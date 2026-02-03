@@ -1,18 +1,18 @@
 {
   "external_id": "begonia_venosa",
-  "name": "Veined Begonia",
+  "name": "Veined begonia",
   "latin": "Begonia venosa",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "orchid"
+    "all-purpose",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne, rozproszone",
-          "de": "Helles Streulicht",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज परोक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
+          "en": "Airy, well-drained",
           "pl": "Przepuszczalne",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "de": "Locker, drainierend",
+          "fr": "Aéré, drainant",
+          "it": "Arieggiato drenante",
+          "es": "Aireado y drenante",
+          "pt": "Arejado, drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "通気性と排水性",
+          "ko": "통기성·배수성"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Let top dry",
+          "pl": "Gdy wierzch przeschnie",
+          "de": "Oberfläche antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga sopra",
+          "es": "Seca la capa superior",
+          "pt": "Secar a camada superior",
+          "ar": "اسقِ بعد جفاف السطح",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干后再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Pflege",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等难度",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,17 +105,17 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
-          "ar": "18–24 م°",
-          "hi": "18–24 °C",
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
           "zh": "18–24°C",
-          "ja": "18～24℃",
+          "ja": "18–24°C",
           "ko": "18–24°C"
         }
       }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Likes humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Gusta humedad",
-          "pt": "Gosta umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润空气",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "Moderate humidity",
+          "pl": "Umiark. wilgotność",
+          "de": "Mäßige Luftfeuchte",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "適度な湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतुओं हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to moderate",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅め",
-          "ko": "느린 성장"
+          "en": "Slow, compact",
+          "pl": "Wolny, zwarty",
+          "de": "Langsam, kompakt",
+          "fr": "Lente, compacte",
+          "it": "Lenta, compatta",
+          "es": "Lento y compacto",
+          "pt": "Lento, compacto",
+          "ar": "بطيء ومضغوط",
+          "hi": "धीमी, सघन",
+          "zh": "缓慢紧凑",
+          "ja": "ゆっくり・コンパクト",
+          "ko": "느림·컴팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Łatwo gnije",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Propensa a pudrición",
+          "pt": "Propensa a apodrecer",
+          "ar": "عرضة للتعفن",
+          "hi": "सड़न का खतरा",
+          "zh": "易烂根",
+          "ja": "根腐れ注意",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحياناً",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Veined Begonia",
-      "description": "Begonia venosa is a tropical species known for its thick, velvety leaves with prominent pale veins. It prefers bright, indirect light and evenly moist but well-drained soil. This plant is commonly grown indoors as a foliage specimen."
+      "common_name": "Veined begonia",
+      "description": "Begonia venosa is a compact begonia valued for thick, textured leaves. Keep it in bright, indirect light and water after the surface dries. It is toxic if eaten by pets."
     },
     "pl": {
       "common_name": "Begonia żyłkowana",
-      "description": "Begonia venosa to tropikalny gatunek o grubych, aksamitnych liściach z wyraźnym unerwieniem. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanie wilgotnym podłożu. Uprawiana jest głównie jako roślina doniczkowa."
+      "description": "Begonia venosa to zwarta begonia o grubych, fakturowanych liściach. Zapewnij jasne, rozproszone światło i podlewaj po przeschnięciu wierzchu podłoża. Roślina jest toksyczna po zjedzeniu przez zwierzęta."
     },
     "de": {
-      "common_name": "Geäderte Begonie",
-      "description": "Begonia venosa ist eine tropische Art mit dicken, samtigen Blättern und hellen Adern. Sie gedeiht bei hellem, indirektem Licht und gleichmäßig feuchter Erde. Die Pflanze wird meist als Zimmerpflanze kultiviert."
+      "common_name": "Adern-Begonie",
+      "description": "Begonia venosa ist eine kompakte Begonie mit dicken, strukturierten Blättern. Hell, aber ohne direkte Sonne stellen und erst gießen, wenn die Oberfläche abgetrocknet ist. Für Haustiere giftig bei Aufnahme."
     },
     "fr": {
-      "common_name": "Bégonia veiné",
-      "description": "Begonia venosa est une espèce tropicale appréciée pour ses feuilles épaisses et veloutées aux nervures claires. Elle préfère une lumière vive indirecte et un sol légèrement humide. Elle est surtout cultivée en intérieur."
+      "common_name": "Bégonia nervuré",
+      "description": "Begonia venosa est un bégonia compact aux feuilles épaisses et texturées. Placez-le en lumière vive indirecte et arrosez quand la surface du substrat est sèche. Il est toxique pour les animaux en cas d’ingestion."
     },
     "it": {
-      "common_name": "Begonia venata",
-      "description": "Begonia venosa è una specie tropicale con foglie spesse e vellutate dalle nervature evidenti. Predilige luce indiretta intensa e terreno ben drenato ma umido. È coltivata principalmente come pianta da interno."
+      "common_name": "Begonia venosa",
+      "description": "Begonia venosa è una begonia compatta apprezzata per foglie spesse e ruvide. Tienila in luce intensa indiretta e annaffia quando lo strato superiore è asciutto. È tossica se ingerita dagli animali domestici."
     },
     "es": {
       "common_name": "Begonia venosa",
-      "description": "Begonia venosa es una especie tropical conocida por sus hojas gruesas y aterciopeladas con venas claras. Prefiere luz indirecta brillante y riego moderado. Se cultiva comúnmente en interiores."
+      "description": "Begonia venosa es una begonia compacta con hojas gruesas y texturizadas. Mantén luz brillante indirecta y riega cuando se seque la capa superior. Es tóxica si la ingieren las mascotas."
     },
     "pt": {
       "common_name": "Begônia venosa",
-      "description": "Begonia venosa é uma espécie tropical com folhas espessas e aveludadas e veias claras. Gosta de luz indireta brilhante e solo levemente úmido. É cultivada principalmente como planta de interior."
+      "description": "Begonia venosa é uma begônia compacta com folhas grossas e texturizadas. Prefere luz forte indireta e rega quando a superfície do substrato secar. É tóxica se ingerida por animais de estimação."
     },
     "ar": {
       "common_name": "بيغونيا عرقية",
-      "description": "بيغونيا فينوسا نبات استوائي يتميز بأوراق سميكة مخملية ذات عروق فاتحة. يفضل الضوء الساطع غير المباشر وتربة رطبة باعتدال. يزرع غالبًا كنبات داخلي."
+      "description": "Begonia venosa بيغونيا مدمجة بأوراق سميكة ذات ملمس واضح. توضع في ضوء ساطع غير مباشر وتُسقى بعد جفاف سطح التربة. هي سامة للحيوانات الأليفة عند الابتلاع."
     },
     "hi": {
-      "common_name": "वेन्ड बेगोनिया",
-      "description": "Begonia venosa एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मोटी और मखमली होती हैं। इसे तेज अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद है। इसे आमतौर पर घर के अंदर उगाया जाता है।"
+      "common_name": "नसदार बेगोनिया",
+      "description": "Begonia venosa एक सघन बेगोनिया है जिसकी पत्तियाँ मोटी और बनावटदार होती हैं। इसे तेज परोक्ष रोशनी दें और ऊपर की मिट्टी सूखने पर पानी दें। पालतू जानवरों द्वारा खाने पर यह विषाक्त है।"
     },
     "zh": {
-      "common_name": "脉叶秋海棠",
-      "description": "Begonia venosa 是一种热带植物，以其厚实绒毛状叶片和浅色叶脉著称。适合明亮的散射光和微湿但排水良好的土壤。常作为室内观叶植物栽培。"
+      "common_name": "脉纹秋海棠",
+      "description": "Begonia venosa 为紧凑型秋海棠，叶片厚实且有纹理。放在明亮散射光处，表土干后再浇水。被宠物误食可能有毒。"
     },
     "ja": {
       "common_name": "ベゴニア・ベノサ",
-      "description": "ベゴニア・ベノサは厚くビロード状の葉と明るい葉脈が特徴の熱帯植物です。明るい間接光と適度に湿った土を好みます。主に観葉植物として室内で育てられます。"
+      "description": "Begonia venosa は厚みのある質感の葉をもつコンパクトなベゴニアです。明るい間接光で管理し、表土が乾いてから水やりします。ペットが口にすると有毒です。"
     },
     "ko": {
-      "common_name": "베노사 베고니아",
-      "description": "Begonia venosa는 두껍고 벨벳 같은 잎과 뚜렷한 잎맥이 특징인 열대 식물입니다. 밝은 간접광과 적당히 촉촉한 토양을 선호합니다. 주로 실내 관엽식물로 재배됩니다."
+      "common_name": "맥무늬 베고니아",
+      "description": "Begonia venosa 는 두껍고 질감 있는 잎이 특징인 컴팩트한 베고니아입니다. 밝은 간접광에서 키우고 겉흙이 마르면 물을 주세요. 반려동물이 먹으면 유독할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a980",
-      "https://www.rhs.org.uk/plants/begonia/houseplant-care",
-      "https://edis.ifas.ufl.edu/publication/EP080"
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/begonia",
+      "https://www.orchidbotanics.co.uk/product-page/begonia-venosa",
+      "https://www.blasus.co.uk/begonia-venosa",
+      "https://bwhplantco.com/blogs/care-guides/begonia-care-the-complete-guide",
+      "https://www.thespruce.com/houseplant-humidity-tips-pros-hate-8767262"
     ]
   }
 }

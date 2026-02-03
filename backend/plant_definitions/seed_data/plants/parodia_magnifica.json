@@ -1,6 +1,6 @@
 {
   "external_id": "parodia_magnifica",
-  "name": "Parodia magnifica",
+  "name": "Magnificent Parodia",
   "latin": "Parodia magnifica",
   "sun": "high",
   "water": "medium",
@@ -11,8 +11,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -33,14 +32,14 @@
           "pl": "Pełne słońce",
           "de": "Volle Sonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "أشعة الشمس المباشرة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "完全な太陽",
-          "ko": "완전한 태양"
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy, well-draining",
-          "pl": "Piaszczysta, dobrze przepuszczająca wodę",
-          "de": "Sandy, gut durchlässig",
-          "fr": "Sableux, bien drainé",
-          "it": "Sabbioso, ben drenato",
-          "es": "Arenoso, bien drenado",
-          "pt": "Arenoso, bem drenado",
-          "ar": "رمال، جيد التصريف",
-          "hi": "रेतीला, अच्छे जल निकासी वाला",
-          "zh": "沙质，良好排水",
-          "ja": "砂質、良好な排水性",
-          "ko": "모래, 배수가 잘 되는"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -90,9 +89,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm, 20-30°C",
-          "pl": "Ciepło, 20-30°C",
-          "de": "Warm, 20-30°C",
-          "fr": "Chaud, 20-30°C",
-          "it": "Caldo, 20-30°C",
-          "es": "Cálido, 20-30°C",
-          "pt": "Quente, 20-30°C",
-          "ar": "دافئ، 20-30°C",
-          "hi": "गर्म, 20-30°C",
-          "zh": "温暖，20-30°C",
-          "ja": "暖かい、20-30°C",
-          "ko": "따뜻한, 20-30°C"
+          "en": "22-30°C",
+          "pl": "22-30°C",
+          "de": "22-30°C",
+          "fr": "22-30°C",
+          "it": "22-30°C",
+          "es": "22-30°C",
+          "pt": "22-30°C",
+          "ar": "22-30°C",
+          "hi": "22-30°C",
+          "zh": "22-30°C",
+          "ja": "22-30°C",
+          "ko": "22-30°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "निम्न से मध्य",
+          "zh": "低到中等",
+          "ja": "低〜中",
+          "ko": "낮음에서 중간"
         }
       }
     },
@@ -151,10 +150,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,76 +161,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare il ristagno d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenzia occasionale",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Magnificent Cactus",
-      "description": "Parodia magnifica, also known as the magnificent cactus, is a striking cactus native to South America. It is known for its large, spherical shape and vibrant yellow flowers."
+      "common_name": "Magnificent Parodia",
+      "description": "A slow-growing cactus native to South America. It requires full sun and well-draining soil."
     },
     "pl": {
-      "common_name": "Kaktus Magnificzny",
-      "description": "Parodia magnifica, znana jako kaktus magnificzny, to efektowny kaktus pochodzący z Ameryki Południowej. Charakteryzuje się dużym, kulistym kształtem i jaskrawożółtymi kwiatami."
+      "common_name": "Magnificent Parodia",
+      "description": "Wolno rosnący kaktus pochodzący z Ameryki Południowej. Wymaga pełnego słońca i dobrze przepuszczalnej gleby."
     },
     "de": {
-      "common_name": "Prächtige Kaktus",
-      "description": "Parodia magnifica, auch als prächtiger Kaktus bekannt, ist ein auffälliger Kaktus aus Südamerika. Er zeichnet sich durch seine große, kugelförmige Form und leuchtend gelbe Blüten aus."
+      "common_name": "Magnificent Parodia",
+      "description": "Ein langsam wachsender Kaktus aus Südamerika. Er benötigt volle Sonne und gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Cactus Magnifique",
-      "description": "Parodia magnifica, également connu sous le nom de cactus magnifique, est un cactus frappant originaire d'Amérique du Sud. Il se distingue par sa grande forme sphérique et ses fleurs jaunes vives."
+      "common_name": "Parodia magnifique",
+      "description": "Un cactus à croissance lente originaire d'Amérique du Sud. Il nécessite un ensoleillement direct et un sol bien drainé."
     },
     "it": {
-      "common_name": "Cactus Magnifico",
-      "description": "Parodia magnifica, noto anche come cactus magnifico, è un cactus impressionante originario del Sud America. È noto per la sua forma sferica e i suoi fiori gialli vivaci."
+      "common_name": "Parodia magnifica",
+      "description": "Un cactus a crescita lenta originario del Sud America. Richiede pieno sole e terreno ben drenato."
     },
     "es": {
-      "common_name": "Cactus Magnífico",
-      "description": "Parodia magnifica, también conocido como el cactus magnífico, es un cactus llamativo originario de Sudamérica. Se caracteriza por su gran forma esférica y sus flores amarillas brillantes."
+      "common_name": "Parodia magnífica",
+      "description": "Un cactus de crecimiento lento originario de América del Sur. Requiere sol pleno y suelo bien drenado."
     },
     "pt": {
-      "common_name": "Cacto Magnífico",
-      "description": "Parodia magnifica, também conhecido como cacto magnífico, é um cacto impressionante nativo da América do Sul. É conhecido por sua grande forma esférica e flores amarelas vibrantes."
+      "common_name": "Parodia magnífica",
+      "description": "Um cacto de crescimento lento originário da América do Sul. Precisa de sol pleno e solo bem drenado."
     },
     "ar": {
-      "common_name": "صبار رائع",
-      "description": "باروديا ماجنفيكا، والمعروف أيضًا بالصبار الرائع، هو صبار لافت للنظر من أمريكا الجنوبية. يعرف بشكله الكروي الكبير وزهورها الصفراء الزاهية."
+      "common_name": "باروديا رائعة",
+      "description": "صبار ينمو ببطء من أمريكا الجنوبية. يحتاج إلى شمس كاملة وتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "magnificent कैक्टस",
-      "description": "Parodia magnifica, जिसे शानदार कैक्टस भी कहा जाता है, दक्षिण अमेरिका का एक आकर्षक कैक्टस है। यह अपनी बड़ी, गोल आकृति और चमकीले पीले फूलों के लिए जाना जाता है।"
+      "common_name": "magnificent Parodia",
+      "description": "दक्षिण अमेरिका का एक धीमी वृद्धि वाला कैक्टस। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "壮丽仙人掌",
-      "description": "Parodia magnifica，也称为壮丽仙人掌，是一种来自南美的引人注目的仙人掌。以其大的球形和明亮的黄色花朵而闻名。"
+      "common_name": "壮丽的巴罗迪亚",
+      "description": "一种生长缓慢的仙人掌，原产于南美。它需要充足的阳光和排水良好的土壤。"
     },
     "ja": {
-      "common_name": "豪華なサボテン",
-      "description": "Parodia magnifica、または豪華なサボテンは、南アメリカ原産の目を引くサボテンです。その大きな球形と鮮やかな黄色の花で知られています。"
+      "common_name": "豪華なパロディア",
+      "description": "南アメリカ原産の遅い成長をするサボテン。直射日光と排水性の良い土を必要とします。"
     },
     "ko": {
-      "common_name": "장엄한 선인장",
-      "description": "Parodia magnifica, 또는 장엄한 선인장은 남미에서 유래한 인상적인 선인장입니다. 그것은 크고 구형이며 밝은 노란 꽃으로 유명합니다."
+      "common_name": "Magnificent Parodia",
+      "description": "남미 원산지의 느리게 자라는 선인장. 직사광선과 배수가 좋은 토양이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/Parodia-magnifica",
-      "https://www.botanicgardens.org/plant-care"
+      "https://www.rhs.org.uk/plants/10079/parodia-magnifica/details",
+      "https://www.gardenia.net/plant/parodia-magnifica"
     ]
   }
 }

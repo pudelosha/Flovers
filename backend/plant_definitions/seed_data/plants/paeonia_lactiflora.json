@@ -1,6 +1,6 @@
 {
   "external_id": "paeonia_lactiflora",
-  "name": "Chinese Peony",
+  "name": "Peony",
   "latin": "Paeonia lactiflora",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loamy",
-          "pl": "gliniasty",
-          "de": "lehmig",
-          "fr": "argileux",
-          "it": "argilloso",
-          "es": "arcilloso",
-          "pt": "argiloso",
-          "ar": "طيني",
-          "hi": "मिट्टी",
-          "zh": "粘土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-24°C",
-          "pl": "10-24°C",
-          "de": "10-24°C",
-          "fr": "10-24°C",
-          "it": "10-24°C",
-          "es": "10-24°C",
-          "pt": "10-24°C",
-          "ar": "10-24°C",
-          "hi": "10-24°C",
-          "zh": "10-24°C",
-          "ja": "10-24°C",
-          "ko": "10-24°C"
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°C",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不是",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "średnie",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso di annaffiatura",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물 주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Chinese Peony",
-      "description": "Paeonia lactiflora, known as the Chinese peony, is a popular ornamental plant with large, fragrant flowers. It is commonly found in gardens and is prized for its striking blooms in spring and summer."
+      "common_name": "Peony",
+      "description": "Paeonia lactiflora, commonly known as the peony, is a flowering plant with large, colorful blooms. It thrives in well-draining soil and requires moderate watering."
     },
     "pl": {
-      "common_name": "Piwonia chińska",
-      "description": "Paeonia lactiflora, znana jako piwonia chińska, to popularna roślina ozdobna o dużych, pachnących kwiatach. Jest często spotykana w ogrodach i ceniona za swoje uderzające kwiaty wiosną i latem."
+      "common_name": "Piwonia",
+      "description": "Paeonia lactiflora, znana jako piwonia, to roślina kwitnąca o dużych, kolorowych kwiatach. Wymaga dobrze przepuszczalnej gleby i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Chinesische Pfingstrose",
-      "description": "Paeonia lactiflora, bekannt als chinesische Pfingstrose, ist eine beliebte Zierpflanze mit großen, duftenden Blumen. Sie ist häufig in Gärten zu finden und wird für ihre auffälligen Blüten im Frühling und Sommer geschätzt."
+      "common_name": "Pfingstrose",
+      "description": "Paeonia lactiflora, auch Pfingstrose genannt, ist eine blühende Pflanze mit großen, farbenfrohen Blüten. Sie gedeiht in gut durchlässigem Boden und benötigt mäßige Bewässerung."
     },
     "fr": {
-      "common_name": "Pivoine chinoise",
-      "description": "Paeonia lactiflora, connue sous le nom de pivoine chinoise, est une plante ornementale populaire avec de grandes fleurs parfumées. Elle est couramment trouvée dans les jardins et est appréciée pour ses fleurs frappantes au printemps et en été."
+      "common_name": "Pivoine",
+      "description": "Paeonia lactiflora, connue sous le nom de pivoine, est une plante à fleurs avec de grandes fleurs colorées. Elle préfère un sol bien drainé et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Peonia cinese",
-      "description": "Paeonia lactiflora, conosciuta come peonia cinese, è una pianta ornamentale popolare con grandi fiori profumati. È comunemente trovata nei giardini ed è apprezzata per i suoi fiori spettacolari in primavera e estate."
+      "common_name": "Peonia",
+      "description": "Paeonia lactiflora, conosciuta come peonia, è una pianta da fiore con grandi fiori colorati. Cresce meglio in terreni ben drenanti e necessita di annaffiature moderate."
     },
     "es": {
-      "common_name": "Peonía china",
-      "description": "Paeonia lactiflora, conocida como peonía china, es una planta ornamental popular con grandes flores fragantes. Se encuentra comúnmente en jardines y es apreciada por sus impresionantes flores en primavera y verano."
+      "common_name": "Peonía",
+      "description": "Paeonia lactiflora, conocida como peonía, es una planta con grandes flores coloridas. Prefiere suelos bien drenados y requiere riego moderado."
     },
     "pt": {
-      "common_name": "Peônia chinesa",
-      "description": "Paeonia lactiflora, conhecida como peônia chinesa, é uma planta ornamental popular com grandes flores perfumadas. É comumente encontrada em jardins e é valorizada por suas flores impressionantes na primavera e no verão."
+      "common_name": "Peônia",
+      "description": "Paeonia lactiflora, conhecida como peônia, é uma planta com flores grandes e coloridas. Prefere solo bem drenado e requer rega moderada."
     },
     "ar": {
-      "common_name": "زهرة الفاوانيا الصينية",
-      "description": "Paeonia lactiflora، المعروفة باسم زهرة الفاوانيا الصينية، هي نبتة زينة شعبية تتميز بزهورها الكبيرة والعطرية. توجد عادة في الحدائق وتعتبر محبوبة بسبب زهورها المدهشة في الربيع والصيف."
+      "common_name": "فاوانيا",
+      "description": "Paeonia lactiflora، والمعروفة باسم الفاوانيا، هي نبات مزهر يحتوي على أزهار كبيرة وملونة. ينمو في التربة جيدة التصريف ويحتاج إلى ري معتدل."
     },
     "hi": {
-      "common_name": "चीनी पीओनिया",
-      "description": "Paeonia lactiflora, जिसे चीनी पीओनिया कहा जाता है, एक लोकप्रिय सजावटी पौधा है जिसकी बड़ी, खुशबूदार फूल होते हैं। यह आमतौर पर बग़ीचों में पाया जाता है और अपनी आकर्षक फूलों के लिए वसंत और ग्रीष्मकाल में पसंद किया जाता है।"
+      "common_name": "पीओनिय",
+      "description": "Paeonia lactiflora, जिसे पीओनिय कहा जाता है, एक फूलदार पौधा है जिसमें बड़े, रंगीन फूल होते हैं। इसे अच्छी जल निकासी वाली मिट्टी पसंद है और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "中国牡丹",
-      "description": "Paeonia lactiflora, 被称为中国牡丹，是一种受欢迎的观赏植物，拥有大而芳香的花朵。它通常出现在花园中，并因其春夏季节的鲜艳花朵而受到喜爱。"
+      "common_name": "牡丹",
+      "description": "Paeonia lactiflora，常称为牡丹，是一种开花植物，具有大型多彩的花朵。它在排水良好的土壤中生长，需要适度的浇水。"
     },
     "ja": {
-      "common_name": "中国牡丹",
-      "description": "Paeonia lactiflora、中国牡丹は大きな香りの良い花を持つ人気の観賞植物です。春と夏にその美しい花を楽しむため、よく庭園で見られます。"
+      "common_name": "ボタン",
+      "description": "Paeonia lactiflora（ボタン）は、大きく色とりどりの花を持つ花卉植物です。良好な排水性の土壌で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "중국모란",
-      "description": "Paeonia lactiflora, 중국모란은 큰 향기 나는 꽃을 가진 인기 있는 장식용 식물입니다. 봄과 여름에 그 화려한 꽃을 즐기기 위해 정원에서 자주 볼 수 있습니다."
+      "common_name": "작약",
+      "description": "Paeonia lactiflora, 일반적으로 작약으로 알려진 이 식물은 크고 화려한 꽃을 가진 꽃 식물입니다. 배수가 좋은 토양에서 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/paeonia-lactiflora",
-      "https://www.bhg.com/gardening/pests-diseases-pollinators/gardening-101-peonies/"
+      "https://www.rhs.org.uk/advice/profile?pid=187",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/how-to-grow-peonies/"
     ]
   }
 }

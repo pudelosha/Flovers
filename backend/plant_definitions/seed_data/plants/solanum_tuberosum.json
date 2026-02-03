@@ -4,15 +4,15 @@
   "latin": "Solanum tuberosum",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 광"
+          "ja": "中くらいの光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba gliniasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßiges Gießen",
-          "fr": "Arrosage régulier",
-          "it": "Irrigazione regolare",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "الري المنتظم",
-          "hi": "नियमित पानी देना",
-          "zh": "定期浇水",
-          "ja": "定期の水やり",
-          "ko": "정기적인 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-20°C",
-          "pl": "15-20°C",
-          "de": "15-20°C",
-          "fr": "15-20°C",
-          "it": "15-20°C",
-          "es": "15-20°C",
-          "pt": "15-20°C",
-          "ar": "15-20°C",
-          "hi": "15-20°C",
-          "zh": "15-20°C",
-          "ja": "15-20°C",
-          "ko": "15-20°C"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Baja",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -152,9 +152,9 @@
           "pt": "Não",
           "ar": "لا",
           "hi": "नहीं",
-          "zh": "不",
+          "zh": "否",
           "ja": "いいえ",
-          "ko": "아니요"
+          "ko": "아니오"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium growth",
-          "pl": "Średni wzrost",
-          "de": "Mittleres Wachstum",
-          "fr": "Croissance moyenne",
-          "it": "Crescita media",
-          "es": "Crecimiento medio",
-          "pt": "Crescimento médio",
-          "ar": "نمو متوسط",
-          "hi": "मध्यम विकास",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 성장"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Pas trop d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물 주기 방지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि से कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔씩 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Potato",
-      "description": "The potato is a root vegetable known for its edible tubers. It thrives in cool, temperate climates and is widely grown for food."
+      "description": "The potato is a starchy tuber from the plant Solanum tuberosum. It's widely grown and consumed globally."
     },
     "pl": {
       "common_name": "Ziemniak",
-      "description": "Ziemniak to roślina okopowa znana z jadalnych bulw. Rośnie w chłodnym, umiarkowanym klimacie i jest szeroko uprawiana jako żywność."
+      "description": "Ziemniak to skrobiowa bulwa rośliny Solanum tuberosum. Jest szeroko uprawiany i spożywany na całym świecie."
     },
     "de": {
       "common_name": "Kartoffel",
-      "description": "Die Kartoffel ist ein Wurzelgemüse, das für seine essbaren Knollen bekannt ist. Sie gedeiht in kühlen, gemäßigten Klimazonen und wird weltweit als Nahrungsmittel angebaut."
+      "description": "Die Kartoffel ist eine stärkehaltige Knolle der Pflanze Solanum tuberosum. Sie wird weltweit angebaut und verzehrt."
     },
     "fr": {
       "common_name": "Pomme de terre",
-      "description": "La pomme de terre est un légume racine connu pour ses tubercules comestibles. Elle prospère dans les climats frais et tempérés et est largement cultivée pour l'alimentation."
+      "description": "La pomme de terre est un tubercule amidonné de la plante Solanum tuberosum. Elle est cultivée et consommée dans le monde entier."
     },
     "it": {
       "common_name": "Patata",
-      "description": "La patata è un ortaggio a radice noto per i suoi tuberi commestibili. Cresce in climi freschi e temperati ed è ampiamente coltivata come cibo."
+      "description": "La patata è un tubero amidaceo della pianta Solanum tuberosum. È ampiamente coltivata e consumata in tutto il mondo."
     },
     "es": {
-      "common_name": "Patata",
-      "description": "La patata es un vegetal de raíz conocido por sus tubérculos comestibles. Crece en climas frescos y templados y se cultiva ampliamente como alimento."
+      "common_name": "Papa",
+      "description": "La papa es un tubérculo con almidón de la planta Solanum tuberosum. Se cultiva y consume ampliamente en todo el mundo."
     },
     "pt": {
       "common_name": "Batata",
-      "description": "A batata é um vegetal de raiz conhecido pelos seus tubérculos comestíveis. Cresce em climas frescos e temperados e é amplamente cultivada como alimento."
+      "description": "A batata é um tubérculo rico em amido da planta Solanum tuberosum. É amplamente cultivada e consumida em todo o mundo."
     },
     "ar": {
-      "common_name": "بطاطس",
-      "description": "البطاطس هي خضروات جذرية معروفة بثمارها الصالحة للأكل. تنمو في المناخات المعتدلة والباردة وتزرع على نطاق واسع كغذاء."
+      "common_name": "بطاطا",
+      "description": "البطاطا هي درنة نشوية من نبات Solanum tuberosum. تزرع وتستهلك على نطاق واسع في جميع أنحاء العالم."
     },
     "hi": {
       "common_name": "आलू",
-      "description": "आलू एक जड़ वाली सब्जी है जो अपनी खाने योग्य कंदों के लिए जानी जाती है। यह ठंडे, समशीतोष्ण जलवायु में उगती है और खाद्य के रूप में व्यापक रूप से उगाई जाती है।"
+      "description": "आलू एक स्टार्ची कंद है जो पौधे Solanum tuberosum से आता है। यह दुनिया भर में उगाया और खाया जाता है।"
     },
     "zh": {
       "common_name": "土豆",
-      "description": "土豆是一种以可食用块茎闻名的根茎类蔬菜。它在寒冷、温带气候中生长，并广泛种植作为食物。"
+      "description": "土豆是来自 Solanum tuberosum 植物的含淀粉块茎。它在全球范围内广泛种植和消费。"
     },
     "ja": {
       "common_name": "ジャガイモ",
-      "description": "ジャガイモは食用の塊茎で知られる根菜です。冷涼な温帯気候で育ち、広く食料として栽培されています。"
+      "description": "ジャガイモは、植物Solanum tuberosumからのでんぷん質の塊茎です。世界中で広く栽培され、消費されています。"
     },
     "ko": {
       "common_name": "감자",
-      "description": "감자는 먹을 수 있는 덩이줄기로 알려진 뿌리채소입니다. 시원한 온대 기후에서 자라며, 식량으로 널리 재배됩니다."
+      "description": "감자는 Solanum tuberosum 식물의 전분 덩어리입니다. 전 세계적으로 널리 재배되고 소비됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.bhg.com/gardening/pests-insects-diseases/potato-growing-tips/",
-      "https://www.rhs.org.uk/advice/profile?pid=229"
+      "https://www.gardeningknowhow.com/edible/vegetables/potato/potato-plant-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=366"
     ]
   }
 }

@@ -1,9 +1,9 @@
 {
   "external_id": "alocasia_sanderiana",
-  "name": "Alocasia sanderiana",
+  "name": "Kris plant",
   "latin": "Alocasia sanderiana",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
@@ -15,10 +15,10 @@
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_sanderiana.jpg",
@@ -28,17 +28,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい光",
+          "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
       }
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining aroid mix",
-          "pl": "Przepuszczalna ziemia",
-          "de": "Lockeres Substrat",
-          "fr": "Sol drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好基质",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Airy aroid mix",
+          "pl": "Przewiewna mieszanka",
+          "de": "Luftiges Aroid-Sub.",
+          "fr": "Substrat aéré aroid",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة أرويد جيدة الصرف",
+          "hi": "हवादार, जल-निकासी",
+          "zh": "疏松排水基质",
+          "ja": "通気の良い用土",
+          "ko": "통기성 좋은 배양토"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil moist",
-          "pl": "Wilgotna gleba",
-          "de": "Erde feucht halten",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "흙 촉촉하게"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotno",
+          "de": "Leicht feucht halten",
+          "fr": "Garder légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطبة قليلاً دائمًا",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "살짝 촉촉하게"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Demanding care",
+          "en": "Fussy indoors",
           "pl": "Wymagająca",
           "de": "Anspruchsvoll",
           "fr": "Exigeante",
-          "it": "Impegnativa",
+          "it": "Esigente",
           "es": "Exigente",
           "pt": "Exigente",
-          "ar": "عناية صعبة",
-          "hi": "देखभाल कठिन",
-          "zh": "养护较难",
-          "ja": "管理が難しい",
-          "ko": "관리 어려움"
+          "ar": "حساسة في الداخل",
+          "hi": "थोड़ी नाज़ुक",
+          "zh": "较难养",
+          "ja": "やや難しい",
+          "ko": "관리 난이도 높음"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm 18–27°C",
-          "pl": "Ciepło 18–27°C",
-          "de": "Warm 18–27°C",
-          "fr": "Chaud 18–27°C",
-          "it": "Caldo 18–27°C",
-          "es": "Cálido 18–27°C",
-          "pt": "Quente 18–27°C",
-          "ar": "دافئ 18–27°م",
-          "hi": "गर्म 18–27°C",
-          "zh": "温暖18–27°C",
-          "ja": "18–27℃",
-          "ko": "따뜻함 18–27°C"
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -127,11 +127,11 @@
           "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
+          "hi": "अधिक आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الأكل",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright foliage",
-          "pl": "Wzniesiony wzrost",
-          "de": "Aufrechter Wuchs",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधी बढ़त",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम बढ़वार",
+          "zh": "中等生长",
+          "ja": "中程度の生長",
+          "ko": "중간 생장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "ज्यादा पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealybugs",
+          "pl": "Przędziorki, wełnowce",
+          "de": "Spinnmilben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عناكب, بق دقيقي",
+          "hi": "माइट्स, मिलीबग्स",
+          "zh": "红蜘蛛, 粉蚧",
+          "ja": "ハダニ, カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Kris Plant",
-      "description": "Alocasia sanderiana is a tropical aroid known for its dark, arrow-shaped leaves with bold white veins. It requires bright indirect light, high humidity, and consistently warm temperatures. The plant is sensitive to cold, drought, and overwatering."
+      "common_name": "Kris plant",
+      "description": "Alocasia sanderiana is a tropical aroid grown for its narrow, deeply veined leaves. Keep it in bright, indirect light and water when the top layer of mix starts to dry, avoiding soggy soil. It prefers warm temperatures and higher humidity, and it is toxic if chewed or swallowed."
     },
     "pl": {
-      "common_name": "Alokazja Sandera",
-      "description": "Alocasia sanderiana to tropikalna roślina o ciemnych liściach z wyraźnymi jasnymi nerwami. Wymaga jasnego, rozproszonego światła oraz wysokiej wilgotności powietrza. Jest wrażliwa na chłód i przesuszenie."
+      "common_name": "Alokazja Sanderiana (Kris)",
+      "description": "Alocasia sanderiana to tropikalna roślina o wąskich, mocno unerwionych liściach. Ustaw ją w jasnym, rozproszonym świetle i podlewaj, gdy wierzch podłoża lekko przeschnie, nie dopuszczając do zalania. Lubi ciepło i wyższą wilgotność powietrza oraz jest toksyczna po zjedzeniu."
     },
     "de": {
       "common_name": "Kris-Pflanze",
-      "description": "Alocasia sanderiana ist eine tropische Blattpflanze mit dunkelgrünen, pfeilförmigen Blättern. Sie benötigt helles, indirektes Licht und hohe Luftfeuchtigkeit. Kälte und Trockenheit verträgt sie schlecht."
+      "description": "Alocasia sanderiana ist ein tropischer Aronstabgewächs mit schmalen, stark geaderten Blättern. Stelle sie hell, aber ohne direkte Sonne, und gieße, sobald die Oberfläche leicht abtrocknet; Staunässe vermeiden. Sie mag Wärme und höhere Luftfeuchte und ist giftig bei Kauen oder Verschlucken."
     },
     "fr": {
       "common_name": "Plante Kris",
-      "description": "Alocasia sanderiana est une plante tropicale aux feuilles sombres et nervurées de blanc. Elle préfère une lumière vive indirecte et une forte humidité. Les températures froides et le dessèchement lui sont néfastes."
+      "description": "Alocasia sanderiana est un aroïde tropical cultivé pour ses feuilles étroites et nervurées. Placez-la en lumière vive indirecte et arrosez quand la surface du substrat commence à sécher, sans laisser l’eau stagner. Elle apprécie la chaleur et une humidité élevée, et elle est toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "Alocasia di Sander",
-      "description": "Alocasia sanderiana è una pianta tropicale con foglie scure e venature chiare. Cresce bene con luce intensa indiretta e alta umidità. Soffre il freddo e la mancanza d'acqua."
+      "common_name": "Pianta Kris",
+      "description": "Alocasia sanderiana è un’aroide tropicale coltivata per le foglie strette e molto nervate. Tienila in luce intensa ma indiretta e annaffia quando lo strato superiore inizia ad asciugare, evitando ristagni. Preferisce caldo e umidità più alta ed è tossica se masticata o ingerita."
     },
     "es": {
-      "common_name": "Alocasia de Sander",
-      "description": "Alocasia sanderiana es una planta tropical apreciada por sus hojas oscuras y nervaduras claras. Necesita luz brillante indirecta y alta humedad ambiental. Es sensible al frío y a la sequedad."
+      "common_name": "Planta Kris",
+      "description": "Alocasia sanderiana es una arácea tropical apreciada por sus hojas estrechas y muy marcadas. Colócala con luz brillante e indirecta y riega cuando la capa superior empiece a secarse, evitando el encharcamiento. Prefiere temperaturas cálidas y mayor humedad, y es tóxica si se mastica o ingiere."
     },
     "pt": {
-      "common_name": "Alocásia Sanderiana",
-      "description": "Alocasia sanderiana é uma planta tropical de folhas escuras com veias claras marcantes. Prefere luz indireta intensa e alta umidade. Não tolera frio nem solo seco."
+      "common_name": "Planta Kris",
+      "description": "Alocasia sanderiana é uma arácea tropical cultivada pelas folhas estreitas e bem nervuradas. Mantenha em luz forte indireta e regue quando a superfície do substrato começar a secar, evitando encharcamento. Gosta de calor e umidade mais alta e é tóxica se mastigada ou ingerida."
     },
     "ar": {
-      "common_name": "ألوكاسيا ساندر",
-      "description": "نبات ألوكاسيا ساندر نبات استوائي بأوراق داكنة وعروق بيضاء بارزة. يحتاج إلى ضوء ساطع غير مباشر ورطوبة عالية. يتضرر من البرودة والجفاف."
+      "common_name": "نبات كريس",
+      "description": "ألوكاسيا سانديانا نبات استوائي من الأرويد بأوراق ضيقة وعروق واضحة. ضعه في ضوء ساطع غير مباشر واسقه عندما تبدأ طبقة السطح بالجفاف قليلًا مع تجنب تشبع التربة بالماء. يفضل الدفء ورطوبة أعلى، وهو سام إذا تم مضغه أو ابتلاعه."
     },
     "hi": {
-      "common_name": "अलोकासिया सैंडेरियाना",
-      "description": "अलोकासिया सैंडेरियाना एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहरी और नसें हल्की होती हैं। इसे तेज लेकिन अप्रत्यक्ष रोशनी और अधिक नमी की आवश्यकता होती है। ठंड और सूखी मिट्टी इसे नुकसान पहुँचाती है।"
+      "common_name": "क्रिस प्लांट",
+      "description": "Alocasia sanderiana एक उष्णकटिबंधीय एरॉयड है, जिसे इसकी संकरी और गहरी नसों वाली पत्तियों के लिए उगाया जाता है। इसे तेज़ अप्रत्यक्ष रोशनी में रखें और जब ऊपर की परत हल्की सूखने लगे तब पानी दें, मिट्टी को दलदली न होने दें। इसे गर्मी और अधिक नमी पसंद है, और चबाने/निगलने पर यह विषैली है।"
     },
     "zh": {
-      "common_name": "桑德海芋",
-      "description": "Alocasia sanderiana 是一种热带观叶植物，以深色叶片和明显白色叶脉著称。它需要明亮的散射光和高湿度环境。对低温和干燥非常敏感。"
+      "common_name": "克里斯海芋",
+      "description": "Alocasia sanderiana 是热带天南星科观叶植物，叶片狭长且叶脉明显。放在明亮散射光处，基质表层开始变干时再浇水，避免积水烂根。喜温暖和较高湿度，误食有毒。"
     },
     "ja": {
-      "common_name": "アロカシア・サンデリアナ",
-      "description": "アロカシア・サンデリアナは白い葉脈が目立つ熱帯性の観葉植物です。明るい間接光と高い湿度を好みます。寒さや乾燥には弱いです。"
+      "common_name": "クリス・アロカシア",
+      "description": "Alocasia sanderiana は細長く葉脈のはっきりした葉が特徴の熱帯サトイモ科植物です。明るい間接光で育て、用土の表面が乾き始めたら水やりし、過湿は避けます。暖かさと高めの湿度を好み、かじる・摂取すると有毒です。"
     },
     "ko": {
-      "common_name": "알로카시아 산데리아나",
-      "description": "알로카시아 산데리아나는 흰 잎맥이 돋보이는 열대 관엽식물입니다. 밝은 간접광과 높은 습도를 필요로 합니다. 추위와 건조에 약합니다."
+      "common_name": "크리스 알로카시아",
+      "description": "Alocasia sanderiana는 좁고 뚜렷한 잎맥의 잎을 가진 열대 아로이드입니다. 밝은 간접광에서 키우고 흙 표면이 마르기 시작하면 물을 주되 과습은 피하세요. 따뜻한 온도와 높은 습도를 선호하며, 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/alocasia",
-      "https://edis.ifas.ufl.edu/publication/FP033",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a710"
+      "https://www.thespruce.com/grow-alocasia-indoors-1902735",
+      "https://www.provenwinners.com/learn/houseplants/alocasia",
+      "https://bloomscape.com/plant-care-guide/alocasia/",
+      "https://www.poison.org/articles/are-plants-in-the-alocasia-genus-poisonous-221",
+      "https://www.patchplants.com/pages/plant-care/complete-guide-to-alocasia-care/"
     ]
   }
 }

@@ -2,19 +2,20 @@
   "external_id": "laurus_nobilis",
   "name": "Bay Laurel",
   "latin": "Laurus nobilis",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水"
         }
       }
     },
@@ -66,23 +66,61 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适量",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Regagem média",
+          "ar": "سقاية متوسطة",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 정도의 급수"
         }
       }
     },
     {
       "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
+          "ar": "15–24°C",
+          "hi": "15–24°C",
+          "zh": "15–24°C",
+          "ja": "15–24°C",
+          "ko": "15–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
       "value": {
         "text": {
           "en": "Medium",
@@ -92,49 +130,11 @@
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
+          "ja": "中程度",
           "ko": "중간"
-        }
-      }
-    },
-    {
-      "key": "temperature",
-      "value": {
-        "text": {
-          "en": "5–25°C",
-          "pl": "5–25°C",
-          "de": "5–25°C",
-          "fr": "5–25°C",
-          "it": "5–25°C",
-          "es": "5–25°C",
-          "pt": "5–25°C",
-          "ar": "5–25°م",
-          "hi": "5–25°C",
-          "zh": "5–25°C",
-          "ja": "5–25℃",
-          "ko": "5–25°C"
-        }
-      }
-    },
-    {
-      "key": "humidity",
-      "value": {
-        "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
         }
       }
     },
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독"
         }
       }
     },
@@ -161,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow shrub",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमा वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長は遅い",
+          "ja": "成長が遅い",
           "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenze occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +218,57 @@
   "translations": {
     "en": {
       "common_name": "Bay Laurel",
-      "description": "Laurus nobilis is an evergreen shrub or small tree native to the Mediterranean region. It prefers bright light and well-drained soil when grown in containers. Leaves are commonly used as a culinary herb."
+      "description": "Laurus nobilis, or Bay Laurel, is a slow-growing evergreen shrub native to the Mediterranean. It is popular for its aromatic leaves, used in cooking and herbal medicine."
     },
     "pl": {
-      "common_name": "Wawrzyn szlachetny",
-      "description": "Laurus nobilis to zimozielony krzew lub małe drzewo pochodzące z rejonu Morza Śródziemnego. Uprawiany w donicach wymaga dużo światła i przepuszczalnej gleby. Liście są używane jako przyprawa."
+      "common_name": "Laurus szlachetny",
+      "description": "Laurus nobilis, znany również jako Laurus szlachetny, to wolno rosnący krzew zimozielony pochodzący z regionu Morza Śródziemnego. Jego liście są cenione w kuchni i ziołolecznictwie."
     },
     "de": {
       "common_name": "Echter Lorbeer",
-      "description": "Laurus nobilis ist ein immergrüner Strauch aus dem Mittelmeerraum. In Töpfen benötigt er viel Licht und gut durchlässige Erde. Die Blätter werden häufig in der Küche verwendet."
+      "description": "Laurus nobilis, auch Echter Lorbeer genannt, ist ein langsam wachsender immergrüner Strauch aus dem Mittelmeerraum. Seine aromatischen Blätter werden in der Küche und der Kräutermedizin verwendet."
     },
     "fr": {
-      "common_name": "Laurier-sauce",
-      "description": "Laurus nobilis est un arbuste persistant originaire du bassin méditerranéen. Il pousse bien en pot avec beaucoup de lumière et un sol drainant. Ses feuilles sont utilisées en cuisine."
+      "common_name": "Laurier noble",
+      "description": "Laurus nobilis, ou Laurier noble, est un arbuste à croissance lente originaire de la Méditerranée. Ses feuilles aromatiques sont utilisées en cuisine et en médecine herbacée."
     },
     "it": {
       "common_name": "Alloro",
-      "description": "Laurus nobilis è un arbusto sempreverde originario del Mediterraneo. Coltivato in vaso richiede luce intensa e terreno ben drenato. Le foglie sono usate come aroma."
+      "description": "Laurus nobilis, o Alloro, è un arbusto sempreverde a crescita lenta originario del Mediterraneo. Le sue foglie aromatiche sono usate in cucina e nella medicina erboristica."
     },
     "es": {
       "common_name": "Laurel",
-      "description": "Laurus nobilis es un arbusto perenne originario del Mediterráneo. En maceta necesita buena luz y suelo bien drenado. Sus hojas se usan como condimento."
+      "description": "Laurus nobilis, o Laurel, es un arbusto de crecimiento lento originario de la región mediterránea. Sus hojas aromáticas se utilizan en la cocina y en la medicina herbal."
     },
     "pt": {
       "common_name": "Loureiro",
-      "description": "Laurus nobilis é um arbusto perene originário do Mediterrâneo. Cultivado em vaso, precisa de bastante luz e solo bem drenado. As folhas são usadas na culinária."
+      "description": "Laurus nobilis, ou Loureiro, é um arbusto perene de crescimento lento nativo da região do Mediterrâneo. Suas folhas aromáticas são usadas na culinária e na medicina herbal."
     },
     "ar": {
-      "common_name": "الغار",
-      "description": "Laurus nobilis نبات دائم الخضرة موطنه منطقة البحر المتوسط. ينجح في الأصص مع إضاءة قوية وتربة جيدة التصريف. أوراقه تستخدم في الطهي."
+      "common_name": "لوريل نبيل",
+      "description": "Laurus nobilis, المعروف أيضًا باللوريل النبيل، هو شجيرة دائمة الخضرة تنمو ببطء وتعود إلى منطقة البحر الأبيض المتوسط. أوراقه العطرية تستخدم في الطهي والطب العشبي."
     },
     "hi": {
-      "common_name": "तेज पत्ता",
-      "description": "Laurus nobilis एक सदाबहार झाड़ी है जो भूमध्यसागरीय क्षेत्र की मूल निवासी है। गमले में इसे तेज रोशनी और अच्छी जल निकास वाली मिट्टी चाहिए। इसकी पत्तियाँ मसाले के रूप में उपयोग होती हैं।"
+      "common_name": "बे लॉरेल",
+      "description": "Laurus nobilis, या बे लॉरेल, एक धीमी गति से बढ़ने वाली सदाबहार झाड़ी है जो भूमध्य सागर क्षेत्र की मूल निवासी है। इसके सुगंधित पत्ते खाना पकाने और हर्बल दवाओं में उपयोग किए जाते हैं."
     },
     "zh": {
       "common_name": "月桂树",
-      "description": "Laurus nobilis 是原产于地中海地区的常绿灌木。盆栽时需要充足光照和良好排水的土壤。叶片常用于烹饪调味。"
+      "description": "Laurus nobilis，或月桂树，是一种生长缓慢的常绿灌木，原产于地中海地区。其芳香的叶子在烹饪和草药治疗中使用。"
     },
     "ja": {
-      "common_name": "ゲッケイジュ",
-      "description": "Laurus nobilis は地中海原産の常緑低木です。鉢植えでは十分な日光と水はけの良い土が必要です。葉は料理に使われます。"
+      "common_name": "ベイローリエ",
+      "description": "Laurus nobilis、またはベイローリエは、地中海原産の遅く成長する常緑の低木です。その芳香のある葉は料理やハーブ医学で使用されます。"
     },
     "ko": {
       "common_name": "월계수",
-      "description": "Laurus nobilis는 지중해 지역 원산의 상록 관목입니다. 화분 재배 시 강한 빛과 배수 좋은 흙이 필요합니다. 잎은 요리에 사용됩니다."
+      "description": "Laurus nobilis, 또는 월계수는 지중해 지역 원산지의 느리게 자라는 상록 관목입니다. 그 향긋한 잎은 요리와 허브 의학에서 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/laurus-nobilis",
-      "https://www.gardenersworld.com/plants/laurus-nobilis/",
-      "https://plants.ces.ncsu.edu/plants/laurus-nobilis/"
+      "https://www.rhs.org.uk/advice/profile?pid=337",
+      "https://www.missouribotanicalgarden.org/plantfinder/plantfindersearch.aspx?taxonid=282186"
     ]
   }
 }

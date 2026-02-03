@@ -8,10 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial shade",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Sombra parcial",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम दोमट",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "촉촉한 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期的",
-          "ko": "규칙적"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
         }
       }
     },
@@ -86,8 +87,8 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
+          "pl": "Łatwy",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -96,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool–mild",
-          "pl": "Chłodno",
-          "de": "Kühl",
-          "fr": "Frais",
-          "it": "Fresco",
-          "es": "Fresco",
-          "pt": "Fresco",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "सामान्य",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,12 +144,12 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
           "hi": "गैर विषैला",
           "zh": "无毒",
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast spread",
-          "pl": "Szybki wzrost",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
-          "zh": "生长快",
-          "ja": "成長早い",
-          "ko": "빠름"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि में कीड़े",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Spotted deadnettle",
-      "description": "Lamium maculatum is a hardy perennial groundcover native to Europe and western Asia. It thrives in partial shade with consistently moist, well-drained soil. The plant is valued for its variegated foliage and spring flowers."
+      "common_name": "Spotted Deadnettle",
+      "description": "Lamium maculatum is a shade-loving perennial with attractive, variegated foliage. It is easy to grow and suitable for containers or ground cover."
     },
     "pl": {
-      "common_name": "Gajowiec plamisty",
-      "description": "Lamium maculatum to bylina okrywowa pochodząca z Europy i Azji Zachodniej. Najlepiej rośnie w półcieniu i wilgotnej, przepuszczalnej glebie. Ceniona jest za dekoracyjne liście i wiosenne kwiaty."
+      "common_name": "Nettleszkrzynka plamkowana",
+      "description": "Lamium maculatum to roślina wieloletnia, lubiąca cień, z atrakcyjnymi, zróżnicowanymi liśćmi. Jest łatwa w uprawie, idealna do pojemników lub jako roślina okrywowa."
     },
     "de": {
-      "common_name": "Gefleckte Taubnessel",
-      "description": "Lamium maculatum ist eine robuste, bodendeckende Staude aus Europa und Westasien. Sie bevorzugt Halbschatten und gleichmäßig feuchten, gut durchlässigen Boden. Bekannt ist sie für ihr panaschiertes Laub und ihre Blüten."
+      "common_name": "Geflecktes Taubnessel",
+      "description": "Lamium maculatum ist eine schattenliebende Staude mit attraktiven, gefleckten Blättern. Sie ist pflegeleicht und eignet sich gut für Töpfe oder Bodendecker."
     },
     "fr": {
       "common_name": "Lamier maculé",
-      "description": "Lamium maculatum est une plante vivace couvre-sol originaire d’Europe et d’Asie occidentale. Elle pousse bien à mi-ombre dans un sol humide et drainé. Elle est appréciée pour son feuillage décoratif et ses fleurs printanières."
+      "description": "Lamium maculatum est une plante vivace qui aime l'ombre, avec un feuillage décoratif. Facile à cultiver, elle est idéale pour les pots ou en couvre-sol."
     },
     "it": {
       "common_name": "Lamio maculato",
-      "description": "Lamium maculatum è una perenne tappezzante originaria dell’Europa e dell’Asia occidentale. Predilige la mezz’ombra e terreni umidi ma ben drenati. È coltivata per le foglie variegate e i fiori primaverili."
+      "description": "Lamium maculatum è una pianta perenne che ama l'ombra con foglie variegate e attraenti. Facile da coltivare, è adatta per vasi o come copertura del terreno."
     },
     "es": {
       "common_name": "Ortiga manchada",
-      "description": "Lamium maculatum es una planta perenne cubresuelos originaria de Europa y Asia occidental. Crece mejor en sombra parcial y suelos húmedos y bien drenados. Destaca por su follaje variegado y flores primaverales."
+      "description": "Lamium maculatum es una planta perenne que ama la sombra, con follaje decorativo. Es fácil de cultivar y adecuada para macetas o como cobertura del suelo."
     },
     "pt": {
-      "common_name": "Urtiga-morta manchada",
-      "description": "Lamium maculatum é uma planta perene de cobertura do solo nativa da Europa e da Ásia Ocidental. Desenvolve-se bem em meia-sombra e solo úmido e drenado. É apreciada pelas folhas decorativas e flores."
+      "common_name": "Urtiga manchada",
+      "description": "Lamium maculatum é uma planta perene amante da sombra, com folhas variegadas atraentes. Fácil de cultivar, é adequada para vasos ou cobertura do solo."
     },
     "ar": {
       "common_name": "القراص المرقط",
-      "description": "Lamium maculatum نبات معمر غطائي موطنه أوروبا وغرب آسيا. يفضل الظل الجزئي والتربة الرطبة جيدة التصريف. يُزرع لأوراقه المزخرفة وأزهاره الربيعية."
+      "description": "لاميوم ماكولاتوم هو نبات معمر يحب الظل وله أوراق متنوعه جذابة. سهل النمو ومناسب للأواني أو كغطاء أرضي."
     },
     "hi": {
-      "common_name": "स्पॉटेड डेडनेटल",
-      "description": "Lamium maculatum यूरोप और पश्चिमी एशिया का बहुवर्षीय ग्राउंडकवर पौधा है। यह आंशिक छाया और नम, अच्छी जल निकासी वाली मिट्टी में अच्छा बढ़ता है। इसके सजावटी पत्ते और वसंत फूल प्रसिद्ध हैं।"
+      "common_name": "धब्बेदार डेडनेटल",
+      "description": "लैमियम मैकुलाटम एक छायादार प्रेमी बहुवर्षीय पौधा है जिसकी आकर्षक, विविध पत्तियाँ होती हैं। यह उगाने में आसान है और कंटेनरों या भूमि कवर के रूप में उपयुक्त है।"
     },
     "zh": {
-      "common_name": "斑叶野芝麻",
-      "description": "Lamium maculatum 是原产于欧洲和西亚的多年生地被植物。适合在半阴和湿润、排水良好的土壤中生长。以其斑叶和春季花朵受到喜爱。"
+      "common_name": "斑点死荨麻",
+      "description": "Lamium maculatum 是一种喜阴的多年生植物，具有吸引人的斑驳叶片。它易于种植，适合做容器植物或地面覆盖。"
     },
     "ja": {
-      "common_name": "ラミウム・マクラツム",
-      "description": "Lamium maculatum はヨーロッパと西アジア原産の多年生グラウンドカバーです。半日陰と湿り気のある水はけの良い土壌を好みます。斑入りの葉と春の花が特徴です。"
+      "common_name": "斑点デッドネットル",
+      "description": "Lamium maculatumは日陰を好む多年草で、魅力的な斑入りの葉があります。育てやすく、鉢植えや地面カバーに適しています。"
     },
     "ko": {
-      "common_name": "무늬광대수염",
-      "description": "Lamium maculatum은 유럽과 서아시아 원산의 다년생 지피식물입니다. 반그늘과 배수가 좋은 촉촉한 토양에서 잘 자랍니다. 무늬 잎과 봄꽃으로 알려져 있습니다."
+      "common_name": "반점 데드넷틀",
+      "description": "Lamium maculatum은 그늘을 좋아하는 다년생 식물로, 매력적인 얼룩덜룩한 잎을 가지고 있습니다. 기르기 쉬우며, 화분이나 지면 덮개로 적합합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10235/lamium-maculatum/details",
-      "https://extension.umn.edu/groundcovers/lamium",
-      "https://www.gardenersworld.com/plants/lamium-maculatum/"
+      "https://www.rhs.org.uk/plants/lamium-maculatum",
+      "https://www.gardenia.net/plant/lamium-maculatum"
     ]
   }
 }

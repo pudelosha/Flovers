@@ -1,27 +1,27 @@
 {
-  "external_id": "trigonella_foenum_graecum",
+  "external_id": "trigonella_foenum-graecum",
   "name": "Fenugreek",
   "latin": "Trigonella foenum-graecum",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "trigonella_foenum_graecum.jpg",
   "image_thumb": "trigonella_foenum_graecum.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainé",
-          "it": "Drenante",
-          "es": "Drenado",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期",
-          "ko": "규칙적"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "ري مائي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度に水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैले नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast annual",
-          "pl": "Szybkoroczna",
-          "de": "Schnelljährig",
-          "fr": "Annuelle rapide",
-          "it": "Annuale rapida",
-          "es": "Anual rápida",
-          "pt": "Anual rápida",
-          "ar": "سنوية سريعة",
-          "hi": "तेज़ वार्षिक",
-          "zh": "快速一年生",
-          "ja": "一年草",
-          "ko": "빠른 한해살이"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez le sur-arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Fenugreek",
-      "description": "Fenugreek is an annual herb commonly grown for its aromatic leaves and seeds. It prefers full sun and well-drained soil with regular watering. The plant is easy to grow and often harvested within a few months."
+      "description": "Fenugreek is an herb widely used in cooking and medicine. It has green leaves and small white flowers, followed by small, yellow-brown seeds."
     },
     "pl": {
       "common_name": "Kozieradka",
-      "description": "Kozieradka to jednoroczna roślina zielna uprawiana dla liści i nasion. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Jest łatwa w uprawie i szybko dojrzewa."
+      "description": "Kozieradka to zioło powszechnie wykorzystywane w kuchni i medycynie. Ma zielone liście i małe białe kwiaty, a po nich pojawiają się małe, żółtawo-brązowe nasiona."
     },
     "de": {
       "common_name": "Bockshornklee",
-      "description": "Bockshornklee ist eine einjährige Kräuterpflanze, die für Blätter und Samen genutzt wird. Er wächst am besten in voller Sonne und durchlässigem Boden. Die Pflanze ist pflegeleicht und schnell erntereif."
+      "description": "Bockshornklee ist ein Kraut, das in der Küche und der Medizin weit verbreitet ist. Es hat grüne Blätter und kleine weiße Blüten, gefolgt von kleinen, gelb-braunen Samen."
     },
     "fr": {
       "common_name": "Fenugrec",
-      "description": "Le fenugrec est une plante annuelle cultivée pour ses feuilles et ses graines. Il apprécie le plein soleil et un sol bien drainé. Sa culture est simple et rapide."
+      "description": "Le fenugrec est une herbe largement utilisée en cuisine et en médecine. Il a des feuilles vertes et de petites fleurs blanches, suivies de petites graines jaune-brun."
     },
     "it": {
       "common_name": "Fieno greco",
-      "description": "Il fieno greco è una pianta annuale coltivata per foglie e semi. Cresce bene in pieno sole e terreno drenante. È facile da coltivare e a crescita rapida."
+      "description": "Il fieno greco è un'erba ampiamente utilizzata in cucina e in medicina. Ha foglie verdi e piccoli fiori bianchi, seguiti da piccoli semi giallo-marroni."
     },
     "es": {
-      "common_name": "Fenogreco",
-      "description": "El fenogreco es una hierba anual cultivada por sus hojas y semillas. Prefiere pleno sol y suelo bien drenado. Es fácil de cultivar y de crecimiento rápido."
+      "common_name": "Alholva",
+      "description": "La alholva es una hierba ampliamente utilizada en la cocina y la medicina. Tiene hojas verdes y pequeñas flores blancas, seguidas de pequeñas semillas amarillas y marrones."
     },
     "pt": {
       "common_name": "Feno-grego",
-      "description": "O feno-grego é uma planta anual cultivada pelas folhas e sementes. Desenvolve-se bem em sol pleno e solo drenado. É fácil de cuidar e cresce rapidamente."
+      "description": "O feno-grego é uma erva amplamente utilizada na culinária e medicina. Possui folhas verdes e pequenas flores brancas, seguidas de pequenas sementes amarelo-marrons."
     },
     "ar": {
       "common_name": "الحلبة",
-      "description": "الحلبة نبات عشبي سنوي يزرع من أجل أوراقه وبذوره. يفضل الشمس الكاملة والتربة جيدة التصريف. سهل الزراعة وسريع النمو."
+      "description": "الحلبة هي عشبة تستخدم على نطاق واسع في الطهي والطب. تحتوي على أوراق خضراء وزهور بيضاء صغيرة، تليها بذور صغيرة صفراء-بنية."
     },
     "hi": {
       "common_name": "मेथी",
-      "description": "मेथी एक वार्षिक जड़ी-बूटी है जिसे पत्तियों और बीजों के लिए उगाया जाता है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। यह उगाने में आसान और तेजी से बढ़ती है।"
+      "description": "मेथी एक ऐसी जड़ी-बूटी है जिसका उपयोग रसोई और चिकित्सा में किया जाता है। इसके हरे पत्ते और छोटे सफेद फूल होते हैं, जिनके बाद छोटे पीले-ब्राउन बीज आते हैं।"
     },
     "zh": {
       "common_name": "胡芦巴",
-      "description": "胡芦巴是一年生草本植物，常为叶和种子栽培。它需要充足阳光和良好排水的土壤。生长迅速，易于管理。"
+      "description": "胡芦巴是一种广泛用于烹饪和医学的草药。它有绿色的叶子和小白花，之后是小的黄褐色种子。"
     },
     "ja": {
       "common_name": "フェヌグリーク",
-      "description": "フェヌグリークは葉と種子を利用する一年草です。日当たりと水はけの良い土を好みます。育てやすく成長が早い植物です。"
+      "description": "フェヌグリークは料理と医学で広く使用されるハーブです。緑の葉と小さな白い花があり、その後に小さな黄褐色の種が続きます。"
     },
     "ko": {
-      "common_name": "페뉴그릭",
-      "description": "페뉴그릭은 잎과 씨앗을 위해 재배되는 한해살이 허브입니다. 충분한 햇빛과 배수가 좋은 토양을 선호합니다. 키우기 쉽고 성장 속도가 빠릅니다."
+      "common_name": "호로파",
+      "description": "호로파는 요리와 의학에 널리 사용되는 허브입니다. 녹색 잎과 작은 흰 꽃을 가지고 있으며 그 후 작은 노란 갈색 씨앗이 이어집니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/herbs/fenugreek/grow-your-own",
-      "https://extension.umn.edu/herbs/fenugreek",
-      "https://www.britannica.com/plant/fenugreek"
+      "https://www.gardenersworld.com/plants/fenugreek/",
+      "https://www.thespruce.com/growing-fenugreek-1402836"
     ]
   }
 }

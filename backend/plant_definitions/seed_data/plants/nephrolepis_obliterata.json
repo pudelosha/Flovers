@@ -1,23 +1,23 @@
 {
   "external_id": "nephrolepis_obliterata",
-  "name": "Kimberly Queen Fern",
+  "name": "Nephrolepis obliterata",
   "latin": "Nephrolepis obliterata",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich well-drained",
-          "pl": "Żyzna przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche drainé",
-          "it": "Ricco drenante",
-          "es": "Rico drenado",
-          "pt": "Rico drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ जलनिकासी",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulier",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة منتظمة",
-          "hi": "नियमित नमी",
-          "zh": "保持湿润",
-          "ja": "常に湿り気",
-          "ko": "고르게 물주기"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Regagem média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -126,13 +126,13 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
+          "es": "Humedad alta",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright fast grower",
-          "pl": "Szybko rosnąca",
-          "de": "Schnelles Wachstum",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "성장 빠름"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适中生长",
+          "ja": "中程度の成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Kimberly Queen Fern",
-      "description": "Nephrolepis obliterata is a tropical fern native to Australia. It has upright arching fronds and adapts well to indoor conditions. It prefers consistent moisture and bright indirect light."
+      "common_name": "Lemon Button Fern",
+      "description": "Nephrolepis obliterata, known as the Lemon Button Fern, is a tropical fern commonly grown for its attractive, finely cut fronds. It prefers moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Paproć Kimberly",
-      "description": "Nephrolepis obliterata to tropikalna paproć z Australii. Ma wzniesione, łukowate liście i dobrze rośnie w domu. Wymaga stałej wilgoci i jasnego, rozproszonego światła."
+      "common_name": "Paprotka cytrynowa",
+      "description": "Nephrolepis obliterata, znana jako paprotka cytrynowa, to tropikalna paproć ceniona za swoje dekoracyjne, drobno powcinane liście. Preferuje umiarkowane światło i wysoką wilgotność."
     },
     "de": {
-      "common_name": "Kimberly-Farn",
-      "description": "Nephrolepis obliterata ist ein tropischer Farn aus Australien. Er wächst aufrecht und eignet sich gut für Innenräume. Bevorzugt gleichmäßige Feuchte und indirektes Licht."
+      "common_name": "Lemon Button Farn",
+      "description": "Nephrolepis obliterata, auch bekannt als Lemon Button Farn, ist eine tropische Farnpflanze, die wegen ihrer attraktiven, fein geschnittenen Blätter beliebt ist. Sie bevorzugt mittleres Licht und hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Fougère Kimberly",
-      "description": "Nephrolepis obliterata est une fougère tropicale originaire d’Australie. Elle possède des frondes dressées et s’adapte bien à l’intérieur. Elle aime une humidité constante et une lumière indirecte."
+      "common_name": "Fougère bouton de citron",
+      "description": "Nephrolepis obliterata, connue sous le nom de fougère bouton de citron, est une fougère tropicale cultivée pour ses frondes décoratives finement découpées. Elle préfère une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Felce Kimberly",
-      "description": "Nephrolepis obliterata è una felce tropicale australiana. Ha fronde erette ed è adatta alla coltivazione in casa. Richiede umidità costante e luce indiretta."
+      "common_name": "Felce Lemon Button",
+      "description": "Nephrolepis obliterata, conosciuta come felce Lemon Button, è una felce tropicale apprezzata per le sue foglie finemente tagliate. Preferisce una luce moderata e un'umidità elevata."
     },
     "es": {
-      "common_name": "Helecho Kimberly",
-      "description": "Nephrolepis obliterata es un helecho tropical de Australia. Presenta frondes erguidas y crece bien en interiores. Necesita humedad constante y luz indirecta."
+      "common_name": "Helecho Lemon Button",
+      "description": "Nephrolepis obliterata, conocido como el helecho Lemon Button, es una planta tropical cultivada por sus atractivas frondas finamente recortadas. Prefiere luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Samambaia Kimberly",
-      "description": "Nephrolepis obliterata é uma samambaia tropical da Austrália. Tem frondes eretas e adapta-se bem a interiores. Prefere umidade constante e luz indireta."
+      "common_name": "Samambaia botão de limão",
+      "description": "Nephrolepis obliterata, conhecida como samambaia botão de limão, é uma samambaia tropical apreciada por suas folhas finamente cortadas. Prefere luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "سرخس كيمبرلي",
-      "description": "نبات Nephrolepis obliterata سرخس استوائي موطنه أستراليا. يتميز بأوراق قائمة وينمو جيدًا داخل المنازل. يحتاج إلى رطوبة منتظمة وضوء غير مباشر."
+      "common_name": "سرخس الليمون",
+      "description": "نفروليبس أوبليتراتا، والمعروفة بسرخس الليمون، هي نبات سرخسي استوائي يزرع من أجل أوراقه الجذابة المقطوعة بشكل دقيق. يفضل الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "किम्बरली फर्न",
-      "description": "Nephrolepis obliterata ऑस्ट्रेलिया का उष्णकटिबंधीय फर्न है। इसकी पत्तियाँ सीधी होती हैं और यह घर के अंदर अच्छी तरह बढ़ता है। इसे नियमित नमी और अप्रत्यक्ष रोशनी चाहिए।"
+      "common_name": "नींबू बटन फ़र्न",
+      "description": "नेफ्रोलिप्स ओब्लिटराटा, जिसे नींबू बटन फ़र्न के नाम से जाना जाता है, एक उष्णकटिबंधीय फर्न है जिसे अपनी आकर्षक, बारीक कटी हुई पत्तियों के लिए उगाया जाता है। यह मध्यम प्रकाश और उच्च आर्द्रता पसंद करता है।"
     },
     "zh": {
-      "common_name": "金伯利蕨",
-      "description": "Nephrolepis obliterata 原产于澳大利亚的热带蕨类植物。叶片直立，适合室内栽培。喜欢稳定湿度和明亮散射光。"
+      "common_name": "柠檬纽扣蕨",
+      "description": "Nephrolepis obliterata，俗称柠檬纽扣蕨，是一种热带蕨类植物，以其细致切割的叶子而著名。它喜欢中等光照和高湿度。"
     },
     "ja": {
-      "common_name": "キンバリーシダ",
-      "description": "Nephrolepis obliterata はオーストラリア原産の熱帯性シダです。直立した葉を持ち、室内で育てやすいです。一定の湿度と間接光を好みます。"
+      "common_name": "レモンボタンシダ",
+      "description": "Nephrolepis obliterata、レモンボタンシダとして知られるこの植物は、魅力的な細かく切られた葉を持つ熱帯のシダです。中程度の光と高い湿度を好みます。"
     },
     "ko": {
-      "common_name": "킴벌리 고사리",
-      "description": "Nephrolepis obliterata는 호주 원산의 열대 양치식물입니다. 잎이 곧게 자라며 실내 재배에 적합합니다. 일정한 수분과 간접광을 선호합니다."
+      "common_name": "레몬버튼고사리",
+      "description": "Nephrolepis obliterata, 레몬버튼고사리로 알려진 이 식물은 매력적인 섬세하게 잘린 잎 때문에 열대 고사리로 재배됩니다. 이 식물은 중간 정도의 빛과 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11167/nephrolepis-obliterata/details",
-      "https://edis.ifas.ufl.edu/publication/FP398",
-      "https://www.gardenia.net/plant/nephrolepis-obliterata-kimberly-queen-fern"
+      "https://www.rhs.org.uk/plants/nephrolepis-obliterata",
+      "https://www.botanicalgarden.ubc.ca/fern/nephrolepis-obliterata/"
     ]
   }
 }

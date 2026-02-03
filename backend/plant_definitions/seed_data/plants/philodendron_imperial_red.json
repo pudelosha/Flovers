@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "philodendron_imperial_red.jpg",
   "image_thumb": "philodendron_imperial_red.jpg",
   "traits": [
@@ -37,8 +37,8 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等光线",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
           "ja": "中程度の光",
           "ko": "중간 빛"
         }
@@ -49,17 +49,17 @@
       "value": {
         "text": {
           "en": "Aroid mix",
-          "pl": "Mieszanka aroid",
-          "de": "Aroid-Mix",
-          "fr": "Mélange aroid",
-          "it": "Miscela aroid",
-          "es": "Mezcla aroid",
-          "pt": "Mistura aroid",
-          "ar": "خليط ايرود",
-          "hi": "एरॉयड मिश्रण",
-          "zh": "天南星混合土",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange pour aroides",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "خليط للآرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊混合土",
           "ja": "アロイドミックス",
-          "ko": "아로이드 혼합 토양"
+          "ko": "아로이드 혼합토"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
+          "de": "Mäßige Bewässerung",
           "fr": "Arrosage modéré",
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Rega moderada",
+          "pt": "Regagem moderada",
           "ar": "سقي معتدل",
-          "hi": "मध्यम पानी देना",
+          "hi": "मध्यम पानी",
           "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -91,12 +91,12 @@
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
-          "es": "Medio",
-          "pt": "Médio",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°C",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -150,8 +150,8 @@
           "it": "Tossico per gli animali",
           "es": "Tóxico para mascotas",
           "pt": "Tóxico para animais de estimação",
-          "ar": "سام للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषैला",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
           "ko": "반려동물에게 독성"
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Moderate growth",
-          "pl": "Średni wzrost",
-          "de": "Mittlere Wachstumsrate",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
           "fr": "Croissance modérée",
           "it": "Crescita moderata",
           "es": "Crecimiento moderado",
           "pt": "Crescimento moderado",
           "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 성장"
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie przelać",
+          "de": "Nicht überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No sobrehidratar",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Philodendron Imperial Red",
-      "description": "Philodendron Imperial Red is a striking tropical plant with dark red and green foliage. It thrives in medium light and requires moderate watering and high humidity."
+      "description": "Philodendron Imperial Red is an attractive, evergreen houseplant with dark red leaves and a unique color palette. It thrives in moderate light and high humidity."
     },
     "pl": {
       "common_name": "Filodendron Imperial Red",
-      "description": "Filodendron Imperial Red to uderzający tropikalny kwiat o ciemnoczerwonych i zielonych liściach. Wymaga umiarkowanego podlewania i wysokiej wilgotności."
+      "description": "Filodendron Imperial Red to atrakcyjna roślina doniczkowa o ciemnoczerwonych liściach. Rośnie najlepiej w umiarkowanym świetle i wysokiej wilgotności."
     },
     "de": {
       "common_name": "Philodendron Imperial Red",
-      "description": "Philodendron Imperial Red ist eine auffällige tropische Pflanze mit dunkelroten und grünen Blättern. Sie gedeiht bei mittlerem Licht und benötigt mäßige Bewässerung und hohe Luftfeuchtigkeit."
+      "description": "Der Philodendron Imperial Red ist eine attraktive Zimmerpflanze mit dunkelroten Blättern. Er gedeiht am besten bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
       "common_name": "Philodendron Imperial Red",
-      "description": "Le Philodendron Imperial Red est une plante tropicale saisissante aux feuilles rouges foncées et vertes. Il préfère une lumière modérée et nécessite un arrosage modéré ainsi qu'une humidité élevée."
+      "description": "Le Philodendron Imperial Red est une plante d'intérieur attrayante avec des feuilles rouges foncées. Il se développe dans une lumière modérée et une humidité élevée."
     },
     "it": {
       "common_name": "Philodendron Imperial Red",
-      "description": "Il Philodendron Imperial Red è una pianta tropicale sorprendente con foglie rosso scuro e verdi. Cresce bene con luce media e necessita di irrigazione moderata e alta umidità."
+      "description": "Il Philodendron Imperial Red è una pianta d'appartamento attraente con foglie rosse scure. Cresce al meglio in luce moderata e umidità elevata."
     },
     "es": {
       "common_name": "Philodendron Imperial Red",
-      "description": "El Philodendron Imperial Red es una planta tropical llamativa con hojas rojas y verdes. Prefiere luz media y requiere riego moderado y alta humedad."
+      "description": "El Philodendron Imperial Red es una planta de interior atractiva con hojas de color rojo oscuro. Crece mejor con luz moderada y alta humedad."
     },
     "pt": {
       "common_name": "Philodendron Imperial Red",
-      "description": "O Philodendron Imperial Red é uma planta tropical impressionante com folhas vermelhas escuras e verdes. Cresce bem em luz média e necessita de rega moderada e alta umidade."
+      "description": "O Philodendron Imperial Red é uma planta de interior atraente com folhas vermelhas escuras. Cresce melhor com luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "فيلوديندرون إمبيريال ريد",
-      "description": "فيلوديندرون إمبيريال ريد هو نبات استوائي مدهش ذو أوراق حمراء داكنة وخضراء. ينمو جيدًا في الضوء المتوسط ويتطلب ري معتدل ورطوبة عالية."
+      "common_name": "فيلوديندرون إمبريال ريد",
+      "description": "الفيلوديندرون إمبريال ريد هو نبات منزلي جذاب بأوراق حمراء داكنة. ينمو بشكل أفضل في ضوء معتدل ورطوبة عالية."
     },
     "hi": {
-      "common_name": "फिलोडेंड्रोन इम्पीरियल रेड",
-      "description": "फिलोडेंड्रोन इम्पीरियल रेड एक शानदार उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहरे लाल और हरे रंग की होती हैं। इसे मध्यम रोशनी की आवश्यकता होती है और यह मध्यम पानी और उच्च आर्द्रता में उगता है।"
+      "common_name": "फिलोडेन्ड्रोन इम्पीरियल रेड",
+      "description": "फिलोडेन्ड्रोन इम्पीरियल रेड एक आकर्षक हाउसप्लांट है जिसकी पत्तियाँ गहरे लाल रंग की होती हैं। यह मध्यम प्रकाश और उच्च आर्द्रता में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "帝王红龟背竹",
-      "description": "帝王红龟背竹是一种引人注目的热带植物，拥有深红色和绿色的叶子。它适应中等光照，需适度浇水和较高的湿度。"
+      "common_name": "帝王红斑节草",
+      "description": "帝王红斑节草是一种迷人的室内植物，具有深红色的叶子。在中等光照和高湿度环境中生长良好。"
     },
     "ja": {
-      "common_name": "フィロデンドロン・インペリアルレッド",
-      "description": "フィロデンドロン・インペリアルレッドは、ダークレッドとグリーンの葉を持つ印象的な熱帯植物です。中程度の光を好み、適度な水やりと高い湿度が必要です。"
+      "common_name": "フィロデンドロン・インペリアル・レッド",
+      "description": "フィロデンドロン・インペリアル・レッドは、深紅の葉を持つ魅力的な室内植物です。中程度の光と高湿度で最適に育ちます。"
     },
     "ko": {
       "common_name": "필로덴드론 임페리얼 레드",
-      "description": "필로덴드론 임페리얼 레드는 짙은 빨간색과 초록색 잎을 가진 눈에 띄는 열대 식물입니다. 중간 정도의 빛에서 잘 자라며 적당한 급수와 높은 습도를 필요로 합니다."
+      "description": "필로덴드론 임페리얼 레드는 짙은 붉은색 잎을 가진 매력적인 실내 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/phillodendron-imperial-red",
-      "https://www.houzz.com/photos/philo-imperial-red-care"
+      "https://www.abc-gardening.com/philodendron-imperial-red-care",
+      "https://www.houseplant411.com/philodendron-imperial-red/"
     ]
   }
 }

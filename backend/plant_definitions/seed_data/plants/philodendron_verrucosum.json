@@ -12,12 +12,12 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium light",
-          "pl": "średnie światło",
-          "de": "mittleres Licht",
-          "fr": "lumière moyenne",
-          "it": "luce media",
-          "es": "luz media",
-          "pt": "luz média",
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
           "ar": "ضوء متوسط",
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 광선"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-drained",
-          "pl": "dobrze przepuszczalna",
-          "de": "gut durchlässig",
-          "fr": "bien drainé",
-          "it": "ben drenato",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "جيد الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好排水",
-          "ja": "良好排水",
-          "ko": "양호한 배수"
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidowa",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange aroid",
+          "it": "Miscela aroid",
+          "es": "Mezcla aroid",
+          "pt": "Mistura aroid",
+          "ar": "مزيج الأيرود",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊土壤",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowane",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Creeping Philodendron",
-      "description": "Philodendron verrucosum is a tropical vine with velvety, heart-shaped leaves. Known for its striking veins, it thrives in humid conditions."
+      "common_name": "Velvet Leaf Philodendron",
+      "description": "Philodendron verrucosum is a tropical plant known for its velvety, heart-shaped leaves. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Filodendron brodawkowaty",
-      "description": "Filodendron verrucosum to tropikalna roślina pnąca o aksamitnych, sercowatych liściach. Charakteryzuje się wyraźnymi żyłkami i wymaga wilgotnych warunków."
+      "common_name": "Filodendron verrucosum",
+      "description": "Filodendron verrucosum to tropikalna roślina o aksamitnych, sercowatych liściach. Dobrze rośnie w umiarkowanym świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Warziger Philodendron",
-      "description": "Philodendron verrucosum ist eine tropische Kletterpflanze mit samtigen, herzförmigen Blättern. Es liebt feuchte Bedingungen und hat markante Adern."
+      "common_name": "Velvetblatt-Philodendron",
+      "description": "Der Philodendron verrucosum ist eine tropische Pflanze mit samtigen, herzförmigen Blättern. Er gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Philodendron verruqueux",
-      "description": "Le Philodendron verrucosum est une plante grimpante tropicale aux feuilles en forme de cœur, veloutées et aux nervures frappantes."
+      "common_name": "Philodendron velours",
+      "description": "Le Philodendron verrucosum est une plante tropicale connue pour ses feuilles veloutées en forme de cœur. Elle se plaît à la lumière modérée et dans une humidité élevée."
     },
     "it": {
-      "common_name": "Philodendron verrucoso",
-      "description": "Il Philodendron verrucosum è una pianta rampicante tropicale con foglie vellutate a forma di cuore, caratterizzate da venature evidenti."
+      "common_name": "Philodendron vellutato",
+      "description": "Il Philodendron verrucosum è una pianta tropicale nota per le sue foglie vellutate a forma di cuore. Cresce bene in luce media e umidità elevata."
     },
     "es": {
-      "common_name": "Philodendron verrucoso",
-      "description": "El Philodendron verrucosum es una planta trepadora tropical con hojas aterciopeladas en forma de corazón y venas prominentes."
+      "common_name": "Philodendron de hojas aterciopeladas",
+      "description": "El Philodendron verrucosum es una planta tropical conocida por sus hojas aterciopeladas en forma de corazón. Se desarrolla bien en luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Philodendron verrucoso",
-      "description": "Philodendron verrucosum é uma planta trepadeira tropical com folhas aveludadas em forma de coração e veias proeminentes."
+      "common_name": "Philodendron de folhas aveludadas",
+      "description": "O Philodendron verrucosum é uma planta tropical conhecida por suas folhas aveludadas em forma de coração. Ela cresce bem em luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "فلودندرون فوروكوسوم",
-      "description": "الفلودندرون فوروكوسوم هو نبات تسلق استوائي بأوراق مخملية على شكل قلب وعروق بارزة."
+      "common_name": "الفيلودندرون المخملي",
+      "description": "الفيلودندرون فيروكوزوم هو نبات استوائي يعرف بأوراقه المخملية على شكل قلب. ينمو جيدًا في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "फिलोडेंड्रोन वेरीकोसुम",
-      "description": "फिलोडेंड्रोन वेरीकोसुम एक उष्णकटिबंधीय लताओं वाली पौधा है, जिसके मखमली, दिल के आकार के पत्ते होते हैं और इसकी नसें स्पष्ट होती हैं।"
+      "common_name": "वेलवेट लीफ फिलोडेंड्रोन",
+      "description": "फिलोडेंड्रोन वेर्रुकोसुम एक उष्णकटिबंधीय पौधा है जो अपनी मखमली, दिल के आकार की पत्तियों के लिए जाना जाता है। यह मध्यम रोशनी और उच्च आर्द्रता में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "毛茸毛爬山虎",
-      "description": "Philodendron verrucosum 是一种热带藤本植物，具有天鹅绒般的心形叶子，显著的脉络。"
+      "common_name": "天鹅绒叶菲洛藤",
+      "description": "Philodendron verrucosum 是一种热带植物，以其天鹅绒般的心形叶片而闻名。它在中等光照和高湿度下生长良好。"
     },
     "ja": {
-      "common_name": "フィロデンドロン・ヴェルルコスム",
-      "description": "フィロデンドロン・ヴェルルコスムは、ベルベットのような心形の葉と特徴的な静脈を持つ熱帯性のつる植物です。"
+      "common_name": "ベルベットリーフフィロデンドロン",
+      "description": "Philodendron verrucosumは、ベルベットのようなハート型の葉を持つ熱帯植物です。中程度の光と高い湿度でよく成長します。"
     },
     "ko": {
-      "common_name": "필로덴드론 베루코숨",
-      "description": "필로덴드론 베루코숨은 벨벳 같은 심장 모양의 잎을 가진 열대성 덩굴 식물로 뚜렷한 맥이 있습니다."
+      "common_name": "벨벳잎 필로덴드론",
+      "description": "Philodendron verrucosum은 벨벳 같은 심장 모양의 잎을 가진 열대 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/philodendron-verrucosum",
-      "https://www.gardenia.net/plant/philodendron-verrucosum"
+      "https://www.gardenersworld.com/plants/philodendron-verrucosum-care/"
     ]
   }
 }

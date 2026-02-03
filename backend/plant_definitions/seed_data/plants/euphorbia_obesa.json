@@ -1,25 +1,25 @@
 {
   "external_id": "euphorbia_obesa",
-  "name": "Baseball Plant",
+  "name": "Baseball plant",
   "latin": "Euphorbia obesa",
   "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "euphorbia_obesa.jpg",
   "image_thumb": "euphorbia_obesa.jpg",
   "traits": [
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct sun",
-          "pl": "Jasne pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Sol pleno",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "तेज़ धूप",
-          "zh": "强烈阳光",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -46,17 +46,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenante",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
+          "en": "Fast-draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い土",
           "ko": "배수 좋은 흙"
         }
       }
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり少なめ",
-          "ko": "물 적게"
+          "en": "Water when dry",
+          "pl": "Podlej po wysch.",
+          "de": "Gießen wenn trocken",
+          "fr": "Arroser à sec",
+          "it": "Annaffia a secco",
+          "es": "Riega cuando seque",
+          "pt": "Regar quando seco",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마른 뒤 물"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "易养护",
-          "ja": "育てやすい",
-          "ko": "쉬움"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchte",
+          "en": "Low humidity OK",
+          "pl": "Niska wilg. OK",
+          "de": "Geringe Luft OK",
           "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "it": "Bassa umidità OK",
+          "es": "Baja humedad OK",
+          "pt": "Baixa umid. OK",
+          "ar": "رطوبة منخفضة OK",
+          "hi": "कम नमी ठीक",
+          "zh": "低湿度可",
+          "ja": "低湿度でOK",
+          "ko": "낮은 습도 OK"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic latex sap",
+          "en": "Toxic sap",
           "pl": "Toksyczny sok",
-          "de": "Giftiger Milchsaft",
+          "de": "Giftiger Saft",
           "fr": "Sève toxique",
           "it": "Linfa tossica",
           "es": "Savia tóxica",
           "pt": "Seiva tóxica",
           "ar": "عصارة سامة",
           "hi": "विषैला रस",
-          "zh": "有毒乳汁",
-          "ja": "有毒な樹液",
-          "ko": "독성 수액"
+          "zh": "汁液有毒",
+          "ja": "樹液は有毒",
+          "ko": "수액 유독"
         }
       }
     },
@@ -160,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Very slow growth",
-          "pl": "Bardzo wolny wzrost",
-          "de": "Sehr langsames Wachstum",
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमी बढ़त",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "ja": "成長はゆっくり",
+          "ko": "느린 생장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Ryzyko zgnilizny",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Riesgo de pudrición",
+          "pt": "Risco de apodrecer",
+          "ar": "تعفن مع زيادة الماء",
+          "hi": "सड़न का खतरा",
+          "zh": "易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkod.",
+          "de": "Gelegentliche Schäd.",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "害虫はまれ",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Baseball Plant",
-      "description": "Euphorbia obesa is a spherical succulent native to South Africa. It stores water in its stem and requires bright sunlight with minimal watering. The plant contains toxic milky sap."
+      "common_name": "Baseball plant",
+      "description": "A slow-growing, globular succulent from South Africa. Give bright light and a very free-draining mix, watering only after the soil dries fully. The milky sap is toxic and can irritate skin and eyes."
     },
     "pl": {
-      "common_name": "Wilczomlecz obły",
-      "description": "Euphorbia obesa to kulisty sukulent z Afryki Południowej. Gromadzi wodę w pędzie i wymaga dużo światła oraz rzadkiego podlewania. Zawiera toksyczny mleczny sok."
+      "common_name": "Wilczomlecz obesa",
+      "description": "Wolno rosnący, kulisty sukulent z Afryki Południowej. Zapewnij jasne światło i bardzo przepuszczalne podłoże, podlewając dopiero po całkowitym przeschnięciu. Mleczny sok jest toksyczny i drażniący."
     },
     "de": {
       "common_name": "Baseball-Wolfsmilch",
-      "description": "Euphorbia obesa ist eine kugelförmige Sukkulente aus Südafrika. Sie speichert Wasser im Stamm und braucht viel Sonne sowie wenig Wasser. Der Milchsaft ist giftig."
+      "description": "Langsam wachsender, kugeliger Sukkulent aus Südafrika. Sehr hell stellen und in stark durchlässigem Substrat kultivieren, erst gießen wenn alles trocken ist. Der Milchsaft ist giftig und reizend."
     },
     "fr": {
       "common_name": "Euphorbe obèse",
-      "description": "Euphorbia obesa est une succulente sphérique originaire d’Afrique du Sud. Elle stocke l’eau dans sa tige et nécessite beaucoup de soleil et peu d’arrosage. Sa sève est toxique."
+      "description": "Succulente globuleuse à croissance lente originaire d'Afrique du Sud. Offrez une lumière vive et un substrat très drainant, en arrosant seulement quand tout est sec. Le latex est toxique et irritant."
     },
     "it": {
       "common_name": "Euforbia obesa",
-      "description": "Euphorbia obesa è una succulenta sferica originaria del Sudafrica. Accumula acqua nel fusto e richiede molta luce e poche annaffiature. La linfa è tossica."
+      "description": "Succulenta globosa a crescita lenta originaria del Sudafrica. Tanta luce e substrato molto drenante, annaffiando solo a terreno completamente asciutto. Il lattice è tossico e irritante."
     },
     "es": {
       "common_name": "Euforbia obesa",
-      "description": "Euphorbia obesa es una suculenta esférica nativa de Sudáfrica. Almacena agua en el tallo y necesita mucho sol con riego mínimo. Su savia es tóxica."
+      "description": "Suculenta globosa de crecimiento lento originaria de Sudáfrica. Requiere luz brillante y sustrato muy drenante, regando solo cuando el sustrato esté completamente seco. La savia lechosa es tóxica e irritante."
     },
     "pt": {
       "common_name": "Eufórbia obesa",
-      "description": "Euphorbia obesa é uma suculenta esférica da África do Sul. Armazena água no caule e precisa de sol intenso e pouca rega. A seiva é tóxica."
+      "description": "Suculenta globosa de crescimento lento da África do Sul. Prefere luz intensa e substrato bem drenante, regando apenas quando estiver totalmente seco. A seiva leitosa é tóxica e irritante."
     },
     "ar": {
-      "common_name": "الفربيون الكروي",
-      "description": "الفربيون الكروي نبات عصاري كروي من جنوب أفريقيا. يخزن الماء في الساق ويحتاج إلى شمس قوية وري قليل. العصارة اللبنية سامة."
+      "common_name": "يوفوربيا أوبسا",
+      "description": "نبات عصاري كروي بطيء النمو من جنوب أفريقيا. يحتاج لضوء ساطع وتربة جيدة الصرف مع ريّ فقط بعد جفاف التربة تمامًا. العصارة اللبنية سامة وقد تهيّج الجلد والعينين."
     },
     "hi": {
-      "common_name": "बेसबॉल पौधा",
-      "description": "यूफोर्बिया ओबेसा दक्षिण अफ्रीका का गोलाकार रसीला पौधा है। यह तने में पानी संचित करता है और तेज़ धूप व कम पानी चाहता है। इसका रस विषैला होता है।"
+      "common_name": "यूफोरबिया ओबेसा",
+      "description": "दक्षिण अफ्रीका का धीमी वृद्धि वाला गोलाकार सक्युलेंट। तेज़ रोशनी और बहुत अच्छी जलनिकासी वाली मिट्टी दें, और केवल पूरी तरह सूखने पर पानी दें। इसका दूधिया रस विषैला और त्वचा/आँखों को चुभने वाला हो सकता है।"
     },
     "zh": {
       "common_name": "棒球大戟",
-      "description": "棒球大戟原产于南非，是一种球形多肉植物。它在茎中储水，需强光和少量浇水。其乳汁具有毒性。"
+      "description": "原产南非的球形多肉，生长缓慢。需明亮光照与高排水基质，盆土完全干透后再浇水。乳白色汁液有毒，可能刺激皮肤和眼睛。"
     },
     "ja": {
-      "common_name": "オベサ",
-      "description": "ユーフォルビア・オベサは南アフリカ原産の球状多肉植物です。茎に水を蓄え、強い日光と少ない水を好みます。樹液は有毒です。"
+      "common_name": "ユーフォルビア・オベサ",
+      "description": "南アフリカ原産の球状で成長が遅い多肉植物。明るい光と水はけの良い用土で育て、用土が完全に乾いてから水やりします。白い樹液は有毒で皮膚や目を刺激します。"
     },
     "ko": {
-      "common_name": "야구공 유포르비아",
-      "description": "유포르비아 오베사는 남아프리카 원산의 구형 다육식물입니다. 줄기에 물을 저장하며 강한 햇빛과 적은 물을 필요로 합니다. 수액은 독성이 있습니다."
+      "common_name": "야구공 대극",
+      "description": "남아프리카 원산의 구형 다육으로 성장 속도가 느립니다. 밝은 빛과 배수가 좋은 흙을 쓰고, 흙이 완전히 마른 뒤에만 물을 줍니다. 하얀 수액은 독성이 있어 피부와 눈을 자극할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/euphorbia-obesa",
-      "https://www.rhs.org.uk/plants/5141/euphorbia-obesa/details",
-      "https://www.succulentsandsunshine.com/types-of-succulents/euphorbia-obesa/"
+      "https://www.rhs.org.uk/plants/7075/euphorbia-obesa/details",
+      "https://www.rhs.org.uk/plants/euphorbia/indoor-greenhouse",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:347540-1",
+      "https://www.gardenia.net/plant/euphorbia-obesa-baseball-plant"
     ]
   }
 }

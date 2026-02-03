@@ -1,17 +1,18 @@
 {
   "external_id": "sansevieria_masoniana",
-  "name": "Whale Fin",
+  "name": "Mason's Snake Plant",
   "latin": "Sansevieria masoniana",
   "sun": "medium",
   "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -36,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 밝기"
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
+          "en": "Well-drained",
           "pl": "Dobrze przepuszczalna",
           "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenante",
+          "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
           "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "良好的排水",
-          "ja": "排水良好",
-          "ko": "배수 좋은"
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low water",
-          "pl": "Niska wilgotność",
-          "de": "Wenig Wasser",
-          "fr": "Peu d'eau",
+          "en": "Low watering",
+          "pl": "Mało podlewania",
+          "de": "Wenig gießen",
+          "fr": "Peu d'arrosage",
           "it": "Poca acqua",
-          "es": "Poca agua",
-          "pt": "Água baixa",
-          "ar": "ماء قليل",
-          "hi": "कम पानी",
-          "zh": "少水",
-          "ja": "水やり少なめ",
-          "ko": "물 적게"
+          "es": "Poco riego",
+          "pt": "Pouca rega",
+          "ar": "قليل من الري",
+          "hi": "कम पानी देना",
+          "zh": "少量浇水",
+          "ja": "少なめの水やり",
+          "ko": "적은 물 주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittelschwer",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "अविषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -161,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Whale Fin",
-      "description": "Sansevieria masoniana, also known as Whale Fin, is a striking succulent with broad, dark green leaves speckled with lighter shades. It thrives in bright indirect light and requires minimal water, making it an excellent choice for indoor spaces."
+      "common_name": "Mason's Snake Plant",
+      "description": "Sansevieria masoniana is a slow-growing, low-maintenance plant. It thrives in medium light and requires minimal watering."
     },
     "pl": {
-      "common_name": "Płetwa wieloryba",
-      "description": "Sansevieria masoniana, znana jako Płetwa wieloryba, to uderzający sukulent o szerokich, ciemnozielonych liściach z jaśniejszymi plamkami. Rośnie w świetle rozproszonym i wymaga minimalnego podlewania, co czyni ją doskonałym wyborem do wnętrz."
+      "common_name": "Wąż Masona",
+      "description": "Sansevieria masoniana to roślina wolno rosnąca, mało wymagająca. Lubi średnie światło i wymaga minimalnego podlewania."
     },
     "de": {
-      "common_name": "Walflossen-Sansevieria",
-      "description": "Sansevieria masoniana, auch als Walflossen-Sansevieria bekannt, ist eine auffällige Sukkulente mit breiten, dunkelgrünen Blättern, die mit helleren Flecken gesprenkelt sind. Sie gedeiht bei indirektem Licht und benötigt nur wenig Wasser, was sie zu einer ausgezeichneten Wahl für Innenräume macht."
+      "common_name": "Masons Schlangenpflanze",
+      "description": "Sansevieria masoniana ist eine langsam wachsende, pflegeleichte Pflanze. Sie bevorzugt mittleres Licht und benötigt nur wenig Wasser."
     },
     "fr": {
-      "common_name": "Sansevieria Whale Fin",
-      "description": "Sansevieria masoniana, également connue sous le nom de Whale Fin, est une succulente frappante avec de grandes feuilles vertes foncées parsemées de taches plus claires. Elle prospère dans une lumière indirecte et nécessite peu d'eau, ce qui en fait un excellent choix pour les espaces intérieurs."
+      "common_name": "Plante serpent de Mason",
+      "description": "Sansevieria masoniana est une plante à croissance lente et à faible entretien. Elle préfère la lumière moyenne et nécessite peu d'arrosage."
     },
     "it": {
-      "common_name": "Sansevieria Whale Fin",
-      "description": "Sansevieria masoniana, nota anche come Whale Fin, è una succulenta impressionante con ampie foglie verde scuro macchiate di sfumature più chiare. Cresce in luce indiretta e richiede poca acqua, rendendola una scelta eccellente per gli spazi interni."
+      "common_name": "Pianta serpente di Mason",
+      "description": "Sansevieria masoniana è una pianta a crescita lenta e facile da curare. Cresce bene con luce media e richiede poca acqua."
     },
     "es": {
-      "common_name": "Sansevieria Whale Fin",
-      "description": "Sansevieria masoniana, también conocida como Whale Fin, es una suculenta llamativa con hojas anchas y de color verde oscuro, salpicadas de tonos más claros. Prosperan con luz indirecta y requieren poca agua, lo que la convierte en una excelente opción para interiores."
+      "common_name": "Planta serpiente de Mason",
+      "description": "Sansevieria masoniana es una planta de crecimiento lento y bajo mantenimiento. Prefiere luz media y requiere poca agua."
     },
     "pt": {
-      "common_name": "Sansevieria Whale Fin",
-      "description": "Sansevieria masoniana, também conhecida como Whale Fin, é uma suculenta impressionante com folhas largas e verde-escuras salpicadas de tons mais claros. Cresce em luz indireta e necessita de pouca água, tornando-a uma excelente escolha para interiores."
+      "common_name": "Planta cobra de Mason",
+      "description": "Sansevieria masoniana é uma planta de crescimento lento e de fácil manutenção. Prefere luz média e precisa de pouca água."
     },
     "ar": {
-      "common_name": "السانسيفيريا ذو الزعنفة الحوتية",
-      "description": "سانسيفيريا ماسونيانا، والمعروفة أيضًا باسم الزعنفة الحوتية، هي نبتة عصارية رائعة ذات أوراق خضراء داكنة عريضة مرقطة بدرجات لونية أفتح. تزدهر في الضوء غير المباشر وتحتاج إلى ماء قليل، مما يجعلها خيارًا ممتازًا للمساحات الداخلية."
+      "common_name": "نبات ثعبان ميسون",
+      "description": "Sansevieria masoniana هو نبات بطيء النمو وسهل الصيانة. يفضل الضوء المتوسط ويتطلب سقاية قليلة."
     },
     "hi": {
-      "common_name": "व्हेल फिन",
-      "description": "सांसेवेरिया मसोनियाना, जिसे व्हेल फिन के नाम से भी जाना जाता है, एक आकर्षक सक्युलेंट है जिसकी चौड़ी, गहरी हरी पत्तियाँ हलके रंग की धब्बों से स्पॉटेड होती हैं। यह अप्रत्यक्ष प्रकाश में अच्छी तरह से बढ़ती है और कम पानी की आवश्यकता होती है, जो इसे अंदरूनी स्थानों के लिए एक उत्कृष्ट विकल्प बनाता है।"
+      "common_name": "मासन्स स्नेक प्लांट",
+      "description": "Sansevieria masoniana एक धीमी वृद्धि वाला, कम देखभाल वाला पौधा है। यह मध्यम प्रकाश में बढ़ता है और कम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "鲸鳍蛇尾兰",
-      "description": "Sansevieria masoniana，也叫鲸鳍蛇尾兰，是一种引人注目的多肉植物，具有宽大的深绿色叶子，叶片上有较浅的斑点。它在间接光下茁壮成长，需要较少的水分，非常适合室内种植。"
+      "common_name": "梅森蛇植物",
+      "description": "Sansevieria masoniana 是一种生长缓慢、易于维护的植物。它喜欢中等光照，并需要较少的水。"
     },
     "ja": {
-      "common_name": "ホエールフィンサンスベリア",
-      "description": "Sansevieria masoniana（ホエールフィンサンスベリア）は、広くて深緑色の葉に明るい斑点がある印象的な多肉植物です。間接的な光でよく育ち、水をあまり必要としないため、室内に最適です。"
+      "common_name": "メイソンのサンセベリア",
+      "description": "Sansevieria masoniana は成長が遅く、手入れが簡単な植物です。中程度の光を好み、少量の水で育ちます。"
     },
     "ko": {
-      "common_name": "고래지느러미산세베리아",
-      "description": "Sansevieria masoniana, 고래지느러미산세베리아로도 알려져 있으며, 넓고 짙은 녹색의 잎에 더 밝은 색의 반점이 있는 인상적인 다육식물입니다. 간접광에서 잘 자라며 물을 적게 필요로 하여 실내 공간에 적합한 선택입니다."
+      "common_name": "메이슨의 뱀 식물",
+      "description": "Sansevieria masoniana는 성장 속도가 느리고 관리가 쉬운 식물입니다. 중간 정도의 빛을 선호하며 물은 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/sansevieria-masoniana",
-      "https://www.rhs.org.uk/plants/sansevieria-masoniana"
+      "https://www.ncbi.nlm.nih.gov/plantinfo/sansevieria",
+      "https://www.gardenia.net/plant/sansevieria-masoniana"
     ]
   }
 }

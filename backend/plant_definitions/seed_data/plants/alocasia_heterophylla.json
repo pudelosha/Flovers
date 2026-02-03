@@ -1,13 +1,12 @@
 {
   "external_id": "alocasia_heterophylla",
-  "name": "Alocasia Heterophylla",
+  "name": "Heterophylla alocasia",
   "latin": "Alocasia heterophylla",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
@@ -15,10 +14,10 @@
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 14,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_heterophylla.jpg",
@@ -28,16 +27,16 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło pośrednie",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive indirecte",
-          "it": "Luce intensa indiretta",
-          "es": "Luz brillante indirecta",
-          "pt": "Luz indireta brilhante",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮的散射光",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy aroid mix",
-          "pl": "Przewiewna mieszanka",
-          "de": "Lockeres Aroid-Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
+          "en": "Aroid mix, airy",
+          "pl": "Przewiewne aroid",
+          "de": "Aroid-Mix, luftig",
+          "fr": "Mélange aroid aéré",
+          "it": "Mix aroid arioso",
+          "es": "Mezcla aroid aireada",
+          "pt": "Mistura aroid leve",
+          "ar": "خليط أرويد مهوي",
+          "hi": "एरॉइड मिक्स, हवादार",
           "zh": "疏松的天南星土",
-          "ja": "通気性の良い土",
-          "ko": "통기성 좋은 흙"
+          "ja": "通気の良い土",
+          "ko": "배수 좋은 아로이드"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Utrzymuj wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol légèrement humide",
-          "it": "Terreno umido",
-          "es": "Mantener húmedo",
-          "pt": "Manter úmido",
-          "ar": "تربة رطبة باستمرار",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持均匀湿润",
-          "ja": "均一に湿らせる",
-          "ko": "항상 촉촉하게"
+          "en": "Slightly moist",
+          "pl": "Lekko wilgotno",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी",
+          "zh": "保持微湿",
+          "ja": "やや湿らせる",
+          "ko": "약간 촉촉"
         }
       }
     },
@@ -86,17 +85,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Pflegeaufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
-          "ko": "중간 난이도"
+          "pl": "Średnia trudność",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–28°C",
-          "pl": "18–28°C",
-          "de": "18–28°C",
-          "fr": "18–28°C",
-          "it": "18–28°C",
-          "es": "18–28°C",
-          "pt": "18–28°C",
-          "ar": "18–28°م",
-          "hi": "18–28°C",
-          "zh": "18–28°C",
-          "ja": "18–28℃",
-          "ko": "18–28°C"
+          "en": "16–30°C",
+          "pl": "16–30°C",
+          "de": "16–30°C",
+          "fr": "16–30°C",
+          "it": "16–30°C",
+          "es": "16–30°C",
+          "pt": "16–30°C",
+          "ar": "16–30°م",
+          "hi": "16–30°C",
+          "zh": "16–30°C",
+          "ja": "16–30°C",
+          "ko": "16–30°C"
         }
       }
     },
@@ -128,12 +127,12 @@
           "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
-          "ja": "高い湿度",
+          "ja": "高湿度",
           "ko": "높은 습도"
         }
       }
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique pour animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica para pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू जानवरों के लिए विषैली",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에 유독"
+          "en": "Toxic (oxalates)",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
         }
       }
     },
@@ -161,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping foliage",
-          "pl": "Kępiasty wzrost",
-          "de": "Horstbildend",
-          "fr": "Port en touffe",
-          "it": "Crescita a cespi",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو متكتل",
-          "hi": "झाड़ीदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "군생 성장"
+          "en": "Slow–moderate",
+          "pl": "Wolny–średni",
+          "de": "Langsam–mittel",
+          "fr": "Lente–moyenne",
+          "it": "Lenta–media",
+          "es": "Lento–medio",
+          "pt": "Lento–médio",
+          "ar": "بطيء–متوسط",
+          "hi": "धीमा–मध्यम",
+          "zh": "慢-中等",
+          "ja": "遅め〜普通",
+          "ko": "느림-보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evitar encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "ज्यादा पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodn.",
+          "de": "Gelegentl. Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发虫害",
+          "ja": "ときどき害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Alocasia",
-      "description": "Alocasia heterophylla is a tropical aroid valued for its distinctive veined foliage. It grows naturally in humid forest understories and prefers stable warmth. Consistent moisture and high humidity support healthy growth indoors."
+      "common_name": "Heterophylla alocasia",
+      "description": "A tropical aroid grown for its distinctive foliage and compact clumping habit. Provide bright, indirect light, warm temperatures, and an airy aroid mix kept lightly moist. Reduce watering in winter and keep it away from children and pets due to calcium oxalate."
     },
     "pl": {
-      "common_name": "Alokazja",
-      "description": "Alocasia heterophylla to tropikalna roślina z rodziny obrazkowatych o dekoracyjnych liściach. Naturalnie rośnie w wilgotnych lasach. Wymaga ciepła, wilgoci i rozproszonego światła w uprawie domowej."
+      "common_name": "Alokazja heterophylla",
+      "description": "Tropikalna roślina z rodziny obrazkowatych, uprawiana głównie dla dekoracyjnych liści. Lubi jasne, rozproszone światło, ciepło oraz przewiewne podłoże aroid utrzymywane lekko wilgotne. Zimą podlewaj oszczędniej; roślina jest toksyczna (szczawiany wapnia)."
     },
     "de": {
-      "common_name": "Alokasie",
-      "description": "Alocasia heterophylla ist eine tropische Aronstabpflanze mit markanter Blattzeichnung. Sie stammt aus feuchten Waldgebieten. Gleichmäßige Feuchte und hohe Luftfeuchtigkeit sind wichtig."
+      "common_name": "Heterophylla-Alokasie",
+      "description": "Eine tropische Aronstabpflanze, die wegen ihres auffälligen Laubs kultiviert wird. Helles, indirektes Licht, Wärme und ein luftiges Aroid-Substrat mit leicht feuchter Erde sind ideal. Im Winter weniger gießen; aufgrund von Calciumoxalat für Kinder und Haustiere giftig."
     },
     "fr": {
-      "common_name": "Alocasie",
-      "description": "Alocasia heterophylla est une plante tropicale appréciée pour son feuillage nervuré. Elle pousse dans les sous-bois humides. Une chaleur constante et une bonne humidité sont nécessaires."
+      "common_name": "Alocasia heterophylla",
+      "description": "Aroïde tropicale cultivée pour son feuillage distinctif. Offrez une lumière vive indirecte, de la chaleur et un substrat aéré de type aroid maintenu légèrement humide. Réduisez l’arrosage en hiver et gardez-la hors de portée car elle est toxique (oxalates)."
     },
     "it": {
-      "common_name": "Alocasia",
-      "description": "Alocasia heterophylla è una pianta tropicale ornamentale con foglie decorative. Proviene da ambienti forestali umidi. Predilige luce indiretta e umidità elevata."
+      "common_name": "Alocasia heterophylla",
+      "description": "Aroidea tropicale coltivata soprattutto per il fogliame ornamentale. Preferisce luce intensa ma indiretta, temperature calde e un terriccio aroid molto drenante mantenuto leggermente umido. Riduci l’acqua in inverno; è tossica se ingerita per via degli ossalati."
     },
     "es": {
-      "common_name": "Alocasia",
-      "description": "Alocasia heterophylla es una planta tropical con hojas muy decorativas. Crece de forma natural en bosques húmedos. Necesita humedad constante y luz indirecta."
+      "common_name": "Alocasia heterophylla",
+      "description": "Aroide tropical apreciada por su follaje característico. Necesita luz brillante indirecta, calor y un sustrato tipo aroid aireado, manteniendo la tierra ligeramente húmeda. En invierno riega menos y mantenla fuera del alcance por su toxicidad (oxalatos)."
     },
     "pt": {
-      "common_name": "Alocasia",
-      "description": "Alocasia heterophylla é uma planta tropical conhecida pela folhagem ornamental. É nativa de florestas úmidas. Requer calor estável, umidade e luz indireta."
+      "common_name": "Alocasia heterophylla",
+      "description": "Aroide tropical cultivada pelo seu folhagem distinta. Prefere luz intensa indireta, temperaturas quentes e substrato aroid bem arejado mantido levemente úmido. Reduza as regas no inverno; é tóxica por conter oxalatos."
     },
     "ar": {
-      "common_name": "ألوكاسيا",
-      "description": "نبات Alocasia heterophylla استوائي يتميز بأوراقه المزخرفة. ينمو في البيئات الغابية الرطبة. يحتاج إلى رطوبة عالية وحرارة معتدلة."
+      "common_name": "ألوكاسيا هيتيروفيلا",
+      "description": "نبات أرويد استوائي يُزرع لأوراقه المميّزة. يحتاج إلى ضوء ساطع غير مباشر وحرارة ورطوبة جيدة وتربة أرويد جيدة التهوية مع بقاء التربة رطبة قليلًا. قلّل الري في الشتاء وأبعده عن الأطفال والحيوانات لأنه سام بسبب أوكسالات الكالسيوم."
     },
     "hi": {
-      "common_name": "अलोकैसिया",
-      "description": "Alocasia heterophylla एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ आकर्षक होती हैं। यह नम जंगलों में पाया जाता है। इसे नमी, गर्मी और अप्रत्यक्ष रोशनी चाहिए।"
+      "common_name": "एलोकैसिया हेटेरोफाइला",
+      "description": "यह एक उष्णकटिबंधीय एरॉइड पौधा है जिसे इसकी विशिष्ट पत्तियों के लिए उगाया जाता है। तेज अप्रत्यक्ष रोशनी, गर्म तापमान और हवादार एरॉइड मिक्स में मिट्टी को हल्का नम रखें। सर्दियों में पानी कम करें और कैल्शियम ऑक्सलेट के कारण इसे बच्चों/पालतू जानवरों से दूर रखें।"
     },
     "zh": {
-      "common_name": "海芋",
-      "description": "Alocasia heterophylla 是一种热带观叶植物，以叶脉明显著称。原生于潮湿的森林环境。室内养护需保持湿度和温暖。"
+      "common_name": "异叶海芋",
+      "description": "热带天南星科观叶植物，以叶形和叶面质感见长。适合明亮散射光、温暖环境与疏松透气的天南星配土，盆土保持微湿但不积水。冬季少浇水，植株含草酸钙对人和宠物有毒。"
     },
     "ja": {
-      "common_name": "アロカシア",
-      "description": "Alocasia heterophylla は葉脈が美しい熱帯性植物です。湿った森林環境に自生します。室内では高湿度と安定した温度が必要です。"
+      "common_name": "アロカシア・ヘテロフィラ",
+      "description": "特徴的な葉を楽しむ熱帯性のサトイモ科植物です。明るい間接光と暖かい環境、通気の良い用土で、用土はやや湿らせて管理します。冬は乾かし気味にし、シュウ酸カルシウムのため誤食に注意してください。"
     },
     "ko": {
-      "common_name": "알로카시아",
-      "description": "Alocasia heterophylla는 독특한 잎맥이 특징인 열대 식물입니다. 습한 숲 환경이 원산지입니다. 실내에서는 습도와 따뜻한 온도가 중요합니다."
+      "common_name": "알로카시아 헤테로필라",
+      "description": "독특한 잎을 감상하는 열대 아로이드 식물입니다. 밝은 간접광과 따뜻한 온도, 통기성 좋은 아로이드 배합토에서 흙을 약간 촉촉하게 유지하세요. 겨울에는 물을 줄이고, 칼슘 옥살레이트로 인해 섭취 시 독성이 있어 주의가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/alocasia",
-      "https://edis.ifas.ufl.edu/publication/EP260",
-      "https://www.rhs.org.uk/plants/alocasia/growing-guide"
+      "https://www.rhs.org.uk/plants/alocasia",
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?basic=Alocasia&isprofile=1&taxonid=264582",
+      "https://www.poison.org/articles/are-plants-in-the-alocasia-genus-poisonous-221"
     ]
   }
 }

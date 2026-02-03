@@ -4,19 +4,20 @@
   "latin": "Hoya bella",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy epiphyte mix",
-          "pl": "Przepuszczalne",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato leve",
-          "ar": "تربة جيدة التصريف",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water when top dries",
-          "pl": "Po przeschnięciu",
-          "de": "Gießen nach Antrocknen",
-          "fr": "Arroser sec en surface",
-          "it": "Annaffiare asciutto sopra",
-          "es": "Regar tras secarse",
-          "pt": "Regar após secar",
-          "ar": "عند جفاف السطح",
-          "hi": "सूखने पर पानी",
-          "zh": "表土干后浇水",
-          "ja": "表土乾いてから",
-          "ko": "겉흙 마르면"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "平均的湿度",
-          "ko": "보통 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلا",
+          "hi": "थोड़ी जहरीली",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing vine",
-          "pl": "Pnąca",
-          "de": "Hängend",
-          "fr": "Retombante",
-          "it": "Ricadente",
-          "es": "Colgante",
-          "pt": "Pendente",
-          "ar": "متدلية",
-          "hi": "लटकने वाली",
-          "zh": "下垂生长",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Slow to moderate",
+          "pl": "Powolny do średniego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम",
+          "zh": "缓慢至适中",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez de trop arroser",
+          "it": "Evitare di annaffiare troppo",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Miniature wax plant",
-      "description": "Hoya bella is a small epiphytic vine native to Southeast Asia. It has trailing stems, narrow leaves, and fragrant star-shaped flowers. It grows well indoors in bright, indirect light."
+      "common_name": "Bella Hoya",
+      "description": "Hoya bella is a tropical plant known for its delicate flowers and vining nature. It thrives in bright, indirect light and needs regular watering but not overwatering."
     },
     "pl": {
-      "common_name": "Hoja piękna",
-      "description": "Hoya bella to niewielka epifityczna roślina pnąca z Azji Południowo-Wschodniej. Ma zwisające pędy i gwiaździste, pachnące kwiaty. Dobrze rośnie w jasnym, rozproszonym świetle."
+      "common_name": "Hoya bella",
+      "description": "Hoya bella to tropikalna roślina znana z delikatnych kwiatów i pnącej natury. Rośnie najlepiej w jasnym, pośrednim świetle i wymaga regularnego podlewania, ale nie nadmiernego."
     },
     "de": {
-      "common_name": "Schöne Wachsblume",
-      "description": "Hoya bella ist eine kleine epiphytische Kletterpflanze aus Südostasien. Sie bildet hängende Triebe und sternförmige, duftende Blüten. Sie eignet sich gut für helle Innenräume."
+      "common_name": "Hoya bella",
+      "description": "Hoya bella ist eine tropische Pflanze, die für ihre zarten Blumen und ihre kletternde Natur bekannt ist. Sie gedeiht bei hellem, indirektem Licht und benötigt regelmäßige Bewässerung, jedoch kein Überwässern."
     },
     "fr": {
-      "common_name": "Hoya belle",
-      "description": "Hoya bella est une petite plante épiphyte originaire d’Asie du Sud-Est. Elle possède des tiges retombantes et des fleurs étoilées parfumées. Elle se cultive bien en intérieur lumineux."
+      "common_name": "Hoya bella",
+      "description": "Hoya bella est une plante tropicale connue pour ses fleurs délicates et sa nature grimpante. Elle prospère dans une lumière vive et indirecte et nécessite un arrosage régulier mais pas excessif."
     },
     "it": {
       "common_name": "Hoya bella",
-      "description": "Hoya bella è una piccola pianta epifita originaria del Sud-Est asiatico. Presenta fusti ricadenti e fiori stellati profumati. È adatta alla coltivazione in casa con luce indiretta."
+      "description": "Hoya bella è una pianta tropicale conosciuta per i suoi fiori delicati e la sua natura rampicante. Cresce meglio in luce indiretta e brillante e necessita di annaffiature regolari, senza però essere eccessiva."
     },
     "es": {
-      "common_name": "Flor de cera bella",
-      "description": "Hoya bella es una planta epífita pequeña del sudeste asiático. Tiene tallos colgantes y flores estrelladas fragantes. Se adapta bien al cultivo en interiores luminosos."
+      "common_name": "Hoya bella",
+      "description": "Hoya bella es una planta tropical conocida por sus delicadas flores y su naturaleza trepadora. Crece mejor con luz brillante e indirecta y necesita riego regular, pero no excesivo."
     },
     "pt": {
-      "common_name": "Flor-de-cera-bela",
-      "description": "Hoya bella é uma planta epífita pequena do Sudeste Asiático. Possui ramos pendentes e flores estreladas perfumadas. Cresce bem em interiores com luz indireta."
+      "common_name": "Hoya bella",
+      "description": "Hoya bella é uma planta tropical conhecida por suas flores delicadas e sua natureza trepadeira. Cresce melhor em luz indireta e brilhante e precisa de rega regular, mas não excessiva."
     },
     "ar": {
-      "common_name": "هويا بيلا",
-      "description": "هويا بيلا نبات متسلق صغير موطنه جنوب شرق آسيا. يتميز بسيقان متدلية وأزهار نجمية عطرية. يناسب الزراعة داخل المنازل مع إضاءة غير مباشرة."
+      "common_name": "هوجا بيلا",
+      "description": "Hoya bella هي نبات استوائي معروف بزهوره الرقيقة وطبيعته المتسلقة. يزدهر في الضوء الساطع غير المباشر ويحتاج إلى سقاية منتظمة ولكن ليس الإفراط في السقاية."
     },
     "hi": {
       "common_name": "होया बेला",
-      "description": "होया बेला दक्षिण-पूर्व एशिया की एक छोटी एपिफाइटिक बेल है। इसमें लटकती टहनियाँ और सुगंधित तारे जैसे फूल होते हैं। यह घर के अंदर अच्छी तरह उगती है।"
+      "description": "Hoya bella एक उष्णकटिबंधीय पौधा है जो अपनी नाजुक फूलों और बेलनुमा स्वभाव के लिए जाना जाता है। यह उज्ज्वल, अप्रत्यक्ष प्रकाश में बढ़ता है और नियमित रूप से पानी की आवश्यकता होती है, लेकिन अधिक पानी से बचना चाहिए।"
     },
     "zh": {
-      "common_name": "美丽球兰",
-      "description": "Hoya bella 原产于东南亚，是一种小型附生藤本植物。它具有下垂的茎和芳香的星形花。适合在明亮的室内环境生长。"
+      "common_name": "贝拉蜡花",
+      "description": "Hoya bella 是一种热带植物，以其精致的花朵和藤蔓性质而闻名。它在明亮的间接光下生长，需要定期浇水，但不宜过多。"
     },
     "ja": {
       "common_name": "ホヤ・ベラ",
-      "description": "ホヤ・ベラは東南アジア原産の小型着生植物です。垂れ下がる茎と香りのある星形の花を持ちます。明るい室内で育てやすいです。"
+      "description": "Hoya bellaは、その繊細な花とつる性の特性で知られる熱帯植物です。明るい間接光で育ち、定期的な水やりが必要ですが、過剰な水やりは避けるべきです。"
     },
     "ko": {
       "common_name": "호야 벨라",
-      "description": "호야 벨라는 동남아시아 원산의 소형 착생 덩굴식물입니다. 늘어지는 줄기와 향기로운 별 모양 꽃이 특징입니다. 실내에서 키우기 좋습니다."
+      "description": "Hoya bella는 섬세한 꽃과 덩굴성 특성으로 알려진 열대 식물입니다. 밝고 간접적인 빛에서 잘 자라며 정기적인 물주기가 필요하지만 과도한 물주기는 피해야 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/8387/hoya-bella/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281384",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98745-1"
+      "https://www.rhs.org.uk/plants/hoya-bella",
+      "https://www.gardenia.net/plant/hoya-bella"
     ]
   }
 }

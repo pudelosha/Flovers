@@ -12,16 +12,16 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 24,
   "image_hero": "thaumatophyllum_xanadu.jpg",
   "image_thumb": "thaumatophyllum_xanadu.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "Aroid",
-          "fr": "aroïde",
-          "it": "aroide",
-          "es": "aroide",
-          "pt": "aroide",
-          "ar": "أرويد",
-          "hi": "एरॉयड",
-          "zh": "阿罗伊德",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Aroid soil",
+          "pl": "Gleba aroidowa",
+          "de": "Aroid-Erde",
+          "fr": "Sol aroid",
+          "it": "Terreno per aroidi",
+          "es": "Suelo para aroides",
+          "pt": "Solo para aroides",
+          "ar": "تربة أرايد",
+          "hi": "एरोइड मिट्टी",
+          "zh": "马蹄莲土壤",
+          "ja": "アロイド土",
+          "ko": "아로이드 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderates Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ريّ معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高",
-          "ko": "높은"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Trująca dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossica per gli animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पेट्स के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성 있음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "عدم الإفراط في الري",
+          "hi": "अधिक पानी नहीं",
+          "zh": "不要过度浇水",
+          "ja": "水をやりすぎないこと",
+          "ko": "물을 너무 많이 주지 않음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Thaumatophyllum Xanadu",
-      "description": "Thaumatophyllum xanadu is a tropical plant native to Brazil. It has large, glossy leaves and thrives in humid environments."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu is a tropical plant known for its distinctive, glossy, deeply lobed leaves. It's a popular houseplant that thrives in moderate conditions."
     },
     "pl": {
-      "common_name": "Thaumatophyllum xanadu",
-      "description": "Thaumatophyllum xanadu to roślina tropikalna pochodząca z Brazylii. Posiada duże, błyszczące liście i rośnie w wilgotnym środowisku."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu to roślina tropikalna znana z charakterystycznych, błyszczących, głęboko wciętych liści. Jest popularną rośliną doniczkową, która rośnie w umiarkowanych warunkach."
     },
     "de": {
-      "common_name": "Thaumatophyllum xanadu",
-      "description": "Thaumatophyllum xanadu ist eine tropische Pflanze aus Brasilien. Sie hat große, glänzende Blätter und gedeiht in feuchten Umgebungen."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu ist eine tropische Pflanze, die für ihre markanten, glänzenden, tief eingeschnittenen Blätter bekannt ist. Es ist eine beliebte Zimmerpflanze, die unter gemäßigten Bedingungen gedeiht."
     },
     "fr": {
-      "common_name": "Thaumatophyllum xanadu",
-      "description": "Thaumatophyllum xanadu est une plante tropicale originaire du Brésil. Elle possède de grandes feuilles brillantes et prospère dans des environnements humides."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu est une plante tropicale connue pour ses feuilles profondément découpées et brillantes. C'est une plante d'intérieur populaire qui prospère dans des conditions modérées."
     },
     "it": {
-      "common_name": "Thaumatophyllum xanadu",
-      "description": "Thaumatophyllum xanadu è una pianta tropicale originaria del Brasile. Ha grandi foglie lucide e cresce in ambienti umidi."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu è una pianta tropicale conosciuta per le sue foglie lucide e profondamente lobate. È una pianta da appartamento popolare che cresce in condizioni moderate."
     },
     "es": {
-      "common_name": "Thaumatophyllum xanadu",
-      "description": "Thaumatophyllum xanadu es una planta tropical originaria de Brasil. Tiene grandes hojas brillantes y prospera en ambientes húmedos."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu es una planta tropical conocida por sus hojas brillantes y profundamente lobuladas. Es una planta de interior popular que crece en condiciones moderadas."
     },
     "pt": {
-      "common_name": "Thaumatophyllum xanadu",
-      "description": "Thaumatophyllum xanadu é uma planta tropical nativa do Brasil. Possui grandes folhas brilhantes e cresce em ambientes úmidos."
+      "common_name": "Xanadu",
+      "description": "Thaumatophyllum xanadu é uma planta tropical conhecida por suas folhas brilhantes e profundamente lobadas. É uma planta de interior popular que cresce em condições moderadas."
     },
     "ar": {
-      "common_name": "ثوماتوفيلوم كسينادو",
-      "description": "ثوماتوفيلوم كسينادو هو نبات استوائي موطنه البرازيل. لديه أوراق كبيرة لامعة وينمو في البيئات الرطبة."
+      "common_name": "زانادو",
+      "description": "Thaumatophyllum xanadu هي نبتة استوائية معروفة بأوراقها اللامعة والمفصصة بعمق. إنها نبتة منزلية شهيرة تنمو في ظروف معتدلة."
     },
     "hi": {
-      "common_name": "थौमेटोफायलम एक्सानाडू",
-      "description": "थौमेटोफायलम एक्सानाडू एक उष्णकटिबंधीय पौधा है जो ब्राजील का मूल निवासी है। इसमें बड़ी, चमकदार पत्तियाँ होती हैं और यह नम वातावरण में उगता है।"
+      "common_name": "ज़ानाडू",
+      "description": "Thaumatophyllum xanadu एक उष्णकटिबंधीय पौधा है जो अपनी चमकदार और गहरे कटे हुए पत्तों के लिए जाना जाता है। यह एक लोकप्रिय इनडोर पौधा है जो मध्यम परिस्थितियों में पनपता है।"
     },
     "zh": {
-      "common_name": "塔马托菲勒姆·仙杜",
-      "description": "塔马托菲勒姆·仙杜是原产于巴西的热带植物。它拥有大而光滑的叶子，喜欢湿润的环境。"
+      "common_name": "赞达杜",
+      "description": "Thaumatophyllum xanadu 是一种热带植物，以其光亮、深裂的叶子而闻名。它是一个受欢迎的室内植物，在适度的条件下生长。"
     },
     "ja": {
-      "common_name": "タウマトフィルム・ザナドゥ",
-      "description": "タウマトフィルム・ザナドゥはブラジル原産の熱帯植物です。大きな光沢のある葉を持ち、湿った環境で育ちます。"
+      "common_name": "ザナドゥ",
+      "description": "Thaumatophyllum xanaduは、その光沢のある深く切れ込んだ葉で知られる熱帯植物です。これは人気のある室内植物で、適度な条件で育ちます。"
     },
     "ko": {
-      "common_name": "타우마토필룸 자나두",
-      "description": "타우마토필룸 자나두는 브라질 원산지의 열대 식물입니다. 큰 광택 있는 잎을 가지고 있으며 습한 환경에서 자랍니다."
+      "common_name": "자나두",
+      "description": "Thaumatophyllum xanadu는 광택 있고 깊게 갈라진 잎으로 유명한 열대 식물입니다. 이 식물은 적당한 조건에서 자라는 인기 있는 실내 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=1025",
-      "https://www.gardenia.net/plant/thaumatophyllum-xanadu"
+      "https://www.gardeningknowhow.com/houseplants/philodendron/xanadu-plant-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=361"
     ]
   }
 }

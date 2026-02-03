@@ -4,15 +4,15 @@
   "latin": "Papaver rhoeas",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -32,15 +32,15 @@
           "en": "Full sun",
           "pl": "Pełne słońce",
           "de": "Vollsonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "fr": "Ensoleillement total",
+          "it": "Soleggiato",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "الشمس الكاملة",
+          "ar": "شمس كاملة",
           "hi": "पूरा सूरज",
-          "zh": "完全阳光",
-          "ja": "完全な日光",
-          "ko": "완전한 햇볕"
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -55,11 +55,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "مصفى جيدًا",
-          "hi": "अच्छी तरह से निथरित",
-          "zh": "良好的排水",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
           "ja": "良好な排水",
-          "ko": "잘 배수됨"
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,7 +69,7 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Moderat",
+          "de": "Mäßig",
           "fr": "Modéré",
           "it": "Moderato",
           "es": "Moderado",
@@ -77,89 +77,13 @@
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
-          "ja": "中程度",
+          "ja": "適度",
           "ko": "적당히"
         }
       }
     },
     {
       "key": "difficulty",
-      "value": {
-        "text": {
-          "en": "Easy",
-          "pl": "Łatwy",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
-        }
-      }
-    },
-    {
-      "key": "temperature",
-      "value": {
-        "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodne do ciepłe",
-          "de": "Kühl bis warm",
-          "fr": "Froid à chaud",
-          "it": "Freddo a caldo",
-          "es": "Frío a cálido",
-          "pt": "Frio a quente",
-          "ar": "بارد إلى دافئ",
-          "hi": "ठंडा से गर्म",
-          "zh": "从凉爽到温暖",
-          "ja": "冷暖適温",
-          "ko": "시원한 온도에서 따뜻한 온도"
-        }
-      }
-    },
-    {
-      "key": "humidity",
-      "value": {
-        "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Bas",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮은"
-        }
-      }
-    },
-    {
-      "key": "toxic",
-      "value": {
-        "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
-        }
-      }
-    },
-    {
-      "key": "growth",
       "value": {
         "text": {
           "en": "Medium",
@@ -172,8 +96,122 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny przy spożyciu",
+          "de": "Giftig bei Verschlucken",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام إذا تم تناوله",
+          "hi": "उपभोग करने पर विषाक्त",
+          "zh": "摄入后有毒",
+          "ja": "摂取すると毒性がある",
+          "ko": "섭취 시 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Annual",
+          "pl": "Jednoroczna",
+          "de": "Einjährig",
+          "fr": "Annuelle",
+          "it": "Annuo",
+          "es": "Anual",
+          "pt": "Anual",
+          "ar": "سنوياً",
+          "hi": "वार्षिक",
+          "zh": "一年生",
+          "ja": "一年生",
+          "ko": "일년생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare eccesso d'acqua",
+          "es": "Evitar exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Poppy",
-      "description": "Papaver rhoeas, commonly known as the red poppy, is a flowering plant in the Papaveraceae family. It thrives in full sunlight and well-drained soils."
+      "description": "Papaver rhoeas, commonly known as the poppy, is an annual flowering plant known for its vibrant red flowers. It thrives in full sun and well-drained soil."
     },
     "pl": {
       "common_name": "Mak polny",
-      "description": "Papaver rhoeas, znany jako mak polny, to roślina kwitnąca z rodziny makowatych. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnych glebach."
+      "description": "Papaver rhoeas, znany jako mak polny, to roślina jednoroczna o jaskrawoczerwonych kwiatach. Lubi pełne słońce i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Klatschmohn",
-      "description": "Papaver rhoeas, auch als Klatschmohn bekannt, ist eine blühende Pflanze aus der Familie der Mohngewächse. Sie gedeiht am besten in voller Sonne und gut durchlässigen Böden."
+      "common_name": "Mohn",
+      "description": "Papaver rhoeas, auch Mohn genannt, ist eine einjährige Pflanze mit leuchtend roten Blüten. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Coquelicot",
-      "description": "Papaver rhoeas, communément appelé coquelicot, est une plante à fleurs de la famille des papavéracées. Il prospère en plein soleil et dans des sols bien drainés."
+      "description": "Papaver rhoeas, communément appelé coquelicot, est une plante annuelle avec de vives fleurs rouges. Elle préfère le plein soleil et un sol bien drainé."
     },
     "it": {
-      "common_name": "Papavero rosso",
-      "description": "Papaver rhoeas, noto come papavero rosso, è una pianta da fiore della famiglia delle Papaveraceae. Cresce meglio alla luce diretta del sole e in terreni ben drenati."
+      "common_name": "Papavero",
+      "description": "Papaver rhoeas, noto come papavero, è una pianta annuale con fiori rossi vivaci. Cresce bene al sole pieno e in terreni ben drenati."
     },
     "es": {
       "common_name": "Amapola",
-      "description": "Papaver rhoeas, conocida como amapola roja, es una planta con flores de la familia Papaveraceae. Se desarrolla mejor a pleno sol y en suelos bien drenados."
+      "description": "Papaver rhoeas, conocida como amapola, es una planta anual con flores rojas brillantes. Prefiere el sol pleno y suelos bien drenados."
     },
     "pt": {
-      "common_name": "Papoila",
-      "description": "Papaver rhoeas, conhecida como papoila vermelha, é uma planta da família Papaveraceae. Prefere luz solar plena e solos bem drenados."
+      "common_name": "Papoula",
+      "description": "Papaver rhoeas, conhecida como papoula, é uma planta anual com flores vermelhas vibrantes. Cresce bem sob luz solar total e solo bem drenado."
     },
     "ar": {
-      "common_name": "الخشخاش الأحمر",
-      "description": "Papaver rhoeas، المعروف بالخيشخاش الأحمر، هو نبات مزهر من عائلة الخشخاش. يزدهر في ضوء الشمس الكامل والتربة جيدة التصريف."
+      "common_name": "خشخاش",
+      "description": "Papaver rhoeas، المعروف بالخشخاش، هو نبات سنوي مع أزهار حمراء زاهية. يفضل الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "लाल खसखस",
-      "description": "Papaver rhoeas, जिसे लाल खसखस के नाम से जाना जाता है, एक फूलों वाला पौधा है जो पॉपवीरेसी परिवार का है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
+      "common_name": "पोपी",
+      "description": "Papaver rhoeas, जिसे पोपी कहा जाता है, एक वार्षिक पौधा है जो अपनी जीवंत लाल फूलों के लिए जाना जाता है। यह पूर्ण सूर्य और अच्छे जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
-      "common_name": "红罂粟",
-      "description": "Papaver rhoeas，通常被称为红罂粟，是罂粟科的一种开花植物。它在充足的阳光和良好的排水土壤中生长良好。"
+      "common_name": "罂粟",
+      "description": "Papaver rhoeas，通常称为罂粟，是一种年生植物，因其鲜艳的红色花朵而闻名。它在充足的阳光和良好的排水土壤中生长。"
     },
     "ja": {
       "common_name": "ケシ",
-      "description": "Papaver rhoeas、一般的にケシとして知られるこの植物は、ケシ科の開花植物です。完全な日光と良好な排水の土壌でよく成長します。"
+      "description": "Papaver rhoeas（ケシ）は、一年草で鮮やかな赤い花を咲かせます。完全な日光と良好な排水土壌を好みます。"
     },
     "ko": {
-      "common_name": "붉은 양귀비",
-      "description": "Papaver rhoeas, 일반적으로 붉은 양귀비로 알려진 이 식물은 양귀비과에 속하는 꽃 식물입니다. 완전한 햇볕과 잘 배수되는 토양에서 잘 자랍니다."
+      "common_name": "양귀비",
+      "description": "Papaver rhoeas, 일반적으로 양귀비라고 불리는 이 식물은 밝은 빨간 꽃으로 유명한 일년생 식물입니다. 완전한 햇빛과 배수가 좋은 토양을 좋아합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=486",
-      "https://www.gardenersworld.com/plants/papaver-rhoeas/"
+      "https://www.rhs.org.uk/advice/profile?pid=963",
+      "https://www.gardenia.net/plant/papaver-rhoeas"
     ]
   }
 }

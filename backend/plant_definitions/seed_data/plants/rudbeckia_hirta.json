@@ -4,22 +4,24 @@
   "latin": "Rudbeckia hirta",
   "sun": "high",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "rudbeckia_hirta.jpg",
   "image_thumb": "rudbeckia_hirta.jpg",
   "traits": [
@@ -30,15 +32,15 @@
           "en": "Full sun",
           "pl": "Pełne słońce",
           "de": "Vollsonne",
-          "fr": "Plein soleil",
+          "fr": "En plein soleil",
           "it": "Sole pieno",
-          "es": "Pleno sol",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "أشعة الشمس الكاملة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "完全な日光",
+          "ko": "완전한 태양"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "التربة الطينية",
-          "hi": "मृदुरूप मृदा",
-          "zh": "壤土",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "الري المعتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßige Bewässerung",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -133,7 +135,7 @@
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "中程度",
-          "ko": "보통"
+          "ko": "중간"
         }
       }
     },
@@ -149,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषैले",
           "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "비독성"
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast-growing",
-          "pl": "Szybko rosnąca",
-          "de": "Schnell wachsend",
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
-          "it": "Crescita rapida",
+          "it": "Crescita veloce",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长快速",
-          "ja": "速く成長",
+          "hi": "तेजी से बढ़ना",
+          "zh": "快速生长",
+          "ja": "早い成長",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare il sovra-irrigamento",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Black-eyed Susan",
-      "description": "Rudbeckia hirta, also known as Black-eyed Susan, is a perennial plant native to North America. It is popular for its bright yellow flowers with dark centers."
+      "description": "Rudbeckia hirta, also known as Black-eyed Susan, is a hardy, drought-tolerant perennial. It thrives in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Rudbekia Hirta",
-      "description": "Rudbekia hirta, znana jako Rudbekia, to roślina wieloletnia pochodząca z Ameryki Północnej. Jest popularna z powodu swoich jasnych żółtych kwiatów z ciemnymi środkami."
+      "common_name": "Rudbekia zwyczajna",
+      "description": "Rudbeckia hirta, znana również jako Rudbekia zwyczajna, to odporna na suszę roślina wieloletnia. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Schwarzaugige Susan",
-      "description": "Rudbeckia hirta, auch bekannt als Schwarzaugige Susan, ist eine mehrjährige Pflanze, die in Nordamerika heimisch ist. Sie ist beliebt für ihre leuchtend gelben Blüten mit dunklen Mittelpunkten."
+      "common_name": "Schwarzäugige Susanne",
+      "description": "Rudbeckia hirta, auch als Schwarzäugige Susanne bekannt, ist eine robuste, dürretolerante Staude. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Susan à yeux noirs",
-      "description": "Rudbeckia hirta, également connue sous le nom de Susan à yeux noirs, est une plante vivace originaire d'Amérique du Nord. Elle est populaire pour ses fleurs jaunes éclatantes avec des centres sombres."
+      "common_name": "Susanne à yeux noirs",
+      "description": "Rudbeckia hirta, également connue sous le nom de Susanne à yeux noirs, est une plante vivace résistante à la sécheresse. Elle prospère en plein soleil et dans un sol bien drainé."
     },
     "it": {
       "common_name": "Susanna dagli occhi neri",
-      "description": "Rudbeckia hirta, conosciuta anche come Susanna dagli occhi neri, è una pianta perenne originaria del Nord America. È popolare per i suoi fiori gialli brillanti con centri scuri."
+      "description": "Rudbeckia hirta, conosciuta anche come Susanna dagli occhi neri, è una perenne resistente alla siccità. Cresce meglio al sole pieno e in terreni ben drenati."
     },
     "es": {
-      "common_name": "Susa de ojos negros",
-      "description": "Rudbeckia hirta, también conocida como Susa de ojos negros, es una planta perenne originaria de América del Norte. Es popular por sus brillantes flores amarillas con centros oscuros."
+      "common_name": "Susana de ojos negros",
+      "description": "Rudbeckia hirta, conocida también como Susana de ojos negros, es una planta perenne resistente a la sequía. Crece bien a pleno sol y en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Susan de olhos negros",
-      "description": "Rudbeckia hirta, também conhecida como Susan de olhos negros, é uma planta perene nativa da América do Norte. É popular por suas flores amarelas brilhantes com centros escuros."
+      "common_name": "Susan dos olhos negros",
+      "description": "Rudbeckia hirta, também conhecida como Susan dos olhos negros, é uma planta perene resistente à seca. Cresce melhor sob sol pleno e em solos bem drenados."
     },
     "ar": {
       "common_name": "سوزان ذات العيون السوداء",
-      "description": "رودبيكيا هيرتا، والمعروفة أيضًا باسم سوزان ذات العيون السوداء، هي نبات معمر موطنه أمريكا الشمالية. إنها مشهورة بأزهارها الصفراء الزاهية مع مراكز داكنة."
+      "description": "Rudbeckia hirta، المعروفة أيضًا باسم سوزان ذات العيون السوداء، هي نبتة معمرة مقاومة للجفاف. تنمو بشكل أفضل في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "ब्लैक-आइड सुसान",
-      "description": "रुडबेकिया हिर्टा, जिसे ब्लैक-आइड सुसान भी कहा जाता है, उत्तरी अमेरिका का एक स्थायी पौधा है। यह इसके उज्जवल पीले फूलों और गहरे केंद्रों के लिए प्रसिद्ध है।"
+      "common_name": "ब्लैक-आयड सुज़न",
+      "description": "रुडबेकिया हिर्टा, जिसे ब्लैक-आयड सुज़न के नाम से भी जाना जाता है, एक कठोर, सूखा-सहनीय बहुवर्षीय पौधा है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में बेहतर बढ़ता है।"
     },
     "zh": {
-      "common_name": "黑眼苏珊",
-      "description": "Rudbeckia hirta，或称黑眼苏珊，是一种原产于北美的多年生植物。它因其明亮的黄色花朵和深色的中心而受到喜爱。"
+      "common_name": "黑眼睛苏珊",
+      "description": "Rudbeckia hirta，也叫黑眼睛苏珊，是一种耐旱的多年生植物。它在完全阳光和排水良好的土壤中茁壮成长。"
     },
     "ja": {
       "common_name": "ブラックアイドスーザン",
-      "description": "Rudbeckia hirta、別名ブラックアイドスーザンは、北アメリカ原産の多年草です。明るい黄色の花と暗い中心で人気があります。"
+      "description": "Rudbeckia hirta、別名ブラックアイドスーザンは、耐乾性の多年草です。完全な日光と排水の良い土壌でよく育ちます。"
     },
     "ko": {
       "common_name": "블랙아이드 수잔",
-      "description": "Rudbeckia hirta, 또는 블랙아이드 수잔은 북미 원산의 다년생 식물입니다. 그것은 밝은 노란 꽃과 어두운 중심으로 유명합니다."
+      "description": "Rudbeckia hirta, 블랙아이드 수잔으로도 알려진 이 식물은 내건성 다년생 식물입니다. 완전한 햇볕과 잘 배수되는 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.gardenia.net/plant/rudbeckia-hirta-black-eyed-susan",
-      "https://www.almanac.com/plant/black-eyed-susan"
+      "https://www.bhg.com/gardening/pests-diseases-animals/black-eyed-susan/"
     ]
   }
 }

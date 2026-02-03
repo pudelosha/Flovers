@@ -1,5 +1,5 @@
 {
-  "external_id": "syngonium_white_butterfly",
+  "external_id": "syngonium_'white_butterfly'",
   "name": "White Butterfly",
   "latin": "Syngonium 'White Butterfly'",
   "sun": "medium",
@@ -12,10 +12,10 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "Aroid",
-          "fr": "Aroid",
-          "it": "Aroid",
-          "es": "Aroid",
-          "pt": "Aroid",
-          "ar": "أرويد",
-          "hi": "एरोइड",
-          "zh": "阿罗伊德",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "clumping",
-          "pl": "kępka",
-          "de": "Busch",
-          "fr": "buissonnant",
-          "it": "cespuglioso",
-          "es": "arbustivo",
-          "pt": "arbustivo",
-          "ar": "شجيري",
-          "hi": "झाड़ी जैसा",
-          "zh": "丛生",
-          "ja": "茂盛",
-          "ko": "덩굴"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "White Butterfly",
-      "description": "Syngonium 'White Butterfly' is a popular ornamental houseplant known for its striking arrow-shaped leaves with creamy-white centers and dark green edges. It thrives in warm, humid conditions and requires moderate watering."
+      "description": "Syngonium 'White Butterfly' is a popular ornamental plant known for its striking white-veined leaves. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Biały Motyl",
-      "description": "Syngonium 'White Butterfly' to popularna roślina ozdobna, znana z wyrazistych strzałkowatych liści o kremowo-białych środkach i ciemnozielonych brzegach. Rośnie w ciepłych, wilgotnych warunkach i wymaga umiarkowanego podlewania."
+      "common_name": "Biała Motyl",
+      "description": "Syngonium 'White Butterfly' to popularna roślina ozdobna, znana ze swoich uderzających liści z białymi żyłkami. Rośnie w średnim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Weißer Schmetterling",
-      "description": "Syngonium 'White Butterfly' ist eine beliebte Zierpflanze, die für ihre auffälligen, pfeilförmigen Blätter mit cremeweißen Mitteln und dunkelgrünen Rändern bekannt ist. Sie gedeiht in warmen, feuchten Bedingungen und benötigt mäßiges Gießen."
+      "description": "Syngonium 'White Butterfly' ist eine beliebte Zierpflanze, die für ihre auffälligen weißgeäderten Blätter bekannt ist. Es gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Papillon Blanc",
-      "description": "Syngonium 'White Butterfly' est une plante ornementale populaire, connue pour ses feuilles en forme de flèche avec des centres blancs crème et des bords verts foncés. Elle prospère dans des conditions chaudes et humides et nécessite un arrosage modéré."
+      "common_name": "Papillon blanc",
+      "description": "Syngonium 'White Butterfly' est une plante ornementale populaire, connue pour ses feuilles veillées de blanc. Elle préfère la lumière moyenne et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Farfalla Bianca",
-      "description": "Syngonium 'White Butterfly' è una pianta ornamentale popolare, conosciuta per le sue foglie a forma di freccia con il centro bianco crema e i bordi verdi scuri. Cresce in condizioni calde e umide e richiede annaffiature moderate."
+      "common_name": "Farfallino bianco",
+      "description": "Syngonium 'White Butterfly' è una pianta ornamentale popolare conosciuta per le sue foglie striate di bianco. Cresce in luce media e necessita di annaffiature moderate."
     },
     "es": {
-      "common_name": "Mariposa Blanca",
-      "description": "Syngonium 'White Butterfly' es una planta ornamental popular, conocida por sus hojas en forma de flecha con centros blanco crema y bordes verdes oscuros. Prosperan en condiciones cálidas y húmedas y requieren riego moderado."
+      "common_name": "Mariposa blanca",
+      "description": "Syngonium 'White Butterfly' es una planta ornamental popular conocida por sus hojas de venas blancas. Crece con luz media y necesita riego moderado."
     },
     "pt": {
-      "common_name": "Borboleta Branca",
-      "description": "Syngonium 'White Butterfly' é uma planta ornamental popular, conhecida por suas folhas em forma de seta com centros branco-creme e bordas verdes escuras. Cresce em condições quentes e úmidas e requer rega moderada."
+      "common_name": "Borboleta branca",
+      "description": "Syngonium 'White Butterfly' é uma planta ornamental popular, conhecida por suas folhas com veios brancos. Ela cresce com luz média e requer rega moderada."
     },
     "ar": {
-      "common_name": "فراشة بيضاء",
-      "description": "Syngonium 'White Butterfly' هي نبتة زينة شائعة، معروفة بأوراقها المثلثة ذات اللون الأبيض الكريمي في الوسط وحوافها الخضراء الداكنة. تنمو في الظروف الدافئة والرطبة وتتطلب ريًا معتدلًا."
+      "common_name": "الفراشة البيضاء",
+      "description": "Syngonium 'White Butterfly' هو نبات زخرفي شائع معروف بأوراقه التي تحتوي على عروق بيضاء. ينمو في الضوء المتوسط ويتطلب سقي معتدل."
     },
     "hi": {
       "common_name": "सफेद तितली",
-      "description": "Syngonium 'White Butterfly' एक लोकप्रिय सजावटी पौधा है, जो इसके तीर के आकार के पत्तों के लिए जाना जाता है, जिनके बीच में क्रीम रंग और किनारों पर गहरा हरा होता है। यह गर्म, आर्द्र परिस्थितियों में उगता है और मध्यम पानी की आवश्यकता होती है।"
+      "description": "Syngonium 'White Butterfly' एक लोकप्रिय सजावटी पौधा है जिसे इसके सफेद नसों वाले पत्तों के लिए जाना जाता है। यह मध्यम रोशनी में बढ़ता है और मध्यम पानी की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "白色蝴蝶",
-      "description": "Syngonium 'White Butterfly' 是一种受欢迎的观赏植物，因其箭形叶子而闻名，叶中有奶油白色，边缘呈深绿色。它在温暖潮湿的环境中生长，需要适度的浇水。"
+      "common_name": "白蝴蝶",
+      "description": "Syngonium 'White Butterfly' 是一种受欢迎的观叶植物，以其白色脉络的叶片著称。它在中等光照下生长，需适度浇水。"
     },
     "ja": {
       "common_name": "ホワイトバタフライ",
-      "description": "Syngonium 'White Butterfly' は人気の観葉植物で、クリーム色の中心と深緑の縁を持つ矢じりの形をした葉で知られています。温暖で湿度の高い環境で育ち、適度な水やりが必要です。"
+      "description": "Syngonium 'White Butterfly' は、白い静脈の葉で知られる人気のある観葉植物です。中程度の光で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "화이트 나비",
-      "description": "Syngonium 'White Butterfly'는 크림색 중심과 짙은 녹색 가장자리를 가진 화살 모양의 잎으로 알려진 인기 있는 관엽 식물입니다. 따뜻하고 습한 환경에서 자라며 적당한 물주기가 필요합니다."
+      "common_name": "화이트 버터플라이",
+      "description": "Syngonium 'White Butterfly'는 흰색 veins가 있는 잎으로 유명한 인기 있는 관엽 식물입니다. 중간 정도의 빛에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/syngonium-white-butterfly",
-      "https://www.houseplantsexpert.com/syngonium-white-butterfly-care"
+      "https://www.rhs.org.uk/plants/syngonium",
+      "https://www.gardenia.net/plant/syngonium-white-butterfly"
     ]
   }
 }

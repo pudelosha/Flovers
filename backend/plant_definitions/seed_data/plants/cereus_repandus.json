@@ -1,6 +1,6 @@
 {
   "external_id": "cereus_repandus",
-  "name": "Peruvian Apple Cactus",
+  "name": "Peruvian apple cactus",
   "latin": "Cereus repandus",
   "sun": "high",
   "water": "low",
@@ -10,8 +10,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -36,10 +35,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "日当たり良好",
+          "ko": "강한 빛"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Gritty cactus mix",
+          "pl": "Przepuszczalna miesz.",
+          "de": "Kakteenerde, grob",
+          "fr": "Substrat cactus drain.",
+          "it": "Terriccio cactus dren.",
+          "es": "Sustrato cactus dren.",
+          "pt": "Substrato cactus dren.",
+          "ar": "تربة صبارات مصرفة",
+          "hi": "जलनिकासी कैक्टस मिक्स",
+          "zh": "排水良好仙人掌土",
+          "ja": "水はけ良い用土",
+          "ko": "배수 좋은 선인장흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "적은 물"
+          "en": "Soak, then dry",
+          "pl": "Podlej i wysusz",
+          "de": "Gießen, dann trocknen",
+          "fr": "Arroser puis sécher",
+          "it": "Bagna poi asciuga",
+          "es": "Riega y deja secar",
+          "pt": "Regar e secar",
+          "ar": "اسقِ ثم اتركه يجف",
+          "hi": "भिगोएं, फिर सुखाएं",
+          "zh": "浇透后干透",
+          "ja": "乾いてからたっぷり",
+          "ko": "흠뻑 후 완전 건조"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Dry air OK",
+          "pl": "Suche powietrze OK",
+          "de": "Trockene Luft ok",
+          "fr": "Air sec OK",
+          "it": "Aria secca OK",
+          "es": "Aire seco OK",
+          "pt": "Ar seco OK",
+          "ar": "يتحمل الجفاف",
+          "hi": "सूखी हवा ठीक",
+          "zh": "耐干燥空气",
+          "ja": "乾燥に強い",
+          "ko": "건조 공기 OK"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic (spines)",
+          "pl": "Nietrujący (kolce)",
+          "de": "Ungiftig (Dornen)",
+          "fr": "Non toxique (épines)",
+          "it": "Non tossico (spine)",
+          "es": "No tóxico (espinas)",
+          "pt": "Não tóxico (espinhos)",
+          "ar": "غير سام (أشواك)",
+          "hi": "विषहीन (कांटे)",
+          "zh": "无毒（有刺）",
+          "ja": "無毒（トゲ注意）",
+          "ko": "무독(가시 주의)"
         }
       }
     },
@@ -161,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast upright",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wach.",
-          "fr": "Croissance rap.",
-          "it": "Crescita rap.",
-          "es": "Crec. rápida",
-          "pt": "Cresce rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Columnar, moderate",
+          "pl": "Kolumnowy, średni",
+          "de": "Säulenförmig, mäßig",
+          "fr": "Colonnaire, modéré",
+          "it": "Colonnare, moderata",
+          "es": "Columnar, moderado",
+          "pt": "Colunar, moderado",
+          "ar": "عمودي، متوسط",
+          "hi": "स्तंभाकार, मध्यम",
+          "zh": "柱状，中等生长",
+          "ja": "柱状で中程度",
+          "ko": "기둥형, 보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot if overwatered",
+          "pl": "Zgnilizna przy przel.",
+          "de": "Fäule bei Nässe",
+          "fr": "Pourriture si trop d'eau",
+          "it": "Marciume se troppa acqua",
+          "es": "Pudrición por exceso",
+          "pt": "Podridão por excesso",
+          "ar": "تعفن مع الإفراط بالماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "浇水过多易烂根",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي/قشري",
+          "hi": "मिलीबग/स्केल",
+          "zh": "粉蚧、介壳虫",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레, 깃털벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Peruvian Apple Cactus",
-      "description": "Cereus repandus is a tall columnar cactus native to South America. It thrives in bright light and dry conditions and is well suited to indoor cultivation with minimal care."
+      "common_name": "Peruvian apple cactus",
+      "description": "A columnar cactus from seasonally dry regions of northern South America and the Caribbean. Provide very bright light and a fast-draining cactus mix, watering only after the potting mix dries fully. It is generally considered non-toxic, but the spines can injure skin and pets."
     },
     "pl": {
-      "common_name": "Kaktus peruwiański",
-      "description": "Cereus repandus to wysoki kaktus kolumnowy pochodzący z Ameryki Południowej. Preferuje silne światło i rzadkie podlewanie, dzięki czemu dobrze rośnie w domu."
+      "common_name": "Kaktus jabłkowy peruwiański",
+      "description": "Kolumnowy kaktus z suchych, sezonowych rejonów północnej Ameryki Południowej i Karaibów. Wymaga bardzo jasnego stanowiska i podłoża dla kaktusów o szybkim odpływie wody; podlewaj dopiero po całkowitym przeschnięciu. Uznawany za nietrujący, ale kolce mogą powodować urazy."
     },
     "de": {
       "common_name": "Peruanischer Apfelkaktus",
-      "description": "Cereus repandus ist ein hoher Säulenkaktus aus Südamerika. Er benötigt viel Licht, wenig Wasser und eignet sich gut für die Wohnung."
+      "description": "Ein säulenförmiger Kaktus aus saisonal trockenen Regionen Nord-Südamerikas und der Karibik. Sehr hell stellen und in ein stark durchlässiges Kakteensubstrat pflanzen; erst gießen, wenn das Substrat vollständig trocken ist. Gilt allgemein als ungiftig, die Dornen können jedoch verletzen."
     },
     "fr": {
       "common_name": "Cactus pomme du Pérou",
-      "description": "Cereus repandus est un cactus colonnaire originaire d’Amérique du Sud. Il aime le plein soleil et un arrosage très modéré en intérieur."
+      "description": "Cactus colonnaire originaire de zones tropicales saisonnièrement sèches du nord de l’Amérique du Sud et des Caraïbes. Donnez beaucoup de lumière et un substrat pour cactus très drainant, en arrosant seulement après séchage complet. Généralement considéré non toxique, mais les épines peuvent blesser."
     },
     "it": {
-      "common_name": "Cactus mela del Perù",
-      "description": "Cereus repandus è un cactus colonnare sudamericano. Cresce bene in luce intensa con annaffiature rare."
+      "common_name": "Cactus mela peruviano",
+      "description": "Cactus colonnare originario di aree tropicali stagionalmente secche del nord del Sud America e dei Caraibi. Richiede luce molto intensa e un terriccio per cactus ben drenante; annaffia solo quando il substrato è completamente asciutto. In genere è considerato non tossico, ma le spine possono ferire."
     },
     "es": {
-      "common_name": "Cactus manzana peruana",
-      "description": "Cereus repandus es un cactus columnar de América del Sur. Requiere mucho sol y riego escaso para crecer sano en interiores."
+      "common_name": "Cactus manzana del Perú",
+      "description": "Cactus columnar de regiones tropicales estacionalmente secas del norte de Sudamérica y el Caribe. Necesita mucha luz y un sustrato para cactus muy drenante; riega solo cuando el sustrato esté totalmente seco. Se considera generalmente no tóxico, pero las espinas pueden causar lesiones."
     },
     "pt": {
       "common_name": "Cacto maçã-do-Peru",
-      "description": "Cereus repandus é um cacto colunar nativo da América do Sul. Prefere sol pleno e pouca água, sendo fácil de cuidar."
+      "description": "Cacto colunar de regiões tropicais sazonalmente secas do norte da América do Sul e do Caribe. Prefere muita luz e substrato de cactos bem drenado; regue apenas quando o substrato secar por completo. Em geral é considerado não tóxico, mas os espinhos podem causar ferimentos."
     },
     "ar": {
-      "common_name": "صبار التفاح البيروفي",
-      "description": "نبات Cereus repandus صبار عمودي موطنه أمريكا الجنوبية. يحتاج إلى ضوء قوي وري محدود لينمو بشكل جيد داخل المنزل."
+      "common_name": "صبّار التفاح البيروفي",
+      "description": "صبّار عمودي من مناطق مدارية جافة موسمياً في شمال أمريكا الجنوبية والبحر الكاريبي. يحتاج إلى ضوء قوي جداً وتربة صبارات جيدة التصريف، ويُسقى فقط بعد جفاف التربة تماماً. يُعد غالباً غير سام، لكن الأشواك قد تسبب إصابات."
     },
     "hi": {
-      "common_name": "पेरूवियन एप्पल कैक्टस",
-      "description": "Cereus repandus दक्षिण अमेरिका का एक लंबा कैक्टस है। इसे तेज रोशनी और कम पानी की आवश्यकता होती है।"
+      "common_name": "पेरुवियन एप्पल कैक्टस",
+      "description": "यह स्तंभाकार कैक्टस उत्तरी दक्षिण अमेरिका और कैरेबियन के मौसमी शुष्क क्षेत्रों से आता है। इसे बहुत तेज रोशनी और अच्छी जलनिकासी वाले कैक्टस मिक्स में रखें; मिट्टी पूरी तरह सूखने पर ही पानी दें। आम तौर पर इसे विषहीन माना जाता है, लेकिन कांटे चोट पहुंचा सकते हैं।"
     },
     "zh": {
-      "common_name": "秘鲁苹果仙人柱",
-      "description": "Cereus repandus 原产于南美洲，是高大的柱状仙人掌。适合在强光和干燥环境中生长。"
+      "common_name": "秘鲁苹果仙人掌",
+      "description": "柱状仙人掌，原产于南美北部与加勒比地区的季节性干旱地带。需要强光与排水良好的仙人掌土，盆土完全干透后再浇水。通常被认为无毒，但尖刺可能造成伤害。"
     },
     "ja": {
       "common_name": "ペルーアップルカクタス",
-      "description": "Cereus repandus は南米原産の柱状サボテンです。強い日光と控えめな水やりを好みます。"
+      "description": "南米北部とカリブ海の季節的に乾燥する地域に由来する柱状のサボテンです。強い光と水はけの良いサボテン用土を好み、用土が完全に乾いてから水やりします。一般に無毒とされますが、トゲでけがをすることがあります。"
     },
     "ko": {
       "common_name": "페루 애플 선인장",
-      "description": "Cereus repandus는 남아메리카 원산의 기둥형 선인장입니다. 강한 빛과 적은 물로 잘 자랍니다."
+      "description": "남아메리카 북부와 카리브해의 계절성 건조 지역 원산의 기둥형 선인장입니다. 강한 빛과 배수 좋은 선인장용 흙이 필요하며, 흙이 완전히 마른 뒤에만 물을 주세요. 일반적으로 무독으로 여겨지지만 가시에 다칠 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/174613/cereus-repandus/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c825",
-      "https://plants.ces.ncsu.edu/plants/cereus-repandus/"
+      "https://www.rhs.org.uk/plants/157556/cereus-repandus/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:130627-1",
+      "https://www.gardenia.net/plant/cereus-repandus-peruvian-apple-cactus-grow-care-guide",
+      "https://harlowgardens.com/peruvian-apple-cactus-plant-care-guide/"
     ]
   }
 }

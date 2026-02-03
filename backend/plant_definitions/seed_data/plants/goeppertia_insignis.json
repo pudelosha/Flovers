@@ -1,23 +1,23 @@
 {
   "external_id": "goeppertia_insignis",
-  "name": "Rattlesnake Plant",
+  "name": "Goeppertia insignis",
   "latin": "Goeppertia insignis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich well-drained soil",
-          "pl": "Żyzna przepuszczalna",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant riche",
-          "it": "Terriccio drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जलनिकास मिट्टी",
-          "zh": "肥沃排水土",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 잘 되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil lightly moist",
-          "pl": "Lekko wilgotna gleba",
-          "de": "Leicht feucht halten",
-          "fr": "Sol légèrement humide",
-          "it": "Terreno umido",
-          "es": "Suelo ligeramente húmedo",
-          "pt": "Solo levemente úmido",
-          "ar": "تربة رطبة قليلاً",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持微湿",
-          "ja": "土をやや湿らせる",
-          "ko": "흙을 촉촉하게"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलवर्धन",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana pielęgnacja",
-          "de": "Mittlerer Pflegeaufwand",
-          "fr": "Entretien modéré",
-          "it": "Cura media",
-          "es": "Cuidado moderado",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
           "ko": "중간 난이도"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C preferred",
-          "pl": "Preferuje 18–27°C",
-          "de": "Bevorzugt 18–27°C",
-          "fr": "Idéal 18–27°C",
-          "it": "Ideale 18–27°C",
-          "es": "Ideal 18–27°C",
-          "pt": "Ideal 18–27°C",
-          "ar": "يفضل 18–27°م",
-          "hi": "18–27°C उपयुक्त",
-          "zh": "适宜18–27°C",
-          "ja": "18～27℃が適温",
-          "ko": "18–27°C 적합"
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity needed",
+          "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
-          "zh": "需要高湿度",
-          "ja": "高湿度を好む",
+          "zh": "高湿度",
+          "ja": "高湿度",
           "ko": "높은 습도"
         }
       }
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic to pets",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "对宠物无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Trująca dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossica per gli animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping upright growth",
-          "pl": "Kępiasty pokrój",
-          "de": "Horstbildend",
-          "fr": "Port en touffe",
-          "it": "Crescita a cespo",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو كثيف قائم",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生直立",
-          "ja": "株立ち成長",
-          "ko": "포기형 성장"
+          "en": "Moderate growth rate",
+          "pl": "Średni tempo wzrostu",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Taux de croissance moyen",
+          "it": "Velocità di crescita moderata",
+          "es": "Tasa de crecimiento moderada",
+          "pt": "Taxa de crescimento moderada",
+          "ar": "معدل نمو معتدل",
+          "hi": "मध्यम विकास दर",
+          "zh": "适度的生长速度",
+          "ja": "中程度の成長速度",
+          "ko": "중간 성장 속도"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि-आधारित कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rattlesnake Plant",
-      "description": "Goeppertia insignis is a tropical foliage plant known for its spotted, wavy leaves. It thrives indoors with bright indirect light and consistent moisture. High humidity helps maintain healthy leaf edges."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis is a tropical plant known for its striking foliage. It thrives in moderate light, high humidity, and regular watering."
     },
     "pl": {
-      "common_name": "Kalatea grzechotnikowa",
-      "description": "Goeppertia insignis to tropikalna roślina ozdobna o falistych, plamistych liściach. Najlepiej rośnie w jasnym, rozproszonym świetle i wilgotnym podłożu. Wysoka wilgotność powietrza jest bardzo ważna."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis to tropikalna roślina znana z charakterystycznych liści. Rośnie w umiarkowanym świetle, wysokiej wilgotności i regularnym podlewaniu."
     },
     "de": {
-      "common_name": "Klapperpflanze",
-      "description": "Goeppertia insignis ist eine tropische Blattschmuckpflanze mit gemusterten Blättern. Sie bevorzugt helles, indirektes Licht und gleichmäßige Feuchtigkeit. Hohe Luftfeuchtigkeit beugt braunen Blatträndern vor."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis ist eine tropische Pflanze, die für ihr auffälliges Laub bekannt ist. Sie gedeiht bei mäßigem Licht, hoher Luftfeuchtigkeit und regelmäßiger Bewässerung."
     },
     "fr": {
-      "common_name": "Plante à sonnette",
-      "description": "Goeppertia insignis est une plante tropicale appréciée pour son feuillage décoratif. Elle pousse bien à la lumière indirecte avec un sol légèrement humide. Une forte humidité est recommandée."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis est une plante tropicale connue pour son feuillage frappant. Elle prospère sous une lumière modérée, une humidité élevée et un arrosage régulier."
     },
     "it": {
-      "common_name": "Calatea sonaglio",
-      "description": "Goeppertia insignis è una pianta tropicale ornamentale con foglie maculate. Preferisce luce indiretta e terreno costantemente umido. L’umidità elevata favorisce una crescita sana."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis è una pianta tropicale conosciuta per il suo fogliame sorprendente. Cresce in luce moderata, umidità elevata e annaffiature regolari."
     },
     "es": {
-      "common_name": "Planta cascabel",
-      "description": "Goeppertia insignis es una planta tropical de interior valorada por sus hojas decorativas. Necesita luz indirecta y riego regular. La humedad alta es clave para su buen desarrollo."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis es una planta tropical conocida por su llamativa follaje. Crece en luz moderada, alta humedad y riego regular."
     },
     "pt": {
-      "common_name": "Planta cascavel",
-      "description": "Goeppertia insignis é uma planta tropical ornamental com folhas marcadas. Desenvolve-se bem em luz indireta e solo úmido. Ambientes úmidos ajudam a manter a planta saudável."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis é uma planta tropical conhecida por sua folhagem impressionante. Ela cresce em luz moderada, alta umidade e rega regular."
     },
     "ar": {
-      "common_name": "نبات الأفعى",
-      "description": "نبات Goeppertia insignis نبات استوائي يتميز بأوراقه المزخرفة. يفضل الضوء غير المباشر والتربة الرطبة باستمرار. الرطوبة العالية ضرورية لصحة النبات."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis هي نبات استوائي معروف بأوراقه اللافتة. يزدهر في الضوء المعتدل والرطوبة العالية والري المنتظم."
     },
     "hi": {
-      "common_name": "रैटलस्नेक प्लांट",
-      "description": "Goeppertia insignis एक उष्णकटिबंधीय सजावटी पौधा है। यह अप्रत्यक्ष रोशनी और नियमित पानी में अच्छा बढ़ता है। अधिक आर्द्रता इसके लिए लाभकारी होती है।"
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis एक उष्णकटिबंधीय पौधा है जो अपनी आकर्षक पत्तियों के लिए जाना जाता है। यह मध्यम रोशनी, उच्च आर्द्रता और नियमित जलवर्धन में पनपता है।"
     },
     "zh": {
-      "common_name": "响尾蛇竹芋",
-      "description": "Goeppertia insignis 是一种热带观叶植物，以其斑纹叶片著称。适合明亮散射光和持续湿润的土壤。较高的空气湿度有助于生长。"
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis是一种热带植物，以其引人注目的叶片而闻名。它在中等光照、高湿度和定期浇水的环境中茁壮成长。"
     },
     "ja": {
-      "common_name": "ラトルスネークプラント",
-      "description": "Goeppertia insignis は模様のある葉が特徴の熱帯植物です。明るい間接光と適度な水分を好みます。高湿度環境が理想的です。"
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignisは、その目を引く葉で知られる熱帯植物です。中程度の光、高い湿度、定期的な水やりで育ちます。"
     },
     "ko": {
-      "common_name": "방울뱀 칼라데아",
-      "description": "Goeppertia insignis는 무늬 잎이 아름다운 열대 식물입니다. 밝은 간접광과 규칙적인 물주기가 필요합니다. 높은 습도가 건강한 생장에 도움됩니다."
+      "common_name": "Goeppertia insignis",
+      "description": "Goeppertia insignis는 눈에 띄는 잎사귀로 유명한 열대 식물입니다. 중간 정도의 빛, 높은 습도 및 규칙적인 물주기에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/15921/calathea-lancifolia/details",
-      "https://edis.ifas.ufl.edu/publication/FP104",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b415"
+      "https://www.thespruce.com/goeppertia-insignis-care-5073259",
+      "https://www.gardeningknowhow.com/houseplants/goeppertia-insignis.htm"
     ]
   }
 }

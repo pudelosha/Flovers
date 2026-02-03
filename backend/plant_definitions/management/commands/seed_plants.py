@@ -6,6 +6,7 @@ from pathlib import Path
 from django.conf import settings
 from django.core.files import File
 from django.core.management.base import BaseCommand, CommandError
+from django.db import transaction
 
 from plant_definitions.models import PlantDefinition, PlantDefinitionTranslation
 
@@ -106,7 +107,7 @@ class Command(BaseCommand):
             "--only",
             dest="only",
             default="",
-            help="Seed only one plant file by external_id (e.g. monstera_deliciosa)",
+            help="Seed only one plant file by filename stem (e.g. monstera_deliciosa)",
         )
         parser.add_argument(
             "--force-images",
@@ -124,9 +125,12 @@ class Command(BaseCommand):
 
         files = sorted(seed_dir.glob("*.json"))
         if only:
-            files = [seed_dir / f"{only}.json"]
-            if not files[0].exists():
-                raise CommandError(f"File not found for --only={only}: {files[0]}")
+            # Interpret --only as filename stem first.
+            candidate = seed_dir / f"{only}.json"
+            if candidate.exists():
+                files = [candidate]
+            else:
+                raise CommandError(f"File not found for --only={only}: {candidate}")
 
         if not files:
             self.stdout.write("No JSON files found.")
@@ -146,28 +150,44 @@ class Command(BaseCommand):
 
                 validate_plant_payload(payload)
 
-                obj, _ = PlantDefinition.objects.update_or_create(
-                    external_id=payload["external_id"],
-                    defaults={
-                        "name": (payload.get("name") or "").strip(),
-                        "latin": payload["latin"].strip(),
-                        "sun": payload["sun"],
-                        "water": payload["water"],
-                        "difficulty": normalize_difficulty(payload["difficulty"]),
-                        "popular": bool(payload.get("popular", False)),
-                        "recommended_pot_materials": payload.get("recommended_pot_materials", []),
-                        "recommended_soil_mixes": payload.get("recommended_soil_mixes", []),
-                        "water_required": bool(payload.get("water_required", False)),
-                        "water_interval_days": payload.get("water_interval_days"),
-                        "moisture_required": bool(payload.get("moisture_required", False)),
-                        "moisture_interval_days": payload.get("moisture_interval_days"),
-                        "fertilize_required": bool(payload.get("fertilize_required", False)),
-                        "fertilize_interval_days": payload.get("fertilize_interval_days"),
-                        "repot_required": bool(payload.get("repot_required", False)),
-                        "repot_interval_months": payload.get("repot_interval_months"),
-                        "traits": payload.get("traits", []),
-                    },
-                )
+                latin = payload["latin"].strip()
+                desired_external_id = (payload.get("external_id") or "").strip()
+
+                # Idempotent write: DB uniqueness is on latin, so upsert by latin
+                with transaction.atomic():
+                    obj, created = PlantDefinition.objects.update_or_create(
+                        latin=latin,
+                        defaults={
+                            # IMPORTANT: do NOT blindly set external_id here, because it may be unique too
+                            "name": (payload.get("name") or "").strip(),
+                            "sun": payload["sun"],
+                            "water": payload["water"],
+                            "difficulty": normalize_difficulty(payload["difficulty"]),
+                            "popular": bool(payload.get("popular", False)),
+                            "recommended_pot_materials": payload.get("recommended_pot_materials", []),
+                            "recommended_soil_mixes": payload.get("recommended_soil_mixes", []),
+                            "water_required": bool(payload.get("water_required", False)),
+                            "water_interval_days": payload.get("water_interval_days"),
+                            "moisture_required": bool(payload.get("moisture_required", False)),
+                            "moisture_interval_days": payload.get("moisture_interval_days"),
+                            "fertilize_required": bool(payload.get("fertilize_required", False)),
+                            "fertilize_interval_days": payload.get("fertilize_interval_days"),
+                            "repot_required": bool(payload.get("repot_required", False)),
+                            "repot_interval_months": payload.get("repot_interval_months"),
+                            "traits": payload.get("traits", []),
+                        },
+                    )
+
+                    # Safely normalize external_id (only if provided and not taken by another row)
+                    if desired_external_id:
+                        taken = (
+                            PlantDefinition.objects.filter(external_id=desired_external_id)
+                            .exclude(pk=obj.pk)
+                            .exists()
+                        )
+                        if not taken and obj.external_id != desired_external_id:
+                            obj.external_id = desired_external_id
+                            obj.save(update_fields=["external_id"])
 
                 # Translations
                 translations = payload["translations"]
@@ -227,7 +247,11 @@ class Command(BaseCommand):
                 obj.save()
 
                 ok += 1
-                self.stdout.write(self.style.SUCCESS(f"OK  {payload['external_id']} ({fp.name})"))
+                self.stdout.write(
+                    self.style.SUCCESS(
+                        f"OK  {payload.get('external_id')} ({fp.name})"
+                    )
+                )
 
             except Exception as e:
                 failed += 1

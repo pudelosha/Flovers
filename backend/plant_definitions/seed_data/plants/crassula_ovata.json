@@ -1,6 +1,6 @@
 {
   "external_id": "crassula_ovata",
-  "name": "Jade Plant",
+  "name": "Jade plant",
   "latin": "Crassula ovata",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "crassula_ovata.jpg",
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct light",
-          "pl": "Jasne słońce",
-          "de": "Helles Sonnenlicht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "强光",
-          "ja": "明るい日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light, sun",
+          "pl": "Jasno, trochę słońca",
+          "de": "Viel Licht, Sonne",
+          "fr": "Lumière vive, soleil",
+          "it": "Luce intensa, sole",
+          "es": "Luz intensa, sol",
+          "pt": "Luz forte, sol",
+          "ar": "ضوء قوي وشمس",
+          "hi": "तेज रोशनी, धूप",
+          "zh": "强光/可直射",
+          "ja": "明るい光・日光",
+          "ko": "밝은 빛, 햇빛"
         }
       }
     },
@@ -46,17 +46,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
+          "en": "Fast-draining mix",
+          "pl": "Przepuszczalna ziemia",
+          "de": "Durchlässiges Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
+          "hi": "जल-निकासी मिट्टी",
+          "zh": "排水良好土",
+          "ja": "水はけの良い土",
           "ko": "배수 좋은 흙"
         }
       }
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega pouca",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Let soil dry out",
+          "pl": "Podlewaj po przeschnięciu",
+          "de": "Gießen nach Abtrocknen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega tras secarse",
+          "pt": "Regar após secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "मिट्टी सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "흙 마르면 물"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24℃",
-          "ko": "18–24°C"
+          "en": "Warm; no frost",
+          "pl": "Ciepło; bez mrozu",
+          "de": "Warm; frostfrei",
+          "fr": "Chaud; sans gel",
+          "it": "Caldo; no gelo",
+          "es": "Cálido; sin heladas",
+          "pt": "Quente; sem geada",
+          "ar": "دافئ دون صقيع",
+          "hi": "गर्म; पाला नहीं",
+          "zh": "温暖，怕霜冻",
+          "ja": "暖かく、霜に弱い",
+          "ko": "따뜻하게, 서리 금지"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Normal, dry air ok",
+          "pl": "Normalna, sucho ok",
+          "de": "Normal, trocken ok",
+          "fr": "Normale, sec ok",
+          "it": "Normale, secco ok",
+          "es": "Normal, seco bien",
+          "pt": "Normal, seco ok",
+          "ar": "عادية؛ الجفاف مناسب",
+          "hi": "सामान्य; सूखी हवा ठीक",
+          "zh": "室内常湿即可",
+          "ja": "普通でOK（乾燥可）",
+          "ko": "보통, 건조 괜찮음"
         }
       }
     },
@@ -143,13 +143,13 @@
         "text": {
           "en": "Toxic to pets",
           "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
+          "de": "Giftig für Haustiere",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषाक्त",
+          "hi": "पालतू के लिए विषैली",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
           "ko": "반려동물 유독"
@@ -160,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
-          "ko": "느린 성장"
+          "en": "Slow, woody succulent",
+          "pl": "Wolny wzrost, sukulent",
+          "de": "Langsam, sukkulent",
+          "fr": "Lente, succulente",
+          "it": "Lenta, succulenta",
+          "es": "Lento, suculento",
+          "pt": "Lento, suculenta",
+          "ar": "بطيء، عصاري خشبي",
+          "hi": "धीमी, रसीला पौधा",
+          "zh": "生长慢，多肉灌木",
+          "ja": "生長ゆっくり多肉",
+          "ko": "느리게 자라는 다육"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Nicht überwässern",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita eccesso d’acqua",
+          "es": "Evita exceso de riego",
+          "pt": "Evite excesso de água",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "忌积水烂根",
+          "ja": "過湿は根腐れ",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, aphids",
+          "pl": "Wełnowce, mszyce",
+          "de": "Wollläuse, Läuse",
+          "fr": "Cochenilles, pucerons",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinillas, pulgones",
+          "pt": "Cochonilhas, pulgões",
+          "ar": "بق دقيقي ومنّ",
+          "hi": "मिलीबग, एफिड",
+          "zh": "粉蚧、蚜虫",
+          "ja": "コナカイガラムシ等",
+          "ko": "깍지벌레, 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Jade Plant",
-      "description": "Crassula ovata is a succulent native to South Africa, valued for its thick glossy leaves. It prefers bright light and infrequent watering. Overwatering can quickly cause root rot."
+      "common_name": "Jade plant",
+      "description": "Crassula ovata is a slow-growing succulent shrub from southern Africa, often grown as a houseplant. Give it very bright light and a fast-draining succulent mix. Water only after the potting mix dries (often about every 2–3 weeks indoors), and keep it frost-free; it is toxic to pets if eaten."
     },
     "pl": {
       "common_name": "Grubosz jajowaty",
-      "description": "Crassula ovata to sukulent pochodzący z Afryki Południowej, znany z mięsistych liści. Wymaga jasnego stanowiska i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia korzeni."
+      "description": "Crassula ovata to wolno rosnący sukulent z południowej Afryki, często uprawiany w domu. Zapewnij bardzo jasne stanowisko i przepuszczalne podłoże dla sukulentów. Podlewaj dopiero po wyschnięciu ziemi (często co 2–3 tygodnie w mieszkaniu) i chroń przed mrozem; po zjedzeniu jest toksyczna dla zwierząt."
     },
     "de": {
       "common_name": "Geldbaum",
-      "description": "Crassula ovata ist eine sukkulente Pflanze aus Südafrika mit dicken Blättern. Sie braucht viel Licht und wenig Wasser. Staunässe schadet der Pflanze schnell."
+      "description": "Crassula ovata ist ein langsam wachsender, verholzender Sukkulent aus dem südlichen Afrika. Sie braucht sehr helles Licht und ein gut durchlässiges Sukkulentensubstrat. Gieße erst nach dem Abtrocknen (drinnen oft alle 2–3 Wochen) und halte sie frostfrei; bei Aufnahme ist sie für Haustiere giftig."
     },
     "fr": {
       "common_name": "Plante de jade",
-      "description": "Crassula ovata est une plante succulente originaire d’Afrique du Sud. Elle apprécie une lumière vive et peu d’arrosage. Un excès d’eau provoque la pourriture des racines."
+      "description": "Crassula ovata est une succulente arbustive à croissance lente originaire d’Afrique australe. Donnez-lui une lumière très vive et un substrat pour succulentes bien drainant. Arrosez seulement quand le mélange est sec (souvent toutes les 2–3 semaines en intérieur) et évitez le gel ; elle est toxique pour les animaux si ingérée."
     },
     "it": {
-      "common_name": "Albero di giada",
-      "description": "Crassula ovata è una succulenta sudafricana dalle foglie carnose. Predilige luce intensa e annaffiature distanziate. Troppa acqua danneggia le radici."
+      "common_name": "Pianta di giada",
+      "description": "Crassula ovata è una succulenta a crescita lenta originaria dell’Africa meridionale, comune come pianta da interno. Preferisce luce molto intensa e un terriccio drenante per succulente. Annaffia solo a substrato asciutto (spesso ogni 2–3 settimane in casa) e tienila al riparo dal gelo; è tossica per gli animali se ingerita."
     },
     "es": {
       "common_name": "Planta de jade",
-      "description": "Crassula ovata es una suculenta originaria del sur de África. Necesita mucha luz y riego moderado. El exceso de agua causa pudrición."
+      "description": "Crassula ovata es una suculenta de crecimiento lento originaria del sur de África, muy usada como planta de interior. Necesita mucha luz y un sustrato para cactus/suculentas bien drenante. Riega solo cuando el sustrato esté seco (a menudo cada 2–3 semanas en interior) y evita las heladas; es tóxica para mascotas si se ingiere."
     },
     "pt": {
       "common_name": "Planta-jade",
-      "description": "Crassula ovata é uma suculenta da África do Sul com folhas espessas. Prefere luz intensa e pouca água. O excesso de rega causa apodrecimento."
+      "description": "Crassula ovata é uma suculenta de crescimento lento, nativa do sul da África, muito cultivada em interiores. Precisa de luz bem forte e substrato bem drenante para suculentas. Regue apenas quando o substrato secar (muitas vezes a cada 2–3 semanas em casa) e mantenha sem geada; é tóxica para animais se ingerida."
     },
     "ar": {
       "common_name": "نبات اليشم",
-      "description": "Crassula ovata نبات عصاري موطنه جنوب أفريقيا. يحتاج إلى ضوء قوي وري متباعد. كثرة الماء تؤدي إلى تعفن الجذور."
+      "description": "Crassula ovata نبات عصاري بطيء النمو موطنه جنوب أفريقيا ويُربّى كثيرًا كنبات منزلي. يحتاج إلى ضوء قوي جدًا وتربة جيدة التصريف للعصاريات. اسقِ فقط بعد جفاف التربة (غالبًا كل 2–3 أسابيع داخل المنزل) وتجنّب الصقيع؛ وهو سام للحيوانات الأليفة إذا تم أكله."
     },
     "hi": {
-      "common_name": "जेड पौधा",
-      "description": "Crassula ovata दक्षिण अफ्रीका का एक रसीला पौधा है। इसे तेज रोशनी और कम पानी की आवश्यकता होती है। अधिक पानी जड़ों को नुकसान पहुँचाता है।"
+      "common_name": "जेड प्लांट",
+      "description": "Crassula ovata दक्षिणी अफ्रीका का धीमे बढ़ने वाला रसीला झाड़ीदार पौधा है, जिसे घर में उगाया जाता है। इसे तेज रोशनी और अच्छी जल-निकासी वाली सक्युलेंट मिट्टी दें। मिट्टी सूखने पर ही पानी दें (अक्सर घर में हर 2–3 हफ्ते), ठंड/पाले से बचाएँ; यह पालतू जानवरों के लिए विषैला है।"
     },
     "zh": {
       "common_name": "玉树",
-      "description": "Crassula ovata 原产于南非，是常见的多肉植物。它需要充足光照和少量浇水。浇水过多会导致烂根。"
+      "description": "Crassula ovata 原产南部非洲，是生长缓慢的多肉灌木，常作室内盆栽。需要充足强光和排水良好的多肉基质。盆土干透再浇水（室内常见约每 2–3 周一次），避免霜冻；误食对宠物有毒。"
     },
     "ja": {
-      "common_name": "金のなる木",
-      "description": "Crassula ovata は南アフリカ原産の多肉植物です。明るい日光と控えめな水やりを好みます。過湿は根腐れの原因になります。"
+      "common_name": "カネノナルキ",
+      "description": "Crassula ovata は南部アフリカ原産の生長がゆっくりな多肉植物で、室内でよく育てられます。強い光と水はけの良い多肉用土が必要です。用土が乾いてから水やり（室内では目安として2～3週間に1回程度）し、霜に当てないでください；ペットが食べると有毒です。"
     },
     "ko": {
       "common_name": "비취나무",
-      "description": "Crassula ovata는 남아프리카 원산의 다육식물입니다. 강한 빛과 적은 물을 선호합니다. 과습은 뿌리썩음을 유발합니다."
+      "description": "Crassula ovata는 남아프리카 원산의 느리게 자라는 다육 관목으로 실내에서 흔히 기릅니다. 매우 밝은 빛과 배수가 좋은 다육용 흙이 필요합니다. 흙이 완전히 마른 뒤에만 물을 주며(실내에서는 보통 2–3주 간격), 서리를 피하세요; 반려동물이 먹으면 유독할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/crassula/ovata/details",
-      "https://www.kew.org/plants/crassula-ovata",
-      "https://extension.umn.edu/houseplants/jade-plant"
+      "https://www.rhs.org.uk/plants/4739/crassula-ovata/details",
+      "https://hort.extension.wisc.edu/articles/jade-plant-crassula-ovata/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=279445",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/jade-plant",
+      "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A273350-1"
     ]
   }
 }

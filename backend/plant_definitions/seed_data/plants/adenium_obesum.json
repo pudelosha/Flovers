@@ -1,6 +1,6 @@
 {
   "external_id": "adenium_obesum",
-  "name": "Desert Rose",
+  "name": "Desert rose",
   "latin": "Adenium obesum",
   "sun": "high",
   "water": "low",
@@ -10,11 +10,11 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -33,12 +33,12 @@
           "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
-          "es": "Sol pleno",
+          "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日なた",
+          "ja": "日当たり良好",
           "ko": "강한 햇빛"
         }
       }
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining",
-          "pl": "Dobrze zdren.",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Rega pouca",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Dry between watering",
+          "pl": "Przeschnąć między",
+          "de": "Zwischen Gießen trocken",
+          "fr": "Sécher entre arrosages",
+          "it": "Asciuga tra bagnature",
+          "es": "Secar entre riegos",
+          "pt": "Secar entre regas",
+          "ar": "اتركه يجف بين الري",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마른 뒤 물주기"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "Warm (10–32°C)",
+          "pl": "Ciepło (10–32°C)",
+          "de": "Warm (10–32°C)",
+          "fr": "Chaud (10–32°C)",
+          "it": "Caldo (10–32°C)",
+          "es": "Cálido (10–32°C)",
+          "pt": "Quente (10–32°C)",
+          "ar": "دافئ (10–32°م)",
+          "hi": "गरम (10–32°C)",
+          "zh": "温暖(10–32°C)",
+          "ja": "暖かい(10–32°C)",
+          "ko": "따뜻함(10–32°C)"
         }
       }
     },
@@ -123,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Gering",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮음"
+          "en": "Low–moderate",
+          "pl": "Niska–umiark.",
+          "de": "Niedrig–mittel",
+          "fr": "Faible à modérée",
+          "it": "Bassa–media",
+          "es": "Baja–media",
+          "pt": "Baixa–média",
+          "ar": "منخفضة-متوسطة",
+          "hi": "कम–मध्यम",
+          "zh": "低到中等",
+          "ja": "低〜中程度",
+          "ko": "낮음~보통"
         }
       }
     },
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic sap",
-          "pl": "Toksyczny",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if eaten",
+          "pl": "Trująca po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,78 +161,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow grower",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長遅い",
-          "ko": "느린 성장"
+          "en": "Slow, caudex",
+          "pl": "Wolny, kaudeks",
+          "de": "Langsam, Caudex",
+          "fr": "Lente, caudex",
+          "it": "Lenta, caudex",
+          "es": "Lento, caudex",
+          "pt": "Lento, caudex",
+          "ar": "بطيء، جذع منتفخ",
+          "hi": "धीमा, काउडेक्स",
+          "zh": "生长慢，有膨大茎",
+          "ja": "遅い、塊根状",
+          "ko": "느림, 비대줄기"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid rot & cold",
+          "pl": "Unikaj zgnilizny i chłodu",
+          "de": "Fäulnis & Kälte meiden",
+          "fr": "Éviter pourriture/froid",
+          "it": "Evita marciume/freddo",
+          "es": "Evita pudrición y frío",
+          "pt": "Evite podridão e frio",
+          "ar": "تجنب التعفن والبرد",
+          "hi": "सड़न/ठंड से बचें",
+          "zh": "怕涝怕冷",
+          "ja": "過湿・寒さに弱い",
+          "ko": "과습·저온 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids sometimes",
+          "pl": "Czasem mszyce",
+          "de": "Mitunter Blattläuse",
+          "fr": "Pucerons parfois",
+          "it": "Afidi a volte",
+          "es": "Pulgones a veces",
+          "pt": "Pulgões às vezes",
+          "ar": "قد تظهر حشرات منّ",
+          "hi": "कभी-कभी एफिड्स",
+          "zh": "偶有蚜虫",
+          "ja": "アブラムシ時々",
+          "ko": "가끔 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Desert Rose",
-      "description": "Adenium obesum is a succulent shrub native to arid regions of Africa and the Arabian Peninsula. It stores water in a swollen trunk and requires bright light and sparse watering indoors."
+      "common_name": "Desert rose",
+      "description": "Adenium obesum is a caudiciform succulent grown for its swollen trunk and summer flowers. Give very bright light and let the potting mix dry between waterings. Keep warm and reduce watering strongly in cooler, low-light periods."
     },
     "pl": {
       "common_name": "Róża pustyni",
-      "description": "Adenium obesum to sukulentowy krzew z suchych rejonów Afryki i Półwyspu Arabskiego. Posiada zgrubiały pień magazynujący wodę i wymaga dużo światła oraz rzadkiego podlewania."
+      "description": "Adenium obesum to sukulent z charakterystycznym, zgrubiałym pniem i letnimi kwiatami. Wymaga bardzo jasnego stanowiska i podłoża, które przesycha między podlewaniami. Trzymaj w cieple i mocno ogranicz wodę w chłodniejszym, ciemniejszym okresie."
     },
     "de": {
       "common_name": "Wüstenrose",
-      "description": "Adenium obesum ist ein sukkulenter Strauch aus trockenen Regionen Afrikas und der Arabischen Halbinsel. Er speichert Wasser im Stamm und benötigt viel Sonne sowie wenig Wasser."
+      "description": "Adenium obesum ist ein sukkulenter Strauch mit verdicktem Caudex und Sommerblüte. Sehr hell stellen und das Substrat zwischen den Wassergaben austrocknen lassen. Warm halten und bei wenig Licht bzw. kühler Witterung deutlich weniger gießen."
     },
     "fr": {
       "common_name": "Rose du désert",
-      "description": "Adenium obesum est un arbuste succulent originaire des régions arides d’Afrique et de la péninsule Arabique. Il stocke l’eau dans son tronc et demande beaucoup de lumière et peu d’arrosage."
+      "description": "Adenium obesum est une plante succulente à caudex, appréciée pour son tronc renflé et ses fleurs estivales. Offrez une lumière très vive et laissez sécher le substrat entre deux arrosages. Gardez au chaud et réduisez fortement l’eau en période plus fraîche et peu lumineuse."
     },
     "it": {
       "common_name": "Rosa del deserto",
-      "description": "Adenium obesum è un arbusto succulento originario di regioni aride africane e arabe. Accumula acqua nel tronco e necessita di luce intensa e annaffiature limitate."
+      "description": "Adenium obesum è una succulenta con caudex, coltivata per il fusto rigonfio e la fioritura estiva. Serve molta luce e il terriccio deve asciugare tra un’annaffiatura e l’altra. Tienila al caldo e riduci molto l’acqua quando fa più fresco e c’è meno luce."
     },
     "es": {
       "common_name": "Rosa del desierto",
-      "description": "Adenium obesum es un arbusto suculento de regiones áridas de África y la península arábiga. Almacena agua en el tronco y requiere mucha luz y riego escaso."
+      "description": "Adenium obesum es una suculenta con caudex, valorada por su tronco engrosado y flores de verano. Dale luz muy intensa y deja que el sustrato se seque entre riegos. Manténla cálida y reduce mucho el riego en épocas más frescas y con poca luz."
     },
     "pt": {
       "common_name": "Rosa-do-deserto",
-      "description": "Adenium obesum é um arbusto suculento de regiões áridas da África e da Península Arábica. Armazena água no tronco e precisa de sol intenso e pouca rega."
+      "description": "Adenium obesum é uma suculenta com caudex, conhecida pelo tronco inchado e flores no verão. Precisa de muita luz e o substrato deve secar entre as regas. Mantenha em local quente e reduza bastante a água quando estiver mais fresco e com menos luz."
     },
     "ar": {
       "common_name": "وردة الصحراء",
-      "description": "نبات أدينيوم أوبسوم شجيرة عصارية موطنها المناطق الجافة في أفريقيا وشبه الجزيرة العربية. يخزن الماء في الساق ويتطلب ضوءًا قويًا وريًا محدودًا."
+      "description": "Adenium obesum نبات عصاري ذو جذع منتفخ ويزهر غالبًا في الصيف. يحتاج إلى ضوء قوي جدًا مع ترك التربة لتجف بين مرات الري. احفظه دافئًا وقلّل الري كثيرًا عند انخفاض الحرارة أو قلة الضوء."
     },
     "hi": {
-      "common_name": "डेज़र्ट रोज़",
-      "description": "Adenium obesum एक रसीला झाड़ी है जो अफ्रीका और अरब प्रायद्वीप के शुष्क क्षेत्रों में पाई जाती है। यह अपने तने में पानी संचित करती है और तेज धूप व कम पानी चाहती है।"
+      "common_name": "रेगिस्तानी गुलाब",
+      "description": "Adenium obesum एक रसदार पौधा है जिसमें मोटा काउडेक्स होता है और आम तौर पर गर्मियों में फूल आते हैं। तेज रोशनी दें और मिट्टी को पानी देने के बीच पूरी तरह सूखने दें। गरम रखें और ठंड/कम रोशनी के समय पानी बहुत कम करें।"
     },
     "zh": {
       "common_name": "沙漠玫瑰",
-      "description": "Adenium obesum 原产于非洲和阿拉伯半岛的干旱地区，是一种多肉灌木。它通过膨大的树干储水，室内养护需强光和少量浇水。"
+      "description": "Adenium obesum 是具膨大茎的多肉植物，常在夏季开花。需要强光，浇水前让盆土干透。保持温暖，在气温较低或光照不足时大幅减少浇水。"
     },
     "ja": {
-      "common_name": "デザートローズ",
-      "description": "アデニウム・オベスムはアフリカやアラビア半島の乾燥地帯原産の多肉低木です。幹に水を蓄え、明るい光と控えめな水やりを好みます。"
+      "common_name": "砂漠のバラ",
+      "description": "Adenium obesum は塊根状の幹が特徴の多肉植物で、主に夏に開花します。強い光を与え、用土は水やりの間にしっかり乾かします。暖かく管理し、低温や日照不足の時期は水やりを大きく減らします。"
     },
     "ko": {
-      "common_name": "데저트 로즈",
-      "description": "아데니움 오베숨은 아프리카와 아라비아 반도의 건조 지역 원산의 다육 관목입니다. 줄기에 수분을 저장하며 강한 빛과 적은 물을 필요로 합니다."
+      "common_name": "사막의 장미",
+      "description": "Adenium obesum은 비대줄기가 있는 다육식물로 주로 여름에 꽃을 피웁니다. 강한 빛이 필요하며 물 주기 사이에 흙이 완전히 마르도록 합니다. 따뜻하게 유지하고 기온이 낮거나 빛이 부족할 때는 물을 크게 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/adenium",
-      "https://www.kew.org/plants/adenium-obesum",
-      "https://extension.ifas.ufl.edu/publications/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276116",
+      "https://www.rhs.org.uk/plants/426/adenium-obesum/details",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10220692/"
     ]
   }
 }

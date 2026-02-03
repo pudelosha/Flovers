@@ -1,23 +1,23 @@
 {
   "external_id": "phlebodium_aureum",
-  "name": "Blue Star Fern",
+  "name": "Golden Polypody",
   "latin": "Phlebodium aureum",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "fern"
   ],
   "water_required": true,
-  "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 10,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßige Bewässerung",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 급수"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20–25°C",
-          "pl": "20–25°C",
-          "de": "20–25°C",
-          "fr": "20–25°C",
-          "it": "20–25°C",
-          "es": "20–25°C",
-          "pt": "20–25°C",
-          "ar": "20–25°C",
-          "hi": "20–25°C",
-          "zh": "20–25°C",
-          "ja": "20–25°C",
-          "ko": "20–25°C"
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "false",
-          "pl": "fałsz",
-          "de": "falsch",
-          "fr": "faux",
-          "it": "falso",
-          "es": "falso",
-          "pt": "falso",
-          "ar": "كاذب",
-          "hi": "गलत",
-          "zh": "错误",
-          "ja": "偽",
-          "ko": "거짓"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适中生长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避けてください",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pochi parassiti",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-आधारित कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Blue Star Fern",
-      "description": "Phlebodium aureum is a tropical fern known for its distinctive blue-green, wavy fronds. It thrives in shaded, humid environments."
+      "common_name": "Golden Polypody",
+      "description": "Phlebodium aureum is a tropical fern known for its distinctive, feathery fronds. It prefers moderate lighting and regular watering."
     },
     "pl": {
-      "common_name": "Paproć niebieska gwiazda",
-      "description": "Phlebodium aureum to tropikalna paproć, znana z charakterystycznych niebiesko-zielonych, falistych liści. Rośnie w zacienionych, wilgotnych środowiskach."
+      "common_name": "Złoty polipod",
+      "description": "Phlebodium aureum to tropikalna paproć o charakterystycznych, pierzastych liściach. Preferuje umiarkowane światło i regularne podlewanie."
     },
     "de": {
-      "common_name": "Blaue Sternfarn",
-      "description": "Phlebodium aureum ist ein tropischer Farn, bekannt für seine auffälligen blau-grünen, gewellten Wedel. Er gedeiht in schattigen, feuchten Umgebungen."
+      "common_name": "Goldenes Polypodium",
+      "description": "Phlebodium aureum ist ein tropischer Farn mit auffälligen, federartigen Blättern. Er bevorzugt mittleres Licht und regelmäßiges Gießen."
     },
     "fr": {
-      "common_name": "Fougère étoile bleue",
-      "description": "Phlebodium aureum est une fougère tropicale connue pour ses frondes bleu-vert ondulées. Elle prospère dans des environnements ombragés et humides."
+      "common_name": "Polypode doré",
+      "description": "Phlebodium aureum est une fougère tropicale connue pour ses frondes distinctives. Elle préfère une lumière modérée et un arrosage régulier."
     },
     "it": {
-      "common_name": "Felce stella blu",
-      "description": "Phlebodium aureum è una felce tropicale nota per le sue fronde ondulate di colore blu-verde. Cresce in ambienti ombreggiati e umidi."
+      "common_name": "Polipodio dorato",
+      "description": "Phlebodium aureum è una felce tropicale conosciuta per le sue fronde distintive. Preferisce una luce moderata e annaffiature regolari."
     },
     "es": {
-      "common_name": "Helecho estrella azul",
-      "description": "Phlebodium aureum es un helecho tropical conocido por sus frondas onduladas de color azul-verde. Crece en entornos sombreados y húmedos."
+      "common_name": "Polipodio dorado",
+      "description": "Phlebodium aureum es un helecho tropical conocido por sus frondas distintivas. Prefiere luz moderada y riego regular."
     },
     "pt": {
-      "common_name": "Samambaia estrela azul",
-      "description": "Phlebodium aureum é uma samambaia tropical conhecida por suas frondes onduladas azul-esverdeadas. Ela cresce em ambientes sombreados e úmidos."
+      "common_name": "Polipódio dourado",
+      "description": "Phlebodium aureum é uma samambaia tropical conhecida por suas frondes distintas. Prefere luz moderada e rega regular."
     },
     "ar": {
-      "common_name": "سرخس النجمة الزرقاء",
-      "description": "Phlebodium aureum هو سرخس استوائي معروف بسعفه المتموجة باللون الأزرق والأخضر. ينمو في بيئات مظللة ورطبة."
+      "common_name": "بوليبوديوم ذهبي",
+      "description": "Phlebodium aureum هو سرخس استوائي معروف بوريقاتها المميزة. يفضل الضوء المعتدل والري المنتظم."
     },
     "hi": {
-      "common_name": "ब्लू स्टार फर्न",
-      "description": "Phlebodium aureum एक उष्णकटिबंधीय फर्न है जो अपनी विशिष्ट नीली-हरे, लहराती पत्तियों के लिए जाना जाता है। यह छायादार, आर्द्र वातावरण में उगता है।"
+      "common_name": "स्वर्णनमित पल्मोडियम",
+      "description": "Phlebodium aureum एक उष्णकटिबंधीय फर्न है जो अपनी विशिष्ट, पंख जैसी पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश और नियमित पानी देना पसंद करता है।"
     },
     "zh": {
-      "common_name": "蓝星蕨",
-      "description": "Phlebodium aureum 是一种热带蕨类植物，以其独特的蓝绿色波状叶子而闻名。它在阴湿的环境中生长。"
+      "common_name": "金波裂叶蕨",
+      "description": "Phlebodium aureum 是一种热带蕨类植物，因其独特的羽状叶片而闻名。它喜欢中等光照和定期浇水。"
     },
     "ja": {
-      "common_name": "ブルースターファーン",
-      "description": "Phlebodium aureum は、特徴的な青緑色の波状の葉で知られる熱帯性のシダです。日陰で湿った環境で成長します。"
+      "common_name": "ゴールデンポリポディウム",
+      "description": "Phlebodium aureumは、その特徴的な羽毛状の葉で知られる熱帯性シダ植物です。中程度の光と定期的な水やりを好みます。"
     },
     "ko": {
-      "common_name": "블루 스타 고사리",
-      "description": "Phlebodium aureum는 파란색-녹색의 물결 모양 잎으로 알려진 열대 식물입니다. 그늘지고 습한 환경에서 자랍니다."
+      "common_name": "골든 폴리포디움",
+      "description": "Phlebodium aureum은 독특한 깃털 모양의 잎으로 알려진 열대 양치식물입니다. 중간 정도의 빛과 규칙적인 급수를 선호합니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/phlebodium-aureum",
-      "https://www.gardenia.net/plant/phlebodium-aureum-blue-star-fern"
+      "https://www.gardenia.net/plant/phlebodium-aureum"
     ]
   }
 }

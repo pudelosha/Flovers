@@ -2,17 +2,17 @@
   "external_id": "rebutia_muscula",
   "name": "Rebutia muscula",
   "latin": "Rebutia muscula",
-  "sun": "high",
-  "water": "medium",
+  "sun": "medium",
+  "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta",
-    "ceramic"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaskowy",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملي",
-          "hi": "रेत",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Wässern, wenn trocken",
+          "fr": "Arroser lorsque sec",
+          "it": "Annaffiare quando secco",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी दें",
+          "zh": "干燥时浇水",
+          "ja": "乾燥時に水やり",
+          "ko": "건조할 때 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Humedad baja",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "저습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovrannumero",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar regar demais",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestiferi occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Golden Torch Cactus",
-      "description": "Rebutia muscula is a small cactus native to Bolivia. It features bright orange flowers and is well-suited to sunny, dry environments."
+      "common_name": "Cactus Muscula",
+      "description": "Rebutia muscula is a small, globular cactus from South America. It is known for its vibrant, colorful flowers."
     },
     "pl": {
-      "common_name": "Kaktus Złoty Płomień",
-      "description": "Rebutia muscula to mały kaktus pochodzący z Boliwii. Charakteryzuje się jasnymi pomarańczowymi kwiatami i dobrze rośnie w słonecznych, suchych warunkach."
+      "common_name": "Kaktus Muscula",
+      "description": "Rebutia muscula to mały, kulisty kaktus pochodzący z Ameryki Południowej. Znany jest z jaskrawych, kolorowych kwiatów."
     },
     "de": {
-      "common_name": "Goldene Fackel Kaktus",
-      "description": "Rebutia muscula ist ein kleiner Kaktus aus Bolivien. Er hat leuchtend orangefarbene Blüten und wächst gut in sonnigen, trockenen Umgebungen."
+      "common_name": "Muscula Kaktus",
+      "description": "Rebutia muscula ist ein kleiner, kugelförmiger Kaktus aus Südamerika. Er ist bekannt für seine lebendigen, bunten Blumen."
     },
     "fr": {
-      "common_name": "Cactus Torche Dorée",
-      "description": "Rebutia muscula est un petit cactus originaire de Bolivie. Il possède des fleurs orange vives et se développe bien dans des environnements ensoleillés et secs."
+      "common_name": "Cactus Muscula",
+      "description": "Rebutia muscula est un petit cactus globulaire originaire d'Amérique du Sud. Il est connu pour ses fleurs vibrantes et colorées."
     },
     "it": {
-      "common_name": "Cactus Torcia Dorata",
-      "description": "Rebutia muscula è un piccolo cactus originario della Bolivia. Ha fiori arancioni brillanti e cresce bene in ambienti soleggiati e asciutti."
+      "common_name": "Cactus Muscula",
+      "description": "Rebutia muscula è un piccolo cactus globoso proveniente dal Sud America. È noto per i suoi fiori vivaci e colorati."
     },
     "es": {
-      "common_name": "Cactus Antorcha Dorada",
-      "description": "Rebutia muscula es un pequeño cactus originario de Bolivia. Tiene flores naranjas brillantes y crece bien en ambientes soleados y secos."
+      "common_name": "Cactus Muscula",
+      "description": "Rebutia muscula es un pequeño cactus globular originario de América del Sur. Es conocido por sus flores vibrantes y coloridas."
     },
     "pt": {
-      "common_name": "Cacto Tocha Dourada",
-      "description": "Rebutia muscula é um pequeno cacto nativo da Bolívia. Apresenta flores laranjas brilhantes e cresce bem em ambientes ensolarados e secos."
+      "common_name": "Cacto Muscula",
+      "description": "Rebutia muscula é um pequeno cacto globoso originário da América do Sul. É conhecido por suas flores vibrantes e coloridas."
     },
     "ar": {
-      "common_name": "صبار الشعلة الذهبية",
-      "description": "Rebutia muscula هو صبار صغير موطنه بوليفيا. يتميز بزهور برتقالية زاهية وينمو بشكل جيد في البيئات المشمسة والجافة."
+      "common_name": "صبار موسكولا",
+      "description": "Rebutia muscula هو صبار كروي صغير من أمريكا الجنوبية. يعرف بأزهاره الزاهية والملونة."
     },
     "hi": {
-      "common_name": "गोल्डन टॉर्च कैक्टस",
-      "description": "Rebutia muscula एक छोटा कैक्टस है जो बोलीविया का मूल निवासी है। इसमें चमकीले नारंगी फूल होते हैं और यह धूप और शुष्क वातावरण में अच्छा बढ़ता है।"
+      "common_name": "कैक्टस मुस्कुला",
+      "description": "Rebutia muscula एक छोटा, गोलाकार कैक्टस है जो दक्षिण अमेरिका से है। यह अपने जीवंत, रंगीन फूलों के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "金色火炬仙人掌",
-      "description": "Rebutia muscula 是一种原产于玻利维亚的小型仙人掌。它有明亮的橙色花朵，并且在阳光明媚、干燥的环境中生长良好。"
+      "common_name": "穆斯库拉仙人掌",
+      "description": "Rebutia muscula 是一种来自南美的小型球形仙人掌。以其生动、多彩的花朵而闻名。"
     },
     "ja": {
-      "common_name": "ゴールデントーチサボテン",
-      "description": "Rebutia musculaはボリビア原産の小さなサボテンです。鮮やかなオレンジ色の花を持ち、日当たりの良い乾燥した環境でよく育ちます。"
+      "common_name": "ムスキュラサボテン",
+      "description": "Rebutia muscula は南アメリカ原産の小さな球形サボテンです。鮮やかで色とりどりの花で知られています。"
     },
     "ko": {
-      "common_name": "골든 토치 선인장",
-      "description": "Rebutia muscula는 볼리비아 원산의 작은 선인장입니다. 밝은 오렌지색 꽃을 가지고 있으며 햇볕이 잘 드는 건조한 환경에서 잘 자랍니다."
+      "common_name": "무스큘라 선인장",
+      "description": "Rebutia muscula는 남미 출신의 작은 구형 선인장입니다. 생동감 있고 다채로운 꽃으로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/rebutia-muscula",
-      "https://www.cactusinfo.org/rebutia-muscula-care"
+      "https://www.rhs.org.uk/plants/rebutia-muscula",
+      "https://www.gardeningknowhow.com/plant-problems/pests-diseases/rebutia-muscula-care.htm"
     ]
   }
 }

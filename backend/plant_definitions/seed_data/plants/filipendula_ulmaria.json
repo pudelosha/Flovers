@@ -4,22 +4,22 @@
   "latin": "Filipendula ulmaria",
   "sun": "medium",
   "water": "high",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "ceramic"
+    "self-watering"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "clay"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 3,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "filipendula_ulmaria.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Sun/part shade",
+          "pl": "Słońce/półcień",
+          "de": "Sonne/Halbschat",
+          "fr": "Soleil/mi-ombre",
+          "it": "Sole/Mezzombra",
+          "es": "Sol/semisombra",
+          "pt": "Sol/meia-sombra",
+          "ar": "شمس/ظل جزئي",
+          "hi": "धूप/आंशिक छाया",
+          "zh": "阳光/半阴",
+          "ja": "日向/半日陰",
+          "ko": "햇빛/반그늘"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Suolo umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Fertile, humus-rich",
+          "pl": "Żyzna, próchniczna",
+          "de": "Humos, nährstoffr.",
+          "fr": "Riche, humifère",
+          "it": "Fertile, umifero",
+          "es": "Fértil, con humus",
+          "pt": "Fértil, humosa",
+          "ar": "خصبة، غنية بالدبال",
+          "hi": "उपजाऊ, ह्यूमसयुक्त",
+          "zh": "肥沃、腐殖质",
+          "ja": "肥沃で腐植質",
+          "ko": "비옥한 부식질"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Frequent",
-          "pl": "Częste",
-          "de": "Häufig",
-          "fr": "Fréquent",
-          "it": "Frequente",
-          "es": "Frecuente",
-          "pt": "Frequente",
-          "ar": "متكرر",
-          "hi": "बार-बार",
-          "zh": "经常浇水",
-          "ja": "頻繁",
-          "ko": "잦은 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Restez humide",
+          "it": "Sempre umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "تربة رطبة دائمًا",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Umiarkowana",
-          "de": "Gemäßigt",
-          "fr": "Tempéré",
-          "it": "Temperato",
-          "es": "Templado",
-          "pt": "Temperado",
-          "ar": "معتدل",
-          "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "en": "Cool: 10–22°C",
+          "pl": "Chłodno: 10–22°C",
+          "de": "Kühl: 10–22°C",
+          "fr": "Frais: 10–22°C",
+          "it": "Fresco: 10–22°C",
+          "es": "Fresco: 10–22°C",
+          "pt": "Fresco: 10–22°C",
+          "ar": "معتدل: 10–22°م",
+          "hi": "ठंडा: 10–22°C",
+          "zh": "偏凉：10–22°C",
+          "ja": "涼しい: 10–22°C",
+          "ko": "서늘함: 10–22°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "مرتفعة",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Normal to moist air",
+          "pl": "Normalna–wilgotna",
+          "de": "Normal bis feucht",
+          "fr": "Normale à humide",
+          "it": "Normale–umida",
+          "es": "Normal a húmeda",
+          "pt": "Normal a úmida",
+          "ar": "عادية إلى رطبة",
+          "hi": "सामान्य–नम",
+          "zh": "普通到偏湿",
+          "ja": "普通〜やや湿潤",
+          "ko": "보통~약간 습함"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic reported",
+          "pl": "Brak toksyczności",
+          "de": "Ungiftig (gemeldet)",
+          "fr": "Non toxique (signalé)",
+          "it": "Non tossica (nota)",
+          "es": "No tóxica (report.)",
+          "pt": "Não tóxica (rel.)",
+          "ar": "غير سامة (مذكور)",
+          "hi": "गैर-विषैली (रिप.)",
+          "zh": "未见毒性报告",
+          "ja": "毒性報告なし",
+          "ko": "독성 보고 없음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clump forming",
-          "pl": "Kępowa",
+          "en": "Clump-forming",
+          "pl": "Kępkowa",
           "de": "Horstbildend",
-          "fr": "Touffue",
-          "it": "A cespi",
-          "es": "En matas",
-          "pt": "Em touceiras",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार",
+          "fr": "En touffe",
+          "it": "Cespitosa",
+          "es": "Forma matas",
+          "pt": "Forma touceiras",
+          "ar": "تنمو في كتل",
+          "hi": "गुच्छेदार वृद्धि",
           "zh": "丛生",
           "ja": "株立ち",
-          "ko": "군생"
+          "ko": "포기형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drying out",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter le dessèchement",
+          "it": "Non far seccare",
+          "es": "Evitar sequedad",
+          "pt": "Evitar secar",
+          "ar": "تجنب الجفاف",
+          "hi": "सूखने न दें",
+          "zh": "避免干旱",
+          "ja": "乾燥させない",
+          "ko": "건조 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Generally pest-free",
+          "pl": "Zwykle bez szkodn.",
+          "de": "Meist schädlingsfrei",
+          "fr": "Gén. sans ravageurs",
+          "it": "Di solito senza par.",
+          "es": "Generalmente sin pl.",
+          "pt": "Geralmente sem pr.",
+          "ar": "عادة بلا آفات",
+          "hi": "आमतौर पर कीट-रहित",
+          "zh": "通常少虫害",
+          "ja": "害虫は少なめ",
+          "ko": "해충 드묾"
         }
       }
     }
@@ -181,58 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Meadowsweet",
-      "description": "Filipendula ulmaria is a perennial herb native to Europe and western Asia. It naturally grows in damp meadows, riverbanks, and wetlands. The plant produces fragrant white flowers in early summer."
+      "description": "Filipendula ulmaria is a herbaceous perennial known for airy clusters of small creamy-white flowers. It prefers fertile, humus-rich soil kept consistently moist and grows in sun to partial shade. It is generally reported as non-toxic."
     },
     "pl": {
-      "common_name": "Więzówka błotna",
-      "description": "Filipendula ulmaria to bylina występująca w Europie i zachodniej Azji. Rośnie naturalnie na wilgotnych łąkach i brzegach rzek. Latem wytwarza pachnące białe kwiaty."
+      "common_name": "Wiązówka błotna",
+      "description": "Filipendula ulmaria to bylina o kremowobiałych, drobnych kwiatach zebranych w wiechy. Lubi żyzną, próchniczną glebę stale wilgotną oraz stanowisko od słońca do półcienia. Zwykle nie jest uznawana za roślinę toksyczną."
     },
     "de": {
-      "common_name": "Mädesüß",
-      "description": "Filipendula ulmaria ist eine ausdauernde Pflanze aus Europa und Westasien. Sie wächst bevorzugt an feuchten Wiesen und Gewässerrändern. Im Sommer erscheinen duftende weiße Blüten."
+      "common_name": "Echtes Mädesüß",
+      "description": "Filipendula ulmaria ist eine krautige Staude mit lockeren, cremeweißen Blütenständen. Sie mag nährstoffreichen, humosen Boden, der gleichmäßig feucht bleibt, und wächst in Sonne bis Halbschatten. Sie gilt in der Regel als ungiftig."
     },
     "fr": {
       "common_name": "Reine-des-prés",
-      "description": "Filipendula ulmaria est une plante vivace originaire d’Europe et d’Asie occidentale. Elle pousse dans les prairies humides et les zones marécageuses. Elle fleurit en été avec des fleurs blanches parfumées."
+      "description": "Filipendula ulmaria est une vivace herbacée aux panicules de petites fleurs blanc crème. Elle préfère un sol fertile et humifère, maintenu constamment humide, au soleil ou à mi-ombre. Elle est généralement signalée comme non toxique."
     },
     "it": {
       "common_name": "Olmaria",
-      "description": "Filipendula ulmaria è una pianta perenne diffusa in Europa e Asia occidentale. Cresce in ambienti umidi come prati e rive dei fiumi. Produce fiori bianchi profumati in estate."
+      "description": "Filipendula ulmaria è una perenne erbacea con infiorescenze leggere di piccoli fiori bianco crema. Preferisce un terreno fertile e ricco di humus mantenuto costantemente umido, in sole o mezz’ombra. È in genere riportata come non tossica."
     },
     "es": {
       "common_name": "Reina de los prados",
-      "description": "Filipendula ulmaria es una planta perenne nativa de Europa y Asia occidental. Habita praderas húmedas y zonas ribereñas. Florece en verano con flores blancas aromáticas."
+      "description": "Filipendula ulmaria es una vivaz herbácea con ramilletes de pequeñas flores blanco crema. Prefiere un sustrato fértil con humus y humedad constante, en sol o semisombra. Por lo general se reporta como no tóxica."
     },
     "pt": {
       "common_name": "Rainha-dos-prados",
-      "description": "Filipendula ulmaria é uma planta perene da Europa e Ásia Ocidental. Desenvolve-se em prados húmidos e margens de rios. Produz flores brancas perfumadas no verão."
+      "description": "Filipendula ulmaria é uma perene herbácea com cachos leves de pequenas flores branco-creme. Prefere substrato fértil e rico em húmus, mantido constantemente úmido, em sol ou meia-sombra. Em geral é relatada como não tóxica."
     },
     "ar": {
       "common_name": "ملكة المروج",
-      "description": "نبات Filipendula ulmaria معمر موطنه أوروبا وغرب آسيا. ينمو في المروج الرطبة وضفاف الأنهار. يتميز بأزهار بيضاء عطرية في الصيف."
+      "description": "Filipendula ulmaria نبات معمر عشبي بأزهار صغيرة بلون أبيض كريمي في عناقيد خفيفة. يفضل تربة خصبة غنية بالدبال مع رطوبة ثابتة، في الشمس أو الظل الجزئي. يُذكر عادةً أنه غير سام."
     },
     "hi": {
       "common_name": "मीडोस्वीट",
-      "description": "Filipendula ulmaria यूरोप और पश्चिमी एशिया का बहुवर्षीय पौधा है। यह नम घास के मैदानों और नदी किनारों पर उगता है। गर्मियों में इसमें सफेद सुगंधित फूल आते हैं।"
+      "description": "Filipendula ulmaria एक बहुवर्षीय शाकीय पौधा है जिसमें क्रीमी-सफेद छोटे फूल गुच्छों में आते हैं। इसे उपजाऊ, ह्यूमस-युक्त मिट्टी चाहिए जो लगातार नम रहे, और यह धूप से आंशिक छाया में बढ़ता है। सामान्यतः इसे गैर-विषैला बताया जाता है।"
     },
     "zh": {
-      "common_name": "绣线菊草",
-      "description": "Filipendula ulmaria 原产于欧洲和西亚，是多年生植物。常见于湿润草地和河岸。夏季开白色芳香花朵。"
+      "common_name": "草绣线菊",
+      "description": "Filipendula ulmaria 是一种多年生草本植物，开成簇的乳白色小花。它喜欢肥沃、富含腐殖质且保持湿润的土壤，可在阳光到半阴环境生长。一般被认为没有明显毒性报告。"
     },
     "ja": {
-      "common_name": "セイヨウナツユキソウ",
-      "description": "Filipendula ulmaria はヨーロッパと西アジア原産の多年草です。湿った草地や川辺に自生します。夏に香りのある白い花を咲かせます。"
+      "common_name": "フィリペンデュラ",
+      "description": "Filipendula ulmaria は多年草で、クリーム白の小花をふわっとした花序に付けます。腐植質の多い肥沃な用土を常に湿り気のある状態に保ち、日向〜半日陰で育ちます。一般に強い毒性は報告されていません。"
     },
     "ko": {
       "common_name": "메도스위트",
-      "description": "Filipendula ulmaria는 유럽과 서아시아 원산의 다년생 식물입니다. 습한 초지와 강가에서 자랍니다. 여름에 향기로운 흰 꽃이 핍니다."
+      "description": "Filipendula ulmaria는 크림빛 흰색의 작은 꽃이 송이로 피는 여러해살이풀입니다. 비옥하고 부식질이 많은 흙을 항상 촉촉하게 유지하며, 햇빛부터 반그늘까지에서 자랍니다. 일반적으로 독성 보고가 없는 편입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/filipendula-ulmaria",
-      "https://www.rhs.org.uk/plants/7546/filipendula-ulmaria/details",
-      "https://plants.usda.gov/home/plantProfile?symbol=FIUL2"
+      "https://plants.ces.ncsu.edu/plants/filipendula-ulmaria/",
+      "https://www.rhs.org.uk/plants/32871/filipendula-ulmaria/details",
+      "https://www.gardenersworld.com/plants/filipendula-ulmaria/"
     ]
   }
 }

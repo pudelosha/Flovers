@@ -1,18 +1,17 @@
 {
   "external_id": "pachyphytum_compactum",
-  "name": "Pachyphytum compactum",
+  "name": "Compact Pachyphytum",
   "latin": "Pachyphytum compactum",
   "sun": "medium",
   "water": "low",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaszczysta",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملي",
-          "hi": "रेतीली",
-          "zh": "沙质",
-          "ja": "砂地",
-          "ko": "모래"
+          "en": "Cactus soil",
+          "pl": "Gleba kaktusowa",
+          "de": "Kaktuserde",
+          "fr": "Terre pour cactus",
+          "it": "Terreno per cactus",
+          "es": "Tierra para cactus",
+          "pt": "Terra para cactos",
+          "ar": "تربة للصبارة",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "仙人掌土壤",
+          "ja": "サボテン用土",
+          "ko": "선인장 토양"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niski",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "basso",
-          "es": "bajo",
-          "pt": "baixo",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low water",
+          "pl": "Niska wilgotność",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "ماء قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "少量の水",
+          "ko": "적은 물"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°C",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niski",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "basso",
-          "es": "bajo",
-          "pt": "baixo",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "powolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überbewässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفر सिचाई से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けて",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +218,57 @@
   "translations": {
     "en": {
       "common_name": "Compact Pachyphytum",
-      "description": "Pachyphytum compactum is a slow-growing succulent native to Mexico. It thrives in well-draining soil and requires minimal watering."
+      "description": "Pachyphytum compactum is a succulent plant known for its compact rosette of bluish-grey leaves. It thrives with minimal water and prefers well-drained soil."
     },
     "pl": {
-      "common_name": "Kompaktne Pachyphytum",
-      "description": "Pachyphytum compactum to wolno rosnący sukulent pochodzący z Meksyku. Rośnie najlepiej w glebie dobrze przepuszczającej wodę i wymaga minimalnego podlewania."
+      "common_name": "Pachyphytum kompaktowe",
+      "description": "Pachyphytum compactum to roślina sukulentna o zwartej rozetce niebieskawo-szarych liści. Rośnie dobrze przy minimalnym podlewaniu i preferuje dobrze przepuszczalną glebę."
     },
     "de": {
       "common_name": "Kompaktes Pachyphytum",
-      "description": "Pachyphytum compactum ist eine langsam wachsende Sukkulente aus Mexiko. Es gedeiht in gut durchlässigem Boden und benötigt nur wenig Wasser."
+      "description": "Pachyphytum compactum ist eine Sukkulente mit einer kompakten Rosette aus bläulich-grauen Blättern. Es gedeiht mit wenig Wasser und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "Pachyphytum compactum",
-      "description": "Le Pachyphytum compactum est une plante succulente à croissance lente originaire du Mexique. Elle préfère un sol bien drainé et un arrosage modéré."
+      "description": "Pachyphytum compactum est une plante succulente connue pour sa rosette compacte de feuilles bleu-grises. Elle prospère avec peu d'eau et préfère un sol bien drainé."
     },
     "it": {
       "common_name": "Pachyphytum compatto",
-      "description": "Il Pachyphytum compactum è una succulenta a crescita lenta originaria del Messico. Preferisce un terreno ben drenato e necessita di poca acqua."
+      "description": "Pachyphytum compactum è una pianta succulenta con una rosetta compatta di foglie grigio-bluastre. Cresce bene con poca acqua e preferisce terreni ben drenati."
     },
     "es": {
       "common_name": "Pachyphytum compacto",
-      "description": "Pachyphytum compactum es una suculenta de crecimiento lento originaria de México. Crece mejor en suelos bien drenados y requiere poca agua."
+      "description": "Pachyphytum compactum es una planta suculenta conocida por su roseta compacta de hojas gris-azuladas. Crece bien con poca agua y prefiere suelos bien drenados."
     },
     "pt": {
       "common_name": "Pachyphytum compacto",
-      "description": "Pachyphytum compactum é uma suculenta de crescimento lento originária do México. Prefere solos bem drenados e necessita de pouca água."
+      "description": "Pachyphytum compactum é uma planta suculenta conhecida por sua roseta compacta de folhas cinza-azuladas. Ela cresce bem com pouca água e prefere solos bem drenados."
     },
     "ar": {
-      "common_name": "Pachyphytum compactum",
-      "description": "Pachyphytum compactum هو نبات عصاري ينمو ببطء من المكسيك. يزدهر في التربة ذات الصرف الجيد ويتطلب سقاية قليلة."
+      "common_name": "بخاخ باكي فيثيوم المضغوط",
+      "description": "Pachyphytum compactum هو نبات عصاري معروف بتجمعه المضغوط من الأوراق الزرقاء الرمادية. ينمو بشكل جيد مع القليل من الماء ويفضل التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "Pachyphytum compactum",
-      "description": "Pachyphytum compactum एक धीमी वृद्धि वाला मांसल पौधा है जो मेक्सिको का मूल निवासी है। यह अच्छी जल निकासी वाली मिट्टी में उगता है और कम पानी की आवश्यकता होती है।"
+      "common_name": "कॉम्पैक्ट पैचिफाइटम",
+      "description": "Pachyphytum compactum एक सुप्त पौधा है जो नीले-ग्रे पत्तों के संकुचित रोसेट के लिए जाना जाता है। यह न्यूनतम पानी के साथ अच्छा बढ़ता है और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "紧凑 Pachyphytum",
-      "description": "Pachyphytum compactum 是一种生长缓慢的多肉植物，原产于墨西哥。它喜欢排水良好的土壤，并需要较少的水。"
+      "common_name": "紧凑型百合花",
+      "description": "Pachyphytum compactum 是一种多肉植物，以其紧凑的蓝灰色叶片丛生而闻名。它在最少的水分条件下生长良好，喜欢排水良好的土壤。"
     },
     "ja": {
-      "common_name": "コンパクトパキフィツム",
-      "description": "Pachyphytum compactumはメキシコ原産の成長の遅い多肉植物です。排水性の良い土壌でよく育ち、少量の水分を必要とします。"
+      "common_name": "コンパクトパキフィタム",
+      "description": "Pachyphytum compactum は、コンパクトなブルーグレーの葉を持つ多肉植物です。最小限の水分で成長し、排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "컴팩트 파키피툼",
-      "description": "Pachyphytum compactum은 멕시코 원산지의 성장 속도가 느린 다육 식물입니다. 배수가 좋은 토양에서 자라며 물은 적게 필요합니다."
+      "common_name": "컴팩트 파키피텀",
+      "description": "Pachyphytum compactum은 푸른 회색의 작은 로제트를 가진 다육 식물입니다. 최소한의 물로 잘 자라며 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/26780/Pachyphytum-compactum/Details",
-      "https://www.bhg.com/gardening/pachyphytum-care/"
+      "https://www.rhs.org.uk/advice/profile?pid=406",
+      "https://www.gardenia.net/plant/pachyphytum-compactum"
     ]
   }
 }

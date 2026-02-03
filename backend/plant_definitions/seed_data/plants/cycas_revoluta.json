@@ -1,8 +1,8 @@
 {
   "external_id": "cycas_revoluta",
-  "name": "Sago Palm",
+  "name": "Sago palm",
   "latin": "Cycas revoluta",
-  "sun": "high",
+  "sun": "medium",
   "water": "low",
   "difficulty": "medium",
   "popular": false,
@@ -10,17 +10,17 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 30,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "cycas_revoluta.jpg",
   "image_thumb": "cycas_revoluta.jpg",
   "traits": [
@@ -28,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Bright, filtered light",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, gefiltert",
+          "fr": "Lumiere filtree",
+          "it": "Luce intensa filtrata",
+          "es": "Luz brillante filtrada",
+          "pt": "Luz forte filtrada",
+          "ar": "ضوء ساطع مُرشح",
+          "hi": "तेज पर छनी रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "en": "Very well-drained",
+          "pl": "Bardzo przepuszczalne",
+          "de": "Sehr durchlassig",
+          "fr": "Tres drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "बहुत जलनिकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaff. scarsa",
-          "es": "Riego escaso",
-          "pt": "Rega pouca",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "물 적게"
+          "en": "Let soil dry between",
+          "pl": "Przeschnij przed podl.",
+          "de": "Zwischenzeitl. trocknen",
+          "fr": "Laisser secher",
+          "it": "Lascia asciugare",
+          "es": "Deja secar",
+          "pt": "Deixe secar",
+          "ar": "اترك التربة تجف",
+          "hi": "मिट्टी सूखने दें",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -85,14 +85,14 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
+          "en": "Moderate",
+          "pl": "Srednia",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "pt": "Media",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "普通",
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26 °C",
-          "pl": "18–26 °C",
-          "de": "18–26 °C",
-          "fr": "18–26 °C",
-          "it": "18–26 °C",
-          "es": "18–26 °C",
-          "pt": "18–26 °C",
-          "ar": "18–26°م",
-          "hi": "18–26 °C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26℃"
+          "en": "18-29°C",
+          "pl": "18-29°C",
+          "de": "18-29°C",
+          "fr": "18-29°C",
+          "it": "18-29°C",
+          "es": "18-29°C",
+          "pt": "18-29°C",
+          "ar": "18-29°م",
+          "hi": "18-29°C",
+          "zh": "18-29°C",
+          "ja": "18-29°C",
+          "ko": "18-29°C"
         }
       }
     },
@@ -123,17 +123,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
+          "en": "Average humidity",
+          "pl": "Zwykla wilgotnosc",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidite normale",
+          "it": "Umidita normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة معتدلة",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Highly toxic",
-          "pl": "Silnie trująca",
-          "de": "Stark giftig",
-          "fr": "Très toxique",
-          "it": "Molto tossica",
-          "es": "Muy tóxica",
-          "pt": "Muito tóxica",
-          "ar": "سامة جدًا",
-          "hi": "अत्यंत विषैली",
-          "zh": "高度有毒",
-          "ja": "強い毒性",
-          "ko": "강한 독성"
+          "en": "Toxic to pets",
+          "pl": "Trujacy dla zwierzat",
+          "de": "Giftig fur Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Toxica para mascotas",
+          "pt": "Toxica para pets",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Very slow",
-          "pl": "Bardzo wolny",
-          "de": "Sehr langsam",
-          "fr": "Très lente",
-          "it": "Molto lenta",
-          "es": "Muy lento",
-          "pt": "Muito lento",
-          "ar": "بطيء جدًا",
-          "hi": "बहुत धीमी",
+          "en": "Slow-growing",
+          "pl": "Wolnorosnacy",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
+          "ja": "成長は遅い",
           "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to root rot",
+          "pl": "Latwo o zgnilizne",
+          "de": "Neigt zu Faule",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Riesgo de pudricion",
+          "pt": "Risco de podridao",
+          "ar": "تتعفن مع زيادة الماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "易烂根",
+          "ja": "根腐れに注意",
+          "ko": "과습시 뿌리썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale insects",
+          "pl": "Tarczniki",
+          "de": "Schildlause",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية",
+          "hi": "स्केल कीट",
+          "zh": "介壳虫",
+          "ja": "カイガラムシ",
+          "ko": "깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Sago Palm",
-      "description": "Cycas revoluta is a primitive cycad often grown as a houseplant. It prefers bright light, excellent drainage, and infrequent watering. All parts are highly toxic if ingested."
+      "common_name": "Sago palm",
+      "description": "Cycas revoluta is a slow-growing cycad with stiff, glossy fronds. Give bright, filtered light and let the potting mix dry well between waterings. All parts are poisonous if ingested, especially the seeds."
     },
     "pl": {
       "common_name": "Sagowiec odwinięty",
-      "description": "Cycas revoluta to prymitywna sagownica uprawiana jako roślina doniczkowa. Wymaga jasnego światła i bardzo dobrego drenażu. Jest silnie trująca."
+      "description": "Cycas revoluta to wolno rosnący sagowiec o sztywnych, błyszczących liściach. Lubi jasne, rozproszone światło i podlewanie dopiero po wyraźnym przeschnięciu podłoża. Jest trujący po spożyciu, szczególnie nasiona."
     },
     "de": {
-      "common_name": "Sagopalme",
-      "description": "Cycas revoluta ist eine urtümliche Palmfarn-Art für helle Standorte. Sie wächst sehr langsam und benötigt durchlässiges Substrat. Alle Pflanzenteile sind giftig."
+      "common_name": "Japanische Sagopalme",
+      "description": "Cycas revoluta ist eine langsam wachsende Palmfarn-Art mit festen, glänzenden Wedeln. Hell stellen, aber vor heißer Mittagssonne schützen, und zwischen den Wassergaben gut abtrocknen lassen. Alle Pflanzenteile sind bei Aufnahme giftig, besonders die Samen."
     },
     "fr": {
-      "common_name": "Palmier sagou",
-      "description": "Cycas revoluta est une cycadale ancienne cultivée en intérieur lumineux. Elle demande peu d’arrosage et un sol très drainant. La plante est très toxique."
+      "common_name": "Cycad du Japon",
+      "description": "Cycas revoluta est un cycad a croissance lente avec des frondes rigides et brillantes. Placez-le en lumiere vive filtree et laissez le substrat bien secher entre les arrosages. La plante est toxique en cas d'ingestion, surtout les graines."
     },
     "it": {
-      "common_name": "Palma del sago",
-      "description": "Cycas revoluta è una cicade ornamentale a crescita lenta. Predilige luce intensa e terreno ben drenato. Tutte le parti sono tossiche."
+      "common_name": "Cicas del Giappone",
+      "description": "Cycas revoluta e una cicade a crescita lenta con fronde rigide e lucide. Preferisce luce intensa ma filtrata e irrigazioni solo dopo che il substrato si e asciugato bene. Tutte le parti sono tossiche se ingerite, soprattutto i semi."
     },
     "es": {
-      "common_name": "Palma de sagú",
-      "description": "Cycas revoluta es una cícada ornamental muy resistente. Necesita mucha luz y riegos espaciados. Es altamente tóxica."
+      "common_name": "Cica (palma de sagú)",
+      "description": "Cycas revoluta es una cica de crecimiento lento con frondes rigidas y brillantes. Dale luz brillante filtrada y deja secar bien el sustrato entre riegos. Es toxica si se ingiere, especialmente las semillas."
     },
     "pt": {
-      "common_name": "Palmeira-sagu",
-      "description": "Cycas revoluta é uma cicadácea ornamental de crescimento lento. Prefere luz intensa e solo bem drenado. É muito tóxica."
+      "common_name": "Cica-do-japao",
+      "description": "Cycas revoluta e uma cicada de crescimento lento com folhas rigidas e brilhantes. Prefere luz forte filtrada e regas apenas quando o substrato estiver bem seco. E toxica se ingerida, especialmente as sementes."
     },
     "ar": {
       "common_name": "نخيل الساغو",
-      "description": "سيكاس ريفولوتا نبات قديم يُزرع كنبات منزلي. يحتاج إلى ضوء ساطع وتصريف ممتاز. جميع أجزائه سامة جدًا."
+      "description": "Cycas revoluta نبات سيكاس بطيء النمو بأوراق صلبة لامعة. يحتاج لضوء ساطع مُرشح وتُترك التربة لتجف جيداً بين الريّات. جميع الأجزاء سامة عند الابتلاع وخاصة البذور."
     },
     "hi": {
       "common_name": "सागो पाम",
-      "description": "Cycas revoluta एक प्राचीन पौधा है जो घरों में उगाया जाता है। इसे तेज़ रोशनी और कम पानी चाहिए। यह अत्यंत विषैला है।"
+      "description": "Cycas revoluta एक धीमी वृद्धि वाला साइकैड है जिसकी पत्तियां सख्त और चमकदार होती हैं। तेज लेकिन छनी हुई रोशनी दें और पानी देने से पहले मिट्टी को अच्छी तरह सूखने दें। इसके सभी भाग निगलने पर विषाक्त हैं, खासकर बीज।"
     },
     "zh": {
       "common_name": "苏铁",
-      "description": "Cycas revoluta 是一种古老的苏铁类植物，常作为室内观赏植物。需要充足光照和良好排水。全株有毒。"
+      "description": "Cycas revoluta 生长缓慢，叶片坚挺有光泽。提供明亮散射光，浇水前让基质充分干燥并确保排水良好。全株误食有毒，尤其是种子。"
     },
     "ja": {
       "common_name": "ソテツ",
-      "description": "Cycas revoluta は観葉植物として育てられる原始的なソテツです。明るい光と水はけの良い土を好みます。全体に毒性があります。"
+      "description": "Cycas revoluta は成長が遅いソテツ類で、硬く光沢のある葉が特徴です。明るい間接光で育て、用土がよく乾いてから水やりします。全草が誤食で有毒で、特に種子は危険です。"
     },
     "ko": {
       "common_name": "소철",
-      "description": "Cycas revoluta는 실내에서 기르는 고대 식물입니다. 밝은 빛과 배수가 좋은 흙이 필요합니다. 모든 부분에 독성이 있습니다."
+      "description": "Cycas revoluta 는 성장 속도가 느린 소철로, 단단하고 윤기 있는 잎이 특징입니다. 밝은 간접광에서 키우고 흙이 충분히 마른 뒤 물을 주세요. 섭취 시 전 부위가 유독하며 특히 씨앗이 위험합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/4732/cycas-revoluta/details",
-      "https://edis.ifas.ufl.edu/publication/FP170",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c580"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=279640",
+      "https://www.rhs.org.uk/plants/5127/cycas-revoluta-japanese-sago-palm-cycad/details",
+      "https://plants.ces.ncsu.edu/plants/cycas-revoluta/",
+      "https://vcahospitals.com/know-your-pet/sago-palm-poisoning",
+      "https://www.researchgate.net/profile/Matthew-Borden/publication/355424761_Key_Plant_Key_Pests_Sago_Palm_Cycas_revoluta_EP608ENH1344_102021/links/61857f3a3068c54fa5b22ad6/Key-Plant-Key-Pests-Sago-Palm-Cycas-revoluta-EP608-ENH1344-10-2021.pdf"
     ]
   }
 }

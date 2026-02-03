@@ -1,27 +1,27 @@
 {
   "external_id": "cyrtomium_falcatum",
-  "name": "Japanese holly fern",
+  "name": "Japanese Holly Fern",
   "latin": "Cyrtomium falcatum",
-  "sun": "medium",
+  "sun": "low",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "fern",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "cyrtomium_falcatum.jpg",
   "image_thumb": "cyrtomium_falcatum.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial shade",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Sombra parcial",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Low light",
+          "pl": "Słabe światło",
+          "de": "Schwaches Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Baja luz",
+          "pt": "Baixa luz",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "낮은 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, draining soil",
-          "pl": "Żyzna gleba",
-          "de": "Nährstoffreich",
-          "fr": "Sol riche",
-          "it": "Terriccio ricco",
-          "es": "Suelo fértil",
-          "pt": "Solo rico",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature medie",
-          "es": "Riego moderado",
-          "pt": "Rega média",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water when top is dry",
+          "pl": "Podlewać, gdy wierzch wyschnie",
+          "de": "Wässern, wenn die Oberfläche trocken ist",
+          "fr": "Arroser lorsque le dessus est sec",
+          "it": "Annaffiare quando sopra è asciutto",
+          "es": "Regar cuando la parte superior esté seca",
+          "pt": "Regar quando o topo estiver seco",
+          "ar": "سقي عندما يكون السطح جافًا",
+          "hi": "जब ऊपर का हिस्सा सूखा हो, तब पानी दें",
+          "zh": "顶部干燥时浇水",
+          "ja": "表面が乾いたら水をやる",
+          "ko": "위가 마르면 물을 주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–24 °C",
-          "pl": "10–24 °C",
-          "de": "10–24 °C",
-          "fr": "10–24 °C",
-          "it": "10–24 °C",
-          "es": "10–24 °C",
-          "pt": "10–24 °C",
-          "ar": "10–24°م",
-          "hi": "10–24 °C",
-          "zh": "10–24°C",
-          "ja": "10–24℃",
-          "ko": "10–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal indoor",
-          "pl": "Pokojowa",
-          "de": "Zimmerfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常の湿度",
-          "ko": "일반 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping fern",
-          "pl": "Kępiasta paproć",
-          "de": "Horstbildend",
-          "fr": "Fougère en touffe",
-          "it": "Felce cespitosa",
-          "es": "Helecho compacto",
-          "pt": "Samambaia densa",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "군생형"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适中增长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرात से पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やりのしすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Japanese holly fern",
-      "description": "Cyrtomium falcatum is an evergreen fern native to East Asia. It has glossy, leathery fronds and adapts well to indoor conditions with moderate light. The plant is valued for its tolerance of cooler temperatures."
+      "common_name": "Japanese Holly Fern",
+      "description": "Cyrtomium falcatum is a popular fern, valued for its dark green foliage. It thrives in low light and moderate humidity, making it an ideal indoor plant."
     },
     "pl": {
-      "common_name": "Paprotka japońska",
-      "description": "Cyrtomium falcatum to zimozielona paproć pochodząca z Azji Wschodniej. Ma błyszczące, skórzaste liście i dobrze rośnie w warunkach domowych. Preferuje umiarkowane światło i regularne podlewanie."
+      "common_name": "Paproć japońska",
+      "description": "Cyrtomium falcatum to popularna paproć, ceniona za ciemnozieloną roślinność. Rośnie w słabym świetle i umiarkowanej wilgotności, idealna do wnętrz."
     },
     "de": {
-      "common_name": "Japanischer Ilexfarn",
-      "description": "Cyrtomium falcatum ist ein immergrüner Farn aus Ostasien. Er besitzt ledrige, glänzende Wedel und eignet sich gut für Innenräume. Die Pflanze ist relativ kältetolerant."
+      "common_name": "Japanische Stechpalmenfarn",
+      "description": "Cyrtomium falcatum ist ein beliebter Farn, bekannt für sein dunkelgrünes Laub. Er gedeiht bei wenig Licht und moderater Luftfeuchtigkeit, ideal für Innenräume."
     },
     "fr": {
-      "common_name": "Fougère houx japonaise",
-      "description": "Cyrtomium falcatum est une fougère persistante originaire d’Asie de l’Est. Ses frondes coriaces et brillantes sont très décoratives. Elle pousse bien en intérieur à lumière modérée."
+      "common_name": "Fougère hollandaise",
+      "description": "Cyrtomium falcatum est une fougère populaire, appréciée pour son feuillage vert foncé. Elle prospère dans des conditions de faible luminosité et d'humidité modérée, idéale pour les intérieurs."
     },
     "it": {
-      "common_name": "Felce agrifoglio giapponese",
-      "description": "Cyrtomium falcatum è una felce sempreverde originaria dell’Asia orientale. Presenta fronde lucide e coriacee. È adatta alla coltivazione in casa con luce moderata."
+      "common_name": "Felce giapponese",
+      "description": "Cyrtomium falcatum è una felce popolare, apprezzata per il suo fogliame verde scuro. Cresce bene in luce bassa e umidità moderata, ideale per gli ambienti interni."
     },
     "es": {
-      "common_name": "Helecho acebo japonés",
-      "description": "Cyrtomium falcatum es un helecho perenne originario del este de Asia. Tiene frondes brillantes y resistentes. Se adapta bien al cultivo en interiores con luz media."
+      "common_name": "Helecho japonés",
+      "description": "Cyrtomium falcatum es un helecho popular, apreciado por su follaje verde oscuro. Crece bien en luz baja y humedad moderada, ideal para interiores."
     },
     "pt": {
-      "common_name": "Samambaia-azevinho-japonesa",
-      "description": "Cyrtomium falcatum é uma samambaia perene nativa do leste da Ásia. Possui frondes brilhantes e coriáceas. Desenvolve-se bem em ambientes internos com luz moderada."
+      "common_name": "Samambaia japonesa",
+      "description": "Cyrtomium falcatum é uma samambaia popular, apreciada por sua folhagem verde escura. Cresce bem com pouca luz e umidade moderada, ideal para ambientes internos."
     },
     "ar": {
-      "common_name": "سرخس الهولي الياباني",
-      "description": "Cyrtomium falcatum هو سرخس دائم الخضرة موطنه شرق آسيا. يتميز بأوراق لامعة وسميكة. ينمو جيدًا داخل المنازل مع إضاءة معتدلة."
+      "common_name": "سرخس هولي اليابانية",
+      "description": "Cyrtomium falcatum هو سرخس شائع، ويقدر لأوراقه الخضراء الداكنة. يزدهر في الضوء المنخفض والرطوبة المعتدلة، مما يجعله نباتًا مثاليًا للداخل."
     },
     "hi": {
       "common_name": "जापानी होली फर्न",
-      "description": "Cyrtomium falcatum पूर्वी एशिया का सदाबहार फर्न है। इसकी पत्तियाँ चमकदार और मजबूत होती हैं। यह मध्यम रोशनी में घर के अंदर अच्छी तरह उगता है।"
+      "description": "Cyrtomium falcatum एक लोकप्रिय फर्न है, जो अपनी गहरी हरी पत्तियों के लिए जाना जाता है। यह कम रोशनी और मध्यम आर्द्रता में पनपता है, जो इसे एक आदर्श इनडोर पौधा बनाता है।"
     },
     "zh": {
-      "common_name": "贯众",
-      "description": "Cyrtomium falcatum 是原产于东亚的常绿蕨类植物。叶片厚实有光泽。适合在室内中等光照条件下生长。"
+      "common_name": "日本冬青蕨",
+      "description": "Cyrtomium falcatum 是一种受欢迎的蕨类植物，因其深绿色的叶片而受到喜爱。它在低光和适中的湿度下生长良好，适合作为室内植物。"
     },
     "ja": {
-      "common_name": "オニヤブソテツ",
-      "description": "Cyrtomium falcatum は東アジア原産の常緑シダです。光沢のある丈夫な葉を持ちます。室内の半日陰でも育てやすい植物です。"
+      "common_name": "日本ホリーシダ",
+      "description": "Cyrtomium falcatum は、暗緑の葉で評価されている人気のシダです。低光と適度な湿度で成長し、室内植物に最適です。"
     },
     "ko": {
-      "common_name": "도깨비고비",
-      "description": "Cyrtomium falcatum은 동아시아 원산의 상록 양치식물입니다. 두껍고 윤기 있는 잎이 특징입니다. 실내의 중간 밝기 환경에 잘 적응합니다."
+      "common_name": "일본 호리 페른",
+      "description": "Cyrtomium falcatum은 짙은 녹색의 잎으로 인기가 있는 고사리입니다. 낮은 빛과 적당한 습도에서 잘 자라며, 실내 식물로 이상적입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a566",
-      "https://www.rhs.org.uk/plants/5462/cyrtomium-falcatum/details",
-      "https://plants.ces.ncsu.edu/plants/cyrtomium-falcatum/"
+      "https://www.gardeningknowhow.com/plant-problems/pests-diseases/cyrtomium-falcatum-care.htm",
+      "https://www.rhs.org.uk/plants/cyrtomium-falcatum"
     ]
   }
 }

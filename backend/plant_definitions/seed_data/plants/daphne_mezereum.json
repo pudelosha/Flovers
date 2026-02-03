@@ -1,23 +1,25 @@
 {
   "external_id": "daphne_mezereum",
-  "name": "Mezereon",
+  "name": "Daphne Mezereum",
   "latin": "Daphne mezereum",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "daphne_mezereum.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezzombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna gleba",
-          "de": "Nährboden",
-          "fr": "Sol riche",
-          "it": "Suolo fertile",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة خصبة",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Stała wilgoć",
-          "de": "Gleichmäßig",
-          "fr": "Humide régulier",
-          "it": "Umido costante",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "नियमित नमी",
-          "zh": "均匀湿润",
-          "ja": "適度な湿り",
-          "ko": "고른 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعب",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Umiarkowana",
-          "de": "Gemäßigt",
-          "fr": "Tempéré frais",
-          "it": "Temperato",
-          "es": "Templado",
-          "pt": "Temperado",
-          "ar": "معتدل",
-          "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -122,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "通常",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
           "ko": "보통"
         }
       }
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Highly toxic",
-          "pl": "Silnie trująca",
-          "de": "Sehr giftig",
-          "fr": "Très toxique",
-          "it": "Molto tossica",
-          "es": "Muy tóxica",
-          "pt": "Muito tóxica",
-          "ar": "شديدة السمية",
-          "hi": "अत्यंत विषैला",
-          "zh": "高度有毒",
-          "ja": "強い毒性",
-          "ko": "강한 독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة إذا تم ابتلاعها",
+          "hi": "अगर खाया जाए तो विषैला",
+          "zh": "食用后有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow shrub",
-          "pl": "Wolny krzew",
-          "de": "Langsam",
-          "fr": "Arbuste lent",
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
           "it": "Crescita lenta",
-          "es": "Arbusto lento",
-          "pt": "Arbusto lento",
-          "ar": "شجيرة بطيئة",
-          "hi": "धीमी झाड़ी",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "低木",
-          "ko": "느린 관목"
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez de trop arroser",
+          "it": "Evitare il sovraccarico d'acqua",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि अवधि की कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Mezereon",
-      "description": "Daphne mezereum is a deciduous shrub native to Europe and western Asia. It blooms in early spring with fragrant pink flowers before leaves appear. All parts of the plant are highly toxic."
+      "description": "Daphne mezereum is a deciduous shrub that produces fragrant pink flowers in early spring. It is often used for ornamental purposes."
     },
     "pl": {
-      "common_name": "Wawrzynek wilczełyko",
-      "description": "Daphne mezereum to liściasty krzew pochodzący z Europy i Azji Zachodniej. Kwitnie wczesną wiosną pachnącymi różowymi kwiatami przed rozwojem liści. Cała roślina jest silnie trująca."
+      "common_name": "Mierzwa",
+      "description": "Daphne mezereum to krzew liściasty, który wczesną wiosną wydaje pachnące różowe kwiaty. Często używany jako roślina ozdobna."
     },
     "de": {
-      "common_name": "Seidelbast",
-      "description": "Daphne mezereum ist ein laubabwerfender Strauch aus Europa und Westasien. Er blüht sehr früh im Frühjahr mit duftenden rosa Blüten vor dem Laubaustrieb. Alle Pflanzenteile sind stark giftig."
+      "common_name": "Mezereon",
+      "description": "Daphne mezereum ist ein Laubstrauch, der im frühen Frühling duftende rosa Blüten produziert. Häufig wird er als Zierpflanze verwendet."
     },
     "fr": {
-      "common_name": "Bois joli",
-      "description": "Daphne mezereum est un arbuste caduc originaire d’Europe et d’Asie occidentale. Il fleurit très tôt au printemps avec des fleurs roses parfumées avant les feuilles. Toute la plante est très toxique."
+      "common_name": "Daphné mezéréon",
+      "description": "Daphne mezereum est un arbuste à feuilles caduques qui produit des fleurs roses parfumées au début du printemps. Il est souvent utilisé à des fins ornementales."
     },
     "it": {
-      "common_name": "Dafne mezereo",
-      "description": "Daphne mezereum è un arbusto deciduo originario dell’Europa e dell’Asia occidentale. Fiorisce all’inizio della primavera con fiori rosa profumati prima delle foglie. Tutte le parti della pianta sono tossiche."
+      "common_name": "Daphne mezereum",
+      "description": "Daphne mezereum è un arbusto deciduo che produce fiori rosa profumati all'inizio della primavera. È spesso usato a scopi ornamentali."
     },
     "es": {
-      "common_name": "Mezereón",
-      "description": "Daphne mezereum es un arbusto caducifolio nativo de Europa y Asia occidental. Florece a comienzos de primavera con flores rosadas y fragantes antes de las hojas. Toda la planta es altamente tóxica."
+      "common_name": "Dafne mezereum",
+      "description": "Daphne mezereum es un arbusto caducifolio que produce flores rosadas fragantes a principios de primavera. A menudo se utiliza con fines ornamentales."
     },
     "pt": {
-      "common_name": "Mezério",
-      "description": "Daphne mezereum é um arbusto caducifólio nativo da Europa e da Ásia Ocidental. Floresce no início da primavera com flores rosas perfumadas antes das folhas. Todas as partes da planta são tóxicas."
+      "common_name": "Daphne mezereum",
+      "description": "Daphne mezereum é um arbusto caducifólio que produz flores cor-de-rosa perfumadas no início da primavera. É frequentemente utilizado para fins ornamentais."
     },
     "ar": {
-      "common_name": "الدافني السام",
-      "description": "نبات Daphne mezereum شجيرة متساقطة الأوراق موطنها أوروبا وغرب آسيا. تزهر في أوائل الربيع بأزهار وردية عطرية قبل ظهور الأوراق. جميع أجزاء النبات سامة جدًا."
+      "common_name": "دافني ميزيروم",
+      "description": "دافني ميزيروم هو شجيرة نفضية تنتج أزهارًا وردية عطرة في أوائل الربيع. غالبًا ما تستخدم لأغراض الزينة."
     },
     "hi": {
-      "common_name": "मेज़ेरियॉन",
-      "description": "Daphne mezereum यूरोप और पश्चिमी एशिया की एक पर्णपाती झाड़ी है। यह वसंत की शुरुआत में पत्तियों से पहले गुलाबी सुगंधित फूल देती है। पौधे के सभी भाग विषैले होते हैं।"
+      "common_name": "डेफनी मेजेरियम",
+      "description": "डेफनी मेजेरियम एक पर्णपाती झाड़ी है जो वसंत की शुरुआत में सुगंधित गुलाबी फूलों का उत्पादन करती है। इसे अक्सर सजावटी उद्देश्यों के लिए उपयोग किया जाता है।"
     },
     "zh": {
-      "common_name": "瑞香",
-      "description": "Daphne mezereum 是原产于欧洲和西亚的落叶灌木。它在早春先开粉红色芳香花朵，后长叶。整株植物均有毒。"
+      "common_name": "美泽蓉",
+      "description": "美泽蓉是一种落叶灌木，春初开出芬芳的粉红色花朵。它常被用作观赏植物。"
     },
     "ja": {
-      "common_name": "メゼレウム",
-      "description": "Daphne mezereum はヨーロッパと西アジア原産の落葉低木です。春先に葉より先に香りのあるピンク色の花を咲かせます。全草に強い毒性があります。"
+      "common_name": "ダフネ・メゼリウム",
+      "description": "ダフネ・メゼリウムは落葉性の低木で、春の初めに香りの良いピンク色の花を咲かせます。観賞用としてよく使われます。"
     },
     "ko": {
-      "common_name": "메제레움",
-      "description": "Daphne mezereum은 유럽과 서아시아 원산의 낙엽 관목입니다. 이른 봄 잎보다 먼저 향기로운 분홍색 꽃이 핍니다. 식물 전체에 강한 독성이 있습니다."
+      "common_name": "다프네 메제륨",
+      "description": "다프네 메제륨은 봄 초기에 향기로운 분홍색 꽃을 피우는 낙엽성 관목입니다. 장식용으로 자주 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/5258/daphne-mezereum/details",
-      "https://pfaf.org/user/Plant.aspx?LatinName=Daphne+mezereum",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b330"
+      "https://www.rhs.org.uk/plants/daphne-mezereum",
+      "https://www.bhg.com/gardening/pests-diseases-chemicals/daphne-mezereum-care/"
     ]
   }
 }

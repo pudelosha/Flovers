@@ -1,0 +1,275 @@
+{
+  "external_id": "vriesea_splendens",
+  "name": "Vriesea splendens",
+  "latin": "Vriesea splendens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "green-plants"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "vriesea_splendens.jpg",
+  "image_thumb": "vriesea_splendens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी तरह से निथरने वाली",
+          "zh": "排水良好",
+          "ja": "排水の良い",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Flaming Sword",
+      "description": "Vriesea splendens is an ornamental bromeliad native to South America. It is known for its striking, brightly colored flower spikes."
+    },
+    "pl": {
+      "common_name": "Miecz Płomienia",
+      "description": "Vriesea splendens to ozdobna bromelia pochodząca z Ameryki Południowej. Znana jest ze swoich jaskrawych, kolorowych kwiatostanów."
+    },
+    "de": {
+      "common_name": "Flammenschwert",
+      "description": "Vriesea splendens ist eine Zierbromelie aus Südamerika. Sie ist bekannt für ihre auffälligen, hellen Blütenstände."
+    },
+    "fr": {
+      "common_name": "Épée enflammée",
+      "description": "Vriesea splendens est une bromélie ornementale originaire d'Amérique du Sud. Elle est connue pour ses épis floraux aux couleurs vives."
+    },
+    "it": {
+      "common_name": "Spada Fiammeggiante",
+      "description": "Vriesea splendens è una bromelia ornamentale originaria del Sud America. È conosciuta per le sue infiorescenze dai colori vivaci."
+    },
+    "es": {
+      "common_name": "Espada Ardiente",
+      "description": "Vriesea splendens es una bromelia ornamental originaria de América del Sur. Es conocida por sus llamativos picos florales de colores brillantes."
+    },
+    "pt": {
+      "common_name": "Espada Flamejante",
+      "description": "Vriesea splendens é uma bromélia ornamental nativa da América do Sul. É conhecida por suas impressionantes espigas florais coloridas."
+    },
+    "ar": {
+      "common_name": "سيف اللهب",
+      "description": "Vriesea splendens هي بروميليا زينة موطنها أمريكا الجنوبية. تشتهر بسيقانها الزهرية الملونة واللامعة."
+    },
+    "hi": {
+      "common_name": "आग की तलवार",
+      "description": "Vriesea splendens एक सजावटी ब्रोमेलीया है जो दक्षिण अमेरिका की मूल निवासी है। यह अपनी आकर्षक, चमकीली रंगों वाली पुष्पमाला के लिए प्रसिद्ध है।"
+    },
+    "zh": {
+      "common_name": "火焰剑",
+      "description": "Vriesea splendens 是一种原产于南美洲的观赏性凤梨科植物。它因其鲜艳的花穗而闻名。"
+    },
+    "ja": {
+      "common_name": "フレイミングソード",
+      "description": "Vriesea splendens は南アメリカ原産の観賞用ブロメリアです。鮮やかな色の花穂が特徴です。"
+    },
+    "ko": {
+      "common_name": "불꽃 검",
+      "description": "Vriesea splendens는 남미 원산지의 장식용 브로메리아입니다. 선명한 색상의 꽃줄기로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/vriesea-splendens",
+      "https://www.gardenia.net/plant/vriesea-splendens"
+    ]
+  }
+}

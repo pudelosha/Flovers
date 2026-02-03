@@ -1,24 +1,24 @@
 {
   "external_id": "euonymus_fortunei",
-  "name": "Wintercreeper",
+  "name": "Wintercreeper euonymus",
   "latin": "Euonymus fortunei",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "euonymus_fortunei.jpg",
@@ -28,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial to full sun",
-          "pl": "Półcień lub słońce",
-          "de": "Halbschatten Sonne",
-          "fr": "Mi-ombre soleil",
-          "it": "Mezzombra sole",
-          "es": "Sol o semisombra",
-          "pt": "Sol ou meia-sombra",
-          "ar": "شمس أو ظل جزئي",
-          "hi": "आंशिक से पूर्ण धूप",
-          "zh": "半阴到全日照",
-          "ja": "半日陰から日向",
-          "ko": "반그늘 또는 양지"
+          "en": "Bright, part shade",
+          "pl": "Jasne, półcień",
+          "de": "Hell, Halbschatten",
+          "fr": "Lumineux, mi-ombre",
+          "it": "Luminoso, mezz'ombra",
+          "es": "Luz, semisombra",
+          "pt": "Luz, meia-sombra",
+          "ar": "ضوء ساطع وظل جزئي",
+          "hi": "तेज़ रोशनी, आंशिक छाया",
+          "zh": "明亮半阴",
+          "ja": "明るい半日陰",
+          "ko": "밝은 빛, 반그늘"
         }
       }
     },
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierter Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno drenante",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
+          "en": "Well-drained potting",
+          "pl": "Przepuszczalna ziemia",
+          "de": "Durchlässige Erde",
+          "fr": "Terreau drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好的土壤",
+          "hi": "अच्छी जल-निकासी मिट्टी",
+          "zh": "排水良好土",
           "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Irrigazione moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Water when top dries",
+          "pl": "Podlej gdy wierzch suchy",
+          "de": "Gießen bei trockener Oberfläche",
+          "fr": "Arroser si surface sèche",
+          "it": "Annaffia quando asciuga",
+          "es": "Riega al secarse arriba",
+          "pt": "Regar quando secar em cima",
+          "ar": "اسقِ عند جفاف السطح",
+          "hi": "ऊपर सूखे तो पानी",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら水やり",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,15 +86,15 @@
       "value": {
         "text": {
           "en": "Easy care",
-          "pl": "Łatwa w uprawie",
+          "pl": "Łatwa pielęgnacja",
           "de": "Pflegeleicht",
-          "fr": "Facile à cultiver",
-          "it": "Facile da coltivare",
-          "es": "Fácil de cuidar",
-          "pt": "Fácil de cuidar",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
           "ar": "سهل العناية",
           "hi": "आसान देखभाल",
-          "zh": "易于养护",
+          "zh": "易养",
           "ja": "育てやすい",
           "ko": "키우기 쉬움"
         }
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to temperate",
-          "pl": "Chłodny umiarkowany",
-          "de": "Kühl bis mild",
-          "fr": "Frais tempéré",
-          "it": "Fresco temperato",
-          "es": "Fresco templado",
-          "pt": "Fresco temperado",
-          "ar": "معتدل بارد",
-          "hi": "ठंडा समशीतोष्ण",
-          "zh": "凉爽至温带",
-          "ja": "冷涼から温帯",
-          "ko": "서늘한 온대"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -124,15 +124,15 @@
       "value": {
         "text": {
           "en": "Average humidity",
-          "pl": "Średnia wilgotność",
+          "pl": "Umiarkowana wilgotność",
           "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
           "es": "Humedad media",
           "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
-          "hi": "औसत आर्द्रता",
-          "zh": "中等湿度",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
           "ja": "平均的な湿度",
           "ko": "보통 습도"
         }
@@ -142,17 +142,17 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if ingested",
-          "pl": "Trująca po spożyciu",
-          "de": "Giftig bei Verzehr",
-          "fr": "Toxique ingéré",
-          "it": "Tossica ingerita",
-          "es": "Tóxica ingerida",
-          "pt": "Tóxica ingerida",
-          "ar": "سامة عند البلع",
-          "hi": "सेवन पर विषैला",
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig beim Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام إذا أُكل",
+          "hi": "खाने पर विषाक्त",
           "zh": "误食有毒",
-          "ja": "摂取で有毒",
+          "ja": "摂取すると有毒",
           "ko": "섭취 시 독성"
         }
       }
@@ -161,77 +161,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Creeping evergreen",
-          "pl": "Zimozielona płożąca",
-          "de": "Immergrün kriechend",
-          "fr": "Persistant rampant",
-          "it": "Sempreverde strisciante",
-          "es": "Rastrera perenne",
-          "pt": "Rasteira perene",
-          "ar": "دائمة خضراء زاحفة",
-          "hi": "सदाबहार फैलने वाला",
-          "zh": "常绿匍匐生长",
-          "ja": "常緑ほふく性",
-          "ko": "상록 덩굴성"
+          "en": "Trailing/climbing",
+          "pl": "Płożąca/pnąca",
+          "de": "Kriechend/kletternd",
+          "fr": "Rampante/grimpante",
+          "it": "Ricadente/rampicante",
+          "es": "Rastrera/trepadora",
+          "pt": "Rasteira/trepadeira",
+          "ar": "زاحفة/متسلقة",
+          "hi": "लटकती/चढ़ने वाली",
+          "zh": "匍匐/攀援",
+          "ja": "ほふく/つる性",
+          "ko": "포복/덩굴성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Nie zalewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "पानी भराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, aphids",
+          "pl": "Tarczniki, mszyce",
+          "de": "Schildläuse, Blattläuse",
+          "fr": "Cochenilles, pucerons",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinillas, pulgones",
+          "pt": "Cochonilhas, pulgões",
+          "ar": "حشرات قشرية ومنّ",
+          "hi": "स्केल, एफिड्स",
+          "zh": "介壳虫、蚜虫",
+          "ja": "カイガラムシ、アブラムシ",
+          "ko": "깍지벌레, 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wintercreeper",
-      "description": "Euonymus fortunei is an evergreen groundcover or climbing shrub native to East Asia. It is valued for its variegated foliage and tolerance of a wide range of light and soil conditions."
+      "common_name": "Wintercreeper euonymus",
+      "description": "Evergreen, trailing or climbing euonymus often grown outdoors as a groundcover, but it can be kept in a bright window in a container. Use a well-drained potting mix and water when the top of the soil dries. All parts can be harmful if eaten."
     },
     "pl": {
-      "common_name": "Trzmielina Fortune'a",
-      "description": "Euonymus fortunei to zimozielona roślina okrywowa lub pnący krzew pochodzący z Azji Wschodniej. Ceniona jest za dekoracyjne liście i dużą tolerancję siedliskową."
+      "common_name": "Trzmielina Fortune’a (pnąca)",
+      "description": "Zimozielona trzmielina o płożącym lub pnącym pokroju, zwykle uprawiana w ogrodzie, ale możliwa także w donicy w jasnym miejscu. Stosuj przepuszczalne podłoże i podlewaj, gdy przeschnie wierzchnia warstwa. Roślina może być szkodliwa po spożyciu."
     },
     "de": {
-      "common_name": "Kriechspindel",
-      "description": "Euonymus fortunei ist ein immergrüner Bodendecker oder Kletterstrauch aus Ostasien. Er ist robust und wird wegen seines dekorativen Laubes geschätzt."
+      "common_name": "Kriechspindelstrauch",
+      "description": "Immergrüner Euonymus mit kriechendem oder kletterndem Wuchs, meist als Bodendecker im Freien genutzt, kann aber auch hell im Topf stehen. Verwende durchlässige Erde und gieße, wenn die Oberfläche abtrocknet. Bei Verzehr kann die Pflanze schädlich sein."
     },
     "fr": {
-      "common_name": "Fusain de Fortune",
-      "description": "Euonymus fortunei est un couvre-sol ou arbuste grimpant persistant originaire d’Asie de l’Est. Il est apprécié pour son feuillage décoratif et sa grande adaptabilité."
+      "common_name": "Fusain rampant",
+      "description": "Fusain persistant à port rampant ou grimpant, souvent cultivé dehors en couvre-sol, mais possible en pot près d’une fenêtre lumineuse. Utilisez un terreau drainant et arrosez quand la surface du substrat sèche. La plante peut être nocive si elle est ingérée."
     },
     "it": {
       "common_name": "Evonimo strisciante",
-      "description": "Euonymus fortunei è una pianta sempreverde tappezzante o rampicante originaria dell’Asia orientale. È apprezzata per le foglie ornamentali e la facilità di coltivazione."
+      "description": "Evonimo sempreverde con crescita ricadente o rampicante, di solito coltivato all’esterno come tappezzante, ma gestibile anche in vaso in buona luce. Usa un terriccio drenante e annaffia quando lo strato superiore si asciuga. Può essere tossico se ingerito."
     },
     "es": {
-      "common_name": "Evónimo rastrero",
-      "description": "Euonymus fortunei es una planta perenne tapizante o trepadora originaria de Asia oriental. Destaca por su follaje decorativo y su resistencia."
+      "common_name": "Eurónimo rastrero",
+      "description": "Euónimo perenne de porte rastrero o trepador, común como cubresuelos en exterior, pero también puede vivir en maceta con buena luz. Usa sustrato con buen drenaje y riega cuando se seque la capa superior. Puede ser dañino si se ingiere."
     },
     "pt": {
-      "common_name": "Evônimo rasteiro",
-      "description": "Euonymus fortunei é uma planta perene e rasteira ou trepadeira nativa do leste da Ásia. É valorizada pela folhagem ornamental e pela rusticidade."
+      "common_name": "Evónimo-rasteiro",
+      "description": "Evónimo perene de crescimento rasteiro ou trepador, muito usado no exterior como forração, mas pode ser mantido em vaso com boa luz. Use substrato bem drenado e regue quando a superfície secar. Pode ser tóxico se ingerido."
     },
     "ar": {
-      "common_name": "اليونيموس الزاحف",
-      "description": "Euonymus fortunei نبات دائم الخضرة يستخدم كغطاء أرضي أو متسلق وأصله من شرق آسيا. يتميز بأوراقه الزخرفية وقدرته على التحمل."
+      "common_name": "يوونيموس زاحف",
+      "description": "نبات دائم الخضرة ذو نمو زاحف أو متسلق، يُزرع غالبًا خارجًا كغطاء أرضي ويمكن إبقاؤه في أصيص قرب نافذة مضيئة. استخدم تربة جيدة التصريف واسقِ عندما يجف سطح التربة. قد يكون ضارًا إذا تم تناوله."
     },
     "hi": {
-      "common_name": "विंटरक्रीपर",
-      "description": "Euonymus fortunei एक सदाबहार फैलने वाला या चढ़ने वाला पौधा है जो पूर्वी एशिया का मूल निवासी है। यह अपनी सजावटी पत्तियों और सहनशीलता के लिए जाना जाता है।"
+      "common_name": "विंटरक्रीपर यूओनिमस",
+      "description": "यह सदाबहार पौधा लटकने या चढ़ने वाली बढ़त वाला होता है और आम तौर पर बाहर ग्राउंडकवर के रूप में उगाया जाता है, लेकिन उजली खिड़की के पास गमले में भी रखा जा सकता है। अच्छी जल-निकासी वाली मिट्टी रखें और ऊपर की परत सूखने पर पानी दें। खाने पर यह हानिकारक हो सकता है।"
     },
     "zh": {
-      "common_name": "扶芳藤",
-      "description": "Euonymus fortunei 是一种原产于东亚的常绿地被或攀援灌木。因其观赏性叶片和适应性强而广受欢迎。"
+      "common_name": "卫矛（扶芳藤）",
+      "description": "常绿的匍匐或攀援卫矛，多用于户外地被，也可在明亮窗边盆栽养护。使用排水良好的基质，表土干后再浇水。误食可能有害。"
     },
     "ja": {
       "common_name": "ツルマサキ",
-      "description": "Euonymus fortunei は東アジア原産の常緑の地被植物またはつる性低木です。丈夫で斑入りの葉が特徴です。"
+      "description": "常緑でほふく・つる性に伸びるニシキギ属で、屋外ではグランドカバーに使われますが、明るい窓辺の鉢でも育てられます。水はけの良い用土を使い、表土が乾いたら水やりします。口にすると有害な場合があります。"
     },
     "ko": {
       "common_name": "줄사철나무",
-      "description": "Euonymus fortunei는 동아시아 원산의 상록 지피식물 또는 덩굴성 관목입니다. 잎이 아름답고 환경 적응력이 높습니다."
+      "description": "상록성으로 포복하거나 덩굴처럼 자라는 사철나무류로, 보통 야외 지피식물로 쓰이지만 밝은 창가의 화분에서도 관리할 수 있습니다. 배수가 좋은 흙을 사용하고 겉흙이 마르면 물을 주세요. 섭취 시 해로울 수 있습니다."
     }
   },
   "sources": {
     "urls": [
+      "https://www.rhs.org.uk/plants/6980/euonymus-fortunei/details",
+      "https://www.rhs.org.uk/plants/euonymus/growing-guide",
+      "https://www.bhg.com/will-euonymus-grow-indoors-year-round-8756424",
       "https://plants.ces.ncsu.edu/plants/euonymus-fortunei/",
-      "https://www.rhs.org.uk/plants/6964/euonymus-fortunei/details",
-      "https://extension.umd.edu/resource/wintercreeper-euonymus-fortunei"
+      "https://www.uaex.uada.edu/yard-garden/plant-health-clinic/disease-notes/posts/euonymus-scale.aspx",
+      "https://www.provenwinners.com/plants/euonymus/white-album-wintercreeper-euonymus-fortunei-0"
     ]
   }
 }

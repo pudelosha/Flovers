@@ -1,6 +1,6 @@
 {
   "external_id": "stephanotis_floribunda",
-  "name": "Madagascar Jasmine",
+  "name": "Stephanotis floribunda",
   "latin": "Stephanotis floribunda",
   "sun": "medium",
   "water": "medium",
@@ -8,20 +8,20 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "stephanotis_floribunda.jpg",
   "image_thumb": "stephanotis_floribunda.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy",
-          "pl": "Gliniasty",
-          "de": "Lehmig",
-          "fr": "Argileux",
-          "it": "Limoso",
-          "es": "Arcilloso",
-          "pt": "Argiloso",
-          "ar": "طيني",
-          "hi": "मिट्टी",
-          "zh": "粘土",
-          "ja": "粘土質",
-          "ko": "점토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średni poziom trudności",
+          "de": "Mittelschwer",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20–25°C",
-          "pl": "20–25°C",
-          "de": "20–25°C",
-          "fr": "20–25°C",
-          "it": "20–25°C",
-          "es": "20–25°C",
-          "pt": "20–25°C",
-          "ar": "20–25°C",
-          "hi": "20–25°C",
-          "zh": "20–25°C",
-          "ja": "20–25°C",
-          "ko": "20–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,70 +162,108 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Vining",
-          "pl": "Pnącze",
-          "de": "Kletternd",
-          "fr": "Grimpant",
-          "it": "Rampicante",
-          "es": "Trepador",
-          "pt": "Crescimento em trepadeira",
-          "ar": "متسلق",
-          "hi": "लताएँ",
-          "zh": "攀爬",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do średni wzrost",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta o moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीरे से मध्य गति में वृद्धि",
+          "zh": "生长缓慢至适中",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 중간 속도의 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Madagascar Jasmine",
-      "description": "Stephanotis floribunda, commonly known as Madagascar Jasmine, is a flowering vine native to Madagascar. It thrives in tropical climates with bright but indirect sunlight."
+      "common_name": "Waxflower",
+      "description": "Stephanotis floribunda, known as the Waxflower, is a fragrant climbing vine that thrives in moderate light and high humidity. It is commonly grown indoors for its attractive white flowers."
     },
     "pl": {
-      "common_name": "Jaśmin Madagaskarski",
-      "description": "Stephanotis floribunda, znany jako jaśmin Madagaskarski, to pnącze kwitnące pochodzące z Madagaskaru. Rośnie w tropikalnym klimacie w jasnym, ale pośrednim świetle."
+      "common_name": "Woskownica",
+      "description": "Stephanotis floribunda, znana jako Woskownica, to pachnąca pnącze, które najlepiej rośnie w średnim świetle i wysokiej wilgotności. Często hodowana w pomieszczeniach ze względu na swoje piękne białe kwiaty."
     },
     "de": {
-      "common_name": "Madagaskar-Jasmin",
-      "description": "Stephanotis floribunda, auch Madagaskar-Jasmin genannt, ist eine blühende Kletterpflanze aus Madagaskar. Sie gedeiht in tropischen Klimazonen mit hellem, aber indirektem Licht."
+      "common_name": "Wachsblume",
+      "description": "Stephanotis floribunda, auch Wachsblume genannt, ist eine duftende Kletterpflanze, die bei mittlerem Licht und hoher Luftfeuchtigkeit gedeiht. Sie wird häufig in Innenräumen wegen ihrer attraktiven weißen Blüten gezogen."
     },
     "fr": {
-      "common_name": "Jasmin de Madagascar",
-      "description": "Le Stephanotis floribunda, également connu sous le nom de jasmin de Madagascar, est une plante grimpante originaire de Madagascar. Elle prospère dans les climats tropicaux avec une lumière vive mais indirecte."
+      "common_name": "Fleur de cire",
+      "description": "Stephanotis floribunda, connue sous le nom de Fleur de cire, est une plante grimpante parfumée qui prospère à la lumière modérée et à une humidité élevée. Elle est couramment cultivée à l'intérieur pour ses belles fleurs blanches."
     },
     "it": {
-      "common_name": "Gelsomino del Madagascar",
-      "description": "Stephanotis floribunda, noto come gelsomino del Madagascar, è una pianta rampicante che cresce originariamente nel Madagascar. Cresce in climi tropicali con luce intensa ma indiretta."
+      "common_name": "Fiore di cera",
+      "description": "Stephanotis floribunda, conosciuto come Fiore di cera, è una pianta rampicante profumata che cresce bene alla luce moderata e con alta umidità. Viene spesso coltivato in casa per i suoi attraenti fiori bianchi."
     },
     "es": {
-      "common_name": "Jazmín de Madagascar",
-      "description": "Stephanotis floribunda, conocido como jazmín de Madagascar, es una planta trepadora originaria de Madagascar. Prosperan en climas tropicales con luz brillante pero indirecta."
+      "common_name": "Flor de cera",
+      "description": "Stephanotis floribunda, conocida como Flor de cera, es una planta trepadora fragante que prospera con luz moderada y alta humedad. Se cultiva comúnmente en interiores por sus atractivas flores blancas."
     },
     "pt": {
-      "common_name": "Jasmim de Madagascar",
-      "description": "Stephanotis floribunda, conhecido como jasmim de Madagascar, é uma planta trepadeira nativa de Madagascar. Cresce em climas tropicais com luz brilhante, mas indireta."
+      "common_name": "Flor de cera",
+      "description": "Stephanotis floribunda, conhecida como Flor de cera, é uma planta trepadora perfumada que cresce bem em luz moderada e alta umidade. É comumente cultivada em ambientes internos por suas flores brancas atraentes."
     },
     "ar": {
-      "common_name": "ياسمين مدغشقر",
-      "description": "Stephanotis floribunda، المعروف باسم ياسمين مدغشقر، هو نبات متسلق موطنه الأصلي مدغشقر. يزدهر في المناخات الاستوائية مع ضوء ساطع ولكن غير مباشر."
+      "common_name": "زهرة الشمع",
+      "description": "Stephanotis floribunda ، المعروفة باسم زهرة الشمع ، هي نبتة متسلقة معطرة تنمو جيدًا في الضوء المعتدل والرطوبة العالية. غالبًا ما تُزرع في الداخل بسبب زهورها البيضاء الجذابة."
     },
     "hi": {
-      "common_name": "मेडागास्कर चमेली",
-      "description": "Stephanotis floribunda, जिसे मेडागास्कर चमेली के नाम से जाना जाता है, एक लता है जो मेडागास्कर से उत्पन्न हुई है। यह उष्णकटिबंधीय जलवायु में चमकदार लेकिन अप्रत्यक्ष सूर्यप्रकाश में उगती है।"
+      "common_name": "मोम का फूल",
+      "description": "Stephanotis floribunda, जिसे मोम का फूल कहा जाता है, एक सुगंधित चढ़ाई वाला पौधा है जो मध्यम रोशनी और उच्च आर्द्रता में अच्छा बढ़ता है। इसके आकर्षक सफेद फूलों के लिए इसे अक्सर इनडोर उगाया जाता है।"
     },
     "zh": {
-      "common_name": "马达加斯加茉莉",
-      "description": "Stephanotis floribunda，常称为马达加斯加茉莉，是一种来自马达加斯加的攀爬植物。它在热带气候中茁壮成长，适合明亮但间接的阳光。"
+      "common_name": "蜡花",
+      "description": "Stephanotis floribunda，蜡花，是一种芬芳的攀缘植物，在中等光照和高湿度下生长良好。由于其美丽的白色花朵，常在室内栽培。"
     },
     "ja": {
-      "common_name": "マダガスカルジャスミン",
-      "description": "Stephanotis floribunda、一般にマダガスカルジャスミンとして知られるこの植物は、マダガスカル原産のツル植物です。熱帯気候で明るいが間接的な光で成長します。"
+      "common_name": "ワックスフラワー",
+      "description": "Stephanotis floribunda（ワックスフラワー）は、香り高いつる植物で、中程度の光と高い湿度でよく成長します。その魅力的な白い花のため、室内でよく育てられます。"
     },
     "ko": {
-      "common_name": "마다가스카르 재스민",
-      "description": "Stephanotis floribunda, 일반적으로 마다가스카르 재스민이라고 알려진 이 식물은 마다가스카르에서 자생하는 덩굴 식물입니다. 열대 기후에서 밝지만 간접적인 빛을 받아 잘 자랍니다."
+      "common_name": "왁스플라워",
+      "description": "Stephanotis floribunda, 왁스플라워로 알려져 있으며, 향기로운 덩굴 식물로 중간 정도의 빛과 높은 습도에서 잘 자랍니다. 그 매력적인 흰 꽃 때문에 실내에서 자주 기릅니다."
     }
   },
   "sources": {

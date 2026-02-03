@@ -1,21 +1,21 @@
 {
   "external_id": "orchis_purpurea",
-  "name": "Lady Orchid",
+  "name": "Purple Orchid",
   "latin": "Orchis purpurea",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "acidic",
-          "pl": "kwaśna",
-          "de": "sauer",
-          "fr": "acide",
-          "it": "acido",
-          "es": "ácido",
-          "pt": "ácido",
-          "ar": "حمضي",
-          "hi": "अम्लीय",
-          "zh": "酸性",
-          "ja": "酸性",
-          "ko": "산성"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैला नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過ぎを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Lady Orchid",
-      "description": "The Lady Orchid (Orchis purpurea) is a perennial orchid known for its striking purple flowers. It is native to Mediterranean regions and thrives in calcareous soil and woodland environments."
+      "common_name": "Purple Orchid",
+      "description": "Orchis purpurea is a medium-care orchid native to Europe. It thrives in moderate light and humidity, preferring well-drained soil."
     },
     "pl": {
-      "common_name": "Orchidea Pani",
-      "description": "Orchidea Pani (Orchis purpurea) to bylinna orchidea o charakterystycznych fioletowych kwiatach. Jest rodzimym gatunkiem w regionach Morza Śródziemnego, preferującym wapienną glebę i środowisko leśne."
+      "common_name": "Orchidea Purpurowa",
+      "description": "Orchis purpurea to storczyk średnio wymagający, pochodzący z Europy. Lubi umiarkowane światło i wilgotność, preferując dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Damen Orchidee",
-      "description": "Die Damen Orchidee (Orchis purpurea) ist eine mehrjährige Orchidee, die für ihre auffälligen violetten Blüten bekannt ist. Sie stammt aus den Mittelmeerländern und wächst bevorzugt in kalkhaltigen Böden und Wäldern."
+      "common_name": "Purpurorchidee",
+      "description": "Orchis purpurea ist eine mittelpflegerische Orchidee, die in Europa heimisch ist. Sie gedeiht bei mittlerem Licht und Feuchtigkeit und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Orchidée Dame",
-      "description": "L'Orchidée Dame (Orchis purpurea) est une orchidée vivace, connue pour ses fleurs violettes frappantes. Elle est originaire des régions méditerranéennes et préfère les sols calcaires et les environnements forestiers."
+      "common_name": "Orchidée pourpre",
+      "description": "Orchis purpurea est une orchidée à soins moyens originaire d'Europe. Elle préfère une lumière et une humidité modérées ainsi qu'un sol bien drainé."
     },
     "it": {
-      "common_name": "Orchidea della Signora",
-      "description": "L'Orchidea della Signora (Orchis purpurea) è un'orchidea perenne con fiori viola vivaci. È originaria delle regioni mediterranee e cresce preferibilmente in terreni calcarei e ambienti boschivi."
+      "common_name": "Orchidea purpurea",
+      "description": "Orchis purpurea è un'orchidea di cura media originaria dell'Europa. Cresce meglio con luce e umidità moderate, preferendo un terreno ben drenato."
     },
     "es": {
-      "common_name": "Orquídea de la Dama",
-      "description": "La Orquídea de la Dama (Orchis purpurea) es una orquídea perenne conocida por sus llamativas flores moradas. Es originaria de las regiones mediterráneas y crece preferentemente en suelos calcáreos y en entornos boscosos."
+      "common_name": "Orquídea púrpura",
+      "description": "Orchis purpurea es una orquídea de cuidado medio originaria de Europa. Se adapta bien a luz y humedad moderadas y prefiere suelos bien drenados."
     },
     "pt": {
-      "common_name": "Orquídea da Senhora",
-      "description": "A Orquídea da Senhora (Orchis purpurea) é uma orquídea perene conhecida pelas suas flores roxas impressionantes. É nativa das regiões mediterrâneas e cresce preferencialmente em solos calcários e ambientes florestais."
+      "common_name": "Orquídea roxa",
+      "description": "Orchis purpurea é uma orquídea de cuidados médios, nativa da Europa. Ela prefere luz e umidade moderadas, com solo bem drenado."
     },
     "ar": {
-      "common_name": "أوركيد السيدة",
-      "description": "أوركيد السيدة (Orchis purpurea) هو نوع دائم الخضرة معروف بأزهاره البنفسجية اللافتة. وهو أصلي في مناطق البحر الأبيض المتوسط ويزدهر في التربة الكلسية والبيئات الغابية."
+      "common_name": "أوركيدية أرجوانية",
+      "description": "Orchis purpurea هي أوركيدية متوسطة الرعاية موطنها أوروبا. تزدهر في الضوء المعتدل والرطوبة وتفضل التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "लेडी ऑर्किड",
-      "description": "लेडी ऑर्किड (Orchis purpurea) एक बहुवर्षीय ऑर्किड है, जो अपनी आकर्षक बैंगनी फूलों के लिए जाना जाता है। यह भूमध्यसागरीय क्षेत्रों का मूल निवासी है और कैल्शियम-समृद्ध मिट्टी और वन्य परिवेश में बढ़ता है।"
+      "common_name": "बैंगनी ऑर्किड",
+      "description": "Orchis purpurea एक मध्यम देखभाल वाली ऑर्किड है जो यूरोप से है। यह मध्यम प्रकाश और आर्द्रता में अच्छी तरह से बढ़ती है, और अच्छी जल निकासी वाली मिट्टी को पसंद करती है।"
     },
     "zh": {
-      "common_name": "女士兰",
-      "description": "女士兰（Orchis purpurea）是一种多年生兰花，以其引人注目的紫色花朵而闻名。它原产于地中海地区，喜欢生长在石灰质土壤和森林环境中。"
+      "common_name": "紫色兰花",
+      "description": "Orchis purpurea 是一种中等护理的兰花，原产于欧洲。它适应中等光照和湿度，喜欢排水良好的土壤。"
     },
     "ja": {
-      "common_name": "レディオーキッド",
-      "description": "レディオーキッド（Orchis purpurea）は、紫色の花で知られる多年生のランです。地中海地域が原産で、カルシウムを含んだ土壌と森林環境を好みます。"
+      "common_name": "紫色の蘭",
+      "description": "Orchis purpurea は中程度の世話を必要とするヨーロッパ原産の蘭です。適度な光と湿度で育ち、排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "레이디 오키드",
-      "description": "레이디 오키드(Orchis purpurea)는 눈에 띄는 보라색 꽃으로 알려진 다년생 난초입니다. 지중해 지역이 원산지이며, 석회질 토양과 숲 환경에서 자라기를 선호합니다."
+      "common_name": "자주색 난초",
+      "description": "Orchis purpurea는 유럽 원산지의 중간 관리 난초입니다. 적당한 빛과 습도에서 잘 자라며 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/orchis_purpurea",
-      "https://www.plantsociety.org/orchis_purpurea"
+      "https://www.rhs.org.uk/advice/profile?pid=727",
+      "https://www.gardenia.net/plant/orchis-purpurea"
     ]
   }
 }

@@ -1,13 +1,14 @@
 {
   "external_id": "cymbidium_aloifolium",
-  "name": "Aloe-leafed Cymbidium",
+  "name": "Aloe-leaf cymbidium",
   "latin": "Cymbidium aloifolium",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "orchid"
@@ -17,7 +18,7 @@
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "cymbidium_aloifolium.jpg",
@@ -27,17 +28,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "en": "Bright, filtered sun",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, gefiltert",
+          "fr": "Lumière vive filtrée",
+          "it": "Luce intensa filtrata",
+          "es": "Luz brillante filtrada",
+          "pt": "Luz forte filtrada",
+          "ar": "ضوء ساطع مُرشَّح",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい間接光",
+          "ja": "明るい半日陰",
           "ko": "밝은 간접광"
         }
       }
@@ -47,17 +48,17 @@
       "value": {
         "text": {
           "en": "Orchid bark mix",
-          "pl": "Podłoże storczyków",
-          "de": "Orchideensubstrat",
-          "fr": "Substrat orchidée",
-          "it": "Substrato orchidee",
-          "es": "Sustrato orquídea",
-          "pt": "Substrato orquídea",
-          "ar": "وسط أوركيد",
-          "hi": "ऑर्किड मिश्रण",
-          "zh": "兰花基质",
-          "ja": "ラン用培地",
-          "ko": "난용 배지"
+          "pl": "Kora do storczyków",
+          "de": "Orchideenrinde",
+          "fr": "Écorces d’orchidée",
+          "it": "Corteccia per orchidee",
+          "es": "Corteza para orquídeas",
+          "pt": "Casca p/ orquídeas",
+          "ar": "وسط لحاء للأوركيد",
+          "hi": "ऑर्किड बार्क मिक्स",
+          "zh": "兰花树皮基质",
+          "ja": "バーク用土",
+          "ko": "난석/바크 배지"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even, moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Let top dry a bit",
+          "pl": "Przesusz lekko wierzch",
+          "de": "Oben antrocknen lassen",
+          "fr": "Laisser sécher le dessus",
+          "it": "Asciuga un po’ sopra",
+          "es": "Seca un poco arriba",
+          "pt": "Seque um pouco em cima",
+          "ar": "اترك السطح يجف قليلاً",
+          "hi": "ऊपर थोड़ा सूखने दें",
+          "zh": "表层微干再浇",
+          "ja": "表面が少し乾いたら",
+          "ko": "겉이 마르면 물"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -123,8 +124,8 @@
       "value": {
         "text": {
           "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchte",
           "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietrująca dla zwierząt",
+          "de": "Ungiftig für Haustiere",
+          "fr": "Non toxique (animaux)",
+          "it": "Non tossica (animali)",
+          "es": "No tóxica (mascotas)",
+          "pt": "Não tóxica (pets)",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू-सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -160,77 +161,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping orchid",
-          "pl": "Storczyk kępiasty",
-          "de": "Horstbildend",
-          "fr": "Orchidée cespiteuse",
-          "it": "Orchidea cespuglio",
-          "es": "Orquídea en matas",
-          "pt": "Orquídea em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち成長",
-          "ko": "군생 성장"
+          "en": "Epiphytic, clumping",
+          "pl": "Epifit, rośnie kępami",
+          "de": "Epiphytisch, horstig",
+          "fr": "Épiphyte, en touffe",
+          "it": "Epifita, cespitosa",
+          "es": "Epífita, en mata",
+          "pt": "Epífita, em touceira",
+          "ar": "هوائي، ينمو كتلًا",
+          "hi": "एपिफाइट, गुच्छेदार",
+          "zh": "附生，丛生",
+          "ja": "着生・株立ち",
+          "ko": "착생, 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy media",
+          "pl": "Unikaj przelania",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب البلل الدائم",
+          "hi": "जलभराव न करें",
+          "zh": "避免长期潮湿",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schildläuse, Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية وبق دقيقي",
+          "hi": "स्केल, मिलीबग",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레, 깍지진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Aloe-leafed Cymbidium",
-      "description": "Cymbidium aloifolium is an epiphytic orchid native to South and Southeast Asia. It produces long, arching leaves and pendant sprays of fragrant flowers. It is commonly grown mounted or in orchid bark under bright, indirect light."
+      "common_name": "Aloe-leaf cymbidium",
+      "description": "Cymbidium aloifolium is an epiphytic or lithophytic orchid from tropical and subtropical Asia. Grow it in a bark-based orchid mix with bright light and water when the medium starts to dry. Cooler nights can help initiate flower spikes, and it typically produces pendant racemes of striped flowers in spring."
     },
     "pl": {
       "common_name": "Cymbidium aloesolistne",
-      "description": "Cymbidium aloifolium to epifityczny storczyk pochodzący z Azji Południowej i Południowo-Wschodniej. Tworzy długie liście i zwisające kwiatostany. Wymaga jasnego, rozproszonego światła i podłoża dla storczyków."
+      "description": "Cymbidium aloifolium to storczyk epifityczny lub litofityczny z tropikalnej i subtropikalnej Azji. Uprawiaj w korze do storczyków, w jasnym świetle, podlewając gdy podłoże zaczyna przesychać. Chłodniejsze noce sprzyjają zawiązywaniu pędów kwiatowych; wiosną tworzy zwisające grona pasiastych kwiatów."
     },
     "de": {
-      "common_name": "Aloe-Blatt-Cymbidium",
-      "description": "Cymbidium aloifolium ist eine epiphytische Orchidee aus Süd- und Südostasien. Sie bildet lange Blätter und hängende Blütenstände. Sie wächst gut in hellem, indirektem Licht mit speziellem Orchideensubstrat."
+      "common_name": "Aloe-blättriges Cymbidium",
+      "description": "Cymbidium aloifolium ist eine epiphytische oder lithophytische Orchidee aus tropischem bis subtropischem Asien. Kultiviere sie in Rinden-Substrat für Orchideen bei hellem Licht und gieße, wenn das Substrat antrocknet. Kühlere Nächte fördern die Blütenbildung; im Frühjahr erscheinen hängende Blütentrauben mit gestreiften Blüten."
     },
     "fr": {
       "common_name": "Cymbidium à feuilles d’aloès",
-      "description": "Cymbidium aloifolium est une orchidée épiphyte originaire d’Asie du Sud et du Sud-Est. Elle porte de longues feuilles et des grappes florales pendantes. Elle préfère une lumière vive sans soleil direct."
+      "description": "Cymbidium aloifolium est une orchidée épiphyte ou lithophyte originaire d’Asie tropicale à subtropicale. Cultivez-la dans un substrat d’écorces pour orchidées, en lumière vive, et arrosez quand le mélange commence à sécher. Des nuits plus fraîches favorisent l’initiation des hampes, avec des grappes pendantes de fleurs striées au printemps."
     },
     "it": {
       "common_name": "Cymbidium a foglie di aloe",
-      "description": "Cymbidium aloifolium è un’orchidea epifita dell’Asia meridionale e sud-orientale. Ha foglie lunghe e infiorescenze pendule. Richiede luce intensa indiretta e substrato specifico per orchidee."
+      "description": "Cymbidium aloifolium è un’orchidea epifita o litofita originaria dell’Asia tropicale e subtropicale. Coltivala in corteccia per orchidee con luce intensa e annaffia quando il substrato inizia ad asciugare. Notti più fresche aiutano l’emissione degli steli fiorali; in primavera porta racemi penduli di fiori striati."
     },
     "es": {
       "common_name": "Cymbidium de hojas de aloe",
-      "description": "Cymbidium aloifolium es una orquídea epífita originaria del sur y sudeste de Asia. Presenta hojas largas y flores colgantes. Se cultiva con luz brillante indirecta y sustrato para orquídeas."
+      "description": "Cymbidium aloifolium es una orquídea epífita o litófita de Asia tropical y subtropical. Cultívala en sustrato de corteza para orquídeas con luz brillante y riega cuando el sustrato empiece a secarse. Las noches más frescas ayudan a iniciar varas florales y en primavera produce racimos colgantes de flores rayadas."
     },
     "pt": {
       "common_name": "Cymbidium de folhas de aloe",
-      "description": "Cymbidium aloifolium é uma orquídea epífita da Ásia do Sul e Sudeste. Possui folhas longas e inflorescências pendentes. Prefere luz indireta intensa e substrato para orquídeas."
+      "description": "Cymbidium aloifolium é uma orquídea epífita ou litófita da Ásia tropical e subtropical. Cultive em substrato de casca para orquídeas com luz forte e regue quando o meio começar a secar. Noites mais frescas ajudam a induzir hastes florais e, na primavera, forma cachos pendentes de flores listradas."
     },
     "ar": {
       "common_name": "سيمبيديوم أوراق الألوة",
-      "description": "Cymbidium aloifolium سحلية هوائية موطنها جنوب وجنوب شرق آسيا. لها أوراق طويلة وأزهار متدلية. تنمو في ضوء ساطع غير مباشر ووسط خاص بالأوركيد."
+      "description": "Cymbidium aloifolium سحلبية هوائية أو صخرية من آسيا المدارية وشبه المدارية. تُزرع في وسط لحاء مخصص للأوركيد مع ضوء ساطع مُرشَّح، وتُسقى عندما يبدأ الوسط بالجفاف. تساعد الليالي الأبرد على بدء السنابل الزهرية، وتظهر في الربيع عناقيد متدلية من أزهار مخططة."
     },
     "hi": {
-      "common_name": "एलो पत्ती सिम्बिडियम",
-      "description": "Cymbidium aloifolium दक्षिण और दक्षिण-पूर्व एशिया की एक एपिफाइटिक ऑर्किड है। इसमें लंबी पत्तियाँ और लटकते फूल होते हैं। इसे तेज़ अप्रत्यक्ष रोशनी और ऑर्किड मिश्रण की आवश्यकता होती है।"
+      "common_name": "एलो-लीफ सिम्बिडियम",
+      "description": "Cymbidium aloifolium उष्णकटिबंधीय व उप-उष्णकटिबंधीय एशिया की एक एपिफाइट/लिथोफाइट ऑर्किड है। इसे ऑर्किड बार्क मिक्स में तेज अप्रत्यक्ष रोशनी पर रखें और माध्यम के सूखने पर पानी दें। ठंडी रातें फूल की डंडियों के बनने में मदद कर सकती हैं और वसंत में लटकते गुच्छों में धारीदार फूल आते हैं।"
     },
     "zh": {
-      "common_name": "芦荟叶兰",
-      "description": "Cymbidium aloifolium 原产于南亚和东南亚，是一种附生兰花。它具有细长叶片和下垂花序。适合在明亮的散射光和兰花基质中生长。"
+      "common_name": "芦荟叶兰（大花蕙兰属）",
+      "description": "Cymbidium aloifolium 是原产于亚洲热带至亚热带的附生或岩生兰。使用兰花树皮基质，给予明亮散射光，基质开始变干再浇水。较凉的夜温有助于抽花梗，春季常开下垂总状花序的条纹花。"
     },
     "ja": {
       "common_name": "アロエ葉シンビジウム",
-      "description": "Cymbidium aloifolium は南アジアから東南アジア原産の着生ランです。長い葉と下垂する花序を持ちます。明るい間接光とラン用培地を好みます。"
+      "description": "Cymbidium aloifolium はアジアの熱帯〜亜熱帯に分布する着生・岩生のランです。バーク主体の用土で明るい光に置き、用土が乾き始めたら水やりします。夜温がやや低いと花芽形成に役立ち、春に縞模様の花を房状に下垂して咲かせます。"
     },
     "ko": {
       "common_name": "알로에잎 심비디움",
-      "description": "Cymbidium aloifolium은 남아시아와 동남아시아 원산의 착생 난초입니다. 길게 늘어진 잎과 아래로 늘어지는 꽃을 가집니다. 밝은 간접광과 난용 배지가 적합합니다."
+      "description": "Cymbidium aloifolium은 아시아 열대~아열대 지역의 착생 또는 암생 난초입니다. 바크 기반 난초용 배지에 심고 밝은 빛에서 키우며, 배지가 마르기 시작하면 물을 줍니다. 밤 기온이 다소 낮으면 꽃대 형성에 도움이 되며 봄에 줄무늬 꽃이 늘어진 꽃차례로 피는 편입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/cymbidium-aloifolium",
-      "https://www.aos.org/orchids/orchids-a-to-z/letter-c/cymbidium.aspx",
-      "https://www.rhs.org.uk/plants/3077/cymbidium-aloifolium/details"
+      "https://www.rhs.org.uk/plants/cymbidium-orchids/how-to-grow-cymbidium-orchids",
+      "https://www.aos.org/orchid-care/orchid-care-and-culture-sheets/cymbidium-culture",
+      "https://www.portlandnursery.com/houseplants/cymbidium-orchid",
+      "https://www.aspca.org/news/safe-bouquet-mothers-day"
     ]
   }
 }

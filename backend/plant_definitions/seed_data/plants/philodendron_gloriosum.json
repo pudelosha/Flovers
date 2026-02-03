@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "loam"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "philodendron_gloriosum.jpg",
   "image_thumb": "philodendron_gloriosum.jpg",
   "traits": [
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ja": "中くらいの光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka dla roślin aroidowych",
-          "de": "Aroid-Mischung",
-          "fr": "Mélange aroid",
-          "it": "Miscela aroid",
-          "es": "Mezcla aroid",
-          "pt": "Mistura aroid",
-          "ar": "خليط أرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "箭叶植物混合土",
-          "ja": "アロイド混合土",
-          "ko": "아로이드 혼합 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -91,13 +91,13 @@
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
-          "es": "Medio",
-          "pt": "Médio",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "中程度",
-          "ko": "보통"
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "20–28°C",
+          "pl": "20–28°C",
+          "de": "20–28°C",
+          "fr": "20–28°C",
+          "it": "20–28°C",
+          "es": "20–28°C",
+          "pt": "20–28°C",
+          "ar": "20–28°C",
+          "hi": "20–28°C",
+          "zh": "20–28°C",
+          "ja": "20–28°C",
+          "ko": "20–28°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성이 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowany",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita l'irrigazione eccessiva",
+          "es": "Evita el exceso de riego",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Glorious Philodendron",
-      "description": "Philodendron gloriosum is a tropical plant native to Colombia. It features large, heart-shaped leaves with prominent white veins."
+      "description": "Philodendron gloriosum is a striking aroid known for its large, heart-shaped leaves with white veining. It thrives in bright, indirect light and requires moderate watering."
     },
     "pl": {
       "common_name": "Philodendron wspaniały",
-      "description": "Philodendron gloriosum to roślina tropikalna pochodząca z Kolumbii. Charakteryzuje się dużymi, sercowatymi liśćmi z wyraźnymi białymi żyłkami."
+      "description": "Philodendron gloriosum to efektowna roślina z dużymi, sercowatymi liśćmi z białymi żyłkami. Rośnie najlepiej w jasnym, pośrednim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Herrlicher Philodendron",
-      "description": "Philodendron gloriosum ist eine tropische Pflanze aus Kolumbien. Sie hat große, herzförmige Blätter mit auffälligen weißen Adern."
+      "common_name": "Glorioser Philodendron",
+      "description": "Der Philodendron gloriosum ist eine auffällige Aroidpflanze mit großen, herzförmigen Blättern und weißen Adern. Er gedeiht bei indirektem Licht und benötigt mäßige Bewässerung."
     },
     "fr": {
       "common_name": "Philodendron glorieux",
-      "description": "Le Philodendron gloriosum est une plante tropicale originaire de Colombie. Il présente de grandes feuilles en forme de cœur avec des veines blanches bien marquées."
+      "description": "Le Philodendron gloriosum est une plante aroid remarquable avec de grandes feuilles en forme de cœur et des nervures blanches. Il préfère la lumière indirecte et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Philodendron glorioso",
-      "description": "Il Philodendron gloriosum è una pianta tropicale originaria della Colombia. Ha grandi foglie a forma di cuore con vene bianche ben visibili."
+      "description": "Il Philodendron gloriosum è una pianta aroida caratterizzata da grandi foglie a forma di cuore con vene bianche. Cresce bene in luce indiretta e necessita di annaffiature moderate."
     },
     "es": {
       "common_name": "Philodendron glorioso",
-      "description": "El Philodendron gloriosum es una planta tropical originaria de Colombia. Presenta grandes hojas en forma de corazón con venas blancas prominentes."
+      "description": "El Philodendron gloriosum es una planta aroid destacada por sus grandes hojas en forma de corazón con venas blancas. Crece bien con luz indirecta y requiere riego moderado."
     },
     "pt": {
       "common_name": "Philodendron glorioso",
-      "description": "O Philodendron gloriosum é uma planta tropical nativa da Colômbia. Possui grandes folhas em forma de coração com veias brancas pronunciadas."
+      "description": "O Philodendron gloriosum é uma planta aroida notável por suas grandes folhas em forma de coração com veios brancos. Ela se desenvolve bem em luz indireta e necessita de rega moderada."
     },
     "ar": {
-      "common_name": "فيلوديندرون رائع",
-      "description": "الفيلوديندرون غلوريوسوم هو نبات استوائي موطنه كولومبيا. يتميز بأوراق كبيرة على شكل قلب مع عروق بيضاء بارزة."
+      "common_name": "الفيلوديندرون الرائع",
+      "description": "الفيلوديندرون جلاوريوم هو نبات أرايد مميز بأوراقه الكبيرة على شكل قلب وعروق بيضاء. يفضل الضوء غير المباشر ويحتاج إلى ري معتدل."
     },
     "hi": {
       "common_name": "भव्य फिलोडेंड्रोन",
-      "description": "फिलोडेंड्रोन ग्लोरियोसुम एक उष्णकटिबंधीय पौधा है जो कोलंबिया का मूल निवासी है। इसके पास बड़े, दिल के आकार के पत्ते हैं जिनमें प्रमुख सफेद नसें हैं।"
+      "description": "फिलोडेंड्रोन ग्लोरियॉसुम एक आकर्षक एरॉयड पौधा है, जिसकी बड़ी, दिल के आकार की पत्तियाँ सफेद नसों के साथ होती हैं। यह परोक्ष, अप्रत्यक्ष प्रकाश में बढ़ता है और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "辉煌的泰诺兰",
-      "description": "辉煌泰诺兰（Philodendron gloriosum）是一种原产于哥伦比亚的热带植物。它具有大而心形的叶子，上面有显眼的白色脉络。"
+      "common_name": "光辉铁线蕨",
+      "description": "光辉铁线蕨是一种显著的天南星科植物，具有大而心形的叶子，白色的叶脉。它喜欢间接光，并需要适度的浇水。"
     },
     "ja": {
-      "common_name": "グロリアスフィロデンドロン",
-      "description": "フィロデンドロン・グロリオスムはコロンビア原産の熱帯植物です。大きなハート型の葉に目立つ白い脈があります。"
+      "common_name": "栄光のフィロデンドロン",
+      "description": "フィロデンドロン・グロリオスムは、大きなハート型の葉と白い葉脈が特徴的なアロイド植物です。間接的な光を好み、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "화려한 필로덴드론",
-      "description": "필로덴드론 글로리오숨은 콜롬비아가 원산지인 열대 식물입니다. 크고 하트 모양의 잎에 뚜렷한 흰색 줄기가 있습니다."
+      "common_name": "영광의 필로덴드론",
+      "description": "필로덴드론 글로리오섬은 큰 하트 모양의 잎과 흰색 줄무늬가 특징인 아로이드 식물입니다. 간접적인 빛을 좋아하며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicgardens.com/philodendron-gloriosum",
-      "https://www.rareplantcare.com/philodendron-gloriosum-care"
+      "https://www.rhs.org.uk/plants/philodendron-gloriosum",
+      "https://www.botanicalliving.com/philodendron-gloriosum-care/"
     ]
   }
 }

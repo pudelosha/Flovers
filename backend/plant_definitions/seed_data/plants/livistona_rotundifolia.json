@@ -1,6 +1,6 @@
 {
   "external_id": "livistona_rotundifolia",
-  "name": "Round-leaf Fan Palm",
+  "name": "Livistona rotundifolia",
   "latin": "Livistona rotundifolia",
   "sun": "medium",
   "water": "medium",
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "livistona_rotundifolia.jpg",
   "image_thumb": "livistona_rotundifolia.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne pośrednie",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-draining",
-          "pl": "przepuszczalna",
-          "de": "durchlässig",
-          "fr": "bien drainé",
-          "it": "ben drenato",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जल निकास",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowane",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderata",
-          "es": "moderado",
-          "pt": "moderada",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "适中",
+          "zh": "适度",
           "ja": "適度",
-          "ko": "보통"
+          "ko": "적당히"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium care",
-          "pl": "średnia piel.",
-          "de": "mittlere Pflege",
-          "fr": "soins moyens",
-          "it": "cura media",
-          "es": "cuidado medio",
-          "pt": "cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "중간 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "average",
-          "pl": "przeciętna",
-          "de": "durchschnitt",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
         }
       }
     },
@@ -143,15 +143,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietrująca",
-          "de": "ungiftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषेकी",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow to medium",
-          "pl": "wolny–średni",
-          "de": "langsam–mittel",
-          "fr": "lent à moyen",
-          "it": "lenta-media",
-          "es": "lento-medio",
-          "pt": "lento-médio",
-          "ar": "بطيء-متوسط",
-          "hi": "धीमी–मध्यम",
-          "zh": "缓慢到中等",
-          "ja": "遅い〜中",
-          "ko": "느림~중간"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम",
+          "zh": "缓慢至适中",
+          "ja": "遅いから中くらい",
+          "ko": "느리거나 중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرात में पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Round-leaf Fan Palm",
-      "description": "Livistona rotundifolia is a tropical fan palm native to Southeast Asia. It is commonly grown indoors for its glossy, rounded leaves. The plant prefers bright indirect light and evenly moist soil."
+      "common_name": "Round-leafed Livistona",
+      "description": "Livistona rotundifolia is a slow-growing, tropical palm. It thrives in bright, indirect light and prefers moderate watering."
     },
     "pl": {
-      "common_name": "Palma wachlarzowa",
-      "description": "Livistona rotundifolia to tropikalna palma z Azji Południowo-Wschodniej. Jest popularna w uprawie domowej dzięki okrągłym liściom. Wymaga jasnego, rozproszonego światła i umiarkowanego podlewania."
+      "common_name": "Livistona o okrągłych liściach",
+      "description": "Livistona rotundifolia to powoli rosnąca palma tropikalna. Preferuje jasne, pośrednie światło i umiarkowane podlewanie."
     },
     "de": {
-      "common_name": "Rundblättrige Fächerpalme",
-      "description": "Livistona rotundifolia ist eine tropische Palme aus Südostasien. Sie wird als Zimmerpflanze wegen ihrer runden Fächerblätter geschätzt. Sie bevorzugt helles, indirektes Licht und gleichmäßige Feuchte."
+      "common_name": "Rundblättrige Livistona",
+      "description": "Livistona rotundifolia ist eine langsam wachsende tropische Palme. Sie bevorzugt helles, indirektes Licht und mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Palmier éventail",
-      "description": "Livistona rotundifolia est un palmier tropical d’Asie du Sud-Est. Il est cultivé en intérieur pour ses feuilles arrondies. Il apprécie une lumière vive indirecte et un arrosage modéré."
+      "common_name": "Livistona à feuilles rondes",
+      "description": "Livistona rotundifolia est un palmier à croissance lente. Il préfère la lumière indirecte et un arrosage modéré."
     },
     "it": {
-      "common_name": "Palma a ventaglio",
-      "description": "Livistona rotundifolia è una palma tropicale originaria del Sud-Est asiatico. È coltivata in casa per le sue foglie lucide e rotonde. Predilige luce indiretta e terreno leggermente umido."
+      "common_name": "Livistona a foglie rotonde",
+      "description": "Livistona rotundifolia è una palma a crescita lenta. Preferisce la luce indiretta e annaffiature moderate."
     },
     "es": {
-      "common_name": "Palmera de abanico",
-      "description": "Livistona rotundifolia es una palmera tropical del sudeste asiático. Se cultiva en interiores por sus hojas redondeadas. Necesita luz indirecta brillante y riego moderado."
+      "common_name": "Livistona de hojas redondas",
+      "description": "Livistona rotundifolia es una palma de crecimiento lento. Prefiere luz indirecta y riego moderado."
     },
     "pt": {
-      "common_name": "Palmeira-leque",
-      "description": "Livistona rotundifolia é uma palmeira tropical do Sudeste Asiático. É cultivada em interiores por suas folhas arredondadas. Prefere luz indireta brilhante e rega moderada."
+      "common_name": "Livistona de folhas arredondadas",
+      "description": "Livistona rotundifolia é uma palma de crescimento lento. Prefere luz indireta e rega moderada."
     },
     "ar": {
-      "common_name": "نخيل المروحة",
-      "description": "ليفستونا روتونديفوليا نخيل استوائي من جنوب شرق آسيا. يزرع كنبات داخلي لأوراقه الدائرية. يحتاج إلى ضوء ساطع غير مباشر وري معتدل."
+      "common_name": "ليفستونا ذات الأوراق المستديرة",
+      "description": "ليفستونا روتونديفوليا هي نبتة نخيلية بطيئة النمو. تفضل الضوء غير المباشر والري المعتدل."
     },
     "hi": {
-      "common_name": "फैन पाम",
-      "description": "लिविस्टोना रोटुंडिफोलिया दक्षिण-पूर्व एशिया की उष्णकटिबंधीय पाम है। इसे घर के अंदर गोल पत्तियों के लिए उगाया जाता है। इसे तेज अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है।"
+      "common_name": "गोल पत्तियों वाली लिविस्टोना",
+      "description": "लिविस्टोना रोटुंडीफोलिया एक धीमी वृद्धि करने वाला उष्णकटिबंधीय हथेली है। यह उज्ज्वल, अप्रत्यक्ष प्रकाश में बढ़ता है और मध्यम पानी पसंद करता है।"
     },
     "zh": {
-      "common_name": "圆叶蒲葵",
-      "description": "圆叶蒲葵原产于东南亚的热带地区。因其圆形光亮的叶片而常作为室内植物栽培。喜欢明亮的散射光和适度浇水。"
+      "common_name": "圆叶棕榈",
+      "description": "圆叶棕榈是一种生长缓慢的热带棕榈。它喜欢明亮的间接光和适度的浇水。"
     },
     "ja": {
-      "common_name": "ラウンドリーフパーム",
-      "description": "リビストナ・ロツンディフォリアは東南アジア原産のヤシです。丸い葉が特徴で室内観葉植物として育てられます。明るい間接光と適度な水やりを好みます。"
+      "common_name": "丸葉リヴィストナ",
+      "description": "リヴィストナ・ロトゥンディフォリアは遅く成長する熱帯性のヤシです。明るい間接光と適度な水やりを好みます。"
     },
     "ko": {
-      "common_name": "원형잎 부채야자",
-      "description": "리비스토나 로툰디폴리아는 동남아시아 원산의 열대 야자입니다. 둥근 잎으로 실내 관엽식물로 재배됩니다. 밝은 간접광과 적당한 물주기가 필요합니다."
+      "common_name": "둥근잎 리비스토나",
+      "description": "리비스토나 로툰디폴리아는 느리게 자라는 열대 야자수입니다. 밝고 간접적인 빛과 적당한 급수를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/livistona-rotundifolia",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a123",
-      "https://www.rhs.org.uk/plants/10238/livistona-rotundifolia/details"
+      "https://www.rhs.org.uk/plants/157131/livistona-rotundifolia",
+      "https://www.bhg.com/gardening/pests-insects-diseases/livistona-rotundifolia-care/"
     ]
   }
 }

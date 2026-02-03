@@ -7,12 +7,12 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezza ombra",
+          "es": "Sombra parcial",
+          "pt": "Sombra parcial",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "部分阳光",
+          "ja": "部分的な日光",
+          "ko": "부분적인 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy",
-          "pl": "Glinisty",
-          "de": "Lehmig",
-          "fr": "Argileux",
-          "it": "Argilloso",
-          "es": "Arcilloso",
-          "pt": "Argiloso",
-          "ar": "طيني",
-          "hi": "काली मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土質",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "좋은 배수"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool",
-          "pl": "Chłodny",
-          "de": "Kühl",
-          "fr": "Froid",
-          "it": "Fresco",
-          "es": "Frío",
-          "pt": "Frio",
-          "ar": "بارد",
-          "hi": "ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "시원한"
+          "en": "15-24°C",
+          "pl": "15-24°C",
+          "de": "15-24°C",
+          "fr": "15-24°C",
+          "it": "15-24°C",
+          "es": "15-24°C",
+          "pt": "15-24°C",
+          "ar": "15-24°C",
+          "hi": "15-24°C",
+          "zh": "15-24°C",
+          "ja": "15-24°C",
+          "ko": "15-24°C"
         }
       }
     },
@@ -135,7 +135,7 @@
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "中程度",
-          "ko": "중간"
+          "ko": "보통"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是的",
-          "ja": "はい",
-          "ko": "예"
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
+          "zh": "适中",
           "ja": "中程度",
-          "ko": "중간"
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evita l'eccessiva irrigazione",
+          "es": "Evite el riego excesivo",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Dandelion",
-      "description": "A hardy and widely recognized wildflower, known for its bright yellow flowers and fluffy seed heads. Commonly found in temperate regions."
+      "description": "Dandelions are common wildflowers with distinctive yellow flowers. They are often found in lawns and meadows."
     },
     "pl": {
       "common_name": "Mniszek lekarski",
-      "description": "Trwała i powszechnie rozpoznawana roślina dzika, znana z jaskrawożółtych kwiatów i puszystych główek nasiennych. Powszechna w umiarkowanych regionach."
+      "description": "Mniszek lekarski to pospolite rośliny dziko rosnące, z charakterystycznymi żółtymi kwiatami. Często spotykane na trawnikach i łąkach."
     },
     "de": {
       "common_name": "Löwenzahn",
-      "description": "Eine robuste und weithin bekannte Wildblume, bekannt für ihre leuchtend gelben Blüten und flauschigen Samenköpfe. Häufig in gemäßigten Regionen anzutreffen."
+      "description": "Löwenzähne sind weit verbreitete Wildpflanzen mit auffälligen gelben Blüten. Sie wachsen oft auf Rasenflächen und Wiesen."
     },
     "fr": {
       "common_name": "Pissenlit",
-      "description": "Une plante sauvage robuste et largement reconnue, connue pour ses fleurs jaunes vives et ses têtes de graines duveteuses. Commune dans les régions tempérées."
+      "description": "Les pissenlits sont des fleurs sauvages communes avec des fleurs jaunes distinctives. On les trouve souvent dans les pelouses et les prairies."
     },
     "it": {
       "common_name": "Dente di leone",
-      "description": "Un fiore selvatico resistente e ampiamente riconosciuto, noto per i suoi fiori gialli brillanti e le teste di semi soffici. Comune nelle regioni temperate."
+      "description": "Il dente di leone è un fiore selvatico comune con fiori gialli distintivi. Si trova spesso nei prati e nei campi."
     },
     "es": {
       "common_name": "Diente de león",
-      "description": "Una planta silvestre resistente y ampliamente reconocida, conocida por sus flores amarillas brillantes y cabezas de semillas esponjosas. Común en regiones templadas."
+      "description": "El diente de león es una flor silvestre común con flores amarillas distintivas. Se encuentra a menudo en céspedes y praderas."
     },
     "pt": {
-      "common_name": "Dente-de-leão",
-      "description": "Uma planta selvagem resistente e amplamente reconhecida, conhecida pelas suas flores amarelas brilhantes e cabeças de sementes fofas. Comum em regiões temperadas."
+      "common_name": "Dente de leão",
+      "description": "O dente de leão é uma flor selvagem comum com flores amarelas distintas. Frequentemente encontrado em gramados e prados."
     },
     "ar": {
       "common_name": "الهندباء",
-      "description": "نبات بري قوي ومعروف على نطاق واسع، يعرف بأزهاره الصفراء الزاهية ورؤوس بذوره الفاتحة. شائع في المناطق المعتدلة."
+      "description": "الهندباء هي أزهار برية شائعة تتميز بأزهارها الصفراء. توجد غالبًا في المروج والمراعي."
     },
     "hi": {
-      "common_name": "डैंडलियन",
-      "description": "एक कठोर और व्यापक रूप से पहचाना जाने वाला जंगली फूल, जो अपने चमकीले पीले फूलों और मुलायम बीज सिरों के लिए जाना जाता है। सामान्यतः समशीतोष्ण क्षेत्रों में पाया जाता है।"
+      "common_name": "डंडेलियन",
+      "description": "डंडेलियन एक सामान्य जंगली फूल है जिसमें विशिष्ट पीले फूल होते हैं। ये आमतौर पर घास के मैदानों और घास के मैदानों में पाए जाते हैं।"
     },
     "zh": {
       "common_name": "蒲公英",
-      "description": "一种耐寒且广为人知的野花，以其明亮的黄色花朵和蓬松的种子头而闻名。通常生长在温带地区。"
+      "description": "蒲公英是一种常见的野生花卉，具有独特的黄色花朵。它们通常生长在草地和草原中。"
     },
     "ja": {
       "common_name": "タンポポ",
-      "description": "明るい黄色の花とふわふわした種の頭で知られる、頑丈で広く認識された野生の花です。温帯地域に一般的に見られます。"
+      "description": "タンポポは、特徴的な黄色い花を持つ一般的な野生の花です。芝生や草原に多く見られます。"
     },
     "ko": {
       "common_name": "민들레",
-      "description": "밝은 노란색 꽃과 솜털 같은 씨앗 머리로 잘 알려진 튼튼한 야생화입니다. 온대 지역에서 흔히 볼 수 있습니다."
+      "description": "민들레는 특징적인 노란 꽃을 가진 일반적인 들꽃입니다. 잔디밭과 초원에서 자주 발견됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.bgci.org/garden_search.php?id=2139",
-      "https://www.rhs.org.uk/plants/popular/dandelions"
+      "https://www.rhs.org.uk/plants/taraxacum-officinale",
+      "https://www.gardenersworld.com/plants/dandelion-taraxacum-officinale/"
     ]
   }
 }

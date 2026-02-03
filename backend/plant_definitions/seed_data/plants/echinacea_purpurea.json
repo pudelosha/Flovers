@@ -1,20 +1,19 @@
 {
   "external_id": "echinacea_purpurea",
-  "name": "Purple Coneflower",
+  "name": "Purple coneflower",
   "latin": "Echinacea purpurea",
   "sun": "high",
-  "water": "low",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -36,9 +35,9 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日当たり良好",
+          "ja": "日なた",
           "ko": "강한 햇빛"
         }
       }
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Well-drained mix",
           "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "de": "Gut drainiert",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
           "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low water",
-          "pl": "Mało wody",
-          "de": "Wenig Wasser",
-          "fr": "Peu d’eau",
-          "it": "Poca acqua",
-          "es": "Poca agua",
-          "pt": "Pouca água",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Let top dry",
+          "pl": "Przeschnij wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher",
+          "it": "Asciuga in alto",
+          "es": "Secar la capa",
+          "pt": "Secar a camada",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いて",
+          "ko": "겉흙 마르면"
         }
       }
     },
@@ -104,17 +103,17 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool–warm",
-          "pl": "Chłodno–ciepło",
-          "de": "Kühl–warm",
+          "en": "Cool to warm",
+          "pl": "Chłód do ciepła",
+          "de": "Kühl bis warm",
           "fr": "Frais à chaud",
           "it": "Fresco-caldo",
-          "es": "Fresco-calor",
-          "pt": "Fresco-quente",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "凉到温暖",
-          "ja": "涼〜暖",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽到温暖",
+          "ja": "涼しい〜暖かい",
           "ko": "서늘~따뜻"
         }
       }
@@ -123,17 +122,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła",
+          "en": "Average",
+          "pl": "Umiarkowana",
           "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通湿度",
-          "ja": "通常",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "一般",
+          "ja": "普通",
           "ko": "보통"
         }
       }
@@ -150,7 +149,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "गैर-विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping",
-          "pl": "Kępowa",
-          "de": "Horstig",
-          "fr": "En touffe",
-          "it": "A cespo",
-          "es": "En mata",
-          "pt": "Em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "군생"
+          "en": "Clumping perennial",
+          "pl": "Kępiasta bylina",
+          "de": "Horstbildend",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cesp.",
+          "es": "Vivaz en matas",
+          "pt": "Perene em touceira",
+          "ar": "معمّرة كتلية",
+          "hi": "गुच्छेदार बहुवर्षीय",
+          "zh": "丛生多年生",
+          "ja": "株立ち多年草",
+          "ko": "포기형 다년생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Hates soggy soil",
+          "pl": "Nie znosi zalania",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l'excès d'eau",
+          "it": "No ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة الموحلة",
+          "hi": "कीचड़ से बचें",
+          "zh": "忌积水",
+          "ja": "過湿に弱い",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mildew",
+          "pl": "Mszyce, mączniak",
+          "de": "Blattläuse, Mehltau",
+          "fr": "Pucerons, oïdium",
+          "it": "Afidi, oidio",
+          "es": "Pulgones, oídio",
+          "pt": "Pulgões, oídio",
+          "ar": "المنّ، البياض الدقيقي",
+          "hi": "एफिड, फफूंदी",
+          "zh": "蚜虫, 白粉病",
+          "ja": "アブラムシ, うどんこ",
+          "ko": "진딧물, 흰가루"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Purple Coneflower",
-      "description": "Echinacea purpurea is a hardy perennial native to North America. It thrives in full sun and well-drained soil. The plant is drought tolerant once established."
+      "common_name": "Purple coneflower",
+      "description": "Echinacea purpurea is a hardy perennial known for purple-pink daisy-like flowers. Give it very bright light (ideally full sun) and a well-drained potting mix. Water when the top layer dries and avoid consistently soggy soil."
     },
     "pl": {
       "common_name": "Jeżówka purpurowa",
-      "description": "Jeżówka purpurowa to bylina pochodząca z Ameryki Północnej. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Jest odporna na suszę."
+      "description": "Echinacea purpurea to wytrzymała bylina o purpurowo-różowych kwiatach. Potrzebuje bardzo jasnego stanowiska (najlepiej pełne słońce) i przepuszczalnego podłoża. Podlewaj, gdy przeschnie wierzch, i unikaj stałego przelania."
     },
     "de": {
       "common_name": "Purpur-Sonnenhut",
-      "description": "Echinacea purpurea ist eine robuste Staude aus Nordamerika. Sie bevorzugt volle Sonne und durchlässigen Boden. Nach dem Anwachsen ist sie trockenheitsverträglich."
+      "description": "Echinacea purpurea ist eine robuste Staude mit purpurrosa Blüten. Stelle sie sehr hell bis vollsonnig und verwende ein gut drainiertes Substrat. Gieße erst, wenn die Oberfläche abgetrocknet ist, und vermeide Staunässe."
     },
     "fr": {
       "common_name": "Échinacée pourpre",
-      "description": "L’échinacée pourpre est une plante vivace d’Amérique du Nord. Elle aime le plein soleil et les sols bien drainés. Elle tolère bien la sécheresse."
+      "description": "Echinacea purpurea est une vivace rustique aux fleurs rose-pourpre. Offrez-lui une lumière très vive, idéalement le plein soleil, et un substrat bien drainé. Arrosez quand la surface a séché et évitez les excès d’eau."
     },
     "it": {
       "common_name": "Echinacea purpurea",
-      "description": "L’Echinacea purpurea è una perenne nordamericana. Cresce meglio in pieno sole e terreno ben drenato. È resistente alla siccità."
+      "description": "Echinacea purpurea è una perenne rustica con fiori rosa-porpora. Richiede molta luce, preferibilmente pieno sole, e un terriccio ben drenante. Annaffia quando lo strato superiore è asciutto ed evita ristagni."
     },
     "es": {
       "common_name": "Equinácea púrpura",
-      "description": "La equinácea púrpura es una planta perenne de América del Norte. Prefiere pleno sol y suelos bien drenados. Tolera bien la sequía."
+      "description": "Echinacea purpurea es una perenne resistente con flores rosado-púrpura. Necesita luz muy intensa, idealmente pleno sol, y un sustrato bien drenado. Riega cuando se seque la capa superior y evita el encharcamiento."
     },
     "pt": {
       "common_name": "Equinácea-roxa",
-      "description": "A equinácea-roxa é uma planta perene da América do Norte. Desenvolve-se melhor em sol pleno e solo bem drenado. É tolerante à seca."
+      "description": "Echinacea purpurea é uma perene resistente com flores rosa-arroxeadas. Precisa de luz muito forte, de preferência sol pleno, e substrato bem drenado. Regue quando a camada superior secar e evite solo encharcado."
     },
     "ar": {
-      "common_name": "القنفذية الأرجوانية",
-      "description": "نبات القنفذية الأرجوانية معمر موطنه أمريكا الشمالية. يفضل الشمس الكاملة والتربة جيدة التصريف. يتحمل الجفاف بعد تثبيته."
+      "common_name": "الإشيناسيا الأرجوانية",
+      "description": "Echinacea purpurea نبات معمّر قوي بأزهار وردية أرجوانية. يحتاج إلى ضوء قوي جدًا ويفضل الشمس الكاملة مع تربة جيدة الصرف. اسقِ عندما يجف سطح التربة وتجنب بقاء التربة مبللة باستمرار."
     },
     "hi": {
       "common_name": "पर्पल कोनफ्लावर",
-      "description": "यह उत्तरी अमेरिका का बहुवर्षीय पौधा है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। यह सूखे को सहन करता है।"
+      "description": "Echinacea purpurea एक कठोर बहुवर्षीय पौधा है जिसमें बैंगनी-गुलाबी फूल आते हैं। इसे बहुत तेज रोशनी, आदर्श रूप से पूरा सूरज, और अच्छी जलनिकासी वाली मिट्टी दें। ऊपर की परत सूखने पर पानी दें और लगातार गीली मिट्टी से बचें।"
     },
     "zh": {
       "common_name": "紫锥菊",
-      "description": "紫锥菊原产于北美，是多年生植物。喜全日照和排水良好的土壤。成株后耐旱。"
+      "description": "Echinacea purpurea 是耐寒的多年生开花植物，花色紫粉。需要非常充足的光照（最好全日照）和排水良好的基质。表土干后再浇水，避免长期积水。"
     },
     "ja": {
       "common_name": "ムラサキバレンギク",
-      "description": "ムラサキバレンギクは北米原産の多年草です。日当たりと水はけの良い土を好みます。乾燥に強いです。"
+      "description": "Echinacea purpurea は紫桃色の花を咲かせる丈夫な多年草です。強い光（できれば日当たり）と水はけの良い用土で育てます。表土が乾いてから水やりし、過湿を避けます。"
     },
     "ko": {
-      "common_name": "퍼플 콘플라워",
-      "description": "퍼플 콘플라워는 북미 원산의 다년생 식물입니다. 햇빛과 배수 좋은 토양을 선호합니다. 건조에 강합니다."
+      "common_name": "자주천인국",
+      "description": "Echinacea purpurea 는 보라빛 분홍 꽃이 피는 강한 다년생입니다. 매우 밝은 빛(가능하면 직사광)과 배수 좋은 흙이 필요합니다. 겉흙이 마르면 물을 주고 과습은 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a642",
-      "https://extension.umn.edu/flowers/echinacea",
-      "https://www.rhs.org.uk/plants/6806/echinacea-purpurea/details"
+      "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+      "https://www.rhs.org.uk/plants/41568/echinacea-purpurea/details",
+      "https://www.provenwinners.com/learn/how-plant/coneflower",
+      "https://www.almanac.com/plant/coneflowers",
+      "https://www.plantsandflowersfoundationholland.org/en/outdoor-plantguide/echinacea/"
     ]
   }
 }

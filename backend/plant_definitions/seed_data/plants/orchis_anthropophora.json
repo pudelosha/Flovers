@@ -7,11 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -39,7 +40,7 @@
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, orchid mix",
-          "pl": "Kwasne, mieszanka orchidei",
-          "de": "Saure, Orchideen-Mischung",
-          "fr": "Acide, mélange orchidée",
-          "it": "Acido, mix orchidee",
-          "es": "Ácido, mezcla para orquídeas",
-          "pt": "Ácido, mistura de orquídeas",
-          "ar": "حمضي، خليط أوركيد",
-          "hi": "अम्लीय, आर्किड मिश्रण",
-          "zh": "酸性，兰花混合土",
-          "ja": "酸性、ラン科混合土",
-          "ko": "산성, 난초 혼합"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "مياه متوسطة",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम पानी",
-          "zh": "中等浇水",
-          "ja": "中程度の水",
-          "ko": "중간 정도의 물"
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średni",
+          "pl": "Średnie",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Medio",
@@ -95,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "15-20°C",
+          "pl": "15-20°C",
+          "de": "15-20°C",
+          "fr": "15-20°C",
+          "it": "15-20°C",
+          "es": "15-20°C",
+          "pt": "15-20°C",
+          "ar": "15-20°C",
+          "hi": "15-20°C",
+          "zh": "15-20°C",
+          "ja": "15-20°C",
+          "ko": "15-20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असमान",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Up to 50 cm",
-          "pl": "Do 50 cm",
-          "de": "Bis zu 50 cm",
-          "fr": "Jusqu'à 50 cm",
-          "it": "Fino a 50 cm",
-          "es": "Hasta 50 cm",
-          "pt": "Até 50 cm",
-          "ar": "حتى 50 سم",
-          "hi": "50 सेंटीमीटर तक",
-          "zh": "最多50厘米",
-          "ja": "最大50cm",
-          "ko": "최대 50cm"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢生长",
+          "ja": "遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il ristagno",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けて",
+          "ko": "과도한 물 주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Man Orchid",
-      "description": "The Man Orchid is a unique plant with human-shaped flowers. It thrives in temperate regions, typically found in grassy meadows and woodlands."
+      "description": "Orchis anthropophora, commonly known as the Man Orchid, is a distinctive species native to Europe. Its flowers resemble human figures and are a fascinating subject for gardeners and enthusiasts alike."
     },
     "pl": {
-      "common_name": "Orkidea ludzka",
-      "description": "Orkidea ludzka to unikalna roślina o kwiatach w kształcie ludzkich postaci. Rośnie w umiarkowanych regionach, głównie na łąkach i w lasach."
+      "common_name": "Orchidea Człowiek",
+      "description": "Orchis anthropophora, znana jako Orchidea Człowiek, to gatunek rośliny występujący w Europie. Jej kwiaty przypominają postacie ludzkie, co sprawia, że jest to fascynująca roślina do uprawy."
     },
     "de": {
-      "common_name": "Mannorchidee",
-      "description": "Die Mannorchidee ist eine einzigartige Pflanze mit menschenähnlichen Blüten. Sie wächst in gemäßigten Regionen, hauptsächlich auf Wiesen und in Wäldern."
+      "common_name": "Menschenorchidee",
+      "description": "Orchis anthropophora, auch als Menschenorchidee bekannt, ist eine in Europa heimische Pflanze. Ihre Blüten ähneln menschlichen Figuren und sind ein faszinierendes Thema für Gärtner."
     },
     "fr": {
-      "common_name": "Orchidée homme",
-      "description": "L'Orchidée homme est une plante unique avec des fleurs en forme d'humain. Elle prospère dans les régions tempérées, souvent trouvée dans les prairies et les forêts."
+      "common_name": "Orchidée Homme",
+      "description": "Orchis anthropophora, également connue sous le nom d'Orchidée Homme, est une plante originaire d'Europe. Ses fleurs ressemblent à des figures humaines et sont un sujet fascinant pour les jardiniers."
     },
     "it": {
-      "common_name": "Orchidea uomo",
-      "description": "L'Orchidea uomo è una pianta unica con fiori a forma umana. Cresce nelle regioni temperate, solitamente in prati e boschi."
+      "common_name": "Orchidea Uomo",
+      "description": "Orchis anthropophora, conosciuta anche come Orchidea Uomo, è una pianta originaria dell'Europa. I suoi fiori somigliano a figure umane ed è un soggetto affascinante per i giardinieri."
     },
     "es": {
-      "common_name": "Orquídea hombre",
-      "description": "La Orquídea hombre es una planta única con flores en forma de figura humana. Crece en regiones templadas, comúnmente encontrada en praderas y bosques."
+      "common_name": "Orquídea Hombre",
+      "description": "Orchis anthropophora, conocida como Orquídea Hombre, es una planta originaria de Europa. Sus flores tienen forma humana, lo que la convierte en un tema fascinante para los jardineros."
     },
     "pt": {
-      "common_name": "Orquídea homem",
-      "description": "A Orquídea homem é uma planta única com flores em forma humana. Cresce em regiões temperadas, sendo encontrada principalmente em pradarias e bosques."
+      "common_name": "Orquídea Homem",
+      "description": "Orchis anthropophora, conhecida como Orquídea Homem, é uma planta nativa da Europa. Suas flores têm a forma de figuras humanas, tornando-a um tema fascinante para jardineiros."
     },
     "ar": {
-      "common_name": "زهرة الأوركيد البشرية",
-      "description": "زهرة الأوركيد البشرية هي نبات فريد من نوعه بزهور على شكل إنسان. تنمو في المناطق المعتدلة، وتوجد عادة في المروج والغابات."
+      "common_name": "زهرة الرجل",
+      "description": "Orchis anthropophora، المعروفة أيضًا باسم زهرة الرجل، هي نبات موطنه أوروبا. أزهارها تشبه الأشكال البشرية، مما يجعلها موضوعًا مثيرًا للاهتمام للبستانيين."
     },
     "hi": {
-      "common_name": "मान ओर्किड",
-      "description": "मान ओर्किड एक अनोखा पौधा है, जिसकी फूल मानव के आकार के होते हैं। यह समशीतोष्ण क्षेत्रों में उगता है, आमतौर पर घास के मैदानों और जंगलों में पाया जाता है।"
+      "common_name": "मान ऑर्किड",
+      "description": "Orchis anthropophora, जिसे मान ऑर्किड के नाम से भी जाना जाता है, यूरोप का एक पौधा है। इसके फूल मानव आकृतियों जैसे होते हैं, और यह बागवानी प्रेमियों के लिए आकर्षण का केंद्र है।"
     },
     "zh": {
       "common_name": "人形兰",
-      "description": "人形兰是一种独特的植物，具有类人形的花朵。它生长在温带地区，通常出现在草地和森林中。"
+      "description": "Orchis anthropophora，通常被称为人形兰，是一种原产于欧洲的植物。它的花朵类似人类形态，成为园艺爱好者的迷人植物。"
     },
     "ja": {
-      "common_name": "人形ラン",
-      "description": "人形ランは人間の形をした花を持つ独特な植物です。温帯地域に生息し、主に草地や森林で見られます。"
+      "common_name": "人間ラン",
+      "description": "Orchis anthropophora、人間ランとしても知られるこの植物は、ヨーロッパ原産です。花は人間の形に似ており、園芸家にとって魅力的な植物です。"
     },
     "ko": {
-      "common_name": "인간 모양 난초",
-      "description": "인간 모양 난초는 인간 모양의 꽃을 가진 독특한 식물입니다. 온대 지역에서 자생하며 주로 풀밭과 숲에서 자주 발견됩니다."
+      "common_name": "인간 난초",
+      "description": "Orchis anthropophora, 인간 난초라고도 불리는 이 식물은 유럽 원산지입니다. 꽃은 인간 모양을 닮아 있어 정원사들에게 매력적인 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/orchis-anthropophora",
-      "https://www.royalhorticulturalsociety.org.uk/plants-orchid-care"
+      "https://www.rhs.org.uk/advice/profile?pid=318",
+      "https://www.gardenia.net/plant/orchis-anthropophora"
     ]
   }
 }

@@ -1,23 +1,25 @@
 {
   "external_id": "haworthia_fasciata",
-  "name": "Zebra Haworthia",
+  "name": "Zebra Plant",
   "latin": "Haworthia fasciata",
   "sun": "medium",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "haworthia_fasciata.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-draining",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수 좋음"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
+          "en": "Infrequent",
           "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
+          "de": "Seltene Bewässerung",
           "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり控えめ",
-          "ko": "물 적게"
+          "it": "Annaffiature rare",
+          "es": "Riego poco frecuente",
+          "pt": "Rega infrequente",
+          "ar": "سقي نادر",
+          "hi": "अल्पकालिक पानी देना",
+          "zh": "不常浇水",
+          "ja": "頻繁に水やりしない",
+          "ko": "불규칙한 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
+          "en": "Easy to care for",
+          "pl": "Łatwe w pielęgnacji",
           "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "fr": "Facile à entretenir",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "देखभाल में आसान",
+          "zh": "易于护理",
+          "ja": "育てやすい",
+          "ko": "돌보기 쉬운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
+          "en": "Low",
+          "pl": "Niska",
           "de": "Niedrig",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -160,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
+          "en": "Slow growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमा विकास",
           "zh": "生长缓慢",
-          "ja": "成長遅い",
-          "ko": "느린 성장"
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Kein Überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अفرो पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Zebra Haworthia",
-      "description": "Haworthia fasciata is a small succulent native to South Africa. It forms rosettes of dark green leaves with white bands. It is well suited to indoor growing with minimal care."
+      "common_name": "Zebra Plant",
+      "description": "Haworthia fasciata, commonly known as the Zebra Plant, is a small succulent native to Southern Africa. It features distinctive white stripes on its dark green leaves."
     },
     "pl": {
-      "common_name": "Haworcja pasiasta",
-      "description": "Haworthia fasciata to niewielki sukulent z Afryki Południowej. Tworzy rozety ciemnozielonych liści z białymi paskami. Dobrze rośnie w warunkach domowych przy małej pielęgnacji."
+      "common_name": "Roślina zebra",
+      "description": "Haworthia fasciata, znana jako roślina zebra, to mała roślina sukulentna pochodząca z Południowej Afryki. Charakteryzuje się białymi pasami na ciemnozielonych liściach."
     },
     "de": {
-      "common_name": "Zebra-Haworthie",
-      "description": "Haworthia fasciata ist eine kleine Sukkulente aus Südafrika. Sie bildet Rosetten mit weißen Streifen. Sie eignet sich gut als pflegeleichte Zimmerpflanze."
+      "common_name": "Zebra Pflanze",
+      "description": "Haworthia fasciata, auch als Zebra Pflanze bekannt, ist ein kleiner Sukkulent aus Südafrika. Sie hat markante weiße Streifen auf ihren dunkelgrünen Blättern."
     },
     "fr": {
-      "common_name": "Haworthia zébrée",
-      "description": "Haworthia fasciata est une petite plante succulente d’Afrique du Sud. Elle forme des rosettes striées de blanc. Elle est facile à cultiver en intérieur."
+      "common_name": "Plante zèbre",
+      "description": "Haworthia fasciata, communément appelée plante zèbre, est une petite succulente originaire d'Afrique du Sud. Elle présente des rayures blanches distinctes sur ses feuilles vert foncé."
     },
     "it": {
-      "common_name": "Haworthia zebra",
-      "description": "Haworthia fasciata è una succulenta originaria del Sudafrica. Presenta rosette con strisce bianche. È adatta alla coltivazione in casa."
+      "common_name": "Pianta zebra",
+      "description": "Haworthia fasciata, conosciuta come pianta zebra, è una piccola succulenta originaria del Sud Africa. Ha strisce bianche distintive sulle sue foglie verde scuro."
     },
     "es": {
-      "common_name": "Haworthia cebra",
-      "description": "Haworthia fasciata es una suculenta pequeña de Sudáfrica. Forma rosetas con bandas blancas. Es ideal para interiores con pocos cuidados."
+      "common_name": "Planta cebra",
+      "description": "Haworthia fasciata, conocida como planta cebra, es una pequeña suculenta originaria de Sudáfrica. Presenta rayas blancas distintivas en sus hojas verdes oscuras."
     },
     "pt": {
-      "common_name": "Haworthia zebra",
-      "description": "Haworthia fasciata é uma suculenta originária da África do Sul. Possui folhas com listras brancas. É fácil de cuidar em ambientes internos."
+      "common_name": "Planta zebra",
+      "description": "Haworthia fasciata, conhecida como planta zebra, é uma pequena suculenta nativa da África do Sul. Possui listras brancas distintas em suas folhas verde-escuras."
     },
     "ar": {
-      "common_name": "هاوورثيا مخططة",
-      "description": "هاوورثيا فاسيّاتا نبات عصاري صغير من جنوب أفريقيا. يتميز بأوراق مخططة باللون الأبيض. مناسب للزراعة داخل المنازل."
+      "common_name": "نبتة الزبرا",
+      "description": "هوايثيا فاسياتا، والمعروفة باسم نبتة الزبرا، هي نبتة عصارية صغيرة موطنها جنوب إفريقيا. تتميز بخطوط بيضاء مميزة على أوراقها الخضراء الداكنة."
     },
     "hi": {
-      "common_name": "ज़ेब्रा हॉवर्थिया",
-      "description": "हॉवर्थिया फास्सियाटा दक्षिण अफ्रीका का एक छोटा सक्युलेंट है। इसकी पत्तियों पर सफेद धारियां होती हैं। यह घर के अंदर आसानी से उगता है।"
+      "common_name": "ज़ेबरा प्लांट",
+      "description": "हावोर्थिया फासीता, जिसे ज़ेबरा प्लांट कहा जाता है, एक छोटी सी रसीली पौध है जो दक्षिणी अफ्रीका की मूल निवासी है। इसके गहरे हरे पत्तों पर सफेद धारियाँ होती हैं।"
     },
     "zh": {
-      "common_name": "条纹十二卷",
-      "description": "Haworthia fasciata 原产于南非，是一种小型多肉植物。叶片有明显白色条纹。适合室内低维护养护。"
+      "common_name": "斑马植物",
+      "description": "Haworthia fasciata，通常称为斑马植物，是一种来自南非的小型多肉植物。它的深绿色叶片上有明显的白色条纹。"
     },
     "ja": {
-      "common_name": "シマ十二巻",
-      "description": "ハオルチア・ファスキアータは南アフリカ原産の多肉植物です。白い縞模様の葉を持ちます。室内で育てやすい植物です。"
+      "common_name": "ゼブラプラント",
+      "description": "Haworthia fasciata、通称ゼブラプラントは南アフリカ原産の小さな多肉植物です。濃い緑色の葉に特徴的な白い縞模様があります。"
     },
     "ko": {
-      "common_name": "제브라 하월시아",
-      "description": "하월시아 파시아타는 남아프리카 원산의 소형 다육식물입니다. 흰 줄무늬 잎이 특징입니다. 실내에서 키우기 쉽습니다."
+      "common_name": "얼룩말 식물",
+      "description": "Haworthia fasciata는 남아프리카 원산지의 작은 다육식물로, 어두운 녹색의 잎에 뚜렷한 흰색 줄무늬가 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/haworthia",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a437"
+      "https://www.rhs.org.uk/advice/profile?pid=621",
+      "https://www.gardenia.net/plant/haworthia-fasciata"
     ]
   }
 }

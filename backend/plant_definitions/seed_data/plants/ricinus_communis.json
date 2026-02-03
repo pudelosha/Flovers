@@ -1,18 +1,18 @@
 {
   "external_id": "ricinus_communis",
-  "name": "Castor bean",
+  "name": "Castor Bean",
   "latin": "Ricinus communis",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "ricinus_communis.jpg",
   "image_thumb": "ricinus_communis.jpg",
   "traits": [
@@ -33,14 +33,14 @@
           "pl": "Pełne słońce",
           "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Sole pieno",
+          "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
+          "ar": "شمس ساطعة",
           "hi": "पूर्ण सूर्य",
           "zh": "全日照",
-          "ja": "完全な太陽",
-          "ko": "완전한 태양"
+          "ja": "日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy",
-          "pl": "Gliniasty",
-          "de": "Lehmig",
-          "fr": "Argileux",
-          "it": "Argilloso",
-          "es": "Arenoso",
-          "pt": "Argiloso",
-          "ar": "طيني",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土質",
-          "ko": "점토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Regularly",
+          "pl": "Regularnie",
+          "de": "Regelmäßig",
+          "fr": "Régulièrement",
+          "it": "Regolarmente",
+          "es": "Regularmente",
+          "pt": "Regularmente",
+          "ar": "بإنتظام",
+          "hi": "नियमित रूप से",
+          "zh": "定期",
+          "ja": "定期的に",
+          "ko": "정기적으로"
         }
       }
     },
@@ -110,7 +110,7 @@
           "de": "Warm",
           "fr": "Chaud",
           "it": "Caldo",
-          "es": "Cálido",
+          "es": "Caliente",
           "pt": "Quente",
           "ar": "دافئ",
           "hi": "गर्म",
@@ -127,9 +127,9 @@
           "en": "Low",
           "pl": "Niskie",
           "de": "Niedrig",
-          "fr": "Bas",
-          "it": "Basso",
-          "es": "Bajo",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
           "pt": "Baixo",
           "ar": "منخفض",
           "hi": "कम",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Highly toxic",
+          "pl": "Bardzo trujący",
+          "de": "Hoch giftig",
+          "fr": "Très toxique",
+          "it": "Altamente tossico",
+          "es": "Altamente tóxico",
+          "pt": "Altamente tóxico",
+          "ar": "شديد السمية",
+          "hi": "अत्यधिक विषाक्त",
+          "zh": "高度有毒",
+          "ja": "非常に有毒",
+          "ko": "매우 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast",
-          "pl": "Szybki",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Veloce",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
-          "zh": "快",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠르게 성장하는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات متقطعة",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Castor bean",
-      "description": "Ricinus communis, also known as the castor bean plant, is a large shrub or small tree native to tropical regions. It is known for its attractive, large, palmate leaves and distinctive seed pods."
+      "common_name": "Castor Bean",
+      "description": "Ricinus communis, also known as the Castor Bean, is a fast-growing plant. It requires full sunlight, regular watering, and well-drained soil."
     },
     "pl": {
       "common_name": "Rącznik pospolity",
-      "description": "Rącznik pospolity to duży krzew lub małe drzewo, pochodzące z tropikalnych rejonów. Charakteryzuje się dużymi, palmowymi liśćmi oraz charakterystycznymi nasionami."
+      "description": "Rącznik pospolity, znany również jako Rącznik, to roślina szybko rosnąca. Wymaga pełnego nasłonecznienia, regularnego podlewania i dobrze przepuszczalnej gleby."
     },
     "de": {
-      "common_name": "Rizinus",
-      "description": "Rizinus, auch bekannt als Wunderbaum, ist ein großer Strauch oder kleiner Baum aus tropischen Regionen. Er ist für seine auffälligen, großen, handförmigen Blätter und markanten Samenkapseln bekannt."
+      "common_name": "Rizinusstrauch",
+      "description": "Ricinus communis, auch als Rizinusstrauch bekannt, ist eine schnell wachsende Pflanze. Sie benötigt volle Sonne, regelmäßige Bewässerung und gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Ricin",
-      "description": "Le ricin est un grand arbuste ou un petit arbre originaire des régions tropicales. Il est connu pour ses grandes feuilles palmées et ses capsules de graines distinctives."
+      "common_name": "Ricin commun",
+      "description": "Ricinus communis, aussi connu sous le nom de Ricin commun, est une plante à croissance rapide. Elle nécessite une exposition au soleil, un arrosage régulier et un sol bien drainé."
     },
     "it": {
       "common_name": "Ricinus",
-      "description": "Il ricino è un grande arbusto o piccolo albero originario delle regioni tropicali. È noto per le sue grandi foglie palmate e per i caratteristici baccelli di semi."
+      "description": "Ricinus communis, noto anche come Ricinus, è una pianta a crescita rapida. Richiede pieno sole, annaffiature regolari e terreno ben drenato."
     },
     "es": {
       "common_name": "Ricinus",
-      "description": "El ricino es un arbusto grande o un árbol pequeño originario de las regiones tropicales. Es conocido por sus grandes hojas palmeadas y sus cápsulas de semillas distintivas."
+      "description": "Ricinus communis, también conocido como Ricinus, es una planta de rápido crecimiento. Requiere pleno sol, riego regular y suelo bien drenado."
     },
     "pt": {
       "common_name": "Rícino",
-      "description": "O rícino é um grande arbusto ou pequena árvore nativa das regiões tropicais. É conhecido pelas suas grandes folhas palmeadas e pelas cápsulas de sementes distintivas."
+      "description": "Ricinus communis, também conhecido como Rícino, é uma planta de crescimento rápido. Requer pleno sol, rega regular e solo bem drenado."
     },
     "ar": {
       "common_name": "الخروع",
-      "description": "الخروع هو شجيرة كبيرة أو شجرة صغيرة موطنها المناطق الاستوائية. يُعرف بأوراقه الكبيرة ذات الشكل اليدوي وبذوره المميزة."
+      "description": "Ricinus communis، المعروف أيضًا باسم الخروع، هو نبات سريع النمو. يتطلب أشعة الشمس الكاملة، الري المنتظم، والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "रिसिन",
-      "description": "रिसिन, जिसे कास्टोर बीन्स के नाम से भी जाना जाता है, एक बड़ा झाड़ या छोटा पेड़ है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। यह अपनी बड़ी, हथेली के आकार की पत्तियों और विशिष्ट बीजों के लिए जाना जाता है।"
+      "common_name": "रिसिनस",
+      "description": "Ricinus communis, जिसे रिसिनस के नाम से भी जाना जाता है, एक तेजी से बढ़ने वाली पौधा है। इसे पूरी धूप, नियमित पानी और अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "蓖麻",
-      "description": "蓖麻是一种大灌木或小树，原产于热带地区。它以其大的掌状叶子和独特的种子荚而闻名。"
+      "common_name": " castor bean",
+      "description": "Ricinus communis，亦称为 castor bean，是一种生长快速的植物。它需要充足的阳光，定期浇水和良好的排水土壤。"
     },
     "ja": {
       "common_name": "ヒマシ油の木",
-      "description": "ヒマシ油の木は熱帯地方に自生する大きな低木または小さな木です。大きな掌状の葉と特徴的な種子カプセルで知られています。"
+      "description": "Ricinus communis（ヒマシ油の木）は、急速に成長する植物です。完全な日光、定期的な水やり、良好な排水土壌を必要とします。"
     },
     "ko": {
       "common_name": "피마자",
-      "description": "피마자는 열대 지역이 원산지인 큰 관목 또는 작은 나무입니다. 큰 손바닥 모양의 잎과 독특한 씨앗 캡슐로 유명합니다."
+      "description": "Ricinus communis, 또한 피마자로 알려진 이 식물은 빠르게 성장합니다. 완전한 햇빛, 규칙적인 물주기 및 잘 배수되는 토양이 필요합니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/ricinus-communis",
-      "https://www.bhg.com/gardening/pests-insects-diseases/castor-bean-plant-guide/"
+      "https://www.bhg.com/gardening/pests-diseases"
     ]
   }
 }

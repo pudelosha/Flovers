@@ -10,10 +10,11 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Helle Sonne",
-          "fr": "Soleil vif",
-          "it": "Sole pieno",
-          "es": "Sol brillante",
-          "pt": "Sol intenso",
-          "ar": "شمس ساطعة",
-          "hi": "तेज धूप",
-          "zh": "强光照",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
+          "en": "Gritty, fast-drain",
+          "pl": "Przepuszczalne",
           "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
           "zh": "排水良好",
           "ja": "水はけ良い",
-          "ko": "배수 토양"
+          "ko": "배수 잘됨"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca rega",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "물 적게"
+          "en": "Soak then dry",
+          "pl": "Podlej i wysusz",
+          "de": "Gießen, trocknen",
+          "fr": "Arroser puis sec",
+          "it": "Bagna poi asciuga",
+          "es": "Riega y seca",
+          "pt": "Regar e secar",
+          "ar": "اسقِ ثم اترك يجف",
+          "hi": "भिगोकर फिर सूखा",
+          "zh": "浇透再干",
+          "ja": "乾いてから水",
+          "ko": "말린 뒤 물"
         }
       }
     },
@@ -84,16 +85,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
+          "en": "Easy",
           "pl": "Łatwa",
-          "de": "Pflegeleicht",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "易养护",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬움"
         }
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm temps",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "10–24°C ideal",
+          "pl": "Najlepiej 10–24°C",
+          "de": "Ideal 10–24°C",
+          "fr": "Idéal 10–24°C",
+          "it": "Ideale 10–24°C",
+          "es": "Ideal 10–24°C",
+          "pt": "Ideal 10–24°C",
+          "ar": "مثالي 10–24°م",
+          "hi": "10–24°C बेहतर",
+          "zh": "适宜10–24°C",
+          "ja": "適温10–24°C",
+          "ko": "적정 10–24°C"
         }
       }
     },
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Average, on dry side",
+          "pl": "Zwykła, raczej sucho",
+          "de": "Normal, eher trocken",
+          "fr": "Normal, plutôt sec",
+          "it": "Normale, più secco",
+          "es": "Normal, más seco",
+          "pt": "Normal, mais seco",
+          "ar": "عادية ويفضل الجفاف",
+          "hi": "सामान्य, सूखा बेहतर",
+          "zh": "一般偏干",
+          "ja": "普通で乾燥気味",
+          "ko": "보통, 건조 선호"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zw.",
+          "de": "Ungiftig für Tiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica per anim.",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica p/ pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -160,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長遅い",
-          "ko": "느린 성장"
+          "en": "Slow, forms offsets",
+          "pl": "Wolna, robi odrosty",
+          "de": "Langsam, Kindel",
+          "fr": "Lente, rejets",
+          "it": "Lenta, polloni",
+          "es": "Lenta, hijuelos",
+          "pt": "Lenta, brotos",
+          "ar": "بطيء ويكوّن خلفات",
+          "hi": "धीमी, ऑफसेट बनती",
+          "zh": "缓慢，会分株",
+          "ja": "遅め・子株出る",
+          "ko": "느림, 자구 생성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot if wet",
+          "pl": "Zgnilizna przy przel.",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourrit si trop humide",
+          "it": "Marciume se bagnata",
+          "es": "Pudre si se encharca",
+          "pt": "Apodrece se encharca",
+          "ar": "تعفن مع زيادة الماء",
+          "hi": "ज्यादा पानी से सड़न",
+          "zh": "积水易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, aphids",
+          "pl": "Wełnowce, mszyce",
+          "de": "Wollläuse, Blattläuse",
+          "fr": "Cochenilles, pucerons",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinillas, pulgón",
+          "pt": "Cochonilhas, pulgões",
+          "ar": "بق دقيقي، منّ",
+          "hi": "मीलीबग, एफिड",
+          "zh": "粉蚧、蚜虫",
+          "ja": "コナカイガラムシ",
+          "ko": "깍지벌레, 진딧물"
         }
       }
     }
@@ -179,58 +218,61 @@
   "translations": {
     "en": {
       "common_name": "Pulido's echeveria",
-      "description": "Echeveria pulidonis is a compact rosette succulent native to Mexico. It has blue-green leaves edged with red when grown in strong light. The plant prefers bright sun, infrequent watering, and well-draining soil."
+      "description": "Echeveria pulidonis is a compact rosette-forming succulent from Mexico. Provide very bright light and a fast-draining cactus mix, watering only after the substrate dries. Keep cooler and much drier in winter to reduce rot risk."
     },
     "pl": {
-      "common_name": "Echeweria Pulido",
-      "description": "Echeveria pulidonis to sukulent o zwarteciej rozecie pochodzący z Meksyku. Liście są niebieskozielone z czerwonym brzegiem w mocnym świetle. Wymaga słońca i rzadkiego podlewania."
+      "common_name": "eszeveria Pulido",
+      "description": "Echeveria pulidonis to kompaktowy sukulent rozetowy z Meksyku. Zapewnij bardzo jasne stanowisko i przepuszczalne podłoże do sukulentów, podlewając dopiero po wyschnięciu ziemi. Zimą trzymaj chłodniej i podlewaj rzadziej, aby ograniczyć ryzyko zgnilizny."
     },
     "de": {
-      "common_name": "Pulidos Echeverie",
-      "description": "Echeveria pulidonis ist eine kompakte Rosettensukkulente aus Mexiko. Die blaugrünen Blätter färben sich bei viel Licht rot. Sie mag Sonne, wenig Wasser und durchlässiges Substrat."
+      "common_name": "Pulido-Echeverie",
+      "description": "Echeveria pulidonis ist eine kompakte, rosettige Sukkulente aus Mexiko. Gib sehr viel Licht und ein schnell abtrocknendes Kakteensubstrat, und gieße erst, wenn die Erde trocken ist. Im Winter kühler und deutlich trockener halten, um Fäulnis zu vermeiden."
     },
     "fr": {
-      "common_name": "Echeveria de Pulido",
-      "description": "Echeveria pulidonis est une succulente en rosette originaire du Mexique. Ses feuilles bleu-vert prennent un bord rouge au soleil. Elle demande beaucoup de lumière et peu d’arrosage."
+      "common_name": "échévéria de Pulido",
+      "description": "Echeveria pulidonis est une succulente en rosette compacte originaire du Mexique. Donne une lumière très vive et un substrat pour cactus bien drainant, en arrosant seulement une fois le mélange sec. En hiver, garde plus frais et beaucoup plus sec pour limiter la pourriture."
     },
     "it": {
-      "common_name": "Echeveria di Pulido",
-      "description": "Echeveria pulidonis è una succulenta a rosetta originaria del Messico. Le foglie sono verde-azzurre con margini rossi al sole. Preferisce luce intensa e annaffiature rade."
+      "common_name": "echeveria di Pulido",
+      "description": "Echeveria pulidonis è una succulenta a rosetta compatta originaria del Messico. Fornisci luce molto intensa e un terriccio per cactus ben drenante, annaffiando solo quando il substrato è asciutto. In inverno tienila più fresca e molto più asciutta per ridurre il marciume."
     },
     "es": {
-      "common_name": "Echeveria de Pulido",
-      "description": "Echeveria pulidonis es una suculenta de roseta nativa de México. Sus hojas verde azuladas se tornan rojizas en los bordes con buen sol. Requiere riego escaso y sustrato drenante."
+      "common_name": "echeveria de Pulido",
+      "description": "Echeveria pulidonis es una suculenta de roseta compacta originaria de México. Dale luz muy brillante y un sustrato para cactus bien drenante, regando solo cuando esté seco. En invierno, mantenla más fresca y mucho más seca para evitar pudrición."
     },
     "pt": {
-      "common_name": "Echevéria de Pulido",
-      "description": "Echeveria pulidonis é uma suculenta em roseta do México. As folhas azul-esverdeadas ganham bordas vermelhas ao sol. Gosta de muita luz e pouca água."
+      "common_name": "echevéria de Pulido",
+      "description": "Echeveria pulidonis é uma suculenta de roseta compacta nativa do México. Dê luz muito intensa e substrato para cactos bem drenante, regando apenas quando secar. No inverno, mantenha mais fresco e bem mais seco para reduzir apodrecimento."
     },
     "ar": {
-      "common_name": "إشيفيريا بوليدونيس",
-      "description": "إشيفيريا بوليدونيس نبات عصاري وردي موطنه المكسيك. أوراقه خضراء مزرقة بحواف حمراء مع الشمس القوية. يحتاج ضوءًا قويًا وريًا قليلًا."
+      "common_name": "إشيفيريا بوليدونِس",
+      "description": "Echeveria pulidonis نبات عصاري على شكل وردة موطنه المكسيك. يحتاج إلى ضوء ساطع جداً وتربة صبارات جيدة التصريف مع الري فقط بعد جفاف التربة. في الشتاء يُفضَّل حفظه أبرد وأكثر جفافاً لتقليل التعفن."
     },
     "hi": {
-      "common_name": "पुलिडोनिस एचेवेरिया",
-      "description": "Echeveria pulidonis मेक्सिको का एक रोसेट सक्युलेंट है। तेज रोशनी में इसकी पत्तियों के किनारे लाल हो जाते हैं। इसे कम पानी और अच्छी जलनिकास वाली मिट्टी चाहिए।"
+      "common_name": "पुलिडो की एचेवेरिया",
+      "description": "Echeveria pulidonis मेक्सिको की एक सघन रोसेट सक्युलेंट है। बहुत तेज़ रोशनी और अच्छी जल-निकासी वाला कैक्टस मिक्स दें, और मिट्टी सूखने के बाद ही पानी दें। सर्दियों में इसे थोड़ा ठंडा और अधिक सूखा रखें ताकि सड़न से बचाव हो।"
     },
     "zh": {
       "common_name": "普利多拟石莲",
-      "description": "Echeveria pulidonis 原产于墨西哥，是紧凑的莲座型多肉。强光下叶缘会变红。喜充足阳光和少量浇水。"
+      "description": "Echeveria pulidonis 是原产墨西哥的莲座型多肉。需要明亮光照与排水良好的多肉/仙人掌基质，等介质干透后再浇水。冬季应更凉爽并显著控水，以降低腐烂风险。"
     },
     "ja": {
-      "common_name": "プルイドニス",
-      "description": "エケベリア・プルイドニスはメキシコ原産の多肉植物です。強い光で葉縁が赤くなります。日当たりと控えめな水やりを好みます。"
+      "common_name": "プルイドニス（エケベリア）",
+      "description": "Echeveria pulidonis はメキシコ原産のコンパクトなロゼット状多肉です。とても明るい光と水はけの良い多肉用土を用い、用土が乾いてから水やりします。冬はやや涼しく乾かし気味に管理し、腐れを防ぎます。"
     },
     "ko": {
       "common_name": "풀리도니스 에케베리아",
-      "description": "에케베리아 풀리도니스는 멕시코 원산의 로제트형 다육식물입니다. 강한 빛에서 잎 가장자리가 붉어집니다. 밝은 햇빛과 적은 물을 선호합니다."
+      "description": "Echeveria pulidonis 는 멕시코 원산의 컴팩트한 로제트형 다육식물입니다. 매우 밝은 빛과 배수가 좋은 다육/선인장용 흙을 사용하고, 흙이 완전히 마른 뒤에 물을 주세요. 겨울에는 더 서늘하고 건조하게 관리해 부패를 줄입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/366530/echeveria-pulidonis/details",
-      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/28776/Echeveria_pulidonis",
-      "https://www.gardenersworld.com/plants/echeveria/"
+      "https://www.rhs.org.uk/plants/echeveria",
+      "https://www.rhsplants.co.uk/plants/_/echeveria/classid.2000028161/",
+      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/27641/Echeveria_pulidonis",
+      "https://www.gardendesign.com/succulents/echeveria.html",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/blue-echeveria",
+      "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Cactus%20and%20Succulents10.pdf"
     ]
   }
 }

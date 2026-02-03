@@ -1,6 +1,6 @@
 {
   "external_id": "alocasia_infernalis",
-  "name": "Black Magic Alocasia",
+  "name": "Alocasia infernalis",
   "latin": "Alocasia infernalis",
   "sun": "medium",
   "water": "medium",
@@ -8,13 +8,14 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "ceramic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "aroid",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
           "de": "Hell, indirekt",
-          "fr": "Lumineux indirect",
+          "fr": "Vive, indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ पर अप्रत्यक्ष",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Chunky aroid mix",
-          "pl": "Przepuszcz. aroid",
-          "de": "Lockeres Aroid-Sub.",
-          "fr": "Substrat aroid aéré",
-          "it": "Mix aroid drenante",
-          "es": "Mezcla aroid aireada",
-          "pt": "Mistura aroid arejada",
-          "ar": "خليط أرويد مهوّى",
-          "hi": "हवादार एरॉइड मिक्स",
-          "zh": "疏松天南星土",
-          "ja": "エアリーなアロイド",
-          "ko": "통기성 아로이드"
+          "en": "Airy aroid mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة أرويد جيدة صرف",
+          "hi": "हवादार मिट्टी मिश्रण",
+          "zh": "疏松透气土",
+          "ja": "通気の良い用土",
+          "ko": "통기성 좋은 흙"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moist, not soggy",
-          "pl": "Wilgotno, nie mokro",
-          "de": "Feucht, nicht nass",
-          "fr": "Humide, pas détrempé",
-          "it": "Umido, non zuppo",
-          "es": "Húmedo, no encharcar",
-          "pt": "Úmido, sem encharcar",
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
           "ar": "رطبة دون إغراق",
-          "hi": "नम, पर पानी जमा नहीं",
-          "zh": "保持湿润不积水",
-          "ja": "湿り気、過湿NG",
-          "ko": "촉촉, 과습 금지"
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Demanding",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Esigente",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "تحتاج عناية",
-          "hi": "देखभाल-उच्च",
-          "zh": "较难养",
-          "ja": "手がかかる",
-          "ko": "관리 난이도 높음"
+          "en": "Needs consistency",
+          "pl": "Wymaga regularności",
+          "de": "Braucht Konstanz",
+          "fr": "Soins réguliers",
+          "it": "Richiede costanza",
+          "es": "Requiere constancia",
+          "pt": "Exige constância",
+          "ar": "تحتاج ثبات رعاية",
+          "hi": "नियमित देखभाल",
+          "zh": "需稳定养护",
+          "ja": "安定管理が必要",
+          "ko": "꾸준한 관리 필요"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "Warm: 16–30°C",
+          "pl": "Ciepło: 16–30°C",
+          "de": "Warm: 16–30°C",
+          "fr": "Chaud: 16–30°C",
+          "it": "Caldo: 16–30°C",
+          "es": "Cálido: 16–30°C",
+          "pt": "Quente: 16–30°C",
+          "ar": "دافئ: 16–30°م",
+          "hi": "गरम: 16–30°C",
+          "zh": "温暖：16–30°C",
+          "ja": "温暖: 16–30°C",
+          "ko": "따뜻함: 16–30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High (60%+)",
-          "pl": "Wysoka (60%+)",
-          "de": "Hoch (60%+)",
-          "fr": "Élevée (60%+)",
-          "it": "Alta (60%+)",
-          "es": "Alta (60%+)",
-          "pt": "Alta (60%+)",
-          "ar": "رطوبة عالية (60%+)",
-          "hi": "उच्च (60%+)",
-          "zh": "高湿(60%+)",
-          "ja": "高湿度(60%+)",
-          "ko": "고습(60%+)"
+          "en": "Prefers humid air",
+          "pl": "Lubi wilgotne pow.",
+          "de": "Mag feuchte Luft",
+          "fr": "Aime l’air humide",
+          "it": "Ama aria umida",
+          "es": "Prefiere humedad",
+          "pt": "Prefere umidade",
+          "ar": "تفضّل رطوبة عالية",
+          "hi": "उच्च नमी पसंद",
+          "zh": "喜高湿",
+          "ja": "高湿度が好み",
+          "ko": "높은 습도 선호"
         }
       }
     },
@@ -143,16 +144,16 @@
       "value": {
         "text": {
           "en": "Toxic if eaten",
-          "pl": "Trująca po zjedzeniu",
+          "pl": "Toksyczna po zjedz.",
           "de": "Giftig bei Verzehr",
           "fr": "Toxique si ingéré",
           "it": "Tossica se ingerita",
           "es": "Tóxica si se ingiere",
           "pt": "Tóxica se ingerida",
-          "ar": "سامة إذا أُكلت",
-          "hi": "खाने पर विषाक्त",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषैला",
           "zh": "误食有毒",
-          "ja": "誤食で有毒",
+          "ja": "誤食は有毒",
           "ko": "섭취 시 유독"
         }
       }
@@ -161,78 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact, slow",
-          "pl": "Kompaktowa, wolna",
-          "de": "Kompakt, langsam",
-          "fr": "Compacte, lente",
-          "it": "Compatta, lenta",
-          "es": "Compacta, lenta",
-          "pt": "Compacta, lenta",
-          "ar": "مدمجة وبطيئة",
-          "hi": "कॉम्पैक्ट, धीमी",
-          "zh": "株型紧凑，慢生",
-          "ja": "コンパクト・遅め",
-          "ko": "컴팩트, 느림"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "生長は中程度",
+          "ko": "중간 속도 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنّب تشبع التربة",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites possible",
+          "pl": "Możliwe przędziorki",
+          "de": "Spinnmilben möglich",
+          "fr": "Acariens possibles",
+          "it": "Ragnetti possibili",
+          "es": "Ácaros posibles",
+          "pt": "Ácaros possíveis",
+          "ar": "قد تظهر العناكب الحمراء",
+          "hi": "स्पाइडर माइट संभव",
+          "zh": "可能有红蜘蛛",
+          "ja": "ハダニが出ることも",
+          "ko": "응애 발생 가능"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Black Magic alocasia",
-      "description": "Alocasia infernalis is a compact aroid from Sarawak (Borneo) with very dark, glossy leaves. Give bright, indirect light and a chunky aroid mix that stays lightly moist but never waterlogged. Keep it warm and humid indoors, and remember it is toxic if ingested."
+      "common_name": "Black alocasia",
+      "description": "Alocasia infernalis is a tropical aroid grown for its very dark, metallic-looking foliage. Provide bright, indirect light and warm temperatures, and water when the upper layer of mix dries slightly. Like other alocasias, it is toxic if ingested."
     },
     "pl": {
-      "common_name": "alokazja Black Magic",
-      "description": "Alocasia infernalis to kompaktowy aroid z Sarawaku (Borneo) o bardzo ciemnych, błyszczących liściach. Zapewnij jasne, rozproszone światło i przewiewne podłoże aroidowe, stale lekko wilgotne, ale bez przelania. Lubi ciepło i wysoką wilgotność, a po spożyciu jest toksyczna."
+      "common_name": "Alokazja czarna",
+      "description": "Alocasia infernalis to tropikalna roślina z rodziny obrazkowatych, ceniona za bardzo ciemne, metaliczne liście. Zapewnij jasne, rozproszone światło, ciepło i podlewaj, gdy wierzch podłoża lekko przeschnie. Roślina jest toksyczna po spożyciu."
     },
     "de": {
-      "common_name": "Black-Magic-Alokasie",
-      "description": "Alocasia infernalis ist eine kompakte Aronstabpflanze aus Sarawak (Borneo) mit sehr dunklen, glänzenden Blättern. Sie braucht helles, indirektes Licht und ein luftiges Aroid-Substrat, das leicht feucht bleibt, aber nicht nass ist. Warm und hohe Luftfeuchte fördern das Wachstum; bei Verzehr ist sie giftig."
+      "common_name": "Schwarze Alokasie",
+      "description": "Alocasia infernalis ist ein tropisches Aronstabgewächs mit sehr dunklem, metallisch wirkendem Laub. Stelle sie hell, aber ohne direkte Sonne, halte sie warm und gieße, wenn die obere Substratschicht leicht abtrocknet. Bei Verzehr ist sie giftig."
     },
     "fr": {
-      "common_name": "alocasia Black Magic",
-      "description": "Alocasia infernalis est une aracée compacte originaire du Sarawak (Bornéo), connue pour ses feuilles très sombres et luisantes. Offrez une lumière vive indirecte et un substrat aroid aéré, maintenu légèrement humide sans excès d’eau. Elle apprécie la chaleur et une forte humidité, et elle est toxique en cas d’ingestion."
+      "common_name": "Alocasia noir",
+      "description": "Alocasia infernalis est une aracée tropicale appréciée pour son feuillage très sombre à reflets métalliques. Donnez une lumière vive indirecte, de la chaleur, et arrosez quand la couche supérieure du substrat sèche légèrement. La plante est toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "alocasia Black Magic",
-      "description": "Alocasia infernalis è un’aroidea compatta del Sarawak (Borneo) con foglie molto scure e lucide. Richiede luce intensa ma indiretta e un mix aroid drenante che resti leggermente umido senza ristagni. Preferisce caldo e alta umidità in casa ed è tossica se ingerita."
+      "common_name": "Alocasia nera",
+      "description": "Alocasia infernalis è un’aroide tropicale coltivata per foglie molto scure dall’aspetto metallico. Fornisci luce intensa ma indiretta, temperature calde e annaffia quando lo strato superiore del terriccio si asciuga leggermente. È tossica se ingerita."
     },
     "es": {
-      "common_name": "alocasia Black Magic",
-      "description": "Alocasia infernalis es una arácea compacta de Sarawak (Borneo) con hojas muy oscuras y brillantes. Dale luz brillante e indirecta y un sustrato aireado para aroides que se mantenga ligeramente húmedo sin encharcar. Agradece calor y alta humedad en interior, y es tóxica si se ingiere."
+      "common_name": "Alocasia negra",
+      "description": "Alocasia infernalis es una arácea tropical apreciada por su follaje muy oscuro con brillo metálico. Dale luz brillante e indirecta, calor, y riega cuando la capa superior del sustrato se seque un poco. Es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "alocásia Black Magic",
-      "description": "Alocasia infernalis é uma aróidea compacta de Sarawak (Bornéu) com folhas muito escuras e brilhantes. Prefere luz forte e indireta e um substrato aroid bem arejado, mantido levemente úmido sem encharcar. Gosta de calor e alta umidade dentro de casa e é tóxica se ingerida."
+      "common_name": "Alocásia negra",
+      "description": "Alocasia infernalis é uma aróidea tropical cultivada pela folhagem muito escura com aspecto metálico. Ofereça luz forte indireta, calor e regue quando a camada superior do substrato secar levemente. É tóxica se ingerida."
     },
     "ar": {
-      "common_name": "ألوكاسيا بلاك ماجيك",
-      "description": "Alocasia infernalis نبات أرويد صغير من ساراواك (بورنيو) بأوراق داكنة لامعة جدًا. يحتاج ضوءًا ساطعًا غير مباشر وخليط تربة أرويد مهوّى يبقى رطبًا قليلًا دون إغراق. يفضّل الدفء والرطوبة العالية داخل المنزل وهو سام عند الابتلاع."
+      "common_name": "ألوكاسيا سوداء",
+      "description": "ألوكاسيا إنفيرناليس نبات أرويد استوائي يُزرع لأوراقه الداكنة جدًا ذات اللمعان المعدني. يحتاج إلى ضوء ساطع غير مباشر ودفء، ويُسقى عند جفاف الطبقة العلوية قليلًا. النبات سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "ब्लैक मैजिक अलोकैसिया",
-      "description": "Alocasia infernalis सारावाक (बोर्नियो) का एक कॉम्पैक्ट एरॉइड है, जिसकी पत्तियाँ बहुत गहरी और चमकदार होती हैं। इसे तेज़ पर अप्रत्यक्ष रोशनी और हवादार एरॉइड मिक्स दें, मिट्टी हल्की नम रहे पर पानी जमा न हो। गर्म तापमान और अधिक आर्द्रता मदद करती है, और यह खाने पर विषाक्त है।"
+      "common_name": "काली एलोकासिया",
+      "description": "Alocasia infernalis एक उष्णकटिबंधीय एरॉयड है, जिसकी बहुत गहरी धात्विक-सी पत्तियाँ आकर्षक होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और गर्म तापमान दें, और जब मिट्टी की ऊपर की परत हल्की सूख जाए तब पानी दें। यह पौधा खाने पर विषैला है।"
     },
     "zh": {
-      "common_name": "黑魔法海芋",
-      "description": "Alocasia infernalis 原产马来西亚砂拉越（婆罗洲），植株紧凑，叶片深色且有光泽。适合明亮散射光与疏松的天南星科基质，保持微湿但不要积水。室内养护应保持温暖与较高湿度，误食有毒。"
+      "common_name": "黑海芋",
+      "description": "Alocasia infernalis 是天南星科的热带观叶植物，以深色、带金属光泽的叶片著称。放在明亮散射光处并保持温暖，表层基质略干后再浇水。误食有毒。"
     },
     "ja": {
-      "common_name": "ブラックマジック・アロカシア",
-      "description": "Alocasia infernalis はボルネオ島サラワク原産の小型アロイドで、非常に暗色で光沢のある葉が特徴です。明るい間接光と通気性のあるアロイド用土で育て、用土は軽く湿り気を保ちつつ過湿にしないでください。暖かさと高湿度を好み、誤食で有毒です。"
+      "common_name": "ブラックアロカシア",
+      "description": "Alocasia infernalis は天南星科の熱帯植物で、非常に暗い金属光沢の葉が特徴です。明るい間接光と暖かさを保ち、用土の表面が少し乾いてから水やりします。誤食すると有毒です。"
     },
     "ko": {
-      "common_name": "블랙 매직 알로카시아",
-      "description": "Alocasia infernalis는 보르네오 사라왁 원산의 컴팩트한 천남성과 식물로 매우 어두운 광택 잎이 특징입니다. 밝은 간접광과 통기성 좋은 아로이드 배합토에서 키우고, 흙은 촉촉하게 유지하되 과습은 피하세요. 따뜻함과 높은 습도를 좋아하며 섭취 시 유독합니다."
+      "common_name": "블랙 알로카시아",
+      "description": "Alocasia infernalis 는 천남성과의 열대 관엽식물로, 매우 어두운 금속광택 잎이 특징입니다. 밝은 간접광과 따뜻한 온도를 유지하고, 겉흙이 약간 마르면 물을 주세요. 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77085614-1",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?basic=Alocasia+%C3%97+amazonica&isprofile=1&taxonid=259315",
       "https://www.rhs.org.uk/plants/alocasia/growing-guide",
-      "https://yardandgarden.extension.iastate.edu/how-to/bulbs-well-suited-houseplants"
+      "https://www.rhs.org.uk/plants/alocasia",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia",
+      "https://www.southernliving.com/alocasia-care-7151548"
     ]
   }
 }

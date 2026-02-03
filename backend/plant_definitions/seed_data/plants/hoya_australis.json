@@ -4,18 +4,18 @@
   "latin": "Hoya australis",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "universal"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining mix",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water when top dry",
-          "pl": "Podlewaj po przeschnięciu",
-          "de": "Gießen bei Trockenheit",
-          "fr": "Arroser sol sec",
-          "it": "Annaffia a secco",
-          "es": "Regar suelo seco",
-          "pt": "Regar solo seco",
-          "ar": "اسق عند الجفاف",
-          "hi": "सूखने पर पानी",
-          "zh": "干后浇水",
-          "ja": "乾いたら水やり",
-          "ko": "마르면 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27 °C",
-          "ja": "18–27 °C",
-          "ko": "18–27 °C"
+          "en": "18-25°C",
+          "pl": "18-25°C",
+          "de": "18-25°C",
+          "fr": "18-25°C",
+          "it": "18-25°C",
+          "es": "18-25°C",
+          "pt": "18-25°C",
+          "ar": "18-25°C",
+          "hi": "18-25°C",
+          "zh": "18-25°C",
+          "ja": "18-25°C",
+          "ko": "18-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia domowa",
-          "de": "Normale Raumluft",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "平均的湿度",
-          "ko": "보통 습도"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing vine",
-          "pl": "Pnącze",
-          "de": "Kletterpflanze",
-          "fr": "Plante grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "نبات متسلق",
-          "hi": "लता",
-          "zh": "攀援生长",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适中生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wax Plant",
-      "description": "Hoya australis is a vining epiphytic plant native to Australia. It has thick glossy leaves and produces fragrant star-shaped flowers. It is commonly grown indoors in bright indirect light."
+      "common_name": "Common Waxflower",
+      "description": "Hoya australis, known as the Common Waxflower, is a popular houseplant with thick, waxy leaves. It thrives in moderate light and is low maintenance."
     },
     "pl": {
-      "common_name": "Hoja australijska",
-      "description": "Hoya australis to pnąca roślina epifityczna pochodząca z Australii. Ma grube błyszczące liście i pachnące kwiaty. Dobrze rośnie w jasnym rozproszonym świetle."
+      "common_name": "Woskownica australijska",
+      "description": "Hoya australis, znana jako woskownica australijska, to popularna roślina doniczkowa o grubych, woskowych liściach. Rośnie najlepiej w średnim świetle i jest łatwa w pielęgnacji."
     },
     "de": {
-      "common_name": "Wachsblume",
-      "description": "Hoya australis ist eine kletternde epiphytische Pflanze aus Australien. Sie besitzt dicke glänzende Blätter und duftende Blüten. Sie eignet sich gut als Zimmerpflanze."
+      "common_name": "Australische Wachsblume",
+      "description": "Hoya australis, bekannt als die Australische Wachsblume, ist eine beliebte Zimmerpflanze mit dicken, wachsartigen Blättern. Sie gedeiht bei mittlerem Licht und ist pflegeleicht."
     },
     "fr": {
-      "common_name": "Plante de cire",
-      "description": "Hoya australis est une plante grimpante originaire d’Australie. Elle produit des feuilles épaisses et des fleurs parfumées. Elle se cultive bien en intérieur lumineux."
+      "common_name": "Fleur de cire australienne",
+      "description": "Hoya australis, connue sous le nom de Fleur de cire australienne, est une plante d'intérieur populaire avec des feuilles épaisses et cireuses. Elle préfère une lumière modérée et est facile à entretenir."
     },
     "it": {
-      "common_name": "Pianta di cera",
-      "description": "Hoya australis è una pianta rampicante originaria dell’Australia. Ha foglie spesse e fiori profumati. È adatta alla coltivazione in casa."
+      "common_name": "Fiore di cera australiano",
+      "description": "Hoya australis, conosciuta come Fiore di cera australiano, è una pianta d'appartamento popolare con foglie spesse e cerose. Cresce bene in luce moderata ed è di facile cura."
     },
     "es": {
-      "common_name": "Planta de cera",
-      "description": "Hoya australis es una planta trepadora nativa de Australia. Presenta hojas carnosas y flores fragantes. Se adapta bien al cultivo interior."
+      "common_name": "Flor de cera australiana",
+      "description": "Hoya australis, conocida como la Flor de cera australiana, es una planta de interior popular con hojas gruesas y cerosas. Se desarrolla bien con luz moderada y es de fácil cuidado."
     },
     "pt": {
-      "common_name": "Planta de cera",
-      "description": "Hoya australis é uma planta trepadeira nativa da Austrália. Possui folhas grossas e flores perfumadas. É comum como planta de interior."
+      "common_name": "Flor de cera australiana",
+      "description": "Hoya australis, conhecida como Flor de cera australiana, é uma planta de interior popular com folhas espessas e cerosas. Ela cresce bem em luz moderada e é de fácil cuidado."
     },
     "ar": {
-      "common_name": "نبات الشمع",
-      "description": "هويا أستراليس نبات متسلق موطنه أستراليا. يتميز بأوراق سميكة وأزهار عطرية. يناسب الزراعة داخل المنازل."
+      "common_name": "زهرة الشمع الأسترالية",
+      "description": "Hoya australis، المعروفة باسم زهرة الشمع الأسترالية، هي نبات منزلي شهير ذو أوراق سميكة وشمعية. ينمو بشكل جيد في الضوء المعتدل وسهل العناية."
     },
     "hi": {
-      "common_name": "वैक्स प्लांट",
-      "description": "होया ऑस्ट्रेलिस ऑस्ट्रेलिया का एक लता पौधा है। इसमें मोटी पत्तियाँ और सुगंधित फूल होते हैं। इसे घर के अंदर उगाया जाता है।"
+      "common_name": "कॉमन वैक्सफ्लावर",
+      "description": "Hoya australis, जिसे कॉमन वैक्सफ्लावर के नाम से जाना जाता है, एक लोकप्रिय हाउसप्लांट है जिसमें मोटे, मोम जैसे पत्ते होते हैं। यह मध्यम रोशनी में अच्छी तरह से बढ़ता है और इसकी देखभाल करना आसान है।"
     },
     "zh": {
-      "common_name": "球兰",
-      "description": "Hoya australis 原产于澳大利亚，是一种藤本植物。它有厚实的叶片和芳香的花朵。常作为室内观叶植物栽培。"
+      "common_name": "常见的蜡花",
+      "description": "Hoya australis，又名常见蜡花，是一种流行的室内植物，具有厚实的蜡质叶子。它在中等光照下生长良好，且易于打理。"
     },
     "ja": {
-      "common_name": "ホヤ・オーストラリス",
-      "description": "ホヤ・オーストラリスはオーストラリア原産のつる性植物です。厚い葉と香りのある花を持ちます。室内栽培に適しています。"
+      "common_name": "オーストラリアワックスフラワー",
+      "description": "Hoya australis（オーストラリアワックスフラワー）は、厚いワックス状の葉を持つ人気の室内植物です。中程度の光の中でよく育ち、手入れが簡単です。"
     },
     "ko": {
-      "common_name": "호야 오스트랄리스",
-      "description": "호야 오스트랄리스는 호주 원산의 덩굴식물입니다. 두꺼운 잎과 향기로운 꽃이 특징입니다. 실내에서 키우기 좋습니다."
+      "common_name": "호야 아우스트랄리스",
+      "description": "Hoya australis(호야 아우스트랄리스)는 두껍고 왁스 같은 잎을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며 관리가 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/8971/hoya-australis/details",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/"
+      "https://www.rhs.org.uk/plants/hoya-australis",
+      "https://www.gardenia.net/plant/hoya-australis"
     ]
   }
 }

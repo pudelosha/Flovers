@@ -7,17 +7,19 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "valeriana_officinalis.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी नालियां",
+          "zh": "排水良好",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期的",
-          "ko": "규칙적"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Chłodna",
-          "de": "Kühl",
-          "fr": "Tempéré frais",
-          "it": "Fresco",
-          "es": "Fresco",
-          "pt": "Fresco",
-          "ar": "معتدل بارد",
-          "hi": "ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "औसत",
-          "zh": "一般",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright herb",
-          "pl": "Bylina",
-          "de": "Staude",
-          "fr": "Vivace",
-          "it": "Perenne",
-          "es": "Perenne",
-          "pt": "Perene",
-          "ar": "عشبة معمرة",
-          "hi": "बहुवर्षीय",
-          "zh": "多年生",
-          "ja": "多年草",
-          "ko": "다년생"
+          "en": "Fast growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "生长快速",
+          "ja": "速く成長",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Valerian",
-      "description": "Valeriana officinalis is a perennial herb native to Europe and parts of Asia. It prefers moist soil and partial sun and is traditionally grown outdoors."
+      "description": "Valerian is a perennial herb known for its calming effects. It is commonly used in herbal medicine to treat insomnia and anxiety."
     },
     "pl": {
-      "common_name": "Kozłek lekarski",
-      "description": "Valeriana officinalis to bylina pochodząca z Europy i Azji. Preferuje wilgotną glebę i półcień, zwykle uprawiana jest na zewnątrz."
+      "common_name": "Waleriana",
+      "description": "Waleriana to roślina wieloletnia, znana ze swoich uspokajających właściwości. Często używana w medycynie ziołowej do leczenia bezsenności i lęków."
     },
     "de": {
       "common_name": "Baldrian",
-      "description": "Valeriana officinalis ist eine mehrjährige Pflanze aus Europa und Asien. Sie wächst am besten in feuchtem Boden und Halbschatten im Freien."
+      "description": "Baldrian ist ein mehrjähriges Kraut, das für seine beruhigenden Eigenschaften bekannt ist. Es wird häufig in der Kräutermedizin verwendet, um Schlaflosigkeit und Angst zu behandeln."
     },
     "fr": {
       "common_name": "Valériane",
-      "description": "Valeriana officinalis est une plante vivace originaire d’Europe et d’Asie. Elle préfère un sol humide et une exposition mi-ombragée."
+      "description": "La valériane est une plante vivace reconnue pour ses effets apaisants. Elle est couramment utilisée en phytothérapie pour traiter l'insomnie et l'anxiété."
     },
     "it": {
       "common_name": "Valeriana",
-      "description": "Valeriana officinalis è una pianta perenne originaria di Europa e Asia. Cresce bene in terreno umido e mezz'ombra, soprattutto all'aperto."
+      "description": "La valeriana è una pianta perenne conosciuta per i suoi effetti calmanti. È comunemente usata in medicina erboristica per trattare l'insonnia e l'ansia."
     },
     "es": {
       "common_name": "Valeriana",
-      "description": "Valeriana officinalis es una planta perenne nativa de Europa y Asia. Prefiere suelos húmedos y semisombra en cultivo exterior."
+      "description": "La valeriana es una planta perenne conocida por sus efectos calmantes. Se utiliza comúnmente en la medicina herbal para tratar el insomnio y la ansiedad."
     },
     "pt": {
       "common_name": "Valeriana",
-      "description": "Valeriana officinalis é uma planta perene nativa da Europa e Ásia. Desenvolve-se melhor em solo úmido e meia-sombra ao ar livre."
+      "description": "A valeriana é uma planta perene conhecida por seus efeitos calmantes. É comumente usada na medicina herbal para tratar insônia e ansiedade."
     },
     "ar": {
-      "common_name": "الناردين",
-      "description": "نبات Valeriana officinalis عشبي معمر موطنه أوروبا وآسيا. يفضل التربة الرطبة والضوء الجزئي وينمو عادة في الخارج."
+      "common_name": "فاليريان",
+      "description": "الفاليريان هو نبات معمر معروف بتأثيراته المهدئة. يتم استخدامه عادة في الطب العشبي لعلاج الأرق والقلق."
     },
     "hi": {
-      "common_name": "वैलेरियन",
-      "description": "Valeriana officinalis यूरोप और एशिया की एक बहुवर्षीय जड़ी-बूटी है। यह नम मिट्टी और आंशिक धूप में बाहर अच्छी तरह उगती है।"
+      "common_name": "वैलेरियाना",
+      "description": "वैलेरियाना एक वार्षिक जड़ी-बूटी है जिसे शांतिपूर्ण प्रभावों के लिए जाना जाता है। इसका उपयोग अक्सर हर्बल दवाइयों में अनिद्रा और चिंता का इलाज करने के लिए किया जाता है."
     },
     "zh": {
       "common_name": "缬草",
-      "description": "Valeriana officinalis 原产于欧洲和亚洲，是多年生草本植物。适合在湿润土壤和半日照的户外环境生长。"
+      "description": "缬草是一种多年生草本植物，以其镇静效果而闻名。它通常用于草药治疗失眠和焦虑。"
     },
     "ja": {
-      "common_name": "セイヨウカノコソウ",
-      "description": "Valeriana officinalis はヨーロッパとアジア原産の多年草です。湿った土壌と半日陰の屋外環境を好みます。"
+      "common_name": "バレリアン",
+      "description": "バレリアンは鎮静効果で知られる多年草です。不眠症や不安の治療にハーブ療法としてよく使用されます。"
     },
     "ko": {
-      "common_name": "서양쥐오줌풀",
-      "description": "Valeriana officinalis는 유럽과 아시아 원산의 다년생 식물입니다. 습한 토양과 반그늘의 야외 환경을 선호합니다."
+      "common_name": "발레리안",
+      "description": "발레리안은 진정 효과로 잘 알려진 다년생 허브입니다. 불면증과 불안을 치료하기 위해 허브 의학에서 흔히 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/valeriana-officinalis/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b580"
+      "https://www.botanicalgarden.com/valeriana-officinalis",
+      "https://www.horticulture.com/plant-care/valeriana-officinalis"
     ]
   }
 }

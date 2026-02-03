@@ -4,22 +4,22 @@
   "latin": "Ocimum citriodorum",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "ocimum_citriodorum.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Viel Sonne",
-          "fr": "Soleil vif",
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
           "it": "Sole pieno",
-          "es": "Sol intenso",
-          "pt": "Sol forte",
-          "ar": "شمس ساطعة",
-          "hi": "तेज धूप",
-          "zh": "充足阳光",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "完全な日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well-drained",
-          "pl": "Żyzna gleba",
-          "de": "Nährstoffreich",
-          "fr": "Sol drainant",
-          "it": "Terreno fertile",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة خصبة",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlew.",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature reg.",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "정기적 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm conditions",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilg.",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
           "ar": "رطوبة معتدلة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
+          "en": "Fast growth",
           "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
+          "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
-          "it": "Crescita rapida",
+          "it": "Crescita veloce",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेजी से बढ़ता",
+          "hi": "तेज वृद्धि",
           "zh": "快速生长",
-          "ja": "成長が早い",
+          "ja": "速い成長",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać nadmiernie",
+          "de": "Kein Überwässern",
+          "fr": "Pas trop d'arrosage",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regue demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अفرत पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やりのしすぎに注意",
+          "ko": "과도한 물주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Lemon Basil",
-      "description": "Ocimum citriodorum is a fragrant basil with a distinct lemon scent. It is commonly grown as a culinary herb and thrives in bright light and warm conditions."
+      "description": "Ocimum citriodorum, commonly known as lemon basil, is a fragrant herb native to Asia. It thrives in full sun with moderate watering and well-drained soil."
     },
     "pl": {
       "common_name": "Bazylia cytrynowa",
-      "description": "Ocimum citriodorum to aromatyczna bazylia o cytrynowym zapachu. Jest popularnym ziołem kuchennym i najlepiej rośnie w jasnym, ciepłym miejscu."
+      "description": "Ocimum citriodorum, znana jako bazylia cytrynowa, to pachnąca roślina z Azji. Rośnie najlepiej w pełnym słońcu, umiarkowanym podlewaniu i przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Zitronenbasilikum",
-      "description": "Ocimum citriodorum ist ein duftendes Basilikum mit Zitronenaroma. Es wird als Küchenkraut genutzt und bevorzugt viel Licht und Wärme."
+      "common_name": "Zitronen-Basilikum",
+      "description": "Ocimum citriodorum, auch bekannt als Zitronen-Basilikum, ist ein duftendes Kraut aus Asien. Es gedeiht am besten in voller Sonne mit mäßiger Bewässerung und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Basilic citron",
-      "description": "Ocimum citriodorum est un basilic aromatique au parfum de citron. Il est cultivé comme herbe culinaire et aime la chaleur et la lumière."
+      "description": "Ocimum citriodorum, également connu sous le nom de basilic citron, est une herbe parfumée originaire d'Asie. Il pousse bien en plein soleil avec un arrosage modéré et un sol bien drainé."
     },
     "it": {
       "common_name": "Basilico al limone",
-      "description": "Ocimum citriodorum è un basilico profumato con aroma di limone. È usato in cucina e cresce bene con luce intensa e temperature calde."
+      "description": "Ocimum citriodorum, noto anche come basilico al limone, è un'erba fragrante originaria dell'Asia. Cresce bene al sole pieno con annaffiature moderate e terreno ben drenato."
     },
     "es": {
       "common_name": "Albahaca limón",
-      "description": "Ocimum citriodorum es una albahaca aromática con olor a limón. Se cultiva como hierba culinaria y requiere sol y calor."
+      "description": "Ocimum citriodorum, también conocido como albahaca limón, es una planta aromática originaria de Asia. Crece mejor a pleno sol con riego moderado y suelo bien drenado."
     },
     "pt": {
-      "common_name": "Manjericão-limão",
-      "description": "Ocimum citriodorum é um manjericão aromático com fragrância de limão. É usado na culinária e prefere sol intenso e clima quente."
+      "common_name": "Manjericão de limão",
+      "description": "Ocimum citriodorum, conhecido como manjericão de limão, é uma erva perfumada nativa da Ásia. Cresce melhor com sol pleno, rega moderada e solo bem drenado."
     },
     "ar": {
       "common_name": "ريحان الليمون",
-      "description": "Ocimum citriodorum نبات ريحان عطري برائحة الليمون. يُزرع كعشب مطبخي ويحتاج إلى ضوء قوي ودفء."
+      "description": "Ocimum citriodorum، المعروف أيضًا باسم ريحان الليمون، هو عشب عطري موطنه آسيا. ينمو جيدًا في الشمس الكاملة مع الري المعتدل والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "लेमन तुलसी",
-      "description": "Ocimum citriodorum एक सुगंधित तुलसी है जिसमें नींबू की खुशबू होती है। यह रसोई में उपयोग की जाती है और धूप व गर्मी पसंद करती है।"
+      "common_name": "नींबू तुलसी",
+      "description": "Ocimum citriodorum, जिसे नींबू तुलसी के नाम से जाना जाता है, एशिया का एक सुगंधित पौधा है। यह पूरी धूप में, मध्यम पानी और अच्छी जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
       "common_name": "柠檬罗勒",
-      "description": "Ocimum citriodorum 是一种带有柠檬香味的罗勒。常作为香草种植，适合温暖和充足光照的环境。"
+      "description": "Ocimum citriodorum，通常称为柠檬罗勒，是一种原产于亚洲的芳香草本植物。它在充足阳光下、适量浇水和排水良好的土壤中生长最好。"
     },
     "ja": {
       "common_name": "レモンバジル",
-      "description": "Ocimum citriodorum はレモンの香りを持つバジルです。料理用ハーブとして栽培され、暖かく明るい環境を好みます。"
+      "description": "Ocimum citriodorum、通称レモンバジルは、アジア原産の芳香を持つハーブです。完全な日光と適度な水やり、良好な排水の土壌で最適に育ちます。"
     },
     "ko": {
       "common_name": "레몬 바질",
-      "description": "Ocimum citriodorum은 레몬 향이 나는 바질입니다. 요리용 허브로 재배되며 따뜻하고 밝은 환경을 좋아합니다."
+      "description": "Ocimum citriodorum, 일반적으로 레몬 바질로 알려진 이 식물은 아시아 원산지의 향긋한 허브입니다. 완전한 햇볕과 적당한 물주기, 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/herbs/basil/grow-your-own",
-      "https://extension.umn.edu/herbs/growing-basil",
-      "https://www.gardenersworld.com/plants/ocimum-citriodorum/"
+      "https://www.rhs.org.uk/plants/ocimum-citriodorum",
+      "https://www.gardenia.net/plant/ocimum-citriodorum"
     ]
   }
 }

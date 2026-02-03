@@ -1,26 +1,27 @@
 {
   "external_id": "heptapleurum_actinophyllum",
-  "name": "Umbrella tree",
+  "name": "Heptapleurum actinophyllum",
   "latin": "Heptapleurum actinophyllum",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "heptapleurum_actinophyllum.jpg",
   "image_thumb": "heptapleurum_actinophyllum.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne, rozproszone",
-          "de": "Helles, indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Gut drainierende Erde",
-          "fr": "Substrat drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenante",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल-निकासी मिट्टी",
-          "zh": "排水良好基质",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "When top dries",
-          "pl": "Gdy wierzch przeschnie",
-          "de": "Gießen wenn oben trocken",
-          "fr": "Arroser si sec dessus",
-          "it": "Quando asciuga sopra",
-          "es": "Cuando se seque arriba",
-          "pt": "Quando secar em cima",
-          "ar": "عند جفاف السطح",
-          "hi": "ऊपर सूखने पर पानी",
-          "zh": "表土干再浇",
-          "ja": "表土が乾いたら",
-          "ko": "겉흙 마르면 물"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–29°C",
-          "pl": "18–29°C",
-          "de": "18–29°C",
-          "fr": "18–29°C",
-          "it": "18–29°C",
-          "es": "18–29°C",
-          "pt": "18–29°C",
-          "ar": "18–29°م",
-          "hi": "18–29°C",
-          "zh": "18–29°C",
-          "ja": "18–29°C",
-          "ko": "18–29°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Avg to higher",
-          "pl": "Średnia lub wyższa",
-          "de": "Normal bis höher",
-          "fr": "Moyenne à élevée",
-          "it": "Media o alta",
-          "es": "Media a alta",
-          "pt": "Média a alta",
-          "ar": "متوسطة إلى عالية",
-          "hi": "सामान्य से अधिक",
-          "zh": "中等到较高",
-          "ja": "普通〜高め",
-          "ko": "보통~높음"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica p/ animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतुओं के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -161,78 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright tree",
-          "pl": "Pokrój drzewkowaty",
-          "de": "Aufrechter Wuchs",
-          "fr": "Port arborescent",
-          "it": "Crescita arborea",
-          "es": "Porte arbóreo",
-          "pt": "Porte arbóreo",
-          "ar": "نمو شجري قائم",
-          "hi": "सीधा झाड़ी/पेड़",
-          "zh": "直立木本",
-          "ja": "直立する木立ち",
-          "ko": "직립 수형"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Umbrella tree",
-      "description": "Heptapleurum actinophyllum (often sold as Schefflera actinophylla) is a tropical tree from northern Australia and New Guinea. Indoors it prefers bright, indirect light and a well-draining potting mix; water when the surface dries, typically about every 10 days. It is toxic to cats and dogs if chewed."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum is a tropical houseplant known for its lush green foliage. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Szeflera promienista",
-      "description": "Heptapleurum actinophyllum (często sprzedawana jako Schefflera actinophylla) to tropikalne drzewko z północnej Australii i Nowej Gwinei. W domu lubi jasne, rozproszone światło i przepuszczalne podłoże; podlewaj, gdy przeschnie wierzch, zwykle co ok. 10 dni. Roślina jest toksyczna dla psów i kotów po pogryzieniu."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum to tropikalna roślina doniczkowa znana z bujnych zielonych liści. Wymaga średniego nasłonecznienia i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Strahlenaralie",
-      "description": "Heptapleurum actinophyllum (oft als Schefflera actinophylla verkauft) ist ein tropischer Baum aus Nordaustralien und Neuguinea. In Zimmerkultur mag sie helles, indirektes Licht und ein gut drainierendes Substrat; gegossen wird, wenn die Oberfläche abgetrocknet ist, meist etwa alle 10 Tage. Für Katzen und Hunde ist sie giftig."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum ist eine tropische Zimmerpflanze, die für ihr üppiges grünes Laub bekannt ist. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Arbre ombrelle",
-      "description": "Heptapleurum actinophyllum (souvent vendu sous Schefflera actinophylla) est un arbre tropical d’Australie du Nord et de Nouvelle-Guinée. En intérieur, donnez une lumière vive indirecte et un terreau bien drainant; arrosez quand la surface sèche, en général tous les 10 jours. La plante est toxique pour les chats et les chiens."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum est une plante d'intérieur tropicale connue pour son feuillage vert luxuriant. Elle préfère une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Albero ombrello",
-      "description": "Heptapleurum actinophyllum (spesso venduto come Schefflera actinophylla) è un albero tropicale del nord Australia e della Nuova Guinea. In casa preferisce luce intensa indiretta e un terriccio ben drenante; annaffia quando lo strato superiore è asciutto, di solito ogni 10 giorni. È tossica per cani e gatti se masticata."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum è una pianta tropicale da appartamento conosciuta per il suo fogliame verde lussureggiante. Cresce bene con luce moderata e alta umidità."
     },
     "es": {
-      "common_name": "Árbol paraguas",
-      "description": "Heptapleurum actinophyllum (a menudo vendido como Schefflera actinophylla) es un árbol tropical del norte de Australia y Nueva Guinea. En interior prefiere luz brillante e indirecta y un sustrato con buen drenaje; riega cuando se seque la superficie, normalmente cada 10 días. Es tóxica para perros y gatos si la mastican."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum es una planta tropical de interior conocida por su follaje verde exuberante. Prefiere luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Árvore-umbrela",
-      "description": "Heptapleurum actinophyllum (frequentemente vendido como Schefflera actinophylla) é uma árvore tropical do norte da Austrália e da Nova Guiné. Em interiores, prefere luz forte indireta e substrato bem drenado; regue quando a superfície secar, geralmente a cada 10 dias. É tóxica para cães e gatos se ingerida."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum é uma planta tropical de interior conhecida pela sua folhagem verde exuberante. Prefere luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "شجرة المظلة الأسترالية",
-      "description": "Heptapleurum actinophyllum (تُباع كثيرًا باسم Schefflera actinophylla) شجرة استوائية من شمال أستراليا وغينيا الجديدة. داخل المنزل تفضّل ضوءًا ساطعًا غير مباشر وتربة جيدة التصريف؛ اسقِ عندما يجف سطح التربة، عادةً كل 10 أيام. النبات سام للقطط والكلاب عند القضم."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum هي نبتة استوائية للمنزل تعرف بأوراقها الخضراء الكثيفة. تفضل الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "अम्ब्रेला ट्री",
-      "description": "Heptapleurum actinophyllum (अक्सर Schefflera actinophylla नाम से बिकता है) उत्तरी ऑस्ट्रेलिया और न्यू गिनी का उष्णकटिबंधीय पौधा है। घर के अंदर इसे तेज़ अप्रत्यक्ष रोशनी और अच्छी जल-निकासी वाला पॉटिंग मिक्स दें; जब ऊपर की सतह सूख जाए तब पानी दें, आम तौर पर लगभग हर 10 दिन। पालतू जानवरों के लिए यह विषाक्त है।"
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum एक उष्णकटिबंधीय हाउसप्लांट है जो अपनी हरी पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश और उच्च आर्द्रता में बढ़ता है।"
     },
     "zh": {
-      "common_name": "澳洲伞树",
-      "description": "Heptapleurum actinophyllum（常以 Schefflera actinophylla 销售）原产北澳大利亚与新几内亚的热带木本植物。室内宜放在明亮散射光处并使用排水良好的基质；表土干后再浇水，通常约每 10 天一次。对猫狗有毒，勿让啃咬。"
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum 是一种热带室内植物，以其浓密的绿色叶子而闻名。它喜欢中等光照和高湿度。"
     },
     "ja": {
-      "common_name": "オーストラリアン・アンブレラツリー",
-      "description": "Heptapleurum actinophyllum（流通名は Schefflera actinophylla が多い）は北オーストラリア〜ニューギニア原産の熱帯性の木本です。室内では明るい間接光と水はけの良い用土にし、表土が乾いてから水やり（目安は約10日ごと）。猫や犬には有毒です。"
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum は、その豊かな緑の葉で知られる熱帯の観葉植物です。中程度の光と高い湿度で成長します。"
     },
     "ko": {
-      "common_name": "우산나무",
-      "description": "Heptapleurum actinophyllum(유통명 Schefflera actinophylla가 흔함)은 북호주와 뉴기니 원산의 열대 목본 식물입니다. 실내에서는 밝은 간접광과 배수 좋은 흙을 사용하고, 겉흙이 마르면 물을 주며 보통 약 10일 간격입니다. 고양이와 개에 유독합니다."
+      "common_name": "Heptapleurum",
+      "description": "Heptapleurum actinophyllum은 울창한 녹색 잎으로 알려진 열대 식물입니다. 중간 정도의 빛과 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77213393-1",
-      "https://www.rhs.org.uk/plants/516846/heptapleurum-actinophyllum-amate/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276615",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/schefflera"
+      "https://www.rhs.org.uk/advice/profile?pid=1035",
+      "https://www.gardenersworld.com/plants/heptapleurum-actinophyllum/"
     ]
   }
 }

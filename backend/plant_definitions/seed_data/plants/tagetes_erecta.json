@@ -1,18 +1,18 @@
 {
   "external_id": "tagetes_erecta",
-  "name": "African Marigold",
+  "name": "Marigold",
   "latin": "Tagetes erecta",
   "sun": "high",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "balcony-flowers"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "الشمس الساطعة",
+          "hi": "पूरा सूर्य",
+          "zh": "全日照",
+          "ja": "フルサン",
+          "ko": "완전한 태양"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム",
-          "ko": "점토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中くらい",
-          "ko": "중간"
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -86,16 +86,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwy",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "简单",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepły",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中くらい",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic to pets",
+          "pl": "Trujący dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中くらい",
-          "ko": "중간"
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez le trop d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "African Marigold",
-      "description": "Tagetes erecta is a vibrant flowering plant native to Mexico. Known for its striking orange and yellow blooms, it thrives in sunny environments and well-drained soil."
+      "common_name": "Marigold",
+      "description": "Tagetes erecta, commonly known as marigold, is a popular flowering plant known for its vibrant yellow, orange, and red blooms. It thrives in full sun and well-drained soil, making it ideal for gardens and containers."
     },
     "pl": {
-      "common_name": "Aksamitka afrykańska",
-      "description": "Tagetes erecta to roślina kwitnąca pochodząca z Meksyku. Znana z intensywnych pomarańczowych i żółtych kwiatów, rośnie w słonecznych miejscach na dobrze przepuszczalnym podłożu."
+      "common_name": "Aksamitka",
+      "description": "Tagetes erecta, znana jako aksamitka, to popularna roślina ozdobna, charakteryzująca się jaskrawymi żółtymi, pomarańczowymi i czerwonymi kwiatami. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Afrikanisches Studentenblume",
-      "description": "Tagetes erecta ist eine blühende Pflanze aus Mexiko. Sie ist bekannt für ihre auffälligen orangefarbenen und gelben Blüten und gedeiht in sonnigen Standorten und gut durchlässigem Boden."
+      "common_name": "Ringelblume",
+      "description": "Tagetes erecta, auch bekannt als Ringelblume, ist eine beliebte Zierpflanze mit leuchtend gelben, orangefarbenen und roten Blüten. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Tagète d'Afrique",
-      "description": "Tagetes erecta est une plante à fleurs originaire du Mexique. Connue pour ses fleurs orange et jaunes éclatantes, elle prospère dans des environnements ensoleillés et un sol bien drainé."
+      "common_name": "Tagète",
+      "description": "Tagetes erecta, communément appelée tagète, est une plante à fleurs populaire connue pour ses fleurs vibrantes jaunes, oranges et rouges. Elle pousse mieux en plein soleil et dans un sol bien drainé."
     },
     "it": {
-      "common_name": "Tagete africano",
-      "description": "Tagetes erecta è una pianta da fiore originaria del Messico. Conosciuta per i suoi fiori arancioni e gialli, cresce in ambienti soleggiati e in terreni ben drenati."
+      "common_name": "Garofano di barriera",
+      "description": "Tagetes erecta, conosciuta come garofano di barriera, è una pianta ornamentale popolare per i suoi fiori gialli, arancioni e rossi. Cresce bene in pieno sole e in terreno ben drenato."
     },
     "es": {
-      "common_name": "Tagete africano",
-      "description": "Tagetes erecta es una planta con flores originaria de México. Es conocida por sus llamativas flores naranjas y amarillas, y prospera en entornos soleados y suelos bien drenados."
+      "common_name": "Clavelón",
+      "description": "Tagetes erecta, conocido como clavelón, es una planta ornamental popular por sus flores vibrantes de color amarillo, naranja y rojo. Crece mejor a pleno sol y en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Tagete africano",
-      "description": "Tagetes erecta é uma planta florida nativa do México. Conhecida pelas suas flores laranja e amarelas vibrantes, cresce em ambientes ensolarados e solo bem drenado."
+      "common_name": "Cravo-de-defunto",
+      "description": "Tagetes erecta, conhecido como cravo-de-defunto, é uma planta popular por suas flores vibrantes nas cores amarelo, laranja e vermelho. Cresce bem em pleno sol e em solos bem drenados."
     },
     "ar": {
-      "common_name": "أقحوان أفريقي",
-      "description": "تاجيتس إيريكتا هو نبات مزهر موطنه المكسيك. معروف بأزهاره البرتقالية والصفراء الزاهية، ينمو في البيئات المشمسة والتربة جيدة التصريف."
+      "common_name": "الماريغولد",
+      "description": "تاجيتس إريكتا، المعروفة بالماريغولد، هي نبتة زينة مشهورة تتميز بأزهارها الملونة باللون الأصفر والبرتقالي والأحمر. تنمو جيدًا في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "अफ़्रीकी मैरीगोल्ड",
-      "description": "टैगेट्स एरेक्टा एक फूलदार पौधा है जो मेक्सिको का मूल निवासी है। यह अपनी उज्ज्वल नारंगी और पीली कलियों के लिए प्रसिद्ध है और धूप वाले वातावरण और अच्छे जल निकासी वाली मिट्टी में पनपता है।"
+      "common_name": "गेंदा",
+      "description": "टैगेट्स एरेक्टा, जिसे गेंदा के नाम से जाना जाता है, एक लोकप्रिय सजावटी पौधा है जो अपने जीवंत पीले, नारंगी और लाल फूलों के लिए प्रसिद्ध है। यह पूर्ण सूर्य और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह बढ़ता है।"
     },
     "zh": {
-      "common_name": "非洲万寿菊",
-      "description": "Tagetes erecta 是一种原产于墨西哥的开花植物。以其鲜艳的橙色和黄色花朵而闻名，喜欢阳光充足和排水良好的土壤环境。"
+      "common_name": "万寿菊",
+      "description": "塔格特斯·埃雷克塔（Tagetes erecta），常称为万寿菊，是一种因其明亮的黄色、橙色和红色花朵而广受欢迎的花卉植物。它在全日照和良好排水的土壤中生长得很好。"
     },
     "ja": {
-      "common_name": "アフリカマリーゴールド",
-      "description": "Tagetes erecta はメキシコ原産の花を咲かせる植物です。その鮮やかなオレンジ色と黄色の花で知られ、日当たりの良い場所と排水性の良い土壌で成長します。"
+      "common_name": "マリーゴールド",
+      "description": "タゲテス・エレクタ（Tagetes erecta）は、鮮やかな黄色、オレンジ、赤の花が特徴の人気のある観賞用植物です。完全な日光と良好な排水性の土壌で良く育ちます。"
     },
     "ko": {
-      "common_name": "아프리카 마리골드",
-      "description": "Tagetes erecta는 멕시코 원산의 꽃을 피우는 식물입니다. 눈에 띄는 주황색과 노란색 꽃으로 유명하며, 햇볕이 잘 드는 환경과 배수가 좋은 토양에서 잘 자랍니다."
+      "common_name": "금잔화",
+      "description": "타게테스 에렉타(Tagetes erecta)는 선명한 노란색, 주황색, 빨간색 꽃으로 유명한 인기 있는 꽃 식물입니다. 풀 햇볕과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/details?plantid=4281",
-      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/tagetes/"
+      "https://www.gardenersworld.com/plants/marigolds/",
+      "https://www.rhs.org.uk/plants/tagetes-erecta"
     ]
   }
 }

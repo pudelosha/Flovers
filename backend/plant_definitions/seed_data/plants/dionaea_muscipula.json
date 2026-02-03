@@ -1,26 +1,26 @@
 {
   "external_id": "dionaea_muscipula",
-  "name": "Venus Flytrap",
+  "name": "Venus flytrap",
   "latin": "Dionaea muscipula",
   "sun": "high",
   "water": "high",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "sandy"
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 3,
+  "water_interval_days": 2,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 18,
   "image_hero": "dionaea_muscipula.jpg",
   "image_thumb": "dionaea_muscipula.jpg",
   "traits": [
@@ -36,10 +36,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ja": "日当たり良好",
+          "ko": "직사광선"
         }
       }
     },
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, sandy",
-          "pl": "Kwaśna, piaszczysta",
-          "de": "Sauer, sandig",
-          "fr": "Acide, sableux",
-          "it": "Acido, sabbioso",
-          "es": "Ácido y arenoso",
-          "pt": "Ácido e arenoso",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय रेतीली",
-          "zh": "酸性沙质",
-          "ja": "酸性砂質",
-          "ko": "산성 모래"
+          "en": "Acidic, low-nutrient",
+          "pl": "Kwaśne, jałowe",
+          "de": "Sauer, nährstoffarm",
+          "fr": "Acide, pauvre",
+          "it": "Acido, povero",
+          "es": "Ácido, pobre",
+          "pt": "Ácido, pobre",
+          "ar": "حمضي فقير",
+          "hi": "अम्लीय, गरीब",
+          "zh": "酸性贫瘠",
+          "ja": "酸性で低栄養",
+          "ko": "산성, 저영양"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep very wet",
-          "pl": "Stale wilgotna",
-          "de": "Stets feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umida",
-          "es": "Siempre húmeda",
-          "pt": "Sempre úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "हमेशा गीली",
-          "zh": "始终湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "en": "Keep wet; RO/rain",
+          "pl": "Stale mokre; RO/deszcz",
+          "de": "Nass halten; Regen/RO",
+          "fr": "Toujours humide; pluie",
+          "it": "Sempre umida; pioggia",
+          "es": "Siempre húmeda; lluvia",
+          "pt": "Sempre úmida; chuva",
+          "ar": "رطبة دائمًا؛ مطر",
+          "hi": "हमेशा नम; वर्षा/RO",
+          "zh": "保持湿润; 雨水/RO",
+          "ja": "常に湿潤; 雨水/RO",
+          "ko": "항상 촉촉; 빗물/RO"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–30°C",
-          "pl": "10–30°C",
-          "de": "10–30°C",
-          "fr": "10–30°C",
-          "it": "10–30°C",
-          "es": "10–30°C",
-          "pt": "10–30°C",
-          "ar": "10–30°م",
-          "hi": "10–30°C",
-          "zh": "10–30°C",
-          "ja": "10–30℃",
-          "ko": "10–30°C"
+          "en": "10–27°C; cool rest",
+          "pl": "10–27°C; chłodny spoczynek",
+          "de": "10–27°C; kühle Ruhe",
+          "fr": "10–27°C; repos frais",
+          "it": "10–27°C; riposo fresco",
+          "es": "10–27°C; reposo fresco",
+          "pt": "10–27°C; repouso fresco",
+          "ar": "10–27°م؛ سكون بارد",
+          "hi": "10–27°C; ठंडा विश्राम",
+          "zh": "10–27°C; 冬季休眠",
+          "ja": "10–27°C; 冬は休眠",
+          "ko": "10–27°C; 겨울 휴면"
         }
       }
     },
@@ -123,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Normal OK",
+          "pl": "Zwykła OK",
+          "de": "Normal ok",
+          "fr": "Normale ok",
+          "it": "Normale ok",
+          "es": "Normal ok",
+          "pt": "Normal ok",
+          "ar": "عادية مناسبة",
+          "hi": "सामान्य ठीक",
+          "zh": "普通湿度即可",
+          "ja": "通常で可",
+          "ko": "보통이면 됨"
         }
       }
     },
@@ -143,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietrująca",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "विषहीन",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +161,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Powolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow, compact",
+          "pl": "Wolny, kompaktowy",
+          "de": "Langsam, kompakt",
+          "fr": "Lente, compacte",
+          "it": "Lenta, compatta",
+          "es": "Lenta, compacta",
+          "pt": "Lenta, compacta",
+          "ar": "بطيء ومضغوط",
+          "hi": "धीमी, कॉम्पैक्ट",
+          "zh": "生长缓慢紧凑",
+          "ja": "ゆっくり小型",
+          "ko": "느림, 컴팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No tap water; no dry",
+          "pl": "Nie kranówka; nie suszyć",
+          "de": "Kein Leitungsw.; nicht trocken",
+          "fr": "Pas d'eau du robinet",
+          "it": "No acqua rubinetto",
+          "es": "No agua del grifo",
+          "pt": "Sem água da torneira",
+          "ar": "لا ماء حنفية ولا جفاف",
+          "hi": "नल का पानी नहीं; सूखा नहीं",
+          "zh": "不用自来水;勿干",
+          "ja": "水道水NG・乾燥NG",
+          "ko": "수돗물X, 건조X"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ وعث",
+          "hi": "एफिड्स, माइट्स",
+          "zh": "蚜虫, 螨",
+          "ja": "アブラムシ, ダニ",
+          "ko": "진딧물, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Venus Flytrap",
-      "description": "Dionaea muscipula is a carnivorous plant native to the wetlands of the southeastern United States. It requires full sun, nutrient-poor acidic soil, and consistently wet conditions. The traps close on insects to supplement nutrients."
+      "common_name": "Venus flytrap",
+      "description": "A carnivorous bog plant that forms snap traps to catch insects. Grow it in very bright light/full sun, in acidic low-nutrient media, and keep the pot standing in mineral-free water. It benefits from a cooler winter rest period while staying slightly moist."
     },
     "pl": {
       "common_name": "Muchołówka amerykańska",
-      "description": "Dionaea muscipula to roślina owadożerna pochodząca z bagien południowo-wschodnich USA. Wymaga pełnego słońca, ubogiej kwaśnej gleby i stałej wilgoci. Liście chwytają owady w celu uzupełnienia składników odżywczych."
+      "description": "Roślina owadożerna z pułapkami, która naturalnie rośnie na ubogich torfowiskach. Wymaga bardzo jasnego światła/pełnego słońca, kwaśnego jałowego podłoża i stałej wilgoci z użyciem wody deszczowej lub demineralizowanej. Zimą potrzebuje chłodniejszego okresu spoczynku, ale podłoże nie może wyschnąć."
     },
     "de": {
       "common_name": "Venusfliegenfalle",
-      "description": "Dionaea muscipula ist eine fleischfressende Pflanze aus den Feuchtgebieten im Südosten der USA. Sie benötigt volle Sonne, nährstoffarmen sauren Boden und ständig feuchte Erde. Die Fallen schließen sich bei Insektenkontakt."
+      "description": "Eine fleischfressende Moorpflanze mit zuschnappenden Fallen. Sie braucht sehr helles Licht/volle Sonne, sauberes mineralarmes Wasser und ein saures, nährstoffarmes Substrat, das nie austrocknet. Im Winter ist eine kühlere Ruhephase sinnvoll, dabei nur leicht feucht halten."
     },
     "fr": {
       "common_name": "Dionée attrape-mouche",
-      "description": "Dionaea muscipula est une plante carnivore originaire des zones humides du sud-est des États-Unis. Elle a besoin de plein soleil, d’un sol acide pauvre et toujours humide. Les pièges se ferment pour capturer les insectes."
+      "description": "Plante carnivore de tourbière qui capture des insectes avec des pièges mobiles. Elle demande beaucoup de lumière/plein soleil, un substrat acide pauvre et une eau très douce (pluie/déminéralisée), avec le pot maintenu humide en permanence. Une période de repos plus fraîche en hiver aide à long terme."
     },
     "it": {
-      "common_name": "Venere acchiappamosche",
-      "description": "Dionaea muscipula è una pianta carnivora originaria delle zone umide del sud-est degli Stati Uniti. Richiede pieno sole, terreno acido povero e umidità costante. Le trappole si chiudono sugli insetti."
+      "common_name": "Dionea acchiappamosche",
+      "description": "Pianta carnivora di palude con trappole che si chiudono rapidamente. Coltivala in luce molto intensa/pieno sole, in substrato acido povero e con sola acqua piovana o demineralizzata, mantenendo il terreno sempre umido. In inverno gradisce un periodo di riposo più fresco senza far seccare il substrato."
     },
     "es": {
       "common_name": "Atrapamoscas de Venus",
-      "description": "Dionaea muscipula es una planta carnívora nativa de los humedales del sureste de Estados Unidos. Necesita pleno sol, suelo ácido pobre y humedad constante. Sus trampas se cierran al atrapar insectos."
+      "description": "Planta carnívora de turbera con trampas que se cierran para capturar insectos. Necesita luz muy intensa/pleno sol, sustrato ácido y pobre, y agua sin minerales (lluvia/destilada), manteniendo el sustrato siempre húmedo. Un descanso invernal más fresco es beneficioso manteniendo ligera humedad."
     },
     "pt": {
-      "common_name": "Dionéia apanha-moscas",
-      "description": "Dionaea muscipula é uma planta carnívora nativa de áreas úmidas do sudeste dos EUA. Precisa de sol pleno, solo ácido pobre e substrato sempre úmido. As armadilhas fecham-se sobre insetos."
+      "common_name": "Dioneia (Vênus papa-moscas)",
+      "description": "Planta carnívora de brejo com armadilhas que fecham ao toque. Requer luz muito forte/sol pleno, substrato ácido e pobre e apenas água sem minerais (chuva/destilada), mantendo o vaso sempre úmido. Um período de descanso mais fresco no inverno ajuda, sem deixar o substrato secar."
     },
     "ar": {
       "common_name": "مصيدة فينوس",
-      "description": "نبات ديونيا موسيبولا آكل للحشرات وموطنه الأراضي الرطبة في جنوب شرق الولايات المتحدة. يحتاج إلى شمس كاملة وتربة حمضية فقيرة ورطوبة دائمة. تغلق المصائد لالتقاط الحشرات."
+      "description": "نبات لاحم من بيئات مستنقعية يصنع مصائد تُغلق لالتقاط الحشرات. يحتاج إلى ضوء قوي جدًا/شمس كاملة وتربة حمضية فقيرة مع إبقاء الأصيص رطبًا دائمًا باستخدام ماء مطر أو ماء منزوع المعادن. يستفيد من فترة سكون أبرد شتاءً مع الحفاظ على رطوبة خفيفة."
     },
     "hi": {
       "common_name": "वीनस फ्लाईट्रैप",
-      "description": "डायोनीया म्यूसिपुला एक कीटभक्षी पौधा है जो दक्षिण-पूर्वी अमेरिका के आर्द्र क्षेत्रों का मूल निवासी है। इसे तेज धूप, पोषक तत्वों से गरीब अम्लीय मिट्टी और लगातार नमी चाहिए। पत्तियाँ कीड़ों को पकड़ती हैं।"
+      "description": "यह दलदली आवास का मांसाहारी पौधा है जो कीट पकड़ने के लिए स्नैप-ट्रैप बनाता है। इसे बहुत तेज़ रोशनी/पूरी धूप, अम्लीय कम-पोषक माध्यम और केवल खनिज-रहित पानी (बारिश/RO) चाहिए; मिट्टी कभी सूखने न दें। सर्दियों में ठंडा विश्राम उपयोगी है, पर नमी बनी रहनी चाहिए।"
     },
     "zh": {
       "common_name": "捕蝇草",
-      "description": "Dionaea muscipula 是原产于美国东南部湿地的食虫植物。它需要充足阳光、贫瘠的酸性土壤和持续湿润的环境。叶片会闭合捕捉昆虫。"
+      "description": "一种生长在贫瘠酸性沼泽环境的食虫植物，具有可迅速闭合的捕虫夹。需要强光/全日照、酸性低养分基质，并用雨水/蒸馏水等无矿物质水保持盆土长期湿润。冬季保持较凉并进入休眠更有利，但基质不要干透。"
     },
     "ja": {
       "common_name": "ハエトリグサ",
-      "description": "ディオネア・ムスキプラは米国南東部の湿地に自生する食虫植物です。強い日光、栄養の少ない酸性土壌、常に湿った環境を必要とします。葉は昆虫を捕らえます。"
+      "description": "酸性で栄養の少ない湿地に適応した食虫植物で、トラップが閉じて昆虫を捕らえます。強い光/日光と、低栄養の酸性用土、そして雨水や蒸留水などの軟水で常に湿り気を保つことが重要です。冬は涼しい休眠期を与えつつ、乾かさないようにします。"
     },
     "ko": {
       "common_name": "파리지옥",
-      "description": "디오네아 무시풀라는 미국 남동부 습지 원산의 식충식물입니다. 강한 햇빛과 영양이 적은 산성 토양, 지속적인 습기가 필요합니다. 잎은 곤충을 잡아 영양을 보충합니다."
+      "description": "영양이 적은 산성 습지에 적응한 식충식물로, 덫이 닫혀 곤충을 잡습니다. 강한 빛/직사광선, 산성·저영양 배지, 그리고 빗물/증류수 같은 무기질 없는 물로 항상 촉촉하게 유지하세요. 겨울에는 더 서늘한 휴면이 도움이 되지만 완전히 마르게 두면 안 됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/venus-flytrap/growing-guide",
-      "https://www.botanicgardens.org/plant-care/dionaea-muscipula",
-      "https://www.carnivorousplants.org/grow/guides/Dionaea"
+      "https://www.rhs.org.uk/plants/venus-fly-trap",
+      "https://www.rhs.org.uk/garden-inspiration/plants-we-love/caring-for-a-venus-fly-trap",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=d707",
+      "https://www.kew.org/read-and-watch/venus-flytrap-creepy-carnivorous-plant"
     ]
   }
 }

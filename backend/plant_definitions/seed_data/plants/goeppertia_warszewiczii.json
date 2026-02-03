@@ -1,9 +1,9 @@
 {
   "external_id": "goeppertia_warszewiczii",
-  "name": "Jungle Velvet Calathea",
+  "name": "Goeppertia warszewiczii",
   "latin": "Goeppertia warszewiczii",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": null,
   "image_hero": "goeppertia_warszewiczii.jpg",
   "image_thumb": "goeppertia_warszewiczii.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne rozproszone",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "airy rich soil",
-          "pl": "lekka żyzna gleba",
-          "de": "luftige Erde",
-          "fr": "sol riche aéré",
-          "it": "terreno arioso",
-          "es": "suelo aireado",
-          "pt": "solo arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松肥沃土壤",
-          "ja": "通気性の土",
-          "ko": "통기성 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性の良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep moist",
-          "pl": "utrzymuj wilgoć",
-          "de": "gleichmäßig feucht",
-          "fr": "garder humide",
-          "it": "sempre umido",
-          "es": "mantener húmedo",
-          "pt": "manter úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "항상 촉촉"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "umiarkowana",
-          "de": "mittel",
-          "fr": "modérée",
-          "it": "media",
-          "es": "media",
-          "pt": "moderada",
-          "ar": "متوسطة",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high humidity",
-          "pl": "wysoka wilgotność",
-          "de": "hohe Luftfeuchte",
-          "fr": "forte humidité",
-          "it": "alta umidità",
-          "es": "alta humedad",
-          "pt": "alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietrująca",
-          "de": "ungiftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "clumping foliage",
-          "pl": "kępowy wzrost",
-          "de": "horstbildend",
-          "fr": "port touffu",
-          "it": "crescita cesp.",
-          "es": "crecimiento en mata",
-          "pt": "crescimento em touceira",
-          "ar": "نمو كثيف",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "포기형 성장"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak nadmiernego podlewania",
+          "de": "Kein Überwässern",
+          "fr": "Pas d'excès d'arrosage",
+          "it": "Niente eccesso d'acqua",
+          "es": "No exceso de riego",
+          "pt": "Não regar demais",
+          "ar": "عدم الإفراط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けて",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔씩 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Jungle Velvet Calathea",
-      "description": "Goeppertia warszewiczii is a tropical understory plant native to Central America. It is prized for its velvety, patterned leaves and requires consistently moist soil. Bright indirect light and high humidity help maintain healthy foliage."
+      "common_name": "Prayer Plant",
+      "description": "Goeppertia warszewiczii, also known as the prayer plant, is a vibrant tropical plant known for its beautiful patterned leaves. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Kalatea aksamitna",
-      "description": "Goeppertia warszewiczii to tropikalna roślina pochodząca z Ameryki Środkowej. Ceniona jest za aksamitne, dekoracyjne liście i wymaga stale wilgotnej gleby. Najlepiej rośnie w jasnym, rozproszonym świetle i wysokiej wilgotności."
+      "common_name": "Roślina modlitewna",
+      "description": "Goeppertia warszewiczii, znana jako roślina modlitewna, to tropikalna roślina o pięknych liściach. Wymaga średniego światła i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Samt-Korbmarante",
-      "description": "Goeppertia warszewiczii stammt aus den tropischen Regenwäldern Mittelamerikas. Die Pflanze ist bekannt für ihre samtigen Blätter und benötigt gleichmäßig feuchte Erde. Indirektes Licht und hohe Luftfeuchtigkeit sind ideal."
+      "common_name": "Gebetspflanze",
+      "description": "Goeppertia warszewiczii, auch Gebetspflanze genannt, ist eine tropische Pflanze mit schönen gemusterten Blättern. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Calathée velours",
-      "description": "Goeppertia warszewiczii est une plante tropicale originaire d’Amérique centrale. Elle se distingue par ses feuilles veloutées et demande un sol constamment humide. Une lumière indirecte et une forte humidité sont recommandées."
+      "common_name": "Plante de prière",
+      "description": "Goeppertia warszewiczii, également connue sous le nom de plante de prière, est une plante tropicale vibrante avec de belles feuilles décorées. Elle prospère sous une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Calatea vellutata",
-      "description": "Goeppertia warszewiczii è una pianta tropicale dell’America Centrale. È apprezzata per le foglie vellutate e necessita di terreno sempre leggermente umido. Predilige luce indiretta e umidità elevata."
+      "common_name": "Pianta della preghiera",
+      "description": "Goeppertia warszewiczii, conosciuta anche come pianta della preghiera, è una pianta tropicale vivace con foglie decorate. Cresce bene in luce moderata e umidità elevata."
     },
     "es": {
-      "common_name": "Calatea terciopelo",
-      "description": "Goeppertia warszewiczii es una planta tropical originaria de Centroamérica. Destaca por sus hojas aterciopeladas y requiere sustrato constantemente húmedo. La luz indirecta brillante y la alta humedad son ideales."
+      "common_name": "Planta de oración",
+      "description": "Goeppertia warszewiczii, también conocida como planta de oración, es una planta tropical vibrante conocida por sus hermosas hojas decoradas. Crece bien con luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Calatheia veludo",
-      "description": "Goeppertia warszewiczii é uma planta tropical da América Central. É valorizada pelas folhas aveludadas e precisa de solo sempre úmido. Prefere luz indireta e alta umidade."
+      "common_name": "Planta de oração",
+      "description": "Goeppertia warszewiczii, também conhecida como planta de oração, é uma planta tropical vibrante conhecida por suas belas folhas decoradas. Cresce bem em luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "كالاثيا مخملية",
-      "description": "نبات Goeppertia warszewiczii موطنه المناطق الاستوائية في أمريكا الوسطى. يتميز بأوراقه المخملية ويحتاج إلى تربة رطبة باستمرار. يفضل الضوء غير المباشر والرطوبة العالية."
+      "common_name": "نبات الصلاة",
+      "description": "Goeppertia warszewiczii، المعروفة أيضًا بنبات الصلاة، هي نبات استوائي نابض بالحياة معروف بأوراقه المزخرفة الجميلة. ينمو بشكل جيد في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "जंगल वेल्वेट कैलाथिया",
-      "description": "Goeppertia warszewiczii मध्य अमेरिका का एक उष्णकटिबंधीय पौधा है। इसकी मखमली पत्तियाँ इसे आकर्षक बनाती हैं और इसे लगातार नम मिट्टी की आवश्यकता होती है। अप्रत्यक्ष रोशनी और अधिक नमी उपयुक्त है।"
+      "common_name": "प्रार्थना पौधा",
+      "description": "Goeppertia warszewiczii, जिसे प्रार्थना पौधा भी कहा जाता है, एक उष्णकटिबंधीय पौधा है जिसे अपनी सुंदर पत्तियों के लिए जाना जाता है। यह मध्यम रोशनी और उच्च आर्द्रता में अच्छा बढ़ता है।"
     },
     "zh": {
-      "common_name": "绒叶竹芋",
-      "description": "Goeppertia warszewiczii 原产于中美洲的热带地区。它以天鹅绒般的叶片著称，需要保持土壤湿润。明亮的散射光和较高的空气湿度最为适合。"
+      "common_name": "祈祷植物",
+      "description": "Goeppertia warszewiczii，也称为祈祷植物，是一种以美丽的叶片闻名的热带植物。它在中等光照和高湿度下生长良好。"
     },
     "ja": {
-      "common_name": "ビロードカラテア",
-      "description": "Goeppertia warszewiczii は中米原産の熱帯植物です。ビロード状の葉が特徴で、用土は常に湿り気を保つ必要があります。明るい間接光と高湿度を好みます。"
+      "common_name": "祈りの植物",
+      "description": "Goeppertia warszewiczii、通称祈りの植物は、美しい模様の葉で知られる熱帯植物です。中程度の光と高い湿度でよく育ちます。"
     },
     "ko": {
-      "common_name": "벨벳 칼라테아",
-      "description": "Goeppertia warszewiczii는 중미가 원산지인 열대 식물입니다. 벨벳 같은 잎이 특징이며 토양을 항상 촉촉하게 유지해야 합니다. 밝은 간접광과 높은 습도를 선호합니다."
+      "common_name": "기도 식물",
+      "description": "Goeppertia warszewiczii, 기도 식물로도 알려진 이 식물은 아름다운 무늬의 잎으로 유명한 열대 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/19594/calathea-warszewiczii/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=285433",
-      "https://www.thespruce.com/grow-calathea-warscewiczii-5085257"
+      "https://www.rhs.org.uk/advice/profile?pid=105",
+      "https://www.gardeningknowhow.com/houseplants/pepperomia/peperomia-care.htm"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "aloe_polyphylla",
-  "name": "Spiral Aloe",
+  "name": "Spiral aloe",
   "latin": "Aloe polyphylla",
   "sun": "high",
   "water": "low",
@@ -10,10 +10,10 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Very well-drained",
-          "pl": "Bardzo przepuszczalna",
+          "en": "Fast-draining mix",
+          "pl": "Przepuszczalne",
           "de": "Sehr durchlässig",
           "fr": "Très drainant",
           "it": "Molto drenante",
           "es": "Muy drenante",
-          "pt": "Muito drenado",
-          "ar": "تصريف ممتاز",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जलनिकास वाली",
+          "zh": "排水良好土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega esparsa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "적은 물"
+          "en": "Water when dry",
+          "pl": "Podlej po wysch.",
+          "de": "Gießen bei Trocken",
+          "fr": "Arroser si sec",
+          "it": "Annaffia se secco",
+          "es": "Riega si está seco",
+          "pt": "Regue se seco",
+          "ar": "اسقِ عند الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干后再浇水",
+          "ja": "乾いたら水やり",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging",
-          "pl": "Trudna",
-          "de": "Anspruchsvoll",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Hard indoors",
+          "pl": "Trudna w domu",
+          "de": "Drinnen schwierig",
+          "fr": "Difficile en int.",
+          "it": "Difficile in casa",
+          "es": "Difícil en interior",
+          "pt": "Difícil em interior",
+          "ar": "صعبة داخل المنزل",
+          "hi": "घर में कठिन",
+          "zh": "室内较难",
+          "ja": "室内は難しい",
+          "ko": "실내는 어려움"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool preferred",
-          "pl": "Lubi chłód",
-          "de": "Kühl bevorzugt",
-          "fr": "Aime le frais",
-          "it": "Preferisce fresco",
-          "es": "Prefiere fresco",
-          "pt": "Prefere fresco",
-          "ar": "يفضل البرودة",
-          "hi": "ठंडा पसंद",
-          "zh": "喜凉爽",
-          "ja": "冷涼好み",
-          "ko": "서늘함 선호"
+          "en": "Cool 10-25°C",
+          "pl": "Chłodno 10-25°C",
+          "de": "Kühl 10-25°C",
+          "fr": "Frais 10-25°C",
+          "it": "Fresco 10-25°C",
+          "es": "Fresco 10-25°C",
+          "pt": "Fresco 10-25°C",
+          "ar": "بارد 10-25°م",
+          "hi": "ठंडा 10-25°C",
+          "zh": "10-25°C较适宜",
+          "ja": "涼しい10-25°C",
+          "ko": "서늘한 10-25°C"
         }
       }
     },
@@ -124,7 +124,7 @@
         "text": {
           "en": "Low humidity",
           "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchte",
+          "de": "Geringe Feuchte",
           "fr": "Faible humidité",
           "it": "Bassa umidità",
           "es": "Baja humedad",
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약한 독성"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -160,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
+          "en": "Slow rosette",
+          "pl": "Wolna rozeta",
+          "de": "Langsame Rosette",
+          "fr": "Rosette lente",
+          "it": "Rosetta lenta",
+          "es": "Roseta lenta",
+          "pt": "Roseta lenta",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमी रोसेट",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "ja": "成長ゆっくり",
+          "ko": "느린 로제트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Skłonna do gnicia",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourrit.",
+          "it": "Rischio marciume",
+          "es": "Propensa a pudrición",
+          "pt": "Propensa a apodrec.",
+          "ar": "عرضة للتعفن",
+          "hi": "सड़न का जोखिम",
+          "zh": "易腐烂",
+          "ja": "腐りやすい",
+          "ko": "부패 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schild-, Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي وحشرة قشرية",
+          "hi": "मिलीबग, स्केल",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레류"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Spiral Aloe",
-      "description": "Aloe polyphylla is a rare aloe native to the mountains of Lesotho. It is known for its perfect spiral leaf arrangement and preference for cool, sunny conditions. It is difficult to grow indoors and requires excellent drainage."
+      "common_name": "Spiral aloe",
+      "description": "Aloe polyphylla is a slow-growing aloe known for its spiral rosette of leaves. Provide very well-draining soil and bright light, and let the mix dry between waterings. It prefers cool to mild temperatures and is vulnerable to rot if kept wet."
     },
     "pl": {
       "common_name": "Aloes spiralny",
-      "description": "Aloe polyphylla to rzadki aloes pochodzący z gór Lesotho. Słynie z idealnie spiralnego układu liści i preferuje chłodne, słoneczne warunki. W uprawie domowej jest trudny i wymaga doskonałego drenażu."
+      "description": "Aloe polyphylla to wolno rosnący aloes o spiralnie ułożonych liściach. Wymaga bardzo przepuszczalnego podłoża i jasnego stanowiska oraz podlewania dopiero po przeschnięciu. Lubi chłodniejsze warunki i łatwo gnije w zbyt mokrej ziemi."
     },
     "de": {
       "common_name": "Spiral-Aloe",
-      "description": "Aloe polyphylla ist eine seltene Aloe aus den Bergen Lesothos. Sie ist bekannt für ihre spiralförmige Blattanordnung und benötigt kühle, sonnige Standorte. Die Art ist anspruchsvoll in Kultur und braucht sehr gute Drainage."
+      "description": "Aloe polyphylla ist eine langsam wachsende Aloe mit spiraliger Rosette. Verwende ein sehr gut durchlässiges Substrat, gib viel Licht und gieße erst nach dem Abtrocknen. Sie mag kühle bis milde Temperaturen und fault leicht bei Nässe."
     },
     "fr": {
       "common_name": "Aloès spiralé",
-      "description": "Aloe polyphylla est un aloès rare originaire des montagnes du Lesotho. Il est célèbre pour sa spirale parfaite de feuilles et préfère des conditions fraîches et ensoleillées. Sa culture est délicate et nécessite un drainage excellent."
+      "description": "Aloe polyphylla est un aloès à croissance lente, célèbre pour sa rosette en spirale. Utilisez un mélange très drainant, donnez une lumière vive et arrosez seulement après séchage. Elle préfère des températures fraîches à douces et pourrit si le substrat reste humide."
     },
     "it": {
       "common_name": "Aloe spirale",
-      "description": "Aloe polyphylla è un aloe raro originario delle montagne del Lesotho. È noto per la disposizione a spirale delle foglie e predilige condizioni fresche e soleggiate. È difficile da coltivare in vaso e richiede un drenaggio eccellente."
+      "description": "Aloe polyphylla è un’aloe a crescita lenta con rosetta a spirale. Richiede un substrato molto drenante, tanta luce e annaffiature solo quando il terreno è asciutto. Preferisce temperature fresche-miti e può marcire se resta bagnata."
     },
     "es": {
       "common_name": "Aloe espiral",
-      "description": "Aloe polyphylla es un aloe raro originario de las montañas de Lesoto. Destaca por su perfecta espiral de hojas y prefiere climas frescos y soleados. Su cultivo es exigente y necesita un drenaje excelente."
+      "description": "Aloe polyphylla es un aloe de crecimiento lento conocido por su roseta en espiral. Necesita sustrato muy drenante, mucha luz y riego solo cuando el sustrato se seque. Prefiere temperaturas frescas a templadas y se pudre con facilidad si permanece húmeda."
     },
     "pt": {
       "common_name": "Aloe espiral",
-      "description": "Aloe polyphylla é um aloe raro nativo das montanhas do Lesoto. É conhecido pela espiral perfeita das folhas e prefere clima fresco e sol pleno. O cultivo é difícil e exige drenagem excelente."
+      "description": "Aloe polyphylla é uma aloe de crescimento lento com roseta em espiral. Precisa de substrato muito drenante, bastante luz e regas apenas após secar. Prefere temperaturas frescas a amenas e apodrece se ficar encharcada."
     },
     "ar": {
-      "common_name": "الألوة الحلزونية",
-      "description": "Aloe polyphylla نبات نادر موطنه جبال ليسوتو. يتميز بشكل حلزوني مثالي للأوراق ويفضل الأجواء الباردة والمشمسة. زراعته صعبة ويتطلب تصريفًا ممتازًا للتربة."
+      "common_name": "ألوة حلزونية",
+      "description": "Aloe polyphylla نبات ألوة بطيء النمو معروف بشكل الوردة الحلزونية. يحتاج لتربة شديدة التصريف وضوء ساطع مع الري فقط بعد جفاف الوسط. يفضل درجات حرارة باردة إلى معتدلة ويتعرض للتعفن عند البلل المستمر."
     },
     "hi": {
       "common_name": "स्पाइरल एलो",
-      "description": "Aloe polyphylla लेसोथो के पहाड़ी क्षेत्रों का दुर्लभ एलो है। यह अपनी पत्तियों की सुंदर सर्पिल संरचना और ठंडी, धूप वाली जलवायु के लिए जाना जाता है। इसे उगाना कठिन है और अच्छी जल निकासी आवश्यक है।"
+      "description": "Aloe polyphylla एक धीमी बढ़ने वाली एलो प्रजाति है जिसकी पत्तियाँ सर्पिल रोसेट बनाती हैं। बहुत अच्छी जलनिकासी वाली मिट्टी, तेज़ रोशनी और मिट्टी सूखने पर ही पानी दें। ठंडा से मध्यम तापमान बेहतर है और अधिक नमी से सड़न हो सकती है।"
     },
     "zh": {
       "common_name": "螺旋芦荟",
-      "description": "Aloe polyphylla 原产于莱索托山区，是一种稀有芦荟。它以完美的螺旋叶序和喜凉爽、强光环境而闻名。栽培难度高，需要极佳的排水条件。"
+      "description": "Aloe polyphylla 生长缓慢，以螺旋状莲座叶形著称。需要排水极好的多肉基质和充足光照，基质干透后再浇水。偏好凉爽到温和的温度，长期潮湿容易腐烂。"
     },
     "ja": {
       "common_name": "スパイラルアロエ",
-      "description": "Aloe polyphylla はレソトの山岳地帯原産の希少なアロエです。葉が美しい螺旋状に並び、涼しく日当たりの良い環境を好みます。栽培は難しく、排水性が重要です。"
+      "description": "Aloe polyphylla は葉がらせん状に並ぶロゼットで知られる、成長が遅いアロエです。水はけの良い用土と明るい光を好み、乾いてから与えます。涼しめ〜温和な温度を好み、過湿で腐りやすいです。"
     },
     "ko": {
       "common_name": "스파이럴 알로에",
-      "description": "Aloe polyphylla는 레소토 산악 지대 원산의 희귀한 알로에입니다. 완벽한 나선형 잎 배열과 서늘하고 햇빛이 풍부한 환경을 선호합니다. 재배가 까다롭고 배수가 매우 중요합니다."
+      "description": "Aloe polyphylla 는 잎이 나선형 로제트를 이루는 느린 생장 알로에입니다. 배수가 매우 좋은 흙과 밝은 빛이 필요하며, 흙이 마른 뒤 물을 줍니다. 서늘한~온화한 온도를 선호하고 과습 시 부패하기 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/aloe-polyphylla",
-      "https://www.succulentsociety.org/resources/spiral-aloe/",
-      "https://www.rhs.org.uk/plants/142/aloe-polyphylla/details"
+      "https://www.rhs.org.uk/plants/135837/aloe-polyphylla/details",
+      "https://www.rhs.org.uk/plants/aloe",
+      "https://pza.sanbi.org/aloe-polyphylla",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/aloe"
     ]
   }
 }

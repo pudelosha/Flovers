@@ -4,24 +4,22 @@
   "latin": "Aloysia citrodora",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "aloysia_citrodora.jpg",
   "image_thumb": "aloysia_citrodora.jpg",
   "traits": [
@@ -39,7 +37,7 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日向",
+          "ja": "日なた",
           "ko": "직사광"
         }
       }
@@ -48,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Well-drained soil",
           "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainé",
-          "it": "Drenante",
-          "es": "Drenado",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "जल निकासी",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जलनिकास वाली",
           "zh": "排水良好",
-          "ja": "水はけ良",
-          "ko": "배수 양호"
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适量",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Water when top dries",
+          "pl": "Gdy wierzch przeschnie",
+          "de": "Gießen wenn trocken",
+          "fr": "Arroser si sec",
+          "it": "Annaffia a secco",
+          "es": "Riega al secar",
+          "pt": "Regar ao secar",
+          "ar": "اسقِ بعد جفاف السطح",
+          "hi": "ऊपर सूखे तो दें",
+          "zh": "表土干再浇",
+          "ja": "表土乾いたら水",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Bedarf",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "手入れ普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "Frost tender",
+          "pl": "Wrażliwa na mróz",
+          "de": "Frostempfindlich",
+          "fr": "Craint le gel",
+          "it": "Teme il gelo",
+          "es": "Sensible a heladas",
+          "pt": "Sensível à geada",
+          "ar": "لا تتحمل الصقيع",
+          "hi": "पाला सहन नहीं",
+          "zh": "不耐霜冻",
+          "ja": "霜に弱い",
+          "ko": "서리 약함"
         }
       }
     },
@@ -124,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -143,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "अविषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Shrubby",
-          "pl": "Krzewiasta",
-          "de": "Strauchig",
-          "fr": "Arbustive",
-          "it": "Arbustiva",
-          "es": "Arbustiva",
-          "pt": "Arbustiva",
-          "ar": "شجيرية",
-          "hi": "झाड़ीदार",
-          "zh": "灌木状",
-          "ja": "低木状",
-          "ko": "관목형"
+          "en": "Woody herb shrub",
+          "pl": "Ziołowy krzew",
+          "de": "Verholzender Strauch",
+          "fr": "Arbrisseau aromatique",
+          "it": "Arbusto aromatico",
+          "es": "Arbusto aromático",
+          "pt": "Arbusto aromático",
+          "ar": "شجيرة عطرية",
+          "hi": "सुगंधित झाड़ी",
+          "zh": "芳香灌木",
+          "ja": "香りの低木",
+          "ko": "향기 관목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No waterlogging",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Pas d'excès d'eau",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "अधिक पानी नहीं",
+          "zh": "忌积水",
+          "ja": "過湿に注意",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites, whitefly",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ وعناكب دقيقة",
+          "hi": "एफिड व स्पाइडर माइट",
+          "zh": "蚜虫与红蜘蛛",
+          "ja": "アブラムシ・ハダニ",
+          "ko": "진딧물·응애"
         }
       }
     }
@@ -181,58 +217,60 @@
   "translations": {
     "en": {
       "common_name": "Lemon verbena",
-      "description": "Aromatic shrub native to South America, valued for its lemon-scented leaves. It prefers full sun, warm conditions, and regular watering during growth."
+      "description": "Aloysia citrodora is a fragrant shrub grown for lemon-scented leaves used in teas and cooking. Give it full sun and well-drained soil, watering when the surface dries. It is frost-tender and is often overwintered indoors with reduced watering."
     },
     "pl": {
       "common_name": "Werbena cytrynowa",
-      "description": "Aromatyczny krzew z Ameryki Południowej o cytrynowym zapachu liści. Wymaga słońca, ciepła i regularnego podlewania w sezonie."
+      "description": "Aloysia citrodora to pachnący krzew o cytrynowym aromacie liści, używanych do naparów i w kuchni. Wymaga pełnego słońca i przepuszczalnego podłoża; podlewaj, gdy wierzch ziemi przeschnie. Jest wrażliwa na mróz i zimą zwykle trzyma się ją w pomieszczeniu, ograniczając podlewanie."
     },
     "de": {
       "common_name": "Zitronenverbene",
-      "description": "Duftender Strauch aus Südamerika mit zitronigem Aroma. Bevorzugt volle Sonne, Wärme und gleichmäßiges Gießen."
+      "description": "Aloysia citrodora ist ein aromatischer Strauch mit zitronig duftenden Blättern für Tee und Küche. Stelle sie sonnig und in gut drainierte Erde; gieße, wenn die Oberfläche abgetrocknet ist. Sie ist frostempfindlich und wird in kalten Regionen oft im Topf überwintert, dann sparsamer gießen."
     },
     "fr": {
       "common_name": "Verveine citronnelle",
-      "description": "Arbuste aromatique d’Amérique du Sud aux feuilles citronnées. Il aime le plein soleil et un arrosage régulier."
+      "description": "Aloysia citrodora est un arbuste aromatique aux feuilles très parfumées, utilisées en infusion et en cuisine. Placez-la au plein soleil dans un sol bien drainé et arrosez quand le dessus du substrat sèche. Elle craint le gel et se conserve souvent en pot à l’intérieur l’hiver, avec moins d’arrosage."
     },
     "it": {
       "common_name": "Cedrina",
-      "description": "Arbusto aromatico sudamericano con foglie al profumo di limone. Cresce bene al sole con annaffiature regolari."
+      "description": "Aloysia citrodora è un arbusto aromatico con foglie profumate di limone, usate per tisane e in cucina. Vuole pieno sole e substrato ben drenato; annaffia quando la superficie asciuga. È sensibile al gelo e spesso si sverna in vaso al riparo, riducendo l’acqua."
     },
     "es": {
       "common_name": "Hierba luisa",
-      "description": "Arbusto aromático de Sudamérica con intenso aroma a limón. Necesita sol pleno y riego moderado."
+      "description": "Aloysia citrodora es un arbusto aromático con hojas de intenso olor a limón, usadas en infusiones y cocina. Necesita pleno sol y sustrato bien drenado; riega cuando la capa superior se seque. Es sensible a las heladas y suele invernarse en interior en maceta con menos riego."
     },
     "pt": {
-      "common_name": "Lúcia-lima",
-      "description": "Arbusto aromático originário da América do Sul, com folhas perfumadas de limão. Prefere sol pleno e regas regulares."
+      "common_name": "Erva-luísa",
+      "description": "Aloysia citrodora é um arbusto aromático com folhas de perfume cítrico, usadas em chás e na culinária. Prefere sol pleno e substrato bem drenado; regue quando a camada superior secar. É sensível à geada e geralmente é mantida em vaso no interior no inverno, com regas reduzidas."
     },
     "ar": {
       "common_name": "لويزة",
-      "description": "شجيرة عطرية من أمريكا الجنوبية بأوراق برائحة الليمون. تحتاج إلى شمس كاملة وري معتدل."
+      "description": "Aloysia citrodora شجيرة عطرية بأوراق ذات رائحة ليمونية تُستخدم في الشاي والطبخ. تحتاج شمسًا كاملة وتربة جيدة الصرف، ويكون الري بعد جفاف سطح التربة. لا تتحمل الصقيع وغالبًا تُحفظ في الداخل شتاءً مع تقليل الري."
     },
     "hi": {
       "common_name": "लेमन वर्बेना",
-      "description": "दक्षिण अमेरिका की सुगंधित झाड़ी, जिसकी पत्तियों में नींबू की खुशबू होती है। इसे धूप और नियमित पानी पसंद है।"
+      "description": "Aloysia citrodora एक सुगंधित झाड़ी है जिसकी पत्तियाँ नींबू जैसी खुशबू वाली होती हैं और चाय/खाने में उपयोग होती हैं। इसे पूरी धूप और अच्छे जलनिकास वाली मिट्टी दें; ऊपर की मिट्टी सूखे तो पानी दें। यह पाला नहीं सहती, इसलिए सर्दियों में अक्सर गमले सहित अंदर रखकर कम पानी दिया जाता है।"
     },
     "zh": {
       "common_name": "柠檬马鞭草",
-      "description": "原产南美的芳香灌木，叶片带柠檬香味。喜全日照和适量浇水。"
+      "description": "Aloysia citrodora 为芳香灌木，叶片带浓郁柠檬香，常用于花草茶与烹饪。需充足日照与排水良好的基质，表土变干后再浇水。它不耐霜冻，寒冷季节多以盆栽移入室内并减少浇水。"
     },
     "ja": {
       "common_name": "レモンバーベナ",
-      "description": "南米原産の香り高い低木で、葉にレモンの香りがあります。日当たりと適度な水やりを好みます。"
+      "description": "Aloysia citrodora はレモンの香りが強い葉を持つ芳香低木で、ハーブティーや料理に使われます。日当たりと水はけの良い用土を好み、表土が乾いたら水やりします。霜に弱いため、寒い時期は鉢で室内に取り込み水やりを控えめにします。"
     },
     "ko": {
       "common_name": "레몬버베나",
-      "description": "남아메리카 원산의 향기로운 관목으로 잎에서 레몬 향이 납니다. 햇빛과 규칙적인 물주기가 필요합니다."
+      "description": "Aloysia citrodora 는 잎에서 강한 레몬 향이 나는 향기 관목으로 차나 요리에 사용됩니다. 햇빛이 잘 드는 곳과 배수 좋은 흙을 주고, 겉흙이 마르면 물을 줍니다. 서리에 약해 추운 계절에는 실내로 들여 물 주기를 줄이는 편이 안전합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/aloysia-citrodora/details",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:8632-1",
-      "https://extension.oregonstate.edu/gardening/herbs/lemon-verbena"
+      "https://plants.ces.ncsu.edu/plants/aloysia-citriodora/",
+      "https://ucanr.edu/site/uc-marin-master-gardeners/documents/lemon-verbena",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/lemon-verbena",
+      "https://www.portlandnursery.com/herbs/verbena",
+      "https://www.thespruce.com/how-to-grow-and-care-for-lemon-verbena-4690675"
     ]
   }
 }

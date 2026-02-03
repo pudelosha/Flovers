@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "thaumatophyllum_adamantinum.jpg",
   "image_thumb": "thaumatophyllum_adamantinum.jpg",
   "traits": [
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 조명"
         }
       }
     },
@@ -50,16 +50,16 @@
         "text": {
           "en": "Aroid mix",
           "pl": "Mieszanka dla aroidów",
-          "de": "Aroid-Mischung",
+          "de": "Aroid-Erde",
           "fr": "Mélange pour aroides",
-          "it": "Miscela per aroidi",
+          "it": "Terriccio per aroidi",
           "es": "Mezcla para aroides",
           "pt": "Mistura para aroides",
-          "ar": "خليط لأريود",
+          "ar": "خليط للأيرودات",
           "hi": "एरोइड मिश्रण",
-          "zh": "阿罗伊德混合土",
+          "zh": "喜阴植物土壤",
           "ja": "アロイドミックス",
-          "ko": "아로이드 혼합"
+          "ko": "아로이드 혼합 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittleres Gießen",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "الري المتوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
         }
       }
     },
@@ -90,9 +90,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-28°C",
-          "pl": "22-28°C",
-          "de": "22-28°C",
-          "fr": "22-28°C",
-          "it": "22-28°C",
-          "es": "22-28°C",
-          "pt": "22-28°C",
-          "ar": "22-28°C",
-          "hi": "22-28°C",
-          "zh": "22-28°C",
-          "ja": "22-28°C",
-          "ko": "22-28°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysokie",
-          "de": "Hoch",
-          "fr": "Élevé",
-          "it": "Alto",
-          "es": "Alto",
-          "pt": "Alto",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Toksyczny",
-          "de": "Toxisch",
-          "fr": "Toxique",
-          "it": "Tossico",
-          "es": "Tóxico",
-          "pt": "Tóxico",
-          "ar": "سام",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium growth",
-          "pl": "Średni wzrost",
-          "de": "Mittleres Wachstum",
-          "fr": "Croissance moyenne",
-          "it": "Crescita media",
-          "es": "Crecimiento medio",
-          "pt": "Crescimento médio",
-          "ar": "نمو متوسط",
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
           "zh": "中等生长",
           "ja": "中程度の成長",
           "ko": "중간 성장"
         }
       }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter un arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
+        }
+      }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Crystal Philodendron",
-      "description": "A striking plant with large, glossy leaves. It thrives in medium light and warm, humid environments."
+      "common_name": "Emerald Gem",
+      "description": "Thaumatophyllum adamantinum is a striking tropical plant known for its large, glossy leaves. It thrives in moderate indoor conditions and requires regular but not excessive watering."
     },
     "pl": {
-      "common_name": "Filodendron Kryształowy",
-      "description": "Roślina o dużych, błyszczących liściach. Rośnie w średnim świetle i ciepłym, wilgotnym otoczeniu."
+      "common_name": "Szmaragdowy klejnot",
+      "description": "Thaumatophyllum adamantinum to uderzająca roślina tropikalna, znana z dużych, błyszczących liści. Dobrze rośnie w umiarkowanych warunkach wewnętrznych i wymaga regularnego, ale niezbyt obfitego podlewania."
     },
     "de": {
-      "common_name": "Kristall-Philodendron",
-      "description": "Eine auffällige Pflanze mit großen, glänzenden Blättern. Sie gedeiht bei mittlerem Licht und in warmen, feuchten Umgebungen."
+      "common_name": "Smaragdjuwel",
+      "description": "Thaumatophyllum adamantinum ist eine auffällige tropische Pflanze, die für ihre großen, glänzenden Blätter bekannt ist. Sie gedeiht unter moderaten Innenbedingungen und benötigt regelmäßiges, aber nicht übermäßiges Gießen."
     },
     "fr": {
-      "common_name": "Philodendron Cristal",
-      "description": "Une plante saisissante avec de grandes feuilles brillantes. Elle prospère sous une lumière moyenne et dans des environnements chauds et humides."
+      "common_name": "Bijou émeraude",
+      "description": "Thaumatophyllum adamantinum est une plante tropicale frappante, connue pour ses grandes feuilles brillantes. Elle prospère dans des conditions intérieures modérées et nécessite un arrosage régulier mais non excessif."
     },
     "it": {
-      "common_name": "Philodendron Cristallo",
-      "description": "Una pianta sorprendente con grandi foglie lucide. Cresce in luce media e in ambienti caldi e umidi."
+      "common_name": "Gioiello di smeraldo",
+      "description": "Thaumatophyllum adamantinum è una pianta tropicale impressionante, nota per le sue grandi foglie lucide. Cresce bene in condizioni interne moderate e richiede annaffiature regolari ma non eccessive."
     },
     "es": {
-      "common_name": "Filodendro Cristal",
-      "description": "Una planta llamativa con grandes hojas brillantes. Prosperan con luz media y en ambientes cálidos y húmedos."
+      "common_name": "Joya esmeralda",
+      "description": "Thaumatophyllum adamantinum es una planta tropical llamativa, conocida por sus grandes hojas brillantes. Prospera en condiciones interiores moderadas y necesita riego regular pero no excesivo."
     },
     "pt": {
-      "common_name": "Filodendro Cristal",
-      "description": "Uma planta impressionante com grandes folhas brilhantes. Cresce em luz média e em ambientes quentes e úmidos."
+      "common_name": "Joia esmeralda",
+      "description": "Thaumatophyllum adamantinum é uma planta tropical impressionante, conhecida por suas grandes folhas brilhantes. Ela cresce bem em condições internas moderadas e requer rega regular, mas não excessiva."
     },
     "ar": {
-      "common_name": "فيلوديندرون الكريستال",
-      "description": "نبتة لافتة للنظر ذات أوراق لامعة وكبيرة. تنمو في الضوء المتوسط وفي بيئات دافئة ورطبة."
+      "common_name": "جوهرة الزمرد",
+      "description": "Thaumatophyllum adamantinum هي نبات استوائي لافت للنظر معروف بأوراقه الكبيرة اللامعة. يزدهر في الظروف الداخلية المعتدلة ويحتاج إلى الري المنتظم ولكن ليس المفرط."
     },
     "hi": {
-      "common_name": "क्रिस्टल फिलोडेंड्रोन",
-      "description": "यह एक आकर्षक पौधा है जिसकी बड़ी, चमकदार पत्तियां होती हैं। यह मध्यम रोशनी और गर्म, नम वातावरण में बढ़ता है।"
+      "common_name": "Emerald Gem",
+      "description": "Thaumatophyllum adamantinum एक आकर्षक उष्णकटिबंधीय पौधा है जो अपनी बड़ी, चमकदार पत्तियों के लिए जाना जाता है। यह मध्यम इनडोर परिस्थितियों में पनपता है और नियमित लेकिन अत्यधिक नहीं पानी देने की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "水晶蔓绿绳",
-      "description": "这是一种引人注目的植物，具有大而光亮的叶子。它在中等光照和温暖潮湿的环境中茁壮成长。"
+      "common_name": "翡翠宝石",
+      "description": "Thaumatophyllum adamantinum是一种引人注目的热带植物，以其大型光泽叶片而闻名。它在适度的室内条件下茁壮成长，需要定期但不过度浇水。"
     },
     "ja": {
-      "common_name": "クリスタルフィロデンドロン",
-      "description": "大きくて光沢のある葉を持つ印象的な植物です。中程度の光と暖かく湿った環境で育ちます。"
+      "common_name": "エメラルドジェム",
+      "description": "Thaumatophyllum adamantinumは、その大きく光沢のある葉で知られる印象的な熱帯植物です。適度な室内条件で成長し、定期的な水やりが必要ですが、過剰ではありません。"
     },
     "ko": {
-      "common_name": "크리스탈 필로덴드론",
-      "description": "크고 광택 있는 잎을 가진 인상적인 식물입니다. 중간 정도의 빛과 따뜻하고 습한 환경에서 자랍니다."
+      "common_name": "에메랄드 젬",
+      "description": "Thaumatophyllum adamantinum은 큰 광택 있는 잎으로 유명한 눈에 띄는 열대 식물입니다. 중간 정도의 실내 조건에서 잘 자라며 정기적인 물주기가 필요하지만 과도하지는 않습니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/thaumatophyllum-adamantinum",
-      "https://www.bhg.com/gardening/plant-dictionary/philodendron-crystal"
+      "https://www.gardenia.net/plant/thaumatophyllum-adamantinum"
     ]
   }
 }

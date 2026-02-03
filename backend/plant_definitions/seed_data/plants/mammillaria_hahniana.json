@@ -1,20 +1,21 @@
 {
   "external_id": "mammillaria_hahniana",
-  "name": "Old Lady Cactus",
+  "name": "Hahn's Cactus",
   "latin": "Mammillaria hahniana",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "en": "High light",
+          "pl": "Dużo światła",
+          "de": "Viel Licht",
+          "fr": "Lumière forte",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz alta",
+          "ar": "ضوء عالٍ",
+          "hi": "उच्च रोशनी",
+          "zh": "高光照",
+          "ja": "強い光",
+          "ko": "강한 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Cactus soil",
+          "pl": "Podłoże dla kaktusów",
+          "de": "Kaktus Erde",
+          "fr": "Terre pour cactus",
+          "it": "Terreno per cactus",
+          "es": "Tierra para cactus",
+          "pt": "Solo para cactos",
+          "ar": "تربة للصبار",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "仙人掌土壤",
+          "ja": "サボテン土壌",
+          "ko": "선인장 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -123,16 +124,16 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Geringe Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
           "ja": "低湿度",
           "ko": "낮은 습도"
         }
@@ -143,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मामूली कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Old Lady Cactus",
-      "description": "Mammillaria hahniana is a small, globular cactus covered in white spines. It produces a ring of pink flowers in spring. It is native to central Mexico."
+      "common_name": "Hahn's Cactus",
+      "description": "Mammillaria hahniana, commonly known as Hahn's Cactus, is a slow-growing, small cactus. It thrives in bright light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Kaktus Staruszka",
-      "description": "Mammillaria hahniana to mały, kulisty kaktus pokryty białymi cierniami. Wiosną tworzy różowe kwiaty w pierścieniu. Pochodzi z Meksyku."
+      "common_name": "Kaktus Hahna",
+      "description": "Mammillaria hahniana, znany jako Kaktus Hahna, to powoli rosnący, mały kaktus. Wymaga jasnego światła i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Greisenkaktus",
-      "description": "Mammillaria hahniana ist ein kleiner, kugeliger Kaktus mit weißen Dornen. Im Frühjahr erscheinen rosa Blüten. Die Art stammt aus Mexiko."
+      "common_name": "Hahns Kaktus",
+      "description": "Mammillaria hahniana, auch Hahns Kaktus genannt, ist ein langsam wachsender, kleiner Kaktus. Er benötigt viel Licht und mäßige Bewässerung."
     },
     "fr": {
-      "common_name": "Cactus vieille dame",
-      "description": "Mammillaria hahniana est un cactus globuleux couvert d’épines blanches. Il fleurit au printemps avec des fleurs roses. Originaire du Mexique."
+      "common_name": "Cactus de Hahn",
+      "description": "Mammillaria hahniana, appelé aussi Cactus de Hahn, est un cactus à croissance lente. Il préfère la lumière intense et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Cactus vecchietta",
-      "description": "Mammillaria hahniana è un piccolo cactus globoso con spine bianche. In primavera produce fiori rosa. È originario del Messico."
+      "common_name": "Cactus di Hahn",
+      "description": "Mammillaria hahniana, conosciuto come Cactus di Hahn, è un cactus a crescita lenta. Richiede molta luce e irrigazione moderata."
     },
     "es": {
-      "common_name": "Cactus viejita",
-      "description": "Mammillaria hahniana es un cactus pequeño y globoso con espinas blancas. Florece en primavera con flores rosadas. Es originario de México."
+      "common_name": "Cactus de Hahn",
+      "description": "Mammillaria hahniana, conocido como Cactus de Hahn, es un cactus de crecimiento lento. Requiere mucha luz y riego moderado."
     },
     "pt": {
-      "common_name": "Cacto velhinha",
-      "description": "Mammillaria hahniana é um pequeno cacto globoso coberto por espinhos brancos. Floresce na primavera com flores rosas. É nativo do México."
+      "common_name": "Cacto de Hahn",
+      "description": "Mammillaria hahniana, conhecido como Cacto de Hahn, é um cacto de crescimento lento. Requer luz intensa e rega moderada."
     },
     "ar": {
-      "common_name": "صبار العجوز",
-      "description": "ماميلاريا هانيانا صبار صغير كروي مغطى بأشواك بيضاء. يزهر في الربيع بأزهار وردية. موطنه الأصلي المكسيك."
+      "common_name": "صبار هان",
+      "description": "Mammillaria hahniana، والمعروف أيضًا باسم صبار هان، هو صبار بطيء النمو. يحتاج إلى الضوء الساطع ويتطلب الري المعتدل."
     },
     "hi": {
-      "common_name": "ओल्ड लेडी कैक्टस",
-      "description": "मेमिलेरिया हानियाना एक छोटा गोलाकार कैक्टस है। इसमें सफेद कांटे और गुलाबी फूल होते हैं। यह मेक्सिको का मूल निवासी है।"
+      "common_name": "हान का कैक्टस",
+      "description": "Mammillaria hahniana, जिसे हान का कैक्टस कहा जाता है, एक धीमी वृद्धि वाला, छोटा कैक्टस है। इसे तेज़ रोशनी और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "老妇人仙人掌",
-      "description": "乳突球属哈尼亚纳是一种小型球状仙人掌。表面覆盖白色刺，春季开粉色花。原产于墨西哥。"
+      "common_name": "哈恩仙人掌",
+      "description": "Mammillaria hahniana，又名哈恩仙人掌，是一种生长缓慢的小型仙人掌。它需要明亮的光照和适度的浇水。"
     },
     "ja": {
-      "common_name": "オールドレディカクタス",
-      "description": "マミラリア・ハニアナは白い棘に覆われた小型の球状サボテンです。春にピンクの花を咲かせます。原産地はメキシコです。"
+      "common_name": "ハーンサボテン",
+      "description": "Mammillaria hahniana、通称ハーンサボテンは、成長が遅い小さなサボテンです。強い光を好み、適度な水やりを必要とします。"
     },
     "ko": {
-      "common_name": "올드 레이디 선인장",
-      "description": "마밀라리아 하니아나는 흰 가시로 덮인 작은 구형 선인장입니다. 봄에 분홍색 꽃을 피웁니다. 멕시코 원산입니다."
+      "common_name": "한스 선인장",
+      "description": "Mammillaria hahniana, 한스 선인장으로도 알려진 이 선인장은 느리게 자라는 작은 선인장입니다. 강한 빛을 필요로 하며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10516/mammillaria-hahniana/details",
-      "https://www.cactus-art.biz/schede/MAMMILLARIA/Mammillaria_hahniana/Mammillaria_hahniana.htm",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:133536-1"
+      "https://www.cactus-succulent.com",
+      "https://www.bhg.com/gardening"
     ]
   }
 }

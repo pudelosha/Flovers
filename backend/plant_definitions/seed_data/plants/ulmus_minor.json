@@ -1,27 +1,27 @@
 {
   "external_id": "ulmus_minor",
-  "name": "Field Elm",
+  "name": "English elm",
   "latin": "Ulmus minor",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "clay"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
   "image_hero": "ulmus_minor.jpg",
   "image_thumb": "ulmus_minor.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
-          "de": "volle Sonne",
-          "fr": "plein soleil",
-          "it": "sole pieno",
-          "es": "sol pleno",
-          "pt": "sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूर्ण सूरज",
-          "zh": "充足阳光",
-          "ja": "日当たり良好",
-          "ko": "충분한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "moist loam",
-          "pl": "wilgotna gleba",
-          "de": "feuchte Lehmboden",
-          "fr": "sol limoneux humide",
-          "it": "terreno limoso umido",
-          "es": "suelo limoso húmedo",
-          "pt": "solo limoso húmido",
-          "ar": "تربة طينية رطبة",
-          "hi": "गीला दोम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿ったローム土",
-          "ko": "습한 양토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowane",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Regagem média",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyen",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "tolerates frost",
-          "pl": "toleruje mróz",
-          "de": "frosttolerant",
-          "fr": "tolère le gel",
-          "it": "tollera gelo",
-          "es": "tolera heladas",
-          "pt": "tolera geada",
-          "ar": "يتحمل الصقيع",
-          "hi": "ठंढ सहन",
-          "zh": "耐霜冻",
-          "ja": "霜に強い",
-          "ko": "서리를 견딤"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "normal",
-          "pl": "normalna",
-          "de": "normal",
-          "fr": "normale",
-          "it": "normale",
-          "es": "normal",
-          "pt": "normal",
-          "ar": "عادي",
-          "hi": "साधारण",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non toxic",
-          "pl": "nietoksyczny",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossico",
-          "es": "no tóxico",
-          "pt": "não tóxico",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषैले",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast growing",
-          "pl": "szybko rośnie",
-          "de": "schnell wachsend",
-          "fr": "croissance rapide",
-          "it": "crescita rapida",
-          "es": "crecimiento rápido",
-          "pt": "crescimento rápido",
-          "ar": "ينمو بسرعة",
-          "hi": "तेजी से बढ़ता",
-          "zh": "生长快",
-          "ja": "成長が早い",
-          "ko": "빠르게 성장"
+          "en": "Medium growth rate",
+          "pl": "Średni tempo wzrostu",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Taux de croissance moyen",
+          "it": "Velocità di crescita media",
+          "es": "Tasa de crecimiento media",
+          "pt": "Taxa de crescimento média",
+          "ar": "معدل نمو متوسط",
+          "hi": "मध्यम वृद्धि दर",
+          "zh": "中等生长速度",
+          "ja": "中程度の成長速度",
+          "ko": "중간 성장 속도"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evite el riego excesivo",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرाती पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Field Elm",
-      "description": "Ulmus minor is a deciduous tree native to Europe. It prefers full sun and moist fertile soils with good drainage. It often grows along rivers and supports diverse wildlife."
+      "common_name": "English elm",
+      "description": "Ulmus minor, commonly known as the English elm, is a deciduous tree native to Europe and parts of Asia. It is known for its durability and ability to thrive in a variety of conditions."
     },
     "pl": {
-      "common_name": "Wiąz polny",
-      "description": "Ulmus minor to drzewo liściaste występujące w Europie. Lubi pełne słońce i wilgotne, żyzne gleby. Często rośnie nad rzekami i wspiera różnorodne życie dzikich zwierząt."
+      "common_name": "Wiąz pospolity",
+      "description": "Ulmus minor, znany jako wiąz pospolity, to drzewo liściaste, które pochodzi z Europy i części Azji. Jest znany ze swojej wytrzymałości i zdolności do przetrwania w różnych warunkach."
     },
     "de": {
-      "common_name": "Feldulme",
-      "description": "Ulmus minor ist ein Laubbaum, der in Europa heimisch ist. Er bevorzugt volle Sonne und feuchte, fruchtbare Böden. Er wächst oft an Flussufern und unterstützt vielfältige Tierwelt."
+      "common_name": "Gemeine Ulme",
+      "description": "Ulmus minor, auch als gemeine Ulme bekannt, ist ein Laubbaum, der in Europa und Teilen Asiens beheimatet ist. Er ist bekannt für seine Widerstandsfähigkeit und die Fähigkeit, in verschiedenen Bedingungen zu gedeihen."
     },
     "fr": {
-      "common_name": "Orme champêtre",
-      "description": "Ulmus minor est un arbre à feuilles caduques originaire d'Europe. Il préfère le plein soleil et les sols fertiles et humides. Il pousse souvent le long des rivières et soutient la faune."
+      "common_name": "Orme de Caroline",
+      "description": "Ulmus minor, également connu sous le nom d'orme de Caroline, est un arbre à feuilles caduques originaire d'Europe et de certaines parties de l'Asie. Il est connu pour sa durabilité et sa capacité à prospérer dans diverses conditions."
     },
     "it": {
-      "common_name": "Olmo campestre",
-      "description": "Ulmus minor è un albero deciduo originario dell'Europa. Preferisce pieno sole e suoli fertili e umidi. Cresce spesso lungo i fiumi e supporta molte specie faunistiche."
+      "common_name": "Olmo minore",
+      "description": "Ulmus minor, noto anche come olmo minore, è un albero a foglie decidue originario dell'Europa e di alcune parti dell'Asia. È noto per la sua durabilità e per la capacità di prosperare in diverse condizioni."
     },
     "es": {
       "common_name": "Olmo menor",
-      "description": "Ulmus minor es un árbol caducifolio originario de Europa. Prefiere pleno sol y suelos húmedos y fértiles. Crece a menudo junto a ríos y apoya fauna diversa."
+      "description": "Ulmus minor, conocido como olmo menor, es un árbol de hoja caduca originario de Europa y algunas partes de Asia. Es conocido por su durabilidad y su capacidad para prosperar en diversas condiciones."
     },
     "pt": {
-      "common_name": "Olmo-comum",
-      "description": "Ulmus minor é uma árvore decídua nativa da Europa. Prefere sol pleno e solos férteis e húmidos. Frequentemente cresce junto a rios e apoia vida selvagem."
+      "common_name": "Olmo menor",
+      "description": "Ulmus minor, também conhecido como olmo menor, é uma árvore de folhas caducas nativa da Europa e de algumas partes da Ásia. É conhecido pela sua durabilidade e capacidade de prosperar em diversas condições."
     },
     "ar": {
-      "common_name": "العلْف البري",
-      "description": "Ulmus minor شجرة نفضية موطنها أوروبا. تفضل الشمس الكاملة والترب الرطبة الخصبة. غالبًا ما تنمو على ضفاف الأنهار وتدعم الحياة البرية."
+      "common_name": "الزهرم الصغير",
+      "description": "ألماس مينور، المعروف أيضًا بالزهرم الصغير، هو شجرة نفضية موطنها أوروبا وبعض أجزاء آسيا. ويعرف بمتانته وقدرته على الازدهار في ظروف متنوعة."
     },
     "hi": {
-      "common_name": "मैदान वर्म",
-      "description": "Ulmus minor यूरोप का पर्णपाती वृक्ष है। यह पूर्ण धूप और नम उपजाऊ मिट्टी पसंद करता है। यह अक्सर नदियों के किनारे बढ़ता है और वन्यजीवन का समर्थन करता है।"
+      "common_name": "साधारण उल्म",
+      "description": "उल्मस माइनर, जिसे साधारण उल्म के नाम से भी जाना जाता है, यूरोप और एशिया के कुछ हिस्सों का एक पर्णपाती पेड़ है। यह अपनी स्थिरता और विभिन्न परिस्थितियों में फलने-फूलने की क्षमता के लिए जाना जाता है."
     },
     "zh": {
-      "common_name": "野生榆",
-      "description": "Ulmus minor 是原产于欧洲的落叶树。它喜欢充足阳光和湿润肥沃的土壤。它常沿河流生长并支持多样的野生动物。"
+      "common_name": "普通榆树",
+      "description": "Ulmus minor，常称为普通榆树，原产于欧洲和亚洲部分地区。以其耐久性和能够在各种条件下生长的能力而闻名。"
     },
     "ja": {
-      "common_name": "ヨーロッパニレ",
-      "description": "Ulmus minor はヨーロッパ原産の落葉樹です。十分な日光と湿った肥沃な土壌を好みます。川沿いに生育し、多様な野生生物を支えます。"
+      "common_name": "イングリッシュエルム",
+      "description": "ウルムス・マイナー（Ulmus minor）、通称イングリッシュエルムは、ヨーロッパとアジアの一部に自生する落葉樹です。その耐久性と様々な条件で育つ能力で知られています。"
     },
     "ko": {
-      "common_name": "들버드나무",
-      "description": "Ulmus minor 는 유럽이 원산인 낙엽수입니다. 충분한 햇빛과 습한 비옥한 토양을 선호합니다. 강가에서 자라며 다양한 야생생물을 지원합니다."
+      "common_name": "영국 느릅나무",
+      "description": "Ulmus minor, 흔히 영국 느릅나무로 알려진 이 나무는 유럽과 아시아 일부 지역에 자생하는 낙엽수입니다. 내구성이 뛰어나고 다양한 조건에서 잘 자라는 능력으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/164598/ulmus-minor/details",
-      "https://plants.ces.ncsu.edu/plants/ulmus-minor/"
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/elm-tree-care/",
+      "https://www.rhs.org.uk/advice/profile?pid=426"
     ]
   }
 }

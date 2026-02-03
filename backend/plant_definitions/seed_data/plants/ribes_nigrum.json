@@ -1,6 +1,6 @@
 {
   "external_id": "ribes_nigrum",
-  "name": "Blackcurrant",
+  "name": "Black Currant",
   "latin": "Ribes nigrum",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "acidic",
-          "pl": "kwaśna",
-          "de": "sauer",
-          "fr": "acide",
-          "it": "acido",
-          "es": "ácida",
-          "pt": "ácida",
-          "ar": "حمضي",
-          "hi": "अम्लीय",
-          "zh": "酸性",
-          "ja": "酸性",
-          "ko": "산성"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "cool to moderate",
-          "pl": "chłodne do umiarkowane",
-          "de": "kühl bis mäßig",
-          "fr": "frais à modéré",
-          "it": "fresco a moderato",
-          "es": "fresco a moderado",
-          "pt": "fresco a moderado",
-          "ar": "بارد إلى معتدل",
-          "hi": "ठंडा से मध्यम",
-          "zh": "凉爽到适中",
-          "ja": "涼しいから中程度",
-          "ko": "차가운에서 보통"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 유독"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水をやりすぎないように",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Blackcurrant",
-      "description": "Blackcurrant is a deciduous shrub known for its tart, dark purple-black berries. It grows in cool to moderate climates and requires well-draining, acidic soil."
+      "common_name": "Black Currant",
+      "description": "Black currant is a deciduous shrub known for its dark purple fruits. It thrives in temperate climates with moderate light and water."
     },
     "pl": {
       "common_name": "Czarna porzeczka",
-      "description": "Czarna porzeczka to krzew liściasty znany ze swoich kwaśnych, ciemno-fioletowo-czarnych jagód. Rośnie w chłodnych do umiarkowanych klimatach i wymaga dobrze przepuszczalnej, kwaśnej gleby."
+      "description": "Czarna porzeczka to krzew liściasty, znany ze swoich ciemnofioletowych owoców. Rośnie w klimatach umiarkowanych, preferując średnie światło i podlewanie."
     },
     "de": {
       "common_name": "Schwarze Johannisbeere",
-      "description": "Die schwarze Johannisbeere ist ein Laubstrauch, der für seine säuerlichen, dunkelviolett-schwarzen Beeren bekannt ist. Sie wächst in kühlen bis gemäßigten Klimazonen und benötigt gut durchlässigen, sauren Boden."
+      "description": "Die schwarze Johannisbeere ist ein laubabwerfender Strauch, der für seine dunkelvioletten Früchte bekannt ist. Sie gedeiht in gemäßigten Klimazonen mit mittlerem Licht und Wasser."
     },
     "fr": {
       "common_name": "Cassis",
-      "description": "Le cassis est un arbuste caduc connu pour ses baies acides et de couleur noir-violet foncé. Il pousse dans des climats frais à modérés et nécessite un sol acide bien drainé."
+      "description": "Le cassis est un arbuste à feuilles caduques connu pour ses fruits violets foncés. Il pousse dans des climats tempérés avec une lumière et un arrosage modérés."
     },
     "it": {
       "common_name": "Ribes nero",
-      "description": "Il ribes nero è un arbusto deciduo noto per le sue bacche acide di colore nero-viola scuro. Cresce in climi freschi o moderati e necessita di un terreno acido e ben drenato."
+      "description": "Il ribes nero è un arbusto deciduo noto per i suoi frutti viola scuro. Cresce in climi temperati con luce e annaffiature moderate."
     },
     "es": {
       "common_name": "Grosella negra",
-      "description": "La grosella negra es un arbusto caducifolio conocido por sus bayas ácidas de color negro-oscuro. Crece en climas frescos a moderados y necesita un suelo ácido bien drenado."
+      "description": "La grosella negra es un arbusto caducifolio conocido por sus frutos morados oscuros. Crece en climas templados con luz y riego moderados."
     },
     "pt": {
-      "common_name": "Groselha negra",
-      "description": "A groselha negra é um arbusto caducifólio conhecido pelas suas bagas ácidas de cor negro-roxo. Cresce em climas frescos a moderados e necessita de solo ácido bem drenado."
+      "common_name": "Groselha preta",
+      "description": "A groselha preta é um arbusto caducifólio conhecido por seus frutos roxos escuros. Cresce em climas temperados com luz e rega moderadas."
     },
     "ar": {
       "common_name": "الكشمش الأسود",
-      "description": "الكشمش الأسود هو شجيرة نفضية معروفة بتوتها الحامض ذو اللون الأسود الداكن. ينمو في المناخات الباردة إلى المعتدلة ويحتاج إلى تربة حامضية جيدة التصريف."
+      "description": "الكشمش الأسود هو شجيرة نفضية معروفة بثمارها الأرجوانية الداكنة. ينمو في المناخات المعتدلة مع ضوء وري معتدلين."
     },
     "hi": {
       "common_name": "काले करंट",
-      "description": "काले करंट एक पर्णपाती झाड़ी है, जो अपने खट्टे, गहरे बैंगनी-काले जामुनों के लिए जानी जाती है। यह ठंडे से लेकर मध्यम जलवायु में उगता है और इसे अच्छी तरह से जल निकासी वाली, अम्लीय मिट्टी की आवश्यकता होती है।"
+      "description": "काले करंट एक पर्णपाती झाड़ी है जो इसके गहरे बैंगनी रंग के फलों के लिए जानी जाती है। यह मध्यम रोशनी और पानी में उगता है।"
     },
     "zh": {
-      "common_name": "黑加仑",
-      "description": "黑加仑是一种落叶灌木，以其酸涩的深紫黑色浆果而闻名。它生长在凉爽到适中的气候中，需要排水良好的酸性土壤。"
+      "common_name": "黑醋栗",
+      "description": "黑醋栗是一种落叶灌木，以其深紫色的果实而闻名。它在温带气候中生长，需要适度的光照和浇水。"
     },
     "ja": {
       "common_name": "ブラックカラント",
-      "description": "ブラックカラントは、その酸味のある暗紫色の黒いベリーで知られる落葉灌木です。冷涼から温暖な気候で育ち、排水性の良い酸性土壌が必要です。"
+      "description": "ブラックカラントはその暗紫色の果実で知られる落葉低木です。適度な光と水で温帯気候で育ちます。"
     },
     "ko": {
-      "common_name": "블랙커런트",
-      "description": "블랙커런트는 신맛이 나는 짙은 자주색-검은색 열매로 알려진 낙엽 덤불입니다. 차가운 기후에서 자주 자라며, 배수가 좋은 산성 토양을 필요로 합니다."
+      "common_name": "블랙 커런트",
+      "description": "블랙 커런트는 짙은 보라색 열매로 알려진 낙엽성 관목입니다. 온대 기후에서 적당한 빛과 물로 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/9562/Ribes-nigrum/Details",
-      "https://www.gardenia.net/plant/ribes-nigrum-black-currant"
+      "https://www.gardeningknowhow.com/edible/fruits/currants/black-currant-plant-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=467"
     ]
   }
 }

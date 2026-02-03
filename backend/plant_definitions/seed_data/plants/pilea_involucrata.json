@@ -1,17 +1,17 @@
 {
   "external_id": "pilea_involucrata",
-  "name": "Friendship Plant",
+  "name": "Pilea involucrata",
   "latin": "Pilea involucrata",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "green-plants",
     "aroid"
   ],
   "water_required": true,
@@ -32,7 +32,7 @@
           "en": "Medium light",
           "pl": "Średnie światło",
           "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
@@ -40,7 +40,7 @@
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 광도"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainant",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "排水性良好",
-          "ko": "배수 좋은"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwe",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mäßig",
-          "fr": "Modérée",
-          "it": "Moderata",
-          "es": "Moderada",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -151,9 +151,9 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अतिसंवेदनशील",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "非毒性",
+          "ja": "無毒",
           "ko": "비독성"
         }
       }
@@ -162,75 +162,113 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping",
-          "pl": "Kępowy",
-          "de": "Buschig",
-          "fr": "Tassant",
-          "it": "A mazzi",
-          "es": "En racimo",
-          "pt": "Em tufos",
-          "ar": "تكتل",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "塊状",
-          "ko": "군생"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीड़े",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Friendship Plant",
-      "description": "Pilea involucrata, or the Friendship Plant, is a small, clumping perennial with unique, textured foliage. It thrives in medium light and moderate humidity."
+      "common_name": "Nerve Plant",
+      "description": "Pilea involucrata is a small, attractive plant with textured, patterned leaves. It thrives in moderate light and requires careful watering."
     },
     "pl": {
-      "common_name": "Roślina Przyjaźni",
-      "description": "Pilea involucrata, czyli Roślina Przyjaźni, to mała, kępowa roślina o wyjątkowych, teksturowanych liściach. Dobrze rośnie w średnim świetle i umiarkowanej wilgotności."
+      "common_name": "Roślina nerwowa",
+      "description": "Pilea involucrata to mała, atrakcyjna roślina o teksturowanych, wzorzystych liściach. Rośnie w średnim świetle i wymaga starannego podlewania."
     },
     "de": {
-      "common_name": "Freundschaftspflanze",
-      "description": "Pilea involucrata, auch Freundschaftspflanze genannt, ist eine kleine, buschige Staude mit einzigartigem, strukturiertem Laub. Sie gedeiht bei mittlerem Licht und mäßiger Luftfeuchtigkeit."
+      "common_name": "Nervenpflanze",
+      "description": "Pilea involucrata ist eine kleine, attraktive Pflanze mit strukturierten, gemusterten Blättern. Sie gedeiht bei mittlerem Licht und benötigt sorgfältiges Gießen."
     },
     "fr": {
-      "common_name": "Plante de l'amitié",
-      "description": "Pilea involucrata, ou Plante de l'amitié, est une petite plante vivace en touffe, avec un feuillage texturé unique. Elle prospère sous une lumière modérée et une humidité modérée."
+      "common_name": "Plante nerveuse",
+      "description": "Pilea involucrata est une petite plante attrayante avec des feuilles texturées et décorées. Elle prospère dans une lumière modérée et nécessite un arrosage prudent."
     },
     "it": {
-      "common_name": "Pianta dell'amicizia",
-      "description": "Pilea involucrata, o Pianta dell'amicizia, è una piccola perenne cespugliosa con foglie uniche e strutturate. Cresce bene con luce media e umidità moderata."
+      "common_name": "Pianta nervosa",
+      "description": "Pilea involucrata è una piccola pianta attraente con foglie strutturate e decorate. Cresce alla luce moderata e richiede un'annaffiatura accurata."
     },
     "es": {
-      "common_name": "Planta de la amistad",
-      "description": "Pilea involucrata, o Planta de la amistad, es una pequeña planta perenne que forma racimos con hojas texturizadas únicas. Prosperan con luz media y humedad moderada."
+      "common_name": "Planta nerviosa",
+      "description": "Pilea involucrata es una pequeña planta atractiva con hojas texturizadas y decoradas. Prospera con luz moderada y requiere un riego cuidadoso."
     },
     "pt": {
-      "common_name": "Planta da amizade",
-      "description": "Pilea involucrata, ou Planta da amizade, é uma pequena planta perene que forma tufos com folhas texturizadas únicas. Cresce bem em luz média e umidade moderada."
+      "common_name": "Planta nervosa",
+      "description": "Pilea involucrata é uma planta pequena e atraente com folhas texturizadas e decoradas. Cresce em luz moderada e requer rega cuidadosa."
     },
     "ar": {
-      "common_name": "نبتة الصداقة",
-      "description": "Pilea involucrata، أو نبتة الصداقة، هي نبتة معمرة صغيرة ذات أوراق ناعمة ومنقوشة. تنمو جيدًا في الضوء المتوسط والرطوبة المعتدلة."
+      "common_name": "النبات العصبي",
+      "description": "Pilea involucrata هو نبات صغير وجذاب ذو أوراق منقوشة. ينمو في الضوء المعتدل ويتطلب ري دقيق."
     },
     "hi": {
-      "common_name": "दोस्ती का पौधा",
-      "description": "Pilea involucrata, या दोस्ती का पौधा, एक छोटा, गुच्छेदार पौधा है जिसमें अनूठे, बनावटदार पत्ते होते हैं। यह मध्यम रोशनी और आर्द्रता में अच्छी तरह से बढ़ता है।"
+      "common_name": "तंत्रिका पौधा",
+      "description": "Pilea involucrata एक छोटा, आकर्षक पौधा है जिसकी पत्तियां बनावट और पैटर्न वाली होती हैं। यह मध्यम रोशनी में उगता है और सावधानी से पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "友谊植物",
-      "description": "Pilea involucrata，或称友谊植物，是一种小型的丛生多年生植物，具有独特的纹理叶片。它在中等光照和适度湿度的环境下生长良好。"
+      "common_name": "神经植物",
+      "description": "Pilea involucrata是一种小巧迷人的植物，具有纹理和图案化的叶子。它在中等光照下生长，需要小心浇水。"
     },
     "ja": {
-      "common_name": "友情の植物",
-      "description": "Pilea involucrata、または友情の植物は、小さな株立ちの多年草で、ユニークな質感の葉を持っています。中程度の光と適度な湿度でよく育ちます。"
+      "common_name": "神経植物",
+      "description": "Pilea involucrataは、テクスチャーと模様のある葉を持つ小さく魅力的な植物です。中程度の光で成長し、慎重に水やりが必要です。"
     },
     "ko": {
-      "common_name": "우정 식물",
-      "description": "Pilea involucrata, 또는 우정 식물은 독특한 질감의 잎을 가진 작은 군생 다년초입니다. 중간 정도의 빛과 적당한 습도에서 잘 자랍니다."
+      "common_name": "신경 식물",
+      "description": "Pilea involucrata는 질감과 패턴이 있는 작은 매력적인 식물입니다. 중간 정도의 빛에서 잘 자라며 신중한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=347",
+      "https://www.rhs.org.uk/plants/pilea-involucrata",
       "https://www.gardenia.net/plant/pilea-involucrata"
     ]
   }

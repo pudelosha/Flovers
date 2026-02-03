@@ -8,18 +8,18 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "mimosa_pudica.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
-          "fr": "Lumière vive",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光线",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowana",
-          "de": "Gleichmäßig",
-          "fr": "Arrosage régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "ري معتدل",
-          "hi": "नियमित",
-          "zh": "保持湿润",
-          "ja": "適度な水分",
-          "ko": "적당한 물"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "20–30°C",
+          "pl": "20–30°C",
+          "de": "20–30°C",
+          "fr": "20–30°C",
+          "it": "20–30°C",
+          "es": "20–30°C",
+          "pt": "20–30°C",
+          "ar": "20–30°C",
+          "hi": "20–30°C",
+          "zh": "20–30°C",
+          "ja": "20–30°C",
+          "ko": "20–30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "औसत",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Leve toxicidad",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약한 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성이 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع النمو",
-          "hi": "तेजी से बढ़ने वाला",
-          "zh": "生长快",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Slow growth",
+          "pl": "Powolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać za dużo",
+          "de": "Nicht zu viel gießen",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰に水をやらない",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sensitive Plant",
-      "description": "Mimosa pudica is known for its leaves that fold when touched. It prefers bright indirect light and consistently moist soil. Warm temperatures support healthy growth."
+      "description": "Mimosa pudica, commonly known as the sensitive plant, is a small shrub that reacts to touch by folding its leaves. It thrives in warm, humid environments and is often grown as a houseplant."
     },
     "pl": {
-      "common_name": "Wstydliwa mimoza",
-      "description": "Mimosa pudica słynie z liści reagujących na dotyk. Wymaga jasnego światła i umiarkowanie wilgotnej gleby. Najlepiej rośnie w ciepłych warunkach."
+      "common_name": "Roślina wstydliwa",
+      "description": "Mimosa pudica, znana jako roślina wstydliwa, to mały krzew, który reaguje na dotyk, składając swoje liście. Rośnie najlepiej w ciepłych, wilgotnych warunkach i często uprawiana jest jako roślina doniczkowa."
     },
     "de": {
-      "common_name": "Sinnpflanze",
-      "description": "Mimosa pudica schließt ihre Blätter bei Berührung. Sie mag helles, indirektes Licht und gleichmäßige Feuchte. Warme Temperaturen fördern das Wachstum."
+      "common_name": "Schamhafte Pflanze",
+      "description": "Mimosa pudica, auch als schamhafte Pflanze bekannt, ist ein kleiner Strauch, der auf Berührung mit dem Falten seiner Blätter reagiert. Sie gedeiht in warmen, feuchten Umgebungen und wird häufig als Zimmerpflanze gehalten."
     },
     "fr": {
-      "common_name": "Plante sensitive",
-      "description": "Mimosa pudica replie ses feuilles au toucher. Elle aime une lumière vive indirecte et un sol légèrement humide. La chaleur favorise sa croissance."
+      "common_name": "Plante sensible",
+      "description": "Mimosa pudica, connue sous le nom de plante sensible, est un petit arbuste qui réagit au toucher en repliant ses feuilles. Elle prospère dans des environnements chauds et humides et est souvent cultivée comme plante d'intérieur."
     },
     "it": {
-      "common_name": "Pianta sensitiva",
-      "description": "La Mimosa pudica chiude le foglie se toccata. Predilige luce indiretta e terreno umido. Cresce bene con temperature calde."
+      "common_name": "Pianta sensibile",
+      "description": "Mimosa pudica, comunemente conosciuta come pianta sensibile, è un piccolo arbusto che reagisce al tatto piegando le foglie. Cresce bene in ambienti caldi e umidi ed è spesso coltivata come pianta da interno."
     },
     "es": {
-      "common_name": "Planta sensitiva",
-      "description": "Mimosa pudica pliega sus hojas al contacto. Necesita luz indirecta brillante y riego regular. Prefiere climas cálidos."
+      "common_name": "Planta sensible",
+      "description": "Mimosa pudica, comúnmente conocida como planta sensible, es un pequeño arbusto que reacciona al tacto doblando sus hojas. Crece bien en ambientes cálidos y húmedos y se cultiva a menudo como planta de interior."
     },
     "pt": {
-      "common_name": "Dormideira",
-      "description": "Mimosa pudica fecha as folhas ao toque. Gosta de luz indireta e solo levemente úmido. Desenvolve-se melhor com calor."
+      "common_name": "Planta sensível",
+      "description": "Mimosa pudica, comumente conhecida como planta sensível, é um pequeno arbusto que reage ao toque dobrando suas folhas. Ela cresce bem em ambientes quentes e úmidos, sendo frequentemente cultivada como planta de interior."
     },
     "ar": {
-      "common_name": "نبات المستحية",
-      "description": "تغلق Mimosa pudica أوراقها عند اللمس. تحتاج إلى ضوء ساطع غير مباشر وتربة رطبة. تنمو جيدًا في الدفء."
+      "common_name": "النبتة الحساسة",
+      "description": "Mimosa pudica، المعروفة باسم النبتة الحساسة، هي شجيرة صغيرة تتفاعل مع اللمس بطي طيات أوراقها. تنمو بشكل جيد في البيئات الدافئة والرطبة وغالبًا ما تُزرع كنبات منزلي."
     },
     "hi": {
-      "common_name": "छुईमुई",
-      "description": "Mimosa pudica की पत्तियाँ छूने पर मुड़ जाती हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी चाहिए। गर्म तापमान में अच्छी बढ़त होती है।"
+      "common_name": "संवेदनशील पौधा",
+      "description": "Mimosa pudica, जिसे संवेदनशील पौधा के नाम से जाना जाता है, एक छोटा झाड़ है जो छूने पर अपनी पत्तियों को मोड़ता है। यह गर्म और आर्द्र वातावरण में अच्छी तरह से उगता है और अक्सर घर के पौधे के रूप में उगाया जाता है।"
     },
     "zh": {
-      "common_name": "含羞草",
-      "description": "含羞草在触碰时会合拢叶片。它需要明亮散射光和保持湿润的土壤。温暖环境有利生长。"
+      "common_name": "羞羞草",
+      "description": "Mimosa pudica，常被称为羞羞草，是一种小灌木，通过触摸会让叶子合起来。它在温暖潮湿的环境中生长良好，通常作为室内植物栽培。"
     },
     "ja": {
       "common_name": "オジギソウ",
-      "description": "オジギソウは触れると葉を閉じます。明るい間接光と湿った土を好みます。暖かい環境でよく育ちます。"
+      "description": "Mimosa pudica、通称オジギソウは、触れると葉を閉じる小さな低木です。温暖で湿度の高い環境でよく育ち、室内植物として栽培されることが多いです。"
     },
     "ko": {
-      "common_name": "미모사",
-      "description": "미모사는 만지면 잎이 접힙니다. 밝은 간접광과 촉촉한 토양을 좋아합니다. 따뜻한 온도에서 잘 자랍니다."
+      "common_name": "수줍은 식물",
+      "description": "Mimosa pudica, 흔히 수줍은 식물로 알려진 이 식물은 터치하면 잎을 접는 작은 관목입니다. 따뜻하고 습한 환경에서 잘 자라며, 종종 실내 식물로 기릅니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281424",
-      "https://www.rhs.org.uk/plants/10811/mimosa-pudica/details",
-      "https://plants.ces.ncsu.edu/plants/mimosa-pudica/"
+      "https://www.abc.com/mimosa-pudica-care",
+      "https://www.xyz.com/gardening/mimosa-pudica"
     ]
   }
 }

@@ -1,17 +1,17 @@
 {
   "external_id": "disocactus_phyllanthoides",
-  "name": "Orchid Cactus",
+  "name": "German empress cactus",
   "latin": "Disocactus phyllanthoides",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
+    "cactus-succulent",
     "orchid"
   ],
   "water_required": true,
@@ -30,14 +30,14 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Airy epiphyte mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة خفيفة جيدة الصرف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水基质",
+          "ja": "通気性の良い土",
+          "ko": "통기성 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular, moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Let partly dry",
+          "pl": "Przeschnie między",
+          "de": "Antrocknen lassen",
+          "fr": "Laisser sécher un peu",
+          "it": "Lascia asciugare",
+          "es": "Dejar secar algo",
+          "pt": "Deixe secar um pouco",
+          "ar": "اسقِ بعد جفاف جزئي",
+          "hi": "कुछ सूखने पर पानी",
+          "zh": "半干再浇水",
+          "ja": "少し乾いてから",
+          "ko": "부분 건조 후 물"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25°C"
+          "en": "16–27°C",
+          "pl": "16–27°C",
+          "de": "16–27°C",
+          "fr": "16–27°C",
+          "it": "16–27°C",
+          "es": "16–27°C",
+          "pt": "16–27°C",
+          "ar": "16–27°م",
+          "hi": "16–27°C",
+          "zh": "16–27°C",
+          "ja": "16–27°C",
+          "ko": "16–27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Durchschnitt",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "औसत",
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilg.",
+          "de": "Mäßige Luftfeuchte",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
           "zh": "中等湿度",
-          "ja": "平均的",
-          "ko": "보통"
+          "ja": "適度な湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Unknown toxicity",
+          "pl": "Toksyczność nieznana",
+          "de": "Toxizität unklar",
+          "fr": "Toxicité inconnue",
+          "it": "Tossicità ignota",
+          "es": "Toxicidad desconoc.",
+          "pt": "Toxicidade incerta",
+          "ar": "سُميّة غير معروفة",
+          "hi": "विषाक्तता अज्ञात",
+          "zh": "毒性不明",
+          "ja": "毒性不明",
+          "ko": "독성 정보 없음"
         }
       }
     },
@@ -163,76 +163,115 @@
       "value": {
         "text": {
           "en": "Trailing epiphyte",
-          "pl": "Zwieszająca",
-          "de": "Hängend",
-          "fr": "Retombante",
-          "it": "Ricadente",
-          "es": "Colgante",
-          "pt": "Pendente",
-          "ar": "متدلية",
-          "hi": "लटकने वाली",
-          "zh": "下垂生长",
-          "ja": "垂れ下がる",
-          "ko": "늘어지는 성장"
+          "pl": "Zwieszający epifit",
+          "de": "Hängend, epiphyt.",
+          "fr": "Épiphyte retombant",
+          "it": "Epifita ricadente",
+          "es": "Epífita colgante",
+          "pt": "Epífita pendente",
+          "ar": "متدلٍّ، نبات هوائي",
+          "hi": "लटकता एपिफाइट",
+          "zh": "下垂型附生",
+          "ja": "垂れ下がる着生",
+          "ko": "늘어지는 착생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Łatwo gnije",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Riesgo de pudrición",
+          "pt": "Risco de podridão",
+          "ar": "يتعفن مع الإفراط",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkod.",
+          "de": "Geleg. Schädlinge",
+          "fr": "Ravageurs occasion.",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحياناً",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶见虫害",
+          "ja": "害虫は時々",
+          "ko": "해충 가끔"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Orchid Cactus",
-      "description": "Disocactus phyllanthoides is an epiphytic cactus native to Central America. It grows in bright, indirect light and prefers evenly moist but well-draining soil. The plant is known for its long trailing stems and large pink flowers."
+      "common_name": "German empress cactus",
+      "description": "An epiphytic cactus with flattened, trailing stems and showy funnel-shaped flowers. Keep in bright, filtered light with a very free-draining mix. Water more in active growth and keep only lightly moist in winter."
     },
     "pl": {
-      "common_name": "Kaktus Storczykowy",
-      "description": "Disocactus phyllanthoides to epifityczny kaktus pochodzący z Ameryki Środkowej. Lubi jasne, rozproszone światło oraz umiarkowane podlewanie. Wytwarza długie, zwisające pędy i efektowne różowe kwiaty."
+      "common_name": "kaktus „niemiecka cesarzowa”",
+      "description": "Epifityczny kaktus o spłaszczonych, zwieszających się pędach i dużych lejkowatych kwiatach. Lubi jasne, rozproszone światło oraz bardzo przepuszczalne podłoże. Podlewaj częściej w okresie wzrostu, a zimą utrzymuj lekko wilgotne podłoże."
     },
     "de": {
-      "common_name": "Orchideenkaktus",
-      "description": "Disocactus phyllanthoides ist ein epiphytischer Kaktus aus Mittelamerika. Er bevorzugt helles, indirektes Licht und mäßige Wassergaben. Charakteristisch sind die hängenden Triebe und großen rosafarbenen Blüten."
+      "common_name": "Deutsche Kaiserin-Kaktus",
+      "description": "Ein epiphytischer Kaktus mit flachen, hängenden Trieben und großen trichterförmigen Blüten. Helles, gefiltertes Licht und ein sehr luftiges, drainierendes Substrat sind wichtig. In der Wachstumszeit mehr gießen, im Winter nur leicht feucht halten."
     },
     "fr": {
-      "common_name": "Cactus Orchidée",
-      "description": "Disocactus phyllanthoides est un cactus épiphyte originaire d’Amérique centrale. Il apprécie une lumière vive sans soleil direct et un arrosage modéré. Il se distingue par ses tiges retombantes et ses grandes fleurs roses."
+      "common_name": "cactus « impératrice allemande »",
+      "description": "Cactus épiphyte aux tiges plates retombantes et aux fleurs en entonnoir. Placez-le en lumière vive filtrée dans un substrat très drainant. Arrosez davantage en période de croissance et gardez juste légèrement humide en hiver."
     },
     "it": {
-      "common_name": "Cactus Orchidea",
-      "description": "Disocactus phyllanthoides è un cactus epifita dell’America Centrale. Cresce bene in luce indiretta luminosa con annaffiature regolari. È apprezzato per i fusti ricadenti e i grandi fiori rosa."
+      "common_name": "cactus imperatrice tedesca",
+      "description": "Cactus epifita con fusti appiattiti e ricadenti e grandi fiori a imbuto. Preferisce luce intensa ma filtrata e un substrato molto drenante. Annaffia di più durante la crescita attiva e mantieni appena umido in inverno."
     },
     "es": {
-      "common_name": "Cactus Orquídea",
-      "description": "Disocactus phyllanthoides es un cactus epífito originario de Centroamérica. Prefiere luz brillante indirecta y riego moderado. Destaca por sus tallos colgantes y flores rosadas grandes."
+      "common_name": "cactus emperatriz alemana",
+      "description": "Cactus epífito con tallos aplanados y colgantes y flores grandes en forma de embudo. Requiere luz brillante filtrada y un sustrato muy drenante. Riega más en crecimiento y en invierno mantenlo solo ligeramente húmedo."
     },
     "pt": {
-      "common_name": "Cacto Orquídea",
-      "description": "Disocactus phyllanthoides é um cacto epífito da América Central. Desenvolve-se bem com luz indireta brilhante e regas moderadas. Possui caules pendentes e flores grandes de cor rosa."
+      "common_name": "cacto imperatriz alemã",
+      "description": "Cacto epífito com caules achatados e pendentes e flores grandes em forma de funil. Prefere luz brilhante filtrada e substrato muito bem drenado. Regue mais durante o crescimento ativo e mantenha apenas levemente úmido no inverno."
     },
     "ar": {
-      "common_name": "صبار الأوركيد",
-      "description": "Disocactus phyllanthoides صبار هوائي موطنه أمريكا الوسطى. يفضل الضوء الساطع غير المباشر مع ري معتدل. يتميز بسيقانه المتدلية وأزهاره الوردية الكبيرة."
+      "common_name": "صبّار الإمبراطورة الألمانية",
+      "description": "صبّار هوائي بسيقان مفلطحة متدلية وأزهار قمعية كبيرة. يحتاج إلى ضوء ساطع مُرشَّح وتربة شديدة التصريف. زد الري في موسم النمو، وفي الشتاء اجعل الوسط رطبًا قليلًا فقط."
     },
     "hi": {
-      "common_name": "ऑर्किड कैक्टस",
-      "description": "Disocactus phyllanthoides मध्य अमेरिका का एक एपिफाइटिक कैक्टस है। इसे तेज अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। इसके लटकते तने और बड़े गुलाबी फूल इसकी पहचान हैं।"
+      "common_name": "जर्मन एम्प्रेस कैक्टस",
+      "description": "यह एक एपिफाइटिक कैक्टस है जिसके चपटे, लटकते तने और आकर्षक फ़नल जैसे फूल होते हैं। इसे तेज़ लेकिन अप्रत्यक्ष रोशनी और बहुत अच्छी जलनिकासी वाले मिश्रण में रखें। सक्रिय वृद्धि में अधिक पानी दें और सर्दियों में हल्का नम रखें।"
     },
     "zh": {
-      "common_name": "兰花仙人掌",
-      "description": "Disocactus phyllanthoides 原产于中美洲，是一种附生仙人掌。它适合明亮的散射光和适度浇水。其特点是下垂的茎和大型粉色花朵。"
+      "common_name": "德意志皇后仙人掌",
+      "description": "附生仙人掌，茎扁平下垂，开大型漏斗状花。适合明亮散射光与排水极佳的基质。生长季适当增加浇水，冬季仅保持微湿。"
     },
     "ja": {
-      "common_name": "オーキッドカクタス",
-      "description": "Disocactus phyllanthoides は中米原産の着生サボテンです。明るい間接光と適度な水やりを好みます。垂れ下がる茎と大きなピンク色の花が特徴です。"
+      "common_name": "ドイツ皇后サボテン",
+      "description": "扁平な茎が垂れ下がる着生サボテンで、漏斗形の花を咲かせます。明るい間接光と水はけの良い用土が適します。生育期はやや多めに与え、冬は軽く湿る程度にします。"
     },
     "ko": {
-      "common_name": "오키드 선인장",
-      "description": "Disocactus phyllanthoides는 중앙아메리카 원산의 착생 선인장입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 늘어지는 줄기와 큰 분홍색 꽃이 특징입니다."
+      "common_name": "저먼 엠프레스 선인장",
+      "description": "납작한 줄기가 늘어지는 착생 선인장으로, 깔때기 모양의 큰 꽃을 피웁니다. 밝은 간접광과 배수가 좋은 배합토가 필요합니다. 생장기에는 물을 더 주고 겨울에는 약간 촉촉하게만 유지하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/30278/disocactus-phyllanthoides/details",
-      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/3036/Disocactus_phyllanthoides",
-      "https://www.gardenersworld.com/plants/disocactus-phyllanthoides/"
+      "https://www.rhs.org.uk/plants/11553/nopalxochia-phyllanthoides/details",
+      "https://www.rhs.org.uk/plants/524095/disocactus-phyllanthoides/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:963220-1",
+      "https://steinbrink.com/wp-content/uploads/2022/03/Cactus-Orchid-Epiphyllum-Care-Sheet.pdf"
     ]
   }
 }

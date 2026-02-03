@@ -1,27 +1,27 @@
 {
   "external_id": "stromanthe_sanguinea",
-  "name": "Strawberry Beads",
+  "name": "Tricolor Stromanthe",
   "latin": "Stromanthe sanguinea",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "aroid"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 2,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "stromanthe_sanguinea.jpg",
   "image_thumb": "stromanthe_sanguinea.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universell",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "유니버설"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलिंग",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-27°C",
-          "pl": "22-27°C",
-          "de": "22-27°C",
-          "fr": "22-27°C",
-          "it": "22-27°C",
-          "es": "22-27°C",
-          "pt": "22-27°C",
-          "ar": "22-27°C",
-          "hi": "22-27°C",
-          "zh": "22-27°C",
-          "ja": "22-27°C",
-          "ko": "22-27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "moderat",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez le trop-plein d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Strawberry Beads",
-      "description": "Stromanthe sanguinea is a vibrant tropical plant known for its striking pink and green foliage. It thrives in warm, humid environments and requires frequent watering and high humidity."
+      "common_name": "Tricolor Stromanthe",
+      "description": "Stromanthe sanguinea is an ornamental tropical plant known for its striking tricolored foliage. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Koralik truskawkowy",
-      "description": "Stromanthe sanguinea to tropikalna roślina o wyrazistych różowo-zielonych liściach. Wymaga ciepłych i wilgotnych warunków, częstego podlewania i wysokiej wilgotności."
+      "common_name": "Tricolor Stromanthe",
+      "description": "Stromanthe sanguinea to roślina ozdobna tropikalna znana z trójkolorowego ulistnienia. Rośnie najlepiej w średnim świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Erdbeerperlen",
-      "description": "Stromanthe sanguinea ist eine lebendige tropische Pflanze mit auffälligem rosa und grünen Laub. Sie gedeiht in warmen, feuchten Umgebungen und benötigt regelmäßige Bewässerung und hohe Luftfeuchtigkeit."
+      "common_name": "Tricolor Stromanthe",
+      "description": "Stromanthe sanguinea ist eine Zierpflanze aus den Tropen, die für ihr auffälliges, dreifarbiges Laub bekannt ist. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Perles de fraise",
-      "description": "Stromanthe sanguinea est une plante tropicale vibrante, connue pour son feuillage vert et rose frappant. Elle prospère dans des environnements chauds et humides et nécessite un arrosage fréquent et une forte humidité."
+      "common_name": "Stromanthe tricolore",
+      "description": "Stromanthe sanguinea est une plante tropicale ornementale connue pour son feuillage tricolore frappant. Elle prospère sous une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Perle di fragola",
-      "description": "Stromanthe sanguinea è una pianta tropicale vivace, nota per il suo fogliame verde e rosa. Cresce bene in ambienti caldi e umidi e richiede annaffiature frequenti e alta umidità."
+      "common_name": "Stromanthe tricolore",
+      "description": "Stromanthe sanguinea è una pianta ornamentale tropicale nota per il suo fogliame tricolore. Cresce meglio con luce media e umidità elevata."
     },
     "es": {
-      "common_name": "Perlas de fresa",
-      "description": "Stromanthe sanguinea es una planta tropical vibrante conocida por su llamativo follaje verde y rosa. Crece bien en ambientes cálidos y húmedos, y requiere riego frecuente y alta humedad."
+      "common_name": "Stromanthe tricolor",
+      "description": "Stromanthe sanguinea es una planta tropical ornamental conocida por su follaje tricolor. Crece mejor en luz media y alta humedad."
     },
     "pt": {
-      "common_name": "Perolas de morango",
-      "description": "Stromanthe sanguinea é uma planta tropical vibrante conhecida por sua folhagem verde e rosa impressionante. Ela prospera em ambientes quentes e úmidos e requer rega frequente e alta umidade."
+      "common_name": "Stromanthe tricolor",
+      "description": "Stromanthe sanguinea é uma planta tropical ornamental conhecida por seu folhagem tricolor. Ela cresce bem em luz média e alta umidade."
     },
     "ar": {
-      "common_name": "خرز الفراولة",
-      "description": "Stromanthe sanguinea هي نبتة استوائية حيوية تشتهر بأوراقها الخضراء والوردية المميزة. إنها تنمو بشكل جيد في البيئات الدافئة والرطبة وتتطلب سقيًا متكررًا ورطوبة عالية."
+      "common_name": "سترو مانثي تري كولور",
+      "description": "Stromanthe sanguinea هي نبات زينة استوائي معروف بأوراقه الثلاثية الألوان. ينمو بشكل جيد في الضوء المتوسط والرطوبة العالية."
     },
     "hi": {
-      "common_name": "स्ट्रॉबेरी बीड्स",
-      "description": "Stromanthe sanguinea एक जीवंत उष्णकटिबंधीय पौधा है जो अपनी आकर्षक गुलाबी और हरे पत्तियों के लिए जाना जाता है। यह गर्म, आर्द्र वातावरण में अच्छी तरह से बढ़ता है और नियमित पानी और उच्च आर्द्रता की आवश्यकता होती है."
+      "common_name": "ट्राईकलोर स्ट्रोमंथ",
+      "description": "Stromanthe sanguinea एक सजावटी उष्णकटिबंधीय पौधा है जो अपनी त्रैतीयक पत्तियों के लिए जाना जाता है। यह मध्यम रोशनी और उच्च आर्द्रता में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "草莓珠",
-      "description": "Stromanthe sanguinea 是一种充满活力的热带植物，以其引人注目的粉红色和绿色叶子而闻名。它在温暖潮湿的环境中生长良好，需要频繁浇水和高湿度。"
+      "common_name": "三色秋海棠",
+      "description": "Stromanthe sanguinea 是一种装饰性热带植物，以其三色叶片而闻名。它在中等光照和高湿度下生长良好。"
     },
     "ja": {
-      "common_name": "ストロベリービーズ",
-      "description": "Stromanthe sanguineaは、その印象的なピンクと緑の葉で知られる活気に満ちた熱帯植物です。暖かく湿度の高い環境でよく育ち、頻繁な水やりと高い湿度を必要とします。"
+      "common_name": "トリコロールストロマンテ",
+      "description": "Stromanthe sanguineaは、その印象的な三色の葉で知られる観賞用の熱帯植物です。中程度の光と高湿度で最良の成長をします。"
     },
     "ko": {
-      "common_name": "딸기 비즈",
-      "description": "Stromanthe sanguinea는 눈에 띄는 분홍색과 녹색 잎으로 알려진 활기찬 열대 식물입니다. 따뜻하고 습한 환경에서 잘 자라며, 자주 물을 주고 높은 습도가 필요합니다."
+      "common_name": "삼색 스트로만테",
+      "description": "Stromanthe sanguinea는 인상적인 삼색 잎으로 유명한 장식용 열대 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/stromanthe-sanguinea",
-      "https://www.abc-gardening.com/stromanthe-care"
+      "https://www.rhs.org.uk/plants/12773/Stromanthe-sanguinea/Details",
+      "https://www.indoorgardening.com/stromanthe-care/"
     ]
   }
 }

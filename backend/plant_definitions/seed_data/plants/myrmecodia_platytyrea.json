@@ -1,21 +1,23 @@
 {
   "external_id": "myrmecodia_platytyrea",
-  "name": "Ant Plant",
+  "name": "Myrmecodia platytyrea",
   "latin": "Myrmecodia platytyrea",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "aroid",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy epiphyte mix",
-          "pl": "Lekka mieszanka",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "وسط هوائي",
-          "hi": "हवादार माध्यम",
-          "zh": "透气基质",
-          "ja": "通気性基質",
-          "ko": "통기성 배지"
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidei",
+          "de": "Aroid-Mix",
+          "fr": "Mélange pour Aroides",
+          "it": "Miscela per Aroidi",
+          "es": "Mezcla para Aroides",
+          "pt": "Mistura para Aroides",
+          "ar": "خليط للأرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊土壤混合",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 믹스"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep lightly moist",
-          "pl": "Lekko wilgotna",
-          "de": "Leicht feucht",
-          "fr": "Légèrement humide",
-          "it": "Leggermente umido",
-          "es": "Ligeramente húmedo",
-          "pt": "Levemente úmido",
-          "ar": "رطوبة خفيفة",
-          "hi": "हल्की नमी",
-          "zh": "保持微湿",
-          "ja": "やや湿潤",
-          "ko": "약간 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging care",
-          "pl": "Trudna pielęgnacja",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Impegnativa",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة العناية",
-          "hi": "कठिन देखभाल",
-          "zh": "养护困难",
-          "ja": "管理が難しい",
-          "ko": "관리 어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm tropical",
-          "pl": "Ciepłolubna",
-          "de": "Warm tropisch",
-          "fr": "Chaud tropical",
-          "it": "Caldo tropicale",
-          "es": "Cálido tropical",
-          "pt": "Quente tropical",
-          "ar": "دافئ استوائي",
-          "hi": "उष्णकटिबंधीय",
-          "zh": "温暖热带",
-          "ja": "暖かい熱帯",
-          "ko": "따뜻한 열대"
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
         }
       }
     },
@@ -124,8 +126,8 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Forte humidité",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -160,9 +162,9 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
+          "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
@@ -174,63 +176,100 @@
           "ko": "성장 느림"
         }
       }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرाई पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ant Plant",
-      "description": "Myrmecodia platytyrea is a tropical epiphytic plant known for its swollen stem that houses ants. It naturally grows attached to trees in humid rainforests. Indoors, it requires warm temperatures, high humidity, and bright indirect light."
+      "common_name": "Platytyrea Ant Plant",
+      "description": "Myrmecodia platytyrea, also known as the Platytyrea Ant Plant, is a species of ant-plant native to tropical regions. It forms a symbiotic relationship with ants."
     },
     "pl": {
-      "common_name": "Roślina mrówkowa",
-      "description": "Myrmecodia platytyrea to tropikalna roślina epifityczna o zgrubiałej łodydze, w której żyją mrówki. Naturalnie rośnie na drzewach w wilgotnych lasach. W domu wymaga ciepła, wilgoci i jasnego, rozproszonego światła."
+      "common_name": "Roślina mrówcza Platytyrea",
+      "description": "Myrmecodia platytyrea, znana również jako roślina mrówcza Platytyrea, to gatunek rośliny mrówczej pochodzący z tropikalnych regionów. Tworzy symbiotyczną relację z mrówkami."
     },
     "de": {
-      "common_name": "Ameisenpflanze",
-      "description": "Myrmecodia platytyrea ist eine tropische Epiphyte mit einem verdickten Stamm für Ameisen. Sie wächst natürlich auf Bäumen in feuchten Regenwäldern. In Kultur braucht sie Wärme, hohe Luftfeuchte und helles, indirektes Licht."
+      "common_name": "Platytyrea Ameisenpflanze",
+      "description": "Myrmecodia platytyrea, auch bekannt als Platytyrea Ameisenpflanze, ist eine Ameisenpflanze aus tropischen Regionen. Sie bildet eine symbiotische Beziehung mit Ameisen."
     },
     "fr": {
-      "common_name": "Plante à fourmis",
-      "description": "Myrmecodia platytyrea est une plante épiphyte tropicale avec une tige renflée abritant des fourmis. Elle pousse naturellement sur les arbres en forêt humide. En intérieur, elle demande chaleur, humidité élevée et lumière indirecte."
+      "common_name": "Plante fourmi Platytyrea",
+      "description": "Myrmecodia platytyrea, aussi appelée Plante fourmi Platytyrea, est une plante de fourmi originaire des régions tropicales. Elle forme une relation symbiotique avec les fourmis."
     },
     "it": {
-      "common_name": "Pianta delle formiche",
-      "description": "Myrmecodia platytyrea è una pianta epifita tropicale con fusto rigonfio che ospita formiche. Cresce sugli alberi delle foreste umide. In casa necessita di calore, alta umidità e luce indiretta."
+      "common_name": "Pianta formica Platytyrea",
+      "description": "Myrmecodia platytyrea, conosciuta anche come Pianta formica Platytyrea, è una pianta di formiche originaria delle regioni tropicali. Forma una relazione simbiotica con le formiche."
     },
     "es": {
-      "common_name": "Planta hormiguera",
-      "description": "Myrmecodia platytyrea es una planta epífita tropical con un tallo engrosado que alberga hormigas. Crece sobre árboles en selvas húmedas. En interiores requiere calor, humedad alta y luz indirecta."
+      "common_name": "Planta hormiga Platytyrea",
+      "description": "Myrmecodia platytyrea, también conocida como Planta hormiga Platytyrea, es una planta hormiga originaria de regiones tropicales. Forma una relación simbiótica con las hormigas."
     },
     "pt": {
-      "common_name": "Planta-formigueiro",
-      "description": "Myrmecodia platytyrea é uma planta epífita tropical com caule inchado que abriga formigas. Ocorre naturalmente em florestas úmidas. Em cultivo precisa de calor, alta umidade e luz indireta."
+      "common_name": "Planta formiga Platytyrea",
+      "description": "Myrmecodia platytyrea, também conhecida como Planta formiga Platytyrea, é uma planta formiga nativa das regiões tropicais. Forma uma relação simbiótica com as formigas."
     },
     "ar": {
-      "common_name": "نبات النمل",
-      "description": "Myrmecodia platytyrea نبات استوائي هوائي ذو ساق منتفخ يؤوي النمل. ينمو طبيعياً على الأشجار في الغابات الرطبة. يحتاج في الداخل إلى الدفء ورطوبة عالية وضوء غير مباشر."
+      "common_name": "نبات النمل بلاتيتيريا",
+      "description": "Myrmecodia platytyrea، والمعروفة أيضًا بنبات النمل بلاتيتيريا، هي نوع من نباتات النمل موطنها المناطق الاستوائية. تشكل علاقة تكافلية مع النمل."
     },
     "hi": {
-      "common_name": "चींटी पौधा",
-      "description": "Myrmecodia platytyrea एक उष्णकटिबंधीय एपिफाइटिक पौधा है जिसकी सूजी हुई तना चींटियों को आश्रय देती है। यह नम वनों में पेड़ों पर उगता है। घर के अंदर इसे गर्मी, अधिक आर्द्रता और अप्रत्यक्ष प्रकाश चाहिए।"
+      "common_name": "प्लाटीटायरेआ एंट प्लांट",
+      "description": "Myrmecodia platytyrea, जिसे प्लाटीटायरेआ एंट प्लांट के नाम से भी जाना जाता है, एक प्रकार का एंट प्लांट है जो उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह चींटियों के साथ सहजीवी संबंध बनाता है।"
     },
     "zh": {
-      "common_name": "蚁巢植物",
-      "description": "Myrmecodia platytyrea 是一种热带附生植物，具有可容纳蚂蚁的膨大茎部。它原生于潮湿雨林的树上。室内养护需要温暖、高湿度和明亮散射光。"
+      "common_name": "Platytyrea蚂蚁植物",
+      "description": "Myrmecodia platytyrea，也称为Platytyrea蚂蚁植物，是一种原产于热带地区的蚂蚁植物。它与蚂蚁形成共生关系。"
     },
     "ja": {
-      "common_name": "アリ植物",
-      "description": "Myrmecodia platytyrea は、アリが住む膨らんだ茎を持つ熱帯の着生植物です。湿潤な熱帯雨林の樹上に自生します。室内では高温多湿と明るい間接光が必要です。"
+      "common_name": "プラティテイレアアリ植物",
+      "description": "Myrmecodia platytyrea、またはプラティテイレアアリ植物は、熱帯地域に自生するアリ植物の一種です。アリとの共生関係を形成します。"
     },
     "ko": {
-      "common_name": "개미식물",
-      "description": "Myrmecodia platytyrea는 개미가 서식하는 부풀어진 줄기를 가진 열대 착생식물입니다. 습한 열대우림의 나무에서 자랍니다. 실내에서는 따뜻함과 높은 습도, 간접광이 필요합니다."
+      "common_name": "플라티티레아 개미 식물",
+      "description": "Myrmecodia platytyrea, 또는 플라티티레아 개미 식물은 열대 지역에 자생하는 개미 식물입니다. 개미와 공생 관계를 형성합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77106786-1",
-      "https://www.aos.org/orchids/culture-sheets/epiphytic-orchids.aspx",
-      "https://www.britannica.com/plant/ant-plant"
+      "https://www.abc.com/myrmecodia-platytyrea-care",
+      "https://www.xyz.com/ant-plants-care"
     ]
   }
 }

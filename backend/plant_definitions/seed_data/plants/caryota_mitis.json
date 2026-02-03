@@ -1,23 +1,23 @@
 {
   "external_id": "caryota_mitis",
-  "name": "Fishtail Palm",
+  "name": "Fishtail palm",
   "latin": "Caryota mitis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "en": "Bright, filtered",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, gefiltert",
+          "fr": "Lumineux, filtré",
+          "it": "Luce filtrata",
+          "es": "Luz filtrada",
+          "pt": "Luz filtrada",
+          "ar": "ضوء ساطع مُرشّح",
+          "hi": "तेज़ पर परोक्ष",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良い土",
-          "ko": "배수 잘됨"
+          "en": "Rich, well-draining",
+          "pl": "Żyzne, przepuszcz.",
+          "de": "Nährstoffreich, drain.",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غني وجيد التصريف",
+          "hi": "समृद्ध, जलनिकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥, 배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilg.",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido regolare",
-          "es": "Humedad constante",
-          "pt": "Úmido regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "均一な湿り気",
-          "ko": "고르게 촉촉"
+          "en": "Let top dry slightly",
+          "pl": "Podsusz wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga sopra",
+          "es": "Seca la capa superior",
+          "pt": "Secar a camada de cima",
+          "ar": "اترك السطح يجف قليلاً",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土微干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "윗흙 마르면 물"
         }
       }
     },
@@ -87,17 +87,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Średnia pielęgn.",
-          "de": "Mittlerer Aufwand",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Pflege",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
-          "pt": "Cuidado médio",
+          "pt": "Cuidados médios",
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "养护中等",
+          "ja": "手入れ普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27 °م",
-          "hi": "18–27 °C",
-          "zh": "18–27 °C",
-          "ja": "18–27 ℃",
-          "ko": "18–27 ℃"
+          "en": "15–25°C ideal",
+          "pl": "Idealnie 15–25°C",
+          "de": "Ideal 15–25°C",
+          "fr": "Idéal 15–25°C",
+          "it": "Ideale 15–25°C",
+          "es": "Ideal 15–25°C",
+          "pt": "Ideal 15–25°C",
+          "ar": "مثالي 15–25°م",
+          "hi": "15–25°C उपयुक्त",
+          "zh": "适宜15–25°C",
+          "ja": "適温15–25°C",
+          "ko": "15–25°C 적정"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers high",
-          "pl": "Lubi wilgoć",
-          "de": "Mag hohe Feuchte",
-          "fr": "Aime l'humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "अधिक नमी पसंद",
-          "zh": "喜高湿度",
-          "ja": "高湿度好む",
-          "ko": "높은 습도"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Humidade alta",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक आर्द्रता",
+          "zh": "喜较高湿度",
+          "ja": "高めの湿度",
+          "ko": "습도 높게"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zw.",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica p/ pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विष",
-          "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "en": "Harmful if eaten",
+          "pl": "Szkodliwa po zjedz.",
+          "de": "Schädlich bei Verzehr",
+          "fr": "Nocif si ingéré",
+          "it": "Nociva se ingerita",
+          "es": "Nociva si se ingiere",
+          "pt": "Nociva se ingerida",
+          "ar": "ضارة عند الابتلاع",
+          "hi": "खाने पर हानिकारक",
+          "zh": "误食有害",
+          "ja": "誤食で有害",
+          "ko": "섭취 시 유해"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast clumping palm",
-          "pl": "Szybko rosnąca",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长较快",
-          "ja": "成長早い",
-          "ko": "성장 빠름"
+          "en": "Clumping palm",
+          "pl": "Palmowa kępa",
+          "de": "Horstbildende Palme",
+          "fr": "Palmier en touffe",
+          "it": "Palma cespugliosa",
+          "es": "Palmera en macolla",
+          "pt": "Palmeira em touceira",
+          "ar": "نخلة متكتلة",
+          "hi": "गुच्छेदार पाम",
+          "zh": "丛生棕榈",
+          "ja": "株立ちヤシ",
+          "ko": "군생 야자"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "अति पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, scale",
+          "pl": "Przędziorki, tarczniki",
+          "de": "Spinnmilben, Schildl.",
+          "fr": "Acariens, cochenilles",
+          "it": "Ragnetto, cocciniglia",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ العنكبوت، قشرية",
+          "hi": "स्पाइडर माइट, स्केल",
+          "zh": "红蜘蛛、介壳虫",
+          "ja": "ハダニ、カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Fishtail Palm",
-      "description": "Caryota mitis is a clumping tropical palm native to Southeast Asia. It has distinctive fishtail-shaped leaflets and grows well indoors in bright, indirect light. Consistent moisture and warm temperatures support healthy growth."
+      "common_name": "Fishtail palm",
+      "description": "A clumping palm with distinctive fishtail-shaped leaflets, grown as a houseplant in bright, filtered light. Keep the potting mix evenly moist but not waterlogged, letting the top layer dry slightly between waterings. It prefers warm conditions and higher humidity and can be harmful if eaten and irritating to skin."
     },
     "pl": {
-      "common_name": "Palma fishtail",
-      "description": "Caryota mitis to kępiasta palma tropikalna pochodząca z Azji Południowo-Wschodniej. Wyróżnia się liśćmi w kształcie rybiego ogona i nadaje się do uprawy domowej. Wymaga jasnego stanowiska i regularnego podlewania."
+      "common_name": "Palma rybia",
+      "description": "Kępiasta palma o liściach z listkami przypominającymi rybi ogon, uprawiana w domu w jasnym, rozproszonym świetle. Podłoże utrzymuj lekko wilgotne, ale nie mokre, pozwalając wierzchniej warstwie nieco przeschnąć między podlewaniami. Lubi ciepło i wyższą wilgotność, a po spożyciu może być szkodliwa i drażniąca dla skóry."
     },
     "de": {
       "common_name": "Fischschwanzpalme",
-      "description": "Caryota mitis ist eine horstbildende Palme aus Südostasien. Ihre Blätter haben eine charakteristische Fischschwanzform. Sie wächst gut im Innenraum bei hellem, indirektem Licht und gleichmäßiger Wasserversorgung."
+      "description": "Eine horstbildende Palme mit fischschwanzförmigen Fiederblättchen, die drinnen hell und gefiltert stehen sollte. Das Substrat gleichmäßig feucht halten, aber Staunässe vermeiden und die Oberfläche leicht antrocknen lassen. Warme Temperaturen und höhere Luftfeuchte sind günstig; bei Verzehr kann sie schädlich sein und die Haut reizen."
     },
     "fr": {
       "common_name": "Palmier queue de poisson",
-      "description": "Caryota mitis est un palmier tropical originaire d’Asie du Sud-Est. Il se distingue par ses folioles en forme de queue de poisson. En intérieur, il préfère une lumière vive indirecte et un sol constamment humide."
+      "description": "Palmier cespiteux aux folioles en forme de queue de poisson, adapté à la culture en intérieur en lumière vive filtrée. Maintenez le substrat légèrement humide sans excès, en laissant sécher la surface entre deux arrosages. Il apprécie la chaleur et une humidité plus élevée et peut être nocif s’il est ingéré et irritant pour la peau."
     },
     "it": {
       "common_name": "Palma a coda di pesce",
-      "description": "Caryota mitis è una palma tropicale cespitosa originaria del Sud-Est asiatico. Le sue foglie ricordano la forma di una coda di pesce. Cresce bene in casa con luce indiretta e annaffiature regolari."
+      "description": "Palma a cespo con foglioline a forma di coda di pesce, coltivabile in casa in luce intensa ma filtrata. Mantieni il terriccio leggermente umido evitando ristagni e lascia asciugare appena lo strato superiore tra un’annaffiatura e l’altra. Preferisce temperature calde e umidità più alta; se ingerita può essere nociva e irritante per la pelle."
     },
     "es": {
       "common_name": "Palmera cola de pez",
-      "description": "Caryota mitis es una palmera tropical originaria del sudeste asiático. Presenta hojas con forma de cola de pez muy decorativas. En interior requiere luz indirecta brillante y riego constante."
+      "description": "Palmera de porte agrupado con folíolos en forma de cola de pez, adecuada para interior con luz brillante filtrada. Mantén el sustrato ligeramente húmedo sin encharcar y deja secar un poco la capa superior entre riegos. Prefiere calor y mayor humedad y puede ser nociva si se ingiere e irritante para la piel."
     },
     "pt": {
       "common_name": "Palmeira rabo-de-peixe",
-      "description": "Caryota mitis é uma palmeira tropical nativa do Sudeste Asiático. Suas folhas têm formato característico de rabo de peixe. Desenvolve-se bem em ambientes internos com luz indireta e rega regular."
+      "description": "Palmeira em touceira com folíolos em forma de rabo de peixe, cultivada em interior com luz forte filtrada. Mantenha o substrato ligeiramente húmido sem encharcar e deixe a camada superior secar um pouco entre regas. Prefere temperaturas quentes e maior humidade e pode ser nociva se ingerida e irritante para a pele."
     },
     "ar": {
       "common_name": "نخيل ذيل السمكة",
-      "description": "نبات Caryota mitis هو نخيل استوائي موطنه جنوب شرق آسيا. يتميز بأوراق تشبه ذيل السمكة ويصلح للزراعة الداخلية. يحتاج إلى ضوء غير مباشر وري منتظم."
+      "description": "نخلة متكتلة ذات وريقات تشبه ذيل السمكة، وتناسب الداخل مع ضوء ساطع مُرشّح. أبقِ التربة رطبة قليلًا دون تشبع، واترك السطح يجف قليلًا بين الريات. تفضل الدفء ورطوبة أعلى وقد تكون ضارة عند الابتلاع ومهيجة للجلد."
     },
     "hi": {
       "common_name": "फिशटेल पाम",
-      "description": "Caryota mitis एक उष्णकटिबंधीय पाम है जो दक्षिण-पूर्व एशिया का मूल निवासी है। इसकी पत्तियाँ मछली की पूंछ जैसी होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी और नियमित पानी में अच्छी तरह बढ़ता है।"
+      "description": "यह गुच्छेदार पाम मछली की पूंछ जैसी पत्तियों के लिए जाना जाता है और घर के अंदर तेज़ परोक्ष रोशनी में अच्छा रहता है। मिट्टी को हल्का नम रखें लेकिन पानी जमा न होने दें, और ऊपर की परत को थोड़ा सूखने दें। इसे गर्म तापमान और अधिक नमी पसंद है; खाने पर हानिकारक और त्वचा में जलन कर सकता है।"
     },
     "zh": {
       "common_name": "鱼尾葵",
-      "description": "Caryota mitis 原产于东南亚，是一种丛生型热带棕榈。其叶片形似鱼尾，观赏性强。适合在室内明亮散射光和稳定浇水条件下生长。"
+      "description": "鱼尾葵为丛生棕榈，叶小羽片形似鱼尾，适合室内明亮散射光。盆土保持微湿但避免积水，浇水前让表土略干。喜温暖与较高湿度，误食可能有害并可致皮肤刺激。"
     },
     "ja": {
       "common_name": "フィッシュテールパーム",
-      "description": "Caryota mitis は東南アジア原産の熱帯ヤシです。魚の尾のような形の葉が特徴です。室内では明るい間接光と定期的な水やりを好みます。"
+      "description": "魚の尾のような小葉が特徴の株立ちヤシで、室内では明るい間接光が適します。用土は軽く湿り気を保ちつつ過湿を避け、表土が少し乾いてから水やりします。暖かさと高めの湿度を好み、誤食で有害・皮膚刺激となることがあります。"
     },
     "ko": {
-      "common_name": "피쉬테일 야자",
-      "description": "Caryota mitis는 동남아시아 원산의 열대 야자입니다. 잎 모양이 물고기 꼬리처럼 독특합니다. 실내에서는 밝은 간접광과 규칙적인 물주기가 필요합니다."
+      "common_name": "피쉬테일야자",
+      "description": "물고기 꼬리처럼 생긴 소엽이 특징인 군생 야자로, 실내에서는 밝은 간접광이 좋습니다. 흙은 촉촉하게 유지하되 과습은 피하고, 윗흙이 약간 마른 뒤 물을 줍니다. 따뜻한 온도와 높은 습도를 선호하며, 섭취 시 유해하고 피부 자극을 일으킬 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/2889/caryota-mitis/details",
-      "https://edis.ifas.ufl.edu/publication/FP131",
-      "https://www.botanicalgarden.ubc.ca/caryota-mitis/"
+      "https://www.rhs.org.uk/plants/75193/caryota-mitis/details",
+      "https://plants.ces.ncsu.edu/plants/caryota-mitis/",
+      "https://www.thespruce.com/growing-caryota-palms-indoors-1902879",
+      "https://www.thompson-morgan.com/p/caryota-mitis/wkf4472TM",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:665616-1"
     ]
   }
 }

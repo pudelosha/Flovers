@@ -1,6 +1,6 @@
 {
   "external_id": "pseudorhipsalis_ramulosa",
-  "name": "Red Rhipsalis",
+  "name": "Mistletoe Cactus",
   "latin": "Pseudorhipsalis ramulosa",
   "sun": "medium",
   "water": "medium",
@@ -8,16 +8,16 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "universal"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 조명"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Orchid mix",
-          "pl": "Mieszanka orchidei",
-          "de": "Orchideenmix",
-          "fr": "Mélange pour orchidées",
-          "it": "Miscela per orchidee",
-          "es": "Mezcla para orquídeas",
-          "pt": "Mistura para orquídeas",
-          "ar": "خليط للزهور الأوركيد",
-          "hi": "ऑर्किड मिश्रण",
-          "zh": "兰花混合土",
-          "ja": "オーキッドミックス",
-          "ko": "난초 혼합 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "سقي متوسط",
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
           "hi": "मध्यम पानी देना",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간급 급수"
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -90,13 +90,13 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchtigkeit",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -153,7 +153,7 @@
           "ar": "غير سام",
           "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "비독성"
         }
       }
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsame Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमा विकास",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mäßige Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "生长缓慢到中等",
+          "ja": "遅いから中程度の成長",
+          "ko": "느린에서 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرोत्तर से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過水を避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Red Rhipsalis",
-      "description": "Pseudorhipsalis ramulosa is an epiphytic cactus with red, succulent stems. It thrives in tropical forests with medium light and high humidity."
+      "common_name": "Mistletoe Cactus",
+      "description": "Pseudorhipsalis ramulosa, or Mistletoe Cactus, is an epiphytic cactus native to tropical regions. It thrives in moderate light and prefers well-drained soil."
     },
     "pl": {
-      "common_name": "Czerwony Rhipsalis",
-      "description": "Pseudorhipsalis ramulosa to epifityczny kaktus o czerwonych, mięsistych łodygach. Rośnie w tropikalnych lasach, preferując średnie światło i wysoką wilgotność."
+      "common_name": "Kaktus jemiołowy",
+      "description": "Pseudorhipsalis ramulosa, czyli kaktus jemiołowy, to epifityczny kaktus, który pochodzi z tropikalnych regionów. Rośnie w średnim świetle i lubi dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Rote Rhipsalis",
-      "description": "Pseudorhipsalis ramulosa ist ein epiphytischer Kaktus mit roten, fleischigen Stängeln. Er wächst in tropischen Wäldern bei mittlerem Licht und hoher Luftfeuchtigkeit."
+      "common_name": "Mistelnopal",
+      "description": "Pseudorhipsalis ramulosa, oder Mistelnopal, ist ein epiphytischer Kaktus, der in tropischen Regionen beheimatet ist. Er gedeiht bei mittlerem Licht und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Rhipsalis rouge",
-      "description": "Pseudorhipsalis ramulosa est un cactus épiphyte aux tiges succulentes rouges. Il pousse dans les forêts tropicales avec une lumière moyenne et une humidité élevée."
+      "common_name": "Cactus Gui",
+      "description": "Pseudorhipsalis ramulosa, ou Cactus Gui, est un cactus épiphyte originaire des régions tropicales. Il prospère sous une lumière modérée et préfère un sol bien drainé."
     },
     "it": {
-      "common_name": "Rhipsalis rosso",
-      "description": "Pseudorhipsalis ramulosa è un cactus epifita con fusti succulenti rossi. Cresce nelle foreste tropicali con luce media e alta umidità."
+      "common_name": "Cactus Vischio",
+      "description": "Pseudorhipsalis ramulosa, o Cactus Vischio, è un cactus epifita originario delle regioni tropicali. Cresce alla luce moderata e predilige un terreno ben drenato."
     },
     "es": {
-      "common_name": "Rhipsalis roja",
-      "description": "Pseudorhipsalis ramulosa es un cactus epifítico con tallos suculentos rojos. Crece en bosques tropicales con luz media y alta humedad."
+      "common_name": "Cactus Muérdago",
+      "description": "Pseudorhipsalis ramulosa, o Cactus Muérdago, es un cactus epifito originario de las regiones tropicales. Crece bajo luz moderada y prefiere un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Rhipsalis vermelha",
-      "description": "Pseudorhipsalis ramulosa é um cacto epifítico com caules suculentos vermelhos. Cresce em florestas tropicais com luz média e alta umidade."
+      "common_name": "Cacto Visco",
+      "description": "Pseudorhipsalis ramulosa, ou Cacto Visco, é um cacto epífito nativo das regiões tropicais. Cresce sob luz moderada e prefere solo bem drenado."
     },
     "ar": {
-      "common_name": "رايبساليس الأحمر",
-      "description": "Pseudorhipsalis ramulosa هو صبار شبه هوائي ذو سيقان سمينة حمراء. ينمو في الغابات الاستوائية حيث الإضاءة المتوسطة والرطوبة العالية."
+      "common_name": "صبار الدبق",
+      "description": "Pseudorhipsalis ramulosa، أو صبار الدبق، هو صبار نباتي يعيش في المناطق الاستوائية. ينمو تحت الضوء المعتدل ويفضل التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "लाल राइप्सालिस",
-      "description": "Pseudorhipsalis ramulosa एक एपिफाइटिक कैक्टस है जिसमें लाल, मांसल तने होते हैं। यह उष्णकटिबंधीय जंगलों में मध्यम प्रकाश और उच्च आर्द्रता के साथ बढ़ता है।"
+      "common_name": "मिस्टलटो कैक्टस",
+      "description": "Pseudorhipsalis ramulosa, या मिस्टलटो कैक्टस, एक एपिफाइटिक कैक्टस है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। यह मध्यम प्रकाश में उगता है और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "红色链锯叶仙人掌",
-      "description": "Pseudorhipsalis ramulosa 是一种具有红色多肉茎的附生仙人掌。它在热带森林中生长，适应中等光照和高湿度环境。"
+      "common_name": "槲寄生仙人掌",
+      "description": "Pseudorhipsalis ramulosa，或槲寄生仙人掌，是一种原生于热带地区的附生仙人掌。它在中等光照下生长，喜欢排水良好的土壤。"
     },
     "ja": {
-      "common_name": "赤いリプサリス",
-      "description": "Pseudorhipsalis ramulosa は赤い多肉質の茎を持つ着生性のサボテンです。熱帯雨林で中程度の光と高い湿度の中で育ちます。"
+      "common_name": "ヤドリギサボテン",
+      "description": "Pseudorhipsalis ramulosa、またはヤドリギサボテンは、熱帯地方に自生する着生サボテンです。中程度の光で育ち、水はけの良い土を好みます。"
     },
     "ko": {
-      "common_name": "빨간 리프살리스",
-      "description": "Pseudorhipsalis ramulosa는 빨간 다육질 줄기를 가진 착생성 선인장입니다. 열대 숲에서 중간 정도의 빛과 높은 습도를 좋아합니다."
+      "common_name": "겨우살이 선인장",
+      "description": "Pseudorhipsalis ramulosa, 또는 겨우살이 선인장은 열대 지역이 원산지인 착생 선인장입니다. 중간 정도의 빛에서 자라며 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/pseudorhipsalis-ramulosa",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a405"
+      "https://www.rhs.org.uk/advice/profile?pid=434",
+      "https://www.gardeningknowhow.com/plant-problems/pests/insects-diseases/pseudorhipsalis-ramulosa-care.htm"
     ]
   }
 }

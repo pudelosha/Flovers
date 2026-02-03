@@ -1,24 +1,25 @@
 {
   "external_id": "lithops_karasmontana",
-  "name": "Living Stones",
+  "name": "Karasmontana Lithops",
   "latin": "Lithops karasmontana",
   "sun": "high",
   "water": "low",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "lithops_karasmontana.jpg",
@@ -29,15 +30,15 @@
       "value": {
         "text": {
           "en": "High light",
-          "pl": "Dużo słońca",
+          "pl": "Wysokie światło",
           "de": "Viel Licht",
-          "fr": "Lumière forte",
+          "fr": "Lumière élevée",
           "it": "Luce intensa",
-          "es": "Mucha luz",
+          "es": "Luz alta",
           "pt": "Luz intensa",
-          "ar": "ضوء قوي",
-          "hi": "तेज रोशनी",
-          "zh": "强光",
+          "ar": "ضوء عالي",
+          "hi": "उच्च प्रकाश",
+          "zh": "高光照",
           "ja": "強い光",
           "ko": "강한 빛"
         }
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Very well draining",
-          "pl": "Bardzo przepuszczalna",
-          "de": "Sehr durchlässig",
-          "fr": "Très drainant",
-          "it": "Molto drenante",
-          "es": "Muy drenante",
-          "pt": "Muito drenante",
-          "ar": "تصريف ممتاز",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega rara",
-          "ar": "ري نادر",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり少なめ",
-          "ko": "물 적게"
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Peu fréquent",
+          "it": "Raro",
+          "es": "Poco frecuente",
+          "pt": "Pouco frequente",
+          "ar": "نادراً",
+          "hi": "कभी-कभी",
+          "zh": "不频繁",
+          "ja": "あまり頻繁ではない",
+          "ko": "드물게"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm preferred",
-          "pl": "Lubi ciepło",
-          "de": "Warm bevorzugt",
-          "fr": "Aime la chaleur",
-          "it": "Ama il caldo",
-          "es": "Prefiere calor",
-          "pt": "Prefere calor",
-          "ar": "يفضل الدفء",
-          "hi": "गर्म पसंद",
-          "zh": "喜温暖",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
         }
       }
     },
@@ -143,16 +144,16 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "무독성"
         }
       }
@@ -161,77 +162,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Very slow",
-          "pl": "Bardzo wolny",
-          "de": "Sehr langsam",
-          "fr": "Très lente",
-          "it": "Molto lenta",
-          "es": "Muy lento",
-          "pt": "Muito lento",
-          "ar": "نمو بطيء",
-          "hi": "बहुत धीमी",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Nicht überwässern",
+          "fr": "Pas trop d'arrosage",
+          "it": "Non innaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अفرो पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水を与えすぎないで",
+          "ko": "과도한 물 주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Living Stones",
-      "description": "Lithops karasmontana is a small succulent native to southern Africa. It mimics surrounding stones to avoid herbivores. Care requires bright light and very careful watering."
+      "common_name": "Karasmontana Lithops",
+      "description": "Lithops karasmontana is a slow-growing, succulent plant native to southern Africa. It thrives in bright sunlight and requires minimal watering."
     },
     "pl": {
-      "common_name": "Żywe kamienie",
-      "description": "Lithops karasmontana to niewielki sukulent z południowej Afryki. Upodabnia się do kamieni, by uniknąć zjadania. Wymaga silnego światła i ostrożnego podlewania."
+      "common_name": "Lithops Karasmontana",
+      "description": "Lithops karasmontana to powoli rosnąca roślina sukulentna pochodząca z południowej Afryki. Preferuje jasne światło i potrzebuje minimalnego podlewania."
     },
     "de": {
-      "common_name": "Lebende Steine",
-      "description": "Lithops karasmontana ist eine kleine Sukkulente aus dem südlichen Afrika. Sie tarnt sich als Stein. Benötigt viel Licht und sehr sparsames Gießen."
+      "common_name": "Karasmontana Lithops",
+      "description": "Lithops karasmontana ist eine langsam wachsende Sukkulente aus Südafrika. Sie benötigt viel Sonnenlicht und wenig Wasser."
     },
     "fr": {
-      "common_name": "Pierres vivantes",
-      "description": "Lithops karasmontana est une petite plante succulente d’Afrique australe. Elle ressemble à des cailloux pour se protéger. Elle demande beaucoup de lumière et peu d’eau."
+      "common_name": "Lithops Karasmontana",
+      "description": "Lithops karasmontana est une plante succulente à croissance lente originaire du sud de l'Afrique. Elle préfère la lumière vive et nécessite peu d'eau."
     },
     "it": {
-      "common_name": "Pietre viventi",
-      "description": "Lithops karasmontana è una succulenta originaria dell’Africa meridionale. Imita le pietre per difendersi. Necessita luce intensa e annaffiature molto limitate."
+      "common_name": "Lithops Karasmontana",
+      "description": "Lithops karasmontana è una pianta succulenta a crescita lenta originaria del Sud Africa. Cresce bene alla luce intensa e necessita di poca acqua."
     },
     "es": {
-      "common_name": "Piedras vivas",
-      "description": "Lithops karasmontana es una suculenta pequeña del sur de África. Se camufla como piedra para sobrevivir. Requiere mucha luz y riego mínimo."
+      "common_name": "Lithops Karasmontana",
+      "description": "Lithops karasmontana es una planta suculenta de crecimiento lento originaria del sur de África. Crece mejor con mucha luz solar y necesita poca agua."
     },
     "pt": {
-      "common_name": "Pedras vivas",
-      "description": "Lithops karasmontana é uma suculenta do sul da África. Parece uma pedra para evitar predadores. Precisa de luz intensa e pouca água."
+      "common_name": "Lithops Karasmontana",
+      "description": "Lithops karasmontana é uma planta suculenta de crescimento lento originária do sul da África. Prefere luz intensa e necessita de pouca água."
     },
     "ar": {
-      "common_name": "الحجارة الحية",
-      "description": "ليثوبس كاراسمونتانا نبات عصاري صغير من جنوب أفريقيا. يشبه الحجارة للتمويه. يحتاج إلى ضوء قوي وري محدود جدًا."
+      "common_name": "ليثوبس كارسمنتانا",
+      "description": "ليثوبس كارسمنتانا هو نبات بطيء النمو من جنوب إفريقيا. يتطلب ضوءًا ساطعًا ويحتاج إلى سقي نادر."
     },
     "hi": {
-      "common_name": "लिविंग स्टोन्स",
-      "description": "लिथोप्स करासमोंटाना दक्षिणी अफ्रीका का एक छोटा सक्युलेंट है। यह पत्थरों जैसा दिखता है। इसे तेज रोशनी और बहुत कम पानी चाहिए।"
+      "common_name": "लिथोप्स कॅरामोंटाना",
+      "description": "लिथोप्स कॅरामोंटाना एक धीमी वृद्धि वाली पौधा है जो दक्षिणी अफ्रीका का मूल निवासी है। यह अधिक धूप में बढ़ता है और पानी कम आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "生石花",
-      "description": "Lithops karasmontana 原产于南部非洲，是一种小型多肉植物。外形像石头以躲避捕食。需要强光和极少浇水。"
+      "common_name": "卡拉斯蒙塔纳石莲",
+      "description": "卡拉斯蒙塔纳石莲是原产于南非的慢生植物。它喜欢强光，并且需要较少的水分。"
     },
     "ja": {
-      "common_name": "リトープス",
-      "description": "Lithops karasmontana は南部アフリカ原産の小型多肉植物です。石のような姿で身を守ります。強い光と控えめな水やりが必要です。"
+      "common_name": "カラスモンタナリトプス",
+      "description": "カラスモンタナリトプスは南アフリカ原産の遅く成長する多肉植物です。強い光を好み、少ない水分を必要とします。"
     },
     "ko": {
-      "common_name": "리톱스",
-      "description": "Lithops karasmontana는 남부 아프리카 원산의 작은 다육식물입니다. 돌처럼 위장합니다. 강한 빛과 매우 적은 물이 필요합니다."
+      "common_name": "리톱스 카라스몬타나",
+      "description": "리톱스 카라스몬타나는 남아프리카 원산지의 느리게 자라는 다육 식물입니다. 강한 햇빛을 좋아하고 물은 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/lithops-karasmontana",
-      "https://www.rhs.org.uk/plants/lithops/growing-guide",
-      "https://www.cactus-art.biz/schede/LITHOPS/Lithops_karasmontana/Lithops_karasmontana.htm"
+      "https://www.rhs.org.uk/advice/profile?pid=773",
+      "https://www.gardeningknowhow.com/houseplants/lithops/lithops-care.htm",
+      "https://www.succulent-plant.com/lithops-karasmontana"
     ]
   }
 }

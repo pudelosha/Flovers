@@ -1,23 +1,25 @@
 {
   "external_id": "gloriosa_superba",
-  "name": "Flame lily",
+  "name": "Gloriosa superba",
   "latin": "Gloriosa superba",
   "sun": "high",
   "water": "medium",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "gloriosa_superba.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "强光照",
-          "ja": "明るい光",
-          "ko": "강한 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiatura regolare",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期給水",
-          "ko": "규칙적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Impegnativa",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "较难养护",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गर्म तापमान",
-          "zh": "温暖环境",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18-25°C",
+          "pl": "18-25°C",
+          "de": "18-25°C",
+          "fr": "18-25°C",
+          "it": "18-25°C",
+          "es": "18-25°C",
+          "pt": "18-25°C",
+          "ar": "18-25°C",
+          "hi": "18-25°C",
+          "zh": "18-25°C",
+          "ja": "18-25°C",
+          "ko": "18-25°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Highly toxic",
-          "pl": "Silnie trująca",
-          "de": "Sehr giftig",
-          "fr": "Très toxique",
-          "it": "Molto tossica",
-          "es": "Muy tóxica",
-          "pt": "Muito tóxica",
-          "ar": "سامة جدا",
-          "hi": "अत्यंत विषैला",
-          "zh": "高度有毒",
-          "ja": "非常に有毒",
-          "ko": "강한 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 유독"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing vine",
-          "pl": "Pnącze",
-          "de": "Kletterpflanze",
-          "fr": "Plante grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "نبات متسلق",
-          "hi": "चढ़ने वाली बेल",
-          "zh": "攀援植物",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Fast growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Kein Überwässern",
+          "fr": "Pas trop d'eau",
+          "it": "Non troppo irrigato",
+          "es": "No regar en exceso",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Flame lily",
-      "description": "Gloriosa superba is a tropical climbing plant known for its striking red and yellow flowers. It grows from tubers and requires bright light and warmth. All parts of the plant are highly toxic."
+      "common_name": "Glory Lily",
+      "description": "Gloriosa superba, also known as Glory Lily, is a stunning climbing plant native to tropical Africa and Asia. It produces vibrant, fiery-red flowers that are often tinged with yellow or orange."
     },
     "pl": {
-      "common_name": "Chwała wspaniała",
-      "description": "Gloriosa superba to tropikalne pnącze o efektownych czerwono-żółtych kwiatach. Wyrasta z bulw i wymaga dużo światła oraz ciepła. Cała roślina jest silnie trująca."
+      "common_name": "Lilia chwały",
+      "description": "Gloriosa superba, znana również jako Lilia chwały, to oszałamiająca roślina pnąca, pochodząca z tropikalnej Afryki i Azji. Wytwarza żywe, ognisto-czerwone kwiaty, które często mają odcienie żółci lub pomarańczu."
     },
     "de": {
-      "common_name": "Ruhmeskrone",
-      "description": "Gloriosa superba ist eine tropische Kletterpflanze mit auffälligen rot-gelben Blüten. Sie wächst aus Knollen und benötigt viel Licht und Wärme. Alle Pflanzenteile sind stark giftig."
+      "common_name": "Gloriosa",
+      "description": "Gloriosa superba, auch bekannt als Gloriosa, ist eine beeindruckende Kletterpflanze, die in den tropischen Regionen Afrikas und Asiens beheimatet ist. Sie produziert lebendige, feuerrote Blüten, die oft gelb oder orange getönt sind."
     },
     "fr": {
-      "common_name": "Lis de gloire",
-      "description": "Gloriosa superba est une plante grimpante tropicale aux fleurs rouges et jaunes spectaculaires. Elle pousse à partir de tubercules et aime la lumière vive et la chaleur. La plante est très toxique."
+      "common_name": "Lys glorieux",
+      "description": "Gloriosa superba, également appelée Lys glorieux, est une plante grimpante spectaculaire originaire des régions tropicales d'Afrique et d'Asie. Elle produit des fleurs vibrantes rouges flamboyantes souvent teintées de jaune ou d'orange."
     },
     "it": {
-      "common_name": "Giglio di gloria",
-      "description": "Gloriosa superba è una pianta rampicante tropicale con fiori rosso-gialli molto vistosi. Cresce da tuberi e richiede luce intensa e calore. Tutte le parti sono tossiche."
+      "common_name": "Giglio della gloria",
+      "description": "Gloriosa superba, conosciuta anche come Giglio della gloria, è una pianta rampicante spettacolare originaria delle regioni tropicali dell'Africa e dell'Asia. Produce fiori vivaci rossi fuoco spesso con sfumature di giallo o arancione."
     },
     "es": {
       "common_name": "Lirio glorioso",
-      "description": "Gloriosa superba es una planta trepadora tropical con flores rojas y amarillas llamativas. Crece a partir de tubérculos y necesita mucha luz y calor. Es altamente tóxica."
+      "description": "Gloriosa superba, también conocida como Lirio glorioso, es una impresionante planta trepadora originaria de las regiones tropicales de África y Asia. Produce flores vibrantes de color rojo brillante, a menudo con matices amarillos o naranjas."
     },
     "pt": {
-      "common_name": "Lírio-da-glória",
-      "description": "Gloriosa superba é uma planta trepadeira tropical com flores vermelhas e amarelas marcantes. Cresce de tubérculos e precisa de muita luz e calor. Todas as partes são tóxicas."
+      "common_name": "Lírio glorioso",
+      "description": "Gloriosa superba, também conhecida como Lírio glorioso, é uma planta trepadora impressionante nativa das regiões tropicais da África e da Ásia. Produz flores vibrantes vermelhas intensas, frequentemente com matizes amarelos ou laranja."
     },
     "ar": {
-      "common_name": "زنبق المجد",
-      "description": "غلوريوسا سوبيربا نبات متسلق استوائي ذو أزهار حمراء وصفراء مميزة. ينمو من درنات ويحتاج إلى ضوء قوي ودفء. جميع أجزائه سامة."
+      "common_name": "زهرة المجد",
+      "description": "غوريوسا سوبربا، والمعروفة أيضًا باسم زهرة المجد، هي نبات متسلق رائع موطنه المناطق الاستوائية في أفريقيا وآسيا. تنتج زهورًا حمراء لامعة غالبًا ما تكون مائلة إلى الأصفر أو البرتقالي."
     },
     "hi": {
       "common_name": "ग्लोरी लिली",
-      "description": "ग्लोरियोसा सुपरबा एक उष्णकटिबंधीय चढ़ने वाला पौधा है जिसके फूल लाल और पीले होते हैं। यह कंद से उगता है और तेज रोशनी व गर्मी चाहता है। पौधा अत्यंत विषैला है।"
+      "description": "ग्लोरियोसा सुपरबा, जिसे ग्लोरी लिली भी कहा जाता है, एक शानदार चढ़ाई करने वाला पौधा है जो उष्णकटिबंधीय अफ्रीका और एशिया का मूल निवासी है। यह जीवंत, आग जैसे लाल फूल उत्पन्न करता है, जो अक्सर पीले या नारंगी रंग में रंगे होते हैं।"
     },
     "zh": {
-      "common_name": "火焰百合",
-      "description": "Gloriosa superba 是一种热带攀援植物，具有醒目的红黄色花朵。它由块茎生长，需要充足光照和温暖环境。全株有毒。"
+      "common_name": "荣耀百合",
+      "description": "Gloriosa superba，又名荣耀百合，是一种来自热带非洲和亚洲的攀缘植物。它开出鲜艳的火红色花朵，常带有黄色或橙色的色调。"
     },
     "ja": {
-      "common_name": "グロリオサ",
-      "description": "グロリオサ・スペルバは赤と黄色の花が特徴の熱帯性つる植物です。塊茎から育ち、強い光と暖かさを好みます。全草に毒があります。"
+      "common_name": "グローリーユリ",
+      "description": "グローリオサ・スーパバ（Gloriosa superba）、またの名をグローリーユリは、アフリカとアジアの熱帯地方に自生する印象的なつる植物です。鮮やかな赤い花を咲かせ、しばしば黄色やオレンジ色が混じります。"
     },
     "ko": {
-      "common_name": "글로리오사",
-      "description": "Gloriosa superba는 붉고 노란 꽃이 인상적인 열대 덩굴식물입니다. 덩이줄기에서 자라며 강한 빛과 따뜻함을 필요로 합니다. 모든 부분에 독성이 있습니다."
+      "common_name": "글로리 리리",
+      "description": "Gloriosa superba, 또는 글로리 리리는 아프리카와 아시아의 열대 지역이 원산지인 인상적인 덩굴 식물입니다. 생동감 넘치는 불타는 빨간 꽃을 피우며 종종 노란색 또는 주황색의 색조가 섞입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/gloriosa-superba",
-      "https://www.rhs.org.uk/plants/7668/gloriosa-superba/details",
-      "https://plants.ces.ncsu.edu/plants/gloriosa-superba/"
+      "https://www.gardenia.net/plant/gloriosa-superba",
+      "https://www.rhs.org.uk/plants/3247/gloriosa-superba"
     ]
   }
 }

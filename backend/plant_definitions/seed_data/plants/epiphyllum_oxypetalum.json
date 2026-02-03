@@ -7,12 +7,11 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -31,13 +30,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
+          "de": "Helles, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज परोक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
+          "en": "Airy, well-draining",
+          "pl": "Przepuszczalne",
+          "de": "Luftig, durchlässig",
+          "fr": "Aéré, drainant",
+          "it": "Aereo, drenante",
+          "es": "Aireado, drenante",
+          "pt": "Aéreo, drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "通気・排水良好",
+          "ko": "통기·배수 좋게"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Let top dry slightly",
+          "pl": "Przeschnie wierzch",
+          "de": "Oben leicht antrocknen",
+          "fr": "Laisser sécher en surface",
+          "it": "Asciuga in superficie",
+          "es": "Seca arriba un poco",
+          "pt": "Seca o topo um pouco",
+          "ar": "اترك السطح يجف قليلاً",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土微干再浇",
+          "ja": "表面が乾いてから",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,7 +85,7 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
+          "en": "Moderate",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
@@ -96,7 +95,7 @@
           "ar": "متوسطة",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "普通",
           "ko": "보통"
         }
       }
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "16–27°C (min 10°C)",
+          "pl": "16–27°C (min 10°C)",
+          "de": "16–27°C (min 10°C)",
+          "fr": "16–27°C (min 10°C)",
+          "it": "16–27°C (min 10°C)",
+          "es": "16–27°C (min 10°C)",
+          "pt": "16–27°C (min 10°C)",
+          "ar": "16–27°م (حد 10°م)",
+          "hi": "16–27°C (न्यून 10°C)",
+          "zh": "16–27°C（最低10°C）",
+          "ja": "16–27°C（最低10°C）",
+          "ko": "16–27°C(최저 10°C)"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
+          "en": "Moderate humidity",
+          "pl": "Umiark. wilgotność",
+          "de": "Mäßige Luftfeuchte",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
           "zh": "中等湿度",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Epiphytic cactus",
-          "pl": "Epifityczny",
-          "de": "Epiphytisch",
-          "fr": "Épiphyte",
-          "it": "Epifita",
-          "es": "Epífita",
-          "pt": "Epífita",
-          "ar": "صبار هوائي",
-          "hi": "एपिफाइट कैक्टस",
-          "zh": "附生仙人掌",
-          "ja": "着生サボテン",
-          "ko": "착생 선인장"
+          "en": "Fast, trailing stems",
+          "pl": "Szybki, zwisający",
+          "de": "Schnell, hängend",
+          "fr": "Rapide, retombant",
+          "it": "Rapida, ricadente",
+          "es": "Rápida, colgante",
+          "pt": "Rápido, pendente",
+          "ar": "سريع النمو ومتدلٍ",
+          "hi": "तेजी से, लटकता",
+          "zh": "生长快，垂吊",
+          "ja": "成長早い・垂れ下がる",
+          "ko": "빠름, 늘어짐"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Nicht zu nass halten",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita exceso de agua",
+          "pt": "Evite encharcar",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免积水烂根",
+          "ja": "過湿と直射を避ける",
+          "ko": "과습·직사광 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي وحشرات قشرية",
+          "hi": "मिलीबग, स्केल",
+          "zh": "粉蚧、介壳虫",
+          "ja": "カイガラムシ類",
+          "ko": "깍지·깍지벌레"
         }
       }
     }
@@ -181,58 +218,59 @@
   "translations": {
     "en": {
       "common_name": "Queen of the Night",
-      "description": "Epiphyllum oxypetalum is an epiphytic cactus native to tropical forests of Central America. It is famous for its large, fragrant white flowers that bloom briefly at night. Indoors it prefers bright indirect light and well-drained soil."
+      "description": "An epiphytic cactus with long, flat stems and large fragrant white flowers that open at night. Give bright, indirect light and an airy, fast-draining mix. Water when the surface dries slightly, and reduce watering in winter."
     },
     "pl": {
-      "common_name": "Królowa jednej nocy",
-      "description": "Epiphyllum oxypetalum to epifityczny kaktus pochodzący z lasów tropikalnych Ameryki Środkowej. Słynie z dużych, pachnących białych kwiatów kwitnących nocą. W uprawie domowej wymaga jasnego, rozproszonego światła."
+      "common_name": "Królowa nocy",
+      "description": "Epifityczny kaktus o spłaszczonych pędach i dużych, pachnących białych kwiatach otwierających się nocą. Lubi jasne, rozproszone światło i lekkie, przepuszczalne podłoże. Podlewaj, gdy wierzch lekko przeschnie, a zimą ogranicz podlewanie."
     },
     "de": {
       "common_name": "Königin der Nacht",
-      "description": "Epiphyllum oxypetalum ist ein epiphytischer Kaktus aus den tropischen Wäldern Mittelamerikas. Bekannt ist er für seine großen, duftenden weißen Nachtblüten. Er wächst am besten bei hellem, indirektem Licht."
+      "description": "Ein epiphytischer Kaktus mit flachen Trieben und großen, duftenden weißen Blüten, die nachts aufgehen. Stelle ihn hell, aber ohne direkte Mittagssonne, in ein luftiges Substrat. Gieße, wenn die Oberfläche leicht abgetrocknet ist, und im Winter sparsamer."
     },
     "fr": {
       "common_name": "Reine de la nuit",
-      "description": "Epiphyllum oxypetalum est un cactus épiphyte originaire des forêts tropicales d’Amérique centrale. Il produit de grandes fleurs blanches très parfumées qui s’ouvrent la nuit. En intérieur, il apprécie une lumière vive sans soleil direct."
+      "description": "Cactus épiphyte aux tiges plates et aux grandes fleurs blanches parfumées qui s’ouvrent la nuit. Il préfère une lumière vive indirecte et un mélange très drainant et aéré. Arrosez quand la surface du substrat sèche légèrement et réduisez en hiver."
     },
     "it": {
       "common_name": "Regina della notte",
-      "description": "Epiphyllum oxypetalum è un cactus epifita delle foreste tropicali dell’America Centrale. È noto per i suoi grandi fiori bianchi profumati che sbocciano di notte. Coltivato in casa necessita di luce indiretta e substrato drenante."
+      "description": "Cactus epifita con fusti appiattiti e grandi fiori bianchi profumati che si aprono di notte. Preferisce luce intensa ma indiretta e un substrato molto drenante e arioso. Annaffia quando lo strato superiore si asciuga leggermente e riduci in inverno."
     },
     "es": {
       "common_name": "Reina de la noche",
-      "description": "Epiphyllum oxypetalum es un cactus epífito originario de los bosques tropicales de Centroamérica. Destaca por sus grandes flores blancas y fragantes que se abren por la noche. En interior requiere luz brillante indirecta."
+      "description": "Cactus epífito de tallos planos y flores blancas grandes y fragantes que se abren de noche. Requiere luz brillante e indirecta y un sustrato aireado y bien drenante. Riega cuando la superficie se seque un poco y reduce en invierno."
     },
     "pt": {
-      "common_name": "Dama-da-noite",
-      "description": "Epiphyllum oxypetalum é um cacto epífito nativo das florestas tropicais da América Central. É conhecido pelas grandes flores brancas e perfumadas que se abrem à noite. Prefere luz indireta e solo bem drenado."
+      "common_name": "Rainha-da-noite",
+      "description": "Cacto epífito com hastes achatadas e grandes flores brancas perfumadas que abrem à noite. Prefere luz forte indireta e um substrato bem drenante e arejado. Regue quando a superfície secar um pouco e reduza no inverno."
     },
     "ar": {
       "common_name": "ملكة الليل",
-      "description": "نبات Epiphyllum oxypetalum صبار هوائي موطنه الغابات الاستوائية في أمريكا الوسطى. يشتهر بأزهاره البيضاء الكبيرة العطرة التي تتفتح ليلاً. يفضل الضوء الساطع غير المباشر داخل المنازل."
+      "description": "صبار نباتيّ فوقيّ بسيقان مسطحة وزهور بيضاء كبيرة عطرة تتفتح ليلًا. يحتاج ضوءًا ساطعًا غير مباشر وتربة خفيفة جيدة التصريف. اسقِ عندما يجف السطح قليلًا وقلّل الري في الشتاء."
     },
     "hi": {
-      "common_name": "रात की रानी",
-      "description": "Epiphyllum oxypetalum मध्य अमेरिका के उष्णकटिबंधीय वनों का एक एपिफाइट कैक्टस है। यह अपने बड़े, सुगंधित सफेद फूलों के लिए जाना जाता है जो रात में खिलते हैं। घर के अंदर इसे अप्रत्यक्ष रोशनी पसंद है।"
+      "common_name": "क्वीन ऑफ़ द नाइट",
+      "description": "यह एक एपिफाइटिक कैक्टस है, जिसकी चपटी डंडियाँ होती हैं और बड़े, सुगंधित सफेद फूल रात में खिलते हैं। इसे तेज परोक्ष रोशनी और हवादार, अच्छी जलनिकासी वाली मिट्टी दें। ऊपर की परत हल्की सूखने पर पानी दें और सर्दियों में कम करें।"
     },
     "zh": {
       "common_name": "昙花",
-      "description": "Epiphyllum oxypetalum 原产于中美洲热带森林，是一种附生仙人掌。它以夜间开放的巨大芳香白花而闻名。室内养护需要明亮的散射光和良好排水的基质。"
+      "description": "一种附生仙人掌，茎扁平，夜间开放大型芳香白花。适合明亮散射光与疏松、排水良好的介质。表土微干再浇水，冬季减少浇水。"
     },
     "ja": {
       "common_name": "月下美人",
-      "description": "エピフィルム・オキシペタラムは中米の熱帯林原産の着生サボテンです。夜に咲く大きく香り高い白い花で知られています。室内では明るい間接光を好みます。"
+      "description": "扁平な茎を持つ着生サボテンで、夜に大きく香りのよい白花を咲かせます。明るい間接光と通気・排水のよい用土を好みます。表面が少し乾いてから水やりし、冬は控えめにします。"
     },
     "ko": {
       "common_name": "월하미인",
-      "description": "Epiphyllum oxypetalum은 중앙아메리카 열대 우림이 원산지인 착생 선인장입니다. 밤에 피는 크고 향기로운 흰 꽃으로 유명합니다. 실내에서는 밝은 간접광에서 잘 자랍니다."
+      "description": "납작한 줄기를 가진 착생 선인장으로, 밤에 큰 향기로운 흰 꽃이 핍니다. 밝은 간접광과 통기·배수가 좋은 흙을 좋아합니다. 겉흙이 약간 마르면 물을 주고 겨울에는 물주기를 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/epiphyllum-oxypetalum",
-      "https://garden.org/plants/view/552807/Epiphyllum-oxypetalum/",
-      "https://www.rhs.org.uk/plants/epiphyllum/growing-guide"
+      "https://plants.ces.ncsu.edu/plants/epiphyllum-oxypetalum/",
+      "https://www.gardenia.net/plant/epiphyllum-oxypetalum",
+      "https://www.rhs.org.uk/plants/epiphyllum/growing-guide",
+      "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/insects-pests-and-problems/insects/mealybugs/insect-pests-of-cacti-and-succulents"
     ]
   }
 }

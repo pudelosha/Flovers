@@ -2,24 +2,26 @@
   "external_id": "ledebouria_socialis",
   "name": "Silver Squill",
   "latin": "Ledebouria socialis",
-  "sun": "medium",
-  "water": "low",
+  "sun": "low",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "green-plants",
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "ledebouria_socialis.jpg",
   "image_thumb": "ledebouria_socialis.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Bassa luce",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "إضاءة منخفضة",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低い光",
+          "ko": "약한 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage léger",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega espaçada",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "적은 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -85,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -95,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -122,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average room",
-          "pl": "Zwykła",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通湿度",
-          "ja": "通常",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中くらい",
           "ko": "보통"
         }
       }
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "对宠物有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषेकी नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow clumping",
-          "pl": "Powolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "缓慢丛生",
-          "ja": "成長は遅い",
-          "ko": "느린 성장"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evita l'eccesso d'acqua",
+          "es": "Evita el exceso de agua",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-कालिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Silver Squill",
-      "description": "Ledebouria socialis is a small bulbous plant native to southern Africa. It has silver-green spotted leaves and grows well indoors with bright indirect light. Allow the soil to dry between waterings."
+      "description": "Ledebouria socialis, also known as Silver Squill, is a small, slow-growing plant with decorative foliage. It thrives in low light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Ledeburia plamista",
-      "description": "Ledebouria socialis to mała roślina cebulowa z południowej Afryki. Ma srebrzyste, cętkowane liście i dobrze rośnie w domu. Podlewaj dopiero po przeschnięciu podłoża."
+      "common_name": "Srebrna roślina cebulowa",
+      "description": "Ledebouria socialis, znana również jako srebrna roślina cebulowa, to mała roślina o dekoracyjnych liściach. Wymaga niskiego światła i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Silber-Meerzwiebel",
-      "description": "Ledebouria socialis ist eine kleine Zwiebelpflanze aus dem südlichen Afrika. Sie hat silbrig gemusterte Blätter und eignet sich gut für die Wohnung. Zwischen dem Gießen sollte das Substrat abtrocknen."
+      "common_name": "Silber Squill",
+      "description": "Ledebouria socialis, auch bekannt als Silber Squill, ist eine kleine, langsam wachsende Pflanze mit dekorativen Blättern. Sie gedeiht bei schwachem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Scille argentée",
-      "description": "Ledebouria socialis est une petite plante bulbeuse d’Afrique australe. Ses feuilles sont argentées et tachetées. Elle préfère une lumière indirecte et un arrosage modéré."
+      "common_name": "Squill argenté",
+      "description": "Ledebouria socialis, également connu sous le nom de Squill argenté, est une petite plante à croissance lente avec un feuillage décoratif. Elle prospère à faible luminosité et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Scilla argentea",
-      "description": "Ledebouria socialis è una piccola pianta bulbosa originaria dell’Africa meridionale. Ha foglie argentee maculate ed è adatta alla coltivazione in casa. Va annaffiata solo quando il terreno è asciutto."
+      "common_name": "Squill argentato",
+      "description": "Ledebouria socialis, conosciuta anche come Squill argentato, è una piccola pianta a crescita lenta con foglie decorative. Cresce in luce bassa e necessita di annaffiature moderate."
     },
     "es": {
-      "common_name": "Escila plateada",
-      "description": "Ledebouria socialis es una planta bulbosa pequeña del sur de África. Presenta hojas plateadas con manchas. Requiere luz indirecta y riego espaciado."
+      "common_name": "Squill plateado",
+      "description": "Ledebouria socialis, también conocida como Squill plateado, es una planta pequeña de crecimiento lento con follaje decorativo. Crece con poca luz y requiere un riego moderado."
     },
     "pt": {
-      "common_name": "Cebola-prateada",
-      "description": "Ledebouria socialis é uma planta bulbosa pequena da África Austral. Possui folhas prateadas manchadas e cresce bem em interiores. Regue apenas quando o solo estiver seco."
+      "common_name": "Squill prateado",
+      "description": "Ledebouria socialis, também conhecida como Squill prateado, é uma planta pequena de crescimento lento com folhagem decorativa. Cresce em luz baixa e requer rega moderada."
     },
     "ar": {
-      "common_name": "بصلة فضية",
-      "description": "نبات Ledebouria socialis نبات بصلي صغير موطنه جنوب أفريقيا. يتميز بأوراق فضية منقطة. يفضل الضوء غير المباشر والري القليل."
+      "common_name": "سكويل الفضة",
+      "description": "Ledebouria socialis، المعروفة أيضًا باسم سكويل الفضة، هي نبتة صغيرة تنمو ببطء مع أوراق مزخرفة. تنمو في الإضاءة المنخفضة وتحتاج إلى ري معتدل."
     },
     "hi": {
       "common_name": "सिल्वर स्क्विल",
-      "description": "Ledebouria socialis दक्षिणी अफ्रीका का एक छोटा बल्ब वाला पौधा है। इसकी पत्तियाँ चांदी जैसी धब्बेदार होती हैं। इसे अप्रत्यक्ष रोशनी और कम पानी की आवश्यकता होती है।"
+      "description": "Ledebouria socialis, जिसे सिल्वर स्क्विल भी कहा जाता है, एक छोटी, धीमी गति से बढ़ने वाली पौधा है जिसमें सजावटी पत्तियां होती हैं। यह कम रोशनी में बढ़ता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "银鳞百合",
-      "description": "Ledebouria socialis 原产于非洲南部，是一种小型球根植物。叶片呈银绿色并带斑点。适合室内明亮散射光并少量浇水。"
+      "common_name": "银铃花",
+      "description": "Ledebouria socialis，也叫银铃花，是一种小型、缓慢生长的植物，具有装饰性的叶子。它适应低光环境，需适量浇水。"
     },
     "ja": {
-      "common_name": "シルバースクイル",
-      "description": "Ledebouria socialis は南部アフリカ原産の小型球根植物です。銀色の斑点のある葉を持ちます。明るい間接光と控えめな水やりを好みます。"
+      "common_name": "シルバー・スクィル",
+      "description": "Ledebouria socialis（シルバー・スクィル）は、小さく、成長が遅い植物で、装飾的な葉を持っています。低光で育ち、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "실버 스퀼",
-      "description": "Ledebouria socialis는 남아프리카 원산의 작은 구근 식물입니다. 은빛 무늬 잎이 특징입니다. 밝은 간접광과 적은 물을 선호합니다."
+      "description": "Ledebouria socialis, 또는 실버 스퀴는 작은 크기와 느린 성장을 가진 장식용 잎을 가진 식물입니다. 낮은 빛에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/ledebouria-socialis",
-      "https://www.rhs.org.uk/plants/ledebouria/socialis/details",
-      "https://extension.umn.edu/houseplants/ledebouria"
+      "https://www.rhs.org.uk/plants/30842/Ledebouria-socialis/Details",
+      "https://www.gardenia.net/plant/ledebouria-socialis"
     ]
   }
 }

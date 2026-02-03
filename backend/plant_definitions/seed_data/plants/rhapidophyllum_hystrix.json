@@ -1,18 +1,18 @@
 {
-  "external_id": "rapidophyllum_hystrix",
+  "external_id": "rhapidophyllum_hystrix",
   "name": "Needle Palm",
   "latin": "Rhapidophyllum hystrix",
-  "sun": "medium",
+  "sun": "low",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -22,25 +22,25 @@
   "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
-  "image_hero": "rapidophyllum_hystrix.jpg",
-  "image_thumb": "rapidophyllum_hystrix.jpg",
+  "image_hero": "raphidophyllum_hystrix.jpg",
+  "image_thumb": "raphidophyllum_hystrix.jpg",
   "traits": [
     {
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "إضاءة منخفضة",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "약한 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaszczysta",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملية",
-          "hi": "रेत",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
           "ar": "منخفض",
-          "hi": "निम्न",
+          "hi": "नम",
           "zh": "低",
           "ja": "低",
-          "ko": "낮은"
+          "ko": "낮음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
           "ar": "بطيء",
           "hi": "धीमा",
           "zh": "慢",
           "ja": "遅い",
-          "ko": "느린"
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Needle Palm",
-      "description": "Rhapidophyllum hystrix is a slow-growing, hardy palm native to the southeastern United States. It is characterized by its fan-shaped leaves and spiny trunk."
+      "description": "The Needle Palm is a hardy, slow-growing palm native to the southeastern United States. It thrives in low light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Palmowiec iglasty",
-      "description": "Rhapidophyllum hystrix to powolnie rosnąca, odporna palma, pochodząca z południowo-wschodnich Stanów Zjednoczonych. Charakteryzuje się wachlarzowatymi liśćmi i kolczastym pniem."
+      "common_name": "Palma igłowa",
+      "description": "Palma igłowa to odporna, wolno rosnąca palma, pochodząca z południowo-wschodnich Stanów Zjednoczonych. Wymaga niskiego światła i umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Nadelpalme",
-      "description": "Rhapidophyllum hystrix ist eine langsam wachsende, robuste Palme aus dem Südosten der Vereinigten Staaten. Sie zeichnet sich durch ihre fächerförmigen Blätter und den stacheligen Stamm aus."
+      "description": "Die Nadelpalme ist eine robuste, langsam wachsende Palme aus den südöstlichen USA. Sie gedeiht bei wenig Licht und benötigt mäßige Bewässerung."
     },
     "fr": {
       "common_name": "Palmier à aiguilles",
-      "description": "Rhapidophyllum hystrix est un palmier à croissance lente, originaire du sud-est des États-Unis. Il se caractérise par ses feuilles en forme de palme et son tronc épineux."
+      "description": "Le palmier à aiguilles est un palmier robuste et à croissance lente, originaire du sud-est des États-Unis. Il prospère dans une faible lumière et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Palma a aghi",
-      "description": "Rhapidophyllum hystrix è una palma a crescita lenta, originaria del sud-est degli Stati Uniti. È caratterizzata da foglie a forma di ventaglio e un tronco spinoso."
+      "common_name": "Palma a ago",
+      "description": "La palma a ago è una pianta resistente e a crescita lenta originaria del sud-est degli Stati Uniti. Cresce bene con luce bassa e richiede un'irrigazione moderata."
     },
     "es": {
-      "common_name": "Palma de agujas",
-      "description": "Rhapidophyllum hystrix es una palma de crecimiento lento, originaria del sureste de los Estados Unidos. Se caracteriza por sus hojas en forma de abanico y su tronco espinoso."
+      "common_name": "Palmera de agujas",
+      "description": "La palmera de agujas es una planta resistente y de crecimiento lento originaria del sureste de los Estados Unidos. Crece bien con poca luz y requiere riego moderado."
     },
     "pt": {
       "common_name": "Palmeira de agulhas",
-      "description": "Rhapidophyllum hystrix é uma palma de crescimento lento, nativa do sudeste dos Estados Unidos. É caracterizada por suas folhas em forma de leque e tronco espinhoso."
+      "description": "A palmeira de agulhas é uma planta resistente de crescimento lento originária do sudeste dos Estados Unidos. Cresce bem com pouca luz e requer rega moderada."
     },
     "ar": {
-      "common_name": "نخيل الإبر",
-      "description": "Rhapidophyllum hystrix هو نوع من أشجار النخيل ذات النمو البطيء، وهو موطنه الأصلي في جنوب شرق الولايات المتحدة. يتميز بأوراقه على شكل مروحة وجذعه الشوكي."
+      "common_name": "نخلة الإبرة",
+      "description": "نخلة الإبرة هي نبتة قوية بطيئة النمو موطنها الجنوب الشرقي للولايات المتحدة. تنمو بشكل جيد في الإضاءة المنخفضة وتتطلب الري المعتدل."
     },
     "hi": {
-      "common_name": "सुई की हथेली",
-      "description": "Rhapidophyllum hystrix एक धीमी गति से बढ़ने वाली, दृढ़ हथेली है जो दक्षिण-पूर्वी संयुक्त राज्य अमेरिका का मूल है। यह अपनी पंखुड़ी जैसी पत्तियों और कांटेदार तने के लिए जाना जाता है।"
+      "common_name": "सुई पाम",
+      "description": "सुई पाम एक मजबूत और धीमी गति से बढ़ने वाली पाम है जो संयुक्त राज्य के दक्षिण-पूर्वी हिस्से से उत्पन्न होती है। यह कम रोशनी में अच्छा बढ़ता है और इसे मध्यम पानी की आवश्यकता होती है."
     },
     "zh": {
       "common_name": "针叶棕榈",
-      "description": "Rhapidophyllum hystrix 是一种生长缓慢、耐寒的棕榈，原产于美国东南部。它的特点是扇形叶和多刺的树干。"
+      "description": "针叶棕榈是原产于美国东南部的耐寒、缓慢生长的棕榈。它在低光条件下生长良好，需要适度浇水。"
     },
     "ja": {
       "common_name": "針葉ヤシ",
-      "description": "Rhapidophyllum hystrixは、アメリカ南東部原産の成長が遅い丈夫なヤシです。扇形の葉ととげのある幹が特徴です。"
+      "description": "針葉ヤシはアメリカ南東部原産の耐寒性があり、成長が遅いヤシの木です。低光でよく成長し、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "바늘야자",
-      "description": "Rhapidophyllum hystrix는 미국 남동부가 원산지인 느리게 자라는 강한 야자입니다. 팬 모양의 잎과 가시가 있는 줄기가 특징입니다."
+      "common_name": "바늘 야자",
+      "description": "바늘 야자는 미국 동남부 원산지의 강한 내구성을 가진 느리게 자라는 야자입니다. 낮은 빛에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/raphidophyllum-hystrix",
-      "https://www.missouribotanicalgarden.org/plantfinder/plantfindersearch.aspx?taxonid=285906"
+      "https://www.ncbi.nlm.nih.gov/plant/raphidophyllum-hystrix",
+      "https://www.gardeningknowhow.com/plant-care"
     ]
   }
 }

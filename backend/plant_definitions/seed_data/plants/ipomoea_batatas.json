@@ -1,25 +1,25 @@
 {
   "external_id": "ipomoea_batatas",
-  "name": "Sweet Potato Vine",
+  "name": "Sweet Potato",
   "latin": "Ipomoea batatas",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "ipomoea_batatas.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loose fertile soil",
-          "pl": "Luźna gleba",
-          "de": "Lockerer Boden",
-          "fr": "Sol meuble",
-          "it": "Terreno sciolto",
-          "es": "Suelo suelto",
-          "pt": "Solo solto",
-          "ar": "تربة خفيفة",
-          "hi": "ढीली मिट्टी",
-          "zh": "疏松土壤",
-          "ja": "水はけ土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "よく排水されている",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Regular watering",
           "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
+          "de": "Regelmäßiges Gießen",
           "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
+          "it": "Annaffiatura regolare",
           "es": "Riego regular",
           "pt": "Rega regular",
-          "ar": "ري منتظم",
+          "ar": "الري المنتظم",
           "hi": "नियमित पानी",
           "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "ja": "定期的な水やり",
+          "ko": "정기적인 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
+          "en": "Medium humidity",
           "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
+          "de": "Mittlere Luftfeuchtigkeit",
           "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
-          "pt": "Umidade média",
+          "pt": "Humidade média",
           "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
+          "hi": "मध्यम आर्द्रता",
           "zh": "中等湿度",
-          "ja": "普通湿度",
-          "ko": "보통 습도"
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing vine",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Vigorous growth",
+          "pl": "Wigorosty wzrost",
+          "de": "Kräftiges Wachstum",
+          "fr": "Croissance vigoureuse",
+          "it": "Crescita vigorosa",
+          "es": "Crecimiento vigoroso",
+          "pt": "Crescimento vigoroso",
+          "ar": "نمو قوي",
+          "hi": "शक्तिशाली वृद्धि",
+          "zh": "旺盛生长",
+          "ja": "旺盛な成長",
+          "ko": "강한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il troppo acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि पests",
+          "zh": "偶尔害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sweet Potato",
-      "description": "Ipomoea batatas is a warm-season vine grown for its edible tubers and ornamental foliage. It needs strong light and consistent watering. Indoors it is usually grown as a foliage plant rather than for harvest."
+      "description": "Sweet potatoes are vine-like plants commonly grown for their edible tubers. They thrive in warm climates and are relatively easy to grow indoors."
     },
     "pl": {
-      "common_name": "Bataty",
-      "description": "Ipomoea batatas to ciepłolubne pnącze uprawiane dla jadalnych bulw i liści. Wymaga dużo światła i regularnego podlewania. W domu pełni głównie funkcję ozdobną."
+      "common_name": "Batata",
+      "description": "Bataty to rośliny pnące uprawiane głównie dla jadalnych korzeni. Rozwijają się w ciepłym klimacie i są stosunkowo łatwe do uprawy w pomieszczeniach."
     },
     "de": {
       "common_name": "Süßkartoffel",
-      "description": "Ipomoea batatas ist eine wärmeliebende Pflanze mit rankendem Wuchs. Sie benötigt viel Licht und gleichmäßige Wassergaben. In Innenräumen wird sie meist als Zierpflanze gehalten."
+      "description": "Süßkartoffeln sind rankende Pflanzen, die hauptsächlich wegen ihrer essbaren Wurzeln angebaut werden. Sie gedeihen in warmem Klima und lassen sich relativ einfach drinnen anbauen."
     },
     "fr": {
       "common_name": "Patate douce",
-      "description": "Ipomoea batatas est une plante tropicale cultivée pour ses tubercules et son feuillage. Elle demande une forte luminosité et un arrosage régulier. En intérieur, elle est surtout décorative."
+      "description": "Les patates douces sont des plantes grimpantes cultivées principalement pour leurs racines comestibles. Elles prospèrent dans les climats chauds et sont relativement faciles à cultiver en intérieur."
     },
     "it": {
       "common_name": "Patata dolce",
-      "description": "Ipomoea batatas è una pianta rampicante amante del caldo. Richiede molta luce e annaffiature regolari. In casa viene coltivata soprattutto per le foglie."
+      "description": "Le patate dolci sono piante rampicanti coltivate principalmente per le loro radici commestibili. Crescono bene nei climi caldi e sono relativamente facili da coltivare in casa."
     },
     "es": {
       "common_name": "Batata",
-      "description": "Ipomoea batatas es una planta tropical de crecimiento rápido. Necesita sol intenso y riego constante. En interior se cultiva principalmente como ornamental."
+      "description": "Las batatas son plantas trepadoras cultivadas principalmente por sus raíces comestibles. Prosperan en climas cálidos y son relativamente fáciles de cultivar en interiores."
     },
     "pt": {
       "common_name": "Batata-doce",
-      "description": "Ipomoea batatas é uma planta de clima quente cultivada pelos seus tubérculos. Precisa de muita luz e rega regular. Em ambientes internos é usada como ornamental."
+      "description": "As batatas-doces são plantas trepadeiras cultivadas principalmente pelas suas raízes comestíveis. Elas prosperam em climas quentes e são relativamente fáceis de cultivar em interiores."
     },
     "ar": {
       "common_name": "البطاطا الحلوة",
-      "description": "Ipomoea batatas نبات محب للحرارة ينمو كمتسلق. يحتاج إلى ضوء قوي وري منتظم. يزرع داخليًا غالبًا لأوراقه."
+      "description": "البطاطا الحلوة هي نباتات متسلقة تزرع أساسًا من أجل جذورها الصالحة للأكل. تنمو في المناخات الدافئة ومن السهل نسبيًا زراعتها في الداخل."
     },
     "hi": {
       "common_name": "शकरकंद",
-      "description": "Ipomoea batatas एक गर्म जलवायु की बेल है। इसे तेज़ रोशनी और नियमित पानी की आवश्यकता होती है। घर के अंदर इसे सजावटी रूप में उगाया जाता है।"
+      "description": "शकरकंद लताओं के जैसे पौधे होते हैं जिन्हें मुख्य रूप से खाने योग्य कंदों के लिए उगाया जाता है। यह गर्म जलवायु में अच्छी तरह से उगते हैं और इन्हें घर के अंदर उगाना अपेक्षाकृत आसान होता है।"
     },
     "zh": {
-      "common_name": "红薯",
-      "description": "Ipomoea batatas 是喜温植物，生长迅速。需要充足光照和规律浇水。室内多作为观叶植物栽培。"
+      "common_name": "甘薯",
+      "description": "甘薯是藤本植物，主要种植其可食用的块根。它们在温暖的气候中茂盛生长，且相对容易在室内种植。"
     },
     "ja": {
       "common_name": "サツマイモ",
-      "description": "Ipomoea batatas は暖かい環境を好むつる性植物です。強い光と定期的な水やりが必要です。室内では観葉目的で育てられます。"
+      "description": "サツマイモは食用の根を得るために主に栽培されるつる性植物です。温暖な気候でよく育ち、室内で育てるのも比較的簡単です。"
     },
     "ko": {
       "common_name": "고구마",
-      "description": "Ipomoea batatas 는 따뜻한 기후를 좋아하는 덩굴식물입니다. 밝은 빛과 규칙적인 물주기가 필요합니다. 실내에서는 관엽용으로 재배됩니다."
+      "description": "고구마는 주로 식용 뿌리를 위해 재배되는 덩굴 식물입니다. 따뜻한 기후에서 잘 자라며 실내에서 재배하기도 비교적 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://edis.ifas.ufl.edu/publication/HS1310",
-      "https://www.rhs.org.uk/plants/9176/ipomoea-batatas/details",
-      "https://plants.ces.ncsu.edu/plants/ipomoea-batatas/"
+      "https://www.rhs.org.uk/advice/profile?pid=212",
+      "https://www.gardeningknowhow.com/edible/vegetables/sweet-potato/sweet-potato-plant-care.htm"
     ]
   }
 }

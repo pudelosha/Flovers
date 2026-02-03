@@ -12,12 +12,12 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "Aroid",
-          "fr": "Aroid",
-          "it": "Aroid",
-          "es": "Aroid",
-          "pt": "Aroid",
-          "ar": "أرويد",
-          "hi": "एरोइड",
-          "zh": "阿罗伊德",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-28°C",
-          "pl": "22-28°C",
-          "de": "22-28°C",
-          "fr": "22-28°C",
-          "it": "22-28°C",
-          "es": "22-28°C",
-          "pt": "22-28°C",
-          "ar": "22-28°C",
-          "hi": "22-28°C",
-          "zh": "22-28°C",
-          "ja": "22-28°C",
-          "ko": "22-28°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "średni",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Fast growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Red-Leaf Philodendron",
-      "description": "Philodendron erubescens is a tropical plant with glossy, heart-shaped leaves. It thrives in bright, indirect light and requires consistent moisture and warmth."
+      "description": "Philodendron erubescens is a tropical plant known for its red-tinged leaves and fast growth. It thrives in medium light and high humidity."
     },
     "pl": {
-      "common_name": "Filodendron Czerwony",
-      "description": "Philodendron erubescens to tropikalna roślina o błyszczących, sercowatych liściach. Wymaga jasnego, pośredniego światła oraz stałej wilgoci i ciepła."
+      "common_name": "Filodendron czerwony",
+      "description": "Filodendron erubescens to roślina tropikalna, znana z czerwonych liści i szybkiego wzrostu. Wymaga średniego światła i wysokiej wilgotności."
     },
     "de": {
       "common_name": "Rote Blätter Philodendron",
-      "description": "Philodendron erubescens ist eine tropische Pflanze mit glänzenden, herzförmigen Blättern. Sie gedeiht bei hellem, indirektem Licht und benötigt konstante Feuchtigkeit und Wärme."
+      "description": "Philodendron erubescens ist eine tropische Pflanze, die für ihre rot getönten Blätter und schnelles Wachstum bekannt ist. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Philodendron à Feuilles Rouges",
-      "description": "Philodendron erubescens est une plante tropicale à feuilles en forme de cœur et brillantes. Elle préfère la lumière indirecte et nécessite une humidité et une chaleur constantes."
+      "common_name": "Philodendron à feuilles rouges",
+      "description": "Le Philodendron erubescens est une plante tropicale connue pour ses feuilles teintées de rouge et sa croissance rapide. Il préfère une lumière moyenne et une forte humidité."
     },
     "it": {
-      "common_name": "Filodendro a Foglie Rosse",
-      "description": "Philodendron erubescens è una pianta tropicale con foglie lucide a forma di cuore. Cresce meglio in luce indiretta e richiede umidità costante e calore."
+      "common_name": "Filodendro a foglie rosse",
+      "description": "Il Philodendron erubescens è una pianta tropicale conosciuta per le sue foglie rossastre e la crescita rapida. Cresce bene con luce media e alta umidità."
     },
     "es": {
-      "common_name": "Filodendro de Hojas Rojas",
-      "description": "Philodendron erubescens es una planta tropical con hojas brillantes en forma de corazón. Prefiere la luz indirecta y necesita humedad y calor constantes."
+      "common_name": "Filodendro de hojas rojas",
+      "description": "El Philodendron erubescens es una planta tropical conocida por sus hojas rojas y su rápido crecimiento. Prefiere luz media y alta humedad."
     },
     "pt": {
-      "common_name": "Filodendro de Folhas Vermelhas",
-      "description": "Philodendron erubescens é uma planta tropical com folhas brilhantes em forma de coração. Prefere luz indireta e necessita de umidade e calor constantes."
+      "common_name": "Filodendro de folhas vermelhas",
+      "description": "O Philodendron erubescens é uma planta tropical conhecida pelas suas folhas avermelhadas e rápido crescimento. Prefere luz média e alta umidade."
     },
     "ar": {
-      "common_name": "فيلوديندرون ذو الأوراق الحمراء",
-      "description": "فيلوديندرون إيروبسنس هو نبات استوائي بأوراق لامعة على شكل قلب. يفضل الضوء غير المباشر ويتطلب رطوبة وحرارة ثابتة."
+      "common_name": "فيلوديندورن ذو الأوراق الحمراء",
+      "description": "الفيلوديندورن إيروبسنس هو نبات استوائي يعرف بأوراقه ذات اللون الأحمر ونموه السريع. يزدهر في الضوء المتوسط والرطوبة العالية."
     },
     "hi": {
-      "common_name": "लाल पत्ते वाला फिलोडेंड्रोन",
-      "description": "फिलोडेंड्रोन एरुबेसन्स एक उष्णकटिबंधीय पौधा है, जिसकी पत्तियाँ दिल के आकार की और चमकदार होती हैं। यह धीमी, परोक्ष रोशनी में बढ़ता है और निरंतर नमी और गर्मी की आवश्यकता होती है।"
+      "common_name": "लाल पत्तियों वाला फिलोडेंड्रोन",
+      "description": "फिलोडेंड्रोन एरुबेसेन्स एक उष्णकटिबंधीय पौधा है, जो अपनी लाल रंग की पत्तियों और तेज़ बढ़ने के लिए जाना जाता है। इसे मध्यम प्रकाश और उच्च आर्द्रता में बढ़ने में आसानी होती है।"
     },
     "zh": {
-      "common_name": "红叶菲洛登德伦",
-      "description": "Philodendron erubescens是一种热带植物，具有光滑的心形叶子。它喜欢间接光，并需要恒定的湿度和温暖。"
+      "common_name": "红叶菲洛登德龙",
+      "description": "Philodendron erubescens是一种热带植物，以其红色的叶子和快速的生长而闻名。它喜欢中等光照和高湿度环境。"
     },
     "ja": {
-      "common_name": "レッドリーフフィロデンドロン",
-      "description": "Philodendron erubescensは、光沢のあるハート型の葉を持つ熱帯植物です。間接光のもとで育ち、一定の湿度と温かさを必要とします。"
+      "common_name": "赤葉フィロデンドロン",
+      "description": "フィロデンドロン・エルベセンスは赤みを帯びた葉と早い成長で知られる熱帯植物です。中程度の光と高湿度でよく育ちます。"
     },
     "ko": {
-      "common_name": "레드리프 필로덴드론",
-      "description": "Philodendron erubescens는 광택이 나는 심장 모양의 잎을 가진 열대 식물입니다. 간접적인 빛에서 자라며 일정한 습도와 온기를 필요로 합니다."
+      "common_name": "붉은 잎 필로덴드론",
+      "description": "Philodendron erubescens는 빨간색 잎과 빠른 성장으로 유명한 열대 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/philodendron-erubescens",
-      "https://www.rhs.org.uk/plants/philodendron-erubescens"
+      "https://www.rhs.org.uk/plants/philodendron-erubescens",
+      "https://www.gardenia.net/plant/philodendron-erubescens"
     ]
   }
 }

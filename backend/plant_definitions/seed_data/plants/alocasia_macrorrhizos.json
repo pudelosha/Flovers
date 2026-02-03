@@ -1,6 +1,6 @@
 {
   "external_id": "alocasia_macrorrhizos",
-  "name": "Giant Taro",
+  "name": "Giant taro",
   "latin": "Alocasia macrorrhizos",
   "sun": "medium",
   "water": "high",
@@ -15,10 +15,10 @@
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_macrorrhizos.jpg",
@@ -29,14 +29,14 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumiere indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining mix",
-          "pl": "Przepuszczalne",
-          "de": "Gut drainierend",
-          "fr": "Bien drainant",
-          "it": "Ben drenante",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Chunky aroid mix",
+          "pl": "Przepuszczalne aroid",
+          "de": "Luftiges Aroid-Sub",
+          "fr": "Substrat aroid aere",
+          "it": "Mix aroid drenante",
+          "es": "Mezcla aroid aireada",
+          "pt": "Mistura aroid arejada",
+          "ar": "خليط أرويد جيد الصرف",
+          "hi": "हवादार एरॉइड मिक्स",
+          "zh": "疏松天南星土",
+          "ja": "排水よいアロイド土",
+          "ko": "통기성 아로이드 흙"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطبة باستمرار",
-          "hi": "लगातार नम",
-          "zh": "保持湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder humide",
+          "it": "Terriccio umido",
+          "es": "Mantener humedo",
+          "pt": "Manter umido",
+          "ar": "تربة رطبة بلا غمر",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -86,17 +86,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Pflege",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Anspruch",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
-          "pt": "Cuidado médio",
+          "pt": "Cuidado medio",
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等难度",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "中等养护",
+          "ja": "手入れ普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -124,12 +124,12 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgotność",
+          "pl": "Wysoka wilgotnosc",
           "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "fr": "Humidite elevee",
+          "it": "Alta umidita",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषाक्त",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedz",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingere",
+          "it": "Tossica se ingerita",
+          "es": "Toxica si se ingiere",
+          "pt": "Toxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast, very large",
-          "pl": "Szybki, duży",
-          "de": "Schnell, groß",
-          "fr": "Rapide, grande",
-          "it": "Rapida, grande",
-          "es": "Rápido, grande",
-          "pt": "Rápido, grande",
-          "ar": "سريع وكبير",
-          "hi": "तेज़, बड़ा",
-          "zh": "快速大型",
-          "ja": "早く大きい",
-          "ko": "빠른 대형"
+          "en": "Large, fast growth",
+          "pl": "Duza, szybki wzrost",
+          "de": "Gross, schnelles W",
+          "fr": "Grande, croissance",
+          "it": "Grande, crescita rap",
+          "es": "Grande, crecimiento",
+          "pt": "Grande, crescimento",
+          "ar": "نمو كبير وسريع",
+          "hi": "बड़ा, तेज़ विकास",
+          "zh": "大型生长快",
+          "ja": "大型で成長早い",
+          "ko": "크고 빠른 생장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No soggy soil",
+          "pl": "Bez przelania",
+          "de": "Keine Staunasse",
+          "fr": "Pas d'eau stagnante",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Nao encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जलभराव नहीं",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealy",
+          "pl": "Przedziorki, weln",
+          "de": "Spinnmilben, Wolll",
+          "fr": "Acarien, cochenille",
+          "it": "Ragnetti, coccinig",
+          "es": "Acaros, cochinilla",
+          "pt": "Acaros, cochonilha",
+          "ar": "عناكب دقيقة وبق دقيق",
+          "hi": "स्पाइडर माइट, मिलीबग",
+          "zh": "红蜘蛛, 粉蚧",
+          "ja": "ハダニ・コナカイ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Giant Taro",
-      "description": "Alocasia macrorrhizos is a large tropical aroid with massive leaves and thick stems. It thrives indoors with bright indirect light, warm temperatures, and consistently moist soil."
+      "common_name": "Giant taro",
+      "description": "A tropical aroid grown for very large, upright leaves. Give bright, indirect light and water when the top layer starts to dry, keeping the mix evenly moist but not soggy. Keep warm (about 18–27°C) and note it is toxic if ingested."
     },
     "pl": {
       "common_name": "Alokazja olbrzymia",
-      "description": "Alocasia macrorrhizos to tropikalna roślina o bardzo dużych liściach. Wymaga jasnego światła pośredniego, ciepła i stale wilgotnego podłoża."
+      "description": "Tropikalna roślina z rodziny obrazkowatych o bardzo dużych, wzniesionych liściach. Zapewnij jasne, rozproszone światło i podlewaj, gdy wierzch podłoża lekko przeschnie, bez przelania. Lubi ciepło (ok. 18–27°C) i jest toksyczna po spożyciu."
     },
     "de": {
-      "common_name": "Riesen-Pfeilblatt",
-      "description": "Alocasia macrorrhizos ist eine tropische Blattpflanze mit sehr großen Blättern. Sie wächst am besten bei hellem indirektem Licht und gleichmäßig feuchter Erde."
+      "common_name": "Riesen-Alokasie",
+      "description": "Ein tropischer Aronstabgewächs mit sehr großen, aufrechten Blättern. Stelle sie hell, aber ohne direkte Sonne, und gieße, wenn die Oberfläche leicht antrocknet, ohne Staunässe. Warm halten (ca. 18–27°C) und beachten: bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Alocasia géant",
-      "description": "Alocasia macrorrhizos est une plante tropicale aux feuilles immenses. Elle préfère une lumière indirecte vive, la chaleur et un sol humide."
+      "common_name": "Alocasie géante",
+      "description": "Aroïde tropicale cultivée pour ses très grandes feuilles dressées. Offrez une lumière vive indirecte et arrosez quand la surface commence à sécher, en gardant le substrat humide sans excès d'eau. Garder au chaud (env. 18–27°C) et noter qu'elle est toxique en cas d'ingestion."
     },
     "it": {
       "common_name": "Alocasia gigante",
-      "description": "Alocasia macrorrhizos è una pianta tropicale con foglie molto grandi. In casa necessita luce indiretta, caldo e terreno costantemente umido."
+      "description": "Aroidea tropicale coltivata per foglie molto grandi e erette. Fornisci luce intensa indiretta e annaffia quando lo strato superiore inizia ad asciugare, evitando ristagni. Mantieni temperature calde (circa 18–27°C) ed è tossica se ingerita."
     },
     "es": {
       "common_name": "Alocasia gigante",
-      "description": "Alocasia macrorrhizos es una planta tropical de hojas enormes. Requiere luz indirecta brillante, temperaturas cálidas y riego regular."
+      "description": "Aroide tropical apreciado por sus hojas muy grandes y erguidas. Colócalo con luz brillante indirecta y riega cuando la capa superior empiece a secarse, manteniendo el sustrato húmedo sin encharcar. Mantén calor (aprox. 18–27°C) y recuerda que es tóxico si se ingiere."
     },
     "pt": {
       "common_name": "Alocasia gigante",
-      "description": "Alocasia macrorrhizos é uma planta tropical de folhas grandes. Prefere luz indireta, calor e solo sempre levemente úmido."
+      "description": "Aroide tropical cultivada por folhas muito grandes e eretas. Dê luz forte indireta e regue quando a camada superior começar a secar, mantendo o substrato úmido sem encharcar. Mantenha quente (cerca de 18–27°C) e é tóxica se ingerida."
     },
     "ar": {
       "common_name": "ألوكاسيا عملاقة",
-      "description": "ألوكاسيا ماكروريزوس نبات استوائي بأوراق كبيرة جدًا. تنمو جيدًا في ضوء غير مباشر وبيئة دافئة وتربة رطبة."
+      "description": "نبات استوائي من فصيلة الأرويد يُربى لأوراقه الكبيرة جدًا. يحتاج إلى ضوء ساطع غير مباشر مع ري عند بدء جفاف سطح التربة، مع تجنب الغمر. يفضل الدفء (حوالي 18–27°م) وهو سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "जायंट एलोकैसिया",
-      "description": "Alocasia macrorrhizos एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बहुत बड़ी होती हैं। इसे अप्रत्यक्ष रोशनी, गर्मी और नम मिट्टी पसंद है।"
+      "common_name": "जायंट टैरो",
+      "description": "यह एक उष्णकटिबंधीय एरॉइड पौधा है जो बहुत बड़े, सीधे पत्तों के लिए उगाया जाता है। इसे तेज अप्रत्यक्ष रोशनी दें और जब ऊपर की परत हल्की सूखे तो पानी दें, मिट्टी को नम रखें पर जलभराव न होने दें। 18–27°C के आसपास गर्म रखें और ध्यान दें कि यह खाने पर विषाक्त है।"
     },
     "zh": {
-      "common_name": "巨型海芋",
-      "description": "Alocasia macrorrhizos 是一种叶片巨大的热带植物。适合明亮散射光、温暖环境和持续湿润的土壤。"
+      "common_name": "大野芋",
+      "description": "热带天南星科观叶植物，以巨大直立叶片著称。提供明亮散射光，表土开始变干时浇水，保持均匀湿润但避免积水。适宜温度约18–27°C，误食有毒。"
     },
     "ja": {
       "common_name": "オオクワズイモ",
-      "description": "アロカシア・マクロリゾスは非常に大きな葉を持つ熱帯植物です。明るい間接光と温暖で湿った環境を好みます。"
+      "description": "非常に大きな直立葉を持つ熱帯のサトイモ科観葉植物です。明るい間接光で管理し、表土が少し乾き始めたら水やりして過湿は避けます。適温は約18～27°Cで、誤食すると有毒です。"
     },
     "ko": {
       "common_name": "자이언트 알로카시아",
-      "description": "알로카시아 마크로리조스는 매우 큰 잎을 가진 열대 식물입니다. 밝은 간접광과 따뜻하고 촉촉한 환경에서 잘 자랍니다."
+      "description": "매우 큰 직립 잎이 특징인 열대 천남성과 식물입니다. 밝은 간접광을 주고 겉흙이 살짝 마르기 시작하면 물을 주되 과습은 피하세요. 적정 온도는 약 18–27°C이며 섭취 시 독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1013/alocasia-macrorrhizos/details",
-      "https://edis.ifas.ufl.edu/publication/FP036",
-      "https://www.kew.org/plants/alocasia-macrorrhizos"
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.gardeners.com/blogs/gardening-tips/alocasia-care-9750",
+      "https://www.ukhouseplants.com/plants/elephant-s-ear-a-macrorrhizos",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderProfileResults.aspx?gen=Alocasia"
     ]
   }
 }

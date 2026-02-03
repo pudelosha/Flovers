@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム",
-          "ko": "양토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी नालियों वाली मिट्टी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyenne",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低到中等",
+          "ja": "低から中",
+          "ko": "낮은에서 중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow to medium",
+          "pl": "Wolny do średniego",
+          "de": "Langsam bis mittel",
+          "fr": "Lent à moyen",
+          "it": "Lento a medio",
+          "es": "Lento a medio",
+          "pt": "Lento a médio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम",
+          "zh": "缓慢到中等",
+          "ja": "遅いから中程度",
+          "ko": "느린에서 중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Japanese Yew",
-      "description": "Podocarpus macrophyllus, commonly known as the Japanese Yew, is an evergreen shrub native to East Asia. It features dark green, needle-like leaves and grows slowly, thriving in medium light conditions."
+      "description": "A slow-growing evergreen shrub. Popular as a decorative plant for landscapes and interiors."
     },
     "pl": {
-      "common_name": "Cis japoński",
-      "description": "Podocarpus macrophyllus, znany jako cis japoński, to zimozielony krzew pochodzący z Azji Wschodniej. Charakteryzuje się ciemnozielonymi, iglastymi liśćmi i rośnie powoli, preferując średnie nasłonecznienie."
+      "common_name": "Tujej Japoński",
+      "description": "Powolny rosnący krzew iglasty. Popularny jako roślina ozdobna w krajobrazach i wnętrzach."
     },
     "de": {
       "common_name": "Japanische Eibe",
-      "description": "Podocarpus macrophyllus, auch als japanische Eibe bekannt, ist ein immergrüner Strauch aus Ostasien. Er hat dunkelgrüne, nadelartige Blätter und wächst langsam, bevorzugt mittleres Licht."
+      "description": "Langsam wachsender immergrüner Strauch. Beliebt als Zierpflanze für Landschaften und Innenräume."
     },
     "fr": {
       "common_name": "If du Japon",
-      "description": "Podocarpus macrophyllus, connu sous le nom d'if du Japon, est un arbuste à feuilles persistantes originaire d'Asie de l'Est. Il possède des feuilles en forme d'aiguilles de couleur vert foncé et croît lentement, préférant la lumière modérée."
+      "description": "Arbuste à croissance lente et persistant. Populaire comme plante décorative pour les paysages et les intérieurs."
     },
     "it": {
-      "common_name": "Tasso giapponese",
-      "description": "Podocarpus macrophyllus, noto come tasso giapponese, è un arbusto sempreverde originario dell'Asia orientale. Ha foglie verde scuro, simili a aghi, e cresce lentamente, preferendo condizioni di luce media."
+      "common_name": "Tasso Giapponese",
+      "description": "Un arbusto a crescita lenta. Popolare come pianta decorativa per paesaggi e interni."
     },
     "es": {
-      "common_name": "Tejo japonés",
-      "description": "Podocarpus macrophyllus, conocido como tejo japonés, es un arbusto perenne originario del este de Asia. Presenta hojas verdes oscuras en forma de aguja y crece lentamente, prefiriendo condiciones de luz media."
+      "common_name": "Tejo Japonés",
+      "description": "Un arbusto de crecimiento lento. Popular como planta decorativa en paisajes e interiores."
     },
     "pt": {
-      "common_name": "Teixo japonês",
-      "description": "Podocarpus macrophyllus, conhecido como teixo japonês, é um arbusto perene nativo do leste da Ásia. Apresenta folhas escuras, semelhantes a agulhas, e cresce lentamente, preferindo luz moderada."
+      "common_name": "Teixo Japonês",
+      "description": "Um arbusto de crescimento lento. Popular como planta decorativa para paisagens e interiores."
     },
     "ar": {
-      "common_name": "العرعر الياباني",
-      "description": "Podocarpus macrophyllus، المعروف بالعرعر الياباني، هو شجيرة دائمة الخضرة من شرق آسيا. يتميز بأوراقه الخضراء الداكنة الشبيهة بالإبر وينمو ببطء، مفضلًا الإضاءة المتوسطة."
+      "common_name": "شجرة التايجو اليابانية",
+      "description": "شجيرة بطيئة النمو دائمة الخضرة. تحظى بشعبية كزرعة زخرفية في المناظر الطبيعية والداخلية."
     },
     "hi": {
-      "common_name": "जापानी देवदार",
-      "description": "Podocarpus macrophyllus, जिसे जापानी देवदार कहा जाता है, एक सदाबहार झाड़ी है जो पूर्वी एशिया से है। इसमें गहरे हरे रंग की सुई जैसी पत्तियाँ होती हैं और यह धीमी गति से बढ़ता है, मध्य रोशनी की स्थितियों में पनपता है।"
+      "common_name": "जापानी यॉ",
+      "description": "धीमे विकास वाली सदाबहार झाड़ी। परिदृश्यों और आंतरिक सजावट के लिए लोकप्रिय पौधा।"
     },
     "zh": {
       "common_name": "日本红豆杉",
-      "description": "Podocarpus macrophyllus，通常称为日本红豆杉，是一种原产于东亚的常绿灌木。它具有深绿色的针状叶子，生长缓慢，适合中等光照条件。"
+      "description": "一种生长缓慢的常绿灌木。常用于景观和室内装饰植物。"
     },
     "ja": {
       "common_name": "日本のイチイ",
-      "description": "Podocarpus macrophyllus、一般的に日本のイチイとして知られるこの植物は、東アジア原産の常緑低木です。暗緑色の針のような葉を持ち、遅い成長をし、適度な光条件を好みます。"
+      "description": "成長が遅い常緑の低木。風景やインテリアに人気の装飾植物。"
     },
     "ko": {
       "common_name": "일본 측백나무",
-      "description": "Podocarpus macrophyllus, 일본 측백나무로 알려진 이 식물은 동아시아 원산의 상록수입니다. 어두운 녹색의 바늘 같은 잎을 가지고 있으며 느리게 자라며, 중간 정도의 햇빛 조건에서 잘 자랍니다."
+      "description": "느리게 자라는 상록 관목. 풍경과 실내 장식용으로 인기 있는 식물."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/16302/podocarpus-macrophyllus",
+      "https://www.rhs.org.uk/plants/podocarpus-macrophyllus",
       "https://www.gardenia.net/plant/podocarpus-macrophyllus"
     ]
   }

@@ -1,18 +1,18 @@
 {
   "external_id": "tradescantia_fluminensis",
-  "name": "Wandering Jew",
+  "name": "Inch Plant",
   "latin": "Tradescantia fluminensis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -39,7 +39,7 @@
           "ar": "ضوء متوسط",
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中程度の光",
+          "ja": "中くらいの光",
           "ko": "중간 빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba gliniasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी की मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土質土壌",
-          "ko": "점토질 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Regar moderadamente",
-          "ar": "الري المعتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwe",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm temperatures",
-          "pl": "Ciepłe temperatury",
-          "de": "Warme Temperaturen",
-          "fr": "Températures chaudes",
-          "it": "Temperature calde",
-          "es": "Temperaturas cálidas",
-          "pt": "Temperaturas quentes",
-          "ar": "درجات حرارة دافئة",
-          "hi": "गर्म तापमान",
-          "zh": "温暖的温度",
-          "ja": "暖かい温度",
-          "ko": "따뜻한 온도"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiarkowana wilgotność",
-          "de": "Mäßige Luftfeuchtigkeit",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad moderada",
-          "pt": "Humidade moderada",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "适度湿度",
-          "ja": "適度な湿度",
-          "ko": "적당한 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中くらい",
+          "ko": "중간"
         }
       }
     },
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Mildly toxic",
-          "pl": "Łagodnie toksyczne",
+          "pl": "Łagodnie trujące",
           "de": "Leicht giftig",
           "fr": "Légèrement toxique",
           "it": "Leggermente tossico",
           "es": "Levemente tóxico",
           "pt": "Levemente tóxico",
-          "ar": "قليلاً سام",
-          "hi": "हल्के रूप से विषाक्त",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ा जहरीला",
           "zh": "轻微有毒",
           "ja": "軽度の毒性",
           "ko": "약간 독성"
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
+          "en": "Fast-growing",
           "pl": "Szybko rosnący",
           "de": "Schnell wachsend",
           "fr": "Croissance rapide",
-          "it": "Crescita veloce",
+          "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज वृद्धि",
-          "zh": "快速生长",
-          "ja": "速成",
-          "ko": "빠른 성장"
+          "hi": "तेज बढ़ने वाला",
+          "zh": "生长迅速",
+          "ja": "成長が速い",
+          "ko": "빠르게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wandering Jew",
-      "description": "Tradescantia fluminensis, commonly known as Wandering Jew, is a fast-growing, ground-covering plant. It thrives in warm, humid environments and is easy to care for indoors."
+      "common_name": "Inch Plant",
+      "description": "Tradescantia fluminensis, also known as Inch Plant, is a fast-growing houseplant. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Wędrujący Żyd",
-      "description": "Tradescantia fluminensis, znana jako Wędrujący Żyd, to szybko rosnąca roślina okrywowa. Rośnie w ciepłych, wilgotnych warunkach i łatwo się ją pielęgnuje w domu."
+      "common_name": "Roślina Inch",
+      "description": "Tradescantia fluminensis, znana również jako roślina Inch, to szybko rosnąca roślina doniczkowa. Wymaga średniego nasłonecznienia i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Wandernde Judenpflanze",
-      "description": "Tradescantia fluminensis, auch bekannt als Wandernde Judenpflanze, ist eine schnell wachsende, bodendeckende Pflanze. Sie gedeiht in warmen, feuchten Umgebungen und ist pflegeleicht."
+      "common_name": "Inch Pflanze",
+      "description": "Tradescantia fluminensis, auch Inch Pflanze genannt, ist eine schnell wachsende Zimmerpflanze. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Tradescantia du Brésil",
-      "description": "Tradescantia fluminensis, connue sous le nom de Tradescantia du Brésil, est une plante couvre-sol à croissance rapide. Elle prospère dans des environnements chauds et humides et est facile à entretenir en intérieur."
+      "common_name": "Plante Inch",
+      "description": "La Tradescantia fluminensis, également appelée Plante Inch, est une plante d'intérieur à croissance rapide. Elle prospère dans une lumière modérée et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Tradescantia del Brasile",
-      "description": "Tradescantia fluminensis, conosciuta come Tradescantia del Brasile, è una pianta da copertura a crescita rapida. Cresce in ambienti caldi e umidi ed è facile da curare in casa."
+      "common_name": "Pianta Inch",
+      "description": "La Tradescantia fluminensis, conosciuta anche come Pianta Inch, è una pianta da appartamento a crescita rapida. Cresce bene in luce media e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Tradescantia del Brasil",
-      "description": "Tradescantia fluminensis, conocida como Tradescantia del Brasil, es una planta de rápido crecimiento que cubre el suelo. Crece en ambientes cálidos y húmedos y es fácil de cuidar en interiores."
+      "common_name": "Planta Inch",
+      "description": "La Tradescantia fluminensis, también conocida como Planta Inch, es una planta de interior de rápido crecimiento. Prosperan con luz media y requieren riego moderado."
     },
     "pt": {
-      "common_name": "Tradescantia do Brasil",
-      "description": "Tradescantia fluminensis, conhecida como Tradescantia do Brasil, é uma planta rasteira de rápido crescimento. Ela prospera em ambientes quentes e úmidos, sendo fácil de cuidar dentro de casa."
+      "common_name": "Planta Inch",
+      "description": "A Tradescantia fluminensis, também conhecida como Planta Inch, é uma planta de crescimento rápido. Ela cresce bem sob luz média e precisa de rega moderada."
     },
     "ar": {
-      "common_name": "تريدسكانتيا البرازيلية",
-      "description": "تعتبر تريدسكانتيا الفلومينينسيس المعروفة بتريدسكانتيا البرازيلية نباتًا سريع النمو. تنمو في البيئات الدافئة والرطبة وسهلة العناية في الداخل."
+      "common_name": "نبتة إنش",
+      "description": "تعتبر Tradescantia fluminensis، والمعروفة أيضًا باسم نبتة إنش، من النباتات المنزلية سريعة النمو. تنمو في الضوء المتوسط وتتطلب ريًا معتدلًا."
     },
     "hi": {
-      "common_name": "वैंडरिंग यहूदी",
-      "description": "ट्रेडेसकेंटिया फ्लुमिनेंसिस, जिसे वैंडरिंग यहूदी के नाम से जाना जाता है, एक तेजी से बढ़ने वाला, ज़मीन को ढकने वाला पौधा है। यह गर्म, आर्द्र वातावरण में अच्छा बढ़ता है और इसे अंदर रखना आसान है।"
+      "common_name": "इंच पौधा",
+      "description": "Tradescantia fluminensis, जिसे इंच पौधा भी कहा जाता है, एक तेजी से बढ़ने वाला इनडोर पौधा है। यह मध्यम रोशनी में पनपता है और इसे उचित पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "流浪的犹太人",
-      "description": "Tradescantia fluminensis，通常称为流浪的犹太人，是一种快速生长的地被植物。它在温暖、潮湿的环境中生长良好，且易于室内护理。"
+      "common_name": "英寸植物",
+      "description": "Tradescantia fluminensis，也叫英寸植物，是一种生长迅速的室内植物。它在中等光照下生长良好，并且需要适量浇水。"
     },
     "ja": {
-      "common_name": "ワンダリング・ジュー",
-      "description": "Tradescantia fluminensis、一般にワンダリング・ジューとして知られるこの植物は、急速に成長するグラウンドカバー植物です。温暖で湿度の高い環境で育ち、屋内での管理も簡単です。"
+      "common_name": "インチプラント",
+      "description": "Tradescantia fluminensis（インチプラント）は、成長が速い室内植物です。中程度の光で成長し、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "방황하는 유대인",
-      "description": "트레데스칸티아 플루미넨시스, 흔히 방황하는 유대인으로 알려진 이 식물은 빠르게 자라는 지면 덮개 식물입니다. 따뜻하고 습한 환경에서 잘 자라며 실내에서 돌보기가 쉽습니다."
+      "common_name": "인치 플랜트",
+      "description": "Tradescantia fluminensis, 또는 인치 플랜트는 빠르게 자라는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/tradescantia-fluminensis",
-      "https://www.rhs.org.uk/plants/21270/tradescantia-fluminensis"
+      "https://www.rhs.org.uk/plants/tradescantia-fluminensis",
+      "https://www.gardenia.net/plant/tradescantia-fluminensis"
     ]
   }
 }

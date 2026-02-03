@@ -1,23 +1,25 @@
 {
   "external_id": "haworthiopsis_fasciata",
-  "name": "Zebra Haworthia",
+  "name": "Zebra Cactus",
   "latin": "Haworthiopsis fasciata",
   "sun": "medium",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "haworthiopsis_fasciata.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles indirektes",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenante",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水性良好",
+          "ko": "배수성 좋음"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري نادر",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "물 적게"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "低い",
+          "ko": "낮음"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18～26℃",
-          "ko": "18–26°C"
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Geringe Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "低い",
+          "ko": "낮음"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीरे बढ़ने वाला",
           "zh": "生长缓慢",
           "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "ko": "느리게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter le trop d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرाटी सिंचाई से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과습을 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Zebra Haworthia",
-      "description": "Haworthiopsis fasciata is a small succulent native to South Africa with distinctive white-banded leaves. It prefers bright indirect light and infrequent watering. This plant is well suited to indoor cultivation."
+      "common_name": "Zebra Cactus",
+      "description": "Haworthiopsis fasciata, known as Zebra Cactus, is a small, slow-growing succulent with striking white markings on its green leaves. It requires medium light and low water, making it an easy plant to care for indoors."
     },
     "pl": {
-      "common_name": "Haworcja pasiasta",
-      "description": "Haworthiopsis fasciata to niewielki sukulent z Afryki Południowej o liściach z białymi pasami. Lubi jasne, rozproszone światło i rzadkie podlewanie. Dobrze rośnie w warunkach domowych."
+      "common_name": "Kaktus zebra",
+      "description": "Haworthiopsis fasciata, znany jako Kaktus zebra, to mała, wolno rosnąca roślina sukulentna o wyraźnych białych znakach na zielonych liściach. Wymaga średniego światła i mało wody, co sprawia, że jest łatwa w pielęgnacji w pomieszczeniach."
     },
     "de": {
-      "common_name": "Zebra-Haworthie",
-      "description": "Haworthiopsis fasciata ist eine kleine Sukkulente aus Südafrika mit weiß gestreiften Blättern. Sie bevorzugt helles indirektes Licht und wenig Wasser. Ideal als Zimmerpflanze."
+      "common_name": "Zebra-Kaktus",
+      "description": "Haworthiopsis fasciata, auch Zebra-Kaktus genannt, ist eine kleine, langsam wachsende Sukkulente mit auffälligen weißen Markierungen auf ihren grünen Blättern. Sie benötigt mittleres Licht und wenig Wasser, was sie zu einer pflegeleichten Pflanze für drinnen macht."
     },
     "fr": {
-      "common_name": "Haworthia zébrée",
-      "description": "Haworthiopsis fasciata est une petite plante succulente originaire d’Afrique du Sud. Elle aime la lumière indirecte et des arrosages espacés. Elle convient bien à la culture en intérieur."
+      "common_name": "Cactus Zèbre",
+      "description": "Haworthiopsis fasciata, connu sous le nom de Cactus Zèbre, est une petite succulente à croissance lente avec des marques blanches frappantes sur ses feuilles vertes. Elle nécessite une lumière moyenne et peu d'eau, ce qui en fait une plante facile à entretenir à l'intérieur."
     },
     "it": {
-      "common_name": "Haworthia zebrata",
-      "description": "Haworthiopsis fasciata è una succulenta compatta del Sudafrica con foglie striate. Richiede luce indiretta e annaffiature poco frequenti. È adatta agli ambienti interni."
+      "common_name": "Cactus Zebra",
+      "description": "Haworthiopsis fasciata, noto come Cactus Zebra, è una piccola pianta succulenta a crescita lenta con evidenti strisce bianche sulle sue foglie verdi. Richiede luce media e poca acqua, il che la rende una pianta facile da curare in casa."
     },
     "es": {
-      "common_name": "Haworthia cebra",
-      "description": "Haworthiopsis fasciata es una suculenta pequeña originaria de Sudáfrica. Prefiere luz indirecta brillante y riego escaso. Es ideal como planta de interior."
+      "common_name": "Cactus Cebra",
+      "description": "Haworthiopsis fasciata, conocido como Cactus Cebra, es una pequeña suculenta de crecimiento lento con llamativas marcas blancas en sus hojas verdes. Requiere luz media y poca agua, lo que la convierte en una planta fácil de cuidar en interiores."
     },
     "pt": {
-      "common_name": "Haworthia zebra",
-      "description": "Haworthiopsis fasciata é uma suculenta pequena da África do Sul com folhas listradas. Prefere luz indireta e pouca água. Adapta-se bem ao cultivo interno."
+      "common_name": "Cacto Zebra",
+      "description": "Haworthiopsis fasciata, conhecido como Cacto Zebra, é uma pequena suculenta de crescimento lento com marcas brancas impressionantes em suas folhas verdes. Exige luz média e pouca água, tornando-se uma planta fácil de cuidar em ambientes internos."
     },
     "ar": {
-      "common_name": "هاوورثيا مخططة",
-      "description": "هاوورثيوبسيس فاشياتا نبات عصاري صغير من جنوب أفريقيا بأوراق مخططة. يفضل الضوء غير المباشر والري القليل. مناسب للزراعة داخل المنزل."
+      "common_name": "صبار النمر",
+      "description": "Haworthiopsis fasciata، المعروف باسم صبار النمر، هو نبات عصاري صغير بطيء النمو ذو علامات بيضاء لافتة على أوراقه الخضراء. يتطلب ضوءًا متوسطًا وكمية قليلة من الماء، مما يجعله نباتًا سهلاً للعناية في الأماكن المغلقة."
     },
     "hi": {
-      "common_name": "ज़ेब्रा हॉवर्थिया",
-      "description": "Haworthiopsis fasciata दक्षिण अफ्रीका का एक छोटा रसीला पौधा है। इसे अप्रत्यक्ष रोशनी और कम पानी की आवश्यकता होती है। यह घर के अंदर उगाने के लिए उपयुक्त है।"
+      "common_name": "ज़ेब्रा कैक्टस",
+      "description": "Haworthiopsis fasciata, जिसे ज़ेब्रा कैक्टस के नाम से जाना जाता है, एक छोटा, धीमी गति से बढ़ने वाला सक्युलेंट है जिसमें उसकी हरी पत्तियों पर स्पष्ट सफेद निशान होते हैं। यह मध्यम रोशनी और कम पानी की आवश्यकता होती है, जिससे यह इनडोर रख-रखाव के लिए एक आसान पौधा बन जाता है।"
     },
     "zh": {
-      "common_name": "斑马十二卷",
-      "description": "Haworthiopsis fasciata 原产于南非，是一种小型多肉植物。它喜欢明亮的散射光和少量浇水。非常适合室内种植。"
+      "common_name": "斑马仙人掌",
+      "description": "Haworthiopsis fasciata，通常称为斑马仙人掌，是一种小型、缓慢生长的多肉植物，具有显眼的白色斑纹。它需要中等光照和少量水分，使其成为一种易于室内养护的植物。"
     },
     "ja": {
-      "common_name": "ゼブラハオルチア",
-      "description": "ハオルチオプシス・ファスキアタは南アフリカ原産の小型多肉植物です。明るい間接光と控えめな水やりを好みます。室内栽培に適しています。"
+      "common_name": "ゼブラサボテン",
+      "description": "Haworthiopsis fasciata、ゼブラサボテンとして知られるこの植物は、緑色の葉に白い斑点が特徴的な小さな成長の遅い多肉植物です。中程度の光と少量の水分を必要とし、室内での管理が簡単な植物です。"
     },
     "ko": {
-      "common_name": "제브라 하월시아",
-      "description": "Haworthiopsis fasciata는 남아프리카 원산의 소형 다육식물입니다. 밝은 간접광과 적은 물을 선호합니다. 실내 재배에 적합합니다."
+      "common_name": "제브라 선인장",
+      "description": "Haworthiopsis fasciata, 제브라 선인장으로 알려진 이 식물은 녹색 잎에 하얀 줄무늬가 돋보이는 작은 느리게 자라는 다육식물입니다. 이 식물은 중간 정도의 빛과 적은 물을 필요로 하여 실내에서 기르기 쉬운 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/haworthiopsis-fasciata",
-      "https://www.rhs.org.uk/plants/haworthia/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a800"
+      "https://www.rhs.org.uk/advice/profile?pid=902",
+      "https://www.gardenia.net/plant/haworthiopsis-fasciata-zebra-cactus"
     ]
   }
 }

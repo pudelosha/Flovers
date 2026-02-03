@@ -7,21 +7,21 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "peperomia_rotundifolia.jpg",
   "image_thumb": "peperomia_rotundifolia.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universal",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "यूनिवर्सल",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "유니버설"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-27°C",
-          "pl": "22-27°C",
-          "de": "22-27°C",
-          "fr": "22-27°C",
-          "it": "22-27°C",
-          "es": "22-27°C",
-          "pt": "22-27°C",
-          "ar": "22-27°C",
-          "hi": "22-27°C",
-          "zh": "22-27°C",
-          "ja": "22-27°C",
-          "ko": "22-27°C"
+          "en": "20-24°C",
+          "pl": "20-24°C",
+          "de": "20-24°C",
+          "fr": "20-24°C",
+          "it": "20-24°C",
+          "es": "20-24°C",
+          "pt": "20-24°C",
+          "ar": "20-24°C",
+          "hi": "20-24°C",
+          "zh": "20-24°C",
+          "ja": "20-24°C",
+          "ko": "20-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,15 +143,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietoksyczny",
-          "de": "nicht toxisch",
-          "fr": "non toxique",
-          "it": "non tossico",
-          "es": "no tóxico",
-          "pt": "não tóxico",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "compact",
-          "pl": "zwarty",
-          "de": "kompakt",
-          "fr": "compact",
-          "it": "compatto",
-          "es": "compacto",
-          "pt": "compacto",
-          "ar": "مضغوط",
-          "hi": "संक्षिप्त",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "컴팩트"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnąca",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे से बढ़ने वाली",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare il sovrappeso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Trailing Jade",
-      "description": "Peperomia rotundifolia is a small, trailing plant known for its round, glossy leaves. It thrives in moderate light and prefers well-draining soil."
+      "description": "Peperomia rotundifolia, also known as Trailing Jade, is a low-maintenance houseplant with round, succulent leaves. It thrives in moderate light and requires minimal watering."
     },
     "pl": {
-      "common_name": "Jade zwisający",
-      "description": "Peperomia rotundifolia to mała, zwisająca roślina o okrągłych, błyszczących liściach. Rośnie w umiarkowanym świetle i preferuje dobrze przepuszczalną glebę."
+      "common_name": "Jade wisząca",
+      "description": "Peperomia rotundifolia, znana również jako Jade wisząca, to łatwa w uprawie roślina doniczkowa o okrągłych, mięsistych liściach. Dobrze rośnie w umiarkowanym świetle i wymaga minimalnego podlewania."
     },
     "de": {
-      "common_name": "Hängendes Jadepflänzchen",
-      "description": "Peperomia rotundifolia ist eine kleine, hängende Pflanze mit runden, glänzenden Blättern. Sie gedeiht bei mittlerem Licht und bevorzugt gut durchlässigen Boden."
+      "common_name": "Hängender Jade",
+      "description": "Peperomia rotundifolia, auch bekannt als Hängender Jade, ist eine pflegeleichte Zimmerpflanze mit runden, sukkulenten Blättern. Sie gedeiht bei mittlerem Licht und benötigt wenig Wasser."
     },
     "fr": {
-      "common_name": "Jade traînant",
-      "description": "Peperomia rotundifolia est une petite plante grimpante avec des feuilles rondes et brillantes. Elle préfère un éclairage modéré et un sol bien drainé."
+      "common_name": "Jade rampante",
+      "description": "Peperomia rotundifolia, aussi appelée Jade rampante, est une plante d'intérieur facile à entretenir avec des feuilles rondes et succulentes. Elle prospère sous une lumière modérée et nécessite peu d'arrosage."
     },
     "it": {
-      "common_name": "Jade pendente",
-      "description": "Peperomia rotundifolia è una piccola pianta rampicante con foglie rotonde e lucide. Cresce con luce moderata e preferisce un terreno ben drenato."
+      "common_name": "Jade rampicante",
+      "description": "Peperomia rotundifolia, conosciuta anche come Jade rampicante, è una pianta d'appartamento facile da curare con foglie rotonde e succulente. Cresce bene alla luce moderata e richiede poca acqua."
     },
     "es": {
-      "common_name": "Jade colgante",
-      "description": "Peperomia rotundifolia es una pequeña planta colgante con hojas redondas y brillantes. Prefiere luz moderada y un suelo bien drenado."
+      "common_name": "Jade trepador",
+      "description": "Peperomia rotundifolia, también conocida como Jade trepador, es una planta de interior fácil de cuidar con hojas redondas y suculentas. Crece bien con luz moderada y necesita poco riego."
     },
     "pt": {
-      "common_name": "Jade pendente",
-      "description": "Peperomia rotundifolia é uma planta pequena e pendente com folhas redondas e brilhantes. Prefere luz moderada e solo bem drenado."
+      "common_name": "Jade rastejante",
+      "description": "Peperomia rotundifolia, também conhecida como Jade rastejante, é uma planta de casa de fácil cuidado com folhas redondas e suculentas. Cresce bem com luz moderada e precisa de pouca água."
     },
     "ar": {
-      "common_name": "جاد مائل",
-      "description": "Peperomia rotundifolia هي نبات صغير مائل ذو أوراق دائرية لامعة. يفضل الضوء المعتدل والتربة جيدة التصريف."
+      "common_name": "اليشم المتسلق",
+      "description": "Peperomia rotundifolia، المعروفة أيضًا باسم اليشم المتسلق، هي نبتة منزلية سهلة الصيانة بأوراق مستديرة وسمكية. تنمو بشكل جيد في الضوء المعتدل وتتطلب سقيًا قليلًا."
     },
     "hi": {
-      "common_name": "लटकता हुआ जेड",
-      "description": "Peperomia rotundifolia एक छोटा, लटकता हुआ पौधा है जिसकी गोल, चमकदार पत्तियां होती हैं। यह मध्यम रोशनी में पनपता है और अच्छी तरह से नाली वाली मिट्टी को पसंद करता है।"
+      "common_name": "लटकी हुई जैड",
+      "description": "Peperomia rotundifolia, जिसे लटकी हुई जैड भी कहा जाता है, एक सरल देखभाल वाली हाउसप्लांट है जिसमें गोल, मांसल पत्ते होते हैं। यह मध्यम प्रकाश में अच्छी तरह से उगता है और कम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "垂吊玉树",
-      "description": "Peperomia rotundifolia 是一种小型垂挂植物，具有圆形光滑的叶子。它喜欢中等光照和排水良好的土壤。"
+      "common_name": "悬挂玉树",
+      "description": "Peperomia rotundifolia，亦称悬挂玉树，是一种低维护的室内植物，具有圆形的多肉叶子。它在中等光照下生长良好，需水量少。"
     },
     "ja": {
-      "common_name": "トレーリングジェイド",
-      "description": "Peperomia rotundifoliaは、小さな垂れ下がる植物で、丸い光沢のある葉を持っています。適度な光と排水性の良い土壌を好みます。"
+      "common_name": "ツルヤシ",
+      "description": "Peperomia rotundifolia、別名ツルヤシは、丸い肉質の葉を持つ手入れが簡単な観葉植物です。中程度の光で良く育ち、水やりは少なめです。"
     },
     "ko": {
-      "common_name": "추적하는 제이드",
-      "description": "Peperomia rotundifolia는 작은 덩굴 식물로 둥글고 광택 있는 잎을 가집니다. 이 식물은 적당한 빛과 배수가 잘되는 토양에서 잘 자랍니다."
+      "common_name": "덩굴 제이드",
+      "description": "Peperomia rotundifolia, 덩굴 제이드로도 알려진 이 식물은 둥근 다육이 잎을 가진 손쉬운 실내 식물입니다. 적당한 빛에서 잘 자라며 물이 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/166438/Peperomia-rotundifolia/Details",
-      "https://www.gardenia.net/plant/peperomia-rotundifolia"
+      "https://www.houseplantsexpert.com",
+      "https://www.gardenia.net"
     ]
   }
 }

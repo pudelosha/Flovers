@@ -1,21 +1,21 @@
 {
   "external_id": "persea_indica",
-  "name": "Canary Laurel",
+  "name": "Indian Avocado",
   "latin": "Persea indica",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universell",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "유니버설"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性が良い",
+          "ko": "배수 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderate Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Água moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie trujące",
+          "de": "Mild giftig",
+          "fr": "Légèrement toxique",
+          "it": "Poco tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ा विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성이 있음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرा पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Canary Laurel",
-      "description": "Persea indica, also known as the Canary Laurel, is a small tree native to the Canary Islands. It features glossy dark green leaves and small yellow-green flowers."
+      "common_name": "Indian Avocado",
+      "description": "Persea indica, known as the Indian Avocado, is a tropical tree native to India. It thrives in moderate light and requires well-draining soil."
     },
     "pl": {
-      "common_name": "Laurier Canarien",
-      "description": "Persea indica, znany również jako laurier Canarien, to małe drzewo pochodzące z Wysp Kanaryjskich. Charakteryzuje się błyszczącymi, ciemnozielonymi liśćmi i małymi, żółto-zielonymi kwiatami."
+      "common_name": "Awokado Indyjski",
+      "description": "Persea indica, znana jako Awokado Indyjskie, to tropikalne drzewo pochodzące z Indii. Preferuje średnie światło i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Kanarische Lorbeer",
-      "description": "Persea indica, auch bekannt als Kanarischer Lorbeer, ist ein kleiner Baum, der auf den Kanarischen Inseln heimisch ist. Er hat glänzende, dunkelgrüne Blätter und kleine, gelb-grüne Blüten."
+      "common_name": "Indisches Avocado",
+      "description": "Persea indica, auch als Indische Avocado bekannt, ist ein tropischer Baum aus Indien. Er gedeiht bei mittlerem Licht und benötigt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Laurier des Canaries",
-      "description": "Persea indica, également connu sous le nom de Laurier des Canaries, est un petit arbre originaire des îles Canaries. Il possède des feuilles vert foncé brillantes et de petites fleurs jaune-vert."
+      "common_name": "Avocat indien",
+      "description": "Persea indica, connu sous le nom d'avocat indien, est un arbre tropical originaire d'Inde. Il préfère une lumière modérée et un sol bien drainé."
     },
     "it": {
-      "common_name": "Alloro delle Canarie",
-      "description": "Persea indica, noto anche come alloro delle Canarie, è un piccolo albero originario delle Isole Canarie. Presenta foglie verde scuro lucide e piccoli fiori giallo-verdi."
+      "common_name": "Avocado indiano",
+      "description": "Persea indica, conosciuto come avocado indiano, è un albero tropicale originario dell'India. Cresce bene con luce moderata e richiede un terreno ben drenato."
     },
     "es": {
-      "common_name": "Laurel de Canarias",
-      "description": "Persea indica, también conocido como el laurel de Canarias, es un pequeño árbol originario de las Islas Canarias. Tiene hojas de color verde oscuro brillante y pequeñas flores amarillo-verde."
+      "common_name": "Aguacate indio",
+      "description": "Persea indica, conocido como aguacate indio, es un árbol tropical originario de la India. Crece bien con luz moderada y necesita un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Loureiro das Canárias",
-      "description": "Persea indica, também conhecido como Loureiro das Canárias, é uma pequena árvore nativa das Ilhas Canárias. Possui folhas verdes escuras e brilhantes e pequenas flores amarelo-verde."
+      "common_name": "Abacate indiano",
+      "description": "Persea indica, conhecido como abacate indiano, é uma árvore tropical originária da Índia. Cresce bem com luz moderada e requer solo bem drenado."
     },
     "ar": {
-      "common_name": "لوريل الكناري",
-      "description": "بيرسيا إنديكا، المعروف أيضًا باسم لوريل الكناري، هو شجرة صغيرة موطنها جزر الكناري. يتميز بأوراقه الخضراء الداكنة اللامعة وأزهاره الصغيرة ذات اللون الأصفر-الأخضر."
+      "common_name": "أفوكادو هندي",
+      "description": "Persea indica، المعروف باسم أفوكادو هندي، هو شجرة استوائية موطنها الهند. يزدهر في الضوء المعتدل ويتطلب تربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "कैनरी लॉरेल",
-      "description": "Persea indica, जिसे कैनरी लॉरेल के नाम से भी जाना जाता है, एक छोटा पेड़ है जो कैनरी द्वीप समूह का मूल निवासी है। इसमें चमकदार गहरे हरे पत्ते और छोटे पीले-हरे फूल होते हैं।"
+      "common_name": "भारतीय एवोकाडो",
+      "description": "Persea indica, जिसे भारतीय एवोकाडो के नाम से जाना जाता है, एक उष्णकटिबंधीय पेड़ है जो भारत का मूल निवासी है। यह मध्यम रोशनी में अच्छा बढ़ता है और इसे अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "加那利月桂",
-      "description": "Persea indica，也被称为加那利月桂，是一种原产于加那利群岛的小树。它具有光亮的深绿色叶子和小型黄绿色花朵。"
+      "common_name": "印度鳄梨",
+      "description": "Persea indica，称为印度鳄梨，是一种原产于印度的热带树木。它在中等光照下生长良好，需要排水良好的土壤。"
     },
     "ja": {
-      "common_name": "カナリア月桂樹",
-      "description": "Persea indica、別名カナリア月桂樹は、カナリア諸島原産の小さな木です。光沢のある深緑色の葉と小さな黄色がかった緑色の花を特徴としています。"
+      "common_name": "インディアンアボカド",
+      "description": "Persea indica、インディアンアボカドとして知られるこの木は、インド原産の熱帯樹です。中程度の光を好み、排水性の良い土壌が必要です。"
     },
     "ko": {
-      "common_name": "카나리 월계수",
-      "description": "Persea indica, 또한 카나리 월계수로 알려진 이 나무는 카나리 제도의 원산지인 작은 나무입니다. 광택이 나는 진한 녹색 잎과 작은 노란-녹색 꽃을 가지고 있습니다."
+      "common_name": "인도 아보카도",
+      "description": "Persea indica, 인도 아보카도로 알려진 이 나무는 인도가 원산지인 열대 식물입니다. 중간 정도의 빛을 선호하며 배수가 좋은 토양을 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/121170/persea-indica",
-      "https://www.gardenia.net/plant/persea-indica"
+      "https://www.rhs.org.uk/plants/162372/persea-indica/details",
+      "https://www.gardeningknowhow.com/edible/fruits/avocado/persea-indica-growing-and-care.htm"
     ]
   }
 }

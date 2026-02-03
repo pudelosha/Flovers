@@ -1,6 +1,6 @@
 {
   "external_id": "melocactus_matanzus",
-  "name": "Matanzas Melocactus",
+  "name": "Matanzus Melocactus",
   "latin": "Melocactus matanzus",
   "sun": "high",
   "water": "medium",
@@ -8,11 +8,10 @@
   "popular": false,
   "recommended_pot_materials": [
     "terracotta",
-    "plastic"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High sunlight",
+          "pl": "Duże nasłonecznienie",
+          "de": "Viel Sonne",
+          "fr": "Beaucoup de soleil",
+          "it": "Molto sole",
+          "es": "Mucho sol",
+          "pt": "Muita luz solar",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "उच्च सूर्य",
+          "zh": "强光",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaszczysta",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملي",
-          "hi": "रेतीला",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Water regularly",
+          "pl": "Podlewać regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित रूप से पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -86,17 +85,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "25–30°C",
-          "pl": "25–30°C",
-          "de": "25–30°C",
-          "fr": "25–30°C",
-          "it": "25–30°C",
-          "es": "25–30°C",
-          "pt": "25–30°C",
-          "ar": "25–30°C",
-          "hi": "25–30°C",
-          "zh": "25–30°C",
-          "ja": "25–30°C",
-          "ko": "25–30°C"
+          "en": "25-30°C",
+          "pl": "25-30°C",
+          "de": "25-30°C",
+          "fr": "25-30°C",
+          "it": "25-30°C",
+          "es": "25-30°C",
+          "pt": "25-30°C",
+          "ar": "25-30°C",
+          "hi": "25-30°C",
+          "zh": "25-30°C",
+          "ja": "25-30°C",
+          "ko": "25-30°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "निम्न",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +161,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "powolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Matanzas Melocactus",
-      "description": "Melocactus matanzus is a slow-growing cactus native to Cuba. It requires high light and medium watering intervals."
+      "common_name": "Matanzus Melocactus",
+      "description": "The Melocactus matanzus is a slow-growing cactus native to the Caribbean. It thrives in high sunlight and requires a well-draining soil mix."
     },
     "pl": {
-      "common_name": "Melokaktus Matanzas",
-      "description": "Melocactus matanzus to wolno rosnący kaktus pochodzący z Kuby. Wymaga wysokiego nasłonecznienia i średnich odstępów w podlewaniu."
+      "common_name": "Melocactus Matanzus",
+      "description": "Melocactus matanzus to wolno rosnący kaktus, który pochodzi z Karaibów. Wymaga dużego nasłonecznienia i gleby dobrze przepuszczalnej."
     },
     "de": {
-      "common_name": "Matanzas-Melocactus",
-      "description": "Melocactus matanzus ist ein langsam wachsender Kaktus aus Kuba. Er benötigt viel Licht und mittlere Bewässerungsintervalle."
+      "common_name": "Matanzus Melocactus",
+      "description": "Der Melocactus matanzus ist ein langsam wachsender Kaktus aus der Karibik. Er gedeiht bei viel Sonnenlicht und benötigt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Melocactus de Matanzas",
-      "description": "Le Melocactus matanzus est un cactus à croissance lente originaire de Cuba. Il nécessite une lumière intense et des intervalles d'arrosage moyens."
+      "common_name": "Melocactus matanzus",
+      "description": "Le Melocactus matanzus est un cactus à croissance lente originaire des Caraïbes. Il prospère sous une forte exposition au soleil et nécessite un sol bien drainé."
     },
     "it": {
-      "common_name": "Melocactus di Matanzas",
-      "description": "Il Melocactus matanzus è un cactus a crescita lenta originario di Cuba. Richiede una forte illuminazione e intervalli di annaffiatura medi."
+      "common_name": "Melocactus matanzus",
+      "description": "Il Melocactus matanzus è un cactus a crescita lenta originario dei Caraibi. Cresce bene alla luce solare diretta e richiede un terreno ben drenato."
     },
     "es": {
-      "common_name": "Melocactus de Matanzas",
-      "description": "El Melocactus matanzus es un cactus de crecimiento lento originario de Cuba. Requiere luz intensa e intervalos de riego medios."
+      "common_name": "Melocactus matanzus",
+      "description": "El Melocactus matanzus es un cactus de crecimiento lento originario del Caribe. Crece bien bajo luz solar directa y necesita un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Melocactus de Matanzas",
-      "description": "Melocactus matanzus é um cacto de crescimento lento originário de Cuba. Exige luz alta e intervalos de rega médios."
+      "common_name": "Melocactus matanzus",
+      "description": "O Melocactus matanzus é um cacto de crescimento lento originário do Caribe. Cresce bem sob luz solar direta e necessita de solo bem drenado."
     },
     "ar": {
-      "common_name": "ميلوككتوس ماتانزاس",
-      "description": "Melocactus matanzus هو صبار بطيء النمو موطنه كوبا. يتطلب ضوءًا عاليًا وفترات سقي متوسطة."
+      "common_name": "ميلوككتوس ماتانزوس",
+      "description": "ميلوككتوس ماتانزوس هو صبار بطيء النمو موطنه منطقة الكاريبي. ينمو جيدًا في ضوء الشمس المباشر ويتطلب تربة جيدة الصرف."
     },
     "hi": {
-      "common_name": "मैटांज़ास मेलोकैक्टस",
-      "description": "Melocactus matanzus एक धीमी गति से बढ़ने वाला कैक्टस है जो क्यूबा का मूल निवासी है। इसे उच्च रोशनी और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "मेलोकेक्टस मटांज़स",
+      "description": "मेलोकेक्टस मटांज़स एक धीमी गति से बढ़ने वाला कैक्टस है जो कैरेबियाई क्षेत्र का मूल निवासी है। इसे उच्च सूर्यप्रकाश में अच्छी तरह से बढ़ता है और अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "马坦萨斯美洲柱",
-      "description": "Melocactus matanzus 是一种生长缓慢的仙人掌，原产于古巴。它需要高强度的光照和中等的浇水间隔。"
+      "common_name": "马坦苏斯仙人掌",
+      "description": "马坦苏斯仙人掌是一种生长缓慢的仙人掌，原产于加勒比地区。它在强光下生长良好，且需要排水良好的土壤。"
     },
     "ja": {
-      "common_name": "マタンザス・メロカクタス",
-      "description": "Melocactus matanzusはキューバ原産の成長が遅いサボテンです。高い光と中程度の水やりの間隔が必要です。"
+      "common_name": "マタンツスメロカクタス",
+      "description": "マタンツスメロカクタスはカリブ海原産の成長が遅いサボテンです。直射日光の下でよく成長し、排水性の良い土壌を必要とします。"
     },
     "ko": {
-      "common_name": "마탄자스 멜로카쿠투스",
-      "description": "Melocactus matanzus는 쿠바 원산지의 느리게 자라는 선인장입니다. 높은 햇빛과 중간 정도의 물 주기가 필요합니다."
+      "common_name": "마탄주스 멜로카투스",
+      "description": "마탄주스 멜로카투스는 카리브해가 원산지인 느리게 자라는 선인장입니다. 강한 햇빛에서 잘 자라며 배수가 좋은 토양이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/melocactus-matanzus-care",
-      "https://www.cactus-society.org/melocactus-matanzus"
+      "https://www.rhs.org.uk/advice/profile?pid=287",
+      "https://www.cactusinfo.com/melocactus-matanzus"
     ]
   }
 }

@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "gleba",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "काली मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수성이 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-30°C",
-          "pl": "20-30°C",
-          "de": "20-30°C",
-          "fr": "20-30°C",
-          "it": "20-30°C",
-          "es": "20-30°C",
-          "pt": "20-30°C",
-          "ar": "20-30°C",
-          "hi": "20-30°C",
-          "zh": "20-30°C",
-          "ja": "20-30°C",
-          "ko": "20-30°C"
+          "en": "18–25°C",
+          "pl": "18–25°C",
+          "de": "18–25°C",
+          "fr": "18–25°C",
+          "it": "18–25°C",
+          "es": "18–25°C",
+          "pt": "18–25°C",
+          "ar": "18–25°C",
+          "hi": "18–25°C",
+          "zh": "18–25°C",
+          "ja": "18–25°C",
+          "ko": "18–25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "White Bird of Paradise",
-      "description": "Strelitzia alba is a striking tropical plant native to South Africa. It features large, glossy leaves and white flowers with delicate pale pink hues."
+      "description": "Strelitzia alba is a tropical plant with striking white flowers and large, glossy leaves. It thrives in bright, indirect light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Biała ptasia radość",
-      "description": "Strelitzia alba to uderzająca roślina tropikalna pochodząca z Południowej Afryki. Charakteryzuje się dużymi, błyszczącymi liśćmi i białymi kwiatami o delikatnych odcieniach różu."
+      "common_name": "Biały Rajski Ptak",
+      "description": "Strelitzia alba to tropikalna roślina o imponujących białych kwiatach i dużych, błyszczących liściach. Wymaga średniego podlewania i jasnego, pośredniego światła."
     },
     "de": {
-      "common_name": "Weiße Paradiesvogelblume",
-      "description": "Strelitzia alba ist eine auffällige tropische Pflanze aus Südafrika. Sie zeichnet sich durch große, glänzende Blätter und weiße Blumen mit zarten rosa Tönen aus."
+      "common_name": "Weißer Paradiesvogel",
+      "description": "Strelitzia alba ist eine tropische Pflanze mit auffälligen weißen Blüten und großen, glänzenden Blättern. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Oiseau de paradis blanc",
-      "description": "Strelitzia alba est une plante tropicale frappante originaire d'Afrique du Sud. Elle possède de grandes feuilles brillantes et des fleurs blanches avec des nuances de rose pâle."
+      "common_name": "Oiseau de Paradis Blanc",
+      "description": "Strelitzia alba est une plante tropicale avec des fleurs blanches spectaculaires et de grandes feuilles brillantes. Elle prospère sous une lumière indirecte vive et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Uccello del Paradiso Bianco",
-      "description": "Strelitzia alba è una pianta tropicale sorprendente originaria del Sudafrica. Ha grandi foglie lucide e fiori bianchi con delicate sfumature di rosa."
+      "description": "Strelitzia alba è una pianta tropicale con fiori bianchi sorprendenti e grandi foglie lucide. Cresce bene in luce indiretta e ha bisogno di irrigazione moderata."
     },
     "es": {
       "common_name": "Ave del Paraíso Blanca",
-      "description": "Strelitzia alba es una planta tropical llamativa originaria de Sudáfrica. Presenta grandes hojas brillantes y flores blancas con delicados tonos rosados."
+      "description": "Strelitzia alba es una planta tropical con flores blancas impresionantes y grandes hojas brillantes. Crece bien con luz indirecta brillante y necesita riego moderado."
     },
     "pt": {
-      "common_name": "Ave do Paraíso Branca",
-      "description": "Strelitzia alba é uma planta tropical impressionante originária da África do Sul. Apresenta grandes folhas brilhantes e flores brancas com delicadas tonalidades de rosa."
+      "common_name": "Ave do Paraíso Branco",
+      "description": "Strelitzia alba é uma planta tropical com flores brancas impressionantes e grandes folhas brilhantes. Cresce bem sob luz indireta e necessita de rega moderada."
     },
     "ar": {
       "common_name": "طائر الجنة الأبيض",
-      "description": "Strelitzia alba هو نبات استوائي لافت للنظر من جنوب أفريقيا. يتميز بأوراق كبيرة لامعة وزهور بيضاء مع ظلال دقيقة من الوردي."
+      "description": "Strelitzia alba هي نبات استوائي يتميز بزهور بيضاء لافتة وأوراق كبيرة لامعة. تنمو في الضوء غير المباشر الساطع وتحتاج إلى الري المعتدل."
     },
     "hi": {
-      "common_name": "सफेद स्वर्ग का पक्षी",
-      "description": "Strelitzia alba एक आकर्षक उष्णकटिबंधीय पौधा है जो दक्षिण अफ्रीका का मूल निवासी है। इसमें बड़े, चमकदार पत्ते और हलके गुलाबी रंग के साथ सफेद फूल होते हैं।"
+      "common_name": "सफेद बर्ड ऑफ पैराडाइज",
+      "description": "Strelitzia alba एक उष्णकटिबंधीय पौधा है जिसमें आकर्षक सफेद फूल और बड़े, चमकदार पत्ते होते हैं। यह मध्यम पानी देने के साथ उज्जवल अप्रत्यक्ष प्रकाश में बढ़ता है।"
     },
     "zh": {
       "common_name": "白色天堂鸟",
-      "description": "Strelitzia alba 是一种引人注目的热带植物，原产于南非。它具有大型光亮的叶子和带有淡粉色调的白色花朵。"
+      "description": "Strelitzia alba 是一种热带植物，具有引人注目的白色花朵和大而光亮的叶子。它在明亮的间接光下茁壮成长，需要适度浇水。"
     },
     "ja": {
       "common_name": "白い楽園の鳥",
-      "description": "Strelitzia alba は南アフリカ原産の目を引く熱帯植物です。大きな光沢のある葉と淡いピンク色の花を特徴としています。"
+      "description": "Strelitzia alba は、印象的な白い花と大きな光沢のある葉を持つ熱帯植物です。明るい間接光の下で繁茂し、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "흰색 천국의 새",
-      "description": "Strelitzia alba는 남아프리카에서 유래한 눈에 띄는 열대 식물입니다. 큰 광택이 나는 잎과 연한 분홍색이 섞인 흰색 꽃을 가지고 있습니다."
+      "description": "Strelitzia alba는 인상적인 흰색 꽃과 크고 반짝이는 잎을 가진 열대 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/163517/strelitzia-alba",
-      "https://www.gardenia.net/plant/Strelitzia-alba"
+      "https://www.rhs.org.uk/advice/profile?pid=121",
+      "https://www.gardenia.net/plant/strelitzia-alba-white-bird-of-paradise"
     ]
   }
 }

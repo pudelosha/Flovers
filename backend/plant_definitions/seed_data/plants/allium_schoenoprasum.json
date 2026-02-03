@@ -11,17 +11,16 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 180,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "allium_schoenoprasum.jpg",
   "image_thumb": "allium_schoenoprasum.jpg",
   "traits": [
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "강한 햇빛"
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Helle Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol brillante",
+          "pt": "Sol forte",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "充足阳光",
+          "ja": "日当たり良好",
+          "ko": "밝은 햇빛"
         }
       }
     },
@@ -55,11 +54,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlew.",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiare reg.",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "정기적 물주기"
+          "en": "Even moisture",
+          "pl": "Stała wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Umido costante",
+          "es": "Húmedo uniforme",
+          "pt": "Umidade constante",
+          "ar": "رطوبة متوازنة",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持微湿",
+          "ja": "適度に湿らせる",
+          "ko": "고르게 촉촉"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–25°C",
-          "pl": "10–25°C",
-          "de": "10–25°C",
-          "fr": "10–25°C",
-          "it": "10–25°C",
-          "es": "10–25°C",
-          "pt": "10–25°C",
-          "ar": "10–25°م",
-          "hi": "10–25°C",
-          "zh": "10–25°C",
-          "ja": "10–25°C",
-          "ko": "10–25°C"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°C",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -125,16 +124,16 @@
       "value": {
         "text": {
           "en": "Normal humidity",
-          "pl": "Zwykła wilg.",
-          "de": "Normale Feuchte",
+          "pl": "Zwykła wilgotn.",
+          "de": "Normale Luft",
           "fr": "Humidité normale",
           "it": "Umidità normale",
           "es": "Humedad normal",
           "pt": "Umidade normal",
           "ar": "رطوبة عادية",
           "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zw.",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossico animali",
+          "es": "Tóxico mascotas",
+          "pt": "Tóxico p/ pets",
+          "ar": "سام للقطط/الكلاب",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -164,16 +163,54 @@
         "text": {
           "en": "Clumping perennial",
           "pl": "Bylina kępowa",
-          "de": "Horstige Staude",
+          "de": "Horstig, mehrjährig",
           "fr": "Vivace en touffe",
-          "it": "Perenne cesp.",
+          "it": "Perenne a cespi",
           "es": "Perenne en mata",
           "pt": "Perene em touceira",
-          "ar": "معمرة متكتلة",
-          "hi": "गुच्छेदार बारहमासी",
+          "ar": "معمر كتلي",
+          "hi": "गुच्छेदार बहुवर्षीय",
           "zh": "丛生多年生",
           "ja": "株立ち多年草",
-          "ko": "군생 다년초"
+          "ko": "군생 다년생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No waterlogging",
+          "pl": "Bez przelania",
+          "de": "Keine Staunässe",
+          "fr": "Pas d'excès d'eau",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Sem encharcar",
+          "ar": "تجنب الغمر",
+          "hi": "जलभराव नहीं",
+          "zh": "避免积水",
+          "ja": "過湿は避ける",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkod.",
+          "de": "Geleg. Schädlinge",
+          "fr": "Ravageurs rares",
+          "it": "Parassiti rari",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶见害虫",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +218,61 @@
   "translations": {
     "en": {
       "common_name": "Chives",
-      "description": "Allium schoenoprasum is a perennial herb grown for its hollow, onion-flavored leaves. It prefers full sun and evenly moist, well-drained soil. Regular harvesting encourages fresh growth."
+      "description": "Allium schoenoprasum is a clumping perennial herb grown for its hollow, onion-flavored leaves and purple flowers. Keep it in bright sun and water when the top layer begins to dry so the potting mix stays evenly moist. Divide or repot the clump periodically to refresh growth."
     },
     "pl": {
       "common_name": "Szczypiorek",
-      "description": "Allium schoenoprasum to bylina uprawiana dla jadalnych, pustych liści o cebulowym smaku. Najlepiej rośnie w pełnym słońcu i wilgotnej, przepuszczalnej glebie. Częste cięcie pobudza wzrost."
+      "description": "Allium schoenoprasum to kępowa bylina uprawiana dla pustych, cebulowych liści i fioletowych kwiatów. Zapewnij dużo słońca i podlewaj, gdy wierzch podłoża zaczyna przesychać, aby utrzymać równą wilgotność. Co pewien czas przesadzaj lub dziel kępę, aby odmłodzić roślinę."
     },
     "de": {
       "common_name": "Schnittlauch",
-      "description": "Allium schoenoprasum ist eine mehrjährige Kräuterpflanze mit hohlen, zwiebelartig schmeckenden Blättern. Sie wächst am besten in voller Sonne und gut durchlässigem Boden. Regelmäßiges Schneiden fördert den Neuaustrieb."
+      "description": "Allium schoenoprasum ist ein horstig wachsendes, mehrjähriges Küchenkraut mit hohlen, lauchartig schmeckenden Blättern und violetten Blüten. Stelle es sehr hell und gieße, wenn die oberste Substratschicht antrocknet, damit es gleichmäßig feucht bleibt. Teile oder topfe den Horst regelmäßig, um ihn zu verjüngen."
     },
     "fr": {
       "common_name": "Ciboulette",
-      "description": "Allium schoenoprasum est une plante vivace cultivée pour ses feuilles creuses au goût d’oignon. Elle préfère le plein soleil et un sol bien drainé et frais. La récolte régulière stimule la croissance."
+      "description": "Allium schoenoprasum est une vivace en touffe cultivée pour ses feuilles creuses au goût d'oignon et ses fleurs violettes. Placez-la au soleil et arrosez quand la surface du substrat commence à sécher afin de garder une humidité régulière. Divisez ou rempotez la touffe périodiquement pour relancer la croissance."
     },
     "it": {
       "common_name": "Erba cipollina",
-      "description": "Allium schoenoprasum è un’erba perenne coltivata per le foglie cave dal sapore di cipolla. Cresce meglio in pieno sole e terreno ben drenato. Il taglio frequente favorisce nuovi germogli."
+      "description": "Allium schoenoprasum è un'erba perenne a cespi, coltivata per le foglie cave dal sapore di cipolla e per i fiori viola. Tienila in pieno sole e annaffia quando lo strato superiore del terriccio inizia ad asciugare, mantenendo umidità uniforme. Dividi o rinvasa periodicamente il cespo per rinnovare la pianta."
     },
     "es": {
       "common_name": "Cebollino",
-      "description": "Allium schoenoprasum es una hierba perenne cultivada por sus hojas huecas con sabor a cebolla. Prefiere pleno sol y suelo bien drenado y húmedo. La cosecha regular estimula el crecimiento."
+      "description": "Allium schoenoprasum es una hierba perenne en mata, apreciada por sus hojas huecas con sabor a cebolla y sus flores moradas. Colócala a pleno sol y riega cuando la capa superior del sustrato empiece a secarse para mantener humedad uniforme. Divide o trasplanta el macizo de vez en cuando para estimular el crecimiento."
     },
     "pt": {
       "common_name": "Cebolinha",
-      "description": "Allium schoenoprasum é uma erva perene cultivada pelas folhas ocas com sabor de cebola. Desenvolve-se melhor em sol pleno e solo bem drenado. Cortes regulares incentivam novo crescimento."
+      "description": "Allium schoenoprasum é uma erva perene em touceira, cultivada pelas folhas ocas com sabor de cebola e pelas flores roxas. Mantenha em sol forte e regue quando a camada superior do substrato começar a secar, sem encharcar. Divida ou replante a touceira periodicamente para renovar o vigor."
     },
     "ar": {
       "common_name": "الثوم المعمر",
-      "description": "Allium schoenoprasum نبات عشبي معمر يزرع لأوراقه المجوفة ذات نكهة البصل. يفضل الشمس الكاملة وتربة جيدة التصريف ورطبة. الحصاد المنتظم يشجع نموًا جديدًا."
+      "description": "Allium schoenoprasum نبات عشبي معمر ينمو على شكل كتل، ويُزرع لأوراقه الأنبوبية ذات نكهة البصل وأزهاره البنفسجية. ضعه في شمس ساطعة واسقه عندما يبدأ سطح التربة بالجفاف مع الحفاظ على رطوبة متوازنة دون غمر. اقسم الكتلة أو أعد الزراعة دوريًا لتجديد النمو."
     },
     "hi": {
       "common_name": "चाइव्स",
-      "description": "Allium schoenoprasum एक बहुवर्षीय जड़ी बूटी है जिसकी खोखली पत्तियाँ प्याज जैसा स्वाद देती हैं। यह पूरी धूप और अच्छी जलनिकास वाली नम मिट्टी पसंद करती है। नियमित कटाई से नई वृद्धि होती है।"
+      "description": "Allium schoenoprasum गुच्छेदार बहुवर्षीय जड़ी-बूटी है, जिसकी खोखली पत्तियाँ प्याज़ जैसा स्वाद देती हैं और बैंगनी फूल आते हैं। इसे तेज धूप में रखें और जब ऊपर की मिट्टी सूखने लगे तब पानी दें ताकि नमी समान रहे। समय-समय पर गुच्छे को बाँटें या रीपॉट करें ताकि बढ़वार ताज़ा रहे।"
     },
     "zh": {
       "common_name": "细香葱",
-      "description": "Allium schoenoprasum 是一种多年生香草，因其中空、具洋葱风味的叶片而栽培。它喜欢充足阳光和排水良好的湿润土壤。经常采收可促进新生长。"
+      "description": "Allium schoenoprasum 为丛生多年生香草，叶片中空，具有葱洋葱风味，并可开紫色花。放在充足阳光处，表层基质开始变干时浇水，使盆土保持微湿但不积水。可定期分株或换盆以促进新生长。"
     },
     "ja": {
       "common_name": "チャイブ",
-      "description": "Allium schoenoprasum は多年生のハーブで、ネギ風味の中空の葉を収穫します。日当たりと水はけの良い湿った土壌を好みます。定期的な収穫で生育が促進されます。"
+      "description": "Allium schoenoprasum は株立ちする多年草のハーブで、中空の葉と紫の花をつけます。日当たりの良い場所で育て、表土が乾き始めたら水やりして適度な湿り気を保ちます。株が込み合ったら分けるか植え替えて更新します。"
     },
     "ko": {
       "common_name": "차이브",
-      "description": "Allium schoenoprasum은 속이 빈 잎과 양파 향이 특징인 다년생 허브입니다. 햇빛이 잘 들고 배수가 좋은 촉촉한 토양을 선호합니다. 자주 수확하면 새잎이 잘 자랍니다."
+      "description": "Allium schoenoprasum은 군생하는 다년생 허브로, 속이 빈 잎과 보라색 꽃이 특징입니다. 밝은 햇빛에서 키우고 겉흙이 마르기 시작하면 물을 주어 흙이 고르게 촉촉하게 유지되게 하되 과습은 피하세요. 주기적으로 포기나누기 또는 분갈이를 하면 생육이 좋아집니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/herbs/chives/grow-your-own",
+      "https://www.rhs.org.uk/plants/859/allium-schoenoprasum/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=j270",
       "https://extension.umn.edu/vegetables/growing-chives",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chives/"
+      "https://extension.illinois.edu/herbs/chives",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chives"
     ]
   }
 }

@@ -1,24 +1,25 @@
 {
   "external_id": "zygopetalum_mackayi",
-  "name": "Zygopetalum Mackayi",
+  "name": "Zygopetalum mackayi",
   "latin": "Zygopetalum mackayi",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "orchid",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "zygopetalum_mackayi.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained orchid mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Orchideensubstrat",
-          "fr": "Substrat orchidée",
-          "it": "Substrato orchidee",
-          "es": "Sustrato orquídeas",
-          "pt": "Substrato orquídea",
-          "ar": "تربة أوركيد جيدة",
+          "en": "Orchid mix",
+          "pl": "Mieszanka dla storczyków",
+          "de": "Orchideenmischung",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "خليط للزهور الأوركيد",
           "hi": "ऑर्किड मिक्स",
-          "zh": "兰花基质",
-          "ja": "ラン用培地",
-          "ko": "난용 배합토"
+          "zh": "兰花土壤",
+          "ja": "蘭の土",
+          "ko": "오키드 믹스"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido regolare",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطب باعتدال",
-          "hi": "नियमित नमी",
-          "zh": "保持微湿",
-          "ja": "適度に湿潤",
-          "ko": "항상 촉촉"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Aufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等难度",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers high humidity",
-          "pl": "Lubi wilgotność",
-          "de": "Mag hohe Luftfeuchte",
-          "fr": "Aime humidité élevée",
-          "it": "Ama umidità alta",
-          "es": "Prefiere humedad",
-          "pt": "Prefere umidade",
-          "ar": "رطوبة مرتفعة",
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
-          "zh": "喜高湿度",
-          "ja": "高湿度を好む",
-          "ko": "높은 습도 선호"
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Sympodial orchid",
-          "pl": "Orchidea sympodialna",
-          "de": "Sympodiales Wachstum",
-          "fr": "Orchidée sympodiale",
-          "it": "Orchidea simpodiale",
-          "es": "Orquídea simpodial",
-          "pt": "Orquídea simpodial",
-          "ar": "نمو سيمبودي",
-          "hi": "सिम्पोडियल वृद्धि",
-          "zh": "合轴生长",
-          "ja": "シンポジアル型",
-          "ko": "심포디얼"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccessiva irrigazione",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestivazione occasionale",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि के अनुसार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々発生する害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Zygopetalum Orchid",
-      "description": "Zygopetalum mackayi is a sympodial orchid native to Brazil. It produces fragrant, green and purple flowers and prefers cool to intermediate indoor conditions."
+      "common_name": "Mackay's Zygopetalum",
+      "description": "Zygopetalum mackayi is a species of orchid with fragrant, colorful flowers. It prefers moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Zygopetalum",
-      "description": "Zygopetalum mackayi to sympodialna orchidea pochodząca z Brazylii. Wytwarza pachnące, zielono-fioletowe kwiaty i najlepiej rośnie w umiarkowanych warunkach domowych."
+      "common_name": "Zygopetalum Mackaya",
+      "description": "Zygopetalum mackayi to gatunek storczyka o pachnących, kolorowych kwiatach. Wymaga umiarkowanego światła i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Zygopetalum",
-      "description": "Zygopetalum mackayi ist eine sympodial wachsende Orchidee aus Brasilien. Sie bildet duftende grün-violette Blüten und mag kühle bis temperierte Räume."
+      "common_name": "Mackay Zygopetalum",
+      "description": "Zygopetalum mackayi ist eine Orchideenart mit duftenden, bunten Blüten. Es bevorzugt mäßiges Licht und hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Zygopetalum",
-      "description": "Zygopetalum mackayi est une orchidée sympodiale originaire du Brésil. Elle produit des fleurs parfumées vertes et violettes et apprécie des conditions tempérées."
+      "common_name": "Zygopétalum de Mackay",
+      "description": "Zygopetalum mackayi est une espèce d'orchidée à fleurs colorées et parfumées. Il préfère une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Zygopetalum",
-      "description": "Zygopetalum mackayi è un’orchidea simpodiale originaria del Brasile. Produce fiori profumati verde-violacei e predilige ambienti freschi e luminosi."
+      "common_name": "Zygopetalum di Mackay",
+      "description": "Zygopetalum mackayi è una specie di orchidea con fiori profumati e colorati. Preferisce luce moderata e alta umidità."
     },
     "es": {
-      "common_name": "Zygopetalum",
-      "description": "Zygopetalum mackayi es una orquídea simpodial originaria de Brasil. Destaca por sus flores fragantes verdes y púrpuras y su cultivo en interior templado."
+      "common_name": "Zygopetalum de Mackay",
+      "description": "Zygopetalum mackayi es una especie de orquídea con flores fragantes y coloridas. Prefiere luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Zygopetalum",
-      "description": "Zygopetalum mackayi é uma orquídea simpodial nativa do Brasil. Produz flores perfumadas verde-arroxeadas e prefere condições intermediárias."
+      "common_name": "Zygopetalum de Mackay",
+      "description": "Zygopetalum mackayi é uma espécie de orquídea com flores coloridas e perfumadas. Prefere luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "زيغوبيتالوم",
-      "description": "زيغوبيتالوم ماكاي هي سحلبية سيمبودية موطنها البرازيل. تتميز بأزهار عطرية خضراء وبنفسجية وتفضل بيئة معتدلة داخلية."
+      "common_name": "زيغوبتالوم ماكاي",
+      "description": "Zygopetalum mackayi هو نوع من الأوركيد يتميز بالزهور العطرة والملونة. يفضل الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "ज़ाइगोपेटलम ऑर्किड",
-      "description": "Zygopetalum mackayi ब्राज़ील की एक सिम्पोडियल ऑर्किड है। इसमें सुगंधित हरे और बैंगनी फूल आते हैं और यह मध्यम तापमान पसंद करती है।"
+      "common_name": "मैकेज़ ज़ाइगोपेटलम",
+      "description": "Zygopetalum mackayi एक ऑर्किड प्रजाति है जिसमें खुशबूदार, रंगीन फूल होते हैं। यह मध्यम प्रकाश और उच्च आर्द्रता पसंद करता है।"
     },
     "zh": {
-      "common_name": "兹格佩塔兰",
-      "description": "Zygopetalum mackayi 原产于巴西，是一种合轴兰花。花朵芳香，呈绿色和紫色，适合温和的室内环境。"
+      "common_name": "麦凯的齿瓣兰",
+      "description": "Zygopetalum mackayi 是一种具有芳香、彩色花朵的兰花。它喜欢适度的光照和高湿度。"
     },
     "ja": {
-      "common_name": "ジゴペタラム",
-      "description": "Zygopetalum mackayi はブラジル原産のシンポジアル型ランです。芳香のある緑と紫の花を咲かせ、穏やかな室内環境を好みます。"
+      "common_name": "マッケイ・ズィゴペタルム",
+      "description": "Zygopetalum mackayi は香りの良いカラフルな花を持つ蘭の一種です。中程度の光と高い湿度を好みます。"
     },
     "ko": {
-      "common_name": "지고페탈룸",
-      "description": "Zygopetalum mackayi는 브라질 원산의 심포디얼 난초입니다. 향기로운 녹색과 보라색 꽃을 피우며 온화한 실내 환경을 선호합니다."
+      "common_name": "맥케이 지고페탈룸",
+      "description": "Zygopetalum mackayi는 향기롭고 다채로운 꽃을 가진 난초 종입니다. 중간 정도의 빛과 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/zygopetalum",
-      "https://www.aos.org/orchids/orchid-care.aspx",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx"
+      "https://www.rhs.org.uk/plants/zygopetalum-mackayi",
+      "https://www.abc-garden.com/zygopetalum-care"
     ]
   }
 }

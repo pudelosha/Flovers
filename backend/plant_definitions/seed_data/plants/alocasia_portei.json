@@ -1,23 +1,24 @@
 {
   "external_id": "alocasia_portei",
-  "name": "Porte's Alocasia",
+  "name": "Porter's alocasia",
   "latin": "Alocasia portei",
   "sun": "medium",
   "water": "high",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_portei.jpg",
@@ -29,13 +30,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
+          "de": "Hell, indirekt",
+          "fr": "Vive indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज पर अप्रत्यक्ष",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy aroid mix",
-          "pl": "Przewiewne aroidy",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Terriccio arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "en": "Chunky aroid mix",
+          "pl": "Przepuszczalna aroid",
+          "de": "Luftige Aroid-Mix",
+          "fr": "Mélange aroid aéré",
+          "it": "Substrato aroid ario",
+          "es": "Sustrato aroid aireado",
+          "pt": "Substrato aroid solto",
+          "ar": "تربة أرويد جيدة الصرف",
+          "hi": "एरॉइड मिक्स, ड्रेनेज",
+          "zh": "疏松排水基质",
+          "ja": "排水の良い用土",
+          "ko": "배수 좋은 혼합토"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido costante",
-          "es": "Humedad constante",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة منتظمة",
-          "hi": "निरंतर नमी",
-          "zh": "保持湿润",
-          "ja": "常に湿らせる",
-          "ko": "항상 촉촉"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder humide",
+          "it": "Terriccio umido",
+          "es": "Sustrato húmedo",
+          "pt": "Solo levemente úmido",
+          "ar": "حافظ على رطوبة خفيفة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "用土は軽く湿らせる",
+          "ko": "흙을 약간 촉촉"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Impegnativa",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "较难养护",
-          "ja": "上級者向け",
-          "ko": "관리 어려움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "16–30°C",
+          "pl": "16–30°C",
+          "de": "16–30°C",
+          "fr": "16–30°C",
+          "it": "16–30°C",
+          "es": "16–30°C",
+          "pt": "16–30°C",
+          "ar": "16–30°م",
+          "hi": "16–30°C",
+          "zh": "16–30°C",
+          "ja": "16–30°C",
+          "ko": "16–30°C"
         }
       }
     },
@@ -123,12 +124,12 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgoć",
+          "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
-          "fr": "Forte humidité",
+          "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食は有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,77 +161,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Large upright",
-          "pl": "Duży pokrój",
-          "de": "Groß wachsend",
-          "fr": "Grande taille",
-          "it": "Crescita grande",
-          "es": "Gran tamaño",
-          "pt": "Porte grande",
-          "ar": "نمو كبير",
-          "hi": "बड़ा आकार",
-          "zh": "大型生长",
-          "ja": "大型に成長",
-          "ko": "대형 성장"
+          "en": "Large foliage",
+          "pl": "Duże liście",
+          "de": "Große Blätter",
+          "fr": "Grand feuillage",
+          "it": "Foglie grandi",
+          "es": "Hojas grandes",
+          "pt": "Folhas grandes",
+          "ar": "أوراق كبيرة",
+          "hi": "बड़े पत्ते",
+          "zh": "大叶观叶",
+          "ja": "大きな葉",
+          "ko": "큰 잎"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "ज्यादा पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites",
+          "pl": "Przędziorki",
+          "de": "Spinnmilben",
+          "fr": "Araignées rouges",
+          "it": "Ragnetto rosso",
+          "es": "Ácaros",
+          "pt": "Ácaros",
+          "ar": "العناكب الحمراء",
+          "hi": "स्पाइडर माइट्स",
+          "zh": "红蜘蛛",
+          "ja": "ハダニ",
+          "ko": "응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Porte's Alocasia",
-      "description": "Alocasia portei is a large tropical aroid with deeply lobed leaves and strong upright growth. It prefers bright indirect light, warm temperatures, and consistently moist but well-draining soil. High humidity and stable conditions are essential for healthy growth indoors."
+      "common_name": "Porter's alocasia",
+      "description": "A tropical elephant ear with large, dramatic leaves that prefers bright, indirect light. Keep the potting mix evenly moist but never waterlogged, and maintain warm temperatures and high humidity. All parts are toxic if chewed or swallowed."
     },
     "pl": {
-      "common_name": "Alokazja Porte’a",
-      "description": "Alocasia portei to duża roślina tropikalna o głęboko powcinanych liściach. Wymaga jasnego, rozproszonego światła, ciepła i stale lekko wilgotnego podłoża. Najlepiej rośnie przy wysokiej wilgotności powietrza."
+      "common_name": "Alokazja Portera",
+      "description": "Tropikalna alokazja o dużych, dekoracyjnych liściach, najlepiej rośnie w jasnym, rozproszonym świetle. Podłoże utrzymuj lekko wilgotne, ale bez zastoin wody, oraz zapewnij ciepło i wysoką wilgotność. Roślina jest toksyczna po spożyciu."
     },
     "de": {
-      "common_name": "Portes Alokasie",
-      "description": "Alocasia portei ist eine großwüchsige tropische Aronstabpflanze mit stark gelappten Blättern. Sie benötigt helles indirektes Licht, Wärme und gleichmäßig feuchtes Substrat. Eine hohe Luftfeuchtigkeit ist für die Kultur wichtig."
+      "common_name": "Porters Alokasie",
+      "description": "Tropische Alokasie mit großen, auffälligen Blättern für helles, indirektes Licht. Das Substrat gleichmäßig feucht halten, aber Staunässe vermeiden, und warme Temperaturen sowie hohe Luftfeuchte bieten. Bei Verzehr ist die Pflanze giftig."
     },
     "fr": {
-      "common_name": "Alocasia de Porte",
-      "description": "Alocasia portei est une grande plante tropicale aux feuilles profondément découpées. Elle apprécie une lumière vive indirecte, une chaleur constante et un sol toujours légèrement humide. Une forte humidité ambiante favorise une croissance saine."
+      "common_name": "Alocasia de Porter",
+      "description": "Plante tropicale à grandes feuilles, à placer en lumière vive indirecte. Gardez le substrat légèrement humide sans excès d’eau et assurez chaleur et humidité élevée. Toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "Alocasia di Porte",
-      "description": "Alocasia portei è una grande pianta tropicale con foglie profondamente lobate. Predilige luce indiretta intensa, temperature calde e terreno costantemente umido ma drenante. L’elevata umidità è importante in casa."
+      "common_name": "Alocasia di Porter",
+      "description": "Alocasia tropicale dal fogliame grande e scenografico, adatta a luce intensa ma indiretta. Mantieni il substrato leggermente umido evitando ristagni e garantisci temperature calde e alta umidità. È tossica se ingerita."
     },
     "es": {
-      "common_name": "Alocasia de Porte",
-      "description": "Alocasia portei es una planta tropical grande con hojas profundamente lobuladas. Necesita luz indirecta brillante, calor y un sustrato siempre ligeramente húmedo. La alta humedad ambiental es clave para su buen desarrollo."
+      "common_name": "Alocasia de Porter",
+      "description": "Planta tropical de hojas grandes que prefiere luz brillante e indirecta. Mantén el sustrato ligeramente húmedo sin encharcar y aporta calor y humedad ambiental alta. Es tóxica si se mastica o ingiere."
     },
     "pt": {
-      "common_name": "Alocásia de Porte",
-      "description": "Alocasia portei é uma planta tropical de grande porte com folhas profundamente recortadas. Prefere luz indireta brilhante, temperaturas quentes e solo sempre levemente úmido. Umidade elevada ajuda no crescimento saudável."
+      "common_name": "Alocásia de Porter",
+      "description": "Planta tropical de folhas grandes que prefere luz forte e indireta. Mantenha o substrato levemente úmido, sem encharcar, e ofereça calor e alta umidade. É tóxica se ingerida."
     },
     "ar": {
       "common_name": "ألوكاسيا بورتي",
-      "description": "ألوكاسيا بورتي نبات استوائي كبير بأوراق عميقة التفصص. يفضل الضوء الساطع غير المباشر والدفء وتربة رطبة جيدة التصريف. الرطوبة العالية ضرورية لنموه داخل المنزل."
+      "description": "نبات استوائي بأوراق كبيرة يفضل ضوءًا ساطعًا غير مباشر. حافظ على التربة رطبة قليلًا دون إغراق، مع حرارة مناسبة ورطوبة مرتفعة. النبات سام عند المضغ أو الابتلاع."
     },
     "hi": {
-      "common_name": "अलोकासिया पोर्टेई",
-      "description": "अलोकासिया पोर्टेई एक बड़ा उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहराई से कटी होती हैं। इसे तेज अप्रत्यक्ष रोशनी, गर्म तापमान और लगातार नम लेकिन जलनिकास वाली मिट्टी चाहिए। उच्च आर्द्रता में यह बेहतर बढ़ता है।"
+      "common_name": "अलोकेशिया पोर्टेई",
+      "description": "यह एक उष्णकटिबंधीय पौधा है जिसके बड़े सजावटी पत्ते होते हैं और इसे तेज लेकिन अप्रत्यक्ष रोशनी पसंद है। मिट्टी को हल्का नम रखें, पानी जमा न होने दें, और गर्मी व उच्च आर्द्रता बनाए रखें। चबाने या निगलने पर यह विषैला है।"
     },
     "zh": {
       "common_name": "波特海芋",
-      "description": "Alocasia portei 是一种大型热带观叶植物，叶片深裂而挺立。它适合明亮的散射光、温暖环境和持续微湿的排水良好基质。较高的空气湿度有助于健康生长。"
+      "description": "这是一种热带观叶植物，适合明亮的散射光。盆土保持微湿但避免积水，并提供温暖与较高湿度。植株误食有毒，应远离儿童与宠物。"
     },
     "ja": {
-      "common_name": "ポルテアロカシア",
-      "description": "アロカシア・ポルテイは深く切れ込んだ大きな葉を持つ熱帯植物です。明るい間接光と暖かい環境、常にやや湿った用土を好みます。高い湿度が室内管理では重要です。"
+      "common_name": "アロカシア・ポルテイ",
+      "description": "大きな葉が特徴の熱帯性アロカシアで、明るい間接光を好みます。用土は軽く湿らせつつ過湿を避け、暖かさと高湿度を保ちます。かじる・誤食すると有毒です。"
     },
     "ko": {
-      "common_name": "포르테 알로카시아",
-      "description": "알로카시아 포르테이는 깊게 갈라진 잎을 가진 대형 열대 식물입니다. 밝은 간접광과 따뜻한 온도, 항상 약간 촉촉한 배수 좋은 토양을 선호합니다. 높은 습도가 건강한 생장에 중요합니다."
+      "common_name": "알로카시아 포르테이",
+      "description": "큰 잎이 특징인 열대 식물로 밝은 간접광에서 잘 자랍니다. 흙은 약간 촉촉하게 유지하되 과습은 피하고, 따뜻한 온도와 높은 습도를 제공합니다. 씹거나 섭취하면 유독합니다."
     }
   },
   "sources": {
     "urls": [
+      "https://www.rhs.org.uk/plants/alocasia",
       "https://www.rhs.org.uk/plants/alocasia/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx",
-      "https://edis.ifas.ufl.edu/publication/EP258"
+      "https://www.patchplants.com/pages/plant-care/complete-guide-to-alocasia-care/",
+      "https://www.thespruce.com/grow-alocasia-indoors-1902735",
+      "https://www.poison.org/articles/are-plants-in-the-alocasia-genus-poisonous-221",
+      "https://www.homesandgardens.com/gardens/how-to-repot-an-alocasia"
     ]
   }
 }

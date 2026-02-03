@@ -1,25 +1,27 @@
 {
   "external_id": "angelica_archangelica",
-  "name": "Garden Angelica",
+  "name": "Garden angelica",
   "latin": "Angelica archangelica",
-  "sun": "medium",
+  "sun": "high",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "herbs-vegetables",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 4,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "angelica_archangelica.jpg",
   "image_thumb": "angelica_archangelica.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Part sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Sun to part shade",
+          "pl": "Słońce/półcień",
+          "de": "Sonne/Halbschatten",
+          "fr": "Soleil/mi-ombre",
+          "it": "Sole/mez'ombra",
+          "es": "Sol/semisombra",
+          "pt": "Sol/meia-sombra",
+          "ar": "شمس/ظل جزئي",
+          "hi": "धूप/आंशिक छाया",
+          "zh": "全日照/半阴",
+          "ja": "日向〜半日陰",
+          "ko": "양지/반그늘"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna gleba",
-          "de": "Nährstoffreich",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Rich, moist, drained",
+          "pl": "Żyzna, wilg., dr.",
+          "de": "Nährreich, feucht",
+          "fr": "Riche, frais, drainé",
+          "it": "Ricco, umido, dren.",
+          "es": "Rico, húmedo, dren.",
+          "pt": "Rico, úmido, dren.",
+          "ar": "غني ورطب ومصرف",
+          "hi": "उपजाऊ, नम, निकासी",
+          "zh": "肥沃湿润, 排水好",
+          "ja": "肥沃で湿り, 排水良",
+          "ko": "비옥·습윤·배수"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Stała wilgoć",
-          "de": "Feucht halten",
-          "fr": "Sol humide",
-          "it": "Sempre umido",
-          "es": "Húmedo",
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj stałą wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder humide",
+          "it": "Terriccio sempre umido",
+          "es": "Mantén húmedo",
           "pt": "Manter úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気維持",
-          "ko": "항상 촉촉"
+          "ar": "أبقِ التربة رطبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "土を均一に湿らす",
+          "ko": "흙을 고르게 촉촉"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "手入れは中程度",
+          "ko": "관리 보통"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Lubi chłód",
-          "de": "Kühltolerant",
-          "fr": "Aime le frais",
-          "it": "Clima fresco",
-          "es": "Clima fresco",
-          "pt": "Clima fresco",
-          "ar": "تتحمل البرودة",
-          "hi": "ठंड सहनशील",
-          "zh": "耐凉",
-          "ja": "冷涼向き",
-          "ko": "서늘함 선호"
+          "en": "Cool: 5–20°C",
+          "pl": "Chłodno: 5–20°C",
+          "de": "Kühl: 5–20°C",
+          "fr": "Frais: 5–20°C",
+          "it": "Fresco: 5–20°C",
+          "es": "Fresco: 5–20°C",
+          "pt": "Fresco: 5–20°C",
+          "ar": "بارد: 5–20°م",
+          "hi": "ठंडा: 5–20°C",
+          "zh": "凉爽：5–20°C",
+          "ja": "涼しい: 5–20°C",
+          "ko": "서늘함: 5–20°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Normal humidity ok",
+          "pl": "Wilg. pow. zwykła",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale OK",
+          "it": "Umidità normale OK",
+          "es": "Humedad normal OK",
+          "pt": "Umidade normal OK",
+          "ar": "رطوبة عادية مناسبة",
+          "hi": "सामान्य नमी ठीक",
+          "zh": "正常湿度即可",
+          "ja": "普通の湿度で可",
+          "ko": "보통 습도 OK"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Sap may irritate skin",
+          "pl": "Sok może drażnić skórę",
+          "de": "Saft reizt evtl. Haut",
+          "fr": "Sève peut irriter peau",
+          "it": "Linfa può irritare pelle",
+          "es": "Savia puede irritar piel",
+          "pt": "Seiva pode irritar pele",
+          "ar": "العصارة قد تهيّج الجلد",
+          "hi": "रस त्वचा चुभा सकता",
+          "zh": "汁液可能刺激皮肤",
+          "ja": "樹液で皮膚刺激あり",
+          "ko": "수액이 피부 자극"
         }
       }
     },
@@ -160,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Tall biennial",
-          "pl": "Dwuletnia",
-          "de": "Zweijährig",
-          "fr": "Bisannuelle",
-          "it": "Biennale",
-          "es": "Bienal",
-          "pt": "Bienal",
-          "ar": "ثنائية الحول",
-          "hi": "द्विवर्षीय",
-          "zh": "二年生",
-          "ja": "二年草",
-          "ko": "이년생"
+          "en": "Tall biennial herb",
+          "pl": "Wysoka rośl. dwulet.",
+          "de": "Hohe zweijährige Staude",
+          "fr": "Grande bisannuelle",
+          "it": "Erbacea biennale alta",
+          "es": "Herbácea bienal alta",
+          "pt": "Erva bienal alta",
+          "ar": "عشبة ثنائية الحول طويلة",
+          "hi": "ऊँचा द्विवर्षीय पौधा",
+          "zh": "高大二年生草本",
+          "ja": "背の高い二年草",
+          "ko": "키 큰 2년생 초본"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drought & heat",
+          "pl": "Unikaj suszy i upału",
+          "de": "Trockenheit vermeiden",
+          "fr": "Éviter sécheresse/chaleur",
+          "it": "Evita secco e caldo",
+          "es": "Evita sequía y calor",
+          "pt": "Evite seca e calor",
+          "ar": "تجنب الجفاف والحر",
+          "hi": "सूखापन/गर्मी से बचें",
+          "zh": "避免干旱与高温",
+          "ja": "乾燥と暑さを避ける",
+          "ko": "건조·고온 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发虫害",
+          "ja": "害虫は時々",
+          "ko": "해충 가끔"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Garden Angelica",
-      "description": "Angelica archangelica is a tall biennial herb native to northern Europe. It prefers cool climates, moist soil, and partial sun. The plant is valued for its aromatic stems and medicinal uses."
+      "common_name": "Garden angelica",
+      "description": "Angelica archangelica is a tall, aromatic biennial herb. It grows best in rich soil kept consistently moist, in full sun to partial shade. Keep the potting mix from drying out, and handle sap carefully as it may irritate skin in sunlight."
     },
     "pl": {
       "common_name": "Dzięgiel litwor",
-      "description": "Angelica archangelica to wysoka roślina dwuletnia pochodząca z północnej Europy. Lubi chłodny klimat, wilgotną glebę i półcień. Jest ceniona za aromatyczne pędy i zastosowania lecznicze."
+      "description": "Angelica archangelica to wysoka, aromatyczna roślina dwuletnia. Najlepiej rośnie w żyznej glebie o stałej wilgotności, w słońcu lub półcieniu. Nie dopuszczaj do przesychania podłoża; sok może podrażniać skórę na słońcu."
     },
     "de": {
       "common_name": "Echter Engelwurz",
-      "description": "Angelica archangelica ist eine hohe zweijährige Pflanze aus Nordeuropa. Sie bevorzugt kühles Klima, feuchten Boden und Halbschatten. Die Pflanze wird wegen ihrer aromatischen Stängel geschätzt."
+      "description": "Angelica archangelica ist ein hohes, aromatisches, zweijähriges Kraut. Sie bevorzugt nährstoffreiche Erde, die gleichmäßig feucht bleibt, bei Sonne bis Halbschatten. Das Substrat nicht austrocknen lassen; Pflanzensaft kann in Sonne die Haut reizen."
     },
     "fr": {
       "common_name": "Angélique officinale",
-      "description": "Angelica archangelica est une grande plante bisannuelle originaire d’Europe du Nord. Elle aime les climats frais, les sols humides et la mi-ombre. Elle est utilisée pour ses tiges aromatiques."
+      "description": "Angelica archangelica est une grande plante bisannuelle aromatique. Elle préfère un sol riche, restant humide, au soleil ou à mi-ombre. Évitez le dessèchement du substrat et manipulez la sève avec prudence, car elle peut irriter la peau au soleil."
     },
     "it": {
       "common_name": "Angelica officinale",
-      "description": "Angelica archangelica è una pianta biennale alta originaria del Nord Europa. Predilige climi freschi, terreno umido e mezz'ombra. È apprezzata per i suoi fusti aromatici."
+      "description": "Angelica archangelica è un'erbacea biennale alta e aromatica. Cresce meglio in un terriccio ricco mantenuto costantemente umido, in sole o mezz'ombra. Evita che il substrato si asciughi; la linfa può irritare la pelle con il sole."
     },
     "es": {
       "common_name": "Angélica",
-      "description": "Angelica archangelica es una planta bienal alta nativa del norte de Europa. Prefiere climas frescos, suelo húmedo y semisombra. Es conocida por sus tallos aromáticos."
+      "description": "Angelica archangelica es una hierba bienal alta y aromática. Prefiere un sustrato rico que se mantenga uniformemente húmedo, con sol o semisombra. No dejes que se seque la maceta; la savia puede irritar la piel con exposición solar."
     },
     "pt": {
       "common_name": "Angélica",
-      "description": "Angelica archangelica é uma planta bienal alta nativa do norte da Europa. Prefere clima fresco, solo úmido e meia-sombra. É valorizada por seus caules aromáticos."
+      "description": "Angelica archangelica é uma erva bienal alta e aromática. Desenvolve-se melhor em substrato rico mantido sempre úmido, com sol ou meia-sombra. Não deixe o vaso secar; a seiva pode irritar a pele sob sol."
     },
     "ar": {
-      "common_name": "حشيشة الملاك",
-      "description": "Angelica archangelica نبات ثنائي الحول طويل موطنه شمال أوروبا. يفضل المناخ البارد والتربة الرطبة والشمس الجزئية. يُعرف بسيقانه العطرية."
+      "common_name": "أنجليكا",
+      "description": "Angelica archangelica نبات عشبي عطري ثنائي الحول وطويل. يفضّل تربة غنية تبقى رطبة باستمرار مع شمس أو ظل جزئي. تجنّب جفاف التربة وتعامل مع العصارة بحذر لأنها قد تهيّج الجلد مع ضوء الشمس."
     },
     "hi": {
       "common_name": "एंजेलिका",
-      "description": "Angelica archangelica एक लंबा द्विवर्षीय पौधा है जो उत्तरी यूरोप का मूल निवासी है। इसे ठंडी जलवायु, नम मिट्टी और आंशिक धूप पसंद है। इसके सुगंधित तनों के लिए जाना जाता है।"
+      "description": "Angelica archangelica एक सुगंधित, ऊँचा द्विवर्षीय पौधा है। यह उपजाऊ मिट्टी में अच्छा बढ़ता है जिसे लगातार नम रखा जाए, और धूप से आंशिक छाया तक पसंद करता है। गमले की मिट्टी सूखने न दें; रस धूप में त्वचा को चुभा सकता है।"
     },
     "zh": {
-      "common_name": "欧当归",
-      "description": "Angelica archangelica 是原产于北欧的高大二年生草本植物。它喜欢凉爽气候、湿润土壤和半日照。常因其芳香茎而被利用。"
+      "common_name": "当归（欧当归）",
+      "description": "Angelica archangelica 是高大的芳香二年生草本。适合在肥沃土壤中栽培并保持均匀湿润，光照为全日照到半阴。避免盆土干透，汁液在日光下可能刺激皮肤。"
     },
     "ja": {
       "common_name": "アンジェリカ",
-      "description": "Angelica archangelica は北ヨーロッパ原産の背の高い二年草です。冷涼な気候と湿った土、半日陰を好みます。香りのある茎で知られています。"
+      "description": "Angelica archangelica は芳香のある背の高い二年草です。肥沃で常に湿り気のある用土を好み、日向から半日陰で育ちます。用土を乾かし過ぎないようにし、樹液は日光下で皮膚刺激になることがあります。"
     },
     "ko": {
       "common_name": "안젤리카",
-      "description": "Angelica archangelica는 북유럽 원산의 키가 큰 이년생 식물입니다. 서늘한 기후와 습한 토양, 반그늘을 선호합니다. 향기로운 줄기로 알려져 있습니다."
+      "description": "Angelica archangelica 는 향이 있는 키 큰 2년생 허브입니다. 비옥한 흙을 고르게 촉촉하게 유지하고, 양지부터 반그늘에서 잘 자랍니다. 흙이 마르지 않게 관리하며, 수액은 햇빛에서 피부 자극을 줄 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1341/angelica-archangelica/details",
-      "https://plants.usda.gov/home/plantProfile?symbol=ANAR3",
-      "https://www.britannica.com/plant/angelica-plant-genus"
+      "https://extension.unh.edu/resource/how-grow-angelica-angelica-archangelica",
+      "https://www.rhsplants.co.uk/plants/_/angelica-archangelica/classid.2000017256/",
+      "https://plants.ces.ncsu.edu/plants/angelica-archangelica/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?isprofile=0&taxonid=276039",
+      "https://www.gardenersworld.com/plants/angelica-archangelica/"
     ]
   }
 }

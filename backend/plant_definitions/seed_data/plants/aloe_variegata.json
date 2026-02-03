@@ -1,6 +1,6 @@
 {
   "external_id": "aloe_variegata",
-  "name": "Tiger Aloe",
+  "name": "Tiger aloe",
   "latin": "Aloe variegata",
   "sun": "high",
   "water": "low",
@@ -10,15 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "aloe_variegata.jpg",
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Helle Sonne",
-          "fr": "Soleil vif",
-          "it": "Sole forte",
-          "es": "Sol intenso",
-          "pt": "Sol forte",
-          "ar": "شمس ساطعة",
-          "hi": "तेज़ धूप",
-          "zh": "强光照",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light/sun",
+          "pl": "Jasne światło/słońce",
+          "de": "Helles Licht/Sonne",
+          "fr": "Lumière vive/soleil",
+          "it": "Luce intensa/sole",
+          "es": "Luz intensa/sol",
+          "pt": "Luz forte/sol",
+          "ar": "ضوء ساطع/شمس",
+          "hi": "तेज़ रोशनी/धूप",
+          "zh": "明亮光照/阳光",
+          "ja": "明るい光/日光",
+          "ko": "밝은 빛/햇빛"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining",
-          "pl": "Dobrze zdren.",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 좋음"
+          "en": "Cactus mix, gritty",
+          "pl": "Podłoże do kaktusów",
+          "de": "Kakteenerde, grob",
+          "fr": "Substrat cactus drainant",
+          "it": "Terriccio cactus drenante",
+          "es": "Sustrato cactus drenante",
+          "pt": "Substrato cactus drenante",
+          "ar": "تربة صبّار جيدة الصرف",
+          "hi": "कैक्टस मिट्टी, जलनिकास",
+          "zh": "仙人掌土，排水好",
+          "ja": "多肉用土・水はけ",
+          "ko": "다육용 흙, 배수"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Rzadkie",
-          "de": "Wenig",
-          "fr": "Peu",
-          "it": "Rado",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Let dry; water sparingly",
+          "pl": "Przeschnie, podlej skąpo",
+          "de": "Trocken; sparsam gießen",
+          "fr": "Sec; arroser peu",
+          "it": "Asciutto; poca acqua",
+          "es": "Seco; riego escaso",
+          "pt": "Seco; rega pouca",
+          "ar": "اتركها تجف ثم اسقِ قليلاً",
+          "hi": "सूखने पर कम पानी",
+          "zh": "干透再少浇",
+          "ja": "乾いてから控えめ",
+          "ko": "마른 뒤 소량 물"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Dry air ok",
+          "pl": "Suche powietrze OK",
+          "de": "Trockene Luft ok",
+          "fr": "Air sec OK",
+          "it": "Aria secca OK",
+          "es": "Aire seco OK",
+          "pt": "Ar seco OK",
+          "ar": "الهواء الجاف مناسب",
+          "hi": "सूखी हवा ठीक",
+          "zh": "干燥空气可",
+          "ja": "乾燥に強い",
+          "ko": "건조한 공기 OK"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement tox.",
-          "it": "Leggermente tox",
-          "es": "Leve tóxica",
-          "pt": "Leve tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषाक्त",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Mildly toxic to pets",
+          "pl": "Lekko toksyczna dla zw.",
+          "de": "Leicht giftig für Tiere",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Leve toxicidad (masc.)",
+          "pt": "Leve toxicidade (pets)",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -161,77 +160,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow rosette clumps",
+          "pl": "Wolne kępy rozet",
+          "de": "Langsam, Rosetten",
+          "fr": "Lente, rosettes",
+          "it": "Lenta, rosette",
+          "es": "Lenta, rosetas",
+          "pt": "Lenta, rosetas",
+          "ar": "نمو بطيء، وردات",
+          "hi": "धीमी, रोसेट गुच्छे",
+          "zh": "生长慢，莲座",
+          "ja": "成長遅いロゼット",
+          "ko": "느린 로제트 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering/rot",
+          "pl": "Unikaj przelania/zgnilizny",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni d’acqua",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso de água",
+          "ar": "تجنّب الإفراط بالماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "避免积水烂根",
+          "ja": "過湿・腐れ注意",
+          "ko": "과습·부패 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles farineuses",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي/حشرات قشرية",
+          "hi": "मिलीबग, स्केल",
+          "zh": "粉蚧、介壳虫",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레, 깍지"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Tiger Aloe",
-      "description": "Aloe variegata is a compact succulent native to South Africa with banded, triangular leaves. It thrives in bright light and dry conditions. Overwatering is the main cause of failure."
+      "common_name": "Tiger aloe",
+      "description": "A compact, slow-growing succulent with banded leaves that form rosettes. Grow in bright light and a gritty cactus-succulent mix, watering only after the soil dries out. Keep warm and protect from frost; ingestion may upset pets."
     },
     "pl": {
-      "common_name": "Aloes pstry",
-      "description": "Aloe variegata to niewielki sukulent z Afryki Południowej o pasiastych liściach. Lubi jasne stanowiska i suche podłoże. Nadmiar wody szkodzi roślinie."
+      "common_name": "Aloes tygrysi",
+      "description": "Zwarta, wolno rosnąca sukulenta o pasiastych liściach tworzących rozety. Zapewnij jasne światło i przepuszczalne podłoże do kaktusów, podlewając dopiero po całkowitym przeschnięciu. Trzymaj w cieple i chroń przed mrozem; spożycie może wywołać dolegliwości u zwierząt."
     },
     "de": {
       "common_name": "Tiger-Aloe",
-      "description": "Aloe variegata ist eine kompakte Sukkulente aus Südafrika mit gestreiften Blättern. Sie bevorzugt viel Licht und trockene Erde. Zu häufiges Gießen schadet ihr."
+      "description": "Kompakte, langsam wachsende Sukkulente mit gebänderten Blättern in Rosetten. In helles Licht stellen und in gut drainierende Kakteenerde pflanzen; erst gießen, wenn das Substrat trocken ist. Warm halten und vor Frost schützen; Aufnahme kann Haustiere reizen."
     },
     "fr": {
-      "common_name": "Aloès panaché",
-      "description": "Aloe variegata est une succulente compacte d’Afrique du Sud aux feuilles rayées. Elle aime la lumière vive et un sol sec. L’excès d’eau est à éviter."
+      "common_name": "Aloès tigré",
+      "description": "Petite succulente à croissance lente, aux feuilles striées en rosettes. Placez-la en lumière vive et dans un substrat drainant pour cactus, en arrosant seulement quand le terreau est sec. Gardez-la au chaud et à l’abri du gel ; l’ingestion peut incommoder les animaux."
     },
     "it": {
       "common_name": "Aloe tigrata",
-      "description": "Aloe variegata è una succulenta compatta del Sudafrica con foglie striate. Predilige luce intensa e terreno asciutto. L’eccesso d’acqua è dannoso."
+      "description": "Succulenta compatta e a crescita lenta con foglie fasciate disposte a rosetta. Coltivala in luce intensa e in un terriccio drenante per cactus, bagnando solo a substrato asciutto. Tienila al caldo e lontano dal gelo; l’ingestione può dare disturbi agli animali."
     },
     "es": {
       "common_name": "Aloe tigre",
-      "description": "Aloe variegata es una suculenta compacta de Sudáfrica con hojas rayadas. Requiere mucha luz y riegos escasos. El exceso de agua provoca problemas."
+      "description": "Suculenta compacta y de crecimiento lento con hojas bandeadas en roseta. Requiere luz intensa y un sustrato bien drenante para cactus, con riegos solo cuando el sustrato esté seco. Manténla cálida y sin heladas; la ingestión puede causar malestar en mascotas."
     },
     "pt": {
-      "common_name": "Babosa-tigre",
-      "description": "Aloe variegata é uma suculenta compacta da África do Sul com folhas listradas. Prefere luz intensa e solo seco. Regas excessivas devem ser evitadas."
+      "common_name": "Aloe-tigre",
+      "description": "Suculenta compacta e de crescimento lento, com folhas listradas em roseta. Prefere luz forte e substrato bem drenado para cactos/suculentas, regando apenas quando o solo secar. Mantenha aquecida e longe de geadas; a ingestão pode causar desconforto em pets."
     },
     "ar": {
-      "common_name": "ألوة مخططة",
-      "description": "نبات Aloe variegata عصاري صغير من جنوب أفريقيا بأوراق مخططة. يحتاج إلى ضوء قوي وتربة جافة. الإفراط في الري يسبب تلفه."
+      "common_name": "ألوة النمر",
+      "description": "نبات عصاري صغير بطيء النمو بأوراق مخططة تتجمع على شكل وردات. يحتاج إلى ضوء ساطع وتربة صبّار جيدة الصرف، مع الري فقط بعد جفاف التربة تماماً. يُحفظ دافئاً وبعيداً عن الصقيع؛ قد يسبب الابتلاع انزعاجاً للحيوانات الأليفة."
     },
     "hi": {
       "common_name": "टाइगर एलो",
-      "description": "Aloe variegata दक्षिण अफ्रीका का एक छोटा रसीला पौधा है। इसे तेज रोशनी और कम पानी पसंद है। अधिक पानी नुकसानदेह होता है।"
+      "description": "यह एक कॉम्पैक्ट, धीमी बढ़ने वाली सक्युलेंट है जिसकी धारियों वाली पत्तियाँ रोसेट बनाती हैं। तेज़ रोशनी और कैक्टस-सक्युलेंट मिट्टी में रखें, और मिट्टी सूखने पर ही पानी दें। इसे गर्म रखें और पाला से बचाएँ; पालतू जानवरों के लिए निगलना परेशानी दे सकता है।"
     },
     "zh": {
-      "common_name": "斑纹芦荟",
-      "description": "Aloe variegata 是原产南非的小型多肉植物，叶片有斑纹。喜强光和干燥环境。浇水过多容易腐烂。"
+      "common_name": "虎纹芦荟",
+      "description": "紧凑、缓慢生长的多肉植物，斑纹叶片形成莲座丛。放在明亮光照处，用排水良好的仙人掌/多肉土，土干透再浇水。保持温暖并防霜冻；误食可能使宠物不适。"
     },
     "ja": {
-      "common_name": "タイガーアロエ",
-      "description": "Aloe variegata は南アフリカ原産の小型多肉植物です。強い光と乾いた土を好みます。水の与えすぎに注意が必要です。"
+      "common_name": "トラアロエ",
+      "description": "縞模様の葉がロゼット状にまとまる、コンパクトで成長の遅い多肉植物。明るい場所と多肉用の水はけの良い土で育て、用土が乾いてから控えめに水やりします。暖かく保ち霜を避け、誤食はペットに不調を招くことがあります。"
     },
     "ko": {
       "common_name": "타이거 알로에",
-      "description": "Aloe variegata는 남아프리카 원산의 소형 다육식물입니다. 밝은 빛과 건조한 토양을 선호합니다. 과습은 해롭습니다."
+      "description": "줄무늬 잎이 로제트를 이루는 작고 느리게 자라는 다육식물입니다. 밝은 빛과 배수가 좋은 다육/선인장용 흙에서 키우고, 흙이 완전히 마른 뒤에만 물을 주세요. 따뜻하게 유지하고 서리를 피하며, 섭취 시 반려동물에 불편을 줄 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/332/aloe-variegata/details",
-      "https://www.kew.org/plants/aloe-variegata",
-      "https://extension.psu.edu/houseplants-aloe"
+      "https://www.rhs.org.uk/plants/505645/gonialoe-variegata-%28v%29/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:530009-1",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/aloe"
     ]
   }
 }

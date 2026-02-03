@@ -1,0 +1,275 @@
+{
+  "external_id": "verbena_officinalis",
+  "name": "Common Verbena",
+  "latin": "Verbena officinalis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "herbs-vegetables"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "verbena_officinalis.jpg",
+  "image_thumb": "verbena_officinalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري محايد",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असामान्य",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di annaffiatura",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折発生する害虫",
+          "ko": "가끔 발생하는 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common Verbena",
+      "description": "Verbena officinalis is a hardy perennial known for its medicinal and ornamental uses. It thrives in full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Wernonia pospolita",
+      "description": "Verbena officinalis to roślina wieloletnia, znana ze swoich zastosowań leczniczych i ozdobnych. Rośnie w pełnym słońcu i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Gemeine Eisenkraut",
+      "description": "Verbena officinalis ist eine robuste Staude, die für ihre medizinischen und dekorativen Anwendungen bekannt ist. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Verveine officinale",
+      "description": "Verbena officinalis est une plante vivace résistante, connue pour ses utilisations médicinales et ornementales. Elle pousse en plein soleil et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Verveina officinale",
+      "description": "Verbena officinalis è una pianta perenne resistente, conosciuta per i suoi usi medicinali e ornamentali. Cresce al sole pieno e in un terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Verbena común",
+      "description": "Verbena officinalis es una planta perenne resistente conocida por sus usos medicinales y ornamentales. Crece a pleno sol y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Verbena comum",
+      "description": "Verbena officinalis é uma planta perene resistente conhecida por seus usos medicinais e ornamentais. Cresce ao sol pleno e em solos bem drenados."
+    },
+    "ar": {
+      "common_name": "الفرمود",
+      "description": "Verbena officinalis هي نبتة معمرة مقاومة معروفة باستخداماتها الطبية والزخرفية. تنمو تحت الشمس الساطعة وفي التربة جيدة الصرف."
+    },
+    "hi": {
+      "common_name": "साधारण वर्बेना",
+      "description": "Verbena officinalis एक कठोर स्थायी पौधा है जिसे औषधीय और सजावटी उपयोगों के लिए जाना जाता है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में उगता है।"
+    },
+    "zh": {
+      "common_name": "常见马鞭草",
+      "description": "Verbena officinalis 是一种耐寒的多年生植物，以其药用和观赏用途而闻名。它在充足的阳光和排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "一般的なバーベナ",
+      "description": "Verbena officinalis は、薬用および装飾用として知られる耐寒性の多年草です。日当たりの良い場所と排水の良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "일반 바베나",
+      "description": "Verbena officinalis는 약용 및 장식용으로 알려진 내한성 다년생 식물입니다. 완전한 햇빛과 배수가 좋은 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/verbena-officinalis",
+      "https://www.gardenia.net/plant/verbena-officinalis"
+    ]
+  }
+}

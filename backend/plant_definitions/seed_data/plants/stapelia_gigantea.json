@@ -1,18 +1,17 @@
 {
   "external_id": "stapelia_gigantea",
-  "name": "Giant Cactus Flower",
+  "name": "Giant Toad Plant",
   "latin": "Stapelia gigantea",
   "sun": "medium",
   "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaskowy",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملية",
-          "hi": "बालू",
-          "zh": "沙质",
-          "ja": "砂地",
-          "ko": "모래"
+          "en": "Cactus soil",
+          "pl": "Gleba dla kaktusów",
+          "de": "Kaktuserde",
+          "fr": "Sol de cactus",
+          "it": "Terreno per cactus",
+          "es": "Tierra para cactus",
+          "pt": "Terra para cactos",
+          "ar": "تربة للصبار",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "仙人掌土壤",
+          "ja": "サボテン用土",
+          "ko": "선인장 토양"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niski",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "basso",
-          "es": "bajo",
-          "pt": "baixo",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮은"
+          "en": "Low watering",
+          "pl": "Niskie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Bassa irrigazione",
+          "es": "Bajo riego",
+          "pt": "Baixa rega",
+          "ar": "سقي منخفض",
+          "hi": "कम पानी देना",
+          "zh": "低水量",
+          "ja": "少量の水やり",
+          "ko": "적은 급수"
         }
       }
     },
@@ -86,13 +85,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,13 +104,13 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
           "ar": "دافئ",
           "hi": "गर्म",
           "zh": "温暖",
@@ -124,13 +123,13 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niski",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "basso",
-          "es": "bajo",
-          "pt": "baixo",
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
           "ar": "منخفض",
           "hi": "कम",
           "zh": "低",
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असामान्य",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +161,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Zunahme",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter un arrosage excessif",
+          "it": "Evitare eccessivo innaffiamento",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避けてください",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Giant Cactus Flower",
-      "description": "Stapelia gigantea is a succulent known for its large, star-shaped flowers with a characteristic odor. It thrives in warm climates and requires minimal water, making it ideal for desert-like environments."
+      "common_name": "Giant Toad Plant",
+      "description": "Stapelia gigantea, known as the Giant Toad Plant, is a succulent native to South Africa. It is known for its large, star-shaped flowers that resemble a toad's skin."
     },
     "pl": {
-      "common_name": "Wielka Kwiatowa Kaktus",
-      "description": "Stapelia gigantea to sukulent znany ze swoich dużych, gwiazdkowatych kwiatów o charakterystycznym zapachu. Rośnie w ciepłych klimatach i wymaga minimalnego podlewania, co sprawia, że idealnie nadaje się do środowisk pustynnych."
+      "common_name": "Wielka roślina ropuchy",
+      "description": "Stapelia gigantea, znana jako Wielka roślina ropuchy, to sukulent pochodzący z Południowej Afryki. Słynie z dużych, gwiaździstych kwiatów przypominających skórę ropuchy."
     },
     "de": {
-      "common_name": "Riesige Kaktusblume",
-      "description": "Stapelia gigantea ist eine Sukkulente, die für ihre großen, sternförmigen Blumen mit charakteristischem Geruch bekannt ist. Sie gedeiht in warmen Klimazonen und benötigt nur wenig Wasser, was sie ideal für wüstenähnliche Umgebungen macht."
+      "common_name": "Riesenkrötenpflanze",
+      "description": "Stapelia gigantea, auch als Riesenkrötenpflanze bekannt, ist eine Sukkulente aus Südafrika. Sie ist bekannt für ihre großen, sternförmigen Blumen, die einer Krötenhaut ähneln."
     },
     "fr": {
-      "common_name": "Fleur de Cactus Géant",
-      "description": "Stapelia gigantea est une plante succulente connue pour ses grandes fleurs en forme d'étoile au parfum caractéristique. Elle prospère dans des climats chauds et nécessite peu d'eau, ce qui la rend idéale pour les environnements désertiques."
+      "common_name": "Plante crapaud géant",
+      "description": "Stapelia gigantea, connue sous le nom de plante crapaud géant, est une succulente originaire d'Afrique du Sud. Elle est connue pour ses grandes fleurs en forme d'étoile qui ressemblent à la peau d'un crapaud."
     },
     "it": {
-      "common_name": "Fiore di Cactus Gigante",
-      "description": "Stapelia gigantea è una succulenta nota per i suoi grandi fiori a forma di stella con un odore caratteristico. Cresce in climi caldi e richiede poca acqua, rendendola ideale per ambienti desertici."
+      "common_name": "Pianta rospo gigante",
+      "description": "Stapelia gigantea, conosciuta come pianta rospo gigante, è una succulenta originaria del Sud Africa. È nota per i suoi grandi fiori a forma di stella che somigliano alla pelle di un rospo."
     },
     "es": {
-      "common_name": "Flor de Cactus Gigante",
-      "description": "Stapelia gigantea es una suculenta conocida por sus grandes flores en forma de estrella con un olor característico. Crece en climas cálidos y requiere poca agua, lo que la hace ideal para entornos desérticos."
+      "common_name": "Planta sapo gigante",
+      "description": "Stapelia gigantea, conocida como planta sapo gigante, es una suculenta originaria de Sudáfrica. Es conocida por sus grandes flores en forma de estrella que se asemejan a la piel de un sapo."
     },
     "pt": {
-      "common_name": "Flor de Cacto Gigante",
-      "description": "Stapelia gigantea é uma suculenta conhecida por suas grandes flores em forma de estrela com um cheiro característico. Ela prospera em climas quentes e requer pouca água, tornando-a ideal para ambientes desérticos."
+      "common_name": "Planta sapo gigante",
+      "description": "Stapelia gigantea, conhecida como planta sapo gigante, é uma suculenta nativa da África do Sul. É conhecida por suas grandes flores em forma de estrela que se assemelham à pele de um sapo."
     },
     "ar": {
-      "common_name": "زهرة صبار عملاقة",
-      "description": "Stapelia gigantea هي نبتة عصارية معروفة بزهورها الكبيرة ذات الشكل النجمي ورائحتها المميزة. تنمو في المناخات الدافئة وتتطلب القليل من الماء، مما يجعلها مثالية للبيئات الصحراوية."
+      "common_name": "نبتة ضفدع عملاقة",
+      "description": "Stapelia gigantea، المعروفة باسم نبتة الضفدع العملاقة، هي نبتة عصارية من جنوب أفريقيا. تشتهر بأزهارها الكبيرة ذات الشكل النجمي التي تشبه جلد الضفدع."
     },
     "hi": {
-      "common_name": "विशाल कैक्टस फूल",
-      "description": "Stapelia gigantea एक शाकीय पौधा है जो अपनी बड़ी, तारा आकार की फूलों के लिए जाना जाता है, जिसमें एक विशिष्ट गंध होती है। यह गर्म जलवायु में बढ़ता है और न्यूनतम पानी की आवश्यकता होती है, जो इसे रेगिस्तानी जैसे वातावरण के लिए आदर्श बनाता है।"
+      "common_name": "विशाल मेंढ़क पौधा",
+      "description": "Stapelia gigantea, जिसे विशाल मेंढ़क पौधा कहा जाता है, दक्षिण अफ्रीका का एक सुकुलेंट है। यह अपने बड़े, सितारे के आकार के फूलों के लिए जाना जाता है जो मेंढ़क की त्वचा जैसी दिखती हैं।"
     },
     "zh": {
-      "common_name": "巨型仙人掌花",
-      "description": "Stapelia gigantea 是一种多肉植物，以其大型的星形花朵和特有的气味而闻名。它适应温暖气候，水需求较少，适合沙漠类环境。"
+      "common_name": "巨型蟾蜍植物",
+      "description": "Stapelia gigantea，称为巨型蟾蜍植物，是一种来自南非的多肉植物。它以其大而星形的花朵闻名，花朵形状像蟾蜍的皮肤。"
     },
     "ja": {
-      "common_name": "巨大なサボテンの花",
-      "description": "Stapelia giganteaは、特有の香りを持つ大きな星形の花で知られる多肉植物です。暖かい気候で成長し、最小限の水分を必要とし、砂漠のような環境に最適です。"
+      "common_name": "巨大ヒキガエル植物",
+      "description": "Stapelia gigantea、巨大ヒキガエル植物として知られるこの多肉植物は南アフリカ原産です。カエルの皮膚のような大きな星形の花が特徴です。"
     },
     "ko": {
-      "common_name": "거대한 선인장 꽃",
-      "description": "Stapelia gigantea는 특징적인 향을 가진 큰 별 모양의 꽃으로 알려진 다육식물입니다. 따뜻한 기후에서 잘 자라며 물이 적게 필요해 사막 같은 환경에 이상적입니다."
+      "common_name": "거대 두꺼비 식물",
+      "description": "Stapelia gigantea, 거대 두꺼비 식물로 알려진 이 다육 식물은 남아프리카가 원산지입니다. 두꺼비의 피부처럼 보이는 크고 별 모양의 꽃으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/Stapelia-gigantea",
-      "https://www.gardenia.net/plant/stapelia-gigantea"
+      "https://www.rhs.org.uk/Plants/12335/Stapelia-gigantea/Details",
+      "https://www.abcgarden.com/stapelia-gigantea-care"
     ]
   }
 }

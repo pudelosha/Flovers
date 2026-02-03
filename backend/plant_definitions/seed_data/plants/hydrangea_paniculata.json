@@ -1,24 +1,25 @@
 {
   "external_id": "hydrangea_paniculata",
-  "name": "Panicle hydrangea",
+  "name": "Panicle Hydrangea",
   "latin": "Hydrangea paniculata",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "all-purpose",
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 4,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 180,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "hydrangea_paniculata.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Sun to part shade",
-          "pl": "Słońce/półcień",
-          "de": "Sonne/Halbschat.",
-          "fr": "Soleil/mi-ombre",
-          "it": "Sole/ombra parz.",
-          "es": "Sol/semisombra",
-          "pt": "Sol/meia-sombra",
-          "ar": "شمس/ظل جزئي",
-          "hi": "धूप/आंशिक छाया",
-          "zh": "全日照/半阴",
-          "ja": "日向/半日陰",
-          "ko": "양지/반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist, well-drained",
-          "pl": "Wilgotna, przepus.",
-          "de": "Feucht, durchläss.",
-          "fr": "Frais, drainé",
-          "it": "Umido, drenante",
-          "es": "Húmedo y drenado",
-          "pt": "Úmido e drenado",
-          "ar": "رطبة وجيدة الصرف",
-          "hi": "नम, जल-निकासी",
-          "zh": "湿润且排水好",
-          "ja": "湿り気・水はけ",
-          "ko": "촉촉·배수 양호"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Utrzymuj wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Garder humide",
-          "it": "Tieni umido",
-          "es": "Mantén húmedo",
-          "pt": "Mantenha úmido",
-          "ar": "حافظ على الرطوبة",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持土壤湿润",
-          "ja": "土を均一に湿らす",
-          "ko": "흙을 고르게 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "-30°C hardy",
-          "pl": "Mrozoodp. do -30°C",
-          "de": "Bis -30°C winterh.",
-          "fr": "Rustique -30°C",
-          "it": "Resiste a -30°C",
-          "es": "Resiste a -30°C",
-          "pt": "Resiste a -30°C",
-          "ar": "تتحمل حتى -30°م",
-          "hi": "-30°C तक सहन",
-          "zh": "耐寒至-30°C",
-          "ja": "-30°Cまで耐寒",
-          "ko": "-30°C 내한성"
+          "en": "10-30°C",
+          "pl": "10-30°C",
+          "de": "10-30°C",
+          "fr": "10-30°C",
+          "it": "10-30°C",
+          "es": "10-30°C",
+          "pt": "10-30°C",
+          "ar": "10-30°C",
+          "hi": "10-30°C",
+          "zh": "10-30°C",
+          "ja": "10-30°C",
+          "ko": "10-30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotn.",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "一般湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if eaten",
-          "pl": "Trująca po zjedz.",
-          "de": "Giftig bei Verzehr",
-          "fr": "Toxique si ingéré",
-          "it": "Tossica se ingerita",
-          "es": "Tóxica si se ingiere",
-          "pt": "Tóxica se ingerida",
-          "ar": "سامة عند الأكل",
-          "hi": "खाने पर विषाक्त",
-          "zh": "误食有毒",
-          "ja": "誤食で有毒",
-          "ko": "섭취 시 유독"
+          "en": "Slightly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Ligeiramente tóxico",
+          "ar": "طفيف السمية",
+          "hi": "थोड़ा जहरीला",
+          "zh": "略有毒性",
+          "ja": "わずかに有毒",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -161,78 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Large deciduous shrub",
-          "pl": "Duży krzew liści.",
-          "de": "Großer Laubstrauch",
-          "fr": "Grand arbuste caduc",
-          "it": "Grande arbusto cad.",
-          "es": "Arbusto grande caduco",
-          "pt": "Arbusto grande caduco",
-          "ar": "شجيرة كبيرة متساقطة",
-          "hi": "बड़ी पर्णपाती झाड़ी",
-          "zh": "大型落叶灌木",
-          "ja": "大型の落葉低木",
-          "ko": "큰 낙엽 관목"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnellwachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "急速成長",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter un arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرोट पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Panicle hydrangea",
-      "description": "Deciduous shrub with cone-shaped flower panicles in summer that age from white to pink. Grows best in full sun to part shade in moist, well-drained soil; prune in late winter or early spring because it blooms on new wood. Harmful if eaten and may irritate skin when handled."
+      "common_name": "Panicle Hydrangea",
+      "description": "Hydrangea paniculata is a deciduous shrub that produces large, conical flower heads. It thrives in moderate sunlight and prefers well-drained, acidic soil."
     },
     "pl": {
-      "common_name": "Hortensja bukietowa",
-      "description": "Krzew liściasty z dużymi, stożkowatymi kwiatostanami latem, które z czasem różowieją. Najlepiej rośnie w słońcu lub półcieniu w wilgotnej, przepuszczalnej glebie; tnie się późną zimą lub wczesną wiosną, bo kwitnie na pędach jednorocznych. Po zjedzeniu jest szkodliwa i może podrażniać skórę."
+      "common_name": "Hortensja stożkowa",
+      "description": "Hydrangea paniculata to krzew liściasty, który wytwarza duże, stożkowe kwiatostany. Lubi umiarkowane światło słoneczne i przepuszczalną, kwaśną glebę."
     },
     "de": {
       "common_name": "Rispenhortensie",
-      "description": "Laubabwerfender Strauch mit großen, kegelförmigen Blütenrispen im Sommer, die von Weiß nach Rosa nachreifen. Am besten in Sonne bis Halbschatten in feuchtem, gut drainiertem Boden; Schnitt im Spätwinter oder zeitigen Frühjahr, da sie am neuen Holz blüht. Bei Verzehr schädlich und kann Haut reizen."
+      "description": "Die Hydrangea paniculata ist ein laubabwerfender Strauch, der große, kegelförmige Blütenstände bildet. Sie gedeiht bei mäßigem Sonnenlicht und bevorzugt gut durchlässigen, sauren Boden."
     },
     "fr": {
-      "common_name": "Hortensia paniculé",
-      "description": "Arbuste caduc portant en été de grandes panicules coniques qui passent du blanc au rose. Préfère le soleil à la mi-ombre dans un sol frais et bien drainé; tailler en fin d’hiver ou début de printemps car il fleurit sur le bois de l’année. Nocif en cas d’ingestion et peut irriter la peau."
+      "common_name": "Hortensia paniculée",
+      "description": "L'Hydrangea paniculata est un arbuste caduc qui produit de grandes inflorescences coniques. Il prospère à la lumière modérée et préfère un sol bien drainé et acide."
     },
     "it": {
       "common_name": "Ortensia a pannocchia",
-      "description": "Arbusto deciduo con grandi pannocchie coniche estive che maturano dal bianco al rosa. Cresce meglio al sole o in mezz’ombra in terreno umido ma ben drenato; potare a fine inverno o inizio primavera perché fiorisce sul legno nuovo. Nociva se ingerita e può irritare la pelle."
+      "description": "L'Hydrangea paniculata è un arbusto deciduo che produce grandi fiori a forma conica. Cresce bene alla luce moderata e preferisce terreni ben drenati e acidi."
     },
     "es": {
-      "common_name": "Hortensia paniculata",
-      "description": "Arbusto caducifolio con grandes panículas cónicas en verano que cambian de blanco a rosado. Va mejor a pleno sol o semisombra en suelo húmedo y bien drenado; se poda a finales de invierno o inicios de primavera porque florece en madera nueva. Es tóxica si se ingiere y puede irritar la piel."
+      "common_name": "Hortensia paniculada",
+      "description": "La Hydrangea paniculata es un arbusto caducifolio que produce grandes inflorescencias cónicas. Crece bien con luz moderada y prefiere suelos bien drenados y ácidos."
     },
     "pt": {
-      "common_name": "Hortênsia-paniculada",
-      "description": "Arbusto decíduo com grandes panículas cônicas no verão que passam do branco ao rosado. Prefere sol a meia-sombra em solo úmido e bem drenado; pode no fim do inverno ou começo da primavera, pois floresce em ramos novos. É tóxica se ingerida e pode irritar a pele."
+      "common_name": "Hortênsia paniculada",
+      "description": "A Hydrangea paniculata é um arbusto caducifólio que produz grandes flores em forma de cone. Ela cresce bem sob luz moderada e prefere solo bem drenado e ácido."
     },
     "ar": {
-      "common_name": "كوبية عنقودية",
-      "description": "شجيرة متساقطة الأوراق تحمل نورات مخروطية كبيرة صيفًا يتدرج لونها من الأبيض إلى الوردي. تنمو أفضل في الشمس إلى الظل الجزئي مع تربة رطبة جيدة الصرف؛ يُنصح بالتقليم أواخر الشتاء أو أوائل الربيع لأنها تزهر على النمو الجديد. ضارة عند الأكل وقد تُسبب تهيجًا جلديًا."
+      "common_name": "هيدرانجيا بنقالية",
+      "description": "الهيدرانجيا بنقالية هي شجيرة نفضية تنتج رؤوس زهور مخروطية كبيرة. تنمو بشكل جيد تحت الضوء المعتدل ويفضل التربة جيدة التصريف وحمضية."
     },
     "hi": {
       "common_name": "पैनिकल हाइड्रेंजिया",
-      "description": "यह एक पर्णपाती झाड़ी है जिसमें गर्मियों में शंकु-आकार के बड़े पुष्पगुच्छ होते हैं जो सफेद से गुलाबी होते जाते हैं। इसे धूप से आंशिक छाया और नम, अच्छी जल-निकासी वाली मिट्टी पसंद है; देर सर्दी या शुरुआती वसंत में छँटाई करें क्योंकि यह नई टहनियों पर फूलती है। खाने पर विषाक्त हो सकती है और त्वचा में जलन कर सकती है।"
+      "description": "हाइड्रेंजिया पैनिकुलाटा एक पर्णपाती झाड़ी है जो बड़ी, शंकु जैसी फूलों की सिरियों का उत्पादन करती है। यह मध्यम सूर्य की रोशनी में अच्छा बढ़ता है और अच्छी तरह से जल निकासी वाली, अम्लीय मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "圆锥绣球",
-      "description": "落叶灌木，夏季开大型圆锥花序，花色可由白逐渐转粉。喜全日照到半阴、湿润且排水良好的土壤；因在当年新枝开花，宜在冬末或早春修剪。误食有毒，接触汁液可能刺激皮肤。"
+      "common_name": "圆锥绣球花",
+      "description": "圆锥绣球花是一种落叶灌木，能开出大而锥形的花朵。它喜欢中等阳光和排水良好的酸性土壤。"
     },
     "ja": {
-      "common_name": "ノリウツギ",
-      "description": "落葉性の低木で、夏に円錐形の花房をつけ、白からピンクに色づきます。日向〜半日陰で、水はけのよい湿った土を好み、新梢に咲くため剪定は冬の終わり〜早春が適します。誤食で有毒となり、皮膚刺激の可能性があります。"
+      "common_name": "パンケーキアジサイ",
+      "description": "ハイドランジア・パニキュラータは、円錐形の大きな花房を持つ落葉性の低木です。中程度の光でよく育ち、排水性の良い酸性土壌を好みます。"
     },
     "ko": {
-      "common_name": "원추수국",
-      "description": "낙엽성 관목으로 여름에 원추형 꽃차례가 피고 흰색에서 분홍색으로 변합니다. 양지~반그늘과 촉촉하되 배수가 좋은 토양을 좋아하며, 새가지에 꽃이 피므로 늦겨울~초봄에 전정합니다. 섭취 시 유독할 수 있고 피부 자극을 일으킬 수 있습니다."
+      "common_name": "팬더 하이드레인지아",
+      "description": "Hydrangea paniculata는 큰 원뿔 모양의 꽃 송이를 만드는 낙엽관목입니다. 중간 정도의 빛에서 잘 자라며 배수가 좋은 산성 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c313",
-      "https://www.rhs.org.uk/plants/8944/hydrangea-paniculata/details",
-      "https://plants.ces.ncsu.edu/plants/hydrangea-paniculata/",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/hydrangea"
+      "https://www.rhs.org.uk/plants/hydrangea-paniculata",
+      "https://www.gardeningknowhow.com/ornamental/shrubs/hydrangea/growing-hydrangea-paniculata.htm"
     ]
   }
 }

@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,7 +37,7 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
           "ko": "중간 빛"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchniczna",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Suolo argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मृदायुक्त मिट्टी",
-          "zh": "粘土土壤",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "ماء جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जल देने",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwy",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Slightly toxic",
-          "pl": "Lekko toksyczny",
-          "de": "Leicht toxisch",
+          "en": "Mildly toxic",
+          "pl": "Lekko trujący",
+          "de": "Mild giftig",
           "fr": "Légèrement toxique",
           "it": "Leggermente tossico",
-          "es": "Ligeramente tóxico",
-          "pt": "Levemente tóxico",
-          "ar": "سامة قليلاً",
+          "es": "Levemente tóxico",
+          "pt": "Ligeiramente tóxico",
+          "ar": "سام قليلاً",
           "hi": "थोड़ा विषैला",
           "zh": "轻微有毒",
-          "ja": "やや有毒",
-          "ko": "약간 유독"
+          "ja": "軽度の毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast",
-          "pl": "Szybki",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Veloce",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज",
-          "zh": "快速",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "À croissance rapide",
+          "it": "Crescita veloce",
+          "es": "De rápido crecimiento",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速く成長する",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やりの過剰を避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Common Groundsel",
-      "description": "Common Groundsel is a fast-growing herb found in disturbed soils. It has yellow daisy-like flowers and deeply lobed leaves."
+      "description": "Senecio vulgaris, or Common Groundsel, is a fast-growing, mildly toxic plant. It thrives in medium light and moderate watering conditions."
     },
     "pl": {
-      "common_name": "Zwykły senecjo",
-      "description": "Zwykły senecjo to szybko rosnąca roślina zielna występująca na zniszczonych glebach. Ma żółte kwiaty przypominające stokrotki i głęboko wcięte liście."
+      "common_name": "Zwykły Senecjo",
+      "description": "Senecio vulgaris, czyli Zwykły Senecjo, to szybko rosnąca, lekko trująca roślina. Rośnie dobrze w średnim świetle i umiarkowanym podlewaniu."
     },
     "de": {
-      "common_name": "Gewöhnlicher Greiskraut",
-      "description": "Das gewöhnliche Greiskraut ist eine schnell wachsende Pflanze, die in gestörten Böden vorkommt. Es hat gelbe blumenartige Blüten und tief eingeschnittene Blätter."
+      "common_name": "Gemeiner Greiskraut",
+      "description": "Senecio vulgaris, auch Gemeines Greiskraut genannt, ist eine schnell wachsende, leicht giftige Pflanze. Sie gedeiht bei mittlerem Licht und mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Senecio vulgaris",
-      "description": "Le senecio vulgaris est une plante à croissance rapide que l'on trouve dans les sols perturbés. Il a des fleurs jaunes en forme de marguerites et des feuilles profondément découpées."
+      "common_name": "Séneçon vulgaire",
+      "description": "Le Séneçon vulgaire, ou Senecio vulgaris, est une plante à croissance rapide et légèrement toxique. Elle prospère sous une lumière modérée et un arrosage modéré."
     },
     "it": {
       "common_name": "Senecio comune",
-      "description": "Il senecio comune è una pianta a crescita rapida che cresce nei terreni disturbati. Ha fiori gialli simili a margherite e foglie profondamente lobate."
+      "description": "Il Senecio vulgaris, o Senecio comune, è una pianta a crescita rapida e leggermente tossica. Cresce bene in luce media e con irrigazione moderata."
     },
     "es": {
       "common_name": "Senecio vulgaris",
-      "description": "El Senecio vulgaris es una planta de rápido crecimiento que se encuentra en suelos perturbados. Tiene flores amarillas similares a las margaritas y hojas profundamente lobuladas."
+      "description": "El Senecio vulgaris, conocido como Senecio común, es una planta de rápido crecimiento y ligeramente tóxica. Se adapta bien a la luz media y al riego moderado."
     },
     "pt": {
       "common_name": "Senecio vulgaris",
-      "description": "O Senecio vulgaris é uma planta de crescimento rápido encontrada em solos perturbados. Possui flores amarelas semelhantes a margaridas e folhas profundamente lobadas."
+      "description": "O Senecio vulgaris, ou Senécio comum, é uma planta de rápido crescimento e ligeiramente tóxica. Cresce bem em luz média e com rega moderada."
     },
     "ar": {
-      "common_name": "سنيسيولوس فولغاريس",
-      "description": "السنيسيولوس فولغاريس هو نبات سريع النمو يوجد في التربة المتضررة. يحتوي على زهور صفراء تشبه الأقحوان وأوراق مفصصة بعمق."
+      "common_name": "سينيشيو فولغاريس",
+      "description": "سينيشيو فولغاريس، أو السينيشيو العادي، هو نبات سريع النمو وسمّي قليلاً. ينمو جيدًا في الضوء المتوسط وبتسوية معتدلة."
     },
     "hi": {
-      "common_name": "कॉमन ग्राउंडसेल",
-      "description": "कॉमन ग्राउंडसेल एक तेज़ी से बढ़ने वाला पौधा है जो विकृत मृदाओं में पाया जाता है। इसमें पीली डेज़ी जैसी फूलें और गहरी कटिंग वाली पत्तियाँ होती हैं।"
+      "common_name": "सनीशियो वल्गारिस",
+      "description": "सनीशियो वल्गारिस, या सामान्य सनीशियो, एक तेज़ी से बढ़ने वाला और हल्के विषैला पौधा है। यह मध्यम प्रकाश और मापयुक्त पानी देने की स्थिति में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "普通地桑",
-      "description": "普通地桑是一种快速生长的草本植物，生长在被破坏的土壤中。它具有黄色的菊花状花朵和深裂的叶子。"
+      "common_name": "普通千屈菜",
+      "description": "普通千屈菜（Senecio vulgaris）是一种快速生长且轻微有毒的植物。它在中等光照和适度浇水条件下生长良好。"
     },
     "ja": {
-      "common_name": "コモングラウンドセル",
-      "description": "コモングラウンドセルは、荒れた土壌で見られる急速に成長する草本植物です。黄色のデイジーのような花と深く切れ込んだ葉を持っています。"
+      "common_name": "セネシオ・ヴルガリス",
+      "description": "セネシオ・ヴルガリスは速く成長し、軽度の毒性を持つ植物です。中程度の光と適度な水やり条件でよく育ちます。"
     },
     "ko": {
-      "common_name": "일반 땅비름",
-      "description": "일반 땅비름은 교란된 토양에서 자라는 빠르게 자라는 풀입니다. 노란색 데이지 같은 꽃과 깊게 갈라진 잎을 가지고 있습니다."
+      "common_name": "일반적인 센에시오",
+      "description": "Senecio vulgaris, 또는 일반 센에시오는 빠르게 자라는 약간 독성이 있는 식물입니다. 중간 빛과 적당한 물주기 조건에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/4138/senecio-vulgaris/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=278462"
+      "https://www.rhs.org.uk/advice/profile?pid=681",
+      "https://www.gardenersworld.com/plants/senecio-vulgaris/"
     ]
   }
 }

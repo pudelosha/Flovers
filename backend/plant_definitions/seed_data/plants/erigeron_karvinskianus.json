@@ -1,6 +1,6 @@
 {
   "external_id": "erigeron_karvinskianus",
-  "name": "Mexican Fleabane",
+  "name": "Mexican fleabane",
   "latin": "Erigeron karvinskianus",
   "sun": "high",
   "water": "medium",
@@ -11,11 +11,10 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "balcony-flowers"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -39,7 +38,7 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日向",
+          "ja": "日なた",
           "ko": "양지"
         }
       }
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Gleba przepuszczalna",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "en": "Free-draining soil",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकास",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 좋은 토양"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Irrigazione moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Let dry between",
+          "pl": "Przeschnie między",
+          "de": "Zwischendurch trock.",
+          "fr": "Laisser sécher",
+          "it": "Asciuga tra annaff.",
+          "es": "Secar entre riegos",
+          "pt": "Secar entre regas",
+          "ar": "اتركها تجف بين",
+          "hi": "बीच में सूखने दें",
+          "zh": "干透再浇",
+          "ja": "乾いたら水やり",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -88,7 +87,7 @@
         "text": {
           "en": "Easy",
           "pl": "Łatwa",
-          "de": "Leicht",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Mild climates",
-          "pl": "Łagodny klimat",
-          "de": "Mildes Klima",
-          "fr": "Climat doux",
-          "it": "Clima mite",
-          "es": "Clima templado",
-          "pt": "Clima ameno",
-          "ar": "مناخ معتدل",
-          "hi": "मध्यम जलवायु",
-          "zh": "温和气候",
-          "ja": "温暖な気候",
-          "ko": "온화한 기후"
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°م",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
         }
       }
     },
@@ -124,8 +123,8 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
           "de": "Normale Luftfeuchte",
           "fr": "Humidité normale",
           "it": "Umidità normale",
@@ -133,8 +132,8 @@
           "pt": "Umidade normal",
           "ar": "رطوبة عادية",
           "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
+          "zh": "一般湿度",
+          "ja": "標準的な湿度",
           "ko": "보통 습도"
         }
       }
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic pets",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Legg. tossica",
+          "es": "Leve tóxica",
+          "pt": "Leve tóxica",
+          "ar": "سُمية خفيفة",
+          "hi": "हल्की विषाक्त",
+          "zh": "轻度有毒",
+          "ja": "軽い毒性あり",
+          "ko": "약한 독성"
         }
       }
     },
@@ -163,17 +162,55 @@
       "value": {
         "text": {
           "en": "Spreading perennial",
-          "pl": "Bylina płożąca",
-          "de": "Ausbreitend",
-          "fr": "Vivace étalée",
+          "pl": "Rozrastająca bylina",
+          "de": "Breit wachsend",
+          "fr": "Vivace tapissante",
           "it": "Perenne espansa",
           "es": "Perenne rastrera",
           "pt": "Perene rasteira",
           "ar": "معمرة زاحفة",
-          "hi": "फैलने वाली",
+          "hi": "फैलने वाली बारहमासी",
           "zh": "蔓生多年生",
           "ja": "広がる多年草",
           "ko": "퍼지는 다년초"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبتلة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodn.",
+          "de": "Gelegentl. Schädlinge",
+          "fr": "Ravageurs occasion.",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +218,60 @@
   "translations": {
     "en": {
       "common_name": "Mexican fleabane",
-      "description": "Erigeron karvinskianus is a low-growing perennial with small daisy-like flowers that change from white to pink. It blooms for long periods and tolerates drought once established."
+      "description": "A daisy-like perennial that flowers for a long season and spreads gently from a trailing habit. Give it the brightest spot you have and a well-draining mix. Water when the top layer dries and avoid waterlogged soil."
     },
     "pl": {
-      "common_name": "Przymiotno meksykańskie",
-      "description": "Erigeron karvinskianus to niska bylina o drobnych, stokrotkowatych kwiatach. Kwitnie długo i dobrze znosi okresowe susze."
+      "common_name": "Przymiotno (meksykańskie)",
+      "description": "Bylina o drobnych, stokrotkowatych kwiatach i długim okresie kwitnienia. Lubi bardzo jasne stanowisko oraz przepuszczalne podłoże. Podlewaj, gdy wierzch przeschnie, i unikaj zastoin wody."
     },
     "de": {
       "common_name": "Mexikanisches Berufkraut",
-      "description": "Erigeron karvinskianus ist eine niedrig wachsende Staude mit kleinen, margeritenähnlichen Blüten. Sie blüht lange und ist nach dem Anwachsen trockenheitsverträglich."
+      "description": "Eine ausdauernde, margeritenähnliche Pflanze mit langer Blütezeit und locker überhängendem Wuchs. Stelle sie sehr hell und verwende ein gut drainierendes Substrat. Gieße erst, wenn die Oberfläche abgetrocknet ist, und vermeide Staunässe."
     },
     "fr": {
-      "common_name": "Vergerette du Mexique",
-      "description": "Erigeron karvinskianus est une vivace basse aux petites fleurs en forme de marguerite. Elle fleurit longtemps et supporte bien la sécheresse."
+      "common_name": "Vergerette de Karvinski",
+      "description": "Vivace à petites fleurs de type marguerite, très florifère sur une longue période. Placez-la au maximum de lumière avec un substrat bien drainant. Arrosez quand la surface sèche et évitez l’excès d’eau."
     },
     "it": {
-      "common_name": "Erigerone del Messico",
-      "description": "Erigeron karvinskianus è una perenne tappezzante con piccoli fiori simili a margherite. Fiorisce a lungo e tollera la siccità."
+      "common_name": "Erigeron di Karvinski",
+      "description": "Perenne dai piccoli fiori tipo margherita, con fioritura prolungata e portamento ricadente. Preferisce molta luce e un terriccio ben drenante. Annaffia quando lo strato superiore è asciutto ed evita ristagni."
     },
     "es": {
-      "common_name": "Margarita mexicana",
-      "description": "Erigeron karvinskianus es una planta perenne baja con flores tipo margarita. Florece durante largos periodos y resiste la sequía."
+      "common_name": "Erígero (margarita mexicana)",
+      "description": "Perenne de flores tipo margarita con floración muy larga y hábito algo colgante. Necesita el lugar más luminoso y un sustrato con buen drenaje. Riega cuando la superficie se seque y evita el encharcamiento."
     },
     "pt": {
-      "common_name": "Erígero-do-México",
-      "description": "Erigeron karvinskianus é uma planta perene de porte baixo com flores semelhantes a margaridas. Floresce por muito tempo e tolera seca."
+      "common_name": "Erígero (margarida mexicana)",
+      "description": "Perene com pequenas flores tipo margarida e floração prolongada, de hábito rasteiro/pendente. Prefere muita luz e substrato bem drenado. Regue quando a camada superior secar e evite encharcar."
     },
     "ar": {
       "common_name": "الأقحوان المكسيكي",
-      "description": "نبات Erigeron karvinskianus معمر منخفض بأزهار صغيرة تشبه الأقحوان. يزهر لفترات طويلة ويتحمل الجفاف."
+      "description": "نبات معمر بأزهار تشبه الأقحوان ويزهر لفترة طويلة مع نمو متمدد. يحتاج إلى إضاءة قوية وتربة جيدة الصرف. اسقِ عندما تجف الطبقة العلوية وتجنب تشبع التربة بالماء."
     },
     "hi": {
-      "common_name": "मैक्सिकन फ्लेबेन",
-      "description": "Erigeron karvinskianus एक कम ऊँचाई वाला बहुवर्षीय पौधा है जिसमें डेज़ी जैसे फूल होते हैं। यह लंबे समय तक खिलता है और सूखा सहन करता है।"
+      "common_name": "मैक्सिकन फ़्लीबेन",
+      "description": "यह डेज़ी जैसे फूलों वाला बारहमासी पौधा है जो लंबे समय तक खिलता है और फैलने की प्रवृत्ति रखता है। इसे सबसे उजली जगह और अच्छी जलनिकासी वाली मिट्टी दें। ऊपर की मिट्टी सूखने पर पानी दें और जलभराव से बचें।"
     },
     "zh": {
       "common_name": "墨西哥飞蓬",
-      "description": "Erigeron karvinskianus 是一种低矮的多年生植物，开小型雏菊状花。花期长，成株后耐旱。"
+      "description": "开小雏菊状花的多年生植物，花期较长，株形蔓生。放在最明亮的位置，并使用排水良好的基质。表土干后再浇水，避免积水烂根。"
     },
     "ja": {
-      "common_name": "メキシコヒナギク",
-      "description": "エリゲロン・カルビンスキアヌスは小さなデイジー状の花を持つ多年草です。長期間開花し、乾燥に強いです。"
+      "common_name": "エリゲロン（カルビンスキアヌス）",
+      "description": "小さなデイジー状の花を長く咲かせる多年草で、やや広がる性質があります。できるだけ明るい場所と水はけの良い用土で育てます。表土が乾いてから水やりし、過湿を避けます。"
     },
     "ko": {
-      "common_name": "멕시코국화",
-      "description": "Erigeron karvinskianus는 작은 데이지 모양의 꽃을 가진 다년생 식물입니다. 개화 기간이 길고 건조에 강합니다."
+      "common_name": "멕시칸 플리베인",
+      "description": "작은 데이지 모양 꽃을 오래 피우는 다년초로, 퍼지듯 자랍니다. 가장 밝은 곳과 배수 좋은 흙을 사용하세요. 겉흙이 마르면 물을 주고 과습을 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/6575/erigeron-karvinskianus/details",
-      "https://www.gardenersworld.com/plants/erigeron-karvinskianus/",
-      "https://plants.ces.ncsu.edu/plants/erigeron-karvinskianus/"
+      "https://www.rhs.org.uk/plants/erigeron",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-erigeron/",
+      "https://mygardenlife.com/plant-library/fleabane-erigeron-karvinskianus",
+      "https://www.gardenia.net/plant/erigeron-karvinskianus-mexican-daisy",
+      "https://www.gardenersworld.com/plants/erigeron-karvinskianus/"
     ]
   }
 }

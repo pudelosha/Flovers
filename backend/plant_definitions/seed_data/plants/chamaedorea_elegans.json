@@ -1,22 +1,23 @@
 {
   "external_id": "chamaedorea_elegans",
-  "name": "Parlor Palm",
+  "name": "Parlor palm",
   "latin": "Chamaedorea elegans",
-  "sun": "low",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": true,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low to medium light",
-          "pl": "Niskie światło",
-          "de": "Wenig Licht",
-          "fr": "Lumière faible",
-          "it": "Poca luce",
-          "es": "Poca luz",
-          "pt": "Pouca luz",
-          "ar": "ضوء منخفض",
-          "hi": "कम रोशनी",
-          "zh": "低到中等光照",
-          "ja": "弱い光",
-          "ko": "약한 빛"
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
+          "en": "Free-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Gut drainierend",
+          "fr": "Drainant, léger",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "疏松排水好",
           "ja": "水はけ良い土",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "en": "Let top dry",
+          "pl": "Przeschnij wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga in superficie",
+          "es": "Seca la capa superior",
+          "pt": "Secar a camada superior",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易于养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
-          "ar": "18–24 °م",
-          "hi": "18–24 °C",
-          "zh": "18–24 °C",
-          "ja": "18–24 ℃",
-          "ko": "18–24 ℃"
+          "en": "10–27°C",
+          "pl": "10–27°C",
+          "de": "10–27°C",
+          "fr": "10–27°C",
+          "it": "10–27°C",
+          "es": "10–27°C",
+          "pt": "10–27°C",
+          "ar": "10–27°م",
+          "hi": "10–27°C",
+          "zh": "10–27°C",
+          "ja": "10～27°C",
+          "ko": "10–27°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "en": "Mist weekly",
+          "pl": "Zraszaj co tydzień",
+          "de": "Wöchentlich besprühen",
+          "fr": "Brumiser 1×/sem",
+          "it": "Nebulizza 1×/sett",
+          "es": "Pulveriza semanal",
+          "pt": "Borrifar semanal",
+          "ar": "رذاذ أسبوعي",
+          "hi": "साप्ताहिक मिस्टिंग",
+          "zh": "每周喷雾",
+          "ja": "週1回霧吹き",
+          "ko": "주 1회 분무"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zw.",
+          "de": "Ungiftig für Tiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica per anim.",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica p/ pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -162,8 +163,8 @@
       "value": {
         "text": {
           "en": "Slow growth",
-          "pl": "Powolny wzrost",
-          "de": "Langsames Wachstum",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
@@ -171,67 +172,106 @@
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
+          "ja": "生長ゆっくり",
           "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, scale",
+          "pl": "Przędziorki, tarczniki",
+          "de": "Spinnmilben, Schildl.",
+          "fr": "Araignées rouges, coq.",
+          "it": "Ragnetto, cocciniglia",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عناكب حمراء، قشرية",
+          "hi": "माइट्स, स्केल",
+          "zh": "红蜘蛛、介壳虫",
+          "ja": "ハダニ、カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Parlor Palm",
-      "description": "Chamaedorea elegans is a compact palm native to the rainforests of Central America. It tolerates low indoor light and prefers evenly moist soil. It is well suited for homes and offices."
+      "common_name": "Parlor palm",
+      "description": "A slow-growing indoor palm that tolerates medium to lower light if kept out of direct sun. Water when the surface dries and keep the pot draining freely to prevent root rot. Moderate humidity helps; misting can reduce brown tips and deter spider mites."
     },
     "pl": {
-      "common_name": "Palma koralowa",
-      "description": "Chamaedorea elegans to niewielka palma pochodząca z lasów deszczowych Ameryki Środkowej. Dobrze rośnie w słabym świetle i umiarkowanie wilgotnej glebie. Jest popularną rośliną domową."
+      "common_name": "Chamedora wytworna",
+      "description": "Wolno rosnąca palma doniczkowa, dobrze znosi światło rozproszone i słabsze, ale bez ostrego słońca. Podlewaj, gdy wierzch podłoża przeschnie, i nie zostawiaj wody w osłonce, by uniknąć gnicia korzeni. Umiarkowana wilgotność pomaga; zraszanie ogranicza zasychanie końcówek i sprzyja profilaktyce przędziorków."
     },
     "de": {
       "common_name": "Bergpalme",
-      "description": "Chamaedorea elegans stammt aus den Regenwäldern Mittelamerikas. Sie kommt mit wenig Licht gut zurecht und mag gleichmäßig feuchte Erde. Ideal für Innenräume."
+      "description": "Eine langsam wachsende Zimmerpalme für helles, indirektes Licht, die auch mit weniger Licht zurechtkommt, aber keine direkte Sonne mag. Gießen, wenn die Oberfläche abgetrocknet ist, und Staunässe vermeiden, um Wurzelfäule zu verhindern. Mäßige Luftfeuchte ist hilfreich; gelegentliches Besprühen kann braune Spitzen und Spinnmilben begünstigende Trockenheit reduzieren."
     },
     "fr": {
-      "common_name": "Palmier nain",
-      "description": "Chamaedorea elegans est un petit palmier originaire d’Amérique centrale. Il supporte une faible luminosité et un arrosage modéré. C’est une plante d’intérieur fiable."
+      "common_name": "Palmier de salon",
+      "description": "Palmier d’intérieur à croissance lente, adapté à une lumière vive indirecte et tolérant une lumière plus faible, sans soleil direct. Arrosez quand la surface du substrat est sèche et évitez l’eau stagnante pour limiter la pourriture des racines. Une humidité modérée est utile; la brumisation peut réduire les pointes brunes et aider contre les araignées rouges."
     },
     "it": {
-      "common_name": "Palma della fortuna",
-      "description": "Chamaedorea elegans è una palma compatta dell’America Centrale. Cresce bene con poca luce e annaffiature regolari. È adatta agli ambienti interni."
+      "common_name": "Palma da salotto",
+      "description": "Palma da interno a crescita lenta, ideale in luce intensa ma indiretta e tollerante a luce più bassa, evitando il sole diretto. Annaffia quando lo strato superficiale è asciutto e non lasciare ristagni per prevenire marciumi radicali. Un’umidità moderata aiuta; la nebulizzazione può ridurre le punte secche e limitare gli acari."
     },
     "es": {
-      "common_name": "Palma de salón",
-      "description": "Chamaedorea elegans es una palma pequeña originaria de Centroamérica. Tolera poca luz y requiere riego moderado. Es muy común como planta de interior."
+      "common_name": "Palmera de salón",
+      "description": "Palmera de interior de crecimiento lento, va bien con luz brillante indirecta y tolera menos luz si no recibe sol directo. Riega cuando se seque la capa superior y evita el encharcamiento para prevenir pudrición de raíces. La humedad moderada ayuda; la pulverización puede reducir puntas marrones y disminuir problemas de ácaros."
     },
     "pt": {
-      "common_name": "Palmeira-de-sala",
-      "description": "Chamaedorea elegans é uma palmeira pequena da América Central. Adapta-se bem à pouca luz e solo levemente úmido. Muito usada em interiores."
+      "common_name": "Palmeira-de-salão",
+      "description": "Palmeira de interior de crescimento lento, prefere luz indireta brilhante e tolera menos luz, mas não sol direto. Regue quando a camada superior secar e evite encharcamento para prevenir podridão das raízes. Umidade moderada ajuda; borrifar pode reduzir pontas secas e desencorajar ácaros."
     },
     "ar": {
-      "common_name": "نخيل الصالون",
-      "description": "Chamaedorea elegans نخلة صغيرة موطنها أمريكا الوسطى. تتحمل الإضاءة الضعيفة وتحتاج ريًا معتدلاً. مناسبة للزراعة داخل المنازل."
+      "common_name": "نخلة الصالون",
+      "description": "نخلة داخلية بطيئة النمو تناسب الضوء الساطع غير المباشر ويمكنها تحمّل إضاءة أضعف بعيدًا عن الشمس المباشرة. اسقِ عندما يجف سطح التربة وتأكد من تصريف جيد لتجنب تعفن الجذور. الرطوبة المعتدلة مفيدة؛ رش الأوراق قد يقلل أطرافًا بنية ويساعد في تقليل العناكب الحمراء."
     },
     "hi": {
       "common_name": "पार्लर पाम",
-      "description": "Chamaedorea elegans मध्य अमेरिका की एक छोटी पाम है। यह कम रोशनी में अच्छी तरह बढ़ती है और मध्यम पानी पसंद करती है। घर के अंदर के लिए उपयुक्त है।"
+      "description": "यह धीमी गति से बढ़ने वाला इनडोर पाम है जो तेज लेकिन अप्रत्यक्ष रोशनी में अच्छा रहता है और कम रोशनी भी सह लेता है, पर सीधी धूप से बचाएँ। ऊपर की मिट्टी सूखने पर पानी दें और गमले में पानी जमा न होने दें ताकि जड़ों का सड़ना न हो। मध्यम नमी मदद करती है; मिस्टिंग से पत्तियों के सिरे भूरे होने और माइट्स की समस्या कम हो सकती है।"
     },
     "zh": {
       "common_name": "袖珍椰子",
-      "description": "Chamaedorea elegans 原产于中美洲雨林。它能适应较低光照并喜欢保持土壤微湿。常见于室内种植。"
+      "description": "生长缓慢的室内棕榈，适合明亮散射光，也能耐较低光照，但应避免直射强光。表土干后再浇水，并确保盆土排水良好以减少烂根风险。适度湿度更好；每周喷雾可减轻叶尖干枯并有助于抑制红蜘蛛。"
     },
     "ja": {
       "common_name": "テーブルヤシ",
-      "description": "チャメドレア・エレガンスは中米原産の小型ヤシです。弱い光にも耐え、土は適度な湿り気を好みます。室内向きの植物です。"
+      "description": "生長がゆっくりな室内向きのヤシで、明るい間接光が最適ですが弱い光にも耐えます。表土が乾いてから水やりし、受け皿に水を溜めないことで根腐れを防ぎます。適度な湿度が役立ち、霧吹きは葉先の傷みやハダニの予防に有効です。"
     },
     "ko": {
       "common_name": "테이블야자",
-      "description": "Chamaedorea elegans는 중앙아메리카 원산의 작은 야자입니다. 낮은 빛에서도 잘 자라며 흙을 촉촉하게 유지하는 것을 좋아합니다. 실내 재배에 적합합니다."
+      "description": "성장이 느린 실내 야자로, 밝은 간접광이 좋고 낮은 광량도 어느 정도 견디지만 직사광은 피해야 합니다. 겉흙이 마르면 물을 주고 배수를 유지해 뿌리썩음을 예방하세요. 적당한 습도가 도움이 되며, 주 1회 분무는 잎끝 마름과 응애 발생을 줄이는 데 도움이 될 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/3744/chamaedorea-elegans/details",
-      "https://extension.psu.edu/parlor-palm-chamaedorea-elegans",
-      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/parlor-palm"
+      "https://www.rhs.org.uk/plants/chamaedorea/growing-guide",
+      "https://www.rhs.org.uk/plants/chamaedorea",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chamaedorea",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:54865-2"
     ]
   }
 }

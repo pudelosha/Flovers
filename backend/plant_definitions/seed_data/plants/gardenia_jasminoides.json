@@ -3,24 +3,25 @@
   "name": "Gardenia",
   "latin": "Gardenia jasminoides",
   "sun": "medium",
-  "water": "high",
-  "difficulty": "hard",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "acidic"
+    "acid-loving",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
   "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "gardenia_jasminoides.jpg",
   "image_thumb": "gardenia_jasminoides.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz brilhante",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,17 +48,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic well-drained",
-          "pl": "Kwaśna gleba",
-          "de": "Saure Erde",
+          "en": "Acidic soil",
+          "pl": "Kwasna gleba",
+          "de": "Saurer Boden",
           "fr": "Sol acide",
           "it": "Terreno acido",
           "es": "Suelo ácido",
           "pt": "Solo ácido",
           "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
+          "hi": "क्षारीय मिट्टी",
           "zh": "酸性土壤",
-          "ja": "酸性土",
+          "ja": "酸性土壌",
           "ko": "산성 토양"
         }
       }
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "लगातार नम",
-          "zh": "保持湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "الري المتوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Demanding care",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Impegnativa",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة العناية",
-          "hi": "देखभाल कठिन",
-          "zh": "养护困难",
-          "ja": "管理が難しい",
-          "ko": "관리 어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,14 +125,14 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgoć",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Hygrométrie élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic pets",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Leve toxicidad",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微毒性",
-          "ja": "軽い毒性",
-          "ko": "약한 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow shrub growth",
+          "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमा विकास",
           "zh": "生长缓慢",
           "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Narażona na gnicie",
+          "de": "Neigt zu Fäulnis",
+          "fr": "Sensible à la pourriture",
+          "it": "Tende a marcire",
+          "es": "Propensa a la descomposición",
+          "pt": "Propensa à podridão",
+          "ar": "عرضة للتعفن",
+          "hi": "सड़न के प्रति संवेदनशील",
+          "zh": "易腐烂",
+          "ja": "腐りやすい",
+          "ko": "썩기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम आधारित कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Cape jasmine",
-      "description": "Gardenia jasminoides is an evergreen shrub known for its glossy leaves and fragrant white flowers. It prefers bright indirect light, acidic soil, and consistently moist conditions. High humidity and stable temperatures are essential for healthy growth."
+      "common_name": "Gardenia",
+      "description": "Gardenia jasminoides, known for its fragrant white flowers, thrives in bright, indirect light. It needs well-draining acidic soil and high humidity."
     },
     "pl": {
-      "common_name": "Gardenia jaśminowa",
-      "description": "Gardenia jasminoides to zimozielony krzew o błyszczących liściach i pachnących białych kwiatach. Wymaga jasnego światła, kwaśnej gleby i stałej wilgotności. Wysoka wilgotność powietrza jest kluczowa."
+      "common_name": "Gardenia",
+      "description": "Gardenia jasminoides, znana z pachnących białych kwiatów, najlepiej rośnie w jasnym, pośrednim świetle. Potrzebuje dobrze przepuszczającej wodę, kwaśnej gleby i wysokiej wilgotności."
     },
     "de": {
       "common_name": "Gardenie",
-      "description": "Gardenia jasminoides ist ein immergrüner Strauch mit glänzenden Blättern und duftenden weißen Blüten. Sie benötigt helles Licht, saure Erde und gleichmäßige Feuchtigkeit. Hohe Luftfeuchtigkeit ist wichtig."
+      "description": "Gardenia jasminoides, bekannt für ihre duftenden weißen Blüten, gedeiht in hellem, indirektem Licht. Sie benötigt gut durchlässigen, sauren Boden und hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Gardénia",
-      "description": "Gardenia jasminoides est un arbuste persistant aux feuilles brillantes et aux fleurs blanches parfumées. Elle préfère une lumière vive, un sol acide et une humidité constante. Une forte humidité est nécessaire."
+      "common_name": "Gardenia",
+      "description": "La Gardenia jasminoides, connue pour ses fleurs blanches parfumées, prospère sous une lumière indirecte et vive. Elle a besoin d'un sol acide bien drainé et d'une humidité élevée."
     },
     "it": {
       "common_name": "Gardenia",
-      "description": "Gardenia jasminoides è un arbusto sempreverde con foglie lucide e fiori bianchi profumati. Richiede luce intensa, terreno acido e umidità costante. L'umidità elevata favorisce la fioritura."
+      "description": "La Gardenia jasminoides, conosciuta per i suoi fiori bianchi profumati, cresce meglio in luce indiretta e brillante. Ha bisogno di un terreno acido ben drenato e di un'umidità elevata."
     },
     "es": {
       "common_name": "Gardenia",
-      "description": "Gardenia jasminoides es un arbusto perenne con hojas brillantes y flores blancas fragantes. Necesita luz brillante, suelo ácido y humedad constante. La alta humedad es fundamental."
+      "description": "Gardenia jasminoides, conocida por sus flores blancas fragantes, prospera en luz indirecta brillante. Necesita un suelo ácido bien drenado y alta humedad."
     },
     "pt": {
-      "common_name": "Gardênia",
-      "description": "Gardenia jasminoides é um arbusto perene com folhas brilhantes e flores brancas perfumadas. Prefere luz intensa, solo ácido e umidade constante. Alta umidade é essencial."
+      "common_name": "Gardenia",
+      "description": "Gardenia jasminoides, conhecida por suas flores brancas e perfumadas, prospera sob luz indireta e brilhante. Precisa de solo ácido bem drenado e alta umidade."
     },
     "ar": {
-      "common_name": "الغاردينيا",
-      "description": "Gardenia jasminoides شجيرة دائمة الخضرة بأوراق لامعة وأزهار بيضاء عطرة. تحتاج إلى ضوء ساطع غير مباشر وتربة حمضية ورطوبة ثابتة. الرطوبة العالية ضرورية."
+      "common_name": "جاردينيا",
+      "description": "جاردينيا ياسمينويديس، معروفة بأزهارها البيضاء العطرة، تزدهر في الضوء غير المباشر الساطع. تحتاج إلى تربة حمضية جيدة التصريف ورطوبة عالية."
     },
     "hi": {
-      "common_name": "गर्डेनिया",
-      "description": "Gardenia jasminoides एक सदाबहार झाड़ी है जिसमें चमकदार पत्ते और सुगंधित सफेद फूल होते हैं। इसे तेज अप्रत्यक्ष रोशनी, अम्लीय मिट्टी और निरंतर नमी चाहिए। अधिक आर्द्रता आवश्यक है।"
+      "common_name": "गैर्डनिया",
+      "description": "गैर्डनिया जास्मिनोइड्स, अपनी खुशबूदार सफेद फूलों के लिए जानी जाती है, यह हल्की अप्रत्यक्ष रोशनी में पनपती है। इसे अच्छी तरह से जल निकासी वाली अम्लीय मिट्टी और उच्च आर्द्रता की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "栀子花",
-      "description": "Gardenia jasminoides 是一种常绿灌木，具有光亮的叶片和芳香的白色花朵。它喜欢明亮散射光、酸性土壤和持续湿润。高湿度有助于生长。"
+      "description": "栀子花（Gardenia jasminoides），以其芳香的白色花朵而闻名，喜欢明亮的间接光。它需要良好排水的酸性土壤和高湿度。"
     },
     "ja": {
-      "common_name": "クチナシ",
-      "description": "Gardenia jasminoides は光沢のある葉と香り高い白い花を持つ常緑低木です。明るい間接光と酸性土壌、安定した湿度を好みます。高湿度が重要です。"
+      "common_name": "ガーデニア",
+      "description": "ガーデニア・ジャスミノイデスは、芳香のある白い花で知られ、明るい間接光で育ちます。排水性の良い酸性土壌と高湿度が必要です。"
     },
     "ko": {
-      "common_name": "치자나무",
-      "description": "Gardenia jasminoides는 윤기 있는 잎과 향기로운 흰 꽃을 가진 상록 관목입니다. 밝은 간접광과 산성 토양, 꾸준한 습도가 필요합니다. 높은 습도가 중요합니다."
+      "common_name": "가드니아",
+      "description": "가드니아 자스미노이드, 향기로운 흰 꽃으로 유명하며 밝고 간접적인 빛에서 자랍니다. 배수가 좋은 산성 토양과 높은 습도가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/gardenia/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a521",
-      "https://extension.umd.edu/resource/gardenia-care"
+      "https://www.rhs.org.uk/plants/gardenia-jasminoides",
+      "https://www.gardenia.net/plant/plant-care/gardenia"
     ]
   }
 }

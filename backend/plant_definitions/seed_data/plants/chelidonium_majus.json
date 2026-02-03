@@ -1,25 +1,25 @@
 {
   "external_id": "chelidonium_majus",
-  "name": "Greater Celandine",
+  "name": "Greater celandine",
   "latin": "Chelidonium majus",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
   "repot_required": true,
-  "repot_interval_months": null,
+  "repot_interval_months": 24,
   "image_hero": "chelidonium_majus.jpg",
   "image_thumb": "chelidonium_majus.jpg",
   "traits": [
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezzombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक धूप",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Part shade–sun",
+          "pl": "Półcień–słońce",
+          "de": "Halbschatten–Sonne",
+          "fr": "Mi-ombre–soleil",
+          "it": "Mezz'ombra–sole",
+          "es": "Semisombra–sol",
+          "pt": "Meia-sombra–sol",
+          "ar": "ظل جزئي–شمس",
+          "hi": "आंशिक छाया–धूप",
+          "zh": "半阴到日照",
+          "ja": "半日陰〜日なた",
+          "ko": "반그늘~햇빛"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo húmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Moist, well-drained",
+          "pl": "Wilgotna, przepuszcz.",
+          "de": "Feucht, durchlässig",
+          "fr": "Frais, drainé",
+          "it": "Umido, drenante",
+          "es": "Húmedo, drenante",
+          "pt": "Úmido, drenante",
+          "ar": "رطبة جيدة الصرف",
+          "hi": "नम, जल-निकासी",
+          "zh": "湿润且排水好",
+          "ja": "湿り気と水はけ",
+          "ko": "촉촉, 배수 양호"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotno",
+          "de": "Leicht feucht halten",
+          "fr": "Garder frais",
+          "it": "Tenere appena umido",
+          "es": "Mantener algo húmedo",
+          "pt": "Manter levemente úmido",
+          "ar": "حافظ على رطوبة خفيفة",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Umiarkowana",
-          "de": "Gemäßigt",
-          "fr": "Tempéré",
-          "it": "Temperato",
-          "es": "Templado",
-          "pt": "Temperado",
-          "ar": "معتدلة",
-          "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "en": "Cool-temperate",
+          "pl": "Chłodno-umiark.",
+          "de": "Kühl-gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "معتدل مائل للبرودة",
+          "hi": "ठंडा-समशीतोष्ण",
+          "zh": "凉爽温带",
+          "ja": "冷涼な温帯",
+          "ko": "서늘한 온대"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य आर्द्रता",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Trująca",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic, irritant sap",
+          "pl": "Trujący, drażniący sok",
+          "de": "Giftig, reizender Saft",
+          "fr": "Sève irritante, toxique",
+          "it": "Linfa irritante, tossica",
+          "es": "Savia irritante, tóxica",
+          "pt": "Seiva irritante, tóxica",
+          "ar": "عصارة مهيجة وسامة",
+          "hi": "विषैला, चुभने वाला रस",
+          "zh": "有毒刺激性汁液",
+          "ja": "有毒で刺激性の乳液",
+          "ko": "독성, 자극성 수액"
         }
       }
     },
@@ -160,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "سريع النمو",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长快",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Short-lived perennial",
+          "pl": "Krótkowieczna bylina",
+          "de": "Kurzlebige Staude",
+          "fr": "Vivace de courte durée",
+          "it": "Perenne di breve vita",
+          "es": "Perenne de vida corta",
+          "pt": "Perene de vida curta",
+          "ar": "معمرة قصيرة العمر",
+          "hi": "अल्पायु बहुवर्षीय",
+          "zh": "短命多年生",
+          "ja": "短命の多年草",
+          "ko": "짧게 사는 다년초"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj zalewania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶发害虫",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +217,60 @@
   "translations": {
     "en": {
       "common_name": "Greater celandine",
-      "description": "Chelidonium majus is a hardy perennial herb native to Europe and western Asia. It grows naturally in shaded, moist soils along woodland edges and disturbed sites. The plant contains toxic alkaloids and should be handled with care."
+      "description": "Chelidonium majus is a short-lived herbaceous perennial with yellow flowers and orange-yellow sap. It grows best in moist but well-drained soil in partial shade to sun. The sap can irritate skin and the plant is toxic if ingested."
     },
     "pl": {
       "common_name": "Glistnik jaskółcze ziele",
-      "description": "Chelidonium majus to wieloletnia bylina pochodząca z Europy i Azji Zachodniej. Występuje na wilgotnych, półcienistych stanowiskach przy lasach i siedliskach ruderalnych. Roślina jest trująca."
+      "description": "Chelidonium majus to krótkowieczna bylina o żółtych kwiatach i pomarańczowożółtym soku. Najlepiej rośnie w wilgotnej, ale przepuszczalnej glebie w półcieniu lub słońcu. Sok może podrażniać skórę, a roślina jest trująca po spożyciu."
     },
     "de": {
       "common_name": "Schöllkraut",
-      "description": "Chelidonium majus ist eine ausdauernde Pflanze aus Europa und Westasien. Sie wächst an feuchten, halbschattigen Standorten wie Waldrändern. Alle Pflanzenteile sind giftig."
+      "description": "Chelidonium majus ist eine kurzlebige Staude mit gelben Blüten und orangegelbem Milchsaft. Sie bevorzugt feuchten, gut drainierten Boden in Halbschatten bis Sonne. Der Saft kann die Haut reizen, und die Pflanze ist bei Aufnahme giftig."
     },
     "fr": {
-      "common_name": "Grande chélidoine",
-      "description": "Chelidonium majus est une plante vivace originaire d’Europe et d’Asie occidentale. Elle pousse dans des sols humides et ombragés, souvent en lisière de forêt. La plante est toxique."
+      "common_name": "Chélidoine majeure",
+      "description": "Chelidonium majus est une vivace de courte durée aux fleurs jaunes et à la sève jaune-orangé. Elle pousse en sol frais mais bien drainé, à mi-ombre ou au soleil. La sève peut irriter la peau et la plante est toxique en cas d’ingestion."
     },
     "it": {
       "common_name": "Celidonia maggiore",
-      "description": "Chelidonium majus è una pianta perenne originaria dell’Europa e dell’Asia occidentale. Cresce in terreni umidi e ombreggiati lungo i margini dei boschi. È una pianta tossica."
+      "description": "Chelidonium majus è una perenne di breve durata con fiori gialli e linfa giallo-arancio. Preferisce terreno umido ma ben drenato in mezz’ombra o sole. La linfa può irritare la pelle e la pianta è tossica se ingerita."
     },
     "es": {
       "common_name": "Celidonia mayor",
-      "description": "Chelidonium majus es una planta perenne originaria de Europa y Asia occidental. Se desarrolla en suelos húmedos y sombríos, especialmente en bordes de bosques. Es una especie tóxica."
+      "description": "Chelidonium majus es una perenne de vida corta con flores amarillas y savia amarillo-anaranjada. Crece mejor en suelo húmedo pero bien drenado, en semisombra o sol. La savia puede irritar la piel y la planta es tóxica si se ingiere."
     },
     "pt": {
       "common_name": "Celidônia-maior",
-      "description": "Chelidonium majus é uma planta perene nativa da Europa e da Ásia Ocidental. Cresce em solos húmidos e sombreados, frequentemente em margens de florestas. A planta é tóxica."
+      "description": "Chelidonium majus é uma perene de vida curta com flores amarelas e seiva amarelo-alaranjada. Prefere solo úmido, porém bem drenado, em meia-sombra a sol. A seiva pode irritar a pele e a planta é tóxica se ingerida."
     },
     "ar": {
-      "common_name": "العليقون الكبير",
-      "description": "نبات Chelidonium majus معمر موطنه أوروبا وغرب آسيا. ينمو في تربة رطبة ومظللة قرب الغابات. النبات سام ويجب التعامل معه بحذر."
+      "common_name": "بقلة الخطاطيف",
+      "description": "Chelidonium majus نبات عشبي معمّر قصير العمر بزهور صفراء وعصارة صفراء برتقالية. ينمو أفضل في تربة رطبة جيدة الصرف في ظل جزئي إلى شمس. العصارة قد تهيّج الجلد والنبات سام عند ابتلاعه."
     },
     "hi": {
-      "common_name": "ग्रेटर सेलेनडाइन",
-      "description": "Chelidonium majus यूरोप और पश्चिमी एशिया का एक बहुवर्षीय पौधा है। यह नम और आंशिक छाया वाली जगहों में उगता है। पौधा विषैला होता है।"
+      "common_name": "ग्रेटर सेलैंडाइन",
+      "description": "Chelidonium majus एक अल्पायु बहुवर्षीय पौधा है, जिसमें पीले फूल और पीला-नारंगी रस होता है। यह नम लेकिन अच्छी जल-निकासी वाली मिट्टी में आंशिक छाया से धूप तक बेहतर बढ़ता है। इसका रस त्वचा में जलन कर सकता है और निगलने पर यह विषैला है।"
     },
     "zh": {
       "common_name": "白屈菜",
-      "description": "Chelidonium majus 原产于欧洲和西亚，是一种多年生草本植物。常生长在湿润、半阴的林缘地带。全株有毒。"
+      "description": "Chelidonium majus 为短命多年生草本，开黄色花，具橙黄色乳汁。适合在湿润但排水良好的土壤中生长，半阴至日照均可。其汁液可刺激皮肤，误食有毒。"
     },
     "ja": {
       "common_name": "クサノオウ",
-      "description": "Chelidonium majus はヨーロッパと西アジア原産の多年草です。湿った半日陰の環境でよく育ちます。植物全体に毒性があります。"
+      "description": "Chelidonium majus は黄色い花と橙黄色の乳液をもつ短命の多年草です。湿り気があり水はけのよい土で、半日陰〜日なたに適します。乳液は皮膚刺激性があり、摂取すると有毒です。"
     },
     "ko": {
       "common_name": "애기똥풀",
-      "description": "Chelidonium majus는 유럽과 서아시아 원산의 다년생 식물입니다. 습하고 반그늘진 곳에서 자라며 독성이 있습니다."
+      "description": "Chelidonium majus는 노란 꽃과 주황빛 노란 수액이 있는 짧게 사는 다년초입니다. 촉촉하지만 배수가 좋은 흙에서 반그늘부터 햇빛까지 잘 자랍니다. 수액은 피부를 자극할 수 있고 섭취하면 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/chelidonium/majus/details",
-      "https://www.gardenersworld.com/plants/chelidonium-majus/",
-      "https://www.ncbi.nlm.nih.gov/books/NBK548561/"
+      "https://www.rhs.org.uk/plants/3711/chelidonium-majus/details",
+      "https://plants.ces.ncsu.edu/plants/chelidonium-majus/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=284857",
+      "https://cornellbotanicgardens.org/plant/celandine",
+      "https://dnr.wisconsin.gov/topic/Invasives/fact/Celandine"
     ]
   }
 }

@@ -1,23 +1,23 @@
 {
   "external_id": "asparagus_aethiopicus",
-  "name": "Asparagus Fern",
+  "name": "Asparagus fern",
   "latin": "Asparagus aethiopicus",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 1,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,14 +29,14 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles Indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
+          "ar": "ضوء ساطع غير مباشر",
           "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierte Erde",
-          "fr": "Sol bien drainé",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalna ziemia",
+          "de": "Gut drainierend",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल-निकासी मिट्टी",
+          "zh": "疏松排水土",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Evenly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Légèrement humide",
+          "it": "Sempre leggermente umida",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة متوازنة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "土をやや湿らせる",
+          "ko": "흙을 촉촉하게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile à cultiver",
-          "it": "Facile da curare",
-          "es": "Fácil de cuidar",
-          "pt": "Fácil de cuidar",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易于养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgn.",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado moderado",
+          "pt": "Cuidados moderados",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "手入れは普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
-          "ar": "18–24 °م",
-          "hi": "18–24 °C",
-          "zh": "18–24 °C",
-          "ja": "18–24 ℃",
-          "ko": "18–24 ℃"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "普通の湿度",
-          "ko": "보통 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "偏高湿度",
+          "ja": "高めの湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
           "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषाक्त",
+          "it": "Tossico per animali",
+          "es": "Tóxico mascotas",
+          "pt": "Tóxico p/ animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू के लिए विषैला",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -162,76 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast, spreading",
-          "pl": "Szybko rosnąca",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast, trailing",
+          "pl": "Szybki, przewiesz.",
+          "de": "Schnell, hängend",
+          "fr": "Rapide, retombant",
+          "it": "Rapida, ricadente",
+          "es": "Rápido, colgante",
+          "pt": "Rápido, pendente",
+          "ar": "سريع ومتدلٍ",
+          "hi": "तेज़, लटकता",
+          "zh": "生长快，蔓生",
+          "ja": "生長早く垂れる",
+          "ko": "빠르고 늘어짐"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Pas d’excès d’eau",
+          "it": "No ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "ज्यादा पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Przędziorki, wełn.",
+          "de": "Milben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ وبق دقيقي",
+          "hi": "माइट्स, मिलीबग",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ・カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Asparagus Fern",
-      "description": "Asparagus aethiopicus is a perennial evergreen plant with fine, arching stems and soft needle-like foliage. It is commonly grown as a houseplant and tolerates a range of indoor conditions with moderate care."
+      "common_name": "Asparagus fern",
+      "description": "Asparagus aethiopicus grows best in bright, indirect light and in a loose, well-draining potting mix. Keep the soil lightly moist, letting the top layer dry slightly between waterings. It prefers warm conditions and higher humidity; regular misting can help, and it is toxic to pets."
     },
     "pl": {
-      "common_name": "Szparag pierzasty",
-      "description": "Asparagus aethiopicus to zimozielona bylina o delikatnych, łukowato wygiętych pędach. Często uprawiana w domu, dobrze znosi warunki pokojowe przy umiarkowanej pielęgnacji."
+      "common_name": "Szparag Sprengera",
+      "description": "Asparagus aethiopicus najlepiej rośnie w jasnym, rozproszonym świetle oraz w przepuszczalnym podłożu. Podlewaj tak, by ziemia była lekko wilgotna, a wierzchnia warstwa mogła nieco przeschnąć między podlewaniami. Lubi ciepło i wyższą wilgotność (pomaga regularne zraszanie) oraz jest toksyczny dla zwierząt."
     },
     "de": {
       "common_name": "Zierspargel",
-      "description": "Asparagus aethiopicus ist eine immergrüne Staude mit feinen, überhängenden Trieben. Sie wird häufig als Zimmerpflanze gehalten und ist relativ pflegeleicht."
+      "description": "Asparagus aethiopicus bevorzugt helles, indirektes Licht und ein lockeres, gut drainierendes Substrat. Halte die Erde leicht feucht und lasse die oberste Schicht zwischen dem Gießen etwas abtrocknen. Warme Temperaturen und höhere Luftfeuchte sind ideal; regelmäßiges Besprühen kann helfen, und die Pflanze ist für Haustiere giftig."
     },
     "fr": {
       "common_name": "Fougère asperge",
-      "description": "Asparagus aethiopicus est une plante vivace au feuillage fin et retombant. Elle est souvent cultivée en intérieur et s’adapte bien aux conditions domestiques."
+      "description": "Asparagus aethiopicus apprécie une lumière vive indirecte et un substrat aéré et drainant. Maintenez le terreau légèrement humide en laissant sécher un peu la surface entre deux arrosages. La plante préfère la chaleur et une humidité plus élevée (une brumisation régulière peut aider) et elle est toxique pour les animaux."
     },
     "it": {
       "common_name": "Felce asparago",
-      "description": "Asparagus aethiopicus è una pianta perenne sempreverde con fusti arcuati e leggeri. È diffusa come pianta da appartamento e richiede cure moderate."
+      "description": "Asparagus aethiopicus cresce bene con luce intensa ma indiretta e in un terriccio leggero e drenante. Mantieni il substrato leggermente umido, lasciando asciugare un po’ lo strato superiore tra un’annaffiatura e l’altra. Preferisce caldo e buona umidità (utile nebulizzare regolarmente) ed è tossica per gli animali domestici."
     },
     "es": {
-      "common_name": "Esparraguera ornamental",
-      "description": "Asparagus aethiopicus es una planta perenne de follaje fino y arqueado. Se cultiva comúnmente en interiores y se adapta bien al ambiente doméstico."
+      "common_name": "Helecho espárrago",
+      "description": "Asparagus aethiopicus prefiere luz brillante indirecta y un sustrato suelto y bien drenado. Mantén el sustrato ligeramente húmedo, dejando secar un poco la capa superior entre riegos. Le gusta el calor y la humedad más alta (la pulverización regular puede ayudar) y es tóxica para mascotas."
     },
     "pt": {
-      "common_name": "Aspargo-ornamental",
-      "description": "Asparagus aethiopicus é uma planta perene de folhas finas e crescimento vigoroso. Muito usada como planta de interior, adapta-se bem a cuidados simples."
+      "common_name": "Samambaia-aspargo",
+      "description": "Asparagus aethiopicus vai melhor em luz indireta brilhante e em substrato solto e bem drenado. Mantenha o solo levemente úmido, deixando a camada superior secar um pouco entre regas. Prefere calor e umidade mais alta (borrifar regularmente pode ajudar) e é tóxica para animais de estimação."
     },
     "ar": {
       "common_name": "سرخس الهليون",
-      "description": "نبات Asparagus aethiopicus نبات معمر دائم الخضرة بأوراق دقيقة. يزرع كنبات داخلي ويتحمل ظروف المنزل المعتدلة."
+      "description": "ينمو Asparagus aethiopicus أفضل في ضوء ساطع غير مباشر وتربة خفيفة جيدة التصريف. حافظ على التربة رطبة قليلًا مع السماح للسطح بأن يجف جزئيًا بين الريّات. يفضّل الدفء ورطوبة أعلى (يساعد الرشّ المنتظم)، وهو سام للحيوانات الأليفة."
     },
     "hi": {
-      "common_name": "एस्पैरेगस फर्न",
-      "description": "Asparagus aethiopicus एक सदाबहार पौधा है जिसकी पत्तियाँ पतली और धनुषाकार होती हैं। इसे आमतौर पर घर के अंदर उगाया जाता है और मध्यम देखभाल की आवश्यकता होती है।"
+      "common_name": "एस्पैरागस फ़र्न",
+      "description": "Asparagus aethiopicus तेज़ अप्रत्यक्ष रोशनी और अच्छी जल-निकासी वाली ढीली मिट्टी में अच्छा बढ़ता है। मिट्टी को हल्का नम रखें और सिंचाई के बीच ऊपर की परत को थोड़ा सूखने दें। इसे गर्म वातावरण और अधिक नमी पसंद है (नियमित मिस्टिंग मदद कर सकती है) और यह पालतू जानवरों के लिए विषैला है।"
     },
     "zh": {
-      "common_name": "天门冬蕨",
-      "description": "Asparagus aethiopicus 是一种常绿多年生植物，具有细密下垂的枝叶。常作为室内观赏植物，适应性较强。"
+      "common_name": "天门冬",
+      "description": "Asparagus aethiopicus 适合明亮散射光和疏松排水良好的盆土。浇水保持盆土微湿，浇水间让表层稍微干一点。喜温暖和较高湿度（可规律喷雾），且对宠物有毒。"
     },
     "ja": {
       "common_name": "アスパラガス・ファーン",
-      "description": "Asparagus aethiopicus は細い枝と柔らかい葉を持つ常緑多年草です。観葉植物として広く栽培され、室内環境に適応します。"
+      "description": "Asparagus aethiopicus は明るい間接光と、水はけの良い用土を好みます。土は軽く湿らせ、次の水やりまで表面を少し乾かしてください。暖かさと高めの湿度が向き（定期的な霧吹きが有効）、ペットには有毒です。"
     },
     "ko": {
       "common_name": "아스파라거스 펀",
-      "description": "Asparagus aethiopicus는 가늘고 늘어진 줄기를 가진 상록 다년생 식물입니다. 실내 관엽식물로 널리 재배되며 관리가 어렵지 않습니다."
+      "description": "Asparagus aethiopicus는 밝은 간접광과 배수 좋은 흙에서 잘 자랍니다. 흙을 약간 촉촉하게 유지하되, 물 주기 사이 표면이 조금 마르도록 하세요. 따뜻함과 높은 습도를 선호하며(정기 분무 도움), 반려동물에게 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1588/asparagus-aethiopicus/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450"
+      "https://www.thespruce.com/grow-asparagus-ferns-1902714",
+      "https://bloomscape.com/plant-care-guide/asparagus-fern/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/asparagus-fern",
+      "https://www.gardenia.net/plant/asparagus-setaceus-asparagus-fern-grow-care-tips"
     ]
   }
 }

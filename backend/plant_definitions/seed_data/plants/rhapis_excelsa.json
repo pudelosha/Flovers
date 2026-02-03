@@ -1,21 +1,21 @@
 {
   "external_id": "rhapis_excelsa",
-  "name": "Lady Palm",
+  "name": "Rhapis excelsa",
   "latin": "Rhapis excelsa",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 조명"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba gliniasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "दोमट मिट्टी",
-          "zh": "粘土土壤",
-          "ja": "粘土質の土壌",
-          "ko": "점토 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "ري المدى المتوسط",
-          "hi": "मध्यम पानी",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 급수"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري في معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -90,7 +90,7 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
+          "it": "Media",
           "es": "Medio",
           "pt": "Médio",
           "ar": "متوسط",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,7 +124,7 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
+          "en": "Medium humidity",
           "pl": "Średnia wilgotność",
           "de": "Mittlere Luftfeuchtigkeit",
           "fr": "Humidité moyenne",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "अविषेकी",
-          "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "비독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez le trop d'eau",
+          "it": "Evitare il troppo acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Lady Palm",
-      "description": "The Rhapis excelsa, or Lady Palm, is a small, attractive palm native to tropical Asia. It is commonly grown indoors due to its adaptability to low light conditions."
+      "description": "Rhapis excelsa, known as Lady Palm, is a popular ornamental houseplant with elegant, fan-shaped leaves. It thrives in moderate light and requires occasional watering."
     },
     "pl": {
-      "common_name": "Palma Pani",
-      "description": "Rhapis excelsa, znana jako palma Pani, to niewielka, atrakcyjna palma pochodząca z tropikalnej Azji. Jest powszechnie uprawiana w pomieszczeniach z powodu swojej odporności na słabe światło."
+      "common_name": "Palma dama",
+      "description": "Rhapis excelsa, znana jako Palma dama, to popularna roślina ozdobna z eleganckimi, wachlarzowatymi liśćmi. Rośnie w średnim świetle i wymaga okazjonalnego podlewania."
     },
     "de": {
       "common_name": "Damenpalme",
-      "description": "Rhapis excelsa, oder Damenpalme, ist eine kleine, attraktive Palme, die in den tropischen Regionen Asiens heimisch ist. Sie wird häufig in Innenräumen gezüchtet, da sie sich gut an schwaches Licht anpasst."
+      "description": "Rhapis excelsa, auch Damenpalme genannt, ist eine beliebte Zimmerpflanze mit eleganten, fächerförmigen Blättern. Sie gedeiht bei mittlerem Licht und benötigt gelegentliches Gießen."
     },
     "fr": {
       "common_name": "Palmier de dame",
-      "description": "Rhapis excelsa, ou palmier de dame, est un petit palmier attrayant originaire des régions tropicales d'Asie. Il est couramment cultivé à l'intérieur en raison de son adaptabilité à des conditions de faible luminosité."
+      "description": "Rhapis excelsa, appelé Palmier de dame, est une plante d'intérieur populaire avec des feuilles élégantes en forme de palme. Elle pousse sous une lumière modérée et nécessite un arrosage occasionnel."
     },
     "it": {
       "common_name": "Palma della signora",
-      "description": "La Rhapis excelsa, o palma della signora, è una piccola e attraente palma originaria delle regioni tropicali asiatiche. È comunemente coltivata all'interno grazie alla sua adattabilità a condizioni di scarsa illuminazione."
+      "description": "Rhapis excelsa, conosciuta come Palma della signora, è una pianta ornamentale popolare con foglie eleganti a forma di ventaglio. Cresce in luce moderata e richiede annaffiature occasionali."
     },
     "es": {
-      "common_name": "Palmera dama",
-      "description": "Rhapis excelsa, o palmera dama, es una pequeña y atractiva palmera originaria de las regiones tropicales de Asia. Se cultiva comúnmente en interiores debido a su adaptabilidad a condiciones de poca luz."
+      "common_name": "Palma de señora",
+      "description": "Rhapis excelsa, conocida como Palma de señora, es una planta ornamental popular con hojas elegantes en forma de abanico. Crece con luz moderada y necesita riego ocasional."
     },
     "pt": {
       "common_name": "Palmeira-dama",
-      "description": "A Rhapis excelsa, ou palmeira-dama, é uma pequena e atraente palmeira nativa das regiões tropicais da Ásia. É comumente cultivada em ambientes internos devido à sua adaptabilidade a condições de pouca luz."
+      "description": "Rhapis excelsa, conhecida como Palmeira-dama, é uma planta ornamental popular com folhas elegantes em forma de leque. Ela cresce sob luz moderada e requer rega ocasional."
     },
     "ar": {
-      "common_name": "نخيل السيدة",
-      "description": "Rhapis excelsa، أو نخيل السيدة، هو نوع صغير وجميل من النخيل الذي ينمو في المناطق الاستوائية في آسيا. يُزرع عادة في الأماكن المغلقة بسبب تكيفه مع الظروف ذات الإضاءة المنخفضة."
+      "common_name": "نخلة السيدة",
+      "description": "Rhapis excelsa، والمعروفة باسم نخلة السيدة، هي نبات منزلي شائع ذو أوراق أنيقة على شكل مروحة. إنها تزدهر في الضوء المعتدل وتتطلب الري العرضي."
     },
     "hi": {
       "common_name": "लेडी पाम",
-      "description": "Rhapis excelsa, या लेडी पाम, एक छोटा, आकर्षक ताड़ का पेड़ है जो उष्णकटिबंधीय एशिया में पाया जाता है। यह सामान्य रूप से कम रोशनी की परिस्थितियों में अनुकूलता के कारण इनडोर उगाया जाता है।"
+      "description": "Rhapis excelsa, जिसे लेडी पाम कहा जाता है, एक लोकप्रिय सजावटी पौधा है जिसमें सुंदर, पंखे के आकार की पत्तियाँ होती हैं। यह मध्यम प्रकाश में पनपता है और कभी-कभी पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "女士棕榈",
-      "description": "Rhapis excelsa，或称女士棕榈，是一种原产于亚洲热带地区的小巧迷人的棕榈植物。由于其适应低光条件，常常作为室内植物栽培。"
+      "description": "Rhapis excelsa，俗称女士棕榈，是一种受欢迎的观赏室内植物，具有优雅的扇形叶子。它在中等光照下生长，需要偶尔浇水。"
     },
     "ja": {
-      "common_name": "レディパーム",
-      "description": "Rhapis excelsa、またはレディパームは、アジアの熱帯地域原産の小さく魅力的なヤシの木です。低光条件に適応するため、一般的に室内で栽培されます。"
+      "common_name": "レディーパーム",
+      "description": "Rhapis excelsa、通称レディーパームは、優雅な扇形の葉を持つ人気の観葉植物です。中程度の光で育ち、時々水を与える必要があります。"
     },
     "ko": {
-      "common_name": "레이디 팜",
-      "description": "Rhapis excelsa 또는 레이디 팜은 아시아 열대 지역 원산의 작은 매력적인 야자수입니다. 낮은 빛 조건에 잘 적응하여 일반적으로 실내에서 재배됩니다."
+      "common_name": "여자야자",
+      "description": "Rhapis excelsa, 여성야자라고도 알려진 이 식물은 우아한 부채 모양의 잎을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 자라며 가끔씩 물을 주어야 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/rhapis-excelsa",
+      "https://www.rhs.org.uk/plants/155492/rhapis-excelsa",
       "https://www.gardenia.net/plant/rhapis-excelsa"
     ]
   }

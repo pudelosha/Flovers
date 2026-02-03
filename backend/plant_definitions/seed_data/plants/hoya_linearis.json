@@ -7,16 +7,17 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy, well-drained",
-          "pl": "Lekka, przepuszczalna",
-          "de": "Luftig, drainiert",
-          "fr": "Léger drainant",
-          "it": "Leggero drenante",
-          "es": "Ligero drenante",
-          "pt": "Leve drenado",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "हवादार, निकास वाली",
-          "zh": "疏松排水好",
-          "ja": "通気性良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlew.",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature medie",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Wässern, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando secco",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "干燥时浇水",
+          "ja": "乾いたら水をやる",
+          "ko": "건조하면 물을 주다"
         }
       }
     },
@@ -86,17 +87,17 @@
       "value": {
         "text": {
           "en": "Medium care",
-          "pl": "Średnia pielęgn.",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
           "it": "Cura media",
           "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotn.",
-          "de": "Mittlere Feuchte",
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
           "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
           "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
+          "hi": "मध्यम आर्द्रता",
           "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "독성 없음"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing epiphyte",
-          "pl": "Zwisający epifit",
-          "de": "Hängender Epiphyt",
-          "fr": "Épiphyte retomb.",
-          "it": "Epifita ricad.",
-          "es": "Epífita colg.",
-          "pt": "Epífita pend.",
-          "ar": "نبات متدلٍ",
-          "hi": "लटकने वाला",
-          "zh": "下垂生长",
-          "ja": "垂れ下がる",
-          "ko": "늘어지는 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter le trop d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرाव पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरात्मक कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Linear-leaf hoya",
-      "description": "Hoya linearis is an epiphytic hoya with long, narrow trailing leaves. It prefers bright indirect light and evenly moist but well-drained substrate. The plant produces fragrant white star-shaped flowers under good conditions."
+      "common_name": "String of Needles",
+      "description": "Hoya linearis is a trailing plant with thin, needle-like leaves. It is native to Southeast Asia and is commonly cultivated as an ornamental houseplant."
     },
     "pl": {
-      "common_name": "Hoja liniowa",
-      "description": "Hoya linearis to epifityczna hoja o długich, wąskich pędach. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Przy odpowiednich warunkach kwitnie białymi, pachnącymi kwiatami."
+      "common_name": "Łańcuch igieł",
+      "description": "Hoya linearis to pnąca roślina o cienkich, igiełkowatych liściach. Pochodzi z Azji Południowo-Wschodniej i jest popularna jako roślina ozdobna w domach."
     },
     "de": {
-      "common_name": "Lineare Wachsblume",
-      "description": "Hoya linearis ist eine epiphytische Hoya mit langen, schmalen Trieben. Sie mag helles, indirektes Licht und gleichmäßige Wassergaben. Unter guten Bedingungen erscheinen duftende weiße Blüten."
+      "common_name": "Nadelschnur",
+      "description": "Hoya linearis ist eine kletternde Pflanze mit dünnen, nadelartigen Blättern. Sie stammt aus Südostasien und wird häufig als Zierpflanze in Wohnungen gezüchtet."
     },
     "fr": {
-      "common_name": "Hoya linéaire",
-      "description": "Hoya linearis est une plante épiphyte aux longues feuilles fines retombantes. Elle préfère une lumière vive indirecte et un arrosage modéré. Elle peut produire des fleurs blanches parfumées."
+      "common_name": "Chaîne d'aiguilles",
+      "description": "Hoya linearis est une plante grimpante avec des feuilles fines en forme d'aiguilles. Originaire d'Asie du Sud-Est, elle est couramment cultivée comme plante d'intérieur décorative."
     },
     "it": {
-      "common_name": "Hoya linearis",
-      "description": "Hoya linearis è una hoya epifita dai lunghi fusti sottili. Richiede luce indiretta luminosa e irrigazioni regolari ma leggere. In buone condizioni fiorisce con fiori bianchi profumati."
+      "common_name": "Catena di aghi",
+      "description": "Hoya linearis è una pianta rampicante con foglie sottili simili a aghi. È originaria del Sud-est asiatico ed è comunemente coltivata come pianta ornamentale da interno."
     },
     "es": {
-      "common_name": "Hoya linearis",
-      "description": "Hoya linearis es una planta epífita con tallos largos y finos. Prefiere luz indirecta brillante y riego moderado. Con buenos cuidados produce flores blancas aromáticas."
+      "common_name": "Cadena de agujas",
+      "description": "Hoya linearis es una planta trepadora con hojas finas parecidas a agujas. Es nativa del sudeste asiático y se cultiva comúnmente como planta ornamental en interiores."
     },
     "pt": {
-      "common_name": "Hoya linearis",
-      "description": "Hoya linearis é uma planta epífita de crescimento pendente. Gosta de luz indireta intensa e rega moderada. Em condições adequadas, produz flores brancas perfumadas."
+      "common_name": "Cadeia de agulhas",
+      "description": "Hoya linearis é uma planta trepadeira com folhas finas semelhantes a agulhas. Nativa do Sudeste Asiático, é cultivada comumente como planta ornamental para interiores."
     },
     "ar": {
-      "common_name": "هويا خطية",
-      "description": "Hoya linearis نبات هويا متدلي ينمو كنبات هوائي. يفضل الضوء الساطع غير المباشر والري المعتدل. يمكن أن ينتج أزهارًا بيضاء عطرة عند العناية الجيدة."
+      "common_name": "سلسلة الإبر",
+      "description": "Hoya linearis هي نبات متسلق ذو أوراق رفيعة تشبه الإبر. موطنه الأصلي جنوب شرق آسيا ويزرع عادة كنبات زينة داخلية."
     },
     "hi": {
-      "common_name": "होया लाइनैरिस",
-      "description": "Hoya linearis एक लटकने वाला एपिफाइट पौधा है। इसे तेज अप्रत्यक्ष रोशनी और मध्यम सिंचाई पसंद है। अच्छी देखभाल पर इसमें सुगंधित सफेद फूल आते हैं।"
+      "common_name": "सुई की श्रृंखला",
+      "description": "Hoya linearis एक लटकने वाला पौधा है जिसमें पतली, सुई जैसी पत्तियाँ होती हैं। यह दक्षिण-पूर्व एशिया का मूल निवासी है और आमतौर पर आंतरिक सजावटी पौधे के रूप में उगाया जाता है।"
     },
     "zh": {
-      "common_name": "线叶球兰",
-      "description": "Hoya linearis 是一种下垂生长的附生球兰。它喜欢明亮的散射光和适度浇水。在良好条件下会开出芳香的白色花朵。"
+      "common_name": "针叶链",
+      "description": "Hoya linearis 是一种攀缘植物，具有细长的针状叶片。它原产于东南亚，通常作为室内观赏植物栽培。"
     },
     "ja": {
-      "common_name": "ホヤ・リネアリス",
-      "description": "Hoya linearis は細長い葉を持つ着生性のホヤです。明るい間接光と適度な水やりを好みます。条件が良いと白い香りのある花を咲かせます。"
+      "common_name": "針の鎖",
+      "description": "Hoya linearis は細長い針のような葉を持つツル性の植物です。東南アジア原産で、観葉植物として広く栽培されています。"
     },
     "ko": {
-      "common_name": "호야 리네아리스",
-      "description": "Hoya linearis는 늘어지는 형태의 착생 호야입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 환경이 좋으면 향기로운 흰 꽃을 피웁니다."
+      "common_name": "바늘 사슬",
+      "description": "Hoya linearis는 가느다란 바늘 모양의 잎을 가진 덩굴 식물입니다. 동남아시아 원산지이며, 일반적으로 실내 장식용 식물로 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/387403/hoya-linearis/details",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/",
-      "https://plants.ces.ncsu.edu/plants/hoya/"
+      "https://www.rhs.org.uk/plants/117877/hoya-linearis/details",
+      "https://www.gardenia.net/plant/hoya-linearis"
     ]
   }
 }

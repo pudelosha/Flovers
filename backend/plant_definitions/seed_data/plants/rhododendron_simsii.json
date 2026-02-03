@@ -1,23 +1,23 @@
 {
   "external_id": "rhododendron_simsii",
-  "name": "Rhododendron",
+  "name": "Azalea",
   "latin": "Rhododendron simsii",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "acid-loving",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간광"
+          "en": "Partial sunlight",
+          "pl": "Częściowe światło",
+          "de": "Teilsonne",
+          "fr": "Soleil partiel",
+          "it": "Luce parziale",
+          "es": "Luz parcial",
+          "pt": "Luz parcial",
+          "ar": "ضوء جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "部分阳光",
+          "ja": "部分的な日光",
+          "ko": "부분적인 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, loamy",
-          "pl": "Kwaśna, próchnicza",
-          "de": "Sauer, lehmig",
-          "fr": "Acide, argileuse",
-          "it": "Acido, limosa",
-          "es": "Ácida, arcillosa",
-          "pt": "Ácida, argilosa",
-          "ar": "حمضية وطينية",
-          "hi": "खट्टा, दोमट",
-          "zh": "酸性, 壤土",
-          "ja": "酸性、ローム土",
-          "ko": "산성, 양토"
+          "en": "Acidic, well-drained",
+          "pl": "Kwaśna, dobrze przepuszczalna",
+          "de": "Sauer, gut durchlässig",
+          "fr": "Acide, bien drainé",
+          "it": "Acido, ben drenato",
+          "es": "Ácida, bien drenada",
+          "pt": "Ácida, bem drenada",
+          "ar": "حمضي، جيد التصريف",
+          "hi": "तेज, अच्छी जल निकासी",
+          "zh": "酸性，良好排水",
+          "ja": "酸性、排水性良好",
+          "ko": "산성, 배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성이 있음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Compact, bushy",
+          "pl": "Kompaktowy, krzewiasty",
+          "de": "Kompakt, buschig",
+          "fr": "Compact, buissonnant",
+          "it": "Compatto, cespuglioso",
+          "es": "Compacto, arbustivo",
+          "pt": "Compacto, arbustivo",
+          "ar": "مضغوط، شجيري",
+          "hi": "संक्षिप्त, झाड़ीदार",
+          "zh": "紧凑，灌木状",
+          "ja": "コンパクトで茂った",
+          "ko": "콤팩트하고 덤불 같은"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evita il ristagno d'acqua",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite o excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Indian Azalea",
-      "description": "Rhododendron simsii is a flowering shrub native to China. Known for its vibrant pink flowers, it thrives in well-drained acidic soil with moderate watering."
+      "common_name": "Azalea",
+      "description": "Rhododendron simsii is a popular flowering plant. It thrives in bright but indirect sunlight and needs well-drained acidic soil."
     },
     "pl": {
-      "common_name": "Azalia Indyjska",
-      "description": "Rhododendron simsii to krzew kwitnący, pochodzący z Chin. Znany z żywych różowych kwiatów, preferuje dobrze przepuszczalną kwaśną glebę i umiarkowane podlewanie."
+      "common_name": "Azalia",
+      "description": "Rhododendron simsii to popularna roślina kwitnąca. Wymaga jasnego, ale pośredniego światła oraz dobrze przepuszczalnej, kwaśnej gleby."
     },
     "de": {
-      "common_name": "Indische Azalee",
-      "description": "Rhododendron simsii ist ein blühender Strauch, der in China heimisch ist. Er ist bekannt für seine lebhaften rosa Blumen und gedeiht in gut durchlässigem, saurem Boden mit mäßiger Bewässerung."
+      "common_name": "Azalee",
+      "description": "Rhododendron simsii ist eine beliebte blühende Pflanze. Sie gedeiht bei hellem, aber indirektem Sonnenlicht und benötigt gut durchlässigen, sauren Boden."
     },
     "fr": {
-      "common_name": "Azalée indienne",
-      "description": "Rhododendron simsii est un arbuste à fleurs originaire de Chine. Connu pour ses fleurs roses vives, il préfère un sol acide bien drainé avec un arrosage modéré."
+      "common_name": "Azalée",
+      "description": "Rhododendron simsii est une plante à fleurs populaire. Il prospère sous une lumière vive mais indirecte et nécessite un sol acide bien drainé."
     },
     "it": {
-      "common_name": "Azalea Indiana",
-      "description": "Rhododendron simsii è un arbusto fiorito originario della Cina. Conosciuto per i suoi fiori rosa vivaci, cresce bene in terreni acidi e ben drenati con irrigazione moderata."
+      "common_name": "Azalea",
+      "description": "Rhododendron simsii è una pianta da fiore popolare. Cresce sotto luce intensa ma indiretta e necessita di un terreno acido e ben drenato."
     },
     "es": {
-      "common_name": "Azalea india",
-      "description": "Rhododendron simsii es un arbusto de flores originario de China. Conocido por sus flores rosadas, prospera en suelos ácidos bien drenados con riego moderado."
+      "common_name": "Azalea",
+      "description": "Rhododendron simsii es una planta con flores popular. Crece a la luz brillante pero indirecta y necesita un suelo ácido y bien drenado."
     },
     "pt": {
-      "common_name": "Azáleia Indiana",
-      "description": "Rhododendron simsii é um arbusto florido nativo da China. Conhecido por suas flores cor-de-rosa vibrantes, cresce bem em solo ácido e bem drenado com irrigação moderada."
+      "common_name": "Azaléia",
+      "description": "Rhododendron simsii é uma planta popular de flores. Ela cresce sob luz brilhante, mas indireta, e precisa de solo ácido e bem drenado."
     },
     "ar": {
-      "common_name": "أزاليا هندية",
-      "description": "Rhododendron simsii هو شجيرة مزهرة موطنها الصين. معروف بأزهاره الوردية الزاهية، يزدهر في التربة الحمضية جيدة التصريف مع الري المعتدل."
+      "common_name": "أزاليا",
+      "description": "Rhododendron simsii هو نبات مزهر شهير. ينمو تحت ضوء ساطع ولكن غير مباشر ويحتاج إلى تربة حمضية جيدة التصريف."
     },
     "hi": {
-      "common_name": "भारतीय अजालिया",
-      "description": "Rhododendron simsii एक फूलों वाली झाड़ी है जो चीन की मूल निवासी है। इसके चमकीले गुलाबी फूलों के लिए जाना जाता है, यह हल्के रूप से सिक्त, अम्लीय मिट्टी में अच्छी तरह से बढ़ता है।"
+      "common_name": "अज़ालिया",
+      "description": "Rhododendron simsii एक लोकप्रिय फूलों वाली पौधा है। यह चमकदार, लेकिन अप्रत्यक्ष सूर्य प्रकाश में अच्छा बढ़ता है और अच्छी जल निकासी वाली अम्लीय मिट्टी की आवश्यकता है।"
     },
     "zh": {
-      "common_name": "印度杜鹃",
-      "description": "Rhododendron simsii 是一种原产于中国的开花灌木。以其鲜艳的粉色花朵而闻名，它在排水良好的酸性土壤中茁壮成长，浇水适中。"
+      "common_name": "杜鹃花",
+      "description": "Rhododendron simsii 是一种受欢迎的开花植物。它在明亮但间接的阳光下茁壮成长，并需要排水良好的酸性土壤。"
     },
     "ja": {
-      "common_name": "インディアンアザレア",
-      "description": "Rhododendron simsii は中国原産の花木です。鮮やかなピンクの花で知られ、適度に水やりを行い、排水性の良い酸性土壌で育ちます。"
+      "common_name": "アザレア",
+      "description": "Rhododendron simsii は人気のある花の植物です。明るいが間接的な光の下で成長し、排水性の良い酸性土壌が必要です。"
     },
     "ko": {
-      "common_name": "인디언 진달래",
-      "description": "Rhododendron simsii는 중국 원산의 꽃이 피는 관목입니다. 생생한 분홍색 꽃으로 알려져 있으며, 잘 배수되는 산성 토양에서 적당한 물을 주어 자랍니다."
+      "common_name": "진달래",
+      "description": "Rhododendron simsii는 인기 있는 꽃 식물입니다. 밝지만 간접적인 햇빛에서 자라며 잘 배수되는 산성 토양이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/rhododendron-simsii",
-      "https://www.rhs.org.uk/plants/64345/rhododendron-simsii"
+      "https://www.rhs.org.uk/plants/rhododendron-simsii",
+      "https://www.gardenia.net/plant/rhododendron-simsii"
     ]
   }
 }

@@ -1,21 +1,21 @@
 {
   "external_id": "chrysanthemum_morifolium",
-  "name": "Chrysanthemum",
+  "name": "Florist's chrysanthemum",
   "latin": "Chrysanthemum morifolium",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "peat-free",
+    "balcony-flowers"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "양지"
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Helle Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol brillante",
+          "pt": "Sol forte",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮阳光",
+          "ja": "明るい日光",
+          "ko": "밝은 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna gleba",
-          "de": "Nährstoffreich",
-          "fr": "Sol riche",
-          "it": "Terriccio ricco",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 흙"
+          "en": "Fertile, draining",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährstoffreich, drain",
+          "fr": "Fertile, drainant",
+          "it": "Fertile, drenante",
+          "es": "Fértil, drenante",
+          "pt": "Fértil, drenante",
+          "ar": "خصبة جيدة الصرف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥·배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowana wilg.",
+          "en": "Evenly moist",
+          "pl": "Umiark. wilgotna",
           "de": "Gleichmäßig feucht",
-          "fr": "Humidité régulière",
-          "it": "Umidità costante",
-          "es": "Riego regular",
-          "pt": "Umidade regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित सिंचाई",
-          "zh": "均匀浇水",
-          "ja": "均一な水やり",
-          "ko": "고른 물주기"
+          "fr": "Humide régulièrement",
+          "it": "Umido regolare",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة متوازنة",
+          "hi": "हल्की नमी बनाएँ",
+          "zh": "保持微湿",
+          "ja": "均一に湿らせる",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "管理は普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–24°C",
-          "pl": "15–24°C",
-          "de": "15–24°C",
-          "fr": "15–24°C",
-          "it": "15–24°C",
-          "es": "15–24°C",
-          "pt": "15–24°C",
-          "ar": "15–24°م",
-          "hi": "15–24°C",
-          "zh": "15–24°C",
-          "ja": "15–24°C",
-          "ko": "15–24°C"
+          "en": "Cool 12–21°C",
+          "pl": "Chłodno 12–21°C",
+          "de": "Kühl 12–21°C",
+          "fr": "Frais 12–21°C",
+          "it": "Fresco 12–21°C",
+          "es": "Fresco 12–21°C",
+          "pt": "Fresco 12–21°C",
+          "ar": "معتدل 12–21°م",
+          "hi": "ठंडा 12–21°C",
+          "zh": "偏凉 12–21°C",
+          "ja": "涼しい 12–21°C",
+          "ko": "서늘 12–21°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła wilg.",
-          "de": "Normale Luft",
+          "en": "Average humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
           "fr": "Humidité normale",
           "it": "Umidità normale",
           "es": "Humedad normal",
-          "pt": "Umidade normal",
+          "pt": "Humidade normal",
           "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
+          "hi": "सामान्य आर्द्रता",
           "zh": "普通湿度",
-          "ja": "通常湿度",
+          "ja": "通常の湿度",
           "ko": "보통 습도"
         }
       }
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻度有毒",
-          "ja": "軽い毒性",
-          "ko": "약간 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierz.",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,77 +162,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Bushy clump",
-          "pl": "Kępiasty",
-          "de": "Buschig",
-          "fr": "Touffe dense",
-          "it": "Cespugliosa",
-          "es": "Arbustiva",
-          "pt": "Arbustiva",
-          "ar": "نمو كثيف",
-          "hi": "घना विकास",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "덤불형"
+          "en": "Bushy bloomer",
+          "pl": "Krzaczasty kwiat",
+          "de": "Buschig, blühend",
+          "fr": "Touffe florifère",
+          "it": "Cespugliosa, fior.",
+          "es": "Arbustiva, flor.",
+          "pt": "Arbustiva, flor.",
+          "ar": "نمو كثيف مزهر",
+          "hi": "झाड़ीदार, फूलदार",
+          "zh": "丛生开花",
+          "ja": "株立ちで開花",
+          "ko": "덤불형 개화"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ، عناكب دقيقة",
+          "hi": "एफिड, माइट्स",
+          "zh": "蚜虫、螨类",
+          "ja": "アブラムシ・ダニ",
+          "ko": "진딧물·응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Florist’s chrysanthemum",
-      "description": "Chrysanthemum morifolium is a popular ornamental plant grown for its long-lasting, colorful blooms. It prefers bright sunlight, evenly moist soil, and cooler indoor temperatures during flowering."
+      "common_name": "Florist's chrysanthemum",
+      "description": "A flowering chrysanthemum commonly grown in pots for autumn and winter display. Give it very bright light and keep the potting mix evenly moist but not waterlogged. It prefers cooler indoor temperatures and is toxic to cats and dogs if chewed."
     },
     "pl": {
       "common_name": "Chryzantema wielkokwiatowa",
-      "description": "Chrysanthemum morifolium to popularna roślina ozdobna ceniona za trwałe kwiaty. Wymaga dużo światła, umiarkowanego podlewania i chłodniejszych warunków w czasie kwitnienia."
+      "description": "Kwitnąca chryzantema często uprawiana w donicach jesienią i zimą. Zapewnij bardzo jasne stanowisko i utrzymuj podłoże lekko wilgotne, bez zastoin wody. Lubi chłodniejsze warunki w mieszkaniu i jest toksyczna dla kotów oraz psów."
     },
     "de": {
       "common_name": "Garten-Chrysantheme",
-      "description": "Chrysanthemum morifolium ist eine weit verbreitete Zierpflanze mit dekorativen Blüten. Sie benötigt viel Licht, gleichmäßige Wassergaben und eher kühle Temperaturen während der Blüte."
+      "description": "Eine blühende Chrysantheme, die oft im Topf für Herbst und Winter kultiviert wird. Sehr hell stellen und das Substrat gleichmäßig feucht halten, aber Staunässe vermeiden. Kühlere Temperaturen sind günstiger, und die Pflanze ist für Katzen und Hunde giftig."
     },
     "fr": {
       "common_name": "Chrysanthème des fleuristes",
-      "description": "Chrysanthemum morifolium est une plante ornementale très cultivée pour ses fleurs durables. Elle apprécie une forte luminosité, un sol humide mais drainé et des températures modérées."
+      "description": "Chrysanthème cultivé en pot pour la floraison d’automne et d’hiver. Placez-le en lumière très vive et gardez le substrat uniformément humide sans excès d’eau. Il préfère une atmosphère plutôt fraîche et il est toxique pour les chats et les chiens."
     },
     "it": {
-      "common_name": "Crisantemo",
-      "description": "Chrysanthemum morifolium è una pianta ornamentale molto diffusa per la fioritura prolungata. Cresce bene con molta luce, irrigazione regolare e temperature fresche durante la fioritura."
+      "common_name": "Crisantemo dei fioristi",
+      "description": "Crisantemo da fiore spesso coltivato in vaso per l’autunno e l’inverno. Tienilo in luce molto intensa e mantieni il terriccio uniformemente umido senza ristagni. Preferisce temperature interne più fresche ed è tossico per cani e gatti."
     },
     "es": {
-      "common_name": "Crisantemo",
-      "description": "Chrysanthemum morifolium es una planta ornamental apreciada por sus flores duraderas. Necesita buena luz solar, riego constante y temperaturas moderadas en interior."
+      "common_name": "Crisantemo de floristería",
+      "description": "Crisantemo con flor, común en maceta para otoño e invierno. Colócalo con luz muy brillante y mantén el sustrato uniformemente húmedo sin encharcar. Va mejor con temperaturas interiores frescas y es tóxico para gatos y perros."
     },
     "pt": {
-      "common_name": "Crisântemo",
-      "description": "Chrysanthemum morifolium é uma planta ornamental popular pelas suas flores vistosas. Prefere sol pleno, solo levemente úmido e temperaturas mais amenas durante a floração."
+      "common_name": "Crisântemo de florista",
+      "description": "Crisântemo florido muito usado em vaso no outono e inverno. Dê luz muito intensa e mantenha o substrato uniformemente húmido, sem encharcar. Prefere temperaturas interiores mais frescas e é tóxico para cães e gatos."
     },
     "ar": {
-      "common_name": "الأقحوان",
-      "description": "Chrysanthemum morifolium نبات زينة مشهور بأزهاره طويلة العمر. يحتاج إلى ضوء قوي وري منتظم ودرجات حرارة معتدلة داخل المنزل."
+      "common_name": "الأقحوان (كريزانثيمم)",
+      "description": "نبات مزهر يُزرع غالبًا في الأصص لزينة الخريف والشتاء. يحتاج إلى ضوء قوي جدًا مع إبقاء التربة رطبة بشكل متوازن دون إغراق. يفضّل درجات حرارة داخلية أبرد نسبيًا وهو سام للقطط والكلاب عند المضغ."
     },
     "hi": {
-      "common_name": "गुलदाउदी",
-      "description": "Chrysanthemum morifolium एक लोकप्रिय सजावटी पौधा है जो अपने लंबे समय तक टिकने वाले फूलों के लिए जाना जाता है। इसे तेज रोशनी, नियमित पानी और मध्यम तापमान पसंद है।"
+      "common_name": "क्राइसैंथेमम (गुलदाउदी)",
+      "description": "यह एक फूलदार गुलदाउदी है जिसे अक्सर गमले में शरद/सर्दियों की सजावट के लिए उगाया जाता है। बहुत तेज़ रोशनी दें और मिट्टी को हल्का नम रखें, पर जलभराव न होने दें। यह अपेक्षाकृत ठंडे तापमान में बेहतर रहता है और बिल्लियों व कुत्तों के लिए विषाक्त है।"
     },
     "zh": {
-      "common_name": "菊花",
-      "description": "Chrysanthemum morifolium 是一种常见的观赏植物，以花期长而闻名。它需要充足的光照、均匀的浇水和较凉爽的生长环境。"
+      "common_name": "菊花（盆栽菊）",
+      "description": "常见的开花菊花，秋冬常作盆栽观赏。需要非常明亮的光照，并保持基质均匀微湿，避免积水。室内偏凉更合适，误食对猫狗有毒。"
     },
     "ja": {
-      "common_name": "キク",
-      "description": "Chrysanthemum morifolium は観賞用として広く栽培される植物です。明るい日光と適度な水やり、開花期の涼しい環境を好みます。"
+      "common_name": "キク（鉢植え菊）",
+      "description": "秋冬に鉢で楽しまれる花もののキクです。とても明るい光に置き、用土は均一に湿らせつつ過湿は避けます。室内はやや涼しい方が向き、猫や犬には有毒です。"
     },
     "ko": {
-      "common_name": "국화",
-      "description": "Chrysanthemum morifolium 은 오랫동안 꽃을 감상할 수 있는 관상식물입니다. 충분한 햇빛과 규칙적인 물주기, 서늘한 온도를 선호합니다."
+      "common_name": "국화(화분국)",
+      "description": "가을·겨울에 화분으로 많이 키우는 개화식물입니다. 매우 밝은 빛을 주고 흙은 고르게 촉촉하게 유지하되 과습은 피하세요. 실내는 비교적 서늘할수록 좋으며 고양이와 개에게 독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
+      "https://plants.ces.ncsu.edu/plants/chrysanthemum-x-morifolium/",
+      "https://www.rhs.org.uk/plants/chrysanthemum",
       "https://www.rhs.org.uk/plants/chrysanthemum/growing-guide",
-      "https://extension.umn.edu/houseplants/chrysanthemums",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chrysanthemums/"
+      "https://www.gardenersworld.com/how-to/grow-plants/chrysanthemums-grow-guide/",
+      "https://www.sarahraven.com/articles/how-to-plant-and-grow-chrysanthemums",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chrysanthemum"
     ]
   }
 }

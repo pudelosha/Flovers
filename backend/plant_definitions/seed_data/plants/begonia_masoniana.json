@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "orchid"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 24,
   "image_hero": "begonia_masoniana.jpg",
   "image_thumb": "begonia_masoniana.jpg",
   "traits": [
@@ -30,14 +30,14 @@
       "value": {
         "text": {
           "en": "Bright indirect light",
-          "pl": "Jasne, rozproszone",
+          "pl": "Jasne światło",
           "de": "Helles Streulicht",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,17 +48,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining rich soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant riche",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良い土",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
           "ko": "배수 좋은 토양"
         }
       }
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Terreno umido",
-          "es": "Humedad constante",
-          "pt": "Úmido regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "均一に湿らす",
-          "ko": "고르게 촉촉"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطبة قليلاً",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らす",
+          "ko": "약간 촉촉"
         }
       }
     },
@@ -88,7 +88,7 @@
         "text": {
           "en": "Moderate care",
           "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Aufwand",
+          "de": "Mittel",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
           "ar": "18–24°م",
-          "hi": "18–24 °C",
+          "hi": "18–24°C",
           "zh": "18–24°C",
-          "ja": "18–24℃",
-          "ko": "18–24℃"
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Prefers humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿度",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic pets",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약한 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica a pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,9 +162,9 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact foliage plant",
+          "en": "Compact foliage",
           "pl": "Zwarty pokrój",
-          "de": "Kompakter Wuchs",
+          "de": "Kompakt",
           "fr": "Port compact",
           "it": "Crescita compatta",
           "es": "Crecimiento compacto",
@@ -173,7 +173,45 @@
           "hi": "सघन वृद्धि",
           "zh": "紧凑生长",
           "ja": "コンパクト成長",
-          "ko": "콤팩트 성장"
+          "ko": "컴팩트 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid wet leaves",
+          "pl": "Nie moczyć liści",
+          "de": "Blätter trocken",
+          "fr": "Feuilles sèches",
+          "it": "Foglie asciutte",
+          "es": "Evitar hojas mojadas",
+          "pt": "Evitar folhas molhadas",
+          "ar": "تجنب بلل الأوراق",
+          "hi": "पत्ते गीले न रखें",
+          "zh": "避免叶片积水",
+          "ja": "葉を濡らさない",
+          "ko": "잎 젖음 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Iron Cross Begonia",
-      "description": "Begonia masoniana is known for its textured green leaves marked with a dark cross pattern. It is grown mainly for foliage and prefers bright, indirect light. Consistent moisture and high humidity support healthy growth indoors."
+      "description": "Begonia masoniana is known for its textured green leaves marked with a dark cross pattern. It prefers bright indirect light and evenly moist soil. Avoid wetting the leaves to reduce disease risk."
     },
     "pl": {
-      "common_name": "Begonia żelazny krzyż",
-      "description": "Begonia masoniana wyróżnia się zielonymi liśćmi z ciemnym wzorem krzyża. Uprawiana jest głównie jako roślina ozdobna z liści. Wymaga jasnego światła rozproszonego i stałej wilgotności."
+      "common_name": "Begonia żelaznego krzyża",
+      "description": "Begonia masoniana wyróżnia się zielonymi liśćmi z ciemnym wzorem krzyża. Najlepiej rośnie w jasnym, rozproszonym świetle i lekko wilgotnym podłożu. Nie należy moczyć liści."
     },
     "de": {
       "common_name": "Eisenkreuz-Begonie",
-      "description": "Begonia masoniana besitzt auffällige Blätter mit dunklem Kreuzmuster. Sie wird vor allem als Blattschmuckpflanze kultiviert. Gleichmäßige Feuchtigkeit und hohe Luftfeuchte sind wichtig."
+      "description": "Begonia masoniana hat strukturierte Blätter mit dunklem Kreuzmuster. Sie mag helles, indirektes Licht und gleichmäßig feuchte Erde. Nasse Blätter sollten vermieden werden."
     },
     "fr": {
       "common_name": "Bégonia croix de fer",
-      "description": "Begonia masoniana est appréciée pour ses feuilles texturées marquées d'une croix sombre. Elle se cultive surtout pour son feuillage décoratif. Une lumière indirecte et une humidité élevée sont recommandées."
+      "description": "Begonia masoniana se distingue par ses feuilles vertes marquées d’une croix sombre. Elle apprécie une lumière indirecte et un sol légèrement humide. Évitez de mouiller le feuillage."
     },
     "it": {
       "common_name": "Begonia croce di ferro",
-      "description": "Begonia masoniana è nota per le foglie verdi con un disegno a croce scura. È coltivata principalmente per il fogliame ornamentale. Preferisce luce indiretta e umidità costante."
+      "description": "Begonia masoniana è nota per le foglie verdi con disegno a croce. Predilige luce indiretta e terreno leggermente umido. Le foglie non vanno bagnate."
     },
     "es": {
       "common_name": "Begonia cruz de hierro",
-      "description": "Begonia masoniana destaca por sus hojas verdes con una cruz oscura. Se cultiva principalmente por su follaje decorativo. Requiere luz indirecta brillante y humedad regular."
+      "description": "Begonia masoniana destaca por sus hojas verdes con una cruz oscura. Requiere luz indirecta brillante y riego moderado. Evite mojar las hojas."
     },
     "pt": {
       "common_name": "Begônia cruz de ferro",
-      "description": "Begonia masoniana possui folhas verdes texturizadas com marca em forma de cruz. É cultivada principalmente pelo valor ornamental das folhas. Necessita luz indireta e boa umidade."
+      "description": "Begonia masoniana possui folhas verdes com marca em forma de cruz. Prefere luz indireta e solo levemente úmido. Não molhe as folhas."
     },
     "ar": {
       "common_name": "بيغونيا الصليب الحديدي",
-      "description": "تتميز Begonia masoniana بأوراق خضراء ذات نقش صليبي داكن. تزرع كنبات زينة لأوراقها بشكل أساسي. تحتاج إلى ضوء غير مباشر ورطوبة مرتفعة."
+      "description": "تتميز Begonia masoniana بأوراق خضراء ذات علامة صليب داكنة. تنمو جيدًا في ضوء غير مباشر وتربة رطبة قليلًا. يُنصح بتجنب بلل الأوراق."
     },
     "hi": {
       "common_name": "आयरन क्रॉस बेगोनिया",
-      "description": "Begonia masoniana अपनी पत्तियों पर गहरे क्रॉस पैटर्न के लिए जानी जाती है। इसे मुख्य रूप से सजावटी पत्तियों के लिए उगाया जाता है। अप्रत्यक्ष रोशनी और नमी आवश्यक है।"
+      "description": "Begonia masoniana अपने हरे पत्तों पर गहरे क्रॉस पैटर्न के लिए जानी जाती है। इसे अप्रत्यक्ष रोशनी और हल्की नमी वाली मिट्टी पसंद है। पत्तों को गीला न करें।"
     },
     "zh": {
       "common_name": "铁十字秋海棠",
-      "description": "Begonia masoniana 以叶片上深色十字纹理而闻名。它主要作为观叶植物栽培。适合明亮的散射光和稳定湿度。"
+      "description": "Begonia masoniana 以带有深色十字纹的绿色叶片著称。适合明亮散射光和微湿的土壤。应避免叶片积水。"
     },
     "ja": {
       "common_name": "アイアンクロスベゴニア",
-      "description": "Begonia masoniana は葉に濃い十字模様があることで知られています。主に観葉植物として育てられます。明るい間接光と湿度が必要です。"
+      "description": "Begonia masoniana は濃い十字模様の葉が特徴です。明るい間接光と適度な水分を好みます。葉を濡らさないようにします。"
     },
     "ko": {
       "common_name": "아이언 크로스 베고니아",
-      "description": "Begonia masoniana는 잎의 어두운 십자 무늬가 특징입니다. 주로 관엽식물로 재배됩니다. 밝은 간접광과 높은 습도를 선호합니다."
+      "description": "Begonia masoniana는 잎에 짙은 십자 무늬가 특징입니다. 밝은 간접광과 적당히 촉촉한 토양을 선호합니다. 잎에 물이 닿지 않게 관리하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b150",
-      "https://plants.ces.ncsu.edu/plants/begonia-masoniana/",
-      "https://www.rhs.org.uk/plants/1983/begonia-masoniana/details"
+      "https://www.rhs.org.uk/plants/begonia/houseplant-care",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282743",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-begonias/"
     ]
   }
 }

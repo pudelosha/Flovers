@@ -1,23 +1,23 @@
 {
   "external_id": "syngonium_podophyllum",
-  "name": "Arrowhead Plant",
+  "name": "Syngonium podophyllum",
   "latin": "Syngonium podophyllum",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 조명"
+          "ja": "中くらいの光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好的排水性",
-          "ja": "良好な排水性",
-          "ko": "배수가 좋은"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "良好排水の土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "中程度",
-          "ko": "적당한"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Wässern, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando secco",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عند الجفاف",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "土壤干燥时浇水",
+          "ja": "乾いたら水やり",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -95,7 +95,7 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "简单",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "적당한"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适中生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرाती पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Arrowhead Plant",
-      "description": "Syngonium podophyllum is a popular houseplant, known for its arrow-shaped leaves and easy care. It thrives in moderate light and moderate watering."
+      "description": "Syngonium podophyllum, commonly known as Arrowhead Plant, is a tropical perennial. It's popular for its attractive arrow-shaped leaves and easy care."
     },
     "pl": {
-      "common_name": "Roślina Strzałkowa",
-      "description": "Syngonium podophyllum to popularna roślina doniczkowa, znana z liści w kształcie strzały i łatwej pielęgnacji. Rośnie w umiarkowanym świetle i umiarkowanym podlewaniu."
+      "common_name": "Roślina strzałkowa",
+      "description": "Syngonium podophyllum, znane jako roślina strzałkowa, to tropikalna roślina wieloletnia. Jest popularna dzięki atrakcyjnym liściom w kształcie strzałki i łatwej pielęgnacji."
     },
     "de": {
       "common_name": "Pfeilblattpflanze",
-      "description": "Syngonium podophyllum ist eine beliebte Zimmerpflanze, die für ihre pfeilförmigen Blätter und einfache Pflege bekannt ist. Sie gedeiht bei mäßigem Licht und mäßigem Gießen."
+      "description": "Syngonium podophyllum, auch Pfeilblattpflanze genannt, ist eine tropische Staude. Sie ist bekannt für ihre attraktiven, pfeilförmigen Blätter und pflegeleicht."
     },
     "fr": {
-      "common_name": "Plante Flèche",
-      "description": "Syngonium podophyllum est une plante d'intérieur populaire, connue pour ses feuilles en forme de flèche et sa facilité d'entretien. Elle préfère la lumière modérée et un arrosage modéré."
+      "common_name": "Plante flèche",
+      "description": "Syngonium podophyllum, connue sous le nom de plante flèche, est une plante vivace tropicale. Elle est appréciée pour ses feuilles en forme de flèche et sa facilité d'entretien."
     },
     "it": {
-      "common_name": "Pianta Freccia",
-      "description": "Syngonium podophyllum è una pianta d'appartamento popolare, nota per le sue foglie a forma di freccia e per la sua facile cura. Cresce in luce moderata e con annaffiature moderate."
+      "common_name": "Pianta freccia",
+      "description": "Syngonium podophyllum, conosciuta come pianta freccia, è una perenne tropicale. È apprezzata per le sue foglie a forma di freccia e la facile manutenzione."
     },
     "es": {
-      "common_name": "Planta Flecha",
-      "description": "Syngonium podophyllum es una planta de interior popular, conocida por sus hojas en forma de flecha y su fácil cuidado. Crece con luz moderada y riego moderado."
+      "common_name": "Planta flecha",
+      "description": "Syngonium podophyllum, conocida como planta flecha, es una perenne tropical. Se destaca por sus hojas en forma de flecha y su fácil cuidado."
     },
     "pt": {
-      "common_name": "Planta Flecha",
-      "description": "Syngonium podophyllum é uma planta popular de interior, conhecida pelas suas folhas em forma de flecha e fácil de cuidar. Cresce com luz moderada e rega moderada."
+      "common_name": "Planta seta",
+      "description": "Syngonium podophyllum, conhecida como planta seta, é uma perene tropical. Destaca-se pelas suas folhas em forma de seta e pela facilidade de cuidado."
     },
     "ar": {
       "common_name": "نبات السهم",
-      "description": "Syngonium podophyllum هو نبات داخلي شهير معروف بأوراقه على شكل سهم وسهولة العناية به. ينمو في الضوء المعتدل والري المعتدل."
+      "description": "Syngonium podophyllum، المعروف باسم نبات السهم، هو نبات معمر استوائي. يشتهر بأوراقه الجذابة على شكل سهم وسهولة العناية به."
     },
     "hi": {
-      "common_name": "तीर पौधा",
-      "description": "Syngonium podophyllum एक लोकप्रिय इनडोर पौधा है, जो अपनी तीर जैसी पत्तियों और आसान देखभाल के लिए जाना जाता है। यह मध्यम प्रकाश और मध्यम पानी में बढ़ता है।"
+      "common_name": "तीर का पौधा",
+      "description": "Syngonium podophyllum, जिसे तीर का पौधा कहा जाता है, एक उष्णकटिबंधीय बहुवर्षीय पौधा है। यह अपनी तीर के आकार की पत्तियों और आसान देखभाल के लिए प्रसिद्ध है।"
     },
     "zh": {
       "common_name": "箭头植物",
-      "description": "Syngonium podophyllum 是一种受欢迎的室内植物，以其箭头形状的叶子和易于护理而闻名。它喜欢中等光照和中等浇水。"
+      "description": "Syngonium podophyllum，通常被称为箭头植物，是一种热带多年生植物。它因其具有吸引力的箭头形叶子和易于护理而受到欢迎。"
     },
     "ja": {
       "common_name": "矢印植物",
-      "description": "Syngonium podophyllum は、矢印の形をした葉と手入れの簡単さで知られる人気のある観葉植物です。適度な光と適度な水やりで成長します。"
+      "description": "Syngonium podophyllum、一般に矢印植物として知られているのは、熱帯の多年草です。矢印形の魅力的な葉と簡単な手入れで人気があります。"
     },
     "ko": {
       "common_name": "화살표 식물",
-      "description": "Syngonium podophyllum은 화살표 모양의 잎과 쉬운 관리로 유명한 인기 있는 실내 식물입니다. 이 식물은 중간 정도의 빛과 물주기를 선호합니다."
+      "description": "Syngonium podophyllum, 일반적으로 화살표 식물로 알려져 있는 이 식물은 열대 다년생 식물입니다. 화살표 모양의 매력적인 잎과 쉬운 관리로 인기가 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10028/syngonium-podophyllum/details",
+      "https://www.rhs.org.uk/plants/syngonium-podophyllum",
       "https://www.gardenia.net/plant/syngonium-podophyllum"
     ]
   }

@@ -1,8 +1,8 @@
 {
   "external_id": "platanus_orientalis",
-  "name": "Oriental Plane Tree",
+  "name": "Oriental Plane",
   "latin": "Platanus orientalis",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
@@ -11,8 +11,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Sole pieno",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूर्ण सूर्य",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lößiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी की मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム土",
-          "ko": "로암 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "적당한"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -87,12 +87,12 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średni",
+          "pl": "Średnie",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Large tree",
-          "pl": "Duże drzewo",
-          "de": "Großer Baum",
-          "fr": "Grand arbre",
-          "it": "Albero grande",
-          "es": "Árbol grande",
-          "pt": "Árvore grande",
-          "ar": "شجرة كبيرة",
-          "hi": "बड़ा पेड़",
-          "zh": "大树",
-          "ja": "大きな木",
-          "ko": "큰 나무"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Oriental Plane Tree",
-      "description": "Platanus orientalis is a large, deciduous tree native to southeastern Europe and western Asia. It is known for its distinctive peeling bark and large, palmate leaves."
+      "common_name": "Oriental Plane",
+      "description": "Platanus orientalis is a deciduous tree native to southeastern Europe and western Asia. It is commonly found in parks and along roadsides."
     },
     "pl": {
-      "common_name": "Platan orientalny",
-      "description": "Platanus orientalis to duże, liściaste drzewo pochodzące z południowo-wschodniej Europy i zachodniej Azji. Jest znane z charakterystycznej łuszczącej się kory i dużych, dłoniastych liści."
+      "common_name": "Platany orientalny",
+      "description": "Platanus orientalis to drzewo liściaste pochodzące z południowo-wschodniej Europy i zachodniej Azji. Jest powszechnie spotykane w parkach i wzdłuż dróg."
     },
     "de": {
       "common_name": "Orientalische Platane",
-      "description": "Platanus orientalis ist ein großes, laubabwerfendes Baum aus Südosteuropa und Westasien. Es ist bekannt für seine markante schälende Rinde und großen, handförmigen Blätter."
+      "description": "Die Platanus orientalis ist ein Laubbaum, der ursprünglich aus Südosteuropa und Westasien stammt. Sie ist häufig in Parks und an Straßenrändern zu finden."
     },
     "fr": {
       "common_name": "Platane orientale",
-      "description": "Platanus orientalis est un grand arbre à feuilles caduques originaire du sud-est de l'Europe et de l'Asie occidentale. Il est connu pour son écorce distinctive qui pèle et ses grandes feuilles palmées."
+      "description": "La Platanus orientalis est un arbre à feuilles caduques originaire du sud-est de l'Europe et de l'Asie occidentale. On la trouve couramment dans les parcs et le long des routes."
     },
     "it": {
       "common_name": "Platano orientale",
-      "description": "Platanus orientalis è un grande albero deciduo originario del sud-est dell'Europa e dell'Asia occidentale. È noto per la sua corteccia distintiva che si sfalda e le grandi foglie palmate."
+      "description": "Platanus orientalis è un albero deciduo originario dell'Europa sud-orientale e dell'Asia occidentale. Si trova comunemente nei parchi e lungo le strade."
     },
     "es": {
       "common_name": "Plátano oriental",
-      "description": "Platanus orientalis es un gran árbol caducifolio originario del sureste de Europa y Asia occidental. Se reconoce por su corteza distintiva que se pela y sus grandes hojas palmeadas."
+      "description": "Platanus orientalis es un árbol caducifolio originario del sureste de Europa y el oeste de Asia. Se encuentra comúnmente en parques y a lo largo de las carreteras."
     },
     "pt": {
       "common_name": "Plátano oriental",
-      "description": "Platanus orientalis é uma grande árvore decídua originária do sudeste da Europa e do oeste da Ásia. É conhecida pela sua casca distintiva que se solta e pelas suas grandes folhas palmadas."
+      "description": "Platanus orientalis é uma árvore caducifólia nativa do sudeste da Europa e do oeste da Ásia. É comumente encontrada em parques e ao longo das estradas."
     },
     "ar": {
-      "common_name": "شجرة الطائرة الشرقية",
-      "description": "Platanus orientalis هي شجرة نفضية كبيرة موطنها جنوب شرق أوروبا وغرب آسيا. تشتهر لحاءها المميز الذي يتقشر وأوراقها الكبيرة."
+      "common_name": "بلوط شرقي",
+      "description": "Platanus orientalis هو شجرة نفضية موطنها جنوب شرق أوروبا وغرب آسيا. توجد عادة في الحدائق وعلى جوانب الطرق."
     },
     "hi": {
-      "common_name": "ओरिएंटल प्लेन ट्री",
-      "description": "Platanus orientalis एक बड़ा पत्तेदार पेड़ है जो दक्षिण-पूर्व यूरोप और पश्चिमी एशिया का मूल निवासी है। यह अपनी विशिष्ट छाल और बड़े पामेट पत्तों के लिए जाना जाता है."
+      "common_name": "ओरिएंटल प्लेन",
+      "description": "Platanus orientalis एक पर्णपाती पेड़ है जो दक्षिण-पूर्वी यूरोप और पश्चिमी एशिया का मूल निवासी है। इसे सामान्यतः पार्कों और सड़कों के किनारे पाया जाता है."
     },
     "zh": {
       "common_name": "东方悬铃木",
-      "description": "Platanus orientalis 是一种原产于东南欧洲和西亚的大型落叶树。以其独特的剥落树皮和大型掌状叶子而闻名。"
+      "description": "Platanus orientalis 是一种落叶树，原产于东南欧和西亚。常见于公园和道路旁边。"
     },
     "ja": {
       "common_name": "オリエンタルプラタナス",
-      "description": "Platanus orientalis は東南ヨーロッパと西アジアに自生する大きな落葉樹です。特徴的な皮が剥がれる幹と大きな手のひら状の葉で知られています。"
+      "description": "Platanus orientalis は、南東ヨーロッパおよび西アジア原産の落葉樹です。公園や道路脇でよく見かけます。"
     },
     "ko": {
       "common_name": "동양 플라타너스",
-      "description": "Platanus orientalis는 동남유럽과 서아시아 원산의 큰 낙엽수입니다. 독특한 벗겨지는 껍질과 큰 손바닥 모양의 잎으로 유명합니다."
+      "description": "Platanus orientalis는 동남유럽과 서아시아 원산지인 낙엽수입니다. 공원과 도로변에서 자주 볼 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/platanus-orientalis",
-      "https://www.botanicgardens.ie/plants/platanus-orientalis"
+      "https://www.rhs.org.uk/advice/profile?pid=576",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/how-to-care-for-plane-trees/"
     ]
   }
 }

@@ -1,22 +1,23 @@
 {
   "external_id": "hoya_pubicalyx",
-  "name": "Hoya Pubicalyx",
+  "name": "Hoya pubicalyx",
   "latin": "Hoya pubicalyx",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "aroid",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy orchid mix",
-          "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroid",
+          "de": "Aroid-Erde",
+          "fr": "Mélange aroid",
+          "it": "Miscela aroid",
+          "es": "Mezcla aroid",
+          "pt": "Mistura aroid",
+          "ar": "مزيج أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water when dry",
-          "pl": "Podlewaj po przeschnięciu",
-          "de": "Gießen bei Trockenheit",
-          "fr": "Arroser après séchage",
-          "it": "Annaffiare a secco",
-          "es": "Regar al secarse",
-          "pt": "Regar ao secar",
-          "ar": "الري بعد الجفاف",
-          "hi": "सूखने पर पानी",
-          "zh": "干后浇水",
-          "ja": "乾いたら水やり",
-          "ko": "마르면 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26 °C",
-          "pl": "18–26 °C",
-          "de": "18–26 °C",
-          "fr": "18–26 °C",
-          "it": "18–26 °C",
-          "es": "18–26 °C",
-          "pt": "18–26 °C",
-          "ar": "18–26 °C",
-          "hi": "18–26 °C",
-          "zh": "18–26 °C",
-          "ja": "18–26 °C",
-          "ko": "18–26 °C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal indoor air",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Raumluft",
-          "fr": "Air ambiant normal",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing vine",
-          "pl": "Pnącze",
-          "de": "Kletterpflanze",
-          "fr": "Plante grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "نبات متسلق",
-          "hi": "चढ़ने वाली बेल",
-          "zh": "攀援生长",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wax Plant",
-      "description": "Hoya pubicalyx is a tropical climbing plant with thick, waxy leaves and fragrant star-shaped flowers. It prefers bright, indirect light and well-draining soil. Allow the substrate to dry slightly between waterings."
+      "common_name": "Porcelain Flower",
+      "description": "Hoya pubicalyx is a beautiful climbing plant native to the Philippines. It is known for its star-shaped flowers with a sweet fragrance."
     },
     "pl": {
-      "common_name": "Hoja woskownica",
-      "description": "Hoya pubicalyx to tropikalne pnącze o grubych, woskowych liściach i pachnących kwiatach. Najlepiej rośnie w jasnym, rozproszonym świetle i przepuszczalnym podłożu. Podlewaj po lekkim przeschnięciu ziemi."
+      "common_name": "Kwiat porcelanowy",
+      "description": "Hoya pubicalyx to piękna roślina pnąca, pochodząca z Filipin. Jest znana z gwiazdkowatych kwiatów o słodkim zapachu."
     },
     "de": {
-      "common_name": "Wachsblume",
-      "description": "Hoya pubicalyx ist eine tropische Kletterpflanze mit wachsartigen Blättern und duftenden Blüten. Sie bevorzugt helles, indirektes Licht und durchlässiges Substrat. Zwischen den Wassergaben leicht antrocknen lassen."
+      "common_name": "Porzellanblume",
+      "description": "Hoya pubicalyx ist eine schöne Kletterpflanze aus den Philippinen. Sie ist bekannt für ihre sternförmigen Blüten mit einem süßen Duft."
     },
     "fr": {
-      "common_name": "Fleur de cire",
-      "description": "Hoya pubicalyx est une plante tropicale grimpante aux feuilles épaisses et fleurs parfumées. Elle aime la lumière indirecte et un substrat drainant. Laisser sécher légèrement entre les arrosages."
+      "common_name": "Fleur de porcelaine",
+      "description": "Hoya pubicalyx est une belle plante grimpante originaire des Philippines. Elle est connue pour ses fleurs en forme d'étoile au parfum sucré."
     },
     "it": {
-      "common_name": "Fiore di cera",
-      "description": "Hoya pubicalyx è una pianta tropicale rampicante con foglie cerose e fiori profumati. Preferisce luce indiretta e substrato ben drenato. Annaffiare solo dopo parziale asciugatura."
+      "common_name": "Fiore di porcellana",
+      "description": "Hoya pubicalyx è una bellissima pianta rampicante originaria delle Filippine. È nota per i suoi fiori a forma di stella con una dolce fragranza."
     },
     "es": {
-      "common_name": "Flor de cera",
-      "description": "Hoya pubicalyx es una planta tropical trepadora con hojas cerosas y flores fragantes. Crece mejor con luz indirecta y sustrato drenante. Regar cuando el sustrato esté parcialmente seco."
+      "common_name": "Flor de porcelana",
+      "description": "Hoya pubicalyx es una hermosa planta trepadora originaria de Filipinas. Es conocida por sus flores en forma de estrella con un dulce aroma."
     },
     "pt": {
-      "common_name": "Flor-de-cera",
-      "description": "Hoya pubicalyx é uma planta tropical trepadeira com folhas cerosas e flores perfumadas. Prefere luz indireta e substrato bem drenado. Regar após leve secagem do solo."
+      "common_name": "Flor de porcelana",
+      "description": "Hoya pubicalyx é uma bela planta trepadeira originária das Filipinas. É conhecida pelas suas flores em forma de estrela com um doce aroma."
     },
     "ar": {
-      "common_name": "نبات الشمع",
-      "description": "هويا بوبكاليكس نبات استوائي متسلق بأوراق شمعية وأزهار عطرية. يفضل الضوء الساطع غير المباشر وتربة جيدة التصريف. يُسقى بعد جفاف التربة جزئياً."
+      "common_name": "زهرة الخزف",
+      "description": "Hoya pubicalyx هي نبات متسلق جميل من الفلبين. تشتهر بزهورها ذات الشكل النجمي وعطرها الحلو."
     },
     "hi": {
-      "common_name": "वैक्स प्लांट",
-      "description": "Hoya pubicalyx एक उष्णकटिबंधीय चढ़ने वाला पौधा है जिसमें मोटी मोमी पत्तियाँ और सुगंधित फूल होते हैं। इसे अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद है। मिट्टी सूखने पर ही पानी दें।"
+      "common_name": "पोर्सिलन फूल",
+      "description": "Hoya pubicalyx एक सुंदर चढ़ाई करने वाला पौधा है जो फिलीपींस का मूल निवासी है। यह अपने तारों के आकार के फूलों के लिए जाना जाता है जो मीठी खुशबू फैलाते हैं।"
     },
     "zh": {
-      "common_name": "球兰",
-      "description": "Hoya pubicalyx 是一种热带攀援植物，具有蜡质叶片和芳香花朵。适合明亮的散射光和排水良好的基质。浇水前让基质稍微干燥。"
+      "common_name": "瓷花",
+      "description": "Hoya pubicalyx 是一种美丽的藤本植物，原产于菲律宾。它以其星形花朵和甜美的香气而闻名。"
     },
     "ja": {
-      "common_name": "ホヤ",
-      "description": "Hoya pubicalyx は厚い葉と芳香のある花を持つ熱帯性のつる植物です。明るい間接光と水はけの良い土を好みます。土が少し乾いてから水やりします。"
+      "common_name": "磁器の花",
+      "description": "Hoya pubicalyxはフィリピン原産の美しいつる植物です。星形の花と甘い香りで知られています。"
     },
     "ko": {
-      "common_name": "호야",
-      "description": "Hoya pubicalyx는 두꺼운 잎과 향기로운 꽃을 가진 열대 덩굴식물입니다. 밝은 간접광과 배수가 좋은 토양을 선호합니다. 흙이 약간 마른 후 물을 주세요."
+      "common_name": "도자기 꽃",
+      "description": "Hoya pubicalyx는 필리핀 원산지의 아름다운 덩굴 식물입니다. 별 모양의 꽃과 달콤한 향기로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/9151/hoya-pubicalyx/details",
-      "https://edis.ifas.ufl.edu/publication/EP347",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/"
+      "https://www.rhs.org.uk/Plants/106569/Hoya-pubicalyx/Details",
+      "https://www.gardenia.net/plant/Hoya-pubicalyx"
     ]
   }
 }

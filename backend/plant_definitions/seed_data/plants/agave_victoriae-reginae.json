@@ -1,6 +1,6 @@
 {
-  "external_id": "agave_victoriae_reginae",
-  "name": "Queen Victoria Agave",
+  "external_id": "agave_victoriae-reginae",
+  "name": "Queen Victoria agave",
   "latin": "Agave victoriae-reginae",
   "sun": "high",
   "water": "low",
@@ -10,7 +10,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -35,10 +35,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "日なた",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Cactus mix",
+          "pl": "Podłoże kaktusowe",
+          "de": "Kakteenerde",
+          "fr": "Terre cactus",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactos",
+          "ar": "تربة صبارات",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "多肉土",
+          "ja": "多肉用土",
+          "ko": "다육이 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Skąpe",
-          "de": "Gering",
-          "fr": "Faible",
-          "it": "Scarso",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "少なめ",
-          "ko": "적음"
+          "en": "Let dry, then water",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Erst trocken, dann",
+          "fr": "Arroser après sec",
+          "it": "Annaffia da secco",
+          "es": "Riega tras secar",
+          "pt": "Regue após secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "마른 뒤 물"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Trockene Luft",
+          "fr": "Air sec",
+          "it": "Aria secca",
+          "es": "Aire seco",
+          "pt": "Ar seco",
+          "ar": "هواء جاف",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "乾燥気味",
+          "ko": "건조한 공기"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Irritant sap",
+          "pl": "Drażniący sok",
+          "de": "Reizender Saft",
+          "fr": "Sève irritante",
+          "it": "Linfa irritante",
+          "es": "Savia irritante",
+          "pt": "Seiva irritante",
+          "ar": "عصارة مهيِّجة",
+          "hi": "रस जलनकारी",
+          "zh": "汁液刺激",
+          "ja": "樹液は刺激性",
+          "ko": "수액 자극성"
         }
       }
     },
@@ -161,76 +161,115 @@
       "value": {
         "text": {
           "en": "Slow",
-          "pl": "Wolny",
+          "pl": "Wolny wzrost",
           "de": "Langsam",
           "fr": "Lente",
           "it": "Lenta",
           "es": "Lento",
           "pt": "Lento",
           "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "hi": "धीमा",
+          "zh": "生长慢",
+          "ja": "成長は遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Łatwo gnije",
+          "de": "Fäulnisgefahr",
+          "fr": "Pourriture",
+          "it": "Marciume",
+          "es": "Pudrición",
+          "pt": "Apodrecimento",
+          "ar": "تعفن الجذور",
+          "hi": "सड़न का खतरा",
+          "zh": "易烂根",
+          "ja": "根腐れ注意",
+          "ko": "뿌리썩음 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي/قشريات",
+          "hi": "मिलीबग/स्केल",
+          "zh": "粉蚧/介壳虫",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레류"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Queen Victoria Agave",
-      "description": "Agave victoriae-reginae is a compact succulent native to arid regions of Mexico. It forms a symmetrical rosette with dark green leaves edged in white. The plant prefers bright sun and infrequent watering."
+      "common_name": "Queen Victoria agave",
+      "description": "A compact, slow-growing agave with stiff, dark green leaves marked by white lines. Give it very bright light and let the potting mix dry out fully before watering. Keep it warm and dry, and avoid cold, wet soil to reduce rot risk."
     },
     "pl": {
       "common_name": "Agawa królowej Wiktorii",
-      "description": "Agave victoriae-reginae to zwarta sukulenta z suchych rejonów Meksyku. Tworzy symetryczną rozetę z ciemnozielonych liści z białymi krawędziami. Wymaga dużo słońca i rzadkiego podlewania."
+      "description": "Zwarta, wolno rosnąca agawa o sztywnych, ciemnozielonych liściach z białymi liniami. Zapewnij bardzo jasne stanowisko i podlewaj dopiero po całkowitym wyschnięciu podłoża. Trzymaj w cieple i sucho, a zimą ogranicz wodę, by uniknąć gnicia."
     },
     "de": {
       "common_name": "Königin-Victoria-Agave",
-      "description": "Agave victoriae-reginae ist eine kompakte Sukkulente aus trockenen Regionen Mexikos. Sie bildet eine symmetrische Rosette mit dunkelgrünen Blättern und weißen Rändern. Bevorzugt Sonne und wenig Wasser."
+      "description": "Eine kompakte, langsam wachsende Agave mit steifen, dunkelgrünen Blättern und weißen Zeichnungen. Sehr hell stellen und erst gießen, wenn das Substrat vollständig trocken ist. Warm und eher trocken halten; Staunässe fördert Fäulnis."
     },
     "fr": {
       "common_name": "Agave de la reine Victoria",
-      "description": "Agave victoriae-reginae est une succulente compacte originaire des régions arides du Mexique. Elle forme une rosette symétrique aux feuilles vert foncé bordées de blanc. Elle aime le plein soleil et peu d’arrosage."
+      "description": "Agave compacte à croissance lente, aux feuilles rigides vert foncé avec des marques blanches. Placez-la en lumière très vive et arrosez seulement lorsque le substrat est totalement sec. Gardez-la au chaud et au sec pour limiter la pourriture."
     },
     "it": {
-      "common_name": "Agave della regina Vittoria",
-      "description": "Agave victoriae-reginae è una succulenta compatta originaria delle zone aride del Messico. Forma una rosetta simmetrica con foglie verde scuro bordate di bianco. Preferisce sole intenso e annaffiature rare."
+      "common_name": "Agave regina Vittoria",
+      "description": "Agave compatta e a crescita lenta con foglie rigide verde scuro e segni bianchi. Mettila in luce molto intensa e annaffia solo quando il terriccio è completamente asciutto. Tienila calda e asciutta per ridurre il rischio di marciume."
     },
     "es": {
       "common_name": "Agave reina Victoria",
-      "description": "Agave victoriae-reginae es una suculenta compacta originaria de regiones áridas de México. Forma una roseta simétrica con hojas verde oscuro y bordes blancos. Requiere mucho sol y riego escaso."
+      "description": "Agave compacta y de crecimiento lento, con hojas rígidas verde oscuro y líneas blancas. Colócala con mucha luz y riega solo cuando el sustrato esté totalmente seco. Manténla cálida y seca para evitar pudriciones."
     },
     "pt": {
       "common_name": "Agave rainha Vitória",
-      "description": "Agave victoriae-reginae é uma suculenta compacta nativa de regiões áridas do México. Forma uma roseta simétrica com folhas verde-escuras e bordas brancas. Prefere sol pleno e pouca água."
+      "description": "Agave compacta e de crescimento lento, com folhas rígidas verde-escuras e marcas brancas. Dê muita luz e regue apenas quando o substrato estiver totalmente seco. Mantenha em ambiente quente e seco para reduzir apodrecimento."
     },
     "ar": {
       "common_name": "أغاف الملكة فيكتوريا",
-      "description": "نبات Agave victoriae-reginae عصاري مدمج موطنه المناطق الجافة في المكسيك. يشكل وردة متماثلة بأوراق خضراء داكنة ذات حواف بيضاء. يحتاج إلى شمس قوية وري محدود."
+      "description": "نبات أغاف مدمج وبطيء النمو بأوراق صلبة خضراء داكنة مع خطوط بيضاء. يحتاج إلى ضوء قوي جدًا ويُسقى فقط بعد جفاف التربة تمامًا. يُحفظ دافئًا وجافًا لأن زيادة الماء قد تسبب تعفنًا."
     },
     "hi": {
-      "common_name": "क्वीन विक्टोरिया एगेव",
-      "description": "Agave victoriae-reginae मेक्सिको के शुष्क क्षेत्रों का एक सघन रसीला पौधा है। यह सफेद किनारों वाली गहरे हरे पत्तों की सममित रोसेट बनाता है। इसे तेज धूप और कम पानी चाहिए।"
+      "common_name": "क्वीन विक्टोरिया अगावे",
+      "description": "यह एक सघन, धीमी बढ़त वाली अगावे है जिसकी पत्तियाँ कठोर और गहरे हरे रंग की होती हैं तथा उन पर सफेद रेखाएँ होती हैं। तेज रोशनी दें और मिट्टी पूरी तरह सूखने पर ही पानी दें। गर्म और सूखा रखें; अधिक पानी से सड़न का खतरा बढ़ता है।"
     },
     "zh": {
       "common_name": "维多利亚女王龙舌兰",
-      "description": "Agave victoriae-reginae 原产于墨西哥干旱地区，是一种紧凑的多肉植物。它形成对称的莲座状，叶片深绿色并带白边。喜全日照和少量浇水。"
+      "description": "株型紧凑、生长缓慢，叶片坚硬深绿并带白色纹路。需要强光，基质完全干透后再浇水。保持温暖干燥，避免低温潮湿以减少烂根。"
     },
     "ja": {
       "common_name": "ビクトリアアガベ",
-      "description": "Agave victoriae-reginae はメキシコの乾燥地帯原産のコンパクトな多肉植物です。白い縁を持つ濃緑色の葉で対称的なロゼットを形成します。強い日光と少ない水を好みます。"
+      "description": "白い模様が入る硬い葉をもつ、コンパクトで成長の遅いアガベです。強い光に当て、用土が完全に乾いてから水やりします。低温で湿ると腐りやすいので、暖かく乾燥気味に管理します。"
     },
     "ko": {
-      "common_name": "빅토리아 아가베",
-      "description": "Agave victoriae-reginae는 멕시코의 건조 지역이 원산지인 소형 다육식물입니다. 흰 가장자리를 가진 진녹색 잎의 대칭 로제트를 형성합니다. 강한 햇빛과 적은 물을 선호합니다."
+      "common_name": "빅토리아아가베",
+      "description": "흰 무늬가 있는 단단한 잎을 가진, 작고 느리게 자라는 아가베입니다. 강한 빛을 주고 흙이 완전히 마른 뒤에만 물을 주세요. 차갑고 젖은 상태는 뿌리썩음을 부르므로 따뜻하고 건조하게 관리합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/agave-victoriae-reginae",
-      "https://www.rhs.org.uk/plants/agave/agave-victoriae-reginae/details",
-      "https://extension.arizona.edu/agave"
+      "https://www.rhs.org.uk/plants/698/agave-victoriae-reginae/details",
+      "https://www.gardeningknowhow.com/guest-bloggers/agave-victoriae-reginae-care-info",
+      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Agavaceae/415/Agave_victoriae-reginae",
+      "https://www.gardenersworld.com/plants/agave-victoriae-reginae/"
     ]
   }
 }

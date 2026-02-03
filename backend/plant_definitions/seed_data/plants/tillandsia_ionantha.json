@@ -1,6 +1,6 @@
 {
   "external_id": "tillandsia_ionantha",
-  "name": "Tillandsia ionantha",
+  "name": "Air Plant",
   "latin": "Tillandsia ionantha",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "tillandsia_ionantha.jpg",
   "image_thumb": "tillandsia_ionantha.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광선"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaskowa",
-          "de": "sandig",
-          "fr": "sableuse",
-          "it": "sabbiosa",
-          "es": "arenosa",
-          "pt": "arenoso",
-          "ar": "رملي",
-          "hi": "रेतीला",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 잘 되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Water weekly",
+          "pl": "Podlewać co tydzień",
+          "de": "Wöchentlich gießen",
+          "fr": "Arroser chaque semaine",
+          "it": "Annaffiare settimanalmente",
+          "es": "Regar semanalmente",
+          "pt": "Regar semanalmente",
+          "ar": "سقي أسبوعي",
+          "hi": "सप्ताह में एक बार पानी दें",
+          "zh": "每周浇水",
+          "ja": "週に一度水やり",
+          "ko": "주 1회 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中",
           "ko": "중간"
         }
       }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "false",
-          "pl": "fałsz",
-          "de": "falsch",
-          "fr": "faux",
-          "it": "falso",
-          "es": "falso",
-          "pt": "falso",
-          "ar": "خطأ",
-          "hi": "झूठ",
-          "zh": "假",
-          "ja": "偽",
-          "ko": "잘못"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez le trop-plein d'eau",
+          "it": "Evita l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Air Plant",
-      "description": "Tillandsia ionantha is a small, epiphytic plant native to Central America. It has rosettes of narrow, green leaves that turn bright red when flowering, with purple blooms."
+      "description": "Tillandsia ionantha, commonly known as the air plant, thrives with minimal care. It requires bright, indirect light and weekly watering."
     },
     "pl": {
-      "common_name": "Rośliny powietrzne",
-      "description": "Tillandsia ionantha to mała roślina epifityczna pochodząca z Ameryki Środkowej. Ma rozetki wąskich zielonych liści, które stają się jaskrawo czerwone podczas kwitnienia, z fioletowymi kwiatami."
+      "common_name": "Roślina powietrzna",
+      "description": "Tillandsia ionantha, znana jako roślina powietrzna, rośnie przy minimalnej pielęgnacji. Wymaga jasnego, pośredniego światła i cotygodniowego podlewania."
     },
     "de": {
       "common_name": "Luftpflanze",
-      "description": "Tillandsia ionantha ist eine kleine, epiphytische Pflanze aus Mittelamerika. Sie hat Rosetten aus schmalen grünen Blättern, die beim Blühen leuchtend rot werden, mit lila Blüten."
+      "description": "Tillandsia ionantha, auch als Luftpflanze bekannt, gedeiht mit minimaler Pflege. Sie benötigt helles, indirektes Licht und wöchentliche Bewässerung."
     },
     "fr": {
       "common_name": "Plante aérienne",
-      "description": "Tillandsia ionantha est une petite plante épiphyte originaire d'Amérique centrale. Elle a des rosettes de feuilles étroites et vertes qui deviennent rouges vives lors de la floraison, avec des fleurs violettes."
+      "description": "Tillandsia ionantha, connue sous le nom de plante aérienne, prospère avec peu de soins. Elle nécessite une lumière vive et indirecte et un arrosage hebdomadaire."
     },
     "it": {
       "common_name": "Pianta aerea",
-      "description": "Tillandsia ionantha è una piccola pianta epifita originaria dell'America centrale. Ha rosette di foglie strette e verdi che diventano rosse brillanti quando fiorisce, con fiori viola."
+      "description": "Tillandsia ionantha, conosciuta come pianta aerea, cresce con poca cura. Richiede luce indiretta e annaffiature settimanali."
     },
     "es": {
       "common_name": "Planta aérea",
-      "description": "Tillandsia ionantha es una pequeña planta epífita originaria de América Central. Tiene rosetas de hojas estrechas y verdes que se vuelven rojas brillantes cuando florece, con flores moradas."
+      "description": "Tillandsia ionantha, conocida como planta aérea, prospera con cuidados mínimos. Requiere luz brillante e indirecta y riego semanal."
     },
     "pt": {
       "common_name": "Planta aérea",
-      "description": "Tillandsia ionantha é uma pequena planta epífita originária da América Central. Possui rosetas de folhas estreitas e verdes que ficam vermelhas brilhantes durante a floração, com flores roxas."
+      "description": "Tillandsia ionantha, conhecida como planta aérea, cresce com poucos cuidados. Necessita de luz indireta e rega semanal."
     },
     "ar": {
-      "common_name": "نبات هوائي",
-      "description": "Tillandsia ionantha هو نبات صغير يفضل النمو على الأشجار في أمريكا الوسطى. يتميز بأوراق ضيقة خضراء تتحول إلى الأحمر الزاهي أثناء الإزهار، مع أزهار أرجوانية."
+      "common_name": "النبات الهوائي",
+      "description": "Tillandsia ionantha، المعروف بالنبات الهوائي، يزدهر مع الحد الأدنى من الرعاية. يحتاج إلى ضوء غير مباشر ساطع وري أسبوعي."
     },
     "hi": {
-      "common_name": "वायु संयंत्र",
-      "description": "Tillandsia ionantha एक छोटा, एपिफाइटिक पौधा है जो मध्य अमेरिका का मूल निवासी है। इसमें संकीर्ण हरी पत्तियाँ होती हैं जो फूलने पर चमकीले लाल हो जाती हैं, और बैंगनी फूल होते हैं।"
+      "common_name": "वायु पौधा",
+      "description": "Tillandsia ionantha, जिसे वायु पौधा कहा जाता है, न्यूनतम देखभाल के साथ बढ़ता है। इसे चमकीले, अप्रत्यक्ष प्रकाश की आवश्यकता होती है और साप्ताहिक पानी देना पड़ता है।"
     },
     "zh": {
       "common_name": "空气植物",
-      "description": "Tillandsia ionantha 是一种小型附生植物，原产于中美洲。它具有狭窄的绿色叶子，在开花时变成鲜艳的红色，开出紫色的花朵。"
+      "description": "Tillandsia ionantha，通常被称为空气植物，需最少的护理。它需要明亮的间接光和每周浇水。"
     },
     "ja": {
-      "common_name": "エアプラント",
-      "description": "Tillandsia ionantha は中米原産の小型の着生植物です。細長い緑の葉を持ち、花が咲くと鮮やかな赤色に変わり、紫色の花を咲かせます。"
+      "common_name": "エアプランツ",
+      "description": "Tillandsia ionantha、通称エアプランツは、最小限の手入れで成長します。明るい間接光と週に一度の水やりが必要です。"
     },
     "ko": {
-      "common_name": "공기 식물",
-      "description": "Tillandsia ionantha는 중미가 원산지인 작은 착생 식물입니다. 좁은 녹색 잎을 가지고 있으며 꽃이 피면 선명한 빨간색으로 변하고, 보라색 꽃이 피납니다."
+      "common_name": "에어 플랜트",
+      "description": "Tillandsia ionantha, 일반적으로 에어 플랜트로 알려진 이 식물은 최소한의 관리로 자랍니다. 밝은 간접광과 주간 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/air-plant-tillandsia-ionantha",
-      "https://www.rhs.org.uk/plants/tillandsia-ionantha"
+      "https://www.rhs.org.uk/advice/profile?pid=756",
+      "https://www.gardenia.net/plant/tillandsia-ionantha-air-plant"
     ]
   }
 }

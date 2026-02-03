@@ -2,23 +2,24 @@
   "external_id": "fragaria_vesca",
   "name": "Wild Strawberry",
   "latin": "Fragaria vesca",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "fragaria_vesca.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna gleba",
-          "de": "Nährreicher Boden",
-          "fr": "Sol riche",
-          "it": "Terreno fertile",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowana wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humidité régulière",
-          "it": "Umidità costante",
-          "es": "Humedad regular",
-          "pt": "Umidade regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "नियमित नमी",
-          "zh": "均匀湿润",
-          "ja": "適度な水分",
-          "ko": "고른 수분"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -94,9 +95,9 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "简单",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "15-24°C",
+          "pl": "15-24°C",
+          "de": "15-24°C",
+          "fr": "15-24°C",
+          "it": "15-24°C",
+          "es": "15-24°C",
+          "pt": "15-24°C",
+          "ar": "15-24°C",
+          "hi": "15-24°C",
+          "zh": "15-24°C",
+          "ja": "15-24°C",
+          "ko": "15-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -143,16 +144,16 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषैला नहीं",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "무독성"
         }
       }
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low spreading",
-          "pl": "Niska, płożąca",
-          "de": "Niedrig kriechend",
-          "fr": "Bas étalé",
-          "it": "Bassa espansa",
-          "es": "Bajo rastrero",
-          "pt": "Baixo rasteiro",
-          "ar": "منخفض ممتد",
-          "hi": "नीची फैलती",
-          "zh": "低矮蔓生",
-          "ja": "低く広がる",
-          "ko": "낮게 퍼짐"
+          "en": "Ground cover",
+          "pl": "Pokrycie ziemi",
+          "de": "Bodenbedeckung",
+          "fr": "Couverture du sol",
+          "it": "Copertura del terreno",
+          "es": "Cobertura del suelo",
+          "pt": "Cobertura do solo",
+          "ar": "غطاء أرضي",
+          "hi": "भूमि आवरण",
+          "zh": "地面覆盖",
+          "ja": "地面カバー",
+          "ko": "지면 덮개"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccessiva irrigazione",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Wild Strawberry",
-      "description": "Fragaria vesca is a low-growing perennial native to Europe and parts of Asia. It produces small, aromatic red fruits and prefers sunny locations with fertile soil."
+      "description": "A small, perennial plant that produces sweet, red berries. Often found in wild gardens or as a ground cover."
     },
     "pl": {
-      "common_name": "Poziomka pospolita",
-      "description": "Fragaria vesca to niska bylina pochodząca z Europy i Azji. Wytwarza małe, aromatyczne owoce i najlepiej rośnie w słońcu oraz żyznej glebie."
+      "common_name": "Truskawka leśna",
+      "description": "Mała, wieloletnia roślina produkująca słodkie, czerwone jagody. Często spotykana w ogrodach dzikich lub jako pokrycie ziemi."
     },
     "de": {
-      "common_name": "Walderdbeere",
-      "description": "Fragaria vesca ist eine niedrig wachsende Staude aus Europa und Asien. Sie bildet kleine, aromatische Früchte und bevorzugt sonnige, nährstoffreiche Böden."
+      "common_name": "Wilde Erdbeere",
+      "description": "Eine kleine, mehrjährige Pflanze, die süße, rote Beeren produziert. Oft in wilden Gärten oder als Bodenbedeckung zu finden."
     },
     "fr": {
-      "common_name": "Fraisier des bois",
-      "description": "Fragaria vesca est une plante vivace basse originaire d’Europe et d’Asie. Elle produit de petits fruits parfumés et aime les sols riches au soleil."
+      "common_name": "Fraise des bois",
+      "description": "Une petite plante vivace qui produit des baies rouges et sucrées. Souvent trouvée dans les jardins sauvages ou comme couverture du sol."
     },
     "it": {
-      "common_name": "Fragolina di bosco",
-      "description": "Fragaria vesca è una pianta perenne bassa originaria dell’Europa e dell’Asia. Produce piccoli frutti aromatici e cresce bene in pieno sole con terreno fertile."
+      "common_name": "Fragola selvatica",
+      "description": "Una piccola pianta perenne che produce bacche rosse e dolci. Spesso trovata nei giardini selvatici o come copertura del terreno."
     },
     "es": {
       "common_name": "Fresa silvestre",
-      "description": "Fragaria vesca es una planta perenne baja originaria de Europa y Asia. Da frutos pequeños y aromáticos y prefiere suelos fértiles y soleados."
+      "description": "Una pequeña planta perenne que produce bayas rojas y dulces. Se encuentra a menudo en jardines silvestres o como cobertura del suelo."
     },
     "pt": {
-      "common_name": "Morango-silvestre",
-      "description": "Fragaria vesca é uma planta perene de baixo crescimento nativa da Europa e Ásia. Produz frutos pequenos e aromáticos e prefere sol pleno e solo fértil."
+      "common_name": "Morango silvestre",
+      "description": "Uma pequena planta perene que produz frutos vermelhos e doces. Frequentemente encontrada em jardins silvestres ou como cobertura do solo."
     },
     "ar": {
-      "common_name": "فراولة برية",
-      "description": "Fragaria vesca نبات معمر منخفض النمو موطنه أوروبا وأجزاء من آسيا. ينتج ثمارًا صغيرة عطرية ويفضل التربة الخصبة والمواقع المشمسة."
+      "common_name": "الفراولة البرية",
+      "description": "نبات معمر صغير ينتج توتًا أحمر حلو. يوجد غالبًا في الحدائق البرية أو كغطاء للأرض."
     },
     "hi": {
       "common_name": "जंगली स्ट्रॉबेरी",
-      "description": "Fragaria vesca यूरोप और एशिया की मूल निवासी एक छोटी बहुवर्षीय पौधा है। यह छोटे सुगंधित फल देता है और धूप व उपजाऊ मिट्टी पसंद करता है।"
+      "description": "एक छोटा, द्विवार्षिक पौधा जो मीठे, लाल बेरियां पैदा करता है। यह अक्सर जंगली बागों में या भूमि आवरण के रूप में पाया जाता है।"
     },
     "zh": {
-      "common_name": "林地草莓",
-      "description": "Fragaria vesca 是原产于欧洲和亚洲的低矮多年生植物。它结出小而芳香的红色果实，适合在阳光充足和肥沃土壤中生长。"
+      "common_name": "野草莓",
+      "description": "一种小型多年生植物，结出甜美的红色浆果。常见于野生花园或作为地面覆盖。"
     },
     "ja": {
-      "common_name": "ノウゴウイチゴ",
-      "description": "Fragaria vesca はヨーロッパやアジア原産の多年草です。小さく香りの良い果実をつけ、日当たりと肥沃な土を好みます。"
+      "common_name": "野いちご",
+      "description": "小さな多年草で、甘くて赤いベリーを生産します。野生の庭や地面カバーとしてよく見られます。"
     },
     "ko": {
-      "common_name": "야생딸기",
-      "description": "Fragaria vesca는 유럽과 아시아가 원산인 낮게 자라는 다년생 식물입니다. 향기로운 작은 열매를 맺으며 햇빛과 비옥한 토양을 선호합니다."
+      "common_name": "야생 딸기",
+      "description": "작고 다년생 식물로 달콤한 빨간 열매를 맺습니다. 종종 야생 정원이나 땅 덮개로 발견됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/fragaria/vesca/details",
-      "https://plants.ces.ncsu.edu/plants/fragaria-vesca/",
-      "https://www.kew.org/plants/fragaria-vesca"
+      "https://www.rhs.org.uk/advice/profile?pid=850",
+      "https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-wild-strawberries.htm"
     ]
   }
 }

@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
+          "ja": "日光が必要",
+          "ko": "햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "barro",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
+          "zh": "适度",
           "ja": "中程度",
-          "ko": "중간"
+          "ko": "보통"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-28°C",
-          "pl": "22-28°C",
-          "de": "22-28°C",
-          "fr": "22-28°C",
-          "it": "22-28°C",
-          "es": "22-28°C",
-          "pt": "22-28°C",
-          "ar": "22-28°C",
-          "hi": "22-28°C",
-          "zh": "22-28°C",
-          "ja": "22-28°C",
-          "ko": "22-28°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,13 +124,13 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات",
+          "hi": "पेट्स के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधारणात्मक कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Bird of Paradise",
-      "description": "Strelitzia reginae, also known as Bird of Paradise, is a striking tropical plant. It produces large, colorful flowers resembling birds in flight."
+      "description": "The Bird of Paradise is a striking plant known for its vibrant flowers. It thrives in full sun and requires moderate watering."
     },
     "pl": {
       "common_name": "Rajski Ptak",
-      "description": "Strelitzia reginae, znana również jako Rajski Ptak, to niezwykła roślina tropikalna. Wytwarza duże, kolorowe kwiaty przypominające ptaki w locie."
+      "description": "Rajski Ptak to roślina o imponujących kwiatach. Lubi pełne słońce i umiarkowane podlewanie."
     },
     "de": {
       "common_name": "Paradiesvogelblume",
-      "description": "Strelitzia reginae, auch Paradiesvogelblume genannt, ist eine auffällige tropische Pflanze. Sie produziert große, bunte Blumen, die Vögeln im Flug ähneln."
+      "description": "Die Paradiesvogelblume ist bekannt für ihre auffälligen Blumen. Sie gedeiht in voller Sonne und benötigt mäßiges Gießen."
     },
     "fr": {
       "common_name": "Oiseau de paradis",
-      "description": "Strelitzia reginae, également appelé Oiseau de paradis, est une plante tropicale remarquable. Elle produit de grandes fleurs colorées ressemblant à des oiseaux en vol."
+      "description": "L'oiseau de paradis est une plante remarquable avec des fleurs vibrantes. Elle prospère sous plein soleil et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Uccello del paradiso",
-      "description": "Strelitzia reginae, noto anche come Uccello del paradiso, è una pianta tropicale straordinaria. Produce fiori grandi e colorati che somigliano a uccelli in volo."
+      "description": "L'uccello del paradiso è una pianta straordinaria con fiori vivaci. Cresce meglio al sole pieno e richiede un'irrigazione moderata."
     },
     "es": {
-      "common_name": "Ave del Paraíso",
-      "description": "Strelitzia reginae, también conocida como Ave del Paraíso, es una planta tropical llamativa. Produce grandes flores coloridas que se asemejan a aves en vuelo."
+      "common_name": "Ave del paraíso",
+      "description": "El ave del paraíso es una planta llamativa con flores vibrantes. Crece mejor con sol directo y requiere riego moderado."
     },
     "pt": {
       "common_name": "Ave do Paraíso",
-      "description": "Strelitzia reginae, também conhecida como Ave do Paraíso, é uma planta tropical impressionante. Produz flores grandes e coloridas que se assemelham a aves em voo."
+      "description": "A Ave do Paraíso é uma planta notável com flores vibrantes. Ela cresce bem sob sol pleno e precisa de rega moderada."
     },
     "ar": {
       "common_name": "طائر الجنة",
-      "description": "Strelitzia reginae، والمعروفة أيضًا باسم طائر الجنة، هي نبات استوائي لافت. تنتج أزهارًا كبيرة وملونة تشبه الطيور أثناء الطيران."
+      "description": "طائر الجنة هو نبات لافت للنظر مع زهور نابضة بالحياة. ينمو جيدًا تحت الشمس الكاملة ويتطلب سقاية معتدلة."
     },
     "hi": {
       "common_name": "स्वर्ग का पक्षी",
-      "description": "Strelitzia reginae, जिसे स्वर्ग का पक्षी भी कहा जाता है, एक अद्भुत उष्णकटिबंधीय पौधा है। यह बड़ी, रंगीन फूलों का उत्पादन करता है जो उड़ते हुए पक्षियों की तरह दिखते हैं।"
+      "description": "स्वर्ग का पक्षी एक आकर्षक पौधा है जिसकी रंगीन फूल होती हैं। यह पूरी धूप में उगता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "天堂鸟",
-      "description": "Strelitzia reginae，也叫天堂鸟，是一种引人注目的热带植物。它开出大而多彩的花朵，像飞翔的鸟类。"
+      "description": "天堂鸟是一种以鲜艳花朵著称的植物。它在充足阳光下茁壮成长，需要适度浇水。"
     },
     "ja": {
       "common_name": "極楽鳥花",
-      "description": "Strelitzia reginae、別名極楽鳥花は、目を引く熱帯植物です。飛んでいる鳥のような大きなカラフルな花を咲かせます。"
+      "description": "極楽鳥花は鮮やかな花で知られる印象的な植物です。完全な日光の下で育ち、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "천국의 새",
-      "description": "Strelitzia reginae, 또는 천국의 새는 눈에 띄는 열대 식물입니다. 비행하는 새처럼 생긴 크고 화려한 꽃을 피웁니다."
+      "description": "천국의 새는 화려한 꽃으로 유명한 인상적인 식물입니다. 이 식물은 완전한 햇빛에서 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1759/strelitzia-reginae/details",
-      "https://www.gardeningknowhow.com/ornamental/flowers/bird-of-paradise/bird-of-paradise-care.htm",
-      "https://www.bhg.com/gardening/pests-diseases-injuries/bird-of-paradise-care/"
+      "https://www.gardenersworld.com/plants/bird-of-paradise/",
+      "https://www.rhs.org.uk/advice/profile?pid=360"
     ]
   }
 }

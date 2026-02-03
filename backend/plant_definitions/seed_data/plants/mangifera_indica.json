@@ -1,20 +1,21 @@
 {
   "external_id": "mangifera_indica",
-  "name": "Mango Tree",
+  "name": "Mango",
   "latin": "Mangifera indica",
   "sun": "high",
   "water": "medium",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "citrus"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूर्ण सूर्य",
           "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "강한 햇빛"
+          "ja": "日光を好む",
+          "ko": "햇볕을 좋아함"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "정기적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당히"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गरम मौसम",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiarkowana wilgotność",
-          "de": "Mäßige Feuchte",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "適度な湿度",
-          "ko": "중간 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당히"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic sap",
-          "pl": "Lekko toksyczny sok",
-          "de": "Leicht giftig",
-          "fr": "Sève toxique",
-          "it": "Linfa tossica",
-          "es": "Savia tóxica",
-          "pt": "Seiva tóxica",
-          "ar": "عصارة سامة",
-          "hi": "हल्का विषाक्त",
-          "zh": "轻微毒性",
-          "ja": "樹液に毒性",
-          "ko": "수액 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성 있음"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Large tree",
-          "pl": "Duże drzewo",
-          "de": "Großer Baum",
-          "fr": "Grand arbre",
-          "it": "Albero grande",
-          "es": "Árbol grande",
-          "pt": "Árvore grande",
-          "ar": "شجرة كبيرة",
-          "hi": "बड़ा पेड़",
-          "zh": "大型乔木",
-          "ja": "大型の木",
-          "ko": "큰 나무"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "生长迅速",
+          "ja": "速成",
+          "ko": "빠르게 성장하는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita il sovrairrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水をやりすぎない",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Mango Tree",
-      "description": "Mangifera indica is a tropical fruit tree native to South Asia. It requires strong sunlight, warmth, and space to grow, making indoor cultivation challenging. The tree is best suited to greenhouses or warm outdoor climates."
+      "common_name": "Mango",
+      "description": "Mangifera indica, or Mango, is a tropical fruit tree known for its large, sweet fruits. It thrives in warm, sunny environments and requires regular watering but is sensitive to overwatering."
     },
     "pl": {
-      "common_name": "Drzewo mango",
-      "description": "Mangifera indica to tropikalne drzewo owocowe pochodzące z Azji Południowej. Wymaga silnego słońca, ciepła i przestrzeni, dlatego uprawa w domu jest trudna. Najlepiej rośnie w szklarniach lub ciepłym klimacie."
+      "common_name": "Mango",
+      "description": "Mangifera indica, czyli mango, to tropikalne drzewo owocowe, które jest znane z dużych, słodkich owoców. Rośnie w ciepłych, słonecznych warunkach i wymaga regularnego podlewania, ale jest wrażliwe na przelanie."
     },
     "de": {
-      "common_name": "Mangobaum",
-      "description": "Mangifera indica ist ein tropischer Obstbaum aus Südasien. Er benötigt viel Sonne, Wärme und Platz, was die Zimmerkultur erschwert. Geeignet ist er vor allem für Gewächshäuser oder warme Regionen."
+      "common_name": "Mango",
+      "description": "Mangifera indica, oder Mango, ist ein tropischer Obstbaum, der für seine großen, süßen Früchte bekannt ist. Er gedeiht in warmen, sonnigen Umgebungen und benötigt regelmäßige Bewässerung, ist jedoch empfindlich gegenüber Staunässe."
     },
     "fr": {
-      "common_name": "Manguier",
-      "description": "Mangifera indica est un arbre fruitier tropical originaire d’Asie du Sud. Il demande beaucoup de soleil, de chaleur et d’espace, ce qui rend la culture intérieure difficile. Il est surtout adapté aux serres ou climats chauds."
+      "common_name": "Mangue",
+      "description": "Mangifera indica, ou Mangue, est un arbre fruitier tropical connu pour ses gros fruits sucrés. Il prospère dans des environnements chauds et ensoleillés et nécessite un arrosage régulier, mais il est sensible à l'excès d'eau."
     },
     "it": {
-      "common_name": "Albero di mango",
-      "description": "Mangifera indica è un albero da frutto tropicale originario dell’Asia meridionale. Richiede molto sole, calore e spazio, rendendo difficile la coltivazione in casa. È più adatto a serre o climi caldi."
+      "common_name": "Mango",
+      "description": "Mangifera indica, o Mango, è un albero da frutto tropicale noto per i suoi grandi frutti dolci. Cresce in ambienti caldi e soleggiati e richiede un'irrigazione regolare, ma è sensibile all'eccesso di acqua."
     },
     "es": {
-      "common_name": "Árbol de mango",
-      "description": "Mangifera indica es un árbol frutal tropical originario del sur de Asia. Necesita mucho sol, calor y espacio, por lo que su cultivo en interior es complicado. Es más adecuado para invernaderos o climas cálidos."
+      "common_name": "Mango",
+      "description": "Mangifera indica, o Mango, es un árbol frutal tropical conocido por sus grandes frutos dulces. Crece en ambientes cálidos y soleados y requiere riego regular, pero es sensible al exceso de riego."
     },
     "pt": {
-      "common_name": "Mangueira",
-      "description": "Mangifera indica é uma árvore frutífera tropical originária do sul da Ásia. Precisa de muito sol, calor e espaço, o que dificulta o cultivo interno. É mais indicada para estufas ou climas quentes."
+      "common_name": "Manga",
+      "description": "Mangifera indica, ou Manga, é uma árvore frutífera tropical conhecida pelos seus grandes frutos doces. Cresce em ambientes quentes e ensolarados e precisa de rega regular, mas é sensível ao excesso de água."
     },
     "ar": {
-      "common_name": "شجرة المانجو",
-      "description": "Mangifera indica شجرة فاكهة استوائية موطنها جنوب آسيا. تحتاج إلى شمس قوية وحرارة ومساحة، مما يجعل زراعتها داخل المنزل صعبة. تناسب البيوت الزجاجية أو المناخات الدافئة."
+      "common_name": "مانجو",
+      "description": "مانجيفيرا إنديكا، أو المانجو، هو شجرة فاكهة استوائية معروفة بثمارها الكبيرة والحلوة. تزدهر في البيئات الدافئة والمشمسة وتحتاج إلى ري منتظم ولكنها حساسة للإفراط في الري."
     },
     "hi": {
-      "common_name": "आम का पेड़",
-      "description": "Mangifera indica एक उष्णकटिबंधीय फलदार वृक्ष है जो दक्षिण एशिया का मूल निवासी है। इसे तेज धूप, गर्मी और जगह की आवश्यकता होती है, इसलिए घर के अंदर उगाना कठिन है। यह ग्रीनहाउस या गर्म जलवायु के लिए उपयुक्त है।"
+      "common_name": "आम",
+      "description": "मांगिफेरा इंडिका, या आम, एक उष्णकटिबंधीय फलदार वृक्ष है जिसे इसके बड़े, मीठे फलों के लिए जाना जाता है। यह गर्म, धूप वाले वातावरण में उगता है और नियमित पानी की आवश्यकता होती है, लेकिन यह अत्यधिक पानी से संवेदनशील है।"
     },
     "zh": {
-      "common_name": "芒果树",
-      "description": "Mangifera indica 是原产于南亚的热带果树。它需要充足阳光、温暖环境和较大空间，室内种植较为困难。更适合温室或温暖地区。"
+      "common_name": "芒果",
+      "description": "Mangifera indica，或芒果，是一种热带果树，以其大而甜的果实而闻名。它在温暖、阳光充足的环境中生长，需要定期浇水，但对过度浇水敏感。"
     },
     "ja": {
-      "common_name": "マンゴーの木",
-      "description": "Mangifera indica は南アジア原産の熱帯果樹です。強い日光と暖かさ、十分な空間が必要で、室内栽培は困難です。温室や暖かい地域に適しています。"
+      "common_name": "マンゴー",
+      "description": "マンギフェラ・インディカ、またはマンゴーは、大きくて甘い果実で知られる熱帯の果樹です。暖かく日当たりの良い環境で育ち、定期的な水やりが必要ですが、水のやりすぎには敏感です。"
     },
     "ko": {
-      "common_name": "망고나무",
-      "description": "Mangifera indica는 남아시아 원산의 열대 과일나무입니다. 강한 햇빛과 따뜻한 환경, 넓은 공간이 필요해 실내 재배는 어렵습니다. 온실이나 따뜻한 기후에 적합합니다."
+      "common_name": "망고",
+      "description": "Mangifera indica, 또는 망고는 큰 달콤한 과일로 유명한 열대 과일 나무입니다. 따뜻하고 햇볕이 잘 드는 환경에서 잘 자라며 정기적인 물주기가 필요하지만 과도한 물주기에 민감합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/mangifera-indica",
-      "https://edis.ifas.ufl.edu/publication/MG216",
-      "https://www.britannica.com/plant/mango-plant"
+      "https://www.gardenia.net/plant/mangifera-indica-mango",
+      "https://www.rhs.org.uk/advice/profile?pid=338"
     ]
   }
 }

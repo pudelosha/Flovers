@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -33,13 +33,13 @@
           "pl": "Pełne słońce",
           "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "أشعة الشمس الكاملة",
-          "hi": "पूरा सूरज",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
           "zh": "完全阳光",
-          "ja": "完全日光",
+          "ja": "完全な太陽",
           "ko": "완전한 햇빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy, sandy",
-          "pl": "Glinka, piaszczysta",
-          "de": "Lehmig, sandig",
-          "fr": "Argileuse, sableuse",
-          "it": "Argillosa, sabbiosa",
-          "es": "Arcillosa, arenosa",
-          "pt": "Argilosa, arenosa",
-          "ar": "طينية، رملية",
-          "hi": "कीलम, रेतीली",
-          "zh": "壤土, 沙土",
-          "ja": "粘土質、砂質",
-          "ko": "점토, 모래"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い",
+          "ko": "배수가 잘되는"
         }
       }
     },
@@ -69,7 +69,7 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig",
+          "de": "Moderat",
           "fr": "Modéré",
           "it": "Moderato",
           "es": "Moderado",
@@ -78,7 +78,7 @@
           "hi": "मध्यम",
           "zh": "适度",
           "ja": "適度",
-          "ko": "적당히"
+          "ko": "적당한"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中級",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climates",
-          "pl": "Ciepły klimat",
-          "de": "Warme Klimazonen",
-          "fr": "Climats chauds",
-          "it": "Climi caldi",
-          "es": "Climas cálidos",
-          "pt": "Climas quentes",
-          "ar": "المناخات الدافئة",
-          "hi": "गर्म जलवायु",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "10-30°C",
+          "pl": "10-30°C",
+          "de": "10-30°C",
+          "fr": "10-30°C",
+          "it": "10-30°C",
+          "es": "10-30°C",
+          "pt": "10-30°C",
+          "ar": "10-30°C",
+          "hi": "10-30°C",
+          "zh": "10-30°C",
+          "ja": "10-30°C",
+          "ko": "10-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low to medium",
-          "pl": "Niska do średniej",
-          "de": "Niedrig bis mittel",
-          "fr": "Faible à moyen",
-          "it": "Bassa a media",
-          "es": "Baja a media",
-          "pt": "Baixa a média",
-          "ar": "منخفض إلى متوسط",
-          "hi": "कम से मध्यम",
-          "zh": "低至中等",
-          "ja": "低いから中くらい",
-          "ko": "낮음에서 중간"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -164,16 +164,54 @@
         "text": {
           "en": "Fast-growing",
           "pl": "Szybko rosnący",
-          "de": "Schnellwachsend",
+          "de": "Schnell wachsend",
           "fr": "Croissance rapide",
           "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज़ी से बढ़ने वाला",
+          "hi": "तेजी से बढ़ने वाला",
           "zh": "快速生长",
-          "ja": "速成",
+          "ja": "速い成長",
           "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرातफरी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Black Locust",
-      "description": "The Black Locust is a fast-growing, deciduous tree native to eastern North America. Known for its fragrant white flowers and durable wood, it thrives in full sun and well-drained soils."
+      "description": "The Black Locust is a fast-growing tree native to North America. It is known for its fragrant white flowers and thorny branches."
     },
     "pl": {
       "common_name": "Robinia akacjowa",
-      "description": "Robinia akacjowa to szybko rosnące drzewo liściaste, pochodzi ze wschodniej Ameryki Północnej. Znana z pachnących białych kwiatów i trwałego drewna, rośnie w pełnym słońcu i dobrze przepuszczalnych glebach."
+      "description": "Robinia akacjowa to szybko rosnące drzewo rodem z Ameryki Północnej. Znane jest z pachnących białych kwiatów i kolczastych gałęzi."
     },
     "de": {
-      "common_name": "Schwarz-Locust",
-      "description": "Die Schwarz-Locust ist ein schnell wachsender Laubbaum, der in den östlichen USA heimisch ist. Bekannt für ihre duftenden weißen Blumen und robustes Holz, gedeiht sie in voller Sonne und gut durchlässigen Böden."
+      "common_name": "Robinie",
+      "description": "Die Robinie ist ein schnell wachsender Baum, der in Nordamerika beheimatet ist. Sie ist für ihre duftenden weißen Blüten und dornigen Äste bekannt."
     },
     "fr": {
       "common_name": "Robinier faux-acacia",
-      "description": "Le robinier faux-acacia est un arbre à croissance rapide, originaire de l'est de l'Amérique du Nord. Connu pour ses fleurs blanches parfumées et son bois durable, il prospère en plein soleil et dans des sols bien drainés."
+      "description": "Le robinier faux-acacia est un arbre à croissance rapide originaire d'Amérique du Nord. Il est connu pour ses fleurs blanches parfumées et ses branches épineuses."
     },
     "it": {
-      "common_name": "Robinia pseudoacacia",
-      "description": "La Robinia pseudoacacia è un albero a crescita rapida originario dell'America settentrionale. Conosciuto per i suoi fiori bianchi profumati e il legno resistente, cresce al sole e in terreni ben drenati."
+      "common_name": "Robinia",
+      "description": "La Robinia è un albero a crescita rapida originario del Nord America. È nota per i suoi fiori bianchi profumati e i rami spinosi."
     },
     "es": {
-      "common_name": "Robinia pseudoacacia",
-      "description": "La Robinia pseudoacacia es un árbol de rápido crecimiento originario del este de América del Norte. Conocido por sus flores blancas fragantes y su madera duradera, prospera a pleno sol y en suelos bien drenados."
+      "common_name": "Robinia falsa acacia",
+      "description": "La Robinia es un árbol de rápido crecimiento originario de América del Norte. Es conocida por sus flores blancas fragantes y sus ramas espinosas."
     },
     "pt": {
-      "common_name": "Robinier falso-acácia",
-      "description": "O Robinier falso-acácia é uma árvore de rápido crescimento, originária do leste da América do Norte. Conhecida pelas suas flores brancas perfumadas e madeira durável, cresce ao sol pleno em solos bem drenados."
+      "common_name": "Falsa acácia",
+      "description": "A falsa acácia é uma árvore de crescimento rápido originária da América do Norte. É conhecida pelas suas flores brancas perfumadas e ramos espinhosos."
     },
     "ar": {
-      "common_name": "الروبينياء",
-      "description": "الروبينياء هي شجرة سريعة النمو موطنها الأصلي شرق أمريكا الشمالية. تعرف بزهورها البيضاء العطرة وخشبها المتين، تنمو في الشمس الكاملة والتربة جيدة التصريف."
+      "common_name": "روبينيه",
+      "description": "روبينيه هو شجرة سريعة النمو موطنها أمريكا الشمالية. تعرف بأزهارها البيضاء العطرة وفروعها الشائكة."
     },
     "hi": {
       "common_name": "ब्लैक लोकेस्ट",
-      "description": "ब्लैक लोकेस्ट एक तेज़ी से बढ़ने वाली पर्णपाती पेड़ है जो पूर्वी उत्तरी अमेरिका का मूल निवासी है। इसकी खुशबूदार सफेद फूलों और मजबूत लकड़ी के लिए प्रसिद्ध है, यह पूर्ण सूर्य और अच्छी तरह से जल निकासी वाली मिट्टी में पनपता है।"
+      "description": "ब्लैक लोकेस्ट एक तेज़ी से बढ़ने वाली पेड़ है जो उत्तरी अमेरिका की मूल निवासी है। यह अपनी सुगंधित सफेद फूलों और कांटेदार शाखाओं के लिए प्रसिद्ध है।"
     },
     "zh": {
-      "common_name": "黑刺槐",
-      "description": "黑刺槐是一种快速生长的落叶树，原产于北美东部。因其芳香的白色花朵和耐用的木材而闻名，喜欢在阳光充足、排水良好的土壤中生长。"
+      "common_name": "黑槐",
+      "description": "黑槐是一种快速生长的树木，原产于北美。它以其芳香的白色花朵和多刺的枝条而闻名。"
     },
     "ja": {
       "common_name": "ブラックロカスト",
-      "description": "ブラックロカストは、北アメリカ東部原産の速く成長する落葉樹です。香り高い白い花と丈夫な木材で知られ、日光が十分に当たる水はけの良い土壌で育ちます。"
+      "description": "ブラックロカストは北アメリカ原産の速成木です。香り高い白い花とトゲのある枝で知られています。"
     },
     "ko": {
       "common_name": "블랙 로커스트",
-      "description": "블랙 로커스트는 북미 동부가 원산지인 빠르게 자라는 낙엽수입니다. 향기로운 흰 꽃과 내구성이 강한 나무로 유명하며, 햇볕이 잘 드는 배수가 좋은 토양에서 자랍니다."
+      "description": "블랙 로커스트는 북미 원산지의 빠르게 자라는 나무입니다. 향기로운 흰 꽃과 가시가 많은 가지로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/robinia_pseudoacacia",
-      "https://www.gardeningknowhow.com/robinia-care"
+      "https://www.rhs.org.uk/advice/profile?pid=231",
+      "https://www.missouribotanicalgarden.org/plantfinder/plantfindersearch.aspx?taxonid=285466"
     ]
   }
 }

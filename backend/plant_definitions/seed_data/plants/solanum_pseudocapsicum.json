@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, well-drained",
-          "pl": "Kwaśna, dobrze przepuszczalna",
-          "de": "Kalkfrei, gut durchlässig",
-          "fr": "Acide, bien drainé",
-          "it": "Acido, ben drenato",
-          "es": "Ácido, bien drenado",
-          "pt": "Ácida, bem drenada",
-          "ar": "حمضي، جيد التصريف",
-          "hi": "अम्लीय, अच्छी जल निकासी",
-          "zh": "酸性，良好的排水",
-          "ja": "酸性、排水良好",
-          "ko": "산성, 잘 배수됨"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري أوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad moderada",
-          "pt": "Umidade moderada",
-          "ar": "رطوبة معتدلة",
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
           "hi": "मध्यम आर्द्रता",
-          "zh": "适中湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Trujący dla zwierząt",
-          "de": "Giftig für Haustiere",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
           "fr": "Toxique pour les animaux",
           "it": "Tossico per gli animali",
-          "es": "Tóxico para las mascotas",
+          "es": "Tóxico para mascotas",
           "pt": "Tóxico para animais",
           "ar": "سامة للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए जहरीला",
+          "hi": "पालतू जानवरों के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "애완 동물에 독성"
+          "ko": "반려동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact shrub",
-          "pl": "Krzew o zwartej budowie",
-          "de": "Komakter Strauch",
-          "fr": "Arbuste compact",
-          "it": "Arbusto compatto",
-          "es": "Arbusto compacto",
-          "pt": "Arbusto compacto",
-          "ar": "شجيرة مدمجة",
-          "hi": "कॉम्पैक्ट झाड़ी",
-          "zh": "紧凑灌木",
-          "ja": "コンパクトな低木",
-          "ko": "콤팩트한 관목"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرोक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير متكررة",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Jerusalem Cherry",
-      "description": "Solanum pseudocapsicum, known as Jerusalem cherry, is a small, ornamental shrub. It produces vibrant red and orange berries and thrives in moderate light and humidity."
+      "description": "The Jerusalem Cherry is a small, ornamental plant with vibrant red berries. It is grown mainly for its decorative value."
     },
     "pl": {
       "common_name": "Wiśnia Jerozolimska",
-      "description": "Solanum pseudocapsicum, znane jako wiśnia jerozolimska, to mały, ozdobny krzew. Produkuje intensywnie czerwone i pomarańczowe jagody, rośnie w umiarkowanym świetle i wilgotności."
+      "description": "Wiśnia Jerozolimska to mała roślina ozdobna o jaskrawoczerwonych jagodach. Jest uprawiana głównie ze względu na walory dekoracyjne."
     },
     "de": {
-      "common_name": "Jerusalem-Kirsche",
-      "description": "Solanum pseudocapsicum, auch Jerusalem-Kirsche genannt, ist ein kleiner Zierstrauch. Er produziert lebendige rote und orange Beeren und gedeiht bei mäßigem Licht und Feuchtigkeit."
+      "common_name": "Jerusalems-Kirsche",
+      "description": "Die Jerusalems-Kirsche ist eine kleine Zierpflanze mit lebendig roten Beeren. Sie wird hauptsächlich wegen ihres dekorativen Wertes angebaut."
     },
     "fr": {
       "common_name": "Cerisier de Jérusalem",
-      "description": "Solanum pseudocapsicum, également appelé cerisier de Jérusalem, est un petit arbuste ornemental. Il produit des baies rouges et oranges vives et prospère dans une lumière et une humidité modérées."
+      "description": "Le Cerisier de Jérusalem est une petite plante ornementale aux baies rouges vives. Elle est cultivée principalement pour sa valeur décorative."
     },
     "it": {
       "common_name": "Ciliegio di Gerusalemme",
-      "description": "Solanum pseudocapsicum, noto come ciliegio di Gerusalemme, è un piccolo arbusto ornamentale. Produce bacche rosse e arancioni vivaci e cresce in luce e umidità moderate."
+      "description": "Il Ciliegio di Gerusalemme è una piccola pianta ornamentale con bacche rosse vivaci. Viene coltivata principalmente per il suo valore decorativo."
     },
     "es": {
       "common_name": "Cerezo de Jerusalén",
-      "description": "Solanum pseudocapsicum, conocido como cerezo de Jerusalén, es un pequeño arbusto ornamental. Produce bayas rojas y naranjas brillantes y prospera con luz y humedad moderadas."
+      "description": "El Cerezo de Jerusalén es una pequeña planta ornamental con bayas rojas brillantes. Se cultiva principalmente por su valor decorativo."
     },
     "pt": {
       "common_name": "Cerejeira de Jerusalém",
-      "description": "Solanum pseudocapsicum, também conhecida como cerejeira de Jerusalém, é um pequeno arbusto ornamental. Produz frutos vermelhos e laranja vibrantes e prospera em luz e umidade moderadas."
+      "description": "A Cerejeira de Jerusalém é uma pequena planta ornamental com frutos vermelhos vibrantes. É cultivada principalmente pelo seu valor decorativo."
     },
     "ar": {
-      "common_name": "شجرة الكرز القدس",
-      "description": "Solanum pseudocapsicum، والمعروفة بشجرة الكرز القدس، هي شجيرة صغيرة مزخرفة. تنتج التوت الأحمر والبرتقالي الزاهي وتزدهر في الضوء والرطوبة المعتدلة."
+      "common_name": "شجرة الكرز في القدس",
+      "description": "شجرة الكرز في القدس هي نبات زينة صغير مع توت أحمر لامع. تزرع أساساً لقيمتها الزخرفية."
     },
     "hi": {
-      "common_name": "येरूशलम चेरी",
-      "description": "Solanum pseudocapsicum, जिसे येरूशलम चेरी कहा जाता है, एक छोटा, सजावटी झाड़ी है। यह चमकीले लाल और नारंगी बेर उगाता है और मध्यम प्रकाश और आर्द्रता में बढ़ता है।"
+      "common_name": "यरूशलेम चेरी",
+      "description": "यरूशलेम चेरी एक छोटी, सजावटी पौधा है जिसमें चमकदार लाल बेर होते हैं। इसे मुख्य रूप से इसकी सजावटी कीमत के लिए उगाया जाता है।"
     },
     "zh": {
       "common_name": "耶路撒冷樱桃",
-      "description": "Solanum pseudocapsicum，称为耶路撒冷樱桃，是一种小型观赏灌木。它产生鲜艳的红色和橙色浆果，在中等光照和湿度下茁壮成长。"
+      "description": "耶路撒冷樱桃是一种小型观赏植物，具有鲜艳的红色浆果。它主要因其装饰价值而被种植。"
     },
     "ja": {
       "common_name": "エルサレムチェリー",
-      "description": "Solanum pseudocapsicum、エルサレムチェリーとしても知られるこの植物は、小さな観賞用低木です。鮮やかな赤とオレンジ色の実をつけ、適度な光と湿度で育ちます。"
+      "description": "エルサレムチェリーは、小さな観賞用植物で、鮮やかな赤い実をつけます。主に装飾的な価値のために栽培されます。"
     },
     "ko": {
       "common_name": "예루살렘 체리",
-      "description": "Solanum pseudocapsicum, 예루살렘 체리라고도 알려진 이 식물은 작은 장식용 관목입니다. 선명한 빨간색과 주황색 열매를 맺으며, 적당한 빛과 습도에서 잘 자랍니다."
+      "description": "예루살렘 체리는 작은 장식용 식물로, 선명한 빨간색 열매를 가지고 있습니다. 주로 장식적 가치 때문에 재배됩니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/solanum-pseudocapsicum",
-      "https://www.gardeningknowhow.com/edible/fruits/solanum-pseudocapsicum.htm"
+      "https://www.gardenia.net/plant/solanum-pseudocapsicum"
     ]
   }
 }

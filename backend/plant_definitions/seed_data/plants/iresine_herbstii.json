@@ -1,6 +1,6 @@
 {
   "external_id": "iresine_herbstii",
-  "name": "Herbst's Bloodleaf",
+  "name": "Iresine herbstii",
   "latin": "Iresine herbstii",
   "sun": "medium",
   "water": "medium",
@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne pośrednie",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "إضاءة غير مباشرة",
-          "hi": "प्रकाश अप्रत्यक्ष",
-          "zh": "间接明亮光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-draining",
-          "pl": "drenażowa",
-          "de": "gut drainierend",
-          "fr": "bien drainant",
-          "it": "ben drenante",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep evenly moist",
-          "pl": "umiarkowanie wilgotna",
-          "de": "gleichmäßig feucht",
-          "fr": "uniformément humide",
-          "it": "uniformemente umido",
-          "es": "mantener húmeda",
-          "pt": "manter húmido",
-          "ar": "رطب بشكل متساوٍ",
-          "hi": "समान रूप से नम",
-          "zh": "保持均匀湿润",
-          "ja": "均一な湿り気",
-          "ko": "고르게 촉촉"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難しさ",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-27°C",
-          "pl": "18-27°C",
-          "de": "18-27°C",
-          "fr": "18-27°C",
-          "it": "18-27°C",
-          "es": "18-27°C",
-          "pt": "18-27°C",
-          "ar": "18-27°C",
-          "hi": "18-27°C",
-          "zh": "18-27°C",
-          "ja": "18〜27°C",
-          "ko": "18-27°C"
+          "en": "20–25°C",
+          "pl": "20–25°C",
+          "de": "20–25°C",
+          "fr": "20–25°C",
+          "it": "20–25°C",
+          "es": "20–25°C",
+          "pt": "20–25°C",
+          "ar": "20–25°C",
+          "hi": "20–25°C",
+          "zh": "20–25°C",
+          "ja": "20–25°C",
+          "ko": "20–25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium-high",
-          "pl": "średnio-wysoka",
-          "de": "mittel-hoch",
-          "fr": "moyenne-haute",
-          "it": "medio-alta",
-          "es": "media-alta",
-          "pt": "médio-alta",
-          "ar": "متوسطة-عالية",
-          "hi": "मध्यम-उच्च",
-          "zh": "中高",
-          "ja": "中〜高",
-          "ko": "중-높음"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietoksyczna",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossico",
-          "es": "no tóxico",
-          "pt": "não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Trujący dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "bushy medium",
-          "pl": "średnio krzaczasty",
-          "de": "buschig mittel",
-          "fr": "buissonnant moyen",
-          "it": "cespuglioso medio",
-          "es": "arbustivo medio",
-          "pt": "arbustivo médio",
-          "ar": "متوسط الكثافة",
-          "hi": "मध्यम झाड़ी",
-          "zh": "中等灌木状",
-          "ja": "中程度の茂り",
-          "ko": "중간 관목형"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mäßige Wachstum",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "生长缓慢到中等",
+          "ja": "遅いから中くらいの成長",
+          "ko": "느리거나 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि के कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,59 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Bloodleaf",
-      "description": "Herbst's Bloodleaf is a tropical foliage plant with striking red leaves. It prefers bright, indirect light and consistently moist soil, and benefits from regular feeding."
+      "description": "Iresine herbstii, commonly known as Bloodleaf, is a colorful ornamental plant. Its bright red to purple leaves make it a popular choice for both indoor and outdoor gardens."
     },
     "pl": {
-      "common_name": "Iresine krwista",
-      "description": "Iresine herbstii to tropikalna roślina ozdobna o czerwonych liściach. Wymaga jasnego światła pośredniego i wilgotnej gleby oraz korzyści z regularnego nawożenia."
+      "common_name": "Czerwonolistna",
+      "description": "Iresine herbstii, znana jako Czerwonolistna, to kolorowa roślina ozdobna. Jej jaskrawe czerwone do purpurowych liście sprawiają, że jest popularnym wyborem do ogrodów wewnętrznych i zewnętrznych."
     },
     "de": {
       "common_name": "Blutblatt",
-      "description": "Iresine herbstii ist eine tropische Zierpflanze mit roten Blättern. Sie bevorzugt helles indirektes Licht und gleichmäßig feuchte Erde sowie regelmäßige Düngung."
+      "description": "Iresine herbstii, auch Blutblatt genannt, ist eine bunte Zierpflanze. Ihre leuchtend roten bis violetten Blätter machen sie zu einer beliebten Wahl für Innen- und Außengärten."
     },
     "fr": {
-      "common_name": "Feuille de sang",
-      "description": "Iresine herbstii est une plante tropicale à feuilles rouges. Elle préfère une lumière indirecte vive et un sol uniformément humide avec engrais régulier."
+      "common_name": "Feuillage rouge",
+      "description": "Iresine herbstii, communément appelée Feuillage rouge, est une plante ornementale colorée. Ses feuilles rouges à violettes en font un choix populaire pour les jardins intérieurs et extérieurs."
     },
     "it": {
-      "common_name": "Foglia di sangue",
-      "description": "Iresine herbstii è una pianta tropicale con foglie rosse. Predilige luce indiretta brillante e terreno umido con concimazioni regolari."
+      "common_name": "Foglia rossa",
+      "description": "Iresine herbstii, conosciuta come Foglia rossa, è una pianta ornamentale colorata. Le sue foglie rosse o viola la rendono una scelta popolare per i giardini interni ed esterni."
     },
     "es": {
-      "common_name": "Hoja de sangre",
-      "description": "Iresine herbstii es una planta tropical de hojas rojas. Prefiere luz indirecta brillante y suelo húmedo con fertilización regular."
+      "common_name": "Hoja roja",
+      "description": "Iresine herbstii, conocida como Hoja roja, es una planta ornamental colorida. Sus hojas rojas a moradas la convierten en una opción popular para jardines interiores y exteriores."
     },
     "pt": {
-      "common_name": "Folha de sangue",
-      "description": "Iresine herbstii é uma planta tropical de folhas vermelhas. Prefere luz indireta brilhante e solo úmido com adubação regular."
+      "common_name": "Folha vermelha",
+      "description": "Iresine herbstii, conhecida como Folha vermelha, é uma planta ornamental colorida. Suas folhas vermelhas a roxas a tornam uma escolha popular para jardins internos e externos."
     },
     "ar": {
-      "common_name": "ورقة دم",
-      "description": "Iresine herbstii هي نبتة استوائية بأوراق حمراء. تفضل ضوءًا غير مباشر مشرق وتربة رطبة مع تغذية منتظمة."
+      "common_name": "ورقة دموية",
+      "description": "إيريسين هيربستي، والمعروفة بورقة دموية، هي نبات مزخرف ملون. تجعل أوراقها الحمراء إلى البنفسجية منها خيارًا شائعًا للحدائق الداخلية والخارجية."
     },
     "hi": {
-      "common_name": "ब्लडलीफ",
-      "description": "Iresine herbstii एक उष्णकटिबंधीय लाल पत्तों वाला पौधा है। यह उज्ज्वल अप्रत्यक्ष प्रकाश और नम मिट्टी पसंद करता है।"
+      "common_name": "लाल पत्तियाँ",
+      "description": "आईरेसिन हर्ब्स्टी, जिसे लाल पत्तियाँ भी कहा जाता है, एक रंगीन सजावटी पौधा है। इसके चमकीले लाल से बैंगनी पत्ते इसे इनडोर और आउटडोर बागवानी का एक लोकप्रिय विकल्प बनाते हैं।"
     },
     "zh": {
-      "common_name": "血叶草",
-      "description": "Iresine herbstii 是一种热带红叶植物。喜明亮间接光和保持湿润的土壤，定期施肥有益。"
+      "common_name": "血叶",
+      "description": "Iresine herbstii，通常称为血叶，是一种色彩丰富的观赏植物。它的鲜红色到紫色的叶子使它成为室内和室外花园的流行选择。"
     },
     "ja": {
-      "common_name": "ブラッドリーフ",
-      "description": "Iresine herbstii は赤い葉の熱帯植物です。明るい間接光と湿った土を好み、定期的な施肥が有益です。"
+      "common_name": "血葉",
+      "description": "Iresine herbstii、一般に血葉として知られる植物は、色とりどりの観賞用植物です。鮮やかな赤から紫の葉は、屋内外の庭で人気があります。"
     },
     "ko": {
-      "common_name": "블러드리프",
-      "description": "Iresine herbstii 는 빨간 잎의 열대 식물입니다. 밝은 간접광과 촉촉한 흙을 좋아하며 정기 비료가 도움이 됩니다."
+      "common_name": "붉은 잎",
+      "description": "Iresine herbstii, 붉은 잎으로 알려진 이 식물은 화려한 관상용 식물입니다. 밝은 빨간색에서 보라색까지의 잎은 실내외 정원에서 인기 있는 선택입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://terrariumtribe.com/terrarium-plants/iresine-herbstii-bloodleaf-plant/",
-      "https://plnts.com/en/care/houseplants-family/iresine",
-      "https://www.rhs.org.uk/plants/96921/iresine-herbstii/details",
-      "https://www.healthyhouseplants.com/indoor-houseplants/blood-leaf-iresine-herbstii-care-guide-types-and-growing-tips/"
+      "https://www.rhs.org.uk/plants/iresine-herbstii",
+      "https://www.gardenia.net/plant/iresine-herbstii"
     ]
   }
 }

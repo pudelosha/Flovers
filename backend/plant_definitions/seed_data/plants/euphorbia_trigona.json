@@ -1,25 +1,26 @@
 {
   "external_id": "euphorbia_trigona",
-  "name": "African Milk Tree",
+  "name": "African milk tree",
   "latin": "Euphorbia trigona",
   "sun": "high",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "euphorbia_trigona.jpg",
   "image_thumb": "euphorbia_trigona.jpg",
   "traits": [
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct light",
-          "pl": "Jasne słońce",
-          "de": "Viel Sonne",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz intensa",
-          "pt": "Luz intensa",
-          "ar": "ضوء قوي",
-          "hi": "तेज रोशनी",
-          "zh": "强光照",
-          "ja": "強い光",
-          "ko": "강한 빛"
+          "en": "Bright indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirektes",
+          "fr": "Lumière vive indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz indireta intensa",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Gritty cactus mix",
+          "pl": "Przepuszczalna, kaktusy",
+          "de": "Kakteenerde, durchlässig",
+          "fr": "Substrat cactus drainant",
+          "it": "Terriccio cactus drenante",
+          "es": "Sustrato cactus drenante",
+          "pt": "Substrato p/ cactos",
+          "ar": "تربة صبارات جيدة الصرف",
+          "hi": "अच्छी जलनिकासी मिट्टी",
+          "zh": "排水良好仙人掌土",
+          "ja": "水はけの良い多肉土",
+          "ko": "배수 좋은 다육토"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadko podlewać",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Rega pouca",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Let dry; water sparingly",
+          "pl": "Przeschnij; podlewaj rzadko",
+          "de": "Antrocknen lassen, sparsam",
+          "fr": "Laisser sécher, peu d'eau",
+          "it": "Lascia asciugare, poca acqua",
+          "es": "Dejar secar, poca agua",
+          "pt": "Deixe secar, pouca água",
+          "ar": "اتركها تجف ثم اسقِ",
+          "hi": "सूखने पर ही पानी दें",
+          "zh": "干透再浇",
+          "ja": "乾いてから控えめに",
+          "ko": "말린 뒤 소량 관수"
         }
       }
     },
@@ -84,9 +85,9 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
+          "en": "Easy",
           "pl": "Łatwa",
-          "de": "Einfach",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm indoor",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "15-27°C; avoid cold",
+          "pl": "15-27°C; unikaj chłodu",
+          "de": "15-27°C; keine Kälte",
+          "fr": "15-27°C; éviter le froid",
+          "it": "15-27°C; evita freddo",
+          "es": "15-27°C; evita frío",
+          "pt": "15-27°C; evite frio",
+          "ar": "15-27°م؛ تجنب البرد",
+          "hi": "15-27°C; ठंड से बचाएं",
+          "zh": "15-27°C，怕冷",
+          "ja": "15-27℃、寒さ注意",
+          "ko": "15-27°C, 냉해 주의"
         }
       }
     },
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮음"
+          "en": "Dry to average air",
+          "pl": "Suche do przeciętnego",
+          "de": "Trocken bis normal",
+          "fr": "Air sec à normal",
+          "it": "Aria secca-normale",
+          "es": "Aire seco a normal",
+          "pt": "Ar seco a normal",
+          "ar": "هواء جاف إلى عادي",
+          "hi": "कम से सामान्य नमी",
+          "zh": "干燥到普通湿度",
+          "ja": "乾燥〜普通",
+          "ko": "건조~보통"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic sap",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic irritant sap",
+          "pl": "Toksyczny, drażniący sok",
+          "de": "Giftiger Reizsaft",
+          "fr": "Sève irritante toxique",
+          "it": "Linfa tossica irritante",
+          "es": "Savia tóxica irritante",
+          "pt": "Seiva tóxica irritante",
+          "ar": "عصارة سامة مهيجة",
+          "hi": "विषैला, चुभने वाला रस",
+          "zh": "有毒刺激性乳汁",
+          "ja": "有毒で刺激性の樹液",
+          "ko": "독성 자극성 수액"
         }
       }
     },
@@ -160,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright growth",
-          "pl": "Pionowy",
-          "de": "Aufrecht",
-          "fr": "Dressé",
-          "it": "Eretto",
-          "es": "Vertical",
-          "pt": "Vertical",
-          "ar": "قائم",
-          "hi": "सीधा",
-          "zh": "直立生长",
-          "ja": "直立型",
-          "ko": "직립형"
+          "en": "Upright, slow-growing",
+          "pl": "Wzniesiona, wolny wzrost",
+          "de": "Aufrecht, langsam",
+          "fr": "Dressée, croissance lente",
+          "it": "Eretta, crescita lenta",
+          "es": "Erecta, crecimiento lento",
+          "pt": "Ereta, crescimento lento",
+          "ar": "قائم وبطيء النمو",
+          "hi": "सीधा, धीमी वृद्धि",
+          "zh": "直立，生长较慢",
+          "ja": "直立でゆっくり成長",
+          "ko": "직립, 느린 생장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot from overwatering",
+          "pl": "Zgnilizna od przelania",
+          "de": "Fäule bei zu viel Wasser",
+          "fr": "Pourriture si trop d'eau",
+          "it": "Marciume se troppa acqua",
+          "es": "Pudrición por exceso",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفن مع الإفراط بالسقي",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "浇水过多易烂根",
+          "ja": "水やり過多で腐る",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs; spider mites",
+          "pl": "Wełnowce; przędziorki",
+          "de": "Wollläuse; Spinnmilben",
+          "fr": "Cochenilles; acariens",
+          "it": "Cocciniglie; acari",
+          "es": "Cochinillas; ácaros",
+          "pt": "Cochonilhas; ácaros",
+          "ar": "بق دقيقي؛ عناكب دقيقة",
+          "hi": "मिलीबग; स्पाइडर माइट",
+          "zh": "粉蚧；红蜘蛛",
+          "ja": "カイガラムシ類、ハダニ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "African Milk Tree",
-      "description": "Euphorbia trigona is a succulent shrub native to Central Africa. It has upright, triangular stems and produces a milky toxic sap. It is commonly grown indoors as a hardy ornamental plant."
+      "common_name": "African milk tree",
+      "description": "A cactus-like succulent Euphorbia with upright, ridged stems and short-lived leaves. Keep in bright indirect light and water only after the mix dries. The milky sap is toxic and can irritate skin and eyes."
     },
     "pl": {
       "common_name": "Wilczomlecz trójżebrowy",
-      "description": "Euphorbia trigona to sukulent pochodzący z Afryki Środkowej. Ma pionowe, trójkanciaste pędy i trujący sok mleczny. Jest często uprawiany jako roślina doniczkowa."
+      "description": "Sukulenty wilczomlecz o wyprostowanych, żebrowanych pędach, często mylony z kaktusem. Trzymaj w jasnym, rozproszonym świetle i podlewaj dopiero po przeschnięciu podłoża. Mleczny sok jest toksyczny i drażniący."
     },
     "de": {
       "common_name": "Afrikanischer Milchbaum",
-      "description": "Euphorbia trigona stammt aus Zentralafrika. Sie besitzt aufrechte, dreikantige Triebe und einen giftigen Milchsaft. Die Pflanze ist eine robuste Zimmerpflanze."
+      "description": "Ein kaktusähnlicher sukkulenter Wolfsmilchgewächs mit aufrechten, gerippten Trieben. Hell und indirekt stellen und erst gießen, wenn das Substrat trocken ist. Der Milchsaft ist giftig und reizt Haut und Augen."
     },
     "fr": {
       "common_name": "Euphorbe trigone",
-      "description": "Euphorbia trigona est originaire d’Afrique centrale. Elle a des tiges dressées et un latex toxique. Elle est cultivée comme plante d’intérieur résistante."
+      "description": "Euphorbe succulente à tiges dressées et côtelées, d’aspect de cactus. Placez-la en lumière vive indirecte et arrosez seulement quand le substrat est sec. La sève laiteuse est toxique et irritante."
     },
     "it": {
-      "common_name": "Euforbia africana",
-      "description": "Euphorbia trigona è originaria dell’Africa centrale. Presenta fusti eretti e linfa tossica. È coltivata come pianta ornamentale da interno."
+      "common_name": "Euforbia trigona",
+      "description": "Succulenta simile a un cactus con fusti eretti e costoluti. Tienila in luce intensa indiretta e annaffia solo quando il terriccio è asciutto. La linfa lattiginosa è tossica e irritante."
     },
     "es": {
       "common_name": "Árbol de leche africano",
-      "description": "Euphorbia trigona es nativa de África central. Tiene tallos erguidos y savia tóxica. Se cultiva comúnmente como planta de interior resistente."
+      "description": "Euforbia suculenta de aspecto cactáceo con tallos erguidos y acanalados. Colócala con luz brillante indirecta y riega solo cuando el sustrato se haya secado. La savia blanca es tóxica e irritante."
     },
     "pt": {
-      "common_name": "Árvore-do-leite africana",
-      "description": "Euphorbia trigona é nativa da África Central. Possui caules eretos e seiva tóxica. É usada como planta ornamental de interior."
+      "common_name": "Árvore-do-leite-africana",
+      "description": "Eufórbia suculenta parecida com cacto, com caules eretos e sulcados. Mantenha em luz indireta intensa e regue apenas quando o substrato secar. A seiva leitosa é tóxica e irritante."
     },
     "ar": {
       "common_name": "شجرة الحليب الإفريقية",
-      "description": "نبات Euphorbia trigona موطنه أفريقيا الوسطى. يتميز بسيقان قائمة وعصارة سامة. يزرع كنبات منزلي قوي."
+      "description": "نبات عصاري يشبه الصبار بسيقان قائمة ومضلعة. يوضع في ضوء ساطع غير مباشر ويُسقى بعد جفاف التربة جيدًا. العصارة اللبنية سامة وقد تهيّج الجلد والعينين."
     },
     "hi": {
       "common_name": "अफ्रीकी मिल्क ट्री",
-      "description": "Euphorbia trigona मध्य अफ्रीका का पौधा है। इसमें सीधे तने और विषैला दूधिया रस होता है। इसे घर के अंदर सजावटी पौधे के रूप में उगाया जाता है।"
+      "description": "कैक्टस जैसा दिखने वाला सक्युलेंट यूफोर्बिया, जिसके तने सीधे और धारियों वाले होते हैं। तेज अप्रत्यक्ष रोशनी दें और मिट्टी सूखने पर ही पानी दें। इसका दूधिया रस विषैला और त्वचा/आंखों को चुभने वाला है।"
     },
     "zh": {
-      "common_name": "非洲麒麟木",
-      "description": "Euphorbia trigona 原产于中非。它具有直立的三棱茎和有毒乳汁。常作为耐养的室内观赏植物。"
+      "common_name": "非洲麒麟掌",
+      "description": "外形像仙人掌的多肉大戟，茎直立且有棱。放在明亮散射光处，基质干透后再浇水。乳白汁液有毒，可能刺激皮肤和眼睛。"
     },
     "ja": {
       "common_name": "アフリカミルクツリー",
-      "description": "Euphorbia trigonaは中央アフリカ原産です。直立した茎と有毒な乳液を持ちます。丈夫な観葉植物として栽培されます。"
+      "description": "サボテンのような姿のユーフォルビアで、直立した稜のある茎を伸ばします。明るい間接光で育て、用土が乾いてから水やりします。白い樹液は有毒で皮膚や目を刺激します。"
     },
     "ko": {
-      "common_name": "아프리카 밀크트리",
-      "description": "Euphorbia trigona는 중앙 아프리카 원산입니다. 곧게 자라는 줄기와 독성 수액이 있습니다. 실내 관상용으로 널리 재배됩니다."
+      "common_name": "아프리칸 밀크 트리",
+      "description": "선인장처럼 보이는 대극속 다육식물로, 능선이 있는 줄기가 곧게 자랍니다. 밝은 간접광에서 키우고 흙이 마른 뒤에만 물을 주세요. 흰 수액은 독성이 있으며 피부와 눈을 자극할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/euphorbia-trigona",
-      "https://extension.umn.edu/houseplants/euphorbia",
-      "https://www.rhs.org.uk/plants/6813/euphorbia-trigona/details"
+      "https://plants.ces.ncsu.edu/plants/euphorbia-trigona/",
+      "https://www.gardenersworld.com/house-plants/african-milk-tree-euphorbia-trigona/",
+      "https://www.rhs.org.uk/plants/131510/euphorbia-trigona/details",
+      "https://www.thespruce.com/african-milk-tree-profile-4846360",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2712704/"
     ]
   }
 }

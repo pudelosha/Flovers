@@ -3,16 +3,16 @@
   "name": "String of Dolphins",
   "latin": "Senecio peregrinus",
   "sun": "medium",
-  "water": "medium",
+  "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "senecio_peregrinus.jpg",
   "image_thumb": "senecio_peregrinus.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaskowy",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملية",
-          "hi": "रेतीला",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी नाली वाली",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Low watering",
+          "pl": "Niskie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "ري أضئ",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "少なめの水やり",
+          "ko": "적은 급수"
         }
       }
     },
@@ -86,16 +86,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwy",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "简单",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25 درجة مئوية",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "basse",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सांकेतिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "String of Dolphins",
-      "description": "Senecio peregrinus, also known as the String of Dolphins, is a unique succulent with dolphin-shaped leaves. It thrives in well-draining, sandy soil and enjoys medium sunlight and moderate watering."
+      "description": "Senecio peregrinus, known as the String of Dolphins, is a popular succulent with trailing, dolphin-shaped leaves. It thrives in bright, indirect light and requires minimal watering."
     },
     "pl": {
       "common_name": "Sznur delfinów",
-      "description": "Senecio peregrinus, znany również jako Sznur Delfinów, to wyjątkowa sukulentka o liściach w kształcie delfinów. Rośnie najlepiej w dobrze przepuszczalnej, piaszczystej glebie, preferując średnie nasłonecznienie i umiarkowane podlewanie."
+      "description": "Senecio peregrinus, znany jako Sznur delfinów, to popularna roślina sukulentowa o zwisających liściach w kształcie delfinów. Rośnie najlepiej w jasnym, pośrednim świetle i wymaga minimalnego podlewania."
     },
     "de": {
-      "common_name": "Delfinschnur",
-      "description": "Senecio peregrinus, auch als Delfinschnur bekannt, ist eine einzigartige Sukkulente mit delfinförmigen Blättern. Sie gedeiht in gut durchlässigem, sandigem Boden und bevorzugt mittlere Sonneneinstrahlung sowie mäßiges Gießen."
+      "common_name": "Delfinstrang",
+      "description": "Senecio peregrinus, auch Delfinstrang genannt, ist eine beliebte Sukkulente mit herabhängenden, delfinartigen Blättern. Sie gedeiht bei hellem, indirektem Licht und benötigt nur wenig Wasser."
     },
     "fr": {
-      "common_name": "Fil de dauphin",
-      "description": "Senecio peregrinus, également connu sous le nom de Fil de dauphin, est une succulente unique avec des feuilles en forme de dauphins. Elle prospère dans un sol bien drainé et sableux et préfère une lumière moyenne et un arrosage modéré."
+      "common_name": "Chaine de dauphins",
+      "description": "Senecio peregrinus, connu sous le nom de Chaine de dauphins, est une plante succulente populaire avec des feuilles en forme de dauphin suspendues. Elle préfère la lumière indirecte et nécessite peu d'eau."
     },
     "it": {
-      "common_name": "Filo di delfino",
-      "description": "Senecio peregrinus, noto anche come Filo di delfino, è una succulenta unica con foglie a forma di delfino. Cresce in un terreno ben drenato e sabbioso e ama una luce media e annaffiature moderate."
+      "common_name": "Catena di delfini",
+      "description": "Senecio peregrinus, conosciuto come Catena di delfini, è una succulenta popolare con foglie a forma di delfino. Cresce meglio in luce indiretta e richiede poca acqua."
     },
     "es": {
-      "common_name": "Hilo de delfín",
-      "description": "Senecio peregrinus, conocido también como Hilo de delfín, es una suculenta única con hojas en forma de delfín. Crece en un suelo bien drenado y arenoso, y disfruta de luz media y riego moderado."
+      "common_name": "Cadena de delfines",
+      "description": "Senecio peregrinus, conocido como Cadena de delfines, es una suculenta popular con hojas en forma de delfín. Crece bien con luz indirecta y necesita poca agua."
     },
     "pt": {
-      "common_name": "Corda de golfinho",
-      "description": "Senecio peregrinus, também conhecido como Corda de Golfinho, é uma suculenta única com folhas em forma de golfinho. Ela cresce em solo bem drenado e arenoso, preferindo luz média e rega moderada."
+      "common_name": "Cadeia de golfinhos",
+      "description": "Senecio peregrinus, conhecido como Cadeia de golfinhos, é uma suculenta popular com folhas em forma de golfinho. Cresce melhor em luz indireta e requer pouca água."
     },
     "ar": {
-      "common_name": "خيط الدلفين",
-      "description": "سنيسيو بيريغرينوس، المعروف أيضًا باسم خيط الدلفين، هو نبات عصاري فريد من نوعه بأوراق على شكل دلافين. ينمو في تربة جيدة التصريف والرملية ويحتاج إلى ضوء متوسط وري معتدل."
+      "common_name": "سلسلة الدلافين",
+      "description": "Senecio peregrinus، المعروف باسم سلسلة الدلافين، هو نبات عصاري شائع بأوراق معلقة على شكل دلفين. يزدهر في الضوء غير المباشر ويحتاج إلى كمية قليلة من الماء."
     },
     "hi": {
-      "common_name": "डॉल्फिन का धागा",
-      "description": "सिनेसीओ पेरेग्रिनस, जिसे डॉल्फिन का धागा भी कहा जाता है, एक अनोखा रसदार पौधा है जिसकी पत्तियाँ डॉल्फिन के आकार की होती हैं। यह अच्छे जल निकासी वाली रेतीली मिट्टी में बढ़ता है और मध्यम सूर्यप्रकाश और हल्के पानी के साथ पनपता है।"
+      "common_name": "डॉल्फिन की डोरी",
+      "description": "Senecio peregrinus, जिसे डॉल्फिन की डोरी के नाम से जाना जाता है, एक लोकप्रिय सुखाद्रव्य है जिसकी पत्तियाँ डॉल्फिन के आकार की होती हैं। यह हल्की, अप्रत्यक्ष रोशनी में उगता है और कम पानी की आवश्यकता होती है."
     },
     "zh": {
       "common_name": "海豚串",
-      "description": "Senecio peregrinus，亦称海豚串，是一种独特的多肉植物，其叶子呈海豚形状。它在排水良好的沙质土壤中生长，喜欢中等阳光和适度浇水。"
+      "description": "Senecio peregrinus，亦称海豚串，是一种受欢迎的多肉植物，具有悬挂的海豚形状叶子。它在明亮的间接光下茁壮成长，且需水量较少。"
     },
     "ja": {
-      "common_name": "イルカのひも",
-      "description": "Senecio peregrinus、またの名をイルカのひもは、イルカの形をした葉を持つユニークな多肉植物です。良好な排水性のある砂質土壌で育ち、適度な日光と水やりを好みます。"
+      "common_name": "ドルフィンストリング",
+      "description": "Senecio peregrinus、通称ドルフィンストリングは、ドルフィン型の葉がぶら下がる人気のある多肉植物です。間接的な明るい光でよく育ち、水やりは控えめです。"
     },
     "ko": {
       "common_name": "돌고래 줄기",
-      "description": "Senecio peregrinus, 또는 돌고래 줄기로 알려진 이 식물은 돌고래 모양의 잎을 가진 독특한 다육식물입니다. 배수가 좋은 모래 토양에서 자라며, 중간 정도의 햇빛과 적당한 물을 선호합니다."
+      "description": "Senecio peregrinus, 돌고래 줄기로 알려진 이 식물은 돌고래 모양의 잎이 달린 인기 있는 다육 식물입니다. 밝은 간접광에서 잘 자라며 물은 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/senecio-peregrinus",
-      "https://www.rhs.org.uk/plants/101340/senecio-peregrinus"
+      "https://www.gardenersworld.com/plants/senecio-peregrinus/",
+      "https://www.bhg.com/gardening/pests-diseases-humidity/senecio-peregrinus-care-guide/"
     ]
   }
 }

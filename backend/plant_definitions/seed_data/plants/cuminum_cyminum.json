@@ -4,20 +4,20 @@
   "latin": "Cuminum cyminum",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "cuminum_cyminum.jpg",
@@ -38,7 +38,7 @@
           "hi": "पूरी धूप",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "강한 햇빛"
+          "ko": "직사광"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Well-drained mix",
           "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
+          "de": "Durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
           "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "ko": "배수 잘됨"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Let top dry",
+          "pl": "Przeschnij wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher",
+          "it": "Asciuga in cima",
+          "es": "Seca arriba",
+          "pt": "Seque o topo",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干再浇",
+          "ja": "表土乾いてから",
+          "ko": "겉흙 마르면"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepła",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئة",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Dry air OK",
+          "pl": "Suche powietrze OK",
+          "de": "Trockene Luft ok",
+          "fr": "Air sec OK",
+          "it": "Aria secca OK",
+          "es": "Aire seco OK",
+          "pt": "Ar seco OK",
+          "ar": "هواء جاف مناسب",
+          "hi": "सूखी हवा ठीक",
+          "zh": "耐干燥空气",
+          "ja": "乾燥気味でOK",
+          "ko": "건조해도 됨"
         }
       }
     },
@@ -142,14 +142,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
+          "it": "Non tossico",
           "es": "No tóxica",
           "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,17 +161,55 @@
       "value": {
         "text": {
           "en": "Annual herb",
-          "pl": "Roczna",
-          "de": "Einjährig",
-          "fr": "Annuelle",
-          "it": "Annuale",
-          "es": "Anual",
-          "pt": "Anual",
-          "ar": "نبات حولي",
-          "hi": "वार्षिक",
-          "zh": "一年生",
+          "pl": "Zioło jednoroczne",
+          "de": "Einjähriges Kraut",
+          "fr": "Herbe annuelle",
+          "it": "Erba annuale",
+          "es": "Hierba anual",
+          "pt": "Erva anual",
+          "ar": "عشب حولي",
+          "hi": "वार्षिक जड़ी",
+          "zh": "一年生香草",
           "ja": "一年草",
-          "ko": "한해살이"
+          "ko": "한해살이 허브"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No wet soil",
+          "pl": "Nie zalewaj",
+          "de": "Keine Staunässe",
+          "fr": "Pas de sol détrempé",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Sem encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "जमाव पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids sometimes",
+          "pl": "Czasem mszyce",
+          "de": "Mitunter Blattläuse",
+          "fr": "Pucerons parfois",
+          "it": "Afidi a volte",
+          "es": "Pulgones a veces",
+          "pt": "Pulgões às vezes",
+          "ar": "قد تظهر حشرات منّ",
+          "hi": "कभी-कभी माहू",
+          "zh": "偶有蚜虫",
+          "ja": "アブラムシ時々",
+          "ko": "가끔 진딧물"
         }
       }
     }
@@ -179,58 +217,58 @@
   "translations": {
     "en": {
       "common_name": "Cumin",
-      "description": "Cuminum cyminum is an annual herb grown for its aromatic seeds. It prefers full sun, warm temperatures, and well-drained soil. Regular but moderate watering supports healthy growth."
+      "description": "Cuminum cyminum is a warm-season annual herb grown for its aromatic seeds. Provide full sun and a well-drained potting mix, watering when the surface soil dries. It is frost-sensitive and performs best in warm conditions."
     },
     "pl": {
-      "common_name": "Kmin rzymski",
-      "description": "Cuminum cyminum to jednoroczna roślina przyprawowa uprawiana dla nasion. Wymaga pełnego słońca i przepuszczalnej gleby. Podlewanie powinno być umiarkowane."
+      "common_name": "Kminek rzymski",
+      "description": "Cuminum cyminum to ciepłolubne zioło jednoroczne uprawiane dla aromatycznych nasion. Zapewnij pełne słońce i przepuszczalne podłoże, podlewając, gdy przeschnie wierzch ziemi. Roślina jest wrażliwa na mróz i lubi ciepło."
     },
     "de": {
       "common_name": "Kreuzkümmel",
-      "description": "Cuminum cyminum ist ein einjähriges Gewürzkraut mit aromatischen Samen. Es benötigt volle Sonne und gut durchlässigen Boden. Gleichmäßiges, mäßiges Gießen ist ideal."
+      "description": "Cuminum cyminum ist ein wärmeliebendes, einjähriges Kraut, das wegen seiner aromatischen Samen angebaut wird. Stelle es in volle Sonne und nutze ein gut drainierendes Substrat; gieße, wenn die Oberfläche abtrocknet. Die Pflanze ist frostempfindlich und braucht Wärme."
     },
     "fr": {
       "common_name": "Cumin",
-      "description": "Cuminum cyminum est une plante annuelle cultivée pour ses graines aromatiques. Elle aime le plein soleil et un sol bien drainé. L’arrosage doit rester modéré."
+      "description": "Cuminum cyminum est une herbe annuelle de saison chaude, cultivée pour ses graines aromatiques. Donnez-lui le plein soleil et un substrat bien drainé, en arrosant lorsque la surface du sol sèche. Elle est sensible au gel et préfère la chaleur."
     },
     "it": {
       "common_name": "Cumino",
-      "description": "Cuminum cyminum è un’erba annuale coltivata per i suoi semi. Predilige sole pieno e terreno ben drenato. L’irrigazione deve essere regolare ma moderata."
+      "description": "Cuminum cyminum è un'erba annuale da clima caldo coltivata per i semi aromatici. Richiede pieno sole e un terriccio ben drenante, con annaffiature quando lo strato superficiale si asciuga. È sensibile al gelo e cresce meglio con temperature miti-calde."
     },
     "es": {
       "common_name": "Comino",
-      "description": "Cuminum cyminum es una hierba anual cultivada por sus semillas aromáticas. Requiere pleno sol y suelo bien drenado. El riego debe ser moderado."
+      "description": "Cuminum cyminum es una hierba anual de clima cálido cultivada por sus semillas aromáticas. Necesita pleno sol y un sustrato bien drenado, regando cuando se seque la capa superior. Es sensible a las heladas y prefiere el calor."
     },
     "pt": {
       "common_name": "Cominho",
-      "description": "Cuminum cyminum é uma erva anual cultivada pelas suas sementes. Necessita de sol pleno e solo bem drenado. A rega deve ser moderada."
+      "description": "Cuminum cyminum é uma erva anual de clima quente cultivada pelas sementes aromáticas. Dê sol pleno e um substrato bem drenado, regando quando a superfície secar. É sensível à geada e cresce melhor em condições quentes."
     },
     "ar": {
       "common_name": "كمون",
-      "description": "Cuminum cyminum نبات حولي يزرع من أجل بذوره العطرية. يفضل الشمس الكاملة والتربة جيدة التصريف. يحتاج إلى ري معتدل."
+      "description": "Cuminum cyminum نبات عشبي حولي يزرع من أجل بذوره العطرية. يحتاج إلى شمس كاملة وتربة جيدة الصرف، مع الري عند جفاف سطح التربة. النبات حساس للصقيع ويفضل الدفء."
     },
     "hi": {
       "common_name": "जीरा",
-      "description": "Cuminum cyminum एक वार्षिक जड़ी-बूटी है जिसे इसके सुगंधित बीजों के लिए उगाया जाता है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी चाहिए। पानी मध्यम मात्रा में दें।"
+      "description": "Cuminum cyminum गर्म मौसम की वार्षिक जड़ी है जिसे सुगंधित बीजों के लिए उगाया जाता है। इसे पूरी धूप और अच्छी जलनिकासी वाली मिट्टी दें, और ऊपर की मिट्टी सूखने पर पानी दें। यह पाला-संवेदनशील है और गर्मी में बेहतर बढ़ता है।"
     },
     "zh": {
       "common_name": "孜然",
-      "description": "Cuminum cyminum 是一年生香料植物，以种子著名。它需要充足阳光和良好排水的土壤。浇水应适中。"
+      "description": "Cuminum cyminum 是喜温的一年生香草，主要为芳香种子而栽培。需全日照与排水良好的基质，表土干再浇水。植株不耐霜冻，更适合温暖环境。"
     },
     "ja": {
       "common_name": "クミン",
-      "description": "Cuminum cyminum は香り高い種子を持つ一年草です。日当たりと水はけの良い土壌を好みます。水やりは控えめに行います。"
+      "description": "Cuminum cyminum は香りのある種子を収穫するために育てる、暖かい季節の一年草です。日当たりと水はけの良い用土を用い、表土が乾いてから水やりします。霜に弱く、暖かい環境を好みます。"
     },
     "ko": {
       "common_name": "쿠민",
-      "description": "Cuminum cyminum은 향신료 씨앗을 위해 재배되는 한해살이 식물입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 물은 적당히 줍니다."
+      "description": "Cuminum cyminum은 향이 강한 씨앗을 얻기 위해 키우는 따뜻한 계절의 한해살이 허브입니다. 직사광과 배수가 좋은 흙을 주고, 겉흙이 마르면 물을 줍니다. 서리에 약해 따뜻한 환경에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/herbs/cumin/grow-your-own",
-      "https://plants.usda.gov/home/plantProfile?symbol=CUCY",
-      "https://en.wikipedia.org/wiki/Cuminum_cyminum"
+      "https://plants.ces.ncsu.edu/plants/cuminum-cyminum/",
+      "https://www.bhg.com/how-to-grow-cumin-7108044",
+      "https://www.marthastewart.com/cumin-plant-8606394"
     ]
   }
 }

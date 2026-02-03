@@ -1,26 +1,27 @@
 {
   "external_id": "vriesea_fosteriana",
-  "name": "Vriesea Fosteriana",
+  "name": "Vriesea fosteriana",
   "latin": "Vriesea fosteriana",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "vriesea_fosteriana.jpg",
   "image_thumb": "vriesea_fosteriana.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy orchid mix",
-          "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार माध्यम",
-          "zh": "透气基质",
-          "ja": "通気性の良い土",
-          "ko": "통기성 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep cup filled",
-          "pl": "Woda w rozecie",
-          "de": "Trichter feucht",
-          "fr": "Rosette remplie",
-          "it": "Rosetta con acqua",
-          "es": "Roseta con agua",
-          "pt": "Roseta com água",
-          "ar": "ماء في القلب",
-          "hi": "रोसेट में पानी",
-          "zh": "叶杯有水",
-          "ja": "筒状部に水",
-          "ko": "통에 물 유지"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقاية منتظمة",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान देखभाल",
-          "zh": "易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humid air",
-          "pl": "Lubi wilgoć",
-          "de": "Mag hohe Luftfeuchte",
-          "fr": "Aime l'humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "आर्द्रता पसंद",
-          "zh": "喜湿润空气",
-          "ja": "高湿度好む",
-          "ko": "습도 선호"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असाम",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow clumping growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
-          "ko": "성장 느림"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفر़ात में पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Foster's Vriesea",
-      "description": "Vriesea fosteriana is a tropical bromeliad native to Brazil. It forms a colorful leaf rosette that holds water in its central cup. It is commonly grown as an indoor ornamental plant."
+      "description": "Vriesea fosteriana is a striking ornamental plant known for its vibrant flower spikes. It thrives in bright, indirect light and moderate humidity."
     },
     "pl": {
-      "common_name": "Vriesea Fostera",
-      "description": "Vriesea fosteriana to tropikalna bromelia pochodząca z Brazylii. Tworzy dekoracyjną rozetę liści gromadzącą wodę. Często uprawiana jest jako roślina pokojowa."
+      "common_name": "Vriesea Foster'a",
+      "description": "Vriesea fosteriana to efektowna roślina ozdobna, znana z jaskrawych kwiatów. Rośnie dobrze w jasnym, pośrednim świetle i umiarkowanej wilgotności."
     },
     "de": {
-      "common_name": "Foster-Vriesea",
-      "description": "Vriesea fosteriana ist eine tropische Bromelie aus Brasilien. Sie bildet eine farbige Blattrosette mit Wassertrichter. Sie eignet sich gut für die Zimmerkultur."
+      "common_name": "Fosters Vriesea",
+      "description": "Vriesea fosteriana ist eine auffällige Zierpflanze, die für ihre lebendigen Blüten bekannt ist. Sie gedeiht bei hellem, indirektem Licht und moderater Luftfeuchtigkeit."
     },
     "fr": {
       "common_name": "Vriesea de Foster",
-      "description": "Vriesea fosteriana est une broméliacée tropicale originaire du Brésil. Elle forme une rosette décorative retenant l’eau. Elle est cultivée comme plante d’intérieur."
+      "description": "Vriesea fosteriana est une plante ornementale frappante connue pour ses fleurs vives. Elle prospère à la lumière vive et indirecte et dans une humidité modérée."
     },
     "it": {
       "common_name": "Vriesea di Foster",
-      "description": "Vriesea fosteriana è una bromelia tropicale del Brasile. Forma una rosetta ornamentale che trattiene acqua. È coltivata come pianta da interno."
+      "description": "Vriesea fosteriana è una pianta ornamentale straordinaria, conosciuta per i suoi vivaci fiori. Cresce bene alla luce indiretta e con umidità moderata."
     },
     "es": {
       "common_name": "Vriesea de Foster",
-      "description": "Vriesea fosteriana es una bromelia tropical originaria de Brasil. Forma una roseta decorativa que almacena agua. Se cultiva comúnmente en interiores."
+      "description": "Vriesea fosteriana es una planta ornamental llamativa conocida por sus flores vibrantes. Se desarrolla bien con luz indirecta brillante y humedad moderada."
     },
     "pt": {
       "common_name": "Vriesea de Foster",
-      "description": "Vriesea fosteriana é uma bromélia tropical nativa do Brasil. Forma uma roseta ornamental que retém água. É cultivada como planta de interior."
+      "description": "Vriesea fosteriana é uma planta ornamental marcante conhecida por suas flores vibrantes. Ela cresce bem com luz indireta brilhante e umidade moderada."
     },
     "ar": {
       "common_name": "فريزيا فوستر",
-      "description": "فريزيا فوستر نبات بروميلي استوائي موطنه البرازيل. يشكل وردة أوراق تحتفظ بالماء. يزرع كنبات داخلي للزينة."
+      "description": "Vriesea fosteriana هي نبات مزخرف مميز يعرف براوائعه المزهرة. ينمو جيدًا في الضوء الساطع غير المباشر والرطوبة المعتدلة."
     },
     "hi": {
-      "common_name": "व्रीसिया फोस्टेरियाना",
-      "description": "Vriesea fosteriana ब्राज़ील की उष्णकटिबंधीय ब्रोमेलियाड है। यह पत्तियों की रोसेट बनाती है जिसमें पानी रहता है। इसे सजावटी इनडोर पौधे के रूप में उगाया जाता है।"
+      "common_name": "फोस्टर की व्रीज़िया",
+      "description": "Vriesea fosteriana एक आकर्षक सजावटी पौधा है, जो अपने जीवंत फूलों के लिए जाना जाता है। यह उज्जवल, अप्रत्यक्ष प्रकाश और मध्यम आर्द्रता में उगता है।"
     },
     "zh": {
-      "common_name": "福斯特丽穗凤梨",
-      "description": "Vriesea fosteriana 原产于巴西的热带凤梨科植物。它形成可储水的叶杯状莲座。常作为室内观赏植物栽培。"
+      "common_name": "福斯特的弗里泽亚",
+      "description": "Vriesea fosteriana 是一种引人注目的观赏植物，以其鲜艳的花朵而闻名。它在明亮的间接光和适度的湿度下茁壮成长。"
     },
     "ja": {
-      "common_name": "ブリエセア・フォステリアナ",
-      "description": "Vriesea fosteriana はブラジル原産の熱帯ブロメリアです。水を溜める葉のロゼットを形成します。観葉植物として栽培されます。"
+      "common_name": "フォスターのフリージア",
+      "description": "Vriesea fosteriana は、その鮮やかな花で知られる魅力的な観葉植物です。明るい間接光と適度な湿度で元気に育ちます。"
     },
     "ko": {
-      "common_name": "브리에세아 포스테리아나",
-      "description": "Vriesea fosteriana는 브라질 원산의 열대 브로멜리아입니다. 물을 담는 잎 로제트를 형성합니다. 실내 관상용으로 재배됩니다."
+      "common_name": "포스터의 프리제아",
+      "description": "Vriesea fosteriana는 그 화려한 꽃으로 잘 알려진 눈에 띄는 관상 식물입니다. 밝은 간접광과 적당한 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/vriesea/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/EP337",
-      "https://plants.ces.ncsu.edu/plants/vriesea/"
+      "https://www.rhs.org.uk/advice/profile?pid=536",
+      "https://www.gardeningknowhow.com/houseplants/vriesea-care.htm"
     ]
   }
 }

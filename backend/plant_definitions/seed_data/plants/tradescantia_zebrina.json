@@ -1,22 +1,23 @@
 {
   "external_id": "tradescantia_zebrina",
-  "name": "Wandering Jew",
+  "name": "Zebra Plant",
   "latin": "Tradescantia zebrina",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-draining",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "ja": "水はけの良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep lightly moist",
-          "pl": "Lekko wilgotna",
-          "de": "Leicht feucht",
-          "fr": "Légèrement humide",
-          "it": "Leggermente umido",
-          "es": "Ligeramente húmedo",
-          "pt": "Levemente úmido",
-          "ar": "رطوبة خفيفة",
-          "hi": "हल्की नमी",
-          "zh": "保持微湿",
-          "ja": "やや湿らせる",
-          "ko": "약간 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr leicht",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جداً",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "매우 쉬움"
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -111,7 +112,7 @@
           "it": "18–24°C",
           "es": "18–24°C",
           "pt": "18–24°C",
-          "ar": "18–24°م",
+          "ar": "18–24°C",
           "hi": "18–24°C",
           "zh": "18–24°C",
           "ja": "18–24°C",
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average room",
-          "pl": "Pokojowa",
-          "de": "Zimmerniveau",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Lievemente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약한 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -161,77 +162,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast trailing",
-          "pl": "Szybko zwisająca",
-          "de": "Schnell hängend",
-          "fr": "Rapide retombante",
-          "it": "Ricadente rapida",
-          "es": "Colgante rápida",
-          "pt": "Pendente rápida",
-          "ar": "نمو متدلي سريع",
-          "hi": "तेज़ लटकती",
-          "zh": "快速蔓生",
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
           "ja": "成長が早い",
-          "ko": "빠른 늘어짐"
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez de trop arroser",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar regar demais",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度に水をやらない",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wandering Jew",
-      "description": "Tradescantia zebrina is a fast-growing trailing houseplant known for its striped purple and silver leaves. It prefers bright indirect light and evenly moist soil. It is commonly grown in hanging pots indoors."
+      "common_name": "Zebra Plant",
+      "description": "Tradescantia zebrina is a popular houseplant known for its striking striped leaves. It thrives in moderate light and requires regular watering."
     },
     "pl": {
-      "common_name": "Trzykrotka pasiasta",
-      "description": "Tradescantia zebrina to szybko rosnąca roślina o zwisającym pokroju i pasiastych liściach. Lubi jasne, pośrednie światło i umiarkowanie wilgotne podłoże. Często uprawiana jest w mieszkaniach."
+      "common_name": "Roślina zebra",
+      "description": "Tradescantia zebrina to popularna roślina doniczkowa, znana z charakterystycznych prążkowanych liści. Rośnie w umiarkowanym świetle i wymaga regularnego podlewania."
     },
     "de": {
-      "common_name": "Zebrakraut",
-      "description": "Tradescantia zebrina ist eine schnell wachsende Hängepflanze mit gestreiften Blättern. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Sie wird häufig als Zimmerpflanze gehalten."
+      "common_name": "Zebra Pflanze",
+      "description": "Tradescantia zebrina ist eine beliebte Zimmerpflanze, die für ihre markanten gestreiften Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt regelmäßiges Gießen."
     },
     "fr": {
-      "common_name": "Misère zébrée",
-      "description": "Tradescantia zebrina est une plante retombante à croissance rapide aux feuilles rayées. Elle apprécie une lumière indirecte vive et un sol légèrement humide. Elle est courante en intérieur."
+      "common_name": "Plante zébrée",
+      "description": "Tradescantia zebrina est une plante d'intérieur populaire, connue pour ses feuilles à rayures frappantes. Elle préfère une lumière modérée et un arrosage régulier."
     },
     "it": {
-      "common_name": "Miseria zebrina",
-      "description": "Tradescantia zebrina è una pianta ricadente a crescita rapida con foglie striate. Predilige luce indiretta e terreno leggermente umido. È molto diffusa come pianta da interno."
+      "common_name": "Pianta zebra",
+      "description": "Tradescantia zebrina è una pianta da appartamento popolare, nota per le sue foglie striate. Cresce in luce moderata e richiede annaffiature regolari."
     },
     "es": {
-      "common_name": "Amor de hombre",
-      "description": "Tradescantia zebrina es una planta colgante de crecimiento rápido con hojas rayadas. Prefiere luz indirecta brillante y riego regular. Se cultiva comúnmente en interiores."
+      "common_name": "Planta cebra",
+      "description": "Tradescantia zebrina es una planta de interior popular conocida por sus hojas a rayas. Crece con luz moderada y necesita riego regular."
     },
     "pt": {
-      "common_name": "Trapoeraba-roxa",
-      "description": "Tradescantia zebrina é uma planta pendente de crescimento rápido e folhas listradas. Gosta de luz indireta brilhante e solo levemente úmido. É comum em ambientes internos."
+      "common_name": "Planta zebra",
+      "description": "Tradescantia zebrina é uma planta de interior popular, conhecida pelas suas folhas riscas. Cresce com luz moderada e requer rega regular."
     },
     "ar": {
-      "common_name": "تراديسكانتيا مخططة",
-      "description": "Tradescantia zebrina نبات منزلي سريع النمو بأوراق مخططة. يفضل الضوء غير المباشر والتربة الرطبة باعتدال. يُزرع غالبًا داخل المنازل."
+      "common_name": "نبات الزيبرا",
+      "description": "Tradescantia zebrina هو نبات منزلي شهير يعرف بأوراقه المخططة. ينمو في ضوء متوسط ويتطلب سقاية منتظمة."
     },
     "hi": {
-      "common_name": "वांडरिंग ज्यू",
-      "description": "Tradescantia zebrina एक तेजी से बढ़ने वाला लटकने वाला पौधा है। इसे अप्रत्यक्ष रोशनी और हल्की नमी पसंद है। यह घरों में आम तौर पर उगाया जाता है।"
+      "common_name": "जेबरा पौधा",
+      "description": "ट्रेडस्कैंटिया ज़ेब्रिना एक लोकप्रिय इनडोर पौधा है जिसे इसकी धारीदार पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश में बढ़ता है और नियमित पानी देने की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "斑叶吊竹梅",
-      "description": "Tradescantia zebrina 是一种生长迅速的垂吊植物，叶片具条纹。它喜欢明亮的散射光和微湿的土壤。常作为室内观叶植物栽培。"
+      "common_name": "斑马植物",
+      "description": "Tradescantia zebrina 是一种受欢迎的室内植物，以其条纹状的叶子而闻名。它在中等光照下生长，需要定期浇水。"
     },
     "ja": {
-      "common_name": "ムラサキツユクサ",
-      "description": "Tradescantia zebrina は成長が早い垂れ下がる観葉植物です。明るい間接光と適度な水分を好みます。室内でよく育てられます。"
+      "common_name": "ゼブラプラント",
+      "description": "Tradescantia zebrinaは、そのストライプ状の葉で知られる人気の室内植物です。中程度の光で成長し、定期的な水やりが必要です。"
     },
     "ko": {
-      "common_name": "제브리나 트라데스칸티아",
-      "description": "Tradescantia zebrina는 빠르게 자라는 늘어지는 식물입니다. 밝은 간접광과 촉촉한 흙을 선호합니다. 실내 식물로 널리 재배됩니다."
+      "common_name": "지브라 식물",
+      "description": "Tradescantia zebrina는 그 선명한 줄무늬 잎으로 잘 알려진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 자라며 정기적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/tradescantia",
-      "https://edis.ifas.ufl.edu/publication/FP610",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a564"
+      "https://www.rhs.org.uk/plants/tradescantia-zebrina",
+      "https://www.gardeningknowhow.com/houseplants/tradescantia-zebrina-care.htm",
+      "https://www.thespruce.com/caring-for-tradescantia-zebrina-1902767"
     ]
   }
 }

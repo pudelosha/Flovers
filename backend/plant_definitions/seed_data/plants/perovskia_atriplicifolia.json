@@ -11,11 +11,11 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -31,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Vollsonne",
+          "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Sole pieno",
-          "es": "Sol completo",
+          "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूर्ण सूर्य",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "풀 햇빛"
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "完全な太陽",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Well-draining",
           "pl": "Dobrze przepuszczalna",
           "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيد التصريف",
+          "ar": "جيد الصرف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "排水良好",
-          "ko": "배수가 잘 되는"
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -76,9 +76,9 @@
           "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "适量",
+          "zh": "适中",
           "ja": "適度",
-          "ko": "적당"
+          "ko": "적당한"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -127,7 +127,7 @@
           "en": "Low",
           "pl": "Niskie",
           "de": "Niedrig",
-          "fr": "Faible",
+          "fr": "Bas",
           "it": "Basso",
           "es": "Bajo",
           "pt": "Baixo",
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -154,7 +154,7 @@
           "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium height",
+          "pl": "Średnia wysokość",
+          "de": "Mittlere Höhe",
+          "fr": "Hauteur moyenne",
+          "it": "Altezza media",
+          "es": "Altura media",
+          "pt": "Altura média",
+          "ar": "ارتفاع متوسط",
+          "hi": "मध्यम ऊंचाई",
+          "zh": "中等高度",
+          "ja": "中くらいの高さ",
+          "ko": "중간 높이"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Russian Sage",
-      "description": "Perovskia atriplicifolia, also known as Russian sage, is a woody shrub native to Central Asia. It is prized for its aromatic silvery foliage and tall spikes of lavender-blue flowers."
+      "description": "Perovskia atriplicifolia, known as Russian Sage, is a woody perennial that thrives in full sun and well-draining soil. It is drought-tolerant and attracts pollinators."
     },
     "pl": {
       "common_name": "Szałwia rosyjska",
-      "description": "Perovskia atriplicifolia, znana jako szałwia rosyjska, to krzew liściasty pochodzący z Azji Centralnej. Jest ceniona za aromatyczne, srebrzyste liście oraz wysokie kwiatostany lawendowo-niebieskich kwiatów."
+      "description": "Perovskia atriplicifolia, znana jako szałwia rosyjska, to krzew wieloletni, który rośnie w pełnym słońcu i dobrze przepuszczalnej glebie. Jest odporna na suszę i przyciąga zapylacze."
     },
     "de": {
       "common_name": "Russischer Salbei",
-      "description": "Perovskia atriplicifolia, auch russischer Salbei genannt, ist ein Strauch, der in Zentralasien beheimatet ist. Er wird für sein aromatisches silbernes Laub und die hohen Lavendelblütenstände geschätzt."
+      "description": "Perovskia atriplicifolia, auch russischer Salbei genannt, ist eine mehrjährige Pflanze, die in voller Sonne und gut durchlässigem Boden gedeiht. Sie ist dürretolerant und zieht Bestäuber an."
     },
     "fr": {
       "common_name": "Sauge russe",
-      "description": "Perovskia atriplicifolia, également appelée sauge russe, est un arbuste ligneux originaire d'Asie centrale. Il est prisé pour son feuillage argenté aromatique et ses longues grappes de fleurs lavande-bleu."
+      "description": "Perovskia atriplicifolia, connue sous le nom de sauge russe, est une plante vivace qui prospère au soleil et dans un sol bien drainé. Elle est tolérante à la sécheresse et attire les pollinisateurs."
     },
     "it": {
       "common_name": "Salvia russa",
-      "description": "Perovskia atriplicifolia, conosciuta anche come salvia russa, è un arbusto legnoso originario dell'Asia centrale. È apprezzato per il suo fogliame argentato aromatico e le alte spighe di fiori lavanda-blu."
+      "description": "Perovskia atriplicifolia, conosciuta come salvia russa, è una pianta perenne che cresce al sole e in terreni ben drenati. È resistente alla siccità e attrae impollinatori."
     },
     "es": {
       "common_name": "Salvia rusa",
-      "description": "Perovskia atriplicifolia, también conocida como salvia rusa, es un arbusto leñoso originario de Asia Central. Es apreciada por su follaje plateado aromático y sus altas espigas de flores lavanda-azul."
+      "description": "Perovskia atriplicifolia, conocida como salvia rusa, es una planta perenne que prospera al sol y en suelos bien drenados. Es tolerante a la sequía y atrae a los polinizadores."
     },
     "pt": {
       "common_name": "Sálvia russa",
-      "description": "Perovskia atriplicifolia, também conhecida como sálvia russa, é um arbusto lenhoso nativo da Ásia Central. É valorizada por sua folhagem prateada aromática e suas altas espigas de flores lavanda-azul."
+      "description": "Perovskia atriplicifolia, conhecida como sálvia russa, é uma planta perene que cresce ao sol e em solos bem drenados. É tolerante à seca e atrai polinizadores."
     },
     "ar": {
-      "common_name": "مريمية روسية",
-      "description": "Perovskia atriplicifolia، والمعروفة أيضًا باسم المريمية الروسية، هي شجيرة خشبية موطنها آسيا الوسطى. وتشتهر بأوراقها الفضية العطرية وارتفاعاتها من الزهور اللافندر الزرقاء."
+      "common_name": "المريمية الروسية",
+      "description": "تعتبر Perovskia atriplicifolia، المعروفة باسم المريمية الروسية، نباتًا معمرًا يزدهر في الشمس الكاملة والتربة جيدة التصريف. إنها تتحمل الجفاف وتجذب الملقحات."
     },
     "hi": {
       "common_name": "रूसी सेज",
-      "description": "Perovskia atriplicifolia, जिसे रूसी सेज भी कहा जाता है, मध्य एशिया का एक लकड़ी का झाड़ी है। इसे अपनी खुशबूदार चांदी जैसी पत्तियों और ऊँचे लैवेंडर-नीले फूलों के लिए सराहा जाता है।"
+      "description": "Perovskia atriplicifolia, जिसे रूसी सेज के नाम से जाना जाता है, एक बारहमासी पौधा है जो पूरी धूप और अच्छी जल निकासी वाली मिट्टी में उगता है। यह सूखा सहनशील है और परागणकों को आकर्षित करता है।"
     },
     "zh": {
       "common_name": "俄罗斯鼠尾草",
-      "description": "Perovskia atriplicifolia，也叫俄罗斯鼠尾草，是一种原产于中亚的木本灌木。它因其芳香的银色叶片和高高的薰衣草蓝色花朵而受到喜爱。"
+      "description": "Perovskia atriplicifolia，通常称为俄罗斯鼠尾草，是一种耐旱的多年生植物，喜欢阳光充足且排水良好的土壤。它吸引传粉者。"
     },
     "ja": {
       "common_name": "ロシアセージ",
-      "description": "Perovskia atriplicifolia、別名ロシアセージは、中央アジア原産の木本植物です。香り高い銀色の葉と、ラベンダーブルーの高い花穂で評価されています。"
+      "description": "Perovskia atriplicifolia、ロシアセージとして知られる植物は、完全な日光と排水性の良い土壌で成長する多年草です。乾燥に強く、受粉者を引き寄せます。"
     },
     "ko": {
       "common_name": "러시아 세이지",
-      "description": "Perovskia atriplicifolia, 또는 러시아 세이지는 중앙 아시아가 원산지인 목본 식물입니다. 향긋한 은색 잎과 높은 라벤더 블루 꽃이 특징입니다."
+      "description": "Perovskia atriplicifolia, 러시아 세이지로 알려진 이 식물은 완전한 햇빛과 배수가 좋은 토양에서 자라는 다년생 식물입니다. 가뭄에 강하고 수분을 제공하는 곤충을 유인합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicgarden.com/perovskia-atroplicifolia",
-      "https://www.gardenersworld.com/perovskia-care"
+      "https://www.rhs.org.uk/plants/11035/perovskia-atropurpurea",
+      "https://www.gardenia.net/plant/perovskia-atropurpurea"
     ]
   }
 }

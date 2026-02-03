@@ -1,8 +1,8 @@
 {
   "external_id": "bellis_perennis",
-  "name": "Common Daisy",
+  "name": "English daisy",
   "latin": "Bellis perennis",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
@@ -10,16 +10,17 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "bellis_perennis.jpg",
   "image_thumb": "bellis_perennis.jpg",
   "traits": [
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun to partial",
-          "pl": "Słońce do półcienia",
-          "de": "Sonne bis Halbschat",
-          "fr": "Soleil à mi-ombre",
-          "it": "Sole a mezzombra",
-          "es": "Sol a semisombra",
-          "pt": "Sol a meia-sombra",
-          "ar": "شمس إلى ظل جزئي",
-          "hi": "धूप से आंशिक छाया",
-          "zh": "全日照到半阴",
-          "ja": "日向から半日陰",
-          "ko": "양지~반그늘"
+          "en": "Sun/part shade",
+          "pl": "Słońce/półcień",
+          "de": "Sonne/Halbschatten",
+          "fr": "Soleil/mi-ombre",
+          "it": "Sole/mezzo ombra",
+          "es": "Sol/semisombra",
+          "pt": "Sol/meia-sombra",
+          "ar": "شمس/ظل جزئي",
+          "hi": "धूप/आंशिक छांह",
+          "zh": "全日照/半阴",
+          "ja": "日向/半日陰",
+          "ko": "태양/반그늘"
         }
       }
     },
@@ -47,17 +48,17 @@
       "value": {
         "text": {
           "en": "Moist, well-drained",
-          "pl": "Wilgotna, przepuszcz",
-          "de": "Feucht, durchlässig",
-          "fr": "Humide et drainé",
-          "it": "Umido e drenante",
-          "es": "Húmedo y drenado",
-          "pt": "Úmido e drenado",
-          "ar": "رطبة وجيدة الصرف",
-          "hi": "नम व जलनिकास",
-          "zh": "湿润且排水好",
-          "ja": "湿り気と排水",
-          "ko": "촉촉·배수 좋음"
+          "pl": "Wilg., przepuszcz.",
+          "de": "Feucht, drainiert",
+          "fr": "Frais, drainant",
+          "it": "Umido, drenante",
+          "es": "Húmeda, drenante",
+          "pt": "Úmido, drenante",
+          "ar": "رطبة جيدة الصرف",
+          "hi": "नम, जलनिकासी",
+          "zh": "微湿 排水好",
+          "ja": "適度に湿る",
+          "ko": "촉촉함, 배수 좋게"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlew",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature reg",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित सिंचाई",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgoć",
+          "de": "Gleichm. feucht",
+          "fr": "Garder frais",
+          "it": "Terriccio umido",
+          "es": "Humedad constante",
+          "pt": "Umidade constante",
+          "ar": "تربة رطبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "常にやや湿らせる",
+          "ko": "고르게 촉촉하게"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodno do umiark",
-          "de": "Kühl bis mild",
-          "fr": "Frais à doux",
-          "it": "Fresco o mite",
-          "es": "Fresco a templado",
-          "pt": "Fresco a ameno",
-          "ar": "بارد إلى معتدل",
-          "hi": "ठंडा से हल्का",
-          "zh": "凉爽到温和",
-          "ja": "涼しい〜温和",
-          "ko": "서늘~온화"
+          "en": "Cool: 5–18°C",
+          "pl": "Chłodno: 5–18°C",
+          "de": "Kühl: 5–18°C",
+          "fr": "Frais: 5–18°C",
+          "it": "Fresco: 5–18°C",
+          "es": "Fresco: 5–18°C",
+          "pt": "Fresco: 5–18°C",
+          "ar": "بارد: 5–18°م",
+          "hi": "ठंडा: 5–18°C",
+          "zh": "凉爽 5–18°C",
+          "ja": "涼しい 5–18°C",
+          "ko": "서늘함 5–18°C"
         }
       }
     },
@@ -123,17 +124,17 @@
       "value": {
         "text": {
           "en": "Normal humidity",
-          "pl": "Zwykła wilgotn",
-          "de": "Normale Feuchte",
+          "pl": "Zwykła wilgotn.",
+          "de": "Normale Luftfeuchte",
           "fr": "Humidité normale",
           "it": "Umidità normale",
           "es": "Humedad normal",
           "pt": "Umidade normal",
           "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
+          "hi": "सामान्य आर्द्रता",
           "zh": "普通湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "ja": "普通の湿度",
+          "ko": "일반 습도"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Legg. tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة بشكل خفيف",
+          "hi": "हल्का विषैला",
+          "zh": "轻微毒性",
+          "ja": "軽度に有毒",
+          "ko": "경미하게 유독"
         }
       }
     },
@@ -160,77 +161,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low growing",
-          "pl": "Nisko rosnąca",
-          "de": "Niedrig wachsend",
-          "fr": "Croissance basse",
-          "it": "Crescita bassa",
-          "es": "Crecimiento bajo",
-          "pt": "Crescimento baixo",
-          "ar": "نمو منخفض",
-          "hi": "कम ऊँचाई",
-          "zh": "低矮生长",
-          "ja": "低く成長",
-          "ko": "낮게 성장"
+          "en": "Low, compact",
+          "pl": "Niska, zwarta",
+          "de": "Niedrig, kompakt",
+          "fr": "Bas, compact",
+          "it": "Bassa, compatta",
+          "es": "Baja, compacta",
+          "pt": "Baixa, compacta",
+          "ar": "منخفضة ومدمجة",
+          "hi": "निचली, घनी",
+          "zh": "低矮紧凑",
+          "ja": "低くコンパクト",
+          "ko": "낮고 빽빽함"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid heat, drought",
+          "pl": "Unikaj upału/suszy",
+          "de": "Hitze/Trockenheit",
+          "fr": "Éviter chaleur/séch.",
+          "it": "Evita caldo/sicc.",
+          "es": "Evita calor/sequía",
+          "pt": "Evite calor/seca",
+          "ar": "تجنب الحر/الجفاف",
+          "hi": "गर्मी/सूखापन से बचें",
+          "zh": "避免炎热干旱",
+          "ja": "高温・乾燥を避ける",
+          "ko": "고온·건조 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids; occasional",
+          "pl": "Mszyce; czasem",
+          "de": "Blattläuse, geleg.",
+          "fr": "Pucerons, parfois",
+          "it": "Afidi, a volte",
+          "es": "Pulgones, a veces",
+          "pt": "Pulgões, às vezes",
+          "ar": "حشرة المنّ؛ أحياناً",
+          "hi": "एफिड्स; कभी-कभी",
+          "zh": "蚜虫；偶有",
+          "ja": "アブラムシが偶発",
+          "ko": "진딧물; 가끔"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Common Daisy",
-      "description": "Bellis perennis is a low-growing perennial commonly found in lawns and meadows. It produces white flowers with yellow centers and prefers cool conditions with regular moisture."
+      "common_name": "English daisy",
+      "description": "Bellis perennis is a low, rosette-forming perennial with daisy-like flower heads. It prefers full sun to partial shade and consistently moist, well-drained soil. It grows best in cool conditions and may decline in heat."
     },
     "pl": {
-      "common_name": "Stokrotka pospolita",
-      "description": "Bellis perennis to niska bylina często spotykana na trawnikach i łąkach. Tworzy białe kwiaty z żółtym środkiem i najlepiej rośnie w chłodniejszych warunkach."
+      "common_name": "stokrotka pospolita",
+      "description": "Bellis perennis to niska bylina tworząca rozetę liści i koszyczki kwiatowe. Lubi słońce lub półcień oraz stale lekko wilgotne, przepuszczalne podłoże. Najlepiej rośnie w chłodzie i źle znosi upały."
     },
     "de": {
       "common_name": "Gänseblümchen",
-      "description": "Bellis perennis ist eine niedrig wachsende Staude aus Wiesen und Rasenflächen. Sie bildet weiße Blüten mit gelber Mitte und mag gleichmäßige Feuchtigkeit."
+      "description": "Bellis perennis ist eine niedrige, rosettenbildende Staude mit typischen Korbblüten. Sie mag Sonne bis Halbschatten und gleichmäßig feuchte, gut drainierte Erde. Kühle Temperaturen sind ideal, starke Hitze schwächt die Pflanze."
     },
     "fr": {
-      "common_name": "Pâquerette",
-      "description": "Bellis perennis est une plante vivace basse commune dans les pelouses. Elle porte des fleurs blanches à cœur jaune et préfère un sol frais."
+      "common_name": "pâquerette vivace",
+      "description": "Bellis perennis est une petite vivace en rosette à fleurs en forme de marguerite. Elle préfère le soleil à la mi-ombre et un sol frais mais bien drainé. Elle se développe mieux par temps frais et souffre en cas de forte chaleur."
     },
     "it": {
-      "common_name": "Pratolina comune",
-      "description": "Bellis perennis è una pianta perenne bassa diffusa nei prati. Produce fiori bianchi con centro giallo e cresce bene in climi freschi."
+      "common_name": "pratolina comune",
+      "description": "Bellis perennis è una perenne bassa a rosetta con capolini simili a margherite. Preferisce sole o mezz'ombra e terreno costantemente umido ma ben drenato. Cresce meglio con temperature fresche e può rallentare con il caldo intenso."
     },
     "es": {
-      "common_name": "Margarita común",
-      "description": "Bellis perennis es una planta perenne de bajo crecimiento común en céspedes. Tiene flores blancas con centro amarillo y requiere riego regular."
+      "common_name": "margarita común",
+      "description": "Bellis perennis es una perenne baja con roseta de hojas y flores tipo margarita. Prefiere sol a semisombra y un sustrato húmedo pero bien drenado. Va mejor con temperaturas frescas y puede decaer con calor fuerte."
     },
     "pt": {
-      "common_name": "Margarida-comum",
-      "description": "Bellis perennis é uma planta perene baixa comum em relvados. Produz flores brancas com centro amarelo e prefere solos húmidos."
+      "common_name": "margarida-comum",
+      "description": "Bellis perennis é uma perene baixa, em roseta, com flores em forma de margarida. Prefere sol a meia-sombra e substrato sempre levemente úmido e bem drenado. Desenvolve-se melhor em clima fresco e pode sofrer com calor intenso."
     },
     "ar": {
-      "common_name": "الأقحوان الشائع",
-      "description": "Bellis perennis نبات معمر منخفض الانتشار في المروج. ينتج أزهارًا بيضاء ذات مركز أصفر ويفضل تربة رطبة."
+      "common_name": "الأقحوان الإنجليزي",
+      "description": "Bellis perennis نبات معمر منخفض ينمو كوردة أوراق ويحمل أزهاراً شبيهة بالأقحوان. يفضل الشمس أو الظل الجزئي وتربة رطبة مع صرف جيد. ينجح أكثر في الجو البارد ويتراجع مع الحرارة العالية."
     },
     "hi": {
-      "common_name": "साधारण डेज़ी",
-      "description": "Bellis perennis एक कम ऊँचाई वाला बहुवर्षीय पौधा है जो घास के मैदानों में पाया जाता है। इसमें पीले केंद्र के साथ सफेद फूल आते हैं।"
+      "common_name": "इंग्लिश डेजी",
+      "description": "Bellis perennis एक निचला बहुवर्षीय पौधा है जो रोजेट बनाता है और डेजी जैसे फूल देता है. इसे धूप से आंशिक छांह और नम पर जलनिकासी मिट्टी पसंद है. ठंडे मौसम में बेहतर बढ़ता है और ज्यादा गरमी में कमजोर पड़ सकता है."
     },
     "zh": {
       "common_name": "雏菊",
-      "description": "Bellis perennis 是一种常见的低矮多年生植物，常见于草坪。它开白色花，黄色花心，喜湿润环境。"
+      "description": "Bellis perennis 为低矮莲座状多年生草本，花头似雏菊。喜全日照或半阴，偏好均匀湿润但排水良好的基质。更适合凉爽环境，高温时生长会受影响。"
     },
     "ja": {
-      "common_name": "デイジー",
-      "description": "Bellis perennis は芝生によく見られる低成長の多年草です。白い花と黄色い中心が特徴で、適度な水分を好みます。"
+      "common_name": "イングリッシュデージー",
+      "description": "Bellis perennis は低く育つロゼット状の多年草で、デージー状の花を付けます。日向か半日陰と、過湿にしない排水の良い用土が向きます。涼しい環境を好み、高温で弱りやすいです。"
     },
     "ko": {
-      "common_name": "데이지",
-      "description": "Bellis perennis 는 잔디밭에서 흔히 자라는 낮은 다년생 식물입니다. 노란 중심의 흰 꽃을 피웁니다."
+      "common_name": "영국 데이지",
+      "description": "Bellis perennis는 낮게 자라는 로제트 형태의 다년생 초반으로, 데이지 모양의 꽃을 피웁니다. 태양과 반그늘 모두 가능하며 물빠짐 좋고 거의 항상 촉촉한 흡양을 선호합니다. 서늘한 환경에서 가장 잘 자라고 고온에서는 기세가 떨어질 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/2153/bellis-perennis/details",
+      "https://www.rhs.org.uk/plants/94326/bellis-perennis/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b749",
       "https://plants.ces.ncsu.edu/plants/bellis-perennis/",
-      "https://www.gardenersworld.com/plants/bellis-perennis/"
+      "https://www.thespruce.com/english-daisy-plant-overview-4767251"
     ]
   }
 }

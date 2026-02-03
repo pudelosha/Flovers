@@ -1,17 +1,18 @@
 {
   "external_id": "anemone_coronaria",
-  "name": "Poppy Anemone",
+  "name": "Poppy anemone",
   "latin": "Anemone coronaria",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,7 +31,7 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonnig",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
@@ -39,7 +40,7 @@
           "hi": "पूरी धूप",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "직사광선"
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
+          "en": "Well-drained, rich",
           "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
+          "de": "Durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "जलनिकास वाली",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
           "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "ko": "배수 잘됨"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate water",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage moyen",
-          "it": "Acqua moderata",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水",
-          "ko": "보통 급수"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotno",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉"
         }
       }
     },
@@ -85,14 +86,14 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
+          "en": "Moderate",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "普通",
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodno-umiark.",
-          "de": "Kühl-mild",
-          "fr": "Frais à doux",
-          "it": "Fresco-mite",
-          "es": "Fresco suave",
-          "pt": "Fresco a ameno",
-          "ar": "معتدل بارد",
-          "hi": "ठंडा-हल्का",
-          "zh": "凉爽温和",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "Cool: 10–18°C",
+          "pl": "Chłodno: 10–18°C",
+          "de": "Kühl: 10–18°C",
+          "fr": "Frais: 10–18°C",
+          "it": "Fresco: 10–18°C",
+          "es": "Fresco: 10–18°C",
+          "pt": "Fresco: 10–18°C",
+          "ar": "بارد: 10–18°م",
+          "hi": "ठंडा: 10–18°C",
+          "zh": "凉爽：10–18°C",
+          "ja": "涼しい: 10–18°C",
+          "ko": "서늘: 10–18°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Average humidity",
+          "pl": "Umiarkowana",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if eaten",
-          "pl": "Trująca",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Seasonal growth",
-          "pl": "Sezonowy",
-          "de": "Saisonal",
-          "fr": "Saisonnier",
-          "it": "Stagionale",
-          "es": "Estacional",
-          "pt": "Sazonal",
-          "ar": "موسمي",
-          "hi": "मौसमी",
-          "zh": "季节性",
-          "ja": "季節的",
-          "ko": "계절성"
+          "en": "Corm; spring blooms",
+          "pl": "Bulwa; wiosną kwit.",
+          "de": "Knolle; Frühblüher",
+          "fr": "Cormus; floraison",
+          "it": "Cormo; fioritura",
+          "es": "Cormo; primavera",
+          "pt": "Cormo; primavera",
+          "ar": "درنة؛ ربيعًا",
+          "hi": "कॉर्म; वसंत फूल",
+          "zh": "球茎；春季开花",
+          "ja": "球根・春咲き",
+          "ko": "구근; 봄 개화"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التشبع",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodn.",
+          "de": "Gelegentliche Schäd.",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有害虫",
+          "ja": "害虫は時々",
+          "ko": "해충 가끔"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Poppy Anemone",
-      "description": "Anemone coronaria is a tuberous perennial native to the Mediterranean region. It produces bright, poppy-like flowers in spring and prefers full sun with well-drained soil."
+      "common_name": "Poppy anemone",
+      "description": "A corm-grown anemone valued for bright spring flowers. Give full sun and a well-drained, fertile mix, watering when the surface starts to dry. Reduce watering after flowering as foliage dies back; sap can irritate skin and the plant is toxic if ingested."
     },
     "pl": {
       "common_name": "Zawilec wieńcowy",
-      "description": "Anemone coronaria to bulwiasta bylina pochodząca z rejonu Morza Śródziemnego. Kwitnie wiosną i najlepiej rośnie w pełnym słońcu na przepuszczalnej glebie."
+      "description": "Zawilec z bulwą, ceniony za wiosenne, intensywne kwiaty. Lubi pełne słońce i żyzne, przepuszczalne podłoże; podlewaj, gdy wierzch przeschnie. Po kwitnieniu ogranicz podlewanie, gdy liście zasychają; roślina jest toksyczna po spożyciu i może drażnić skórę."
     },
     "de": {
       "common_name": "Kronen-Anemone",
-      "description": "Anemone coronaria ist eine knollenbildende Staude aus dem Mittelmeerraum. Sie blüht im Frühjahr und benötigt volle Sonne sowie gut durchlässigen Boden."
+      "description": "Eine Knollenpflanze mit leuchtenden Frühlingsblüten. Vollsonnig stellen und in ein nährstoffreiches, gut drainiertes Substrat pflanzen; gießen, wenn die Oberfläche antrocknet. Nach der Blüte weniger gießen, wenn das Laub einzieht; giftig bei Verzehr und kann Haut reizen."
     },
     "fr": {
       "common_name": "Anémone couronnée",
-      "description": "Anemone coronaria est une plante vivace à tubercules originaire de la région méditerranéenne. Elle fleurit au printemps et préfère le plein soleil et un sol bien drainé."
+      "description": "Plante à corme appréciée pour ses fleurs de printemps très colorées. Installez-la au soleil dans un substrat fertile et bien drainé, et arrosez quand la surface commence à sécher. Réduisez l’arrosage après la floraison lorsque le feuillage jaunit; la plante est toxique en cas d’ingestion et peut irriter la peau."
     },
     "it": {
       "common_name": "Anemone coronaria",
-      "description": "Anemone coronaria è una perenne tuberosa originaria del Mediterraneo. Fiorisce in primavera e richiede pieno sole e terreno ben drenato."
+      "description": "Anemone da cormo nota per le fioriture primaverili vivaci. Coltivala in pieno sole con terriccio fertile e ben drenato, annaffiando quando la superficie asciuga. Dopo la fioritura riduci l’acqua mentre la parte aerea secca; è tossica se ingerita e la linfa può irritare la pelle."
     },
     "es": {
       "common_name": "Anémona coronaria",
-      "description": "Anemone coronaria es una planta perenne tuberosa del Mediterráneo. Florece en primavera y necesita sol pleno y suelo bien drenado."
+      "description": "Planta de cormo apreciada por sus flores primaverales intensas. Necesita pleno sol y un sustrato fértil y bien drenado; riega cuando la superficie empiece a secarse. Reduce el riego tras la floración cuando el follaje se marchite; es tóxica si se ingiere y puede irritar la piel."
     },
     "pt": {
       "common_name": "Anêmona-coronária",
-      "description": "Anemone coronaria é uma planta perene tuberosa originária do Mediterrâneo. Floresce na primavera e prefere sol pleno e solo bem drenado."
+      "description": "Planta de cormo valorizada por flores vivas na primavera. Dê sol pleno e substrato fértil e bem drenado, regando quando a superfície começar a secar. Após a floração, reduza a rega quando a folhagem entrar em dormência; é tóxica se ingerida e pode irritar a pele."
     },
     "ar": {
-      "common_name": "شقائق النعمان",
-      "description": "Anemone coronaria نبات معمر درني موطنه منطقة البحر المتوسط. يزهر في الربيع ويحتاج إلى شمس كاملة وتربة جيدة التصريف."
+      "common_name": "شقائق النعمان التاجية",
+      "description": "نبات درني معروف بأزهاره الربيعية الزاهية. يحتاج إلى شمس كاملة وتربة خصبة جيدة الصرف، ويُسقى عندما يبدأ سطح التربة بالجفاف. خفف الري بعد الإزهار عند اصفرار الأوراق؛ النبات سام عند الابتلاع وقد يسبب تهيجًا جلديًا."
     },
     "hi": {
-      "common_name": "पॉपी एनीमोन",
-      "description": "Anemone coronaria भूमध्यसागरीय क्षेत्र का कंदयुक्त बहुवर्षीय पौधा है। यह वसंत में खिलता है और अच्छी जल निकास वाली मिट्टी व धूप पसंद करता है।"
+      "common_name": "पोपी एनेमोन",
+      "description": "यह एक कॉर्म से उगने वाला पौधा है, जो वसंत में चमकीले फूल देता है। इसे पूरी धूप और अच्छी जलनिकासी वाली उपजाऊ मिट्टी दें, और ऊपर की सतह सूखने लगे तो पानी दें। फूलों के बाद पत्तियाँ सूखने पर पानी कम करें; खाने पर यह विषाक्त है और रस त्वचा को चिढ़ा सकता है।"
     },
     "zh": {
-      "common_name": "银莲花",
-      "description": "Anemone coronaria 原产于地中海地区，是一种块茎多年生植物。春季开花，喜全日照和排水良好的土壤。"
+      "common_name": "冠状银莲花",
+      "description": "球茎植物，以春季鲜艳花朵著称。放在全日照处，使用肥沃且排水良好的基质；表土开始变干时浇水。花后叶片枯黄回缩需减少浇水；误食有毒，汁液可能刺激皮肤。"
     },
     "ja": {
-      "common_name": "アネモネ",
-      "description": "アネモネ・コロナリアは地中海原産の球根性多年草です。春に開花し、日当たりと水はけの良い土を好みます。"
+      "common_name": "アネモネ・コロナリア",
+      "description": "球根（球茎）で育ち、春に鮮やかな花を咲かせます。日当たりと水はけの良い肥沃な用土を好み、表土が乾き始めたら水やりします。花後に葉が枯れ込む時期は水を控えめにし、誤食は有毒で樹液は皮膚刺激になることがあります。"
     },
     "ko": {
-      "common_name": "아네모네",
-      "description": "Anemone coronaria는 지중해 지역 원산의 괴경성 다년초입니다. 봄에 꽃이 피며 햇볕과 배수가 좋은 토양을 선호합니다."
+      "common_name": "관상 아네모네",
+      "description": "구근(구경)으로 자라며 봄에 선명한 꽃을 피웁니다. 햇빛이 잘 드는 곳과 배수가 좋은 비옥한 흙을 주고, 겉흙이 마르기 시작하면 물을 주세요. 개화 후 잎이 시들어 들어가면 물을 줄이며, 섭취 시 유독하고 수액이 피부를 자극할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1201/anemone-coronaria/details",
-      "https://www.gardenersworld.com/plants/anemone-coronaria/",
-      "https://plants.ces.ncsu.edu/plants/anemone-coronaria/"
+      "https://plants.ces.ncsu.edu/plants/anemone-coronaria/",
+      "https://www.almanac.com/plant/anemone",
+      "https://www.lovethegarden.com/uk-en/growing-guide/how-grow-and-care-anemone",
+      "https://www.sarahraven.com/articles/how-to-plant-and-grow-anemones",
+      "https://plantura.garden/uk/flowers-perennials/anemone/anemone-coronaria"
     ]
   }
 }

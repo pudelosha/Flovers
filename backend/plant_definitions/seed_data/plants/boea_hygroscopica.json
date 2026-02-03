@@ -1,23 +1,24 @@
 {
   "external_id": "boea_hygroscopica",
-  "name": "Resurrection plant",
+  "name": "Rock violet",
   "latin": "Boea hygroscopica",
   "sun": "medium",
-  "water": "low",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy"
+    "all-purpose",
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "boea_hygroscopica.jpg",
@@ -29,13 +30,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles indirektes",
+          "de": "Helles Indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rocky sandy soil",
-          "pl": "Piaszczysto-kamienna",
-          "de": "Sandig steinig",
-          "fr": "Sableux rocheux",
-          "it": "Sabbioso roccioso",
-          "es": "Arenoso rocoso",
-          "pt": "Arenoso rochoso",
-          "ar": "تربة رملية",
-          "hi": "रेतीली मिट्टी",
-          "zh": "沙质岩性土",
-          "ja": "砂質岩混じり",
-          "ko": "모래 자갈 토양"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Gut drainierend",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकासी मिट्टी",
+          "zh": "排水良好土",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Very infrequent",
-          "pl": "Bardzo rzadkie",
-          "de": "Sehr selten",
-          "fr": "Très rare",
-          "it": "Molto raro",
-          "es": "Muy escaso",
-          "pt": "Muito raro",
-          "ar": "نادر جدًا",
-          "hi": "बहुत कम",
-          "zh": "极少浇水",
-          "ja": "ごく控えめ",
-          "ko": "아주 적게"
+          "en": "Lightly moist",
+          "pl": "Lekko wilgotno",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿らせる",
+          "ko": "약간 촉촉"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
         }
       }
     },
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal indoor",
-          "pl": "Normalna domowa",
-          "de": "Normale Raumluft",
-          "fr": "Intérieur normal",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通室内",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Average home",
+          "pl": "Typowa domowa",
+          "de": "Normale Wohnung",
+          "fr": "Maison normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة منزلية",
+          "hi": "सामान्य नमी",
+          "zh": "普通室内湿度",
+          "ja": "標準的な湿度",
+          "ko": "일반 실내습도"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxicity unknown",
+          "pl": "Toksyczność nieznana",
+          "de": "Toxizität unklar",
+          "fr": "Toxicité inconnue",
+          "it": "Tossicità ignota",
+          "es": "Toxicidad desconocida",
+          "pt": "Toxicidade desconhecida",
+          "ar": "سمية غير معروفة",
+          "hi": "विषाक्तता अज्ञात",
+          "zh": "毒性未知",
+          "ja": "毒性は不明",
+          "ko": "독성 정보 없음"
         }
       }
     },
@@ -160,77 +161,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow, clumping",
+          "pl": "Wolny, kępiasty",
+          "de": "Langsam, horstig",
+          "fr": "Lente, en touffe",
+          "it": "Lenta, cespitosa",
+          "es": "Lento, en mata",
+          "pt": "Lento, em touceira",
+          "ar": "نمو بطيء متكتل",
+          "hi": "धीमी, गुच्छेदार",
+          "zh": "缓慢丛生",
+          "ja": "ゆっくり株立ち",
+          "ko": "느림, 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "ज्यादा पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Resurrection plant",
-      "description": "Boea hygroscopica is a drought-tolerant lithophytic plant from East Asia. It can survive long dry periods by desiccating and rehydrating when watered. Indoors it prefers bright, indirect light and very sparse watering."
+      "common_name": "Rock violet",
+      "description": "Boea hygroscopica is a gesneriad with fleshy leaves and small purple flowers, often grown like an African violet. Provide bright, indirect light and a fast-draining mix. Water to keep the mix lightly moist but never waterlogged, letting the surface dry slightly between waterings."
     },
     "pl": {
-      "common_name": "Roślina zmartwychwstania",
-      "description": "Boea hygroscopica to odporna na suszę roślina skalna z Azji Wschodniej. Potrafi przetrwać długie okresy bez wody, ponownie ożywając po nawodnieniu. W domu wymaga jasnego, rozproszonego światła i rzadkiego podlewania."
+      "common_name": "Boea (fiołek skalny)",
+      "description": "Boea hygroscopica to gesneriad o mięsistych liściach i drobnych fioletowych kwiatach, uprawiany podobnie jak fiołek afrykański. Zapewnij jasne, rozproszone światło i przepuszczalne podłoże. Podlewaj tak, by podłoże było lekko wilgotne, ale bez zastoin wody; pozwól wierzchowi nieco przeschnąć."
     },
     "de": {
-      "common_name": "Auferstehungspflanze",
-      "description": "Boea hygroscopica ist eine trockenheitsresistente Felsenpflanze aus Ostasien. Sie übersteht lange Trockenzeiten und rehydriert sich nach dem Gießen. Als Zimmerpflanze benötigt sie helles, indirektes Licht und wenig Wasser."
+      "common_name": "Felsenveilchen",
+      "description": "Boea hygroscopica ist eine Gesnerienpflanze mit fleischigen Blättern und kleinen violetten Blüten und wird ähnlich wie ein Usambaraveilchen gepflegt. Stelle sie hell, aber ohne direkte Sonne, in ein gut drainierendes Substrat. Gieße so, dass es leicht feucht bleibt, jedoch nie nass; die Oberfläche darf zwischen den Wassergaben etwas abtrocknen."
     },
     "fr": {
-      "common_name": "Plante de la résurrection",
-      "description": "Boea hygroscopica est une plante lithophyte résistante à la sécheresse originaire d’Asie de l’Est. Elle peut se dessécher complètement et repartir après arrosage. En intérieur, elle demande une lumière vive indirecte et peu d’eau."
+      "common_name": "Violette des rochers",
+      "description": "Boea hygroscopica est une gesnériacée aux feuilles charnues et aux petites fleurs violettes, cultivée un peu comme une violette africaine. Installe-la en lumière vive indirecte dans un substrat bien drainant. Arrose pour garder le mélange légèrement humide sans le détremper, en laissant sécher un peu la surface entre deux arrosages."
     },
     "it": {
-      "common_name": "Pianta della resurrezione",
-      "description": "Boea hygroscopica è una pianta litofita tollerante alla siccità originaria dell’Asia orientale. Sopravvive a lunghi periodi secchi e si riprende con l’acqua. In casa richiede luce indiretta brillante e annaffiature molto rare."
+      "common_name": "Violetta di roccia",
+      "description": "Boea hygroscopica è una gesneriacea con foglie carnose e piccoli fiori viola, coltivata in modo simile alla violetta africana. Offri luce intensa ma indiretta e un terriccio ben drenante. Annaffia per mantenere il substrato leggermente umido senza ristagni, lasciando asciugare un po’ lo strato superficiale."
     },
     "es": {
-      "common_name": "Planta de la resurrección",
-      "description": "Boea hygroscopica es una planta litófita resistente a la sequía de Asia oriental. Puede secarse casi por completo y rehidratarse al regar. En interior necesita luz indirecta brillante y riegos muy espaciados."
+      "common_name": "Violeta de roca",
+      "description": "Boea hygroscopica es una gesneriácea de hojas carnosas y pequeñas flores moradas, con cuidados similares a la violeta africana. Necesita luz brillante e indirecta y un sustrato bien drenante. Riega para mantener el sustrato ligeramente húmedo sin encharcar, dejando que la capa superior se seque un poco entre riegos."
     },
     "pt": {
-      "common_name": "Planta da ressurreição",
-      "description": "Boea hygroscopica é uma planta litófita tolerante à seca da Ásia Oriental. Suporta longos períodos secos e se recupera com água. Cultivada em interior, prefere luz indireta intensa e regas raras."
+      "common_name": "Violeta-da-rocha",
+      "description": "Boea hygroscopica é uma gesneriácea com folhas carnudas e pequenas flores roxas, cultivada de forma semelhante à violeta-africana. Prefere luz forte indireta e substrato bem drenado. Regue para manter levemente úmido sem encharcar, deixando a superfície secar um pouco entre as regas."
     },
     "ar": {
-      "common_name": "نبات القيامة",
-      "description": "Boea hygroscopica نبات صخري مقاوم للجفاف موطنه شرق آسيا. يستطيع الجفاف لفترات طويلة ثم يعود للحياة عند الري. داخل المنزل يفضل ضوءًا ساطعًا غير مباشر وريًا نادرًا."
+      "common_name": "البويا (بنفسج صخري)",
+      "description": "Boea hygroscopica نبات من الفصيلة الغزنرية بأوراق لحمية وأزهار بنفسجية صغيرة، ويمكن التعامل معه مثل البنفسج الإفريقي. يحتاج إلى ضوء ساطع غير مباشر وتربة جيدة التصريف. اسقِ للحفاظ على رطوبة خفيفة دون تشبع بالماء، مع ترك السطح يجف قليلًا بين الريّات."
     },
     "hi": {
-      "common_name": "पुनर्जीवन पौधा",
-      "description": "Boea hygroscopica पूर्वी एशिया का सूखा सहने वाला शैल-वनस्पति पौधा है। यह लंबे समय तक सूखा रह सकता है और पानी मिलने पर फिर जीवित हो जाता है। घर में इसे तेज अप्रत्यक्ष रोशनी और बहुत कम पानी चाहिए।"
+      "common_name": "रॉक वायलेट",
+      "description": "Boea hygroscopica गेसेनेरिएसी परिवार का पौधा है, जिसकी पत्तियाँ मांसल और फूल छोटे बैंगनी होते हैं; देखभाल अफ्रीकी वायलेट जैसी रखी जा सकती है। इसे तेज़ लेकिन अप्रत्यक्ष रोशनी और अच्छी जलनिकासी वाले मिश्रण में रखें। मिट्टी को हल्का नम रखें, पर पानी जमा न होने दें; ऊपर की परत को थोड़ा सूखने दें।"
     },
     "zh": {
-      "common_name": "复活植物",
-      "description": "Boea hygroscopica 是一种原产于东亚的耐旱岩生植物。它可以在干旱时休眠，浇水后重新恢复生长。室内养护需明亮散射光和极少浇水。"
+      "common_name": "岩紫罗兰",
+      "description": "Boea hygroscopica 是苦苣苔科植物，叶片肥厚，开小型紫色花，养护方式可参考非洲紫罗兰。提供明亮散射光和排水良好的基质。浇水保持微湿但避免积水，期间让表层稍微干一点再浇。"
     },
     "ja": {
-      "common_name": "復活植物",
-      "description": "Boea hygroscopica は東アジア原産の耐乾性岩生植物です。長期間乾燥しても水分で回復します。室内では明るい間接光と控えめな水やりが必要です。"
+      "common_name": "ロックバイオレット",
+      "description": "Boea hygroscopica は苦苣苔科で、肉厚の葉と小さな紫花をつけ、アフリカスミレに近い管理ができます。明るい間接光と水はけの良い用土で育てます。用土はやや湿り気を保ちつつ過湿を避け、表面が少し乾いてから水やりします。"
     },
     "ko": {
-      "common_name": "부활식물",
-      "description": "Boea hygroscopica는 동아시아 원산의 건조에 강한 암석식물입니다. 오랜 건조 후에도 물을 주면 회복합니다. 실내에서는 밝은 간접광과 매우 적은 물주기가 필요합니다."
+      "common_name": "록 바이올렛",
+      "description": "Boea hygroscopica 는 괴불나무과(게스네리아과) 식물로, 두꺼운 잎과 작은 보라색 꽃이 특징이며 아프리칸 바이올렛처럼 관리할 수 있습니다. 밝은 간접광과 배수 좋은 흙을 사용하세요. 흙은 약간 촉촉하게 유지하되 과습을 피하고, 윗부분이 조금 마른 뒤 물을 주세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/read-and-watch/resurrection-plants",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60456323-2",
-      "https://www.botanicgardens.org/plant-talk/resurrection-plants"
+      "https://resources.austplants.com.au/stories/boea-hygroscopica-commonly-known-as-rock-violet/",
+      "https://www.gesneriadsociety.org/wp-content/uploads/2016/06/Gesneriads2016Q3HD.pdf",
+      "https://gardeningwithangus.com.au/boea-hygroscopica-rock-violet/"
     ]
   }
 }

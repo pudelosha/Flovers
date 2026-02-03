@@ -1,27 +1,27 @@
 {
   "external_id": "tillandsia_usneoides",
-  "name": "Spanish Moss",
+  "name": "Spanish moss",
   "latin": "Tillandsia usneoides",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 14,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "tillandsia_usneoides.jpg",
   "image_thumb": "tillandsia_usneoides.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "orchid",
-          "pl": "orchidea",
-          "de": "Orchidee",
-          "fr": "orchidée",
-          "it": "orchidea",
-          "es": "orquídea",
-          "pt": "orquídea",
-          "ar": "أوركيد",
-          "hi": "ऑर्किड",
-          "zh": "兰花",
-          "ja": "ラン",
-          "ko": "난초"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "よく排水された土",
+          "ko": "잘 배수되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीड़े",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Spanish Moss",
-      "description": "Tillandsia usneoides, or Spanish moss, is a type of epiphytic bromeliad native to the southern United States. It thrives in humid, shaded environments, often hanging from trees in swamps and forests."
+      "common_name": "Spanish moss",
+      "description": "Spanish moss is an epiphytic plant known for its long, wispy strands. It thrives in warm, humid conditions and requires moderate light and watering."
     },
     "pl": {
-      "common_name": "Hiszpańska Mch",
-      "description": "Tillandsia usneoides, czyli hiszpańska mchu, to epifityczny bromeliad, który pochodzi z południowych Stanów Zjednoczonych. Rośnie w wilgotnych, zacienionych środowiskach, często zwisając z drzew w bagnach i lasach."
+      "common_name": "Moss hiszpański",
+      "description": "Moss hiszpański to epifityczna roślina znana z długich, zwiewnych włókien. Rośnie w ciepłych, wilgotnych warunkach i wymaga umiarkowanego światła oraz podlewania."
     },
     "de": {
       "common_name": "Spanisches Moos",
-      "description": "Tillandsia usneoides, oder spanisches Moos, ist eine epiphytische Bromelie, die aus den südlichen Vereinigten Staaten stammt. Es wächst in feuchten, schattigen Umgebungen und hängt oft von Bäumen in Sümpfen und Wäldern."
+      "description": "Spanisches Moos ist eine epiphytische Pflanze, die für ihre langen, zarten Stränge bekannt ist. Es gedeiht bei warmen, feuchten Bedingungen und benötigt mittleres Licht und Bewässerung."
     },
     "fr": {
-      "common_name": "Mousse Espagnole",
-      "description": "Tillandsia usneoides, ou mousse espagnole, est un broméliacée épiphyte originaire du sud des États-Unis. Il pousse dans des environnements humides et ombragés, suspendu aux arbres des marais et des forêts."
+      "common_name": "Mousse espagnole",
+      "description": "La mousse espagnole est une plante épiphyte connue pour ses longs filaments souples. Elle pousse dans des conditions chaudes et humides et nécessite une lumière et un arrosage modérés."
     },
     "it": {
-      "common_name": "Muschio Spagnolo",
-      "description": "Tillandsia usneoides, o muschio spagnolo, è una bromeliacea epifita originaria del sud degli Stati Uniti. Cresce in ambienti umidi e ombrosi, spesso appeso agli alberi in paludi e foreste."
+      "common_name": "Muschio spagnolo",
+      "description": "Il muschio spagnolo è una pianta epifita conosciuta per i suoi lunghi fili sottili. Cresce in condizioni calde e umide e richiede luce e annaffiatura moderate."
     },
     "es": {
-      "common_name": "Musgo Español",
-      "description": "Tillandsia usneoides, o musgo español, es una bromelia epífita originaria del sur de los Estados Unidos. Crece en ambientes húmedos y sombreados, a menudo colgando de los árboles en pantanos y bosques."
+      "common_name": "Musgo español",
+      "description": "El musgo español es una planta epífita conocida por sus largos hilos. Crece en condiciones cálidas y húmedas y requiere luz y riego moderados."
     },
     "pt": {
-      "common_name": "Musgo Espanhol",
-      "description": "Tillandsia usneoides, ou musgo espanhol, é uma bromélia epífita nativa do sul dos Estados Unidos. Cresce em ambientes úmidos e sombreados, frequentemente pendurado em árvores em pântanos e florestas."
+      "common_name": "Musgo espanhol",
+      "description": "O musgo espanhol é uma planta epífita conhecida por seus longos fios finos. Cresce em condições quentes e úmidas, exigindo luz e rega moderadas."
     },
     "ar": {
-      "common_name": "الطحلب الإسباني",
-      "description": "تيلاندسيا يوسنوييدس، أو الطحلب الإسباني، هو نوع من البروميليا الهوائية الذي ينمو في جنوب الولايات المتحدة. ينمو في البيئات الرطبة والمظللة، وغالبًا ما يتدلى من الأشجار في المستنقعات والغابات."
+      "common_name": "طحلب إسباني",
+      "description": "الطحلب الإسباني هو نبات زاحف معروف بخيوطه الطويلة والرفيعة. ينمو في ظروف دافئة ورطبة ويحتاج إلى ضوء معتدل وري معتدل."
     },
     "hi": {
       "common_name": "स्पैनिश मॉस",
-      "description": "टिलैंडसिया उस्नोएड्स, या स्पैनिश मॉस, दक्षिणी संयुक्त राज्य से उत्पन्न एक एपिफाइटिक ब्रोमेलीएड है। यह आर्द्र, छायादार वातावरण में पनपता है, अक्सर दलदल और जंगलों में पेड़ों से लटकते हुए।"
+      "description": "स्पैनिश मॉस एक एपिफाइटिक पौधा है जो अपनी लंबी, महीन लताओं के लिए जाना जाता है। यह गर्म, आर्द्र परिस्थितियों में पनपता है और इसे मध्यम प्रकाश और पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "西班牙苔藓",
-      "description": "Tillandsia usneoides，或称西班牙苔藓，是一种原产于美国南部的气生凤梨。它在湿润、阴凉的环境中生长，常常悬挂在沼泽和森林中的树木上。"
+      "description": "西班牙苔藓是一种附生植物，以其长而柔软的丝状物而闻名。它在温暖湿润的环境中生长，需要适量的光照和浇水。"
     },
     "ja": {
       "common_name": "スペインモス",
-      "description": "Tillandsia usneoides、またはスペインモスは、アメリカ南部原産の着生植物です。湿気が多く、陰の多い環境で成長し、沼地や森林の木々にぶら下がっていることがよくあります。"
+      "description": "スペインモスは長い細い糸で知られる着生植物です。温暖で湿度の高い環境で育ち、中程度の光と水やりが必要です。"
     },
     "ko": {
       "common_name": "스페인 이끼",
-      "description": "Tillandsia usneoides, 또는 스페인 이끼는 미국 남부 원산지의 공생성 브로멜리아입니다. 습하고 그늘진 환경에서 자라며, 종종 습지와 숲 속 나무에 걸쳐 있습니다."
+      "description": "스페인 이끼는 긴 실처럼 가느다란 줄기로 알려진 착생 식물입니다. 따뜻하고 습한 환경에서 자라며, 적당한 빛과 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/spanishmoss",
-      "https://www.universityextensions.com/tillandsia-usneoides"
+      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-and-pests/spanish-moss/",
+      "https://www.smithsonianmag.com/arts-culture/what-is-spanish-moss-118249294/"
     ]
   }
 }

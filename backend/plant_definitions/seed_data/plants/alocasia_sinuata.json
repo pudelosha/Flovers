@@ -1,26 +1,27 @@
 {
   "external_id": "alocasia_sinuata",
-  "name": "Alocasia Sinuata",
+  "name": "Alocasia sinuata",
   "latin": "Alocasia sinuata",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "aroid",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
   "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "alocasia_sinuata.jpg",
   "image_thumb": "alocasia_sinuata.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining aroid",
-          "pl": "Przepuszczalne",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidów",
+          "de": "Aroid-Mix",
+          "fr": "Mélange aroid",
+          "it": "Miscela aroid",
+          "es": "Mezcla de aroides",
+          "pt": "Mistura de aroides",
+          "ar": "خليط أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합토"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stała wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido costante",
-          "es": "Húmedo constante",
-          "pt": "Úmido constante",
-          "ar": "رطوبة ثابتة",
-          "hi": "नमी बनाए रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,17 +87,17 @@
       "value": {
         "text": {
           "en": "Medium care",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -125,15 +126,15 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
-          "ja": "高湿度",
+          "ja": "高い湿度",
           "ko": "높은 습도"
         }
       }
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पेट्स के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to medium",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestifere occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Sinuate Alocasia",
-      "description": "Alocasia sinuata is a tropical aroid known for its thick, glossy, deeply veined leaves. It prefers warm temperatures, high humidity, and bright indirect light. Consistent moisture and good drainage are essential."
+      "common_name": "Elephant Ear",
+      "description": "Alocasia sinuata, commonly known as Elephant Ear, is a tropical plant with distinctive arrow-shaped leaves. It thrives in bright, indirect light and high humidity."
     },
     "pl": {
-      "common_name": "Alokazja Sinuata",
-      "description": "Alocasia sinuata to tropikalna roślina o grubych, błyszczących liściach. Wymaga ciepła, wysokiej wilgotności i jasnego, rozproszonego światła. Podłoże powinno być stale lekko wilgotne."
+      "common_name": "Uszy słonia",
+      "description": "Alocasia sinuata, znana jako Uszy słonia, to tropikalna roślina o charakterystycznych liściach w kształcie strzały. Rośnie najlepiej w jasnym, pośrednim świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Alokasie Sinuata",
-      "description": "Alocasia sinuata ist eine tropische Aronstabpflanze mit dicken, glänzenden Blättern. Sie mag Wärme, hohe Luftfeuchtigkeit und helles, indirektes Licht. Gleichmäßige Feuchtigkeit ist wichtig."
+      "common_name": "Elefantenohren",
+      "description": "Alocasia sinuata, auch Elefantenohren genannt, ist eine tropische Pflanze mit markanten pfeilförmigen Blättern. Sie gedeiht bei hellem, indirektem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Alocasia sinuata",
-      "description": "Alocasia sinuata est une plante tropicale aux feuilles épaisses et brillantes. Elle apprécie la chaleur, une forte humidité et une lumière indirecte. Le substrat doit rester légèrement humide."
+      "common_name": "Oreilles d'éléphant",
+      "description": "Alocasia sinuata, communément appelée Oreilles d'éléphant, est une plante tropicale avec des feuilles en forme de flèche. Elle prospère dans une lumière vive et indirecte ainsi qu'une forte humidité."
     },
     "it": {
-      "common_name": "Alocasia sinuata",
-      "description": "Alocasia sinuata è una pianta tropicale con foglie spesse e lucide. Predilige caldo, alta umidità e luce indiretta intensa. Richiede irrigazioni regolari senza ristagni."
+      "common_name": "Orecchie di elefante",
+      "description": "Alocasia sinuata, comunemente chiamata Orecchie di elefante, è una pianta tropicale con foglie a forma di freccia. Cresce meglio in luce indiretta e in ambienti umidi."
     },
     "es": {
-      "common_name": "Alocasia sinuata",
-      "description": "Alocasia sinuata es una planta tropical con hojas gruesas y brillantes. Necesita calor, alta humedad y luz indirecta brillante. El sustrato debe mantenerse ligeramente húmedo."
+      "common_name": "Orejones de elefante",
+      "description": "Alocasia sinuata, conocida como Orejones de elefante, es una planta tropical con hojas en forma de flecha. Prefiere la luz indirecta brillante y una alta humedad."
     },
     "pt": {
-      "common_name": "Alocasia sinuata",
-      "description": "Alocasia sinuata é uma planta tropical de folhas grossas e brilhantes. Prefere calor, alta umidade e luz indireta intensa. O solo deve permanecer levemente úmido."
+      "common_name": "Orelhas de elefante",
+      "description": "Alocasia sinuata, conhecida como Orelhas de elefante, é uma planta tropical com folhas em forma de flecha. Gosta de luz indireta brilhante e alta umidade."
     },
     "ar": {
-      "common_name": "ألوكاسيا سينواتا",
-      "description": "ألوكاسيا سينواتا نبات استوائي بأوراق سميكة ولامعة. يحتاج إلى حرارة ورطوبة عالية وضوء ساطع غير مباشر. يجب الحفاظ على رطوبة التربة دون تشبع."
+      "common_name": "أذن الفيل",
+      "description": "ألوكاسيا سينياتا، المعروفة باسم أذن الفيل، هي نبتة استوائية تتميز بأوراقها التي تشبه السهم. تنمو بشكل جيد في الضوء الساطع غير المباشر والرطوبة العالية."
     },
     "hi": {
-      "common_name": "एलोकैसिया साइनुएटा",
-      "description": "एलोकैसिया साइनुएटा एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मोटी और चमकदार होती हैं। इसे गर्मी, अधिक नमी और अप्रत्यक्ष रोशनी पसंद है। मिट्टी हल्की नम रहनी चाहिए।"
+      "common_name": "हाथी के कान",
+      "description": "Alocasia sinuata, जिसे हाथी के कान के नाम से जाना जाता है, एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ तीर के आकार की होती हैं। यह उज्जवल, अप्रत्यक्ष प्रकाश और उच्च आर्द्रता में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "波纹海芋",
-      "description": "Alocasia sinuata 是一种热带海芋植物，叶片厚实有光泽。它需要温暖环境、高湿度和明亮的散射光。土壤应保持微湿但排水良好。"
+      "common_name": "象耳芋",
+      "description": "Alocasia sinuata，常被称为象耳芋，是一种热带植物，具有独特的箭头形叶子。它在明亮的间接光和高湿度环境中生长良好。"
     },
     "ja": {
-      "common_name": "アロカシア・シヌアータ",
-      "description": "アロカシア・シヌアータは厚く光沢のある葉を持つ熱帯植物です。高温多湿と明るい間接光を好みます。用土は適度な湿り気を保ちます。"
+      "common_name": "ゾウ耳芋",
+      "description": "Alocasia sinuata（ゾウ耳芋）は、特徴的な矢印型の葉を持つ熱帯植物です。明るい間接光と高湿度の環境でよく育ちます。"
     },
     "ko": {
-      "common_name": "알로카시아 시누아타",
-      "description": "알로카시아 시누아타는 두껍고 윤기 있는 잎을 가진 열대 식물입니다. 따뜻한 온도와 높은 습도, 밝은 간접광을 선호합니다. 흙은 항상 약간 촉촉해야 합니다."
+      "common_name": "코끼리귀 식물",
+      "description": "Alocasia sinuata는 독특한 화살표 모양의 잎을 가진 열대 식물로, 밝은 간접광과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/EP106",
-      "https://www.aroid.org/genera/alocasia.php"
+      "https://www.rhs.org.uk/plants/alocasia-sinuata",
+      "https://www.gardenia.net/plant/alocasia-sinuata"
     ]
   }
 }

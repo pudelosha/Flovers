@@ -2,16 +2,17 @@
   "external_id": "oenothera_biennis",
   "name": "Evening Primrose",
   "latin": "Oenothera biennis",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Vollsonne",
-          "fr": "Plein soleil",
-          "it": "Sole pieno",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "أشعة الشمس المباشرة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광도"
         }
       }
     },
@@ -47,17 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy",
-          "pl": "Ziemia próchnicza",
-          "de": "Lößig",
-          "fr": "Argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी की मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム土"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Water regularly",
+          "pl": "Podlewaj regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित रूप से पानी दें",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -94,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中級",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Bas",
-          "it": "Basso",
-          "es": "Bajo",
-          "pt": "Baixo",
-          "ar": "منخفض",
-          "hi": "नम कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyenne",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "निम्न से मध्यम",
+          "zh": "低至中等",
+          "ja": "低〜中",
+          "ko": "낮음에서 중간"
         }
       }
     },
@@ -149,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
@@ -179,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Evening Primrose",
-      "description": "Oenothera biennis is a perennial plant with bright yellow flowers that bloom in the evening. It thrives in full sunlight and prefers well-drained loamy soil."
+      "description": "Oenothera biennis, commonly known as Evening Primrose, is a flowering plant native to North America. It is often grown for its beautiful yellow flowers that bloom in the evening."
     },
     "pl": {
-      "common_name": "Wieczorny pierwiosnek",
-      "description": "Oenothera biennis to roślina wieloletnia z jasnymi żółtymi kwiatami, które kwitną wieczorem. Wymaga pełnego nasłonecznienia i dobrze przepuszczalnej gleby."
+      "common_name": "Wieczornik",
+      "description": "Oenothera biennis, znana jako wieczornik, to roślina kwitnąca pochodząca z Ameryki Północnej. Jest uprawiana ze względu na swoje piękne żółte kwiaty, które kwitną wieczorem."
     },
     "de": {
       "common_name": "Abend-Primel",
-      "description": "Oenothera biennis ist eine mehrjährige Pflanze mit leuchtend gelben Blüten, die abends blühen. Sie gedeiht in voller Sonne und bevorzugt gut durchlässigen, lehmigen Boden."
+      "description": "Oenothera biennis, auch als Abend-Primel bekannt, ist eine blühende Pflanze aus Nordamerika. Sie wird oft wegen ihrer schönen gelben Blüten angebaut, die abends blühen."
     },
     "fr": {
-      "common_name": "Onagre",
-      "description": "Oenothera biennis est une plante vivace avec des fleurs jaunes vives qui fleurissent le soir. Elle prospère en plein soleil et préfère un sol limoneux bien drainé."
+      "common_name": "Onagre bisannuelle",
+      "description": "Oenothera biennis, connue sous le nom d'Onagre bisannuelle, est une plante à fleurs originaire d'Amérique du Nord. Elle est cultivée pour ses belles fleurs jaunes qui s'épanouissent le soir."
     },
     "it": {
-      "common_name": "Onagra",
-      "description": "Oenothera biennis è una pianta perenne con fiori gialli che sbocciano alla sera. Cresce al sole pieno e predilige un terreno argilloso ben drenato."
+      "common_name": "Primula serotina",
+      "description": "Oenothera biennis, conosciuta come Primula serotina, è una pianta fiorita originaria del Nord America. Viene coltivata per i suoi bellissimi fiori gialli che sbocciano la sera."
     },
     "es": {
-      "common_name": "Onagra",
-      "description": "Oenothera biennis es una planta perenne con flores amarillas brillantes que florecen por la tarde. Se desarrolla con plena luz solar y prefiere suelos arcillosos bien drenados."
+      "common_name": "Onagra bianual",
+      "description": "Oenothera biennis, conocida como Onagra bianual, es una planta con flores originaria de América del Norte. Se cultiva por sus hermosas flores amarillas que florecen por la noche."
     },
     "pt": {
-      "common_name": "Onagra",
-      "description": "Oenothera biennis é uma planta perene com flores amarelas brilhantes que florescem à noite. Cresce em plena luz solar e prefere solos argilosos bem drenados."
+      "common_name": "Onagra bianual",
+      "description": "Oenothera biennis, conhecida como Onagra bianual, é uma planta florescente nativa da América do Norte. É cultivada por suas lindas flores amarelas que florescem à noite."
     },
     "ar": {
-      "common_name": "البريمروز المسائي",
-      "description": "Oenothera biennis هي نبات معمر بأزهار صفراء زاهية تتفتح في المساء. يزدهر في ضوء الشمس الكامل ويفضل التربة الطينية جيدة التصريف."
+      "common_name": "أوناغرا سنوية",
+      "description": "Oenothera biennis، المعروفة باسم أوناغرا سنوية، هي نبات مزهر موطنه أمريكا الشمالية. يزرع من أجل زهورها الصفراء الجميلة التي تتفتح في المساء."
     },
     "hi": {
-      "common_name": "शाम प्राइमरोस",
-      "description": "Oenothera biennis एक बारहमासी पौधा है जिसमें चमकीले पीले फूल होते हैं जो शाम को खिलते हैं। यह पूर्ण सूर्य के प्रकाश में बढ़ता है और अच्छी तरह से जल निकासी वाली मिट्टी को पसंद करता है।"
+      "common_name": "संध्या प्रिमरोस",
+      "description": "Oenothera biennis, जिसे संध्या प्रिमरोस के नाम से जाना जाता है, एक फूलों वाला पौधा है जो उत्तर अमेरिका का मूल निवासी है। इसे अपनी सुंदर पीली फूलों के लिए उगाया जाता है जो शाम के समय खिलते हैं।"
     },
     "zh": {
-      "common_name": "夜间报春花",
-      "description": "Oenothera biennis 是一种多年生植物，拥有明亮的黄色花朵，傍晚开放。它在充足的阳光下茁壮成长，喜欢排水良好的壤土。"
+      "common_name": "晚樱草",
+      "description": "Oenothera biennis，通常被称为晚樱草，是一种原产于北美的开花植物。它因其在晚上绽放的美丽黄色花朵而被广泛种植。"
     },
     "ja": {
       "common_name": "イブニングプリムローズ",
-      "description": "Oenothera biennisは明るい黄色の花を持つ多年生植物で、夕方に開花します。完全な日光の下で育ち、排水の良いローム質の土壌を好みます。"
+      "description": "Oenothera biennis、一般にイブニングプリムローズとして知られるこの植物は、北アメリカ原産の開花植物です。夕方に咲く美しい黄色い花が特徴で、観賞用に栽培されます。"
     },
     "ko": {
       "common_name": "이브닝 프림로즈",
-      "description": "Oenothera biennis는 저녁에 꽃이 피는 밝은 노란색 꽃을 가진 다년생 식물입니다. 완전한 햇볕 아래에서 자라며 배수가 좋은 양토를 선호합니다."
+      "description": "Oenothera biennis, 일반적으로 이브닝 프림로즈로 알려진 이 식물은 북미 원산의 꽃이 피는 식물입니다. 저녁에 피는 아름다운 노란 꽃을 위해 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/details?plantid=3717",
-      "https://www.gardenia.net/plant/oenothera-biennis-evening-primrose"
+      "https://www.gardenia.net/plant/oenothera-biennis-evening-primrose",
+      "https://www.rhs.org.uk/plants/10345/oenothera-biennis"
     ]
   }
 }

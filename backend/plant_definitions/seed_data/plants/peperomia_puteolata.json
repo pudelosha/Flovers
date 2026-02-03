@@ -7,11 +7,11 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "green-plants",
     "aroid"
   ],
   "water_required": true,
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 광선"
         }
       }
     },
@@ -53,9 +53,9 @@
           "de": "Gut durchlässig",
           "fr": "Bien drainant",
           "it": "Ben drenante",
-          "es": "Bien drenado",
+          "es": "Bien drenante",
           "pt": "Bem drenado",
-          "ar": "جيد الصرف",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
           "ja": "排水良好",
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -87,45 +87,7 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
-        }
-      }
-    },
-    {
-      "key": "temperature",
-      "value": {
-        "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
-        }
-      }
-    },
-    {
-      "key": "humidity",
-      "value": {
-        "text": {
-          "en": "Medium",
-          "pl": "Średnia",
+          "pl": "Średnie",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
@@ -140,21 +102,59 @@
       }
     },
     {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषेकी नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "독성 없음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Powolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Nicht übergießen",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare il ristagno d'acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी न डालें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Parallel peperomia",
-      "description": "Peperomia puteolata is a slow-growing, medium-light plant known for its striking green-and-white striped leaves. It thrives in well-drained soil and requires moderate watering."
+      "common_name": "Radiator Plant",
+      "description": "Peperomia puteolata, commonly known as the Radiator Plant, is a low-maintenance houseplant known for its compact growth and attractive green foliage with cream-colored stripes. It thrives in moderate light and enjoys a well-draining soil mix."
     },
     "pl": {
-      "common_name": "Peperomia równoległa",
-      "description": "Peperomia puteolata to wolno rosnąca roślina o średnim świetle, znana z pasiastej zielono-białej liści. Rośnie najlepiej w dobrze przepuszczalnej glebie i wymaga umiarkowanego podlewania."
+      "common_name": "Peperomia pasiasna",
+      "description": "Peperomia puteolata, znana jako peperomia pasiasna, to roślina doniczkowa, która wyróżnia się zwartym wzrostem i dekoracyjnymi, zielonymi liśćmi z kremowymi paskami. Preferuje średnie światło i przepuszczalną ziemię."
     },
     "de": {
-      "common_name": "Parallel Peperomie",
-      "description": "Peperomia puteolata ist eine langsam wachsende Pflanze mit mittelmäßiger Beleuchtung und auffälligen grün-weißen gestreiften Blättern. Sie gedeiht in gut durchlässigem Boden und benötigt mäßiges Gießen."
+      "common_name": "Radiator Pflanze",
+      "description": "Peperomia puteolata, auch Radiator Pflanze genannt, ist eine pflegeleichte Zimmerpflanze mit kompakter Wuchsform und attraktiven, grünen Blättern mit cremefarbenen Streifen. Sie bevorzugt mittleres Licht und gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Peperomia parallèle",
-      "description": "Peperomia puteolata est une plante à croissance lente, nécessitant une lumière moyenne et des feuilles rayées vertes et blanches. Elle prospère dans un sol bien drainé et nécessite un arrosage modéré."
+      "common_name": "Plante radiateur",
+      "description": "Peperomia puteolata, connue sous le nom de plante radiateur, est une plante d'intérieur facile à entretenir, reconnue pour sa croissance compacte et son feuillage vert décoratif avec des rayures crème. Elle préfère la lumière modérée et un sol bien drainé."
     },
     "it": {
-      "common_name": "Peperomia parallela",
-      "description": "Peperomia puteolata è una pianta a crescita lenta che richiede luce media e ha foglie striate verdi e bianche. Cresce meglio in terreno ben drenato e necessita di annaffiature moderate."
+      "common_name": "Pianta del radiatore",
+      "description": "Peperomia puteolata, conosciuta come pianta del radiatore, è una pianta da appartamento facile da curare, nota per la sua crescita compatta e il fogliame verde decorativo con strisce color crema. Preferisce una luce moderata e un terreno ben drenato."
     },
     "es": {
-      "common_name": "Peperomia paralela",
-      "description": "Peperomia puteolata es una planta de crecimiento lento que requiere luz media y presenta hojas rayadas verdes y blancas. Se desarrolla mejor en suelos bien drenados y requiere riego moderado."
+      "common_name": "Planta del radiador",
+      "description": "Peperomia puteolata, conocida como planta del radiador, es una planta de interior fácil de cuidar, famosa por su crecimiento compacto y su follaje verde decorativo con rayas de color crema. Prefiere luz moderada y un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Peperomia paralela",
-      "description": "Peperomia puteolata é uma planta de crescimento lento que requer luz média e tem folhas verdes e brancas listradas. Ela cresce melhor em solos bem drenados e precisa de rega moderada."
+      "common_name": "Planta radiador",
+      "description": "Peperomia puteolata, conhecida como planta radiador, é uma planta de interior de baixa manutenção, com crescimento compacto e folhagem verde atraente com listras creme. Prefere luz moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "بيبروميا متوازية",
-      "description": "Peperomia puteolata هي نبات بطيء النمو يتطلب ضوءًا متوسطًا وله أوراق مخططة باللونين الأخضر والأبيض. ينمو بشكل أفضل في التربة جيدة التصريف ويتطلب ريًا معتدلاً."
+      "common_name": "نبات المبرد",
+      "description": "بيبروميا بوتيولاتا، والمعروفة بنبات المبرد، هي نبات منزلي سهل العناية معروف بنموه المضغوط وأوراقه الخضراء الجذابة التي تحتوي على خطوط كريمية. يفضل الضوء المتوسط والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "पेपरोमिया समांतर",
-      "description": "Peperomia puteolata एक धीमी गति से बढ़ने वाली पौधा है, जो हरे और सफेद धारियों वाले पत्तों के लिए जाना जाता है। यह अच्छी तरह से जल निकासी वाली मिट्टी में उगता है और इसके लिए मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "रेडिएटर पौधा",
+      "description": "पीपरोमिया प्यूटियोलाटा, जिसे रेडिएटर पौधा कहा जाता है, एक कम रखरखाव वाला इनडोर पौधा है जो अपनी संकुचित वृद्धि और आकर्षक हरी पत्तियों के लिए जाना जाता है जिन पर क्रीम रंग की धारियाँ होती हैं। यह मध्यम रोशनी में पनपता है और अच्छी जल निकासी वाली मिट्टी को पसंद करता है."
     },
     "zh": {
-      "common_name": "平行辣椒藤",
-      "description": "Peperomia puteolata 是一种生长缓慢的植物，因其绿白相间的条纹叶而闻名。它在排水良好的土壤中生长，需要适度的浇水。"
+      "common_name": "散热器植物",
+      "description": "Peperomia puteolata，通常被称为散热器植物，是一种低维护的室内植物，以其紧凑的生长和具有奶油色条纹的绿色叶片而闻名。它在中等光照下茁壮成长，喜欢排水良好的土壤。"
     },
     "ja": {
-      "common_name": "平行ペペロミア",
-      "description": "Peperomia puteolataは遅い成長をする植物で、中程度の光を必要とし、緑と白の縞模様の葉が特徴です。排水性の良い土壌で成長し、適度な水やりが必要です。"
+      "common_name": "ラジエータープラント",
+      "description": "Peperomia puteolata、一般的にはラジエータープラントとして知られているこの植物は、コンパクトな成長とクリーム色の縞模様が入った緑の葉が特徴の手入れが簡単な室内植物です。中程度の光を好み、排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "평행 페페로미아",
-      "description": "Peperomia puteolata는 느리게 자라는 식물로, 중간 정도의 빛을 필요로 하며, 초록과 흰색의 줄무늬 잎이 특징입니다. 배수가 좋은 토양에서 자라며, 적당한 물주기가 필요합니다."
+      "common_name": "라디에이터 식물",
+      "description": "Peperomia puteolata, 라디에이터 식물로도 알려져 있는 이 식물은 간편한 관리와 크림색 줄무늬가 있는 초록색 잎으로 잘 알려진 실내 식물입니다. 중간 정도의 빛을 선호하며 배수가 좋은 토양을 좋아합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/houseplants/peperomia/peperomia-puteolata-care.htm",
-      "https://www.rhs.org.uk/plants/21773/peperomia-puteolata/details"
+      "https://www.rhs.org.uk/plants/peperomia-puteolata",
+      "https://www.houseplantsexpert.com/peperomia-puteolata-care-guide.html"
     ]
   }
 }

@@ -2,23 +2,24 @@
   "external_id": "laelia_anceps",
   "name": "Laelia anceps",
   "latin": "Laelia anceps",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "orchid",
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "laelia_anceps.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Orchid bark mix",
-          "pl": "Podłoże storczyk",
-          "de": "Orchideensubstrat",
-          "fr": "Substrat orchidée",
-          "it": "Substrato orchidee",
-          "es": "Sustrato orquídea",
-          "pt": "Substrato orquídea",
-          "ar": "وسط أوركيد",
-          "hi": "ऑर्किड माध्यम",
-          "zh": "兰花基质",
-          "ja": "洋ラン用土",
-          "ko": "난 전용 배지"
+          "en": "Orchid mix",
+          "pl": "Mieszanka dla storczyków",
+          "de": "Orchideenmix",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "خليط للزهور الأوركيد",
+          "hi": "ऑर्किड मिश्रण",
+          "zh": "兰花土",
+          "ja": "ランの土",
+          "ko": "오르키드 믹스"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Weekly watering",
-          "pl": "Podlewanie co tydz.",
-          "de": "Wöchentlich gießen",
-          "fr": "Arrosage hebdo",
-          "it": "Annaffiatura sett.",
-          "es": "Riego semanal",
-          "pt": "Rega semanal",
-          "ar": "ري أسبوعي",
-          "hi": "साप्ताहिक पानी",
-          "zh": "每周浇水",
-          "ja": "週1回水やり",
-          "ko": "주 1회 물주기"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
-          "fr": "Modérée",
+          "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26℃"
+          "en": "20-28°C",
+          "pl": "20-28°C",
+          "de": "20-28°C",
+          "fr": "20-28°C",
+          "it": "20-28°C",
+          "es": "20-28°C",
+          "pt": "20-28°C",
+          "ar": "20-28°C",
+          "hi": "20-28°C",
+          "zh": "20-28°C",
+          "ja": "20-28°C",
+          "ko": "20-28°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiark. wilgoć",
-          "de": "Mäßige Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "適度な湿度",
-          "ko": "보통 습도"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Haute",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Sympodial orchid",
-          "pl": "Storczyk symp.",
-          "de": "Sympodial",
-          "fr": "Sympodiale",
-          "it": "Simpodiale",
-          "es": "Simpodial",
-          "pt": "Simpodial",
-          "ar": "نمو سيمبودي",
-          "hi": "सिम्पोडियल",
-          "zh": "合轴生长",
-          "ja": "シンポジアル",
-          "ko": "심포디얼"
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Christmas orchid",
-      "description": "Laelia anceps is an epiphytic orchid native to Mexico and Central America. It produces large lavender flowers in winter and prefers bright light with good air movement."
+      "common_name": "Anceps Laelia",
+      "description": "Laelia anceps is an orchid native to Central America. It thrives in bright indirect light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Laelia zimowa",
-      "description": "Laelia anceps to epifityczny storczyk z Meksyku i Ameryki Środkowej. Kwitnie zimą dużymi lawendowymi kwiatami i wymaga jasnego stanowiska."
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps to storczyk pochodzący z Ameryki Środkowej. Rośnie w jasnym, pośrednim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Weihnachts-Laelie",
-      "description": "Laelia anceps ist eine epiphytische Orchidee aus Mexiko und Mittelamerika. Sie blüht im Winter und benötigt viel Licht sowie gute Luftzirkulation."
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps ist eine Orchidee aus Mittelamerika. Sie gedeiht bei hellem, indirekten Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Laelia de Noël",
-      "description": "Laelia anceps est une orchidée épiphyte originaire du Mexique et d’Amérique centrale. Elle fleurit en hiver et apprécie une lumière vive."
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps est une orchidée originaire d'Amérique centrale. Elle prospère dans une lumière indirecte brillante et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Laelia invernale",
-      "description": "Laelia anceps è un’orchidea epifita del Messico e America Centrale. Fiorisce in inverno e richiede luce intensa e buona aerazione."
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps è un'orchidea originaria dell'America Centrale. Cresce in luce indiretta brillante e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Laelia navideña",
-      "description": "Laelia anceps es una orquídea epífita de México y Centroamérica. Florece en invierno y necesita luz brillante y riego regolare."
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps es una orquídea originaria de América Central. Crece con luz indirecta brillante y necesita riego moderado."
     },
     "pt": {
-      "common_name": "Laélia-de-inverno",
-      "description": "Laelia anceps é uma orquídea epífita do México e América Central. Floresce no inverno e prefere luz intensa e boa ventilação."
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps é uma orquídea nativa da América Central. Cresce com luz indireta brilhante e requer rega moderada."
     },
     "ar": {
-      "common_name": "أوركيد عيد الميلاد",
-      "description": "Laelia anceps أوركيد هوائي موطنه المكسيك وأمريكا الوسطى. يزهر شتاءً ويحتاج إلى ضوء ساطع وتهوية جيدة."
+      "common_name": "لايليا آنسِبْس",
+      "description": "لايليا آنسِبْس هي زهرة أوركيدية موطنها أمريكا الوسطى. تنمو في ضوء غير مباشر ساطع وتحتاج إلى سقاية معتدلة."
     },
     "hi": {
-      "common_name": "क्रिसमस ऑर्किड",
-      "description": "Laelia anceps मेक्सिको और मध्य अमेरिका की एक एपिफाइटिक ऑर्किड है। यह सर्दियों में खिलती है और तेज़ रोशनी पसंद करती है।"
+      "common_name": "लाेलिया एन्सेप्स",
+      "description": "लाेलिया एन्सेप्स एक ऑर्किड है जो मध्य अमेरिका का मूल है। यह उज्ज्वल अप्रत्यक्ष प्रकाश में बढ़ता है और इसमें मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "冬花卡特兰",
-      "description": "Laelia anceps 原产于墨西哥和中美洲，是一种附生兰花。它在冬季开花，喜明亮散射光。"
+      "common_name": "Laelia anceps",
+      "description": "Laelia anceps 是一种原产于中美洲的兰花。它在明亮的间接光照下生长，需要适度浇水。"
     },
     "ja": {
-      "common_name": "ラエリア・アンセプス",
-      "description": "ラエリア・アンセプスはメキシコ原産の着生ランです。冬に開花し、明るい環境を好みます。"
+      "common_name": "ラエリア アンセプス",
+      "description": "ラエリア アンセプスは中央アメリカ原産のランの一種です。明るい間接光で育ち、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "라엘리아 안셉스",
-      "description": "Laelia anceps는 멕시코와 중미 원산의 착생 난초입니다. 겨울에 꽃이 피며 밝은 빛을 선호합니다."
+      "description": "라엘리아 안셉스는 중미 원산의 난초입니다. 밝은 간접광에서 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.aos.org/orchids/orchids-a-to-z/letter-l/laelia.aspx",
-      "https://www.kew.org/plants/laelia-anceps",
-      "https://www.orchidweb.com/orchids/laelia/laelia-anceps"
+      "https://www.rhs.org.uk/plants/232064/laelia-anceps/details",
+      "https://www.americanorchid.org/care-guide/laelia-anceps/"
     ]
   }
 }

@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universal",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "유니버설"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "false",
-          "pl": "fałsz",
-          "de": "falsch",
-          "fr": "faux",
-          "it": "falso",
-          "es": "falso",
-          "pt": "falso",
-          "ar": "خطأ",
-          "hi": "झूठा",
-          "zh": "假",
-          "ja": "偽",
-          "ko": "거짓"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम विकास",
+          "zh": "中等生长",
+          "ja": "中くらいの成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرो पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Citronella Geranium",
-      "description": "Pelargonium citrosum, also known as citronella geranium, is a fragrant plant native to South Africa. It is popular for its citronella-like scent and its ability to repel insects."
+      "description": "Pelargonium citrosum is a fragrant plant known for its citronella scent. It thrives in medium light and requires regular watering."
     },
     "pl": {
-      "common_name": "Pelargonia cytrynowa",
-      "description": "Pelargonium citrosum, znana również jako pelargonia cytrynowa, to roślina o przyjemnym zapachu pochodząca z Południowej Afryki. Jest popularna ze względu na zapach cytronelli i zdolność odstraszania owadów."
+      "common_name": "Geranium cytronelowe",
+      "description": "Pelargonium citrosum to roślina o charakterystycznym zapachu cytroneli. Preferuje średnie nasłonecznienie i regularne podlewanie."
     },
     "de": {
       "common_name": "Citronella-Geranie",
-      "description": "Pelargonium citrosum, auch als Citronella-Geranie bekannt, ist eine duftende Pflanze aus Südafrika. Sie ist bekannt für ihren Citronella-ähnlichen Geruch und ihre Fähigkeit, Insekten abzuschrecken."
+      "description": "Pelargonium citrosum ist eine duftende Pflanze mit Citronelladuft. Es gedeiht bei mittlerem Licht und benötigt regelmäßiges Gießen."
     },
     "fr": {
-      "common_name": "Géranium Citronnelle",
-      "description": "Le Pelargonium citrosum, également connu sous le nom de géranium citronnelle, est une plante parfumée originaire d'Afrique du Sud. Elle est populaire pour son odeur de citronnelle et sa capacité à repousser les insectes."
+      "common_name": "Géranium citronnelle",
+      "description": "Pelargonium citrosum est une plante parfumée connue pour son odeur de citronnelle. Elle préfère une lumière moyenne et un arrosage régulier."
     },
     "it": {
-      "common_name": "Geranio Citronella",
-      "description": "Pelargonium citrosum, noto anche come geranio citronella, è una pianta profumata originaria del Sud Africa. È popolare per il suo odore simile alla citronella e per la sua capacità di respingere gli insetti."
+      "common_name": "Geranio citronella",
+      "description": "Pelargonium citrosum è una pianta fragrante conosciuta per il suo profumo di citronella. Cresce bene in luce media e richiede annaffiature regolari."
     },
     "es": {
-      "common_name": "Geranio Citronella",
-      "description": "El Pelargonium citrosum, también conocido como geranio citronella, es una planta aromática originaria de Sudáfrica. Es popular por su olor a citronela y su capacidad para repeler insectos."
+      "common_name": "Geranio citronela",
+      "description": "Pelargonium citrosum es una planta fragante conocida por su aroma a citronela. Prefiere luz media y necesita riego regular."
     },
     "pt": {
-      "common_name": "Gerânio Citronela",
-      "description": "O Pelargonium citrosum, também conhecido como gerânio citronela, é uma planta aromática nativa da África do Sul. É popular pelo seu cheiro de citronela e sua capacidade de repelir insetos."
+      "common_name": "Gerânio citronela",
+      "description": "Pelargonium citrosum é uma planta perfumada conhecida pelo seu aroma de citronela. Gosta de luz média e requer rega regular."
     },
     "ar": {
-      "common_name": "إبرة الراعي العطرية",
-      "description": "البلارجونيوم سيتروسوم، المعروف أيضًا باسم إبرة الراعي العطرية، هو نبات عطر من جنوب إفريقيا. يشتهر برائحته المشابهة للسترونيلا وقدرته على طرد الحشرات."
+      "common_name": "الجيرانيوم الليموني",
+      "description": "Pelargonium citrosum هو نبات عطري معروف برائحته المميزة من السترونيلا. يفضل الضوء المتوسط ويحتاج إلى الري المنتظم."
     },
     "hi": {
-      "common_name": "सिट्रोनेला गेरानियम",
-      "description": "पेलार्गोनियम सिट्रोसुम, जिसे सिट्रोनेला गेरानियम के नाम से भी जाना जाता है, दक्षिण अफ्रीका का एक सुगंधित पौधा है। यह अपनी सिट्रोनेला जैसी खुशबू और कीटों को दूर करने की क्षमता के लिए लोकप्रिय है।"
+      "common_name": "साइट्रोनला जेरानियम",
+      "description": "Pelargonium citrosum एक खुशबूदार पौधा है जिसे साइट्रोनला की खुशबू के लिए जाना जाता है। यह मध्यम प्रकाश में अच्छा उगता है और नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "香茅天竺葵",
-      "description": "Pelargonium citrosum，也称为香茅天竺葵，是一种来自南非的芳香植物。它因其类似香茅的气味和驱虫的能力而受到欢迎。"
+      "description": "Pelargonium citrosum 是一种因其香茅香味而闻名的芳香植物。它喜欢中等光照并需要定期浇水。"
     },
     "ja": {
       "common_name": "シトロネラゼラニウム",
-      "description": "Pelargonium citrosum、別名シトロネラゼラニウムは、南アフリカ原産の芳香植物です。そのシトロネラに似た香りと虫除け効果で人気があります。"
+      "description": "Pelargonium citrosumはシトロネラの香りで知られる香り高い植物です。中程度の光で成長し、定期的な水やりが必要です。"
     },
     "ko": {
       "common_name": "시트로넬라 제라늄",
-      "description": "Pelargonium citrosum, 또는 시트로넬라 제라늄은 남아프리카 원산의 향기로운 식물입니다. 이 식물은 시트로넬라와 같은 향기와 곤충을 쫓는 능력으로 인기가 있습니다."
+      "description": "Pelargonium citrosum은 시트로넬라 향으로 유명한 향기로운 식물입니다. 중간 정도의 빛에서 잘 자라며 정기적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/157151/pelargonium-citrosum/details",
-      "https://www.gardenia.net/plant/pelargonium-citrosum"
+      "https://www.botanicalgarden.com/pelargonium-citrosum",
+      "https://www.gardenpedia.com/citronella-geranium-care"
     ]
   }
 }

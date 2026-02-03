@@ -1,6 +1,6 @@
 {
   "external_id": "agave_americana",
-  "name": "Century Plant",
+  "name": "Century plant",
   "latin": "Agave americana",
   "sun": "high",
   "water": "low",
@@ -10,15 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "agave_americana.jpg",
@@ -30,7 +29,7 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Viel Licht",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
@@ -38,7 +37,7 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
+          "ja": "日当たり良好",
           "ko": "강한 햇빛"
         }
       }
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Gritty, fast-drain",
           "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة سريعة الصرف",
+          "hi": "जल-निकासी वाली",
+          "zh": "疏松排水好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "물 적게"
+          "en": "Let dry between",
+          "pl": "Przesuszyć podłoże",
+          "de": "Zwischen Gießen trocken",
+          "fr": "Sécher entre arrosages",
+          "it": "Asciuga tra annaffiature",
+          "es": "Secar entre riegos",
+          "pt": "Secar entre regas",
+          "ar": "اتركها تجف",
+          "hi": "सूखने पर ही पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마른 뒤 물주기"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm tolerant",
-          "pl": "Ciepłolubna",
-          "de": "Wärmeliebend",
-          "fr": "Aime chaleur",
-          "it": "Ama caldo",
-          "es": "Tolera calor",
-          "pt": "Gosta calor",
-          "ar": "تحب الدفء",
-          "hi": "गर्म सहन",
-          "zh": "耐热",
-          "ja": "高温耐性",
-          "ko": "고온 내성"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -124,17 +123,17 @@
       "value": {
         "text": {
           "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Geringe Feuchte",
-          "fr": "Faible humid.",
-          "it": "Bassa umid.",
-          "es": "Baja humedad",
-          "pt": "Baixa umid.",
+          "pl": "Niska wilgotność",
+          "de": "Trockene Luft ok",
+          "fr": "Air sec ok",
+          "it": "Aria secca ok",
+          "es": "Aire seco ok",
+          "pt": "Ar seco ok",
           "ar": "رطوبة منخفضة",
           "hi": "कम नमी",
           "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "ja": "乾燥に強い",
+          "ko": "건조 선호"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement tox.",
-          "it": "Leggermente toss.",
-          "es": "Leve toxicidad",
-          "pt": "Leve toxic.",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषाक्त",
-          "zh": "轻度有毒",
-          "ja": "弱い毒性",
-          "ko": "약한 독성"
+          "en": "Toxic sap",
+          "pl": "Drażniący sok",
+          "de": "Reizender Saft",
+          "fr": "Sève irritante",
+          "it": "Linfa irritante",
+          "es": "Savia irritante",
+          "pt": "Seiva irritante",
+          "ar": "عصارة مهيجة",
+          "hi": "रस जलनकारी",
+          "zh": "汁液刺激性",
+          "ja": "樹液が刺激性",
+          "ko": "수액 자극성"
         }
       }
     },
@@ -161,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
+          "en": "Slow to moderate",
           "pl": "Wolny wzrost",
-          "de": "Langsam wach.",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमी बढ़त",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "ja": "生長は遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Pas d'excès d'eau",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب كثرة الماء",
+          "hi": "ज्यादा पानी नहीं",
+          "zh": "忌积水",
+          "ja": "水のやり過ぎ注意",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي/قشري",
+          "hi": "मिलीबग/स्केल",
+          "zh": "粉蚧、介壳虫",
+          "ja": "カイガラムシ",
+          "ko": "깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Century Plant",
-      "description": "Agave americana is a large succulent native to Mexico and the southern United States. It forms a rosette of thick, spined leaves and thrives in dry, sunny conditions."
+      "common_name": "Century plant",
+      "description": "Agave americana is a large, rosette-forming succulent grown for its stiff, spined leaves. Indoors it needs very bright light and a gritty, fast-draining mix. Water only after the potting mix dries out, and keep much drier in winter."
     },
     "pl": {
       "common_name": "Agawa amerykańska",
-      "description": "Agave americana to duży sukulent pochodzący z Meksyku i południa USA. Tworzy rozetę mięsistych, kolczastych liści i dobrze znosi suszę."
+      "description": "Agave americana to duży sukulent rozetowy o sztywnych, kolczastych liściach. W domu wymaga bardzo jasnego stanowiska i przepuszczalnego podłoża dla kaktusów. Podlewaj dopiero po całkowitym przeschnięciu ziemi, zimą dużo rzadziej."
     },
     "de": {
       "common_name": "Amerikanische Agave",
-      "description": "Agave americana ist eine große Sukkulente aus Mexiko und dem Süden der USA. Sie bildet eine kräftige Blattrosette und benötigt viel Sonne."
+      "description": "Agave americana ist eine große Rosetten-Sukkulente mit steifen, bedornten Blättern. In der Wohnung braucht sie sehr helles Licht und ein stark durchlässiges Kakteensubstrat. Gieße erst nach vollständigem Abtrocknen und halte sie im Winter fast trocken."
     },
     "fr": {
-      "common_name": "Agave d’Amérique",
-      "description": "Agave americana est une grande plante succulente originaire du Mexique. Elle forme une rosette de feuilles épaisses adaptées aux climats secs."
+      "common_name": "Agave d'Amérique",
+      "description": "Agave americana est une grande succulente en rosette aux feuilles rigides et épineuses. En intérieur, elle demande beaucoup de lumière et un substrat très drainant type cactus. Arrosez seulement quand le mélange est sec et réduisez fortement en hiver."
     },
     "it": {
       "common_name": "Agave americana",
-      "description": "Agave americana è una grande succulenta originaria del Messico. Cresce lentamente e preferisce pieno sole e terreni drenanti."
+      "description": "Agave americana è una grande succulenta a rosetta con foglie rigide e spinose. In casa richiede molta luce e un terriccio molto drenante per cactus. Annaffia solo quando il substrato è asciutto e tienila quasi asciutta in inverno."
     },
     "es": {
       "common_name": "Agave americana",
-      "description": "Agave americana es una suculenta grande originaria de México. Tolera la sequía y necesita mucha luz solar."
+      "description": "Agave americana es una suculenta grande en roseta con hojas rígidas y espinosas. En interior necesita mucha luz y un sustrato muy drenante para cactus. Riega solo cuando el sustrato esté seco y reduce mucho el riego en invierno."
     },
     "pt": {
       "common_name": "Agave-americana",
-      "description": "Agave americana é uma suculenta grande nativa do México. Desenvolve folhas grossas e prefere ambientes secos e ensolarados."
+      "description": "Agave americana é uma suculenta grande em roseta, com folhas rígidas e espinhosas. Dentro de casa precisa de muita luz e de substrato bem drenante para cactos. Regue apenas quando o substrato estiver seco e quase suspenda no inverno."
     },
     "ar": {
       "common_name": "الأغاف الأمريكي",
-      "description": "الأغاف الأمريكي نبات عصاري كبير موطنه المكسيك. يتحمل الجفاف ويحتاج إلى ضوء شمس قوي."
+      "description": "Agave americana نبات عصاري كبير على شكل وردة بأوراق صلبة وحواف شوكية. داخل المنزل يحتاج إلى ضوء قوي جدًا وتربة سريعة الصرف مثل خليط الصبّارات. اسقِ فقط بعد جفاف التربة تمامًا وقلّل الري كثيرًا في الشتاء."
     },
     "hi": {
-      "common_name": "सेंचुरी प्लांट",
-      "description": "Agave americana मेक्सिको की बड़ी रसीली पौधा है। यह कम पानी में पनपता है और तेज धूप पसंद करता है।"
+      "common_name": "अगेव अमेरिकाना",
+      "description": "Agave americana एक बड़ी रोसेट-आकार की सक्युलेंट है जिसकी पत्तियाँ सख्त और कांटेदार होती हैं। घर के अंदर इसे बहुत तेज रोशनी और कैक्टस/सक्युलेंट जैसी अच्छी जल-निकासी वाली मिट्टी चाहिए। मिट्टी पूरी सूखने पर ही पानी दें और सर्दियों में पानी बहुत कम करें।"
     },
     "zh": {
       "common_name": "美洲龙舌兰",
-      "description": "美洲龙舌兰原产于墨西哥，是大型多肉植物。耐旱，适合阳光充足的环境。"
+      "description": "Agave americana 是大型莲座状多肉，叶片坚硬并带刺。室内需强光并使用排水良好的多肉/仙人掌基质。盆土干透后再浇水，冬季明显减少浇水。"
     },
     "ja": {
-      "common_name": "アメリカアガベ",
-      "description": "アガベ・アメリカーナはメキシコ原産の大型多肉植物です。乾燥に強く、日当たりを好みます。"
+      "common_name": "アオノリュウゼツラン",
+      "description": "Agave americana は大きなロゼット状の多肉で、硬い葉とトゲが特徴です。室内では強い光と水はけの良いサボテン用土が適します。用土が乾いてから水やりし、冬はかなり控えます。"
     },
     "ko": {
       "common_name": "아가베 아메리카나",
-      "description": "아가베 아메리카나는 멕시코 원산의 대형 다육식물입니다. 건조에 강하고 강한 햇빛을 선호합니다."
+      "description": "Agave americana는 큰 로제트형 다육식물로 단단하고 가시가 있는 잎이 특징입니다. 실내에서는 강한 빛과 배수가 좋은 선인장/다육용 흙이 필요합니다. 흙이 완전히 마른 뒤에 물을 주고, 겨울에는 물주기를 크게 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/agave-americana",
-      "https://plants.ces.ncsu.edu/plants/agave-americana/",
-      "https://www.rhs.org.uk/plants/agave/americana/details"
+      "https://www.missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=275719",
+      "https://www.rhs.org.uk/plants/95075/agave-americana/details",
+      "https://www.wildflower.org/plants/result.php?id_plant=agam",
+      "https://www.cats.org.uk/media/gb1jkhcr/cats_protection-safe-plants-guide.pdf"
     ]
   }
 }

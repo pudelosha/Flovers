@@ -1,24 +1,25 @@
 {
   "external_id": "zamia_furfuracea",
-  "name": "Cardboard Palm",
+  "name": "Zamia Furfuracea",
   "latin": "Zamia furfuracea",
   "sun": "medium",
-  "water": "low",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "zamia_furfuracea.jpg",
@@ -29,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -39,7 +40,7 @@
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 광량"
+          "ko": "중간 조명"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierter Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage léger",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり控えめ",
-          "ko": "물 적게"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana pielęgnacja",
-          "de": "Mäßige Pflege",
-          "fr": "Entretien modéré",
-          "it": "Cura moderata",
-          "es": "Cuidado moderado",
-          "pt": "Cuidado moderado",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "管理は普通",
-          "ko": "보통 관리"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm indoors",
-          "pl": "Ciepłe wnętrza",
-          "de": "Warm halten",
-          "fr": "Température chaude",
-          "it": "Temperatura calda",
-          "es": "Temperatura cálida",
-          "pt": "Ambiente quente",
-          "ar": "حرارة دافئة",
-          "hi": "गरम तापमान",
-          "zh": "温暖环境",
-          "ja": "暖かい環境",
-          "ko": "따뜻한 환경"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luft",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니오"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar regar demais",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Cardboard Palm",
-      "description": "Zamia furfuracea is a cycad native to Mexico, often grown as a houseplant. It prefers bright, indirect light and infrequent watering. All parts are toxic if ingested."
+      "description": "Zamia furfuracea, known as Cardboard Palm, is a slow-growing, tropical plant native to Mexico. It thrives in bright, indirect light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Zamia kartonowa",
-      "description": "Zamia furfuracea to sagowiec pochodzący z Meksyku, często uprawiany w domu. Lubi jasne, rozproszone światło i rzadkie podlewanie. Roślina jest toksyczna."
+      "common_name": "Palma kartonowa",
+      "description": "Zamia furfuracea, znana jako palma kartonowa, to powolnie rosnąca roślina tropikalna pochodząca z Meksyku. Wymaga jasnego, pośredniego światła i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Kartonpalme",
-      "description": "Zamia furfuracea ist ein Palmfarn aus Mexiko, beliebt als Zimmerpflanze. Sie mag helles, indirektes Licht und wenig Wasser. Die Pflanze ist giftig."
+      "common_name": "Papppalme",
+      "description": "Zamia furfuracea, auch Papppalme genannt, ist eine langsam wachsende tropische Pflanze aus Mexiko. Sie bevorzugt helles, indirektes Licht und mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Palmier carton",
-      "description": "Zamia furfuracea est un cycadé originaire du Mexique, cultivé en intérieur. Il préfère une lumière vive indirecte et peu d’arrosage. La plante est toxique."
+      "common_name": "Palmier en carton",
+      "description": "Zamia furfuracea, surnommée Palmier en carton, est une plante tropicale à croissance lente originaire du Mexique. Elle préfère la lumière indirecte et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Palma di cartone",
-      "description": "Zamia furfuracea è una cicade originaria del Messico, coltivata come pianta da interno. Richiede luce indiretta e annaffiature limitate. È una pianta tossica."
+      "description": "Zamia furfuracea, conosciuta come palma di cartone, è una pianta tropicale a crescita lenta originaria del Messico. Predilige la luce indiretta e necessita di annaffiature moderate."
     },
     "es": {
       "common_name": "Palma de cartón",
-      "description": "Zamia furfuracea es una cícada originaria de México, usada como planta de interior. Necesita luz indirecta brillante y poco riego. Es tóxica."
+      "description": "Zamia furfuracea, conocida como palma de cartón, es una planta tropical de crecimiento lento originaria de México. Prefiere luz indirecta y requiere riego moderado."
     },
     "pt": {
-      "common_name": "Palmeira-de-cartão",
-      "description": "Zamia furfuracea é uma cicadácea do México, comum em interiores. Prefere luz indireta e rega espaçada. A planta é tóxica."
+      "common_name": "Palmeira de papelão",
+      "description": "Zamia furfuracea, conhecida como Palmeira de papelão, é uma planta tropical de crescimento lento originária do México. Prefere luz indireta e necessita de rega moderada."
     },
     "ar": {
-      "common_name": "نخيل الكرتون",
-      "description": "زاميا فورفوراسيا نبات سيكاد من المكسيك ويزرع داخل المنازل. يحتاج إلى ضوء ساطع غير مباشر وري قليل. النبات سام."
+      "common_name": "نخلة الكرتون",
+      "description": "زاملية فورفوراسيا، المعروفة بنخلة الكرتون، هي نبات استوائي بطيء النمو أصلي من المكسيك. يفضل الضوء غير المباشر ويتطلب سقاية معتدلة."
     },
     "hi": {
       "common_name": "कार्डबोर्ड पाम",
-      "description": "ज़ामिया फरफुरासिया मेक्सिको का एक साइकैड पौधा है। इसे तेज अप्रत्यक्ष रोशनी और कम पानी चाहिए। यह पौधा विषैला है।"
+      "description": "जामिया फरफुरासिया, जिसे कार्डबोर्ड पाम कहा जाता है, एक धीमी गति से बढ़ने वाला उष्णकटिबंधीय पौधा है जो मेक्सिको का मूल निवासी है। यह उज्जवल, अप्रत्यक्ष रोशनी में उगता है और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "纸板苏铁",
-      "description": "Zamia furfuracea 原产于墨西哥，常作为室内植物栽培。喜明亮散射光，耐旱。全株有毒。"
+      "common_name": "纸板棕榈",
+      "description": "Zamia furfuracea，俗称纸板棕榈，是一种生长缓慢的热带植物，原产于墨西哥。它喜欢明亮的间接光，需要适量的浇水。"
     },
     "ja": {
-      "common_name": "ダンボールパーム",
-      "description": "ザミア・フルフラセアはメキシコ原産のソテツ植物です。明るい間接光と控えめな水やりを好みます。有毒です。"
+      "common_name": "段ボールヤシ",
+      "description": "Zamia furfuracea（段ボールヤシ）はメキシコ原産の遅い成長を示す熱帯植物です。明るい間接光で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "카드보드 야자",
-      "description": "자미아 퍼푸라세아는 멕시코 원산의 소철 식물입니다. 밝은 간접광과 적은 물을 선호합니다. 독성이 있습니다."
+      "common_name": "종이상자야자",
+      "description": "Zamia furfuracea는 멕시코가 원산지인 느리게 자라는 열대 식물입니다. 밝은 간접광을 선호하고 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b567",
-      "https://edis.ifas.ufl.edu/publication/FP695",
-      "https://www.rhs.org.uk/plants/19495/zamia-furfuracea/details"
+      "https://www.rhs.org.uk/plants/86556/zamia-furfuracea",
+      "https://www.gardenia.net/plant/zamia-furfuracea"
     ]
   }
 }

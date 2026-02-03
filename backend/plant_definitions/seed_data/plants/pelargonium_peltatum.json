@@ -1,18 +1,18 @@
 {
   "external_id": "pelargonium_peltatum",
-  "name": "Ivy-leaved Geranium",
+  "name": "Geranium",
   "latin": "Pelargonium peltatum",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium sunlight",
+          "pl": "Światło średnie",
+          "de": "Mittleres Sonnenlicht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderates Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwy",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittelschwer",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不是",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당한"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare il sovrairrigazione",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के अनुसार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ivy-leaved Geranium",
-      "description": "Pelargonium peltatum, known as the Ivy-leaved Geranium, is a low-growing, evergreen plant. It is favored for its attractive flowers and trailing growth habit."
+      "common_name": "Geranium",
+      "description": "Pelargonium peltatum, commonly known as Geranium, is a popular flowering plant with trailing stems. It thrives in moderate sunlight and well-draining soil, making it an excellent choice for indoor environments."
     },
     "pl": {
-      "common_name": "Pelargonia bluszczolistna",
-      "description": "Pelargonium peltatum, znane jako Pelargonia bluszczolistna, to niska, wiecznie zielona roślina. Jest ceniona za atrakcyjne kwiaty i zwisający pokrój."
+      "common_name": "Pelargonia",
+      "description": "Pelargonium peltatum, znane jako pelargonia, to popularna roślina kwitnąca o opadających łodygach. Doskonale rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie, co sprawia, że jest świetnym wyborem do wnętrz."
     },
     "de": {
-      "common_name": "Efeu-Blatt-Geranie",
-      "description": "Pelargonium peltatum, bekannt als Efeu-Blatt-Geranie, ist eine niedrig wachsende, immergrüne Pflanze. Sie ist für ihre attraktiven Blumen und hängenden Wuchs bekannt."
+      "common_name": "Geranie",
+      "description": "Pelargonium peltatum, auch als Geranie bekannt, ist eine beliebte blühende Pflanze mit hängenden Stängeln. Sie gedeiht bei mittlerem Sonnenlicht und gut durchlässigem Boden, was sie zu einer ausgezeichneten Wahl für Innenräume macht."
     },
     "fr": {
-      "common_name": "Géranium à feuilles de lierre",
-      "description": "Pelargonium peltatum, connu sous le nom de Géranium à feuilles de lierre, est une plante basse et persistante. Elle est appréciée pour ses fleurs attrayantes et sa croissance traînante."
+      "common_name": "Géranium",
+      "description": "Pelargonium peltatum, également connu sous le nom de Géranium, est une plante à fleurs populaire avec des tiges rampantes. Elle prospère sous une lumière modérée et un sol bien drainé, ce qui en fait un excellent choix pour les environnements intérieurs."
     },
     "it": {
-      "common_name": "Geranio a foglia di edera",
-      "description": "Pelargonium peltatum, conosciuto come Geranio a foglia di edera, è una pianta perenne bassa. È apprezzata per i suoi fiori attraenti e la sua crescita strisciante."
+      "common_name": "Geranio",
+      "description": "Pelargonium peltatum, noto come Geranio, è una pianta da fiore popolare con steli pendenti. Cresce bene in luce moderata e in terreni ben drenati, rendendola una scelta eccellente per gli ambienti interni."
     },
     "es": {
-      "common_name": "Geranio de hojas de hiedra",
-      "description": "Pelargonium peltatum, conocido como Geranio de hojas de hiedra, es una planta de bajo crecimiento y siempre verde. Es valorada por sus flores atractivas y su hábito de crecimiento rastrero."
+      "common_name": "Geranio",
+      "description": "Pelargonium peltatum, conocido como Geranio, es una planta ornamental popular con tallos rastreros. Se desarrolla bien en luz moderada y suelos bien drenados, siendo una excelente opción para interiores."
     },
     "pt": {
-      "common_name": "Gerânio de folhas de hera",
-      "description": "Pelargonium peltatum, conhecido como Gerânio de folhas de hera, é uma planta perene de baixo crescimento. É valorizada por suas flores atraentes e seu crescimento rastejante."
+      "common_name": "Gerânio",
+      "description": "Pelargonium peltatum, conhecido como Gerânio, é uma planta ornamental popular com caules pendentes. Cresce bem sob luz moderada e solo bem drenado, sendo uma ótima escolha para ambientes internos."
     },
     "ar": {
-      "common_name": "جيرانيوم أوراق اللبلاب",
-      "description": "Pelargonium peltatum، المعروف باسم جيرانيوم أوراق اللبلاب، هو نبات منخفض النمو ودائم الخضرة. إنه مفضل لزهوره الجذابة وعادته في النمو المتسلق."
+      "common_name": "الجيرانيوم",
+      "description": "يُعرف Pelargonium peltatum، أو الجيرانيوم، كنبات مزهر شهير ذو سيقان متدلية. يزدهر في الضوء المعتدل والتربة الجيدة التصريف، مما يجعله خيارًا ممتازًا للبيئات الداخلية."
     },
     "hi": {
-      "common_name": "आइवी पत्तियों वाला जेरेनियम",
-      "description": "Pelargonium peltatum, जिसे आइवी पत्तियों वाला जेरेनियम कहा जाता है, एक निम्न वृद्धि वाला, सदाबहार पौधा है। यह अपने आकर्षक फूलों और लटकते हुए विकास के लिए प्रिय है।"
+      "common_name": "गेरानियम",
+      "description": "Pelargonium peltatum, जिसे गेरानियम के नाम से भी जाना जाता है, एक लोकप्रिय फूलों वाला पौधा है जिसमें लटकती हुई डंठल होती हैं। यह मध्यम धूप और अच्छी जल निकासी वाली मिट्टी में अच्छा बढ़ता है, जिससे यह इनडोर वातावरण के लिए आदर्श है।"
     },
     "zh": {
-      "common_name": "常春藤叶天竺葵",
-      "description": "Pelargonium peltatum，常春藤叶天竺葵，生长低矮，常绿。因其迷人的花朵和蔓延的生长方式而受到青睐。"
+      "common_name": "天竺葵",
+      "description": "天竺葵（Pelargonium peltatum）是一种受欢迎的开花植物，具有垂挂的茎。它在适中的阳光和排水良好的土壤中生长得很好，是室内环境的理想选择。"
     },
     "ja": {
-      "common_name": "アイビー葉ゼラニウム",
-      "description": "Pelargonium peltatum、アイビー葉ゼラニウムは低木で常緑の植物です。魅力的な花と垂れ下がる成長習性で知られています。"
+      "common_name": "ゼラニウム",
+      "description": "Pelargonium peltatum、通称ゼラニウムは、垂れ下がる茎を持つ人気のある花を咲かせる植物です。中程度の日光と排水性の良い土壌でよく育ち、室内環境に最適な選択肢となります。"
     },
     "ko": {
-      "common_name": "아이비 잎 제라늄",
-      "description": "Pelargonium peltatum, 아이비 잎 제라늄은 낮게 자라는 상록 식물입니다. 매력적인 꽃과 기는 성장 방식으로 유명합니다."
+      "common_name": "제라늄",
+      "description": "Pelargonium peltatum, 흔히 제라늄이라고 불리는 이 식물은 늘어진 줄기를 가진 인기 있는 꽃 식물입니다. 중간 정도의 햇빛과 배수가 좋은 토양에서 잘 자라며, 실내 환경에 적합한 훌륭한 선택입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/22999/pelargonium-peltatum/details",
-      "https://www.gardenia.net/plant/pelargonium-peltatum-ivy-geranium"
+      "https://www.rhs.org.uk/plants/pelargonium-peltatum",
+      "https://www.gardenia.net/plant/pelargonium-peltatum"
     ]
   }
 }

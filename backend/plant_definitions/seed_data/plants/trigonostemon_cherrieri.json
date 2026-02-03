@@ -1,0 +1,275 @@
+{
+  "external_id": "trigonostemon_cherrieri",
+  "name": "Trigonostemon cherrieri",
+  "latin": "Trigonostemon cherrieri",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "green-plants"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "trigonostemon_cherrieri.jpg",
+  "image_thumb": "trigonostemon_cherrieri.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenante",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당히 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsam bis mäßig",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमे से मध्यम वृद्धि",
+          "zh": "缓慢到中等生长",
+          "ja": "遅いから中程度の成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि से कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cherrie's Trigonostemon",
+      "description": "Trigonostemon cherrieri is a slow-growing, evergreen shrub. It thrives in moderate light and well-draining soil, requiring moderate watering."
+    },
+    "pl": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri to wolno rosnący krzew wiecznie zielony. Preferuje umiarkowane światło i dobrze przepuszczalną glebę, wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri ist ein langsam wachsender, immergrüner Strauch. Er gedeiht bei mittlerem Licht und gut durchlässigem Boden, benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Le Trigonostemon cherrieri est un arbuste à croissance lente et à feuillage persistant. Il préfère une lumière modérée et un sol bien drainé, avec un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri è un arbusto sempreverde a crescita lenta. Cresce bene con luce media e suolo ben drenato, richiede annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri es un arbusto perenne de crecimiento lento. Prefiere luz moderada y suelo bien drenado, requiere riego moderado."
+    },
+    "pt": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri é um arbusto perene de crescimento lento. Prefere luz moderada e solo bem drenado, com rega moderada."
+    },
+    "ar": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri هو شجيرة دائمة الخضرة بطيئة النمو. يفضل الضوء المعتدل والتربة جيدة التصريف ويحتاج إلى سقاية معتدلة."
+    },
+    "hi": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri एक धीमी गति से बढ़ने वाली सदाबहार झाड़ी है। यह मध्यम रोशनी और अच्छी जल निकासी वाली मिट्टी में अच्छे से बढ़ता है, इसे मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri 是一种生长缓慢的常绿灌木。它喜欢中等光照和良好的排水土壤，需要适度浇水。"
+    },
+    "ja": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri は遅く成長する常緑低木です。中程度の光と良好な排水土壌を好み、適度な水やりを必要とします。"
+    },
+    "ko": {
+      "common_name": "Trigonostemon Cherry",
+      "description": "Trigonostemon cherrieri는 서서히 성장하는 상록 관목입니다. 중간 정도의 빛과 잘 배수되는 토양을 선호하며, 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/plant-care/caring-for-trigonostemon.htm",
+      "https://www.rhs.org.uk/plants/trigonostemon"
+    ]
+  }
+}

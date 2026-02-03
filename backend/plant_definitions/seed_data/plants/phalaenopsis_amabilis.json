@@ -12,16 +12,16 @@
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "loam"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 24,
   "image_hero": "phalaenopsis_amabilis.jpg",
   "image_thumb": "phalaenopsis_amabilis.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Orchid",
-          "pl": "Orchidea",
-          "de": "Orchidee",
-          "fr": "Orchidée",
-          "it": "Orchidea",
-          "es": "Orquídea",
-          "pt": "Orquídea",
-          "ar": "زهرة الأوركيد",
-          "hi": "ऑर्किड",
-          "zh": "兰花",
-          "ja": "ラン",
-          "ko": "난초"
+          "en": "Orchid mix",
+          "pl": "Mieszanka dla storczyków",
+          "de": "Orchideen-Erde",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "خليط للزهور الأوركيد",
+          "hi": "ऑर्किड मिश्रण",
+          "zh": "兰花混合土",
+          "ja": "ラン科用土",
+          "ko": "난초용 혼합토"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnio",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -91,8 +91,8 @@
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
-          "es": "Media",
-          "pt": "Média",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-29°C",
+          "pl": "18-29°C",
+          "de": "18-29°C",
+          "fr": "18-29°C",
+          "it": "18-29°C",
+          "es": "18-29°C",
+          "pt": "18-29°C",
+          "ar": "18-29°C",
+          "hi": "18-29°C",
+          "zh": "18-29°C",
+          "ja": "18-29°C",
+          "ko": "18-29°C"
         }
       }
     },
@@ -134,8 +134,8 @@
           "ar": "عالية",
           "hi": "उच्च",
           "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "ja": "高",
+          "ko": "높음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سام خفيف",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -171,9 +171,47 @@
           "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "适中",
+          "zh": "中等",
           "ja": "中程度",
           "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Moth Orchid",
-      "description": "Phalaenopsis amabilis, also known as the Moth Orchid, is a tropical epiphytic orchid native to Southeast Asia. It is popular for its large, showy white flowers and is commonly grown indoors as an ornamental plant."
+      "description": "Phalaenopsis amabilis, commonly known as the Moth Orchid, is a popular houseplant with elegant, showy flowers. It thrives in medium light and moderate humidity."
     },
     "pl": {
-      "common_name": "Orchidea Moth",
-      "description": "Phalaenopsis amabilis, znana jako Orchidea Moth, jest tropikalną epifityczną orchideą pochodzącą z Azji Południowo-Wschodniej. Cieszy się popularnością ze względu na duże, efektowne białe kwiaty i jest często hodowana w pomieszczeniach jako roślina ozdobna."
+      "common_name": "Storczyk motyli",
+      "description": "Phalaenopsis amabilis, znany jako storczyk motyli, to popularna roślina doniczkowa o eleganckich kwiatach. Preferuje średnie światło i umiarkowaną wilgotność."
     },
     "de": {
-      "common_name": "Mottorchidee",
-      "description": "Phalaenopsis amabilis, auch bekannt als Mottorchidee, ist eine tropische epiphytische Orchidee aus Südostasien. Sie ist aufgrund ihrer großen, auffälligen weißen Blüten sehr beliebt und wird häufig als Zierpflanze in Innenräumen gezüchtet."
+      "common_name": "Schmetterlingsorchidee",
+      "description": "Phalaenopsis amabilis, auch als Schmetterlingsorchidee bekannt, ist eine beliebte Zimmerpflanze mit eleganten, auffälligen Blüten. Sie gedeiht bei mittlerem Licht und moderater Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Orchidée Papillon",
-      "description": "Phalaenopsis amabilis, également connue sous le nom d'Orchidée Papillon, est une orchidée épiphyte tropicale originaire d'Asie du Sud-Est. Elle est populaire pour ses grandes fleurs blanches spectaculaires et est couramment cultivée en intérieur comme plante ornementale."
+      "common_name": "Orchidée papillon",
+      "description": "Phalaenopsis amabilis, connue sous le nom d'orchidée papillon, est une plante d'intérieur populaire avec des fleurs élégantes. Elle préfère la lumière moyenne et une humidité modérée."
     },
     "it": {
-      "common_name": "Orchidea Falena",
-      "description": "Phalaenopsis amabilis, conosciuta anche come Orchidea Falena, è un'orchidea epifita tropicale originaria del Sud-est asiatico. È apprezzata per i suoi grandi fiori bianchi e viene comunemente coltivata in ambienti chiusi come pianta ornamentale."
+      "common_name": "Orchidea falena",
+      "description": "Phalaenopsis amabilis, nota come orchidea falena, è una pianta d'appartamento popolare con fiori eleganti. Preferisce luce media e umidità moderata."
     },
     "es": {
-      "common_name": "Orquídea Polilla",
-      "description": "Phalaenopsis amabilis, también conocida como Orquídea Polilla, es una orquídea epifita tropical originaria del sudeste asiático. Es popular por sus grandes flores blancas y se cultiva comúnmente en interiores como planta ornamental."
+      "common_name": "Orquídea polilla",
+      "description": "Phalaenopsis amabilis, conocida como orquídea polilla, es una planta de interior popular con flores elegantes. Prefiere luz media y humedad moderada."
     },
     "pt": {
-      "common_name": "Orquídea Moth",
-      "description": "Phalaenopsis amabilis, também conhecida como Orquídea Moth, é uma orquídea epífita tropical originária do sudeste asiático. É popular por suas grandes flores brancas e é comumente cultivada em ambientes internos como planta ornamental."
+      "common_name": "Orquídea mariposa",
+      "description": "Phalaenopsis amabilis, conhecida como orquídea mariposa, é uma planta de interior popular com flores elegantes. Prefere luz média e umidade moderada."
     },
     "ar": {
-      "common_name": "زهرة الفراشة",
-      "description": "Phalaenopsis amabilis، والمعروفة أيضًا باسم زهرة الفراشة، هي أوركيدية استوائية إبفيتية نشأت في جنوب شرق آسيا. تشتهر بزهورها البيضاء الكبيرة، وغالبًا ما تزرع كزهرة زينة في الأماكن الداخلية."
+      "common_name": "زهرة الأوركيد الفراشة",
+      "description": "فالاينوبسيس أمايبلس، المعروفة أيضًا باسم زهرة الأوركيد الفراشة، هي نبتة منزلية مشهورة ذات أزهار أنيقة. يفضل الضوء المتوسط والرطوبة المعتدلة."
     },
     "hi": {
-      "common_name": "मथ ऑर्किड",
-      "description": "फालानेप्सिस अमाबिलिस, जिसे मथ ऑर्किड भी कहा जाता है, दक्षिण-पूर्वी एशिया का एक उष्णकटिबंधीय एपिफाइटिक ऑर्किड है। इसके बड़े सफेद फूलों के लिए प्रसिद्ध है और इसे आमतौर पर सजावटी पौधे के रूप में अंदर उगाया जाता है।"
+      "common_name": "मॉथ ऑर्किड",
+      "description": "फैलेनॉप्सिस अमाबिलिस, जिसे मॉथ ऑर्किड के नाम से भी जाना जाता है, एक लोकप्रिय इनडोर पौधा है जो सुंदर फूलों से सजा होता है। इसे मध्यम रोशनी और मामूली आर्द्रता पसंद है।"
     },
     "zh": {
       "common_name": "飞蛾兰",
-      "description": "Phalaenopsis amabilis，又名飞蛾兰，是一种原产于东南亚的热带附生兰花。因其大型白色花朵而受欢迎，通常作为观赏植物在室内栽培。"
+      "description": "飞蛾兰（Phalaenopsis amabilis）是一种受欢迎的室内植物，拥有优雅的花朵。它喜欢中等光照和适度湿度。"
     },
     "ja": {
       "common_name": "モスオーキッド",
-      "description": "Phalaenopsis amabilis（モスオーキッド）は、東南アジア原産の熱帯性の着生ランです。大きな白い花が特徴で、観賞用植物として室内で栽培されています。"
+      "description": "ファレノプシス・アマビリスは、モスオーキッドとしても知られる人気のある観葉植物で、優雅な花を持っています。中程度の光と適度な湿度を好みます。"
     },
     "ko": {
       "common_name": "나방 난초",
-      "description": "Phalaenopsis amabilis, 또는 나방 난초는 동남아시아 원산의 열대 착생 난초입니다. 큰 흰색 꽃이 특징이며, 주로 실내에서 장식용 식물로 재배됩니다."
+      "description": "Phalaenopsis amabilis는 나방 난초로 알려진 인기 있는 실내 식물로 우아한 꽃을 가지고 있습니다. 중간 정도의 빛과 적당한 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/phalaenopsis-amabilis",
-      "https://www.bhg.com/gardening/pests/insects-diseases-and-pests/phalaenopsis-orchids-care/"
+      "https://www.rhs.org.uk/advice/profile?pid=425",
+      "https://www.gardenersworld.com/plants/phalaenopsis-orchid/"
     ]
   }
 }

@@ -1,0 +1,275 @@
+{
+  "external_id": "verbena_bonariensis",
+  "name": "Verbena bonariensis",
+  "latin": "Verbena bonariensis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "balcony-flowers"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "verbena_bonariensis.jpg",
+  "image_thumb": "verbena_bonariensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyenne",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "निम्न से मध्यम",
+          "zh": "低至中等",
+          "ja": "低から中程度",
+          "ko": "낮음에서 중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "De rápido crecimiento",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "急速成長",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過水を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tall Verbena",
+      "description": "Verbena bonariensis is a tall perennial plant with delicate, purple flowers. It thrives in full sun and is drought tolerant."
+    },
+    "pl": {
+      "common_name": "Werbena bonariensis",
+      "description": "Werbena bonariensis to wysoka roślina wieloletnia z delikatnymi, fioletowymi kwiatami. Rośnie najlepiej w pełnym słońcu i jest odporna na suszę."
+    },
+    "de": {
+      "common_name": "Hohe Eisenkraut",
+      "description": "Verbena bonariensis ist eine hohe, mehrjährige Pflanze mit zarten, lila Blüten. Sie gedeiht am besten in voller Sonne und ist trockenheitsresistent."
+    },
+    "fr": {
+      "common_name": "Verveine de Buenos Aires",
+      "description": "La Verbena bonariensis est une plante vivace haute avec de délicates fleurs violettes. Elle prospère en plein soleil et est résistante à la sécheresse."
+    },
+    "it": {
+      "common_name": "Verbena di Buenos Aires",
+      "description": "La Verbena bonariensis è una pianta perenne alta con delicati fiori viola. Cresce bene al sole pieno ed è resistente alla siccità."
+    },
+    "es": {
+      "common_name": "Verbena de Buenos Aires",
+      "description": "La Verbena bonariensis es una planta perenne alta con flores moradas delicadas. Crece mejor a pleno sol y es tolerante a la sequía."
+    },
+    "pt": {
+      "common_name": "Verbena de Buenos Aires",
+      "description": "A Verbena bonariensis é uma planta perene alta com flores roxas delicadas. Ela prospera em pleno sol e é resistente à seca."
+    },
+    "ar": {
+      "common_name": "فيربينا بوناريينسيس",
+      "description": "الفيبينا بوناريينسيس هي نبات معمر طويل مزهر بالزهور الأرجوانية الرقيقة. ينمو بشكل أفضل في الشمس الكاملة ومقاوم للجفاف."
+    },
+    "hi": {
+      "common_name": "वर्बेना बोनारियेंसीस",
+      "description": "वर्बेना बोनारियेंसीस एक लंबा बारहमासी पौधा है जिसमें नाजुक बैंगनी फूल होते हैं। यह पूर्ण सूरज में अच्छे से बढ़ता है और सूखा सहनशील है।"
+    },
+    "zh": {
+      "common_name": "波那里恩斯铁线莲",
+      "description": "波那里恩斯铁线莲是一种高大的多年生植物，具有精致的紫色花朵。它在充足阳光下生长良好，并且耐旱。"
+    },
+    "ja": {
+      "common_name": "ブルンジア・ボナリエンシス",
+      "description": "ブルンジア・ボナリエンシスは高い多年草で、繊細な紫色の花を咲かせます。完全な日光の下で成長し、乾燥に強いです。"
+    },
+    "ko": {
+      "common_name": "버베나 보나리엔시스",
+      "description": "버베나 보나리엔시스는 섬세한 보라색 꽃을 가진 키 큰 다년생 식물입니다. 완전한 햇빛에서 잘 자라며 가뭄에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/106392/Verbena-bonariensis/Details",
+      "https://www.gardenia.net/plant/verbena-bonariensis"
+    ]
+  }
+}

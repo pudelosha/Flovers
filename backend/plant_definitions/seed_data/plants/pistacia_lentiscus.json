@@ -7,11 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -30,13 +31,13 @@
         "text": {
           "en": "Medium sunlight",
           "pl": "Średnie światło",
-          "de": "Mittleres Sonnenlicht",
+          "de": "Mittlere Sonneneinstrahlung",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम धूप",
+          "hi": "मध्यम सूर्य",
           "zh": "中等阳光",
           "ja": "中程度の日光",
           "ko": "중간 햇빛"
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy, loamy",
-          "pl": "Piaszczysta, próchniczna",
-          "de": "Sandig, lehmig",
-          "fr": "Sableux, argileux",
-          "it": "Sabbioso, argilloso",
-          "es": "Arenoso, arcilloso",
-          "pt": "Arenoso, argiloso",
-          "ar": "رملية وطينية",
-          "hi": "रेतदार, बलुई",
-          "zh": "沙质, 壤土",
-          "ja": "砂質、粘土質",
-          "ko": "모래, 점토"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
           "hi": "मध्यम पानी",
-          "zh": "适中",
+          "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "중간 급수"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -89,9 +90,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°C",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "नम",
-          "zh": "低",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low to medium",
+          "pl": "Niskie do średniego",
+          "de": "Niedrig bis mittel",
+          "fr": "Bas à moyen",
+          "it": "Basso a medio",
+          "es": "Bajo a medio",
+          "pt": "Baixo a médio",
+          "ar": "منخفض إلى متوسط",
+          "hi": "निम्न से मध्यम",
+          "zh": "低到中等",
+          "ja": "低から中程度の湿度",
+          "ko": "낮은 습도에서 중간 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowany",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Mastic Tree",
-      "description": "Pistacia lentiscus is a shrub native to the Mediterranean. It is commonly known for its aromatic resin used in mastic production."
+      "description": "Pistacia lentiscus, known as the Mastic Tree, is a hardy evergreen shrub native to the Mediterranean. It thrives in warm, dry climates and is valued for its aromatic resin."
     },
     "pl": {
-      "common_name": "Drzewo Mastyksowe",
-      "description": "Pistacia lentiscus to krzew rodzime do rejonu Morza Śródziemnego. Znane jest z aromatycznej żywicy, wykorzystywanej do produkcji mastyksu."
+      "common_name": "Drzewo Mastiksowe",
+      "description": "Pistacia lentiscus, znane jako drzewo mastiksowe, to wytrzymały, wiecznie zielony krzew, pochodzący z basenu Morza Śródziemnego. Rośnie najlepiej w ciepłych, suchych klimatach i cenione jest za swoją aromatyczną żywicę."
     },
     "de": {
       "common_name": "Mastixbaum",
-      "description": "Pistacia lentiscus ist ein Strauch aus dem Mittelmeerraum. Es ist bekannt für seinen aromatischen Harz, das zur Herstellung von Mastix verwendet wird."
+      "description": "Pistacia lentiscus, auch Mastixbaum genannt, ist ein robuster, immergrüner Strauch, der im Mittelmeerraum beheimatet ist. Er gedeiht in warmen, trockenen Klimazonen und wird wegen seines aromatischen Harzes geschätzt."
     },
     "fr": {
-      "common_name": "Arbre à Mastic",
-      "description": "Pistacia lentiscus est un arbuste originaire de la Méditerranée. Il est connu pour sa résine aromatique utilisée dans la production de mastic."
+      "common_name": "Arbre à mastic",
+      "description": "Pistacia lentiscus, connu sous le nom d'arbre à mastic, est un arbuste persistant robuste originaire du bassin méditerranéen. Il prospère dans les climats chauds et secs et est apprécié pour sa résine aromatique."
     },
     "it": {
       "common_name": "Albero del Mastice",
-      "description": "Pistacia lentiscus è un arbusto originario del Mediterraneo. È noto per la sua resina aromatica utilizzata nella produzione di mastice."
+      "description": "Pistacia lentiscus, conosciuto come albero del mastice, è un arbusto sempreverde resistente originario del Mediterraneo. Cresce bene in climi caldi e secchi ed è apprezzato per la sua resina aromatica."
     },
     "es": {
-      "common_name": "Árbol de Mástique",
-      "description": "Pistacia lentiscus es un arbusto nativo del Mediterráneo. Es conocido por su resina aromática utilizada en la producción de mástique."
+      "common_name": "Árbol de Mastique",
+      "description": "Pistacia lentiscus, conocido como árbol de mastique, es un arbusto perenne resistente originario del Mediterráneo. Prosperar en climas cálidos y secos y se valora por su resina aromática."
     },
     "pt": {
-      "common_name": "Árvore do Mástique",
-      "description": "Pistacia lentiscus é um arbusto nativo da região do Mediterrâneo. É conhecido pela sua resina aromática usada na produção de mastique."
+      "common_name": "Árvore de Mástique",
+      "description": "Pistacia lentiscus, conhecida como árvore de mástique, é um arbusto perene resistente nativo da região do Mediterrâneo. Ela prospera em climas quentes e secos e é valorizada por sua resina aromática."
     },
     "ar": {
       "common_name": "شجرة المستكة",
-      "description": "Pistacia lentiscus هي شجيرة موطنها منطقة البحر الأبيض المتوسط. تشتهر بصلصتها العطرية المستخدمة في إنتاج المستكة."
+      "description": "Pistacia lentiscus، المعروفة بشجرة المستكة، هي شجيرة دائمة الخضرة مقاومة موطنها منطقة البحر الأبيض المتوسط. تزدهر في المناخات الدافئة والجافة وتقدّر بسبب صمغها العطري."
     },
     "hi": {
       "common_name": "मास्टिक वृक्ष",
-      "description": "Pistacia lentiscus एक झाड़ी है जो भूमध्य सागर क्षेत्र का मूल निवासी है। यह अपनी सुगंधित रेजिन के लिए जाना जाता है, जिसका उपयोग मस्टिक उत्पादन में होता है।"
+      "description": "Pistacia lentiscus, जिसे मास्टिक वृक्ष के नाम से जाना जाता है, एक मजबूत सदाबहार झाड़ी है जो भूमध्यसागरीय क्षेत्र की मूल निवासी है। यह गर्म, शुष्क जलवायु में अच्छा उगता है और अपनी सुगंधित रेजिन के लिए मूल्यवान है।"
     },
     "zh": {
       "common_name": "乳香树",
-      "description": "Pistacia lentiscus 是一种原产于地中海的灌木。它以其芳香的树脂而闻名，用于生产乳香。"
+      "description": "Pistacia lentiscus，乳香树，是一种坚韧的常绿灌木，原产于地中海地区。它在温暖干燥的气候中茁壮成长，以其芳香的树脂而闻名。"
     },
     "ja": {
       "common_name": "マスティックツリー",
-      "description": "Pistacia lentiscus は地中海原産の低木です。マスティック生産に使われる芳香性樹脂で知られています。"
+      "description": "Pistacia lentiscus、マスティックツリーとして知られるこの植物は、地中海地域原産の丈夫な常緑の低木です。温暖で乾燥した気候でよく育ち、その芳香を持つ樹脂が評価されています。"
     },
     "ko": {
       "common_name": "마스틱 나무",
-      "description": "Pistacia lentiscus는 지중해 지역이 원산지인 관목입니다. 향이 나는 수지가 마스틱 생산에 사용됩니다."
+      "description": "Pistacia lentiscus, 마스틱 나무로 알려진 이 식물은 지중해 지역 원산의 강인한 상록관목입니다. 따뜻하고 건조한 기후에서 잘 자라며, 그 향긋한 수지가 높이 평가됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.britannica.com/plant/Pistacia-lentiscus",
-      "https://www.gardenia.net/plant/pistacia-lentiscus",
-      "https://www.rhs.org.uk/Plants/64891/Pistacia-lentiscus"
+      "https://www.rhs.org.uk/plants/pistacia-lentiscus",
+      "https://www.bhg.com/gardening/pistacia-lentiscus-care/"
     ]
   }
 }

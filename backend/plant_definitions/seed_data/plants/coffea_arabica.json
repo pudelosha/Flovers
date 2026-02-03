@@ -1,23 +1,21 @@
 {
   "external_id": "coffea_arabica",
-  "name": "Coffee Plant",
+  "name": "Coffee plant",
   "latin": "Coffea arabica",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,15 +27,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic rich soil",
-          "pl": "Kwaśna żyzna gleba",
-          "de": "Saure Erde",
-          "fr": "Sol acide riche",
-          "it": "Terreno acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土壌",
-          "ko": "산성 토양"
+          "en": "Acidic, well-drained",
+          "pl": "Kwaśne, przepuszcz.",
+          "de": "Sauer, durchlässig",
+          "fr": "Acide, drainant",
+          "it": "Acido, drenante",
+          "es": "Ácido, drenante",
+          "pt": "Ácido, drenante",
+          "ar": "تربة حمضية جيدة الصرف",
+          "hi": "अम्लीय, जलनिकासी",
+          "zh": "微酸、排水好",
+          "ja": "弱酸性・水はけ",
+          "ko": "약산성, 배수"
         }
       }
     },
@@ -67,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Sempre umido",
-          "es": "Humedad constante",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة منتظمة",
-          "hi": "नमी बनाए रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "고르게 물주기"
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "حافظ على رطوبة خفيفة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉"
         }
       }
     },
@@ -87,15 +85,15 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Umiarkowana pielęgnacja",
-          "de": "Mittlere Pflege",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Anspruch",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
           "pt": "Cuidado médio",
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "zh": "养护中等",
           "ja": "中程度",
           "ko": "중간 난이도"
         }
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "16–24°C",
+          "pl": "16–24°C",
+          "de": "16–24°C",
+          "fr": "16–24°C",
+          "it": "16–24°C",
+          "es": "16–24°C",
+          "pt": "16–24°C",
+          "ar": "16–24°م",
+          "hi": "16–24°C",
+          "zh": "16–24°C",
+          "ja": "16–24°C",
+          "ko": "16–24°C"
         }
       }
     },
@@ -124,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Likes higher humidity",
+          "pl": "Lubi wyższą wilg.",
+          "de": "Mag höhere Feuchte",
+          "fr": "Aime l'humidité",
+          "it": "Ama umidità alta",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل رطوبة أعلى",
+          "hi": "अधिक नमी पसंद",
+          "zh": "喜较高湿度",
+          "ja": "高湿度が好き",
+          "ko": "높은 습도 선호"
         }
       }
     },
@@ -143,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic pets",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषाक्त",
-          "zh": "轻度有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -163,76 +161,116 @@
       "value": {
         "text": {
           "en": "Slow to moderate",
-          "pl": "Wolny do średni",
-          "de": "Langsam bis mäßig",
+          "pl": "Wolny–umiark.",
+          "de": "Langsam–mittel",
           "fr": "Lente à modérée",
-          "it": "Lenta media",
-          "es": "Lento a medio",
-          "pt": "Lento a médio",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅め",
-          "ko": "느린 성장"
+          "it": "Lenta-moderata",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम",
+          "zh": "生长慢到中等",
+          "ja": "ゆっくり〜普通",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid hot direct sun",
+          "pl": "Unikaj ostrego słońca",
+          "de": "Keine pralle Sonne",
+          "fr": "Éviter soleil fort",
+          "it": "Evita sole forte",
+          "es": "Evita sol fuerte",
+          "pt": "Evite sol forte",
+          "ar": "تجنب الشمس الحارة",
+          "hi": "कड़ी धूप से बचें",
+          "zh": "避免烈日直晒",
+          "ja": "直射の強光NG",
+          "ko": "강한 직사광 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites possible",
+          "pl": "Możliwe przędziorki",
+          "de": "Spinnmilben möglich",
+          "fr": "Acariens possibles",
+          "it": "Ragnetto rosso",
+          "es": "Ácaros posibles",
+          "pt": "Ácaros possíveis",
+          "ar": "قد تظهر العناكب الحمراء",
+          "hi": "स्पाइडर माइट्स संभव",
+          "zh": "可能有红蜘蛛",
+          "ja": "ハダニ注意",
+          "ko": "거미진드기 가능"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Coffee Plant",
-      "description": "Coffea arabica is a tropical evergreen shrub native to East Africa. Indoors it prefers bright, indirect light, evenly moist acidic soil, and warm stable temperatures."
+      "common_name": "Coffee plant",
+      "description": "Coffea arabica is a tropical evergreen grown indoors for glossy leaves and occasional fragrant white flowers. Give it bright, indirect light and keep the potting mix evenly moist but not waterlogged. It prefers warm conditions and higher humidity."
     },
     "pl": {
       "common_name": "Kawa arabska",
-      "description": "Coffea arabica to tropikalny, zimozielony krzew pochodzący z Afryki Wschodniej. W domu wymaga jasnego, rozproszonego światła, wilgotnej kwaśnej gleby i ciepła."
+      "description": "Coffea arabica to tropikalna roślina zimozielona uprawiana w domu dla błyszczących liści i czasem pachnących białych kwiatów. Zapewnij jasne, rozproszone światło i utrzymuj podłoże równomiernie wilgotne, ale nie mokre. Lubi ciepło i podwyższoną wilgotność powietrza."
     },
     "de": {
-      "common_name": "Kaffeepflanze",
-      "description": "Coffea arabica ist ein tropischer, immergrüner Strauch aus Ostafrika. Als Zimmerpflanze braucht sie helles, indirektes Licht und gleichmäßig feuchte, saure Erde."
+      "common_name": "Arabica-Kaffeepflanze",
+      "description": "Coffea arabica ist eine tropische, immergrüne Zimmerpflanze mit glänzendem Laub und gelegentlich duftenden weißen Blüten. Stelle sie hell, aber ohne pralle Sonne, und halte das Substrat gleichmäßig leicht feucht. Warme Temperaturen und höhere Luftfeuchte sind vorteilhaft."
     },
     "fr": {
-      "common_name": "Caféier",
-      "description": "Coffea arabica est un arbuste tropical persistant originaire d’Afrique de l’Est. En intérieur, il apprécie une lumière indirecte et un sol acide maintenu humide."
+      "common_name": "Caféier d’Arabie",
+      "description": "Coffea arabica est une plante tropicale persistante cultivée en intérieur pour son feuillage luisant et parfois ses fleurs blanches parfumées. Offrez une lumière vive indirecte et un substrat maintenu légèrement humide sans excès d’eau. Elle apprécie la chaleur et une humidité ambiante plus élevée."
     },
     "it": {
-      "common_name": "Pianta del caffè",
-      "description": "Coffea arabica è un arbusto tropicale sempreverde originario dell’Africa orientale. In casa richiede luce indiretta, terreno acido e umidità costante."
+      "common_name": "Caffè arabica",
+      "description": "Coffea arabica è una sempreverde tropicale coltivata in casa per le foglie lucide e talvolta fiori bianchi profumati. Fornisci luce intensa ma indiretta e mantieni il terriccio leggermente umido senza ristagni. Preferisce temperature calde e umidità più alta."
     },
     "es": {
-      "common_name": "Planta de café",
-      "description": "Coffea arabica es un arbusto tropical perenne originario de África oriental. En interior necesita luz indirecta brillante y un sustrato ácido siempre húmedo."
+      "common_name": "Cafeto arábigo",
+      "description": "Coffea arabica es una perenne tropical de hoja perenne que se cultiva en interior por sus hojas brillantes y, a veces, flores blancas perfumadas. Dale luz brillante indirecta y mantén el sustrato ligeramente húmedo sin encharcar. Prefiere ambiente cálido y mayor humedad."
     },
     "pt": {
-      "common_name": "Cafeeiro",
-      "description": "Coffea arabica é um arbusto tropical perene da África Oriental. Cultivado em interiores, prefere luz indireta, solo ácido e boa umidade."
+      "common_name": "Cafeeiro-arábica",
+      "description": "Coffea arabica é uma planta tropical perene, sempre-verde, cultivada em interior pelas folhas brilhantes e, às vezes, flores brancas perfumadas. Dê luz forte indireta e mantenha o substrato levemente úmido, sem encharcar. Prefere calor e umidade do ar mais alta."
     },
     "ar": {
-      "common_name": "نبات القهوة",
-      "description": "Coffea arabica شجيرة استوائية دائمة الخضرة موطنها شرق أفريقيا. تنمو جيدًا داخل المنزل مع ضوء غير مباشر وتربة حمضية رطبة."
+      "common_name": "شجرة القهوة العربية",
+      "description": "Coffea arabica نبات استوائي دائم الخضرة يُزرع داخل المنزل لأوراقه اللامعة وأحيانًا أزهاره البيضاء العطرية. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة قليلًا دون تغريق. يفضل الدفء ورطوبة هواء أعلى."
     },
     "hi": {
-      "common_name": "कॉफी पौधा",
-      "description": "Coffea arabica पूर्वी अफ्रीका का एक उष्णकटिबंधीय सदाबहार पौधा है। घर के अंदर इसे अप्रत्यक्ष रोशनी और नम अम्लीय मिट्टी की आवश्यकता होती है।"
+      "common_name": "अरेबिका कॉफी पौधा",
+      "description": "Coffea arabica एक उष्णकटिबंधीय सदाबहार पौधा है जिसे घर में चमकदार पत्तियों और कभी-कभी सुगंधित सफेद फूलों के लिए उगाया जाता है। इसे तेज़ अप्रत्यक्ष रोशनी दें और मिट्टी को हल्का नम रखें, पानी भरने न दें। इसे गर्म तापमान और अधिक नमी पसंद है।"
     },
     "zh": {
-      "common_name": "咖啡树",
-      "description": "Coffea arabica 原产于东非，是一种热带常绿灌木。室内养护需明亮散射光、酸性土壤和稳定湿度。"
+      "common_name": "阿拉比卡咖啡树",
+      "description": "Coffea arabica 是热带常绿植物，室内常作为观叶植物栽培，偶尔会开芳香的白花。提供明亮散射光，并让盆土保持微湿但不积水。它喜欢温暖环境和较高空气湿度。"
     },
     "ja": {
-      "common_name": "コーヒーノキ",
-      "description": "Coffea arabica は東アフリカ原産の常緑低木です。室内では明るい間接光と湿った酸性土を好みます。"
+      "common_name": "アラビカコーヒー",
+      "description": "Coffea arabica は熱帯性の常緑植物で、つやのある葉と、ときどき香りのある白い花が特徴です。明るい間接光で育て、用土は湿り気を保ちつつ過湿にしないようにします。暖かさと高めの湿度を好みます。"
     },
     "ko": {
-      "common_name": "커피나무",
-      "description": "Coffea arabica는 동아프리카 원산의 열대 상록 관목입니다. 실내에서는 밝은 간접광과 촉촉한 산성 토양이 필요합니다."
+      "common_name": "아라비카 커피나무",
+      "description": "Coffea arabica 는 열대 상록 식물로, 윤기 나는 잎과 때때로 향기로운 흰 꽃을 위해 실내에서 키웁니다. 밝은 간접광을 주고 흙은 촉촉하게 유지하되 과습은 피하세요. 따뜻한 온도와 비교적 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/coffee/plant-care",
-      "https://edis.ifas.ufl.edu/publication/EP183",
-      "https://www.kew.org/plants/coffea-arabica"
+      "https://www.rhs.org.uk/plants/4159/coffea-arabica/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b632",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-and-care-for-a-coffee-plant/",
+      "https://www.thespruce.com/grow-coffee-plants-1902614",
+      "https://1stpetvet.com/pet-health-information/top-8-feline-and-canine-toxic-plants-what-you-need-to-know/"
     ]
   }
 }

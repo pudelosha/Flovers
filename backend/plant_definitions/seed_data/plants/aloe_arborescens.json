@@ -1,6 +1,6 @@
 {
   "external_id": "aloe_arborescens",
-  "name": "Aloe arborescens",
+  "name": "Candelabra aloe",
   "latin": "Aloe arborescens",
   "sun": "high",
   "water": "low",
@@ -10,7 +10,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -27,17 +28,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol forte",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光照",
+          "ja": "強い日光",
           "ko": "강한 햇빛"
         }
       }
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "en": "Gritty cactus mix",
+          "pl": "Mieszanka kaktusowa",
+          "de": "Kakteenerde, grob",
+          "fr": "Substrat cactus",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactus",
+          "ar": "تربة صبارات جيدة",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "多孔仙人掌土",
+          "ja": "サボテン用土",
+          "ko": "다육이 배양토"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Skąpe",
-          "de": "Wenig",
-          "fr": "Faible",
-          "it": "Scarsa",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Let soil dry",
+          "pl": "Przeschnąć między",
+          "de": "Erst trocken gießen",
+          "fr": "Laisser sécher",
+          "it": "Lascia asciugare",
+          "es": "Deja secar",
+          "pt": "Deixe secar",
+          "ar": "اتركها تجف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "완전 건조 후"
         }
       }
     },
@@ -113,7 +114,7 @@
           "ar": "10–30°م",
           "hi": "10–30°C",
           "zh": "10–30°C",
-          "ja": "10–30℃",
+          "ja": "10–30°C",
           "ko": "10–30°C"
         }
       }
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity OK",
+          "pl": "Niska wilg. OK",
+          "de": "Trockene Luft ok",
+          "fr": "Air sec OK",
+          "it": "Bassa umidità OK",
+          "es": "Baja humedad OK",
+          "pt": "Baixa umidade OK",
+          "ar": "رطوبة منخفضة OK",
+          "hi": "कम नमी ठीक",
+          "zh": "低湿度也行",
+          "ja": "低湿度で可",
+          "ko": "낮은 습도 OK"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zw.",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -160,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Shrubby aloe",
-          "pl": "Krzewiasty aloes",
-          "de": "Strauchartig",
-          "fr": "Aloès arbustif",
-          "it": "Aloe arbustiva",
-          "es": "Aloe arbustivo",
-          "pt": "Aloe arbustiva",
-          "ar": "نمو شجيري",
-          "hi": "झाड़ीदार",
-          "zh": "灌木状",
-          "ja": "低木状",
-          "ko": "관목형"
+          "en": "Shrubby succulent",
+          "pl": "Krzewiasty sukulent",
+          "de": "Strauch-Sukkulent",
+          "fr": "Succulente arbustive",
+          "it": "Succulenta arbustiva",
+          "es": "Suculenta arbustiva",
+          "pt": "Suculenta arbustiva",
+          "ar": "عصارية شجيرية",
+          "hi": "झाड़ीदार रसीला",
+          "zh": "灌木状多肉",
+          "ja": "低木状多肉",
+          "ko": "관목형 다육"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Nicht zu nass",
+          "fr": "Éviter excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso d'água",
+          "ar": "تجنب كثرة الماء",
+          "hi": "ज्यादा पानी नहीं",
+          "zh": "忌积水烂根",
+          "ja": "過湿は腐れ",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "بق دقيقي/قشري",
+          "hi": "मिलीबग, स्केल",
+          "zh": "粉蚧、介壳虫",
+          "ja": "カイガラムシ",
+          "ko": "깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Candelabra Aloe",
-      "description": "Aloe arborescens is a shrubby succulent native to southern Africa. It thrives in bright sunlight and well-drained soil with infrequent watering. The plant is valued for its red winter flowers and drought tolerance."
+      "common_name": "Candelabra aloe",
+      "description": "Aloe arborescens is a shrubby, clumping aloe grown for its toothed, succulent leaves and winter-to-spring flower spikes. Give it very bright light and a gritty cactus mix with excellent drainage. Water only after the pot dries, reduce further in winter, and feed lightly during the growing season."
     },
     "pl": {
       "common_name": "Aloes drzewiasty",
-      "description": "Aloe arborescens to krzewiasty sukulent pochodzący z południowej Afryki. Preferuje jasne stanowiska i przepuszczalne podłoże oraz rzadkie podlewanie. Jest ceniony za czerwone zimowe kwiaty i odporność na suszę."
+      "description": "Aloe arborescens to krzewiasty, kępiasty aloes o mięsistych, ząbkowanych liściach i kwitnieniu od zimy do wiosny. Wymaga bardzo jasnego stanowiska oraz przepuszczalnego podłoża dla sukulentów. Podlewaj dopiero po całkowitym przeschnięciu, zimą rzadziej, i zasilaj lekko w sezonie wzrostu."
     },
     "de": {
       "common_name": "Baum-Aloe",
-      "description": "Aloe arborescens ist eine strauchartige Sukkulente aus dem südlichen Afrika. Sie benötigt viel Sonne, gut drainiertes Substrat und seltenes Gießen. Die Pflanze ist bekannt für ihre roten Winterblüten."
+      "description": "Aloe arborescens ist eine buschige, horstbildende Aloe mit sukkulenten, gezähnten Blättern und Blütenständen im Winter bis Frühjahr. Stelle sie sehr hell und nutze ein grobes, gut drainierendes Kakteensubstrat. Gieße erst nach vollständigem Abtrocknen und im Winter deutlich seltener, dünge sparsam in der Wachstumszeit."
     },
     "fr": {
-      "common_name": "Aloès candélabre",
-      "description": "Aloe arborescens est une plante succulente arbustive originaire d'Afrique australe. Elle apprécie le plein soleil, un sol bien drainé et des arrosages espacés. Elle est remarquable pour sa floraison rouge en hiver."
+      "common_name": "Aloès arborescent",
+      "description": "Aloe arborescens est un aloès arbustif formant des touffes, apprécié pour ses feuilles succulentes dentées et sa floraison de fin d'hiver au printemps. Installez-le en lumière très vive et dans un substrat pour cactus très drainant. Arrosez seulement lorsque le pot est sec, réduisez en hiver, et fertilisez légèrement en période de croissance."
     },
     "it": {
-      "common_name": "Aloe candelabro",
-      "description": "Aloe arborescens è una succulenta arbustiva originaria dell'Africa meridionale. Cresce bene in pieno sole con terreno drenante e annaffiature sporadiche. È apprezzata per i suoi fiori rossi invernali."
+      "common_name": "Aloe arborescente",
+      "description": "Aloe arborescens è un’aloe cespugliosa e cespitosa con foglie succulente dentellate e fioriture tra fine inverno e primavera. Richiede molta luce e un terriccio per cactus ben drenante. Annaffia solo quando il vaso è asciutto, molto meno in inverno, e concima leggermente durante la crescita."
     },
     "es": {
-      "common_name": "Aloe candelabro",
-      "description": "Aloe arborescens es una suculenta arbustiva originaria del sur de África. Requiere sol pleno, suelo bien drenado y riego poco frecuente. Destaca por sus flores rojas en invierno."
+      "common_name": "Aloe arbórea",
+      "description": "Aloe arborescens es un aloe arbustivo que forma matas, con hojas suculentas dentadas y floración de invierno a primavera. Colócalo con mucha luz y en un sustrato para cactus muy drenante. Riega solo cuando el sustrato esté completamente seco, reduce en invierno y abona ligeramente en temporada de crecimiento."
     },
     "pt": {
-      "common_name": "Aloe candelabro",
-      "description": "Aloe arborescens é uma suculenta arbustiva nativa do sul da África. Prefere sol pleno, solo bem drenado e regas espaçadas. É conhecida pelas flores vermelhas no inverno."
+      "common_name": "Aloe-arborescente",
+      "description": "Aloe arborescens é uma aloe arbustiva e entouceirada, com folhas suculentas serrilhadas e floração do inverno à primavera. Precisa de luz muito intensa e substrato bem drenado para cactos/suculentas. Regue apenas quando o vaso estiver seco, reduza no inverno e adube levemente na estação de crescimento."
     },
     "ar": {
       "common_name": "الألوة الشجرية",
-      "description": "الألوة الشجرية نبات عصاري شجيري موطنه جنوب أفريقيا. يحتاج إلى شمس قوية وتربة جيدة الصرف مع ري متباعد. يتميز بأزهاره الحمراء في فصل الشتاء."
+      "description": "Aloe arborescens نبات عصاري شجيري يتكتل، بأوراق سميكة مسننة ونورات من الشتاء حتى الربيع. يحتاج إلى ضوء قوي جداً وتربة عصاريات جيدة التصريف. اسقِ فقط بعد جفاف التربة تماماً وقلّل الري في الشتاء، مع تسميد خفيف خلال موسم النمو."
     },
     "hi": {
-      "common_name": "कैंडेलाब्रा एलो",
-      "description": "Aloe arborescens दक्षिणी अफ्रीका का झाड़ीदार रसीला पौधा है। इसे तेज धूप, अच्छी जल निकासी वाली मिट्टी और कम पानी की आवश्यकता होती है। यह सर्दियों में लाल फूलों के लिए जाना जाता है।"
+      "common_name": "ट्री एलो",
+      "description": "Aloe arborescens झाड़ीदार रसीला पौधा है, जिसकी दाँतेदार मोटी पत्तियाँ और सर्दी से वसंत तक फूल आते हैं। इसे बहुत तेज़ रोशनी और अच्छी जल-निकासी वाली कैक्टस/सक्युलेंट मिट्टी दें। मिट्टी पूरी सूखने पर ही पानी दें, सर्दियों में और कम, तथा बढ़वार के मौसम में हल्का खाद दें।"
     },
     "zh": {
-      "common_name": "树状芦荟",
-      "description": "Aloe arborescens 原产于非洲南部，是一种灌木状多肉植物。它需要充足阳光、良好排水的土壤和少量浇水。冬季会开红色花朵。"
+      "common_name": "木立芦荟",
+      "description": "Aloe arborescens 为丛生灌木状芦荟，叶片肥厚具小齿，花期多在冬末至春季。需要强光与排水良好的仙人掌/多肉基质。盆土干透再浇水，冬季更少，并在生长季少量施肥。"
     },
     "ja": {
-      "common_name": "木立アロエ",
-      "description": "Aloe arborescens は南アフリカ原産の低木状多肉植物です。強い日光と水はけの良い土壌を好み、水やりは控えめにします。冬に赤い花を咲かせます。"
+      "common_name": "キダチアロエ",
+      "description": "Aloe arborescens は株立ちする低木状のアロエで、鋸歯のある多肉質の葉と冬〜春の花穂が特徴です。強い光と水はけの良いサボテン用土で育てます。用土が完全に乾いてから水やりし、冬は控えめにし、生育期に薄く施肥します。"
     },
     "ko": {
-      "common_name": "나무알로에",
-      "description": "Aloe arborescens는 남아프리카 원산의 관목형 다육식물입니다. 강한 햇빛과 배수가 좋은 토양, 적은 물을 선호합니다. 겨울에 붉은 꽃을 피웁니다."
+      "common_name": "키다치알로에",
+      "description": "Aloe arborescens 는 군생하는 관목형 알로에로, 톱니가 있는 다육질 잎과 겨울~봄의 꽃대가 특징입니다. 강한 빛과 배수가 좋은 다육이용 흙이 필요합니다. 흙이 완전히 마른 뒤 물을 주고 겨울에는 더 줄이며, 생장기에는 약하게 비료를 줍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/aloe-arborescens",
-      "https://www.rhs.org.uk/plants/1022/aloe-arborescens/details",
-      "https://edis.ifas.ufl.edu/publication/FP039"
+      "https://www.rhs.org.uk/plants/923/aloe-arborescens/details",
+      "https://www.rhs.org.uk/plants/131675/aloe-arborescens-variegata-%28v%29/details",
+      "https://pza.sanbi.org/aloe-arborescens",
+      "https://plants.ces.ncsu.edu/plants/aloe-vera/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/aloe"
     ]
   }
 }

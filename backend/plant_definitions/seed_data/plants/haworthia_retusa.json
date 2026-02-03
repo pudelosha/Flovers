@@ -7,17 +7,18 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "haworthia_retusa.jpg",
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut drainierend",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenante",
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
+          "en": "Low watering",
+          "pl": "Niskie podlewanie",
           "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
+          "fr": "Arrosage faible",
+          "it": "Annaffiatura bassa",
+          "es": "Riego bajo",
+          "pt": "Regar pouco",
+          "ar": "ري مياه منخفضة",
+          "hi": "कम पानी देना",
           "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "물 적게"
+          "ja": "少ない水やり",
+          "ko": "물 적게 주기"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
+          "en": "Easy to grow",
+          "pl": "Łatwe w uprawie",
+          "de": "Einfach zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل النمو",
+          "hi": "उगाने में आसान",
+          "zh": "容易种植",
           "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "ko": "기르기 쉬움"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,13 +125,13 @@
         "text": {
           "en": "Low humidity",
           "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
+          "de": "Niedrige Luftfeuchtigkeit",
           "fr": "Faible humidité",
           "it": "Bassa umidità",
           "es": "Baja humedad",
           "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
+          "hi": "कम आर्द्रता",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -142,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,75 +163,112 @@
         "text": {
           "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमा विकास",
           "zh": "生长缓慢",
           "ja": "成長が遅い",
           "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기 방지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات متفرقة",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Window Haworthia",
-      "description": "Haworthia retusa is a small South African succulent with translucent leaf tips. It prefers bright indirect light and infrequent watering. Overwatering can easily cause root rot."
+      "common_name": "Retuse Haworthia",
+      "description": "Haworthia retusa is a succulent species native to South Africa. It has distinctive translucent window-like features on its leaves."
     },
     "pl": {
-      "common_name": "Haworcja okienkowa",
-      "description": "Haworthia retusa to mały sukulent z Afryki Południowej z półprzezroczystymi liśćmi. Lubi jasne, rozproszone światło i rzadkie podlewanie. Nadmiar wody prowadzi do gnicia korzeni."
+      "common_name": "Haworthia retusa",
+      "description": "Haworthia retusa to gatunek sukulentu pochodzący z Południowej Afryki. Ma charakterystyczne przezroczyste okienkowe cechy na swoich liściach."
     },
     "de": {
-      "common_name": "Fenster-Haworthie",
-      "description": "Haworthia retusa ist eine kleine Sukkulente aus Südafrika mit durchscheinenden Blattspitzen. Sie mag helles, indirektes Licht und wenig Wasser. Staunässe sollte vermieden werden."
+      "common_name": "Retuse Haworthia",
+      "description": "Haworthia retusa ist eine Sukkulente, die in Südafrika beheimatet ist. Sie hat auffällige, durchscheinende Fenstermerkmale an ihren Blättern."
     },
     "fr": {
-      "common_name": "Haworthia vitrée",
-      "description": "Haworthia retusa est une petite plante succulente d’Afrique du Sud aux feuilles translucides. Elle préfère une lumière indirecte et des arrosages espacés. Un excès d’eau provoque la pourriture."
+      "common_name": "Haworthia retuse",
+      "description": "Haworthia retusa est une espèce succulente originaire d'Afrique du Sud. Elle possède des caractéristiques translucides semblables à des fenêtres sur ses feuilles."
     },
     "it": {
-      "common_name": "Haworthia a finestra",
-      "description": "Haworthia retusa è una succulenta sudafricana con foglie traslucide. Predilige luce indiretta e annaffiature poco frequenti. Il ristagno d’acqua è dannoso."
+      "common_name": "Haworthia retusa",
+      "description": "Haworthia retusa è una specie di pianta succulenta originaria del Sud Africa. Presenta caratteristiche traslucide simili a finestre sulle sue foglie."
     },
     "es": {
-      "common_name": "Haworthia ventana",
-      "description": "Haworthia retusa es una suculenta pequeña de Sudáfrica con hojas translúcidas. Necesita luz indirecta brillante y poco riego. El exceso de agua causa pudrición."
+      "common_name": "Haworthia retusa",
+      "description": "Haworthia retusa es una especie de suculenta originaria de Sudáfrica. Tiene características translúcidas en sus hojas que parecen ventanas."
     },
     "pt": {
-      "common_name": "Haworthia janela",
-      "description": "Haworthia retusa é uma suculenta sul-africana de folhas translúcidas. Prefere luz indireta e regas espaçadas. O excesso de água pode apodrecer as raízes."
+      "common_name": "Haworthia retusa",
+      "description": "Haworthia retusa é uma espécie de suculenta nativa da África do Sul. Possui características translúcidas nas folhas, semelhantes a janelas."
     },
     "ar": {
       "common_name": "هاوورثيا ريتوسا",
-      "description": "نبات عصاري صغير من جنوب أفريقيا بأطراف أوراق شفافة. يفضل الضوء غير المباشر والري القليل. كثرة الماء تسبب تعفن الجذور."
+      "description": "هاوورثيا ريتوسا هي نوع من النباتات العصارية الأصلية في جنوب أفريقيا. تحتوي أوراقها على ميزات شفافة تشبه النوافذ."
     },
     "hi": {
-      "common_name": "हवोर्थिया",
-      "description": "हॉवर्थिया रेटूसा दक्षिण अफ्रीका का छोटा रसीला पौधा है जिसकी पत्तियाँ पारदर्शी होती हैं। इसे अप्रत्यक्ष रोशनी और कम पानी चाहिए। अधिक पानी नुकसानदायक है।"
+      "common_name": "हॉवर्थिया रिटुसा",
+      "description": "हॉवर्थिया रिटुसा एक मांसल पौधा है जो दक्षिण अफ्रीका का मूल निवासी है। इसके पत्तों में पारदर्शी खिड़की जैसे लक्षण होते हैं।"
     },
     "zh": {
-      "common_name": "玉露",
-      "description": "Haworthia retusa 是原产南非的小型多肉植物，叶端透明。适合明亮散射光和少量浇水。浇水过多容易烂根。"
+      "common_name": "裂叶 Haworthia",
+      "description": "Haworthia retusa 是一种原产于南非的多肉植物。其叶子上具有类似窗户的透明特征。"
     },
     "ja": {
-      "common_name": "ハオルチア",
-      "description": "ハオルチア・レツサは南アフリカ原産の小型多肉植物です。明るい間接光と控えめな水やりを好みます。過湿は根腐れの原因になります。"
+      "common_name": "ハワーシア・レトゥーサ",
+      "description": "Haworthia retusa は南アフリカ原産の多肉植物です。その葉には窓のような透明な特徴があります。"
     },
     "ko": {
-      "common_name": "하월시아",
-      "description": "하월시아 레투사는 남아프리카 원산의 소형 다육식물입니다. 밝은 간접광과 적은 물을 선호합니다. 과습하면 뿌리가 썩습니다."
+      "common_name": "하워시아 레투사",
+      "description": "Haworthia retusa는 남아프리카 원산의 다육 식물입니다. 그 잎에는 창문처럼 투명한 특징이 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/7804/haworthia-retusa/details",
-      "https://www.kew.org/read-and-watch/haworthia-care-guide",
-      "https://www.succulentsandsunshine.com/types-of-succulents/haworthia/"
+      "https://www.succulentplants.org/haworthia-retusa",
+      "https://www.rhs.org.uk/plants/haworthia-retusa"
     ]
   }
 }

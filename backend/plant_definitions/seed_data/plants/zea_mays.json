@@ -4,14 +4,15 @@
   "latin": "Zea mays",
   "sun": "high",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -19,8 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "zea_mays.jpg",
   "image_thumb": "zea_mays.jpg",
   "traits": [
@@ -28,17 +29,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
-          "de": "volle Sonne",
-          "fr": "plein soleil",
-          "it": "pieno sole",
-          "es": "sol pleno",
-          "pt": "sol pleno",
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूर्य",
-          "zh": "充足阳光",
-          "ja": "日光下",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "直射日光",
           "ko": "직사광선"
         }
       }
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well drained loam",
-          "pl": "gleba gliniasta",
-          "de": "gut drainierte Lehmb",
-          "fr": "sol limoneux",
-          "it": "terreno franco",
-          "es": "suelo limoso",
-          "pt": "solo argiloso",
-          "ar": "تربة طينية جيدة",
-          "hi": "अच्छी जल निकासी मिट्टी",
-          "zh": "良好排水壤土",
-          "ja": "水はけ良好土壌",
-          "ko": "양질의 양토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "consistent moisture",
-          "pl": "stała wilgotność",
-          "de": "gleichmäßige Feuchte",
-          "fr": "humidité constante",
-          "it": "umidità costante",
-          "es": "humedad constante",
-          "pt": "umidade constante",
-          "ar": "رطوبة منتظمة",
-          "hi": "नियमानुसार नमी",
-          "zh": "持续湿润",
-          "ja": "安定した水分",
-          "ko": "지속적 수분"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당한"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "16–30°C",
-          "pl": "16–30°C",
-          "de": "16–30°C",
-          "fr": "16–30°C",
-          "it": "16–30°C",
-          "es": "16–30°C",
-          "pt": "16–30°C",
-          "ar": "16–30°C",
-          "hi": "16–30°C",
-          "zh": "16–30°C",
-          "ja": "16–30°C",
-          "ko": "16–30°C"
+          "en": "18-30°C",
+          "pl": "18-30°C",
+          "de": "18-30°C",
+          "fr": "18-30°C",
+          "it": "18-30°C",
+          "es": "18-30°C",
+          "pt": "18-30°C",
+          "ar": "18-30°C",
+          "hi": "18-30°C",
+          "zh": "18-30°C",
+          "ja": "18-30°C",
+          "ko": "18-30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowana",
-          "de": "mäßig",
-          "fr": "modérée",
-          "it": "moderata",
-          "es": "moderada",
-          "pt": "moderada",
-          "ar": "معتدلة",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -142,15 +143,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "not toxic",
-          "pl": "nietoksyczny",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossico",
-          "es": "no tóxico",
-          "pt": "não tóxico",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अ-ज़हरीला",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -161,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "tall annual grass",
-          "pl": "wysoka roślina jednoroczna",
-          "de": "hohe einjährige Gras",
-          "fr": "herbe annuelle haute",
-          "it": "erba annuale alta",
-          "es": "hierba anual alta",
-          "pt": "erva anual alta",
-          "ar": "عشب سنوي طويل",
-          "hi": "लंबा एकवर्षीय घास",
-          "zh": "高大一年生草",
-          "ja": "高い一年草",
-          "ko": "키 큰 일년생"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Overwatering",
+          "pl": "Zalewanie",
+          "de": "Überwässerung",
+          "fr": "Excès d'eau",
+          "it": "Eccesso d'acqua",
+          "es": "Exceso de riego",
+          "pt": "Excesso de água",
+          "ar": "إفراط في الري",
+          "hi": "अधिक पानी",
+          "zh": "浇水过多",
+          "ja": "過剰水やり",
+          "ko": "과도한 물주기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Corn",
-      "description": "Maize is a tall annual cereal grass grown for grain. It requires full sun and consistent water during growth."
+      "common_name": "Maize",
+      "description": "Zea mays, commonly known as Maize or Corn, is a staple crop grown worldwide. It thrives in full sun and requires moderate watering."
     },
     "pl": {
       "common_name": "Kukurydza",
-      "description": "Kukurydza to wysoka jednoroczna trawa uprawna. Wymaga pełnego słońca i stałej wilgotności."
+      "description": "Zea mays, znana jako kukurydza, to roślina uprawna, szeroko hodowana na całym świecie. Rośnie najlepiej w pełnym słońcu i wymaga umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Mais",
-      "description": "Mais ist ein hohes einjähriges Getreidegras. Es braucht volle Sonne und gleichmäßige Feuchte."
+      "description": "Zea mays, auch als Mais bekannt, ist eine weltweit angebaute Nutzpflanze. Sie gedeiht in voller Sonne und benötigt mäßige Bewässerung."
     },
     "fr": {
       "common_name": "Maïs",
-      "description": "Le maïs est une grande herbe annuelle cultivée pour ses grains. Il nécessite plein soleil et humidité constante."
+      "description": "Zea mays, connu sous le nom de maïs, est une culture de base cultivée dans le monde entier. Il préfère le plein soleil et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Mais",
-      "description": "Il mais è un alta erba annuale coltivata per i semi. Richiede pieno sole e umidità costante."
+      "description": "Zea mays, conosciuto come mais, è una coltura fondamentale coltivata in tutto il mondo. Cresce meglio sotto il pieno sole e richiede un'annaffiatura moderata."
     },
     "es": {
       "common_name": "Maíz",
-      "description": "El maíz es un alto pasto anual cultivado por sus granos. Requiere sol pleno y humedad constante."
+      "description": "Zea mays, conocido como maíz, es un cultivo básico cultivado en todo el mundo. Crece mejor a pleno sol y requiere riego moderado."
     },
     "pt": {
       "common_name": "Milho",
-      "description": "O milho é uma gramínea anual alta cultivada pelo grão. Requer sol pleno e umidade constante."
+      "description": "Zea mays, conhecido como milho, é uma cultura básica cultivada em todo o mundo. Cresce melhor sob sol pleno e requer rega moderada."
     },
     "ar": {
-      "common_name": "الذرة",
-      "description": "الذرة نبات سنوي عالي يُزرع من أجل الحبوب. يحتاج شمس كاملة ورطوبة منتظمة."
+      "common_name": "ذرة",
+      "description": "Zea mays، المعروف بالذرة، هو محصول أساسي يُزرع في جميع أنحاء العالم. ينمو في الشمس الكاملة ويتطلب سقاية معتدلة."
     },
     "hi": {
       "common_name": "मक्का",
-      "description": "मक्का अनाज के लिए उगाई जाने वाली लंबी एकवर्षीय घास है. यह पूर्ण सूर्य और नमी चाहता है."
+      "description": "Zea mays, जिसे मक्का के नाम से जाना जाता है, एक प्रमुख फसल है जो पूरी दुनिया में उगाई जाती है। यह पूर्ण सूर्य में उगता है और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "玉米",
-      "description": "玉米是一种高大一年生禾草，种植以收获谷物。它需要充足阳光和持续湿润。"
+      "description": "Zea mays，通常称为玉米，是全球广泛种植的主食作物。它在全日照下生长，且需要适度浇水。"
     },
     "ja": {
       "common_name": "トウモロコシ",
-      "description": "トウモロコシは穀物用に栽培される高い一年草です。日光と安定した水分が必要です。"
+      "description": "Zea mays、一般にトウモロコシとして知られる作物は、世界中で広く栽培されています。直射日光で育ち、中程度の水やりが必要です。"
     },
     "ko": {
       "common_name": "옥수수",
-      "description": "옥수수는 곡물용으로 재배되는 큰 일년생 풀입니다. 직사광선과 일정한 수분이 필요합니다."
+      "description": "Zea mays, 일반적으로 옥수수로 알려진 이 식물은 전 세계에서 재배되는 주요 작물입니다. 직사광선에서 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://en.wikipedia.org/wiki/Maize",
-      "https://pfaf.org/user/plant.aspx?LatinName=Zea+mays"
+      "https://www.rhs.org.uk/advice/profile?pid=263",
+      "https://www.gardenersworld.com/plants/how-to-grow-maize/"
     ]
   }
 }

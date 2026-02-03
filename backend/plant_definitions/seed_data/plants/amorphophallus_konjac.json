@@ -1,6 +1,6 @@
 {
   "external_id": "amorphophallus_konjac",
-  "name": "Konjac Lily",
+  "name": "Konjac",
   "latin": "Amorphophallus konjac",
   "sun": "medium",
   "water": "medium",
@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "loam"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -29,17 +29,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "en": "Bright, filtered light",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, gefiltert",
+          "fr": "Lumière tamisée",
+          "it": "Luce filtrata",
+          "es": "Luz filtrada",
+          "pt": "Luz filtrada",
+          "ar": "ضوء ساطع مُرشح",
+          "hi": "तेज़, छनित रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい日陰",
+          "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well-drained",
+          "en": "Rich, well-draining",
           "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainé",
+          "de": "Nährstoffreich, locker",
+          "fr": "Riche, drainant",
           "it": "Ricco e drenante",
-          "es": "Rico y drenado",
-          "pt": "Rico e drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良い土",
-          "ko": "배수 좋은 흙"
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غني وجيد التصريف",
+          "hi": "समृद्ध, जलनिकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で排水良い",
+          "ko": "비옥, 배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular in growth",
-          "pl": "Regularne w sezonie",
-          "de": "Regelmäßig aktiv",
-          "fr": "Régulier en saison",
-          "it": "Regolare in crescita",
-          "es": "Regular en crecimiento",
-          "pt": "Regular no crescimento",
-          "ar": "ري منتظم",
-          "hi": "विकास में नियमित",
-          "zh": "生长期定期",
-          "ja": "成長期に給水",
-          "ko": "생장기 규칙적"
+          "en": "Moist in growth",
+          "pl": "Wilgotno w sezonie",
+          "de": "Feucht in Wachstum",
+          "fr": "Humide en croissance",
+          "it": "Umido in crescita",
+          "es": "Húmedo al crecer",
+          "pt": "Úmido em crescimento",
+          "ar": "رطب أثناء النمو",
+          "hi": "विकास में नम रखें",
+          "zh": "生长期保持湿润",
+          "ja": "生育期は湿らせる",
+          "ko": "생장기 촉촉하게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Modérée",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等难度",
-          "ja": "中程度",
-          "ko": "보통 난이도"
+          "en": "Seasonal dormancy",
+          "pl": "Okres spoczynku",
+          "de": "Jährliche Ruhezeit",
+          "fr": "Dormance saisonnière",
+          "it": "Dormienza stagionale",
+          "es": "Dormancia estacional",
+          "pt": "Dormência sazonal",
+          "ar": "سكون موسمي",
+          "hi": "मौसमी सुप्तावस्था",
+          "zh": "季节性休眠",
+          "ja": "季節の休眠",
+          "ko": "계절 휴면"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Durchschnittlich",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "普通湿度",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Average home",
+          "pl": "Zwykła domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة منزلية",
+          "hi": "सामान्य घरेलू",
+          "zh": "普通室内湿度",
+          "ja": "標準的な室内",
+          "ko": "일반 실내 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if raw",
-          "pl": "Toksyczna surowa",
+          "en": "Toxic if eaten raw",
+          "pl": "Toksyczna na surowo",
           "de": "Roh giftig",
           "fr": "Toxique cru",
-          "it": "Tossica cruda",
-          "es": "Tóxica cruda",
-          "pt": "Tóxica crua",
-          "ar": "سامة نيئة",
-          "hi": "कच्ची विषैली",
+          "it": "Tossico da crudo",
+          "es": "Tóxico en crudo",
+          "pt": "Tóxico cru",
+          "ar": "سام نيئًا",
+          "hi": "कच्चा विषैला",
           "zh": "生食有毒",
-          "ja": "生は有毒",
-          "ko": "생것은 독성"
+          "ja": "生食は有毒",
+          "ko": "생식 시 유독"
         }
       }
     },
@@ -162,77 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Seasonal dormancy",
-          "pl": "Sezonowy spoczynek",
-          "de": "Saisonal ruhend",
-          "fr": "Dormance saisonnière",
-          "it": "Dormienza stagionale",
-          "es": "Latencia estacional",
-          "pt": "Dormência sazonal",
-          "ar": "سكون موسمي",
-          "hi": "मौसमी सुप्तावस्था",
-          "zh": "季节性休眠",
-          "ja": "季節休眠",
-          "ko": "계절 휴면"
+          "en": "Tuber, 1 leaf/yr",
+          "pl": "Bulwa, 1 liść/rok",
+          "de": "Knolle, 1 Blatt/J",
+          "fr": "Tubercule, 1 feuille",
+          "it": "Tubero, 1 foglia",
+          "es": "Tubérculo, 1 hoja",
+          "pt": "Túbero, 1 folha",
+          "ar": "درنة، ورقة/سنة",
+          "hi": "कंद, 1 पत्ता/वर्ष",
+          "zh": "块茎，每年一叶",
+          "ja": "球茎、年1葉",
+          "ko": "구경, 연 1잎"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Łatwo gnije",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Propensa a pudrición",
+          "pt": "Propensa a apodrecer",
+          "ar": "عرضة للتعفن",
+          "hi": "सड़न का खतरा",
+          "zh": "易烂根",
+          "ja": "腐りやすい",
+          "ko": "부패 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Konjac Lily",
-      "description": "Amorphophallus konjac is a tuberous aroid known for its large single leaf and dramatic inflorescence. It grows actively in warm months and enters full dormancy in winter."
+      "common_name": "Konjac",
+      "description": "A tuberous aroid that produces a single large leaf each growing season and then goes dormant. Keep in bright, filtered light and water during active growth when the surface begins to dry. Reduce watering greatly during dormancy and avoid leaving the tuber in wet soil."
     },
     "pl": {
       "common_name": "Dziwidło konjac",
-      "description": "Amorphophallus konjac to bulwiasta roślina z rodziny obrazkowatych o jednym dużym liściu. Latem intensywnie rośnie, a zimą przechodzi w stan spoczynku."
+      "description": "Bulwiasta roślina z rodziny obrazkowatych, która w sezonie wytwarza jeden duży liść, a potem przechodzi w spoczynek. Zapewnij jasne, rozproszone światło i podlewaj w okresie wzrostu, gdy wierzch podłoża lekko przeschnie. W czasie spoczynku ogranicz podlewanie do minimum i nie trzymaj bulwy w mokrej ziemi."
     },
     "de": {
-      "common_name": "Teufelszunge",
-      "description": "Amorphophallus konjac ist eine knollenbildende Aronstabpflanze mit einem einzelnen großen Blatt. Sie wächst im Sommer und ruht im Winter vollständig."
+      "common_name": "Konjak",
+      "description": "Eine knollenbildende Aronstabpflanze, die pro Saison meist nur ein großes Blatt treibt und danach in Ruhe geht. Hell, aber gefiltert stellen und während des Wachstums gießen, sobald die Oberfläche etwas abtrocknet. In der Ruhezeit sehr sparsam gießen und Staunässe vermeiden."
     },
     "fr": {
-      "common_name": "Lys vaudou",
-      "description": "Amorphophallus konjac est une plante tubéreuse à une seule grande feuille. Elle pousse pendant la saison chaude et entre en dormance en hiver."
+      "common_name": "Konjac",
+      "description": "Un aroïde à tubercule qui produit généralement une seule grande feuille par saison, puis entre en dormance. Placez-le en lumière vive tamisée et arrosez en période de croissance lorsque la surface du substrat commence à sécher. Réduisez fortement l’arrosage en dormance et évitez le substrat détrempé."
     },
     "it": {
-      "common_name": "Giglio konjac",
-      "description": "Amorphophallus konjac è una pianta tuberosa con una grande foglia singola. Cresce nei mesi caldi e va in dormienza in inverno."
+      "common_name": "Konjac",
+      "description": "Un’aroidea tuberosa che produce una sola grande foglia per stagione e poi va in dormienza. Tienila in luce intensa ma filtrata e annaffia in crescita quando la superficie del terriccio inizia ad asciugare. In dormienza riduci molto l’acqua ed evita ristagni."
     },
     "es": {
-      "common_name": "Lirio konjac",
-      "description": "Amorphophallus konjac es una planta tuberosa con una sola hoja grande. Crece en épocas cálidas y entra en reposo en invierno."
+      "common_name": "Konjac",
+      "description": "Una arácea tuberosa que suele sacar una sola hoja grande por temporada y luego entra en reposo. Colócala con luz brillante filtrada y riega durante el crecimiento cuando la superficie empiece a secarse. En reposo reduce mucho el riego y evita el sustrato encharcado."
     },
     "pt": {
-      "common_name": "Lírio konjac",
-      "description": "Amorphophallus konjac é uma planta tuberosa com uma folha grande única. Cresce no calor e entra em dormência no inverno."
+      "common_name": "Konjac",
+      "description": "Uma arácea tuberosa que normalmente produz uma única folha grande por estação e depois entra em dormência. Mantenha em luz forte filtrada e regue no crescimento quando a superfície começar a secar. Na dormência, reduza bastante a água e evite solo encharcado."
     },
     "ar": {
-      "common_name": "زنبق الكونجاك",
-      "description": "Amorphophallus konjac نبات درني له ورقة كبيرة واحدة. ينمو في الفصول الدافئة ويدخل في سكون شتوي."
+      "common_name": "كونجاك",
+      "description": "نبات درني من الفصيلة القلقاسية ينتج عادة ورقة كبيرة واحدة في موسم النمو ثم يدخل في سكون. يوضع في ضوء ساطع مُرشح ويُسقى أثناء النمو عندما يبدأ سطح التربة بالجفاف. أثناء السكون تُخفض السقاية كثيرًا ويُتجنب بقاء الدرنة في تربة مبللة."
     },
     "hi": {
-      "common_name": "कोनजैक लिली",
-      "description": "Amorphophallus konjac एक कंदीय पौधा है जिसमें एक बड़ा पत्ता होता है। यह गर्म मौसम में बढ़ता है और सर्दियों में सुप्त रहता है।"
+      "common_name": "कोनजैक",
+      "description": "यह एक कंद वाली एरॉइड है जो आमतौर पर हर बढ़वार मौसम में एक बड़ा पत्ता निकालती है और फिर सुप्त हो जाती है। इसे तेज़ लेकिन छनित रोशनी दें और सक्रिय बढ़वार में तब पानी दें जब सतह सूखने लगे। सुप्तावस्था में पानी बहुत कम करें और कंद को गीली मिट्टी में न रखें।"
     },
     "zh": {
       "common_name": "魔芋",
-      "description": "Amorphophallus konjac 是一种块茎天南星科植物，只有一片大叶。夏季生长旺盛，冬季完全休眠。"
+      "description": "一种块茎天南星科植物，生长期通常只抽出一片大型叶片，随后进入休眠。放在明亮散射光处，生长期当表土开始变干再浇水。休眠期大幅减少浇水，避免块茎长期处于湿土中。"
     },
     "ja": {
       "common_name": "コンニャク",
-      "description": "Amorphophallus konjac は大きな葉を一枚だけ出す塊茎植物です。暖かい季節に成長し、冬は休眠します。"
+      "description": "塊茎性のサトイモ科で、生育期に大きな葉を1枚出してから休眠します。明るい間接光で管理し、生育期は表土が乾き始めたら水やりします。休眠期は水やりを大幅に減らし、塊茎を湿った土に置きっぱなしにしないでください。"
     },
     "ko": {
       "common_name": "곤약",
-      "description": "Amorphophallus konjac은 하나의 큰 잎을 가진 괴경 식물입니다. 따뜻한 계절에 자라고 겨울에는 휴면합니다."
+      "description": "구경을 만드는 천남성과 식물로, 생장기에 보통 큰 잎 한 장을 내고 이후 휴면에 들어갑니다. 밝은 간접광에서 키우고 생장기에는 흙 표면이 마르기 시작할 때 물을 줍니다. 휴면기에는 물을 크게 줄이고 구경이 젖은 흙에 오래 있지 않게 하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/amorphophallus-konjac",
+      "https://hort.extension.wisc.edu/articles/voodoo-lily-amorphophallus-konjac/",
       "https://plants.ces.ncsu.edu/plants/amorphophallus-konjac/",
-      "https://www.rhs.org.uk/plants/1620/amorphophallus-konjac/details"
+      "https://www.rhs.org.uk/plants/133125/amorphophallus-konjac/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276204"
     ]
   }
 }

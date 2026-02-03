@@ -1,6 +1,6 @@
 {
   "external_id": "cephalocereus_senilis",
-  "name": "Old Man Cactus",
+  "name": "Old man cactus",
   "latin": "Cephalocereus senilis",
   "sun": "high",
   "water": "low",
@@ -10,16 +10,16 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "cephalocereus_senilis.jpg",
   "image_thumb": "cephalocereus_senilis.jpg",
   "traits": [
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "en": "Bright direct sun",
+          "pl": "Jasne, pełne słońce",
+          "de": "Viel helles Licht",
+          "fr": "Soleil direct vif",
+          "it": "Sole diretto vivo",
+          "es": "Sol directo brillante",
+          "pt": "Sol direto forte",
+          "ar": "شمس ساطعة مباشرة",
+          "hi": "तेज़ सीधी धूप",
+          "zh": "强光直射",
+          "ja": "明るい直射日光",
+          "ko": "강한 직사광"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenável",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Gritty cactus mix",
+          "pl": "Podłoże do kaktusów",
+          "de": "Kakteenerde, grob",
+          "fr": "Substrat cactus drainant",
+          "it": "Terriccio cactus drenante",
+          "es": "Sustrato cactus drenante",
+          "pt": "Substrato cactus drenante",
+          "ar": "تربة صبارات جيدة الصرف",
+          "hi": "रेतीली कैक्टस मिट्टी",
+          "zh": "排水佳仙人掌土",
+          "ja": "水はけ良い多肉土",
+          "ko": "배수 좋은 선인장흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Skąpe",
-          "de": "Wenig",
-          "fr": "Peu",
-          "it": "Poca",
-          "es": "Escasa",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "少なめ",
-          "ko": "적음"
+          "en": "Dry out, then soak",
+          "pl": "Wysusz, potem podlej",
+          "de": "Erst trocken, dann gießen",
+          "fr": "Sec puis arrosage",
+          "it": "Asciuga, poi irriga",
+          "es": "Secar y luego regar",
+          "pt": "Secar e depois regar",
+          "ar": "اتركه يجف ثم اسقِ",
+          "hi": "सूखे फिर भिगोएँ",
+          "zh": "干透再浇透",
+          "ja": "乾いてからたっぷり",
+          "ko": "완전 건조 후 흠뻑"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Easy, slow grower",
+          "pl": "Łatwy, rośnie wolno",
+          "de": "Einfach, wächst langsam",
+          "fr": "Facile, croissance lente",
+          "it": "Facile, crescita lenta",
+          "es": "Fácil, crecimiento lento",
+          "pt": "Fácil, crescimento lento",
+          "ar": "سهل، نمو بطيء",
+          "hi": "आसान, धीमी बढ़त",
+          "zh": "易养，生长慢",
+          "ja": "簡単、成長ゆっくり",
+          "ko": "쉬움, 성장 느림"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18-29°C; no frost",
+          "pl": "18-29°C, bez mrozu",
+          "de": "18-29°C, frostfrei",
+          "fr": "18-29°C, sans gel",
+          "it": "18-29°C, niente gelo",
+          "es": "18-29°C, sin heladas",
+          "pt": "18-29°C, sem geada",
+          "ar": "18-29°م دون صقيع",
+          "hi": "18-29°C, पाला नहीं",
+          "zh": "18-29°C，防霜冻",
+          "ja": "18-29°C、霜はNG",
+          "ko": "18-29°C, 서리 금지"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic (pets)",
+          "pl": "Nietrujący (zwierzęta)",
+          "de": "Ungiftig (Haustiere)",
+          "fr": "Non toxique (animaux)",
+          "it": "Non tossico (animali)",
+          "es": "No tóxico (mascotas)",
+          "pt": "Não tóxico (pets)",
+          "ar": "غير سام للحيوانات",
+          "hi": "पालतू हेतु सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -160,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow, columnar",
+          "pl": "Wolny, kolumnowy",
+          "de": "Langsam, säulenförmig",
+          "fr": "Lent, colonnaire",
+          "it": "Lento, colonnare",
+          "es": "Lento, columnar",
+          "pt": "Lento, colunar",
+          "ar": "بطيء، عمودي",
+          "hi": "धीमा, स्तंभाकार",
+          "zh": "缓慢，柱状",
+          "ja": "遅い、柱状",
+          "ko": "느림, 기둥형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot if overwatered",
+          "pl": "Gnicia przy zalaniu",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourrit si trop arrosé",
+          "it": "Marciume se troppo bagnato",
+          "es": "Pudre si se riega de más",
+          "pt": "Apodrece se encharcar",
+          "ar": "يتعفن مع الإفراط",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "浇水过多易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, scale",
+          "pl": "Wełnowce, tarczniki",
+          "de": "Wollläuse, Schildläuse",
+          "fr": "Cochenilles, farineuses",
+          "it": "Cocciniglie, cotonose",
+          "es": "Cochinillas, escamas",
+          "pt": "Cochonilhas, escamas",
+          "ar": "بق دقيقي وحشرات قشرية",
+          "hi": "मिलीबग, स्केल",
+          "zh": "粉蚧、介壳虫",
+          "ja": "コナカイガラムシ",
+          "ko": "깍지벌레, 솜깍지"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Old Man Cactus",
-      "description": "Cephalocereus senilis is a columnar cactus native to Mexico, known for its long white hair-like spines. It thrives in bright sun and dry conditions. Growth is slow but long-lived."
+      "common_name": "Old man cactus",
+      "description": "Cephalocereus senilis is a slow-growing, columnar cactus covered with long white hairs that help protect it from sun and temperature extremes. Give it very bright light with some direct sun and use a fast-draining cactus mix. Water only after the potting mix fully dries, and keep it much drier in winter."
     },
     "pl": {
       "common_name": "Kaktus starzec",
-      "description": "Cephalocereus senilis to kolumnowy kaktus z Meksyku, znany z długich białych włosków. Wymaga dużo słońca i rzadkiego podlewania. Rośnie bardzo wolno."
+      "description": "Cephalocereus senilis to wolno rosnący, kolumnowy kaktus z długimi białymi włoskami. Wymaga bardzo jasnego stanowiska z odrobiną bezpośredniego słońca i przepuszczalnego podłoża do kaktusów. Podlewaj dopiero po całkowitym przeschnięciu ziemi, zimą ogranicz podlewanie do minimum."
     },
     "de": {
-      "common_name": "Greisenhaupt-Kaktus",
-      "description": "Cephalocereus senilis ist ein säulenförmiger Kaktus aus Mexiko mit weißen Haaren. Er bevorzugt volle Sonne und trockene Erde. Das Wachstum ist langsam."
+      "common_name": "Greisenhauptkaktus",
+      "description": "Cephalocereus senilis ist ein langsam wachsender Säulenkaktus mit langen weißen Haaren. Er braucht sehr viel Licht mit etwas direkter Sonne und ein stark durchlässiges Kakteensubstrat. Gießen Sie erst, wenn das Substrat vollständig trocken ist, und halten Sie ihn im Winter deutlich trockener."
     },
     "fr": {
       "common_name": "Cactus vieil homme",
-      "description": "Cephalocereus senilis est un cactus colonnaire du Mexique, couvert de longs poils blancs. Il aime le plein soleil et peu d’arrosage. Sa croissance est lente."
+      "description": "Cephalocereus senilis est un cactus colonnaire à croissance lente, recouvert de longs poils blancs. Il demande une lumière très vive avec un peu de soleil direct et un substrat cactus très drainant. Arrosez seulement quand le mélange est totalement sec et réduisez fortement en hiver."
     },
     "it": {
       "common_name": "Cactus vecchio",
-      "description": "Cephalocereus senilis è un cactus colonnare originario del Messico con lunghi peli bianchi. Richiede molto sole e poca acqua. Cresce lentamente."
+      "description": "Cephalocereus senilis è un cactus colonnare a crescita lenta con lunghi peli bianchi. Preferisce molta luce con un po’ di sole diretto e un terriccio per cactus ben drenante. Annaffia solo quando il substrato è completamente asciutto e tienilo quasi asciutto in inverno."
     },
     "es": {
-      "common_name": "Cactus viejito",
-      "description": "Cephalocereus senilis es un cactus columnar de México, famoso por sus pelos blancos. Necesita sol intenso y riego escaso. Su crecimiento es lento."
+      "common_name": "Cactus viejo",
+      "description": "Cephalocereus senilis es un cactus columnar de crecimiento lento cubierto de pelos blancos largos. Necesita mucha luz con algo de sol directo y un sustrato para cactus muy drenante. Riega únicamente cuando el sustrato esté totalmente seco y reduce el riego en invierno."
     },
     "pt": {
       "common_name": "Cacto velho",
-      "description": "Cephalocereus senilis é um cacto colunar do México, coberto por longos pelos brancos. Prefere sol pleno e pouca água. Crescimento lento."
+      "description": "Cephalocereus senilis é um cacto colunar de crescimento lento, coberto por longos pelos brancos. Precisa de luz muito intensa com algum sol direto e substrato bem drenante para cactos. Regue apenas quando o substrato secar por completo e mantenha bem mais seco no inverno."
     },
     "ar": {
       "common_name": "صبار الرجل العجوز",
-      "description": "Cephalocereus senilis صبار عمودي من المكسيك يتميز بشعيرات بيضاء طويلة. يحتاج إلى شمس قوية وري قليل. نموه بطيء."
+      "description": "Cephalocereus senilis صبار عمودي بطيء النمو ومغطى بشعيرات بيضاء طويلة. يحتاج إلى ضوء قوي جدًا مع بعض الشمس المباشرة وتربة صبارات جيدة الصرف. اسقِ فقط بعد جفاف التربة تمامًا وقلّل الري كثيرًا في الشتاء."
     },
     "hi": {
-      "common_name": "ओल्ड मैन कैक्टस",
-      "description": "Cephalocereus senilis मेक्सिको का एक लंबा कैक्टस है, जिस पर सफेद बाल जैसे रेशे होते हैं। इसे तेज धूप और कम पानी चाहिए। वृद्धि धीमी होती है।"
+      "common_name": "बूढ़ा आदमी कैक्टस",
+      "description": "Cephalocereus senilis धीमी गति से बढ़ने वाला, स्तंभाकार कैक्टस है जिस पर लंबे सफेद रोंए होते हैं। इसे बहुत तेज़ रोशनी और कुछ सीधी धूप तथा अच्छी जल-निकासी वाली कैक्टस मिट्टी चाहिए। मिट्टी पूरी तरह सूखने पर ही पानी दें और सर्दियों में पानी बहुत कम रखें।"
     },
     "zh": {
       "common_name": "老翁柱",
-      "description": "Cephalocereus senilis 原产于墨西哥，是一种被白色毛覆盖的柱状仙人掌。需要充足阳光和少量浇水。生长缓慢。"
+      "description": "Cephalocereus senilis 是生长缓慢的柱状仙人掌，表面有长白毛。需要非常明亮的光照并可接受部分直射光，使用排水良好的仙人掌土。盆土完全干透后再浇透，冬季应显著减少浇水。"
     },
     "ja": {
-      "common_name": "オールドマンカクタス",
-      "description": "Cephalocereus senilis はメキシコ原産の柱状サボテンで、白い毛に覆われています。強い日光と控えめな水やりを好みます。成長は遅いです。"
+      "common_name": "老人柱",
+      "description": "Cephalocereus senilis は白い毛に覆われた、成長の遅い柱状サボテンです。とても明るい場所で、ある程度の直射日光と水はけの良いサボテン用土が必要です。用土が完全に乾いてからたっぷり与え、冬は乾かし気味に管理します。"
     },
     "ko": {
-      "common_name": "노인 선인장",
-      "description": "Cephalocereus senilis는 멕시코 원산의 기둥형 선인장으로 흰 털이 특징입니다. 강한 햇빛과 적은 물을 필요로 합니다. 성장 속도는 느립니다."
+      "common_name": "노인선인장",
+      "description": "Cephalocereus senilis 는 긴 흰 털이 특징인 느리게 자라는 기둥형 선인장입니다. 매우 밝은 빛과 약간의 직사광, 배수가 좋은 선인장용 흙이 필요합니다. 흙이 완전히 마른 뒤에만 물을 주고, 겨울에는 훨씬 더 건조하게 관리하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/cephalocereus-senilis",
-      "https://www.kew.org/plants/cephalocereus-senilis",
-      "https://www.cactus-art.biz/schede/CEPHALOCEREUS/Cephalocereus_senilis.htm"
+      "https://plants.ces.ncsu.edu/plants/cephalocereus-senilis/",
+      "https://www.rhs.org.uk/plants/types/cacti-succulents/houseplants/growing-guide",
+      "https://gardenerspath.com/plants/succulents/grow-old-man-cactus/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/old-man-cactus"
     ]
   }
 }

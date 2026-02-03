@@ -1,24 +1,25 @@
 {
   "external_id": "sedum_rupestre",
-  "name": "Reflexed Stonecrop",
+  "name": "Stonecrop",
   "latin": "Sedum rupestre",
   "sun": "high",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "sedum_rupestre.jpg",
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Voller Sonnenschein",
+          "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "أشعة الشمس المباشرة",
-          "hi": "पूर्ण सूर्य",
+          "ar": "الشمس الكاملة",
+          "hi": "पूरा सूर्य",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "完全日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaszczysta gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sableux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेतीली मिट्टी",
-          "zh": "沙质土壤",
-          "ja": "砂質土壌",
-          "ko": "모래토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수 잘되는 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low watering",
-          "pl": "Niskie podlewanie",
-          "de": "Geringes Wässern",
-          "fr": "Arrosage faible",
-          "it": "Annaffiatura bassa",
-          "es": "Riego bajo",
-          "pt": "Rega baixa",
-          "ar": "ري منخفض",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "少ない水やり",
-          "ko": "적은 물주기"
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten gießen",
+          "fr": "Arrosage peu fréquent",
+          "it": "Raramente annaffiare",
+          "es": "Riego infrecuente",
+          "pt": "Regar raramente",
+          "ar": "الري بشكل غير متكرر",
+          "hi": "अल्प समय में पानी देना",
+          "zh": "不频繁浇水",
+          "ja": "頻繁に水やりしない",
+          "ko": "드물게 물주기"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -123,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchtigkeit",
-          "fr": "Humidité faible",
-          "it": "Bassa umidità",
-          "es": "Humedad baja",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低湿",
           "ko": "낮은 습도"
         }
       }
@@ -144,16 +145,16 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "अक्षारी",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "독성 없음"
         }
       }
     },
@@ -163,73 +164,111 @@
         "text": {
           "en": "Slow-growing",
           "pl": "Wolno rosnący",
-          "de": "Langsam wachsend",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीरे-धीरे बढ़ने वाला",
+          "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "遅い成長",
-          "ko": "느리게 자라는"
+          "ja": "成長が遅い",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre is a small, drought-tolerant succulent. It has needle-like blue-green leaves and thrives in rocky, well-drained soil."
+      "common_name": "Stonecrop",
+      "description": "Sedum rupestre is a low-growing succulent, ideal for ground cover or container gardens. It thrives in full sun and requires minimal watering."
     },
     "pl": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre to mała, odporna na suszę roślina sukulentowa. Ma igiełkowate, niebiesko-zielone liście i rośnie w skalistych, dobrze przepuszczających wodę glebach."
+      "common_name": "Rozchodnik",
+      "description": "Sedum rupestre to niskopienne sukulent, idealne do pokrycia ziemi lub ogrodów w pojemnikach. Rośnie najlepiej w pełnym słońcu i wymaga minimalnego podlewania."
     },
     "de": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre ist eine kleine, dürretolerante Sukkulente. Sie hat nadelartige, blaugrüne Blätter und gedeiht in felsigem, gut durchlässigem Boden."
+      "common_name": "Felsen-Steinbrech",
+      "description": "Sedum rupestre ist eine niedrig wachsende Sukkulente, ideal für Bodendecker oder Containergärten. Es gedeiht in voller Sonne und benötigt wenig Wasser."
     },
     "fr": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre est une petite plante succulente résistante à la sécheresse. Elle a des feuilles en forme d'aiguilles de couleur bleu-vert et prospère dans un sol rocheux et bien drainé."
+      "common_name": "Orpin",
+      "description": "Sedum rupestre est une succulente basse, idéale pour couvrir le sol ou les jardins en pot. Elle prospère au soleil et nécessite peu d'arrosage."
     },
     "it": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre è una piccola pianta succulenta resistente alla siccità. Ha foglie sottili di colore verde-blu e cresce in terreni rocciosi e ben drenati."
+      "common_name": "Sedum",
+      "description": "Sedum rupestre è una succulenta che cresce bassa, ideale per coprire il terreno o per giardini in contenitori. Cresce al sole e necessita di poca acqua."
     },
     "es": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre es una pequeña suculenta tolerante a la sequía. Tiene hojas en forma de aguja de color verde azulado y prospera en suelos rocosos y bien drenados."
+      "common_name": "Sedum",
+      "description": "Sedum rupestre es una suculenta de bajo crecimiento, ideal para cubrir el suelo o jardines en macetas. Prosperan a pleno sol y requieren poca agua."
     },
     "pt": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre é uma pequena planta suculenta resistente à seca. Tem folhas em forma de agulha de cor azul-esverdeada e cresce em solos rochosos e bem drenados."
+      "common_name": "Sedum",
+      "description": "Sedum rupestre é uma suculenta de crescimento baixo, ideal para cobrir o solo ou jardins em vasos. Cresce ao sol pleno e requer pouca água."
     },
     "ar": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre هي نبتة عصارية صغيرة مقاومة للجفاف. تحتوي على أوراق إبرية باللون الأزرق-الأخضر وتزدهر في التربة الصخرية جيدة التصريف."
+      "common_name": "الاوراق الحجرية",
+      "description": "Sedum rupestre هو نبات عصاري منخفض النمو، مثالي لتغطية الأرض أو الحدائق في الحاويات. ينمو في الشمس ويتطلب سقاية قليلة."
     },
     "hi": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre एक छोटी, सूखा सहन करने वाली मांसल पौधा है। इसके पास नीले-हरे रंग के सुई जैसे पत्ते होते हैं और यह चट्टानी, अच्छी तरह से जल निकासी वाली मिट्टी में उगता है।"
+      "common_name": "स्टोनक्रॉप",
+      "description": "Sedum rupestre एक निम्न-वृद्धि वाला मांसल पौधा है, जो जमीन पर आवरण या कंटेनर गार्डन के लिए आदर्श है। यह पूरी धूप में उगता है और बहुत कम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre 是一种小型的耐旱多肉植物。它具有蓝绿色的针状叶子，并在岩石和排水良好的土壤中生长。"
+      "common_name": "景天",
+      "description": "Sedum rupestre 是一种低矮的多肉植物，适用于地面覆盖或容器花园。它在全日照下生长，并且需要较少的水分。"
     },
     "ja": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre は小さな乾燥に強い多肉植物です。針のような青緑色の葉を持ち、岩だらけの排水性の良い土壌で育ちます。"
+      "common_name": "セダム",
+      "description": "Sedum rupestreは低く成長する多肉植物で、地面のカバーやコンテナガーデンに最適です。完全な日光で育ち、最小限の水やりで済みます。"
     },
     "ko": {
-      "common_name": "Reflexed Stonecrop",
-      "description": "Sedum rupestre는 작은 내건성 다육 식물입니다. 파란색-녹색의 바늘 모양의 잎을 가지고 있으며, 바위가 많은 배수성이 좋은 토양에서 자랍니다."
+      "common_name": "석류석",
+      "description": "Sedum rupestre는 낮게 자라는 다육식물로, 땅 덮개나 용기 정원에 이상적입니다. 햇볕이 잘 드는 곳에서 자라며 물을 적게 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/13780/Sedum-rupestre/Details",
+      "https://www.rhs.org.uk/plants/sedum-rupestre",
       "https://www.gardenia.net/plant/sedum-rupestre"
     ]
   }

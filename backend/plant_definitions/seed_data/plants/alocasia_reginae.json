@@ -1,10 +1,10 @@
 {
   "external_id": "alocasia_reginae",
-  "name": "Queen Alocasia",
+  "name": "Alocasia reginae",
   "latin": "Alocasia reginae",
   "sun": "medium",
-  "water": "high",
-  "difficulty": "hard",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
@@ -18,7 +18,7 @@
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_reginae.jpg",
@@ -30,13 +30,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
+          "de": "Helles, indirekt",
+          "fr": "Vive indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining aroid",
-          "pl": "Przepuszczalne",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Airy aroid mix",
+          "pl": "Przewiewna mieszanka",
+          "de": "Luftiges Aroid-Substr.",
+          "fr": "Mélange aroid aéré",
+          "it": "Substrato arioso",
+          "es": "Mezcla aireada",
+          "pt": "Mistura arejada",
+          "ar": "تربة أرويد خفيفة",
+          "hi": "हवादार एरॉइड मिक्स",
+          "zh": "疏松天南星土",
+          "ja": "通気性ある用土",
+          "ko": "통기성 아로이드토"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stała wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol humide",
-          "it": "Umido costante",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة منتظمة",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "均一に湿らせる",
-          "ko": "항상 촉촉"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नम मिट्टी",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Impegnativa",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "较难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -128,7 +128,7 @@
           "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Humedad alta",
+          "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الأكل",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright clumping",
-          "pl": "Kępiasty",
-          "de": "Horstig",
-          "fr": "En touffe",
-          "it": "Cespugliosa",
-          "es": "En mata",
-          "pt": "Em touceira",
-          "ar": "نمو قائم",
-          "hi": "गुच्छेदार",
-          "zh": "丛生直立",
-          "ja": "株立ち",
-          "ko": "포기형"
+          "en": "Slow–moderate",
+          "pl": "Wolny–umiarkowany",
+          "de": "Langsam–mittel",
+          "fr": "Lente à modérée",
+          "it": "Lenta–moderata",
+          "es": "Lento–moderado",
+          "pt": "Lento–moderado",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी–मध्यम",
+          "zh": "缓慢至中等",
+          "ja": "ゆっくり〜普通",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "ज्यादा पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites",
+          "pl": "Przędziorki",
+          "de": "Spinnmilben",
+          "fr": "Araignées rouges",
+          "it": "Ragnetti rossi",
+          "es": "Ácaros",
+          "pt": "Ácaros-aranha",
+          "ar": "العناكب الحمراء",
+          "hi": "स्पाइडर माइट्स",
+          "zh": "红蜘蛛",
+          "ja": "ハダニ",
+          "ko": "거미진드기"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Queen Alocasia",
-      "description": "Alocasia reginae is a tropical aroid known for dark green leaves with prominent veins. It prefers bright indirect light, warm temperatures, and consistently moist but well-drained soil. High humidity is important for healthy growth."
+      "common_name": "Silver velvet alocasia",
+      "description": "Alocasia reginae is a tropical aroid from Borneo grown for its distinctive foliage. Give it bright, indirect light and a warm spot, and water when the surface begins to dry while avoiding waterlogging. It prefers humid air and is toxic if ingested."
     },
     "pl": {
-      "common_name": "Alokazja Regina",
-      "description": "Alocasia reginae to tropikalna roślina o ciemnych liściach z wyraźnym unerwieniem. Wymaga jasnego, rozproszonego światła oraz ciepła. Podłoże powinno być stale lekko wilgotne i przepuszczalne."
+      "common_name": "Alokazja srebrzysta (reginae)",
+      "description": "Alocasia reginae to tropikalna roślina z Borneo uprawiana dla ozdobnych liści. Zapewnij jasne, rozproszone światło i ciepłe miejsce oraz podlewaj, gdy wierzch podłoża lekko przeschnie, nie dopuszczając do zastojów wody. Lubi wysoką wilgotność powietrza i jest toksyczna po spożyciu."
     },
     "de": {
-      "common_name": "Königin-Alokasie",
-      "description": "Alocasia reginae ist eine tropische Aronstabpflanze mit dunklen, geaderten Blättern. Sie benötigt helles, indirektes Licht und warme Temperaturen. Das Substrat sollte gleichmäßig feucht und gut drainiert sein."
+      "common_name": "Silber-Samt-Alokasie",
+      "description": "Alocasia reginae ist eine tropische Aronstabgewächs-Art aus Borneo, die wegen ihres Laubs gehalten wird. Stelle sie hell, aber ohne direkte Sonne, und gieße, wenn die Oberfläche antrocknet, ohne Staunässe zu verursachen. Hohe Luftfeuchte ist hilfreich, und die Pflanze ist bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Alocasia reine",
-      "description": "Alocasia reginae est une plante tropicale aux feuilles foncées et nervurées. Elle apprécie une lumière indirecte vive et une atmosphère chaude. Le sol doit rester humide sans être détrempé."
+      "common_name": "Alocasie velours argenté",
+      "description": "Alocasia reginae est une aracée tropicale originaire de Bornéo, cultivée pour son feuillage. Placez-la en lumière vive indirecte et au chaud, puis arrosez quand la surface commence à sécher en évitant l’excès d’eau. Elle apprécie une atmosphère humide et elle est toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "Alocasia Regina",
-      "description": "Alocasia reginae è una pianta tropicale con foglie scure e venature evidenti. Predilige luce indiretta intensa e temperature calde. Il terreno deve essere umido ma ben drenato."
+      "common_name": "Alocasia velluto argento",
+      "description": "Alocasia reginae è un’aroide tropicale del Borneo coltivata per le foglie ornamentali. Fornisci luce intensa ma indiretta e temperature calde, e annaffia quando lo strato superiore inizia ad asciugare evitando ristagni. Preferisce aria umida ed è tossica se ingerita."
     },
     "es": {
-      "common_name": "Alocasia reina",
-      "description": "Alocasia reginae es una planta tropical con hojas oscuras y venas marcadas. Necesita luz indirecta brillante y calor constante. El sustrato debe mantenerse húmedo y bien drenado."
+      "common_name": "Alocasia terciopelo plateado",
+      "description": "Alocasia reginae es una arácea tropical de Borneo cultivada por su follaje. Dale luz brillante e indirecta y un ambiente cálido, y riega cuando la capa superior empiece a secarse evitando el encharcamiento. Prefiere humedad ambiental alta y es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Alocasia rainha",
-      "description": "Alocasia reginae é uma planta tropical com folhas verdes escuras e nervuras claras. Prefere luz indireta intensa e ambiente quente. O solo deve ser mantido levemente úmido e bem drenado."
+      "common_name": "Alocásia veludo prateado",
+      "description": "Alocasia reginae é uma aróide tropical de Bornéu cultivada pela folhagem. Mantenha em luz forte indireta e em local quente, regando quando a superfície começar a secar e evitando encharcamento. Prefere ar úmido e é tóxica se ingerida."
     },
     "ar": {
-      "common_name": "ألوكاسيا الملكة",
-      "description": "ألوكاسيا ريجيناي نبات استوائي بأوراق داكنة وعروق واضحة. يحتاج إلى ضوء ساطع غير مباشر ودرجات حرارة دافئة. يجب أن تبقى التربة رطبة مع تصريف جيد."
+      "common_name": "ألوكاسيا مخملية فضية",
+      "description": "Alocasia reginae نبات استوائي من بورنيو يُزرع لأوراقه. يوضع في ضوء ساطع غير مباشر وحرارة دافئة، ويُسقى عند بدء جفاف السطح مع تجنب تشبع التربة بالماء. يفضل رطوبة هواء مرتفعة وهو سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "क्वीन एलोकैसिया",
-      "description": "Alocasia reginae एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहरी और शिरायुक्त होती हैं। इसे तेज अप्रत्यक्ष रोशनी और गर्म वातावरण चाहिए। मिट्टी नम लेकिन अच्छी जल निकास वाली होनी चाहिए।"
+      "common_name": "सिल्वर वेल्वेट अलोकासिया",
+      "description": "Alocasia reginae बोर्नियो की एक उष्णकटिबंधीय एरॉइड है जिसे इसके पत्तों के लिए उगाया जाता है। इसे तेज अप्रत्यक्ष रोशनी और गर्म स्थान पर रखें, और जब ऊपर की मिट्टी हल्की सूखने लगे तो पानी दें, लेकिन जलभराव न होने दें। यह अधिक आर्द्रता पसंद करती है और खाने पर विषैली है।"
     },
     "zh": {
-      "common_name": "王后海芋",
-      "description": "Alocasia reginae 是一种热带观叶植物，叶色深且叶脉明显。适合明亮的散射光和温暖环境。土壤需保持湿润并具有良好排水性。"
+      "common_name": "银绒海芋",
+      "description": "Alocasia reginae 为产自婆罗洲的热带天南星科观叶植物。提供明亮散射光与温暖环境，表土略干再浇透，避免积水烂根。喜欢较高空气湿度，误食有毒。"
     },
     "ja": {
-      "common_name": "クイーンアロカシア",
-      "description": "Alocasia reginae は濃い葉色と目立つ葉脈を持つ熱帯植物です。明るい間接光と暖かい環境を好みます。用土は湿り気を保ちつつ排水性が必要です。"
+      "common_name": "シルバーベルベット・アロカシア",
+      "description": "Alocasia reginae はボルネオ原産の熱帯性サトイモ科で、観葉として葉を楽しみます。明るい間接光と暖かい環境を保ち、表土が少し乾いてから水やりし、過湿を避けます。湿度を好み、誤食すると有毒です。"
     },
     "ko": {
-      "common_name": "퀸 알로카시아",
-      "description": "Alocasia reginae는 짙은 잎과 뚜렷한 맥이 특징인 열대 식물입니다. 밝은 간접광과 따뜻한 환경을 선호합니다. 흙은 배수가 잘되면서 촉촉해야 합니다."
+      "common_name": "실버 벨벳 알로카시아",
+      "description": "Alocasia reginae는 보르네오 원산의 열대 천남성과 식물로 잎이 관상 포인트입니다. 밝은 간접광과 따뜻한 환경에서 키우고, 겉흙이 마르기 시작하면 물을 주되 과습은 피하세요. 높은 습도를 선호하며 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:84234-1",
       "https://www.rhs.org.uk/plants/alocasia",
-      "https://www.kew.org/plants/alocasia",
-      "https://www.aroid.org/genera/alocasia/alocasia.php"
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia",
+      "https://plants.ces.ncsu.edu/plants/alocasia/",
+      "https://www.gardendesign.com/houseplants/alocasia.html"
     ]
   }
 }

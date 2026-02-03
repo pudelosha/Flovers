@@ -1,0 +1,275 @@
+{
+  "external_id": "viola_odorata",
+  "name": "Sweet Violet",
+  "latin": "Viola odorata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "green-plants",
+    "all-purpose"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "viola_odorata.jpg",
+  "image_thumb": "viola_odorata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Częściowe słońce",
+          "de": "Teilsonne",
+          "fr": "Soleil partiel",
+          "it": "Sole parziale",
+          "es": "Sol parcial",
+          "pt": "Sol parcial",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक सूरज",
+          "zh": "部分阳光",
+          "ja": "部分的な日光",
+          "ko": "부분적인 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良く排水された土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il troppo acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sweet Violet",
+      "description": "Viola odorata, commonly known as the Sweet Violet, is a fragrant flowering plant. It is often grown as a ground cover or in containers."
+    },
+    "pl": {
+      "common_name": "Fiołek pachnący",
+      "description": "Viola odorata, znana jako Fiołek pachnący, to roślina kwitnąca o przyjemnym zapachu. Często uprawiana jest jako roślina okrywowa lub w doniczkach."
+    },
+    "de": {
+      "common_name": "Duftveilchen",
+      "description": "Viola odorata, bekannt als Duftveilchen, ist eine blühende Pflanze mit angenehmem Duft. Sie wird oft als Bodendecker oder in Töpfen angebaut."
+    },
+    "fr": {
+      "common_name": "Violette odorante",
+      "description": "Viola odorata, connue sous le nom de Violette odorante, est une plante à fleurs parfumées. Elle est souvent cultivée comme couvre-sol ou en pots."
+    },
+    "it": {
+      "common_name": "Viola odorosa",
+      "description": "Viola odorata, conosciuta come Viola odorosa, è una pianta fiorita dal profumo delicato. Viene spesso coltivata come copertura del suolo o in contenitori."
+    },
+    "es": {
+      "common_name": "Violeta dulce",
+      "description": "Viola odorata, conocida como Violeta dulce, es una planta con flores fragantes. Se cultiva a menudo como cubresuelos o en macetas."
+    },
+    "pt": {
+      "common_name": "Violeta doce",
+      "description": "Viola odorata, conhecida como Violeta doce, é uma planta com flores perfumadas. Frequentemente cultivada como cobertura do solo ou em vasos."
+    },
+    "ar": {
+      "common_name": "الف violeta العطرة",
+      "description": "فيولا أودوراتا، المعروفة باسم الف violeta العطرة، هي نبتة مزهرة عطرية. يتم زراعتها غالبًا كغطاء أرضي أو في أواني."
+    },
+    "hi": {
+      "common_name": "मिठी वायलेट",
+      "description": "विओला ओडोरेटा, जिसे मिठी वायलेट के नाम से जाना जाता है, एक खुशबूदार फूलों वाली पौधा है। इसे अक्सर भूमि कवर के रूप में या बर्तनों में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "香紫罗兰",
+      "description": "Viola odorata，通常称为香紫罗兰，是一种芳香的开花植物。它通常作为地被植物或盆栽种植。"
+    },
+    "ja": {
+      "common_name": "スイートバイオレット",
+      "description": "Viola odorata、一般的にスイートバイオレットとして知られているこの植物は、香り高い花を咲かせます。地被植物や容器栽培でよく育てられます。"
+    },
+    "ko": {
+      "common_name": "스위트 바이올렛",
+      "description": "Viola odorata, 일반적으로 스위트 바이올렛으로 알려진 이 식물은 향기로운 꽃을 피웁니다. 종종 지면 덮개 식물이나 화분에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/viola-odorata",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/sweet-violet-care/"
+    ]
+  }
+}

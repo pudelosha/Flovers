@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -32,15 +32,15 @@
           "en": "Full sun",
           "pl": "Pełne słońce",
           "de": "Vollsonne",
-          "fr": "Plein soleil",
+          "fr": "Ensoleillement complet",
           "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूर्ण सूर्य",
+          "hi": "पूरा सूर्य",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "完全な太陽",
+          "ko": "완전한 태양"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "排水良好的土壤",
-          "ja": "排水の良い土壌",
-          "ko": "배수가 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
-          "es": "Riego moderado",
-          "pt": "Regagem moderada",
-          "ar": "ري أوسط",
-          "hi": "मध्यम पानी देना",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中級",
+          "ja": "中",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepły",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -127,14 +127,14 @@
           "en": "Low",
           "pl": "Niska",
           "de": "Niedrig",
-          "fr": "Basse",
+          "fr": "Faible",
           "it": "Bassa",
           "es": "Baja",
           "pt": "Baixa",
           "ar": "منخفض",
-          "hi": "कम",
+          "hi": "निम्न",
           "zh": "低",
-          "ja": "低い",
+          "ja": "低",
           "ko": "낮은"
         }
       }
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -170,10 +170,48 @@
           "es": "Compacto",
           "pt": "Compacto",
           "ar": "مضغوط",
-          "hi": "संकुचित",
+          "hi": "संक्षिप्त",
           "zh": "紧凑",
           "ja": "コンパクト",
-          "ko": "컴팩트"
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter un arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Summer Savory",
-      "description": "Summer savory is an aromatic herb, commonly used in culinary dishes. It thrives in sunny, well-drained soils."
+      "description": "Summer Savory is an annual herb known for its aromatic leaves, often used in cooking. It thrives in sunny, well-drained soil."
     },
     "pl": {
-      "common_name": "Majeranek letni",
-      "description": "Majeranek letni to aromatyczna roślina stosowana w kuchni. Wymaga słonecznych, dobrze przepuszczalnych gleb."
+      "common_name": "Oregano letni",
+      "description": "Oregano letni to jednoroczna roślina zielna, znana z aromatycznych liści, często wykorzystywanych w kuchni. Wymaga pełnego słońca i dobrze przepuszczalnej gleby."
     },
     "de": {
       "common_name": "Sommerbohnenkraut",
-      "description": "Sommerbohnenkraut ist ein aromatisches Kraut, das häufig in der Küche verwendet wird. Es gedeiht in sonnigen, gut durchlässigen Böden."
+      "description": "Sommerbohnenkraut ist ein einjähriges Kraut, das für seine aromatischen Blätter bekannt ist und häufig in der Küche verwendet wird. Es gedeiht in sonnigem, gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Sarriette d'été",
-      "description": "La sarriette d'été est une herbe aromatique, utilisée en cuisine. Elle prospère dans des sols bien drainés et ensoleillés."
+      "description": "La sarriette d'été est une plante annuelle connue pour ses feuilles aromatiques, souvent utilisées en cuisine. Elle prospère en plein soleil dans un sol bien drainé."
     },
     "it": {
-      "common_name": "Santoreggia",
-      "description": "La santoreggia è un'erba aromatica utilizzata in cucina. Cresce in terreni ben drenati e soleggiati."
+      "common_name": "Saturea estiva",
+      "description": "La saturea estiva è un'erba annuale conosciuta per le sue foglie aromatiche, spesso utilizzate in cucina. Cresce bene in un terreno ben drenato e soleggiato."
     },
     "es": {
-      "common_name": "Satureja",
-      "description": "La satureja es una hierba aromática utilizada en la cocina. Crece en suelos bien drenados y soleados."
+      "common_name": "Ajedrea de verano",
+      "description": "La ajedrea de verano es una planta anual conocida por sus hojas aromáticas, a menudo utilizadas en la cocina. Crece bien en un suelo bien drenado y soleado."
     },
     "pt": {
-      "common_name": "Satureia",
-      "description": "A satureia é uma erva aromática usada na culinária. Desenvolve-se em solos bem drenados e ensolarados."
+      "common_name": "Satureja de verão",
+      "description": "A satureja de verão é uma planta anual conhecida pelas suas folhas aromáticas, frequentemente utilizadas na culinária. Desenvolve-se bem em solos bem drenados e expostos ao sol."
     },
     "ar": {
-      "common_name": "زعتر صيفي",
-      "description": "الزعتر الصيفي هو عشب عطري يُستخدم في الطهي. يزدهر في التربة جيدة التصريف والمشمسة."
+      "common_name": "الزعتر الصيفي",
+      "description": "الزعتر الصيفي هو نبات عشبي سنوي معروف بأوراقه العطرية التي تُستخدم في الطهي. ينمو جيدًا في التربة جيدة التصريف والمشمسة."
     },
     "hi": {
-      "common_name": "गर्मी का सैवोरी",
-      "description": "गर्मी का सैवोरी एक खुशबूदार जड़ी-बूटी है, जिसका उपयोग रसोई में किया जाता है। यह धूप वाली, अच्छी जल निकासी वाली मिट्टी में उगती है।"
+      "common_name": "गर्मियों का सैचुरिया",
+      "description": "गर्मियों का सैचुरिया एक वार्षिक पौधा है जिसे इसके खुशबूदार पत्तों के लिए जाना जाता है, जो अक्सर खाना पकाने में इस्तेमाल होते हैं। यह धूप वाली और अच्छी जल निकासी वाली मिट्टी में अच्छा उगता है।"
     },
     "zh": {
-      "common_name": "夏季香草",
-      "description": "夏季香草是一种芳香的草本植物，常用于烹饪。它在阳光充足、排水良好的土壤中生长良好。"
+      "common_name": "夏季百里香",
+      "description": "夏季百里香是一种一年生草本植物，因其芳香的叶子而闻名，常用于烹饪。它在阳光充足、排水良好的土壤中生长良好。"
     },
     "ja": {
-      "common_name": "夏のサバリー",
-      "description": "夏のサバリーは香り高いハーブで、料理に使われます。日当たりが良く、排水の良い土壌で育ちます。"
+      "common_name": "夏のサヴォリー",
+      "description": "夏のサヴォリーは香りの良い葉を持つ一年生のハーブで、料理に使われることが多いです。日光がよく当たり、排水性の良い土壌でよく育ちます。"
     },
     "ko": {
-      "common_name": "여름 세이보리",
-      "description": "여름 세이보리는 요리에 자주 사용되는 향기로운 허브입니다. 햇볕이 잘 드는 배수가 좋은 토양에서 자랍니다."
+      "common_name": "여름 향미",
+      "description": "여름 향미는 향기로운 잎을 가진 일년생 허브로, 요리에 자주 사용됩니다. 햇볕이 잘 드는 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/edible/herbs/summer-savory-growing.htm",
-      "https://www.bhg.com/gardening/pests-insects-diseases/summer-savory/"
+      "https://www.gardeningknowhow.com/edible/herbs/summer-savory-growing-and-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=946"
     ]
   }
 }

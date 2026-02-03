@@ -1,6 +1,6 @@
 {
   "external_id": "tabernaemontana_divaricata",
-  "name": "Pinwheel Jasmine",
+  "name": "Pinwheel Flower",
   "latin": "Tabernaemontana divaricata",
   "sun": "medium",
   "water": "medium",
@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lößboden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "क्ले मिट्टी",
-          "zh": "粘土土壤",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "よく排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium difficulty",
-          "pl": "Średnia trudność",
-          "de": "Mittlere Schwierigkeit",
-          "fr": "Difficulté moyenne",
-          "it": "Difficoltà media",
-          "es": "Dificultad media",
-          "pt": "Dificuldade média",
-          "ar": "صعوبة متوسطة",
-          "hi": "मध्यम कठिनाई",
-          "zh": "中等难度",
-          "ja": "中程度の難易度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiarkowana wilgotność",
-          "de": "Mäßige Luftfeuchtigkeit",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad moderada",
-          "pt": "Humidade moderada",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "适度湿度",
-          "ja": "適度な湿度",
-          "ko": "적당한 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais de estimação",
-          "ar": "سامة للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에 독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny po spożyciu",
+          "de": "Toxisch bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سامة إذا ابتلعت",
+          "hi": "अगर खा लिया जाए तो विषाक्त",
+          "zh": "食用有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취하면 독성"
         }
       }
     },
@@ -171,67 +171,105 @@
           "pt": "Crescimento moderado",
           "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中等成長",
+          "zh": "适度生长",
+          "ja": "適度な成長",
           "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Pinwheel Jasmine",
-      "description": "Tabernaemontana divaricata, also known as Pinwheel Jasmine, is a small shrub with fragrant white flowers. It thrives in moderate light and requires regular watering."
+      "common_name": "Pinwheel Flower",
+      "description": "Tabernaemontana divaricata, commonly known as the Pinwheel Flower, is a shrub native to tropical Asia. It is valued for its fragrant white flowers and glossy green foliage."
     },
     "pl": {
-      "common_name": "Jaśmin wiatraczny",
-      "description": "Tabernaemontana divaricata, znana również jako jaśmin wiatraczny, to mały krzew z pachnącymi białymi kwiatami. Rośnie najlepiej w umiarkowanym świetle i wymaga regularnego podlewania."
+      "common_name": "Kwiat Wiatraka",
+      "description": "Tabernaemontana divaricata, znany jako Kwiat Wiatraka, to krzew pochodzący z tropikalnej Azji. Cieszy się popularnością dzięki pachnącym białym kwiatom i błyszczącej zielonej liściastości."
     },
     "de": {
-      "common_name": "Windrad-Jasmin",
-      "description": "Tabernaemontana divaricata, auch als Windrad-Jasmin bekannt, ist ein kleiner Strauch mit duftenden weißen Blüten. Er gedeiht bei mäßigem Licht und benötigt regelmäßiges Gießen."
+      "common_name": "Windradblume",
+      "description": "Tabernaemontana divaricata, auch als Windradblume bekannt, ist ein Strauch aus tropischem Asien. Sie wird für ihre duftenden weißen Blüten und glänzendes grünes Laub geschätzt."
     },
     "fr": {
-      "common_name": "Jasmin moulinet",
-      "description": "Tabernaemontana divaricata, aussi appelé Jasmin moulinet, est un petit arbuste aux fleurs blanches parfumées. Il pousse bien à la lumière modérée et nécessite un arrosage régulier."
+      "common_name": "Fleur en Moulin",
+      "description": "Tabernaemontana divaricata, également connue sous le nom de Fleur en Moulin, est un arbuste originaire d'Asie tropicale. Elle est appréciée pour ses fleurs blanches parfumées et son feuillage vert brillant."
     },
     "it": {
-      "common_name": "Gelsomino ruota",
-      "description": "Tabernaemontana divaricata, noto anche come gelsomino ruota, è un piccolo arbusto con fiori bianchi profumati. Cresce bene in luce moderata e necessita di annaffiature regolari."
+      "common_name": "Fiore a Vento",
+      "description": "Tabernaemontana divaricata, conosciuta anche come Fiore a Vento, è un arbusto originario dell'Asia tropicale. È apprezzato per i suoi fiori bianchi profumati e il fogliame verde lucido."
     },
     "es": {
-      "common_name": "Jazmín molino",
-      "description": "Tabernaemontana divaricata, también conocido como jazmín molino, es un arbusto pequeño con flores blancas fragantes. Crece bien con luz moderada y requiere riego regular."
+      "common_name": "Flor en Molinete",
+      "description": "Tabernaemontana divaricata, conocida como Flor en Molinete, es un arbusto originario del sudeste asiático. Se valora por sus flores blancas fragantes y su follaje verde brillante."
     },
     "pt": {
-      "common_name": "Jasmim moinho",
-      "description": "Tabernaemontana divaricata, também conhecido como jasmim moinho, é um pequeno arbusto com flores brancas perfumadas. Cresce bem com luz moderada e precisa de rega regular."
+      "common_name": "Flor em Cata-vento",
+      "description": "Tabernaemontana divaricata, também conhecida como Flor em Cata-vento, é um arbusto nativo da Ásia tropical. É valorizada pelas suas flores brancas perfumadas e folhas verdes brilhantes."
     },
     "ar": {
-      "common_name": "ياسمين عجلة الرياح",
-      "description": "تابيرنيمونتانا ديفاريكاتا، المعروف أيضًا باسم ياسمين عجلة الرياح، هو شجيرة صغيرة ذات زهور بيضاء عطرية. ينمو في الضوء المعتدل ويتطلب الري المنتظم."
+      "common_name": "زهرة دائمة",
+      "description": "تابيرنيمونتانا ديفاريكاتا، والمعروفة أيضًا باسم زهرة دائمة، هي شجيرة موطنها آسيا الاستوائية. تحظى بتقدير لزهورها البيضاء العطرية وأوراقها الخضراء اللامعة."
     },
     "hi": {
-      "common_name": "पिनव्हील जैस्मिन",
-      "description": "टैबर्नीमोंटाना डिवारीकेटा, जिसे पिनव्हील जैस्मिन भी कहा जाता है, एक छोटा झाड़ी है जिसमें खुशबूदार सफेद फूल होते हैं। यह मध्यम रोशनी में अच्छा उगता है और नियमित पानी की आवश्यकता होती है।"
+      "common_name": "पिनव्हील फूल",
+      "description": "टैबर्नेमोंटाना डिवेरिकेटा, जिसे पिनव्हील फूल भी कहा जाता है, एक झाड़ी है जो उष्णकटिबंधीय एशिया का मूल निवासी है। इसकी खुशबूदार सफेद फूलों और चमकदार हरी पत्तियों के लिए इसकी सराहना की जाती है।"
     },
     "zh": {
-      "common_name": "风车茉莉",
-      "description": "Tabernaemontana divaricata，通常被称为风车茉莉，是一种具有香气的白色花朵的小灌木。它在中等光照下生长良好，并需要定期浇水。"
+      "common_name": "风车花",
+      "description": "塔伯内蒙塔纳·迪瓦里卡塔，通常称为风车花，是一种原产于热带亚洲的灌木。它因其芬芳的白色花朵和光亮的绿色叶片而受到赞赏。"
     },
     "ja": {
-      "common_name": "風車ジャスミン",
-      "description": "Tabernaemontana divaricata、別名風車ジャスミンは、香り高い白い花を持つ小さな低木です。中程度の光でよく育ち、定期的な水やりが必要です。"
+      "common_name": "ピンホイールフラワー",
+      "description": "ターベルネモンタナ・ディヴァリカタは、ピンホイールフラワーとしても知られる、熱帯アジア原産の低木です。香り高い白い花と光沢のある緑の葉が特徴です。"
     },
     "ko": {
-      "common_name": "풍차 자스민",
-      "description": "Tabernaemontana divaricata, 풍차 자스민으로도 알려진 이 식물은 향기로운 흰 꽃을 가진 작은 관목입니다. 중간 정도의 빛에서 잘 자라며 정기적인 물주기가 필요합니다."
+      "common_name": "핀휠 꽃",
+      "description": "타베르네몬타나 디바리카타는 핀휠 꽃으로 알려진 열대 아시아 원산의 관목입니다. 향기로운 흰 꽃과 광택 있는 녹색 잎으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/tabernaemontana-divaricata",
-      "https://www.horticulture.com/pinwheel-jasmine-care"
+      "https://www.rhs.org.uk/Plants/91314/Tabernaemontana-divaricata/Details",
+      "https://www.gardenia.net/plant/tabernaemontana-divaricata"
     ]
   }
 }

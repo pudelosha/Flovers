@@ -1,22 +1,23 @@
 {
   "external_id": "monstera_deliciosa",
-  "name": "Monstera",
+  "name": "Monstera deliciosa",
   "latin": "Monstera deliciosa",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": true,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining aroid mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Durchlässiges Substrat",
-          "fr": "Substrat drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenável",
-          "ar": "تربة جيدة التصريف",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "zh": "良好的排水",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water when top dries",
-          "pl": "Podlewaj po przeschnięciu",
-          "de": "Gießen nach Antrocknen",
-          "fr": "Arroser après séchage",
-          "it": "Annaffiare a secco",
-          "es": "Regar al secar",
-          "pt": "Regar quando seco",
-          "ar": "الري بعد الجفاف",
-          "hi": "सूखने पर पानी",
-          "zh": "表土干后浇水",
-          "ja": "乾いたら給水",
-          "ko": "마르면 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري مستمر",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average to high",
-          "pl": "Średnia do wysokiej",
-          "de": "Mittel bis hoch",
-          "fr": "Moyenne à élevée",
-          "it": "Media-alta",
-          "es": "Media a alta",
-          "pt": "Média a alta",
-          "ar": "متوسطة إلى عالية",
-          "hi": "मध्यम से अधिक",
-          "zh": "中到高湿度",
-          "ja": "中〜高湿度",
-          "ko": "중~높음"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
+          "pl": "Trująca dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossica per gli animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast climbing growth",
-          "pl": "Szybki wzrost pnący",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़वार",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare annaffiature eccessive",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि अवधि की कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Swiss cheese plant",
-      "description": "Monstera deliciosa is a tropical aroid native to Central America. It is valued for its large, fenestrated leaves and vigorous indoor growth. It prefers bright indirect light and evenly moist, well-draining soil."
+      "common_name": "Monstera",
+      "description": "Monstera deliciosa is a popular tropical plant known for its large, perforated leaves. It thrives in moderate light and humidity."
     },
     "pl": {
-      "common_name": "Monstera dziurawa",
-      "description": "Monstera deliciosa to tropikalna roślina z Ameryki Środkowej. Ceniona jest za duże, dziurawe liście i szybki wzrost w domu. Lubi jasne światło rozproszone i umiarkowane podlewanie."
+      "common_name": "Monstera",
+      "description": "Monstera deliciosa to popularna roślina tropikalna, znana z dużych, perforowanych liści. Lubi umiarkowane światło i wilgotność."
     },
     "de": {
-      "common_name": "Fensterblatt",
-      "description": "Monstera deliciosa stammt aus den Tropen Mittelamerikas. Sie ist bekannt für ihre großen, geschlitzten Blätter und kräftiges Wachstum. Sie gedeiht bei hellem, indirektem Licht und durchlässigem Substrat."
+      "common_name": "Monstera",
+      "description": "Monstera deliciosa ist eine beliebte tropische Pflanze, die für ihre großen, perforierten Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und Feuchtigkeit."
     },
     "fr": {
-      "common_name": "Plante gruyère",
-      "description": "Monstera deliciosa est une plante tropicale originaire d’Amérique centrale. Elle est appréciée pour ses grandes feuilles perforées. Elle préfère une lumière vive indirecte et un sol bien drainé."
+      "common_name": "Monstera",
+      "description": "Monstera deliciosa est une plante tropicale populaire, connue pour ses grandes feuilles perforées. Elle préfère une lumière et une humidité modérées."
     },
     "it": {
       "common_name": "Monstera",
-      "description": "Monstera deliciosa è una pianta tropicale dell’America Centrale. È nota per le sue grandi foglie forate e la crescita vigorosa. Predilige luce indiretta intensa e terreno drenante."
+      "description": "Monstera deliciosa è una pianta tropicale popolare, conosciuta per le sue grandi foglie perforate. Cresce bene in luce e umidità moderate."
     },
     "es": {
-      "common_name": "Costilla de Adán",
-      "description": "Monstera deliciosa es una planta tropical originaria de Centroamérica. Destaca por sus hojas grandes y perforadas. Crece mejor con luz indirecta brillante y riego moderado."
+      "common_name": "Monstera",
+      "description": "Monstera deliciosa es una planta tropical popular conocida por sus grandes hojas perforadas. Crece bien con luz y humedad moderadas."
     },
     "pt": {
-      "common_name": "Costela-de-adão",
-      "description": "Monstera deliciosa é uma planta tropical da América Central. É valorizada pelas folhas grandes e recortadas. Prefere luz indireta e solo bem drenado."
+      "common_name": "Monstera",
+      "description": "Monstera deliciosa é uma planta tropical popular, conhecida por suas grandes folhas perfuradas. Ela cresce bem com luz e umidade moderadas."
     },
     "ar": {
-      "common_name": "نبات الجبن السويسري",
-      "description": "Monstera deliciosa نبات استوائي موطنه أمريكا الوسطى. يتميز بأوراقه الكبيرة المثقبة ونموه القوي داخل المنازل. يفضل الضوء غير المباشر والتربة جيدة التصريف."
+      "common_name": "مونستيرا",
+      "description": "مونستيرا ديليسيونا هي نبات استوائي شائع معروف بأوراقه الكبيرة المثقبة. ينمو بشكل جيد في الضوء والرطوبة المعتدلة."
     },
     "hi": {
-      "common_name": "स्विस चीज़ प्लांट",
-      "description": "Monstera deliciosa मध्य अमेरिका का उष्णकटिबंधीय पौधा है। इसकी बड़ी कटी हुई पत्तियाँ इसे लोकप्रिय बनाती हैं। यह अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
+      "common_name": "मॉन्स्टेरा",
+      "description": "मॉन्स्टेरा डेलिसिओसा एक लोकप्रिय उष्णकटिबंधीय पौधा है, जो अपनी बड़ी, छिद्रित पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश और आर्द्रता में बढ़ता है।"
     },
     "zh": {
-      "common_name": "龟背竹",
-      "description": "龟背竹原产于中美洲的热带地区。因其大型开裂叶片而广受欢迎。适合明亮的散射光和排水良好的土壤。"
+      "common_name": "怪兽",
+      "description": "Monstera deliciosa 是一种受欢迎的热带植物，以其大型穿孔叶子而闻名。它在适度的光照和湿度条件下生长良好。"
     },
     "ja": {
       "common_name": "モンステラ",
-      "description": "モンステラは中米原産の熱帯植物です。大きく切れ込みのある葉が特徴です。明るい間接光と水はけの良い土を好みます。"
+      "description": "モンステラ・デリシオーサは、大きな穴の空いた葉で知られる人気の熱帯植物です。適度な光と湿度でよく育ちます。"
     },
     "ko": {
       "common_name": "몬스테라",
-      "description": "몬스테라는 중앙아메리카 원산의 열대 식물입니다. 큰 갈라진 잎이 특징입니다. 밝은 간접광과 배수가 좋은 흙에서 잘 자랍니다."
+      "description": "몬스테라 델리시오사는 큰 구멍이 있는 잎으로 유명한 인기 있는 열대 식물입니다. 적당한 빛과 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/monstera/deliciosa",
-      "https://edis.ifas.ufl.edu/publication/FP362",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a235"
+      "https://www.rhs.org.uk/plants/monstera-deliciosa",
+      "https://www.gardeningknowhow.com/houseplants/monstera/monstera-deliciosa-care.htm"
     ]
   }
 }

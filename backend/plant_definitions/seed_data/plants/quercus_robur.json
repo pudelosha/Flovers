@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole diretto",
+          "es": "Sol directo",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-25°C",
-          "pl": "10-25°C",
-          "de": "10-25°C",
-          "fr": "10-25°C",
-          "it": "10-25°C",
-          "es": "10-25°C",
-          "pt": "10-25°C",
-          "ar": "10-25°C",
-          "hi": "10-25°C",
-          "zh": "10-25°C",
-          "ja": "10-25°C",
-          "ko": "10-25°C"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "bas",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "नम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast",
-          "pl": "szybki",
-          "de": "schnell",
-          "fr": "rapide",
-          "it": "veloce",
-          "es": "rápido",
-          "pt": "rápido",
-          "ar": "سريع",
-          "hi": "तेज",
-          "zh": "快速",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Slow to moderate",
+          "pl": "Wolne do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅いから中くらい",
+          "ko": "느리거나 보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "English Oak",
-      "description": "Quercus robur, or English Oak, is a large deciduous tree native to Europe. It is known for its sturdy wood and iconic lobed leaves."
+      "description": "Quercus robur is a large deciduous tree native to Europe. It is known for its strength and longevity, often growing in forests and woodlands."
     },
     "pl": {
-      "common_name": "Dąb Angielski",
-      "description": "Quercus robur, czyli dąb angielski, to duże drzewo liściaste pochodzące z Europy. Znane jest z twardego drewna i charakterystycznych liści z klapami."
+      "common_name": "Dąb szypułkowy",
+      "description": "Quercus robur to duże drzewo liściaste, pochodzące z Europy. Jest znane z siły i długowieczności, często rośnie w lasach i zaroślach."
     },
     "de": {
-      "common_name": "Englische Eiche",
-      "description": "Die Quercus robur, oder Englische Eiche, ist ein großes Laubbaum, das in Europa heimisch ist. Sie ist bekannt für ihr robustes Holz und ihre ikonischen, gelappten Blätter."
+      "common_name": "Stieleiche",
+      "description": "Quercus robur ist ein großer Laubbaum, der in Europa beheimatet ist. Er ist bekannt für seine Stärke und Langlebigkeit und wächst oft in Wäldern und Gehölzen."
     },
     "fr": {
-      "common_name": "Chêne commun",
-      "description": "Le Quercus robur, ou chêne commun, est un grand arbre à feuilles caduques originaire d'Europe. Il est connu pour son bois robuste et ses feuilles lobées emblématiques."
+      "common_name": "Chêne pédonculé",
+      "description": "Quercus robur est un grand arbre à feuilles caduques originaire d'Europe. Il est connu pour sa force et sa longévité, souvent trouvé dans les forêts et les bosquets."
     },
     "it": {
-      "common_name": "Quercia comune",
-      "description": "Il Quercus robur, o quercia comune, è un grande albero deciduo originario dell'Europa. È noto per il suo legno robusto e le sue foglie lobate iconiche."
+      "common_name": "Quercia rovere",
+      "description": "Quercus robur è un grande albero a foglie caduche originario dell'Europa. È noto per la sua forza e longevità, cresce spesso in foreste e boschetti."
     },
     "es": {
       "common_name": "Roble común",
-      "description": "El Quercus robur, o roble común, es un gran árbol caducifolio originario de Europa. Es conocido por su madera resistente y sus hojas lobuladas características."
+      "description": "Quercus robur es un gran árbol de hojas caducas originario de Europa. Es conocido por su fuerza y longevidad, y suele crecer en bosques y matorrales."
     },
     "pt": {
       "common_name": "Carvalho comum",
-      "description": "O Quercus robur, ou carvalho comum, é uma grande árvore decídua nativa da Europa. É conhecido pela sua madeira robusta e suas folhas lobadas características."
+      "description": "Quercus robur é uma grande árvore caducifólia nativa da Europa. É conhecida pela sua força e longevidade, frequentemente encontrada em florestas e arbustos."
     },
     "ar": {
       "common_name": "بلوط إنجليزي",
-      "description": "Quercus robur، أو البلوط الإنجليزي، هو شجرة نفضية كبيرة موطنها الأصلي أوروبا. تشتهر بأخشابها القوية وأوراقها المميزة المشقوقة."
+      "description": "Quercus robur هو شجرة عريضة الأوراق كبيرة الحجم من أصل أوروبي. يشتهر بقوته وطول عمره وغالبًا ما ينمو في الغابات والأدغال."
     },
     "hi": {
       "common_name": "इंग्लिश ओक",
-      "description": "Quercus robur, या इंग्लिश ओक, एक बड़ी पर्णपाती वृक्ष है जो यूरोप का मूल निवासी है। यह अपने मजबूत लकड़ी और पारंपरिक पत्तियों के लिए प्रसिद्ध है।"
+      "description": "Quercus robur एक बड़ा पत्तेदार पेड़ है जो यूरोप का मूल निवासी है। यह अपनी ताकत और लंबी उम्र के लिए जाना जाता है, और अक्सर जंगलों और झाड़ियों में उगता है।"
     },
     "zh": {
-      "common_name": "英格兰橡树",
-      "description": "Quercus robur，或英格兰橡树，是一种原产于欧洲的大型落叶树。以其坚固的木材和标志性的深裂叶子而闻名。"
+      "common_name": "欧洲橡树",
+      "description": "Quercus robur 是一种来自欧洲的大型落叶树。它以其坚固和长寿而闻名，通常生长在森林和灌木丛中。"
     },
     "ja": {
-      "common_name": "イングリッシュオーク",
-      "description": "Quercus robur、またはイングリッシュオークは、ヨーロッパ原産の大きな落葉樹です。その堅牢な木材と特徴的な深裂葉で知られています。"
+      "common_name": "ヨーロッパオーク",
+      "description": "Quercus robur はヨーロッパ原産の大きな落葉樹で、その強さと長寿で知られ、森や藪の中に生えています。"
     },
     "ko": {
-      "common_name": "잉글리시 오크",
-      "description": "Quercus robur, 또는 잉글리시 오크는 유럽 원산의 큰 낙엽수입니다. 튼튼한 나무와 상징적인 깊은 갈라진 잎으로 잘 알려져 있습니다."
+      "common_name": "영국 참나무",
+      "description": "Quercus robur는 유럽 원산의 큰 낙엽수로, 그 강함과 장수로 잘 알려져 있으며 종종 숲과 덤불에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/quercus-robur",
-      "https://www.botanicalgarden.ubc.ca"
+      "https://www.rhs.org.uk/advice/profile?pid=221",
+      "https://www.british-trees.com/english-oak"
     ]
   }
 }

@@ -7,11 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic"
+    "ceramic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "pimpinella_anisum.jpg",
   "image_thumb": "pimpinella_anisum.jpg",
   "traits": [
@@ -39,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "粘土土壤",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "سقي متوسط",
-          "hi": "मध्यम पानी देना",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Regar regularmente",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°C",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -150,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średni",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "중간"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Anise",
-      "description": "Anise is an herb known for its aromatic seeds, used in cooking and herbal remedies. It thrives in sunny to partially sunny areas with moderate watering."
+      "description": "Anise (Pimpinella anisum) is an herb known for its aromatic seeds. It is often used in cooking and for medicinal purposes."
     },
     "pl": {
       "common_name": "Anyż",
-      "description": "Anyż to zioło znane ze swoich aromatycznych nasion, używanych w gotowaniu i medycynie naturalnej. Rośnie najlepiej w nasłonecznionych miejscach z umiarkowanym podlewaniem."
+      "description": "Anyż (Pimpinella anisum) to roślina znana ze swoich aromatycznych nasion. Często używana w kuchni i do celów leczniczych."
     },
     "de": {
       "common_name": "Anis",
-      "description": "Anis ist ein Kraut, das für seine aromatischen Samen bekannt ist, die in der Küche und in der Kräutermedizin verwendet werden. Es gedeiht in sonnigen bis halbschattigen Bereichen mit mäßiger Bewässerung."
+      "description": "Anis (Pimpinella anisum) ist ein Kraut, das für seine aromatischen Samen bekannt ist. Es wird oft in der Küche und für medizinische Zwecke verwendet."
     },
     "fr": {
       "common_name": "Anis",
-      "description": "L'anis est une plante aromatique connue pour ses graines utilisées en cuisine et en médecine. Elle pousse dans des zones ensoleillées à partiellement ombragées avec un arrosage modéré."
+      "description": "L'anis (Pimpinella anisum) est une herbe connue pour ses graines aromatiques. Elle est souvent utilisée en cuisine et à des fins médicinales."
     },
     "it": {
       "common_name": "Anice",
-      "description": "L'anice è un'erba conosciuta per i suoi semi aromatici, usati in cucina e nella medicina. Cresce bene in zone soleggiate o parzialmente ombreggiate con irrigazione moderata."
+      "description": "L'anice (Pimpinella anisum) è un'erba nota per i suoi semi aromatici. Viene spesso utilizzato in cucina e per scopi medicinali."
     },
     "es": {
       "common_name": "Anís",
-      "description": "El anís es una planta conocida por sus semillas aromáticas, utilizadas en la cocina y remedios herbales. Crece en áreas soleadas a parcialmente soleadas con riego moderado."
+      "description": "El anís (Pimpinella anisum) es una planta conocida por sus semillas aromáticas. Se usa comúnmente en la cocina y con fines medicinales."
     },
     "pt": {
       "common_name": "Anis",
-      "description": "O anis é uma planta conhecida por suas sementes aromáticas, utilizadas na culinária e em remédios naturais. Cresce em áreas ensolaradas a parcialmente sombreadas, com rega moderada."
+      "description": "O anis (Pimpinella anisum) é uma erva conhecida por suas sementes aromáticas. É frequentemente utilizado na culinária e para fins medicinais."
     },
     "ar": {
       "common_name": "اليانسون",
-      "description": "اليانسون هو عشب معروف ببذوره العطرية، التي تستخدم في الطهي والعلاجات العشبية. ينمو في المناطق المشمسة إلى شبه الظليلة مع الري المعتدل."
+      "description": "اليانسون (Pimpinella anisum) هو نبات معروف بذوره العطرية. يُستخدم في الطهي ولأغراض طبية."
     },
     "hi": {
       "common_name": "सौंफ",
-      "description": "सौंफ एक औषधीय पौधा है जो अपने सुगंधित बीजों के लिए जाना जाता है, जिसका उपयोग खाना पकाने और हर्बल उपचार में किया जाता है। यह धूप वाले या आंशिक रूप से छायादार क्षेत्रों में मध्यम पानी देने के साथ बढ़ता है।"
+      "description": "सौंफ (Pimpinella anisum) एक जड़ी-बूटी है जो अपनी सुगंधित बीजों के लिए जानी जाती है। इसका उपयोग आमतौर पर खाना पकाने और चिकित्सा उद्देश्यों के लिए किया जाता है."
     },
     "zh": {
-      "common_name": "八角茴香",
-      "description": "八角茴香是一种以其芳香的种子闻名的草本植物，用于烹饪和草药治疗。它在阳光充足或部分阴凉的地方生长，适量浇水。"
+      "common_name": "茴香",
+      "description": "茴香（Pimpinella anisum）是一种以其芳香种子而闻名的草本植物。常用于烹饪和药用目的。"
     },
     "ja": {
       "common_name": "アニス",
-      "description": "アニスはその香り高い種子で知られるハーブで、料理や薬草療法に使用されます。日当たりの良い場所または部分的に日陰の場所で、適度な水やりで育ちます。"
+      "description": "アニス（Pimpinella anisum）は、その芳香性の種子で知られるハーブです。料理や医療目的でよく使用されます。"
     },
     "ko": {
-      "common_name": "애니즈",
-      "description": "애니즈는 요리와 약용으로 사용되는 향기로운 씨앗으로 알려진 허브입니다. 햇볕이 잘 드는 곳이나 부분적인 그늘에서 적당히 물을 주면 잘 자랍니다."
+      "common_name": "회향",
+      "description": "회향(Pimpinella anisum)은 그 향기로운 씨앗으로 알려진 허브입니다. 요리 및 의약 목적으로 자주 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=149",
-      "https://www.gardeningknowhow.com/edible/herbs/anise/anise-herb-care.htm"
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/anise-plant-care/",
+      "https://www.gardeningknowhow.com/edible/herbs/anise/anise-plant-information.htm"
     ]
   }
 }

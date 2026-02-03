@@ -1,18 +1,18 @@
 {
   "external_id": "scaevola_aemula",
-  "name": "Fan flower",
+  "name": "Scaevola",
   "latin": "Scaevola aemula",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Sole pieno",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूर्य",
-          "zh": "完全阳光",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Well-draining",
           "pl": "Dobrze przepuszczalna",
           "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "مصفى جيد",
-          "hi": "अच्छी तरह से जल निकासी",
-          "zh": "排水良好",
-          "ja": "よく排水された",
-          "ko": "배수가 잘 되는"
+          "ar": "تصريف جيد",
+          "hi": "अच्छा जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Basse",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -145,13 +145,13 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "अविषेकी नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowany",
-          "de": "Mittel",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Fan flower",
-      "description": "Scaevola aemula, or fan flower, is a native Australian plant known for its purple, fan-shaped blooms. It thrives in full sun and well-drained soil."
+      "common_name": "Fan Flower",
+      "description": "Scaevola aemula is a trailing plant known for its fan-shaped flowers. It's a hardy, low-maintenance plant popular in gardens and hanging baskets."
     },
     "pl": {
       "common_name": "Kwiat wachlarzowy",
-      "description": "Scaevola aemula, znana również jako kwiat wachlarzowy, to roślina pochodząca z Australii, znana z purpurowych kwiatów w kształcie wachlarza. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
+      "description": "Scaevola aemula to roślina pnąca znana z wachlarzowych kwiatów. Jest to odporna roślina o niskich wymaganiach, popularna w ogrodach i koszach wiszących."
     },
     "de": {
       "common_name": "Fächerblume",
-      "description": "Scaevola aemula, auch Fächerblume genannt, ist eine aus Australien stammende Pflanze, die für ihre lila, fächerförmigen Blüten bekannt ist. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
+      "description": "Scaevola aemula ist eine kletternde Pflanze, die für ihre fächerförmigen Blumen bekannt ist. Sie ist eine robuste, pflegeleichte Pflanze, die in Gärten und Hängekörben beliebt ist."
     },
     "fr": {
-      "common_name": "Fleur éventail",
-      "description": "Scaevola aemula, ou fleur éventail, est une plante originaire d'Australie, connue pour ses fleurs violettes en forme d'éventail. Elle prospère en plein soleil et dans un sol bien drainé."
+      "common_name": "Fleur en éventail",
+      "description": "Scaevola aemula est une plante grimpante connue pour ses fleurs en forme de éventail. C'est une plante robuste et facile d'entretien, populaire dans les jardins et les paniers suspendus."
     },
     "it": {
       "common_name": "Fiore a ventaglio",
-      "description": "Scaevola aemula, o fiore a ventaglio, è una pianta originaria dell'Australia, conosciuta per i suoi fiori viola a forma di ventaglio. Cresce meglio al sole pieno e in terreni ben drenati."
+      "description": "Scaevola aemula è una pianta rampicante nota per i suoi fiori a forma di ventaglio. È una pianta resistente e di facile manutenzione, popolare nei giardini e nei cestini appesi."
     },
     "es": {
       "common_name": "Flor abanico",
-      "description": "Scaevola aemula, o flor abanico, es una planta originaria de Australia, conocida por sus flores moradas en forma de abanico. Crece mejor a pleno sol y en suelos bien drenados."
+      "description": "Scaevola aemula es una planta trepadora conocida por sus flores en forma de abanico. Es una planta resistente y de bajo mantenimiento, popular en jardines y cestas colgantes."
     },
     "pt": {
       "common_name": "Flor em leque",
-      "description": "Scaevola aemula, ou flor em leque, é uma planta nativa da Austrália, conhecida por suas flores roxas em forma de leque. Cresce bem ao sol pleno e em solo bem drenado."
+      "description": "Scaevola aemula é uma planta trepadeira conhecida por suas flores em forma de leque. É uma planta resistente e de fácil manutenção, popular em jardins e cestas suspensas."
     },
     "ar": {
       "common_name": "زهرة المروحة",
-      "description": "Scaevola aemula، أو زهرة المروحة، هي نبات أصلي في أستراليا يعرف بأزهارها البنفسجية على شكل مروحة. تنمو بشكل جيد في الشمس الكاملة والتربة جيدة التصريف."
+      "description": "Scaevola aemula هي نبتة متسلقة معروفة بأزهارها على شكل مروحة. إنها نبتة متينة وسهلة الصيانة، تحظى بشعبية في الحدائق والسلال المعلقة."
     },
     "hi": {
-      "common_name": "पंखी फूल",
-      "description": "Scaevola aemula, या पंखी फूल, एक ऑस्ट्रेलियाई पौधा है जो अपने बैंगनी पंखी आकार के फूलों के लिए जाना जाता है। यह पूर्ण सूर्य और अच्छे जल निकासी वाली मिट्टी में उगता है।"
+      "common_name": "पंखा फूल",
+      "description": "Scaevola aemula एक लतिका पौधा है, जो अपने पंखे के आकार के फूलों के लिए जाना जाता है। यह एक मजबूत और कम देखभाल वाली पौधा है, जो बागों और लटकते बास्केट्स में लोकप्रिय है।"
     },
     "zh": {
       "common_name": "扇形花",
-      "description": "Scaevola aemula，或扇形花，是一种原产于澳大利亚的植物，以其紫色的扇形花朵而闻名。它在充足的阳光和排水良好的土壤中生长得最好。"
+      "description": "Scaevola aemula 是一种攀缘植物，因其扇形的花朵而闻名。它是一种耐寒、易于维护的植物，在花园和悬挂篮子中很受欢迎。"
     },
     "ja": {
       "common_name": "ファンフラワー",
-      "description": "Scaevola aemula、またはファンフラワーは、オーストラリア原産の植物で、紫色の扇形の花が特徴です。日当たりの良い場所と排水の良い土壌でよく育ちます。"
+      "description": "Scaevola aemula はファンの形をした花で知られるつる植物です。丈夫で手入れが簡単な植物で、庭や吊り下げかごで人気があります。"
     },
     "ko": {
-      "common_name": "팬 꽃",
-      "description": "Scaevola aemula, 또는 팬 꽃은 호주 원산의 식물로 보라색의 부채꼴 꽃으로 유명합니다. 이 식물은 햇빛이 잘 드는 곳과 배수가 좋은 토양에서 잘 자랍니다."
+      "common_name": "팬꽃",
+      "description": "Scaevola aemula는 부채 모양의 꽃으로 알려진 덩굴 식물입니다. 내구성이 강하고 유지 관리가 용이한 식물로, 정원과 매달린 바구니에서 인기가 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/26914/Scaevola-aemula/Details",
-      "https://www.gardenia.net/plant/scaevola-aemula"
+      "https://www.rhs.org.uk/plants/1573/scaevola-aemula",
+      "https://www.gardeningknowhow.com/ornamental/vines/scaevola-plant-care.htm"
     ]
   }
 }

@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "acid-loving",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,16 +30,16 @@
       "value": {
         "text": {
           "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz brilhante",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい光",
+          "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
       }
@@ -53,13 +53,13 @@
           "de": "Sauer, durchlässig",
           "fr": "Acide, drainant",
           "it": "Acido drenante",
-          "es": "Ácido y drenado",
-          "pt": "Ácido drenado",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性排水土",
-          "ja": "酸性排水土",
-          "ko": "산성 배수토"
+          "es": "Ácido y drenante",
+          "pt": "Ácido e drenado",
+          "ar": "تربة حمضية جيدة",
+          "hi": "अम्लीय, जल निकास",
+          "zh": "微酸排水好",
+          "ja": "弱酸性・排水良",
+          "ko": "약산성 배수"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido regolare",
+          "es": "Humedad constante",
+          "pt": "Úmido regular",
+          "ar": "رطوبة منتظمة",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉"
         }
       }
     },
@@ -88,7 +88,7 @@
         "text": {
           "en": "Moderate care",
           "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Aufwand",
+          "de": "Mittlerer Pflegeaufwand",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
@@ -96,8 +96,8 @@
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
           "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "ja": "中程度の管理",
+          "ko": "중간 관리"
         }
       }
     },
@@ -115,7 +115,7 @@
           "ar": "18–24°م",
           "hi": "18–24°C",
           "zh": "18–24°C",
-          "ja": "18–24°C",
+          "ja": "18～24℃",
           "ko": "18–24°C"
         }
       }
@@ -124,16 +124,16 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Likes humidity",
+          "en": "Prefers humidity",
           "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime l’humidité",
+          "de": "Mag Luftfeuchte",
+          "fr": "Aime l'humidité",
           "it": "Ama umidità",
-          "es": "Gusta humedad",
+          "es": "Prefiere humedad",
           "pt": "Gosta de umidade",
-          "ar": "يحب الرطوبة",
+          "ar": "يفضل الرطوبة",
           "hi": "नमी पसंद",
-          "zh": "喜湿润",
+          "zh": "喜湿润空气",
           "ja": "湿度を好む",
           "ko": "습도 선호"
         }
@@ -151,7 +151,7 @@
           "es": "Tóxica",
           "pt": "Tóxica",
           "ar": "سامة",
-          "hi": "विषैला",
+          "hi": "विषैली",
           "zh": "有毒",
           "ja": "有毒",
           "ko": "독성 있음"
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Shrubby growth",
-          "pl": "Krzewiasty",
+          "pl": "Krzewiasty wzrost",
           "de": "Strauchförmig",
           "fr": "Port arbustif",
           "it": "Crescita arbustiva",
-          "es": "Arbustivo",
-          "pt": "Arbustivo",
+          "es": "Crecimiento arbusto",
+          "pt": "Crescimento arbusto",
           "ar": "نمو شجيري",
-          "hi": "झाड़ीदार",
-          "zh": "灌木状",
+          "hi": "झाड़ीदार वृद्धि",
+          "zh": "灌木状生长",
           "ja": "低木状",
-          "ko": "관목형"
+          "ko": "관목형 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drought",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter sécheresse",
+          "it": "Evitare secco",
+          "es": "Evitar sequedad",
+          "pt": "Evitar secura",
+          "ar": "تجنب الجفاف",
+          "hi": "सूखापन न हो",
+          "zh": "避免干旱",
+          "ja": "乾燥注意",
+          "ko": "건조 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发害虫",
+          "ja": "まれに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Yesterday-today-and-tomorrow",
-      "description": "Brunfelsia pauciflora is a tropical shrub known for flowers that change color over several days. It prefers bright indirect light and evenly moist soil. All parts of the plant are toxic if ingested."
+      "description": "Brunfelsia pauciflora is a tropical shrub known for flowers that change color over several days. It prefers bright, indirect light and evenly moist, acidic soil. All parts of the plant are toxic if ingested."
     },
     "pl": {
-      "common_name": "Wczoraj–dziś–jutro",
-      "description": "Brunfelsia pauciflora to tropikalny krzew o kwiatach zmieniających kolor. Wymaga jasnego stanowiska i umiarkowanego podlewania. Roślina jest toksyczna po spożyciu."
+      "common_name": "Wczoraj-dziś-jutro",
+      "description": "Brunfelsia pauciflora to tropikalny krzew o kwiatach zmieniających barwę w czasie kwitnienia. Wymaga jasnego, rozproszonego światła i stale lekko wilgotnej, kwaśnej gleby. Roślina jest trująca po spożyciu."
     },
     "de": {
       "common_name": "Gestern-heute-morgen",
-      "description": "Brunfelsia pauciflora ist ein tropischer Strauch mit farbwechselnden Blüten. Sie benötigt helles, indirektes Licht und gleichmäßige Feuchtigkeit. Die Pflanze ist giftig."
+      "description": "Brunfelsia pauciflora ist ein tropischer Strauch mit farbwechselnden Blüten. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßig feuchter, saurer Erde. Die Pflanze ist giftig."
     },
     "fr": {
       "common_name": "Hier-aujourd’hui-demain",
-      "description": "Brunfelsia pauciflora est un arbuste tropical aux fleurs changeantes. Elle aime une lumière vive sans soleil direct et un sol humide. La plante est toxique."
+      "description": "Brunfelsia pauciflora est un arbuste tropical aux fleurs changeant de couleur. Elle apprécie une lumière vive indirecte et un sol acide maintenu humide. Toutes les parties sont toxiques."
     },
     "it": {
       "common_name": "Ieri-oggi-domani",
-      "description": "Brunfelsia pauciflora è un arbusto tropicale con fiori che cambiano colore. Predilige luce intensa indiretta e annaffiature regolari. È una pianta tossica."
+      "description": "Brunfelsia pauciflora è un arbusto tropicale con fiori che cambiano colore. Predilige luce indiretta luminosa e terreno acido costantemente umido. La pianta è tossica se ingerita."
     },
     "es": {
       "common_name": "Ayer-hoy-mañana",
-      "description": "Brunfelsia pauciflora es un arbusto tropical con flores que cambian de color. Necesita luz brillante indirecta y riego regular. Es tóxica si se ingiere."
+      "description": "Brunfelsia pauciflora es un arbusto tropical con flores que cambian de color. Necesita luz indirecta brillante y suelo ácido ligeramente húmedo. Es una planta tóxica."
     },
     "pt": {
       "common_name": "Ontem-hoje-amanhã",
-      "description": "Brunfelsia pauciflora é um arbusto tropical de flores mutáveis. Prefere luz indireta brilhante e solo úmido. A planta é tóxica."
+      "description": "Brunfelsia pauciflora é um arbusto tropical com flores que mudam de cor. Prefere luz indireta brilhante e solo ácido sempre úmido. A planta é tóxica."
     },
     "ar": {
       "common_name": "أمس-اليوم-غدًا",
-      "description": "Brunfelsia pauciflora شجيرة استوائية بأزهار يتغير لونها. تحتاج إلى ضوء ساطع غير مباشر وتربة رطبة. النبات سام."
+      "description": "Brunfelsia pauciflora شجيرة استوائية مع أزهار يتغير لونها. تحتاج إلى ضوء ساطع غير مباشر وتربة حمضية رطبة باستمرار. النبات سام."
     },
     "hi": {
       "common_name": "येस्टरडे-टुडे-टुमॉरो",
-      "description": "Brunfelsia pauciflora एक उष्णकटिबंधीय झाड़ी है जिसके फूल रंग बदलते हैं। इसे तेज अप्रत्यक्ष रोशनी और नियमित पानी चाहिए। यह पौधा विषैला है।"
+      "description": "Brunfelsia pauciflora एक उष्णकटिबंधीय झाड़ी है जिसके फूल रंग बदलते हैं। इसे तेज़ अप्रत्यक्ष रोशनी और हल्की नम, अम्लीय मिट्टी चाहिए। पौधा विषैला है।"
     },
     "zh": {
       "common_name": "昨日今日明日花",
-      "description": "Brunfelsia pauciflora 是一种热带灌木，花朵会变色。适合明亮散射光和保持湿润的土壤。全株有毒。"
+      "description": "Brunfelsia pauciflora 是一种热带灌木，花色会随时间变化。适合明亮散射光和保持湿润的酸性土壤。全株有毒。"
     },
     "ja": {
-      "common_name": "ヤスタデイ・トゥデイ・トゥモロー",
-      "description": "Brunfelsia pauciflora は花色が変化する熱帯低木です。明るい間接光と適度な水分を好みます。有毒植物です。"
+      "common_name": "ヤエヤマアオキ",
+      "description": "Brunfelsia pauciflora は花色が変化する熱帯低木です。明るい間接光と湿った酸性土壌を好みます。有毒植物です。"
     },
     "ko": {
-      "common_name": "예스터데이 투데이 투모로우",
-      "description": "Brunfelsia pauciflora는 꽃 색이 변하는 열대 관목입니다. 밝은 간접광과 꾸준한 물주기가 필요합니다. 독성이 있습니다."
+      "common_name": "어제오늘내일꽃",
+      "description": "Brunfelsia pauciflora는 꽃 색이 변하는 열대 관목입니다. 밝은 간접광과 촉촉한 산성 토양을 선호합니다. 독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281271",
-      "https://edis.ifas.ufl.edu/publication/FP095",
-      "https://www.rhs.org.uk/plants/2799/brunfelsia-pauciflora/details"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b563",
+      "https://edis.ifas.ufl.edu/publication/FP096",
+      "https://www.rhs.org.uk/plants/3033/brunfelsia-pauciflora/details"
     ]
   }
 }

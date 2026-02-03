@@ -7,17 +7,17 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
+          "en": "Medium light",
           "pl": "Średnie światło",
-          "de": "Mittlere Sonne",
+          "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम सूर्य प्रकाश",
-          "zh": "中等阳光",
-          "ja": "中程度の日光",
-          "ko": "중간 햇빛"
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam soil",
-          "pl": "Gleba",
-          "de": "Lehmboden",
-          "fr": "Sol argileux",
-          "it": "Terreno limoso",
-          "es": "Suelo limoso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム土壌",
-          "ko": "로암 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "ري ماء معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 급수"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度に水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium difficulty",
-          "pl": "Średnia trudność",
-          "de": "Mittlere Schwierigkeit",
-          "fr": "Difficulté moyenne",
-          "it": "Difficoltà media",
-          "es": "Dificultad media",
-          "pt": "Dificuldade média",
-          "ar": "صعوبة متوسطة",
-          "hi": "मध्यम कठिनाई",
-          "zh": "中等难度",
-          "ja": "中程度の難易度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Humidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高湿",
+          "ja": "高湿",
+          "ko": "높은 습도"
         }
       }
     },
@@ -154,7 +154,7 @@
           "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
           "hi": "मध्यम वृद्धि",
-          "zh": "适中生长",
-          "ja": "適度な成長",
-          "ko": "적당한 성장"
+          "zh": "中等生长",
+          "ja": "中くらいの成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drafts",
+          "pl": "Unikaj przeciągów",
+          "de": "Vermeiden Sie Zugluft",
+          "fr": "Éviter les courants d'air",
+          "it": "Evita le correnti d'aria",
+          "es": "Evitar corrientes de aire",
+          "pt": "Evitar correntes de ar",
+          "ar": "تجنب التيارات الهوائية",
+          "hi": "प्रवाह से बचें",
+          "zh": "避免气流",
+          "ja": "ドラフトを避ける",
+          "ko": "초안 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,58 @@
   "translations": {
     "en": {
       "common_name": "African Hemp",
-      "description": "Sparrmannia africana, known as African Hemp, is a shrub native to tropical Africa. It is appreciated for its large, fuzzy leaves and beautiful white flowers."
+      "description": "Sparrmannia africana is an attractive indoor plant with lush, broad leaves. It thrives in moderate light and humidity, requiring regular watering and occasional misting."
     },
     "pl": {
-      "common_name": "Hemp Afrykański",
-      "description": "Sparrmannia africana, znana jako Hemp Afrykański, to krzew pochodzący z tropikalnej Afryki. Jest ceniona za swoje duże, puszyste liście oraz piękne białe kwiaty."
+      "common_name": "Hemp afrykański",
+      "description": "Sparrmannia africana to atrakcyjna roślina doniczkowa o bujnych, szerokich liściach. Rośnie najlepiej w umiarkowanym świetle i wilgotności, wymaga regularnego podlewania i sporadycznego spryskiwania."
     },
     "de": {
-      "common_name": "Afrikanisches Hanf",
-      "description": "Sparrmannia africana, bekannt als Afrikanisches Hanf, ist ein Strauch aus dem tropischen Afrika. Es wird für seine großen, flauschigen Blätter und schönen weißen Blumen geschätzt."
+      "common_name": "Afrikanische Hanf",
+      "description": "Sparrmannia africana ist eine attraktive Zimmerpflanze mit üppigen, breiten Blättern. Sie gedeiht bei mittlerem Licht und Feuchtigkeit und benötigt regelmäßiges Gießen und gelegentliches Besprühen."
     },
     "fr": {
-      "common_name": "Chanvre Africain",
-      "description": "Sparrmannia africana, appelé Chanvre Africain, est un arbuste originaire de l'Afrique tropicale. Il est apprécié pour ses grandes feuilles duveteuses et ses belles fleurs blanches."
+      "common_name": "Chanvre africain",
+      "description": "Sparrmannia africana est une plante d'intérieur attrayante avec de grandes feuilles larges. Elle prospère dans une lumière et une humidité modérées, nécessitant un arrosage régulier et une pulvérisation occasionnelle."
     },
     "it": {
-      "common_name": "Canapa Africana",
-      "description": "Sparrmannia africana, noto come Canapa Africana, è un arbusto originario dell'Africa tropicale. È apprezzato per le sue grandi foglie pelose e i suoi bellissimi fiori bianchi."
+      "common_name": "Canapa africana",
+      "description": "Sparrmannia africana è una pianta da interno attraente con foglie larghe e lussureggianti. Cresce bene con luce e umidità moderate, richiedendo annaffiature regolari e occasionali nebulizzazioni."
     },
     "es": {
-      "common_name": "Cáñamo Africano",
-      "description": "Sparrmannia africana, conocido como Cáñamo Africano, es un arbusto originario de África tropical. Es apreciado por sus grandes hojas vellosas y sus hermosas flores blancas."
+      "common_name": "Cáñamo africano",
+      "description": "Sparrmannia africana es una atractiva planta de interior con hojas grandes y anchas. Crece bien con luz y humedad moderadas, requiriendo riego regular y pulverización ocasional."
     },
     "pt": {
-      "common_name": "Cânhamo Africano",
-      "description": "Sparrmannia africana, conhecido como Cânhamo Africano, é um arbusto nativo da África tropical. É apreciado por suas grandes folhas peludas e belas flores brancas."
+      "common_name": "Cânhamo africano",
+      "description": "Sparrmannia africana é uma planta de interior atraente com folhas largas e exuberantes. Ela prospera em luz e umidade moderadas, exigindo rega regular e borrifos ocasionais."
     },
     "ar": {
-      "common_name": "قنب أفريقي",
-      "description": "Sparrmannia africana، المعروف باسم قنب أفريقي، هو شجيرة موطنها إفريقيا الاستوائية. ويُقدَّر لأوراقه الكبيرة المشعرة وزهورها البيضاء الجميلة."
+      "common_name": "القنب الأفريقي",
+      "description": "Sparrmannia africana هي نبتة منزلية جذابة بأوراق واسعة وخصبة. تنمو في الضوء المعتدل والرطوبة، وتحتاج إلى سقاية منتظمة ورش بين الحين والآخر."
     },
     "hi": {
       "common_name": "अफ्रीकी गांजा",
-      "description": "Sparrmannia africana, जिसे अफ्रीकी गांजा कहा जाता है, एक झाड़ी है जो उष्णकटिबंधीय अफ्रीका से उत्पन्न होती है। यह अपनी बड़ी, रोयेदार पत्तियों और सुंदर सफेद फूलों के लिए सराहा जाता है।"
+      "description": "Sparrmannia africana एक आकर्षक इनडोर पौधा है जिसकी पत्तियाँ बड़ी और घनी होती हैं। यह मध्यम रोशनी और आर्द्रता में बढ़ता है, और नियमित पानी देने के साथ कभी-कभी नमी देने की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "非洲麻",
-      "description": "Sparrmannia africana，通常称为非洲麻，是一种原产于热带非洲的灌木。它因其大而毛茸茸的叶子和美丽的白色花朵而受到喜爱。"
+      "common_name": "非洲大麻",
+      "description": "Sparrmannia africana 是一种具有大而浓密叶片的吸引人的室内植物。它在中等光照和湿度下生长，需要定期浇水和偶尔喷雾。"
     },
     "ja": {
-      "common_name": "アフリカヘンプ",
-      "description": "Sparrmannia africana、通称アフリカヘンプは、熱帯アフリカ原産の低木です。大きくて毛むくじゃらの葉と美しい白い花で評価されています。"
+      "common_name": "アフリカンヘンプ",
+      "description": "Sparrmannia africana は、広い葉を持つ魅力的な室内植物です。中程度の光と湿度で育ち、定期的な水やりと時折の霧吹きが必要です。"
     },
     "ko": {
       "common_name": "아프리카 대마",
-      "description": "Sparrmannia africana, 아프리카 대마로 알려진 이 식물은 열대 아프리카 원산의 관목입니다. 큰 솜털 같은 잎과 아름다운 흰 꽃으로 평가받고 있습니다."
+      "description": "Sparrmannia africana는 크고 풍성한 잎을 가진 매력적인 실내 식물입니다. 중간 정도의 빛과 습도에서 잘 자라며, 정기적인 물주기와 가끔 미스트가 필요합니다."
     }
   },
   "sources": {
     "urls": [
+      "https://www.rhs.org.uk/plants/sparrmannia-africana",
       "https://www.gardenia.net/plant/sparrmannia-africana",
-      "https://www.bhg.com/gardening/pests-diseases-harmful-plants/african-hemp-plant-care/"
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/sparrmannia-africana-care/"
     ]
   }
 }

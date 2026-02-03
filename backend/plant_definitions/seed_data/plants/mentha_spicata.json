@@ -3,19 +3,19 @@
   "name": "Spearmint",
   "latin": "Mentha spicata",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-soleil",
-          "it": "Mezz'ombra",
-          "es": "Sol parcial",
-          "pt": "Sol parcial",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日向",
-          "ko": "부분 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, moist soil",
-          "pl": "Żyzna gleba",
-          "de": "Nährstoffreich",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo rico",
-          "pt": "Solo rico",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Stale wilgotna",
-          "de": "Feucht halten",
-          "fr": "Sol humide",
-          "it": "Sempre umido",
-          "es": "Mantener húmedo",
-          "pt": "Manter úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気維持",
-          "ko": "촉촉 유지"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilg.",
-          "de": "Normale Luft",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
+          "en": "Fast growth",
           "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
+          "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
           "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
           "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
+          "zh": "快速生长",
+          "ja": "速い成長",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Kein Überwässern",
+          "fr": "Pas d'excès d'eau",
+          "it": "Evitare eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "لا تفرط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "मौसम के अनुसार कीड़े",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Spearmint",
-      "description": "Mentha spicata is a perennial herb known for its fragrant, bright green leaves. It prefers moist soil and partial sun and is widely grown for culinary and medicinal uses. Regular harvesting encourages bushy growth."
+      "description": "Spearmint is a fragrant herb used in cooking and for medicinal purposes. It prefers moderate sunlight and well-drained soil."
     },
     "pl": {
       "common_name": "Mięta zielona",
-      "description": "Mentha spicata to wieloletnie zioło o aromatycznych, zielonych liściach. Lubi wilgotną glebę i półcień. Częste przycinanie wspomaga gęsty wzrost."
+      "description": "Mięta zielona to pachnące zioło stosowane w kuchni i medycynie. Preferuje umiarkowane światło i dobrze przepuszczalną glebę."
     },
     "de": {
       "common_name": "Grüne Minze",
-      "description": "Mentha spicata ist ein mehrjähriges Kraut mit aromatischen grünen Blättern. Sie wächst gut in feuchtem Boden und Halbschatten. Regelmäßiges Schneiden fördert buschiges Wachstum."
+      "description": "Grüne Minze ist ein duftendes Kraut, das in der Küche und für medizinische Zwecke verwendet wird. Sie bevorzugt mäßiges Sonnenlicht und gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "Menthe verte",
-      "description": "Mentha spicata est une plante vivace aux feuilles vert vif et parfumées. Elle apprécie un sol humide et une exposition mi-ombragée. La taille régulière stimule sa croissance."
+      "description": "La menthe verte est une herbe parfumée utilisée en cuisine et à des fins médicinales. Elle préfère une lumière modérée et un sol bien drainé."
     },
     "it": {
       "common_name": "Menta verde",
-      "description": "Mentha spicata è un'erba perenne con foglie verdi aromatiche. Predilige terreno umido e luce parziale. La raccolta frequente favorisce una crescita compatta."
+      "description": "La menta verde è un'erba profumata utilizzata in cucina e per scopi medicinali. Preferisce la luce moderata e un terreno ben drenato."
     },
     "es": {
-      "common_name": "Hierbabuena",
-      "description": "Mentha spicata es una hierba perenne de hojas verdes aromáticas. Prefiere suelo húmedo y sol parcial. La poda regular estimula su crecimiento."
+      "common_name": "Menta verde",
+      "description": "La menta verde es una hierba aromática utilizada en la cocina y con fines medicinales. Prefiere luz moderada y un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Hortelã-verde",
-      "description": "Mentha spicata é uma erva perene de folhas verdes aromáticas. Gosta de solo úmido e luz parcial. Podas frequentes ajudam no crescimento."
+      "common_name": "Hortelã verde",
+      "description": "A hortelã verde é uma erva aromática usada na culinária e para fins medicinais. Prefere luz moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "نعناع بلدي",
-      "description": "Mentha spicata نبات عشبي معمر بأوراق خضراء عطرية. يفضل التربة الرطبة وضوء الشمس الجزئي. التقليم المنتظم يعزز النمو."
+      "common_name": "نعناع أخضر",
+      "description": "النعناع الأخضر هو عشب عطري يستخدم في الطهي ولأغراض طبية. يفضل الضوء المعتدل والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "स्पीयरमिंट",
-      "description": "Mentha spicata एक बहुवर्षीय जड़ी-बूटी है जिसकी पत्तियाँ सुगंधित होती हैं। इसे नम मिट्टी और आंशिक धूप पसंद है। नियमित कटाई से अच्छी वृद्धि होती है।"
+      "common_name": "हरी पुदीना",
+      "description": "हरी पुदीना एक सुगंधित पौधा है जो खाना पकाने और औषधीय उपयोग के लिए प्रयोग किया जाता है। यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "留兰香",
-      "description": "Mentha spicata 是一种多年生草本植物，具有芳香的绿色叶片。它喜欢湿润的土壤和半日照环境。经常修剪有助于生长。"
+      "common_name": "绿薄荷",
+      "description": "绿薄荷是一种芳香的草本植物，用于烹饪和药用。它喜欢中等阳光和排水良好的土壤。"
     },
     "ja": {
-      "common_name": "スペアミント",
-      "description": "Mentha spicata は香りのある緑の葉を持つ多年草です。湿った土と半日向を好みます。定期的な収穫でよく育ちます。"
+      "common_name": "グリーンミント",
+      "description": "グリーンミントは料理や薬用に使われる香り高いハーブです。中程度の光と排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "스피어민트",
-      "description": "Mentha spicata는 향기로운 녹색 잎을 가진 여러해살이 허브입니다. 촉촉한 토양과 부분 햇빛을 선호합니다. 자주 수확하면 잘 자랍니다."
+      "common_name": "그린 민트",
+      "description": "그린 민트는 요리와 의약 용도로 사용되는 향긋한 허브입니다. 중간 정도의 빛과 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/mentha/spicata/details",
-      "https://extension.umn.edu/herbs/growing-mint",
-      "https://plants.ces.ncsu.edu/plants/mentha-spicata/"
+      "https://www.rhs.org.uk/plants/mentha-spicata",
+      "https://www.gardenersworld.com/plants/mentha-spicata/"
     ]
   }
 }

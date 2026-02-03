@@ -1,23 +1,25 @@
 {
   "external_id": "helichrysum_italicum",
-  "name": "Curry Plant",
+  "name": "Helichrysum italicum",
   "latin": "Helichrysum italicum",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "helichrysum_italicum.jpg",
@@ -29,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
-          "es": "Pleno sol",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "完全な太陽",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -47,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-drained",
-          "pl": "Dobrze zdrenowana",
-          "de": "Gut drainiert",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "よく排水された土壌",
+          "ko": "잘 배수되는 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Skąpe",
-          "de": "Wenig",
-          "fr": "Peu fréquent",
-          "it": "Raro",
-          "es": "Escaso",
-          "pt": "Pouco",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गर्म जलवायु",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低から中程度",
+          "ko": "낮은에서 중간"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
           "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -160,76 +162,113 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact shrub",
-          "pl": "Krzew niski",
-          "de": "Kompakter Strauch",
-          "fr": "Arbuste compact",
-          "it": "Arbusto compatto",
-          "es": "Arbusto compacto",
-          "pt": "Arbusto compacto",
-          "ar": "شجيرة مدمجة",
-          "hi": "घना झाड़ी",
-          "zh": "紧凑灌木",
-          "ja": "低木状",
-          "ko": "관목형"
+          "en": "Slow to medium",
+          "pl": "Wolny do średni",
+          "de": "Langsam bis mittel",
+          "fr": "Lent à moyen",
+          "it": "Lento a medio",
+          "es": "Lento a medio",
+          "pt": "Lento a médio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅いから中くらい",
+          "ko": "느림에서 중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرदी से पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Curry plant",
-      "description": "Helichrysum italicum is a Mediterranean evergreen shrub with aromatic silver leaves. It prefers full sun and very well-drained soil. The plant is drought tolerant and unsuitable for frequent watering."
+      "common_name": "Curry Plant",
+      "description": "Helichrysum italicum is a fragrant herb with silvery foliage. It thrives in full sun and requires moderate watering."
     },
     "pl": {
-      "common_name": "Kocanka włoska",
-      "description": "Helichrysum italicum to zimozielony krzew śródziemnomorski o srebrnych liściach. Wymaga pełnego słońca i przepuszczalnej gleby. Jest odporny na suszę i nie lubi nadmiaru wody."
+      "common_name": "Roślina curry",
+      "description": "Helichrysum italicum to pachnąca roślina z srebrzystymi liśćmi. Rośnie w pełnym słońcu i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Currykraut",
-      "description": "Helichrysum italicum ist ein immergrüner Strauch aus dem Mittelmeerraum. Er benötigt volle Sonne und sehr gut drainierten Boden. Die Pflanze ist trockenheitsverträglich."
+      "common_name": "Curry-Pflanze",
+      "description": "Helichrysum italicum ist ein duftendes Kraut mit silbrigen Blättern. Es gedeiht in voller Sonne und benötigt mäßige Bewässerung."
     },
     "fr": {
       "common_name": "Plante curry",
-      "description": "Helichrysum italicum est un arbuste méditerranéen persistant aux feuilles argentées. Il aime le plein soleil et les sols bien drainés. L’arrosage doit rester limité."
+      "description": "Helichrysum italicum est une herbe parfumée avec un feuillage argenté. Elle prospère en plein soleil et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Elicriso italico",
-      "description": "Helichrysum italicum è un arbusto sempreverde mediterraneo con foglie aromatiche. Predilige pieno sole e terreni ben drenati. Tollera bene la siccità."
+      "common_name": "Pianta curry",
+      "description": "Helichrysum italicum è un'erba profumata con foglie argentate. Cresce al pieno sole e richiede un'annaffiatura moderata."
     },
     "es": {
-      "common_name": "Planta del curry",
-      "description": "Helichrysum italicum es un arbusto mediterráneo perenne de hojas plateadas. Necesita pleno sol y suelo bien drenado. Es resistente a la sequía."
+      "common_name": "Planta curry",
+      "description": "Helichrysum italicum es una hierba fragante con follaje plateado. Crece a pleno sol y necesita riego moderado."
     },
     "pt": {
-      "common_name": "Planta do curry",
-      "description": "Helichrysum italicum é um arbusto mediterrâneo perene e aromático. Prefere sol pleno e solo bem drenado. Tolera bem a seca."
+      "common_name": "Planta de curry",
+      "description": "Helichrysum italicum é uma erva perfumada com folhagem prateada. Cresce em pleno sol e requer rega moderada."
     },
     "ar": {
       "common_name": "نبات الكاري",
-      "description": "Helichrysum italicum شجيرة متوسطية دائمة الخضرة ذات أوراق عطرية. تحتاج إلى شمس كاملة وتربة جيدة الصرف. تتحمل الجفاف ولا تحب الري الزائد."
+      "description": "Helichrysum italicum هو نبات عطري ذو أوراق فضية. ينمو في الشمس الكاملة ويتطلب الري المعتدل."
     },
     "hi": {
       "common_name": "करी पौधा",
-      "description": "Helichrysum italicum भूमध्यसागरीय सदाबहार झाड़ी है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी चाहिए। यह सूखा सहन कर सकता है।"
+      "description": "Helichrysum italicum एक सुगंधित हर्ब है जिसमें चांदी जैसा पत्तियां होती हैं। यह पूर्ण सूर्य में बढ़ता है और इसे मध्यम पानी की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "咖喱草",
-      "description": "Helichrysum italicum 是一种地中海常绿灌木，叶片呈银色。需要充足阳光和良好排水的土壤。耐旱，不宜频繁浇水。"
+      "common_name": "咖喱植物",
+      "description": "Helichrysum italicum 是一种具有银色叶片的芳香草本植物。它在阳光充足的地方生长，需要适度的浇水。"
     },
     "ja": {
-      "common_name": "カレープラント",
-      "description": "Helichrysum italicum は地中海原産の常緑低木です。直射日光と水はけの良い土を好みます。乾燥に強い植物です。"
+      "common_name": "カレー植物",
+      "description": "Helichrysum italicum は銀色の葉を持つ香り高いハーブです。完全な日光の下で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "커리플랜트",
-      "description": "Helichrysum italicum은 지중해 원산의 상록 관목입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 건조에 강합니다."
+      "common_name": "커리 식물",
+      "description": "Helichrysum italicum은 은색 잎을 가진 향기로운 허브입니다. 완전한 햇빛에서 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/helichrysum-italicum/details",
-      "https://extension.umn.edu/herbaceous-perennials/curry-plant",
+      "https://www.rhs.org.uk/advice/profile?pid=137",
       "https://www.gardenia.net/plant/helichrysum-italicum"
     ]
   }

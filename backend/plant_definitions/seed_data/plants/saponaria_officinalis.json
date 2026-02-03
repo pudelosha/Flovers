@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 광도"
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "दोमट मिट्टी",
-          "zh": "粘土土壤",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "ري ماء معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyen",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°C",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Bas",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Poco tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ी जहरीली",
+          "zh": "轻度有毒",
+          "ja": "やや毒性あり",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clump-forming",
-          "pl": "Tworzący kępy",
-          "de": "Haufenbildend",
-          "fr": "Forme en touffes",
-          "it": "Forma a ciuffo",
-          "es": "Formación en mata",
-          "pt": "Formador de tufos",
-          "ar": "يشكل كتل",
-          "hi": "झाड़ीदार रूप में वृद्धि",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "덩어리 형성"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez le trop d'eau",
+          "it": "Evita l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過水を避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Soapwort",
-      "description": "Soapwort is a hardy perennial plant, known for its ability to produce a soap-like lather from its roots. It grows best in loamy soil and enjoys medium sunlight and watering."
+      "description": "Soapwort is a hardy herb known for its soap-like qualities. It thrives in moderate conditions and requires basic care."
     },
     "pl": {
       "common_name": "Mydlnica lekarska",
-      "description": "Mydlnica lekarska to odporna roślina wieloletnia, znana ze swojej zdolności do wytwarzania piany podobnej do mydła z korzeni. Najlepiej rośnie w glebie próchniczej i lubi średnie nasłonecznienie oraz podlewanie."
+      "description": "Mydlnica lekarska to wytrzymała roślina znana ze swoich właściwości mydlnych. Rośnie w umiarkowanych warunkach i wymaga podstawowej opieki."
     },
     "de": {
-      "common_name": "Seifenpflanze",
-      "description": "Die Seifenpflanze ist eine robuste mehrjährige Pflanze, die für ihre Fähigkeit bekannt ist, mit ihren Wurzeln einen seifenähnlichen Schaum zu erzeugen. Sie wächst am besten in lehmigem Boden und mag mittleres Sonnenlicht und Bewässerung."
+      "common_name": "Seifenkraut",
+      "description": "Seifenkraut ist ein robuster Kraut, bekannt für seine seifenähnlichen Eigenschaften. Es gedeiht unter mäßigen Bedingungen und benötigt einfache Pflege."
     },
     "fr": {
-      "common_name": "Saponaire",
-      "description": "La saponaire est une plante vivace robuste, connue pour sa capacité à produire une mousse semblable au savon à partir de ses racines. Elle pousse mieux dans un sol argileux et préfère une lumière et un arrosage modérés."
+      "common_name": "Saponaire officinale",
+      "description": "La saponaire officinale est une plante robuste, connue pour ses propriétés savonneuses. Elle prospère dans des conditions modérées et nécessite des soins de base."
     },
     "it": {
-      "common_name": "Saponaria",
-      "description": "La saponaria è una pianta perenne resistente, nota per la sua capacità di produrre una schiuma simile al sapone dalle sue radici. Cresce meglio in terreni argillosi e predilige una luce e un'irrigazione moderate."
+      "common_name": "Saponaria officinale",
+      "description": "La saponaria officinale è un'erba resistente, conosciuta per le sue qualità simili al sapone. Cresce in condizioni moderate e richiede cure basilari."
     },
     "es": {
-      "common_name": "Saponaria",
-      "description": "La saponaria es una planta perenne resistente, conocida por su capacidad para producir una espuma similar al jabón a partir de sus raíces. Crece mejor en suelos arcillosos y prefiere luz y riego moderados."
+      "common_name": "Saponaria officinalis",
+      "description": "La saponaria officinalis es una hierba resistente conocida por sus cualidades similares al jabón. Crece en condiciones moderadas y requiere cuidados básicos."
     },
     "pt": {
-      "common_name": "Saboneteira",
-      "description": "A saboneteira é uma planta perene resistente, conhecida pela sua capacidade de produzir uma espuma semelhante ao sabão a partir das suas raízes. Cresce melhor em solos argilosos e prefere luz e rega moderadas."
+      "common_name": "Saponária",
+      "description": "A saponária é uma erva resistente conhecida pelas suas qualidades semelhantes ao sabão. Cresce em condições moderadas e requer cuidados básicos."
     },
     "ar": {
-      "common_name": "الصابون البري",
-      "description": "الصابون البري هو نبات معمر قوي، معروف بقدرته على إنتاج رغوة تشبه الصابون من جذوره. ينمو بشكل أفضل في التربة الطينية ويفضل الضوء المتوسط والري المعتدل."
+      "common_name": "سابوناريا",
+      "description": "السابوناريا هي عشبة قوية معروفة بخصائصها الشبيهة بالصابون. تنمو في ظروف معتدلة وتتطلب رعاية أساسية."
     },
     "hi": {
       "common_name": "सोपवर्ट",
-      "description": "सोपवर्ट एक मजबूत पौधा है, जो अपनी जड़ों से साबुन जैसी झाग पैदा करने की क्षमता के लिए जाना जाता है। यह दोमट मिट्टी में सबसे अच्छा उगता है और मध्यम प्रकाश और पानी को पसंद करता है।"
+      "description": "सोपवर्ट एक कठोर पौधा है जिसे साबुन जैसे गुणों के लिए जाना जाता है। यह मध्यम परिस्थितियों में उगता है और बुनियादी देखभाल की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "肥皂草",
-      "description": "肥皂草是一种耐寒的多年生植物，因其根部能产生类似肥皂的泡沫而闻名。它在粘土土壤中生长最好，并喜欢中等光照和浇水。"
+      "common_name": "皂草",
+      "description": "皂草是一种坚韧的草本植物，以其类似肥皂的特性而闻名。它在适度的条件下茁壮成长，需要基本的护理。"
     },
     "ja": {
-      "common_name": "サポナリア",
-      "description": "サポナリアは耐寒性の多年草で、その根から石鹸のような泡を生成する能力で知られています。粘土質の土壌で最適に育ち、中程度の光と水やりを好みます。"
+      "common_name": "ソープワート",
+      "description": "ソープワートは、その石鹸のような特性で知られる丈夫なハーブです。中程度の条件で育ち、基本的な手入れが必要です。"
     },
     "ko": {
       "common_name": "비누풀",
-      "description": "비누풀은 뿌리에서 비누와 유사한 거품을 생성하는 능력으로 알려진 다년생 강건한 식물입니다. 점토 토양에서 잘 자라며 중간 정도의 햇빛과 물주기를 선호합니다."
+      "description": "비누풀은 비누와 유사한 특성으로 알려진 강한 허브입니다. 중간 정도의 조건에서 자라며 기본적인 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.bgci.org/garden.php?id=946",
-      "https://www.rhs.org.uk/plants/details?plantid=2341"
+      "https://www.gardenia.net/plant/saponaria-officinalis",
+      "https://www.rhs.org.uk/plants/3645/saponaria-officinalis"
     ]
   }
 }

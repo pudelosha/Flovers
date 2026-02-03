@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -31,13 +31,13 @@
         "text": {
           "en": "Medium light",
           "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière modérée",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
           "ko": "중간 빛"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lößboden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム土",
-          "ko": "양토"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良好な排水土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnia woda",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "ماء متوسط",
-          "hi": "मध्यम पानी",
-          "zh": "中等水量",
-          "ja": "中程度の水",
-          "ko": "중간 물"
+          "en": "Water regularly",
+          "pl": "Podlewać regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित रूप से पानी दें",
+          "zh": "定期浇水",
+          "ja": "定期的に水を与える",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodno do ciepło",
-          "de": "Kühl bis warm",
-          "fr": "Froid à chaud",
-          "it": "Freddo a caldo",
-          "es": "Frío a cálido",
-          "pt": "Frio a morno",
-          "ar": "بارد إلى دافئ",
-          "hi": "ठंडा से गर्म",
-          "zh": "冷到温暖",
-          "ja": "涼しいから暖かい",
-          "ko": "차가운 것에서 따뜻한 것까지"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,13 +124,13 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
+          "en": "Medium humidity",
           "pl": "Średnia wilgotność",
           "de": "Mittlere Luftfeuchtigkeit",
           "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
-          "pt": "Humidade média",
+          "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
           "hi": "मध्यम आर्द्रता",
           "zh": "中等湿度",
@@ -151,7 +151,7 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -166,14 +166,52 @@
           "pl": "Szybko rosnący",
           "de": "Schnell wachsend",
           "fr": "Croissance rapide",
-          "it": "Crescita veloce",
+          "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज बढ़ता हुआ",
+          "hi": "तेज़ी से बढ़ने वाला",
           "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠르게 성장"
+          "ja": "速い成長",
+          "ko": "빠르게 성장하는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Raspberry",
-      "description": "Raspberry is a popular fruit-bearing plant grown for its edible berries. It thrives in temperate climates and needs medium water and sunlight."
+      "description": "Raspberries are small, red fruits that grow on shrubs. They are known for their sweet-tart flavor and are commonly used in desserts."
     },
     "pl": {
       "common_name": "Malina",
-      "description": "Malina to popularna roślina owocująca, uprawiana dla swoich jadalnych jagód. Rośnie w klimacie umiarkowanym, potrzebuje średniego podlewania i światła słonecznego."
+      "description": "Maliny to małe, czerwone owoce rosnące na krzewach. Są znane ze swojego słodko-kwaśnego smaku i często wykorzystywane w deserach."
     },
     "de": {
       "common_name": "Himbeere",
-      "description": "Die Himbeere ist eine beliebte Fruchtpflanze, die wegen ihrer essbaren Beeren angebaut wird. Sie gedeiht in gemäßigten Klimazonen und benötigt mittlere Bewässerung und Sonnenlicht."
+      "description": "Himbeeren sind kleine, rote Früchte, die an Sträuchern wachsen. Sie sind bekannt für ihren süß-sauren Geschmack und werden oft in Desserts verwendet."
     },
     "fr": {
       "common_name": "Framboise",
-      "description": "La framboise est une plante fruitière populaire cultivée pour ses baies comestibles. Elle prospère dans les climats tempérés et nécessite un arrosage et de la lumière moyenne."
+      "description": "Les framboises sont de petits fruits rouges qui poussent sur des buissons. Elles sont connues pour leur goût sucré-acidulé et sont souvent utilisées dans les desserts."
     },
     "it": {
       "common_name": "Lampone",
-      "description": "Il lampone è una pianta da frutto popolare coltivata per le sue bacche commestibili. Cresce nei climi temperati e ha bisogno di acqua e luce solare medie."
+      "description": "I lamponi sono piccoli frutti rossi che crescono su arbusti. Sono noti per il loro sapore dolce-acido e sono spesso usati nei dolci."
     },
     "es": {
       "common_name": "Frambuesa",
-      "description": "La frambuesa es una planta frutal popular cultivada por sus bayas comestibles. Se desarrolla en climas templados y necesita riego y luz solar moderados."
+      "description": "Las frambuesas son frutas rojas pequeñas que crecen en arbustos. Son conocidas por su sabor dulce y ácido y se utilizan comúnmente en postres."
     },
     "pt": {
       "common_name": "Framboesa",
-      "description": "A framboesa é uma planta frutífera popular cultivada pelas suas bagas comestíveis. Ela cresce em climas temperados e precisa de rega e luz solar moderados."
+      "description": "As framboesas são pequenas frutas vermelhas que crescem em arbustos. São conhecidas por seu sabor doce e azedo e são comumente usadas em sobremesas."
     },
     "ar": {
       "common_name": "توت العليق",
-      "description": "التوت العليق هو نبات فاكهة شائع يُزرع من أجل ثماره الصالحة للأكل. ينمو في المناخات المعتدلة ويحتاج إلى ري وضوء شمس متوسط."
+      "description": "توت العليق هو فاكهة حمراء صغيرة تنمو على الشجيرات. تشتهر بنكهتها الحلوة والحامضة وغالبًا ما تستخدم في الحلويات."
     },
     "hi": {
-      "common_name": "रास्पबेरी",
-      "description": "रास्पबेरी एक लोकप्रिय फल देने वाली पौधा है, जिसे इसके खाने योग्य फल के लिए उगाया जाता है। यह समशीतोष्ण जलवायु में पनपता है और इसे मध्यम पानी और धूप की आवश्यकता होती है।"
+      "common_name": "रसभरी",
+      "description": "रसभरी छोटे, लाल फल होते हैं जो झाड़ियों पर उगते हैं। इन्हें अपनी मीठी-खट्टी स्वाद के लिए जाना जाता है और आमतौर पर मिठाइयों में उपयोग किया जाता है."
     },
     "zh": {
       "common_name": "覆盆子",
-      "description": "覆盆子是一种受欢迎的水果植物，因其可食用的浆果而被栽培。它在温带气候中茁壮成长，需要中等水量和阳光。"
+      "description": "覆盆子是长在灌木丛中的小红果。它们因甜酸的味道而闻名，常用于甜点中。"
     },
     "ja": {
       "common_name": "ラズベリー",
-      "description": "ラズベリーはその食用のベリーのために栽培される人気の果物植物です。温帯気候で育ち、適度な水と日光が必要です。"
+      "description": "ラズベリーは低木に生える小さな赤い果実です。甘酸っぱい味で知られ、デザートに一般的に使われます。"
     },
     "ko": {
-      "common_name": "라즈베리",
-      "description": "라즈베리는 먹을 수 있는 베리를 위해 재배되는 인기 있는 과일 식물입니다. 온대 기후에서 자라며, 중간 정도의 물과 햇빛이 필요합니다."
+      "common_name": "산딸기",
+      "description": "산딸기는 관목에서 자라는 작은 빨간 열매입니다. 달콤하고 시큼한 맛으로 유명하며 디저트에 자주 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=818",
-      "https://www.gardeningknowhow.com/edible/fruits/raspberry/raspberry-plant-care.htm"
+      "https://www.rhs.org.uk/advice/profile?pid=221",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/how-to-grow-raspberries/"
     ]
   }
 }

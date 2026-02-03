@@ -11,16 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
+    "green-plants",
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "adelonema_wallisii.jpg",
   "image_thumb": "adelonema_wallisii.jpg",
   "traits": [
@@ -28,7 +29,7 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium indirect light",
+          "en": "Medium light",
           "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
@@ -36,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等散射光",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 밝기"
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining aroid soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierte Erde",
-          "fr": "Sol bien drainé",
-          "it": "Terriccio drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "排水性の良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "よく排水される",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep lightly moist",
-          "pl": "Lekko wilgotna",
-          "de": "Leicht feucht halten",
-          "fr": "Légèrement humide",
-          "it": "Leggermente umido",
-          "es": "Ligeramente húmedo",
-          "pt": "Levemente úmido",
-          "ar": "رطوبة خفيفة",
-          "hi": "हल्की नमी रखें",
-          "zh": "保持微湿",
-          "ja": "やや湿った状態",
-          "ko": "약간 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري ذي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -85,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Aufwand",
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
           "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
+          "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
           "ko": "중간 관리"
         }
       }
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27 °م",
-          "hi": "18–27 °C",
-          "zh": "18–27 °C",
-          "ja": "18–27 °C",
-          "ko": "18–27 °C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humid air",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchtigkeit",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润空气",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if ingested",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Mäßig giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ी ज़हरीली",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact upright growth",
-          "pl": "Zwarty pokrój",
-          "de": "Kompakter Wuchs",
-          "fr": "Croissance compacte",
-          "it": "Crescita compatta",
-          "es": "Crecimiento compacto",
-          "pt": "Crescimento compacto",
-          "ar": "نمو مدمج",
-          "hi": "सघन वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクト成長",
-          "ko": "컴팩트한 성장"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرोक्सी पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wallis’ adelonema",
-      "description": "Adelonema wallisii is a tropical aroid valued for its patterned, lance-shaped leaves. It grows naturally on the rainforest floor in warm, humid environments. Indoors it prefers steady moisture, indirect light, and stable temperatures."
+      "common_name": "Wallis' Adelonema",
+      "description": "Adelonema wallisii is a tropical plant, native to Southeast Asia. It thrives in humid environments and prefers moderate light and watering."
     },
     "pl": {
-      "common_name": "Adelonema Wallisa",
-      "description": "Adelonema wallisii to tropikalny obrazkowaty ceniony za dekoracyjne liście. Naturalnie rośnie w wilgotnych lasach Ameryki Południowej. W uprawie domowej wymaga umiarkowanego światła i regularnego podlewania."
+      "common_name": "Adelonema Wallisii",
+      "description": "Adelonema wallisii to roślina tropikalna pochodząca z Azji Południowo-Wschodniej. Wymaga wilgotnego środowiska i średniego nasłonecznienia oraz podlewania."
     },
     "de": {
-      "common_name": "Wallis-Adelonema",
-      "description": "Adelonema wallisii ist eine tropische Aronstabpflanze mit dekorativ gemusterten Blättern. Sie stammt aus feuchten Regenwaldgebieten. Als Zimmerpflanze bevorzugt sie gleichmäßige Feuchte und indirektes Licht."
+      "common_name": "Wallis' Adelonema",
+      "description": "Adelonema wallisii ist eine tropische Pflanze, die in Südostasien beheimatet ist. Sie gedeiht in feuchten Umgebungen und bevorzugt mittleres Licht und Bewässerung."
     },
     "fr": {
-      "common_name": "Adelonema de Wallis",
-      "description": "Adelonema wallisii est une plante tropicale de la famille des aracées. Elle pousse naturellement dans les forêts humides. En intérieur, elle apprécie une lumière tamisée et un sol légèrement humide."
+      "common_name": "Adelonéma de Wallis",
+      "description": "Adelonema wallisii est une plante tropicale originaire du Sud-Est asiatique. Elle prospère dans des environnements humides et préfère une lumière et un arrosage modérés."
     },
     "it": {
-      "common_name": "Adelonema di Wallis",
-      "description": "Adelonema wallisii è una pianta tropicale ornamentale della famiglia delle Araceae. Proviene da ambienti caldi e umidi di sottobosco. In casa richiede luce indiretta e annaffiature regolari."
+      "common_name": "Adelonema Wallisii",
+      "description": "Adelonema wallisii è una pianta tropicale originaria del Sud-Est asiatico. Cresce bene in ambienti umidi e preferisce luce e annaffiature moderate."
     },
     "es": {
       "common_name": "Adelonema de Wallis",
-      "description": "Adelonema wallisii es una planta tropical de hojas decorativas. Crece de forma natural en selvas húmedas. Como planta de interior necesita luz indirecta y riego constante."
+      "description": "Adelonema wallisii es una planta tropical originaria del sudeste asiático. Prefiere ambientes húmedos y requiere luz y riego moderados."
     },
     "pt": {
-      "common_name": "Adelonema de Wallis",
-      "description": "Adelonema wallisii é uma planta tropical da família das aráceas. Habita florestas úmidas e quentes. Em ambientes internos prefere luz indireta e solo levemente úmido."
+      "common_name": "Adelonema Wallisii",
+      "description": "Adelonema wallisii é uma planta tropical originária do Sudeste Asiático. Ela cresce bem em ambientes úmidos e prefere luz e rega moderadas."
     },
     "ar": {
-      "common_name": "أديلونيما واليس",
-      "description": "أديلونيما واليس نبات استوائي من الفصيلة القلقاسية. ينمو طبيعيًا في الغابات الرطبة. كنبات منزلي يحتاج إلى ضوء غير مباشر وري منتظم."
+      "common_name": "أديلونما ووليسي",
+      "description": "أديلونما ووليسي هي نبات استوائي من جنوب شرق آسيا. تنمو في بيئات رطبة وتفضل الضوء والري المعتدل."
     },
     "hi": {
-      "common_name": "एडेलोनेमा वालिसी",
-      "description": "एडेलोनेमा वालिसी एक उष्णकटिबंधीय एरॉयड पौधा है। यह प्राकृतिक रूप से नम जंगलों में उगता है। घर के अंदर इसे मध्यम रोशनी और नियमित पानी की आवश्यकता होती है।"
+      "common_name": "वॉलिस का एडेलोनिमा",
+      "description": "एडेलोनिमा वालिसी एक उष्णकटिबंधीय पौधा है जो दक्षिण-पूर्व एशिया का मूल निवासी है। यह नम वातावरण में बढ़ता है और मध्यम प्रकाश और पानी देना पसंद करता है।"
     },
     "zh": {
-      "common_name": "瓦利斯阿德罗内马",
-      "description": "Adelonema wallisii 是一种热带天南星科植物。原生于湿润的雨林环境。室内栽培时需散射光和均匀浇水。"
+      "common_name": "瓦利斯亚德罗内马",
+      "description": "Adelonema wallisii 是一种原产于东南亚的热带植物。它喜欢湿润的环境，适合中等光照和浇水。"
     },
     "ja": {
-      "common_name": "アデロネマ・ワリシー",
-      "description": "アデロネマ・ワリシーは熱帯性のサトイモ科植物です。湿度の高い森林に自生します。室内では間接光と安定した水やりを好みます。"
+      "common_name": "ワリスアデロネマ",
+      "description": "Adelonema wallisii は東南アジア原産の熱帯植物で、湿気の多い環境を好み、中程度の光と水やりを好みます。"
     },
     "ko": {
-      "common_name": "아델로네마 왈리시",
-      "description": "아델로네마 왈리시는 열대성 천남성과 식물입니다. 습한 숲 환경에서 자랍니다. 실내에서는 간접광과 규칙적인 물주기가 필요합니다."
+      "common_name": "왈리스 아델로네마",
+      "description": "Adelonema wallisii는 동남아시아 원산의 열대 식물입니다. 습한 환경에서 잘 자라며, 중간 정도의 빛과 물주기를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/science/collections-and-resources/collections/herbarium",
-      "https://www.aroid.org/genera/adelonema.php",
-      "https://plants.ces.ncsu.edu/plants/category/houseplants/"
+      "https://www.rhs.org.uk/advice/profile?pid=879",
+      "https://www.bhg.com/gardening/pests-insects-diseases/indoor-plants-advice/"
     ]
   }
 }

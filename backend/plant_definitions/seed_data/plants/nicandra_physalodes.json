@@ -1,18 +1,18 @@
 {
   "external_id": "nicandra_physalodes",
-  "name": "Shoofly Plant",
+  "name": "Shoo Fly Plant",
   "latin": "Nicandra physalodes",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "nicandra_physalodes.jpg",
   "image_thumb": "nicandra_physalodes.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "किट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwy",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 수준의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Shoofly Plant",
-      "description": "Nicandra physalodes is a fast-growing herbaceous annual with attractive bell-shaped flowers. It is often used in gardens for its unique appearance and easy care."
+      "common_name": "Shoo Fly Plant",
+      "description": "Nicandra physalodes, known as the Shoo Fly Plant, is a fast-growing, ornamental annual. It produces purple flowers and is toxic to pets."
     },
     "pl": {
-      "common_name": "Roślina szuflowa",
-      "description": "Nicandra physalodes to szybko rosnąca roślina jednoroczna z atrakcyjnymi dzwonkowatymi kwiatami. Jest często używana w ogrodach ze względu na swój unikalny wygląd i łatwą pielęgnację."
+      "common_name": "Roślina odstraszająca muchy",
+      "description": "Nicandra physalodes, znana jako roślina odstraszająca muchy, to szybko rosnąca roślina ozdobna. Produkuje fioletowe kwiaty i jest toksyczna dla zwierząt."
     },
     "de": {
-      "common_name": "Schuhaus Pflanze",
-      "description": "Nicandra physalodes ist eine schnell wachsende einjährige Pflanze mit attraktiven glockenförmigen Blüten. Sie wird oft in Gärten für ihr einzigartiges Aussehen und ihre einfache Pflege verwendet."
+      "common_name": "Fliegenabwehrpflanze",
+      "description": "Nicandra physalodes, bekannt als Fliegenabwehrpflanze, ist eine schnell wachsende, zierliche einjährige Pflanze. Sie produziert lila Blumen und ist für Haustiere giftig."
     },
     "fr": {
-      "common_name": "Plante Shoofly",
-      "description": "Nicandra physalodes est une plante annuelle à croissance rapide avec des fleurs en forme de cloche attrayantes. Elle est souvent utilisée dans les jardins pour son apparence unique et sa facilité d'entretien."
+      "common_name": "Plante chasse-mouches",
+      "description": "Nicandra physalodes, connue sous le nom de plante chasse-mouches, est une plante ornementale à croissance rapide. Elle produit des fleurs violettes et est toxique pour les animaux."
     },
     "it": {
-      "common_name": "Pianta Shoofly",
-      "description": "Nicandra physalodes è una pianta annuale a crescita rapida con fiori a forma di campana attraenti. Viene spesso utilizzata nei giardini per il suo aspetto unico e la cura facile."
+      "common_name": "Pianta scaccia mosche",
+      "description": "Nicandra physalodes, conosciuta come pianta scaccia mosche, è una pianta ornamentale a crescita rapida. Produce fiori viola ed è tossica per gli animali domestici."
     },
     "es": {
-      "common_name": "Planta Shoofly",
-      "description": "Nicandra physalodes es una planta anual de rápido crecimiento con flores atractivas en forma de campana. A menudo se usa en jardines debido a su apariencia única y fácil cuidado."
+      "common_name": "Planta mata moscas",
+      "description": "Nicandra physalodes, conocida como planta mata moscas, es una planta ornamental de rápido crecimiento. Produce flores moradas y es tóxica para las mascotas."
     },
     "pt": {
-      "common_name": "Planta Shoofly",
-      "description": "Nicandra physalodes é uma planta anual de crescimento rápido com flores em forma de sino atraentes. Muitas vezes é usada em jardins por sua aparência única e fácil cuidado."
+      "common_name": "Planta mata moscas",
+      "description": "Nicandra physalodes, conhecida como planta mata moscas, é uma planta ornamental de crescimento rápido. Produz flores roxas e é tóxica para animais de estimação."
     },
     "ar": {
-      "common_name": "نبات شو فلاي",
-      "description": "نبات Nicandra physalodes هو نبات سنوي سريع النمو يتميز بزهور على شكل جرس جذابة. غالبًا ما يستخدم في الحدائق بسبب مظهره الفريد وسهولة العناية به."
+      "common_name": "نبات طارد الذباب",
+      "description": "Nicandra physalodes، المعروفة باسم نبات طارد الذباب، هي نبات زينة سريع النمو. تنتج زهورًا بنفسجية وهي سامة للحيوانات الأليفة."
     },
     "hi": {
-      "common_name": "शूफ्लाय पौधा",
-      "description": "निकांद्रा फिजालोड्स एक तेजी से बढ़ने वाला वार्षिक पौधा है जिसमें आकर्षक घंटी के आकार के फूल होते हैं। इसे बगीचों में अपनी अद्वितीय उपस्थिति और आसान देखभाल के लिए उपयोग किया जाता है।"
+      "common_name": "मच्छर भगाने वाला पौधा",
+      "description": "Nicandra physalodes, जिसे मच्छर भगाने वाला पौधा कहा जाता है, एक तेज़ी से बढ़ने वाला सजावटी पौधा है। यह बैंगनी रंग के फूल उगाता है और पालतू जानवरों के लिए विषैला होता है।"
     },
     "zh": {
-      "common_name": "Shoofly植物",
-      "description": "Nicandra physalodes是一种生长迅速的年生植物，具有吸引人的钟形花朵。它因其独特的外观和易于护理而常用于花园中。"
+      "common_name": "驱蝇植物",
+      "description": "Nicandra physalodes，通常被称为驱蝇植物，是一种快速生长的观赏性一年生植物。它会开紫色花，对宠物有毒。"
     },
     "ja": {
-      "common_name": "シューフライプラント",
-      "description": "Nicandra physalodesは、魅力的な鐘形の花を持つ速く成長する一年生植物です。その独特な外観と簡単な手入れで、庭園でよく使用されます。"
+      "common_name": "ショーフライプラント",
+      "description": "Nicandra physalodesはショーフライプラントとして知られ、急速に成長する観賞用一年草です。紫色の花を咲かせ、ペットに有毒です。"
     },
     "ko": {
-      "common_name": "슈플라이 식물",
-      "description": "Nicandra physalodes는 매력적인 종 모양의 꽃을 가진 빠르게 자라는 일년생 식물입니다. 독특한 외관과 쉬운 관리로 정원에서 자주 사용됩니다."
+      "common_name": "파리 쫓는 식물",
+      "description": "Nicandra physalodes, 파리 쫓는 식물로 알려진 이 식물은 빠르게 자라는 관상용 일년생 식물입니다. 보라색 꽃을 피우며 애완동물에게 독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/nicandra-physalodes",
-      "https://www.gardenia.net/plant/nicandra-physalodes"
+      "https://www.gardeningknowhow.com/ornamental/flowers/shoo-fly-plant.htm"
     ]
   }
 }

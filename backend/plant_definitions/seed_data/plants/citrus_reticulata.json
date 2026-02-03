@@ -1,6 +1,6 @@
 {
   "external_id": "citrus_reticulata",
-  "name": "Mandarin Orange",
+  "name": "Mandarin orange",
   "latin": "Citrus reticulata",
   "sun": "high",
   "water": "medium",
@@ -10,15 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "citrus"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "citrus_reticulata.jpg",
@@ -36,10 +35,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ja": "日なた",
+          "ko": "양지"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained acidic",
-          "pl": "Kwaśna przepuszczalna",
-          "de": "Sauer durchlässig",
-          "fr": "Acide drainé",
-          "it": "Acido drenante",
-          "es": "Ácido drenante",
-          "pt": "Ácido drenado",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性排水好",
-          "ja": "酸性水はけ",
-          "ko": "산성 배수토"
+          "en": "Well-draining",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "정기적 물주기"
+          "en": "Even moisture",
+          "pl": "Umiark. wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, pas détrempé",
+          "it": "Umida, non fradicia",
+          "es": "Húmedo, no encharc.",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर पानी न भरे",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "촉촉하게"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Pflege",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "ふつう",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm conditions",
-          "pl": "Ciepłe warunki",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म वातावरण",
-          "zh": "温暖环境",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "中湿度",
-          "ko": "보통 습도"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Mehr Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità più alta",
+          "es": "Humedad alta",
+          "pt": "Umidade mais alta",
+          "ar": "رطوبة أعلى",
+          "hi": "उच्च आर्द्रता",
+          "zh": "较高湿度",
+          "ja": "やや高湿度",
+          "ko": "다소 높은 습도"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zw.",
+          "de": "Für Tiere giftig",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유해"
         }
       }
     },
@@ -162,76 +161,117 @@
       "value": {
         "text": {
           "en": "Small tree",
-          "pl": "Małe drzewo",
+          "pl": "Małe drzewko",
           "de": "Kleiner Baum",
           "fr": "Petit arbre",
-          "it": "Piccolo albero",
-          "es": "Árbol pequeño",
+          "it": "Alberello",
+          "es": "Arbolito",
           "pt": "Árvore pequena",
           "ar": "شجرة صغيرة",
           "hi": "छोटा पेड़",
           "zh": "小乔木",
-          "ja": "小高木",
-          "ko": "소형 나무"
+          "ja": "小さな樹",
+          "ko": "작은 나무"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No soggy soil",
+          "pl": "Bez przelania",
+          "de": "Keine Staunässe",
+          "fr": "Pas détrempé",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Sem encharcar",
+          "ar": "تجنب الإغراق",
+          "hi": "अधिक पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿に注意",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, spider mites",
+          "pl": "Tarczniki, przędzi.",
+          "de": "Schildläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "حشرة قشرية وعناكب",
+          "hi": "स्केल, स्पाइडर माइट",
+          "zh": "介壳虫/红蜘蛛",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Mandarin Orange",
-      "description": "Citrus reticulata is a small evergreen citrus tree valued for its sweet, easy-to-peel fruit. Indoors it requires very bright light, regular watering, and periodic feeding to fruit well."
+      "common_name": "Mandarin orange",
+      "description": "Citrus reticulata is a small citrus tree grown in containers for fragrant flowers and sweet fruit. Indoors it needs very bright light, evenly moist but well-drained soil, and regular feeding during active growth."
     },
     "pl": {
       "common_name": "Mandarynka",
-      "description": "Citrus reticulata to niewielkie, zimozielone drzewo cytrusowe o słodkich owocach. W uprawie domowej wymaga dużo światła, regularnego podlewania i nawożenia."
+      "description": "Citrus reticulata to niewielkie drzewko cytrusowe uprawiane w donicy dla pachnących kwiatów i owoców. W domu potrzebuje bardzo jasnego stanowiska, przepuszczalnego podłoża utrzymywanego lekko wilgotnego oraz nawożenia w okresie wzrostu."
     },
     "de": {
       "common_name": "Mandarine",
-      "description": "Citrus reticulata ist ein kleiner immergrüner Zitrusbaum mit süßen Früchten. In Innenräumen benötigt er viel Licht, gleichmäßiges Gießen und regelmäßige Düngung."
+      "description": "Citrus reticulata ist ein kleiner Zitrusbaum für Kübelkultur mit duftenden Blüten und essbaren Früchten. In der Wohnung braucht er sehr viel Licht, gleichmäßige Feuchte ohne Staunässe und regelmäßige Düngung während des Wachstums."
     },
     "fr": {
       "common_name": "Mandarinier",
-      "description": "Citrus reticulata est un petit agrume persistant apprécié pour ses fruits sucrés. En intérieur, il demande une lumière intense, un arrosage régulier et de l’engrais."
+      "description": "Citrus reticulata est un petit agrume cultivé en pot pour ses fleurs parfumées et ses fruits. En intérieur, il demande une lumière très vive, un substrat drainant maintenu légèrement humide et des apports d’engrais en période de croissance."
     },
     "it": {
-      "common_name": "Mandarancio",
-      "description": "Citrus reticulata è un piccolo agrume sempreverde dai frutti dolci. Coltivato in casa necessita di molta luce, annaffiature regolari e concimazioni."
+      "common_name": "Mandarino",
+      "description": "Citrus reticulata è un piccolo agrume coltivato in vaso per fiori profumati e frutti. In casa richiede luce molto intensa, terriccio ben drenante mantenuto leggermente umido e concimazioni regolari durante la crescita."
     },
     "es": {
       "common_name": "Mandarino",
-      "description": "Citrus reticulata es un cítrico pequeño de hojas perennes y frutos dulces. En interior necesita sol directo, riego regular y fertilización periódica."
+      "description": "Citrus reticulata es un cítrico pequeño cultivado en maceta por sus flores aromáticas y frutos. En interior necesita mucha luz, sustrato drenante con humedad uniforme y fertilización regular en época de crecimiento."
     },
     "pt": {
-      "common_name": "Tangerineira",
-      "description": "Citrus reticulata é uma pequena árvore cítrica perene com frutos doces. Em ambientes internos requer muita luz, regas regulares e adubação."
+      "common_name": "Mandarineira",
+      "description": "Citrus reticulata é uma pequena árvore cítrica cultivada em vaso por flores perfumadas e frutos. Em interior, precisa de muita luz, substrato bem drenado levemente úmido e adubação regular durante o crescimento."
     },
     "ar": {
       "common_name": "شجرة اليوسفي",
-      "description": "Citrus reticulata شجرة حمضيات صغيرة دائمة الخضرة ذات ثمار حلوة. عند زراعتها داخليًا تحتاج إلى ضوء قوي وري منتظم وتسميد."
+      "description": "Citrus reticulata شجرة حمضيات صغيرة يمكن تربيتها في أصيص لإزهارها العطري وثمارها. داخل المنزل تحتاج إلى ضوء قوي جدًا وتربة جيدة الصرف تبقى رطبة قليلًا مع تسميد منتظم أثناء النمو."
     },
     "hi": {
-      "common_name": "संतरा मंडारिन",
-      "description": "Citrus reticulata एक छोटा सदाबहार खट्टे फल का पेड़ है। घर के अंदर उगाने पर इसे तेज धूप, नियमित पानी और खाद की आवश्यकता होती है।"
+      "common_name": "संतरा (मंदारिन)",
+      "description": "Citrus reticulata एक छोटा सिट्रस पेड़ है जिसे गमले में सुगंधित फूलों और फलों के लिए उगाया जाता है। घर के अंदर इसे बहुत तेज रोशनी, अच्छी जल-निकासी वाली हल्की नम मिट्टी और बढ़वार के मौसम में नियमित खाद चाहिए।"
     },
     "zh": {
-      "common_name": "橘树",
-      "description": "Citrus reticulata 是一种小型常绿柑橘树，以甜果著称。室内养护需要充足光照、定期浇水和施肥。"
+      "common_name": "柑橘（橘子树）",
+      "description": "Citrus reticulata 是可盆栽的小型柑橘树，开花有香味并可结果。室内养护需要非常明亮的光照、排水良好的微湿基质，并在生长期定期施肥。"
     },
     "ja": {
-      "common_name": "マンダリンオレンジ",
-      "description": "Citrus reticulata は甘い果実をつける小型の常緑柑橘樹です。室内では強い光と定期的な水やり、施肥が必要です。"
+      "common_name": "マンダリン（みかん）",
+      "description": "Citrus reticulata は鉢植えで育てられる小型の柑橘で、香りのよい花と果実が特徴です。室内では強い光、排水のよい用土をやや湿り気に保つこと、生育期の定期的な施肥が必要です。"
     },
     "ko": {
       "common_name": "만다린 오렌지",
-      "description": "Citrus reticulata는 달콤한 열매를 맺는 작은 상록 감귤나무입니다. 실내 재배 시 강한 빛과 규칙적인 물주기, 비료가 필요합니다."
+      "description": "Citrus reticulata 는 향기로운 꽃과 열매를 위해 화분에서 키우는 작은 감귤 나무입니다. 실내에서는 매우 밝은 빛, 배수 좋은 흙의 고른 수분 유지, 생장기 동안의 정기적인 비료가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/citrus/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/HS195",
-      "https://www.britannica.com/plant/mandarin-orange"
+      "https://hort.extension.wisc.edu/articles/indoor-citrus/",
+      "https://monroe.cce.cornell.edu/resources/growing-dwarf-citrus",
+      "https://www.rhs.org.uk/fruit/citrus/grow-your-own",
+      "https://www.rhs.org.uk/problems/citrus",
+      "https://ucanr.edu/node/129790/printable/print",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/orange"
     ]
   }
 }

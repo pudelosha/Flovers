@@ -1,6 +1,6 @@
 {
-  "external_id": "adiantum_capillus_veneris",
-  "name": "Maidenhair Fern",
+  "external_id": "adiantum_capillus-veneris",
+  "name": "Maidenhair fern",
   "latin": "Adiantum capillus-veneris",
   "sun": "medium",
   "water": "high",
@@ -11,17 +11,16 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "fern"
   ],
   "water_required": true,
-  "water_interval_days": 4,
-  "moisture_required": true,
-  "moisture_interval_days": 2,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "adiantum_capillus_veneris.jpg",
   "image_thumb": "adiantum_capillus_veneris.jpg",
   "traits": [
@@ -30,14 +29,14 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumiere indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist rich soil",
-          "pl": "Wilgotna żyzna",
-          "de": "Feuchte Erde",
-          "fr": "Sol riche humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम समृद्ध मिट्टी",
-          "zh": "湿润肥沃土",
-          "ja": "湿った肥沃土",
-          "ko": "습한 비옥토"
+          "en": "Rich, well-drained",
+          "pl": "Zyzna, przepuszczalna",
+          "de": "Nahrhaft, drainiert",
+          "fr": "Riche, draine",
+          "it": "Ricco, drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "تربة غنية وصرف جيد",
+          "hi": "समृद्ध, जलनिकासी",
+          "zh": "富有机质排水好",
+          "ja": "有機質で排水良い",
+          "ko": "유기질, 배수 좋게"
         }
       }
     },
@@ -68,17 +67,17 @@
       "value": {
         "text": {
           "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "हमेशा नम",
-          "zh": "保持湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "pl": "Stale wilgotne podloze",
+          "de": "Gleichmaessig feucht",
+          "fr": "Toujours leger humide",
+          "it": "Sempre legger umido",
+          "es": "Siempre ligeramente humedo",
+          "pt": "Sempre levemente umido",
+          "ar": "حافظ على رطوبة دائمة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Sensitive care",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Délicate",
-          "it": "Delicata",
-          "es": "Delicada",
-          "pt": "Delicada",
-          "ar": "حساسة",
-          "hi": "संवेदनशील",
-          "zh": "较难养护",
-          "ja": "管理が難しい",
-          "ko": "관리 어려움"
+          "en": "Fussy indoors",
+          "pl": "Wymagajaca w domu",
+          "de": "Anspruchsvoll drinnen",
+          "fr": "Delicate en interieur",
+          "it": "Delicata in casa",
+          "es": "Delicada en interior",
+          "pt": "Delicada em casa",
+          "ar": "حساسة داخل المنزل",
+          "hi": "घर में नाजुक",
+          "zh": "室内较挑剔",
+          "ja": "室内では繊細",
+          "ko": "실내에선 까다로움"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C ideal",
+          "pl": "Idealnie 18-24°C",
+          "de": "Ideal 18-24°C",
+          "fr": "Ideal 18-24°C",
+          "it": "Ideale 18-24°C",
+          "es": "Ideal 18-24°C",
+          "pt": "Ideal 18-24°C",
+          "ar": "مثالي 18-24°م",
+          "hi": "18-24°C उपयुक्त",
+          "zh": "18-24°C 适宜",
+          "ja": "18-24°Cが適温",
+          "ko": "18-24°C 적정"
         }
       }
     },
@@ -125,14 +124,14 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgotność",
+          "pl": "Wysoka wilgotnosc",
           "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
+          "fr": "Forte humidite",
+          "it": "Alta umidita",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
+          "hi": "उच्च नमी",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Pet-safe",
+          "pl": "Bezpieczna dla zwierzat",
+          "de": "Haustierfreundlich",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica animali",
+          "es": "No toxica mascotas",
+          "pt": "Nao toxica pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू-सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -162,77 +161,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping fern",
-          "pl": "Paprotka kępowa",
-          "de": "Horstbildend",
-          "fr": "Fougère en touffe",
-          "it": "Felce cespitosa",
-          "es": "Helecho en mata",
-          "pt": "Samambaia em touceira",
-          "ar": "سرخس متكتل",
-          "hi": "गुच्छेदार फर्न",
-          "zh": "丛生蕨类",
-          "ja": "株立ちシダ",
-          "ko": "군생 양치"
+          "en": "Slow, clumping",
+          "pl": "Wolny, kepowy",
+          "de": "Langsam, horstig",
+          "fr": "Lente, en touffe",
+          "it": "Lenta, cespitosa",
+          "es": "Lenta, en mata",
+          "pt": "Lento, entouceirado",
+          "ar": "بطيء ومتكتل",
+          "hi": "धीमी, गुच्छेदार",
+          "zh": "生长慢，丛生",
+          "ja": "成長ゆっくり株立ち",
+          "ko": "느리게 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Hates drying out",
+          "pl": "Nie znosi przesuszenia",
+          "de": "Nicht austrocknen",
+          "fr": "Craint la secheresse",
+          "it": "Odia seccarsi",
+          "es": "No tolera sequia",
+          "pt": "Nao tolera secura",
+          "ar": "لا يحب الجفاف",
+          "hi": "सूखना पसंद नहीं",
+          "zh": "怕干燥",
+          "ja": "乾燥に弱い",
+          "ko": "건조에 약함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, welnowce",
+          "de": "Schild- und Wolllause",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية وبق دقيقي",
+          "hi": "स्केल, मिलीबग",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레, 깍지진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Maidenhair Fern",
-      "description": "Adiantum capillus-veneris is a delicate fern with fine, fan-shaped leaflets. It naturally grows in moist, shaded habitats and requires consistent humidity indoors."
+      "common_name": "Maidenhair fern",
+      "description": "A delicate fern with fan-shaped leaflets on dark wiry stems. It prefers bright, indirect light, high humidity, and soil that stays evenly moist. Avoid drying out or direct sun, which can cause rapid leaf drop."
     },
     "pl": {
-      "common_name": "Zanokcica włosowata",
-      "description": "Adiantum capillus-veneris to delikatna paproć o wachlarzowatych listkach. Wymaga stałej wilgotności i jasnego, rozproszonego światła w domu."
+      "common_name": "Adiantum (paproć włos Wenery)",
+      "description": "Delikatna paproć o wachlarzykowatych listkach na ciemnych ogonkach. Lubi jasne, rozproszone światło, wysoką wilgotność i stale lekko wilgotne podłoże. Nie dopuszczaj do przesuszenia ani ostrego słońca."
     },
     "de": {
       "common_name": "Venushaarfarn",
-      "description": "Adiantum capillus-veneris ist ein zarter Farn mit feinen Fiederblättern. Er bevorzugt feuchte Luft und gleichmäßig feuchten Boden im Innenbereich."
+      "description": "Ein zarter Farn mit fächerförmigen Fiedern an dunklen, drahtigen Stielen. Er mag helles, indirektes Licht, hohe Luftfeuchte und gleichmäßig feuchtes Substrat. Direkte Sonne und Austrocknen führen schnell zu Blattverlust."
     },
     "fr": {
-      "common_name": "Capillaire de Montpellier",
-      "description": "Adiantum capillus-veneris est une fougère fine aux frondes légères. Elle pousse naturellement en milieux humides et ombragés et demande une forte humidité."
+      "common_name": "Fougère capillaire",
+      "description": "Fougère délicate aux segments en éventail sur des tiges sombres et fines. Elle préfère une lumière vive mais indirecte, une forte humidité et un substrat toujours légèrement humide. Évitez le soleil direct et le dessèchement."
     },
     "it": {
       "common_name": "Capelvenere",
-      "description": "Adiantum capillus-veneris è una felce delicata con foglie sottili. Necessita di terreno sempre umido e aria molto umida in casa."
+      "description": "Felce delicata con foglioline a ventaglio su steli scuri e sottili. Preferisce luce intensa ma indiretta, alta umidità e terreno costantemente umido ma drenante. Evita sole diretto e periodi di secchezza."
     },
     "es": {
       "common_name": "Culantrillo de pozo",
-      "description": "Adiantum capillus-veneris es un helecho delicado de hojas finas. Requiere humedad alta y riego frecuente en interiores."
+      "description": "Helecho delicado con folíolos en forma de abanico y tallos oscuros. Prefiere luz brillante e indirecta, humedad alta y sustrato uniformemente húmedo. Evita el sol directo y que la maceta se seque."
     },
     "pt": {
       "common_name": "Avenca",
-      "description": "Adiantum capillus-veneris é uma samambaia delicada de folhas finas. Prefere ambientes úmidos e solo constantemente úmido."
+      "description": "Samambaia delicada com folíolos em leque e hastes escuras. Prefere luz brilhante indireta, alta umidade e substrato sempre levemente úmido. Evite sol direto e deixar o vaso secar."
     },
     "ar": {
       "common_name": "سرخس شعر فينوس",
-      "description": "نبات Adiantum capillus-veneris سرخس رقيق بأوراق ناعمة. يحتاج إلى رطوبة عالية وتربة رطبة باستمرار داخل المنزل."
+      "description": "سرخس رقيق بأوراق مروحية على سيقان داكنة رفيعة. يفضل ضوءًا ساطعًا غير مباشر ورطوبة عالية وتربة تبقى رطبة بشكل متوازن. تجنب الجفاف والشمس المباشرة."
     },
     "hi": {
-      "common_name": "मैडनहेयर फर्न",
-      "description": "Adiantum capillus-veneris एक नाजुक फर्न है जिसकी पत्तियाँ पतली होती हैं। इसे घर के अंदर अधिक नमी और नियमित पानी की आवश्यकता होती है।"
+      "common_name": "मेडनहेयर फ़र्न",
+      "description": "यह नाज़ुक फ़र्न काले पतले डंठलों पर पंखे जैसे पत्तों के लिए जाना जाता है। इसे तेज़ अप्रत्यक्ष रोशनी, अधिक नमी और लगातार नम लेकिन जलनिकासी वाली मिट्टी चाहिए। मिट्टी सूखने या सीधी धूप से पत्ते झड़ सकते हैं।"
     },
     "zh": {
       "common_name": "铁线蕨",
-      "description": "Adiantum capillus-veneris 是一种叶片细小的蕨类植物。它喜欢湿润环境，在室内需要高湿度和均匀浇水。"
+      "description": "叶片细密、扇形小叶，叶柄细黑。喜欢明亮散射光、高湿度，以及始终均匀湿润但排水良好的基质。避免强烈直射光和盆土干透。"
     },
     "ja": {
-      "common_name": "ホウライシダ",
-      "description": "Adiantum capillus-veneris は繊細な葉を持つシダ植物です。室内では高い湿度と一定の水分が必要です。"
+      "common_name": "アジアンタム",
+      "description": "黒い細い茎に扇形の小葉がつく繊細なシダです。明るい間接光と高い湿度、均一に湿った用土を好みます。乾燥や直射日光は落葉の原因になります。"
     },
     "ko": {
-      "common_name": "아디안텀",
-      "description": "Adiantum capillus-veneris 는 잎이 섬세한 양치식물입니다. 실내에서는 높은 습도와 규칙적인 물주기가 필요합니다."
+      "common_name": "아디안텀(메이든헤어 고사리)",
+      "description": "검은 가는 줄기에 부채 모양의 잎이 달리는 섬세한 고사리입니다. 밝은 간접광, 높은 습도, 그리고 항상 촉촉하지만 배수가 좋은 흙을 선호합니다. 건조와 직사광선을 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/adiantum-capillus-veneris/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a213",
-      "https://plants.ces.ncsu.edu/plants/adiantum-capillus-veneris/"
+      "https://www.rhs.org.uk/plants/23998/adiantum-capillus-veneris/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c345",
+      "https://www.thespruce.com/grow-adiantum-ferns-1902722",
+      "https://www.vpisglobal.com/wp-content/uploads/2023/08/Pet-safe-plants-v2-with-logo.pdf"
     ]
   }
 }

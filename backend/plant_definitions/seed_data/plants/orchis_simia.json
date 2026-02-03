@@ -7,14 +7,14 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "acidic"
+    "orchid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Średnie nasłonecznienie",
-          "de": "Mittlere Sonne",
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम धूप",
-          "zh": "中等阳光",
-          "ja": "中くらいの太陽光",
-          "ko": "중간 햇빛"
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic soil",
-          "pl": "Kwasna gleba",
-          "de": "Saure Boden",
-          "fr": "Sol acide",
-          "it": "Suolo acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "क्षारीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土壌",
-          "ko": "산성 토양"
+          "en": "Orchid mix",
+          "pl": "Mieszanka dla orchidei",
+          "de": "Orchideenmischung",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "خليط للزهور الأوركيد",
+          "hi": "आर्किड मिश्रण",
+          "zh": "兰花土壤",
+          "ja": "蘭花の土",
+          "ko": "난초 혼합"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnia ilość wody",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "مياه متوسطة",
-          "hi": "मध्यम पानी",
-          "zh": "中等水量",
-          "ja": "中くらいの水",
-          "ko": "중간 물"
+          "en": "Water regularly",
+          "pl": "Podlewać regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित रूप से पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium difficulty",
-          "pl": "Średnia trudność",
-          "de": "Mittlere Schwierigkeit",
-          "fr": "Difficulté moyenne",
-          "it": "Difficoltà media",
-          "es": "Dificultad media",
-          "pt": "Dificuldade média",
-          "ar": "صعوبة متوسطة",
-          "hi": "मध्यम कठिनाई",
-          "zh": "中等难度",
-          "ja": "中程度の難易度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -123,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中くらいの湿度",
-          "ko": "중간 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -150,10 +150,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "अ विषैला",
           "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "무독성"
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Up to 30 cm",
-          "pl": "Do 30 cm",
-          "de": "Bis zu 30 cm",
-          "fr": "Jusqu'à 30 cm",
-          "it": "Fino a 30 cm",
-          "es": "Hasta 30 cm",
-          "pt": "Até 30 cm",
-          "ar": "حتى 30 سم",
-          "hi": "30 सेंटीमीटर तक",
-          "zh": "最多30厘米",
-          "ja": "最大30cm",
-          "ko": "최대 30cm"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفرत पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +218,57 @@
   "translations": {
     "en": {
       "common_name": "Monkey Orchid",
-      "description": "The Monkey Orchid, also known as Orchis simia, is native to Southern Europe. It is characterized by unique flowers resembling monkeys."
+      "description": "Orchis simia is an orchid species known for its unique flowers resembling monkeys. It prefers medium light and high humidity, with a slow growth rate."
     },
     "pl": {
       "common_name": "Orchidea małpia",
-      "description": "Orchidea małpia, znana również jako Orchis simia, pochodzi z południowej Europy. Charakteryzuje się kwiatami przypominającymi małpy."
+      "description": "Orchis simia to gatunek storczyka o unikalnych kwiatach przypominających małpy. Wymaga średniego oświetlenia i wysokiej wilgotności, rośnie powoli."
     },
     "de": {
       "common_name": "Affen-Orchidee",
-      "description": "Die Affen-Orchidee, auch bekannt als Orchis simia, ist in Südeuropa beheimatet. Ihre Blumen ähneln kleinen Affen."
+      "description": "Orchis simia ist eine Orchideenart, die für ihre einzigartigen, affenähnlichen Blüten bekannt ist. Sie bevorzugt mittleres Licht und hohe Luftfeuchtigkeit und wächst langsam."
     },
     "fr": {
-      "common_name": "Orchidée Singe",
-      "description": "L'Orchidée Singe, également connue sous le nom d'Orchis simia, est originaire du sud de l'Europe. Ses fleurs ressemblent à de petits singes."
+      "common_name": "Orchidée singe",
+      "description": "Orchis simia est une espèce d'orchidée connue pour ses fleurs uniques ressemblant à des singes. Elle préfère la lumière moyenne et une humidité élevée, avec une croissance lente."
     },
     "it": {
       "common_name": "Orchidea scimmia",
-      "description": "L'Orchidea scimmia, conosciuta anche come Orchis simia, è originaria dell'Europa meridionale. I suoi fiori assomigliano a piccole scimmie."
+      "description": "Orchis simia è una specie di orchidea conosciuta per i suoi fiori unici che somigliano a delle scimmie. Preferisce luce media e alta umidità, con una crescita lenta."
     },
     "es": {
-      "common_name": "Orquídea Mono",
-      "description": "La Orquídea Mono, también conocida como Orchis simia, es originaria del sur de Europa. Sus flores se asemejan a pequeños monos."
+      "common_name": "Orquídea mono",
+      "description": "Orchis simia es una especie de orquídea conocida por sus flores únicas que se asemejan a monos. Prefiere luz media y alta humedad, con un crecimiento lento."
     },
     "pt": {
-      "common_name": "Orquídea Macaco",
-      "description": "A Orquídea Macaco, também conhecida como Orchis simia, é nativa do sul da Europa. Suas flores se parecem com pequenos macacos."
+      "common_name": "Orquídea macaco",
+      "description": "Orchis simia é uma espécie de orquídea conhecida por suas flores únicas que se assemelham a macacos. Prefere luz média e alta umidade, com um crescimento lento."
     },
     "ar": {
       "common_name": "زهرة الأوركيد القرد",
-      "description": "زهرة الأوركيد القرد، المعروفة أيضًا باسم Orchis simia، موطنها جنوب أوروبا. تتميز بزهورها التي تشبه القردة الصغيرة."
+      "description": "Orchis simia هو نوع من الأوركيد المعروف بأزهاره الفريدة التي تشبه القرود. يفضل الضوء المتوسط والرطوبة العالية، مع نمو بطيء."
     },
     "hi": {
-      "common_name": "बंदर ऑर्किड",
-      "description": "बंदर ऑर्किड, जिसे Orchis simia भी कहा जाता है, दक्षिणी यूरोप का मूल निवासी है। इसके फूल छोटे बंदरों की तरह दिखते हैं।"
+      "common_name": "मंकी आर्किड",
+      "description": "Orchis simia एक आर्किड प्रजाति है, जिसे इसके अद्वितीय फूलों के लिए जाना जाता है जो बंदरों जैसे होते हैं। यह मध्यम प्रकाश और उच्च आर्द्रता पसंद करता है, और धीमी वृद्धि दर होती है।"
     },
     "zh": {
       "common_name": "猴子兰",
-      "description": "猴子兰，也叫Orchis simia，原产于南欧。它的花朵像小猴子。"
+      "description": "Orchis simia是一种以独特的猴子形状花朵而闻名的兰花。它喜欢中等光照和高湿度，生长缓慢。"
     },
     "ja": {
-      "common_name": "サルラン",
-      "description": "サルラン、またはOrchis simiaは南ヨーロッパ原産です。その花は小さなサルに似ています。"
+      "common_name": "モンキーオーキッド",
+      "description": "Orchis simiaは、猿のような形をしたユニークな花で知られるランの一種です。中程度の光と高湿度を好み、成長が遅いです。"
     },
     "ko": {
       "common_name": "원숭이 난초",
-      "description": "원숭이 난초, 또는 Orchis simia는 남유럽 원산입니다. 이 꽃은 작은 원숭이를 닮았습니다."
+      "description": "Orchis simia는 원숭이 모양의 독특한 꽃으로 유명한 난초 속 식물입니다. 중간 정도의 빛과 높은 습도를 선호하며 성장 속도가 느립니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanikgarten.de/orchis-simia",
-      "https://www.orchidsociety.org/monkey-orchid-care"
+      "https://www.rhs.org.uk/advice/profile?pid=375",
+      "https://www.gardenia.net/plant/Orchis-simia"
     ]
   }
 }

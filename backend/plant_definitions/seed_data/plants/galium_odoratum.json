@@ -2,23 +2,24 @@
   "external_id": "galium_odoratum",
   "name": "Sweet Woodruff",
   "latin": "Galium odoratum",
-  "sun": "low",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "galium_odoratum.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "shade to part shade",
-          "pl": "cień półcień",
-          "de": "Schatten Halbschat",
-          "fr": "ombre mi-ombre",
-          "it": "ombra mezzombra",
-          "es": "sombra parcial",
-          "pt": "sombra parcial",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "阴到半阴",
-          "ja": "日陰 半日陰",
-          "ko": "그늘 반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "moist loamy soil",
-          "pl": "wilgotna glina",
-          "de": "feuchter Lehmboden",
-          "fr": "sol limoneux humide",
-          "it": "terreno umido",
-          "es": "suelo húmedo",
-          "pt": "solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम दोमट मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った壌土",
-          "ko": "습한 양토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep evenly moist",
-          "pl": "utrzymuj wilgoć",
-          "de": "gleichmäßig feucht",
-          "fr": "garder humide",
-          "it": "sempre umido",
-          "es": "mantener húmedo",
-          "pt": "manter úmido",
-          "ar": "حافظ على الرطوبة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "고르게 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy care",
-          "pl": "łatwa pielęgnacja",
-          "de": "pflegeleicht",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "cool temperate",
-          "pl": "umiarkowanie chłodno",
-          "de": "kühl gemäßigt",
-          "fr": "tempéré frais",
-          "it": "temperato fresco",
-          "es": "templado fresco",
-          "pt": "temperado fresco",
-          "ar": "معتدل بارد",
-          "hi": "समशीतोष्ण",
-          "zh": "凉爽温带",
-          "ja": "冷涼温帯",
-          "ko": "서늘한 온대"
+          "en": "15-24°C",
+          "pl": "15-24°C",
+          "de": "15-24°C",
+          "fr": "15-24°C",
+          "it": "15-24°C",
+          "es": "15-24°C",
+          "pt": "15-24°C",
+          "ar": "15-24°C",
+          "hi": "15-24°C",
+          "zh": "15-24°C",
+          "ja": "15-24°C",
+          "ko": "15-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "average humidity",
-          "pl": "średnia wilgotność",
-          "de": "mittlere Feuchte",
-          "fr": "humidité moyenne",
-          "it": "umidità media",
-          "es": "humedad media",
-          "pt": "umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "平均的湿度",
-          "ko": "보통 습도"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高",
+          "ko": "높은"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non toxic",
-          "pl": "nietrująca",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
           "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "low groundcover",
-          "pl": "niska okrywowa",
-          "de": "niedriger Bodendecker",
-          "fr": "couvre-sol bas",
-          "it": "tapizante basso",
-          "es": "cobertura baja",
-          "pt": "forração baixa",
-          "ar": "غطاء أرضي منخفض",
-          "hi": "नीची ग्राउंडकवर",
-          "zh": "低矮地被",
-          "ja": "低い地被植物",
-          "ko": "낮은 지피식물"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Keine Überwässerung",
+          "fr": "Pas de trop d'eau",
+          "it": "Niente eccesso d'acqua",
+          "es": "No sobre regar",
+          "pt": "Não regue demais",
+          "ar": "لا تسقي كثيراً",
+          "hi": "अधिक पानी न डालें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やり禁止",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sweet Woodruff",
-      "description": "Galium odoratum is a low-growing perennial native to European woodlands. It prefers shady locations and consistently moist soil. The plant is known for its fragrant leaves when dried."
+      "description": "Sweet Woodruff is a perennial herb with fragrant, whorled leaves and small white flowers. It thrives in shaded areas with moist, well-drained soil."
     },
     "pl": {
-      "common_name": "Marzanka wonna",
-      "description": "Galium odoratum to niska bylina leśna pochodząca z Europy. Najlepiej rośnie w cieniu i wilgotnej glebie. Liście wydzielają przyjemny zapach po wysuszeniu."
+      "common_name": "Rzeżucha zapachowa",
+      "description": "Rzeżucha zapachowa to roślina wieloletnia o pachnących, okrągłych liściach i małych białych kwiatach. Lubi cieniste miejsca z wilgotną, dobrze przepuszczalną glebą."
     },
     "de": {
       "common_name": "Waldmeister",
-      "description": "Galium odoratum ist eine bodendeckende Staude aus europäischen Wäldern. Sie wächst am besten im Schatten und in gleichmäßig feuchtem Boden. Getrocknete Blätter duften aromatisch."
+      "description": "Waldmeister ist ein mehrjähriges Kraut mit duftenden, wirbelartigen Blättern und kleinen weißen Blüten. Es wächst gut in schattigen, feuchten, gut durchlässigen Böden."
     },
     "fr": {
-      "common_name": "Aspérule odorante",
-      "description": "Galium odoratum est une plante vivace couvre-sol des forêts européennes. Elle apprécie l’ombre et un sol frais et humide. Les feuilles sont parfumées une fois sèches."
+      "common_name": "Muguet odorant",
+      "description": "Le muguet odorant est une plante vivace avec des feuilles parfumées disposées en cercle et de petites fleurs blanches. Elle pousse bien à l'ombre dans des sols humides et bien drainés."
     },
     "it": {
-      "common_name": "Stellina odorosa",
-      "description": "Galium odoratum è una perenne tappezzante originaria dei boschi europei. Predilige ombra e terreno costantemente umido. Le foglie secche sono profumate."
+      "common_name": "Asperula odorosa",
+      "description": "L'Asperula odorosa è una pianta perenne con foglie profumate disposte a corona e piccoli fiori bianchi. Cresce bene in luoghi ombreggiati con terreni umidi e ben drenati."
     },
     "es": {
-      "common_name": "Aspérula olorosa",
-      "description": "Galium odoratum es una planta perenne cubresuelos de bosques europeos. Crece mejor en sombra y suelos húmedos. Sus hojas desprenden aroma al secarse."
+      "common_name": "Galio oloroso",
+      "description": "El galio oloroso es una planta perenne con hojas aromáticas dispuestas en espiral y pequeñas flores blancas. Crece bien en áreas sombreadas con suelos húmedos y bien drenados."
     },
     "pt": {
-      "common_name": "Aspérula-odorífera",
-      "description": "Galium odoratum é uma planta perene de cobertura do solo nativa da Europa. Prefere sombra e solo sempre úmido. As folhas secas são aromáticas."
+      "common_name": "Galium odoratum",
+      "description": "O galium odoratum é uma planta perene com folhas perfumadas dispostas em espiral e pequenas flores brancas. Cresce bem em áreas sombreadas com solo úmido e bem drenado."
     },
     "ar": {
-      "common_name": "غاليوم عطري",
-      "description": "Galium odoratum نبات معمر منخفض من غابات أوروبا. يفضل الظل والتربة الرطبة باستمرار. أوراقه عطرية عند التجفيف."
+      "common_name": "عشب العطر الحلو",
+      "description": "عشب العطر الحلو هو نبات معمر ذو أوراق عطرية مرتبة في دوائر وزهور بيضاء صغيرة. يزدهر في الأماكن المظللة ذات التربة الرطبة جيدة التصريف."
     },
     "hi": {
-      "common_name": "स्वीट वुडरफ",
-      "description": "Galium odoratum यूरोप के वनों का एक नीचा बारहमासी पौधा है। यह छाया और नम मिट्टी पसंद करता है। सूखने पर इसकी पत्तियाँ सुगंधित होती हैं।"
+      "common_name": "मीठा वुड्रफ",
+      "description": "मीठा वुड्रफ एक वार्षिक जड़ी-बूटी है जिसमें सुगंधित, गोलाकार पत्तियाँ और छोटी सफेद फूल होती हैं। यह छायादार क्षेत्रों में अच्छे जल निकासी वाली गीली मिट्टी में बढ़ता है।"
     },
     "zh": {
-      "common_name": "香车叶草",
-      "description": "Galium odoratum 是原产于欧洲林地的多年生地被植物。它喜阴并需要保持土壤湿润。叶片干燥后具有香味。"
+      "common_name": "香木蓝",
+      "description": "香木蓝是一种多年生草本植物，具有芳香的环状叶片和小白花。它喜欢在阴凉的地方生长，土壤湿润且排水良好。"
     },
     "ja": {
-      "common_name": "クルマバソウ",
-      "description": "Galium odoratum はヨーロッパ原産の多年生グランドカバーです。日陰と湿った土壌を好みます。乾燥した葉は香りがあります。"
+      "common_name": "甘草草",
+      "description": "甘草草は香り高い円状の葉と小さな白い花を持つ多年生の草です。湿った排水の良い土壌で陰の多い場所で育ちます。"
     },
     "ko": {
-      "common_name": "스위트우드러프",
-      "description": "Galium odoratum는 유럽 숲 원산의 다년생 지피식물입니다. 그늘과 촉촉한 토양을 선호합니다. 잎은 건조되면 향이 납니다."
+      "common_name": "향기 나는 목련풀",
+      "description": "향기 나는 목련풀은 향기로운 원형의 잎과 작은 흰 꽃을 가진 다년생 허브입니다. 그늘진 지역의 습하고 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/galium/odoratum/details",
-      "https://plants.ces.ncsu.edu/plants/galium-odoratum/"
+      "https://www.rhs.org.uk/plants/galium-odoratum",
+      "https://www.bhg.com/gardening/pests-diseases-animals/growing-sweet-woodruff/"
     ]
   }
 }

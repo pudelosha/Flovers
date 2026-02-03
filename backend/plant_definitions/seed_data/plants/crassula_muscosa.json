@@ -1,6 +1,6 @@
 {
   "external_id": "crassula_muscosa",
-  "name": "Watch Chain",
+  "name": "Watch chain plant",
   "latin": "Crassula muscosa",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "crassula_muscosa.jpg",
@@ -32,10 +32,10 @@
           "de": "Helles Licht",
           "fr": "Lumière vive",
           "it": "Luce intensa",
-          "es": "Luz brillante",
+          "es": "Luz intensa",
           "pt": "Luz intensa",
           "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
+          "hi": "तेज रोशनी",
           "zh": "明亮光照",
           "ja": "明るい光",
           "ko": "밝은 빛"
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Fast-draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जल-निकासी मिट्टी",
+          "zh": "排水良好土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage léger",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega esparsa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "물 적게"
+          "en": "Let soil dry",
+          "pl": "Przesuszyć ziemię",
+          "de": "Erst trocknen",
+          "fr": "Laisser sécher",
+          "it": "Lascia asciugare",
+          "es": "Dejar secar",
+          "pt": "Deixar secar",
+          "ar": "اترك التربة تجف",
+          "hi": "मिट्टी सूखने दें",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "마른 뒤 물"
         }
       }
     },
@@ -84,17 +84,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "簡単",
+          "zh": "容易",
+          "ja": "かんたん",
           "ko": "쉬움"
         }
       }
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26°C"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low to normal",
+          "pl": "Niska do normalnej",
+          "de": "Niedrig-normal",
+          "fr": "Faible à normal",
+          "it": "Bassa-normale",
+          "es": "Baja a normal",
+          "pt": "Baixa a normal",
+          "ar": "منخفضة-عادية",
+          "hi": "कम से सामान्य",
+          "zh": "低到正常",
+          "ja": "低め〜普通",
+          "ko": "낮음~보통"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약한 독성"
+          "en": "Potentially toxic",
+          "pl": "Potencjalnie toks.",
+          "de": "Möglich giftig",
+          "fr": "Poss. toxique",
+          "it": "Poss. tossica",
+          "es": "Pos. tóxica",
+          "pt": "Pot. tóxica",
+          "ar": "قد تكون سامة",
+          "hi": "संभावित विषाक्त",
+          "zh": "可能有毒",
+          "ja": "毒性の可能性",
+          "ko": "독성 가능"
         }
       }
     },
@@ -160,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright, compact",
-          "pl": "Pionowy, zwarty",
-          "de": "Aufrecht, kompakt",
-          "fr": "Dressée, compacte",
-          "it": "Eretta, compatta",
-          "es": "Vertical y compacta",
-          "pt": "Ereta e compacta",
-          "ar": "نمو قائم",
-          "hi": "सीधा, सघन",
-          "zh": "直立紧凑",
-          "ja": "直立で密",
-          "ko": "직립형"
+          "en": "Slow, branching",
+          "pl": "Wolny, rozgałęz.",
+          "de": "Langsam, buschig",
+          "fr": "Lent, ramifié",
+          "it": "Lenta, ramifica",
+          "es": "Lento, ramifica",
+          "pt": "Lento, ramifica",
+          "ar": "بطيء ومتفرع",
+          "hi": "धीमी, शाखित",
+          "zh": "生长慢，分枝",
+          "ja": "遅い・分枝",
+          "ko": "느림, 분지"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Skłonna do gnicia",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourriture si trop",
+          "it": "Marciume se troppa",
+          "es": "Pudrición si exceso",
+          "pt": "Apodrece se excesso",
+          "ar": "تعفن مع الإفراط",
+          "hi": "अधिक पानी=सड़न",
+          "zh": "易因积水腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, aphids",
+          "pl": "Wełnowce, mszyce",
+          "de": "Wollläuse, Läuse",
+          "fr": "Cochenilles, puc.",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinillas, pulg.",
+          "pt": "Cochonilhas, pulg.",
+          "ar": "بق دقيقي، منّ",
+          "hi": "मिलीबग, एफिड",
+          "zh": "粉蚧、蚜虫",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레 등"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Watch Chain",
-      "description": "Crassula muscosa is a small succulent with densely stacked, needle-like leaves forming upright columns. It prefers bright light and infrequent watering. Overwatering can easily cause rot."
+      "common_name": "Watch chain plant",
+      "description": "Crassula muscosa is a small, branching succulent from southern Africa with tightly packed, scale-like leaves. Grow it in very bright light and a fast-draining cactus/succulent mix. Water only after the potting mix dries, and feed monthly during the main growing season."
     },
     "pl": {
       "common_name": "Grubosz muscosa",
-      "description": "Crassula muscosa to niewielki sukulent o gęsto ułożonych, igiełkowatych liściach. Wymaga jasnego stanowiska i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia."
+      "description": "Crassula muscosa to niewielki, rozgałęziony sukulent z południowej Afryki o gęsto ułożonych, łuskowatych liściach. Wymaga bardzo jasnego stanowiska i przepuszczalnego podłoża dla kaktusów i sukulentów. Podlewaj dopiero po przeschnięciu ziemi i nawoź raz w miesiącu w okresie wzrostu."
     },
     "de": {
       "common_name": "Uhrenkette",
-      "description": "Crassula muscosa ist eine kompakte Sukkulente mit dicht angeordneten Trieben. Sie benötigt viel Licht und wenig Wasser. Staunässe sollte vermieden werden."
+      "description": "Crassula muscosa ist eine kleine, verzweigte Sukkulente aus dem südlichen Afrika mit dicht anliegenden, schuppenartigen Blättern. Sie braucht sehr helles Licht und ein stark durchlässiges Kakteen-/Sukkulentensubstrat. Erst gießen, wenn das Substrat trocken ist, und in der Wachstumszeit monatlich düngen."
     },
     "fr": {
-      "common_name": "Chaîne de montre",
-      "description": "Crassula muscosa est une plante succulente compacte aux tiges serrées. Elle apprécie une lumière vive et des arrosages espacés. Un excès d’eau provoque la pourriture."
+      "common_name": "Crassule moussu",
+      "description": "Crassula muscosa est une petite succulente ramifiée d’Afrique australe aux feuilles très serrées, en écailles. Installez-la en lumière très vive dans un substrat très drainant pour cactus/succulentes. Arrosez seulement quand le mélange est sec et fertilisez une fois par mois pendant la croissance."
     },
     "it": {
-      "common_name": "Catena d’orologio",
-      "description": "Crassula muscosa è una succulenta compatta con fusti fitti. Predilige luce intensa e annaffiature limitate. L’eccesso d’acqua causa marciumi."
+      "common_name": "Crassula muscosa",
+      "description": "Crassula muscosa è una piccola succulenta ramificata dell’Africa meridionale con foglie fitte e squamose. Vuole luce molto intensa e un terriccio drenante per cactus e succulente. Annaffia solo quando il substrato è asciutto e concima mensilmente nella stagione di crescita."
     },
     "es": {
       "common_name": "Cadena de reloj",
-      "description": "Crassula muscosa es una suculenta compacta de tallos densos. Necesita mucha luz y riegos poco frecuentes. El exceso de agua es perjudicial."
+      "description": "Crassula muscosa es una suculenta pequeña y ramificada del sur de África, con hojas muy apretadas y escamosas. Necesita luz muy intensa y un sustrato muy drenante para cactus y suculentas. Riega solo cuando el sustrato esté seco y fertiliza una vez al mes durante el crecimiento."
     },
     "pt": {
       "common_name": "Corrente-de-relógio",
-      "description": "Crassula muscosa é uma suculenta compacta com hastes densas. Prefere luz intensa e pouca rega. O excesso de água causa apodrecimento."
+      "description": "Crassula muscosa é uma suculenta pequena e ramificada do sul de África, com folhas muito compactas e escamiformes. Prefere luz muito intensa e um substrato bem drenante para cactos e suculentas. Regue apenas quando o substrato secar e adube mensalmente na época de crescimento."
     },
     "ar": {
-      "common_name": "سلسلة الساعة",
-      "description": "Crassula muscosa نبات عصاري صغير ذو سيقان متراصة. يحتاج إلى ضوء قوي وري قليل. كثرة الماء تؤدي إلى التعفن."
+      "common_name": "نبات سلسلة الساعة",
+      "description": "Crassula muscosa عصارية صغيرة متفرعة من جنوب أفريقيا بأوراق متراكبة تشبه الحراشف. تحتاج إلى ضوء ساطع جدًا وتربة سريعة الصرف مخصصة للصبارات والعصاريات. اسقِ فقط بعد جفاف التربة وسمّد شهريًا خلال موسم النمو."
     },
     "hi": {
-      "common_name": "वॉच चेन पौधा",
-      "description": "Crassula muscosa एक छोटा रसीला पौधा है जिसकी टहनियाँ घनी होती हैं। इसे तेज़ रोशनी और कम पानी चाहिए। अधिक पानी से सड़न हो सकती है।"
+      "common_name": "वॉच चेन प्लांट",
+      "description": "Crassula muscosa दक्षिणी अफ्रीका का छोटा, शाखित सक्युलेंट है जिसकी पत्तियाँ सघन और स्केल जैसी होती हैं। इसे तेज रोशनी और अच्छी जल-निकासी वाले कैक्टस/सक्युलेंट मिक्स में उगाएँ। मिट्टी सूखने पर ही पानी दें और बढ़ने के मौसम में महीने में एक बार खाद दें।"
     },
     "zh": {
-      "common_name": "钟链景天",
-      "description": "Crassula muscosa 是一种小型多肉植物，茎叶紧密排列。它需要明亮光照和较少浇水。浇水过多容易腐烂。"
+      "common_name": "链条景天",
+      "description": "Crassula muscosa 为南部非洲原产的小型分枝多肉，叶片紧密重叠呈鳞片状。应放在非常明亮的光照处，并使用排水良好的多肉/仙人掌土。盆土干透后再浇水，生长季每月施肥一次。"
     },
     "ja": {
-      "common_name": "トケイソウズル",
-      "description": "Crassula muscosa は茎が密に重なる小型の多肉植物です。明るい光と控えめな水やりを好みます。過湿は腐敗の原因になります。"
+      "common_name": "ウォッチチェーン",
+      "description": "Crassula muscosa は南部アフリカ原産の小型の多肉で、鱗片状の葉が密に重なります。非常に明るい場所と、水はけのよい多肉・サボテン用土で育てます。用土が乾いてから水やりし、生育期は月1回施肥します。"
     },
     "ko": {
-      "common_name": "워치체인",
-      "description": "Crassula muscosa는 줄기가 빽빽한 소형 다육식물입니다. 밝은 빛과 적은 물을 필요로 합니다. 과습은 부패를 유발합니다."
+      "common_name": "워치 체인",
+      "description": "Crassula muscosa 는 남아프리카 원산의 작은 분지형 다육식물로, 비늘 같은 잎이 촘촘히 겹칩니다. 매우 밝은 빛과 배수가 좋은 다육/선인장 배양토가 필요합니다. 흙이 완전히 마른 뒤 물을 주고, 생장기에는 한 달에 한 번 비료를 줍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/315207/crassula-muscosa/details",
-      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/1513/Crassula_muscosa",
-      "https://plants.ces.ncsu.edu/plants/crassula-muscosa/"
+      "https://www.rhs.org.uk/plants/4735/crassula-muscosa/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:273320-1",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/jade-plant",
+      "https://www.aspca.org/news/are-succulents-safe-have-around-pets",
+      "https://www.petpoisonhelpline.com/poison/jade-plant/"
     ]
   }
 }

@@ -2,16 +2,17 @@
   "external_id": "hibiscus_syriacus",
   "name": "Rose of Sharon",
   "latin": "Hibiscus syriacus",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "완전한 햇빛"
+          "en": "Partial sun",
+          "pl": "Częściowe słońce",
+          "de": "Halbschatten",
+          "fr": "Soleil partiel",
+          "it": "Sole parziale",
+          "es": "Sol parcial",
+          "pt": "Sol parcial",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "部分阳光",
+          "ja": "部分日光",
+          "ko": "부분 일광"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiatura regolare",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित सिंचाई",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "정기적 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Hardy to -15°C",
-          "pl": "Do -15°C",
-          "de": "Bis -15°C",
-          "fr": "Jusqu’à -15°C",
-          "it": "Fino a -15°C",
-          "es": "Hasta -15°C",
-          "pt": "Até -15°C",
-          "ar": "حتى -15°م",
-          "hi": "-15°C तक",
-          "zh": "耐寒-15°C",
-          "ja": "-15°Cまで耐寒",
-          "ko": "-15°C 내한"
+          "en": "15-30°C",
+          "pl": "15-30°C",
+          "de": "15-30°C",
+          "fr": "15-30°C",
+          "it": "15-30°C",
+          "es": "15-30°C",
+          "pt": "15-30°C",
+          "ar": "15-30°C",
+          "hi": "15-30°C",
+          "zh": "15-30°C",
+          "ja": "15-30°C",
+          "ko": "15-30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie trujący",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Legaermente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "خفيف السمية",
+          "hi": "थोड़ा विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 유독"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Shrub, slow",
-          "pl": "Krzew wolny",
-          "de": "Langsam wachsend",
-          "fr": "Arbuste lent",
-          "it": "Arbusto lento",
-          "es": "Arbusto lento",
-          "pt": "Arbusto lento",
-          "ar": "شجيرة بطيئة",
-          "hi": "धीमी झाड़ी",
-          "zh": "灌木，生长慢",
-          "ja": "低木・遅成長",
-          "ko": "관목, 느림"
+          "en": "Fast growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "急速成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter un arrosage excessif",
+          "it": "Evitare l'eccessiva irrigazione",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि अवधि की कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Rose of Sharon",
-      "description": "Hibiscus syriacus is a hardy deciduous shrub known for its large summer flowers. It thrives in full sun and well-drained soil. It is commonly grown outdoors in gardens and containers."
+      "description": "Hibiscus syriacus, also known as the Rose of Sharon, is a hardy shrub. It blooms in summer and produces large, colorful flowers."
     },
     "pl": {
-      "common_name": "Ketmia syryjska",
-      "description": "Hibiscus syriacus to mrozoodporny krzew liściasty o dużych letnich kwiatach. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Często sadzony w ogrodach i pojemnikach."
+      "common_name": "Róża Syryjska",
+      "description": "Hibiscus syriacus, znany również jako Róża Syryjska, to odporna krzewinka. Kwiatostany pojawiają się latem, oferując duże, kolorowe kwiaty."
     },
     "de": {
-      "common_name": "Garteneibisch",
-      "description": "Hibiscus syriacus ist ein winterharter Laubstrauch mit großen Sommerblüten. Er bevorzugt volle Sonne und gut durchlässigen Boden. Häufig wird er in Gärten oder Kübeln kultiviert."
+      "common_name": "Chinesische Rose",
+      "description": "Hibiscus syriacus, auch als Chinesische Rose bekannt, ist ein robuster Strauch. Im Sommer blüht er mit großen, bunten Blumen."
     },
     "fr": {
-      "common_name": "Althéa",
-      "description": "Hibiscus syriacus est un arbuste caduc rustique aux grandes fleurs estivales. Il aime le plein soleil et les sols bien drainés. Il est couramment cultivé en jardin ou en bac."
+      "common_name": "Hibiscus de Syrie",
+      "description": "Hibiscus syriacus, également connu sous le nom d'Hibiscus de Syrie, est un arbuste rustique. Il fleurit en été et produit de grandes fleurs colorées."
     },
     "it": {
-      "common_name": "Ibisco siriaco",
-      "description": "Hibiscus syriacus è un arbusto deciduo rustico con grandi fiori estivi. Predilige il pieno sole e terreni ben drenati. È spesso coltivato in giardino o in vaso."
+      "common_name": "Ibisco della Siria",
+      "description": "Hibiscus syriacus, noto anche come Ibisco della Siria, è un arbusto resistente. Fiorisce in estate e produce fiori grandi e colorati."
     },
     "es": {
-      "common_name": "Rosa de Siria",
-      "description": "Hibiscus syriacus es un arbusto caducifolio resistente con grandes flores estivales. Crece mejor a pleno sol y en suelos bien drenados. Es común en jardines y macetas."
+      "common_name": "Hibisco de Siria",
+      "description": "Hibiscus syriacus, también conocido como Hibisco de Siria, es un arbusto resistente. Florece en verano y produce flores grandes y coloridas."
     },
     "pt": {
-      "common_name": "Hibisco-da-síria",
-      "description": "Hibiscus syriacus é um arbusto caducifólio resistente com grandes flores de verão. Prefere sol pleno e solo bem drenado. É muito usado em jardins e vasos."
+      "common_name": "Hibisco sírio",
+      "description": "Hibiscus syriacus, também conhecido como Hibisco sírio, é um arbusto resistente. Floresce no verão e produz flores grandes e coloridas."
     },
     "ar": {
-      "common_name": "ورد الشارون",
-      "description": "Hibiscus syriacus شجيرة متساقطة الأوراق مقاومة للبرد ذات أزهار صيفية كبيرة. تنمو جيدًا في الشمس الكاملة والتربة جيدة التصريف. تزرع غالبًا في الحدائق أو الحاويات."
+      "common_name": "الكركديه السوري",
+      "description": "Hibiscus syriacus، المعروف أيضًا بالكركديه السوري، هو شجيرة قوية. تزهر في الصيف وتنتج زهورًا كبيرة وملونة."
     },
     "hi": {
-      "common_name": "शेरोन का गुलाब",
-      "description": "Hibiscus syriacus एक ठंड सहनशील झाड़ी है जिसमें बड़े ग्रीष्मकालीन फूल होते हैं। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह बढ़ता है। इसे बगीचों और गमलों में उगाया जाता है।"
+      "common_name": "हिबिस्कस सीरियस",
+      "description": "Hibiscus syriacus, जिसे हिबिस्कस सीरियस भी कहा जाता है, एक मजबूत झाड़ी है। यह गर्मियों में फूलता है और बड़े, रंगीन फूल उत्पन्न करता है।"
     },
     "zh": {
-      "common_name": "木槿",
-      "description": "Hibiscus syriacus 是一种耐寒的落叶灌木，夏季开大花。适合全日照和排水良好的土壤。常用于庭院或盆栽种植。"
+      "common_name": "叙利亚木槿",
+      "description": "Hibiscus syriacus，也称为叙利亚木槿，是一种坚韧的灌木。它在夏季开花，产生大型彩色花朵。"
     },
     "ja": {
-      "common_name": "ムクゲ",
-      "description": "Hibiscus syriacus は夏に大きな花を咲かせる耐寒性の落葉低木です。日当たりと水はけの良い土を好みます。庭や鉢植えで広く栽培されています。"
+      "common_name": "シリアヒビスクス",
+      "description": "Hibiscus syriacus、シリアヒビスクスとしても知られるこの植物は丈夫な低木です。夏に咲き、大きくて色鮮やかな花を咲かせます。"
     },
     "ko": {
-      "common_name": "무궁화",
-      "description": "Hibiscus syriacus는 여름에 큰 꽃을 피우는 내한성 낙엽 관목입니다. 햇빛과 배수가 좋은 토양을 선호합니다. 정원이나 화분에서 흔히 재배됩니다."
+      "common_name": "시리아 히비스커스",
+      "description": "Hibiscus syriacus, 시리아 히비스커스로도 알려진 이 식물은 강한 관목입니다. 여름에 꽃을 피우고 크고 화려한 꽃을 피웁니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hibiscus/syriacus",
-      "https://plants.ces.ncsu.edu/plants/hibiscus-syriacus/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a614"
+      "https://www.rhs.org.uk/plants/hibiscus-syriacus",
+      "https://www.gardenia.net/plant/hibiscus-syriacus"
     ]
   }
 }

@@ -1,8 +1,8 @@
 {
   "external_id": "colocasia_esculenta",
-  "name": "Taro",
+  "name": "Taro (Elephant ear)",
   "latin": "Colocasia esculenta",
-  "sun": "high",
+  "sun": "medium",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
@@ -10,16 +10,16 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 18,
   "image_hero": "colocasia_esculenta.jpg",
   "image_thumb": "colocasia_esculenta.jpg",
   "traits": [
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz intensa",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich moist soil",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchte Erde",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润土壤",
-          "ja": "湿った土",
-          "ko": "촉촉한 토양"
+          "en": "Rich, moisture-retent.",
+          "pl": "Żyzna, wilgotna",
+          "de": "Nährstoffreich, feucht",
+          "fr": "Riche, humide",
+          "it": "Ricco, umido",
+          "es": "Rico, húmedo",
+          "pt": "Rico, úmido",
+          "ar": "تربة غنية ورطبة",
+          "hi": "उपजाऊ, नम मिट्टी",
+          "zh": "肥沃保湿土",
+          "ja": "肥沃で湿り気",
+          "ko": "비옥하고 촉촉"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Very frequent",
-          "pl": "Bardzo częste",
-          "de": "Sehr häufig",
-          "fr": "Très fréquent",
-          "it": "Molto frequente",
-          "es": "Muy frecuente",
-          "pt": "Muito frequente",
-          "ar": "متكرر جدًا",
-          "hi": "बहुत बार",
-          "zh": "频繁浇水",
-          "ja": "頻繁",
-          "ko": "자주 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "حافظ على رطوبتها",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -84,7 +84,7 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
+          "en": "Medium",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18-30°C",
+          "pl": "18-30°C",
+          "de": "18-30°C",
+          "fr": "18-30°C",
+          "it": "18-30°C",
+          "es": "18-30°C",
+          "pt": "18-30°C",
+          "ar": "18-30°م",
+          "hi": "18-30°C",
+          "zh": "18-30°C",
+          "ja": "18-30°C",
+          "ko": "18-30°C"
         }
       }
     },
@@ -123,12 +123,12 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Feuchte",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च नमी",
           "zh": "高湿度",
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة إذا أُكلت",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食すると有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growth",
-          "pl": "Szybki wzrost",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
+          "en": "Fast grower",
+          "pl": "Szybko rośnie",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "سريعة النمو",
+          "hi": "तेज़ वृद्धि",
           "zh": "生长快",
-          "ja": "成長早い",
-          "ko": "빠른 성장"
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drying out",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter le dessèchement",
+          "it": "Evita secchezza",
+          "es": "Evita que se seque",
+          "pt": "Não deixar secar",
+          "ar": "لا تتركها تجف",
+          "hi": "सूखने न दें",
+          "zh": "避免干透",
+          "ja": "乾燥させない",
+          "ko": "건조 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, aphids",
+          "pl": "Przędziorki, mszyce",
+          "de": "Spinnmilben, Läuse",
+          "fr": "Araignées, pucerons",
+          "it": "Acari, afidi",
+          "es": "Ácaros, pulgones",
+          "pt": "Ácaros, pulgões",
+          "ar": "عثّ العنكبوت والمنّ",
+          "hi": "मकड़ी कण, एफिड",
+          "zh": "红蜘蛛、蚜虫",
+          "ja": "ハダニ・アブラムシ",
+          "ko": "응애, 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Taro",
-      "description": "Colocasia esculenta is a tropical plant known for its large heart-shaped leaves. It thrives in warm conditions with high moisture and bright light. The plant is commonly grown both as an ornamental and a food crop."
+      "common_name": "Taro (Elephant ear)",
+      "description": "Colocasia esculenta is a tropical aroid grown for its large, heart-shaped leaves. Indoors it prefers bright, indirect light and consistently moist soil in warm conditions. All parts are irritating/toxic if eaten due to calcium oxalate."
     },
     "pl": {
-      "common_name": "Kolokazja jadalna",
-      "description": "Colocasia esculenta to roślina tropikalna o dużych liściach. Wymaga ciepła, wilgoci i jasnego stanowiska. Uprawiana jest jako roślina ozdobna i użytkowa."
+      "common_name": "Kolokazja jadalna (taro)",
+      "description": "Colocasia esculenta to tropikalna roślina o bardzo dużych, sercowatych liściach. W mieszkaniu lubi jasne, rozproszone światło oraz stale lekko wilgotne podłoże i ciepło. Jest drażniąca i toksyczna po zjedzeniu (szczawiany wapnia)."
     },
     "de": {
-      "common_name": "Taro",
-      "description": "Colocasia esculenta ist eine tropische Pflanze mit großen Blättern. Sie benötigt Wärme, viel Wasser und helles Licht. Sie wird als Zier- und Nutzpflanze kultiviert."
+      "common_name": "Taro (Elefantenohr)",
+      "description": "Colocasia esculenta ist eine tropische Aronstabgewächs-Pflanze mit großen, herzförmigen Blättern. In der Wohnung mag sie helles, indirektes Licht und gleichmäßig feuchte Erde bei Wärme. Bei Verzehr ist sie reizend/giftig (Calciumoxalat)."
     },
     "fr": {
-      "common_name": "Taro",
-      "description": "Colocasia esculenta est une plante tropicale aux grandes feuilles. Elle préfère la chaleur, l’humidité et une lumière vive. Elle est cultivée comme plante ornementale et alimentaire."
+      "common_name": "Taro (oreille d’éléphant)",
+      "description": "Colocasia esculenta est une plante tropicale cultivée pour ses grandes feuilles en forme de cœur. En intérieur, elle préfère une lumière vive indirecte et un substrat constamment humide, avec des températures chaudes. Elle est irritante/toxique en cas d’ingestion (oxalate de calcium)."
     },
     "it": {
-      "common_name": "Taro",
-      "description": "Colocasia esculenta è una pianta tropicale con grandi foglie. Cresce bene in ambienti caldi e umidi con molta luce. È coltivata sia per ornamento che per uso alimentare."
+      "common_name": "Taro (orecchie d’elefante)",
+      "description": "Colocasia esculenta è una pianta tropicale coltivata per le grandi foglie a cuore. In casa preferisce luce intensa ma indiretta e terriccio costantemente umido in ambiente caldo. È irritante/tossica se ingerita (ossalati di calcio)."
     },
     "es": {
-      "common_name": "Taro",
-      "description": "Colocasia esculenta es una planta tropical de hojas grandes. Necesita calor, humedad y buena iluminación. Se cultiva como planta ornamental y comestible."
+      "common_name": "Taro (oreja de elefante)",
+      "description": "Colocasia esculenta es una planta tropical apreciada por sus hojas grandes y acorazonadas. En interior necesita luz brillante indirecta y sustrato siempre húmedo con temperaturas cálidas. Es irritante/tóxica si se ingiere por sus oxalatos de calcio."
     },
     "pt": {
-      "common_name": "Inhame",
-      "description": "Colocasia esculenta é uma planta tropical de folhas grandes. Prefere calor, umidade elevada e luz intensa. É usada como planta ornamental e alimentar."
+      "common_name": "Taro (orelha-de-elefante)",
+      "description": "Colocasia esculenta é uma planta tropical cultivada pelas folhas grandes em forma de coração. Em interiores, prefere luz brilhante indireta e substrato sempre úmido, com calor. É irritante/tóxica se ingerida devido a oxalatos de cálcio."
     },
     "ar": {
-      "common_name": "قلقاس",
-      "description": "Colocasia esculenta نبات استوائي بأوراق كبيرة. يحتاج إلى حرارة ورطوبة عالية وضوء جيد. يُزرع للزينة وللاستخدام الغذائي."
+      "common_name": "القلقاس (أذن الفيل)",
+      "description": "Colocasia esculenta نبات استوائي يُزرع لأوراقه الكبيرة القلبية الشكل. داخل المنزل يفضّل ضوءًا ساطعًا غير مباشر وتربة رطبة باستمرار مع دفء. النبات مُهيِّج/سام عند الأكل بسبب أوكسالات الكالسيوم."
     },
     "hi": {
-      "common_name": "अरबी",
-      "description": "Colocasia esculenta एक उष्णकटिबंधीय पौधा है जिसके बड़े पत्ते होते हैं। इसे गर्मी, नमी और तेज रोशनी की आवश्यकता होती है। यह सजावटी और खाद्य दोनों रूपों में उगाया जाता है।"
+      "common_name": "अरबी (टैरो)",
+      "description": "Colocasia esculenta एक उष्णकटिबंधीय पौधा है जिसे बड़े दिल-आकार पत्तों के लिए उगाया जाता है। घर के अंदर इसे तेज़ अप्रत्यक्ष रोशनी और लगातार नम मिट्टी के साथ गर्म तापमान पसंद है। कैल्शियम ऑक्सेलेट के कारण इसे खाने पर जलन/विषाक्तता हो सकती है।"
     },
     "zh": {
-      "common_name": "芋头",
-      "description": "Colocasia esculenta 是一种热带植物，具有大型叶片。它需要温暖、潮湿和充足光照。常作为观赏植物和食用作物栽培。"
+      "common_name": "芋头（象耳）",
+      "description": "Colocasia esculenta 是一种热带天南星科植物，以大型心形叶片观赏。室内养护宜明亮散射光，并保持盆土持续湿润且温暖。误食会刺激口腔，因含草酸钙晶体而有毒性。"
     },
     "ja": {
-      "common_name": "タロイモ",
-      "description": "Colocasia esculenta は大きな葉を持つ熱帯植物です。高温多湿と明るい光を好みます。観賞用および食用として栽培されます。"
+      "common_name": "タロイモ（エレファントイヤー）",
+      "description": "Colocasia esculenta は大きなハート形の葉を楽しむ熱帯のサトイモ科植物です。室内では明るい間接光と、常にしめった用土、暖かい環境を好みます。シュウ酸カルシウムの結晶により誤食すると刺激性・有毒です。"
     },
     "ko": {
-      "common_name": "토란",
-      "description": "Colocasia esculenta는 큰 잎을 가진 열대 식물입니다. 따뜻하고 습한 환경과 밝은 빛을 필요로 합니다. 관상용과 식용으로 재배됩니다."
+      "common_name": "토란 (코끼리귀)",
+      "description": "Colocasia esculenta는 큰 하트 모양 잎으로 키우는 열대 천남성과 식물입니다. 실내에서는 밝은 간접광과 항상 촉촉한 흙, 따뜻한 온도를 선호합니다. 칼슘 옥살레이트 때문에 섭취 시 자극/독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/colocasia-esculenta",
-      "https://extension.ifas.ufl.edu/publications/",
-      "https://www.rhs.org.uk/plants/colocasia"
+      "https://plants.ces.ncsu.edu/plants/colocasia-esculenta/",
+      "https://www.missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=276338",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/elephant-ears-0",
+      "https://www.rhs.org.uk/plants/4248/colocasia-esculenta/details",
+      "https://ask.extension.org/kb/faq.php?id=871066"
     ]
   }
 }

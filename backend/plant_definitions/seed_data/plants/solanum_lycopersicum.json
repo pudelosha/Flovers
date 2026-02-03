@@ -11,8 +11,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Voller Sonnenschein",
+          "fr": "Ensoleillement direct",
+          "it": "Sole diretto",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "कादर",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى بشكل جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßige Bewässerung",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقاية منتظمة",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Kein Überwässern",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرा पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات متفرقة",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Tomato",
-      "description": "The tomato (Solanum lycopersicum) is a popular fruit-bearing plant native to western South America. It thrives in sunny locations and well-drained loamy soil."
+      "description": "Tomatoes are widely grown for their edible fruit. They require full sun and regular watering."
     },
     "pl": {
       "common_name": "Pomidor",
-      "description": "Pomidor (Solanum lycopersicum) to popularna roślina owocowa pochodząca z zachodniej Ameryki Południowej. Rośnie najlepiej w słonecznych miejscach i dobrze przepuszczalnej glebie."
+      "description": "Pomidory są szeroko uprawiane ze względu na jadalne owoce. Wymagają pełnego słońca i regularnego podlewania."
     },
     "de": {
       "common_name": "Tomate",
-      "description": "Die Tomate (Solanum lycopersicum) ist eine beliebte fruchttragende Pflanze, die in West-Südamerika beheimatet ist. Sie gedeiht an sonnigen Standorten und in gut durchlässigem, lehmigem Boden."
+      "description": "Tomaten werden weit verbreitet für ihre essbaren Früchte angebaut. Sie benötigen volle Sonne und regelmäßiges Gießen."
     },
     "fr": {
       "common_name": "Tomate",
-      "description": "La tomate (Solanum lycopersicum) est une plante fruitière populaire originaire de l'ouest de l'Amérique du Sud. Elle préfère les endroits ensoleillés et un sol bien drainé."
+      "description": "Les tomates sont largement cultivées pour leurs fruits comestibles. Elles nécessitent un ensoleillement direct et un arrosage régulier."
     },
     "it": {
       "common_name": "Pomodoro",
-      "description": "Il pomodoro (Solanum lycopersicum) è una pianta fruttifera popolare originaria dell'ovest del Sud America. Cresce meglio in luoghi soleggiati e in terreni ben drenati."
+      "description": "I pomodori sono coltivati ampiamente per i loro frutti commestibili. Necessitano di pieno sole e annaffiature regolari."
     },
     "es": {
       "common_name": "Tomate",
-      "description": "El tomate (Solanum lycopersicum) es una planta frutal popular originaria del oeste de América del Sur. Se desarrolla mejor en lugares soleados y en suelos bien drenados."
+      "description": "Los tomates se cultivan ampliamente por sus frutos comestibles. Requieren pleno sol y riego regular."
     },
     "pt": {
       "common_name": "Tomate",
-      "description": "O tomate (Solanum lycopersicum) é uma planta frutífera popular nativa do oeste da América do Sul. Prefere locais ensolarados e solos bem drenados."
+      "description": "Os tomates são amplamente cultivados por seus frutos comestíveis. Eles precisam de sol pleno e rega regular."
     },
     "ar": {
       "common_name": "طماطم",
-      "description": "الطماطم (Solanum lycopersicum) هي نبتة مثمرة شائعة موطنها غرب أمريكا الجنوبية. تنمو بشكل أفضل في الأماكن المشمسة وفي التربة جيدة التصريف."
+      "description": "تزرع الطماطم على نطاق واسع لثمارها الصالحة للأكل. إنها تتطلب أشعة الشمس الكاملة والري المنتظم."
     },
     "hi": {
       "common_name": "टमाटर",
-      "description": "टमाटर (Solanum lycopersicum) एक लोकप्रिय फलदार पौधा है, जो पश्चिमी दक्षिण अमेरिका का मूल निवासी है। यह धूप वाले स्थानों और अच्छी जल निकासी वाली मिट्टी में सबसे अच्छा उगता है।"
+      "description": "टमाटर को उनकी खाने योग्य फल के लिए व्यापक रूप से उगाया जाता है। इन्हें पूर्ण सूर्य और नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "番茄",
-      "description": "番茄（Solanum lycopersicum）是一种受欢迎的果实植物，原产于南美洲西部。它在阳光充足且排水良好的土壤中生长最佳。"
+      "description": "番茄因其可食用的果实而广泛种植。它们需要充足的阳光和定期浇水。"
     },
     "ja": {
       "common_name": "トマト",
-      "description": "トマト（Solanum lycopersicum）は西南アメリカ原産の人気の果実を持つ植物です。日当たりの良い場所と排水性の良い土壌で最適に育ちます。"
+      "description": "トマトは食用果実のために広く栽培されています。直射日光と定期的な水やりが必要です。"
     },
     "ko": {
       "common_name": "토마토",
-      "description": "토마토(Solanum lycopersicum)는 서남 아메리카 원산의 인기 있는 과일 식물입니다. 햇볕이 잘 드는 장소와 배수가 좋은 토양에서 잘 자랍니다."
+      "description": "토마토는 먹을 수 있는 과일을 위해 널리 재배됩니다. 그들은 완전한 햇빛과 정기적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenersworld.com/plants/tomato-solanum-lycopersicum/",
-      "https://www.rhs.org.uk/advice/profile?pid=107"
+      "https://www.rhs.org.uk/advice/profile?pid=104",
+      "https://www.gardenersworld.com/plants/growing-tomatoes/"
     ]
   }
 }

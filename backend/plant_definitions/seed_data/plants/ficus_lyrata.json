@@ -1,19 +1,21 @@
 {
   "external_id": "ficus_lyrata",
-  "name": "Fiddle-leaf fig",
+  "name": "Fiddle Leaf Fig",
   "latin": "Ficus lyrata",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
+          "en": "Indirect light",
+          "pl": "Światło pośrednie",
+          "de": "Indirektes Licht",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "间接光",
+          "ja": "間接光",
+          "ko": "간접광"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenante",
-          "es": "Buen drenaje",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة التصريف",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "zh": "良好的排水性",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
+          "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia",
+          "en": "Medium",
+          "pl": "Średnie",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "عناية متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average home",
-          "pl": "Domowa",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य",
-          "zh": "普通湿度",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة للحيوانات",
-          "hi": "विषैला",
+          "pl": "Toksyny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 독성"
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright tree",
-          "pl": "Drzewkowaty",
-          "de": "Aufrecht",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Erguido",
-          "pt": "Ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधा बढ़ता",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립형"
+          "en": "Slow to medium",
+          "pl": "Wolny do średniego",
+          "de": "Langsam bis mittel",
+          "fr": "Lent à moyen",
+          "it": "Lento a medio",
+          "es": "Lento a medio",
+          "pt": "Lento a médio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमे से मध्यम",
+          "zh": "缓慢至中等",
+          "ja": "遅いから中くらい",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il troppo acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과도한 물 주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Fiddle-leaf fig",
-      "description": "Ficus lyrata is a tropical tree native to West Africa. It is valued for its large, violin-shaped leaves and is commonly grown indoors in bright light."
+      "common_name": "Fiddle Leaf Fig",
+      "description": "Ficus lyrata, or Fiddle Leaf Fig, is a popular ornamental houseplant. It thrives in bright, indirect light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Figowiec dębolistny",
-      "description": "Ficus lyrata pochodzi z Afryki Zachodniej. Roślina jest ceniona za duże, dekoracyjne liście i uprawiana jako roślina domowa."
+      "common_name": "Figowiec liściasty",
+      "description": "Ficus lyrata, znany również jako figowiec liściasty, jest popularną rośliną ozdobną. Wymaga jasnego, pośredniego światła i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Geigenfeige",
-      "description": "Ficus lyrata stammt aus Westafrika. Er wird wegen seiner großen, geigenförmigen Blätter als Zimmerpflanze geschätzt."
+      "common_name": "Geigen-Feige",
+      "description": "Ficus lyrata, auch Geigen-Feige genannt, ist eine beliebte Zierpflanze. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
       "common_name": "Figuier lyre",
-      "description": "Ficus lyrata est originaire d’Afrique de l’Ouest. Il est apprécié pour ses grandes feuilles et cultivé en intérieur lumineux."
+      "description": "Ficus lyrata, ou figuier lyre, est une plante d'intérieur populaire. Il prospère à la lumière indirecte et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Fico a foglia di violino",
-      "description": "Ficus lyrata è originario dell’Africa occidentale. È coltivato in casa per le sue grandi foglie ornamentali."
+      "common_name": "Ficus a foglia di violino",
+      "description": "Ficus lyrata, conosciuto anche come Ficus a foglia di violino, è una pianta ornamentale popolare. Cresce in luce indiretta e richiede irrigazione moderata."
     },
     "es": {
       "common_name": "Higuera de hoja de violín",
-      "description": "Ficus lyrata es nativo de África occidental. Se cultiva en interiores por sus grandes hojas decorativas."
+      "description": "Ficus lyrata, conocida como higuera de hoja de violín, es una planta ornamental popular. Se desarrolla en luz indirecta y necesita un riego moderado."
     },
     "pt": {
-      "common_name": "Figueira-lira",
-      "description": "Ficus lyrata é nativo da África Ocidental. É cultivado em interiores pelas suas folhas grandes e ornamentais."
+      "common_name": "Figueira de folha de violino",
+      "description": "Ficus lyrata, também conhecida como figueira de folha de violino, é uma planta ornamental popular. Gosta de luz indireta e requer rega moderada."
     },
     "ar": {
-      "common_name": "فيكس ليراتا",
-      "description": "نبات فيكس ليراتا موطنه أفريقيا الغربية. يزرع كنبات داخلي لأوراقه الكبيرة الزخرفية."
+      "common_name": "شجرة التين ذات الأوراق الكمان",
+      "description": "Ficus lyrata، أو شجرة التين ذات الأوراق الكمان، هي نبتة منزلية شهيرة. تنمو في الضوء غير المباشر وتحتاج إلى سقاية معتدلة."
     },
     "hi": {
       "common_name": "फिडल लीफ फिग",
-      "description": "फिकस लिराटा पश्चिमी अफ्रीका का पौधा है। इसे बड़े सजावटी पत्तों के कारण घर के अंदर उगाया जाता है।"
+      "description": "Ficus lyrata, जिसे फिडल लीफ फिग भी कहा जाता है, एक लोकप्रिय सजावटी पौधा है। यह हल्की, अप्रत्यक्ष रोशनी में बढ़ता है और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "琴叶榕",
-      "description": "琴叶榕原产于西非。因其大型观赏叶片而常作为室内植物栽培。"
+      "description": "Ficus lyrata，或琴叶榕，是一种受欢迎的观赏室内植物。它喜欢明亮的间接光，需要适量浇水。"
     },
     "ja": {
-      "common_name": "フィカス・リラータ",
-      "description": "フィカス・リラータは西アフリカ原産です。大きな葉を持つ観葉植物として室内で育てられます。"
+      "common_name": "フィドルリーフフィグ",
+      "description": "Ficus lyrata、またはフィドルリーフフィグは人気の観葉植物です。明るい間接光を好み、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "떡갈잎고무나무",
-      "description": "피쿠스 리라타는 서아프리카 원산입니다. 큰 잎이 특징이며 실내 관엽식물로 재배됩니다."
+      "common_name": "피들리프 무화과",
+      "description": "Ficus lyrata, 또는 피들리프 무화과는 인기 있는 실내 장식 식물입니다. 밝고 간접적인 빛에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ficus/lyrata",
-      "https://edis.ifas.ufl.edu/publication/FP233",
-      "https://www.kew.org/plants/ficus-lyrata"
+      "https://www.thespruce.com/fiddle-leaf-fig-plant-4767576",
+      "https://www.gardenia.net/plant/ficus-lyrata"
     ]
   }
 }

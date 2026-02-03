@@ -7,12 +7,12 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "loam"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroidowy",
-          "de": "Aroid",
-          "fr": "aroïde",
-          "it": "aroide",
-          "es": "aroide",
-          "pt": "aroide",
-          "ar": "أرويدي",
-          "hi": "एरोइड",
-          "zh": "阿罗伊德",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnio",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwy",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Easy to care for",
+          "pl": "Łatwe w pielęgnacji",
+          "de": "Einfach zu pflegen",
+          "fr": "Facile à entretenir",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "देखभाल में आसान",
+          "zh": "容易护理",
+          "ja": "手入れが簡単",
+          "ko": "관리 쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中的湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不是",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे बढ़ता हुआ",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Vermeiden Sie Überbewässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفرातफरी से पानी देना से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Creeping Peperomia",
-      "description": "Peperomia serpens is a low-growing, creeping plant known for its heart-shaped, glossy green leaves with white margins. It thrives in medium light and requires moderate watering."
+      "description": "Peperomia serpens is a compact, trailing plant known for its small, round leaves. It thrives in moderate indoor conditions and is easy to care for."
     },
     "pl": {
       "common_name": "Peperomia pełzająca",
-      "description": "Peperomia serpens to roślina o niskim wzroście, pełzająca, charakteryzująca się sercowatymi, błyszczącymi zielonymi liśćmi z białymi brzegami. Rośnie najlepiej w średnim świetle i wymaga umiarkowanego podlewania."
+      "description": "Peperomia serpens to kompaktowa roślina pnąca, znana z małych, okrągłych liści. Rośnie w umiarkowanych warunkach wewnętrznych i jest łatwa w pielęgnacji."
     },
     "de": {
-      "common_name": "Kriechende Peperomie",
-      "description": "Peperomia serpens ist eine niedrig wachsende, kriechende Pflanze, die für ihre herzförmigen, glänzend grünen Blätter mit weißen Rändern bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
+      "common_name": "Kriechende Peperomia",
+      "description": "Peperomia serpens ist eine kompakte, kriechende Pflanze, die für ihre kleinen, runden Blätter bekannt ist. Sie gedeiht unter gemäßigten Innenbedingungen und ist pflegeleicht."
     },
     "fr": {
       "common_name": "Peperomia rampante",
-      "description": "Peperomia serpens est une plante rampante à faible croissance, connue pour ses feuilles vertes en forme de cœur avec des bords blancs. Elle préfère la lumière moyenne et un arrosage modéré."
+      "description": "Peperomia serpens est une plante compacte et rampante, connue pour ses petites feuilles rondes. Elle prospère dans des conditions intérieures modérées et est facile à entretenir."
     },
     "it": {
       "common_name": "Peperomia strisciante",
-      "description": "Peperomia serpens è una pianta a crescita bassa e strisciante, con foglie verdi a forma di cuore e bordi bianchi. Cresce bene in luce media e richiede annaffiature moderate."
+      "description": "Peperomia serpens è una pianta compatta e strisciante, nota per le sue piccole foglie rotonde. Cresce bene in condizioni interne moderate ed è facile da curare."
     },
     "es": {
       "common_name": "Peperomia rastrera",
-      "description": "Peperomia serpens es una planta rastrera de bajo crecimiento, conocida por sus hojas en forma de corazón de color verde brillante con márgenes blancos. Crece mejor con luz media y requiere riego moderado."
+      "description": "Peperomia serpens es una planta compacta y rastrera conocida por sus pequeñas hojas redondas. Crece bien en condiciones moderadas en interiores y es fácil de cuidar."
     },
     "pt": {
       "common_name": "Peperomia rasteira",
-      "description": "Peperomia serpens é uma planta rasteira de baixo crescimento, conhecida por suas folhas em forma de coração com bordas brancas. Prefere luz média e necessita de rega moderada."
+      "description": "Peperomia serpens é uma planta compacta e rasteira conhecida por suas pequenas folhas redondas. Ela cresce bem em condições internas moderadas e é fácil de cuidar."
     },
     "ar": {
       "common_name": "بيبيروميا زاحفة",
-      "description": "Peperomia serpens هي نبات زاحف منخفض النمو يتميز بأوراقها على شكل قلب باللون الأخضر اللامع مع حواف بيضاء. ينمو بشكل جيد في الضوء المتوسط ويتطلب ريًا معتدلًا."
+      "description": "Peperomia serpens هي نبتة مدمجة ومتسلقة معروفة بأوراقها الصغيرة والدائرية. تزدهر في الظروف الداخلية المعتدلة وسهلة العناية."
     },
     "hi": {
-      "common_name": "पीपेरोमिया सरपेंस",
-      "description": "Peperomia serpens एक धीमी गति से बढ़ने वाली, फैलने वाली पौधा है जिसमें हृदय के आकार की, चमकदार हरी पत्तियाँ होती हैं जिनके किनारे सफेद होते हैं। यह मध्यम रोशनी में अच्छे से बढ़ता है और मध्यम सिंचाई की आवश्यकता होती है।"
+      "common_name": "पीपेरोमिया रेंगने वाली",
+      "description": "Peperomia serpens एक कॉम्पैक्ट, रेंगने वाली पौधा है जिसे इसके छोटे, गोल पत्तों के लिए जाना जाता है। यह मध्यम आंतरिक परिस्थितियों में अच्छा बढ़ता है और देखभाल में आसान है।"
     },
     "zh": {
-      "common_name": "爬行胡椒草",
-      "description": "Peperomia serpens 是一种低矮的爬行植物，因其心形的绿色光滑叶片和白色边缘而闻名。它在中等光照下生长良好，且需要适度浇水。"
+      "common_name": "爬行椒草",
+      "description": "Peperomia serpens是一种紧凑型、爬行植物，因其小巧圆形的叶子而闻名。它在适中的室内环境下生长良好，且容易照料。"
     },
     "ja": {
-      "common_name": "クレーピング・ペペロミア",
-      "description": "Peperomia serpens は低く成長する這う植物で、ハート型の光沢のある緑色の葉と白い縁が特徴です。中程度の光で育ち、適度な水やりが必要です。"
+      "common_name": "クレッピングペペロミア",
+      "description": "Peperomia serpensは、小さな丸い葉を持つコンパクトで這う植物です。中程度の室内条件で繁茂し、手入れが簡単です。"
     },
     "ko": {
       "common_name": "크리핑 페페로미아",
-      "description": "Peperomia serpens는 낮게 자라는 풀로, 하트 모양의 광택이 나는 초록색 잎과 흰색 테두리가 특징입니다. 중간 정도의 햇빛에서 잘 자라며, 적당한 물을 필요로 합니다."
+      "description": "Peperomia serpens는 작은 둥근 잎으로 유명한 컴팩트한 덩굴식물입니다. 적당한 실내 조건에서 잘 자라며 관리하기 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/peperomia-serpens",
-      "https://www.gardenia.net/plant/peperomia-serpens"
+      "https://www.rhs.org.uk/advice/profile?pid=287",
+      "https://www.abcgardeners.com/peperomia-serpens-care"
     ]
   }
 }

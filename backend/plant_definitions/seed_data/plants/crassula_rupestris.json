@@ -1,23 +1,24 @@
 {
   "external_id": "crassula_rupestris",
-  "name": "Baby's Necklace",
+  "name": "Buttons on a string",
   "latin": "Crassula rupestris",
   "sun": "high",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 21,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "crassula_rupestris.jpg",
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "强光",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Bright light, some sun",
+          "pl": "Jasno, trochę słońca",
+          "de": "Hell, etwas Sonne",
+          "fr": "Lumineux, un soleil",
+          "it": "Luce forte, po' sole",
+          "es": "Mucha luz, algo sol",
+          "pt": "Luz forte, algum sol",
+          "ar": "ضوء قوي وبعض شمس",
+          "hi": "तेज रोशनी, कुछ धूप",
+          "zh": "强光，部分直射",
+          "ja": "明るい光 少し日光",
+          "ko": "밝은 빛, 약간의 햇빛"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining",
-          "pl": "Dobrze zdren.",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Fast-draining mix",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Oszczędne",
-          "de": "Wenig",
-          "fr": "Peu",
-          "it": "Raro",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Soak, then dry out",
+          "pl": "Podlej, potem wysusz",
+          "de": "Gießen, dann trocknen",
+          "fr": "Arroser puis sécher",
+          "it": "Bagna poi lascia secco",
+          "es": "Riega y deja secar",
+          "pt": "Regue e deixe secar",
+          "ar": "اسقِ ثم اتركه يجف",
+          "hi": "पानी दें, फिर सुखाएँ",
+          "zh": "浇透后完全干",
+          "ja": "たっぷり後に乾かす",
+          "ko": "흠뻑 후 완전 건조"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26°C"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low to normal",
+          "pl": "Niska do normalnej",
+          "de": "Niedrig bis normal",
+          "fr": "Faible à normal",
+          "it": "Bassa o normale",
+          "es": "Baja a normal",
+          "pt": "Baixa a normal",
+          "ar": "منخفضة إلى عادية",
+          "hi": "कम से सामान्य",
+          "zh": "低到正常",
+          "ja": "低め〜普通",
+          "ko": "낮음~보통"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic if eaten",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً عند الأكل",
+          "hi": "खाने पर हल्की विषैली",
+          "zh": "误食或有轻微毒性",
+          "ja": "誤食で軽い毒性",
+          "ko": "섭취 시 약한 독성"
         }
       }
     },
@@ -160,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Powolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow, compact",
+          "pl": "Powolny, zwarty",
+          "de": "Langsam, kompakt",
+          "fr": "Lent, compact",
+          "it": "Lenta, compatta",
+          "es": "Lento, compacto",
+          "pt": "Lento, compacto",
+          "ar": "بطيء ومضغوط",
+          "hi": "धीमी, सघन",
+          "zh": "生长慢，紧凑",
+          "ja": "成長遅め・コンパクト",
+          "ko": "느리게, 콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot if wet",
+          "pl": "Gnija przy przelaniu",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourrit si trop arrosée",
+          "it": "Marciume se troppo bagn.",
+          "es": "Se pudre si se encharca",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفن مع زيادة الماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "积水易烂根",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, aphids",
+          "pl": "Wełnowce, mszyce",
+          "de": "Wollläuse, Blattläuse",
+          "fr": "Cochenilles, pucerons",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinilla, pulgones",
+          "pt": "Cochonilhas, pulgões",
+          "ar": "بق دقيقي ومنّ",
+          "hi": "मिलीबग, एफिड",
+          "zh": "粉蚧、蚜虫",
+          "ja": "コナカイガラムシ等",
+          "ko": "깍지벌레, 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Baby's Necklace",
-      "description": "Crassula rupestris is a compact succulent with stacked, triangular leaves. It prefers bright light and infrequent watering. The plant is well suited to indoor pots with excellent drainage."
+      "common_name": "Buttons on a string",
+      "description": "A compact South African succulent with stacked leaves on upright to trailing stems. Give bright light and a fast-draining cactus mix. Water only after the potting mix dries fully, and feed lightly during active growth."
     },
     "pl": {
-      "common_name": "Grubosz naszyjnik",
-      "description": "Crassula rupestris to sukulent o warstwowych liściach. Wymaga jasnego stanowiska i rzadkiego podlewania. Najlepiej rośnie w przepuszczalnym podłożu."
+      "common_name": "Sznur guzików",
+      "description": "Zwarty sukulent z Afryki Południowej o ułożonych warstwowo liściach na pędach. Wymaga jasnego stanowiska i bardzo przepuszczalnego podłoża dla sukulentów. Podlewaj dopiero po całkowitym przeschnięciu i zasilaj lekko w okresie wzrostu."
     },
     "de": {
-      "common_name": "Baby-Halskette",
-      "description": "Crassula rupestris ist eine kompakte Sukkulente mit gestapelten Blättern. Sie mag helles Licht und wenig Wasser. Staunässe sollte vermieden werden."
+      "common_name": "Knöpfe an der Schnur",
+      "description": "Kompakte Sukkulente aus dem südlichen Afrika mit gestapelten Blättern an aufrechten bis hängenden Trieben. Hell stellen und in sehr durchlässiges Kakteensubstrat setzen. Erst gießen, wenn das Substrat vollständig trocken ist, und in der Wachstumszeit sparsam düngen."
     },
     "fr": {
-      "common_name": "Collier de bébé",
-      "description": "Crassula rupestris est une plante succulente compacte. Elle aime la lumière vive et peu d’arrosage. Un sol très drainant est essentiel."
+      "common_name": "Boutons sur une ficelle",
+      "description": "Succulente compacte d'Afrique australe aux feuilles empilées sur des tiges dressées à retombantes. Offrez une forte luminosité et un substrat très drainant pour cactus. Arrosez seulement quand le mélange est complètement sec et fertilisez légèrement en période de croissance."
     },
     "it": {
-      "common_name": "Collana di bambina",
-      "description": "Crassula rupestris è una succulenta ornamentale a crescita lenta. Preferisce molta luce e annaffiature sporadiche. Il drenaggio è fondamentale."
+      "common_name": "Bottoni su un filo",
+      "description": "Succulenta compatta dell'Africa meridionale con foglie sovrapposte su fusti eretti o ricadenti. Serve molta luce e un terriccio per cactus molto drenante. Annaffia solo a substrato asciutto e concima leggermente durante la crescita."
     },
     "es": {
-      "common_name": "Collar de bebé",
-      "description": "Crassula rupestris es una suculenta compacta. Necesita mucha luz y riego escaso. El exceso de agua puede dañarla."
+      "common_name": "Botones en un cordón",
+      "description": "Suculenta compacta del sur de África con hojas apiladas en tallos erectos o colgantes. Necesita mucha luz y sustrato para cactus bien drenante. Riega solo cuando el sustrato esté completamente seco y abona suavemente en crecimiento."
     },
     "pt": {
-      "common_name": "Colar de bebê",
-      "description": "Crassula rupestris é uma suculenta de folhas empilhadas. Gosta de luz intensa e pouca água. Cultive em solo bem drenado."
+      "common_name": "Botões no cordão",
+      "description": "Suculenta compacta do sul da África com folhas empilhadas em caules eretos a pendentes. Prefere muita luz e substrato para cactos bem drenante. Regue apenas quando o substrato secar por completo e adube levemente na fase de crescimento."
     },
     "ar": {
-      "common_name": "عقد الطفل",
-      "description": "Crassula rupestris نبات عصاري صغير. يفضل الضوء الساطع والري القليل. التربة جيدة التصريف ضرورية."
+      "common_name": "أزرار على خيط",
+      "description": "نبات عصاري مدمج من جنوب أفريقيا بأوراق متراكبة على سيقان قائمة أو متدلية. يحتاج إلى ضوء قوي وتربة صباريات جيدة التصريف. اسقِ فقط بعد جفاف التربة تمامًا وسمّد بخفة أثناء النمو."
     },
     "hi": {
-      "common_name": "बेबी नेकलेस",
-      "description": "Crassula rupestris एक छोटा सक्युलेंट पौधा है। इसे तेज रोशनी और कम पानी चाहिए। अच्छी जल निकासी आवश्यक है।"
+      "common_name": "बटन स्ट्रिंग सक्युलेंट",
+      "description": "दक्षिणी अफ्रीका का सघन सक्युलेंट, जिसमें पत्तियाँ तने पर परतों में लगी होती हैं। तेज रोशनी और अच्छी जल-निकासी वाले कैक्टस मिक्स में रखें। मिट्टी पूरी तरह सूखने पर ही पानी दें और बढ़वार के समय हल्का खाद दें।"
     },
     "zh": {
-      "common_name": "婴儿项链景天",
-      "description": "Crassula rupestris 是一种紧凑的多肉植物。它需要充足光照和少量浇水。排水良好的土壤很重要。"
+      "common_name": "串钮扣景天",
+      "description": "原产南部非洲的紧凑型多肉，叶片层层叠生在直立或下垂的茎上。需要强光与排水良好的多肉土。盆土完全干透后再浇水，生长季少量施肥。"
     },
     "ja": {
-      "common_name": "ベビーネックレス",
-      "description": "Crassula rupestris は葉が重なる多肉植物です。明るい光と控えめな水やりを好みます。水はけの良い土が必要です。"
+      "common_name": "ボタンネックレス",
+      "description": "南部アフリカ原産の多肉で、葉が茎に重なるようにつきます。明るい光と水はけの良い多肉用土が必要です。用土が完全に乾いてから水やりし、生育期は薄い肥料を控えめに与えます。"
     },
     "ko": {
-      "common_name": "베이비 목걸이",
-      "description": "Crassula rupestris는 층진 잎을 가진 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 배수가 중요합니다."
+      "common_name": "버튼 넥클리스",
+      "description": "남부 아프리카 원산의 콤팩트한 다육으로, 잎이 줄기에 층층이 달립니다. 밝은 빛과 배수 좋은 다육용 흙이 필요합니다. 흙이 완전히 마른 뒤에만 물을 주고 생장기에는 약하게 비료를 줍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/53359/crassula-rupestris/details",
-      "https://www.sanbi.org/plant/crassula-rupestris",
-      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/Crassula_rupestris/"
+      "https://www.rhs.org.uk/plants/4748/crassula-rupestris/details",
+      "https://pza.sanbi.org/crassula-rupestris",
+      "https://www.ruthbancroftgarden.org/plants/crassula-rupestris/",
+      "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/insects-pests-and-problems/insects/mealybugs/insect-pests-of-cacti-and-succulents",
+      "https://www.gardenersworld.com/plants/crassula-x-rupestris-f-marnieriana/"
     ]
   }
 }

@@ -4,22 +4,22 @@
   "latin": "Eranthis hyemalis",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
   "repot_required": true,
-  "repot_interval_months": null,
+  "repot_interval_months": 24,
   "image_hero": "eranthis_hyemalis.jpg",
   "image_thumb": "eranthis_hyemalis.jpg",
   "traits": [
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Part shade–sun",
+          "pl": "Półcień–słońce",
+          "de": "Halbschatten–Sonne",
+          "fr": "Mi-ombre–soleil",
+          "it": "Mezz’ombra–sole",
+          "es": "Semisombra–sol",
+          "pt": "Meia-sombra–sol",
+          "ar": "ظل جزئي–شمس",
+          "hi": "आंशिक छाया–धूप",
+          "zh": "半阴至阳光",
+          "ja": "半日陰〜日向",
+          "ko": "반그늘~햇빛"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Humus, well-drained",
+          "pl": "Próchn., przepuszcz.",
+          "de": "Humos, durchlässig",
+          "fr": "Humifère, drainé",
+          "it": "Umido, drenante",
+          "es": "Húmico, drenante",
+          "pt": "Húmus, drenado",
+          "ar": "غني ودائم الصرف",
+          "hi": "ह्यूमस, जलनिकासी",
+          "zh": "腐殖质, 排水好",
+          "ja": "腐植質で排水良",
+          "ko": "부식질, 배수 좋게"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular in growth",
-          "pl": "Podlewać w sezonie",
-          "de": "Regelmäßig",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित सिंचाई",
-          "zh": "生长期浇水",
-          "ja": "生育期に給水",
-          "ko": "생육기 물주기"
+          "en": "Moist in growth",
+          "pl": "Wilgotno w sezonie",
+          "de": "Feucht im Wuchs",
+          "fr": "Humide en croissance",
+          "it": "Umido in crescita",
+          "es": "Húmedo al crecer",
+          "pt": "Úmido no crescimento",
+          "ar": "رطب أثناء النمو",
+          "hi": "वृद्धि में नम",
+          "zh": "生长期保持湿润",
+          "ja": "生育期は湿り気",
+          "ko": "성장기 촉촉하게"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Seasonal care",
+          "pl": "Pielęgn. sezonowa",
+          "de": "Saisonpflege",
+          "fr": "Soin saisonnier",
+          "it": "Cura stagionale",
+          "es": "Cuidado estacional",
+          "pt": "Cuidado sazonal",
+          "ar": "عناية موسمية",
+          "hi": "मौसमी देखभाल",
+          "zh": "季节性养护",
+          "ja": "季節管理が必要",
+          "ko": "계절 관리 필요"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cold tolerant",
-          "pl": "Mrozoodporna",
-          "de": "Frosthart",
-          "fr": "Rustique",
-          "it": "Resistente al freddo",
-          "es": "Resistente al frío",
-          "pt": "Resistente ao frio",
-          "ar": "يتحمل البرد",
-          "hi": "ठंड सहनशील",
-          "zh": "耐寒",
-          "ja": "耐寒性",
-          "ko": "내한성"
+          "en": "Cool-season plant",
+          "pl": "Roślina chłodna",
+          "de": "Kühlzeit-Pflanze",
+          "fr": "Plante de fraîcheur",
+          "it": "Pianta da fresco",
+          "es": "De clima fresco",
+          "pt": "De clima fresco",
+          "ar": "يفضل البرودة",
+          "hi": "ठंडा मौसम पसंद",
+          "zh": "喜凉爽",
+          "ja": "涼しい環境向き",
+          "ko": "서늘함 선호"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal outdoor",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य आर्द्रता",
+          "zh": "普通湿度即可",
+          "ja": "普通の湿度で可",
+          "ko": "보통 습도"
         }
       }
     },
@@ -142,17 +142,17 @@
       "value": {
         "text": {
           "en": "Toxic if eaten",
-          "pl": "Trująca",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "pl": "Trująca po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low spring bulb",
-          "pl": "Niska bylina",
-          "de": "Niedrig",
-          "fr": "Bulbe bas",
-          "it": "Bulbo basso",
-          "es": "Bulbo bajo",
-          "pt": "Bulbo baixo",
-          "ar": "نمو منخفض",
-          "hi": "छोटा बल्ब",
-          "zh": "低矮球根",
-          "ja": "低草丈球根",
-          "ko": "낮은 구근"
+          "en": "Spring ephemeral",
+          "pl": "Wiosenny efemeryd",
+          "de": "Frühjahrs-Ephemer",
+          "fr": "Éphémère printanier",
+          "it": "Effimera primaverile",
+          "es": "Efímera primaveral",
+          "pt": "Efêmera da primavera",
+          "ar": "معمر ربيعي قصير",
+          "hi": "वसंत अल्पजीवी",
+          "zh": "春季短命植物",
+          "ja": "春のスプリングエフェ",
+          "ko": "봄철 단명"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj zalewania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodn.",
+          "de": "Gelegentl. Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "害虫はまれ",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Winter aconite",
-      "description": "Eranthis hyemalis is a small tuberous perennial that flowers very early in late winter. It naturally grows in deciduous woodlands and prefers moist, well-drained soil. After flowering, the plant goes dormant by late spring."
+      "description": "Eranthis hyemalis is a tuberous perennial that flowers very early in late winter to early spring. It prefers humus-rich, moist but well-drained soil in sun to partial shade. Keep evenly moist while growing and let the pot dry more once foliage dies back; all parts are toxic if ingested."
     },
     "pl": {
       "common_name": "Rannik zimowy",
-      "description": "Eranthis hyemalis to niska bylina kwitnąca bardzo wcześnie, jeszcze zimą. Występuje naturalnie w lasach liściastych i lubi wilgotną, przepuszczalną glebę. Po kwitnieniu szybko przechodzi w stan spoczynku."
+      "description": "Eranthis hyemalis to bulwiasta bylina kwitnąca bardzo wcześnie, pod koniec zimy i na początku wiosny. Lubi glebę próchniczną, wilgotną, ale przepuszczalną oraz stanowisko od słońca do półcienia. Podlewaj umiarkowanie w okresie wzrostu i ogranicz wodę po zaschnięciu liści; roślina jest trująca po spożyciu."
     },
     "de": {
       "common_name": "Winterling",
-      "description": "Eranthis hyemalis ist eine früh blühende, niedrig wachsende Staude. Sie wächst bevorzugt in lichten Laubwäldern auf feuchtem, gut durchlässigem Boden. Nach der Blüte zieht sie im Frühjahr ein."
+      "description": "Eranthis hyemalis ist eine knollenbildende Staude mit sehr früher Blüte im Spätwinter bis zeitigen Frühjahr. Sie wächst am besten in humoser, gleichmäßig feuchter, aber gut drainierter Erde in Sonne bis Halbschatten. Während des Austriebs feucht halten und nach dem Einziehen der Blätter trockener; alle Pflanzenteile sind bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Éranthis d'hiver",
-      "description": "Eranthis hyemalis est une petite plante vivace à floraison hivernale précoce. Elle pousse naturellement en sous-bois clairs avec un sol humide et drainé. La plante entre en dormance après la floraison."
+      "common_name": "Éranthis d’hiver",
+      "description": "Eranthis hyemalis est une vivace à tubercules qui fleurit très tôt, de la fin de l’hiver au début du printemps. Elle préfère un sol humifère, humide mais bien drainé, au soleil ou à mi-ombre. Maintenez le substrat légèrement humide en période de croissance puis plus sec après le jaunissement; la plante est toxique en cas d’ingestion."
     },
     "it": {
       "common_name": "Eranthis invernale",
-      "description": "Eranthis hyemalis è una perenne bulbosa che fiorisce alla fine dell'inverno. Predilige ambienti boschivi con terreno umido e ben drenato. Dopo la fioritura entra rapidamente in riposo vegetativo."
+      "description": "Eranthis hyemalis è una perenne tuberosa che fiorisce molto presto tra fine inverno e inizio primavera. Preferisce un terreno ricco di humus, umido ma ben drenato, in sole o mezz’ombra. Mantieni umido durante la crescita e riduci l’acqua dopo la senescenza delle foglie; è tossica se ingerita."
     },
     "es": {
-      "common_name": "Eranthis de invierno",
-      "description": "Eranthis hyemalis es una pequeña planta perenne que florece a finales del invierno. Crece en bosques caducifolios con suelo húmedo y drenado. Tras la floración, la parte aérea desaparece."
+      "common_name": "Acónito de invierno",
+      "description": "Eranthis hyemalis es una perenne tuberosa que florece muy temprano, a finales de invierno y comienzos de primavera. Prefiere suelo con humus, húmedo pero bien drenado, con sol o semisombra. Mantén la humedad durante el crecimiento y reduce el riego cuando el follaje se seque; es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Eranthis-de-inverno",
-      "description": "Eranthis hyemalis é uma planta perene de floração muito precoce. Desenvolve-se em bosques com solo húmido e bem drenado. Após a floração, entra em dormência na primavera."
+      "common_name": "Acônito-de-inverno",
+      "description": "Eranthis hyemalis é uma perene tuberosa que floresce muito cedo do fim do inverno ao início da primavera. Prefere solo rico em húmus, úmido porém bem drenado, em sol ou meia-sombra. Mantenha úmido durante o crescimento e mais seco após a folhagem secar; é tóxica se ingerida."
     },
     "ar": {
-      "common_name": "أقحوان الشتاء",
-      "description": "نبات Eranthis hyemalis معمر صغير يزهر في أواخر الشتاء. ينمو في الغابات متساقطة الأوراق ويفضل التربة الرطبة جيدة التصريف. يدخل في طور السكون بعد الإزهار."
+      "common_name": "إرانثيس الشتوي",
+      "description": "Eranthis hyemalis نبات معمر درني يزهر مبكرًا من أواخر الشتاء إلى أوائل الربيع. يفضّل تربة غنية بالدبال ورطبة لكنها جيدة الصرف مع شمس أو ظل جزئي. حافظ على رطوبة معتدلة أثناء النمو وقلّل الري بعد ذبول الأوراق؛ جميع الأجزاء سامة عند الابتلاع."
     },
     "hi": {
       "common_name": "विंटर एकोनाइट",
-      "description": "Eranthis hyemalis एक छोटा बहुवर्षीय पौधा है जो सर्दियों के अंत में खिलता है। यह नम और अच्छी जल निकासी वाली मिट्टी पसंद करता है। फूलों के बाद पौधा सुप्त अवस्था में चला जाता है।"
+      "description": "Eranthis hyemalis एक कंदयुक्त बहुवर्षीय पौधा है जो देर सर्दियों से शुरुआती वसंत में बहुत जल्दी फूल देता है। इसे ह्यूमस-युक्त, नम लेकिन अच्छी जलनिकासी वाली मिट्टी और आंशिक छाया से धूप तक का स्थान पसंद है। वृद्धि के समय मिट्टी हल्की नम रखें और पत्तियाँ सूखने पर पानी कम करें; खाने पर यह विषैला है।"
     },
     "zh": {
-      "common_name": "冬黄花",
-      "description": "Eranthis hyemalis 是一种早春开花的多年生球根植物。它常见于落叶林中，喜欢湿润且排水良好的土壤。开花后植株很快进入休眠。"
+      "common_name": "冬乌头",
+      "description": "Eranthis hyemalis 是块茎型多年生植物，通常在冬末到早春很早开花。适合腐殖质丰富、保持湿润但排水良好的土壤，半阴到阳光处均可。生长期保持均匀湿润，叶片枯萎后减少浇水；误食有毒。"
     },
     "ja": {
-      "common_name": "ウィンターアコナイト",
-      "description": "Eranthis hyemalis は冬の終わりに咲く小型の多年草です。落葉樹林の湿った土壌を好みます。開花後は春に地上部が枯れます。"
+      "common_name": "キバナセツブンソウ",
+      "description": "Eranthis hyemalis は塊茎をもつ多年草で、晩冬から早春にかけて非常に早く開花します。腐植質に富み、湿り気は保つが水はけの良い用土を好み、日向〜半日陰で育ちます。生育期は適度に湿らせ、葉が枯れたら乾かし気味にし、誤食は有毒です。"
     },
     "ko": {
-      "common_name": "윈터 아코나이트",
-      "description": "Eranthis hyemalis는 늦겨울에 꽃을 피우는 작은 다년생 식물입니다. 습하고 배수가 좋은 토양을 선호합니다. 개화 후에는 봄에 휴면기에 들어갑니다."
+      "common_name": "겨울 에란티스",
+      "description": "Eranthis hyemalis 는 덩이줄기를 가진 다년생으로 늦겨울~이른 봄에 매우 이르게 꽃이 핍니다. 부식질이 풍부하고 촉촉하지만 배수가 좋은 흙, 햇빛~반그늘을 선호합니다. 생장기에는 고르게 촉촉하게 유지하고 잎이 마르면 물을 줄이며, 섭취 시 독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/6871/eranthis-hyemalis/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b756",
-      "https://www.gardenersworld.com/plants/eranthis-hyemalis/"
+      "https://www.rhs.org.uk/plants/6540/eranthis-hyemalis/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a446",
+      "https://plants.ces.ncsu.edu/plants/eranthis-hyemalis/",
+      "https://hort.extension.wisc.edu/articles/winter-aconite-eranthis-hyemalis/"
     ]
   }
 }

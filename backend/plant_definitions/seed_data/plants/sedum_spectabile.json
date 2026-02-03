@@ -1,6 +1,6 @@
 {
   "external_id": "sedum_spectabile",
-  "name": "Showy Stonecrop",
+  "name": "Autumn Joy",
   "latin": "Sedum spectabile",
   "sun": "high",
   "water": "medium",
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full Sun",
-          "pl": "Pełne Słońce",
+          "en": "Full sun",
+          "pl": "Pełne słońce",
           "de": "Volle Sonne",
-          "fr": "Plein Soleil",
-          "it": "Sole Pieno",
-          "es": "Pleno Sol",
-          "pt": "Sol Pleno",
-          "ar": "أشعة الشمس المباشرة",
-          "hi": "पूर्ण सूर्य",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس ساطعة",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "完全な太陽",
-          "ko": "완전한 햇볕"
+          "ja": "直射日光",
+          "ko": "햇빛"
         }
       }
     },
@@ -55,11 +55,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيد التصريف",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "良好的排水",
-          "ja": "良好な排水",
-          "ko": "잘 배수된"
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -69,15 +69,15 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig",
+          "de": "Moderat",
           "fr": "Modéré",
           "it": "Moderato",
           "es": "Moderado",
           "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "中程度",
+          "zh": "适中",
+          "ja": "適度",
           "ko": "보통"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-25°C",
-          "pl": "10-25°C",
-          "de": "10-25°C",
-          "fr": "10-25°C",
-          "it": "10-25°C",
-          "es": "10-25°C",
-          "pt": "10-25°C",
-          "ar": "10-25°C",
-          "hi": "10-25°C",
-          "zh": "10-25°C",
-          "ja": "10-25°C",
-          "ko": "10-25°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -125,17 +125,17 @@
       "value": {
         "text": {
           "en": "Low",
-          "pl": "Niskie",
+          "pl": "Niska",
           "de": "Niedrig",
           "fr": "Faible",
-          "it": "Basso",
+          "it": "Bassa",
           "es": "Baja",
           "pt": "Baixa",
-          "ar": "منخفض",
+          "ar": "منخفضة",
           "hi": "कम",
           "zh": "低",
           "ja": "低",
-          "ko": "낮음"
+          "ko": "낮은"
         }
       }
     },
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact",
-          "pl": "Kompaktowy",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatto",
-          "es": "Compacto",
-          "pt": "Compacto",
-          "ar": "مضغوط",
-          "hi": "संकुचित",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "컴팩트"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Showy Stonecrop",
-      "description": "Sedum spectabile is a drought-tolerant perennial with succulent leaves and pink star-shaped flowers. It thrives in full sun and well-drained soil."
+      "common_name": "Autumn Joy",
+      "description": "Sedum spectabile, also known as Autumn Joy, is a hardy perennial with succulent leaves and pink to red flowers. It thrives in full sun and well-draining soil."
     },
     "pl": {
-      "common_name": "Rozchodnik ozdobny",
-      "description": "Sedum spectabile to roślina wieloletnia odporna na suszę, o mięsistych liściach i różowych gwiazdkowych kwiatach. Preferuje pełne słońce i dobrze przepuszczalną glebę."
+      "common_name": "Jesienna radość",
+      "description": "Sedum spectabile, znane również jako Jesienna radość, to wytrzymała roślina wieloletnia z mięsistymi liśćmi i różowymi do czerwonych kwiatami. Preferuje pełne słońce i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Fetthenne",
-      "description": "Sedum spectabile ist eine trockenresistente Staude mit fleischigen Blättern und rosa sternförmigen Blüten. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
+      "common_name": "Herbstfreude",
+      "description": "Sedum spectabile, auch bekannt als Herbstfreude, ist eine robuste Staude mit sukkulenten Blättern und rosa bis roten Blüten. Es gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Orpin de Salon",
-      "description": "Sedum spectabile est une plante vivace tolérante à la sécheresse avec des feuilles succulentes et des fleurs roses en forme d'étoile. Elle préfère le plein soleil et un sol bien drainé."
+      "common_name": "Joie d'automne",
+      "description": "Sedum spectabile, également connu sous le nom de Joie d'automne, est une plante vivace résistante avec des feuilles succulentes et des fleurs roses à rouges. Elle prospère sous un soleil éclatant et dans un sol bien drainé."
     },
     "it": {
-      "common_name": "Sedum Spettacolare",
-      "description": "Sedum spectabile è una pianta perenne resistente alla siccità con foglie succulente e fiori rosa a forma di stella. Preferisce il pieno sole e un terreno ben drenato."
+      "common_name": "Gioia d'autunno",
+      "description": "Sedum spectabile, noto anche come Gioia d'autunno, è una pianta perenne resistente con foglie succulente e fiori rosa-rossi. Cresce bene al sole pieno e in terreni ben drenati."
     },
     "es": {
-      "common_name": "Sedum Espectacular",
-      "description": "Sedum spectabile es una planta perenne resistente a la sequía, con hojas suculentas y flores rosadas en forma de estrella. Crece mejor a pleno sol y en suelos bien drenados."
+      "common_name": "Alegría de otoño",
+      "description": "Sedum spectabile, también conocido como Alegría de otoño, es una planta perenne resistente con hojas suculentas y flores rosas a rojas. Crece bien al sol completo y en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Sedum Espectacular",
-      "description": "Sedum spectabile é uma planta perene resistente à seca, com folhas suculentas e flores rosas em forma de estrela. Prefere pleno sol e solo bem drenado."
+      "common_name": "Alegria do Outono",
+      "description": "Sedum spectabile, também conhecido como Alegria do Outono, é uma planta perene resistente com folhas suculentas e flores rosadas a vermelhas. Cresce bem sob sol pleno e solo bem drenado."
     },
     "ar": {
-      "common_name": "شجرة الزينة الراقية",
-      "description": "Sedum spectabile هو نبات معمّر مقاوم للجفاف بأوراق عصارية وزهور وردية على شكل نجمة. يفضل الشمس الكاملة والتربة جيدة التصريف."
+      "common_name": "فرحة الخريف",
+      "description": "Sedum spectabile، المعروف أيضًا باسم فرحة الخريف، هو نبات معمر مقاوم بأوراق عصارية وزهور وردية إلى حمراء. يزدهر تحت أشعة الشمس الكاملة وفي التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "शानदार पत्थर क्रॉप",
-      "description": "Sedum spectabile एक सूखा सहिष्णु बारहमासी पौधा है जिसमें मांसल पत्तियाँ और गुलाबी स्टार के आकार के फूल होते हैं। यह पूरी धूप और अच्छी तरह से जल निकासी वाली मिट्टी में पनपता है।"
+      "common_name": "पतझड़ की खुशी",
+      "description": "Sedum spectabile, जिसे पतझड़ की खुशी के नाम से भी जाना जाता है, एक मजबूत परिधीय पौधा है जिसमें मांसल पत्तियाँ और गुलाबी से लाल रंग के फूल होते हैं। यह पूर्ण सूर्य और अच्छी जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
-      "common_name": "华丽景天",
-      "description": "Sedum spectabile是一种耐旱的多年生植物，具有多肉叶和粉红色的星形花朵。它喜欢全日照和排水良好的土壤。"
+      "common_name": "秋天的喜悦",
+      "description": "Sedum spectabile，也被称为秋天的喜悦，是一种耐寒的多年生植物，具有多肉的叶子和粉色到红色的花朵。它在充足阳光和排水良好的土壤中茁壮成长。"
     },
     "ja": {
-      "common_name": "華麗なセダム",
-      "description": "Sedum spectabileは耐乾性の多年草で、多肉質の葉とピンクの星形の花を持っています。完全な日光と排水の良い土壌を好みます。"
+      "common_name": "秋の喜び",
+      "description": "Sedum spectabile、別名秋の喜びは、多肉質の葉とピンクから赤の花を持つ丈夫な多年草です。完全な日光と排水の良い土壌でよく育ちます。"
     },
     "ko": {
-      "common_name": "화려한 돌나물",
-      "description": "Sedum spectabile은 다육성 잎과 분홍색 별 모양의 꽃을 가진 내건성 다년생 식물입니다. 완전한 햇빛과 잘 배수되는 토양에서 잘 자랍니다."
+      "common_name": "가을의 기쁨",
+      "description": "Sedum spectabile, 가을의 기쁨으로도 알려진 이 식물은 다육질의 잎과 분홍색에서 빨간색의 꽃을 가진 튼튼한 다년생 식물입니다. 햇빛이 잘 드는 곳과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/sedum-spectabile-showy-stonecrop",
-      "https://www.rhs.org.uk/plants/14562/sedum-spectabile"
+      "https://www.rhs.org.uk/plants/74760/sedum-spectabile/details",
+      "https://www.gardenia.net/plant/sedum-spectabile-autumn-joy"
     ]
   }
 }

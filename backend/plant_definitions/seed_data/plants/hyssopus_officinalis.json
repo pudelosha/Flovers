@@ -1,24 +1,25 @@
 {
   "external_id": "hyssopus_officinalis",
-  "name": "Hyssop",
+  "name": "Hyssopus officinalis",
   "latin": "Hyssopus officinalis",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "hyssopus_officinalis.jpg",
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
+          "ar": "أشعة الشمس الكاملة",
           "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "강한 햇빛"
+          "ja": "完全日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "よく排水された",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low watering",
-          "pl": "Mało wody",
-          "de": "Wenig gießen",
-          "fr": "Arrosage faible",
-          "it": "Poca acqua",
-          "es": "Riego bajo",
-          "pt": "Pouca água",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderate Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–30°C",
-          "pl": "15–30°C",
-          "de": "15–30°C",
-          "fr": "15–30°C",
-          "it": "15–30°C",
-          "es": "15–30°C",
-          "pt": "15–30°C",
-          "ar": "15–30°م",
-          "hi": "15–30°C",
-          "zh": "15–30°C",
-          "ja": "15–30°C",
-          "ko": "15–30°C"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Gering",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -143,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright herb",
-          "pl": "Wzniesiona",
-          "de": "Aufrecht",
-          "fr": "Dressée",
-          "it": "Eretta",
-          "es": "Erguida",
-          "pt": "Ereta",
-          "ar": "قائمة",
-          "hi": "सीधी बढ़त",
-          "zh": "直立生长",
-          "ja": "直立型",
-          "ko": "직립형"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewaj za dużo",
+          "de": "Nicht übergießen",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pochi parassiti",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Hyssop",
-      "description": "Hyssopus officinalis is a perennial aromatic herb native to southern Europe and the Mediterranean. It prefers full sun, well-drained soil, and sparse watering. The plant is commonly grown for culinary, ornamental, and traditional uses."
+      "description": "Hyssopus officinalis is a herbaceous perennial plant known for its aromatic leaves and medicinal properties. It thrives in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Hyzop",
-      "description": "Hyssopus officinalis to wieloletnie zioło pochodzące z rejonu Morza Śródziemnego. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Wymaga umiarkowanego podlewania."
+      "common_name": "Hyzop lekarski",
+      "description": "Hyssopus officinalis to roślina wieloletnia, znana ze swoich aromatycznych liści i właściwości leczniczych. Rośnie najlepiej w pełnym słońcu i przepuszczalnej glebie."
     },
     "de": {
       "common_name": "Ysop",
-      "description": "Hyssopus officinalis ist ein mehrjähriges, aromatisches Kraut aus dem Mittelmeerraum. Es wächst am besten in voller Sonne und durchlässigem Boden. Die Pflanze benötigt nur wenig Wasser."
+      "description": "Hyssopus officinalis ist eine mehrjährige Pflanze, die für ihre aromatischen Blätter und medizinischen Eigenschaften bekannt ist. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Hysope",
-      "description": "Hyssopus officinalis est une plante herbacée vivace originaire du sud de l’Europe. Elle apprécie le plein soleil et les sols bien drainés. L’arrosage doit rester modéré."
+      "description": "Hyssopus officinalis est une plante vivace herbacée connue pour ses feuilles aromatiques et ses propriétés médicinales. Elle préfère le plein soleil et un sol bien drainé."
     },
     "it": {
-      "common_name": "Issopo",
-      "description": "Hyssopus officinalis è un’erba perenne aromatica originaria del Mediterraneo. Predilige pieno sole e terreno ben drenato. Richiede annaffiature limitate."
+      "common_name": "Ippocrate",
+      "description": "Hyssopus officinalis è una pianta perenne erbacea conosciuta per le sue foglie aromatiche e le proprietà medicinali. Cresce bene al sole e in terreni ben drenati."
     },
     "es": {
       "common_name": "Hisopo",
-      "description": "Hyssopus officinalis es una hierba perenne aromática originaria del Mediterráneo. Crece mejor a pleno sol y en suelos bien drenados. Necesita riegos poco frecuentes."
+      "description": "Hyssopus officinalis es una planta perenne herbácea conocida por sus hojas aromáticas y propiedades medicinales. Crece bien al sol y en suelos bien drenados."
     },
     "pt": {
       "common_name": "Hissopo",
-      "description": "Hyssopus officinalis é uma erva perene aromática nativa da região mediterrânea. Prefere sol pleno e solo bem drenado. A rega deve ser moderada."
+      "description": "Hyssopus officinalis é uma planta perene herbácea conhecida por suas folhas aromáticas e propriedades medicinais. Cresce bem sob pleno sol e solo bem drenado."
     },
     "ar": {
-      "common_name": "الزوفا",
-      "description": "نبات Hyssopus officinalis عشبي معمر موطنه جنوب أوروبا. يفضل الشمس الكاملة والتربة جيدة التصريف. يحتاج إلى ري محدود."
+      "common_name": "الهيبسيس",
+      "description": "Hyssopus officinalis هو نبات معمر عشبي معروف بأوراقه العطرية وخصائصه الطبية. ينمو جيدًا في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "हिस्सोप",
-      "description": "Hyssopus officinalis एक बहुवर्षीय सुगंधित जड़ी बूटी है जो भूमध्यसागरीय क्षेत्र की मूल निवासी है। यह पूर्ण धूप और अच्छी जलनिकासी वाली मिट्टी में अच्छी तरह बढ़ती है।"
+      "common_name": "हिसोप",
+      "description": "Hyssopus officinalis एक द्विवर्षीय पौधा है जो अपनी सुगंधित पत्तियों और औषधीय गुणों के लिए जाना जाता है। यह पूर्ण सूर्य और अच्छे जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
-      "common_name": "牛膝草",
-      "description": "Hyssopus officinalis 是一种原产于地中海地区的多年生芳香草本植物。它喜全日照和排水良好的土壤。浇水需求较低。"
+      "common_name": "马郁兰",
+      "description": "Hyssopus officinalis 是一种多年生草本植物，因其芳香的叶子和药用特性而闻名。它喜欢全日照和排水良好的土壤。"
     },
     "ja": {
-      "common_name": "ヒソップ",
-      "description": "Hyssopus officinalis は地中海原産の多年生ハーブです。日当たりと水はけの良い土壌を好みます。水やりは控えめにします。"
+      "common_name": "ヒッソポ",
+      "description": "Hyssopus officinalis は、芳香のある葉と薬効のある特性で知られる多年生の草本植物です。完全な日光と排水の良い土壌で育ちます。"
     },
     "ko": {
       "common_name": "히솝",
-      "description": "Hyssopus officinalis는 지중해 지역이 원산지인 다년생 허브입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 물은 적게 줍니다."
+      "description": "Hyssopus officinalis는 향기로운 잎과 약용 특성으로 잘 알려진 다년생 풀입니다. 완전한 햇볕과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/8755/hyssopus-officinalis/details",
-      "https://plants.ces.ncsu.edu/plants/hyssopus-officinalis/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a561"
+      "https://www.rhs.org.uk/plants/hyssopus-officinalis",
+      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-and-pests/hyssopus-officinalis/"
     ]
   }
 }

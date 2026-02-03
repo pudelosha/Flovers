@@ -1,9 +1,9 @@
 {
   "external_id": "fittonia_albivenis",
-  "name": "Nerve Plant",
+  "name": "Fittonia",
   "latin": "Fittonia albivenis",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne rozproszone",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "rich well-drained",
-          "pl": "żyzna przepuszczalna",
-          "de": "nährstoffreich",
-          "fr": "riche drainé",
-          "it": "ricco drenato",
-          "es": "rico drenado",
-          "pt": "rico drenado",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水土",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep moist",
-          "pl": "stale wilgotne",
-          "de": "gleichmäßig feucht",
-          "fr": "toujours humide",
-          "it": "sempre umido",
-          "es": "siempre húmedo",
-          "pt": "sempre úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気維持",
-          "ko": "항상 촉촉"
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "umiarkowana",
-          "de": "mittel",
-          "fr": "modérée",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度のケア",
+          "ko": "보통의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,15 +124,15 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high humidity",
-          "pl": "wysoka wilgotność",
-          "de": "hohe Luftfeuchte",
-          "fr": "humidité élevée",
-          "it": "alta umidità",
-          "es": "humedad alta",
-          "pt": "umidade alta",
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "अधिक नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietoksyczna",
-          "de": "ungiftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "low compact",
-          "pl": "niski zwarty",
-          "de": "kompakt",
-          "fr": "compact",
-          "it": "compatto",
-          "es": "compacto",
-          "pt": "compacto",
-          "ar": "نمو منخفض",
-          "hi": "घना छोटा",
-          "zh": "低矮紧凑",
-          "ja": "低く密",
-          "ko": "낮고 조밀"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "缓慢到适中",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez de trop arroser",
+          "it": "Evita di annaffiare troppo",
+          "es": "Evita el exceso de riego",
+          "pt": "Evite regar demais",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔씩 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Nerve Plant",
-      "description": "Fittonia albivenis is a tropical houseplant known for its striking veined leaves. It prefers bright indirect light and consistently moist soil. High humidity helps prevent leaf drop."
+      "common_name": "Nerve plant",
+      "description": "Fittonia albivenis is a small tropical plant known for its colorful veined leaves. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Fitonia",
-      "description": "Fittonia albivenis to tropikalna roślina doniczkowa o wyraźnie unerwionych liściach. Lubi jasne, rozproszone światło i stale wilgotne podłoże. Wysoka wilgotność powietrza jest bardzo ważna."
+      "common_name": "Roślina nerwowa",
+      "description": "Fittonia albivenis to mała tropikalna roślina znana z kolorowych liści z żyłkami. Rośnie w umiarkowanym świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Mosaikpflanze",
-      "description": "Fittonia albivenis ist eine tropische Zimmerpflanze mit dekorativen Blattadern. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist vorteilhaft."
+      "common_name": "Nervpflanze",
+      "description": "Fittonia albivenis ist eine kleine tropische Pflanze, die für ihre bunten Aderblätter bekannt ist. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Plante mosaïque",
-      "description": "Fittonia albivenis est une plante tropicale appréciée pour ses feuilles nervurées. Elle aime une lumière indirecte et un sol constamment humide. Une forte humidité est recommandée."
+      "common_name": "Plante nerveuse",
+      "description": "Fittonia albivenis est une petite plante tropicale connue pour ses feuilles colorées et veinées. Elle pousse à la lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Fittonia",
-      "description": "Fittonia albivenis è una pianta tropicale ornamentale con foglie molto venate. Richiede luce indiretta e terreno sempre leggermente umido. L'umidità elevata favorisce una crescita sana."
+      "common_name": "Pianta nervosa",
+      "description": "Fittonia albivenis è una piccola pianta tropicale conosciuta per le sue foglie venate colorate. Cresce in luce moderata e alta umidità."
     },
     "es": {
-      "common_name": "Fitonia",
-      "description": "Fittonia albivenis es una planta tropical de interior con hojas muy decorativas. Prefiere luz indirecta brillante y sustrato húmedo. La humedad alta es esencial."
+      "common_name": "Planta nerviosa",
+      "description": "Fittonia albivenis es una pequeña planta tropical conocida por sus hojas venadas de colores. Crece con luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Fitônia",
-      "description": "Fittonia albivenis é uma planta tropical conhecida pelas nervuras das folhas. Gosta de luz indireta e solo sempre úmido. Alta umidade ajuda no seu desenvolvimento."
+      "common_name": "Planta nervosa",
+      "description": "Fittonia albivenis é uma pequena planta tropical conhecida por suas folhas veínadas coloridas. Ela cresce em luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "نبات العصب",
-      "description": "نبات فيتونيا ألبفينيس نبات استوائي يتميز بأوراقه المزخرفة. يفضل الضوء غير المباشر والتربة الرطبة باستمرار. الرطوبة العالية ضرورية لصحة النبات."
+      "common_name": "النبات العصبي",
+      "description": "Fittonia albivenis هو نبات استوائي صغير معروف بأوراقه الملونة ذات العروق. ينمو في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
       "common_name": "नर्व प्लांट",
-      "description": "फिटोनिया एल्बिवेनिस एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ आकर्षक होती हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। अधिक नमी लाभदायक होती है।"
+      "description": "Fittonia albivenis एक छोटा उष्णकटिबंधीय पौधा है, जो अपने रंगीन नसों वाले पत्तों के लिए जाना जाता है। यह मध्यम प्रकाश और उच्च आर्द्रता में उगता है।"
     },
     "zh": {
-      "common_name": "网纹草",
-      "description": "Fittonia albivenis 是一种热带观叶植物，以叶脉明显著称。它喜欢明亮的散射光和湿润的土壤。高湿度环境有助于生长。"
+      "common_name": "神经植物",
+      "description": "Fittonia albivenis 是一种小型热带植物，以其色彩斑斓的脉络叶片而闻名。它在中等光照和高湿度下生长。"
     },
     "ja": {
-      "common_name": "フィットニア",
-      "description": "フィットニア・アルビウェニスは葉脈が美しい熱帯植物です。明るい間接光と湿った土を好みます。高い湿度が必要です。"
+      "common_name": "神経植物",
+      "description": "Fittonia albivenisは、色鮮やかな脈のある葉で知られる小さな熱帯植物です。中程度の光と高湿度で育ちます。"
     },
     "ko": {
-      "common_name": "피토니아",
-      "description": "피토니아 알비베니스는 잎맥이 돋보이는 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 중요합니다."
+      "common_name": "신경 식물",
+      "description": "Fittonia albivenis는 다채로운 정맥이 있는 작은 열대 식물로 알려져 있습니다. 이는 중간 정도의 빛과 높은 습도에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/fittonia/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/EP337",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a242"
+      "https://www.rhs.org.uk/plants/fittonia-albivenis",
+      "https://www.gardenia.net/plant/fittonia-albivenis"
     ]
   }
 }

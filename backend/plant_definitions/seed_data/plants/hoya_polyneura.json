@@ -1,22 +1,23 @@
 {
   "external_id": "hoya_polyneura",
-  "name": "Fishtail hoya",
+  "name": "Hoya polyneura",
   "latin": "Hoya polyneura",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "cactus"
+    "aroid",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne, rozproszone",
-          "de": "Hell, indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Chunky airy mix",
-          "pl": "Przepuszczalna miesz.",
-          "de": "Lockeres Substrat",
-          "fr": "Mélange aéré",
-          "it": "Mix arioso",
-          "es": "Mezcla aireada",
-          "pt": "Mistura arejada",
-          "ar": "خليط خشن وجيد الصرف",
-          "hi": "हवादार, ढीला मिक्स",
-          "zh": "疏松透气介质",
-          "ja": "通気性の良い用土",
-          "ko": "통기성 좋은 배합"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Dry then water",
-          "pl": "Podlej po przesch.",
-          "de": "Erst antrocknen",
-          "fr": "Arroser après séch.",
-          "it": "Bagna a secco",
-          "es": "Riega tras secar",
-          "pt": "Regar após secar",
-          "ar": "اسقِ بعد الجفاف",
-          "hi": "सूखने पर पानी",
-          "zh": "干透再浇",
-          "ja": "乾いてから水やり",
-          "ko": "마른 뒤 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,17 +87,17 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnia",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate-high",
-          "pl": "Umiark.-wysoka",
-          "de": "Mittel-hoch",
-          "fr": "Moyenne-élevée",
-          "it": "Media-alta",
-          "es": "Media-alta",
-          "pt": "Média-alta",
-          "ar": "رطوبة متوسطة-عالية",
-          "hi": "मध्यम-उच्च",
-          "zh": "中到高湿度",
-          "ja": "中〜高湿度",
-          "ko": "중~높은 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषैला नहीं",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Trujący dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पेट्स के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -161,79 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing vine",
-          "pl": "Pnącze zwisające",
-          "de": "Hängende Ranke",
-          "fr": "Liane retombante",
-          "it": "Ricadente",
-          "es": "Colgante",
-          "pt": "Pendente",
-          "ar": "نبات متدلٍّ",
-          "hi": "लटकने वाली बेल",
-          "zh": "垂吊藤本",
-          "ja": "つる性・垂れ下がる",
-          "ko": "늘어지는 덩굴"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرूक्त पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時折発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Fishtail hoya",
-      "description": "Hoya polyneura is an epiphytic hoya native from the Central Himalaya to northwest Yunnan. Keep it in bright, indirect light and a chunky, fast-draining mix; water when the potting mix is mostly dry (about every 10 days indoors). Warm conditions are best, and it is generally considered non-toxic to cats and dogs."
+      "common_name": "String Bean Hoya",
+      "description": "Hoya polyneura is a vining plant with distinctive, veined leaves. It is native to Southeast Asia and requires moderate care."
     },
     "pl": {
-      "common_name": "Hoya polyneura",
-      "description": "Hoya polyneura to epifityczna hoja pochodząca od Himalajów środkowych po płn.-zach. Junnan. Zapewnij jasne, rozproszone światło i bardzo przepuszczalne podłoże; podlewaj, gdy podłoże prawie przeschnie (zwykle co ok. 10 dni w domu). Lubi ciepło, a roślina jest ogólnie uznawana za nietoksyczną dla kotów i psów."
+      "common_name": "Hoya strunowa",
+      "description": "Hoya polyneura to roślina pnąca z charakterystycznymi, żyłkowymi liśćmi. Pochodzi z Azji Południowo-Wschodniej i wymaga umiarkowanej pielęgnacji."
     },
     "de": {
-      "common_name": "Fishtail-Hoya",
-      "description": "Hoya polyneura ist eine epiphytische Hoya aus dem Zentralhimalaya bis Nordwest-Yunnan. Helles, indirektes Licht und ein grobes, schnell abtrocknendes Substrat sind ideal; gieße erst, wenn es größtenteils trocken ist (innen oft etwa alle 10 Tage). Sie mag Wärme und gilt allgemein als ungiftig für Katzen und Hunde."
+      "common_name": "Schnur-Hoya",
+      "description": "Hoya polyneura ist eine rankende Pflanze mit markanten, geäderten Blättern. Sie stammt aus Südostasien und benötigt mäßige Pflege."
     },
     "fr": {
-      "common_name": "Hoya queue-de-poisson",
-      "description": "Hoya polyneura est un hoya épiphyte originaire de l’Himalaya central jusqu’au nord-ouest du Yunnan. Donnez une lumière vive indirecte et un substrat très drainant; arrosez quand le mélange est presque sec (environ tous les 10 jours en intérieur). Elle apprécie la chaleur et est généralement considérée comme non toxique pour les chats et les chiens."
+      "common_name": "Hoya à haricot",
+      "description": "Hoya polyneura est une plante grimpante avec des feuilles veineuses distinctives. Elle est originaire d'Asie du Sud-Est et nécessite des soins modérés."
     },
     "it": {
-      "common_name": "Hoya a coda di pesce",
-      "description": "Hoya polyneura è una hoya epifita originaria dall’Himalaya centrale al nord-ovest dello Yunnan. Tienila in luce intensa ma indiretta e in un substrato molto drenante; annaffia quando il mix è quasi asciutto (circa ogni 10 giorni in casa). Preferisce temperature calde ed è generalmente considerata non tossica per cani e gatti."
+      "common_name": "Hoya fagiolo",
+      "description": "Hoya polyneura è una pianta rampicante con foglie venate distintive. È originaria del Sud-est asiatico e richiede cure moderate."
     },
     "es": {
-      "common_name": "Hoya cola de pez",
-      "description": "Hoya polyneura es una hoya epífita nativa desde el Himalaya central hasta el noroeste de Yunnan. Requiere luz brillante indirecta y un sustrato muy drenante; riega cuando el sustrato esté casi seco (aprox. cada 10 días en interior). Prefiere calor y, en general, se considera no tóxica para gatos y perros."
+      "common_name": "Hoya frijol",
+      "description": "Hoya polyneura es una planta trepadora con hojas venosas distintivas. Es originaria del sudeste asiático y requiere cuidados moderados."
     },
     "pt": {
-      "common_name": "Hoya cauda-de-peixe",
-      "description": "Hoya polyneura é uma hoya epífita nativa do Himalaia Central ao noroeste de Yunnan. Mantenha em luz brilhante indireta e substrato bem drenante; regue quando estiver quase seco (cerca de 10 dias em interiores). Gosta de calor e é geralmente considerada não tóxica para gatos e cães."
+      "common_name": "Hoya feijão",
+      "description": "Hoya polyneura é uma planta trepadeira com folhas veiosas distintas. É nativa do Sudeste Asiático e requer cuidados moderados."
     },
     "ar": {
-      "common_name": "هويا ذيل السمكة",
-      "description": "Hoya polyneura نبات هويا هوائي الأصل موطنه من الهيمالايا الوسطى إلى شمال غرب يوننان. يحتاج ضوءًا ساطعًا غير مباشر وخليطًا سريع التصريف؛ اسقِ عندما تجف التربة في الغالب (حوالي كل 10 أيام داخل المنزل). يفضّل الدفء ويُعد عمومًا غير سام للقطط والكلاب."
+      "common_name": "هوجيا الفاصوليا",
+      "description": "هوجيا بولينورا هي نبتة متسلقة ذات أوراق مميزة مع عروق. هي موطنها الأصلي جنوب شرق آسيا وتحتاج إلى رعاية معتدلة."
     },
     "hi": {
-      "common_name": "फिशटेल होया",
-      "description": "Hoya polyneura एक एपिफाइटिक होया है जिसका प्राकृतिक क्षेत्र मध्य हिमालय से उत्तर-पश्चिम युन्नान तक है। इसे तेज़ अप्रत्यक्ष रोशनी और हवादार, जल्दी सूखने वाले मिक्स में रखें; मिट्टी लगभग सूखने पर पानी दें (घर में लगभग हर 10 दिन)। गर्म तापमान बेहतर रहता है और इसे आम तौर पर बिल्लियों व कुत्तों के लिए गैर-विषैला माना जाता है।"
+      "common_name": "होया बीन्स",
+      "description": "Hoya polyneura एक लताओं वाली पौधा है जिसमें विशिष्ट शिराएं वाली पत्तियाँ होती हैं। यह दक्षिण-पूर्व एशिया का मूल है और इसे मध्यम देखभाल की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "鱼尾球兰",
-      "description": "Hoya polyneura 为附生球兰，原产自中喜马拉雅至中国云南西北部。宜给明亮散射光和疏松快排的介质，待介质大体干透再浇水（室内约每10天一次）。喜温暖环境，通常被认为对猫狗无毒。"
+      "common_name": "豆型霍亚",
+      "description": "Hoya polyneura 是一种藤本植物，具有独特的叶脉。它原产于东南亚，需要适度的护理。"
     },
     "ja": {
-      "common_name": "フィッシュテールホヤ",
-      "description": "Hoya polyneura は着生性のホヤで、中部ヒマラヤから中国・雲南北西部に自生します。明るい間接光と水はけの良い粗めの用土を使い、用土がほぼ乾いてから水やりします（室内で約10日ごと）。暖かい環境を好み、一般に猫や犬に無毒とされています。"
+      "common_name": "ホヤ・ポリニュラ",
+      "description": "Hoya polyneuraは、特徴的な葉脈を持つつる植物です。東南アジア原産で、適度なケアが必要です。"
     },
     "ko": {
-      "common_name": "피시테일 호야",
-      "description": "Hoya polyneura는 착생성 호야로 중앙 히말라야에서 중국 윈난 북서부까지 자생합니다. 밝은 간접광과 배수가 빠른 거친 배합토를 사용하고, 흙이 대부분 마른 뒤 물을 주세요(실내 약 10일 간격). 따뜻한 환경을 좋아하며 일반적으로 고양이와 개에 무독성으로 여겨집니다."
+      "common_name": "호야 폴리뉴라",
+      "description": "Hoya polyneura는 독특한 잎맥을 가진 덩굴식물입니다. 동남아시아 원산지이며 적당한 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98639-1",
-      "https://www.rhs.org.uk/plants/55009/hoya-polyneura/details",
-      "https://www.teakandterracotta.com/hoya-polyneura/",
-      "https://www.araflora.com/product/hoya-polyneura-fishtail-hoya-m/",
-      "https://www.livelyroot.com/blogs/plant-care/are-hoya-plants-toxic-to-cats-and-dogs"
+      "https://www.rhs.org.uk/advice/profile?pid=574",
+      "https://www.gardenia.net/plant/Hoya-polyneura"
     ]
   }
 }

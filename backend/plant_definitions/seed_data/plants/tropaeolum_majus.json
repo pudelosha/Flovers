@@ -7,21 +7,21 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "tropaeolum_majus.jpg",
   "image_thumb": "tropaeolum_majus.jpg",
   "traits": [
@@ -31,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "양지"
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained soil",
-          "pl": "Gleba przepuszczalna",
-          "de": "Gut drainierter Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "zh": "排水良好",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Regular watering",
           "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
+          "de": "Regelmäßiges Gießen",
           "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
+          "it": "Annaffiatura regolare",
           "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
+          "pt": "Regagem regular",
+          "ar": "سقي منتظم",
           "hi": "नियमित पानी",
           "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "정기적 물주기"
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -87,8 +87,8 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
+          "pl": "Łatwe",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -97,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodno do ciepło",
-          "de": "Kühl bis warm",
-          "fr": "Frais à chaud",
-          "it": "Fresco-caldo",
-          "es": "Fresco a cálido",
-          "pt": "Fresco a quente",
-          "ar": "معتدل إلى دافئ",
-          "hi": "ठंडा से गर्म",
-          "zh": "凉爽到温暖",
-          "ja": "涼〜暖",
-          "ko": "서늘~따뜻"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等湿度",
+          "ja": "中湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic if ingested",
+          "pl": "Trujące po spożyciu",
+          "de": "Toxisch bei Einnahme",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام إذا تم تناوله",
+          "hi": "पिए जाने पर विषाक्त",
+          "zh": "食用有毒",
+          "ja": "摂取すると毒性あり",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast annual",
-          "pl": "Szybki jednoroczny",
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
           "de": "Schnell wachsend",
-          "fr": "Annuelle rapide",
-          "it": "Annuale rapida",
-          "es": "Anual rápido",
-          "pt": "Anual rápido",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज़ वार्षिक",
-          "zh": "快速一年生",
-          "ja": "一年草",
-          "ko": "빠른 한해살이"
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Nasturtium",
-      "description": "Tropaeolum majus is a fast-growing annual known for its round leaves and bright flowers. It prefers full sun and well-drained soil. Often grown in pots or gardens for edible flowers."
+      "description": "Tropaeolum majus, also known as Nasturtium, is a fast-growing, vibrant flowering plant. It is often used in gardens and as an edible ornamental."
     },
     "pl": {
       "common_name": "Nasturcja",
-      "description": "Tropaeolum majus to szybko rosnąca roślina jednoroczna o okrągłych liściach i barwnych kwiatach. Lubi pełne słońce i przepuszczalną glebę. Często uprawiana w donicach i ogrodach."
+      "description": "Tropaeolum majus, znane również jako nasturcja, to szybko rosnąca roślina kwitnąca o żywych kolorach. Często używana w ogrodach i jako ozdoba jadalna."
     },
     "de": {
       "common_name": "Kapuzinerkresse",
-      "description": "Tropaeolum majus ist eine schnell wachsende einjährige Pflanze mit runden Blättern und leuchtenden Blüten. Sie bevorzugt volle Sonne und gut durchlässigen Boden. Häufig im Garten oder Topf kultiviert."
+      "description": "Tropaeolum majus, auch Kapuzinerkresse genannt, ist eine schnell wachsende Pflanze mit lebhaften Blüten. Häufig wird sie in Gärten und als essbare Zierpflanze verwendet."
     },
     "fr": {
       "common_name": "Capucine",
-      "description": "Tropaeolum majus est une annuelle à croissance rapide aux feuilles rondes et fleurs colorées. Elle aime le plein soleil et un sol bien drainé. Souvent cultivée en pot ou au jardin."
+      "description": "Tropaeolum majus, également connu sous le nom de capucine, est une plante à fleurs à croissance rapide et vibrante. Elle est souvent utilisée dans les jardins et comme ornement comestible."
     },
     "it": {
       "common_name": "Nasturzio",
-      "description": "Tropaeolum majus è una pianta annuale a crescita rapida con foglie rotonde e fiori vivaci. Preferisce pieno sole e terreno drenante. Comune in vaso e in giardino."
+      "description": "Tropaeolum majus, noto anche come nasturzio, è una pianta fiorita a crescita rapida e vibrante. Viene spesso utilizzata nei giardini e come ornamento commestibile."
     },
     "es": {
-      "common_name": "Capuchina",
-      "description": "Tropaeolum majus es una anual de rápido crecimiento con hojas redondas y flores vistosas. Prefiere pleno sol y suelo bien drenado. Se cultiva en macetas y jardines."
+      "common_name": "Tropaeolum",
+      "description": "Tropaeolum majus, también conocido como tropaeolum, es una planta de rápido crecimiento con flores vibrantes. Se usa comúnmente en jardines y como ornamental comestible."
     },
     "pt": {
-      "common_name": "Capuchinha",
-      "description": "Tropaeolum majus é uma planta anual de crescimento rápido com folhas redondas e flores vivas. Prefere sol pleno e solo bem drenado. Muito usada em vasos e jardins."
+      "common_name": "Tropaeolum",
+      "description": "Tropaeolum majus, também conhecido como tropaeolum, é uma planta de flores vibrantes e crescimento rápido. Frequentemente usada em jardins e como ornamental comestível."
     },
     "ar": {
-      "common_name": "أبو خنجر",
-      "description": "Tropaeolum majus نبات حولي سريع النمو بأوراق مستديرة وأزهار زاهية. يفضل الشمس الكاملة والتربة جيدة الصرف. يزرع في الأصص والحدائق."
+      "common_name": "الناسترسيوم",
+      "description": "Tropaeolum majus، المعروف أيضًا باسم الناسترسيوم، هو نبات مزهر سريع النمو بألوان زاهية. غالبًا ما يُستخدم في الحدائق وكزينة صالحة للأكل."
     },
     "hi": {
-      "common_name": "नास्टर्शियम",
-      "description": "Tropaeolum majus एक तेज़ी से बढ़ने वाला वार्षिक पौधा है जिसमें गोल पत्ते और चमकीले फूल होते हैं। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है।"
+      "common_name": "नस्तुरशियम",
+      "description": "Tropaeolum majus, जिसे नस्तुरशियम भी कहा जाता है, एक तेज़ी से बढ़ने वाला, जीवंत रंगों वाला फूलों वाला पौधा है। इसे आमतौर पर बागवानी में और खाद्य सजावट के रूप में उपयोग किया जाता है।"
     },
     "zh": {
-      "common_name": "旱金莲",
-      "description": "Tropaeolum majus 是一种生长迅速的一年生植物，具有圆形叶片和鲜艳花朵。喜全日照和排水良好的土壤。常用于盆栽和花园。"
+      "common_name": "大花金莲花",
+      "description": "Tropaeolum majus，也叫大花金莲花，是一种快速生长的、色彩鲜艳的开花植物。通常用在花园中，也可作为食用装饰。"
     },
     "ja": {
-      "common_name": "ノウゼンハレン",
-      "description": "Tropaeolum majus は丸い葉と鮮やかな花を持つ成長の早い一年草です。日当たりと水はけの良い土を好みます。鉢植えや庭で育てられます。"
+      "common_name": "ナスタチウム",
+      "description": "Tropaeolum majus、別名ナスタチウムは、速く成長する鮮やかな花を持つ植物です。主に庭で使われ、食用の装飾としても使用されます。"
     },
     "ko": {
-      "common_name": "한련화",
-      "description": "Tropaeolum majus는 둥근 잎과 선명한 꽃을 가진 빠르게 자라는 한해살이 식물입니다. 햇빛과 배수 좋은 토양을 좋아하며 화분과 정원에 심습니다."
+      "common_name": "나스투르티움",
+      "description": "Tropaeolum majus, 또는 나스투르티움은 빠르게 자라는 생동감 있는 꽃을 가진 식물입니다. 주로 정원에서 사용되며, 먹을 수 있는 장식용으로도 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/17330/tropaeolum-majus/details",
-      "https://extension.umn.edu/flowers/growing-nasturtium",
-      "https://www.britannica.com/plant/nasturtium-plant"
+      "https://www.rhs.org.uk/advice/profile?pid=480",
+      "https://www.gardenia.net/plant/tropaeolum-majus"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "pteris_ensiformis",
-  "name": "Pteris ensiformis",
+  "name": "Sword Fern",
   "latin": "Pteris ensiformis",
   "sun": "medium",
   "water": "medium",
@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "fern",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "gleba",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム",
-          "ko": "로암"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez le trop d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sword Fern",
-      "description": "Pteris ensiformis, or sword fern, is a tropical fern native to Southeast Asia. It thrives in shaded, humid environments and has long, arching fronds."
+      "description": "Pteris ensiformis, or Sword Fern, is a hardy and attractive fern native to tropical regions. It thrives in moderate light and high humidity, requiring regular watering."
     },
     "pl": {
-      "common_name": "Paproć mieczowa",
-      "description": "Pteris ensiformis, znana jako paproć mieczowa, jest rośliną tropikalną pochodzącą z Azji Południowo-Wschodniej. Rośnie w cienistych, wilgotnych miejscach, ma długie, łukowate liście."
+      "common_name": "Paprotka mieczowa",
+      "description": "Pteris ensiformis, czyli paprotka mieczowa, to wytrzymała i atrakcyjna paproć pochodząca z regionów tropikalnych. Rośnie w umiarkowanym świetle i wysokiej wilgotności, wymaga regularnego podlewania."
     },
     "de": {
       "common_name": "Schwertfarn",
-      "description": "Pteris ensiformis, auch Schwertfarn genannt, ist ein tropischer Farn aus Südostasien. Er wächst in schattigen, feuchten Umgebungen und hat lange, bogenförmige Wedel."
+      "description": "Pteris ensiformis, auch Schwertfarn genannt, ist eine robuste und attraktive Farnpflanze, die in tropischen Regionen beheimatet ist. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit und benötigt regelmäßige Bewässerung."
     },
     "fr": {
       "common_name": "Fougère épée",
-      "description": "Pteris ensiformis, ou fougère épée, est une fougère tropicale originaire d'Asie du Sud-Est. Elle prospère dans des environnements ombragés et humides et possède des frondes longues et arquées."
+      "description": "Pteris ensiformis, ou fougère épée, est une fougère robuste et attrayante originaire des régions tropicales. Elle prospère à la lumière modérée et dans une humidité élevée, nécessitant un arrosage régulier."
     },
     "it": {
       "common_name": "Felce spada",
-      "description": "Pteris ensiformis, o felce spada, è una felce tropicale originaria del sud-est asiatico. Cresce in ambienti ombreggiati e umidi con fronde lunghe e arcuate."
+      "description": "Pteris ensiformis, o felce spada, è una felce robusta e attraente originaria delle regioni tropicali. Cresce con luce moderata e umidità elevata, richiedendo annaffiature regolari."
     },
     "es": {
       "common_name": "Helecho espada",
-      "description": "Pteris ensiformis, o helecho espada, es una especie de helecho tropical originaria del sudeste asiático. Crece en ambientes sombreados y húmedos, con frondas largas y arqueadas."
+      "description": "Pteris ensiformis, o helecho espada, es una planta resistente y atractiva originaria de las regiones tropicales. Crece con luz moderada y alta humedad, requiriendo riego regular."
     },
     "pt": {
       "common_name": "Samambaia espada",
-      "description": "Pteris ensiformis, ou samambaia espada, é uma samambaia tropical nativa do Sudeste Asiático. Cresce em ambientes sombreados e úmidos, com frondes longas e arqueadas."
+      "description": "Pteris ensiformis, ou samambaia espada, é uma planta resistente e atraente originária das regiões tropicais. Cresce com luz moderada e alta umidade, necessitando de rega regular."
     },
     "ar": {
       "common_name": "سرخس السيف",
-      "description": "Pteris ensiformis، أو سرخس السيف، هو سرخس استوائي موطنه جنوب شرق آسيا. ينمو في البيئات المظللة والرطبة وله أوراق طويلة منحنية."
+      "description": "Pteris ensiformis، أو سرخس السيف، هو نبات قوي وجذاب موطنه المناطق الاستوائية. ينمو في الضوء المعتدل والرطوبة العالية، ويتطلب سقاية منتظمة."
     },
     "hi": {
-      "common_name": "तलवार की शैवाल",
-      "description": "Pteris ensiformis, जिसे तलवार की शैवाल कहा जाता है, एक उष्णकटिबंधीय शैवाल है जो दक्षिण-पूर्व एशिया का मूल निवासी है। यह छायादार और नम वातावरण में बढ़ता है और इसके लंबे, वक्रित पत्ते होते हैं।"
+      "common_name": "तलवार वाली फर्न",
+      "description": "Pteris ensiformis, या तलवार वाली फर्न, एक मजबूत और आकर्षक फर्न है जो उष्णकटिबंधीय क्षेत्रों का मूल है। यह मध्यम प्रकाश और उच्च आर्द्रता में बढ़ता है, और नियमित पानी देने की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "剑蕨",
-      "description": "Pteris ensiformis，或剑蕨，是一种原产于东南亚的热带蕨类植物。它在阴凉潮湿的环境中生长，具有长而弯曲的叶片。"
+      "description": "Pteris ensiformis，或剑蕨，是一种坚固而吸引人的蕨类植物，原产于热带地区。它在中等光照和高湿度下生长，需要定期浇水。"
     },
     "ja": {
-      "common_name": "剣シダ",
-      "description": "Pteris ensiformis、またの名を剣シダは、東南アジア原産の熱帯性シダです。日陰の湿った環境で育ち、長くアーチ状の葉を持ちます。"
+      "common_name": "剣型シダ",
+      "description": "Pteris ensiformis、または剣型シダは、熱帯地域原産の丈夫で魅力的なシダ植物です。中程度の光と高湿度で育ち、定期的な水やりが必要です。"
     },
     "ko": {
-      "common_name": "검은 양치식물",
-      "description": "Pteris ensiformis, 또는 검은 양치식물은 동남아시아 원산의 열대 양치식물입니다. 그늘지고 습한 환경에서 자라며 길고 아치형의 잎을 가지고 있습니다."
+      "common_name": "검은고사리",
+      "description": "Pteris ensiformis, 또는 검은고사리는 열대 지역이 원산지인 튼튼하고 매력적인 고사리입니다. 중간 정도의 빛과 높은 습도에서 자라며 정기적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=498",
-      "https://www.gardenia.net/plant/Pteris-ensiformis-Sword-Fern"
+      "https://www.gardenia.net/plant/pteris-ensiformis",
+      "https://www.rhs.org.uk/plants/pteris-ensiformis"
     ]
   }
 }

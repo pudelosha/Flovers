@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "philodendron_prince_of_orange.jpg",
   "image_thumb": "philodendron_prince_of_orange.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "Aroid",
-          "fr": "aroïde",
-          "it": "aroide",
-          "es": "aroide",
-          "pt": "aroide",
-          "ar": "أرويد",
-          "hi": "एरोइड",
-          "zh": "阿罗伊德",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Aroid soil mix",
+          "pl": "Mieszanka gleby aroidu",
+          "de": "Aroid-Erde",
+          "fr": "Mélange de sol aroid",
+          "it": "Miscela di terra aroid",
+          "es": "Mezcla de suelo aroid",
+          "pt": "Mistura de solo aroid",
+          "ar": "خليط التربة الأرويد",
+          "hi": "एरोइड मिट्टी मिश्रण",
+          "zh": "喜阴植物土壤混合物",
+          "ja": "アロイド土壌ミックス",
+          "ko": "아로이드 토양 혼합물"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中くらいの水やり",
+          "ko": "중간 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 수준의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-27°C",
-          "pl": "18-27°C",
-          "de": "18-27°C",
-          "fr": "18-27°C",
-          "it": "18-27°C",
-          "es": "18-27°C",
-          "pt": "18-27°C",
-          "ar": "18-27°C",
-          "hi": "18-27°C",
-          "zh": "18-27°C",
-          "ja": "18-27°C",
-          "ko": "18-27°C"
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Hygrométrie élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに毒",
+          "ko": "애완 동물에게 독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Philodendron Prince of Orange",
-      "description": "Philodendron Prince of Orange is a tropical plant with striking orange, yellow, and green foliage. It thrives in medium sunlight and moderate humidity, making it perfect for indoor spaces."
+      "description": "Philodendron Prince of Orange is a popular tropical houseplant known for its vibrant orange and green foliage. It thrives in moderate light and requires medium watering."
     },
     "pl": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "Philodendron Prince of Orange to tropikalna roślina o uderzających pomarańczowych, żółtych i zielonych liściach. Rośnie w średnim świetle i umiarkowanej wilgotności, idealna do przestrzeni wewnętrznych."
+      "common_name": "Filodendron książę pomarańczy",
+      "description": "Filodendron książę pomarańczy to popularna roślina doniczkowa o żywej, pomarańczowo-zielonej liściastości. Rośnie w umiarkowanym świetle i wymaga średniego podlewania."
     },
     "de": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "Philodendron Prince of Orange ist eine tropische Pflanze mit auffälligem orangefarbenem, gelbem und grünem Laub. Sie gedeiht bei mittlerem Sonnenlicht und mäßiger Luftfeuchtigkeit, ideal für Innenräume."
+      "common_name": "Philodendron Prinz von Orange",
+      "description": "Der Philodendron Prinz von Orange ist eine beliebte tropische Zimmerpflanze, die für ihr lebhaftes orange-grünes Laub bekannt ist. Er gedeiht bei mittlerem Licht und benötigt mittlere Bewässerung."
     },
     "fr": {
       "common_name": "Philodendron Prince of Orange",
-      "description": "Le Philodendron Prince of Orange est une plante tropicale aux feuilles orange, jaunes et vertes. Il prospère dans une lumière modérée et une humidité modérée, idéal pour les espaces intérieurs."
+      "description": "Le Philodendron Prince of Orange est une plante d'intérieur tropicale populaire, connue pour son feuillage orange et vert vif. Il prospère dans une lumière modérée et nécessite un arrosage moyen."
     },
     "it": {
       "common_name": "Philodendron Prince of Orange",
-      "description": "Il Philodendron Prince of Orange è una pianta tropicale con foglie arancioni, gialle e verdi. Cresce in luce media e umidità moderata, perfetto per gli spazi interni."
+      "description": "Il Philodendron Prince of Orange è una pianta tropicale d'appartamento popolare, conosciuta per il suo fogliame arancione e verde brillante. Cresce in luce media e necessita di annaffiature medie."
     },
     "es": {
       "common_name": "Philodendron Prince of Orange",
-      "description": "El Philodendron Prince of Orange es una planta tropical con hojas naranjas, amarillas y verdes. Crece con luz moderada y humedad moderada, ideal para espacios interiores."
+      "description": "El Philodendron Prince of Orange es una planta de interior tropical popular, conocida por su follaje naranja y verde brillante. Prosperan con luz moderada y requieren un riego medio."
     },
     "pt": {
       "common_name": "Philodendron Prince of Orange",
-      "description": "O Philodendron Prince of Orange é uma planta tropical com folhas laranja, amarelas e verdes. Cresce em luz média e umidade moderada, ideal para espaços internos."
+      "description": "O Philodendron Prince of Orange é uma planta tropical de interior popular, conhecida pela sua folhagem vibrante de laranja e verde. Cresce com luz moderada e requer rega média."
     },
     "ar": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "فيلودندرون برنس أوف أورانج هو نبات استوائي ذو أوراق برتقالية وصفراء وخضراء. ينمو في ضوء متوسط ورطوبة معتدلة، مما يجعله مثاليًا للمساحات الداخلية."
+      "common_name": "فلوديندرون أمير البرتقالي",
+      "description": "الفلوديندرون أمير البرتقالي هو نبات منزلي استوائي شهير معروف بأوراقه البرتقالية والخضراء الزاهية. ينمو في الضوء المعتدل ويتطلب الري المتوسط."
     },
     "hi": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "फिलोडेन्ड्रोन प्रिंस ऑफ ऑरेंज एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ नारंगी, पीली और हरी होती हैं। यह मध्यम धूप और मध्यम नमी में अच्छी तरह से बढ़ता है, जो इसे इनडोर स्थानों के लिए आदर्श बनाता है।"
+      "common_name": "फिलोडेंड्रोन प्रिंस ऑफ ऑरेंज",
+      "description": "फिलोडेंड्रोन प्रिंस ऑफ ऑरेंज एक लोकप्रिय उष्णकटिबंधीय गृहस्थल पौधा है जो अपनी जीवंत नारंगी और हरी पत्तियों के लिए जाना जाता है। यह मध्यम रोशनी में उगता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "橙色王子绿萝是一种热带植物，拥有橙色、黄色和绿色的叶子。它在中等阳光和适中的湿度下生长，非常适合室内环境。"
+      "common_name": "橙色王子蔓绿绒",
+      "description": "橙色王子蔓绿绒是一种受欢迎的热带室内植物，以其鲜艳的橙绿叶片而闻名。它在中等光照下茁壮成长，且需要中等浇水。"
     },
     "ja": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "フィロデンドロン・プリンス・オブ・オレンジは、オレンジ、黄色、緑色の葉を持つ熱帯植物です。中程度の光と適度な湿度で育ち、室内空間に最適です。"
+      "common_name": "フィロデンドロン・プリンス・オブ・オレンジ",
+      "description": "フィロデンドロン・プリンス・オブ・オレンジは、鮮やかなオレンジと緑の葉で知られる人気の熱帯室内植物です。中程度の光で成長し、中程度の水やりが必要です。"
     },
     "ko": {
-      "common_name": "Philodendron Prince of Orange",
-      "description": "필로덴드론 프린스 오브 오렌지는 주황색, 노란색, 녹색의 잎을 가진 열대 식물입니다. 중간 정도의 햇빛과 적당한 습도에서 잘 자라며 실내 공간에 적합합니다."
+      "common_name": "필로덴드론 프린스 오브 오렌지",
+      "description": "필로덴드론 프린스 오브 오렌지는 선명한 오렌지색과 초록색 잎으로 유명한 인기 있는 열대 실내 식물입니다. 중간 정도의 빛에서 자라며, 중간 정도의 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/philodendron-prince-of-orange",
-      "https://www.gardeningknowhow.com/houseplants/philodendron/philodendron-prince-of-orange.htm"
+      "https://www.gardenia.net/plant/philipodendron-prince-of-orange",
+      "https://www.bhg.com/gardening/potted-plants/philodendron-prince-of-orange"
     ]
   }
 }

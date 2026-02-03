@@ -1,26 +1,27 @@
 {
   "external_id": "lavatera_trimestris",
-  "name": "Annual mallow",
+  "name": "Lavatera",
   "latin": "Lavatera trimestris",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "balcony-flowers"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "lavatera_trimestris.jpg",
   "image_thumb": "lavatera_trimestris.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "양지"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광선"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 좋음"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "ري معتدل",
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري من moderat",
           "hi": "मध्यम पानी",
-          "zh": "适中浇水",
+          "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "かんたん",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm-temperate",
-          "pl": "Ciepło-umiark.",
-          "de": "Mild-warm",
-          "fr": "Doux à chaud",
-          "it": "Mite-caldo",
-          "es": "Templado-cálido",
-          "pt": "Am. a quente",
-          "ar": "معتدل دافئ",
-          "hi": "मध्यम-गर्म",
-          "zh": "温暖温带",
-          "ja": "温暖な気候",
-          "ko": "온난"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "सामान्य",
-          "zh": "一般",
-          "ja": "ふつう",
-          "ko": "보통"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "विषहीन",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -161,78 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Annual, bushy",
-          "pl": "Roczna, krzacz.",
-          "de": "Einjährig buschig",
-          "fr": "Annuelle buiss.",
-          "it": "Annuale cesp.",
-          "es": "Anual, arbust.",
-          "pt": "Anual, arbust.",
-          "ar": "حولية كثيفة",
-          "hi": "वार्षिक, झाड़ी",
-          "zh": "一年生丛生",
-          "ja": "一年草・株立ち",
-          "ko": "한해살이 관목형"
+          "en": "Fast growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ता है",
+          "zh": "快速生长",
+          "ja": "成長が速い",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Annual mallow",
-      "description": "Lavatera trimestris is an upright annual from the Mediterranean with large, saucer-shaped pink or white flowers in summer. Grow it in full sun and well-drained, moderately fertile soil. Water to establish and then water regularly in dry spells, especially in containers."
+      "common_name": "Annual Mallow",
+      "description": "Lavatera trimestris, known as Annual Mallow, is a fast-growing flowering plant often grown for its colorful blooms. It thrives in moderate sunlight and well-drained soil."
     },
     "pl": {
-      "common_name": "Lawatera trzymiesięczna",
-      "description": "Lavatera trimestris to wyprostowana roślina jednoroczna z rejonu Morza Śródziemnego, kwitnąca latem dużymi, różowymi lub białymi kwiatami. Najlepiej rośnie w pełnym słońcu i w przepuszczalnej, umiarkowanie żyznej glebie. Podlewaj po posadzeniu dla ukorzenienia, a potem regularnie w czasie suszy, zwłaszcza w pojemnikach."
+      "common_name": "Malwa roczna",
+      "description": "Lavatera trimestris, znana jako Malwa roczna, to szybko rosnąca roślina kwitnąca, często uprawiana ze względu na swoje kolorowe kwiaty. Wymaga umiarkowanego światła i dobrze przepuszczalnej gleby."
     },
     "de": {
-      "common_name": "Sommermalve",
-      "description": "Lavatera trimestris ist eine aufrechte einjährige Art aus dem Mittelmeerraum mit großen, schalenförmigen Blüten im Sommer. Sie gedeiht am besten in voller Sonne und in gut durchlässigem, mäßig fruchtbarem Boden. Zum Anwachsen gut wässern und später bei Trockenheit regelmäßig gießen, besonders im Topf."
+      "common_name": "Einjährige Malve",
+      "description": "Lavatera trimestris, bekannt als Einjährige Malve, ist eine schnell wachsende Blühpflanze, die oft wegen ihrer bunten Blüten angebaut wird. Sie gedeiht bei mäßigem Licht und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Lavatère trimestrielle",
-      "description": "Lavatera trimestris est une annuelle méditerranéenne à port buissonnant, portant de grandes fleurs roses ou blanches en été. Installez-la au plein soleil dans un sol bien drainé et modérément fertile. Arrosez pour l’installation puis régulièrement en période sèche, surtout en pot."
+      "common_name": "Mauve annuelle",
+      "description": "Lavatera trimestris, connue sous le nom de Mauve annuelle, est une plante à fleurs à croissance rapide souvent cultivée pour ses fleurs colorées. Elle prospère dans une lumière modérée et un sol bien drainé."
     },
     "it": {
-      "common_name": "Lavatera annuale",
-      "description": "Lavatera trimestris è un’annuale di origine mediterranea con grandi fiori rosati o bianchi in estate. Coltivala in pieno sole e in terreno ben drenato e moderatamente fertile. Annaffia per favorire l’attecchimento e poi con regolarità nei periodi asciutti, soprattutto in contenitore."
+      "common_name": "Malva annuale",
+      "description": "Lavatera trimestris, conosciuta come Malva annuale, è una pianta da fiore a crescita rapida spesso coltivata per i suoi fiori colorati. Cresce bene con luce moderata e terreno ben drenato."
     },
     "es": {
-      "common_name": "Lavatera anual",
-      "description": "Lavatera trimestris es una anual mediterránea de porte arbustivo con flores grandes, rosadas o blancas, en verano. Se desarrolla mejor a pleno sol y en suelo bien drenado y moderadamente fértil. Riega para que se establezca y luego riega de forma regular en sequía, especialmente en maceta."
+      "common_name": "Malva anual",
+      "description": "Lavatera trimestris, conocida como Malva anual, es una planta de crecimiento rápido que se cultiva a menudo por sus flores coloridas. Prosperará con luz moderada y suelo bien drenado."
     },
     "pt": {
-      "common_name": "Lavatera anual",
-      "description": "Lavatera trimestris é uma anual mediterrânea de hábito arbustivo com flores grandes rosadas ou brancas no verão. Cultive em sol pleno e em solo bem drenado e moderadamente fértil. Regue para enraizar e depois regue regularmente em períodos secos, sobretudo em vasos."
+      "common_name": "Malva anual",
+      "description": "Lavatera trimestris, conhecida como Malva anual, é uma planta de flores de rápido crescimento cultivada frequentemente pelas suas flores coloridas. Cresce bem em luz moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "لافاتيرا ثلاثية الأشهر",
-      "description": "Lavatera trimestris نبات حولي من منطقة البحر المتوسط بأزهار كبيرة وردية أو بيضاء في الصيف. يفضل الشمس الكاملة وتربة جيدة الصرف متوسطة الخصوبة. اسقِه جيدًا بعد الزراعة للتجذر ثم اسقه بانتظام أثناء الجفاف، خصوصًا في الأصص."
+      "common_name": "خبيزة سنوية",
+      "description": "اللافيتيرا تريمستريس، المعروفة باسم الخبيزة السنوية، هي نبتة مزهرة تنمو بسرعة وتزرع غالباً بسبب أزهارها الملونة. تزدهر في الضوء المعتدل والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "वार्षिक मालो (Lavatera)",
-      "description": "Lavatera trimestris भूमध्यसागरीय क्षेत्र का एक वार्षिक, झाड़ीदार पौधा है जो गर्मियों में बड़े गुलाबी या सफेद फूल देता है। इसे पूरी धूप और अच्छी जलनिकासी वाली, मध्यम उपजाऊ मिट्टी में उगाएँ। जमने तक पानी दें और बाद में सूखे में नियमित सिंचाई करें, खासकर गमलों में।"
+      "common_name": "वार्षिक मल्लो",
+      "description": "लावेटेरा ट्रिमेस्ट्रिस, जिसे वार्षिक मल्लो के नाम से जाना जाता है, एक तेज़ी से बढ़ने वाली फूलों की पौधा है जिसे इसके रंगीन फूलों के लिए उगाया जाता है। यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में बढ़ता है।"
     },
     "zh": {
-      "common_name": "三月锦葵",
-      "description": "Lavatera trimestris 为地中海地区的一年生锦葵科植物，夏季开大型粉色或白色花。适合全日照与排水良好、适度肥沃的土壤。定植后先充分浇水促生根，干旱时规律浇水，盆栽更需注意。"
+      "common_name": "一年生锦葵",
+      "description": "拉瓦特拉·三月花，又名一年生锦葵，是一种快速生长的开花植物，常因其多彩的花朵而被栽培。它在适度的光照和排水良好的土壤中生长。"
     },
     "ja": {
-      "common_name": "ラバテラ（年草）",
-      "description": "Lavatera trimestris は地中海原産の一年草で、夏に大きなピンクまたは白花を咲かせます。日当たりと水はけのよい、適度に肥えた土を好みます。植え付け後は活着まで十分に水やりし、乾燥時は定期的に与え、鉢植えは特に乾きやすいです。"
+      "common_name": "一年生ハマダイコン",
+      "description": "ラヴァテラ・トリメストリス（一年生ハマダイコン）は、色とりどりの花でよく栽培される速く成長する開花植物です。適度な光と排水性の良い土壌でよく育ちます。"
     },
     "ko": {
-      "common_name": "라바테라(일년초)",
-      "description": "Lavatera trimestris 는 지중해 원산의 한해살이 식물로 여름에 큰 분홍 또는 흰 꽃을 피웁니다. 양지와 배수가 좋은, 적당히 비옥한 토양에서 잘 자랍니다. 활착할 때까지 물을 충분히 주고, 이후에는 건조할 때 규칙적으로 관수하며 화분은 더 자주 확인하세요."
+      "common_name": "일년생 몰바",
+      "description": "라바테라 트리메스트리스, 일년생 몰바로 알려져 있으며, 그 화려한 꽃 때문에 자주 재배되는 빠르게 자라는 꽃 식물입니다. 이는 적당한 햇빛과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/507309/malva-trimestris/details",
-      "https://www.rhs.org.uk/plants/lavatera/growing-guide",
-      "https://www.missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=282600",
-      "https://plants.ces.ncsu.edu/plants/malva-trimestris/"
+      "https://www.rhs.org.uk/advice/profile?pid=1051",
+      "https://www.gardenia.net/plant/lavatera-trimestris"
     ]
   }
 }

@@ -1,17 +1,18 @@
 {
   "external_id": "aechmea_chantinii",
-  "name": "Zebra Bromeliad",
+  "name": "Aechmea chantinii",
   "latin": "Aechmea chantinii",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "aechmea_chantinii.jpg",
   "image_thumb": "aechmea_chantinii.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy orchid mix",
-          "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिश्रण",
-          "zh": "通气基质",
-          "ja": "通気性の土",
-          "ko": "통기성 배지"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -68,16 +69,16 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
+          "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
           "it": "Annaffiature moderate",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "ري معتدل",
+          "ar": "الري المعتدل",
           "hi": "मध्यम पानी",
           "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "ko": "적당한 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm indoor",
-          "pl": "Ciepłe wnętrza",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "20–25°C",
+          "pl": "20–25°C",
+          "de": "20–25°C",
+          "fr": "20–25°C",
+          "it": "20–25°C",
+          "es": "20–25°C",
+          "pt": "20–25°C",
+          "ar": "20–25°C",
+          "hi": "20–25°C",
+          "zh": "20–25°C",
+          "ja": "20–25°C",
+          "ko": "20–25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Likes humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime l'humidité",
-          "it": "Ama umidità",
-          "es": "Gusta humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पशुओं के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow clumping",
-          "pl": "Wolno rosnąca",
-          "de": "Langsam wachsend",
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
-          "zh": "缓慢生长",
-          "ja": "成長は遅い",
-          "ko": "느린 생장"
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "No sobreregar",
+          "pt": "Não regar demais",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Zebra Bromeliad",
-      "description": "Aechmea chantinii is a tropical bromeliad known for its banded leaves and tall colorful flower spike. It grows well indoors with bright indirect light and moderate watering. The central rosette should be kept filled with fresh water."
+      "common_name": "Blushing Bromeliad",
+      "description": "Aechmea chantinii is a beautiful bromeliad known for its vibrant red and pink foliage. It thrives in moderate light and requires regular watering."
     },
     "pl": {
-      "common_name": "Bromelia zebra",
-      "description": "Aechmea chantinii to tropikalna bromelia o pasiastych liściach i efektownym kwiatostanie. Dobrze rośnie w jasnym, rozproszonym świetle i przy umiarkowanym podlewaniu. Rozeta liściowa powinna zawierać świeżą wodę."
+      "common_name": "Bromelia czerwieniąca",
+      "description": "Aechmea chantinii to piękna bromelia, znana z intensywnych czerwonych i różowych liści. Rośnie dobrze w umiarkowanym świetle i wymaga regularnego podlewania."
     },
     "de": {
-      "common_name": "Zebra-Bromelie",
-      "description": "Aechmea chantinii ist eine tropische Bromelie mit gebänderten Blättern und auffälligem Blütenstand. Sie eignet sich gut als Zimmerpflanze bei hellem, indirektem Licht. Wasser sollte regelmäßig in der Rosette stehen."
+      "common_name": "Rötliche Aechmea",
+      "description": "Aechmea chantinii ist eine schöne Bromelie, bekannt für ihr lebhaft rotes und pinkes Laub. Sie gedeiht bei mäßigem Licht und benötigt regelmäßiges Gießen."
     },
     "fr": {
-      "common_name": "Bromélia zébrée",
-      "description": "Aechmea chantinii est une broméliacée tropicale aux feuilles striées et à l'inflorescence décorative. Elle préfère une lumière vive indirecte et un arrosage modéré. L'eau doit être maintenue dans la rosette centrale."
+      "common_name": "Broméliacée rouge",
+      "description": "Aechmea chantinii est une magnifique broméliacée connue pour son feuillage rouge et rose vif. Elle se développe sous une lumière modérée et nécessite un arrosage régulier."
     },
     "it": {
-      "common_name": "Bromelia zebra",
-      "description": "Aechmea chantinii è una bromelia tropicale con foglie striate e infiorescenza vistosa. Cresce bene in casa con luce indiretta brillante. L'acqua va mantenuta nella rosetta centrale."
+      "common_name": "Bromelia rossastra",
+      "description": "Aechmea chantinii è una bellissima bromelia conosciuta per il suo fogliame rosso e rosa brillante. Cresce bene in luce moderata e richiede annaffiature regolari."
     },
     "es": {
-      "common_name": "Bromelia cebra",
-      "description": "Aechmea chantinii es una bromelia tropical con hojas rayadas y floración llamativa. Se adapta bien al interior con luz indirecta brillante. El centro de la roseta debe contener agua limpia."
+      "common_name": "Bromelia sonrojada",
+      "description": "Aechmea chantinii es una hermosa bromelia conocida por su follaje rojo y rosa vibrante. Prosperan con luz moderada y necesitan riego regular."
     },
     "pt": {
-      "common_name": "Bromélia-zebra",
-      "description": "Aechmea chantinii é uma bromélia tropical de folhas listradas e inflorescência ornamental. Desenvolve-se bem em ambientes internos com luz indireta. A roseta central deve conter água fresca."
+      "common_name": "Bromélia corada",
+      "description": "Aechmea chantinii é uma bromélia bonita conhecida pela sua folhagem vermelha e rosa vibrante. Ela cresce bem com luz moderada e precisa de rega regular."
     },
     "ar": {
-      "common_name": "بروميليا الحمار الوحشي",
-      "description": "Aechmea chantinii نبات بروميليا استوائي يتميز بأوراق مخططة ونورة جميلة. ينجح داخل المنازل مع ضوء ساطع غير مباشر وري معتدل. يجب الحفاظ على الماء داخل الوردة المركزية."
+      "common_name": "بروميليا محمرة",
+      "description": "Aechmea chantinii هي بروميليا جميلة معروفة بأوراقها الحمراء والوردية الزاهية. تنمو بشكل جيد في الضوء المعتدل وتحتاج إلى سقاية منتظمة."
     },
     "hi": {
-      "common_name": "ज़ेब्रा ब्रोमेलियाड",
-      "description": "Aechmea chantinii एक उष्णकटिबंधीय ब्रोमेलियाड है जिसकी पत्तियाँ धारीदार होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी में अच्छी तरह बढ़ता है। इसके केंद्रीय रोसेट में पानी रखा जाता है।"
+      "common_name": "लाल-ब्रोकन ब्रोमीलिया",
+      "description": "Aechmea chantinii एक सुंदर ब्रोमीलिया है जो अपने चमकीले लाल और गुलाबी पत्तों के लिए जानी जाती है। यह मध्यम रोशनी में उगती है और नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "斑纹凤梨",
-      "description": "Aechmea chantinii 是一种热带凤梨，具有条纹叶片和醒目的花序。适合在明亮的散射光下室内养护。中心叶杯需要保持清水。"
+      "common_name": "红色凤梨",
+      "description": "Aechmea chantinii 是一种美丽的凤梨，以其鲜艳的红色和粉色叶片而闻名。它在中等光照下生长，且需要定期浇水。"
     },
     "ja": {
-      "common_name": "ゼブラブロメリア",
-      "description": "Aechmea chantinii は縞模様の葉と美しい花序を持つ熱帯ブロメリアです。明るい間接光の室内でよく育ちます。中心のロゼットに水を保ちます。"
+      "common_name": "ブロッシング・ブロメリア",
+      "description": "Aechmea chantinii は鮮やかな赤とピンクの葉を持つ美しいブロメリアです。中程度の光で育ち、定期的な水やりが必要です。"
     },
     "ko": {
-      "common_name": "제브라 브로멜리아",
-      "description": "Aechmea chantinii는 줄무늬 잎과 화려한 꽃대를 가진 열대 브로멜리아입니다. 밝은 간접광의 실내 환경에 적합합니다. 중앙 로제트에 물을 유지합니다."
+      "common_name": "붉은 브로멜리아",
+      "description": "Aechmea chantinii는 화려한 빨간색과 분홍색 잎으로 유명한 아름다운 브로멜리아입니다. 중간 밝기에서 자라며 정기적인 급수가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/146/aechmea-chantinii/details",
-      "https://edis.ifas.ufl.edu/publication/EP011",
-      "https://www.bromeliad.org/aechmea.htm"
+      "https://www.rhs.org.uk/plants/aechmea-chantinii",
+      "https://www.gardenia.net/plant/aechmea-chantinii"
     ]
   }
 }

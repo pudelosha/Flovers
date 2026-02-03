@@ -1,18 +1,18 @@
 {
   "external_id": "scindapsus_treubii",
-  "name": "Scindapsus treubii",
+  "name": "Scindapsus Treubii",
   "latin": "Scindapsus treubii",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "loam"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中くらいの光",
-          "ko": "중간 조명"
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka dla aroidów",
-          "de": "Aroid-Erde",
-          "fr": "Mélange pour Aroides",
-          "it": "Miscela per Aroidi",
-          "es": "Mezcla para Aroides",
-          "pt": "Mistura para Aroides",
-          "ar": "خليط أرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "艾罗伊德混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 혼합 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "良好排水土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당히"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 수준의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 유독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowany",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中くらい",
-          "ko": "적당히"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter le sur-arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "साधारण कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Treubii Pothos",
-      "description": "Scindapsus treubii is an epiphytic plant native to Southeast Asia. It is known for its striking dark green leaves with silver streaks."
+      "common_name": "Treubii Scindapsus",
+      "description": "Scindapsus treubii is a popular, attractive houseplant known for its glossy, dark green leaves with silver streaks. It thrives in moderate indoor light and is relatively low-maintenance."
     },
     "pl": {
-      "common_name": "Pothos Treubii",
-      "description": "Scindapsus treubii to epifitczna roślina pochodząca z Azji Południowo-Wschodniej. Charakteryzuje się ciemnozielonymi liśćmi z srebrnymi smugami."
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii to popularna roślina doniczkowa, znana z błyszczących, ciemnozielonych liści z srebrnymi smugami. Rośnie w umiarkowanym świetle wewnętrznym i jest stosunkowo łatwa w pielęgnacji."
     },
     "de": {
-      "common_name": "Treubii Efeu",
-      "description": "Scindapsus treubii ist eine epiphytische Pflanze aus Südostasien. Sie ist bekannt für ihre dunklen grünen Blätter mit silbernen Streifen."
+      "common_name": "Treubii Scindapsus",
+      "description": "Scindapsus treubii ist eine beliebte Zimmerpflanze, die für ihre glänzenden, dunkelgrünen Blätter mit silbernen Streifen bekannt ist. Sie gedeiht bei mittlerem Innenlicht und ist relativ pflegeleicht."
     },
     "fr": {
-      "common_name": "Pothos de Treubii",
-      "description": "Scindapsus treubii est une plante épiphyte originaire du sud-est asiatique. Elle est connue pour ses feuilles vertes foncées avec des rayures argentées."
+      "common_name": "Scindapsus Treubii",
+      "description": "Le Scindapsus treubii est une plante d'intérieur populaire, connue pour ses feuilles vertes brillantes avec des stries argentées. Elle pousse sous une lumière intérieure modérée et nécessite peu d'entretien."
     },
     "it": {
-      "common_name": "Pothos di Treubii",
-      "description": "Scindapsus treubii è una pianta epifita originaria del Sud-Est asiatico. È conosciuta per le sue foglie verde scuro con strisce argentate."
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii è una pianta da interno molto apprezzata, nota per le sue foglie lucide verdi scure con striature argentate. Cresce bene con luce media ed è relativamente facile da curare."
     },
     "es": {
-      "common_name": "Pothos de Treubii",
-      "description": "Scindapsus treubii es una planta epífita originaria del sudeste asiático. Es conocida por sus hojas verde oscuras con rayas plateadas."
+      "common_name": "Scindapsus Treubii",
+      "description": "El Scindapsus treubii es una planta de interior popular, conocida por sus hojas brillantes de color verde oscuro con vetas plateadas. Se desarrolla bien con luz moderada y es relativamente fácil de mantener."
     },
     "pt": {
-      "common_name": "Pothos Treubii",
-      "description": "Scindapsus treubii é uma planta epífita nativa do Sudeste Asiático. É conhecida por suas folhas verdes escuras com listras prateadas."
+      "common_name": "Scindapsus Treubii",
+      "description": "O Scindapsus treubii é uma planta popular, conhecida por suas folhas verdes brilhantes com veios prateados. Cresce bem com luz moderada e é de manutenção relativamente fácil."
     },
     "ar": {
-      "common_name": "بوثوس تريوبي",
-      "description": "Scindapsus treubii هو نبات ميثي موطنه جنوب شرق آسيا. ويشتهر بأوراقه الخضراء الداكنة ذات الخطوط الفضية."
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii هو نبات داخلي شائع يعرف بأوراقه الخضراء الداكنة اللامعة مع خطوط فضية. ينمو جيدًا في الضوء المعتدل داخل المنزل ويتطلب صيانة منخفضة نسبيًا."
     },
     "hi": {
-      "common_name": "ट्रेबुई पोटहोस",
-      "description": "Scindapsus treubii एक एपिफाइटिक पौधा है जो दक्षिण-पूर्व एशिया का मूल निवासी है। इसके गहरे हरे पत्तों पर चांदी की धारियाँ होती हैं।"
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii एक लोकप्रिय पौधा है, जो अपने चमकदार, गहरे हरे पत्तों के लिए जाना जाता है, जिनमें चांदी के धारी होते हैं। यह मध्यम प्रकाश में अच्छे से बढ़ता है और इसकी देखभाल तुलनात्मक रूप से आसान है।"
     },
     "zh": {
-      "common_name": "特鲁比金钱树",
-      "description": "Scindapsus treubii 是一种原产于东南亚的附生植物。以其深绿色的叶子和银色条纹而闻名。"
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii 是一种受欢迎的室内植物，因其光滑的深绿色叶片和银色条纹而闻名。它在中等光照条件下生长良好，且相对容易打理。"
     },
     "ja": {
-      "common_name": "トレウビイポトス",
-      "description": "Scindapsus treubii は東南アジア原産の着生植物です。濃い緑色の葉に銀色のストライプが特徴です。"
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii は、光沢のある濃緑色の葉と銀色の筋が特徴的な人気の室内植物です。中程度の光の中でよく成長し、比較的手入れが簡単です。"
     },
     "ko": {
-      "common_name": "트레우비 포토스",
-      "description": "Scindapsus treubii는 동남아시아 원산의 기생 식물입니다. 짙은 녹색의 잎과 은색 줄무늬로 유명합니다."
+      "common_name": "Scindapsus Treubii",
+      "description": "Scindapsus treubii는 광택이 나는 짙은 녹색 잎과 은색 줄무늬로 유명한 인기 있는 실내 식물입니다. 이 식물은 중간 정도의 빛에서 잘 자라며, 비교적 관리가 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/scindapsus-treubii",
-      "https://www.gardenia.net/plant/scindapsus-treubii"
+      "https://www.botanicgardens.com/scindapsus-treubii",
+      "https://www.gardeningknowhow.com/scindapsus-treubii-care"
     ]
   }
 }

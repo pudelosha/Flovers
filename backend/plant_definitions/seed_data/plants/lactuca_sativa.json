@@ -3,24 +3,25 @@
   "name": "Lettuce",
   "latin": "Lactuca sativa",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
-  "water_interval_days": 2,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "lactuca_sativa.jpg",
   "image_thumb": "lactuca_sativa.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Sol parcial",
-          "pt": "Sol parcial",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "부분 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna gleba",
-          "de": "Nährboden",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Frequent",
-          "pl": "Częste",
-          "de": "Häufig",
-          "fr": "Fréquent",
-          "it": "Frequente",
-          "es": "Frecuente",
-          "pt": "Frequente",
-          "ar": "متكرر",
-          "hi": "बार-बार",
-          "zh": "频繁",
-          "ja": "頻繁",
-          "ko": "자주"
+          "en": "Regularly",
+          "pl": "Regularnie",
+          "de": "Regelmäßig",
+          "fr": "Régulièrement",
+          "it": "Regolarmente",
+          "es": "Regularmente",
+          "pt": "Regularmente",
+          "ar": "بشكل منتظم",
+          "hi": "नियमित रूप से",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -94,9 +95,9 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "简单",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool",
-          "pl": "Chłodno",
-          "de": "Kühl",
-          "fr": "Frais",
-          "it": "Fresco",
-          "es": "Fresco",
-          "pt": "Fresco",
-          "ar": "معتدل",
-          "hi": "ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "Cool to moderate",
+          "pl": "Chłodne do umiarkowanego",
+          "de": "Kühl bis mäßig",
+          "fr": "Frais à modéré",
+          "it": "Fresco a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽到适中",
+          "ja": "涼しいから中程度",
+          "ko": "차가운 온도에서 온화한 온도"
         }
       }
     },
@@ -123,7 +124,7 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
+          "en": "Medium",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
@@ -133,7 +134,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
+          "ja": "中くらい",
           "ko": "보통"
         }
       }
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast",
-          "pl": "Szybki",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
-          "zh": "快速",
-          "ja": "早い",
-          "ko": "빠름"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "De rápido crecimiento",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Lettuce",
-      "description": "Lettuce is a fast-growing leafy vegetable commonly grown for salads. It prefers cool temperatures, consistent moisture, and partial sun. It is well suited to containers and indoor growing with adequate light."
+      "description": "Lactuca sativa, known as lettuce, is a popular leafy green commonly used in salads. It thrives in cooler temperatures and moderate sunlight."
     },
     "pl": {
       "common_name": "Sałata",
-      "description": "Sałata to szybko rosnące warzywo liściowe uprawiane na sałatki. Lubi chłodne warunki, wilgotną glebę i półcień. Może być uprawiana w pojemnikach w domu."
+      "description": "Lactuca sativa, znana jako sałata, to popularna roślina liściasta powszechnie stosowana w sałatkach. Lubi chłodniejsze temperatury i umiarkowane nasłonecznienie."
     },
     "de": {
-      "common_name": "Kopfsalat",
-      "description": "Salat ist ein schnell wachsendes Blattgemüse für den Frischverzehr. Er bevorzugt kühle Temperaturen, gleichmäßige Feuchtigkeit und halbschattige Lagen. Auch für den Anbau in Töpfen geeignet."
+      "common_name": "Lattich",
+      "description": "Lactuca sativa, auch als Kopfsalat bekannt, ist ein beliebtes Blattgemüse, das häufig in Salaten verwendet wird. Es gedeiht bei kühleren Temperaturen und mäßigem Sonnenlicht."
     },
     "fr": {
       "common_name": "Laitue",
-      "description": "La laitue est un légume-feuille à croissance rapide, cultivé pour les salades. Elle apprécie la fraîcheur, un sol humide et une lumière modérée. Elle peut être cultivée en pot."
+      "description": "Lactuca sativa, connue sous le nom de laitue, est une plante à feuilles populaires utilisée dans les salades. Elle préfère des températures fraîches et une lumière modérée."
     },
     "it": {
       "common_name": "Lattuga",
-      "description": "La lattuga è un ortaggio a foglia a crescita rapida usato nelle insalate. Preferisce temperature fresche, terreno umido e luce parziale. Adatta anche alla coltivazione in vaso."
+      "description": "Lactuca sativa, conosciuta come lattuga, è una pianta a foglia molto utilizzata nelle insalate. Cresce meglio in temperature fresche e in luce moderata."
     },
     "es": {
       "common_name": "Lechuga",
-      "description": "La lechuga es una hortaliza de hoja de crecimiento rápido. Requiere temperaturas frescas, riego regular y sol parcial. Se adapta bien al cultivo en macetas."
+      "description": "Lactuca sativa, conocida como lechuga, es una planta de hojas populares en las ensaladas. Se adapta bien a temperaturas frescas y luz moderada."
     },
     "pt": {
       "common_name": "Alface",
-      "description": "A alface é uma hortaliça folhosa de crescimento rápido. Prefere clima fresco, solo úmido e luz parcial. Pode ser cultivada facilmente em vasos."
+      "description": "Lactuca sativa, conhecida como alface, é uma planta folhosa popular em saladas. Cresce bem em temperaturas mais frescas e luz moderada."
     },
     "ar": {
       "common_name": "خس",
-      "description": "الخس نبات ورقي سريع النمو يُزرع للأكل الطازج. يفضل الطقس المعتدل والتربة الرطبة وضوء الشمس الجزئي. يمكن زراعته في أوعية."
+      "description": "Lactuca sativa، والمعروفة بالخس، هي نبات ورقي يستخدم في السلطات. ينمو بشكل جيد في درجات حرارة باردة وأشعة شمس معتدلة."
     },
     "hi": {
-      "common_name": "सलाद पत्ता",
-      "description": "सलाद पत्ता एक तेज़ी से बढ़ने वाली पत्तेदार सब्ज़ी है। इसे ठंडा मौसम, नियमित पानी और आंशिक धूप पसंद है। गमलों में भी उगाया जा सकता है।"
+      "common_name": "लेटस",
+      "description": "Lactuca sativa, जिसे लेटस के नाम से जाना जाता है, एक पत्तेदार सब्जी है जो सलाद में उपयोग होती है। यह ठंडी तापमान और मध्यम धूप में अच्छा बढ़ता है।"
     },
     "zh": {
       "common_name": "生菜",
-      "description": "生菜是一种生长迅速的叶菜类植物。它喜欢凉爽的环境、湿润的土壤和半日照。适合在容器中种植。"
+      "description": "Lactuca sativa，俗称生菜，是一种常用于沙拉的叶菜。它在较凉爽的气温和适度的阳光下生长最好。"
     },
     "ja": {
       "common_name": "レタス",
-      "description": "レタスは成長の早い葉物野菜です。涼しい気候と適度な水分、半日陰を好みます。鉢植えでも育てられます。"
+      "description": "Lactuca sativa（レタス）は、サラダでよく使われる人気のある葉物野菜です。涼しい温度と適度な日光でよく育ちます。"
     },
     "ko": {
       "common_name": "상추",
-      "description": "상추는 빠르게 자라는 잎채소입니다. 서늘한 온도와 꾸준한 물주기, 부분적인 햇빛을 선호합니다. 화분 재배도 가능합니다."
+      "description": "Lactuca sativa, 상추는 샐러드에 자주 사용되는 인기 있는 잎채소입니다. 시원한 온도와 적당한 햇빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://extension.umn.edu/vegetables/growing-lettuce",
-      "https://www.rhs.org.uk/vegetables/lettuce/grow-your-own"
+      "https://www.gardeners.com/how-to/growing-lettuce/5067.html",
+      "https://www.rhs.org.uk/advice/profile?pid=117"
     ]
   }
 }

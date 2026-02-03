@@ -3,23 +3,25 @@
   "name": "Monstera obliqua",
   "latin": "Monstera obliqua",
   "sun": "medium",
-  "water": "high",
-  "difficulty": "hard",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "aroid",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 10,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "monstera_obliqua.jpg",
   "image_thumb": "monstera_obliqua.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光线",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy aroid mix",
-          "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato leve",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "透气基质",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "en": "Aroid soil",
+          "pl": "Ziemia dla roślin aroidów",
+          "de": "Aroid-Erde",
+          "fr": "Sol pour Aroid",
+          "it": "Terreno per Aroid",
+          "es": "Suelo para Aroid",
+          "pt": "Solo para Aroid",
+          "ar": "تربة أرويد",
+          "hi": "एरोइड मिट्टी",
+          "zh": "阿罗伊土壤",
+          "ja": "アロイド用土",
+          "ko": "아로이드 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide en continu",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة مستمرة",
-          "hi": "लगातार नम",
-          "zh": "保持湿润",
-          "ja": "常に湿り気",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very demanding",
-          "pl": "Bardzo wymagająca",
-          "de": "Sehr anspruchsvoll",
-          "fr": "Très exigeante",
-          "it": "Molto esigente",
-          "es": "Muy exigente",
-          "pt": "Muito exigente",
-          "ar": "صعبة العناية",
-          "hi": "अत्यंत कठिन",
-          "zh": "养护困难",
-          "ja": "管理が難しい",
-          "ko": "관리 어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20–28°C",
-          "pl": "20–28°C",
-          "de": "20–28°C",
-          "fr": "20–28°C",
-          "it": "20–28°C",
-          "es": "20–28°C",
-          "pt": "20–28°C",
-          "ar": "20–28°م",
-          "hi": "20–28°C",
-          "zh": "20–28°C",
-          "ja": "20–28℃",
-          "ko": "20–28°C"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Very high",
-          "pl": "Bardzo wysoka",
-          "de": "Sehr hoch",
-          "fr": "Très élevée",
-          "it": "Molto alta",
-          "es": "Muy alta",
-          "pt": "Muito alta",
-          "ar": "مرتفعة جدا",
-          "hi": "बहुत अधिक",
-          "zh": "非常高",
-          "ja": "非常に高い",
-          "ko": "매우 높음"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "ko": "애완동물에 유독"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow climbing",
-          "pl": "Wolno pnąca",
-          "de": "Langsam kletternd",
-          "fr": "Grimpante lente",
-          "it": "Rampicante lenta",
-          "es": "Trepadora lenta",
-          "pt": "Trepadeira lenta",
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長は遅い",
+          "ja": "成長が遅い",
           "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita l'eccesso d'acqua",
+          "es": "Evite el exceso de agua",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि-आवधिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua is a rare tropical aroid native to Central and South American rainforests. It requires very high humidity, warm temperatures, and consistent moisture to survive indoors."
+      "description": "Monstera obliqua is a rare tropical plant known for its delicate leaves with large holes. It thrives in high humidity and moderate light."
     },
     "pl": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua to bardzo rzadka roślina tropikalna z lasów deszczowych Ameryki Środkowej i Południowej. Wymaga wysokiej wilgotności, ciepła i stale wilgotnego podłoża."
+      "description": "Monstera obliqua to rzadka roślina tropikalna znana z delikatnych liści z dużymi otworami. Preferuje wysoką wilgotność i umiarkowane światło."
     },
     "de": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua ist eine sehr seltene tropische Aronstabpflanze aus Mittel- und Südamerika. Sie benötigt hohe Luftfeuchtigkeit, Wärme und gleichmäßige Feuchtigkeit."
+      "description": "Monstera obliqua ist eine seltene tropische Pflanze, die für ihre zarten Blätter mit großen Löchern bekannt ist. Sie gedeiht bei hoher Luftfeuchtigkeit und mittlerem Licht."
     },
     "fr": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua est une plante tropicale rare originaire des forêts humides d’Amérique centrale et du Sud. Elle demande une humidité élevée et des conditions très stables."
+      "description": "Monstera obliqua est une plante tropicale rare connue pour ses feuilles délicates avec de grands trous. Elle prospère dans une humidité élevée et une lumière modérée."
     },
     "it": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua è una rara pianta tropicale delle foreste dell’America Centrale e Meridionale. Necessita di elevata umidità, calore e irrigazione costante."
+      "description": "Monstera obliqua è una pianta tropicale rara nota per le sue foglie delicate con grandi buchi. Cresce bene in alta umidità e luce moderata."
     },
     "es": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua es una planta tropical muy rara de las selvas de América Central y del Sur. Requiere alta humedad, temperaturas cálidas y riego regular."
+      "description": "Monstera obliqua es una planta tropical rara conocida por sus hojas delicadas con grandes agujeros. Crece bien en alta humedad y luz moderada."
     },
     "pt": {
       "common_name": "Monstera obliqua",
-      "description": "Monstera obliqua é uma planta tropical rara das florestas da América Central e do Sul. Precisa de alta umidade, calor constante e solo sempre úmido."
+      "description": "Monstera obliqua é uma planta tropical rara conhecida por suas folhas delicadas com grandes buracos. Cresce bem em alta umidade e luz moderada."
     },
     "ar": {
       "common_name": "مونستيرا أوبليكوا",
-      "description": "مونستيرا أوبليكوا نبات استوائي نادر من غابات أمريكا الوسطى والجنوبية. يحتاج إلى رطوبة عالية وحرارة ثابتة وري منتظم."
+      "description": "مونستيرا أوبليكوا هي نبات استوائي نادر معروف بأوراقه الرقيقة ذات الثقوب الكبيرة. ينمو بشكل جيد في الرطوبة العالية والضوء المعتدل."
     },
     "hi": {
-      "common_name": "मॉन्स्टेरा ओब्लिक्वा",
-      "description": "मॉन्स्टेरा ओब्लिक्वा मध्य और दक्षिण अमेरिका के वर्षावनों का एक दुर्लभ उष्णकटिबंधीय पौधा है। इसे अधिक नमी, गर्म तापमान और नियमित पानी की आवश्यकता होती है।"
+      "common_name": "मॉनस्टेरा ओब्लिक्वा",
+      "description": "मॉनस्टेरा ओब्लिक्वा एक दुर्लभ उष्णकटिबंधीय पौधा है, जो अपने नाजुक पत्तों के लिए जाना जाता है जिनमें बड़े छेद होते हैं। यह उच्च आर्द्रता और मध्यम प्रकाश में अच्छा बढ़ता है।"
     },
     "zh": {
-      "common_name": "斜叶龟背竹",
-      "description": "斜叶龟背竹是一种原产于中南美洲雨林的稀有热带植物。它在室内需要极高的湿度和稳定的养护条件。"
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua 是一种罕见的热带植物，以其大孔的精致叶子而闻名。它在高湿度和适度的光线下生长良好。"
     },
     "ja": {
       "common_name": "モンステラ・オブリクア",
-      "description": "モンステラ・オブリクアは中南米の熱帯雨林原産の非常に希少な植物です。高湿度と安定した環境が必要です。"
+      "description": "モンステラ・オブリクアは、大きな穴が開いた繊細な葉で知られる珍しい熱帯植物です。高湿度と中程度の光の中でよく育ちます。"
     },
     "ko": {
       "common_name": "몬스테라 오블리쿠아",
-      "description": "몬스테라 오블리쿠아는 중남미 열대우림 원산의 매우 희귀한 식물입니다. 높은 습도와 일정한 관리가 필요합니다."
+      "description": "몬스테라 오블리쿠아는 큰 구멍이 있는 섬세한 잎으로 알려진 희귀한 열대 식물입니다. 높은 습도와 중간 정도의 빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/monstera-obliqua",
-      "https://www.aroids.org/aroid-plant-database/monstera",
-      "https://www.rhs.org.uk/plants/monstera/growing-guide"
+      "https://www.rhs.org.uk/plants/monstera-obliqua",
+      "https://www.gardeningknowhow.com/houseplants/monstera/monstera-obliqua-care.htm"
     ]
   }
 }

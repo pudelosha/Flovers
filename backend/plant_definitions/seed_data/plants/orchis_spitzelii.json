@@ -1,6 +1,6 @@
 {
   "external_id": "orchis_spitzelii",
-  "name": "Spitzel's Orchid",
+  "name": "Orchis spitzelii",
   "latin": "Orchis spitzelii",
   "sun": "medium",
   "water": "medium",
@@ -8,16 +8,16 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
+          "en": "Medium light",
           "pl": "Światło średnie",
-          "de": "Mittlere Sonneneinstrahlung",
-          "fr": "Lumière modérée",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम सूर्य",
-          "zh": "中等阳光",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 햇빛"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, orchid mix",
-          "pl": "Kwasowy, mix orchidei",
-          "de": "Saure, Orchideenmischung",
-          "fr": "Sol acide, mélange pour orchidées",
-          "it": "Terreno acido, miscela per orchidee",
-          "es": "Sustrato ácido",
-          "pt": "Solo ácido, mistura para orquídeas",
-          "ar": "تربة حمضية، خليط للزهور الأوركيدية",
-          "hi": "क्षारीय, ऑर्किड मिश्रण",
-          "zh": "酸性，兰花混合土",
-          "ja": "酸性、蘭の土",
-          "ko": "산성, 난초 혼합토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "الري المعتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium difficulty",
-          "pl": "Średnia trudność",
-          "de": "Mittlere Schwierigkeit",
-          "fr": "Difficulté moyenne",
-          "it": "Difficoltà media",
-          "es": "Dificultad media",
-          "pt": "Dificuldade média",
-          "ar": "صعوبة متوسطة",
-          "hi": "मध्यम कठिनाई",
-          "zh": "中等难度",
-          "ja": "中程度の難易度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to moderate",
-          "pl": "Chłodny do umiarkowanego",
-          "de": "Kühl bis mäßig",
-          "fr": "Froid à modéré",
-          "it": "Fresco a moderato",
-          "es": "Frío a moderado",
-          "pt": "Frio a moderado",
-          "ar": "بارد إلى معتدل",
-          "hi": "ठंडा से मध्यम",
-          "zh": "凉爽到适中",
-          "ja": "涼しいから中程度",
-          "ko": "시원함에서 적당함"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "비독성"
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to moderate growth",
-          "pl": "Wolny do umiarkowanego wzrostu",
-          "de": "Langsame bis mäßige Wachstum",
-          "fr": "Croissance lente à modérée",
-          "it": "Crescita lenta a moderata",
-          "es": "Crecimiento lento a moderado",
-          "pt": "Crescimento lento a moderado",
-          "ar": "نمو بطيء إلى معتدل",
-          "hi": "धीमी से मध्यम वृद्धि",
-          "zh": "生长缓慢到适中",
-          "ja": "遅いから中程度の成長",
-          "ko": "느리게에서 중간 성장"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير دائمة",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Spitzel's Orchid",
-      "description": "Orchis spitzelii is a beautiful alpine orchid with striking purple flowers. It thrives in cool to moderate temperatures and requires medium watering and humidity."
+      "description": "Orchis spitzelii is a species of orchid native to Europe. It thrives in moderate light and requires regular watering, avoiding overwatering."
     },
     "pl": {
-      "common_name": "Orchidea Spitzela",
-      "description": "Orchis spitzelii to piękna górska orchidea z uderzającymi fioletowymi kwiatami. Rośnie najlepiej w chłodnych lub umiarkowanych temperaturach i potrzebuje średniego podlewania oraz wilgotności."
+      "common_name": "Orkidea Spitzela",
+      "description": "Orchis spitzelii to gatunek orchidei występujący w Europie. Wymaga umiarkowanego światła i regularnego podlewania, unikając przelania."
     },
     "de": {
-      "common_name": "Spitzels Orchidee",
-      "description": "Orchis spitzelii ist eine wunderschöne Alpenorchidee mit auffälligen violetten Blüten. Sie gedeiht bei kühlen bis mäßigen Temperaturen und benötigt mäßiges Gießen und Luftfeuchtigkeit."
+      "common_name": "Spitzel Orchidee",
+      "description": "Orchis spitzelii ist eine Orchideenart, die in Europa beheimatet ist. Sie benötigt mittleres Licht und regelmäßiges Gießen, ohne Überwässerung."
     },
     "fr": {
       "common_name": "Orchidée de Spitzel",
-      "description": "Orchis spitzelii est une belle orchidée alpine avec des fleurs violettes frappantes. Elle prospère à des températures fraîches à modérées et nécessite un arrosage et une humidité modérés."
+      "description": "Orchis spitzelii est une espèce d'orchidée originaire d'Europe. Elle préfère une lumière modérée et un arrosage régulier, sans excès."
     },
     "it": {
       "common_name": "Orchidea di Spitzel",
-      "description": "Orchis spitzelii è una bellissima orchidea alpina con fiori viola sorprendenti. Cresce bene in temperature fresche o moderate e richiede annaffiature e umidità moderate."
+      "description": "Orchis spitzelii è una specie di orchidea originaria dell'Europa. Cresce meglio con luce moderata e richiede annaffiature regolari, evitando ristagni d'acqua."
     },
     "es": {
       "common_name": "Orquídea de Spitzel",
-      "description": "Orchis spitzelii es una hermosa orquídea alpina con flores moradas llamativas. Crece mejor en temperaturas frescas o moderadas y requiere riego y humedad moderados."
+      "description": "Orchis spitzelii es una especie de orquídea originaria de Europa. Necesita luz moderada y riego regular, evitando el exceso de agua."
     },
     "pt": {
       "common_name": "Orquídea de Spitzel",
-      "description": "Orchis spitzelii é uma linda orquídea alpina com flores roxas impressionantes. Ela prospera em temperaturas frescas a moderadas e requer rega e umidade moderadas."
+      "description": "Orchis spitzelii é uma espécie de orquídea nativa da Europa. Prefere luz moderada e exige rega regular, evitando o excesso de água."
     },
     "ar": {
-      "common_name": "زهرة سبتيزل",
-      "description": "Orchis spitzelii هي زهرة أوركيد جبلية جميلة ذات أزهار بنفسجية لافتة. تزدهر في درجات حرارة باردة إلى معتدلة وتتطلب ري ورطوبة متوسطة."
+      "common_name": "أوركيد سباتزل",
+      "description": "Orchis spitzelii هو نوع من الأوركيد موطنه أوروبا. ينمو في ضوء متوسط ويحتاج إلى الري المنتظم مع تجنب الإفراط في الري."
     },
     "hi": {
-      "common_name": "स्पिट्जल की आर्किड",
-      "description": "Orchis spitzelii एक सुंदर पर्वतीय आर्किड है जिसकी आकर्षक बैंगनी रंग की कलियाँ होती हैं। यह ठंडी से मध्यम तापमान में उगता है और इसके लिए मध्यम पानी और आर्द्रता की आवश्यकता होती है."
+      "common_name": "स्पिट्ज़ल की आर्किड",
+      "description": "Orchis spitzelii एक आर्किड प्रजाति है जो यूरोप की मूल है। इसे मध्यम रोशनी और नियमित पानी की आवश्यकता होती है, अत्यधिक पानी देने से बचना चाहिए।"
     },
     "zh": {
-      "common_name": "斯皮策尔兰花",
-      "description": "Orchis spitzelii 是一种美丽的高山兰花，具有引人注目的紫色花朵。它在凉爽到适中的温度下生长，需要适量的浇水和湿度。"
+      "common_name": "斯皮策尔兰",
+      "description": "Orchis spitzelii 是一种原产于欧洲的兰花。它需要适度的光照和定期浇水，避免过度浇水。"
     },
     "ja": {
-      "common_name": "スピッツエルの蘭",
-      "description": "Orchis spitzeliiは、魅力的な紫色の花を持つ美しい高山ランです。涼しいから中程度の温度で繁栄し、中程度の水やりと湿度が必要です。"
+      "common_name": "スピッツェルのラン",
+      "description": "Orchis spitzelii はヨーロッパ原産のランの一種です。中程度の光と定期的な水やりが必要で、過剰な水やりを避けるべきです。"
     },
     "ko": {
       "common_name": "스피첼의 난초",
-      "description": "Orchis spitzelii는 눈에 띄는 보라색 꽃을 가진 아름다운 고산지대 난초입니다. 차가운 온도에서 중간 정도의 물주기와 습도가 필요합니다."
+      "description": "Orchis spitzelii는 유럽 원산의 난초입니다. 중간 정도의 빛과 정기적인 물주기가 필요하며 과도한 물주기를 피해야 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicgarden.edu/care-guide",
-      "https://www.horticulturalreference.com/spitzel-orchid"
+      "https://www.rhs.org.uk/advice/profile?pid=292",
+      "https://www.botanicgardens.ie/plantfinder"
     ]
   }
 }

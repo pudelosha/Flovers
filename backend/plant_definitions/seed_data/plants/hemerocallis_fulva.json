@@ -1,17 +1,18 @@
 {
   "external_id": "hemerocallis_fulva",
-  "name": "Orange Daylily",
+  "name": "Daylily",
   "latin": "Hemerocallis fulva",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "hemerocallis_fulva.jpg",
   "image_thumb": "hemerocallis_fulva.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期給水",
-          "ko": "정기적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -96,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Hardy perennial",
-          "pl": "Bylina odporna",
-          "de": "Winterhart",
-          "fr": "Vivace rustique",
-          "it": "Perenne rustica",
-          "es": "Perenne rústica",
-          "pt": "Perene rústica",
-          "ar": "نبات معمر قوي",
-          "hi": "सहनशील बारहमासी",
-          "zh": "耐寒多年生",
-          "ja": "耐寒性多年草",
-          "ko": "강한 다년생"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal outdoor",
-          "pl": "Zwykła zewnętrzna",
-          "de": "Normale Außenluft",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य आर्द्रता",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to cats",
-          "pl": "Toksyczna dla kotów",
-          "de": "Giftig für Katzen",
-          "fr": "Toxique chats",
-          "it": "Tossica per gatti",
-          "es": "Tóxica para gatos",
-          "pt": "Tóxica p/ gatos",
-          "ar": "سامة للقطط",
-          "hi": "बिल्लियों के लिए विषाक्त",
-          "zh": "对猫有毒",
-          "ja": "猫に有毒",
-          "ko": "고양이 독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clump forming",
-          "pl": "Tworzy kępy",
-          "de": "Horstbildend",
-          "fr": "Touffue",
-          "it": "A cespi",
-          "es": "Forma matas",
-          "pt": "Forma touceiras",
-          "ar": "ينمو في كتل",
-          "hi": "गुच्छों में बढ़ता",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "군생 성장"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やりのしすぎを避ける",
+          "ko": "과습을 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Orange daylily",
-      "description": "Hemerocallis fulva is a hardy perennial known for its bright orange flowers. It thrives in full sun and well-drained soil. The plant is very low maintenance in gardens."
+      "common_name": "Daylily",
+      "description": "The Daylily (Hemerocallis fulva) is a hardy perennial known for its vibrant, trumpet-shaped flowers. It thrives in well-drained soil with moderate sunlight and water."
     },
     "pl": {
-      "common_name": "Liliowiec rdzawy",
-      "description": "Hemerocallis fulva to odporna bylina o pomarańczowych kwiatach. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Jest łatwa w uprawie ogrodowej."
+      "common_name": "Liliowiec",
+      "description": "Liliowiec (Hemerocallis fulva) to wytrzymała roślina wieloletnia, znana z jaskrawych, dzwonkowatych kwiatów. Rośnie w dobrze przepuszczalnej glebie przy umiarkowanym nasłonecznieniu i podlewaniu."
     },
     "de": {
-      "common_name": "Braune Taglilie",
-      "description": "Hemerocallis fulva ist eine winterharte Staude mit orangefarbenen Blüten. Sie bevorzugt volle Sonne und gut durchlässigen Boden. Die Pflanze ist sehr pflegeleicht."
+      "common_name": "Taglilie",
+      "description": "Die Taglilie (Hemerocallis fulva) ist eine robuste Staude, die für ihre lebendigen, trompetenförmigen Blüten bekannt ist. Sie gedeiht in gut durchlässigem Boden bei mäßigem Sonnenlicht und Bewässerung."
     },
     "fr": {
-      "common_name": "Hémérocalle fauve",
-      "description": "Hemerocallis fulva est une vivace robuste aux fleurs orange. Elle pousse bien en plein soleil dans un sol drainé. L’entretien est minimal au jardin."
+      "common_name": "Hémérocalle",
+      "description": "L'Hémérocalle (Hemerocallis fulva) est une plante vivace résistante, connue pour ses fleurs vibrantes en forme de trompette. Elle prospère dans un sol bien drainé avec une lumière et un arrosage modérés."
     },
     "it": {
-      "common_name": "Giglio di un giorno",
-      "description": "Hemerocallis fulva è una perenne rustica con fiori arancioni. Predilige pieno sole e terreno ben drenato. È molto facile da coltivare."
+      "common_name": "Giglio diurno",
+      "description": "Il Giglio diurno (Hemerocallis fulva) è una pianta perenne resistente, conosciuta per i suoi fiori vivaci a forma di tromba. Cresce in terreni ben drenati con luce e acqua moderate."
     },
     "es": {
-      "common_name": "Lirio de un día",
-      "description": "Hemerocallis fulva es una planta perenne resistente de flores naranjas. Crece mejor a pleno sol y en suelo drenado. Requiere poco mantenimiento."
+      "common_name": "Lirio de día",
+      "description": "El Lirio de día (Hemerocallis fulva) es una planta perenne resistente, conocida por sus flores vibrantes en forma de trompeta. Crece en suelos bien drenados con luz solar y agua moderada."
     },
     "pt": {
-      "common_name": "Lírio-de-um-dia",
-      "description": "Hemerocallis fulva é uma perene resistente com flores alaranjadas. Prefere sol pleno e solo bem drenado. É fácil de manter no jardim."
+      "common_name": "Lírio-do-dia",
+      "description": "O Lírio-do-dia (Hemerocallis fulva) é uma planta perene resistente, conhecida por suas flores vibrantes em forma de trompete. Ela cresce em solo bem drenado com luz e água moderadas."
     },
     "ar": {
-      "common_name": "زنبق النهار",
-      "description": "Hemerocallis fulva نبات معمر قوي ذو أزهار برتقالية. ينمو جيدًا في الشمس الكاملة وتربة جيدة التصريف. سهل العناية في الحدائق."
+      "common_name": "زنبق اليوم",
+      "description": "زنبق اليوم (Hemerocallis fulva) هو نبات معمر قوي، معروف بأزهاره الزاهية على شكل بوق. ينمو في التربة جيدة التصريف مع ضوء الشمس المعتدل والري."
     },
     "hi": {
-      "common_name": "डे-लिली",
-      "description": "Hemerocallis fulva एक मजबूत बारहमासी पौधा है जिसमें नारंगी फूल होते हैं। यह पूरी धूप और अच्छी जल निकास वाली मिट्टी में बढ़ता है। देखभाल आसान है।"
+      "common_name": "डेहलीली",
+      "description": "डेहलीली (Hemerocallis fulva) एक मजबूत बारहमासी पौधा है, जो अपनी चमकीली, ट्रम्पेट के आकार की कलियों के लिए जाना जाता है। यह अच्छी जल निकासी वाली मिट्टी में मध्यम धूप और पानी के साथ उगता है।"
     },
     "zh": {
-      "common_name": "萱草",
-      "description": "Hemerocallis fulva 是一种耐寒多年生植物，开橙色花。适合全日照和排水良好的土壤。在花园中易于养护。"
+      "common_name": "日百合",
+      "description": "日百合 (Hemerocallis fulva) 是一种耐寒的多年生植物，以其鲜艳的喇叭形花朵而闻名。它在排水良好的土壤中，适度的阳光和水分下生长。"
     },
     "ja": {
-      "common_name": "ヤブカンゾウ",
-      "description": "Hemerocallis fulva は橙色の花を咲かせる丈夫な多年草です。日当たりと水はけの良い土を好みます。管理は簡単です。"
+      "common_name": "デイリリー",
+      "description": "デイリリー (Hemerocallis fulva) は、鮮やかなトランペット型の花で知られる丈夫な多年草です。排水の良い土壌で、中程度の光と水分で育ちます。"
     },
     "ko": {
-      "common_name": "원추리",
-      "description": "Hemerocallis fulva는 주황색 꽃이 피는 강한 다년생 식물입니다. 햇빛과 배수 좋은 토양을 선호합니다. 관리가 쉽습니다."
+      "common_name": "데일릴리",
+      "description": "데일릴리 (Hemerocallis fulva)는 생동감 있는 나팔 모양의 꽃으로 유명한 강한 다년생 식물입니다. 잘 배수되는 토양에서 중간 정도의 햇빛과 물로 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c321",
-      "https://extension.umn.edu/perennials/daylilies",
-      "https://www.rhs.org.uk/plants/hemerocallis"
+      "https://www.rhs.org.uk/plants/hemerocallis-fulva",
+      "https://www.gardenia.net/plant/hemerocallis-fulva"
     ]
   }
 }

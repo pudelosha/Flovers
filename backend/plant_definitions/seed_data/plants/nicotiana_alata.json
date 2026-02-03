@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "en": "Medium sunlight",
+          "pl": "Średnie nasłonecznienie",
+          "de": "Mittlere Sonneneinstrahlung",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy, well-drained",
-          "pl": "Żyzna, dobrze przepuszczalna",
-          "de": "Lehmig, gut durchlässig",
-          "fr": "Argileux, bien drainé",
-          "it": "Limoso, ben drenato",
-          "es": "Arcilloso, bien drenado",
-          "pt": "Argiloso, bem drenado",
-          "ar": "طيني، جيد التصريف",
-          "hi": "मृदुल, अच्छा जल निकासी",
-          "zh": "壤土，良好排水",
-          "ja": "ローム質、良好な排水性",
-          "ko": "점토질, 배수가 좋은"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良く排水された土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당히"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中等の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if ingested",
-          "pl": "Toksyczny po spożyciu",
-          "de": "Giftig bei Aufnahme",
-          "fr": "Toxique si ingéré",
-          "it": "Tossico se ingerito",
-          "es": "Tóxico si se ingiere",
-          "pt": "Tóxico se ingerido",
-          "ar": "سمي إذا تم تناوله",
-          "hi": "खाया जाने पर विषैला",
-          "zh": "食用时有毒",
-          "ja": "摂取すると有毒",
-          "ko": "섭취 시 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth rate",
-          "pl": "Średni tempo wzrostu",
-          "de": "Mittlere Wachstumsrate",
-          "fr": "Vitesse de croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Tasa de crecimiento moderada",
-          "pt": "Taxa de crescimento moderada",
-          "ar": "معدل نمو معتدل",
-          "hi": "मध्यम वृद्धि दर",
-          "zh": "中等生长速度",
-          "ja": "中程度の成長速度",
-          "ko": "중간 성장 속도"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ विकास",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過水を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Flowering Tobacco",
-      "description": "Nicotiana alata is a flowering plant native to South America, commonly known for its tubular flowers. It thrives in moderate sunlight and requires well-drained, loamy soil."
+      "description": "Nicotiana alata is a fast-growing ornamental plant known for its trumpet-shaped flowers. It thrives in moderate sunlight and requires well-drained soil."
     },
     "pl": {
-      "common_name": "Tytoń kwitnący",
-      "description": "Nicotiana alata to roślina kwitnąca pochodząca z Ameryki Południowej, znana z rurkowatych kwiatów. Rośnie w średnim świetle i wymaga dobrze przepuszczalnej, żyznej gleby."
+      "common_name": "Tobaco kwitnący",
+      "description": "Nicotiana alata to szybko rosnąca roślina ozdobna o kwiatach w kształcie trąbki. Rośnie najlepiej w umiarkowanym świetle i wymaga dobrze przepuszczalnej gleby."
     },
     "de": {
-      "common_name": "Blühender Tabak",
-      "description": "Nicotiana alata ist eine blühende Pflanze aus Südamerika, bekannt für ihre röhrenförmigen Blüten. Sie gedeiht bei mittlerem Sonnenlicht und benötigt gut durchlässigen, lehmigen Boden."
+      "common_name": "Blühendes Tabak",
+      "description": "Nicotiana alata ist eine schnell wachsende Zierpflanze mit trichterförmigen Blüten. Sie gedeiht bei mäßigem Sonnenlicht und benötigt gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "Tabac à fleurs",
-      "description": "Nicotiana alata est une plante à fleurs originaire d'Amérique du Sud, connue pour ses fleurs en forme de tube. Elle prospère sous un éclairage modéré et nécessite un sol bien drainé et argileux."
+      "description": "Nicotiana alata est une plante ornementale à croissance rapide, connue pour ses fleurs en forme de trompette. Elle préfère la lumière modérée et nécessite un sol bien drainé."
     },
     "it": {
-      "common_name": "Tabacco fiorito",
-      "description": "Nicotiana alata è una pianta fiorita originaria del Sud America, conosciuta per i suoi fiori tubolari. Cresce alla luce media e necessita di un terreno ben drenato e limoso."
+      "common_name": "Tabacco da fiore",
+      "description": "Nicotiana alata è una pianta ornamentale a rapida crescita, famosa per i suoi fiori a forma di tromba. Cresce meglio in luce moderata e richiede un terreno ben drenato."
     },
     "es": {
-      "common_name": "Tabaco floreciente",
-      "description": "Nicotiana alata es una planta con flores originaria de América del Sur, conocida por sus flores tubulares. Crece bajo luz moderada y necesita un suelo bien drenado y arcilloso."
+      "common_name": "Tabaco de flores",
+      "description": "Nicotiana alata es una planta ornamental de rápido crecimiento, conocida por sus flores en forma de trompeta. Crece mejor a la luz moderada y necesita un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Tabaco florido",
-      "description": "Nicotiana alata é uma planta com flores originária da América do Sul, conhecida por suas flores tubulares. Ela cresce sob luz moderada e precisa de solo bem drenado e argiloso."
+      "common_name": "Tabaco de flores",
+      "description": "Nicotiana alata é uma planta ornamental de crescimento rápido, conhecida pelas suas flores em forma de trompete. Cresce bem sob luz moderada e requer solo bem drenado."
     },
     "ar": {
-      "common_name": "تَبَغٌ مَزْهَرِيٌّ",
-      "description": "نبات نيكوتيانا ألاتا هو نبات مزهر من أمريكا الجنوبية، ويعرف بزهوره الأنبوبية. ينمو في ضوء معتدل ويحتاج إلى تربة طينية جيدة التصريف."
+      "common_name": "تبغ مزهر",
+      "description": "Nicotiana alata هي نبتة زينة سريعة النمو مع أزهار على شكل مزمار. تنمو بشكل أفضل تحت الضوء المعتدل وتحتاج إلى تربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "फूलों वाला तंबाकू",
-      "description": "निकोटियाना अलाटा एक फूलों वाला पौधा है जो दक्षिण अमेरिका का मूल निवासी है, जिसे अपनी नलिका जैसी फूलों के लिए जाना जाता है। यह मध्यम प्रकाश में उगता है और अच्छे जल निकासी वाली चिकनी मिट्टी की आवश्यकता होती है।"
+      "common_name": "फूलदार तंबाकू",
+      "description": "Nicotiana alata एक तेजी से बढ़ने वाली सजावटी पौधा है जो अपनी ट्रम्पेट जैसी फूलों के लिए जाना जाता है। यह मध्यम धूप में बढ़ता है और अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है."
     },
     "zh": {
       "common_name": "开花烟草",
-      "description": "Nicotiana alata是一种原产于南美的开花植物，因其管状花朵而闻名。它在中等光照下生长，需要排水良好的壤土。"
+      "description": "Nicotiana alata 是一种快速生长的观赏植物，以其喇叭形花朵而闻名。它在中等阳光下生长，并需要良好的排水土壤。"
     },
     "ja": {
-      "common_name": "花煙草",
-      "description": "Nicotiana alataは南アメリカ原産の開花植物で、その管状の花で知られています。中程度の光で育ち、排水性の良いローム土を必要とします。"
+      "common_name": "開花タバコ",
+      "description": "Nicotiana alata は急成長する観賞植物で、トランペット型の花で知られています。中程度の日光で育ち、良好な排水性の土壌が必要です。"
     },
     "ko": {
-      "common_name": "꽃 담배",
-      "description": "Nicotiana alata는 남미 원산의 꽃 식물로, 튜브 모양의 꽃으로 유명합니다. 중간 정도의 햇빛에서 자라며 잘 배수되는 점토질 토양이 필요합니다."
+      "common_name": "꽃담배",
+      "description": "Nicotiana alata는 트럼펫 모양의 꽃으로 유명한 빠르게 자라는 관상용 식물입니다. 중간 햇빛에서 잘 자라며 배수가 좋은 토양을 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10094/nicotiana-alata/details",
-      "https://www.gardenia.net/plant/nicotiana-alata-flowering-tobacco"
+      "https://www.rhs.org.uk/plants/2836/nicotiana-alata/details",
+      "https://www.gardenia.net/plant/nicotiana-alata"
     ]
   }
 }

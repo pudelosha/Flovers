@@ -8,11 +8,10 @@
   "popular": false,
   "recommended_pot_materials": [
     "terracotta",
-    "ceramic"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "citrus"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -40,7 +39,7 @@
           "hi": "पूरी धूप",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "강한 햇빛"
+          "ko": "햇빛 많음"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist, well-drained",
-          "pl": "Wilg., przepuszcz.",
-          "de": "Feucht, drainiert",
-          "fr": "Frais, drainant",
-          "it": "Umido, drenante",
-          "es": "Húmedo, drenante",
-          "pt": "Úmido, drenado",
-          "ar": "رطب وجيد الصرف",
-          "hi": "नम, जल-निकासी",
-          "zh": "湿润且排水好",
-          "ja": "湿り・水はけ良",
-          "ko": "촉촉·배수 좋게"
+          "en": "Well-draining, acidic",
+          "pl": "Przepuszczalna, kwaś",
+          "de": "Durchlässig, sauer",
+          "fr": "Drainant, acide",
+          "it": "Drenante, acido",
+          "es": "Drenante, ácido",
+          "pt": "Drenado, ácido",
+          "ar": "تصريف جيد، حامضي",
+          "hi": "जलनिकासी, अम्लीय",
+          "zh": "排水好，微酸",
+          "ja": "水はけ良い酸性",
+          "ko": "배수 좋고 산성"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "When top dries",
-          "pl": "Gdy przeschnie wierzch",
-          "de": "Wenn oben trocken",
-          "fr": "Quand surface sèche",
-          "it": "Quando asciuga sopra",
-          "es": "Cuando seque arriba",
-          "pt": "Quando secar em cima",
-          "ar": "عند جفاف السطح",
-          "hi": "ऊपर सूखे तब",
+          "en": "Water when top dries",
+          "pl": "Gdy wierzch przeschnie",
+          "de": "Gießen wenn oben trocken",
+          "fr": "Arroser si sec dessus",
+          "it": "Annaffia quando asciuga",
+          "es": "Riega al secar arriba",
+          "pt": "Regue ao secar em cima",
+          "ar": "اسقِ عند جفاف السطح",
+          "hi": "ऊपर सूखे तो पानी",
           "zh": "表土干再浇",
           "ja": "表土が乾いたら",
-          "ko": "겉흙 마르면"
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -93,10 +92,10 @@
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "ふつう",
+          "ja": "普通",
           "ko": "보통"
         }
       }
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–30°C",
-          "pl": "10–30°C",
-          "de": "10–30°C",
-          "fr": "10–30°C",
-          "it": "10–30°C",
-          "es": "10–30°C",
-          "pt": "10–30°C",
-          "ar": "10–30°م",
-          "hi": "10–30°C",
-          "zh": "10–30°C",
-          "ja": "10–30°C",
-          "ko": "10–30°C"
+          "en": "Keep >10°C",
+          "pl": "Trzymaj >10°C",
+          "de": ">10°C halten",
+          "fr": ">10°C",
+          "it": ">10°C",
+          "es": ">10°C",
+          "pt": ">10°C",
+          "ar": "فوق 10°م",
+          "hi": "10°C से ऊपर",
+          "zh": "保持>10°C",
+          "ja": "10°C以上",
+          "ko": "10°C 이상"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Umiarkowana",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Normal indoor",
+          "pl": "Normalna domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Normale in casa",
+          "es": "Normal interior",
+          "pt": "Normal interna",
+          "ar": "رطوبة منزلية عادية",
+          "hi": "सामान्य नमी",
+          "zh": "室内正常湿度",
+          "ja": "普通の湿度",
+          "ko": "일반 실내 습도"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषैली नहीं",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic (pets)",
+          "pl": "Nietoksyczna (zw.)",
+          "de": "Ungiftig (Haustiere)",
+          "fr": "Non toxique (animaux)",
+          "it": "Non tossica (animali)",
+          "es": "No tóxica (mascotas)",
+          "pt": "Não tóxica (pets)",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Evergreen shrub",
-          "pl": "Zimozielony krzew",
-          "de": "Immergrüner Strauch",
-          "fr": "Arbuste persistant",
-          "it": "Arbusto sempreverde",
-          "es": "Arbusto perenne",
-          "pt": "Arbusto perene",
-          "ar": "شجيرة دائمة الخضرة",
-          "hi": "सदाबहार झाड़ी",
-          "zh": "常绿灌木",
-          "ja": "常緑低木",
-          "ko": "상록 관목"
+          "en": "Shrub, medium growth",
+          "pl": "Krzew, średni wzrost",
+          "de": "Strauch, mittleres W.",
+          "fr": "Arbuste, croissance moy.",
+          "it": "Arbusto, crescita media",
+          "es": "Arbusto, crecimiento medio",
+          "pt": "Arbusto, crescimento médio",
+          "ar": "شجيرة، نمو متوسط",
+          "hi": "झाड़ी, मध्यम वृद्धि",
+          "zh": "灌木，中等生长",
+          "ja": "低木・中程度",
+          "ko": "관목, 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelawaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿は避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, spider mites",
+          "pl": "Tarczniki, przędziorki",
+          "de": "Schildläuse, Spinnmilben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglia, ragnetto",
+          "es": "Cochinilla, ácaros",
+          "pt": "Cochonilha, ácaros",
+          "ar": "حشرات قشرية، عناكب",
+          "hi": "स्केल, स्पाइडर माइट",
+          "zh": "介壳虫、红蜘蛛",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
@@ -181,61 +218,58 @@
   "translations": {
     "en": {
       "common_name": "Crimson bottlebrush",
-      "description": "Evergreen Australian shrub with aromatic leaves and red, brush-like flower spikes. Grow in full sun in moist but well-drained, slightly acidic soil. In cooler climates it is often kept in a container and overwintered bright and frost-free."
+      "description": "Evergreen shrub from Australia with red bottlebrush-like flower spikes and lemon-scented leaves. Grow in full sun in a well-draining, slightly acidic mix. Water when the top layer dries and protect from cold; bring containers in around 10°C."
     },
     "pl": {
       "common_name": "Kuflik cytrynowy",
-      "description": "Zimozielony krzew z Australii o aromatycznych liściach i czerwonych kwiatostanach typu „szczotka”. Wymaga pełnego słońca oraz wilgotnego, ale przepuszczalnego, lekko kwaśnego podłoża. W chłodniejszym klimacie najlepiej uprawiać w pojemniku i zimować jasno, bez mrozu."
+      "description": "Zimozielony krzew z Australii z czerwonymi kwiatostanami typu „szczotka” i cytrynowo pachnącymi liśćmi. Wymaga pełnego słońca oraz przepuszczalnego, lekko kwaśnego podłoża. Podlewaj po przeschnięciu wierzchu i chroń przed chłodem; donice przenieś do środka przy ok. 10°C."
     },
     "de": {
-      "common_name": "Zitronen-Zylinderputzer",
-      "description": "Immergrüner Strauch aus Australien mit aromatischen Blättern und roten, bürstenartigen Blütenständen. In voller Sonne in feuchtem, gut drainiertem, leicht saurem Substrat kultivieren. In kühleren Regionen häufig im Kübel halten und hell sowie frostfrei überwintern."
+      "common_name": "Zitronen-Flaschenbürste",
+      "description": "Immergrüner Strauch aus Australien mit roten, bürstenförmigen Blütenständen und zitronig duftenden Blättern. Vollsonnig in gut drainierendem, leicht saurem Substrat kultivieren. Gießen, wenn die Oberfläche abtrocknet, und vor Kälte schützen; Kübel bei etwa 10°C hereinholen."
     },
     "fr": {
       "common_name": "Rince-bouteille citronné",
-      "description": "Arbuste persistant d’Australie aux feuilles aromatiques et aux épis rouges en forme de brosse. À cultiver au plein soleil dans un sol frais mais bien drainé, plutôt acide. En climat froid, il se cultive souvent en pot et se garde lumineux, hors gel en hiver."
+      "description": "Arbuste persistant d’Australie aux épis rouges en forme de brosse et aux feuilles au parfum citronné. À cultiver en plein soleil dans un substrat drainant, légèrement acide. Arroser quand la surface sèche et protéger du froid; rentrer les pots vers 10°C."
     },
     "it": {
-      "common_name": "Scovolino rosso",
-      "description": "Arbusto sempreverde australiano con foglie aromatiche e infiorescenze rosse a forma di spazzola. Coltivare in pieno sole in substrato umido ma ben drenato e leggermente acido. Nei climi freddi si tiene spesso in vaso e si sverna in luogo luminoso e senza gelo."
+      "common_name": "Callistemone limone",
+      "description": "Arbusto sempreverde australiano con infiorescenze rosse a “scovolino” e foglie profumate di limone. Coltiva in pieno sole con terriccio ben drenante e leggermente acido. Annaffia quando lo strato superiore asciuga e proteggi dal freddo; porta i vasi al chiuso intorno a 10°C."
     },
     "es": {
-      "common_name": "Limpiatubos rojo",
-      "description": "Arbusto perenne australiano con hojas aromáticas y espigas florales rojas tipo cepillo. Crece mejor a pleno sol en sustrato húmedo pero bien drenado y algo ácido. En climas fríos suele cultivarse en maceta y pasar el invierno en un lugar luminoso y sin heladas."
+      "common_name": "Limpiatubos limón",
+      "description": "Arbusto perenne de Australia con espigas rojas tipo cepillo y hojas con aroma a limón. Crece mejor a pleno sol en un sustrato drenante y ligeramente ácido. Riega cuando se seque la capa superior y protégelo del frío; entra las macetas cerca de 10°C."
     },
     "pt": {
-      "common_name": "Escova-de-garrafa vermelha",
-      "description": "Arbusto perene australiano com folhas aromáticas e inflorescências vermelhas em forma de escova. Cultive em sol pleno, em substrato úmido porém bem drenado e levemente ácido. Em regiões frias, é comum manter em vaso e invernar em local claro e sem geada."
+      "common_name": "Escova-de-garrafa",
+      "description": "Arbusto perene da Austrália com espigas vermelhas em forma de escova e folhas com cheiro de limão. Cultive em sol pleno num substrato bem drenado e levemente ácido. Regue quando a camada superior secar e proteja do frio; leve vasos para dentro por volta de 10°C."
     },
     "ar": {
       "common_name": "فرشاة الزجاجة القرمزية",
-      "description": "شجيرة دائمة الخضرة من أستراليا بأوراق عطرية ونورات حمراء تشبه الفرشاة. تُزرع في شمس كاملة وتربة رطبة جيدة الصرف ويميل أن تكون حمضية قليلًا. في المناطق الباردة تُربّى غالبًا في أصيص وتُشتّى في مكان مضيء وخالٍ من الصقيع."
+      "description": "شجيرة دائمة الخضرة من أستراليا بأزهار حمراء تشبه الفرشاة وأوراق ذات رائحة ليمون. تنجح في شمس كاملة وتربة جيدة الصرف تميل للحموضة. اسقِ عند جفاف السطح واحمها من البرد؛ أدخل الأصص عند نحو 10°م."
     },
     "hi": {
-      "common_name": "क्रिमसन बॉटलब्रश",
-      "description": "ऑस्ट्रेलिया की सदाबहार झाड़ी, सुगंधित पत्तियों और लाल ब्रश जैसी पुष्प-मंजरी के लिए जानी जाती है। इसे पूरी धूप में, नम लेकिन अच्छी जल-निकासी वाली और थोड़ी अम्लीय मिट्टी में उगाएँ। ठंडे क्षेत्रों में इसे गमले में रखकर सर्दियों में उजाले में, पाला-मुक्त स्थान पर रखें।"
+      "common_name": "बॉटलब्रश",
+      "description": "यह ऑस्ट्रेलिया की सदाबहार झाड़ी है, जिसमें लाल ब्रश जैसे पुष्पगुच्छ और नींबू जैसी खुशबू वाले पत्ते होते हैं। इसे तेज धूप और अच्छी जलनिकासी वाली, हल्की अम्लीय मिट्टी दें। ऊपर की मिट्टी सूखने पर पानी दें और ठंड से बचाएँ; गमले को लगभग 10°C पर अंदर रखें।"
     },
     "zh": {
       "common_name": "红千层",
-      "description": "澳大利亚常绿灌木，叶片具芳香，花序呈红色刷状。需全日照，基质保持微湿但排水良好，偏微酸更佳。寒冷地区多盆栽养护，冬季置于明亮无霜处。"
+      "description": "常绿灌木，原产澳大利亚，开红色“瓶刷”状花序，叶片揉碎有柠檬香。喜全日照与排水良好、微酸性基质。表土干后再浇水并避免受冻；盆栽在约10°C时移入室内。"
     },
     "ja": {
       "common_name": "ブラシノキ",
-      "description": "オーストラリア原産の常緑低木で、芳香のある葉と赤いブラシ状の花穂が特徴です。日当たりのよい場所で、水はけのよい湿り気のある弱酸性用土に植えます。寒冷地では鉢植えにして冬は明るく霜の当たらない場所で管理します。"
+      "description": "オーストラリア原産の常緑低木で、赤いボトルブラシ状の花とレモン香の葉が特徴です。日当たりと水はけの良い弱酸性用土で育てます。表土が乾いてから水やりし、寒さを避けて鉢は約10°Cで室内へ。"
     },
     "ko": {
       "common_name": "병솔나무",
-      "description": "호주 원산의 상록 관목으로 향기로운 잎과 붉은 병솔 모양의 꽃이 특징입니다. 강한 햇빛과 촉촉하지만 배수가 좋은 약산성 토양을 선호합니다. 추운 지역에서는 화분으로 키우며 겨울에는 밝고 서리 없는 곳에 둡니다."
+      "description": "호주 원산의 상록 관목으로 붉은 병솔 모양의 꽃과 레몬 향 나는 잎이 특징입니다. 강한 햇빛과 배수 좋은 약산성 배합토에서 잘 자랍니다. 겉흙이 마르면 물을 주고 추위를 피하며, 화분은 약 10°C에 실내로 옮기세요."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/2687/callistemon-citrinus/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282871",
-      "https://www.chicagobotanic.org/plant-collections/plant-finder/callistemon-citrinus-crimson-bottlebrush",
-      "https://www.anbg.gov.au/gnp/gnp2/callistemon-citrinus.html",
       "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/callistemon-citrinus",
-      "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/baker/docs/pdf/horticulture/demonstration-gardens/Bottlebrush.pdf"
+      "https://www.gardeningknowhow.com/ornamental/shrubs/bottlebrush/growing-bottlebrush-plants.htm"
     ]
   }
 }

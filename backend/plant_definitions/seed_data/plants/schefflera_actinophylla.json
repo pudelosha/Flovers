@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -39,7 +39,7 @@
           "ar": "ضوء متوسط",
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中光",
+          "ja": "中程度の光",
           "ko": "중간 빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam, Universal",
-          "pl": "Gleba, Uniwersalny",
-          "de": "Lehm, Universal",
-          "fr": "Argile, Universel",
-          "it": "Terreno universale",
-          "es": "Tierra universal",
-          "pt": "Solo universal",
-          "ar": "تربة عالمية",
-          "hi": "सार्वभौमिक मिट्टी",
-          "zh": "通用土壤",
-          "ja": "ユニバーサル土壌",
-          "ko": "유니버설 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -74,9 +74,9 @@
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "سقاية معتدلة",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 급수"
         }
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-25°C",
-          "pl": "18-25°C",
-          "de": "18-25°C",
-          "fr": "18-25°C",
-          "it": "18-25°C",
-          "es": "18-25°C",
-          "pt": "18-25°C",
-          "ar": "18-25°C",
-          "hi": "18-25°C",
-          "zh": "18-25°C",
-          "ja": "18-25°C",
-          "ko": "18-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Durchschnittliche Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "औसत आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "평균 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes, toxic to pets",
-          "pl": "Tak, toksyczny dla zwierząt",
-          "de": "Ja, giftig für Haustiere",
-          "fr": "Oui, toxique pour les animaux",
-          "it": "Sì, tossico per gli animali",
-          "es": "Sí, tóxico para mascotas",
-          "pt": "Sim, tóxico para animais",
-          "ar": "نعم، سام للحيوانات",
-          "hi": "हां, पालतू जानवरों के लिए विषाक्त",
-          "zh": "是的，对宠物有毒",
-          "ja": "はい、ペットに有毒",
-          "ko": "네, 애완동물에 독성"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium growth rate",
-          "pl": "Średni wzrost",
+          "en": "Moderate growth rate",
+          "pl": "Umiarkowane tempo wzrostu",
           "de": "Mittlere Wachstumsrate",
-          "fr": "Vitesse de croissance moyenne",
-          "it": "Velocità di crescita media",
-          "es": "Tasa de crecimiento media",
-          "pt": "Taxa de crescimento média",
-          "ar": "معدل نمو متوسط",
+          "fr": "Taux de croissance modéré",
+          "it": "Tasso di crescita moderato",
+          "es": "Tasa de crecimiento moderada",
+          "pt": "Taxa de crescimento moderada",
+          "ar": "معدل نمو معتدل",
           "hi": "मध्यम वृद्धि दर",
           "zh": "中等生长速度",
-          "ja": "中程度の成長速度",
-          "ko": "중간 성장 속도"
+          "ja": "中程度の成長率",
+          "ko": "중간 성장률"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Umbrella Tree",
-      "description": "Schefflera actinophylla, known as the umbrella tree, is a tropical plant native to Australia. It is known for its large, glossy leaves that grow in a fan-like pattern."
+      "description": "Schefflera actinophylla, known as the umbrella tree, is a popular indoor plant with large, glossy leaves. It thrives in medium light and requires moderate watering."
     },
     "pl": {
       "common_name": "Drzewo parasolowe",
-      "description": "Schefflera actinophylla, znana jako drzewo parasolowe, jest rośliną tropikalną pochodzącą z Australii. Charakteryzuje się dużymi, błyszczącymi liśćmi, które rosną w kształcie wachlarza."
+      "description": "Schefflera actinophylla, znana jako drzewo parasolowe, to popularna roślina doniczkowa o dużych, błyszczących liściach. Rośnie najlepiej w średnim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Regenschirmbaum",
-      "description": "Schefflera actinophylla, auch als Regenschirmbaum bekannt, ist eine tropische Pflanze aus Australien. Sie ist bekannt für ihre großen, glänzenden Blätter, die in fächerartiger Anordnung wachsen."
+      "common_name": "Schirmbaum",
+      "description": "Schefflera actinophylla, auch als Schirmbaum bekannt, ist eine beliebte Zimmerpflanze mit großen, glänzenden Blättern. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
       "common_name": "Arbre parapluie",
-      "description": "Schefflera actinophylla, connu sous le nom d'arbre parapluie, est une plante tropicale originaire d'Australie. Elle est caractérisée par ses grandes feuilles brillantes disposées en forme de éventail."
+      "description": "Schefflera actinophylla, connu sous le nom d'arbre parapluie, est une plante d'intérieur populaire avec de grandes feuilles brillantes. Elle prospère dans une lumière moyenne et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Albero ombrello",
-      "description": "Schefflera actinophylla, noto come albero ombrello, è una pianta tropicale originaria dell'Australia. È conosciuto per le sue grandi foglie lucide che crescono a forma di ventaglio."
+      "description": "Schefflera actinophylla, noto come albero ombrello, è una pianta da interno popolare con grandi foglie lucide. Cresce bene in luce media e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Árbol paraguas",
-      "description": "Schefflera actinophylla, conocido como árbol paraguas, es una planta tropical originaria de Australia. Se caracteriza por sus grandes hojas brillantes que crecen en un patrón de abanico."
+      "common_name": "Árbol sombrilla",
+      "description": "Schefflera actinophylla, conocido como árbol sombrilla, es una planta de interior popular con grandes hojas brillantes. Crece bien con luz media y necesita riego moderado."
     },
     "pt": {
-      "common_name": "Árvore guarda-chuva",
-      "description": "Schefflera actinophylla, conhecida como árvore guarda-chuva, é uma planta tropical originária da Austrália. É conhecida por suas grandes folhas brilhantes que crescem em um padrão de leque."
+      "common_name": "Árvore sombrinha",
+      "description": "Schefflera actinophylla, conhecida como árvore sombrinha, é uma planta de interior popular com grandes folhas brilhantes. Cresce bem com luz média e necessita de rega moderada."
     },
     "ar": {
       "common_name": "شجرة المظلة",
-      "description": "Schefflera actinophylla، المعروفة بشجرة المظلة، هي نبات استوائي موطنه أستراليا. يتميز بأوراقه الكبيرة اللامعة التي تنمو في نمط يشبه المروحة."
+      "description": "Schefflera actinophylla، المعروفة باسم شجرة المظلة، هي نبات داخلي شائع ذو أوراق لامعة وكبيرة. تنمو في الضوء المتوسط وتحتاج إلى ري معتدل."
     },
     "hi": {
-      "common_name": "छतरी वृक्ष",
-      "description": "Schefflera actinophylla, जिसे छतरी वृक्ष के नाम से जाना जाता है, एक उष्णकटिबंधीय पौधा है जो ऑस्ट्रेलिया का मूल निवासी है। यह अपने बड़े, चमकदार पत्तों के लिए जाना जाता है जो पंखुड़ी जैसे पैटर्न में उगते हैं।"
+      "common_name": "छाता पेड़",
+      "description": "Schefflera actinophylla, जिसे छाता पेड़ के नाम से जाना जाता है, एक लोकप्रिय इनडोर पौधा है जिसमें बड़े, चमकदार पत्ते होते हैं। यह मध्यम प्रकाश में अच्छी तरह से बढ़ता है और इसके लिए मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "伞树",
-      "description": "Schefflera actinophylla，也称为伞树，是一种原产于澳大利亚的热带植物。它以其大而光亮的叶子而闻名，这些叶子呈扇形排列。"
+      "common_name": "伞形树",
+      "description": "Schefflera actinophylla，俗称伞形树，是一种受欢迎的室内植物，具有大而光滑的叶子。它在中等光照下生长良好，需要适度浇水。"
     },
     "ja": {
       "common_name": "アンブレラツリー",
-      "description": "Schefflera actinophylla、別名アンブレラツリーはオーストラリア原産の熱帯植物です。大きくて光沢のある葉が扇形に広がる特徴があります。"
+      "description": "Schefflera actinophylla、別名アンブレラツリーは、大きな光沢のある葉を持つ人気の室内植物です。中程度の光で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "우산 나무",
-      "description": "Schefflera actinophylla, 또는 우산 나무는 호주 원산의 열대 식물입니다. 팬 모양으로 자라는 크고 반짝이는 잎으로 잘 알려져 있습니다."
+      "common_name": "우산나무",
+      "description": "Schefflera actinophylla, 우산나무로 알려진 이 식물은 큰 광택 있는 잎을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며 적당한 급수가 필요합니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/schefflera-actinophylla",
-      "https://www.gardeningknowhow.com/houseplants/schefflera/growing-schefflera-plants.htm"
+      "https://www.gardenia.net/plant/schefflera-actinophylla"
     ]
   }
 }

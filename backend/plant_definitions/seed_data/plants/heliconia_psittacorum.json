@@ -1,9 +1,9 @@
 {
   "external_id": "heliconia_psittacorum",
-  "name": "Parrot Heliconia",
+  "name": "Parrot Flower",
   "latin": "Heliconia psittacorum",
-  "sun": "high",
-  "water": "high",
+  "sun": "medium",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,15 +11,15 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "heliconia_psittacorum.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne swiatlo",
-          "de": "Helles Licht",
-          "fr": "Lumiere vive",
-          "it": "Luce intensa",
-          "es": "Luz intensa",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광량"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Zyzna ziemia",
-          "de": "Nahrhafter Boden",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo rico",
-          "pt": "Solo rico",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "良好な排水性の土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Stale wilgotna",
-          "de": "Feucht halten",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre humedo",
-          "pt": "Sempre umido",
-          "ar": "رطبة دائمًا",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気維持",
-          "ko": "촉촉하게"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Srednia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Media",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30 C",
-          "pl": "18–30 C",
-          "de": "18–30 C",
-          "fr": "18–30 C",
-          "it": "18–30 C",
-          "es": "18–30 C",
-          "pt": "18–30 C",
-          "ar": "18–30 م",
-          "hi": "18–30 C",
-          "zh": "18–30°C",
-          "ja": "18–30度",
-          "ko": "18–30도"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -125,14 +125,14 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Feuchte",
-          "fr": "Humidite elevee",
-          "it": "Alta umidita",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Hygrométrie élevée",
+          "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No toxica",
-          "pt": "Nao toxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie trujący",
+          "de": "Mild giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة بشكل معتدل",
+          "hi": "थोड़ा विषैला",
+          "zh": "轻度有毒",
+          "ja": "軽度毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping",
-          "pl": "Kepowa",
-          "de": "Horstbildend",
-          "fr": "Touffue",
-          "it": "A cespi",
-          "es": "En matas",
-          "pt": "Em touceiras",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "군생"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mäßige Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "缓慢到中等生长",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare il sovrairrigazione",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Parrot Heliconia",
-      "description": "Heliconia psittacorum is a tropical flowering plant native to Central and South America. It is known for its colorful upright bracts and clumping growth. Indoors it needs bright light, warmth, and consistently moist soil."
+      "common_name": "Parrot Flower",
+      "description": "Heliconia psittacorum, also known as the Parrot Flower, is a tropical plant known for its vibrant, colorful flowers resembling a parrot's beak. It thrives in bright, indirect light and requires high humidity."
     },
     "pl": {
-      "common_name": "Helikonia papuzia",
-      "description": "Heliconia psittacorum to tropikalna roslina kwitnaca z Ameryki Srodkowej i Poludniowej. Tworzy kepy i ozdobne kwiatostany. W domu wymaga jasnego swiatla i wilgotnej gleby."
+      "common_name": "Kwiat papugi",
+      "description": "Heliconia psittacorum, znany również jako Kwiat papugi, to tropikalna roślina, która słynie ze swoich kolorowych kwiatów przypominających dziób papugi. Wymaga wysokiej wilgotności i średniego światła."
     },
     "de": {
-      "common_name": "Papageien-Helikonie",
-      "description": "Heliconia psittacorum ist eine tropische Bluhpflanze aus Mittel- und Sudamerika. Sie wachst horstig und bildet auffallende Blutenstande. In Innenraumen braucht sie viel Licht und gleichmassige Feuchte."
+      "common_name": "Papageienblume",
+      "description": "Heliconia psittacorum, auch als Papageienblume bekannt, ist eine tropische Pflanze mit leuchtend farbigen Blüten, die einem Papageien-Schnabel ähneln. Sie gedeiht bei mittlerem Licht und benötigt hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Heliconie perroquet",
-      "description": "Heliconia psittacorum est une plante tropicale originaire d Amerique centrale et du Sud. Elle pousse en touffes avec des fleurs decoratives. Elle demande chaleur, lumiere vive et sol humide."
+      "common_name": "Fleur de perroquet",
+      "description": "Heliconia psittacorum, également connue sous le nom de Fleur de perroquet, est une plante tropicale aux fleurs colorées ressemblant au bec d'un perroquet. Elle préfère une lumière indirecte et nécessite une forte humidité."
     },
     "it": {
-      "common_name": "Eliconia pappagallo",
-      "description": "Heliconia psittacorum e una pianta tropicale dell America centrale e meridionale. Cresce a cespi con infiorescenze vistose. In casa necessita di luce intensa e terreno costantemente umido."
+      "common_name": "Fiore del pappagallo",
+      "description": "Heliconia psittacorum, noto anche come Fiore del pappagallo, è una pianta tropicale con fiori colorati che ricordano il becco di un pappagallo. Ama la luce indiretta e richiede umidità elevata."
     },
     "es": {
-      "common_name": "Heliconia loro",
-      "description": "Heliconia psittacorum es una planta tropical de America Central y del Sur. Tiene crecimiento en matas y flores llamativas. Requiere luz brillante y riego frecuente en interior."
+      "common_name": "Flor de loro",
+      "description": "Heliconia psittacorum, también conocida como Flor de loro, es una planta tropical con flores coloridas que se asemejan al pico de un loro. Prefiere la luz indirecta y necesita alta humedad."
     },
     "pt": {
-      "common_name": "Heliconia papagaio",
-      "description": "Heliconia psittacorum e uma planta tropical da America Central e do Sul. Forma touceiras com bracteas coloridas. Precisa de luz forte e solo sempre levemente umido."
+      "common_name": "Flor de papagaio",
+      "description": "Heliconia psittacorum, também conhecida como Flor de papagaio, é uma planta tropical com flores vibrantes que lembram o bico de um papagaio. Ela precisa de luz indireta e alta umidade."
     },
     "ar": {
-      "common_name": "هيليكونيا الببغاء",
-      "description": "هيليكونيا بسيتاكوروم نبات استوائي موطنه امريكا الوسطى والجنوبية. ينمو في كتل وله ازهار ملونة. يحتاج الى ضوء قوي وتربة رطبة باستمرار داخل المنزل."
+      "common_name": "زهرة الببغاء",
+      "description": "Heliconia psittacorum، المعروفة أيضًا باسم زهرة الببغاء، هي نبات استوائي مزهر بألوان زاهية تشبه منقار الببغاء. يفضل الضوء غير المباشر ويتطلب رطوبة عالية."
     },
     "hi": {
-      "common_name": "पैरट हेलिकोनिया",
-      "description": "हेलिकोनिया सिटाकोरोम मध्य और दक्षिण अमेरिका का उष्णकटिबंधीय पौधा है। यह गुच्छों में बढ़ता है और रंगीन पुष्पक्रम बनाता है। इसे तेज रोशनी और नम मिट्टी की जरूरत होती है।"
+      "common_name": "तोता फूल",
+      "description": "हेलिकोनिया सिटैकोरम, जिसे तोता फूल भी कहा जाता है, एक उष्णकटिबंधीय पौधा है जिसकी रंगीन फूल तोते के चोंच जैसी होती है। इसे मध्यम रोशनी और उच्च आर्द्रता की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "鹦鹉蕉",
-      "description": "Heliconia psittacorum 原产于中南美洲的热带植物。植株丛生，花序鲜艳。室内养护需要明亮光照和持续湿润的土壤。"
+      "common_name": "鹦鹉花",
+      "description": "Heliconia psittacorum，也叫做鹦鹉花，是一种热带植物，以其色彩鲜艳、类似鹦鹉喙的花朵而闻名。它喜欢明亮的间接光并需要高湿度。"
     },
     "ja": {
-      "common_name": "オウムヘリコニア",
-      "description": "ヘリコニア・プシッタコルムは中南米原産の熱帯植物です。株立ちで鮮やかな花を咲かせます。室内では明るい光と湿った土が必要です。"
+      "common_name": "オウムの花",
+      "description": "Heliconia psittacorum、別名オウムの花は、鮮やかな色合いでオウムのくちばしのような花を持つ熱帯植物です。間接的な光を好み、高い湿度を必要とします。"
     },
     "ko": {
-      "common_name": "앵무 헬리코니아",
-      "description": "Heliconia psittacorum은 중남미 원산의 열대 식물입니다. 군생하며 화려한 꽃을 피웁니다. 실내에서는 밝은 빛과 꾸준한 수분이 필요합니다."
+      "common_name": "앵무새 꽃",
+      "description": "Heliconia psittacorum, 앵무새 꽃으로도 알려진 이 식물은 앵무새의 부리를 닮은 화려한 꽃을 가진 열대 식물입니다. 간접광을 선호하며 높은 습도가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b562",
-      "https://edis.ifas.ufl.edu/publication/FP285",
-      "https://www.rhs.org.uk/plants/8807/heliconia-psittacorum/details"
+      "https://www.rhs.org.uk/plants/14045/Heliconia-psittacorum/Details",
+      "https://www.gardenia.net/plant/Heliconia-psittacorum"
     ]
   }
 }

@@ -1,0 +1,275 @@
+{
+  "external_id": "vitis_vinifera",
+  "name": "Grape Vine",
+  "latin": "Vitis vinifera",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "green-plants"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "vitis_vinifera.jpg",
+  "image_thumb": "vitis_vinifera.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
+          "ja": "日光浴",
+          "ko": "햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良く排水される",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "急速に成長",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفر मात्रा में पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Grape Vine",
+      "description": "Vitis vinifera, commonly known as the grapevine, is a deciduous vine native to the Mediterranean. It is cultivated worldwide for its fruit, used to produce wine, raisins, and fresh consumption."
+    },
+    "pl": {
+      "common_name": "Winorośl",
+      "description": "Vitis vinifera, znana jako winorośl, to roślina liściasta pochodząca z rejonu Morza Śródziemnego. Uprawiana jest na całym świecie w celu produkcji owoców, z których wytwarza się wino, rodzynki i spożywa na świeżo."
+    },
+    "de": {
+      "common_name": "Weinrebe",
+      "description": "Vitis vinifera, allgemein bekannt als Weinrebe, ist eine laubabwerfende Pflanze aus dem Mittelmeerraum. Sie wird weltweit für ihre Früchte angebaut, die zur Weinherstellung, Rosinenproduktion und für den frischen Verzehr verwendet werden."
+    },
+    "fr": {
+      "common_name": "Vigne",
+      "description": "Vitis vinifera, connue sous le nom de vigne, est une plante vivace à feuilles caduques originaire du bassin méditerranéen. Elle est cultivée dans le monde entier pour ses fruits, utilisés pour produire du vin, des raisins secs et pour la consommation fraîche."
+    },
+    "it": {
+      "common_name": "Vite",
+      "description": "Vitis vinifera, conosciuta come vite, è una pianta rampicante originaria del Mediterraneo. È coltivata in tutto il mondo per i suoi frutti, utilizzati per produrre vino, uvetta e per il consumo fresco."
+    },
+    "es": {
+      "common_name": "Vid",
+      "description": "Vitis vinifera, conocida como vid, es una planta perenne de hojas caducas originaria de la región mediterránea. Se cultiva en todo el mundo por sus frutos, utilizados para producir vino, pasas y para consumo fresco."
+    },
+    "pt": {
+      "common_name": "Videira",
+      "description": "Vitis vinifera, conhecida como videira, é uma planta de folhas caducas originária da região do Mediterrâneo. É cultivada em todo o mundo para seus frutos, usados na produção de vinho, passas e para consumo fresco."
+    },
+    "ar": {
+      "common_name": "عنب",
+      "description": "Vitis vinifera، والمعروفة باسم العنب، هي نبات معمر ذو أوراق متساقطة أصله من منطقة البحر الأبيض المتوسط. يتم زراعتها في جميع أنحاء العالم من أجل ثمارها التي تستخدم في صنع النبيذ والزبيب والاستهلاك الطازج."
+    },
+    "hi": {
+      "common_name": "अंगूर की बेल",
+      "description": "Vitis vinifera, जिसे अंगूर की बेल के नाम से जाना जाता है, एक पर्णपाती लता है जो भूमध्यसागरीय क्षेत्र की मूल निवासी है। इसे दुनिया भर में इसके फलों के लिए उगाया जाता है, जो शराब, किशमिश और ताजे खाने के लिए उपयोग होते हैं।"
+    },
+    "zh": {
+      "common_name": "葡萄藤",
+      "description": "Vitis vinifera，通常称为葡萄藤，是一种落叶藤本植物，原产于地中海地区。它在全球范围内种植，用于生产葡萄酒、葡萄干和新鲜食用的水果。"
+    },
+    "ja": {
+      "common_name": "ぶどうのつる",
+      "description": "Vitis vinifera、一般にぶどうのつるとして知られるこの植物は、地中海地域が原産の落葉性のつる植物です。ワイン、干しぶどう、新鮮な消費のために世界中で栽培されています。"
+    },
+    "ko": {
+      "common_name": "포도덩굴",
+      "description": "Vitis vinifera, 일반적으로 포도덩굴로 알려진 이 식물은 지중해 지역이 원산지인 낙엽성 덩굴 식물입니다. 전 세계에서 포도를 재배하여 와인, 건포도, 신선한 소비를 위해 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/grapevine-care/",
+      "https://www.rhs.org.uk/advice/profile?pid=518"
+    ]
+  }
+}

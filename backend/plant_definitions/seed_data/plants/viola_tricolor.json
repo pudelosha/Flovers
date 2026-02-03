@@ -1,25 +1,25 @@
 {
   "external_id": "viola_tricolor",
-  "name": "Wild pansy",
+  "name": "Wild Pansy",
   "latin": "Viola tricolor",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "viola_tricolor.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-soleil",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日向",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
           "it": "Ben drenato",
-          "es": "Buen drenaje",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Podlewanie",
-          "de": "Regelmäßig",
-          "fr": "Arrosage régulier",
-          "it": "Irrigazione",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Easy to grow",
+          "pl": "Łatwy do uprawy",
+          "de": "Einfach zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل الزراعة",
+          "hi": "उगाना आसान",
+          "zh": "容易种植",
+          "ja": "育てやすい",
+          "ko": "기르기 쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodno",
-          "de": "Kühl",
-          "fr": "Frais",
-          "it": "Fresco",
-          "es": "Fresco",
-          "pt": "Fresco",
-          "ar": "معتدل",
-          "hi": "ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low, spreading",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Basse",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixo",
-          "ar": "منخفض",
-          "hi": "कम फैलाव",
-          "zh": "低矮",
-          "ja": "低成長",
-          "ko": "낮게 성장"
+          "en": "Small, low-growing",
+          "pl": "Mały, nisko rosnący",
+          "de": "Klein, niedrig wachsend",
+          "fr": "Petit, bas",
+          "it": "Piccolo, a bassa crescita",
+          "es": "Pequeña, de bajo crecimiento",
+          "pt": "Pequeno, de baixo crescimento",
+          "ar": "صغير، منخفض النمو",
+          "hi": "छोटा, निम्न वृद्धि",
+          "zh": "小型，低生长",
+          "ja": "小型、低成長",
+          "ko": "작고 낮게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wild pansy",
-      "description": "Viola tricolor is a small flowering plant native to Europe. It prefers cool temperatures, partial sun, and evenly moist soil."
+      "common_name": "Wild Pansy",
+      "description": "Viola tricolor, or Wild Pansy, is a low-growing perennial known for its colorful flowers. It thrives in moderate sunlight and prefers well-drained soil."
     },
     "pl": {
       "common_name": "Bratek polny",
-      "description": "Viola tricolor to niewielka roślina kwitnąca pochodząca z Europy. Najlepiej rośnie w chłodnych warunkach i półcieniu."
+      "description": "Viola tricolor, czyli Bratek polny, to nisko rosnąca roślina wieloletnia, znana ze swoich kolorowych kwiatów. Wymaga średniego nasłonecznienia i dobrze przepuszczalnej gleby."
     },
     "de": {
       "common_name": "Wildes Stiefmütterchen",
-      "description": "Viola tricolor ist eine kleine Blütenpflanze aus Europa. Sie mag kühle Temperaturen und gleichmäßig feuchte Erde."
+      "description": "Viola tricolor, oder Wildes Stiefmütterchen, ist eine niedrig wachsende Staude mit bunten Blüten. Sie gedeiht bei mäßigem Sonnenlicht und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "Pensée sauvage",
-      "description": "Viola tricolor est une petite plante fleurie originaire d’Europe. Elle apprécie les climats frais et un sol humide."
+      "description": "Viola tricolor, ou Pensée sauvage, est une plante vivace basse aux fleurs colorées. Elle prospère sous une lumière modérée et préfère un sol bien drainé."
     },
     "it": {
-      "common_name": "Viola del pensiero",
-      "description": "Viola tricolor è una piccola pianta fiorita europea. Cresce bene in climi freschi con luce moderata."
+      "common_name": "Viola tricolore",
+      "description": "Viola tricolor, o Viola tricolore, è una pianta perenne a bassa crescita con fiori colorati. Cresce bene alla luce moderata e preferisce terreni ben drenati."
     },
     "es": {
       "common_name": "Pensamiento silvestre",
-      "description": "Viola tricolor es una planta pequeña originaria de Europa. Prefiere temperaturas frescas y riego regular."
+      "description": "Viola tricolor, o Pensamiento silvestre, es una planta perenne de bajo crecimiento conocida por sus flores coloridas. Se desarrolla bajo luz moderada y prefiere suelos bien drenados."
     },
     "pt": {
-      "common_name": "Amor-perfeito-silvestre",
-      "description": "Viola tricolor é uma planta florida europeia. Desenvolve-se melhor em clima fresco e solo úmido."
+      "common_name": "Violeta tricolor",
+      "description": "Viola tricolor, ou Violeta tricolor, é uma planta perene de baixo crescimento conhecida pelas suas flores coloridas. Prefere luz moderada e solos bem drenados."
     },
     "ar": {
       "common_name": "البنفسج البري",
-      "description": "نبات Viola tricolor مزهر صغير موطنه أوروبا. يفضل الطقس المعتدل والتربة الرطبة."
+      "description": "Viola tricolor، أو البنفسج البري، هي نبتة معمرة منخفضة النمو تعرف بأزهارها الملونة. تنمو جيدًا تحت ضوء متوسط ويفضل التربة جيدة التصريف."
     },
     "hi": {
       "common_name": "जंगली पैंसी",
-      "description": "Viola tricolor यूरोप का छोटा फूलदार पौधा है। यह ठंडे मौसम और नियमित सिंचाई को पसंद करता है।"
+      "description": "Viola tricolor, या जंगली पैंसी, एक निचली वृद्धि वाली बारहमासी पौधा है जो रंगीन फूलों के लिए जाना जाता है। यह मध्यम धूप में अच्छा बढ़ता है और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "三色堇",
-      "description": "Viola tricolor 原产于欧洲，是一种小型开花植物。适合凉爽气候和湿润土壤。"
+      "common_name": "野生堇菜",
+      "description": "Viola tricolor，或野生堇菜，是一种低生长的多年生植物，因其五颜六色的花朵而闻名。它喜欢中等光照并且适应排水良好的土壤。"
     },
     "ja": {
-      "common_name": "ビオラ・トリカラー",
-      "description": "Viola tricolor はヨーロッパ原産の小型植物です。涼しい環境と適度な水分を好みます。"
+      "common_name": "野生パンジー",
+      "description": "Viola tricolor、または野生パンジーは、カラフルな花で知られる低く成長する多年草です。中程度の光で成長し、排水性の良い土壌を好みます。"
     },
     "ko": {
       "common_name": "야생 팬지",
-      "description": "Viola tricolor는 유럽 원산의 작은 개화 식물입니다. 서늘한 기온과 적당한 물을 선호합니다."
+      "description": "Viola tricolor, 또는 야생 팬지는 다채로운 꽃으로 유명한 저성장 다년생 식물입니다. 중간 정도의 햇빛과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/viola",
-      "https://www.gardenersworld.com/plants/viola-tricolor/"
+      "https://www.rhs.org.uk/plants/viola-tricolor",
+      "https://www.gardenia.net/plant/viola-tricolor-wild-pansy"
     ]
   }
 }

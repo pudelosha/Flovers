@@ -1,27 +1,27 @@
 {
   "external_id": "monstera_adansonii",
-  "name": "Swiss Cheese Vine",
+  "name": "Monstera adansonii",
   "latin": "Monstera adansonii",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "orchid"
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "monstera_adansonii.jpg",
   "image_thumb": "monstera_adansonii.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光线",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy rich mix",
-          "pl": "Przepuszczalna",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Terriccio arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato leve",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 흙"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate water",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water when dry",
+          "pl": "Podlewaj gdy suche",
+          "de": "Wässern, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando asciutto",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी दें",
+          "zh": "干燥时浇水",
+          "ja": "乾いたら水やり",
+          "ko": "건조하면 물 주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27℃"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humid",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 독성"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة خفيفة",
+          "hi": "हल्के जहरीले",
+          "zh": "轻微毒性",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast climbing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare eccesso d'acqua",
+          "es": "Evitar exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Swiss Cheese Vine",
-      "description": "Monstera adansonii is a tropical climbing aroid native to Central and South America. It has distinctive perforated leaves and is commonly grown indoors. It prefers bright indirect light and evenly moist soil."
+      "common_name": "Swiss cheese plant",
+      "description": "Monstera adansonii, commonly known as the Swiss cheese plant, is a popular indoor houseplant. It thrives in medium light and high humidity, requiring moderate care."
     },
     "pl": {
       "common_name": "Monstera dziurawa",
-      "description": "Monstera adansonii to tropikalne pnącze pochodzące z Ameryki Środkowej i Południowej. Ma charakterystyczne dziurawe liście i dobrze rośnie w domu. Lubi jasne, rozproszone światło."
+      "description": "Monstera adansonii, znana jako monstera dziurawa, to popularna roślina doniczkowa. Wymaga umiarkowanej pielęgnacji, rośnie w średnim świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Fensterblatt",
-      "description": "Monstera adansonii ist eine tropische Kletterpflanze aus Mittel- und Südamerika. Sie besitzt durchlöcherte Blätter und eignet sich gut für Innenräume. Helles, indirektes Licht ist ideal."
+      "common_name": "Lochblatt",
+      "description": "Monstera adansonii, auch als Lochblatt bekannt, ist eine beliebte Zimmerpflanze. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit und benötigt mäßige Pflege."
     },
     "fr": {
-      "common_name": "Monstera adansonii",
-      "description": "Monstera adansonii est une plante tropicale grimpante originaire d’Amérique centrale et du Sud. Ses feuilles perforées sont très décoratives. Elle apprécie une lumière vive sans soleil direct."
+      "common_name": "Monstera à trous",
+      "description": "Monstera adansonii, aussi appelée monstera à trous, est une plante d'intérieur populaire. Elle nécessite une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Monstera adansonii",
-      "description": "La Monstera adansonii è una pianta tropicale rampicante dell’America centrale e meridionale. È nota per le foglie traforate. Cresce bene in casa con luce indiretta."
+      "common_name": "Monstera a buchi",
+      "description": "Monstera adansonii, conosciuta anche come monstera a buchi, è una pianta da appartamento popolare. Cresce bene con luce media e umidità elevata."
     },
     "es": {
-      "common_name": "Costilla de Adán pequeña",
-      "description": "Monstera adansonii es una planta tropical trepadora de América Central y del Sur. Sus hojas con perforaciones son muy distintivas. Prefiere luz brillante indirecta."
+      "common_name": "Monstera agujereada",
+      "description": "Monstera adansonii, también conocida como monstera agujereada, es una planta de interior popular. Crece en luz media y requiere humedad alta."
     },
     "pt": {
-      "common_name": "Costela-de-adão-miúda",
-      "description": "Monstera adansonii é uma planta tropical trepadeira da América Central e do Sul. Possui folhas perfuradas decorativas. Desenvolve-se bem em ambientes internos."
+      "common_name": "Monstera furada",
+      "description": "Monstera adansonii, também conhecida como monstera furada, é uma planta de interior popular. Requer luz média e alta umidade."
     },
     "ar": {
       "common_name": "مونستيرا أدانسوني",
-      "description": "نبات مونستيرا أدانسوني نبات استوائي متسلق موطنه أمريكا الوسطى والجنوبية. يتميز بأوراق مثقوبة. يفضل الضوء الساطع غير المباشر."
+      "description": "مونستيرا أدانسوني، والمعروفة أيضًا بمونستيرا أدانسوني، هي نبتة منزلية شائعة. تحتاج إلى إضاءة متوسطة ورطوبة عالية."
     },
     "hi": {
-      "common_name": "स्विस चीज़ बेल",
-      "description": "मॉन्स्टेरा एडैनसोनी एक उष्णकटिबंधीय चढ़ने वाला पौधा है जो मध्य और दक्षिण अमेरिका का मूल निवासी है। इसकी पत्तियाँ छिद्रित होती हैं। यह घर के अंदर अच्छी तरह बढ़ता है।"
+      "common_name": "स्विस चीज़ प्लांट",
+      "description": "मॉनस्टेरा अदान्सोनी, जिसे स्विस चीज़ प्लांट के नाम से भी जाना जाता है, एक लोकप्रिय इनडोर पौधा है। यह मध्यम प्रकाश और उच्च आर्द्रता में बढ़ता है, और इसे मध्यम देखभाल की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "孔洞龟背竹",
-      "description": "孔洞龟背竹原产于中美洲和南美洲的热带地区。叶片具有明显孔洞，常作为室内观叶植物。喜明亮散射光。"
+      "common_name": "瑞士奶酪植物",
+      "description": "Monstera adansonii，又叫瑞士奶酪植物，是一种受欢迎的室内植物。它需要中等光照和高湿度，适合中等护理。"
     },
     "ja": {
-      "common_name": "マドカズラ",
-      "description": "モンステラ・アダンソニーは中南米原産の熱帯性つる植物です。穴あきの葉が特徴です。明るい間接光を好みます。"
+      "common_name": "スイスチーズプラント",
+      "description": "Monstera adansonii、通称スイスチーズプラントは人気の室内植物です。中程度の光と高湿度で育ち、中程度のケアが必要です。"
     },
     "ko": {
-      "common_name": "몬스테라 아단소니",
-      "description": "몬스테라 아단소니는 중남미 원산의 열대 덩굴식물입니다. 구멍 난 잎이 특징입니다. 밝은 간접광에서 잘 자랍니다."
+      "common_name": "스위스 치즈 식물",
+      "description": "Monstera adansonii, 일반적으로 스위스 치즈 식물로 알려져 있는 이 식물은 인기 있는 실내 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자라며, 적당한 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/monstera/adansonii",
-      "https://edis.ifas.ufl.edu/publication/EP477",
-      "https://www.kew.org/plants/monstera-adansonii"
+      "https://www.thesill.com",
+      "https://www.gardeners.com"
     ]
   }
 }

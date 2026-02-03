@@ -1,21 +1,23 @@
 {
   "external_id": "hemionitis_arifolia",
-  "name": "Heart Fern",
+  "name": "Arrowhead fern",
   "latin": "Hemionitis arifolia",
-  "sun": "low",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "fern",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low light",
-          "pl": "Małe światło",
-          "de": "Wenig Licht",
-          "fr": "Faible lumière",
-          "it": "Poca luce",
-          "es": "Poca luz",
-          "pt": "Pouca luz",
-          "ar": "إضاءة منخفضة",
-          "hi": "कम रोशनी",
-          "zh": "低光照",
-          "ja": "弱い光",
-          "ko": "약한 빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna ziemia",
-          "de": "Nährreich",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo rico",
-          "pt": "Solo rico",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 흙"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 잘 되는 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulier",
-          "it": "Umido costante",
-          "es": "Húmedo regular",
-          "pt": "Úmido constante",
-          "ar": "رطوبة ثابتة",
-          "hi": "समान नमी",
-          "zh": "均匀湿润",
-          "ja": "均一な湿り",
-          "ko": "고른 습도"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري مائي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 관리"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,14 +125,14 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgoć",
-          "de": "Hohe Feuchte",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -142,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرवाटरिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Heart Fern",
-      "description": "Hemionitis arifolia is a tropical fern known for its heart-shaped leaves. It prefers low light, consistently moist soil, and high humidity. Often grown indoors, it requires stable conditions to thrive."
+      "common_name": "Arrowhead fern",
+      "description": "Hemionitis arifolia, known as the Arrowhead fern, is a small, evergreen fern with heart-shaped fronds. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Paproć sercowata",
-      "description": "Hemionitis arifolia to tropikalna paproć o liściach w kształcie serca. Lubi słabe światło, stale wilgotne podłoże i wysoką wilgotność. Najlepiej rośnie w stabilnych warunkach domowych."
+      "common_name": "Paprotka strzałkowa",
+      "description": "Hemionitis arifolia, znana jako paprotka strzałkowa, to mała, wiecznie zielona paproć o sercowatych liściach. Rośnie w umiarkowanym świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Herzfarn",
-      "description": "Hemionitis arifolia ist ein tropischer Farn mit herzförmigen Blättern. Er bevorzugt wenig Licht, gleichmäßig feuchte Erde und hohe Luftfeuchtigkeit. Als Zimmerpflanze braucht er konstante Pflege."
+      "common_name": "Pfeilblattfarn",
+      "description": "Hemionitis arifolia, auch Pfeilblattfarn genannt, ist ein kleiner, immergrüner Farn mit herzförmigen Wedeln. Er gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Fougère cœur",
-      "description": "Hemionitis arifolia est une fougère tropicale aux feuilles en forme de cœur. Elle aime la faible lumière, un sol toujours humide et une forte humidité. Elle est surtout cultivée en intérieur."
+      "common_name": "Fougère à feuille de flèche",
+      "description": "Hemionitis arifolia, connue sous le nom de fougère à feuille de flèche, est une petite fougère persistante avec des frondes en forme de cœur. Elle prospère à la lumière modérée et dans une humidité élevée."
     },
     "it": {
-      "common_name": "Felce a cuore",
-      "description": "Hemionitis arifolia è una felce tropicale con foglie a forma di cuore. Preferisce luce bassa, terreno costantemente umido e alta umidità. È adatta alla coltivazione in casa."
+      "common_name": "Felce a foglia di freccia",
+      "description": "Hemionitis arifolia, conosciuta come felce a foglia di freccia, è una piccola felce sempreverde con fronde a forma di cuore. Cresce in luce moderata e umidità elevata."
     },
     "es": {
-      "common_name": "Helecho corazón",
-      "description": "Hemionitis arifolia es un helecho tropical con hojas en forma de corazón. Necesita poca luz, suelo siempre húmedo y alta humedad ambiental. Se cultiva principalmente en interiores."
+      "common_name": "Helecho de hoja de flecha",
+      "description": "Hemionitis arifolia, conocida como helecho de hoja de flecha, es un helecho perenne pequeño con frondas en forma de corazón. Crece en luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Samambaia-coração",
-      "description": "Hemionitis arifolia é uma samambaia tropical de folhas em forma de coração. Prefere pouca luz, solo sempre úmido e alta umidade. É comum como planta de interior."
+      "common_name": "Samambaia de folha de flecha",
+      "description": "Hemionitis arifolia, conhecida como samambaia de folha de flecha, é uma samambaia pequena e perene com frondes em forma de coração. Ela prospera em luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "سرخس القلب",
-      "description": "Hemionitis arifolia سرخس استوائي بأوراق على شكل قلب. يفضل الإضاءة الضعيفة والتربة الرطبة باستمرار والرطوبة العالية. يزرع غالبًا كنبات داخلي."
+      "common_name": "سرخس ورقة السهم",
+      "description": "Hemionitis arifolia، المعروف باسم سرخس ورقة السهم، هو سرخس صغير دائم الخضرة ذو أوراق على شكل قلب. ينمو في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "हार्ट फर्न",
-      "description": "Hemionitis arifolia एक उष्णकटिबंधीय फर्न है जिसकी पत्तियाँ दिल के आकार की होती हैं। इसे कम रोशनी, लगातार नम मिट्टी और अधिक नमी पसंद है। यह घर के अंदर उगाया जाता है।"
+      "common_name": "तीर के आकार वाली बिनतियाँ",
+      "description": "Hemionitis arifolia, जिसे तीर के आकार वाली बिनतियाँ कहा जाता है, एक छोटा, सदाबहार फर्न है, जिसमें दिल के आकार के पत्ते होते हैं। यह मध्यम रोशनी और उच्च आर्द्रता में विकसित होता है।"
     },
     "zh": {
-      "common_name": "心叶铁线蕨",
-      "description": "Hemionitis arifolia 是一种热带蕨类，具有心形叶片。它喜欢低光照、持续湿润的土壤和高湿度。通常作为室内植物栽培。"
+      "common_name": "箭头蕨",
+      "description": "Hemionitis arifolia，又名箭头蕨，是一种小型常绿蕨类，具有心形的叶片。它在中等光照和高湿度下茂盛生长。"
     },
     "ja": {
-      "common_name": "ハートファーン",
-      "description": "Hemionitis arifolia はハート形の葉を持つ熱帯性シダです。弱い光と常に湿った土、高い湿度を好みます。主に室内で育てられます。"
+      "common_name": "矢印葉シダ",
+      "description": "Hemionitis arifolia、別名矢印葉シダは、ハート型の葉を持つ小さな常緑シダです。中程度の光と高い湿度で成長します。"
     },
     "ko": {
-      "common_name": "하트 고사리",
-      "description": "Hemionitis arifolia는 하트 모양 잎을 가진 열대 고사리입니다. 약한 빛과 지속적으로 촉촉한 토양, 높은 습도를 선호합니다. 실내 식물로 주로 재배됩니다."
+      "common_name": "화살촉 고사리",
+      "description": "Hemionitis arifolia, 화살촉 고사리로 알려진 이 식물은 심장 모양의 잎을 가진 작은 상록 고사리입니다. 중간 정도의 빛과 높은 습도에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plants.ces.ncsu.edu/plants/hemionitis-arifolia/",
-      "https://www.rhs.org.uk/plants/hemionitis/arifolia/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a658"
+      "https://www.rhs.org.uk/advice/profile?pid=1159",
+      "https://www.gardenia.net/plant/hemionitis-arifolia"
     ]
   }
 }

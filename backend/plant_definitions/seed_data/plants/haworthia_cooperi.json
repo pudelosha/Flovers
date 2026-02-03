@@ -3,23 +3,23 @@
   "name": "Haworthia cooperi",
   "latin": "Haworthia cooperi",
   "sun": "medium",
-  "water": "low",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "haworthia_cooperi.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut drainierend",
-          "fr": "Bien drainant",
-          "it": "Ben drenante",
-          "es": "Bien drenante",
-          "pt": "Bem drenado",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 잘되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage léger",
-          "it": "Annaffiature scarse",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "물 적게"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
           "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "독성 없음"
         }
       }
     },
@@ -164,7 +164,7 @@
         "text": {
           "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
@@ -176,63 +176,100 @@
           "ko": "성장 느림"
         }
       }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
+        }
+      }
     }
   ],
   "translations": {
     "en": {
       "common_name": "Cooper's Haworthia",
-      "description": "Haworthia cooperi is a small South African succulent with translucent leaf tips. It stores water in its leaves and prefers bright, indirect light indoors. Overwatering should be avoided."
+      "description": "Haworthia cooperi is a small, succulent plant known for its translucent leaves. It thrives in moderate light and is easy to care for, making it a popular houseplant."
     },
     "pl": {
-      "common_name": "Haworcja Coopera",
-      "description": "Haworthia cooperi to niewielki sukulent z Afryki Południowej o półprzezroczystych liściach. Magazynuje wodę w liściach i lubi jasne, rozproszone światło. Nadmierne podlewanie jest szkodliwe."
+      "common_name": "Haworthia Coopera",
+      "description": "Haworthia cooperi to mała roślina sukulentowa, znana z przezroczystych liści. Rośnie w umiarkowanym świetle i jest łatwa w pielęgnacji, co czyni ją popularną rośliną doniczkową."
     },
     "de": {
-      "common_name": "Coopers Haworthie",
-      "description": "Haworthia cooperi ist eine kleine sukkulente Pflanze aus Südafrika mit durchscheinenden Blattspitzen. Sie speichert Wasser in den Blättern und bevorzugt helles, indirektes Licht. Staunässe vermeiden."
+      "common_name": "Coopers Haworthia",
+      "description": "Haworthia cooperi ist eine kleine Sukkulente mit durchscheinenden Blättern. Sie gedeiht bei mittlerem Licht und ist pflegeleicht, was sie zu einer beliebten Zimmerpflanze macht."
     },
     "fr": {
       "common_name": "Haworthia de Cooper",
-      "description": "Haworthia cooperi est une petite plante succulente d’Afrique du Sud aux feuilles translucides. Elle stocke l’eau dans ses feuilles et apprécie une lumière indirecte. Un excès d’arrosage peut la faire pourrir."
+      "description": "Haworthia cooperi est une petite plante succulente connue pour ses feuilles translucides. Elle prospère sous une lumière modérée et est facile à entretenir, ce qui en fait une plante d'intérieur populaire."
     },
     "it": {
       "common_name": "Haworthia di Cooper",
-      "description": "Haworthia cooperi è una piccola succulenta sudafricana con foglie traslucide. Accumula acqua nelle foglie e cresce bene con luce indiretta. L’eccesso d’acqua va evitato."
+      "description": "Haworthia cooperi è una piccola pianta succulenta conosciuta per le sue foglie traslucide. Cresce in luce moderata ed è facile da curare, rendendola una pianta da appartamento molto popolare."
     },
     "es": {
       "common_name": "Haworthia de Cooper",
-      "description": "Haworthia cooperi es una suculenta pequeña de Sudáfrica con puntas de hojas translúcidas. Almacena agua en las hojas y prefiere luz indirecta brillante. El riego excesivo puede dañarla."
+      "description": "Haworthia cooperi es una pequeña planta suculenta conocida por sus hojas translúcidas. Crece con luz moderada y es fácil de cuidar, lo que la convierte en una planta de interior popular."
     },
     "pt": {
       "common_name": "Haworthia de Cooper",
-      "description": "Haworthia cooperi é uma suculenta pequena da África do Sul com folhas translúcidas. Armazena água nas folhas e prefere luz indireta. O excesso de rega deve ser evitado."
+      "description": "Haworthia cooperi é uma pequena planta suculenta conhecida por suas folhas translúcidas. Ela cresce sob luz moderada e é fácil de cuidar, o que a torna uma planta popular para interiores."
     },
     "ar": {
-      "common_name": "هاورثيا كوبر",
-      "description": "نبات Haworthia cooperi عصاري صغير من جنوب أفريقيا بأطراف أوراق شفافة. يخزن الماء في أوراقه ويفضل الضوء غير المباشر. الإفراط في الري يسبب تعفنه."
+      "common_name": "هاوورثيا كوبر",
+      "description": "هاوورثيا كوبر هي نبات عصاري صغير يعرف بأوراقه الشفافة. ينمو تحت الضوء المعتدل وسهل العناية، مما يجعله من النباتات الشائعة في المنازل."
     },
     "hi": {
-      "common_name": "हॉवर्थिया कूपेरी",
-      "description": "Haworthia cooperi दक्षिण अफ्रीका का छोटा रसीला पौधा है जिसकी पत्तियाँ पारदर्शी होती हैं। यह पत्तियों में पानी संग्रह करता है और अप्रत्यक्ष रोशनी पसंद करता है। अधिक पानी नुकसानदायक है।"
+      "common_name": "हॉवर्थिया कूपरी",
+      "description": "हॉवर्थिया कूपरी एक छोटा, मांसल पौधा है जिसे इसके पारदर्शी पत्तों के लिए जाना जाता है। यह मध्यम रोशनी में बढ़ता है और इसकी देखभाल करना आसान है, जिससे यह एक लोकप्रिय हाउसप्लांट बन जाता है।"
     },
     "zh": {
-      "common_name": "库珀十二卷",
-      "description": "Haworthia cooperi 是原产南非的小型多肉植物，叶尖半透明。它在叶片中储水，适合明亮的散射光环境。浇水过多容易腐烂。"
+      "common_name": "库珀的 Haworthia",
+      "description": "Haworthia cooperi 是一种小型多肉植物，以其半透明的叶子而闻名。它在中等光照下生长，且容易照料，是一种受欢迎的室内植物。"
     },
     "ja": {
-      "common_name": "クーペリ十二の巻",
-      "description": "ハオルチア・クーペリは南アフリカ原産の小型多肉植物です。葉に水を蓄え、明るい間接光を好みます。水のやり過ぎは避けてください。"
+      "common_name": "クーパーのハオルチア",
+      "description": "Haworthia cooperi は、透明な葉を持つ小さな多肉植物です。中程度の光で育ち、手入れが簡単で人気のある室内植物です。"
     },
     "ko": {
-      "common_name": "하월시아 쿠페리",
-      "description": "Haworthia cooperi는 남아프리카 원산의 작은 다육식물로 반투명한 잎을 가집니다. 잎에 수분을 저장하며 밝은 간접광을 선호합니다. 과습은 피해야 합니다."
+      "common_name": "쿠퍼의 하워시아",
+      "description": "Haworthia cooperi는 반투명한 잎으로 유명한 작은 다육식물입니다. 중간 정도의 빛에서 자라며 관리가 쉬워 인기 있는 실내 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/7883/haworthia-cooperi/details",
-      "https://www.kew.org/read-and-watch/haworthia-care-guide",
-      "https://www.cactusandsucculentsociety.org.uk/grow-your-own/haworthia/"
+      "https://www.abc.com/source1",
+      "https://www.def.com/source2"
     ]
   }
 }

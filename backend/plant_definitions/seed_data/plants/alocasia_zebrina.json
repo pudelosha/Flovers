@@ -3,21 +3,23 @@
   "name": "Alocasia Zebrina",
   "latin": "Alocasia zebrina",
   "sun": "medium",
-  "water": "high",
-  "difficulty": "medium",
+  "water": "medium",
+  "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "aroid",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_zebrina.jpg",
@@ -27,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux indirect",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining aroid",
-          "pl": "Przepuszczalne",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Airy, well-draining",
+          "pl": "Przepuszczalne, lekkie",
+          "de": "Locker, durchlässig",
+          "fr": "Aéré, drainant",
+          "it": "Arieggiato drenante",
+          "es": "Aireado y drenante",
+          "pt": "Aéreo e drenante",
+          "ar": "تربة خفيفة تصريف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "通気性・排水性",
+          "ko": "통기성 배수"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Stale wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Solo úmido",
-          "ar": "رطوبة مستمرة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "항상 촉촉"
+          "en": "Moist, not soggy",
+          "pl": "Wilgotno, nie mokro",
+          "de": "Feucht, nicht nass",
+          "fr": "Humide, pas détrempé",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, no encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर जलभराव नहीं",
+          "zh": "保持微湿勿积水",
+          "ja": "湿り気、過湿NG",
+          "ko": "촉촉, 과습 금지"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittel",
-          "fr": "Intermédiaire",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Sensitive indoors",
+          "pl": "Wrażliwa w domu",
+          "de": "Empfindlich drinnen",
+          "fr": "Sensible en intérieur",
+          "it": "Delicata in casa",
+          "es": "Sensible en interior",
+          "pt": "Sensível em casa",
+          "ar": "حساسة داخل المنزل",
+          "hi": "घर में संवेदनशील",
+          "zh": "室内较娇气",
+          "ja": "室内で繊細",
+          "ko": "실내서 예민"
         }
       }
     },
@@ -127,11 +129,11 @@
           "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
+          "zh": "喜高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
         }
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growth",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长快",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Moderate, seasonal",
+          "pl": "Umiark., sezonowy",
+          "de": "Mäßig, saisonal",
+          "fr": "Modérée, saisonnière",
+          "it": "Moderata, stagionale",
+          "es": "Moderado, estacional",
+          "pt": "Moderado, sazonal",
+          "ar": "نمو متوسط موسمي",
+          "hi": "मध्यम, मौसमी वृद्धि",
+          "zh": "中等，季节性",
+          "ja": "中程度・季節性",
+          "ko": "중간, 계절성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水烂根",
+          "ja": "過湿・根腐れ注意",
+          "ko": "과습·뿌리썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealybugs",
+          "pl": "Przędziorki, wełnowce",
+          "de": "Spinnmilben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Ragnetti, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ، بق دقيقي",
+          "hi": "स्पाइडर माइट्स, मिलीबग",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ・カイガラムシ",
+          "ko": "거미진드기·깍지"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Zebra Alocasia",
-      "description": "Alocasia zebrina is a tropical aroid known for its striped stems and large arrow-shaped leaves. It prefers bright indirect light, evenly moist soil, and high humidity indoors."
+      "common_name": "Zebra plant",
+      "description": "Alocasia zebrina is a tropical aroid grown for its zebra-striped stalks and arrow-shaped leaves. Keep it in bright, indirect light and water when the top layer of mix dries slightly. Provide warmth and higher humidity, and avoid soggy soil."
     },
     "pl": {
       "common_name": "Alokazja zebra",
-      "description": "Alocasia zebrina to tropikalna roślina o pasiastych ogonkach i dużych liściach. Wymaga jasnego światła pośredniego, wilgotnej gleby i wysokiej wilgotności."
+      "description": "Alocasia zebrina to tropikalna roślina z prążkowanymi ogonkami i strzałkowatymi liśćmi. Ustaw w jasnym, rozproszonym świetle i podlewaj, gdy wierzch podłoża lekko przeschnie. Zapewnij ciepło i wyższą wilgotność oraz unikaj zalegania wody."
     },
     "de": {
       "common_name": "Zebra-Alokasie",
-      "description": "Alocasia zebrina ist eine tropische Blattpflanze mit gestreiften Stielen. Sie mag helles indirektes Licht, gleichmäßig feuchte Erde und hohe Luftfeuchtigkeit."
+      "description": "Alocasia zebrina ist eine tropische Aronstabpflanze mit zebra-gestreiften Blattstielen und pfeilförmigen Blättern. Stelle sie hell, aber ohne direkte Sonne, und gieße erst, wenn die Oberfläche leicht abgetrocknet ist. Warm halten, höhere Luftfeuchte bieten und Staunässe vermeiden."
     },
     "fr": {
-      "common_name": "Alocasia zébrée",
-      "description": "Alocasia zebrina est une plante tropicale aux tiges rayées et aux grandes feuilles. Elle apprécie une lumière indirecte, un sol humide et une forte humidité."
+      "common_name": "Plante zèbre",
+      "description": "Alocasia zebrina est un aroïde tropical apprécié pour ses pétioles zébrés et ses feuilles en forme de flèche. Placez-la en lumière vive indirecte et arrosez lorsque la surface du substrat sèche légèrement. Gardez-la au chaud, avec une humidité plus élevée, sans excès d’eau."
     },
     "it": {
-      "common_name": "Alocasia zebra",
-      "description": "Alocasia zebrina è una pianta tropicale con steli striati decorativi. Cresce bene con luce indiretta, terreno umido e alta umidità."
+      "common_name": "Alocasia zebrata",
+      "description": "Alocasia zebrina è un’aroidea tropicale con piccioli a strisce e foglie a forma di freccia. Tienila in luce intensa ma indiretta e annaffia quando lo strato superiore si asciuga leggermente. Mantieni caldo e umidità alta, evitando ristagni."
     },
     "es": {
-      "common_name": "Alocasia cebra",
-      "description": "Alocasia zebrina es una planta tropical con tallos rayados. Necesita luz indirecta brillante, riego regular y humedad alta."
+      "common_name": "Planta cebra",
+      "description": "Alocasia zebrina es una aroidea tropical con tallos a rayas y hojas en forma de flecha. Colócala con luz brillante e indirecta y riega cuando la capa superior del sustrato se seque un poco. Mantén calor y buena humedad, evitando el encharcamiento."
     },
     "pt": {
-      "common_name": "Alocasia zebra",
-      "description": "Alocasia zebrina é uma planta tropical com hastes listradas. Prefere luz indireta, solo sempre levemente úmido e alta umidade."
+      "common_name": "Planta-zebra",
+      "description": "Alocasia zebrina é uma arácea tropical conhecida pelos pecíolos listrados e folhas em forma de seta. Mantenha em luz brilhante indireta e regue quando a superfície do substrato secar levemente. Prefere calor e umidade mais alta, sem solo encharcado."
     },
     "ar": {
-      "common_name": "ألوكاسيا زيبرا",
-      "description": "الألوكاسيا زيبرا نبات استوائي بسيقان مخططة وأوراق كبيرة. يحتاج إلى ضوء غير مباشر ورطوبة عالية وتربة رطبة."
+      "common_name": "نبات الزيبرا",
+      "description": "Alocasia zebrina نبات استوائي من القلقاسيات يتميز بسيقان مخططة وأوراق سهمية. يوضع في ضوء ساطع غير مباشر ويُسقى عند جفاف خفيف لسطح التربة. يحتاج لدفء ورطوبة أعلى مع تجنب تشبع التربة بالماء."
     },
     "hi": {
-      "common_name": "ज़ेब्रा अलोकेशिया",
-      "description": "Alocasia zebrina एक उष्णकटिबंधीय पौधा है जिसकी डंठल धारियों वाली होती हैं। इसे अप्रत्यक्ष रोशनी, नमी और आर्द्रता की आवश्यकता होती है।"
+      "common_name": "ज़ेब्रा प्लांट",
+      "description": "Alocasia zebrina एक उष्णकटिबंधीय एरॉइड है, जिसकी डंठल पर ज़ेब्रा जैसी धारियां होती हैं। इसे तेज अप्रत्यक्ष रोशनी में रखें और जब मिट्टी की ऊपरी परत हल्की सूख जाए तब पानी दें। गर्मी और अधिक नमी पसंद है, पर जलभराव से बचें।"
     },
     "zh": {
       "common_name": "斑马海芋",
-      "description": "Alocasia zebrina 是一种热带观叶植物，以条纹茎闻名。适合明亮散射光、湿润土壤和高湿度环境。"
+      "description": "Alocasia zebrina 为热带天南星科植物，以斑马纹叶柄和箭形叶著称。放在明亮散射光处，待表层基质略干再浇水。保持温暖与较高湿度，避免积水导致烂根。"
     },
     "ja": {
       "common_name": "ゼブラアロカシア",
-      "description": "アロカシア・ゼブリナは縞模様の茎が特徴の熱帯植物です。明るい間接光と湿度の高い環境を好みます。"
+      "description": "Alocasia zebrina は縞模様の葉柄と矢じり形の葉が特徴の熱帯アロイドです。明るい間接光で育て、用土の表面が少し乾いたらたっぷり水やりします。暖かさと高めの湿度を保ち、過湿は避けます。"
     },
     "ko": {
-      "common_name": "알로카시아 제브리나",
-      "description": "알로카시아 제브리나는 줄기의 줄무늬가 특징인 열대 식물입니다. 밝은 간접광과 높은 습도를 선호합니다."
+      "common_name": "제브라 알로카시아",
+      "description": "Alocasia zebrina 는 줄무늬 잎자루와 화살촉 모양 잎이 특징인 열대 아로이드입니다. 밝은 간접광에서 키우고 겉흙이 살짝 마르면 물을 줍니다. 따뜻함과 높은 습도를 좋아하므로 과습과 고인 물은 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1701/alocasia-zebrina/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280281",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-alocasia/"
+      "https://www.rhs.org.uk/plants/136827/alocasia-zebrina/details",
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.gardendesign.com/houseplants/alocasia.html",
+      "https://www.thespruce.com/alocasia-zebrina-growing-guide-5323306",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77177187-1"
     ]
   }
 }

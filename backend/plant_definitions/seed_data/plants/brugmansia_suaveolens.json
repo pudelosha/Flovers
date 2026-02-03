@@ -1,27 +1,27 @@
 {
   "external_id": "brugmansia_suaveolens",
-  "name": "Angel's Trumpet",
+  "name": "Angel's trumpet",
   "latin": "Brugmansia suaveolens",
   "sun": "high",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "peat-free",
+    "balcony-flowers"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 4,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "brugmansia_suaveolens.jpg",
   "image_thumb": "brugmansia_suaveolens.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
+          "en": "Full sun / bright",
           "pl": "Pełne słońce",
           "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "양지"
+          "ar": "شمس قوية",
+          "hi": "तेज रोशनी",
+          "zh": "全日照/强光",
+          "ja": "日当たり良好",
+          "ko": "강한 빛/직사광"
         }
       }
     },
@@ -49,17 +49,17 @@
       "value": {
         "text": {
           "en": "Rich, well-drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainé",
-          "it": "Ricco drenante",
-          "es": "Rico y drenado",
-          "pt": "Rico drenado",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährstoffreich, drain.",
+          "fr": "Riche, drainant",
+          "it": "Ricco, drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenado",
+          "ar": "غني وجيد الصرف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃、排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥, 배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Frequent watering",
-          "pl": "Częste podlewanie",
-          "de": "Häufig gießen",
-          "fr": "Arrosage fréquent",
-          "it": "Annaffiature frequenti",
-          "es": "Riego frecuente",
-          "pt": "Rega frequente",
-          "ar": "ري متكرر",
-          "hi": "अधिक पानी",
-          "zh": "需勤浇水",
-          "ja": "水多め",
-          "ko": "자주 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Stała lekka wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide sans excès",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, sin enchar.",
+          "pt": "Úmido, sem enchar.",
+          "ar": "رطوبة ثابتة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 촉촉하게"
         }
       }
     },
@@ -87,17 +87,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "pl": "Średnio trudna",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "手入れ中程度",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गर्म मौसम",
-          "zh": "温暖环境",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "Min 7–10°C",
+          "pl": "Min. 7–10°C",
+          "de": "Min. 7–10°C",
+          "fr": "Min. 7–10°C",
+          "it": "Min. 7–10°C",
+          "es": "Mín. 7–10°C",
+          "pt": "Mín. 7–10°C",
+          "ar": "أدنى 7–10°م",
+          "hi": "न्यूनतम 7–10°C",
+          "zh": "最低7–10°C",
+          "ja": "最低7–10°C",
+          "ko": "최저 7–10°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "普通湿度",
-          "ko": "보통 습도"
+          "en": "Average to high",
+          "pl": "Średnia do wysok.",
+          "de": "Mittel bis hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media-alta",
+          "es": "Media a alta",
+          "pt": "Média a alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम से अधिक",
+          "zh": "中等到较高",
+          "ja": "普通〜やや高め",
+          "ko": "보통~높음"
         }
       }
     },
@@ -151,9 +151,9 @@
           "es": "Muy tóxica",
           "pt": "Muito tóxica",
           "ar": "شديدة السمية",
-          "hi": "अत्यंत विषैला",
+          "hi": "अत्यंत विषैली",
           "zh": "高度有毒",
-          "ja": "非常に有毒",
+          "ja": "強い毒性",
           "ko": "강한 독성"
         }
       }
@@ -162,77 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing shrub",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "성장 빠름"
+          "en": "Fast, shrub/tree",
+          "pl": "Szybki krzew/drzewo",
+          "de": "Schnell, Strauch/Baum",
+          "fr": "Rapide, arbuste",
+          "it": "Veloce, arbusto",
+          "es": "Rápido, arbusto",
+          "pt": "Rápido, arbusto",
+          "ar": "سريع، شجيرة",
+          "hi": "तेजी से बढ़ता",
+          "zh": "生长快，灌木",
+          "ja": "生長早い低木",
+          "ko": "빠름, 관목/소교목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No frost, no soggy",
+          "pl": "Bez mrozu i zastoju",
+          "de": "Kein Frost, kein Nass",
+          "fr": "Éviter gel et eau",
+          "it": "No gelo, no ristagni",
+          "es": "Sin heladas, sin charcos",
+          "pt": "Sem geada, sem enchar.",
+          "ar": "تجنب الصقيع والبلل",
+          "hi": "पाला व जलभराव नहीं",
+          "zh": "怕霜冻，忌积水",
+          "ja": "霜と過湿を避ける",
+          "ko": "서리·과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites, whitefly",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari, aleurod.",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ، عثّ، ذبابة بيضاء",
+          "hi": "एफिड, माइट, व्हाइटफ्लाई",
+          "zh": "蚜虫、螨、粉虱",
+          "ja": "アブラムシ・ハダニ",
+          "ko": "진딧물·응애·가루이"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Angel's Trumpet",
-      "description": "Brugmansia suaveolens is a tropical shrub known for its large, pendulous trumpet-shaped flowers. It thrives in full sun with regular watering and fertile soil. All parts of the plant are highly toxic if ingested."
+      "common_name": "Angel's trumpet",
+      "description": "A tender shrub or small tree with large, fragrant, trumpet-shaped flowers. Give very bright light and keep the potting mix evenly moist during active growth. Protect from cold and keep above about 7–10°C; all parts are highly poisonous."
     },
     "pl": {
       "common_name": "Brugmansja wonna",
-      "description": "Brugmansia suaveolens to tropikalny krzew o dużych, zwisających kwiatach w kształcie trąbki. Wymaga pełnego słońca, regularnego podlewania i żyznej gleby. Roślina jest silnie trująca."
+      "description": "Wrażliwy krzew lub małe drzewko o dużych, pachnących kwiatach w kształcie trąbki. Wymaga bardzo jasnego stanowiska i równomiernie wilgotnego podłoża w okresie wzrostu. Zimuje w cieple (powyżej ok. 7–10°C); wszystkie części są silnie trujące."
     },
     "de": {
       "common_name": "Engelstrompete",
-      "description": "Brugmansia suaveolens ist ein tropischer Strauch mit großen, hängenden trompetenförmigen Blüten. Sie bevorzugt volle Sonne, regelmäßiges Gießen und nährstoffreichen Boden. Alle Pflanzenteile sind giftig."
+      "description": "Ein frostempfindlicher Strauch oder kleiner Baum mit großen, duftenden Trompetenblüten. Sehr hell stellen und das Substrat in der Wachstumszeit gleichmäßig feucht halten. Vor Kälte schützen (über ca. 7–10°C überwintern); alle Pflanzenteile sind stark giftig."
     },
     "fr": {
       "common_name": "Trompette des anges",
-      "description": "Brugmansia suaveolens est un arbuste tropical aux grandes fleurs pendantes en forme de trompette. Elle pousse mieux en plein soleil avec un arrosage régulier et un sol riche. La plante est très toxique."
+      "description": "Arbuste tendre à grandes fleurs en trompette, souvent parfumées le soir. Placez-le en lumière très vive et gardez le substrat uniformément humide en période de croissance. Protégez du froid (au-dessus d’environ 7–10°C) et manipulez avec prudence car la plante est très toxique."
     },
     "it": {
       "common_name": "Tromba degli angeli",
-      "description": "Brugmansia suaveolens è un arbusto tropicale con grandi fiori penduli a forma di tromba. Necessita di pieno sole, annaffiature regolari e terreno fertile. Tutte le parti sono tossiche."
+      "description": "Arbusto tenero con grandi fiori a tromba molto profumati. Richiede luce molto intensa e un terriccio mantenuto uniformemente umido durante la crescita. Va protetto dal freddo (sopra circa 7–10°C) ed è altamente tossico in tutte le sue parti."
     },
     "es": {
-      "common_name": "Floripondio",
-      "description": "Brugmansia suaveolens es un arbusto tropical con grandes flores colgantes en forma de trompeta. Requiere pleno sol, riego frecuente y suelo fértil. La planta es muy tóxica."
+      "common_name": "Trompeta de ángel",
+      "description": "Arbusto sensible al frío con grandes flores en forma de trompeta y aroma notable. Necesita luz muy brillante y un sustrato uniformemente húmedo durante el crecimiento. Manténla por encima de ~7–10°C en invierno; todas sus partes son muy tóxicas."
     },
     "pt": {
       "common_name": "Trombeta-dos-anjos",
-      "description": "Brugmansia suaveolens é um arbusto tropical com grandes flores pendentes em forma de trombeta. Prefere sol pleno, regas frequentes e solo rico. Todas as partes são tóxicas."
+      "description": "Arbusto sensível ao frio com flores grandes em forma de trombeta e perfume marcante. Precisa de muita luz e substrato uniformemente úmido durante o crescimento. No inverno, mantenha acima de ~7–10°C; todas as partes são altamente tóxicas."
     },
     "ar": {
       "common_name": "بوق الملاك",
-      "description": "Brugmansia suaveolens شجيرة استوائية ذات أزهار كبيرة متدلية على شكل بوق. تنمو في الشمس الكاملة مع ري منتظم وتربة غنية. النبات سام جدًا."
+      "description": "شجيرة رقيقة ذات أزهار كبيرة على شكل بوق ورائحة قوية خصوصاً مساءً. تحتاج إلى ضوء ساطع جداً وتربة تبقى رطبة باعتدال أثناء النمو. احمِها من البرد وابقها فوق نحو 7–10°م؛ جميع الأجزاء شديدة السمية."
     },
     "hi": {
-      "common_name": "एंजेल ट्रम्पेट",
-      "description": "Brugmansia suaveolens एक उष्णकटिबंधीय झाड़ी है जिसमें बड़े, लटकते हुए फूल होते हैं। इसे पूरी धूप, नियमित पानी और उपजाऊ मिट्टी की आवश्यकता होती है। पौधा अत्यंत विषैला है।"
+      "common_name": "एंजल ट्रम्पेट",
+      "description": "यह ठंड से संवेदनशील झाड़ी/छोटा पेड़ है, जिसमें बड़े, सुगंधित, तुरही जैसे फूल आते हैं। बहुत तेज रोशनी दें और बढ़वार के समय मिट्टी को समान रूप से नम रखें। सर्दियों में लगभग 7–10°C से ऊपर रखें; इसके सभी भाग अत्यंत विषैले हैं।"
     },
     "zh": {
-      "common_name": "天使号角花",
-      "description": "Brugmansia suaveolens 是一种热带灌木，具有大型下垂的喇叭状花朵。它喜全日照、需经常浇水并生长在肥沃土壤中。全株有毒。"
+      "common_name": "天使号角",
+      "description": "不耐寒的灌木或小乔木，具大型喇叭状且常带香味的花。生长季需强光并保持盆土均匀湿润。越冬温度保持在约7–10°C以上；全株有强毒性。"
     },
     "ja": {
-      "common_name": "エンジェルトランペット",
-      "description": "Brugmansia suaveolens は大きなラッパ状の花を下向きに咲かせる熱帯低木です。日当たりと定期的な水やり、肥沃な土を好みます。全草に強い毒性があります。"
+      "common_name": "エンジェルストランペット",
+      "description": "大きなラッパ形の花が咲く、寒さに弱い低木〜小高木。明るい光を確保し、生育期は用土を均一に湿らせます。冬は約7〜10°C以上で管理し、全草に強い毒性があります。"
     },
     "ko": {
       "common_name": "엔젤 트럼펫",
-      "description": "Brugmansia suaveolens는 큰 나팔 모양의 꽃이 아래로 피는 열대 관목입니다. 강한 햇빛과 잦은 물주기, 비옥한 토양을 좋아합니다. 모든 부분에 독성이 있습니다."
+      "description": "큰 나팔 모양의 향기로운 꽃이 피는 내한성 약한 관목/소교목입니다. 매우 밝은 빛을 주고 생장기에는 흙을 고르게 촉촉하게 유지하세요. 겨울에는 약 7–10°C 이상으로 보온하며, 전 부위가 강한 독성을 가집니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450",
+      "https://www.rhs.org.uk/plants/79128/brugmansia-suaveolens/details",
       "https://www.rhs.org.uk/plants/brugmansia/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/FP091"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=287209",
+      "https://poisonousplants.cvmbs.colostate.edu/plant/119"
     ]
   }
 }

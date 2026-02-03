@@ -3,7 +3,7 @@
   "name": "Wall Germander",
   "latin": "Teucrium chamaedrys",
   "sun": "medium",
-  "water": "low",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,11 +11,11 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Średnie nasłonecznienie",
-          "de": "Mittlere Sonne",
-          "fr": "Soleil moyen",
-          "it": "Soleggiato medio",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम धूप",
-          "zh": "中等阳光",
-          "ja": "中程度の陽光",
-          "ko": "중간 햇빛"
+          "en": "Partial Sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Sombra parcial",
+          "pt": "Sombra parcial",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "部分阳光",
+          "ja": "部分日光",
+          "ko": "부분 햇볕"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy, loam",
-          "pl": "Piaszczysta, gliniasta",
-          "de": "Sandy, Lehm",
-          "fr": "Sableux, limoneux",
-          "it": "Sabbioso, limoso",
-          "es": "Arenoso, arcilloso",
-          "pt": "Arenoso, argiloso",
-          "ar": "رملية، طينية",
-          "hi": "रेतीली, बलुई",
-          "zh": "沙土，壤土",
-          "ja": "砂質土壌、ローム",
-          "ko": "모래, 점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low watering",
-          "pl": "Niskie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage faible",
-          "it": "Annaffiatura bassa",
-          "es": "Riego bajo",
-          "pt": "Rega baixa",
-          "ar": "الري القليل",
-          "hi": "कम पानी देना",
-          "zh": "少量浇水",
-          "ja": "少ない水やり",
-          "ko": "적은 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中級",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "10–20°C",
+          "pl": "10–20°C",
+          "de": "10–20°C",
+          "fr": "10–20°C",
+          "it": "10–20°C",
+          "es": "10–20°C",
+          "pt": "10–20°C",
+          "ar": "10–20°C",
+          "hi": "10–20°C",
+          "zh": "10–20°C",
+          "ja": "10–20°C",
+          "ko": "10–20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchtigkeit",
-          "fr": "Humidité faible",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
         }
       }
     },
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "適度な成長",
-          "ko": "중간 성장"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il ristagno",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過湿を避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Rzadkie szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenze occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के कीड़े",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Wall Germander",
-      "description": "Teucrium chamaedrys, commonly known as wall germander, is a hardy, low-maintenance perennial that thrives in sunny, dry areas. It is often used in rock gardens and as ground cover."
+      "description": "Teucrium chamaedrys, also known as Wall Germander, is a hardy perennial known for its compact size and aromatic leaves. It thrives in well-draining soil and requires moderate watering."
     },
     "pl": {
-      "common_name": "Tymianek ścienny",
-      "description": "Teucrium chamaedrys, znany jako tymianek ścienny, to wytrzymała roślina wieloletnia, która rośnie w słonecznych, suchych miejscach. Często stosowana w ogrodach skalnych oraz jako roślina okrywowa."
+      "common_name": "Oregano Wall",
+      "description": "Teucrium chamaedrys, zwany Oregano Wall, to wytrzymały bylinowy roślina o zwartej wielkości i aromatycznych liściach. Dobrze rośnie w dobrze przepuszczalnej glebie i wymaga umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Wand-Germander",
-      "description": "Teucrium chamaedrys, auch Wand-Germander genannt, ist eine robuste, pflegeleichte Staude, die in sonnigen, trockenen Gebieten gedeiht. Häufig wird sie in Steingärten und als Bodendecker verwendet."
+      "description": "Teucrium chamaedrys, auch als Wand-Germander bekannt, ist eine robuste Staude, die für ihre kompakte Größe und aromatischen Blätter bekannt ist. Sie gedeiht in gut durchlässigem Boden und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Germandrée des murs",
-      "description": "Teucrium chamaedrys, connu sous le nom de germandrée des murs, est une plante vivace rustique qui prospère dans des zones ensoleillées et sèches. Elle est souvent utilisée dans les jardins rocheux et comme couvre-sol."
+      "common_name": "Germandrée murale",
+      "description": "Teucrium chamaedrys, également connu sous le nom de Germandrée murale, est une plante vivace résistante, appréciée pour sa taille compacte et ses feuilles aromatiques. Elle prospère dans un sol bien drainé et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Germandrea delle mura",
-      "description": "Teucrium chamaedrys, conosciuto come germandrea delle mura, è una pianta perenne resistente che cresce in aree soleggiate e asciutte. Viene spesso utilizzata nei giardini rocciosi e come copertura del suolo."
+      "common_name": "Germander da muro",
+      "description": "Teucrium chamaedrys, noto anche come Germander da muro, è una pianta perenne resistente, conosciuta per le sue dimensioni compatte e le foglie aromatiche. Cresce bene in terreni ben drenati e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Germandrina de las paredes",
-      "description": "Teucrium chamaedrys, conocida como germandrina de las paredes, es una planta perenne resistente que prospera en áreas soleadas y secas. Se utiliza a menudo en jardines rocosos y como cubierta del suelo."
+      "common_name": "Germándrea de muro",
+      "description": "Teucrium chamaedrys, también conocido como Germándrea de muro, es una planta perenne resistente conocida por su tamaño compacto y sus hojas aromáticas. Crece bien en suelos bien drenados y requiere riego moderado."
     },
     "pt": {
-      "common_name": "Germandra das paredes",
-      "description": "Teucrium chamaedrys, conhecida como germandra das paredes, é uma planta perene resistente que cresce em áreas ensolaradas e secas. É frequentemente utilizada em jardins rochosos e como cobertura do solo."
+      "common_name": "Germandrea de muro",
+      "description": "Teucrium chamaedrys, também conhecido como Germandrea de muro, é uma planta perene resistente conhecida pelo seu tamanho compacto e folhas aromáticas. Cresce bem em solos bem drenados e requer rega moderada."
     },
     "ar": {
-      "common_name": "جيرماندر الجدران",
-      "description": "تيوكروم تشاميدريس، المعروف باسم جيرماندر الجدران، هو نبات معمّر قوي ينمو في المناطق المشمسة والجافة. وغالبًا ما يُستخدم في حدائق الصخور وكغطاء أرضي."
+      "common_name": "الجيرماندر الجدار",
+      "description": "Teucrium chamaedrys، المعروف أيضًا باسم الجيرماندر الجدار، هو نبات معمر مقاوم معروف بحجمه المضغوط وأوراقه العطرية. ينمو بشكل جيد في التربة جيدة التصريف ويتطلب ري معتدل."
     },
     "hi": {
-      "common_name": "दीवार जेर्मेंडर",
-      "description": "टियोक्रियम चमेड्रिस, जिसे दीवार जेर्मेंडर के नाम से जाना जाता है, एक मजबूत, कम देखभाल करने वाली बारहमासी है जो धूप और सूखी जगहों पर बढ़ती है। इसे अक्सर चट्टान बगीचों और भूमि कवर के रूप में इस्तेमाल किया जाता है."
+      "common_name": "दीवार जर्मांडे",
+      "description": "Teucrium chamaedrys, जिसे दीवार जर्मांडे भी कहा जाता है, एक मजबूत पौधा है जो अपनी कॉम्पैक्ट आकार और सुगंधित पत्तियों के लिए जाना जाता है। यह अच्छी जल निकासी वाली मिट्टी में उगता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "墙地黄",
-      "description": "Teucrium chamaedrys，通常被称为墙地黄，是一种耐寒、低维护的多年生植物，喜欢阳光充足、干燥的地方。它常用于岩石花园和作为地被植物。"
+      "common_name": "墙薄荷",
+      "description": "Teucrium chamaedrys，也叫做墙薄荷，是一种耐寒的多年生植物，以其紧凑的体型和芳香的叶子闻名。它在良好排水的土壤中茁壮成长，且需要适度浇水。"
     },
     "ja": {
       "common_name": "ウォールジャーマンダー",
-      "description": "Teucrium chamaedrys、一般的にウォールジャーマンダーとして知られるこの植物は、日当たりが良く乾燥した場所で育つ丈夫な多年草です。岩石庭園やグラウンドカバーとしてよく使われます。"
+      "description": "Teucrium chamaedrys、ウォールジャーマンダーとも呼ばれるこの植物は、コンパクトなサイズと香り高い葉で知られています。良好な排水性土壌でよく育ち、中程度の水やりが必要です。"
     },
     "ko": {
-      "common_name": "벽 게르만더",
-      "description": "Teucrium chamaedrys, 일반적으로 벽 게르만더라고 불리는 이 식물은 햇볕이 잘 드는 건조한 지역에서 자라는 내구성이 뛰어난 다년생 식물입니다. 종종 암석 정원과 지면 덮개로 사용됩니다."
+      "common_name": "벽 자르미더",
+      "description": "Teucrium chamaedrys, 벽 자르미더로도 알려진 이 식물은 컴팩트한 크기와 향기로운 잎으로 유명한 내한성 다년생 식물입니다. 배수가 좋은 토양에서 잘 자라며, 적당한 물 주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/teucrium-chamaedrys",
-      "https://www.bhg.com/gardening/pests-insects-diseases/wall-germander/"
+      "https://www.gardenersworld.com/plant-pedia/teucrium-chamaedrys/",
+      "https://www.rhs.org.uk/plants/teucrium-chamaedrys"
     ]
   }
 }

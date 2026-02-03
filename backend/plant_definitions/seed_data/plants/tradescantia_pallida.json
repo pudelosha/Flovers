@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광량"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy",
-          "pl": "Gliniaste",
-          "de": "Lehmig",
-          "fr": "Argileux",
-          "it": "Argilloso",
-          "es": "Arcilloso",
-          "pt": "Arenoso",
-          "ar": "طيني",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水性",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwe",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepłe",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast",
-          "pl": "Szybki",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Veloce",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
-          "zh": "快速",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "生长迅速",
+          "ja": "急速に成長",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il ristagno d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Purple Heart",
-      "description": "Tradescantia pallida, also known as Purple Heart, is a perennial plant known for its striking purple leaves and small pink flowers. It thrives in bright, indirect light and requires moderate watering."
+      "description": "Tradescantia pallida, commonly known as Purple Heart, is a fast-growing, easy-care houseplant. It has striking purple foliage and thrives in moderate light conditions."
     },
     "pl": {
       "common_name": "Fioletowe Serce",
-      "description": "Tradescantia pallida, znana również jako Fioletowe Serce, to roślina wieloletnia o charakterystycznych fioletowych liściach i małych różowych kwiatach. Preferuje jasne, pośrednie światło i umiarkowane podlewanie."
+      "description": "Tradescantia pallida, znana jako Fioletowe Serce, to szybko rosnąca roślina doniczkowa, łatwa w pielęgnacji. Posiada uderzające fioletowe liście i najlepiej rośnie w średnim świetle."
     },
     "de": {
-      "common_name": "Purpur Herz",
-      "description": "Tradescantia pallida, auch Purpur Herz genannt, ist eine Staude, die für ihre auffälligen lila Blätter und kleinen rosa Blumen bekannt ist. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+      "common_name": "Purpurherz",
+      "description": "Tradescantia pallida, auch als Purpurherz bekannt, ist eine schnell wachsende, pflegeleichte Zimmerpflanze. Sie hat auffällige violette Blätter und gedeiht bei mäßigem Licht."
     },
     "fr": {
       "common_name": "Cœur Pourpre",
-      "description": "Tradescantia pallida, également appelée Cœur Pourpre, est une plante vivace reconnue pour ses feuilles violettes frappantes et ses petites fleurs roses. Elle préfère une lumière indirecte vive et un arrosage modéré."
+      "description": "Tradescantia pallida, communément appelée Cœur Pourpre, est une plante d'intérieur à croissance rapide et facile à entretenir. Elle possède des feuilles violettes remarquables et préfère une lumière modérée."
     },
     "it": {
       "common_name": "Cuore Viola",
-      "description": "Tradescantia pallida, conosciuta anche come Cuore Viola, è una pianta perenne nota per le sue foglie viola e i piccoli fiori rosa. Cresce meglio in luce indiretta e necessita di annaffiature moderate."
+      "description": "Tradescantia pallida, conosciuta come Cuore Viola, è una pianta da appartamento a crescita rapida e facile da curare. Ha foglie viola sorprendenti e cresce bene con luce media."
     },
     "es": {
       "common_name": "Corazón Púrpura",
-      "description": "Tradescantia pallida, también conocida como Corazón Púrpura, es una planta perenne conocida por sus hojas moradas y pequeñas flores rosadas. Prefiere luz indirecta brillante y necesita riego moderado."
+      "description": "Tradescantia pallida, conocida como Corazón Púrpura, es una planta de interior de rápido crecimiento y fácil cuidado. Tiene hojas moradas llamativas y prefiere luz moderada."
     },
     "pt": {
       "common_name": "Coração Roxo",
-      "description": "Tradescantia pallida, também conhecida como Coração Roxo, é uma planta perene famosa por suas folhas roxas e pequenas flores cor-de-rosa. Prefere luz indireta e requer rega moderada."
+      "description": "Tradescantia pallida, conhecida como Coração Roxo, é uma planta de interior de rápido crescimento e fácil cuidado. Possui folhas roxas impressionantes e cresce bem com luz moderada."
     },
     "ar": {
-      "common_name": "القلب البنفسجي",
-      "description": "Tradescantia pallida، المعروفة أيضًا بالقلب البنفسجي، هي نبات معمر معروف بأوراقه البنفسجية المذهلة وأزهاره الوردية الصغيرة. تنمو بشكل جيد في الضوء غير المباشر وتحتاج إلى ري معتدل."
+      "common_name": "القلب الأرجواني",
+      "description": "Tradescantia pallida، والمعروفة باسم القلب الأرجواني، هي نبات داخلي سريع النمو وسهل العناية. تتميز بأوراق أرجوانية لامعة وتحتاج إلى ضوء متوسط."
     },
     "hi": {
       "common_name": "बैंगनी दिल",
-      "description": "Tradescantia pallida, जिसे बैंगनी दिल भी कहा जाता है, एक बारहमासी पौधा है जो अपनी आकर्षक बैंगनी पत्तियों और छोटी गुलाबी फूलों के लिए प्रसिद्ध है। यह हल्की, अप्रत्यक्ष रोशनी में बढ़ता है और मध्यम पानी की आवश्यकता होती है।"
+      "description": "Tradescantia pallida, जिसे बैंगनी दिल के नाम से जाना जाता है, एक तेजी से बढ़ने वाली और देखभाल में आसान पौधा है। इसके पत्ते बैंगनी होते हैं और यह मध्यम रोशनी में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "紫心花",
-      "description": "Tradescantia pallida，也叫紫心花，是一种多年生植物，以其醒目的紫色叶子和小巧的粉红色花朵而闻名。它喜欢明亮的间接光照，需要适量的浇水。"
+      "common_name": "紫心",
+      "description": "Tradescantia pallida，通常称为紫心，是一种快速生长且易于护理的室内植物。它具有醒目的紫色叶子，并且在中等光照条件下生长良好。"
     },
     "ja": {
-      "common_name": "紫のハート",
-      "description": "Tradescantia pallida、別名紫のハートは、その印象的な紫色の葉と小さなピンク色の花で知られる多年草です。明るい間接光で育ち、中程度の水やりが必要です。"
+      "common_name": "パープルハート",
+      "description": "Tradescantia pallida、通称パープルハートは、成長が早く、手入れが簡単な室内植物です。鮮やかな紫色の葉を持ち、中程度の光条件でよく育ちます。"
     },
     "ko": {
-      "common_name": "보라색 심장",
-      "description": "Tradescantia pallida, 보라색 심장이라고도 알려진 이 식물은 눈에 띄는 보라색 잎과 작은 분홍색 꽃으로 유명한 다년생 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기가 필요합니다."
+      "common_name": "퍼플하트",
+      "description": "Tradescantia pallida, 일반적으로 퍼플하트로 알려진 이 식물은 빠르게 자라고 관리가 쉬운 실내 식물입니다. 화려한 보라색 잎을 가지고 있으며 중간 정도의 빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/tradescantia-pallida-purple-heart",
-      "https://www.rhs.org.uk/plants/392303/tradescantia-pallida"
+      "https://www.gardenia.net/plant/tradescantia-pallida",
+      "https://www.abcgarden.com/tradescantia-pallida-care"
     ]
   }
 }

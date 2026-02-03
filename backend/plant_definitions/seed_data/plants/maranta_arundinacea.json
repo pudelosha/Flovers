@@ -4,19 +4,20 @@
   "latin": "Maranta arundinacea",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect light",
-          "pl": "jasne rozproszone",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष प्रकाश",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "rich well-drained",
-          "pl": "żyzna przepuszczalna",
-          "de": "nährstoffreich",
-          "fr": "riche drainant",
-          "it": "ricco drenante",
-          "es": "rico drenante",
-          "pt": "rico drenado",
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terra ben drenata",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ जलनिकासी",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良い土",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良好な排水性の土壌",
+          "ko": "잘 배수된 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep evenly moist",
-          "pl": "umiarkowanie wilgotne",
-          "de": "gleichmäßig feucht",
-          "fr": "sol humide",
-          "it": "suolo umido",
-          "es": "suelo húmedo",
-          "pt": "solo úmido",
-          "ar": "رطوبة معتدلة",
-          "hi": "नम मिट्टी",
-          "zh": "保持湿润",
-          "ja": "均一に湿らせる",
-          "ko": "고르게 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "umiarkowana",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27℃"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "likes humidity",
-          "pl": "lubi wilgoć",
-          "de": "mag Feuchte",
-          "fr": "aime humidité",
-          "it": "ama umidità",
-          "es": "gusta humedad",
-          "pt": "gosta umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润",
-          "ja": "湿度好む",
-          "ko": "습도 선호"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietoksyczna",
-          "de": "ungiftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "독성 없음"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "upright clumping",
-          "pl": "wzniesiona kępa",
-          "de": "horstig",
-          "fr": "en touffe",
-          "it": "a cespo",
-          "es": "en matas",
-          "pt": "em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "포기형"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "حشرات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Arrowroot",
-      "description": "Maranta arundinacea is a tropical perennial grown for its starchy rhizomes and ornamental foliage. It prefers warm temperatures, bright indirect light, and consistently moist soil. The species is also cultivated commercially as a food plant."
+      "description": "Arrowroot is a tropical perennial known for its edible rhizomes. It is easy to grow indoors with moderate light and humidity."
     },
     "pl": {
-      "common_name": "Maranta trzcinowa",
-      "description": "Maranta arundinacea to tropikalna bylina znana z jadalnych kłączy i dekoracyjnych liści. Wymaga ciepła, jasnego rozproszonego światła i stale lekko wilgotnej gleby. Jest także uprawiana jako roślina użytkowa."
+      "common_name": "Maranta",
+      "description": "Maranta to tropikalna roślina, znana z jadalnych kłączy. Jest łatwa w uprawie w domu, wymaga umiarkowanego światła i wilgotności."
     },
     "de": {
       "common_name": "Pfeilwurz",
-      "description": "Maranta arundinacea ist eine tropische Staude mit dekorativen Blättern und essbaren Rhizomen. Sie wächst am besten bei Wärme, indirektem Licht und gleichmäßig feuchtem Substrat. Die Art wird auch landwirtschaftlich genutzt."
+      "description": "Pfeilwurz ist eine tropische Staude, die für ihre essbaren Rhizome bekannt ist. Sie wächst leicht in Innenräumen mit mäßigem Licht und Feuchtigkeit."
     },
     "fr": {
-      "common_name": "Arrow-root",
-      "description": "Maranta arundinacea est une plante tropicale vivace cultivée pour ses rhizomes comestibles. Elle apprécie la chaleur, la lumière indirecte et un sol régulièrement humide. Elle est aussi utilisée comme plante alimentaire."
+      "common_name": "Maranta",
+      "description": "La Maranta est une plante tropicale vivace connue pour ses rhizomes comestibles. Elle pousse facilement en intérieur avec une lumière et une humidité modérées."
     },
     "it": {
-      "common_name": "Arrowroot",
-      "description": "Maranta arundinacea è una perenne tropicale coltivata per i suoi rizomi ricchi di amido. Predilige temperature calde, luce indiretta e terreno costantemente umido. È nota anche come pianta alimentare."
+      "common_name": "Maranta",
+      "description": "La Maranta è una pianta tropicale perenne conosciuta per i suoi rizomi commestibili. È facile da coltivare in casa con luce e umidità moderate."
     },
     "es": {
-      "common_name": "Arrurruz",
-      "description": "Maranta arundinacea es una planta tropical perenne apreciada por sus rizomas comestibles. Requiere calor, luz indirecta y suelo uniformemente húmedo. También se cultiva con fines alimentarios."
+      "common_name": "Maranta",
+      "description": "La Maranta es una planta perenne tropical conocida por sus rizomas comestibles. Es fácil de cultivar en interiores con luz y humedad moderadas."
     },
     "pt": {
-      "common_name": "Araruta",
-      "description": "Maranta arundinacea é uma planta tropical perene cultivada por seus rizomas ricos em amido. Prefere calor, luz indireta e solo sempre levemente úmido. Também é usada como planta alimentar."
+      "common_name": "Maranta",
+      "description": "A Maranta é uma planta perene tropical conhecida pelos seus rizomas comestíveis. É fácil de cultivar em casa com luz e humidade moderadas."
     },
     "ar": {
-      "common_name": "الأروروت",
-      "description": "Maranta arundinacea نبات استوائي معمر يُزرع من أجل جذاميره النشوية. يفضل الدفء والضوء غير المباشر وتربة رطبة باستمرار. يُستخدم أيضًا كنبات غذائي."
+      "common_name": "مارانتا",
+      "description": "المارانتة هي نبات معمر استوائي معروف بجذوره الصالحة للأكل. من السهل زراعته في الداخل مع ضوء ورطوبة معتدلة."
     },
     "hi": {
       "common_name": "एरोरूट",
-      "description": "Maranta arundinacea एक उष्णकटिबंधीय बहुवर्षीय पौधा है जिसे इसके स्टार्चयुक्त राइज़ोम के लिए उगाया जाता है। इसे गर्म तापमान, अप्रत्यक्ष प्रकाश और नम मिट्टी पसंद है। इसका उपयोग खाद्य पौधे के रूप में भी होता है।"
+      "description": "एरोरूट एक उष्णकटिबंधीय पौधा है जो अपने खाने योग्य कंदों के लिए जाना जाता है। इसे घर के अंदर मध्यम रोशनी और आर्द्रता में उगाना आसान है।"
     },
     "zh": {
-      "common_name": "竹芋",
-      "description": "Maranta arundinacea 是一种热带多年生植物，以其富含淀粉的根茎而闻名。它喜欢温暖环境、明亮散射光和持续湿润的土壤。该植物也被用作食用作物。"
+      "common_name": "箭根",
+      "description": "箭根是一种热带多年生植物，以其可食用的根茎而闻名。在中等光照和湿度的室内生长容易。"
     },
     "ja": {
       "common_name": "アロールート",
-      "description": "Maranta arundinacea はデンプン質の根茎で知られる熱帯性多年草です。暖かい気温と明るい間接光、湿り気のある土壌を好みます。食用作物としても栽培されます。"
+      "description": "アロールートは食用の根茎で知られる熱帯性の多年草です。中程度の光と湿度で室内でも育てやすいです。"
     },
     "ko": {
       "common_name": "애로루트",
-      "description": "Maranta arundinacea는 전분이 풍부한 뿌리줄기로 알려진 열대 다년생 식물입니다. 따뜻한 온도와 밝은 간접광, 촉촉한 토양을 선호합니다. 식용 작물로도 재배됩니다."
+      "description": "애로루트는 식용 뿌리줄기로 알려진 열대 다년생 식물입니다. 중간 정도의 빛과 습도에서 실내 재배가 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/maranta-arundinacea",
-      "https://edis.ifas.ufl.edu/publication/FP387",
-      "https://plants.ces.ncsu.edu/plants/maranta-arundinacea/"
+      "https://www.rhs.org.uk/advice/profile?pid=589",
+      "https://www.gardenia.net/plant/Maranta-arundinacea"
     ]
   }
 }

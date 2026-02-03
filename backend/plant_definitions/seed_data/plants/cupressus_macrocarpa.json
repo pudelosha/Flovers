@@ -1,6 +1,6 @@
 {
   "external_id": "cupressus_macrocarpa",
-  "name": "Monterey Cypress",
+  "name": "Monterey cypress",
   "latin": "Cupressus macrocarpa",
   "sun": "high",
   "water": "medium",
@@ -10,17 +10,16 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "conifers"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 365,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "cupressus_macrocarpa.jpg",
   "image_thumb": "cupressus_macrocarpa.jpg",
   "traits": [
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "양지"
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -49,16 +48,16 @@
         "text": {
           "en": "Well-drained soil",
           "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "de": "Gut durchlässig",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Keep evenly moist",
+          "pl": "Umiark. wilgotno",
+          "de": "Gleichm. feucht",
+          "fr": "Humide, sans excès",
+          "it": "Umido, non zuppo",
+          "es": "Húmedo, no encharc.",
+          "pt": "Úmido, sem enchar.",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम रखें, भीगा नहीं",
+          "zh": "保持微湿",
+          "ja": "適度に湿らせる",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -85,7 +84,7 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
+          "en": "Medium",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool–mild",
-          "pl": "Chłodno",
-          "de": "Kühl-mild",
-          "fr": "Frais",
-          "it": "Fresco",
-          "es": "Fresco",
-          "pt": "Fresco",
-          "ar": "معتدل",
-          "hi": "ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "Cool 10–21°C",
+          "pl": "Chłodno 10–21°C",
+          "de": "Kühl 10–21°C",
+          "fr": "Frais 10–21°C",
+          "it": "Fresco 10–21°C",
+          "es": "Fresco 10–21°C",
+          "pt": "Fresco 10–21°C",
+          "ar": "بارد 10–21°م",
+          "hi": "ठंडा 10–21°C",
+          "zh": "凉爽 10–21°C",
+          "ja": "涼しい 10–21°C",
+          "ko": "서늘 10–21°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła",
-          "de": "Normale Luft",
-          "fr": "Air normal",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادي",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Average; mist if dry",
+          "pl": "Średnia; zraszaj",
+          "de": "Normal; sprühen",
+          "fr": "Moyen; brumiser",
+          "it": "Media; nebulizza",
+          "es": "Media; pulveriza",
+          "pt": "Média; borrifar",
+          "ar": "متوسط؛ رش عند جفاف",
+          "hi": "सामान्य; स्प्रे करें",
+          "zh": "一般；干燥喷雾",
+          "ja": "普通・乾燥時霧吹き",
+          "ko": "보통; 건조시 분무"
         }
       }
     },
@@ -146,14 +145,14 @@
           "pl": "Lekko toksyczna",
           "de": "Leicht giftig",
           "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
+          "it": "Leggermente toss.",
           "es": "Levemente tóxica",
           "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
+          "ar": "سامّة قليلاً",
+          "hi": "हल्की विषैली",
           "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "ja": "軽い毒性",
+          "ko": "약한 독성"
         }
       }
     },
@@ -161,77 +160,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Evergreen conifer",
+          "pl": "Zimozielony iglak",
+          "de": "Immergrüner Konif.",
+          "fr": "Conifère persistant",
+          "it": "Conifera semprev.",
+          "es": "Conífera perenne",
+          "pt": "Conífera perene",
+          "ar": "صنوبري دائم الخضرة",
+          "hi": "सदाबहार शंकुधारी",
+          "zh": "常绿针叶",
+          "ja": "常緑針葉樹",
+          "ko": "상록 침엽수"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid heat, soggy soil",
+          "pl": "Unikaj upału i zastoju",
+          "de": "Hitze, Staunässe nein",
+          "fr": "Éviter chaleur, excès",
+          "it": "Evita caldo e ristagni",
+          "es": "Evita calor y encharque",
+          "pt": "Evite calor e encharque",
+          "ar": "تجنب الحرارة والتشبع",
+          "hi": "गर्मी व जलभराव से बचें",
+          "zh": "避高温与积水",
+          "ja": "高温と過湿は避ける",
+          "ko": "고온·과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, scale",
+          "pl": "Mszyce, tarczniki",
+          "de": "Blattläuse, Schildl.",
+          "fr": "Pucerons, cochenilles",
+          "it": "Afidi, cocciniglie",
+          "es": "Pulgones, cochinillas",
+          "pt": "Pulgões, cochonilhas",
+          "ar": "منّ وحشرات قشرية",
+          "hi": "एफिड्स, स्केल",
+          "zh": "蚜虫、介壳虫",
+          "ja": "アブラムシ・カイガラムシ",
+          "ko": "진딧물·깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Monterey Cypress",
-      "description": "Cupressus macrocarpa is a coastal evergreen conifer native to California. It prefers full sun, good air circulation, and well-drained soil. Commonly grown outdoors, it can be container-grown when young."
+      "common_name": "Monterey cypress (lemon cypress)",
+      "description": "Cupressus macrocarpa is an evergreen conifer often sold in pots as lemon cypress (e.g., 'Goldcrest'). Provide very bright light and keep the mix evenly moist but well drained. It performs best in cooler indoor temperatures and can suffer in heat and dry air."
     },
     "pl": {
-      "common_name": "Cyprysik wielkoszyszkowy",
-      "description": "Cupressus macrocarpa to zimozielone drzewo iglaste pochodzące z Kalifornii. Wymaga pełnego słońca i przepuszczalnej gleby. Najlepiej rośnie na zewnątrz w chłodnym klimacie."
+      "common_name": "Cyprys Monterey (cyprys cytrynowy)",
+      "description": "Cupressus macrocarpa to zimozielony iglak, często sprzedawany w donicach jako „cyprys cytrynowy” (np. 'Goldcrest'). Wymaga bardzo jasnego stanowiska oraz podłoża stale lekko wilgotnego, ale przepuszczalnego. Najlepiej rośnie w chłodniejszych temperaturach w mieszkaniu i źle znosi gorąco oraz przesuszenie."
     },
     "de": {
-      "common_name": "Monterey-Zypresse",
-      "description": "Cupressus macrocarpa ist ein immergrüner Nadelbaum aus Kalifornien. Er bevorzugt volle Sonne und gut durchlässigen Boden. Jung kann er im Kübel kultiviert werden."
+      "common_name": "Monterey-Zypresse (Zitronenzypresse)",
+      "description": "Cupressus macrocarpa ist ein immergrüner Nadelbaum, der im Topf oft als Zitronenzypresse (z. B. 'Goldcrest') verkauft wird. Sehr hell stellen und gleichmäßig feucht halten, jedoch mit guter Drainage. In kühleren Innenräumen wächst sie am besten und reagiert empfindlich auf Hitze und trockene Luft."
     },
     "fr": {
-      "common_name": "Cyprès de Monterey",
-      "description": "Cupressus macrocarpa est un conifère persistant originaire de Californie. Il aime le plein soleil et les sols bien drainés. Il est surtout cultivé en extérieur."
+      "common_name": "Cyprès de Monterey (cyprès citron)",
+      "description": "Cupressus macrocarpa est un conifère persistant, souvent vendu en pot comme « cyprès citron » (ex. 'Goldcrest'). Donnez une lumière très vive et maintenez le substrat légèrement humide, sans excès d’eau. Il préfère des températures intérieures plutôt fraîches et souffre de la chaleur et de l’air sec."
     },
     "it": {
-      "common_name": "Cipresso di Monterey",
-      "description": "Cupressus macrocarpa è una conifera sempreverde della California. Predilige pieno sole e terreno drenante. Si coltiva soprattutto all’aperto."
+      "common_name": "Cipresso di Monterey (cipresso limone)",
+      "description": "Cupressus macrocarpa è una conifera sempreverde, spesso venduta in vaso come “cipresso limone” (es. 'Goldcrest'). Richiede molta luce e un terriccio uniformemente umido ma ben drenante. Sta meglio in ambienti interni freschi e può soffrire il caldo e l’aria secca."
     },
     "es": {
-      "common_name": "Ciprés de Monterrey",
-      "description": "Cupressus macrocarpa es una conífera perenne originaria de California. Necesita pleno sol y suelo bien drenado. Se cultiva principalmente en exteriores."
+      "common_name": "Ciprés de Monterrey (ciprés limón)",
+      "description": "Cupressus macrocarpa es una conífera perenne, vendida a menudo en maceta como “ciprés limón” (p. ej., 'Goldcrest'). Necesita mucha luz y un sustrato ligeramente húmedo pero con buen drenaje. Prefiere interiores frescos y puede resentirse con el calor y el aire seco."
     },
     "pt": {
-      "common_name": "Cipreste de Monterey",
-      "description": "Cupressus macrocarpa é uma conífera perene da Califórnia. Prefere sol pleno e solo bem drenado. É cultivada principalmente ao ar livre."
+      "common_name": "Cipreste-de-Monterey (cipreste-limão)",
+      "description": "Cupressus macrocarpa é uma conífera perene, frequentemente vendida em vaso como “cipreste-limão” (ex.: 'Goldcrest'). Forneça muita luz e mantenha o substrato levemente úmido, sem encharcar. Desenvolve-se melhor em temperaturas internas mais frescas e sofre com calor e ar seco."
     },
     "ar": {
-      "common_name": "سرو مونتيري",
-      "description": "Cupressus macrocarpa شجرة مخروطية دائمة الخضرة من كاليفورنيا. تفضل الشمس الكاملة والتربة جيدة التصريف. تزرع غالبًا في الهواء الطلق."
+      "common_name": "سرو مونتيري (السرو الليموني)",
+      "description": "Cupressus macrocarpa شجرة صنوبرية دائمة الخضرة وتباع أحيانًا في الأصص كسرو ليموني مثل 'Goldcrest'. تحتاج إلى ضوء ساطع جدًا وتربة رطبة قليلًا مع تصريف جيد دون إغراق. تفضّل درجات حرارة داخلية أبرد وقد تتضرر من الحرارة والهواء الجاف."
     },
     "hi": {
-      "common_name": "मोंटेरे साइप्रस",
-      "description": "Cupressus macrocarpa कैलिफ़ोर्निया का सदाबहार शंकुधारी वृक्ष है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। आमतौर पर बाहर उगाया जाता है।"
+      "common_name": "मॉन्टेरी साइप्रस (लेमन साइप्रस)",
+      "description": "Cupressus macrocarpa एक सदाबहार शंकुधारी पौधा है, जिसे गमले में अक्सर लेमन साइप्रस (जैसे 'Goldcrest') के रूप में बेचा जाता है। इसे बहुत तेज रोशनी दें और मिट्टी को हल्का नम रखें, लेकिन जलभराव न होने दें। यह ठंडे इनडोर तापमान में बेहतर रहता है और गर्मी व सूखी हवा से तनाव में आ सकता है।"
     },
     "zh": {
-      "common_name": "蒙特雷柏树",
-      "description": "Cupressus macrocarpa 原产于加利福尼亚的常绿针叶树。喜欢充足阳光和良好排水的土壤。主要在室外栽培。"
+      "common_name": "蒙特雷柏（柠檬柏）",
+      "description": "Cupressus macrocarpa 是常绿针叶树，盆栽常以“柠檬柏”（如 'Goldcrest'）出售。需要非常明亮的光照，土壤保持微湿但必须排水良好。更适合较凉爽的室内环境，怕高温与干燥空气。"
     },
     "ja": {
-      "common_name": "モントレーイトスギ",
-      "description": "Cupressus macrocarpa はカリフォルニア原産の常緑針葉樹です。日当たりと水はけの良い土を好みます。主に屋外で育てられます。"
+      "common_name": "モントレーイトスギ（レモンサイプレス）",
+      "description": "Cupressus macrocarpa は常緑の針葉樹で、鉢物ではレモンサイプレス（例：'Goldcrest'）として流通します。強い光を確保し、用土は水はけ良く適度に湿らせます。室内は涼しめが適し、高温と乾燥に弱いです。"
     },
     "ko": {
-      "common_name": "몬터레이 사이프러스",
-      "description": "Cupressus macrocarpa는 캘리포니아 원산의 상록 침엽수입니다. 햇빛과 배수가 좋은 토양을 선호합니다. 주로 야외에서 재배됩니다."
+      "common_name": "몬터레이 사이프러스(레몬 사이프러스)",
+      "description": "Cupressus macrocarpa 는 상록 침엽수로, 화분에서는 레몬 사이프러스(예: 'Goldcrest')로 판매되곤 합니다. 매우 밝은 빛이 필요하며 흙은 촉촉하게 유지하되 배수가 좋아야 합니다. 서늘한 실내 환경을 선호하고 고온과 건조한 공기에 약합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/4941/cupressus-macrocarpa/details",
-      "https://plants.ces.ncsu.edu/plants/cupressus-macrocarpa/",
-      "https://www.calflora.org/app/taxon?crn=2376"
+      "https://www.rhs.org.uk/plants/5074/cupressus-macrocarpa/details",
+      "https://plants.ces.ncsu.edu/plants/hesperocyparis-macrocarpa/",
+      "https://www.whiteflowerfarm.com/how-to-grow-lemon-cypress",
+      "https://www.thespruce.com/growing-lemon-cypress-5113120",
+      "https://www.bhg.com/lemon-cypress-tree-care-indoors-8760863",
+      "https://www.cats.org.uk/media/12932/outdoor-plants-may-2023.pdf"
     ]
   }
 }

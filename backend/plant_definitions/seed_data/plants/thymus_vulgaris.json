@@ -2,23 +2,24 @@
   "external_id": "thymus_vulgaris",
   "name": "Thyme",
   "latin": "Thymus vulgaris",
-  "sun": "high",
-  "water": "medium",
-  "difficulty": "medium",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "thymus_vulgaris.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Vollsonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूर्ण सूर्य",
-          "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "햇볕 잘 드는 곳"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy, loamy",
-          "pl": "Piaszczysta, gliniasta",
-          "de": "Sandig, lehmig",
-          "fr": "Sableux, argileux",
-          "it": "Sabbioso, argilloso",
-          "es": "Arenoso, arcilloso",
-          "pt": "Arenoso, argiloso",
-          "ar": "رملي، طيني",
-          "hi": "रेत, दोमट",
-          "zh": "沙质, 黏土",
-          "ja": "砂質、粘土",
-          "ko": "모래, 점토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Low water needs",
+          "pl": "Niskie zapotrzebowanie na wodę",
+          "de": "Geringer Wasserbedarf",
+          "fr": "Besoins en eau faibles",
+          "it": "Basso bisogno di acqua",
+          "es": "Bajas necesidades de agua",
+          "pt": "Baixas necessidades de água",
+          "ar": "احتياجات منخفضة من الماء",
+          "hi": "कम पानी की आवश्यकता",
+          "zh": "低水需求",
+          "ja": "低水分需要",
+          "ko": "낮은 물 필요"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Easy to grow",
+          "pl": "Łatwe do uprawy",
+          "de": "Einfach zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل النمو",
+          "hi": "उगाना आसान",
+          "zh": "容易种植",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "15–20°C",
+          "pl": "15–20°C",
+          "de": "15–20°C",
+          "fr": "15–20°C",
+          "it": "15–20°C",
+          "es": "15–20°C",
+          "pt": "15–20°C",
+          "ar": "15–20°C",
+          "hi": "15–20°C",
+          "zh": "15–20°C",
+          "ja": "15–20°C",
+          "ko": "15–20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Bas",
-          "it": "Basso",
-          "es": "Bajo",
-          "pt": "Baixo",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -150,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषैला",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact shrub",
-          "pl": "Kompaktowy krzew",
-          "de": "Kompakter Strauch",
-          "fr": "Arbuste compact",
-          "it": "Arbusto compatto",
-          "es": "Arbusto compacto",
-          "pt": "Arbusto compacto",
-          "ar": "شجيرة مدمجة",
-          "hi": "संकुचित झाड़ी",
-          "zh": "紧凑灌木",
-          "ja": "コンパクトな低木",
-          "ko": "콤팩트한 관목"
+          "en": "Slow to medium growth",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à moyenne",
+          "it": "Crescita lenta a media",
+          "es": "Crecimiento lento a medio",
+          "pt": "Crescimento lento a médio",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "缓慢到中等生长",
+          "ja": "遅い成長から中程度の成長",
+          "ko": "느린에서 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरजन्य कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Thyme",
-      "description": "Thymus vulgaris, commonly known as thyme, is a fragrant herb native to the Mediterranean region. It is often used in cooking and has medicinal properties."
+      "description": "Thyme is a small evergreen shrub known for its aromatic leaves, commonly used in cooking. It thrives in well-drained soil and requires minimal watering."
     },
     "pl": {
       "common_name": "Tymianek",
-      "description": "Thymus vulgaris, znany jako tymianek, to aromatyczne zioło pochodzące z regionu Morza Śródziemnego. Często wykorzystywane w kuchni, ma również właściwości lecznicze."
+      "description": "Tymianek to mały, wiecznie zielony krzew, znany ze swojego aromatycznego liścia, często używany w kuchni. Rośnie w dobrze przepuszczalnej glebie i wymaga minimalnego podlewania."
     },
     "de": {
       "common_name": "Thymian",
-      "description": "Thymus vulgaris, allgemein bekannt als Thymian, ist ein duftendes Kraut, das aus dem Mittelmeerraum stammt. Es wird oft in der Küche verwendet und hat medizinische Eigenschaften."
+      "description": "Thymian ist ein kleiner immergrüner Strauch, bekannt für seine aromatischen Blätter, die häufig in der Küche verwendet werden. Er gedeiht in gut durchlässigem Boden und benötigt wenig Wasser."
     },
     "fr": {
       "common_name": "Thym",
-      "description": "Thymus vulgaris, communément appelé thym, est une herbe aromatique originaire de la région méditerranéenne. Elle est souvent utilisée en cuisine et possède des propriétés médicinales."
+      "description": "Le thym est un petit arbuste persistant connu pour ses feuilles aromatiques, souvent utilisées en cuisine. Il prospère dans un sol bien drainé et nécessite peu d'arrosage."
     },
     "it": {
       "common_name": "Timo",
-      "description": "Thymus vulgaris, noto come timo, è un'erba profumata originaria della regione mediterranea. Viene spesso utilizzato in cucina e ha proprietà medicinali."
+      "description": "Il timo è un piccolo arbusto sempreverde noto per le sue foglie aromatiche, comunemente usate in cucina. Cresce in un terreno ben drenato e richiede poca acqua."
     },
     "es": {
       "common_name": "Tomillo",
-      "description": "Thymus vulgaris, conocido como tomillo, es una hierba aromática originaria de la región mediterránea. Se usa comúnmente en la cocina y tiene propiedades medicinales."
+      "description": "El tomillo es un pequeño arbusto perenne conocido por sus hojas aromáticas, comúnmente utilizadas en la cocina. Crece en suelos bien drenados y requiere poca agua."
     },
     "pt": {
       "common_name": "Tomilho",
-      "description": "Thymus vulgaris, conhecido como tomilho, é uma erva aromática originária da região mediterrânea. É frequentemente usado na culinária e possui propriedades medicinais."
+      "description": "O tomilho é um pequeno arbusto perene conhecido por suas folhas aromáticas, comumente usadas na culinária. Cresce em solo bem drenado e requer pouca água."
     },
     "ar": {
-      "common_name": "الزعتر",
-      "description": "ثيموس فولغاريس، المعروف بالزعتر، هو عشبة عطرية موطنها منطقة البحر الأبيض المتوسط. يُستخدم في الطهي وله خصائص طبية."
+      "common_name": "زعتر",
+      "description": "الزعتر هو شجيرة دائمة الخضرة صغيرة معروفة بأوراقها العطرية التي تُستخدم في الطهي. تنمو في التربة جيدة التصريف وتتطلب ريًا قليلًا."
     },
     "hi": {
-      "common_name": "तैयम",
-      "description": "थाइमस वल्गारिस, जिसे थाइम कहा जाता है, एक खुशबूदार जड़ी-बूटी है जो भूमध्य क्षेत्र का मूल निवासी है। इसे अक्सर खाना पकाने में इस्तेमाल किया जाता है और इसमें औषधीय गुण होते हैं।"
+      "common_name": "थाइम",
+      "description": "थाइम एक छोटा सदाबहार झाड़ी है जो अपनी सुगंधित पत्तियों के लिए प्रसिद्ध है, जिसका उपयोग सामान्यत: खाना पकाने में होता है। यह अच्छी जल निकासी वाली मिट्टी में पनपता है और कम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "百里香",
-      "description": "百里香（Thymus vulgaris）是一种芳香草本植物，原产于地中海地区。它常用于烹饪，并具有药用价值。"
+      "description": "百里香是一种小型常绿灌木，以其芳香的叶子而闻名，常用于烹饪。它在排水良好的土壤中生长，需水量较少。"
     },
     "ja": {
       "common_name": "タイム",
-      "description": "タイム（Thymus vulgaris）は地中海地方原産の香り高いハーブです。料理に使われることが多く、薬効成分もあります。"
+      "description": "タイムはその芳香性の葉で知られる小さな常緑灌木で、料理に頻繁に使用されます。排水性の良い土壌で育ち、あまり水を必要としません。"
     },
     "ko": {
       "common_name": "타임",
-      "description": "타임(Thymus vulgaris)은 지중해 지역 원산지의 향기로운 허브입니다. 주로 요리에 사용되며 약용 효과가 있습니다."
+      "description": "타임은 향기로운 잎으로 잘 알려진 작은 상록 관목으로, 요리에 자주 사용됩니다. 배수가 잘 되는 토양에서 자라며 물이 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=158",
-      "https://www.gardeningknowhow.com/edible/herbs/thyme/thyme-care.htm",
-      "https://www.bhg.com/gardening/pests/insects-diseases/thyme/"
+      "https://www.gardeningknowhow.com/edible/herbs/thyme/thyme-plant-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=127"
     ]
   }
 }

@@ -1,26 +1,27 @@
 {
   "external_id": "cyperus_alternifolius",
-  "name": "Umbrella Papyrus",
+  "name": "Umbrella plant",
   "latin": "Cyperus alternifolius",
   "sun": "medium",
   "water": "high",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "self-watering",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "peat-free",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 3,
+  "water_interval_days": 2,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "cyperus_alternifolius.jpg",
   "image_thumb": "cyperus_alternifolius.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज परोक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchte Erde",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
+          "en": "Moist potting mix",
+          "pl": "Wilgotne podłoże",
+          "de": "Stets feucht",
+          "fr": "Substrat humide",
+          "it": "Terriccio umido",
+          "es": "Sustrato húmedo",
+          "pt": "Substrato úmido",
           "ar": "تربة رطبة",
-          "hi": "गीली मिट्टी",
-          "zh": "湿润土壤",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "hi": "गीली पॉटिंग मिट्टी",
+          "zh": "保持湿润基质",
+          "ja": "常に湿った用土",
+          "ko": "항상 촉촉한 흙"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Very frequent",
-          "pl": "Bardzo częste",
-          "de": "Sehr häufig",
-          "fr": "Très fréquent",
-          "it": "Molto frequente",
-          "es": "Muy frecuente",
-          "pt": "Muito frequente",
-          "ar": "متكرر جدا",
-          "hi": "बहुत बार",
-          "zh": "非常频繁",
-          "ja": "非常に頻繁",
-          "ko": "아주 자주"
+          "en": "Keep constantly wet",
+          "pl": "Stale mokre",
+          "de": "Ständig nass halten",
+          "fr": "Toujours humide",
+          "it": "Sempre umida",
+          "es": "Siempre húmeda",
+          "pt": "Sempre úmida",
+          "ar": "أبقِها رطبة دائمًا",
+          "hi": "लगातार गीला रखें",
+          "zh": "持续保持湿润",
+          "ja": "乾かさない",
+          "ko": "마르지 않게"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30 °C",
-          "pl": "18–30 °C",
-          "de": "18–30 °C",
-          "fr": "18–30 °C",
-          "it": "18–30 °C",
-          "es": "18–30 °C",
-          "pt": "18–30 °C",
-          "ar": "18–30°م",
-          "hi": "18–30 °C",
-          "zh": "18–30 °C",
-          "ja": "18～30°C",
-          "ko": "18–30°C"
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
+          "ar": "15–24°م",
+          "hi": "15–24°C",
+          "zh": "15–24°C",
+          "ja": "15–24°C",
+          "ko": "15–24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "مرتفعة",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Average to high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel bis hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media-alta",
+          "es": "Media a alta",
+          "pt": "Média a alta",
+          "ar": "متوسط إلى مرتفع",
+          "hi": "मध्यम से अधिक",
+          "zh": "中到高湿度",
+          "ja": "中〜高湿度",
+          "ko": "중~높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxicity unclear",
+          "pl": "Toksyczność niejasna",
+          "de": "Toxizität unklar",
+          "fr": "Toxicité incertaine",
+          "it": "Tossicità incerta",
+          "es": "Toxicidad incierta",
+          "pt": "Toxicidade incerta",
+          "ar": "السُمية غير مؤكدة",
+          "hi": "विषाक्तता अस्पष्ट",
+          "zh": "毒性不明确",
+          "ja": "毒性は不明",
+          "ko": "독성 정보 불명"
         }
       }
     },
@@ -161,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast",
-          "pl": "Szybki",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
-          "zh": "快速",
-          "ja": "早い",
-          "ko": "빠름"
+          "en": "Fast, clumping",
+          "pl": "Szybki, kępkowy",
+          "de": "Schnell, horstig",
+          "fr": "Rapide, en touffe",
+          "it": "Rapida, cespitosa",
+          "es": "Rápida, en mata",
+          "pt": "Rápida, em touceira",
+          "ar": "سريع ومتكتل",
+          "hi": "तेजी से गुच्छेदार",
+          "zh": "生长快，丛生",
+          "ja": "早い・株立ち",
+          "ko": "빠름, 포기형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drying out",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter le dessèchement",
+          "it": "Non far seccare",
+          "es": "No dejar secar",
+          "pt": "Não deixar secar",
+          "ar": "تجنب الجفاف",
+          "hi": "सूखने न दें",
+          "zh": "避免干透",
+          "ja": "乾燥させない",
+          "ko": "건조 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealy",
+          "pl": "Przędziorki, wełn.",
+          "de": "Spinnmilben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Ragni rossi, cocc.",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عث، بق دقيقي",
+          "hi": "मकड़ी किलनी, मिलीबग",
+          "zh": "红蜘蛛，粉蚧",
+          "ja": "ハダニ、カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Umbrella Papyrus",
-      "description": "Cyperus alternifolius is a wetland sedge known for its umbrella-like leaf whorls. It thrives in consistently moist soil and bright indoor light. It is commonly grown as a houseplant or pond margin plant."
+      "common_name": "Umbrella plant",
+      "description": "A clumping sedge with umbrella-like leaf whorls at the stem tips. Keep the potting mix constantly wet; standing the pot in a shallow tray of water works well. Grow in bright filtered light and feed monthly during the growing season."
     },
     "pl": {
       "common_name": "Cibora zmienna",
-      "description": "Cyperus alternifolius to roślina bagienna o parasolowatych liściach. Wymaga stale wilgotnego podłoża i jasnego stanowiska. Często uprawiana jest jako roślina doniczkowa."
+      "description": "Kępowa turzyca o parasolowatych okółkach liści na końcach pędów. Podłoże powinno być stale mokre; dobrze sprawdza się ustawienie doniczki w płytkiej podstawce z wodą. Najlepiej rośnie w jasnym, rozproszonym świetle i wymaga dokarmiania co miesiąc w sezonie."
     },
     "de": {
-      "common_name": "Zypergras",
-      "description": "Cyperus alternifolius ist eine Sumpfpflanze mit schirmförmigen Blättern. Sie benötigt ständig feuchte Erde und helles Licht. Sie eignet sich gut für den Innenbereich."
+      "common_name": "Schirmpapyrus",
+      "description": "Horstbildende Segge mit schirmförmigen Blattquirlen an den Triebspitzen. Das Substrat muss dauerhaft nass sein; ein flacher Untersetzer mit Wasser ist geeignet. Helles, gefiltertes Licht und eine monatliche Düngung in der Wachstumszeit sind sinnvoll."
     },
     "fr": {
-      "common_name": "Papyrus d'intérieur",
-      "description": "Cyperus alternifolius est une plante des zones humides aux feuilles en ombrelle. Elle préfère un sol constamment humide et une lumière vive. Elle est souvent cultivée en pot."
+      "common_name": "Papyrus en ombrelle",
+      "description": "Laîche en touffe avec des verticilles de feuilles en forme d’ombrelle. Le substrat doit rester constamment détrempé; placer le pot dans une coupelle d’eau peu profonde aide beaucoup. Installez-la en lumière vive filtrée et fertilisez une fois par mois en période de croissance."
     },
     "it": {
-      "common_name": "Papiro ornamentale",
-      "description": "Cyperus alternifolius è una pianta palustre con foglie a ombrello. Cresce bene in terreni sempre umidi e in luce intensa. È adatta alla coltivazione indoor."
+      "common_name": "Papiro a ombrello",
+      "description": "Carice cespitosa con ciuffi fogliari a ombrello sulla sommità dei fusti. Il terriccio va mantenuto costantemente bagnato; utile tenere il vaso in un sottovaso con acqua. Preferisce luce intensa ma filtrata e concimazioni mensili nella stagione di crescita."
     },
     "es": {
       "common_name": "Papiro paraguas",
-      "description": "Cyperus alternifolius es una planta acuática con hojas en forma de paraguas. Necesita suelo siempre húmedo y buena iluminación. Se cultiva mucho en interiores."
+      "description": "Ciperácea en mata con verticilos de hojas que parecen un paraguas. Mantén el sustrato siempre muy húmedo; colocar la maceta en una bandeja poco profunda con agua suele funcionar bien. Crece mejor con luz brillante filtrada y con abonado mensual en época de crecimiento."
     },
     "pt": {
-      "common_name": "Papiro-ornamental",
-      "description": "Cyperus alternifolius é uma planta de zonas úmidas com folhas em forma de guarda-chuva. Prefere solo constantemente úmido e luz abundante. É comum como planta de interior."
+      "common_name": "Papiro-umbrela",
+      "description": "Ciperácea em touceira com folhas em roseta que lembram um guarda-chuva. Mantenha o substrato constantemente molhado; deixar o vaso numa bandeja rasa com água ajuda. Prefere luz forte filtrada e adubação mensal durante o crescimento."
     },
     "ar": {
-      "common_name": "نبات البردي الزخرفي",
-      "description": "Cyperus alternifolius نبات مستنقعات يتميز بأوراق تشبه المظلة. يحتاج إلى تربة رطبة باستمرار وضوء جيد. يزرع غالبًا كنبات منزلي."
+      "common_name": "نبات المظلة",
+      "description": "نبات سُعدي متكتل بأوراق مرتبة كالمظلة عند أطراف السيقان. يجب إبقاء التربة رطبة جدًا باستمرار؛ وضع الأصيص في صينية ماء ضحلة يساعد كثيرًا. يفضل ضوءًا ساطعًا غير مباشر مع تسميد شهري خلال موسم النمو."
     },
     "hi": {
-      "common_name": "अम्ब्रेला पपीरस",
-      "description": "Cyperus alternifolius एक दलदली पौधा है जिसकी पत्तियाँ छतरी जैसी होती हैं। इसे लगातार गीली मिट्टी और अच्छी रोशनी चाहिए। इसे घर के अंदर उगाया जाता है।"
+      "common_name": "छाता पपीरस",
+      "description": "यह गुच्छेदार सेज पौधा है जिसकी पत्तियाँ तने के सिरे पर छाते जैसी दिखती हैं। मिट्टी को लगातार बहुत गीला रखें; गमले को उथली पानी की ट्रे में रखना उपयोगी है। तेज परोक्ष रोशनी दें और बढ़वार के मौसम में महीने में एक बार खाद दें।"
     },
     "zh": {
       "common_name": "伞草",
-      "description": "Cyperus alternifolius 是一种湿地植物，具有伞状叶片。它需要长期湿润的土壤和明亮的光照。常作为室内观赏植物栽培。"
+      "description": "丛生莎草类植物，茎端叶轮像伞一样展开。基质需长期保持很湿，花盆放在浅水盘中更稳妥。放在明亮散射光处，生长季每月施肥一次。"
     },
     "ja": {
-      "common_name": "シペルス",
-      "description": "Cyperus alternifolius は傘状の葉を持つ湿地性植物です。常に湿った土と明るい光を好みます。観葉植物として利用されます。"
+      "common_name": "アンブレラパピルス",
+      "description": "茎の先に傘状の葉が輪生する株立ちのスゲ科植物です。用土は常にしっかり湿らせ、鉢を浅い受け皿の水に置くと管理しやすいです。明るい間接光で育て、生育期は月1回施肥します。"
     },
     "ko": {
-      "common_name": "우산사초",
-      "description": "Cyperus alternifolius는 우산 모양의 잎을 가진 습지 식물입니다. 항상 촉촉한 토양과 밝은 빛이 필요합니다. 실내 식물로 많이 키웁니다."
+      "common_name": "우산파피루스",
+      "description": "줄기 끝에 우산처럼 잎이 돌려나는 포기형 사초과 식물입니다. 흙을 항상 매우 촉촉하게 유지하고, 화분을 얕은 물받이에 두면 도움이 됩니다. 밝은 간접광에서 키우며 생장기에는 한 달에 한 번 비료를 줍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/5061/cyperus-alternifolius/details",
-      "https://edis.ifas.ufl.edu/publication/FP181",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b445"
+      "https://www.rhs.org.uk/plants/158275/cyperus-alternifolius-l/details",
+      "https://plants.ces.ncsu.edu/plants/cyperus-alternifolius/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?chr=48&isprofile=0&taxonid=255129",
+      "https://www.ourhouseplants.com/plants/umbrella-grass-cyperus",
+      "https://www.gardeningknowhow.com/houseplants/cyperus/cyperus-umbrella-plant.htm"
     ]
   }
 }

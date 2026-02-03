@@ -1,20 +1,21 @@
 {
   "external_id": "mammillaria_gracilis",
-  "name": "Thimble Cactus",
+  "name": "Mammillaria gracilis",
   "latin": "Mammillaria gracilis",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -32,14 +33,14 @@
           "pl": "Pełne słońce",
           "de": "Volle Sonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
+          "hi": "पूर्ण सूर्य",
+          "zh": "完全阳光",
           "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze drenowana",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良く排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "적은 물"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm tolerant",
-          "pl": "Lubi ciepło",
-          "de": "Wärmeliebend",
-          "fr": "Aime la chaleur",
-          "it": "Ama il caldo",
-          "es": "Tolera calor",
-          "pt": "Gosta de calor",
-          "ar": "يتحمل الدفء",
-          "hi": "गर्म पसंद",
-          "zh": "喜温暖",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "15-30°C",
+          "pl": "15-30°C",
+          "de": "15-30°C",
+          "fr": "15-30°C",
+          "it": "15-30°C",
+          "es": "15-30°C",
+          "pt": "15-30°C",
+          "ar": "15-30°C",
+          "hi": "15-30°C",
+          "zh": "15-30°C",
+          "ja": "15-30°C",
+          "ko": "15-30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgoć",
-          "de": "Geringe Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرति पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避けてください",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Thimble Cactus",
-      "description": "Mammillaria gracilis is a small clumping cactus native to Mexico. It thrives in bright sun and dry conditions with minimal watering. The plant is valued for its dense white spines and ease of care indoors."
+      "description": "Mammillaria gracilis is a small, easy-to-care-for cactus. It has dense clusters of small, spiny stems."
     },
     "pl": {
-      "common_name": "Kaktus naparstkowy",
-      "description": "Mammillaria gracilis to mały kaktus pochodzący z Meksyku. Wymaga dużo słońca i rzadkiego podlewania. Jest ceniony za białe kolce i łatwą uprawę w domu."
+      "common_name": "Kaktus paluszkowy",
+      "description": "Mammillaria gracilis to mały, łatwy w pielęgnacji kaktus. Ma gęste skupiska małych, kolczastych łodyg."
     },
     "de": {
-      "common_name": "Fingerhutkaktus",
-      "description": "Mammillaria gracilis ist ein kleiner, horstbildender Kaktus aus Mexiko. Er bevorzugt volle Sonne und sehr sparsames Gießen. Die Art ist pflegeleicht und für Innenräume geeignet."
+      "common_name": "Daumen Kaktus",
+      "description": "Mammillaria gracilis ist ein kleiner, pflegeleichter Kaktus. Er hat dichte Gruppen kleiner, stacheliger Stängel."
     },
     "fr": {
-      "common_name": "Cactus dé à coudre",
-      "description": "Mammillaria gracilis est un petit cactus originaire du Mexique. Il aime le plein soleil et un arrosage limité. Il est apprécié pour ses épines blanches et sa culture facile."
+      "common_name": "Cactus pouce",
+      "description": "Mammillaria gracilis est un petit cactus facile à entretenir. Il a des groupes denses de petites tiges épineuses."
     },
     "it": {
-      "common_name": "Cactus ditale",
-      "description": "Mammillaria gracilis è un piccolo cactus originario del Messico. Necessita di molto sole e poca acqua. È apprezzato per le spine bianche e la facile coltivazione."
+      "common_name": "Cactus dito",
+      "description": "Mammillaria gracilis è un piccolo cactus facile da curare. Ha densi gruppi di piccoli fusti spinosi."
     },
     "es": {
-      "common_name": "Cactus dedal",
-      "description": "Mammillaria gracilis es un cactus pequeño originario de México. Requiere sol intenso y riego escaso. Es popular por su aspecto compacto y fácil mantenimiento."
+      "common_name": "Cactus dedo",
+      "description": "Mammillaria gracilis es un pequeño cactus fácil de cuidar. Tiene grupos densos de pequeños tallos espinosos."
     },
     "pt": {
-      "common_name": "Cacto dedal",
-      "description": "Mammillaria gracilis é um pequeno cacto nativo do México. Prefere sol pleno e pouca água. É valorizado pela aparência compacta e fácil cuidado."
+      "common_name": "Cacto dedo",
+      "description": "Mammillaria gracilis é um pequeno cacto fácil de cuidar. Ele tem grupos densos de pequenos caules espinhosos."
     },
     "ar": {
-      "common_name": "صبار الإصبع",
-      "description": "Mammillaria gracilis صبار صغير موطنه المكسيك. يحتاج إلى شمس قوية وري محدود. يتميز بسهولة العناية وكثافة الأشواك البيضاء."
+      "common_name": "صبار الإبهام",
+      "description": "Mammillaria gracilis هو صبار صغير سهل العناية. يحتوي على مجموعات كثيفة من السيقان الصغيرة المغطاة بالأشواك."
     },
     "hi": {
-      "common_name": "थिम्बल कैक्टस",
-      "description": "Mammillaria gracilis मेक्सिको का छोटा कैक्टस है। इसे तेज धूप और कम पानी की आवश्यकता होती है। यह घर के अंदर उगाने में आसान है।"
+      "common_name": "अंगूठा कैक्टस",
+      "description": "Mammillaria gracilis एक छोटा, देखभाल में आसान कैक्टस है। इसमें छोटे, कांटेदार तनों के घने समूह होते हैं।"
     },
     "zh": {
-      "common_name": "顶针仙人掌",
-      "description": "Mammillaria gracilis 原产于墨西哥，是一种小型仙人掌。它需要充足阳光和很少的浇水。因外形紧凑且易于养护而受欢迎。"
+      "common_name": "拇指仙人掌",
+      "description": "Mammillaria gracilis 是一种小型且易于护理的仙人掌。它具有密集的小而多刺的茎群。"
     },
     "ja": {
-      "common_name": "指ぬきサボテン",
-      "description": "Mammillaria gracilis はメキシコ原産の小型サボテンです。強い日光と控えめな水やりを好みます。育てやすく室内向きです。"
+      "common_name": "親指サボテン",
+      "description": "Mammillaria gracilisは小さく、手入れが簡単なサボテンです。小さな棘のある茎が密集しています。"
     },
     "ko": {
-      "common_name": "팀블 선인장",
-      "description": "Mammillaria gracilis는 멕시코 원산의 작은 선인장입니다. 강한 햇빛과 적은 물을 필요로 합니다. 관리가 쉬워 실내 재배에 적합합니다."
+      "common_name": "엄지 선인장",
+      "description": "Mammillaria gracilis는 작은 손질하기 쉬운 선인장입니다. 작은 가시가 있는 줄기가 밀집되어 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11116/mammillaria-gracilis/details",
-      "https://www.cactus-art.biz/schede/MAMMILLARIA/Mammillaria_gracilis/Mammillaria_gracilis.htm",
-      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/11456/Mammillaria_gracilis"
+      "https://www.rhs.org.uk/plants/mammillaria-gracilis",
+      "https://www.gardeningknowhow.com/ornamental/cacti-succulents/mammillaria-gracilis.htm"
     ]
   }
 }

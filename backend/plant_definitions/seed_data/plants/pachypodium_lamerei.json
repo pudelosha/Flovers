@@ -7,11 +7,11 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -30,16 +30,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "ar": "أشعة شمس كاملة",
+          "hi": "पूरा सूर्य",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "フルサン",
+          "ko": "풀 태양"
         }
       }
     },
@@ -54,11 +54,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी तरह से निकासी",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
           "zh": "良好排水",
-          "ja": "排水良好",
-          "ko": "배수 좋은"
+          "ja": "良好な排水",
+          "ko": "잘 배수"
         }
       }
     },
@@ -77,7 +77,7 @@
           "hi": "मध्यम",
           "zh": "适中",
           "ja": "適度",
-          "ko": "적당히"
+          "ko": "적당한"
         }
       }
     },
@@ -95,7 +95,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Calor",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -131,10 +131,10 @@
           "es": "Baja",
           "pt": "Baixa",
           "ar": "منخفض",
-          "hi": "नम कम",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
         }
       }
     },
@@ -153,7 +153,7 @@
           "hi": "हां",
           "zh": "是",
           "ja": "はい",
-          "ko": "네"
+          "ko": "예"
         }
       }
     },
@@ -162,7 +162,7 @@
       "value": {
         "text": {
           "en": "Slow",
-          "pl": "Powolny",
+          "pl": "Wolny",
           "de": "Langsam",
           "fr": "Lent",
           "it": "Lento",
@@ -170,9 +170,47 @@
           "pt": "Lento",
           "ar": "بطيء",
           "hi": "धीमा",
-          "zh": "缓慢",
+          "zh": "慢",
           "ja": "遅い",
-          "ko": "느린"
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare eccessiva irrigazione",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,56 +218,56 @@
   "translations": {
     "en": {
       "common_name": "Madagascar Palm",
-      "description": "Pachypodium lamerei, also known as Madagascar Palm, is a spiny, slow-growing succulent native to Madagascar. It thrives in well-drained soil and needs moderate watering."
+      "description": "Pachypodium lamerei, commonly known as the Madagascar Palm, is a spiny, succulent plant native to Madagascar. It is prized for its unique appearance and low maintenance."
     },
     "pl": {
-      "common_name": "Palma z Madagaskaru",
-      "description": "Pachypodium lamerei, znana jako palma z Madagaskaru, to kolczasta, wolno rosnąca sukulentka pochodząca z Madagaskaru. Wymaga dobrze przepuszczalnej gleby i umiarkowanego podlewania."
+      "common_name": "Palma Madagaskarska",
+      "description": "Pachypodium lamerei, znana jako palma madagaskarska, to roślina sukulentowa pochodząca z Madagaskaru. Cieszy się popularnością dzięki swojej wyjątkowej formie i łatwej pielęgnacji."
     },
     "de": {
       "common_name": "Madagaskarpalme",
-      "description": "Pachypodium lamerei, auch Madagaskarpalme genannt, ist eine stachelige, langsam wachsende Sukkulente, die auf Madagaskar beheimatet ist. Sie benötigt gut durchlässigen Boden und mäßige Bewässerung."
+      "description": "Pachypodium lamerei, auch Madagaskarpalme genannt, ist eine stachelige, sukkulente Pflanze, die ursprünglich von Madagaskar stammt. Sie wird wegen ihres einzigartigen Aussehens geschätzt."
     },
     "fr": {
       "common_name": "Palmier de Madagascar",
-      "description": "Pachypodium lamerei, également appelé palmier de Madagascar, est une plante succulente épineuse à croissance lente originaire de Madagascar. Il a besoin d'un sol bien drainé et d'un arrosage modéré."
+      "description": "Pachypodium lamerei, connu sous le nom de palmier de Madagascar, est une plante succulente épineuse originaire de Madagascar. Elle est appréciée pour son apparence unique et son entretien facile."
     },
     "it": {
       "common_name": "Palma di Madagascar",
-      "description": "Pachypodium lamerei, conosciuta anche come palma di Madagascar, è una pianta succulenta spinosa a crescita lenta originaria del Madagascar. Ha bisogno di un terreno ben drenato e di annaffiature moderate."
+      "description": "Pachypodium lamerei, noto come palma di Madagascar, è una pianta succulenta spinosa originaria del Madagascar. È apprezzata per il suo aspetto unico e la cura facile."
     },
     "es": {
       "common_name": "Palma de Madagascar",
-      "description": "Pachypodium lamerei, también conocida como palma de Madagascar, es una suculenta espinosa de crecimiento lento originaria de Madagascar. Necesita un suelo bien drenado y un riego moderado."
+      "description": "Pachypodium lamerei, conocida como palma de Madagascar, es una planta suculenta espinosa originaria de Madagascar. Es apreciada por su apariencia única y su fácil mantenimiento."
     },
     "pt": {
       "common_name": "Palmeira de Madagascar",
-      "description": "Pachypodium lamerei, também conhecida como palmeira de Madagascar, é uma suculenta espinhosa de crescimento lento originária de Madagascar. Ela precisa de solo bem drenado e rega moderada."
+      "description": "Pachypodium lamerei, conhecida como palmeira de Madagascar, é uma planta suculenta espinhosa originária de Madagascar. É valorizada por sua aparência única e fácil cuidado."
     },
     "ar": {
       "common_name": "نخلة مدغشقر",
-      "description": "Pachypodium lamerei، المعروف أيضًا بنخلة مدغشقر، هو نبات عصاري شوكي ينمو ببطء من مدغشقر. يحتاج إلى تربة جيدة التصريف وري معتدل."
+      "description": "Pachypodium lamerei، المعروفة باسم نخلة مدغشقر، هي نبات عصاري شائك موطنه الأصلي مدغشقر. إنها تحظى بشعبية بسبب مظهرها الفريد وسهولة العناية بها."
     },
     "hi": {
-      "common_name": "मदागास्कर पाम",
-      "description": "Pachypodium lamerei, जिसे मदागास्कर पाम के नाम से भी जाना जाता है, एक कांटेदार, धीमी गति से बढ़ने वाली मांसल पौधा है जो मदागास्कर का मूल निवासी है। इसे अच्छी जल निकासी वाली मिट्टी और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "मेडागास्कर पाम",
+      "description": "Pachypodium lamerei, जिसे मेडागास्कर पाम के नाम से जाना जाता है, एक कांटेदार, रसदार पौधा है जो मेडागास्कर का मूल निवासी है। इसकी अनूठी उपस्थिति और कम देखभाल के लिए इसे सराहा जाता है।"
     },
     "zh": {
       "common_name": "马达加斯加棕榈",
-      "description": "Pachypodium lamerei，亦称马达加斯加棕榈，是一种生长缓慢的多肉植物，原产于马达加斯加。它需要良好排水的土壤和适度的浇水。"
+      "description": "Pachypodium lamerei，常称为马达加斯加棕榈，是一种来自马达加斯加的多刺多肉植物。因其独特的外观和低维护需求而受到喜爱。"
     },
     "ja": {
       "common_name": "マダガスカル・パーム",
-      "description": "Pachypodium lamerei、別名マダガスカル・パームは、マダガスカル原産の棘のある成長の遅い多肉植物です。良好な排水性の土壌と適度な水やりが必要です。"
+      "description": "Pachypodium lamerei、一般にマダガスカル・パームとして知られるこの植物は、マダガスカル原産のトゲのある多肉植物です。そのユニークな外観と手入れの簡単さで人気です。"
     },
     "ko": {
-      "common_name": "마다가스카르 팜",
-      "description": "Pachypodium lamerei, 마다가스카르 팜이라고도 알려진 이 식물은 마다가스카르가 원산지인 가시가 있는 느리게 자라는 다육식물입니다. 배수가 좋은 토양과 적당한 물주기가 필요합니다."
+      "common_name": "마다가스카르 야자",
+      "description": "Pachypodium lamerei, 일반적으로 마다가스카르 야자로 알려진 이 식물은 마다가스카르 원산의 가시가 있는 다육 식물입니다. 독특한 외관과 관리가 쉬운 것으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=318",
+      "https://www.rhs.org.uk/plants/pachypodium-lamerei",
       "https://www.gardenia.net/plant/pachypodium-lamerei"
     ]
   }

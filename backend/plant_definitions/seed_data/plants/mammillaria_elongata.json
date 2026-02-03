@@ -1,19 +1,21 @@
 {
   "external_id": "mammillaria_elongata",
-  "name": "Ladyfinger cactus",
+  "name": "Golden Rat Tail Cactus",
   "latin": "Mammillaria elongata",
-  "sun": "high",
+  "sun": "medium",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
+    "plastic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct sun",
-          "pl": "Jasne pełne słońce",
-          "de": "Helle volle Sonne",
-          "fr": "Plein soleil vif",
-          "it": "Sole pieno",
-          "es": "Sol directo",
-          "pt": "Sol direto",
-          "ar": "شمس مباشرة",
-          "hi": "तेज धूप",
-          "zh": "强烈直射光",
-          "ja": "強い直射日光",
-          "ko": "강한 직사광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "जल निकासी मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり少なめ",
-          "ko": "물 적게"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Wässern, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando asciutto",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يجف",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "干燥时浇水",
+          "ja": "乾燥したら水を与える",
+          "ko": "건조할 때 물 주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm preferred",
-          "pl": "Lubi ciepło",
-          "de": "Bevorzugt warm",
-          "fr": "Aime la chaleur",
-          "it": "Preferisce caldo",
-          "es": "Prefiere calor",
-          "pt": "Prefere calor",
-          "ar": "يفضل الدفء",
-          "hi": "गर्म पसंद",
-          "zh": "喜温暖",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,13 +126,13 @@
         "text": {
           "en": "Low humidity",
           "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchte",
-          "fr": "Faible humidité",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
           "it": "Bassa umidità",
           "es": "Baja humedad",
           "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
+          "hi": "नममी कम",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
           "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow clumping",
-          "pl": "Wolno kępiasta",
-          "de": "Langsam horstig",
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "缓慢生长",
-          "ja": "成長は遅い",
-          "ko": "느린 성장"
+          "hi": "धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać nadmiernie",
+          "de": "Nicht überbewässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تسقي كثيرًا",
+          "hi": "अفرोक पानी से बचें",
+          "zh": "不要过度浇水",
+          "ja": "水やり過ぎないで",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ladyfinger cactus",
-      "description": "Mammillaria elongata is a small clumping cactus native to central Mexico. It has cylindrical stems covered with dense golden spines. It is widely grown indoors for its easy care and compact size."
+      "common_name": "Golden Rat Tail Cactus",
+      "description": "Mammillaria elongata, known as the Golden Rat Tail Cactus, is a small, spiny succulent native to Mexico. It is easy to care for and well-suited to indoor environments."
     },
     "pl": {
-      "common_name": "Mammillaria wydłużona",
-      "description": "Mammillaria elongata to niewielki kaktus kępiasty pochodzący z Meksyku. Tworzy cylindryczne pędy z gęstymi złotymi kolcami. Jest łatwa w uprawie w warunkach domowych."
+      "common_name": "Złoty Kaktus Ogon Rata",
+      "description": "Mammillaria elongata, znany jako Złoty Kaktus Ogon Rata, to mały, kolczasty sukulent pochodzący z Meksyku. Jest łatwy w pielęgnacji i dobrze nadaje się do wnętrz."
     },
     "de": {
-      "common_name": "Fingerkaktus",
-      "description": "Mammillaria elongata ist ein kleiner, horstbildender Kaktus aus Mexiko. Er besitzt zylindrische Triebe mit dichten goldenen Dornen. Die Art ist pflegeleicht und gut für Innenräume geeignet."
+      "common_name": "Goldene Rattenschwanzkaktus",
+      "description": "Mammillaria elongata, bekannt als der Goldene Rattenschwanzkaktus, ist ein kleiner, stacheliger Sukkulent aus Mexiko. Er ist pflegeleicht und eignet sich gut für den Innenbereich."
     },
     "fr": {
-      "common_name": "Cactus doigt",
-      "description": "Mammillaria elongata est un petit cactus originaire du Mexique central. Il forme des tiges cylindriques couvertes d’épines dorées. Il est apprécié comme plante d’intérieur facile."
+      "common_name": "Cactus Queue de Rat Dorée",
+      "description": "Mammillaria elongata, connu sous le nom de Cactus Queue de Rat Dorée, est une petite succulente épineuse originaire du Mexique. Facile à entretenir, elle est idéale pour les environnements intérieurs."
     },
     "it": {
-      "common_name": "Cactus dita",
-      "description": "Mammillaria elongata è un piccolo cactus originario del Messico. Presenta fusti cilindrici con fitte spine dorate. È molto coltivato come pianta da interno per la sua facilità di cura."
+      "common_name": "Cactus Coda di Topo Dorato",
+      "description": "Mammillaria elongata, noto come il Cactus Coda di Topo Dorato, è una piccola succulenta spinosa originaria del Messico. È facile da curare ed è adatta per ambienti interni."
     },
     "es": {
-      "common_name": "Cactus dedo",
-      "description": "Mammillaria elongata es un cactus pequeño originario de México. Tiene tallos cilíndricos con espinas doradas densas. Es popular como planta de interior por su bajo mantenimiento."
+      "common_name": "Cactus Cola de Rata Dorada",
+      "description": "Mammillaria elongata, conocida como el Cactus Cola de Rata Dorada, es una pequeña suculenta espinosa originaria de México. Es fácil de cuidar y adecuada para interiores."
     },
     "pt": {
-      "common_name": "Cacto dedo",
-      "description": "Mammillaria elongata é um pequeno cacto do México central. Possui caules cilíndricos com espinhos dourados. É comum em cultivo doméstico devido à sua resistência."
+      "common_name": "Cacto Rabo de Rato Dourado",
+      "description": "Mammillaria elongata, conhecida como Cacto Rabo de Rato Dourado, é uma pequena suculenta espinhosa nativa do México. É fácil de cuidar e adequada para ambientes internos."
     },
     "ar": {
-      "common_name": "صبار الإصبع",
-      "description": "ماميلاريا إيلونغاتا صبار صغير موطنه المكسيك. يتميز بسيقان أسطوانية مغطاة بأشواك ذهبية كثيفة. يزرع كنبات داخلي سهل العناية."
+      "common_name": "صبار ذيل الفأر الذهبي",
+      "description": "Mammillaria elongata، المعروف بصبار ذيل الفأر الذهبي، هو عصاري صغير مليء بالأشواك من المكسيك. من السهل العناية به وهو مناسب للبيئات الداخلية."
     },
     "hi": {
-      "common_name": "लेडीफिंगर कैक्टस",
-      "description": "मेमिलेरिया एलोन्गाटा मेक्सिको का एक छोटा कैक्टस है। इसके तने बेलनाकार और सुनहरे कांटों से ढके होते हैं। यह घर के अंदर उगाने में आसान है।"
+      "common_name": "गोल्डन रैट टेल कैक्टस",
+      "description": "Mammillaria elongata, जिसे गोल्डन रैट टेल कैक्टस के नाम से जाना जाता है, एक छोटा, कांटेदार पौधा है जो मेक्सिको का मूल निवासी है। यह देखभाल में आसान है और आंतरिक वातावरण के लिए उपयुक्त है।"
     },
     "zh": {
-      "common_name": "指状乳突球",
-      "description": "Mammillaria elongata 原产于墨西哥中部。它具有覆盖金色刺的圆柱形茎。因易于养护而常作为室内植物栽培。"
+      "common_name": "金色鼠尾仙人掌",
+      "description": "Mammillaria elongata，又名金色鼠尾仙人掌，是一种来自墨西哥的小型多刺仙人掌。它易于养护，适合室内环境。"
     },
     "ja": {
-      "common_name": "指サボテン",
-      "description": "マミラリア・エロンガータはメキシコ原産の小型サボテンです。金色の棘に覆われた円柱状の茎を持ちます。室内でも育てやすい品種です。"
+      "common_name": "ゴールデンラットテールサボテン",
+      "description": "Mammillaria elongata、ゴールデンラットテールサボテンとして知られるこの植物は、メキシコ原産の小さな棘のある多肉植物です。手入れが簡単で、屋内環境に適しています。"
     },
     "ko": {
-      "common_name": "핑거 선인장",
-      "description": "마밀라리아 엘롱가타는 멕시코 원산의 작은 선인장입니다. 황금색 가시가 촘촘한 원통형 줄기를 가집니다. 관리가 쉬워 실내 재배에 적합합니다."
+      "common_name": "골든 랫 테일 선인장",
+      "description": "Mammillaria elongata, 골든 랫 테일 선인장으로 알려진 이 식물은 멕시코 원산의 작은 가시가 많은 다육 식물입니다. 관리가 쉬워 실내 환경에 적합합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/mammillaria-elongata",
-      "https://www.rhs.org.uk/plants/10265/mammillaria-elongata/details",
-      "https://cactus-art.biz/schede/MAMMILLARIA/Mammillaria_elongata/Mammillaria_elongata.htm"
+      "https://www.rhs.org.uk/advice/profile?pid=812",
+      "https://www.gardenia.net/plant/mammillaria-elongata"
     ]
   }
 }

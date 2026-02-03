@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "peperomia_griseoargentea.jpg",
   "image_thumb": "peperomia_griseoargentea.jpg",
   "traits": [
@@ -40,7 +40,7 @@
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 밝기"
+          "ko": "중간 조명"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka aroidowa",
-          "de": "Aroid-Mischung",
-          "fr": "Mélange pour aroides",
-          "it": "Miscela per aroidi",
-          "es": "Mezcla para aroides",
-          "pt": "Mistura para aroides",
-          "ar": "مزيج أرويدي",
-          "hi": "एरोइड मिश्रण",
-          "zh": "马铃薯混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 혼합토"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittleres Gießen",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "سقي متوسط",
-          "hi": "मध्यम पानी",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 급수"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري عادي",
+          "hi": "मध्यम जलप्रवाह",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyen",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中湿度",
-          "ko": "중간 습도"
+          "en": "Likes humidity",
+          "pl": "Lubi wilgotność",
+          "de": "Mag Feuchtigkeit",
+          "fr": "Aime l'humidité",
+          "it": "Ama l'umidità",
+          "es": "Le gusta la humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद करता है",
+          "zh": "喜欢湿度",
+          "ja": "湿度が好き",
+          "ko": "습도를 좋아함"
         }
       }
     },
@@ -145,15 +145,15 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "비독성"
         }
       }
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow-growing",
-          "pl": "Wolno rosnący",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमे वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "遅い成長",
-          "ko": "느린 성장"
+          "en": "Compact growth",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompaktes Wachstum",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مدمج",
+          "hi": "संकुचित वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクトな成長",
+          "ko": "콤팩트 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기를 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Silverleaf Peperomia",
-      "description": "Peperomia griseoargentea is a small, slow-growing perennial native to tropical rainforests. It features heart-shaped, silvery leaves with dark veins."
+      "description": "Peperomia griseoargentea, also known as Silverleaf Peperomia, is a compact houseplant with silver-grey foliage. It thrives in moderate light and enjoys a humid environment."
     },
     "pl": {
       "common_name": "Peperomia srebrzysta",
-      "description": "Peperomia griseoargentea to mała, wolno rosnąca roślina wieloletnia, pochodząca z tropikalnych lasów deszczowych. Ma sercowate, srebrzyste liście z ciemnymi żyłkami."
+      "description": "Peperomia griseoargentea, znana również jako peperomia srebrzysta, to kompaktowa roślina doniczkowa o srebrno-szarych liściach. Wymaga umiarkowanego światła i wilgotnego środowiska."
     },
     "de": {
       "common_name": "Silberblatt-Peperomie",
-      "description": "Peperomia griseoargentea ist eine kleine, langsam wachsende Staude aus tropischen Regenwäldern. Sie hat herzförmige, silberne Blätter mit dunklen Adern."
+      "description": "Die Peperomia griseoargentea, auch Silberblatt-Peperomie genannt, ist eine kompakte Zimmerpflanze mit silbergrauem Laub. Sie gedeiht bei mittlerem Licht und in einer feuchten Umgebung."
     },
     "fr": {
-      "common_name": "Peperomia argentée",
-      "description": "Peperomia griseoargentea est une plante vivace petite et à croissance lente, originaire des forêts tropicales. Elle présente des feuilles en forme de cœur, argentées, avec des nervures sombres."
+      "common_name": "Peperomia à feuilles argentées",
+      "description": "La Peperomia griseoargentea, également connue sous le nom de Peperomia à feuilles argentées, est une plante compacte à feuillage argenté. Elle préfère une lumière modérée et un environnement humide."
     },
     "it": {
-      "common_name": "Peperomia argentata",
-      "description": "Peperomia griseoargentea è una pianta perenne di piccole dimensioni, a crescita lenta, originaria delle foreste tropicali. Ha foglie a forma di cuore di colore argenteo con venature scure."
+      "common_name": "Peperomia argentea",
+      "description": "La Peperomia griseoargentea, nota anche come Peperomia argentea, è una pianta compatta con foglie argento-grigie. Cresce bene in luce moderata e in ambienti umidi."
     },
     "es": {
-      "common_name": "Peperomia plateada",
-      "description": "Peperomia griseoargentea es una planta perenne pequeña y de crecimiento lento, originaria de los bosques tropicales. Tiene hojas en forma de corazón, plateadas, con venas oscuras."
+      "common_name": "Peperomia de hojas plateadas",
+      "description": "La Peperomia griseoargentea, también conocida como Peperomia de hojas plateadas, es una planta compacta con follaje gris plateado. Crece bien con luz moderada y en ambientes húmedos."
     },
     "pt": {
-      "common_name": "Peperomia prateada",
-      "description": "Peperomia griseoargentea é uma planta perene pequena e de crescimento lento, nativa das florestas tropicais. Possui folhas em forma de coração, prateadas, com veias escuras."
+      "common_name": "Peperomia de folhas prateadas",
+      "description": "A Peperomia griseoargentea, também conhecida como Peperomia de folhas prateadas, é uma planta compacta com folhas prateadas. Ela se adapta bem à luz moderada e ambientes úmidos."
     },
     "ar": {
-      "common_name": "بيبيروميا فضية",
-      "description": "Peperomia griseoargentea هي نبات صغير المعمر ذو نمو بطيء، موطنه الغابات الاستوائية. يتميز بأوراق على شكل قلب باللون الفضي مع عروق داكنة."
+      "common_name": "بيبروميا فضية الأوراق",
+      "description": "بيبروميا غريسيوارجينتيا، والمعروفة أيضًا باسم بيبروميا فضية الأوراق، هي نبتة مدمجة بأوراق فضية رمادية. تزدهر في الضوء المعتدل وتحتاج إلى بيئة رطبة."
     },
     "hi": {
       "common_name": "चांदी पत्तेदार पेपेरोमिया",
-      "description": "Peperomia griseoargentea एक छोटी, धीमी वृद्धि वाली बारहमासी है, जो उष्णकटिबंधीय वर्षा वनों की निवासी है। इसके दिल के आकार के, चांदी जैसे पत्ते होते हैं, जिनमें गहरे नसें होती हैं।"
+      "description": "पेपेरोमिया ग्रेसीओआर्जेंटिया, जिसे चांदी पत्तेदार पेपेरोमिया भी कहा जाता है, एक संकुचित पौधा है जिसमें चांदी-धूसर पत्ते होते हैं। यह मध्यम रोशनी और नम वातावरण में पनपता है।"
     },
     "zh": {
-      "common_name": "银叶椒草",
-      "description": "Peperomia griseoargentea 是一种小型、缓慢生长的多年生植物，原产于热带雨林。它具有心形的银色叶片，带有深色脉络。"
+      "common_name": "银叶景天",
+      "description": "银叶景天（Peperomia griseoargentea）是一种紧凑型室内植物，具有银灰色的叶子。它喜欢中等光照和潮湿的环境。"
     },
     "ja": {
-      "common_name": "シルバーリーフペペロミア",
-      "description": "Peperomia griseoargentea は小さくて成長が遅い多年草で、熱帯雨林に自生しています。ハート型の銀色の葉に暗い脈が特徴です。"
+      "common_name": "シルバーリーフ・ペペロミア",
+      "description": "ペペロミア・グリセオアルゲンテアは、シルバーリーフ・ペペロミアとも呼ばれ、コンパクトな室内植物で、銀灰色の葉を持っています。中程度の光と湿度の高い環境が好きです。"
     },
     "ko": {
       "common_name": "실버리프 페페로미아",
-      "description": "Peperomia griseoargentea는 열대 우림 원산지의 작은 다년생 식물로, 둥근 심장 모양의 은색 잎과 어두운 줄무늬가 특징입니다."
+      "description": "페페로미아 그리세오아르젠테아, 또는 실버리프 페페로미아는 은색-회색의 잎을 가진 컴팩트한 실내 식물입니다. 이 식물은 중간 정도의 빛과 습한 환경에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/peperomia-griseoargentea",
-      "https://www.botanicus.org/peperomia-griseoargentea-care"
+      "https://www.gardeningknowhow.com/houseplants/peperomia/peperomia-care.htm"
     ]
   }
 }

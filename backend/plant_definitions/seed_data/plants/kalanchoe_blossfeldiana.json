@@ -1,26 +1,27 @@
 {
   "external_id": "kalanchoe_blossfeldiana",
-  "name": "Kalanchoe",
+  "name": "Kalanchoe blossfeldiana",
   "latin": "Kalanchoe blossfeldiana",
   "sun": "high",
-  "water": "low",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "kalanchoe_blossfeldiana.jpg",
   "image_thumb": "kalanchoe_blossfeldiana.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Bright, direct light",
+          "pl": "Jasne, bezpośrednie światło",
+          "de": "Helles, direktes Licht",
+          "fr": "Lumière vive, directe",
+          "it": "Luce brillante, diretta",
+          "es": "Luz brillante, directa",
+          "pt": "Luz brilhante, direta",
+          "ar": "ضوء ساطع ومباشر",
+          "hi": "तेज, प्रत्यक्ष प्रकाश",
+          "zh": "明亮、直射光",
+          "ja": "明るい直射日光",
+          "ko": "밝고 직사광선"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage léger",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ水",
-          "ko": "물 적게"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Gießen, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando asciutto",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "干时浇水",
+          "ja": "乾いたら水をやる",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -85,8 +86,8 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
+          "en": "Easy",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -94,9 +95,9 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易养护",
+          "zh": "简单",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -111,7 +112,7 @@
           "it": "18–24°C",
           "es": "18–24°C",
           "pt": "18–24°C",
-          "ar": "18–24°م",
+          "ar": "18–24°C",
           "hi": "18–24°C",
           "zh": "18–24°C",
           "ja": "18–24°C",
@@ -124,14 +125,14 @@
       "value": {
         "text": {
           "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible humid.",
-          "it": "Bassa umid.",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
           "es": "Baja humedad",
-          "pt": "Baixa umid.",
+          "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
+          "hi": "कम आर्द्रता",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
           "zh": "对宠物有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,76 +163,113 @@
       "value": {
         "text": {
           "en": "Compact growth",
-          "pl": "Zwarty wzrost",
-          "de": "Kompakt",
-          "fr": "Compacte",
-          "it": "Compatta",
-          "es": "Compacta",
-          "pt": "Compacta",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompakte Wachstumsform",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
           "ar": "نمو مدمج",
-          "hi": "सघन वृद्धि",
+          "hi": "संपीड़ित वृद्धि",
           "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "컴팩트"
+          "ja": "コンパクトな成長",
+          "ko": "콤팩트 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter un arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水をやり過ぎないように",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम-सम्बंधी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Flaming Katy",
-      "description": "Kalanchoe blossfeldiana is a compact succulent known for long-lasting colorful flowers. It prefers bright light and infrequent watering."
+      "common_name": "Flowering Kalanchoe",
+      "description": "Kalanchoe blossfeldiana is a popular flowering succulent known for its bright, colorful blooms. It thrives in bright light and needs careful watering."
     },
     "pl": {
-      "common_name": "Kalanchoe",
-      "description": "Kalanchoe blossfeldiana to sukulent o barwnych kwiatach. Wymaga jasnego stanowiska i rzadkiego podlewania."
+      "common_name": "Kalanchoe kwitnące",
+      "description": "Kalanchoe blossfeldiana to popularny sukulent kwitnący, znany ze swoich jasnych, kolorowych kwiatów. Wymaga jasnego światła i ostrożnego podlewania."
     },
     "de": {
-      "common_name": "Flammendes Käthchen",
-      "description": "Kalanchoe blossfeldiana ist eine blühende Sukkulente mit dichter Form. Sie mag viel Licht und wenig Wasser."
+      "common_name": "Blühende Kalanchoe",
+      "description": "Kalanchoe blossfeldiana ist eine beliebte blühende Sukkulente, die für ihre hellen, bunten Blüten bekannt ist. Sie gedeiht bei hellem Licht und benötigt vorsichtiges Gießen."
     },
     "fr": {
-      "common_name": "Kalanchoé",
-      "description": "Kalanchoe blossfeldiana est une plante grasse à floraison durable. Elle aime la lumière vive et peu d’arrosage."
+      "common_name": "Kalanchoé en fleurs",
+      "description": "Kalanchoe blossfeldiana est une succulente à fleurs populaires, connue pour ses fleurs lumineuses et colorées. Elle préfère la lumière vive et un arrosage modéré."
     },
     "it": {
-      "common_name": "Calancola",
-      "description": "Kalanchoe blossfeldiana è una succulenta ornamentale compatta. Richiede luce intensa e annaffiature moderate."
+      "common_name": "Kalanchoe fiorita",
+      "description": "Kalanchoe blossfeldiana è una popolare succulenta fiorita, conosciuta per i suoi fiori brillanti e colorati. Cresce bene in luce intensa e necessita di un'annaffiatura accurata."
     },
     "es": {
-      "common_name": "Calanchoe",
-      "description": "Kalanchoe blossfeldiana es una suculenta de floración vistosa. Prefiere luz brillante y riego escaso."
+      "common_name": "Kalanchoe floreciente",
+      "description": "Kalanchoe blossfeldiana es una suculenta floreciente popular, conocida por sus flores brillantes y coloridas. Necesita mucha luz y un riego cuidadoso."
     },
     "pt": {
-      "common_name": "Calanchoê",
-      "description": "Kalanchoe blossfeldiana é uma suculenta compacta e florífera. Gosta de luz intensa e pouca água."
+      "common_name": "Kalanchoe florido",
+      "description": "Kalanchoe blossfeldiana é uma suculenta popular, conhecida por suas flores brilhantes e coloridas. Prefere luz intensa e precisa de rega cuidadosa."
     },
     "ar": {
-      "common_name": "كالانشو",
-      "description": "نبات كالانشو بلوسفيلديانا عصاري مزهر. يفضل الضوء الساطع والري القليل."
+      "common_name": "كالانشو المزهرة",
+      "description": "كالانشو بلسفيلديانا هو نبات عصاري مزهر شائع معروف بزهوره الساطعة والملونة. ينمو بشكل جيد في الضوء الساطع ويحتاج إلى الري الحذر."
     },
     "hi": {
-      "common_name": "कैलनकोई",
-      "description": "कैलनकोई ब्लॉसफेल्डियाना एक फूलदार रसीला पौधा है। इसे तेज रोशनी और कम पानी चाहिए।"
+      "common_name": "फूलदार कलानचो",
+      "description": "कलानचो ब्लॉस्फेल्डियाना एक लोकप्रिय फूलदार succulent है जो अपनी चमकदार, रंगीन कलियों के लिए जाना जाता है। यह उज्ज्वल प्रकाश में पनपता है और पानी देने में सावधानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "长寿花",
-      "description": "长寿花是一种紧凑型多肉植物，花期长。喜欢明亮光照和少量浇水。"
+      "common_name": "开花的科兰兰",
+      "description": "Kalanchoe blossfeldiana 是一种受欢迎的开花多肉植物，因其明亮的彩色花朵而闻名。它在明亮的光线下茁壮成长，并且需要小心浇水。"
     },
     "ja": {
-      "common_name": "カランコエ",
-      "description": "カランコエは花が長持ちする多肉植物です。明るい光と控えめな水やりを好みます。"
+      "common_name": "開花カランコエ",
+      "description": "Kalanchoe blossfeldianaは、明るくカラフルな花で知られる人気のある花の多肉植物です。明るい光で育ち、慎重な水やりが必要です。"
     },
     "ko": {
-      "common_name": "칼랑코에",
-      "description": "칼랑코에는 꽃이 오래가는 다육식물입니다. 밝은 빛과 적은 물을 선호합니다."
+      "common_name": "꽃이 피는 칼란코에",
+      "description": "칼란코에 블로스펠디아나는 밝고 화려한 꽃으로 유명한 인기 있는 꽃 다육 식물입니다. 밝은 빛에서 잘 자라며 신중한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/9751/kalanchoe-blossfeldiana/details",
-      "https://www.gardenersworld.com/plants/kalanchoe-blossfeldiana/",
-      "https://extension.umn.edu/houseplants/kalanchoe"
+      "https://www.rhs.org.uk/advice/profile?pid=258",
+      "https://www.gardenersworld.com/plants/kalanchoe-blooming-joy/"
     ]
   }
 }

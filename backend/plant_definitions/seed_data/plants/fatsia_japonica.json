@@ -7,17 +7,16 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Światło średnie",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等光照",
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
           "ja": "明るい日陰",
-          "ko": "중간 밝기"
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -50,16 +49,16 @@
         "text": {
           "en": "Rich, well-drained",
           "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche drainé",
-          "it": "Ricco drenato",
-          "es": "Rico y drenado",
-          "pt": "Rico e drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "de": "Nährstoffreich, drain.",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غني وجيد التصريف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥, 배수 좋게"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Podlewanie regularne",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "정기적 물주기"
+          "en": "Evenly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, sans excès",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, sin encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطب دون إغراق",
+          "hi": "नम, पर दलदली नहीं",
+          "zh": "保持微湿",
+          "ja": "乾かし過ぎない",
+          "ko": "촉촉, 과습 금지"
         }
       }
     },
@@ -96,7 +95,7 @@
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
-          "ja": "簡単",
+          "ja": "育てやすい",
           "ko": "쉬움"
         }
       }
@@ -115,7 +114,7 @@
           "ar": "10–24°م",
           "hi": "10–24°C",
           "zh": "10–24°C",
-          "ja": "10–24℃",
+          "ja": "10–24°C",
           "ko": "10–24°C"
         }
       }
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "सामान्य",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average to humid",
+          "pl": "Średnia do wysokiej",
+          "de": "Mittel bis hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media-alta",
+          "es": "Media a alta",
+          "pt": "Média a alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम से अधिक",
+          "zh": "中等到偏高",
+          "ja": "普通〜やや高め",
+          "ko": "보통~약간 높게"
         }
       }
     },
@@ -144,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "विषैला नहीं",
+          "hi": "विषैली नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Shrub",
-          "pl": "Krzew",
-          "de": "Strauch",
-          "fr": "Arbuste",
-          "it": "Arbusto",
-          "es": "Arbusto",
-          "pt": "Arbusto",
-          "ar": "شجيرة",
-          "hi": "झाड़ी",
-          "zh": "灌木",
-          "ja": "低木",
-          "ko": "관목"
+          "en": "Shrubby, moderate",
+          "pl": "Krzewiasta, umiark.",
+          "de": "Strauchig, mäßig",
+          "fr": "Arbustive, modérée",
+          "it": "Arbustiva, moderata",
+          "es": "Arbustiva, moderada",
+          "pt": "Arbustiva, moderada",
+          "ar": "شجيرية، معتدلة",
+          "hi": "झाड़ीदार, मध्यम",
+          "zh": "灌木状，中等",
+          "ja": "低木状・中程度",
+          "ko": "관목형, 중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No hot sun, no soggy",
+          "pl": "Nie ostre słońce",
+          "de": "Keine Staunässe",
+          "fr": "Pas de soleil brûlant",
+          "it": "No sole forte",
+          "es": "No sol fuerte",
+          "pt": "Evite sol forte",
+          "ar": "تجنب الشمس الحارة",
+          "hi": "कड़ी धूप नहीं",
+          "zh": "避烈日与积水",
+          "ja": "直射日光NG",
+          "ko": "강한 햇빛·과습X"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mites, mealy",
+          "pl": "Tarczniki, przędziorki",
+          "de": "Schildläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي وحلم",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "介壳虫、螨虫",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레·응애"
         }
       }
     }
@@ -181,58 +218,59 @@
   "translations": {
     "en": {
       "common_name": "Japanese aralia",
-      "description": "Fatsia japonica is an evergreen shrub native to Japan and Korea. It is valued for its large glossy leaves and tolerance of indoor conditions. The plant prefers bright indirect light and evenly moist soil."
+      "description": "Evergreen shrub with large, glossy, palmate leaves that can be grown as a bright-shade houseplant. Keep the potting mix evenly moist but not waterlogged, and reduce watering in winter. A cooler, well-ventilated spot and occasional leaf misting help it stay healthy indoors."
     },
     "pl": {
       "common_name": "Aralia japońska",
-      "description": "Fatsia japonica to zimozielony krzew pochodzący z Japonii i Korei. Ceniona jest za duże, błyszczące liście i dobrą tolerancję warunków domowych. Lubi jasne, rozproszone światło i umiarkowanie wilgotne podłoże."
+      "description": "Zimozielony krzew o dużych, błyszczących, dłoniastych liściach, często uprawiany w mieszkaniu. Podłoże utrzymuj lekko wilgotne, ale bez zastoin wody, a zimą podlewaj rzadziej. Lubi chłodniejsze, przewiewne miejsce i okresowe zraszanie liści."
     },
     "de": {
       "common_name": "Japanische Aralie",
-      "description": "Fatsia japonica ist ein immergrüner Strauch aus Japan und Korea. Sie wird wegen ihrer großen glänzenden Blätter und Robustheit geschätzt. Die Pflanze bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde."
+      "description": "Immergrüner Strauch mit großen, glänzenden, handförmigen Blättern, auch als Zimmerpflanze geeignet. Substrat gleichmäßig feucht halten, aber Staunässe vermeiden und im Winter weniger gießen. Ein kühler, gut gelüfteter Standort und gelegentliches Besprühen der Blätter sind hilfreich."
     },
     "fr": {
       "common_name": "Aralie du Japon",
-      "description": "Fatsia japonica est un arbuste persistant originaire du Japon et de Corée. Elle est appréciée pour ses grandes feuilles brillantes et sa facilité de culture. Elle préfère une lumière vive indirecte et un sol légèrement humide."
+      "description": "Arbuste persistant aux grandes feuilles palmées et luisantes, cultivable en intérieur à la lumière indirecte. Gardez le substrat légèrement humide sans excès et espacez les arrosages en hiver. Une pièce plutôt fraîche et aérée, avec une brumisation occasionnelle, convient bien."
     },
     "it": {
       "common_name": "Aralia giapponese",
-      "description": "Fatsia japonica è un arbusto sempreverde originario di Giappone e Corea. È apprezzato per le grandi foglie lucide e la buona adattabilità in casa. Predilige luce indiretta e terreno costantemente umido."
+      "description": "Arbusto sempreverde con grandi foglie lucide e palmate, adatto anche come pianta da interno in luce indiretta. Mantieni il terriccio leggermente umido senza ristagni e riduci le annaffiature in inverno. Preferisce temperature fresche e una leggera nebulizzazione delle foglie."
     },
     "es": {
       "common_name": "Aralia japonesa",
-      "description": "Fatsia japonica es un arbusto perenne originario de Japón y Corea. Destaca por sus hojas grandes y brillantes y su fácil cultivo en interiores. Prefiere luz indirecta brillante y riego regular."
+      "description": "Arbusto perenne con hojas grandes, brillantes y palmadas, que puede cultivarse como planta de interior en luz indirecta. Mantén el sustrato ligeramente húmedo sin encharcar y reduce el riego en invierno. Un ambiente más fresco y ventilado y una pulverización ocasional ayudan."
     },
     "pt": {
       "common_name": "Arália-japonesa",
-      "description": "Fatsia japonica é um arbusto perene nativo do Japão e da Coreia. É valorizado pelas folhas grandes e brilhantes e pela facilidade de cultivo. Prefere luz indireta e solo levemente úmido."
+      "description": "Arbusto perene com folhas grandes, brilhantes e palmadas, que pode ser cultivado em interior com luz indireta. Mantenha o substrato levemente úmido sem encharcar e reduza as regas no inverno. Prefere ambiente mais fresco e ventilado e borrifadas ocasionais nas folhas."
     },
     "ar": {
       "common_name": "الأراليا اليابانية",
-      "description": "نبات فاتسيا جابونيكا شجيرة دائمة الخضرة موطنها اليابان وكوريا. تشتهر بأوراقها الكبيرة اللامعة وقدرتها على النمو داخل المنازل. تفضل ضوءًا غير مباشر وتربة رطبة باعتدال."
+      "description": "شجيرة دائمة الخضرة بأوراق كبيرة لامعة ومفصصة، ويمكن تربيتها كنبات منزلي في ضوء ساطع غير مباشر. حافظ على التربة رطبة قليلًا دون إغراق وخفّف الري في الشتاء. يفيدها مكان أبرد مع تهوية جيدة ورشّ خفيف للأوراق بشكل دوري."
     },
     "hi": {
       "common_name": "जापानी अरालिया",
-      "description": "फैट्सिया जैपोनिका जापान और कोरिया का सदाबहार झाड़ीदार पौधा है। इसकी बड़ी चमकदार पत्तियाँ इसे लोकप्रिय बनाती हैं। यह मध्यम रोशनी और नियमित सिंचाई पसंद करता है।"
+      "description": "बड़े, चमकदार, हथेली जैसे पत्तों वाली सदाबहार झाड़ी, जिसे घर के अंदर तेज़ अप्रत्यक्ष रोशनी में उगाया जा सकता है। मिट्टी को हल्का नम रखें लेकिन पानी जमा न होने दें, और सर्दियों में पानी कम करें। ठंडा, हवादार स्थान और समय-समय पर पत्तों पर फुहार मदद करती है।"
     },
     "zh": {
       "common_name": "日本八角金盘",
-      "description": "日本八角金盘原产于日本和韩国，是常绿灌木。因其大而有光泽的叶片而广受欢迎。适合明亮散射光和保持土壤微湿。"
+      "description": "常绿灌木，叶片大而有光泽，适合在室内明亮散射光处养护。盆土保持微湿但避免积水，冬季适当减少浇水。放在较凉爽、通风的位置，并可定期喷雾润叶。"
     },
     "ja": {
       "common_name": "ヤツデ",
-      "description": "ヤツデは日本と韓国原産の常緑低木です。大きく光沢のある葉が特徴で、室内でも育てやすい植物です。明るい日陰と適度な水やりを好みます。"
+      "description": "大きな掌状の葉が特徴の常緑低木で、室内では明るい日陰で育てられます。用土は乾かし過ぎず、ただし過湿にせず、冬は水やりを控えめにします。涼しく風通しのよい場所と、葉水を時々行うのが向きます。"
     },
     "ko": {
-      "common_name": "야츠데",
-      "description": "파츠아 자포니카는 일본과 한국이 원산지인 상록 관목입니다. 크고 윤기 있는 잎으로 관상 가치가 높습니다. 밝은 간접광과 규칙적인 물주기를 선호합니다."
+      "common_name": "팔손이나무",
+      "description": "큰 손바닥 모양의 윤기 있는 잎을 가진 상록 관목으로, 실내에서는 밝은 간접광에 잘 자랍니다. 흙은 촉촉하게 유지하되 물이 고이지 않게 하고 겨울에는 물 주기를 줄입니다. 서늘하고 통풍이 좋은 곳과 가끔 분무가 도움이 됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/7410/fatsia-japonica/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c860",
-      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/fatsia"
+      "https://www.rhsplants.co.uk/plants/_/fatsia-japonica/classid.2000034474/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276608",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/japanese-aralia",
+      "https://hgic.clemson.edu/factsheet/fatsia/"
     ]
   }
 }

@@ -2,25 +2,26 @@
   "external_id": "tritonia_crocata",
   "name": "Tritonia crocata",
   "latin": "Tritonia crocata",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "tritonia_crocata.jpg",
   "image_thumb": "tritonia_crocata.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광량"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
-          "it": "Suolo drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 토양"
+          "ja": "排水性の良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–20°C",
-          "pl": "10–20°C",
-          "de": "10–20°C",
-          "fr": "10–20°C",
-          "it": "10–20°C",
-          "es": "10–20°C",
-          "pt": "10–20°C",
-          "ar": "10–20°م",
-          "hi": "10–20°C",
-          "zh": "10–20°C",
-          "ja": "10–20°C",
-          "ko": "10–20°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luft",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Seasonal growth",
-          "pl": "Wzrost sezonowy",
-          "de": "Saisonal",
-          "fr": "Croissance saisonnière",
-          "it": "Crescita stagionale",
-          "es": "Crecimiento estacional",
-          "pt": "Crescimento sazonal",
-          "ar": "نمو موسمي",
-          "hi": "मौसमी वृद्धि",
-          "zh": "季节性生长",
-          "ja": "季節成長",
-          "ko": "계절 성장"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Keine Überwässerung",
+          "fr": "Pas de trop d'eau",
+          "it": "No sovrannumero",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अفرत से पानी नहीं देना",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주지 않기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "African cornflag",
-      "description": "Tritonia crocata is a corm-forming perennial native to South Africa. It produces bright orange flowers in winter and spring. The plant requires a dry rest period after flowering."
+      "common_name": "Freesia",
+      "description": "Tritonia crocata, commonly known as Freesia, is a bulbous plant native to Southern Africa. It produces bright, trumpet-shaped flowers in a variety of colors."
     },
     "pl": {
-      "common_name": "Trytonia krokoszowa",
-      "description": "Tritonia crocata to bulwiasta bylina pochodząca z Afryki Południowej. Kwitnie na pomarańczowo zimą i wiosną. Po kwitnieniu wymaga okresu spoczynku na sucho."
+      "common_name": "Frezja",
+      "description": "Tritonia crocata, znana również jako Frezja, to roślina cebulowa pochodząca z południowej Afryki. Produkuje jasne, dzwonkowate kwiaty w różnych kolorach."
     },
     "de": {
-      "common_name": "Afrikanische Tritonie",
-      "description": "Tritonia crocata ist eine knollenbildende Pflanze aus Südafrika. Sie blüht im Winter und Frühling orange. Nach der Blüte benötigt sie eine Trockenruhe."
+      "common_name": "Freesie",
+      "description": "Tritonia crocata, auch bekannt als Freesie, ist eine Zwiebelpflanze aus Südafrika. Sie produziert leuchtend farbige, glockenförmige Blumen."
     },
     "fr": {
-      "common_name": "Tritonie safranée",
-      "description": "Tritonia crocata est une plante à corme originaire d’Afrique du Sud. Elle fleurit en orange en hiver et au printemps. Une période de repos sec est nécessaire après la floraison."
+      "common_name": "Freesia",
+      "description": "Tritonia crocata, également connue sous le nom de Freesia, est une plante bulbeuse originaire d'Afrique du Sud. Elle produit des fleurs éclatantes en forme de trompette dans diverses couleurs."
     },
     "it": {
-      "common_name": "Tritonia arancione",
-      "description": "Tritonia crocata è una perenne a cormi del Sudafrica. Fiorisce in arancione tra inverno e primavera. Dopo la fioritura richiede un periodo secco."
+      "common_name": "Frezia",
+      "description": "Tritonia crocata, conosciuta anche come Frezia, è una pianta bulbosa originaria del Sud Africa. Produce fiori luminosi a forma di tromba in vari colori."
     },
     "es": {
-      "common_name": "Tritonia naranja",
-      "description": "Tritonia crocata es una planta bulbosa de Sudáfrica. Florece en color naranja en invierno y primavera. Necesita reposo seco tras la floración."
+      "common_name": "Freesia",
+      "description": "Tritonia crocata, conocida comúnmente como Freesia, es una planta bulbosa originaria de Sudáfrica. Produce flores brillantes en forma de trompeta de varios colores."
     },
     "pt": {
-      "common_name": "Trítonia-laranja",
-      "description": "Tritonia crocata é uma planta de cormo da África do Sul. Produz flores laranja no inverno e primavera. Precisa de repouso seco após a floração."
+      "common_name": "Freesia",
+      "description": "Tritonia crocata, comumente conhecida como Freesia, é uma planta bulbosa originária da África do Sul. Ela produz flores brilhantes em forma de trompete em várias cores."
     },
     "ar": {
-      "common_name": "تريتونية برتقالية",
-      "description": "تريتونية كروكاتا نبات بصلي من جنوب أفريقيا. يزهر باللون البرتقالي في الشتاء والربيع. يحتاج إلى فترة جفاف بعد الإزهار."
+      "common_name": "فريزيا",
+      "description": "تريتونيا كروكاتا، المعروفة أيضًا باسم فريزيا، هي نبات بصلي موطنه جنوب أفريقيا. ينتج زهورًا زاهية على شكل بوق بألوان متنوعة."
     },
     "hi": {
-      "common_name": "अफ्रीकी कॉर्नफ्लैग",
-      "description": "ट्रिटोनिया क्रोकाटा दक्षिण अफ्रीका का कंदीय पौधा है। यह सर्दियों और वसंत में नारंगी फूल देता है। फूलों के बाद सूखा विश्राम आवश्यक है।"
+      "common_name": "फ्रीसिया",
+      "description": "ट्रिटोनिया क्रोकाटा, जिसे फ्रीसिया के नाम से भी जाना जाता है, एक बल्बस पौधा है जो दक्षिणी अफ्रीका का मूल निवासी है। यह विभिन्न रंगों में चमकीले, शंख के आकार के फूल उगाता है।"
     },
     "zh": {
-      "common_name": "非洲鸢尾",
-      "description": "Tritonia crocata 原产于南非，为球茎植物。冬春季开橙色花。花后需要干燥休眠期。"
+      "common_name": "弗雷西亚",
+      "description": "Tritonia crocata，也称为弗雷西亚，是一种原产于南非的球根植物。它开出各种颜色的明亮喇叭形花朵。"
     },
     "ja": {
-      "common_name": "トリトニア",
-      "description": "トリトニア・クロカタは南アフリカ原産の球茎植物です。冬から春に橙色の花を咲かせます。開花後は乾燥休眠が必要です。"
+      "common_name": "フリージア",
+      "description": "Tritonia crocata、通称フリージアは南アフリカ原産の球根植物です。さまざまな色の明るいラッパ型の花を咲かせます。"
     },
     "ko": {
-      "common_name": "트리토니아",
-      "description": "트리토니아 크로카타는 남아프리카 원산의 구근 식물입니다. 겨울과 봄에 주황색 꽃이 피며 개화 후 건조 휴면기가 필요합니다."
+      "common_name": "프리지아",
+      "description": "Tritonia crocata, 일반적으로 프리지아로 알려진 이 식물은 남아프리카 원산지의 구근 식물입니다. 다양한 색상의 밝은 나팔 모양 꽃을 피웁니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/18490/tritonia-crocata/details",
-      "https://www.sanbi.org/plants/tritonia-crocata/",
-      "https://pfaf.org/user/Plant.aspx?LatinName=Tritonia+crocata"
+      "https://www.rhs.org.uk/plants/95675/tritonia-crocata/Details",
+      "https://www.gardenia.net/plant/tritonia-crocata"
     ]
   }
 }

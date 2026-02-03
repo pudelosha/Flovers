@@ -1,18 +1,18 @@
 {
   "external_id": "ocimum_gratissimum",
-  "name": "African Basil",
+  "name": "Clove Basil",
   "latin": "Ocimum gratissimum",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Ensoleillement total",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "完全な太陽",
+          "ko": "완전한 태양"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "gleba",
-          "de": "lehm",
-          "fr": "argile",
-          "it": "terreno",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム",
-          "ko": "로암"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,13 +67,32 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Water when dry",
+          "pl": "Podlewać po wyschnięciu",
+          "de": "Wässern, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando secco",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يجف",
+          "hi": "सूखा होने पर पानी दें",
+          "zh": "干燥时浇水",
+          "ja": "乾いたら水やり",
+          "ko": "마르면 물 주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -83,40 +102,21 @@
       }
     },
     {
-      "key": "difficulty",
-      "value": {
-        "text": {
-          "en": "easy",
-          "pl": "łatwe",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
-        }
-      }
-    },
-    {
       "key": "temperature",
       "value": {
         "text": {
-          "en": "25-30°C",
-          "pl": "25-30°C",
-          "de": "25-30°C",
-          "fr": "25-30°C",
-          "it": "25-30°C",
-          "es": "25-30°C",
-          "pt": "25-30°C",
-          "ar": "25-30°C",
-          "hi": "25-30°C",
-          "zh": "25-30°C",
-          "ja": "25-30°C",
-          "ko": "25-30°C"
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°C",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
+          "zh": "适中",
+          "ja": "中くらい",
           "ko": "중간"
         }
       }
@@ -143,17 +143,17 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietoksyczny",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossico",
-          "es": "no tóxico",
-          "pt": "não tóxico",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषैले",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "무독성"
         }
       }
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast",
-          "pl": "szybki",
-          "de": "schnell",
-          "fr": "rapide",
-          "it": "veloce",
-          "es": "rápido",
-          "pt": "rápido",
-          "ar": "سريع",
-          "hi": "तेज",
-          "zh": "快速",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "African Basil",
-      "description": "Ocimum gratissimum, also known as African basil, is a perennial herb native to tropical regions. It is commonly used in cooking and traditional medicine."
+      "common_name": "Clove Basil",
+      "description": "Ocimum gratissimum, known as Clove Basil, is a tropical herb often used in cooking and traditional medicine. It prefers full sunlight and well-draining soil."
     },
     "pl": {
-      "common_name": "Bazylia afrykańska",
-      "description": "Ocimum gratissimum, znane również jako bazylia afrykańska, to wieloletnia roślina zielna pochodząca z tropikalnych regionów. Jest powszechnie stosowana w kuchni i tradycyjnej medycynie."
+      "common_name": "Bazylia goździkowa",
+      "description": "Ocimum gratissimum, znana jako Bazylia goździkowa, to tropikalna roślina używana w kuchni i medycynie tradycyjnej. Preferuje pełne nasłonecznienie i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Afrikanisches Basilikum",
-      "description": "Ocimum gratissimum, auch bekannt als afrikanisches Basilikum, ist ein mehrjähriges Kraut, das in tropischen Regionen beheimatet ist. Es wird häufig in der Küche und in der traditionellen Medizin verwendet."
+      "common_name": "Nelken-Basilikum",
+      "description": "Ocimum gratissimum, auch als Nelken-Basilikum bekannt, ist ein tropisches Kraut, das häufig in der Küche und in der traditionellen Medizin verwendet wird. Es bevorzugt volle Sonneneinstrahlung und gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Basilic africain",
-      "description": "Ocimum gratissimum, également connu sous le nom de basilic africain, est une plante vivace originaire des régions tropicales. Elle est couramment utilisée en cuisine et en médecine traditionnelle."
+      "common_name": "Basilic clou de girofle",
+      "description": "Ocimum gratissimum, également appelé Basilic clou de girofle, est une herbe tropicale souvent utilisée en cuisine et en médecine traditionnelle. Il préfère une exposition totale au soleil et un sol bien drainé."
     },
     "it": {
-      "common_name": "Basilico africano",
-      "description": "Ocimum gratissimum, noto anche come basilico africano, è un'erba perenne originaria delle regioni tropicali. Viene comunemente utilizzato in cucina e nella medicina tradizionale."
+      "common_name": "Basilico chiodo di garofano",
+      "description": "Ocimum gratissimum, conosciuto anche come Basilico chiodo di garofano, è un'erba tropicale usata frequentemente in cucina e medicina tradizionale. Preferisce la piena luce solare e terreni ben drenati."
     },
     "es": {
-      "common_name": "Albahaca africana",
-      "description": "Ocimum gratissimum, también conocida como albahaca africana, es una hierba perenne originaria de las regiones tropicales. Se utiliza comúnmente en la cocina y la medicina tradicional."
+      "common_name": "Albahaca clavo de olor",
+      "description": "Ocimum gratissimum, conocida como Albahaca clavo de olor, es una hierba tropical utilizada en la cocina y la medicina tradicional. Prefiere luz solar directa y suelo bien drenado."
     },
     "pt": {
-      "common_name": "Manjericão africano",
-      "description": "Ocimum gratissimum, também conhecido como manjericão africano, é uma erva perene nativa das regiões tropicais. É comumente usado na culinária e na medicina tradicional."
+      "common_name": "Manjericão cravo",
+      "description": "Ocimum gratissimum, também conhecido como Manjericão cravo, é uma erva tropical usada na culinária e na medicina tradicional. Prefere luz solar direta e solo bem drenado."
     },
     "ar": {
-      "common_name": "ريحان أفريقي",
-      "description": "Ocimum gratissimum، المعروف أيضًا بالريحان الأفريقي، هو نبات معمر موطنه المناطق الاستوائية. يتم استخدامه عادة في الطهي والطب التقليدي."
+      "common_name": "ريحان القرنفل",
+      "description": "Ocimum gratissimum، المعروف أيضًا باسم ريحان القرنفل، هو عشب استوائي يستخدم غالبًا في الطهي والطب التقليدي. يفضل الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "अफ्रीकी तुलसी",
-      "description": "Ocimum gratissimum, जिसे अफ्रीकी तुलसी के नाम से भी जाना जाता है, एक बारहमासी पौधा है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। इसका उपयोग आमतौर पर खाना पकाने और पारंपरिक चिकित्सा में किया जाता है।"
+      "common_name": "लौंग तुलसी",
+      "description": "Ocimum gratissimum, जिसे लौंग तुलसी कहा जाता है, एक उष्णकटिबंधीय जड़ी-बूटी है जो अक्सर खाना पकाने और पारंपरिक चिकित्सा में उपयोग की जाती है। यह पूर्ण सूर्य और अच्छी जल निकासी वाली मिट्टी पसंद करती है।"
     },
     "zh": {
-      "common_name": "非洲罗勒",
-      "description": "Ocimum gratissimum，也称为非洲罗勒，是一种多年生草本植物，原产于热带地区。它通常用于烹饪和传统医学。"
+      "common_name": "丁香罗勒",
+      "description": "Ocimum gratissimum，也叫丁香罗勒，是一种热带草药，常用于烹饪和传统医学。它喜欢全日照和排水良好的土壤。"
     },
     "ja": {
-      "common_name": "アフリカバジル",
-      "description": "Ocimum gratissimum、アフリカバジルとしても知られるこの植物は、熱帯地域に自生する多年草です。料理や伝統医学で一般的に使用されます。"
+      "common_name": "クローブバジル",
+      "description": "Ocimum gratissimum、別名クローブバジルは、料理や伝統医学でよく使われる熱帯性のハーブです。完全な日光と排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "아프리카 바질",
-      "description": "Ocimum gratissimum, 아프리카 바질로도 알려진 이 식물은 열대 지역이 원산지인 다년생 풀입니다. 주로 요리와 전통 의학에 사용됩니다."
+      "common_name": "클로브 바질",
+      "description": "Ocimum gratissimum, 클로브 바질로 알려진 이 식물은 요리와 전통 의학에 자주 사용되는 열대 허브입니다. 완전한 햇빛과 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=478",
-      "https://www.gardenia.net/plant/ocimum-gratissimum"
+      "https://www.rhs.org.uk/advice/profile?pid=241",
+      "https://www.bhg.com/gardening/pests-diseases/invasive-plants/"
     ]
   }
 }

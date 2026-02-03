@@ -1,17 +1,18 @@
 {
   "external_id": "opuntia_microdasys",
-  "name": "Bunny Ear Cactus",
+  "name": "Bunny Ears Cactus",
   "latin": "Opuntia microdasys",
   "sun": "high",
   "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaszczysta",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملية",
-          "hi": "रेतदार",
-          "zh": "沙质",
-          "ja": "砂地",
-          "ko": "모래"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيدًا",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけの良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niski",
-          "de": "gering",
-          "fr": "faible",
-          "it": "basso",
-          "es": "bajo",
-          "pt": "baixo",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Peu fréquent",
+          "it": "Raro",
+          "es": "Poco frecuente",
+          "pt": "Pouco frequente",
+          "ar": "غير متكرر",
+          "hi": "अल्प",
+          "zh": "不频繁",
+          "ja": "少ない",
+          "ko": "드물게"
         }
       }
     },
@@ -85,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "calor",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixo",
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
           "ar": "منخفض",
-          "hi": "कम",
+          "hi": "निम्न",
           "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic",
+          "pl": "Toksyczny",
+          "de": "Toxisch",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
         }
       }
     },
@@ -161,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
           "ar": "بطيء",
           "hi": "धीमा",
-          "zh": "慢",
+          "zh": "缓慢",
           "ja": "遅い",
-          "ko": "느림"
+          "ko": "느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez le sur-arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과습을 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Bunny Ear Cactus",
-      "description": "Opuntia microdasys is a small cactus native to Mexico. It has flattened, oval pads covered with tiny spines that can cause irritation."
+      "common_name": "Bunny Ears Cactus",
+      "description": "Opuntia microdasys, also known as Bunny Ears Cactus, is a small, spiny cactus native to Mexico. It is known for its distinctive flat, round pads covered with tiny, needle-like spines."
     },
     "pl": {
-      "common_name": "Kaktus Uszaty",
-      "description": "Opuntia microdasys to mały kaktus pochodzący z Meksyku. Ma spłaszczone, owalne łodygi pokryte drobnymi kolcami."
+      "common_name": "Kaktus uszaty",
+      "description": "Opuntia microdasys, znany również jako kaktus uszaty, to mały, kolczasty kaktus pochodzący z Meksyku. Charakteryzuje się płaskimi, okrągłymi padami pokrytymi małymi kolcami przypominającymi igły."
     },
     "de": {
-      "common_name": "Hasenohr-Kaktus",
-      "description": "Opuntia microdasys ist ein kleiner Kaktus aus Mexiko. Er hat abgeflachte, ovale Pads, die mit kleinen Stacheln bedeckt sind."
+      "common_name": "Hasenohrenkaktus",
+      "description": "Opuntia microdasys, auch bekannt als Hasenohrenkaktus, ist ein kleiner, stacheliger Kaktus aus Mexiko. Er ist bekannt für seine flachen, runden Pads, die mit kleinen, nadelartigen Stacheln bedeckt sind."
     },
     "fr": {
-      "common_name": "Cactus Oreilles de Lapin",
-      "description": "Opuntia microdasys est un petit cactus originaire du Mexique. Il a des pads aplatis et ovales couverts de petites épines."
+      "common_name": "Cactus oreilles de lapin",
+      "description": "Opuntia microdasys, également connu sous le nom de cactus oreilles de lapin, est un petit cactus épineux originaire du Mexique. Il est reconnu pour ses pads plats et ronds recouverts de petites épines semblables à des aiguilles."
     },
     "it": {
-      "common_name": "Cactus Orecchie di Coniglio",
-      "description": "Opuntia microdasys è un piccolo cactus originario del Messico. Ha delle pad planate e ovali ricoperte da piccole spine."
+      "common_name": "Cactus orecchie di coniglio",
+      "description": "Opuntia microdasys, noto anche come cactus orecchie di coniglio, è un piccolo cactus spinato originario del Messico. È noto per i suoi pad piatti e rotondi coperti di spine simili a aghi."
     },
     "es": {
-      "common_name": "Cactus Orejas de Conejo",
-      "description": "Opuntia microdasys es un pequeño cactus originario de México. Tiene pads aplanados y ovalados cubiertos de pequeñas espinas."
+      "common_name": "Cactus orejas de conejo",
+      "description": "Opuntia microdasys, también conocido como cactus orejas de conejo, es un pequeño cactus espinoso originario de México. Se caracteriza por sus pads planos y redondos cubiertos con pequeñas espinas similares a agujas."
     },
     "pt": {
-      "common_name": "Cacto Orelhas de Coelho",
-      "description": "Opuntia microdasys é um pequeno cacto nativo do México. Possui pads achatados e ovais cobertos com espinhos pequenos."
+      "common_name": "Cacto orelhas de coelho",
+      "description": "Opuntia microdasys, também conhecido como cacto orelhas de coelho, é um pequeno cacto espinhoso nativo do México. É conhecido por seus pads planos e redondos cobertos com pequenas espinhas semelhantes a agulhas."
     },
     "ar": {
-      "common_name": "صبار أذن الأرنب",
-      "description": "Opuntia microdasys هو صبار صغير موطنه المكسيك. يحتوي على ألواح مسطحة وبيضاوية مغطاة بأشواك صغيرة."
+      "common_name": "صبار آذان الأرنب",
+      "description": "Opuntia microdasys، المعروف أيضًا باسم صبار آذان الأرنب، هو صبار صغير مغطى بالأشواك نشأ في المكسيك. يتميز بألواح مسطحة ومستديرة مغطاة بشوك صغير يشبه الإبر."
     },
     "hi": {
-      "common_name": "बनी कान कैक्टस",
-      "description": "Opuntia microdasys एक छोटा कैक्टस है जो मेक्सिको का मूल निवासी है। इसमें चपटी, अंडाकार पैड होते हैं जो छोटे कांटों से ढके होते हैं।"
+      "common_name": "बनी ईयर कैक्टस",
+      "description": "Opuntia microdasys, जिसे बनी ईयर कैक्टस के नाम से भी जाना जाता है, मेक्सिको का एक छोटा, कांटेदार कैक्टस है। यह अपनी गोल, फ्लैट पैड के लिए जाना जाता है, जो छोटे, सुई जैसे कांटों से ढके होते हैं।"
     },
     "zh": {
       "common_name": "兔耳仙人掌",
-      "description": "Opuntia microdasys 是一种原产于墨西哥的小型仙人掌。它有扁平的、椭圆形的棱柱，覆盖着细小的刺。"
+      "description": "Opuntia microdasys，也叫兔耳仙人掌，是一种来自墨西哥的小型多刺仙人掌。它以其独特的平坦、圆形的 pads 而闻名，覆盖着细小的针状刺。"
     },
     "ja": {
       "common_name": "ウサギ耳サボテン",
-      "description": "Opuntia microdasysはメキシコ原産の小さなサボテンです。平らな楕円形のパッドが小さなとげで覆われています。"
+      "description": "Opuntia microdasys、別名ウサギ耳サボテンは、メキシコ原産の小さなトゲのあるサボテンです。丸くて平らな pads が特徴で、小さな針のようなトゲで覆われています。"
     },
     "ko": {
-      "common_name": "토끼 귀 선인장",
-      "description": "Opuntia microdasys는 멕시코 원산지의 작은 선인장입니다. 평평하고 타원형의 패드가 작은 가시로 덮여 있습니다."
+      "common_name": "토끼귀 선인장",
+      "description": "Opuntia microdasys, 일명 토끼귀 선인장은 멕시코 원산지의 작은 가시 선인장입니다. 특징적인 평평하고 둥근 패드는 작은 바늘 같은 가시로 덮여 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/2339/opuntia-microdasys",
-      "https://www.botanicgardens.edu.au/"
+      "https://www.rhs.org.uk/plants/opuntia-microdasys",
+      "https://www.gardeningknowhow.com/edible/cacti/opuntia-microdasys.htm"
     ]
   }
 }

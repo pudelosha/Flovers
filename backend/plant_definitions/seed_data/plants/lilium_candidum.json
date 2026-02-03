@@ -7,11 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
+          "en": "Full sunlight",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "양지"
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Gleba przepuszczalna",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
           "de": "Gut durchlässig",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "zh": "良好的排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodno-ciepło",
-          "de": "Kühl bis warm",
-          "fr": "Frais à chaud",
-          "it": "Fresco-caldo",
-          "es": "Fresco a cálido",
-          "pt": "Fresco a quente",
-          "ar": "معتدل",
-          "hi": "ठंडा से गर्म",
-          "zh": "凉爽至温暖",
-          "ja": "涼～暖",
-          "ko": "서늘~따뜻"
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "普通の湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to cats",
-          "pl": "Toksyczna dla kotów",
-          "de": "Giftig für Katzen",
-          "fr": "Toxique chats",
-          "it": "Tossica per gatti",
-          "es": "Tóxica gatos",
-          "pt": "Tóxica gatos",
-          "ar": "سامة للقطط",
-          "hi": "बिल्लियों हेतु विषाक्त",
-          "zh": "对猫有毒",
-          "ja": "猫に有毒",
-          "ko": "고양이 독성"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright bulb plant",
-          "pl": "Roślina cebulowa",
-          "de": "Aufrecht wachsend",
-          "fr": "Bulbe dressé",
-          "it": "Bulbosa eretta",
-          "es": "Bulbosa erecta",
-          "pt": "Bulbosa ereta",
-          "ar": "نبات بصلي",
-          "hi": "कंदीय पौधा",
-          "zh": "直立鳞茎",
-          "ja": "直立球根",
-          "ko": "직립 구근"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमीय कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Madonna Lily",
-      "description": "Lilium candidum is a classic white-flowering lily native to the eastern Mediterranean. It grows from bulbs and prefers full sun and well-drained soil. The plant blooms in early summer with fragrant trumpet-shaped flowers."
+      "description": "Lilium candidum, known as the Madonna Lily, is a fragrant flowering plant that thrives in full sunlight. It is often associated with purity and is a popular ornamental plant in gardens."
     },
     "pl": {
-      "common_name": "Lilia biała",
-      "description": "Lilium candidum to klasyczna lilia o białych kwiatach pochodząca z rejonu Morza Śródziemnego. Rośnie z cebul i wymaga słońca oraz przepuszczalnej gleby. Kwitnie wczesnym latem pachnącymi kwiatami."
+      "common_name": "Lilia Madonny",
+      "description": "Lilium candidum, znane jako Lilia Madonny, to pachnąca roślina kwitnąca, która najlepiej rośnie w pełnym słońcu. Jest często kojarzona z czystością i stanowi popularną roślinę ozdobną w ogrodach."
     },
     "de": {
-      "common_name": "Madonnenlilie",
-      "description": "Lilium candidum ist eine traditionelle weiße Lilie aus dem östlichen Mittelmeerraum. Sie wächst aus Zwiebeln und benötigt volle Sonne sowie durchlässigen Boden. Die Pflanze blüht im Frühsommer duftend."
+      "common_name": "Madonnen-Lilie",
+      "description": "Lilium candidum, auch als Madonnen-Lilie bekannt, ist eine duftende blühende Pflanze, die in voller Sonne gedeiht. Sie wird oft mit Reinheit assoziiert und ist eine beliebte Zierpflanze in Gärten."
     },
     "fr": {
-      "common_name": "Lis blanc",
-      "description": "Lilium candidum est un lis blanc originaire de la Méditerranée orientale. Il pousse à partir de bulbes et préfère le plein soleil et un sol drainé. La floraison parfumée a lieu au début de l’été."
+      "common_name": "Lys de la Vierge",
+      "description": "Lilium candidum, connu sous le nom de Lys de la Vierge, est une plante fleurie parfumée qui prospère en plein soleil. Elle est souvent associée à la pureté et est une plante ornementale populaire dans les jardins."
     },
     "it": {
       "common_name": "Giglio della Madonna",
-      "description": "Lilium candidum è un giglio bianco originario del Mediterraneo orientale. Cresce da bulbi e richiede sole pieno e terreno ben drenato. Fiorisce all’inizio dell’estate con fiori profumati."
+      "description": "Lilium candidum, noto come Giglio della Madonna, è una pianta floreale profumata che cresce al meglio in pieno sole. È spesso associato alla purezza ed è una pianta ornamentale popolare nei giardini."
     },
     "es": {
-      "common_name": "Lirio blanco",
-      "description": "Lilium candidum es un lirio blanco originario del Mediterráneo oriental. Crece a partir de bulbos y necesita pleno sol y suelo drenado. Florece a comienzos del verano con aroma intenso."
+      "common_name": "Lirio de la Virgen",
+      "description": "Lilium candidum, conocido como el Lirio de la Virgen, es una planta floreciente y fragante que prospera a plena luz solar. A menudo se asocia con la pureza y es una planta ornamental popular en los jardines."
     },
     "pt": {
-      "common_name": "Lírio branco",
-      "description": "Lilium candidum é um lírio branco nativo do Mediterrâneo oriental. Desenvolve-se a partir de bulbos e prefere sol pleno e solo bem drenado. Floresce no início do verão com perfume marcante."
+      "common_name": "Lírio da Virgem",
+      "description": "Lilium candidum, conhecido como o Lírio da Virgem, é uma planta com flores perfumadas que cresce melhor sob luz solar plena. É frequentemente associado à pureza e é uma planta ornamental popular em jardins."
     },
     "ar": {
-      "common_name": "زنبق أبيض",
-      "description": "Lilium candidum نبات زهري أبيض موطنه شرق البحر المتوسط. ينمو من الأبصال ويحتاج إلى شمس كاملة وتربة جيدة الصرف. يزهر في أوائل الصيف بأزهار عطرية."
+      "common_name": "زنبق العذراء",
+      "description": "Lilium candidum، المعروف باسم زنبق العذراء، هو نبات مزهر ذو رائحة عطرة يزدهر تحت أشعة الشمس المباشرة. غالبًا ما يُرتبط بالنقاء وهو نبات زينة شهير في الحدائق."
     },
     "hi": {
-      "common_name": "मैडोना लिली",
-      "description": "Lilium candidum एक सफेद फूलों वाला पौधा है जो भूमध्यसागरीय क्षेत्र का मूल निवासी है। यह कंद से उगता है और इसे पूर्ण धूप व अच्छी जल निकासी वाली मिट्टी चाहिए। यह ग्रीष्म की शुरुआत में खिलता है।"
+      "common_name": "मदोनना लिली",
+      "description": "Lilium candidum, जिसे मदोनना लिली के नाम से जाना जाता है, एक सुगंधित फूल वाली पौधा है जो पूर्ण सूर्य में उगता है। इसे अक्सर पवित्रता से जोड़ा जाता है और यह बागों में एक लोकप्रिय सजावटी पौधा है।"
     },
     "zh": {
       "common_name": "圣母百合",
-      "description": "Lilium candidum 原产于地中海东部，是一种白色百合。它由鳞茎生长，喜全日照和排水良好的土壤。通常在初夏开出芳香花朵。"
+      "description": "Lilium candidum，又称圣母百合，是一种芬芳的开花植物，喜欢在阳光充足的地方生长。它常与纯洁相关联，是花园中常见的观赏植物。"
     },
     "ja": {
       "common_name": "マドンナリリー",
-      "description": "Lilium candidum は地中海東部原産の白いユリです。球根から成長し、日当たりと水はけの良い土を好みます。初夏に香りのある花を咲かせます。"
+      "description": "Lilium candidum、マドンナリリーとして知られるこの花は、直射日光の下でよく育ちます。純粋さと関連付けられることが多く、庭で人気のある観賞用植物です。"
     },
     "ko": {
-      "common_name": "마돈나백합",
-      "description": "Lilium candidum은 지중해 동부가 원산지인 흰색 백합입니다. 구근식물로 햇빛과 배수가 좋은 토양을 선호합니다. 초여름에 향기로운 꽃이 핍니다."
+      "common_name": "마돈나 백합",
+      "description": "Lilium candidum, 마돈나 백합으로 알려진 이 꽃은 직사광선 아래에서 잘 자랍니다. 순수성과 자주 연관되며 정원에서 인기 있는 장식용 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/lilium/candidum/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c920",
-      "https://www.gardenersworld.com/plants/lilium-candidum/"
+      "https://www.rhs.org.uk/plants/lilium-candidum",
+      "https://www.gardenia.net/plant/lilium-candidum-madonna-lily"
     ]
   }
 }

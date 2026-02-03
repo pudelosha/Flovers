@@ -1,27 +1,26 @@
 {
   "external_id": "begonia_rex",
-  "name": "Rex Begonia",
+  "name": "Rex begonia",
   "latin": "Begonia rex",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
+    "terracotta",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "begonia_rex.jpg",
   "image_thumb": "begonia_rex.jpg",
   "traits": [
@@ -29,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Vive, indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz forte indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loose, rich soil",
-          "pl": "Luźna, żyzna",
-          "de": "Locker, humos",
-          "fr": "Sol riche léger",
-          "it": "Terreno soffice",
-          "es": "Suelo suelto",
-          "pt": "Solo solto",
-          "ar": "تربة غنية",
-          "hi": "ढीली मिट्टी",
-          "zh": "疏松肥沃土",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Airy, well-draining",
+          "pl": "Przepuszczalne",
+          "de": "Locker, durchlaessig",
+          "fr": "Aere, drainant",
+          "it": "Arieggiato, drenante",
+          "es": "Suelto y drenante",
+          "pt": "Leve e drenante",
+          "ar": "خفيف وجيد التصريف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "通気性・排水良",
+          "ko": "배수 잘되는 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiark. wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulier",
-          "it": "Umido regolare",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "नमी बनाए रखें",
-          "zh": "保持湿润",
-          "ja": "適度に湿潤",
-          "ko": "고르게 물주기"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Legerement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente humedo",
+          "pt": "Levemente umido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿り気",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Sensitive indoors",
+          "pl": "Wrazliwa w domu",
+          "de": "Empfindlich drinnen",
+          "fr": "Sensible en interieur",
+          "it": "Sensibile in casa",
+          "es": "Sensible en interior",
+          "pt": "Sensivel em interior",
+          "ar": "حساسة داخل المنزل",
+          "hi": "घर में संवेदनशील",
+          "zh": "室内较娇气",
+          "ja": "室内で繊細",
+          "ko": "실내에서 예민"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18-24°C ideal",
+          "pl": "Opt. 18-24°C",
+          "de": "Ideal 18-24°C",
+          "fr": "Ideal 18-24°C",
+          "it": "Ideale 18-24°C",
+          "es": "Ideal 18-24°C",
+          "pt": "Ideal 18-24°C",
+          "ar": "مثالي 18-24°م",
+          "hi": "18-24°C उपयुक्त",
+          "zh": "18-24°C 适宜",
+          "ja": "適温 18-24°C",
+          "ko": "적정 18-24°C"
         }
       }
     },
@@ -124,17 +123,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
-          "zh": "高湿度",
-          "ja": "高湿度",
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotnosc",
+          "de": "Hoehere Luftfeuchte",
+          "fr": "Humidite elevee",
+          "it": "Umidita alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة مرتفعة",
+          "hi": "अधिक आर्द्रता",
+          "zh": "偏高湿度",
+          "ja": "高めの湿度",
           "ko": "높은 습도"
         }
       }
@@ -144,16 +143,16 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Trująca dla zw.",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
+          "pl": "Toksyczna dla zwierzat",
+          "de": "Giftig fuer Haustiere",
+          "fr": "Toxique pour animaux",
+          "it": "Tossica per animali",
+          "es": "Toxica para mascotas",
+          "pt": "Toxica para pets",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू विषाक्त",
+          "hi": "पालतू के लिए विषैली",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
+          "ja": "ペットに有毒",
           "ko": "반려동물 유독"
         }
       }
@@ -162,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact foliage",
-          "pl": "Zwarty pokrój",
-          "de": "Kompakter Wuchs",
-          "fr": "Port compact",
-          "it": "Crescita compatta",
-          "es": "Crecimiento compacto",
-          "pt": "Crescimento compacto",
-          "ar": "نمو مدمج",
-          "hi": "सघन वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "콤팩트 성장"
+          "en": "Rhizomatous foliage",
+          "pl": "Krzaczasty, klacza",
+          "de": "Rhizomatisch, kompakt",
+          "fr": "Rhizomateuse, compacte",
+          "it": "Rizomatosa, compatta",
+          "es": "Rizomatosa, compacta",
+          "pt": "Rizomatosa, compacta",
+          "ar": "ريزومية وورقية",
+          "hi": "राइजोम, सघन",
+          "zh": "根茎型观叶",
+          "ja": "根茎性の観葉",
+          "ko": "근경성 관엽"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No soggy soil",
+          "pl": "Bez przelania",
+          "de": "Nicht staunass",
+          "fr": "Pas detrempe",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Sem encharcar",
+          "ar": "تجنب التربة الموحلة",
+          "hi": "पानी भराव नहीं",
+          "zh": "忌积水与暴晒",
+          "ja": "過湿と直射日光NG",
+          "ko": "과습·직사광 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Welnowce, przedziorki",
+          "de": "Wolllaese, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, acaros",
+          "pt": "Cochonilhas, acaros",
+          "ar": "بق دقيقي وعناكب",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧、螨类",
+          "ja": "コナカイガラムシ等",
+          "ko": "깍지벌레·응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rex Begonia",
-      "description": "Begonia rex is a foliage plant valued for its colorful, patterned leaves. It prefers bright indirect light and consistently moist soil. High humidity and warm indoor temperatures support healthy growth."
+      "common_name": "Rex begonia",
+      "description": "Begonia rex is a rhizomatous begonia grown mainly for its patterned foliage. Provide bright, indirect light and a porous mix; water when the surface begins to dry, keeping it lightly moist but not soggy. Keep warm conditions and higher humidity, and avoid direct hot sun and cold drafts."
     },
     "pl": {
-      "common_name": "Begonia królewska",
-      "description": "Begonia rex to roślina ozdobna z liści o intensywnych barwach. Lubi jasne, rozproszone światło i lekko wilgotne podłoże. Wysoka wilgotność powietrza sprzyja jej kondycji."
+      "common_name": "Begonia krolewska",
+      "description": "Begonia rex to begonia klaczowa uprawiana glownie dla dekoracyjnych lisci. Zapewnij jasne, rozproszone swiatlo i przepuszczalne podloze; podlewaj, gdy wierzch podloza zaczyna przesychac, utrzymujac lekka wilgotnosc bez zastoju wody. Lubi cieplo i wyzsza wilgotnosc powietrza, a nie znosi ostrego slonca i zimnych przeciagnow."
     },
     "de": {
-      "common_name": "Königs-Begonie",
-      "description": "Begonia rex ist für ihre dekorativen Blätter bekannt. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßig feuchter Erde. Eine hohe Luftfeuchtigkeit ist wichtig."
+      "common_name": "Rex-Begonie",
+      "description": "Begonia rex ist eine rhizombildende Begonie, die vor allem wegen ihres Blattwerks gehalten wird. Helles, indirektes Licht und ein luftiges Substrat sind wichtig; giesse, wenn die Oberflaeche leicht antrocknet, ohne Staunaesse. Warme Temperaturen und hoehere Luftfeuchte helfen, direkte Mittagssonne und Zugluft vermeiden."
     },
     "fr": {
-      "common_name": "Bégonia rex",
-      "description": "Le Begonia rex est apprécié pour son feuillage coloré. Il préfère une lumière vive indirecte et un sol constamment humide. Une humidité élevée favorise sa croissance."
+      "common_name": "Begonia rex",
+      "description": "Begonia rex est un begonia a rhizome cultive surtout pour son feuillage decoratif. Donnez une lumiere vive indirecte et un substrat drainant; arrosez quand la surface seche legerement, sans detremper. Gardez une temperature douce avec une humidite plus elevee, et evitez le soleil direct et les courants d'air froid."
     },
     "it": {
       "common_name": "Begonia rex",
-      "description": "La Begonia rex è coltivata per le sue foglie ornamentali. Richiede luce indiretta intensa e terreno umido. L’umidità elevata è benefica."
+      "description": "Begonia rex e una begonia rizomatosa coltivata soprattutto per il fogliame. Preferisce luce intensa indiretta e un terriccio arieggiato; annaffia quando lo strato superficiale asciuga leggermente, evitando ristagni. Mantieni condizioni calde e umidita piu alta, evitando sole diretto forte e correnti fredde."
     },
     "es": {
       "common_name": "Begonia rex",
-      "description": "Begonia rex es popular por sus hojas decorativas. Necesita luz indirecta brillante y suelo ligeramente húmedo. La humedad alta mejora su desarrollo."
+      "description": "Begonia rex es una begonia rizomatosa cultivada principalmente por su follaje. Dale luz brillante indirecta y un sustrato drenante; riega cuando la capa superior empiece a secarse, manteniendo humedad ligera sin encharcar. Prefiere calor y mayor humedad ambiental, evitando sol directo fuerte y corrientes frias."
     },
     "pt": {
-      "common_name": "Begônia rex",
-      "description": "A Begonia rex destaca-se pela folhagem colorida. Prefere luz indireta intensa e solo sempre levemente úmido. Ambientes úmidos são ideais."
+      "common_name": "Begonia rex",
+      "description": "Begonia rex e uma begonia rizomatosa cultivada principalmente pela folhagem. Forneca luz forte indireta e substrato bem drenante; regue quando a superficie comecar a secar, mantendo leve umidade sem encharcar. Gosta de temperaturas amenas e maior umidade do ar, evitando sol direto forte e correntes frias."
     },
     "ar": {
-      "common_name": "بيغونيا ريكس",
-      "description": "تُعرف بيغونيا ريكس بأوراقها الزخرفية. تحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار. الرطوبة العالية مهمة لنموها."
+      "common_name": "بيجونيا ريكس",
+      "description": "Begonia rex بيجونيا ريزومية تُزرع غالباً من اجل الاوراق المزخرفة. تحتاج ضوءاً ساطعاً غير مباشر وخليطاً جيد التصريف؛ اسقِ عندما تبدأ الطبقة السطحية بالجفاف مع تجنب تشبع التربة. حافظ على الدفء ورطوبة هواء اعلى، وتجنب الشمس المباشرة والهواء البارد."
     },
     "hi": {
       "common_name": "रेक्स बेगोनिया",
-      "description": "बेगोनिया रेक्स अपने सजावटी पत्तों के लिए जानी जाती है। इसे तेज अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। अधिक आर्द्रता इसके लिए लाभकारी है।"
+      "description": "Begonia rex एक राइजोम वाली बेगोनिया है जिसे मुख्यतः पत्तियों के लिए उगाया जाता है। तेज अप्रत्यक्ष रोशनी और हवादार, जलनिकासी वाली मिट्टी दें; जब ऊपरी परत हल्की सूखे तो पानी दें, पर जलभराव न होने दें। गर्म तापमान और अधिक आर्द्रता बेहतर है, सीधे तेज धूप और ठंडी हवा से बचाएं।"
     },
     "zh": {
       "common_name": "彩叶秋海棠",
-      "description": "Begonia rex 以其彩色叶片著称。适合明亮的散射光和持续湿润的土壤。较高的空气湿度有助于生长。"
+      "description": "Begonia rex 为根茎型秋海棠，主要观赏叶片花纹。提供明亮散射光与疏松排水介质；表层略干再浇水，保持微湿但避免积水。喜温暖与较高空气湿度，避免强烈直射日光与冷风。"
     },
     "ja": {
       "common_name": "レックスベゴニア",
-      "description": "ベゴニア・レックスは美しい葉が特徴です。明るい間接光と適度に湿った土を好みます。高湿度環境が適しています。"
+      "description": "Begonia rex は根茎性のベゴニアで、主に葉の模様を楽しみます。明るい間接光と水はけの良い用土で管理し、表面が少し乾いたら与えて過湿にしないようにします。暖かさと高めの湿度を保ち、強い直射日光と冷たい風を避けてください。"
     },
     "ko": {
       "common_name": "렉스 베고니아",
-      "description": "Begonia rex는 화려한 잎으로 유명한 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 필요합니다."
+      "description": "Begonia rex는 근경성 베고니아로 잎 무늬를 감상하는 관엽식물입니다. 밝은 간접광과 통기성 좋은 배수성 흙을 사용하고, 표면이 약간 마르면 물을 주되 과습은 피하세요. 따뜻한 온도와 높은 습도를 선호하며 강한 직사광과 찬바람을 피하는 것이 좋습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/begonia-rex-group",
-      "https://extension.umn.edu/houseplants/begonia",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281278"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?isprofile=0&taxonid=242218",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?isprofile=0&taxonid=444254",
+      "https://www.rhs.org.uk/plants/begonias/houseplants",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/rex-begonia",
+      "https://www.torontomastergardeners.ca/gardeningguides/growing-begonias-indoors-a-toronto-master-gardeners-guide/"
     ]
   }
 }

@@ -4,17 +4,18 @@
   "latin": "Geum urbanum",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Sombra parcial",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक धूप",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Terre humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम दोमट",
-          "zh": "湿润壤土",
-          "ja": "湿った壌土",
-          "ko": "촉촉한 양토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期",
-          "ja": "定期的",
-          "ko": "규칙적"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool-temperate",
-          "pl": "Umiarkowana",
-          "de": "Gemäßigt",
-          "fr": "Tempéré",
-          "it": "Temperato",
-          "es": "Templado",
-          "pt": "Temperado",
-          "ar": "معتدل",
-          "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clump-forming",
-          "pl": "Kępiasta",
-          "de": "Horstig",
-          "fr": "En touffe",
-          "it": "A cespo",
-          "es": "En matas",
-          "pt": "Entouceirada",
-          "ar": "كتلي",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "포기형"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare eccessive annaffiature",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wood avens",
-      "description": "Geum urbanum is a hardy perennial native to Europe, commonly found in woodlands and hedgerows. It produces small yellow flowers and thrives in partial shade with moist soil."
+      "common_name": "Wood Avens",
+      "description": "Geum urbanum, commonly known as Wood Avens, is a perennial plant native to Europe and Asia. It thrives in shaded areas with moderate water requirements."
     },
     "pl": {
-      "common_name": "Kuklik pospolity",
-      "description": "Geum urbanum to bylina występująca naturalnie w lasach i zaroślach Europy. Ma drobne żółte kwiaty i najlepiej rośnie w półcieniu na wilgotnej glebie."
+      "common_name": "Avens leśny",
+      "description": "Geum urbanum, znany jako Avens leśny, to roślina wieloletnia pochodząca z Europy i Azji. Rośnie w cienistych miejscach, wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Echte Nelkenwurz",
-      "description": "Geum urbanum ist eine ausdauernde Pflanze aus europäischen Wäldern und Hecken. Sie bevorzugt halbschattige Standorte mit feuchtem Boden."
+      "common_name": "Waldbärlapp",
+      "description": "Geum urbanum, auch Waldbärlapp genannt, ist eine mehrjährige Pflanze, die in Europa und Asien beheimatet ist. Sie wächst an schattigen Orten und benötigt mäßige Bewässerung."
     },
     "fr": {
-      "common_name": "Benoîte commune",
-      "description": "Geum urbanum est une plante vivace originaire d'Europe, fréquente dans les sous-bois. Elle apprécie les sols frais et une exposition mi-ombragée."
+      "common_name": "Geum urbain",
+      "description": "Geum urbanum, connu sous le nom de Geum urbain, est une plante vivace originaire d'Europe et d'Asie. Elle prospère dans les zones ombragées avec des besoins modérés en eau."
     },
     "it": {
-      "common_name": "Cariofillata comune",
-      "description": "Geum urbanum è una pianta perenne europea che cresce nei boschi e lungo le siepi. Predilige terreni umidi e posizioni di mezz'ombra."
+      "common_name": "Geum urbano",
+      "description": "Geum urbanum, noto come Geum urbano, è una pianta perenne originaria dell'Europa e dell'Asia. Cresce in aree ombreggiate con esigenze moderate di acqua."
     },
     "es": {
-      "common_name": "Benoíta común",
-      "description": "Geum urbanum es una planta perenne europea típica de bosques y setos. Crece mejor en suelos húmedos con sombra parcial."
+      "common_name": "Geum urbano",
+      "description": "Geum urbanum, conocido como Geum urbano, es una planta perenne originaria de Europa y Asia. Crece en áreas sombreadas y requiere un riego moderado."
     },
     "pt": {
-      "common_name": "Benoíte-comum",
-      "description": "Geum urbanum é uma planta perene nativa da Europa, comum em áreas florestais. Desenvolve-se bem em solo úmido e meia-sombra."
+      "common_name": "Geum urbano",
+      "description": "Geum urbanum, conhecido como Geum urbano, é uma planta perene nativa da Europa e Ásia. Cresce em áreas sombreadas e requer irrigação moderada."
     },
     "ar": {
-      "common_name": "جذر القرنفل البري",
-      "description": "Geum urbanum نبات معمر أوروبي يوجد في الغابات والأحراج. يفضل التربة الرطبة والضوء الجزئي."
+      "common_name": "جيووم الحضري",
+      "description": "جيووم الحضري هو نبات معمر موطنه أوروبا وآسيا. ينمو في المناطق المظللة ويحتاج إلى ري معتدل."
     },
     "hi": {
       "common_name": "वुड एवेंस",
-      "description": "Geum urbanum यूरोप का एक बहुवर्षीय पौधा है जो जंगलों में पाया जाता है। यह आंशिक धूप और नम मिट्टी में अच्छी तरह बढ़ता है।"
+      "description": "जिउम उर्बानम, जिसे वुड एवेंस के नाम से जाना जाता है, यूरोप और एशिया का एक बारहमासी पौधा है। यह छायादार क्षेत्रों में बढ़ता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "林地金莲花",
-      "description": "Geum urbanum 原产于欧洲，常见于林地环境。它喜欢湿润土壤和半阴条件。"
+      "common_name": "木鸢尾",
+      "description": "Geum urbanum，通常称为木鸢尾，是一种多年生植物，原产于欧洲和亚洲。它在阴凉的地方生长，水分需求适中。"
     },
     "ja": {
-      "common_name": "ダイコンソウ",
-      "description": "Geum urbanum はヨーロッパ原産の多年草で、林床に自生します。湿った土と半日陰を好みます。"
+      "common_name": "ウッドアヴェンズ",
+      "description": "Geum urbanum、一般にウッドアヴェンズとして知られる植物は、ヨーロッパとアジア原産の多年草です。日陰で育ち、適度な水分を必要とします。"
     },
     "ko": {
-      "common_name": "우드아벤스",
-      "description": "Geum urbanum은 유럽 원산의 다년생 식물로 숲속에서 자랍니다. 반그늘과 촉촉한 토양을 선호합니다."
+      "common_name": "우드 에이븐스",
+      "description": "Geum urbanum은 우드 에이븐스로 알려져 있으며, 유럽과 아시아가 원산지인 다년생 식물입니다. 그늘에서 자라며 물 요구량은 중간입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/7510/geum-urbanum/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280414"
+      "https://www.rhs.org.uk/plants/Geum-urbanum",
+      "https://www.gardenia.net/plant/geum-urbanum"
     ]
   }
 }

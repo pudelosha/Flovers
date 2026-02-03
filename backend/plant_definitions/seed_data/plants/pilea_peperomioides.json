@@ -1,17 +1,17 @@
 {
   "external_id": "pilea_peperomioides",
-  "name": "Chinese Money Plant",
+  "name": "Pilea",
   "latin": "Pilea peperomioides",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 밝기"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "良好な排水",
-          "ko": "배수 좋은"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -74,7 +74,7 @@
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "الري المعتدل",
+          "ar": "ري ماء معتدل",
           "hi": "मध्यम पानी देना",
           "zh": "适量浇水",
           "ja": "適度な水やり",
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwy",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Easy to care for",
+          "pl": "Łatwe w pielęgnacji",
+          "de": "Einfach zu pflegen",
+          "fr": "Facile à entretenir",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "देखभाल में आसान",
+          "zh": "易于照料",
+          "ja": "手入れが簡単",
+          "ko": "관리하기 쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
           "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
           "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -151,7 +151,7 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "보통 성장"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mäßige Wachstum",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "缓慢到适度生长",
+          "ja": "遅いから中程度の成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestiferi occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Chinese Money Plant",
-      "description": "The Chinese Money Plant, or Pilea peperomioides, is a popular houseplant known for its round, glossy leaves. It thrives in moderate light and is easy to care for."
+      "common_name": "Chinese money plant",
+      "description": "Pilea peperomioides is a popular houseplant known for its round, coin-shaped leaves. It thrives in moderate light and requires minimal care."
     },
     "pl": {
-      "common_name": "Roślina pieniądza chińska",
-      "description": "Roślina pieniądza chińska, czyli Pilea peperomioides, to popularna roślina doniczkowa znana z okrągłych, błyszczących liści. Dobrze rośnie w średnim świetle i jest łatwa w pielęgnacji."
+      "common_name": "Pilea",
+      "description": "Pilea peperomioides to popularna roślina doniczkowa, znana z okrągłych, przypominających monety liści. Lubi umiarkowane światło i nie wymaga zbyt wiele troski."
     },
     "de": {
-      "common_name": "Chinesische Geldpflanze",
-      "description": "Die chinesische Geldpflanze, oder Pilea peperomioides, ist eine beliebte Zimmerpflanze, die für ihre runden, glänzenden Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und ist pflegeleicht."
+      "common_name": "Pilea",
+      "description": "Pilea peperomioides ist eine beliebte Zimmerpflanze, die für ihre runden, münzförmigen Blätter bekannt ist. Sie gedeiht bei mäßigem Licht und erfordert wenig Pflege."
     },
     "fr": {
-      "common_name": "Plante à monnaie chinoise",
-      "description": "La plante à monnaie chinoise, ou Pilea peperomioides, est une plante d'intérieur populaire connue pour ses feuilles rondes et brillantes. Elle prospère dans une lumière modérée et est facile à entretenir."
+      "common_name": "Plante monnaie chinoise",
+      "description": "Pilea peperomioides est une plante d'intérieur populaire connue pour ses feuilles rondes en forme de pièce. Elle prospère sous une lumière modérée et nécessite peu de soins."
     },
     "it": {
       "common_name": "Pianta del denaro cinese",
-      "description": "La pianta del denaro cinese, o Pilea peperomioides, è una pianta d'appartamento popolare nota per le sue foglie rotonde e lucide. Cresce bene con luce moderata ed è facile da curare."
+      "description": "Pilea peperomioides è una pianta d'appartamento popolare conosciuta per le sue foglie rotonde a forma di moneta. Cresce bene con luce moderata e richiede poche cure."
     },
     "es": {
-      "common_name": "Planta del dinero china",
-      "description": "La planta del dinero china, o Pilea peperomioides, es una planta de interior popular conocida por sus hojas redondas y brillantes. Crece bien con luz moderada y es fácil de cuidar."
+      "common_name": "Planta de dinero china",
+      "description": "Pilea peperomioides es una planta de interior popular conocida por sus hojas redondas en forma de moneda. Le gusta la luz moderada y requiere pocos cuidados."
     },
     "pt": {
       "common_name": "Planta do dinheiro chinesa",
-      "description": "A planta do dinheiro chinesa, ou Pilea peperomioides, é uma planta de interior popular conhecida por suas folhas redondas e brilhantes. Ela prospera com luz moderada e é fácil de cuidar."
+      "description": "Pilea peperomioides é uma planta de interior popular conhecida pelas suas folhas redondas em forma de moeda. Gosta de luz moderada e requer poucos cuidados."
     },
     "ar": {
       "common_name": "نبات المال الصيني",
-      "description": "نبات المال الصيني، أو Pilea peperomioides، هو نبات منزلي شائع معروف بأوراقه المستديرة واللامعة. ينمو بشكل جيد في الضوء المعتدل وسهل العناية."
+      "description": "Pilea peperomioides هو نبات منزلي شهير يعرف بأوراقه المستديرة التي تشبه العملات المعدنية. يزدهر في الضوء المعتدل ويتطلب عناية قليلة."
     },
     "hi": {
-      "common_name": "चीनी धन का पौधा",
-      "description": "चीनी धन का पौधा, या Pilea peperomioides, एक लोकप्रिय इनडोर पौधा है जो अपने गोल, चमकदार पत्तों के लिए जाना जाता है। यह मध्यम रोशनी में अच्छा बढ़ता है और इसकी देखभाल करना आसान है।"
+      "common_name": "चीनी पैसा पौधा",
+      "description": "Pilea peperomioides एक लोकप्रिय घर पौधा है, जो गोल और सिक्के के आकार के पत्तों के लिए जाना जाता है। यह मध्यम प्रकाश में अच्छी तरह से बढ़ता है और इसे कम देखभाल की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "中国钱币植物",
-      "description": "中国钱币植物，或称Pilea peperomioides，是一种受欢迎的室内植物，以其圆形、光滑的叶子而闻名。它在中等光照下生长良好，且易于照料。"
+      "common_name": "铜钱树",
+      "description": "Pilea peperomioides 是一种受欢迎的室内植物，以其圆形的硬币形叶子而闻名。它在中等光照下生长，并需要较少的护理。"
     },
     "ja": {
       "common_name": "チャイニーズマネープラント",
-      "description": "チャイニーズマネープラント、またはPilea peperomioidesは、丸い光沢のある葉で知られる人気の室内植物です。中程度の光でよく育ち、世話が簡単です。"
+      "description": "Pilea peperomioidesは、丸いコイン型の葉で知られる人気のある観葉植物です。中程度の光でよく育ち、手入れが少なくて済みます。"
     },
     "ko": {
       "common_name": "중국 돈 식물",
-      "description": "중국 돈 식물, 또는 Pilea peperomioides는 둥글고 광택 있는 잎으로 유명한 인기 있는 실내 식물입니다. 적당한 빛에서 잘 자라며 관리가 쉽습니다."
+      "description": "Pilea peperomioides는 둥글고 동전 모양의 잎으로 유명한 인기 있는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며 관리가 적습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenersworld.com/plants/pilea-peperomioides/",
-      "https://www.rhs.org.uk/advice/profile?pid=753"
+      "https://www.rhs.org.uk/advice/profile?pid=623",
+      "https://www.bhg.com/gardening/pests-insects-diseases/pilea-peperomioides/"
     ]
   }
 }

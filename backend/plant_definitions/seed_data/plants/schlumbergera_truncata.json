@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -37,7 +37,7 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
           "ko": "중간 빛"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
-          "zh": "良好的排水土壤",
-          "ja": "排水性の良い土",
-          "ko": "배수성이 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
+          "de": "Moderates Gießen",
           "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
           "ar": "سقي معتدل",
           "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
+          "zh": "适量浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 수준의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
+          "en": "Moderate humidity",
           "pl": "Średnia wilgotność",
           "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
           "hi": "मध्यम आर्द्रता",
-          "zh": "适中湿度",
-          "ja": "中程度の湿度",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
           "ko": "중간 습도"
         }
       }
@@ -151,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -164,16 +164,54 @@
         "text": {
           "en": "Moderate growth",
           "pl": "Średni wzrost",
-          "de": "Mäßiges Wachstum",
+          "de": "Mittleres Wachstum",
           "fr": "Croissance modérée",
           "it": "Crescita moderata",
           "es": "Crecimiento moderado",
           "pt": "Crescimento moderado",
           "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
+          "zh": "适度生长",
           "ja": "中程度の成長",
           "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के कीड़े",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Christmas Cactus",
-      "description": "Schlumbergera truncata, or Christmas Cactus, is a popular houseplant known for its vibrant pink flowers. It thrives in moderate light and well-drained soil."
+      "description": "Schlumbergera truncata, also known as Christmas Cactus, is a popular houseplant. It blooms around Christmas time with bright, colorful flowers."
     },
     "pl": {
-      "common_name": "Kaktus Bożonarodzeniowy",
-      "description": "Schlumbergera truncata, znany jako kaktus bożonarodzeniowy, to popularna roślina doniczkowa z żywymi różowymi kwiatami. Preferuje średnie światło i dobrze przepuszczalną glebę."
+      "common_name": "Kaktus bożonarodzeniowy",
+      "description": "Schlumbergera truncata, znany również jako Kaktus bożonarodzeniowy, to popularna roślina doniczkowa. Kwitnie w okolicach Świąt Bożego Narodzenia, oferując jaskrawe, kolorowe kwiaty."
     },
     "de": {
       "common_name": "Weihnachtskaktus",
-      "description": "Schlumbergera truncata, auch Weihnachtskaktus genannt, ist eine beliebte Zimmerpflanze mit lebendigen rosa Blüten. Sie gedeiht bei mittlerem Licht und gut durchlässigem Boden."
+      "description": "Schlumbergera truncata, auch als Weihnachtskaktus bekannt, ist eine beliebte Zimmerpflanze. Sie blüht zur Weihnachtszeit mit leuchtenden, bunten Blumen."
     },
     "fr": {
       "common_name": "Cactus de Noël",
-      "description": "Schlumbergera truncata, ou Cactus de Noël, est une plante d'intérieur populaire avec des fleurs roses vives. Elle prospère à la lumière modérée et dans un sol bien drainé."
+      "description": "Schlumbergera truncata, également connu sous le nom de Cactus de Noël, est une plante d'intérieur populaire. Elle fleurit autour de Noël avec des fleurs vives et colorées."
     },
     "it": {
       "common_name": "Cactus di Natale",
-      "description": "Schlumbergera truncata, o Cactus di Natale, è una pianta da appartamento popolare con fiori rosa vivaci. Cresce in luce media e in terreno ben drenato."
+      "description": "Schlumbergera truncata, noto anche come Cactus di Natale, è una pianta d'appartamento popolare. Fiorisce durante il periodo natalizio con fiori brillanti e colorati."
     },
     "es": {
       "common_name": "Cactus de Navidad",
-      "description": "Schlumbergera truncata, o Cactus de Navidad, es una planta popular de interior con flores rosas brillantes. Crece en luz moderada y en suelos bien drenados."
+      "description": "Schlumbergera truncata, también conocido como Cactus de Navidad, es una planta popular de interior. Florece alrededor de la Navidad con flores brillantes y coloridas."
     },
     "pt": {
       "common_name": "Cacto de Natal",
-      "description": "Schlumbergera truncata, ou Cacto de Natal, é uma planta de interior popular com flores rosas vibrantes. Cresce em luz moderada e solo bem drenado."
+      "description": "Schlumbergera truncata, também conhecido como Cacto de Natal, é uma planta de interior popular. Floresce por volta do Natal com flores brilhantes e coloridas."
     },
     "ar": {
       "common_name": "صبار عيد الميلاد",
-      "description": "Schlumbergera truncata، أو صبار عيد الميلاد، هو نبات داخلي شائع مع أزهار وردية زاهية. ينمو في الضوء المعتدل والتربة جيدة الصرف."
+      "description": "Schlumbergera truncata، المعروف أيضًا بصبار عيد الميلاد، هو نبات داخلي شهير. يتفتح في موسم عيد الميلاد بأزهار مشرقة وملونة."
     },
     "hi": {
       "common_name": "क्रिसमस कैक्टस",
-      "description": "Schlumbergera truncata, या क्रिसमस कैक्टस, एक लोकप्रिय इनडोर पौधा है जिसकी जीवंत गुलाबी फूल होते हैं। यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में पनपता है।"
+      "description": "Schlumbergera truncata, जिसे क्रिसमस कैक्टस के नाम से भी जाना जाता है, एक लोकप्रिय हाउसप्लांट है। यह क्रिसमस के समय में चमकीले, रंगीन फूलों के साथ खिलता है।"
     },
     "zh": {
       "common_name": "圣诞仙人掌",
-      "description": "Schlumbergera truncata，或圣诞仙人掌，是一种常见的室内植物，具有鲜艳的粉色花朵。它在中等光照和良好的排水土壤中生长。"
+      "description": "Schlumbergera truncata，也称为圣诞仙人掌，是一种受欢迎的室内植物。它在圣诞节期间开出明亮、多彩的花朵。"
     },
     "ja": {
       "common_name": "クリスマスカクタス",
-      "description": "Schlumbergera truncata、またはクリスマスカクタスは、鮮やかなピンクの花を持つ人気の室内植物です。中程度の光と排水性の良い土壌で育ちます。"
+      "description": "Schlumbergera truncata、別名クリスマスカクタスは人気の室内植物です。クリスマスの時期に鮮やかでカラフルな花を咲かせます。"
     },
     "ko": {
       "common_name": "크리스마스 선인장",
-      "description": "Schlumbergera truncata, 또는 크리스마스 선인장은 선명한 분홍색 꽃을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛과 잘 배수되는 토양에서 자랍니다."
+      "description": "Schlumbergera truncata, 크리스마스 선인장으로도 알려진 이 식물은 인기 있는 실내 식물입니다. 크리스마스 시즌에 밝고 화려한 꽃을 피웁니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/ornamental/cacti/schlumbergera-truncata-care.htm",
-      "https://www.bhg.com/gardening/pests-diseases-treatments/christmas-cactus-care/"
+      "https://www.bhg.com/gardening/pests-diseases-troubleshooting/christmas-cactus-care/",
+      "https://www.thespruce.com/christmas-cactus-care-1402798"
     ]
   }
 }

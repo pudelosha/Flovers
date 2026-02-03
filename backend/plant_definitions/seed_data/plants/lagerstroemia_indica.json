@@ -7,10 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
+          "de": "Vollsonne",
+          "fr": "Ensoleillé",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "hi": "पूर्ण सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 잘되는"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 관수"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climates",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गर्म जलवायु",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
           "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Deciduous tree",
-          "pl": "Drzewo liściaste",
-          "de": "Laubbaum",
-          "fr": "Arbre caduc",
-          "it": "Albero caducifoglie",
-          "es": "Árbol caduco",
-          "pt": "Árvore caduca",
-          "ar": "شجرة متساقطة",
-          "hi": "पर्णपाती वृक्ष",
-          "zh": "落叶乔木",
-          "ja": "落葉樹",
-          "ko": "낙엽수"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mittelmäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-वार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -179,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Crape Myrtle",
-      "description": "Lagerstroemia indica is a deciduous flowering tree native to Asia. It is valued for its long summer blooms and attractive bark. It grows best in full sun and well-drained soil."
+      "description": "Crape Myrtle is a flowering shrub or small tree native to Asia. It is prized for its colorful, showy flowers that bloom in summer."
     },
     "pl": {
-      "common_name": "Lagerstremia indyjska",
-      "description": "Lagerstroemia indica to liściaste drzewo ozdobne pochodzące z Azji. Cenione jest za długie letnie kwitnienie i dekoracyjną korę. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie."
+      "common_name": "Krzewuszka",
+      "description": "Krzewuszka to krzew lub małe drzewo pochodzące z Azji. Jest ceniona za swoje kolorowe, efektowne kwiaty, które kwitną latem."
     },
     "de": {
-      "common_name": "Kreppmyrte",
-      "description": "Lagerstroemia indica ist ein laubabwerfender Zierbaum aus Asien. Er ist bekannt für seine lange Sommerblüte und dekorative Rinde. Er bevorzugt volle Sonne und gut durchlässigen Boden."
+      "common_name": "Indische Flieder",
+      "description": "Der Indische Flieder ist ein blühender Strauch oder kleiner Baum aus Asien. Er wird für seine bunten, auffälligen Blumen geschätzt, die im Sommer blühen."
     },
     "fr": {
-      "common_name": "Lilas des Indes",
-      "description": "Lagerstroemia indica est un arbre ornemental caduc originaire d’Asie. Il est apprécié pour sa floraison estivale prolongée et son écorce décorative. Il pousse mieux en plein soleil dans un sol bien drainé."
+      "common_name": "Lagerstroemia",
+      "description": "La Lagerstroemia est un arbuste ou un petit arbre à fleurs originaire d'Asie. Il est apprécié pour ses fleurs colorées et spectaculaires qui fleurissent en été."
     },
     "it": {
-      "common_name": "Lagerstroemia",
-      "description": "Lagerstroemia indica è un albero ornamentale deciduo originario dell’Asia. È apprezzato per la lunga fioritura estiva e la corteccia decorativa. Predilige pieno sole e terreno ben drenato."
+      "common_name": "Crape Myrtle",
+      "description": "Il Crape Myrtle è un arbusto o piccolo albero originario dell'Asia. È apprezzato per i suoi fiori colorati e vistosi che sbocciano in estate."
     },
     "es": {
-      "common_name": "Árbol de Júpiter",
-      "description": "Lagerstroemia indica es un árbol ornamental caducifolio originario de Asia. Destaca por su prolongada floración estival y su corteza atractiva. Crece mejor a pleno sol y en suelo bien drenado."
+      "common_name": "Crape Myrtle",
+      "description": "El Crape Myrtle es un arbusto o árbol pequeño originario de Asia. Se valora por sus flores coloridas y llamativas que florecen en verano."
     },
     "pt": {
-      "common_name": "Resedá",
-      "description": "Lagerstroemia indica é uma árvore ornamental caducifólia originária da Ásia. É valorizada pela floração prolongada no verão e pela casca decorativa. Desenvolve-se melhor em sol pleno e solo bem drenado."
+      "common_name": "Crape Myrtle",
+      "description": "A Crape Myrtle é um arbusto ou pequena árvore nativa da Ásia. É valorizada pelas suas flores coloridas e exuberantes que florescem no verão."
     },
     "ar": {
-      "common_name": "كريب ميرتل",
-      "description": "Lagerstroemia indica شجرة زينة متساقطة الأوراق موطنها آسيا. تشتهر بأزهارها الصيفية الطويلة ولحائها الجذاب. تنمو بشكل أفضل في الشمس الكاملة وتربة جيدة الصرف."
+      "common_name": "الجميلة الهندية",
+      "description": "الجميلة الهندية هي شجيرة أو شجرة صغيرة موطنها آسيا. تشتهر بأزهارها الملونة والمتألقة التي تتفتح في الصيف."
     },
     "hi": {
       "common_name": "क्रेप मर्टल",
-      "description": "Lagerstroemia indica एशिया की एक पर्णपाती पुष्पीय वृक्ष है। इसे लंबे समय तक खिलने वाले फूलों और आकर्षक छाल के लिए जाना जाता है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह बढ़ता है।"
+      "description": "क्रेप मर्टल एक फूलने वाली झाड़ी या छोटी पेड़ है जो एशिया की मूल निवासी है। यह अपने रंगीन और आकर्षक फूलों के लिए प्रसिद्ध है, जो गर्मियों में खिलते हैं।"
     },
     "zh": {
       "common_name": "紫薇",
-      "description": "Lagerstroemia indica 是一种原产于亚洲的落叶开花乔木。以夏季长时间开花和美观的树皮而著称。适合在全日照和排水良好的土壤中生长。"
+      "description": "紫薇是一种原产于亚洲的开花灌木或小树。因其色彩斑斓、引人注目的花朵而受到喜爱，这些花朵在夏季开放。"
     },
     "ja": {
-      "common_name": "サルスベリ",
-      "description": "Lagerstroemia indica はアジア原産の落葉性花木です。夏に長く咲く花と美しい樹皮が特徴です。日当たりと水はけの良い土壌を好みます。"
+      "common_name": "クレープミルトル",
+      "description": "クレープミルトルはアジア原産の花木または小さな木です。夏に咲くカラフルで目を引く花で評価されています。"
     },
     "ko": {
-      "common_name": "배롱나무",
-      "description": "Lagerstroemia indica는 아시아 원산의 낙엽성 꽃나무입니다. 여름에 오래 피는 꽃과 장식적인 수피로 유명합니다. 햇빛이 풍부하고 배수가 좋은 토양에서 잘 자랍니다."
+      "common_name": "크레이프 머틀",
+      "description": "크레이프 머틀은 아시아가 원산지인 꽃이 피는 관목 또는 작은 나무입니다. 여름에 피는 화려하고 눈에 띄는 꽃으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plants.ces.ncsu.edu/plants/lagerstroemia-indica/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a565"
+      "https://www.bhg.com/gardening/pests-insects-diseases/crape-myrtle-care/",
+      "https://www.gardeningknowhow.com/ornamental/shrubs/crape-myrtle/crape-myrtle-care.htm"
     ]
   }
 }

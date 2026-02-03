@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
+          "fr": "Lumière modérée",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ja": "中くらいの光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam-based",
-          "pl": "Na bazie gleby próchniczej",
-          "de": "Auf Lehmbasis",
-          "fr": "Basé sur de la terre franche",
-          "it": "Basato su terriccio",
-          "es": "Basado en tierra arcillosa",
-          "pt": "Baseado em solo argiloso",
-          "ar": "مبني على التربة الطينية",
-          "hi": "मिट्टी पर आधारित",
-          "zh": "基于壤土",
-          "ja": "ロームベース",
-          "ko": "로암 기반"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "중간"
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度に水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -90,9 +90,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Zimno do ciepło",
-          "de": "Kühl bis warm",
-          "fr": "Froid à chaud",
-          "it": "Freddo a caldo",
-          "es": "Frío a cálido",
-          "pt": "Frio a quente",
-          "ar": "بارد إلى دافئ",
-          "hi": "ठंडा से गर्म",
-          "zh": "从凉爽到温暖",
-          "ja": "涼しいから暖かい",
-          "ko": "차가운 것에서 따뜻한 것까지"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
           "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
+          "zh": "中等",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -151,7 +151,7 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping",
-          "pl": "Kępowy",
-          "de": "Buschig",
-          "fr": "En touffe",
-          "it": "A cespuglio",
-          "es": "Agrupado",
-          "pt": "Agrupado",
-          "ar": "مجموع",
-          "hi": "समूह में बढ़ना",
-          "zh": "丛生",
-          "ja": "群生",
-          "ko": "덩어리 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम",
+          "zh": "缓慢到适中",
+          "ja": "遅いから中程度",
+          "ko": "느리게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovraffollamento",
+          "es": "Evite el riego excesivo",
+          "pt": "Evite regar demais",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやり過ぎを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Piggyback Plant",
-      "description": "Tolmiea menziesii is a perennial ground cover plant with heart-shaped leaves and small flowers. It thrives in moderate light and moist, well-drained soil."
+      "description": "Tolmiea menziesii, also known as the piggyback plant, is a perennial native to North America. It's appreciated for its unique leaf growth, where new leaves grow on top of the mature ones."
     },
     "pl": {
-      "common_name": "Roślina przyczepna",
-      "description": "Tolmiea menziesii to wieloletnia roślina okrywowa o sercowatych liściach i małych kwiatach. Rośnie w średnim świetle i wilgotnej, dobrze przepuszczalnej glebie."
+      "common_name": "Roślina podkowa",
+      "description": "Tolmiea menziesii, znana jako roślina podkowa, to roślina wieloletnia pochodząca z Ameryki Północnej. Jest ceniona za unikalny sposób wzrostu liści, gdzie nowe liście wyrastają na starych."
     },
     "de": {
       "common_name": "Piggyback Pflanze",
-      "description": "Tolmiea menziesii ist eine mehrjährige Bodendeckerpflanze mit herzförmigen Blättern und kleinen Blüten. Sie gedeiht bei mittlerem Licht und feuchtem, gut durchlässigem Boden."
+      "description": "Tolmiea menziesii, auch bekannt als Piggyback Pflanze, ist eine mehrjährige Pflanze aus Nordamerika. Sie ist bekannt für das einzigartige Wachstum der Blätter, bei dem neue Blätter auf den alten wachsen."
     },
     "fr": {
-      "common_name": "Plante porteuse",
-      "description": "Tolmiea menziesii est une plante vivace couvre-sol avec des feuilles en forme de cœur et de petites fleurs. Elle prospère à la lumière modérée et dans un sol bien drainé et humide."
+      "common_name": "Plante porte-bagages",
+      "description": "Tolmiea menziesii, également appelée plante porte-bagages, est une plante vivace originaire d'Amérique du Nord. Elle est appréciée pour sa croissance unique des feuilles, où de nouvelles poussent au-dessus des anciennes."
     },
     "it": {
-      "common_name": "Pianta piggyback",
-      "description": "Tolmiea menziesii è una pianta perenne tappezzante con foglie a forma di cuore e fiori piccoli. Cresce in luce moderata e terreno ben drenato e umido."
+      "common_name": "Pianta Portabagagli",
+      "description": "Tolmiea menziesii, conosciuta anche come pianta portabagagli, è una pianta perenne originaria del Nord America. È apprezzata per la sua crescita unica delle foglie, dove quelle nuove crescono sopra quelle mature."
     },
     "es": {
-      "common_name": "Planta piggyback",
-      "description": "Tolmiea menziesii es una planta perenne cubresuelo con hojas en forma de corazón y flores pequeñas. Crece con luz moderada y suelos bien drenados y húmedos."
+      "common_name": "Planta de mochila",
+      "description": "Tolmiea menziesii, también conocida como la planta de mochila, es una planta perenne originaria de América del Norte. Se valora por su crecimiento único de hojas, donde las nuevas crecen encima de las viejas."
     },
     "pt": {
-      "common_name": "Planta piggyback",
-      "description": "Tolmiea menziesii é uma planta perene rasteira com folhas em forma de coração e flores pequenas. Cresce sob luz moderada e solo bem drenado e úmido."
+      "common_name": "Planta de Mochila",
+      "description": "Tolmiea menziesii, também conhecida como a planta de mochila, é uma planta perene nativa da América do Norte. É apreciada por seu crescimento único das folhas, onde as novas crescem em cima das antigas."
     },
     "ar": {
-      "common_name": "نبات بيجيباك",
-      "description": "تولميا مينزيسيا هي نبات معمر يغطي الأرض بأوراق على شكل قلب وزهور صغيرة. تزدهر في الضوء المعتدل والتربة الرطبة ذات التصريف الجيد."
+      "common_name": "نبات حقيبة الظهر",
+      "description": "تولميا مينزيزي، المعروفة أيضًا بنبات حقيبة الظهر، هي نبات معمر من أمريكا الشمالية. وهي مشهورة بنمو أوراقها الفريد، حيث تنمو الأوراق الجديدة فوق الأوراق القديمة."
     },
     "hi": {
-      "common_name": "पिगीबैक पौधा",
-      "description": "टोलमिया मेन्जेसिया एक स्थायी मिट्टी कवर पौधा है जिसमें दिल के आकार के पत्ते और छोटे फूल होते हैं। यह मध्यम प्रकाश और नम, अच्छी जलनिकासी वाली मिट्टी में पनपता है।"
+      "common_name": "पीगिबैक पौधा",
+      "description": "टोल्मिया मेन्जिजी, जिसे पीगिबैक पौधा भी कहा जाता है, उत्तरी अमेरिका का एक बारहमासी पौधा है। इसे इसके अद्वितीय पत्ते विकास के लिए सराहा जाता है, जहां नए पत्ते पुराने पत्तों पर उगते हैं।"
     },
     "zh": {
-      "common_name": "背背植物",
-      "description": "Tolmiea menziesii 是一种多年生地面覆盖植物，具有心形叶子和小花。它在中等光照和湿润、排水良好的土壤中茁壮成长。"
+      "common_name": "背包植物",
+      "description": "Tolmiea menziesii，也叫背包植物，是一种原产于北美的多年生植物。因其独特的叶子生长方式而受到喜爱，新的叶子长在旧叶子上面。"
     },
     "ja": {
       "common_name": "ピギーバックプラント",
-      "description": "Tolmiea menziesii はハート型の葉と小さな花を持つ多年生の地被植物です。中程度の光と湿ったよく排水された土壌で育ちます。"
+      "description": "Tolmiea menziesii、通称ピギーバックプラントは、北アメリカ原産の多年草です。そのユニークな葉の成長で知られており、新しい葉が古い葉の上に成長します。"
     },
     "ko": {
       "common_name": "피기백 식물",
-      "description": "Tolmiea menziesii는 심장 모양의 잎과 작은 꽃을 가진 다년생 땅 덮개 식물입니다. 중간 정도의 빛과 습한 배수가 좋은 토양에서 잘 자랍니다."
+      "description": "Tolmiea menziesii, 피기백 식물로도 알려진 이 식물은 북미 원산의 다년생 식물입니다. 새로운 잎이 오래된 잎 위로 자라는 독특한 성장 방식으로 인기를 끌고 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/12627/Tolmiea-menziesii/Details",
-      "https://www.bhg.com/gardening/pests-insects-diseases/piggyback-plant/"
+      "https://www.rhs.org.uk/plants/tolmiea-menziesii",
+      "https://www.botanicgardens.gov.au/plant-finder/tolmiea-menziesii"
     ]
   }
 }

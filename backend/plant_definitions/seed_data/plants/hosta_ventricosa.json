@@ -1,17 +1,18 @@
 {
   "external_id": "hosta_ventricosa",
-  "name": "Hosta",
+  "name": "Hosta ventricosa",
   "latin": "Hosta ventricosa",
-  "sun": "low",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Shade to part shade",
-          "pl": "Cień do półcienia",
-          "de": "Schatten bis Halbschatten",
-          "fr": "Ombre à mi-ombre",
-          "it": "Ombra o mezzombra",
-          "es": "Sombra o semisombra",
-          "pt": "Sombra a meia-sombra",
-          "ar": "ظل إلى نصف ظل",
-          "hi": "छाया से आंशिक छाया",
-          "zh": "阴影到半阴",
-          "ja": "日陰から半日陰",
-          "ko": "그늘~반그늘"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well-drained soil",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich, locker",
-          "fr": "Riche et drainé",
-          "it": "Ricco e drenante",
-          "es": "Rico y drenado",
-          "pt": "Rico e drenado",
-          "ar": "تربة غنية وجيدة",
-          "hi": "उपजाऊ, जलनिकास",
-          "zh": "肥沃排水良好",
-          "ja": "肥沃で水はけ良好",
-          "ko": "비옥하고 배수 양호"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水の良い土",
+          "ko": "배수성이 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol légèrement humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "رطوبة منتظمة",
-          "hi": "समान नमी रखें",
-          "zh": "保持均匀湿润",
-          "ja": "均一に湿らせる",
-          "ko": "고르게 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易于养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도의 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to moderate",
-          "pl": "Chłodna do umiarkowanej",
-          "de": "Kühl bis mäßig",
-          "fr": "Frais à tempéré",
-          "it": "Fresco-temperato",
-          "es": "Fresco a templado",
-          "pt": "Fresco a moderado",
-          "ar": "معتدلة إلى باردة",
-          "hi": "ठंडा से मध्यम",
-          "zh": "凉爽至温和",
-          "ja": "涼しい〜温和",
-          "ko": "서늘~보통"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
           "ar": "رطوبة معتدلة",
           "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica p/ animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषैली",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "무독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Horstig wachsend",
-          "fr": "Vivace en touffe",
-          "it": "Perenne cespitosa",
-          "es": "Perenne en mata",
-          "pt": "Perene entouceirada",
-          "ar": "نمو خُصلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生多年生",
-          "ja": "株立ち多年草",
-          "ko": "군생 다년생"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير متكررة",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Blue Plantain Lily",
-      "description": "Hosta ventricosa is a hardy perennial valued for its large, glossy green leaves and summer lavender flowers. It prefers shaded locations and consistently moist soil. Commonly grown outdoors, it can also adapt to large containers."
+      "common_name": "Ventricosa Hosta",
+      "description": "Hosta ventricosa is a medium-sized perennial known for its lush, heart-shaped leaves. It thrives in moderate light and well-draining soil."
     },
     "pl": {
-      "common_name": "Funkia rozdęta",
-      "description": "Hosta ventricosa to odporna bylina ceniona za duże zielone liście i letnie kwiaty. Najlepiej rośnie w cieniu i wilgotnej glebie. Uprawiana głównie w ogrodach, nadaje się też do donic."
+      "common_name": "Hosta ventricosa",
+      "description": "Hosta ventricosa to średniej wielkości bylina, znana ze swoich bujnych, sercowatych liści. Rośnie najlepiej w umiarkowanym świetle i dobrze przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Blaugraue Funkie",
-      "description": "Hosta ventricosa ist eine robuste Staude mit dekorativen Blättern und violetten Sommerblüten. Sie wächst bevorzugt im Schatten bei gleichmäßig feuchtem Boden. Geeignet für Garten und große Kübel."
+      "common_name": "Ventricosa Hosta",
+      "description": "Die Hosta ventricosa ist eine mittelgroße Staude, die für ihre üppigen, herzförmigen Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Hosta ventricosa",
-      "description": "Hosta ventricosa est une vivace rustique appréciée pour son feuillage décoratif et ses fleurs estivales. Elle préfère l’ombre et un sol frais. Elle est surtout cultivée en extérieur."
+      "description": "L'Hosta ventricosa est une plante vivace de taille moyenne, connue pour ses feuilles en forme de cœur. Elle prospère à la lumière modérée et dans un sol bien drainé."
     },
     "it": {
       "common_name": "Hosta ventricosa",
-      "description": "Hosta ventricosa è una perenne resistente con grandi foglie verdi e fiori estivi lilla. Predilige zone ombreggiate e terreno umido. È coltivata principalmente all’aperto."
+      "description": "Hosta ventricosa è una pianta perenne di dimensioni medie, nota per le sue foglie a forma di cuore. Cresce bene alla luce moderata e in terreni ben drenati."
     },
     "es": {
       "common_name": "Hosta ventricosa",
-      "description": "Hosta ventricosa es una planta perenne resistente apreciada por sus hojas grandes y flores estivales. Prefiere sombra y suelo húmedo. Se cultiva sobre todo en jardines."
+      "description": "La Hosta ventricosa es una planta perenne de tamaño medio conocida por sus hojas en forma de corazón. Crece bien con luz moderada y en suelos bien drenados."
     },
     "pt": {
       "common_name": "Hosta ventricosa",
-      "description": "Hosta ventricosa é uma planta perene resistente com folhas decorativas e flores de verão. Gosta de sombra e solo sempre úmido. É mais comum em jardins externos."
+      "description": "Hosta ventricosa é uma planta perene de tamanho médio, conhecida por suas folhas em forma de coração. Ela cresce bem em luz moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "هوستا فينتريكوزا",
-      "description": "هوستا فينتريكوزا نبات معمر قوي يتميز بأوراقه الكبيرة وأزهاره الصيفية. يفضل الظل والتربة الرطبة. يزرع غالبًا في الحدائق الخارجية."
+      "common_name": "Hosta ventricosa",
+      "description": "الهوستا فينتريكوزا هي نبتة معمرة متوسطة الحجم معروفة بأوراقها التي تشبه القلب. تنمو بشكل جيد في الضوء المعتدل والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "होस्टा वेंट्रिकोसा",
-      "description": "Hosta ventricosa एक मजबूत बहुवर्षीय पौधा है जो अपनी बड़ी पत्तियों के लिए जाना जाता है। यह छायादार स्थान और नम मिट्टी पसंद करता है। आमतौर पर बगीचों में उगाया जाता है।"
+      "common_name": "होस्टा वेंट्रीकोसा",
+      "description": "होस्टा वेंट्रीकोसा एक मध्यम आकार का बहुवर्षीय पौधा है जो अपनी दिल के आकार की पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "肿柄玉簪",
-      "description": "Hosta ventricosa 是一种耐寒多年生植物，以大叶和夏季花朵著称。喜欢阴凉和湿润土壤。主要作为户外观赏植物栽培。"
+      "common_name": "心叶Hosta",
+      "description": "心叶Hosta是一种中等大小的多年生植物，因其心形的叶子而闻名。它在中等光照和良好的排水土壤中生长良好。"
     },
     "ja": {
-      "common_name": "オオバギボウシ",
-      "description": "Hosta ventricosa は丈夫な多年草で、大きな葉と夏の花が特徴です。日陰と湿った土壌を好みます。主に屋外で栽培されます。"
+      "common_name": "ホスタ・ベンチリコサ",
+      "description": "ホスタ・ベンチリコサは中くらいの大きさの多年草で、ハート型の葉で知られています。適度な光と良好な排水性の土壌でよく育ちます。"
     },
     "ko": {
-      "common_name": "옥잠화",
-      "description": "Hosta ventricosa는 큰 잎과 여름 꽃이 특징인 강한 다년생 식물입니다. 그늘과 촉촉한 토양을 선호합니다. 주로 야외에서 재배됩니다."
+      "common_name": "호스타 벤트리코사",
+      "description": "호스타 벤트리코사는 심장 모양의 잎으로 유명한 중간 크기의 다년생 식물입니다. 중간 정도의 빛과 잘 배수되는 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hosta",
-      "https://plants.ces.ncsu.edu/plants/hosta-ventricosa/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a848"
+      "https://www.rhs.org.uk/plants/hosta-ventricosa",
+      "https://www.bhg.com/gardening/pests-diseases-diseases/hostas-ventricosa-care/"
     ]
   }
 }

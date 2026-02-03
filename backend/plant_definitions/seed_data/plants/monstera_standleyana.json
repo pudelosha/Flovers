@@ -4,24 +4,24 @@
   "latin": "Monstera standleyana",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "loam"
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 14,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "monstera_standleyana.jpg",
   "image_thumb": "monstera_standleyana.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne pośrednie",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "lumin. indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
+          "en": "Indirect light",
+          "pl": "Światło pośrednie",
+          "de": "Indirektes Licht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
           "ar": "ضوء غير مباشر",
-          "hi": "प्रत्यक्ष अप्रत्यक्ष",
-          "zh": "明亮间接光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "hi": "प्रत्यक्ष प्रकाश",
+          "zh": "间接光",
+          "ja": "間接光",
+          "ko": "간접광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well draining",
-          "pl": "drenażowy",
-          "de": "gut drainierend",
-          "fr": "bien drainé",
-          "it": "ben drenante",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "جيد الصرف",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "良好排水",
-          "ja": "水はけ良好",
-          "ko": "배수가 잘됩"
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "dry top soil",
-          "pl": "sucha wierzchnia",
-          "de": "obere Erde trocken",
-          "fr": "sol sec dessus",
-          "it": "terra asciutta",
-          "es": "seca arriba",
-          "pt": "seca acima",
-          "ar": "جفاف السطح",
-          "hi": "ऊपरी मिट्टी सूखी",
-          "zh": "表层干燥",
-          "ja": "表土乾燥",
-          "ko": "표면 건조"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy care",
-          "pl": "łatwa pielęgn.",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易养护",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-29°C",
-          "pl": "18-29°C",
-          "de": "18-29°C",
-          "fr": "18-29°C",
-          "it": "18-29°C",
-          "es": "18-29°C",
-          "pt": "18-29°C",
-          "ar": "18-29°C",
-          "hi": "18-29°C",
-          "zh": "18-29°C",
-          "ja": "18-29°C",
-          "ko": "18-29°C"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "moderate high",
-          "pl": "umiark. wysoka",
-          "de": "mittel hoch",
-          "fr": "humidité élevée",
-          "it": "moderata alta",
-          "es": "humedad alta",
-          "pt": "umid. alta",
-          "ar": "رطوبة عالية",
-          "hi": "मध्यम उच्च",
-          "zh": "中高湿度",
-          "ja": "中高湿度",
-          "ko": "중고습"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "toxic to pets",
-          "pl": "toksyczna",
-          "de": "giftig für Tiere",
-          "fr": "toxique animaux",
-          "it": "tossica animali",
-          "es": "tóxica mascotas",
-          "pt": "tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू विषैला",
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "애완동물 유독"
+          "ko": "애완 동물에게 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "climbing vine",
-          "pl": "pnący się",
-          "de": "kletternde Ranke",
-          "fr": "plante grimpante",
-          "it": "rampicante",
-          "es": "trepadora",
-          "pt": "trepadeira",
-          "ar": "متسلق",
-          "hi": "चढ़ने वाली",
-          "zh": "攀缘藤",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evite el riego excesivo",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-वार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Five Holes Plant",
-      "description": "Monstera standleyana is a tropical vining houseplant that thrives in bright, indirect light and moderate humidity. It prefers well draining soil and water when the top soil dries. Protect from cold drafts and provide support for climbing."
+      "common_name": "Philodendron",
+      "description": "Monstera standleyana is a popular aroid plant known for its attractive, variegated leaves. It thrives in bright, indirect light and moderate humidity."
     },
     "pl": {
-      "common_name": "Roślina Pięciu Dziur",
-      "description": "Monstera standleyana to tropikalna pnącza domowa, która rośnie w jasnym, pośrednim świetle i umiarkowanej wilgotności. Woli gleby dobrze drenujące i podlewanie, gdy wierzch wysycha. Unikaj przeciągów i daj podpórkę."
+      "common_name": "Monstera",
+      "description": "Monstera standleyana to popularna roślina aroida, znana z atrakcyjnych, zróżnicowanych liści. Rośnie w jasnym, pośrednim świetle i umiarkowanej wilgotności."
     },
     "de": {
-      "common_name": "Fünf Löcher Pflanze",
-      "description": "Monstera standleyana ist eine tropische Kletterpflanze, die in hellem, indirektem Licht und mäßiger Luftfeuchte gedeiht. Sie bevorzugt gut drainierte Erde und Wasser, wenn die Oberfläche trocken ist. Schützen vor Kälte."
+      "common_name": "Monstera",
+      "description": "Monstera standleyana ist eine beliebte Aroid-Pflanze, die für ihre attraktiven, variegierten Blätter bekannt ist. Sie gedeiht bei hellem, indirektem Licht und mäßiger Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Plante Cinq Trous",
-      "description": "Monstera standleyana est une plante tropicale grimpante en intérieur qui préfère la lumière indirecte et l’humidité modérée. Elle aime un sol bien drainé et être arrosée lorsque le dessus sèche. Éviter les courants froids."
+      "common_name": "Monstera",
+      "description": "Monstera standleyana est une plante aroid populaire connue pour ses feuilles variées et attrayantes. Elle se développe dans une lumière indirecte vive et une humidité modérée."
     },
     "it": {
-      "common_name": "Pianta Cinque Buchi",
-      "description": "Monstera standleyana è una pianta tropicale rampicante che ama luce indiretta e umidità moderata. Preferisce terreno ben drenante e annaffiature quando la parte superiore si asciuga. Proteggere dal freddo."
+      "common_name": "Monstera",
+      "description": "Monstera standleyana è una pianta aroida popolare, nota per le sue foglie variegate e attraenti. Cresce alla luce indiretta intensa e con umidità moderata."
     },
     "es": {
-      "common_name": "Planta Cinco Agujeros",
-      "description": "Monstera standleyana es una planta trepadora tropical que prospera con luz indirecta y humedad moderada. Prefiere suelo bien drenado y riega cuando la superficie esté seca. Protéjela de corrientes frías."
+      "common_name": "Monstera",
+      "description": "Monstera standleyana es una planta aroida popular conocida por sus atractivas hojas variegadas. Prosperan en luz indirecta brillante y humedad moderada."
     },
     "pt": {
-      "common_name": "Planta Cinco Furos",
-      "description": "Monstera standleyana é uma trepadeira tropical de interior que gosta de luz indireta e humidade moderada. Prefere solo bem drenado e rega quando a superfície seca. Proteja de correntes frias."
+      "common_name": "Monstera",
+      "description": "Monstera standleyana é uma planta aroida popular conhecida por suas folhas variegadas e atraentes. Cresce com luz indireta brilhante e umidade moderada."
     },
     "ar": {
-      "common_name": "نبات الخمسة ثقوب",
-      "description": "Monstera standleyana نبات استوائي متسلق داخلي يزدهر في ضوء غير مباشر ورطوبة معتدلة. يفضل تربة جيدة الصرف والري عند جفاف السطح. احمِه من الهواء البارد."
+      "common_name": "مونستيرا",
+      "description": "مونستيرا ستاندليانا هي نبات آرويدي شهير يعرف بأوراقه المتنوعة والجذابة. ينمو في الضوء غير المباشر الساطع والرطوبة المعتدلة."
     },
     "hi": {
-      "common_name": "फाइव होल प्लांट",
-      "description": "Monstera standleyana एक उष्णकटिबंधीय लता है जो उजाले अप्रत्यक्ष प्रकाश व मध्यम आद्रता में अच्छी होती है. यह अच्छी जल निकासी वाली मिट्टी व ऊपरी सुखने पर पानी चाहती है. ठंडी हवा से बचाएँ."
+      "common_name": "मोनस्टेरा",
+      "description": "मोनस्टेरा स्टैंडलीआना एक लोकप्रिय एरोइड पौधा है, जो आकर्षक, विविध पत्तियों के लिए जाना जाता है। यह हल्के, अप्रत्यक्ष प्रकाश और मध्यम आर्द्रता में उगता है।"
     },
     "zh": {
-      "common_name": "五孔龟背竹",
-      "description": "Monstera standleyana 是热带攀缘室内植物，喜明亮间接光和中等湿度。喜欢良好排水土壤，表层干燥时浇水。避免冷风。"
+      "common_name": "单叶怪兽",
+      "description": "Monstera standleyana是一种受欢迎的阿罗伊德植物，以其迷人的大理石状叶片而闻名。它在明亮的间接光和适中的湿度下生长。"
     },
     "ja": {
-      "common_name": "ファイブホールプラント",
-      "description": "Monstera standleyana は明るい間接光と適度な湿度を好む熱帯性蔓性観葉植物です。排水の良い土を好み、表面が乾いたら水やりします。冷たい風を避けてください。"
+      "common_name": "モンステラ",
+      "description": "モンステラ・スタンドレイアナは、その魅力的で斑入りの葉で知られる人気のアロイド植物です。明るい間接光と中程度の湿度で成長します。"
     },
     "ko": {
-      "common_name": "파이브홀 식물",
-      "description": "Monstera standleyana 는 밝은 간접광과 적당한 습도를 좋아하는 열대 덩굴 실내용 식물입니다. 배수가 좋은 흙과 표면이 마르면 물을 줍니다. 찬 바람을 피하세요."
+      "common_name": "몬스테라",
+      "description": "Monstera standleyana는 매력적이고 변종된 잎으로 유명한 인기 있는 아로이드 식물입니다. 밝은 간접광과 적당한 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.ourhouseplants.com/plants/monstera-standleyana-philodendron-cobra",
-      "https://www.monstera-app.com/en/plants/varieties/monstera-standleyana-01FS7G6DPHT7CM5BB075A1A1V5",
-      "https://www.livinghouse.ca/news/title/how-to-care-for-monstera-standleyana/"
+      "https://www.rhs.org.uk/plants/monstera-standleyana",
+      "https://www.gardenersworld.com/plants/monstera-standleyana-care/"
     ]
   }
 }

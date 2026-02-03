@@ -1,45 +1,46 @@
 {
   "external_id": "lotus_berthelotii",
-  "name": "Parrot's Beak",
+  "name": "Lotus berthelotii",
   "latin": "Lotus berthelotii",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
-  "image_hero": "lotus_berthelotii.jpg",
-  "image_thumb": "lotus_berthelotii.jpg",
+  "image_hero": "lotus_berthelottii.jpg",
+  "image_thumb": "lotus_berthelottii.jpg",
   "traits": [
     {
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -70,9 +71,9 @@
           "pl": "Umiarkowane",
           "de": "Mäßig",
           "fr": "Modéré",
-          "it": "Moderata",
+          "it": "Moderato",
           "es": "Moderado",
-          "pt": "Moderada",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing",
-          "pl": "Płożąca",
-          "de": "Hängend",
-          "fr": "Retombante",
-          "it": "Ricadente",
-          "es": "Rastrera",
-          "pt": "Pendente",
-          "ar": "متدلية",
-          "hi": "लटकती",
-          "zh": "蔓生",
-          "ja": "下垂性",
-          "ko": "늘어짐"
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Parrot's Beak",
-      "description": "Lotus berthelotii is a trailing perennial native to the Canary Islands. It is known for its silvery foliage and bright red-orange flowers. The plant prefers full sun and well-drained soil."
+      "description": "Lotus berthelotii is a trailing plant with bright orange flowers resembling a bird's beak. It thrives in well-drained soils and moderate watering."
     },
     "pl": {
-      "common_name": "Lotus berthelotii",
-      "description": "Lotus berthelotii to bylina pochodząca z Wysp Kanaryjskich. Ma srebrzyste liście i intensywnie czerwono-pomarańczowe kwiaty. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie."
+      "common_name": "Dziób papugi",
+      "description": "Lotus berthelotii to roślina płożąca z jaskrawo pomarańczowymi kwiatami przypominającymi dziób ptaka. Preferuje dobrze przepuszczalne gleby i umiarkowane podlewanie."
     },
     "de": {
-      "common_name": "Papageienschnabel",
-      "description": "Lotus berthelotii ist eine kriechende Staude von den Kanarischen Inseln. Sie hat silbriges Laub und leuchtende Blüten. Bevorzugt volle Sonne und gut drainierten Boden."
+      "common_name": "Papageien-Schnabel",
+      "description": "Lotus berthelotii ist eine kletternde Pflanze mit leuchtend orangefarbenen Blüten, die einem Vogelschnabel ähneln. Sie gedeiht in gut durchlässigen Böden und bei mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Lotus bec-de-perroquet",
-      "description": "Lotus berthelotii est une plante vivace rampante des îles Canaries. Elle se distingue par son feuillage argenté et ses fleurs vives. Elle aime le plein soleil et un sol bien drainé."
+      "common_name": "Bec de perroquet",
+      "description": "Lotus berthelotii est une plante rampante avec des fleurs orange vif ressemblant à un bec d'oiseau. Elle préfère un sol bien drainé et un arrosage modéré."
     },
     "it": {
       "common_name": "Becco di pappagallo",
-      "description": "Lotus berthelotii è una perenne strisciante originaria delle Canarie. Ha foglie argentate e fiori molto vistosi. Cresce meglio in pieno sole e terreno drenante."
+      "description": "Lotus berthelotii è una pianta rampicante con fiori arancioni brillanti che somigliano a un becco di uccello. Cresce bene in terreni ben drenati e con irrigazioni moderate."
     },
     "es": {
       "common_name": "Pico de loro",
-      "description": "Lotus berthelotii es una planta perenne rastrera de las Islas Canarias. Destaca por su follaje plateado y flores brillantes. Requiere sol pleno y suelo bien drenado."
+      "description": "Lotus berthelotii es una planta trepadora con flores naranjas brillantes que se asemejan a un pico de ave. Prefiere suelos bien drenados y un riego moderado."
     },
     "pt": {
-      "common_name": "Bico-de-papagaio",
-      "description": "Lotus berthelotii é uma planta perene pendente das Ilhas Canárias. Possui folhas prateadas e flores chamativas. Prefere sol pleno e solo bem drenado."
+      "common_name": "Bico de papagaio",
+      "description": "Lotus berthelotii é uma planta rasteira com flores laranja brilhante que lembram o bico de um pássaro. Prefere solos bem drenados e rega moderada."
     },
     "ar": {
       "common_name": "منقار الببغاء",
-      "description": "نبات Lotus berthelotii معمر زاحف من جزر الكناري. يتميز بأوراق فضية وأزهار زاهية. يفضل الشمس الكاملة والتربة جيدة التصريف."
+      "description": "Lotus berthelotii هو نبات زاحف بأزهار برتقالية زاهية تشبه منقار الطائر. يزدهر في التربة جيدة التصريف وري معتدل."
     },
     "hi": {
-      "common_name": "पैरट्स बीक",
-      "description": "Lotus berthelotii कैनरी द्वीप का एक लटकने वाला बहुवर्षीय पौधा है। इसमें चांदी जैसे पत्ते और चमकीले फूल होते हैं। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है।"
+      "common_name": "तोते की चोंच",
+      "description": "Lotus berthelotii एक लटकने वाला पौधा है जिसकी चमकीली नारंगी फूल तोते की चोंच जैसी दिखती हैं। यह अच्छी जल निकासी वाली मिट्टी में और मध्यम पानी में उगता है।"
     },
     "zh": {
-      "common_name": "鹦鹉嘴莲",
-      "description": "Lotus berthelotii 原产加那利群岛，是一种蔓生多年生植物。具有银色叶片和鲜艳花朵。适合全日照和排水良好的土壤。"
+      "common_name": "鹦鹉嘴",
+      "description": "Lotus berthelotii是一种攀爬植物，具有明亮的橙色花朵，形似鸟嘴。它在排水良好的土壤中茁壮成长，浇水适中。"
     },
     "ja": {
-      "common_name": "パロットビーク",
-      "description": "Lotus berthelotii はカナリア諸島原産の多年草です。銀色の葉と鮮やかな花が特徴です。日当たりと水はけの良い土を好みます。"
+      "common_name": "オウムのくちばし",
+      "description": "Lotus berthelotiiは、明るいオレンジ色の花が鳥のくちばしのように見えるツル性植物です。排水の良い土壌と適度な水やりを好みます。"
     },
     "ko": {
-      "common_name": "패럿비크",
-      "description": "Lotus berthelotii는 카나리아 제도 원산의 늘어지는 다년초입니다. 은빛 잎과 선명한 꽃이 특징입니다. 강한 햇빛과 배수 좋은 토양을 선호합니다."
+      "common_name": "앵무새 부리",
+      "description": "Lotus berthelotii는 밝은 주황색 꽃이 새 부리처럼 보이는 덩굴 식물입니다. 배수가 좋은 토양과 적당한 물주기를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/lotus/berthelotii/details",
-      "https://plants.ces.ncsu.edu/plants/lotus-berthelotii/",
-      "https://www.gardenersworld.com/plants/lotus-berthelotii/"
+      "https://www.rhs.org.uk/plants/lotus-berthelotii",
+      "https://www.gardenia.net/plant/lotus-berthelotii"
     ]
   }
 }

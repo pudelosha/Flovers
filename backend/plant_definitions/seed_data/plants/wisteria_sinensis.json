@@ -1,0 +1,275 @@
+{
+  "external_id": "wisteria_sinensis",
+  "name": "Wisteria sinensis",
+  "latin": "Wisteria sinensis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "green-plants"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "wisteria_sinensis.jpg",
+  "image_thumb": "wisteria_sinensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "完全日光",
+          "ko": "완전한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी तरह से नालियों वाला",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 잘 되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnellwachsend",
+          "fr": "À croissance rapide",
+          "it": "Crescita veloce",
+          "es": "De rápido crecimiento",
+          "pt": "De crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso di annaffiature",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過水を避ける",
+          "ko": "과잉 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-आधारित कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese Wisteria",
+      "description": "Wisteria sinensis is a fast-growing vine known for its cascading clusters of purple flowers. It thrives in full sun and requires well-drained soil."
+    },
+    "pl": {
+      "common_name": "Wisteria chińska",
+      "description": "Wisteria sinensis to szybko rosnąca pnącze, znana z opadających gron fioletowych kwiatów. Wymaga pełnego słońca i dobrze przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Chinesische Glyzinie",
+      "description": "Wisteria sinensis ist eine schnell wachsende Kletterpflanze, die für ihre hängenden, violetten Blüten bekannt ist. Sie gedeiht in voller Sonne und benötigt gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Glycine de Chine",
+      "description": "Wisteria sinensis est une vigne à croissance rapide connue pour ses grappes tombantes de fleurs violettes. Elle préfère le plein soleil et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Glicine cinese",
+      "description": "Wisteria sinensis è una vite a crescita rapida nota per i suoi grappoli pendenti di fiori viola. Preferisce il pieno sole e un terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Glicinia china",
+      "description": "Wisteria sinensis es una planta trepadora de rápido crecimiento conocida por sus racimos colgantes de flores moradas. Prefiere el sol pleno y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Glicínia chinesa",
+      "description": "Wisteria sinensis é uma planta trepadeira de rápido crescimento, conhecida por seus cachos pendentes de flores roxas. Prefere sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "جليسينيا صينية",
+      "description": "Wisteria sinensis هي نبات متسلق سريع النمو معروف بتجمعات الأزهار البنفسجية المتدلية. يحتاج إلى أشعة الشمس الكاملة وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "चाइनीज विस्टेरिया",
+      "description": "Wisteria sinensis एक तेजी से बढ़ने वाली बेल है, जो बैंगनी फूलों के लटकते गुच्छों के लिए जानी जाती है। इसे पूरे सूरज में और अच्छी तरह से जल निकासी वाली मिट्टी में उगने की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "紫藤",
+      "description": "Wisteria sinensis 是一种快速生长的藤本植物，以紫色花朵的垂直花序而闻名。它喜欢全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "中国ウィステリア",
+      "description": "Wisteria sinensisは、紫色の花を垂れ下がる房で知られる成長が速いツル植物です。完全な日光と排水性の良い土壌が必要です。"
+    },
+    "ko": {
+      "common_name": "중국 윈스터리",
+      "description": "Wisteria sinensis는 자주 자주 보라색 꽃이 떨어지는 덩굴 식물로, 완전한 햇빛과 잘 배수되는 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/71364/wisteria-sinensis/details",
+      "https://www.gardenia.net/plant/wisteria-sinensis-chinese-wisteria"
+    ]
+  }
+}

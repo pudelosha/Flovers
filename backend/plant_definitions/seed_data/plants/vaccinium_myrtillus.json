@@ -7,19 +7,19 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "acid-loving",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 365,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "vaccinium_myrtillus.jpg",
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezzombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
+          "pl": "Częściowe słońce",
+          "de": "Teilsonne",
+          "fr": "Soleil partiel",
+          "it": "Sole parziale",
+          "es": "Sol parcial",
+          "pt": "Sol parcial",
           "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "hi": "आंशिक सूर्य",
+          "zh": "部分阳光",
+          "ja": "部分的な太陽",
+          "ko": "부분적인 햇볕"
         }
       }
     },
@@ -49,10 +49,10 @@
       "value": {
         "text": {
           "en": "Acidic soil",
-          "pl": "Gleba kwaśna",
+          "pl": "Kwaśna gleba",
           "de": "Saurer Boden",
           "fr": "Sol acide",
-          "it": "Suolo acido",
+          "it": "Terreno acido",
           "es": "Suelo ácido",
           "pt": "Solo ácido",
           "ar": "تربة حمضية",
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Stała wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humidité stable",
-          "it": "Umidità costante",
-          "es": "Humedad regular",
-          "pt": "Umidade constante",
-          "ar": "رطوبة منتظمة",
-          "hi": "नियमित नमी",
-          "zh": "均匀湿润",
-          "ja": "適度な湿り気",
-          "ko": "고른 수분"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool climate",
-          "pl": "Chłodny klimat",
-          "de": "Kühles Klima",
-          "fr": "Climat frais",
-          "it": "Clima fresco",
-          "es": "Clima fresco",
-          "pt": "Clima fresco",
-          "ar": "مناخ معتدل",
-          "hi": "ठंडी जलवायु",
-          "zh": "凉爽气候",
-          "ja": "冷涼な気候",
-          "ko": "서늘한 기후"
+          "en": "5-20°C",
+          "pl": "5-20°C",
+          "de": "5-20°C",
+          "fr": "5-20°C",
+          "it": "5-20°C",
+          "es": "5-20°C",
+          "pt": "5-20°C",
+          "ar": "5-20°C",
+          "hi": "5-20°C",
+          "zh": "5-20°C",
+          "ja": "5-20°C",
+          "ko": "5-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgoć",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य आर्द्रता",
-          "zh": "正常湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low shrub",
-          "pl": "Niski krzew",
-          "de": "Niedriger Strauch",
-          "fr": "Arbuste bas",
-          "it": "Arbusto basso",
-          "es": "Arbusto bajo",
-          "pt": "Arbusto baixo",
-          "ar": "شجيرة منخفضة",
-          "hi": "छोटी झाड़ी",
-          "zh": "低矮灌木",
-          "ja": "低木",
-          "ko": "낮은 관목"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Bilberry",
-      "description": "Vaccinium myrtillus is a low-growing deciduous shrub native to European forests and heathlands. It produces edible dark blue berries and prefers acidic, moist soils in cool climates."
+      "description": "Vaccinium myrtillus, commonly known as bilberry, is a small shrub found in temperate regions. It produces blue-black berries, often used in jams and juices."
     },
     "pl": {
       "common_name": "Borówka czarna",
-      "description": "Vaccinium myrtillus to niski krzew liściasty rosnący naturalnie w lasach i na wrzosowiskach Europy. Wytwarza jadalne, ciemnoniebieskie owoce i wymaga kwaśnej, wilgotnej gleby."
+      "description": "Vaccinium myrtillus, znana jako borówka czarna, to mały krzew występujący w strefach umiarkowanych. Wytwarza niebiesko-czarne jagody, które często wykorzystywane są w dżemach i sokach."
     },
     "de": {
       "common_name": "Heidelbeere",
-      "description": "Vaccinium myrtillus ist ein niedriger Laubstrauch aus europäischen Wäldern und Heiden. Er trägt essbare blaue Beeren und wächst am besten in sauren, feuchten Böden."
+      "description": "Vaccinium myrtillus, auch Heidelbeere genannt, ist ein kleiner Strauch, der in gemäßigten Regionen vorkommt. Er produziert blau-schwarze Beeren, die häufig in Marmelade und Säften verwendet werden."
     },
     "fr": {
       "common_name": "Myrtille",
-      "description": "Vaccinium myrtillus est un petit arbuste caduc originaire des forêts européennes. Il produit des baies comestibles et préfère les sols acides et frais."
+      "description": "Vaccinium myrtillus, couramment appelé myrtille, est un petit arbuste trouvé dans les régions tempérées. Il produit des baies bleu-noir, souvent utilisées dans les confitures et les jus."
     },
     "it": {
-      "common_name": "Mirtillo nero",
-      "description": "Vaccinium myrtillus è un arbusto basso originario delle foreste europee. Produce bacche commestibili e cresce bene in terreni acidi e umidi."
+      "common_name": "Mirtillo",
+      "description": "Vaccinium myrtillus, comunemente noto come mirtillo, è un piccolo arbusto che cresce nelle regioni temperate. Produce bacche blu-nerastre, spesso utilizzate per marmellate e succhi."
     },
     "es": {
-      "common_name": "Arándano europeo",
-      "description": "Vaccinium myrtillus es un arbusto bajo nativo de bosques europeos. Da frutos comestibles y requiere suelos ácidos y húmedos."
+      "common_name": "Arándano",
+      "description": "Vaccinium myrtillus, conocido comúnmente como arándano, es un pequeño arbusto que se encuentra en regiones templadas. Produce bayas azul-negro que se usan frecuentemente en mermeladas y jugos."
     },
     "pt": {
       "common_name": "Mirtilo",
-      "description": "Vaccinium myrtillus é um arbusto baixo nativo de florestas europeias. Produz frutos comestíveis e prefere solos ácidos e úmidos."
+      "description": "Vaccinium myrtillus, comumente conhecido como mirtilo, é um pequeno arbusto encontrado em regiões temperadas. Produz frutos azul-escuros, frequentemente usados em geleias e sucos."
     },
     "ar": {
-      "common_name": "توت بري أوروبي",
-      "description": "Vaccinium myrtillus شجيرة منخفضة موطنها الغابات الأوروبية. تنتج ثمارًا صالحة للأكل وتنمو في تربة حمضية رطبة."
+      "common_name": "التوت الأزرق",
+      "description": "Vaccinium myrtillus، المعروف باسم التوت الأزرق، هو شجيرة صغيرة توجد في المناطق المعتدلة. تنتج التوت الأزرق الداكن الذي يستخدم غالبًا في المربيات والعصائر."
     },
     "hi": {
-      "common_name": "यूरोपीय ब्लूबेरी",
-      "description": "Vaccinium myrtillus एक छोटी झाड़ी है जो यूरोपीय वनों में पाई जाती है। यह खाने योग्य फल देती है और अम्लीय नम मिट्टी पसंद करती है।"
+      "common_name": "ब्लूबेरी",
+      "description": "Vaccinium myrtillus, जिसे ब्लूबेरी के नाम से जाना जाता है, एक छोटा झाड़ है जो उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह नीले-काले फल उत्पन्न करता है, जो आमतौर पर जैम और रस में उपयोग किए जाते हैं।"
     },
     "zh": {
-      "common_name": "欧洲越橘",
-      "description": "Vaccinium myrtillus 是原产于欧洲森林的低矮灌木。它结可食用的蓝色果实，适合酸性湿润土壤。"
+      "common_name": "越橘",
+      "description": "Vaccinium myrtillus, 通常称为越橘，是一种小型灌木，生长在温带地区。它会结出蓝黑色的浆果，常用于果酱和果汁中。"
     },
     "ja": {
-      "common_name": "ビルベリー",
-      "description": "Vaccinium myrtillus はヨーロッパ原産の低木です。食用になる青い果実をつけ、酸性で湿った土壌を好みます。"
+      "common_name": "ブルーベリー",
+      "description": "Vaccinium myrtillus、通称ブルーベリーは、温帯地域に生息する小さな低木です。青黒いベリーを実らせ、ジャムやジュースに使われます。"
     },
     "ko": {
-      "common_name": "빌베리",
-      "description": "Vaccinium myrtillus는 유럽 숲이 원산지인 낮은 관목입니다. 식용 가능한 열매를 맺으며 산성의 습한 토양을 선호합니다."
+      "common_name": "블루베리",
+      "description": "Vaccinium myrtillus, 일반적으로 블루베리로 알려진 이 식물은 온대 지역에서 자라는 작은 관목입니다. 푸르스름한 검은색 열매를 맺어 잼과 주스에 자주 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/19548/vaccinium-myrtillus/details",
-      "https://plants.usda.gov/home/plantProfile?symbol=VAMY",
-      "https://www.kew.org/plants/vaccinium-myrtillus"
+      "https://www.rhs.org.uk/advice/profile?pid=746",
+      "https://www.gardenia.net/plant/vaccinium-myrtillus-bilberry"
     ]
   }
 }

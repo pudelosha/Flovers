@@ -1,24 +1,25 @@
 {
   "external_id": "euphorbia_characias",
-  "name": "Mediterranean Spurge",
+  "name": "Euphorbia characias",
   "latin": "Euphorbia characias",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 90,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "euphorbia_characias.jpg",
@@ -32,14 +33,14 @@
           "pl": "Pełne słońce",
           "de": "Volle Sonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूर्य",
           "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "ja": "直射日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -48,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "जल निकास",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "排水性の良い",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Skąpe",
-          "de": "Gering",
-          "fr": "Faible",
-          "it": "Scarso",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम पानी",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적은 물"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Mild climates",
-          "pl": "Łagodny klimat",
-          "de": "Mildes Klima",
-          "fr": "Climat doux",
-          "it": "Clima mite",
-          "es": "Clima suave",
-          "pt": "Clima ameno",
-          "ar": "مناخ معتدل",
-          "hi": "मध्यम ताप",
-          "zh": "温和气候",
-          "ja": "温暖な気候",
-          "ko": "온화한 기후"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -130,11 +131,11 @@
           "it": "Bassa",
           "es": "Baja",
           "pt": "Baixa",
-          "ar": "منخفضة",
+          "ar": "منخفض",
           "hi": "कम",
           "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic sap",
-          "pl": "Toksyczny sok",
-          "de": "Giftiger Saft",
-          "fr": "Sève toxique",
-          "it": "Linfa tossica",
-          "es": "Savia tóxica",
-          "pt": "Seiva tóxica",
-          "ar": "عصارة سامة",
-          "hi": "विषैला रस",
-          "zh": "有毒汁液",
-          "ja": "有毒樹液",
-          "ko": "독성 수액"
+          "en": "Toxic",
+          "pl": "Toksyczny",
+          "de": "Toxisch",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright shrub",
-          "pl": "Wzniesiony krzew",
-          "de": "Aufrechter Strauch",
-          "fr": "Arbuste dressé",
-          "it": "Arbusto eretto",
-          "es": "Arbusto erguido",
-          "pt": "Arbusto ereto",
-          "ar": "شجيرة قائمة",
-          "hi": "सीधी झाड़ी",
-          "zh": "直立灌木",
-          "ja": "直立低木",
-          "ko": "직립 관목"
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水分過剰を避ける",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Mediterranean spurge",
-      "description": "Euphorbia characias is an evergreen Mediterranean shrub known for its blue-green foliage and chartreuse flower heads. It thrives in full sun and dry, well-drained soils. The milky sap is toxic and can irritate skin."
+      "common_name": "Mediterranean Spurge",
+      "description": "Euphorbia characias is a Mediterranean plant known for its distinctive spiky green foliage and vibrant yellow-green flowers. It thrives in sunny, dry conditions."
     },
     "pl": {
-      "common_name": "Wilczomlecz śródziemnomorski",
-      "description": "Euphorbia characias to zimozielony krzew z rejonu Morza Śródziemnego o niebieskozielonych liściach. Preferuje pełne słońce i suche, przepuszczalne gleby. Mleczny sok rośliny jest toksyczny."
+      "common_name": "Wilczomlecz charakias",
+      "description": "Euphorbia characias to roślina śródziemnomorska, znana z charakterystycznych kolczastych liści i jaskrawych żółto-zielonych kwiatów. Lubi słoneczne, suche warunki."
     },
     "de": {
       "common_name": "Mittelmeer-Wolfsmilch",
-      "description": "Euphorbia characias ist ein immergrüner Strauch aus dem Mittelmeerraum mit blaugrünem Laub. Sie wächst am besten in voller Sonne und gut drainierten Böden. Der Milchsaft ist giftig."
+      "description": "Euphorbia characias ist eine mediterrane Pflanze, die für ihr markantes, stacheliges grünes Laub und ihre lebendigen gelb-grünen Blüten bekannt ist. Sie gedeiht in sonnigen, trockenen Bedingungen."
     },
     "fr": {
-      "common_name": "Euphorbe des garrigues",
-      "description": "Euphorbia characias est un arbuste méditerranéen persistant au feuillage bleu-vert. Elle aime le plein soleil et les sols secs et drainés. Sa sève laiteuse est toxique."
+      "common_name": "Euphorbe de Chypre",
+      "description": "Euphorbia characias est une plante méditerranéenne, connue pour son feuillage épineux distinctif et ses fleurs jaune-vert vives. Elle prospère dans des conditions ensoleillées et sèches."
     },
     "it": {
-      "common_name": "Euforbia mediterranea",
-      "description": "Euphorbia characias è un arbusto sempreverde mediterraneo con foglie blu-verdi. Cresce bene in pieno sole e terreni ben drenati. La linfa è tossica e irritante."
+      "common_name": "Euforbia di Cipro",
+      "description": "Euphorbia characias è una pianta mediterranea conosciuta per il suo fogliame spinoso e le sue vivaci fioriture giallo-verdi. Cresce bene in condizioni soleggiate e secche."
     },
     "es": {
-      "common_name": "Euforbia mediterránea",
-      "description": "Euphorbia characias es un arbusto perenne del Mediterráneo con follaje azul verdoso. Prefiere pleno sol y suelos secos y bien drenados. Su savia es tóxica."
+      "common_name": "Euforbia de Chipre",
+      "description": "Euphorbia characias es una planta mediterránea conocida por su distintivo follaje espinoso y sus flores amarillo-verde brillantes. Crece bien en condiciones soleadas y secas."
     },
     "pt": {
-      "common_name": "Eufórbia mediterrânea",
-      "description": "Euphorbia characias é um arbusto perene do Mediterrâneo com folhas azul-esverdeadas. Desenvolve-se melhor em sol pleno e solos bem drenados. A seiva leitosa é tóxica."
+      "common_name": "Eufórbia de Chipre",
+      "description": "Euphorbia characias é uma planta mediterrânea conhecida por sua folhagem espinhosa distinta e flores amarelo-verde vibrantes. Ela prospera em condições ensolaradas e secas."
     },
     "ar": {
-      "common_name": "الفربيون المتوسطي",
-      "description": "Euphorbia characias شجيرة دائمة الخضرة من حوض المتوسط ذات أوراق مزرقة. تنمو في الشمس الكاملة والتربة جيدة التصريف. العصارة اللبنية سامة."
+      "common_name": "الإكليل الأيبيري",
+      "description": "Euphorbia characias هي نبات متوسطي معروف بأوراقه الشائكة المميزة وزهورها الأصفر-الخضراء الزاهية. يزدهر في الظروف المشمسة والجافة."
     },
     "hi": {
-      "common_name": "मेडिटेरेनियन यूफोर्बिया",
-      "description": "Euphorbia characias भूमध्यसागरीय क्षेत्र की सदाबहार झाड़ी है। यह तेज धूप और अच्छी जल निकासी वाली मिट्टी में उगती है। इसका दूधिया रस विषैला होता है।"
+      "common_name": "मेडिटेरेनियन स्पर्ज",
+      "description": "Euphorbia characias एक भूमध्यसागरीय पौधा है, जो अपनी विशिष्ट कांटेदार हरी पत्तियों और उज्जवल पीले-हरे फूलों के लिए जाना जाता है। यह धूप और शुष्क परिस्थितियों में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
       "common_name": "地中海大戟",
-      "description": "Euphorbia characias 是一种地中海常绿灌木，叶片呈蓝绿色。适合全日照和排水良好的干燥土壤。其乳白色汁液有毒。"
+      "description": "Euphorbia characias 是一种地中海植物，以其独特的尖刺绿叶和明亮的黄绿色花朵而闻名。它在阳光明媚、干燥的条件下茁壮成长。"
     },
     "ja": {
-      "common_name": "チチコグサモドキ属ユーフォルビア",
-      "description": "Euphorbia characias は地中海原産の常緑低木です。日当たりと水はけの良い土壌を好みます。白い樹液には毒性があります。"
+      "common_name": "地中海トウダイグサ",
+      "description": "Euphorbia characias は、特徴的なとげのある緑の葉と鮮やかな黄緑色の花で知られる地中海の植物です。日当たりの良い乾燥した場所でよく育ちます。"
     },
     "ko": {
-      "common_name": "지중해 대극",
-      "description": "Euphorbia characias는 지중해 지역의 상록 관목입니다. 강한 햇빛과 배수가 좋은 토양에서 잘 자랍니다. 유백색 수액은 독성이 있습니다."
+      "common_name": "지중해 유포르비아",
+      "description": "Euphorbia characias는 독특한 가시가 있는 초록색 잎과 밝은 노란-녹색 꽃으로 알려진 지중해 식물입니다. 햇볕이 잘 들고 건조한 조건에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/7273/euphorbia-characias/details",
-      "https://plants.ces.ncsu.edu/plants/euphorbia-characias/",
-      "https://www.gardenia.net/plant/euphorbia-characias-mediterranean-spurge"
+      "https://www.rhs.org.uk/plants/euphorbia-characias",
+      "https://www.gardenia.net/plant/euphorbia-characias"
     ]
   }
 }

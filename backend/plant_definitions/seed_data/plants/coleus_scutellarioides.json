@@ -4,18 +4,18 @@
   "latin": "Coleus scutellarioides",
   "sun": "medium",
   "water": "high",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 6,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ अप्रत्यक्ष",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière vive indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz brilhante indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich well-drained soil",
-          "pl": "Żyzna przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Sol drainant",
-          "it": "Terreno drenato",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水土",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Rich, well-drained",
+          "pl": "Żyzne, przepuszczalne",
+          "de": "Nährstoffreich, drainiert",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غني وجيد الصرف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ良い",
+          "ko": "비옥하고 배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilg.",
-          "de": "Gleichmäßig feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة دائمة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "常に湿らす",
-          "ko": "항상 촉촉"
+          "en": "Keep lightly moist",
+          "pl": "Utrzymuj lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder légèrement humide",
+          "it": "Terriccio sempre umido",
+          "es": "Mantener ligeramente húmedo",
+          "pt": "Manter levemente úmido",
+          "ar": "أبقِ التربة رطبة قليلاً",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿り気を保つ",
+          "ko": "항상 약간 촉촉"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mittel",
+          "fr": "Entretien modéré",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados moderados",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Durchschnittlich",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "普通湿度",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average–high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel bis hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media–alta",
+          "es": "Media–alta",
+          "pt": "Média–alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम–उच्च",
+          "zh": "中等到偏高",
+          "ja": "中〜高め",
+          "ko": "중간~높음"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para pets",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतुओं के लिए विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 독성"
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnelles Wachstum",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast, bushy",
+          "pl": "Szybki, krzaczasty",
+          "de": "Schnell, buschig",
+          "fr": "Rapide, touffu",
+          "it": "Rapida, cespugliosa",
+          "es": "Rápido y tupido",
+          "pt": "Rápido e denso",
+          "ar": "سريع وكثيف",
+          "hi": "तेजी से, घना",
+          "zh": "生长快、丛生",
+          "ja": "早く茂る",
+          "ko": "빠르고 풍성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No dry-out or scorch",
+          "pl": "Nie przesuszaj, nie pal słońcem",
+          "de": "Nicht austrocknen lassen",
+          "fr": "Éviter sécheresse/soleil",
+          "it": "No secco o sole forte",
+          "es": "No sequía ni sol fuerte",
+          "pt": "Evite secar e sol forte",
+          "ar": "تجنب الجفاف والشمس القوية",
+          "hi": "सूखने/धूप से बचें",
+          "zh": "避免干透与灼伤",
+          "ja": "乾燥と直射を避ける",
+          "ko": "건조·강한햇빛 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites, mealy",
+          "pl": "Mszyce, przędziorki, wełnowce",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari, cocciniglie",
+          "es": "Pulgones, ácaros, cochinillas",
+          "pt": "Pulgões, ácaros, cochonilhas",
+          "ar": "منّ، عناكب دقيقة، بق دقيقي",
+          "hi": "एफिड्स, माइट्स, मिलीबग",
+          "zh": "蚜虫、红蜘蛛、粉蚧",
+          "ja": "アブラムシ・ハダニ",
+          "ko": "진딧물·응애·깍지벌레"
         }
       }
     }
@@ -181,58 +219,61 @@
   "translations": {
     "en": {
       "common_name": "Coleus",
-      "description": "Coleus scutellarioides is a tropical foliage plant valued for its colorful leaves. It prefers bright indirect light and consistently moist soil indoors."
+      "description": "Coleus scutellarioides is grown for colorful foliage and compact, bushy growth. Provide bright, filtered light and keep the potting mix lightly moist but not waterlogged. Pinch tips to encourage branching and keep it warm; it is considered toxic to pets."
     },
     "pl": {
-      "common_name": "Koleus",
-      "description": "Coleus scutellarioides to tropikalna roślina ozdobna o barwnych liściach. Najlepiej rośnie w jasnym miejscu i wilgotnym podłożu."
+      "common_name": "Koleus (pokrzywka)",
+      "description": "Coleus scutellarioides uprawia się dla barwnych liści i krzaczastego pokroju. Zapewnij jasne, rozproszone światło i utrzymuj podłoże lekko wilgotne, bez przelania. Uszczykuj wierzchołki dla zagęszczenia; roślina jest uznawana za toksyczną dla zwierząt."
     },
     "de": {
       "common_name": "Buntnessel",
-      "description": "Coleus scutellarioides ist eine tropische Blattschmuckpflanze mit farbigen Blättern. Sie mag helles Licht und gleichmäßig feuchte Erde."
+      "description": "Coleus scutellarioides wird wegen seines bunten Laubs kultiviert und wächst buschig. Stelle sie hell mit gefiltertem Licht und halte das Substrat leicht feucht, ohne Staunässe. Triebspitzen regelmäßig pinzieren; für Haustiere gilt sie als giftig."
     },
     "fr": {
       "common_name": "Coléus",
-      "description": "Coleus scutellarioides est une plante tropicale appréciée pour son feuillage coloré. Elle préfère une lumière vive et un sol humide."
+      "description": "Coleus scutellarioides est cultivé pour son feuillage coloré et sa croissance touffue. Donne une lumière vive mais filtrée et garde le substrat légèrement humide sans excès d’eau. Pince les tiges pour le rendre compact; la plante est considérée toxique pour les animaux."
     },
     "it": {
       "common_name": "Coleo",
-      "description": "Coleus scutellarioides è una pianta tropicale ornamentale dalle foglie colorate. Richiede luce intensa e terreno costantemente umido."
+      "description": "Coleus scutellarioides si coltiva per il fogliame molto colorato e la crescita cespugliosa. Offri luce intensa ma indiretta e mantieni il terriccio leggermente umido senza ristagni. Cimare le punte per infoltire; è considerata tossica per gli animali domestici."
     },
     "es": {
       "common_name": "Cóleo",
-      "description": "Coleus scutellarioides es una planta tropical apreciada por su follaje colorido. Necesita buena luz y riego regular."
+      "description": "Coleus scutellarioides se cultiva por su follaje vistoso y crecimiento tupido. Dale luz brillante filtrada y mantén el sustrato ligeramente húmedo, evitando el encharcamiento. Pellizca las puntas para compactar; se considera tóxica para mascotas."
     },
     "pt": {
-      "common_name": "Coleus",
-      "description": "Coleus scutellarioides é uma planta tropical ornamental de folhas coloridas. Prefere luz indireta e solo sempre úmido."
+      "common_name": "Cóleo",
+      "description": "Coleus scutellarioides é cultivado pela folhagem colorida e crescimento denso. Forneça luz brilhante indireta e mantenha o substrato levemente úmido, sem encharcar. Belisque as pontas para ficar mais cheio; é considerada tóxica para pets."
     },
     "ar": {
-      "common_name": "كوليوس",
-      "description": "Coleus scutellarioides نبات استوائي يتميز بأوراقه الملونة. يفضل الضوء الساطع غير المباشر وتربة رطبة."
+      "common_name": "قوليوس",
+      "description": "يُزرع Coleus scutellarioides لأوراقه الملونة ونموه الكثيف. وفّر ضوءًا ساطعًا غير مباشر وحافظ على التربة رطبة قليلًا دون إغراق. قرص القمم يساعد على التفرع؛ ويُعتبر سامًا للحيوانات الأليفة."
     },
     "hi": {
       "common_name": "कोलियस",
-      "description": "Coleus scutellarioides एक उष्णकटिबंधीय सजावटी पौधा है। इसे तेज अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है।"
+      "description": "Coleus scutellarioides अपने रंगीन पत्तों और घनी वृद्धि के लिए उगाया जाता है। तेज़ लेकिन अप्रत्यक्ष रोशनी दें और मिट्टी को हल्का नम रखें, पानी जमा न होने दें। शाखाएँ बढ़ाने के लिए टहनियों की टिप्स पिंच करें; यह पालतुओं के लिए विषाक्त माना जाता है।"
     },
     "zh": {
       "common_name": "彩叶草",
-      "description": "Coleus scutellarioides 是一种热带观叶植物，以彩色叶片著称。适合明亮散射光和湿润土壤。"
+      "description": "Coleus scutellarioides 因彩色叶片和丛生株形而栽培。提供明亮散射光，盆土保持微湿但避免积水。摘心可促分枝、株形更紧凑；对宠物被认为有毒。"
     },
     "ja": {
       "common_name": "コリウス",
-      "description": "Coleus scutellarioides は色鮮やかな葉を持つ熱帯植物です。明るい間接光と湿った土を好みます。"
+      "description": "Coleus scutellarioides は色鮮やかな葉を楽しむ観葉植物で、よく分枝して茂ります。明るい間接光で育て、用土は軽く湿り気を保ちつつ過湿を避けます。摘心でこんもりさせやすく、ペットには有毒とされています。"
     },
     "ko": {
       "common_name": "콜레우스",
-      "description": "Coleus scutellarioides 는 화려한 잎이 특징인 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다."
+      "description": "Coleus scutellarioides 는 화려한 잎색과 풍성한 수형으로 기르는 식물입니다. 밝은 간접광에서 키우고 흙은 약간 촉촉하게 유지하되 과습은 피하세요. 순지르기를 하면 가지가 늘며, 반려동물에겐 유독한 것으로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/coleus/growing-guide",
-      "https://extension.umn.edu/houseplants/coleus",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b301"
+      "https://www.rhs.org.uk/plants/132520/coleus-scutellarioides/details",
+      "https://www.rhs.org.uk/plants/507265/coleus-scutellarioides-durham-gala-%28v%29/details",
+      "https://www.provenwinners.com/how-plant/coleus",
+      "https://www.thespruce.com/grow-coleus-plants-indoors-1902746",
+      "https://www.e-gro.org/pdf/2022-11-07.pdf",
+      "https://vetmed.illinois.edu/poisonplants/wp-content/uploads/sites/186/2022/08/garden-student-handout.pdf"
     ]
   }
 }

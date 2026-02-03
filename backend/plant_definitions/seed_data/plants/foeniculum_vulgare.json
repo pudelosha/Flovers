@@ -7,12 +7,10 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -40,7 +38,7 @@
           "hi": "पूरी धूप",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "강한 햇빛"
+          "ko": "양지"
         }
       }
     },
@@ -48,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "en": "Fertile, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich, drainiert",
+          "fr": "Riche, bien drainé",
+          "it": "Fertile, drenante",
+          "es": "Fértil y drenante",
+          "pt": "Fértil e drenado",
+          "ar": "خصبة وجيدة الصرف",
+          "hi": "उपजाऊ, जल-निकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ良い",
+          "ko": "비옥·배수 좋게"
         }
       }
     },
@@ -67,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Umiarkowane",
-          "de": "Regelmäßig",
-          "fr": "Arrosage régulier",
-          "it": "Irrigazione media",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期給水",
-          "ko": "규칙적 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj lekko wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder humide",
+          "it": "Umido regolare",
+          "es": "Húmedo uniforme",
+          "pt": "Úmido constante",
+          "ar": "رطوبة معتدلة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持均匀湿润",
+          "ja": "適度に湿らせる",
+          "ko": "고르게 촉촉"
         }
       }
     },
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodno-ciepło",
-          "de": "Mild warm",
-          "fr": "Doux à chaud",
-          "it": "Fresco-caldo",
-          "es": "Templado",
-          "pt": "Ameno",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "温和",
-          "ja": "温暖",
-          "ko": "온화"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -124,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -143,15 +141,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "विषाक्त नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长快",
-          "ja": "成長早い",
-          "ko": "빠른 성장"
+          "en": "Fast, tall herb",
+          "pl": "Szybko rośnie, wysoka",
+          "de": "Schnell, hoch wachsend",
+          "fr": "Rapide, grande herbe",
+          "it": "Crescita rapida, alta",
+          "es": "Rápida, alta",
+          "pt": "Rápida, alta",
+          "ar": "نمو سريع وطويل",
+          "hi": "तेज़, लंबी जड़ी",
+          "zh": "生长快、株高",
+          "ja": "生長早く背高い",
+          "ko": "빠르게 크게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj zastoin wody",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب الغمر بالماء",
+          "hi": "पानी जमा न होने दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids possible",
+          "pl": "Możliwe mszyce",
+          "de": "Blattläuse möglich",
+          "fr": "Pucerons possibles",
+          "it": "Possibili afidi",
+          "es": "Pulgones posibles",
+          "pt": "Pulgões possíveis",
+          "ar": "قد تظهر المنّ",
+          "hi": "एफिड्स हो सकते हैं",
+          "zh": "可能有蚜虫",
+          "ja": "アブラムシ注意",
+          "ko": "진딧물 가능"
         }
       }
     }
@@ -181,58 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Fennel",
-      "description": "Foeniculum vulgare is a hardy perennial herb grown for its aromatic leaves and seeds. It prefers full sun and well-drained soil. Regular watering supports steady growth."
+      "description": "Foeniculum vulgare is an aromatic culinary herb grown for its feathery leaves, seeds, and sometimes swollen stems. Provide full sun and fertile, well-drained soil kept evenly moist. In containers, water when the surface begins to dry and feed monthly during active growth."
     },
     "pl": {
-      "common_name": "Koper włoski",
-      "description": "Foeniculum vulgare to bylina uprawiana dla aromatycznych liści i nasion. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Wymaga regularnego podlewania."
+      "common_name": "Fenkuł włoski",
+      "description": "Foeniculum vulgare to aromatyczne zioło uprawiane dla liści, nasion i czasem zgrubiałych ogonków. Wymaga pełnego słońca oraz żyznego, przepuszczalnego podłoża utrzymywanego lekko wilgotnego. W donicy podlewaj, gdy wierzch przesycha, i nawoź raz w miesiącu w okresie wzrostu."
     },
     "de": {
       "common_name": "Fenchel",
-      "description": "Foeniculum vulgare ist ein mehrjähriges Kraut mit aromatischen Blättern und Samen. Es wächst am besten in voller Sonne und gut durchlässigem Boden. Gleichmäßiges Gießen fördert das Wachstum."
+      "description": "Foeniculum vulgare ist ein aromatisches Küchenkraut, das für Blattgrün, Samen und teils verdickte Stängel angebaut wird. Stelle es in volle Sonne und in nährstoffreiche, gut drainierende Erde, die gleichmäßig leicht feucht bleibt. Im Topf gieße, wenn die Oberfläche abtrocknet, und dünge während des Wachstums monatlich."
     },
     "fr": {
       "common_name": "Fenouil",
-      "description": "Foeniculum vulgare est une plante vivace aromatique cultivée pour ses feuilles et graines. Elle aime le plein soleil et un sol bien drainé. Un arrosage régulier est recommandé."
+      "description": "Foeniculum vulgare est une plante aromatique cultivée pour ses feuilles, ses graines et parfois ses tiges renflées. Donne-lui plein soleil et un sol fertile, bien drainé, maintenu légèrement humide. En pot, arrose quand la surface sèche et fertilise une fois par mois en période de croissance."
     },
     "it": {
       "common_name": "Finocchio",
-      "description": "Foeniculum vulgare è un'erba perenne coltivata per foglie e semi aromatici. Preferisce pieno sole e terreno ben drenato. Annaffiature regolari favoriscono la crescita."
+      "description": "Foeniculum vulgare è un’erba aromatica coltivata per foglie, semi e talvolta per i fusti ingrossati. Preferisce pieno sole e un terriccio fertile e ben drenante, mantenuto uniformemente umido. In vaso, annaffia quando la superficie asciuga e concima mensilmente durante la crescita."
     },
     "es": {
       "common_name": "Hinojo",
-      "description": "Foeniculum vulgare es una hierba perenne aromática. Crece mejor a pleno sol y en suelos bien drenados. Requiere riego regular para un buen desarrollo."
+      "description": "Foeniculum vulgare es una hierba aromática usada por sus hojas, semillas y a veces por sus tallos engrosados. Requiere pleno sol y un sustrato fértil y bien drenado, con humedad uniforme. En maceta, riega cuando la capa superior empiece a secarse y abona una vez al mes en crecimiento."
     },
     "pt": {
       "common_name": "Funcho",
-      "description": "Foeniculum vulgare é uma erva perene aromática. Prefere sol pleno e solo bem drenado. A rega regular ajuda no crescimento saudável."
+      "description": "Foeniculum vulgare é uma erva aromática cultivada pelas folhas, sementes e às vezes pelos caules engrossados. Precisa de sol pleno e substrato fértil, bem drenado, mantendo umidade uniforme. Em vaso, regue quando a superfície começar a secar e adube mensalmente na fase de crescimento."
     },
     "ar": {
       "common_name": "شمر",
-      "description": "Foeniculum vulgare نبات عشبي معمر عطري. ينمو جيدًا في الشمس الكاملة وتربة جيدة التصريف. الري المنتظم يدعم نموه."
+      "description": "Foeniculum vulgare نبات عطري يُزرع للأوراق والبذور وأحيانًا للسوق المتضخمة. يحتاج إلى شمس كاملة وتربة خصبة جيدة الصرف مع رطوبة معتدلة دون تغريق. في الأصص اسقِ عند بدء جفاف السطح وسمّد مرة شهريًا خلال النمو."
     },
     "hi": {
       "common_name": "सौंफ",
-      "description": "Foeniculum vulgare एक सुगंधित बहुवर्षीय जड़ी बूटी है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। नियमित सिंचाई से अच्छी वृद्धि होती है।"
+      "description": "Foeniculum vulgare एक सुगंधित जड़ी है, जिसे पत्तियों, बीजों और कभी-कभी मोटे तनों के लिए उगाया जाता है। इसे पूरी धूप और उपजाऊ, जल-निकासी वाली मिट्टी दें और नमी हल्की स्थिर रखें। गमले में ऊपर की मिट्टी सूखने लगे तो पानी दें और बढ़वार के समय महीने में एक बार खाद दें।"
     },
     "zh": {
       "common_name": "茴香",
-      "description": "Foeniculum vulgare 是一种芳香的多年生草本植物。适合全日照和排水良好的土壤。定期浇水有助于生长。"
+      "description": "Foeniculum vulgare 是芳香香草，可收获羽状叶、种子，有时也栽培其膨大的茎部。需要全日照与肥沃、排水良好的基质，并保持均匀微湿。盆栽时表层开始变干再浇水，生长季每月施肥一次。"
     },
     "ja": {
-      "common_name": "フェンネル",
-      "description": "Foeniculum vulgare は芳香のある多年草です。日当たりと水はけの良い土を好みます。定期的な水やりが必要です。"
+      "common_name": "ウイキョウ",
+      "description": "Foeniculum vulgare は香りのあるハーブで、葉や種子、場合によっては太った茎を利用します。日当たりの良い場所と、肥沃で水はけの良い用土で、適度な湿り気を保ちます。鉢植えでは表土が乾き始めたら水やりし、生育期は月1回施肥します。"
     },
     "ko": {
-      "common_name": "펜넬",
-      "description": "Foeniculum vulgare는 향기로운 다년생 허브입니다. 햇빛이 잘 들고 배수가 좋은 토양을 선호합니다. 규칙적인 물주기가 도움이 됩니다."
+      "common_name": "회향",
+      "description": "Foeniculum vulgare 는 향이 강한 허브로 잎과 씨앗, 때로는 굵어진 줄기를 이용합니다. 양지와 비옥하고 배수 좋은 흙에서 키우고 흙을 고르게 촉촉하게 유지하세요. 화분에서는 겉흙이 마르기 시작하면 물을 주고 생장기에는 한 달에 한 번 비료를 줍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/fennel/growing-guide",
-      "https://extension.umn.edu/vegetables/growing-fennel",
-      "https://www.gardenersworld.com/plants/foeniculum-vulgare/"
+      "https://www.rhs.org.uk/herbs/fennel/grow-your-own",
+      "https://hort.extension.wisc.edu/articles/fennel-foeniculum-vulgare/",
+      "https://extension.unh.edu/resource/how-grow-green-fennel%C2%A0foeniculum-vulgare",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/fennel"
     ]
   }
 }

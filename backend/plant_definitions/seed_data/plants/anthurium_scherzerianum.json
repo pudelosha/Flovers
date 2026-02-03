@@ -1,23 +1,23 @@
 {
   "external_id": "anthurium_scherzerianum",
-  "name": "Flamingo Flower",
+  "name": "Flamingo flower",
   "latin": "Anthurium scherzerianum",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
     "orchid"
   ],
   "water_required": true,
-  "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect light",
-          "pl": "jasne rozproszone",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Indirektlicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "airy aroid mix",
-          "pl": "przepuszczalne",
-          "de": "luftig durchlässig",
-          "fr": "substrat aéré",
-          "it": "terreno arioso",
-          "es": "sustrato aireado",
-          "pt": "substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性用土",
-          "ko": "통기성 토양"
+          "en": "Airy, well-draining",
+          "pl": "Przepuszczalne",
+          "de": "Luftig, drainierend",
+          "fr": "Aéré, drainant",
+          "it": "Arieggiato, drenante",
+          "es": "Aireado, drenante",
+          "pt": "Aéreo, drenante",
+          "ar": "خفيف وجيد الصرف",
+          "hi": "हल्की, जल-निकासी",
+          "zh": "疏松排水好",
+          "ja": "通気・排水良い",
+          "ko": "통기·배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep lightly moist",
-          "pl": "lekko wilgotne",
-          "de": "leicht feucht",
-          "fr": "légèrement humide",
-          "it": "leggermente umido",
-          "es": "ligeramente húmedo",
-          "pt": "ligeiramente úmido",
-          "ar": "رطب قليلاً",
-          "hi": "हल्की नमी",
-          "zh": "保持微湿",
-          "ja": "やや湿潤",
-          "ko": "약간 촉촉"
+          "en": "Slightly dry top",
+          "pl": "Lekko przeschnij wierzch",
+          "de": "Oben leicht antrocknen",
+          "fr": "Laisser sécher en surface",
+          "it": "Asciugare in superficie",
+          "es": "Secar un poco arriba",
+          "pt": "Secar um pouco em cima",
+          "ar": "اترك السطح يجف قليلاً",
+          "hi": "ऊपर हल्का सूखने दें",
+          "zh": "表土微干再浇",
+          "ja": "表土が少し乾いたら",
+          "ko": "윗흙 약간 마르면"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "średnia trudność",
-          "de": "mittlerer Anspruch",
-          "fr": "entretien moyen",
-          "it": "cura media",
-          "es": "cuidado medio",
-          "pt": "cuidado médio",
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado moderado",
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "中等难度",
+          "ja": "管理は普通",
+          "ko": "보통 난이도"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high humidity",
-          "pl": "wysoka wilgotność",
-          "de": "hohe Luftfeuchte",
-          "fr": "forte humidité",
-          "it": "alta umidità",
-          "es": "alta humedad",
-          "pt": "alta umidade",
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
-          "hi": "अधिक नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
-          "ja": "高湿度",
+          "ja": "高い湿度",
           "ko": "높은 습도"
         }
       }
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "toxic to pets",
-          "pl": "toksyczna",
-          "de": "giftig für Tiere",
-          "fr": "toxique animaux",
-          "it": "tossica animali",
-          "es": "tóxica mascotas",
-          "pt": "tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "निगलने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "compact upright",
-          "pl": "zwarty pokrój",
-          "de": "kompakt aufrecht",
-          "fr": "port compact",
-          "it": "crescita compatta",
-          "es": "crecimiento compacto",
-          "pt": "porte compacto",
-          "ar": "نمو مدمج",
-          "hi": "सघन वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "컴팩트 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiark.",
+          "de": "Langsam bis mäßig",
+          "fr": "Lente à modérée",
+          "it": "Lenta-moderata",
+          "es": "Lenta a moderada",
+          "pt": "Lenta a moderada",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅い〜中程度",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No soggy soil",
+          "pl": "Bez przelania",
+          "de": "Keine Staunässe",
+          "fr": "Pas d'excès d'eau",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Sem encharcar",
+          "ar": "تجنّب التربة المغمورة",
+          "hi": "ज्यादा पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عناكب",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧、螨虫",
+          "ja": "コナカイガラムシ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Flamingo Flower",
-      "description": "Anthurium scherzerianum is a tropical aroid known for its red spathes and curled spadix. It prefers bright, indirect light and evenly moist, well-drained soil. High humidity and stable warmth support healthy growth indoors."
+      "common_name": "Flamingo flower",
+      "description": "Anthurium scherzerianum is a tropical aroid with a curly spadix and long-lasting spathes. Keep it in bright, indirect light and water when the surface of the mix dries slightly. Warm temperatures and higher humidity support steady growth and flowering."
     },
     "pl": {
       "common_name": "Anturium Scherzera",
-      "description": "Anthurium scherzerianum to tropikalna roślina ozdobna o czerwonych pochwach kwiatowych. Wymaga jasnego, rozproszonego światła i stale lekko wilgotnego podłoża. Lubi wysoką wilgotność powietrza i ciepło."
+      "description": "Anthurium scherzerianum to tropikalne obrazkowate z charakterystycznie skręconą kolbą i trwałą pochwą kwiatostanową. Ustaw w jasnym, rozproszonym świetle i podlewaj, gdy wierzch podłoża lekko przeschnie. Ciepło i wyższa wilgotność powietrza sprzyjają kwitnieniu."
     },
     "de": {
       "common_name": "Flamingoblume",
-      "description": "Anthurium scherzerianum ist eine tropische Zimmerpflanze mit auffälligen roten Hochblättern. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßig feuchtem Substrat. Hohe Luftfeuchtigkeit ist förderlich."
+      "description": "Anthurium scherzerianum ist ein tropisches Aronstabgewächs mit gedrehter Spadix und langlebigen Hochblättern. Stelle es hell, aber ohne direkte Sonne, und gieße, wenn die Oberfläche leicht abgetrocknet ist. Warme Temperaturen und höhere Luftfeuchte fördern Wachstum und Blüte."
     },
     "fr": {
-      "common_name": "Anthurium flamant rose",
-      "description": "Anthurium scherzerianum est une plante tropicale appréciée pour ses spathes rouges. Elle préfère une lumière vive indirecte et un sol légèrement humide. Une humidité élevée favorise sa croissance."
+      "common_name": "Fleur de flamant",
+      "description": "Anthurium scherzerianum est une plante tropicale aux spathes durables et au spadice recourbé. Placez-le en lumière vive indirecte et arrosez quand la surface du substrat sèche légèrement. La chaleur et une humidité élevée améliorent la floraison."
     },
     "it": {
-      "common_name": "Anthurium",
-      "description": "Anthurium scherzerianum è una pianta tropicale da interno con brattee rosse decorative. Necessita di luce indiretta brillante e terreno ben drenato ma umido. Predilige ambienti caldi e umidi."
+      "common_name": "Fiore fenicottero",
+      "description": "Anthurium scherzerianum è un'aroidea tropicale con spadice ricurvo e spate molto decorative. Tienilo in luce intensa ma indiretta e annaffia quando lo strato superiore del substrato asciuga leggermente. Calore e buona umidità aiutano la crescita e la fioritura."
     },
     "es": {
-      "common_name": "Anturio",
-      "description": "Anthurium scherzerianum es una planta tropical ornamental de flores rojas. Requiere luz indirecta brillante y riego regular con buen drenaje. La humedad ambiental alta es recomendable."
+      "common_name": "Flor de flamenco",
+      "description": "Anthurium scherzerianum es una arácea tropical con espádice curvado y espatas duraderas. Colócalo con luz brillante e indirecta y riega cuando la superficie del sustrato se seque un poco. El calor y una humedad más alta favorecen la floración."
     },
     "pt": {
-      "common_name": "Antúrio",
-      "description": "Anthurium scherzerianum é uma planta tropical conhecida pelas espatas vermelhas. Prefere luz indireta intensa e solo levemente úmido. Ambientes quentes e úmidos são ideais."
+      "common_name": "Flor-de-flamingo",
+      "description": "Anthurium scherzerianum é uma arácea tropical com espádice enrolado e espatas duradouras. Mantenha em luz brilhante indireta e regue quando a superfície do substrato secar um pouco. Temperaturas quentes e maior umidade ajudam no crescimento e na floração."
     },
     "ar": {
       "common_name": "زهرة الفلامنغو",
-      "description": "Anthurium scherzerianum نبات استوائي يتميز بأزهاره الحمراء. يفضل الضوء الساطع غير المباشر وتربة رطبة جيدة التصريف. الرطوبة العالية والدفء مهمان لنموه."
+      "description": "Anthurium scherzerianum نبات استوائي من الفصيلة القلقاسية يتميز بسباديكس ملتف وغلاف زهري يدوم طويلاً. يوضع في ضوء ساطع غير مباشر ويُسقى عند جفاف سطح التربة قليلاً. الدفء والرطوبة الأعلى يساعدان على نمو أفضل وإزهار."
     },
     "hi": {
       "common_name": "फ्लेमिंगो फूल",
-      "description": "Anthurium scherzerianum एक उष्णकटिबंधीय पौधा है जो लाल फूलों के लिए जाना जाता है। इसे तेज अप्रत्यक्ष रोशनी और हल्की नम मिट्टी चाहिए। अधिक नमी और गर्म वातावरण उपयुक्त है।"
+      "description": "Anthurium scherzerianum एक उष्णकटिबंधीय एरॉइड है जिसमें मुड़ा हुआ स्पैडिक्स और लंबे समय तक टिकने वाला स्पैथ होता है। इसे तेज अप्रत्यक्ष रोशनी में रखें और जब ऊपर की परत थोड़ी सूखे तब पानी दें। गर्म तापमान और अधिक आर्द्रता फूल और वृद्धि में मदद करती है।"
     },
     "zh": {
       "common_name": "火鹤花",
-      "description": "Anthurium scherzerianum 是一种热带观赏植物，以红色佛焰苞著称。适合明亮散射光和保持微湿的土壤。较高的空气湿度有助于生长。"
+      "description": "Anthurium scherzerianum 是热带天南星科植物，具有卷曲的肉穗花序和持久的佛焰苞。放在明亮散射光处，表土微干再浇水。温暖环境与较高空气湿度有利于开花与生长。"
     },
     "ja": {
-      "common_name": "アンスリウム",
-      "description": "Anthurium scherzerianum は赤い苞が特徴の熱帯植物です。明るい間接光と適度に湿った用土を好みます。高湿度の環境が理想的です。"
+      "common_name": "アンスリウム（シェルツェリアナム）",
+      "description": "Anthurium scherzerianum は熱帯のサトイモ科で、ねじれた肉穂花序と長持ちする仏炎苞が特徴です。明るい間接光に置き、表土が少し乾いてから水やりします。暖かさと高めの湿度が生育と開花を助けます。"
     },
     "ko": {
-      "common_name": "안스리움",
-      "description": "Anthurium scherzerianum은 붉은 불염포가 특징인 열대 식물입니다. 밝은 간접광과 약간 촉촉한 토양을 선호합니다. 높은 습도가 생장에 도움이 됩니다."
+      "common_name": "안스리움(슈체리아눔)",
+      "description": "Anthurium scherzerianum 은 열대 천남성과로, 말린 꽃이삭과 오래가는 불염포가 특징입니다. 밝은 간접광에서 키우고 겉흙이 약간 마르면 물을 주세요. 따뜻한 온도와 높은 습도가 생장과 개화에 도움이 됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1140/anthurium-scherzerianum/details",
-      "https://www.gardenersworld.com/plants/anthurium-scherzerianum/",
-      "https://edis.ifas.ufl.edu/publication/FP039"
+      "https://plants.ces.ncsu.edu/plants/anthurium-scherzerianum/",
+      "https://www.nparks.gov.sg/florafaunaweb/flora/7/0/7093",
+      "https://www.rhs.org.uk/plants/1360/anthurium-scherzerianum/details",
+      "https://www.rhs.org.uk/plants/anthuriums/how-to-grow-anthuriums",
+      "https://www.provenwinners.com/learn/houseplants/anthurium"
     ]
   }
 }

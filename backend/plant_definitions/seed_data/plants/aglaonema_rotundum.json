@@ -1,24 +1,23 @@
 {
   "external_id": "aglaonema_rotundum",
-  "name": "Aglaonema Rotundum",
+  "name": "Chinese evergreen",
   "latin": "Aglaonema rotundum",
   "sun": "low",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "plastic"
   ],
   "recommended_soil_mixes": [
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 42,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "aglaonema_rotundum.jpg",
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low to medium light",
-          "pl": "Mało–średnie światło",
-          "de": "Wenig–mittleres Licht",
-          "fr": "Lumière faible-moy.",
-          "it": "Luce bassa-media",
-          "es": "Luz baja-media",
-          "pt": "Luz baixa-média",
-          "ar": "ضوء منخفض-متوسط",
-          "hi": "कम-मध्यम रोशनी",
-          "zh": "低到中等光照",
-          "ja": "弱〜中光",
-          "ko": "약~중간 빛"
+          "en": "Low–med indirect",
+          "pl": "Mało–śr. rozpros.",
+          "de": "Niedrig–mittel ind.",
+          "fr": "Faible–moy. indirect",
+          "it": "Bassa–media indiretta",
+          "es": "Baja–media indirecta",
+          "pt": "Baixa–média indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "कम परोक्ष रोशनी",
+          "zh": "低-中等散射光",
+          "ja": "弱〜中の間接光",
+          "ko": "약~중 간접광"
         }
       }
     },
@@ -47,17 +46,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained aroid mix",
-          "pl": "Przepuszczalna ziemia",
-          "de": "Luftiges Aroid-Substrat",
-          "fr": "Substrat aéré",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenado",
+          "en": "Well-draining aroid",
+          "pl": "Przepuszcz. aroid",
+          "de": "Aroid, durchlässig",
+          "fr": "Aroïde drainant",
+          "it": "Aroid ben drenante",
+          "es": "Aroide drenante",
+          "pt": "Aroide drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好基质",
-          "ja": "排水性の良い土",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "疏松排水介质",
+          "ja": "排水の良い用土",
           "ko": "배수 좋은 토양"
         }
       }
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water when half-dry",
+          "pl": "Podlej gdy 1/2 sucha",
+          "de": "Gießen wenn halb trocken",
+          "fr": "Arroser à mi-séchage",
+          "it": "Annaffia a metà asciutto",
+          "es": "Riega al 50% seco",
+          "pt": "Regar com 50% seco",
+          "ar": "اسقِ بعد جفاف جزئي",
+          "hi": "आधा सूखने पर पानी",
+          "zh": "半干再浇水",
+          "ja": "半分乾いてから",
+          "ko": "절반 마르면 물"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Aufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
         }
       }
     },
@@ -114,7 +113,7 @@
           "ar": "18–27°م",
           "hi": "18–27°C",
           "zh": "18–27°C",
-          "ja": "18–27℃",
+          "ja": "18–27°C",
           "ko": "18–27°C"
         }
       }
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers high humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Mag hohe Luftfeuchte",
-          "fr": "Aime l'humidité",
-          "it": "Ama l'umidità",
-          "es": "Prefiere humedad",
-          "pt": "Prefere umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "उच्च नमी पसंद",
-          "zh": "喜高湿度",
-          "ja": "高湿度を好む",
-          "ko": "높은 습도 선호"
+          "en": "Moderate humidity",
+          "pl": "Umiark. wilgotność",
+          "de": "Mäßige Luftfeuchte",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "en": "Toxic if eaten",
+          "pl": "Trująca po zjedzeniu",
+          "de": "Giftig beim Verzehr",
+          "fr": "Toxique si ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
+          "en": "Slow, compact",
+          "pl": "Wolny, zwarty",
+          "de": "Langsam, kompakt",
+          "fr": "Lente, compacte",
+          "it": "Lenta, compatta",
+          "es": "Lento, compacto",
+          "pt": "Lento, compacto",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "hi": "धीमी, सघन वृद्धि",
+          "zh": "生长缓慢紧凑",
+          "ja": "ゆっくり・コンパクト",
+          "ko": "느리고 컴팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Nie przelewaj",
+          "de": "Nicht überwässern",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita eccesso d'acqua",
+          "es": "Evita el exceso de agua",
+          "pt": "Evite excesso de água",
+          "ar": "تجنب الإفراط بالسقي",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免浇水过多",
+          "ja": "水のやりすぎ注意",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عث",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧、螨虫",
+          "ja": "カイガラムシ・ハダニ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Round-leaf Chinese Evergreen",
-      "description": "Aglaonema rotundum is a tropical aroid valued for its dark green leaves with pink veins. It grows naturally on shaded rainforest floors. Indoors it prefers warm temperatures, stable moisture, and low light."
+      "common_name": "Chinese evergreen",
+      "description": "Aglaonema rotundum is a slow-growing, compact houseplant grown for its patterned leaves. Keep it in low to medium indirect light and water when the potting mix is about half dry. It prefers warm conditions and is toxic if ingested."
     },
     "pl": {
-      "common_name": "Aglaonema okrągłolistna",
-      "description": "Aglaonema rotundum to tropikalna roślina o ciemnych liściach z różowym unerwieniem. Naturalnie rośnie w cieniu lasów deszczowych. W domu wymaga ciepła, umiarkowanego podlewania i słabego światła."
+      "common_name": "Aglaonema (chiński zimozielony)",
+      "description": "Aglaonema rotundum to wolno rosnąca, zwarta roślina doniczkowa o dekoracyjnych liściach. Ustaw ją w małym do średniego świetle rozproszonym i podlewaj, gdy podłoże przeschnie mniej więcej do połowy. Lubi ciepło i jest trująca po spożyciu."
     },
     "de": {
-      "common_name": "Rundblättriger Kolbenfaden",
-      "description": "Aglaonema rotundum ist eine tropische Blattpflanze mit dunklem Laub und rosa Adern. Sie wächst am Boden schattiger Regenwälder. Als Zimmerpflanze mag sie Wärme, gleichmäßige Feuchte und wenig Licht."
+      "common_name": "Kolbenfaden",
+      "description": "Aglaonema rotundum ist eine langsam wachsende, kompakte Zimmerpflanze mit dekorativ gemusterten Blättern. Stelle sie in niedriges bis mittleres, indirektes Licht und gieße erst, wenn das Substrat etwa zur Hälfte abgetrocknet ist. Sie mag Wärme und ist bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Aglaonéma à feuilles rondes",
-      "description": "Aglaonema rotundum est une plante tropicale appréciée pour son feuillage sombre nervuré de rose. Elle pousse naturellement dans les forêts humides ombragées. En intérieur elle préfère la chaleur et un arrosage modéré."
+      "common_name": "Aglaonéma",
+      "description": "Aglaonema rotundum est une plante d'intérieur compacte à croissance lente, appréciée pour ses feuilles décoratives. Placez-la en lumière indirecte faible à moyenne et arrosez quand le substrat est sec à environ moitié. Elle préfère la chaleur et est toxique en cas d'ingestion."
     },
     "it": {
-      "common_name": "Aglaonema a foglie rotonde",
-      "description": "Aglaonema rotundum è una pianta tropicale con foglie verde scuro e venature rosa. In natura cresce nei sottoboschi umidi. In casa necessita luce bassa, temperature calde e irrigazione regolare."
+      "common_name": "Aglaonema",
+      "description": "Aglaonema rotundum è una pianta da interno compatta e a crescita lenta, coltivata per le foglie decorative. Tienila in luce indiretta bassa o media e annaffia quando il terriccio è asciutto circa a metà. Preferisce temperature calde ed è tossica se ingerita."
     },
     "es": {
-      "common_name": "Aglaonema de hoja redonda",
-      "description": "Aglaonema rotundum es una planta tropical conocida por sus hojas oscuras con venas rosadas. Crece en suelos húmedos y sombreados. En interior requiere calor, riego moderado y poca luz."
+      "common_name": "Aglaonema (siempreverde chino)",
+      "description": "Aglaonema rotundum es una planta de interior compacta y de crecimiento lento, valorada por sus hojas decorativas. Colócala con luz indirecta baja a media y riega cuando el sustrato esté seco aproximadamente a la mitad. Prefiere el calor y es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Aglaonema de folhas redondas",
-      "description": "Aglaonema rotundum é uma planta tropical de folhas verde-escuras com nervuras rosadas. Ocorre naturalmente em florestas úmidas e sombreadas. Dentro de casa prefere calor e rega moderada."
+      "common_name": "Aglaonema (sempre-verde-chinês)",
+      "description": "Aglaonema rotundum é uma planta de interior compacta e de crescimento lento, cultivada pelas folhas decorativas. Mantenha em luz indireta baixa a média e regue quando o substrato estiver cerca de 50% seco. Prefere ambientes quentes e é tóxica se ingerida."
     },
     "ar": {
-      "common_name": "أجلونيما مستديرة الأوراق",
-      "description": "نبات Aglaonema rotundum استوائي يتميز بأوراق داكنة مع عروق وردية. ينمو طبيعياً في أرضيات الغابات المطيرة الظليلة. كنبات داخلي يحتاج دفئاً ورياً معتدلاً وضوءاً منخفضاً."
+      "common_name": "أجلونيما (دائمة الخضرة الصينية)",
+      "description": "Aglaonema rotundum نبات منزلي بطيء النمو ومضغوط بأوراق مزخرفة. يوضع في ضوء غير مباشر منخفض إلى متوسط ويُسقى عندما تجف التربة تقريبًا إلى النصف. يفضل الدفء وهو سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "राउंड लीफ अग्लाओनेमा",
-      "description": "Aglaonema rotundum एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहरे रंग की और गुलाबी नसों वाली होती हैं। यह वर्षावनों की छायादार भूमि में उगता है। घर के अंदर इसे गर्मी और मध्यम सिंचाई चाहिए।"
+      "common_name": "चाइनीज़ एवरग्रीन",
+      "description": "Aglaonema rotundum धीमी वृद्धि वाला, सघन इनडोर पौधा है जिसे सजावटी पत्तियों के लिए उगाया जाता है। इसे कम से मध्यम परोक्ष रोशनी में रखें और जब मिट्टी लगभग आधी सूख जाए तब पानी दें। यह गर्म तापमान पसंद करता है और खाने पर विषाक्त है।"
     },
     "zh": {
-      "common_name": "圆叶粗肋草",
-      "description": "Aglaonema rotundum 是一种热带观叶植物，以深绿色和粉色叶脉著称。原生于阴湿雨林地面。室内养护需温暖环境、适度浇水和弱光。"
+      "common_name": "广东万年青",
+      "description": "Aglaonema rotundum 为生长缓慢、株型紧凑的室内观叶植物。适合低到中等散射光，基质约半干再浇透水。喜温暖环境，误食有毒。"
     },
     "ja": {
-      "common_name": "ロツンダムアグラオネマ",
-      "description": "Aglaonema rotundum は濃緑色の葉とピンクの葉脈が特徴の熱帯植物です。自然では熱帯雨林の林床に生育します。室内では低光量と適度な水分を好みます。"
+      "common_name": "アグラオネマ（チャイニーズエバーグリーン）",
+      "description": "Aglaonema rotundum は生長がゆっくりでコンパクトな観葉植物です。弱〜中の間接光で管理し、用土が半分ほど乾いてから水やりします。暖かい環境を好み、誤食すると有毒です。"
     },
     "ko": {
-      "common_name": "아글라오네마 로툰둠",
-      "description": "Aglaonema rotundum은 짙은 녹색 잎과 분홍색 맥이 특징인 열대 식물입니다. 자연에서는 그늘진 우림 바닥에서 자랍니다. 실내에서는 따뜻함과 적당한 물주기가 필요합니다."
+      "common_name": "아글라오네마(차이니즈 에버그린)",
+      "description": "Aglaonema rotundum 는 성장 속도가 느리고 형태가 단정한 실내 관엽식물입니다. 약~중 간접광에서 키우고 흙이 절반 정도 마르면 물을 줍니다. 따뜻한 환경을 좋아하며 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/aglaonema-rotundum",
-      "https://edis.ifas.ufl.edu/publication/EP473",
-      "https://www.aos.org/orchids/orchid-care.aspx"
+      "https://bloomscape.com/plant-care-guide/aglaonema/",
+      "https://www.gardenersworld.com/house-plants/chinese-evergreen/",
+      "https://www.gardeners.com/blogs/houseplant-encyclopedia/aglaonema-care-9744",
+      "https://www.gardendesign.com/houseplants/chinese-evergreen.html",
+      "https://www.patchplants.com/pages/plant-care/complete-guide-to-aglaonema-care/"
     ]
   }
 }

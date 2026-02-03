@@ -1,6 +1,6 @@
 {
   "external_id": "aglaonema_commutatum",
-  "name": "Chinese Evergreen",
+  "name": "Chinese evergreen",
   "latin": "Aglaonema commutatum",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -30,9 +30,9 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
+          "pl": "Jasne rozproszone",
           "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
+          "fr": "Lumiere indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining mix",
-          "pl": "Przepuszczalne",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 잘됨"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podloze",
+          "de": "Durchlassiges Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जल निकासी वाली मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "排水の良い用土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Top soil dries first",
+          "pl": "Podlej po przesch.",
+          "de": "GieBen nach Antrockn.",
+          "fr": "Arroser apres sechage",
+          "it": "Annaffia dopo asciugo",
+          "es": "Riega al secar arriba",
+          "pt": "Regar ao secar em cima",
+          "ar": "اسق بعد جفاف السطح",
+          "hi": "ऊपर सूखने पर पानी",
+          "zh": "表土干后再浇",
+          "ja": "表土が乾いてから",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -87,12 +87,12 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Latwa",
           "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
+          "es": "Facil",
+          "pt": "Facil",
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°م",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "一般",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Umiark. wilgotnosc",
+          "de": "Mittel Luftfeuchte",
+          "fr": "Humidite moderee",
+          "it": "Umidita moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سام",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingere",
+          "it": "Tossica se ingerita",
+          "es": "Toxica si se ingiere",
+          "pt": "Toxica se ingerida",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食は有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -162,77 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to medium",
-          "pl": "Wolny–średni",
-          "de": "Langsam–mittel",
-          "fr": "Lente à moyenne",
-          "it": "Lenta-media",
-          "es": "Lento-medio",
-          "pt": "Lento-médio",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "缓慢到中等",
-          "ja": "遅め",
-          "ko": "느림~보통"
+          "en": "Slow to moderate",
+          "pl": "Wolny do sredniego",
+          "de": "Langsam bis mittel",
+          "fr": "Lente a moderee",
+          "it": "Lenta-moderata",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "نمو بطيء-متوسط",
+          "hi": "धीमी से मध्यम",
+          "zh": "生长缓慢-中等",
+          "ja": "遅い-中程度",
+          "ko": "느림-중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Staunasse vermeiden",
+          "fr": "Eviter exces d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب زيادة الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Przedziorki, welnowce",
+          "de": "Milben, Wolllause",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Acaros, cochinillas",
+          "pt": "Acaros, cochonilhas",
+          "ar": "عث وبق دقيقي",
+          "hi": "माइट्स, मिलीबग",
+          "zh": "红蜘蛛, 粉蚧",
+          "ja": "ハダニ, カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Chinese Evergreen",
-      "description": "Aglaonema commutatum is a tropical foliage plant native to Southeast Asia. It is valued for its patterned leaves and tolerance of lower indoor light. The plant is commonly grown as a houseplant."
+      "common_name": "Chinese evergreen",
+      "description": "Aglaonema commutatum is a shade-tolerant tropical houseplant grown for patterned leaves. Keep it in bright to medium indirect light and water when the top layer of soil dries. It prefers warm rooms and is toxic if chewed by pets or children."
     },
     "pl": {
       "common_name": "Aglaonema zmienna",
-      "description": "Aglaonema commutatum pochodzi z Azji Południowo-Wschodniej. Ceniona jest za dekoracyjne liście i tolerancję słabszego światła. Często uprawiana jest w pomieszczeniach."
+      "description": "Aglaonema commutatum to tropikalna roslina doniczkowa ceniona za dekoracyjne liscie i tolerancje na slabsze swiatlo. Ustaw w jasnym lub srednim swietle rozproszonym i podlewaj, gdy przeschnie wierzchnia warstwa podloza. Lubi cieplo i jest toksyczna po zjedzeniu."
     },
     "de": {
       "common_name": "Kolbenfaden",
-      "description": "Aglaonema commutatum stammt aus Südostasien. Sie ist für ihr gemustertes Laub und ihre Anpassungsfähigkeit bekannt. Die Pflanze eignet sich gut für Innenräume."
+      "description": "Aglaonema commutatum ist eine robuste Zimmerpflanze mit gemusterten Blaettern und guter Schattentoleranz. Stelle sie hell bis mittel, aber ohne direkte Sonne, und gieBe erst, wenn die obere Erdschicht angetrocknet ist. Sie mag Waerme und ist bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Aglaonème",
-      "description": "Aglaonema commutatum est originaire d’Asie du Sud-Est. Elle est appréciée pour son feuillage décoratif et sa robustesse. Elle est couramment cultivée en intérieur."
+      "common_name": "Aglaonema",
+      "description": "Aglaonema commutatum est une plante d'interieur tropicale appreciee pour son feuillage panache. Placez-la en lumiere indirecte moyenne a vive et arrosez quand la surface du substrat seche. Elle prefere la chaleur et elle est toxique en cas d'ingestion."
     },
     "it": {
       "common_name": "Aglaonema",
-      "description": "Aglaonema commutatum è una pianta tropicale del Sud-Est asiatico. È apprezzata per le foglie ornamentali e la facilità di coltivazione. Viene spesso coltivata in casa."
+      "description": "Aglaonema commutatum e una pianta tropicale da interno coltivata per le foglie decorative. Tienila in luce indiretta da media a luminosa e annaffia quando lo strato superiore del terriccio e asciutto. Preferisce temperature calde ed e tossica se ingerita."
     },
     "es": {
       "common_name": "Aglaonema",
-      "description": "Aglaonema commutatum es originaria del sudeste asiático. Destaca por sus hojas decorativas y su resistencia. Es una planta común de interior."
+      "description": "Aglaonema commutatum es una planta tropical de interior valorada por su follaje decorativo y su tolerancia a poca luz. Colocala con luz indirecta media a brillante y riega cuando se seque la capa superior del sustrato. Prefiere el calor y es toxica si se ingiere."
     },
     "pt": {
       "common_name": "Aglaonema",
-      "description": "Aglaonema commutatum é nativa do Sudeste Asiático. É valorizada pelas folhas ornamentais e pela adaptação a ambientes internos. Muito usada como planta de interior."
+      "description": "Aglaonema commutatum e uma planta tropical de interior cultivada pela folhagem decorativa. Mantenha em luz indireta de media a intensa e regue quando a camada superior do substrato secar. Prefere ambientes quentes e e toxica se ingerida."
     },
     "ar": {
       "common_name": "أجلونيما",
-      "description": "نبات أجلونيما كوميوتاتوم موطنه جنوب شرق آسيا. يتميز بأوراقه المزخرفة وتحمله للضوء المنخفض. يزرع عادة كنبات داخلي."
+      "description": "أجلونيما كوميوتاتوم نبات منزلي استوائي معروف بأوراقه المزخرفة وتحمله للضوء الضعيف. ضعها في ضوء ساطع غير مباشر واسقها عندما تجف الطبقة العلوية من التربة. تفضل الدفء وهي سامة عند الابتلاع."
     },
     "hi": {
-      "common_name": "चाइनीज़ एवरग्रीन",
-      "description": "Aglaonema commutatum दक्षिण पूर्व एशिया का उष्णकटिबंधीय पौधा है। यह अपनी सजावटी पत्तियों और कम रोशनी सहनशीलता के लिए जाना जाता है। इसे घरों में उगाया जाता है।"
+      "common_name": "एग्लाओनेमा",
+      "description": "Aglaonema commutatum एक उष्णकटिबंधीय इनडोर पौधा है, जिसे सजावटी पत्तियों के लिए उगाया जाता है और यह कम रोशनी सहन करता है। इसे मध्यम से तेज अप्रत्यक्ष रोशनी में रखें और ऊपर की मिट्टी सूखने पर पानी दें। इसे गर्म तापमान पसंद है और यह निगलने पर विषाक्त है।"
     },
     "zh": {
       "common_name": "广东万年青",
-      "description": "Aglaonema commutatum 原产于东南亚。因其观赏叶片和耐阴性而受到喜爱。常作为室内观叶植物栽培。"
+      "description": "Aglaonema commutatum 是耐阴的热带室内观叶植物，以花纹叶片著称。放在明亮到中等的散射光处，表土干后再浇水。喜温暖环境，误食对人和宠物有毒。"
     },
     "ja": {
       "common_name": "アグラオネマ",
-      "description": "Aglaonema commutatum は東南アジア原産の観葉植物です。模様のある葉と耐陰性が特徴です。室内でよく栽培されます。"
+      "description": "Aglaonema commutatum は耐陰性のある熱帯性の観葉植物で、模様のある葉が特徴です。明るい〜中程度の間接光で育て、表土が乾いてから水やりします。暖かい環境を好み、誤食すると有毒です。"
     },
     "ko": {
       "common_name": "아글라오네마",
-      "description": "Aglaonema commutatum은 동남아시아 원산의 식물입니다. 무늬 있는 잎과 낮은 광도 적응성이 특징입니다. 실내 식물로 널리 재배됩니다."
+      "description": "Aglaonema commutatum 는 무늬 잎이 특징인 열대 실내 관엽식물로 약한 빛도 견딥니다. 밝은~중간 간접광에서 키우고 겉흙이 마르면 물을 주세요. 따뜻한 환경을 선호하며 섭취 시 독성이 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276418",
-      "https://www.rhs.org.uk/plants/179/i/aglaonema/details",
-      "https://edis.ifas.ufl.edu/publication/FP036"
+      "https://hgic.clemson.edu/factsheet/chinese-evergreen-aglaonema-care-cultivation-growing-guide/",
+      "https://plants.ces.ncsu.edu/plants/aglaonema/",
+      "https://www.gardendesign.com/houseplants/chinese-evergreen.html",
+      "https://www.thespruce.com/grow-aglaonema-houseplants-1902734"
     ]
   }
 }

@@ -4,20 +4,20 @@
   "latin": "Euphorbia ingens",
   "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "euphorbia_ingens.jpg",
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "en": "Bright direct sun",
+          "pl": "Jasne słońce",
+          "de": "Helle Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "强光直射",
+          "ja": "明るい直射光",
+          "ko": "밝은 직사광"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Gritty cactus mix",
+          "pl": "Podłoże do kaktusów",
+          "de": "Kakteenerde, grob",
+          "fr": "Terreau cactus drainant",
+          "it": "Terriccio per cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactus",
+          "ar": "تربة صبارات مصرفة",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "排水佳仙人掌土",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Skąpe",
-          "de": "Gering",
-          "fr": "Faible",
-          "it": "Raro",
-          "es": "Escaso",
-          "pt": "Pouco",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적게"
+          "en": "Let soil dry",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen nach Abtrocknen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega tras secar",
+          "pt": "Regar após secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "흙 마른 뒤 물"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mäßig anspruchsvoll",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "管理は中程度",
+          "ko": "관리 보통"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "Keep >10°C",
+          "pl": "Trzymaj >10°C",
+          "de": ">10°C halten",
+          "fr": ">10°C minimum",
+          "it": ">10°C minimo",
+          "es": ">10°C mínimo",
+          "pt": ">10°C mínimo",
+          "ar": "فوق 10°م",
+          "hi": "10°C से ऊपर",
+          "zh": "保持>10°C",
+          "ja": "10°C以上",
+          "ko": "10°C 이상"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Normal to dry air",
+          "pl": "Normalne/suche powietrze",
+          "de": "Normale trockene Luft",
+          "fr": "Air sec OK",
+          "it": "Aria secca ok",
+          "es": "Aire seco OK",
+          "pt": "Ar seco ok",
+          "ar": "هواء جاف مناسب",
+          "hi": "सूखी हवा ठीक",
+          "zh": "普通偏干空气",
+          "ja": "乾燥気味で可",
+          "ko": "건조한 공기 OK"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic sap",
-          "pl": "Toksyczny sok",
-          "de": "Giftiger Saft",
-          "fr": "Sève toxique",
-          "it": "Linfa tossica",
-          "es": "Savia tóxica",
-          "pt": "Seiva tóxica",
-          "ar": "عصارة سامة",
-          "hi": "विषैला रस",
-          "zh": "有毒汁液",
-          "ja": "有毒な樹液",
-          "ko": "독성 수액"
+          "en": "Toxic milky sap",
+          "pl": "Toksyczny mleczny sok",
+          "de": "Giftiger Milchsaft",
+          "fr": "Sève laiteuse toxique",
+          "it": "Linfa lattiginosa tossica",
+          "es": "Savia lechosa tóxica",
+          "pt": "Seiva leitosa tóxica",
+          "ar": "عصارة لبنية سامة",
+          "hi": "दूधिया रस विषैला",
+          "zh": "乳汁有毒",
+          "ja": "乳液は有毒",
+          "ko": "유액 독성"
         }
       }
     },
@@ -160,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Tree-like",
-          "pl": "Drzewiasta",
-          "de": "Baumartig",
-          "fr": "Arborescente",
-          "it": "Arborea",
-          "es": "Arbórea",
-          "pt": "Arbórea",
-          "ar": "شجرية",
-          "hi": "वृक्षीय",
-          "zh": "树状",
-          "ja": "樹木状",
-          "ko": "나무형"
+          "en": "Upright, tree-like",
+          "pl": "Wzniesiony, drzewiasty",
+          "de": "Aufrecht, baumartig",
+          "fr": "Port arborescent",
+          "it": "Eretto, arboreo",
+          "es": "Erguido, arbóreo",
+          "pt": "Ereto, arbóreo",
+          "ar": "نمو عمودي شجري",
+          "hi": "सीधा, वृक्षाकार",
+          "zh": "直立树状",
+          "ja": "直立し樹形",
+          "ko": "직립 수형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to root rot",
+          "pl": "Wrażliwy na przelanie",
+          "de": "Fäule bei Nässe",
+          "fr": "Pourrit si trop arrosé",
+          "it": "Marciume da eccesso",
+          "es": "Pudre por exceso",
+          "pt": "Apodrece em excesso",
+          "ar": "تعفن مع الإفراط",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "易烂根",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحياناً",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶见虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Candelabra tree",
-      "description": "Euphorbia ingens is a large succulent tree native to southern Africa. It prefers bright sunlight and infrequent watering. The milky sap is toxic and should be handled with care."
+      "description": "Euphorbia ingens is a tree-like succulent grown as a pot plant with ridged, branching green stems. Provide bright sun and a fast-draining cactus mix, and let the soil dry fully between waterings. The milky latex sap is toxic and can irritate skin and eyes."
     },
     "pl": {
-      "common_name": "Wilczomlecz olbrzymi",
-      "description": "Euphorbia ingens to duży, sukulentowy gatunek pochodzący z południowej Afryki. Wymaga dużo słońca i rzadkiego podlewania. Mleczny sok rośliny jest toksyczny."
+      "common_name": "Wilczomlecz kandelabrowy",
+      "description": "Euphorbia ingens to drzewiasty sukulent uprawiany w doniczce, z żebrowanymi, rozgałęzionymi pędami. Wymaga dużo słońca i przepuszczalnego podłoża dla kaktusów; podlewaj dopiero po całkowitym przeschnięciu. Mleczny sok jest toksyczny i drażni skórę oraz oczy."
     },
     "de": {
-      "common_name": "Kandelaberwolfsmilch",
-      "description": "Euphorbia ingens ist ein großer sukkulenter Baum aus dem südlichen Afrika. Sie benötigt viel Sonne und wenig Wasser. Der Milchsaft ist giftig."
+      "common_name": "Kandelaber-Wolfsmilch",
+      "description": "Euphorbia ingens ist eine baumförmige Sukkulente, die häufig als Topfpflanze kultiviert wird und gerippte, verzweigende Triebe hat. Sie braucht viel Licht und ein sehr gut drainierendes Kakteensubstrat; zwischen den Wassergaben vollständig abtrocknen lassen. Der milchige Pflanzensaft ist giftig und reizt Haut und Augen."
     },
     "fr": {
       "common_name": "Euphorbe candélabre",
-      "description": "Euphorbia ingens est une grande plante succulente originaire d’Afrique australe. Elle aime le plein soleil et des arrosages espacés. Sa sève laiteuse est toxique."
+      "description": "Euphorbia ingens est une succulente arborescente souvent cultivée en pot, avec des tiges vertes côtelées et ramifiées. Donnez-lui beaucoup de soleil et un substrat pour cactus très drainant, en laissant sécher le mélange entre deux arrosages. La sève blanche est toxique et irritante pour la peau et les yeux."
     },
     "it": {
       "common_name": "Euforbia a candelabro",
-      "description": "Euphorbia ingens è una grande pianta succulenta originaria dell’Africa meridionale. Predilige sole intenso e poche annaffiature. La linfa lattiginosa è tossica."
+      "description": "Euphorbia ingens è una succulenta dall’aspetto arboreo, coltivata in vaso con fusti verdi costolati e ramificati. Richiede molta luce e un terriccio per cactus ben drenante, lasciando asciugare completamente tra un’annaffiatura e l’altra. La linfa lattiginosa è tossica e può irritare pelle e occhi."
     },
     "es": {
-      "common_name": "Árbol candelabro",
-      "description": "Euphorbia ingens es una suculenta arbórea del sur de África. Necesita mucho sol y riegos poco frecuentes. Su savia lechosa es tóxica."
+      "common_name": "Euforbia candelabro",
+      "description": "Euphorbia ingens es una suculenta de porte arbóreo que se cultiva en maceta, con tallos verdes acanalados y ramificados. Necesita mucho sol y un sustrato para cactus muy drenante, dejando secar por completo entre riegos. La savia lechosa es tóxica e irrita la piel y los ojos."
     },
     "pt": {
-      "common_name": "Árvore-candelabro",
-      "description": "Euphorbia ingens é uma suculenta arbórea nativa do sul da África. Prefere sol pleno e regas espaçadas. A seiva leitosa é tóxica."
+      "common_name": "Eufórbia candelabro",
+      "description": "Euphorbia ingens é uma suculenta de porte arbóreo cultivada em vaso, com caules verdes estriados e ramificados. Precisa de bastante sol e substrato bem drenante para cactos, deixando secar totalmente entre regas. A seiva leitosa é tóxica e pode irritar pele e olhos."
     },
     "ar": {
-      "common_name": "شجرة الشمعدان",
-      "description": "Euphorbia ingens نبات عصاري شجري موطنه جنوب أفريقيا. يحتاج إلى شمس قوية وري متباعد. العصارة اللبنية سامة."
+      "common_name": "يوفوربيا شمعدانية",
+      "description": "Euphorbia ingens نبات عصاري شجري يُربّى غالباً في الأصص وله سيقان خضراء مضلعة ومتفرعة. يحتاج إلى ضوء قوي وتربة صبارات جيدة التصريف مع ترك التربة تجف تماماً بين الريات. العصارة اللبنية سامة ومهيجة للجلد والعينين."
     },
     "hi": {
-      "common_name": "कैंडेलाब्रा वृक्ष",
-      "description": "Euphorbia ingens दक्षिणी अफ्रीका का एक बड़ा रसीला पौधा है। इसे तेज धूप और कम पानी की आवश्यकता होती है। इसका दूधिया रस विषैला होता है।"
+      "common_name": "कैंडलब्रा यूफोर्बिया",
+      "description": "Euphorbia ingens एक पेड़-जैसा सक्युलेंट है जिसे अक्सर गमले में उगाया जाता है और इसके हरे, धारियों वाले तने शाखायुक्त होते हैं। इसे तेज़ रोशनी और अच्छी जल-निकासी वाली कैक्टस मिट्टी दें, और पानी देने से पहले मिट्टी को पूरी तरह सूखने दें। इसका दूधिया रस विषैला होता है और त्वचा व आँखों में जलन कर सकता है।"
     },
     "zh": {
       "common_name": "烛台大戟",
-      "description": "Euphorbia ingens 原产于非洲南部，是大型多肉植物。喜强光，耐干旱。其乳白色汁液有毒。"
+      "description": "Euphorbia ingens 是树状多肉，常作盆栽，茎绿色并具明显棱脊且会分枝。需强光与排水良好的仙人掌/多肉基质，浇水前让盆土完全干透。乳白色汁液有毒，可能刺激皮肤和眼睛。"
     },
     "ja": {
-      "common_name": "キャンデラブラユーフォルビア",
-      "description": "Euphorbia ingens は南アフリカ原産の大型多肉植物です。強い日光と控えめな水やりを好みます。樹液には毒性があります。"
+      "common_name": "キャンデラブラ・ユーフォルビア",
+      "description": "Euphorbia ingens は樹形になる多肉で、鉢植えでは稜のある緑色の茎が分枝します。強い光と水はけの良い多肉用土を好み、用土が完全に乾いてからたっぷり与えます。乳白色の樹液は有毒で、皮膚や目を刺激します。"
     },
     "ko": {
-      "common_name": "캔들라브라 유포르비아",
-      "description": "Euphorbia ingens는 남부 아프리카 원산의 큰 다육식물입니다. 강한 햇빛과 적은 물을 선호합니다. 수액은 독성이 있습니다."
+      "common_name": "촛대 유포르비아",
+      "description": "Euphorbia ingens 는 나무처럼 자라는 다육식물로, 능선이 있는 녹색 줄기가 가지치듯 분지합니다. 강한 빛과 배수가 좋은 다육/선인장용 흙을 주고, 흙이 완전히 마른 뒤 물을 주세요. 흰 유액은 독성이 있으며 피부와 눈에 자극을 줄 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/euphorbia-ingens",
-      "https://www.rhs.org.uk/plants/6953/euphorbia-ingens/details",
-      "https://www.sanbi.org/animal-of-the-week/euphorbia-ingens"
+      "https://www.rhs.org.uk/plants/7062/euphorbia-ingens/details",
+      "https://www.thespruce.com/euphorbia-ingens-6666335",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:346904-1",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2712704/"
     ]
   }
 }

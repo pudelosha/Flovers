@@ -1,23 +1,25 @@
 {
   "external_id": "gasteria_carinata",
-  "name": "Gasteria Carinata",
+  "name": "Gasteria carinata",
   "latin": "Gasteria carinata",
   "sun": "medium",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "gasteria_carinata.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
+          "en": "Well-draining",
           "pl": "Dobrze przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenante",
-          "ar": "تربة جيدة التصريف",
-          "hi": "जल निकासी मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수 잘 됨"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Poche annaffiature",
-          "es": "Riego escaso",
-          "pt": "Rega esparsa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "적은 물주기"
+          "en": "Low water needs",
+          "pl": "Niskie zapotrzebowanie na wodę",
+          "de": "Wasserbedarf gering",
+          "fr": "Besoins en eau faibles",
+          "it": "Basso bisogno d'acqua",
+          "es": "Bajo requerimiento de agua",
+          "pt": "Baixa necessidade de água",
+          "ar": "احتياجات مائية منخفضة",
+          "hi": "कम पानी की आवश्यकता",
+          "zh": "低水需求",
+          "ja": "水の必要性が低い",
+          "ko": "물 필요량 낮음"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "매우 쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26 °C",
-          "pl": "18–26 °C",
-          "de": "18–26 °C",
-          "fr": "18–26 °C",
-          "it": "18–26 °C",
-          "es": "18–26 °C",
-          "pt": "18–26 °C",
-          "ar": "18–26°م",
-          "hi": "18–26 °C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26℃"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,13 +126,13 @@
         "text": {
           "en": "Low humidity",
           "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
+          "de": "Geringe Luftfeuchtigkeit",
           "fr": "Faible humidité",
           "it": "Bassa umidità",
           "es": "Baja humedad",
           "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
+          "hi": "निम्न आर्द्रता",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषाक्त नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -160,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
+          "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
           "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare il ristagno d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرात से पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔씩 나타나는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ox Tongue",
-      "description": "Gasteria carinata is a compact succulent native to South Africa. It has thick, spotted leaves and grows slowly indoors. It prefers bright indirect light and infrequent watering."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata is a small succulent native to South Africa. It is known for its striking, dark green leaves and slow growth."
     },
     "pl": {
-      "common_name": "Gasteria",
-      "description": "Gasteria carinata to niewielki sukulent z Afryki Południowej. Ma grube, plamiste liście i rośnie powoli w domu. Lubi jasne, rozproszone światło i rzadkie podlewanie."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata to mała roślina sukulentna pochodząca z Południowej Afryki. Jest znana z ciemnozielonych liści i powolnego wzrostu."
     },
     "de": {
-      "common_name": "Gasterie",
-      "description": "Gasteria carinata ist eine kompakte Sukkulente aus Südafrika. Sie besitzt dicke, gefleckte Blätter und wächst langsam. Bevorzugt helles, indirektes Licht und wenig Wasser."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata ist eine kleine Sukkulente aus Südafrika. Sie ist bekannt für ihre auffälligen, dunkelgrünen Blätter und langsames Wachstum."
     },
     "fr": {
-      "common_name": "Gastérie",
-      "description": "Gasteria carinata est une succulente compacte originaire d’Afrique du Sud. Elle a des feuilles épaisses et tachetées et pousse lentement. Elle aime la lumière indirecte et peu d’arrosage."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata est une petite succulente originaire d'Afrique du Sud. Elle est connue pour ses feuilles vert foncé et sa croissance lente."
     },
     "it": {
-      "common_name": "Gasteria",
-      "description": "Gasteria carinata è una succulenta compatta del Sudafrica. Ha foglie spesse e maculate e cresce lentamente. Predilige luce indiretta e annaffiature sporadiche."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata è una piccola succulenta originaria del Sud Africa. È nota per le sue foglie verde scuro e la crescita lenta."
     },
     "es": {
-      "common_name": "Gasteria",
-      "description": "Gasteria carinata es una suculenta compacta de Sudáfrica. Tiene hojas gruesas y moteadas y crecimiento lento. Prefiere luz indirecta y riego escaso."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata es una pequeña suculenta originaria de Sudáfrica. Es conocida por sus hojas verdes oscuras y su lento crecimiento."
     },
     "pt": {
-      "common_name": "Gásteria",
-      "description": "Gasteria carinata é uma suculenta compacta da África do Sul. Possui folhas grossas e manchadas e crescimento lento. Prefere luz indireta e pouca rega."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata é uma pequena suculenta originária da África do Sul. É conhecida por suas folhas verde-escuras e crescimento lento."
     },
     "ar": {
-      "common_name": "غاستيريا",
-      "description": "غاستيريا كاريناتا نبات عصاري موطنه جنوب أفريقيا. يتميز بأوراق سميكة منقطة وينمو ببطء داخل المنازل. يفضل الضوء غير المباشر والري القليل."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata هي نبتة عصارية صغيرة موطنها جنوب إفريقيا. وهي معروفة بأوراقها الخضراء الداكنة ونموها البطيء."
     },
     "hi": {
-      "common_name": "गैस्टेरिया",
-      "description": "गैस्टेरिया कैरिनाटा दक्षिण अफ्रीका का एक छोटा सक्यूलेंट है। इसकी पत्तियाँ मोटी और धब्बेदार होती हैं और यह धीरे बढ़ता है। इसे अप्रत्यक्ष रोशनी और कम पानी पसंद है।"
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata एक छोटी मांसल पौधा है जो दक्षिण अफ्रीका का मूल निवासी है। यह अपनी गहरे हरे रंग की पत्तियों और धीमी वृद्धि के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "牛舌兰",
-      "description": "Gasteria carinata 原产于南非，是一种紧凑型多肉植物。叶片厚实并带有斑点，生长缓慢。适合明亮的散射光和少量浇水。"
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata 是一种来自南非的小型多肉植物。它以深绿色的叶子和缓慢的生长速度而闻名。"
     },
     "ja": {
-      "common_name": "ガステリア",
-      "description": "ガステリア・カリナータは南アフリカ原産の多肉植物です。斑点のある厚い葉を持ち、成長はゆっくりです。明るい間接光と控えめな水やりを好みます。"
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata は南アフリカ原産の小さな多肉植物です。濃い緑色の葉と遅い成長で知られています。"
     },
     "ko": {
-      "common_name": "가스테리아",
-      "description": "가스테리아 카리나타는 남아프리카 원산의 다육식물입니다. 두껍고 점무늬 잎을 가지며 생장이 느립니다. 밝은 간접광과 적은 물을 선호합니다."
+      "common_name": "Gasteria carinata",
+      "description": "Gasteria carinata는 남아프리카 원산의 작은 다육 식물입니다. 짙은 녹색의 잎과 느린 성장으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/9018/gasteria-carinata/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b808"
+      "https://www.rhs.org.uk/plants/14621/gasteria-carinata/Details",
+      "https://www.succulentsandsunshine.com/gasteria-care/"
     ]
   }
 }

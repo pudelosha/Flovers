@@ -11,7 +11,7 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "acidic"
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +20,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 30,
   "image_hero": "camellia_japonica.jpg",
   "image_thumb": "camellia_japonica.jpg",
   "traits": [
@@ -28,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright, indirect",
+          "en": "Bright indirect",
           "pl": "Jasne, rozproszone",
           "de": "Hell, indirekt",
-          "fr": "Lumineux, indirect",
-          "it": "Luce intensa, indiretta",
-          "es": "Luz brillante indirecta",
-          "pt": "Luz forte indireta",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़, अप्रत्यक्ष रोशनी",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,17 +47,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, well-drained",
-          "pl": "Kwaśne, przepuszczalne",
-          "de": "Sauer, gut drainiert",
-          "fr": "Acide, bien drainé",
-          "it": "Acido, ben drenato",
-          "es": "Ácido y drenante",
-          "pt": "Ácido, bem drenado",
-          "ar": "تربة حمضية جيدة الصرف",
-          "hi": "अम्लीय, जलनिकास वाली",
-          "zh": "酸性、排水好",
-          "ja": "酸性で水はけ良",
+          "en": "Acidic, drained",
+          "pl": "Kwaśne, przepuszcz.",
+          "de": "Sauer, durchlässig",
+          "fr": "Acide, drainant",
+          "it": "Acido, drenante",
+          "es": "Ácido, drenante",
+          "pt": "Ácido, drenante",
+          "ar": "تربة حمضية جيدة",
+          "hi": "अम्लीय, जलनिकासी",
+          "zh": "酸性且排水好",
+          "ja": "酸性で水はけ",
           "ko": "산성, 배수 좋게"
         }
       }
@@ -67,17 +67,17 @@
       "value": {
         "text": {
           "en": "Keep evenly moist",
-          "pl": "Umiark. stale wilgotne",
+          "pl": "Stale wilgotne",
           "de": "Gleichmäßig feucht",
-          "fr": "Substrat légèrement humide",
-          "it": "Terriccio sempre umido",
-          "es": "Mantén humedad constante",
-          "pt": "Manter úmido constante",
-          "ar": "رطوبة ثابتة دون إغراق",
-          "hi": "मिट्टी समान नमी में",
+          "fr": "Humide régulièrement",
+          "it": "Umido costante",
+          "es": "Húmedo constante",
+          "pt": "Úmido constante",
+          "ar": "رطوبة ثابتة",
+          "hi": "समान नमी रखें",
           "zh": "保持均匀湿润",
           "ja": "均一に湿らせる",
-          "ko": "고르게 촉촉하게"
+          "ko": "고르게 촉촉"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Fussy indoors",
-          "pl": "Wymaga warunków",
-          "de": "Heikel in Räumen",
-          "fr": "Délicate en intérieur",
-          "it": "Delicata in casa",
-          "es": "Exigente en interior",
-          "pt": "Exigente em interior",
-          "ar": "حساسة داخل المنزل",
-          "hi": "घर में संवेदनशील",
-          "zh": "室内较挑剔",
-          "ja": "室内はやや難しい",
-          "ko": "실내는 까다로움"
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "较难",
+          "ja": "難しい",
+          "ko": "어려움"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool: 10–20°C",
-          "pl": "Chłodno: 10–20°C",
-          "de": "Kühl: 10–20°C",
-          "fr": "Frais : 10–20°C",
-          "it": "Fresco: 10–20°C",
-          "es": "Fresco: 10–20°C",
-          "pt": "Fresco: 10–20°C",
-          "ar": "بارد: 10–20°م",
-          "hi": "ठंडा: 10–20°C",
-          "zh": "凉爽：10–20°C",
-          "ja": "涼しい: 10–20°C",
-          "ko": "서늘함: 10–20°C"
+          "en": "Cool 10–21°C",
+          "pl": "Chłodno 10–21°C",
+          "de": "Kühl 10–21°C",
+          "fr": "Frais 10–21°C",
+          "it": "Fresco 10–21°C",
+          "es": "Fresco 10–21°C",
+          "pt": "Fresco 10–21°C",
+          "ar": "بارد 10–21°م",
+          "hi": "ठंडा 10–21°C",
+          "zh": "凉爽 10–21°C",
+          "ja": "涼しい10–21°C",
+          "ko": "서늘함 10–21°C"
         }
       }
     },
@@ -123,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Likes humid air",
-          "pl": "Lubi wilgotne powietrze",
-          "de": "Mag feuchte Luft",
-          "fr": "Aime l’air humide",
-          "it": "Gradisce aria umida",
-          "es": "Prefiere aire húmedo",
-          "pt": "Gosta de ar úmido",
-          "ar": "يحب رطوبة معتدلة",
-          "hi": "नमी वाली हवा पसंद",
-          "zh": "喜湿润空气",
-          "ja": "湿度高めが良い",
-          "ko": "습한 공기 선호"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक आर्द्रता",
+          "zh": "较高湿度",
+          "ja": "高めの湿度",
+          "ko": "습도 높게"
         }
       }
     },
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Pet-safe",
-          "pl": "Bezpieczna dla zwierząt",
-          "de": "Ungiftig für Haustiere",
-          "fr": "Non toxique animaux",
-          "it": "Non tossica per animali",
-          "es": "No tóxica mascotas",
-          "pt": "Não tóxica p/ pets",
-          "ar": "غير سامة للحيوانات",
-          "hi": "पालतू-जानवर सुरक्षित",
-          "zh": "对宠物无毒",
-          "ja": "ペットに無毒",
-          "ko": "반려동물 무독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "अविषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -161,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow, woody shrub",
+          "en": "Slow-growing shrub",
           "pl": "Wolno rosnący krzew",
-          "de": "Langsam wachsender Strauch",
-          "fr": "Arbuste ligneux lent",
-          "it": "Arbusto legnoso lento",
-          "es": "Arbusto leñoso lento",
-          "pt": "Arbusto lenhoso lento",
-          "ar": "شجيرة خشبية بطيئة",
-          "hi": "धीमी, लकड़ीदार झाड़ी",
-          "zh": "生长慢的木本灌木",
-          "ja": "生長遅い低木",
-          "ko": "느린 목본 관목"
+          "de": "Langsam wachsend",
+          "fr": "Arbuste lent",
+          "it": "Arbusto lento",
+          "es": "Arbusto lento",
+          "pt": "Arbusto lento",
+          "ar": "شجيرة بطيئة",
+          "hi": "धीमी झाड़ी",
+          "zh": "缓慢生长灌木",
+          "ja": "成長が遅い低木",
+          "ko": "느리게 크는 관목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid heat, soggy",
+          "pl": "Unikaj upału, zastoju",
+          "de": "Hitze & Staunässe",
+          "fr": "Éviter chaleur, eau",
+          "it": "Evita caldo, ristagni",
+          "es": "Evita calor, encharque",
+          "pt": "Evite calor, encharque",
+          "ar": "تجنب الحر والركود",
+          "hi": "गर्मी/जमाव से बचें",
+          "zh": "避高温与积水",
+          "ja": "高温と過湿NG",
+          "ko": "고온·과습 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, aphids",
+          "pl": "Tarczniki, mszyce",
+          "de": "Schildläuse, Blattläuse",
+          "fr": "Cochenilles, pucerons",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinillas, pulgones",
+          "pt": "Cochonilhas, pulgões",
+          "ar": "حشرات قشرية, منّ",
+          "hi": "स्केल, एफिड्स",
+          "zh": "介壳虫、蚜虫",
+          "ja": "カイガラムシ・アブラムシ",
+          "ko": "깍지벌레, 진딧물"
         }
       }
     }
@@ -180,60 +218,60 @@
   "translations": {
     "en": {
       "common_name": "Japanese camellia",
-      "description": "Camellia japonica is an evergreen shrub grown for its large winter-to-spring blooms. In containers it prefers bright, filtered light and an acidic, well-drained mix kept evenly moist. Cool conditions help reduce stress and bud drop."
+      "description": "Evergreen shrub with glossy leaves and large winter-to-spring flowers. Keep in bright, indirect light and cool conditions, and use an acidic, well-draining mix kept evenly moist."
     },
     "pl": {
       "common_name": "Kamelia japońska",
-      "description": "Camellia japonica to zimozielony krzew ceniony za duże kwiaty pojawiające się zimą i wiosną. W donicy najlepiej rośnie w jasnym, rozproszonym świetle oraz kwaśnym, przepuszczalnym podłożu stale lekko wilgotnym. Chłodniejsze warunki pomagają ograniczyć stres i zrzucanie pąków."
+      "description": "Zimozielony krzew o błyszczących liściach i dużych kwiatach zimą oraz wiosną. Trzymaj w jasnym, rozproszonym świetle i chłodzie, w kwaśnym, przepuszczalnym podłożu utrzymywanym stale lekko wilgotnym."
     },
     "de": {
       "common_name": "Japanische Kamelie",
-      "description": "Camellia japonica ist ein immergrüner Strauch mit großen Blüten von Winter bis Frühjahr. In Töpfen braucht sie helles, gefiltertes Licht sowie ein saures, gut drainiertes Substrat, das gleichmäßig feucht bleibt. Kühle Temperaturen unterstützen die Knospenbildung und vermindern Stress."
+      "description": "Immergrüner Strauch mit glänzenden Blättern und großen Blüten im Winter bis Frühjahr. Hell ohne direkte Sonne und eher kühl halten; in saurer, gut drainierter Erde gleichmäßig feucht halten."
     },
     "fr": {
       "common_name": "Camélia du Japon",
-      "description": "Camellia japonica est un arbuste persistant apprécié pour ses grandes fleurs de l’hiver au printemps. En pot, elle préfère une lumière vive mais filtrée et un substrat acide bien drainé, maintenu légèrement humide. Des températures fraîches limitent le stress et la chute des boutons."
+      "description": "Arbuste persistant aux feuilles brillantes et aux grandes fleurs de l’hiver au printemps. Placez-le en lumière vive indirecte et au frais, dans un substrat acide drainant maintenu uniformément humide."
     },
     "it": {
       "common_name": "Camelia del Giappone",
-      "description": "Camellia japonica è un arbusto sempreverde noto per le fioriture tra inverno e primavera. In vaso richiede luce intensa ma indiretta e un terriccio acido ben drenato, mantenuto uniformemente umido. Temperature fresche aiutano a evitare stress e caduta dei boccioli."
+      "description": "Arbusto sempreverde con foglie lucide e grandi fiori tra inverno e primavera. Tienila in luce intensa indiretta e in ambiente fresco, con terriccio acido drenante mantenuto uniformemente umido."
     },
     "es": {
       "common_name": "Camelia japonesa",
-      "description": "Camellia japonica es un arbusto perenne cultivado por sus grandes flores de invierno a primavera. En maceta prefiere luz brillante y filtrada y un sustrato ácido con buen drenaje, siempre ligeramente húmedo. El ambiente fresco reduce el estrés y la caída de capullos."
+      "description": "Arbusto perenne de hojas brillantes y flores grandes de invierno a primavera. Prefiere luz brillante indirecta y temperaturas frescas; usa sustrato ácido y drenante y mantenlo uniformemente húmedo."
     },
     "pt": {
       "common_name": "Camélia-japonesa",
-      "description": "Camellia japonica é um arbusto perene valorizado pelas flores grandes do inverno à primavera. Em vaso, prefere luz forte e filtrada e substrato ácido bem drenado, mantido uniformemente úmido. Condições mais frescas ajudam a reduzir estresse e queda de botões."
+      "description": "Arbusto perene com folhas brilhantes e flores grandes do inverno à primavera. Prefere luz forte indireta e ambiente fresco; use substrato ácido e bem drenado e mantenha a umidade constante sem encharcar."
     },
     "ar": {
       "common_name": "كاميليا يابانية",
-      "description": "Camellia japonica شجيرة دائمة الخضرة تُزرع لأزهارها الكبيرة من الشتاء حتى الربيع. في الأصص تحتاج إلى ضوء ساطع غير مباشر وتربة حمضية جيدة الصرف تبقى رطبة باعتدال دون إغراق. الأجواء الباردة تقلل الإجهاد وتساقط البراعم."
+      "description": "شجيرة دائمة الخضرة بأوراق لامعة وأزهار كبيرة من الشتاء إلى الربيع. تحتاج ضوءاً ساطعاً غير مباشر وحرارة معتدلة إلى باردة، وتربة حمضية جيدة التصريف مع رطوبة ثابتة دون إغراق."
     },
     "hi": {
       "common_name": "जापानी कैमेलिया",
-      "description": "Camellia japonica एक सदाबहार झाड़ी है जो सर्दियों से वसंत तक बड़े फूलों के लिए उगाई जाती है। गमले में इसे तेज़ लेकिन अप्रत्यक्ष रोशनी और अम्लीय, जलनिकास वाली मिट्टी चाहिए जो समान रूप से नम रहे। ठंडी परिस्थितियाँ तनाव और कली झड़ना कम करती हैं।"
+      "description": "चमकदार पत्तियों और सर्दी से वसंत तक बड़े फूलों वाली सदाबहार झाड़ी। इसे तेज अप्रत्यक्ष रोशनी और ठंडे वातावरण में रखें, अम्लीय व जलनिकासी वाली मिट्टी में नमी समान रखें।"
     },
     "zh": {
       "common_name": "日本山茶",
-      "description": "Camellia japonica 为常绿灌木，以冬季至春季的大花著称。盆栽宜放在明亮散射光处，并使用酸性、排水良好的基质，保持均匀湿润但不积水。较凉爽的环境有助于减少应激与落蕾。"
+      "description": "常绿灌木，叶片有光泽，冬末至春季开大花。放在明亮散射光和较凉环境中，使用酸性、排水好的基质并保持均匀湿润但不积水。"
     },
     "ja": {
       "common_name": "ツバキ",
-      "description": "Camellia japonica は常緑低木で、冬から春にかけて大きな花を咲かせます。鉢植えでは明るい間接光と、酸性で水はけの良い用土を使い、用土を均一に湿らせます。涼しい環境はストレスや蕾落ちを抑えます。"
+      "description": "光沢のある葉と、冬から春に咲く大きな花をもつ常緑低木。明るい間接光と涼しい環境を好み、酸性で水はけのよい用土を均一に湿らせて管理します。"
     },
     "ko": {
       "common_name": "동백나무",
-      "description": "Camellia japonica는 겨울부터 봄까지 큰 꽃을 피우는 상록 관목입니다. 화분에서는 밝은 간접광과 산성의 배수 좋은 배합토를 사용하고, 흙을 고르게 촉촉하게 유지합니다. 서늘한 환경이 스트레스와 꽃봉오리 낙하를 줄이는 데 도움이 됩니다."
+      "description": "윤기 있는 잎과 겨울~봄에 피는 큰 꽃이 특징인 상록 관목입니다. 밝은 간접광과 서늘한 환경을 선호하며, 산성·배수 좋은 흙에서 촉촉하게 유지하되 과습은 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=287331",
-      "https://www.rhs.org.uk/plants/camellia/growing-guide",
-      "https://plants.ces.ncsu.edu/plants/camellia-japonica/",
-      "https://edis.ifas.ufl.edu/publication/EP002",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/common-camellia"
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/camellia",
+      "https://www.americancamellias.com/education-and-camellia-care/general-culture-requirements/container-grown-camellias",
+      "https://internationalcamellia.org/en-us/caring-for-camellias/pests-and-diseases-of-camellias",
+      "https://www.thespruce.com/japanese-camellia-growing-guide-5210436",
+      "https://camelliasaustralia.com.au/cultivation/camellias-in-containers/"
     ]
   }
 }

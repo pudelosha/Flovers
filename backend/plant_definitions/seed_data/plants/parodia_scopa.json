@@ -11,8 +11,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy",
-          "pl": "Piaszczysta",
-          "de": "Sandig",
-          "fr": "Sableux",
-          "it": "Sabbioso",
-          "es": "Arenosa",
-          "pt": "Arenoso",
-          "ar": "رملية",
-          "hi": "रेतदार",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -90,9 +90,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Powolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak nadmiernego podlewania",
+          "de": "Kein Überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Ball Cactus",
-      "description": "Parodia scopa is a small cactus species native to South America. It is known for its spherical shape and yellow flowers that bloom in the spring."
+      "description": "Parodia scopa is a small, globular cactus native to South America. It is known for its dense spines and vibrant yellow flowers."
     },
     "pl": {
       "common_name": "Kaktus kulisty",
-      "description": "Parodia scopa to mały gatunek kaktusa pochodzący z Ameryki Południowej. Jest znany z kulistego kształtu i żółtych kwiatów, które kwitną wiosną."
+      "description": "Parodia scopa to mały, kulisty kaktus pochodzący z Ameryki Południowej. Jest znany z gęstych cierni i intensywnie żółtych kwiatów."
     },
     "de": {
       "common_name": "Kugel-Kaktus",
-      "description": "Parodia scopa ist eine kleine Kaktusart aus Südamerika. Sie ist bekannt für ihre kugelige Form und die gelben Blüten, die im Frühling blühen."
+      "description": "Parodia scopa ist ein kleiner, kugelförmiger Kaktus aus Südamerika. Er ist bekannt für seine dichten Stacheln und leuchtend gelben Blüten."
     },
     "fr": {
       "common_name": "Cactus boule",
-      "description": "Parodia scopa est une petite espèce de cactus originaire d'Amérique du Sud. Elle est connue pour sa forme sphérique et ses fleurs jaunes qui fleurissent au printemps."
+      "description": "Parodia scopa est un petit cactus globulaire originaire d'Amérique du Sud. Il est connu pour ses épines denses et ses fleurs jaunes éclatantes."
     },
     "it": {
       "common_name": "Cactus a palla",
-      "description": "Parodia scopa è una piccola specie di cactus originaria del Sud America. È nota per la sua forma sferica e i fiori gialli che sbocciano in primavera."
+      "description": "Parodia scopa è un piccolo cactus globoso originario del Sud America. È noto per le sue spine dense e i suoi fiori gialli vivaci."
     },
     "es": {
       "common_name": "Cactus bola",
-      "description": "Parodia scopa es una pequeña especie de cactus originaria de América del Sur. Es conocida por su forma esférica y sus flores amarillas que florecen en primavera."
+      "description": "Parodia scopa es un pequeño cactus globular originario de Sudamérica. Es conocido por sus espinas densas y sus flores amarillas vibrantes."
     },
     "pt": {
       "common_name": "Cacto bola",
-      "description": "Parodia scopa é uma pequena espécie de cacto nativa da América do Sul. É conhecida por sua forma esférica e flores amarelas que florescem na primavera."
+      "description": "Parodia scopa é um pequeno cacto globoso nativo da América do Sul. É conhecido por seus espinhos densos e flores amarelas vibrantes."
     },
     "ar": {
-      "common_name": "صبار كرة",
-      "description": "Parodia scopa هو نوع صغير من الصبار موطنه أمريكا الجنوبية. إنه معروف بشكله الكروي وزهوره الصفراء التي تتفتح في الربيع."
+      "common_name": "صبار كروي",
+      "description": "Parodia scopa هو صبار صغير كروي موطنه أمريكا الجنوبية. وهو معروف بشوكه الكثيف وزهور صفراء زاهية."
     },
     "hi": {
-      "common_name": "गोल कैक्टस",
-      "description": "Parodia scopa एक छोटा कैक्टस प्रजाति है जो दक्षिण अमेरिका का मूल निवासी है। यह अपनी गोल आकार और वसंत में खिलने वाले पीले फूलों के लिए जाना जाता है।"
+      "common_name": "गोलाकार कैक्टस",
+      "description": "Parodia scopa एक छोटा, गोलाकार कैक्टस है जो दक्षिण अमेरिका का मूल निवासी है। यह अपनी घनी कांटों और जीवंत पीले फूलों के लिए जाना जाता है।"
     },
     "zh": {
       "common_name": "球形仙人掌",
-      "description": "Parodia scopa是一种小型仙人掌，原产于南美洲。以其球形的外观和春天开放的黄色花朵而闻名。"
+      "description": "Parodia scopa是一种小型球形仙人掌，原产于南美。它以密集的刺和鲜艳的黄色花朵而闻名。"
     },
     "ja": {
-      "common_name": "ボールサボテン",
-      "description": "Parodia scopaは南アメリカ原産の小さなサボテンの種類です。球形の形と春に咲く黄色い花で知られています。"
+      "common_name": "ボールカクタス",
+      "description": "Parodia scopaは南アメリカ原産の小さな球形のサボテンです。密な棘と鮮やかな黄色い花で知られています。"
     },
     "ko": {
       "common_name": "공 모양 선인장",
-      "description": "Parodia scopa는 남미 원산의 작은 선인장 종류입니다. 구형의 형태와 봄에 피는 노란 꽃으로 유명합니다."
+      "description": "Parodia scopa는 남미 원산지의 작은 공 모양 선인장입니다. 밀집한 가시와 선명한 노란 꽃으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicgarden.ox.ac.uk",
-      "https://www.succulentguide.com"
+      "https://www.rhs.org.uk/plants/parodia-scopa",
+      "https://www.gardenia.net/plant/parodia-scopa"
     ]
   }
 }

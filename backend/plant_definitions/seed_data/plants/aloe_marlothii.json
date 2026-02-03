@@ -1,6 +1,6 @@
 {
   "external_id": "aloe_marlothii",
-  "name": "Mountain aloe",
+  "name": "Marloth's aloe",
   "latin": "Aloe marlothii",
   "sun": "high",
   "water": "low",
@@ -10,7 +10,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -35,10 +35,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "日なた",
+          "ko": "직사광"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
+          "en": "Gritty, well-drained",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega pouca",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり控えめ",
-          "ko": "물 적게"
+          "en": "Water when dry",
+          "pl": "Podlewaj po wysch.",
+          "de": "Gießen bei Trockenh.",
+          "fr": "Arroser à sec",
+          "it": "Annaffia da secco",
+          "es": "Riega si está seco",
+          "pt": "Regue quando seco",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -86,7 +86,7 @@
         "text": {
           "en": "Easy",
           "pl": "Łatwa",
-          "de": "Einfach",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -94,7 +94,7 @@
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
-          "ja": "簡単",
+          "ja": "かんたん",
           "ko": "쉬움"
         }
       }
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गर्म जलवायु",
-          "zh": "温暖环境",
-          "ja": "暖かい環境",
-          "ko": "따뜻한 환경"
+          "en": "No frost indoors",
+          "pl": "Bez przymrozków",
+          "de": "Kein Frost",
+          "fr": "Sans gel",
+          "it": "Senza gelo",
+          "es": "Sin heladas",
+          "pt": "Sem geada",
+          "ar": "تجنب الصقيع",
+          "hi": "पाला नहीं",
+          "zh": "避免霜冻",
+          "ja": "霜に弱い",
+          "ko": "서리 피함"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Dry air ok",
+          "pl": "Suche powietrze OK",
+          "de": "Trockene Luft ok",
+          "fr": "Air sec ok",
+          "it": "Aria secca ok",
+          "es": "Aire seco ok",
+          "pt": "Ar seco ok",
+          "ar": "هواء جاف مناسب",
+          "hi": "सूखी हवा ठीक",
+          "zh": "干燥空气可",
+          "ja": "乾燥気味でOK",
+          "ko": "건조해도 OK"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczny po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام عند الأكل",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食に注意",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
+          "en": "Slow to moderate",
+          "pl": "Wzrost wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
+          "hi": "धीमी बढ़त",
+          "zh": "生长较慢",
+          "ja": "生長ゆっくり",
           "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Nicht überwässern",
+          "fr": "Éviter excès d'eau",
+          "it": "Evita troppa acqua",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso d'água",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿に注意",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schild-, Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية/دقيقة",
+          "hi": "स्केल, मिलीबग",
+          "zh": "介壳虫, 粉蚧",
+          "ja": "カイガラムシ",
+          "ko": "깍지벌레, 밀깍지"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Mountain aloe",
-      "description": "Aloe marlothii is a large, tree-like aloe native to southern Africa. It prefers full sun, very well-drained soil, and infrequent watering. Indoors, it grows slowly and needs ample space and bright light."
+      "common_name": "Marloth's aloe",
+      "description": "Aloe marlothii is a large, sun-loving aloe with a spiny rosette that can be grown as a bright indoor specimen when young. Let the potting mix dry out fully between waterings, using a gritty succulent mix. It is considered harmful if eaten by pets or people."
     },
     "pl": {
-      "common_name": "Aloes górski",
-      "description": "Aloe marlothii to duży, drzewiasty aloes pochodzący z południowej Afryki. Wymaga pełnego słońca, bardzo przepuszczalnej gleby i rzadkiego podlewania. W domu rośnie wolno i potrzebuje dużo światła."
+      "common_name": "Aloes Marlotha",
+      "description": "Aloe marlothii to duży, światłolubny aloes z kolczastą rozetą, który młode okazy można uprawiać w jasnym wnętrzu. Podlewaj dopiero po całkowitym przeschnięciu podłoża, w mieszance do kaktusów i sukulentów. Roślina jest uznawana za szkodliwą po zjedzeniu przez ludzi i zwierzęta."
     },
     "de": {
-      "common_name": "Berg-Aloe",
-      "description": "Aloe marlothii ist eine große, baumartige Aloe aus dem südlichen Afrika. Sie benötigt volle Sonne, gut durchlässiges Substrat und seltenes Gießen. In Innenräumen wächst sie langsam und braucht viel Licht."
+      "common_name": "Marloths Aloe",
+      "description": "Aloe marlothii ist eine große, sonnenliebende Aloe mit stacheliger Rosette und kann jung als helles Zimmerexemplar kultiviert werden. Das Substrat zwischen den Wassergaben vollständig austrocknen lassen und eine gut drainierende Sukkulentenmischung nutzen. Bei Verzehr gilt die Pflanze als schädlich für Menschen und Haustiere."
     },
     "fr": {
-      "common_name": "Aloès de montagne",
-      "description": "Aloe marlothii est un grand aloès arborescent originaire d’Afrique australe. Il apprécie le plein soleil, un sol très drainant et des arrosages peu fréquents. En intérieur, sa croissance est lente."
+      "common_name": "Aloès de Marloth",
+      "description": "Aloe marlothii est un grand aloès aimant le soleil, formant une rosette épineuse, cultivable en intérieur très lumineux quand il est jeune. Laissez le substrat sécher complètement entre deux arrosages et utilisez un mélange très drainant pour succulentes. La plante est considérée comme nocive en cas d’ingestion par les humains ou les animaux."
     },
     "it": {
-      "common_name": "Aloe di montagna",
-      "description": "Aloe marlothii è un grande aloe arborescente originario dell’Africa meridionale. Predilige pieno sole, terreno molto drenante e annaffiature rare. In casa cresce lentamente."
+      "common_name": "Aloe di Marloth",
+      "description": "Aloe marlothii è un grande aloe amante del sole con rosetta spinosa, coltivabile da giovane in interno molto luminoso. Lascia asciugare completamente il terriccio tra un’annaffiatura e l’altra usando un mix ben drenante per succulente. È considerata dannosa se ingerita da persone o animali domestici."
     },
     "es": {
-      "common_name": "Aloe de montaña",
-      "description": "Aloe marlothii es un aloe grande y arborescente originario del sur de África. Requiere pleno sol, suelo muy drenante y riegos poco frecuentes. En interiores su crecimiento es lento."
+      "common_name": "Aloe de Marloth",
+      "description": "Aloe marlothii es un aloe grande y amante del sol, con roseta espinosa, que puede cultivarse joven en interior muy luminoso. Deja secar por completo el sustrato entre riegos y usa una mezcla muy drenante para suculentas. Se considera perjudicial si la ingieren personas o mascotas."
     },
     "pt": {
-      "common_name": "Aloe-da-montanha",
-      "description": "Aloe marlothii é um aloe grande e arbóreo nativo do sul da África. Prefere sol pleno, solo bem drenado e regas espaçadas. Em ambientes internos cresce lentamente."
+      "common_name": "Aloe de Marloth",
+      "description": "Aloe marlothii é uma aloe grande e amante de sol, com roseta espinhosa, que pode ser cultivada jovem em interior bem iluminado. Deixe o substrato secar totalmente entre regas e use uma mistura bem drenante para suculentas. É considerada prejudicial se ingerida por pessoas ou animais de estimação."
     },
     "ar": {
-      "common_name": "صبار الجبل",
-      "description": "نبات Aloe marlothii صبار كبير يشبه الشجرة وموطنه جنوب أفريقيا. يحتاج إلى شمس كاملة وتربة جيدة الصرف وري متباعد. ينمو ببطء عند زراعته داخل المنزل."
+      "common_name": "ألوة مارلوث",
+      "description": "Aloe marlothii ألوة كبيرة محبة للشمس ذات وردة شوكية، ويمكن تربية النباتات الصغيرة منها داخل المنزل في مكان شديد الإضاءة. اترك التربة لتجف تمامًا بين الريات واستعمل تربة عصاريات جيدة التصريف. تُعد ضارة إذا تم أكلها من قبل البشر أو الحيوانات الأليفة."
     },
     "hi": {
-      "common_name": "माउंटेन एलो",
-      "description": "Aloe marlothii दक्षिणी अफ्रीका का एक बड़ा, वृक्षाकार एलो है। इसे तेज धूप, अच्छी जल निकासी वाली मिट्टी और कम पानी की आवश्यकता होती है। घर के अंदर इसकी वृद्धि धीमी होती है।"
+      "common_name": "मार्लोथ एलो",
+      "description": "Aloe marlothii एक बड़ा, धूप पसंद एलो है जिसमें कांटेदार रोसेट होता है; छोटे पौधे बहुत उजले इनडोर स्थान में रखे जा सकते हैं। हर सिंचाई के बीच मिट्टी को पूरी तरह सूखने दें और अच्छी जलनिकासी वाला सक्युलेंट मिक्स इस्तेमाल करें। इसे खाने पर इंसानों और पालतू जानवरों के लिए हानिकारक माना जाता है।"
     },
     "zh": {
-      "common_name": "山地芦荟",
-      "description": "Aloe marlothii 原产于南部非洲，是大型树状芦荟。它需要充足阳光、良好排水的土壤和少量浇水。室内栽培时生长缓慢。"
+      "common_name": "马洛斯芦荟",
+      "description": "Aloe marlothii 是喜强光的芦荟，叶缘有刺，幼株可在室内明亮处栽培。每次浇水前先让基质完全干透，并使用排水良好的多肉土。误食对人和宠物可能有害。"
     },
     "ja": {
-      "common_name": "マウンテンアロエ",
-      "description": "Aloe marlothii は南アフリカ原産の大型の木立性アロエです。強い日光と水はけの良い土、控えめな水やりを好みます。室内では成長が遅いです。"
+      "common_name": "マーロスアロエ",
+      "description": "Aloe marlothii は強い光を好む大型のアロエで、葉にトゲのあるロゼットを作り、若株は明るい室内で育てられます。用土が完全に乾いてから水やりし、水はけの良い多肉用土を使います。人やペットが食べると有害とされています。"
     },
     "ko": {
-      "common_name": "마운틴 알로에",
-      "description": "Aloe marlothii는 남아프리카 원산의 큰 나무형 알로에입니다. 강한 햇빛과 배수가 좋은 흙, 적은 물주기를 선호합니다. 실내에서는 성장 속도가 느립니다."
+      "common_name": "말로티 알로에",
+      "description": "Aloe marlothii 는 강한 빛을 좋아하는 큰 알로에로, 가시가 있는 로제트를 만들며 어린 개체는 밝은 실내에서 키울 수 있습니다. 흙이 완전히 마른 뒤에 물을 주고 배수가 좋은 다육이용 흙을 사용하세요. 사람이나 반려동물이 먹으면 해로울 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/aloe-marlothii",
-      "https://worldofsucculents.com/aloe-marlothii-mountain-aloe/",
-      "https://www.sanbi.org/plant/aloe-marlothii/"
+      "https://www.rhs.org.uk/plants/957/aloe-marlothii/details",
+      "https://www.rhs.org.uk/plants/aloe",
+      "https://www.plantzafrica.com/plantab/aloemarloth.html",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/aloe"
     ]
   }
 }

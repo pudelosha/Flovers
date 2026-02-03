@@ -1,25 +1,27 @@
 {
   "external_id": "narcissus_poeticus",
-  "name": "Poet's daffodil",
+  "name": "Poet's Narcissus",
   "latin": "Narcissus poeticus",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "narcissus_poeticus.jpg",
   "image_thumb": "narcissus_poeticus.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun to part sun",
-          "pl": "Słońce do półcienia",
-          "de": "Sonne bis Halbschatten",
-          "fr": "Soleil à mi-ombre",
-          "it": "Sole a mezzombra",
-          "es": "Sol a semisombra",
-          "pt": "Sol a meia-sombra",
-          "ar": "شمس إلى ظل جزئي",
-          "hi": "पूरी से आंशिक धूप",
-          "zh": "全日照至半阴",
-          "ja": "日向から半日陰",
-          "ko": "양지에서 반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno drenante",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "排水良好的土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodno do umiarkowanie",
-          "de": "Kühl bis mild",
-          "fr": "Frais à doux",
-          "it": "Fresco a mite",
-          "es": "Fresco a templado",
-          "pt": "Fresco a ameno",
-          "ar": "بارد إلى معتدل",
-          "hi": "ठंडा से मध्यम",
-          "zh": "凉爽到温和",
-          "ja": "涼しい〜温和",
-          "ko": "서늘함에서 온화"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당히"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if ingested",
-          "pl": "Toksyczna po spożyciu",
-          "de": "Giftig bei Verzehr",
-          "fr": "Toxique si ingéré",
-          "it": "Tossica se ingerita",
-          "es": "Tóxica si se ingiere",
-          "pt": "Tóxica se ingerida",
-          "ar": "سام عند الابتلاع",
-          "hi": "खाने पर विषाक्त",
-          "zh": "误食有毒",
-          "ja": "摂取すると有毒",
-          "ko": "섭취 시 독성"
+          "en": "Slightly toxic",
+          "pl": "Lekkotoksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سمية خفيفة",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Spring flowering bulb",
-          "pl": "Wiosenna roślina cebulowa",
-          "de": "Frühjahrsblüher",
-          "fr": "Bulbe à floraison printanière",
-          "it": "Bulbosa primaverile",
-          "es": "Bulbo de primavera",
-          "pt": "Bulbo primaveril",
-          "ar": "بصلة مزهرة ربيعية",
-          "hi": "वसंत में फूलने वाला बल्ब",
-          "zh": "春季开花球根",
-          "ja": "春咲き球根",
-          "ko": "봄에 피는 구근"
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमीन कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Poet's daffodil",
-      "description": "Narcissus poeticus is a spring-flowering bulb known for its white petals and small red-edged cup. It prefers well-drained soil and full sun to partial shade. After flowering, foliage should be left to die back naturally."
+      "common_name": "Poet's Narcissus",
+      "description": "Narcissus poeticus, also known as Poet's Narcissus, is a spring-blooming bulb plant. It produces fragrant white flowers with a yellow center."
     },
     "pl": {
-      "common_name": "Narcyz wonny",
-      "description": "Narcissus poeticus to wiosenna roślina cebulowa o białych płatkach i czerwono obrzeżonym przykoronku. Najlepiej rośnie w przepuszczalnej glebie i na stanowiskach słonecznych lub półcienistych. Liście należy pozostawić po kwitnieniu aż zaschną."
+      "common_name": "Narcyz poetycki",
+      "description": "Narcissus poeticus, znany również jako Narcyz poetycki, to roślina cebulowa kwitnąca na wiosnę. Produkuje pachnące białe kwiaty z żółtym środkiem."
     },
     "de": {
-      "common_name": "Dichternarzisse",
-      "description": "Narcissus poeticus ist eine Frühlingszwiebel mit weißen Blüten und rotem Rand am Blütenbecher. Sie gedeiht in gut durchlässigem Boden bei Sonne bis Halbschatten. Das Laub sollte nach der Blüte einziehen dürfen."
+      "common_name": "Poetennarzisse",
+      "description": "Narcissus poeticus, auch als Poetennarzisse bekannt, ist eine Frühjahrsblume. Sie produziert duftende weiße Blumen mit einem gelben Zentrum."
     },
     "fr": {
-      "common_name": "Narcisse des poètes",
-      "description": "Narcissus poeticus est un bulbe printanier aux pétales blancs et à la petite couronne bordée de rouge. Il apprécie un sol bien drainé et une exposition ensoleillée à mi-ombragée. Le feuillage doit sécher naturellement après la floraison."
+      "common_name": "Narcisse poétique",
+      "description": "Narcissus poeticus, également connu sous le nom de Narcisse poétique, est une plante à bulbe qui fleurit au printemps. Elle produit des fleurs blanches parfumées avec un centre jaune."
     },
     "it": {
-      "common_name": "Narciso dei poeti",
-      "description": "Narcissus poeticus è una bulbosa primaverile con petali bianchi e una corona con bordo rosso. Cresce bene in terreno drenante e in pieno sole o mezzombra. Dopo la fioritura il fogliame va lasciato seccare."
+      "common_name": "Narciso poetico",
+      "description": "Narcissus poeticus, noto anche come Narciso poetico, è una pianta a bulbo che fiorisce in primavera. Produce fiori bianchi profumati con un centro giallo."
     },
     "es": {
-      "common_name": "Narciso de los poetas",
-      "description": "Narcissus poeticus es un bulbo primaveral con pétalos blancos y una pequeña corona con borde rojo. Prefiere suelos bien drenados y sol o semisombra. El follaje debe dejarse hasta que se seque tras la floración."
+      "common_name": "Narciso poético",
+      "description": "Narcissus poeticus, también conocido como Narciso poético, es una planta bulbosa que florece en primavera. Produce flores blancas fragantes con un centro amarillo."
     },
     "pt": {
-      "common_name": "Narciso-dos-poetas",
-      "description": "Narcissus poeticus é um bolbo de primavera com pétalas brancas e uma pequena coroa com margem vermelha. Desenvolve-se melhor em solo bem drenado e sol a meia-sombra. As folhas devem secar naturalmente após a floração."
+      "common_name": "Narciso poético",
+      "description": "Narcissus poeticus, também conhecido como Narciso poético, é uma planta bulbosa que floresce na primavera. Produz flores brancas perfumadas com um centro amarelo."
     },
     "ar": {
-      "common_name": "نرجس الشعراء",
-      "description": "نبات Narcissus poeticus بصلي يزهر في الربيع بأزهار بيضاء وحافة حمراء صغيرة. يفضل التربة جيدة التصريف والمواقع المشمسة أو شبه المظللة. يجب ترك الأوراق حتى تذبل بعد الإزهار."
+      "common_name": "النرجس الشعري",
+      "description": "Narcissus poeticus، المعروف أيضًا باسم النرجس الشعري، هو نبات بصلي يتفتح في الربيع. ينتج أزهارًا بيضاء معطرة ذات مركز أصفر."
     },
     "hi": {
-      "common_name": "कवि डैफोडिल",
-      "description": "Narcissus poeticus एक वसंत में फूलने वाला बल्ब है जिसमें सफेद पंखुड़ियाँ और लाल किनारे वाला छोटा कप होता है। यह अच्छी जल निकासी वाली मिट्टी और पूरी या आंशिक धूप पसंद करता है। फूल आने के बाद पत्तियों को सूखने देना चाहिए।"
+      "common_name": "कवि का नर्किसस",
+      "description": "Narcissus poeticus, जिसे कवि का नर्किसस भी कहा जाता है, एक वसंत ऋतु में खिलने वाली बल्बनुमा पौधा है। यह सफेद सुगंधित फूल उगाता है, जिनके बीच में पीला रंग होता है।"
     },
     "zh": {
       "common_name": "诗人水仙",
-      "description": "Narcissus poeticus 是一种春季开花的球根植物，具有白色花瓣和红边小副冠。它喜欢排水良好的土壤和全日照或半阴环境。花后应让叶片自然枯萎。"
+      "description": "Narcissus poeticus，又称诗人水仙，是一种春天开花的球根植物。它会开出带有黄色中心的芳香白花。"
     },
     "ja": {
-      "common_name": "ポエットスイセン",
-      "description": "Narcissus poeticus は白い花弁と赤縁の小さな副花冠を持つ春咲き球根植物です。水はけの良い土と日向から半日陰を好みます。開花後は葉を自然に枯らします。"
+      "common_name": "詩人水仙",
+      "description": "Narcissus poeticus、または詩人水仙は春に咲く球根植物です。黄色い中心を持つ香り高い白い花を咲かせます。"
     },
     "ko": {
       "common_name": "시인 수선화",
-      "description": "Narcissus poeticus는 흰 꽃잎과 붉은 가장자리의 작은 관을 가진 봄 개화 구근입니다. 배수가 잘되는 토양과 양지 또는 반그늘을 선호합니다. 개화 후 잎은 자연스럽게 마르도록 둡니다."
+      "description": "Narcissus poeticus, 시인 수선화로도 알려진 이 식물은 봄에 꽃을 피우는 구근 식물입니다. 향기로운 흰색 꽃과 노란색 중심을 특징으로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/narcissus",
-      "https://plants.ces.ncsu.edu/plants/narcissus-poeticus/",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-narcissi/"
+      "https://www.gardenia.net/plant/narcissus-poeticus-poet-s-daffodil",
+      "https://www.rhs.org.uk/plants/1660/narcissus-poeticus/details"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "streptocarpus_inconspicuus",
-  "name": "African Violet (Uluguru)",
+  "name": "Streptocarpus inconspicuus",
   "latin": "Streptocarpus inconspicuus",
   "sun": "medium",
   "water": "medium",
@@ -11,16 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "streptocarpus_inconspicuus.jpg",
   "image_thumb": "streptocarpus_inconspicuus.jpg",
   "traits": [
@@ -28,17 +29,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium light",
-          "pl": "średnie światło",
-          "de": "mittleres Licht",
-          "fr": "lumière moyenne",
-          "it": "luce media",
-          "es": "luz media",
-          "pt": "luz média",
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中光",
+          "ja": "中程度の光",
           "ko": "중간 빛"
         }
       }
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well draining",
-          "pl": "drenażowa",
-          "de": "durchlässig",
-          "fr": "bien drainé",
-          "it": "drenante",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수가 잘됨"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "when top dry",
-          "pl": "gdy wierzch suchy",
-          "de": "wenn oben trocken",
-          "fr": "quand sec dessus",
-          "it": "quando asciutto",
-          "es": "cuando seco arriba",
-          "pt": "quando seco acima",
-          "ar": "عند الجفاف السطحي",
-          "hi": "ऊपर सूखने पर",
-          "zh": "表层干时",
-          "ja": "表面乾いたら",
-          "ko": "표면이 마르면"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßige Bewässerung",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित जलसेचन",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "16-24°C",
-          "pl": "16-24°C",
-          "de": "16-24°C",
-          "fr": "16-24°C",
-          "it": "16-24°C",
-          "es": "16-24°C",
-          "pt": "16-24°C",
-          "ar": "16-24°C",
-          "hi": "16-24°C",
-          "zh": "16-24°C",
-          "ja": "16-24°C",
-          "ko": "16-24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "moderate-high",
-          "pl": "umiark. wysoka",
-          "de": "mittel-hoch",
-          "fr": "moyenne-haute",
-          "it": "medio-alta",
-          "es": "media-alta",
-          "pt": "médio-alta",
-          "ar": "رطوبة متوسطة-عالية",
-          "hi": "मध्यम-उच्च",
-          "zh": "中高湿度",
-          "ja": "中〜高湿度",
-          "ko": "중~높은 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,15 +143,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non toxic",
-          "pl": "nietoksyczny",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossico",
-          "es": "no tóxico",
-          "pt": "não tóxico",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "small rosette",
-          "pl": "mała rozetka",
-          "de": "kleine Rosette",
-          "fr": "petite rosette",
-          "it": "piccola rosetta",
-          "es": "pequeña roseta",
-          "pt": "pequena roseta",
-          "ar": "عروة صغيرة",
-          "hi": "छोटी रोसेटा",
-          "zh": "小丛生",
-          "ja": "小さいロゼット",
-          "ko": "작은 로제트"
+          "en": "Slow to moderate",
+          "pl": "Powolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "慢到适度",
+          "ja": "遅いから中程度の成長",
+          "ko": "느림에서 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać za dużo",
+          "de": "Nicht zu viel gießen",
+          "fr": "Pas trop d'arrosage",
+          "it": "Non esagerare con l'acqua",
+          "es": "No regar en exceso",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في السقاية",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過ぎないでください",
+          "ko": "과도한 물 주지 않기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Uluguru African Violet",
-      "description": "A rare African violet species native to the Uluguru Mountains of Tanzania. It prefers bright, indirect light and moderate watering, avoiding waterlogged soil."
+      "common_name": "Cape Primrose",
+      "description": "Streptocarpus inconspicuus is a small flowering plant from southern Africa. Known for its attractive blooms, it thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Fiołek afrykański Uluguru",
-      "description": "Rzadki fiołek afrykański z gór Uluguru w Tanzanii. Woli jasne, pośrednie światło i umiarkowane podlewanie."
+      "common_name": "Primulka kapowa",
+      "description": "Streptocarpus inconspicuus to mała roślina kwitnąca z południowej Afryki. Znana ze swoich atrakcyjnych kwiatów, najlepiej rośnie w średnim świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Uluguru Afrikanisches Veilchen",
-      "description": "Seltene afrikanische Veilchenart aus den Uluguru-Bergen in Tansania. Bevorzugt indirektes Licht und mäßiges Gießen."
+      "common_name": "Kap-Primel",
+      "description": "Streptocarpus inconspicuus ist eine kleine blühende Pflanze aus Südafrika. Bekannt für ihre attraktiven Blüten wächst sie am besten bei mäßigem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Violette d'Afrique d'Uluguru",
-      "description": "Espèce rare de violette d'Afrique des montagnes Uluguru en Tanzanie. Elle aime la lumière indirecte et un arrosage modéré."
+      "common_name": "Primevère du Cap",
+      "description": "Streptocarpus inconspicuus est une petite plante à fleurs originaire d'Afrique du Sud. Connue pour ses fleurs attrayantes, elle prospère dans une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Violetta Africana di Uluguru",
-      "description": "Specie rara di violetta africana delle montagne Uluguru in Tanzania. Preferisce luce indiretta e annaffiature moderate."
+      "common_name": "Primula del Capo",
+      "description": "Streptocarpus inconspicuus è una piccola pianta fiorita originaria del sud Africa. Conosciuta per i suoi fiori attraenti, cresce meglio in luce moderata e alta umidità."
     },
     "es": {
-      "common_name": "Violeta Africana Uluguru",
-      "description": "Especie rara de violeta africana de los Montes Uluguru en Tanzania. Prefiere luz indirecta y riego moderado."
+      "common_name": "Primula del Cabo",
+      "description": "Streptocarpus inconspicuus es una pequeña planta con flores originaria del sur de África. Conocida por sus flores atractivas, prospera con luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Violeta Africana de Uluguru",
-      "description": "Espécie rara de violeta africana das Montanhas Uluguru na Tanzânia. Prefere luz indireta e rega moderada."
+      "common_name": "Primula do Cabo",
+      "description": "Streptocarpus inconspicuus é uma pequena planta florida do sul da África. Conhecida por suas flores atraentes, cresce bem em luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "بنفسج أفريقي أولوجورو",
-      "description": "نوع نادر من البنفسج الأفريقي من جبال أولوجورو في تنزانيا. يفضل ضوء غير مباشر وري معتدل."
+      "common_name": "زهرة الكاب",
+      "description": "Streptocarpus inconspicuus هو نبات مزهر صغير من جنوب إفريقيا. معروف بأزهاره الجذابة، ينمو بشكل أفضل في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "उलुगुरू अफ्रीकी वायलेट",
-      "description": "तंज़ानिया के उलुगुरू पहाड़ों का दुर्लभ अफ़्रीकी वायलेट. अप्रत्यक्ष प्रकाश और मध्यम पानी पसंद करता है."
+      "common_name": "केप प्रिमरोज़",
+      "description": "Streptocarpus inconspicuus दक्षिणी अफ्रीका से एक छोटा फूलों वाला पौधा है। अपनी आकर्षक फूलों के लिए जाना जाता है, यह मध्यम प्रकाश और उच्च आर्द्रता में अच्छी तरह से उगता है।"
     },
     "zh": {
-      "common_name": "乌卢古鲁非洲紫罗兰",
-      "description": "坦桑尼亚乌卢古鲁山脉的稀有非洲紫罗兰。喜欢明亮散射光和适量浇水。"
+      "common_name": "开普福禄草",
+      "description": "Streptocarpus inconspicuus 是一种来自南非的小型开花植物。以其吸引人的花朵而闻名，适合在中等光照和高湿度条件下生长。"
     },
     "ja": {
-      "common_name": "ウルグル非洲スミレ",
-      "description": "タンザニアのウルグル山地に自生する希少なアフリカスミレ。明るい間接光と適度な水やりを好みます。"
+      "common_name": "ケーププリムローズ",
+      "description": "Streptocarpus inconspicuus は南アフリカからの小さな開花植物です。その魅力的な花で知られ、適度な光と高い湿度で成長します。"
     },
     "ko": {
-      "common_name": "울루구루 아프리카 제비꽃",
-      "description": "탄자니아 울루구루산의 희귀 아프리카 제비꽃. 밝은 간접광과 적당한 물주기를 선호합니다."
+      "common_name": "케이프 프림로즈",
+      "description": "Streptocarpus inconspicuus는 남아프리카에서 자생하는 작은 꽃 식물입니다. 매력적인 꽃으로 알려져 있으며, 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/streptocarpus/growing-guide",
-      "https://www.gardenersworld.com/house-plants/how-to-grow-streptocarpus/",
-      "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77117374-1/general-information"
+      "https://www.rhs.org.uk/plants/streptocarpus-inconspicuus",
+      "https://www.abcgardeners.com/cape-primrose-care"
     ]
   }
 }

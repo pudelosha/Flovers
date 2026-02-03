@@ -1,22 +1,23 @@
 {
   "external_id": "hoya_caudata",
-  "name": "Hoya Caudata",
+  "name": "Hoya caudata",
   "latin": "Hoya caudata",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "aroid",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy epiphyte mix",
-          "pl": "Przepuszczalne",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "透气基质",
-          "ja": "通気性の良い土",
-          "ko": "통기성 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी तरह से निचोड़ने वाली",
+          "zh": "排水良好",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Let dry slightly",
-          "pl": "Lekko przesuszyć",
-          "de": "Leicht antrocknen",
-          "fr": "Laisser sécher",
-          "it": "Asciugare un po'",
-          "es": "Secar un poco",
-          "pt": "Secar um pouco",
-          "ar": "اتركه يجف قليلاً",
-          "hi": "थोड़ा सूखने दें",
-          "zh": "稍干再浇",
-          "ja": "少し乾かす",
-          "ko": "약간 건조"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम जलवायु",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 정도의 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Modérée",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 정도의 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average–high",
-          "pl": "Średnia–wysoka",
-          "de": "Mittel–hoch",
-          "fr": "Moyenne–haute",
-          "it": "Media–alta",
-          "es": "Media–alta",
-          "pt": "Média–alta",
-          "ar": "متوسطة–مرتفعة",
-          "hi": "मध्यम–उच्च",
-          "zh": "中高",
-          "ja": "中～高",
-          "ko": "중~높음"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 정도의 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 유독"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Vining epiphyte",
-          "pl": "Pnący epifit",
-          "de": "Rankender Epiphyt",
-          "fr": "Épiphyte grimpant",
-          "it": "Epifita rampicante",
-          "es": "Epífita trepadora",
-          "pt": "Epífita trepadora",
-          "ar": "نبات متسلق هوائي",
-          "hi": "लता एपिफाइट",
-          "zh": "攀援附生",
-          "ja": "つる性着生",
-          "ko": "덩굴성 착생"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnąca",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać nadmiernie",
+          "de": "Nicht übergießen",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No sobreregar",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी नहीं देना",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि से संबंधित कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wax Plant",
-      "description": "Hoya caudata is a tropical epiphytic vine native to Southeast Asia. It is known for its textured leaves and fuzzy star-shaped flowers. The plant prefers bright indirect light and well-draining soil."
+      "common_name": "Caudata Hoya",
+      "description": "Hoya caudata is a slow-growing, tropical vining plant native to Southeast Asia. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Hoja",
-      "description": "Hoya caudata to tropikalny epifityczny pnącz z Azji Południowo-Wschodniej. Ma ozdobne, fakturowane liście i gwiaździste kwiaty. Najlepiej rośnie w jasnym, rozproszonym świetle."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata to wolno rosnąca roślina pnąca pochodząca z Azji Południowo-Wschodniej. Rośnie w średnim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Wachsblume",
-      "description": "Hoya caudata ist eine tropische epiphytische Kletterpflanze aus Südostasien. Sie besitzt strukturierte Blätter und sternförmige Blüten. Bevorzugt helles, indirektes Licht."
+      "common_name": "Caudata Hoya",
+      "description": "Hoya caudata ist eine langsam wachsende, tropische Kletterpflanze aus Südostasien. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Plante de cire",
-      "description": "Hoya caudata est une plante tropicale épiphyte originaire d’Asie du Sud-Est. Elle se distingue par ses feuilles texturées et ses fleurs étoilées. Elle aime la lumière vive indirecte."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata est une plante grimpante à croissance lente originaire du sud-est de l'Asie. Elle préfère une lumière moyenne et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Pianta di cera",
-      "description": "Hoya caudata è una pianta epifita tropicale del Sud-Est asiatico. Presenta foglie decorative e fiori a stella. Cresce bene con luce indiretta intensa."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata è una pianta rampicante a crescita lenta originaria del sud-est asiatico. Cresce in luce media e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Planta de cera",
-      "description": "Hoya caudata es una enredadera epífita tropical del sudeste asiático. Tiene hojas texturizadas y flores estrelladas. Prefiere luz brillante indirecta."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata es una planta trepadora de crecimiento lento originaria del sudeste asiático. Se desarrolla en luz media y necesita un riego moderado."
     },
     "pt": {
-      "common_name": "Flor-de-cera",
-      "description": "Hoya caudata é uma planta epífita tropical do Sudeste Asiático. Destaca-se pelas folhas texturizadas e flores em forma de estrela. Gosta de luz indireta brilhante."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata é uma planta trepadora de crescimento lento originária do sudeste asiático. Prefere luz média e precisa de rega moderada."
     },
     "ar": {
-      "common_name": "نبات الشمع",
-      "description": "هويا كوداتا نبات استوائي متسلق موطنه جنوب شرق آسيا. يتميز بأوراق مزخرفة وأزهار نجمية. يفضل الضوء الساطع غير المباشر."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata هي نبات متسلق ينمو ببطء موطنه جنوب شرق آسيا. يزدهر في الضوء المتوسط ويتطلب سقاية معتدلة."
     },
     "hi": {
-      "common_name": "वैक्स प्लांट",
-      "description": "होया काउडाटा दक्षिण पूर्व एशिया की एक उष्णकटिबंधीय लता है। इसकी पत्तियाँ बनावटदार और फूल तारे जैसे होते हैं। इसे अप्रत्यक्ष तेज़ रोशनी पसंद है।"
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata एक धीमी गति से बढ़ने वाला लता पौधा है जो दक्षिण-पूर्व एशिया का मूल निवासी है। यह मध्यम प्रकाश में उगता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "球兰",
-      "description": "Hoya caudata 是原产于东南亚的热带附生藤本植物。它以质感叶片和星形花朵著称。适合明亮的散射光环境。"
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata 是一种生长缓慢的攀缘植物，原产于东南亚。它在中等光照下生长，并需要适度浇水。"
     },
     "ja": {
-      "common_name": "ホヤ",
-      "description": "ホヤ・カウダータは東南アジア原産の熱帯着生植物です。質感のある葉と星形の花が特徴です。明るい間接光を好みます。"
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudataは東南アジア原産の遅い成長のつる性植物です。中程度の光で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "호야",
-      "description": "호야 카우다타는 동남아시아 원산의 열대 착생 덩굴식물입니다. 독특한 잎과 별 모양 꽃이 특징입니다. 밝은 간접광을 선호합니다."
+      "common_name": "Hoya caudata",
+      "description": "Hoya caudata는 동남아시아 원산지의 느리게 자라는 덩굴 식물입니다. 중간 정도의 빛을 좋아하며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hoya",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a912",
-      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/hoya"
+      "https://www.rhs.org.uk/plants/17468/Hoya-caudata/Details",
+      "https://www.gardenia.net/plant/hoya-caudata"
     ]
   }
 }

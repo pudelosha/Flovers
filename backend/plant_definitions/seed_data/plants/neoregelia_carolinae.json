@@ -1,22 +1,23 @@
 {
   "external_id": "neoregelia_carolinae",
-  "name": "Blushing Bromeliad",
+  "name": "Carolina's Neoregelia",
   "latin": "Neoregelia carolinae",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne pośrednie",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "airy bark mix",
-          "pl": "przewiewne podłoże",
-          "de": "luftiges Substrat",
-          "fr": "substrat aéré",
-          "it": "substrato arioso",
-          "es": "sustrato aireado",
-          "pt": "substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार माध्यम",
-          "zh": "透气基质",
-          "ja": "通気性用土",
-          "ko": "통기성 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep cup filled",
-          "pl": "woda w rozecie",
-          "de": "Trichter füllen",
-          "fr": "garder rosette",
-          "it": "rosetta piena",
-          "es": "roseta con agua",
-          "pt": "roseta com água",
-          "ar": "ماء في الوردة",
-          "hi": "रोसेट में पानी",
-          "zh": "叶杯存水",
-          "ja": "筒に水",
-          "ko": "로제트 물"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中くらいの水やり",
+          "ko": "중간 급수"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "leicht",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "prefers humid",
-          "pl": "lubi wilgoć",
-          "de": "mag Feuchte",
-          "fr": "aime humidité",
-          "it": "ama umidità",
-          "es": "prefiere humedad",
-          "pt": "gosta de umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜高湿度",
-          "ja": "高湿度好み",
-          "ko": "습도 선호"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,15 +143,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietoksyczna",
-          "de": "nicht giftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow clumping",
-          "pl": "wolno rosnąca",
-          "de": "langsam wachsend",
-          "fr": "croissance lente",
-          "it": "crescita lenta",
-          "es": "crecimiento lento",
-          "pt": "crescimento lento",
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीरे-धीरे बढ़ता है",
           "zh": "生长缓慢",
-          "ja": "成長ゆっくり",
-          "ko": "느린 성장"
+          "ja": "成長が遅い",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرोवरवॉटरिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Blushing Bromeliad",
-      "description": "Neoregelia carolinae is a tropical bromeliad grown for its colorful leaf rosette. It collects water in its central cup and prefers bright, indirect light indoors."
+      "common_name": "Carolina's Neoregelia",
+      "description": "Neoregelia carolinae is a slow-growing, non-toxic bromeliad native to tropical regions. It requires high humidity and medium light."
     },
     "pl": {
-      "common_name": "Neoregelia rumieniąca",
-      "description": "Neoregelia carolinae to tropikalna bromelia ceniona za barwną rozetę liści. Gromadzi wodę w środku i najlepiej rośnie w jasnym, rozproszonym świetle."
+      "common_name": "Neoregelia Karolina",
+      "description": "Neoregelia carolinae to wolno rosnąca, nietoksyczna bromelia, która pochodzi z tropikalnych rejonów. Wymaga wysokiej wilgotności i średniego światła."
     },
     "de": {
-      "common_name": "Rötliche Bromelie",
-      "description": "Neoregelia carolinae ist eine tropische Bromelie mit farbiger Blattrosette. Sie sammelt Wasser im Trichter und mag helles, indirektes Licht."
+      "common_name": "Carolina Neoregelia",
+      "description": "Neoregelia carolinae ist eine langsam wachsende, ungiftige Bromelie aus tropischen Regionen. Sie benötigt hohe Luftfeuchtigkeit und mittleres Licht."
     },
     "fr": {
-      "common_name": "Broméliacée rougeoyante",
-      "description": "Neoregelia carolinae est une broméliacée tropicale appréciée pour sa rosette colorée. Elle retient l’eau au centre et préfère une lumière indirecte."
+      "common_name": "Neoregelia de Caroline",
+      "description": "Neoregelia carolinae est une broméliacée à croissance lente et non toxique originaire des régions tropicales. Elle nécessite une humidité élevée et une lumière moyenne."
     },
     "it": {
-      "common_name": "Bromelia arrossata",
-      "description": "Neoregelia carolinae è una bromelia tropicale coltivata per la rosetta colorata. Raccoglie acqua al centro e ama la luce indiretta."
+      "common_name": "Neoregelia di Carolina",
+      "description": "Neoregelia carolinae è una bromeliacea a crescita lenta e non tossica originaria delle regioni tropicali. Richiede umidità elevata e luce media."
     },
     "es": {
-      "common_name": "Bromelia ruborizada",
-      "description": "Neoregelia carolinae es una bromelia tropical apreciada por su roseta colorida. Acumula agua en el centro y prefiere luz indirecta."
+      "common_name": "Neoregelia de Carolina",
+      "description": "Neoregelia carolinae es una bromelia de crecimiento lento y no tóxica originaria de regiones tropicales. Requiere alta humedad y luz media."
     },
     "pt": {
-      "common_name": "Bromélia ruborizada",
-      "description": "Neoregelia carolinae é uma bromélia tropical conhecida pela roseta colorida. Mantém água no centro e prefere luz indireta."
+      "common_name": "Neoregelia de Carolina",
+      "description": "Neoregelia carolinae é uma bromélia de crescimento lento e não tóxica originária de regiões tropicais. Requer alta umidade e luz média."
     },
     "ar": {
-      "common_name": "بروميليا محمرة",
-      "description": "Neoregelia carolinae نبات بروميليا استوائي يتميز بوردة أوراق ملونة. يحتفظ بالماء في مركزه ويفضل الضوء غير المباشر."
+      "common_name": "نيويرجليا كارولينا",
+      "description": "نيويرجليا كارولينا هي بروميليا بطيئة النمو وغير سامة موطنها المناطق الاستوائية. تتطلب رطوبة عالية وضوء متوسط."
     },
     "hi": {
-      "common_name": "ब्लशिंग ब्रोमेलियाड",
-      "description": "Neoregelia carolinae एक उष्णकटिबंधीय ब्रोमेलियाड है जिसकी पत्तियों की रोसेट रंगीन होती है। यह बीच में पानी जमा करता है और अप्रत्यक्ष रोशनी पसंद करता है।"
+      "common_name": "कारोलिना की नेओरेजेलिया",
+      "description": "नेओरेजेलिया कारोलिना एक धीमी गति से बढ़ने वाली, गैर विषाक्त ब्रोमेलियाड है जो उष्णकटिबंधीय क्षेत्रों से उत्पन्न होती है। इसे उच्च आर्द्रता और मध्यम प्रकाश की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "红心凤梨",
-      "description": "Neoregelia carolinae 是一种热带凤梨科植物，以彩色莲座叶著称。它在中心蓄水，适合明亮的散射光。"
+      "common_name": "卡罗莱纳新凤梨",
+      "description": "Neoregelia carolinae 是一种生长缓慢、无毒的凤梨科植物，原产于热带地区。它需要高湿度和中等光照。"
     },
     "ja": {
-      "common_name": "ネオレゲリア",
-      "description": "ネオレゲリア・カロリナエは葉のロゼットが美しい熱帯性ブロメリアです。中央に水をため、明るい間接光を好みます。"
+      "common_name": "カロライナのネオレゲリア",
+      "description": "Neoregelia carolinae は、熱帯地域原産の成長が遅い無毒のブロメリアです。高湿度と中程度の光が必要です。"
     },
     "ko": {
-      "common_name": "네오레겔리아",
-      "description": "Neoregelia carolinae는 화려한 로제트 잎이 특징인 열대 브로멜리아입니다. 중앙에 물을 모으며 밝은 간접광을 선호합니다."
+      "common_name": "캐롤라이나 네오레겔리아",
+      "description": "Neoregelia carolinae는 열대 지역이 원산지인 성장 느린 무독성 브로멜리아입니다. 높은 습도와 중간 정도의 빛이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11254/neoregelia-carolinae/details",
-      "https://edis.ifas.ufl.edu/publication/FP397",
-      "https://www.bromeliads.info/neoregelia-care/"
+      "https://www.rhs.org.uk/plants/101026/neoregelia-carolinae/details",
+      "https://www.gardenia.net/plant/neoregelia-carolinae"
     ]
   }
 }

@@ -1,26 +1,27 @@
 {
   "external_id": "grevillea_robusta",
-  "name": "Silky oak",
+  "name": "Silk Oak",
   "latin": "Grevillea robusta",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 12,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "grevillea_robusta.jpg",
   "image_thumb": "grevillea_robusta.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "en": "Full sunlight",
+          "pl": "Pełne nasłonecznienie",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "it": "Sole pieno",
+          "es": "Luz solar directa",
+          "pt": "Luz solar direta",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूर्ण सूर्यप्रकाश",
           "zh": "全日照",
-          "ja": "日なた",
-          "ko": "강한 빛"
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, well-drained",
-          "pl": "Kwaśna, przepuszcz.",
-          "de": "Sauer, durchlässig",
-          "fr": "Acide, drainant",
-          "it": "Acido, drenante",
-          "es": "Ácido, drenante",
-          "pt": "Ácido, drenado",
-          "ar": "حمضي وصرف جيد",
-          "hi": "अम्लीय, जल-निकास",
-          "zh": "酸性、排水好",
-          "ja": "酸性・水はけ",
-          "ko": "산성·배수 좋게"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Let top dry slightly",
-          "pl": "Przeschnij wierzch",
-          "de": "Oben antrocknen",
-          "fr": "Laisser sécher dessus",
-          "it": "Asciuga in superficie",
-          "es": "Seca arriba un poco",
-          "pt": "Secar o topo",
-          "ar": "اترك السطح يجف",
-          "hi": "ऊपर सूखने दें",
-          "zh": "表土微干再浇",
-          "ja": "表土が少し乾いたら",
-          "ko": "겉흙 말리기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -86,17 +87,17 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnia",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–30°C",
-          "pl": "10–30°C",
-          "de": "10–30°C",
-          "fr": "10–30°C",
-          "it": "10–30°C",
-          "es": "10–30°C",
-          "pt": "10–30°C",
-          "ar": "10–30°م",
-          "hi": "10–30°C",
-          "zh": "10–30°C",
-          "ja": "10–30°C",
-          "ko": "10–30°C"
+          "en": "Tolerates heat",
+          "pl": "Znosi ciepło",
+          "de": "Hitzetolerant",
+          "fr": "Supporte la chaleur",
+          "it": "Resistente al caldo",
+          "es": "Soporta el calor",
+          "pt": "Suporta calor",
+          "ar": "يتحمل الحرارة",
+          "hi": "गर्मी सहन करता है",
+          "zh": "耐高温",
+          "ja": "暑さに強い",
+          "ko": "더위를 견딘다"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Umiarkowana",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "一般",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "नमीयां कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Skin irritant",
-          "pl": "Drażni skórę",
-          "de": "Hautreizend",
-          "fr": "Irritant peau",
-          "it": "Irritante pelle",
-          "es": "Irrita la piel",
-          "pt": "Irrita a pele",
-          "ar": "مهيّج للجلد",
-          "hi": "त्वचा में जलन",
-          "zh": "刺激皮肤",
-          "ja": "皮膚刺激あり",
-          "ko": "피부 자극"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ी ज़हरीली",
+          "zh": "轻度有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -161,79 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast-growing tree",
-          "pl": "Szybko rośnie",
-          "de": "Schnellwüchsig",
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
           "fr": "Croissance rapide",
           "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
-          "ar": "سريع النمو",
-          "hi": "तेजी से बढ़ता",
-          "zh": "生长快",
-          "ja": "生長が速い",
-          "ko": "성장 빠름"
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "生长迅速",
+          "ja": "急速に成長",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Silky oak",
-      "description": "Grevillea robusta is an evergreen tree from eastern Australia, often grown young in containers in very bright light. Use an acidic, well-drained mix and water when the top layer dries slightly (about every 12 days indoors). Handle with care as the sap/plant material can irritate skin."
+      "common_name": "Silk Oak",
+      "description": "Grevillea robusta, known as the Silk Oak, is a fast-growing tree native to Australia. It thrives in full sunlight and well-drained soil."
     },
     "pl": {
-      "common_name": "Grewilla mocna",
-      "description": "Grevillea robusta to zimozielone drzewo ze wschodniej Australii, młode egzemplarze bywają uprawiane w donicach w bardzo jasnym miejscu. Stosuj kwaśne, dobrze przepuszczalne podłoże i podlewaj, gdy wierzch lekko przeschnie (zwykle co ok. 12 dni w domu). Roślina może podrażniać skórę przy kontakcie z sokiem."
+      "common_name": "Dąb jedwabny",
+      "description": "Grevillea robusta, znany jako dąb jedwabny, to szybko rosnące drzewo pochodzące z Australii. Rośnie najlepiej w pełnym nasłonecznieniu i dobrze przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Australische Silbereiche",
-      "description": "Grevillea robusta ist ein immergrüner Baum aus Ostaustralien und wird jung auch im Kübel bei sehr hellem Licht kultiviert. Verwende ein saures, gut drainierendes Substrat und gieße, wenn die Oberfläche leicht abgetrocknet ist (drinnen meist etwa alle 12 Tage). Pflanzensaft und -material können die Haut reizen."
+      "common_name": "Seiden-Eiche",
+      "description": "Grevillea robusta, auch Seiden-Eiche genannt, ist ein schnell wachsender Baum aus Australien. Er gedeiht am besten in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Chêne soyeux d’Australie",
-      "description": "Grevillea robusta est un arbre persistant d’Australie orientale, parfois cultivé jeune en pot en lumière très vive. Utilise un substrat acide bien drainant et arrose quand la surface a légèrement séché (en intérieur environ tous les 12 jours). Le contact avec la sève ou les tissus peut irriter la peau."
+      "common_name": "Chêne soyeux",
+      "description": "Grevillea robusta, connu sous le nom de chêne soyeux, est un arbre à croissance rapide originaire d'Australie. Il préfère la pleine lumière et un sol bien drainé."
     },
     "it": {
-      "common_name": "Albero del fuoco",
-      "description": "Grevillea robusta è un albero sempreverde dell’Australia orientale; da giovane può essere coltivato in vaso con luce molto intensa. Usa un terriccio acido e ben drenante e annaffia quando lo strato superficiale asciuga leggermente (in casa circa ogni 12 giorni). La linfa e i tessuti possono irritare la pelle."
+      "common_name": "Quercia setosa",
+      "description": "Grevillea robusta, conosciuta come quercia setosa, è un albero a crescita rapida originario dell'Australia. Cresce al meglio alla luce diretta del sole e in terreni ben drenati."
     },
     "es": {
-      "common_name": "Roble sedoso",
-      "description": "Grevillea robusta es un árbol perenne del este de Australia y de joven puede cultivarse en maceta con mucha luz. Usa un sustrato ácido y bien drenado y riega cuando la capa superior esté algo seca (en interior, aprox. cada 12 días). El contacto con la savia o el material vegetal puede causar irritación cutánea."
+      "common_name": "Roble de seda",
+      "description": "Grevillea robusta, conocido como roble de seda, es un árbol de rápido crecimiento originario de Australia. Crece mejor a pleno sol y en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Grevílea-robusta",
-      "description": "Grevillea robusta é uma árvore perene do leste da Austrália e, quando jovem, pode ser cultivada em vaso com luz muito intensa. Use um substrato ácido e bem drenado e regue quando a superfície secar levemente (em interiores, cerca de cada 12 dias). O contato com seiva ou partes da planta pode irritar a pele."
+      "common_name": "Carvalho de seda",
+      "description": "Grevillea robusta, conhecido como carvalho de seda, é uma árvore de crescimento rápido nativa da Austrália. Cresce melhor sob luz solar direta e em solos bem drenados."
     },
     "ar": {
-      "common_name": "البلوط الحريري",
-      "description": "Grevillea robusta شجرة دائمة الخضرة من شرق أستراليا، ويمكن تربية النباتات الصغيرة في أصص مع إضاءة قوية جداً. استخدم تربة حمضية جيدة التصريف واسقِ عندما تجف طبقة السطح قليلاً (عادةً كل 12 يوماً داخل المنزل). قد تسبب العصارة أو أجزاء النبات تهيجاً للجلد."
+      "common_name": "بلوط حريري",
+      "description": "Grevillea robusta، والمعروفة بلوط حريري، هي شجرة سريعة النمو موطنها الأصلي أستراليا. تنمو بشكل أفضل في ضوء الشمس الكامل والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "सिल्की ओक",
-      "description": "Grevillea robusta पूर्वी ऑस्ट्रेलिया का सदाबहार पेड़ है और युवा पौधों को बहुत तेज रोशनी में गमले में उगाया जा सकता है। अम्लीय, अच्छी जल-निकासी वाली मिट्टी रखें और ऊपर की परत हल्की सूखने पर पानी दें (घर के अंदर लगभग हर 12 दिन)। रस या पौधे के हिस्सों से त्वचा में जलन हो सकती है।"
+      "common_name": "सिल्क ओक",
+      "description": "Grevillea robusta, जिसे सिल्क ओक कहा जाता है, एक तेज़ी से बढ़ने वाला पेड़ है जो ऑस्ट्रेलिया का मूल निवासी है। यह पूर्ण सूर्यप्रकाश और अच्छी जल निकासी वाली मिट्टी में सबसे अच्छा बढ़ता है।"
     },
     "zh": {
-      "common_name": "银桦",
-      "description": "Grevillea robusta 原产澳大利亚东部，是常绿乔木，幼株可在盆栽环境下给予强光养护。使用酸性、排水良好的基质，表土微干再浇水（室内通常约每 12 天一次）。其汁液或植物材料可能刺激皮肤。"
+      "common_name": "丝木",
+      "description": "Grevillea robusta，俗称丝木，是一种快速生长的树木，原产于澳大利亚。它在充足的阳光和排水良好的土壤中生长最好。"
     },
     "ja": {
-      "common_name": "シノブノキ",
-      "description": "Grevillea robusta はオーストラリア東部原産の常緑樹で、幼木は鉢植えで強い光の下で育てられます。酸性で水はけの良い用土を使い、表土が少し乾いたら水やり（室内では目安12日ごと）。樹液や植物体は皮膚刺激となることがあります。"
+      "common_name": "シルクオーク",
+      "description": "Grevillea robusta、シルクオークとして知られるこの木は、オーストラリア原産で急速に成長します。直射日光と排水の良い土壌で最もよく育ちます。"
     },
     "ko": {
-      "common_name": "실키오크",
-      "description": "Grevillea robusta는 호주 동부 원산의 상록수이며 어린 개체는 화분에서 매우 밝은 빛으로 키울 수 있습니다. 산성이고 배수가 좋은 흙을 쓰고 겉흙이 약간 마르면 물을 주세요(실내 기준 약 12일 간격). 수액이나 식물 조직이 피부를 자극할 수 있습니다."
+      "common_name": "실크 오크",
+      "description": "Grevillea robusta, 실크 오크로 알려진 이 나무는 호주 원산지의 빠르게 성장하는 나무입니다. 직사광선과 배수가 좋은 토양에서 가장 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plants.ces.ncsu.edu/plants/grevillea/",
-      "https://www.rhs.org.uk/plants/8114/grevillea-robusta/details",
-      "https://www.gardeningknowhow.com/houseplants/grevillea/container-grown-grevilleas.htm",
-      "https://hort.ifas.ufl.edu/trees/GREROBA.pdf",
-      "https://www.ksiaz.walbrzych.pl/turystyka/palmiarnia/grewilla-mocna"
+      "https://www.rhs.org.uk/plants/grevillea-robusta",
+      "https://www.gardenia.net/plant/grevillea-robusta"
     ]
   }
 }

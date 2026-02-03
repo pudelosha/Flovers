@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "nematanthus_gregarius.jpg",
   "image_thumb": "nematanthus_gregarius.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierend",
-          "fr": "Sol drainant",
-          "it": "Terriccio drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة التصريف",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好基质",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "zh": "良好的排水",
+          "ja": "排水良好",
+          "ko": "배수 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido regolare",
-          "es": "Humedad constante",
-          "pt": "Umidade regular",
-          "ar": "رطوبة منتظمة",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "適度に湿らす",
-          "ko": "균일한 수분"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Aufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等难度",
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "중간 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18～24℃",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humid air",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchtigkeit",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润空气",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषैला नहीं",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성이 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing growth",
-          "pl": "Pokrój zwisający",
-          "de": "Hängender Wuchs",
-          "fr": "Port retombant",
-          "it": "Crescita ricadente",
-          "es": "Crecimiento colgante",
-          "pt": "Crescimento pendente",
-          "ar": "نمو متدلٍ",
-          "hi": "लटकती वृद्धि",
-          "zh": "下垂生长",
-          "ja": "下垂性",
-          "ko": "덩굴성 성장"
+          "en": "Slow growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के हिसाब से कीड़े",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Goldfish Plant",
-      "description": "Nematanthus gregarius is a tropical epiphytic plant native to Brazilian rainforests. It is valued for its glossy leaves and bright orange, fish-shaped flowers. Indoors it thrives in bright, indirect light and evenly moist soil."
+      "description": "Nematanthus gregarius, also known as the Goldfish Plant, is a small, attractive flowering plant. It features bright orange flowers that resemble goldfish."
     },
     "pl": {
-      "common_name": "Nematanthus, roślina złota rybka",
-      "description": "Nematanthus gregarius to tropikalna roślina epifityczna pochodząca z Brazylii. Ceniona jest za błyszczące liście i pomarańczowe kwiaty w kształcie rybek. W domu wymaga jasnego, rozproszonego światła i umiarkowanego podlewania."
+      "common_name": "Roślinna złota rybka",
+      "description": "Nematanthus gregarius, znana również jako roślinna złota rybka, to mała, atrakcyjna roślina kwitnąca. Posiada jasnopomarańczowe kwiaty przypominające złote rybki."
     },
     "de": {
       "common_name": "Goldfischpflanze",
-      "description": "Nematanthus gregarius ist eine tropische epiphytische Pflanze aus Brasilien. Sie ist bekannt für glänzende Blätter und orangefarbene Blüten. Als Zimmerpflanze bevorzugt sie helles, indirektes Licht und gleichmäßige Feuchtigkeit."
+      "description": "Nematanthus gregarius, auch als Goldfischpflanze bekannt, ist eine kleine, attraktive blühende Pflanze. Sie hat leuchtend orangefarbene Blumen, die Goldfische ähneln."
     },
     "fr": {
       "common_name": "Plante poisson rouge",
-      "description": "Nematanthus gregarius est une plante tropicale épiphyte originaire du Brésil. Elle se distingue par ses feuilles brillantes et ses fleurs orange. En intérieur, elle apprécie une lumière vive indirecte et un sol légèrement humide."
+      "description": "Nematanthus gregarius, également connue sous le nom de plante poisson rouge, est une petite plante à fleurs attrayante. Elle possède des fleurs orange vif ressemblant à des poissons rouges."
     },
     "it": {
-      "common_name": "Pianta pesciolino",
-      "description": "Nematanthus gregarius è una pianta tropicale epifita del Brasile. È apprezzata per le foglie lucide e i fiori arancioni. Coltivata in casa, necessita di luce intensa indiretta e terreno costantemente umido."
+      "common_name": "Pianta pesce rosso",
+      "description": "Nematanthus gregarius, conosciuta anche come pianta pesce rosso, è una piccola pianta fiorita attraente. Ha fiori arancioni vivaci che assomigliano a pesci rossi."
     },
     "es": {
       "common_name": "Planta pez dorado",
-      "description": "Nematanthus gregarius es una planta tropical epífita originaria de Brasil. Destaca por sus hojas brillantes y flores naranjas. En interior requiere luz brillante indirecta y riego moderado."
+      "description": "Nematanthus gregarius, también conocida como planta pez dorado, es una pequeña planta con flores atractivas. Presenta flores naranjas brillantes que se asemejan a peces dorados."
     },
     "pt": {
-      "common_name": "Planta-peixinho",
-      "description": "Nematanthus gregarius é uma planta tropical epífita nativa do Brasil. Possui folhas brilhantes e flores alaranjadas decorativas. Dentro de casa, prefere luz indireta intensa e solo levemente úmido."
+      "common_name": "Planta peixe dourado",
+      "description": "Nematanthus gregarius, também conhecida como planta peixe dourado, é uma planta pequena e atraente. Possui flores laranja brilhantes que se assemelham a peixes dourados."
     },
     "ar": {
       "common_name": "نبات السمكة الذهبية",
-      "description": "نيماتانثوس غريغاريوس نبات استوائي هوائي موطنه البرازيل. يتميز بأوراق لامعة وأزهار برتقالية. يزرع داخليًا في ضوء ساطع غير مباشر وتربة رطبة باعتدال."
+      "description": "نيماتانتوس جريجاريوس، المعروف أيضًا بنبات السمكة الذهبية، هو نبات صغير وجميل مزهر. يحتوي على زهور برتقالية زاهية تشبه الأسماك الذهبية."
     },
     "hi": {
-      "common_name": "गोल्डफ़िश पौधा",
-      "description": "नेमाटैंथस ग्रेगेरियस ब्राज़ील का एक उष्णकटिबंधीय पौधा है। इसकी पत्तियाँ चमकदार और फूल नारंगी होते हैं। घर में इसे अप्रत्यक्ष रोशनी और समान नमी की आवश्यकता होती है।"
+      "common_name": "गोल्डफ़िश प्लांट",
+      "description": "नेमाटांथस ग्रेगेरियस, जिसे गोल्डफ़िश प्लांट भी कहा जाता है, एक छोटी और आकर्षक फूलों वाली पौधा है। इसमें चमकीले नारंगी फूल होते हैं जो सोने की मछली की तरह दिखते हैं।"
     },
     "zh": {
-      "common_name": "金鱼花",
-      "description": "Nematanthus gregarius 原产于巴西，是一种热带附生植物。其叶片有光泽，花朵呈橙色。室内栽培时需要明亮散射光和均匀湿润的基质。"
+      "common_name": "金鱼植物",
+      "description": "Nematanthus gregarius，亦称金鱼植物，是一种小型而迷人的开花植物。它的橙色花朵像金鱼一样。"
     },
     "ja": {
-      "common_name": "キンギョソウ（ネマタンツス）",
-      "description": "ネマタンツス・グレガリウスはブラジル原産の熱帯着生植物です。光沢のある葉と橙色の花が特徴です。室内では明るい間接光と適度な湿り気を好みます。"
+      "common_name": "ゴールドフィッシュプラント",
+      "description": "Nematanthus gregarius（ゴールドフィッシュプラント）は、小さく魅力的な花を咲かせる植物です。明るいオレンジ色の花が金魚に似ています。"
     },
     "ko": {
-      "common_name": "골드피시 플랜트",
-      "description": "네마탄서스 그레가리우스는 브라질 원산의 열대 착생식물입니다. 윤기 있는 잎과 주황색 꽃이 특징입니다. 실내에서는 밝은 간접광과 고른 수분을 유지해야 합니다."
+      "common_name": "금어초",
+      "description": "Nematanthus gregarius, 또는 금어초는 작은 매력적인 꽃을 피우는 식물입니다. 금붕어와 비슷한 밝은 오렌지색 꽃을 가집니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10989/nematanthus-gregarius/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=285699",
-      "https://edis.ifas.ufl.edu/publication/EP258"
+      "https://www.gardenia.net/plant/nematanthus-gregarius",
+      "https://www.abc.net.au/gardening/plantfinder/nematanthus-gregarius/11583356"
     ]
   }
 }

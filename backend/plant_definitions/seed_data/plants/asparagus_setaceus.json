@@ -1,18 +1,17 @@
 {
   "external_id": "asparagus_setaceus",
-  "name": "Asparagus Fern",
+  "name": "Asparagus fern",
   "latin": "Asparagus setaceus",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne pośrednie",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "परोक्ष प्रकाश",
-          "zh": "明亮散光",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Indirektlicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
           "ja": "明るい間接光",
-          "ko": "간접 밝은빛"
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well draining",
-          "pl": "drenażowa",
-          "de": "gut drainiert",
-          "fr": "bien drainant",
-          "it": "ben drenante",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 잘됨"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Durchlässige Erde",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जलनिकासी वाली मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep moist",
-          "pl": "utrzymuj wilgotno",
-          "de": "feucht halten",
-          "fr": "garder humide",
-          "it": "mantenere umido",
-          "es": "mantener húmedo",
-          "pt": "manter húmido",
-          "ar": "الحفاظ على رطوبة",
-          "hi": "नमी बनाए रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気保つ",
-          "ko": "촉촉 유지"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna ziemia",
+          "de": "Leicht feucht halten",
+          "fr": "Garder légèrement humide",
+          "it": "Terreno leggermente umido",
+          "es": "Mantener algo húmedo",
+          "pt": "Manter levemente úmido",
+          "ar": "رطبة قليلاً",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿り気を保つ",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "13-25°C",
-          "pl": "13-25°C",
-          "de": "13-25°C",
-          "fr": "13-25°C",
-          "it": "13-25°C",
-          "es": "13-25°C",
-          "pt": "13-25°C",
-          "ar": "13-25°C",
-          "hi": "13-25°C",
-          "zh": "13-25°C",
-          "ja": "13-25°C",
-          "ko": "13-25°C"
+          "en": "13–24°C",
+          "pl": "13–24°C",
+          "de": "13–24°C",
+          "fr": "13–24°C",
+          "it": "13–24°C",
+          "es": "13–24°C",
+          "pt": "13–24°C",
+          "ar": "13–24°م",
+          "hi": "13–24°C",
+          "zh": "13–24°C",
+          "ja": "13–24°C",
+          "ko": "13–24°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Average to humid",
+          "pl": "Umiark./wysoka wilg.",
+          "de": "Normal bis hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media-alta",
+          "es": "Media a alta",
+          "pt": "Média a alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम से अधिक",
+          "zh": "中等到高湿",
+          "ja": "普通〜高湿度",
+          "ko": "보통~높은 습도"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "toxic berries",
-          "pl": "toksyczne jagody",
-          "de": "giftige Beeren",
-          "fr": "baies toxiques",
-          "it": "bacche tossiche",
-          "es": "bayas tóxicas",
-          "pt": "bagas tóxicas",
-          "ar": "توت سام",
-          "hi": "जहरीले बेरी",
-          "zh": "有毒浆果",
-          "ja": "有毒の実",
-          "ko": "독성 열매"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Für Haustiere giftig",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -162,76 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "climbing fern-like",
-          "pl": "pnący paproć",
-          "de": "kletternd farnartig",
-          "fr": "grimpant fougère",
-          "it": "rampicante felce",
-          "es": "trepador helecho",
-          "pt": "trepador tipo samambaia",
-          "ar": "متسلق شبيه السرخس",
-          "hi": "चढ़ता फर्न जैसा",
-          "zh": "攀爬似蕨",
-          "ja": "絡むシダ状",
-          "ko": "기어오르는 양치"
+          "en": "Fast, trailing",
+          "pl": "Szybki, pnący",
+          "de": "Schnell, rankend",
+          "fr": "Rapide, retombant",
+          "it": "Rapida, ricadente",
+          "es": "Rápida, colgante",
+          "pt": "Rápida, pendente",
+          "ar": "سريع ومتدلٍ",
+          "hi": "तेज़, लटकने वाली",
+          "zh": "生长快、蔓生",
+          "ja": "生長早い、つる性",
+          "ko": "빠름, 늘어짐"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No hot sun, no soggy",
+          "pl": "Bez palącego słońca",
+          "de": "Keine Staunässe",
+          "fr": "Éviter soleil direct",
+          "it": "No sole forte, ristagni",
+          "es": "Evitar sol fuerte y charcos",
+          "pt": "Evite sol forte e encharcar",
+          "ar": "تجنب الشمس والبلل",
+          "hi": "धूप/पानी भराव न हो",
+          "zh": "避强光与积水",
+          "ja": "直射日光と過湿NG",
+          "ko": "강한 햇빛·과습 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, aphids",
+          "pl": "Przędziorki, mszyce",
+          "de": "Spinnmilben, Läuse",
+          "fr": "Araignées rouges, pucerons",
+          "it": "Ragnetto rosso, afidi",
+          "es": "Ácaros, pulgones",
+          "pt": "Ácaros, pulgões",
+          "ar": "عثّ العنكبوت والمنّ",
+          "hi": "मकड़ी कण, माहू",
+          "zh": "红蜘蛛、蚜虫",
+          "ja": "ハダニ、アブラムシ",
+          "ko": "응애, 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Asparagus Fern",
-      "description": "Asparagus setaceus is an ornamental plant with fine, fern-like foliage. It prefers bright indirect light and moist, well-drained soil."
+      "common_name": "Asparagus fern",
+      "description": "Asparagus setaceus is a feathery, twining houseplant grown for its delicate green sprays. Provide bright, indirect light and keep the potting mix lightly moist, reducing watering in winter. Higher humidity helps, and it is considered toxic to cats and dogs if ingested."
     },
     "pl": {
       "common_name": "Szparag pierzasty",
-      "description": "Asparagus setaceus to roślina ozdobna o delikatnych liściach. Wymaga jasnego światła rozproszonego i wilgotnej, dobrze przepuszczalnej gleby."
+      "description": "Asparagus setaceus to delikatna roślina o pierzastych pędach, często uprawiana w domu. Lubi jasne, rozproszone światło i podłoże lekko wilgotne, z mniejszym podlewaniem zimą. Wyższa wilgotność powietrza pomaga, a roślina jest uznawana za toksyczną dla psów i kotów po spożyciu."
     },
     "de": {
-      "common_name": "Spargelfarn",
-      "description": "Asparagus setaceus ist eine Zierpflanze mit fein farnartigem Laub. Sie bevorzugt helles indirektes Licht und feuchte, gut durchlässige Erde."
+      "common_name": "Asparagusfarn",
+      "description": "Asparagus setaceus ist eine zierliche, rankende Zimmerpflanze mit farnähnlichen Trieben. Sie bevorzugt helles, indirektes Licht und leicht feuchtes Substrat, im Winter wird sparsamer gegossen. Mehr Luftfeuchte ist hilfreich, und die Pflanze gilt bei Aufnahme als giftig für Katzen und Hunde."
     },
     "fr": {
-      "common_name": "Fougère asperge",
-      "description": "Asparagus setaceus est une plante ornementale aux fines feuilles. Elle aime la lumière indirecte et un sol humide bien drainé."
+      "common_name": "Fougère asparagus",
+      "description": "Asparagus setaceus est une plante d’intérieur grimpante au feuillage fin et léger. Placez-la en lumière vive indirecte et gardez le substrat légèrement humide, avec moins d’arrosage en hiver. Une bonne humidité est utile, et la plante est considérée toxique pour les chats et les chiens en cas d’ingestion."
     },
     "it": {
-      "common_name": "Asparago felce",
-      "description": "Asparagus setaceus è una pianta ornamentale con foglie delicate. Preferisce luce indiretta e terreno umido ben drenato."
+      "common_name": "Felce asparago",
+      "description": "Asparagus setaceus è una pianta d’appartamento con fusti sottili e aspetto piumoso. Preferisce luce intensa ma indiretta e terreno leggermente umido, con annaffiature ridotte in inverno. Un’umidità più alta aiuta, ed è considerata tossica per cani e gatti se ingerita."
     },
     "es": {
-      "common_name": "Helecho de espárrago",
-      "description": "Asparagus setaceus es una planta ornamental de follaje fino. Prefiere luz indirecta y suelo húmedo bien drenado."
+      "common_name": "Helecho espárrago",
+      "description": "Asparagus setaceus es una planta de interior trepadora con follaje fino y plumoso. Requiere luz brillante e indirecta y un sustrato ligeramente húmedo, reduciendo el riego en invierno. La humedad ambiental ayuda, y se considera tóxica para perros y gatos si se ingiere."
     },
     "pt": {
-      "common_name": "Aspargo samambaia",
-      "description": "Asparagus setaceus é uma planta ornamental de folhagem fina. Prefere luz indireta e solo úmido bem drenado."
+      "common_name": "Samambaia-aspargo",
+      "description": "Asparagus setaceus é uma planta de interior trepadora com folhagem fina e plumosa. Prefere luz forte indireta e substrato levemente úmido, com menos regas no inverno. Maior umidade ajuda, e é considerada tóxica para cães e gatos se ingerida."
     },
     "ar": {
       "common_name": "سرخس الهليون",
-      "description": "Asparagus setaceus نبات زينة بأوراق دقيقة. يفضل الضوء غير المباشر وتربة رطبة جيدة التصريف."
+      "description": "Asparagus setaceus نبات منزلي متسلق ذو مظهر ريشـي ناعم. يفضل ضوءًا ساطعًا غير مباشر وتربة رطبة قليلًا مع تقليل الري شتاءً. تساعد الرطوبة الأعلى، ويُعد سامًا للقطط والكلاب عند الابتلاع."
     },
     "hi": {
-      "common_name": "एस्पैरेगस फर्न",
-      "description": "Asparagus setaceus एक सजावटी पौधा है जिसमें नाज़ुक पत्तियाँ होती हैं। यह परोक्ष रोशनी और नम मिट्टी पसंद करता है."
+      "common_name": "एस्पैरागस फर्न",
+      "description": "Asparagus setaceus एक इनडोर लता है जिसकी पत्तियाँ महीन और फर्न जैसी दिखती हैं। इसे तेज अप्रत्यक्ष रोशनी दें और मिट्टी को हल्का नम रखें, सर्दियों में पानी कम करें। अधिक आर्द्रता मदद करती है, और इसे बिल्ली/कुत्तों के लिए निगलने पर विषाक्त माना जाता है।"
     },
     "zh": {
-      "common_name": "芦笋蕨",
-      "description": "Asparagus setaceus 是观赏植物，具有细蕨状叶片。它喜欢明亮散射光和湿润排水良好的土壤."
+      "common_name": "天门冬蕨",
+      "description": "Asparagus setaceus 是一种枝条细密、羽毛状的室内观叶植物。适合明亮散射光，盆土保持微湿，冬季适当减少浇水。较高湿度有助于生长，且被认为对猫狗误食有毒。"
     },
     "ja": {
-      "common_name": "アスパラガスファーン",
-      "description": "Asparagus setaceus は細かい葉の観葉植物です。明るい間接光と湿った排水良い土壌を好みます。"
+      "common_name": "アスパラガス・ファーン",
+      "description": "Asparagus setaceus は繊細な羽状の枝が特徴のつる性観葉植物です。明るい間接光で管理し、用土はやや湿り気を保ちつつ冬は水やりを控えます。湿度があると調子が良く、ペットが摂取すると有毒とされています。"
     },
     "ko": {
       "common_name": "아스파라거스 펀",
-      "description": "Asparagus setaceus 는 섬세한 잎이 있는 관상용 식물입니다. 밝은 간접광과 촉촉한 배수토를 선호합니다."
+      "description": "Asparagus setaceus 는 가는 줄기와 깃털 같은 잎 모양이 특징인 덩굴성 실내식물입니다. 밝은 간접광을 주고 흙은 약간 촉촉하게 유지하되 겨울에는 물을 줄입니다. 습도가 있으면 더 잘 자라며, 반려동물이 섭취하면 유독한 것으로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plantemia.pl/rosliny-doniczkowe/143-asparagus-setaceus-",
-      "https://www.gardenersworld.com/house-plants/how-to-grow-asparagus-ferns/"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b629",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-asparagus-ferns/",
+      "https://www.rhs.org.uk/plants/27185/asparagus-setaceus/details",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/asparagus-fern",
+      "https://www.petpoisonhelpline.com/poison/asparagus-fern/"
     ]
   }
 }

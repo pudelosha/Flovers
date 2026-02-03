@@ -7,17 +7,17 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 광선"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic soil",
-          "pl": "Kwasowa gleba",
-          "de": "Saurer Boden",
-          "fr": "Sol acide",
-          "it": "Terreno acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "क्षारीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土壌",
-          "ko": "산성 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良好な排水性の土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -73,9 +73,9 @@
           "fr": "Arrosage modéré",
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Rega moderada",
+          "pt": "Regar moderadamente",
           "ar": "سقي معتدل",
-          "hi": "मध्यम पानी",
+          "hi": "मध्यम जल पान",
           "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-22°C",
+          "pl": "18-22°C",
+          "de": "18-22°C",
+          "fr": "18-22°C",
+          "it": "18-22°C",
+          "es": "18-22°C",
+          "pt": "18-22°C",
+          "ar": "18-22°C",
+          "hi": "18-22°C",
+          "zh": "18-22°C",
+          "ja": "18-22°C",
+          "ko": "18-22°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiarkowana wilgotność",
-          "de": "Mäßige Luftfeuchtigkeit",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad moderada",
-          "pt": "Umidade moderada",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "适度湿度",
-          "ja": "適度な湿度",
-          "ko": "적당한 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -151,9 +151,9 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैले",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "비독성"
         }
       }
@@ -164,16 +164,54 @@
         "text": {
           "en": "Slow growth",
           "pl": "Powolny wzrost",
-          "de": "Langsame Wachstumsrate",
+          "de": "Langsame Wachstum",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
+          "hi": "धीमा विकास",
           "zh": "生长缓慢",
           "ja": "遅い成長",
           "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter trop d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرापानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Military Orchid",
-      "description": "Orchis militaris is a rare orchid found in temperate regions of Europe and Asia. It thrives in acidic soils with moderate light and watering needs."
+      "description": "Orchis militaris is a terrestrial orchid native to Europe. It produces distinctive flowers in late spring to early summer."
     },
     "pl": {
       "common_name": "Storczyk wojskowy",
-      "description": "Orchis militaris to rzadki storczyk występujący w umiarkowanych rejonach Europy i Azji. Rośnie w kwaśnych glebach, wymagających umiarkowanego światła i podlewania."
+      "description": "Orchis militaris to storczyk ziemny, który występuje w Europie. Kwitnie wczesnym latem, tworząc charakterystyczne kwiaty."
     },
     "de": {
       "common_name": "Militär-Orchidee",
-      "description": "Orchis militaris ist eine seltene Orchidee, die in gemäßigten Regionen Europas und Asiens vorkommt. Sie gedeiht in sauren Böden mit mäßigem Licht- und Wasserbedarf."
+      "description": "Orchis militaris ist eine terrestrische Orchidee aus Europa, die im späten Frühling bis frühen Sommer auffällige Blüten bildet."
     },
     "fr": {
       "common_name": "Orchidée militaire",
-      "description": "Orchis militaris est une orchidée rare trouvée dans les régions tempérées d'Europe et d'Asie. Elle pousse dans des sols acides avec des besoins modérés en lumière et en eau."
+      "description": "Orchis militaris est une orchidée terrestre originaire d'Europe. Elle produit des fleurs distinctives du printemps à l'été."
     },
     "it": {
       "common_name": "Orchidea militare",
-      "description": "Orchis militaris è un'orchidea rara che si trova nelle regioni temperate d'Europa e Asia. Cresce in terreni acidi con necessità moderate di luce e irrigazione."
+      "description": "Orchis militaris è un'orchidea terrestre originaria dell'Europa. Produce fiori distintivi tra la fine della primavera e l'inizio dell'estate."
     },
     "es": {
       "common_name": "Orquídea militar",
-      "description": "Orchis militaris es una orquídea rara que se encuentra en las regiones templadas de Europa y Asia. Crece en suelos ácidos con necesidades moderadas de luz y riego."
+      "description": "Orchis militaris es una orquídea terrestre originaria de Europa. Produce flores distintivas a finales de primavera y principios de verano."
     },
     "pt": {
       "common_name": "Orquídea militar",
-      "description": "Orchis militaris é uma orquídea rara encontrada nas regiões temperadas da Europa e Ásia. Ela cresce em solos ácidos com necessidades moderadas de luz e rega."
+      "description": "Orchis militaris é uma orquídea terrestre nativa da Europa. Produz flores distintas no final da primavera e no início do verão."
     },
     "ar": {
-      "common_name": "أوركيدية عسكرية",
-      "description": "Orchis militaris هي زهرة نادرة توجد في المناطق المعتدلة من أوروبا وآسيا. تنمو في التربة الحمضية مع احتياجات معتدلة من الضوء والمياه."
+      "common_name": "زهرة الأوركيد العسكرية",
+      "description": "Orchis militaris هي زهرة أوركيدية أرضية موطنها أوروبا. تنتج زهورًا مميزة في أواخر الربيع إلى أوائل الصيف."
     },
     "hi": {
-      "common_name": "मिलिटरी ऑर्किड",
-      "description": "Orchis militaris एक दुर्लभ ऑर्किड है जो यूरोप और एशिया के उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह अम्लीय मिट्टी में मध्यम प्रकाश और पानी की जरूरतों के साथ बढ़ता है।"
+      "common_name": "सैन्य ऑर्किड",
+      "description": "Orchis militaris एक स्थलीय ऑर्किड है जो यूरोप का मूल निवासी है। यह वसंत के अंत से लेकर ग्रीष्मकाल के प्रारंभ तक विशिष्ट फूल पैदा करता है।"
     },
     "zh": {
       "common_name": "军事兰花",
-      "description": "Orchis militaris 是一种稀有的兰花，生长在欧洲和亚洲的温带地区。它在酸性土壤中生长，对光照和水分需求适中。"
+      "description": "Orchis militaris 是一种原产于欧洲的地生兰花。它在春末到夏初开出独特的花朵。"
     },
     "ja": {
-      "common_name": "ミリタリーオーキッド",
-      "description": "Orchis militarisは、ヨーロッパとアジアの温帯地域に生息する珍しいランの一種です。酸性土壌で、適度な光と水分を必要とします。"
+      "common_name": "ミリタリー・オーキッド",
+      "description": "Orchis militaris はヨーロッパ原産の地生ランです。春の終わりから初夏にかけて特徴的な花を咲かせます。"
     },
     "ko": {
       "common_name": "군사 난초",
-      "description": "Orchis militaris는 유럽과 아시아의 온대 지역에서 자생하는 희귀 난초입니다. 산성 토양에서 자라며 적당한 빛과 물이 필요합니다."
+      "description": "Orchis militaris는 유럽 원산의 지상 난초입니다. 봄 끝에서 여름 초기에 독특한 꽃을 만듭니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/99089/orchis-militaris",
-      "https://www.gardenia.net/plant/orchis-militaris"
+      "https://www.rhs.org.uk/plants/details?plantid=1260",
+      "https://www.botanikus.de"
     ]
   }
 }

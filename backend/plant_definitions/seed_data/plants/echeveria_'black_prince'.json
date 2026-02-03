@@ -1,6 +1,6 @@
 {
-  "external_id": "echeveria_black_prince",
-  "name": "Black Prince Echeveria",
+  "external_id": "echeveria_'black_prince'",
+  "name": "Echeveria Black Prince",
   "latin": "Echeveria 'Black Prince'",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 60,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "echeveria_black_prince.jpg",
@@ -27,8 +27,8 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
+          "en": "Bright light",
+          "pl": "Jasne światło",
           "de": "Helles Licht",
           "fr": "Lumière vive",
           "it": "Luce intensa",
@@ -37,8 +37,8 @@
           "ar": "ضوء ساطع",
           "hi": "तेज़ रोशनी",
           "zh": "强光",
-          "ja": "強い光",
-          "ko": "강한 빛"
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Gritty cactus mix",
-          "pl": "Kaktusowe, grys",
-          "de": "Kakteenerde, grob",
-          "fr": "Substrat cactus",
+          "en": "Cactus mix",
+          "pl": "Podłoże do kaktusów",
+          "de": "Kakteenerde",
+          "fr": "Terreau cactées",
           "it": "Terriccio cactus",
           "es": "Sustrato cactus",
           "pt": "Substrato cactus",
-          "ar": "تربة صبّار جيدة",
-          "hi": "कैक्टस मिश्रण",
-          "zh": "排水佳仙人掌土",
-          "ja": "水はけ良い土",
-          "ko": "배수 좋은 흙"
+          "ar": "تربة صبارات",
+          "hi": "कैक्टस मिक्स",
+          "zh": "仙人掌土",
+          "ja": "多肉用土",
+          "ko": "다육이 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Every 2–3 weeks",
-          "pl": "Co 2–3 tygodnie",
-          "de": "Alle 2–3 Wochen",
-          "fr": "Tous les 2–3 sem",
-          "it": "Ogni 2–3 sett.",
-          "es": "Cada 2–3 sem.",
-          "pt": "A cada 2–3 sem.",
-          "ar": "كل 2–3 أسابيع",
-          "hi": "हर 2–3 हफ्ते",
-          "zh": "每2–3周",
-          "ja": "2〜3週ごと",
-          "ko": "2~3주마다"
+          "en": "Dry out then water",
+          "pl": "Podlej po wyschnięciu",
+          "de": "Erst trocken, dann gießen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega tras secarse",
+          "pt": "Regar após secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "완전 건조 후 물"
         }
       }
     },
@@ -94,7 +94,7 @@
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
-          "ja": "簡単",
+          "ja": "かんたん",
           "ko": "쉬움"
         }
       }
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18〜27°C",
-          "ko": "18–27°C"
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
         }
       }
     },
@@ -124,7 +124,7 @@
         "text": {
           "en": "Low humidity",
           "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
+          "de": "Niedrige Luftfeuchte",
           "fr": "Faible humidité",
           "it": "Bassa umidità",
           "es": "Baja humedad",
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषैली नहीं",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zwierząt",
+          "de": "Ungiftig für Tiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica per animali",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू-सेफ",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -167,11 +167,49 @@
           "it": "Rosetta lenta",
           "es": "Roseta lenta",
           "pt": "Roseta lenta",
-          "ar": "نمو بطيء وردي",
+          "ar": "وردة بطيئة",
           "hi": "धीमी रोसेट",
-          "zh": "缓慢莲座生长",
+          "zh": "缓慢莲座",
           "ja": "ゆっくりロゼット",
           "ko": "느린 로제트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Łatwo gnije",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Propensa a pudrirse",
+          "pt": "Propensa a apodrecer",
+          "ar": "عرضة للتعفن",
+          "hi": "सड़न का खतरा",
+          "zh": "易腐烂",
+          "ja": "腐りやすい",
+          "ko": "부패에 약함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, roztocza",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عث",
+          "hi": "मिलीबग, माइट",
+          "zh": "粉蚧、螨",
+          "ja": "カイガラムシ・ダニ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
@@ -179,60 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Black Prince echeveria",
-      "description": "Echeveria 'Black Prince' is a rosette-forming succulent in the Crassulaceae that prefers bright light and fast-draining soil. Let the potting mix dry completely between deep waterings, typically about every 2–3 weeks indoors. It does best in warm room temperatures and low humidity."
+      "description": "A dark-leaved rosette succulent grown for its compact form and color. Provide very bright light and a sharply draining cactus mix, and water only after the soil dries fully. Keep it warm and protect it from frost."
     },
     "pl": {
-      "common_name": "Echeveria „Black Prince”",
-      "description": "Echeveria 'Black Prince' to sukulent o rozetowym pokroju z rodziny gruboszowatych, który lubi dużo światła i bardzo przepuszczalne podłoże. Podlewaj dopiero po całkowitym przeschnięciu ziemi, zwykle co około 2–3 tygodnie w domu. Najlepiej rośnie w ciepłych temperaturach pokojowych i przy niskiej wilgotności."
+      "common_name": "Eszeweria Czarny Książę",
+      "description": "Ciemnolistna sukulentowa rozeta o zwartym pokroju. Zapewnij bardzo jasne światło i przepuszczalne podłoże do sukulentów, podlewaj dopiero po całkowitym przeschnięciu. Trzymaj w cieple i chroń przed mrozem."
     },
     "de": {
-      "common_name": "Echeverie „Black Prince”",
-      "description": "Echeveria 'Black Prince' ist eine rosettige Sukkulente aus der Familie der Dickblattgewächse und braucht viel Licht sowie ein sehr durchlässiges Substrat. Gieße erst, wenn die Erde vollständig trocken ist, typischerweise etwa alle 2–3 Wochen in Innenräumen. Warme Zimmertemperaturen und niedrige Luftfeuchte sind ideal."
+      "common_name": "Echeverie Black Prince",
+      "description": "Eine dunkel gefärbte, kompakte Rosetten-Sukkulente. Sehr hell stellen, in gut drainierender Kakteenerde kultivieren und erst gießen, wenn das Substrat vollständig trocken ist. Warm halten und vor Frost schützen."
     },
     "fr": {
-      "common_name": "Echeveria « Black Prince »",
-      "description": "Echeveria 'Black Prince' est une succulente en rosette (Crassulaceae) qui apprécie une lumière vive et un substrat très drainant. Arrosez abondamment puis laissez sécher complètement, en général toutes les 2–3 semaines en intérieur. Elle préfère des températures douces et une faible humidité."
+      "common_name": "Échévéria Black Prince",
+      "description": "Succulente en rosette sombre, appréciée pour sa forme compacte. Offrez une lumière très vive et un substrat pour cactus très drainant, puis arrosez seulement après séchage complet. Gardez au chaud et évitez le gel."
     },
     "it": {
-      "common_name": "Echeveria “Black Prince”",
-      "description": "Echeveria 'Black Prince' è una succulenta a rosetta (Crassulaceae) che richiede molta luce e un substrato molto drenante. Annaffia solo quando il terriccio è completamente asciutto, in genere ogni 2–3 settimane in casa. Predilige temperature miti e bassa umidità."
+      "common_name": "Echeveria Black Prince",
+      "description": "Succulenta a rosetta scura, coltivata per forma compatta e colore. Serve luce molto intensa e terriccio per cactus ben drenante; annaffiare solo quando il substrato è completamente asciutto. Tenerla al caldo e al riparo dal gelo."
     },
     "es": {
-      "common_name": "Echeveria “Black Prince”",
-      "description": "Echeveria 'Black Prince' es una suculenta en roseta (Crassulaceae) que necesita luz intensa y un sustrato muy drenante. Riega a fondo solo cuando el sustrato esté completamente seco, normalmente cada 2–3 semanas en interior. Prefiere temperaturas templadas y humedad baja."
+      "common_name": "Echeveria Black Prince",
+      "description": "Suculenta en roseta de hojas oscuras y porte compacto. Dale mucha luz y un sustrato para cactus muy drenante, y riega solo cuando el sustrato se haya secado por completo. Manténla cálida y protégela de las heladas."
     },
     "pt": {
-      "common_name": "Echeveria “Black Prince”",
-      "description": "Echeveria 'Black Prince' é uma suculenta em roseta (Crassulaceae) que prefere muita luz e substrato bem drenado. Regue bem apenas quando o substrato estiver totalmente seco, geralmente a cada 2–3 semanas em interior. Vai melhor com temperaturas amenas e baixa umidade."
+      "common_name": "Echeveria Black Prince",
+      "description": "Suculenta em roseta de folhas escuras e crescimento compacto. Prefere muita luz e substrato bem drenante para cactos; regue apenas após secar totalmente. Mantenha em local quente e protegido de geada."
     },
     "ar": {
-      "common_name": "إشفيريا «بلاك برنس»",
-      "description": "إشفيريا 'Black Prince' نبات عصاري بشكل وردة من الفصيلة الكراسولاسية ويحتاج إلى ضوء ساطع وتربة جيدة التصريف. اسقِ بعمق ثم اترك التربة تجف تمامًا قبل السقي مرة أخرى، عادة كل 2–3 أسابيع داخل المنزل. يفضّل الدفء ورطوبة منخفضة."
+      "common_name": "إشيفيريا بلاك برنس",
+      "description": "نبات عصاري على شكل وردة بأوراق داكنة وشكل مدمج. يحتاج إلى ضوء قوي جدًا وتربة صبارات جيدة التصريف، ويُسقى فقط بعد جفاف التربة تمامًا. يُحفظ دافئًا ويُحمى من الصقيع."
     },
     "hi": {
-      "common_name": "इचेवेरिया ‘ब्लैक प्रिंस’",
-      "description": "Echeveria 'Black Prince' रोसेट बनाने वाला सक्युलेंट (Crassulaceae) है जिसे तेज़ रोशनी और अच्छी जल-निकासी वाली मिट्टी चाहिए। मिट्टी पूरी तरह सूखने पर ही गहराई से पानी दें, आम तौर पर घर के अंदर हर 2–3 हफ्ते में। यह गर्म कमरे के तापमान और कम नमी में अच्छा रहता है।"
+      "common_name": "ब्लैक प्रिंस एचेवेरिया",
+      "description": "गहरे रंग की पत्तियों वाला रोसेट सक्युलेंट, जो कॉम्पैक्ट आकार के लिए उगाया जाता है। तेज रोशनी और अच्छी जल-निकासी वाला कैक्टस मिक्स दें, और मिट्टी पूरी सूखने पर ही पानी दें। ठंड और पाले से बचाएँ।"
     },
     "zh": {
-      "common_name": "黑王子拟石莲花",
-      "description": "Echeveria 'Black Prince' 为景天科莲座型多肉，喜强光与排水良好的基质。每次浇透后需等盆土完全干透再浇，室内通常约每2–3周一次。适合温暖环境并偏好低湿度。"
+      "common_name": "黑王子石莲花",
+      "description": "深色叶片的莲座型多肉，株型紧凑。需要强光和排水良好的仙人掌土，盆土完全干透后再浇水。保持温暖，避免霜冻。"
     },
     "ja": {
-      "common_name": "エケベリア ‘ブラックプリンス’",
-      "description": "Echeveria 'Black Prince' はベンケイソウ科のロゼット状の多肉で、強い光と水はけの良い用土を好みます。用土が完全に乾いてからたっぷり与え、室内では目安として2〜3週に1回程度です。暖かい環境と低湿度が向きます。"
+      "common_name": "ブラックプリンス（エケベリア）",
+      "description": "黒紫色の葉が特徴のロゼット状多肉です。とても明るい光と水はけのよい多肉用土にし、用土が完全に乾いてから水やりします。寒さと霜は避けてください。"
     },
     "ko": {
-      "common_name": "에케베리아 ‘블랙 프린스’",
-      "description": "Echeveria 'Black Prince'는 돌나물과의 로제트형 다육식물로 밝은 빛과 배수가 좋은 흙을 선호합니다. 흙이 완전히 마른 뒤 한 번에 흠뻑 주며, 실내에서는 보통 2–3주 간격이 적당합니다. 따뜻한 온도와 낮은 습도에서 잘 자랍니다."
+      "common_name": "블랙 프린스 에케베리아",
+      "description": "짙은 색 잎의 로제트형 다육으로 컴팩트한 형태가 특징입니다. 매우 밝은 빛과 배수가 좋은 다육용 흙을 사용하고, 흙이 완전히 마른 뒤에만 물을 주세요. 추위와 서리를 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://extension.illinois.edu/news-releases/did-you-forget-water-your-plants-try-low-maintenance-succulents",
-      "https://www.montana.edu/extension/lila_extn/lila_winter_23/GrowingSucculents.html",
-      "https://extension.wvu.edu/lawn-gardening-pests/indoor-plants/succulents-101",
-      "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Cactus%20and%20Succulents10.pdf",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/blue-echeveria"
+      "https://www.rhs.org.uk/plants/echeveria",
+      "https://www.rhs.org.uk/plants/types/cacti-succulents/houseplants/growing-guide",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/blue-echeveria",
+      "https://www.thespruce.com/how-to-grow-echeveria-4778458"
     ]
   }
 }

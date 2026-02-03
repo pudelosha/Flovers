@@ -1,18 +1,18 @@
 {
   "external_id": "sedum_morganianum",
-  "name": "Burro's Tail",
+  "name": "Donkey's Tail",
   "latin": "Sedum morganianum",
-  "sun": "medium",
+  "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس ساطعة",
+          "hi": "पूरा सूरज",
+          "zh": "完全日照",
+          "ja": "完全日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaszczysta gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sableux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेतीली मिट्टी",
-          "zh": "沙质土壤",
-          "ja": "砂質土",
-          "ko": "모래 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low watering",
-          "pl": "Niskie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage léger",
-          "it": "Annaffiatura bassa",
-          "es": "Riego bajo",
-          "pt": "Rega baixa",
-          "ar": "سقي منخفض",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "少なめの水やり",
-          "ko": "적은 물"
+          "en": "Low water needs",
+          "pl": "Niskie zapotrzebowanie na wodę",
+          "de": "Geringer Wasserbedarf",
+          "fr": "Besoins en eau faibles",
+          "it": "Basso fabbisogno di acqua",
+          "es": "Bajas necesidades de agua",
+          "pt": "Baixas necessidades de água",
+          "ar": "احتياجات مياه منخفضة",
+          "hi": "कम पानी की आवश्यकता",
+          "zh": "低水需求",
+          "ja": "水やり少なめ",
+          "ko": "적은 물 요구"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwe",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-26°C",
-          "pl": "15-26°C",
-          "de": "15-26°C",
-          "fr": "15-26°C",
-          "it": "15-26°C",
-          "es": "15-26°C",
-          "pt": "15-26°C",
-          "ar": "15-26°C",
-          "hi": "15-26°C",
-          "zh": "15-26°C",
-          "ja": "15-26°C",
-          "ko": "15-26°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -126,8 +126,8 @@
         "text": {
           "en": "Low humidity",
           "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchtigkeit",
-          "fr": "Faible humidité",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Humidité faible",
           "it": "Bassa umidità",
           "es": "Baja humedad",
           "pt": "Baixa umidade",
@@ -151,7 +151,7 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषाक्त",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -173,65 +173,103 @@
           "hi": "धीमा विकास",
           "zh": "生长缓慢",
           "ja": "成長が遅い",
-          "ko": "느리게 자라는"
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać nadmiernie",
+          "de": "Kein Überwässern",
+          "fr": "Pas d'excès d'eau",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regue em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अत्यधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Burro's Tail",
-      "description": "Sedum morganianum is a low-maintenance succulent that grows long, trailing stems of fleshy, bead-like leaves. Ideal for hanging baskets, it thrives in bright, indirect light."
+      "common_name": "Donkey's Tail",
+      "description": "Sedum morganianum, also known as Donkey's Tail, is a succulent with trailing stems covered in small, fleshy leaves. It is well-suited to bright light and low watering."
     },
     "pl": {
-      "common_name": "Ogonek Burro",
-      "description": "Sedum morganianum to łatwy w uprawie sukulent, który rośnie na długich, zwisających pędach z mięsistymi, kulistymi liśćmi. Doskonały do wiszących doniczek, rośnie w jasnym, pośrednim świetle."
+      "common_name": "Ogonek osła",
+      "description": "Sedum morganianum, znane jako Ogonek osła, to sukulent o zwisających pędach pokrytych małymi, mięsistymi liśćmi. Jest odpowiedni do jasnego światła i mało wymagający pod względem podlewania."
     },
     "de": {
-      "common_name": "Bockschwanz",
-      "description": "Sedum morganianum ist eine pflegeleichte Sukkulente mit langen, hängenden Stängeln aus fleischigen, perlenartigen Blättern. Ideal für Hängekörbe, es gedeiht in hellem, indirektem Licht."
+      "common_name": "Donkey's Tail",
+      "description": "Sedum morganianum, auch bekannt als Donkey's Tail, ist eine Sukkulente mit herabhängenden Stängeln, die mit kleinen, fleischigen Blättern bedeckt sind. Es bevorzugt helles Licht und geringe Bewässerung."
     },
     "fr": {
-      "common_name": "Queue de burro",
-      "description": "Sedum morganianum est une plante succulente facile à entretenir qui produit des tiges longues et pendantes de feuilles charnues en forme de perles. Idéale pour les paniers suspendus, elle prospère dans une lumière indirecte brillante."
+      "common_name": "Queue de cheval",
+      "description": "Sedum morganianum, également connu sous le nom de Queue de cheval, est une plante succulente à tiges retombantes couvertes de petites feuilles charnues. Elle préfère une lumière vive et peu d'eau."
     },
     "it": {
-      "common_name": "Coda di Burro",
-      "description": "Sedum morganianum è una pianta succulenta facile da curare che cresce con steli lunghi e pendenti di foglie carnose a forma di perla. Ideale per cestini appesi, cresce in luce indiretta brillante."
+      "common_name": "Coda di asino",
+      "description": "Sedum morganianum, noto anche come Coda di asino, è una succulenta con steli pendenti ricoperti di piccole foglie carnose. Preferisce luce intensa e poca acqua."
     },
     "es": {
       "common_name": "Cola de burro",
-      "description": "Sedum morganianum es una suculenta fácil de cuidar que crece con tallos largos y colgantes de hojas carnosas en forma de perlas. Ideal para cestas colgantes, prospera con luz indirecta brillante."
+      "description": "Sedum morganianum, también conocido como Cola de burro, es una suculenta con tallos colgantes cubiertos de pequeñas hojas carnosas. Prefiere luz brillante y poca agua."
     },
     "pt": {
       "common_name": "Cauda de burro",
-      "description": "Sedum morganianum é uma suculenta de fácil cuidado que cresce com caules longos e pendentes de folhas carnudas em forma de pérolas. Ideal para cestas suspensas, prospera em luz indireta brilhante."
+      "description": "Sedum morganianum, também conhecido como Cauda de burro, é uma suculenta com caules pendentes cobertos por pequenas folhas carnudas. Prefere luz intensa e pouca água."
     },
     "ar": {
-      "common_name": "ذيل البقرة",
-      "description": "Sedum morganianum هو نبات عصاري سهل العناية ينمو بسيقان طويلة ومتدلية من الأوراق اللحمية على شكل خرز. مثالي للسلّات المعلقة، ينمو في ضوء غير مباشر ساطع."
+      "common_name": "ذيل الحمار",
+      "description": "Sedum morganianum ، المعروف أيضًا باسم ذيل الحمار ، هو نبات عصاري بأعناق متدلية مغطاة بأوراق لحمية صغيرة. يفضل الضوء الساطع والري القليل."
     },
     "hi": {
-      "common_name": "बुर्रो की पूंछ",
-      "description": "Sedum morganianum एक कम रखरखाव वाला रसीला पौधा है जो मांसल, मोती जैसे पत्तों वाली लंबी, लटकी हुई शाखाएँ उगाता है। यह झूलते हुए बास्केट के लिए आदर्श है और इसे हल्के, अप्रत्यक्ष प्रकाश में उगाया जाता है।"
+      "common_name": "गधे की पूंछ",
+      "description": "Sedum morganianum, जिसे गधे की पूंछ भी कहा जाता है, एक मांसल पत्तियों से ढकी हुई लटकती हुई शाखाओं वाला एक रसीला पौधा है। यह तेज़ रोशनी और कम पानी को पसंद करता है।"
     },
     "zh": {
       "common_name": "驴尾草",
-      "description": "Sedum morganianum 是一种易于养护的多肉植物，生长出长而下垂的茎，茎上布满肉质的珍珠状叶片。它非常适合悬挂篮子，喜欢明亮的间接光。"
+      "description": "Sedum morganianum，也叫做驴尾草，是一种具有下垂茎部的小肉质叶子的多肉植物。它适合强光和少量浇水。"
     },
     "ja": {
-      "common_name": "バロンズテール",
-      "description": "Sedum morganianumは、肉質のビーズのような葉を持つ長く垂れ下がる茎を持つ、手間のかからない多肉植物です。吊り鉢に最適で、明るい間接光で成長します。"
+      "common_name": "ドンキーの尾",
+      "description": "Sedum morganianum（ドンキーの尾）は、小さな肉質の葉で覆われた垂れ下がる茎を持つ多肉植物です。明るい光と少量の水やりが適しています。"
     },
     "ko": {
-      "common_name": "부로의 꼬리",
-      "description": "Sedum morganianum은 육질의 구슬처럼 생긴 잎이 달린 긴 가지를 자라는 손쉬운 관리가 가능한 다육 식물입니다. 걸이식 화분에 이상적이며 밝은 간접광에서 잘 자랍니다."
+      "common_name": "당나귀 꼬리",
+      "description": "Sedum morganianum, 또한 당나귀 꼬리로 알려져 있는 이 식물은 작은 육즙 있는 잎이 달린 처진 줄기가 특징인 다육 식물입니다. 밝은 빛과 적은 물을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenersworld.com/plants/sedum-morganianum-burros-tail/",
-      "https://www.rhs.org.uk/plants/sedum-morganianum"
+      "https://www.rhs.org.uk/plants/sedum-morganianum",
+      "https://www.gardenia.net/plant/sedum-morganianum-donkey-s-tail"
     ]
   }
 }

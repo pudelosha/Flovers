@@ -4,23 +4,24 @@
   "latin": "Hoya wayetii",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "aroid",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "hoya_wayetii.jpg",
   "image_thumb": "hoya_wayetii.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz brilhante",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainierend",
-          "fr": "Drainant",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,15 +68,15 @@
       "value": {
         "text": {
           "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
         }
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilg.",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "보통 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 유독"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing vine",
-          "pl": "Pnącze",
-          "de": "Rankend",
-          "fr": "Retombante",
-          "it": "Ricadente",
-          "es": "Colgante",
-          "pt": "Pendente",
-          "ar": "نبات متدل",
-          "hi": "लटकने वाली",
-          "zh": "蔓生",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Slow growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wax Plant",
-      "description": "Hoya wayetii is a tropical epiphytic plant with narrow, waxy leaves. It prefers bright indirect light and well-draining soil. Allow the soil to dry slightly between waterings."
+      "common_name": "Wayetii Hoya",
+      "description": "Hoya wayetii is a slow-growing tropical plant with waxy, elongated leaves. It thrives in bright, indirect light and prefers moderately moist soil."
     },
     "pl": {
-      "common_name": "Hoja woskowa",
-      "description": "Hoya wayetii to tropikalna roślina epifityczna o wąskich liściach. Lubi jasne, rozproszone światło i przepuszczalne podłoże. Podlewaj po lekkim przeschnięciu ziemi."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii to wolno rosnąca roślina tropikalna o woskowych, wydłużonych liściach. Preferuje jasne, pośrednie światło i umiarkowanie wilgotną glebę."
     },
     "de": {
-      "common_name": "Wachsblume",
-      "description": "Hoya wayetii ist eine tropische Epiphyte mit schmalen Blättern. Sie mag helles, indirektes Licht und luftiges Substrat. Zwischen dem Gießen leicht antrocknen lassen."
+      "common_name": "Wayetii Hoya",
+      "description": "Hoya wayetii ist eine langsam wachsende tropische Pflanze mit wachsartigen, länglichen Blättern. Sie gedeiht bei hellem, indirektem Licht und bevorzugt mäßig feuchte Erde."
     },
     "fr": {
-      "common_name": "Plante de cire",
-      "description": "Hoya wayetii est une plante tropicale épiphyte aux feuilles étroites. Elle préfère une lumière vive indirecte et un sol drainant. Laissez sécher légèrement entre les arrosages."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii est une plante tropicale à croissance lente avec des feuilles allongées et cireuses. Elle prospère dans une lumière vive et indirecte et préfère un sol modérément humide."
     },
     "it": {
-      "common_name": "Pianta di cera",
-      "description": "Hoya wayetii è una pianta tropicale epifita con foglie strette. Predilige luce intensa indiretta e substrato drenante. Lasciare asciugare leggermente tra le annaffiature."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii è una pianta tropicale a crescita lenta con foglie allungate e cerose. Cresce meglio in luce brillante e indiretta e preferisce un terreno moderatamente umido."
     },
     "es": {
-      "common_name": "Planta de cera",
-      "description": "Hoya wayetii es una planta tropical epífita de hojas estrechas. Prefiere luz brillante indirecta y sustrato drenante. Dejar secar un poco entre riegos."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii es una planta tropical de crecimiento lento con hojas alargadas y cerosas. Se desarrolla bien en luz brillante e indirecta y prefiere un suelo moderadamente húmedo."
     },
     "pt": {
-      "common_name": "Planta de cera",
-      "description": "Hoya wayetii é uma planta tropical epífita com folhas estreitas. Gosta de luz indireta brilhante e solo bem drenado. Deixe secar levemente entre regas."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii é uma planta tropical de crescimento lento com folhas alongadas e cerosas. Prefere luz indireta brilhante e solo moderadamente úmido."
     },
     "ar": {
-      "common_name": "نبات الشمع",
-      "description": "هويا وايتي نبات استوائي هوائي بأوراق ضيقة. يفضل الضوء الساطع غير المباشر وتربة جيدة التصريف. اترك التربة تجف قليلاً بين الري."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii هي نبتة استوائية تنمو ببطء بأوراق ممدودة وشمعية. تفضل الضوء الساطع غير المباشر والتربة الرطبة بشكل معتدل."
     },
     "hi": {
-      "common_name": "वैक्स प्लांट",
-      "description": "होया वेयटी एक उष्णकटिबंधीय एपिफाइटिक पौधा है। इसे तेज परोक्ष रोशनी और अच्छी जलनिकासी वाली मिट्टी पसंद है। पानी देने से पहले मिट्टी को थोड़ा सूखने दें।"
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii एक धीमी बढ़ने वाली उष्णकटिबंधीय पौधा है जिसकी पत्तियां मोम जैसी और लंबी होती हैं। यह उज्जवल, अप्रत्यक्ष प्रकाश में बढ़ता है और हल्की नम मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "蜡兰",
-      "description": "Hoya wayetii 是一种热带附生植物，叶片狭长。喜明亮的散射光和良好排水的基质。浇水前让基质稍微干燥。"
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii 是一种生长缓慢的热带植物，具有蜡质的长叶子。它喜欢明亮的间接光，并更喜欢适度湿润的土壤。"
     },
     "ja": {
-      "common_name": "ホヤ・ワイエティ",
-      "description": "ホヤ・ワイエティは細い葉を持つ熱帯性の着生植物です。明るい間接光と水はけの良い用土を好みます。水やりは土が少し乾いてから行います。"
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii は成長が遅い熱帯植物で、ろうのような長い葉を持っています。明るい間接光で育ち、適度に湿った土壌を好みます。"
     },
     "ko": {
-      "common_name": "호야 웨이에티",
-      "description": "호야 웨이에티는 가는 잎을 가진 열대 착생 식물입니다. 밝은 간접광과 배수가 좋은 흙을 선호합니다. 물 주기 전 흙을 약간 말리세요."
+      "common_name": "Hoya Wayetii",
+      "description": "Hoya wayetii는 성장 속도가 느린 열대 식물로, 왁스처럼 긴 잎을 가지고 있습니다. 밝고 간접적인 빛에서 잘 자라며 적당히 습한 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hoya/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b889",
-      "https://plants.ces.ncsu.edu/plants/hoya-spp/"
+      "https://www.rhs.org.uk/plants/3530/hoya-wayetii",
+      "https://www.gardenia.net/plant-care/hoya-wayetii"
     ]
   }
 }

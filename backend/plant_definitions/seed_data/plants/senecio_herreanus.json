@@ -1,18 +1,18 @@
 {
   "external_id": "senecio_herreanus",
-  "name": "String of Beans",
+  "name": "String of Beads",
   "latin": "Senecio herreanus",
-  "sun": "medium",
-  "water": "medium",
-  "difficulty": "medium",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
+          "ja": "直射日光",
+          "ko": "강한 햇볕"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy",
-          "pl": "Piaszczysta",
-          "de": "Sandig",
-          "fr": "Sableux",
-          "it": "Sabbiosa",
-          "es": "Arenosa",
-          "pt": "Arenoso",
-          "ar": "رملي",
-          "hi": "रेतीली",
-          "zh": "沙质",
-          "ja": "砂質",
-          "ko": "모래"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnie",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Rarement",
+          "it": "Raramente",
+          "es": "Poca frecuencia",
+          "pt": "Pouca frequência",
+          "ar": "نادر",
+          "hi": "कम बार",
+          "zh": "不常",
+          "ja": "頻繁でない",
+          "ko": "드물게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -127,7 +127,7 @@
           "en": "Low",
           "pl": "Niska",
           "de": "Niedrig",
-          "fr": "Basse",
+          "fr": "Faible",
           "it": "Bassa",
           "es": "Baja",
           "pt": "Baixa",
@@ -135,7 +135,7 @@
           "hi": "कम",
           "zh": "低",
           "ja": "低",
-          "ko": "낮음"
+          "ko": "낮은"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez de trop arroser",
+          "it": "Evitare di annaffiare troppo",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "String of Beans",
-      "description": "Senecio herreanus is a succulent plant known for its unique bead-like leaves. It thrives in bright, indirect light and well-drained soil."
+      "common_name": "String of Beads",
+      "description": "Senecio herreanus, also known as the String of Beads, is a succulent with long cascading stems covered in small, spherical leaves. It thrives in bright, direct sunlight and requires infrequent watering."
     },
     "pl": {
-      "common_name": "Sznur Fasoli",
-      "description": "Senecio herreanus to roślina sukulentna o charakterystycznych, koralikowatych liściach. Preferuje jasne, pośrednie światło i dobrze przepuszczalną glebę."
+      "common_name": "Sznur pereł",
+      "description": "Senecio herreanus, znany również jako sznur pereł, to sukulent o długich, zwisających pędach pokrytych małymi, kulistymi liśćmi. Rośnie najlepiej w jasnym, bezpośrednim świetle słonecznym i wymaga rzadkiego podlewania."
     },
     "de": {
-      "common_name": "Bohnen-Senecio",
-      "description": "Senecio herreanus ist eine sukkulente Pflanze, bekannt für ihre einzigartigen, perlenartigen Blätter. Sie gedeiht in hellem, indirektem Licht und gut durchlässigem Boden."
+      "common_name": "Perlenstrauch",
+      "description": "Senecio herreanus, auch bekannt als Perlenstrauch, ist eine Sukkulente mit langen, herabhängenden Stängeln, die mit kleinen, kugelförmigen Blättern bedeckt sind. Sie gedeiht bei hellem, direktem Sonnenlicht und benötigt seltenes Gießen."
     },
     "fr": {
-      "common_name": "Senecio des haricots",
-      "description": "Senecio herreanus est une plante succulente connue pour ses feuilles en forme de perles. Elle préfère une lumière vive et indirecte ainsi qu'un sol bien drainé."
+      "common_name": "Chaîne de perles",
+      "description": "Senecio herreanus, également connu sous le nom de chaîne de perles, est une plante succulente avec de longues tiges pendantes couvertes de petites feuilles sphériques. Elle prospère sous la lumière directe du soleil et nécessite un arrosage peu fréquent."
     },
     "it": {
-      "common_name": "Senecio dei fagioli",
-      "description": "Senecio herreanus è una pianta succulenta nota per le sue foglie a forma di perla. Cresce bene in luce indiretta e in terreno ben drenato."
+      "common_name": "Catena di perle",
+      "description": "Senecio herreanus, noto anche come catena di perle, è una succulenta con lunghi steli pendenti ricoperti da piccole foglie sferiche. Cresce meglio alla luce solare diretta e richiede annaffiature poco frequenti."
     },
     "es": {
-      "common_name": "Senecio de frijoles",
-      "description": "Senecio herreanus es una planta suculenta conocida por sus hojas en forma de perlas. Prefiere luz indirecta y suelos bien drenados."
+      "common_name": "Cadena de perlas",
+      "description": "Senecio herreanus, también conocido como cadena de perlas, es una suculenta con tallos largos y colgantes cubiertos de pequeñas hojas esféricas. Crece bien bajo luz solar directa y requiere riego poco frecuente."
     },
     "pt": {
-      "common_name": "Senecio dos feijões",
-      "description": "Senecio herreanus é uma planta suculenta conhecida por suas folhas em forma de contas. Prefere luz indireta e solo bem drenado."
+      "common_name": "Corrente de pérolas",
+      "description": "Senecio herreanus, também conhecido como corrente de pérolas, é uma suculenta com caules longos e pendentes cobertos por pequenas folhas esféricas. Cresce bem sob luz solar direta e requer rega pouco frequente."
     },
     "ar": {
-      "common_name": "سينيشيو الحبوب",
-      "description": "سينيشيو هيريانوس هو نبات عصاري معروف بأوراقه ذات الشكل الكروي. يفضل الضوء الساطع وغير المباشر والتربة جيدة التصريف."
+      "common_name": "سلسلة اللؤلؤ",
+      "description": "Senecio herreanus، المعروف أيضًا باسم سلسلة اللؤلؤ، هو نبات عصاري ذو سيقان طويلة متدلية مغطاة بأوراق كروية صغيرة. ينمو جيدًا تحت أشعة الشمس المباشرة ويتطلب ريًّا غير متكرر."
     },
     "hi": {
-      "common_name": "सिनीशियो बीन",
-      "description": "सिनीशियो हेरियनस एक सूखा-सहेजने वाला पौधा है, जिसे इसके मोती जैसे पत्तों के लिए जाना जाता है। यह उज्जवल, अप्रत्यक्ष प्रकाश और अच्छी जल निकासी वाली मिट्टी में अच्छा बढ़ता है।"
+      "common_name": "मोती की माला",
+      "description": "Senecio herreanus, जिसे मोती की माला के नाम से भी जाना जाता है, एक सूक्ष्म पत्तियों से ढकी लंबी लताएँ होने वाली एक रसीली पौधा है। यह पूरी धूप में बढ़ता है और इसे बहुत कम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "豆类千年健",
-      "description": "千年健（Senecio herreanus）是一种多肉植物，以其珍珠般的叶片而闻名。它在明亮的间接光和排水良好的土壤中生长良好。"
+      "common_name": "珍珠链",
+      "description": "Senecio herreanus，也称为珍珠链，是一种多肉植物，长长的悬垂茎上覆盖着小而圆的叶子。它在明亮的直射阳光下茁壮成长，并且需要较少的浇水。"
     },
     "ja": {
-      "common_name": "ビーンセネシオ",
-      "description": "セネシオ・ヘレアヌスは、ビーズのような葉を持つ多肉植物です。明るい間接光と排水性の良い土壌でよく育ちます。"
+      "common_name": "ビーズの鎖",
+      "description": "Senecio herreanus、別名ビーズの鎖は、小さな球形の葉で覆われた長い垂れ下がった茎を持つ多肉植物です。直射日光の下でよく成長し、水やりはあまり必要ありません。"
     },
     "ko": {
-      "common_name": "콩세네시오",
-      "description": "세네시오 헤레아누스는 독특한 구슬 모양의 잎을 가진 다육 식물입니다. 밝고 간접적인 빛과 배수가 좋은 토양에서 잘 자랍니다."
+      "common_name": "진주 줄기",
+      "description": "Senecio herreanus, 진주 줄기로도 알려진 이 식물은 작은 구형 잎으로 덮인 긴 드리워진 줄기를 가진 다육식물입니다. 직사광선에서 잘 자라며, 물 주는 횟수는 적습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/105876/senecio-herreanus/details",
-      "https://www.gardenia.net/plant/senecio-herreanus-string-of-beans"
+      "https://www.rhs.org.uk/plants/1789/senecio-herreanus",
+      "https://www.gardenia.net/plant/senecio-herreanus-string-of-beads"
     ]
   }
 }

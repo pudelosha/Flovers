@@ -4,20 +4,20 @@
   "latin": "Saxifraga stolonifera",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "acidic"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universal",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "범용"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow growth",
+          "pl": "Powolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Strawberry Begonia",
-      "description": "Saxifraga stolonifera, also known as Strawberry Begonia, is a low-growing perennial. It features heart-shaped leaves and small white flowers with yellow centers."
+      "description": "Saxifraga stolonifera is a slow-growing plant known for its heart-shaped leaves. It's often grown as a houseplant due to its attractive foliage and trailing habit."
     },
     "pl": {
-      "common_name": "Begonia truskawkowa",
-      "description": "Saxifraga stolonifera, znana również jako Begonia truskawkowa, to niska roślina wieloletnia. Posiada sercowate liście i małe białe kwiaty z żółtymi środkami."
+      "common_name": "Truskawkowa Begonia",
+      "description": "Saxifraga stolonifera to powoli rosnąca roślina znana z sercowatych liści. Jest często uprawiana jako roślina doniczkowa ze względu na atrakcyjne liście i pnący zwyczaj."
     },
     "de": {
-      "common_name": "Erdbeeren-Begonie",
-      "description": "Saxifraga stolonifera, auch Erdbeeren-Begonie genannt, ist eine niedrig wachsende Staude mit herzförmigen Blättern und kleinen weißen Blüten mit gelben Mittelpunkten."
+      "common_name": "Erdbeeren Begonie",
+      "description": "Saxifraga stolonifera ist eine langsam wachsende Pflanze, die für ihre herzförmigen Blätter bekannt ist. Sie wird oft als Zimmerpflanze wegen ihres attraktiven Laubs und hängenden Wachstums gezogen."
     },
     "fr": {
-      "common_name": "Bégonia fraise",
-      "description": "Saxifraga stolonifera, également connue sous le nom de bégonia fraise, est une plante vivace à croissance basse. Elle présente des feuilles en forme de cœur et de petites fleurs blanches avec des centres jaunes."
+      "common_name": "Bégonia Fraise",
+      "description": "Saxifraga stolonifera est une plante à croissance lente connue pour ses feuilles en forme de cœur. Elle est souvent cultivée en plante d'intérieur en raison de son feuillage attrayant et de son habitude rampante."
     },
     "it": {
-      "common_name": "Begonia fragola",
-      "description": "Saxifraga stolonifera, conosciuta anche come Begonia fragola, è una pianta perenne a bassa crescita. Ha foglie a forma di cuore e piccoli fiori bianchi con centri gialli."
+      "common_name": "Begonia Fragola",
+      "description": "Saxifraga stolonifera è una pianta a crescita lenta nota per le sue foglie a forma di cuore. È spesso coltivata come pianta da appartamento grazie al suo fogliame attraente e al suo portamento ricadente."
     },
     "es": {
-      "common_name": "Begonia fresa",
-      "description": "Saxifraga stolonifera, también conocida como Begonia fresa, es una planta perenne de bajo crecimiento. Tiene hojas en forma de corazón y pequeñas flores blancas con centros amarillos."
+      "common_name": "Begonia Fresa",
+      "description": "Saxifraga stolonifera es una planta de crecimiento lento conocida por sus hojas en forma de corazón. Se cultiva a menudo como planta de interior debido a su follaje atractivo y su hábito de arrastre."
     },
     "pt": {
-      "common_name": "Begônia morango",
-      "description": "Saxifraga stolonifera, também conhecida como Begônia morango, é uma planta perene de baixo crescimento. Apresenta folhas em forma de coração e pequenas flores brancas com centros amarelos."
+      "common_name": "Begônia Morango",
+      "description": "Saxifraga stolonifera é uma planta de crescimento lento conhecida por suas folhas em forma de coração. É frequentemente cultivada como planta de interior devido à sua folhagem atraente e hábito de rastejamento."
     },
     "ar": {
-      "common_name": "بغونيا الفراولة",
-      "description": "Saxifraga stolonifera، والمعروفة أيضًا باسم بغونيا الفراولة، هي نبتة معمرة منخفضة النمو. تحتوي على أوراق على شكل قلب وأزهار بيضاء صغيرة مع مراكز صفراء."
+      "common_name": "بغونية الفراولة",
+      "description": "Saxifraga stolonifera هي نبات بطيء النمو معروف بأوراقه على شكل قلب. غالبًا ما يتم زراعته كنبات داخلي بسبب أوراقه الجذابة وعادته المتساقطة."
     },
     "hi": {
-      "common_name": "स्ट्रॉबेरी बगोनिया",
-      "description": "Saxifraga stolonifera, जिसे स्ट्रॉबेरी बगोनिया भी कहा जाता है, एक निम्न-आयु वाली बारहमासी पौधा है। इसमें दिल के आकार के पत्ते और छोटे सफेद फूल होते हैं जिनमें पीले केंद्र होते हैं।"
+      "common_name": "स्ट्रॉबेरी बेगोनिया",
+      "description": "Saxifraga stolonifera एक धीमी वृद्धि वाली पौधा है जो अपने दिल के आकार के पत्तों के लिए जाना जाता है। इसे अक्सर इसके आकर्षक पत्तों और लटकने की आदत के कारण घर में उगाया जाता है।"
     },
     "zh": {
-      "common_name": "草莓秋海棠",
-      "description": "Saxifraga stolonifera，也被称为草莓秋海棠，是一种低矮的多年生植物。它有心形的叶子和小的白色花朵，中心带有黄色。"
+      "common_name": "草莓凤仙花",
+      "description": "Saxifraga stolonifera 是一种生长缓慢的植物，以其心形的叶子而闻名。由于其有吸引力的叶片和垂直生长的习性，通常作为室内植物栽培。"
     },
     "ja": {
       "common_name": "ストロベリー・ベゴニア",
-      "description": "Saxifraga stolonifera、別名ストロベリー・ベゴニアは、低成長の多年草です。ハート型の葉と、黄色い中心を持つ小さな白い花があります。"
+      "description": "Saxifraga stoloniferaは、ハート型の葉で知られる成長が遅い植物です。魅力的な葉と垂れ下がる習性があり、観葉植物としてよく栽培されます。"
     },
     "ko": {
-      "common_name": "딸기 베고니아",
-      "description": "Saxifraga stolonifera, 또는 딸기 베고니아는 낮은 성장의 다년생 식물입니다. 하트 모양의 잎과 노란색 중심의 작은 흰 꽃을 가지고 있습니다."
+      "common_name": "스트로베리 베고니아",
+      "description": "Saxifraga stolonifera는 하트 모양의 잎으로 알려진 느리게 자라는 식물입니다. 매력적인 잎과 덩굴성 습성 덕분에 실내 식물로 자주 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/ornamental/flowers/strawberry-begonia.htm",
-      "https://www.rhs.org.uk/Plants/3425/Saxifraga-stolonifera/Details"
+      "https://www.rhs.org.uk/plants/saxifraga-stolonifera",
+      "https://www.gardenia.net/plant/saxifraga-stolonifera"
     ]
   }
 }

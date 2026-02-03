@@ -1,9 +1,9 @@
 {
   "external_id": "acalypha_wilkesiana",
-  "name": "Copperleaf",
+  "name": "Acalypha wilkesiana",
   "latin": "Acalypha wilkesiana",
-  "sun": "high",
-  "water": "high",
+  "sun": "medium",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "acalypha_wilkesiana.jpg",
   "image_thumb": "acalypha_wilkesiana.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainé",
-          "it": "Ricco drenato",
-          "es": "Rico y drenado",
-          "pt": "Rico drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水土",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "保持湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Modérée",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium difficulty",
+          "pl": "Średni poziom trudności",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30℃"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -126,7 +126,7 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻度有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnellwachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "성장 빠름"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Copperleaf",
-      "description": "Acalypha wilkesiana is a tropical shrub valued for its colorful foliage. It prefers bright light, warm temperatures, and consistently moist soil indoors."
+      "description": "Acalypha wilkesiana, commonly known as Copperleaf, is a tropical shrub native to the Pacific islands. It is admired for its striking foliage and colorful leaves."
     },
     "pl": {
-      "common_name": "Akalyfa miedziana",
-      "description": "Acalypha wilkesiana to tropikalna roślina o barwnych liściach. Wymaga jasnego światła, ciepła i stale wilgotnego podłoża."
+      "common_name": "Czerwony liść",
+      "description": "Acalypha wilkesiana, znana jako Czerwony liść, to tropikalny krzew pochodzący z wysp Pacyfiku. Jest ceniona za swoje uderzające liście i kolorowe barwy."
     },
     "de": {
       "common_name": "Kupferblatt",
-      "description": "Acalypha wilkesiana ist eine tropische Blattpflanze mit intensiven Farben. Sie benötigt viel Licht, Wärme und gleichmäßig feuchte Erde."
+      "description": "Acalypha wilkesiana, auch Kupferblatt genannt, ist ein tropischer Strauch aus den pazifischen Inseln. Er wird für sein auffälliges Laub und seine bunten Blätter geschätzt."
     },
     "fr": {
       "common_name": "Feuille de cuivre",
-      "description": "Acalypha wilkesiana est une plante tropicale décorative par son feuillage. Elle aime la lumière vive, la chaleur et un sol humide."
+      "description": "Acalypha wilkesiana, communément appelée Feuille de cuivre, est un arbuste tropical originaire des îles du Pacifique. Il est apprécié pour son feuillage frappant et ses feuilles colorées."
     },
     "it": {
-      "common_name": "Acalifa",
-      "description": "Acalypha wilkesiana è una pianta tropicale ornamentale per le foglie colorate. Richiede luce intensa, caldo e terreno umido."
+      "common_name": "Foglia di rame",
+      "description": "Acalypha wilkesiana, conosciuta come Foglia di rame, è un arbusto tropicale originario delle isole del Pacifico. È apprezzata per il suo fogliame straordinario e le sue foglie colorate."
     },
     "es": {
-      "common_name": "Acalifa",
-      "description": "Acalypha wilkesiana es una planta tropical apreciada por su follaje. Necesita mucha luz, calor y suelo constantemente húmedo."
+      "common_name": "Hoja de cobre",
+      "description": "Acalypha wilkesiana, conocida como Hoja de cobre, es un arbusto tropical originario de las islas del Pacífico. Se aprecia por su llamativo follaje y sus hojas de colores."
     },
     "pt": {
-      "common_name": "Acalifa",
-      "description": "Acalypha wilkesiana é uma planta tropical de folhagem colorida. Prefere luz intensa, calor e solo sempre úmido."
+      "common_name": "Folha de cobre",
+      "description": "Acalypha wilkesiana, conhecida como Folha de cobre, é um arbusto tropical nativo das ilhas do Pacífico. É admirada por sua folhagem impressionante e folhas coloridas."
     },
     "ar": {
-      "common_name": "أكاليفا",
-      "description": "أكاليفا ويلكيسيانا نبات استوائي يتميز بأوراقه الملونة. يحتاج إلى ضوء قوي وحرارة ورطوبة منتظمة."
+      "common_name": "ورقة النحاس",
+      "description": "Acalypha wilkesiana، المعروفة بورقة النحاس، هي شجيرة استوائية موطنها جزر المحيط الهادئ. إنها مشهورة بأوراقها اللافتة للنظر وأوراقها الملونة."
     },
     "hi": {
-      "common_name": "एकैलिफा",
-      "description": "Acalypha wilkesiana एक उष्णकटिबंधीय पौधा है जो रंगीन पत्तियों के लिए जाना जाता है। इसे तेज रोशनी, गर्मी और नम मिट्टी चाहिए।"
+      "common_name": "कॉपरलीफ",
+      "description": "Acalypha wilkesiana, जिसे कॉपरलीफ कहा जाता है, एक उष्णकटिबंधीय झाड़ी है जो प्रशांत द्वीपों का मूल निवासी है। यह अपनी आकर्षक पत्तियों और रंगीन पत्तों के लिए सराही जाती है।"
     },
     "zh": {
-      "common_name": "彩叶铁苋菜",
-      "description": "Acalypha wilkesiana 是一种热带观叶植物。它需要明亮光照、温暖环境和持续湿润的土壤。"
+      "common_name": "铜叶",
+      "description": "Acalypha wilkesiana，常被称为铜叶，是一种原产于太平洋岛屿的热带灌木。它因其引人注目的叶子和多彩的叶片而受到喜爱。"
     },
     "ja": {
-      "common_name": "アカリファ",
-      "description": "アカリファ・ウィルケシアナは色鮮やかな葉が特徴の熱帯植物です。明るい光と暖かさ、湿った土を好みます。"
+      "common_name": "銅葉",
+      "description": "Acalypha wilkesiana、一般的に銅葉として知られるのは、太平洋の島々原産の熱帯の低木です。その目を引く葉とカラフルな葉で評価されています。"
     },
     "ko": {
-      "common_name": "아칼리파",
-      "description": "Acalypha wilkesiana는 화려한 잎을 가진 열대 식물입니다. 밝은 빛과 따뜻한 환경, 촉촉한 흙을 선호합니다."
+      "common_name": "구리잎",
+      "description": "Acalypha wilkesiana, 일반적으로 구리잎으로 알려진 이 식물은 태평양 제도의 열대 관목입니다. 그 화려한 잎과 다채로운 색상의 잎으로 주목받고 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b401",
-      "https://edis.ifas.ufl.edu/publication/FP020",
-      "https://www.rhs.org.uk/plants/2882/acalypha-wilkesiana/details"
+      "https://www.rhs.org.uk/plants/acyclpha-wilkesiana",
+      "https://www.gardenia.net/plant/acalypha-wilkesiana"
     ]
   }
 }

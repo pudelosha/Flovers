@@ -1,27 +1,27 @@
 {
   "external_id": "monstera_acacoyaguensis",
-  "name": "Monstera Acacoyaguensis",
+  "name": "Monstera acacoyaguensis",
   "latin": "Monstera acacoyaguensis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "orchid"
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": null,
   "image_hero": "monstera_acacoyaguensis.jpg",
   "image_thumb": "monstera_acacoyaguensis.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy aroid mix",
-          "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Terriccio arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato leve",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "透气土壤",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlew.",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature medie",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Intermediate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Intermédiaire",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humid air",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पशुओं के लिए विषैला",
           "zh": "对宠物有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 독성 있음"
         }
       }
     },
@@ -162,77 +162,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing aroid",
-          "pl": "Pnącze",
-          "de": "Kletterpflanze",
-          "fr": "Plante grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "نبات متسلق",
-          "hi": "चढ़ने वाला",
-          "zh": "攀缘生长",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Acacoyaguensis Monstera",
-      "description": "Monstera acacoyaguensis is a rare climbing aroid native to southern Mexico. It grows in humid forests and develops fenestrated leaves as it matures. Indoors it prefers bright indirect light and evenly moist soil."
+      "common_name": "Monstera acacoyaguensis",
+      "description": "Monstera acacoyaguensis is a rare species in the Monstera family, known for its large, glossy leaves. It thrives in moderate light and regular watering, requiring a well-draining soil mix."
     },
     "pl": {
       "common_name": "Monstera acacoyaguensis",
-      "description": "Monstera acacoyaguensis to rzadki aroid pochodzący z południowego Meksyku. W naturze rośnie w wilgotnych lasach i wspina się po drzewach. W uprawie domowej wymaga jasnego, rozproszonego światła."
+      "description": "Monstera acacoyaguensis to rzadki gatunek z rodziny Monstera, znany z dużych, błyszczących liści. Rośnie najlepiej w średnim świetle i regularnym podlewaniu, wymagając dobrze przepuszczalnej gleby."
     },
     "de": {
       "common_name": "Monstera acacoyaguensis",
-      "description": "Monstera acacoyaguensis ist eine seltene Kletterpflanze aus Mexiko. Sie wächst in feuchten Wäldern und bildet mit dem Alter durchbrochene Blätter. Als Zimmerpflanze bevorzugt sie helles, indirektes Licht."
+      "description": "Monstera acacoyaguensis ist eine seltene Art aus der Familie der Monstera, bekannt für ihre großen, glänzenden Blätter. Sie gedeiht bei mittlerem Licht und regelmäßigem Gießen und benötigt gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "Monstera acacoyaguensis",
-      "description": "Monstera acacoyaguensis est une espèce rare originaire du Mexique. Elle pousse dans des forêts humides et grimpe sur les arbres. En intérieur, elle aime une lumière vive sans soleil direct."
+      "description": "Monstera acacoyaguensis est une espèce rare de la famille des Monstera, connue pour ses grandes feuilles brillantes. Elle prospère sous une lumière modérée et un arrosage régulier, nécessitant un sol bien drainé."
     },
     "it": {
       "common_name": "Monstera acacoyaguensis",
-      "description": "Monstera acacoyaguensis è un’aracea rara originaria del Messico. Cresce in ambienti umidi e sviluppa foglie perforate con l’età. In casa richiede luce indiretta e terreno ben drenante."
+      "description": "Monstera acacoyaguensis è una specie rara della famiglia Monstera, nota per le sue grandi foglie lucide. Cresce meglio con luce media e annaffiature regolari, richiedendo un terreno ben drenato."
     },
     "es": {
       "common_name": "Monstera acacoyaguensis",
-      "description": "Monstera acacoyaguensis es una especie poco común de México. Habita bosques húmedos y crece como trepadora. En interiores necesita luz indirecta brillante y riego moderado."
+      "description": "Monstera acacoyaguensis es una especie rara de la familia Monstera, conocida por sus grandes hojas brillantes. Crece bien con luz moderada y riego regular, requiriendo un suelo bien drenado."
     },
     "pt": {
       "common_name": "Monstera acacoyaguensis",
-      "description": "Monstera acacoyaguensis é uma espécie rara nativa do México. Vive em florestas úmidas e cresce de forma trepadeira. Em ambientes internos prefere luz indireta e solo bem drenado."
+      "description": "Monstera acacoyaguensis é uma espécie rara da família Monstera, conhecida por suas grandes folhas brilhantes. Cresce bem sob luz moderada e rega regular, necessitando de solo bem drenado."
     },
     "ar": {
-      "common_name": "مونستيرا أكاكوياغوينسيس",
-      "description": "مونستيرا أكاكوياغوينسيس نبات نادر موطنه المكسيك. ينمو في الغابات الرطبة ويتسلق الأشجار. يفضل داخل المنزل ضوءًا غير مباشر وريًا معتدلاً."
+      "common_name": "Monstera acacoyaguensis",
+      "description": "Monstera acacoyaguensis هو نوع نادر من عائلة Monstera ، معروف بأوراقه اللامعة الكبيرة. ينمو بشكل أفضل في الضوء المعتدل وري منتظم، ويحتاج إلى تربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "मॉन्स्टेरा अकाकोयागुएन्सिस",
-      "description": "Monstera acacoyaguensis मेक्सिको का एक दुर्लभ आरोइड पौधा है। यह नम जंगलों में चढ़ने वाला पौधा है। घर के अंदर इसे अप्रत्यक्ष रोशनी और संतुलित पानी चाहिए।"
+      "common_name": "Monstera acacoyaguensis",
+      "description": "Monstera acacoyaguensis एक दुर्लभ प्रजाति है, जो Monstera परिवार से है, जिसे इसके बड़े और चमकदार पत्तों के लिए जाना जाता है। यह मध्यम रोशनी और नियमित पानी देने में अच्छे से बढ़ता है, इसके लिए अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "阿卡科亚龟背竹",
-      "description": "Monstera acacoyaguensis 原产于墨西哥，是一种较为稀有的龟背竹。它生长在潮湿森林中，具有攀缘习性。室内养护需明亮散射光和适度浇水。"
+      "common_name": "Monstera acacoyaguensis",
+      "description": "Monstera acacoyaguensis 是一种稀有的 Monstera 科植物，因其大而光亮的叶子而闻名。它在中等光照和定期浇水下生长良好，需求排水良好的土壤。"
     },
     "ja": {
-      "common_name": "モンステラ・アカコヤグエンシス",
-      "description": "モンステラ・アカコヤグエンシスはメキシコ原産の希少種です。湿潤な森林で木に登って成長します。室内では明るい間接光を好みます。"
+      "common_name": "Monstera acacoyaguensis",
+      "description": "Monstera acacoyaguensis は、Monstera 科の希少種で、大きく光沢のある葉で知られています。中程度の光と定期的な水やりでよく育ち、水はけの良い土壌を必要とします。"
     },
     "ko": {
-      "common_name": "몬스테라 아카코야구엔시스",
-      "description": "몬스테라 아카코야구엔시스는 멕시코 원산의 희귀한 아로이드 식물입니다. 습한 숲에서 덩굴성으로 자랍니다. 실내에서는 밝은 간접광과 적당한 물을 선호합니다."
+      "common_name": "Monstera acacoyaguensis",
+      "description": "Monstera acacoyaguensis는 Monstera 속의 희귀한 종으로, 크고 광택 있는 잎으로 유명합니다. 중간 정도의 빛과 정기적인 물주기로 잘 자라며 배수가 좋은 토양이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/science/collections-and-resources/collections/herbarium",
-      "https://www.aroid.org/genera/monstera/monstera_acacoyaguensis.php",
-      "https://edis.ifas.ufl.edu/publication/EP382"
+      "https://www.rhs.org.uk/advice/profile?pid=500",
+      "https://www.gardeningknowhow.com/houseplants/monstera/monstera-care.htm",
+      "https://www.plantcaretoday.com/monstera-care.html"
     ]
   }
 }

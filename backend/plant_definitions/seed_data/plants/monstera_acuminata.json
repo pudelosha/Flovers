@@ -12,12 +12,12 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "orchid"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainierend",
-          "fr": "Drainant",
-          "it": "Ben drenante",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroida",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange aroid",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla aroid",
+          "pt": "Mistura aroid",
+          "ar": "مزيج أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "爱罗伊土壤",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합"
         }
       }
     },
@@ -69,11 +69,11 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig",
+          "de": "Moderat",
           "fr": "Modéré",
-          "it": "Moderata",
+          "it": "Moderato",
           "es": "Moderado",
-          "pt": "Moderada",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
@@ -87,16 +87,16 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnia",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Durchschnitt",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य",
-          "zh": "一般湿度",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing",
-          "pl": "Pnąca",
-          "de": "Kletternd",
-          "fr": "Grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "متسلقة",
-          "hi": "चढ़ने वाली",
-          "zh": "攀援生长",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Moderate",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evita l'eccessiva irrigazione",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evite regar demais",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata is a tropical climbing aroid native to Central America. It has elongated, fenestrated leaves and grows well indoors with support."
+      "common_name": "Monkey Leaf",
+      "description": "Monstera acuminata is a unique and rare variety of Monstera, featuring elongated, arrow-shaped leaves. It thrives in moderate light and requires consistent care to maintain its health."
     },
     "pl": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata to tropikalne pnącze z Ameryki Środkowej. Ma wydłużone liście z otworami i dobrze rośnie w domu."
+      "common_name": "Liść Małpi",
+      "description": "Monstera acuminata to wyjątkowa i rzadka odmiana Monstery, charakteryzująca się wydłużonymi, strzałkowatymi liśćmi. Dobrze rośnie przy umiarkowanym świetle i wymaga systematycznej opieki."
     },
     "de": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata ist eine tropische Kletterpflanze aus Mittelamerika. Sie bildet längliche, durchbrochene Blätter und wächst gut im Innenraum."
+      "common_name": "Affenblatt",
+      "description": "Monstera acuminata ist eine einzigartige und seltene Monstera-Art mit länglichen, pfeilförmigen Blättern. Sie gedeiht bei mittlerem Licht und benötigt regelmäßige Pflege."
     },
     "fr": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata est une plante tropicale grimpante d’Amérique centrale. Elle possède des feuilles allongées et ajourées."
+      "common_name": "Feuille de Singe",
+      "description": "Monstera acuminata est une variété rare et unique de Monstera, avec des feuilles allongées en forme de flèche. Elle préfère la lumière modérée et nécessite des soins constants."
     },
     "it": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata è una pianta tropicale rampicante dell’America Centrale. Presenta foglie allungate con fenestrazioni."
+      "common_name": "Foglia di Scimmia",
+      "description": "Monstera acuminata è una varietà rara e unica di Monstera, con foglie allungate a forma di freccia. Cresce bene con luce moderata e richiede cure costanti."
     },
     "es": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata es una planta tropical trepadora de Centroamérica. Tiene hojas alargadas con perforaciones decorativas."
+      "common_name": "Hoja de Mono",
+      "description": "Monstera acuminata es una variedad rara y única de Monstera, con hojas alargadas en forma de flecha. Prefiere luz moderada y requiere cuidados regulares."
     },
     "pt": {
-      "common_name": "Monstera",
-      "description": "Monstera acuminata é uma planta tropical trepadeira da América Central. Suas folhas são alongadas e perfuradas."
+      "common_name": "Folha de Macaco",
+      "description": "Monstera acuminata é uma variedade rara e única de Monstera, com folhas alongadas em forma de seta. Prefere luz moderada e necessita de cuidados constantes."
     },
     "ar": {
-      "common_name": "مونستيرا",
-      "description": "مونستيرا أكوميناتـا نبات استوائي متسلق من أمريكا الوسطى. يتميز بأوراق ممدودة ذات فتحات."
+      "common_name": "ورقة القرد",
+      "description": "Monstera acuminata هو نوع نادر وفريد من نوعه من Monstera، يتميز بأوراق طويلة الشكل مثل السهم. يحتاج إلى الضوء المعتدل ويتطلب رعاية مستمرة."
     },
     "hi": {
-      "common_name": "मॉन्स्टेरा",
-      "description": "मॉन्स्टेरा एक्यूमिनाटा मध्य अमेरिका का उष्णकटिबंधीय पौधा है। इसकी पत्तियाँ लंबी और छिद्रदार होती हैं।"
+      "common_name": "मोनस्टेरा पत्ता",
+      "description": "Monstera acuminata एक अद्वितीय और दुर्लभ प्रकार की Monstera है, जिसमें लम्बी और तीर के आकार की पत्तियाँ होती हैं। इसे मध्यम रोशनी में वृद्धि होती है और इसे नियमित देखभाल की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "龟背竹",
-      "description": "Monstera acuminata 原产于中美洲，是热带攀援植物。叶片细长并带有裂孔。"
+      "common_name": "猴子叶",
+      "description": "Monstera acuminata 是一种独特且稀有的 Monstera 品种，具有延长的箭头形叶片。它在中等光照下生长良好，需要持续的护理来维持健康。"
     },
     "ja": {
-      "common_name": "モンステラ",
-      "description": "モンステラ・アクミナータは中米原産の熱帯植物です。細長い切れ込みのある葉を持ちます。"
+      "common_name": "モンステラの葉",
+      "description": "Monstera acuminata は、矢印型の長い葉を特徴とするユニークで珍しいモンステラの一種です。中程度の光を好み、健康を維持するために定期的なケアが必要です。"
     },
     "ko": {
-      "common_name": "몬스테라",
-      "description": "몬스테라 아쿠미나타는 중앙아메리카 원산의 열대 식물입니다. 길고 구멍이 있는 잎이 특징입니다."
+      "common_name": "원숭이 잎",
+      "description": "Monstera acuminata는 길쭉하고 화살 모양의 잎을 가진 독특하고 희귀한 몬스테라 품종입니다. 중간 정도의 빛에서 잘 자라며 꾸준한 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/monstera-acuminata",
-      "https://www.aroid.org/genera/monstera/monstera.php",
-      "https://plants.ces.ncsu.edu/plants/monstera/"
+      "https://www.rhs.org.uk/advice/profile?pid=859",
+      "https://www.gardenia.net/plant/monstera-acuminata"
     ]
   }
 }

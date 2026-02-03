@@ -1,6 +1,6 @@
 {
   "external_id": "begonia_conchifolia",
-  "name": "Conch Leaf Begonia",
+  "name": "Shell begonia",
   "latin": "Begonia conchifolia",
   "sun": "medium",
   "water": "medium",
@@ -11,15 +11,15 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "begonia_conchifolia.jpg",
@@ -31,13 +31,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles indirektes",
-          "fr": "Lumière indirecte",
+          "de": "Helles Indirektlicht",
+          "fr": "Lumiere indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "hi": "तेज परोक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podloze",
+          "de": "Gut drainierende Erde",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जल-निकासी मिश्रण",
+          "zh": "排水良好基质",
+          "ja": "排水のよい用土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowana",
-          "de": "Gleichmäßig",
-          "fr": "Humidité régulière",
-          "it": "Umidità costante",
-          "es": "Humedad regular",
-          "pt": "Umidade regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "नियमित नमी",
-          "zh": "均匀湿润",
-          "ja": "適度な湿り",
-          "ko": "고른 수분"
+          "en": "Water when top dries",
+          "pl": "Podlej gdy wierzch suchy",
+          "de": "Giesen wenn oben trocken",
+          "fr": "Arroser quand sec dessus",
+          "it": "Annaffia sopra asciutto",
+          "es": "Riega al secar arriba",
+          "pt": "Regar quando secar topo",
+          "ar": "اسق عند جفاف السطح",
+          "hi": "ऊपर सूखे तो पानी",
+          "zh": "表土干再浇水",
+          "ja": "表土が乾いたら水",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -87,17 +87,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "pl": "Umiarkowana pielegnacja",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado medio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "管理ふつう",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°م",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "مرتفعة",
-          "hi": "उच्च",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotnosc",
+          "de": "Mittelere Luftfeuchte",
+          "fr": "Humidite moderee",
+          "it": "Umidita moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierzat",
+          "de": "Giftig fur Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Toxica para mascotas",
+          "pt": "Toxica para pets",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact clump",
-          "pl": "Zwarty pokrój",
-          "de": "Kompakt",
+          "en": "Compact foliage",
+          "pl": "Zwarty pokroj",
+          "de": "Kompakter Wuchs",
           "fr": "Port compact",
-          "it": "Compatta",
-          "es": "Compacta",
-          "pt": "Compacta",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
           "ar": "نمو مدمج",
           "hi": "सघन वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "컴팩트"
+          "zh": "株形紧凑",
+          "ja": "コンパクトに育つ",
+          "ko": "컴팩트한 생장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Root rot if soggy",
+          "pl": "Zgnilizna przy przelaniu",
+          "de": "Faulnis bei Nasse",
+          "fr": "Pourriture si detrempe",
+          "it": "Marciume se fradicia",
+          "es": "Pudricion si encharca",
+          "pt": "Podridao se encharcar",
+          "ar": "تعفن مع البلل",
+          "hi": "गीला रहे तो सड़न",
+          "zh": "积水易烂根",
+          "ja": "過湿で根腐れ",
+          "ko": "과습시 뿌리썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Przedziorki, welnowce",
+          "de": "Milben, Wolllause",
+          "fr": "Acarien, cochenille",
+          "it": "Acari, cocciniglie",
+          "es": "Acaros, cochinillas",
+          "pt": "Acaros, cochonilhas",
+          "ar": "عث وبق دقيقي",
+          "hi": "माइट्स, मिलीबग",
+          "zh": "红蜘蛛, 粉蚧",
+          "ja": "ハダニ, コナカイガラ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Conch Leaf Begonia",
-      "description": "Begonia conchifolia is a tropical begonia known for its round green leaves with red centers. It prefers bright indirect light and evenly moist soil. This species is commonly grown indoors for its decorative foliage."
+      "common_name": "Shell begonia",
+      "description": "Begonia conchifolia is a compact begonia grown for its rounded, shell-like leaves. Keep it in bright, indirect light and water when the surface of the mix dries. Provide warm temperatures and good drainage to reduce the risk of rot."
     },
     "pl": {
       "common_name": "Begonia muszlowa",
-      "description": "Begonia conchifolia to tropikalna begonia o okrągłych liściach z czerwonym środkiem. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanie wilgotnym podłożu. Często uprawiana jest jako roślina domowa."
+      "description": "Begonia conchifolia to kompaktowa begonia ceniona za zaokraglone liscie przypominajace muszle. Ustaw w jasnym, rozproszonym swietle i podlewaj, gdy przeschnie wierzch podloza. Zapewnij cieplo i dobry odplyw wody, aby ograniczyc ryzyko zgnilizny."
     },
     "de": {
-      "common_name": "Muschelblatt-Begonie",
-      "description": "Begonia conchifolia ist eine tropische Begonie mit runden Blättern und roter Mitte. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Die Art wird häufig als Zimmerpflanze kultiviert."
+      "common_name": "Muschel-Begonie",
+      "description": "Begonia conchifolia ist eine kompakte Begonie mit rundlichen, muschelartigen Blattern. Stelle sie hell, aber ohne direkte Sonne, und giesse erst, wenn die Oberflache des Substrats abgetrocknet ist. Warme Temperaturen und eine gute Drainage helfen, Faule zu vermeiden."
     },
     "fr": {
-      "common_name": "Bégonia à feuilles conques",
-      "description": "Begonia conchifolia est un bégonia tropical aux feuilles rondes à centre rouge. Elle aime la lumière indirecte et un sol légèrement humide. Elle est surtout cultivée comme plante d’intérieur."
+      "common_name": "Begonia coquille",
+      "description": "Begonia conchifolia est un begonia compact cultive pour ses feuilles arrondies en forme de coquille. Placez-le en lumiere vive indirecte et arrosez quand la surface du substrat seche. Une temperature douce et un bon drainage limitent les risques de pourriture."
     },
     "it": {
-      "common_name": "Begonia a foglia di conchiglia",
-      "description": "Begonia conchifolia è una begonia tropicale con foglie rotonde e centro rosso. Predilige luce indiretta e terreno costantemente umido. È coltivata principalmente come pianta da interno."
+      "common_name": "Begonia conchiglia",
+      "description": "Begonia conchifolia e una begonia compatta apprezzata per le foglie tonde a forma di conchiglia. Tienila in luce intensa indiretta e annaffia quando lo strato superiore del terriccio e asciutto. Calore e drenaggio efficace aiutano a prevenire marciumi."
     },
     "es": {
-      "common_name": "Begonia hoja de concha",
-      "description": "Begonia conchifolia es una begonia tropical con hojas redondeadas y centro rojo. Prefiere luz indirecta brillante y suelo uniformemente húmedo. Se cultiva comúnmente en interiores."
+      "common_name": "Begonia concha",
+      "description": "Begonia conchifolia es una begonia compacta cultivada por sus hojas redondeadas tipo concha. Colocala con luz brillante indirecta y riega cuando se seque la parte superior del sustrato. Temperaturas templadas y buen drenaje reducen el riesgo de pudricion."
     },
     "pt": {
-      "common_name": "Begônia folha de concha",
-      "description": "Begonia conchifolia é uma begônia tropical com folhas arredondadas e centro vermelho. Prefere luz indireta e solo levemente úmido. É muito cultivada como planta de interior."
+      "common_name": "Begonia concha",
+      "description": "Begonia conchifolia e uma begonia compacta cultivada pelas folhas arredondadas em forma de concha. Mantenha em luz forte indireta e regue quando a superficie do substrato secar. Temperatura amena e boa drenagem ajudam a evitar apodrecimento."
     },
     "ar": {
-      "common_name": "بيغونيا ورقة الصدفة",
-      "description": "Begonia conchifolia نبات استوائي بأوراق مستديرة ومركز أحمر. يفضل الضوء غير المباشر والتربة الرطبة باعتدال. يُزرع غالبًا كنبات داخلي."
+      "common_name": "بيغونيا الصدفة",
+      "description": "Begonia conchifolia بيغونيا مدمجة تزرع لاوراق مستديرة تشبه الصدفة. توضع في ضوء ساطع غير مباشر وتروى عند جفاف سطح التربة. الدفء والتصريف الجيد يقللان خطر التعفن."
     },
     "hi": {
-      "common_name": "कोंच लीफ बेगोनिया",
-      "description": "Begonia conchifolia एक उष्णकटिबंधीय बेगोनिया है जिसकी पत्तियाँ गोल और बीच में लाल होती हैं। इसे अप्रत्यक्ष रोशनी और समान नमी वाली मिट्टी पसंद है। इसे आमतौर पर घर के अंदर उगाया जाता है।"
+      "common_name": "शेल बेगोनिया",
+      "description": "Begonia conchifolia एक कॉम्पैक्ट बेगोनिया है जिसकी पत्तियां खोल जैसी गोल होती हैं। इसे तेज परोक्ष रोशनी में रखें और मिट्टी की ऊपर की सतह सूखने पर पानी दें। गर्म तापमान और अच्छी जल-निकासी सड़न के जोखिम को कम करती है।"
     },
     "zh": {
-      "common_name": "贝壳叶秋海棠",
-      "description": "Begonia conchifolia 是一种热带秋海棠，具有圆形叶片和红色叶心。它喜欢明亮的散射光和均匀湿润的土壤。常作为室内观叶植物栽培。"
+      "common_name": "贝壳秋海棠",
+      "description": "Begonia conchifolia 为紧凑型秋海棠，叶片圆润似贝壳。放在明亮散射光处，基质表层变干后再浇水。保持温暖并确保排水良好，可降低烂根风险。"
     },
     "ja": {
-      "common_name": "コンチフォリアベゴニア",
-      "description": "Begonia conchifolia は中央が赤い丸い葉を持つ熱帯性ベゴニアです。明るい間接光と適度に湿った土を好みます。主に観葉植物として室内で育てられます。"
+      "common_name": "シェルベゴニア",
+      "description": "Begonia conchifolia は貝殻のような丸い葉を楽しむコンパクトなベゴニアです。明るい間接光で育て、用土の表面が乾いてから水やりします。暖かさと排水性を保つと根腐れを防ぎやすくなります。"
     },
     "ko": {
-      "common_name": "콘치폴리아 베고니아",
-      "description": "Begonia conchifolia는 붉은 중심을 가진 둥근 잎의 열대 베고니아입니다. 밝은 간접광과 고른 수분의 토양을 선호합니다. 주로 실내 관엽식물로 재배됩니다."
+      "common_name": "셸 베고니아",
+      "description": "Begonia conchifolia 는 조개처럼 둥근 잎이 특징인 컴팩트한 베고니아입니다. 밝은 간접광에서 키우고 겉흙이 마르면 물을 주세요. 따뜻한 온도와 좋은 배수는 뿌리썩음을 줄이는 데 도움이 됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1669/begonia-conchifolia/details",
-      "https://plants.ces.ncsu.edu/plants/begonia/",
-      "https://www.botanicgardens.org/plant/begonia"
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/begonia",
+      "https://www.begonias.org/pests-and-diseases-in-begonias/",
+      "https://plnts.com/en/care/houseplants-family/begonia",
+      "https://www.gabriellaplants.com/products/begonia-conchifolia-4?srsltid=AfmBOorQ7uvyhdC_7mEOX7AYZGn_iVZ8WAELT5wY48FZvRDrvQfpK3o4",
+      "https://www.begoniasymas.com/en/producto/begonia-conchifolia-variegata/?srsltid=AfmBOool80FJWZzQ4P9Q4KB7t6J2iyfWIwMVIGw9Lc5WzOcJ41FA59eB"
     ]
   }
 }

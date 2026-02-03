@@ -3,19 +3,19 @@
   "name": "Gazania",
   "latin": "Gazania linearis",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "cactus"
+    "all-purpose",
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -33,13 +33,13 @@
           "pl": "Pełne słońce",
           "de": "Volle Sonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरा सूर्य",
           "zh": "全日照",
-          "ja": "日当たり良好",
+          "ja": "直射日光",
           "ko": "강한 햇빛"
         }
       }
@@ -49,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature scarse",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "적은 물주기"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गरम मौसम",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "독성 없음"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low, spreading",
-          "pl": "Niska, rozłożysta",
-          "de": "Niedrig wachsend",
-          "fr": "Bas et étalé",
-          "it": "Bassa e espansa",
-          "es": "Bajo y extendido",
-          "pt": "Baixo e aberto",
-          "ar": "منخفضة الانتشار",
-          "hi": "नीची फैलावदार",
-          "zh": "低矮铺展",
-          "ja": "低く広がる",
-          "ko": "낮게 퍼짐"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Treasure flower",
-      "description": "Gazania linearis is a sun-loving ornamental plant native to southern Africa. It produces bright daisy-like flowers that open in full sunlight. It is drought tolerant and prefers well-drained soil."
+      "common_name": "Gazania",
+      "description": "Gazania linearis is a sun-loving plant known for its vibrant flowers. It thrives in well-drained soil and regular watering."
     },
     "pl": {
       "common_name": "Gazania",
-      "description": "Gazania linearis to roślina ozdobna pochodząca z południowej Afryki. Kwitnie intensywnie w pełnym słońcu, tworząc duże kwiaty. Dobrze znosi suszę i lekką glebę."
+      "description": "Gazania linearis to roślina kochająca słońce, znana z jaskrawych kwiatów. Rośnie w dobrze przepuszczalnej glebie i regularnym podlewaniu."
     },
     "de": {
       "common_name": "Gazanie",
-      "description": "Gazania linearis ist eine Zierpflanze aus dem südlichen Afrika. Sie bildet auffällige Blüten, die sich bei Sonne öffnen. Die Pflanze ist trockenheitsverträglich."
+      "description": "Gazania linearis ist eine sonnenliebende Pflanze, bekannt für ihre lebendigen Blumen. Sie gedeiht in gut durchlässigem Boden und bei regelmäßiger Bewässerung."
     },
     "fr": {
-      "common_name": "Gazanie",
-      "description": "Gazania linearis est une plante ornementale originaire d’Afrique australe. Elle fleurit abondamment au soleil. Elle préfère les sols bien drainés et secs."
+      "common_name": "Gazania",
+      "description": "Gazania linearis est une plante aimant le soleil, connue pour ses fleurs vibrantes. Elle prospère dans un sol bien drainé et un arrosage régulier."
     },
     "it": {
       "common_name": "Gazania",
-      "description": "Gazania linearis è una pianta ornamentale dell’Africa meridionale. Produce fiori vistosi che si aprono al sole. È resistente alla siccità."
+      "description": "Gazania linearis è una pianta amante del sole, conosciuta per i suoi fiori vivaci. Cresce in terreni ben drenati e con irrigazione regolare."
     },
     "es": {
       "common_name": "Gazania",
-      "description": "Gazania linearis es una planta ornamental originaria del sur de África. Sus flores se abren con el sol directo. Tolera bien la sequía."
+      "description": "Gazania linearis es una planta que ama el sol, conocida por sus flores vibrantes. Crece en suelos bien drenados y con riego regular."
     },
     "pt": {
-      "common_name": "Gazânia",
-      "description": "Gazania linearis é uma planta ornamental da África do Sul. Produz flores coloridas sob sol pleno. É tolerante à seca e solos pobres."
+      "common_name": "Gazania",
+      "description": "Gazania linearis é uma planta que adora o sol, conhecida por suas flores vibrantes. Ela cresce em solos bem drenados e com rega regular."
     },
     "ar": {
-      "common_name": "جازانيا",
-      "description": "Gazania linearis نبات زينة موطنه جنوب أفريقيا. يزهر بألوان زاهية تحت الشمس الكاملة. يتحمل الجفاف والتربة الجافة."
+      "common_name": "غازانيا",
+      "description": "غازانيا ليناريس هي نبات يحب الشمس ومعروف بأزهاره الزاهية. ينمو في التربة جيدة التصريف مع الري المنتظم."
     },
     "hi": {
-      "common_name": "गज़ानिया",
-      "description": "Gazania linearis दक्षिण अफ्रीका का सजावटी पौधा है। यह तेज धूप में चमकीले फूल देता है। यह सूखे को सहन करता है।"
+      "common_name": "गैज़ानिया",
+      "description": "गैज़ानिया लाइनियरिस एक सूरज प्रिय पौधा है, जो अपने जीवंत फूलों के लिए जाना जाता है। यह अच्छी जल निकासी वाली मिट्टी में और नियमित पानी देने में बढ़ता है।"
     },
     "zh": {
-      "common_name": "勋章菊",
-      "description": "Gazania linearis 原产于非洲南部。它在充足阳光下开出鲜艳花朵。耐旱，喜欢排水良好的土壤。"
+      "common_name": "向日葵菊",
+      "description": "向日葵菊（Gazania linearis）是一种喜欢阳光的植物，以其鲜艳的花朵而闻名。它在排水良好的土壤中和定期浇水下生长。"
     },
     "ja": {
       "common_name": "ガザニア",
-      "description": "Gazania linearis は南アフリカ原産の観賞植物です。強い日差しで花が開きます。乾燥に強いです。"
+      "description": "ガザニア・リネアリスは太陽を好む植物で、その鮮やかな花で知られています。排水の良い土壌と定期的な水やりで育ちます。"
     },
     "ko": {
       "common_name": "가자니아",
-      "description": "Gazania linearis는 남아프리카 원산의 관상식물입니다. 강한 햇빛에서 꽃이 핍니다. 건조에 강합니다."
+      "description": "가자니아 라이네아리스는 햇볕을 좋아하는 식물로, 그 화려한 꽃으로 유명합니다. 잘 배수되는 토양과 규칙적인 물주기로 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/gazania",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-gazania/",
-      "https://plants.ces.ncsu.edu/plants/gazania/"
+      "https://www.gardenia.net/plant/gazania-linearis",
+      "https://www.bhg.com/gardening/plant-dictionary/annual/gazania/"
     ]
   }
 }

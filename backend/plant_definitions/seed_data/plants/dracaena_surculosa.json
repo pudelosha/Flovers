@@ -1,6 +1,6 @@
 {
   "external_id": "dracaena_surculosa",
-  "name": "Gold Dust Dracaena",
+  "name": "Gold dust dracaena",
   "latin": "Dracaena surculosa",
   "sun": "medium",
   "water": "medium",
@@ -11,7 +11,7 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -28,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles indirektes",
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna",
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
           "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature medie",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Let top dry slightly",
+          "pl": "Podsusz wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher un peu",
+          "it": "Asciuga un po' sopra",
+          "es": "Seca un poco arriba",
+          "pt": "Secar um pouco em cima",
+          "ar": "اترك السطح يجف قليلاً",
+          "hi": "ऊपरी मिट्टी सूखने दें",
+          "zh": "表土微干再浇",
+          "ja": "表土が少し乾いてから",
+          "ko": "겉흙 약간 마르면"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -123,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "普通の湿度",
-          "ko": "보통 습도"
+          "en": "Average–high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel–hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media–alta",
+          "es": "Media–alta",
+          "pt": "Média–alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम–उच्च",
+          "zh": "中等到较高",
+          "ja": "普通〜高め",
+          "ko": "보통~높음"
         }
       }
     },
@@ -144,16 +144,16 @@
         "text": {
           "en": "Toxic to pets",
           "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
+          "de": "Giftig für Haustiere",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतुओं के लिए विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 독성"
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to moderate",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅め",
-          "ko": "느린 생장"
+          "en": "Slow, upright",
+          "pl": "Wolny, wzniesiony",
+          "de": "Langsam, aufrecht",
+          "fr": "Lente, dressée",
+          "it": "Lenta, eretta",
+          "es": "Lenta, erguida",
+          "pt": "Lenta, ereta",
+          "ar": "نمو بطيء قائم",
+          "hi": "धीमी, सीधी बढ़त",
+          "zh": "生长慢，直立",
+          "ja": "ゆっくり直立",
+          "ko": "느리게 곧게"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelij",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبتلة",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عناكب",
+          "hi": "मीलीबग, माइट्स",
+          "zh": "粉蚧、螨虫",
+          "ja": "カイガラムシ、ハダニ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Gold Dust Dracaena",
-      "description": "Dracaena surculosa is a tropical shrub native to West Africa, known for its spotted leaves. It prefers bright, indirect light and evenly moist soil. It is commonly grown as a low-maintenance indoor plant."
+      "common_name": "Gold dust dracaena",
+      "description": "Dracaena surculosa is a tropical dracaena with spotted, oval leaves on slender stems. Grow it in bright, indirect light and water when the top of the mix dries slightly. Keep it warm and avoid waterlogged soil."
     },
     "pl": {
-      "common_name": "Dracena plamista",
-      "description": "Dracaena surculosa pochodzi z Afryki Zachodniej i ma charakterystyczne, plamiste liście. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Jest łatwa w uprawie w domu."
+      "common_name": "Dracena nakrapiana",
+      "description": "Dracaena surculosa to tropikalna dracena o nakrapianych liściach na smukłych pędach. Lubi jasne, rozproszone światło i podlewanie po lekkim przeschnięciu wierzchu podłoża. Utrzymuj ciepło i nie dopuszczaj do zastojów wody."
     },
     "de": {
       "common_name": "Goldstaub-Dracaena",
-      "description": "Dracaena surculosa stammt aus Westafrika und hat gefleckte Blätter. Sie wächst gut bei hellem, indirektem Licht und gleichmäßiger Wassergabe. Eine pflegeleichte Zimmerpflanze."
+      "description": "Dracaena surculosa ist eine tropische Dracaena mit gesprenkelten, ovalen Blättern an schlanken Trieben. Sie wächst am besten bei hellem, indirektem Licht und wird gegossen, wenn die Oberfläche leicht abgetrocknet ist. Warm halten und Staunässe vermeiden."
     },
     "fr": {
-      "common_name": "Dracaena moucheté",
-      "description": "Dracaena surculosa est originaire d’Afrique de l’Ouest et possède des feuilles tachetées. Elle apprécie une lumière indirecte et un arrosage modéré. C’est une plante d’intérieur facile."
+      "common_name": "Dracaena à pois",
+      "description": "Dracaena surculosa est un dracaena tropical aux feuilles ovales tachetées sur des tiges fines. Placez-le en lumière vive indirecte et arrosez quand le dessus du substrat sèche légèrement. Gardez-le au chaud et évitez l'eau stagnante."
     },
     "it": {
-      "common_name": "Dracena a pois",
-      "description": "La Dracaena surculosa è originaria dell’Africa occidentale ed è nota per le foglie maculate. Predilige luce indiretta e annaffiature regolari. È adatta alla coltivazione in casa."
+      "common_name": "Dracena maculata",
+      "description": "Dracaena surculosa è una dracena tropicale con foglie ovali macchiettate su fusti sottili. Preferisce luce intensa ma indiretta e va annaffiata quando la superficie del terriccio si asciuga leggermente. Tienila al caldo ed evita ristagni."
     },
     "es": {
       "common_name": "Drácena moteada",
-      "description": "Dracaena surculosa es nativa de África occidental y tiene hojas moteadas. Prefiere luz indirecta brillante y riego moderado. Es una planta de interior resistente."
+      "description": "Dracaena surculosa es una drácena tropical con hojas ovaladas moteadas en tallos finos. Crece mejor con luz brillante e indirecta y se riega cuando la capa superior se seca un poco. Manténla cálida y evita el encharcamiento."
     },
     "pt": {
-      "common_name": "Dracena pintada",
-      "description": "Dracaena surculosa é originária da África Ocidental e tem folhas manchadas. Gosta de luz indireta e rega moderada. É comum como planta ornamental de interior."
+      "common_name": "Dracena salpicada",
+      "description": "Dracaena surculosa é uma dracena tropical com folhas ovais salpicadas em hastes finas. Prefere luz forte e indireta e deve ser regada quando a parte superior do substrato secar um pouco. Mantenha-a aquecida e evite encharcamento."
     },
     "ar": {
       "common_name": "دراسينا منقطة",
-      "description": "نبات Dracaena surculosa موطنه غرب إفريقيا وله أوراق منقطة. يفضل الضوء غير المباشر والري المعتدل. يزرع كنبات داخلي سهل العناية."
+      "description": "Dracaena surculosa نبات دراسينا استوائي بأوراق بيضاوية منقطة على سيقان رفيعة. يفضل ضوءاً ساطعاً غير مباشر ويُسقى عند جفاف السطح قليلاً. حافظ عليه دافئاً وتجنب تشبع التربة بالماء."
     },
     "hi": {
-      "common_name": "गोल्ड डस्ट ड्रैसीना",
-      "description": "Dracaena surculosa पश्चिमी अफ्रीका का पौधा है जिसकी पत्तियाँ चित्तीदार होती हैं। इसे तेज अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। यह एक आसान घरेलू पौधा है।"
+      "common_name": "गोल्ड डस्ट ड्रेसीना",
+      "description": "Dracaena surculosa एक उष्णकटिबंधीय ड्रेसीना है जिसकी अंडाकार पत्तियों पर धब्बे होते हैं। इसे तेज़ अप्रत्यक्ष रोशनी दें और जब ऊपर की मिट्टी थोड़ी सूख जाए तब पानी दें। गर्म रखें और पानी जमा न होने दें।"
     },
     "zh": {
-      "common_name": "斑点龙血树",
-      "description": "Dracaena surculosa 原产于西非，叶片带有斑点。适合明亮散射光和适量浇水。常作为室内观赏植物栽培。"
+      "common_name": "金粉龙血树",
+      "description": "Dracaena surculosa 为热带龙血树，叶片椭圆并带斑点。放在明亮散射光处，表土微干再浇水。保持温暖并避免盆土积水。"
     },
     "ja": {
       "common_name": "ゴールドダスト・ドラセナ",
-      "description": "Dracaena surculosa は西アフリカ原産で、斑点のある葉が特徴です。明るい間接光と適度な水やりを好みます。室内向きの丈夫な植物です。"
+      "description": "Dracaena surculosa は斑点のある楕円葉をつける熱帯性のドラセナです。明るい間接光で育て、表土が少し乾いてから水やりします。暖かく保ち、過湿を避けてください。"
     },
     "ko": {
       "common_name": "골드더스트 드라세나",
-      "description": "Dracaena surculosa는 서아프리카 원산의 반점 잎 식물입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 관리가 쉬운 실내 식물입니다."
+      "description": "Dracaena surculosa 는 점무늬 타원 잎이 특징인 열대 드라세나입니다. 밝은 간접광에서 키우고 겉흙이 약간 마르면 물을 줍니다. 따뜻하게 유지하고 과습을 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b432",
-      "https://plants.ces.ncsu.edu/plants/dracaena-surculosa/",
-      "https://www.rhs.org.uk/plants/5517/dracaena-surculosa/details"
+      "https://www.rhs.org.uk/plants/125442/dracaena-surculosa/details",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/gold-dust-dracaena",
+      "https://www.thespruce.com/florida-beauty-plant-7377283",
+      "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/santa-rosa/docs/pdfs/demo-garden-4/Gold-Dust-Dracaena.pdf",
+      "https://edis.ifas.ufl.edu/publication/EP149"
     ]
   }
 }

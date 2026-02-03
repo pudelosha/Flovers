@@ -1,24 +1,25 @@
 {
   "external_id": "iberis_sempervirens",
-  "name": "Evergreen Candytuft",
+  "name": "Candytuft",
   "latin": "Iberis sempervirens",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "iberis_sempervirens.jpg",
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूर्ण सूर्य",
           "zh": "全日照",
-          "ja": "日なた",
-          "ko": "강한 햇빛"
+          "ja": "日光浴",
+          "ko": "완전 햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained",
-          "pl": "Dobrze zdren.",
-          "de": "Gut drainiert",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी निकास",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low water",
-          "pl": "Mało wody",
-          "de": "Wenig Wasser",
-          "fr": "Peu d’eau",
-          "it": "Poca acqua",
-          "es": "Poca agua",
-          "pt": "Pouca água",
-          "ar": "ماء قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적음"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Odporna chł.",
-          "de": "Kühltolerant",
-          "fr": "Tolère frais",
-          "it": "Resiste freddo",
-          "es": "Tolera frío",
-          "pt": "Tolera frio",
-          "ar": "يتحمل البرودة",
-          "hi": "ठंड सहन",
-          "zh": "耐寒",
-          "ja": "耐寒性",
-          "ko": "서늘함 견딤"
+          "en": "15–20°C",
+          "pl": "15–20°C",
+          "de": "15–20°C",
+          "fr": "15–20°C",
+          "it": "15–20°C",
+          "es": "15–20°C",
+          "pt": "15–20°C",
+          "ar": "15–20°C",
+          "hi": "15–20°C",
+          "zh": "15–20°C",
+          "ja": "15–20°C",
+          "ko": "15–20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła wilg.",
-          "de": "Normale Luft",
-          "fr": "Air normal",
-          "it": "Aria normale",
-          "es": "Aire normal",
-          "pt": "Ar normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -142,15 +143,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low mound",
-          "pl": "Niska kępa",
-          "de": "Niedrig pol.",
-          "fr": "Touffe basse",
-          "it": "Cespuglio basso",
-          "es": "Mata baja",
-          "pt": "Moita baixa",
-          "ar": "نمو منخفض",
-          "hi": "नीची वृद्धि",
-          "zh": "低矮丛生",
-          "ja": "低く広がる",
-          "ko": "낮게 자람"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Kein Überwässern",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Evergreen Candytuft",
-      "description": "Iberis sempervirens is a low-growing evergreen perennial valued for its white spring flowers. It prefers full sun and well-drained soil, making it suitable for rock gardens and borders. Once established, it is drought tolerant and easy to maintain."
+      "common_name": "Candytuft",
+      "description": "Iberis sempervirens, commonly known as Candytuft, is a perennial plant with white flowers. It thrives in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Ubiorek wieczniezielony",
-      "description": "Iberis sempervirens to niska bylina zimozielona o białych kwiatach pojawiających się wiosną. Najlepiej rośnie w pełnym słońcu i na dobrze przepuszczalnej glebie. Po ukorzenieniu jest odporna na suszę i łatwa w uprawie."
+      "common_name": "Iberis wiecznie zielona",
+      "description": "Iberis sempervirens, znana jako Iberis wiecznie zielona, to roślina wieloletnia z białymi kwiatami. Lubi pełne słońce i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Immergrüne Schleifenblume",
-      "description": "Iberis sempervirens ist eine niedrig wachsende, immergrüne Staude mit weißen Frühlingsblüten. Sie bevorzugt volle Sonne und gut durchlässigen Boden. Nach dem Anwachsen ist sie trockenheitsverträglich und pflegeleicht."
+      "common_name": "Ewiger Schneeball",
+      "description": "Iberis sempervirens, auch Ewiger Schneeball genannt, ist eine mehrjährige Pflanze mit weißen Blüten. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Ibéris toujours vert",
-      "description": "Iberis sempervirens est une plante vivace couvre-sol à feuillage persistant et fleurs blanches printanières. Elle apprécie le plein soleil et un sol bien drainé. Une fois installée, elle supporte bien la sécheresse."
+      "common_name": "Ibéris sempervirens",
+      "description": "L'Iberis sempervirens, également appelé ibéris éternel, est une plante vivace à fleurs blanches. Elle préfère le plein soleil et un sol bien drainé."
     },
     "it": {
-      "common_name": "Iberide sempreverde",
-      "description": "Iberis sempervirens è una perenne sempreverde a crescita bassa con fiori bianchi primaverili. Predilige pieno sole e terreni ben drenati. Dopo l’attecchimento richiede poche cure e poca acqua."
+      "common_name": "Iberide sempervirente",
+      "description": "L'Iberis sempervirens, noto anche come Iberide sempervirente, è una pianta perenne con fiori bianchi. Preferisce il pieno sole e un terreno ben drenato."
     },
     "es": {
-      "common_name": "Iberis perenne",
-      "description": "Iberis sempervirens es una planta perenne de porte bajo con flores blancas en primavera. Crece mejor a pleno sol y en suelos bien drenados. Una vez establecida, tolera bien la sequía."
+      "common_name": "Iberis sempervirens",
+      "description": "Iberis sempervirens, conocido como iberis perenne, es una planta perenne de flores blancas. Prefiere pleno sol y suelo bien drenado."
     },
     "pt": {
-      "common_name": "Íberis-perene",
-      "description": "Iberis sempervirens é uma planta perene de baixo crescimento com flores brancas na primavera. Prefere sol pleno e solo bem drenado. Após estabelecida, necessita de pouca rega."
+      "common_name": "Iberis sempervirens",
+      "description": "Iberis sempervirens, também conhecida como iberis perene, é uma planta perene com flores brancas. Prefere sol pleno e solo bem drenado."
     },
     "ar": {
-      "common_name": "إيبيريس دائم الخضرة",
-      "description": "Iberis sempervirens نبات معمر منخفض النمو يتميز بأزهاره البيضاء في الربيع. يفضل الشمس الكاملة والتربة جيدة التصريف. بعد تثبيته يصبح قليل الاحتياج للماء."
+      "common_name": "الايبيريس الدائم الخضرة",
+      "description": "الايبيريس الدائم الخضرة هو نبات معمر ذو أزهار بيضاء. يفضل الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "एवरग्रीन कैंडीटफ्ट",
-      "description": "Iberis sempervirens एक कम ऊँचाई वाला सदाबहार पौधा है जिसमें वसंत में सफेद फूल आते हैं। इसे पूरी धूप और अच्छी जल निकास वाली मिट्टी पसंद है। स्थापित होने के बाद इसे कम पानी की आवश्यकता होती है।"
+      "common_name": "आइबेरिस सैंपर्विर्न्स",
+      "description": "आइबेरिस सैंपर्विर्न्स, जिसे कैंडिटफ्ट भी कहा जाता है, एक बारहमासी पौधा है जिसकी सफेद फूल होते हैं। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में बढ़ता है।"
     },
     "zh": {
-      "common_name": "常绿屈曲花",
-      "description": "Iberis sempervirens 是一种低矮的常绿多年生植物，春季开白花。它适合全日照和排水良好的土壤。成活后耐旱，养护简单。"
+      "common_name": "常绿雪花莲",
+      "description": "常绿雪花莲（Iberis sempervirens）是一种多年生植物，具有白色花朵。它喜欢全日照和排水良好的土壤。"
     },
     "ja": {
-      "common_name": "トキワマガリバナ",
-      "description": "Iberis sempervirens は春に白い花を咲かせる低生長の常緑多年草です。日当たりと水はけの良い土壌を好みます。定着後は乾燥にも強いです。"
+      "common_name": "アイベリス・センペルビレンス",
+      "description": "アイベリス・センペルビレンス（Iberis sempervirens）は白い花を持つ多年草です。直射日光と排水の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "상록 이베리스",
-      "description": "Iberis sempervirens는 봄에 흰 꽃이 피는 낮게 자라는 상록 다년초입니다. 햇빛이 풍부하고 배수가 좋은 토양을 선호합니다. 활착 후에는 건조에도 강합니다."
+      "common_name": "아이베리스 세멥버리벤스",
+      "description": "아이베리스 세멉버리벤스는 흰 꽃을 가진 다년생 식물입니다. 이 식물은 완전한 햇빛과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/iberis/sempervirens/details",
-      "https://plants.ces.ncsu.edu/plants/iberis-sempervirens/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282545"
+      "https://www.rhs.org.uk/plants/iberis-sempervirens",
+      "https://www.gardenia.net/plant/iberis-sempervirens"
     ]
   }
 }

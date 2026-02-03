@@ -1,6 +1,6 @@
 {
   "external_id": "alocasia_baginda",
-  "name": "Alocasia Baginda",
+  "name": "Dragon Scale Alocasia",
   "latin": "Alocasia baginda",
   "sun": "medium",
   "water": "high",
@@ -12,16 +12,16 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "orchid"
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 21,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 24,
   "image_hero": "alocasia_baginda.jpg",
   "image_thumb": "alocasia_baginda.jpg",
   "traits": [
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło pośrednie",
-          "de": "Helles, indirektes Licht",
-          "fr": "Lumière indirecte vive",
-          "it": "Luce indiretta intensa",
-          "es": "Luz indirecta brillante",
-          "pt": "Luz indireta brilhante",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy, fast draining",
-          "pl": "Przepuszczalna, lekka",
-          "de": "Luftig, gut drainiert",
-          "fr": "Aéré, bien drainant",
-          "it": "Ariosamente drenante",
+          "en": "Airy, well-draining",
+          "pl": "Przepuszczalne",
+          "de": "Luftig, drainierend",
+          "fr": "Aéré, drainant",
+          "it": "Aereo, drenante",
           "es": "Aireado y drenante",
-          "pt": "Aéreo e drenável",
-          "ar": "خفيفة جيدة التصريف",
-          "hi": "हवादार, जलनिकासी",
+          "pt": "Arejado, drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "हवादार, जलनिकास",
           "zh": "疏松排水好",
-          "ja": "通気性と排水性",
-          "ko": "배수 좋은 토양"
+          "ja": "通気・排水良",
+          "ko": "통기·배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Utrzymuj wilgotną",
-          "de": "Gleichmäßig feucht",
-          "fr": "Substrat humide",
-          "it": "Terreno umido",
-          "es": "Sustrato húmedo",
-          "pt": "Solo sempre úmido",
-          "ar": "تربة رطبة دائمًا",
-          "hi": "समान नमी रखें",
-          "zh": "保持湿润",
-          "ja": "均一に湿らせる",
-          "ko": "항상 촉촉하게"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطبة قليلًا",
+          "hi": "हल्की नम रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -87,17 +87,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien modéré",
-          "it": "Cura moderata",
-          "es": "Cuidado moderado",
-          "pt": "Cuidado moderado",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "养护中等",
+          "ja": "管理は普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "16–29°C",
+          "pl": "16–29°C",
+          "de": "16–29°C",
+          "fr": "16–29°C",
+          "it": "16–29°C",
+          "es": "16–29°C",
+          "pt": "16–29°C",
+          "ar": "16–29°م",
+          "hi": "16–29°C",
+          "zh": "16–29°C",
+          "ja": "16–29°C",
+          "ko": "16–29°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Humedad alta",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Medium to high",
+          "pl": "Średnia do wysokiej",
+          "de": "Mittel bis hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media-alta",
+          "es": "Media a alta",
+          "pt": "Média a alta",
+          "ar": "رطوبة متوسطة-عالية",
+          "hi": "मध्यम से अधिक",
+          "zh": "中到高湿度",
+          "ja": "湿度は中〜高",
+          "ko": "중~높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica p/ animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食注意（有毒）",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright clumping",
-          "pl": "Wzniesiony pokrój",
-          "de": "Aufrecht wachsend",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधा बढ़ाव",
-          "zh": "直立丛生",
-          "ja": "直立型",
-          "ko": "직립 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do średniego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lente à modérée",
+          "it": "Lenta-moderata",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "نمو بطيء-متوسط",
+          "hi": "धीमी से मध्यम",
+          "zh": "生长慢到中等",
+          "ja": "生長は遅め〜中",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przeliewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जमाव न होने दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealybugs",
+          "pl": "Przędziorki, wełnowce",
+          "de": "Spinnmilben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Ragnetti, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عث, بق دقيقي",
+          "hi": "माइट्स, मिलीबग्स",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ・コナカイガ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
@@ -181,58 +219,60 @@
   "translations": {
     "en": {
       "common_name": "Dragon Scale Alocasia",
-      "description": "Alocasia baginda is a tropical aroid known for its thick, textured leaves with silvery veins. It prefers bright indirect light, warm temperatures, and evenly moist soil. High humidity supports healthy growth indoors."
+      "description": "Alocasia baginda is a tropical aroid from Borneo grown for thick, textured leaves. Provide bright, indirect light and water when the upper layer of mix has dried. Keep it warm and avoid cold drafts; it is toxic if ingested."
     },
     "pl": {
       "common_name": "Alokazja Dragon Scale",
-      "description": "Alocasia baginda to tropikalna roślina o grubych liściach z wyraźnym unerwieniem. Wymaga jasnego, pośredniego światła i stale lekko wilgotnego podłoża. Najlepiej rośnie w ciepłych i wilgotnych warunkach."
+      "description": "Alocasia baginda to tropikalny obrazkowaty z Borneo o grubych, fakturowanych liściach. Lubi jasne, rozproszone światło i podlewanie, gdy wierzch podłoża przeschnie. Trzymaj w cieple i z dala od przeciągów; jest toksyczna po spożyciu."
     },
     "de": {
       "common_name": "Drachenschuppen-Alokasie",
-      "description": "Alocasia baginda ist eine tropische Aronstabpflanze mit stark strukturierten Blättern. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Warme Temperaturen und hohe Luftfeuchte sind ideal."
+      "description": "Alocasia baginda ist ein tropischer Aronstabgewächs aus Borneo mit dicken, strukturierten Blättern. Stelle sie hell, aber ohne direkte Sonne, und gieße, wenn die obere Substratschicht abgetrocknet ist. Warm halten und Zugluft vermeiden; bei Verzehr giftig."
     },
     "fr": {
       "common_name": "Alocasia Dragon Scale",
-      "description": "Alocasia baginda est une plante tropicale aux feuilles épaisses et nervurées. Elle aime une lumière vive indirecte et un sol constamment humide. Une forte humidité favorise une bonne croissance."
+      "description": "Alocasia baginda est une aracée tropicale de Bornéo aux feuilles épaisses et texturées. Donnez une lumière vive indirecte et arrosez quand la couche supérieure du substrat a séché. Gardez-la au chaud, évitez les courants d’air; toxique en cas d’ingestion."
     },
     "it": {
       "common_name": "Alocasia Dragon Scale",
-      "description": "Alocasia baginda è una pianta tropicale apprezzata per le foglie spesse e venate. Predilige luce indiretta intensa e terreno sempre leggermente umido. Cresce bene in ambienti caldi e umidi."
+      "description": "Alocasia baginda è un’aroide tropicale del Borneo con foglie spesse e molto testurizzate. Preferisce luce intensa indiretta e irrigazioni quando lo strato superiore del terriccio è asciutto. Tienila al caldo, lontano da correnti; è tossica se ingerita."
     },
     "es": {
       "common_name": "Alocasia Dragon Scale",
-      "description": "Alocasia baginda es una planta tropical con hojas gruesas y decorativas. Necesita luz indirecta brillante y sustrato uniformemente húmedo. La alta humedad ambiental mejora su desarrollo."
+      "description": "Alocasia baginda es una arácea tropical de Borneo con hojas gruesas y texturizadas. Requiere luz brillante indirecta y riego cuando la capa superior del sustrato se haya secado. Manténla cálida y sin corrientes; es tóxica si se ingiere."
     },
     "pt": {
       "common_name": "Alocasia Dragon Scale",
-      "description": "Alocasia baginda é uma planta tropical conhecida por suas folhas grossas e texturizadas. Prefere luz indireta forte e solo sempre levemente úmido. Ambientes quentes e úmidos são ideais."
+      "description": "Alocasia baginda é uma arácea tropical de Bornéu com folhas espessas e texturizadas. Precisa de luz indireta brilhante e rega quando a camada superior do substrato secar. Mantenha em local quente e sem correntes de ar; é tóxica se ingerida."
     },
     "ar": {
       "common_name": "ألوكاسيا دراغون سكيل",
-      "description": "Alocasia baginda نبات استوائي يتميز بأوراق سميكة ذات عروق فضية. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار. الرطوبة العالية تساعد على نموه الصحي."
+      "description": "Alocasia baginda نبات أرويدي استوائي من بورنيو بأوراق سميكة ذات نسيج واضح. يحتاج إلى ضوء ساطع غير مباشر وريّ عند جفاف الطبقة العلوية من التربة. يُحفظ دافئًا بعيدًا عن التيارات الباردة؛ وهو سام عند الابتلاع."
     },
     "hi": {
       "common_name": "ड्रैगन स्केल एलोकैसिया",
-      "description": "Alocasia baginda एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मोटी और बनावटदार होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और समान रूप से नम मिट्टी चाहिए। अधिक आर्द्रता में यह बेहतर बढ़ता है।"
+      "description": "Alocasia baginda बोर्नियो का उष्णकटिबंधीय एरॉइड है, जिसकी पत्तियाँ मोटी और बनावटदार होती हैं। इसे तेज अप्रत्यक्ष रोशनी दें और मिट्टी की ऊपरी परत सूखने पर पानी दें। गर्म रखें और ठंडी हवा से बचाएँ; खाने पर विषैली है।"
     },
     "zh": {
       "common_name": "龙鳞海芋",
-      "description": "Alocasia baginda 是一种热带观叶植物，叶片厚实且纹理明显。适合明亮的散射光和持续湿润的基质。较高的空气湿度有助于健康生长。"
+      "description": "Alocasia baginda 是原产婆罗洲的热带天南星植物，以厚实、纹理明显的叶片著称。提供明亮散射光，基质上层干后再浇透水。保持温暖并避免冷风；误食有毒。"
     },
     "ja": {
-      "common_name": "ドラゴンスケール・アロカシア",
-      "description": "Alocasia baginda は厚く質感のある葉を持つ熱帯植物です。明るい間接光と適度に湿った土壌を好みます。高い湿度環境でよく育ちます。"
+      "common_name": "アロカシア・ドラゴンスケール",
+      "description": "Alocasia baginda はボルネオ原産のサトイモ科で、厚く凹凸のある葉が特徴です。明るい間接光で育て、用土の表面が乾いてから水やりします。暖かく保ち冷たい風を避けてください。誤食すると有毒です。"
     },
     "ko": {
       "common_name": "드래곤 스케일 알로카시아",
-      "description": "Alocasia baginda는 두껍고 무늬가 뚜렷한 잎이 특징인 열대 식물입니다. 밝은 간접광과 항상 촉촉한 흙을 선호합니다. 높은 습도에서 건강하게 자랍니다."
+      "description": "Alocasia baginda 는 보르네오 원산의 천남성과 식물로 두껍고 질감 있는 잎이 특징입니다. 밝은 간접광에서 키우고 흙 윗부분이 마르면 물을 주세요. 따뜻하게 유지하고 찬바람을 피하세요; 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/alocasia/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/EP061",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-alocasia/"
+      "https://www.ukhouseplants.com/plants/alocasia-baginda",
+      "https://plnts.com/en/care/houseplants-family/alocasia",
+      "https://www.provenwinners.com/learn/houseplants/alocasia",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60456116-2"
     ]
   }
 }

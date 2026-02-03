@@ -1,8 +1,8 @@
 {
   "external_id": "sansevieria_zeylanica",
-  "name": "Ceylon Bowstring Hemp",
+  "name": "Snake Plant",
   "latin": "Sansevieria zeylanica",
-  "sun": "medium",
+  "sun": "low",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
@@ -11,15 +11,15 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "sansevieria_zeylanica.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "저조도"
         }
       }
     },
@@ -48,18 +48,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universell",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "보편적인"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
           "ar": "منخفض",
           "hi": "कम",
           "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "ja": "低",
+          "ko": "낮음"
         }
       }
     },
@@ -86,13 +85,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwe",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفضة",
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
           "hi": "कम",
           "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "ja": "低",
+          "ko": "낮음"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독"
         }
       }
     },
@@ -162,76 +161,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느리게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter trop d'eau",
+          "it": "Evitare il ristagno",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar regar em excesso",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "たまに発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ceylon Bowstring Hemp",
-      "description": "Sansevieria zeylanica is a hardy, low-maintenance plant. It thrives in bright, indirect light and requires infrequent watering."
+      "common_name": "Snake Plant",
+      "description": "Sansevieria zeylanica, commonly known as the snake plant, is a hardy, low-maintenance houseplant. It is famous for its upright, sword-shaped leaves and tolerance to low light conditions."
     },
     "pl": {
-      "common_name": "Lina Cejlońska",
-      "description": "Sansevieria zeylanica to roślina odporna na zaniedbanie. Preferuje jasne, pośrednie światło i rzadkie podlewanie."
+      "common_name": "Wężownica",
+      "description": "Sansevieria zeylanica, znana również jako wężownica, to wytrzymała roślina doniczkowa, która jest łatwa w pielęgnacji. Charakteryzuje się wzniesionymi, mieczowatymi liśćmi i tolerancją na niskie oświetlenie."
     },
     "de": {
-      "common_name": "Ceylon-Bogenhanf",
-      "description": "Sansevieria zeylanica ist eine pflegeleichte Pflanze. Sie gedeiht bei hellem, indirektem Licht und benötigt nur wenig Wasser."
+      "common_name": "Schwiegermutterzunge",
+      "description": "Sansevieria zeylanica, auch bekannt als Schwiegermutterzunge, ist eine robuste, pflegeleichte Zimmerpflanze. Sie ist bekannt für ihre aufrechten, schwertähnlichen Blätter und ihre Toleranz gegenüber schwachem Licht."
     },
     "fr": {
-      "common_name": "Chanvre de Ceylan",
-      "description": "Sansevieria zeylanica est une plante résistante. Elle préfère la lumière indirecte et un arrosage modéré."
+      "common_name": "Langue de belle-mère",
+      "description": "Sansevieria zeylanica, connue sous le nom de langue de belle-mère, est une plante d'intérieur robuste et facile à entretenir. Elle est célèbre pour ses feuilles dressées en forme d'épée et sa tolérance aux faibles conditions de lumière."
     },
     "it": {
-      "common_name": "Canapa di Ceylon",
-      "description": "Sansevieria zeylanica è una pianta resistente. Predilige la luce indiretta e richiede poca acqua."
+      "common_name": "Lingua di suocera",
+      "description": "Sansevieria zeylanica, conosciuta come lingua di suocera, è una pianta da appartamento resistente e di facile cura. È famosa per le sue foglie erette a forma di spada e la sua tolleranza alla scarsa illuminazione."
     },
     "es": {
-      "common_name": "Cáñamo de Ceilán",
-      "description": "Sansevieria zeylanica es una planta resistente. Prefiere luz indirecta y riego poco frecuente."
+      "common_name": "Lengua de suegra",
+      "description": "Sansevieria zeylanica, conocida como lengua de suegra, es una planta resistente y de bajo mantenimiento. Es famosa por sus hojas erectas en forma de espada y su tolerancia a condiciones de poca luz."
     },
     "pt": {
-      "common_name": "Cânhamo de Ceilão",
-      "description": "Sansevieria zeylanica é uma planta resistente. Prefere luz indireta e rega moderada."
+      "common_name": "Língua de sogra",
+      "description": "Sansevieria zeylanica, conhecida como língua de sogra, é uma planta resistente e fácil de cuidar. Famosa por suas folhas eretas em forma de espada e sua tolerância a pouca luz."
     },
     "ar": {
-      "common_name": "حبل قوس سيلان",
-      "description": "Sansevieria zeylanica هي نبتة مقاومة. تفضل الضوء غير المباشر والري المعتدل."
+      "common_name": "لسان الحماة",
+      "description": "سانسيفيريا زيلانيكا، والمعروفة بلغة الحماة، هي نبات منزلي قوي وسهل العناية. تشتهر بأوراقها المنتصبة التي تشبه السيف وقدرتها على تحمل ظروف الضوء المنخفض."
     },
     "hi": {
-      "common_name": "सीलोन बोवस्ट्रिंग हैम्प",
-      "description": "Sansevieria zeylanica एक मजबूत पौधा है। यह अप्रत्यक्ष प्रकाश पसंद करता है और कम पानी की आवश्यकता होती है।"
+      "common_name": "स्नेक प्लांट",
+      "description": "सांसिवेरिया ज़ेलनिका, जिसे स्नेक प्लांट के नाम से जाना जाता है, एक मजबूत और कम देखभाल वाला पौधा है। यह अपनी खड़ी, तलवार जैसी पत्तियों और कम रोशनी की स्थिति में सहनशीलता के लिए प्रसिद्ध है।"
     },
     "zh": {
-      "common_name": "锡兰弓弦麻",
-      "description": "Sansevieria zeylanica 是一种坚韧的植物。它喜欢间接光，并且需要较少的水分。"
+      "common_name": "虎尾兰",
+      "description": "Sansevieria zeylanica，也叫虎尾兰，是一种坚韧且易于护理的室内植物。它因其直立的剑形叶子和耐低光的特性而闻名。"
     },
     "ja": {
-      "common_name": "セイロンボウストリングヘンプ",
-      "description": "Sansevieria zeylanica は手入れが簡単な植物です。間接光を好み、少ない水分で育ちます。"
+      "common_name": "スネークプラント",
+      "description": "Sansevieria zeylanica、別名スネークプラントは、丈夫で手入れが簡単な観葉植物です。直立した剣のような葉と低光条件に対する耐性で知られています。"
     },
     "ko": {
-      "common_name": "실론 보우스트링 햄프",
-      "description": "Sansevieria zeylanica는 관리가 쉬운 식물입니다. 간접적인 빛을 선호하고 적은 물을 필요로 합니다."
+      "common_name": "스네이크 플랜트",
+      "description": "산세베리아 제일라니카, 일반적으로 스네이크 플랜트로 알려진 이 식물은 강하고 관리가 쉬운 실내 식물입니다. 직립한 검 모양의 잎과 낮은 조명 환경에 대한 내성으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/sansevieria-zeylanica",
-      "https://www.rhs.org.uk/plants/104599/sansevieria-zeylanica/details"
+      "https://www.bhg.com/gardening/houseplants/snake-plant-care/",
+      "https://www.joyusgarden.com/snake-plant-care/"
     ]
   }
 }

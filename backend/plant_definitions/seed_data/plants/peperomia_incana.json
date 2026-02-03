@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -37,9 +37,9 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中程度の光",
+          "ja": "中くらいの光",
           "ko": "중간 빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好排水",
-          "ja": "良好な排水",
-          "ko": "배수가 잘 되는"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से बहने वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "적당한"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलने",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittelschwer",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "적당한"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -151,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैले",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "ja": "非毒性",
+          "ko": "독성 없음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact",
-          "pl": "Kompaktowy",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatto",
-          "es": "Compacto",
-          "pt": "Compacto",
-          "ar": "مضغوط",
-          "hi": "संकुचित",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "콤팩트"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Felt-leaf Peperomia",
-      "description": "Peperomia incana is a small, compact houseplant known for its silvery, felt-like leaves. It thrives in moderate light and moderate watering conditions."
+      "common_name": "Silvery Peperomia",
+      "description": "Peperomia incana is a small, low-maintenance houseplant with silvery-green leaves. It thrives in medium light and moderate watering conditions."
     },
     "pl": {
-      "common_name": "Pieprzyca wełnista",
-      "description": "Peperomia incana to mała, kompaktowa roślina doniczkowa o srebrzystych, welwetowych liściach. Rośnie w umiarkowanym świetle i umiarkowanych warunkach nawadniania."
+      "common_name": "Peperomia srebrzysta",
+      "description": "Peperomia incana to mała roślina doniczkowa o srebrzysto-zielonych liściach. Dobrze rośnie w średnim świetle i umiarkowanym podlewaniu."
     },
     "de": {
-      "common_name": "Filzblättrige Peperomia",
-      "description": "Peperomia incana ist eine kleine, kompakte Zimmerpflanze, die für ihre silbrigen, filzartigen Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und mäßiger Bewässerung."
+      "common_name": "Silberne Peperomie",
+      "description": "Peperomia incana ist eine kleine, pflegeleichte Zimmerpflanze mit silbrig-grünen Blättern. Sie gedeiht bei mittlerem Licht und mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Peperomia à feuilles feutrées",
-      "description": "Peperomia incana est une petite plante compacte connue pour ses feuilles argentées et duveteuses. Elle prospère dans une lumière modérée et un arrosage modéré."
+      "common_name": "Peperomia argentée",
+      "description": "Peperomia incana est une petite plante d'intérieur à feuilles vertes argentées. Elle se développe bien à la lumière moyenne et avec un arrosage modéré."
     },
     "it": {
-      "common_name": "Peperomia a foglie lanose",
-      "description": "Peperomia incana è una piccola pianta compatta conosciuta per le sue foglie argentee e vellutate. Cresce in condizioni di luce moderata e annaffiature moderate."
+      "common_name": "Peperomia argentata",
+      "description": "Peperomia incana è una pianta da interno di piccole dimensioni con foglie verde argento. Cresce bene in luce media e con irrigazione moderata."
     },
     "es": {
-      "common_name": "Peperomia de hojas lanosas",
-      "description": "Peperomia incana es una pequeña planta compacta conocida por sus hojas plateadas y aterciopeladas. Crece con luz moderada y riego moderado."
+      "common_name": "Peperomia plateada",
+      "description": "Peperomia incana es una planta pequeña de interior con hojas verde plateadas. Se adapta bien a luz media y riego moderado."
     },
     "pt": {
-      "common_name": "Peperomia de folhas felpudas",
-      "description": "Peperomia incana é uma planta pequena e compacta conhecida por suas folhas prateadas e felpudas. Ela cresce em luz moderada e com rega moderada."
+      "common_name": "Peperomia prateada",
+      "description": "Peperomia incana é uma planta pequena e de fácil cuidado, com folhas verde-prateadas. Cresce bem em luz média e com rega moderada."
     },
     "ar": {
-      "common_name": "بيبيروميا ذات الأوراق المخملية",
-      "description": "Peperomia incana هي نبتة صغيرة ومضغوطة معروفة بأوراقها الفضية والمخملية. تنمو في ضوء معتدل وظروف ري معتدلة."
+      "common_name": "بيبيروميا فضية",
+      "description": "Peperomia incana هي نبتة صغيرة وسهلة العناية ذات أوراق خضراء فضية. تنمو بشكل جيد في الضوء المتوسط وبالري المعتدل."
     },
     "hi": {
-      "common_name": "फेल्ट-पत्तियों वाली पेपेरोमिया",
-      "description": "Peperomia incana एक छोटी, कॉम्पैक्ट हाउसप्लांट है जो अपनी सिल्वर, फेल्ट जैसी पत्तियों के लिए प्रसिद्ध है। यह मध्यम रोशनी और पानी की मध्यम आवश्यकता में पनपती है।"
+      "common_name": "चांदी की पेपेरोमिया",
+      "description": "Peperomia incana एक छोटी, कम रखरखाव वाली हाउसप्लांट है जिसमें चांदी-हरी पत्तियाँ होती हैं। यह मध्यम प्रकाश और नियमित पानी में अच्छी तरह से बढ़ती है।"
     },
     "zh": {
-      "common_name": "毛茸茸叶子的胡椒草",
-      "description": "Peperomia incana 是一种小型紧凑的室内植物，以其银色的毛绒叶子而闻名。它在适度的光照和适中的浇水条件下生长。"
+      "common_name": "银叶绿萝",
+      "description": "Peperomia incana 是一种小型的室内植物，具有银绿色的叶子。它在中等光照和适度浇水的条件下生长良好。"
     },
     "ja": {
-      "common_name": "フェルト状の葉を持つペペロミア",
-      "description": "Peperomia incana は、小さなコンパクトな観葉植物で、銀色のフェルト状の葉を持っています。適度な光と適度な水やり条件で育ちます。"
+      "common_name": "銀葉ペペロミア",
+      "description": "Peperomia incana は小型の室内植物で、銀緑色の葉を持っています。中程度の光と適度な水やりの条件でよく育ちます。"
     },
     "ko": {
-      "common_name": "모직 잎을 가진 페페로미아",
-      "description": "Peperomia incana는 은색의 모직 같은 잎을 가진 작은 컴팩트한 실내 식물입니다. 적당한 빛과 적당한 물주기 조건에서 잘 자랍니다."
+      "common_name": "은색 페페로미아",
+      "description": "Peperomia incana는 은색-녹색 잎을 가진 작은 실내 식물입니다. 중간 정도의 빛과 적당한 물주기에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/piperomia-incana",
-      "https://www.garden.org/plantguide/?q=peperomia+incana"
+      "https://www.rhs.org.uk/Peperomia-incana-care",
+      "https://www.gardenersworld.com/peperomia-incana-care"
     ]
   }
 }

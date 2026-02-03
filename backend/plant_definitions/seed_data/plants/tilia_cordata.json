@@ -1,6 +1,6 @@
 {
   "external_id": "tilia_cordata",
-  "name": "Littleleaf Linden",
+  "name": "Small-leaved Lime",
   "latin": "Tilia cordata",
   "sun": "medium",
   "water": "medium",
@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,14 +30,14 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
           "ko": "중간 빛"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba gliniasta",
-          "de": "Lösem Boden",
-          "fr": "Sol limoneux",
-          "it": "Suolo argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "壌土",
-          "ko": "양토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良く排水された土",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "سقاية معتدلة",
-          "hi": "मध्यम पानी देना",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnie",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Medio",
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-20°C",
-          "pl": "10-20°C",
-          "de": "10-20°C",
-          "fr": "10-20°C",
-          "it": "10-20°C",
-          "es": "10-20°C",
-          "pt": "10-20°C",
-          "ar": "10-20°C",
-          "hi": "10-20°C",
-          "zh": "10-20°C",
-          "ja": "10-20°C",
-          "ko": "10-20°C"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -145,13 +145,13 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषाक्त",
+          "hi": "विषाक्त नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast-growing",
-          "pl": "Szybko rosnący",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेजी से बढ़ने वाला",
-          "zh": "快速生长",
-          "ja": "速成",
-          "ko": "빠른 성장"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Littleleaf Linden",
-      "description": "Tilia cordata is a deciduous tree native to Europe. It is known for its heart-shaped leaves and fragrant yellow flowers."
+      "common_name": "Small-leaved Lime",
+      "description": "Tilia cordata, known as the Small-leaved Lime, is a deciduous tree native to Europe. It is commonly grown for its attractive foliage and fragrant flowers."
     },
     "pl": {
       "common_name": "Lipa drobnolistna",
-      "description": "Tilia cordata to drzewo liściaste pochodzące z Europy. Znane jest z sercowatych liści i pachnących żółtych kwiatów."
+      "description": "Tilia cordata, znana jako lipa drobnolistna, to drzewo liściaste pochodzące z Europy. Jest często uprawiana ze względu na swoje atrakcyjne liście i pachnące kwiaty."
     },
     "de": {
-      "common_name": "Winterlinde",
-      "description": "Tilia cordata ist ein Laubbaum aus Europa. Er ist bekannt für seine herzförmigen Blätter und duftenden gelben Blüten."
+      "common_name": "Kleinstrauchige Linde",
+      "description": "Tilia cordata, auch als Kleinstrauchige Linde bekannt, ist ein Laubbaum, der in Europa heimisch ist. Sie wird häufig wegen ihres attraktiven Laubs und duftenden Blüten gezüchtet."
     },
     "fr": {
       "common_name": "Tilleul à petites feuilles",
-      "description": "Tilia cordata est un arbre caduc originaire d'Europe. Il est connu pour ses feuilles en forme de cœur et ses fleurs jaunes parfumées."
+      "description": "Tilia cordata, connu sous le nom de Tilleul à petites feuilles, est un arbre caduc originaire d'Europe. Il est couramment cultivé pour son feuillage attrayant et ses fleurs parfumées."
     },
     "it": {
-      "common_name": "Lime a foglia piccola",
-      "description": "Tilia cordata è un albero deciduo originario dell'Europa. È conosciuto per le sue foglie a forma di cuore e i fiori gialli profumati."
+      "common_name": "Lime a foglie piccole",
+      "description": "Tilia cordata, conosciuto come Lime a foglie piccole, è un albero deciduo originario dell'Europa. È comunemente coltivato per il suo fogliame attraente e i suoi fiori profumati."
     },
     "es": {
-      "common_name": "Linden de hojas pequeñas",
-      "description": "Tilia cordata es un árbol caducifolio originario de Europa. Se caracteriza por sus hojas en forma de corazón y sus flores amarillas fragantes."
+      "common_name": "Tilo de hojas pequeñas",
+      "description": "Tilia cordata, conocido como Tilo de hojas pequeñas, es un árbol caducifolio originario de Europa. Se cultiva comúnmente por su atractivo follaje y sus flores fragantes."
     },
     "pt": {
-      "common_name": "Lima de folhas pequenas",
-      "description": "Tilia cordata é uma árvore caducifólia nativa da Europa. É conhecida por suas folhas em forma de coração e flores amarelas perfumadas."
+      "common_name": "Tília de folhas pequenas",
+      "description": "Tilia cordata, conhecida como Tília de folhas pequenas, é uma árvore caducifólia nativa da Europa. É comumente cultivada por sua folhagem atraente e flores perfumadas."
     },
     "ar": {
-      "common_name": "الزهره الصغيرة",
-      "description": "تيلاء كورداتا هي شجرة نفضية موطنها الأصلي أوروبا. تشتهر بأوراقها على شكل قلب وزهورها الصفراء العطرية."
+      "common_name": "شجرة الليمون ذات الأوراق الصغيرة",
+      "description": "تيلليا كوراداتا، المعروفة بشجرة الليمون ذات الأوراق الصغيرة، هي شجرة نفضية موطنها الأصلي أوروبا. غالباً ما تزرع بسبب أوراقها الجذابة وزهورها المعطرة."
     },
     "hi": {
-      "common_name": "लिटलिफ़ लिंडन",
-      "description": "टिलिया कॉर्डाटा एक पर्णपाती पेड़ है जो यूरोप का मूल निवासी है। यह अपने दिल के आकार के पत्तों और खुशबूदार पीले फूलों के लिए जाना जाता है।"
+      "common_name": "छोटे पत्तों वाली तिलिया",
+      "description": "टिलिया कॉर्डाटा, जिसे छोटे पत्तों वाली तिलिया के नाम से जाना जाता है, एक पत्तेदार पेड़ है जो यूरोप का मूल निवासी है। इसे अपनी आकर्षक पत्तियों और सुगंधित फूलों के लिए उगाया जाता है।"
     },
     "zh": {
-      "common_name": "小叶椴",
-      "description": "小叶椴是原产于欧洲的落叶树。它因其心形的叶子和芬芳的黄色花朵而闻名。"
+      "common_name": "小叶椴树",
+      "description": "小叶椴树（Tilia cordata）是一种原产于欧洲的落叶树。由于其美丽的叶片和芳香的花朵，常被栽培。"
     },
     "ja": {
-      "common_name": "リトルリーフリンデン",
-      "description": "ティリア・コルダタはヨーロッパ原産の落葉樹です。ハート型の葉と香りの良い黄色い花で知られています。"
+      "common_name": "小葉リンデン",
+      "description": "Tilia cordataは小葉リンデンとして知られ、ヨーロッパ原産の落葉樹です。魅力的な葉と香り高い花のために栽培されます。"
     },
     "ko": {
-      "common_name": "작은잎 린든",
-      "description": "Tilia cordata는 유럽 원산지의 낙엽수입니다. 심장 모양의 잎과 향기로운 노란 꽃으로 잘 알려져 있습니다."
+      "common_name": "작은잎 린덴",
+      "description": "Tilia cordata, 작은잎 린덴으로 알려진 이 나무는 유럽 원산의 낙엽수입니다. 매력적인 잎과 향기로운 꽃을 위해 자주 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/details?plantid=1266",
-      "https://www.bhg.com/gardening/pests-insects-diseases/linden-tree-guide/"
+      "https://www.rhs.org.uk/plants/tilia-cordata",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=244417&isprofile=0"
     ]
   }
 }

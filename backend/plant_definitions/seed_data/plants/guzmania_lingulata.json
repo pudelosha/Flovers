@@ -1,18 +1,18 @@
 {
   "external_id": "guzmania_lingulata",
-  "name": "Scarlet Star",
+  "name": "Guzmania lingulata",
   "latin": "Guzmania lingulata",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "universal"
+    "green-plants",
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "guzmania_lingulata.jpg",
   "image_thumb": "guzmania_lingulata.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy, well drained",
-          "pl": "Lekka, przepuszczalna",
-          "de": "Luftig, drainiert",
-          "fr": "Léger, drainant",
-          "it": "Leggero drenante",
-          "es": "Ligero drenante",
-          "pt": "Leve drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "हल्की जलनिकासी",
-          "zh": "疏松排水好",
-          "ja": "水はけ良い",
-          "ko": "배수 잘됨"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水性",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep rosette moist",
-          "pl": "Wilgotna rozeta",
-          "de": "Rosette feucht",
-          "fr": "Rosette humide",
-          "it": "Rosetta umida",
-          "es": "Roseta húmeda",
-          "pt": "Roseta úmida",
-          "ar": "حافظ على الرطوبة",
-          "hi": "रोसेट नम",
-          "zh": "莲座保湿",
-          "ja": "ロゼット湿潤",
-          "ko": "로제트 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -126,13 +126,13 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow clumping",
+          "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
+          "de": "Langsame Wachstum",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
           "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Scarlet Star",
-      "description": "Guzmania lingulata is a tropical bromeliad native to Central and South America. It grows as an epiphyte or terrestrial plant with a colorful central bract. It prefers bright indirect light and consistently warm, humid conditions indoors."
+      "common_name": "Red Guzmania",
+      "description": "Guzmania lingulata is a popular bromeliad known for its striking red bracts. It thrives in humid, warm environments and requires moderate light and watering."
     },
     "pl": {
-      "common_name": "Guzmania języczkowata",
-      "description": "Guzmania lingulata to tropikalna bromelia pochodząca z Ameryki Środkowej i Południowej. Tworzy barwną rozetę z ozdobnym kwiatostanem. Najlepiej rośnie w jasnym, rozproszonym świetle i wysokiej wilgotności."
+      "common_name": "Guzmania czerwona",
+      "description": "Guzmania lingulata to popularna bromelia, znana z wyrazistych czerwonych podsadek. Rośnie w wilgotnym, ciepłym środowisku, wymagając umiarkowanego światła i podlewania."
     },
     "de": {
-      "common_name": "Scharlachrote Guzmanie",
-      "description": "Guzmania lingulata ist eine tropische Bromelie aus Mittel- und Südamerika. Sie wächst epiphytisch oder terrestrisch mit auffälligem Hochblatt. Bevorzugt helles, indirektes Licht und warme, feuchte Luft."
+      "common_name": "Rote Guzmania",
+      "description": "Guzmania lingulata ist eine beliebte Bromelie, bekannt für ihre auffälligen roten Hochblätter. Sie gedeiht in feuchten, warmen Umgebungen und benötigt mäßiges Licht und Bewässerung."
     },
     "fr": {
-      "common_name": "Guzmania écarlate",
-      "description": "Guzmania lingulata est une broméliacée tropicale d’Amérique centrale et du Sud. Elle forme une rosette avec une bractée colorée durable. Elle aime la lumière vive indirecte et une forte humidité."
+      "common_name": "Guzmania rouge",
+      "description": "Guzmania lingulata est une broméliacée populaire, connue pour ses bractées rouges frappantes. Elle prospère dans des environnements humides et chauds et nécessite une lumière et un arrosage modérés."
     },
     "it": {
-      "common_name": "Guzmania scarlatta",
-      "description": "Guzmania lingulata è una bromeliacea tropicale originaria dell’America centrale e meridionale. Produce una rosetta con una vistosa infiorescenza. Predilige luce indiretta e ambienti caldi e umidi."
+      "common_name": "Guzmania rossa",
+      "description": "Guzmania lingulata è una bromelia popolare conosciuta per le sue bratte rosse. Cresce in ambienti umidi e caldi e richiede luce e irrigazione moderate."
     },
     "es": {
-      "common_name": "Guzmania escarlata",
-      "description": "Guzmania lingulata es una bromelia tropical de América Central y del Sur. Crece con una roseta y una bráctea central muy colorida. Requiere luz indirecta brillante y alta humedad."
+      "common_name": "Guzmania roja",
+      "description": "Guzmania lingulata es una bromelia popular conocida por sus brácteas rojas. Crece en ambientes cálidos y húmedos y requiere luz e irrigación moderadas."
     },
     "pt": {
-      "common_name": "Guzmânia-escarlate",
-      "description": "Guzmania lingulata é uma bromélia tropical da América Central e do Sul. Forma uma roseta com bráctea ornamental duradoura. Prefere luz indireta e ambiente quente e úmido."
+      "common_name": "Guzmania vermelha",
+      "description": "Guzmania lingulata é uma bromélia popular conhecida por suas brácteas vermelhas. Ela prospera em ambientes úmidos e quentes, exigindo luz e irrigação moderadas."
     },
     "ar": {
       "common_name": "غوزمانيا حمراء",
-      "description": "غوزمانيا لينغولاتا نبات بروميلي استوائي من أمريكا الوسطى والجنوبية. يتميز بوردة وأوراق مركزية ملونة. يفضل الضوء الساطع غير المباشر والرطوبة العالية."
+      "description": "غوزمانيا لينغولاتا هي بروميليا شهيرة معروفة بأغلفتها الحمراء المميزة. تزدهر في البيئات الرطبة والدافئة وتتطلب ضوءًا وريًا معتدلًا."
     },
     "hi": {
-      "common_name": "गुज़मानिया",
-      "description": "गुज़मानिया लिंगुलाटा मध्य और दक्षिण अमेरिका का उष्णकटिबंधीय ब्रॉमेलियाड है। इसमें रंगीन केंद्रीय ब्रैक्ट होती है। यह अप्रत्यक्ष रोशनी और उच्च आर्द्रता में अच्छा बढ़ता है।"
+      "common_name": "लाल गुझमैनिया",
+      "description": "गुझमैनिया लिंगुलाटा एक लोकप्रिय ब्रोमेलियाड है जो अपनी striking लाल पत्तियों के लिए जानी जाती है। यह नमी और गर्मी वाले वातावरण में उगती है और मध्यम रोशनी और पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "舌叶古兹曼凤梨",
-      "description": "Guzmania lingulata 原产于中美和南美的热带凤梨植物。植株中心有鲜艳的苞片。适合明亮散射光和高湿度环境。"
+      "common_name": "红色古兹曼尼亚",
+      "description": "Guzmania lingulata 是一种受欢迎的凤梨科植物，以其引人注目的红色苞片而闻名。它在潮湿温暖的环境中生长，需要适中的光照和浇水。"
     },
     "ja": {
-      "common_name": "グズマニア",
-      "description": "グズマニア・リングラータは中南米原産の熱帯ブロメリアです。鮮やかな中心苞が特徴です。明るい間接光と高湿度を好みます。"
+      "common_name": "赤いグズマニア",
+      "description": "Guzmania lingulata は、その目を引く赤い苞葉で知られる人気のあるブロメリアです。湿度の高い温暖な環境で育ち、適度な光と水やりが必要です。"
     },
     "ko": {
-      "common_name": "구즈마니아",
-      "description": "구즈마니아 링굴라타는 중남미 원산의 열대 브로멜리아드입니다. 화려한 중앙 포엽이 특징입니다. 밝은 간접광과 높은 습도를 선호합니다."
+      "common_name": "빨간 구즈마니아",
+      "description": "Guzmania lingulata는 인상적인 빨간색 포엽으로 잘 알려진 인기 있는 브로멜리아입니다. 습하고 따뜻한 환경에서 잘 자라며 적당한 빛과 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/guzmania/growing-guide",
-      "https://edis.ifas.ufl.edu/publication/EP285",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a586"
+      "https://www.rhs.org.uk/plants/guzmania-lingulata",
+      "https://www.bhg.com/gardening/pests-insects-diseases/guzmania-care/"
     ]
   }
 }

@@ -7,21 +7,19 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
-  "water_interval_days": 3,
+  "water_interval_days": 4,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 21,
-  "repot_required": true,
-  "repot_interval_months": 12,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
   "image_hero": "coriandrum_sativum.jpg",
   "image_thumb": "coriandrum_sativum.jpg",
   "traits": [
@@ -31,16 +29,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Voller Sonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "직사광"
+          "ko": "양지"
         }
       }
     },
@@ -48,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Drenado",
-          "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良",
-          "ko": "배수 양호"
+          "en": "Well-drained, fertile",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Durchlässig, nährstoffr",
+          "fr": "Riche, drainant",
+          "it": "Fertile e drenante",
+          "es": "Fértil y drenante",
+          "pt": "Fértil e drenante",
+          "ar": "خصبة وجيدة الصرف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃、排水好",
+          "ja": "肥沃で水はけ良い",
+          "ko": "배수 좋은 비옥토"
         }
       }
     },
@@ -67,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期",
-          "ko": "규칙적"
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj lekko wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, sans détremper",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, sin encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطوبة معتدلة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "適度に湿らせる",
+          "ko": "흙을 촉촉하게"
         }
       }
     },
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25℃"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -124,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average indoor",
+          "pl": "Typowa domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة منزلية",
+          "hi": "सामान्य नमी",
+          "zh": "普通室内湿度",
+          "ja": "室内の標準湿度",
+          "ko": "보통 실내 습도"
         }
       }
     },
@@ -143,15 +141,15 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "अविषैला",
+          "hi": "गैर-विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast annual",
-          "pl": "Szybki jednoroczny",
-          "de": "Schnell einjährig",
-          "fr": "Annuel rapide",
-          "it": "Annuale rapido",
-          "es": "Anual rápido",
-          "pt": "Anual rápido",
-          "ar": "سنوي سريع",
-          "hi": "तेज़ वार्षिक",
-          "zh": "快速一年生",
-          "ja": "一年草",
+          "en": "Fast annual herb",
+          "pl": "Szybko rosnące zioło",
+          "de": "Schnelles einjähriges",
+          "fr": "Herbe annuelle rapide",
+          "it": "Erba annua rapida",
+          "es": "Hierba anual rápida",
+          "pt": "Erva anual rápida",
+          "ar": "عشب سنوي سريع",
+          "hi": "तेजी से बढ़ने वाली",
+          "zh": "快速一年生香草",
+          "ja": "成長早い一年草",
           "ko": "빠른 한해살이"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Heat causes bolting",
+          "pl": "Upał powoduje wybijanie",
+          "de": "Hitze fördert Schossen",
+          "fr": "Chaleur: montée en gra",
+          "it": "Caldo: va a seme",
+          "es": "Calor: espiga rápido",
+          "pt": "Calor: espiga rápido",
+          "ar": "الحرارة تسبب الإزهار",
+          "hi": "गर्मी में फूल लगता",
+          "zh": "高温易抽薹",
+          "ja": "暑さでとう立ち",
+          "ko": "더우면 추대"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, spider mites",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Spinnmilb",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, ragnetto rosso",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ وعث",
+          "hi": "एफिड, माइट्स",
+          "zh": "蚜虫、红蜘蛛",
+          "ja": "アブラムシ、ハダニ",
+          "ko": "진딧물, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Coriander",
-      "description": "Coriandrum sativum is an annual herb grown for its aromatic leaves and seeds. It prefers full sun, well-drained soil, and consistent watering. Indoors it grows quickly and is harvested young."
+      "common_name": "Coriander (cilantro)",
+      "description": "Coriandrum sativum is a fast-growing annual herb grown for its aromatic leaves and seeds. Indoors it needs very bright light and evenly moist, well-drained potting mix. It bolts quickly in heat, so cooler indoor conditions help keep it leafy longer."
     },
     "pl": {
-      "common_name": "Kolendra",
-      "description": "Coriandrum sativum to jednoroczne zioło uprawiane dla liści i nasion. Wymaga pełnego słońca, przepuszczalnej gleby i regularnego podlewania. W domu rośnie szybko i wcześnie się je zbiera."
+      "common_name": "Kolendra siewna",
+      "description": "Coriandrum sativum to szybko rosnące zioło jednoroczne uprawiane dla liści i nasion. W domu wymaga bardzo jasnego stanowiska oraz stale lekko wilgotnego, przepuszczalnego podłoża. Wysoka temperatura sprzyja wybijaniu w pęd kwiatostanowy, więc chłodniejsze warunki pomagają dłużej zbierać liście."
     },
     "de": {
       "common_name": "Koriander",
-      "description": "Coriandrum sativum ist ein einjähriges Kraut für Blätter und Samen. Es benötigt volle Sonne, durchlässige Erde und regelmäßiges Gießen. In Innenräumen wächst es schnell."
+      "description": "Coriandrum sativum ist ein schnell wachsendes, einjähriges Küchenkraut für Blätter und Samen. In der Wohnung braucht es sehr helles Licht und gleichmäßig feuchte, gut drainierte Erde. Bei Wärme schosst es rasch, daher sind eher kühle Bedingungen vorteilhaft."
     },
     "fr": {
       "common_name": "Coriandre",
-      "description": "Coriandrum sativum est une herbe annuelle cultivée pour ses feuilles et graines. Elle préfère le plein soleil, un sol drainé et des arrosages réguliers. La récolte se fait jeune."
+      "description": "Coriandrum sativum est une herbe annuelle à croissance rapide, cultivée pour ses feuilles et ses graines. En intérieur, elle demande beaucoup de lumière et un substrat drainant maintenu légèrement humide. La chaleur accélère la montée en graines, donc une ambiance plus fraîche prolonge la récolte de feuilles."
     },
     "it": {
       "common_name": "Coriandolo",
-      "description": "Coriandrum sativum è un'erba annuale coltivata per foglie e semi. Richiede pieno sole, terreno drenato e annaffiature regolari. Cresce rapidamente in vaso."
+      "description": "Coriandrum sativum è un’erba annuale a crescita rapida, coltivata per foglie e semi. In casa richiede luce molto intensa e terriccio drenante mantenuto leggermente umido. Con il caldo va facilmente a seme, quindi temperature più fresche aiutano a mantenerla fogliosa."
     },
     "es": {
       "common_name": "Cilantro",
-      "description": "Coriandrum sativum es una hierba anual usada por sus hojas y semillas. Necesita sol pleno, suelo drenado y riego regular. En interior crece rápido."
+      "description": "Coriandrum sativum es una hierba anual de crecimiento rápido, cultivada por sus hojas y semillas. En interior necesita mucha luz y un sustrato bien drenado que se mantenga ligeramente húmedo. Con calor espiga con facilidad, por lo que un ambiente más fresco prolonga la cosecha de hojas."
     },
     "pt": {
       "common_name": "Coentro",
-      "description": "Coriandrum sativum é uma erva anual cultivada pelas folhas e sementes. Prefere sol pleno, solo drenado e rega regular. Cresce rapidamente em vasos."
+      "description": "Coriandrum sativum é uma erva anual de crescimento rápido, cultivada pelas folhas e pelas sementes. Dentro de casa precisa de muita luz e de um substrato bem drenado mantido levemente úmido. O calor acelera a floração e a formação de sementes, então temperaturas mais amenas ajudam a manter as folhas por mais tempo."
     },
     "ar": {
       "common_name": "كزبرة",
-      "description": "Coriandrum sativum نبات عشبي سنوي يزرع للأوراق والبذور. يحتاج إلى شمس كاملة وتربة جيدة التصريف وري منتظم. ينمو بسرعة داخل المنزل."
+      "description": "Coriandrum sativum عشب سنوي سريع النمو يُزرع للأوراق والبذور العطرية. داخل المنزل يحتاج إلى ضوء قوي جدًا وتربة جيدة الصرف مع رطوبة معتدلة دون إغراق. الحرارة العالية تُسرّع الإزهار وتكوين البذور، لذا تساعد الأجواء الأبرد على إطالة فترة حصاد الأوراق."
     },
     "hi": {
       "common_name": "धनिया",
-      "description": "Coriandrum sativum एक वार्षिक जड़ी बूटी है जिसे पत्तियों और बीजों के लिए उगाया जाता है। इसे पूरी धूप, अच्छी जल निकास वाली मिट्टी और नियमित पानी चाहिए।"
+      "description": "Coriandrum sativum एक तेजी से बढ़ने वाला एक-वर्षीय हर्ब है, जिसे पत्तियों और बीजों के लिए उगाया जाता है। घर के अंदर इसे बहुत तेज रोशनी और अच्छी जलनिकासी वाली मिट्टी चाहिए, जिसे हल्का नम रखा जाए। गर्मी में यह जल्दी फूल/बीज पर चला जाता है, इसलिए अपेक्षाकृत ठंडा वातावरण पत्तियों की कटाई बढ़ाता है।"
     },
     "zh": {
-      "common_name": "香菜",
-      "description": "Coriandrum sativum 是一年生香草植物，用于叶和种子。喜全日照、排水良好的土壤和规律浇水。室内生长迅速。"
+      "common_name": "芫荽（香菜）",
+      "description": "Coriandrum sativum 是生长较快的一年生香草，可收获芳香叶片和种子。室内栽培需要充足光照，并保持排水良好的盆土微湿但不积水。高温容易抽薹开花，较凉爽的环境更利于持续采叶。"
     },
     "ja": {
-      "common_name": "コリアンダー",
-      "description": "Coriandrum sativum は葉と種子を利用する一年草です。日当たりと水はけの良い土を好みます。鉢植えでも早く育ちます。"
+      "common_name": "コリアンダー（パクチー）",
+      "description": "Coriandrum sativum は葉と種子を利用する成長の早い一年草のハーブです。室内では強い光と、水はけのよい用土を適度に湿らせて育てます。高温だととう立ちしやすいので、涼しめの環境が葉の収穫を長くします。"
     },
     "ko": {
       "common_name": "고수",
-      "description": "Coriandrum sativum은 잎과 씨앗을 사용하는 한해살이 허브입니다. 햇빛이 잘 들고 배수 좋은 흙과 규칙적인 물주기가 필요합니다."
+      "description": "Coriandrum sativum는 잎과 씨앗을 이용하는 생장이 빠른 한해살이 허브입니다. 실내에서는 매우 밝은 빛과 배수가 좋은 흙을 유지하며, 흙은 촉촉하되 과습은 피합니다. 더우면 쉽게 추대하므로 비교적 서늘한 환경이 잎 수확을 더 오래 돕습니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/herbs/coriander/grow-your-own",
-      "https://extension.umn.edu/vegetables/growing-cilantro",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-coriander/"
+      "https://plants.ces.ncsu.edu/plants/coriandrum-sativum/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=275984",
+      "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/cilantro"
     ]
   }
 }

@@ -2,15 +2,17 @@
   "external_id": "oroya_peruviana",
   "name": "Oroya peruviana",
   "latin": "Oroya peruviana",
-  "sun": "high",
+  "sun": "low",
   "water": "medium",
   "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Sole pieno",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
-          "zh": "完全阳光",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Niedriges Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "낮은 빛"
         }
       }
     },
@@ -53,11 +55,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "مصفى جيد",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "良好的排水",
-          "ja": "良好な排水",
-          "ko": "배수가 잘 되는"
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -75,8 +77,8 @@
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
-          "ja": "中程度",
-          "ko": "적당히"
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15-25 درجة مئوية",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "Cool",
+          "pl": "Chłodno",
+          "de": "Kühl",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "بارد",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘한"
         }
       }
     },
@@ -125,15 +127,15 @@
           "en": "Low",
           "pl": "Niskie",
           "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
           "hi": "कम",
           "zh": "低",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "ja": "低い",
+          "ko": "낮은"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic",
+          "pl": "Toksyczny",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سام",
+          "hi": "विषाक्त",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
         }
       }
     },
@@ -169,67 +171,105 @@
           "pt": "Lento",
           "ar": "بطيء",
           "hi": "धीमा",
-          "zh": "缓慢",
+          "zh": "慢",
           "ja": "遅い",
-          "ko": "느림"
+          "ko": "느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Peruvian Cactus",
-      "description": "Oroya peruviana is a slow-growing cactus native to the Peruvian Andes. It thrives in high altitudes and requires well-drained soil and moderate watering."
+      "common_name": "Peruvian Oroya",
+      "description": "Oroya peruviana is a slow-growing, toxic plant native to the Peruvian Andes. It requires cool, low-light conditions and is known for its difficulty in care."
     },
     "pl": {
-      "common_name": "Kaktus peruwiański",
-      "description": "Oroya peruviana to wolno rosnący kaktus pochodzący z Andów w Peru. Wymaga dobrze przepuszczalnej gleby i umiarkowanego podlewania."
+      "common_name": "Peruwiańska Oroya",
+      "description": "Oroya peruviana to wolno rosnąca, toksyczna roślina pochodząca z Andów peruwiańskich. Wymaga chłodnych, słabo oświetlonych warunków i jest znana ze swojej trudności w pielęgnacji."
     },
     "de": {
-      "common_name": "Peruanische Kaktus",
-      "description": "Oroya peruviana ist ein langsam wachsender Kaktus, der in den peruanischen Anden beheimatet ist. Er benötigt gut durchlässigen Boden und mäßiges Gießen."
+      "common_name": "Peruanische Oroya",
+      "description": "Oroya peruviana ist eine langsam wachsende, giftige Pflanze, die in den peruanischen Anden heimisch ist. Sie benötigt kühle, lichtarme Bedingungen und ist für ihre Pflegeanforderungen bekannt."
     },
     "fr": {
-      "common_name": "Cactus péruvien",
-      "description": "Oroya peruviana est un cactus à croissance lente originaire des Andes péruviennes. Il nécessite un sol bien drainé et un arrosage modéré."
+      "common_name": "Oroya péruvienne",
+      "description": "Oroya peruviana est une plante à croissance lente et toxique originaire des Andes péruviennes. Elle nécessite des conditions fraîches et peu lumineuses et est connue pour sa difficulté de soin."
     },
     "it": {
-      "common_name": "Cactus peruviano",
-      "description": "Oroya peruviana è un cactus a crescita lenta originario delle Ande peruviane. Richiede un terreno ben drenato e annaffiature moderate."
+      "common_name": "Oroya peruviana",
+      "description": "Oroya peruviana è una pianta a crescita lenta e tossica originaria delle Ande peruviane. Richiede condizioni fresche e con poca luce ed è nota per la difficoltà di cura."
     },
     "es": {
-      "common_name": "Cactus peruano",
-      "description": "Oroya peruviana es un cactus de crecimiento lento originario de los Andes peruanos. Requiere suelo bien drenado y riego moderado."
+      "common_name": "Oroya peruana",
+      "description": "Oroya peruviana es una planta de crecimiento lento y tóxica originaria de los Andes peruanos. Requiere condiciones frescas y con poca luz y es conocida por su dificultad en el cuidado."
     },
     "pt": {
-      "common_name": "Cacto peruano",
-      "description": "Oroya peruviana é um cacto de crescimento lento nativo dos Andes peruanos. Exige solo bem drenado e rega moderada."
+      "common_name": "Oroya peruana",
+      "description": "Oroya peruviana é uma planta de crescimento lento e tóxica nativa dos Andes peruanos. Ela requer condições frescas e com pouca luz e é conhecida pela dificuldade em cuidados."
     },
     "ar": {
-      "common_name": "صبار بيروفي",
-      "description": "Oroya peruviana هو صبار بطيء النمو موطنه جبال الأنديز في بيرو. يحتاج إلى تربة جيدة التصريف وري معتدل."
+      "common_name": "أورويّا بيروفية",
+      "description": "أورويّا بيروفية هي نبتة بطيئة النمو وسامة تنمو في جبال الأنديز البيروفية. تتطلب ظروفًا باردة وضوءًا منخفضًا وتشتهر بصعوبة العناية."
     },
     "hi": {
-      "common_name": "पेरूवियन कैक्टस",
-      "description": "Oroya peruviana एक धीमी गति से बढ़ने वाला कैक्टस है जो पेरू के एंडीज पर्वत से उत्पन्न होता है। इसे अच्छी जल निकासी वाली मिट्टी और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "पेरूवियान ओरोया",
+      "description": "ओरोया पेरुवियाना एक धीमी गति से बढ़ने वाली और विषैली पौधा है जो पेरू के एंडीज पर्वत से आता है। इसे ठंडे, कम रोशनी वाले वातावरण की आवश्यकता होती है और इसकी देखभाल करना कठिन माना जाता है।"
     },
     "zh": {
-      "common_name": "秘鲁仙人掌",
-      "description": "Oroya peruviana 是一种生长缓慢的仙人掌，原产于秘鲁的安第斯山脉。它需要良好的排水土壤和适度的浇水。"
+      "common_name": "秘鲁欧洛亚",
+      "description": "秘鲁欧洛亚是一种生长缓慢且有毒的植物，原产于秘鲁安第斯山脉。它需要寒冷、低光的条件，并因其难以照顾而闻名。"
     },
     "ja": {
-      "common_name": "ペルーサボテン",
-      "description": "Oroya peruviana はペルーのアンデス山脈原産の遅い成長をするサボテンです。良好な排水性土壌と適度な水やりが必要です。"
+      "common_name": "ペルーオロヤ",
+      "description": "Oroya peruvianaは、ペルーのアンデス山脈原産の遅く成長し、有毒な植物です。涼しく低光の条件が必要で、手入れが難しいことで知られています。"
     },
     "ko": {
-      "common_name": "페루 선인장",
-      "description": "Oroya peruviana는 페루 안데스 산맥 원산지의 느리게 자라는 선인장입니다. 배수가 좋은 토양과 적당한 물주기가 필요합니다."
+      "common_name": "페루 오로야",
+      "description": "Oroya peruviana는 페루 안데스 산맥 원산지의 느리게 자라는 독성이 있는 식물입니다. 서늘하고 낮은 빛의 조건을 요구하며, 관리하기 어려운 것으로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/18460/Oroya-peruviana/Details",
-      "https://www.cactus-art.biz/schede/OROYA/Oroya_peruviana/Oroya_peruviana/Oroya_peruviana.htm"
+      "https://www.rhs.org.uk/plants/plant-finder/oroya-peruviana",
+      "https://www.gardeningknowhow.com/plant-problems/pests/insects-diseases/oroya-peruviana-care.htm"
     ]
   }
 }

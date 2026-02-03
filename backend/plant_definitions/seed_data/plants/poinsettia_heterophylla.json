@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,9 +37,9 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
+          "ja": "中くらいの光",
           "ko": "중간 빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba gliniasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Suolo argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी का मृदा",
-          "zh": "粘土土壤",
-          "ja": "粘土質土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnia ilość wody",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Acqua media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "ماء متوسط",
-          "hi": "मध्यम पानी",
-          "zh": "中等水分",
-          "ja": "中程度の水やり",
-          "ko": "중간 물"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
+          "en": "Moderate humidity",
           "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
           "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Trujące dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais",
-          "ar": "سامة للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완 동물에게 유독한"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Léggermente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سام قليلا",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度毒性",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "适度生长",
-          "ja": "適度な成長",
-          "ko": "적당한 성장"
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter le trop d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Poinsettia",
-      "description": "Poinsettia heterophylla is a small shrub native to Mexico. It is known for its striking red bracts and green leaves."
+      "common_name": "Jingle Bell Poinsettia",
+      "description": "Poinsettia heterophylla is a species of poinsettia with unique variegated leaves. It thrives in bright light with moderate watering and a well-drained soil mix."
     },
     "pl": {
-      "common_name": "Poinsecja",
-      "description": "Poinsettia heterophylla to mały krzew rodzimy w Meksyku. Jest znana z wyrazistych czerwonych przylistków i zielonych liści."
+      "common_name": "Poinsecja dzwonki",
+      "description": "Poinsettia heterophylla to gatunek poinsecji o wyjątkowych liściach w różnych kolorach. Rośnie dobrze w jasnym świetle, przy umiarkowanym podlewaniu i dobrze przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Poinsettie",
-      "description": "Poinsettia heterophylla ist ein kleiner Strauch aus Mexiko. Sie ist bekannt für ihre auffälligen roten Hochblätter und grünen Blätter."
+      "common_name": "Jingle Bell Poinsettie",
+      "description": "Poinsettia heterophylla ist eine Art der Weihnachtssterne mit einzigartig bunten Blättern. Sie gedeiht bei mittlerem Licht, moderatem Gießen und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Poinsettia",
-      "description": "Poinsettia heterophylla est un petit arbuste originaire du Mexique. Il est connu pour ses bractées rouges frappantes et ses feuilles vertes."
+      "common_name": "Poinsettia cloche",
+      "description": "Poinsettia heterophylla est une espèce de poinsettia avec des feuilles variées. Elle prospère à la lumière moyenne avec un arrosage modéré et un sol bien drainé."
     },
     "it": {
-      "common_name": "Poinsettia",
-      "description": "Poinsettia heterophylla è un piccolo arbusto originario del Messico. È conosciuto per le sue bratte rosse vivaci e le foglie verdi."
+      "common_name": "Poinsettia campana",
+      "description": "Poinsettia heterophylla è una specie di poinsettia con foglie variegate. Cresce bene alla luce moderata con annaffiature moderate e un terreno ben drenato."
     },
     "es": {
-      "common_name": "Poinsettia",
-      "description": "Poinsettia heterophylla es un pequeño arbusto originario de México. Es conocido por sus brácteas rojas y hojas verdes."
+      "common_name": "Poinsettia campanilla",
+      "description": "Poinsettia heterophylla es una especie de flor de pascua con hojas variegadas. Crece bien con luz moderada, riego moderado y un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Poinsettia",
-      "description": "Poinsettia heterophylla é um pequeno arbusto nativo do México. É conhecido por suas brácteas vermelhas e folhas verdes."
+      "common_name": "Poinsettia sinfônica",
+      "description": "Poinsettia heterophylla é uma espécie de poinsettia com folhas variadas. Ela cresce bem com luz média, rega moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "بونسيتيا",
-      "description": "Poinsettia heterophylla هي شجيرة صغيرة موطنها المكسيك. تشتهر بحوافها الحمراء الزاهية وأوراقها الخضراء."
+      "common_name": "بوينسيتيا الجرس",
+      "description": "Poinsettia heterophylla هي نوع من نباتات البوينسيتيا ذات الأوراق المتنوعة. تنمو جيدًا في ضوء متوسط مع ري معتدل وتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "पॉइनसेटिया",
-      "description": "Poinsettia heterophylla एक छोटा झाड़ीनुमा पौधा है जो मेक्सिको का मूल निवासी है। यह अपनी चमकदार लाल ब्रैक्ट और हरी पत्तियों के लिए जाना जाता है।"
+      "common_name": "पॉइन्सेटिया घंटी",
+      "description": "Poinsettia heterophylla एक प्रकार का पॉइन्सेटिया है जिसकी पत्तियाँ रंग-बिरंगी होती हैं। यह मध्यम रोशनी में अच्छी तरह से बढ़ता है और इसके लिए उचित जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "一品红",
-      "description": "Poinsettia heterophylla 是一种原产于墨西哥的小灌木。它因鲜艳的红色苞片和绿色叶子而闻名。"
+      "common_name": "铃铛圣诞花",
+      "description": "Poinsettia heterophylla 是一种具有独特斑驳叶片的圣诞花。它适合在中等光照下生长，需适度浇水并使用排水良好的土壤。"
     },
     "ja": {
-      "common_name": "ポインセチア",
-      "description": "Poinsettia heterophylla はメキシコ原産の小さな低木です。鮮やかな赤い苞葉と緑の葉が特徴です。"
+      "common_name": "ジングルベルポインセチア",
+      "description": "Poinsettia heterophyllaは、ユニークな斑入り葉を持つポインセチアの一種です。明るい光と適度な水やり、よく排水される土壌でうまく育ちます。"
     },
     "ko": {
-      "common_name": "포인세티아",
-      "description": "Poinsettia heterophylla는 멕시코 원산의 작은 관목입니다. 선명한 빨간 색조와 녹색 잎으로 유명합니다."
+      "common_name": "징글벨 포인세티아",
+      "description": "Poinsettia heterophylla는 독특한 다채로운 잎을 가진 포인세티아의 일종입니다. 밝은 빛과 적당한 물주기, 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/poinsettia-heterophylla",
-      "https://www.gardenia.net/plant/poinsettia-heterophylla"
+      "https://www.rhs.org.uk/advice/profile?pid=466",
+      "https://www.gardeningknowhow.com/ornamental/flowers/poinsettia/poinsettia-care.htm"
     ]
   }
 }

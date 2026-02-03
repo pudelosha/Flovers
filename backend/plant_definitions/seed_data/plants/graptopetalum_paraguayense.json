@@ -2,18 +2,19 @@
   "external_id": "graptopetalum_paraguayense",
   "name": "Ghost Plant",
   "latin": "Graptopetalum paraguayense",
-  "sun": "high",
+  "sun": "medium",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct sun",
-          "pl": "Jasne słońce",
-          "de": "Helle Sonne",
-          "fr": "Soleil vif",
-          "it": "Sole diretto",
-          "es": "Sol brillante",
-          "pt": "Sol direto",
-          "ar": "شمس ساطعة",
-          "hi": "तेज धूप",
-          "zh": "强烈阳光",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenante",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
+          "en": "Water sparingly",
+          "pl": "Podlewać oszczędnie",
           "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaff. rado",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
+          "fr": "Arroser modérément",
+          "it": "Annaffiare moderatamente",
+          "es": "Regar moderadamente",
+          "pt": "Regar com moderação",
+          "ar": "سقي قليل",
+          "hi": "हल्के से पानी दें",
           "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "ja": "適度に水やり",
+          "ko": "적게 물 주기"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr leicht",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "매우 쉬움"
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
+          "en": "Low",
+          "pl": "Niskie",
           "de": "Niedrig",
           "fr": "Faible",
           "it": "Bassa",
           "es": "Baja",
           "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
         }
       }
     },
@@ -142,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -160,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing succulent",
-          "pl": "Zwieszająca",
-          "de": "Hängend",
-          "fr": "Retombante",
-          "it": "Ricadente",
-          "es": "Colgante",
-          "pt": "Pendente",
-          "ar": "متدلية",
-          "hi": "लटकने वाली",
-          "zh": "下垂生长",
-          "ja": "垂れ下がる",
-          "ko": "늘어짐"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرात से पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -179,57 +218,57 @@
   "translations": {
     "en": {
       "common_name": "Ghost Plant",
-      "description": "Graptopetalum paraguayense is a drought-tolerant succulent with pale gray rosettes. It prefers bright sunlight and infrequent watering. Overwatering can cause root rot."
+      "description": "Graptopetalum paraguayense, commonly known as Ghost Plant, is a succulent native to Mexico. It features pale, silvery leaves that form rosettes, making it a popular choice for indoor gardens."
     },
     "pl": {
-      "common_name": "Graptopetalum",
-      "description": "Graptopetalum paraguayense to sukulent odporny na suszę o jasnych rozetach. Lubi dużo światła i rzadkie podlewanie. Nadmiar wody powoduje gnicie korzeni."
+      "common_name": "Roślinka duchowa",
+      "description": "Graptopetalum paraguayense, znana jako Roślinka Duchowa, to sukulent pochodzący z Meksyku. Ma blado-srebrzyste liście, które tworzą rozetki, co czyni ją popularnym wyborem do ogrodów wewnętrznych."
     },
     "de": {
-      "common_name": "Geisterpflanze",
-      "description": "Graptopetalum paraguayense ist eine sukkulente Pflanze mit grauen Rosetten. Sie benötigt viel Licht und wenig Wasser. Staunässe vermeiden."
+      "common_name": "Gespenstpflanze",
+      "description": "Graptopetalum paraguayense, auch bekannt als Gespenstpflanze, ist eine Sukkulente aus Mexiko. Sie hat blass-silberne Blätter, die Rosetten bilden und ist eine beliebte Wahl für Zimmergärten."
     },
     "fr": {
-      "common_name": "Plante fantôme",
-      "description": "Graptopetalum paraguayense est une succulente aux rosettes pâles. Elle aime le soleil direct et peu d’arrosage. L’excès d’eau est nuisible."
+      "common_name": "Plante Fantôme",
+      "description": "Graptopetalum paraguayense, communément appelée Plante Fantôme, est une succulente originaire du Mexique. Elle possède des feuilles argentées pâles formant des rosettes, ce qui en fait un choix populaire pour les jardins intérieurs."
     },
     "it": {
-      "common_name": "Pianta fantasma",
-      "description": "Graptopetalum paraguayense è una succulenta con rosette chiare. Richiede molta luce e annaffiature sporadiche. Teme i ristagni d’acqua."
+      "common_name": "Pianta Fantasma",
+      "description": "Graptopetalum paraguayense, conosciuta come Pianta Fantasma, è una pianta succulenta originaria del Messico. Ha foglie di un grigio argenteo che formano rosette, rendendola una scelta popolare per i giardini interni."
     },
     "es": {
-      "common_name": "Planta fantasma",
-      "description": "Graptopetalum paraguayense es una suculenta resistente a la sequía. Necesita sol intenso y riego poco frecuente. El exceso de agua la daña."
+      "common_name": "Planta Fantasma",
+      "description": "Graptopetalum paraguayense, conocida como Planta Fantasma, es una suculenta originaria de México. Presenta hojas plateadas que forman rosetas, lo que la convierte en una opción popular para jardines interiores."
     },
     "pt": {
-      "common_name": "Planta fantasma",
-      "description": "Graptopetalum paraguayense é uma suculenta de baixa manutenção. Prefere sol pleno e pouca água. O excesso causa apodrecimento."
+      "common_name": "Planta Fantasma",
+      "description": "Graptopetalum paraguayense, conhecida como Planta Fantasma, é uma suculenta originária do México. Possui folhas prateadas que formam rosetas, tornando-se uma escolha popular para jardins internos."
     },
     "ar": {
-      "common_name": "نبات الشبح",
-      "description": "Graptopetalum paraguayense نبات عصاري يتحمل الجفاف. يحتاج إلى شمس قوية وري قليل. الإفراط في الري يسبب تلف الجذور."
+      "common_name": "نبتة الشبح",
+      "description": "Graptopetalum paraguayense، المعروفة بنبتة الشبح، هي نبتة عصارية موطنها المكسيك. تتميز بأوراق فضية شاحبة تشكل ورديات، مما يجعلها خيارًا شائعًا لحدائق المنازل."
     },
     "hi": {
-      "common_name": "घोस्ट प्लांट",
-      "description": "Graptopetalum paraguayense एक सूखा सहनशील सक्युलेंट है। इसे तेज धूप और कम पानी चाहिए। अधिक पानी नुकसानदायक है।"
+      "common_name": "भूत प्लांट",
+      "description": "Graptopetalum paraguayense, जिसे भूत प्लांट कहा जाता है, एक मौसमी पौधा है जो मेक्सिको का मूल निवासी है। यह हल्के चांदी जैसे पत्तों से बना होता है, जो गुलदस्ते में बनते हैं।"
     },
     "zh": {
-      "common_name": "幽灵景天",
-      "description": "Graptopetalum paraguayense 是耐旱多肉植物。喜欢强光和少量浇水。浇水过多会烂根。"
+      "common_name": "鬼魂植物",
+      "description": "Graptopetalum paraguayense，通常称为鬼魂植物，是一种原产于墨西哥的多肉植物。它的叶子呈浅银色，形成莲座，是室内花园的流行选择。"
     },
     "ja": {
-      "common_name": "グラプトペタルム",
-      "description": "Graptopetalum paraguayense は乾燥に強い多肉植物です。強い日光と控えめな水やりを好みます。過湿に注意。"
+      "common_name": "ゴーストプラント",
+      "description": "Graptopetalum paraguayense、通称ゴーストプラントは、メキシコ原産の多肉植物です。淡い銀色の葉がロゼットを形成し、室内庭園で人気のある選択肢です。"
     },
     "ko": {
-      "common_name": "고스트 플랜트",
-      "description": "Graptopetalum paraguayense 는 건조에 강한 다육식물입니다. 강한 빛과 적은 물을 선호합니다. 과습을 피하세요."
+      "common_name": "유령 식물",
+      "description": "Graptopetalum paraguayense, 유령 식물로 알려진 이 다육 식물은 멕시코 원산입니다. 연한 은색의 잎이 로제트를 형성하여 실내 정원에서 인기 있는 선택입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/7429/graptopetalum-paraguayense/details",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-graptopetalum/"
+      "https://www.gardenersworld.com/plants/ghost-plant/",
+      "https://www.rhs.org.uk/plants/graptopetalum-paraguayense"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "agave_parryi",
-  "name": "Parry's Agave",
+  "name": "Parry's agave",
   "latin": "Agave parryi",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "agave_parryi.jpg",
@@ -35,9 +35,9 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "直射日光",
+          "ja": "日なた",
           "ko": "강한 햇빛"
         }
       }
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Cactus-succulent mix",
+          "pl": "Podłoże do kaktusów",
+          "de": "Kakteenerde",
+          "fr": "Terreau cactus",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactus",
+          "ar": "تربة صبارات",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "多肉土",
+          "ja": "多肉用土",
+          "ko": "다육이 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Rzadkie",
-          "de": "Selten",
-          "fr": "Rare",
-          "it": "Raro",
-          "es": "Escaso",
-          "pt": "Pouco",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "少なめ",
-          "ko": "적게"
+          "en": "Water when fully dry",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser sol sec",
+          "it": "Annaffia a secco",
+          "es": "Riega con sustrato seco",
+          "pt": "Regar com solo seco",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "मिट्टी सूखने पर",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "완전 건조 후 물"
         }
       }
     },
@@ -86,7 +86,7 @@
         "text": {
           "en": "Easy",
           "pl": "Łatwa",
-          "de": "Einfach",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "5–35°C, keep dry",
+          "pl": "5–35°C, raczej sucho",
+          "de": "5–35°C, trocken",
+          "fr": "5–35°C, au sec",
+          "it": "5–35°C, asciutto",
+          "es": "5–35°C, seco",
+          "pt": "5–35°C, seco",
+          "ar": "5–35°م مع جفاف",
+          "hi": "5–35°C, सूखा रखें",
+          "zh": "5–35°C，偏干",
+          "ja": "5–35°C 乾かし気味",
+          "ko": "5–35°C, 건조하게"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Normal dry air",
+          "pl": "Zwykłe suche powietrze",
+          "de": "Normale trockene Luft",
+          "fr": "Air sec normal",
+          "it": "Aria secca normale",
+          "es": "Aire seco normal",
+          "pt": "Ar seco normal",
+          "ar": "هواء جاف عادي",
+          "hi": "सामान्य सूखी हवा",
+          "zh": "普通干燥空气",
+          "ja": "普通の乾燥空気",
+          "ko": "보통 건조 공기"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "弱い毒性",
-          "ko": "약한 독성"
+          "en": "Sap irritant",
+          "pl": "Sok drażniący",
+          "de": "Saft reizend",
+          "fr": "Sève irritante",
+          "it": "Linfa irritante",
+          "es": "Savia irritante",
+          "pt": "Seiva irritante",
+          "ar": "العصارة مهيّجة",
+          "hi": "रस से जलन",
+          "zh": "汁液刺激性",
+          "ja": "樹液は刺激性",
+          "ko": "수액 자극성"
         }
       }
     },
@@ -160,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow rosette",
+          "pl": "Wolny wzrost, rozeta",
+          "de": "Langsam, Rosette",
+          "fr": "Rosette, lente",
+          "it": "Rosetta, lenta",
+          "es": "Roseta, lento",
+          "pt": "Roseta, lento",
+          "ar": "نمو بطيء، وردة",
+          "hi": "धीमी रोसेट वृद्धि",
+          "zh": "缓慢莲座状",
+          "ja": "ゆっくりロゼット",
+          "ko": "느린 로제트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot if overwatered",
+          "pl": "Zgnilizna przy przelaniu",
+          "de": "Fäule bei Nässe",
+          "fr": "Pourriture si trop d'eau",
+          "it": "Marciume se troppo acqua",
+          "es": "Pudre si exceso de agua",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفّن مع الإفراط",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "浇多易烂根",
+          "ja": "過湿で腐る",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schildläuse, Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية ودقيقية",
+          "hi": "स्केल, मिलीबग",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레, 깔따구"
         }
       }
     }
@@ -179,58 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Parry's agave",
-      "description": "Agave parryi is a compact, slow-growing agave native to the southwestern United States and northern Mexico. It thrives in full sun and very well-drained soil. Water sparingly and allow the soil to dry completely between waterings."
+      "description": "A compact, cold-hardy agave forming a tight rosette of blue-gray leaves with sharp tips. Provide the brightest light possible and a very fast-draining cactus mix. Water only after the potting mix dries completely and keep much drier in winter."
     },
     "pl": {
-      "common_name": "Agawa Parry’ego",
-      "description": "Agave parryi to zwarta, wolno rosnąca agawa z południowo-zachodnich USA i północnego Meksyku. Wymaga pełnego słońca i bardzo przepuszczalnego podłoża. Podlewać rzadko po całkowitym wyschnięciu ziemi."
+      "common_name": "Agawa Parry'ego",
+      "description": "Zwarta agawa tworząca gęstą rozetę niebieskoszarych liści z ostrymi końcówkami. Zapewnij maksymalnie jasne stanowisko i bardzo przepuszczalne podłoże do kaktusów. Podlewaj dopiero po całkowitym przeschnięciu i zimą utrzymuj zdecydowanie bardziej sucho."
     },
     "de": {
       "common_name": "Parry-Agave",
-      "description": "Agave parryi ist eine kompakte, langsam wachsende Agave aus dem Südwesten der USA und Nordmexiko. Sie bevorzugt volle Sonne und gut durchlässiges Substrat. Nur sparsam gießen und Staunässe vermeiden."
+      "description": "Eine kompakte Agave mit dichter Rosette aus blaugrünen, spitz endenden Blättern. Stelle sie so hell wie möglich und verwende sehr durchlässige Kakteenerde. Gieße erst, wenn das Substrat vollständig trocken ist, und halte sie im Winter deutlich trockener."
     },
     "fr": {
       "common_name": "Agave de Parry",
-      "description": "Agave parryi est une agave compacte à croissance lente originaire du sud-ouest des États-Unis et du nord du Mexique. Elle aime le plein soleil et un sol très drainant. Arroser rarement lorsque le sol est complètement sec."
+      "description": "Agave compacte formant une rosette serrée de feuilles bleu-gris aux pointes acérées. Donnez un maximum de lumière et un substrat très drainant pour cactus. Arrosez seulement quand le mélange est complètement sec et gardez presque au sec en hiver."
     },
     "it": {
       "common_name": "Agave di Parry",
-      "description": "Agave parryi è un’agave compatta a crescita lenta originaria del sud-ovest degli Stati Uniti e del Messico settentrionale. Predilige pieno sole e terreno ben drenato. Annaffiare poco e solo a substrato asciutto."
+      "description": "Agave compatta che forma una rosetta fitta di foglie blu-grigie con punte spinose. Offri molta luce e un terriccio per cactus molto drenante. Annaffia solo quando il substrato è completamente asciutto e in inverno mantieni molto più secco."
     },
     "es": {
       "common_name": "Agave de Parry",
-      "description": "Agave parryi es una agave compacta de crecimiento lento originaria del suroeste de Estados Unidos y el norte de México. Necesita pleno sol y suelo muy drenante. Regar poco y solo cuando el sustrato esté seco."
+      "description": "Agave compacta que forma una roseta densa de hojas azul grisáceas con puntas afiladas. Dale la máxima luz posible y un sustrato para cactus muy drenante. Riega solo cuando el sustrato esté totalmente seco y en invierno mantenla casi seca."
     },
     "pt": {
-      "common_name": "Agave de Parry",
-      "description": "Agave parryi é uma agave compacta de crescimento lento, nativa do sudoeste dos EUA e do norte do México. Prefere sol pleno e solo bem drenado. Regar com moderação após a secagem do solo."
+      "common_name": "Agave-de-Parry",
+      "description": "Agave compacta que forma uma roseta densa de folhas azul-acinzentadas com pontas afiadas. Dê muita luz e um substrato para cactos bem drenante. Regue apenas quando o substrato estiver completamente seco e mantenha bem mais seco no inverno."
     },
     "ar": {
       "common_name": "أغاف باري",
-      "description": "نبات أغاف باري نبات عصاري مدمج بطيء النمو موطنه جنوب غرب الولايات المتحدة وشمال المكسيك. يحتاج إلى شمس كاملة وتربة جيدة التصريف. يُسقى باعتدال بعد جفاف التربة تمامًا."
+      "description": "نبات أغاف مدمج يُكوّن وردة كثيفة من أوراق رمادية مزرقة ذات أطراف حادة. وفّر أقصى قدر من الضوء وتربة صبارات جيدة التصريف. اسقِ فقط بعد جفاف التربة تمامًا واجعل الري أقل بكثير في الشتاء."
     },
     "hi": {
       "common_name": "पैरी अगावे",
-      "description": "Agave parryi एक छोटा और धीमी गति से बढ़ने वाला अगावे है जो दक्षिण-पश्चिम अमेरिका और उत्तरी मेक्सिको का मूल निवासी है। इसे तेज धूप और अच्छी जल निकासी वाली मिट्टी चाहिए। मिट्टी सूखने पर ही पानी दें।"
+      "description": "यह एक सघन रोसेट बनाने वाला अगावे है, जिसकी पत्तियाँ नीला-धूसर रंग और नुकीले सिरे वाली होती हैं। इसे बहुत तेज रोशनी और अच्छी जलनिकासी वाली कैक्टस मिट्टी दें। मिट्टी पूरी तरह सूखने पर ही पानी दें और सर्दियों में और भी कम पानी रखें।"
     },
     "zh": {
       "common_name": "帕里龙舌兰",
-      "description": "Agave parryi 是一种生长缓慢、株型紧凑的龙舌兰，原产于美国西南部和墨西哥北部。喜全日照和良好排水的土壤。浇水要少，待土壤完全干燥后再浇。"
+      "description": "紧凑型龙舌兰，叶片蓝灰色，莲座状且叶尖锋利。需要尽可能强的光照，并使用排水很快的多肉/仙人掌基质。基质完全干透后再浇水，冬季尽量保持偏干。"
     },
     "ja": {
       "common_name": "パリーアガベ",
-      "description": "アガベ・パリーは米国南西部とメキシコ北部原産の成長が遅いコンパクトな多肉植物です。直射日光と水はけの良い土を好みます。土が完全に乾いてから水やりします。"
+      "description": "青灰色の葉で締まったロゼットを作るコンパクトなアガベで、葉先は鋭いです。できるだけ明るい場所と水はけの良い多肉用土を使います。用土が完全に乾いてから水やりし、冬はさらに乾かし気味にします。"
     },
     "ko": {
       "common_name": "패리 아가베",
-      "description": "Agave parryi는 미국 남서부와 멕시코 북부가 원산지인 성장 속도가 느린 아가베입니다. 강한 햇빛과 배수가 좋은 흙을 선호합니다. 흙이 완전히 마른 후 물을 주세요."
+      "description": "푸른 회색 잎의 조밀한 로제트를 만드는 비교적 소형 아가베이며 잎끝이 날카롭습니다. 가능한 한 강한 빛과 배수가 좋은 선인장/다육용 흙을 사용하세요. 흙이 완전히 마른 뒤에만 물을 주고 겨울에는 훨씬 더 건조하게 관리합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.desertmuseum.org/kids/oz/long-fact-sheets/Agave%20parryi.php",
-      "https://www.rhs.org.uk/plants/1767/agave-parryi/details",
-      "https://plants.ces.ncsu.edu/plants/agave-parryi/"
+      "https://www.rhs.org.uk/plants/55613/agave-parryi/details",
+      "https://landscapeplants.oregonstate.edu/plants/agave-parryi",
+      "https://www.waltersgardens.com/variety.php?ID=AGATR",
+      "https://www.ivis.org/library/guide-to-poisonous-house-and-garden-plants/agave-species-century-plant"
     ]
   }
 }

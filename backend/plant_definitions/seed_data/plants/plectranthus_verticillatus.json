@@ -1,6 +1,6 @@
 {
   "external_id": "plectranthus_verticillatus",
-  "name": "Swedish Ivy",
+  "name": "Whorled Plectranthus",
   "latin": "Plectranthus verticillatus",
   "sun": "medium",
   "water": "medium",
@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "plectranthus_verticillatus.jpg",
   "image_thumb": "plectranthus_verticillatus.jpg",
   "traits": [
@@ -37,9 +37,9 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中光",
+          "ja": "中程度の光",
           "ko": "중간 빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam, Universal",
-          "pl": "Ziemia ogólna",
-          "de": "Lehm, Universal",
-          "fr": "Terreau universel",
-          "it": "Terreno universale",
-          "es": "Tierra universal",
-          "pt": "Terra universal",
-          "ar": "تربة عالمية",
-          "hi": "सामान्य मृदा",
-          "zh": "通用土壤",
-          "ja": "ユニバーサル土",
-          "ko": "유니버설 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -95,7 +95,7 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "简单",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -154,7 +154,7 @@
           "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evita l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Swedish Ivy",
-      "description": "Plectranthus verticillatus, commonly known as Swedish Ivy, is a low-maintenance, fast-growing ground cover plant with trailing stems and scalloped, bright green leaves. It is typically used as an ornamental plant in hanging baskets or as a ground cover."
+      "common_name": "Whorled Plectranthus",
+      "description": "A low-maintenance indoor plant with trailing stems and attractive foliage. Tolerates moderate light and occasional watering."
     },
     "pl": {
-      "common_name": "Bluszczyk",
-      "description": "Plectranthus verticillatus, znany jako Bluszczyk Szwedzki, jest rośliną o niskich wymaganiach pielęgnacyjnych, szybko rosnącą, z opadającymi łodygami i karbowanymi, jasnozielonymi liśćmi. Jest często używany jako roślina ozdobna w wiszących doniczkach lub jako pokrywa gruntu."
+      "common_name": "Plektrantus okółkowy",
+      "description": "Roślina doniczkowa o zwisających łodygach i ozdobnych liściach. Dobrze rośnie w średnim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Schweden-Efeu",
-      "description": "Plectranthus verticillatus, auch als Schweden-Efeu bekannt, ist eine pflegeleichte, schnell wachsende Bodendeckerpflanze mit hängenden Stängeln und gezackten, hellgrünen Blättern. Sie wird oft als Zierpflanze in Hängetöpfen oder als Bodendecker verwendet."
+      "common_name": "Kreis-Plectranthus",
+      "description": "Eine pflegeleichte Zimmerpflanze mit hängenden Stängeln und dekorativen Blättern. Verträgt mittleres Licht und gelegentliches Gießen."
     },
     "fr": {
-      "common_name": "Lierre suédoise",
-      "description": "Plectranthus verticillatus, communément appelé Lierre suédois, est une plante couvre-sol à croissance rapide et peu exigeante, avec des tiges retombantes et des feuilles vert clair ondulées. Elle est souvent utilisée comme plante ornementale dans des paniers suspendus ou comme couvre-sol."
+      "common_name": "Plectranthus verticillé",
+      "description": "Plante d'intérieur facile à entretenir avec des tiges pendantes et un feuillage décoratif. Tolère la lumière modérée et un arrosage occasionnel."
     },
     "it": {
-      "common_name": "Edera svedese",
-      "description": "Plectranthus verticillatus, conosciuta come Edera svedese, è una pianta rampicante a bassa manutenzione e in rapida crescita, con steli pendenti e foglie verde chiaro a margini seghettati. Viene spesso utilizzata come pianta ornamentale in cesti appesi o come copertura del terreno."
+      "common_name": "Plectranthus verticillato",
+      "description": "Pianta d'appartamento a bassa manutenzione con steli pendenti e foglie decorative. Tollera luce moderata e annaffiature occasionali."
     },
     "es": {
-      "common_name": "Hiedra sueca",
-      "description": "Plectranthus verticillatus, conocida como Hiedra Sueca, es una planta de cobertura de bajo mantenimiento y rápido crecimiento, con tallos caídos y hojas verdes claras con bordes dentados. Se utiliza comúnmente como planta ornamental en cestas colgantes o como cubierta de suelo."
+      "common_name": "Plectranthus verticillatus",
+      "description": "Planta de interior de bajo mantenimiento con tallos colgantes y follaje decorativo. Tolera luz moderada y riego ocasional."
     },
     "pt": {
-      "common_name": "Hera sueca",
-      "description": "Plectranthus verticillatus, conhecida como Hera sueca, é uma planta de cobertura de solo de baixo cuidado e rápido crescimento, com caules pendentes e folhas verde claras com bordas dentadas. É frequentemente usada como planta ornamental em cestos suspensos ou como cobertura do solo."
+      "common_name": "Plectranthus verticillatus",
+      "description": "Planta de interior de fácil manutenção com caules pendentes e folhagem decorativa. Tolera luz moderada e rega ocasional."
     },
     "ar": {
-      "common_name": "اللبلاب السويدي",
-      "description": "Plectranthus verticillatus، المعروف باللبلاب السويدي، هو نبات مغطى بالأرض سهل الصيانة ونموه سريع، مع سيقان متدلية وأوراق خضراء فاتحة ذات حواف مسننة. غالبًا ما يستخدم كنبات زينة في الأواني المعلقة أو كغطاء أرضي."
+      "common_name": "بليكترا نتس فيرتيسيلاتوس",
+      "description": "نبات داخلي سهل الصيانة ذو سيقان متدلية وأوراق مزخرفة. يتحمل الضوء المعتدل والري العرضي."
     },
     "hi": {
-      "common_name": "स्वीडिश आइवी",
-      "description": "Plectranthus verticillatus, जिसे स्वीडिश आइवी के नाम से जाना जाता है, एक कम रख-रखाव वाला, तेजी से बढ़ने वाला पौधा है जिसमें लटकते हुए तने और मंझले आकार के, हरे रंग के पत्ते होते हैं। इसका उपयोग आमतौर पर सजावटी पौधे के रूप में किया जाता है।"
+      "common_name": "व्होर्ल्ड प्लीक्ट्रांथस",
+      "description": "कम रखरखाव वाला इनडोर पौधा जिसमें लटकते तने और आकर्षक पत्तियाँ होती हैं। यह मध्यम प्रकाश और कभी-कभी पानी देने को सहन करता है।"
     },
     "zh": {
-      "common_name": "瑞典常春藤",
-      "description": "Plectranthus verticillatus，常称为瑞典常春藤，是一种低维护、快速生长的地面覆盖植物，具有下垂的茎和边缘呈锯齿状的浅绿色叶子。通常作为装饰植物用于悬挂篮中或作为地面覆盖植物。"
+      "common_name": "旋生白千层",
+      "description": "一种低维护的室内植物，具有下垂的茎和具有装饰性的叶子。耐受中等光照和偶尔浇水。"
     },
     "ja": {
-      "common_name": "スウェーデンアイビー",
-      "description": "Plectranthus verticillatus、通称スウェーデンアイビーは、手入れが簡単で成長が早い地面カバー植物で、垂れ下がった茎と鋸歯状の明るい緑色の葉を持っています。通常、吊り鉢や地面カバーとして装飾植物として使用されます。"
+      "common_name": "環状プレクトランサス",
+      "description": "垂れた茎と装飾的な葉を持つ、手間のかからない室内植物。中程度の光と時々の水やりに耐えます。"
     },
     "ko": {
-      "common_name": "스웨덴 아이비",
-      "description": "Plectranthus verticillatus, 스웨덴 아이비로 알려진 이 식물은 저Maintenance, 빠르게 자라는 덮개 식물로, 처진 줄기와 톱니 모양의 밝은 녹색 잎을 가지고 있습니다. 장식용 식물로 흔히 사용되며 걸이 화분이나 바닥 덮개로 사용됩니다."
+      "common_name": "둘레플렉트란투스",
+      "description": "떨어지는 줄기와 장식적인 잎을 가진 손쉬운 실내 식물. 중간 정도의 빛과 가끔 물을 주는 것을 견딥니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=349",
-      "https://www.bhg.com/gardening/pests-insects-diseases/swedish-ivy-care/"
+      "https://www.rhs.org.uk/advice/profile?pid=739",
+      "https://www.gardenia.net/plant/plectranthus-verticillatus"
     ]
   }
 }

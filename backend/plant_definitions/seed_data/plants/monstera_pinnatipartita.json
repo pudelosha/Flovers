@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "monstera_pinnatipartita.jpg",
   "image_thumb": "monstera_pinnatipartita.jpg",
   "traits": [
@@ -39,8 +39,8 @@
           "ar": "ضوء متوسط",
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ja": "中くらいの光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -49,17 +49,17 @@
       "value": {
         "text": {
           "en": "Aroid mix",
-          "pl": "Mieszanka dla aroidów",
-          "de": "Aroid-Mischung",
-          "fr": "Mélange pour aroides",
-          "it": "Miscela per aroidi",
-          "es": "Mezcla para aroides",
-          "pt": "Mistura para aroides",
-          "ar": "خليط لأرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "阿罗伊混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 혼합 토양"
+          "pl": "Mieszanka dla roślin aroidowych",
+          "de": "Aroid-Erde",
+          "fr": "Mélange pour Aroides",
+          "it": "Miscela per Aroidi",
+          "es": "Mezcla para Aroides",
+          "pt": "Mistura para Aroides",
+          "ar": "مزيج للآرويد",
+          "hi": "ऐरोइड मिक्स",
+          "zh": "天南星植物土壤混合物",
+          "ja": "アロイド用土壌",
+          "ko": "아로이드 혼합토"
         }
       }
     },
@@ -67,14 +67,14 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate water",
+          "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
+          "de": "Mäßige Bewässerung",
           "fr": "Arrosage modéré",
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "الري المعتدل",
+          "ar": "سقي معتدل",
           "hi": "मध्यम पानी देना",
           "zh": "适度浇水",
           "ja": "適度な水やり",
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins modérés",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados moderados",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度护理",
+          "ja": "中程度の世話",
+          "ko": "중간 수준의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Caliente",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -129,7 +129,7 @@
           "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
+          "es": "Humedad alta",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Toksyczny",
-          "de": "Toxisch",
-          "fr": "Toxique",
-          "it": "Tossico",
-          "es": "Tóxico",
-          "pt": "Tóxico",
-          "ar": "سام",
-          "hi": "विषाक्त",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -163,75 +163,113 @@
       "value": {
         "text": {
           "en": "Moderate growth",
-          "pl": "Średni wzrost",
-          "de": "Mittleres Wachstum",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
           "fr": "Croissance modérée",
           "it": "Crescita moderata",
           "es": "Crecimiento moderado",
           "pt": "Crescimento moderado",
-          "ar": "نمو متوسط",
+          "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中くらいの成長",
-          "ko": "중간 성장"
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di annaffiatura",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Od czasu do czasu szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 나타나는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita is a climbing plant native to tropical regions. It thrives in moderate light and requires a humid environment."
+      "common_name": "Pinnate-leaf Monstera",
+      "description": "Monstera pinnatipartita is an aroid plant native to tropical regions. It features distinctive deeply lobed leaves and grows moderately with a preference for high humidity."
     },
     "pl": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita to roślina pnąca pochodząca z tropikalnych regionów. Lubi umiarkowane światło i wymaga wilgotnego środowiska."
+      "common_name": "Monstera z pinnatowymi liśćmi",
+      "description": "Monstera pinnatipartita to roślina aroidowa pochodząca z tropikalnych regionów. Ma charakterystyczne głęboko wcięte liście i rośnie umiarkowanie, preferując wysoką wilgotność."
     },
     "de": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita ist eine kletternde Pflanze aus tropischen Regionen. Sie gedeiht bei mittlerem Licht und benötigt eine hohe Luftfeuchtigkeit."
+      "common_name": "Gefiederte Monstera",
+      "description": "Monstera pinnatipartita ist eine Aroidpflanze aus tropischen Regionen. Sie hat markante tief eingeschnittene Blätter und wächst mäßig bei Vorliebe für hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita est une plante grimpante originaire des régions tropicales. Elle préfère une lumière modérée et un environnement humide."
+      "common_name": "Monstera à feuilles pennées",
+      "description": "Monstera pinnatipartita est une plante aroides originaire des régions tropicales. Elle présente des feuilles profondément découpées et pousse modérément, préférant une humidité élevée."
     },
     "it": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita è una pianta rampicante originaria delle regioni tropicali. Cresce bene in luce moderata e richiede un ambiente umido."
+      "common_name": "Monstera a foglie pennate",
+      "description": "Monstera pinnatipartita è una pianta aroida originaria delle regioni tropicali. Ha foglie distintive profondamente lobate e cresce moderatamente con una preferenza per l'umidità elevata."
     },
     "es": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita es una planta trepadora originaria de las regiones tropicales. Crece bien con luz moderada y necesita un ambiente húmedo."
+      "common_name": "Monstera de hojas pinnadas",
+      "description": "Monstera pinnatipartita es una planta aroida nativa de regiones tropicales. Presenta hojas profundamente lobuladas y crece moderadamente con preferencia por la alta humedad."
     },
     "pt": {
-      "common_name": "Monstera pinnatipartita",
-      "description": "Monstera pinnatipartita é uma planta trepadeira originária das regiões tropicais. Prefere luz moderada e necessita de um ambiente úmido."
+      "common_name": "Monstera de folhas pinnadas",
+      "description": "Monstera pinnatipartita é uma planta aroida nativa das regiões tropicais. Possui folhas profundamente lobadas e cresce moderadamente, preferindo alta umidade."
     },
     "ar": {
-      "common_name": "مونستيرا بيناتيباريتا",
-      "description": "مونستيرا بيناتيباريتا هي نبتة متسلقة موطنها المناطق الاستوائية. تنمو بشكل جيد في الضوء المعتدل وتحتاج إلى بيئة رطبة."
+      "common_name": "مونستيرا ذات الأوراق المتناظرة",
+      "description": "Monstera pinnatipartita هي نبتة من الأرويد من المناطق الاستوائية. تتميز بأوراقها العميقة والممزقة وتناسبها الرطوبة العالية."
     },
     "hi": {
-      "common_name": "मॉनस्टेरा पिनाटिपार्टीटा",
-      "description": "मॉनस्टेरा पिनाटिपार्टीटा एक चढ़ाई करने वाली पौधा है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। यह मध्यम रोशनी में अच्छी तरह से बढ़ता है और उच्च आर्द्रता की आवश्यकता होती है।"
+      "common_name": "पिन्नेट-आकृति मॉन्स्टेरा",
+      "description": "Monstera pinnatipartita एक एरॉयड पौधा है जो उष्णकटिबंधीय क्षेत्रों में पाया जाता है। इसमें विशिष्ट गहरे कांटे वाली पत्तियाँ होती हैं और यह मध्यम गति से बढ़ता है, उच्च आर्द्रता पसंद करता है।"
     },
     "zh": {
-      "common_name": "怪兽藤",
-      "description": "怪兽藤是一种攀爬植物，原产于热带地区。它在中等光照下生长良好，且需要潮湿的环境。"
+      "common_name": "羽裂怪兽藤",
+      "description": "Monstera pinnatipartita 是一种原产于热带地区的天南星科植物。它具有深裂的叶子，喜欢高湿度，生长速度适中。"
     },
     "ja": {
-      "common_name": "モンステラ・ピンナティパルティタ",
-      "description": "モンステラ・ピンナティパルティタは熱帯地域に自生するツル性植物です。中程度の光でよく育ち、高い湿度が必要です。"
+      "common_name": "羽状葉モンステラ",
+      "description": "Monstera pinnatipartitaは熱帯地域に自生するアロイド植物です。特徴的な深い裂け目のある葉を持ち、高湿度を好みながら適度に成長します。"
     },
     "ko": {
-      "common_name": "몬스테라 핀나티파르티타",
-      "description": "몬스테라 핀나티파르티타는 열대 지역에서 자생하는 덩굴 식물입니다. 중간 정도의 빛에서 잘 자라며 높은 습도를 필요로 합니다."
+      "common_name": "깊게 갈라진 몬스테라",
+      "description": "Monstera pinnatipartita는 열대 지역에서 자생하는 아로이드 식물입니다. 특유의 깊은 갈라진 잎을 가지고 있으며, 고습도를 선호하고 중간 정도로 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/monstera-pinnatipartita",
-      "https://www.botanicalgarden.ubc.ca/monstera-pinnatipartita/"
+      "https://www.abc-gardens.com/monstera-pinnatipartita-care",
+      "https://www.gardeningknowhow.com/monstera-pinnatipartita-guide"
     ]
   }
 }

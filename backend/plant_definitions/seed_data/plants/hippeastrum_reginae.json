@@ -1,27 +1,27 @@
 {
   "external_id": "hippeastrum_reginae",
-  "name": "Royal Amaryllis",
+  "name": "Regal Amaryllis",
   "latin": "Hippeastrum reginae",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "hippeastrum_reginae.jpg",
   "image_thumb": "hippeastrum_reginae.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Bright, indirect",
+          "pl": "Jasne, pośrednie",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux, indirect",
+          "it": "Luminoso, indiretto",
+          "es": "Brillante, indirecto",
+          "pt": "Brilhante, indireto",
+          "ar": "مشرق، غير مباشر",
+          "hi": "उज्ज्वल, अप्रत्यक्ष",
+          "zh": "明亮、间接",
+          "ja": "明るい、間接的",
+          "ko": "밝고 간접적인"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig",
+          "de": "Moderat",
           "fr": "Modéré",
-          "it": "Moderata",
+          "it": "Moderato",
           "es": "Moderado",
-          "pt": "Moderada",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
           "ja": "適度",
-          "ko": "보통"
+          "ko": "적당한"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
+          "en": "Medium",
           "pl": "Średnia",
-          "de": "Normal",
+          "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "一般",
-          "ja": "普通",
-          "ko": "보통"
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Trująca",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Bulb flowering",
-          "pl": "Cebulowa",
-          "de": "Zwiebelpflanze",
-          "fr": "Bulbe",
-          "it": "Bulbosa",
-          "es": "Bulbosa",
-          "pt": "Bulbosa",
-          "ar": "بصلية",
-          "hi": "कंदीय",
-          "zh": "球根植物",
-          "ja": "球根植物",
-          "ko": "구근식물"
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccessiva irrigazione",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Royal Amaryllis",
-      "description": "Hippeastrum reginae is a bulbous flowering plant known for its large red trumpet-shaped blooms. It grows best indoors in bright light and well-drained soil. The plant has a dormant period after flowering."
+      "common_name": "Regal Amaryllis",
+      "description": "Hippeastrum reginae is a flowering plant known for its large, vibrant flowers. It thrives in bright, indirect light and moderate watering."
     },
     "pl": {
       "common_name": "Amarylis królewski",
-      "description": "Hippeastrum reginae to roślina cebulowa o dużych czerwonych kwiatach. Najlepiej rośnie w jasnym miejscu i przepuszczalnym podłożu. Po kwitnieniu przechodzi okres spoczynku."
+      "description": "Hippeastrum reginae to roślina kwitnąca znana z dużych, żywych kwiatów. Lubi jasne, pośrednie światło i umiarkowane podlewanie."
     },
     "de": {
-      "common_name": "Königs-Amaryllis",
-      "description": "Hippeastrum reginae ist eine Zwiebelpflanze mit großen roten Blüten. Sie bevorzugt helles Licht und gut durchlässige Erde. Nach der Blüte folgt eine Ruhephase."
+      "common_name": "Königliche Amaryllis",
+      "description": "Hippeastrum reginae ist eine blühende Pflanze, die für ihre großen, lebendigen Blüten bekannt ist. Sie gedeiht bei hellem, indirektem Licht und mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Amaryllis royal",
-      "description": "Hippeastrum reginae est une plante bulbeuse aux grandes fleurs rouges. Elle aime une lumière vive et un sol bien drainé. Une période de repos suit la floraison."
+      "common_name": "Amaryllis royale",
+      "description": "Hippeastrum reginae est une plante à fleurs connue pour ses grandes fleurs vibrantes. Elle préfère la lumière indirecte brillante et un arrosage modéré."
     },
     "it": {
-      "common_name": "Amarillide reale",
-      "description": "Hippeastrum reginae è una pianta bulbosa con grandi fiori rossi. Cresce bene in luce intensa e terreno drenante. Dopo la fioritura entra in dormienza."
+      "common_name": "Amarillis regale",
+      "description": "Hippeastrum reginae è una pianta da fiore nota per i suoi grandi fiori vivaci. Cresce bene in luce brillante e indiretta con annaffiature moderate."
     },
     "es": {
-      "common_name": "Amarilis real",
-      "description": "Hippeastrum reginae es una planta bulbosa de grandes flores rojas. Prefiere luz brillante y suelo bien drenado. Presenta un período de reposo tras la floración."
+      "common_name": "Amaryllis real",
+      "description": "Hippeastrum reginae es una planta con flores conocida por sus grandes flores vibrantes. Prefiere la luz brillante e indirecta y un riego moderado."
     },
     "pt": {
-      "common_name": "Amarílis real",
-      "description": "Hippeastrum reginae é uma planta bulbosa com flores vermelhas grandes. Desenvolve-se bem em luz intensa e solo drenado. Após a floração entra em dormência."
+      "common_name": "Amaryllis real",
+      "description": "Hippeastrum reginae é uma planta florida conhecida por suas grandes flores vibrantes. Prefere luz indireta brilhante e rega moderada."
     },
     "ar": {
-      "common_name": "أمارلس ملكي",
-      "description": "Hippeastrum reginae نبات بصلي ذو أزهار حمراء كبيرة. يفضل الضوء الساطع والتربة جيدة التصريف. يمر بفترة سكون بعد الإزهار."
+      "common_name": "أماريلس ملكي",
+      "description": "Hippeastrum reginae هي نبات مزهر معروف بزهوره الكبيرة والملونة. يفضل الضوء الساطع غير المباشر والري المعتدل."
     },
     "hi": {
-      "common_name": "रॉयल अमैरिलिस",
-      "description": "Hippeastrum reginae एक कंदीय पौधा है जिसमें बड़े लाल फूल होते हैं। यह तेज रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद करता है। फूल के बाद यह सुप्त अवस्था में जाता है।"
+      "common_name": "राजसी अमेरिलिस",
+      "description": "Hippeastrum reginae एक फूलों वाला पौधा है जिसे इसके बड़े, रंगीन फूलों के लिए जाना जाता है। यह चमकीली, अप्रत्यक्ष रोशनी और मध्यम पानी देना पसंद करता है।"
     },
     "zh": {
-      "common_name": "帝王朱顶红",
-      "description": "Hippeastrum reginae 是一种球根开花植物，具有大型红色花朵。适合在明亮环境和排水良好的土壤中生长。开花后会进入休眠期。"
+      "common_name": "皇家风信子",
+      "description": "Hippeastrum reginae是一种开花植物，因其大型鲜艳的花朵而闻名。它喜欢明亮的间接光和适中的浇水。"
     },
     "ja": {
       "common_name": "ロイヤルアマリリス",
-      "description": "Hippeastrum reginae は大きな赤い花を咲かせる球根植物です。明るい光と水はけの良い土を好みます。開花後は休眠期に入ります。"
+      "description": "Hippeastrum reginaeは、大きく鮮やかな花で知られる開花植物です。明るい間接光と適度な水やりを好みます。"
     },
     "ko": {
       "common_name": "로열 아마릴리스",
-      "description": "Hippeastrum reginae 는 큰 붉은 꽃을 피우는 구근 식물입니다. 밝은 빛과 배수가 좋은 토양을 선호합니다. 개화 후 휴면기에 들어갑니다."
+      "description": "Hippeastrum reginae는 크고 화려한 꽃으로 알려진 꽃이 피는 식물입니다. 밝은 간접광과 적당한 물주기를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hippeastrum/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a838",
-      "https://extension.umn.edu/houseplants/amaryllis"
+      "https://www.rhs.org.uk/plants/hippeastrum-reginae",
+      "https://www.gardenia.net/plant/hippeastrum-reginae"
     ]
   }
 }

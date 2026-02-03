@@ -1,18 +1,17 @@
 {
   "external_id": "asplenium_nidus",
-  "name": "Bird's Nest Fern",
+  "name": "Bird's nest fern",
   "latin": "Asplenium nidus",
   "sun": "medium",
-  "water": "medium",
-  "difficulty": "easy",
+  "water": "high",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "universal"
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,9 +28,9 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
+          "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
+          "de": "Helles indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loose well drained",
-          "pl": "Przepuszczalna",
-          "de": "Locker drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "疏松排水好",
-          "ja": "水はけ良い",
-          "ko": "배수 잘됨"
+          "en": "Porous, peaty mix",
+          "pl": "Przepuszczalna ziemia",
+          "de": "Lockere Erde",
+          "fr": "Substrat léger",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة خفيفة جيدة",
+          "hi": "झरझरी मिट्टी",
+          "zh": "疏松腐殖土",
+          "ja": "通気の良い用土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -68,17 +67,17 @@
       "value": {
         "text": {
           "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
+          "pl": "Stale lekko wilgotne",
           "de": "Gleichmäßig feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
+          "fr": "Terreau humide",
+          "it": "Sempre leggermente umida",
+          "es": "Sustrato siempre húmedo",
+          "pt": "Solo sempre úmido",
           "ar": "رطوبة ثابتة",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "均一な湿り気",
-          "ko": "항상 촉촉"
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18 to 27°C",
-          "pl": "18 do 27°C",
-          "de": "18 bis 27°C",
-          "fr": "18 à 27°C",
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
           "it": "18–27°C",
           "es": "18–27°C",
           "pt": "18–27°C",
           "ar": "18–27°م",
           "hi": "18–27°C",
           "zh": "18–27°C",
-          "ja": "18～27°C",
-          "ko": "18~27°C"
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -132,7 +131,7 @@
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,7 +142,7 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
+          "en": "Non-toxic",
           "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
@@ -151,7 +150,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "गैर-विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright rosette",
-          "pl": "Rozeta pionowa",
-          "de": "Aufrechte Rosette",
-          "fr": "Rosette dressée",
-          "it": "Rosetta eretta",
-          "es": "Roseta erguida",
-          "pt": "Roseta ereta",
-          "ar": "نمو وردي",
-          "hi": "सीधा रोसेट",
-          "zh": "直立莲座",
-          "ja": "直立ロゼット",
-          "ko": "직립 로제트"
+          "en": "Slow to moderate",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Lente à moyenne",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长较慢",
+          "ja": "生長は遅め",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj przelania",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب الغمر",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schildläuse, Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية",
+          "hi": "स्केल, मिलीबग",
+          "zh": "介壳虫",
+          "ja": "カイガラムシ",
+          "ko": "깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Bird's Nest Fern",
-      "description": "Asplenium nidus is a tropical fern with glossy, arching fronds forming a central rosette. It grows naturally on trees in humid forests and adapts well to indoor conditions. Consistent moisture and indirect light are essential."
+      "common_name": "Bird's nest fern",
+      "description": "A tropical fern with glossy fronds forming a central rosette. It prefers bright, indirect light and consistently moist (not soggy) substrate. Higher humidity and gentle misting help indoors, especially in dry seasons."
     },
     "pl": {
       "common_name": "Zanokcica gniazdowa",
-      "description": "Asplenium nidus to tropikalna paproć o błyszczących liściach tworzących rozetę. W naturze rośnie epifitycznie w wilgotnych lasach. W domu wymaga stałej wilgoci i jasnego, rozproszonego światła."
+      "description": "Tropikalna paproć o błyszczących liściach tworzących rozetę. Lubi jasne, rozproszone światło oraz stale lekko wilgotne (nie mokre) podłoże. Wysoka wilgotność i delikatne zraszanie pomagają w mieszkaniu."
     },
     "de": {
       "common_name": "Nestfarn",
-      "description": "Asplenium nidus ist ein tropischer Farn mit glänzenden, rosettenförmigen Wedeln. Er wächst in feuchten Wäldern oft auf Bäumen. In Innenräumen benötigt er gleichmäßige Feuchtigkeit und indirektes Licht."
+      "description": "Ein tropischer Farn mit glänzenden Wedeln in Rosettenform. Er mag helles, indirektes Licht und gleichmäßig feuchtes, aber nicht nasses Substrat. Hohe Luftfeuchte und gelegentliches Besprühen sind im Innenraum hilfreich."
     },
     "fr": {
-      "common_name": "Fougère nid d’oiseau",
-      "description": "Asplenium nidus est une fougère tropicale aux frondes brillantes en rosette. Elle pousse naturellement dans les forêts humides sur les arbres. Elle préfère une humidité constante et une lumière indirecte."
+      "common_name": "Fougère nid d'oiseau",
+      "description": "Fougère tropicale aux frondes brillantes formant une rosette. Elle préfère une lumière vive mais indirecte et un substrat uniformément humide sans excès d'eau. Une forte humidité et une brumisation légère aident à la culture en intérieur."
     },
     "it": {
       "common_name": "Felce nido d'uccello",
-      "description": "Asplenium nidus è una felce tropicale con fronde lucide disposte a rosetta. In natura cresce in ambienti umidi come epifita. In casa richiede luce indiretta e umidità costante."
+      "description": "Felce tropicale con fronde lucide disposte a rosetta. Preferisce luce intensa ma indiretta e un terriccio costantemente umido, senza ristagni. Umidità elevata e nebulizzazioni leggere sono utili in casa."
     },
     "es": {
       "common_name": "Helecho nido de ave",
-      "description": "Asplenium nidus es un helecho tropical de frondas brillantes en forma de roseta. Crece de forma natural en bosques húmedos sobre árboles. Necesita humedad constante y luz indirecta."
+      "description": "Helecho tropical con frondes brillantes en forma de roseta. Prefiere luz brillante e indirecta y un sustrato siempre húmedo, sin encharcar. La humedad alta y la pulverización suave ayudan en interior."
     },
     "pt": {
-      "common_name": "Samambaia ninho-de-passarinho",
-      "description": "Asplenium nidus é uma samambaia tropical com folhas brilhantes em roseta. Ocorre naturalmente em florestas úmidas como epífita. Prefere umidade constante e luz indireta."
+      "common_name": "Samambaia-ninho",
+      "description": "Samambaia tropical com frondes brilhantes em roseta. Prefere luz forte e indireta e substrato uniformemente úmido, sem encharcamento. Umidade alta e borrifadas leves ajudam no cultivo interno."
     },
     "ar": {
-      "common_name": "سرخس عش الطائر",
-      "description": "نبات Asplenium nidus هو سرخس استوائي بأوراق لامعة مرتبة بشكل وردي. ينمو طبيعياً في الغابات الرطبة على الأشجار. يحتاج إلى رطوبة ثابتة وضوء غير مباشر."
+      "common_name": "سرخس عش الطير",
+      "description": "سرخس استوائي بأوراق لامعة تتجمع على شكل وردة. يفضل ضوءًا ساطعًا غير مباشر وتربة رطبة باستمرار دون تشبع بالماء. الرطوبة العالية والرش الخفيف يساعدان داخل المنزل."
     },
     "hi": {
       "common_name": "बर्ड्स नेस्ट फर्न",
-      "description": "Asplenium nidus एक उष्णकटिबंधीय फर्न है जिसकी पत्तियाँ रोसेट बनाती हैं। यह प्राकृतिक रूप से नम जंगलों में पेड़ों पर उगता है। इसे अप्रत्यक्ष रोशनी और लगातार नमी चाहिए।"
+      "description": "यह एक उष्णकटिबंधीय फर्न है जिसकी चमकदार पत्तियाँ रोसेट बनाती हैं। इसे तेज लेकिन अप्रत्यक्ष रोशनी और लगातार नम, पर जलभराव रहित मिट्टी पसंद है। घर के अंदर अधिक आर्द्रता और हल्का स्प्रे करना मदद करता है।"
     },
     "zh": {
-      "common_name": "鸟巢蕨",
-      "description": "Asplenium nidus 是一种热带蕨类，叶片呈莲座状生长。原产于潮湿森林，常附生于树上。适合室内养护，需要稳定湿度和散射光。"
+      "common_name": "巢蕨",
+      "description": "热带蕨类，叶片光亮并形成莲座状中心。适合明亮散射光，盆土保持均匀湿润但不要积水。室内湿度偏高更好，干燥时可轻喷雾增湿。"
     },
     "ja": {
-      "common_name": "オオタニワタリ",
-      "description": "Asplenium nidus は光沢のある葉を持つ熱帯性シダです。湿潤な森林で樹上に着生します。室内では間接光と安定した湿度が必要です。"
+      "common_name": "シマオオタニワタリ",
+      "description": "光沢のある葉がロゼット状に広がる熱帯性のシダ。明るい間接光と、過湿にならない程度に均一な湿り気のある用土を好みます。室内では高湿度が望ましく、乾燥時は軽い霧吹きが役立ちます。"
     },
     "ko": {
-      "common_name": "새둥지양치",
-      "description": "Asplenium nidus는 광택 있는 잎이 로제트 형태로 자라는 열대 양치식물입니다. 자연에서는 습한 숲의 나무에 착생합니다. 실내에서는 간접광과 꾸준한 습도가 필요합니다."
+      "common_name": "새둥지고사리",
+      "description": "윤기 있는 잎이 로제트 형태로 자라는 열대 고사리입니다. 밝은 간접광과 과습이 아닌 촉촉한 토양을 선호합니다. 실내에서는 습도를 높이고 건조할 때 가볍게 분무하면 도움이 됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1655/asplenium-nidus/details",
-      "https://edis.ifas.ufl.edu/publication/FP045",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282747"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=285707",
+      "https://plants.ces.ncsu.edu/plants/asplenium-nidus/",
+      "https://www.rhs.org.uk/plants/1728/asplenium-nidus/details",
+      "https://www.rhsplants.co.uk/plants/_/asplenium-nidus/classid.2000028174/",
+      "https://hgic.clemson.edu/how-to-grow-and-care-for-birds-nest-fern-asplenium-nidus/"
     ]
   }
 }

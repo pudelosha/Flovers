@@ -4,14 +4,13 @@
   "latin": "Damasonium alisma",
   "sun": "high",
   "water": "high",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "clay",
-    "loam"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 2,
@@ -30,7 +29,7 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonnig",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
@@ -38,8 +37,8 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日向",
-          "ko": "양지"
+          "ja": "日なた",
+          "ko": "직사광"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Wet clay soil",
-          "pl": "Mokra glina",
-          "de": "Nasser Ton",
-          "fr": "Argile humide",
-          "it": "Argilla umida",
-          "es": "Arcilla húmeda",
-          "pt": "Argila úmida",
-          "ar": "تربة طينية رطبة",
-          "hi": "गीली चिकनी मिट्टी",
-          "zh": "湿黏土",
-          "ja": "湿った粘土",
-          "ko": "습한 점토"
+          "en": "Muddy, pond soil",
+          "pl": "Mulista ziemia",
+          "de": "Schlammiger Boden",
+          "fr": "Sol vaseux",
+          "it": "Suolo fangoso",
+          "es": "Suelo fangoso",
+          "pt": "Solo lodoso",
+          "ar": "تربة طينية",
+          "hi": "कीचड़ वाली मिट्टी",
+          "zh": "泥质土",
+          "ja": "泥質の土",
+          "ko": "진흙 토양"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Constant moisture",
-          "pl": "Stała wilgoć",
-          "de": "Ständig feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة دائمة",
-          "hi": "लगातार नमी",
-          "zh": "持续湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 습함"
+          "en": "Keep in shallow water",
+          "pl": "Płytka woda stale",
+          "de": "Stets flach im Wasser",
+          "fr": "Eau peu profonde",
+          "it": "Acqua bassa costante",
+          "es": "Agua poco profunda",
+          "pt": "Água rasa constante",
+          "ar": "ماء ضحل دائم",
+          "hi": "उथला पानी रखें",
+          "zh": "保持浅水",
+          "ja": "浅水を保つ",
+          "ko": "얕은 물 유지"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Specialist aquatic",
+          "pl": "Wymaga warunków",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeant",
+          "it": "Esigente",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "يتطلب شروطًا",
+          "hi": "विशेष परिस्थितियाँ",
+          "zh": "较挑环境",
+          "ja": "環境に敏感",
+          "ko": "환경 민감"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Umiarkowana",
-          "de": "Gemäßigt",
-          "fr": "Tempéré",
-          "it": "Temperato",
-          "es": "Templado",
-          "pt": "Temperado",
-          "ar": "معتدل",
+          "en": "Cool-temperate",
+          "pl": "Umiarkowanie chłodno",
+          "de": "Kühl-gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "معتدل بارد",
           "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "zh": "温带偏凉",
+          "ja": "冷涼な温帯",
+          "ko": "서늘한 온대"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Feuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Aquatic plant",
+          "pl": "Roślina wodna",
+          "de": "Wasserpflanze",
+          "fr": "Plante aquatique",
+          "it": "Pianta acquatica",
+          "es": "Planta acuática",
+          "pt": "Planta aquática",
+          "ar": "نبات مائي",
+          "hi": "जलीय पौधा",
+          "zh": "水生植物",
+          "ja": "水生植物",
+          "ko": "수생식물"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Not known toxic",
+          "pl": "Brak danych o toks.",
+          "de": "Nicht bekannt giftig",
+          "fr": "Non toxique connu",
+          "it": "Non noto tossico",
+          "es": "No tóxica conocida",
+          "pt": "Não tóxica conhecida",
+          "ar": "غير معروف كسمّي",
+          "hi": "विषाक्तता अज्ञात",
+          "zh": "未见毒性资料",
+          "ja": "毒性情報なし",
+          "ko": "독성 정보 없음"
         }
       }
     },
@@ -161,77 +160,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Herbaceous annual",
-          "pl": "Roczna roślina",
-          "de": "Einjährig",
-          "fr": "Annuelle",
-          "it": "Annuale",
-          "es": "Anual",
-          "pt": "Anual",
-          "ar": "عشبي سنوي",
-          "hi": "वार्षिक शाकीय",
-          "zh": "一年生草本",
-          "ja": "一年草",
-          "ko": "한해살이"
+          "en": "Annual, 5–50 cm",
+          "pl": "Jednoroczna, do 50 cm",
+          "de": "Einjährig, bis 50 cm",
+          "fr": "Annuelle, 5–50 cm",
+          "it": "Annuale, 5–50 cm",
+          "es": "Anual, 5–50 cm",
+          "pt": "Anual, 5–50 cm",
+          "ar": "حولية حتى 50 سم",
+          "hi": "वार्षिक, 5–50 सेमी",
+          "zh": "一年生 5–50cm",
+          "ja": "一年草 5–50cm",
+          "ko": "일년생 5–50cm"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drying out",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter le dessèchement",
+          "it": "Non far seccare",
+          "es": "Evitar que se seque",
+          "pt": "Evitar secar",
+          "ar": "تجنب الجفاف",
+          "hi": "सूखने न दें",
+          "zh": "避免干涸",
+          "ja": "乾燥させない",
+          "ko": "건조 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶发虫害",
+          "ja": "害虫は時々",
+          "ko": "간헐적 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Starfruit",
-      "description": "Damasonium alisma is a small annual aquatic plant native to Europe and parts of Asia. It grows in shallow ponds, ditches, and temporary wetlands with clay-rich soils. The plant requires constant moisture and full sun to complete its life cycle."
+      "common_name": "Starfruit (aquatic)",
+      "description": "Damasonium alisma is a rare semi-aquatic plant of seasonal ponds and muddy pond margins. It prefers open, very bright conditions and shallow freshwater over muddy mineral soil. Keep it continuously wet or in shallow water rather than letting the pot dry out."
     },
     "pl": {
-      "common_name": "Gwiazdnica wodna",
-      "description": "Damasonium alisma to niewielka roślina wodna jednoroczna występująca w Europie. Rośnie w płytkich zbiornikach i rowach na glebach gliniastych. Wymaga stałej wilgoci i pełnego słońca."
+      "common_name": "Starfruit (roślina wodna)",
+      "description": "Damasonium alisma to rzadka roślina półwodna związana z okresowymi stawami i mulistymi brzegami. Lubi stanowiska otwarte i bardzo jasne oraz płytką wodę nad mulistą glebą. Podłoże powinno być stale mokre lub zanurzone w płytkiej wodzie."
     },
     "de": {
-      "common_name": "Sternfrucht-Wasserpflanze",
-      "description": "Damasonium alisma ist eine kleine einjährige Wasserpflanze aus Europa. Sie wächst in flachen Gewässern und Gräben mit tonigen Böden. Ständige Feuchtigkeit und volle Sonne sind notwendig."
+      "common_name": "Starfruit (Wasserpflanze)",
+      "description": "Damasonium alisma ist eine seltene, halb-aquatische Art aus saisonalen Teichen und schlammigen Ufern. Sie braucht sehr helles, offenes Licht und flaches Süßwasser über schlammigem Substrat. Das Gefäß darf nicht austrocknen und sollte dauerhaft nass stehen."
     },
     "fr": {
-      "common_name": "Damasonium",
-      "description": "Damasonium alisma est une petite plante aquatique annuelle d’Europe. Elle pousse dans des eaux peu profondes et des sols argileux. Une humidité constante et le plein soleil sont essentiels."
+      "common_name": "Starfruit (plante aquatique)",
+      "description": "Damasonium alisma est une plante semi-aquatique rare des mares temporaires et des berges vaseuses. Elle demande une exposition très lumineuse et une eau douce peu profonde sur substrat boueux. Maintenez le pot constamment humide ou placé dans une faible hauteur d’eau."
     },
     "it": {
-      "common_name": "Damasonio",
-      "description": "Damasonium alisma è una piccola pianta acquatica annuale europea. Cresce in acque basse con suoli argillosi. Necessita di umidità costante e pieno sole."
+      "common_name": "Starfruit (pianta acquatica)",
+      "description": "Damasonium alisma è una specie semi-acquatica rara di stagni stagionali e margini fangosi. Preferisce luce molto intensa e acqua dolce poco profonda su substrato limoso. Non lasciare asciugare il vaso: mantienilo sempre bagnato o in acqua bassa."
     },
     "es": {
-      "common_name": "Damasonio",
-      "description": "Damasonium alisma es una planta acuática anual originaria de Europa. Habita en aguas poco profundas y suelos arcillosos. Requiere humedad constante y pleno sol."
+      "common_name": "Starfruit (acuática)",
+      "description": "Damasonium alisma es una planta semiacuática rara de charcas estacionales y orillas fangosas. Requiere luz muy brillante y agua dulce poco profunda sobre sustrato lodoso. Mantén el recipiente siempre húmedo o colocado en una lámina de agua baja."
     },
     "pt": {
-      "common_name": "Damasonium",
-      "description": "Damasonium alisma é uma pequena planta aquática anual europeia. Cresce em águas rasas e solos argilosos. Precisa de umidade constante e sol pleno."
+      "common_name": "Starfruit (aquática)",
+      "description": "Damasonium alisma é uma espécie semi-aquática rara de lagoas sazonais e margens lamacentas. Prefere muita luz e água doce rasa sobre substrato lodoso. Não deixe o vaso secar; mantenha-o sempre úmido ou em água rasa."
     },
     "ar": {
-      "common_name": "داماسونيوم",
-      "description": "Damasonium alisma نبات مائي سنوي موطنه أوروبا. ينمو في المياه الضحلة والتربة الطينية. يحتاج إلى رطوبة دائمة وضوء شمس كامل."
+      "common_name": "ستارفروت (نبات مائي)",
+      "description": "Damasonium alisma نبات شبه مائي نادر يعيش في برك موسمية وحواف طينية. يحتاج إلى إضاءة قوية ومكان مفتوح وماء عذب ضحل فوق تربة طينية. أبقِ الوعاء رطبًا دائمًا أو موضوعًا في طبقة ماء ضحلة."
     },
     "hi": {
-      "common_name": "डैमसोनियम",
-      "description": "Damasonium alisma एक छोटा वार्षिक जलीय पौधा है जो यूरोप में पाया जाता है। यह उथले पानी और चिकनी मिट्टी में उगता है। इसे लगातार नमी और पूरी धूप की आवश्यकता होती है।"
+      "common_name": "स्टारफ्रूट (जलीय पौधा)",
+      "description": "Damasonium alisma एक दुर्लभ अर्ध-जलीय पौधा है जो मौसमी तालाबों और कीचड़ वाले किनारों में मिलता है। इसे बहुत तेज रोशनी और उथला मीठा पानी, कीचड़युक्त मिट्टी के ऊपर पसंद है। गमले को सूखने न दें और उसे लगातार गीला/उथले पानी में रखें।"
     },
     "zh": {
-      "common_name": "星果泽泻",
-      "description": "Damasonium alisma 是原产于欧洲的一年生水生植物。它生长在浅水和黏土质土壤中。需要持续湿润和充足阳光。"
+      "common_name": "星果泽泻（湿地植物）",
+      "description": "Damasonium alisma 是季节性池塘与泥质岸边的稀有半水生植物。它需要开阔强光与浅淡水环境，基质以泥质矿质土为主。栽培时应保持盆土持续湿润或放在浅水中，避免干涸。"
     },
     "ja": {
-      "common_name": "ダマソニウム",
-      "description": "Damasonium alisma はヨーロッパ原産の一年生水生植物です。浅い水域と粘土質の土壌で育ちます。常に湿り気と十分な日光が必要です。"
+      "common_name": "スター・フルーツ（水生）",
+      "description": "Damasonium alisma は季節的な池や泥の岸辺に生える希少な半水生植物です。明るく開けた環境と浅い淡水、泥状の用土を好みます。鉢は乾かさず、常に湿った状態か浅水に置いて管理します。"
     },
     "ko": {
-      "common_name": "다마소니움",
-      "description": "Damasonium alisma는 유럽 원산의 한해살이 수생식물입니다. 얕은 물과 점토질 토양에서 자랍니다. 지속적인 수분과 충분한 햇빛이 필요합니다."
+      "common_name": "스타프루트(수생식물)",
+      "description": "Damasonium alisma 는 계절성 연못과 진흙 가장자리에 사는 드문 반수생 식물입니다. 매우 밝고 트인 환경과 얕은 담수, 진흙성 기질을 선호합니다. 화분이 마르지 않게 항상 젖게 유지하거나 얕은 물에 두세요."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321705-2",
-      "https://www.gbif.org/species/2875526",
-      "https://www.brc.ac.uk/plantatlas/plant/damasonium-alisma"
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:58296-1/general-information",
+      "https://www.rhs.org.uk/plants/158329/damasonium-alisma/details",
+      "https://www.fws.gov/sites/default/files/documents/Ecological-Risk-Screening-Summary-Damasonium-alisma-plant.pdf",
+      "https://archive.bsbi.org.uk/Wats20p33.pdf",
+      "https://content.freshwaterhabitats.org.uk/2015/03/STARFRUIT-RARE-SPECIES-RECORDING-SHEET.pdf",
+      "https://pfaf.org/user/Plant.aspx?LatinName=Damasonium+alisma"
     ]
   }
 }

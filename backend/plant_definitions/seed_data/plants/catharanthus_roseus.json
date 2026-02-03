@@ -7,12 +7,11 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "peat-free",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,17 +28,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日当たり良好",
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Licht",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol forte",
+          "ar": "شمس قوية",
+          "hi": "तेज़ धूप",
+          "zh": "强光",
+          "ja": "よく日の当たる",
           "ko": "강한 햇빛"
         }
       }
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "en": "Well-drained mix",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जलनिकासी वाली",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Let top dry",
+          "pl": "Przeschnij wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga in superficie",
+          "es": "Secar la capa superior",
+          "pt": "Secar a camada de cima",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いてから",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -96,7 +95,7 @@
           "ar": "سهل",
           "hi": "आसान",
           "zh": "容易",
-          "ja": "簡単",
+          "ja": "かんたん",
           "ko": "쉬움"
         }
       }
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climates",
-          "pl": "Ciepły klimat",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18–29°C",
+          "pl": "18–29°C",
+          "de": "18–29°C",
+          "fr": "18–29°C",
+          "it": "18–29°C",
+          "es": "18–29°C",
+          "pt": "18–29°C",
+          "ar": "18–29°م",
+          "hi": "18–29°C",
+          "zh": "18–29°C",
+          "ja": "18–29°C",
+          "ko": "18–29°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "औसत",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average humidity",
+          "pl": "Umiarkowana wilg.",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "ふつうの湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -144,17 +143,17 @@
       "value": {
         "text": {
           "en": "Toxic if eaten",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "pl": "Trująca po zjedzeniu",
+          "de": "Giftig beim Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند البلع",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Bushy growth",
-          "pl": "Krzaczasty",
-          "de": "Buschig",
-          "fr": "Touffue",
-          "it": "Cespugliosa",
-          "es": "Arbustiva",
-          "pt": "Arbustiva",
-          "ar": "كثيف",
-          "hi": "झाड़ीदार",
-          "zh": "丛生",
-          "ja": "茂る",
-          "ko": "덤불형"
+          "en": "Bushy bloomer",
+          "pl": "Krzaczasta, kwitnie",
+          "de": "Buschig, blühend",
+          "fr": "Buissonnant, fleuri",
+          "it": "Cespugliosa, fiorita",
+          "es": "Arbustiva, florece",
+          "pt": "Arbustiva, florida",
+          "ar": "شجيرية مزهرة",
+          "hi": "झाड़ीदार, खिलती",
+          "zh": "丛生开花",
+          "ja": "こんもり開花",
+          "ko": "덤불형 개화"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Pas d'excès d'eau",
+          "it": "No ristagni",
+          "es": "Sin encharcar",
+          "pt": "Sem encharcar",
+          "ar": "تجنب تربة مشبعة",
+          "hi": "ज्यादा पानी नहीं",
+          "zh": "忌积水",
+          "ja": "過湿に注意",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites",
+          "pl": "Przędziorki",
+          "de": "Spinnmilben",
+          "fr": "Araignées rouges",
+          "it": "Ragnetto rosso",
+          "es": "Ácaros",
+          "pt": "Ácaros",
+          "ar": "العناكب الحمراء",
+          "hi": "स्पाइडर माइट्स",
+          "zh": "红蜘蛛",
+          "ja": "ハダニ",
+          "ko": "응애"
         }
       }
     }
@@ -181,57 +218,59 @@
   "translations": {
     "en": {
       "common_name": "Madagascar periwinkle",
-      "description": "Catharanthus roseus is a sun-loving flowering plant native to Madagascar. It is widely grown as an ornamental for its long-lasting blooms and tolerance of heat and drought."
+      "description": "Catharanthus roseus is a warm-season flowering plant with glossy leaves and continuous blooms in strong light. Grow it in a very well-drained potting mix and water when the top layer dries. It is toxic if ingested by pets or people."
     },
     "pl": {
-      "common_name": "Katarantus różowy",
-      "description": "Catharanthus roseus to roślina kwitnąca pochodząca z Madagaskaru. Ceniona jest za długie kwitnienie i odporność na upały."
+      "common_name": "katarantus różowy",
+      "description": "Catharanthus roseus to ciepłolubna roślina kwitnąca o błyszczących liściach. Wymaga bardzo przepuszczalnego podłoża i podlewania, gdy przeschnie wierzch. Jest trująca po spożyciu przez zwierzęta lub ludzi."
     },
     "de": {
       "common_name": "Madagaskar-Immergrün",
-      "description": "Catharanthus roseus stammt aus Madagaskar und ist eine beliebte Zierpflanze. Sie blüht lange und verträgt Sonne sowie Trockenheit."
+      "description": "Catharanthus roseus ist eine wärmeliebende Blühpflanze mit glänzenden Blättern. Verwenden Sie ein sehr gut drainierendes Substrat und gießen Sie, wenn die Oberfläche abgetrocknet ist. Die Pflanze ist bei Aufnahme giftig."
     },
     "fr": {
       "common_name": "Pervenche de Madagascar",
-      "description": "Catharanthus roseus est originaire de Madagascar. Elle est cultivée pour ses fleurs abondantes et sa résistance à la chaleur."
+      "description": "Catharanthus roseus est une plante florifère de chaleur aux feuilles luisantes. Cultivez-la dans un substrat très drainant et arrosez quand la surface sèche. Elle est toxique en cas d’ingestion."
     },
     "it": {
       "common_name": "Pervinca del Madagascar",
-      "description": "Catharanthus roseus è una pianta ornamentale originaria del Madagascar. Fiorisce a lungo e tollera bene il caldo."
+      "description": "Catharanthus roseus è una pianta fiorita amante del caldo con foglie lucide. Coltivala in un terriccio molto drenante e annaffia quando lo strato superiore si asciuga. È tossica se ingerita."
     },
     "es": {
       "common_name": "Vinca de Madagascar",
-      "description": "Catharanthus roseus es originaria de Madagascar. Se cultiva por su floración prolongada y su resistencia al calor."
+      "description": "Catharanthus roseus es una planta de flor que prefiere el calor y la luz intensa. Usa un sustrato muy drenante y riega cuando se seque la capa superior. Es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Vinca de Madagascar",
-      "description": "Catharanthus roseus é nativa de Madagascar. É valorizada pela floração contínua e pela tolerância ao calor."
+      "common_name": "Vinca-de-Madagáscar",
+      "description": "Catharanthus roseus é uma planta florífera de clima quente com folhas brilhantes. Plante em substrato bem drenado e regue quando a camada superior secar. É tóxica se ingerida."
     },
     "ar": {
       "common_name": "ونكا مدغشقر",
-      "description": "نبات Catharanthus roseus موطنه مدغشقر. يزرع للزينة بسبب أزهاره المستمرة وتحمله للحرارة."
+      "description": "Catharanthus roseus نبات مزهر محب للدفء بأوراق لامعة ويزهر مع الضوء القوي. ازرعه في تربة جيدة التصريف واسقه عندما يجف سطح التربة. النبات سام عند ابتلاعه للحيوانات الأليفة أو البشر."
     },
     "hi": {
-      "common_name": "मेडागास्कर सदाबहार",
-      "description": "Catharanthus roseus मेडागास्कर का मूल पौधा है। यह लंबे समय तक फूल देने और गर्मी सहन करने के लिए जाना जाता है।"
+      "common_name": "मैडागास्कर पेरिविंकल",
+      "description": "Catharanthus roseus गर्म मौसम में खिलने वाला पौधा है जिसकी पत्तियाँ चमकीली होती हैं। अच्छी जलनिकासी वाली मिट्टी में लगाएँ और ऊपर की परत सूखने पर पानी दें। पालतू जानवरों या मनुष्यों द्वारा खाने पर यह विषैला है।"
     },
     "zh": {
       "common_name": "长春花",
-      "description": "Catharanthus roseus 原产于马达加斯加。因花期长且耐热而广泛栽培。"
+      "description": "Catharanthus roseus 是喜温的开花植物，强光下更易持续开花。使用排水良好的盆土，表土干再浇水。误食对人和宠物有毒。"
     },
     "ja": {
       "common_name": "ニチニチソウ",
-      "description": "Catharanthus roseus はマダガスカル原産の植物です。長い開花期と耐暑性で知られています。"
+      "description": "Catharanthus roseus は暖かい環境と強い光でよく咲く開花植物です。水はけの良い用土を使い、表土が乾いてから水やりします。誤食すると人やペットに有毒です。"
     },
     "ko": {
       "common_name": "일일초",
-      "description": "Catharanthus roseus는 마다가스카르 원산의 식물입니다. 긴 개화 기간과 더위에 강한 특징이 있습니다."
+      "description": "Catharanthus roseus 는 따뜻한 환경과 강한 빛에서 잘 꽃피는 식물입니다. 배수가 좋은 흙에 심고 겉흙이 마르면 물을 주세요. 사람이나 반려동물이 섭취하면 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a253",
-      "https://extension.umn.edu/flowers/growing-annual-vinca"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a569",
+      "https://www.rhs.org.uk/plants/98105/catharanthus-roseus/details",
+      "https://plants.ces.ncsu.edu/plants/catharanthus-roseus/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/vinca"
     ]
   }
 }

@@ -1,18 +1,18 @@
 {
   "external_id": "eucomis_comosa",
-  "name": "Pineapple Lily",
+  "name": "Eucomis comosa",
   "latin": "Eucomis comosa",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Gleba przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Sol drainant",
-          "it": "Suolo drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
+          "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
-          "it": "Irrigazione media",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
+          "pt": "Regagem moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलिंग",
           "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlere Pflege",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "보통 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm season plant",
-          "pl": "Roślina ciepłolubna",
-          "de": "Wärmeliebend",
-          "fr": "Plante de chaleur",
-          "it": "Pianta da caldo",
-          "es": "Planta cálida",
-          "pt": "Planta de calor",
-          "ar": "نبات دافئ",
-          "hi": "गर्म मौसम पौधा",
-          "zh": "喜温植物",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "18-25°C",
+          "pl": "18-25°C",
+          "de": "18-25°C",
+          "fr": "18-25°C",
+          "it": "18-25°C",
+          "es": "18-25°C",
+          "pt": "18-25°C",
+          "ar": "18-25°C",
+          "hi": "18-25°C",
+          "zh": "18-25°C",
+          "ja": "18-25°C",
+          "ko": "18-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "일반 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽い毒性",
-          "ko": "약한 독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Bulbous perennial",
-          "pl": "Bylina cebulowa",
-          "de": "Zwiebelpflanze",
-          "fr": "Vivace bulbeuse",
-          "it": "Perenne bulbosa",
-          "es": "Perenne bulbosa",
-          "pt": "Perene bulbosa",
-          "ar": "نبات بصلي معمر",
-          "hi": "कंदीय बहुवर्षीय",
-          "zh": "球根多年生",
-          "ja": "球根多年草",
-          "ko": "구근성 다년초"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير متكررة",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Pineapple Lily",
-      "description": "Eucomis comosa is a bulbous perennial native to southern Africa. It produces tall flower spikes topped with a tuft resembling a pineapple. The plant grows best in full sun with well-drained soil during the warm season."
+      "description": "Eucomis comosa, also known as Pineapple Lily, is a bulbous perennial with striking green leaves and tall spikes of white or purple flowers. It thrives in moderate light and requires well-drained soil."
     },
     "pl": {
       "common_name": "Lilia ananasowa",
-      "description": "Eucomis comosa to bylina cebulowa pochodząca z południowej Afryki. Tworzy wysokie kwiatostany z charakterystyczną rozetą liści na szczycie. Wymaga słońca i przepuszczalnej gleby w okresie wzrostu."
+      "description": "Eucomis comosa, znana również jako lilia ananasowa, to bylinowa roślina cebulowa z efektownymi zielonymi liśćmi i wysokimi kwiatostanami białych lub fioletowych kwiatów. Preferuje umiarkowane światło i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Ananaslilie",
-      "description": "Eucomis comosa ist eine zwiebelbildende Staude aus dem südlichen Afrika. Sie bildet hohe Blütenstände mit einer schopfartigen Spitze. Bevorzugt volle Sonne und gut drainierten Boden."
+      "common_name": "Ananas-Lilie",
+      "description": "Eucomis comosa, auch als Ananas-Lilie bekannt, ist eine zwiebeltragende Pflanze mit auffälligen grünen Blättern und hohen Blütenständen aus weißen oder violetten Blüten. Sie gedeiht bei mäßigem Licht und benötigt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Lis des ananas",
-      "description": "Eucomis comosa est une plante vivace bulbeuse originaire d’Afrique australe. Elle produit des hampes florales surmontées d’une touffe décorative. Elle apprécie le plein soleil et un sol bien drainé."
+      "common_name": "Lis des pins",
+      "description": "Eucomis comosa, également connue sous le nom de Lis des pins, est une plante bulbeuse vivace avec des feuilles vertes frappantes et des hampes florales hautes de fleurs blanches ou violettes. Elle préfère la lumière modérée et un sol bien drainé."
     },
     "it": {
       "common_name": "Giglio ananas",
-      "description": "Eucomis comosa è una perenne bulbosa originaria dell’Africa meridionale. Presenta infiorescenze alte con un ciuffo apicale ornamentale. Cresce meglio in pieno sole e terreno drenante."
+      "description": "Eucomis comosa, noto anche come giglio ananas, è una pianta perenne bulbosa con foglie verdi evidenti e alti steli di fiori bianchi o viola. Preferisce la luce moderata e richiede un terreno ben drenato."
     },
     "es": {
       "common_name": "Lirio piña",
-      "description": "Eucomis comosa es una planta bulbosa perenne originaria del sur de África. Produce espigas florales altas con una corona decorativa. Requiere sol pleno y suelo bien drenado."
+      "description": "Eucomis comosa, también conocida como lirio piña, es una planta perenne bulbosa con hojas verdes llamativas y altas espigas de flores blancas o moradas. Crece mejor con luz moderada y requiere suelos bien drenados."
     },
     "pt": {
-      "common_name": "Lírio-abacaxi",
-      "description": "Eucomis comosa é uma planta bulbosa perene nativa do sul da África. Desenvolve hastes florais altas com uma coroa ornamental. Prefere sol pleno e solo bem drenado."
+      "common_name": "Lírio abacaxi",
+      "description": "Eucomis comosa, também conhecido como lírio abacaxi, é uma planta perene bulbosa com folhas verdes marcantes e espigas altas de flores brancas ou roxas. Prefere luz moderada e solo bem drenado."
     },
     "ar": {
       "common_name": "زنبق الأناناس",
-      "description": "Eucomis comosa نبات بصلي معمر موطنه جنوب أفريقيا. يتميز بنورات زهرية طويلة مع تاج يشبه الأناناس. يفضل الشمس الكاملة والتربة جيدة الصرف."
+      "description": "Eucomis comosa، والمعروفة أيضًا باسم زنبق الأناناس، هي نبتة دائمة ذات بصيلة بأوراق خضراء لافتة وأزهار بيضاء أو بنفسجية على سيقان عالية. تنمو في الضوء المعتدل وتحتاج إلى تربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "पाइनएप्पल लिली",
-      "description": "Eucomis comosa दक्षिणी अफ्रीका का एक कंदीय बहुवर्षीय पौधा है। इसमें ऊँचे फूलों के डंठल और ऊपर सजावटी गुच्छा होता है। यह पूर्ण सूर्य और अच्छी जल निकास वाली मिट्टी पसंद करता है।"
+      "common_name": "अनानास लिली",
+      "description": "Eucomis comosa, जिसे अनानास लिली के नाम से भी जाना जाता है, एक बल्बयुक्त बारहमासी पौधा है जिसमें हरे रंग के पत्ते और सफेद या बैंगनी फूलों के लंबे स्पाइक होते हैं। यह मध्यम रोशनी में अच्छा बढ़ता है और इसे अच्छी जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "菠萝百合",
-      "description": "Eucomis comosa 原产于非洲南部，是一种球根多年生植物。其花序高耸，顶端形似菠萝。适合在全日照和排水良好的土壤中生长。"
+      "description": "Eucomis comosa，也称为菠萝百合，是一种多年生球根植物，具有引人注目的绿色叶片和高高的白色或紫色花序。它在中等光照下茁壮成长，且需要良好排水的土壤。"
     },
     "ja": {
       "common_name": "パイナップルリリー",
-      "description": "ユーコミス・コモサは南アフリカ原産の球根植物です。パイナップル状の花穂が特徴です。日当たりと水はけの良い土壌を好みます。"
+      "description": "Eucomis comosa、またはパイナップルリリーは、目を引く緑の葉と高い白または紫の花穂を持つ球根性の多年草です。中程度の光の下で成長し、排水性の良い土壌を好みます。"
     },
     "ko": {
       "common_name": "파인애플 백합",
-      "description": "Eucomis comosa는 남아프리카 원산의 구근성 다년초입니다. 파인애플 모양의 꽃대가 특징입니다. 햇빛이 잘 들고 배수가 좋은 토양에서 잘 자랍니다."
+      "description": "Eucomis comosa, 또는 파인애플 백합은 눈에 띄는 녹색 잎과 긴 흰색 또는 보라색 꽃이 있는 구근성 다년생 식물입니다. 적당한 빛에서 잘 자라며 배수가 좋은 토양을 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/eucomis",
-      "https://www.kew.org/plants/eucomis-comosa",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a655"
+      "https://www.rhs.org.uk/plants/eucomis-comosa",
+      "https://www.gardenia.net/plant/eucomis-comosa"
     ]
   }
 }

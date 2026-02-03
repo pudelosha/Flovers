@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム",
-          "ko": "로암"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良く排水される土壌",
+          "ko": "배수가 잘 되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-आधारित कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折発生する害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Meadow Rue",
-      "description": "Thalictrum aquilegiifolium, or meadow rue, is a perennial plant native to temperate regions. It features delicate pinkish-lavender flowers and thrives in shaded woodland areas."
+      "description": "Thalictrum aquilegiifolium, known as Meadow Rue, is a perennial herb native to temperate regions. It features finely divided, fern-like leaves and delicate flowers."
     },
     "pl": {
-      "common_name": "Rutewka łąkowa",
-      "description": "Thalictrum aquilegiifolium, znana jako rutewka łąkowa, to roślina wieloletnia występująca w umiarkowanych rejonach. Posiada delikatne różowo-lawendowe kwiaty i rośnie w zacienionych lasach."
+      "common_name": "Rdest łąkowy",
+      "description": "Thalictrum aquilegiifolium, znany jako rdest łąkowy, to wieloletnia roślina zielna występująca w umiarkowanych regionach. Charakteryzuje się drobno podzielonymi, paprociowymi liśćmi i delikatnymi kwiatami."
     },
     "de": {
       "common_name": "Wiesen-Rue",
-      "description": "Thalictrum aquilegiifolium, oder Wiesen-Rue, ist eine mehrjährige Pflanze, die in gemäßigten Regionen heimisch ist. Sie hat zarte rosa-lavendelfarbene Blüten und gedeiht in schattigen Waldgebieten."
+      "description": "Thalictrum aquilegiifolium, auch als Wiesen-Rue bekannt, ist eine mehrjährige Pflanze aus gemäßigten Regionen. Sie hat fein unterteilte, farnartige Blätter und zarte Blüten."
     },
     "fr": {
       "common_name": "Rue des prés",
-      "description": "Thalictrum aquilegiifolium, ou rue des prés, est une plante vivace originaire des régions tempérées. Elle présente de délicates fleurs rose-lavande et pousse dans des zones boisées ombragées."
+      "description": "Thalictrum aquilegiifolium, connu sous le nom de Rue des prés, est une plante vivace originaire des régions tempérées. Elle présente des feuilles finement divisées, semblables à des fougères, et de délicates fleurs."
     },
     "it": {
-      "common_name": "Rue dei prati",
-      "description": "Thalictrum aquilegiifolium, o rue dei prati, è una pianta perenne originaria delle regioni temperate. Presenta fiori delicati rosa-lavanda e cresce in zone boschive ombreggiate."
+      "common_name": "Rue di prato",
+      "description": "Thalictrum aquilegiifolium, conosciuta come Rue di prato, è una pianta perenne originaria delle regioni temperate. Ha foglie finemente divise simili a felci e fiori delicati."
     },
     "es": {
-      "common_name": "Rue de los prados",
-      "description": "Thalictrum aquilegiifolium, o rue de los prados, es una planta perenne originaria de las regiones templadas. Tiene flores delicadas de color rosa lavanda y crece en zonas boscosas sombreadas."
+      "common_name": "Rue de pradera",
+      "description": "Thalictrum aquilegiifolium, conocida como Rue de pradera, es una planta perenne originaria de las regiones templadas. Presenta hojas finamente divididas, similares a helechos, y flores delicadas."
     },
     "pt": {
-      "common_name": "Rue dos campos",
-      "description": "Thalictrum aquilegiifolium, ou rue dos campos, é uma planta perene nativa das regiões temperadas. Apresenta flores delicadas de cor rosa-lavanda e cresce em áreas sombreadas de floresta."
+      "common_name": "Rue de prado",
+      "description": "Thalictrum aquilegiifolium, conhecida como Rue de prado, é uma planta perene originária das regiões temperadas. Apresenta folhas finamente divididas, semelhantes a samambaias, e flores delicadas."
     },
     "ar": {
-      "common_name": "Rue العشب",
-      "description": "Thalictrum aquilegiifolium، أو Rue العشب، هي نبات معمر أصلي في المناطق المعتدلة. تتميز بزهور وردية شاحبة وتزدهر في المناطق الظليلة."
+      "common_name": "شجيرة المرج",
+      "description": "Thalictrum aquilegiifolium، المعروف بشجيرة المرج، هو نبات معمر موطنه المناطق المعتدلة. يتميز بأوراق مقسمة بشكل دقيق وأزهار دقيقة."
     },
     "hi": {
-      "common_name": "घास की आरजू",
-      "description": "Thalictrum aquilegiifolium, या घास की आरजू, एक परिपक्व पौधा है जो समशीतोष्ण क्षेत्रों में पाया जाता है। यह हल्के गुलाबी-लवेंडर रंग के फूलों के साथ होता है और यह छायादार जंगल क्षेत्रों में उगता है।"
+      "common_name": "घास का रूट",
+      "description": "Thalictrum aquilegiifolium, जिसे घास का रूट के नाम से जाना जाता है, एक बारहमासी पौधा है जो समशीतोष्ण क्षेत्रों में पाया जाता है। इसके पत्ते बारीकी से विभाजित होते हैं और इसके फूल नाजुक होते हैं।"
     },
     "zh": {
-      "common_name": "草地蓍草",
-      "description": "Thalictrum aquilegiifolium，或称草地蓍草，是一种多年生植物，原产于温带地区。它具有精致的粉红色-薰衣草色花朵，生长在阴凉的森林地区。"
+      "common_name": "草地Rue",
+      "description": "Thalictrum aquilegiifolium，草地Rue，原产于温带地区，是一种多年生草本植物。它的叶子精细分裂，像蕨类植物，花朵精致。"
     },
     "ja": {
-      "common_name": "草原ルー",
-      "description": "Thalictrum aquilegiifolium、または草原ルーは、温帯地域に自生する多年草です。繊細なピンクがかったラベンダー色の花を持ち、陰った森林の中で育ちます。"
+      "common_name": "草地ルー",
+      "description": "Thalictrum aquilegiifolium、草地ルーとして知られ、温帯地域に自生する多年草です。繊細に分割された葉と繊細な花を特徴としています。"
     },
     "ko": {
-      "common_name": "초원 민들레",
-      "description": "Thalictrum aquilegiifolium, 또는 초원 민들레는 온대 지역에서 자생하는 다년생 식물입니다. 섬세한 분홍색-라벤더 꽃을 가지고 있으며 그늘진 숲 지역에서 자랍니다."
+      "common_name": "초원Rue",
+      "description": "Thalictrum aquilegiifolium, 초원Rue로 알려진 이 식물은 온대 지역에서 자생하는 다년생 식물입니다. 섬세하게 분할된 잎과 섬세한 꽃을 특징으로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/thalictrum-aquilegiifolium",
-      "https://www.bgci.org/garden.php?id=612",
-      "https://www.gardenia.net/plant/thalictrum-aquilegiifolium"
+      "https://www.rhs.org.uk/Plants/22879/Thalictrum-aquilegiifolium/Details",
+      "https://www.botanicgardens.uw.edu/thalictrum-aquilegiifolium/"
     ]
   }
 }

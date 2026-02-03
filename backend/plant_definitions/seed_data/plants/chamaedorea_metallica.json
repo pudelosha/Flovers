@@ -2,7 +2,7 @@
   "external_id": "chamaedorea_metallica",
   "name": "Metallic Palm",
   "latin": "Chamaedorea metallica",
-  "sun": "low",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low to medium light",
-          "pl": "Niskie–średnie światło",
-          "de": "Wenig bis mittel Licht",
-          "fr": "Lumière faible à moyenne",
-          "it": "Luce bassa-media",
-          "es": "Luz baja a media",
-          "pt": "Luz baixa a média",
-          "ar": "ضوء منخفض إلى متوسط",
-          "hi": "कम से मध्यम रोशनी",
-          "zh": "低到中等光照",
-          "ja": "弱〜中光",
-          "ko": "약~중간 광"
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles indirektes Licht",
+          "fr": "Lumière indirecte vive",
+          "it": "Luce indiretta intensa",
+          "es": "Luz indirecta brillante",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -50,13 +50,13 @@
         "text": {
           "en": "Well-draining soil",
           "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
+          "de": "Gut durchlässige Erde",
           "fr": "Sol bien drainé",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenável",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी मिट्टी",
+          "hi": "अच्छी जल निकास मिट्टी",
           "zh": "排水良好土壤",
           "ja": "水はけの良い土",
           "ko": "배수 좋은 토양"
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido regolare",
-          "es": "Humedad regular",
-          "pt": "Umidade regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "समान नमी रखें",
-          "zh": "保持均匀湿润",
-          "ja": "均一に湿らす",
-          "ko": "고르게 물 유지"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -89,13 +89,13 @@
           "en": "Easy care",
           "pl": "Łatwa w uprawie",
           "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
+          "fr": "Facile d’entretien",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
           "ar": "سهل العناية",
           "hi": "आसान देखभाल",
-          "zh": "易养护",
+          "zh": "易于养护",
           "ja": "育てやすい",
           "ko": "관리 쉬움"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–27°C range",
+          "pl": "Zakres 18–27°C",
+          "de": "18–27°C Bereich",
+          "fr": "Plage 18–27°C",
+          "it": "Intervallo 18–27°C",
+          "es": "Rango 18–27°C",
+          "pt": "Faixa 18–27°C",
+          "ar": "نطاق 18–27°م",
+          "hi": "18–27°C सीमा",
+          "zh": "18–27°C范围",
+          "ja": "18～27℃",
+          "ko": "18–27°C 범위"
         }
       }
     },
@@ -132,9 +132,9 @@
           "es": "Humedad media",
           "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
+          "hi": "औसत आर्द्रता",
           "zh": "中等湿度",
-          "ja": "平均的湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -151,7 +151,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -173,7 +173,45 @@
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
           "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter excès d’eau",
+          "it": "Evitare ristagni",
+          "es": "Evitar exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶发害虫",
+          "ja": "まれに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Metallic Palm",
-      "description": "Chamaedorea metallica is a compact palm native to Central American rainforests. It is valued for its metallic blue-green leaves and tolerance of low indoor light. The plant prefers evenly moist soil and stable indoor temperatures."
+      "description": "Chamaedorea metallica is a compact palm with distinctive metallic blue-green leaves. It is well suited to indoor growing and tolerates moderate light. The plant is slow growing and easy to maintain."
     },
     "pl": {
       "common_name": "Palma metaliczna",
-      "description": "Chamaedorea metallica to niewielka palma pochodząca z lasów deszczowych Ameryki Środkowej. Ceniona jest za metalicznie niebieskozielone liście i dobrą tolerancję słabego światła. Wymaga umiarkowanie wilgotnego podłoża i ciepła."
+      "description": "Chamaedorea metallica to niewielka palma o metalicznie zielonych liściach. Dobrze rośnie w warunkach domowych przy umiarkowanym świetle. Jest rośliną wolno rosnącą i łatwą w pielęgnacji."
     },
     "de": {
       "common_name": "Metallpalme",
-      "description": "Chamaedorea metallica ist eine kompakte Palme aus den Regenwäldern Mittelamerikas. Sie ist bekannt für ihre metallisch blaugrünen Blätter und ihre Anpassung an wenig Licht. Gleichmäßig feuchte Erde und konstante Wärme sind ideal."
+      "description": "Chamaedorea metallica ist eine kompakte Palme mit metallisch blaugrünen Blättern. Sie eignet sich gut für Innenräume bei mäßigem Licht. Die Pflanze wächst langsam und ist pflegeleicht."
     },
     "fr": {
       "common_name": "Palmier métallique",
-      "description": "Chamaedorea metallica est un petit palmier originaire des forêts tropicales d’Amérique centrale. Il se distingue par ses feuilles bleu-vert métalliques et sa tolérance à la faible luminosité. Il préfère un sol légèrement humide et des températures stables."
+      "description": "Chamaedorea metallica est un petit palmier aux feuilles vert bleuté métallisé. Il s’adapte bien à la culture en intérieur avec une lumière modérée. Sa croissance est lente et son entretien facile."
     },
     "it": {
       "common_name": "Palma metallica",
-      "description": "Chamaedorea metallica è una palma compatta originaria delle foreste dell’America Centrale. È apprezzata per le foglie blu-verdi dall’aspetto metallico e la tolleranza alla scarsa luce. Necessita di terreno umido e temperature costanti."
+      "description": "Chamaedorea metallica è una palma compatta con foglie verde-blu metalliche. È adatta alla coltivazione in interno con luce moderata. Cresce lentamente ed è facile da curare."
     },
     "es": {
-      "common_name": "Palmera metálica",
-      "description": "Chamaedorea metallica es una palmera pequeña originaria de las selvas de Centroamérica. Destaca por sus hojas azul verdosas con brillo metálico y su tolerancia a poca luz. Prefiere suelo uniformemente húmedo y temperaturas estables."
+      "common_name": "Palma metálica",
+      "description": "Chamaedorea metallica es una palmera compacta con hojas verde azuladas de aspecto metálico. Se adapta bien al interior con luz moderada. Es de crecimiento lento y fácil mantenimiento."
     },
     "pt": {
       "common_name": "Palmeira metálica",
-      "description": "Chamaedorea metallica é uma palmeira compacta nativa das florestas da América Central. É conhecida pelas folhas azul-esverdeadas com brilho metálico e boa adaptação à pouca luz. Gosta de solo levemente úmido e calor constante."
+      "description": "Chamaedorea metallica é uma palmeira compacta com folhas verde-azul metálicas. Desenvolve-se bem em ambientes internos com luz moderada. Tem crescimento lento e cuidados simples."
     },
     "ar": {
       "common_name": "نخيل معدني",
-      "description": "نبات Chamaedorea metallica هو نخيل صغير موطنه غابات أمريكا الوسطى. يتميز بأوراقه الخضراء المزرقة ذات المظهر المعدني وتحمله للإضاءة المنخفضة. يفضل تربة رطبة بشكل معتدل ودرجات حرارة ثابتة."
+      "description": "نبات Chamaedorea metallica نخيل صغير بأوراق خضراء مزرقة ذات مظهر معدني. يناسب الزراعة الداخلية مع إضاءة معتدلة. نموه بطيء وسهل العناية."
     },
     "hi": {
       "common_name": "मेटैलिक पाम",
-      "description": "Chamaedorea metallica मध्य अमेरिका के वर्षावनों की एक छोटी पाम है। इसकी धात्विक नीली-हरी पत्तियाँ और कम रोशनी सहन करने की क्षमता इसे लोकप्रिय बनाती है। इसे समान रूप से नम मिट्टी और स्थिर तापमान चाहिए।"
+      "description": "Chamaedorea metallica एक छोटा पाम है जिसकी पत्तियाँ धात्विक नीले-हरे रंग की होती हैं। यह मध्यम रोशनी में घर के अंदर अच्छी तरह बढ़ता है। इसकी वृद्धि धीमी और देखभाल आसान है।"
     },
     "zh": {
       "common_name": "金属袖珍椰子",
-      "description": "Chamaedorea metallica 原产于中美洲雨林，是一种小型棕榈。它以金属质感的蓝绿色叶片和耐弱光能力著称。适合保持土壤均匀湿润并放置在温暖环境中。"
+      "description": "Chamaedorea metallica 是一种叶片呈金属蓝绿色的小型棕榈。适合在中等光照的室内环境中生长。生长缓慢，养护简单。"
     },
     "ja": {
-      "common_name": "メタリックヤシ",
-      "description": "チャメドレア・メタリカは中米の熱帯雨林原産の小型ヤシです。金属光沢のある青緑色の葉と弱光への強さが特徴です。土は適度に湿らせ、安定した室温を保ちます。"
+      "common_name": "メタリックチャメドレア",
+      "description": "Chamaedorea metallica は金属光沢のある青緑色の葉を持つ小型のヤシです。中程度の光で室内栽培に適しています。成長は遅く管理しやすい植物です。"
     },
     "ko": {
-      "common_name": "메탈릭 테이블야자",
-      "description": "Chamaedorea metallica는 중앙아메리카 열대우림이 원산인 소형 야자입니다. 금속광택의 청록색 잎과 낮은 빛에 대한 적응력이 특징입니다. 토양은 촉촉하게 유지하고 따뜻한 온도를 유지해야 합니다."
+      "common_name": "메탈릭 야자",
+      "description": "Chamaedorea metallica는 금속광택의 청록색 잎을 가진 소형 야자입니다. 실내의 중간 광도에서 잘 자랍니다. 성장 속도가 느리고 관리가 쉽습니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.kew.org/plants/chamaedorea-metallica",
       "https://plants.ces.ncsu.edu/plants/chamaedorea-metallica/",
-      "https://www.rhs.org.uk/plants/172302/chamaedorea-metallica/details"
+      "https://www.rhs.org.uk/plants/179312/chamaedorea-metallica/details"
     ]
   }
 }

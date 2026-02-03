@@ -1,9 +1,9 @@
 {
   "external_id": "impatiens_walleriana",
-  "name": "Busy Lizzie",
+  "name": "Impatiens",
   "latin": "Impatiens walleriana",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,14 +11,15 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 5,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "impatiens_walleriana.jpg",
@@ -29,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche drainée",
-          "it": "Ricco drenante",
-          "es": "Rico drenante",
-          "pt": "Rico drenado",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良く排水される土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Stale wilgotne",
-          "de": "Feucht halten",
-          "fr": "Garder humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة دائمة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気維持",
-          "ko": "항상 촉촉"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Easy to grow",
+          "pl": "Łatwy do uprawy",
+          "de": "Einfach zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل النمو",
+          "hi": "उगाना आसान है",
+          "zh": "易于种植",
+          "ja": "育てやすい",
+          "ko": "기르기 쉬움"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
-          "ar": "18–24°م",
-          "hi": "18–24 °C",
-          "zh": "18–24°C",
-          "ja": "18–24℃",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Modérée",
-          "it": "Moderata",
-          "es": "Moderada",
-          "pt": "Moderada",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독함"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact bushy",
-          "pl": "Zwarty pokrój",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatta",
-          "es": "Compacta",
-          "pt": "Compacta",
-          "ar": "مضغوط",
-          "hi": "घनी वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "콤팩트"
+          "en": "Compact growth",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompakte Wachstumsform",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مضغوط",
+          "hi": "संकुचित वृद्धि",
+          "zh": "紧凑的生长",
+          "ja": "コンパクトな成長",
+          "ko": "콤팩트한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovra-irrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折出現する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Busy Lizzie",
-      "description": "Impatiens walleriana is a popular flowering plant grown indoors and outdoors. It blooms continuously with regular watering and moderate light."
+      "common_name": "Impatiens",
+      "description": "Impatiens walleriana is a popular flowering plant known for its bright, colorful blooms. It thrives in shaded areas with high humidity."
     },
     "pl": {
-      "common_name": "Niecierpek Waleriana",
-      "description": "Impatiens walleriana to popularna roślina kwitnąca do domu i ogrodu. Wymaga wilgotnej gleby i umiarkowanego światła."
+      "common_name": "Niecierpek",
+      "description": "Impatiens walleriana to popularna roślina kwitnąca, znana ze swoich jasnych, kolorowych kwiatów. Dobrze rośnie w cieniu i w wilgotnym środowisku."
     },
     "de": {
       "common_name": "Fleißiges Lieschen",
-      "description": "Impatiens walleriana ist eine beliebte blühende Pflanze für Innenräume. Sie benötigt gleichmäßige Feuchtigkeit und helles, indirektes Licht."
+      "description": "Impatiens walleriana ist eine beliebte Blühpflanze, die für ihre leuchtenden, bunten Blüten bekannt ist. Sie gedeiht in schattigen Bereichen mit hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Impatiente de Waller",
-      "description": "Impatiens walleriana est une plante fleurie très répandue. Elle fleurit bien avec un sol humide et une lumière modérée."
+      "common_name": "Impatiens",
+      "description": "Impatiens walleriana est une plante à fleurs populaire, connue pour ses fleurs colorées et lumineuses. Elle préfère les zones ombragées et l'humidité élevée."
     },
     "it": {
       "common_name": "Impatiens",
-      "description": "Impatiens walleriana è una pianta fiorita molto comune. Cresce bene con annaffiature regolari e luce moderata."
+      "description": "Impatiens walleriana è una pianta da fiore popolare, nota per i suoi fiori vivaci e colorati. Cresce bene in zone ombreggiate e in ambienti umidi."
     },
     "es": {
-      "common_name": "Alegría del hogar",
-      "description": "Impatiens walleriana es una planta ornamental muy usada en interiores. Necesita riego frecuente y luz indirecta."
+      "common_name": "Impaciencia",
+      "description": "Impatiens walleriana es una planta de flores popular, conocida por sus flores coloridas. Prefiere áreas sombreadas y alta humedad."
     },
     "pt": {
-      "common_name": "Beijo-turco",
-      "description": "Impatiens walleriana é uma planta ornamental popular. Floresce bem com solo úmido e luz moderada."
+      "common_name": "Impatiens",
+      "description": "Impatiens walleriana é uma planta de flores popular, conhecida pelas suas flores coloridas. Prefere áreas sombreadas e alta umidade."
     },
     "ar": {
-      "common_name": "إمباتينس",
-      "description": "نبات إمباتينس واليريانا نبات مزهر شائع. يحتاج إلى تربة رطبة وضوء معتدل لينمو جيدًا."
+      "common_name": "النعناع",
+      "description": "Impatiens walleriana هي نبتة زهور شهيرة، معروفة بأزهارها الملونة. تفضل الأماكن المظللة والرطوبة العالية."
     },
     "hi": {
       "common_name": "इम्पेशन्स",
-      "description": "Impatiens walleriana एक लोकप्रिय फूलदार पौधा है। इसे नियमित पानी और मध्यम रोशनी की आवश्यकता होती है।"
+      "description": "Impatiens walleriana एक लोकप्रिय फूलों वाली पौधा है, जो अपने चमकीले रंग-बिरंगे फूलों के लिए जाना जाता है। यह छायादार क्षेत्रों और उच्च आर्द्रता में अच्छे से बढ़ता है।"
     },
     "zh": {
       "common_name": "凤仙花",
-      "description": "Impatiens walleriana 是常见的开花植物。保持土壤湿润并提供中等光照可持续开花。"
+      "description": "Impatiens walleriana 是一种受欢迎的开花植物，因其明亮多彩的花朵而闻名。它喜欢阴凉的地方和高湿度环境。"
     },
     "ja": {
-      "common_name": "インパチェンス",
-      "description": "インパチェンスは育てやすい開花植物です。適度な光と水分でよく育ちます。"
+      "common_name": "インパチエンス",
+      "description": "Impatiens walleriana は、鮮やかな色の花が特徴の人気のある開花植物です。日陰の場所と高い湿度の環境でよく育ちます。"
     },
     "ko": {
-      "common_name": "임파첸스",
-      "description": "Impatiens walleriana는 관리가 쉬운 꽃식물입니다. 규칙적인 물주기와 중간 밝기의 빛을 좋아합니다."
+      "common_name": "임페이셔스",
+      "description": "Impatiens walleriana는 화려한 색상의 꽃으로 유명한 인기 있는 꽃 식물입니다. 그늘에서 잘 자라며 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/impatiens-walleriana/details",
-      "https://extension.umn.edu/houseplants/impatiens",
-      "https://www.gardenersworld.com/plants/impatiens-walleriana/"
+      "https://www.rhs.org.uk/plants/impatiens-walleriana",
+      "https://www.gardenia.net/plant/impatiens-walleriana"
     ]
   }
 }

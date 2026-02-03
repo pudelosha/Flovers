@@ -7,19 +7,18 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "cuphea_hyssopifolia.jpg",
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
+          "en": "Full sun / bright",
+          "pl": "Pełne słońce",
+          "de": "Viel Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس ساطعة",
           "hi": "तेज़ रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "zh": "全日照/明亮",
+          "ja": "日当たり良好",
+          "ko": "밝은 햇빛"
         }
       }
     },
@@ -49,17 +48,17 @@
       "value": {
         "text": {
           "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainiert",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "जल निकासी",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 토양"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期給水",
-          "ko": "규칙적 물"
+          "en": "Water when top dries",
+          "pl": "Gdy wierzch przeschnie",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser si sec",
+          "it": "Annaffia se asciutto",
+          "es": "Riega si se seca",
+          "pt": "Regue se secar",
+          "ar": "اسقِ عند جفاف السطح",
+          "hi": "ऊपर सूखे तो पानी",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "Warm 18–29°C",
+          "pl": "Ciepło 18–29°C",
+          "de": "Warm 18–29°C",
+          "fr": "Chaud 18–29°C",
+          "it": "Caldo 18–29°C",
+          "es": "Cálido 18–29°C",
+          "pt": "Quente 18–29°C",
+          "ar": "دافئ 18–29°م",
+          "hi": "गर्म 18–29°C",
+          "zh": "温暖 18–29°C",
+          "ja": "温暖 18–29°C",
+          "ko": "따뜻함 18–29°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -151,7 +150,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "विषहीन",
+          "hi": "गैर-विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -163,17 +162,55 @@
       "value": {
         "text": {
           "en": "Compact shrub",
-          "pl": "Krzewinka",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatta",
-          "es": "Compacta",
-          "pt": "Compacta",
-          "ar": "شجيرة",
-          "hi": "छोटी झाड़ी",
+          "pl": "Kompaktowy krzew",
+          "de": "Kompakter Strauch",
+          "fr": "Arbuste compact",
+          "it": "Arbusto compatto",
+          "es": "Arbusto compacto",
+          "pt": "Arbusto compacto",
+          "ar": "شجيرة مدمجة",
+          "hi": "झाड़ीदार, सघन",
           "zh": "紧凑灌木",
-          "ja": "低木",
-          "ko": "관목형"
+          "ja": "コンパクト低木",
+          "ko": "컴팩트 관목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelać",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "पानी भराव न हो",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites, whitefly",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ وعناكب وذبابة",
+          "hi": "एफिड/माइट्स",
+          "zh": "蚜虫/螨/粉虱",
+          "ja": "アブラムシ等",
+          "ko": "진딧물/응애"
         }
       }
     }
@@ -181,58 +218,60 @@
   "translations": {
     "en": {
       "common_name": "Mexican heather",
-      "description": "Cuphea hyssopifolia is a small evergreen shrub native to Mexico and Guatemala. It produces numerous small purple flowers and grows well in bright light with regular watering. It is often grown indoors or as a warm-climate ornamental."
+      "description": "Cuphea hyssopifolia is a compact evergreen shrub grown for small, long-blooming flowers. Give it bright light or full sun and a well-draining potting mix. Water when the top layer dries and keep it warm for best growth."
     },
     "pl": {
-      "common_name": "Kufea meksykańska",
-      "description": "Cuphea hyssopifolia to niewielki zimozielony krzew pochodzący z Meksyku i Gwatemali. Kwitnie drobnymi fioletowymi kwiatami i wymaga jasnego stanowiska oraz regularnego podlewania. Często uprawiana w pojemnikach."
+      "common_name": "kufea izopowa",
+      "description": "Cuphea hyssopifolia to zwarty, zimozielony krzew o drobnych kwiatach. Najlepiej rośnie w jasnym miejscu i w przepuszczalnym podłożu. Podlewaj, gdy przeschnie wierzchnia warstwa ziemi, i chroń przed chłodem."
     },
     "de": {
-      "common_name": "Scheinheide",
-      "description": "Cuphea hyssopifolia ist ein kleiner immergrüner Strauch aus Mexiko und Guatemala. Sie trägt viele kleine violette Blüten und bevorzugt helles Licht sowie gleichmäßige Wassergaben. Geeignet für Kübel und Innenräume."
+      "common_name": "Mexikanische Scheinheide",
+      "description": "Cuphea hyssopifolia ist ein kompakter, immergrüner Strauch mit vielen kleinen Blüten. Stelle sie sehr hell bis sonnig und nutze gut durchlässige Erde. Gieße, wenn die oberste Schicht abtrocknet, und halte sie warm."
     },
     "fr": {
-      "common_name": "Cuphea à feuilles d’hysope",
-      "description": "Cuphea hyssopifolia est un petit arbuste persistant originaire du Mexique et du Guatemala. Elle fleurit abondamment et apprécie une forte luminosité avec un arrosage régulier. Elle est souvent cultivée en pot."
+      "common_name": "fausse bruyère",
+      "description": "Cuphea hyssopifolia est un petit arbuste persistant à floraison prolongée. Placez-le en lumière vive à plein soleil et dans un substrat bien drainant. Arrosez quand la surface du terreau sèche et évitez le froid."
     },
     "it": {
-      "common_name": "Cuphea messicana",
-      "description": "Cuphea hyssopifolia è un piccolo arbusto sempreverde originario del Messico e del Guatemala. Produce molti piccoli fiori viola e richiede luce intensa e annaffiature regolari. Adatta anche alla coltivazione in vaso."
+      "common_name": "falsa erica",
+      "description": "Cuphea hyssopifolia è un piccolo arbusto sempreverde con molti fiorellini. Preferisce luce intensa o pieno sole e un terriccio ben drenante. Annaffia quando lo strato superiore asciuga e mantieni temperature calde."
     },
     "es": {
-      "common_name": "Falsa brecina",
-      "description": "Cuphea hyssopifolia es un arbusto pequeño originario de México y Guatemala. Destaca por sus flores moradas y su crecimiento compacto. Necesita buena luz y riego regular."
+      "common_name": "brezo mexicano",
+      "description": "Cuphea hyssopifolia es un arbusto compacto y perenne con flores pequeñas y abundantes. Necesita mucha luz o sol directo y un sustrato bien drenante. Riega cuando se seque la capa superior y evita el frío."
     },
     "pt": {
-      "common_name": "Falsa-érica",
-      "description": "Cuphea hyssopifolia é um pequeno arbusto perene nativo do México e da Guatemala. Possui flores roxas abundantes e prefere luz intensa com regas regulares. Muito usada como ornamental."
+      "common_name": "urze-mexicano",
+      "description": "Cuphea hyssopifolia é um arbusto compacto e perene com muitas flores pequenas. Prefere luz forte ou sol e substrato bem drenado. Regue quando a camada superior secar e mantenha em temperatura amena a quente."
     },
     "ar": {
-      "common_name": "كوفيه مكسيكية",
-      "description": "Cuphea hyssopifolia نبات شجيري دائم الخضرة موطنه المكسيك وغواتيمالا. يتميز بأزهاره البنفسجية الصغيرة ويحتاج إلى ضوء ساطع وري منتظم. يزرع غالبًا في الأصص."
+      "common_name": "هيذر مكسيكي",
+      "description": "Cuphea hyssopifolia شجيرة صغيرة دائمة الخضرة بأزهار صغيرة كثيرة. تحتاج إلى ضوء ساطع أو شمس مباشرة وتربة جيدة الصرف. اسقِ عندما تجف الطبقة العلوية وحافظ على الدفء."
     },
     "hi": {
-      "common_name": "मैक्सिकन हीदर",
-      "description": "Cuphea hyssopifolia मेक्सिको और ग्वाटेमाला का एक छोटा सदाबहार झाड़ीदार पौधा है। इसमें छोटे बैंगनी फूल आते हैं और इसे तेज़ रोशनी व नियमित पानी की आवश्यकता होती है। गमलों में उगाया जा सकता है।"
+      "common_name": "मेक्सिकन हीदर",
+      "description": "Cuphea hyssopifolia एक छोटी, सघन सदाबहार झाड़ी है जो छोटे फूल देती है। इसे तेज रोशनी या धूप और अच्छी जलनिकासी वाला मिश्रण दें। ऊपर की मिट्टी सूखे तो पानी दें और ठंड से बचाएँ।"
     },
     "zh": {
-      "common_name": "墨西哥石竹",
-      "description": "Cuphea hyssopifolia 原产于墨西哥和危地马拉，是一种小型常绿灌木。它开紫色小花，喜明亮光照和规律浇水。常用于盆栽观赏。"
+      "common_name": "墨西哥假石楠",
+      "description": "Cuphea hyssopifolia 是紧凑的常绿小灌木，开细小花。需要明亮光照或全日照，并使用排水良好的盆土。表土变干再浇水，保持温暖更利于生长。"
     },
     "ja": {
-      "common_name": "クフェア",
-      "description": "Cuphea hyssopifolia はメキシコとグアテマラ原産の常緑低木です。小さな紫色の花を多数咲かせ、明るい場所と定期的な水やりを好みます。鉢植えに適します。"
+      "common_name": "メキシカンヘザー",
+      "description": "Cuphea hyssopifolia は小型の常緑低木で、小さな花を長く咲かせます。明るい場所から日当たりの良い場所と、水はけの良い用土が適します。表土が乾いたら水やりし、寒さを避けます。"
     },
     "ko": {
-      "common_name": "쿠페아",
-      "description": "Cuphea hyssopifolia는 멕시코와 과테말라 원산의 작은 상록 관목입니다. 보라색의 작은 꽃이 피며 밝은 빛과 규칙적인 물주기를 선호합니다. 화분 재배에 적합합니다."
+      "common_name": "멕시칸 헤더",
+      "description": "Cuphea hyssopifolia 는 작은 꽃을 오래 피우는 컴팩트한 상록 관목입니다. 밝은 빛이나 직사광과 배수가 좋은 흙이 필요합니다. 겉흙이 마르면 물을 주고 차가운 온도는 피하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b680",
+      "https://www.rhs.org.uk/plants/5036/cuphea-hyssopifolia/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a113",
       "https://plants.ces.ncsu.edu/plants/cuphea-hyssopifolia/",
-      "https://www.rhs.org.uk/plants/5048/cuphea-hyssopifolia/details"
+      "https://www.thespruce.com/mexican-heather-growing-guide-5208425",
+      "https://hgic.clemson.edu/cupheas/"
     ]
   }
 }

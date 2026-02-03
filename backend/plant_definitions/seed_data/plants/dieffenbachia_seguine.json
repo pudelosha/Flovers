@@ -4,15 +4,15 @@
   "latin": "Dieffenbachia seguine",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": true,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "dieffenbachia_seguine.jpg",
   "image_thumb": "dieffenbachia_seguine.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowana woda",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide modéré",
-          "it": "Umido moderato",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम सिंचाई",
-          "zh": "保持微湿",
-          "ja": "適度に湿らす",
-          "ko": "적당히 촉촉"
+          "en": "Even moisture",
+          "pl": "Równomierna wilgoć",
+          "de": "Gleichmäßige Feuchtigkeit",
+          "fr": "Humidité uniforme",
+          "it": "Umidità uniforme",
+          "es": "Humedad uniforme",
+          "pt": "Umidade uniforme",
+          "ar": "رطوبة متساوية",
+          "hi": "समान नमी",
+          "zh": "均匀湿润",
+          "ja": "均等な湿気",
+          "ko": "균등한 습기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等照料",
+          "ja": "中程度の手入れ",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27℃",
-          "ja": "18～27℃",
-          "ko": "18–27℃"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia domowa",
-          "de": "Normale Raumluft",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "普通湿度",
-          "ja": "標準的湿度",
-          "ko": "보통 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Trująca",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright foliage",
-          "pl": "Wzniesiony pokrój",
-          "de": "Aufrecht wachsend",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधी वृद्धि",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Dumb Cane",
-      "description": "Dieffenbachia seguine is a tropical houseplant with large variegated leaves. It prefers bright indirect light and evenly moist soil. All parts are toxic if ingested."
+      "description": "Dieffenbachia seguine, known as Dumb Cane, is a popular houseplant with attractive, large variegated leaves. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Difenbachia",
-      "description": "Dieffenbachia seguine to tropikalna roślina doniczkowa o dużych, pstrych liściach. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Jest trująca po spożyciu."
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia seguine, znana jako Dumb Cane, to popularna roślina doniczkowa o atrakcyjnych, dużych liściach. Preferuje średnie światło i umiarkowane podlewanie."
     },
     "de": {
-      "common_name": "Dieffenbachie",
-      "description": "Dieffenbachia seguine ist eine tropische Zimmerpflanze mit großen, panaschierten Blättern. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßiger Feuchte. Die Pflanze ist giftig."
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia seguine, auch als Dumb Cane bekannt, ist eine beliebte Zimmerpflanze mit attraktiven, großen, gefleckten Blättern. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Canne des muets",
-      "description": "Dieffenbachia seguine est une plante tropicale aux grandes feuilles décoratives. Elle apprécie une lumière indirecte et un arrosage modéré. Elle est toxique pour les humains et les animaux."
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia seguine, connue sous le nom de Dumb Cane, est une plante d'intérieur populaire avec de grandes feuilles panachées. Elle préfère une lumière moyenne et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Dieffenbachia",
-      "description": "Dieffenbachia seguine è una pianta tropicale da interno con foglie grandi e variegate. Preferisce luce indiretta e terreno leggermente umido. È tossica se ingerita."
+      "description": "Dieffenbachia seguine, nota come Dumb Cane, è una pianta d'appartamento popolare con grandi foglie variegate. Cresce in luce media e richiede un'irrigazione moderata."
     },
     "es": {
-      "common_name": "Diefembaquia",
-      "description": "Dieffenbachia seguine es una planta tropical de interior con hojas grandes y decorativas. Necesita luz indirecta brillante y riego regular. Es tóxica si se ingiere."
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia seguine, conocida como Dumb Cane, es una planta de interior popular con hojas grandes y variegadas. Requiere luz media y riego moderado."
     },
     "pt": {
-      "common_name": "Comigo-ninguém-pode",
-      "description": "Dieffenbachia seguine é uma planta tropical ornamental de folhas grandes. Prefere luz indireta e solo levemente úmido. Todas as partes são tóxicas."
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia seguine, conhecida como Dumb Cane, é uma planta de interior popular com folhas grandes e variegadas. Prefere luz média e rega moderada."
     },
     "ar": {
       "common_name": "ديفنباخيا",
-      "description": "نبات ديفنباخيا سيغوين نبات استوائي منزلي بأوراق كبيرة مزخرفة. يفضل الضوء غير المباشر والري المنتظم. النبات سام عند الابتلاع."
+      "description": "ديفنباخيا سيجيني، المعروفة باسم نبات العصا الغبية، هي نبات داخلي شهير ذو أوراق كبيرة مبقعة. يفضل الضوء المتوسط ويحتاج إلى ري معتدل."
     },
     "hi": {
-      "common_name": "डाइफेनबैचिया",
-      "description": "Dieffenbachia seguine एक उष्णकटिबंधीय घरेलू पौधा है जिसकी पत्तियाँ बड़ी और रंगीन होती हैं। इसे अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। यह विषैला होता है।"
+      "common_name": "डम्ब केन",
+      "description": "डिफेन्बाचिया सेगुइन, जिसे डम्ब केन के नाम से जाना जाता है, एक लोकप्रिय इनडोर पौधा है जिसकी बड़ी और रंग-बिरंगी पत्तियाँ होती हैं। यह मध्यम रोशनी में बढ़ता है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "花叶万年青",
-      "description": "Dieffenbachia seguine 是一种热带观叶植物，叶片宽大且具斑纹。适合明亮的散射光和均匀湿润的土壤。全株有毒。"
+      "common_name": "呆棒草",
+      "description": "Dieffenbachia seguine，俗称呆棒草，是一种受欢迎的室内植物，拥有大而有变色的叶子。它适应中等光照，并需要适量的浇水。"
     },
     "ja": {
-      "common_name": "ディフェンバキア",
-      "description": "ディフェンバキア・セグイネは大きな斑入り葉を持つ熱帯植物です。明るい間接光と適度な水分を好みます。毒性があります。"
+      "common_name": "ダンデカン",
+      "description": "Dieffenbachia seguine（ダンデカン）は、人気のある室内植物で、大きく斑入りの葉を持っています。中程度の光で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "디펜바키아",
-      "description": "Dieffenbachia seguine는 크고 무늬 있는 잎을 가진 열대 식물입니다. 밝은 간접광과 고른 수분을 선호합니다. 독성이 있습니다."
+      "common_name": "덤 케인",
+      "description": "Dieffenbachia seguine, 덤 케인으로 알려진 이 식물은 인기 있는 실내 식물로, 크고 변색된 잎을 가지고 있습니다. 중간 정도의 빛에서 자라며 적당한 물을 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/5030/dieffenbachia-seguine/details",
-      "https://edis.ifas.ufl.edu/publication/FP174",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a287"
+      "https://www.gardenia.net/plant/dieffenbachia-seguine",
+      "https://www.rhs.org.uk/plants/1576/dieffenbachia-seguine"
     ]
   }
 }

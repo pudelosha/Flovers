@@ -12,16 +12,16 @@
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "universal"
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 24,
   "image_hero": "miltonia_spectabilis.jpg",
   "image_thumb": "miltonia_spectabilis.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "orchid",
-          "pl": "orchidea",
-          "de": "Orchidee",
-          "fr": "orchidée",
-          "it": "orchidea",
-          "es": "orquídea",
-          "pt": "orquídea",
-          "ar": "أوركيد",
-          "hi": "ऑर्किड",
-          "zh": "兰花",
-          "ja": "ラン",
-          "ko": "난초"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित जल देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-25°C",
-          "pl": "20-25°C",
-          "de": "20-25°C",
-          "fr": "20-25°C",
-          "it": "20-25°C",
-          "es": "20-25°C",
-          "pt": "20-25°C",
-          "ar": "20-25°C",
-          "hi": "20-25°C",
-          "zh": "20-25°C",
-          "ja": "20-25°C",
-          "ko": "20-25°C"
+          "en": "18-25°C",
+          "pl": "18-25°C",
+          "de": "18-25°C",
+          "fr": "18-25°C",
+          "it": "18-25°C",
+          "es": "18-25°C",
+          "pt": "18-25°C",
+          "ar": "18-25°C",
+          "hi": "18-25°C",
+          "zh": "18-25°C",
+          "ja": "18-25°C",
+          "ko": "18-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Hautes humidités",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرात में पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Spectacular Miltonia",
-      "description": "Miltonia spectabilis is a species of orchid native to Brazil. It is known for its beautiful, colorful flowers and moderate care requirements."
+      "common_name": "Spectabilis Miltonia",
+      "description": "Miltonia spectabilis is an orchid known for its beautiful, showy flowers. It thrives in bright, indirect light and prefers high humidity."
     },
     "pl": {
-      "common_name": "Miltonia spektakularna",
-      "description": "Miltonia spectabilis to gatunek storczyka pochodzący z Brazylii. Znany jest z pięknych, kolorowych kwiatów i umiarkowanych wymagań pielęgnacyjnych."
+      "common_name": "Miltonia spektabilis",
+      "description": "Miltonia spektabilis to storczyk, który wyróżnia się pięknymi, okazałymi kwiatami. Preferuje jasne, rozproszone światło i wysoką wilgotność."
     },
     "de": {
-      "common_name": "Spektakuläre Miltonia",
-      "description": "Miltonia spectabilis ist eine Orchideenart aus Brasilien. Sie ist bekannt für ihre schönen, farbenfrohen Blüten und mäßige Pflegeanforderungen."
+      "common_name": "Miltonia spektabilis",
+      "description": "Miltonia spektabilis ist eine Orchidee, die für ihre schönen, auffälligen Blüten bekannt ist. Sie bevorzugt helles, indirektes Licht und hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Miltonia spectaculaire",
-      "description": "Miltonia spectabilis est une espèce d'orchidée originaire du Brésil. Elle est connue pour ses belles fleurs colorées et ses besoins modérés en soins."
+      "common_name": "Miltonia spectabilis",
+      "description": "Miltonia spectabilis est une orchidée connue pour ses belles fleurs voyantes. Elle prospère sous une lumière vive et indirecte et préfère une humidité élevée."
     },
     "it": {
-      "common_name": "Miltonia spettacolare",
-      "description": "Miltonia spectabilis è una specie di orchidea originaria del Brasile. È conosciuta per i suoi fiori colorati e per le esigenze di cura moderate."
+      "common_name": "Miltonia spettabilis",
+      "description": "Miltonia spettabilis è un'orchidea conosciuta per i suoi fiori belli e appariscenti. Cresce bene in luce brillante e indiretta e preferisce alta umidità."
     },
     "es": {
-      "common_name": "Miltonia espectacular",
-      "description": "Miltonia spectabilis es una especie de orquídea originaria de Brasil. Es conocida por sus hermosas flores coloridas y sus requisitos moderados de cuidado."
+      "common_name": "Miltonia espectabilis",
+      "description": "Miltonia espectabilis es una orquídea conocida por sus hermosas flores llamativas. Crece bien con luz brillante e indirecta y prefiere alta humedad."
     },
     "pt": {
-      "common_name": "Miltonia espetacular",
-      "description": "Miltonia spectabilis é uma espécie de orquídea nativa do Brasil. É conhecida por suas belas flores coloridas e necessidades moderadas de cuidados."
+      "common_name": "Miltonia espectabilis",
+      "description": "Miltonia espectabilis é uma orquídea conhecida por suas belas flores chamativas. Ela prefere luz indireta brilhante e alta umidade."
     },
     "ar": {
-      "common_name": "ميلتونيا المدهشة",
-      "description": "ميلتونيا سبكتابيليس هي نوع من الأوركيد موطنها البرازيل. تشتهر بأزهارها الجميلة الملونة ومتطلبات العناية المعتدلة."
+      "common_name": "ميلتونيا سبيكتيبيليس",
+      "description": "ميلتونيا سبيكتيبيليس هي أوركيد مشهورة بأزهارها الجميلة والبارزة. تفضل الضوء الساطع غير المباشر والرطوبة العالية."
     },
     "hi": {
-      "common_name": "विचित्र मिल्टोनिया",
-      "description": "मिल्टोनिया स्पेक्टैबिलिस एक प्रकार का ऑर्किड है जो ब्राजील का मूल निवासी है। यह अपनी सुंदर, रंगीन फूलों और मध्यम देखभाल आवश्यकताओं के लिए जाना जाता है।"
+      "common_name": "मिल्टोनिया स्पेक्टैबिलिस",
+      "description": "मिल्टोनिया स्पेक्टैबिलिस एक ऑर्किड है जो अपनी सुंदर, शानदार फूलों के लिए जाना जाता है। यह चमकीली, अप्रत्यक्ष रोशनी में बढ़ता है और उच्च आर्द्रता पसंद करता है।"
     },
     "zh": {
-      "common_name": "壮丽的米尔托尼亚",
-      "description": "米尔托尼亚·斯佩克塔比利斯是一种原产于巴西的兰花。它以美丽、多彩的花朵和适中的护理要求而闻名。"
+      "common_name": "美丽米尔托尼亚",
+      "description": "美丽米尔托尼亚是一种以其美丽、引人注目的花朵而闻名的兰花。它在明亮、间接的光线下生长，并偏好高湿度。"
     },
     "ja": {
-      "common_name": "スペクタキュラー・ミルトニア",
-      "description": "ミルトニア・スペクタビリスはブラジル原産のランの一種です。美しい色とりどりの花と、適度な世話の必要性で知られています。"
+      "common_name": "ミルトニア・スペクタビリス",
+      "description": "ミルトニア・スペクタビリスは、その美しい目立つ花で知られるランの一種です。明るい間接光で育ち、高い湿度を好みます。"
     },
     "ko": {
-      "common_name": "스펙타큘러 밀토니아",
-      "description": "밀토니아 스펙타빌리스는 브라질 원산의 난초입니다. 아름다운 다채로운 꽃과 적당한 관리 요구사항으로 유명합니다."
+      "common_name": "밀토니아 스펙타빌리스",
+      "description": "밀토니아 스펙타빌리스는 아름답고 눈에 띄는 꽃으로 유명한 난초입니다. 밝고 간접적인 빛에서 잘 자라며 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10395/miltonia-spectabilis/details",
-      "https://www.gardenia.net/plant/miltonia-spectabilis"
+      "https://www.rhs.org.uk/plants/173130/miltonia-spectabilis/details",
+      "https://www.orchidspecies.com/miltonspectabilis.htm"
     ]
   }
 }

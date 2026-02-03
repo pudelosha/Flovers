@@ -1,8 +1,8 @@
 {
   "external_id": "adiantum_raddianum",
-  "name": "Delta Maidenhair Fern",
+  "name": "Delta maidenhair fern",
   "latin": "Adiantum raddianum",
-  "sun": "low",
+  "sun": "medium",
   "water": "high",
   "difficulty": "hard",
   "popular": false,
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "fern",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 3,
+  "water_interval_days": 4,
   "moisture_required": true,
   "moisture_interval_days": 2,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "adiantum_raddianum.jpg",
   "image_thumb": "adiantum_raddianum.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low light",
-          "pl": "Mało światła",
-          "de": "Wenig Licht",
-          "fr": "Faible lumière",
-          "it": "Poca luce",
-          "es": "Poca luz",
-          "pt": "Pouca luz",
-          "ar": "إضاءة منخفضة",
-          "hi": "कम रोशनी",
-          "zh": "低光照",
-          "ja": "弱い光",
-          "ko": "약한 빛"
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist, airy soil",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchte Erde",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润土壤",
-          "ja": "湿った土",
-          "ko": "촉촉한 토양"
+          "en": "Moist, well-drained",
+          "pl": "Wilgotne, przepuszcz.",
+          "de": "Feucht, durchlässig",
+          "fr": "Humide, drainant",
+          "it": "Umido, drenante",
+          "es": "Húmedo, drenante",
+          "pt": "Úmido, drenante",
+          "ar": "رطب وجيد التصريف",
+          "hi": "नम, जल-निकास",
+          "zh": "湿润且排水好",
+          "ja": "湿り気と排水",
+          "ko": "촉촉·배수 좋게"
         }
       }
     },
@@ -68,17 +68,17 @@
       "value": {
         "text": {
           "en": "Keep evenly moist",
-          "pl": "Stała wilgoć",
+          "pl": "Stale wilgotne",
           "de": "Gleichmäßig feucht",
           "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة دائمة",
-          "hi": "हमेशा नम",
-          "zh": "保持湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "it": "Sempre leggermente umido",
+          "es": "Siempre ligeramente húmedo",
+          "pt": "Sempre levemente úmido",
+          "ar": "حافظ على رطوبة ثابتة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "乾かさない",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Needs steady care",
+          "pl": "Wymaga regularności",
+          "de": "Anspruchsvoll",
+          "fr": "Délicate",
+          "it": "Delicata",
+          "es": "Delicada",
+          "pt": "Delicada",
+          "ar": "حسّاسة",
+          "hi": "नाज़ुक",
+          "zh": "较难养护",
+          "ja": "繊細",
+          "ko": "예민함"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24℃",
-          "ko": "18–24°C"
+          "en": "15–21°C, min 10°C",
+          "pl": "15–21°C, min 10°C",
+          "de": "15–21°C, min 10°C",
+          "fr": "15–21°C, min 10°C",
+          "it": "15–21°C, min 10°C",
+          "es": "15–21°C, mín 10°C",
+          "pt": "15–21°C, mín 10°C",
+          "ar": "15–21°م، حد 10°م",
+          "hi": "15–21°C, न्यून 10°C",
+          "zh": "15–21°C，最低10°C",
+          "ja": "15–21°C、最低10°C",
+          "ko": "15–21°C, 최저 10°C"
         }
       }
     },
@@ -127,12 +127,12 @@
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
+          "fr": "Forte humidité",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -151,7 +151,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "गैर-विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Clumping fern",
-          "pl": "Paprotka kępowa",
-          "de": "Horstfarn",
+          "pl": "Kępiasta paproć",
+          "de": "Horstig wachsend",
           "fr": "Fougère en touffe",
           "it": "Felce cespitosa",
           "es": "Helecho en mata",
           "pt": "Samambaia em touceira",
-          "ar": "نمو متكتل",
-          "hi": "झुंड में बढ़ती",
+          "ar": "سرخس كثيف",
+          "hi": "गुच्छेदार फर्न",
           "zh": "丛生蕨类",
-          "ja": "株立ち",
-          "ko": "군생 성장"
+          "ja": "株立ちシダ",
+          "ko": "포기형 고사리"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Hates dry air/soil",
+          "pl": "Nie lubi suszy",
+          "de": "Mag keine Trockenheit",
+          "fr": "N'aime pas le sec",
+          "it": "Soffre se secca",
+          "es": "No tolera sequedad",
+          "pt": "Não tolera secura",
+          "ar": "تتضرر من الجفاف",
+          "hi": "सूखापन नापसंद",
+          "zh": "怕干燥与直晒",
+          "ja": "乾燥と直射に弱い",
+          "ko": "건조·직사광 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schildläuse, Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية/دقيقيات",
+          "hi": "स्केल, मिलीबग",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레·깍지진딧물"
         }
       }
     }
@@ -181,58 +219,59 @@
   "translations": {
     "en": {
       "common_name": "Delta maidenhair fern",
-      "description": "Adiantum raddianum is a delicate fern native to tropical South America. It prefers low light, constant moisture, and high humidity indoors."
+      "description": "Adiantum raddianum is a delicate fern grown indoors in bright, indirect light. Keep the potting mix evenly moist and provide high humidity to prevent browning fronds."
     },
     "pl": {
-      "common_name": "Nieczułek klinowaty",
-      "description": "Adiantum raddianum to delikatna paproć z Ameryki Południowej. Wymaga mało światła, stałej wilgoci i wysokiej wilgotności powietrza."
+      "common_name": "adiantum (paproć)",
+      "description": "Adiantum raddianum to delikatna paproć do jasnego, rozproszonego światła. Podłoże utrzymuj stale lekko wilgotne i zapewnij wysoką wilgotność powietrza, aby liście nie brązowiały."
     },
     "de": {
-      "common_name": "Delta-Frauenhaarfarn",
-      "description": "Adiantum raddianum ist ein zarter Farn aus Südamerika. Er braucht wenig Licht, gleichmäßige Feuchtigkeit und hohe Luftfeuchte."
+      "common_name": "Frauenhaarfarn",
+      "description": "Adiantum raddianum ist ein empfindlicher Farn für helles, indirektes Licht. Das Substrat gleichmäßig feucht halten und für hohe Luftfeuchte sorgen, damit die Wedel nicht vertrocknen."
     },
     "fr": {
-      "common_name": "Fougère capillaire",
-      "description": "Adiantum raddianum est une fougère délicate d’Amérique du Sud. Elle aime une lumière faible, un sol toujours humide et une forte humidité."
+      "common_name": "fougère capillaire",
+      "description": "Adiantum raddianum est une fougère délicate à placer en lumière vive indirecte. Gardez le substrat uniformément humide et augmentez l’humidité ambiante pour éviter le dessèchement des frondes."
     },
     "it": {
-      "common_name": "Capelvenere",
-      "description": "Adiantum raddianum è una felce delicata originaria del Sud America. Richiede poca luce, terreno costantemente umido e alta umidità."
+      "common_name": "capelvenere",
+      "description": "Adiantum raddianum è una felce delicata da tenere in luce intensa ma indiretta. Mantieni il terriccio costantemente umido e aumenta l’umidità ambientale per ridurre l’imbrunimento delle fronde."
     },
     "es": {
-      "common_name": "Helecho culantrillo",
-      "description": "Adiantum raddianum es un helecho delicado de Sudamérica. Necesita poca luz, humedad constante y alta humedad ambiental."
+      "common_name": "culantrillo (helecho)",
+      "description": "Adiantum raddianum es un helecho delicado para luz brillante e indirecta. Mantén el sustrato uniformemente húmedo y aporta alta humedad ambiental para evitar puntas secas."
     },
     "pt": {
-      "common_name": "Avenca",
-      "description": "Adiantum raddianum é uma samambaia delicada da América do Sul. Prefere pouca luz, solo sempre úmido e alta umidade."
+      "common_name": "avenca",
+      "description": "Adiantum raddianum é uma samambaia delicada para luz forte e indireta. Mantenha o substrato sempre levemente úmido e aumente a umidade do ar para evitar o ressecamento das frondes."
     },
     "ar": {
-      "common_name": "سرخس كزبرة البئر",
-      "description": "Adiantum raddianum سرخس دقيق من أمريكا الجنوبية. يحتاج إلى إضاءة منخفضة ورطوبة مستمرة ورطوبة جوية عالية."
+      "common_name": "سرخس شعر البنت",
+      "description": "Adiantum raddianum سرخس حساس يفضل ضوءًا ساطعًا غير مباشر. حافظ على التربة رطبة بشكل متوازن وارفع رطوبة الجو لتقليل جفاف واصفرار الأوراق."
     },
     "hi": {
       "common_name": "मेडनहेयर फर्न",
-      "description": "Adiantum raddianum एक नाज़ुक फर्न है जो दक्षिण अमेरिका से आता है। इसे कम रोशनी, लगातार नमी और अधिक आर्द्रता चाहिए।"
+      "description": "Adiantum raddianum एक नाज़ुक फर्न है जिसे तेज़ अप्रत्यक्ष रोशनी चाहिए। मिट्टी को लगातार हल्का नम रखें और अच्छी आर्द्रता दें ताकि पत्तियाँ सूखकर भूरी न हों।"
     },
     "zh": {
       "common_name": "铁线蕨",
-      "description": "Adiantum raddianum 原产于南美洲，是一种娇嫩的蕨类植物。适合低光照、持续湿润和高湿度环境。"
+      "description": "Adiantum raddianum 适合室内明亮散射光。盆土需保持均匀湿润并提高空气湿度，以减少叶片干尖和发褐。"
     },
     "ja": {
       "common_name": "アジアンタム",
-      "description": "Adiantum raddianum は南米原産の繊細なシダ植物です。弱い光と常に湿った土、高い湿度を好みます。"
+      "description": "Adiantum raddianum は明るい間接光で育てる繊細なシダです。用土を乾かさずに均一に湿らせ、高湿度を保つと葉先の傷みを減らせます。"
     },
     "ko": {
-      "common_name": "아디안텀",
-      "description": "Adiantum raddianum은 남아메리카 원산의 섬세한 고사리입니다. 약한 빛과 지속적인 수분, 높은 습도를 선호합니다."
+      "common_name": "메이든헤어 고사리",
+      "description": "Adiantum raddianum은 밝은 간접광에서 키우는 섬세한 고사리입니다. 흙을 고르게 촉촉하게 유지하고 습도를 높여 잎끝 마름과 갈변을 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/adiantum-raddianum/details",
-      "https://plants.ces.ncsu.edu/plants/adiantum-raddianum/",
-      "https://www.gardenersworld.com/plants/adiantum-raddianum/"
+      "https://www.rhs.org.uk/plants/20650/adiantum-raddianum/details",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-maidenhair-fern-adiantum-raddianum/",
+      "https://www.gardenersworld.com/plants/adiantum-raddianum-kensington-gem/",
+      "https://www.thespruce.com/grow-adiantum-ferns-1902722"
     ]
   }
 }

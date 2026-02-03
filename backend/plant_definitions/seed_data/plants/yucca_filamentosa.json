@@ -1,27 +1,27 @@
 {
   "external_id": "yucca_filamentosa",
-  "name": "Adam's needle",
+  "name": "Yucca filamentosa",
   "latin": "Yucca filamentosa",
   "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
   "image_hero": "yucca_filamentosa.jpg",
   "image_thumb": "yucca_filamentosa.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
-          "de": "volle Sonne",
-          "fr": "plein soleil",
-          "it": "pieno sole",
-          "es": "sol pleno",
-          "pt": "sol pleno",
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Soleil direct",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूर्ण धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "hi": "पूर्ण सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well drained",
-          "pl": "dobrze przepuszczalna",
-          "de": "gut durchlässig",
-          "fr": "bien drainé",
-          "it": "ben drenato",
-          "es": "bien drenado",
-          "pt": "bem drenado",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
           "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수가 잘되는"
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "low water",
-          "pl": "mało wody",
-          "de": "wenig Wasser",
-          "fr": "peu d'eau",
-          "it": "poca acqua",
-          "es": "poca agua",
-          "pt": "pouca água",
-          "ar": "ماء قليل",
-          "hi": "कम पानी",
-          "zh": "少量水分",
-          "ja": "少なめ水",
-          "ko": "적은 물"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "少ない",
+          "ko": "적음"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "tolerant wide range",
-          "pl": "szeroki zakres",
-          "de": "breite Spanne",
-          "fr": "large gamme",
-          "it": "ampia gamma",
-          "es": "amplio rango",
-          "pt": "ampla faixa",
-          "ar": "نطاق واسع",
-          "hi": "विस्तृत श्रेणी",
-          "zh": "宽温度范围",
-          "ja": "広い範囲",
-          "ko": "넓은 범위"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low humidity",
-          "pl": "niska wilgotność",
-          "de": "niedrige Luftfeucht.",
-          "fr": "faible humidité",
-          "it": "bassa umidità",
-          "es": "baja humedad",
-          "pt": "baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "少ない",
+          "ko": "적음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "toxic pets",
-          "pl": "toksyczny dla zwierząt",
-          "de": "giftig für Haustiere",
-          "fr": "toxique animaux",
-          "it": "tossico per animali",
-          "es": "tóxico mascotas",
-          "pt": "tóxico animais",
-          "ar": "سام للحيوانات",
-          "hi": "पशुओं के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에 유독"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna przy połknięciu",
+          "de": "Giftig bei Verschlucken",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة إذا تم ابتلاعها",
+          "hi": "अगर निगल लिया जाए तो जहरीला",
+          "zh": "如果摄入有毒",
+          "ja": "摂取すると有毒",
+          "ko": "삼킬 경우 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow upright",
-          "pl": "powolny pionowy",
-          "de": "langsam aufrecht",
-          "fr": "lent et droit",
-          "it": "lento eretto",
-          "es": "lento erguido",
-          "pt": "lento ereto",
-          "ar": "نمو بطيء",
-          "hi": "धीमी ऊर्ध्वाधर",
-          "zh": "生长缓慢直立",
-          "ja": "ゆっくり直立",
-          "ko": "느리게 직립"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि-वार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Adam's needle",
-      "description": "Yucca filamentosa is a drought-tolerant evergreen shrub. It prefers full sun and well-drained soil."
+      "common_name": "Adam's Needle",
+      "description": "Yucca filamentosa is a hardy, drought-tolerant plant native to the southeastern United States. It is known for its spiky, sword-like leaves and tall flower stalks."
     },
     "pl": {
-      "common_name": "Igła Adama",
-      "description": "Yucca filamentosa jest sucholubnym zimozielonym krzewem. Woli pełne słońce i przepuszczalną glebę."
+      "common_name": "Iglica Adama",
+      "description": "Yucca filamentosa to roślina odporna na suszę, pochodząca z południowo-wschodnich Stanów Zjednoczonych. Charakteryzuje się ostrymi, mieczowatymi liśćmi i wysokimi pędami kwiatowymi."
     },
     "de": {
-      "common_name": "Adamsspieß",
-      "description": "Yucca filamentosa ist ein dürretoleranter immergrüner Strauch. Sie bevorzugt volle Sonne und gut durchlässigen Boden."
+      "common_name": "Adam's Nadel",
+      "description": "Yucca filamentosa ist eine robuste, dürretolerante Pflanze, die im Südosten der USA beheimatet ist. Sie ist bekannt für ihre stacheligen, schwertartigen Blätter und hohen Blütenstängel."
     },
     "fr": {
-      "common_name": "Yucca d’Adam",
-      "description": "Yucca filamentosa est un arbuste persistant tolérant à la sécheresse. Il préfère le plein soleil et un sol drainé."
+      "common_name": "Filamentosa de Yucca",
+      "description": "Yucca filamentosa est une plante robuste et résistante à la sécheresse originaire du sud-est des États-Unis. Elle est connue pour ses feuilles épineuses en forme d'épée et ses hampes florales hautes."
     },
     "it": {
-      "common_name": "Ago di Adam",
-      "description": "Yucca filamentosa è un arbusto sempreverde tollerante alla siccità. Preferisce pieno sole e terreno ben drenato."
+      "common_name": "Filamentosa di Yucca",
+      "description": "Yucca filamentosa è una pianta resistente alla siccità, originaria del sud-est degli Stati Uniti. È nota per le sue foglie spinose a forma di spada e gli steli floreali alti."
     },
     "es": {
-      "common_name": "Aguja de Adam",
-      "description": "Yucca filamentosa es un arbusto perenne tolerante a la sequía. Prefiere sol pleno y suelo bien drenado."
+      "common_name": "Yucca de hilos",
+      "description": "Yucca filamentosa es una planta resistente a la sequía originaria del sureste de los Estados Unidos. Es conocida por sus hojas puntiagudas en forma de espada y altos tallos florales."
     },
     "pt": {
-      "common_name": "Agulha de Adam",
-      "description": "Yucca filamentosa é um arbusto perene tolerante à seca. Prefere sol pleno e solo bem drenado."
+      "common_name": "Yucca filamentosa",
+      "description": "A Yucca filamentosa é uma planta resistente à seca, nativa do sudeste dos Estados Unidos. É conhecida por suas folhas espinhosas em forma de espada e hastes florais altas."
     },
     "ar": {
       "common_name": "إبرة آدم",
-      "description": "Yucca filamentosa شجيرة دائمة تتحمل الجفاف. تفضل الشمس الكاملة والتربة جيدة التصريف."
+      "description": "Yucca filamentosa هي نبات مقاوم للجفاف ويعود أصله إلى جنوب شرق الولايات المتحدة. يُعرف بأوراقه الشائكة التي تشبه السيوف وسوياته الزهرية الطويلة."
     },
     "hi": {
-      "common_name": "एडम की सुई",
-      "description": "Yucca filamentosa drought सहनशील सदाबहार झाड़ी है। यह पूर्ण धूप और अच्छी जलनिकासी वाली मिट्टी पसंद करती है।"
+      "common_name": "आदम की सुई",
+      "description": "Yucca filamentosa एक मजबूत, सूखा-सहिष्णु पौधा है जो दक्षिण-पूर्वी संयुक्त राज्य अमेरिका का मूल निवासी है। यह अपनी कांटेदार, तलवार जैसी पत्तियों और ऊंची फूलों की डंठल के लिए जाना जाता है."
     },
     "zh": {
       "common_name": "亚当针",
-      "description": "Yucca filamentosa 是耐旱常绿灌木。 它喜欢全日照和良好排水的土壤。"
+      "description": "Yucca filamentosa是一种耐旱植物，原产于美国东南部。以其尖锐的剑形叶子和高大的花梗而闻名。"
     },
     "ja": {
       "common_name": "アダムの針",
-      "description": "Yucca filamentosa は耐乾性常緑低木です。 直射日光と排水良好な土壌を好みます。"
+      "description": "Yucca filamentosaは乾燥に強い植物で、アメリカ合衆国南東部が原産です。剣のような鋭い葉と高い花茎で知られています。"
     },
     "ko": {
       "common_name": "아담의 바늘",
-      "description": "Yucca filamentosa 는 내건성 항상녹색 관목입니다. 햇빛과 배수 좋은 토양을 선호합니다."
+      "description": "Yucca filamentosa는 미국 동남부가 원산지인 내건성 식물입니다. 뾰족한 검 모양의 잎과 높은 꽃줄기로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://en.wikipedia.org/wiki/Yucca_filamentosa",
-      "https://www.gardenersworld.com/plants/yucca-filamentosa/"
+      "https://www.rhs.org.uk/advice/profile?pid=129",
+      "https://www.gardenia.net/plant/yucca-filamentosa-adams-needle"
     ]
   }
 }

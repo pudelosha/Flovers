@@ -1,20 +1,21 @@
 {
   "external_id": "myrtus_communis",
-  "name": "Common myrtle",
+  "name": "Myrtle",
   "latin": "Myrtus communis",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Viel Sonne",
-          "fr": "Soleil vif",
-          "it": "Sole pieno",
-          "es": "Sol intenso",
-          "pt": "Sol intenso",
-          "ar": "شمس ساطعة",
-          "hi": "तेज धूप",
-          "zh": "强光",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,16 +87,16 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnia",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–25°C",
-          "pl": "10–25°C",
-          "de": "10–25°C",
-          "fr": "10–25°C",
-          "it": "10–25°C",
-          "es": "10–25°C",
-          "pt": "10–25°C",
-          "ar": "10–25°م",
-          "hi": "10–25°C",
-          "zh": "10–25°C",
-          "ja": "10–25°C",
-          "ko": "10–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "一般",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中的湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독함"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Woody shrub",
-          "pl": "Krzew",
-          "de": "Strauch",
-          "fr": "Arbuste",
-          "it": "Arbusto",
-          "es": "Arbusto",
-          "pt": "Arbusto",
-          "ar": "شجيرة",
-          "hi": "झाड़ी",
-          "zh": "灌木",
-          "ja": "低木",
-          "ko": "관목"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "生长缓慢到中等",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리게 또는 중간 속도의 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Common myrtle",
-      "description": "Myrtus communis is an evergreen shrub native to the Mediterranean region. It prefers bright sunlight and well-drained soil. Indoors, it grows slowly and benefits from regular pruning."
+      "common_name": "Myrtle",
+      "description": "Myrtus communis, commonly known as Myrtle, is a Mediterranean shrub known for its aromatic leaves and white or pink star-like flowers."
     },
     "pl": {
-      "common_name": "Mirt zwyczajny",
-      "description": "Myrtus communis to zimozielony krzew pochodzący z regionu śródziemnomorskiego. Lubi jasne stanowiska i przepuszczalną glebę. W uprawie domowej rośnie wolno."
+      "common_name": "Myrt",
+      "description": "Myrtus communis, znany jako Myrt, to krzew śródziemnomorski, znany z aromatycznych liści i białych lub różowych kwiatów w kształcie gwiazdy."
     },
     "de": {
-      "common_name": "Echte Myrte",
-      "description": "Myrtus communis ist ein immergrüner Strauch aus dem Mittelmeerraum. Er benötigt viel Licht und gut durchlässigen Boden. In Innenräumen wächst er eher langsam."
+      "common_name": "Myrrhe",
+      "description": "Myrtus communis, auch Myrrhe genannt, ist ein mediterraner Strauch, bekannt für seine aromatischen Blätter und weißen oder rosa sternförmigen Blüten."
     },
     "fr": {
-      "common_name": "Myrte commune",
-      "description": "Myrtus communis est un arbuste persistant originaire du bassin méditerranéen. Il apprécie le plein soleil et un sol bien drainé. Sa croissance en intérieur est modérée."
+      "common_name": "Myrrhe",
+      "description": "Myrtus communis, communément appelé Myrrhe, est un arbuste méditerranéen connu pour ses feuilles aromatiques et ses fleurs en forme d'étoile blanches ou roses."
     },
     "it": {
-      "common_name": "Mirto comune",
-      "description": "Myrtus communis è un arbusto sempreverde originario del Mediterraneo. Predilige luce intensa e terreni ben drenati. In vaso cresce lentamente."
+      "common_name": "Mirto",
+      "description": "Myrtus communis, conosciuto come Mirto, è un arbusto mediterraneo noto per le sue foglie aromatiche e i suoi fiori a forma di stella bianchi o rosa."
     },
     "es": {
-      "common_name": "Mirto común",
-      "description": "Myrtus communis es un arbusto perenne originario del Mediterráneo. Requiere mucha luz y suelo bien drenado. En interior su crecimiento es lento."
+      "common_name": "Mirto",
+      "description": "Myrtus communis, conocido como Mirto, es un arbusto mediterráneo conocido por sus hojas aromáticas y flores blancas o rosas en forma de estrella."
     },
     "pt": {
-      "common_name": "Murta-comum",
-      "description": "Myrtus communis é um arbusto perene nativo da região mediterrânea. Prefere sol pleno e solo bem drenado. Em ambientes internos cresce de forma moderada."
+      "common_name": "Myrtus",
+      "description": "Myrtus communis, conhecido como Myrtus, é um arbusto mediterrâneo conhecido por suas folhas aromáticas e flores brancas ou rosas em forma de estrela."
     },
     "ar": {
-      "common_name": "الآس الشائع",
-      "description": "نبات Myrtus communis شجيرة دائمة الخضرة موطنها منطقة البحر المتوسط. تحتاج إلى ضوء قوي وتربة جيدة التصريف. نموها داخليًا معتدل."
+      "common_name": "المر",
+      "description": "Myrtus communis، المعروف بالمر، هو شجيرة متوسطيّة معروفة بأوراقها العطرية وزهورها البيضاء أو الوردية على شكل نجمة."
     },
     "hi": {
       "common_name": "मर्टल",
-      "description": "Myrtus communis भूमध्यसागरीय क्षेत्र की सदाबहार झाड़ी है। इसे तेज धूप और अच्छी जल निकास वाली मिट्टी पसंद है। घर के अंदर इसकी वृद्धि धीमी होती है।"
+      "description": "Myrtus communis, जिसे मर्टल कहा जाता है, एक भूमध्यसागरीय झाड़ी है जो अपनी सुगंधित पत्तियों और सफेद या गुलाबी तारे के आकार के फूलों के लिए जानी जाती है।"
     },
     "zh": {
-      "common_name": "香桃木",
-      "description": "Myrtus communis 是原产于地中海地区的常绿灌木。它需要充足的阳光和良好排水的土壤。室内生长速度较慢。"
+      "common_name": "桃金娘",
+      "description": "Myrtus communis，通常称为桃金娘，是一种地中海灌木，以其芳香的叶子和白色或粉色的星形花朵而闻名。"
     },
     "ja": {
-      "common_name": "ギンバイカ",
-      "description": "Myrtus communis は地中海原産の常緑低木です。強い日光と水はけの良い土を好みます。室内では成長は緩やかです。"
+      "common_name": "マートル",
+      "description": "Myrtus communis、一般にマートルとして知られるこの植物は、芳香を持つ葉と白またはピンクの星形の花を持つ地中海原産の低木です。"
     },
     "ko": {
       "common_name": "머틀",
-      "description": "Myrtus communis는 지중해 지역 원산의 상록 관목입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 실내에서는 천천히 자랍니다."
+      "description": "Myrtus communis, 일반적으로 머틀로 알려진 이 식물은 향기로운 잎과 흰색 또는 분홍색 별 모양의 꽃을 가진 지중해 원산의 관목입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11408/myrtus-communis/details",
-      "https://www.gardenia.net/plant/myrtus-communis-common-myrtle",
-      "https://plants.ces.ncsu.edu/plants/myrtus-communis/"
+      "https://www.rhs.org.uk/plants/myrtus-communis",
+      "https://www.gardenia.net/plant/myrtus-communis"
     ]
   }
 }

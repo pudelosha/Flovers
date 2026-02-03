@@ -1,25 +1,27 @@
 {
   "external_id": "hoya_serpens",
-  "name": "Himalayan wax plant",
+  "name": "Hoya serpens",
   "latin": "Hoya serpens",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "hoya_serpens.jpg",
   "image_thumb": "hoya_serpens.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Hell, indirekt",
-          "fr": "Lumineux indirect",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 광량"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy orchid mix",
-          "pl": "Przewiewna orchid",
-          "de": "Luftiges Orchideens.",
-          "fr": "Mélange orchidée",
-          "it": "Substrato orchidea",
-          "es": "Sustrato orquídea",
-          "pt": "Substrato orquídea",
-          "ar": "خليط أوركيد جيد التهوية",
-          "hi": "हवादार ऑर्किड मिक्स",
-          "zh": "透气兰花基质",
-          "ja": "通気性ラン用土",
-          "ko": "통기성 난초 배합"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Let mix almost dry",
-          "pl": "Prawie przeschnąć",
-          "de": "Fast abtrocknen",
-          "fr": "Laisser sécher un peu",
-          "it": "Lascia quasi asciug.",
-          "es": "Deja secar un poco",
-          "pt": "Deixe secar um pouco",
-          "ar": "اتركها تجف قليلاً",
-          "hi": "लगभग सूखने दें",
-          "zh": "微干再浇",
-          "ja": "乾き気味に水やり",
-          "ko": "거의 마르면 물"
+          "en": "Water regularly",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "الري بانتظام",
+          "hi": "नियमित रूप से पानी दें",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "16–24°C",
-          "pl": "16–24°C",
-          "de": "16–24°C",
-          "fr": "16–24°C",
-          "it": "16–24°C",
-          "es": "16–24°C",
-          "pt": "16–24°C",
-          "ar": "16–24°م",
-          "hi": "16–24°C",
-          "zh": "16–24°C",
-          "ja": "16–24°C",
-          "ko": "16–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Higher humidity",
-          "pl": "Wyższa wilgotność",
-          "de": "Höhere Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Umidità più alta",
-          "es": "Humedad alta",
-          "pt": "Humidade alta",
-          "ar": "رطوبة أعلى",
-          "hi": "अधिक आर्द्रता",
-          "zh": "较高湿度",
-          "ja": "高めの湿度",
-          "ko": "높은 습도"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic to pets",
-          "pl": "Nietoksyczna dla zw.",
-          "de": "Haustierfreundlich",
-          "fr": "Non toxique animaux",
-          "it": "Non tossica animali",
-          "es": "No tóxica mascotas",
-          "pt": "Não tóxica pets",
-          "ar": "غير سامة للحيوانات",
-          "hi": "पालतू-सेफ",
-          "zh": "对宠物无毒",
-          "ja": "ペットに無毒",
-          "ko": "반려동물 무독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अक्षारी",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -160,79 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow trailing vine",
-          "pl": "Wolno płożąca",
-          "de": "Langsam hängend",
-          "fr": "Lente retombante",
-          "it": "Lenta ricadente",
-          "es": "Lenta colgante",
-          "pt": "Lenta pendente",
-          "ar": "متدلية بطيئة",
-          "hi": "धीमी लटकती बेल",
-          "zh": "缓慢垂藤",
-          "ja": "ゆっくり垂れる",
-          "ko": "느리게 늘어짐"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di annaffiature",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水をやりすぎない",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Himalayan wax plant",
-      "description": "Hoya serpens is a small-leaved, trailing epiphytic hoya native to the Himalayas and the Andaman Islands. Grow it in bright, indirect light in a very airy mix and water when the medium is fairly dry but not bone-dry. Average indoor warmth suits it, and higher humidity can help steady growth."
+      "common_name": "Creeping Hoya",
+      "description": "Hoya serpens is a small, creeping plant known for its thick, succulent leaves. It thrives in moderate light and requires regular watering but dislikes overwatering."
     },
     "pl": {
-      "common_name": "hoja himalajska",
-      "description": "Hoya serpens to drobnolistna, zwisająca hoja epifityczna pochodząca z Himalajów i Wysp Andamańskich. Uprawiaj ją w jasnym, rozproszonym świetle w bardzo przewiewnym podłożu i podlewaj, gdy podłoże wyraźnie przeschnie, ale nie całkowicie. Ciepło domowe zwykle wystarcza, a wyższa wilgotność sprzyja wzrostowi."
+      "common_name": "Hoya pełzająca",
+      "description": "Hoya serpens to mała roślina pełzająca o mięsistych, sukulentnych liściach. Lubi umiarkowane światło i regularne podlewanie, ale nie znosi przelania."
     },
     "de": {
-      "common_name": "Himalaya-Wachsblume",
-      "description": "Hoya serpens ist eine kleinblättrige, hängende epiphytische Hoya aus dem Himalaya und den Andamanen. Stelle sie hell, aber ohne direkte Sonne, in ein sehr luftiges Substrat und gieße, wenn das Medium ziemlich trocken ist, jedoch nicht völlig austrocknet. Normale Zimmertemperaturen passen, und höhere Luftfeuchte unterstützt das Wachstum."
+      "common_name": "Kriechende Hoya",
+      "description": "Hoya serpens ist eine kleine, kriechende Pflanze mit dicken, sukkulenten Blättern. Sie gedeiht bei mäßigem Licht und benötigt regelmäßige Bewässerung, mag jedoch keine Überwässerung."
     },
     "fr": {
-      "common_name": "hoya serpens",
-      "description": "Hoya serpens est un hoya épiphyte retombant à petites feuilles, originaire de l’Himalaya et des îles Andaman. Placez-le en lumière vive indirecte dans un substrat très aéré et arrosez quand le mélange est assez sec sans le laisser sécher complètement. Une humidité plus élevée peut favoriser une croissance régulière."
+      "common_name": "Hoya rampante",
+      "description": "Hoya serpens est une petite plante rampante connue pour ses feuilles épaisses et succulentes. Elle préfère une lumière modérée et nécessite un arrosage régulier, mais déteste l'excès d'eau."
     },
     "it": {
-      "common_name": "hoya serpens",
-      "description": "Hoya serpens è una Hoya epifita ricadente a foglie piccole, originaria dell’Himalaya e delle Isole Andamane. Coltivala con luce intensa ma indiretta in un substrato molto arioso e annaffia quando il mix è quasi asciutto, senza farlo seccare del tutto. Temperature domestiche medie vanno bene e un’umidità più alta può aiutare la crescita."
+      "common_name": "Hoya strisciante",
+      "description": "Hoya serpens è una piccola pianta strisciante con foglie spesse e succulente. Cresce in luce moderata e ha bisogno di annaffiature regolari, ma non sopporta l'acqua in eccesso."
     },
     "es": {
-      "common_name": "hoya serpens",
-      "description": "Hoya serpens es una hoya epífita colgante de hojas pequeñas, nativa del Himalaya y de las islas Andamán. Dale luz brillante e indirecta, usa un sustrato muy aireado y riega cuando el medio esté bastante seco, sin dejar que se seque por completo. Una humedad más alta puede favorecer un crecimiento constante."
+      "common_name": "Hoya rastrera",
+      "description": "Hoya serpens es una planta pequeña y rastrera conocida por sus hojas gruesas y suculentas. Prefiere luz moderada y necesita riego regular, pero no tolera el exceso de agua."
     },
     "pt": {
-      "common_name": "hoya serpens",
-      "description": "Hoya serpens é uma hoya epífita pendente de folhas pequenas, nativa do Himalaia e das Ilhas Andamão. Mantenha em luz forte indireta, em substrato muito arejado, e regue quando o meio estiver bem seco, sem deixar secar totalmente. Maior humidade pode ajudar no crescimento."
+      "common_name": "Hoya rasteira",
+      "description": "Hoya serpens é uma planta pequena e rasteira conhecida por suas folhas grossas e suculentas. Gosta de luz moderada e requer rega regular, mas não tolera excesso de água."
     },
     "ar": {
-      "common_name": "هويا سيربنس",
-      "description": "Hoya serpens هويا نباتية صغيرة الأوراق ومتدلية وتنمو كإيبيفايت، موطنها جبال الهيمالايا وجزر أندامان. توضع في ضوء ساطع غير مباشر مع تربة جيدة التهوية جدًا، وتُسقى عندما يجف الوسط إلى حد كبير دون أن يجف تمامًا. الرطوبة الأعلى قد تساعد على نمو أكثر ثباتًا."
+      "common_name": "هيا زاحفة",
+      "description": "Hoya serpens هي نبات صغير زاحف معروف بأوراقه السميكة والعصارية. تنمو في ضوء معتدل وتتطلب الري المنتظم ولكنها لا تحب الإفراط في الري."
     },
     "hi": {
-      "common_name": "होया सर्पेन्स",
-      "description": "Hoya serpens छोटे पत्तों वाली, लटकने वाली एपिफाइट होया है, जो हिमालय और अंडमान द्वीपों की मूल निवासी है. इसे तेज अप्रत्यक्ष रोशनी में बहुत हवादार माध्यम में उगाएँ और तब पानी दें जब माध्यम काफी सूख जाए, पर पूरी तरह न सूखे. सामान्य कमरे का तापमान ठीक रहता है और अधिक आर्द्रता से वृद्धि में मदद मिल सकती है."
+      "common_name": "होया घास",
+      "description": "Hoya serpens एक छोटी, घास जैसी पौधा है जो मोटे, मांसल पत्तों के लिए जाना जाता है। यह मध्यम प्रकाश में बढ़ता है और नियमित पानी की आवश्यकता होती है, लेकिन अधिक पानी से नफरत करता है।"
     },
     "zh": {
-      "common_name": "蛇纹球兰",
-      "description": "Hoya serpens 是小叶、垂生的附生球兰，原产喜马拉雅地区及安达曼群岛。置于明亮散射光下，使用非常疏松透气的基质，待介质较干后再浇水，但不要完全干透。较高空气湿度有助于稳定生长。"
+      "common_name": "爬行霍亚",
+      "description": "Hoya serpens 是一种小型的爬行植物，因其厚实的多肉叶片而闻名。它喜欢中等光照，并需要定期浇水，但不喜欢过度浇水。"
     },
     "ja": {
-      "common_name": "ホヤ・セルペンス",
-      "description": "Hoya serpens は小さな葉の垂れ下がる着生ホヤで、ヒマラヤ地域とアンダマン諸島が原産です。明るい間接光と通気性の高い用土で育て、用土がかなり乾いてから水やりしますが、完全に乾かし切らないようにします。湿度が高めだと生育が安定しやすいです。"
+      "common_name": "這い性ホヤ",
+      "description": "Hoya serpensは小さな這うような植物で、厚い肉質の葉を持っています。中程度の光で育ち、定期的な水やりを必要としますが、過度の水やりは嫌います。"
     },
     "ko": {
-      "common_name": "호야 세르펜스",
-      "description": "Hoya serpens 는 작은 잎이 촘촘한 덩굴성 착생 호야로, 히말라야 지역과 안다만 제도가 원산입니다. 밝은 간접광과 통기성 좋은 배합토에서 키우고, 배지가 거의 마르면 물을 주되 완전히 바싹 마르게 두지 않습니다. 비교적 높은 습도가 안정적인 생장에 도움이 됩니다."
+      "common_name": "기어가는 호야",
+      "description": "Hoya serpens는 두껍고 다육질의 잎을 가진 작은 기어가는 식물입니다. 중간 정도의 빛에서 자라며 정기적인 물주기가 필요하지만 과도한 물주기를 싫어합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98692-1",
-      "https://www.rhs.org.uk/plants/8863/hoya-serpens/details",
-      "https://www.rhs.org.uk/plants/hoya/how-to-grow",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276833",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/wax-plant"
+      "https://www.rhs.org.uk/plants/hoya-serpens",
+      "https://www.gardenia.net/plant/hoya-serpens"
     ]
   }
 }

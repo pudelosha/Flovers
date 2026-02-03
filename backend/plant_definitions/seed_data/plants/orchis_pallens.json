@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,7 +37,7 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
           "ko": "중간 빛"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, orchid mix",
-          "pl": "Kwaśna, mieszanka orchidei",
-          "de": "Saurer Boden, Orchideenmischung",
-          "fr": "Sol acide, mélange pour orchidées",
-          "it": "Terreno acido, miscela per orchidee",
-          "es": "Suelo ácido, mezcla para orquídeas",
-          "pt": "Solo ácido, mistura para orquídeas",
-          "ar": "تربة حمضية، خليط للزهور الأوركيدية",
-          "hi": "अम्लीय, ऑर्किड मिश्रण",
-          "zh": "酸性土壤，兰花混合土",
-          "ja": "酸性土壌、ラン科植物用混合土",
-          "ko": "산성 토양, 난초 혼합 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好な排水性の土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -73,12 +73,12 @@
           "fr": "Arrosage modéré",
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Regar moderadamente",
-          "ar": "ري سقي معتدل",
-          "hi": "मध्यम जलिंग",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
           "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "ko": "적당한 급수"
         }
       }
     },
@@ -87,17 +87,17 @@
       "value": {
         "text": {
           "en": "Medium care",
-          "pl": "Średnia opieka",
+          "pl": "Średnia pielęgnacja",
           "de": "Mittlere Pflege",
-          "fr": "Entretien moyen",
+          "fr": "Soins moyens",
           "it": "Cura media",
           "es": "Cuidado medio",
-          "pt": "Cuidado médio",
+          "pt": "Cuidados médios",
           "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
           "zh": "中等护理",
-          "ja": "中程度の手入れ",
-          "ko": "중간 관리"
+          "ja": "中程度の世話",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -133,7 +133,7 @@
           "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
           "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
+          "zh": "适度湿度",
           "ja": "中程度の湿度",
           "ko": "중간 습도"
         }
@@ -145,16 +145,16 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषाक्त",
+          "hi": "विषैला नहीं",
           "zh": "无毒",
           "ja": "非毒性",
-          "ko": "비독성"
+          "ko": "독성 없음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 성장"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Pale Orchid",
-      "description": "Orchis pallens is a delicate, pale yellow orchid native to temperate regions. It thrives in shaded forest environments."
+      "description": "Orchis pallens is a slow-growing orchid known for its pale flowers. It thrives in moderate light and well-draining soil, requiring moderate watering."
     },
     "pl": {
       "common_name": "Orchidea blada",
-      "description": "Orchis pallens to delikatna, jasnożółta orchidea, występująca w strefach umiarkowanych. Rośnie w zacienionych lasach."
+      "description": "Orchis pallens to wolno rosnąca orchidea znana z bladych kwiatów. Wymaga umiarkowanego światła i dobrze przepuszczalnej gleby, umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Blasse Orchidee",
-      "description": "Orchis pallens ist eine zarte, blassgelbe Orchidee, die in gemäßigten Regionen heimisch ist. Sie gedeiht in schattigen Wäldern."
+      "description": "Orchis pallens ist eine langsam wachsende Orchidee, bekannt für ihre blassen Blumen. Sie benötigt mäßiges Licht und gut durchlässigen Boden und mäßige Bewässerung."
     },
     "fr": {
       "common_name": "Orchidée pâle",
-      "description": "Orchis pallens est une orchidée délicate, jaune pâle, originaire des régions tempérées. Elle prospère dans des forêts ombragées."
+      "description": "Orchis pallens est une orchidée à croissance lente, connue pour ses fleurs pâles. Elle préfère une lumière modérée et un sol bien drainé avec un arrosage modéré."
     },
     "it": {
       "common_name": "Orchidea pallida",
-      "description": "Orchis pallens è un'orchidea delicata di colore giallo pallido, originaria delle regioni temperate. Cresce in ambienti forestali ombreggiati."
+      "description": "Orchis pallens è un'orchidea a crescita lenta, nota per i suoi fiori pallidi. Cresce meglio con luce moderata e terreno ben drenato, necessitando di annaffiature moderate."
     },
     "es": {
       "common_name": "Orquídea pálida",
-      "description": "Orchis pallens es una orquídea delicada de color amarillo pálido originaria de regiones templadas. Crece en bosques sombreados."
+      "description": "Orchis pallens es una orquídea de crecimiento lento, conocida por sus flores pálidas. Necesita luz moderada y suelo bien drenado, con un riego moderado."
     },
     "pt": {
       "common_name": "Orquídea pálida",
-      "description": "Orchis pallens é uma orquídea delicada de cor amarela pálida, nativa de regiões temperadas. Cresce em florestas sombreadas."
+      "description": "Orchis pallens é uma orquídea de crescimento lento, conhecida pelas suas flores pálidas. Prefere luz moderada e solo bem drenado, necessitando de rega moderada."
     },
     "ar": {
       "common_name": "أوركيد باهت",
-      "description": "Orchis pallens هي أوركيد رقيقة ذات أزهار صفراء باهتة، تنمو في المناطق المعتدلة. تزدهر في الغابات المظللة."
+      "description": "Orchis pallens هو أوركيد بطيء النمو يعرف بزهوره الباهتة. يزدهر في ضوء معتدل وتربة جيدة التصريف مع ري معتدل."
     },
     "hi": {
-      "common_name": "पीला ऑर्किड",
-      "description": "Orchis pallens एक नाजुक, पीले रंग की ऑर्किड है जो समशीतोष्ण क्षेत्रों में पाई जाती है। यह छायादार जंगलों में उगती है।"
+      "common_name": "पीली ऑर्किड",
+      "description": "Orchis pallens एक धीमे बढ़ने वाला ऑर्किड है जो अपने पीले फूलों के लिए जाना जाता है। यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में उगता है, और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "淡黄兰",
-      "description": "Orchis pallens 是一种细腻的淡黄色兰花，原产于温带地区。它在阴凉的森林环境中茁壮成长。"
+      "common_name": "苍白兰花",
+      "description": "Orchis pallens 是一种生长缓慢的兰花，以其苍白的花朵而闻名。它在中等光照和排水良好的土壤中生长，需要适度的浇水。"
     },
     "ja": {
-      "common_name": "淡いラン",
-      "description": "Orchis pallens は、温帯地域に自生する繊細な淡黄色のランです。日陰の森林環境で繁茂します。"
+      "common_name": "淡い蘭",
+      "description": "Orchis pallensは遅い成長をする蘭で、淡い花を特徴とします。中程度の光と排水性の良い土壌を好み、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "옅은 난초",
-      "description": "Orchis pallens는 온대 지역에 자생하는 섬세한 연노란색 난초입니다. 그늘진 숲 환경에서 자랍니다."
+      "common_name": "창백한 난초",
+      "description": "Orchis pallens는 느리게 자라는 난초로 창백한 꽃이 특징입니다. 중간 정도의 빛과 배수가 좋은 토양에서 잘 자라며 적당한 급수가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=102",
-      "https://www.botanicalgarden.wisc.edu"
+      "https://www.rhs.org.uk/Plants/8596/Orchis-pallens/Details",
+      "https://www.gardenia.net/plant/orchis-pallens"
     ]
   }
 }

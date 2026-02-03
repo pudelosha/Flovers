@@ -1,6 +1,6 @@
 {
   "external_id": "ariocarpus_fissuratus",
-  "name": "Ariocarpus fissuratus",
+  "name": "Living rock cactus",
   "latin": "Ariocarpus fissuratus",
   "sun": "high",
   "water": "low",
@@ -10,8 +10,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -36,10 +35,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
           "ja": "直射日光",
-          "ko": "직사광선"
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Gritty cactus soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenante",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
+          "en": "Gritty cactus mix",
+          "pl": "Przepuszczalna miesz.",
+          "de": "Mineralisch, luftig",
+          "fr": "Substrat très drainant",
+          "it": "Substrato drenante",
+          "es": "Sustrato muy drenante",
+          "pt": "Substrato bem drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "रेतीली, जलनिकास",
+          "zh": "砂质排水土",
           "ja": "水はけ良い土",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Very sparse",
-          "pl": "Bardzo rzadko",
-          "de": "Sehr selten",
-          "fr": "Très rare",
-          "it": "Molto raro",
-          "es": "Muy escaso",
-          "pt": "Muito pouco",
-          "ar": "ري نادر",
-          "hi": "बहुत कम पानी",
-          "zh": "极少浇水",
-          "ja": "水やり極少",
-          "ko": "물 매우 적음"
+          "en": "Water sparingly",
+          "pl": "Podlewaj oszczędnie",
+          "de": "Sparsam gießen",
+          "fr": "Arroser peu",
+          "it": "Annaffia poco",
+          "es": "Riega poco",
+          "pt": "Regar pouco",
+          "ar": "ريّ قليل",
+          "hi": "कम पानी दें",
+          "zh": "少量浇水",
+          "ja": "控えめに水やり",
+          "ko": "물을 조금만"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Hard, slow grower",
+          "pl": "Trudna, rośnie wolno",
+          "de": "Schwierig, sehr langsam",
+          "fr": "Difficile, très lente",
+          "it": "Difficile, molto lenta",
+          "es": "Difícil, muy lenta",
+          "pt": "Difícil, muito lenta",
+          "ar": "صعبة وبطيئة",
+          "hi": "कठिन, धीमी",
+          "zh": "难养，生长慢",
+          "ja": "難しい・成長遅い",
+          "ko": "키우기 어려움"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm, dry",
-          "pl": "Ciepło i sucho",
-          "de": "Warm und trocken",
-          "fr": "Chaud et sec",
-          "it": "Caldo e secco",
-          "es": "Cálido y seco",
-          "pt": "Quente e seco",
-          "ar": "دافئ وجاف",
-          "hi": "गर्म और शुष्क",
-          "zh": "温暖干燥",
-          "ja": "暖かく乾燥",
-          "ko": "따뜻하고 건조"
+          "en": "Warm days, cool dry",
+          "pl": "Ciepło; zimą sucho",
+          "de": "Warm, Winter kühl-trocken",
+          "fr": "Chaud; hiver sec",
+          "it": "Caldo; inverno secco",
+          "es": "Cálido; invierno seco",
+          "pt": "Quente; inverno seco",
+          "ar": "دافئ؛ شتاء جاف",
+          "hi": "गर्म; सर्दी सूखी",
+          "zh": "温暖，冬季干燥",
+          "ja": "暖かく冬は乾燥",
+          "ko": "따뜻, 겨울 건조"
         }
       }
     },
@@ -131,7 +130,7 @@
           "es": "Baja humedad",
           "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
+          "hi": "कम नमी",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة إذا أُكلت",
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "摂取で有害",
+          "ko": "먹으면 유해"
         }
       }
     },
@@ -161,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Very slow",
-          "pl": "Bardzo wolny",
-          "de": "Sehr langsam",
-          "fr": "Très lente",
-          "it": "Molto lenta",
-          "es": "Muy lento",
-          "pt": "Muito lento",
-          "ar": "بطيء جدًا",
-          "hi": "बहुत धीमी",
+          "en": "Very slow growth",
+          "pl": "Bardzo wolny wzrost",
+          "de": "Sehr langsames Wachstum",
+          "fr": "Croissance très lente",
+          "it": "Crescita molto lenta",
+          "es": "Crecimiento muy lento",
+          "pt": "Crescimento muito lento",
+          "ar": "نمو بطيء جدًا",
+          "hi": "बहुत धीमी वृद्धि",
           "zh": "生长极慢",
-          "ja": "成長が遅い",
-          "ko": "매우 느림"
+          "ja": "成長が非常に遅い",
+          "ko": "성장이 매우 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot from wet soil",
+          "pl": "Gnicie przy przelaniu",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourriture si trop d'eau",
+          "it": "Marciume se troppo umido",
+          "es": "Pudrición por exceso",
+          "pt": "Podridão por excesso",
+          "ar": "تعفن مع البلل",
+          "hi": "ज्यादा पानी से सड़न",
+          "zh": "积水易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Living Rock Cactus",
-      "description": "Ariocarpus fissuratus is a small, spineless cactus native to limestone deserts of Texas and northern Mexico. It grows extremely slowly and relies on excellent drainage and bright sun. Overwatering is the most common cause of failure."
+      "common_name": "Living rock cactus",
+      "description": "Ariocarpus fissuratus is a very slow-growing cactus from arid regions of Texas and northern Mexico. Keep it in strong light and an extremely free-draining cactus mix, watering only after the substrate is fully dry. It needs a cool, dry winter rest to reduce rot risk."
     },
     "pl": {
-      "common_name": "Kaktus żywy kamień",
-      "description": "Ariocarpus fissuratus to niewielki, bezkolcowy kaktus z suchych obszarów Teksasu i Meksyku. Rośnie bardzo wolno i wymaga silnego światła oraz doskonałego drenażu. Nadmiar wody łatwo prowadzi do gnicia."
+      "common_name": "Kaktus „żywy kamień”",
+      "description": "Ariocarpus fissuratus to bardzo wolno rosnący kaktus z suchych rejonów Teksasu i północnego Meksyku. Wymaga mocnego światła oraz bardzo przepuszczalnego podłoża dla kaktusów, a podlewania dopiero po całkowitym wyschnięciu. Zimą powinien stać sucho i chłodniej, aby ograniczyć ryzyko gnicia."
     },
     "de": {
-      "common_name": "Lebender Felsenkaktus",
-      "description": "Ariocarpus fissuratus ist ein kleiner, dornenloser Kaktus aus den Kalkwüsten von Texas und Mexiko. Er wächst extrem langsam und benötigt volle Sonne sowie sehr durchlässiges Substrat. Zu viel Wasser führt schnell zu Fäulnis."
+      "common_name": "Lebender-Stein-Kaktus",
+      "description": "Ariocarpus fissuratus ist ein extrem langsam wachsender Kaktus aus trockenen Gebieten in Texas und Nordmexiko. Er braucht sehr viel Licht und ein stark mineralisches, gut drainierendes Kakteensubstrat; gegossen wird erst nach vollständigem Abtrocknen. Im Winter kühl und vollkommen trocken halten, um Fäulnis zu vermeiden."
     },
     "fr": {
-      "common_name": "Cactus roche vivante",
-      "description": "Ariocarpus fissuratus est un petit cactus sans épines originaire des déserts calcaires du Texas et du Mexique. Sa croissance est très lente et il exige beaucoup de soleil et un sol très drainant. Un excès d’arrosage est dangereux."
+      "common_name": "Cactus pierre vivante",
+      "description": "Ariocarpus fissuratus est un cactus à croissance très lente originaire des zones arides du Texas et du nord du Mexique. Donnez-lui une lumière forte et un substrat pour cactus très drainant, puis arrosez seulement lorsque le mélange est totalement sec. Un repos hivernal frais et sec aide à limiter le risque de pourriture."
     },
     "it": {
-      "common_name": "Cactus roccia viva",
-      "description": "Ariocarpus fissuratus è un piccolo cactus senza spine originario dei deserti calcarei del Texas e del Messico. Cresce molto lentamente e richiede pieno sole e terreno ben drenato. L’acqua in eccesso causa facilmente marciumi."
+      "common_name": "Cactus pietra vivente",
+      "description": "Ariocarpus fissuratus è un cactus a crescita molto lenta proveniente da aree aride del Texas e del nord del Messico. Necessita di luce intensa e di un substrato per cactus molto drenante, con annaffiature solo a completa asciugatura. In inverno va tenuto fresco e asciutto per ridurre il rischio di marciume."
     },
     "es": {
-      "common_name": "Cactus roca viva",
-      "description": "Ariocarpus fissuratus es un cactus pequeño y sin espinas de los desiertos calcáreos de Texas y México. Su crecimiento es extremadamente lento y necesita sol intenso y sustrato muy drenante. El riego excesivo es perjudicial."
+      "common_name": "Cactus piedra viva",
+      "description": "Ariocarpus fissuratus es un cactus de crecimiento muy lento originario de zonas áridas de Texas y del norte de México. Requiere mucha luz y un sustrato para cactus muy drenante; riega solo cuando esté completamente seco. En invierno conviene mantenerlo más fresco y seco para evitar pudriciones."
     },
     "pt": {
-      "common_name": "Cacto rocha viva",
-      "description": "Ariocarpus fissuratus é um pequeno cacto sem espinhos dos desertos calcários do Texas e do México. Cresce muito lentamente e necessita de sol pleno e solo bem drenado. O excesso de água causa apodrecimento."
+      "common_name": "Cacto pedra-viva",
+      "description": "Ariocarpus fissuratus é um cacto de crescimento muito lento, nativo de regiões áridas do Texas e do norte do México. Precisa de luz forte e de substrato para cactos bem drenante, regando apenas quando estiver totalmente seco. Um descanso de inverno mais fresco e seco ajuda a prevenir apodrecimento."
     },
     "ar": {
-      "common_name": "صبار الصخرة الحية",
-      "description": "Ariocarpus fissuratus صبار صغير عديم الأشواك موطنه صحاري الحجر الجيري في تكساس والمكسيك. نموه بطيء جدًا ويتطلب شمسًا قوية وتصريفًا ممتازًا. الري الزائد يسبب تعفن الجذور."
+      "common_name": "صبار الحجر الحي",
+      "description": "Ariocarpus fissuratus صبار بطيء النمو موطنه مناطق جافة في تكساس وشمال المكسيك. يحتاج إلى ضوء قوي وتربة صبار شديدة التصريف، مع الري فقط بعد جفاف التربة تمامًا. في الشتاء يُفضَّل إبقاؤه أبرد وجافًا لتقليل خطر التعفن."
     },
     "hi": {
       "common_name": "लिविंग रॉक कैक्टस",
-      "description": "Ariocarpus fissuratus एक छोटा, बिना कांटों वाला कैक्टस है जो टेक्सास और मेक्सिको के चूना-पत्थर वाले रेगिस्तानों का मूल निवासी है। इसकी वृद्धि बहुत धीमी होती है और इसे तेज धूप व अच्छी जल निकासी चाहिए। अधिक पानी नुकसानदायक है।"
+      "description": "Ariocarpus fissuratus बहुत धीमी गति से बढ़ने वाला कैक्टस है, जो टेक्सास और उत्तरी मेक्सिको के शुष्क क्षेत्रों से आता है। इसे तेज रोशनी और बहुत अच्छी जलनिकासी वाली कैक्टस मिट्टी दें, और पानी तभी दें जब मिट्टी पूरी तरह सूख जाए। सर्दियों में इसे ठंडा और सूखा रखना सड़न के जोखिम को कम करता है।"
     },
     "zh": {
-      "common_name": "裂岩牡丹",
-      "description": "Ariocarpus fissuratus 原产于美国德州和墨西哥的石灰岩沙漠，是一种无刺小型仙人掌。其生长极其缓慢，需要强光和极佳的排水条件。浇水过多容易腐烂。"
+      "common_name": "裂纹岩牡丹",
+      "description": "Ariocarpus fissuratus 生长极慢，原产于美国德州与墨西哥北部的干旱地区。需要强光与排水极佳的仙人掌土，浇水应在基质完全干透后再进行。冬季保持偏凉且干燥，有助于降低腐烂风险。"
     },
     "ja": {
-      "common_name": "裂岩牡丹",
-      "description": "Ariocarpus fissuratus はテキサス州やメキシコの石灰岩砂漠原産の小型で無刺のサボテンです。成長は非常に遅く、強い日光と優れた排水性が必要です。水の与えすぎは枯死の原因になります。"
+      "common_name": "リビングロック・カクタス",
+      "description": "Ariocarpus fissuratus はテキサス州からメキシコ北部の乾燥地に自生する、成長が非常に遅いサボテンです。強い光と水はけの良いサボテン用土を用い、用土が完全に乾いてから給水します。冬は涼しめで乾燥させ、腐敗を防ぎます。"
     },
     "ko": {
-      "common_name": "아리오카르푸스 피수라투스",
-      "description": "Ariocarpus fissuratus는 미국 텍사스와 멕시코의 석회암 사막이 원산인 작은 무가시 선인장입니다. 생장이 매우 느리며 강한 햇빛과 뛰어난 배수가 필요합니다. 과습은 치명적입니다."
+      "common_name": "리빙 록 선인장",
+      "description": "Ariocarpus fissuratus는 텍사스와 멕시코 북부의 건조 지역 원산인 매우 느리게 자라는 선인장입니다. 강한 빛과 배수가 뛰어난 선인장용 흙이 필요하며, 흙이 완전히 마른 뒤에만 물을 줍니다. 겨울에는 서늘하고 건조하게 유지하면 부패 위험을 줄일 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/ariocarpus-fissuratus",
-      "https://llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1156/Ariocarpus_fissuratus",
-      "https://www.cactusandsucculents.org.uk/cactus-and-succulent-care/"
+      "https://www.rhs.org.uk/plants/131610/ariocarpus-fissuratus/details",
+      "https://bcss.org.uk/cultivation-notes-on-ariocarpus/",
+      "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A19054-2",
+      "https://www.living-rocks.com/adult.htm",
+      "https://hscactus.org/resources/plants-of-the-month/ariocarpus-2/"
     ]
   }
 }

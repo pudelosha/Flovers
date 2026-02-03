@@ -1,25 +1,25 @@
 {
   "external_id": "impatiens_hawkeri",
-  "name": "New Guinea Impatiens",
+  "name": "Sunpatiens",
   "latin": "Impatiens hawkeri",
   "sun": "medium",
   "water": "high",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "impatiens_hawkeri.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche drainé",
-          "it": "Ricco drenante",
-          "es": "Rico drenado",
-          "pt": "Rico drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "肥沃で排水良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 잘되는 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stała wilgotność",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulier",
-          "it": "Sempre umido",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة منتظمة",
-          "hi": "नियमित नमी",
-          "zh": "保持湿润",
-          "ja": "均一に湿らす",
-          "ko": "항상 촉촉"
+          "en": "High water needs",
+          "pl": "Wysokie zapotrzebowanie na wodę",
+          "de": "Hoher Wasserbedarf",
+          "fr": "Besoins en eau élevés",
+          "it": "Alto fabbisogno d'acqua",
+          "es": "Altas necesidades de agua",
+          "pt": "Alta necessidade de água",
+          "ar": "احتياجات مائية عالية",
+          "hi": "उच्च जल आवश्यकताएँ",
+          "zh": "高水分需求",
+          "ja": "水分要求が高い",
+          "ko": "높은 물 필요"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia",
-          "de": "Durchschnittlich",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact bushy",
-          "pl": "Zwarta",
-          "de": "Kompakt",
-          "fr": "Compacte",
-          "it": "Compatta",
-          "es": "Compacta",
-          "pt": "Compacta",
-          "ar": "نمو كثيف",
-          "hi": "घना विकास",
-          "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "컴팩트"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter le trop d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避けて",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات متفرقة",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "New Guinea Impatiens",
-      "description": "Impatiens hawkeri is a flowering plant native to New Guinea. It is valued for its colorful blooms and glossy leaves. It grows well indoors with bright indirect light."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, commonly known as Sunpatiens, is a popular flowering plant. It is known for its vibrant blooms and ability to tolerate sunlight better than traditional impatiens."
     },
     "pl": {
-      "common_name": "Niecierpek nowogwinejski",
-      "description": "Impatiens hawkeri pochodzi z Nowej Gwinei. Ceniony jest za barwne kwiaty i błyszczące liście. Dobrze rośnie w jasnych wnętrzach."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, znany również jako Sunpatiens, to popularna roślina kwitnąca. Jest znana ze swoich żywych kwiatów i zdolności do lepszego tolerowania światła słonecznego niż tradycyjne impatiens."
     },
     "de": {
-      "common_name": "Neuguinea-Fleißiges Lieschen",
-      "description": "Impatiens hawkeri stammt aus Neuguinea. Die Pflanze hat auffällige Blüten und glänzende Blätter. Sie eignet sich gut für helle Innenräume."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, auch bekannt als Sunpatiens, ist eine beliebte blühende Pflanze. Sie ist für ihre lebhaften Blüten und ihre Fähigkeit bekannt, mehr Sonnenlicht zu tolerieren als traditionelle Impatiens."
     },
     "fr": {
-      "common_name": "Impatiens de Nouvelle-Guinée",
-      "description": "Impatiens hawkeri est originaire de Nouvelle-Guinée. Il est apprécié pour ses fleurs colorées. Il pousse bien en intérieur lumineux."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, également connu sous le nom de Sunpatiens, est une plante à fleurs populaire. Elle est connue pour ses fleurs vibrantes et sa capacité à tolérer la lumière du soleil mieux que les impatiens traditionnels."
     },
     "it": {
-      "common_name": "Impatiens della Nuova Guinea",
-      "description": "Impatiens hawkeri proviene dalla Nuova Guinea. È apprezzata per i suoi fiori vivaci. Si adatta bene agli ambienti interni luminosi."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, conosciuto anche come Sunpatiens, è una pianta fiorita popolare. È nota per i suoi fiori vivaci e la capacità di tollerare meglio la luce solare rispetto agli impazienti tradizionali."
     },
     "es": {
-      "common_name": "Impatiens de Nueva Guinea",
-      "description": "Impatiens hawkeri es originaria de Nueva Guinea. Destaca por sus flores coloridas. Crece bien en interiores luminosos."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, también conocido como Sunpatiens, es una planta con flores popular. Es conocida por sus flores vibrantes y su capacidad para tolerar mejor la luz solar que las impatiens tradicionales."
     },
     "pt": {
-      "common_name": "Impatiens-da-Nova-Guiné",
-      "description": "Impatiens hawkeri é nativa da Nova Guiné. É valorizada pelas flores vistosas. Desenvolve-se bem em interiores claros."
+      "common_name": "Sunpatiens",
+      "description": "Impatiens hawkeri, também conhecida como Sunpatiens, é uma planta florida popular. É conhecida por suas flores vibrantes e sua capacidade de tolerar melhor a luz solar do que as impatiens tradicionais."
     },
     "ar": {
-      "common_name": "إمباتينس غينيا الجديدة",
-      "description": "نبات Impatiens hawkeri موطنه غينيا الجديدة. يتميز بأزهاره الملونة. مناسب للزراعة داخل المنزل."
+      "common_name": "سانباتيينس",
+      "description": "إمباتينز هوكرى، المعروف أيضًا باسم سانباتيينس، هو نبات مزهر شائع. يشتهر بأزهاره النابضة بالحياة وقدرته على تحمل أشعة الشمس بشكل أفضل من النباتات التقليدية."
     },
     "hi": {
-      "common_name": "न्यू गिनी इम्पेशंस",
-      "description": "Impatiens hawkeri न्यू गिनी का पौधा है। इसके फूल रंगीन होते हैं। यह घर के अंदर अच्छी तरह बढ़ता है।"
+      "common_name": "सनपाटिएन्स",
+      "description": "इम्पेशन्स हॉकरी, जिसे सनपाटिएन्स भी कहा जाता है, एक लोकप्रिय फूलों वाला पौधा है। यह अपनी जीवंत फूलों और पारंपरिक इम्पेशन्स से बेहतर सूर्यप्रकाश सहन करने की क्षमता के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "新几内亚凤仙花",
-      "description": "Impatiens hawkeri 原产于新几内亚。以鲜艳花朵著称。适合明亮的室内环境。"
+      "common_name": "阳光凤仙花",
+      "description": "Impatiens hawkeri，通常称为阳光凤仙花，是一种受欢迎的开花植物。它以其鲜艳的花朵和比传统凤仙花更能耐受阳光而闻名。"
     },
     "ja": {
-      "common_name": "ニューギニアインパチェンス",
-      "description": "Impatiens hawkeri はニューギニア原産です。鮮やかな花が特徴です。明るい室内で育ちます。"
+      "common_name": "サンプチエンス",
+      "description": "Impatiens hawkeri、通称サンプチエンスは、人気のある開花植物です。伝統的なインパチェンスよりも日光に耐える能力と鮮やかな花で知られています。"
     },
     "ko": {
-      "common_name": "뉴기니아 임파첸스",
-      "description": "Impatiens hawkeri는 뉴기니아 원산입니다. 화려한 꽃이 특징입니다. 실내 재배에 적합합니다."
+      "common_name": "선페이션스",
+      "description": "임페이션스 호커리, 일반적으로 선페이션스라고 불리는 이 식물은 인기 있는 꽃 식물입니다. 전통적인 임페이션스보다 더 많은 햇빛을 견딜 수 있는 능력과 생동감 있는 꽃으로 잘 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/impatiens-hawkeri",
-      "https://extension.wisc.edu/articles/new-guinea-impatiens/"
+      "https://www.rhs.org.uk/advice/profile?pid=107",
+      "https://www.gardeningknowhow.com/ornamental/flowers/impatiens/sunpatiens-plant-care.htm"
     ]
   }
 }

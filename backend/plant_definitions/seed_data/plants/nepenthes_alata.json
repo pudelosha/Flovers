@@ -1,24 +1,25 @@
 {
   "external_id": "nepenthes_alata",
-  "name": "Nepenthes Alata",
+  "name": "Nepenthes alata",
   "latin": "Nepenthes alata",
   "sun": "medium",
   "water": "high",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "acidic"
+    "peat-free",
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 4,
+  "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 2,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "nepenthes_alata.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic airy mix",
-          "pl": "Kwaśne lekkie",
-          "de": "Saures Substrat",
-          "fr": "Substrat acide",
-          "it": "Substrato acido",
-          "es": "Sustrato ácido",
-          "pt": "Substrato ácido",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性透气土",
-          "ja": "酸性用土",
-          "ko": "산성 배합토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczający",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,17 +68,17 @@
       "value": {
         "text": {
           "en": "Keep moist",
-          "pl": "Stale wilgotne",
+          "pl": "Trzymać wilgotne",
           "de": "Feucht halten",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطبة دائماً",
-          "hi": "नम रखें",
+          "fr": "Garder humide",
+          "it": "Mantenere umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "ابق رطبًا",
+          "hi": "गीला रखें",
           "zh": "保持湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 촉촉"
+          "ja": "湿らせておく",
+          "ko": "습기를 유지"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "25-30°C",
+          "pl": "25-30°C",
+          "de": "25-30°C",
+          "fr": "25-30°C",
+          "it": "25-30°C",
+          "es": "25-30°C",
+          "pt": "25-30°C",
+          "ar": "25-30°C",
+          "hi": "25-30°C",
+          "zh": "25-30°C",
+          "ja": "25-30°C",
+          "ko": "25-30°C"
         }
       }
     },
@@ -124,14 +125,14 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Luftf.",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to medium",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम",
+          "zh": "慢到适中",
+          "ja": "遅いから中程度",
+          "ko": "느린에서 보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرोवाटिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Tropical Pitcher Plant",
-      "description": "Nepenthes alata is a tropical carnivorous plant native to the Philippines. It grows climbing stems with hanging pitchers that trap insects. It requires high humidity, pure water, and bright indirect light indoors."
+      "common_name": "Winged Pitcher Plant",
+      "description": "Nepenthes alata is a species of tropical pitcher plant native to Southeast Asia. It is known for its striking pitcher-shaped leaves that trap and digest insects."
     },
     "pl": {
-      "common_name": "Dzbanecznik",
-      "description": "Nepenthes alata to tropikalna roślina owadożerna z Filipin. Wytwarza dzbanki chwytające owady na pnących pędach. Wymaga wysokiej wilgotności i jasnego, rozproszonego światła."
+      "common_name": "Roczna dzbaneczna roślina",
+      "description": "Nepenthes alata to gatunek rośliny tropikalnej z Azji Południowo-Wschodniej. Jest znany ze swojego uderzającego kształtu dzbaneczków, które łapią i trawią owady."
     },
     "de": {
-      "common_name": "Kannenpflanze",
-      "description": "Nepenthes alata ist eine tropische fleischfressende Pflanze aus den Philippinen. Sie bildet hängende Kannen zum Insektenfang. Sie benötigt hohe Luftfeuchtigkeit und helles, indirektes Licht."
+      "common_name": "Geflügelte Kannenpflanze",
+      "description": "Nepenthes alata ist eine tropische Kannenpflanze aus Südostasien. Sie ist bekannt für ihre auffälligen Kannenblätter, die Insekten fangen und verdauen."
     },
     "fr": {
-      "common_name": "Plante carnivore",
-      "description": "Nepenthes alata est une plante carnivore tropicale originaire des Philippines. Elle produit des urnes suspendues pour piéger les insectes. Elle demande une forte humidité et une lumière indirecte."
+      "common_name": "Plante à pichet ailé",
+      "description": "Nepenthes alata est une espèce de plante carnivore originaire d'Asie du Sud-Est. Elle est connue pour ses feuilles en forme de pichet qui piègent et digèrent les insectes."
     },
     "it": {
-      "common_name": "Pianta carnivora",
-      "description": "Nepenthes alata è una pianta carnivora tropicale delle Filippine. Produce ascidi pendenti che catturano insetti. Necessita di elevata umidità e luce indiretta."
+      "common_name": "Pianta a brocca alata",
+      "description": "Nepenthes alata è una specie di pianta carnivora tropicale originaria del Sud-est asiatico. È conosciuta per le sue foglie a forma di brocca che catturano e digeriscono gli insetti."
     },
     "es": {
-      "common_name": "Planta jarra",
-      "description": "Nepenthes alata es una planta carnívora tropical de Filipinas. Desarrolla jarras colgantes para atrapar insectos. Requiere alta humedad y luz indirecta brillante."
+      "common_name": "Planta carnívora alada",
+      "description": "Nepenthes alata es una especie de planta carnívora originaria del sudeste asiático. Es conocida por sus hojas en forma de jarra que atrapan y digieren insectos."
     },
     "pt": {
-      "common_name": "Planta jarro",
-      "description": "Nepenthes alata é uma planta carnívora tropical das Filipinas. Produz jarros pendentes que capturam insetos. Precisa de alta umidade e luz indireta."
+      "common_name": "Planta carnívora alada",
+      "description": "Nepenthes alata é uma espécie de planta carnívora tropical originária do Sudeste Asiático. É conhecida por suas folhas em forma de jarra que capturam e digerem insetos."
     },
     "ar": {
-      "common_name": "نبات إبريق",
-      "description": "نيبنتس ألاتا نبات لاحم استوائي موطنه الفلبين. ينتج أباريق معلقة لاصطياد الحشرات. يحتاج إلى رطوبة عالية وضوء غير مباشر."
+      "common_name": "نبات الجرة الجناحية",
+      "description": "نبتة نيبينثيس ألاتا هي نوع من النباتات الآكلة للحوم من جنوب شرق آسيا. تعرف بأوراقها ذات الشكل الجرة التي تلتقط وت diger الحشرات."
     },
     "hi": {
-      "common_name": "घड़ा पौधा",
-      "description": "नेपेंथेस एलाटा फिलीपींस का उष्णकटिबंधीय मांसाहारी पौधा है। यह कीट पकड़ने वाले लटकते घड़े बनाता है। इसे अधिक नमी और अप्रत्यक्ष रोशनी की आवश्यकता होती है।"
+      "common_name": "पंखदार पिचर पौधा",
+      "description": "नेपेंथेस अलाटा दक्षिण-पूर्व एशिया का एक उष्णकटिबंधीय पिचर पौधा है। यह अपने शानदार पिचर-आकार के पत्तों के लिए जाना जाता है, जो कीड़ों को पकड़ते और पचाते हैं।"
     },
     "zh": {
-      "common_name": "猪笼草",
-      "description": "Nepenthes alata 是原产菲律宾的热带食虫植物。它生长出悬挂的捕虫囊。室内栽培需要高湿度和明亮散射光。"
+      "common_name": "翼形瓶子植物",
+      "description": "Nepenthes alata 是一种来自东南亚的热带捕虫植物。它以其引人注目的瓶状叶子著称，这些叶子能够捕捉并消化昆虫。"
     },
     "ja": {
-      "common_name": "ウツボカズラ",
-      "description": "ネペンテス・アラタはフィリピン原産の熱帯食虫植物です。昆虫を捕らえる袋状の捕虫器を形成します。高湿度と明るい間接光を必要とします。"
+      "common_name": "翼のあるピッチャープラント",
+      "description": "Nepenthes alata は、東南アジアに自生する熱帯の捕虫植物です。昆虫を捕え、消化する特徴的なピッチャー形の葉で知られています。"
     },
     "ko": {
-      "common_name": "네펜데스",
-      "description": "Nepenthes alata는 필리핀 원산의 열대 식충식물입니다. 곤충을 포획하는 주머니를 형성합니다. 높은 습도와 밝은 간접광이 필요합니다."
+      "common_name": "날개 달린 피쳐 식물",
+      "description": "Nepenthes alata는 동남아시아 원산지의 열대식물입니다. 곤충을 잡아 소화하는 피쳐 형태의 잎으로 잘 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rbg.ca/plant/nepenthes-alata/",
-      "https://www.carnivorousplants.org/grow/guides/Nepenthes",
-      "https://extension.umn.edu/houseplants/pitcher-plants"
+      "https://www.botanicus.org/nepenthes-alata",
+      "https://www.rhs.org.uk/plant-details/nepenthes-alata"
     ]
   }
 }

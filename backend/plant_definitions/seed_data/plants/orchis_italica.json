@@ -1,21 +1,21 @@
 {
   "external_id": "orchis_italica",
-  "name": "Italian Man Orchid",
+  "name": "Naked Man Orchid",
   "latin": "Orchis italica",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "orchid",
-          "pl": "orchidowy",
-          "de": "Orchideen",
-          "fr": "orchidée",
-          "it": "orchidea",
-          "es": "orquídea",
-          "pt": "orquídea",
-          "ar": "أوركيد",
-          "hi": "ऑर्किड",
-          "zh": "兰花",
-          "ja": "蘭",
-          "ko": "난초"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी नाली वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良く排水された土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Water regularly",
+          "pl": "Podlewać regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित पानी दें",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter un excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Italian Man Orchid",
-      "description": "Orchis italica, commonly known as the Italian Man Orchid, is a species of orchid native to the Mediterranean region. It is known for its unique, human-shaped flowers."
+      "common_name": "Naked Man Orchid",
+      "description": "Orchis italica is a striking orchid species known for its unique flower shape. It is native to the Mediterranean region and thrives in well-draining soils."
     },
     "pl": {
-      "common_name": "Włoskie orchidee mężczyzny",
-      "description": "Orchis italica, znana również jako włoska orchidea mężczyzny, to gatunek orchidei występujący w regionie Morza Śródziemnego. Charakteryzuje się unikalnymi, ludzkimi kwiatami."
+      "common_name": "Orkidea Nagi Mężczyzny",
+      "description": "Orchis italica to uderzający gatunek orchidei znany ze swojego unikalnego kształtu kwiatów. Pochodzi z regionu Morza Śródziemnego i rośnie w glebach dobrze przepuszczających wodę."
     },
     "de": {
-      "common_name": "Italienische Mannorchidee",
-      "description": "Orchis italica, auch bekannt als die italienische Mannorchidee, ist eine Orchideenart aus dem Mittelmeerraum. Sie ist bekannt für ihre einzigartigen, menschenähnlichen Blüten."
+      "common_name": "Nackter Mann Orchidee",
+      "description": "Orchis italica ist eine auffällige Orchideenart, die für ihre einzigartige Blütenform bekannt ist. Sie stammt aus dem Mittelmeerraum und gedeiht in gut durchlässigen Böden."
     },
     "fr": {
-      "common_name": "Orchidée Homme d'Italie",
-      "description": "Orchis italica, communément appelée Orchidée Homme d'Italie, est une espèce d'orchidée originaire de la région méditerranéenne. Elle est connue pour ses fleurs uniques en forme humaine."
+      "common_name": "Orchidée Homme Nu",
+      "description": "Orchis italica est une espèce d'orchidée frappante, connue pour sa forme unique de fleur. Elle est originaire de la région méditerranéenne et pousse dans des sols bien drainés."
     },
     "it": {
-      "common_name": "Orchidea Uomo Italiana",
-      "description": "Orchis italica, conosciuta come Orchidea Uomo Italiana, è una specie di orchidea originaria della regione mediterranea. È famosa per i suoi fiori unici a forma di uomo."
+      "common_name": "Orchidea Uomo Nudo",
+      "description": "Orchis italica è una specie di orchidea straordinaria, nota per la sua forma unica del fiore. È originaria della regione mediterranea e cresce in terreni ben drenati."
     },
     "es": {
-      "common_name": "Orquídea Hombre Italiana",
-      "description": "Orchis italica, conocida como la Orquídea Hombre Italiana, es una especie de orquídea originaria de la región mediterránea. Es famosa por sus flores únicas con forma humana."
+      "common_name": "Orquídea Hombre Desnudo",
+      "description": "Orchis italica es una especie de orquídea llamativa, conocida por su forma única de flor. Es originaria de la región mediterránea y crece en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Orquídea Homem Italiana",
-      "description": "Orchis italica, conhecida como Orquídea Homem Italiana, é uma espécie de orquídea originária da região mediterrânica. É conhecida pelas suas flores únicas com forma humana."
+      "common_name": "Orquídea Homem Nu",
+      "description": "Orchis italica é uma espécie de orquídea impressionante, conhecida por sua forma única de flor. É nativa da região mediterrânea e cresce em solos bem drenados."
     },
     "ar": {
-      "common_name": "زهرة الرجل الإيطالي",
-      "description": "Orchis italica، المعروفة باسم زهرة الرجل الإيطالي، هي نوع من الأوركيد ينتمي إلى منطقة البحر الأبيض المتوسط. تشتهر بأزهارها الفريدة ذات الشكل البشري."
+      "common_name": "أوركيد الرجل العاري",
+      "description": "أوركيدا إيطاليكا هي نوع من الأوركيديات الملفتة للنظر والمعروفة بشكل زهرتها الفريد. هي موطنها منطقة البحر الأبيض المتوسط وتنمو في التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "इतालवी मानव ऑर्किड",
-      "description": "Orchis italica, जिसे इतालवी मानव ऑर्किड के नाम से जाना जाता है, भूमध्यसागरीय क्षेत्र का एक ऑर्किड है। यह अपनी अद्वितीय, मानव-आकृति वाली कलियों के लिए प्रसिद्ध है।"
+      "common_name": "नग्न आदमी ऑर्किड",
+      "description": "ऑर्किस इटालिका एक अद्वितीय ऑर्किड प्रजाति है, जो अपनी अनोखी फूलों की आकृति के लिए जानी जाती है। यह भूमध्यसागरीय क्षेत्र का मूल निवासी है और अच्छी जल निकासी वाली मिट्टी में बढ़ती है।"
     },
     "zh": {
-      "common_name": "意大利人形兰",
-      "description": "Orchis italica，常称为意大利人形兰，是一种原产于地中海地区的兰花。以其独特的人形花朵而闻名。"
+      "common_name": "裸体人兰",
+      "description": "Orchis italica 是一种引人注目的兰花物种，以其独特的花形闻名。它原产于地中海地区，生长在排水良好的土壤中。"
     },
     "ja": {
-      "common_name": "イタリアン・マン・オーキッド",
-      "description": "Orchis italica、通称イタリアン・マン・オーキッドは、地中海地域に自生するラン科の一種です。人間の形をした花で知られています。"
+      "common_name": "裸の男のラン",
+      "description": "Orchis italicaは、独特な花の形で知られる印象的なラン科の植物です。地中海地域に自生し、排水性の良い土壌で育ちます。"
     },
     "ko": {
-      "common_name": "이탈리안 맨 오키드",
-      "description": "Orchis italica, 이탈리안 맨 오키드는 지중해 지역에 자생하는 난초입니다. 인간 형상을 한 꽃으로 유명합니다."
+      "common_name": "벌거벗은 남자 난초",
+      "description": "Orchis italica는 독특한 꽃 모양으로 유명한 인상적인 난초 종입니다. 지중해 지역이 원산지이며 배수가 좋은 토양에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/orchis-italica",
-      "https://www.horticulture.com/orchid-care"
+      "https://www.rhs.org.uk/Plants/92006/Orchis-italica/Details",
+      "https://www.gardenia.net/plant/orchis-italica"
     ]
   }
 }

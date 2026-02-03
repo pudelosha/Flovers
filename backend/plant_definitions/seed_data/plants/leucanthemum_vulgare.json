@@ -7,20 +7,21 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "leucanthemum_vulgare.jpg",
   "image_thumb": "leucanthemum_vulgare.jpg",
   "traits": [
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "de": "Vollsonne",
+          "fr": "En plein soleil",
+          "it": "Sole diretto",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日向",
-          "ko": "양지"
+          "hi": "पूर्ण सूर्य",
+          "zh": "充足阳光",
+          "ja": "日光",
+          "ko": "햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Gleba przepuszczalna",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Suolo drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate water",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Regular water",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Regar regularmente",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,17 +87,17 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
+          "pl": "Łatwy",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "简单",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to temperate",
-          "pl": "Chłodna umiarkowana",
-          "de": "Kühl gemäßigt",
-          "fr": "Tempéré frais",
-          "it": "Temperato fresco",
-          "es": "Templado fresco",
-          "pt": "Temperado fresco",
-          "ar": "معتدل بارد",
-          "hi": "शीतोष्ण",
-          "zh": "凉爽温带",
-          "ja": "冷涼",
-          "ko": "서늘한 온대"
+          "en": "10-24°C",
+          "pl": "10-24°C",
+          "de": "10-24°C",
+          "fr": "10-24°C",
+          "it": "10-24°C",
+          "es": "10-24°C",
+          "pt": "10-24°C",
+          "ar": "10-24°C",
+          "hi": "10-24°C",
+          "zh": "10-24°C",
+          "ja": "10-24°C",
+          "ko": "10-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Horstige Staude",
-          "fr": "Vivace en touffe",
-          "it": "Perenne cespitosa",
-          "es": "Perenne en mata",
-          "pt": "Perene em touceira",
-          "ar": "معمرة متكتلة",
-          "hi": "गुच्छेदार बारहमासी",
-          "zh": "丛生多年生",
-          "ja": "叢生多年草",
-          "ko": "군생 다년생"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "De crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速成型",
+          "ko": "빠르게 성장하는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過水を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Oxeye Daisy",
-      "description": "Leucanthemum vulgare is a hardy perennial daisy native to Europe. It grows in meadows and grasslands and produces white flowers with yellow centers in summer."
+      "description": "Leucanthemum vulgare, also known as the Oxeye Daisy, is a hardy perennial that thrives in full sun. It is native to Europe and commonly found in wild meadows."
     },
     "pl": {
-      "common_name": "Złocień właściwy",
-      "description": "Leucanthemum vulgare to wytrzymała bylina pochodząca z Europy. Rośnie na łąkach i pastwiskach, kwitnąc latem białymi kwiatami."
+      "common_name": "Stokrotka zwyczajna",
+      "description": "Leucanthemum vulgare, znana również jako stokrotka zwyczajna, to odporna roślina wieloletnia, która rośnie najlepiej w pełnym słońcu. Jest rodzima dla Europy i występuje w dzikich łąkach."
     },
     "de": {
-      "common_name": "Margerite",
-      "description": "Leucanthemum vulgare ist eine robuste Staude aus Europa. Sie wächst auf Wiesen und bildet im Sommer weiße Blüten."
+      "common_name": "Ackergänseblümchen",
+      "description": "Leucanthemum vulgare, auch Ackergänseblümchen genannt, ist eine robuste Staude, die in voller Sonne gedeiht. Sie stammt aus Europa und kommt häufig in Wildwiesen vor."
     },
     "fr": {
       "common_name": "Marguerite commune",
-      "description": "Leucanthemum vulgare est une vivace rustique originaire d’Europe. Elle pousse dans les prairies et fleurit en été."
+      "description": "Leucanthemum vulgare, également appelée marguerite commune, est une plante vivace robuste qui pousse bien au soleil. Elle est originaire d'Europe et se trouve souvent dans les prairies sauvages."
     },
     "it": {
       "common_name": "Margherita comune",
-      "description": "Leucanthemum vulgare è una perenne rustica europea. Cresce in prati e fiorisce in estate con fiori bianchi."
+      "description": "Leucanthemum vulgare, conosciuta anche come margherita comune, è una pianta perenne resistente che cresce bene al sole. È originaria dell'Europa e si trova frequentemente nei prati selvatici."
     },
     "es": {
       "common_name": "Margarita común",
-      "description": "Leucanthemum vulgare es una planta perenne resistente de Europa. Habita praderas y florece en verano."
+      "description": "Leucanthemum vulgare, también conocida como margarita común, es una planta perenne resistente que crece bien al sol. Es originaria de Europa y se encuentra comúnmente en praderas silvestres."
     },
     "pt": {
-      "common_name": "Margarida-dos-prados",
-      "description": "Leucanthemum vulgare é uma planta perene resistente da Europa. Cresce em prados e floresce no verão."
+      "common_name": "Margarida comum",
+      "description": "Leucanthemum vulgare, também conhecida como margarida comum, é uma planta perene resistente que cresce bem ao sol. É originária da Europa e é comumente encontrada em prados selvagens."
     },
     "ar": {
-      "common_name": "الأقحوان البري",
-      "description": "Leucanthemum vulgare نبات معمر قوي موطنه أوروبا. ينمو في المروج ويزهر صيفًا بأزهار بيضاء."
+      "common_name": "بابونج العين الكبرى",
+      "description": "Leucanthemum vulgare, والمعروفة أيضًا باسم بابونج العين الكبرى، هي نبات معمر قوي ينمو جيدًا في الشمس الكاملة. وهو موطنه أوروبا وغالبًا ما يوجد في المروج البرية."
     },
     "hi": {
-      "common_name": "जंगली डेज़ी",
-      "description": "Leucanthemum vulgare यूरोप की एक मजबूत बारहमासी पौधा है। यह घास के मैदानों में उगता है और गर्मियों में फूल देता है।"
+      "common_name": "ऑक्सआई डेज़ी",
+      "description": "Leucanthemum vulgare, जिसे ऑक्सआई डेज़ी के नाम से भी जाना जाता है, एक कठोर स्थायी पौधा है जो पूरी धूप में बढ़ता है। यह यूरोप का मूल निवासी है और जंगली घास के मैदानों में सामान्य रूप से पाया जाता है।"
     },
     "zh": {
-      "common_name": "牛眼菊",
-      "description": "Leucanthemum vulgare 是原产欧洲的多年生植物。常见于草地，夏季开白色花。"
+      "common_name": "大眼雏菊",
+      "description": "Leucanthemum vulgare，也叫大眼雏菊，是一种耐寒的多年生植物，喜欢充足的阳光。它原产于欧洲，通常可以在野生草地中找到。"
     },
     "ja": {
-      "common_name": "フランスギク",
-      "description": "Leucanthemum vulgare はヨーロッパ原産の多年草です。草原に生え、夏に白い花を咲かせます。"
+      "common_name": "オックスアイデイジー",
+      "description": "Leucanthemum vulgare、別名オックスアイデイジーは、日光が十分な場所でよく育つ丈夫な多年草です。ヨーロッパ原産で、野生の草地に生息しています。"
     },
     "ko": {
-      "common_name": "불란서국화",
-      "description": "Leucanthemum vulgare는 유럽 원산의 다년생 식물입니다. 초원에서 자라며 여름에 흰 꽃을 피웁니다."
+      "common_name": "옥아이 데이지",
+      "description": "Leucanthemum vulgare, 또는 옥아이 데이지는 햇볕이 잘 드는 곳에서 잘 자라는 강한 다년생 식물입니다. 유럽 원산으로, 야생 풀밭에서 자주 발견됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:201104-1",
-      "https://www.rhs.org.uk/plants/10628/leucanthemum-vulgare/details",
-      "https://plants.usda.gov/home/plantProfile?symbol=LEVU"
+      "https://www.rhs.org.uk/advice/profile?pid=489",
+      "https://www.gardenia.net/plant/Leucanthemum-vulgare"
     ]
   }
 }

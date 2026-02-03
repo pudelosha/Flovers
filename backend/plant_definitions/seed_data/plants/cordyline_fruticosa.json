@@ -11,17 +11,17 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "peat-free",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 10,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 1,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 30,
   "image_hero": "cordyline_fruticosa.jpg",
   "image_thumb": "cordyline_fruticosa.jpg",
   "traits": [
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "en": "Bright filtered",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, gefiltert",
+          "fr": "Lumière filtrée",
+          "it": "Luce filtrata",
+          "es": "Luz filtrada",
+          "pt": "Luz filtrada",
+          "ar": "ضوء ساطع مفلتر",
+          "hi": "तेज, परोक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining soil",
-          "pl": "Przepuszczalna",
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne",
           "de": "Gut drainierend",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil moist",
-          "pl": "Gleba wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "मिट्टी नम",
-          "zh": "保持湿润",
-          "ja": "土を湿らす",
-          "ko": "흙 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Maessig giessen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度に水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -91,13 +91,13 @@
           "de": "Mittlere Pflege",
           "fr": "Entretien moyen",
           "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
+          "es": "Cuidados medios",
+          "pt": "Cuidados médios",
           "ar": "عناية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "养护中等",
+          "ja": "手入れ普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "Warm 18–29°C",
+          "pl": "Ciepło 18–29°C",
+          "de": "Warm 18–29°C",
+          "fr": "Chaud 18–29°C",
+          "it": "Caldo 18–29°C",
+          "es": "Cálido 18–29°C",
+          "pt": "Quente 18–29°C",
+          "ar": "دافئ 18–29°م",
+          "hi": "गरम 18–29°C",
+          "zh": "温暖 18–29°C",
+          "ja": "18–29°C推奨",
+          "ko": "따뜻 18–29°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
           "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة مرتفعة",
+          "hi": "अधिक नमी",
+          "zh": "较高湿度",
+          "ja": "高めの湿度",
+          "ko": "습도 높게"
         }
       }
     },
@@ -145,15 +145,15 @@
         "text": {
           "en": "Toxic to pets",
           "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
+          "de": "Giftig fuer Tiere",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
+          "it": "Tossica per animali",
           "es": "Tóxica mascotas",
-          "pt": "Tóxica animais",
+          "pt": "Tóxica p/ animais",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषैली",
+          "hi": "पालतू हेतु विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
+          "ja": "ペットに有毒",
           "ko": "반려동물 유독"
         }
       }
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright shrub",
-          "pl": "Wzniesiony krzew",
-          "de": "Aufrechter Wuchs",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधी वृद्धि",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립 성장"
+          "en": "Upright, clumping",
+          "pl": "Wzniesiona, kępiasta",
+          "de": "Aufrecht, buschig",
+          "fr": "Dressée, touffue",
+          "it": "Eretta, cespitosa",
+          "es": "Erguida, en mata",
+          "pt": "Ereta, em touceira",
+          "ar": "قائمة ومتكتلة",
+          "hi": "सीधी, गुच्छेदार",
+          "zh": "直立丛生",
+          "ja": "直立・株立ち",
+          "ko": "직립, 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunaesse",
+          "fr": "Éviter l’excès d’eau",
+          "it": "No ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التغريق",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Przędziorki, wełnowce",
+          "de": "Spinnmilben, Wolllaese",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ وبقّ دقيقي",
+          "hi": "माइट्स, मिलीबग्स",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ、カイガラムシ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
@@ -181,58 +219,59 @@
   "translations": {
     "en": {
       "common_name": "Ti plant",
-      "description": "Cordyline fruticosa is a tropical foliage plant native to Southeast Asia and the Pacific. It is valued for its colorful, lance-shaped leaves. Indoors it prefers bright indirect light and consistently moist soil."
+      "description": "Cordyline fruticosa is a tropical foliage plant grown indoors for its colorful, strap-like leaves. Give it bright filtered light and water when the top of the mix dries slightly. It prefers warmth and higher humidity, and it is toxic to cats and dogs."
     },
     "pl": {
       "common_name": "Kordylina krzewiasta",
-      "description": "Cordyline fruticosa to tropikalna roślina liściasta pochodząca z Azji Południowo-Wschodniej. Ceniona jest za barwne liście. W domu wymaga jasnego światła i wilgotnej gleby."
+      "description": "Cordyline fruticosa to tropikalna roślina liściasta ceniona za barwne, wąskie liście. Zapewnij jasne, rozproszone światło i podlewaj, gdy wierzch podłoża lekko przeschnie. Lubi ciepło i wyższą wilgotność; jest toksyczna dla kotów i psów."
     },
     "de": {
-      "common_name": "Keulenlilie",
-      "description": "Cordyline fruticosa ist eine tropische Blattpflanze aus Südostasien. Sie wird wegen ihrer farbigen Blätter geschätzt. Als Zimmerpflanze benötigt sie helles, indirektes Licht."
+      "common_name": "Ti-Pflanze",
+      "description": "Cordyline fruticosa ist eine tropische Blattpflanze mit auffälligen, riemenförmigen Blättern. Sie wächst am besten bei hellem, gefiltertem Licht und wird gegossen, wenn die oberste Erdschicht leicht antrocknet. Sie mag Wärme und höhere Luftfeuchte und ist für Katzen und Hunde giftig."
     },
     "fr": {
       "common_name": "Plante Ti",
-      "description": "Cordyline fruticosa est une plante tropicale originaire d’Asie du Sud-Est. Elle est appréciée pour son feuillage coloré. Elle préfère une lumière vive indirecte et un sol humide."
+      "description": "Cordyline fruticosa est une plante tropicale cultivée pour son feuillage coloré. Placez-la en lumière vive filtrée et arrosez lorsque le dessus du substrat sèche légèrement. Elle apprécie la chaleur et une humidité plus élevée, et elle est toxique pour les chats et les chiens."
     },
     "it": {
-      "common_name": "Cordiline",
-      "description": "La Cordyline fruticosa è una pianta tropicale dell’Asia sudorientale. È coltivata per le sue foglie decorative. In casa richiede luce indiretta e terreno umido."
+      "common_name": "Cordiline (pianta Ti)",
+      "description": "Cordyline fruticosa è una pianta tropicale da interno apprezzata per le foglie lunghe e colorate. Fornisci luce intensa ma filtrata e annaffia quando lo strato superiore del terriccio asciuga leggermente. Preferisce caldo e umidità più alta ed è tossica per cani e gatti."
     },
     "es": {
-      "common_name": "Planta ti",
-      "description": "Cordyline fruticosa es una planta tropical originaria del sudeste asiático. Destaca por su follaje colorido. En interior necesita luz indirecta y riego regular."
+      "common_name": "Planta Ti",
+      "description": "Cordyline fruticosa es una planta tropical de interior valorada por sus hojas alargadas y coloridas. Dale luz brillante filtrada y riega cuando la capa superior del sustrato se seque un poco. Prefiere calor y mayor humedad, y es tóxica para gatos y perros."
     },
     "pt": {
-      "common_name": "Planta-ti",
-      "description": "Cordyline fruticosa é uma planta tropical do Sudeste Asiático. É valorizada pelas folhas coloridas. Prefere luz indireta e solo levemente úmido."
+      "common_name": "Planta Ti",
+      "description": "Cordyline fruticosa é uma planta tropical cultivada em interiores pela folhagem colorida. Prefere luz forte filtrada e regas quando a superfície do substrato seca levemente. Gosta de calor e umidade mais alta e é tóxica para cães e gatos."
     },
     "ar": {
       "common_name": "نبات التي",
-      "description": "نبات Cordyline fruticosa استوائي موطنه جنوب شرق آسيا. يتميز بأوراقه الملونة. يفضل الضوء غير المباشر والتربة الرطبة."
+      "description": "Cordyline fruticosa نبات استوائي يزرع داخل المنزل لأوراقه الطويلة والملونة. يحتاج إلى ضوء ساطع مفلتر وريّ عند جفاف الطبقة العلوية قليلًا. يفضل الدفء ورطوبة أعلى وهو سام للقطط والكلاب."
     },
     "hi": {
-      "common_name": "टी पौधा",
-      "description": "Cordyline fruticosa एक उष्णकटिबंधीय पौधा है जो दक्षिण पूर्व एशिया से आता है। इसकी पत्तियाँ रंगीन होती हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है।"
+      "common_name": "टी प्लांट",
+      "description": "Cordyline fruticosa एक उष्णकटिबंधीय पर्णीय पौधा है जिसे रंगीन, लंबी पत्तियों के लिए उगाया जाता है। इसे तेज परोक्ष/छनी हुई रोशनी दें और मिट्टी की ऊपरी परत हल्की सूखने पर पानी दें। इसे गर्मी और अधिक नमी पसंद है, और यह बिल्लियों व कुत्तों के लिए विषाक्त है।"
     },
     "zh": {
       "common_name": "朱蕉",
-      "description": "Cordyline fruticosa 原产于东南亚，是常见的热带观叶植物。以色彩丰富的叶片著称。适合明亮散射光和湿润土壤。"
+      "description": "Cordyline fruticosa 是热带观叶植物，以色彩丰富的带状叶片著称。适合明亮散射光，盆土表层略干再浇水并避免积水。喜温暖和较高湿度，对猫狗有毒。"
     },
     "ja": {
-      "common_name": "コルジリネ",
-      "description": "コルジリネ・フルティコサは東南アジア原産の熱帯植物です。色鮮やかな葉が特徴です。明るい間接光を好みます。"
+      "common_name": "コルディリネ（ティー）",
+      "description": "Cordyline fruticosa は色のある細長い葉を楽しむ熱帯性の観葉植物です。明るい間接光で育て、用土の表面が少し乾いたら水やりします。暖かさと高めの湿度を好み、猫や犬には有毒です。"
     },
     "ko": {
-      "common_name": "코르딜리네",
-      "description": "Cordyline fruticosa는 동남아시아 원산의 열대 식물입니다. 화려한 잎이 특징입니다. 실내에서는 밝은 간접광이 좋습니다."
+      "common_name": "티플랜트(코르딜리네)",
+      "description": "Cordyline fruticosa 는 화려한 띠 모양 잎을 가진 열대 관엽식물입니다. 밝은 간접광에서 키우고 흙 윗부분이 약간 마르면 물을 주세요. 따뜻함과 높은 습도를 좋아하며, 고양이와 개에게 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/cordyline/cordyline-fruticosa",
-      "https://edis.ifas.ufl.edu/publication/FP154",
-      "https://www.gardenersworld.com/plants/cordyline-fruticosa/"
+      "https://www.rhs.org.uk/plants/43794/cordyline-fruticosa-kiwi/details",
+      "https://www.rhsplants.co.uk/plants/_/cordyline-fruticosa-mambo/classid.2000043266/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/ti-plant",
+      "https://www.thespruce.com/ti-plant-profile-5074159"
     ]
   }
 }

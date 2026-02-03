@@ -1,24 +1,24 @@
 {
   "external_id": "equisetum_hyemale",
-  "name": "Horsetail Reed",
+  "name": "Scouring rush",
   "latin": "Equisetum hyemale",
   "sun": "medium",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "self-watering"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "clay"
+    "fern"
   ],
   "water_required": true,
-  "water_interval_days": 3,
+  "water_interval_days": 2,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "equisetum_hyemale.jpg",
@@ -28,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
           "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz brilhante",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ परोक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい日陰",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Heavy, wet soil",
-          "pl": "Ciężka gleba",
-          "de": "Schwerer Boden",
-          "fr": "Sol lourd",
-          "it": "Terreno pesante",
-          "es": "Suelo pesado",
-          "pt": "Solo pesado",
-          "ar": "تربة ثقيلة",
-          "hi": "भारी मिट्टी",
-          "zh": "厚重土壤",
-          "ja": "重い土",
-          "ko": "무거운 토양"
+          "en": "Moist, rich mix",
+          "pl": "Wilgotne, żyzne",
+          "de": "Feucht, nährstoffr.",
+          "fr": "Humide, riche",
+          "it": "Umido e ricco",
+          "es": "Húmedo y fértil",
+          "pt": "Úmido e fértil",
+          "ar": "تربة رطبة وغنية",
+          "hi": "नम, उपजाऊ मिट्टी",
+          "zh": "湿润肥沃土",
+          "ja": "湿った肥沃土",
+          "ko": "촉촉한 비옥토"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep constantly wet",
-          "pl": "Stale mokra",
-          "de": "Ständig nass",
+          "en": "Keep constantly moist",
+          "pl": "Stale wilgotne",
+          "de": "Stets feucht halten",
           "fr": "Toujours humide",
           "it": "Sempre umido",
           "es": "Siempre húmedo",
           "pt": "Sempre úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "हमेशा गीली",
-          "zh": "持续湿润",
-          "ja": "常に湿潤",
-          "ko": "항상 축축"
+          "ar": "حافظ على الرطوبة",
+          "hi": "हमेशा नम रखें",
+          "zh": "保持持续湿润",
+          "ja": "常に湿らせる",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -85,7 +85,7 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
+          "en": "Medium",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–25 °C",
-          "pl": "10–25 °C",
-          "de": "10–25 °C",
-          "fr": "10–25 °C",
-          "it": "10–25 °C",
-          "es": "10–25 °C",
-          "pt": "10–25 °C",
-          "ar": "10–25°م",
-          "hi": "10–25 °C",
-          "zh": "10–25°C",
-          "ja": "10–25℃",
-          "ko": "10–25℃"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°C",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -123,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "مرتفعة",
-          "hi": "उच्च",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높음"
+          "en": "Average–high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel–hoch",
+          "fr": "Moyenne–élevée",
+          "it": "Media–alta",
+          "es": "Media–alta",
+          "pt": "Média–alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम–उच्च",
+          "zh": "中到高",
+          "ja": "中〜高",
+          "ko": "보통~높음"
         }
       }
     },
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻度有毒",
-          "ja": "軽い毒性",
-          "ko": "약한 독성"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczny po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषैला",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "먹으면 유독"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright clumping",
-          "pl": "Kępkowy",
-          "de": "Horstig",
-          "fr": "En touffes",
-          "it": "A ciuffi",
-          "es": "En matas",
-          "pt": "Em touceiras",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार",
-          "zh": "丛生直立",
-          "ja": "叢生直立",
-          "ko": "군생 직립"
+          "en": "Upright clumps",
+          "pl": "Wzniesione kępy",
+          "de": "Aufrechte Horste",
+          "fr": "Touffes dressées",
+          "it": "Ciuffi eretti",
+          "es": "Matas erguidas",
+          "pt": "Touceiras eretas",
+          "ar": "كتل قائمة",
+          "hi": "सीधी गुच्छेदार",
+          "zh": "直立丛生",
+          "ja": "直立して群生",
+          "ko": "곧게 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Hates drying out",
+          "pl": "Nie lubi przesuszeń",
+          "de": "Mag kein Austrocknen",
+          "fr": "Craint la sécheresse",
+          "it": "Soffre il secco",
+          "es": "No tolera sequía",
+          "pt": "Não gosta de secar",
+          "ar": "لا تدعها تجف",
+          "hi": "सूखना पसंद नहीं",
+          "zh": "怕干旱",
+          "ja": "乾燥に弱い",
+          "ko": "건조에 약함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Few pest issues",
+          "pl": "Mało problemów",
+          "de": "Wenig Schädlinge",
+          "fr": "Peu de ravageurs",
+          "it": "Pochi parassiti",
+          "es": "Pocas plagas",
+          "pt": "Poucas pragas",
+          "ar": "مشاكل قليلة",
+          "hi": "कम कीट समस्याएँ",
+          "zh": "虫害少",
+          "ja": "害虫は少なめ",
+          "ko": "해충 문제 적음"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rough Horsetail",
-      "description": "Equisetum hyemale is a perennial, reed-like plant native to wetlands and riverbanks. It requires constant moisture and bright light to thrive. The plant spreads by rhizomes and prefers heavy, water-retentive soils."
+      "common_name": "Scouring rush horsetail",
+      "description": "Equisetum hyemale is an evergreen horsetail with stiff, jointed stems that forms dense clumps. Keep the potting mix constantly moist and grow it in bright light, avoiding letting it dry out."
     },
     "pl": {
       "common_name": "Skrzyp zimowy",
-      "description": "Equisetum hyemale to wieloletnia roślina bagienna występująca nad wodami. Wymaga stale wilgotnego podłoża i jasnego stanowiska. Rozrasta się za pomocą kłączy."
+      "description": "Equisetum hyemale to zimozielony skrzyp o sztywnych, członowanych pędach, tworzący zwarte kępy. Podłoże w doniczce powinno być stale wilgotne, a roślina najlepiej rośnie w jasnym miejscu i źle znosi przesuszenie."
     },
     "de": {
-      "common_name": "Winterschachtelhalm",
-      "description": "Equisetum hyemale ist eine ausdauernde Sumpfpflanze aus Uferzonen. Sie benötigt dauerhaft nassen Boden und viel Licht. Die Ausbreitung erfolgt über Rhizome."
+      "common_name": "Winter-Schachtelhalm",
+      "description": "Equisetum hyemale ist ein immergrüner Schachtelhalm mit steifen, gegliederten Trieben und wächst horstig. Das Substrat sollte dauerhaft feucht bleiben und die Pflanze steht am besten hell, ohne auszutrocknen."
     },
     "fr": {
-      "common_name": "Prêle d’hiver",
-      "description": "Equisetum hyemale est une plante vivace des zones humides. Elle a besoin d’un sol constamment humide et d’une lumière vive. Elle se propage par des rhizomes souterrains."
+      "common_name": "Prêle d'hiver",
+      "description": "Equisetum hyemale est une prêle persistante aux tiges rigides et segmentées, formant des touffes. Gardez le substrat constamment humide et placez-la en lumière vive, en évitant tout dessèchement."
     },
     "it": {
-      "common_name": "Equiseto invernale",
-      "description": "Equisetum hyemale è una pianta perenne tipica delle zone umide. Richiede terreno sempre bagnato e buona luminosità. Si diffonde tramite rizomi."
+      "common_name": "Equiseto d'inverno",
+      "description": "Equisetum hyemale è un equiseto sempreverde con fusti rigidi e articolati che forma ciuffi densi. Mantieni il substrato costantemente umido e coltivalo in luce intensa, evitando che si asciughi."
     },
     "es": {
-      "common_name": "Cola de caballo japonesa",
-      "description": "Equisetum hyemale es una planta perenne de ambientes húmedos. Necesita sustrato constantemente húmedo y buena luz. Se propaga mediante rizomas."
+      "common_name": "Cola de caballo de invierno",
+      "description": "Equisetum hyemale es una cola de caballo perenne con tallos rígidos y segmentados que forma matas. Mantén el sustrato siempre húmedo y colócala en un sitio luminoso, evitando que se seque."
     },
     "pt": {
-      "common_name": "Cavalinha-japonesa",
-      "description": "Equisetum hyemale é uma planta perene de áreas alagadas. Exige solo sempre úmido e boa luminosidade. Espalha-se por rizomas."
+      "common_name": "Cavalinha-de-inverno",
+      "description": "Equisetum hyemale é uma cavalinha perene com caules rígidos e segmentados que forma touceiras densas. Mantenha o substrato constantemente úmido e cultive em boa luz, sem deixar secar."
     },
     "ar": {
-      "common_name": "ذنب الخيل الشتوي",
-      "description": "نبات Equisetum hyemale معمر ينمو في المناطق الرطبة. يحتاج إلى تربة مشبعة بالماء وضوء جيد. ينتشر بواسطة الجذامير."
+      "common_name": "ذيل الحصان الشتوي",
+      "description": "Equisetum hyemale نبات دائم الخضرة بسيقان صلبة ومفصلية ويكوّن كتلًا كثيفة. أبقِ التربة في الأصيص رطبة باستمرار وضعه في ضوء ساطع، وتجنب جفاف التربة."
     },
     "hi": {
-      "common_name": "विंटर हॉर्सटेल",
-      "description": "Equisetum hyemale एक बहुवर्षीय आर्द्रभूमि पौधा है। इसे लगातार गीली मिट्टी और तेज रोशनी चाहिए। यह राइजोम द्वारा फैलता है।"
+      "common_name": "शीतकालीन हॉर्सटेल",
+      "description": "Equisetum hyemale एक सदाबहार हॉर्सटेल है जिसके तने कठोर और खंडित होते हैं और यह गुच्छों में बढ़ता है। गमले की मिट्टी को लगातार नम रखें और इसे तेज़ रोशनी में रखें, मिट्टी को सूखने न दें।"
     },
     "zh": {
-      "common_name": "木贼",
-      "description": "Equisetum hyemale 是一种生长在湿地的多年生植物。需要持续湿润的土壤和充足光照。通过地下根茎扩展。"
+      "common_name": "冬木贼",
+      "description": "Equisetum hyemale 为常绿木贼，茎秆直立且有明显节段，常成丛生长。盆土需长期保持湿润，并放在明亮光线处，避免盆土干透。"
     },
     "ja": {
       "common_name": "トクサ",
-      "description": "Equisetum hyemale は湿地に自生する多年草です。常に湿った土壌と明るい光を必要とします。地下茎で広がります。"
+      "description": "Equisetum hyemale は節のある硬い茎を持つ常緑のトクサで、株立ちになります。用土は常に湿り気を保ち、明るい場所で育て、乾燥させないようにします。"
     },
     "ko": {
       "common_name": "속새",
-      "description": "Equisetum hyemale는 습지에서 자라는 다년생 식물입니다. 항상 젖은 토양과 밝은 빛이 필요합니다. 뿌리줄기로 번식합니다."
+      "description": "Equisetum hyemale 는 마디가 있는 단단한 줄기가 특징인 상록 속새로, 군생으로 자랍니다. 화분 흙을 항상 촉촉하게 유지하고 밝은 곳에서 키우며, 마르지 않게 관리하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/6693/equisetum-hyemale/details",
-      "https://plants.ces.ncsu.edu/plants/equisetum-hyemale/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b580"
+      "https://www.rhs.org.uk/plants/6527/equisetum-hyemale/details",
+      "https://www.gardenia.net/plant/equisetum-hyemale",
+      "https://www.bhg.com/gardening/plant-dictionary/water/horsetail/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/scouring-rush",
+      "https://poisonousplants.cvmbs.colostate.edu/plant/10"
     ]
   }
 }

@@ -10,8 +10,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +19,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 14,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "freesia_refracta.jpg",
   "image_thumb": "freesia_refracta.jpg",
   "traits": [
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "en": "Well-drained mix",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainiert",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate water",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Acqua moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물"
+          "en": "Moist in growth",
+          "pl": "Wilgotno w sezonie",
+          "de": "Feucht im Wuchs",
+          "fr": "Humide en croissance",
+          "it": "Umido in crescita",
+          "es": "Húmedo en crecimiento",
+          "pt": "Úmido no crescimento",
+          "ar": "رطبة أثناء النمو",
+          "hi": "वृद्धि में नम",
+          "zh": "生长期保持湿润",
+          "ja": "生育期は湿り気",
+          "ko": "생장기 촉촉하게"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Aufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "ふつう",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–20°C",
-          "pl": "10–20°C",
-          "de": "10–20°C",
-          "fr": "10–20°C",
-          "it": "10–20°C",
-          "es": "10–20°C",
-          "pt": "10–20°C",
-          "ar": "10–20°م",
-          "hi": "10–20°C",
-          "zh": "10–20°C",
-          "ja": "10–20°C",
-          "ko": "10–20°C"
+          "en": "Cool 10–18°C",
+          "pl": "Chłodno 10–18°C",
+          "de": "Kühl 10–18°C",
+          "fr": "Frais 10–18°C",
+          "it": "Fresco 10–18°C",
+          "es": "Fresco 10–18°C",
+          "pt": "Fresco 10–18°C",
+          "ar": "معتدل 10–18°م",
+          "hi": "ठंडा 10–18°C",
+          "zh": "凉爽 10–18°C",
+          "ja": "涼しい 10–18°C",
+          "ko": "서늘 10–18°C"
         }
       }
     },
@@ -123,17 +122,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
+          "en": "Average home",
+          "pl": "Typowa domowa",
+          "de": "Normale Raumluft",
+          "fr": "Air ambiant",
           "it": "Umidità normale",
           "es": "Humedad normal",
           "pt": "Umidade normal",
           "ar": "رطوبة عادية",
           "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
+          "zh": "普通室内湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -143,14 +142,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "विषहीन",
+          "hi": "गैर-विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Seasonal bulb",
-          "pl": "Sezonowa cebula",
-          "de": "Saisonknolle",
-          "fr": "Bulbe saisonnier",
-          "it": "Bulbo stagionale",
-          "es": "Bulbo estacional",
-          "pt": "Bulbo sazonal",
-          "ar": "بصلي موسمي",
-          "hi": "मौसमी कंद",
-          "zh": "季节性球茎",
-          "ja": "季節性球根",
-          "ko": "계절성 구근"
+          "en": "Corm, seasonal",
+          "pl": "Bulwa, sezonowa",
+          "de": "Knolle, saisonal",
+          "fr": "Cormus, saisonnier",
+          "it": "Cormo, stagionale",
+          "es": "Cormo, estacional",
+          "pt": "Cormo, sazonal",
+          "ar": "درنة موسمية",
+          "hi": "कॉर्म, मौसमी",
+          "zh": "球茎，季节性",
+          "ja": "球茎・季節性",
+          "ko": "구근, 계절성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب تشبع التربة",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, thrips",
+          "pl": "Mszyce, wciornastki",
+          "de": "Blattläuse, Thripse",
+          "fr": "Pucerons, thrips",
+          "it": "Afidi, tripidi",
+          "es": "Pulgones, trips",
+          "pt": "Pulgões, tripes",
+          "ar": "المنّ، التربس",
+          "hi": "माहू, थ्रिप्स",
+          "zh": "蚜虫、蓟马",
+          "ja": "アブラムシ等",
+          "ko": "진딧물, 총채"
         }
       }
     }
@@ -180,58 +217,60 @@
   "translations": {
     "en": {
       "common_name": "Freesia",
-      "description": "Freesia refracta is a fragrant flowering bulb native to southern Africa. It grows from corms and blooms in cool seasons with bright light. After flowering, it enters a dry dormancy period."
+      "description": "Freesia refracta is a fragrant corm plant grown for its funnel-shaped flowers. Provide very bright light and a free-draining potting mix, keeping soil lightly moist during active growth. After flowering, reduce watering as foliage dies back and keep it cooler if possible."
     },
     "pl": {
       "common_name": "Frezja",
-      "description": "Freesia refracta to pachnąca roślina cebulowa z południowej Afryki. Kwitnie w chłodniejszych porach przy jasnym świetle. Po kwitnieniu przechodzi okres spoczynku."
+      "description": "Freesia refracta to pachnąca roślina bulwiasta uprawiana dla kwiatów. Zapewnij bardzo jasne stanowisko i przepuszczalne podłoże, a w okresie wzrostu utrzymuj lekką wilgotność. Po kwitnieniu ogranicz podlewanie, gdy liście zaczynają zamierać, i utrzymuj raczej chłodne warunki."
     },
     "de": {
       "common_name": "Freesie",
-      "description": "Freesia refracta ist eine duftende Knollenpflanze aus dem südlichen Afrika. Sie blüht bei hellem Licht in kühleren Jahreszeiten. Nach der Blüte folgt eine Ruhephase."
+      "description": "Freesia refracta ist eine duftende Knollenpflanze mit trichterförmigen Blüten. Sehr hell stellen und in ein gut drainierendes Substrat pflanzen, während des Wachstums gleichmäßig leicht feucht halten. Nach der Blüte weniger gießen, wenn das Laub einzieht, und möglichst eher kühl halten."
     },
     "fr": {
       "common_name": "Freesia",
-      "description": "Freesia refracta est une plante bulbeuse parfumée originaire d’Afrique australe. Elle fleurit en saison fraîche avec beaucoup de lumière. Après la floraison, elle entre en dormance."
+      "description": "Freesia refracta est une plante à corme connue pour ses fleurs parfumées. Placez-la en lumière très vive et dans un substrat bien drainant, en gardant le terreau légèrement humide en période de croissance. Après la floraison, réduisez l’arrosage lorsque le feuillage jaunit et privilégiez une ambiance plutôt fraîche."
     },
     "it": {
       "common_name": "Fresia",
-      "description": "Freesia refracta è una pianta bulbosa profumata originaria dell’Africa australe. Fiorisce con luce intensa nei periodi freschi. Dopo la fioritura entra in dormienza."
+      "description": "Freesia refracta è una pianta a cormo apprezzata per i fiori profumati. Serve molta luce e un terriccio ben drenante, mantenendo il substrato leggermente umido durante la crescita attiva. Dopo la fioritura riduci l’irrigazione quando le foglie ingialliscono e tienila, se possibile, in condizioni più fresche."
     },
     "es": {
       "common_name": "Fresia",
-      "description": "Freesia refracta es una planta bulbosa aromática del sur de África. Florece con buena luz en estaciones frescas. Tras la floración entra en reposo."
+      "description": "Freesia refracta es una planta de cormo cultivada por sus flores fragantes. Necesita mucha luz y un sustrato bien drenante, con riego moderado para mantener una ligera humedad durante el crecimiento. Tras la floración, reduce el riego a medida que el follaje se seca y procura un ambiente más fresco."
     },
     "pt": {
       "common_name": "Frésia",
-      "description": "Freesia refracta é uma planta bulbosa perfumada da África Austral. Floresce com luz intensa em épocas mais frescas. Após a floração entra em dormência."
+      "description": "Freesia refracta é uma planta de cormo valorizada pelas flores perfumadas. Dê muita luz e um substrato bem drenado, mantendo o solo levemente úmido durante o crescimento ativo. Após a floração, reduza as regas quando a folhagem secar e, se possível, mantenha em ambiente mais fresco."
     },
     "ar": {
       "common_name": "فريزيا",
-      "description": "Freesia refracta نبات بصلي عطري موطنه جنوب أفريقيا. يزهر في المواسم المعتدلة مع ضوء ساطع. بعد الإزهار يدخل في فترة سكون."
+      "description": "Freesia refracta نبات كورمي يُزرع لأزهاره العطرية. يحتاج إلى ضوء قوي وتربة جيدة الصرف مع إبقاء الوسط رطبًا قليلًا أثناء النمو. بعد الإزهار خفّف الري عندما تبدأ الأوراق بالذبول ويفضل توفير جو أبرد قدر الإمكان."
     },
     "hi": {
-      "common_name": "फ्रीसिया",
-      "description": "Freesia refracta दक्षिणी अफ्रीका का सुगंधित कंदीय पौधा है। यह ठंडे मौसम में तेज रोशनी में फूल देता है। फूलों के बाद यह सुप्त अवस्था में चला जाता है।"
+      "common_name": "फ्रीज़िया",
+      "description": "Freesia refracta एक कॉर्म वाला पौधा है जिसे सुगंधित फूलों के लिए उगाया जाता है। इसे बहुत तेज रोशनी और अच्छी जलनिकासी वाली मिट्टी दें, तथा बढ़वार के समय मिट्टी को हल्का नम रखें। फूल आने के बाद जब पत्तियां सूखने लगें तो पानी कम कर दें और संभव हो तो ठंडी जगह रखें।"
     },
     "zh": {
       "common_name": "小苍兰",
-      "description": "Freesia refracta 原产于非洲南部，是一种芳香球茎植物。它在凉爽季节和明亮光照下开花。花后进入休眠期。"
+      "description": "Freesia refracta 为球茎类花卉，以芳香漏斗状花著称。需要充足光照与排水良好的盆土，生长期保持土壤微湿即可。花后随叶片枯黄逐步减少浇水，并尽量放在较凉爽的位置。"
     },
     "ja": {
       "common_name": "フリージア",
-      "description": "Freesia refracta は南アフリカ原産の香りのある球根植物です。涼しい季節に明るい光で開花します。開花後は休眠します。"
+      "description": "Freesia refracta は香りのよい花を咲かせる球茎植物です。強い光と水はけのよい用土で育て、生育期は用土を軽く湿らせてください。開花後は葉が枯れてくるにつれて水やりを減らし、できれば涼しめに管理します。"
     },
     "ko": {
       "common_name": "프리지아",
-      "description": "Freesia refracta는 남아프리카 원산의 향기로운 구근 식물입니다. 밝은 빛과 서늘한 계절에 꽃을 피웁니다. 개화 후 휴면기에 들어갑니다."
+      "description": "Freesia refracta 는 향기로운 꽃을 피우는 구근(구경) 식물입니다. 빛이 매우 밝고 배수가 좋은 흙에서 키우며, 생장기에는 흙을 약간 촉촉하게 유지합니다. 꽃이 진 뒤 잎이 마르기 시작하면 물 주기를 줄이고 가능하면 서늘하게 관리합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/freesia",
       "https://www.rhs.org.uk/plants/freesia/growing-guide",
-      "https://extension.umn.edu/bulbs/freesia"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=264594",
+      "https://www.bhg.com/gardening/plant-dictionary/bulb/freesia/",
+      "https://extension.msstate.edu/sites/default/files/document/2025-09/P3751_web.pdf",
+      "https://www.aspca.org/news/mothers-day-bouquets-whats-safe-pets"
     ]
   }
 }

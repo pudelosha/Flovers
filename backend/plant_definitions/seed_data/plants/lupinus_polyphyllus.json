@@ -1,18 +1,18 @@
 {
   "external_id": "lupinus_polyphyllus",
-  "name": "Large-leaved lupine",
+  "name": "Lupine",
   "latin": "Lupinus polyphyllus",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -31,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "ar": "شمس ساطعة",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "ja": "完全な太陽",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Suolo drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수성이 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित सिंचाई",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري مو moderate",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "중간 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodno do umiark.",
-          "de": "Kühl bis mild",
-          "fr": "Frais à doux",
-          "it": "Fresco-mite",
-          "es": "Fresco a templado",
-          "pt": "Fresco a ameno",
-          "ar": "معتدل إلى بارد",
-          "hi": "ठंडा से हल्का",
-          "zh": "凉爽至温和",
-          "ja": "涼しい環境",
-          "ko": "서늘한 기온"
+          "en": "Cool to moderate",
+          "pl": "Chłodno do umiarkowanego",
+          "de": "Kühl bis mäßig",
+          "fr": "Froid à modéré",
+          "it": "Fresco a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽至适中",
+          "ja": "涼しいから中程度",
+          "ko": "차가운에서 중간"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य आर्द्रता",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Durchschnittliche Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "औसत आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "평균 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic seeds",
-          "pl": "Nasiona trujące",
-          "de": "Samen giftig",
-          "fr": "Graines toxiques",
-          "it": "Semi tossici",
-          "es": "Semillas tóxicas",
-          "pt": "Sementes tóxicas",
-          "ar": "بذور سامة",
-          "hi": "बीज विषैले",
-          "zh": "种子有毒",
-          "ja": "種子有毒",
-          "ko": "씨앗 독성"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Mäßig giftig",
+          "fr": "Légèrement toxique",
+          "it": "Lievemente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة بشكل خفيف",
+          "hi": "हल्का जहरीला",
+          "zh": "轻微毒性",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast perennial",
-          "pl": "Szybki wzrost",
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
           "de": "Schnell wachsend",
           "fr": "Croissance rapide",
           "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "hi": "तेजी से बढ़ता हुआ",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Large-leaved lupine",
-      "description": "Lupinus polyphyllus is a hardy perennial native to western North America. It produces tall flower spikes in spring and early summer. The plant prefers full sun and well-drained soil."
+      "common_name": "Lupine",
+      "description": "Lupinus polyphyllus, commonly known as lupine, is a fast-growing perennial with blue, purple, or pink flowers. It thrives in well-drained, full sun conditions."
     },
     "pl": {
-      "common_name": "Łubin trwały",
-      "description": "Lupinus polyphyllus to bylina pochodząca z zachodniej Ameryki Północnej. Tworzy wysokie kwiatostany wiosną i latem. Najlepiej rośnie w słońcu i przepuszczalnej glebie."
+      "common_name": "Lupina",
+      "description": "Lupinus polyphyllus, znany jako lupina, to szybko rosnąca roślina wieloletnia z niebieskimi, fioletowymi lub różowymi kwiatami. Rośnie najlepiej w dobrze przepuszczalnej glebie i pełnym słońcu."
     },
     "de": {
-      "common_name": "Vielblättrige Lupine",
-      "description": "Lupinus polyphyllus ist eine mehrjährige Pflanze aus Nordamerika. Sie blüht mit hohen Blütenständen im Frühjahr. Bevorzugt Sonne und durchlässigen Boden."
+      "common_name": "Lupine",
+      "description": "Lupinus polyphyllus, auch als Lupine bekannt, ist eine schnell wachsende mehrjährige Pflanze mit blauen, lila oder rosa Blüten. Sie gedeiht am besten in gut durchlässigem Boden und bei voller Sonne."
     },
     "fr": {
-      "common_name": "Lupin à feuilles nombreuses",
-      "description": "Lupinus polyphyllus est une plante vivace d'Amérique du Nord. Elle produit de longues hampes florales au printemps. Elle aime le plein soleil et les sols drainés."
+      "common_name": "Lupin",
+      "description": "Lupinus polyphyllus, connu sous le nom de lupin, est une plante vivace à croissance rapide avec des fleurs bleues, violettes ou roses. Elle prospère dans un sol bien drainé et sous un soleil plein."
     },
     "it": {
-      "common_name": "Lupino a foglie grandi",
-      "description": "Lupinus polyphyllus è una perenne originaria del Nord America. Fiorisce in primavera con alti steli colorati. Preferisce sole pieno e terreno drenante."
+      "common_name": "Lupino",
+      "description": "Lupinus polyphyllus, conosciuto come lupino, è una pianta perenne a crescita rapida con fiori blu, viola o rosa. Cresce meglio in un terreno ben drenato e al sole pieno."
     },
     "es": {
-      "common_name": "Lupino perenne",
-      "description": "Lupinus polyphyllus es una planta perenne de Norteamérica. Produce espigas florales altas en primavera. Requiere sol pleno y suelo bien drenado."
+      "common_name": "Altramuz",
+      "description": "Lupinus polyphyllus, conocido como altramuz, es una planta perenne de rápido crecimiento con flores azules, moradas o rosas. Crece mejor en un suelo bien drenado y con pleno sol."
     },
     "pt": {
-      "common_name": "Tremoço-perene",
-      "description": "Lupinus polyphyllus é uma planta perene da América do Norte. Floresce na primavera com hastes altas. Prefere sol pleno e solo drenado."
+      "common_name": "Lupino",
+      "description": "Lupinus polyphyllus, conhecido como lupino, é uma planta perene de crescimento rápido com flores azuis, roxas ou rosas. Cresce melhor em solo bem drenado e sob sol pleno."
     },
     "ar": {
-      "common_name": "الترمس المعمر",
-      "description": "Lupinus polyphyllus نبات معمر موطنه أمريكا الشمالية. يزهر في الربيع بسيقان طويلة. يفضل الشمس الكاملة والتربة الجيدة الصرف."
+      "common_name": "اللوبين",
+      "description": "Lupinus polyphyllus، المعروف باسم اللوبين، هو نبات معمر سريع النمو ذو أزهار زرقاء أو بنفسجية أو وردية. يزدهر في التربة جيدة التصريف وتحت الشمس الكاملة."
     },
     "hi": {
-      "common_name": "बहुवर्षीय ल्यूपिन",
-      "description": "Lupinus polyphyllus उत्तरी अमेरिका का बहुवर्षीय पौधा है। यह वसंत में लंबे फूल देता है। इसे पूरी धूप और अच्छी मिट्टी चाहिए।"
+      "common_name": "लुपाइन",
+      "description": "Lupinus polyphyllus, जिसे लुपाइन के नाम से जाना जाता है, एक तेजी से बढ़ने वाला बारहमासी पौधा है जिसमें नीले, बैंगनी या गुलाबी फूल होते हैं। यह अच्छी तरह से जल निकासी वाली मिट्टी और पूर्ण सूर्य में अच्छा उगता है।"
     },
     "zh": {
-      "common_name": "多年生羽扇豆",
-      "description": "Lupinus polyphyllus 原产于北美，是多年生植物。春季开高大的花序。适合全日照和排水良好的土壤。"
+      "common_name": "狼毒草",
+      "description": "Lupinus polyphyllus, 又称为狼毒草，是一种快速生长的多年生植物，开有蓝色、紫色或粉色的花。它在排水良好的土壤和充足阳光下茁壮成长。"
     },
     "ja": {
       "common_name": "ルピナス",
-      "description": "Lupinus polyphyllusは北米原産の多年草です。春に高い花穂を咲かせます。日当たりと水はけを好みます。"
+      "description": "Lupinus polyphyllus、通称ルピナスは、青、紫、またはピンクの花を持つ速成型の多年草です。良好な排水性の土壌と日当たりの良い場所で最適に育ちます。"
     },
     "ko": {
-      "common_name": "루피너스",
-      "description": "Lupinus polyphyllus는 북아메리카 원산의 다년생 식물입니다. 봄에 키 큰 꽃대를 피웁니다. 햇빛과 배수 좋은 토양을 선호합니다."
+      "common_name": "루핀",
+      "description": "Lupinus polyphyllus, 일반적으로 루핀으로 알려진 이 식물은 파란색, 보라색 또는 분홍색 꽃을 가진 빠르게 자라는 다년생 식물입니다. 배수가 좋은 토양과 충분한 햇빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/lupinus/polyphyllus/details",
-      "https://plants.ces.ncsu.edu/plants/lupinus-polyphyllus/",
-      "https://www.gardenersworld.com/plants/lupinus-polyphyllus/"
+      "https://www.rhs.org.uk/plants/lupinus-polyphyllus",
+      "https://www.gardenia.net/plant/lupinus-polyphyllus"
     ]
   }
 }

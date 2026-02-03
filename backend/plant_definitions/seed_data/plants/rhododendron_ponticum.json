@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "acid-loving",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ko": "중간 광선"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, loam",
-          "pl": "Kwaśna, gliniasta",
-          "de": "Saurer, lehmiger Boden",
-          "fr": "Sol acide, argileux",
-          "it": "Acido, argilloso",
-          "es": "Ácido, arcilloso",
-          "pt": "Ácido, argiloso",
-          "ar": "تربة حمضية، طينية",
-          "hi": "अम्लीय, बलुआ",
-          "zh": "酸性, 粘土",
-          "ja": "酸性、ローム",
-          "ko": "산성, 양토"
+          "en": "Acidic, well-drained",
+          "pl": "Kwaśna, dobrze przepuszczalna",
+          "de": "Sauer, gut durchlässig",
+          "fr": "Acide, bien drainé",
+          "it": "Acido, ben drenato",
+          "es": "Ácida, bien drenada",
+          "pt": "Ácida, bem drenada",
+          "ar": "حمضي، جيد الصرف",
+          "hi": "अम्लीय, अच्छी जल निकासी",
+          "zh": "酸性，排水良好",
+          "ja": "酸性、良好な排水",
+          "ko": "산성, 배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "سقي متوسط",
-          "hi": "मध्यम पानी",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Moderate, avoid overwatering",
+          "pl": "Umiarkowane, unikaj przelania",
+          "de": "Mäßig, übermäßiges Gießen vermeiden",
+          "fr": "Modéré, éviter l'excès d'eau",
+          "it": "Moderato, evitare ristagni d'acqua",
+          "es": "Moderado, evitar exceso de agua",
+          "pt": "Moderado, evitar excesso de água",
+          "ar": "معتدل، تجنب الإفراط في الري",
+          "hi": "मध्यम, अधिक पानी से बचें",
+          "zh": "适量，避免过度浇水",
+          "ja": "適度、過剰水やりを避ける",
+          "ko": "적당히, 과도한 물주기를 피하십시오"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Humidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高湿",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Trujący",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossico",
-          "es": "Tóxico",
-          "pt": "Tóxico",
-          "ar": "سام",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to medium growth",
-          "pl": "Wolny do średniego wzrostu",
-          "de": "Langsame bis mittlere Wachstumsrate",
-          "fr": "Croissance lente à moyenne",
-          "it": "Crescita lenta a media",
-          "es": "Crecimiento lento a medio",
-          "pt": "Crescimento lento a médio",
-          "ar": "نمو بطيء إلى متوسط",
-          "hi": "धीरे से मध्यम वृद्धि",
-          "zh": "慢至中等生长",
-          "ja": "遅いから中程度の成長",
-          "ko": "느리게 또는 중간 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare ristagni d'acqua",
+          "es": "Evitar exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Common Purple Rhododendron",
-      "description": "Rhododendron ponticum is a species of evergreen shrub native to the Mediterranean and parts of Asia. It features showy purple flowers and is often found in woodlands."
+      "common_name": "Common Rhododendron",
+      "description": "Rhododendron ponticum is a shrub with attractive flowers. It is popular in gardens for its colorful blooms."
     },
     "pl": {
-      "common_name": "Różanecznik pontyjski",
-      "description": "Rhododendron ponticum to gatunek krzewu wieczniezielonego, pochodzący z rejonu Morza Śródziemnego i Azji. Charakteryzuje się okazałymi fioletowymi kwiatami."
+      "common_name": "Różanecznik pospolity",
+      "description": "Różanecznik pospolity to krzew o atrakcyjnych kwiatach. Jest popularny w ogrodach dzięki kolorowym kwiatom."
     },
     "de": {
-      "common_name": "Gemeiner Rhododendron",
-      "description": "Rhododendron ponticum ist eine immergrüne Strauchart aus dem Mittelmeerraum und Teilen Asiens. Sie hat auffällige lila Blüten und wächst häufig in Wäldern."
+      "common_name": "Gewöhnlicher Rhododendron",
+      "description": "Rhododendron ponticum ist ein Strauch mit attraktiven Blumen. Er ist in Gärten wegen seiner bunten Blüten beliebt."
     },
     "fr": {
-      "common_name": "Rhododendron pontique",
-      "description": "Le Rhododendron ponticum est un arbuste à feuilles persistantes originaire de la région méditerranéenne et de certaines parties de l'Asie. Il possède de grandes fleurs violettes."
+      "common_name": "Rhododendron commun",
+      "description": "Le Rhododendron ponticum est un arbuste aux fleurs attrayantes. Il est populaire dans les jardins pour ses fleurs colorées."
     },
     "it": {
-      "common_name": "Rhododendron pontico",
-      "description": "Il Rhododendron ponticum è un arbusto sempreverde originario della regione mediterranea e di alcune parti dell'Asia. Ha fiori viola appariscenti."
+      "common_name": "Rhododendron comune",
+      "description": "Il Rhododendron ponticum è un arbusto con fiori attraenti. È popolare nei giardini per i suoi fiori colorati."
     },
     "es": {
-      "common_name": "Rhododendron ponticum",
-      "description": "El Rhododendron ponticum es un arbusto de hoja perenne originario del Mediterráneo y algunas partes de Asia. Tiene flores moradas llamativas."
+      "common_name": "Rhododendron común",
+      "description": "Rhododendron ponticum es un arbusto con flores atractivas. Es popular en los jardines por sus flores coloridas."
     },
     "pt": {
-      "common_name": "Rhododendron ponticum",
-      "description": "Rhododendron ponticum é um arbusto perene originário da região do Mediterrâneo e partes da Ásia. Possui flores roxas vistosas."
+      "common_name": "Rhododendron comum",
+      "description": "Rhododendron ponticum é um arbusto com flores atraentes. É popular nos jardins por suas flores coloridas."
     },
     "ar": {
-      "common_name": "رودودندرون بونتيكم",
-      "description": "رودودندرون بونتيكم هو نوع من الشجيرات دائمة الخضرة من منطقة البحر الأبيض المتوسط وبعض أجزاء آسيا. يتميز بأزهار أرجوانية جميلة."
+      "common_name": "رودودندرون شائع",
+      "description": "رودودندرون بونتيكوم هو شجيرة ذات زهور جذابة. إنه شائع في الحدائق بسبب أزهاره الملونة."
     },
     "hi": {
-      "common_name": "रhododendron पोंटीकम",
-      "description": "रhododendron पोंटीकम एक सदाबहार झाड़ी है जो भूमध्यसागरीय और एशिया के कुछ हिस्सों का मूल है। इसमें चमकीले बैंगनी फूल होते हैं।"
+      "common_name": "कॉमन रोडोडेंड्रॉन",
+      "description": "रोडोडेंड्रॉन पॉंटिकम एक झाड़ी है जिसमें आकर्षक फूल होते हैं। यह अपने रंगीन फूलों के लिए बगीचों में लोकप्रिय है।"
     },
     "zh": {
-      "common_name": "点缀杜鹃",
-      "description": "点缀杜鹃是源自地中海和亚洲部分地区的常绿灌木。它的紫色花朵非常显眼。"
+      "common_name": "常见杜鹃",
+      "description": "常见杜鹃是一个具有吸引力花朵的灌木。由于其色彩丰富的花朵，它在花园中很受欢迎。"
     },
     "ja": {
-      "common_name": "ポンティクム・ツツジ",
-      "description": "Rhododendron ponticumは地中海地域とアジアの一部から来た常緑低木です。鮮やかな紫色の花を持っています。"
+      "common_name": "普通のツツジ",
+      "description": "Rhododendron ponticum は魅力的な花を持つ低木です。そのカラフルな花が庭で人気があります。"
     },
     "ko": {
-      "common_name": "포인트릭럼 진달래",
-      "description": "Rhododendron ponticum은 지중해와 아시아 일부에서 자생하는 상록 관목입니다. 눈에 띄는 보라색 꽃이 특징입니다."
+      "common_name": "일반 진달래",
+      "description": "Rhododendron ponticum은 매력적인 꽃을 가진 관목입니다. 그 화려한 꽃 덕분에 정원에서 인기가 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.bgci.org",
-      "https://www.rhs.org.uk",
-      "https://www.plantcare.com"
+      "https://www.rhs.org.uk/advice/profile?pid=510",
+      "https://www.gardenia.net/plant/rhododendron-ponticum"
     ]
   }
 }

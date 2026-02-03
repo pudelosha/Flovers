@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -34,13 +34,13 @@
           "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Sole pieno",
-          "es": "Luz solar directa",
+          "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس ساطعة",
-          "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "完全な日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -55,11 +55,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好排水",
-          "ja": "排水が良い",
-          "ko": "배수 좋은"
+          "ar": "مصفى جيدًا",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -76,9 +76,9 @@
           "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "적당히"
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당한"
         }
       }
     },
@@ -95,7 +95,7 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "简单",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderada",
-          "pt": "Moderada",
-          "ar": "معتدل",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
           "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "적당히"
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast-growing",
-          "pl": "Szybko rosnący",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "De rápido crecimiento",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेजी से बढ़ने वाला",
-          "zh": "快速生长",
-          "ja": "速く成長",
-          "ko": "빠르게 성장"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare il sovrannumero",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधारणीय कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Basil",
-      "description": "Basil is an aromatic herb commonly used in cooking. It thrives in warm, sunny environments and well-drained soil."
+      "description": "Basil is a popular herb known for its aromatic leaves. It is used in cooking and enjoys sunny, warm conditions."
     },
     "pl": {
       "common_name": "Bazylia",
-      "description": "Bazylia to zioło o intensywnym zapachu, powszechnie stosowane w kuchni. Rośnie najlepiej w ciepłych, słonecznych miejscach i w dobrze przepuszczalnej glebie."
+      "description": "Bazylia to popularna roślina aromatyczna, używana w kuchni. Lubi słoneczne, ciepłe warunki."
     },
     "de": {
       "common_name": "Basilikum",
-      "description": "Basilikum ist ein aromatisches Kraut, das häufig in der Küche verwendet wird. Es gedeiht am besten in warmen, sonnigen Umgebungen und gut durchlässigem Boden."
+      "description": "Basilikum ist ein beliebtes Kraut mit aromatischen Blättern. Es wird in der Küche verwendet und bevorzugt sonnige, warme Bedingungen."
     },
     "fr": {
       "common_name": "Basilic",
-      "description": "Le basilic est une herbe aromatique couramment utilisée en cuisine. Il prospère dans des environnements chauds et ensoleillés, et dans un sol bien drainé."
+      "description": "Le basilic est une herbe populaire connue pour ses feuilles aromatiques. Elle est utilisée en cuisine et préfère des conditions ensoleillées et chaudes."
     },
     "it": {
       "common_name": "Basilico",
-      "description": "Il basilico è un'erba aromatica usata comunemente in cucina. Cresce bene in ambienti caldi e soleggiati e in terreni ben drenati."
+      "description": "Il basilico è un'erba popolare conosciuta per le sue foglie aromatiche. Viene utilizzato in cucina e ama condizioni di sole e calore."
     },
     "es": {
       "common_name": "Albahaca",
-      "description": "La albahaca es una hierba aromática utilizada comúnmente en la cocina. Crece bien en ambientes cálidos y soleados, en suelos bien drenados."
+      "description": "La albahaca es una hierba popular conocida por sus hojas aromáticas. Se utiliza en la cocina y disfruta de condiciones soleadas y cálidas."
     },
     "pt": {
       "common_name": "Manjericão",
-      "description": "O manjericão é uma erva aromática comumente utilizada na culinária. Ela cresce bem em ambientes quentes e ensolarados, em solo bem drenado."
+      "description": "O manjericão é uma erva popular conhecida por suas folhas aromáticas. É usado na culinária e prefere condições de sol e calor."
     },
     "ar": {
       "common_name": "ريحان",
-      "description": "الريحان هو نبات عطري يستخدم عادة في الطهي. يزدهر في البيئات الدافئة والمشمسة وفي التربة جيدة التصريف."
+      "description": "الريحان هو نبات عشبي شائع معروف بأوراقه العطرية. يُستخدم في الطهي ويفضل الظروف المشمسة والدافئة."
     },
     "hi": {
       "common_name": "तुलसी",
-      "description": "तुलसी एक सुगंधित पौधा है जिसका उपयोग सामान्यतः रसोई में किया जाता है। यह गर्म, धूप वाले वातावरण और अच्छे जल निकासी वाली मिट्टी में अच्छे से उगता है।"
+      "description": "तुलसी एक प्रसिद्ध हर्ब है, जो अपनी खुशबूदार पत्तियों के लिए जानी जाती है। इसका उपयोग रसोई में किया जाता है और यह धूप और गर्मी में बढ़ता है।"
     },
     "zh": {
       "common_name": "罗勒",
-      "description": "罗勒是一种常用于烹饪的芳香草本植物。它在温暖、阳光充足的环境中以及排水良好的土壤中生长良好。"
+      "description": "罗勒是一种常见的香草，以其芳香的叶子闻名。它常用于烹饪，并喜欢阳光明媚和温暖的环境。"
     },
     "ja": {
       "common_name": "バジル",
-      "description": "バジルは料理でよく使われる香り高いハーブです。暖かく日当たりの良い環境と良好な排水性の土壌で育ちます。"
+      "description": "バジルは香り高い葉で知られる人気のハーブです。料理に使われ、日当たりの良い温暖な環境を好みます。"
     },
     "ko": {
       "common_name": "바질",
-      "description": "바질은 요리에 자주 사용되는 향기로운 허브입니다. 따뜻하고 햇볕이 잘 드는 환경과 배수가 좋은 토양에서 잘 자랍니다."
+      "description": "바질은 향긋한 잎으로 잘 알려진 인기 있는 허브입니다. 요리에 사용되며 햇볕이 잘 드는 따뜻한 환경을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenersworld.com/plants/basil/",
-      "https://www.rhs.org.uk/advice/profile?pid=313"
+      "https://www.rhs.org.uk/advice/profile?pid=83",
+      "https://www.almanac.com/plant/basil"
     ]
   }
 }

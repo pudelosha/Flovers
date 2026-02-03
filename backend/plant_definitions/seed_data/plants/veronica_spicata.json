@@ -1,0 +1,275 @@
+{
+  "external_id": "veronica_spicata",
+  "name": "Spike Speedwell",
+  "latin": "Veronica spicata",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "green-plants"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "veronica_spicata.jpg",
+  "image_thumb": "veronica_spicata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性が良い",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-24°C",
+          "pl": "15-24°C",
+          "de": "15-24°C",
+          "fr": "15-24°C",
+          "it": "15-24°C",
+          "es": "15-24°C",
+          "pt": "15-24°C",
+          "ar": "15-24°C",
+          "hi": "15-24°C",
+          "zh": "15-24°C",
+          "ja": "15-24°C",
+          "ko": "15-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषैला नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرा पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spike Speedwell",
+      "description": "Veronica spicata is a flowering perennial known for its tall spikes of blue to purple flowers. It thrives in full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Pręcik Veronica",
+      "description": "Veronica spicata to roślina wieloletnia, znana z wysokich kolb kwiatów w odcieniach niebieskiego i fioletowego. Lubi pełne słońce i dobrze przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Ährige Ehrenpreis",
+      "description": "Veronica spicata ist eine mehrjährige Pflanze, die für ihre hohen Blütenstände in Blau- bis Violetttönen bekannt ist. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Veronica à épis",
+      "description": "Veronica spicata est une plante vivace connue pour ses hautes hampes de fleurs bleues à violettes. Elle préfère le plein soleil et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Veronica a spiga",
+      "description": "Veronica spicata è una pianta perenne che si distingue per le alte spighe di fiori blu-viola. Cresce bene in pieno sole e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Verónica espigada",
+      "description": "Veronica spicata es una planta perenne conocida por sus altas espigas de flores azules a moradas. Prefiere pleno sol y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Verônica espigada",
+      "description": "Veronica spicata é uma planta perene conhecida por suas altas espigas de flores azuis a roxas. Prefere sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "فيرونيكا الشوكية",
+      "description": "Veronica spicata هي نبتة معمرة معروفة برؤوس الأزهار العالية التي تتراوح بين الأزرق والأرجواني. تنمو في الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "स्पाइक स्पीडवेल",
+      "description": "Veronica spicata एक फूलों वाली बहुवर्षीय पौधा है जो नीले से बैंगनी रंग के फूलों के लंबे स्फिंक्स के लिए जाना जाता है। यह पूर्ण सूर्य और अच्छे जल निकासी वाली मिट्टी में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "穗状车前草",
+      "description": "Veronica spicata 是一种多年生植物，因其蓝色到紫色的高花穗而闻名。它喜欢充足的阳光和良好的排水土壤。"
+    },
+    "ja": {
+      "common_name": "スパイク・スピードウェル",
+      "description": "Veronica spicata は、青紫色の高い花穂で知られる多年草です。完全な日光と良好な排水性の土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "스파이크 스피드웰",
+      "description": "Veronica spicata는 파란색에서 보라색까지의 높은 꽃이 있는 다년생 식물입니다. 햇볕이 잘 드는 곳과 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/8591/Veronica-spicata/Details",
+      "https://www.gardenia.net/plant/Veronica-spicata"
+    ]
+  }
+}

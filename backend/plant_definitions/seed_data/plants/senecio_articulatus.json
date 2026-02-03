@@ -1,18 +1,18 @@
 {
   "external_id": "senecio_articulatus",
-  "name": "Candle Plant",
+  "name": "Shrubby Ragwort",
   "latin": "Senecio articulatus",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "senecio_articulatus.jpg",
   "image_thumb": "senecio_articulatus.jpg",
   "traits": [
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 조명"
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy mix",
-          "pl": "Mieszanka piaszczysta",
-          "de": "Sandiger Mix",
-          "fr": "Mélange sableux",
-          "it": "Miscela sabbiosa",
-          "es": "Mezcla arenosa",
-          "pt": "Mistura arenosa",
-          "ar": "خليط رملي",
-          "hi": "रेत मिश्रण",
-          "zh": "沙质混合土",
-          "ja": "砂のミックス",
-          "ko": "모래 혼합 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig",
+          "de": "Moderat",
           "fr": "Modéré",
           "it": "Moderato",
           "es": "Moderado",
           "pt": "Moderado",
           "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "중간"
+          "hi": "मध्यम पानी",
+          "zh": "适中浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwe",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "简单",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Basso",
-          "es": "Baja",
-          "pt": "Baixo",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮은"
+          "en": "Low to medium",
+          "pl": "Niskie do średnich",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低～中程度の湿度",
+          "ko": "낮음에서 중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Toksyczny",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossico",
-          "es": "Tóxico",
-          "pt": "Tóxico",
-          "ar": "سام",
-          "hi": "विषैले",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic to pets",
+          "pl": "Trujący dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Candle Plant",
-      "description": "Senecio articulatus, also known as the Candle Plant, is a succulent native to South Africa. It is characterized by segmented, pale green stems that resemble linked sausages, topped with clusters of small yellow flowers."
+      "common_name": "Shrubby Ragwort",
+      "description": "Senecio articulatus is a shrubby succulent native to southern Africa. It is known for its branching growth habit and distinctive cylindrical leaves."
     },
     "pl": {
-      "common_name": "Roślina świecowa",
-      "description": "Senecio articulatus, znany również jako roślina świecowa, to sukulent pochodzący z Południowej Afryki. Charakteryzuje się segmentowanymi, bladymi zielonymi łodygami przypominającymi połączone kiełbaski, zakończonymi małymi żółtymi kwiatami."
+      "common_name": "Krzyżownik drzewiasty",
+      "description": "Senecio articulatus to krzewiasty sukulent pochodzący z południowej Afryki. Charakteryzuje się rozgałęzionym wzrostem i cylindrycznymi liśćmi."
     },
     "de": {
-      "common_name": "Kerzenpflanze",
-      "description": "Senecio articulatus, auch als Kerzenpflanze bekannt, ist eine sukkulente Pflanze aus Südafrika. Sie hat segmentierte, blassgrüne Stängel, die an verbundene Würstchen erinnern, und trägt kleine gelbe Blüten."
+      "common_name": "Strauch-Aster",
+      "description": "Senecio articulatus ist ein strauchartiger Sukkulent aus Südafrika. Er zeichnet sich durch seine verzweigte Wuchsform und zylindrische Blätter aus."
     },
     "fr": {
-      "common_name": "Plante bougie",
-      "description": "Senecio articulatus, également appelée plante bougie, est une plante succulente originaire d'Afrique du Sud. Elle se caractérise par des tiges segmentées, vert pâle, ressemblant à des saucisses reliées, surmontées de petites fleurs jaunes."
+      "common_name": "Ragwort arbustif",
+      "description": "Senecio articulatus est une succulente arbustive originaire d'Afrique du Sud. Elle se distingue par sa croissance ramifiée et ses feuilles cylindriques."
     },
     "it": {
-      "common_name": "Pianta candela",
-      "description": "Senecio articulatus, conosciuta anche come pianta candela, è una succulenta originaria del Sudafrica. Ha steli segmentati, di colore verde pallido, che ricordano salsicce collegate, e porta piccoli fiori gialli."
+      "common_name": "Ragwort arbustivo",
+      "description": "Senecio articulatus è una succulenta arbustiva originaria del Sudafrica. È conosciuta per la sua crescita ramificata e le sue foglie cilindriche."
     },
     "es": {
-      "common_name": "Planta vela",
-      "description": "Senecio articulatus, también conocida como planta vela, es una suculenta originaria de Sudáfrica. Se caracteriza por tallos segmentados de color verde pálido que parecen salchichas enlazadas, con pequeñas flores amarillas."
+      "common_name": "Ragwort arbustivo",
+      "description": "Senecio articulatus es una suculenta arbustiva originaria del sur de África. Es conocida por su hábito de crecimiento ramificado y sus hojas cilíndricas."
     },
     "pt": {
-      "common_name": "Planta vela",
-      "description": "Senecio articulatus, também conhecida como planta vela, é uma suculenta nativa da África do Sul. Apresenta caules segmentados, de cor verde pálido, que se assemelham a salsichas ligadas, e pequenas flores amarelas."
+      "common_name": "Ragwort arbustivo",
+      "description": "Senecio articulatus é uma suculenta arbustiva nativa do sul da África. É conhecida pelo seu hábito de crescimento ramificado e suas folhas cilíndricas."
     },
     "ar": {
-      "common_name": "نبات الشمعة",
-      "description": "Senecio articulatus، المعروف أيضًا بنبات الشمعة، هو نبات عصاري موطنه جنوب إفريقيا. يتميز بسيقان مجزأة ذات لون أخضر باهت تشبه السجق المتصل، ويعلوها أزهار صغيرة صفراء."
+      "common_name": "عشب شجيري",
+      "description": "Senecio articulatus هو نبات عصاري شجيري موطنه جنوب أفريقيا. يعرف بنموه المتفرع وأوراقه الأسطوانية."
     },
     "hi": {
-      "common_name": "मोमबत्ती पौधा",
-      "description": "Senecio articulatus, जिसे मोमबत्ती पौधा भी कहा जाता है, दक्षिण अफ्रीका का एक सुस्कलेंट है। इसके खंडित, हल्के हरे तने लिंक्ड सॉसेज के जैसे होते हैं और इनमें छोटे पीले फूल होते हैं।"
+      "common_name": "झाड़ीदार रैगवॉर्ट",
+      "description": "Senecio articulatus एक झाड़ीदार सूक्यूलेंट है जो दक्षिण अफ्रीका का मूल निवासी है। यह अपनी शाखाओं वाली वृद्धि और विशिष्ट सिलिंड्रिकल पत्तियों के लिए जाना जाता है."
     },
     "zh": {
-      "common_name": "蜡烛植物",
-      "description": "Senecio articulatus，亦称为蜡烛植物，是一种原产于南非的多肉植物。它的茎分段，淡绿色，像连接的香肠，顶部有小黄花。"
+      "common_name": "灌木状千屈菜",
+      "description": "Senecio articulatus 是一种来自南非的灌木状多肉植物。它因其分枝的生长习性和独特的圆柱形叶片而闻名。"
     },
     "ja": {
-      "common_name": "キャンドルプラント",
-      "description": "Senecio articulatus、別名キャンドルプラントは南アフリカ原産の多肉植物です。セグメント化された淡緑色の茎が連結されたソーセージのようで、上部には小さな黄色の花があります。"
+      "common_name": "シュラッピーラグワート",
+      "description": "Senecio articulatus は南アフリカ原産のシュラブ多肉植物です。枝分かれした成長習性と特徴的な円筒形の葉で知られています。"
     },
     "ko": {
-      "common_name": "촛불 식물",
-      "description": "Senecio articulatus, 또는 촛불 식물은 남아프리카 원산의 다육 식물입니다. 분절된 연한 녹색 줄기가 연결된 소시지처럼 보이며, 그 위에 작은 노란 꽃이 핍니다."
+      "common_name": "덤불 래그워트",
+      "description": "Senecio articulatus는 남아프리카 출신의 덤불 다육 식물입니다. 그것은 가지가 많은 성장 습관과 독특한 원통형 잎으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11949/senecio-articulatus/details",
-      "https://www.gardenia.net/plant/senecio-articulatus"
+      "https://www.rhs.org.uk/plants/30748/senecio-articulatus",
+      "https://www.succulentsandsunshine.com/senecio-articulatus-care/"
     ]
   }
 }

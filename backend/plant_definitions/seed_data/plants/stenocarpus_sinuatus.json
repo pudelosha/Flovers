@@ -7,13 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土壌",
+          "ko": "배수 잘 되는"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderates Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -84,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
+          "zh": "适中",
           "ja": "中程度",
-          "ko": "중간"
+          "ko": "보통"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Firewheel Tree",
-      "description": "Stenocarpus sinuatus, known as the Firewheel Tree, is native to Australia. It is famous for its striking red-orange flowers."
+      "description": "The Firewheel Tree is a beautiful flowering tree native to Australia. It is known for its stunning red-orange flowers."
     },
     "pl": {
-      "common_name": "Drzewo Ogniskowe",
-      "description": "Stenocarpus sinuatus, znany jako Drzewo Ogniskowe, pochodzi z Australii. Słynie ze swoich uderzających czerwono-pomarańczowych kwiatów."
+      "common_name": "Drzewo Ognistego Koła",
+      "description": "Drzewo Ognistego Koła to piękne drzewo kwitnące, pochodzące z Australii. Znane jest z imponujących czerwono-pomarańczowych kwiatów."
     },
     "de": {
       "common_name": "Feuerradbaum",
-      "description": "Stenocarpus sinuatus, auch als Feuerradbaum bekannt, stammt aus Australien. Berühmt ist er für seine auffälligen rot-orangenen Blüten."
+      "description": "Der Feuerradbaum ist ein schöner blühender Baum aus Australien, bekannt für seine auffälligen rot-orangefarbenen Blüten."
     },
     "fr": {
-      "common_name": "Arbre Roue de Feu",
-      "description": "Stenocarpus sinuatus, connu sous le nom d'Arbre Roue de Feu, est originaire d'Australie. Il est célèbre pour ses fleurs rouges-orangées éclatantes."
+      "common_name": "Arbre à roue de feu",
+      "description": "L'Arbre à roue de feu est un bel arbre à fleurs originaire d'Australie, connu pour ses magnifiques fleurs rouge-orange."
     },
     "it": {
       "common_name": "Albero Ruota di Fuoco",
-      "description": "Stenocarpus sinuatus, noto come Albero Ruota di Fuoco, è originario dell'Australia. È famoso per i suoi fiori rosso-arancioni."
+      "description": "L'Albero Ruota di Fuoco è un bellissimo albero da fiore originario dell'Australia, noto per i suoi fiori rosso-arancio."
     },
     "es": {
       "common_name": "Árbol Rueda de Fuego",
-      "description": "Stenocarpus sinuatus, conocido como Árbol Rueda de Fuego, es originario de Australia. Es famoso por sus flores rojas-anaranjadas."
+      "description": "El Árbol Rueda de Fuego es un hermoso árbol con flores originario de Australia, conocido por sus flores rojas y naranjas."
     },
     "pt": {
       "common_name": "Árvore Roda de Fogo",
-      "description": "Stenocarpus sinuatus, conhecido como Árvore Roda de Fogo, é nativo da Austrália. É famoso por suas flores vermelhas e laranja."
+      "description": "A Árvore Roda de Fogo é uma bela árvore florida nativa da Austrália, conhecida por suas flores vermelhas e laranjas."
     },
     "ar": {
       "common_name": "شجرة عجلة النار",
-      "description": "Stenocarpus sinuatus، المعروف بشجرة عجلة النار، موطنه أستراليا. إنه مشهور بزهوره الحمراء والبرتقالية."
+      "description": "شجرة عجلة النار هي شجرة مزهرة جميلة موطنها الأصلي أستراليا، ومعروفة بأزهارها الحمراء البرتقالية المدهشة."
     },
     "hi": {
-      "common_name": "आग व्हील वृक्ष",
-      "description": "Stenocarpus sinuatus, जिसे आग व्हील वृक्ष कहा जाता है, ऑस्ट्रेलिया का मूल निवासी है। यह अपनी लाल-नारंगी फूलों के लिए प्रसिद्ध है।"
+      "common_name": "आग का पहिया पेड़",
+      "description": "आग का पहिया पेड़ एक सुंदर फूलों वाला पेड़ है जो ऑस्ट्रेलिया का मूल निवासी है। यह अपने लाल-नारंगी फूलों के लिए जाना जाता है।"
     },
     "zh": {
       "common_name": "火轮树",
-      "description": "Stenocarpus sinuatus, 被称为火轮树，原产于澳大利亚。以其鲜艳的红橙色花朵而闻名。"
+      "description": "火轮树是一种美丽的开花树，原产于澳大利亚，以其红橙色的花朵而闻名。"
     },
     "ja": {
       "common_name": "ファイヤーホイールツリー",
-      "description": "Stenocarpus sinuatus、ファイヤーホイールツリーとして知られるこの植物はオーストラリア原産です。鮮やかな赤橙色の花が特徴です。"
+      "description": "ファイヤーホイールツリーはオーストラリア原産の美しい花を持つ木で、鮮やかな赤橙色の花で知られています。"
     },
     "ko": {
-      "common_name": "파이어휠트리",
-      "description": "Stenocarpus sinuatus, 파이어휠트리로 알려진 이 식물은 호주가 원산지입니다. 선명한 빨간색과 주황색 꽃으로 유명합니다."
+      "common_name": "화염바퀴나무",
+      "description": "화염바퀴나무는 호주 원산지의 아름다운 꽃나무로, 붉은 주황색 꽃으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.bgci.org",
-      "https://www.rhs.org.uk",
-      "https://www.botanicgardens.gov.au"
+      "https://www.rhs.org.uk/Plants/12351/Stenocarpus-sinuatus/Details",
+      "https://www.gardenia.net/plant/Stenocarpus-sinuatus"
     ]
   }
 }

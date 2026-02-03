@@ -1,6 +1,6 @@
 {
   "external_id": "aloe_aristata",
-  "name": "Lace Aloe",
+  "name": "Lace aloe",
   "latin": "Aloe aristata",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "aloe_aristata.jpg",
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Viel Sonne",
-          "fr": "Soleil vif",
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
           "it": "Luce intensa",
-          "es": "Sol intenso",
-          "pt": "Sol intenso",
-          "ar": "شمس ساطعة",
-          "hi": "तेज़ धूप",
-          "zh": "强光",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Gritty, fast drain",
           "pl": "Przepuszczalna",
           "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जल-निकासी मिट्टी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Oszczędne",
-          "de": "Wenig",
-          "fr": "Peu fréquent",
-          "it": "Rado",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Water when dry",
+          "pl": "Podlewaj po wysch.",
+          "de": "Gießen bei Trockenh.",
+          "fr": "Arroser sec",
+          "it": "Annaffia da asciutto",
+          "es": "Riega al secarse",
+          "pt": "Regue ao secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "마르면 물"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–25°C",
-          "pl": "10–25°C",
-          "de": "10–25°C",
-          "fr": "10–25°C",
-          "it": "10–25°C",
-          "es": "10–25°C",
-          "pt": "10–25°C",
-          "ar": "10–25°م",
-          "hi": "10–25°C",
-          "zh": "10–25°C",
-          "ja": "10–25°C",
-          "ko": "10–25°C"
+          "en": "Keep above 10°C",
+          "pl": "Powyżej 10°C",
+          "de": "Über 10°C",
+          "fr": "Au-dessus 10°C",
+          "it": "Sopra 10°C",
+          "es": "Sobre 10°C",
+          "pt": "Acima de 10°C",
+          "ar": "فوق 10°م",
+          "hi": "10°C से ऊपर",
+          "zh": "高于10°C",
+          "ja": "10°C以上",
+          "ko": "10°C 이상"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Normal, dry air",
+          "pl": "Zwykła, sucho",
+          "de": "Normal, eher trocken",
+          "fr": "Air sec, normal",
+          "it": "Aria secca ok",
+          "es": "Aire seco normal",
+          "pt": "Ar seco normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य, सूखा",
+          "zh": "普通偏干",
+          "ja": "普通で乾き気味",
+          "ko": "보통, 건조"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽い毒性",
-          "ko": "약간 독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zw.",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سام للقطط والكلاب",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -160,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow rosette",
-          "pl": "Wolna rozeta",
-          "de": "Langsam rosettig",
-          "fr": "Rosette lente",
-          "it": "Rosetta lenta",
-          "es": "Roseta lenta",
-          "pt": "Roseta lenta",
-          "ar": "نمو بطيء",
-          "hi": "धीमी रोसेट",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
-          "ko": "느린 성장"
+          "en": "Slow, clumping",
+          "pl": "Wolny, kępy",
+          "de": "Langsam, horstig",
+          "fr": "Lente, en touffes",
+          "it": "Lenta, cespugliosa",
+          "es": "Lento, en matas",
+          "pt": "Lento, em touceira",
+          "ar": "بطيء، يتكتل",
+          "hi": "धीमा, गुच्छेदार",
+          "zh": "生长慢, 丛生",
+          "ja": "遅い, 群生",
+          "ko": "느림, 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Nie przelewaj",
+          "de": "Nicht überwässern",
+          "fr": "Éviter excès d’eau",
+          "it": "Evita eccesso d'acqua",
+          "es": "Evita exceso de riego",
+          "pt": "Evite excesso d'água",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी न दें",
+          "zh": "忌积水烂根",
+          "ja": "過湿は根腐れ",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional mealybugs",
+          "pl": "Czasem wełnowce",
+          "de": "Geleg. Wollläuse",
+          "fr": "Cochenilles parfois",
+          "it": "Cocciniglie talvolta",
+          "es": "Cochinillas a veces",
+          "pt": "Cochonilhas às vezes",
+          "ar": "أحياناً بق دقيقي",
+          "hi": "कभी-कभी मिलीबग",
+          "zh": "偶见粉蚧",
+          "ja": "まれにカイガラムシ",
+          "ko": "가끔 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Lace Aloe",
-      "description": "Aloe aristata is a compact succulent native to southern Africa. It forms dense rosettes with spotted, toothed leaves. It is valued for its hardiness and ease of indoor care."
+      "common_name": "Lace aloe",
+      "description": "A compact rosette-forming succulent often listed as Aloe aristata (also sold as Aristaloe aristata). Give bright light and a fast-draining cactus/succulent mix. Water thoroughly only after the soil dries, and keep it above about 10°C; ingestion may upset pets."
     },
     "pl": {
-      "common_name": "Aloes koronkowy",
-      "description": "Aloe aristata to zwarty sukulent pochodzący z południowej Afryki. Tworzy rozety z cętkowanymi liśćmi o ząbkowanych brzegach. Jest łatwy w uprawie domowej."
+      "common_name": "Aloes ościsty",
+      "description": "Zwarta sukulenta rozetowa znana jako Aloe aristata (spotykana też jako Aristaloe aristata). Lubi jasne stanowisko i bardzo przepuszczalne podłoże do kaktusów i sukulentów. Podlewaj dopiero po całkowitym przeschnięciu ziemi i chroń przed chłodem poniżej ok. 10°C; może szkodzić zwierzętom po zjedzeniu."
     },
     "de": {
       "common_name": "Spitzen-Aloe",
-      "description": "Aloe aristata ist eine kompakte Sukkulente aus dem südlichen Afrika. Sie bildet dichte Rosetten mit gefleckten Blättern. Die Art gilt als robust und pflegeleicht."
+      "description": "Eine kompakte, rosettenbildende Sukkulente, oft als Aloe aristata verkauft (auch Aristaloe aristata). Sie braucht viel Licht und ein sehr gut drainierendes Sukkulentensubstrat. Erst gießen, wenn das Substrat vollständig abgetrocknet ist, und möglichst über ca. 10°C halten; für Haustiere potenziell giftig bei Aufnahme."
     },
     "fr": {
-      "common_name": "Aloès aristé",
-      "description": "Aloe aristata est une succulente compacte originaire d’Afrique australe. Elle forme des rosettes de feuilles ponctuées et dentées. Elle est appréciée pour sa facilité de culture."
+      "common_name": "Aloès dentelle",
+      "description": "Petite succulente en rosette souvent vendue sous Aloe aristata (aussi Aristaloe aristata). Offrez une lumière vive et un substrat très drainant pour cactus/succulentes. Arrosez seulement quand le pot est bien sec et gardez-la au-dessus d’environ 10°C; l’ingestion peut rendre les animaux malades."
     },
     "it": {
-      "common_name": "Aloe aristata",
-      "description": "Aloe aristata è una succulenta compatta originaria dell’Africa meridionale. Forma rosette dense con foglie macchiate e dentellate. È semplice da coltivare in casa."
+      "common_name": "Aloe merletto",
+      "description": "Succulenta compatta a rosetta spesso venduta come Aloe aristata (anche Aristaloe aristata). Richiede luce intensa e un terriccio per cactus/succulente molto drenante. Annaffia a fondo solo quando il substrato è asciutto e mantieni sopra circa 10°C; l’ingestione può essere nociva per gli animali domestici."
     },
     "es": {
-      "common_name": "Aloe aristata",
-      "description": "Aloe aristata es una suculenta compacta originaria del sur de África. Forma rosetas densas con hojas moteadas. Es resistente y adecuada para interiores luminosos."
+      "common_name": "Aloe encaje",
+      "description": "Suculenta compacta de roseta, conocida como Aloe aristata (también vendida como Aristaloe aristata). Necesita luz brillante y sustrato muy drenante para cactus/suculentas. Riega solo cuando el sustrato esté completamente seco y mantenla por encima de unos 10°C; la ingestión puede afectar a las mascotas."
     },
     "pt": {
-      "common_name": "Babosa rendada",
-      "description": "Aloe aristata é uma suculenta compacta da África Austral. Desenvolve rosetas densas com folhas pontilhadas. É resistente e fácil de manter em vasos."
+      "common_name": "Aloe renda",
+      "description": "Suculenta compacta em roseta frequentemente vendida como Aloe aristata (também Aristaloe aristata). Prefere luz intensa e substrato muito drenante para cactos/suculentas. Regue bem apenas quando o substrato secar totalmente e mantenha acima de cerca de 10°C; a ingestão pode ser tóxica para animais."
     },
     "ar": {
-      "common_name": "ألوة مزخرفة",
-      "description": "Aloe aristata نبات عصاري صغير موطنه جنوب أفريقيا. يشكل وُريدات كثيفة بأوراق منقطة. يتميز بسهولة العناية به داخل المنازل."
+      "common_name": "ألوة الدانتيل",
+      "description": "نبات عصاري صغير على شكل وردة يُباع غالباً باسم Aloe aristata (ويُذكر أيضاً Aristaloe aristata). يحتاج ضوءاً ساطعاً وتربة صبّار/عصاريات جيدة التصريف. اسقِ فقط بعد جفاف التربة تماماً وأبقِه فوق نحو 10°م؛ قد يسبب ابتلاعه مشاكل للحيوانات الأليفة."
     },
     "hi": {
       "common_name": "लेस एलो",
-      "description": "Aloe aristata दक्षिणी अफ्रीका का एक छोटा रसीला पौधा है। यह धब्बेदार पत्तियों की घनी रोसेट बनाता है। इसे घर के अंदर उगाना आसान है।"
+      "description": "यह एक कॉम्पैक्ट रोसेट सक्युलेंट है जिसे अक्सर Aloe aristata (Aristaloe aristata) के नाम से बेचा जाता है। इसे तेज रोशनी और अच्छी जल-निकासी वाला कैक्टस/सक्युलेंट मिक्स दें। मिट्टी पूरी सूखने पर ही गहराई से पानी दें और तापमान लगभग 10°C से ऊपर रखें; पालतू जानवरों के लिए निगलने पर हानिकारक हो सकता है।"
     },
     "zh": {
       "common_name": "蕾丝芦荟",
-      "description": "Aloe aristata 原产于南部非洲，是一种紧凑型多肉植物。它形成带斑点叶片的莲座状结构。适合明亮环境下的室内栽培。"
+      "description": "这是一种紧凑的莲座状多肉，常以 Aloe aristata 出售（也常标为 Aristaloe aristata）。需要明亮光照与排水快的多肉/仙人掌基质。盆土干透后再浇透，并尽量保持在约10°C以上；宠物误食可能引起不适。"
     },
     "ja": {
       "common_name": "レースアロエ",
-      "description": "Aloe aristata は南部アフリカ原産の小型多肉植物です。斑点のある葉で密なロゼットを形成します。丈夫で育てやすい種類です。"
+      "description": "コンパクトなロゼット状の多肉で、Aloe aristata（Aristaloe aristata としても流通）として販売されます。明るい光と水はけの良い多肉用土を好みます。用土が完全に乾いてからたっぷり与え、約10°C以上を保ちます；ペットが食べると体調不良の原因になります。"
     },
     "ko": {
       "common_name": "레이스 알로에",
-      "description": "Aloe aristata는 남부 아프리카 원산의 소형 다육식물입니다. 반점 있는 잎의 로제트를 형성합니다. 관리가 쉬워 실내 재배에 적합합니다."
+      "description": "작은 로제트형 다육으로 Aloe aristata(Aristaloe aristata로도 유통)로 판매됩니다. 밝은 빛과 배수가 좋은 다육/선인장용 흙이 필요합니다. 흙이 완전히 마른 뒤에만 흠뻑 물주고 약 10°C 이상을 유지하세요; 반려동물이 섭취하면 이상 증상이 생길 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1583/aloe-aristata/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a200",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:529902-1"
+      "https://www.rhs.org.uk/plants/389089/aristaloe-aristata/details",
+      "https://www.thespruce.com/lace-aloe-7377345",
+      "https://www.gardenersworld.com/plants/aloe-aristata/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/aloe"
     ]
   }
 }

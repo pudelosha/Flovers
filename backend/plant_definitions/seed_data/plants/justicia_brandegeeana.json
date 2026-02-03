@@ -1,25 +1,25 @@
 {
   "external_id": "justicia_brandegeeana",
-  "name": "Shrimp Plant",
+  "name": "Brazilian Purple Sage",
   "latin": "Justicia brandegeeana",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "justicia_brandegeeana.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -49,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "良好な排水性の土",
+          "ko": "잘 배수되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Sempre leggermente umida",
-          "es": "Humedad constante",
-          "pt": "Umidade constante",
-          "ar": "رطوبة منتظمة",
-          "hi": "समान नमी",
-          "zh": "保持微湿",
-          "ja": "均一に湿らせる",
-          "ko": "고르게 물주기"
+          "en": "Water when dry",
+          "pl": "Podlewać gdy suche",
+          "de": "Gießen, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando secco",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عند الجفاف",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "土壤干燥时浇水",
+          "ja": "乾いたら水をやる",
+          "ko": "건조하면 물을 주다"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27℃"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "平均的湿度",
-          "ko": "보통 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing shrub",
+          "en": "Fast growth",
           "pl": "Szybki wzrost",
           "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
-          "it": "Crescita rapida",
+          "it": "Crescita veloce",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
+          "hi": "तेज विकास",
+          "zh": "快速生长",
+          "ja": "速い成長",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Shrimp Plant",
-      "description": "Justicia brandegeeana is a tropical shrub known for its colorful shrimp-like bracts. It grows best in bright, indirect light with evenly moist soil. Regular pruning encourages compact growth and flowering."
+      "common_name": "Brazilian Purple Sage",
+      "description": "A flowering plant known for its purple blooms and attractive foliage. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Justicja krewetkowa",
-      "description": "Justicia brandegeeana to tropikalny krzew o dekoracyjnych, krewetkowatych przykwiatkach. Najlepiej rośnie w jasnym, pośrednim świetle i stale lekko wilgotnej glebie. Przycinanie sprzyja zagęszczeniu i kwitnieniu."
+      "common_name": "Szałwia brazylijska",
+      "description": "Roślina kwitnąca, znana z fioletowych kwiatów i atrakcyjnego ulistnienia. Wymaga średniego światła i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Garnelenpflanze",
-      "description": "Justicia brandegeeana ist ein tropischer Strauch mit auffälligen, garnelenartigen Hochblättern. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Regelmäßiger Rückschnitt fördert buschigen Wuchs."
+      "common_name": "Brasilianische Purpursalbei",
+      "description": "Eine blühende Pflanze, die für ihre lila Blüten und attraktives Laub bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Plante crevette",
-      "description": "Justicia brandegeeana est un arbuste tropical aux bractées colorées en forme de crevette. Elle préfère une lumière vive indirecte et un sol légèrement humide. La taille régulière stimule la floraison."
+      "common_name": "Sauge pourpre brésilienne",
+      "description": "Une plante à fleurs connue pour ses fleurs violettes et son feuillage attrayant. Elle prospère à la lumière moyenne et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Pianta gambero",
-      "description": "Justicia brandegeeana è un arbusto tropicale con brattee ornamentali simili a gamberi. Predilige luce intensa indiretta e terreno costantemente umido. La potatura favorisce una crescita compatta."
+      "common_name": "Salvia viola brasiliana",
+      "description": "Una pianta da fiore conosciuta per i suoi fiori viola e il fogliame attraente. Cresce bene con luce media e richiede irrigazione moderata."
     },
     "es": {
-      "common_name": "Planta camarón",
-      "description": "Justicia brandegeeana es un arbusto tropical con brácteas coloridas en forma de camarón. Crece mejor con luz indirecta brillante y suelo ligeramente húmedo. La poda regular mejora su forma y floración."
+      "common_name": "Salvia morada brasileña",
+      "description": "Planta con flores conocidas por sus flores moradas y su follaje atractivo. Requiere luz media y riego moderado."
     },
     "pt": {
-      "common_name": "Planta camarão",
-      "description": "Justicia brandegeeana é um arbusto tropical com brácteas decorativas semelhantes a camarões. Prefere luz indireta intensa e solo sempre levemente úmido. Podas regulares ajudam no crescimento."
+      "common_name": "Sálvia roxa brasileira",
+      "description": "Uma planta com flores conhecidas por suas flores roxas e folhagem atraente. Cresce bem com luz média e precisa de rega moderada."
     },
     "ar": {
-      "common_name": "نبات الروبيان",
-      "description": "نبات Justicia brandegeeana شجيرة استوائية مع قنابات تشبه الروبيان. يفضل الضوء الساطع غير المباشر وتربة رطبة قليلاً. التقليم المنتظم يساعد على تحسين النمو."
+      "common_name": "المريمية البنفسجية البرازيلية",
+      "description": "نبات مزهر يعرف بأزهاره البنفسجية وأوراقه الجذابة. يزدهر في الضوء المتوسط ويتطلب ريًا معتدلًا."
     },
     "hi": {
-      "common_name": "श्रिम्प प्लांट",
-      "description": "Justicia brandegeeana एक उष्णकटिबंधीय झाड़ी है जिसमें झींगा जैसे रंगीन ब्रैक्ट होते हैं। इसे तेज़ अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद है। नियमित छंटाई से बेहतर वृद्धि होती है।"
+      "common_name": "ब्राज़ीलियाई बैंगनी शालवी",
+      "description": "एक फूलों वाली पौधों जिसे उसके बैंगनी फूलों और आकर्षक पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश में पनपता है और इसमें मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "虾花",
-      "description": "Justicia brandegeeana 是一种热带灌木，以虾状彩色苞片著称。适合明亮的散射光和保持微湿的土壤。定期修剪有助于保持株型。"
+      "common_name": "巴西紫色鼠尾草",
+      "description": "一种以紫色花朵和吸引人的叶子而闻名的开花植物。它在中等光照下茁壮成长，并需要适量的浇水。"
     },
     "ja": {
-      "common_name": "シュリンププラント",
-      "description": "Justicia brandegeeana はエビのような苞が特徴の熱帯低木です。明るい間接光と適度に湿った土を好みます。剪定すると形よく育ちます。"
+      "common_name": "ブラジル紫サルビア",
+      "description": "紫色の花と魅力的な葉を持つことで知られる開花植物。中程度の光で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "쉬림프 플랜트",
-      "description": "Justicia brandegeeana는 새우 모양의 화려한 포엽이 특징인 열대 관목입니다. 밝은 간접광과 약간 촉촉한 토양을 선호합니다. 정기적인 가지치기가 성장에 도움이 됩니다."
+      "common_name": "브라질 자주색 세이지",
+      "description": "자주색 꽃과 매력적인 잎으로 알려진 꽃 식물입니다. 중간 정도의 빛에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a316",
-      "https://edis.ifas.ufl.edu/publication/FP315",
-      "https://www.rhs.org.uk/plants/justicia/brandegeeana/details"
+      "https://www.rhs.org.uk/plants/justicia-brandegeeana",
+      "https://www.bhg.com/gardening/pests-diseases-hazards/justicia-brandegeeana/"
     ]
   }
 }

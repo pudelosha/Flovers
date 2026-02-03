@@ -7,17 +7,17 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "green-plants",
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -32,7 +32,7 @@
           "en": "Medium light",
           "pl": "Średnie światło",
           "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "良好な排水",
-          "ko": "배수 좋은"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम जल देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -87,16 +87,16 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnie",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
+          "it": "Media",
           "es": "Medio",
           "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中級",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -145,13 +145,13 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact",
-          "pl": "Kompaktowy",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatto",
-          "es": "Compacto",
-          "pt": "Compacto",
-          "ar": "مضغوط",
-          "hi": "संकुचित",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "콤팩트"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Emerald Ripple Peperomia",
-      "description": "Peperomia caperata, known as Emerald Ripple Peperomia, is a small, compact houseplant with textured, heart-shaped leaves. It thrives in medium light and requires moderate watering."
+      "common_name": "Rippled peperomia",
+      "description": "Peperomia caperata, known as the rippled peperomia, is a small, slow-growing houseplant native to South America. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Peperomia falista",
-      "description": "Peperomia caperata, znana jako peperomia falista, to mała, kompaktowa roślina domowa z fakturowanymi, sercowatymi liśćmi. Rośnie najlepiej w średnim świetle i wymaga umiarkowanego podlewania."
+      "common_name": "Peperomia pofałdowana",
+      "description": "Peperomia caperata, znana jako peperomia pofałdowana, to mała, wolno rosnąca roślina doniczkowa pochodząca z Ameryki Południowej. Rośnie w średnim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Wellen-Peperomia",
-      "description": "Peperomia caperata, auch Wellen-Peperomia genannt, ist eine kleine, kompakte Zimmerpflanze mit strukturierten, herzförmigen Blättern. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
+      "common_name": "Gerippte Peperomie",
+      "description": "Peperomia caperata, auch gerippte Peperomie genannt, ist eine kleine, langsam wachsende Zimmerpflanze aus Südamerika. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
       "common_name": "Peperomia ondulée",
-      "description": "Peperomia caperata, appelée Peperomia ondulée, est une petite plante d'intérieur compacte avec des feuilles en forme de cœur et texturées. Elle préfère la lumière modérée et nécessite un arrosage modéré."
+      "description": "La Peperomia caperata, connue sous le nom de peperomia ondulée, est une petite plante d'intérieur à croissance lente originaire d'Amérique du Sud. Elle préfère une lumière modérée et un arrosage modéré."
     },
     "it": {
       "common_name": "Peperomia arricciata",
-      "description": "Peperomia caperata, nota come Peperomia arricciata, è una piccola pianta da appartamento compatta con foglie a forma di cuore e dalla texture interessante. Cresce bene in luce media e richiede annaffiature moderate."
+      "description": "Peperomia caperata, conosciuta come peperomia arricciata, è una pianta da appartamento a crescita lenta originaria del Sud America. Preferisce una luce media e ha bisogno di un'annaffiatura moderata."
     },
     "es": {
-      "common_name": "Peperomia rizada",
-      "description": "Peperomia caperata, conocida como Peperomia rizada, es una pequeña planta de interior compacta con hojas texturizadas en forma de corazón. Crece bien con luz moderada y requiere riego moderado."
+      "common_name": "Peperomia arrugada",
+      "description": "Peperomia caperata, conocida como peperomia arrugada, es una planta de interior pequeña y de crecimiento lento originaria de América del Sur. Prefiere luz media y riego moderado."
     },
     "pt": {
       "common_name": "Peperomia ondulada",
-      "description": "Peperomia caperata, também conhecida como Peperomia ondulada, é uma planta de interior compacta com folhas texturizadas em forma de coração. Ela prefere luz média e necessita de rega moderada."
+      "description": "Peperomia caperata, conhecida como peperomia ondulada, é uma planta de interior pequena e de crescimento lento originária da América do Sul. Prefere luz média e precisa de rega moderada."
     },
     "ar": {
       "common_name": "بيبيروميا متموجة",
-      "description": "بيبيروميا كابيراتا، المعروفة باسم بيبيروميا متموجة، هي نبات صغير ومضغوط بأوراق على شكل قلب ومبطن. يفضل الضوء المعتدل ويتطلب ري معتدل."
+      "description": "بيبيروميا كابيراتا، والمعروفة باسم البيبيروميا المتموجة، هي نبتة صغيرة تنمو ببطء ومصدرها من أمريكا الجنوبية. تفضل الإضاءة المتوسطة وتتطلب ريًا معتدلًا."
     },
     "hi": {
-      "common_name": "एमरल्ड रिपल पेपरमिया",
-      "description": "पेपरमिया कैपेरेट, जिसे एम्बरल्ड रिपल पेपरमिया के नाम से जाना जाता है, एक छोटा, संकुचित हाउसप्लांट है जिसकी बनावट वाली, दिल के आकार की पत्तियाँ होती हैं। यह मध्यम प्रकाश में उगता है और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "रिपल्ड पेपेरोमिया",
+      "description": "पेपरोमिया कैपराटा, जिसे रिपल्ड पेपरोमिया कहा जाता है, एक छोटी, धीमी गति से बढ़ने वाली पौधा है जो दक्षिण अमेरिका का मूल निवासी है। यह मध्यम रोशनी में उगता है और इसे नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "翡翠波纹椒草",
-      "description": "Peperomia caperata，又名翡翠波纹椒草，是一种小巧紧凑的室内植物，具有纹理丰富的心形叶子。它在中等光照下生长，且需要适度的浇水。"
+      "common_name": "波纹椒草",
+      "description": "波纹椒草（Peperomia caperata）是一种小型、缓慢生长的室内植物，原产于南美。它在中等光照下生长，并需要适度浇水。"
     },
     "ja": {
-      "common_name": "エメラルドリップルペペロミア",
-      "description": "Peperomia caperata（エメラルドリップルペペロミア）は、小さくてコンパクトな室内植物で、テクスチャーのあるハート型の葉を持っています。中程度の光で育ち、適度な水やりが必要です。"
+      "common_name": "リップルペペロミア",
+      "description": "ペペロミア・カペラータ（Peperomia caperata）は、南アメリカ原産の小さな、成長が遅い室内植物です。中程度の光を好み、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "에메랄드 리플 페페로미아",
-      "description": "Peperomia caperata, 에메랄드 리플 페페로미아로 알려진 이 식물은 질감이 있는 하트 모양의 잎을 가진 작은 실내 식물입니다. 중간 정도의 빛에서 자라며 적당한 물주기가 필요합니다."
+      "common_name": "물결 페페로미아",
+      "description": "페페로미아 카페라타(Peperomia caperata)는 남미 원산지의 작은 느리게 자라는 실내 식물입니다. 중간 정도의 빛을 선호하며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.royalhorticulturalsociety.org/",
-      "https://www.gardenia.net/plant/peperomia-caperata"
+      "https://www.rhs.org.uk/advice/profile?pid=890",
+      "https://www.gardeningknowhow.com/houseplants/peperomia/peperomia-caperata-growing.htm"
     ]
   }
 }

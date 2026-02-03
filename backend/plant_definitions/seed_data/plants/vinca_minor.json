@@ -1,0 +1,275 @@
+{
+  "external_id": "vinca_minor",
+  "name": "Lesser Periwinkle",
+  "latin": "Vinca minor",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "green-plants"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "vinca_minor.jpg",
+  "image_thumb": "vinca_minor.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好に排水された土壌",
+          "ko": "배수가 잘되는 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy to grow",
+          "pl": "Łatwy w uprawie",
+          "de": "Einfach zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل النمو",
+          "hi": "उगाना आसान है",
+          "zh": "容易种植",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे-धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie przelewać",
+          "de": "Nicht überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "عدم الري الزائد",
+          "hi": "अत्यधिक पानी न दें",
+          "zh": "不要过度浇水",
+          "ja": "過度の水やりを避けて",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lesser Periwinkle",
+      "description": "Vinca minor is a low-growing perennial with trailing stems and bright blue or purple flowers. It thrives in moderate light and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Barwinek mniejszy",
+      "description": "Vinca minor to nisko rosnąca roślina wieloletnia z pędami pełzającymi i jasnoniebieskimi lub fioletowymi kwiatami. Rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Kleines Immergrün",
+      "description": "Vinca minor ist eine niedrig wachsende Staude mit kriechenden Stängeln und hellblauen oder lila Blumen. Sie gedeiht bei mittlerem Licht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Petite pervenche",
+      "description": "Vinca minor est une plante vivace basse à tiges rampantes et des fleurs bleues ou violettes. Elle pousse sous une lumière modérée et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Pervinca minore",
+      "description": "Vinca minor è una pianta perenne a crescita bassa con fusti striscianti e fiori blu o viola. Cresce in luce moderata e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Periwinkle menor",
+      "description": "Vinca minor es una planta perenne de bajo crecimiento con tallos rastreros y flores azules o moradas. Crece con luz moderada y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Vinca menor",
+      "description": "Vinca minor é uma planta perene de baixo crescimento com caules rastejantes e flores azuis ou roxas. Cresce em luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "عشب صغير",
+      "description": "Vinca minor هو نبات معمر منخفض النمو ذو سيقان زاحفة وأزهار زرقاء أو أرجوانية. ينمو في ضوء معتدل وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "लघु पेरिविंकल",
+      "description": "Vinca minor एक निम्न-लंबाई वाली बारहमासी पौधा है, जिसमें लटकते तने और नीले या बैंगनी रंग के फूल होते हैं। यह मध्यम रोशनी और अच्छे जल निकासी वाली मिट्टी में उगता है।"
+    },
+    "zh": {
+      "common_name": "小长春花",
+      "description": "Vinca minor 是一种低矮的多年生植物，具有蔓生的茎和蓝色或紫色的花朵。它在中等光照和排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "小さなツルニチニチソウ",
+      "description": "Vinca minor は低成長の多年草で、匍匐する茎と青または紫の花を持ちます。中程度の光と排水の良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "소형 퍼리윙클",
+      "description": "Vinca minor는 낮게 자라는 다년생 식물로, 기는 줄기와 파란색 또는 보라색 꽃을 가지고 있습니다. 중간 정도의 빛과 잘 배수되는 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1129/vinca-minor",
+      "https://www.gardenia.net/plant/vinca-minor-lesser-periwinkle"
+    ]
+  }
+}

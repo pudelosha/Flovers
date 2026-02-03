@@ -1,21 +1,21 @@
 {
   "external_id": "liriope_muscari",
-  "name": "Lilyturf",
+  "name": "Liriope muscari",
   "latin": "Liriope muscari",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial shade",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Sombra parcial",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
-          "es": "Buen drenaje",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Umiarkowane",
-          "de": "Regelmäßig",
-          "fr": "Arrosage régulier",
-          "it": "Irrigazione regolare",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 관수"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Easy to grow",
+          "pl": "Łatwe w uprawie",
+          "de": "Einfach zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل الزراعة",
+          "hi": "उगाने में आसान",
+          "zh": "易于生长",
+          "ja": "育てやすい",
+          "ko": "기르기 쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "विषाक्त नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Horstig",
-          "fr": "Vivace en touffe",
-          "it": "Perenne cespitosa",
-          "es": "Perenne en mata",
-          "pt": "Perene entouceirada",
-          "ar": "نمو كتل",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "포기형"
+          "en": "Slow growth",
+          "pl": "Powolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Lilyturf",
-      "description": "Liriope muscari is an evergreen perennial with grass-like leaves and purple flower spikes. It tolerates partial shade and is commonly used as a groundcover. It adapts well to containers indoors with adequate light."
+      "description": "Liriope muscari, commonly known as lilyturf, is a hardy, perennial groundcover plant with grass-like foliage and purple flower spikes. It is popular for landscaping and can tolerate a variety of light and soil conditions."
     },
     "pl": {
       "common_name": "Liriope",
-      "description": "Liriope muscari to zimozielona bylina o trawiastych liściach i fioletowych kwiatach. Dobrze rośnie w półcieniu i bywa stosowana jako roślina okrywowa. Może być uprawiana w pojemnikach w jasnych wnętrzach."
+      "description": "Liriope muscari, znane jako liliope, to odporna, wieloletnia roślina okrywowa o trawiastych liściach i fioletowych kwiatach. Jest popularne w krajobrazach i toleruje różne warunki świetlne oraz glebowe."
     },
     "de": {
-      "common_name": "Lilientraube",
-      "description": "Liriope muscari ist eine immergrüne Staude mit grasartigen Blättern und violetten Blütenständen. Sie bevorzugt Halbschatten und wird oft als Bodendecker genutzt. Bei ausreichend Licht eignet sie sich auch für Kübel."
+      "common_name": "Liriope",
+      "description": "Liriope muscari, auch als Lilienturf bekannt, ist eine robuste, mehrjährige Bodendeckerpflanze mit grasartigen Blättern und lila Blütenständen. Sie ist beliebt in der Landschaftsgestaltung und verträgt eine Vielzahl von Licht- und Bodenbedingungen."
     },
     "fr": {
-      "common_name": "Muguet du Japon",
-      "description": "Liriope muscari est une vivace persistante aux feuilles rubanées et aux fleurs violettes. Elle apprécie la mi-ombre et sert souvent de couvre-sol. Elle peut aussi être cultivée en pot lumineux."
+      "common_name": "Liriope",
+      "description": "Liriope muscari, communément appelée herbe de lys, est une plante couvre-sol vivace et robuste avec un feuillage semblable à de l'herbe et des épis de fleurs violettes. Elle est populaire en aménagement paysager et tolère une variété de conditions de lumière et de sol."
     },
     "it": {
       "common_name": "Liriope",
-      "description": "Liriope muscari è una perenne sempreverde con foglie simili all'erba e fiori viola. Cresce bene in mezz'ombra ed è usata come tappezzante. Può adattarsi alla coltivazione in vaso in ambienti luminosi."
+      "description": "Liriope muscari, comunemente chiamato erba di giglio, è una pianta perenne resistente con foglie simili a erba e spighe di fiori viola. È popolare per l'architettura del paesaggio e tollera una varietà di condizioni di luce e suolo."
     },
     "es": {
       "common_name": "Liriope",
-      "description": "Liriope muscari es una planta perenne perenne con hojas tipo césped y flores púrpuras. Prefiere la sombra parcial y se usa como cubresuelos. Puede cultivarse en macetas con buena luz."
+      "description": "Liriope muscari, comúnmente conocida como pasto de lirio, es una planta perenne resistente con hojas similares a las de la hierba y espigas de flores moradas. Es popular para paisajismo y puede tolerar una variedad de condiciones de luz y suelo."
     },
     "pt": {
-      "common_name": "Líriope",
-      "description": "Liriope muscari é uma planta perene e perene com folhas semelhantes a grama e flores roxas. Desenvolve-se bem em meia-sombra e é usada como forração. Pode ser cultivada em vasos bem iluminados."
+      "common_name": "Liriope",
+      "description": "Liriope muscari, comumente conhecida como gramínea de lírio, é uma planta perene resistente com folhagem parecida com grama e espigas de flores roxas. É popular em paisagismo e pode tolerar uma variedade de condições de luz e solo."
     },
     "ar": {
-      "common_name": "ليوريوبي",
-      "description": "نبات Liriope muscari معمر دائم الخضرة بأوراق تشبه العشب وأزهار بنفسجية. يفضل الظل الجزئي ويستخدم كنبات غطاء أرضي. يمكن زراعته في أوعية مع إضاءة كافية."
+      "common_name": "ليوروبي",
+      "description": "Liriope muscari، والمعروفة عادة باسم عشب الزنبق، هي نبات معمر وقوي مع أوراق تشبه العشب وأزهار بنفسجية. إنها شائعة في تنسيق الحدائق ويمكنها تحمل مجموعة من ظروف الضوء والتربة."
     },
     "hi": {
-      "common_name": "लिरिओपे",
-      "description": "Liriope muscari एक सदाबहार बहुवर्षीय पौधा है जिसमें घास जैसी पत्तियाँ और बैंगनी फूल होते हैं। यह आंशिक छाया में अच्छी तरह बढ़ता है। पर्याप्त रोशनी में गमलों में भी उगाया जा सकता है।"
+      "common_name": "लिलीटर्फ",
+      "description": "लिरियोप muscari, जिसे आमतौर पर लिलीटर्फ कहा जाता है, एक कठोर, बारहमासी ग्राउंडकवर पौधा है जिसमें घास जैसी पत्तियाँ और बैंगनी फूल की कलियाँ होती हैं। यह लैंडस्केपिंग के लिए लोकप्रिय है और विभिन्न प्रकार की प्रकाश और मिट्टी की स्थितियों को सहन कर सकता है।"
     },
     "zh": {
-      "common_name": "沿阶草",
-      "description": "Liriope muscari 是一种常绿多年生植物，具有草状叶片和紫色花序。适合半阴环境，常作地被植物。光照充足时也可盆栽。"
+      "common_name": "百合草",
+      "description": "Liriope muscari，通常被称为百合草，是一种耐寒的多年生地被植物，具有类似草的叶片和紫色的花穗。它在景观美化中很受欢迎，并且可以忍受各种光照和土壤条件。"
     },
     "ja": {
-      "common_name": "ヤブラン",
-      "description": "ヤブラン（Liriope muscari）は常緑多年草で、細長い葉と紫色の花穂を持ちます。半日陰を好み、グラウンドカバーとして利用されます。明るい場所なら鉢植えも可能です。"
+      "common_name": "リリオペ",
+      "description": "Liriope muscari（リリオペ・ムスカリ）は、耐寒性があり、草のような葉と紫色の花穂を持つ多年生のグラウンドカバー植物です。風景の造園に人気があり、さまざまな光や土壌条件に耐えることができます。"
     },
     "ko": {
-      "common_name": "맥문동",
-      "description": "Liriope muscari는 상록성 다년초로 잔디 같은 잎과 보라색 꽃을 가집니다. 반그늘에서 잘 자라며 지피식물로 사용됩니다. 밝은 실내에서는 화분 재배도 가능합니다."
+      "common_name": "리리오페",
+      "description": "Liriope muscari(리리오페 무스카리)는 내구성이 뛰어난 다년생 땅덮개 식물로 풀과 같은 잎과 보라색 꽃을 가지고 있습니다. 조경에 인기가 있으며 다양한 빛과 토양 조건을 견딜 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450",
-      "https://www.rhs.org.uk/plants/10363/liriope-muscari/details"
+      "https://www.rhs.org.uk/plants/1531/liriope-muscari/details",
+      "https://www.gardeningknowhow.com/ornamental/grasses/liriope/liriope-muscari-care.htm"
     ]
   }
 }

@@ -1,8 +1,8 @@
 {
   "external_id": "syringa_vulgaris",
-  "name": "Lilac",
+  "name": "Common Lilac",
   "latin": "Syringa vulgaris",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
@@ -11,8 +11,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간광"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "बालू-मिट्टी मिश्रित मिट्टी",
-          "zh": "壤土",
-          "ja": "壌土",
-          "ko": "양토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "水はけが良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "الري المعتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "중간급 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "보통"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-20°C",
-          "pl": "10-20°C",
-          "de": "10-20°C",
-          "fr": "10-20°C",
-          "it": "10-20°C",
-          "es": "10-20°C",
-          "pt": "10-20°C",
-          "ar": "10-20°C",
-          "hi": "10-20°C",
-          "zh": "10-20°C",
-          "ja": "10-20°C",
-          "ko": "10-20°C"
+          "en": "10–20°C",
+          "pl": "10–20°C",
+          "de": "10–20°C",
+          "fr": "10–20°C",
+          "it": "10–20°C",
+          "es": "10–20°C",
+          "pt": "10–20°C",
+          "ar": "10-20 درجة مئوية",
+          "hi": "10–20°C",
+          "zh": "10–20°C",
+          "ja": "10–20°C",
+          "ko": "10–20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低から中",
+          "ko": "낮음에서 중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 성장"
+          "en": "Up to 5 m",
+          "pl": "Do 5 m",
+          "de": "Bis zu 5 m",
+          "fr": "Jusqu'à 5 m",
+          "it": "Fino a 5 m",
+          "es": "Hasta 5 m",
+          "pt": "Até 5 m",
+          "ar": "حتى 5 م",
+          "hi": "5 मीटर तक",
+          "zh": "最高5米",
+          "ja": "最大5メートル",
+          "ko": "최대 5m"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Lilac",
-      "description": "Syringa vulgaris is a deciduous shrub known for its fragrant purple flowers. It thrives in temperate climates and is commonly used as an ornamental garden plant."
+      "common_name": "Common Lilac",
+      "description": "Syringa vulgaris is a fragrant flowering shrub. It thrives in sunny spots and grows up to 5 meters in height."
     },
     "pl": {
-      "common_name": "Bez",
-      "description": "Syringa vulgaris to krzew liściasty, znany ze swoich pachnących fioletowych kwiatów. Rośnie w klimacie umiarkowanym i jest powszechnie stosowany jako roślina ozdobna."
+      "common_name": "Lilak pospolity",
+      "description": "Syringa vulgaris to pachnący krzew ozdobny. Rośnie najlepiej w słonecznych miejscach i osiąga wysokość do 5 metrów."
     },
     "de": {
-      "common_name": "Flieder",
-      "description": "Syringa vulgaris ist ein laubabwerfender Strauch, der für seine duftenden, violetten Blüten bekannt ist. Er gedeiht in gemäßigten Klimazonen und wird häufig als Zierpflanze verwendet."
+      "common_name": "Gemeiner Flieder",
+      "description": "Syringa vulgaris ist ein duftender Strauch. Er gedeiht an sonnigen Standorten und erreicht eine Höhe von bis zu 5 Metern."
     },
     "fr": {
-      "common_name": "Lilas",
-      "description": "Syringa vulgaris est un arbuste à feuilles caduques connu pour ses fleurs violettes parfumées. Il prospère dans les climats tempérés et est souvent utilisé comme plante ornementale."
+      "common_name": "Lilas commun",
+      "description": "Syringa vulgaris est un arbuste à fleurs parfumées. Il prospère dans des endroits ensoleillés et atteint jusqu'à 5 mètres de hauteur."
     },
     "it": {
-      "common_name": "Lillà",
-      "description": "Syringa vulgaris è un arbusto deciduo noto per i suoi fiori viola profumati. Cresce nei climi temperati ed è spesso utilizzato come pianta ornamentale."
+      "common_name": "Lillà comune",
+      "description": "Syringa vulgaris è un arbusto fiorito profumato. Cresce bene in posti soleggiati e raggiunge i 5 metri di altezza."
     },
     "es": {
-      "common_name": "Lila",
-      "description": "Syringa vulgaris es un arbusto caducifolio conocido por sus flores moradas fragantes. Crece en climas templados y se usa comúnmente como planta ornamental."
+      "common_name": "Lila común",
+      "description": "Syringa vulgaris es un arbusto con flores fragantes. Crece bien en lugares soleados y alcanza hasta 5 metros de altura."
     },
     "pt": {
-      "common_name": "Lilás",
-      "description": "Syringa vulgaris é um arbusto caducifólio conhecido por suas flores roxas e perfumadas. Cresce em climas temperados e é comumente utilizado como planta ornamental."
+      "common_name": "Lilás comum",
+      "description": "Syringa vulgaris é um arbusto florido e perfumado. Cresce bem em locais ensolarados e pode alcançar até 5 metros de altura."
     },
     "ar": {
-      "common_name": "اللافندر",
-      "description": "Syringa vulgaris هو شجيرة نفضية معروفة بأزهارها الأرجوانية المعطرة. تنمو في المناخات المعتدلة وغالبًا ما تستخدم كنبات زينة."
+      "common_name": "الليلاك العادي",
+      "description": "سيرينغا فولغاريس هو شجيرة مزهرة ذات رائحة عطرة. يزدهر في الأماكن المشمسة ويمكن أن يصل ارتفاعه إلى 5 أمتار."
     },
     "hi": {
-      "common_name": "लिलैक",
-      "description": "Syringa vulgaris एक पर्णपाती झाड़ी है जो अपनी सुगंधित बैंगनी फूलों के लिए जानी जाती है। यह समशीतोष्ण जलवायु में उगती है और आमतौर पर सजावटी पौधे के रूप में उपयोग की जाती है।"
+      "common_name": "सामान्य लाइलैक",
+      "description": "Syringa vulgaris एक सुगंधित फूलदार झाड़ी है। यह धूप वाली जगहों में अच्छी तरह से बढ़ता है और 5 मीटर तक ऊँचा हो सकता है।"
     },
     "zh": {
-      "common_name": "丁香",
-      "description": "Syringa vulgaris 是一种落叶灌木，以其芳香的紫色花朵而闻名。它生长在温带气候中，常被用作观赏植物。"
+      "common_name": "普通紫丁香",
+      "description": "Syringa vulgaris 是一种芳香的开花灌木。它在阳光充足的地方生长，最高可达 5 米。"
     },
     "ja": {
-      "common_name": "ライラック",
-      "description": "Syringa vulgaris は香り高い紫色の花で知られる落葉性の低木です。温帯気候で育ち、観賞用植物として一般的に使用されます。"
+      "common_name": "コモンライラック",
+      "description": "Syringa vulgaris は香りのよい花の低木です。日当たりの良い場所でよく育ち、最大で 5 メートルの高さになります。"
     },
     "ko": {
-      "common_name": "라일락",
-      "description": "Syringa vulgaris는 향기로운 보라색 꽃으로 유명한 낙엽관목입니다. 온대 기후에서 자라며 장식용 식물로 일반적으로 사용됩니다."
+      "common_name": "일반 라일락",
+      "description": "Syringa vulgaris는 향기로운 꽃이 피는 관목입니다. 햇볕이 잘 드는 곳에서 잘 자라며 최대 5미터까지 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/syringa-vulgaris",
-      "https://www.bhg.com/gardening/pests-diseases-harms/lilac-care/"
+      "https://www.gardeningknowhow.com/ornamental/shrubs/common-lilac-care.htm",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/lilac-care/"
     ]
   }
 }

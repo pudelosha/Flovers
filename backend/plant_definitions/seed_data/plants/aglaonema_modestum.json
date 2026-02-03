@@ -1,6 +1,6 @@
 {
   "external_id": "aglaonema_modestum",
-  "name": "Aglaonema Modestum",
+  "name": "Chinese evergreen",
   "latin": "Aglaonema modestum",
   "sun": "low",
   "water": "medium",
@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low to medium light",
-          "pl": "Mało do średnio światła",
-          "de": "Wenig bis mittel Licht",
-          "fr": "Faible à moyenne lumière",
+          "en": "Low–medium indirect",
+          "pl": "Słabe–średnie",
+          "de": "Wenig–mittel Licht",
+          "fr": "Lumière faible-moy",
           "it": "Luce bassa-media",
-          "es": "Luz baja a media",
-          "pt": "Luz baixa a média",
-          "ar": "إضاءة منخفضة إلى متوسطة",
-          "hi": "कम से मध्यम रोशनी",
-          "zh": "低到中等光照",
-          "ja": "弱い〜中程度の光",
-          "ko": "낮은~중간 광량"
+          "es": "Luz baja-media",
+          "pt": "Luz baixa-média",
+          "ar": "ضوء منخفض-متوسط",
+          "hi": "कम- मध्यम रोशनी",
+          "zh": "弱到中等散射光",
+          "ja": "弱〜中の間接光",
+          "ko": "약-중간 간접광"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining rich soil",
-          "pl": "Przepuszczalna żyzna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol riche drainant",
+          "en": "Well-draining aroid",
+          "pl": "Przepuszczalne",
+          "de": "Locker, gut drain.",
+          "fr": "Substrat drainant",
           "it": "Terriccio drenante",
           "es": "Sustrato drenante",
-          "pt": "Solo bem drenado",
-          "ar": "تربة غنية جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好的土壤",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "疏松排水好",
           "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "When top dries",
+          "pl": "Gdy wierzch suchy",
+          "de": "Gießen bei Trocken",
+          "fr": "Quand le dessus sèche",
+          "it": "Quando asciuga sopra",
+          "es": "Cuando se seque arriba",
+          "pt": "Quando secar em cima",
+          "ar": "اسقِ عند جفاف السطح",
+          "hi": "ऊपर सूखे तब पानी",
+          "zh": "表土干了再浇",
+          "ja": "表土乾いたら水やり",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile à cultiver",
-          "it": "Facile da curare",
-          "es": "Fácil de cuidar",
-          "pt": "Fácil de cuidar",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易于养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -115,7 +114,7 @@
           "ar": "18–27°م",
           "hi": "18–27°C",
           "zh": "18–27°C",
-          "ja": "18–27℃",
+          "ja": "18–27°C",
           "ko": "18–27°C"
         }
       }
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "en": "Average–high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel–hoch",
+          "fr": "Moyenne–élevée",
+          "it": "Media–alta",
+          "es": "Media–alta",
+          "pt": "Média–alta",
+          "ar": "متوسطة-مرتفعة",
+          "hi": "मध्यम-उच्च",
+          "zh": "中到高湿度",
+          "ja": "普通〜高湿度",
+          "ko": "보통-높음"
         }
       }
     },
@@ -145,16 +144,16 @@
         "text": {
           "en": "Toxic to pets",
           "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique pour animaux",
+          "de": "Für Tiere giftig",
+          "fr": "Toxique animaux",
           "it": "Tossica per animali",
           "es": "Tóxica para mascotas",
-          "pt": "Tóxica para pets",
+          "pt": "Tóxica p/ animais",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "hi": "पालतू हेतु विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "반려동물에 유독"
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -162,77 +161,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow upright growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow–moderate",
+          "pl": "Wolny–umiark.",
+          "de": "Langsam–mäßig",
+          "fr": "Lente–modérée",
+          "it": "Lenta–moderata",
+          "es": "Lento–moderado",
+          "pt": "Lento–moderado",
+          "ar": "بطيء-متوسط",
+          "hi": "धीमी- मध्यम",
+          "zh": "生长慢到中等",
+          "ja": "遅い〜普通",
+          "ko": "느림-보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عناكب",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧、螨虫",
+          "ja": "コナカイガラムシ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Chinese Evergreen",
-      "description": "Aglaonema modestum is a hardy tropical houseplant known for its glossy green leaves. It tolerates low light and irregular watering well. The plant is commonly used indoors for its durability."
+      "common_name": "Chinese evergreen",
+      "description": "Aglaonema modestum is a low-light tolerant houseplant grown for its durable green foliage. Let the top layer of soil dry slightly between waterings and avoid soggy conditions. Keep it warm and away from cold drafts; it is toxic to pets if chewed."
     },
     "pl": {
-      "common_name": "Aglaonema skromna",
-      "description": "Aglaonema modestum to wytrzymała roślina tropikalna o zielonych liściach. Dobrze znosi słabe światło i umiarkowane podlewanie. Często uprawiana jako roślina doniczkowa."
+      "common_name": "Aglaonema (chiński zimozielony)",
+      "description": "Aglaonema modestum dobrze znosi słabsze światło i jest uprawiana dla trwałych, zielonych liści. Podlewaj, gdy przeschnie wierzchnia warstwa podłoża, unikając zastojów wody. Trzymaj w cieple i z dala od przeciągów; roślina jest toksyczna dla zwierząt."
     },
     "de": {
       "common_name": "Kolbenfaden",
-      "description": "Aglaonema modestum ist eine robuste Zimmerpflanze mit grünen Blättern. Sie verträgt wenig Licht und gleichmäßige Wassergaben. Ideal für Innenräume."
+      "description": "Aglaonema modestum ist eine robuste Zimmerpflanze, die auch mit wenig Licht zurechtkommt. Gieße erst, wenn die obere Erdschicht leicht abgetrocknet ist, und vermeide Staunässe. Warm halten und vor Kälte schützen; beim Anknabbern ist sie für Haustiere giftig."
     },
     "fr": {
       "common_name": "Aglaonéma",
-      "description": "Aglaonema modestum est une plante tropicale résistante aux feuilles vertes. Elle supporte une faible luminosité et un arrosage modéré. Adaptée à la culture intérieure."
+      "description": "Aglaonema modestum est une plante d’intérieur tolérante à la faible lumière, appréciée pour son feuillage vert. Arrosez lorsque la surface du substrat sèche légèrement et évitez l’eau stagnante. Gardez-la au chaud, à l’abri des courants d’air froids; elle est toxique pour les animaux."
     },
     "it": {
       "common_name": "Aglaonema",
-      "description": "Aglaonema modestum è una pianta tropicale robusta con foglie verdi lucide. Tollera bene poca luce e annaffiature regolari. È comune come pianta da interno."
+      "description": "Aglaonema modestum è una pianta da interno resistente che tollera luce bassa e indiretta. Annaffia quando lo strato superiore del terriccio si asciuga leggermente ed evita ristagni. Tienila al caldo e lontano da correnti fredde; è tossica per gli animali domestici se masticata."
     },
     "es": {
       "common_name": "Aglaonema",
-      "description": "Aglaonema modestum es una planta tropical resistente de hojas verdes. Se adapta a poca luz y riego moderado. Muy utilizada en interiores."
+      "description": "Aglaonema modestum es una planta de interior resistente y tolerante a poca luz, cultivada por su follaje verde. Riega cuando se seque un poco la capa superior y evita el encharcamiento. Manténla cálida y sin corrientes frías; es tóxica para mascotas si la muerden."
     },
     "pt": {
       "common_name": "Aglaonema",
-      "description": "Aglaonema modestum é uma planta tropical resistente com folhas verdes. Tolera pouca luz e regas moderadas. Indicada para ambientes internos."
+      "description": "Aglaonema modestum é uma planta de interior resistente e tolerante a pouca luz, valorizada pela folhagem verde. Regue quando a camada superior do substrato secar levemente e evite encharcar. Mantenha em local quente e sem correntes frias; é tóxica para animais de estimação se mastigada."
     },
     "ar": {
-      "common_name": "أجلونيما",
-      "description": "أجلونيما مودستوم نبات استوائي قوي بأوراق خضراء. يتحمل الإضاءة المنخفضة والري المعتدل. مناسب للزراعة الداخلية."
+      "common_name": "أغلاونيما (دائمة الخضرة الصينية)",
+      "description": "Aglaonema modestum نبات منزلي يتحمّل الإضاءة المنخفضة ويُزرع لأوراقه الخضراء المتينة. اسقِ عندما تجف طبقة التربة العلوية قليلًا وتجنب تشبع التربة بالماء. احفظه دافئًا وبعيدًا عن التيارات الباردة؛ وهو سام للحيوانات الأليفة عند المضغ."
     },
     "hi": {
-      "common_name": "चीनी एवरग्रीन",
-      "description": "एग्लाओनेमा मोडेस्टम एक मजबूत उष्णकटिबंधीय पौधा है। यह कम रोशनी और मध्यम पानी में अच्छा बढ़ता है। आमतौर पर घरों में लगाया जाता है।"
+      "common_name": "चाइनीज़ एवरग्रीन",
+      "description": "Aglaonema modestum कम रोशनी में भी अच्छा रहने वाला इनडोर पौधा है और इसकी हरी पत्तियाँ टिकाऊ होती हैं। ऊपर की मिट्टी हल्की सूखने पर पानी दें और लगातार गीली मिट्टी से बचें। इसे गर्म रखें और ठंडी हवा से दूर रखें; चबाने पर यह पालतू जानवरों के लिए विषाक्त है।"
     },
     "zh": {
       "common_name": "广东万年青",
-      "description": "广东万年青是一种耐养的热带植物，叶片绿色有光泽。它能适应低光和适度浇水，常用于室内种植。"
+      "description": "Aglaonema modestum 耐弱光，常作室内观叶植物栽培。表土稍干再浇水，避免盆土长期积水。保持温暖并避开冷风；被宠物啃咬会有毒性。"
     },
     "ja": {
       "common_name": "アグラオネマ",
-      "description": "アグラオネマ・モデスタムは丈夫な熱帯植物です。弱い光と適度な水やりに耐えます。観葉植物として一般的です。"
+      "description": "Aglaonema modestum は弱い光にも耐える観葉植物で、緑の葉を楽しみます。表土が少し乾いてから水やりし、過湿を避けてください。暖かく保ち冷たい風を避けること、またペットがかじると有毒です。"
     },
     "ko": {
       "common_name": "아글라오네마",
-      "description": "아글라오네마 모데스툼은 관리가 쉬운 열대 식물입니다. 낮은 빛과 적당한 물주기에 잘 적응합니다. 실내에서 흔히 키웁니다."
+      "description": "Aglaonema modestum 은 약한 빛에서도 잘 자라는 실내 관엽식물로, 짙은 녹색 잎이 특징입니다. 겉흙이 약간 마르면 물을 주고 과습은 피하세요. 따뜻하게 관리하고 찬바람을 피하며, 반려동물이 씹으면 유독할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/aglaonema",
-      "https://edis.ifas.ufl.edu/publication/EP105",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282353"
+      "https://hgic.clemson.edu/factsheet/chinese-evergreen-aglaonema-care-cultivation-growing-guide/",
+      "https://plants.ces.ncsu.edu/plants/aglaonema/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chinese-evergreen",
+      "https://www.thespruce.com/grow-aglaonema-houseplants-1902734"
     ]
   }
 }

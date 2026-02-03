@@ -1,18 +1,18 @@
 {
   "external_id": "jasminum_polyanthum",
-  "name": "Pink jasmine",
+  "name": "Chinese Jasmine",
   "latin": "Jasminum polyanthum",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 잘됨"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期的",
-          "ko": "규칙적"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–24°C",
-          "pl": "10–24°C",
-          "de": "10–24°C",
-          "fr": "10–24°C",
-          "it": "10–24°C",
-          "es": "10–24°C",
-          "pt": "10–24°C",
-          "ar": "10–24°م",
-          "hi": "10–24°C",
-          "zh": "10–24°C",
-          "ja": "10–24°C",
-          "ko": "10–24°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "औसत",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Slightly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ा जहरीला",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast climber",
-          "pl": "Szybki pnącz",
-          "de": "Schnell wachsend",
-          "fr": "Grimpant rapide",
-          "it": "Rampicante veloce",
-          "es": "Trepadora rápida",
-          "pt": "Trepadeira rápida",
-          "ar": "متسلق سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "快速攀援",
-          "ja": "成長早い",
-          "ko": "빠른 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避けて",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के अनुसार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Pink jasmine",
-      "description": "Jasminum polyanthum is a fast-growing evergreen climber known for fragrant pink buds and white flowers. It prefers bright light and evenly moist soil during active growth."
+      "common_name": "Chinese Jasmine",
+      "description": "Jasminum polyanthum is a fragrant flowering plant known for its beautiful white to pink star-shaped blooms. It thrives in moderate light and requires regular watering."
     },
     "pl": {
-      "common_name": "Jaśmin różowy",
-      "description": "Jasminum polyanthum to szybko rosnące pnącze o pachnących różowych pąkach i białych kwiatach. Lubi jasne stanowiska i umiarkowanie wilgotną glebę."
+      "common_name": "Jaśmin chiński",
+      "description": "Jasminum polyanthum to pachnąca roślina kwitnąca, znana z pięknych, białych do różowych gwiazdkowatych kwiatów. Rośnie w umiarkowanym świetle i wymaga regularnego podlewania."
     },
     "de": {
-      "common_name": "Rosa Jasmin",
-      "description": "Jasminum polyanthum ist eine schnell wachsende Kletterpflanze mit duftenden Blüten. Sie benötigt viel Licht und gleichmäßig feuchte Erde."
+      "common_name": "Chinesischer Jasmin",
+      "description": "Jasminum polyanthum ist eine duftende blühende Pflanze, die für ihre schönen weißen bis rosa sternförmigen Blüten bekannt ist. Sie gedeiht bei mäßigem Licht und benötigt regelmäßiges Gießen."
     },
     "fr": {
-      "common_name": "Jasmin rose",
-      "description": "Jasminum polyanthum est une plante grimpante vigoureuse aux fleurs très parfumées. Elle apprécie une lumière vive et un arrosage régulier."
+      "common_name": "Jasmin chinois",
+      "description": "Jasminum polyanthum est une plante à fleurs parfumées, connue pour ses belles fleurs en forme d'étoile, blanches à roses. Elle prospère sous une lumière modérée et nécessite un arrosage régulier."
     },
     "it": {
-      "common_name": "Gelsomino rosa",
-      "description": "Jasminum polyanthum è un rampicante sempreverde dai fiori profumati. Cresce bene con molta luce e terreno mantenuto umido."
+      "common_name": "Gelsomino cinese",
+      "description": "Jasminum polyanthum è una pianta fiorita profumata, nota per i suoi bellissimi fiori a forma di stella, bianchi e rosa. Cresce in luce moderata e necessita di annaffiature regolari."
     },
     "es": {
-      "common_name": "Jazmín rosa",
-      "description": "Jasminum polyanthum es una trepadora de rápido crecimiento con flores fragantes. Requiere buena luz y riego regular en crecimiento."
+      "common_name": "Jazmín chino",
+      "description": "Jasminum polyanthum es una planta floreciente fragante, conocida por sus hermosas flores en forma de estrella, de color blanco a rosa. Crece con luz moderada y necesita riego regular."
     },
     "pt": {
-      "common_name": "Jasmim-rosa",
-      "description": "Jasminum polyanthum é uma trepadeira vigorosa com flores perfumadas. Prefere luz intensa e solo levemente úmido."
+      "common_name": "Jasmim chinês",
+      "description": "Jasminum polyanthum é uma planta florida perfumada, conhecida por suas belas flores em forma de estrela, de branco a rosa. Ela cresce sob luz moderada e precisa de rega regular."
     },
     "ar": {
-      "common_name": "الياسمين الوردي",
-      "description": "الياسمين الوردي نبات متسلق سريع النمو ذو أزهار عطرية. يحتاج إلى ضوء جيد وري منتظم."
+      "common_name": "ياسمين صيني",
+      "description": "Jasminum polyanthum هو نبات مزهر ذو رائحة عطرية، معروف بأزهاره الجميلة التي تتراوح من الأبيض إلى الوردي. ينمو في ضوء متوسط ويحتاج إلى ري منتظم."
     },
     "hi": {
-      "common_name": "पिंक जैस्मिन",
-      "description": "Jasminum polyanthum एक तेज़ी से बढ़ने वाली बेल है जिसमें सुगंधित फूल होते हैं। इसे तेज़ रोशनी और नियमित पानी पसंद है।"
+      "common_name": "चीनी जैस्मिन",
+      "description": "Jasminum polyanthum एक खुशबूदार फूलों वाला पौधा है, जो अपने सुंदर सफेद से गुलाबी स्टार के आकार के फूलों के लिए जाना जाता है। यह मध्यम प्रकाश में उगता है और नियमित पानी की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "粉红茉莉",
-      "description": "Jasminum polyanthum 是生长迅速的攀援植物，花香浓郁。需要充足光照和均匀浇水。"
+      "common_name": "中国茉莉花",
+      "description": "Jasminum polyanthum 是一种具有香气的开花植物，以其美丽的白色到粉红色的星形花朵而闻名。它在适度的光线下生长，并需要定期浇水。"
     },
     "ja": {
-      "common_name": "ピンクジャスミン",
-      "description": "Jasminum polyanthum は香りの強い花を咲かせるつる性植物です。明るい場所と適度な水やりを好みます。"
+      "common_name": "チャイニーズジャスミン",
+      "description": "Jasminum polyanthum は、その美しい白からピンク色の星形の花で知られる香りの良い開花植物です。中程度の光で育ち、定期的な水やりが必要です。"
     },
     "ko": {
-      "common_name": "핑크 자스민",
-      "description": "Jasminum polyanthum은 향기로운 꽃을 가진 빠르게 자라는 덩굴식물입니다. 밝은 빛과 규칙적인 물주기가 필요합니다."
+      "common_name": "중국 재스민",
+      "description": "Jasminum polyanthum은 아름다운 흰색에서 분홍색 별 모양의 꽃으로 알려진 향기 나는 꽃 식물입니다. 중간 정도의 빛에서 자라며 규칙적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/9090/jasminum-polyanthum/details",
-      "https://plants.ces.ncsu.edu/plants/jasminum-polyanthum/",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-jasmine/"
+      "https://www.rhs.org.uk/plants/96094/jasminum-polyanthum/details",
+      "https://www.gardenia.net/plant/jasminum-polyanthum-chinese-jasmine"
     ]
   }
 }

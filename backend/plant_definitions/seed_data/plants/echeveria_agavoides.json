@@ -1,6 +1,6 @@
 {
   "external_id": "echeveria_agavoides",
-  "name": "Lipstick echeveria",
+  "name": "Echeveria agavoides",
   "latin": "Echeveria agavoides",
   "sun": "high",
   "water": "low",
@@ -10,15 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
+  "fertilize_interval_days": 60,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "echeveria_agavoides.jpg",
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz intensa",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Bright direct sun",
+          "pl": "Jasne słońce",
+          "de": "Helle Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol forte",
+          "ar": "شمس قوية",
+          "hi": "तेज धूप",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Cactus mix",
-          "pl": "Podłoże kaktus.",
-          "de": "Kakteenerde",
-          "fr": "Terreau cactus",
-          "it": "Terriccio cactus",
-          "es": "Sustrato cactus",
-          "pt": "Substrato cactus",
-          "ar": "تربة صبارات",
-          "hi": "कैक्टस मिट्टी",
-          "zh": "仙人掌土",
-          "ja": "サボテン用土",
-          "ko": "선인장 흙"
+          "en": "Very well draining",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تصريف ممتاز",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 우수"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Every 2–4 wks",
-          "pl": "Co 2–4 tyg.",
-          "de": "Alle 2–4 Wo.",
-          "fr": "Tous 2–4 sem.",
-          "it": "Ogni 2–4 sett.",
-          "es": "Cada 2–4 sem.",
-          "pt": "Cada 2–4 sem.",
-          "ar": "كل ٢–٤ أسابيع",
-          "hi": "हर 2–4 हफ्ते",
-          "zh": "每2–4周浇水",
-          "ja": "2～4週ごと",
-          "ko": "2–4주마다"
+          "en": "Infrequent watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Selten gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiare poco",
+          "es": "Riego escaso",
+          "pt": "Rega pouca",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
         }
       }
     },
@@ -85,16 +84,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "容易养护",
           "ja": "簡単",
           "ko": "쉬움"
         }
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Above 10°C",
-          "pl": "Powyżej 10°C",
-          "de": "Über 10°C",
-          "fr": "Au-dessus 10°C",
-          "it": "Sopra 10°C",
-          "es": "Sobre 10°C",
-          "pt": "Acima de 10°C",
-          "ar": "أعلى من 10°م",
-          "hi": "10°C से ऊपर",
-          "zh": "10°C以上",
-          "ja": "10°C以上",
-          "ko": "10°C 이상"
+          "en": "Warm conditions",
+          "pl": "Ciepłe warunki",
+          "de": "Warm bevorzugt",
+          "fr": "Chaud",
+          "it": "Clima caldo",
+          "es": "Ambiente cálido",
+          "pt": "Clima quente",
+          "ar": "جو دافئ",
+          "hi": "गर्म तापमान",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
         }
       }
     },
@@ -124,12 +123,12 @@
       "value": {
         "text": {
           "en": "Low humidity",
-          "pl": "Niska wilgotn.",
-          "de": "Niedrige Luftf.",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Feuchte",
           "fr": "Faible humidité",
           "it": "Bassa umidità",
-          "es": "Humedad baja",
-          "pt": "Umidade baixa",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
           "hi": "कम नमी",
           "zh": "低湿度",
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic to pets",
-          "pl": "Nietoksyczna",
+          "en": "Non toxic",
+          "pl": "Nietrująca",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "पालतू-सुरक्षित",
-          "zh": "对宠物无毒",
-          "ja": "ペット無害",
-          "ko": "반려동물 무독"
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -161,80 +160,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow, compact",
-          "pl": "Wolny, zwarty",
-          "de": "Langsam, kompakt",
-          "fr": "Lente, compacte",
-          "it": "Lenta, compatta",
-          "es": "Lento, compacto",
-          "pt": "Lento, compacto",
-          "ar": "بطيء، مدمج",
-          "hi": "धीमी, सघन",
-          "zh": "缓慢紧凑",
-          "ja": "ゆっくり密",
-          "ko": "느림, 콤팩트"
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長ゆっくり",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter excès eau",
+          "it": "Evita ristagni",
+          "es": "Evitar exceso agua",
+          "pt": "Evitar excesso água",
+          "ar": "تجنب الإفراط",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs possible",
+          "pl": "Możliwe wełnowce",
+          "de": "Wollläuse möglich",
+          "fr": "Cochenilles possibles",
+          "it": "Cocciniglie possibili",
+          "es": "Cochinillas posibles",
+          "pt": "Cochonilhas possíveis",
+          "ar": "بق دقيقي محتمل",
+          "hi": "मिलीबग संभव",
+          "zh": "可能有粉蚧",
+          "ja": "コナカイガラムシ",
+          "ko": "깍지벌레 가능"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Lipstick echeveria",
-      "description": "Echeveria agavoides is a compact rosette-forming succulent from Mexico with thick, pointed leaves. Give it very bright light and a fast-draining cactus mix; water only after the soil dries out (about every 2–4 weeks indoors). Keep it warm (ideally above 10°C) and feed lightly during active growth."
+      "common_name": "Molded Wax Agave",
+      "description": "Echeveria agavoides is a compact succulent with thick, pointed leaves forming a rosette. It prefers bright direct light and infrequent watering. Overwatering can quickly cause root rot."
     },
     "pl": {
-      "common_name": "Eszeweria „Lipstick”",
-      "description": "Echeveria agavoides to zwarta sukulenta rozetowa z Meksyku o grubych, spiczastych liściach. Zapewnij bardzo jasne stanowisko i przepuszczalne podłoże do kaktusów; podlewaj dopiero po całkowitym przeschnięciu (zwykle co 2–4 tygodnie w domu). Utrzymuj temperaturę powyżej 10°C i delikatnie nawoź w okresie wzrostu."
+      "common_name": "Eszeweria agawowa",
+      "description": "Echeveria agavoides to zwarta roślina sukulentowa o mięsistych, ostrych liściach. Wymaga dużo światła i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia korzeni."
     },
     "de": {
-      "common_name": "Lippenstift-Echeverie",
-      "description": "Echeveria agavoides ist eine kompakte, rosettenbildende Sukkulente aus Mexiko mit dicken, spitzen Blättern. Stelle sie sehr hell und nutze ein gut drainierendes Kakteensubstrat; gieße erst, wenn das Substrat trocken ist (drinnen meist alle 2–4 Wochen). Halte sie über 10°C und dünge sparsam während der Wachstumszeit."
+      "common_name": "Agavenartige Echeverie",
+      "description": "Echeveria agavoides ist eine kompakte Sukkulente mit spitzen Blättern in Rosettenform. Sie braucht viel Sonne und wenig Wasser. Staunässe sollte vermieden werden."
     },
     "fr": {
-      "common_name": "Échévéria « Lipstick »",
-      "description": "Echeveria agavoides est une succulente en rosette compacte originaire du Mexique, aux feuilles épaisses et pointues. Offrez une lumière très vive et un substrat pour cactus bien drainant; arrosez seulement quand le mélange est sec (en intérieur environ toutes les 2–4 semaines). Gardez-la au-dessus de 10°C et fertilisez légèrement en période de croissance."
+      "common_name": "Échévéria agavoïde",
+      "description": "Echeveria agavoides est une succulente compacte aux feuilles épaisses et pointues. Elle aime le plein soleil et des arrosages espacés. L'excès d'eau provoque la pourriture."
     },
     "it": {
-      "common_name": "Echeveria « Lipstick »",
-      "description": "Echeveria agavoides è una succulenta a rosetta compatta originaria del Messico, con foglie spesse e appuntite. Fornisci luce molto intensa e un terriccio per cactus ben drenante; annaffia solo quando il substrato è asciutto (in casa circa ogni 2–4 settimane). Mantieni temperature sopra i 10°C e concima leggermente durante la crescita."
+      "common_name": "Echeveria agavoides",
+      "description": "Echeveria agavoides è una succulenta compatta con foglie spesse e appuntite. Richiede molta luce e poca acqua. I ristagni causano marciume radicale."
     },
     "es": {
-      "common_name": "Echeveria « Lipstick »",
-      "description": "Echeveria agavoides es una suculenta compacta en roseta originaria de México, con hojas gruesas y puntiagudas. Dale mucha luz y un sustrato para cactus bien drenante; riega solo cuando el sustrato esté seco (en interior, aprox. cada 2–4 semanas). Mantenla por encima de 10°C y fertiliza suavemente durante el crecimiento."
+      "common_name": "Echeveria agavoides",
+      "description": "Echeveria agavoides es una suculenta compacta de hojas gruesas y puntiagudas. Necesita sol directo y riegos espaciados. El exceso de agua provoca pudrición."
     },
     "pt": {
-      "common_name": "Echevéria « Lipstick »",
-      "description": "Echeveria agavoides é uma suculenta compacta em roseta, nativa do México, com folhas grossas e pontiagudas. Dê luz muito intensa e um substrato de cactos bem drenante; regue apenas quando o substrato estiver seco (em interior, cerca de cada 2–4 semanas). Mantenha acima de 10°C e adube levemente durante o período de crescimento."
+      "common_name": "Echevéria-agavoide",
+      "description": "Echeveria agavoides é uma suculenta compacta com folhas grossas e pontiagudas. Prefere sol direto e pouca rega. O excesso de água causa apodrecimento."
     },
     "ar": {
-      "common_name": "إشفيريا ليبستك",
-      "description": "Echeveria agavoides نبات عصاري صغير على شكل وردة من المكسيك بأوراق سميكة مدببة. يحتاج إلى ضوء قوي جدًا وتربة صبارات جيدة التصريف؛ اسقِ فقط بعد جفاف التربة (عادة كل 2–4 أسابيع داخل المنزل). احفظه فوق 10°م وسمّد بكمية خفيفة خلال موسم النمو."
+      "common_name": "إشيفيريا أغافويدس",
+      "description": "نبات عصاري مدمج بأوراق سميكة وحادة. يحتاج إلى ضوء قوي وري متباعد. كثرة الماء تسبب تعفن الجذور."
     },
     "hi": {
-      "common_name": "लिपस्टिक एचेवेरिया",
-      "description": "Echeveria agavoides मेक्सिको की एक छोटी, रोसेट बनाने वाली सक्युलेंट है जिसकी पत्तियाँ मोटी और नुकीली होती हैं। इसे तेज़ रोशनी और अच्छी जल-निकासी वाली कैक्टस मिट्टी दें; मिट्टी सूखने पर ही पानी दें (घर के अंदर आमतौर पर हर 2–4 हफ्ते)। तापमान 10°C से ऊपर रखें और बढ़ते मौसम में हल्का खाद दें।"
+      "common_name": "एचेवेरिया",
+      "description": "Echeveria agavoides एक छोटी रसीली पौधा है जिसकी पत्तियाँ मोटी और नुकीली होती हैं। इसे तेज रोशनी और कम पानी चाहिए। अधिक पानी से जड़ सड़ जाती है।"
     },
     "zh": {
-      "common_name": "唇膏拟石莲",
-      "description": "Echeveria agavoides 为墨西哥原产的莲座状多肉，叶片厚实且尖。给予充足明亮光照与排水良好的仙人掌土；盆土完全干后再浇水（室内通常每2–4周一次）。温度尽量保持在10°C以上，生长期可少量施肥。"
+      "common_name": "龙舌兰型拟石莲",
+      "description": "Echeveria agavoides 是一种紧凑的多肉植物，叶片厚实尖锐。喜强光和少量浇水。浇水过多容易烂根。"
     },
     "ja": {
-      "common_name": "リップスティック・エケベリア",
-      "description": "Echeveria agavoides はメキシコ原産のコンパクトなロゼット状多肉で、厚く尖った葉を持ちます。明るい光と水はけの良いサボテン用土で管理し、用土が完全に乾いてから水やりします（室内では概ね2～4週ごと）。10°C以上を保ち、生育期に薄めた肥料を少量与えます。"
+      "common_name": "エケベリア・アガボイデス",
+      "description": "エケベリア・アガボイデスは肉厚で尖った葉を持つ多肉植物です。強い日光と控えめな水やりを好みます。過湿は根腐れの原因になります。"
     },
     "ko": {
-      "common_name": "립스틱 에케베리아",
-      "description": "Echeveria agavoides는 멕시코 원산의 콤팩트한 로제트형 다육식물로 두껍고 뾰족한 잎이 특징입니다. 아주 밝은 빛과 배수가 좋은 선인장용 흙을 사용하고, 흙이 완전히 마른 뒤에만 물을 줍니다(실내 보통 2–4주 간격). 10°C 이상을 유지하고 생장기에만 옅게 비료를 줍니다."
+      "common_name": "에케베리아 아가보이데스",
+      "description": "에케베리아 아가보이데스는 두껍고 뾰족한 잎을 가진 다육식물입니다. 강한 빛과 적은 물을 선호합니다. 과습하면 뿌리가 썩습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/6220/echeveria-agavoides/details",
-      "https://www.rhs.org.uk/plants/echeveria",
-      "https://www.almanac.com/plant/complete-guide-growing-and-caring-echeveria-succulents",
-      "https://www.ruthbancroftgarden.org/plants/echeveria-agavoides/",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/blue-echeveria",
-      "https://www.monrovia.com/lipstick-echeveria.html"
+      "https://www.rhs.org.uk/plants/153203/echeveria-agavoides/details",
+      "https://www.cactus-art.biz/schede/ECHEVERIA/Echeveria_agavoides/Echeveria_agavoides.htm",
+      "https://extension.arizona.edu/pubs/succulent-care"
     ]
   }
 }

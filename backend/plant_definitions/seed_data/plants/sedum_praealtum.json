@@ -3,16 +3,16 @@
   "name": "Sedum praealtum",
   "latin": "Sedum praealtum",
   "sun": "medium",
-  "water": "medium",
+  "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -38,9 +38,9 @@
           "pt": "Luz média",
           "ar": "ضوء متوسط",
           "hi": "मध्यम रोशनी",
-          "zh": "中等光线",
+          "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी तरह से सूखा हुआ मिट्टी",
-          "zh": "良好排水的土壤",
-          "ja": "よく排水された土壌",
-          "ko": "잘 배수된 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水良好",
+          "ko": "배수 좋음"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري الماء المعتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwy",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -125,17 +125,17 @@
       "value": {
         "text": {
           "en": "Low",
-          "pl": "Niska",
+          "pl": "Niskie",
           "de": "Niedrig",
           "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
           "ar": "منخفض",
           "hi": "कम",
           "zh": "低",
           "ja": "低い",
-          "ko": "낮음"
+          "ko": "낮은"
         }
       }
     },
@@ -145,16 +145,16 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "अविषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,75 +162,113 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact growth",
-          "pl": "Kompaktowy wzrost",
-          "de": "Kompaktes Wachstum",
-          "fr": "Croissance compacte",
-          "it": "Crescita compatta",
-          "es": "Crecimiento compacto",
-          "pt": "Crescimento compacto",
-          "ar": "نمو مدمج",
-          "hi": "संकीर्ण वृद्धि",
-          "zh": "紧凑的生长",
-          "ja": "コンパクトな成長",
-          "ko": "콤팩트한 성장"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter le trop d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Tall Sedum",
-      "description": "Sedum praealtum is a succulent species native to dry rocky habitats. It has dense clusters of yellow flowers and thick, fleshy leaves."
+      "common_name": "High-Altitude Sedum",
+      "description": "Sedum praealtum is a succulent plant known for its attractive green leaves and compact growth. It thrives in moderate light and is relatively easy to care for."
     },
     "pl": {
-      "common_name": "Wysoki Sedum",
-      "description": "Sedum praealtum to gatunek sukulentu, który pochodzi z suchych, skalistych siedlisk. Ma gęste skupiska żółtych kwiatów i grube, mięsiste liście."
+      "common_name": "Sedum wysokogórski",
+      "description": "Sedum praealtum to sukulent znany ze swoich atrakcyjnych zielonych liści i zwartego wzrostu. Rośnie najlepiej w umiarkowanym świetle i jest stosunkowo łatwy w pielęgnacji."
     },
     "de": {
-      "common_name": "Hoher Fetthenne",
-      "description": "Sedum praealtum ist eine Sukkulente, die in trockenen, felsigen Lebensräumen beheimatet ist. Sie hat dichte Büschel von gelben Blumen und dicke, fleischige Blätter."
+      "common_name": "Hochgebirgsedum",
+      "description": "Sedum praealtum ist eine Sukkulente mit attraktiven grünen Blättern und kompaktem Wachstum. Es gedeiht bei mäßigem Licht und ist relativ pflegeleicht."
     },
     "fr": {
-      "common_name": "Sedum élevé",
-      "description": "Sedum praealtum est une plante succulente originaire des habitats rocheux secs. Il possède des grappes denses de fleurs jaunes et des feuilles épaisses et charnues."
+      "common_name": "Sedum des haute montagnes",
+      "description": "Le Sedum praealtum est une plante succulente connue pour ses belles feuilles vertes et sa croissance compacte. Il préfère une lumière modérée et est facile à entretenir."
     },
     "it": {
-      "common_name": "Sedum alto",
-      "description": "Sedum praealtum è una specie succulenta originaria degli habitat rocciosi secchi. Ha densi ciuffi di fiori gialli e foglie spesse e carnose."
+      "common_name": "Sedum delle alte montagne",
+      "description": "Il Sedum praealtum è una pianta succulenta conosciuta per le sue foglie verdi attraenti e la crescita compatta. Cresce bene con luce moderata ed è relativamente facile da curare."
     },
     "es": {
-      "common_name": "Sedum alto",
-      "description": "Sedum praealtum es una especie suculenta originaria de hábitats rocosos secos. Tiene racimos densos de flores amarillas y hojas gruesas y carnosas."
+      "common_name": "Sedum de gran altitud",
+      "description": "Sedum praealtum es una planta suculenta conocida por sus atractivas hojas verdes y su crecimiento compacto. Crece bien con luz moderada y es relativamente fácil de cuidar."
     },
     "pt": {
-      "common_name": "Sedum alto",
-      "description": "Sedum praealtum é uma planta suculenta nativa de habitats rochosos secos. Possui densos cachos de flores amarelas e folhas espessas e carnudas."
+      "common_name": "Sedum de grande altitude",
+      "description": "Sedum praealtum é uma planta suculenta conhecida por suas folhas verdes atraentes e crescimento compacto. Ela prospera com luz moderada e é relativamente fácil de cuidar."
     },
     "ar": {
-      "common_name": "سدوم طويل",
-      "description": "Sedum praealtum هو نوع من النباتات العصارية التي تنمو في البيئات الصخرية الجافة. يحتوي على عناقيد كثيفة من الزهور الصفراء وأوراق سميكة وعصارية."
+      "common_name": "سدوم عالي الارتفاع",
+      "description": "Sedum praealtum هي نبتة عصارية معروفة بأوراقها الخضراء الجذابة ونموها المدمج. تنمو بشكل جيد في الضوء المعتدل وسهلة العناية بها."
     },
     "hi": {
-      "common_name": "ऊँचा सेडम",
-      "description": "Sedum praealtum एक सुखाड़, चट्टानी निवास से उत्पन्न होने वाली मांसल पौधे की प्रजाति है। इसमें पीले फूलों का घना गुच्छा और मोटे, मांसल पत्ते होते हैं।"
+      "common_name": "उच्च ऊंचाई वाला सेडम",
+      "description": "Sedum praealtum एक मांसल पौधा है जो अपनी आकर्षक हरी पत्तियों और कॉम्पैक्ट वृद्धि के लिए जाना जाता है। यह मध्यम रोशनी में अच्छा बढ़ता है और देखभाल में अपेक्षाकृत आसान है।"
     },
     "zh": {
-      "common_name": "高大景天",
-      "description": "Sedum praealtum 是一种原产于干燥岩石栖息地的多肉植物。它有密集的黄色花簇和厚实的肉质叶片。"
+      "common_name": "高山景天",
+      "description": "Sedum praealtum 是一种多肉植物，以其吸引人的绿色叶子和紧凑的生长而闻名。它在中等光照下生长良好，且相对易于护理。"
     },
     "ja": {
-      "common_name": "高いセダム",
-      "description": "Sedum praealtum は乾燥した岩場に自生する多肉植物です。黄色の花が密集した花序と、厚い肉質の葉を持っています。"
+      "common_name": "高山セダム",
+      "description": "Sedum praealtumは、その魅力的な緑色の葉とコンパクトな成長で知られる多肉植物です。適度な光の中でよく育ち、比較的手入れが簡単です。"
     },
     "ko": {
-      "common_name": "높은 세덤",
-      "description": "Sedum praealtum은 건조한 바위 환경에서 자생하는 다육 식물입니다. 노란 꽃이 밀집된 꽃차례와 두껍고 육질의 잎을 가지고 있습니다."
+      "common_name": "고산 세덤",
+      "description": "Sedum praealtum은 매력적인 녹색 잎과 컴팩트한 성장으로 알려진 다육 식물입니다. 적당한 빛에서 잘 자라며 관리가 비교적 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/162015/sedum-praealtum/details",
+      "https://www.rhs.org.uk/plants/1234",
       "https://www.gardenia.net/plant/sedum-praealtum"
     ]
   }

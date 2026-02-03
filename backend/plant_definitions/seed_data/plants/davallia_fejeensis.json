@@ -1,9 +1,9 @@
 {
   "external_id": "davallia_fejeensis",
-  "name": "Rabbit's Foot Fern",
+  "name": "Rabbit's foot fern",
   "latin": "Davallia fejeensis",
   "sun": "medium",
-  "water": "medium",
+  "water": "high",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,16 +11,16 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "fern"
   ],
   "water_required": true,
-  "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "water_interval_days": 6,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 30,
   "image_hero": "davallia_fejeensis.jpg",
   "image_thumb": "davallia_fejeensis.jpg",
   "traits": [
@@ -29,14 +29,14 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumiere indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज पर अप्रत्यक्ष",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy organic mix",
-          "pl": "Przepuszczalne",
-          "de": "Lockeres Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato leve",
-          "ar": "تربة خفيفة",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性用土",
-          "ko": "통기성 흙"
+          "en": "Airy fern mix",
+          "pl": "Przepuszczalna",
+          "de": "Luftig, humos",
+          "fr": "Melange aerien",
+          "it": "Misto arioso",
+          "es": "Mezcla aireada",
+          "pt": "Mistura arejada",
+          "ar": "خليط خفيف وجيد",
+          "hi": "हवादार फर्न मिक्स",
+          "zh": "疏松蕨类土",
+          "ja": "通気性の良い土",
+          "ko": "통기성 좋은 흙"
         }
       }
     },
@@ -67,17 +67,17 @@
       "value": {
         "text": {
           "en": "Keep lightly moist",
-          "pl": "Lekko wilgotna",
+          "pl": "Lekko wilgotno",
           "de": "Leicht feucht",
-          "fr": "Légèrement humide",
-          "it": "Leggermente umido",
-          "es": "Ligeramente húmedo",
-          "pt": "Levemente úmido",
-          "ar": "رطوبة خفيفة",
-          "hi": "हल्की नमी",
+          "fr": "Substrat humide",
+          "it": "Sempre umido",
+          "es": "Siempre humedo",
+          "pt": "Levemente umido",
+          "ar": "تربة رطبة قليلا",
+          "hi": "हल्का नम रखें",
           "zh": "保持微湿",
-          "ja": "やや湿潤",
-          "ko": "약간 촉촉"
+          "ja": "軽く湿らせる",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittel schwer",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Srednia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Media",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "16–24°C",
+          "pl": "16–24°C",
+          "de": "16–24°C",
+          "fr": "16–24°C",
+          "it": "16–24°C",
+          "es": "16–24°C",
+          "pt": "16–24°C",
+          "ar": "16–24°م",
+          "hi": "16–24°C",
+          "zh": "16–24°C",
+          "ja": "16–24°C",
+          "ko": "16–24°C"
         }
       }
     },
@@ -124,16 +124,16 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgotność",
+          "pl": "Wysoka wilgotnosc",
           "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
+          "fr": "Humidite elevee",
+          "it": "Alta umidita",
+          "es": "Humedad alta",
           "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
-          "zh": "高湿度",
-          "ja": "高湿度",
+          "ar": "رطوبة مرتفعة",
+          "hi": "उच्च आर्द्रता",
+          "zh": "较高湿度",
+          "ja": "高い湿度",
           "ko": "높은 습도"
         }
       }
@@ -147,10 +147,10 @@
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
+          "es": "No toxica",
+          "pt": "Nao toxica",
           "ar": "غير سامة",
-          "hi": "विषहीन",
+          "hi": "विषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping fern",
-          "pl": "Paproć kępowa",
-          "de": "Horstartig",
-          "fr": "Fougère en touffe",
-          "it": "Felce cespitosa",
-          "es": "Helecho en mata",
-          "pt": "Samambaia densa",
-          "ar": "نمو متكتل",
-          "hi": "गुच्छेदार",
-          "zh": "丛生蕨类",
-          "ja": "株立ち",
-          "ko": "군생 성장"
+          "en": "Slow–moderate",
+          "pl": "Wolny–sredni",
+          "de": "Langsam–mittel",
+          "fr": "Lente a moderee",
+          "it": "Lenta–media",
+          "es": "Lento–medio",
+          "pt": "Lento–medio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी–मध्यम",
+          "zh": "缓慢到中等",
+          "ja": "ゆっくり〜普通",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunasse",
+          "fr": "Eviter l exces d eau",
+          "it": "No ristagni",
+          "es": "Evitar encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, scale",
+          "pl": "Przedziorki, tarczniki",
+          "de": "Spinnmilben, Schildl",
+          "fr": "Acarien, cochenille",
+          "it": "Acari, cocciniglia",
+          "es": "Acaros, cochinilla",
+          "pt": "Acarios, cochonilha",
+          "ar": "عناكب حمراء وبق",
+          "hi": "माइट्स, स्केल",
+          "zh": "红蜘蛛, 介壳虫",
+          "ja": "ハダニ, カイガラム",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rabbit's Foot Fern",
-      "description": "Davallia fejeensis is a tropical fern known for its fuzzy rhizomes that creep over the soil surface. It prefers bright, indirect light and consistently moist, well-aerated substrate. High humidity supports healthy frond growth indoors."
+      "common_name": "Rabbit's foot fern",
+      "description": "Davallia fejeensis is a fern with creeping, fuzzy rhizomes and lacy fronds. It grows best in bright, indirect light with evenly moist, well-draining fern mix. Keep it warm and avoid waterlogged soil to reduce rot risk."
     },
     "pl": {
       "common_name": "Paprotka królicza łapka",
-      "description": "Davallia fejeensis to tropikalna paproć o charakterystycznych, owłosionych kłączach. Najlepiej rośnie w jasnym, rozproszonym świetle i stale lekko wilgotnym podłożu. Wysoka wilgotność powietrza sprzyja zdrowemu wzrostowi."
+      "description": "Davallia fejeensis to paproć z pełzającymi, puszystymi kłączami i delikatnymi liśćmi. Najlepiej rośnie w jasnym, rozproszonym świetle i w stale lekko wilgotnym, przepuszczalnym podłożu dla paproci. Lubi ciepło; unikaj przelania i zastoin wody."
     },
     "de": {
       "common_name": "Hasenpfotenfarn",
-      "description": "Davallia fejeensis ist ein tropischer Farn mit auffälligen, behaarten Rhizomen. Er benötigt helles, indirektes Licht und gleichmäßig feuchtes, luftiges Substrat. Hohe Luftfeuchtigkeit fördert kräftiges Wachstum."
+      "description": "Davallia fejeensis ist ein Farn mit kriechenden, filzigen Rhizomen und feinen Wedeln. Er bevorzugt helles, indirektes Licht und ein gleichmäßig leicht feuchtes, gut drainierendes Farnsubstrat. Warm halten und Staunässe vermeiden, um Fäulnis zu verhindern."
     },
     "fr": {
-      "common_name": "Fougère patte-de-lapin",
-      "description": "Davallia fejeensis est une fougère tropicale aux rhizomes duveteux visibles. Elle apprécie une lumière vive sans soleil direct et un substrat légèrement humide. Une forte humidité ambiante est recommandée."
+      "common_name": "Fougère patte de lapin",
+      "description": "Davallia fejeensis est une fougère aux rhizomes rampants et duveteux et aux frondes fines. Elle préfère une lumière vive indirecte et un substrat pour fougères restant légèrement humide mais drainant. Gardez-la au chaud et évitez l’excès d’eau pour limiter la pourriture."
     },
     "it": {
       "common_name": "Felce zampa di coniglio",
-      "description": "Davallia fejeensis è una felce tropicale con rizomi pelosi decorativi. Cresce bene con luce indiretta e terreno costantemente umido ma drenante. L'umidità elevata aiuta a mantenere le fronde sane."
+      "description": "Davallia fejeensis è una felce con rizomi striscianti e pelosi e fronde leggere. Preferisce luce intensa ma indiretta e un terriccio per felci ben drenante, mantenuto leggermente umido. Tienila al caldo ed evita ristagni per ridurre il rischio di marciume."
     },
     "es": {
       "common_name": "Helecho pata de conejo",
-      "description": "Davallia fejeensis es un helecho tropical con rizomas vellosos visibles. Prefiere luz indirecta brillante y sustrato ligeramente húmedo. La humedad ambiental alta favorece su desarrollo."
+      "description": "Davallia fejeensis es un helecho con rizomas rastreros y vellosos y frondes finas. Crece mejor con luz brillante e indirecta y un sustrato para helechos que se mantenga ligeramente húmedo y con buen drenaje. Manténlo cálido y evita el encharcamiento para prevenir pudrición."
     },
     "pt": {
-      "common_name": "Samambaia-pé-de-coelho",
-      "description": "Davallia fejeensis é uma samambaia tropical com rizomas felpudos ornamentais. Deve ser cultivada em luz indireta e solo levemente úmido e bem drenado. Umidade alta é importante para o crescimento saudável."
+      "common_name": "Samambaia pé-de-coelho",
+      "description": "Davallia fejeensis é uma samambaia com rizomas rastejantes e felpudos e frondes delicadas. Prefere luz forte indireta e um substrato para samambaias bem drenado, mantido levemente úmido. Mantenha em ambiente quente e evite encharcamento para reduzir risco de podridão."
     },
     "ar": {
       "common_name": "سرخس قدم الأرنب",
-      "description": "Davallia fejeensis نبات سرخسي استوائي يتميز بجذامير مكسوة بالزغب. يفضل الضوء الساطع غير المباشر وتربة رطبة جيدة التهوية. الرطوبة العالية تساعد على نمو الأوراق."
+      "description": "Davallia fejeensis سرخس ذو جذامير زاحفة مكسوة بزغب وأوراق ريشية. يفضل ضوءًا ساطعًا غير مباشر وتربة سرخسية جيدة التصريف تبقى رطبة قليلًا. حافظ على الدفء وتجنب تشبع التربة بالماء لتقليل خطر التعفن."
     },
     "hi": {
-      "common_name": "रैबिट्स फुट फ़र्न",
-      "description": "Davallia fejeensis एक उष्णकटिबंधीय फ़र्न है जिसकी जड़ें रोएंदार होती हैं। इसे तेज अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद है। अच्छी वृद्धि के लिए उच्च नमी आवश्यक है।"
+      "common_name": "रैबिट्स फुट फर्न",
+      "description": "Davallia fejeensis एक फर्न है जिसमें रेंगते, रोएंदार राइज़ोम और हल्की फ्रॉन्ड्स होती हैं। इसे तेज़ लेकिन अप्रत्यक्ष रोशनी और फर्न के लिए अच्छी जलनिकासी वाली मिट्टी में हल्का नम रखना पसंद है। गर्म रखें और जलभराव से बचें ताकि सड़न का खतरा कम हो।"
     },
     "zh": {
       "common_name": "兔脚蕨",
-      "description": "Davallia fejeensis 是一种热带蕨类，以其毛茸茸的根茎著称。适合明亮的散射光和保持微湿的疏松基质。较高的空气湿度有助于健康生长。"
+      "description": "Davallia fejeensis 是一种蕨类，具有匍匐的绒毛状根茎和细碎叶片。适合明亮散射光，并使用排水良好的蕨类基质，保持微湿但不积水。保持温暖并避免过湿，以降低腐烂风险。"
     },
     "ja": {
-      "common_name": "ラビットフットファーン",
-      "description": "Davallia fejeensis は毛に覆われた根茎が特徴の熱帯性シダです。明るい間接光と適度に湿った用土を好みます。高い湿度が葉の生育を助けます。"
+      "common_name": "ウサギノオシダ（ラビットフットファーン）",
+      "description": "Davallia fejeensis は、毛のある匍匐性の根茎と繊細な葉をもつシダです。明るい間接光と、水はけのよいシダ用土で、用土を軽く湿らせる管理が向きます。暖かく保ち、過湿や水のたまりを避けて腐れを防ぎます。"
     },
     "ko": {
-      "common_name": "토끼발 고사리",
-      "description": "Davallia fejeensis는 털이 있는 뿌리줄기가 특징인 열대 고사리입니다. 밝은 간접광과 약간 촉촉한 토양에서 잘 자랍니다. 높은 습도가 건강한 성장을 돕습니다."
+      "common_name": "토끼발고사리",
+      "description": "Davallia fejeensis 는 보송한 뿌리줄기와 섬세한 잎을 가진 고사리입니다. 밝은 간접광과 배수가 좋은 고사리용 흙에서 흙을 촉촉하게 유지하는 것이 좋습니다. 따뜻하게 관리하고 과습과 고인 물을 피하면 뿌리썩음을 줄일 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/5708/davallia-fejeensis/details",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-davallia-ferns/",
-      "https://edis.ifas.ufl.edu/publication/EP507"
+      "https://plants.ces.ncsu.edu/plants/davallia-solida-var-fejeensis/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/dainty-rabbits-foot-fern",
+      "https://www.mahoneysgarden.com/wp-content/uploads/2024/12/Rabbits-Foot-Fern.pdf",
+      "https://www.ourhouseplants.com/plants/rabbits-foot-fern-davallia-humata-tyermanii",
+      "https://www.ukhouseplants.com/plants/rabbit-foot-fern-davallia-fejeensis"
     ]
   }
 }

@@ -7,19 +7,19 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
+    "plastic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "stachys_byzantina.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Światło średnie",
-          "de": "Mittlere Sonne",
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम धूप",
-          "zh": "中等阳光",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 햇빛"
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Suolo argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "बलुआ मिट्टी",
-          "zh": "壤土",
-          "ja": "ローム土",
-          "ko": "로암 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "ري مياه متوسطة",
-          "hi": "मध्यम पानी",
-          "zh": "中等水分",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwe",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "简单",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Easy to grow",
+          "pl": "Łatwy w uprawie",
+          "de": "Leicht zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل النمو",
+          "hi": "उगाने में आसान",
+          "zh": "容易生长",
+          "ja": "育てやすい",
+          "ko": "기르기 쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-25°C",
-          "pl": "10-25°C",
-          "de": "10-25°C",
-          "fr": "10-25°C",
-          "it": "10-25°C",
-          "es": "10-25°C",
-          "pt": "10-25°C",
-          "ar": "10-25°C",
-          "hi": "10-25°C",
-          "zh": "10-25°C",
-          "ja": "10-25°C",
-          "ko": "10-25°C"
+          "en": "12-24°C",
+          "pl": "12-24°C",
+          "de": "12-24°C",
+          "fr": "12-24°C",
+          "it": "12-24°C",
+          "es": "12-24°C",
+          "pt": "12-24°C",
+          "ar": "12-24°C",
+          "hi": "12-24°C",
+          "zh": "12-24°C",
+          "ja": "12-24°C",
+          "ko": "12-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Low to medium humidity",
+          "pl": "Niska do średniej wilgotności",
+          "de": "Geringe bis mittlere Luftfeuchtigkeit",
+          "fr": "Humidité faible à moyenne",
+          "it": "Umidità bassa a media",
+          "es": "Humedad baja a media",
+          "pt": "Umidade baixa a média",
+          "ar": "رطوبة منخفضة إلى متوسطة",
+          "hi": "कम से मध्यम आर्द्रता",
+          "zh": "低到中等湿度",
+          "ja": "低から中程度の湿度",
+          "ko": "낮은 습도에서 중간 습도"
         }
       }
     },
@@ -145,13 +145,13 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "असामयिक",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Ground cover",
-          "pl": "Pokrywa ziemi",
-          "de": "Bodenbedeckung",
-          "fr": "Couverture du sol",
-          "it": "Copertura del suolo",
-          "es": "Cobertura del suelo",
-          "pt": "Cobertura do solo",
-          "ar": "تغطية الأرض",
-          "hi": "भूमि आवरण",
-          "zh": "地面覆盖",
-          "ja": "地面カバー",
-          "ko": "지면 덮개"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "生长缓慢到中等",
+          "ja": "遅いから中程度の成長",
+          "ko": "느린 성장에서 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Lamb's Ear",
-      "description": "Stachys byzantina is a hardy perennial, known for its silvery-green, velvety foliage. It is often used in ground cover or borders."
+      "description": "Stachys byzantina, commonly known as Lamb's Ear, is a perennial plant. It thrives in moderate sunlight and prefers well-draining soil."
     },
     "pl": {
-      "common_name": "Uszy baranka",
-      "description": "Stachys byzantina to odporna roślina wieloletnia, znana z srebrno-zielonych, aksamitnych liści. Często wykorzystywana jako roślina okrywowa."
+      "common_name": "Uszy jagnięce",
+      "description": "Stachys byzantina, znana jako Uszy jagnięce, to roślina wieloletnia. Rośnie najlepiej przy umiarkowanym świetle i w glebie dobrze przepuszczalnej."
     },
     "de": {
       "common_name": "Lammohren",
-      "description": "Stachys byzantina ist eine robuste Staude mit silbrig-grünen, samtigen Blättern. Sie wird oft als Bodendecker verwendet."
+      "description": "Stachys byzantina, auch als Lammohren bekannt, ist eine mehrjährige Pflanze. Sie gedeiht bei mäßigem Licht und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Oreilles de mouton",
-      "description": "Stachys byzantina est une plante vivace résistante, connue pour son feuillage vert argenté et velouté. Elle est souvent utilisée en couvre-sol."
+      "common_name": "Oreilles de Mouton",
+      "description": "Stachys byzantina, communément appelée Oreilles de Mouton, est une plante vivace. Elle prospère sous une lumière modérée et préfère un sol bien drainé."
     },
     "it": {
-      "common_name": "Orecchie di agnello",
-      "description": "Stachys byzantina è una pianta perenne resistente, conosciuta per il suo fogliame vellutato verde argentato. Spesso usata come copertura del terreno."
+      "common_name": "Orecchie di Pecora",
+      "description": "Stachys byzantina, comunemente chiamata Orecchie di Pecora, è una pianta perenne. Cresce bene in luce moderata e preferisce un terreno ben drenato."
     },
     "es": {
-      "common_name": "Orejas de cordero",
-      "description": "Stachys byzantina es una planta perenne resistente, conocida por su follaje verde plateado y aterciopelado. A menudo se utiliza como cubresuelo."
+      "common_name": "Orejas de Cordero",
+      "description": "Stachys byzantina, conocida como Orejas de Cordero, es una planta perenne. Crece bien con luz moderada y prefiere suelos bien drenados."
     },
     "pt": {
-      "common_name": "Orelhas de cordeiro",
-      "description": "Stachys byzantina é uma planta perene resistente, conhecida por suas folhas verde prateadas e aveludadas. Frequentemente usada como cobertura de solo."
+      "common_name": "Orelhas de Cordeiro",
+      "description": "Stachys byzantina, também conhecida como Orelhas de Cordeiro, é uma planta perene. Gosta de luz moderada e prefere solo bem drenado."
     },
     "ar": {
       "common_name": "أذن الحمل",
-      "description": "Stachys byzantina هي نبتة معمرة مقاومة، معروفة بأوراقها الفضية الخضراء والمخملية. وغالبًا ما تستخدم في تغطية الأرض."
+      "description": "Stachys byzantina، والمعروفة بأذن الحمل، هي نبات معمر. يزدهر تحت ضوء معتدل ويفضل التربة جيدة التصريف."
     },
     "hi": {
       "common_name": "भेड़ के कान",
-      "description": "Stachys byzantina एक कठोर बारहमासी पौधा है, जो अपनी चांदी-हरी, मखमली पत्तियों के लिए जाना जाता है। इसे अक्सर जमीन पर ढकने के लिए उपयोग किया जाता है।"
+      "description": "Stachys byzantina, जिसे भेड़ के कान के नाम से जाना जाता है, एक बहु-वर्षीय पौधा है। यह मध्यम प्रकाश में उगता है और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
       "common_name": "羊耳草",
-      "description": "Stachys byzantina 是一种耐寒的多年生植物，以其银绿色、天鹅绒般的叶片而闻名。通常用于地面覆盖。"
+      "description": "Stachys byzantina，通常称为羊耳草，是一种多年生植物。它在中等光照下生长，喜欢排水良好的土壤。"
     },
     "ja": {
-      "common_name": "ヒツジの耳",
-      "description": "Stachys byzantina は、銀緑色のベルベットのような葉を持つ耐寒性の多年草です。主にグラウンドカバーやボーダーに使用されます。"
+      "common_name": "ラムズイヤー",
+      "description": "Stachys byzantina、一般にラムズイヤーとして知られるこの植物は多年生です。中程度の光の下で育ち、排水性の良い土壌を好みます。"
     },
     "ko": {
       "common_name": "양 귀",
-      "description": "Stachys byzantina는 은색 녹색의 벨벳 같은 잎을 가진 내한성 다년초입니다. 주로 지면 덮개나 경계 식물로 사용됩니다."
+      "description": "Stachys byzantina, 일반적으로 양 귀로 알려진 이 식물은 다년생입니다. 중간 정도의 빛에서 자라며 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenersworld.com/plants/stachys-byzantina/",
-      "https://www.rhs.org.uk/plants/133199/stachys-byzantina/details"
+      "https://www.rhs.org.uk/plants/stachys-byzantina",
+      "https://www.gardenia.net/plant/Stachys-byzantina"
     ]
   }
 }

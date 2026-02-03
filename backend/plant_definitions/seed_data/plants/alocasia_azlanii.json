@@ -1,9 +1,9 @@
 {
   "external_id": "alocasia_azlanii",
-  "name": "Alocasia azlanii",
+  "name": "Jewel Alocasia",
   "latin": "Alocasia azlanii",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
@@ -16,7 +16,7 @@
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,14 +29,14 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining aroid",
-          "pl": "Przepuszczalne",
-          "de": "Gut drainierend",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Chunky aroid mix",
+          "pl": "Przepuszczalne aroid",
+          "de": "Lockere Aroid-Mix",
+          "fr": "Mélange aroid aéré",
+          "it": "Mix aroid drenante",
+          "es": "Sustrato aroid aireado",
+          "pt": "Mistura aroid solta",
+          "ar": "خليط أرويد مفكك",
+          "hi": "हवादार एरॉइड मिक्स",
+          "zh": "疏松天南星土",
+          "ja": "粗めのアロイド土",
+          "ko": "통기성 아로이드토"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Utrzymuj wilgoć",
-          "de": "Feucht halten",
-          "fr": "Garder humide",
-          "it": "Sempre umido",
-          "es": "Mantener húmedo",
-          "pt": "Manter úmido",
-          "ar": "تبقى رطبة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿度を保つ",
-          "ko": "촉촉하게"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht halten",
+          "fr": "Garder légèrement humide",
+          "it": "Terriccio appena umido",
+          "es": "Mantener algo húmedo",
+          "pt": "Manter levemente úmido",
+          "ar": "تربة رطبة قليلًا",
+          "hi": "मिट्टी हल्की नम",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Challenging",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Impegnativa",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "متطلبة",
+          "hi": "थोड़ा कठिन",
+          "zh": "较难养护",
+          "ja": "やや難しい",
+          "ko": "관리 어려움"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "Warm 16–30°C",
+          "pl": "Ciepło 16–30°C",
+          "de": "Warm 16–30°C",
+          "fr": "Chaud 16–30°C",
+          "it": "Caldo 16–30°C",
+          "es": "Cálido 16–30°C",
+          "pt": "Quente 16–30°C",
+          "ar": "دافئ 16–30°م",
+          "hi": "गरम 16–30°C",
+          "zh": "温暖 16–30°C",
+          "ja": "16–30°Cの暖かさ",
+          "ko": "따뜻함 16–30°C"
         }
       }
     },
@@ -124,12 +124,12 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Feuchte",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow–moderate",
+          "pl": "Wolny–średni",
+          "de": "Langsam–mäßig",
+          "fr": "Lente à modérée",
+          "it": "Lenta–moderata",
+          "es": "Lento–moderado",
+          "pt": "Lento–moderado",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी–मध्यम",
+          "zh": "生长缓慢到中等",
+          "ja": "遅め〜普通",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No cold or soggy soil",
+          "pl": "Nie zimno ani mokro",
+          "de": "Keine Kälte, Staunässe",
+          "fr": "Éviter froid et eau",
+          "it": "No freddo, ristagni",
+          "es": "Evitar frío y encharque",
+          "pt": "Evite frio e encharque",
+          "ar": "تجنب البرد والتغدق",
+          "hi": "ठंड व जलभराव नहीं",
+          "zh": "避免低温积水",
+          "ja": "寒さと過湿NG",
+          "ko": "저온·과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealybugs",
+          "pl": "Przędziorki, wełnowce",
+          "de": "Spinnmilben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ، بقّ دقيقي",
+          "hi": "मकड़ी कण, मिलीबग",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ、コナカイガラ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Red Mambo Alocasia",
-      "description": "Alocasia azlanii is a rare tropical aroid from Borneo with metallic purple leaves. It requires bright indirect light, warm temperatures, and consistently moist soil. High humidity is essential for healthy growth."
+      "common_name": "Jewel alocasia",
+      "description": "Alocasia azlanii is a jewel aroid from Borneo grown for dark, metallic leaves with pink veins. Provide bright, indirect light, warm temperatures, and a chunky aroid mix kept lightly moist but not waterlogged. All parts are toxic if ingested."
     },
     "pl": {
-      "common_name": "Alokazja azlanii",
-      "description": "Alocasia azlanii to rzadka roślina tropikalna z Borneo o metalicznych liściach. Wymaga jasnego światła pośredniego i stałej wilgotności podłoża. Najlepiej rośnie w wysokiej wilgotności powietrza."
+      "common_name": "Alokazja klejnotowa",
+      "description": "Alocasia azlanii to aroid z Borneo, ceniony za ciemne, metaliczne liście z różowym unerwieniem. Zapewnij jasne, rozproszone światło, ciepło i przepuszczalne podłoże typu aroid, utrzymując je lekko wilgotne bez zastoin wody. Roślina jest toksyczna po spożyciu."
     },
     "de": {
-      "common_name": "Alokasie azlanii",
-      "description": "Alocasia azlanii ist eine seltene tropische Aroidpflanze aus Borneo. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist wichtig."
+      "common_name": "Juwel-Alokasie",
+      "description": "Alocasia azlanii ist ein Juwel-Aroid von Borneo mit dunklen, metallischen Blättern und rosa Adern. Gib helles, indirektes Licht, Wärme und ein luftiges Aroid-Substrat, das leicht feucht bleibt, aber nie nass steht. Bei Verzehr ist sie giftig."
     },
     "fr": {
-      "common_name": "Alocasie azlanii",
-      "description": "Alocasia azlanii est une plante tropicale rare originaire de Bornéo. Elle aime la lumière indirecte et un sol toujours humide. Une forte humidité est nécessaire."
+      "common_name": "Alocasie bijou",
+      "description": "Alocasia azlanii est une aracée de Bornéo aux feuilles sombres, métalliques, nervurées de rose. Placez-la en lumière vive indirecte, au chaud, dans un mélange aroid bien drainant maintenu légèrement humide sans excès d’eau. La plante est toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "Alocasia azlanii",
-      "description": "Alocasia azlanii è una rara pianta tropicale del Borneo. Necessita di luce indiretta intensa e terreno costantemente umido. L’umidità elevata è fondamentale."
+      "common_name": "Alocasia gioiello",
+      "description": "Alocasia azlanii è un’aroide del Borneo apprezzata per foglie scure e metalliche con venature rosa. Offri luce intensa ma indiretta, temperature calde e un mix aroid drenante mantenuto appena umido, evitando ristagni. È tossica se ingerita."
     },
     "es": {
-      "common_name": "Alocasia azlanii",
-      "description": "Alocasia azlanii es una planta tropical rara de Borneo. Prefiere luz indirecta brillante y sustrato húmedo. Requiere alta humedad ambiental."
+      "common_name": "Alocasia joya",
+      "description": "Alocasia azlanii es una aroidea de Borneo con hojas oscuras y metálicas y venas rosadas. Dale luz brillante e indirecta, calor y un sustrato aroid aireado, manteniéndolo ligeramente húmedo sin encharcar. Es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Alocasia azlanii",
-      "description": "Alocasia azlanii é uma planta tropical rara de Bornéu. Precisa de luz indireta brilhante e solo sempre úmido. Alta umidade é essencial."
+      "common_name": "Alocasia joia",
+      "description": "Alocasia azlanii é uma arácea de Bornéu conhecida por folhas escuras, metálicas, com nervuras rosadas. Prefere luz forte indireta, calor e uma mistura aroid bem drenada, mantendo o substrato levemente úmido sem encharcar. É tóxica se ingerida."
     },
     "ar": {
-      "common_name": "ألوكاسيا أزلاني",
-      "description": "نبات ألوكاسيا أزلاني نبات استوائي نادر من بورنيو. يحتاج إلى ضوء غير مباشر وتربة رطبة باستمرار. الرطوبة العالية ضرورية."
+      "common_name": "ألوكاسيا جوهرة",
+      "description": "ألوكاسيا أزلاني نبات أرويدي من بورنيو يُزرع لأوراقه الداكنة ذات اللمعة المعدنية والعروق الوردية. يحتاج ضوءًا ساطعًا غير مباشر وحرارة ورطوبة مرتفعة وتربة أرويد جيدة التصريف تبقى رطبة قليلًا دون تغدّق. النبات سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "अलोकेशिया अज़लानी",
-      "description": "Alocasia azlanii बोर्नियो का एक दुर्लभ उष्णकटिबंधीय पौधा है। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी चाहिए। उच्च आर्द्रता आवश्यक है।"
+      "common_name": "ज्वेल अलोकासिया",
+      "description": "Alocasia azlanii बोर्नियो का एक ज्वेल एरॉइड है, जिसकी पत्तियाँ गहरी धात्विक और गुलाबी नसों वाली होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी, गर्म तापमान और हवादार एरॉइड मिट्टी दें, मिट्टी को हल्का नम रखें पर जलभराव न होने दें। निगलने पर यह विषाक्त है।"
     },
     "zh": {
-      "common_name": "紫背海芋",
-      "description": "Alocasia azlanii 是原产于婆罗洲的稀有热带植物。喜明亮散射光和持续湿润的土壤。需要较高空气湿度。"
+      "common_name": "宝石海芋",
+      "description": "Alocasia azlanii 原产婆罗洲，以深色金属光泽叶片和粉色叶脉著称。提供明亮散射光、温暖环境，并使用疏松排水良好的天南星土，保持微湿但避免积水。误食有毒。"
     },
     "ja": {
-      "common_name": "アロカシア・アズラニー",
-      "description": "アロカシア・アズラニーはボルネオ原産の希少な熱帯植物です。明るい間接光と湿った土壌を好みます。高湿度が必要です。"
+      "common_name": "ジュエルアロカシア",
+      "description": "Alocasia azlanii はボルネオ原産で、金属光沢のある濃色の葉とピンクの葉脈が特徴です。明るい間接光、暖かい環境、粗めのアロイド用土で、用土はやや湿り気を保ちつつ過湿は避けます。誤食で有毒です。"
     },
     "ko": {
-      "common_name": "알로카시아 아즐라니",
-      "description": "알로카시아 아즐라니는 보르네오 원산의 희귀 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 필요합니다."
+      "common_name": "주얼 알로카시아",
+      "description": "Alocasia azlanii 는 보르네오 원산의 아로이드로, 어두운 금속광 잎과 분홍색 맥이 특징입니다. 밝은 간접광과 따뜻한 온도, 배수 좋은 아로이드 배합토를 사용하고 흙은 약간 촉촉하게 유지하되 과습은 피하세요. 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.aroidpedia.com/journal/alocasia-azlanii",
-      "https://www.rhs.org.uk/plants/Alocasia",
-      "https://www.gardenia.net/plant/alocasia"
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.rhs.org.uk/plants/alocasia",
+      "https://plants.ces.ncsu.edu/plants/alocasia/",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77158842-1",
+      "https://www.thespruce.com/alocasia-azlanii-care-guide-8557457"
     ]
   }
 }

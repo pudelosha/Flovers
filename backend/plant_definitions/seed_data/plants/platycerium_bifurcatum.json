@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "wood"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "acidic"
+    "fern",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -39,8 +39,8 @@
           "ar": "ضوء متوسط",
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, orchid mix",
-          "pl": "Kwaśna, mieszanka orchidei",
-          "de": "Saurer, Orchideenmix",
-          "fr": "Mélange acide, orchidée",
-          "it": "Acido, miscela per orchidee",
-          "es": "Acídico, mezcla de orquídeas",
-          "pt": "Ácido, mistura para orquídeas",
-          "ar": "حمضي، خليط للأوركيد",
-          "hi": "अम्लीय, ऑर्किड मिश्रण",
-          "zh": "酸性, 兰花混合土",
-          "ja": "酸性、蘭の土壌混合物",
-          "ko": "산성, 난초 혼합 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Regar moderadamente",
-          "ar": "الري المعتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water regularly",
+          "pl": "Regularnie podlewać",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "الري بانتظام",
+          "hi": "नियमित रूप से पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물 주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High",
-          "pl": "Wysoka",
-          "de": "Hoch",
-          "fr": "Élevée",
-          "it": "Alta",
-          "es": "Alta",
-          "pt": "Alta",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高い湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -154,7 +154,7 @@
           "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "非毒性",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Slow to moderate",
-          "pl": "Wolny do średniego",
+          "pl": "Wolne do umiarkowanego",
           "de": "Langsam bis moderat",
           "fr": "Lent à modéré",
           "it": "Lento a moderato",
           "es": "Lento a moderado",
-          "pt": "Lento a moderado",
-          "ar": "بطيء إلى معتدل",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
           "hi": "धीमा से मध्यम",
-          "zh": "慢至中等",
-          "ja": "遅いから中程度",
-          "ko": "느리게부터 중간"
+          "zh": "生长缓慢到适中",
+          "ja": "遅いから中くらいの成長",
+          "ko": "느리거나 보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter le trop-plein d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水をやりすぎない",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Staghorn Fern",
-      "description": "The Staghorn Fern is an epiphytic plant with large, bifurcated fronds. It thrives in warm, humid environments and is often found growing on tree trunks."
+      "description": "Platycerium bifurcatum is a distinctive fern with antler-shaped fronds. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Pterygium jelenie",
-      "description": "Pterygium jelenie to epifityczna roślina z dużymi, rozgałęzionymi liśćmi. Rośnie w ciepłych, wilgotnych warunkach, często na pniach drzew."
+      "common_name": "Naronik rogaty",
+      "description": "Platycerium bifurcatum to wyjątkowy paproć o liściach przypominających poroże. Rośnie w średnim świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Hirschhornfarn",
-      "description": "Der Hirschhornfarn ist eine epiphytische Pflanze mit großen, verzweigten Blättern. Er gedeiht in warmen, feuchten Umgebungen und wächst oft auf Baumstämmen."
+      "common_name": "Hirschgeweihfarn",
+      "description": "Platycerium bifurcatum ist ein markanter Farn mit gehornartigen Wedeln. Es gedeiht bei mäßigem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Fougère cerf",
-      "description": "La fougère cerf est une plante épiphyte avec de grandes frondes bifurquées. Elle prospère dans des environnements chauds et humides, souvent sur les troncs d'arbres."
+      "common_name": "Fougère à bois de cerf",
+      "description": "Platycerium bifurcatum est une fougère distinctive avec des frondes en forme de bois de cerf. Elle préfère une lumière modérée et une humidité élevée."
     },
     "it": {
       "common_name": "Felce corna di cervo",
-      "description": "La felce corna di cervo è una pianta epifita con grandi fronde biforcate. Cresce in ambienti caldi e umidi, spesso sui tronchi degli alberi."
+      "description": "Platycerium bifurcatum è una felce distintiva con fronde a forma di corna di cervo. Cresce bene in luce moderata e umidità elevata."
     },
     "es": {
-      "common_name": "Helecho cuerno de alce",
-      "description": "El helecho cuerno de alce es una planta epífita con grandes frondas bifurcadas. Crece en ambientes cálidos y húmedos, a menudo sobre los troncos de los árboles."
+      "common_name": "Helecho ciervo",
+      "description": "Platycerium bifurcatum es un helecho distintivo con frondas en forma de cuerno de ciervo. Prefiere luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Samambaia chifre de alce",
-      "description": "A samambaia chifre de alce é uma planta epífita com grandes frondes bifurcadas. Cresce em ambientes quentes e úmidos, frequentemente sobre troncos de árvores."
+      "common_name": "Samambaia com galho de cervo",
+      "description": "Platycerium bifurcatum é uma samambaia distinta com frondes em forma de galho de cervo. Cresce bem com luz moderada e alta umidade."
     },
     "ar": {
       "common_name": "سرخس قرن الأيل",
-      "description": "سرخس قرن الأيل هو نبات إبيفيتي ذو أوراق متفرعة كبيرة. ينمو في بيئات دافئة ورطبة وغالبًا ما ينمو على جذوع الأشجار."
+      "description": "Platycerium bifurcatum هو سرخس مميز بأوراق تشبه قرون الأيل. ينمو جيدًا في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "गांठ फर्न",
-      "description": "गांठ फर्न एक एपिफाइटिक पौधा है जिसकी बड़ी, bifurcated पत्तियां होती हैं। यह गर्म, आर्द्र वातावरण में पनपता है और अक्सर वृक्षों की छाल पर उगता है।"
+      "common_name": "गौर के सींग जैसा फर्न",
+      "description": "Platycerium bifurcatum एक विशिष्ट फर्न है जिसकी पत्तियाँ सींग के आकार की होती हैं। यह मध्यम प्रकाश और उच्च आर्द्रता में उगता है।"
     },
     "zh": {
       "common_name": "鹿角蕨",
-      "description": "鹿角蕨是一种附生植物，具有大型分叉的叶子。它在温暖湿润的环境中生长，通常生长在树干上。"
+      "description": "Platycerium bifurcatum 是一种独特的蕨类植物，叶片呈鹿角形状。它在中等光照和高湿度的环境中生长良好。"
     },
     "ja": {
-      "common_name": "鹿角シダ",
-      "description": "鹿角シダは大きな分岐した葉を持つ着生植物です。温暖で湿度の高い環境で繁茂し、しばしば木の幹に生えています。"
+      "common_name": "シカの角のようなシダ",
+      "description": "Platycerium bifurcatum は、角のような葉を持つユニークなシダです。中程度の光と高い湿度の環境で育ちます。"
     },
     "ko": {
-      "common_name": "사슴뿔고사리",
-      "description": "사슴뿔고사리는 큰 갈라진 잎을 가진 착생 식물입니다. 따뜻하고 습한 환경에서 자라며 종종 나무의 줄기에 자랍니다."
+      "common_name": "사슴 뿔 같은 양치식물",
+      "description": "Platycerium bifurcatum은 뿔 모양의 잎을 가진 독특한 양치식물입니다. 중간 밝기와 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=825",
-      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-pests/staghorn-fern-care/"
+      "https://www.gardenia.net/plant/platycerium-bifurcatum",
+      "https://www.rhs.org.uk/plants/ferns/platycerium-bifurcatum"
     ]
   }
 }

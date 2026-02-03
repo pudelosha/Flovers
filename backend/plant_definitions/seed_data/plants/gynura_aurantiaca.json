@@ -1,18 +1,18 @@
 {
   "external_id": "gynura_aurantiaca",
-  "name": "Purple velvet plant",
+  "name": "Purple Passion Plant",
   "latin": "Gynura aurantiaca",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "gynura_aurantiaca.jpg",
   "image_thumb": "gynura_aurantiaca.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光线",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainierend",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep lightly moist",
-          "pl": "Lekko wilgotna",
-          "de": "Leicht feucht",
-          "fr": "Légèrement humide",
-          "it": "Leggermente umido",
-          "es": "Ligeramente húmedo",
-          "pt": "Levemente úmido",
-          "ar": "رطبة قليلاً",
-          "hi": "हल्की नम",
-          "zh": "保持微湿",
-          "ja": "やや湿潤",
-          "ko": "약간 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
-          "ar": "18–24 °C",
-          "hi": "18–24 °C",
-          "zh": "18–24 °C",
-          "ja": "18–24 °C",
-          "ko": "18–24 °C"
+          "en": "20-24°C",
+          "pl": "20-24°C",
+          "de": "20-24°C",
+          "fr": "20-24°C",
+          "it": "20-24°C",
+          "es": "20-24°C",
+          "pt": "20-24°C",
+          "ar": "20-24°C",
+          "hi": "20-24°C",
+          "zh": "20-24°C",
+          "ja": "20-24°C",
+          "ko": "20-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers moderate",
-          "pl": "Umiarkowana",
-          "de": "Mäßig",
-          "fr": "Modérée",
-          "it": "Moderata",
-          "es": "Moderada",
-          "pt": "Moderada",
-          "ar": "معتدلة",
-          "hi": "मध्यम",
-          "zh": "中等湿度",
-          "ja": "中程度",
-          "ko": "중간 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczny",
+          "de": "Mäßig giftig",
+          "fr": "Légèrement toxique",
+          "it": "Léggermente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "قليل السمية",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast trailing growth",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "성장 빠름"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Purple velvet plant",
-      "description": "Gynura aurantiaca is known for its deep purple, velvety leaves and trailing habit. It grows best in bright, indirect light with evenly moist soil. This tropical plant is commonly kept as an easy-care houseplant."
+      "common_name": "Purple Passion Plant",
+      "description": "Gynura aurantiaca, commonly known as the Purple Passion Plant, is a vibrant indoor plant with striking purple-hued leaves. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Ginura pomarańczowa",
-      "description": "Gynura aurantiaca wyróżnia się aksamitnymi, purpurowymi liśćmi. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanie wilgotnej glebie. Jest łatwa w uprawie jako roślina domowa."
+      "common_name": "Fioletowa roślina pasji",
+      "description": "Gynura aurantiaca, znana jako Fioletowa roślina pasji, to roślina doniczkowa o intensywnie fioletowych liściach. Preferuje średnie światło i wysoką wilgotność."
     },
     "de": {
-      "common_name": "Purpur-Samtpflanze",
-      "description": "Gynura aurantiaca hat samtige, violette Blätter und einen überhängenden Wuchs. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Die Pflanze gilt als pflegeleicht im Innenbereich."
+      "common_name": "Lila Leidenschaft Pflanze",
+      "description": "Gynura aurantiaca, auch als Lila Leidenschaft Pflanze bekannt, ist eine lebendige Zimmerpflanze mit auffälligen, lila Blättern. Sie bevorzugt mittleres Licht und hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Plante velours violet",
-      "description": "Gynura aurantiaca est appréciée pour ses feuilles violettes et duveteuses. Elle pousse bien à la lumière indirecte avec un sol légèrement humide. C’est une plante d’intérieur facile à cultiver."
+      "common_name": "Plante Passion pourpre",
+      "description": "Gynura aurantiaca, connue sous le nom de Plante Passion pourpre, est une plante d'intérieur vibrante avec des feuilles d'un violet saisissant. Elle prospère dans une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Pianta di velluto viola",
-      "description": "La Gynura aurantiaca è nota per le sue foglie vellutate di colore viola. Preferisce luce indiretta e terreno moderatamente umido. È una pianta da interno semplice da mantenere."
+      "common_name": "Pianta Passione Viola",
+      "description": "Gynura aurantiaca, conosciuta come Pianta Passione Viola, è una pianta da interno vivace con foglie di un viola intenso. Cresce meglio con luce moderata e umidità elevata."
     },
     "es": {
-      "common_name": "Planta terciopelo púrpura",
-      "description": "Gynura aurantiaca destaca por sus hojas púrpuras aterciopeladas. Crece mejor con luz indirecta brillante y riego regular. Es una planta de interior fácil de cuidar."
+      "common_name": "Planta Pasión Púrpura",
+      "description": "Gynura aurantiaca, conocida como Planta Pasión Púrpura, es una planta de interior vibrante con hojas de color morado intenso. Prosperan con luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Planta veludo roxo",
-      "description": "A Gynura aurantiaca possui folhas roxas aveludadas muito decorativas. Prefere luz indireta e solo levemente úmido. É uma planta doméstica de fácil manutenção."
+      "common_name": "Planta Paixão Roxa",
+      "description": "Gynura aurantiaca, conhecida como Planta Paixão Roxa, é uma planta de interior vibrante com folhas de tom roxo. Ela cresce bem com luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "نبات المخمل الأرجواني",
-      "description": "تشتهر Gynura aurantiaca بأوراقها البنفسجية المخملية. تنمو جيدًا في ضوء ساطع غير مباشر مع تربة رطبة قليلاً. تُعد نباتًا منزليًا سهل العناية."
+      "common_name": "نبات العاطفة الأرجوانية",
+      "description": "Gynura aurantiaca، المعروف باسم نبات العاطفة الأرجوانية، هو نبات داخلي حيوي بأوراق ذات لون أرجواني لامع. يزدهر في الضوء المتوسط والرطوبة العالية."
     },
     "hi": {
-      "common_name": "पर्पल वेलवेट पौधा",
-      "description": "Gynura aurantiaca अपने मखमली बैंगनी पत्तों के लिए जानी जाती है। यह तेज़ अप्रत्यक्ष रोशनी और हल्की नम मिट्टी में अच्छी बढ़ती है। इसे आसान घरेलू पौधा माना जाता है।"
+      "common_name": "बैंगनी पैशन प्लांट",
+      "description": "Gynura aurantiaca, जिसे बैंगनी पैशन प्लांट के नाम से जाना जाता है, एक जीवंत इनडोर पौधा है जिसकी पत्तियाँ बैंगनी रंग की होती हैं। यह मध्यम रोशनी और उच्च आर्द्रता में अच्छा होता है।"
     },
     "zh": {
-      "common_name": "紫绒叶",
-      "description": "Gynura aurantiaca 以其紫色绒毛状叶片而闻名。它适合明亮的散射光和保持微湿的土壤。常作为易养护的室内植物栽培。"
+      "common_name": "紫色激情植物",
+      "description": "Gynura aurantiaca，常被称为紫色激情植物，是一种室内植物，具有引人注目的紫色叶子。它在中等光照和高湿度下生长良好。"
     },
     "ja": {
-      "common_name": "パープルベルベットプラント",
-      "description": "Gynura aurantiaca は紫色のビロード状の葉が特徴です。明るい間接光と適度に湿った土を好みます。育てやすい観葉植物です。"
+      "common_name": "紫の情熱植物",
+      "description": "Gynura aurantiaca、紫の情熱植物として知られるこの植物は、鮮やかな紫色の葉を持つ室内植物です。中程度の光と高い湿度でよく育ちます。"
     },
     "ko": {
-      "common_name": "퍼플 벨벳 식물",
-      "description": "Gynura aurantiaca는 보라색의 벨벳 같은 잎이 특징입니다. 밝은 간접광과 적당히 촉촉한 토양에서 잘 자랍니다. 관리가 쉬운 실내 식물입니다."
+      "common_name": "보라색 열정 식물",
+      "description": "Gynura aurantiaca, 보라색 열정 식물로 알려진 이 식물은 눈에 띄는 보라색 잎을 가진 실내 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/8706/gynura-aurantiaca/details",
-      "https://edis.ifas.ufl.edu/publication/FP260",
-      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/gynura-aurantiaca"
+      "https://www.gardenersworld.com/plants/gynura-aurantiaca/",
+      "https://www.rhs.org.uk/plants/gynura-aurantiaca"
     ]
   }
 }

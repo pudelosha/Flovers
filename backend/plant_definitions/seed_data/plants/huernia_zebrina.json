@@ -1,19 +1,20 @@
 {
   "external_id": "huernia_zebrina",
-  "name": "Lifesaver Plant",
+  "name": "Zebra Cactus",
   "latin": "Huernia zebrina",
-  "sun": "high",
+  "sun": "medium",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect sun",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Indirect light",
+          "pl": "Światło pośrednie",
+          "de": "Indirektes Licht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष प्रकाश",
+          "zh": "间接光",
+          "ja": "間接光",
+          "ko": "간접광"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadko podlewać",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "적은 물"
+          "en": "Water sparingly",
+          "pl": "Podlewaj oszczędnie",
+          "de": "Sparsam gießen",
+          "fr": "Arroser modérément",
+          "it": "Annaffiare con parsimonia",
+          "es": "Regar moderadamente",
+          "pt": "Regar moderadamente",
+          "ar": "سقي قليل",
+          "hi": "सावधानी से पानी देना",
+          "zh": "适量浇水",
+          "ja": "控えめに水を与える",
+          "ko": "적당히 물을 주기"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -123,17 +124,17 @@
       "value": {
         "text": {
           "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "नमीयता कम",
           "zh": "低湿度",
           "ja": "低湿度",
-          "ko": "낮은 습도"
+          "ko": "저습도"
         }
       }
     },
@@ -142,17 +143,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -160,77 +161,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping succulent",
-          "pl": "Kępiasta",
-          "de": "Horstbildend",
-          "fr": "Touffue",
-          "it": "Cespugliosa",
-          "es": "En matas",
-          "pt": "Em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार",
-          "zh": "丛生",
-          "ja": "群生",
-          "ko": "군생"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기를 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Lifesaver Plant",
-      "description": "Huernia zebrina is a small succulent known for its star-shaped, striped flowers. It prefers bright light and infrequent watering. Overwatering can cause root rot."
+      "common_name": "Zebra Cactus",
+      "description": "Huernia zebrina, also known as Zebra Cactus, is a slow-growing succulent with distinctive striped, fleshy stems. It thrives in bright, indirect light and requires minimal watering."
     },
     "pl": {
-      "common_name": "Huernia zebrina",
-      "description": "Huernia zebrina to sukulent o gwiaździstych kwiatach. Wymaga jasnego światła i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia."
+      "common_name": "Kaktus Zebra",
+      "description": "Huernia zebrina, znany również jako Kaktus Zebra, to wolno rosnący sukulent o charakterystycznych, prążkowanych, mięsistych łodygach. Rośnie najlepiej w jasnym, pośrednim świetle i wymaga minimalnego podlewania."
     },
     "de": {
-      "common_name": "Lifesaver-Pflanze",
-      "description": "Huernia zebrina ist eine sukkulente Pflanze mit auffälligen Blüten. Sie mag helles Licht und wenig Wasser. Staunässe vermeiden."
+      "common_name": "Zebra-Kaktus",
+      "description": "Der Huernia zebrina, auch als Zebra-Kaktus bekannt, ist eine langsam wachsende Sukkulente mit markanten gestreiften, fleischigen Stängeln. Er gedeiht am besten bei hellem, indirektem Licht und benötigt nur wenig Wasser."
     },
     "fr": {
-      "common_name": "Plante bouée",
-      "description": "Huernia zebrina est une succulente aux fleurs étoilées. Elle aime la lumière vive et peu d’arrosage. Un sol drainant est essentiel."
+      "common_name": "Cactus Zebra",
+      "description": "Huernia zebrina, également connu sous le nom de Cactus Zebra, est une succulente à croissance lente avec des tiges charnues et rayées distinctives. Elle préfère une lumière indirecte vive et nécessite peu d'arrosage."
     },
     "it": {
-      "common_name": "Pianta salvagente",
-      "description": "Huernia zebrina è una succulenta dai fiori decorativi. Richiede molta luce e annaffiature sporadiche. Teme i ristagni d’acqua."
+      "common_name": "Cactus Zebra",
+      "description": "Huernia zebrina, noto anche come Cactus Zebra, è una succulenta a crescita lenta con fusti carnosi e striati distintivi. Cresce meglio alla luce indiretta e ha bisogno di poca acqua."
     },
     "es": {
-      "common_name": "Planta salvavidas",
-      "description": "Huernia zebrina es una suculenta de flores llamativas. Necesita buena luz y riego escaso. El exceso de agua es perjudicial."
+      "common_name": "Cactus Cebra",
+      "description": "Huernia zebrina, también conocido como Cactus Cebra, es una suculenta de crecimiento lento con tallos carnosos y rayados distintivos. Prefiere la luz indirecta brillante y requiere poco riego."
     },
     "pt": {
-      "common_name": "Planta salva-vidas",
-      "description": "Huernia zebrina é uma suculenta de flores estreladas. Prefere luz intensa e pouca água. Solo bem drenado é fundamental."
+      "common_name": "Cacto Zebra",
+      "description": "Huernia zebrina, também conhecido como Cacto Zebra, é uma suculenta de crescimento lento com hastes carnudas e listradas distintas. Prefere luz indireta brilhante e requer pouca água."
     },
     "ar": {
-      "common_name": "نبات هويرنيا",
-      "description": "هويرنيا زبرينا نبات عصاري بأزهار مميزة. يحتاج إلى ضوء قوي وري قليل. كثرة الماء تضر بالجذور."
+      "common_name": "صبار النمر",
+      "description": "هورنيا زبرينا، المعروف أيضًا باسم صبار النمر، هو نبات عصاري بطيء النمو ذو سيقان لحمية مخططة مميزة. ينمو بشكل أفضل في ضوء غير مباشر ساطع ويتطلب ريًا قليلًا."
     },
     "hi": {
-      "common_name": "लाइफसेवर पौधा",
-      "description": "Huernia zebrina एक रसीला पौधा है जिसमें अनोखे फूल होते हैं। इसे तेज रोशनी और कम पानी चाहिए। अधिक पानी हानिकारक है।"
+      "common_name": "जेब्रा कैक्टस",
+      "description": "हर्निया ज़ेब्रिना, जिसे ज़ेब्रा कैक्टस भी कहा जाता है, एक धीमी वृद्धि वाला रसीला पौधा है जिसमें विशिष्ट धारीदार, मांसल तने होते हैं। यह उज्ज्वल, अप्रत्यक्ष प्रकाश में सबसे अच्छा बढ़ता है और इसमें न्यूनतम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "救生圈花",
-      "description": "Huernia zebrina 是一种多肉植物，花朵呈星形。需要明亮光照和少量浇水。忌积水。"
+      "common_name": "斑马仙人掌",
+      "description": "胡尔尼亚·泽布里纳，也称为斑马仙人掌，是一种生长缓慢的多肉植物，具有独特的条纹肉质茎。它在明亮的间接光下生长良好，且需要少量浇水。"
     },
     "ja": {
-      "common_name": "ライフセーバープラント",
-      "description": "Huernia zebrina は星形の花を持つ多肉植物です。明るい光と控えめな水やりを好みます。"
+      "common_name": "ゼブラサボテン",
+      "description": "ヒュエルニア・ゼブリナは、ゼブラサボテンとしても知られ、特徴的な縞模様の肉質茎を持つ成長の遅い多肉植物です。明るい間接光で最適に育ち、最小限の水やりが必要です。"
     },
     "ko": {
-      "common_name": "라이프세이버 식물",
-      "description": "Huernia zebrina는 독특한 꽃을 가진 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 과습을 피하세요."
+      "common_name": "얼룩무늬 선인장",
+      "description": "Huernia zebrina는 얼룩무늬 선인장으로 알려져 있으며, 특징적인 줄무늬의 육질 줄기가 있는 느리게 자라는 다육 식물입니다. 간접적인 밝은 빛에서 잘 자라며 물은 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/huernia-zebrina",
-      "https://www.cactus-art.biz/schede/HUERNIA/Huernia_zebrina/Huernia_zebrina.htm",
-      "https://www.rhs.org.uk/plants/huernia"
+      "https://www.rhs.org.uk/plants/huernia-zebrina",
+      "https://www.gardenia.net/plant/huernia-zebrina"
     ]
   }
 }

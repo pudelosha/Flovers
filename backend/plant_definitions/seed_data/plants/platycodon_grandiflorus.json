@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "platycodon_grandiflorus.jpg",
   "image_thumb": "platycodon_grandiflorus.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "बलुआ",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niski",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixo",
-          "ar": "منخفض",
-          "hi": "निम्न",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Balloon Flower",
-      "description": "Platycodon grandiflorus is known for its striking balloon-shaped buds that open into star-like blue flowers. It's a hardy perennial that thrives in moderate sunlight and well-drained soil."
+      "description": "Platycodon grandiflorus, or Balloon Flower, is known for its bell-shaped blooms that resemble balloons. It thrives in moderate sunlight and requires moderate watering."
     },
     "pl": {
       "common_name": "Kwiat balonowy",
-      "description": "Platycodon grandiflorus to trwała roślina wieloletnia o charakterystycznych pąkach w kształcie balonu, które otwierają się w gwiaździste niebieskie kwiaty. Rośnie najlepiej w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+      "description": "Platycodon grandiflorus, znany jako Kwiat balonowy, ma dzwonkowate kwiaty przypominające balony. Rośnie najlepiej w umiarkowanym świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Ballonblume",
-      "description": "Platycodon grandiflorus ist bekannt für seine auffälligen, ballonartigen Knospen, die sich zu sternförmigen blauen Blumen öffnen. Es ist eine robuste Staude, die in gemäßigtem Sonnenlicht und gut durchlässigem Boden gedeiht."
+      "description": "Platycodon grandiflorus, auch als Ballonblume bekannt, hat glockenförmige Blüten, die wie Ballons aussehen. Sie gedeiht bei mäßigem Sonnenlicht und benötigt mäßige Bewässerung."
     },
     "fr": {
-      "common_name": "Fleur ballon",
-      "description": "Platycodon grandiflorus est connu pour ses boutons en forme de ballon qui s'ouvrent en fleurs bleues en forme d'étoile. C'est une plante vivace résistante qui prospère sous un ensoleillement modéré et un sol bien drainé."
+      "common_name": "Fleur de ballon",
+      "description": "Platycodon grandiflorus, ou Fleur de ballon, est connue pour ses fleurs en forme de cloche ressemblant à des ballons. Elle préfère la lumière modérée et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Fiore a palloncino",
-      "description": "Platycodon grandiflorus è noto per i suoi boccioli a forma di palloncino che si aprono in fiori blu a forma di stella. È una pianta perenne resistente che cresce al meglio alla luce solare moderata e in terreni ben drenati."
+      "description": "Platycodon grandiflorus, noto come Fiore a palloncino, è famoso per i suoi fiori a campana che somigliano a palloncini. Cresce bene con luce moderata e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Flor globo",
-      "description": "Platycodon grandiflorus es conocida por sus botones en forma de globo que se abren en flores azules en forma de estrella. Es una planta perenne resistente que prospera bajo luz solar moderada y suelos bien drenados."
+      "common_name": "Flor de globo",
+      "description": "Platycodon grandiflorus, o Flor de globo, es conocida por sus flores en forma de campana que se asemejan a globos. Crece mejor con luz moderada y requiere un riego moderado."
     },
     "pt": {
       "common_name": "Flor de balão",
-      "description": "Platycodon grandiflorus é conhecida por seus botões em forma de balão que se abrem em flores azuis em forma de estrela. É uma planta perene resistente que cresce bem sob luz solar moderada e solo bem drenado."
+      "description": "Platycodon grandiflorus, ou Flor de balão, é conhecida pelas suas flores em forma de sino que lembram balões. Cresce bem sob luz moderada e requer rega moderada."
     },
     "ar": {
       "common_name": "زهرة البالون",
-      "description": "Platycodon grandiflorus معروفة براعمها التي تشبه البالون والتي تتفتح إلى أزهار زرقاء على شكل نجمة. إنها نبات معمر قوي ينمو بشكل أفضل تحت ضوء الشمس المعتدل والتربة جيدة التصريف."
+      "description": "Platycodon grandiflorus، أو زهرة البالون، معروفة بأزهارها على شكل جرس تشبه البالونات. تنمو في ضوء معتدل وتحتاج إلى ري معتدل."
     },
     "hi": {
-      "common_name": "बलून फूल",
-      "description": "Platycodon grandiflorus अपनी गुब्बारे के आकार की कलियों के लिए जाना जाता है, जो तारे के आकार के नीले फूलों में खुलती हैं। यह एक कठोर परिपक्व पौधा है जो मध्यम सूर्यप्रकाश और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
+      "common_name": "गुब्बारा फूल",
+      "description": "प्लाटिकोडोन ग्रैंडिफ्लोरस, या गुब्बारा फूल, अपने घंटी के आकार के फूलों के लिए जाना जाता है जो गुब्बारों की तरह दिखते हैं। यह मध्यम प्रकाश में बढ़ता है और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "气球花",
-      "description": "Platycodon grandiflorus 以其气球形状的花蕾而闻名，开花后呈现星形蓝色花朵。它是一种耐寒的多年生植物，适应中等阳光和排水良好的土壤。"
+      "description": "Platycodon grandiflorus，或气球花，以其钟形花朵而闻名，类似于气球。它在中等光照下生长，需要适量浇水。"
     },
     "ja": {
-      "common_name": "風船草",
-      "description": "Platycodon grandiflorusは、風船の形をしたつぼみが星形の青い花に開くことで知られています。中程度の日光と排水性の良い土壌で成長する丈夫な多年草です。"
+      "common_name": "バルーンフラワー",
+      "description": "Platycodon grandiflorus、またはバルーンフラワーは、風船のような鐘形の花で知られています。中程度の光で成長し、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "풍선꽃",
-      "description": "Platycodon grandiflorus는 풍선 모양의 꽃봉오리가 별 모양의 파란 꽃으로 피는 것으로 유명합니다. 이 식물은 중간 정도의 햇빛과 배수가 좋은 토양에서 잘 자라는 강한 다년생 식물입니다."
+      "description": "Platycodon grandiflorus, 또는 풍선꽃은 풍선처럼 보이는 종 모양의 꽃으로 유명합니다. 중간 정도의 빛에서 자라며 적당한 급수가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenersworld.com/plants/platycodon-grandiflorus/",
-      "https://www.bhg.com/gardening/pests-injuries-diseases/balloon-flower/"
+      "https://www.bhg.com/gardening/pests-diseases/balloon-flower-care/",
+      "https://www.gardenia.net/plant/platycodon-grandiflorus-balloon-flower"
     ]
   }
 }

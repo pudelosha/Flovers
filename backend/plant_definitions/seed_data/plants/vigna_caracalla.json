@@ -1,25 +1,27 @@
 {
   "external_id": "vigna_caracalla",
-  "name": "Corkscrew vine",
+  "name": "Corkscrew Bean",
   "latin": "Vigna caracalla",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "vigna_caracalla.jpg",
   "image_thumb": "vigna_caracalla.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "직사광선"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 좋음"
+          "ar": "تصريف جيد",
+          "hi": "अच्छा जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수 잘됨"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlew.",
-          "de": "Regelmäßig",
-          "fr": "Arrosage rég.",
-          "it": "Annaffiature",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的給水",
-          "ko": "정기적 물주기"
+          "en": "Medium water",
+          "pl": "Średnia ilość wody",
+          "de": "Mittlere Menge Wasser",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "مياه معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "中等水分",
+          "ja": "中程度の水やり",
+          "ko": "중간 정도의 물"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
+          "en": "Medium",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئة",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilg.",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moy.",
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
           "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
+          "hi": "मध्यम आर्द्रता",
           "zh": "中等湿度",
-          "ja": "平均湿度",
-          "ko": "보통 습도"
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성 있음"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing vine",
-          "pl": "Pnącze",
-          "de": "Kletterpflanze",
-          "fr": "Grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "نبات متسلق",
-          "hi": "लता",
-          "zh": "攀援植物",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ता है",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠르게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Corkscrew vine",
-      "description": "Vigna caracalla is a fast-growing climbing vine known for its fragrant, spiraled flowers. It prefers full sun, warm temperatures, and regular watering during active growth."
+      "common_name": "Corkscrew Bean",
+      "description": "The Corkscrew Bean is a tropical vine known for its unique, curly pods. It thrives in warm temperatures and requires medium light and watering."
     },
     "pl": {
-      "common_name": "Ślimakowiec pachnący",
-      "description": "Vigna caracalla to szybko rosnące pnącze o charakterystycznych, skręconych kwiatach. Wymaga pełnego słońca, ciepła i regularnego podlewania."
+      "common_name": "Fasola korkociągowa",
+      "description": "Fasola korkociągowa to tropikalna roślina pnąca o charakterystycznych kręconych strąkach. Wymaga ciepłych temperatur oraz średniego nasłonecznienia i podlewania."
     },
     "de": {
-      "common_name": "Schneckenbohne",
-      "description": "Vigna caracalla ist eine schnell wachsende Kletterpflanze mit duftenden, spiraligen Blüten. Sie benötigt viel Sonne, Wärme und regelmäßige Wassergaben."
+      "common_name": "Korkenzieherbohne",
+      "description": "Die Korkenzieherbohne ist eine tropische Kletterpflanze mit einzigartigen, gekrümmten Hülsen. Sie gedeiht bei warmen Temperaturen und benötigt mittlere Lichtverhältnisse und Bewässerung."
     },
     "fr": {
-      "common_name": "Pois escargot",
-      "description": "Vigna caracalla est une plante grimpante vigoureuse aux fleurs parfumées en spirale. Elle aime le plein soleil, la chaleur et un arrosage régulier."
+      "common_name": "Haricot tire-bouchon",
+      "description": "Le Haricot tire-bouchon est une plante grimpante tropicale connue pour ses gousses en spirale. Elle prospère dans des températures chaudes et nécessite un éclairage et un arrosage moyens."
     },
     "it": {
-      "common_name": "Fagiolo a chiocciola",
-      "description": "Vigna caracalla è una pianta rampicante a crescita rapida con fiori profumati e spiralati. Preferisce sole pieno, clima caldo e annaffiature regolari."
+      "common_name": "Fagiolo a cavatappi",
+      "description": "Il fagiolo a cavatappi è una pianta rampicante tropicale nota per i suoi baccelli unici e ricci. Cresce bene in temperature calde e ha bisogno di luce e annaffiature medie."
     },
     "es": {
-      "common_name": "Vid caracol",
-      "description": "Vigna caracalla es una enredadera de rápido crecimiento con flores fragantes en espiral. Requiere pleno sol, temperaturas cálidas y riego regular."
+      "common_name": "Frijol sacacorchos",
+      "description": "El frijol sacacorchos es una planta trepadora tropical conocida por sus vainas en espiral. Crece bien en temperaturas cálidas y requiere luz y riego medios."
     },
     "pt": {
-      "common_name": "Feijão-caracol",
-      "description": "Vigna caracalla é uma trepadeira de crescimento rápido com flores perfumadas em espiral. Gosta de sol pleno, calor e rega regular."
+      "common_name": "Feijão saca-rolhas",
+      "description": "O feijão saca-rolhas é uma planta trepadeira tropical conhecida por suas vagens curvas. Cresce bem em temperaturas quentes e precisa de luz e rega médias."
     },
     "ar": {
-      "common_name": "نبات الحلزون",
-      "description": "Vigna caracalla نبات متسلق سريع النمو يتميز بأزهاره الحلزونية العطرية. يحتاج إلى شمس كاملة وحرارة وري منتظم."
+      "common_name": "الفاصوليا الملتوية",
+      "description": "الفاصوليا الملتوية هي نبتة استوائية معروفة بقرونها الملتوية الفريدة. تنمو بشكل جيد في درجات حرارة دافئة وتتطلب إضاءة وري متوسطيين."
     },
     "hi": {
-      "common_name": "कॉर्कस्क्रू बेल",
-      "description": "Vigna caracalla एक तेजी से बढ़ने वाली लता है जिसमें सुगंधित घुमावदार फूल होते हैं। इसे पूरी धूप, गर्मी और नियमित पानी की आवश्यकता होती है।"
+      "common_name": "कॉर्कस्क्रू बीन",
+      "description": "कॉर्कस्क्रू बीन एक उष्णकटिबंधीय बेल है जो अपनी विशिष्ट घुमावदार फलियों के लिए जानी जाती है। यह गर्म तापमान में बढ़ता है और इसे मध्यम रोशनी और पानी की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "螺旋豆藤",
-      "description": "Vigna caracalla 是一种快速生长的攀援植物，花朵呈螺旋状并带香味。适合全日照、温暖环境和定期浇水。"
+      "common_name": "螺旋豆",
+      "description": "螺旋豆是一种热带藤本植物，以其独特的螺旋状荚果而闻名。它在温暖的温度下生长，需要中等光照和浇水。"
     },
     "ja": {
-      "common_name": "スネイルバイン",
-      "description": "Vigna caracalla は香りのある螺旋状の花をつける成長の早いつる植物です。日当たりと暖かさ、定期的な水やりを好みます。"
+      "common_name": "コルクスクリュー豆",
+      "description": "コルクスクリュー豆は独特な渦巻き状の豆を持つ熱帯のつる植物です。温暖な気温でよく育ち、中程度の光と水やりが必要です。"
     },
     "ko": {
-      "common_name": "코르크스크루 덩굴",
-      "description": "Vigna caracalla는 향기로운 나선형 꽃을 가진 빠르게 자라는 덩굴식물입니다. 충분한 햇빛과 따뜻한 환경, 규칙적인 물주기가 필요합니다."
+      "common_name": "코르크스크류 빈",
+      "description": "코르크스크류 빈은 독특한 나선형 꼬투리로 유명한 열대 덩굴식물입니다. 따뜻한 온도에서 잘 자라며 중간 정도의 빛과 물이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/20331/vigna-caracalla/details",
-      "https://edis.ifas.ufl.edu/publication/FP640",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b570"
+      "https://www.rhs.org.uk/plants/vigna-caracalla",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/vigna-caracalla-care/"
     ]
   }
 }

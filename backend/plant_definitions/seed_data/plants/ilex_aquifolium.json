@@ -1,24 +1,25 @@
 {
   "external_id": "ilex_aquifolium",
-  "name": "English Holly",
+  "name": "Holly",
   "latin": "Ilex aquifolium",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "all-purpose",
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ilex_aquifolium.jpg",
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezzombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic soil",
-          "pl": "Gleba kwaśna",
-          "de": "Saurer Boden",
-          "fr": "Sol acide",
-          "it": "Suolo acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土",
-          "ko": "산성 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,15 +67,15 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Umiarkowane",
-          "de": "Mäßig feucht",
-          "fr": "Humidité modérée",
-          "it": "Umidità media",
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
           "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Odporna na chłód",
-          "de": "Kältetolerant",
-          "fr": "Tolère le froid",
-          "it": "Resiste al freddo",
-          "es": "Tolera el frío",
-          "pt": "Tolera frio",
-          "ar": "يتحمل البرودة",
-          "hi": "ठंड सहनशील",
-          "zh": "耐寒",
-          "ja": "耐寒性",
-          "ko": "내한성"
+          "en": "12-24°C",
+          "pl": "12-24°C",
+          "de": "12-24°C",
+          "fr": "12-24°C",
+          "it": "12-24°C",
+          "es": "12-24°C",
+          "pt": "12-24°C",
+          "ar": "12-24°C",
+          "hi": "12-24°C",
+          "zh": "12-24°C",
+          "ja": "12-24°C",
+          "ko": "12-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic berries",
-          "pl": "Toksyczne owoce",
-          "de": "Giftige Beeren",
-          "fr": "Baies toxiques",
-          "it": "Bacche tossiche",
-          "es": "Bayas tóxicas",
-          "pt": "Bagas tóxicas",
-          "ar": "ثمار سامة",
-          "hi": "विषैले फल",
-          "zh": "果实有毒",
-          "ja": "果実有毒",
-          "ko": "열매 독성"
+          "en": "Toxic if ingested",
+          "pl": "Trująca po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة إذا تم ابتلاعها",
+          "hi": "अगर निगला जाए तो विषैला",
+          "zh": "摄入时有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "缓慢至适中生长",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리게에서 보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-आधारित कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "English Holly",
-      "description": "Ilex aquifolium is an evergreen shrub or small tree native to Europe. It has glossy spiny leaves and red berries on female plants. It prefers partial sun and acidic, well-drained soil."
+      "common_name": "Holly",
+      "description": "Holly is a popular evergreen shrub or tree with spiny, glossy leaves and bright red berries. It is often used in winter decorations and as a hedge."
     },
     "pl": {
-      "common_name": "Ostrokrzew kolczasty",
-      "description": "Ilex aquifolium to zimozielony krzew lub małe drzewo pochodzące z Europy. Charakteryzuje się błyszczącymi liśćmi i czerwonymi owocami na roślinach żeńskich. Najlepiej rośnie w półcieniu i kwaśnej glebie."
+      "common_name": "Ostrokrzew",
+      "description": "Ostrokrzew to popularny krzew lub drzewo z wiecznie zielonymi liśćmi i błyszczącymi, kolczastymi liśćmi oraz czerwonymi jagodami."
     },
     "de": {
       "common_name": "Stechpalme",
-      "description": "Ilex aquifolium ist ein immergrüner Strauch oder kleiner Baum aus Europa. Er besitzt glänzende, stachelige Blätter und rote Beeren an weiblichen Pflanzen. Bevorzugt halbschattige Lagen und sauren Boden."
+      "description": "Die Stechpalme ist ein beliebter immergrüner Strauch oder Baum mit stacheligen, glänzenden Blättern und roten Beeren."
     },
     "fr": {
-      "common_name": "Houx commun",
-      "description": "Ilex aquifolium est un arbuste ou petit arbre persistant originaire d’Europe. Il présente des feuilles brillantes et des baies rouges sur les plants femelles. Il préfère la mi-ombre et un sol acide bien drainé."
+      "common_name": "Houx",
+      "description": "Le houx est un arbuste ou arbre à feuilles persistantes avec des feuilles brillantes et épineuses et des baies rouges vives."
     },
     "it": {
       "common_name": "Agrifoglio",
-      "description": "Ilex aquifolium è un arbusto o piccolo albero sempreverde originario dell’Europa. Ha foglie lucide e bacche rosse sulle piante femminili. Cresce meglio in mezzombra e terreno acido drenante."
+      "description": "L'agrifoglio è un popolare arbusto o albero sempreverde con foglie lucide e spine e bacche rosse."
     },
     "es": {
       "common_name": "Acebo",
-      "description": "Ilex aquifolium es un arbusto o árbol pequeño perenne originario de Europa. Presenta hojas brillantes y bayas rojas en plantas femeninas. Prefiere semisombra y suelos ácidos bien drenados."
+      "description": "El acebo es un arbusto o árbol siempreverde con hojas espinosas y brillantes y bayas rojas."
     },
     "pt": {
       "common_name": "Azevinho",
-      "description": "Ilex aquifolium é um arbusto ou pequena árvore perene nativa da Europa. Possui folhas brilhantes e bagas vermelhas nas plantas femininas. Prefere meia-sombra e solo ácido bem drenado."
+      "description": "O azevinho é um arbusto ou árvore popular de folhas perenes, com folhas brilhantes e espinhosas e bagas vermelhas."
     },
     "ar": {
-      "common_name": "الهولي الأوروبي",
-      "description": "Ilex aquifolium شجيرة أو شجرة صغيرة دائمة الخضرة موطنها أوروبا. تتميز بأوراق لامعة وثمار حمراء على النباتات الأنثوية. تفضل الشمس الجزئية والتربة الحمضية جيدة التصريف."
+      "common_name": "الهدب",
+      "description": "الهدب هو شجيرة أو شجرة دائمة الخضرة بأوراق لامعة وشائكة وثمار حمراء."
     },
     "hi": {
-      "common_name": "इंग्लिश होली",
-      "description": "Ilex aquifolium यूरोप का मूल सदाबहार झाड़ी या छोटा पेड़ है। इसमें चमकदार कांटेदार पत्तियाँ और मादा पौधों पर लाल फल होते हैं। यह आंशिक धूप और अम्लीय मिट्टी पसंद करता है।"
+      "common_name": "हॉली",
+      "description": "हॉली एक लोकप्रिय सदाबहार झाड़ी या पेड़ है जिसमें कांटेदार, चमकदार पत्तियाँ और उज्ज्वल लाल बेरी होती है।"
     },
     "zh": {
-      "common_name": "欧洲冬青",
-      "description": "Ilex aquifolium 是原产于欧洲的常绿灌木或小乔木。其叶片光亮，雌株会结红色果实。适合半阴环境和排水良好的酸性土壤。"
+      "common_name": "冬青",
+      "description": "冬青是一种常绿灌木或树木，具有刺状、光泽的叶子和鲜艳的红色浆果。"
     },
     "ja": {
-      "common_name": "セイヨウヒイラギ",
-      "description": "Ilex aquifolium はヨーロッパ原産の常緑低木または小高木です。光沢のある葉と雌株の赤い実が特徴です。半日陰と酸性土壌を好みます。"
+      "common_name": "ヒイラギ",
+      "description": "ヒイラギは、鋭い光沢のある葉と鮮やかな赤いベリーを持つ人気のある常緑樹木です。"
     },
     "ko": {
-      "common_name": "서양호랑가시나무",
-      "description": "Ilex aquifolium은 유럽 원산의 상록 관목 또는 작은 나무입니다. 윤기 있는 잎과 암그루의 붉은 열매가 특징입니다. 반그늘과 산성 토양에서 잘 자랍니다."
+      "common_name": "호랑가시나무",
+      "description": "호랑가시나무는 가시가 있는 반짝이는 잎과 밝은 빨간색 열매를 가진 인기 있는 상록수입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ilex/aquifolium/details",
-      "https://plants.ces.ncsu.edu/plants/ilex-aquifolium/",
-      "https://www.kew.org/plants/ilex-aquifolium"
+      "https://www.rhs.org.uk/plants/ilex-aquifolium",
+      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-pests/holly/"
     ]
   }
 }

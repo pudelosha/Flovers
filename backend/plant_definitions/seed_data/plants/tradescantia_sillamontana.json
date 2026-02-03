@@ -1,18 +1,18 @@
 {
   "external_id": "tradescantia_sillamontana",
-  "name": "Cobweb Spiderwort",
+  "name": "White Gossamer Plant",
   "latin": "Tradescantia sillamontana",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "cactus"
+    "all-purpose",
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -39,8 +39,8 @@
           "ar": "ضوء متوسط",
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中光",
-          "ko": "중간 조명"
+          "ja": "中程度の光",
+          "ko": "중간 광도"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "よく排水された土壌",
-          "ko": "잘 배수된 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري بلطف",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -153,7 +153,7 @@
           "ar": "غير سام",
           "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "비독성"
         }
       }
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to medium",
-          "pl": "Wolny do średniego",
-          "de": "Langsam bis mittel",
-          "fr": "Lent à moyen",
-          "it": "Lento a medio",
-          "es": "Lento a medio",
-          "pt": "Lento a médio",
-          "ar": "بطيء إلى متوسط",
-          "hi": "धीमा से मध्यम",
-          "zh": "慢到中等",
-          "ja": "遅いから中くらい",
-          "ko": "느린 성장"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やりのしすぎを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات متقطعة",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Cobweb Spiderwort",
-      "description": "Tradescantia sillamontana is a low-growing perennial native to Mexico. It has silvery-green leaves covered in soft white hairs and produces pinkish-purple flowers."
+      "common_name": "White Gossamer Plant",
+      "description": "Tradescantia sillamontana, known for its soft, silvery hairs, thrives in bright indirect light and well-drained soil. It's easy to care for with moderate watering."
     },
     "pl": {
-      "common_name": "Pająkowiec pokryty włoskami",
-      "description": "Tradescantia sillamontana to niskorosnąca roślina wieloletnia pochodząca z Meksyku. Ma srebrzysto-zielone liście pokryte miękkimi białymi włoskami i wytwarza różowo-fioletowe kwiaty."
+      "common_name": "Biała roślina gossamer",
+      "description": "Tradescantia sillamontana, znana z miękkich, srebrzystych włosków, rośnie w jasnym, pośrednim świetle i dobrze przepuszczalnej glebie. Łatwa w pielęgnacji przy umiarkowanym podlewaniu."
     },
     "de": {
-      "common_name": "Spinnweb-Spinnenpflanze",
-      "description": "Tradescantia sillamontana ist eine niedrig wachsende Staude, die in Mexiko beheimatet ist. Sie hat silbrig-grüne Blätter, die mit weichen weißen Haaren bedeckt sind, und produziert rosa-lila Blüten."
+      "common_name": "Weiße Gossamer Pflanze",
+      "description": "Tradescantia sillamontana, bekannt für ihre weichen, silbrigen Haare, gedeiht bei hellem, indirektem Licht und gut durchlässigem Boden. Sie ist einfach zu pflegen mit mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Tradescantia sillamontana",
-      "description": "Tradescantia sillamontana est une plante vivace basse originaire du Mexique. Elle a des feuilles vertes argentées couvertes de poils blancs doux et produit des fleurs rose-violet."
+      "common_name": "Plante Gossamer blanche",
+      "description": "Tradescantia sillamontana, connue pour ses poils doux et argentés, prospère à la lumière indirecte brillante et dans un sol bien drainé. Facile à entretenir avec un arrosage modéré."
     },
     "it": {
-      "common_name": "Tradescantia sillamontana",
-      "description": "Tradescantia sillamontana è una pianta perenne a bassa crescita originaria del Messico. Ha foglie verde argento coperte da morbidi peli bianchi e produce fiori rosa-viola."
+      "common_name": "Pianta Gossamer bianca",
+      "description": "Tradescantia sillamontana, nota per i suoi peli morbidi e argentati, cresce in luce indiretta brillante e in terriccio ben drenato. Facile da curare con annaffiature moderate."
     },
     "es": {
-      "common_name": "Tradescantia sillamontana",
-      "description": "Tradescantia sillamontana es una planta perenne de bajo crecimiento originaria de México. Tiene hojas verde plateadas cubiertas de suaves pelos blancos y produce flores rosa-lilas."
+      "common_name": "Planta Gossamer blanca",
+      "description": "Tradescantia sillamontana, conocida por sus pelos suaves y plateados, prospera en luz indirecta brillante y suelo bien drenado. Es fácil de cuidar con riego moderado."
     },
     "pt": {
-      "common_name": "Tradescantia sillamontana",
-      "description": "Tradescantia sillamontana é uma planta perene de baixo crescimento originária do México. Possui folhas verde prateadas cobertas por pelos brancos suaves e produz flores rosa-roxas."
+      "common_name": "Planta Gossamer branca",
+      "description": "Tradescantia sillamontana, conhecida por seus pelos suaves e prateados, cresce em luz indireta brilhante e solo bem drenado. Fácil de cuidar com rega moderada."
     },
     "ar": {
-      "common_name": "تراديشانتيا سيلامونتانا",
-      "description": "تراديشانتيا سيلامونتانا هي نبات معمر منخفض النمو أصلي من المكسيك. لها أوراق خضراء فضية مغطاة بشعيرات بيضاء ناعمة وتنتج زهورًا وردية بنفسجية."
+      "common_name": "نبات جوسامير الأبيض",
+      "description": "Tradescantia sillamontana، المعروفة بشعرها الناعم والفضي، تنمو في الضوء غير المباشر الساطع والتربة جيدة التصريف. سهل العناية به مع الري المعتدل."
     },
     "hi": {
-      "common_name": "ट्रेडस्कैंटिया सिल्लामोंटाना",
-      "description": "ट्रेडस्कैंटिया सिल्लामोंटाना एक निम्न-वृद्धि वाली बारहमासी पौधा है जो मेक्सिको का मूल निवासी है। इसके पास चांदी-हरे पत्ते होते हैं जो मुलायम सफेद बालों से ढके होते हैं और यह गुलाबी-बैंगनी फूल उगता है।"
+      "common_name": "सफेद गोस्सामर पौधा",
+      "description": "Tradescantia sillamontana, अपने मुलायम, चांदी जैसे बालों के लिए जाना जाता है, यह उज्ज्वल अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाली मिट्टी में बढ़ता है। यह मध्यम पानी देने के साथ देखभाल करने में आसान है।"
     },
     "zh": {
-      "common_name": "蛛网草",
-      "description": "Tradescantia sillamontana 是一种原产于墨西哥的低矮多年生植物。它有银绿色的叶子，覆盖着柔软的白色毛发，并开出粉紫色的花朵。"
+      "common_name": "白色薄纱植物",
+      "description": "Tradescantia sillamontana，以其柔软的银白色毛发闻名，在明亮的间接光和排水良好的土壤中生长。适合进行适度的浇水，非常易于照料。"
     },
     "ja": {
-      "common_name": "トレディスカンティア・シラモンタナ",
-      "description": "トレディスカンティア・シラモンタナはメキシコ原産の低成長の多年草です。銀緑色の葉には柔らかい白い毛が生えており、ピンク紫色の花を咲かせます。"
+      "common_name": "ホワイトゴッサマー植物",
+      "description": "Tradescantia sillamontanaは、その柔らかい銀色の毛で知られており、明るい間接光と排水の良い土壌で育ちます。適度な水やりで簡単にお手入れできます。"
     },
     "ko": {
-      "common_name": "트레디스칸티아 실라몬타나",
-      "description": "트레디스칸티아 실라몬타나는 멕시코 원산지의 저성장 다년생 식물입니다. 은회색의 잎은 부드러운 흰 털로 덮여 있으며, 분홍-보라색 꽃을 피웁니다."
+      "common_name": "화이트 고사머 식물",
+      "description": "Tradescantia sillamontana는 부드럽고 은색의 털로 유명하며, 밝은 간접광과 잘 배수되는 토양에서 자랍니다. 적당한 물주기로 쉽게 관리할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/62308/i-tradescantia-sillamontana-i/Details",
-      "https://www.gardenia.net/plant/Tradescantia-sillamontana"
+      "https://www.rhs.org.uk/advice/profile?pid=431",
+      "https://www.gardeningknowhow.com/houseplants/tradescantia-sillamontana-care.htm"
     ]
   }
 }

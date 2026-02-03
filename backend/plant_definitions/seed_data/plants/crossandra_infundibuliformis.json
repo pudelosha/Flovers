@@ -1,27 +1,26 @@
 {
   "external_id": "crossandra_infundibuliformis",
-  "name": "Firecracker Flower",
+  "name": "Firecracker flower",
   "latin": "Crossandra infundibuliformis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
+  "fertilize_interval_days": 14,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "crossandra_infundibuliformis.jpg",
   "image_thumb": "crossandra_infundibuliformis.jpg",
   "traits": [
@@ -29,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
+          "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive",
+          "de": "Helles Indirekt",
+          "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज अप्रत्यक्ष प्रकाश",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well drained",
+          "en": "Rich, well-draining",
           "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainant",
-          "it": "Ricco e drenante",
+          "de": "Nährstoffreich, drain.",
+          "fr": "Riche, drainant",
+          "it": "Ricco, drenante",
           "es": "Rico y drenante",
-          "pt": "Rico e drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "उपजाऊ व जलनिकासी",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良い土",
-          "ko": "배수 좋은 토양"
+          "pt": "Rico e drenante",
+          "ar": "تربة غنية مصرفة",
+          "hi": "समृद्ध, जलनिकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥·배수 좋게"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Evenly moist soil",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol humide",
-          "it": "Suolo umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "保持湿润",
-          "ja": "土を湿らせる",
-          "ko": "항상 촉촉"
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Substrat légèrement humide",
+          "it": "Terriccio poco umido",
+          "es": "Sustrato algo húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطبة قليلا",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -93,11 +92,11 @@
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等难度",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–27°C warm",
+          "pl": "18–27°C ciepło",
+          "de": "18–27°C warm",
+          "fr": "18–27°C chaud",
+          "it": "18–27°C caldo",
+          "es": "18–27°C cálido",
+          "pt": "18–27°C quente",
+          "ar": "18–27°م دافئ",
+          "hi": "18–27°C गर्म",
+          "zh": "18–27°C 温暖",
+          "ja": "18–27°C 暖かく",
+          "ko": "18–27°C 따뜻하게"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
+          "en": "Non-toxic (pets)",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "hi": "अ-विषाक्त",
+          "zh": "对宠物无毒",
+          "ja": "無毒(ペット)",
+          "ko": "무독성(반려동물)"
         }
       }
     },
@@ -162,77 +161,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Bushy flowering plant",
-          "pl": "Krzaczasta",
-          "de": "Buschig",
-          "fr": "Port buissonnant",
-          "it": "Cespugliosa",
-          "es": "Arbustiva",
-          "pt": "Arbustiva",
-          "ar": "نمو كثيف",
-          "hi": "झाड़ीदार वृद्धि",
-          "zh": "灌木状生长",
-          "ja": "茂る成長",
-          "ko": "관목형 성장"
+          "en": "Compact, flowering",
+          "pl": "Zwarta, kwitnąca",
+          "de": "Kompakt, blühend",
+          "fr": "Compacte, fleurie",
+          "it": "Compatta, fiorita",
+          "es": "Compacta, florífera",
+          "pt": "Compacta, florida",
+          "ar": "مدمجة مزهرة",
+          "hi": "सघन, पुष्पित",
+          "zh": "紧凑开花型",
+          "ja": "コンパクト開花",
+          "ko": "콤팩트·개화"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid cold drafts",
+          "pl": "Unikaj przeciągów",
+          "de": "Zugluft vermeiden",
+          "fr": "Éviter les courants",
+          "it": "Evita correnti fredde",
+          "es": "Evita corrientes frías",
+          "pt": "Evite correntes frias",
+          "ar": "تجنب التيارات الباردة",
+          "hi": "ठंडी हवा से बचें",
+          "zh": "避免冷风直吹",
+          "ja": "冷気と直射回避",
+          "ko": "찬바람 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mites",
+          "pl": "Mszyce, przędziorki",
+          "de": "Blattläuse, Milben",
+          "fr": "Pucerons, acariens",
+          "it": "Afidi, acari",
+          "es": "Pulgones, ácaros",
+          "pt": "Pulgões, ácaros",
+          "ar": "منّ، عناكب دقيقة",
+          "hi": "एफिड्स, माइट्स",
+          "zh": "蚜虫、螨虫",
+          "ja": "アブラムシ・ダニ",
+          "ko": "진딧물·응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Firecracker Flower",
-      "description": "Crossandra infundibuliformis is a tropical flowering plant native to southern India and Sri Lanka. It is valued for its bright orange flowers and glossy green leaves. The plant grows best indoors with warm temperatures and bright indirect light."
+      "common_name": "Firecracker flower",
+      "description": "Crossandra infundibuliformis is a tropical flowering houseplant with glossy leaves and orange to salmon blooms. It grows best in bright, indirect light with evenly moist, well-drained soil and warm temperatures. Higher humidity helps performance, and regular misting is useful in dry indoor air."
     },
     "pl": {
-      "common_name": "Krosandra",
-      "description": "Crossandra infundibuliformis to tropikalna roślina kwitnąca pochodząca z południowych Indii i Sri Lanki. Ceniona jest za intensywnie pomarańczowe kwiaty i błyszczące liście. Najlepiej rośnie w jasnym miejscu i ciepłym otoczeniu."
+      "common_name": "Krosandra lejkowata",
+      "description": "Crossandra infundibuliformis to tropikalna roślina kwitnąca o błyszczących liściach i pomarańczowych kwiatach. Najlepiej rośnie w jasnym, rozproszonym świetle oraz w lekko wilgotnym, przepuszczalnym podłożu i cieple. Wysoka wilgotność jest korzystna, a w suchym powietrzu pomaga regularne zraszanie."
     },
     "de": {
-      "common_name": "Feuerwerksblume",
-      "description": "Crossandra infundibuliformis ist eine tropische Blühpflanze aus Südindien und Sri Lanka. Sie zeichnet sich durch leuchtend orange Blüten und glänzende Blätter aus. Als Zimmerpflanze benötigt sie Wärme und helles, indirektes Licht."
+      "common_name": "Crossandra",
+      "description": "Crossandra infundibuliformis ist eine tropische Blühpflanze mit glänzendem Laub und orangefarbenen Blüten. Sie bevorzugt helles, indirektes Licht, gleichmäßig leicht feuchtes Substrat und Wärme. Hohe Luftfeuchte ist vorteilhaft; in trockener Raumluft hilft regelmäßiges Besprühen."
     },
     "fr": {
-      "common_name": "Fleur pétard",
-      "description": "Crossandra infundibuliformis est une plante tropicale originaire du sud de l’Inde et du Sri Lanka. Elle est appréciée pour ses fleurs orange vives et son feuillage brillant. Elle se cultive bien en intérieur avec chaleur et lumière vive."
+      "common_name": "Crossandra",
+      "description": "Crossandra infundibuliformis est une plante tropicale à fleurs, au feuillage luisant et aux fleurs orangées. Elle aime une lumière vive indirecte, un substrat riche et drainant gardé légèrement humide, et des températures chaudes. Une bonne humidité ambiante est utile, avec une brumisation régulière en air sec."
     },
     "it": {
       "common_name": "Crossandra",
-      "description": "La Crossandra infundibuliformis è una pianta tropicale originaria dell’India meridionale e dello Sri Lanka. È nota per i suoi fiori arancioni intensi e le foglie lucide. Cresce bene in casa con temperature calde e luce indiretta."
+      "description": "Crossandra infundibuliformis è una pianta tropicale fiorita con foglie lucide e fiori arancioni. Preferisce luce intensa ma indiretta, terriccio drenante mantenuto leggermente umido e temperature calde. Un’umidità elevata aiuta, e la nebulizzazione è utile quando l’aria è secca."
     },
     "es": {
       "common_name": "Crossandra",
-      "description": "Crossandra infundibuliformis es una planta tropical originaria del sur de la India y Sri Lanka. Destaca por sus flores naranjas brillantes y hojas verdes lustrosas. Se adapta bien al interior con calor y luz indirecta."
+      "description": "Crossandra infundibuliformis es una planta tropical de floración con hojas brillantes y flores anaranjadas. Va mejor con luz brillante e indirecta, sustrato bien drenado y ligeramente húmedo, y calor estable. La humedad alta favorece su crecimiento y el pulverizado ayuda en ambientes secos."
     },
     "pt": {
       "common_name": "Crossandra",
-      "description": "A Crossandra infundibuliformis é uma planta tropical nativa do sul da Índia e do Sri Lanka. É valorizada pelas flores laranja vivas e folhas brilhantes. Desenvolve-se bem em ambientes internos quentes e iluminados."
+      "description": "Crossandra infundibuliformis é uma planta tropical florífera com folhas brilhantes e flores alaranjadas. Prefere luz forte indireta, substrato rico e bem drenado mantido levemente úmido e temperaturas quentes. Umidade alta ajuda, e borrifar é útil quando o ar está seco."
     },
     "ar": {
-      "common_name": "كروسندرا",
-      "description": "نبات Crossandra infundibuliformis نبات استوائي موطنه جنوب الهند وسريلانكا. يتميز بأزهاره البرتقالية الزاهية وأوراقه الخضراء اللامعة. ينجح كنبات داخلي مع الدفء والضوء غير المباشر."
+      "common_name": "كروساندرا",
+      "description": "Crossandra infundibuliformis نبات استوائي مزهر بأوراق لامعة وأزهار برتقالية. يفضل ضوءًا ساطعًا غير مباشر وتربة جيدة التصريف تبقى رطبة قليلًا وحرارة ثابتة. الرطوبة العالية مفيدة، ويمكن أن يساعد الرش المنتظم عند جفاف هواء المنزل."
     },
     "hi": {
-      "common_name": "क्रॉसेंड्रा",
-      "description": "Crossandra infundibuliformis एक उष्णकटिबंधीय फूलदार पौधा है जो दक्षिण भारत और श्रीलंका का मूल निवासी है। इसके चमकीले नारंगी फूल और हरी चमकदार पत्तियाँ इसे लोकप्रिय बनाती हैं। यह घर के अंदर गर्म तापमान और अप्रत्यक्ष रोशनी में अच्छा बढ़ता है।"
+      "common_name": "क्रॉसैन्ड्रा",
+      "description": "Crossandra infundibuliformis एक उष्णकटिबंधीय फूलदार पौधा है जिसकी पत्तियाँ चमकीली और फूल नारंगी होते हैं। इसे तेज़ अप्रत्यक्ष रोशनी, अच्छी जलनिकासी वाली मिट्टी जो हल्की नम रहे, और गर्म तापमान पसंद है। अधिक नमी मदद करती है और सूखी हवा में नियमित मिस्टिंग उपयोगी होती है।"
     },
     "zh": {
-      "common_name": "十字花",
-      "description": "Crossandra infundibuliformis 原产于印度南部和斯里兰卡，是一种热带开花植物。它以鲜艳的橙色花朵和光亮的绿叶著称。适合在温暖且明亮的室内环境中生长。"
+      "common_name": "十字花属（Crossandra）",
+      "description": "Crossandra infundibuliformis 是热带开花观叶植物，叶片有光泽，花色多为橙色。适合明亮散射光、排水良好且保持微湿的基质，以及温暖环境。较高湿度更利于生长，室内干燥时可定期喷雾增湿。"
     },
     "ja": {
-      "common_name": "クロサンドラ",
-      "description": "クロサンドラはインド南部とスリランカ原産の熱帯性開花植物です。鮮やかなオレンジ色の花と光沢のある葉が特徴です。暖かく明るい室内でよく育ちます。"
+      "common_name": "クロッサンドラ",
+      "description": "Crossandra infundibuliformis は光沢のある葉とオレンジ色の花をつける熱帯性の花木です。明るい間接光、排水のよい用土をやや湿り気を保って管理し、暖かい環境を好みます。湿度が高いほど調子が良く、乾燥時は定期的な霧吹きが役立ちます。"
     },
     "ko": {
       "common_name": "크로산드라",
-      "description": "Crossandra infundibuliformis는 인도 남부와 스리랑카가 원산지인 열대 개화 식물입니다. 선명한 주황색 꽃과 윤기 있는 잎이 특징입니다. 따뜻하고 밝은 실내 환경에서 잘 자랍니다."
+      "description": "Crossandra infundibuliformis는 윤기 있는 잎과 주황색 꽃이 특징인 열대성 개화 식물입니다. 밝은 간접광과 배수가 좋은 흙을 약간 촉촉하게 유지하고, 따뜻한 온도를 선호합니다. 높은 습도가 도움이 되며 실내가 건조하면 정기적인 분무가 유용합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b817",
-      "https://www.rhs.org.uk/plants/17855/crossandra-infundiuliformis/details",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-crossandra/"
+      "https://plants.ces.ncsu.edu/plants/crossandra-infundibuliformis/",
+      "https://www.thespruce.com/grow-crossandra-inside-1902641",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/crossandra",
+      "https://www.southernliving.com/garden/shade/crossandra-firecracker-plant"
     ]
   }
 }

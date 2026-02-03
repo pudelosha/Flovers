@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "philodendron_melanochrysum.jpg",
   "image_thumb": "philodendron_melanochrysum.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "aroid",
-          "fr": "aroïde",
-          "it": "aroide",
-          "es": "aroide",
-          "pt": "aroide",
-          "ar": "أرويد",
-          "hi": "एरोइड",
-          "zh": "阿罗伊",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Aroid soil",
+          "pl": "Gleba dla aroidów",
+          "de": "Aroid-Erde",
+          "fr": "Terreau pour aroides",
+          "it": "Terreno per aroidi",
+          "es": "Tierra para aroides",
+          "pt": "Solo para aroides",
+          "ar": "تربة أرويد",
+          "hi": "एरॉइड मिट्टी",
+          "zh": "箭叶植物土壤",
+          "ja": "アロイド土壌",
+          "ko": "아로이드 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-30°C",
-          "pl": "20-30°C",
-          "de": "20-30°C",
-          "fr": "20-30°C",
-          "it": "20-30°C",
-          "es": "20-30°C",
-          "pt": "20-30°C",
-          "ar": "20-30°C",
-          "hi": "20-30°C",
-          "zh": "20-30°C",
-          "ja": "20-30°C",
-          "ko": "20-30°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "climbing",
-          "pl": "wspinacz",
-          "de": "klettern",
-          "fr": "grimpant",
-          "it": "rampicante",
-          "es": "trepadora",
-          "pt": "trepadeira",
-          "ar": "زاحف",
-          "hi": "चढ़ाई",
-          "zh": "攀爬",
-          "ja": "登る",
-          "ko": "기어 오르기"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mäßige Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta o moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "生长缓慢至适中",
+          "ja": "遅いから中程度の成長",
+          "ko": "느린에서 보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenze occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "Philodendron melanochrysum is a climbing aroid known for its large, glossy heart-shaped leaves with striking golden veins. It thrives in humid tropical environments, typically found growing on trees or as an epiphyte."
+      "common_name": "Melanochrysum Philodendron",
+      "description": "Philodendron melanochrysum is a rare and beautiful houseplant native to Colombia. It features heart-shaped leaves with striking yellow veins."
     },
     "pl": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "Philodendron melanochrysum to roślina pnąca z rodziny aroidów, znana ze swoich dużych, błyszczących, sercowatych liści z wyrazistymi złotymi żyłkami. Rośnie w wilgotnym tropikalnym środowisku, najczęściej na drzewach lub jako epifit."
+      "common_name": "Philodendron melanochrysum",
+      "description": "Philodendron melanochrysum to rzadka i piękna roślina domowa, pochodząca z Kolumbii. Charakteryzuje się sercowatymi liśćmi z wyraźnymi żółtymi żyłkami."
     },
     "de": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "Philodendron melanochrysum ist eine kletternde Aroidpflanze, die für ihre großen, glänzenden herzförmigen Blätter mit auffälligen goldenen Adern bekannt ist. Sie wächst in feuchten tropischen Umgebungen und wird oft als Epiphyt auf Bäumen gefunden."
+      "common_name": "Philodendron melanochrysum",
+      "description": "Der Philodendron melanochrysum ist eine seltene und schöne Zimmerpflanze, die aus Kolumbien stammt. Sie hat herzförmige Blätter mit auffälligen gelben Adern."
     },
     "fr": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "Le Philodendron melanochrysum est une plante grimpante de la famille des aracées, connue pour ses grandes feuilles en forme de cœur et brillantes avec des nervures dorées. Elle prospère dans les environnements tropicaux humides et se trouve souvent sur des arbres comme épiphyte."
+      "common_name": "Philodendron melanochrysum",
+      "description": "Le Philodendron melanochrysum est une plante d'intérieur rare et belle originaire de Colombie. Elle présente des feuilles en forme de cœur avec des nervures jaunes frappantes."
     },
     "it": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "Il Philodendron melanochrysum è una pianta rampicante della famiglia delle Aracee, nota per le sue grandi foglie lucide a forma di cuore con venature dorate. Cresce in ambienti tropicali umidi, solitamente sugli alberi come epifita."
+      "common_name": "Philodendron melanochrysum",
+      "description": "Il Philodendron melanochrysum è una pianta rara e bella originaria della Colombia. Ha foglie a forma di cuore con venature gialle molto evidenti."
     },
     "es": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "El Philodendron melanochrysum es una planta trepadora de la familia de las aráceas, conocida por sus grandes hojas brillantes en forma de corazón con venas doradas. Crece en ambientes tropicales húmedos, generalmente sobre árboles como epífita."
+      "common_name": "Philodendron melanochrysum",
+      "description": "El Philodendron melanochrysum es una planta rara y hermosa originaria de Colombia. Presenta hojas en forma de corazón con venas amarillas llamativas."
     },
     "pt": {
-      "common_name": "Philodendron Melanochrysum",
-      "description": "O Philodendron melanochrysum é uma planta trepadeira da família Araceae, conhecida por suas grandes folhas brilhantes em forma de coração com nervuras douradas. Cresce em ambientes tropicais úmidos, geralmente em árvores como epífita."
+      "common_name": "Philodendron melanochrysum",
+      "description": "O Philodendron melanochrysum é uma planta rara e bonita originária da Colômbia. Possui folhas em forma de coração com veias amarelas marcantes."
     },
     "ar": {
-      "common_name": "فيلوديندورن ميلانوكريسوم",
-      "description": "فيلوديندورن ميلانوكريسوم هو نبات تسلق من عائلة الأرود، معروف بأوراقه الكبيرة اللامعة ذات الشكل القلبي والعروق الذهبية. ينمو في البيئات الاستوائية الرطبة، وغالبًا ما ينمو على الأشجار كإيبيفيت."
+      "common_name": "فيلوديندرون ميلانوكريسوم",
+      "description": "فيلوديندرون ميلانوكريسوم هو نبات نادر وجميل موطنه كولومبيا. يتميز بأوراق على شكل قلب مع عروق صفراء بارزة."
     },
     "hi": {
-      "common_name": "फिलोडेंड्रोन मेलानोक्रिसम",
-      "description": "फिलोडेंड्रोन मेलानोक्रिसम एक चढ़ाई करने वाला पौधा है, जो अपने बड़े, चमकदार, दिल के आकार के पत्तों और सोने जैसी नसों के लिए जाना जाता है। यह आर्द्र उष्णकटिबंधीय वातावरण में उगता है, आमतौर पर पेड़ों पर एपिफाइट के रूप में।"
+      "common_name": "फिलोडेंड्रोन मेलानोक्राईसियम",
+      "description": "फिलोडेंड्रोन मेलानोक्राईसियम एक दुर्लभ और सुंदर पौधा है जो कोलंबिया का मूल निवासी है। इसमें दिल के आकार के पत्ते होते हैं जिनमें चमकीली पीली नसें होती हैं।"
     },
     "zh": {
-      "common_name": "美丽铁树",
-      "description": "美丽铁树是一种攀爬型的天南星科植物，因其大而光滑的心形叶子和金色脉络而闻名。它生长在潮湿的热带环境中，通常作为附生植物生长在树木上。"
+      "common_name": "美丽叶鸭脚木",
+      "description": "美丽叶鸭脚木是一种稀有且美丽的室内植物，原产于哥伦比亚。它的心形叶子上有显著的黄色脉络。"
     },
     "ja": {
       "common_name": "フィロデンドロン・メラノクリスム",
-      "description": "フィロデンドロン・メラノクリスムは、金色の葉脈が特徴的な大きなハート型の光沢のある葉を持つツル植物です。湿った熱帯環境で、通常は樹木に付着して生育します。"
+      "description": "フィロデンドロン・メラノクリスムはコロンビア原産の珍しく美しい室内植物です。ハート型の葉に鮮やかな黄色い脈があります。"
     },
     "ko": {
       "common_name": "필로덴드론 멜라노크리숨",
-      "description": "필로덴드론 멜라노크리숨은 크고 광택이 나는 하트 모양의 잎과 금색의 정맥을 가진 덩굴식물입니다. 이 식물은 습한 열대 환경에서 자생하며, 일반적으로 나무에 부착되어 자랍니다."
+      "description": "필로덴드론 멜라노크리숨은 콜롬비아 원산지의 희귀하고 아름다운 실내 식물입니다. 심장 모양의 잎사귀에 눈에 띄는 노란색 줄무늬가 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/philodendron-melanochrysum",
-      "https://www.botanicalgarden.ubc.ca"
+      "https://www.gardeningknowhow.com/houseplants/philodendron-melanochrysum-care.htm",
+      "https://www.rhs.org.uk/plants/philodendron-melanochrysum"
     ]
   }
 }

@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "rhaphidophora_hayi.jpg",
   "image_thumb": "rhaphidophora_hayi.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "aroid",
-          "fr": "aroïde",
-          "it": "aroide",
-          "es": "aroide",
-          "pt": "aroide",
-          "ar": "أرويد",
-          "hi": "एरोइड",
-          "zh": "阿罗伊",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidowa",
+          "de": "Aroid Mischung",
+          "fr": "Mélange Aroid",
+          "it": "Miscela Aroid",
+          "es": "Mezcla Aroid",
+          "pt": "Mistura Aroid",
+          "ar": "مزيج أرويد",
+          "hi": "एरोइड मिक्स",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합토"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-26°C",
-          "pl": "22-26°C",
-          "de": "22-26°C",
-          "fr": "22-26°C",
-          "it": "22-26°C",
-          "es": "22-26°C",
-          "pt": "22-26°C",
-          "ar": "22-26°C",
-          "hi": "22-26°C",
-          "zh": "22-26°C",
-          "ja": "22-26°C",
-          "ko": "22-26°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성 있음"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당한"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Pas d'arrosage excessif",
+          "it": "Evitare il troppo innaffiamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Não exagerar na rega",
+          "ar": "لا تفرط في الري",
+          "hi": "अفرोवाटरिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりは避ける",
+          "ko": "과도한 물주기 방지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-समय में कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折の害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi is a climbing aroid, native to tropical regions. It features glossy, dark green, shingling leaves and can grow as an epiphyte."
+      "common_name": "Hayi Philodendron",
+      "description": "Rhaphidophora hayi is a tropical plant with attractive heart-shaped leaves. It's commonly grown indoors as a decorative houseplant."
     },
     "pl": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi to roślina pnąca, pochodząca z tropikalnych rejonów. Ma błyszczące, ciemnozielone liście, które rosną jak epifity."
+      "common_name": "Filodendron Hayi",
+      "description": "Rhaphidophora hayi to roślina tropikalna o atrakcyjnych, sercowatych liściach. Jest popularnie uprawiana w pomieszczeniach jako roślina ozdobna."
     },
     "de": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi ist eine kletternde Aroidpflanze, die in tropischen Regionen beheimatet ist. Sie hat glänzende, dunkelgrüne Blätter und wächst als Epiphyt."
+      "common_name": "Hayi-Philodendron",
+      "description": "Rhaphidophora hayi ist eine tropische Pflanze mit attraktiven herzförmigen Blättern. Sie wird häufig als Zimmerpflanze angebaut."
     },
     "fr": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi est une plante grimpante, originaire des régions tropicales. Elle possède des feuilles luisantes, vert foncé, et peut pousser en tant qu'épiphyte."
+      "common_name": "Philodendron Hayi",
+      "description": "Rhaphidophora hayi est une plante tropicale avec de belles feuilles en forme de cœur. Elle est couramment cultivée comme plante d'intérieur décorative."
     },
     "it": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi è una pianta rampicante, originaria delle regioni tropicali. Presenta foglie lucide e verde scuro e può crescere come epifita."
+      "common_name": "Philodendron Hayi",
+      "description": "Rhaphidophora hayi è una pianta tropicale con foglie a forma di cuore. È comunemente coltivata come pianta da interno decorativa."
     },
     "es": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi es una planta trepadora originaria de las regiones tropicales. Tiene hojas brillantes de color verde oscuro y puede crecer como epífita."
+      "common_name": "Filodendro Hayi",
+      "description": "Rhaphidophora hayi es una planta tropical con atractivas hojas en forma de corazón. Comúnmente se cultiva en interiores como planta decorativa."
     },
     "pt": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi é uma planta trepadeira, nativa das regiões tropicais. Apresenta folhas brilhantes de cor verde escuro e pode crescer como epífita."
+      "common_name": "Filodendro Hayi",
+      "description": "Rhaphidophora hayi é uma planta tropical com folhas atraentes em forma de coração. Geralmente é cultivada como planta decorativa em ambientes internos."
     },
     "ar": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi هي نبات متسلق، موطنه المناطق الاستوائية. يتميز بأوراق لامعة وخضراء داكنة ويمكن أن ينمو كإبيفيت."
+      "common_name": "فيلوديندرون هايي",
+      "description": "Rhaphidophora hayi هي نبات استوائي ذو أوراق جذابة على شكل قلب. غالبًا ما يتم زراعتها كنبات زخرفي داخلي."
     },
     "hi": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi एक चढ़ाई करने वाला पौधा है, जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। इसमें चमकदार, गहरे हरे पत्ते होते हैं और यह एपिफाइट के रूप में बढ़ सकता है।"
+      "common_name": "फिलोडेंड्रोन हायि",
+      "description": "Rhaphidophora hayi एक उष्णकटिबंधीय पौधा है जिसकी आकर्षक दिल के आकार की पत्तियाँ होती हैं। इसे आमतौर पर एक सजावटी पौधे के रूप में इनडोर उगाया जाता है।"
     },
     "zh": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi 是一种爬藤植物，原产于热带地区。它具有光亮的深绿色叶子，且可以作为附生植物生长。"
+      "common_name": "海伊蔓绿绒",
+      "description": "Rhaphidophora hayi 是一种热带植物，具有迷人的心形叶子。它通常作为室内装饰植物种植。"
     },
     "ja": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi は熱帯地域原産のつる植物です。光沢のある濃緑色の葉を持ち、着生植物として成長します。"
+      "common_name": "ハイイフィロデンドロン",
+      "description": "Rhaphidophora hayi は魅力的なハート型の葉を持つ熱帯植物です。一般的に室内の装飾植物として栽培されています。"
     },
     "ko": {
-      "common_name": "Rhaphidophora hayi",
-      "description": "Rhaphidophora hayi는 열대 지역 원산지의 덩굴 식물입니다. 광택 있는 어두운 녹색 잎을 가지고 있으며, 착생 식물로 자랄 수 있습니다."
+      "common_name": "하이이 필로덴드론",
+      "description": "Rhaphidophora hayi는 매력적인 심장 모양의 잎을 가진 열대 식물입니다. 일반적으로 실내 장식 식물로 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/details?plantid=1442",
-      "https://www.botanicgardens.org.au/plants/rhaphidophora-hayi/"
+      "https://www.rhs.org.uk/advice/profile?pid=383",
+      "https://www.gardenia.net/plant/rhaphidophora-hayi"
     ]
   }
 }

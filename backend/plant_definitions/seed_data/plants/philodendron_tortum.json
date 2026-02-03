@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 광도"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka aroidów",
-          "de": "Aroid-Mischung",
-          "fr": "Mélange pour aroides",
-          "it": "Miscela per aroidi",
-          "es": "Mezcla para aroides",
-          "pt": "Mistura para aroides",
-          "ar": "مزيج الأرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "阿罗伊德混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 혼합토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnia ilość wody",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "ماء متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम पानी",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 급수"
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnie",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Medio",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
         }
       }
     },
@@ -127,15 +127,15 @@
           "en": "High",
           "pl": "Wysoka",
           "de": "Hoch",
-          "fr": "Élevée",
+          "fr": "Haut",
           "it": "Alta",
           "es": "Alta",
           "pt": "Alta",
           "ar": "عالية",
           "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "zh": "高湿",
+          "ja": "高湿",
+          "ko": "높음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Trujący dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez de trop arroser",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar regar demais",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避けてください",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum is a unique species of climbing plant native to tropical regions. It is known for its decorative, deeply lobed leaves and is a popular houseplant."
+      "common_name": "Tortum Philodendron",
+      "description": "Philodendron tortum is a tropical plant known for its unique, deeply lobed leaves. It thrives in moderate light and requires high humidity to grow well."
     },
     "pl": {
       "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum to wyjątkowy gatunek pnącza pochodzący z tropikalnych regionów. Znany jest z ozdobnych, głęboko wciętych liści i jest popularną rośliną doniczkową."
+      "description": "Philodendron tortum to roślina tropikalna o charakterystycznych liściach głęboko wyciętych. Rośnie najlepiej w średnim świetle i wymaga wysokiej wilgotności."
     },
     "de": {
       "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum ist eine einzigartige Kletterpflanze, die in tropischen Regionen heimisch ist. Sie ist bekannt für ihre dekorativen, tief eingeschnittenen Blätter und ist eine beliebte Zimmerpflanze."
+      "description": "Der Philodendron tortum ist eine tropische Pflanze mit einzigartigen, tief eingeschnittenen Blättern. Er gedeiht bei mittlerem Licht und benötigt hohe Luftfeuchtigkeit."
     },
     "fr": {
       "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum est une plante grimpante unique originaire des régions tropicales. Elle est connue pour ses feuilles profondément lobées et est une plante d'intérieur populaire."
+      "description": "Le Philodendron tortum est une plante tropicale connue pour ses feuilles profondément découpées. Il pousse bien sous une lumière modérée et nécessite une forte humidité."
     },
     "it": {
       "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum è una pianta rampicante unica, originaria delle regioni tropicali. È nota per le sue foglie profondamente lobate ed è una pianta d'appartamento popolare."
+      "description": "Il Philodendron tortum è una pianta tropicale con foglie profondamente lobate. Cresce bene alla luce moderata e richiede alta umidità."
     },
     "es": {
       "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum es una planta trepadora única originaria de las regiones tropicales. Es conocida por sus hojas profundamente lobuladas y es una planta popular de interior."
+      "description": "El Philodendron tortum es una planta tropical conocida por sus hojas profundamente lobuladas. Crece bien con luz moderada y requiere alta humedad."
     },
     "pt": {
       "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum é uma planta trepadeira única nativa das regiões tropicais. É conhecida por suas folhas profundamente lobadas e é uma planta de interior popular."
+      "description": "Philodendron tortum é uma planta tropical com folhas profundamente lobadas. Cresce bem sob luz moderada e requer alta umidade."
     },
     "ar": {
-      "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum هو نوع فريد من النباتات المتسلقة موطنه المناطق الاستوائية. وهو معروف بأوراقه المقطوعة بعمق وهو نبات داخلي شائع."
+      "common_name": "الفيلوديندرون التورتيوم",
+      "description": "الفيلوديندرون التورتيوم هو نبات استوائي معروف بأوراقه المقطوعة بعمق. يزدهر في الضوء المعتدل ويتطلب رطوبة عالية للنمو الجيد."
     },
     "hi": {
-      "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum एक अद्वितीय बेल वाली पौधा है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। इसे अपनी गहरे कटे हुए पत्तियों के लिए जाना जाता है और यह एक लोकप्रिय इनडोर पौधा है।"
+      "common_name": "फिलोडेंड्रॉन टॉर्टम",
+      "description": "फिलोडेंड्रॉन टॉर्टम एक उष्णकटिबंधीय पौधा है जो अपनी गहरे कटे हुए पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश में उगता है और अच्छे विकास के लिए उच्च आर्द्रता की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum 是一种独特的攀缘植物，原产于热带地区。它以其深裂的叶子而闻名，是一种受欢迎的室内植物。"
+      "common_name": "大裂叶天堂鸟",
+      "description": "大裂叶天堂鸟是一种热带植物，因其独特的深裂叶而闻名。它在中等光照下生长良好，需要高湿度才能茁壮成长。"
     },
     "ja": {
-      "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum は熱帯地域原産のユニークなつる植物です。その装飾的で深く裂けた葉で知られ、人気のある室内植物です。"
+      "common_name": "フィロデンドロン・トルタム",
+      "description": "フィロデンドロン・トルタムは、深く裂けた葉で知られる熱帯植物です。中程度の光で育ち、高湿度を必要とします。"
     },
     "ko": {
-      "common_name": "Philodendron tortum",
-      "description": "Philodendron tortum은 열대 지역 원산지의 독특한 덩굴식물입니다. 깊게 갈라진 장식적인 잎으로 유명하며, 인기 있는 실내 식물입니다."
+      "common_name": "필로덴드론 토르텀",
+      "description": "필로덴드론 토르텀은 깊게 자른 잎으로 유명한 열대 식물입니다. 중간 정도의 빛에서 잘 자라며 높은 습도가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/philodendron-tortum",
-      "https://www.gardeningknowhow.com/houseplants/philodendron/philodendron-care.htm"
+      "https://www.botanicalgarden.org/philodendron-tortum",
+      "https://www.gardeningknowhow.com/philodendron-care"
     ]
   }
 }

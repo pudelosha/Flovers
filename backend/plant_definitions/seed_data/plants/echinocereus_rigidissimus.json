@@ -1,17 +1,16 @@
 {
   "external_id": "echinocereus_rigidissimus",
-  "name": "Rainbow Cactus",
+  "name": "Rainbow hedgehog cactus",
   "latin": "Echinocereus rigidissimus",
   "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -20,7 +19,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 30,
   "image_hero": "echinocereus_rigidissimus.jpg",
   "image_thumb": "echinocereus_rigidissimus.jpg",
   "traits": [
@@ -38,7 +37,7 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
+          "ja": "日当たり良好",
           "ko": "강한 햇빛"
         }
       }
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जल निकास",
+          "en": "Fast-draining mix",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Oszczędne",
-          "de": "Wenig",
-          "fr": "Rare",
-          "it": "Rara",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "少なめ",
-          "ko": "적음"
+          "en": "Water after dry",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen nach Trocknen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega tras secar",
+          "pt": "Regue após secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇水",
+          "ja": "乾いてから水やり",
+          "ko": "완전 건조 후 물"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "10–30°C ideal",
+          "pl": "Najlepiej 10–30°C",
+          "de": "Ideal 10–30°C",
+          "fr": "Idéal 10–30°C",
+          "it": "Ideale 10–30°C",
+          "es": "Ideal 10–30°C",
+          "pt": "Ideal 10–30°C",
+          "ar": "مثالي 10–30°م",
+          "hi": "10–30°C उपयुक्त",
+          "zh": "适宜10–30°C",
+          "ja": "適温10–30°C",
+          "ko": "적정 10–30°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity OK",
+          "pl": "Niska wilgotność OK",
+          "de": "Niedrige LF ok",
+          "fr": "Faible humidité OK",
+          "it": "Bassa umidità OK",
+          "es": "Baja humedad OK",
+          "pt": "Baixa umidade OK",
+          "ar": "رطوبة منخفضة مناسبة",
+          "hi": "कम नमी ठीक",
+          "zh": "低湿度可",
+          "ja": "低湿度で可",
+          "ko": "낮은 습도 OK"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic; spines",
+          "pl": "Nietoksyczny; kolce",
+          "de": "Ungiftig; Stacheln",
+          "fr": "Non toxique; épines",
+          "it": "Non tossico; spine",
+          "es": "No tóxico; espinas",
+          "pt": "Não tóxico; espinhos",
+          "ar": "غير سام؛ أشواك",
+          "hi": "विषैला नहीं; कांटे",
+          "zh": "无毒；有刺",
+          "ja": "無毒; トゲ注意",
+          "ko": "무독; 가시 주의"
         }
       }
     },
@@ -161,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow, columnar",
+          "pl": "Wolny, kolumnowy",
+          "de": "Langsam, säulenförmig",
+          "fr": "Lente, colonnaire",
+          "it": "Lenta, colonnare",
+          "es": "Lento, columnar",
+          "pt": "Lento, colunar",
+          "ar": "نمو بطيء عمودي",
+          "hi": "धीमी, स्तंभाकार",
+          "zh": "生长缓慢，柱状",
+          "ja": "成長ゆっくり柱状",
+          "ko": "느린 성장, 기둥형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to root rot",
+          "pl": "Skłonny do zgnilizny",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Propenso a pudrición",
+          "pt": "Propenso à podridão",
+          "ar": "يتعفن مع كثرة الماء",
+          "hi": "ज्यादा पानी से सड़न",
+          "zh": "易烂根",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عناكب دقيقة",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧、螨",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rainbow Cactus",
-      "description": "Echinocereus rigidissimus is a small columnar cactus native to the southwestern United States and Mexico. It is known for its colorful spines and bright pink spring flowers. The plant prefers full sun and very infrequent watering."
+      "common_name": "Rainbow hedgehog cactus",
+      "description": "A solitary, spiny cactus native to the deserts of the southwestern United States and northern Mexico. Keep it in very bright light and use a fast-draining cactus mix. Water only after the soil has fully dried, and keep much drier in winter to reduce rot risk."
     },
     "pl": {
-      "common_name": "Kaktus tęczowy",
-      "description": "Echinocereus rigidissimus to niewielki kaktus kolumnowy pochodzący z południowo-zachodnich USA i Meksyku. Słynie z barwnych cierni i różowych kwiatów wiosną. Wymaga pełnego słońca i rzadkiego podlewania."
+      "common_name": "Tęczowy kaktus jeżowy",
+      "description": "Samotnie rosnący, kolczasty kaktus z pustyń południowo-zachodnich USA i północnego Meksyku. Wymaga bardzo jasnego stanowiska i mocno przepuszczalnego podłoża dla kaktusów. Podlewaj dopiero po całkowitym wyschnięciu ziemi, zimą znacznie rzadziej, by ograniczyć ryzyko zgnilizny."
     },
     "de": {
-      "common_name": "Regenbogenkaktus",
-      "description": "Echinocereus rigidissimus ist ein kleiner Säulenkaktus aus dem Südwesten der USA und Mexiko. Er besitzt farbige Dornen und rosa Blüten im Frühling. Er benötigt volle Sonne und wenig Wasser."
+      "common_name": "Regenbogen-Igelkaktus",
+      "description": "Ein einzelner, stark bedornter Kaktus aus den Wüsten des Südwestens der USA und Nordmexikos. Er braucht sehr helles Licht und ein stark durchlässiges Kakteensubstrat. Gieße erst, wenn das Substrat komplett trocken ist, und halte ihn im Winter deutlich trockener, um Fäulnis zu vermeiden."
     },
     "fr": {
-      "common_name": "Cactus arc-en-ciel",
-      "description": "Echinocereus rigidissimus est un petit cactus colonnaire originaire du sud-ouest des États-Unis et du Mexique. Il est apprécié pour ses épines colorées et ses fleurs roses printanières. Il aime le plein soleil et un arrosage rare."
+      "common_name": "Cactus hérisson arc-en-ciel",
+      "description": "Cactus solitaire et épineux originaire des déserts du sud-ouest des États-Unis et du nord du Mexique. Il demande une lumière très vive et un substrat pour cactus très drainant. Arrosez uniquement lorsque le substrat est totalement sec et réduisez fortement en hiver pour limiter la pourriture."
     },
     "it": {
-      "common_name": "Cactus arcobaleno",
-      "description": "Echinocereus rigidissimus è un piccolo cactus colonnare originario degli Stati Uniti sud-occidentali e del Messico. È noto per le spine colorate e i fiori rosa primaverili. Richiede pieno sole e poca acqua."
+      "common_name": "Cactus riccio arcobaleno",
+      "description": "Cactus solitario e spinoso originario dei deserti del sud-ovest degli USA e del nord del Messico. Richiede luce molto intensa e un terriccio per cactus ben drenante. Annaffia solo quando il substrato è completamente asciutto e riduci molto in inverno per evitare marciumi."
     },
     "es": {
-      "common_name": "Cactus arcoíris",
-      "description": "Echinocereus rigidissimus es un cactus columnar pequeño originario del suroeste de Estados Unidos y México. Destaca por sus espinas coloridas y flores rosadas en primavera. Necesita pleno sol y riego escaso."
+      "common_name": "Cactus erizo arcoíris",
+      "description": "Cactus solitario y espinoso nativo de los desiertos del suroeste de EE. UU. y el norte de México. Necesita mucha luz directa y un sustrato para cactus de drenaje rápido. Riega solo cuando el sustrato esté totalmente seco y reduce mucho en invierno para evitar pudrición."
     },
     "pt": {
-      "common_name": "Cacto-arco-íris",
-      "description": "Echinocereus rigidissimus é um pequeno cacto colunar nativo do sudoeste dos Estados Unidos e do México. Possui espinhos coloridos e flores rosa na primavera. Prefere sol pleno e pouca rega."
+      "common_name": "Cacto-ouriço arco-íris",
+      "description": "Cacto solitário e espinhoso nativo dos desertos do sudoeste dos EUA e do norte do México. Precisa de luz muito intensa e substrato para cactos com ótima drenagem. Regue apenas quando o substrato estiver totalmente seco e reduza bastante no inverno para evitar apodrecimento."
     },
     "ar": {
-      "common_name": "صبار قوس قزح",
-      "description": "نبات Echinocereus rigidissimus صبار صغير عمودي موطنه جنوب غرب الولايات المتحدة والمكسيك. يتميز بأشواكه الملونة وأزهاره الوردية في الربيع. يحتاج إلى شمس كاملة وري قليل."
+      "common_name": "صبار القنفذ قوس قزح",
+      "description": "صبار منفرد كثير الأشواك موطنه صحارى جنوب غرب الولايات المتحدة وشمال المكسيك. يحتاج إلى ضوء قوي جدًا وتربة صبارات سريعة التصريف. اسقِ فقط بعد جفاف التربة تمامًا وقلّل الري كثيرًا في الشتاء لتقليل خطر التعفن."
     },
     "hi": {
-      "common_name": "रेनबो कैक्टस",
-      "description": "Echinocereus rigidissimus दक्षिण-पश्चिम अमेरिका और मेक्सिको का छोटा स्तंभाकार कैक्टस है। यह रंगीन कांटों और वसंत में गुलाबी फूलों के लिए जाना जाता है। इसे तेज धूप और कम पानी चाहिए।"
+      "common_name": "रेनबो हेजहॉग कैक्टस",
+      "description": "यह एक अकेला, कांटेदार कैक्टस है जो दक्षिण-पश्चिमी अमेरिका और उत्तरी मेक्सिको के रेगिस्तानों का मूल निवासी है। इसे बहुत तेज रोशनी और अच्छी जल-निकासी वाला कैक्टस मिक्स चाहिए। मिट्टी पूरी तरह सूखने के बाद ही पानी दें और सर्दियों में बहुत कम रखें ताकि सड़न से बचा जा सके।"
     },
     "zh": {
-      "common_name": "彩虹仙人掌",
-      "description": "Echinocereus rigidissimus 原产于美国西南部和墨西哥，是一种小型柱状仙人掌。它以彩色刺和春季粉色花朵而闻名。需要充足阳光和很少浇水。"
+      "common_name": "彩虹刺猬仙人掌",
+      "description": "单生、多刺的仙人掌，原产于美国西南部与墨西哥北部的干旱地区。需要强光与排水极佳的仙人掌基质。等盆土完全干透再浇水，冬季显著减少浇水以降低烂根风险。"
     },
     "ja": {
-      "common_name": "レインボーカクタス",
-      "description": "Echinocereus rigidissimus は米国南西部とメキシコ原産の小型柱状サボテンです。色鮮やかな棘と春のピンクの花が特徴です。強い日光と控えめな水やりを好みます。"
+      "common_name": "レインボー・ヘッジホッグカクタス",
+      "description": "米国南西部からメキシコ北部の乾燥地に自生する、単生でトゲの多いサボテンです。強い光と水はけの良いサボテン用土を好みます。用土が完全に乾いてから水やりし、冬はさらに乾かし気味にして腐敗を防ぎます。"
     },
     "ko": {
-      "common_name": "레인보우 선인장",
-      "description": "Echinocereus rigidissimus는 미국 남서부와 멕시코 원산의 작은 기둥형 선인장입니다. 화려한 가시와 봄철 분홍 꽃으로 유명합니다. 강한 햇빛과 적은 물을 선호합니다."
+      "common_name": "레인보우 고슴도치 선인장",
+      "description": "미국 남서부와 멕시코 북부의 사막 지대가 원산인 단생형 선인장입니다. 강한 빛과 배수가 매우 좋은 선인장 흙이 필요합니다. 흙이 완전히 마른 뒤에만 물을 주고, 겨울에는 물을 크게 줄여 부패를 예방하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.ubc.ca/echinocereus-rigidissimus",
-      "https://www.rhs.org.uk/plants/echinocereus/rigidissimus/details",
-      "https://www.desertmuseum.org/kids/oz/long-fact-sheets/Rainbow%20Cactus.php"
+      "https://www.rhs.org.uk/plants/115504/echinocereus-rigidissimus/details",
+      "https://www.thespruce.com/grow-echinocereus-cactus-indoors-1902978",
+      "https://guide.floragrubb.com/echinocereus-rigidissimus",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:88002-2",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/tree-cactus"
     ]
   }
 }

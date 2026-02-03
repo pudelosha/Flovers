@@ -1,6 +1,6 @@
 {
   "external_id": "peperomia_obtusifolia",
-  "name": "Baby Rubber Plant",
+  "name": "Peperomia obtusifolia",
   "latin": "Peperomia obtusifolia",
   "sun": "medium",
   "water": "medium",
@@ -11,7 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -52,14 +52,14 @@
           "pl": "Dobrze przepuszczalna",
           "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenato",
+          "it": "Ben drenante",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تصريف جيد",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "排水良好",
-          "ko": "배수가 좋은"
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당히"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwe",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht toxisch",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "अविषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toxiczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact",
-          "pl": "Kompaktowy",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatto",
-          "es": "Compacto",
-          "pt": "Compacto",
-          "ar": "مضغوط",
-          "hi": "संकुचित",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "콤팩트"
+          "en": "Compact growth",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompaktes Wachstum",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مضغوط",
+          "hi": "संकुचित वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクトな成長",
+          "ko": "콤팩트 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewaj za dużo",
+          "de": "Nicht überwässern",
+          "fr": "Pas trop d'arrosage",
+          "it": "Non annaffiare troppo",
+          "es": "No sobreregar",
+          "pt": "Não regue demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Baby Rubber Plant",
-      "description": "Peperomia obtusifolia is a popular houseplant with attractive, glossy green leaves. It thrives in bright, indirect light and requires moderate watering."
+      "description": "Peperomia obtusifolia, or Baby Rubber Plant, is a popular houseplant known for its glossy, succulent leaves. It thrives in medium light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Roślina gumowa",
-      "description": "Peperomia obtusifolia to popularna roślina doniczkowa o atrakcyjnych, błyszczących zielonych liściach. Wymaga umiarkowanego podlewania i jasnego, pośredniego światła."
+      "common_name": "Peperomia tępa",
+      "description": "Peperomia obtusifolia, znana jako Peperomia tępa, to popularna roślina doniczkowa o błyszczących, mięsistych liściach. Rośnie w średnim świetle i potrzebuje umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Baby-Gummipflanze",
-      "description": "Peperomia obtusifolia ist eine beliebte Zimmerpflanze mit attraktiven, glänzenden grünen Blättern. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+      "common_name": "Peperomia obtusifolia",
+      "description": "Peperomia obtusifolia ist eine beliebte Zimmerpflanze mit glänzenden, saftigen Blättern. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Plante Caoutchouc",
-      "description": "Peperomia obtusifolia est une plante d'intérieur populaire avec des feuilles vertes brillantes. Elle préfère une lumière indirecte et un arrosage modéré."
+      "common_name": "Peperomia obtusifolia",
+      "description": "Peperomia obtusifolia, ou Peperomia à feuilles épaisses, est une plante d'intérieur populaire connue pour ses feuilles succulentes et brillantes. Elle préfère une lumière modérée et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Pianta Gomma",
-      "description": "Peperomia obtusifolia è una pianta da interno popolare con foglie verdi lucide. Cresce meglio in luce indiretta e richiede un'irrigazione moderata."
+      "common_name": "Peperomia obtusifolia",
+      "description": "Peperomia obtusifolia, o Peperomia a foglie spesse, è una pianta d'appartamento popolare conosciuta per le sue foglie carnose e lucenti. Cresce bene in luce media e ha bisogno di annaffiature moderate."
     },
     "es": {
-      "common_name": "Planta de goma",
-      "description": "Peperomia obtusifolia es una planta de interior popular con hojas verdes brillantes. Prefiere luz indirecta y riego moderado."
+      "common_name": "Peperomia obtusifolia",
+      "description": "Peperomia obtusifolia, o planta de goma, es una planta de interior popular conocida por sus hojas carnosas y brillantes. Prefiere luz media y requiere riego moderado."
     },
     "pt": {
-      "common_name": "Planta de borracha",
-      "description": "Peperomia obtusifolia é uma planta de interior popular com folhas verdes brilhantes. Prefere luz indireta e rega moderada."
+      "common_name": "Peperomia obtusifolia",
+      "description": "Peperomia obtusifolia, ou planta de borracha, é uma planta de interior popular conhecida por suas folhas carnudas e brilhantes. Ela cresce bem com luz média e precisa de rega moderada."
     },
     "ar": {
-      "common_name": "نبات مطاطي",
-      "description": "Peperomia obtusifolia هو نبات داخلي شائع ذو أوراق خضراء لامعة. يفضل الضوء غير المباشر والري المعتدل."
+      "common_name": "بيبروميا أوبتوسيفوليا",
+      "description": "بيبروميا أوبتوسيفوليا، أو نبتة المطاط، هي نبتة داخلية شهيرة تعرف بأوراقها السميكة واللامعة. تنمو في الضوء المعتدل وتتطلب الري المعتدل."
     },
     "hi": {
       "common_name": "बेबी रबर प्लांट",
-      "description": "Peperomia obtusifolia एक लोकप्रिय घरेलू पौधा है, जिसके आकर्षक, चमकदार हरे पत्ते होते हैं। यह हल्की, अप्रत्यक्ष रोशनी में बढ़ता है और मध्यम सिंचाई की आवश्यकता होती है।"
+      "description": "Peperomia obtusifolia, जिसे बेबी रबर प्लांट कहा जाता है, एक लोकप्रिय घर की पौधा है जो अपनी चमकदार, मांसल पत्तियों के लिए जाना जाता है। यह मध्यम रोशनी में अच्छे से बढ़ता है और उसे मॉडरेट पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "橡胶植物",
-      "description": "Peperomia obtusifolia是一种受欢迎的室内植物，具有光滑的绿色叶子。它在明亮的间接光下生长，并需要适度的浇水。"
+      "common_name": "橡皮树",
+      "description": "Peperomia obtusifolia，也叫橡皮树，是一种受欢迎的室内植物，因其光滑、多肉的叶子而闻名。它喜欢中等光照，并需要适量的浇水。"
     },
     "ja": {
-      "common_name": "ベビールーバープラント",
-      "description": "Peperomia obtusifoliaは、光沢のある緑の葉を持つ人気の室内植物です。明るい間接光で成長し、適度な水やりが必要です。"
+      "common_name": "ベビーゴムの木",
+      "description": "Peperomia obtusifolia（ベビーゴムの木）は、光沢のある肉質の葉で知られる人気のある室内植物です。中程度の光の下で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "베이비 고무 식물",
-      "description": "Peperomia obtusifolia는 매력적인 반짝이는 녹색 잎을 가진 인기 있는 실내 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기가 필요합니다."
+      "common_name": "베이비 고무 나무",
+      "description": "Peperomia obtusifolia, 또는 베이비 고무 나무는 윤기 나는 다육질의 잎으로 유명한 인기 있는 실내 식물입니다. 중간 정도의 빛을 선호하며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/plants/peperomia-obtusifolia",
-      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/peperomia-obtusifolia-care/"
+      "https://www.gardenia.net/plant/peperomia-obtusifolia"
     ]
   }
 }

@@ -1,9 +1,9 @@
 {
   "external_id": "adiantum_formosum",
-  "name": "Giant Maidenhair Fern",
+  "name": "Adiantum formosum",
   "latin": "Adiantum formosum",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "acidic"
+    "green-plants",
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 2,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 광도"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well-drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainé",
-          "it": "Ricco e drenato",
-          "es": "Rico y drenado",
-          "pt": "Rico e drenado",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil moist",
-          "pl": "Gleba wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol toujours humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "मिट्टी नम",
-          "zh": "保持湿润",
-          "ja": "常に湿った土",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Pflegeaufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "중간 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Humedad alta",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
           "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright clumping",
-          "pl": "Kępiasty wzrost",
-          "de": "Horstbildend",
-          "fr": "Touffe dressée",
-          "it": "Crescita cespugliosa",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو متكتل",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "군생 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez le sur-arrosage",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折発生する害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Giant Maidenhair Fern",
-      "description": "Adiantum formosum is a large maidenhair fern native to eastern Australia. It prefers bright indirect light, consistently moist soil, and high humidity. It is commonly grown indoors as an ornamental foliage plant."
+      "common_name": "Pacific maidenhair fern",
+      "description": "Adiantum formosum, also known as the Pacific maidenhair fern, is a delicate and graceful fern that thrives in moderate light and humidity. It is non-toxic and enjoys well-draining soil."
     },
     "pl": {
-      "common_name": "Adiantum okazałe",
-      "description": "Adiantum formosum to duża paproć pochodząca ze wschodniej Australii. Wymaga jasnego, rozproszonego światła oraz stale wilgotnej gleby. Najlepiej rośnie w warunkach podwyższonej wilgotności."
+      "common_name": "Paprotka pacficzna",
+      "description": "Adiantum formosum, znana jako paprotka pacficzna, to delikatna i pełna wdzięku paproć, która rośnie w umiarkowanym świetle i wilgotności. Jest nietoksyczna i preferuje dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Riesen-Frauenhaarfarn",
-      "description": "Adiantum formosum ist ein großer Farn aus Ost-Australien. Er benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Eine hohe Luftfeuchtigkeit fördert gesundes Wachstum."
+      "common_name": "Pazifische Schuppenfarn",
+      "description": "Adiantum formosum, auch bekannt als Pazifischer Schuppenfarn, ist ein zarter und anmutiger Farn, der in mittlerem Licht und Feuchtigkeit gedeiht. Er ist ungiftig und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Fougère capillaire géante",
-      "description": "Adiantum formosum est une grande fougère originaire de l’est de l’Australie. Elle apprécie une lumière indirecte et un sol constamment humide. Une forte humidité ambiante est recommandée."
+      "common_name": "Fougère de la pacifique",
+      "description": "Adiantum formosum, également connue sous le nom de fougère de la pacifique, est une fougère délicate et gracieuse qui prospère dans un éclairage et une humidité modérés. Elle est non toxique et préfère un sol bien drainé."
     },
     "it": {
-      "common_name": "Felce capelvenere gigante",
-      "description": "Adiantum formosum è una grande felce originaria dell’Australia orientale. Richiede luce indiretta e terreno sempre umido. Predilige ambienti con alta umidità."
+      "common_name": "Felce della pacifica",
+      "description": "Adiantum formosum, nota anche come felce della pacifica, è una felce delicata e graziosa che cresce in luce e umidità moderate. È non tossica e preferisce un terreno ben drenato."
     },
     "es": {
-      "common_name": "Culantrillo gigante",
-      "description": "Adiantum formosum es un helecho grande originario del este de Australia. Necesita luz indirecta y sustrato constantemente húmedo. La humedad ambiental alta favorece su desarrollo."
+      "common_name": "Helecho pacífico",
+      "description": "Adiantum formosum, también conocido como helecho pacífico, es un helecho delicado y elegante que crece en luz y humedad moderadas. No es tóxico y prefiere un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Avenca-gigante",
-      "description": "Adiantum formosum é uma samambaia grande nativa do leste da Austrália. Prefere luz indireta e solo sempre úmido. Desenvolve-se melhor com alta umidade do ar."
+      "common_name": "Samambaia pacífica",
+      "description": "Adiantum formosum, também conhecida como samambaia pacífica, é uma samambaia delicada e graciosa que cresce em luz e umidade moderadas. Não é tóxica e prefere solo bem drenado."
     },
     "ar": {
-      "common_name": "سرخس شعر البنت العملاق",
-      "description": "Adiantum formosum سرخس كبير موطنه شرق أستراليا. يحتاج إلى ضوء غير مباشر وتربة رطبة باستمرار. يفضل الرطوبة العالية للنمو الجيد."
+      "common_name": "سرخس المحيط الهادئ",
+      "description": "Adiantum formosum، والمعروفة أيضًا باسم سرخس المحيط الهادئ، هي سرخس رقيق وأنيق ينمو في ضوء ورطوبة معتدلة. غير سام ويفضل التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "जायंट मेडनहेयर फ़र्न",
-      "description": "Adiantum formosum एक बड़ा फ़र्न है जो पूर्वी ऑस्ट्रेलिया का मूल निवासी है। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी चाहिए। अधिक आर्द्रता में यह बेहतर बढ़ता है।"
+      "common_name": "प्रशांत समथर्ना फर्न",
+      "description": "Adiantum formosum, जिसे प्रशांत समथर्ना फर्न के नाम से भी जाना जाता है, एक कोमल और graceful फर्न है जो मध्यम प्रकाश और आर्द्रता में पनपता है। यह गैर विषैला है और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "大型铁线蕨",
-      "description": "Adiantum formosum 原产于澳大利亚东部，是一种大型铁线蕨。它喜欢明亮的散射光和持续湿润的土壤。较高的空气湿度有助于生长。"
+      "common_name": "太平洋铁线蕨",
+      "description": "Adiantum formosum，也被称为太平洋铁线蕨，是一种纤细优雅的蕨类植物，喜欢中等光照和湿度。它是无毒的，喜欢排水良好的土壤。"
     },
     "ja": {
-      "common_name": "オオホウライシダ",
-      "description": "Adiantum formosum はオーストラリア東部原産の大型シダです。明るい間接光と常に湿った土を好みます。高い湿度環境でよく育ちます。"
+      "common_name": "太平洋シダ",
+      "description": "Adiantum formosum、別名太平洋シダは、繊細で優雅なシダで、中程度の光と湿度で育ちます。無毒で、排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "대형 아디안툼",
-      "description": "Adiantum formosum은 호주 동부 원산의 큰 고사리입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도에서 건강하게 자랍니다."
+      "common_name": "태평양 미녀고사리",
+      "description": "Adiantum formosum, 태평양 미녀고사리로 알려진 이 식물은 섬세하고 우아한 고사리로, 중간 정도의 빛과 습도에서 자랍니다. 무독성이며 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/adiantum-formosum/details",
-      "https://www.gardenia.net/plant/adiantum-formosum-giant-maidenhair-fern",
-      "https://www.australiangardening.com.au/plant/adiantum-formosum/"
+      "https://www.rhs.org.uk/advice/profile?pid=939",
+      "https://www.gardeningknowhow.com/plant-problems/pests/insects-diseases/adiantum-maidenhair-fern-care.htm"
     ]
   }
 }

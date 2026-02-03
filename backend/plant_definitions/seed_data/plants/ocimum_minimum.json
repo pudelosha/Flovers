@@ -2,16 +2,17 @@
   "external_id": "ocimum_minimum",
   "name": "Dwarf Basil",
   "latin": "Ocimum minimum",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Średnie nasłonecznienie",
-          "de": "Mittlere Sonne",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम धूप",
-          "zh": "中等阳光",
-          "ja": "中程度の光",
-          "ko": "중간 햇빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "全日照",
+          "ja": "完全な太陽",
+          "ko": "완전한 태양"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy, well-drained",
-          "pl": "Ziemia próchnicza, dobrze przepuszczalna",
-          "de": "Lehmig, gut drainiert",
-          "fr": "Sol argileux, bien drainé",
-          "it": "Terreno argilloso, ben drenato",
-          "es": "Suelo arcilloso, bien drenado",
-          "pt": "Solo argiloso, bem drenado",
-          "ar": "تربة طينية، جيدة التصريف",
-          "hi": "मिट्टी, अच्छी जल निकासी",
-          "zh": "壤土，良好排水",
-          "ja": "粘土質、排水性良好",
-          "ko": "점토, 잘 배수됨"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -73,11 +74,11 @@
           "it": "Annaffiatura media",
           "es": "Riego medio",
           "pt": "Rega média",
-          "ar": "ري ماء متوسط",
-          "hi": "मध्यम पानी",
+          "ar": "سقاية متوسطة",
+          "hi": "मध्यम पानी देना",
           "zh": "中等浇水",
           "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "ko": "중간 급수"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-30°C",
-          "pl": "18-30°C",
-          "de": "18-30°C",
-          "fr": "18-30°C",
-          "it": "18-30°C",
-          "es": "18-30°C",
-          "pt": "18-30°C",
-          "ar": "18-30°C",
-          "hi": "18-30°C",
-          "zh": "18-30°C",
-          "ja": "18-30°C",
-          "ko": "18-30°C"
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -150,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact, bushy",
-          "pl": "Kompaktne, krzaczaste",
-          "de": "Kompakt, buschig",
-          "fr": "Compact, buissonnant",
-          "it": "Compatto, cespuglioso",
-          "es": "Compacto, arbustivo",
-          "pt": "Compacto, arbustivo",
-          "ar": "مضغوط، شجري",
-          "hi": "संकुचित, झाड़ीदार",
-          "zh": "紧凑、灌木状",
-          "ja": "コンパクトで茂った",
-          "ko": "콤팩트하고 덤불 같은"
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovraffollamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Dwarf Basil",
-      "description": "Ocimum minimum, or Dwarf Basil, is a small herbaceous plant in the mint family. It is known for its compact growth and aromatic leaves, commonly used in culinary applications."
+      "description": "Ocimum minimum, known as Dwarf Basil, is a compact herb commonly used in cooking. It thrives in sunny spots with moderate watering."
     },
     "pl": {
       "common_name": "Bazylia karłowata",
-      "description": "Ocimum minimum, czyli bazylia karłowata, to mała roślina zielna z rodziny miętowatych. Jest znana z kompaktowego wzrostu i aromatycznych liści, powszechnie wykorzystywanych w kuchni."
+      "description": "Ocimum minimum, znana jako Bazylia karłowata, to zwarta roślina często używana w kuchni. Rośnie najlepiej w słonecznych miejscach z umiarkowanym podlewaniem."
     },
     "de": {
       "common_name": "Zwerg-Basilikum",
-      "description": "Ocimum minimum, oder Zwerg-Basilikum, ist eine kleine krautige Pflanze aus der Familie der Lippenblütler. Sie ist bekannt für ihr kompaktes Wachstum und aromatische Blätter, die häufig in der Küche verwendet werden."
+      "description": "Ocimum minimum, auch Zwerg-Basilikum genannt, ist ein kompakter Kräuterstrauch, der oft in der Küche verwendet wird. Es gedeiht an sonnigen Orten mit mäßiger Bewässerung."
     },
     "fr": {
       "common_name": "Basilic nain",
-      "description": "Ocimum minimum, ou basilic nain, est une petite plante herbacée de la famille des Lamiacées. Elle est connue pour sa croissance compacte et ses feuilles aromatiques, couramment utilisées en cuisine."
+      "description": "Ocimum minimum, appelé basilic nain, est une plante compacte couramment utilisée en cuisine. Il prospère dans des endroits ensoleillés avec un arrosage modéré."
     },
     "it": {
       "common_name": "Basilico nano",
-      "description": "Ocimum minimum, o basilico nano, è una piccola pianta erbacea della famiglia delle Lamiaceae. È conosciuta per la sua crescita compatta e le foglie aromatiche, usate comunemente in cucina."
+      "description": "Ocimum minimum, conosciuto come basilico nano, è una pianta compatta usata in cucina. Cresce bene in luoghi soleggiati con annaffiature moderate."
     },
     "es": {
       "common_name": "Albahaca enana",
-      "description": "Ocimum minimum, o albahaca enana, es una pequeña planta herbácea de la familia de las Lamiáceas. Es conocida por su crecimiento compacto y sus hojas aromáticas, utilizadas comúnmente en la cocina."
+      "description": "Ocimum minimum, conocida como albahaca enana, es una planta compacta utilizada comúnmente en la cocina. Crece mejor en lugares soleados con riego moderado."
     },
     "pt": {
       "common_name": "Manjericão anão",
-      "description": "Ocimum minimum, ou manjericão anão, é uma pequena planta herbácea da família das Lamiáceas. É conhecida pelo seu crescimento compacto e folhas aromáticas, comumente usadas na culinária."
+      "description": "Ocimum minimum, conhecido como manjericão anão, é uma planta compacta comumente usada na culinária. Ela cresce bem em locais ensolarados com rega moderada."
     },
     "ar": {
       "common_name": "ريحان قزم",
-      "description": "Ocimum minimum أو ريحان قزم هو نبات عشبي صغير من عائلة الشفويات. يعرف بنموه المضغوط وأوراقه العطرية التي تستخدم في الطهي."
+      "description": "Ocimum minimum، المعروف بالريحان القزم، هو نبات مدمج يستخدم في المطبخ. ينمو بشكل جيد في الأماكن المشمسة مع ري معتدل."
     },
     "hi": {
-      "common_name": "बेसिल छोटा",
-      "description": "Ocimum minimum या बेसिल छोटा एक छोटा हर्बस पौधा है जो मिंट परिवार से है। यह अपनी कॉम्पैक्ट वृद्धि और सुगंधित पत्तियों के लिए जाना जाता है, जो आमतौर पर खाना पकाने में उपयोग की जाती हैं।"
+      "common_name": "बेसिल मिनिमम",
+      "description": "Ocimum minimum, जिसे बासिल मिनिमम कहा जाता है, एक संकुचित जड़ी बूटी है जो खाना पकाने में उपयोग की जाती है। यह धूप वाले स्थानों में उगता है और नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "矮生罗勒",
-      "description": "Ocimum minimum 或矮生罗勒是一种小型草本植物，属于唇形科。它以紧凑的生长和芳香的叶子著称，常用于烹饪。"
+      "description": "Ocimum minimum，通常称为矮生罗勒，是一种常用于烹饪的紧凑型草本植物。它在阳光充足的地方茁壮成长，需要适度的浇水。"
     },
     "ja": {
-      "common_name": "小型バジル",
-      "description": "Ocimum minimum、または小型バジルは、シソ科の小さな草本植物です。コンパクトな成長と香りの良い葉で知られ、料理に広く使われています。"
+      "common_name": "ドワーフバジル",
+      "description": "Ocimum minimum（ドワーフバジル）は、料理でよく使われるコンパクトなハーブです。日当たりの良い場所で、適度に水を与えることでよく育ちます。"
     },
     "ko": {
-      "common_name": "소형 바질",
-      "description": "Ocimum minimum 또는 소형 바질은 민트과에 속하는 작은 초본 식물입니다. 컴팩트한 성장과 향기로운 잎으로 잘 알려져 있으며, 주로 요리에 사용됩니다."
+      "common_name": "왜소 바질",
+      "description": "Ocimum minimum, 왜소 바질로 알려진 이 식물은 요리에 자주 사용되는 컴팩트한 허브입니다. 햇볕이 잘 드는 곳에서 적당히 물을 주며 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/ocimum_minimum",
-      "https://www.gardeningknowhow.com/edible/herbs/basil/dwarf-basil-care.htm"
+      "https://www.rhs.org.uk/advice/profile?pid=133",
+      "https://www.gardenersworld.com/plants/basil-varieties/"
     ]
   }
 }

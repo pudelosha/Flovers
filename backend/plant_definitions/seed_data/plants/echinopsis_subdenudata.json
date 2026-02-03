@@ -1,6 +1,6 @@
 {
   "external_id": "echinopsis_subdenudata",
-  "name": "Domino cactus",
+  "name": "Easter lily cactus",
   "latin": "Echinopsis subdenudata",
   "sun": "high",
   "water": "low",
@@ -10,7 +10,7 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 21,
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct sun",
-          "pl": "Jasne słońce",
-          "de": "Helle Sonne",
-          "fr": "Soleil intense",
-          "it": "Sole pieno",
-          "es": "Sol intenso",
-          "pt": "Sol intenso",
-          "ar": "شمس قوية",
-          "hi": "तेज़ धूप",
-          "zh": "强烈阳光",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light, some sun",
+          "pl": "Jasno, trochę słońca",
+          "de": "Hell, etwas Sonne",
+          "fr": "Lumière vive, soleil",
+          "it": "Luce intensa, sole",
+          "es": "Luz intensa, sol",
+          "pt": "Luz forte, sol",
+          "ar": "ضوء قوي وبعض شمس",
+          "hi": "तेज़ रोशनी, धूप",
+          "zh": "强光，可晒太阳",
+          "ja": "明るく日光も可",
+          "ko": "밝은 빛, 약간 직사"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierter Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Gritty, fast-draining",
+          "pl": "Przepuszczalne, grube",
+          "de": "Grob, sehr durchlässig",
+          "fr": "Très drainant, minéral",
+          "it": "Drenante e minerale",
+          "es": "Muy drenante, mineral",
+          "pt": "Bem drenante, mineral",
+          "ar": "تربة سريعة التصريف",
+          "hi": "तेज़ निकास वाली मिट्टी",
+          "zh": "颗粒多、排水快",
+          "ja": "水はけ良い用土",
+          "ko": "배수 좋은 마사토"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水やり控えめ",
-          "ko": "적은 물주기"
+          "en": "Soak, then dry out",
+          "pl": "Podlej i wysusz",
+          "de": "Gießen, dann trocknen",
+          "fr": "Arroser puis sécher",
+          "it": "Bagna, poi asciuga",
+          "es": "Riega y deja secar",
+          "pt": "Regue e deixe secar",
+          "ar": "اسقِ ثم اتركه يجف",
+          "hi": "पानी दें, फिर सूखने दें",
+          "zh": "浇透后完全干再浇",
+          "ja": "乾いてからたっぷり",
+          "ko": "흠뻑 후 완전 건조"
         }
       }
     },
@@ -84,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm preferred",
-          "pl": "Ciepło lubi",
-          "de": "Bevorzugt warm",
-          "fr": "Aime la chaleur",
-          "it": "Ama il caldo",
-          "es": "Prefiere calor",
-          "pt": "Gosta de calor",
-          "ar": "يفضل الدفء",
-          "hi": "गर्मी पसंद",
-          "zh": "喜温暖",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "10–30°C, no frost",
+          "pl": "10–30°C, bez mrozu",
+          "de": "10–30°C, frostfrei",
+          "fr": "10–30°C, sans gel",
+          "it": "10–30°C, no gelo",
+          "es": "10–30°C, sin heladas",
+          "pt": "10–30°C, sem geada",
+          "ar": "10–30°م بلا صقيع",
+          "hi": "10–30°C, पाला नहीं",
+          "zh": "10–30°C，怕霜冻",
+          "ja": "10–30℃ 霜に弱い",
+          "ko": "10–30°C, 서리 금지"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Average indoor",
+          "pl": "Typowa domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة منزلية عادية",
+          "hi": "सामान्य घर की नमी",
+          "zh": "普通室内湿度",
+          "ja": "普通の室内湿度",
+          "ko": "보통 실내 습도"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic (pets)",
+          "pl": "Nietoksyczna (zw.)",
+          "de": "Ungiftig (Haustiere)",
+          "fr": "Non toxique (anim.)",
+          "it": "Non tossica (anim.)",
+          "es": "No tóxica (masc.)",
+          "pt": "Não tóxica (pets)",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु विषहीन",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물에 무독"
         }
       }
     },
@@ -160,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長ゆっくり",
-          "ko": "성장 느림"
+          "en": "Slow, clumping cactus",
+          "pl": "Wolny, kępkowy kaktus",
+          "de": "Langsam, bildet Horste",
+          "fr": "Lente, fait des rejets",
+          "it": "Lenta, cespitosa",
+          "es": "Lento, forma hijuelos",
+          "pt": "Lento, forma touceiras",
+          "ar": "نمو بطيء ومتكتل",
+          "hi": "धीमी, गुच्छेदार",
+          "zh": "生长慢，会群生",
+          "ja": "成長遅い、群生",
+          "ko": "느리게 자람, 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid wet soil",
+          "pl": "Unikaj mokrej ziemi",
+          "de": "Nasse Erde vermeiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita terreno bagnato",
+          "es": "Evita suelo mojado",
+          "pt": "Evite solo encharcado",
+          "ar": "تجنب التربة المبللة",
+          "hi": "गीली मिट्टी से बचें",
+          "zh": "避免积水烂根",
+          "ja": "過湿は根腐れ",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs possible",
+          "pl": "Możliwe wełnowce",
+          "de": "Wollläuse möglich",
+          "fr": "Cochenilles possibles",
+          "it": "Cocciniglie possibili",
+          "es": "Cochinillas posibles",
+          "pt": "Cochonilhas possíveis",
+          "ar": "بق دقيقي محتمل",
+          "hi": "मिलीबग संभव",
+          "zh": "可能有粉蚧",
+          "ja": "カイガラムシ注意",
+          "ko": "깍지벌레 가능"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Domino cactus",
-      "description": "Echinopsis subdenudata is a small globular cactus native to Bolivia. It prefers bright sunlight, minimal watering, and very well-draining soil. Under good conditions it produces large, fragrant white flowers."
+      "common_name": "Easter lily cactus",
+      "description": "A small, globular South American cactus known for large white, night-blooming flowers. Provide very bright light and a fast-draining cactus mix. Water only after the soil dries completely, and reduce further in winter."
     },
     "pl": {
-      "common_name": "Kaktus domino",
-      "description": "Echinopsis subdenudata to niewielki kulisty kaktus pochodzący z Boliwii. Wymaga jasnego światła, oszczędnego podlewania i dobrze przepuszczalnej gleby. Przy odpowiedniej pielęgnacji kwitnie dużymi białymi kwiatami."
+      "common_name": "Kaktus wielkanocny",
+      "description": "Mały, kulisty kaktus z Ameryki Południowej, znany z dużych białych kwiatów otwierających się nocą. Lubi bardzo jasne stanowisko i przepuszczalne podłoże do kaktusów. Podlewaj dopiero po całkowitym przeschnięciu i ogranicz podlewanie zimą."
     },
     "de": {
-      "common_name": "Domino-Kaktus",
-      "description": "Echinopsis subdenudata ist ein kleiner kugeliger Kaktus aus Bolivien. Er benötigt viel Sonne, wenig Wasser und stark durchlässiges Substrat. Bei guter Pflege bildet er große weiße Blüten."
+      "common_name": "Osterlilienkaktus",
+      "description": "Ein kleiner, kugeliger Kaktus aus Südamerika mit großen weißen, nachts öffnenden Blüten. Er braucht sehr viel Licht und ein stark durchlässiges Kakteensubstrat. Gieße erst, wenn das Substrat komplett trocken ist, und im Winter deutlich seltener."
     },
     "fr": {
-      "common_name": "Cactus domino",
-      "description": "Echinopsis subdenudata est un petit cactus globulaire originaire de Bolivie. Il aime le plein soleil, un arrosage modéré et un sol très drainant. Il peut produire de grandes fleurs blanches parfumées."
+      "common_name": "Cactus lis de Pâques",
+      "description": "Petit cactus globulaire d’Amérique du Sud, célèbre pour ses grandes fleurs blanches nocturnes. Donnez-lui une lumière très vive et un substrat pour cactus bien drainant. Arrosez seulement quand le mélange est totalement sec, et espacez davantage en hiver."
     },
     "it": {
-      "common_name": "Cactus domino",
-      "description": "Echinopsis subdenudata è un piccolo cactus globoso originario della Bolivia. Necessita di molta luce, poca acqua e terreno ben drenato. In buone condizioni fiorisce con grandi fiori bianchi."
+      "common_name": "Cactus giglio di Pasqua",
+      "description": "Piccolo cactus globoso sudamericano noto per grandi fiori bianchi che si aprono di notte. Richiede luce molto intensa e un terriccio per cactus molto drenante. Annaffia solo a substrato completamente asciutto e riduci ulteriormente in inverno."
     },
     "es": {
-      "common_name": "Cactus dominó",
-      "description": "Echinopsis subdenudata es un cactus pequeño y globoso originario de Bolivia. Requiere sol intenso, riegos escasos y sustrato bien drenado. Puede producir flores blancas grandes y fragantes."
+      "common_name": "Cactus lirio de Pascua",
+      "description": "Cactus pequeño y globoso de Sudamérica, conocido por grandes flores blancas que se abren por la noche. Necesita mucha luz y un sustrato para cactus con excelente drenaje. Riega solo cuando el sustrato esté totalmente seco y reduce aún más en invierno."
     },
     "pt": {
-      "common_name": "Cacto dominó",
-      "description": "Echinopsis subdenudata é um pequeno cacto globular nativo da Bolívia. Prefere sol forte, pouca água e solo bem drenado. Em boas condições, produz flores brancas grandes."
+      "common_name": "Cacto lírio-da-Páscoa",
+      "description": "Pequeno cacto globoso da América do Sul, conhecido por grandes flores brancas que abrem à noite. Prefere muita luz e substrato para cactos bem drenante. Regue apenas quando o substrato secar por completo e reduza mais no inverno."
     },
     "ar": {
-      "common_name": "صبار الدومينو",
-      "description": "إكينوبسيس سوبدينوداتا صبار كروي صغير موطنه بوليفيا. يحتاج إلى شمس قوية وري قليل وتربة جيدة التصريف. يمكن أن ينتج أزهارًا بيضاء كبيرة عند العناية الجيدة."
+      "common_name": "صبار زنبق الفصح",
+      "description": "صبار صغير كروي من أمريكا الجنوبية معروف بأزهاره البيضاء الكبيرة التي تتفتح ليلاً. يحتاج إلى ضوء قوي جداً وتربة صبارات سريعة التصريف. اسقِ فقط بعد جفاف التربة تماماً وقلّل السقي أكثر في الشتاء."
     },
     "hi": {
-      "common_name": "डोमिनो कैक्टस",
-      "description": "Echinopsis subdenudata एक छोटा गोलाकार कैक्टस है जो बोलीविया का मूल निवासी है। इसे तेज धूप, कम पानी और अच्छी जल निकासी वाली मिट्टी चाहिए। सही देखभाल में यह बड़े सफेद फूल देता है।"
+      "common_name": "ईस्टर लिली कैक्टस",
+      "description": "दक्षिण अमेरिका का छोटा गोलाकार कैक्टस, जो रात में खिलने वाले बड़े सफेद फूलों के लिए जाना जाता है। इसे तेज रोशनी और अच्छी जल-निकासी वाली कैक्टस मिट्टी दें। मिट्टी पूरी तरह सूखने पर ही पानी दें और सर्दियों में और कम करें।"
     },
     "zh": {
-      "common_name": "多米诺仙人球",
-      "description": "Echinopsis subdenudata 是原产于玻利维亚的小型球形仙人掌。它需要强光、少量浇水和良好排水的土壤。在良好条件下会开出大的白色花朵。"
+      "common_name": "复活节百合仙人球",
+      "description": "南美洲的小型球状仙人掌，以夜间开放的大型白花著称。需要强光和排水良好的仙人掌基质。等盆土完全干透再浇水，冬季再明显减少。"
     },
     "ja": {
-      "common_name": "ドミノサボテン",
-      "description": "エキノプシス・サブデヌダータはボリビア原産の小型球状サボテンです。強い日光と控えめな水やり、排水性の良い土を好みます。条件が良いと大きな白い花を咲かせます。"
+      "common_name": "イースターリリーカクタス",
+      "description": "南米原産の小型の球状サボテンで、夜に咲く大きな白い花が特徴です。強い光と水はけの良いサボテン用土を好みます。用土が完全に乾いてから潅水し、冬はさらに控えめにします。"
     },
     "ko": {
-      "common_name": "도미노 선인장",
-      "description": "Echinopsis subdenudata는 볼리비아 원산의 작은 구형 선인장입니다. 강한 햇빛과 적은 물, 배수가 좋은 토양을 선호합니다. 환경이 맞으면 큰 흰 꽃을 피웁니다."
+      "common_name": "이스터 릴리 선인장",
+      "description": "남아메리카 원산의 작은 구형 선인장으로, 밤에 피는 큰 흰 꽃으로 알려져 있습니다. 강한 빛과 배수가 좋은 선인장용 흙이 필요합니다. 흙이 완전히 마른 뒤에만 물을 주고 겨울에는 더 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/echinopsis",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=242751",
-      "https://cactusandsucculentsociety.org.uk"
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:88512-2",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/easter-lily-cactus",
+      "https://www.rhs.org.uk/plants/218383/echinopsis-new-dawn/details",
+      "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Cactus%20and%20Succulents10.pdf",
+      "https://www.gardenia.net/plant/echinopsis-subdenudata-easter-lily-cactus"
     ]
   }
 }

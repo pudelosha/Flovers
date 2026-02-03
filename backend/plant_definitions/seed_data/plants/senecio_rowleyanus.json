@@ -2,17 +2,17 @@
   "external_id": "senecio_rowleyanus",
   "name": "String of Pearls",
   "latin": "Senecio rowleyanus",
-  "sun": "medium",
-  "water": "medium",
+  "sun": "high",
+  "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
+    "plastic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "senecio_rowleyanus.jpg",
   "image_thumb": "senecio_rowleyanus.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Światło średnie",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaszczysta gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sablonneux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेतिला मिट्टी",
-          "zh": "沙质土壤",
-          "ja": "砂地",
-          "ko": "모래 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "良好な排水性の土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Regar moderadamente",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당히 물 주기"
+          "en": "Infrequent watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Seltene Bewässerung",
+          "fr": "Arrosage peu fréquent",
+          "it": "Annaffiature rare",
+          "es": "Riego poco frecuente",
+          "pt": "Regar infrequentemente",
+          "ar": "سقي نادر",
+          "hi": "अल्पकालिक पानी देना",
+          "zh": "不频繁浇水",
+          "ja": "まれに水やり",
+          "ko": "드물게 물주기"
         }
       }
     },
@@ -96,8 +96,8 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°C",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low to medium",
-          "pl": "Niska do średniej",
-          "de": "Niedrig bis mittel",
-          "fr": "Faible à moyen",
-          "it": "Bassa a media",
-          "es": "Baja a media",
-          "pt": "Baixa a média",
-          "ar": "منخفض إلى متوسط",
-          "hi": "कम से मध्यम",
-          "zh": "低至中等",
-          "ja": "低い〜中程度",
-          "ko": "낮음에서 중간"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing",
-          "pl": "Wiążące",
-          "de": "Hängend",
-          "fr": "Pendent",
-          "it": "Ricadente",
-          "es": "Cuelga",
-          "pt": "Pendendo",
-          "ar": "معلق",
-          "hi": "लटकी हुई",
-          "zh": "垂挂",
-          "ja": "垂れ下がる",
-          "ko": "늘어짐"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा बढ़ना",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar regar em excesso",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Rzadkie szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenze occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 나타나는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "String of Pearls",
-      "description": "Senecio rowleyanus, known as string of pearls, is a succulent plant native to southern Africa. It thrives in dry environments and is famous for its unique, bead-like leaves."
+      "description": "Senecio rowleyanus, commonly known as the String of Pearls, is a succulent plant native to South Africa. It is characterized by its trailing stems with bead-like leaves."
     },
     "pl": {
       "common_name": "Sznur pereł",
-      "description": "Senecio rowleyanus, znany jako sznur pereł, to sukulent pochodzący z południowej Afryki. Rośnie w suchych środowiskach i charakteryzuje się unikalnymi, koralikowymi liśćmi."
+      "description": "Senecio rowleyanus, znany jako Sznur pereł, to sukulent pochodzący z Południowej Afryki. Charakteryzuje się zwisającymi pędami z koralikowatymi liśćmi."
     },
     "de": {
-      "common_name": "Perlenstrauch",
-      "description": "Senecio rowleyanus, auch Perlenstrauch genannt, ist eine sukkulente Pflanze aus Südafrika. Sie gedeiht in trockenen Umgebungen und zeichnet sich durch ihre einzigartigen, perlenartigen Blätter aus."
+      "common_name": "Perlenkette",
+      "description": "Senecio rowleyanus, auch als Perlenkette bekannt, ist eine sukkulente Pflanze aus Südafrika. Sie zeichnet sich durch ihre hängenden Stängel mit perlenartigen Blättern aus."
     },
     "fr": {
       "common_name": "Collier de perles",
-      "description": "Senecio rowleyanus, connu sous le nom de collier de perles, est une plante succulente originaire d'Afrique du Sud. Elle prospère dans des environnements secs et est célèbre pour ses feuilles en forme de perles."
+      "description": "Senecio rowleyanus, communément appelé Collier de perles, est une plante succulente originaire d'Afrique du Sud. Elle se caractérise par ses tiges pendantes avec des feuilles en forme de perles."
     },
     "it": {
       "common_name": "Collana di perle",
-      "description": "Senecio rowleyanus, noto come collana di perle, è una pianta succulenta originaria del sud Africa. Cresce in ambienti secchi ed è famosa per le sue foglie a forma di perla."
+      "description": "Senecio rowleyanus, comunemente conosciuto come Collana di perle, è una pianta succulenta originaria del Sud Africa. Si caratterizza per i suoi steli pendenti con foglie simili a perle."
     },
     "es": {
       "common_name": "Collar de perlas",
-      "description": "Senecio rowleyanus, conocido como collar de perlas, es una planta suculenta originaria de Sudáfrica. Crece en entornos secos y es famosa por sus hojas en forma de perlas."
+      "description": "Senecio rowleyanus, conocido comúnmente como Collar de perlas, es una planta suculenta originaria de Sudáfrica. Se caracteriza por sus tallos colgantes con hojas en forma de perlas."
     },
     "pt": {
       "common_name": "Colar de pérolas",
-      "description": "Senecio rowleyanus, conhecido como colar de pérolas, é uma planta suculenta nativa da África do Sul. Ela cresce em ambientes secos e é famosa por suas folhas em forma de pérola."
+      "description": "Senecio rowleyanus, comumente conhecido como Colar de pérolas, é uma planta suculenta nativa da África do Sul. Caracteriza-se pelos seus caules pendentes com folhas semelhantes a pérolas."
     },
     "ar": {
-      "common_name": "سلسلة من اللؤلؤ",
-      "description": "Senecio rowleyanus، المعروف بسلسلة اللؤلؤ، هو نبات عصاري موطنه جنوب إفريقيا. ينمو في البيئات الجافة ويشتهر بأوراقه التي تشبه اللؤلؤ."
+      "common_name": "قلادة اللؤلؤ",
+      "description": "سنيسيو رووليانوس، المعروف باسم قلادة اللؤلؤ، هو نبات عصاري موطنه جنوب إفريقيا. يتميز بسيقانه المعلقة وأوراقه الشبيهة باللؤلؤ."
     },
     "hi": {
       "common_name": "मोती की माला",
-      "description": "Senecio rowleyanus, जिसे मोती की माला के नाम से जाना जाता है, दक्षिण अफ्रीका का एक रसदार पौधा है। यह शुष्क वातावरण में बढ़ता है और इसकी अनूठी मोती जैसी पत्तियाँ होती हैं।"
+      "description": "सिनेसीओ रोव्लियानस, जिसे मोती की माला के नाम से जाना जाता है, दक्षिण अफ्रीका का एक सकुलेंट पौधा है। यह अपनी लटकती हुई शाखाओं और मोती जैसे पत्तों के लिए प्रसिद्ध है।"
     },
     "zh": {
       "common_name": "珍珠串",
-      "description": "Senecio rowleyanus，通常称为珍珠串，是一种原产于南非的多肉植物。它在干燥的环境中生长，以其独特的珍珠状叶子而闻名。"
+      "description": "Senecio rowleyanus，常被称为珍珠串，是一种原产于南非的多肉植物。它以其下垂的茎和类似珍珠的叶子而闻名。"
     },
     "ja": {
-      "common_name": "パールの首飾り",
-      "description": "Senecio rowleyanus、パールの首飾りとして知られるこの植物は、南アフリカ原産の多肉植物です。乾燥した環境で育ち、独特なパールのような葉が特徴です。"
+      "common_name": "パールネックレス",
+      "description": "Senecio rowleyanus、一般的にパールネックレスとして知られるこの植物は、南アフリカ原産の多肉植物です。垂れ下がる茎と真珠のような葉が特徴です。"
     },
     "ko": {
       "common_name": "진주목걸이",
-      "description": "Senecio rowleyanus, 진주목걸이로 알려진 이 식물은 남아프리카 원산의 다육 식물입니다. 건조한 환경에서 자라며 독특한 진주 모양의 잎을 가지고 있습니다."
+      "description": "Senecio rowleyanus, 일반적으로 진주목걸이로 알려진 이 식물은 남아프리카 원산의 다육 식물입니다. 진주 같은 잎이 달린 매달린 줄기로 특징지어집니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/104593/senecio-rowleyanus/details",
-      "https://www.gardenia.net/plant/senecio-rowleyanus-string-of-pearls"
+      "https://www.rhs.org.uk/plants/3058/senecio-rowleyanus/details",
+      "https://www.gardenia.net/plant/senecio-rowleyanus"
     ]
   }
 }

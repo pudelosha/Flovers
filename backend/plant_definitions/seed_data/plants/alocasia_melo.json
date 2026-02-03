@@ -3,20 +3,19 @@
   "name": "Alocasia Melo",
   "latin": "Alocasia melo",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "plastic"
   ],
   "recommended_soil_mixes": [
     "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,15 +27,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło pośrednie",
-          "de": "Helles indirektes Licht",
-          "fr": "Lumière indirecte vive",
-          "it": "Luce indiretta intensa",
-          "es": "Luz indirecta brillante",
-          "pt": "Luz indireta brilhante",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Vive indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "hi": "तेज़ परोक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining aroid mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Durchlässiges Substrat",
-          "fr": "Substrat drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Airy aroid mix",
+          "pl": "Przewiewne aroidy",
+          "de": "Luftiges Aroid-Sub",
+          "fr": "Substrat aéré aroid",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "خليط تربة أروييد",
+          "hi": "हवादार एरॉइड मिक्स",
+          "zh": "疏松天南星土",
+          "ja": "通気性の良い土",
+          "ko": "통기성 아로이드토"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Utrzymuj wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol légèrement humide",
-          "it": "Terreno umido",
-          "es": "Mantener húmedo",
-          "pt": "Manter úmido",
-          "ar": "تربة رطبة دائمًا",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持湿润",
-          "ja": "常に湿り気",
-          "ko": "항상 촉촉"
+          "en": "Moist, not soggy",
+          "pl": "Wilgotno, nie mokro",
+          "de": "Feucht, nicht nass",
+          "fr": "Humide, pas détrempé",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, no encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर दलदली नहीं",
+          "zh": "保持微湿不积水",
+          "ja": "湿り気、過湿NG",
+          "ko": "촉촉, 과습 금지"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard to grow",
-          "pl": "Trudna w uprawie",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "उगाना कठिन",
+          "en": "Finicky",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Délicate",
+          "it": "Delicata",
+          "es": "Delicada",
+          "pt": "Delicada",
+          "ar": "حساسة",
+          "hi": "संवेदनशील",
           "zh": "较难养护",
-          "ja": "育成が難しい",
-          "ko": "키우기 어려움"
+          "ja": "やや難しい",
+          "ko": "까다로움"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica para pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू जानवरों हेतु विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물 독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -162,76 +161,117 @@
       "value": {
         "text": {
           "en": "Slow, compact",
-          "pl": "Wolny, zwarty",
+          "pl": "Wolny, kompaktowy",
           "de": "Langsam, kompakt",
           "fr": "Lente, compacte",
           "it": "Lenta, compatta",
-          "es": "Lento y compacto",
-          "pt": "Lento e compacto",
-          "ar": "نمو بطيء",
-          "hi": "धीमी, सघन वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
-          "ko": "느린 생장"
+          "es": "Lento, compacto",
+          "pt": "Lento, compacto",
+          "ar": "بطيء ومدمج",
+          "hi": "धीमी, सघन",
+          "zh": "生长慢且紧凑",
+          "ja": "ゆっくり小型",
+          "ko": "느림, 콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Łatwo gnije",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Riesgo de pudrición",
+          "pt": "Risco de podridão",
+          "ar": "عرضة لتعفن الجذور",
+          "hi": "सड़न का जोखिम",
+          "zh": "易根腐",
+          "ja": "根腐れ注意",
+          "ko": "뿌리썩음 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites",
+          "pl": "Przędziorki",
+          "de": "Spinnmilben",
+          "fr": "Araignées rouges",
+          "it": "Ragnetto rosso",
+          "es": "Ácaros",
+          "pt": "Ácaros",
+          "ar": "العناكب الحمراء",
+          "hi": "स्पाइडर माइट्स",
+          "zh": "红蜘蛛",
+          "ja": "ハダニ",
+          "ko": "응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Jewel Alocasia",
-      "description": "Alocasia melo is a rare tropical aroid prized for its thick, textured leaves. It requires stable warmth, high humidity, and evenly moist soil. Best grown indoors with careful environmental control."
+      "common_name": "Melo alocasia",
+      "description": "Alocasia melo is a compact aroid valued for thick, textured leaves. Grow it in bright, indirect light and an airy aroid mix kept lightly moist. Keep it warm with higher humidity, and note it is toxic if ingested."
     },
     "pl": {
       "common_name": "Alokazja Melo",
-      "description": "Alocasia melo to rzadka roślina tropikalna o grubych, teksturowanych liściach. Wymaga ciepła, wysokiej wilgotności i stale wilgotnego podłoża. Najlepiej rośnie w warunkach domowych."
+      "description": "Alocasia melo to kompaktowa roślina z grubymi, mocno fakturowanymi liśćmi. Lubi jasne, rozproszone światło i przewiewne podłoże typu aroid, stale lekko wilgotne. Wymaga ciepła i wyższej wilgotności, a po zjedzeniu jest toksyczna."
     },
     "de": {
-      "common_name": "Alokasie Melo",
-      "description": "Alocasia melo ist eine seltene tropische Aroidpflanze mit dicken Blättern. Sie benötigt Wärme, hohe Luftfeuchtigkeit und gleichmäßig feuchte Erde. Ideal für den Innenbereich."
+      "common_name": "Melo-Alokasie",
+      "description": "Alocasia melo ist eine kompakte Aronstabgewächs-Art mit dicken, stark strukturierten Blättern. Sie mag helles, indirektes Licht und ein luftiges Aroid-Substrat, das leicht feucht bleibt. Warm halten und für höhere Luftfeuchte sorgen; bei Verschlucken ist sie giftig."
     },
     "fr": {
-      "common_name": "Alocasia Melo",
-      "description": "Alocasia melo est une plante tropicale rare aux feuilles épaisses. Elle demande chaleur, humidité élevée et sol humide. Culture recommandée en intérieur."
+      "common_name": "Alocasia melo",
+      "description": "Alocasia melo est une aroidée compacte aux feuilles épaisses et très texturées. Placez-la en lumière vive indirecte dans un substrat aéré, légèrement humide. Gardez-la au chaud avec une humidité plus élevée, et sachez qu’elle est toxique en cas d’ingestion."
     },
     "it": {
       "common_name": "Alocasia Melo",
-      "description": "Alocasia melo è una pianta tropicale rara con foglie spesse e testurizzate. Necessita di calore costante, alta umidità e terreno umido. Ideale come pianta da interno."
+      "description": "Alocasia melo è un’aroide compatta con foglie spesse e molto rugose. Preferisce luce intensa ma indiretta e un substrato arioso da aroid, mantenuto leggermente umido. Tienila al caldo con umidità più alta; è tossica se ingerita."
     },
     "es": {
       "common_name": "Alocasia Melo",
-      "description": "Alocasia melo es una planta tropical rara de hojas gruesas. Requiere humedad alta, calor estable y riego regular. Se cultiva principalmente en interiores."
+      "description": "Alocasia melo es una arácea compacta apreciada por sus hojas gruesas y texturizadas. Requiere luz brillante e indirecta y un sustrato aireado para aráceas, ligeramente húmedo. Manténla cálida con mayor humedad; es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Alocasia Melo",
-      "description": "Alocasia melo é uma planta tropical rara com folhas grossas. Precisa de calor, alta umidade e solo sempre úmido. Indicada para cultivo interno."
+      "common_name": "Alocásia Melo",
+      "description": "Alocasia melo é uma arácea compacta com folhas grossas e muito texturizadas. Precisa de luz forte indireta e substrato arejado para aróides, mantido levemente úmido. Mantenha-a quente com umidade mais alta; é tóxica se ingerida."
     },
     "ar": {
       "common_name": "ألوكاسيا ميلو",
-      "description": "ألوكاسيا ميلو نبات استوائي نادر بأوراق سميكة. يحتاج إلى رطوبة عالية وحرارة ثابتة وتربة رطبة. مناسب للزراعة الداخلية."
+      "description": "Alocasia melo نبات أروييد صغير ذو أوراق سميكة ذات نسيج بارز. يحتاج إلى ضوء ساطع غير مباشر وتربة أروييد جيدة التهوية تبقى رطبة قليلًا. وفر الدفء ورطوبة أعلى، وهو سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "अलोकासिया मेलो",
-      "description": "अलोकासिया मेलो एक दुर्लभ उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मोटी होती हैं। इसे उच्च आर्द्रता और नियमित नमी चाहिए। इसे घर के अंदर उगाया जाता है।"
+      "common_name": "अलोकैसिया मेलो",
+      "description": "Alocasia melo एक कॉम्पैक्ट एरॉइड है जिसकी पत्तियाँ मोटी और बनावटदार होती हैं। इसे तेज़ परोक्ष रोशनी और हवादार एरॉइड मिक्स में उगाएँ, मिट्टी हल्की नम रखें। गर्माहट और अधिक आर्द्रता दें; यह खाने पर विषाक्त है।"
     },
     "zh": {
-      "common_name": "美乐海芋",
-      "description": "Alocasia melo 是一种稀有的热带观叶植物，叶片厚实。需要高湿度、温暖环境和均匀湿润的土壤。适合室内栽培。"
+      "common_name": "梅洛海芋",
+      "description": "Alocasia melo 为紧凑型天南星科观叶植物，叶片厚实且纹理明显。适合明亮散射光与疏松的天南星土，保持盆土微湿但不积水。喜温暖与较高湿度，误食有毒。"
     },
     "ja": {
       "common_name": "アロカシア・メロ",
-      "description": "アロカシア・メロは厚い葉を持つ希少な熱帯植物です。高湿度と安定した温度、湿った土壌を好みます。室内栽培向きです。"
+      "description": "Alocasia melo は葉が厚く凹凸のある小型のサトイモ科観葉植物です。明るい間接光と通気性の良い用土で、用土は軽く湿り気を保ちます。暖かさと高めの湿度を好み、誤食で有毒です。"
     },
     "ko": {
       "common_name": "알로카시아 멜로",
-      "description": "알로카시아 멜로는 두꺼운 잎이 특징인 희귀한 열대 식물입니다. 높은 습도와 따뜻한 환경, 지속적인 수분이 필요합니다. 실내 재배에 적합합니다."
+      "description": "Alocasia melo는 두껍고 질감이 뚜렷한 잎이 특징인 소형 아로이드입니다. 밝은 간접광과 통기성 좋은 아로이드 배합토에서 키우고, 흙은 촉촉하되 과습은 피하세요. 따뜻함과 높은 습도를 선호하며 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/alocasia",
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
       "https://www.rhs.org.uk/plants/alocasia",
-      "https://edis.ifas.ufl.edu/publication/EP258"
+      "https://www.thespruce.com/alocasia-melo-care-guide-8623290",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia",
+      "https://www.aroidsociety.org/genera/speciespage.php?genus=alocasia&species=melo",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:995487-1"
     ]
   }
 }

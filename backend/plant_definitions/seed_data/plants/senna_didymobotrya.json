@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "senna_didymobotrya.jpg",
   "image_thumb": "senna_didymobotrya.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
+          "en": "Full sun",
+          "pl": "Pełne słońce",
           "de": "Volle Sonne",
-          "fr": "plein soleil",
-          "it": "sole pieno",
-          "es": "sol pleno",
-          "pt": "sol pleno",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूर्ण सूरज",
           "zh": "全日照",
           "ja": "直射日光",
-          "ko": "직사광선"
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-drained",
-          "pl": "dobrze przepuszczalna",
-          "de": "gut durchlässig",
-          "fr": "bien drainé",
-          "it": "ben drenato",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "جيد التصريف",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
           "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "排水良好",
-          "ko": "배수 좋은"
+          "ja": "水はけが良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,17 +67,17 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowane",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
-          "ja": "適度",
+          "ja": "中程度",
           "ko": "보통"
         }
       }
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaleur",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Fast growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter un excès d'eau",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Candle Bush",
-      "description": "Senna didymobotrya, also known as Candle Bush, is a tropical plant native to East Africa. It features striking yellow flowers and is often used as an ornamental shrub."
+      "description": "Senna didymobotrya is a fast-growing shrub with bright yellow flowers, native to tropical regions. It is known for its ornamental value and easy care."
     },
     "pl": {
-      "common_name": "Krzak świecowy",
-      "description": "Senna didymobotrya, znana również jako Krzak świecowy, to roślina tropikalna pochodząca z Afryki Wschodniej. Ma wyraziste żółte kwiaty i jest często stosowana jako krzew ozdobny."
+      "common_name": "Krzew świeczkowy",
+      "description": "Senna didymobotrya to szybko rosnący krzew z jasnymi żółtymi kwiatami, pochodzący z tropikalnych regionów. Znany jest ze swojej wartości ozdobnej i łatwej pielęgnacji."
     },
     "de": {
       "common_name": "Kerzenstrauch",
-      "description": "Senna didymobotrya, auch als Kerzenstrauch bekannt, ist eine tropische Pflanze aus Ostafrika. Sie hat auffällige gelbe Blumen und wird oft als Zierstrauch verwendet."
+      "description": "Senna didymobotrya ist ein schnell wachsender Strauch mit leuchtend gelben Blumen, der in tropischen Regionen beheimatet ist. Es ist bekannt für seinen Zierwert und die einfache Pflege."
     },
     "fr": {
       "common_name": "Buisson à bougie",
-      "description": "Senna didymobotrya, également connu sous le nom de Buisson à bougie, est une plante tropicale originaire d'Afrique de l'Est. Elle présente des fleurs jaunes frappantes et est souvent utilisée comme arbuste ornemental."
+      "description": "Senna didymobotrya est un arbuste à croissance rapide avec de grandes fleurs jaunes, originaire des régions tropicales. Il est apprécié pour sa valeur ornementale et sa facilité d'entretien."
     },
     "it": {
-      "common_name": "Cespite di Candele",
-      "description": "Senna didymobotrya, noto anche come Cespite di Candele, è una pianta tropicale originaria dell'Africa orientale. Presenta fiori gialli evidenti ed è spesso utilizzata come arbusto ornamentale."
+      "common_name": "Arbusto a candela",
+      "description": "Senna didymobotrya è un arbusto a crescita rapida con fiori gialli brillanti, originario delle regioni tropicali. È noto per il suo valore ornamentale e la sua facile cura."
     },
     "es": {
-      "common_name": "Arbusto de Velas",
-      "description": "Senna didymobotrya, también conocido como Arbusto de Velas, es una planta tropical originaria del este de África. Presenta flores amarillas llamativas y se utiliza comúnmente como arbusto ornamental."
+      "common_name": "Arbusto de vela",
+      "description": "Senna didymobotrya es un arbusto de rápido crecimiento con flores amarillas brillantes, originario de las regiones tropicales. Es conocido por su valor ornamental y su fácil cuidado."
     },
     "pt": {
-      "common_name": "Arbusto de Velas",
-      "description": "Senna didymobotrya, também conhecido como Arbusto de Velas, é uma planta tropical nativa do leste da África. Possui flores amarelas marcantes e é frequentemente usado como arbusto ornamental."
+      "common_name": "Arbusto de vela",
+      "description": "Senna didymobotrya é um arbusto de rápido crescimento com flores amarelas brilhantes, nativo das regiões tropicais. É conhecido pelo seu valor ornamental e facilidade de cuidado."
     },
     "ar": {
-      "common_name": "شجيرة الشموع",
-      "description": "Senna didymobotrya، المعروف أيضًا باسم شجيرة الشموع، هو نبات استوائي موطنه شرق أفريقيا. يحتوي على زهور صفراء لافتة للنظر ويستخدم غالبًا كأدغال للزينة."
+      "common_name": "شجيرة الشمعة",
+      "description": "Senna didymobotrya هو شجيرة سريعة النمو تحمل أزهارًا صفراء زاهية، موطنها المناطق الاستوائية. يشتهر بقيمته الزخرفية وسهولة العناية."
     },
     "hi": {
       "common_name": "मोमबत्ती झाड़ी",
-      "description": "Senna didymobotrya, जिसे मोमबत्ती झाड़ी भी कहा जाता है, एक उष्णकटिबंधीय पौधा है जो पूर्वी अफ्रीका का मूल निवासी है। इसमें आकर्षक पीले फूल होते हैं और इसे अक्सर सजावटी झाड़ी के रूप में इस्तेमाल किया जाता है।"
+      "description": "Senna didymobotrya एक तेजी से बढ़ने वाला झाड़ी है, जिसमें चमकीले पीले फूल होते हैं, जो उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह अपनी सजावटी मूल्य और आसान देखभाल के लिए जाना जाता है।"
     },
     "zh": {
       "common_name": "蜡烛灌木",
-      "description": "Senna didymobotrya，也称为蜡烛灌木，是一种原产于东非的热带植物。它具有引人注目的黄色花朵，常用作观赏性灌木。"
+      "description": "Senna didymobotrya 是一种快速生长的灌木，具有明亮的黄色花朵，原产于热带地区。因其观赏价值和容易护理而闻名。"
     },
     "ja": {
       "common_name": "キャンドルブッシュ",
-      "description": "Senna didymobotrya、別名キャンドルブッシュは東アフリカ原産の熱帯植物です。目を引く黄色い花を特徴としており、装飾用の低木としてよく使われます。"
+      "description": "Senna didymobotrya は、熱帯地域原産の速成性の低木で、鮮やかな黄色の花を持っています。その観賞価値と手入れの簡単さで知られています。"
     },
     "ko": {
-      "common_name": "양초 덤불",
-      "description": "Senna didymobotrya, 양초 덤불로도 알려진 이 식물은 동부 아프리카 원산의 열대 식물입니다. 눈에 띄는 노란색 꽃을 가지고 있으며 장식용 관목으로 자주 사용됩니다."
+      "common_name": "촛불 덤불",
+      "description": "Senna didymobotrya는 밝은 노란색 꽃을 가진 빠르게 자라는 관목으로 열대 지역이 원산지입니다. 장식용 가치와 쉬운 관리로 잘 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/64633/senna-didymobotrya/details",
-      "https://www.gardenia.net/plant/senna-didymobotrya"
+      "https://www.gardenia.net/plant/senna-didymobotrya",
+      "https://www.rhs.org.uk/plants/senna-didymobotrya"
     ]
   }
 }

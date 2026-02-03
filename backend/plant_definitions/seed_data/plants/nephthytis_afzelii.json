@@ -1,27 +1,27 @@
 {
   "external_id": "nephthytis_afzelii",
-  "name": "Nephthytis Afzelii",
+  "name": "Nephthytis",
   "latin": "Nephthytis afzelii",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "nephthytis_afzelii.jpg",
   "image_thumb": "nephthytis_afzelii.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirektes",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainierend",
-          "fr": "Bien drainé",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
           "it": "Ben drenante",
-          "es": "Buen drenaje",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilg.",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido regolare",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة منتظمة",
-          "hi": "नियमित नमी",
-          "zh": "保持湿润",
-          "ja": "適度に湿らせる",
-          "ko": "적당히 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers high humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Hohe Luftfeuchte",
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
-          "zh": "喜高湿度",
-          "ja": "高湿度好む",
+          "zh": "高湿度",
+          "ja": "高湿度",
           "ko": "높은 습도"
         }
       }
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if ingested",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing, spreading",
-          "pl": "Pnąca",
-          "de": "Kletternd",
-          "fr": "Grimpante",
-          "it": "Rampicante",
-          "es": "Trepadora",
-          "pt": "Trepadeira",
-          "ar": "متسلقة",
-          "hi": "चढ़ने वाली",
-          "zh": "攀援生长",
-          "ja": "つる性",
-          "ko": "덩굴성"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "African Arrowhead Vine",
-      "description": "Nephthytis afzelii is a tropical aroid native to West Africa. It is commonly grown indoors for its decorative arrow-shaped leaves and easy care. The plant prefers warm temperatures, indirect light, and consistently moist soil."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii is a moderate-growing, tropical plant that thrives in medium light and high humidity. It is toxic to pets and requires moderate watering."
     },
     "pl": {
-      "common_name": "Afrykański zroślicha",
-      "description": "Nephthytis afzelii to tropikalna roślina z Afryki Zachodniej. Uprawiana w pomieszczeniach ze względu na dekoracyjne liście i łatwą pielęgnację. Preferuje ciepło, jasne pośrednie światło i wilgotne podłoże."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii to roślina tropikalna o średnim wzroście, która rośnie w średnim świetle i wysokiej wilgotności. Jest toksyczna dla zwierząt domowych i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Afrikanischer Pfeilblatt",
-      "description": "Nephthytis afzelii ist eine tropische Aronstabpflanze aus Westafrika. Sie wird als Zimmerpflanze wegen ihrer pfeilförmigen Blätter geschätzt. Bevorzugt Wärme, indirektes Licht und gleichmäßig feuchte Erde."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii ist eine mäßig wachsende tropische Pflanze, die in mittlerem Licht und hoher Luftfeuchtigkeit gedeiht. Sie ist für Haustiere giftig und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Néphthytis d’Afrique",
-      "description": "Nephthytis afzelii est une plante tropicale originaire d’Afrique de l’Ouest. Elle est appréciée en intérieur pour ses feuilles décoratives. Elle aime la chaleur, la lumière indirecte et un sol légèrement humide."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii est une plante tropicale à croissance modérée qui prospère dans une lumière moyenne et une humidité élevée. Elle est toxique pour les animaux domestiques et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Nefthytis africano",
-      "description": "Nephthytis afzelii è una pianta tropicale dell’Africa occidentale. Coltivata come pianta d’appartamento per le sue foglie ornamentali. Predilige caldo, luce indiretta e terreno umido."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii è una pianta tropicale a crescita moderata che prospera in luce media e alta umidità. È tossica per gli animali domestici e richiede annaffiature moderate."
     },
     "es": {
-      "common_name": "Nefthytis africano",
-      "description": "Nephthytis afzelii es una planta tropical originaria de África occidental. Se cultiva en interiores por su follaje decorativo y fácil cuidado. Requiere luz indirecta, calor y riego regular."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii es una planta tropical de crecimiento moderado que prospera con luz media y alta humedad. Es tóxica para las mascotas y requiere riego moderado."
     },
     "pt": {
-      "common_name": "Nefthytis africano",
-      "description": "Nephthytis afzelii é uma planta tropical da África Ocidental. Muito usada como planta de interior pelas suas folhas ornamentais. Prefere luz indireta, calor e solo levemente úmido."
+      "common_name": "Nephthytis",
+      "description": "Nephthytis afzelii é uma planta tropical de crescimento moderado que prospera em luz média e alta umidade. É tóxica para animais de estimação e requer rega moderada."
     },
     "ar": {
-      "common_name": "نبتة السهم الأفريقية",
-      "description": "Nephthytis afzelii نبات استوائي موطنه غرب أفريقيا. يزرع كنبات داخلي لأوراقه الزخرفية وسهولة العناية به. يفضل الضوء غير المباشر والرطوبة والدفء."
+      "common_name": "نفتيس",
+      "description": "نبتة نبتس أفيلي هي نبات استوائي ينمو بشكل معتدل ويفضل الضوء المتوسط والرطوبة العالية. سامة للحيوانات الأليفة وتتطلب سقاية معتدلة."
     },
     "hi": {
-      "common_name": "अफ्रीकी एरोहेड पौधा",
-      "description": "Nephthytis afzelii पश्चिमी अफ्रीका का एक उष्णकटिबंधीय पौधा है। इसे घरों में सजावटी पत्तियों के लिए उगाया जाता है। इसे अप्रत्यक्ष रोशनी, नमी और गर्म वातावरण पसंद है।"
+      "common_name": "नेफथाइटिस",
+      "description": "नेफथाइटिस अफ़ज़ेली एक मध्यम बढ़ने वाली उष्णकटिबंधीय पौधा है जो मध्यम प्रकाश और उच्च आर्द्रता में उगता है। यह पालतू जानवरों के लिए विषैला है और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "非洲合果芋",
-      "description": "Nephthytis afzelii 原产于西非的热带植物。常作为室内观叶植物栽培。喜欢温暖环境、明亮散射光和湿润土壤。"
+      "common_name": "蛇藤",
+      "description": "Nephthytis afzelii 是一种中等生长的热带植物，喜欢中等光照和高湿度。它对宠物有毒，并且需要适度的浇水。"
     },
     "ja": {
-      "common_name": "アフリカンシンゴニウム",
-      "description": "Nephthytis afzelii は西アフリカ原産の熱帯植物です。観葉植物として育てやすく、矢じり形の葉が特徴です。間接光と湿度を好みます。"
+      "common_name": "ネフティティス",
+      "description": "Nephthytis afzeliiは中程度の成長をする熱帯植物で、適度な光と高湿度を好みます。ペットに有毒で、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "아프리카 싱고니움",
-      "description": "Nephthytis afzelii는 서아프리카 원산의 열대 식물입니다. 실내에서 키우기 쉬운 관엽식물로 알려져 있습니다. 간접광과 습한 환경을 선호합니다."
+      "common_name": "네프티티스",
+      "description": "Nephthytis afzelii는 중간 정도로 자라는 열대 식물로, 적당한 빛과 높은 습도를 좋아합니다. 애완동물에게 독성이 있으며, 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/science/collections-and-resources/data-and-digital/herbarium-catalogue",
-      "https://edis.ifas.ufl.edu/publication/EP574",
-      "https://www.aroid.org/genera/nephthytis.php"
+      "https://www.rhs.org.uk/plants/Nephthytis-afzelii",
+      "https://www.gardenia.net/plant/nephthytis-afzelii"
     ]
   }
 }

@@ -7,11 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "rosmarinus_officinalis.jpg",
   "image_thumb": "rosmarinus_officinalis.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Voller Sonnenschein",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "フルサン",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaszczysty",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رملي",
-          "hi": "रेत",
-          "zh": "沙质",
-          "ja": "砂地",
-          "ko": "모래"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -111,7 +112,7 @@
           "it": "15-25°C",
           "es": "15-25°C",
           "pt": "15-25°C",
-          "ar": "15-25°C",
+          "ar": "15-25 درجة مئوية",
           "hi": "15-25°C",
           "zh": "15-25°C",
           "ja": "15-25°C",
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "gering",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮은"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Trujący dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowany",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Rosemary",
-      "description": "Rosmarinus officinalis is a fragrant herb native to the Mediterranean. It's commonly used in cooking and has medicinal properties."
+      "description": "Rosemary is a fragrant herb used in cooking and for ornamental purposes. It thrives in full sun and well-drained soil."
     },
     "pl": {
       "common_name": "Rozmaryn",
-      "description": "Rosmarinus officinalis to aromatyczne zioło pochodzące z basenu Morza Śródziemnego. Jest szeroko stosowane w kuchni i ma właściwości lecznicze."
+      "description": "Rozmaryn to pachnąca roślina wykorzystywana w kuchni i do ozdoby. Lubi pełne słońce i dobrze przepuszczalną glebę."
     },
     "de": {
       "common_name": "Rosmarin",
-      "description": "Rosmarinus officinalis ist ein duftendes Kraut, das ursprünglich aus dem Mittelmeerraum stammt. Es wird häufig in der Küche verwendet und hat heilende Eigenschaften."
+      "description": "Rosmarin ist ein duftendes Kraut, das in der Küche und als Zierpflanze verwendet wird. Es gedeiht in vollem Sonnenschein und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Romarin",
-      "description": "Rosmarinus officinalis est une herbe aromatique originaire de la Méditerranée. Il est couramment utilisé en cuisine et possède des propriétés médicinales."
+      "description": "Le romarin est une herbe parfumée utilisée en cuisine et à des fins ornementales. Il prospère en plein soleil et dans un sol bien drainé."
     },
     "it": {
       "common_name": "Rosmarino",
-      "description": "Rosmarinus officinalis è un'erba aromatica originaria del Mediterraneo. È comunemente usato in cucina e ha proprietà medicinali."
+      "description": "Il rosmarino è un'erba profumata utilizzata in cucina e come pianta ornamentale. Cresce al sole pieno e in terreni ben drenati."
     },
     "es": {
       "common_name": "Romero",
-      "description": "Rosmarinus officinalis es una hierba aromática originaria de la cuenca mediterránea. Se usa comúnmente en la cocina y tiene propiedades medicinales."
+      "description": "El romero es una hierba fragante utilizada en la cocina y con fines ornamentales. Crece a pleno sol en suelos bien drenados."
     },
     "pt": {
       "common_name": "Alecrim",
-      "description": "Rosmarinus officinalis é uma erva aromática nativa da região mediterrânea. É amplamente usado na culinária e possui propriedades medicinais."
+      "description": "O alecrim é uma erva aromática usada na culinária e com fins ornamentais. Cresce sob sol pleno e em solos bem drenados."
     },
     "ar": {
       "common_name": "إكليل الجبل",
-      "description": "Rosmarinus officinalis هو عشب عطري موطنه منطقة البحر الأبيض المتوسط. يستخدم بشكل شائع في الطهي وله خصائص طبية."
+      "description": "إكليل الجبل هو عشب عطري يستخدم في الطهي ولأغراض زينة. ينمو في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "रोजमैरी",
-      "description": "Rosmarinus officinalis एक सुगंधित पौधा है जो भूमध्यसागरीय क्षेत्र का मूल निवासी है। इसका उपयोग रसोई में सामान्य है और इसमें औषधीय गुण होते हैं।"
+      "common_name": "रोज़मैरी",
+      "description": "रोज़मैरी एक सुगंधित जड़ी-बूटी है जो खाना बनाने और सजावटी उद्देश्यों के लिए उपयोग की जाती है। यह पूर्ण सूर्य और अच्छी जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
       "common_name": "迷迭香",
-      "description": "Rosmarinus officinalis 是一种芳香草本植物，原产于地中海地区。它在烹饪中广泛使用，且具有药用特性。"
+      "description": "迷迭香是一种芳香的草药，用于烹饪和装饰用途。它在充足阳光和排水良好的土壤中茁壮成长。"
     },
     "ja": {
       "common_name": "ローズマリー",
-      "description": "Rosmarinus officinalisは地中海地方原産の芳香性のハーブです。料理に広く使われ、薬用効果もあります。"
+      "description": "ローズマリーは料理や装飾目的で使用される香り高いハーブです。直射日光と排水性の良い土壌で育ちます。"
     },
     "ko": {
       "common_name": "로즈마리",
-      "description": "Rosmarinus officinalis는 지중해 지역이 원산지인 향긋한 허브입니다. 주로 요리에 사용되며 약용 효과가 있습니다."
+      "description": "로즈마리는 요리와 장식용으로 사용되는 향기로운 허브입니다. 햇볕이 잘 드는 곳과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=346",
-      "https://www.gardeningknowhow.com/edible/herbs/rosemary/rosemary-plant-care.htm",
-      "https://www.bhg.com/gardening/pests-insects-diseases/rosemary-plant-care/"
+      "https://www.rhs.org.uk/advice/profile?pid=530",
+      "https://www.gardenia.net/plant/rosmarinus-officinalis-rosemary"
     ]
   }
 }

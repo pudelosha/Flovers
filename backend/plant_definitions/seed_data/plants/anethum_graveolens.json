@@ -7,21 +7,20 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 4,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
-  "repot_required": true,
-  "repot_interval_months": 12,
+  "fertilize_interval_days": 30,
+  "repot_required": false,
+  "repot_interval_months": null,
   "image_hero": "anethum_graveolens.jpg",
   "image_thumb": "anethum_graveolens.jpg",
   "traits": [
@@ -31,16 +30,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonnig",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "직사광선"
+          "ko": "양지"
         }
       }
     },
@@ -48,17 +47,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Suolo drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "en": "Well-drained, fertile",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
           "ar": "تربة جيدة الصرف",
           "hi": "अच्छी जलनिकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
+          "ja": "水はけ良い",
           "ko": "배수 좋은 흙"
         }
       }
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep lightly moist",
-          "pl": "Lekko wilgotna",
-          "de": "Leicht feucht",
-          "fr": "Légèrement humide",
-          "it": "Leggermente umido",
-          "es": "Ligeramente húmedo",
-          "pt": "Levemente úmido",
-          "ar": "رطوبة خفيفة",
-          "hi": "हल्की नमी",
+          "en": "Keep evenly moist",
+          "pl": "Umiark. wilgotno",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, pas détrempé",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, no encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون غمر",
+          "hi": "नमी रखें",
           "zh": "保持微湿",
-          "ja": "やや湿潤",
-          "ko": "약간 촉촉"
+          "ja": "乾かしすぎない",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–24°C",
-          "pl": "15–24°C",
-          "de": "15–24°C",
-          "fr": "15–24°C",
-          "it": "15–24°C",
-          "es": "15–24°C",
-          "pt": "15–24°C",
-          "ar": "15–24°م",
-          "hi": "15–24°C",
-          "zh": "15–24°C",
-          "ja": "15–24°C",
-          "ko": "15–24°C"
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
         }
       }
     },
@@ -124,17 +123,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
+          "en": "Normal indoor air",
           "pl": "Zwykła wilgotność",
-          "de": "Normale Feuchte",
+          "de": "Normale Luft",
           "fr": "Humidité normale",
           "it": "Umidità normale",
           "es": "Humedad normal",
           "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
+          "ar": "رطوبة منزلية عادية",
           "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
+          "zh": "普通湿度",
+          "ja": "標準の湿度",
           "ko": "보통 습도"
         }
       }
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
+          "en": "Non-toxic to pets",
           "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू-सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペット無害",
+          "ko": "반려동물 안전"
         }
       }
     },
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast annual",
-          "pl": "Szybki roczny",
-          "de": "Schnell wachsend",
-          "fr": "Annuel rapide",
-          "it": "Annuale rapido",
-          "es": "Anual rápido",
-          "pt": "Anual rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速一年生",
-          "ja": "一年草・早成",
-          "ko": "빠른 한해살이"
+          "en": "Fast annual herb",
+          "pl": "Szybki jednoroczny",
+          "de": "Schnell, einjährig",
+          "fr": "Annuelle rapide",
+          "it": "Annuale veloce",
+          "es": "Anual y rápida",
+          "pt": "Anual e rápida",
+          "ar": "عشب سنوي سريع",
+          "hi": "तेजी से बढ़ता",
+          "zh": "一年生，生长快",
+          "ja": "一年草・早い",
+          "ko": "한해살이, 빠름"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional aphids",
+          "pl": "Sporadycznie mszyce",
+          "de": "Gelegentlich Blattläuse",
+          "fr": "Pucerons parfois",
+          "it": "Afidi occasionali",
+          "es": "Pulgones a veces",
+          "pt": "Pulgões às vezes",
+          "ar": "منّ أحيانًا",
+          "hi": "कभी-कभी एफिड्स",
+          "zh": "偶见蚜虫",
+          "ja": "アブラムシ時々",
+          "ko": "가끔 진딧물"
         }
       }
     }
@@ -181,58 +218,60 @@
   "translations": {
     "en": {
       "common_name": "Dill",
-      "description": "Dill is an annual aromatic herb commonly grown for its feathery leaves and seeds. It prefers full sun and evenly moist, well-drained soil. Regular harvesting encourages healthy growth indoors."
+      "description": "Dill is an annual culinary herb grown for its feathery leaves and aromatic seeds. Provide full sun or very bright light and keep the potting mix evenly moist but not waterlogged. It grows best in a deep container with good drainage and only needs light feeding."
     },
     "pl": {
       "common_name": "Koper ogrodowy",
-      "description": "Koper ogrodowy to jednoroczna roślina zielna uprawiana dla liści i nasion. Wymaga pełnego słońca i umiarkowanie wilgotnej, przepuszczalnej gleby. Dobrze rośnie także w donicach w domu."
+      "description": "Koper ogrodowy to jednoroczne zioło uprawiane dla delikatnych liści i aromatycznych nasion. Zapewnij pełne słońce lub bardzo jasne stanowisko i utrzymuj podłoże równomiernie wilgotne, bez zastoin wody. Najlepiej rośnie w głębokiej donicy z dobrym drenażem i wymaga jedynie lekkiego nawożenia."
     },
     "de": {
       "common_name": "Dill",
-      "description": "Dill ist ein einjähriges Küchenkraut mit feinen, aromatischen Blättern. Er benötigt viel Sonne und gleichmäßig feuchten, gut durchlässigen Boden. Regelmäßiges Schneiden fördert das Wachstum."
+      "description": "Dill ist ein einjähriges Küchenkraut mit feinen Blättern und aromatischen Samen. Stelle ihn sehr hell bis vollsonnig und halte das Substrat gleichmäßig feucht, ohne Staunässe. Ein tiefer Topf mit guter Drainage ist wichtig; sparsam düngen."
     },
     "fr": {
       "common_name": "Aneth",
-      "description": "L’aneth est une plante annuelle cultivée pour ses feuilles et ses graines aromatiques. Elle aime le plein soleil et un sol léger et drainé. Elle peut être cultivée en pot à l’intérieur."
+      "description": "L’aneth est une herbe annuelle cultivée pour ses feuilles fines et ses graines aromatiques. Donnez-lui beaucoup de lumière/plein soleil et gardez le substrat régulièrement humide sans excès d’eau. Un pot profond avec bon drainage convient, avec une fertilisation légère."
     },
     "it": {
       "common_name": "Aneto",
-      "description": "L’aneto è un’erba annuale aromatica usata in cucina. Cresce meglio in pieno sole con terreno ben drenato e leggermente umido. È adatto anche alla coltivazione in vaso."
+      "description": "L’aneto è un’erba annuale coltivata per le foglie leggere e i semi aromatici. Fornisci pieno sole o luce molto intensa e mantieni il terriccio uniformemente umido senza ristagni. Preferisce un vaso profondo con buon drenaggio e concimazioni leggere."
     },
     "es": {
       "common_name": "Eneldo",
-      "description": "El eneldo es una hierba anual aromática cultivada por sus hojas y semillas. Prefiere pleno sol y suelo bien drenado con humedad moderada. Es fácil de cultivar en interior."
+      "description": "El eneldo es una hierba anual cultivada por sus hojas finas y semillas aromáticas. Necesita pleno sol o luz muy intensa y un sustrato uniformemente húmedo, sin encharcar. Crece mejor en una maceta profunda con buen drenaje y con abonado suave."
     },
     "pt": {
       "common_name": "Endro",
-      "description": "O endro é uma erva anual aromática muito usada na culinária. Necessita de sol pleno e solo bem drenado e levemente úmido. Pode ser cultivado com sucesso em vasos."
+      "description": "O endro é uma erva anual cultivada pelas folhas finas e sementes aromáticas. Dê sol pleno ou luz muito forte e mantenha o substrato sempre levemente úmido, sem encharcar. Prefere vaso fundo com boa drenagem e adubação leve."
     },
     "ar": {
-      "common_name": "الشبت",
-      "description": "الشبت نبات عشبي سنوي عطري يُزرع لأوراقه وبذوره. يحتاج إلى شمس كاملة وتربة جيدة الصرف مع رطوبة معتدلة. يمكن زراعته بسهولة في أواني داخل المنزل."
+      "common_name": "شبت",
+      "description": "الشبت عشب سنوي يُزرع لأوراقه الريشية وبذوره العطرية. يحتاج إلى شمس كاملة أو ضوء قوي جدًا مع تربة رطبة بالتساوي دون غمر. ينجح في أصيص عميق مع تصريف جيد ويكفيه تسميد خفيف."
     },
     "hi": {
       "common_name": "सोआ",
-      "description": "सोआ एक वार्षिक सुगंधित जड़ी-बूटी है जिसे पत्तियों और बीजों के लिए उगाया जाता है। इसे पूरी धूप और अच्छी जलनिकासी वाली नम मिट्टी पसंद है। गमलों में भी इसे उगाया जा सकता है।"
+      "description": "सोआ एक वार्षिक रसोई जड़ी-बूटी है जिसे इसके महीन पत्तों और सुगंधित बीजों के लिए उगाया जाता है। इसे पूरा सूरज या बहुत तेज रोशनी दें और मिट्टी को समान रूप से नम रखें, लेकिन जलभराव न होने दें। गहरी, अच्छी जलनिकासी वाली गमले में यह बेहतर बढ़ता है और हल्की खाद पर्याप्त रहती है।"
     },
     "zh": {
       "common_name": "莳萝",
-      "description": "莳萝是一年生芳香草本植物，常用于叶片和种子。它喜欢充足阳光和排水良好的微湿土壤。在室内盆栽中也能良好生长。"
+      "description": "莳萝是一年生香草，常用于采收羽状叶和芳香种子。需要充足日照或很强的光照，并保持盆土均匀微湿，避免积水。使用较深且排水良好的花盆，少量施肥即可。"
     },
     "ja": {
       "common_name": "ディル",
-      "description": "ディルは一年生の香りの良いハーブで、葉や種子が利用されます。日当たりと水はけの良い適度に湿った土を好みます。鉢植えで室内栽培も可能です。"
+      "description": "ディルは一年草のハーブで、繊細な葉と芳香のある種子を利用します。日当たりの良い場所で育て、用土は常に軽く湿る程度に保ち、過湿は避けます。排水のよい深めの鉢が適し、追肥は控えめで十分です。"
     },
     "ko": {
       "common_name": "딜",
-      "description": "딜은 잎과 씨앗을 이용하는 향기로운 한해살이 허브입니다. 햇빛이 충분하고 배수가 잘되는 약간 촉촉한 흙을 좋아합니다. 실내 화분 재배도 쉽습니다."
+      "description": "딜은 깃털 같은 잎과 향기로운 씨앗을 수확하는 한해살이 허브입니다. 햇빛이 잘 드는 곳에서 키우고 흙은 촉촉하게 유지하되 과습은 피하세요. 배수가 좋은 깊은 화분이 좋으며 비료는 약하게 주면 됩니다."
     }
   },
   "sources": {
     "urls": [
+      "https://plants.ces.ncsu.edu/plants/anethum-graveolens/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=d682",
       "https://www.rhs.org.uk/herbs/dill/grow-your-own",
-      "https://extension.umn.edu/vegetables/growing-dill",
-      "https://plants.ces.ncsu.edu/plants/anethum-graveolens/"
+      "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/dill"
     ]
   }
 }

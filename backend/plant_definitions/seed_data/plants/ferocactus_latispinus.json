@@ -1,24 +1,19 @@
 {
   "external_id": "ferocactus_latispinus",
-  "name": "Devil's Tongue Cactus",
+  "name": "Devil's tongue barrel cactus",
   "latin": "Ferocactus latispinus",
   "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
-  "recommended_pot_materials": [
-    "terracotta"
-  ],
-  "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
-  ],
+  "recommended_pot_materials": ["terracotta"],
+  "recommended_soil_mixes": ["cactus-succulent"],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 45,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ferocactus_latispinus.jpg",
@@ -33,13 +28,13 @@
           "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
-          "es": "Sol pleno",
+          "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -47,18 +42,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenante",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Gritty, fast-draining",
+          "pl": "Przepuszczalna, gruba",
+          "de": "Sehr durchlaessig",
+          "fr": "Tres drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة سريعة الصرف",
+          "hi": "तेजी से जल निकासी",
+          "zh": "排水良好颗粒土",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +61,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "물 적게"
+          "en": "Water after dry-out",
+          "pl": "Podlej po wyschnieciu",
+          "de": "Giesse nach Abtrocknen",
+          "fr": "Arroser apres sechage",
+          "it": "Annaffia a secco",
+          "es": "Riega tras secar",
+          "pt": "Regar apos secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "완전 건조 후 물"
         }
       }
     },
@@ -85,18 +80,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate",
+          "pl": "Srednia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Media",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +99,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm preferred",
-          "pl": "Lubi ciepło",
-          "de": "Bevorzugt warm",
-          "fr": "Aime la chaleur",
-          "it": "Ama il caldo",
-          "es": "Prefiere calor",
-          "pt": "Prefere calor",
-          "ar": "يفضل الدفء",
-          "hi": "गरम पसंद",
-          "zh": "喜温暖",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "10-35\u00b0C",
+          "pl": "10-35\u00b0C",
+          "de": "10-35\u00b0C",
+          "fr": "10-35\u00b0C",
+          "it": "10-35\u00b0C",
+          "es": "10-35\u00b0C",
+          "pt": "10-35\u00b0C",
+          "ar": "10-35\u00b0C",
+          "hi": "10-35\u00b0C",
+          "zh": "10-35\u00b0C",
+          "ja": "10-35\u00b0C",
+          "ko": "10-35\u00b0C"
         }
       }
     },
@@ -123,18 +118,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low humidity ok",
+          "pl": "Niska wilgotnosc ok",
+          "de": "Niedrige Feuchte ok",
+          "fr": "Faible humidite ok",
+          "it": "Bassa umidita ok",
+          "es": "Baja humedad ok",
+          "pt": "Baixa umidade ok",
+          "ar": "رطوبة منخفضة مناسبة",
+          "hi": "कम नमी ठीक",
+          "zh": "低湿度也可",
+          "ja": "低湿度でOK",
+          "ko": "낮은 습도 OK"
         }
       }
     },
@@ -142,18 +137,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic; spines",
+          "pl": "Nietrujacy; kolce",
+          "de": "Ungiftig; Dornen",
+          "fr": "Non toxique; epines",
+          "it": "Non tossico; spine",
+          "es": "No toxica; espinas",
+          "pt": "Nao toxica; espinhos",
+          "ar": "غير سام؛ اشواك",
+          "hi": "विषैला नहीं; कांटे",
+          "zh": "无毒; 有刺",
+          "ja": "無毒; トゲあり",
+          "ko": "무독성; 가시"
         }
       }
     },
@@ -161,8 +156,8 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
+          "en": "Slow-growing barrel",
+          "pl": "Wolno rosnaca beczka",
           "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
@@ -171,67 +166,107 @@
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
+          "ja": "成長はゆっくり",
           "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot if wet",
+          "pl": "Gnijenie przy przelaniu",
+          "de": "Faulnis bei Naesse",
+          "fr": "Pourriture si trop humide",
+          "it": "Marciume se troppo bagnato",
+          "es": "Pudricion si exceso agua",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفن مع زيادة الماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "积水易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional mealybugs",
+          "pl": "Sporadycznie welnowce",
+          "de": "Gelegentlich Wolllaeuse",
+          "fr": "Cochenilles parfois",
+          "it": "Cocciniglie a volte",
+          "es": "Cochinilla ocasional",
+          "pt": "Cochonilha ocasional",
+          "ar": "بق دقيقي احيانا",
+          "hi": "कभी-कभी मिलीबग",
+          "zh": "偶有粉蚧",
+          "ja": "まれにカイガラムシ",
+          "ko": "가끔 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Devil's Tongue Cactus",
-      "description": "Ferocactus latispinus is a barrel cactus native to central Mexico. It prefers full sun, very fast-draining soil, and infrequent watering. Overwatering can easily cause root rot."
+      "common_name": "Devil's tongue barrel cactus",
+      "description": "A slow-growing Mexican barrel cactus with broad, flattened spines and showy purple to magenta flowers. Give very bright light and a gritty, fast-draining mix. Water only after the soil dries completely and keep it drier in winter."
     },
     "pl": {
-      "common_name": "Kaktus diabelski język",
-      "description": "Ferocactus latispinus to kaktus beczkowaty z Meksyku. Wymaga pełnego słońca, bardzo przepuszczalnej gleby i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia korzeni."
+      "common_name": "Beczkowy kaktus \"diabli jezyk\"",
+      "description": "Wolno rosnacy kaktus beczkowy z Meksyku z szerokimi, splaszczonymi cierniami i purpurowymi kwiatami. Wymaga bardzo jasnego stanowiska i silnie przepuszczalnego podloza. Podlewaj dopiero po calkowitym przeschneciu, zimą znacznie rzadziej."
     },
     "de": {
-      "common_name": "Teufelszungenkaktus",
-      "description": "Ferocactus latispinus ist ein Kugelkaktus aus Mexiko. Er braucht volle Sonne, stark durchlässiges Substrat und seltenes Gießen. Zu viel Wasser schädigt die Wurzeln."
+      "common_name": "Teufelszungen-Ferokaktus",
+      "description": "Langsam wachsender Fasskaktus aus Mexiko mit breiten, abgeflachten Dornen und violett bis magenta Farben der Blueten. Sehr hell stellen und in sehr durchlaessiges Substrat pflanzen. Erst giessen, wenn alles trocken ist, und im Winter deutlich trockener halten."
     },
     "fr": {
-      "common_name": "Cactus langue du diable",
-      "description": "Ferocactus latispinus est un cactus globulaire originaire du Mexique. Il aime le plein soleil, un sol très drainant et peu d’arrosage. L’excès d’eau provoque la pourriture."
+      "common_name": "Cactus tonneau langue du diable",
+      "description": "Cactus tonneau mexicain a croissance lente, avec de larges epines aplaties et des fleurs pourpres a magenta. Placez-le en lumiere tres vive et dans un substrat tres drainant. Arrosez seulement apres sechage complet, et presque pas en hiver."
     },
     "it": {
-      "common_name": "Cactus lingua del diavolo",
-      "description": "Ferocactus latispinus è un cactus globoso del Messico. Richiede sole pieno, terreno molto drenante e annaffiature rare. L’acqua in eccesso causa marciumi."
+      "common_name": "Cactus barile lingua del diavolo",
+      "description": "Cactus messicano a crescita lenta, con spine larghe e appiattite e fiori viola-magenta. Richiede molta luce e un terriccio molto drenante. Annaffiare solo a substrato completamente asciutto e ridurre molto in inverno."
     },
     "es": {
       "common_name": "Biznaga lengua del diablo",
-      "description": "Ferocactus latispinus es un cactus barril originario de México. Necesita sol pleno, suelo muy drenante y riegos escasos. El exceso de agua provoca pudrición."
+      "description": "Cactus barril de Mexico, de crecimiento lento, con espinas anchas y aplanadas y flores purpuras a magenta. Necesita mucha luz y un sustrato muy drenante. Riega solo cuando el sustrato este totalmente seco y reduce mucho en invierno."
     },
     "pt": {
-      "common_name": "Cacto língua-do-diabo",
-      "description": "Ferocactus latispinus é um cacto barril do México. Prefere sol pleno, solo muito drenante e regas espaçadas. O excesso de água causa apodrecimento."
+      "common_name": "Cacto barril lingua do diabo",
+      "description": "Cacto mexicano de crescimento lento, com espinhos largos e achatados e flores roxas a magenta. Precisa de muita luz e substrato muito drenante. Regue apenas quando estiver totalmente seco e reduza bastante no inverno."
     },
     "ar": {
-      "common_name": "صبار لسان الشيطان",
-      "description": "Ferocactus latispinus صبار كروي موطنه المكسيك. يحتاج إلى شمس كاملة وتربة جيدة التصريف وري قليل. كثرة الماء تسبب تعفن الجذور."
+      "common_name": "صبار لسان الشيطان البرميلي",
+      "description": "صبار برميلي بطيء النمو من المكسيك ذو اشواك عريضة مفلطحة وازهار ارجوانية الى وردية داكنة. يحتاج ضوءا قويا جدا وتربة شديدة التصريف. اسقِ فقط بعد جفاف التربة تماما وقلل الري كثيرا في الشتاء."
     },
     "hi": {
-      "common_name": "डेविल्स टंग कैक्टस",
-      "description": "Ferocactus latispinus मेक्सिको का एक बैरल कैक्टस है। इसे पूरी धूप, अच्छी जल निकासी वाली मिट्टी और कम पानी चाहिए। अधिक पानी से जड़ सड़ जाती है।"
+      "common_name": "डेविल्स टंग बैरल कैक्टस",
+      "description": "मेक्सिको का धीमी वृद्धि वाला बैरल कैक्टस, चौड़े चपटे कांटों और बैंगनी से मैजेंटा फूलों के साथ। बहुत तेज रोशनी और अच्छी जल-निकासी वाला मिश्रण दें। मिट्टी पूरी तरह सूखने पर ही पानी दें और सर्दियों में और कम करें।"
     },
     "zh": {
-      "common_name": "魔舌仙人掌",
-      "description": "Ferocactus latispinus 原产于墨西哥，是一种桶状仙人掌。需要充足阳光、良好排水的土壤和少量浇水。浇水过多会导致烂根。"
+      "common_name": "魔舌桶仙人掌",
+      "description": "原产墨西哥的桶状仙人掌，生长缓慢，刺宽而扁，花色紫到洋红。需要强光与排水极好的颗粒基质。盆土完全干透后再浇水，冬季更要少浇。"
     },
     "ja": {
-      "common_name": "デビルタンゲカクタス",
-      "description": "フェロカクタス・ラティスピヌスはメキシコ原産の球状サボテンです。強い日光と水はけの良い土、控えめな水やりを好みます。過湿は根腐れの原因になります。"
+      "common_name": "デビルタン・バレルカクタス",
+      "description": "メキシコ原産の成長が遅い樽型サボテンで、幅広い扁平なトゲと紫〜マゼンタの花が特徴です。強い光と水はけの良い用土が必要です。用土が完全に乾いてから水やりし、冬はさらに控えます。"
     },
     "ko": {
-      "common_name": "데블 텅 선인장",
-      "description": "Ferocactus latispinus는 멕시코 원산의 구형 선인장입니다. 강한 햇빛과 배수가 좋은 토양, 적은 물주기를 필요로 합니다. 과습은 뿌리 썩음을 유발합니다."
+      "common_name": "데빌스 텅 배럴 선인장",
+      "description": "멕시코 원산의 느리게 자라는 배럴형 선인장으로, 넓고 납작한 가시와 보라~자주색 꽃이 특징입니다. 강한 빛과 배수가 매우 좋은 흙이 필요합니다. 흙이 완전히 마른 뒤에만 물 주고 겨울에는 더 건조하게 관리하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ferocactus/latispinus/details",
-      "https://www.cactus-art.biz/schede/FEROCACTUS/Ferocactus_latispinus/Ferocactus_latispinus.htm",
-      "https://plants.ces.ncsu.edu/plants/ferocactus-latispinus/"
+      "https://www.desertmuseum.org/visit/sheets/Ferlat.pdf",
+      "https://plants.ces.ncsu.edu/plants/ferocactus/",
+      "https://bcss.org.uk/cultivation-notes-on-ferocactus/",
+      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/4259/Ferocactus_latispinus",
+      "https://mountaincrestgardens.com/ferocactus-latispinus-devils-tongue/?srsltid=AfmBOooey-5bVKX5xI8rdZi4gXpxM3EyWaVHBf6Ih4G_30wMqUbxFSf0"
     ]
   }
 }

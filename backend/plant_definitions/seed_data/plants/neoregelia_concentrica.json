@@ -1,23 +1,23 @@
 {
   "external_id": "neoregelia_concentrica",
-  "name": "Neoregelia",
+  "name": "Neoregelia concentrica",
   "latin": "Neoregelia concentrica",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "acidic"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive douce",
-          "it": "Luce intensa indiretta",
-          "es": "Luz brillante indirecta",
-          "pt": "Luz indireta viva",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained mix",
-          "pl": "Przepuszczalne",
-          "de": "Durchlässiges Substrat",
-          "fr": "Substrat drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好基质",
-          "ja": "水はけ良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性が良い",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep central cup filled",
-          "pl": "Woda w rozecie",
-          "de": "Rosette feucht halten",
-          "fr": "Garder l'entonnoir",
-          "it": "Acqua nella rosetta",
-          "es": "Agua en la roseta",
-          "pt": "Água na roseta",
-          "ar": "ماء في القلب",
-          "hi": "रोसेट में पानी",
-          "zh": "保持中心积水",
-          "ja": "筒に水を保つ",
-          "ko": "중앙에 물 유지"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,16 +124,16 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Humedad alta",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高湿",
           "ja": "高湿度",
           "ko": "높은 습도"
         }
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow rosette growth",
-          "pl": "Powolny wzrost",
-          "de": "Langsames Wachstum",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢生长",
+          "ja": "遅い成長",
           "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter de trop arroser",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि से पेस्ट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Bromeliad",
-      "description": "Neoregelia concentrica is a tropical bromeliad native to Brazil. It forms a colorful rosette that holds water in its center and thrives in bright, indirect light. It is commonly grown as an indoor ornamental plant."
+      "common_name": "Concentric Bromeliad",
+      "description": "Neoregelia concentrica is a striking tropical plant known for its colorful rosettes. It thrives in bright, indirect light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Bromelia",
-      "description": "Neoregelia concentrica to tropikalna bromelia z Brazylii. Tworzy barwną rozetę gromadzącą wodę i najlepiej rośnie w jasnym, rozproszonym świetle. Często uprawiana jako roślina pokojowa."
+      "common_name": "Bromelia koncentryczna",
+      "description": "Neoregelia concentrica to uderzająca roślina tropikalna znana z kolorowych rozet. Rośnie w jasnym, pośrednim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Bromelie",
-      "description": "Neoregelia concentrica ist eine tropische Bromelie aus Brasilien. Sie bildet eine farbige Rosette mit Wasserreservoir und bevorzugt helles, indirektes Licht. Sie wird häufig als Zimmerpflanze gehalten."
+      "common_name": "Konzentrische Bromelie",
+      "description": "Neoregelia concentrica ist eine auffällige tropische Pflanze, die für ihre bunten Rosetten bekannt ist. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Broméliacée",
-      "description": "Neoregelia concentrica est une broméliacée tropicale originaire du Brésil. Elle forme une rosette colorée retenant l’eau et préfère une lumière vive indirecte. Elle est couramment cultivée en intérieur."
+      "common_name": "Broméliacée concentrique",
+      "description": "Neoregelia concentrica est une plante tropicale saisissante connue pour ses rosettes colorées. Elle prospère à la lumière indirecte vive et nécessite un arrosage modéré."
     },
     "it": {
-      "common_name": "Bromelia",
-      "description": "Neoregelia concentrica è una bromelia tropicale originaria del Brasile. Forma una rosetta colorata che trattiene l’acqua e cresce bene con luce intensa indiretta. È spesso coltivata come pianta da interno."
+      "common_name": "Bromelia concentrica",
+      "description": "Neoregelia concentrica è una pianta tropicale sorprendente, nota per le sue rosette colorate. Cresce alla luce indiretta brillante e necessita di annaffiature moderate."
     },
     "es": {
-      "common_name": "Bromelia",
-      "description": "Neoregelia concentrica es una bromelia tropical nativa de Brasil. Forma una roseta colorida que retiene agua y prefiere luz brillante indirecta. Se cultiva comúnmente como planta de interior."
+      "common_name": "Bromelia concéntrica",
+      "description": "Neoregelia concentrica es una planta tropical llamativa conocida por sus rosetas coloridas. Crece en luz indirecta brillante y requiere un riego moderado."
     },
     "pt": {
-      "common_name": "Bromélia",
-      "description": "Neoregelia concentrica é uma bromélia tropical nativa do Brasil. Forma uma roseta colorida que armazena água e prefere luz indireta brilhante. É muito usada como planta ornamental de interior."
+      "common_name": "Bromélia concêntrica",
+      "description": "Neoregelia concentrica é uma planta tropical impressionante conhecida por suas rosetas coloridas. Ela cresce com luz indireta brilhante e requer rega moderada."
     },
     "ar": {
-      "common_name": "بروميليا",
-      "description": "نيوريجيليا كونسينتريكا نبات بروميليا استوائي موطنه البرازيل. يشكل وردة ملونة تحتفظ بالماء ويفضل الضوء الساطع غير المباشر. يزرع غالبًا كنبات داخلي."
+      "common_name": "برومايليا مركبة",
+      "description": "نوريجيليا كونسينتريكا هي نبتة استوائية مدهشة معروفة برايزتها الملونة. تنمو في ضوء غير مباشر ساطع وتتطلب الري المعتدل."
     },
     "hi": {
-      "common_name": "ब्रोमेलियाड",
-      "description": "नियोरेजेलिया कॉन्सेंट्रिका ब्राज़ील का एक उष्णकटिबंधीय ब्रोमेलियाड पौधा है। यह रंगीन रोसेट बनाता है जिसमें पानी जमा रहता है और अप्रत्यक्ष रोशनी पसंद करता है। इसे अक्सर घर के अंदर उगाया जाता है।"
+      "common_name": "संवेदनशील ब्रोमेलियाड",
+      "description": "Neoregelia concentrica एक आकर्षक उष्णकटिबंधीय पौधा है जो अपने रंगीन गुलदस्तों के लिए जाना जाता है। यह उज्ज्वल, अप्रत्यक्ष प्रकाश में बढ़ता है और इसे मध्यतम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "彩叶凤梨",
-      "description": "Neoregelia concentrica 原产于巴西，是一种热带凤梨植物。它形成可储水的彩色莲座，适合明亮的散射光环境。常作为室内观赏植物栽培。"
+      "common_name": "同心美人蕉",
+      "description": "Neoregelia concentrica是一种引人注目的热带植物，以其彩色莲座而闻名。它在明亮的间接光线下茁壮成长，需要适量的浇水。"
     },
     "ja": {
-      "common_name": "ネオレゲリア",
-      "description": "ネオレゲリア・コンセントリカはブラジル原産の熱帯ブロメリアです。中央に水をためる色鮮やかなロゼットを形成し、明るい間接光を好みます。室内観葉植物として一般的です。"
+      "common_name": "同心型ブロメリア",
+      "description": "Neoregelia concentricaは、色とりどりのロゼットで知られる目を引く熱帯植物です。明るい間接光の中で育ち、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "네오레겔리아",
-      "description": "네오레겔리아 콘센트리카는 브라질 원산의 열대 브로멜리아입니다. 물을 머금는 화려한 로제트를 형성하며 밝은 간접광을 선호합니다. 실내 관엽식물로 널리 재배됩니다."
+      "common_name": "동심 브로멜리아",
+      "description": "Neoregelia concentrica는 화려한 색상의 로제트로 잘 알려진 눈에 띄는 열대 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/neoregelia",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a581",
-      "https://www.rhs.org.uk/plants/bromeliad/growing-guide"
+      "https://www.rhs.org.uk/plants/19845/neoregelia-concentrica/details",
+      "https://www.gardenia.net/plant/neoregelia-concentrica"
     ]
   }
 }

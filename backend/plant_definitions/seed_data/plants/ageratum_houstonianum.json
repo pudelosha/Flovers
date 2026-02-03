@@ -3,25 +3,25 @@
   "name": "Flossflower",
   "latin": "Ageratum houstonianum",
   "sun": "high",
-  "water": "medium",
+  "water": "high",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "terracotta"
+    "terracotta",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 4,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
-  "repot_required": true,
-  "repot_interval_months": 12,
+  "fertilize_interval_days": 21,
+  "repot_required": false,
+  "repot_interval_months": null,
   "image_hero": "ageratum_houstonianum.jpg",
   "image_thumb": "ageratum_houstonianum.jpg",
   "traits": [
@@ -31,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "강한 햇빛"
+          "ko": "양지"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Gleba przepuszczalna",
-          "de": "Gut drainierter Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährstoffreich",
+          "fr": "Riche, drainé",
+          "it": "Ricco e drenante",
+          "es": "Fértil y drenado",
+          "pt": "Fértil, drenado",
+          "ar": "خصبة جيدة الصرف",
+          "hi": "उपजाऊ, जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥·배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Stała lekka wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder humide",
+          "it": "Sempre legger. um.",
+          "es": "Húmedo uniforme",
+          "pt": "Manter úmido",
+          "ar": "رطوبة متوازنة",
+          "hi": "नमी समान रखें",
+          "zh": "保持均匀湿润",
+          "ja": "土を程よく湿らす",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -88,7 +88,7 @@
         "text": {
           "en": "Easy",
           "pl": "Łatwa",
-          "de": "Leicht",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "مناخ دافئ",
-          "hi": "गर्म मौसम",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "15–27°C",
+          "pl": "15–27°C",
+          "de": "15–27°C",
+          "fr": "15–27°C",
+          "it": "15–27°C",
+          "es": "15–27°C",
+          "pt": "15–27°C",
+          "ar": "15–27°م",
+          "hi": "15–27°C",
+          "zh": "15–27°C",
+          "ja": "15–27°C",
+          "ko": "15–27°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
+          "en": "Average humidity",
+          "pl": "Średnia wilgotn.",
           "de": "Normale Luftfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常の湿度",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic if eaten",
+          "pl": "Trujące po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام عند الأكل",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Fast annual",
-          "pl": "Szybki jednoroczny",
-          "de": "Schnell einjährig",
+          "pl": "Szybki jednorocz.",
+          "de": "Schnell, einjährig",
           "fr": "Annuelle rapide",
           "it": "Annuale rapida",
-          "es": "Anual rápido",
-          "pt": "Anual rápido",
-          "ar": "سنوي سريع",
-          "hi": "तेज़ वार्षिक",
-          "zh": "快速一年生",
-          "ja": "一年草",
-          "ko": "빠른 한해살이"
+          "es": "Anual, rápido",
+          "pt": "Anual, rápido",
+          "ar": "حولية سريعة",
+          "hi": "तेजी से वार्षिक",
+          "zh": "一年生，生长快",
+          "ja": "一年草・生長早い",
+          "ko": "한해살이·빠름"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid dry soil",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter la sécheresse",
+          "it": "Non far seccare",
+          "es": "Evitar sequedad",
+          "pt": "Evite secar",
+          "ar": "تجنب الجفاف",
+          "hi": "मिट्टी न सुखाएँ",
+          "zh": "避免干透",
+          "ja": "乾かしすぎ注意",
+          "ko": "과건조 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodn.",
+          "de": "Gelegentl. Schädlinge",
+          "fr": "Ravageurs occasion.",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有害虫",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,59 @@
   "translations": {
     "en": {
       "common_name": "Flossflower",
-      "description": "Ageratum houstonianum is a tender annual known for its fluffy blue to purple flowers. It prefers full sun and evenly moist, well-drained soil. Commonly grown outdoors but can be kept indoors with strong light."
+      "description": "Ageratum houstonianum is a warm-season annual with fluffy blue to purple flower clusters. Grow it in full sun and keep the potting mix evenly moist but well drained. It is considered toxic if ingested and is not frost tolerant."
     },
     "pl": {
       "common_name": "Żeniszek meksykański",
-      "description": "Ageratum houstonianum to delikatna roślina jednoroczna o puszystych niebieskich kwiatach. Wymaga pełnego słońca i umiarkowanie wilgotnej gleby. Najczęściej uprawiana jest na zewnątrz."
+      "description": "Ageratum houstonianum to ciepłolubna roślina jednoroczna o puszystych, niebieskofioletowych kwiatach. Lubi pełne słońce oraz stale lekko wilgotne, ale przepuszczalne podłoże. Uznawana jest za trującą po spożyciu i nie znosi przymrozków."
     },
     "de": {
       "common_name": "Leberbalsam",
-      "description": "Ageratum houstonianum ist eine einjährige Pflanze mit flauschigen blauvioletten Blüten. Sie wächst am besten in voller Sonne und gut durchlässigem Boden. Häufig als Beet- und Balkonpflanze genutzt."
+      "description": "Ageratum houstonianum ist eine wärmeliebende einjährige Pflanze mit flauschigen blau-violetten Blütenständen. Sie braucht viel Sonne und gleichmäßig feuchte, gut drainierte Erde. Bei Aufnahme gilt sie als giftig und ist nicht frosthart."
     },
     "fr": {
-      "common_name": "Ageratum du Mexique",
-      "description": "Ageratum houstonianum est une annuelle appréciée pour ses fleurs duveteuses bleues. Elle aime le plein soleil et un sol bien drainé. Elle est surtout cultivée en extérieur."
+      "common_name": "Agératum du Mexique",
+      "description": "Ageratum houstonianum est une annuelle de saison chaude aux inflorescences duveteuses bleu à violet. Installez-la au plein soleil et gardez le substrat régulièrement humide tout en assurant un bon drainage. Elle est considérée toxique en cas d’ingestion et ne supporte pas le gel."
     },
     "it": {
-      "common_name": "Agerato",
-      "description": "Ageratum houstonianum è una pianta annuale con fiori soffici blu-violacei. Predilige pieno sole e terreno ben drenato. Viene coltivata principalmente all'aperto."
+      "common_name": "Agerato messicano",
+      "description": "Ageratum houstonianum è una annuale da clima caldo con capolini soffici blu-violacei. Preferisce pieno sole e un terriccio costantemente leggermente umido ma ben drenante. È considerata tossica se ingerita e non tollera il gelo."
     },
     "es": {
-      "common_name": "Agerato",
-      "description": "Ageratum houstonianum es una planta anual con flores suaves de color azul. Necesita pleno sol y riego regular. Se cultiva sobre todo en jardines exteriores."
+      "common_name": "Agerato mexicano",
+      "description": "Ageratum houstonianum es una anual de clima cálido con flores en pompones azulados a púrpura. Necesita pleno sol y un sustrato uniformemente húmedo pero con buen drenaje. Se considera tóxica si se ingiere y no tolera las heladas."
     },
     "pt": {
-      "common_name": "Agerato",
-      "description": "Ageratum houstonianum é uma planta anual com flores azuladas e macias. Gosta de sol pleno e solo bem drenado. É mais comum em cultivo externo."
+      "common_name": "Agerato-do-méxico",
+      "description": "Ageratum houstonianum é uma anual de clima quente com inflorescências felpudas azul-arroxeadas. Prefere sol pleno e substrato sempre levemente úmido, porém bem drenado. É considerada tóxica se ingerida e não tolera geada."
     },
     "ar": {
-      "common_name": "زهرة الأجيراتوم",
-      "description": "نبات Ageratum houstonianum نبات سنوي يتميز بأزهاره الزرقاء الناعمة. يحتاج إلى شمس كاملة وتربة جيدة التصريف. يزرع غالبًا في الهواء الطلق."
+      "common_name": "أجيراطوم (زهرة الزغب)",
+      "description": "Ageratum houstonianum نبات حولي محب للدفء بأزهار زغبية زرقاء إلى بنفسجية. يحتاج إلى شمس كاملة وتربة رطبة بالتساوي مع تصريف جيد. يُعد سامًا عند الابتلاع ولا يتحمل الصقيع."
     },
     "hi": {
-      "common_name": "फ्लॉस फ्लावर",
-      "description": "Ageratum houstonianum एक वार्षिक पौधा है जिसमें मुलायम नीले फूल होते हैं। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी चाहिए। आमतौर पर बाहर उगाया जाता है।"
+      "common_name": "एजेराटम",
+      "description": "Ageratum houstonianum गर्म मौसम का वार्षिक पौधा है, जिसमें मुलायम नीले-बैंगनी फूल गुच्छों में आते हैं। इसे तेज धूप दें और मिट्टी को समान रूप से नम रखें, लेकिन जलनिकास अच्छा हो। इसे खाने पर विषाक्त माना जाता है और पाला सहन नहीं करता।"
     },
     "zh": {
-      "common_name": "藿香蓟",
-      "description": "藿香蓟是一种一年生植物，以柔软的蓝紫色花朵著称。它需要充足阳光和排水良好的土壤。多用于室外种植。"
+      "common_name": "霍香蓟",
+      "description": "Ageratum houstonianum 为喜温一年生植物，花序绒毛状，常见蓝紫色。需充足日照，盆土保持均匀湿润但排水良好。误食被认为有毒，且不耐霜冻。"
     },
     "ja": {
-      "common_name": "アゲラタム",
-      "description": "アゲラタムは青紫色のふわふわした花を咲かせる一年草です。日当たりと水はけの良い土を好みます。主に屋外で育てられます。"
+      "common_name": "カッコウアザミ",
+      "description": "Ageratum houstonianum は暖かい季節に育つ一年草で、ふわっとした青紫の花房をつけます。日当たりを好み、用土は乾かしすぎず水はけ良く保ちます。誤食は有毒とされ、霜に弱い植物です。"
     },
     "ko": {
-      "common_name": "아게라텀",
-      "description": "아게라텀은 부드러운 푸른 꽃이 특징인 한해살이 식물입니다. 햇빛과 배수가 좋은 토양을 좋아합니다. 주로 야외에서 재배됩니다."
+      "common_name": "아게라툼",
+      "description": "Ageratum houstonianum은 따뜻한 계절에 잘 자라는 한해살이로, 보송한 파란빛 꽃송이가 달립니다. 양지에서 키우고 흙은 고르게 촉촉하되 배수가 좋아야 합니다. 섭취 시 유독할 수 있으며 서리에 약합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ageratum",
-      "https://extension.umn.edu/annuals/ageratum",
-      "https://plants.ces.ncsu.edu/plants/ageratum-houstonianum/"
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-and-care-for-ageratum/",
+      "https://www.gardenia.net/plant/ageratum-houstonianum-floss-flower",
+      "https://www.gardendesign.com/annuals/ageratum.html",
+      "https://plantura.garden/uk/flowers-perennials/ageratum-houstonianum/ageratum-houstonianum-overview"
     ]
   }
 }

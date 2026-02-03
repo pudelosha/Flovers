@@ -1,18 +1,18 @@
 {
   "external_id": "epiphyllum_anguliger",
-  "name": "Fishbone Cactus",
+  "name": "Fishbone cactus",
   "latin": "Epiphyllum anguliger",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "orchid"
+    "orchid",
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 10,
@@ -29,17 +29,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい光",
+          "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining mix",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terriccio drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Airy, fast-draining",
+          "pl": "Przewiewne, drenujące",
+          "de": "Luftig, durchlässig",
+          "fr": "Aéré, drainant",
+          "it": "Aereato, drenante",
+          "es": "Aireado y drenante",
+          "pt": "Aéreo e drenante",
+          "ar": "خليط خفيف وصارف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松且排水好",
+          "ja": "通気性・排水良",
+          "ko": "통기성·배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature medie",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Water when partly dry",
+          "pl": "Podlewaj po przeschnięciu",
+          "de": "Gießen bei Antrocknen",
+          "fr": "Arroser si sec en surface",
+          "it": "Annaffia quando asciuga",
+          "es": "Riega tras secar",
+          "pt": "Regue ao secar",
+          "ar": "اسقِ بعد جفاف جزئي",
+          "hi": "आंशिक सूखने पर पानी",
+          "zh": "半干后再浇水",
+          "ja": "半分乾いたら水やり",
+          "ko": "부분 건조 후 물"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa pielęgnacja",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mäßig anspruchsvoll",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidados moderados",
+          "pt": "Cuidados moderados",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "手入れは普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–25°C",
-          "pl": "18–25°C",
-          "de": "18–25°C",
-          "fr": "18–25°C",
-          "it": "18–25°C",
-          "es": "18–25°C",
-          "pt": "18–25°C",
-          "ar": "18–25°م",
-          "hi": "18–25°C",
-          "zh": "18–25°C",
-          "ja": "18–25℃",
-          "ko": "18–25°C"
+          "en": "15–25°C, min 10°C",
+          "pl": "15–25°C, min 10°C",
+          "de": "15–25°C, min 10°C",
+          "fr": "15–25°C, min 10°C",
+          "it": "15–25°C, min 10°C",
+          "es": "15–25°C, min 10°C",
+          "pt": "15–25°C, min 10°C",
+          "ar": "15–25°م، حد 10°م",
+          "hi": "15–25°C, न्यून 10°C",
+          "zh": "15–25°C，最低10°C",
+          "ja": "15–25°C、最低10°C",
+          "ko": "15–25°C, 최저 10°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "보통 습도"
+          "en": "Average–high humidity",
+          "pl": "Średnia–wysoka wilg.",
+          "de": "Mittel–hohe Luftfeuchte",
+          "fr": "Humidité moyenne/élevée",
+          "it": "Umidità media-alta",
+          "es": "Humedad media-alta",
+          "pt": "Umidade média-alta",
+          "ar": "رطوبة متوسطة-عالية",
+          "hi": "मध्यम-उच्च आर्द्रता",
+          "zh": "中到高湿度",
+          "ja": "湿度は中〜高め",
+          "ko": "중~높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczny dla zwierząt",
+          "de": "Ungiftig für Haustiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossico per animali",
+          "es": "No tóxico para mascotas",
+          "pt": "Não tóxico p/ pets",
+          "ar": "غير سام للحيوانات",
+          "hi": "पालतू हेतु गैर-विषाक्त",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물에 무독"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing epiphyte",
-          "pl": "Epifit zwisający",
-          "de": "Hängend wachsend",
-          "fr": "Port retombant",
-          "it": "Crescita ricadente",
-          "es": "Crecimiento colgante",
-          "pt": "Crescimento pendente",
-          "ar": "نمو متدلي",
-          "hi": "लटकती वृद्धि",
-          "zh": "下垂生长",
-          "ja": "垂れ下がる",
-          "ko": "늘어지는 성장"
+          "en": "Trailing, slow–medium",
+          "pl": "Zwieszający, wolno-śr.",
+          "de": "Hängend, langsam–mittel",
+          "fr": "Retombant, lent-moyen",
+          "it": "Ricadente, lento-medio",
+          "es": "Colgante, lento-medio",
+          "pt": "Pendente, lento-médio",
+          "ar": "متدلٍ، بطيء-متوسط",
+          "hi": "लटकता, धीमा-मध्यम",
+          "zh": "下垂生长，慢-中等",
+          "ja": "垂れ性、遅〜中",
+          "ko": "늘어짐, 느림-보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot if overwatered",
+          "pl": "Zgnilizna przy przelaniu",
+          "de": "Fäule bei Nässe",
+          "fr": "Pourriture si trop arrosé",
+          "it": "Marciume se troppa acqua",
+          "es": "Pudre con exceso de riego",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفن عند الإفراط بالسقي",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "浇水过多易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentlich Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶有虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Fishbone Cactus",
-      "description": "Epiphyllum anguliger is an epiphytic cactus native to Mexican forests. It has flat, zigzag stems and grows best in bright indirect light indoors. The plant prefers evenly moist but well-drained soil."
+      "common_name": "Fishbone cactus",
+      "description": "An epiphytic cactus from Mexico with zigzag, trailing stems. Give bright filtered light and water after the potting mix partially dries. Keep it warm and reduce watering in winter; mature plants may produce fragrant flowers in autumn."
     },
     "pl": {
       "common_name": "Kaktus rybia ość",
-      "description": "Epiphyllum anguliger to epifityczny kaktus z lasów Meksyku. Ma spłaszczone, zygzakowate pędy i najlepiej rośnie w jasnym, rozproszonym świetle. Lubi umiarkowanie wilgotne, przepuszczalne podłoże."
+      "description": "Epifityczny kaktus z Meksyku o zygzakowatych, zwisających pędach. Zapewnij jasne, rozproszone światło i podlewaj po częściowym przeschnięciu podłoża. Trzymaj w cieple i ogranicz podlewanie zimą; dojrzałe rośliny mogą kwitnąć pachnąco jesienią."
     },
     "de": {
       "common_name": "Fischgrätenkaktus",
-      "description": "Epiphyllum anguliger ist ein epiphytischer Kaktus aus Mexiko. Er besitzt flache, gezackte Triebe und wächst gut bei hellem, indirektem Licht. Das Substrat sollte gut drainiert sein."
+      "description": "Ein epiphytischer Kaktus aus Mexiko mit zickzackförmigen, hängenden Trieben. Hell gefiltertes Licht geben und gießen, wenn das Substrat teilweise abgetrocknet ist. Warm halten und im Winter sparsamer gießen; ältere Pflanzen können im Herbst duftende Blüten bilden."
     },
     "fr": {
-      "common_name": "Cactus zigzag",
-      "description": "Epiphyllum anguliger est un cactus épiphyte originaire du Mexique. Il se distingue par ses tiges plates et ondulées. Il préfère une lumière vive sans soleil direct et un sol drainant."
+      "common_name": "Cactus arête de poisson",
+      "description": "Cactus épiphyte du Mexique aux tiges retombantes en zigzag. Offrez une lumière vive mais filtrée et arrosez après un séchage partiel du substrat. Gardez-le au chaud et réduisez les arrosages en hiver; les sujets adultes peuvent fleurir en automne avec des fleurs parfumées."
     },
     "it": {
-      "common_name": "Cactus a lisca di pesce",
-      "description": "Epiphyllum anguliger è un cactus epifita originario del Messico. Presenta fusti piatti e ondulati e cresce bene in luce intensa indiretta. Richiede un terriccio ben drenato."
+      "common_name": "Cactus lisca di pesce",
+      "description": "Cactus epifita del Messico con fusti ricadenti a zigzag. Fornisci luce intensa ma filtrata e annaffia quando il substrato è parzialmente asciutto. Tienilo al caldo e riduci l’acqua in inverno; le piante mature possono fare fiori profumati in autunno."
     },
     "es": {
-      "common_name": "Cactus zigzag",
-      "description": "Epiphyllum anguliger es un cactus epífito nativo de México. Tiene tallos planos en forma de zigzag y prefiere luz brillante indirecta. El sustrato debe drenar bien."
+      "common_name": "Cactus espina de pez",
+      "description": "Cactus epífito de México con tallos colgantes en zigzag. Dale luz brillante filtrada y riega cuando el sustrato se haya secado parcialmente. Manténlo cálido y reduce el riego en invierno; las plantas maduras pueden dar flores fragantes en otoño."
     },
     "pt": {
       "common_name": "Cacto espinha-de-peixe",
-      "description": "Epiphyllum anguliger é um cacto epífito do México. Possui caules achatados e ondulados e cresce melhor com luz indireta brilhante. Prefere solo bem drenado."
+      "description": "Cacto epífito do México com caules pendentes em zigue-zague. Dê luz brilhante filtrada e regue quando o substrato secar parcialmente. Mantenha-o quente e reduza a rega no inverno; plantas adultas podem produzir flores perfumadas no outono."
     },
     "ar": {
-      "common_name": "صبار عظم السمكة",
-      "description": "نبات Epiphyllum anguliger صبار هوائي موطنه المكسيك. يتميز بسيقان مسطحة متعرجة وينمو جيدًا في ضوء ساطع غير مباشر. يحتاج إلى تربة جيدة التصريف."
+      "common_name": "صبار عظمة السمكة",
+      "description": "صبار هوائي من المكسيك بسيقان متدلية متعرجة. يحتاج ضوءًا ساطعًا غير مباشر ويُسقى بعد أن يجف الوسط جزئيًا. احفظه دافئًا وقلل الري شتاءً؛ قد تُنتج النباتات البالغة أزهارًا عطرة في الخريف."
     },
     "hi": {
       "common_name": "फिशबोन कैक्टस",
-      "description": "Epiphyllum anguliger मेक्सिको का एक एपिफाइटिक कैक्टस है। इसकी पत्तियाँ चपटी और ज़िगज़ैग होती हैं। यह तेज़ अप्रत्यक्ष रोशनी और अच्छी जल निकास वाली मिट्टी में अच्छा बढ़ता है।"
+      "description": "मेक्सिको का एक एपिफाइटिक कैक्टस, जिसकी टहनियाँ ज़िगज़ैग और लटकने वाली होती हैं। तेज़ लेकिन छनकर आने वाली रोशनी दें और मिट्टी आंशिक सूखने पर पानी दें। इसे गर्म रखें और सर्दियों में पानी कम करें; परिपक्व पौधों में शरद ऋतु में सुगंधित फूल आ सकते हैं।"
     },
     "zh": {
       "common_name": "鱼骨令箭荷花",
-      "description": "Epiphyllum anguliger 原产于墨西哥，是一种附生仙人掌。它具有锯齿状扁平茎，适合明亮的散射光环境。需要排水良好的基质。"
+      "description": "原产墨西哥的附生仙人掌，茎条呈锯齿状并下垂。提供明亮散射光，基质半干后再浇水。保持温暖并在冬季减少浇水；成株可能在秋季开出带香味的花。"
     },
     "ja": {
       "common_name": "フィッシュボーンカクタス",
-      "description": "Epiphyllum anguliger はメキシコ原産の着生サボテンです。ジグザグ状の平たい茎が特徴で、明るい間接光を好みます。水はけの良い用土が必要です。"
+      "description": "メキシコ原産の着生サボテンで、ジグザグの垂れ下がる茎が特徴です。明るい間接光で育て、用土が半分ほど乾いてから水やりします。暖かく保ち冬は乾かし気味にし、成熟株は秋に香りのある花を咲かせることがあります。"
     },
     "ko": {
-      "common_name": "피쉬본 선인장",
-      "description": "Epiphyllum anguliger는 멕시코 원산의 착생 선인장입니다. 지그재그 모양의 납작한 줄기가 특징이며 밝은 간접광에서 잘 자랍니다. 배수가 좋은 토양이 필요합니다."
+      "common_name": "피시본 선인장",
+      "description": "멕시코 원산의 착생 선인장으로 지그재그 형태의 늘어지는 줄기가 특징입니다. 밝은 간접광에서 키우고 배지가 부분적으로 마른 뒤 물을 줍니다. 따뜻하게 유지하고 겨울에는 물을 줄이며, 성숙한 개체는 가을에 향기로운 꽃을 피울 수 있습니다."
     }
   },
   "sources": {
     "urls": [
+      "https://www.rhs.org.uk/plants/529070/epiphyllum-anguligerum/details",
+      "https://www.rhs.org.uk/plants/epiphyllum/growing-guide",
       "https://www.rhs.org.uk/plants/epiphyllum",
-      "https://www.botanicgardens.org/epiphyllum-care",
-      "https://extension.umn.edu/houseplants/epiphyllum"
+      "https://savvygardening.com/fishbone-cactus/",
+      "https://www.theguardian.com/lifeandstyle/2022/jan/07/houseplant-of-the-week-fishbone-cactus"
     ]
   }
 }

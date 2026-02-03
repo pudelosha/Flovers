@@ -1,25 +1,25 @@
 {
   "external_id": "gerbera_jamesonii",
-  "name": "Gerbera Daisy",
+  "name": "Gerbera",
   "latin": "Gerbera jamesonii",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "gerbera_jamesonii.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
+          "en": "High light",
+          "pl": "Wysokie światło",
+          "de": "Viel Licht",
+          "fr": "Lumière élevée",
           "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "es": "Luz alta",
+          "pt": "Luz alta",
+          "ar": "ضوء عالٍ",
+          "hi": "उच्च रोशनी",
+          "zh": "强光",
+          "ja": "強い光",
+          "ko": "강한 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenante",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري المياه المتوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana pielęgnacja",
-          "de": "Mittlerer Aufwand",
-          "fr": "Entretien moyen",
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度管理",
-          "ko": "중간 난이도"
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24℃",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
+          "en": "Medium humidity",
           "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
+          "de": "Mittlere Luftfeuchtigkeit",
           "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
           "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "औसत नमी",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
           "zh": "中等湿度",
-          "ja": "普通の湿度",
-          "ko": "보통 습도"
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Léggermente tossico",
+          "es": "Levemente tóxica",
+          "pt": "Ligeiramente tóxica",
+          "ar": "سامة قليلا",
+          "hi": "थोड़ा विषाक्त",
+          "zh": "轻度有毒",
+          "ja": "軽度毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clump forming",
-          "pl": "Kępowy wzrost",
-          "de": "Horstbildend",
-          "fr": "Croissance en touffe",
-          "it": "Crescita a cespo",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "포기형 성장"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Moderates Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفر पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Gerbera Daisy",
-      "description": "Gerbera jamesonii is a flowering plant known for its large, colorful daisy-like blooms. It prefers bright light and evenly moist, well-drained soil. Often grown indoors or as a seasonal outdoor plant."
+      "common_name": "Gerbera",
+      "description": "Gerbera jamesonii, also known as the African daisy, is a bright and colorful flowering plant. It thrives in bright light and well-draining soil, requiring moderate care."
     },
     "pl": {
       "common_name": "Gerbera",
-      "description": "Gerbera jamesonii to roślina kwitnąca o dużych, barwnych kwiatach. Wymaga jasnego stanowiska i umiarkowanie wilgotnej gleby. Często uprawiana w domu lub sezonowo na zewnątrz."
+      "description": "Gerbera jamesonii, znana także jako stokrotka afrykańska, to roślina o jasnych i kolorowych kwiatach. Preferuje jasne światło i dobrze przepuszczalną glebę, wymaga umiarkowanej opieki."
     },
     "de": {
       "common_name": "Gerbera",
-      "description": "Gerbera jamesonii ist eine blühende Pflanze mit großen, farbigen Blüten. Sie benötigt viel Licht und gleichmäßig feuchte Erde. Sie wird oft als Zimmer- oder Saisonpflanze kultiviert."
+      "description": "Gerbera jamesonii, auch als afrikanische Gänseblümchen bekannt, ist eine leuchtende und farbenfrohe Blume. Sie gedeiht in hellem Licht und gut durchlässigem Boden und benötigt mäßige Pflege."
     },
     "fr": {
       "common_name": "Gerbera",
-      "description": "Gerbera jamesonii est une plante à fleurs aux grandes inflorescences colorées. Elle apprécie une lumière vive et un sol bien drainé. Elle est cultivée en intérieur ou en extérieur selon la saison."
+      "description": "Gerbera jamesonii, également connue sous le nom de marguerite africaine, est une plante à fleurs vive et colorée. Elle prospère dans une lumière vive et un sol bien drainé, nécessitant un entretien modéré."
     },
     "it": {
       "common_name": "Gerbera",
-      "description": "Gerbera jamesonii è una pianta ornamentale dai grandi fiori colorati. Predilige luce intensa e terreno umido ma drenante. È coltivata in casa o all’aperto stagionalmente."
+      "description": "Gerbera jamesonii, conosciuta anche come margherita africana, è una pianta dai fiori brillanti e colorati. Cresce bene in luce intensa e in terreni ben drenati, richiedendo una cura moderata."
     },
     "es": {
       "common_name": "Gerbera",
-      "description": "Gerbera jamesonii es una planta ornamental con flores grandes y vistosas. Necesita buena luz y riego regular sin encharcar. Se cultiva en interior o exterior según el clima."
+      "description": "Gerbera jamesonii, conocida también como margarita africana, es una planta con flores brillantes y coloridas. Crece bien con luz intensa y en suelos bien drenados, necesitando cuidado moderado."
     },
     "pt": {
-      "common_name": "Gérbera",
-      "description": "Gerbera jamesonii é uma planta florida com grandes flores coloridas. Prefere luz intensa e solo bem drenado. Pode ser cultivada em ambientes internos ou externos."
+      "common_name": "Gerbera",
+      "description": "Gerbera jamesonii, também conhecida como margarida africana, é uma planta colorida e brilhante. Ela cresce bem com luz intensa e solo bem drenado, exigindo cuidados moderados."
     },
     "ar": {
       "common_name": "جيربيرا",
-      "description": "Gerbera jamesonii نبات مزهر يتميز بأزهاره الكبيرة والملونة. يحتاج إلى ضوء ساطع وتربة جيدة التصريف. يزرع كنبات داخلي أو خارجي حسب الموسم."
+      "description": "جيربيرا جيمسونيا، المعروفة أيضًا باسم الأقحوان الإفريقي، هي نبات مزهر ملون ومشرق. يزدهر في الضوء الساطع والتربة جيدة التصريف، ويحتاج إلى رعاية متوسطة."
     },
     "hi": {
       "common_name": "गेरबेरा",
-      "description": "Gerbera jamesonii एक सजावटी फूलदार पौधा है जिसके फूल बड़े और रंगीन होते हैं। इसे तेज रोशनी और अच्छी जल निकासी वाली मिट्टी चाहिए। इसे घर के अंदर या बाहर उगाया जाता है।"
+      "description": "गेरबेरा जेम्सोनिया, जिसे अफ्रीकी डेजी भी कहा जाता है, एक उज्जवल और रंगीन फूलों वाला पौधा है। यह उच्च रोशनी और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है, और इसे मध्यम देखभाल की आवश्यकता होती है."
     },
     "zh": {
       "common_name": "非洲菊",
-      "description": "Gerbera jamesonii 是一种开花植物，以其鲜艳的大花著称。它需要明亮的光照和排水良好的土壤。常作为室内或季节性室外植物栽培。"
+      "description": "非洲菊（Gerbera jamesonii），也称为非洲雏菊，是一种明亮多彩的开花植物。它在强光和排水良好的土壤中茁壮成长，需适度护理。"
     },
     "ja": {
       "common_name": "ガーベラ",
-      "description": "Gerbera jamesonii は大きく鮮やかな花を咲かせる植物です。明るい光と水はけの良い土を好みます。室内や季節的な屋外で育てられます。"
+      "description": "ガーベラ・ジェームソニア（Gerbera jamesonii）は、アフリカデイジーとも呼ばれる明るくカラフルな花を持つ植物です。明るい光と排水の良い土壌で成長し、適度なケアが必要です。"
     },
     "ko": {
       "common_name": "거베라",
-      "description": "Gerbera jamesonii는 크고 화려한 꽃으로 유명한 식물입니다. 밝은 빛과 배수가 좋은 토양을 선호합니다. 실내 또는 계절에 따라 야외에서 재배됩니다."
+      "description": "거베라 제임슨이아(Gerbera jamesonii), 아프리카 데이지로도 알려진 이 식물은 밝고 화려한 꽃을 가집니다. 강한 빛과 배수가 좋은 토양에서 잘 자라며 중간 정도의 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/gerbera/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281690",
-      "https://extension.umn.edu/houseplants/gerbera-daisy"
+      "https://www.rhs.org.uk/plants/gerbera",
+      "https://www.gardeningknowhow.com/ornamental/flowers/gerbera/gerbera-plant-care.htm"
     ]
   }
 }

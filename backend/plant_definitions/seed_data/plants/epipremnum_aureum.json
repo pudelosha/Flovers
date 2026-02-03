@@ -1,6 +1,6 @@
 {
   "external_id": "epipremnum_aureum",
-  "name": "Golden Pothos",
+  "name": "Golden pothos",
   "latin": "Epipremnum aureum",
   "sun": "medium",
   "water": "medium",
@@ -12,12 +12,12 @@
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -31,7 +31,7 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles indirektes",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining mix",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Aroid, well-drained",
+          "pl": "Przepuszczalne aroid",
+          "de": "Locker, durchlässig",
+          "fr": "Aéré, drainant",
+          "it": "Drenante, aroid",
+          "es": "Aéreo, drenante",
+          "pt": "Solto e drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Dry top, then water",
+          "pl": "Przeschnij wierzch",
+          "de": "Oben trocknen lassen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga sopra",
+          "es": "Seca arriba",
+          "pt": "Secar o topo",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "ऊपर सूखने पर",
+          "zh": "表土干再浇",
+          "ja": "表土乾いてから",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30 °C",
-          "pl": "18–30 °C",
-          "de": "18–30 °C",
-          "fr": "18–30 °C",
-          "it": "18–30 °C",
-          "es": "18–30 °C",
-          "pt": "18–30 °C",
-          "ar": "18–30°م",
-          "hi": "18–30 °C",
-          "zh": "18–30℃",
-          "ja": "18–30℃",
-          "ko": "18–30℃"
+          "en": "18–27°C indoors",
+          "pl": "18–27°C w domu",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -125,16 +125,16 @@
       "value": {
         "text": {
           "en": "Average humidity",
-          "pl": "Średnia wilg.",
-          "de": "Normale Feuchte",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
           "fr": "Humidité moyenne",
           "it": "Umidità media",
           "es": "Humedad media",
           "pt": "Umidade média",
           "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "平均的湿度",
+          "hi": "मध्यम नमी",
+          "zh": "普通室内湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
+          "pl": "Toksyczne dla zwierząt",
           "de": "Giftig für Tiere",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू हेतु विषाक्त",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ pets",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペット有毒",
           "ko": "반려동물 유독"
@@ -162,77 +162,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast vining",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast trailing vine",
+          "pl": "Szybko pnąca",
+          "de": "Schnell rankend",
+          "fr": "Vigne rapide",
+          "it": "Rampicante veloce",
+          "es": "Enredadera rápida",
+          "pt": "Trepadeira rápida",
+          "ar": "متسلق سريع",
+          "hi": "तेज़ लता",
+          "zh": "快速蔓生",
+          "ja": "つる性で速い",
+          "ko": "빠른 덩굴성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe meiden",
+          "fr": "Éviter excès d’eau",
+          "it": "No ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "अधिक पानी नहीं",
+          "zh": "忌积水",
+          "ja": "過湿に注意",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Roztocza, wełnowce",
+          "de": "Milben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ وبق دقيقي",
+          "hi": "माइट्स, मिलीबग",
+          "zh": "红蜘蛛,粉蚧",
+          "ja": "ハダニ,カイガラムシ",
+          "ko": "응애,깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Golden Pothos",
-      "description": "Epipremnum aureum is a tropical climbing plant native to the Solomon Islands. It is widely grown indoors for its trailing vines and tolerance of varied light. The plant is hardy and forgiving of occasional care mistakes."
+      "common_name": "Golden pothos",
+      "description": "A trailing aroid grown indoors for its heart-shaped leaves and tolerance of lower light. Keep in bright, indirect light for best growth and allow the top of the mix to dry before watering. Toxic if ingested by pets."
     },
     "pl": {
       "common_name": "Epipremnum złociste",
-      "description": "Epipremnum aureum to tropikalne pnącze pochodzące z Wysp Salomona. Jest popularną rośliną domową dzięki wytrzymałości i dekoracyjnym liściom. Dobrze znosi różne warunki świetlne."
+      "description": "Pnącze z rodziny obrazkowatych, popularne w uprawie domowej i dość tolerancyjne na słabsze światło. Najlepiej rośnie w jasnym, rozproszonym świetle; podlewaj dopiero po przeschnięciu wierzchniej warstwy podłoża. Roślina jest toksyczna po spożyciu przez zwierzęta."
     },
     "de": {
       "common_name": "Efeutute",
-      "description": "Epipremnum aureum ist eine tropische Kletterpflanze aus den Salomonen. Sie wird häufig als Zimmerpflanze kultiviert und ist sehr pflegeleicht. Die langen Triebe eignen sich gut zum Hängen oder Klettern."
+      "description": "Eine rankende Aronstabpflanze, die als Zimmerpflanze sehr robust ist und auch weniger Licht toleriert. Am besten wächst sie bei hellem, indirektem Licht; gegossen wird erst, wenn die obere Substratschicht abgetrocknet ist. Für Haustiere giftig bei Aufnahme."
     },
     "fr": {
-      "common_name": "Pothos doré",
-      "description": "Epipremnum aureum est une plante tropicale grimpante originaire des îles Salomon. Elle est appréciée en intérieur pour sa robustesse et son feuillage décoratif. Elle tolère bien des conditions variées."
+      "common_name": "Pothos",
+      "description": "Plante grimpante de la famille des aracées, cultivée en intérieur et assez tolérante à la faible luminosité. Elle pousse mieux en lumière vive indirecte; arroser quand la couche supérieure du substrat a séché. Toxique pour les animaux en cas d’ingestion."
     },
     "it": {
       "common_name": "Pothos",
-      "description": "Epipremnum aureum è una pianta tropicale rampicante originaria delle Isole Salomone. È molto diffusa come pianta da interno per la sua facilità di coltivazione. Si adatta bene a diversi livelli di luce."
+      "description": "Aroide rampicante molto comune in casa, resistente e adattabile a luce più bassa. Cresce meglio con luce intensa indiretta; annaffia quando lo strato superiore del terriccio è asciutto. Tossica se ingerita dagli animali domestici."
     },
     "es": {
       "common_name": "Poto",
-      "description": "Epipremnum aureum es una planta tropical trepadora originaria de las Islas Salomón. Se cultiva ampliamente en interiores por su resistencia y hojas ornamentales. Tolera bien condiciones variables."
+      "description": "Aroidea trepadora muy usada como planta de interior y tolerante a poca luz. Prefiere luz brillante indirecta; riega cuando la capa superior del sustrato se haya secado. Es tóxica para mascotas si se ingiere."
     },
     "pt": {
       "common_name": "Jiboia",
-      "description": "Epipremnum aureum é uma planta tropical trepadeira nativa das Ilhas Salomão. É muito popular como planta de interior pela sua resistência. Cresce bem em diferentes condições de luz."
+      "description": "Trepadeira da família Araceae muito comum em ambientes internos e tolerante a menos luz. Cresce melhor em luz indireta brilhante; regue quando a camada superior do substrato secar. Tóxica para pets se ingerida."
     },
     "ar": {
-      "common_name": "بوتس ذهبي",
-      "description": "Epipremnum aureum نبات استوائي متسلق موطنه جزر سليمان. يزرع كنبات منزلي لسهولة العناية به. يتحمل ظروف إضاءة مختلفة."
+      "common_name": "البوتس الذهبي",
+      "description": "نبات متسلق من الفصيلة القلقاسية يُزرع داخل المنزل ويتحمل الضوء المنخفض نسبيًا. يفضل ضوءًا ساطعًا غير مباشر؛ اسقِ بعد جفاف الطبقة العلوية من التربة. سام للحيوانات الأليفة عند الابتلاع."
     },
     "hi": {
       "common_name": "गोल्डन पोथोस",
-      "description": "Epipremnum aureum एक उष्णकटिबंधीय लता है जो सोलोमन द्वीप की मूल निवासी है। यह घरों में आसानी से उगाई जाती है। यह विभिन्न रोशनी परिस्थितियों को सहन करती है।"
+      "description": "यह एक लतादार एरॉइड पौधा है जो घर के अंदर आसानी से उगाया जाता है और कम रोशनी भी सह लेता है। सबसे अच्छा विकास अप्रत्यक्ष तेज़ रोशनी में होता है; मिट्टी की ऊपरी परत सूखने पर ही पानी दें। पालतू जानवरों के लिए निगलने पर विषैला है।"
     },
     "zh": {
       "common_name": "黄金葛",
-      "description": "Epipremnum aureum 原产于所罗门群岛，是一种热带藤本植物。常作为室内植物栽培，适应性强。对光照要求不高。"
+      "description": "常见的室内蔓生天南星科观叶植物，对较弱光照也有一定耐受。明亮散射光下长势更好，表土变干后再浇水。误食对宠物有毒。"
     },
     "ja": {
       "common_name": "ポトス",
-      "description": "Epipremnum aureum はソロモン諸島原産の熱帯性つる植物です。丈夫で育てやすく、観葉植物として広く利用されています。さまざまな光条件に適応します。"
+      "description": "室内で育てやすいツル性のサトイモ科観葉植物で、弱めの光にもある程度耐えます。明るい間接光が理想で、用土の表面が乾いてから水やりします。ペットが摂取すると有毒です。"
     },
     "ko": {
       "common_name": "포토스",
-      "description": "Epipremnum aureum는 솔로몬 제도 원산의 열대 덩굴식물입니다. 관리가 쉬워 실내 식물로 널리 재배됩니다. 다양한 빛 환경에 잘 적응합니다."
+      "description": "실내에서 흔히 키우는 덩굴성 천남성과 식물로, 비교적 약한 빛도 어느 정도 견딥니다. 밝은 간접광에서 가장 잘 자라며 겉흙이 마르면 물을 줍니다. 반려동물이 먹으면 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/epipremnum/aureum/details",
-      "https://edis.ifas.ufl.edu/publication/FP207",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a330"
+      "https://www.rhs.org.uk/plants/epipremnum/growing-guide",
+      "https://www.rhs.org.uk/plants/epipremnum",
+      "https://plants.ces.ncsu.edu/plants/epipremnum-aureum/",
+      "https://extension.psu.edu/pothos-as-a-houseplant/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b594",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/golden-pothos"
     ]
   }
 }

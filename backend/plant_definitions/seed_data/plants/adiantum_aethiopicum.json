@@ -1,23 +1,22 @@
 {
   "external_id": "adiantum_aethiopicum",
-  "name": "Maidenhair Fern",
+  "name": "Common maidenhair fern",
   "latin": "Adiantum aethiopicum",
   "sun": "medium",
   "water": "high",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "fern"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 4,
   "moisture_required": true,
-  "moisture_interval_days": 2,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -31,13 +30,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles indirekt",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष प्रकाश",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist, well-drained",
-          "pl": "Wilgotna przepuszczalna",
-          "de": "Feucht, durchlässig",
-          "fr": "Humide drainé",
-          "it": "Umido drenante",
-          "es": "Húmedo drenante",
-          "pt": "Úmido drenado",
-          "ar": "رطبة جيدة التصريف",
-          "hi": "नम व जलनिकास",
-          "zh": "湿润排水好",
-          "ja": "湿潤で排水良",
-          "ko": "습하고 배수됨"
+          "en": "Rich, well-drained",
+          "pl": "Żyzne, przepuszcz.",
+          "de": "Nährreich, locker",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "تربة غنية مُصرّفة",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "疏松、排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥, 배수 좋음"
         }
       }
     },
@@ -68,17 +67,17 @@
       "value": {
         "text": {
           "en": "Keep evenly moist",
-          "pl": "Stale wilgotne",
+          "pl": "Stała lekka wilg.",
           "de": "Gleichmäßig feucht",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
+          "fr": "Substrat humide",
+          "it": "Sempre legger umido",
           "es": "Siempre húmedo",
           "pt": "Sempre úmido",
-          "ar": "رطوبة مستمرة",
-          "hi": "लगातार नम",
-          "zh": "保持均匀湿润",
-          "ja": "常に湿らせる",
-          "ko": "항상 촉촉"
+          "ar": "رطوبة ثابتة",
+          "hi": "लगातार नम रखें",
+          "zh": "保持微湿",
+          "ja": "常にやや湿らせる",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Fussy indoors",
+          "pl": "Kapryśna w domu",
+          "de": "Empfindlich drinnen",
+          "fr": "Délicate en intérieur",
+          "it": "Delicata in casa",
+          "es": "Delicada en interior",
+          "pt": "Exigente em casa",
+          "ar": "حساسة داخل المنزل",
+          "hi": "घर में नाज़ुक",
+          "zh": "室内较挑剔",
+          "ja": "室内で繊細",
+          "ko": "실내에서 예민"
         }
       }
     },
@@ -127,12 +126,12 @@
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
+          "fr": "Forte humidité",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "अधिक नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -144,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietrująca",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "hi": "विषहीन",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -163,76 +162,117 @@
       "value": {
         "text": {
           "en": "Clumping fern",
-          "pl": "Kępiasta paproć",
-          "de": "Horstbildend",
+          "pl": "Kępkowa paproć",
+          "de": "Horstbildender Farn",
           "fr": "Fougère en touffe",
           "it": "Felce cespitosa",
           "es": "Helecho en mata",
           "pt": "Samambaia em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "군생"
+          "ar": "سرخس متكتل",
+          "hi": "गुच्छेदार फ़र्न",
+          "zh": "丛生蕨类",
+          "ja": "株立ちのシダ",
+          "ko": "군생 양치"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Hates dry soil",
+          "pl": "Nie znosi przesuszeń",
+          "de": "Mag keine Trockenheit",
+          "fr": "N'aime pas sécher",
+          "it": "Odia seccarsi",
+          "es": "No tolera sequedad",
+          "pt": "Não tolera secura",
+          "ar": "يكره جفاف التربة",
+          "hi": "सूखी मिट्टी नापसंद",
+          "zh": "怕干燥",
+          "ja": "乾燥に弱い",
+          "ko": "건조에 약함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale & mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schild- & Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرات قشرية وبق دقيقي",
+          "hi": "स्केल व मिलीबग",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레·깍지진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Maidenhair fern",
-      "description": "Adiantum aethiopicum is a delicate fern native to Australia and southern Africa. It grows in moist, shaded habitats and is valued for its fine, fan-shaped fronds. Indoors, it needs consistent moisture and high humidity."
+      "common_name": "Common maidenhair fern",
+      "description": "A delicate evergreen fern with wiry dark stems and fan-shaped leaflets. Grows best in bright, indirect light with consistently moist, well-drained soil and high humidity. Avoid letting the pot dry out or sit in water."
     },
     "pl": {
-      "common_name": "Paprotka australijska",
-      "description": "Adiantum aethiopicum to delikatna paproć pochodząca z Australii i Afryki Południowej. Naturalnie rośnie w wilgotnych i zacienionych miejscach. W domu wymaga stałej wilgoci i wysokiej wilgotności powietrza."
+      "common_name": "Zanokcica etiopska",
+      "description": "Delikatna, zimozielona paproć o ciemnych ogonkach i wachlarzowatych listkach. Najlepiej rośnie w jasnym, rozproszonym świetle oraz w stale lekko wilgotnym, przepuszczalnym podłożu i przy wysokiej wilgotności. Nie dopuszczaj do przesuszenia ani do stania w wodzie."
     },
     "de": {
-      "common_name": "Frauenhaarfarn",
-      "description": "Adiantum aethiopicum ist ein zarter Farn aus Australien und dem südlichen Afrika. Er wächst in feuchten, schattigen Lebensräumen. Als Zimmerpflanze benötigt er gleichmäßige Feuchtigkeit und hohe Luftfeuchte."
+      "common_name": "Gewöhnlicher Frauenhaarfarn",
+      "description": "Ein zarter, immergrüner Farn mit dunklen, drahtigen Stielen und fächerförmigen Fiederchen. Er braucht helles, indirektes Licht, dauerhaft leicht feuchtes, gut drainierendes Substrat und hohe Luftfeuchte. Nicht austrocknen lassen und keine Staunässe."
     },
     "fr": {
-      "common_name": "Fougère cheveux-de-Vénus",
-      "description": "Adiantum aethiopicum est une fougère délicate originaire d’Australie et d’Afrique australe. Elle pousse dans des milieux humides et ombragés. En intérieur, elle demande une humidité constante."
+      "common_name": "Fougère capillaire",
+      "description": "Fougère persistante et délicate, aux tiges sombres et fines et aux folioles en éventail. Elle préfère une lumière vive indirecte, un substrat drainant maintenu humide et une forte humidité ambiante. Évitez le dessèchement et l'eau stagnante."
     },
     "it": {
-      "common_name": "Felce capelvenere",
-      "description": "Adiantum aethiopicum è una felce delicata originaria dell’Australia e dell’Africa meridionale. Cresce in ambienti umidi e ombreggiati. In casa richiede annaffiature regolari e alta umidità."
+      "common_name": "Capelvenere comune",
+      "description": "Felce sempreverde delicata con fusti scuri e sottili e foglioline a ventaglio. Richiede luce intensa ma indiretta, terriccio drenante mantenuto costantemente umido e alta umidità. Evita sia l'asciugatura completa sia i ristagni d'acqua."
     },
     "es": {
-      "common_name": "Culantrillo",
-      "description": "Adiantum aethiopicum es un helecho delicado originario de Australia y África austral. Vive en zonas húmedas y sombreadas. Como planta de interior necesita humedad constante."
+      "common_name": "Helecho culantrillo común",
+      "description": "Helecho perenne y delicado con tallos oscuros y finos y foliolos en forma de abanico. Prefiere luz brillante indirecta, sustrato bien drenado pero siempre húmedo y alta humedad ambiental. No dejes que se seque ni que quede encharcado."
     },
     "pt": {
-      "common_name": "Avenca",
-      "description": "Adiantum aethiopicum é uma samambaia delicada nativa da Austrália e do sul da África. Desenvolve-se em locais úmidos e sombreados. Em interiores, precisa de umidade constante e ar úmido."
+      "common_name": "Avenca-comum",
+      "description": "Samambaia delicada e perene, com hastes escuras e finas e folíolos em forma de leque. Cresce melhor em luz brilhante indireta, substrato drenante mantido sempre úmido e alta umidade. Evite ressecar e também encharcar."
     },
     "ar": {
       "common_name": "سرخس شعر العذراء",
-      "description": "Adiantum aethiopicum هو سرخس رقيق موطنه أستراليا وجنوب أفريقيا. ينمو في بيئات رطبة ومظللة. كنبات داخلي يحتاج إلى رطوبة ثابتة."
+      "description": "سرخس دائم الخضرة بأعناق داكنة رفيعة ووريقات مروحية. يفضّل ضوءاً ساطعاً غير مباشر وتربة جيدة الصرف تبقى رطبة مع رطوبة جوية مرتفعة. تجنّب جفاف الأصيص أو بقاءه في ماء راكد."
     },
     "hi": {
-      "common_name": "मेडेनहेयर फर्न",
-      "description": "Adiantum aethiopicum एक नाज़ुक फ़र्न है जो ऑस्ट्रेलिया और दक्षिणी अफ्रीका का मूल निवासी है। यह नम और छायादार स्थानों में उगता है। घर के अंदर इसे लगातार नमी की आवश्यकता होती है।"
+      "common_name": "मैडनहेयर फर्न",
+      "description": "यह एक नाज़ुक सदाबहार फ़र्न है, जिसमें गहरे पतले डंठल और पंखे जैसी पत्तियाँ होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी, अच्छी जलनिकासी वाली मिट्टी जो लगातार नम रहे, और उच्च आर्द्रता चाहिए। मिट्टी को सूखने न दें और पानी जमा न होने दें।"
     },
     "zh": {
       "common_name": "铁线蕨",
-      "description": "Adiantum aethiopicum 原产于澳大利亚和非洲南部，是一种外形精致的蕨类植物。它生长在潮湿阴凉的环境中。室内养护需保持土壤湿润和空气湿度。"
+      "description": "一种精致的常绿蕨类，具细黑茎与扇形小叶。适合明亮散射光、排水良好但保持微湿的基质，并需要较高空气湿度。避免盆土干透或积水。"
     },
     "ja": {
       "common_name": "アジアンタム",
-      "description": "Adiantum aethiopicum はオーストラリアと南部アフリカ原産の繊細なシダ植物です。湿った半日陰の環境に自生します。室内では高い湿度が必要です。"
+      "description": "細い黒い茎と扇形の小葉をもつ繊細な常緑シダです。明るい間接光と、水はけが良く常にやや湿った用土、高い湿度を好みます。乾燥させず、受け皿に水を溜めないでください。"
     },
     "ko": {
-      "common_name": "아디안텀 고사리",
-      "description": "Adiantum aethiopicum은 호주와 남부 아프리카 원산의 섬세한 고사리입니다. 습하고 그늘진 환경에서 자랍니다. 실내에서는 지속적인 수분과 습도가 필요합니다."
+      "common_name": "아디안텀(마이든헤어 고사리)",
+      "description": "가늘고 어두운 줄기와 부채 모양 잎을 가진 섬세한 상록 양치식물입니다. 밝은 간접광과 배수가 좋으면서도 항상 촉촉한 흙, 높은 습도를 선호합니다. 흙이 마르거나 물이 고이지 않게 하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/adiantum-aethiopicum/details",
-      "https://www.botanicgardens.sa.gov.au/learn/gardening/growing-adiantum",
-      "https://www.gardenersworld.com/plants/adiantum-aethiopicum/"
+      "https://plants.ces.ncsu.edu/plants/adiantum-aethiopicum/",
+      "https://www.thespruce.com/grow-adiantum-ferns-1902722",
+      "https://www.bunnings.com.au/diy-advice/garden/planting-and-growing/how-to-grow-and-care-for-maidenhair-ferns",
+      "https://powo.science.kew.org/taxon/17008760-1",
+      "https://www.cats.org.uk/media/gb1jkhcr/cats_protection-safe-plants-guide.pdf",
+      "https://www.rhs.org.uk/plants/439/adiantum-aethiopicum/details"
     ]
   }
 }

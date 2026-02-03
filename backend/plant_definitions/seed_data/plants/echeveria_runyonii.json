@@ -1,21 +1,20 @@
 {
   "external_id": "echeveria_runyonii",
-  "name": "Topsy Turvy Echeveria",
+  "name": "Topsy-turvy echeveria",
   "latin": "Echeveria runyonii",
   "sun": "high",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Viel Sonne",
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
           "fr": "Lumière vive",
           "it": "Luce intensa",
-          "es": "Sol intenso",
-          "pt": "Sol intenso",
-          "ar": "شمس ساطعة",
-          "hi": "तेज धूप",
-          "zh": "强光照",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 양호"
+          "en": "Gritty cactus mix",
+          "pl": "Przepuszczalne",
+          "de": "Kakteenerde",
+          "fr": "Substrat drainant",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactus",
+          "ar": "تربة صبّارة",
+          "hi": "कैैक्टस मिट्टी",
+          "zh": "颗粒多肉土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ水やり",
-          "ko": "물 적게"
+          "en": "Soak, then dry",
+          "pl": "Podlej po wysch.",
+          "de": "Gießen nach Trock.",
+          "fr": "Arroser à sec",
+          "it": "Bagna a secco",
+          "es": "Riega en seco",
+          "pt": "Regar ao secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "마르면 흠뻑"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26 °C",
-          "pl": "18–26 °C",
-          "de": "18–26 °C",
-          "fr": "18–26 °C",
-          "it": "18–26 °C",
-          "es": "18–26 °C",
-          "pt": "18–26 °C",
-          "ar": "18–26°م",
-          "hi": "18–26 °C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26°C"
+          "en": "15–27°C",
+          "pl": "15–27°C",
+          "de": "15–27°C",
+          "fr": "15–27°C",
+          "it": "15–27°C",
+          "es": "15–27°C",
+          "pt": "15–27°C",
+          "ar": "15–27°م",
+          "hi": "15–27°C",
+          "zh": "15–27°C",
+          "ja": "15–27°C",
+          "ko": "15–27°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgoć",
-          "de": "Geringe Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Normal, dry air",
+          "pl": "Sucho/normalnie",
+          "de": "Normale, trocken",
+          "fr": "Air sec OK",
+          "it": "Aria secca OK",
+          "es": "Aire seco OK",
+          "pt": "Ar seco OK",
+          "ar": "هواء جاف مناسب",
+          "hi": "सूखी हवा ठीक",
+          "zh": "干燥空气可",
+          "ja": "乾燥気味でOK",
+          "ko": "건조해도 OK"
         }
       }
     },
@@ -144,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "विषैली नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +161,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "en": "Slow, forms offsets",
+          "pl": "Wolna, rozłogi",
+          "de": "Langsam, Ableger",
+          "fr": "Lente, rejets",
+          "it": "Lenta, polloni",
+          "es": "Lenta, hijuelos",
+          "pt": "Lenta, brotos",
+          "ar": "بطيء، يُنتج فسوخ",
+          "hi": "धीमी, ऑफसेट",
+          "zh": "缓慢，易分株",
+          "ja": "ゆっくり子株",
+          "ko": "느림, 자구"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter excès d'eau",
+          "it": "Evita troppa acqua",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso d'água",
+          "ar": "تجنّب فرط السقي",
+          "hi": "अधिक पानी नहीं",
+          "zh": "怕积水烂根",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Szkodniki czasem",
+          "de": "Gelegentl. Schädlinge",
+          "fr": "Ravageurs parfois",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Topsy Turvy Echeveria",
-      "description": "Echeveria runyonii is a compact succulent known for its blue-green, spoon-shaped leaves. It thrives in bright light and well-draining soil. Water sparingly to prevent rot."
+      "common_name": "Topsy-turvy echeveria",
+      "description": "A compact rosette-forming succulent with curved leaves. Give very bright light and use a fast-draining cactus mix in a pot with drainage. Water thoroughly only after the soil dries; keep cooler and drier in winter."
     },
     "pl": {
-      "common_name": "Eszeweria Topsy Turvy",
-      "description": "Echeveria runyonii to sukulent o niebieskozielonych liściach. Wymaga jasnego stanowiska i przepuszczalnej gleby. Podlewać oszczędnie."
+      "common_name": "Echeweria „Topsy Turvy”",
+      "description": "Sukulenta tworząca zwartą rozetę z wygiętymi liśćmi. Zapewnij bardzo jasne stanowisko i przepuszczalne podłoże dla kaktusów w doniczce z odpływem. Podlewaj dopiero po całkowitym przeschnięciu; zimą trzymaj chłodniej i podlewaj rzadziej."
     },
     "de": {
       "common_name": "Topsy-Turvy-Echeverie",
-      "description": "Echeveria runyonii ist eine kompakte Sukkulente mit blaugrünen Blättern. Sie bevorzugt viel Licht und durchlässige Erde. Sparsam gießen."
+      "description": "Eine kompakte Rosetten-Sukkulente mit gebogenen Blättern. Sehr hell stellen und in gut drainierende Kakteenerde mit Abzugslöchern pflanzen. Erst gießen, wenn das Substrat komplett trocken ist; im Winter kühler und deutlich trockener halten."
     },
     "fr": {
-      "common_name": "Échévéria Topsy Turvy",
-      "description": "Echeveria runyonii est une succulente compacte aux feuilles bleu-vert. Elle aime la lumière vive et un sol drainant. Arroser modérément."
+      "common_name": "Échévéria « Topsy Turvy »",
+      "description": "Succulente en rosette compacte aux feuilles recourbées. Offrez une lumière très vive et un substrat pour cactus bien drainant dans un pot percé. Arrosez seulement quand le terreau est sec; en hiver, gardez plus frais et arrosez moins."
     },
     "it": {
-      "common_name": "Echeveria Topsy Turvy",
-      "description": "Echeveria runyonii è una succulenta compatta con foglie blu-verdi. Cresce bene in luce intensa e terreno drenante. Annaffiare poco."
+      "common_name": "Echeveria « Topsy Turvy »",
+      "description": "Succulenta a rosetta compatta con foglie incurvate. Tanta luce e terriccio per cactus molto drenante in un vaso con fori. Annaffia solo quando il substrato è asciutto; in inverno tienila più fresca e quasi asciutta."
     },
     "es": {
-      "common_name": "Echeveria Topsy Turvy",
-      "description": "Echeveria runyonii es una suculenta compacta de hojas azul verdosas. Necesita mucha luz y suelo drenante. Regar con moderación."
+      "common_name": "Echeveria « Topsy Turvy »",
+      "description": "Suculenta de roseta compacta con hojas curvadas. Dale mucha luz y un sustrato para cactus bien drenante en una maceta con agujeros. Riega solo cuando el sustrato esté seco; en invierno, mantenla más fresca y con menos agua."
     },
     "pt": {
-      "common_name": "Echeveria Topsy Turvy",
-      "description": "Echeveria runyonii é uma suculenta compacta de folhas azul-esverdeadas. Prefere luz intensa e solo bem drenado. Regar pouco."
+      "common_name": "Echevéria « Topsy Turvy »",
+      "description": "Suculenta de roseta compacta com folhas curvadas. Precisa de muita luz e substrato para cactos bem drenante em vaso com furos. Regue apenas quando o substrato secar; no inverno, mantenha mais fresco e mais seco."
     },
     "ar": {
-      "common_name": "إشيفيريا توبسي تيرفي",
-      "description": "إشيفيريا رونيويي نبات عصاري مدمج بأوراق زرقاء مخضرة. يفضل الضوء القوي والتربة جيدة التصريف. يُسقى باعتدال."
+      "common_name": "إيشيفيريا توبسي تورفي",
+      "description": "نبات عصاري على شكل وردة بأوراق منحنية. يحتاج إلى ضوء ساطع جدًا وتربة صبّارات جيدة التصريف في أصيص ذي فتحات. اسقِ بعمق فقط بعد جفاف التربة تمامًا، واجعله أبرد وأكثر جفافًا في الشتاء."
     },
     "hi": {
-      "common_name": "टॉप्सी टर्वी सक्यूलेंट",
-      "description": "Echeveria runyonii एक कॉम्पैक्ट रसीला पौधा है। इसे तेज रोशनी और अच्छी जलनिकास वाली मिट्टी चाहिए। कम पानी दें।"
+      "common_name": "टॉप्सी टर्वी इचेवेरिया",
+      "description": "मुड़ी हुई पत्तियों वाला सघन रोसेट सक्युलेंट। इसे बहुत तेज रोशनी दें और छेद वाले गमले में अच्छी जल-निकासी वाली कैक्टस मिट्टी लगाएँ। मिट्टी पूरी सूखने पर ही अच्छी तरह पानी दें; सर्दियों में ठंडा और अधिक सूखा रखें।"
     },
     "zh": {
-      "common_name": "翻转石莲花",
-      "description": "Echeveria runyonii 是一种紧凑的多肉植物，叶片呈蓝绿色。喜欢充足光照和良好排水的土壤。浇水要少。"
+      "common_name": "翻叶石莲花",
+      "description": "紧凑莲座状多肉，叶片向外翻卷。需要强光与排水良好的多肉/仙人掌土，并使用带孔花盆。土壤干透后再浇透；冬季保持更凉爽并减少浇水。"
     },
     "ja": {
-      "common_name": "トプシータービー",
-      "description": "エケベリア・ルンヨニーは青緑色の葉を持つ多肉植物です。強い光と水はけの良い土を好みます。水やりは控えめに。"
+      "common_name": "トップシータービー",
+      "description": "葉が反り返るコンパクトなロゼット型の多肉植物。強い光と水はけの良い多肉用土を用い、底穴のある鉢で育てます。用土が完全に乾いてからたっぷり与え、冬は涼しく乾かし気味にします。"
     },
     "ko": {
       "common_name": "톱시 터비 에케베리아",
-      "description": "Echeveria runyonii는 청록색 잎을 가진 다육식물입니다. 밝은 빛과 배수 좋은 흙을 선호합니다. 물은 적게 주세요."
+      "description": "잎이 바깥으로 말리는 로제트형 다육식물입니다. 매우 밝은 빛과 배수가 좋은 다육용 흙, 배수구가 있는 화분이 필요합니다. 흙이 완전히 마른 뒤에 흠뻑 주고, 겨울에는 더 서늘하고 건조하게 관리하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/18169/echeveria-runyonii/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a589",
-      "https://ucanr.edu/sites/UC_Master_Gardeners/files/154559.pdf"
+      "https://www.rhs.org.uk/plants/echeveria",
+      "https://yardandgarden.extension.iastate.edu/how-to/growing-succulents-indoors",
+      "https://extension.illinois.edu/news-releases/did-you-forget-water-your-plants-try-low-maintenance-succulents",
+      "https://extension.wvu.edu/lawn-gardening-pests/indoor-plants/succulents-101",
+      "https://mountaincrestgardens.com/echeveria-runyonii-topsy-turvy/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/blue-echeveria"
     ]
   }
 }

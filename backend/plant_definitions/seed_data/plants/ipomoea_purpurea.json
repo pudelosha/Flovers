@@ -7,21 +7,21 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "ipomoea_purpurea.jpg",
   "image_thumb": "ipomoea_purpurea.jpg",
   "traits": [
@@ -31,14 +31,14 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
+          "it": "Sole diretto",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "شمس ساطعة",
+          "hi": "पूरा सूरज",
+          "zh": "充足阳光",
           "ja": "直射日光",
           "ko": "직사광선"
         }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainé",
-          "it": "Drenato",
-          "es": "Drenado",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "مصفى جيدًا",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlew.",
-          "de": "Regelmäßig",
-          "fr": "Arrosage rég.",
-          "it": "Annaffiatura reg.",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "규칙적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -87,8 +87,8 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
+          "pl": "Łatwy",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -97,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm climate",
-          "pl": "Ciepły klimat",
-          "de": "Warmes Klima",
-          "fr": "Climat chaud",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "طقس دافئ",
-          "hi": "गर्म मौसम",
-          "zh": "温暖气候",
-          "ja": "暖かい気候",
-          "ko": "따뜻한 기후"
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilg.",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Moderat",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic seeds",
-          "pl": "Nasiona toksyczne",
-          "de": "Samen giftig",
-          "fr": "Graines toxiques",
-          "it": "Semi tossici",
-          "es": "Semillas tóxicas",
-          "pt": "Sementes tóx.",
-          "ar": "بذور سامة",
-          "hi": "बीज विषैले",
-          "zh": "种子有毒",
-          "ja": "種子は有毒",
-          "ko": "씨앗 독성"
+          "en": "Toxic",
+          "pl": "Toksyczny",
+          "de": "Toxisch",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سام",
+          "hi": "विषैले",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast climbing vine",
-          "pl": "Szybko rośnie",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Cresce rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovraffollamento",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرापानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Morning Glory",
-      "description": "Ipomoea purpurea is a fast-growing annual vine known for its trumpet-shaped purple flowers. It blooms best in full sun and warm conditions. Commonly grown outdoors on trellises or fences."
+      "description": "Ipomoea purpurea is a fast-growing, annual vine with trumpet-shaped flowers. It thrives in full sun and is commonly grown for its attractive blooms."
     },
     "pl": {
       "common_name": "Wilec purpurowy",
-      "description": "Ipomoea purpurea to szybko rosnące pnącze jednoroczne o fioletowych kwiatach. Najlepiej kwitnie w pełnym słońcu i cieple. Często sadzona przy podporach."
+      "description": "Ipomoea purpurea to szybko rosnąca roślina pnąca z kwiatami w kształcie trąbki. Preferuje pełne słońce i jest popularnie uprawiana ze względu na swoje atrakcyjne kwiaty."
     },
     "de": {
       "common_name": "Prunkwinde",
-      "description": "Ipomoea purpurea ist eine einjährige Kletterpflanze mit violetten Blüten. Sie bevorzugt volle Sonne und warme Standorte. Wird häufig an Zäunen gezogen."
+      "description": "Ipomoea purpurea ist eine schnell wachsende, einjährige Kletterpflanze mit trompetenförmigen Blüten. Sie gedeiht in voller Sonne und wird häufig wegen ihrer schönen Blüten angebaut."
     },
     "fr": {
-      "common_name": "Volubilis pourpre",
-      "description": "Ipomoea purpurea est une plante grimpante annuelle aux fleurs violettes. Elle aime le plein soleil et la chaleur. Souvent cultivée en extérieur."
+      "common_name": "Liseron pourpre",
+      "description": "Ipomoea purpurea est une vigne annuelle à croissance rapide avec des fleurs en forme de trompette. Elle préfère le plein soleil et est cultivée principalement pour ses fleurs attrayantes."
     },
     "it": {
-      "common_name": "Ipomea purpurea",
-      "description": "Ipomoea purpurea è una rampicante annuale dai fiori viola. Cresce meglio al sole e con temperature calde. Ideale per pergolati."
+      "common_name": "Gloria del mattino",
+      "description": "Ipomoea purpurea è una pianta rampicante a crescita rapida con fiori a forma di tromba. Cresce meglio alla luce solare diretta ed è coltivata per i suoi fiori decorativi."
     },
     "es": {
       "common_name": "Gloria de la mañana",
-      "description": "Ipomoea purpurea es una enredadera anual de rápido crecimiento con flores púrpuras. Prefiere pleno sol y clima cálido. Muy usada en jardines."
+      "description": "Ipomoea purpurea es una enredadera de rápido crecimiento con flores en forma de trompeta. Crece mejor a pleno sol y se cultiva principalmente por sus hermosas flores."
     },
     "pt": {
-      "common_name": "Glória-da-manhã",
-      "description": "Ipomoea purpurea é uma trepadeira anual de flores roxas. Desenvolve-se melhor em sol pleno e calor. Comum em cercas."
+      "common_name": "Glória da manhã",
+      "description": "Ipomoea purpurea é uma planta trepadeira de crescimento rápido com flores em forma de trombeta. Prefere luz solar direta e é comumente cultivada por suas flores atraentes."
     },
     "ar": {
-      "common_name": "مجد الصباح",
-      "description": "Ipomoea purpurea نبات متسلق سنوي بأزهار أرجوانية. يفضل الشمس الكاملة والطقس الدافئ. يزرع خارجياً غالباً."
+      "common_name": "مجلة الصباح",
+      "description": "إيبومويا بوربوريا هي نبات متسلق سريع النمو مع أزهار على شكل بوق. يزدهر في ضوء الشمس الكامل وغالبًا ما يُزرع بسبب زهورها الجميلة."
     },
     "hi": {
-      "common_name": "मॉर्निंग ग्लोरी",
-      "description": "Ipomoea purpurea एक तेजी से बढ़ने वाली बेल है जिसमें बैंगनी फूल होते हैं। इसे पूरी धूप और गर्म मौसम पसंद है।"
+      "common_name": "सुबह की महिमा",
+      "description": "इपॉमोआ पुरप्योरिया एक तेजी से बढ़ने वाली, वार्षिक बेल है जिसमें ट्रम्पेट के आकार के फूल होते हैं। यह पूर्ण सूर्य में पनपता है और इसके आकर्षक फूलों के कारण आमतौर पर उगाया जाता है।"
     },
     "zh": {
-      "common_name": "牵牛花",
-      "description": "Ipomoea purpurea 是一年生攀援植物，开紫色花。喜全日照和温暖环境。常用于庭院栽培。"
+      "common_name": "紫花牵牛花",
+      "description": "Ipomoea purpurea是一种快速生长的年生藤本植物，具有喇叭形的花朵。它在充足阳光下茂盛生长，通常因其美丽的花朵而被栽培。"
     },
     "ja": {
-      "common_name": "アサガオ",
-      "description": "Ipomoea purpurea は紫色の花を咲かせる一年草のつる植物です。日当たりと暖かさを好みます。"
+      "common_name": "朝顔",
+      "description": "Ipomoea purpureaはトランペット形の花を持つ速く成長する一年生のつる植物です。直射日光を好み、美しい花のために広く栽培されています。"
     },
     "ko": {
-      "common_name": "나팔꽃",
-      "description": "Ipomoea purpurea는 보라색 꽃을 피우는 한해살이 덩굴식물입니다. 햇빛과 따뜻한 환경을 좋아합니다."
+      "common_name": "아침영광",
+      "description": "Ipomoea purpurea는 트럼펫 모양의 꽃을 가진 빠르게 자라는 한해살이 덩굴식물입니다. 직사광선을 좋아하며 매력적인 꽃 때문에 자주 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plants.ces.ncsu.edu/plants/ipomoea-purpurea/",
-      "https://www.rhs.org.uk/plants/9273/ipomoea-purpurea/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c540"
+      "https://www.rhs.org.uk/plants/27342/ipomoea-purpurea/details",
+      "https://www.gardenia.net/plant/ipomoea-purpurea-morning-glory"
     ]
   }
 }

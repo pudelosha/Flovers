@@ -1,18 +1,18 @@
 {
   "external_id": "sedum_pachyphyllum",
-  "name": "Jelly Bean Plant",
+  "name": "Sedum Pachyphyllum",
   "latin": "Sedum pachyphyllum",
   "sun": "high",
-  "water": "medium",
+  "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "sedum_pachyphyllum.jpg",
   "image_thumb": "sedum_pachyphyllum.jpg",
   "traits": [
@@ -31,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Vollsonne",
+          "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Sole pieno",
-          "es": "Sol directo",
+          "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
+          "ar": "أشعة الشمس الكاملة",
           "hi": "पूरा सूर्य",
           "zh": "完全阳光",
-          "ja": "完全日光",
-          "ko": "완전한 햇볕"
+          "ja": "フルサン",
+          "ko": "완전한 태양"
         }
       }
     },
@@ -48,7 +48,7 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Well-draining",
           "pl": "Dobrze przepuszczalna",
           "de": "Gut durchlässig",
           "fr": "Bien drainé",
@@ -58,8 +58,8 @@
           "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
           "zh": "良好排水",
-          "ja": "排水良好",
-          "ko": "배수 좋은"
+          "ja": "良好な排水",
+          "ko": "잘 배수"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당히"
+          "en": "Low water",
+          "pl": "Niska woda",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Baja agua",
+          "pt": "Baixa água",
+          "ar": "قليل من الماء",
+          "hi": "कम पानी",
+          "zh": "少水",
+          "ja": "少ない水",
+          "ko": "적은 물"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Basse",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮은"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -145,16 +145,16 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "असामान्य",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,75 +162,113 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Powolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Jelly Bean Plant",
-      "description": "Sedum pachyphyllum, or Jelly Bean Plant, is a succulent native to Mexico. Its thick, fleshy, blue-green leaves are tipped with reddish-pink."
+      "common_name": "Baby Jelly Beans",
+      "description": "Sedum pachyphyllum, known as Baby Jelly Beans, is a small succulent with thick, fleshy leaves. It thrives in full sun and requires minimal water."
     },
     "pl": {
-      "common_name": "Roślina Żelki",
-      "description": "Sedum pachyphyllum, znana jako Roślina Żelki, to sukulent pochodzący z Meksyku. Jej grube, mięsiste, niebiesko-zielone liście mają różowawo-czerwone końce."
+      "common_name": "Małe Galaretki",
+      "description": "Sedum pachyphyllum, znane jako Małe Galaretki, to mały sukulent o grubych, mięsistych liściach. Rośnie w pełnym słońcu i wymaga minimalnego podlewania."
     },
     "de": {
-      "common_name": "Gummibärchenpflanze",
-      "description": "Sedum pachyphyllum, auch Gummibärchenpflanze genannt, ist ein Sukkulent aus Mexiko. Die dicken, fleischigen, blau-grünen Blätter sind an den Spitzen rötlich-pink."
+      "common_name": "Baby Jelly Beans",
+      "description": "Sedum pachyphyllum, auch Baby Jelly Beans genannt, ist eine kleine Sukkulente mit dicken, fleischigen Blättern. Es gedeiht in voller Sonne und benötigt wenig Wasser."
     },
     "fr": {
-      "common_name": "Plante Jelly Bean",
-      "description": "Sedum pachyphyllum, aussi appelée Plante Jelly Bean, est une succulente originaire du Mexique. Ses feuilles épaisses et charnues sont bleu-vert avec des pointes rougeâtres."
+      "common_name": "Petits Bonbons de Gelée",
+      "description": "Sedum pachyphyllum, surnommé Petits Bonbons de Gelée, est une petite plante succulente aux feuilles épaisses et charnues. Elle prospère au soleil et nécessite peu d'eau."
     },
     "it": {
-      "common_name": "Pianta Jelly Bean",
-      "description": "Sedum pachyphyllum, o Pianta Jelly Bean, è una succulenta originaria del Messico. Le sue foglie spesse e carnose sono verdi-blu con punte rosse."
+      "common_name": "Piccole Gelatine",
+      "description": "Sedum pachyphyllum, conosciuto come Piccole Gelatine, è una piccola succulenta con foglie spesse e carnose. Cresce al sole e richiede poca acqua."
     },
     "es": {
-      "common_name": "Planta Jelly Bean",
-      "description": "Sedum pachyphyllum, o Planta Jelly Bean, es una suculenta originaria de México. Sus hojas gruesas y carnosas son de color verde-azul con puntas rojizas."
+      "common_name": "Pequeñas Judías de Gelatina",
+      "description": "Sedum pachyphyllum, conocido como Pequeñas Judías de Gelatina, es una pequeña suculenta con hojas gruesas y carnosas. Prosperan a pleno sol y requieren poca agua."
     },
     "pt": {
-      "common_name": "Planta Jelly Bean",
-      "description": "Sedum pachyphyllum, também conhecida como Planta Jelly Bean, é uma suculenta nativa do México. Suas folhas espessas e carnudas são verde-azul com pontas avermelhadas."
+      "common_name": "Pequenos Grãos de Gelatina",
+      "description": "Sedum pachyphyllum, conhecido como Pequenos Grãos de Gelatina, é uma pequena suculenta com folhas grossas e carnudas. Cresce sob sol pleno e requer pouca água."
     },
     "ar": {
-      "common_name": "نبات جيلي بين",
-      "description": "Sedum pachyphyllum، والمعروف أيضًا باسم نبات جيلي بين، هو نبات عصاري أصلي من المكسيك. أوراقه السميكة والعصارية ذات اللون الأزرق-الأخضر مع أطراف حمراء."
+      "common_name": "الفاصوليا الصغيرة الجيلاتينية",
+      "description": "Sedum pachyphyllum، المعروف بالفاصوليا الصغيرة الجيلاتينية، هو نبات عصاري صغير بأوراق سميكة ولحمية. ينمو تحت الشمس الكاملة ويتطلب القليل من الماء."
     },
     "hi": {
-      "common_name": "जेली बीन पौधा",
-      "description": "Sedum pachyphyllum, जिसे जेली बीन पौधा भी कहा जाता है, मेक्सिको का एक मांसल पौधा है। इसके मोटे, मांसल, नीले-हरे पत्ते लाल-गुलाबी टिप्स के साथ होते हैं।"
+      "common_name": "बेबी जैली बीन्स",
+      "description": "Sedum pachyphyllum, जिसे बेबी जैली बीन्स के नाम से जाना जाता है, एक छोटा रसीला पौधा है जिसमें मोटे, मांसल पत्ते होते हैं। यह पूर्ण सूर्य में उगता है और इसे न्यूनतम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "果冻豆植物",
-      "description": "Sedum pachyphyllum，或果冻豆植物，是一种原产于墨西哥的多肉植物。它的厚实肉质叶子是蓝绿色的，叶尖带有红色。"
+      "common_name": "宝宝果冻豆",
+      "description": "Sedum pachyphyllum，常被称为宝宝果冻豆，是一种小型多肉植物，具有厚实的肉质叶片。它在完全阳光下生长，并且需要最少的水。"
     },
     "ja": {
-      "common_name": "ジェリービーンプラント",
-      "description": "Sedum pachyphyllum、またはジェリービーンプラントは、メキシコ原産の多肉植物です。その厚く肉厚な青緑色の葉は、赤みを帯びたピンク色の先端を持っています。"
+      "common_name": "ベビージェリービーンズ",
+      "description": "Sedum pachyphyllum、ベビージェリービーンズとして知られるこの植物は、小さな多肉植物で、厚い肉質の葉を持っています。完全な日光の下で育ち、最小限の水分で十分です。"
     },
     "ko": {
-      "common_name": "젤리빈 식물",
-      "description": "Sedum pachyphyllum, 또는 젤리빈 식물은 멕시코 원산지의 다육 식물입니다. 그 두껍고 육즙이 많은 청록색 잎은 붉은색 끝이 있습니다."
+      "common_name": "베이비 젤리 빈",
+      "description": "Sedum pachyphyllum, 베이비 젤리 빈으로 알려진 이 식물은 두껍고 육질이 있는 작은 다육 식물입니다. 이 식물은 완전한 태양 아래에서 자라며 최소한의 물만 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/102727/Sedum-pachyphyllum/Details",
+      "https://www.rhs.org.uk/advice/profile?pid=139",
       "https://www.gardenia.net/plant/sedum-pachyphyllum"
     ]
   }

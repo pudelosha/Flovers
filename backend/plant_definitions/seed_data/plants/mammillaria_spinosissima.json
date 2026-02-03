@@ -1,23 +1,24 @@
 {
   "external_id": "mammillaria_spinosissima",
-  "name": "Red-headed Irishman",
+  "name": "Spiny Mamma",
   "latin": "Mammillaria spinosissima",
   "sun": "high",
   "water": "low",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "mammillaria_spinosissima.jpg",
@@ -29,16 +30,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरे सूरज में",
           "zh": "全日照",
           "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ko": "직사광선"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋음"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Oszczędne",
-          "de": "Wenig",
-          "fr": "Rare",
-          "it": "Raro",
-          "es": "Escaso",
-          "pt": "Pouco",
+          "en": "Minimal",
+          "pl": "Minimalna",
+          "de": "Minimal",
+          "fr": "Minimale",
+          "it": "Minimale",
+          "es": "Mínimo",
+          "pt": "Mínima",
           "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "hi": "न्यूनतम",
+          "zh": "最小",
+          "ja": "最小",
+          "ko": "최소"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–30°C",
-          "pl": "15–30°C",
-          "de": "15–30°C",
-          "fr": "15–30°C",
-          "it": "15–30°C",
-          "es": "15–30°C",
-          "pt": "15–30°C",
-          "ar": "15–30°م",
-          "hi": "15–30°C",
-          "zh": "15–30°C",
-          "ja": "15–30°C",
-          "ko": "15–30°C"
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
         }
       }
     },
@@ -129,10 +130,10 @@
           "it": "Bassa",
           "es": "Baja",
           "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
+          "ar": "منخفض",
+          "hi": "निम्न",
           "zh": "低",
-          "ja": "低い",
+          "ja": "低",
           "ko": "낮음"
         }
       }
@@ -142,17 +143,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -163,74 +164,111 @@
           "en": "Slow",
           "pl": "Wolny",
           "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
+          "fr": "Lent",
+          "it": "Lento",
           "es": "Lento",
           "pt": "Lento",
           "ar": "بطيء",
-          "hi": "धीमी",
+          "hi": "धीमा",
           "zh": "缓慢",
           "ja": "遅い",
           "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرूक्त जल देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Red-headed Irishman",
-      "description": "Mammillaria spinosissima is a columnar cactus native to Mexico. It thrives in bright sun and dry conditions. Water sparingly to prevent root rot."
+      "common_name": "Spiny Mamma",
+      "description": "Mammillaria spinosissima is a small, spiny cactus known for its spherical shape and vibrant pinkish-red flowers. It's a hardy plant, suitable for indoor environments with minimal watering."
     },
     "pl": {
-      "common_name": "Mammillaria czerwonogłowa",
-      "description": "Mammillaria spinosissima to kolumnowy kaktus z Meksyku. Lubi silne słońce i suche warunki. Podlewaj rzadko, aby uniknąć gnicia."
+      "common_name": "Ciernista Mamma",
+      "description": "Mammillaria spinosissima to mały, cierniowy kaktus o kulistym kształcie i żywych, różowoczerwonych kwiatach. To wytrzymała roślina, odpowiednia do wnętrz, wymagająca minimalnego podlewania."
     },
     "de": {
-      "common_name": "Roter Ire",
-      "description": "Mammillaria spinosissima ist ein säulenförmiger Kaktus aus Mexiko. Er benötigt viel Sonne und trockene Erde. Gießen Sie nur sparsam."
+      "common_name": "Stachelige Mamma",
+      "description": "Mammillaria spinosissima ist ein kleiner, stacheliger Kaktus, der für seine kugelförmige Form und lebendigen pink-rotfarbenen Blüten bekannt ist. Eine pflegeleichte Pflanze für Innenräume mit minimalem Wasserbedarf."
     },
     "fr": {
-      "common_name": "Cactus irlandais",
-      "description": "Mammillaria spinosissima est un cactus colonnaire du Mexique. Il aime le plein soleil et les sols secs. Un arrosage modéré est essentiel."
+      "common_name": "Mamma Épineuse",
+      "description": "Mammillaria spinosissima est un petit cactus épineux, connu pour sa forme sphérique et ses fleurs roses-rouges vives. C'est une plante résistante, idéale pour les environnements intérieurs avec peu d'arrosage."
     },
     "it": {
-      "common_name": "Cactus irlandese",
-      "description": "Mammillaria spinosissima è un cactus colonnare originario del Messico. Predilige sole intenso e terreno asciutto. Annaffiare poco."
+      "common_name": "Mamma Spinosa",
+      "description": "Mammillaria spinosissima è un piccolo cactus spinoso, noto per la sua forma sferica e i fiori di colore rosa-rosso vivace. È una pianta resistente, adatta a ambienti interni con irrigazioni minime."
     },
     "es": {
-      "common_name": "Biznaga espinosa",
-      "description": "Mammillaria spinosissima es un cactus columnar de México. Requiere sol pleno y riego escaso. El exceso de agua causa pudrición."
+      "common_name": "Mamá Espinosa",
+      "description": "Mammillaria spinosissima es un pequeño cactus espinoso, conocido por su forma esférica y sus flores de color rosa-rojo brillante. Es una planta resistente, adecuada para entornos interiores con poco riego."
     },
     "pt": {
-      "common_name": "Cacto irlandês",
-      "description": "Mammillaria spinosissima é um cacto colunar do México. Prefere sol direto e pouca água. O excesso de rega prejudica as raízes."
+      "common_name": "Mãe Espinhosa",
+      "description": "Mammillaria spinosissima é um pequeno cacto espinhoso, conhecido por sua forma esférica e flores rosadas vermelhas vibrantes. É uma planta resistente, adequada para ambientes internos com pouca rega."
     },
     "ar": {
-      "common_name": "صبار الرأس الأحمر",
-      "description": "Mammillaria spinosissima صبار عمودي موطنه المكسيك. يحتاج إلى شمس قوية وتربة جافة. الري القليل ضروري."
+      "common_name": "أم شوكية",
+      "description": "Mammillaria spinosissima هي صبار صغير ذو أشواك، معروف بشكل كروي وزهور وردية حمراء زاهية. إنها نبتة قوية تتحمل البيئة الداخلية مع احتياج قليل للسقاية."
     },
     "hi": {
-      "common_name": "रेड हेडेड कैक्टस",
-      "description": "Mammillaria spinosissima मेक्सिको का स्तंभाकार कैक्टस है। इसे तेज धूप और सूखी मिट्टी चाहिए। बहुत कम पानी दें।"
+      "common_name": "स्पाइनी मम्मा",
+      "description": "Mammillaria spinosissima एक छोटा, कांटेदार कैक्टस है जो गोल आकार और गुलाबी-लाल रंग के फूलों के लिए जाना जाता है। यह एक मजबूत पौधा है, जो न्यूनतम पानी के साथ आंतरिक वातावरण के लिए उपयुक्त है।"
     },
     "zh": {
-      "common_name": "红头乳突球",
-      "description": "Mammillaria spinosissima 原产于墨西哥，是柱状仙人掌。喜欢强光和干燥环境。浇水需谨慎。"
+      "common_name": "刺脊仙人掌",
+      "description": "Mammillaria spinosissima 是一种小型刺状仙人掌，因其球形和鲜艳的粉红红色花朵而闻名。它是一种耐寒植物，适合室内环境，水分需求较少。"
     },
     "ja": {
-      "common_name": "レッドヘッドマミラリア",
-      "description": "Mammillaria spinosissima はメキシコ原産の柱状サボテンです。強い日光と乾燥を好みます。水は控えめに。"
+      "common_name": "スパイニーママ",
+      "description": "Mammillaria spinosissima は小さな棘のあるサボテンで、球形と鮮やかなピンク-赤い花が特徴です。少ない水分で室内環境に適した耐寒性のある植物です。"
     },
     "ko": {
-      "common_name": "레드헤드 선인장",
-      "description": "Mammillaria spinosissima는 멕시코 원산의 기둥형 선인장입니다. 강한 햇빛과 건조한 환경을 선호합니다. 물은 적게 주세요."
+      "common_name": "가시엄마",
+      "description": "Mammillaria spinosissima는 작은 가시가 있는 선인장으로, 구형과 선명한 분홍-빨간 꽃이 특징입니다. 물을 적게 필요로 하는 실내 환경에 적합한 내구성이 있는 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10179/mammillaria-spinosissima/details",
-      "https://www.cactus-art.biz/schede/MAMMILLARIA/Mammillaria_spinosissima/Mammillaria_spinosissima.htm",
-      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/13626/Mammillaria_spinosissima"
+      "https://www.gardeningknowhow.com/ornamental/cacti-succulents/mammillaria-cactus-care.htm",
+      "https://www.rhs.org.uk/plants/mammillaria-spinosissima"
     ]
   }
 }

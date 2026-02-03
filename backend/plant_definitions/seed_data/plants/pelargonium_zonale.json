@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수 잘되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "gering",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮은"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "नमीयुक्ति कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水を与えすぎない",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Zonal Geranium",
-      "description": "Pelargonium zonale, commonly known as the zonal geranium, is a popular ornamental plant known for its colorful blooms and vibrant foliage. It thrives in moderate sunlight and requires regular watering."
+      "description": "Pelargonium zonale is a popular flowering plant. It is known for its vibrant flowers and easy care indoors."
     },
     "pl": {
-      "common_name": "Pelargonia strefowa",
-      "description": "Pelargonium zonale, znana jako pelargonia strefowa, to popularna roślina ozdobna, znana z kolorowych kwiatów i bujnych liści. Wymaga umiarkowanego nasłonecznienia i regularnego podlewania."
+      "common_name": "Geranium strefowy",
+      "description": "Pelargonium zonale to popularna roślina ozdobna. Jest znana z żywych kwiatów i łatwej pielęgnacji w domu."
     },
     "de": {
       "common_name": "Zonale Geranie",
-      "description": "Pelargonium zonale, auch bekannt als zonales Geranien, ist eine beliebte Zierpflanze, die für ihre farbenfrohen Blüten und kräftigen Blätter bekannt ist. Sie gedeiht bei mäßigem Sonnenlicht und benötigt regelmäßige Bewässerung."
+      "description": "Pelargonium zonale ist eine beliebte Zierpflanze. Sie ist bekannt für ihre lebendigen Blumen und einfache Pflege im Innenbereich."
     },
     "fr": {
-      "common_name": "Géranium zonal",
-      "description": "Pelargonium zonale, également connu sous le nom de géranium zonal, est une plante ornementale populaire, connue pour ses fleurs colorées et son feuillage vibrant. Elle préfère une lumière modérée et nécessite un arrosage régulier."
+      "common_name": "Géranium zonale",
+      "description": "Pelargonium zonale est une plante ornementale populaire. Elle est connue pour ses fleurs vibrantes et son entretien facile à l'intérieur."
     },
     "it": {
       "common_name": "Geranio zonale",
-      "description": "Pelargonium zonale, conosciuto come geranio zonale, è una pianta ornamentale molto popolare, nota per i suoi fiori colorati e il fogliame vibrante. Cresce bene alla luce solare moderata e richiede annaffiature regolari."
+      "description": "Pelargonium zonale è una pianta da fiore popolare. È nota per i suoi fiori vivaci e la cura facile in casa."
     },
     "es": {
       "common_name": "Geranio zonal",
-      "description": "Pelargonium zonale, también conocido como geranio zonal, es una planta ornamental muy popular, conocida por sus coloridas flores y su follaje vibrante. Se desarrolla bien con luz solar moderada y requiere riego regular."
+      "description": "Pelargonium zonale es una planta ornamental popular. Es conocida por sus flores vibrantes y su fácil cuidado en interiores."
     },
     "pt": {
       "common_name": "Gerânio zonal",
-      "description": "Pelargonium zonale, também conhecido como gerânio zonal, é uma planta ornamental popular, conhecida pelas suas flores coloridas e folhagem vibrante. Prefere luz solar moderada e necessita de rega regular."
+      "description": "Pelargonium zonale é uma planta ornamental popular. É conhecida pelas suas flores vibrantes e fácil cuidado em ambientes internos."
     },
     "ar": {
-      "common_name": "الجرانيوما المنطقي",
-      "description": "Pelargonium zonale، المعروف بالجرانيوما المنطقي، هو نبات زينة شائع معروف بزهوره الملونة وأوراقه الخضراء الزاهية. ينمو بشكل جيد تحت ضوء الشمس المعتدل ويحتاج إلى الري المنتظم."
+      "common_name": "الجيرانيوم الزونالي",
+      "description": "Pelargonium zonale هو نبات مزخرف شائع. يعرف بأزهاره الزاهية والعناية السهلة في الأماكن المغلقة."
     },
     "hi": {
-      "common_name": "जोनल गेरानियम",
-      "description": "Pelargonium zonale, जिसे जोनल गेरानियम के नाम से जाना जाता है, एक लोकप्रिय सजावटी पौधा है जो अपने रंगीन फूलों और हरे पत्तों के लिए जाना जाता है। यह मध्यम सूर्य प्रकाश में अच्छा बढ़ता है और नियमित रूप से पानी की आवश्यकता होती है।"
+      "common_name": "ज़ोनल गेरानियम",
+      "description": "Pelargonium zonale एक लोकप्रिय फूलों वाला पौधा है। यह इसके जीवंत फूलों और घर के अंदर आसान देखभाल के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "带状天竺葵",
-      "description": "Pelargonium zonale，也称为带状天竺葵，是一种常见的观赏植物，以其色彩鲜艳的花朵和充满活力的叶子而闻名。它在适度阳光下生长良好，且需要定期浇水。"
+      "common_name": "区域天竺葵",
+      "description": "Pelargonium zonale 是一种流行的开花植物。它以其生动的花朵和室内易于护理而闻名。"
     },
     "ja": {
-      "common_name": "ゾナルゼラニウム",
-      "description": "Pelargonium zonale、一般にゾナルゼラニウムとして知られるこの植物は、鮮やかな花と生き生きとした葉が特徴の人気のある観賞植物です。適度な日光でよく育ち、定期的な水やりが必要です。"
+      "common_name": "ゾーンゼラニウム",
+      "description": "Pelargonium zonale は人気のある開花植物です。鮮やかな花と室内での簡単な手入れで知られています。"
     },
     "ko": {
-      "common_name": "존럴 제라늄",
-      "description": "Pelargonium zonale, 일반적으로 존럴 제라늄으로 알려진 이 식물은 화려한 꽃과 활기찬 잎사귀로 유명한 인기 있는 관상용 식물입니다. 적당한 햇빛에서 잘 자라며 정기적인 물 주기가 필요합니다."
+      "common_name": "존날 제라늄",
+      "description": "Pelargonium zonale는 인기 있는 꽃 식물입니다. 생동감 있는 꽃과 실내에서의 쉬운 관리로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/75674/pelargonium-zonale/details",
+      "https://www.rhs.org.uk/advice/profile?pid=226",
       "https://www.gardenia.net/plant/pelargonium-zonale"
     ]
   }

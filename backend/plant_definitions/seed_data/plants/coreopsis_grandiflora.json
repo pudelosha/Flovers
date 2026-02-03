@@ -7,12 +7,10 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "balcony-flowers"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,9 +35,9 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日なた",
+          "ja": "日向",
           "ko": "양지"
         }
       }
@@ -51,7 +49,7 @@
           "en": "Well-drained soil",
           "pl": "Przepuszczalna",
           "de": "Durchlässig",
-          "fr": "Bien drainé",
+          "fr": "Drainant",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodno-ciepło",
-          "de": "Kühl bis warm",
-          "fr": "Frais à chaud",
-          "it": "Fresco-caldo",
-          "es": "Fresco a cálido",
-          "pt": "Fresco a quente",
-          "ar": "معتدل دافئ",
-          "hi": "ठंडा-गरम",
-          "zh": "凉至暖",
-          "ja": "涼〜暖",
-          "ko": "서늘~따뜻"
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
         }
       }
     },
@@ -131,7 +129,7 @@
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "عادية",
           "hi": "सामान्य",
           "zh": "一般",
           "ja": "普通",
@@ -151,7 +149,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Horstig",
-          "fr": "Vivace touffe",
-          "it": "Perenne cespo",
-          "es": "Perenne en mata",
-          "pt": "Perene em touceira",
-          "ar": "معمرة كتلية",
-          "hi": "गुच्छेदार",
-          "zh": "丛生多年生",
+          "en": "Upright clump",
+          "pl": "Kępiasty",
+          "de": "Horstbildend",
+          "fr": "Touffe dressée",
+          "it": "Cespugliosa",
+          "es": "En mata",
+          "pt": "Em touceira",
+          "ar": "نمو قائم",
+          "hi": "झाड़ीदार",
+          "zh": "丛生",
           "ja": "株立ち",
           "ko": "포기형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie przelać",
+          "de": "Nicht vernässen",
+          "fr": "Éviter excès",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Não encharcar",
+          "ar": "تجنب الغمر",
+          "hi": "अधिक पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿不可",
+          "ko": "과습 금물"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids",
+          "pl": "Mszyce",
+          "de": "Blattläuse",
+          "fr": "Pucerons",
+          "it": "Afidi",
+          "es": "Pulgones",
+          "pt": "Pulgões",
+          "ar": "المن",
+          "hi": "एफिड्स",
+          "zh": "蚜虫",
+          "ja": "アブラムシ",
+          "ko": "진딧물"
         }
       }
     }
@@ -181,57 +217,57 @@
   "translations": {
     "en": {
       "common_name": "Large-flowered Tickseed",
-      "description": "Coreopsis grandiflora is a sun-loving perennial known for its bright yellow daisy-like flowers. It thrives in well-drained soil and blooms reliably through summer. The plant is drought tolerant once established."
+      "description": "Coreopsis grandiflora is a sun-loving perennial known for its bright yellow daisy-like flowers. It prefers well-drained soil and moderate watering. In containers, it should be kept in a bright, sunny position."
     },
     "pl": {
       "common_name": "Nachyłek wielkokwiatowy",
-      "description": "Coreopsis grandiflora to bylina kochająca słońce, o dużych żółtych kwiatach. Najlepiej rośnie w przepuszczalnej glebie i kwitnie latem. Po ukorzenieniu dobrze znosi suszę."
+      "description": "Coreopsis grandiflora to bylina lubiąca słońce, ceniona za żółte kwiaty. Wymaga przepuszczalnej gleby i umiarkowanego podlewania. Uprawiana w donicy potrzebuje bardzo jasnego stanowiska."
     },
     "de": {
       "common_name": "Großblütiges Mädchenauge",
-      "description": "Coreopsis grandiflora ist eine mehrjährige Pflanze mit leuchtend gelben Blüten. Sie bevorzugt volle Sonne und gut durchlässigen Boden. Nach dem Anwachsen ist sie trockenheitsverträglich."
+      "description": "Coreopsis grandiflora ist eine sonnenliebende Staude mit gelben Blüten. Sie wächst am besten in gut durchlässiger Erde und bei mäßiger Wassergabe. Im Topf braucht sie einen sehr hellen Standort."
     },
     "fr": {
       "common_name": "Coréopsis à grandes fleurs",
-      "description": "Coreopsis grandiflora est une vivace appréciant le plein soleil et les sols drainés. Elle produit de grandes fleurs jaunes tout l’été. Une fois établie, elle tolère la sécheresse."
+      "description": "Coreopsis grandiflora est une plante vivace aimant le soleil et les sols drainants. Elle demande des arrosages modérés. En pot, elle doit être placée en situation très lumineuse."
     },
     "it": {
       "common_name": "Coreopsis a grandi fiori",
-      "description": "Coreopsis grandiflora è una perenne rustica dai fiori gialli brillanti. Predilige pieno sole e terreno ben drenato. Resiste bene alla siccità dopo l’attecchimento."
+      "description": "Coreopsis grandiflora è una perenne amante del sole con fiori gialli vistosi. Preferisce terreno ben drenato e annaffiature moderate. In vaso richiede molta luce."
     },
     "es": {
       "common_name": "Coreopsis de flor grande",
-      "description": "Coreopsis grandiflora es una planta perenne amante del sol con flores amarillas vistosas. Crece mejor en suelos bien drenados. Es tolerante a la sequía cuando está establecida."
+      "description": "Coreopsis grandiflora es una planta perenne de pleno sol con flores amarillas. Necesita suelo bien drenado y riego moderado. En maceta debe situarse en un lugar muy luminoso."
     },
     "pt": {
-      "common_name": "Coreópsis-de-flor-grande",
-      "description": "Coreopsis grandiflora é uma planta perene de sol pleno com flores amarelas vibrantes. Prefere solo bem drenado. Após estabelecida, tolera períodos de seca."
+      "common_name": "Coreopsis-de-flor-grande",
+      "description": "Coreopsis grandiflora é uma planta perene que prefere sol pleno e solo bem drenado. Requer rega moderada. Em vaso, deve ficar em local muito claro."
     },
     "ar": {
-      "common_name": "كوريوپسيس كبيرة الأزهار",
-      "description": "Coreopsis grandiflora نبات معمر محب للشمس يتميز بأزهاره الصفراء الزاهية. ينمو في تربة جيدة التصريف. يتحمل الجفاف بعد استقراره."
+      "common_name": "كوريوپسس كبيرة الأزهار",
+      "description": "نبات Coreopsis grandiflora معمر محب للشمس وله أزهار صفراء. يفضل تربة جيدة التصريف وريًا معتدلًا. عند زراعته في أصيص يحتاج إلى ضوء قوي."
     },
     "hi": {
-      "common_name": "बड़ा फूल टिकसीड",
-      "description": "Coreopsis grandiflora एक धूप पसंद करने वाला बहुवर्षीय पौधा है। यह अच्छी जल निकास वाली मिट्टी में उगता है और गर्मियों में फूल देता है। स्थापित होने पर सूखा सहन करता है।"
+      "common_name": "कोरियोप्सिस",
+      "description": "Coreopsis grandiflora एक धूप पसंद करने वाला बहुवर्षीय पौधा है। इसे अच्छी जल निकास वाली मिट्टी और मध्यम पानी चाहिए। गमले में इसे तेज रोशनी में रखें।"
     },
     "zh": {
       "common_name": "大花金鸡菊",
-      "description": "Coreopsis grandiflora 是喜阳的多年生植物，开鲜黄色花。适合排水良好的土壤。成活后具有一定耐旱性。"
+      "description": "Coreopsis grandiflora 是喜阳的多年生植物，花色鲜黄。它需要排水良好的土壤和适量浇水。盆栽时应放在光照充足处。"
     },
     "ja": {
       "common_name": "オオキンケイギク",
-      "description": "Coreopsis grandiflora は日当たりを好む多年草で、鮮やかな黄色の花を咲かせます。水はけの良い土壌を好み、定着後は乾燥に強いです。"
+      "description": "Coreopsis grandiflora は日当たりを好む多年草です。水はけの良い土と適度な水やりを必要とします。鉢植えでは明るい場所に置きます。"
     },
     "ko": {
       "common_name": "큰금계국",
-      "description": "Coreopsis grandiflora는 햇빛을 좋아하는 다년생 식물입니다. 배수가 좋은 토양에서 잘 자라며 노란 꽃을 피웁니다. 활착 후에는 건조에 강합니다."
+      "description": "Coreopsis grandiflora는 햇빛을 좋아하는 다년생 식물입니다. 배수가 좋은 토양과 보통의 물주기가 필요합니다. 화분에서는 밝은 곳에 두는 것이 좋습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a375",
-      "https://www.rhs.org.uk/plants/4220/coreopsis-grandiflora/details",
+      "https://plants.ces.ncsu.edu/plants/coreopsis-grandiflora/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b561",
       "https://extension.umn.edu/flowers/coreopsis"
     ]
   }

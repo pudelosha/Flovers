@@ -1,27 +1,27 @@
 {
   "external_id": "clivia_miniata",
-  "name": "Clivia",
+  "name": "Natal lily",
   "latin": "Clivia miniata",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "peat-free",
+    "orchid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 48,
   "image_hero": "clivia_miniata.jpg",
   "image_thumb": "clivia_miniata.jpg",
   "traits": [
@@ -29,17 +29,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux indirect",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ परोक्ष रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい日陰",
+          "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Rich, well-drained",
+          "pl": "Żyzne, przepuszczalne",
+          "de": "Nährstoffreich, drainiert",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غني وجيد التصريف",
+          "hi": "उपजाऊ, जल-निकासी",
+          "zh": "疏松排水好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물"
+          "en": "Let top dry",
+          "pl": "Podsusz wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga in superficie",
+          "es": "Deja secar arriba",
+          "pt": "Deixe secar em cima",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干了再浇",
+          "ja": "表土が乾いてから",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "쉬움"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25°C"
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna",
-          "de": "Normale Luft",
+          "en": "Average humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
           "fr": "Humidité normale",
           "it": "Umidità normale",
           "es": "Humedad normal",
           "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常の湿度",
+          "ar": "رطوبة منزلية عادية",
+          "hi": "सामान्य आर्द्रता",
+          "zh": "普通室内湿度",
+          "ja": "標準的な湿度",
           "ko": "보통 습도"
         }
       }
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "ja": "ペットに有毒",
+          "ko": "반려동물 독성"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "en": "Slow, clumping",
+          "pl": "Powolna, kępowa",
+          "de": "Langsam, horstig",
+          "fr": "Lente, en touffe",
+          "it": "Lenta, cespitosa",
+          "es": "Lenta, en matas",
+          "pt": "Lenta, em touceira",
+          "ar": "بطيئة ومتكتلة",
+          "hi": "धीमी, गुच्छेदार",
+          "zh": "生长慢，丛生",
+          "ja": "ゆっくり株立ち",
+          "ko": "느리게 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبتلة",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentlich Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶见虫害",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Bush lily",
-      "description": "Clivia miniata is a shade-tolerant perennial native to South Africa. It produces clusters of orange flowers and thick evergreen leaves. It is commonly grown indoors in bright, indirect light."
+      "common_name": "Natal lily",
+      "description": "Clivia miniata is a clumping evergreen with strap-like leaves and spring flower clusters. Keep it in bright, indirect light and let the top of the mix dry before watering. Reduce watering during a cool winter rest to encourage blooming."
     },
     "pl": {
-      "common_name": "Kliwia pomarańczowa",
-      "description": "Clivia miniata to bylina pochodząca z Afryki Południowej. Tworzy pomarańczowe kwiaty i mięsiste, zielone liście. Dobrze rośnie w jasnym, rozproszonym świetle."
+      "common_name": "kliwia pomarańczowa",
+      "description": "Clivia miniata tworzy kępy z długimi, skórzastymi liśćmi i kwiatami pojawiającymi się zwykle wiosną. Lubi jasne, rozproszone światło i podlewanie dopiero po przeschnięciu wierzchu podłoża. Zimą ogranicz podlewanie i zapewnij chłodniejszy okres spoczynku dla lepszego kwitnienia."
     },
     "de": {
-      "common_name": "Riemenblume",
-      "description": "Clivia miniata stammt aus Südafrika und ist eine robuste Zimmerpflanze. Sie bildet auffällige orange Blüten und dicke Blätter. Sie bevorzugt helles, indirektes Licht."
+      "common_name": "Klivie",
+      "description": "Clivia miniata ist eine horstbildende, immergrüne Pflanze mit riemenförmigen Blättern und Blütenständen im Frühjahr. Stelle sie hell, aber ohne direkte Sonne, und gieße erst, wenn die Oberfläche abgetrocknet ist. Im Winter kühler und deutlich sparsamer gießen, um die Blütenbildung zu fördern."
     },
     "fr": {
-      "common_name": "Clivie",
-      "description": "Clivia miniata est une plante vivace originaire d’Afrique du Sud. Elle porte des fleurs orange décoratives et des feuilles persistantes. Elle apprécie une lumière vive sans soleil direct."
+      "common_name": "clivie",
+      "description": "Clivia miniata forme une touffe persistante aux longues feuilles et à des bouquets de fleurs au printemps. Placez-la en lumière vive indirecte et arrosez lorsque le dessus du substrat a séché. En hiver, réduisez l’arrosage et gardez-la plus au frais pour favoriser la floraison."
     },
     "it": {
-      "common_name": "Clivia",
-      "description": "Clivia miniata è una pianta perenne sudafricana. Produce fiori arancioni vistosi e foglie sempreverdi. È adatta alla coltivazione in casa con luce indiretta."
+      "common_name": "clivia",
+      "description": "Clivia miniata è una sempreverde cespitosa con foglie nastriformi e infiorescenze primaverili. Preferisce luce brillante ma indiretta e annaffiature solo quando lo strato superiore del terriccio è asciutto. In inverno riduci l’acqua e mantieni un periodo più fresco per stimolare la fioritura."
     },
     "es": {
-      "common_name": "Clivia",
-      "description": "Clivia miniata es una planta perenne de Sudáfrica. Destaca por sus flores anaranjadas y hojas verdes gruesas. Se cultiva bien en interiores con luz indirecta."
+      "common_name": "lirio de Natal",
+      "description": "Clivia miniata es una planta perenne en mata con hojas acintadas y ramilletes de flores en primavera. Necesita luz brillante e indirecta y riego cuando se haya secado la capa superior del sustrato. En invierno conviene reducir el riego y darle un descanso fresco para favorecer la floración."
     },
     "pt": {
-      "common_name": "Clívia",
-      "description": "Clivia miniata é uma planta perene originária da África do Sul. Possui flores alaranjadas e folhas verdes espessas. Prefere luz indireta e cuidados simples."
+      "common_name": "lírio-do-natal",
+      "description": "Clivia miniata é uma planta perene que forma touceiras, com folhas longas e flores em cachos na primavera. Prefere luz intensa indireta e regas quando a superfície do substrato estiver seca. No inverno, reduza a água e mantenha um período mais fresco para estimular a floração."
     },
     "ar": {
       "common_name": "كليفيا",
-      "description": "نبات كليفيا مينيياتا موطنه جنوب أفريقيا. يتميز بأزهاره البرتقالية وأوراقه الخضراء السميكة. يزرع غالبًا في الداخل مع ضوء غير مباشر."
+      "description": "Clivia miniata نبات دائم الخضرة يتكتل بأوراق شريطية ونورات تظهر غالبًا في الربيع. يفضل ضوءًا ساطعًا غير مباشر والري بعد جفاف سطح التربة. في الشتاء قلل الري ووفّر فترة راحة أبرد لتحفيز الإزهار."
     },
     "hi": {
       "common_name": "क्लिविया",
-      "description": "क्लिविया मिनिएटा दक्षिण अफ्रीका का एक बहुवर्षीय पौधा है। इसमें नारंगी फूल और मोटी हरी पत्तियाँ होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी में अच्छा बढ़ता है।"
+      "description": "Clivia miniata गुच्छेदार सदाबहार पौधा है, जिसकी पत्तियाँ पट्टी जैसी होती हैं और वसंत में फूलों के गुच्छे आते हैं। इसे तेज़ परोक्ष रोशनी दें और ऊपर की मिट्टी सूखने पर ही पानी दें। सर्दियों में पानी कम करें और ठंडा विश्राम काल दें ताकि फूल अच्छे आएँ।"
     },
     "zh": {
       "common_name": "君子兰",
-      "description": "君子兰原产于南非，是一种多年生植物。它具有橙色花朵和厚实的常绿叶片。适合在室内明亮散射光下生长。"
+      "description": "Clivia miniata 为丛生常绿植物，叶片带状，常在春季开成簇花。适合明亮散射光，表土干后再浇水。冬季适当降温并减少浇水，有助于促进来年开花。"
     },
     "ja": {
       "common_name": "クンシラン",
-      "description": "クンシランは南アフリカ原産の多年草です。オレンジ色の花と厚い葉が特徴です。室内の明るい日陰で育てられます。"
+      "description": "Clivia miniata は株立ちする常緑で、帯状の葉と春の花房が特徴です。明るい間接光で育て、用土の表面が乾いてから水やりします。冬は涼しく乾かし気味にして休ませると開花しやすくなります。"
     },
     "ko": {
       "common_name": "군자란",
-      "description": "군자란은 남아프리카 원산의 다년생 식물입니다. 주황색 꽃과 두꺼운 잎이 특징입니다. 밝은 간접광의 실내 환경에 적합합니다."
+      "description": "Clivia miniata는 띠 모양 잎을 가진 군생 상록식물로, 봄에 꽃이 모여 핍니다. 밝은 간접광에서 키우고 겉흙이 마른 뒤 물을 주세요. 겨울에는 물을 줄이고 서늘한 휴면기를 주면 개화에 도움이 됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/clivia/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280234",
-      "https://plants.ces.ncsu.edu/plants/clivia-miniata/"
+      "https://www.rhs.org.uk/plants/4036/clivia-miniata/details",
+      "https://www.rhs.org.uk/plants/clivia/how-to-grow",
+      "https://yardandgarden.extension.iastate.edu/how-to/growing-clivia-indoors",
+      "https://plants.ces.ncsu.edu/plants/clivia-miniata/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/clivia-lily"
     ]
   }
 }

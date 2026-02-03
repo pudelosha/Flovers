@@ -1,27 +1,26 @@
 {
   "external_id": "ficus_microcarpa",
-  "name": "Chinese Banyan",
+  "name": "Chinese banyan",
   "latin": "Ficus microcarpa",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "bonsai",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "ficus_microcarpa.jpg",
   "image_thumb": "ficus_microcarpa.jpg",
   "traits": [
@@ -29,17 +28,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
-          "ja": "明るい光",
+          "ja": "明るい間接光",
           "ko": "밝은 간접광"
         }
       }
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Gut drainierend",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "疏松排水好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiature medie",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Let top dry",
+          "pl": "Przesusz wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga sopra",
+          "es": "Secar la capa sup.",
+          "pt": "Secar a camada sup.",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干再浇",
+          "ja": "表土乾いたら水",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,45 +85,7 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "簡単",
-          "ko": "쉬움"
-        }
-      }
-    },
-    {
-      "key": "temperature",
-      "value": {
-        "text": {
-          "en": "Warm indoor temps",
-          "pl": "Ciepłe",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖环境",
-          "ja": "暖かい",
-          "ko": "따뜻함"
-        }
-      }
-    },
-    {
-      "key": "humidity",
-      "value": {
-        "text": {
-          "en": "Average humidity",
+          "en": "Moderate",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
@@ -132,10 +93,48 @@
           "es": "Media",
           "pt": "Média",
           "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "中等湿度",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "普通",
-          "ko": "보통 습도"
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Gradisce umidità",
+          "es": "Le gusta humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润",
+          "ja": "湿度が好き",
+          "ko": "습도 선호"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سام",
-          "hi": "विषैला",
-          "zh": "对宠物有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic sap",
+          "pl": "Toksyczny sok",
+          "de": "Giftiger Milchsaft",
+          "fr": "Sève irritante",
+          "it": "Linfa irritante",
+          "es": "Savia irritante",
+          "pt": "Seiva irritante",
+          "ar": "عصارة مهيِّجة",
+          "hi": "दूधिया रस विषाक्त",
+          "zh": "乳汁有毒",
+          "ja": "樹液は有毒",
+          "ko": "수액 유독"
         }
       }
     },
@@ -162,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell",
-          "fr": "Rapide",
-          "it": "Rapida",
-          "es": "Rápido",
-          "pt": "Rápido",
-          "ar": "سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "성장 빠름"
+          "en": "Slow–medium",
+          "pl": "Wolny–średni",
+          "de": "Langsam–mittel",
+          "fr": "Lente à modérée",
+          "it": "Lenta–media",
+          "es": "Lento–medio",
+          "pt": "Lento–médio",
+          "ar": "بطيء–متوسط",
+          "hi": "धीमा–मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅め〜普通",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drafts",
+          "pl": "Unikaj przeciągów",
+          "de": "Zugluft meiden",
+          "fr": "Éviter les courants",
+          "it": "Evita correnti",
+          "es": "Evita corrientes",
+          "pt": "Evite correntes",
+          "ar": "تجنب التيارات",
+          "hi": "ठंडी हवा से बचें",
+          "zh": "避免冷风与积水",
+          "ja": "寒風と過湿NG",
+          "ko": "찬바람·과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, scale",
+          "pl": "Przędziorki, tarczniki",
+          "de": "Milben, Schildläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ وحشرات قشرية",
+          "hi": "माइट्स, स्केल",
+          "zh": "红蜘蛛、介壳虫",
+          "ja": "ハダニ・カイガラムシ",
+          "ko": "응애·깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Chinese Banyan",
-      "description": "Ficus microcarpa is a tropical evergreen tree often grown indoors as a bonsai or ornamental plant. It prefers bright indirect light and evenly moist soil. The species is known for its aerial roots and tolerance of pruning."
+      "common_name": "Chinese banyan",
+      "description": "Ficus microcarpa is a tropical fig often grown indoors as a small tree or bonsai. Keep it in bright, indirect light and water when the surface of the mix dries. It prefers warm temperatures and benefits from higher humidity."
     },
     "pl": {
       "common_name": "Figowiec drobnolistny",
-      "description": "Ficus microcarpa to tropikalne zimozielone drzewo często uprawiane w pomieszczeniach. Preferuje jasne, rozproszone światło i umiarkowane podlewanie. Dobrze znosi przycinanie i formowanie."
+      "description": "Ficus microcarpa to tropikalny figowiec uprawiany w domu jako drzewko lub bonsai. Zapewnij jasne, rozproszone światło i podlewaj, gdy wierzch podłoża przeschnie. Lubi ciepło i lepiej rośnie przy wyższej wilgotności powietrza."
     },
     "de": {
-      "common_name": "Chinesische Feige",
-      "description": "Ficus microcarpa ist ein tropischer, immergrüner Baum für die Zimmerkultur. Er mag helles, indirektes Licht und gleichmäßig feuchte Erde. Die Pflanze ist schnittverträglich."
+      "common_name": "Kleinblättrige Feige",
+      "description": "Ficus microcarpa ist ein tropischer Feigenbaum, der häufig als Zimmerbaum oder Bonsai gehalten wird. Stelle ihn hell ohne pralle Sonne und gieße, wenn die obere Schicht abgetrocknet ist. Warme Temperaturen und etwas höhere Luftfeuchte sind günstig."
     },
     "fr": {
-      "common_name": "Figuier de Malaisie",
-      "description": "Ficus microcarpa est un arbre tropical persistant souvent cultivé en intérieur. Il apprécie une lumière vive indirecte et un arrosage modéré. Il supporte bien la taille."
+      "common_name": "Figuier à petites feuilles",
+      "description": "Ficus microcarpa est un figuier tropical cultivé en intérieur comme petit arbre ou bonsaï. Donnez une lumière vive indirecte et arrosez quand la surface du substrat a séché. Il aime la chaleur et profite d’une humidité ambiante plus élevée."
     },
     "it": {
-      "common_name": "Fico cinese",
-      "description": "Ficus microcarpa è un albero tropicale sempreverde coltivato come pianta da interno. Richiede luce intensa indiretta e annaffiature regolari. Tollera bene la potatura."
+      "common_name": "Fico a foglie piccole",
+      "description": "Ficus microcarpa è un fico tropicale coltivato in casa come alberello o bonsai. Tienilo in luce intensa ma indiretta e annaffia quando lo strato superiore si asciuga. Preferisce temperature calde e beneficia di una maggiore umidità."
     },
     "es": {
-      "common_name": "Banyan chino",
-      "description": "Ficus microcarpa es un árbol tropical perenne cultivado en interiores. Prefiere luz brillante indirecta y riego moderado. Es resistente a la poda."
+      "common_name": "Ficus microcarpa",
+      "description": "Ficus microcarpa es un ficus tropical que se cultiva en interior como arbolito o bonsái. Colócalo con luz brillante e indirecta y riega cuando se seque la capa superior del sustrato. Prefiere temperaturas cálidas y agradece más humedad ambiental."
     },
     "pt": {
-      "common_name": "Banyan chinês",
-      "description": "Ficus microcarpa é uma árvore tropical perene usada como planta ornamental. Gosta de luz indireta brilhante e rega moderada. Aceita bem podas."
+      "common_name": "Figueira-chinesa",
+      "description": "Ficus microcarpa é uma figueira tropical usada como planta de interior e bonsai. Mantenha em luz brilhante indireta e regue quando a camada superior do substrato secar. Gosta de calor e se beneficia de maior umidade do ar."
     },
     "ar": {
-      "common_name": "التين الصيني",
-      "description": "فيكس ميكروكاربا شجرة استوائية دائمة الخضرة تزرع داخل المنازل. تفضل الضوء الساطع غير المباشر والري المعتدل. تتحمل التقليم جيدًا."
+      "common_name": "فيكس ميكروكاربا",
+      "description": "Ficus microcarpa شجرة تين استوائية تُربّى داخل المنزل كشجرة صغيرة أو بونساي. ضَعها في ضوء ساطع غير مباشر واسقِها عندما يجف سطح التربة. تفضّل الدفء وتستفيد من رطوبة هواء أعلى."
     },
     "hi": {
-      "common_name": "चीनी बरगद",
-      "description": "फाइकस माइक्रोकार्पा एक उष्णकटिबंधीय सदाबहार पौधा है। इसे तेज लेकिन अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। यह छंटाई सहन करता है।"
+      "common_name": "फिकस माइक्रोकार्पा",
+      "description": "Ficus microcarpa एक उष्णकटिबंधीय फ़िकस है जिसे घर के अंदर छोटे पेड़ या बोन्साई के रूप में उगाया जाता है। इसे तेज़ अप्रत्यक्ष रोशनी दें और जब ऊपर की मिट्टी सूख जाए तब पानी दें। यह गर्म तापमान पसंद करता है और अधिक नमी से लाभ होता है।"
     },
     "zh": {
-      "common_name": "细叶榕",
-      "description": "细叶榕是一种热带常绿植物，常作为室内观赏植物。喜明亮散射光和适度浇水。耐修剪，适合造型。"
+      "common_name": "小叶榕",
+      "description": "Ficus microcarpa 是热带榕属植物，常作为室内小乔木或盆景栽培。放在明亮散射光处，表土干后再浇水。喜温暖环境，并在较高湿度下生长更好。"
     },
     "ja": {
       "common_name": "ガジュマル",
-      "description": "フィカス・ミクロカルパは室内で育てられる熱帯性常緑樹です。明るい間接光と適度な水やりを好みます。剪定に強い植物です。"
+      "description": "Ficus microcarpa は熱帯性のイチジクの仲間で、室内では観葉樹や盆栽として育てられます。明るい間接光に置き、用土の表面が乾いてから水やりします。暖かさを好み、湿度が高いと調子が良いです。"
     },
     "ko": {
       "common_name": "가주마루",
-      "description": "피쿠스 마이크로카르파는 실내에서 키우는 열대 상록수입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 가지치기에 강합니다."
+      "description": "Ficus microcarpa 는 열대성 무화과류로 실내에서는 작은 나무나 분재로 키웁니다. 밝은 간접광에서 키우고 겉흙이 마르면 물을 줍니다. 따뜻한 온도를 선호하며 습도가 높으면 더 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ficus/microcarpa/details",
-      "https://edis.ifas.ufl.edu/publication/FP235",
-      "https://www.botanicgardens.org/ficus-care"
+      "https://plants.ces.ncsu.edu/plants/ficus-microcarpa-ginseng/",
+      "https://www.rhs.org.uk/plants/ornamental-figs/growing-guide",
+      "https://www.provenwinners.com/learn/houseplants/ficus",
+      "https://www.rhs.org.uk/plants/32855/ficus-microcarpa/details",
+      "https://www.thompson-morgan.com/p/ficus-microcarpa-ginseng/wkf4189TM"
     ]
   }
 }

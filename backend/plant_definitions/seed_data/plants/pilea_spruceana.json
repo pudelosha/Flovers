@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "aroid"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "pilea_spruceana.jpg",
   "image_thumb": "pilea_spruceana.jpg",
   "traits": [
@@ -32,15 +32,15 @@
           "en": "Medium light",
           "pl": "Średnie światło",
           "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ja": "中くらいの光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka aroidów",
-          "de": "Aroid-Mischung",
-          "fr": "Mélange d'aroïdes",
-          "it": "Miscela per aroidi",
-          "es": "Mezcla para aroides",
-          "pt": "Mistura para aroides",
-          "ar": "خلطة آرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "箭头植物混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 혼합"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -75,10 +75,10 @@
           "es": "Riego moderado",
           "pt": "Rega moderada",
           "ar": "الري المعتدل",
-          "hi": "मध्यम पानी",
+          "hi": "मध्यम पानी देना",
           "zh": "适量浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -96,8 +96,8 @@
           "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
           "zh": "中等护理",
-          "ja": "中程度の手入れ",
-          "ko": "중간 난이도 관리"
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm temperatures",
-          "pl": "Ciepłe temperatury",
-          "de": "Warme Temperaturen",
-          "fr": "Températures chaudes",
-          "it": "Temperature calde",
-          "es": "Temperaturas cálidas",
-          "pt": "Temperaturas quentes",
-          "ar": "درجات حرارة دافئة",
-          "hi": "गर्म तापमान",
-          "zh": "温暖的温度",
-          "ja": "暖かい温度",
-          "ko": "따뜻한 온도"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchtigkeit",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -151,7 +151,7 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैले",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact growth",
-          "pl": "Kompaktowy wzrost",
-          "de": "Kompakte Wuchsform",
-          "fr": "Croissance compacte",
-          "it": "Crescita compatta",
-          "es": "Crecimiento compacto",
-          "pt": "Crescimento compacto",
-          "ar": "نمو مدمج",
-          "hi": "सघन वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクトな成長",
-          "ko": "콤팩트한 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsam bis mäßig",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "生长缓慢至适中",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 중간 속도 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare il sovra-irrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenze occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Trailed Pilea",
-      "description": "Pilea spruceana, or the Trailed Pilea, is a compact, low-maintenance tropical plant. Its unique, iridescent foliage adds a decorative touch to any indoor space."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana is a compact houseplant with striking green leaves, often seen in indoor gardens. It's known for its unique texture and relatively easy care."
     },
     "pl": {
-      "common_name": "Pilea wisząca",
-      "description": "Pilea spruceana, czyli Pilea wisząca, to kompaktowa, łatwa w pielęgnacji roślina tropikalna. Jej unikalne, iryzujące liście dodają dekoracyjnego charakteru każdemu wnętrzu."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana to kompaktowa roślina doniczkowa o efektownych zielonych liściach, często spotykana w ogrodach wewnętrznych. Charakteryzuje się unikalną fakturą i stosunkowo łatwą pielęgnacją."
     },
     "de": {
-      "common_name": "Hängende Pilea",
-      "description": "Pilea spruceana, auch als Hängende Pilea bekannt, ist eine kompakte, pflegeleichte tropische Pflanze. Ihre einzigartigen, schillernden Blätter verleihen jedem Raum eine dekorative Note."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana ist eine kompakte Zimmerpflanze mit auffälligen grünen Blättern, die oft in Innenräumen zu finden ist. Sie zeichnet sich durch ihre einzigartige Textur und relativ einfache Pflege aus."
     },
     "fr": {
-      "common_name": "Pilea suspendue",
-      "description": "Pilea spruceana, ou la Pilea suspendue, est une plante tropicale compacte et facile à entretenir. Son feuillage irisé unique apporte une touche décorative à tout espace intérieur."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana est une plante d'intérieur compacte avec des feuilles vertes frappantes, souvent vue dans les jardins intérieurs. Elle est connue pour sa texture unique et son entretien relativement facile."
     },
     "it": {
-      "common_name": "Pilea sospesa",
-      "description": "Pilea spruceana, o Pilea sospesa, è una pianta tropicale compatta e facile da curare. Il suo fogliame iridescente unico aggiunge un tocco decorativo a qualsiasi ambiente."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana è una pianta da interno compatta con foglie verdi sorprendenti, spesso vista nei giardini interni. È conosciuta per la sua texture unica e la cura relativamente facile."
     },
     "es": {
-      "common_name": "Pilea colgante",
-      "description": "Pilea spruceana, o Pilea colgante, es una planta tropical compacta y de fácil cuidado. Su follaje iridiscente único aporta un toque decorativo a cualquier espacio interior."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana es una planta compacta de interior con hojas verdes llamativas, a menudo vista en jardines interiores. Es conocida por su textura única y cuidado relativamente fácil."
     },
     "pt": {
-      "common_name": "Pilea pendente",
-      "description": "Pilea spruceana, ou Pilea pendente, é uma planta tropical compacta e de fácil manutenção. Sua folhagem iridescente única traz um toque decorativo a qualquer ambiente."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana é uma planta compacta de interior com folhas verdes impressionantes, frequentemente vista em jardins internos. É conhecida pela sua textura única e cuidado relativamente fácil."
     },
     "ar": {
-      "common_name": "بيلية متدلية",
-      "description": "Pilea spruceana، أو البيلية المتدلية، هي نبتة استوائية مدمجة وسهلة العناية. تضيف أوراقها اللامعة الفريدة لمسة ديكورية لأي مساحة داخلية."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana هي نبتة منزلية مدمجة ذات أوراق خضراء لافتة للنظر، وغالبًا ما تُرى في الحدائق الداخلية. تشتهر بنسيجها الفريد ورعايتها السهلة نسبيًا."
     },
     "hi": {
-      "common_name": "पाइलिया लटकी हुई",
-      "description": "Pilea spruceana, या पाइलिया लटकी हुई, एक संकुचित, कम-देखभाल वाली उष्णकटिबंधीय पौधा है। इसका अद्वितीय, इंद्रधनुषी पत्तियाँ किसी भी कमरे में सजावटी स्पर्श जोड़ती हैं।"
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana एक कॉम्पैक्ट इनडोर पौधा है जिसमें प्रभावशाली हरी पत्तियाँ होती हैं, जिसे अक्सर इनडोर बागवानी में देखा जाता है। यह अपनी अद्वितीय बनावट और अपेक्षाकृत आसान देखभाल के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "悬挂堇菜",
-      "description": "Pilea spruceana，或称悬挂堇菜，是一种紧凑、易于护理的热带植物。其独特的彩虹色叶子为任何室内空间增添装饰效果。"
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana 是一种紧凑型室内植物，具有引人注目的绿色叶子，常见于室内花园。它以其独特的质地和相对容易的护理而闻名。"
     },
     "ja": {
-      "common_name": "吊るされたピレア",
-      "description": "Pilea spruceana、または吊るされたピレアは、コンパクトで手入れが簡単な熱帯植物です。その独特の虹色の葉が、どんな室内空間にも装飾的なタッチを加えます。"
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceanaは、印象的な緑の葉を持つコンパクトな室内植物で、室内庭園でよく見られます。その独特の質感と比較的簡単な手入れで知られています。"
     },
     "ko": {
-      "common_name": "매달린 피레아",
-      "description": "Pilea spruceana 또는 매달린 피레아는 컴팩트하고 손쉬운 관리가 가능한 열대 식물입니다. 독특한 무지갯빛 잎은 모든 실내 공간에 장식적인 터치를 더합니다."
+      "common_name": "Pilea spruceana",
+      "description": "Pilea spruceana는 눈에 띄는 녹색 잎을 가진 컴팩트한 실내 식물로, 종종 실내 정원에서 볼 수 있습니다. 독특한 질감과 상대적으로 쉬운 관리로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/pilea-spruceana",
-      "https://www.gardenia.net/plant/pilea-spruceana"
+      "https://www.houseplantsexpert.com/pilea-spruceana-care",
+      "https://www.gardenersworld.com/plants/pilea-spruceana/"
     ]
   }
 }

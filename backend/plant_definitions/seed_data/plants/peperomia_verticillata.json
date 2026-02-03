@@ -4,14 +4,14 @@
   "latin": "Peperomia verticillata",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "all-purpose",
     "aroid"
   ],
   "water_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universal",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "यूनिवर्सल",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "보편적"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Água moderada",
+          "ar": "ماء معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "简单",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैले नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Kein Überwässern",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرंति पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata is a tropical plant known for its distinctive whorled leaves. It thrives in indirect sunlight and requires moderate watering."
+      "common_name": "Whorled Peperomia",
+      "description": "Peperomia verticillata is a slow-growing, non-toxic plant with medium light and water needs. It is well-suited for indoor environments."
     },
     "pl": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata to roślina tropikalna znana z charakterystycznych liści w okółkach. Rośnie najlepiej w średnim świetle i wymaga umiarkowanego podlewania."
+      "common_name": "Peperomia okrągła",
+      "description": "Peperomia verticillata to wolno rosnąca, nietoksyczna roślina o średnich wymaganiach dotyczących światła i wody. Doskonała do wnętrz."
     },
     "de": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata ist eine tropische Pflanze, die für ihre charakteristischen wirbelartigen Blätter bekannt ist. Sie gedeiht bei indirekter Sonneneinstrahlung und benötigt mäßiges Gießen."
+      "common_name": "Kreisblatt-Peperomie",
+      "description": "Peperomia verticillata ist eine langsam wachsende, ungiftige Pflanze mit mittleren Anforderungen an Licht und Wasser. Sie eignet sich gut für Innenräume."
     },
     "fr": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata est une plante tropicale connue pour ses feuilles disposées en verticilles. Elle préfère la lumière indirecte et nécessite un arrosage modéré."
+      "common_name": "Peperomia verticillée",
+      "description": "Peperomia verticillata est une plante à croissance lente, non toxique, avec des besoins modérés en lumière et en eau. Idéale pour l'intérieur."
     },
     "it": {
       "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata è una pianta tropicale nota per le sue foglie disposte a verticillo. Cresce bene in luce indiretta e richiede annaffiature moderate."
+      "description": "Peperomia verticillata è una pianta a crescita lenta, non tossica, con esigenze moderate di luce e acqua. Adatta agli ambienti interni."
     },
     "es": {
       "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata es una planta tropical conocida por sus hojas dispuestas en verticilos. Crece bien con luz indirecta y requiere riego moderado."
+      "description": "Peperomia verticillata es una planta de crecimiento lento, no tóxica, que necesita luz y agua moderadas. Ideal para interiores."
     },
     "pt": {
       "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata é uma planta tropical conhecida por suas folhas dispostas em verticilos. Prefere luz indireta e precisa de rega moderada."
+      "description": "Peperomia verticillata é uma planta de crescimento lento, não tóxica, com necessidades médias de luz e água. Ideal para ambientes internos."
     },
     "ar": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata هي نبات استوائي معروف بأوراقه الملتفة بشكل دائري. يزدهر في الضوء غير المباشر ويتطلب سقي معتدل."
+      "common_name": "بيبيروميا فيرتيسيلا",
+      "description": "بيبيروميا فيرتيسيلا هي نبات بطيء النمو وغير سام مع احتياجات معتدلة من الضوء والماء. مناسب للأماكن الداخلية."
     },
     "hi": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata एक उष्णकटिबंधीय पौधा है जिसे इसकी विशिष्ट चक्करदार पत्तियों के लिए जाना जाता है। यह अप्रत्यक्ष प्रकाश में उगता है और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "पीपरोमिया वर्टिसिलाटा",
+      "description": "पीपरोमिया वर्टिसिलाटा एक धीमी गति से बढ़ने वाला, गैर विषैला पौधा है, जिसे मध्यम प्रकाश और पानी की आवश्यकता होती है। यह इनडोर पर्यावरण के लिए उपयुक्त है।"
     },
     "zh": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata 是一种热带植物，以其独特的轮生叶而闻名。它在间接阳光下生长，需要适量的浇水。"
+      "common_name": "螺旋叶景天",
+      "description": "Peperomia verticillata 是一种生长缓慢的无毒植物，适应中等光照和水分需求。适合室内种植。"
     },
     "ja": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata は、特徴的な輪生葉で知られる熱帯植物です。間接光で育ち、中程度の水やりが必要です。"
+      "common_name": "ペペロミア・ヴェルティシラタ",
+      "description": "ペペロミア・ヴェルティシラタは、成長が遅く、非毒性の植物で、適度な光と水分が必要です。室内での栽培に適しています。"
     },
     "ko": {
-      "common_name": "Peperomia verticillata",
-      "description": "Peperomia verticillata는 독특한 원형 배열의 잎으로 유명한 열대 식물입니다. 간접광에서 잘 자라며 중간 정도의 물주기가 필요합니다."
+      "common_name": "피페로미아 베르티실라타",
+      "description": "피페로미아 베르티실라타는 성장 속도가 느리고 독성이 없는 식물로 중간 정도의 빛과 물을 필요로 합니다. 실내 환경에 적합합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/peperomia-verticillata",
-      "https://www.gardenia.net/plant/peperomia-verticillata"
+      "https://www.rhs.org.uk/Plants/126063/Peperomia-verticillata/Details",
+      "https://www.gardenia.net/plant-care/peperomia-verticillata"
     ]
   }
 }

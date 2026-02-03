@@ -1,6 +1,6 @@
 {
   "external_id": "beaucarnea_recurvata",
-  "name": "Ponytail Palm",
+  "name": "Ponytail palm",
   "latin": "Beaucarnea recurvata",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,15 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "beaucarnea_recurvata.jpg",
@@ -36,7 +37,7 @@
           "pt": "Luz intensa",
           "ar": "ضوء ساطع",
           "hi": "तेज़ रोशनी",
-          "zh": "强光照",
+          "zh": "明亮光照",
           "ja": "明るい光",
           "ko": "밝은 빛"
         }
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well draining",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Drenante",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
+          "en": "Fast-draining",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainierend",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जल-निकासी मिट्टी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Infrequent",
-          "pl": "Rzadkie",
-          "de": "Selten",
-          "fr": "Peu fréquent",
-          "it": "Raro",
-          "es": "Escaso",
-          "pt": "Raro",
-          "ar": "نادر",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ",
-          "ko": "드물게"
+          "en": "Let dry out",
+          "pl": "Podlewaj po wysch.",
+          "de": "Erst trocken gießen",
+          "fr": "Laisser sécher",
+          "it": "Lascia asciugare",
+          "es": "Dejar secar",
+          "pt": "Deixar secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "마르면 물"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr leicht",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "Warm, no cold",
+          "pl": "Ciepło, bez chłodu",
+          "de": "Warm, frostfrei",
+          "fr": "Chaud, sans froid",
+          "it": "Caldo, no freddo",
+          "es": "Cálido, sin frío",
+          "pt": "Quente, sem frio",
+          "ar": "دافئ دون برد",
+          "hi": "गरम, ठंड नहीं",
+          "zh": "温暖怕冷",
+          "ja": "暖かく寒さNG",
+          "ko": "따뜻, 추위 주의"
         }
       }
     },
@@ -122,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average home",
+          "pl": "Domowa przeciętna",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Humidade normal",
+          "ar": "رطوبة منزلية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zw.",
+          "de": "Ungiftig für Tiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica animali",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペット無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -160,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "生长慢",
-          "ja": "成長遅い",
-          "ko": "느림"
+          "en": "Slow grower",
+          "pl": "Wolno rośnie",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Cresce devagar",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長ゆっくり",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter excès d’eau",
+          "it": "Evita troppa acqua",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso de água",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी न दें",
+          "zh": "忌积水",
+          "ja": "水のやり過ぎ注意",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Przędziorki, wełn.",
+          "de": "Milben, Wollläuse",
+          "fr": "Acariens, cochen.",
+          "it": "Acari, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عثّ وبق دقيقي",
+          "hi": "माइट्स, मीलिबग",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ・カイガラム",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ponytail Palm",
-      "description": "Beaucarnea recurvata is a slow-growing plant native to Mexico with a swollen trunk that stores water. It prefers bright light and infrequent watering, making it suitable for indoor conditions. Overwatering is the most common cause of problems."
+      "common_name": "Ponytail palm",
+      "description": "A slow-growing caudiciform plant with a swollen base that stores water and arching, strap-like leaves. Give it very bright light and a fast-draining mix. Water only after the pot dries almost completely."
     },
     "pl": {
       "common_name": "Nolina odgięta",
-      "description": "Beaucarnea recurvata pochodzi z Meksyku i ma zgrubiały pień magazynujący wodę. Lubi jasne stanowiska i rzadkie podlewanie, dlatego dobrze sprawdza się w domu. Nadmiar wody jest jej największym zagrożeniem."
+      "description": "Wolno rosnąca roślina z zgrubiałą nasadą pnia magazynującą wodę i kępkami wąskich, przewieszających się liści. Lubi bardzo jasne stanowisko i przepuszczalne podłoże. Podlewaj dopiero, gdy podłoże prawie całkiem przeschnie."
     },
     "de": {
       "common_name": "Elefantenfuß",
-      "description": "Beaucarnea recurvata stammt aus Mexiko und speichert Wasser in ihrem verdickten Stamm. Sie benötigt viel Licht und nur selten Wasser. Staunässe sollte unbedingt vermieden werden."
+      "description": "Langsam wachsende Pflanze mit verdickter Basis als Wasserspeicher und schopfartigen, überhängenden Blättern. Sehr hell stellen und ein stark drainierendes Substrat verwenden. Erst gießen, wenn das Substrat fast vollständig trocken ist."
     },
     "fr": {
       "common_name": "Pied d’éléphant",
-      "description": "Beaucarnea recurvata est originaire du Mexique et possède un tronc renflé qui stocke l’eau. Elle apprécie une lumière vive et des arrosages espacés. Un excès d’eau peut provoquer des dégâts."
+      "description": "Plante à croissance lente avec une base renflée qui stocke l’eau et des feuilles retombantes en lanières. Offrez une lumière très vive et un substrat très drainant. Arrosez seulement quand le pot est presque sec."
     },
     "it": {
-      "common_name": "Mangiafumo",
-      "description": "Beaucarnea recurvata è una pianta messicana con tronco rigonfio che accumula acqua. Predilige luce intensa e annaffiature poco frequenti. L’eccesso d’acqua va evitato."
+      "common_name": "Pianta piede d’elefante",
+      "description": "Pianta a crescita lenta con base rigonfia che immagazzina acqua e foglie lunghe e ricadenti. Richiede luce molto intensa e un terriccio ben drenante. Annaffia solo quando il substrato è quasi completamente asciutto."
     },
     "es": {
       "common_name": "Pata de elefante",
-      "description": "Beaucarnea recurvata es originaria de México y almacena agua en su tronco ensanchado. Necesita mucha luz y riego poco frecuente. El exceso de agua es perjudicial."
+      "description": "Planta de crecimiento lento con base engrosada que almacena agua y hojas largas y arqueadas. Necesita luz muy brillante y sustrato de drenaje rápido. Riega solo cuando el sustrato esté casi totalmente seco."
     },
     "pt": {
       "common_name": "Pata-de-elefante",
-      "description": "Beaucarnea recurvata vem do México e armazena água no tronco dilatado. Prefere luz intensa e regas espaçadas. O excesso de água pode causar problemas."
+      "description": "Planta de crescimento lento com base inchada que armazena água e folhas longas e arqueadas. Prefere luz muito intensa e substrato bem drenado. Regue apenas quando o substrato estiver quase totalmente seco."
     },
     "ar": {
-      "common_name": "نبات ذيل الحصان",
-      "description": "نبات Beaucarnea recurvata موطنه المكسيك ويخزن الماء في جذعه المنتفخ. يحتاج إلى ضوء ساطع وري متباعد. الإفراط في الري قد يسبب تلف الجذور."
+      "common_name": "نخلة ذيل الحصان",
+      "description": "نبات بطيء النمو ذو قاعدة منتفخة تخزن الماء وأوراق طويلة متدلية. يحتاج إلى ضوء ساطع جدًا وتربة جيدة الصرف. اسقِ فقط بعد أن تجف التربة في الأصيص تقريبًا بالكامل."
     },
     "hi": {
       "common_name": "पोनीटेल पाम",
-      "description": "Beaucarnea recurvata मेक्सिको का पौधा है जिसकी मोटी तना पानी संचित करती है। इसे तेज़ रोशनी और कम पानी की आवश्यकता होती है। अधिक पानी देना नुकसानदायक हो सकता है।"
+      "description": "धीमी वृद्धि वाला पौधा, जिसकी फूली हुई आधार-डंठल में पानी जमा होता है और पत्तियाँ लंबी, झुकी हुई होती हैं। इसे तेज रोशनी और अच्छी जल-निकासी वाली मिट्टी दें। मिट्टी लगभग पूरी सूखने पर ही पानी दें।"
     },
     "zh": {
       "common_name": "酒瓶兰",
-      "description": "Beaucarnea recurvata 原产于墨西哥，膨大的树干可以储存水分。它喜欢强光和少量浇水，适合室内养护。浇水过多容易出问题。"
+      "description": "生长缓慢，基部膨大可储水，叶片细长下垂呈喷泉状。需要明亮强光与排水良好的基质。盆土几乎干透后再浇水。"
     },
     "ja": {
       "common_name": "トックリラン",
-      "description": "Beaucarnea recurvata はメキシコ原産で、膨らんだ幹に水を蓄えます。明るい光と控えめな水やりを好みます。水の与えすぎに注意が必要です。"
+      "description": "基部が膨らんで水を貯める、成長の遅い観葉植物で、細長い葉が弧を描いて垂れます。とても明るい光と水はけの良い用土が適します。用土がほぼ乾いてから水やりします。"
     },
     "ko": {
       "common_name": "포니테일야자",
-      "description": "Beaucarnea recurvata는 멕시코 원산으로 줄기에 물을 저장합니다. 밝은 빛과 드문 물주기를 선호합니다. 과습은 피해야 합니다."
+      "description": "물 저장을 하는 비대한 밑동(카우덱스)과 길게 늘어지는 잎을 가진 느리게 자라는 식물입니다. 매우 밝은 빛과 배수 좋은 흙이 필요합니다. 흙이 거의 완전히 마른 뒤 물을 주세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/2002/beaucarnea-recurvata/details",
-      "https://extension.umn.edu/houseplants/pony-tail-palm",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a457"
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/pony-tail",
+      "https://www.rhs.org.uk/plants/1993/beaucarnea-recurvata/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282253",
+      "https://libguides.nybg.org/ponytail",
+      "https://www.almanac.com/plant/ponytail-palms"
     ]
   }
 }

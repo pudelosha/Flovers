@@ -1,20 +1,20 @@
 {
   "external_id": "mammillaria_bocasana",
-  "name": "Powder Puff Cactus",
+  "name": "Bishop's Cap Cactus",
   "latin": "Mammillaria bocasana",
   "sun": "high",
   "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -30,16 +30,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "ja": "完全な日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut drainiert",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Buen drenaje",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تصريف جيد",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rade",
-          "es": "Riego escaso",
-          "pt": "Pouca rega",
-          "ar": "ري نادر",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "물 적게"
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Peu fréquent",
+          "it": "Raro",
+          "es": "Poco frecuente",
+          "pt": "Raro",
+          "ar": "غير متكرر",
+          "hi": "अल्पकालिक",
+          "zh": "不频繁",
+          "ja": "まれに水やり",
+          "ko": "드물게 물주기"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr leicht",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm preferred",
-          "pl": "Lubi ciepło",
-          "de": "Mag Wärme",
-          "fr": "Aime la chaleur",
-          "it": "Ama il caldo",
-          "es": "Prefiere calor",
-          "pt": "Gosta de calor",
-          "ar": "يفضل الدفء",
-          "hi": "गर्म पसंद",
-          "zh": "喜温暖",
-          "ja": "暖かさ好む",
-          "ko": "따뜻함 선호"
+          "en": "25-35°C",
+          "pl": "25-35°C",
+          "de": "25-35°C",
+          "fr": "25-35°C",
+          "it": "25-35°C",
+          "es": "25-35°C",
+          "pt": "25-35°C",
+          "ar": "25-35°C",
+          "hi": "25-35°C",
+          "zh": "25-35°C",
+          "ja": "25-35°C",
+          "ko": "25-35°C"
         }
       }
     },
@@ -123,16 +123,16 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "नम",
+          "zh": "低",
           "ja": "低湿度",
           "ko": "낮은 습도"
         }
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,77 +161,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長遅い",
-          "ko": "성장 느림"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水を与えすぎない",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Powder Puff Cactus",
-      "description": "Mammillaria bocasana is a small clumping cactus native to Mexico. It is covered in soft white spines and produces small pink flowers. The plant thrives in bright sun and dry conditions."
+      "common_name": "Bishop's Cap Cactus",
+      "description": "A small, spherical cactus with a woolly appearance. It is native to Mexico and requires minimal care."
     },
     "pl": {
-      "common_name": "Kaktus puchaty",
-      "description": "Mammillaria bocasana to niewielki kaktus pochodzący z Meksyku. Ma miękkie, białe ciernie i wytwarza różowe kwiaty. Najlepiej rośnie w pełnym słońcu i suchym podłożu."
+      "common_name": "Kaktus Biskupa",
+      "description": "Mały, kulisty kaktus o wełnistej powierzchni. Pochodzi z Meksyku i wymaga minimalnej opieki."
     },
     "de": {
-      "common_name": "Puderquasten-Kaktus",
-      "description": "Mammillaria bocasana ist ein kleiner, horstbildender Kaktus aus Mexiko. Er besitzt weiche weiße Dornen und rosa Blüten. Er bevorzugt viel Sonne und trockene Erde."
+      "common_name": "Bischofsmütze",
+      "description": "Ein kleiner, kugelförmiger Kaktus mit wolliger Erscheinung. Er stammt aus Mexiko und benötigt nur wenig Pflege."
     },
     "fr": {
-      "common_name": "Cactus houppette",
-      "description": "Mammillaria bocasana est un petit cactus originaire du Mexique. Il est couvert d’épines blanches et produit des fleurs roses. Il aime le plein soleil et un sol sec."
+      "common_name": "Cactus Capuchon",
+      "description": "Un petit cactus sphérique à l'apparence laineuse. Il est originaire du Mexique et nécessite peu de soins."
     },
     "it": {
-      "common_name": "Cactus piumoso",
-      "description": "Mammillaria bocasana è un piccolo cactus del Messico. Presenta spine bianche morbide e fiori rosa. Cresce bene in pieno sole e terreno asciutto."
+      "common_name": "Cactus Cappuccio",
+      "description": "Un piccolo cactus sferico con un aspetto lanuginoso. È originario del Messico e richiede poca cura."
     },
     "es": {
-      "common_name": "Cactus copo de nieve",
-      "description": "Mammillaria bocasana es un cactus pequeño originario de México. Tiene espinas blancas suaves y flores rosadas. Prefiere sol intenso y riego muy moderado."
+      "common_name": "Cactus de Capucho",
+      "description": "Un pequeño cactus esférico con una apariencia lanosa. Es originario de México y requiere pocos cuidados."
     },
     "pt": {
-      "common_name": "Cacto pompom",
-      "description": "Mammillaria bocasana é um pequeno cacto do México. Possui espinhos brancos macios e flores rosadas. Desenvolve-se melhor em sol pleno e solo seco."
+      "common_name": "Cacto Capucho",
+      "description": "Um pequeno cacto esférico com aparência lanosa. É originário do México e exige poucos cuidados."
     },
     "ar": {
-      "common_name": "صبار كرة القطن",
-      "description": "ماميلاريا بوكاسانا صبار صغير موطنه المكسيك. يتميز بأشواك بيضاء ناعمة وزهور وردية. يفضل الشمس القوية والتربة الجافة."
+      "common_name": "صبار قبعة الأسقف",
+      "description": "صبار صغير كروي ذو مظهر صوفي. هو من أصل مكسيكي ويتطلب رعاية قليلة."
     },
     "hi": {
-      "common_name": "पाउडर पफ कैक्टस",
-      "description": "मेमिलेरिया बोकासाना मेक्सिको का एक छोटा कैक्टस है। इसमें मुलायम सफेद कांटे और गुलाबी फूल होते हैं। इसे तेज धूप और कम पानी पसंद है।"
+      "common_name": "बिशप्स कैप कैक्टस",
+      "description": "एक छोटा, गोलाकार कैक्टस जिसमें ऊनी रूप है। यह मेक्सिको का मूल निवासी है और कम देखभाल की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "粉扑仙人球",
-      "description": "Mammillaria bocasana 原产于墨西哥，是一种小型仙人掌。其表面覆盖白色柔刺并开粉色小花。适合强光和干燥环境。"
+      "common_name": "主教帽仙人掌",
+      "description": "一种小型球形仙人掌，具有羊毛般的外观。它原产于墨西哥，且需要很少的护理。"
     },
     "ja": {
-      "common_name": "パウダーパフサボテン",
-      "description": "マミラリア・ボカサナはメキシコ原産の小型サボテンです。白い柔らかな棘とピンクの花が特徴です。強い日光と乾燥を好みます。"
+      "common_name": "ビショップキャップサボテン",
+      "description": "小さな球形のサボテンで、毛羽立った外観を持っています。メキシコが原産で、手間のかからない植物です。"
     },
     "ko": {
-      "common_name": "파우더 퍼프 선인장",
-      "description": "Mammillaria bocasana는 멕시코 원산의 작은 선인장입니다. 부드러운 흰 가시와 분홍색 꽃이 특징입니다. 강한 햇빛과 건조한 환경을 좋아합니다."
+      "common_name": "주교모자 선인장",
+      "description": "작고 구형의 선인장으로 털처럼 보입니다. 멕시코 원산지이며 적은 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/9878/mammillaria-bocasana/details",
-      "https://www.cactus-art.biz/schede/MAMMILLARIA/Mammillaria_bocasana/Mammillaria_bocasana.htm",
-      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/12473/Mammillaria_bocasana"
+      "https://www.rhs.org.uk/plants/mammillaria-bocasana",
+      "https://www.gardeningknowhow.com/ornamental/cacti/mammillaria-bocasana-care.htm"
     ]
   }
 }

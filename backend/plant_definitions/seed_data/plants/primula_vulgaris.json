@@ -1,18 +1,18 @@
 {
   "external_id": "primula_vulgaris",
-  "name": "Primrose",
+  "name": "Primula vulgaris",
   "latin": "Primula vulgaris",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwy",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Easy to care",
+          "pl": "Łatwe w pielęgnacji",
+          "de": "Einfach zu pflegen",
+          "fr": "Facile à entretenir",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "देखभाल में आसान",
+          "zh": "容易照料",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "cool",
-          "pl": "chłodny",
-          "de": "kühl",
-          "fr": "frais",
-          "it": "fresco",
-          "es": "fresco",
-          "pt": "fresco",
-          "ar": "بارد",
-          "hi": "ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘한"
+          "en": "Cool to moderate",
+          "pl": "Chłodne do umiarkowane",
+          "de": "Kühl bis mäßig",
+          "fr": "Froid à modéré",
+          "it": "Freddo a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "寒冷至温和",
+          "ja": "涼しい〜中程度",
+          "ko": "서늘한 ~ 중간"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Compact growth",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompakte Wachstumsform",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مضغوط",
+          "hi": "संकोचित वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクトな成長",
+          "ko": "컴팩트한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evite el riego excesivo",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避けて",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Primrose",
-      "description": "Primula vulgaris, commonly known as primrose, is a perennial plant native to Europe and parts of Asia. It prefers cool climates and well-drained loamy soil."
+      "description": "Primula vulgaris, commonly known as the primrose, is a perennial plant known for its colorful flowers. It thrives in cool, shaded environments and is easy to care for indoors."
     },
     "pl": {
       "common_name": "Pierwiosnek",
-      "description": "Primula vulgaris, znana jako pierwiosnek, to roślina wieloletnia pochodząca z Europy i części Azji. Preferuje chłodny klimat i dobrze przepuszczalną glebę."
+      "description": "Primula vulgaris, znana jako pierwiosnek, to roślina wieloletnia o kolorowych kwiatach. Lubi chłodne, zacienione miejsca i jest łatwa w pielęgnacji."
     },
     "de": {
       "common_name": "Primel",
-      "description": "Primula vulgaris, allgemein als Primel bekannt, ist eine mehrjährige Pflanze, die in Europa und Teilen Asiens heimisch ist. Sie bevorzugt kühle Klimazonen und gut durchlässigen Lehmboden."
+      "description": "Die Primula vulgaris, auch als Primel bekannt, ist eine mehrjährige Pflanze mit bunten Blumen. Sie gedeiht in kühlen, schattigen Umgebungen und ist pflegeleicht."
     },
     "fr": {
       "common_name": "Primevère",
-      "description": "Primula vulgaris, communément appelée primevère, est une plante vivace originaire d'Europe et de certaines parties de l'Asie. Elle préfère les climats frais et un sol limoneux bien drainé."
+      "description": "La Primula vulgaris, également appelée primevère, est une plante vivace à fleurs colorées. Elle pousse bien dans des environnements frais et ombragés et est facile à entretenir."
     },
     "it": {
       "common_name": "Primula",
-      "description": "Primula vulgaris, comunemente conosciuta come primula, è una pianta perenne originaria dell'Europa e di alcune parti dell'Asia. Preferisce climi freschi e suoli limosi ben drenati."
+      "description": "La Primula vulgaris, conosciuta come primula, è una pianta perenne con fiori colorati. Cresce bene in ambienti freschi e ombreggiati ed è facile da curare."
     },
     "es": {
       "common_name": "Prímula",
-      "description": "Primula vulgaris, conocida como prímula, es una planta perenne originaria de Europa y partes de Asia. Prefiere climas frescos y suelos arcillosos bien drenados."
+      "description": "La Primula vulgaris, conocida como prímula, es una planta perenne de flores coloridas. Crece bien en ambientes frescos y sombreados y es fácil de cuidar."
     },
     "pt": {
-      "common_name": "Prímula",
-      "description": "Primula vulgaris, conhecida como prímula, é uma planta perene nativa da Europa e de partes da Ásia. Prefere climas frescos e solos argilosos bem drenados."
+      "common_name": "Primavera",
+      "description": "A Primula vulgaris, conhecida como primavera, é uma planta perene com flores coloridas. Cresce bem em ambientes frescos e sombreados e é fácil de cuidar."
     },
     "ar": {
-      "common_name": "بريموالي",
-      "description": "Primula vulgaris، المعروفة باسم بريموالي، هي نبات معمر أصلي في أوروبا وأجزاء من آسيا. تفضل المناخات الباردة والتربة الطينية جيدة التصريف."
+      "common_name": "بريمولا",
+      "description": "تعتبر Primula vulgaris، والمعروفة باسم بريمولا، نباتًا معمرًا ذو أزهار ملونة. تنمو بشكل جيد في البيئات الباردة والمظللة وسهلة العناية بها."
     },
     "hi": {
-      "common_name": "प्रिमुला",
-      "description": "Primula vulgaris, जिसे प्रिमुला के नाम से जाना जाता है, एक बहुवर्षीय पौधा है जो यूरोप और एशिया के कुछ हिस्सों का मूल है। यह ठंडे जलवायु और अच्छी तरह से जल निकासी वाली बलुई मिट्टी को पसंद करता है।"
+      "common_name": "प्राइमुला",
+      "description": "प्राइमुला वल्गारिस, जिसे प्राइमुला के नाम से जाना जाता है, एक बहुवर्षीय पौधा है जिसमें रंगीन फूल होते हैं। यह ठंडी, छायादार जगहों में अच्छी तरह से उगता है और इसे देखभाल करना आसान है।"
     },
     "zh": {
       "common_name": "报春花",
-      "description": "Primula vulgaris，常称为报春花，是一种多年生植物，原产于欧洲和亚洲部分地区。它喜欢凉爽的气候和排水良好的壤土。"
+      "description": "Primula vulgaris，常见的报春花，是一种多年生植物，以其多彩的花朵而闻名。它在凉爽的阴凉环境中生长良好，且易于照料。"
     },
     "ja": {
       "common_name": "サクラソウ",
-      "description": "Primula vulgaris、一般的にサクラソウとして知られるこの植物は、ヨーロッパおよびアジアの一部に自生しています。涼しい気候とよく排水される粘土質の土壌を好みます。"
+      "description": "Primula vulgaris、一般的にサクラソウとして知られるこの植物は、色とりどりの花を持つ多年草です。涼しい日陰の環境で育ち、手入れが簡単です。"
     },
     "ko": {
       "common_name": "프리무라",
-      "description": "Primula vulgaris, 일반적으로 프리무라로 알려진 이 식물은 유럽과 아시아 일부 지역이 원산지입니다. 시원한 기후와 잘 배수되는 점토질 토양을 선호합니다."
+      "description": "Primula vulgaris, 일반적으로 프리무라로 알려진 이 식물은 다채로운 꽃을 가진 다년생 식물입니다. 서늘하고 그늘진 환경에서 잘 자라며 관리가 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/primula-vulgaris",
+      "https://www.rhs.org.uk/advice/profile?pid=786",
       "https://www.gardenia.net/plant/primula-vulgaris"
     ]
   }

@@ -1,6 +1,6 @@
 {
   "external_id": "asplenium_gracillimum",
-  "name": "Slender Spleenwort",
+  "name": "Slender spleenwort",
   "latin": "Asplenium gracillimum",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "loam"
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,9 +28,9 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
+          "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
+          "de": "Hell indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
@@ -48,17 +47,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loose organic soil",
-          "pl": "Luźna gleba",
-          "de": "Lockeres Substrat",
-          "fr": "Sol aéré",
-          "it": "Terriccio arioso",
-          "es": "Suelo suelto",
-          "pt": "Solo solto",
-          "ar": "تربة خفيفة",
-          "hi": "ढीली मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
+          "en": "Moist, well-drained",
+          "pl": "Wilgotna, lekka",
+          "de": "Feucht, luftig",
+          "fr": "Humide drainé",
+          "it": "Umido drenante",
+          "es": "Húmedo drenante",
+          "pt": "Úmido drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "नम, जलनिकासी",
+          "zh": "湿润排水好",
+          "ja": "湿潤で排水良",
           "ko": "배수 좋은 흙"
         }
       }
@@ -67,17 +66,17 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Evenly moist",
-          "pl": "Umiarkowanie wilg.",
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgoć",
           "de": "Gleichmäßig feucht",
-          "fr": "Humide régulier",
+          "fr": "Humidité constante",
           "it": "Sempre umido",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة منتظمة",
-          "hi": "नियमित नमी",
+          "es": "Humedad constante",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة ثابتة",
+          "hi": "समान नमी",
           "zh": "保持湿润",
-          "ja": "均一な湿り気",
+          "ja": "均一に湿らす",
           "ko": "항상 촉촉"
         }
       }
@@ -87,17 +86,17 @@
       "value": {
         "text": {
           "en": "Moderate care",
-          "pl": "Średnia pielęgn.",
-          "de": "Mittlerer Bedarf",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "보통 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -105,17 +104,17 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–24 °C",
-          "pl": "15–24 °C",
-          "de": "15–24 °C",
-          "fr": "15–24 °C",
-          "it": "15–24 °C",
-          "es": "15–24 °C",
-          "pt": "15–24 °C",
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
           "ar": "15–24°م",
-          "hi": "15–24 °C",
+          "hi": "15–24°C",
           "zh": "15–24°C",
-          "ja": "15–24℃",
+          "ja": "15–24°C",
           "ko": "15–24°C"
         }
       }
@@ -127,13 +126,13 @@
           "en": "Prefers humidity",
           "pl": "Lubi wilgoć",
           "de": "Mag Feuchte",
-          "fr": "Aime humidité",
+          "fr": "Aime l'humidité",
           "it": "Ama umidità",
-          "es": "Gusta humedad",
-          "pt": "Gosta umidade",
-          "ar": "يحب الرطوبة",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
           "hi": "नमी पसंद",
-          "zh": "喜湿润",
+          "zh": "喜高湿度",
           "ja": "湿度を好む",
           "ko": "습도 선호"
         }
@@ -151,7 +150,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,9 +161,9 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow clumping",
+          "en": "Slow, clumping",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
+          "de": "Langsam",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
@@ -176,63 +175,100 @@
           "ko": "느린 성장"
         }
       }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid dry soil",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Sol sec à éviter",
+          "it": "No secco",
+          "es": "Evitar sequedad",
+          "pt": "Evitar secura",
+          "ar": "تجنب الجفاف",
+          "hi": "सूखापन न हो",
+          "zh": "避免干燥",
+          "ja": "乾燥注意",
+          "ko": "건조 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentlich Schädlinge",
+          "fr": "Parasites rares",
+          "it": "Parassiti rari",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات نادرة",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶见害虫",
+          "ja": "まれに害虫",
+          "ko": "가끔 해충"
+        }
+      }
     }
   ],
   "translations": {
     "en": {
       "common_name": "Slender spleenwort",
-      "description": "Asplenium gracillimum is a delicate fern native to New Zealand forests. It grows naturally on moist forest floors and tree trunks. Indoors it prefers stable moisture and indirect light."
+      "description": "Asplenium gracillimum is a delicate fern native to New Zealand forests. It prefers bright, indirect light and consistently moist soil indoors."
     },
     "pl": {
       "common_name": "Zanokcica smukła",
-      "description": "Asplenium gracillimum to delikatna paproć z Nowej Zelandii. Występuje w wilgotnych lasach na ziemi i pniach drzew. W domu wymaga stałej wilgotności i rozproszonego światła."
+      "description": "Asplenium gracillimum to delikatna paproć z Nowej Zelandii. Najlepiej rośnie w jasnym, rozproszonym świetle i stale wilgotnym podłożu."
     },
     "de": {
       "common_name": "Zarter Streifenfarn",
-      "description": "Asplenium gracillimum ist ein feiner Farn aus Neuseeland. Er wächst in feuchten Wäldern am Boden oder auf Stämmen. In Kultur braucht er gleichmäßige Feuchte und indirektes Licht."
+      "description": "Asplenium gracillimum ist ein feiner Farn aus Neuseeland. Er mag helles, indirektes Licht und gleichmäßig feuchte Erde."
     },
     "fr": {
-      "common_name": "Doradille gracieuse",
-      "description": "Asplenium gracillimum est une fougère fine originaire de Nouvelle-Zélande. Elle pousse dans les forêts humides sur le sol ou les troncs. En intérieur elle demande une humidité constante."
+      "common_name": "Doradille grêle",
+      "description": "Asplenium gracillimum est une fougère délicate originaire de Nouvelle-Zélande. Elle apprécie une lumière indirecte et un sol toujours légèrement humide."
     },
     "it": {
-      "common_name": "Asplenio gracile",
-      "description": "Asplenium gracillimum è una felce delicata della Nuova Zelanda. Vive in ambienti forestali umidi su suolo o tronchi. In casa richiede luce indiretta e terreno sempre umido."
+      "common_name": "Asplenio sottile",
+      "description": "Asplenium gracillimum è una felce delicata della Nuova Zelanda. Predilige luce indiretta e terreno costantemente umido."
     },
     "es": {
-      "common_name": "Esplenio grácil",
-      "description": "Asplenium gracillimum es un helecho delicado de Nueva Zelanda. Crece en bosques húmedos sobre suelo o troncos. En interior necesita humedad constante y luz indirecta."
+      "common_name": "Culantrillo esbelto",
+      "description": "Asplenium gracillimum es un helecho delicado de Nueva Zelanda. Requiere luz indirecta y sustrato uniformemente húmedo."
     },
     "pt": {
-      "common_name": "Asplênio gracil",
-      "description": "Asplenium gracillimum é uma samambaia delicada da Nova Zelândia. Ocorre em florestas úmidas no solo ou em troncos. Em cultivo prefere umidade constante e luz indireta."
+      "common_name": "Asplênio esguio",
+      "description": "Asplenium gracillimum é uma samambaia delicada da Nova Zelândia. Gosta de luz indireta e solo sempre levemente úmido."
     },
     "ar": {
       "common_name": "سرخس أسبلينيوم رفيع",
-      "description": "نبات Asplenium gracillimum سرخس دقيق موطنه نيوزيلندا. ينمو في الغابات الرطبة على الأرض أو جذوع الأشجار. يحتاج داخل المنزل إلى رطوبة ثابتة وضوء غير مباشر."
+      "description": "Asplenium gracillimum سرخس دقيق موطنه نيوزيلندا. يفضل الضوء غير المباشر والتربة الرطبة باستمرار."
     },
     "hi": {
-      "common_name": "स्लिम स्प्लीनवर्ट",
-      "description": "Asplenium gracillimum न्यूज़ीलैंड का एक नाज़ुक फ़र्न है। यह नम जंगलों में जमीन या पेड़ों पर उगता है। घर में इसे नमी और अप्रत्यक्ष रोशनी चाहिए।"
+      "common_name": "पतला स्प्लीनवॉर्ट",
+      "description": "Asplenium gracillimum न्यूज़ीलैंड का एक नाज़ुक फ़र्न है। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी पसंद है।"
     },
     "zh": {
       "common_name": "纤细铁角蕨",
-      "description": "Asplenium gracillimum 原产于新西兰的细小蕨类植物。常生长在潮湿森林的地面或树干上。室内养护需保持湿润并避免直射阳光。"
+      "description": "Asplenium gracillimum 原产于新西兰，是一种精致的蕨类植物。室内养护需明亮散射光和持续湿润的土壤。"
     },
     "ja": {
-      "common_name": "ホソバシダ",
-      "description": "Asplenium gracillimum はニュージーランド原産の繊細なシダです。湿った森林の地表や樹幹に生育します。室内では安定した湿度と間接光を好みます。"
+      "common_name": "ホソバチャセンシダ",
+      "description": "Asplenium gracillimum はニュージーランド原産の繊細なシダです。明るい間接光と適度に湿った土を好みます。"
     },
     "ko": {
-      "common_name": "가느다란 아스플레니움",
-      "description": "Asplenium gracillimum은 뉴질랜드 원산의 섬세한 고사리입니다. 습한 숲의 토양이나 나무에서 자랍니다. 실내에서는 꾸준한 수분과 간접광이 필요합니다."
+      "common_name": "가는아스플레니움",
+      "description": "Asplenium gracillimum은 뉴질랜드 원산의 섬세한 양치식물입니다. 밝은 간접광과 지속적으로 촉촉한 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.nzpcn.org.nz/flora/species/asplenium-gracillimum/",
-      "https://www.rhs.org.uk/plants/ferns/growing-guide",
-      "https://www.gardenersworld.com/plants/ferns-growing-guide/"
+      "https://www.rbgsyd.nsw.gov.au/science/plant-diversity-research/plant-profiles/asplenium"
     ]
   }
 }

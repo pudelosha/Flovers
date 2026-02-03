@@ -7,19 +7,19 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "ceramic",
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "leucojum_vernum.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial shade",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Sombra parcial",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期的",
-          "ko": "규칙적"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -97,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Odporna na chłód",
-          "de": "Kältetolerant",
-          "fr": "Tolère le froid",
-          "it": "Resiste al freddo",
-          "es": "Tolera frío",
-          "pt": "Tolera frio",
-          "ar": "يتحمل البرودة",
-          "hi": "ठंड सहनशील",
-          "zh": "耐寒",
-          "ja": "耐寒性",
-          "ko": "내한성"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "通常",
-          "ko": "보통"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Spring bulb",
-          "pl": "Cebula wiosenna",
-          "de": "Frühlingszwiebel",
-          "fr": "Bulbe printanier",
-          "it": "Bulbo primaverile",
-          "es": "Bulbo primaveral",
-          "pt": "Bulbo primaveril",
-          "ar": "بصلة ربيعية",
-          "hi": "वसंत बल्ब",
-          "zh": "春季鳞茎",
-          "ja": "春咲き球根",
-          "ko": "봄 구근"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez trop d'arrosage",
+          "it": "Evita l'eccesso di acqua",
+          "es": "Evita el riego excesivo",
+          "pt": "Evite regar em excesso",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرोक्ष वॉटरिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Spring Snowflake",
-      "description": "Leucojum vernum is a spring-flowering bulb native to central Europe. It produces nodding white flowers with green tips in early spring. The plant prefers moist soil and partial shade."
+      "description": "Leucojum vernum, known as Spring Snowflake, is a perennial plant with delicate, bell-shaped white flowers that bloom in early spring. It thrives in well-drained soil and moderate sunlight."
     },
     "pl": {
-      "common_name": "Śnieżyca wiosenna",
-      "description": "Leucojum vernum to wiosenna roślina cebulowa pochodząca z Europy Środkowej. Kwitnie białymi, zwisającymi kwiatami z zielonymi końcówkami. Lubi wilgotną glebę i półcień."
+      "common_name": "Śnieżyczka wiosenna",
+      "description": "Leucojum vernum, znana jako Śnieżyczka wiosenna, to roślina wieloletnia z delikatnymi, dzwonkowatymi białymi kwiatami, które kwitną na wiosnę. Rośnie najlepiej w glebie dobrze przepuszczalnej i umiarkowanym świetle."
     },
     "de": {
-      "common_name": "Märzenbecher",
-      "description": "Leucojum vernum ist eine frühjahrsblühende Zwiebelpflanze aus Mitteleuropa. Sie trägt weiße, nickende Blüten mit grünen Spitzen. Bevorzugt feuchten Boden und Halbschatten."
+      "common_name": "Frühlings-Knotenblume",
+      "description": "Leucojum vernum, auch als Frühlings-Knotenblume bekannt, ist eine mehrjährige Pflanze mit zarten, glockenförmigen weißen Blüten, die im Frühling blühen. Sie wächst am besten in gut durchlässigem Boden und mäßigem Licht."
     },
     "fr": {
-      "common_name": "Nivéole de printemps",
-      "description": "Leucojum vernum est une plante à bulbe printanière d’Europe centrale. Elle produit des fleurs blanches pendantes à pointes vertes. Elle apprécie les sols humides et la mi-ombre."
+      "common_name": "Perce-neige de printemps",
+      "description": "Leucojum vernum, connu sous le nom de Perce-neige de printemps, est une plante vivace avec de délicates fleurs blanches en forme de cloche qui fleurissent au début du printemps. Elle prospère dans un sol bien drainé et sous une lumière modérée."
     },
     "it": {
-      "common_name": "Campanellino primaverile",
-      "description": "Leucojum vernum è una pianta bulbosa primaverile originaria dell’Europa centrale. Presenta fiori bianchi penduli con punte verdi. Predilige terreno umido e mezz’ombra."
+      "common_name": "Fiore di neve primaverile",
+      "description": "Leucojum vernum, noto come Fiore di neve primaverile, è una pianta perenne con delicati fiori bianchi a campana che fioriscono all'inizio della primavera. Cresce meglio in terreni ben drenati e in luce moderata."
     },
     "es": {
       "common_name": "Campanilla de primavera",
-      "description": "Leucojum vernum es una planta bulbosa de primavera nativa de Europa central. Produce flores blancas colgantes con puntas verdes. Prefiere suelos húmedos y sombra parcial."
+      "description": "Leucojum vernum, conocida como Campanilla de primavera, es una planta perenne con delicadas flores blancas en forma de campana que florecen a principios de primavera. Crece mejor en suelos bien drenados y con luz moderada."
     },
     "pt": {
-      "common_name": "Campainha-da-primavera",
-      "description": "Leucojum vernum é uma planta bulbosa de primavera nativa da Europa Central. Produz flores brancas pendentes com pontas verdes. Prefere solo úmido e meia-sombra."
+      "common_name": "Campânula de primavera",
+      "description": "Leucojum vernum, conhecida como Campânula de primavera, é uma planta perene com delicadas flores brancas em forma de campânula que florescem no início da primavera. Cresce melhor em solo bem drenado e sob luz moderada."
     },
     "ar": {
       "common_name": "زهرة الثلج الربيعية",
-      "description": "Leucojum vernum نبات بصلي يزهر في الربيع موطنه أوروبا الوسطى. ينتج أزهارًا بيضاء متدلية ذات أطراف خضراء. يفضل التربة الرطبة والظل الجزئي."
+      "description": "Leucojum vernum، المعروفة باسم زهرة الثلج الربيعية، هي نبات معمر ذو أزهار بيضاء على شكل جرس تتفتح في أوائل الربيع. تنمو بشكل أفضل في التربة جيدة التصريف وتحت ضوء معتدل."
     },
     "hi": {
-      "common_name": "स्प्रिंग स्नोफ्लेक",
-      "description": "Leucojum vernum एक वसंत ऋतु में खिलने वाला बल्ब पौधा है जो मध्य यूरोप का मूल निवासी है। इसमें हरे सिरे वाले झुके हुए सफेद फूल होते हैं। यह नम मिट्टी और आंशिक छाया पसंद करता है।"
+      "common_name": "वसंत बर्फ का फूल",
+      "description": "Leucojum vernum, जिसे वसंत बर्फ का फूल कहा जाता है, एक बहुवर्षीय पौधा है जिसमें नाजुक, घंटी के आकार के सफेद फूल होते हैं जो वसंत के प्रारंभ में खिलते हैं। यह अच्छी जल निकासी वाली मिट्टी और मध्यम प्रकाश में उगता है।"
     },
     "zh": {
-      "common_name": "春雪片莲",
-      "description": "Leucojum vernum 是原产于中欧的春季开花鳞茎植物。它在早春开出带绿色尖端的下垂白花。适合生长在湿润、半阴的环境中。"
+      "common_name": "春季雪花",
+      "description": "Leucojum vernum，俗称春季雪花，是一种多年生植物，具有精致的钟形白色花朵，在春季早期盛开。它在排水良好的土壤和适中的光照下生长最好。"
     },
     "ja": {
-      "common_name": "スプリングスノーフレーク",
-      "description": "Leucojum vernum は中欧原産の春咲き球根植物です。緑の先端を持つ白い下向きの花を咲かせます。湿った土と半日陰を好みます。"
+      "common_name": "春のスノーフレーク",
+      "description": "Leucojum vernum、春のスノーフレークとして知られるこの植物は、春の初めに咲く繊細な鐘型の白い花を持つ多年草です。排水の良い土壌と適度な光でよく育ちます。"
     },
     "ko": {
-      "common_name": "봄설강초",
-      "description": "Leucojum vernum은 중부 유럽이 원산지인 봄 개화 구근 식물입니다. 초봄에 녹색 끝이 있는 흰색 종 모양의 꽃을 피웁니다. 습한 토양과 반그늘을 선호합니다."
+      "common_name": "봄 눈송이",
+      "description": "Leucojum vernum, 봄 눈송이로 알려진 이 식물은 봄 초기에 피는 섬세한 종 모양의 흰 꽃을 가진 다년생 식물입니다. 잘 배수되는 토양과 적당한 빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10064/leucojum-vernum/details",
-      "https://www.gardenersworld.com/plants/leucojum-vernum/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b460"
+      "https://www.rhs.org.uk/plants/leucojum-vernum",
+      "https://www.gardenia.net/plant/Leucojum-vernum"
     ]
   }
 }

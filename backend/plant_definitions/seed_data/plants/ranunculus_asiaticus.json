@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "gleba",
-          "de": "Lehm",
-          "fr": "argileux",
-          "it": "limoso",
-          "es": "arcilloso",
-          "pt": "argiloso",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "壌土",
-          "ko": "양토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "良好な排水性土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Léggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "معتدل السمية",
+          "hi": "मध्यम विषाक्त",
+          "zh": "轻微有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성이 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast",
-          "pl": "szybki",
-          "de": "schnell",
-          "fr": "rapide",
-          "it": "veloce",
-          "es": "rápido",
-          "pt": "rápido",
-          "ar": "سريع",
-          "hi": "तेज़",
-          "zh": "快",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Medium growth rate",
+          "pl": "Średni tempo wzrostu",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Taux de croissance moyen",
+          "it": "Velocità di crescita media",
+          "es": "Tasa de crecimiento media",
+          "pt": "Taxa de crescimento média",
+          "ar": "معدل نمو متوسط",
+          "hi": "मध्यम वृद्धि दर",
+          "zh": "中等生长速度",
+          "ja": "中くらいの成長速度",
+          "ko": "중간 성장 속도"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Persian Buttercup",
-      "description": "Ranunculus asiaticus, known as the Persian buttercup, is a popular ornamental flower with vibrant blooms in various colors. It thrives in moderate sunlight and well-drained soil."
+      "description": "Ranunculus asiaticus is a vibrant flowering plant known for its colorful blooms. It thrives in moderate light and well-drained soil."
     },
     "pl": {
-      "common_name": "Jaskier perski",
-      "description": "Ranunculus asiaticus, znany jako jaskier perski, to popularna roślina ozdobna o żywych kwiatach w różnych kolorach. Rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+      "common_name": "Kraniec perski",
+      "description": "Ranunculus asiaticus to roślina kwitnąca o żywych kolorach. Rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie."
     },
     "de": {
       "common_name": "Persischer Hahnenfuß",
-      "description": "Ranunculus asiaticus, auch als persischer Hahnenfuß bekannt, ist eine beliebte Zierpflanze mit lebendigen Blüten in verschiedenen Farben. Sie gedeiht bei mäßigem Sonnenlicht und gut durchlässigem Boden."
+      "description": "Ranunculus asiaticus ist eine lebendige Blume, die für ihre bunten Blüten bekannt ist. Sie gedeiht bei mäßigem Licht und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Renoncule asiatique",
-      "description": "Ranunculus asiaticus, connu sous le nom de renoncule asiatique, est une plante ornementale populaire avec des fleurs vibrantes de différentes couleurs. Elle pousse sous une lumière modérée et dans un sol bien drainé."
+      "description": "Ranunculus asiaticus est une plante à fleurs vibrantes connue pour ses fleurs colorées. Elle prospère dans une lumière modérée et un sol bien drainé."
     },
     "it": {
       "common_name": "Ranuncolo asiatico",
-      "description": "Ranunculus asiaticus, noto come ranuncolo asiatico, è una pianta ornamentale popolare con fiori vivaci di vari colori. Cresce in luce moderata e in terreno ben drenato."
+      "description": "Ranunculus asiaticus è una pianta fiorita vibrante conosciuta per i suoi fiori colorati. Cresce in luce moderata e in terreno ben drenato."
     },
     "es": {
       "common_name": "Ranúnculo asiático",
-      "description": "Ranunculus asiaticus, conocido como ranúnculo asiático, es una planta ornamental popular con flores vibrantes en varios colores. Crece bajo luz moderada y en suelos bien drenados."
+      "description": "Ranunculus asiaticus es una planta de flores vibrantes conocida por sus coloridas flores. Crece en luz moderada y en suelos bien drenados."
     },
     "pt": {
       "common_name": "Ranúnculo asiático",
-      "description": "Ranunculus asiaticus, conhecido como ranúnculo asiático, é uma planta ornamental popular com flores vibrantes de várias cores. Cresce sob luz moderada e solo bem drenado."
+      "description": "Ranunculus asiaticus é uma planta florida vibrante conhecida por suas flores coloridas. Cresce em luz moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "حشيشة الفرس الآسيوية",
-      "description": "رانونكولوس آسياتيكس، المعروف باسم حشيشة الفرس الآسيوية، هو نبات زينة شهير بأزهار حية بألوان مختلفة. ينمو في ضوء معتدل وتربة جيدة التصريف."
+      "common_name": "زهره الراننكولوس الآسيوي",
+      "description": "رانونكولوس آسيوتي هو نبات مزهر معروف بأزهاره الملونة. ينمو في الضوء المعتدل والتربة جيدة التصريف."
     },
     "hi": {
       "common_name": "पर्शियन बटरकप",
-      "description": "रनुनकुलस एशियाटिकस, जिसे पर्शियन बटरकप कहा जाता है, एक लोकप्रिय सजावटी फूल है जो विभिन्न रंगों में खिलता है। यह मध्यम धूप और अच्छी जल निकासी वाली मिट्टी में बढ़ता है।"
+      "description": "रणुनकुलस एशियाटिकस एक जीवंत फूल वाला पौधा है जो अपने रंगीन फूलों के लिए जाना जाता है। यह मध्यम रोशनी और अच्छी जल निकासी वाली मिट्टी में पनपता है।"
     },
     "zh": {
-      "common_name": "波斯毛茛",
-      "description": "Ranunculus asiaticus，波斯毛茛，是一种流行的观赏花卉，具有各种颜色的鲜艳花朵。它在适度的阳光下和排水良好的土壤中生长。"
+      "common_name": "波斯金凤花",
+      "description": "Ranunculus asiaticus 是一种以其多彩的花朵而闻名的鲜艳开花植物。它在中等光照和排水良好的土壤中生长。"
     },
     "ja": {
-      "common_name": "ペルシャキンポウゲ",
-      "description": "Ranunculus asiaticus、ペルシャキンポウゲは、さまざまな色の鮮やかな花を持つ人気の観賞植物です。適度な日光と良好な排水性の土壌で育ちます。"
+      "common_name": "ペルシャバターカップ",
+      "description": "ランヌクルス・アジアティクスは、そのカラフルな花で知られる鮮やかな開花植物です。適度な光と排水の良い土壌で育ちます。"
     },
     "ko": {
       "common_name": "페르시아 버터컵",
-      "description": "Ranunculus asiaticus, 페르시아 버터컵으로 알려진 이 식물은 다양한 색상의 생동감 있는 꽃을 가진 인기 있는 장식용 식물입니다. 적당한 햇빛과 잘 배수되는 토양에서 자랍니다."
+      "description": "Ranunculus asiaticus는 화려한 꽃으로 알려진 선명한 꽃 식물입니다. 중간 빛과 배수가 좋은 토양에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ranunculus-asiaticus",
+      "https://www.rhs.org.uk/advice/profile?pid=206",
       "https://www.gardenia.net/plant/ranunculus-asiaticus"
     ]
   }

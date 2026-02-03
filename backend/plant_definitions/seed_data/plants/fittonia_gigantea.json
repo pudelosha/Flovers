@@ -1,9 +1,9 @@
 {
   "external_id": "fittonia_gigantea",
-  "name": "Giant Nerve Plant",
+  "name": "Fittonia gigantea",
   "latin": "Fittonia gigantea",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,7 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich well-draining soil",
-          "pl": "Żyzna przepuszczalna",
-          "de": "Durchlässige Erde",
-          "fr": "Sol riche drainé",
-          "it": "Terreno drenante",
-          "es": "Sustrato drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "疏松肥沃土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水性",
+          "ja": "良好な排水性",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Sol toujours humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持湿润",
-          "ja": "土を湿らせる",
-          "ko": "항상 촉촉"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßige Bewässerung",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Regar regularmente",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -87,16 +88,16 @@
         "text": {
           "en": "Medium care",
           "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Pflegeaufwand",
+          "de": "Mittlere Pflege",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
           "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
+          "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
-          "ko": "중간 난이도"
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18～26°C",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -125,10 +126,10 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
-          "it": "Umidità alta",
-          "es": "Humedad alta",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سمية خفيفة",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Low spreading",
-          "pl": "Niska rozłożysta",
-          "de": "Niedrig wachsend",
-          "fr": "Croissance basse",
-          "it": "Crescita bassa",
-          "es": "Crecimiento bajo",
-          "pt": "Crescimento baixo",
-          "ar": "نمو منخفض",
-          "hi": "धीमी फैलती",
-          "zh": "低矮蔓生",
-          "ja": "低く広がる",
-          "ko": "낮게 퍼짐"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare il ristagno d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evite regar demais",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرातफरी से पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Giant nerve plant",
-      "description": "Fittonia gigantea is a tropical foliage plant native to South American rainforests. It is valued for its large, boldly veined leaves and compact growth. Consistent moisture and high humidity are essential for healthy growth."
+      "common_name": "Giant Fittonia",
+      "description": "Fittonia gigantea is a vibrant, fast-growing houseplant known for its striking foliage. It thrives in medium light with regular watering and high humidity."
     },
     "pl": {
-      "common_name": "Fitonia olbrzymia",
-      "description": "Fittonia gigantea to tropikalna roślina liściasta z lasów deszczowych Ameryki Południowej. Ceniona jest za duże, wyraźnie unerwione liście i niski pokrój. Wymaga stałej wilgoci i wysokiej wilgotności powietrza."
+      "common_name": "Fittonia gigantyczna",
+      "description": "Fittonia gigantea to żywotna roślina doniczkowa o charakterystycznym ulistnieniu. Wymaga średniego nasłonecznienia, regularnego podlewania i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Riesen-Mosaikpflanze",
-      "description": "Fittonia gigantea stammt aus den tropischen Regenwäldern Südamerikas. Sie zeichnet sich durch große, stark geaderte Blätter aus. Gleichmäßige Feuchtigkeit und hohe Luftfeuchtigkeit sind wichtig."
+      "common_name": "Riesige Fittonia",
+      "description": "Die Fittonia gigantea ist eine lebendige, schnell wachsende Zimmerpflanze mit auffälligem Blattwerk. Sie gedeiht bei mittlerem Licht, regelmäßiger Bewässerung und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Fittonia géant",
-      "description": "Fittonia gigantea est une plante tropicale originaire d’Amérique du Sud. Elle est appréciée pour ses grandes feuilles nervurées. Une humidité élevée et un sol constamment humide sont nécessaires."
+      "common_name": "Fittonia géante",
+      "description": "La Fittonia gigantea est une plante d'intérieur vibrante à la croissance rapide, connue pour son feuillage frappant. Elle préfère une lumière moyenne, un arrosage régulier et une humidité élevée."
     },
     "it": {
-      "common_name": "Fittonia gigante",
-      "description": "Fittonia gigantea è una pianta tropicale delle foreste sudamericane. È nota per le sue grandi foglie venate. Richiede umidità elevata e irrigazioni regolari."
+      "common_name": "Fittonia gigantea",
+      "description": "La Fittonia gigantea è una pianta da appartamento vivace a crescita rapida, nota per il suo fogliame vistoso. Cresce bene in luce media, con annaffiature regolari e alta umidità."
     },
     "es": {
-      "common_name": "Fitonia gigante",
-      "description": "Fittonia gigantea es una planta tropical originaria de Sudamérica. Destaca por sus hojas grandes y venadas. Necesita humedad alta y riego constante."
+      "common_name": "Fittonia gigantea",
+      "description": "La Fittonia gigantea es una planta vibrante de rápido crecimiento conocida por su follaje llamativo. Crece mejor en luz media, con riego regular y alta humedad."
     },
     "pt": {
-      "common_name": "Fitônia gigante",
-      "description": "Fittonia gigantea é uma planta tropical da América do Sul. Possui folhas grandes e muito decorativas. Precisa de solo úmido e alta umidade do ar."
+      "common_name": "Fittonia gigantea",
+      "description": "A Fittonia gigantea é uma planta de interior vibrante e de crescimento rápido, conhecida pelas suas folhas marcantes. Prefere luz média, rega regular e alta umidade."
     },
     "ar": {
-      "common_name": "نبات العصب العملاق",
-      "description": "Fittonia gigantea نبات استوائي موطنه غابات أمريكا الجنوبية. يتميز بأوراق كبيرة ذات عروق واضحة. يحتاج إلى رطوبة عالية وتربة رطبة باستمرار."
+      "common_name": "فيتتونيا جيغانتيا",
+      "description": "تعتبر فيتتونيا جيغانتيا نباتًا منزليًا سريع النمو معروفًا بأوراقه المتنوعة. يزدهر في الضوء المتوسط مع سقاية منتظمة ورطوبة عالية."
     },
     "hi": {
-      "common_name": "जायंट नर्व प्लांट",
-      "description": "Fittonia gigantea दक्षिण अमेरिका के वर्षावनों की उष्णकटिबंधीय पौधा है। इसकी बड़ी शिरायुक्त पत्तियाँ आकर्षक होती हैं। इसे नियमित पानी और अधिक नमी की आवश्यकता होती है।"
+      "common_name": "फिटोनिया गिगांतेआ",
+      "description": "फिटोनिया गिगांतेआ एक जीवंत, तेज़ी से बढ़ने वाला पौधा है, जो अपनी आकर्षक पत्तियों के लिए जाना जाता है। यह मध्य आकाशीय प्रकाश, नियमित पानी देने और उच्च आर्द्रता में बढ़ता है।"
     },
     "zh": {
-      "common_name": "巨型网纹草",
-      "description": "Fittonia gigantea 原产于南美洲热带雨林。以其大型清晰叶脉的叶片而闻名。生长需要持续湿润和高空气湿度。"
+      "common_name": "巨型费顿尼亚",
+      "description": "Fittonia gigantea是一种充满活力的快速生长的室内植物，因其引人注目的叶片而闻名。它在中等光照、定期浇水和高湿度的环境下生长。"
     },
     "ja": {
-      "common_name": "ジャイアントフィットニア",
-      "description": "Fittonia gigantea は南米の熱帯雨林原産の観葉植物です。大きな葉脈が特徴です。高い湿度と安定した水分が必要です。"
+      "common_name": "フィトニア・ギガンティア",
+      "description": "フィトニア・ギガンティアは鮮やかで成長が早い室内植物で、目を引く葉が特徴です。中程度の光、定期的な水やり、高湿度の環境でよく育ちます。"
     },
     "ko": {
-      "common_name": "자이언트 핏토니아",
-      "description": "Fittonia gigantea는 남아메리카 열대우림 원산의 관엽식물입니다. 크고 선명한 잎맥이 특징입니다. 높은 습도와 꾸준한 수분 공급이 필요합니다."
+      "common_name": "피토니아 기간티아",
+      "description": "피토니아 기간티아는 선명한 색상과 빠른 성장을 특징으로 하는 실내 식물입니다. 중간 정도의 빛과 정기적인 물 주기, 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a259",
-      "https://www.rhs.org.uk/plants/fittonia",
-      "https://edis.ifas.ufl.edu/publication/EP271"
+      "https://www.rhs.org.uk/plants/fittonia-gigantea",
+      "https://www.gardenia.net/plant/fittonia-gigantea"
     ]
   }
 }

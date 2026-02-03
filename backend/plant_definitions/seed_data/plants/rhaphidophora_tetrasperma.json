@@ -1,23 +1,23 @@
 {
   "external_id": "rhaphidophora_tetrasperma",
-  "name": "Mini Monstera",
+  "name": "Rhaphidophora tetrasperma",
   "latin": "Rhaphidophora tetrasperma",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
-    "universal"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroid",
-          "de": "Aroid",
-          "fr": "Aroid",
-          "it": "aroide",
-          "es": "aroide",
-          "pt": "aroide",
-          "ar": "أرويد",
-          "hi": "एरोइड",
-          "zh": "艾罗伊",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "سقي منتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soin moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma is a small, tropical climbing plant. It is known for its fenestrated, glossy leaves and compact growth habit."
+      "description": "Rhaphidophora tetrasperma, also known as the Mini Monstera, is a popular indoor plant. It is known for its unique, split-leaf appearance and rapid growth."
     },
     "pl": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma to mała tropikalna roślina pnąca. Charakteryzuje się szczelinowanymi, błyszczącymi liśćmi i zwartym pokrojem."
+      "description": "Rhaphidophora tetrasperma, znana również jako Mini Monstera, to popularna roślina doniczkowa. Charakteryzuje się unikalnym, podzielonym liściem i szybkim wzrostem."
     },
     "de": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma ist eine kleine, tropische Kletterpflanze. Sie zeichnet sich durch ihre fenestrierten, glänzenden Blätter und kompakte Wuchsform aus."
+      "description": "Rhaphidophora tetrasperma, auch als Mini Monstera bekannt, ist eine beliebte Zimmerpflanze. Sie ist für ihr einzigartiges, gespaltenes Blattwerk und schnelles Wachstum bekannt."
     },
     "fr": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma est une petite plante grimpante tropicale. Elle est connue pour ses feuilles fenestrées et brillantes, ainsi que sa croissance compacte."
+      "description": "Rhaphidophora tetrasperma, également connue sous le nom de Mini Monstera, est une plante d'intérieur populaire. Elle est connue pour son apparence unique de feuille fendue et sa croissance rapide."
     },
     "it": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma è una piccola pianta rampicante tropicale. È conosciuta per le sue foglie fenestrate e lucide, e la sua crescita compatta."
+      "description": "Rhaphidophora tetrasperma, conosciuta anche come Mini Monstera, è una pianta da interno popolare. È conosciuta per il suo aspetto unico con foglie divise e crescita rapida."
     },
     "es": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma es una pequeña planta trepadora tropical. Es conocida por sus hojas fenestradas y brillantes, y su hábito de crecimiento compacto."
+      "description": "Rhaphidophora tetrasperma, también conocida como Mini Monstera, es una planta de interior popular. Se caracteriza por su apariencia única de hojas partidas y su rápido crecimiento."
     },
     "pt": {
       "common_name": "Mini Monstera",
-      "description": "Rhaphidophora tetrasperma é uma pequena planta trepadeira tropical. É conhecida por suas folhas fenestradas e brilhantes, e seu crescimento compacto."
+      "description": "Rhaphidophora tetrasperma, também conhecida como Mini Monstera, é uma planta de interior popular. É conhecida pela sua aparência única com folhas divididas e rápido crescimento."
     },
     "ar": {
       "common_name": "ميني مونستيرا",
-      "description": "Rhaphidophora tetrasperma هي نبات متسلق صغير استوائي. تشتهر بأوراقها المتشققة اللامعة وموضع نموها المدمج."
+      "description": "Rhaphidophora tetrasperma، والمعروفة أيضًا باسم ميني مونستيرا، هي نبات داخلي شهير. يشتهر بمظهره الفريد من الأوراق المنقسمة والنمو السريع."
     },
     "hi": {
       "common_name": "मिनी मॉन्स्टेरा",
-      "description": "Rhaphidophora tetrasperma एक छोटी, उष्णकटिबंधीय चढ़ाई करने वाली पौधा है। यह अपनी दरार वाली, चमकदार पत्तियों और कॉम्पैक्ट वृद्धि के लिए प्रसिद्ध है।"
+      "description": "Rhaphidophora tetrasperma, जिसे मिनी मॉन्स्टेरा भी कहा जाता है, एक लोकप्रिय इनडोर पौधा है। इसे अपनी अनूठी, विभाजित पत्तियों और तेज़ वृद्धि के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "迷你怪兽",
-      "description": "Rhaphidophora tetrasperma 是一种小型热带藤本植物，因其有裂纹的光泽叶子和紧凑的生长习性而闻名。"
+      "common_name": "迷你 monstera",
+      "description": "Rhaphidophora tetrasperma，也被称为迷你 monstera，是一种流行的室内植物。它因其独特的分裂叶片和快速生长而闻名。"
     },
     "ja": {
       "common_name": "ミニモンステラ",
-      "description": "Rhaphidophora tetraspermaは小さな熱帯のつる植物です。裂けた光沢のある葉とコンパクトな成長習性で知られています。"
+      "description": "Rhaphidophora tetrasperma、別名ミニモンステラは人気のある室内植物です。その独特な分割された葉と急速な成長で知られています。"
     },
     "ko": {
       "common_name": "미니 몬스테라",
-      "description": "Rhaphidophora tetrasperma는 작은 열대성 덩굴식물입니다. 찢어진 광택 있는 잎과 컴팩트한 성장 습성으로 잘 알려져 있습니다."
+      "description": "Rhaphidophora tetrasperma, 미니 몬스테라로도 알려져 있는 이 식물은 인기 있는 실내 식물입니다. 독특하게 분할된 잎과 빠른 성장으로 유명합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ rhaphidophora-tetrasperma",
-      "https://www.gardeningknowhow.com/houseplants/rhaphidophora-tetrasperma-care.htm"
+      "https://www.rhs.org.uk/advice/profile?pid=225",
+      "https://www.gardenersworld.com/plants/rhaphidophora-tetrasperma/"
     ]
   }
 }

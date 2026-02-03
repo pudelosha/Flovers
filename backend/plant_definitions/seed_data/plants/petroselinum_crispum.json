@@ -7,12 +7,12 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,16 +86,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwe",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "简单",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "15-21°C",
+          "pl": "15-21°C",
+          "de": "15-21°C",
+          "fr": "15-21°C",
+          "it": "15-21°C",
+          "es": "15-21°C",
+          "pt": "15-21°C",
+          "ar": "15-21°C",
+          "hi": "15-21°C",
+          "zh": "15-21°C",
+          "ja": "15-21°C",
+          "ko": "15-21°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "średni",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के अनुसार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Parsley",
-      "description": "Parsley is a popular herb used in cooking. It prefers moderate sunlight and well-drained soil."
+      "description": "Parsley is a popular herb used in cooking. It prefers medium light and moderate watering."
     },
     "pl": {
       "common_name": "Pietruszka",
-      "description": "Pietruszka to popularna roślina używana w kuchni. Woli umiarkowane światło słoneczne i dobrze przepuszczalną glebę."
+      "description": "Pietruszka to popularne zioło wykorzystywane w kuchni. Lubi średnie nasłonecznienie i umiarkowane podlewanie."
     },
     "de": {
       "common_name": "Petersilie",
-      "description": "Petersilie ist ein beliebtes Küchenkraut. Sie bevorzugt mäßiges Sonnenlicht und gut durchlässigen Boden."
+      "description": "Petersilie ist ein beliebtes Kraut in der Küche. Sie bevorzugt mittleres Licht und mäßiges Gießen."
     },
     "fr": {
       "common_name": "Persil",
-      "description": "Le persil est une herbe populaire en cuisine. Il préfère une lumière modérée et un sol bien drainé."
+      "description": "Le persil est une herbe populaire en cuisine. Il préfère une lumière moyenne et un arrosage modéré."
     },
     "it": {
       "common_name": "Prezzemolo",
-      "description": "Il prezzemolo è un'erba popolare in cucina. Preferisce la luce moderata e un terreno ben drenato."
+      "description": "Il prezzemolo è un'erba popolare in cucina. Preferisce una luce media e un'annaffiatura moderata."
     },
     "es": {
       "common_name": "Perejil",
-      "description": "El perejil es una hierba popular en la cocina. Prefiere luz moderada y suelo bien drenado."
+      "description": "El perejil es una hierba popular en la cocina. Prefiere luz media y riego moderado."
     },
     "pt": {
       "common_name": "Salsa",
-      "description": "A salsa é uma erva popular na culinária. Prefere luz moderada e solo bem drenado."
+      "description": "A salsa é uma erva popular na culinária. Prefere luz média e rega moderada."
     },
     "ar": {
       "common_name": "بقدونس",
-      "description": "البقدونس هو عشب شائع في الطهي. يفضل الضوء المعتدل والتربة جيدة الصرف."
+      "description": "البقدونس هو عشبة شائعة في الطهي. يفضل الضوء المتوسط والري المعتدل."
     },
     "hi": {
       "common_name": "धनिया",
-      "description": "धनिया एक लोकप्रिय हर्ब है जिसका उपयोग खाना बनाने में होता है। यह मध्यम धूप और अच्छी जल निकासी वाली मिट्टी पसंद करता है।"
+      "description": "धनिया एक लोकप्रिय मसाला है। इसे मध्यम रोशनी और सामान्य पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "香菜",
-      "description": "香菜是厨房中常用的草药。它喜欢适度的阳光和排水良好的土壤。"
+      "description": "香菜是常用于烹饪的草本植物。它喜欢中等光照和适度浇水。"
     },
     "ja": {
       "common_name": "パセリ",
-      "description": "パセリは料理でよく使われるハーブです。適度な日光と排水の良い土壌を好みます。"
+      "description": "パセリは料理でよく使われるハーブです。中程度の光と適度な水やりを好みます。"
     },
     "ko": {
       "common_name": "파슬리",
-      "description": "파슬리는 요리에서 자주 사용되는 허브입니다. 적당한 햇빛과 배수가 좋은 토양을 선호합니다."
+      "description": "파슬리는 요리에 자주 사용되는 허브입니다. 중간 정도의 빛과 적당한 물주기를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/edible/herbs/petroselinum-crispum-parsley-care.htm",
-      "https://www.rhs.org.uk/plants/petroselinum-crispum"
+      "https://www.rhs.org.uk/advice/profile?pid=170",
+      "https://www.gardenia.net/plant/petroselinum-crispum-parsley"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "astrophytum_asterias",
-  "name": "Astrophytum asterias",
+  "name": "Star cactus",
   "latin": "Astrophytum asterias",
   "sun": "high",
   "water": "low",
@@ -10,17 +10,17 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 36,
   "image_hero": "astrophytum_asterias.jpg",
   "image_thumb": "astrophytum_asterias.jpg",
   "traits": [
@@ -28,17 +28,17 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
+          "en": "Bright sun",
           "pl": "Pełne słońce",
           "de": "Volle Sonne",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "强光",
+          "ja": "強い日光",
           "ko": "강한 햇빛"
         }
       }
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Bardzo przepuszczalna",
-          "de": "Sehr durchlässig",
-          "fr": "Très drainant",
-          "it": "Molto drenante",
-          "es": "Muy drenante",
-          "pt": "Muito drenante",
+          "en": "Gritty cactus mix",
+          "pl": "Ziemia bardzo lekka",
+          "de": "Mineralisches Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "hi": "जल-निकासी मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "水はけ良い用土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Selten gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega escassa",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Water when dry",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen wenn trocken",
+          "fr": "Arroser à sec",
+          "it": "Annaffia da asciutto",
+          "es": "Riega en seco",
+          "pt": "Regue quando seco",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "완전 건조 후 물"
         }
       }
     },
@@ -85,9 +85,9 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia trudność",
-          "de": "Mittlerer Pflegeaufwand",
+          "en": "Moderate care",
+          "pl": "Umiarkowanie trudna",
+          "de": "Mittlere Pflege",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm conditions",
-          "pl": "Ciepłe warunki",
-          "de": "Warme Temperaturen",
-          "fr": "Températures chaudes",
-          "it": "Clima caldo",
-          "es": "Clima cálido",
-          "pt": "Clima quente",
-          "ar": "جو دافئ",
-          "hi": "गर्म तापमान",
-          "zh": "温暖环境",
-          "ja": "暖かい環境",
-          "ko": "따뜻한 환경"
+          "en": "18–30°C; cool dry",
+          "pl": "18–30°C; zimą sucho",
+          "de": "18–30°C; kühl-trocken",
+          "fr": "18–30°C; hiver sec",
+          "it": "18–30°C; inverno secco",
+          "es": "18–30°C; invierno seco",
+          "pt": "18–30°C; inverno seco",
+          "ar": "18–30°م؛ شتاء جاف",
+          "hi": "18–30°C; ठंडा सूखा",
+          "zh": "18–30°C；冬季偏干",
+          "ja": "18–30°C；冬は乾燥",
+          "ko": "18–30°C; 겨울 건조"
         }
       }
     },
@@ -128,10 +128,10 @@
           "de": "Niedrige Luftfeuchte",
           "fr": "Faible humidité",
           "it": "Bassa umidità",
-          "es": "Humedad baja",
+          "es": "Baja humedad",
           "pt": "Baixa umidade",
           "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
+          "hi": "कम नमी",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -143,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietrujący",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,9 +161,9 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
+          "en": "Slow growth",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
+          "de": "Langsames Wachstum",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
@@ -171,67 +171,106 @@
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "성장 느림"
+          "ja": "生長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita troppa acqua",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso de água",
+          "ar": "تجنّب زيادة الماء",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水烂根",
+          "ja": "過湿は腐敗",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي وعناكب",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧与螨",
+          "ja": "カイガラムシ・ダニ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Star Cactus",
-      "description": "Astrophytum asterias is a small, spineless cactus native to Texas and Mexico. It prefers bright sun, excellent drainage, and infrequent watering. Overwatering can quickly cause rot."
+      "common_name": "Star cactus",
+      "description": "A small, slow-growing cactus native to southern Texas and northeastern Mexico. It prefers very bright light and a gritty, fast-draining substrate. Let the potting mix dry fully between waterings and keep it much drier in winter to reduce rot risk."
     },
     "pl": {
-      "common_name": "Astrofitum gwiaździste",
-      "description": "Astrophytum asterias to niewielki, bezkolcowy kaktus z Teksasu i Meksyku. Wymaga silnego światła, bardzo przepuszczalnego podłoża i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia."
+      "common_name": "Kaktus gwiazdowy",
+      "description": "Mały, wolno rosnący kaktus pochodzący z południowego Teksasu i północno-wschodniego Meksyku. Lubi bardzo jasne stanowisko oraz lekkie, silnie przepuszczalne podłoże. Podlewaj dopiero po całkowitym wyschnięciu ziemi i ogranicz podlewanie zimą, aby uniknąć gnicia."
     },
     "de": {
       "common_name": "Sternkaktus",
-      "description": "Astrophytum asterias ist ein kleiner, dornenloser Kaktus aus Texas und Mexiko. Er benötigt viel Sonne, stark drainiertes Substrat und seltenes Gießen. Staunässe verursacht Fäulnis."
+      "description": "Ein kleiner, langsam wachsender Kaktus aus Südtexas und Nordostmexiko. Er braucht sehr helles Licht und ein stark durchlässiges, mineralisches Substrat. Nur gießen, wenn alles vollständig trocken ist, und im Winter deutlich trockener halten, um Fäulnis zu vermeiden."
     },
     "fr": {
       "common_name": "Cactus étoile",
-      "description": "Astrophytum asterias est un petit cactus sans épines originaire du Texas et du Mexique. Il demande beaucoup de soleil, un sol très drainant et peu d’arrosage. L’excès d’eau provoque la pourriture."
+      "description": "Petit cactus à croissance lente originaire du sud du Texas et du nord-est du Mexique. Il aime une lumière très vive et un substrat très drainant. Laissez sécher complètement entre deux arrosages et gardez-le presque sec en hiver pour limiter les risques de pourriture."
     },
     "it": {
       "common_name": "Cactus stella",
-      "description": "Astrophytum asterias è un piccolo cactus senza spine originario di Texas e Messico. Necessita di pieno sole, terreno molto drenante e annaffiature rare. L’acqua in eccesso causa marciumi."
+      "description": "Piccolo cactus a crescita lenta originario del sud del Texas e del nord-est del Messico. Richiede luce molto intensa e un substrato molto drenante. Annaffia solo a terriccio completamente asciutto e riduci molto in inverno per prevenire marciumi."
     },
     "es": {
       "common_name": "Cactus estrella",
-      "description": "Astrophytum asterias es un cactus pequeño y sin espinas de Texas y México. Requiere sol intenso, sustrato muy drenante y riego escaso. El exceso de agua provoca pudrición."
+      "description": "Cactus pequeño y de crecimiento lento, originario del sur de Texas y del noreste de México. Necesita mucha luz y un sustrato muy drenante. Riega solo cuando el sustrato esté totalmente seco y manténlo mucho más seco en invierno para evitar pudrición."
     },
     "pt": {
-      "common_name": "Cacto estrela",
-      "description": "Astrophytum asterias é um pequeno cacto sem espinhos nativo do Texas e do México. Precisa de sol pleno, solo muito drenante e regas espaçadas. O excesso de água causa apodrecimento."
+      "common_name": "Cacto-estrela",
+      "description": "Cacto pequeno e de crescimento lento, nativo do sul do Texas e do nordeste do México. Prefere luz muito forte e substrato bem drenante. Regue apenas quando estiver completamente seco e mantenha bem mais seco no inverno para reduzir risco de apodrecimento."
     },
     "ar": {
       "common_name": "صبار النجمة",
-      "description": "Astrophytum asterias صبار صغير بلا أشواك موطنه تكساس والمكسيك. يحتاج إلى شمس قوية وتربة جيدة التصريف وري قليل. الإفراط في الري يسبب التعفن."
+      "description": "صبار صغير بطيء النمو موطنه جنوب تكساس وشمال شرق المكسيك. يحتاج إلى ضوء ساطع جدًا وتربة سريعة التصريف. اسقِ فقط بعد جفاف التربة تمامًا وقلّل الري كثيرًا في الشتاء لتجنب التعفن."
     },
     "hi": {
       "common_name": "स्टार कैक्टस",
-      "description": "Astrophytum asterias टेक्सास और मेक्सिको का छोटा बिना कांटों वाला कैक्टस है। इसे तेज धूप, अच्छी जल निकासी और कम पानी की आवश्यकता होती है। अधिक पानी से सड़न होती है।"
+      "description": "यह एक छोटा, धीमी गति से बढ़ने वाला कैक्टस है जो दक्षिण टेक्सास और उत्तर-पूर्वी मेक्सिको का मूल निवासी है। इसे बहुत तेज़ रोशनी और अच्छी जल-निकासी वाला मिश्रण चाहिए। मिट्टी पूरी तरह सूखने पर ही पानी दें और सर्दियों में पानी बहुत कम रखें ताकि सड़न न हो।"
     },
     "zh": {
-      "common_name": "星形仙人掌",
-      "description": "Astrophytum asterias 是原产于德州和墨西哥的小型无刺仙人掌。需要充足阳光、良好排水的土壤和少量浇水。浇水过多容易腐烂。"
+      "common_name": "星球仙人掌",
+      "description": "小型、缓慢生长的仙人掌，原产于美国南部德州及墨西哥东北部。需要强光和颗粒感强、排水快的基质。每次浇水前务必干透，冬季尽量保持更干燥以降低腐烂风险。"
     },
     "ja": {
       "common_name": "アストロフィツム",
-      "description": "アストロフィツム・アステリアスはテキサスとメキシコ原産の小型無刺サボテンです。強い日光と水はけの良い用土、控えめな水やりが必要です。過湿は腐敗の原因になります。"
+      "description": "米国南テキサスからメキシコ北東部原産の小型で生長が遅いサボテンです。強い光と水はけの良い粒状の用土を好みます。用土が完全に乾いてから潅水し、冬は乾かし気味にして腐敗を防ぎます。"
     },
     "ko": {
       "common_name": "별선인장",
-      "description": "Astrophytum asterias는 텍사스와 멕시코 원산의 작은 무가시 선인장입니다. 강한 햇빛과 배수가 좋은 토양, 적은 물을 선호합니다. 과습하면 부패합니다."
+      "description": "미국 남부 텍사스와 멕시코 북동부 원산의 작은 선인장으로 성장 속도가 느립니다. 강한 빛과 배수가 매우 좋은 흙을 선호합니다. 흙이 완전히 마른 뒤에만 물을 주고, 겨울에는 더 건조하게 관리해 부패를 예방하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/astrophytum/asterias/details",
-      "https://www.cactus-art.biz/schede/ASTROPHYTUM/Astrophytum_asterias/Astrophytum_asterias.htm",
-      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1746/Astrophytum_asterias"
+      "https://plants.ces.ncsu.edu/plants/astrophytum/",
+      "https://www.rhs.org.uk/plants/513781/astrophytum-asterias-superkabuto/details",
+      "https://www.rhs.org.uk/plants/types/cacti-succulents/houseplants/growing-guide",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:128907-1"
     ]
   }
 }

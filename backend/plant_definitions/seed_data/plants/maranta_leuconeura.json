@@ -3,7 +3,7 @@
   "name": "Prayer Plant",
   "latin": "Maranta leuconeura",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "maranta_leuconeura.jpg",
   "image_thumb": "maranta_leuconeura.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Indirect light",
-          "pl": "Światło pośrednie",
-          "de": "Indirektes Licht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "散射光",
-          "ja": "間接光",
-          "ko": "간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수 좋음"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil moist",
-          "pl": "Utrzymuj wilgoć",
-          "de": "Feucht halten",
-          "fr": "Sol humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "촉촉하게 유지"
+          "en": "Evenly moist",
+          "pl": "Równomiernie wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Uniformément humide",
+          "it": "Uniformemente umido",
+          "es": "Uniformemente húmedo",
+          "pt": "Uniformemente úmido",
+          "ar": "رطب بشكل متساوٍ",
+          "hi": "समान रूप से गीला",
+          "zh": "均匀湿润",
+          "ja": "均等に湿った",
+          "ko": "균일한 습도"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlere Pflege",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -126,8 +126,8 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Hygrométrie élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact growth",
-          "pl": "Zwarty wzrost",
-          "de": "Kompakter Wuchs",
-          "fr": "Croissance compacte",
-          "it": "Crescita compatta",
-          "es": "Crecimiento compacto",
-          "pt": "Crescimento compacto",
-          "ar": "نمو مدمج",
-          "hi": "सघन वृद्धि",
-          "zh": "紧凑生长",
-          "ja": "コンパクト",
-          "ko": "콤팩트 성장"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Prayer Plant",
-      "description": "Maranta leuconeura is a tropical houseplant known for its patterned leaves that fold upward at night. It prefers bright indirect light, evenly moist soil, and high humidity."
+      "description": "The Prayer Plant is known for its striking, patterned leaves and its unique habit of folding them up at night. It thrives in moderate light and high humidity, making it a great indoor plant."
     },
     "pl": {
-      "common_name": "Maranta",
-      "description": "Maranta leuconeura to tropikalna roślina doniczkowa o dekoracyjnych liściach, które unoszą się nocą. Wymaga jasnego, pośredniego światła, wilgotnej gleby i wysokiej wilgotności."
+      "common_name": "Roślina modlitewna",
+      "description": "Roślina modlitewna jest znana z wyjątkowych, wzorzystych liści oraz charakterystycznego nawyku ich składania w nocy. Rośnie najlepiej przy średnim świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Pfeilwurz",
-      "description": "Maranta leuconeura ist eine tropische Zimmerpflanze mit gemusterten Blättern, die sich nachts aufrichten. Sie mag helles, indirektes Licht, feuchte Erde und hohe Luftfeuchtigkeit."
+      "common_name": "Gebetspflanze",
+      "description": "Die Gebetspflanze ist bekannt für ihre auffälligen, gemusterten Blätter und ihre einzigartige Gewohnheit, sie nachts zusammenzufalten. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Plante prieuse",
-      "description": "Maranta leuconeura est une plante tropicale appréciée pour ses feuilles décoratives qui se replient la nuit. Elle préfère une lumière indirecte, un sol humide et une forte humidité."
+      "common_name": "Plante de prière",
+      "description": "La plante de prière est connue pour ses feuilles décorées de motifs frappants et sa capacité unique à les replier la nuit. Elle prospère sous une lumière modérée et une humidité élevée."
     },
     "it": {
       "common_name": "Pianta della preghiera",
-      "description": "Maranta leuconeura è una pianta tropicale da interno con foglie ornamentali che si chiudono di notte. Richiede luce indiretta, terreno umido e alta umidità."
+      "description": "La pianta della preghiera è conosciuta per le sue foglie decorata e per l'abitudine unica di piegarle la notte. Cresce bene con luce moderata e alta umidità."
     },
     "es": {
-      "common_name": "Planta de la oración",
-      "description": "Maranta leuconeura es una planta tropical de interior conocida por sus hojas decorativas que se levantan por la noche. Prefiere luz indirecta, suelo húmedo y alta humedad."
+      "common_name": "Planta de oración",
+      "description": "La planta de oración es conocida por sus hojas decoradas con patrones llamativos y por su costumbre única de doblarlas por la noche. Se desarrolla bien con luz moderada y alta humedad."
     },
     "pt": {
-      "common_name": "Planta-da-oração",
-      "description": "Maranta leuconeura é uma planta tropical de interior com folhas ornamentais que se movem à noite. Gosta de luz indireta, solo úmido e alta umidade."
+      "common_name": "Planta de oração",
+      "description": "A planta de oração é conhecida por suas folhas marcadas e pela sua característica de dobrá-las à noite. Cresce bem com luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "نبات الصلاة",
-      "description": "Maranta leuconeura نبات استوائي منزلي يتميز بأوراق مزخرفة ترتفع ليلاً. يحتاج إلى ضوء غير مباشر وتربة رطبة ورطوبة عالية."
+      "common_name": "نبتة الصلاة",
+      "description": "تشتهر نبتة الصلاة بأوراقها المزخرفة وعادتها الفريدة في طيّها ليلاً. تزدهر في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
       "common_name": "प्रेयर प्लांट",
-      "description": "Maranta leuconeura एक उष्णकटिबंधीय इनडोर पौधा है जिसकी पत्तियाँ रात में ऊपर उठती हैं। इसे अप्रत्यक्ष रोशनी, नम मिट्टी और अधिक आर्द्रता चाहिए।"
+      "description": "प्रेयर प्लांट अपने आकर्षक, पैटर्नयुक्त पत्तों और रात के समय इन्हें मोड़ने की अनूठी आदत के लिए प्रसिद्ध है। यह मध्यम रोशनी और उच्च आर्द्रता में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "祈祷竹芋",
-      "description": "Maranta leuconeura 是一种热带室内植物，以夜间合拢的装饰性叶片著称。它需要明亮的散射光、湿润的土壤和较高的湿度。"
+      "common_name": "祈祷植物",
+      "description": "祈祷植物以其独特的图案叶子和夜间将叶子折叠起来的习惯而闻名。它在中等光照和高湿度的环境中生长得很好。"
     },
     "ja": {
-      "common_name": "マランタ",
-      "description": "Maranta leuconeura は夜に葉を閉じる模様の美しい熱帯観葉植物です。明るい間接光、湿った土、高湿度を好みます。"
+      "common_name": "祈りの植物",
+      "description": "祈りの植物は、特徴的な模様の葉と夜に葉を折りたたむ独特な習慣で知られています。中程度の光と高い湿度の条件でよく育ちます。"
     },
     "ko": {
-      "common_name": "마란타",
-      "description": "Maranta leuconeura는 밤에 잎이 접히는 무늬 잎이 특징인 열대 실내식물입니다. 간접광, 촉촉한 토양, 높은 습도를 선호합니다."
+      "common_name": "기도 식물",
+      "description": "기도 식물은 눈에 띄는 무늬의 잎사귀와 밤에 그것들을 접는 독특한 습관으로 알려져 있습니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11309/maranta-leuconeura/details",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-maranta/",
-      "https://edis.ifas.ufl.edu/publication/FP395"
+      "https://www.botanicalgarden.com",
+      "https://www.hortmag.com",
+      "https://www.gardeners.com"
     ]
   }
 }

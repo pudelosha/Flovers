@@ -1,6 +1,6 @@
 {
   "external_id": "pinguicula_moranensis",
-  "name": "Moran's Butterwort",
+  "name": "Moran's Pinguicula",
   "latin": "Pinguicula moranensis",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "sandy"
+    "cactus-succulent",
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "pinguicula_moranensis.jpg",
   "image_thumb": "pinguicula_moranensis.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "acidic, sandy",
-          "pl": "kwaśny, piaszczysty",
-          "de": "sauer, sandig",
-          "fr": "acide, sablonneux",
-          "it": "acido, sabbioso",
-          "es": "ácido, arenoso",
-          "pt": "ácido, arenoso",
-          "ar": "حمضي، رملي",
-          "hi": "क्षारीय, रेतीला",
-          "zh": "酸性，沙质",
-          "ja": "酸性、砂質",
-          "ko": "산성, 모래질"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छा जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnio",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "15-30°C",
+          "pl": "15-30°C",
+          "de": "15-30°C",
+          "fr": "15-30°C",
+          "it": "15-30°C",
+          "es": "15-30°C",
+          "pt": "15-30°C",
+          "ar": "15-30°C",
+          "hi": "15-30°C",
+          "zh": "15-30°C",
+          "ja": "15-30°C",
+          "ko": "15-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "false",
-          "pl": "fałsz",
-          "de": "falsch",
-          "fr": "faux",
-          "it": "falso",
-          "es": "falso",
-          "pt": "falso",
-          "ar": "خطأ",
-          "hi": "गलत",
-          "zh": "否",
-          "ja": "違う",
-          "ko": "거짓"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असाम",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
           "ar": "بطيء",
           "hi": "धीमा",
           "zh": "缓慢",
           "ja": "遅い",
-          "ko": "느린"
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Pas trop d'eau",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regue em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "不要过度浇水",
+          "ja": "水やり過多に注意",
+          "ko": "물을 너무 많이 주지 마세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Moran's Butterwort",
-      "description": "Pinguicula moranensis is a carnivorous plant native to Mexico. It has vibrant green rosettes and striking magenta flowers."
+      "common_name": "Moran's Pinguicula",
+      "description": "Pinguicula moranensis is a small carnivorous plant known for its rosette of succulent leaves. It thrives in moderate light and requires well-draining soil."
     },
     "pl": {
-      "common_name": "Woskowiec Moran",
-      "description": "Pinguicula moranensis to roślina mięsożerna pochodząca z Meksyku. Ma intensywnie zielone rozetki i wyraziste, purpurowe kwiaty."
+      "common_name": "Pinguicula Morana",
+      "description": "Pinguicula moranensis to mała roślina mięsożerna, znana z rozetki mięsistych liści. Rośnie w umiarkowanym świetle i wymaga przepuszczalnej gleby."
     },
     "de": {
-      "common_name": "Morans Butterblume",
-      "description": "Pinguicula moranensis ist eine fleischfressende Pflanze aus Mexiko. Sie hat leuchtend grüne Rosetten und auffällige magentafarbene Blumen."
+      "common_name": "Moran's Pinguicula",
+      "description": "Pinguicula moranensis ist eine kleine fleischfressende Pflanze, die für ihre Rosette aus fleischigen Blättern bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "Pinguicula de Moran",
-      "description": "Pinguicula moranensis est une plante carnivore originaire du Mexique. Elle possède des rosettes vertes vives et des fleurs magenta frappantes."
+      "description": "Pinguicula moranensis est une petite plante carnivore connue pour sa rosette de feuilles succulentes. Elle préfère une lumière modérée et un sol bien drainé."
     },
     "it": {
       "common_name": "Pinguicula di Moran",
-      "description": "Pinguicula moranensis è una pianta carnivora originaria del Messico. Ha rosette verdi vivaci e fiori magenta sorprendenti."
+      "description": "Pinguicula moranensis è una piccola pianta carnivora nota per la sua rosetta di foglie succulente. Cresce in luce moderata e richiede terreni ben drenati."
     },
     "es": {
       "common_name": "Pinguicula de Moran",
-      "description": "Pinguicula moranensis es una planta carnívora originaria de México. Tiene rosetas verdes brillantes y flores magenta llamativas."
+      "description": "Pinguicula moranensis es una pequeña planta carnívora conocida por su roseta de hojas suculentas. Crece con luz moderada y necesita un suelo bien drenado."
     },
     "pt": {
       "common_name": "Pinguicula de Moran",
-      "description": "Pinguicula moranensis é uma planta carnívora nativa do México. Possui rosetas verdes vibrantes e flores magenta impressionantes."
+      "description": "Pinguicula moranensis é uma pequena planta carnívora conhecida por sua roseta de folhas suculentas. Cresce em luz moderada e necessita de solo bem drenado."
     },
     "ar": {
-      "common_name": "Pinguicula موران",
-      "description": "Pinguicula moranensis هي نبات آكل اللحوم موطنه المكسيك. لها وردات خضراء زاهية وأزهار مغنتا لافتة."
+      "common_name": "بينغويكولا مورانسيس",
+      "description": "Pinguicula moranensis هو نبات صغير آكل اللحوم معروف بورقة أوراقه العصارية. ينمو في الضوء المعتدل ويحتاج إلى تربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "पिंग्विकुला मोरानेंसिस",
-      "description": "पिंग्विकुला मोरानेंसिस एक मांसाहारी पौधा है जो मेक्सिको का मूल निवासी है। इसमें हरे रंग की रोसेट और चमकीले मैजेंटा रंग के फूल होते हैं।"
+      "common_name": "मोरान की पिंगुइक्युला",
+      "description": "Pinguicula moranensis एक छोटी मांसाहारी पौधा है जो अपनी मांसल पत्तियों की गुलगुली के लिए जाना जाता है। यह मध्यम रोशनी में बढ़ता है और अच्छे जल निकासी वाली मिट्टी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "莫兰毛虫草",
-      "description": "Pinguicula moranensis 是一种原产于墨西哥的食虫植物。它具有鲜艳的绿色莲座和引人注目的品红色花朵。"
+      "common_name": "莫兰猪笼草",
+      "description": "Pinguicula moranensis 是一种小型食肉植物，以其多肉叶子的莲座而闻名。它喜欢中等光照并需要良好的排水土壤。"
     },
     "ja": {
-      "common_name": "モランのウツボカズラ",
-      "description": "Pinguicula moranensis はメキシコ原産の食虫植物です。鮮やかな緑色のロゼットと目を引くマゼンタ色の花を持っています。"
+      "common_name": "モランのピンギキュラ",
+      "description": "Pinguicula moranensis は、小さな肉食植物で、肉質の葉のロゼットが特徴です。中程度の光の下で育ち、排水性の良い土壌を必要とします。"
     },
     "ko": {
-      "common_name": "모란 벌레잡이풀",
-      "description": "Pinguicula moranensis는 멕시코 원산의 식충 식물입니다. 그것은 선명한 녹색의 로제트와 눈에 띄는 자홍색 꽃을 가지고 있습니다."
+      "common_name": "모란 핑귀큘라",
+      "description": "Pinguicula moranensis는 다육성 잎으로 이루어진 작은 육식 식물입니다. 중간 정도의 빛에서 자라며 배수가 좋은 토양을 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.ubc.ca/pinguicula-moranensis",
-      "https://www.carnivorousplant.org/pinguicula-moranensis-care"
+      "https://www.botanicgarden.edu/plantcare/pinguicula-moranensis",
+      "https://www.carnivorousplantcare.com/pinguicula-moranensis-guide"
     ]
   }
 }

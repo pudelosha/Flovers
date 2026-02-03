@@ -1,6 +1,6 @@
 {
   "external_id": "dorstenia_foetida",
-  "name": "Stink Dorstenia",
+  "name": "Foetid dorstenia",
   "latin": "Dorstenia foetida",
   "sun": "high",
   "water": "low",
@@ -10,14 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 90,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "dorstenia_foetida.jpg",
@@ -27,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright sun",
-          "pl": "Jasne słońce",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Sol brillante",
-          "pt": "Sol intenso",
-          "ar": "شمس ساطعة",
-          "hi": "तेज़ धूप",
-          "zh": "强光照",
-          "ja": "強い光",
-          "ko": "강한 빛"
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux, indirect",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz forte indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज, अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining",
-          "pl": "Dobrze drenująca",
-          "de": "Gut drainierend",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تربة مصرفة",
-          "hi": "अच्छी निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良",
-          "ko": "배수 우수"
+          "en": "Gritty, fast-drain",
+          "pl": "Przepuszczalne, grys",
+          "de": "Mineralisch, drainiert",
+          "fr": "Drainant, minéral",
+          "it": "Drenante, minerale",
+          "es": "Drenante, mineral",
+          "pt": "Drenante, mineral",
+          "ar": "تربة سريعة التصريف",
+          "hi": "झरझरी, जलनिकासी",
+          "zh": "颗粒感排水土",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Oszczędne",
-          "de": "Spärlich",
-          "fr": "Modéré",
-          "it": "Scarso",
-          "es": "Escaso",
-          "pt": "Escasso",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Dry then water",
+          "pl": "Przeschnie, podlej",
+          "de": "Antrocknen lassen",
+          "fr": "Laisser sécher",
+          "it": "Asciuga poi annaffia",
+          "es": "Secar y regar",
+          "pt": "Secar e regar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干后再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마른 뒤 물주기"
         }
       }
     },
@@ -84,14 +84,14 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
+          "en": "Moderate",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسط",
+          "ar": "متوسطة",
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "普通",
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepła",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "15–30°C, no frost",
+          "pl": "15–30°C, bez mrozu",
+          "de": "15–30°C, frostfrei",
+          "fr": "15–30°C, sans gel",
+          "it": "15–30°C, no gelo",
+          "es": "15–30°C, sin heladas",
+          "pt": "15–30°C, sem geada",
+          "ar": "15–30°م دون صقيع",
+          "hi": "15–30°C, पाला नहीं",
+          "zh": "15–30°C，怕霜",
+          "ja": "15–30°C 霜に弱い",
+          "ko": "15–30°C, 서리 금지"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Average indoor",
+          "pl": "Zwykła domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Humidade normal",
+          "ar": "رطوبة منزلية عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通室内湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 실내 습도"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko trująca",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻度有毒",
-          "ja": "弱い毒性",
-          "ko": "약한 독성"
+          "en": "Irritant latex sap",
+          "pl": "Drażniący lateks",
+          "de": "Reizender Milchsaft",
+          "fr": "Latex irritant",
+          "it": "Lattice irritante",
+          "es": "Látex irritante",
+          "pt": "Látex irritante",
+          "ar": "عصارة لاتكس مهيجة",
+          "hi": "चुभने वाला लेटेक्स",
+          "zh": "乳汁可能刺激",
+          "ja": "乳液は刺激性",
+          "ko": "수액 자극 가능"
         }
       }
     },
@@ -160,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमी",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow, caudex-form",
+          "pl": "Wolny, kaudeks",
+          "de": "Langsam, Caudex",
+          "fr": "Lente, caudex",
+          "it": "Lenta, caudex",
+          "es": "Lento, caudex",
+          "pt": "Lento, caudex",
+          "ar": "بطيء، ذو كاودكس",
+          "hi": "धीमा, काउडेक्स",
+          "zh": "缓慢，块茎状",
+          "ja": "遅い、塊根状",
+          "ko": "느림, 코덱스형"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot if overwatered",
+          "pl": "Gnije od przelania",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourrit si trop arrosé",
+          "it": "Marciume se troppa acqua",
+          "es": "Pudre con exceso de agua",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفن مع كثرة الماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "易因积水腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습 시 부패"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Stink Dorstenia",
-      "description": "Dorstenia foetida is a caudiciform succulent native to arid regions of East Africa. It forms a swollen base with seasonal leaves and unusual flattened flowers. It prefers bright light and careful watering."
+      "common_name": "Foetid dorstenia",
+      "description": "Dorstenia foetida is a caudiciform succulent in the mulberry family (Moraceae) from northeastern Africa and the Arabian Peninsula. Give it bright light and a very fast-draining cactus/succulent mix, watering only after the mix dries partly. Reduce watering strongly in winter; the milky latex sap can irritate skin."
     },
     "pl": {
       "common_name": "Dorstenia cuchnąca",
-      "description": "Dorstenia foetida to sukulent kaudeksowy pochodzący z suchych rejonów Afryki Wschodniej. Tworzy zgrubiałą podstawę i sezonowe liście z nietypowymi kwiatami. Wymaga jasnego światła i oszczędnego podlewania."
+      "description": "Dorstenia foetida to sukulent kaudeksowy z rodziny morwowatych (Moraceae), pochodzący z północno-wschodniej Afryki i Półwyspu Arabskiego. Zapewnij dużo światła i bardzo przepuszczalne podłoże dla kaktusów/sukulentów, podlewając dopiero po przeschnięciu. Zimą podlewanie mocno ogranicz; mleczny lateks może podrażniać skórę."
     },
     "de": {
       "common_name": "Stinkende Dorstenie",
-      "description": "Dorstenia foetida ist eine sukkulente Caudexpflanze aus trockenen Gebieten Ostafrikas. Sie bildet eine verdickte Basis mit saisonalen Blättern und ungewöhnlichen Blüten. Helles Licht und vorsichtiges Gießen sind wichtig."
+      "description": "Dorstenia foetida ist eine caudexbildende Sukkulente aus der Maulbeergewächse-Familie (Moraceae) aus Nordostafrika und der Arabischen Halbinsel. Stelle sie hell und nutze ein sehr gut drainierendes Kakteen-/Sukkulentensubstrat; gieße erst, wenn es teilweise abgetrocknet ist. Im Winter stark sparsamer gießen; der milchige Latex kann die Haut reizen."
     },
     "fr": {
-      "common_name": "Dorstenia fétide",
-      "description": "Dorstenia foetida est une plante succulente à caudex originaire des zones arides d’Afrique de l’Est. Elle développe une base renflée avec des feuilles saisonnières et des fleurs inhabituelles. Elle préfère une lumière vive et peu d’eau."
+      "common_name": "Dorstenie fétide",
+      "description": "Dorstenia foetida est une succulente à caudex de la famille des Moracées (Moraceae), originaire d’Afrique du Nord-Est et de la péninsule Arabique. Offrez une lumière vive et un substrat très drainant type cactus/succulentes, en arrosant seulement après un séchage partiel. En hiver, réduisez fortement l’arrosage; le latex peut être irritant."
     },
     "it": {
       "common_name": "Dorstenia fetida",
-      "description": "Dorstenia foetida è una succulenta caudiciforme originaria delle regioni aride dell’Africa orientale. Presenta una base ingrossata con foglie stagionali e fiori insoliti. Necessita di luce intensa e annaffiature moderate."
+      "description": "Dorstenia foetida è una succulenta caudiciforme della famiglia Moraceae, originaria del Nord-Est dell’Africa e della Penisola Arabica. Richiede molta luce e un terriccio molto drenante per cactus/succulente, con annaffiature solo dopo parziale asciugatura. In inverno riduci molto l’acqua; il lattice può irritare la pelle."
     },
     "es": {
       "common_name": "Dorstenia fétida",
-      "description": "Dorstenia foetida es una suculenta caudiciforme originaria de zonas áridas del este de África. Forma una base engrosada con hojas estacionales y flores inusuales. Requiere mucha luz y riegos espaciados."
+      "description": "Dorstenia foetida es una suculenta con caudex de la familia Moraceae, originaria del noreste de África y la península arábiga. Necesita mucha luz y un sustrato muy drenante para cactus/suculentas, regando solo cuando se haya secado parcialmente. En invierno reduce mucho el riego; el látex puede ser irritante."
     },
     "pt": {
       "common_name": "Dorstenia fétida",
-      "description": "Dorstenia foetida é uma suculenta caudiciforme nativa de regiões áridas da África Oriental. Possui uma base engrossada com folhas sazonais e flores incomuns. Prefere luz intensa e pouca água."
+      "description": "Dorstenia foetida é uma suculenta caudiciforme da família Moraceae, nativa do nordeste de África e da Península Arábica. Prefere luz forte e substrato muito drenante para cactos/suculentas, regando apenas após secagem parcial. No inverno, reduza bastante a água; o látex pode irritar a pele."
     },
     "ar": {
-      "common_name": "دورستينيا كريهة",
-      "description": "نبات Dorstenia foetida نبات عصاري ذو قاعدة منتفخة موطنه المناطق الجافة في شرق أفريقيا. يتميز بأوراق موسمية وأزهار غير مألوفة. يحتاج إلى ضوء قوي وري معتدل."
+      "common_name": "دورستينيا نتنة",
+      "description": "Dorstenia foetida نبات عصاري ذو كاودكس من فصيلة التوتيات (Moraceae) موطنه شمال شرق أفريقيا وشبه الجزيرة العربية. يحتاج لضوء ساطع وتربة شديدة التصريف مثل خليط الصبار/العصاريات، مع ري بعد جفاف جزئي للتربة. قلّل الري كثيرًا شتاءً؛ العصارة اللبنية (اللاتكس) قد تسبب تهيجًا للجلد."
     },
     "hi": {
-      "common_name": "डॉर्स्टेनिया फोएटिडा",
-      "description": "Dorstenia foetida पूर्वी अफ्रीका के शुष्क क्षेत्रों का एक रसीला पौधा है। इसमें मोटा आधार, मौसमी पत्तियाँ और अनोखे फूल होते हैं। इसे तेज़ रोशनी और कम पानी पसंद है।"
+      "common_name": "डोर्स्टीनिया फोएटिडा",
+      "description": "Dorstenia foetida शहतूत कुल (Moraceae) का काउडेक्स वाला सक्युलेंट है, जिसका मूल उत्तर-पूर्वी अफ्रीका और अरब प्रायद्वीप है। इसे तेज रोशनी और बहुत अच्छी जलनिकासी वाली कैक्टस/सक्युलेंट मिट्टी दें, और मिट्टी आंशिक सूखने पर ही पानी दें। सर्दियों में पानी बहुत कम करें; इसका दूधिया लेटेक्स त्वचा में जलन कर सकता है।"
     },
     "zh": {
-      "common_name": "臭多榕属植物",
-      "description": "Dorstenia foetida 原产于东非干旱地区，是一种块根型多肉植物。它具有膨大的基部、季节性叶片和特殊的花序。适合强光和少量浇水。"
+      "common_name": "臭盾花（Dorstenia foetida）",
+      "description": "Dorstenia foetida 是桑科（Moraceae）的块茎状多肉植物，原产东北非与阿拉伯半岛。需明亮光照与排水极好的仙人掌/多肉基质，基质部分干后再浇水。冬季应显著减少浇水；植株乳汁可能刺激皮肤。"
     },
     "ja": {
-      "common_name": "ドルステニア・フォエティダ",
-      "description": "Dorstenia foetida は東アフリカの乾燥地帯原産の塊根性多肉植物です。肥大した基部と季節的な葉、独特な花を持ちます。強い光と控えめな水やりを好みます。"
+      "common_name": "ドーステニア・フォエチダ",
+      "description": "Dorstenia foetida はクワ科（Moraceae）の塊根状多肉で、北東アフリカからアラビア半島に自生します。明るい光と水はけの良い多肉用土を用い、用土がある程度乾いてから水やりします。冬は水やりを大きく控え、乳白色の樹液は刺激性があるため注意してください。"
     },
     "ko": {
       "common_name": "도르스테니아 포에티다",
-      "description": "Dorstenia foetida는 동아프리카의 건조 지역이 원산지인 괴근 다육식물입니다. 부풀어진 기부와 계절성 잎, 독특한 꽃을 가집니다. 강한 빛과 적은 물을 선호합니다."
+      "description": "Dorstenia foetida 는 뽕나무과(Moraceae)의 코덱스형 다육식물로, 북동아프리카와 아라비아 반도 원산입니다. 밝은 빛과 배수가 매우 좋은 다육/선인장용 흙을 사용하고, 흙이 어느 정도 마른 뒤 물을 주세요. 겨울에는 물을 크게 줄이며, 유백색 수액은 피부 자극을 일으킬 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:853772-1",
-      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Moraceae/11355/Dorstenia_foetida",
-      "https://cactus-art.biz/schede/DORSTENIA/Dorstenia_foetida/Dorstenia_foetida.htm"
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:851554-1",
+      "https://worldofsucculents.com/grow-care-dorstenia/",
+      "https://www.cactus-art.biz/schede/DORSTENIA/Dorstenia_foetida/Dorstenia_foetida/Dorstenia_foetida.htm",
+      "https://hscactus.org/resources/plants-of-the-month/dorstenia-2019/",
+      "https://www.oasicactus.com/en/product/dorstenia-foetida-vase-77/"
     ]
   }
 }

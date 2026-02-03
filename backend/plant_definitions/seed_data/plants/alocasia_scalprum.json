@@ -1,25 +1,26 @@
 {
   "external_id": "alocasia_scalprum",
-  "name": "Scalpel-leaf Alocasia",
+  "name": "Alocasia scalprum",
   "latin": "Alocasia scalprum",
   "sun": "medium",
   "water": "high",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 21,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "alocasia_scalprum.jpg",
   "image_thumb": "alocasia_scalprum.jpg",
   "traits": [
@@ -27,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Streulicht",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Indirektlicht",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy aroid mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Luftiges Substrat",
+          "en": "Chunky aroid mix",
+          "pl": "Przewiewna mieszanka",
+          "de": "Luftiges Aroid-Substrat",
           "fr": "Substrat aéré",
-          "it": "Terriccio arioso",
+          "it": "Substrato arioso",
           "es": "Sustrato aireado",
           "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 좋은 흙"
+          "ar": "تربة أرويد جيدة التهوية",
+          "hi": "हवादार एरॉइड मिश्रण",
+          "zh": "疏松天南星基质",
+          "ja": "通気の良い用土",
+          "ko": "통기성 좋은 배합토"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide en continu",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة منتظمة",
-          "hi": "लगातार नम",
-          "zh": "保持湿润",
-          "ja": "常に湿り気",
-          "ko": "항상 촉촉"
+          "en": "Moist, not soggy",
+          "pl": "Wilgotno, nie mokro",
+          "de": "Feucht, nicht nass",
+          "fr": "Humide, pas détrempé",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, no encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर जलभराव नहीं",
+          "zh": "保持微湿不积水",
+          "ja": "湿り気、過湿NG",
+          "ko": "촉촉하게, 과습 금지"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Advanced care",
-          "pl": "Trudna w uprawie",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Difficile",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "عناية صعبة",
-          "hi": "उन्नत देखभाल",
-          "zh": "养护较难",
-          "ja": "上級者向け",
-          "ko": "관리 어려움"
+          "en": "Moderate care",
+          "pl": "Umiarkowanie trudna",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "16–30°C",
+          "pl": "16–30°C",
+          "de": "16–30°C",
+          "fr": "16–30°C",
+          "it": "16–30°C",
+          "es": "16–30°C",
+          "pt": "16–30°C",
+          "ar": "16–30°م",
+          "hi": "16–30°C",
+          "zh": "16–30°C",
+          "ja": "16–30°C",
+          "ko": "16–30°C"
         }
       }
     },
@@ -125,10 +126,10 @@
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
-          "fr": "Forte humidité",
+          "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च नमी",
           "zh": "高湿度",
@@ -141,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषैली",
-          "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to moderate",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
-          "ko": "성장 느림"
+          "en": "Slow–moderate",
+          "pl": "Wolny–umiarkowany",
+          "de": "Langsam–mäßig",
+          "fr": "Lente à moyenne",
+          "it": "Lenta–media",
+          "es": "Lento–medio",
+          "pt": "Lento–médio",
+          "ar": "نمو بطيء–متوسط",
+          "hi": "धीमा–मध्यम",
+          "zh": "缓慢至中等",
+          "ja": "遅め〜中程度",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites, mealybugs",
+          "pl": "Przędziorki, wełnowce",
+          "de": "Spinnmilben, Wollläuse",
+          "fr": "Acariens, cochenilles",
+          "it": "Ragnetti, cocciniglie",
+          "es": "Ácaros, cochinillas",
+          "pt": "Ácaros, cochonilhas",
+          "ar": "عث، بق دقيقي",
+          "hi": "स्पाइडर माइट्स, मिलीबग्स",
+          "zh": "红蜘蛛、粉蚧",
+          "ja": "ハダニ、コナカイガラ",
+          "ko": "응애, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Scalpel-leaf Alocasia",
-      "description": "Alocasia scalprum is a rare tropical aroid prized for its narrow, metallic-textured leaves. It prefers bright indirect light, consistently moist soil, and high humidity. This species is sensitive to cold, drought, and low humidity."
+      "common_name": "Samar lance alocasia",
+      "description": "Alocasia scalprum is a compact aroid with narrow, textured leaves. Keep it in bright, indirect light and an airy aroid mix. Water when the top layer dries slightly, and keep it warm with higher humidity."
     },
     "pl": {
-      "common_name": "Alokazja skalpelowa",
-      "description": "Alocasia scalprum to rzadka roślina tropikalna o wąskich, metalicznych liściach. Wymaga jasnego, rozproszonego światła oraz stale wilgotnego podłoża. Najlepiej rośnie w wysokiej wilgotności powietrza."
+      "common_name": "Alokazja „Samar lance”",
+      "description": "Alocasia scalprum to kompaktowa alokazja o wąskich, mocno fakturowanych liściach. Lubi jasne, rozproszone światło i przewiewne podłoże dla obrazkowatych. Podlewaj, gdy wierzch podłoża lekko przeschnie, i zapewnij ciepło oraz wyższą wilgotność."
     },
     "de": {
-      "common_name": "Skalpell-Alokasie",
-      "description": "Alocasia scalprum ist eine seltene tropische Aronstabpflanze mit schmalen, metallisch wirkenden Blättern. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist wichtig für gesundes Wachstum."
+      "common_name": "Samar-Lanzen-Alokasie",
+      "description": "Alocasia scalprum ist eine kompakte Aroid-Pflanze mit schmalen, strukturierten Blättern. Sie wächst am besten bei hellem, indirektem Licht in einem luftigen Aroid-Substrat. Gieße, wenn die obere Schicht leicht abtrocknet, und halte sie warm bei höherer Luftfeuchte."
     },
     "fr": {
-      "common_name": "Alocasia à feuilles fines",
-      "description": "Alocasia scalprum est une espèce tropicale rare aux feuilles étroites et texturées. Elle préfère une lumière indirecte vive et un sol constamment humide. Une forte humidité ambiante est essentielle."
+      "common_name": "Alocasia « lance de Samar »",
+      "description": "Alocasia scalprum est un aroïde compact aux feuilles étroites et texturées. Placez-le en lumière vive indirecte dans un substrat aéré pour aroïdes. Arrosez quand la surface sèche légèrement et maintenez chaleur et humidité élevées."
     },
     "it": {
-      "common_name": "Alocasia a foglie sottili",
-      "description": "Alocasia scalprum è una pianta tropicale rara con foglie strette dall'aspetto metallico. Necessita di luce indiretta intensa e terreno sempre umido. L'umidità elevata favorisce una crescita sana."
+      "common_name": "Alocasia “lancia di Samar”",
+      "description": "Alocasia scalprum è un’aroide compatta con foglie strette e molto testurizzate. Preferisce luce intensa ma indiretta e un substrato arioso per aroidi. Annaffia quando lo strato superiore asciuga leggermente e mantieni caldo e umidità alta."
     },
     "es": {
-      "common_name": "Alocasia de hoja fina",
-      "description": "Alocasia scalprum es una arácea tropical rara con hojas estrechas y textura metálica. Requiere luz brillante indirecta y sustrato constantemente húmedo. La alta humedad ambiental es muy importante."
+      "common_name": "Alocasia lanza de Samar",
+      "description": "Alocasia scalprum es una arácea compacta con hojas estrechas y texturizadas. Necesita luz brillante e indirecta y un sustrato aireado tipo aroid. Riega cuando la capa superior se seque un poco y mantenla cálida con humedad alta."
     },
     "pt": {
-      "common_name": "Alocasia de folhas finas",
-      "description": "Alocasia scalprum é uma planta tropical rara com folhas estreitas de aspecto metálico. Prefere luz indireta brilhante e solo sempre úmido. A alta umidade ajuda no desenvolvimento adequado."
+      "common_name": "Alocasia lança de Samar",
+      "description": "Alocasia scalprum é uma arácea compacta com folhas estreitas e texturizadas. Prefere luz forte indireta e um substrato bem arejado para aróides. Regue quando a camada superior secar levemente e mantenha calor e boa umidade."
     },
     "ar": {
-      "common_name": "ألوكاسيا سكالبـروم",
-      "description": "Alocasia scalprum نبات استوائي نادر بأوراق ضيقة ذات مظهر معدني. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار. الرطوبة العالية ضرورية لنموه."
+      "common_name": "ألوكاسيا سكالبروم",
+      "description": "Alocasia scalprum نبات أرويد مدمج بأوراق ضيقة ذات نسيج واضح. يحتاج إلى ضوء ساطع غير مباشر وتربة أرويد جيدة التهوية. اسقِ عندما تجف الطبقة السطحية قليلًا، مع الحفاظ على الدفء ورطوبة أعلى."
     },
     "hi": {
-      "common_name": "एलोकैसिया स्कैलप्रम",
-      "description": "Alocasia scalprum एक दुर्लभ उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ संकरी और धात्विक होती हैं। इसे तेज अप्रत्यक्ष रोशनी और लगातार नम मिट्टी चाहिए। उच्च आर्द्रता इसके लिए आवश्यक है।"
+      "common_name": "एलोकैसिया स्कैल्प्रम",
+      "description": "Alocasia scalprum एक कॉम्पैक्ट एरॉइड है जिसकी पत्तियाँ पतली और बनावटदार होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और हवादार एरॉइड मिक्स में रखें। ऊपर की परत हल्की सूखने पर पानी दें, और गर्मी व अधिक नमी बनाए रखें।"
     },
     "zh": {
-      "common_name": "细叶海芋",
-      "description": "Alocasia scalprum 是一种稀有的热带天南星科植物，叶片狭长且具有金属质感。它需要明亮的散射光和持续湿润的基质。高湿度有助于健康生长。"
+      "common_name": "刻刀海芋",
+      "description": "Alocasia scalprum 是一种株型紧凑的天南星科观叶植物，叶片狭长且有质感。适合明亮散射光与疏松透气的天南星基质。表层略干再浇水，保持温暖并提供较高湿度。"
     },
     "ja": {
-      "common_name": "アロカシア・スカルプラム",
-      "description": "Alocasia scalprum は細く金属質感の葉を持つ希少な熱帯植物です。明るい間接光と常に湿った土壌を好みます。高い湿度環境が必要です。"
+      "common_name": "アロカシア・スカルプルム",
+      "description": "Alocasia scalprum は細長い質感のある葉を持つコンパクトなサトイモ科植物です。明るい間接光と通気の良い用土で育てます。表土が少し乾いてから水やりし、暖かさと高めの湿度を保ちます。"
     },
     "ko": {
-      "common_name": "알로카시아 스칼프럼",
-      "description": "Alocasia scalprum은 좁고 금속 질감의 잎을 가진 희귀한 열대 식물입니다. 밝은 간접광과 지속적으로 촉촉한 토양을 선호합니다. 높은 습도가 필요합니다."
+      "common_name": "알로카시아 스칼프룸",
+      "description": "Alocasia scalprum은 좁고 질감 있는 잎이 특징인 소형 아로이드입니다. 밝은 간접광과 통기성 좋은 배합토에서 잘 자랍니다. 겉흙이 살짝 마르면 물을 주고, 따뜻함과 높은 습도를 유지하세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.aroidpedia.com/journal/alocasia-scalprum",
-      "https://www.exoticrainforest.com/Alocasia%20scalprum%20pc.html",
-      "https://www.kew.org/plants/alocasia"
+      "https://www.rhs.org.uk/plants/alocasia",
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.gardendesign.com/houseplants/alocasia.html",
+      "https://www.thespruce.com/grow-alocasia-indoors-1902735",
+      "https://www.poison.org/articles/are-plants-in-the-alocasia-genus-poisonous-221"
     ]
   }
 }

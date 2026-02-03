@@ -1,0 +1,275 @@
+{
+  "external_id": "zamioculcas_zamiifolia",
+  "name": "ZZ Plant",
+  "latin": "Zamioculcas zamiifolia",
+  "sun": "low",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": true,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "cactus-succulent"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "zamioculcas_zamiifolia.jpg",
+  "image_thumb": "zamioculcas_zamiifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "낮은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性が良い",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Infrequent",
+          "pl": "Rzadkie podlewanie",
+          "de": "Seltene Bewässerung",
+          "fr": "Arrosage rare",
+          "it": "Irrigazione infrequente",
+          "es": "Riego infrecuente",
+          "pt": "Rega infrequente",
+          "ar": "ري",
+          "hi": "अल्प पानी",
+          "zh": "不常浇水",
+          "ja": "稀に水やり",
+          "ko": "드문 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pochi parassiti",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-आवधिक कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "ZZ Plant",
+      "description": "The ZZ plant is a low-maintenance indoor plant known for its waxy, hearty leaves. It thrives in low light and infrequent watering."
+    },
+    "pl": {
+      "common_name": "Zamiokulkas",
+      "description": "Zamiokulkas to roślina o niewielkich wymaganiach pielęgnacyjnych, znana z błyszczących, mocnych liści. Dobrze rośnie przy słabym świetle i rzadkim podlewaniu."
+    },
+    "de": {
+      "common_name": "Glücksfeder",
+      "description": "Die Glücksfeder ist eine pflegeleichte Zimmerpflanze mit wachsartigen, robusten Blättern. Sie gedeiht bei wenig Licht und seltenem Gießen."
+    },
+    "fr": {
+      "common_name": "Plante ZZ",
+      "description": "La plante ZZ est une plante d'intérieur facile à entretenir, connue pour ses feuilles cireuses et robustes. Elle prospère avec peu de lumière et des arrosages rares."
+    },
+    "it": {
+      "common_name": "Pianta ZZ",
+      "description": "La pianta ZZ è una pianta da interno di facile manutenzione, conosciuta per le sue foglie cerose e robuste. Cresce bene con poca luce e irrigazione infrequente."
+    },
+    "es": {
+      "common_name": "Planta ZZ",
+      "description": "La planta ZZ es una planta de interior de bajo mantenimiento, conocida por sus hojas cerosas y resistentes. Crece bien con poca luz y riego poco frecuente."
+    },
+    "pt": {
+      "common_name": "Planta ZZ",
+      "description": "A planta ZZ é uma planta de interior de baixo cuidado, conhecida por suas folhas cerosas e resistentes. Cresce bem em pouca luz e com regas pouco frequentes."
+    },
+    "ar": {
+      "common_name": "نبات ZZ",
+      "description": "نبات ZZ هو نبات داخلي سهل العناية، معروف بأوراقه الشمعية والقوية. ينمو جيدًا في الضوء الخافت مع الري النادر."
+    },
+    "hi": {
+      "common_name": "ZZ पौधा",
+      "description": "ZZ पौधा एक कम देखभाल वाला इनडोर पौधा है, जो अपनी मोमी और मजबूत पत्तियों के लिए जाना जाता है। यह कम रोशनी में और कम पानी के साथ अच्छी तरह से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "ZZ植物",
+      "description": "ZZ植物是一种低维护的室内植物，因其蜡质、坚韧的叶片而闻名。它在低光照和不频繁的浇水条件下茁壮成长。"
+    },
+    "ja": {
+      "common_name": "ZZプラント",
+      "description": "ZZプラントは低メンテナンスの室内植物で、ロウのような丈夫な葉で知られています。低光であまり水を与えなくても元気に育ちます。"
+    },
+    "ko": {
+      "common_name": "ZZ 식물",
+      "description": "ZZ 식물은 관리가 적은 실내 식물로, 왁스 같은 강한 잎으로 유명합니다. 낮은 빛과 드문 물주기에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.thespruce.com/zz-plant-5070603",
+      "https://www.gardeningknowhow.com/houseplants/zz-plant/zz-plant-care.htm"
+    ]
+  }
+}

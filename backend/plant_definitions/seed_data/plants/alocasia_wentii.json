@@ -1,9 +1,9 @@
 {
   "external_id": "alocasia_wentii",
-  "name": "New Guinea Shield",
+  "name": "New Guinea shield",
   "latin": "Alocasia wentii",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -18,7 +18,7 @@
   "moisture_required": true,
   "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_wentii.jpg",
@@ -28,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect",
-          "pl": "jasne pośrednie",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux indirect",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "airy aroid mix",
-          "pl": "przewiewna aroid",
-          "de": "luftiges Aroid",
-          "fr": "mélange aéré",
-          "it": "substrato arioso",
-          "es": "sustrato aireado",
-          "pt": "substrato leve",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidowa",
+          "de": "Aroid-Mix",
+          "fr": "Substrat aroides",
+          "it": "Mix per aroidi",
+          "es": "Mezcla aroides",
+          "pt": "Mistura aroides",
+          "ar": "تربة أرويد جيدة",
+          "hi": "एरॉइड मिक्स",
+          "zh": "天南星科基质",
+          "ja": "アロイド用土",
+          "ko": "아로이드 배합토"
         }
       }
     },
@@ -66,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep moist",
-          "pl": "umiark. wilgotna",
-          "de": "gleichmäßig feucht",
-          "fr": "sol humide",
-          "it": "sempre umido",
-          "es": "mantener húmedo",
-          "pt": "manter úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気を保つ",
-          "ko": "촉촉 유지"
+          "en": "Evenly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, pas détrempé",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, no encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर जलभराव नहीं",
+          "zh": "保持微湿",
+          "ja": "常にやや湿り気",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -85,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "管理は中程度",
+          "ko": "관리 보통"
         }
       }
     },
@@ -104,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18–29°C",
+          "pl": "18–29°C",
+          "de": "18–29°C",
+          "fr": "18–29°C",
+          "it": "18–29°C",
+          "es": "18–29°C",
+          "pt": "18–29°C",
+          "ar": "18–29°م",
+          "hi": "18–29°C",
+          "zh": "18–29°C",
+          "ja": "18–29°C",
+          "ko": "18–29°C"
         }
       }
     },
@@ -123,15 +123,15 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high humidity",
-          "pl": "wysoka wilg.",
-          "de": "hohe Luftfeuchte",
-          "fr": "forte humidité",
-          "it": "alta umidità",
-          "es": "alta humedad",
-          "pt": "alta umidade",
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "अधिक नमी",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -142,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "toxic to pets",
-          "pl": "toksyczna",
-          "de": "giftig",
-          "fr": "toxique",
-          "it": "tossica",
-          "es": "tóxica",
-          "pt": "tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند الأكل",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +161,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "upright clump",
-          "pl": "wzniesiona",
-          "de": "horstig",
-          "fr": "touffe dressée",
-          "it": "cespuglio eretto",
-          "es": "porte erguido",
-          "pt": "porte ereto",
+          "en": "Upright clumps",
+          "pl": "Wzniesione kępy",
+          "de": "Aufrecht wachsend",
+          "fr": "Touffe dressée",
+          "it": "Cespugli eretti",
+          "es": "Matas erguidas",
+          "pt": "Touceiras eretas",
           "ar": "نمو قائم",
-          "hi": "सीधा गुच्छा",
+          "hi": "सीधा गुच्छेदार",
           "zh": "直立丛生",
-          "ja": "直立株立ち",
-          "ko": "직립형"
+          "ja": "直立して株立ち",
+          "ko": "직립 군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to rot",
+          "pl": "Skłonna do zgnilizny",
+          "de": "Fäulnisgefahr",
+          "fr": "Risque de pourriture",
+          "it": "Rischio marciume",
+          "es": "Propensa a pudrirse",
+          "pt": "Propensa a podridão",
+          "ar": "عرضة للتعفن",
+          "hi": "सड़न का जोखिम",
+          "zh": "易烂根",
+          "ja": "根腐れ注意",
+          "ko": "뿌리썩음 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites",
+          "pl": "Przędziorki",
+          "de": "Spinnmilben",
+          "fr": "Araignées rouges",
+          "it": "Ragnetti rossi",
+          "es": "Ácaros",
+          "pt": "Ácaros",
+          "ar": "عث العنكبوت",
+          "hi": "मकड़ी किलनी",
+          "zh": "红蜘蛛",
+          "ja": "ハダニ",
+          "ko": "응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "New Guinea Shield",
-      "description": "Alocasia wentii is a tropical aroid known for its large green leaves with purple undersides. It grows best indoors with bright indirect light, warm temperatures, and consistently moist soil. High humidity helps maintain healthy foliage."
+      "common_name": "New Guinea shield",
+      "description": "A tropical Alocasia with deep green leaves and a darker, often purplish underside. Give bright, indirect light and water when the top layer begins to dry, keeping the mix evenly moist but not soggy. Keep warm and humid, and note it is toxic if ingested."
     },
     "pl": {
-      "common_name": "Alokazja tarczowa",
-      "description": "Alocasia wentii to tropikalna roślina o dużych zielonych liściach z purpurowym spodem. Wymaga jasnego, rozproszonego światła i wilgotnego podłoża. Najlepiej rośnie w ciepłych i wilgotnych warunkach."
+      "common_name": "Alokazja „New Guinea shield”",
+      "description": "Tropikalna alokazja o dużych, ciemnozielonych liściach z ciemniejszym spodem. Zapewnij jasne, rozproszone światło i podlewaj, gdy wierzch podłoża zaczyna przesychać, utrzymując je lekko wilgotne. Lubi ciepło i wysoką wilgotność, a po zjedzeniu jest toksyczna."
     },
     "de": {
-      "common_name": "Neuguinea-Schildblatt",
-      "description": "Alocasia wentii ist eine tropische Pflanze mit großen grünen Blättern und violetter Unterseite. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit unterstützt gesundes Wachstum."
+      "common_name": "New-Guinea-Schild",
+      "description": "Eine tropische Alokasie mit großen, dunkelgrünen Blättern und oft purpurner Blattunterseite. Hell, aber ohne direkte Sonne stellen und gießen, sobald die obere Schicht antrocknet; keine Staunässe. Warm und möglichst luftfeucht halten; bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Alocasie de Nouvelle-Guinée",
-      "description": "Alocasia wentii est une plante tropicale aux grandes feuilles vertes au revers pourpre. Elle apprécie une lumière indirecte et un sol constamment humide. Une humidité élevée est recommandée."
+      "common_name": "Bouclier de Nouvelle-Guinée",
+      "description": "Alocasia tropical aux grandes feuilles vert foncé, souvent plus sombres au revers. Placez-la en lumière vive indirecte et arrosez quand la surface du substrat commence à sécher, sans détremper. Elle apprécie chaleur et humidité, et elle est toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "Alocasia della Nuova Guinea",
-      "description": "Alocasia wentii è una pianta tropicale con grandi foglie verdi e lato inferiore porpora. Predilige luce indiretta e terreno umido. L'umidità elevata favorisce una crescita sana."
+      "common_name": "Scudo della Nuova Guinea",
+      "description": "Alocasia tropicale con foglie grandi verde scuro e spesso pagina inferiore più scura. Tieni in luce intensa indiretta e annaffia quando lo strato superiore inizia ad asciugare, evitando ristagni. Richiede caldo e umidità; è tossica se ingerita."
     },
     "es": {
-      "common_name": "Alocasia de Nueva Guinea",
-      "description": "Alocasia wentii es una planta tropical con hojas grandes y envés púrpura. Necesita luz indirecta brillante y riego regular. La humedad alta es beneficiosa."
+      "common_name": "Escudo de Nueva Guinea",
+      "description": "Alocasia tropical con hojas grandes verde oscuro y envés más oscuro. Colócala con luz brillante e indirecta y riega cuando la capa superior empiece a secarse, sin encharcar. Prefiere calor y humedad, y es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Alocasia da Nova Guiné",
-      "description": "Alocasia wentii é uma planta tropical com folhas verdes grandes e verso arroxeado. Prefere luz indireta e solo sempre úmido. Alta umidade ajuda no desenvolvimento."
+      "common_name": "Escudo da Nova Guiné",
+      "description": "Alocasia tropical com folhas grandes verde-escuras e verso mais escuro. Dê luz forte indireta e regue quando a camada superior começar a secar, sem encharcar. Prefere calor e umidade, e é tóxica se ingerida."
     },
     "ar": {
-      "common_name": "ألوكاسيا غينيا الجديدة",
-      "description": "ألوكاسيا وينتي نبات استوائي بأوراق كبيرة خضراء وأسفل أرجواني. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار. الرطوبة العالية مفيدة لصحة النبات."
+      "common_name": "درع غينيا الجديدة",
+      "description": "ألوكاسيا استوائية بأوراق كبيرة خضراء داكنة وغالبًا يكون أسفلها أغمق. ضعها في ضوء ساطع غير مباشر واسقِ عند بدء جفاف سطح التربة مع تجنب الإغراق. تحب الدفء والرطوبة، وهي سامة عند الابتلاع."
     },
     "hi": {
-      "common_name": "न्यू गिनी अलोकेशिया",
-      "description": "Alocasia wentii एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बड़ी और नीचे से बैंगनी होती हैं। इसे तेज अप्रत्यक्ष रोशनी और नम मिट्टी चाहिए। अधिक नमी से पौधा स्वस्थ रहता है।"
+      "common_name": "न्यू गिनी शील्ड",
+      "description": "यह एक उष्णकटिबंधीय अलोकासिया है जिसकी पत्तियाँ गहरी हरी और नीचे की तरफ अक्सर गहरी होती हैं। तेज अप्रत्यक्ष रोशनी दें और जब ऊपर की परत सूखने लगे तब पानी दें, मिट्टी को नम रखें पर जलभराव न हो। गर्मी व अधिक नमी पसंद करती है और खाने पर विषाक्त है।"
     },
     "zh": {
-      "common_name": "新几内亚海芋",
-      "description": "Alocasia wentii 是一种热带植物，叶片大且背面呈紫色。适合明亮散射光和持续湿润的土壤。高湿度有助于其生长。"
+      "common_name": "新几内亚盾牌海芋",
+      "description": "热带海芋，叶片深绿且背面常更深色。放在明亮散射光处，表层开始变干再浇水，保持微湿但不积水。喜温暖高湿，误食有毒。"
     },
     "ja": {
-      "common_name": "ニューギニアクワズイモ",
-      "description": "Alocasia wentii は大きな緑の葉と紫色の裏面を持つ熱帯植物です。明るい間接光と湿った土を好みます。高湿度が健康な成長を助けます。"
+      "common_name": "ニューギニア・シールド",
+      "description": "濃い緑の大きな葉と、暗色になりやすい葉裏が特徴の熱帯性アロカシアです。明るい間接光で管理し、表土が乾き始めたら水やりして過湿は避けます。高温多湿を好み、誤食で有毒です。"
     },
     "ko": {
-      "common_name": "뉴기니 알로카시아",
-      "description": "Alocasia wentii는 잎이 크고 뒷면이 보라색인 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 잎 건강에 도움이 됩니다."
+      "common_name": "뉴기니 실드 알로카시아",
+      "description": "짙은 녹색 잎과 더 어두운 잎뒷면이 특징인 열대 알로카시아입니다. 밝은 간접광에서 키우고 겉흙이 마르기 시작하면 물을 주되 과습은 피하세요. 따뜻함과 높은 습도를 좋아하며 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/17984/alocasia-wentii/details",
-      "https://edis.ifas.ufl.edu/publication/FP033",
-      "https://www.botanicalgarden.ubc.ca/alocasia-care-guide"
+      "https://www.rhs.org.uk/plants/73296/alocasia-wentii/details",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia",
+      "https://hort.extension.wisc.edu/articles/elephant-ears-colocasia-alocasia-and-xanthosoma/",
+      "https://plants.ces.ncsu.edu/plants/alocasia/",
+      "https://www.thespruce.com/alocasia-wentii-care-guide-8609141",
+      "https://www.bhg.com/grow-elephant-ear-plant-indoors-6979648"
     ]
   }
 }

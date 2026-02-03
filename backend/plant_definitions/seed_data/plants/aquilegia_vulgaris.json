@@ -7,10 +7,11 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "balcony-flowers"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -27,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz’ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Sun/part shade",
+          "pl": "Słońce/półcień",
+          "de": "Sonne/Halbschatten",
+          "fr": "Soleil/mi-ombre",
+          "it": "Sole/ombra parz.",
+          "es": "Sol/semisombra",
+          "pt": "Sol/meia-sombra",
+          "ar": "شمس/ظل جزئي",
+          "hi": "धूप/आंशिक छाया",
+          "zh": "全日照/半阴",
+          "ja": "日向/半日陰",
+          "ko": "양지/반그늘"
         }
       }
     },
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Sol limoneux",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम दोमट",
-          "zh": "湿润壤土",
-          "ja": "湿った壌土",
-          "ko": "습한 양토"
+          "en": "Moist, well-drained",
+          "pl": "Wilg., przepuszcz.",
+          "de": "Feucht, durchlässig",
+          "fr": "Frais, drainant",
+          "it": "Umido, drenante",
+          "es": "Húmedo, drenante",
+          "pt": "Úmido, drenante",
+          "ar": "رطب وصرف جيد",
+          "hi": "नम, जल-निकासी",
+          "zh": "湿润且排水好",
+          "ja": "適湿で排水良好",
+          "ko": "촉촉, 배수 좋게"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "en": "Even moisture",
+          "pl": "Równo wilgotno",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humidité régulière",
+          "it": "Umidità costante",
+          "es": "Humedad constante",
+          "pt": "Umidade constante",
+          "ar": "رطوبة ثابتة",
+          "hi": "समान नमी",
+          "zh": "保持均匀湿润",
+          "ja": "乾かしすぎない",
+          "ko": "고르게 촉촉"
         }
       }
     },
@@ -84,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -103,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Chłodny klimat",
-          "de": "Kühl gemäßigt",
-          "fr": "Tempéré frais",
-          "it": "Temperato fresco",
-          "es": "Templado fresco",
-          "pt": "Temperado fresco",
-          "ar": "معتدل بارد",
-          "hi": "शीतोष्ण",
-          "zh": "凉爽温带",
-          "ja": "冷涼",
-          "ko": "서늘한 기후"
+          "en": "10–20°C",
+          "pl": "10–20°C",
+          "de": "10–20°C",
+          "fr": "10–20°C",
+          "it": "10–20°C",
+          "es": "10–20°C",
+          "pt": "10–20°C",
+          "ar": "10–20°م",
+          "hi": "10–20°C",
+          "zh": "10–20°C",
+          "ja": "10–20°C",
+          "ko": "10–20°C"
         }
       }
     },
@@ -122,17 +123,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgoć",
-          "de": "Normale Feuchte",
+          "en": "Average humidity",
+          "pl": "Śr. wilgotność",
+          "de": "Normale Luftfeuchte",
           "fr": "Humidité normale",
           "it": "Umidità normale",
           "es": "Humedad normal",
           "pt": "Umidade normal",
           "ar": "رطوبة عادية",
           "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常の湿度",
+          "zh": "一般湿度",
+          "ja": "普通の湿度",
           "ko": "보통 습도"
         }
       }
@@ -142,17 +143,17 @@
       "value": {
         "text": {
           "en": "Toxic if eaten",
-          "pl": "Trująca po zjedzeniu",
+          "pl": "Trująca po zjedz.",
           "de": "Giftig bei Verzehr",
-          "fr": "Toxique ingérée",
+          "fr": "Toxique si ingéré",
           "it": "Tossica se ingerita",
-          "es": "Tóxica ingerida",
-          "pt": "Tóxica ingerida",
-          "ar": "سامة عند الأكل",
-          "hi": "विषैला सेवन पर",
-          "zh": "食用有毒",
-          "ja": "摂取で有毒",
-          "ko": "섭취 시 독성"
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام إذا أُكلت",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -160,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clump forming",
-          "pl": "Kępowy wzrost",
-          "de": "Horstbildend",
-          "fr": "Croissance en touffe",
-          "it": "Crescita cespitosa",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "군생 성장"
+          "en": "Clumping perennial",
+          "pl": "Bylina kępkowa",
+          "de": "Horstbild. Staude",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cespitosa",
+          "es": "Perenne en mata",
+          "pt": "Perene em touceira",
+          "ar": "معمرة كتلية",
+          "hi": "गुच्छेदार बहुवर्षीय",
+          "zh": "丛生多年生",
+          "ja": "多年草（株立ち）",
+          "ko": "포기형 여러해살이"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Nie zalewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب الغمر بالماء",
+          "hi": "पानी भराव नहीं",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, leaf miners",
+          "pl": "Mszyce, miniarki",
+          "de": "Blattläuse, Minierer",
+          "fr": "Pucerons, mineuses",
+          "it": "Afidi, minatori",
+          "es": "Pulgones, minadores",
+          "pt": "Pulgões, minadores",
+          "ar": "منّ وحفار الأوراق",
+          "hi": "एफिड, लीफ माइनर",
+          "zh": "蚜虫, 潜叶虫",
+          "ja": "アブラムシ等",
+          "ko": "진딧물, 굴파리"
         }
       }
     }
@@ -179,58 +218,61 @@
   "translations": {
     "en": {
       "common_name": "Common columbine",
-      "description": "Aquilegia vulgaris is a herbaceous perennial native to Europe. It produces nodding, spurred flowers in spring and prefers partial shade with moist, well-drained soil."
+      "description": "A temperate, clump-forming perennial grown for nodding, spurred flowers in late spring to early summer. Give bright light with some shade and keep soil evenly moist but well drained. All parts can be toxic if eaten."
     },
     "pl": {
       "common_name": "Orlik pospolity",
-      "description": "Aquilegia vulgaris to bylina pochodząca z Europy. Kwitnie wiosną i najlepiej rośnie w półcieniu na wilgotnej, przepuszczalnej glebie."
+      "description": "Bylina kępkowa o zwisających kwiatach z ostrogami, kwitnąca późną wiosną i wczesnym latem. Zapewnij jasne stanowisko z półcieniem i utrzymuj podłoże równomiernie wilgotne, ale przepuszczalne. Roślina może być trująca po spożyciu."
     },
     "de": {
       "common_name": "Gewöhnliche Akelei",
-      "description": "Aquilegia vulgaris ist eine ausdauernde Pflanze aus Europa. Sie blüht im Frühjahr und gedeiht am besten im Halbschatten in feuchtem Boden."
+      "description": "Eine horstbildende Staude mit nickenden, gespornten Blüten im späten Frühjahr bis Frühsommer. Hell stellen, gern mit etwas Schatten, und das Substrat gleichmäßig feucht, aber gut drainiert halten. Bei Verzehr kann die Pflanze giftig sein."
     },
     "fr": {
       "common_name": "Ancolie commune",
-      "description": "Aquilegia vulgaris est une plante vivace européenne. Elle fleurit au printemps et préfère une exposition mi-ombragée avec un sol humide."
+      "description": "Vivace en touffe appréciée pour ses fleurs retombantes à éperons à la fin du printemps et au début de l’été. Placez-la en lumière vive avec un peu d’ombre et gardez le sol frais mais bien drainé. La plante peut être toxique en cas d’ingestion."
     },
     "it": {
       "common_name": "Aquilegia comune",
-      "description": "Aquilegia vulgaris è una pianta perenne originaria dell’Europa. Fiorisce in primavera e predilige mezz’ombra e terreno umido drenato."
+      "description": "Perenne cespitosa con fiori penduli e speronati a fine primavera e inizio estate. Preferisce luce intensa con un po’ d’ombra e un terreno costantemente umido ma ben drenato. Può essere tossica se ingerita."
     },
     "es": {
       "common_name": "Aguileña común",
-      "description": "Aquilegia vulgaris es una planta perenne europea. Florece en primavera y crece mejor en semisombra con suelo húmedo."
+      "description": "Perenne en mata, valorada por sus flores colgantes con espolones a finales de primavera y comienzos de verano. Dale luz brillante con algo de sombra y mantén el sustrato uniformemente húmedo pero con buen drenaje. Puede ser tóxica si se ingiere."
     },
     "pt": {
       "common_name": "Aquilégia-comum",
-      "description": "Aquilegia vulgaris é uma planta perene da Europa. Floresce na primavera e prefere meia-sombra e solo úmido."
+      "description": "Perene em touceira cultivada por flores pendentes com esporões no fim da primavera e início do verão. Prefere luz forte com alguma sombra e substrato uniformemente úmido, porém bem drenado. Pode ser tóxica se ingerida."
     },
     "ar": {
       "common_name": "أكويليجيا شائعة",
-      "description": "نبات معمر موطنه أوروبا. يزهر في الربيع ويفضل الظل الجزئي والتربة الرطبة جيدة التصريف."
+      "description": "نبات معمر ينمو على شكل كتل ويزهر بأزهار متدلية ذات نتوءات في أواخر الربيع وبداية الصيف. يحتاج إلى ضوء ساطع مع بعض الظل وتربة رطبة بانتظام مع تصريف جيد. قد يكون سامًا إذا تم تناوله."
     },
     "hi": {
-      "common_name": "कॉमन कोलंबाइन",
-      "description": "Aquilegia vulgaris यूरोप का बहुवर्षीय पौधा है। यह वसंत में खिलता है और आंशिक धूप व नम मिट्टी पसंद करता है।"
+      "common_name": "कॉमन कॉलम्बाइन",
+      "description": "यह गुच्छेदार बहुवर्षीय पौधा देर वसंत से शुरुआती गर्मियों में झुके हुए, स्पर वाले फूल देता है। तेज रोशनी के साथ कुछ छाया दें और मिट्टी को समान रूप से नम लेकिन जल-निकासी वाली रखें। खाने पर यह विषाक्त हो सकता है।"
     },
     "zh": {
-      "common_name": "普通耧斗菜",
-      "description": "Aquilegia vulgaris 原产于欧洲，为多年生植物。春季开花，适合半阴和湿润土壤。"
+      "common_name": "欧洲耧斗菜",
+      "description": "丛生多年生植物，晚春到初夏开下垂的距状花。提供明亮光照并适当遮阴，盆土保持均匀湿润但需排水良好。误食可能有毒。"
     },
     "ja": {
       "common_name": "セイヨウオダマキ",
-      "description": "Aquilegia vulgaris はヨーロッパ原産の多年草です。春に花を咲かせ、半日陰と湿った土を好みます。"
+      "description": "株立ちする多年草で、春後半から初夏にかけて距のある下向きの花を咲かせます。明るい場所で半日陰も可、用土は排水よく適度に湿らせます。誤食すると有毒の可能性があります。"
     },
     "ko": {
       "common_name": "서양매발톱꽃",
-      "description": "Aquilegia vulgaris는 유럽 원산의 다년생 식물입니다. 봄에 꽃이 피며 반그늘과 촉촉한 토양을 선호합니다."
+      "description": "봄 늦게부터 초여름까지 아래로 향한 꽃과 꿀주머니(거)가 특징인 포기형 여러해살이입니다. 밝은 빛과 약한 그늘에서 키우고 흙은 배수가 잘되면서 고르게 촉촉하게 유지하세요. 섭취 시 유독할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1021/aquilegia-vulgaris/details",
-      "https://www.gardenersworld.com/plants/aquilegia-vulgaris/",
-      "https://plants.ces.ncsu.edu/plants/aquilegia-vulgaris/"
+      "https://www.rhs.org.uk/plants/aquilegia/growing-guide",
+      "https://www.rhs.org.uk/plants/aquilegia",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=286072",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-aquilegias/",
+      "https://plants.ces.ncsu.edu/plants/aquilegia-x-hybrida/",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:306409-2"
     ]
   }
 }

@@ -3,14 +3,14 @@
   "name": "Madagascar Jewel",
   "latin": "Euphorbia leuconeura",
   "sun": "medium",
-  "water": "medium",
+  "water": "low",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -27,15 +27,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Helles indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "en": "Bright, indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière vive indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz intensa indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -46,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Fast-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Sehr durchlässig",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जल निकासी वाली मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -65,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Let soil dry",
+          "pl": "Pozwól przeschnąć",
+          "de": "Antrocknen lassen",
+          "fr": "Laisser sécher",
+          "it": "Lascia asciugare",
+          "es": "Dejar secar",
+          "pt": "Deixar secar",
+          "ar": "اترك التربة تجف",
+          "hi": "मिट्टी सूखने दें",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "흙 마르면 물"
         }
       }
     },
@@ -103,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18–27°C; min 15°C",
+          "pl": "18–27°C; min 15°C",
+          "de": "18–27°C; min 15°C",
+          "fr": "18–27°C; min 15°C",
+          "it": "18–27°C; min 15°C",
+          "es": "18–27°C; min 15°C",
+          "pt": "18–27°C; min 15°C",
+          "ar": "18–27°م؛ حد 15°م",
+          "hi": "18–27°C; न्यून 15°C",
+          "zh": "18–27°C；最低15°C",
+          "ja": "18–27°C；最低15°C",
+          "ko": "18–27°C; 최저 15°C"
         }
       }
     },
@@ -122,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Durchschnitt",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average; no misting",
+          "pl": "Średnia; bez zrasz.",
+          "de": "Normal; kein Sprühen",
+          "fr": "Moyenne; sans brume",
+          "it": "Media; no nebulizzazione",
+          "es": "Media; sin pulverizar",
+          "pt": "Média; sem borrifar",
+          "ar": "عادية؛ بلا رش",
+          "hi": "सामान्य; मिस्टिंग नहीं",
+          "zh": "普通湿度；不需喷雾",
+          "ja": "普通湿度；霧吹き不要",
+          "ko": "보통 습도; 분무 불필요"
         }
       }
     },
@@ -141,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic sap",
-          "pl": "Trujący sok",
-          "de": "Giftiger Saft",
-          "fr": "Sève toxique",
-          "it": "Linfa tossica",
-          "es": "Savia tóxica",
-          "pt": "Seiva tóxica",
-          "ar": "عصارة سامة",
-          "hi": "विषैला रस",
-          "zh": "有毒汁液",
-          "ja": "有毒な樹液",
-          "ko": "유독 수액"
+          "en": "Toxic milky sap",
+          "pl": "Toksyczny sok mleczny",
+          "de": "Giftiger Milchsaft",
+          "fr": "Sève laiteuse toxique",
+          "it": "Lattice tossico",
+          "es": "Savia lechosa tóxica",
+          "pt": "Seiva leitosa tóxica",
+          "ar": "عصارة لبنية سامة",
+          "hi": "विषैला दूधिया रस",
+          "zh": "有毒乳汁",
+          "ja": "有毒な乳白色の樹液",
+          "ko": "유독한 유액"
         }
       }
     },
@@ -160,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright shrub",
-          "pl": "Krzewiasty",
-          "de": "Aufrecht",
-          "fr": "Dressé",
-          "it": "Eretto",
-          "es": "Erecto",
-          "pt": "Ereto",
-          "ar": "قائم",
-          "hi": "सीधा बढ़त",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립형"
+          "en": "Upright succulent",
+          "pl": "Sukulent wzniesiony",
+          "de": "Aufrecht wachsend",
+          "fr": "Succulente dressée",
+          "it": "Succulenta eretta",
+          "es": "Suculenta erguida",
+          "pt": "Suculenta ereta",
+          "ar": "نمو قائم عصاري",
+          "hi": "सीधा रसीला पौधा",
+          "zh": "直立多肉",
+          "ja": "直立する多肉",
+          "ko": "직립 다육"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Keine Staunässe",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita exceso de agua",
+          "pt": "Evite excesso de água",
+          "ar": "تجنب الإفراط بالري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحياناً",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶有虫害",
+          "ja": "まれに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Madagascar Jewel",
-      "description": "Euphorbia leuconeura is a succulent shrub native to Madagascar. It has thick stems and green leaves with pale veins. The plant is drought tolerant and well suited to indoor growing."
+      "common_name": "Madagascar jewel",
+      "description": "Euphorbia leuconeura is a succulent spurge from Madagascar grown as an indoor plant. Give it bright, indirect light and let the potting mix dry between waterings. The milky sap is toxic and can irritate skin and pets."
     },
     "pl": {
-      "common_name": "Wilczomlecz białounerwiony",
-      "description": "Euphorbia leuconeura pochodzi z Madagaskaru i ma mięsiste pędy. Liście są zielone z jasnymi nerwami. Dobrze znosi warunki domowe i okresowe susze."
+      "common_name": "Klejnot madagaskarski",
+      "description": "Euphorbia leuconeura to sukulent z Madagaskaru uprawiany jako roślina domowa. Zapewnij jasne, rozproszone światło i pozwalaj podłożu przeschnąć między podlewaniami. Mleczny sok jest toksyczny i może podrażniać skórę oraz zwierzęta."
     },
     "de": {
       "common_name": "Madagaskar-Juwel",
-      "description": "Euphorbia leuconeura ist eine sukkulente Pflanze aus Madagaskar. Sie besitzt dicke Stämme und geaderte Blätter. Sie ist pflegeleicht und trockenheitsverträglich."
+      "description": "Euphorbia leuconeura ist eine sukkulente Wolfsmilch aus Madagaskar für die Zimmerkultur. Stelle sie hell, aber ohne harte Mittagssonne, und lasse das Substrat zwischen den Wassergaben abtrocknen. Der Milchsaft ist giftig und kann Haut und Haustiere reizen."
     },
     "fr": {
-      "common_name": "Euphorbe de Madagascar",
-      "description": "Euphorbia leuconeura est originaire de Madagascar. Elle développe des tiges épaisses et des feuilles nervurées. Elle s’adapte bien à la culture en intérieur."
+      "common_name": "Joyeau de Madagascar",
+      "description": "Euphorbia leuconeura est une euphorbe succulente de Madagascar cultivée en intérieur. Placez-la en lumière vive indirecte et laissez le substrat sécher entre deux arrosages. Sa sève laiteuse est toxique et irritante."
     },
     "it": {
-      "common_name": "Euforbia del Madagascar",
-      "description": "Euphorbia leuconeura è una pianta succulenta del Madagascar. Presenta fusti carnosi e foglie verdi. È resistente e adatta agli ambienti interni."
+      "common_name": "Gioiello del Madagascar",
+      "description": "Euphorbia leuconeura è una euforbia succulenta del Madagascar coltivata come pianta da interno. Preferisce luce intensa ma indiretta e annaffiature solo dopo l’asciugatura del substrato. Il lattice è tossico e può irritare pelle e animali."
     },
     "es": {
       "common_name": "Joya de Madagascar",
-      "description": "Euphorbia leuconeura es originaria de Madagascar. Tiene tallos gruesos y hojas con nervaduras claras. Es fácil de cuidar en interiores."
+      "description": "Euphorbia leuconeura es una euforbia suculenta de Madagascar cultivada en interior. Dale luz brillante indirecta y deja secar el sustrato entre riegos. La savia lechosa es tóxica e irritante."
     },
     "pt": {
       "common_name": "Joia de Madagascar",
-      "description": "Euphorbia leuconeura é nativa de Madagascar. Possui caules espessos e folhas verdes. Tolera bem a seca e ambientes internos."
+      "description": "Euphorbia leuconeura é uma eufórbia suculenta de Madagascar cultivada em interiores. Prefere luz forte indireta e regas apenas quando o substrato secar. A seiva leitosa é tóxica e pode irritar pele e animais."
     },
     "ar": {
       "common_name": "جوهرة مدغشقر",
-      "description": "نبات Euphorbia leuconeura موطنه مدغشقر. يتميز بسيقان سميكة وأوراق مخططة. مناسب للزراعة داخل المنازل."
+      "description": "Euphorbia leuconeura نبات عصاري من الفربيونيات موطنه مدغشقر ويُربّى كنبات منزلي. يحتاج إلى ضوء ساطع غير مباشر مع ترك التربة تجف بين الريات. العصارة اللبنية سامة وقد تسبب تهيجاً للجلد والحيوانات الأليفة."
     },
     "hi": {
       "common_name": "मेडागास्कर ज्वेल",
-      "description": "Euphorbia leuconeura मेडागास्कर का पौधा है। इसमें मोटे तने और हरी पत्तियाँ होती हैं। यह घर के अंदर उगाने के लिए उपयुक्त है।"
+      "description": "Euphorbia leuconeura मेडागास्कर का एक रसीला स्पर्ज पौधा है जो घर के अंदर उगाया जाता है। इसे तेज़ अप्रत्यक्ष रोशनी दें और पानी देने से पहले मिट्टी को सूखने दें। इसका दूधिया रस विषैला होता है और त्वचा व पालतू जानवरों को परेशान कर सकता है।"
     },
     "zh": {
       "common_name": "马达加斯加宝石",
-      "description": "Euphorbia leuconeura 原产于马达加斯加。它具有粗壮茎干和清晰叶脉。适合室内种植。"
+      "description": "Euphorbia leuconeura 是原产马达加斯加的多肉大戟类室内植物。提供明亮散射光，浇水前让基质干透。其乳白色汁液有毒，可能刺激皮肤并对宠物有害。"
     },
     "ja": {
       "common_name": "マダガスカルジュエル",
-      "description": "Euphorbia leuconeura はマダガスカル原産です。太い茎と葉脈の目立つ葉を持ちます。室内で育てやすい植物です。"
+      "description": "Euphorbia leuconeura はマダガスカル原産の多肉のトウダイグサです。明るい間接光で育て、用土が乾いてから水やりします。乳白色の樹液は有毒で、皮膚やペットに刺激となることがあります。"
     },
     "ko": {
       "common_name": "마다가스카르 주얼",
-      "description": "Euphorbia leuconeura는 마다가스카르가 원산지입니다. 두꺼운 줄기와 뚜렷한 잎맥이 특징입니다. 실내 재배에 적합합니다."
+      "description": "Euphorbia leuconeura는 마다가스카르 원산의 다육성 대극류 실내식물입니다. 밝은 간접광에서 키우고 흙이 마른 뒤 물을 주세요. 유액은 독성이 있어 피부 자극 및 반려동물에 위험할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/euphorbia-leuconeura",
-      "https://www.rhs.org.uk/plants/6956/euphorbia-leuconeura/details",
-      "https://www.gardenersworld.com/plants/euphorbia-leuconeura/"
+      "https://plantura.garden/uk/houseplants/madagascar-jewel/madagascar-jewel-overview",
+      "https://bloomboxclub.com/blogs/plantcare/madagascar-jewel-euphorbia-leuconeura",
+      "https://indoor-plants.net/euphorbia-leuconeura/",
+      "https://laidbackgardener.blog/2020/01/17/madagascar-jewel-the-pass-along-succulent/",
+      "https://www.animalpoisons.com.au/news/euphorbia-pets/"
     ]
   }
 }

@@ -1,17 +1,18 @@
 {
   "external_id": "hypoestes_phyllostachya",
-  "name": "Polka dot plant",
+  "name": "Hypoestes phyllostachya",
   "latin": "Hypoestes phyllostachya",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "hypoestes_phyllostachya.jpg",
   "image_thumb": "hypoestes_phyllostachya.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist, well-drained",
-          "pl": "Wilgotne, przepuszcz.",
-          "de": "Feucht, durchlässig",
-          "fr": "Humide, drainant",
-          "it": "Umido, drenante",
-          "es": "Húmedo, drenante",
-          "pt": "Úmido, drenante",
-          "ar": "رطب وجيد الصرف",
-          "hi": "नम, जलनिकासी",
-          "zh": "湿润且排水好",
-          "ja": "湿り気と水はけ",
-          "ko": "촉촉·배수 좋게"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water weekly",
-          "pl": "Podlewaj co 7 dni",
-          "de": "Wöchentlich gießen",
-          "fr": "Arroser 1×/sem",
-          "it": "Annaffia sett.",
-          "es": "Riego semanal",
-          "pt": "Regar semanal",
-          "ar": "اسقِ أسبوعيًا",
-          "hi": "साप्ताहिक पानी",
-          "zh": "每周浇水",
-          "ja": "週1で水やり",
-          "ko": "주 1회 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "중간"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°C",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium–high",
-          "pl": "Średnia–wysoka",
-          "de": "Mittel–hoch",
-          "fr": "Moyenne à élevée",
-          "it": "Media–alta",
-          "es": "Media–alta",
-          "pt": "Média–alta",
-          "ar": "متوسطة–مرتفعة",
-          "hi": "मध्यम–उच्च",
-          "zh": "中到高",
-          "ja": "中〜高",
-          "ko": "중~높음"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高",
+          "ko": "높은"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -161,78 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast, compact",
-          "pl": "Szybki, zwarty",
-          "de": "Schnell, kompakt",
-          "fr": "Rapide, compact",
-          "it": "Rapida, compatta",
-          "es": "Rápido, compacto",
-          "pt": "Rápido, compacto",
-          "ar": "سريع ومدمج",
-          "hi": "तेज़, सघन",
-          "zh": "快速紧凑",
-          "ja": "早い・コンパクト",
-          "ko": "빠름·컴팩트"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرाह से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Polka dot plant",
-      "description": "A compact tropical plant from Madagascar grown for its spotted pink, red, or white foliage. Give bright, indirect light and water when the surface begins to dry, keeping the potting mix lightly moist. It prefers warm rooms (about 18–27°C) and is listed as non-toxic to cats and dogs."
+      "common_name": "Polka Dot Plant",
+      "description": "Hypoestes phyllostachya, also known as the Polka Dot Plant, is a popular ornamental houseplant. It features attractive, colorful leaves with spots of pink, red, or white."
     },
     "pl": {
-      "common_name": "Hipoestes (polka dot plant)",
-      "description": "Kompaktowa roślina tropikalna z Madagaskaru, uprawiana dla nakrapianych liści w odcieniach różu, czerwieni lub bieli. Zapewnij jasne, rozproszone światło i podlewaj, gdy wierzch podłoża lekko przeschnie, utrzymując je lekko wilgotne. Lubi ciepło (około 18–27°C) i jest uznawana za nietoksyczną dla kotów i psów."
+      "common_name": "Roślina w kropki",
+      "description": "Hypoestes phyllostachya, znana jako Roślina w kropki, jest popularną rośliną ozdobną. Charakteryzuje się atrakcyjnymi, kolorowymi liśćmi z plamkami w odcieniach różu, czerwieni lub bieli."
     },
     "de": {
-      "common_name": "Punktpflanze",
-      "description": "Eine kompakte Tropenpflanze aus Madagaskar, die wegen ihrer gepunkteten rosa, roten oder weißen Blätter gehalten wird. Stelle sie hell, aber ohne direkte Sonne, und gieße, wenn die Oberfläche antrocknet, sodass das Substrat leicht feucht bleibt. Sie mag Wärme (ca. 18–27°C) und gilt als ungiftig für Katzen und Hunde."
+      "common_name": "Punktemuster Pflanze",
+      "description": "Hypoestes phyllostachya, auch als Punktemuster Pflanze bekannt, ist eine beliebte Zierpflanze. Sie hat auffällige, bunte Blätter mit Flecken in Pink, Rot oder Weiß."
     },
     "fr": {
       "common_name": "Plante à pois",
-      "description": "Plante tropicale compacte originaire de Madagascar, cultivée pour son feuillage tacheté rose, rouge ou blanc. Donnez une lumière vive indirecte et arrosez quand la surface commence à sécher, en gardant le terreau légèrement humide. Elle préfère la chaleur (environ 18–27°C) et est indiquée comme non toxique pour les chats et les chiens."
+      "description": "Hypoestes phyllostachya, également connue sous le nom de Plante à pois, est une plante d'intérieur populaire. Elle présente des feuilles colorées et attrayantes avec des taches roses, rouges ou blanches."
     },
     "it": {
       "common_name": "Pianta a pois",
-      "description": "Pianta tropicale compatta del Madagascar, coltivata per le foglie macchiettate rosa, rosse o bianche. Fornisci luce intensa indiretta e annaffia quando la superficie inizia ad asciugare, mantenendo il substrato leggermente umido. Preferisce temperature calde (circa 18–27°C) ed è considerata non tossica per cani e gatti."
+      "description": "Hypoestes phyllostachya, conosciuta anche come Pianta a pois, è una pianta ornamentale popolare. Ha foglie colorate e attraenti con macchie rosa, rosse o bianche."
     },
     "es": {
-      "common_name": "Planta de lunares",
-      "description": "Planta tropical compacta de Madagascar, apreciada por su follaje moteado rosa, rojo o blanco. Dale luz brillante indirecta y riega cuando la superficie empiece a secarse, manteniendo el sustrato ligeramente húmedo. Prefiere calor (aprox. 18–27°C) y figura como no tóxica para gatos y perros."
+      "common_name": "Planta de puntos",
+      "description": "Hypoestes phyllostachya, también conocida como Planta de puntos, es una planta ornamental popular. Presenta hojas coloridas con manchas rosas, rojas o blancas."
     },
     "pt": {
-      "common_name": "Planta-de-bolinhas",
-      "description": "Planta tropical compacta de Madagascar, cultivada pelas folhas manchadas em tons de rosa, vermelho ou branco. Dê luz brilhante indireta e regue quando a superfície começar a secar, mantendo o substrato levemente úmido. Prefere temperaturas quentes (cerca de 18–27°C) e é listada como não tóxica para cães e gatos."
+      "common_name": "Planta de pontos",
+      "description": "Hypoestes phyllostachya, também conhecida como Planta de pontos, é uma planta ornamental popular. Suas folhas coloridas possuem manchas de rosa, vermelho ou branco."
     },
     "ar": {
-      "common_name": "نبات منقط",
-      "description": "نبات استوائي صغير موطنه مدغشقر ويُزرع لأوراقه المرقطة بالوردي أو الأحمر أو الأبيض. ضعْه في ضوء ساطع غير مباشر واسقه عندما يبدأ سطح التربة بالجفاف مع إبقاء الوسط رطبًا قليلًا. يفضل الدفء (حوالي 18–27°م) وهو مُدرج كنبات غير سام للقطط والكلاب."
+      "common_name": "نبتة النقاط",
+      "description": "Hypoestes phyllostachya، والمعروفة أيضًا باسم نبتة النقاط، هي نبتة منزلية زينة شهيرة. تتميز بأوراق ملونة وجذابة بها بقع باللون الوردي أو الأحمر أو الأبيض."
     },
     "hi": {
-      "common_name": "पोल्का डॉट प्लांट",
-      "description": "यह मेडागास्कर का एक कॉम्पैक्ट उष्णकटिबंधीय पौधा है, जिसे गुलाबी/लाल/सफेद धब्बेदार पत्तियों के लिए उगाया जाता है। तेज़ अप्रत्यक्ष रोशनी दें और जब ऊपर की मिट्टी सूखने लगे तब पानी दें, ताकि मिट्टी हल्की नम रहे। इसे गर्म तापमान (लगभग 18–27°C) पसंद है और इसे बिल्लियों व कुत्तों के लिए गैर-विषैला सूचीबद्ध किया गया है।"
+      "common_name": "पोल्का डॉट पौधा",
+      "description": "Hypoestes phyllostachya, जिसे पोल्का डॉट पौधा भी कहा जाता है, एक लोकप्रिय सजावटी पौधा है। इसके आकर्षक, रंगीन पत्ते होते हैं जिन पर गुलाबी, लाल या सफेद धब्बे होते हैं।"
     },
     "zh": {
-      "common_name": "斑点草",
-      "description": "一种原产马达加斯加的紧凑型热带观叶植物，以粉红/红/白色斑点叶片著称。提供明亮散射光，表土开始变干时浇水，使基质保持微湿。适温约18–27°C，并被列为对猫狗无毒。"
+      "common_name": "波尔卡点植物",
+      "description": "Hypoestes phyllostachya，也叫波尔卡点植物，是一种受欢迎的室内观赏植物。它的叶子颜色鲜艳，带有粉红色、红色或白色的斑点。"
     },
     "ja": {
-      "common_name": "ポルカドットプランツ",
-      "description": "マダガスカル原産のコンパクトな熱帯植物で、ピンク/赤/白の斑点のある葉を観賞します。明るい間接光を与え、表土が乾き始めたら水やりして用土を軽く湿らせます。適温は約18～27°Cで、猫や犬に対して無毒として掲載されています。"
+      "common_name": "ポルカドット植物",
+      "description": "Hypoestes phyllostachya、別名ポルカドット植物は、人気の観賞用植物です。ピンク、赤、または白の斑点がある魅力的な色とりどりの葉を持っています。"
     },
     "ko": {
-      "common_name": "폴카도트 플랜트",
-      "description": "마다가스카르 원산의 소형 열대 식물로, 분홍/빨강/흰색 반점 잎이 특징입니다. 밝은 간접광에서 키우고 겉흙이 마르기 시작하면 물을 주어 흙을 촉촉하게 유지하세요. 약 18–27°C의 따뜻한 온도를 좋아하며, 고양이와 개에 비독성으로 안내됩니다."
+      "common_name": "폴카 도트 식물",
+      "description": "Hypoestes phyllostachya, 또는 폴카 도트 식물은 인기 있는 관상용 식물입니다. 분홍색, 빨간색 또는 흰색 반점이 있는 매력적인 색상의 잎을 가지고 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hypoestes",
-      "https://plants.ces.ncsu.edu/plants/hypoestes-phyllostachya/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a515",
-      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/polka-dot-plant"
+      "https://www.americanmeadows.com/learn/polka-dot-plant-care",
+      "https://www.gardeningknowhow.com/houseplants/polka-dot-plant/hypoestes-phyllostachya.htm"
     ]
   }
 }

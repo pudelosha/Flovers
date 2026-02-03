@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "satureja_montana.jpg",
   "image_thumb": "satureja_montana.jpg",
   "traits": [
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -39,8 +39,8 @@
           "ar": "ضوء متوسط",
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaszczysta gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sableux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेत वाली मिट्टी",
-          "zh": "沙质土壤",
-          "ja": "砂質土壌",
-          "ko": "모래 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수 잘되는"
         }
       }
     },
@@ -71,11 +71,11 @@
           "pl": "Umiarkowane podlewanie",
           "de": "Mäßige Bewässerung",
           "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
+          "it": "Annaffiature moderate",
           "es": "Riego moderado",
           "pt": "Rega moderada",
           "ar": "الري المعتدل",
-          "hi": "मध्यम पानी देना",
+          "hi": "मध्यम पानी",
           "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średni",
+          "pl": "Średnie",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-24°C",
-          "pl": "10-24°C",
-          "de": "10-24°C",
-          "fr": "10-24°C",
-          "it": "10-24°C",
-          "es": "10-24°C",
-          "pt": "10-24°C",
-          "ar": "10-24°C",
-          "hi": "10-24°C",
-          "zh": "10-24°C",
-          "ja": "10-24°C",
-          "ko": "10-24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchtigkeit",
-          "fr": "Humidité faible",
-          "it": "Bassa umidità",
-          "es": "Humedad baja",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -151,7 +151,7 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "विषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "비독성"
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact growth",
-          "pl": "Kompaktowy wzrost",
-          "de": "Kompaktes Wachstum",
-          "fr": "Croissance compacte",
-          "it": "Crescita compatta",
-          "es": "Crecimiento compacto",
-          "pt": "Crescimento compacto",
-          "ar": "نمو مدمج",
-          "hi": "संकुचित वृद्धि",
-          "zh": "紧凑的生长",
-          "ja": "コンパクトな成長",
-          "ko": "컴팩트 성장"
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Od czasu do czasu szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Winter Savory",
-      "description": "Winter savory is a perennial herb with aromatic leaves and white to pinkish flowers. It thrives in well-drained, sandy soil and requires moderate watering."
+      "description": "Winter savory is a hardy herb, known for its aromatic leaves and use in culinary dishes. It thrives in well-draining soil and moderate sunlight."
     },
     "pl": {
-      "common_name": "Krzewiąca Satureja",
-      "description": "Krzewiąca Satureja to wieloletnia roślina o aromatycznych liściach i białych lub różowych kwiatach. Rośnie najlepiej w dobrze przepuszczalnej, piaszczystej glebie."
+      "common_name": "Szałwia zimowa",
+      "description": "Szałwia zimowa to wytrzymała roślina, znana ze swoich aromatycznych liści i użycia w potrawach. Rośnie najlepiej w dobrze przepuszczalnej glebie i umiarkowanym świetle."
     },
     "de": {
-      "common_name": "Winter-Savory",
-      "description": "Winter-Savory ist ein mehrjähriges Kraut mit aromatischen Blättern und weißen bis rosafarbenen Blüten. Es gedeiht in gut durchlässigem, sandigem Boden."
+      "common_name": "Winter-Salbei",
+      "description": "Winter-Salbei ist ein robustes Kraut, bekannt für seine aromatischen Blätter und die Verwendung in kulinarischen Gerichten. Es gedeiht in gut durchlässigem Boden und mittlerem Sonnenlicht."
     },
     "fr": {
-      "common_name": "Sarriette d'hiver",
-      "description": "La sarriette d'hiver est une plante vivace aux feuilles aromatiques et aux fleurs blanches à roses. Elle pousse dans un sol bien drainé et sablonneux."
+      "common_name": "Sauge d'hiver",
+      "description": "La sauge d'hiver est une herbe résistante, connue pour ses feuilles aromatiques et son utilisation dans les plats culinaires. Elle prospère dans un sol bien drainé et une lumière modérée."
     },
     "it": {
-      "common_name": "Satureja montana",
-      "description": "La Satureja montana è un'erba perenne con foglie aromatiche e fiori bianchi o rosa. Cresce meglio in terreni ben drenati e sabbiosi."
+      "common_name": "Salvia invernale",
+      "description": "La salvia invernale è un'erba resistente, conosciuta per le sue foglie aromatiche e l'uso nei piatti culinari. Cresce bene in terreni ben drenanti e luce moderata."
     },
     "es": {
-      "common_name": "Satureja de invierno",
-      "description": "La satureja de invierno es una planta perenne con hojas aromáticas y flores blancas o rosadas. Crece mejor en suelos arenosos y bien drenados."
+      "common_name": "Salvia de invierno",
+      "description": "La salvia de invierno es una hierba resistente, conocida por sus hojas aromáticas y su uso en platos culinarios. Crece bien en suelos bien drenados y luz moderada."
     },
     "pt": {
-      "common_name": "Satureja de inverno",
-      "description": "A Satureja de inverno é uma planta perene com folhas aromáticas e flores brancas ou rosadas. Ela cresce melhor em solos bem drenados e arenosos."
+      "common_name": "Sálvia de inverno",
+      "description": "A sálvia de inverno é uma erva resistente, conhecida por suas folhas aromáticas e uso em pratos culinários. Cresce bem em solos bem drenados e luz moderada."
     },
     "ar": {
-      "common_name": "الزعتر الشتوي",
-      "description": "الزعتر الشتوي هو نبات معمر ذو أوراق عطرية وأزهار بيضاء إلى وردية. ينمو في التربة جيدة التصريف والرملية."
+      "common_name": "الميرمية الشتوية",
+      "description": "الميرمية الشتوية هي عشبة مقاومة، معروفة بأوراقها العطرية واستخدامها في الأطباق. تنمو بشكل جيد في التربة جيدة التصريف وأشعة الشمس المعتدلة."
     },
     "hi": {
-      "common_name": "सर्दी का सिवेरी",
-      "description": "सर्दी का सिवेरी एक बारहमासी पौधा है जिसकी खुशबूदार पत्तियाँ और सफेद से गुलाबी फूल होते हैं। यह अच्छी तरह से नालीदार, रेतीली मिट्टी में उगता है।"
+      "common_name": "सर्दी तुलसी",
+      "description": "सर्दी तुलसी एक मजबूत पौधा है, जो अपनी सुगंधित पत्तियों और खाद्य व्यंजनों में उपयोग के लिए जाना जाता है। यह अच्छे जल निकासी वाली मिट्टी और मध्यम सूर्य प्रकाश में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
       "common_name": "冬季香草",
-      "description": "冬季香草是一种多年生草本植物，具有芳香的叶子和白色到粉红色的花。它在排水良好的沙质土壤中生长得最好。"
+      "description": "冬季香草是一种坚韧的草本植物，以其芳香的叶子和在烹饪中的应用而闻名。它在排水良好的土壤和适度的阳光下生长良好。"
     },
     "ja": {
-      "common_name": "ウィンターサヴォリー",
-      "description": "ウィンターサヴォリーは芳香のある葉と白からピンク色の花を持つ多年草です。排水の良い砂質土壌で育ちます。"
+      "common_name": "冬サヴォリー",
+      "description": "冬サヴォリーは丈夫なハーブで、その香り高い葉と料理での使用で知られています。排水性の良い土壌と適度な日光でよく育ちます。"
     },
     "ko": {
-      "common_name": "겨울 세이지",
-      "description": "겨울 세이지는 향긋한 잎과 흰색에서 분홍색 꽃을 가진 다년생 식물입니다. 배수가 좋은 모래 토양에서 잘 자랍니다."
+      "common_name": "겨울 사보리",
+      "description": "겨울 사보리는 향긋한 잎과 요리에서의 사용으로 알려진 강한 허브입니다. 잘 배수되는 토양과 적당한 햇빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11888/satureja-montana/details",
-      "https://www.gardenia.net/plant/satureja-montana-winter-savory"
+      "https://www.rhs.org.uk/advice/profile?pid=162",
+      "https://www.gardenia.net/plant/satureja-montana"
     ]
   }
 }

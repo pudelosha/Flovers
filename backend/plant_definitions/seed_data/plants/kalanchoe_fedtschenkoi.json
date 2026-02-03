@@ -1,19 +1,21 @@
 {
   "external_id": "kalanchoe_fedtschenkoi",
-  "name": "Lavender scallops",
+  "name": "Chandelier Plant",
   "latin": "Kalanchoe fedtschenkoi",
-  "sun": "high",
-  "water": "low",
+  "sun": "medium",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct sun",
-          "pl": "Jasne słońce",
-          "de": "Helles Sonnenlicht",
-          "fr": "Soleil vif",
-          "it": "Sole pieno",
-          "es": "Sol brillante",
-          "pt": "Sol intenso",
-          "ar": "شمس ساطعة",
-          "hi": "तेज़ धूप",
-          "zh": "明亮直射光",
-          "ja": "明るい日光",
-          "ko": "밝은 직사광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage léger",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega espaçada",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Water when dry",
+          "pl": "Podlewaj, gdy suche",
+          "de": "Wasser, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffia quando secco",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يجف",
+          "hi": "सूखा होने पर पानी दें",
+          "zh": "干时浇水",
+          "ja": "乾いたら水を与える",
+          "ko": "건조할 때 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm indoor",
-          "pl": "Ciepłe wnętrza",
-          "de": "Warm",
-          "fr": "Tempéré chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖环境",
-          "ja": "暖かい環境",
-          "ko": "따뜻함"
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Luftfeuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Humedad baja",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू विषाक्त",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات",
+          "hi": "पेट्स के लिए जहरीला",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita media",
-          "es": "Crecimiento medio",
-          "pt": "Crescimento médio",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 성장"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे गति से बढ़ता है",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Lavender scallops",
-      "description": "Kalanchoe fedtschenkoi is a drought-tolerant succulent native to Madagascar. It has bluish leaves with scalloped edges and pink margins. It thrives in bright light and minimal watering."
+      "common_name": "Chandelier Plant",
+      "description": "Kalanchoe fedtschenkoi, commonly known as the Chandelier Plant, is a succulent native to Madagascar. It is appreciated for its cascading stems and attractive foliage."
     },
     "pl": {
-      "common_name": "Kalanchoe lawendowe",
-      "description": "Kalanchoe fedtschenkoi to sukulent odporny na suszę pochodzący z Madagaskaru. Ma niebieskozielone liście z falistymi brzegami. Najlepiej rośnie w jasnym świetle i przy rzadkim podlewaniu."
+      "common_name": "Roślina żyrandolowa",
+      "description": "Kalanchoe fedtschenkoi, znana jako roślina żyrandolowa, to sukulent pochodzący z Madagaskaru. Doceniana jest za zwisające łodygi i atrakcyjne liście."
     },
     "de": {
-      "common_name": "Lavendelfarbene Kalanchoe",
-      "description": "Kalanchoe fedtschenkoi ist eine sukkulente Pflanze aus Madagaskar. Sie besitzt blaugrüne, gewellte Blätter. Sie benötigt viel Licht und wenig Wasser."
+      "common_name": "Kandelaberpflanze",
+      "description": "Kalanchoe fedtschenkoi, auch als Kandelaberpflanze bekannt, ist ein Sukkulent aus Madagaskar. Sie wird für ihre herabhängenden Stängel und attraktiven Blätter geschätzt."
     },
     "fr": {
-      "common_name": "Kalanchoé lavande",
-      "description": "Kalanchoe fedtschenkoi est une plante succulente originaire de Madagascar. Elle a des feuilles bleu-vert aux bords ondulés. Elle préfère une forte lumière et peu d’arrosage."
+      "common_name": "Plante candélabre",
+      "description": "Kalanchoe fedtschenkoi, connue sous le nom de plante candélabre, est une succulente originaire de Madagascar. Elle est appréciée pour ses tiges pendantes et son feuillage attrayant."
     },
     "it": {
-      "common_name": "Kalanchoe lavanda",
-      "description": "Kalanchoe fedtschenkoi è una succulenta del Madagascar. Presenta foglie blu-verdi dai margini ondulati. Richiede molta luce e poca acqua."
+      "common_name": "Pianta candelabro",
+      "description": "Kalanchoe fedtschenkoi, conosciuta come pianta candelabro, è una succulenta originaria del Madagascar. È apprezzata per i suoi steli pendenti e il fogliame attraente."
     },
     "es": {
-      "common_name": "Kalanchoe lavanda",
-      "description": "Kalanchoe fedtschenkoi es una suculenta originaria de Madagascar. Tiene hojas azuladas con bordes ondulados. Necesita luz brillante y riego escaso."
+      "common_name": "Planta candelabro",
+      "description": "Kalanchoe fedtschenkoi, conocida como planta candelabro, es una suculenta originaria de Madagascar. Es apreciada por sus tallos colgantes y su atractivo follaje."
     },
     "pt": {
-      "common_name": "Kalanchoe lavanda",
-      "description": "Kalanchoe fedtschenkoi é uma suculenta nativa de Madagascar. Possui folhas azuladas com bordas onduladas. Prefere luz intensa e pouca rega."
+      "common_name": "Planta candelabro",
+      "description": "Kalanchoe fedtschenkoi, conhecida como planta candelabro, é uma suculenta originária de Madagascar. É apreciada por seus caules pendentes e folhagem atraente."
     },
     "ar": {
-      "common_name": "كالانشو لافندر",
-      "description": "نبات كالانشو فيدتسشنكوي عصاري موطنه مدغشقر. يتميز بأوراق مزرقة وحواف متموجة. يحتاج إلى ضوء قوي وري قليل."
+      "common_name": "نبات الشمعدان",
+      "description": "Kalanchoe fedtschenkoi، المعروف باسم نبات الشمعدان، هو نبات عصاري أصله من مدغشقر. يتميز بسيقانه المتدلية وأوراقه الجذابة."
     },
     "hi": {
-      "common_name": "लैवेंडर कैलान्कोई",
-      "description": "कैलान्कोई फेड्टशेंकोई मेडागास्कर का एक रसीला पौधा है। इसकी पत्तियाँ नीली और किनारे लहरदार होते हैं। इसे तेज़ रोशनी और कम पानी चाहिए।"
+      "common_name": "झूला पौधा",
+      "description": "Kalanchoe fedtschenkoi, जिसे झूला पौधा कहा जाता है, एक सूखा सहनशील पौधा है जो मदागास्कर का मूल निवासी है। इसके लटकते तने और आकर्षक पत्तियां इसे विशेष बनाती हैं।"
     },
     "zh": {
-      "common_name": "紫缘落地生根",
-      "description": "Kalanchoe fedtschenkoi 原产于马达加斯加，是耐旱多肉植物。叶片呈蓝绿色并带波状边缘。适合强光和少量浇水。"
+      "common_name": "吊灯植物",
+      "description": "Kalanchoe fedtschenkoi，俗称吊灯植物，是一种原产于马达加斯加的多肉植物。因其悬垂的茎和吸引人的叶片而受到喜爱。"
     },
     "ja": {
-      "common_name": "ラベンダーカランコエ",
-      "description": "カランコエ・フェドツェンコイはマダガスカル原産の多肉植物です。青緑色の波状の葉を持ちます。明るい光と控えめな水やりを好みます。"
+      "common_name": "シャンデリアプランツ",
+      "description": "Kalanchoe fedtschenkoi、通称シャンデリアプランツは、マダガスカル原産の多肉植物です。その垂れ下がった茎と魅力的な葉で評価されています。"
     },
     "ko": {
-      "common_name": "라벤더 칼랑코에",
-      "description": "칼랑코에 페드첸코이는 마다가스카르 원산의 다육식물입니다. 푸른 잎과 물결 모양 가장자가 특징입니다. 밝은 빛과 적은 물을 선호합니다."
+      "common_name": "샹들리에 식물",
+      "description": "Kalanchoe fedtschenkoi, 일반적으로 샹들리에 식물로 알려진 이 다육식물은 마다가스카르 출신입니다. 그늘지는 줄기와 매력적인 잎사귀로 인정받고 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/189331/kalanchoe-fedtschenkoi/details",
-      "https://plants.ces.ncsu.edu/plants/kalanchoe-fedtschenkoi/",
-      "https://www.gardenersworld.com/plants/kalanchoe-fedtschenkoi/"
+      "https://www.rhs.org.uk/advice/profile?pid=527",
+      "https://www.gardenia.net/plant/kalanchoe-fedtschenkoi"
     ]
   }
 }

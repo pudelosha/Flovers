@@ -1,0 +1,275 @@
+{
+  "external_id": "vicia_faba",
+  "name": "Fava Bean",
+  "latin": "Vicia faba",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "herbs-vegetables"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "vicia_faba.jpg",
+  "image_thumb": "vicia_faba.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole diretto",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠르게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fava Bean",
+      "description": "Vicia faba, also known as Fava Bean, is a hardy annual plant. It is widely cultivated for its edible seeds and used in cooking."
+    },
+    "pl": {
+      "common_name": "Bób",
+      "description": "Vicia faba, znany również jako bób, to roślina jednoroczna. Jest szeroko uprawiany dla swoich jadalnych nasion i używany w kuchni."
+    },
+    "de": {
+      "common_name": "Ackerbohne",
+      "description": "Vicia faba, auch bekannt als Ackerbohne, ist eine robuste einjährige Pflanze. Sie wird weit verbreitet für ihre essbaren Samen und in der Küche verwendet."
+    },
+    "fr": {
+      "common_name": "Fève",
+      "description": "Vicia faba, également connue sous le nom de fève, est une plante annuelle robuste. Elle est largement cultivée pour ses graines comestibles et utilisée en cuisine."
+    },
+    "it": {
+      "common_name": "Fava",
+      "description": "Vicia faba, conosciuta anche come fava, è una pianta annuale resistente. È ampiamente coltivata per i suoi semi commestibili e utilizzata in cucina."
+    },
+    "es": {
+      "common_name": "Frijol fava",
+      "description": "Vicia faba, también conocida como frijol fava, es una planta anual resistente. Se cultiva ampliamente por sus semillas comestibles y se utiliza en la cocina."
+    },
+    "pt": {
+      "common_name": "Feijão Fava",
+      "description": "Vicia faba, também conhecida como feijão fava, é uma planta anual resistente. É amplamente cultivada por suas sementes comestíveis e utilizada na culinária."
+    },
+    "ar": {
+      "common_name": "الفاصوليا الفافا",
+      "description": "Vicia faba، المعروفة أيضًا باسم الفاصوليا الفافا، هي نبات سنوي قاسي. يتم زراعتها على نطاق واسع من أجل بذورها الصالحة للأكل وتستخدم في الطهي."
+    },
+    "hi": {
+      "common_name": "फावा बीन्स",
+      "description": "Vicia faba, जिसे फावा बीन्स के नाम से भी जाना जाता है, एक कठोर वार्षिक पौधा है। इसका उत्पादन इसके खाने योग्य बीजों के लिए किया जाता है और इसे खाना पकाने में इस्तेमाल किया जाता है।"
+    },
+    "zh": {
+      "common_name": "蚕豆",
+      "description": "Vicia faba，也被称为蚕豆，是一种耐寒的年生植物。它广泛种植用于其可食用的种子，并用于烹饪。"
+    },
+    "ja": {
+      "common_name": "ソラマメ",
+      "description": "Vicia faba、別名ソラマメは耐寒性のある一年草です。食用種子のために広く栽培され、料理に使用されます。"
+    },
+    "ko": {
+      "common_name": "파바 콩",
+      "description": "Vicia faba, 또한 파바 콩으로 알려져 있는 이 식물은 내한성 일년생 식물입니다. 식용 씨앗을 위해 널리 재배되며 요리에 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1410/vicia-faba/details",
+      "https://www.gardenia.net/plant/vicia-faba"
+    ]
+  }
+}

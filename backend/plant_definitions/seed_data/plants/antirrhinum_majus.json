@@ -4,22 +4,23 @@
   "latin": "Antirrhinum majus",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 21,
-  "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_required": false,
+  "repot_interval_months": null,
   "image_hero": "antirrhinum_majus.jpg",
   "image_thumb": "antirrhinum_majus.jpg",
   "traits": [
@@ -29,7 +30,7 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonnig",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
@@ -37,7 +38,7 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日向",
+          "ja": "日なた",
           "ko": "양지"
         }
       }
@@ -46,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Suolo drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährstoffreich",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Fértil, drenante",
+          "pt": "Fértil, drenado",
+          "ar": "غني وجيد الصرف",
+          "hi": "उपजाऊ, जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "배수 좋은 비옥토"
         }
       }
     },
@@ -65,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期水やり",
-          "ko": "정기적 물주기"
+          "en": "Keep evenly moist",
+          "pl": "Umiark. wilgotno",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder humide",
+          "it": "Umido regolare",
+          "es": "Húmedo uniforme",
+          "pt": "Umidade regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "समान नमी",
+          "zh": "保持均匀湿润",
+          "ja": "適度に湿らせる",
+          "ko": "고르게 촉촉"
         }
       }
     },
@@ -84,53 +85,15 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
-        }
-      }
-    },
-    {
-      "key": "temperature",
-      "value": {
-        "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodna do umiark.",
-          "de": "Kühl bis mild",
-          "fr": "Frais à doux",
-          "it": "Fresco-mite",
-          "es": "Fresco a templado",
-          "pt": "Fresco a ameno",
-          "ar": "معتدل إلى بارد",
-          "hi": "ठंडा से मध्यम",
-          "zh": "凉爽至温和",
-          "ja": "涼しい気候",
-          "ko": "서늘한 기온"
-        }
-      }
-    },
-    {
-      "key": "humidity",
-      "value": {
-        "text": {
-          "en": "Average",
+          "en": "Moderate",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
+          "ar": "متوسط",
+          "hi": "मध्यम",
           "zh": "中等",
           "ja": "普通",
           "ko": "보통"
@@ -138,21 +101,59 @@
       }
     },
     {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool: 10–22°C",
+          "pl": "Chłodno: 10–22°C",
+          "de": "Kühl: 10–22°C",
+          "fr": "Frais: 10–22°C",
+          "it": "Fresco: 10–22°C",
+          "es": "Fresco: 10–22°C",
+          "pt": "Fresco: 10–22°C",
+          "ar": "بارد: 10–22°م",
+          "hi": "ठंडा: 10–22°C",
+          "zh": "凉爽：10–22°C",
+          "ja": "涼しい: 10–22°C",
+          "ko": "서늘: 10–22°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Typowa wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zw.",
+          "de": "Ungiftig für Tiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica animali",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無害",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -160,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright annual",
-          "pl": "Wzniesiona roślina",
-          "de": "Aufrecht wachsend",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधा बढ़ाव",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립 성장"
+          "en": "Short-lived perennial",
+          "pl": "Krótko żyjąca",
+          "de": "Kurzlebig",
+          "fr": "Vivace de courte vie",
+          "it": "Perenne breve",
+          "es": "Perenne corta",
+          "pt": "Perene curta",
+          "ar": "معمر قصير العمر",
+          "hi": "कम-अवधि बहुवर्षीय",
+          "zh": "短命多年生",
+          "ja": "短命の多年草",
+          "ko": "단명 다년초"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids; rust risk",
+          "pl": "Mszyce; rdza",
+          "de": "Blattläuse; Rost",
+          "fr": "Pucerons; rouille",
+          "it": "Afidi; ruggine",
+          "es": "Pulgones; roya",
+          "pt": "Pulgões; ferrugem",
+          "ar": "منّ؛ صدأ",
+          "hi": "एफिड; रतुआ",
+          "zh": "蚜虫；锈病",
+          "ja": "アブラムシ・さび病",
+          "ko": "진딧물·녹병"
         }
       }
     }
@@ -179,58 +218,61 @@
   "translations": {
     "en": {
       "common_name": "Snapdragon",
-      "description": "Antirrhinum majus is a popular flowering annual grown for its colorful, dragon-shaped blooms. It prefers full sun and well-drained soil. Regular watering encourages continuous flowering."
+      "description": "Antirrhinum majus is a short-lived perennial often grown as an annual, valued for upright flower spikes. Give it very bright light and keep the potting mix evenly moist but not waterlogged. It performs best in cooler conditions and may slow flowering in heat."
     },
     "pl": {
       "common_name": "Wyżlin większy",
-      "description": "Antirrhinum majus to popularna roślina jednoroczna o barwnych kwiatach. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Regularne podlewanie sprzyja kwitnieniu."
+      "description": "Antirrhinum majus to krótkowieczna bylina, zwykle uprawiana jako roślina jednoroczna, o kłosach barwnych kwiatów. Zapewnij dużo światła i utrzymuj podłoże równomiernie wilgotne, bez zastoin wody. Najlepiej rośnie w chłodniejszych warunkach i w upale może słabiej kwitnąć."
     },
     "de": {
-      "common_name": "Löwenmäulchen",
-      "description": "Antirrhinum majus ist eine beliebte einjährige Blume mit auffälligen Blüten. Sie wächst am besten in voller Sonne und gut durchlässigem Boden. Regelmäßiges Gießen fördert die Blüte."
+      "common_name": "Löwenmaul",
+      "description": "Antirrhinum majus ist eine kurzlebige Staude, die meist einjährig kultiviert wird, mit auffälligen Blütenähren. Stelle sie sehr hell und halte das Substrat gleichmäßig feucht, ohne Staunässe. In kühleren Temperaturen wächst und blüht sie am zuverlässigsten."
     },
     "fr": {
       "common_name": "Muflier",
-      "description": "Antirrhinum majus est une plante annuelle appréciée pour ses fleurs colorées. Elle préfère le plein soleil et un sol bien drainé. Un arrosage régulier soutient la floraison."
+      "description": "Antirrhinum majus est une vivace de courte vie souvent cultivée comme annuelle, connue pour ses épis floraux. Placez-la en lumière très vive et gardez le substrat uniformément humide sans excès d’eau. Elle préfère les conditions fraîches et peut moins fleurir par forte chaleur."
     },
     "it": {
       "common_name": "Bocca di leone",
-      "description": "Antirrhinum majus è una pianta annuale ornamentale dai fiori vistosi. Predilige pieno sole e terreno ben drenato. Annaffiature regolari favoriscono la fioritura."
+      "description": "Antirrhinum majus è una perenne di breve durata spesso coltivata come annuale, apprezzata per le spighe fiorite. Fornisci molta luce e mantieni il terriccio uniformemente umido senza ristagni. Rende al meglio con temperature fresche e può rallentare con il caldo."
     },
     "es": {
       "common_name": "Boca de dragón",
-      "description": "Antirrhinum majus es una planta anual muy cultivada por sus flores vistosas. Requiere sol pleno y suelo bien drenado. El riego regular mantiene la floración."
+      "description": "Antirrhinum majus es una perenne de vida corta, normalmente cultivada como anual, con espigas de flores vistosas. Dale mucha luz y mantén el sustrato uniformemente húmedo sin encharcar. Prefiere temperaturas frescas y el calor puede reducir la floración."
     },
     "pt": {
       "common_name": "Boca-de-leão",
-      "description": "Antirrhinum majus é uma planta anual ornamental de flores coloridas. Prefere sol pleno e solo bem drenado. Rega regular ajuda na floração contínua."
+      "description": "Antirrhinum majus é uma perene de curta duração, geralmente cultivada como anual, com espigas florais. Ofereça luz muito intensa e mantenha o substrato uniformemente úmido sem encharcar. Desenvolve-se melhor em clima fresco e pode florescer menos no calor."
     },
     "ar": {
       "common_name": "فم السمكة",
-      "description": "Antirrhinum majus نبات حولي مزهر معروف بأزهاره الملونة. يفضل الشمس الكاملة وتربة جيدة الصرف. الري المنتظم يساعد على استمرار الإزهار."
+      "description": "Antirrhinum majus نبات معمر قصير العمر يُزرع غالبًا كنبات حولي وله سنابل زهرية واضحة. وفر ضوءًا قويًا جدًا وحافظ على تربة رطبة باعتدال دون غمر. ينجح أكثر في الأجواء الباردة وقد يقل الإزهار مع الحرارة."
     },
     "hi": {
       "common_name": "स्नैपड्रैगन",
-      "description": "Antirrhinum majus एक लोकप्रिय वार्षिक फूल वाला पौधा है। इसे पूरी धूप और अच्छी जल निकास वाली मिट्टी पसंद है। नियमित पानी देने से फूल अच्छे आते हैं।"
+      "description": "Antirrhinum majus कम-अवधि का बहुवर्षीय पौधा है जिसे अक्सर वार्षिक की तरह उगाया जाता है और इसमें फूलों की लंबी मंजरी होती है। इसे बहुत तेज़ रोशनी दें और मिट्टी को समान रूप से नम रखें, पर जलभराव न होने दें। ठंडे तापमान में यह बेहतर बढ़ता है और गर्मी में फूल कम हो सकते हैं।"
     },
     "zh": {
       "common_name": "金鱼草",
-      "description": "Antirrhinum majus 是常见的一年生开花植物。它喜欢全日照和排水良好的土壤。定期浇水有助于持续开花。"
+      "description": "Antirrhinum majus 为短命多年生植物，常作一年生栽培，以直立花序著称。提供强光并保持基质均匀湿润，但避免积水。它更适合凉爽环境，高温时开花可能减弱。"
     },
     "ja": {
       "common_name": "キンギョソウ",
-      "description": "Antirrhinum majus は観賞用の一年草です。日当たりと水はけの良い土壌を好みます。定期的な水やりで開花が続きます。"
+      "description": "Antirrhinum majus は短命の多年草で、一般に一年草として栽培され、花穂が特徴です。強い光に当て、用土は均一に湿らせつつ過湿は避けます。涼しい環境でよく育ち、暑さで開花が鈍ることがあります。"
     },
     "ko": {
       "common_name": "금어초",
-      "description": "Antirrhinum majus는 화려한 꽃을 가진 한해살이 식물입니다. 햇빛과 배수가 좋은 토양을 선호합니다. 규칙적인 물주기가 개화를 돕습니다."
+      "description": "Antirrhinum majus 는 단명 다년초로 보통 일년초처럼 키우며 곧게 올라오는 꽃대가 특징입니다. 매우 밝은 빛을 주고 흙은 고르게 촉촉하게 유지하되 과습은 피하세요. 서늘한 환경에서 가장 잘 자라며 더위에는 개화가 줄 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/antirrhinum/growing-guide",
-      "https://extension.umn.edu/flowers/snapdragons",
-      "https://www.britannica.com/plant/snapdragon-plant"
+      "https://plants.ces.ncsu.edu/plants/antirrhinum-majus/",
+      "https://www.missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=287001",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/common-snapdragon",
+      "https://fieldreport.caes.uga.edu/news/these-cool-season-flowers-will-have-you-feeling-snaptastic/",
+      "https://www.rhs.org.uk/plants/69565/antirrhinum-majus/details",
+      "https://www.rhs.org.uk/plants/215489/antirrhinum-majus-giant-rust-resistant-%28mixed%29/details"
     ]
   }
 }

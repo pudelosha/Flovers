@@ -1,21 +1,21 @@
 {
   "external_id": "hoya_obovata",
-  "name": "Hoya Obovata",
+  "name": "Hoya obovata",
   "latin": "Hoya obovata",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "universal"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 12,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło pośrednie",
-          "de": "Helles indirektes Licht",
-          "fr": "Lumière indirecte vive",
-          "it": "Luce indiretta intensa",
-          "es": "Luz indirecta brillante",
-          "pt": "Luz indireta brilhante",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining airy mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenante",
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "हवादार मिट्टी",
-          "zh": "排水良好基质",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好排水土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water after drying",
-          "pl": "Podlewaj po wyschnięciu",
-          "de": "Nach Antrocknen gießen",
-          "fr": "Arroser après séchage",
-          "it": "Annaffiare a secco",
-          "es": "Regar tras secar",
-          "pt": "Regar após secar",
-          "ar": "اسق بعد الجفاف",
-          "hi": "सूखने पर पानी",
-          "zh": "干后再浇水",
-          "ja": "乾いてから給水",
-          "ko": "마른 후 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
-          "fr": "Facile d'entretien",
-          "it": "Facile da curare",
-          "es": "Fácil de cuidar",
-          "pt": "Fácil de cuidar",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易于养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–28°C",
-          "pl": "18–28°C",
-          "de": "18–28°C",
-          "fr": "18–28°C",
-          "it": "18–28°C",
-          "es": "18–28°C",
-          "pt": "18–28°C",
-          "ar": "18–28°م",
-          "hi": "18–28°C",
-          "zh": "18–28°C",
-          "ja": "18–28°C",
-          "ko": "18–28°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average indoor",
-          "pl": "Średnia domowa",
-          "de": "Normale Raumluft",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "普通の湿度",
-          "ko": "보통 습도"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to moderate",
-          "pl": "Wolny do umiark.",
-          "de": "Langsam bis mittel",
-          "fr": "Lente à modérée",
-          "it": "Lenta-media",
-          "es": "Lento a medio",
-          "pt": "Lento a médio",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "缓慢生长",
-          "ja": "成長は緩やか",
-          "ko": "느린 성장"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta o moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "生长缓慢到中等",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare l'eccesso di annaffiatura",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Wax Plant",
-      "description": "Hoya obovata is a tropical epiphytic vine known for its thick, round leaves with silver speckles. It prefers bright indirect light and infrequent watering once the soil dries. The plant produces fragrant pink star-shaped flowers under good conditions."
+      "common_name": "Obovate Hoya",
+      "description": "Hoya obovata is a trailing plant with attractive, fleshy, round leaves. It thrives in moderate indoor light and well-draining soil, requiring moderate watering."
     },
     "pl": {
-      "common_name": "Hoja woskownica",
-      "description": "Hoya obovata to tropikalne pnącze epifityczne o grubych, okrągłych liściach z jasnymi plamkami. Lubi jasne światło pośrednie i podlewanie po przeschnięciu podłoża. Przy odpowiednich warunkach wytwarza pachnące, gwiazdkowate kwiaty."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata to pnąca roślina o atrakcyjnych, mięsistych, okrągłych liściach. Lubi umiarkowane światło wewnętrzne i dobrze przepuszczalną glebę, potrzebuje umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Wachsblume",
-      "description": "Hoya obovata ist eine tropische, epiphytische Kletterpflanze mit dicken, runden Blättern. Sie mag helles, indirektes Licht und mäßiges Gießen nach dem Antrocknen des Substrats. Bei guter Pflege bildet sie duftende Blüten."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata ist eine kletternde Pflanze mit attraktiven, fleischigen, runden Blättern. Sie gedeiht bei mäßigem Licht und gut durchlässigem Boden und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Plante de cire",
-      "description": "Hoya obovata est une plante tropicale épiphyte aux feuilles épaisses et arrondies. Elle préfère une lumière vive indirecte et des arrosages espacés. Dans de bonnes conditions, elle produit des fleurs parfumées."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata est une plante grimpante aux feuilles rondes et charnues. Elle préfère une lumière modérée et un sol bien drainé, avec un arrosage modéré."
     },
     "it": {
-      "common_name": "Pianta di cera",
-      "description": "Hoya obovata è una pianta tropicale epifita con foglie spesse e tonde. Cresce bene in luce indiretta intensa e con annaffiature moderate. Può produrre fiori profumati a forma di stella."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata è una pianta rampicante con foglie carnose e rotonde. Cresce bene in luce media e in un terreno ben drenato, richiedendo un'irrigazione moderata."
     },
     "es": {
-      "common_name": "Planta de cera",
-      "description": "Hoya obovata es una planta tropical epífita con hojas gruesas y redondeadas. Prefiere luz indirecta brillante y riegos cuando el sustrato se seca. En buenas condiciones desarrolla flores aromáticas."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata es una planta trepadora con hojas carnosas y redondas. Prefiere luz moderada y tierra bien drenada, requiriendo riego moderado."
     },
     "pt": {
-      "common_name": "Planta de cera",
-      "description": "Hoya obovata é uma planta tropical epífita com folhas grossas e arredondadas. Prefere luz indireta brilhante e regas espaçadas após a secagem do substrato. Pode produzir flores perfumadas."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata é uma planta trepadeira com folhas carnudas e redondas. Ela prefere luz moderada e solo bem drenado, necessitando de rega moderada."
     },
     "ar": {
-      "common_name": "نبات الشمع",
-      "description": "هويا أوبوفاتا نبات استوائي متسلق ذو أوراق سميكة ومستديرة. يفضل الضوء الساطع غير المباشر والري بعد جفاف التربة. يمكن أن ينتج أزهارًا عطرية في الظروف المناسبة."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata هي نبتة متسلقة ذات أوراق مستديرة وسميكة. تنمو في الضوء المعتدل والتربة جيدة التصريف وتحتاج إلى ري معتدل."
     },
     "hi": {
-      "common_name": "वैक्स प्लांट",
-      "description": "होया ओबोवाटा एक उष्णकटिबंधीय बेलनुमा पौधा है जिसकी पत्तियाँ मोटी और गोल होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और मिट्टी सूखने पर पानी देना पसंद है। अच्छे हालात में इसमें सुगंधित फूल आते हैं।"
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata एक चढ़ाई करने वाली पौधा है जिसमें आकर्षक, मांसल, गोल पत्तियाँ होती हैं। यह मध्यम इनडोर प्रकाश और अच्छी जल निकासी वाली मिट्टी में पनपता है, और इसे मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "球兰",
-      "description": "Hoya obovata 是一种热带附生藤本植物，叶片厚实而圆润。它喜欢明亮的散射光，并在基质干燥后浇水。在良好条件下会开出芳香的花朵。"
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata 是一种攀爬植物，具有吸引人的肉质圆叶。它在适中的室内光照和排水良好的土壤中生长，需适度浇水。"
     },
     "ja": {
-      "common_name": "ホヤ・オボバタ",
-      "description": "ホヤ・オボバタは厚く丸い葉を持つ熱帯性の着生植物です。明るい間接光と乾いてからの水やりを好みます。条件が良ければ香りのある花を咲かせます。"
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata は、魅力的な肉質の丸い葉を持つつる植物です。中程度の室内光と排水性の良い土壌で成長し、適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "호야 오보바타",
-      "description": "호야 오보바타는 두껍고 둥근 잎을 가진 열대 착생 식물입니다. 밝은 간접광과 흙이 마른 후 물 주기를 선호합니다. 환경이 좋으면 향기로운 꽃을 피웁니다."
+      "common_name": "Hoya obovata",
+      "description": "Hoya obovata는 매력적인 두꺼운 둥근 잎을 가진 덩굴 식물입니다. 그것은 중간 정도의 실내 빛과 배수가 좋은 토양에서 잘 자라며 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hoya/growing-guide",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/",
-      "https://plants.ces.ncsu.edu/plants/hoya/"
+      "https://www.rhs.org.uk/plants/hoya-obovata",
+      "https://www.gardenia.net/plant/hoya-obovata"
     ]
   }
 }

@@ -3,23 +3,25 @@
   "name": "Sunflower",
   "latin": "Helianthus annuus",
   "sun": "high",
-  "water": "high",
-  "difficulty": "medium",
+  "water": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
+    "plastic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 3,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "helianthus_annuus.jpg",
   "image_thumb": "helianthus_annuus.jpg",
   "traits": [
@@ -29,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
-          "ar": "شمس كاملة",
+          "ar": "الشمس الكاملة",
           "hi": "पूरा सूरज",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "직사광선"
+          "zh": "完全阳光",
+          "ja": "完全な太陽",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich loam",
-          "pl": "Żyzna gleba",
-          "de": "Nährreicher Lehm",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo fértil",
-          "pt": "Solo fértil",
-          "ar": "تربة خصبة",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃壤土",
-          "ja": "肥沃な土",
-          "ko": "비옥한 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Frequent",
-          "pl": "Częste",
-          "de": "Häufig",
-          "fr": "Fréquent",
-          "it": "Frequente",
-          "es": "Frecuente",
-          "pt": "Frequente",
-          "ar": "متكرر",
-          "hi": "अक्सर",
-          "zh": "频繁",
-          "ja": "頻繁",
-          "ko": "잦은 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당한"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30°C",
-          "ko": "18–30°C"
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -142,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -160,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast annual",
-          "pl": "Szybki roczny",
-          "de": "Schnell einjährig",
-          "fr": "Annuelle rapide",
-          "it": "Annuale rapida",
-          "es": "Anual rápida",
-          "pt": "Anual rápida",
-          "ar": "سنوية سريعة",
-          "hi": "तेज़ वार्षिक",
-          "zh": "快速一年生",
-          "ja": "一年草・早い",
-          "ko": "빠른 한해살이"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "De crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "成長が速い",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrapotere",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرाई से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多を避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -179,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sunflower",
-      "description": "Helianthus annuus is a fast-growing annual known for its large yellow flower heads. It requires full sun, regular watering, and fertile soil. Commonly grown outdoors but can be cultivated in large containers."
+      "description": "Sunflowers are bright, tall plants known for their large, yellow petals and seeds. They thrive in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Słonecznik zwyczajny",
-      "description": "Helianthus annuus to szybko rosnąca roślina jednoroczna o dużych żółtych kwiatach. Wymaga pełnego słońca, regularnego podlewania i żyznej gleby. Najczęściej uprawiana na zewnątrz."
+      "common_name": "Słonecznik",
+      "description": "Słoneczniki to jasne, wysokie rośliny znane z dużych, żółtych płatków i nasion. Rośnie w pełnym słońcu i w glebie dobrze przepuszczalnej."
     },
     "de": {
       "common_name": "Sonnenblume",
-      "description": "Helianthus annuus ist eine schnell wachsende einjährige Pflanze mit großen gelben Blüten. Sie benötigt volle Sonne, regelmäßiges Gießen und nährstoffreichen Boden. Meist im Freien kultiviert."
+      "description": "Sonnenblumen sind helle, hohe Pflanzen, die für ihre großen, gelben Blütenblätter und Samen bekannt sind. Sie gedeihen in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Tournesol",
-      "description": "Helianthus annuus est une plante annuelle à croissance rapide avec de grandes fleurs jaunes. Elle a besoin de plein soleil, d’arrosages réguliers et d’un sol fertile. Généralement cultivée en extérieur."
+      "description": "Les tournesols sont des plantes grandes et lumineuses, connues pour leurs grandes pétales jaunes et leurs graines. Ils prospèrent sous plein soleil et dans un sol bien drainé."
     },
     "it": {
       "common_name": "Girasole",
-      "description": "Helianthus annuus è una pianta annuale a crescita rapida con grandi fiori gialli. Richiede pieno sole, annaffiature regolari e terreno fertile. Coltivata soprattutto all’aperto."
+      "description": "I girasoli sono piante alte e luminose, conosciute per i loro grandi petali gialli e semi. Crescono bene al sole pieno e in terreni ben drenati."
     },
     "es": {
       "common_name": "Girasol",
-      "description": "Helianthus annuus es una planta anual de rápido crecimiento con grandes flores amarillas. Necesita pleno sol, riego regular y suelo fértil. Se cultiva principalmente en exteriores."
+      "description": "Los girasoles son plantas altas y brillantes conocidas por sus grandes pétalos amarillos y semillas. Prosperan a pleno sol y en suelos bien drenados."
     },
     "pt": {
       "common_name": "Girassol",
-      "description": "Helianthus annuus é uma planta anual de crescimento rápido com grandes flores amarelas. Necessita de sol pleno, regas regulares e solo fértil. Geralmente cultivada ao ar livre."
+      "description": "Os girassóis são plantas altas e brilhantes, conhecidas por suas grandes pétalas amarelas e sementes. Prosperam sob sol pleno e solo bem drenado."
     },
     "ar": {
       "common_name": "عباد الشمس",
-      "description": "Helianthus annuus نبات سنوي سريع النمو يتميز بأزهاره الصفراء الكبيرة. يحتاج إلى شمس كاملة وري منتظم وتربة خصبة. يزرع غالبًا في الهواء الطلق."
+      "description": "عباد الشمس هو نبات طويل ومشرق يعرف ببتلاته الصفراء الكبيرة وبذوره. يزدهر في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
       "common_name": "सूरजमुखी",
-      "description": "Helianthus annuus एक तेज़ी से बढ़ने वाला वार्षिक पौधा है जिसके बड़े पीले फूल होते हैं। इसे पूरा सूरज, नियमित पानी और उपजाऊ मिट्टी चाहिए। आमतौर पर बाहर उगाया जाता है।"
+      "description": "सूरजमुखी लंबे और चमकीले पौधे होते हैं, जो अपनी बड़ी पीली पंखुड़ियों और बीजों के लिए जाने जाते हैं। ये पूर्ण सूर्य और अच्छी जल निकासी वाली मिट्टी में अच्छे से बढ़ते हैं।"
     },
     "zh": {
       "common_name": "向日葵",
-      "description": "Helianthus annuus 是一种生长迅速的一年生植物，具有大型黄色花盘。需要充足阳光、规律浇水和肥沃土壤。多在户外种植。"
+      "description": "向日葵是明亮的高大植物，以其大黄花瓣和种子闻名。它们在充足的阳光和排水良好的土壤中生长得很好。"
     },
     "ja": {
       "common_name": "ヒマワリ",
-      "description": "Helianthus annuus は成長が早い一年草で、大きな黄色の花を咲かせます。日当たりと定期的な水やり、肥沃な土壌が必要です。主に屋外で栽培されます。"
+      "description": "ヒマワリは大きな黄色い花びらと種で知られる明るく高い植物です。完全な太陽とよく排水される土壌で繁栄します。"
     },
     "ko": {
       "common_name": "해바라기",
-      "description": "Helianthus annuus는 큰 노란 꽃을 피우는 빠르게 자라는 한해살이 식물입니다. 충분한 햇빛과 규칙적인 물주기, 비옥한 토양이 필요합니다. 주로 야외에서 재배됩니다."
+      "description": "해바라기는 큰 노란 꽃잎과 씨앗으로 유명한 밝고 큰 식물입니다. 완전한 햇볕과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/sunflower/growing-guide",
-      "https://extension.umn.edu/flowers/growing-sunflowers",
-      "https://www.britannica.com/plant/sunflower-plant"
+      "https://www.gardenersworld.com/plants/sunflower/",
+      "https://www.bhg.com/gardening/pests-diseases-harms/sunflower-care-guide/"
     ]
   }
 }

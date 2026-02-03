@@ -11,11 +11,11 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect light",
-          "pl": "jasne rozproszone",
-          "de": "helles Streulicht",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광량"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well drained soil",
-          "pl": "przepuszczalna gleba",
-          "de": "durchlässige Erde",
-          "fr": "sol drainant",
-          "it": "terreno drenante",
-          "es": "suelo drenante",
-          "pt": "solo drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "moderate watering",
-          "pl": "umiarkowane podlewanie",
-          "de": "mäßig gießen",
-          "fr": "arrosage modéré",
-          "it": "innaffiatura moderata",
-          "es": "riego moderado",
-          "pt": "rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "średnia pielęgnacja",
-          "de": "mittlerer Pflegeaufwand",
-          "fr": "entretien moyen",
-          "it": "cura media",
-          "es": "cuidado medio",
-          "pt": "cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18～30℃",
-          "ko": "18–30°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "average humidity",
-          "pl": "średnia wilgotność",
-          "de": "mittlere Luftfeuchte",
-          "fr": "humidité moyenne",
-          "it": "umidità media",
-          "es": "humedad media",
-          "pt": "umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "mildly toxic sap",
-          "pl": "lekko toksyczny",
-          "de": "leicht giftig",
-          "fr": "légèrement toxique",
-          "it": "leggermente tossico",
-          "es": "ligeramente tóxico",
-          "pt": "ligeiramente tóxico",
-          "ar": "سامة قليلاً",
-          "hi": "हल्का विषैला",
-          "zh": "轻微有毒",
-          "ja": "軽度の毒性",
-          "ko": "약한 독성"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast growing tree",
-          "pl": "szybki wzrost",
-          "de": "schnelles Wachstum",
-          "fr": "croissance rapide",
-          "it": "crescita rapida",
-          "es": "crecimiento rápido",
-          "pt": "crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-वार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sacred Fig",
-      "description": "Ficus religiosa is a large fig tree native to South Asia and culturally significant in many regions. Indoors it prefers bright, indirect light and evenly moist soil. It can grow vigorously when given stable warmth and space."
+      "description": "Ficus religiosa, also known as the Sacred Fig, is a large deciduous tree native to the Indian subcontinent. It is revered for its religious significance in several cultures, particularly in Buddhism and Hinduism."
     },
     "pl": {
-      "common_name": "Figowiec pagodowy",
-      "description": "Ficus religiosa to duże drzewo figowe pochodzące z Azji Południowej, ważne kulturowo. W uprawie domowej wymaga jasnego, rozproszonego światła i umiarkowanego podlewania. Przy sprzyjających warunkach rośnie szybko."
+      "common_name": "Figowiec Święty",
+      "description": "Ficus religiosa, znany jako Figowiec Święty, to duże drzewo liściaste pochodzące z subkontynentu indyjskiego. Jest czczony ze względu na swoje religijne znaczenie w kilku kulturach, szczególnie w buddyzmie i hinduizmie."
     },
     "de": {
-      "common_name": "Pappelfeige",
-      "description": "Ficus religiosa ist ein großer Feigenbaum aus Südasien mit religieller Bedeutung. Als Zimmerpflanze benötigt er helles, indirektes Licht und gleichmäßige Wassergaben. Bei Wärme wächst er kräftig."
+      "common_name": "Heilige Feige",
+      "description": "Ficus religiosa, auch als Heilige Feige bekannt, ist ein großer Laubbaum, der auf dem indischen Subkontinent heimisch ist. Es wird aufgrund seiner religiösen Bedeutung in mehreren Kulturen, insbesondere im Buddhismus und Hinduismus, verehrt."
     },
     "fr": {
       "common_name": "Figuier sacré",
-      "description": "Ficus religiosa est un grand figuier originaire d’Asie du Sud, chargé de symbolisme. En intérieur, il apprécie une lumière vive indirecte et un sol légèrement humide. Sa croissance est rapide dans de bonnes conditions."
+      "description": "Ficus religiosa, également connu sous le nom de Figuier sacré, est un grand arbre à feuilles caduques originaire du sous-continent indien. Il est vénéré pour sa signification religieuse dans plusieurs cultures, en particulier dans le bouddhisme et l'hindouisme."
     },
     "it": {
       "common_name": "Fico sacro",
-      "description": "Ficus religiosa è un grande albero di fico originario dell’Asia meridionale. Coltivato in casa richiede luce intensa ma indiretta e annaffiature regolari. Con temperature stabili cresce rapidamente."
+      "description": "Ficus religiosa, conosciuto anche come Fico sacro, è un grande albero a foglie caduche originario del subcontinente indiano. È venerato per il suo significato religioso in diverse culture, in particolare nel buddismo e nell'induismo."
     },
     "es": {
       "common_name": "Higuera sagrada",
-      "description": "Ficus religiosa es una gran higuera originaria del sur de Asia y muy simbólica. En interior necesita luz brillante indirecta y riego moderado. Puede crecer con rapidez si se cuida bien."
+      "description": "Ficus religiosa, también conocida como Higuera sagrada, es un gran árbol caducifolio originario del subcontinente indio. Es venerada por su significado religioso en varias culturas, especialmente en el budismo y el hinduismo."
     },
     "pt": {
-      "common_name": "Figueira-sagrada",
-      "description": "Ficus religiosa é uma grande figueira nativa do sul da Ásia. Em ambientes internos prefere luz indireta brilhante e solo levemente úmido. Apresenta crescimento vigoroso."
+      "common_name": "Figueira sagrada",
+      "description": "Ficus religiosa, também conhecida como Figueira sagrada, é uma grande árvore caducifólia nativa do subcontinente indiano. É venerada por seu significado religioso em várias culturas, especialmente no budismo e no hinduísmo."
     },
     "ar": {
-      "common_name": "شجرة التين المقدسة",
-      "description": "Ficus religiosa شجرة تين كبيرة موطنها جنوب آسيا ولها أهمية ثقافية. عند زراعتها داخل المنزل تحتاج إلى ضوء ساطع غير مباشر وري منتظم. تنمو بسرعة في الظروف المناسبة."
+      "common_name": "التين المقدس",
+      "description": "Ficus religiosa، المعروف أيضًا بالتين المقدس، هو شجرة كبيرة نفضية موطنها شبه القارة الهندية. يُقدس بسبب أهميته الدينية في عدة ثقافات، لا سيما في البوذية والهندوسية."
     },
     "hi": {
-      "common_name": "पीपल का पेड़",
-      "description": "Ficus religiosa दक्षिण एशिया का एक बड़ा और पवित्र अंजीर वृक्ष है। घर के अंदर इसे तेज़ अप्रत्यक्ष रोशनी और नियमित पानी की आवश्यकता होती है। अनुकूल वातावरण में इसकी वृद्धि तेज़ होती है।"
+      "common_name": "पवित्र अंजीर",
+      "description": "Ficus religiosa, जिसे पवित्र अंजीर के नाम से भी जाना जाता है, भारतीय उपमहाद्वीप का एक बड़ा पर्णपाती वृक्ष है। यह कई संस्कृतियों में अपनी धार्मिक महत्वपूर्णता के लिए पूजा जाता है, विशेष रूप से बौद्ध धर्म और हिन्दू धर्म में।"
     },
     "zh": {
-      "common_name": "菩提树",
-      "description": "Ficus religiosa 原产于南亚，是一种具有文化意义的榕树。室内养护需要明亮的散射光和适度浇水。在稳定温暖的环境中生长较快。"
+      "common_name": "圣榕",
+      "description": "Ficus religiosa，也叫圣榕，是一种原产于印度次大陆的大型落叶树。它因在多种文化中，尤其是在佛教和印度教中的宗教意义而受到尊崇。"
     },
     "ja": {
-      "common_name": "インドボダイジュ",
-      "description": "Ficus religiosa は南アジア原産の大型のイチジクの木です。室内では明るい間接光と適度な水やりを好みます。条件が良ければ成長は早いです。"
+      "common_name": "聖なるイチジク",
+      "description": "Ficus religiosa、別名聖なるイチジクは、インド亜大陸に自生する大型の落葉樹です。特に仏教とヒンドゥー教での宗教的な意義から、いくつかの文化で崇拝されています。"
     },
     "ko": {
-      "common_name": "보리수나무",
-      "description": "Ficus religiosa는 남아시아 원산의 큰 무화과나무입니다. 실내에서는 밝은 간접광과 규칙적인 물주기가 필요합니다. 환경이 안정되면 빠르게 자랍니다."
+      "common_name": "성스러운 무화과",
+      "description": "Ficus religiosa, 성스러운 무화과로도 알려진 이 나무는 인도 아대륙에서 자생하는 큰 낙엽수입니다. 불교와 힌두교를 포함한 여러 문화에서 종교적 의미로 숭배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/ficus-religiosa",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a558",
-      "https://www.rhs.org.uk/plants/ficus"
+      "https://www.gardenia.net/plant/ficus-religiosa",
+      "https://www.rhs.org.uk/plants/ficus-religiosa"
     ]
   }
 }

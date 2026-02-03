@@ -1,13 +1,12 @@
 {
   "external_id": "aechmea_fasciata",
-  "name": "Silver Vase Plant",
+  "name": "Silver vase plant",
   "latin": "Aechmea fasciata",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
@@ -15,8 +14,8 @@
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,15 +27,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière indirecte vive",
+          "it": "Luce indiretta intensa",
+          "es": "Luz indirecta brillante",
+          "pt": "Luz indireta forte",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Airy orchid mix",
-          "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
-          "fr": "Substrat aéré",
-          "it": "Substrato arioso",
-          "es": "Sustrato aireado",
-          "pt": "Substrato arejado",
-          "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिश्रण",
-          "zh": "通气基质",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "en": "Airy, fast-draining",
+          "pl": "Przepuszczalne",
+          "de": "Luftig, drainierend",
+          "fr": "Aéré, drainant",
+          "it": "Arieggiato, drenante",
+          "es": "Aireado y drenante",
+          "pt": "Aereado e drenante",
+          "ar": "خفيف جيد التصريف",
+          "hi": "हवादार, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "水はけの良い用土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water weekly",
-          "pl": "Podlewaj co tydzień",
-          "de": "Wöchentlich gießen",
-          "fr": "Arrosage hebdo",
-          "it": "Annaffia settim.",
-          "es": "Riego semanal",
-          "pt": "Regar semanal",
-          "ar": "ري أسبوعي",
-          "hi": "साप्ताहिक पानी",
-          "zh": "每周浇水",
-          "ja": "週1回水やり",
-          "ko": "주 1회 물주기"
+          "en": "Flush cup weekly",
+          "pl": "Płucz lejek co tydz.",
+          "de": "Trichter wöchentlich spülen",
+          "fr": "Rincer la rosette/sem.",
+          "it": "Risciacqua rosetta/sett.",
+          "es": "Enjuaga roseta/sem.",
+          "pt": "Lave a roseta/sem.",
+          "ar": "اشطف الكأس أسبوعياً",
+          "hi": "कप साप्ताहिक धोएँ",
+          "zh": "每周冲洗叶杯",
+          "ja": "葉筒を週1回洗う",
+          "ko": "통을 주 1회 세척"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26°C",
-          "ko": "18–26°C"
+          "en": "18–29°C",
+          "pl": "18–29°C",
+          "de": "18–29°C",
+          "fr": "18–29°C",
+          "it": "18–29°C",
+          "es": "18–29°C",
+          "pt": "18–29°C",
+          "ar": "18–29°م",
+          "hi": "18–29°C",
+          "zh": "18–29°C",
+          "ja": "18–29°C",
+          "ko": "18–29°C"
         }
       }
     },
@@ -123,16 +122,16 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Likes humidity",
+          "en": "Prefers humidity",
           "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Le gusta humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润",
+          "de": "Mag Luftfeuchte",
+          "fr": "Aime l'humidité",
+          "it": "Gradisce umidità",
+          "es": "Prefiere humedad",
+          "pt": "Prefere umidade",
+          "ar": "يفضل رطوبة أعلى",
+          "hi": "नमी पसंद करता है",
+          "zh": "喜较高湿度",
           "ja": "湿度を好む",
           "ko": "습도 선호"
         }
@@ -150,7 +149,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "विषरहित",
+          "hi": "विषाक्त नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -161,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow rosette",
+          "en": "Slow, rosette",
           "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "de": "Langsam, Rosette",
+          "fr": "Lente, en rosette",
+          "it": "Lenta, a rosetta",
+          "es": "Lenta, en roseta",
+          "pt": "Lenta, em roseta",
+          "ar": "بطيء، على شكل وردة",
+          "hi": "धीमी, रोसेट",
+          "zh": "生长慢，莲座状",
+          "ja": "ゆっくり成長",
+          "ko": "느리게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المغمورة",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水烂根",
+          "ja": "過湿にしない",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, mealybugs",
+          "pl": "Tarczniki, wełnowce",
+          "de": "Schild- & Wollläuse",
+          "fr": "Cochenilles",
+          "it": "Cocciniglie",
+          "es": "Cochinillas",
+          "pt": "Cochonilhas",
+          "ar": "حشرة قشرية وبق دقيقي",
+          "hi": "स्केल, मीलीबग",
+          "zh": "介壳虫、粉蚧",
+          "ja": "カイガラムシ類",
+          "ko": "깍지벌레, 깍지진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Silver Vase Plant",
-      "description": "Aechmea fasciata is a tropical bromeliad known for its silver-banded leaves and long-lasting pink flower spike. It prefers bright indirect light, warm temperatures, and water kept in its central cup."
+      "common_name": "Silver vase plant",
+      "description": "Aechmea fasciata is a bromeliad that forms a water-holding rosette and produces pups after flowering. Provide bright, indirect light and keep the central cup refreshed with clean water, flushing it about weekly. Use an airy, fast-draining mix and avoid keeping the potting medium constantly wet."
     },
     "pl": {
-      "common_name": "Aechmea wstęgowata",
-      "description": "Aechmea fasciata to tropikalna bromelia o srebrzystych liściach i różowym kwiatostanie. Wymaga jasnego, rozproszonego światła oraz regularnego podlewania do rozety."
+      "common_name": "Echmea wstęgowata",
+      "description": "Aechmea fasciata to bromelia tworząca rozetę z lejkiem na wodę i po kwitnieniu wytwarzająca odrosty. Zapewnij jasne, rozproszone światło i utrzymuj wodę w lejku, przepłukując go mniej więcej co tydzień. Podłoże powinno być bardzo przepuszczalne, a ziemia nie powinna pozostawać stale mokra."
     },
     "de": {
       "common_name": "Silbervase",
-      "description": "Aechmea fasciata ist eine tropische Bromelie mit silbrig gemusterten Blättern und rosa Blütenstand. Sie mag helles, indirektes Licht und Wasser im Blatttrichter."
+      "description": "Aechmea fasciata ist eine Bromelie mit wasserhaltender Rosette und bildet nach der Blüte Kindel. Stelle sie hell, aber ohne starke Mittagssonne, und spüle den Trichter etwa wöchentlich mit frischem Wasser. Verwende ein luftiges, gut drainierendes Substrat und vermeide dauerhaft nasse Erde."
     },
     "fr": {
-      "common_name": "Vase d’argent",
-      "description": "Aechmea fasciata est une broméliacée tropicale aux feuilles argentées et à l’inflorescence rose durable. Elle apprécie la lumière indirecte et une humidité régulière."
+      "common_name": "Aechmée fasciée",
+      "description": "Aechmea fasciata est une broméliacée en rosette qui retient l’eau et produit des rejets après la floraison. Placez-la en lumière vive indirecte et rincez la rosette environ chaque semaine avec de l’eau propre. Utilisez un substrat très drainant et évitez un terreau constamment détrempé."
     },
     "it": {
-      "common_name": "Aechmea argentata",
-      "description": "Aechmea fasciata è una bromelia tropicale con foglie argentee e una vistosa infiorescenza rosa. Cresce bene con luce indiretta e acqua nel calice centrale."
+      "common_name": "Aechmea fasciata (vaso d’argento)",
+      "description": "Aechmea fasciata è una bromeliacea a rosetta che trattiene acqua nel centro e produce polloni dopo la fioritura. Tienila in luce intensa ma indiretta e risciacqua il “bicchiere” centrale circa una volta a settimana con acqua pulita. Usa un substrato arieggiato e drenante ed evita ristagni nel vaso."
     },
     "es": {
-      "common_name": "Aechmea plateada",
-      "description": "Aechmea fasciata es una bromelia tropical con hojas plateadas y una flor rosa duradera. Prefiere luz indirecta y riego regular en la roseta."
+      "common_name": "Planta urna (Aechmea fasciata)",
+      "description": "Aechmea fasciata es una bromelia en roseta que retiene agua en el centro y saca hijuelos tras la floración. Dale luz brillante indirecta y enjuaga la roseta aproximadamente cada semana con agua limpia. Usa un sustrato muy drenante y evita mantener la maceta constantemente empapada."
     },
     "pt": {
-      "common_name": "Vaso-prateado",
-      "description": "Aechmea fasciata é uma bromélia tropical com folhas prateadas e inflorescência rosa. Desenvolve-se melhor com luz indireta e umidade constante."
+      "common_name": "Bromélia vaso-prateado",
+      "description": "Aechmea fasciata é uma bromélia em roseta que armazena água no centro e forma brotos após a floração. Mantenha em luz indireta forte e lave o “copo” central cerca de uma vez por semana com água limpa. Use substrato bem drenante e não deixe o vaso encharcado."
     },
     "ar": {
-      "common_name": "نبات المزهرية الفضية",
-      "description": "Aechmea fasciata نبات بروميلي استوائي بأوراق فضية ونورة وردية طويلة العمر. يفضل الضوء غير المباشر والري المنتظم داخل التجويف."
+      "common_name": "بروميليا الوعاء الفضي",
+      "description": "Aechmea fasciata نبات بروميليا يشكل وردة تحتفظ بالماء ويُنتج فسائل بعد الإزهار. وفر ضوءاً ساطعاً غير مباشر، وبدّل ماء الكأس المركزي واشطفه تقريباً مرة أسبوعياً. استخدم وسطاً خفيفاً جيد التصريف وتجنب بقاء التربة مشبعة بالماء."
     },
     "hi": {
-      "common_name": "सिल्वर वेस पौधा",
-      "description": "Aechmea fasciata एक उष्णकटिबंधीय ब्रॉमेलियाड है जिसकी पत्तियाँ चांदी जैसी और फूल गुलाबी होते हैं। इसे अप्रत्यक्ष रोशनी और नियमित नमी पसंद है।"
+      "common_name": "सिल्वर वेस ब्रोमेलियाड",
+      "description": "Aechmea fasciata एक ब्रोमेलियाड है जो रोसेट बनाकर बीच में पानी रोकता है और फूलने के बाद पप्स देता है। तेज़ अप्रत्यक्ष रोशनी दें और केंद्रीय कप का पानी साफ रखकर लगभग साप्ताहिक धोएँ। हवादार, जल्दी सूखने वाला माध्यम रखें और गमले की मिट्टी को लगातार भीगा न रखें।"
     },
     "zh": {
-      "common_name": "银瓶凤梨",
-      "description": "Aechmea fasciata 是一种热带凤梨，具有银色叶片和持久的粉色花序。适合明亮散射光，并在叶杯中保持清水。"
+      "common_name": "银杯凤梨",
+      "description": "Aechmea fasciata 是凤梨科植物，莲座中心可存水，开花后会长出侧芽。放在明亮散射光处，并约每周用清水冲洗叶杯、补充新水。基质要疏松排水好，避免盆土长期潮湿。"
     },
     "ja": {
-      "common_name": "シルバーベース",
-      "description": "Aechmea fasciata は銀色の葉とピンクの花序を持つ熱帯性ブロメリアです。明るい間接光と適度な湿度を好みます。"
+      "common_name": "シルバーベース（エクメア）",
+      "description": "Aechmea fasciata は葉の筒に水を溜めるタンク型のブロメリアで、開花後に子株を出します。明るい間接光で育て、葉筒の水は清潔に保ち、目安として週1回ほど洗い流します。用土は水はけ良くし、鉢内を常に過湿にしないでください。"
     },
     "ko": {
-      "common_name": "실버 베이스",
-      "description": "Aechmea fasciata는 은빛 잎과 분홍색 꽃을 가진 열대 브로멜리아입니다. 밝은 간접광과 로제트에 물을 유지하는 관리가 필요합니다."
+      "common_name": "실버베이스 브로멜리아",
+      "description": "Aechmea fasciata 는 중심 통에 물을 담는 로제트형 브로멜리아로, 개화 후 자구가 생깁니다. 밝은 간접광에서 키우고, 통의 물은 깨끗하게 유지하며 대략 주 1회 세척해 주세요. 배수 좋은 배합토를 쓰고 흙이 계속 젖어 있게 두지 마세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/aechmea-fasciata",
-      "https://edis.ifas.ufl.edu/publication/EP023",
-      "https://www.kew.org/plants/aechmea-fasciata"
+      "https://plants.ces.ncsu.edu/plants/aechmea-fasciata/",
+      "https://hgic.clemson.edu/factsheet/bromeliads/",
+      "https://libguides.nybg.org/growingbromeliads",
+      "https://www.rhs.org.uk/plants/59419/aechmea-fasciata/details",
+      "https://www.thespruce.com/urn-plant-care-guide-8631135"
     ]
   }
 }

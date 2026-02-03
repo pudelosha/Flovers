@@ -11,8 +11,7 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,10 +36,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूरज",
+          "hi": "पूरी धूप",
           "zh": "全日照",
           "ja": "日なた",
-          "ko": "양지"
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -49,17 +48,17 @@
       "value": {
         "text": {
           "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
           "ar": "تربة جيدة",
-          "hi": "जल निकासी वाली मिट्टी",
-          "zh": "排水良好土壤",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
           "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 양호"
         }
       }
     },
@@ -68,7 +67,7 @@
       "value": {
         "text": {
           "en": "Regular watering",
-          "pl": "Regularne podlewanie",
+          "pl": "Podlewać regularnie",
           "de": "Regelmäßig gießen",
           "fr": "Arrosage régulier",
           "it": "Annaffiature regolari",
@@ -77,8 +76,8 @@
           "ar": "ري منتظم",
           "hi": "नियमित पानी",
           "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "ja": "定期水やり",
+          "ko": "정기적 물주기"
         }
       }
     },
@@ -106,17 +105,17 @@
       "value": {
         "text": {
           "en": "Cool to warm",
-          "pl": "Chłodno do ciepło",
+          "pl": "Chłodno-ciepło",
           "de": "Kühl bis warm",
           "fr": "Frais à chaud",
           "it": "Fresco-caldo",
           "es": "Fresco a cálido",
           "pt": "Fresco a quente",
           "ar": "معتدل",
-          "hi": "ठंडा से गर्म",
-          "zh": "凉爽到温暖",
-          "ja": "涼しい〜暖かい",
-          "ko": "서늘~따뜻"
+          "hi": "ठंडा-गरम",
+          "zh": "凉到温暖",
+          "ja": "涼～暖",
+          "ko": "서늘-따뜻"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "औसत नमी",
-          "zh": "中等湿度",
-          "ja": "普通の湿度",
-          "ko": "보통 습도"
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -144,14 +143,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "ar": "غير سام",
+          "hi": "विषरहित",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,18 +161,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Horstige Staude",
-          "fr": "Vivace en touffe",
-          "it": "Perenne cespitosa",
-          "es": "Perenne en mata",
-          "pt": "Perene em touceira",
-          "ar": "معمرة متكتلة",
-          "hi": "गुच्छेदार बारहमासी",
-          "zh": "丛生多年生",
-          "ja": "多年草・株立ち",
-          "ko": "군생 다년초"
+          "en": "Clumping growth",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Touffe dense",
+          "it": "Crescita a ciuffi",
+          "es": "Crecimiento en matas",
+          "pt": "Cresce em touceiras",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "군생"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj zalania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare ristagni",
+          "es": "Evitar encharcar",
+          "pt": "Evitar encharcar",
+          "ar": "تجنب الغمر",
+          "hi": "अधिक पानी नहीं",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶见害虫",
+          "ja": "害虫はまれ",
+          "ko": "해충 드묾"
         }
       }
     }
@@ -181,58 +218,58 @@
   "translations": {
     "en": {
       "common_name": "Garlic Chives",
-      "description": "Allium tuberosum is a perennial herb grown for its flat, garlic-flavored leaves. It prefers full sun and well-drained soil. Regular harvesting encourages new growth."
+      "description": "Allium tuberosum is a perennial herb grown for its flat, garlic-scented leaves. It prefers full sun and evenly moist, well-drained soil. Regular harvesting encourages fresh growth."
     },
     "pl": {
-      "common_name": "Czosnek chiński",
-      "description": "Allium tuberosum to bylina uprawiana dla płaskich liści o czosnkowym smaku. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Regularne cięcie pobudza wzrost."
+      "common_name": "Szczypiorek czosnkowy",
+      "description": "Allium tuberosum to bylina uprawiana dla liści o czosnkowym aromacie. Najlepiej rośnie w pełnym słońcu i w przepuszczalnej, lekko wilgotnej glebie. Częste cięcie pobudza wzrost."
     },
     "de": {
-      "common_name": "Knoblauch-Schnittlauch",
-      "description": "Allium tuberosum ist ein mehrjähriges Küchenkraut mit knoblauchartigem Geschmack. Es wächst am besten in voller Sonne und gut durchlässigem Boden. Regelmäßiges Schneiden fördert den Austrieb."
+      "common_name": "Chinesischer Schnittlauch",
+      "description": "Allium tuberosum ist ein mehrjähriges Küchenkraut mit flachen, knoblauchartigen Blättern. Es mag volle Sonne und gleichmäßig feuchten, gut drainierten Boden. Regelmäßiges Schneiden fördert neuen Austrieb."
     },
     "fr": {
-      "common_name": "Ciboule à l’ail",
-      "description": "Allium tuberosum est une herbe vivace aux feuilles plates au goût d’ail. Elle apprécie le plein soleil et un sol bien drainé. La récolte fréquente stimule la croissance."
+      "common_name": "Ciboule de Chine",
+      "description": "Allium tuberosum est une plante vivace cultivée pour ses feuilles au goût d’ail. Elle apprécie le plein soleil et un sol bien drainé restant légèrement humide. La coupe régulière stimule la croissance."
     },
     "it": {
-      "common_name": "Erba cipollina all’aglio",
-      "description": "Allium tuberosum è un’erba perenne dal sapore di aglio. Predilige pieno sole e terreno ben drenato. Il taglio regolare favorisce nuova crescita."
+      "common_name": "Erba cipollina cinese",
+      "description": "Allium tuberosum è una perenne aromatica dalle foglie piatte con aroma d’aglio. Cresce bene in pieno sole e in terreno drenante mantenuto umido. La raccolta frequente favorisce nuovi germogli."
     },
     "es": {
       "common_name": "Cebollino chino",
-      "description": "Allium tuberosum es una hierba perenne con hojas sabor a ajo. Crece mejor a pleno sol y en suelos bien drenados. La cosecha regular estimula el rebrote."
+      "description": "Allium tuberosum es una hierba perenne cultivada por sus hojas con aroma a ajo. Prefiere pleno sol y suelo bien drenado y ligeramente húmedo. El corte regular estimula el crecimiento."
     },
     "pt": {
       "common_name": "Cebolinha chinesa",
-      "description": "Allium tuberosum é uma erva perene de folhas com sabor de alho. Prefere sol pleno e solo bem drenado. Cortes regulares estimulam o crescimento."
+      "description": "Allium tuberosum é uma erva perene cultivada pelas folhas com aroma de alho. Desenvolve-se melhor em sol pleno e solo bem drenado e levemente úmido. A colheita regular incentiva novos brotos."
     },
     "ar": {
       "common_name": "ثوم معمر",
-      "description": "Allium tuberosum نبات عشبي معمر بأوراق بطعم الثوم. يفضل الشمس الكاملة وتربة جيدة التصريف. الحصاد المنتظم يشجع النمو."
+      "description": "Allium tuberosum نبات معمر يزرع لأوراقه ذات رائحة الثوم. يفضل الشمس الكاملة وتربة جيدة التصريف ورطبة باعتدال. القص المنتظم يحفز النمو."
     },
     "hi": {
-      "common_name": "गार्लिक चाइव्स",
-      "description": "Allium tuberosum एक बहुवर्षीय जड़ी बूटी है जिसकी पत्तियाँ लहसुन स्वाद की होती हैं। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। नियमित कटाई से नई वृद्धि होती है।"
+      "common_name": "लहसुन चाइव्स",
+      "description": "Allium tuberosum एक बहुवर्षीय जड़ी बूटी है जिसकी पत्तियों में लहसुन की सुगंध होती है। इसे पूरी धूप और अच्छी जल निकास वाली नम मिट्टी पसंद है। नियमित कटाई से नई वृद्धि होती है।"
     },
     "zh": {
       "common_name": "韭菜",
-      "description": "Allium tuberosum 是一种多年生草本植物，以蒜香叶片著称。适合全日照和排水良好的土壤。经常采收可促进生长。"
+      "description": "Allium tuberosum 是一种多年生香草植物，以扁平且带蒜香的叶片著称。适合全日照和排水良好、保持湿润的土壤。经常收割可促进生长。"
     },
     "ja": {
       "common_name": "ニラ",
-      "description": "Allium tuberosum は多年生のハーブで、ニンニク風味の葉を持ちます。日当たりと水はけの良い土を好みます。定期的な収穫で成長が促されます。"
+      "description": "Allium tuberosum は多年生のハーブで、ニンニクの香りのある平たい葉を持ちます。日当たりと水はけのよい適度に湿った土を好みます。定期的な収穫で生育が促進されます。"
     },
     "ko": {
       "common_name": "부추",
-      "description": "Allium tuberosum은 마늘 향이 나는 잎을 가진 다년생 허브입니다. 햇빛이 잘 들고 배수가 좋은 토양을 선호합니다. 자주 수확하면 잘 자랍니다."
+      "description": "Allium tuberosum은 마늘 향이 나는 잎을 가진 다년생 허브입니다. 햇빛이 잘 들고 배수가 좋은 촉촉한 토양을 선호합니다. 자주 수확하면 새 잎이 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plants.ces.ncsu.edu/plants/allium-tuberosum/",
-      "https://www.rhs.org.uk/plants/961/allium-tuberosum/details",
-      "https://extension.umn.edu/vegetables/growing-garlic-chives"
+      "https://www.rhs.org.uk/plants/1703/allium-tuberosum/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c240",
+      "https://extension.umn.edu/vegetables/growing-chives"
     ]
   }
 }

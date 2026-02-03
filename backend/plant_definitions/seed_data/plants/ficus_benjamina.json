@@ -1,25 +1,24 @@
 {
   "external_id": "ficus_benjamina",
-  "name": "Weeping Fig",
+  "name": "Weeping fig",
   "latin": "Ficus benjamina",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": true,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ficus_benjamina.jpg",
@@ -30,14 +29,14 @@
       "value": {
         "text": {
           "en": "Bright indirect",
-          "pl": "Jasne pośrednie",
-          "de": "Hell indirekt",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well drained",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Durchlässige Erde",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "hi": "अच्छी जल-निकासी मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम",
-          "zh": "适量浇水",
-          "ja": "適度",
-          "ko": "적당함"
+          "en": "Let top dry",
+          "pl": "Przesusz wierzch",
+          "de": "Oben antrocknen",
+          "fr": "Laisser sécher dessus",
+          "it": "Asciuga in superficie",
+          "es": "Seca la capa superior",
+          "pt": "Seque a superfície",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपर सूखने दें",
+          "zh": "表土干后再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,14 +85,14 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
+          "en": "Moderate",
           "pl": "Średnia",
           "de": "Mittel",
           "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
-          "ar": "متوسطة",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
           "ja": "普通",
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–25°C",
-          "pl": "18–25°C",
-          "de": "18–25°C",
-          "fr": "18–25°C",
-          "it": "18–25°C",
-          "es": "18–25°C",
-          "pt": "18–25°C",
-          "ar": "18–25°م",
-          "hi": "18–25°C",
-          "zh": "18–25°C",
-          "ja": "18–25℃",
-          "ko": "18–25℃"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average home",
-          "pl": "Średnia domowa",
-          "de": "Normale Raumluft",
-          "fr": "Humidité normale",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य आर्द्रता",
-          "zh": "普通湿度",
-          "ja": "標準的湿度",
-          "ko": "보통 습도"
+          "en": "Average–high",
+          "pl": "Umiark.-wyższa",
+          "de": "Mittel–hoch",
+          "fr": "Moyenne à élevée",
+          "it": "Media-alta",
+          "es": "Media-alta",
+          "pt": "Média-alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "मध्यम–उच्च",
+          "zh": "中等至较高",
+          "ja": "普通〜高め",
+          "ko": "보통~높음"
         }
       }
     },
@@ -147,14 +146,14 @@
           "pl": "Toksyczna dla zwierząt",
           "de": "Giftig für Tiere",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
+          "it": "Tossica per animali",
           "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
+          "pt": "Tóxica p/ animais",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषैली",
+          "hi": "पालतू के लिए विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -162,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Tree form",
-          "pl": "Forma drzewka",
-          "de": "Baumartig",
-          "fr": "Port arboré",
-          "it": "Forma ad albero",
-          "es": "Forma arbórea",
-          "pt": "Forma arbórea",
-          "ar": "نمو شجري",
-          "hi": "वृक्षाकार",
-          "zh": "乔木形态",
-          "ja": "樹木状",
-          "ko": "교목형"
+          "en": "Tree/shrub",
+          "pl": "Drzewko/krzew",
+          "de": "Baum/Strauch",
+          "fr": "Arbre/arbuste",
+          "it": "Albero/arbusto",
+          "es": "Árbol/arbusto",
+          "pt": "Árvore/arbusto",
+          "ar": "شجرة/شجيرة",
+          "hi": "पेड़/झाड़ी",
+          "zh": "木本灌木",
+          "ja": "木本（樹木）",
+          "ko": "목본(나무)"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drafts/moves",
+          "pl": "Unikaj przeciągów",
+          "de": "Zugluft vermeiden",
+          "fr": "Éviter courants d'air",
+          "it": "Evita correnti/spost.",
+          "es": "Evita corrientes/mover",
+          "pt": "Evite correntes/mover",
+          "ar": "تجنب التيارات/النقل",
+          "hi": "झोंके/स्थान बदलना नहीं",
+          "zh": "怕冷风与搬动",
+          "ja": "寒風・移動に弱い",
+          "ko": "찬바람/이동 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale & spider mites",
+          "pl": "Tarczniki, przędziorki",
+          "de": "Schildläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "حشرات قشرية/عث",
+          "hi": "स्केल/स्पाइडर माइट्स",
+          "zh": "介壳虫与红蜘蛛",
+          "ja": "カイガラムシ/ハダニ",
+          "ko": "깍지벌레/응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Weeping Fig",
-      "description": "Ficus benjamina is a popular indoor tree with arching branches and glossy leaves. It prefers bright, indirect light and stable conditions. Sudden changes may cause leaf drop."
+      "common_name": "Weeping fig",
+      "description": "An evergreen ficus grown indoors for its arching branches and small glossy leaves. Give bright, indirect light and water when the top layer of mix dries. Keep it in a stable spot away from drafts; the sap is irritating and it is toxic to pets if chewed."
     },
     "pl": {
       "common_name": "Figowiec benjamina",
-      "description": "Ficus benjamina to popularna roślina doniczkowa o zwisających pędach. Lubi jasne, pośrednie światło i stałe warunki. Zmiany mogą powodować opadanie liści."
+      "description": "Zimozielony figowiec uprawiany w domu dla przewieszających się pędów i drobnych, błyszczących liści. Zapewnij jasne, rozproszone światło i podlewaj, gdy przeschnie wierzch podłoża. Trzymaj z dala od przeciągów i nagłych zmian; sok może podrażniać, roślina jest toksyczna dla zwierząt."
     },
     "de": {
       "common_name": "Birkenfeige",
-      "description": "Ficus benjamina ist ein beliebter Zimmerbaum mit glänzenden Blättern. Er bevorzugt helles, indirektes Licht. Standortwechsel können Blattfall verursachen."
+      "description": "Ein immergrüner Ficus als Zimmerpflanze mit bogigen Trieben und kleinen glänzenden Blättern. Hell, aber ohne pralle Sonne stellen und gießen, wenn die obere Erdschicht abgetrocknet ist. Nicht häufig umstellen und Zugluft vermeiden; der Milchsaft reizt und die Pflanze ist für Haustiere giftig."
     },
     "fr": {
       "common_name": "Figuier pleureur",
-      "description": "Le Ficus benjamina est un arbre d’intérieur apprécié pour son feuillage. Il aime la lumière vive indirecte et une routine stable. Les changements peuvent entraîner une chute des feuilles."
+      "description": "Ficus persistant cultivé en intérieur pour ses rameaux retombants et ses petites feuilles luisantes. Placez-le en lumière vive indirecte et arrosez quand le dessus du substrat sèche. Évitez les courants d’air et les déplacements; le latex est irritant et la plante est toxique pour les animaux."
     },
     "it": {
-      "common_name": "Fico beniamino",
-      "description": "Il Ficus benjamina è una pianta da interno molto diffusa. Preferisce luce indiretta brillante e condizioni costanti. Gli stress ambientali causano perdita di foglie."
+      "common_name": "Ficus benjamina",
+      "description": "Ficus sempreverde da interno con rami arcuati e foglie piccole e lucide. Tieni in luce intensa ma indiretta e annaffia quando lo strato superiore del terriccio è asciutto. Evita correnti e spostamenti frequenti; la linfa è irritante ed è tossico per gli animali domestici."
     },
     "es": {
       "common_name": "Ficus benjamina",
-      "description": "El Ficus benjamina es un árbol de interior muy común. Necesita luz indirecta brillante y riego moderado. Cambios bruscos provocan caída de hojas."
+      "description": "Ficus perenne de interior con ramas arqueadas y hojas pequeñas y brillantes. Dale luz brillante e indirecta y riega cuando se seque la capa superior del sustrato. Evita corrientes de aire y moverlo; la savia irrita y es tóxico para mascotas si lo muerden."
     },
     "pt": {
-      "common_name": "Figueira-benjamim",
-      "description": "Ficus benjamina é uma planta ornamental muito usada em interiores. Prefere luz indireta forte e rega regular. Mudanças repentinas causam queda das folhas."
+      "common_name": "Figueira-chorona",
+      "description": "Ficus perene cultivado em interiores por seus ramos arqueados e folhas pequenas e brilhantes. Prefere luz forte indireta e rega quando a camada superior do substrato secar. Evite correntes de ar e mudanças de lugar; a seiva é irritante e é tóxico para animais de estimação."
     },
     "ar": {
       "common_name": "فيكس بنجامينا",
-      "description": "فيكس بنجامينا نبات داخلي شائع بأوراق لامعة. يفضل الضوء غير المباشر والظروف المستقرة. التغيرات المفاجئة قد تسبب تساقط الأوراق."
+      "description": "نبات فيكس دائم الخضرة يُربّى داخل المنزل لأغصانه المقوسة وأوراقه الصغيرة اللامعة. يحتاج إلى ضوء ساطع غير مباشر ويُسقى عندما يجف سطح التربة. تجنب التيارات الباردة وتغيير المكان؛ العصارة مهيِّجة والنبات سام للحيوانات الأليفة إذا مضغته."
     },
     "hi": {
       "common_name": "वीपिंग फिग",
-      "description": "फिकस बेंजामिना एक लोकप्रिय इनडोर पेड़ है। इसे अप्रत्यक्ष रोशनी और स्थिर वातावरण पसंद है। बदलाव से पत्तियाँ गिर सकती हैं।"
+      "description": "यह सदाबहार फिकस घर के अंदर उगाया जाता है और इसकी झुकी हुई शाखाएँ व चमकदार पत्तियाँ होती हैं। तेज़ अप्रत्यक्ष रोशनी दें और ऊपर की मिट्टी सूखने पर पानी दें। ड्राफ्ट और बार-बार जगह बदलना न पसंद है; इसका दूधिया रस त्वचा को चुभ सकता है और पालतू जानवरों के लिए विषाक्त है।"
     },
     "zh": {
       "common_name": "垂叶榕",
-      "description": "垂叶榕是一种常见的室内观叶植物。喜欢明亮的散射光和稳定环境。环境变化容易导致落叶。"
+      "description": "垂叶榕是常见室内常绿木本观叶植物，枝条下垂、叶片有光泽。放在明亮散射光处，表土干后再浇透。避免冷风与频繁搬动；乳汁有刺激性，啃咬对宠物有毒。"
     },
     "ja": {
       "common_name": "ベンジャミン",
-      "description": "フィカス・ベンジャミナは室内向けの人気観葉植物です。明るい間接光と安定した環境を好みます。環境変化で落葉します。"
+      "description": "ベンジャミンは枝がしだれる常緑の観葉植物で、小さな光沢のある葉が特徴です。明るい間接光で育て、表土が乾いたら水やりします。寒風や置き場所の変化を避けてください。樹液は刺激性があり、ペットがかじると有害です。"
     },
     "ko": {
       "common_name": "벤자민고무나무",
-      "description": "벤자민고무나무는 실내에서 많이 기르는 관엽수입니다. 밝은 간접광과 안정적인 환경을 선호합니다. 변화에 민감합니다."
+      "description": "벤자민고무나무는 실내에서 기르는 상록 관엽수로 늘어진 가지와 작은 윤기 나는 잎이 특징입니다. 밝은 간접광에서 키우고 겉흙이 마르면 물을 주세요. 찬바람과 잦은 위치 변경을 피하고, 수액은 자극적이며 반려동물이 씹으면 유독할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ficus/benjamina",
-      "https://edis.ifas.ufl.edu/publication/FP221",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-ficus-benjamina/"
+      "https://www.rhsplants.co.uk/plants/_/ficus-benjamina-twilight/classid.2000031754/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282745",
+      "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/gardening-help-faqs/question/522/why-is-my-weeping-fig-dropping-leaves",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/fig",
+      "https://www.thespruce.com/grow-weeping-fig-indoors-1902440"
     ]
   }
 }

@@ -1,25 +1,25 @@
 {
   "external_id": "medinilla_magnifica",
-  "name": "Rose Grape",
+  "name": "Medinilla magnifica",
   "latin": "Medinilla magnifica",
   "sun": "medium",
-  "water": "high",
-  "difficulty": "hard",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
   "moisture_interval_days": 3,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "medinilla_magnifica.jpg",
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect",
-          "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loose acidic mix",
-          "pl": "Kwaśne luźne",
-          "de": "Locker sauer",
-          "fr": "Acide drainant",
-          "it": "Acido drenante",
-          "es": "Ácido suelto",
-          "pt": "Ácido solto",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "疏松酸性土",
-          "ja": "酸性で疎水",
-          "ko": "산성 배수토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 잘되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Evenly moist",
-          "pl": "Stale wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide constant",
-          "it": "Umido costante",
-          "es": "Húmedo constante",
-          "pt": "Úmido constante",
-          "ar": "رطب دائمًا",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "均一な湿り",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Demanding",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Esigente",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "高要求",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -125,14 +125,14 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgoć",
-          "de": "Hohe Luftfeuchte",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright shrub",
-          "pl": "Krzew wzniesiony",
-          "de": "Aufrechter Strauch",
-          "fr": "Arbuste dressé",
-          "it": "Arbusto eretto",
-          "es": "Arbusto erguido",
-          "pt": "Arbusto ereto",
-          "ar": "شجيرة قائمة",
-          "hi": "सीधी झाड़ी",
-          "zh": "直立灌木",
-          "ja": "直立低木",
-          "ko": "직립 관목"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać za dużo",
+          "de": "Nicht überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過度に水やりしない",
+          "ko": "과도한 물주지 않기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rose Grape",
-      "description": "Medinilla magnifica is a tropical ornamental shrub native to the Philippines. It is prized for its large pink flower clusters and glossy leaves. The plant requires warm temperatures, high humidity, and bright indirect light indoors."
+      "common_name": "Pink Orchid",
+      "description": "Medinilla magnifica, also known as the Pink Orchid, is a tropical plant known for its striking pink flowers. It thrives in high humidity and moderate light."
     },
     "pl": {
-      "common_name": "Medinilla wspaniała",
-      "description": "Medinilla magnifica to tropikalny krzew ozdobny pochodzący z Filipin. Ceniona jest za okazałe różowe kwiatostany i błyszczące liście. Wymaga ciepła, wysokiej wilgotności i jasnego, rozproszonego światła."
+      "common_name": "Orchidea różowa",
+      "description": "Medinilla magnifica, znana także jako Orchidea różowa, to tropikalna roślina charakteryzująca się uderzającymi różowymi kwiatami. Rośnie w wysokiej wilgotności i średnim świetle."
     },
     "de": {
-      "common_name": "Prachtmedinille",
-      "description": "Medinilla magnifica ist ein tropischer Zierstrauch aus den Philippinen. Sie ist bekannt für ihre großen rosa Blütenstände und glänzenden Blätter. Die Pflanze benötigt Wärme, hohe Luftfeuchte und helles indirektes Licht."
+      "common_name": "Pinkorchidee",
+      "description": "Medinilla magnifica, auch als Pinkorchidee bekannt, ist eine tropische Pflanze mit auffälligen rosa Blüten. Sie gedeiht bei hoher Luftfeuchtigkeit und mittlerem Licht."
     },
     "fr": {
-      "common_name": "Médinille magnifique",
-      "description": "Medinilla magnifica est un arbuste tropical ornemental originaire des Philippines. Elle est appréciée pour ses grandes grappes de fleurs roses et son feuillage brillant. Elle demande chaleur, humidité élevée et lumière indirecte."
+      "common_name": "Orchidée rose",
+      "description": "Medinilla magnifica, également connue sous le nom d'Orchidée rose, est une plante tropicale avec de magnifiques fleurs roses. Elle prospère dans une humidité élevée et une lumière modérée."
     },
     "it": {
-      "common_name": "Medinilla magnifica",
-      "description": "Medinilla magnifica è un arbusto ornamentale tropicale originario delle Filippine. È apprezzata per le sue infiorescenze rosa e le foglie lucide. Richiede caldo, alta umidità e luce indiretta."
+      "common_name": "Orchidea rosa",
+      "description": "Medinilla magnifica, conosciuta anche come Orchidea rosa, è una pianta tropicale con fiori rosa vivaci. Cresce in alta umidità e luce moderata."
     },
     "es": {
-      "common_name": "Medinilla magnífica",
-      "description": "Medinilla magnifica es un arbusto tropical ornamental originario de Filipinas. Destaca por sus grandes flores rosadas y hojas brillantes. Necesita calor, alta humedad y luz indirecta."
+      "common_name": "Orquídea rosa",
+      "description": "Medinilla magnifica, también conocida como Orquídea rosa, es una planta tropical que destaca por sus flores rosadas. Prefiere humedad alta y luz moderada."
     },
     "pt": {
-      "common_name": "Medinila-magnífica",
-      "description": "Medinilla magnifica é um arbusto ornamental tropical nativo das Filipinas. É valorizada por suas flores rosadas pendentes e folhas brilhantes. Precisa de calor, alta umidade e luz indireta."
+      "common_name": "Orquídea rosa",
+      "description": "Medinilla magnifica, também conhecida como Orquídea rosa, é uma planta tropical com flores rosa marcantes. Gosta de alta umidade e luz moderada."
     },
     "ar": {
-      "common_name": "ميدينيلا رائعة",
-      "description": "نبات Medinilla magnifica شجيرة زينة استوائية موطنها الفلبين. تشتهر بعناقيد أزهار وردية كبيرة وأوراق لامعة. تحتاج إلى الدفء ورطوبة عالية وضوء غير مباشر."
+      "common_name": "أوركيديا الوردية",
+      "description": "مدينلا ماجنيفيكا، المعروفة أيضا باسم أوركيديا الوردية، هي نبات استوائي يتميز بزهوره الوردية المذهلة. يزدهر في الرطوبة العالية والضوء المعتدل."
     },
     "hi": {
-      "common_name": "मेडिनिला",
-      "description": "Medinilla magnifica फिलीपींस की एक उष्णकटिबंधीय सजावटी झाड़ी है। यह अपने गुलाबी फूलों और चमकदार पत्तियों के लिए जानी जाती है। इसे गर्म तापमान, अधिक नमी और अप्रत्यक्ष रोशनी चाहिए।"
+      "common_name": "गुलाबी ऑर्किड",
+      "description": "मेडिनिला मैग्निफिका, जिसे गुलाबी ऑर्किड के नाम से भी जाना जाता है, एक उष्णकटिबंधीय पौधा है जो अपनी आकर्षक गुलाबी फूलों के लिए प्रसिद्ध है। यह उच्च आर्द्रता और मध्यम रोशनी में उगता है।"
     },
     "zh": {
-      "common_name": "美丁花",
-      "description": "Medinilla magnifica 原产于菲律宾，是一种热带观赏灌木。它以大型粉色花序和光亮叶片著称。室内养护需要温暖、高湿度和明亮散射光。"
+      "common_name": "粉色兰花",
+      "description": "美登尼拉·宏伟，也叫粉色兰花，是一种热带植物，以其鲜艳的粉色花朵而著称。它喜欢高湿度和中等光照。"
     },
     "ja": {
-      "common_name": "メディニラ",
-      "description": "メディニラ・マグニフィカはフィリピン原産の熱帯観賞低木です。大きなピンク色の花房と光沢のある葉が特徴です。暖かさと高湿度、明るい間接光を好みます。"
+      "common_name": "ピンクオーキッド",
+      "description": "メディニラ・マグニフィカは、ピンクオーキッドとしても知られ、鮮やかなピンクの花で有名な熱帯植物です。高湿度と中程度の光で育ちます。"
     },
     "ko": {
-      "common_name": "메디닐라",
-      "description": "Medinilla magnifica는 필리핀 원산의 열대 관상 관목입니다. 분홍색 꽃송이와 윤기 있는 잎이 특징입니다. 따뜻한 온도와 높은 습도, 밝은 간접광이 필요합니다."
+      "common_name": "핑크 오키드",
+      "description": "메디닐라 마그니피카, 핑크 오키드로도 알려진 이 식물은 눈에 띄는 분홍색 꽃으로 유명한 열대 식물입니다. 고습도와 중간 정도의 빛에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/medinilla/magnifica/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281497",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:543993-1"
+      "https://www.rhs.org.uk/plants/medinilla-magnifica",
+      "https://www.gardenia.net/plant/medinilla-magnifica"
     ]
   }
 }

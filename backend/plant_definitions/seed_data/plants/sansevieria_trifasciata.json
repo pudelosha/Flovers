@@ -7,12 +7,12 @@
   "difficulty": "easy",
   "popular": true,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -40,7 +40,7 @@
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ko": "중간 빛"
         }
       }
     },
@@ -55,11 +55,11 @@
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी तरह से जल निकासी",
-          "zh": "排水良好",
-          "ja": "良く排水される土壌",
-          "ko": "배수가 좋은 토양"
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low water",
-          "pl": "Niska ilość wody",
-          "de": "Wenig Wasser",
-          "fr": "Peu d'eau",
-          "it": "Poca acqua",
-          "es": "Poca agua",
-          "pt": "Pouca água",
-          "ar": "ماء قليل",
-          "hi": "कम पानी",
-          "zh": "少量水",
-          "ja": "少量の水",
-          "ko": "적은 물"
+          "en": "Infrequent",
+          "pl": "Rzadkie podlewanie",
+          "de": "Seltene Bewässerung",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego poco frecuente",
+          "pt": "Regar com pouca frequência",
+          "ar": "سقي نادر",
+          "hi": "अल्प जल देने",
+          "zh": "不常浇水",
+          "ja": "あまり水をやらない",
+          "ko": "드물게 물주기"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwy",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "नमीयत कम",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低〜中程度",
+          "ko": "낮은 편에서 중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットには毒性あり",
+          "ko": "애완동물에게 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowany",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnąca",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느리다"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "حشرات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Snake Plant",
-      "description": "Sansevieria trifasciata, also known as the Snake Plant, is an easy-to-care-for houseplant. It thrives in medium light and is drought-tolerant, requiring little watering."
+      "description": "Sansevieria trifasciata is a popular houseplant known for its striking sword-like leaves. It thrives in medium light and requires minimal water."
     },
     "pl": {
       "common_name": "Wężownica",
-      "description": "Sansevieria trifasciata, znana jako wężownica, to łatwa w pielęgnacji roślina doniczkowa. Rośnie w średnim świetle i jest odporna na suszę, wymagając minimalnego podlewania."
+      "description": "Sansevieria trifasciata to popularna roślina doniczkowa o efektownych liściach w kształcie mieczy. Rośnie w średnim świetle i wymaga minimalnego podlewania."
     },
     "de": {
       "common_name": "Schwiegermutterzunge",
-      "description": "Sansevieria trifasciata, auch als Schwiegermutterzunge bekannt, ist eine pflegeleichte Zimmerpflanze. Sie gedeiht bei mittlerem Licht und ist trockenheitsresistent, benötigt wenig Wasser."
+      "description": "Sansevieria trifasciata ist eine beliebte Zimmerpflanze, die für ihre auffälligen, schwertartigen Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt wenig Wasser."
     },
     "fr": {
-      "common_name": "Plante serpent",
-      "description": "Sansevieria trifasciata, également connue sous le nom de plante serpent, est une plante d'intérieur facile à entretenir. Elle se développe à la lumière moyenne et est résistante à la sécheresse, nécessitant peu d'eau."
+      "common_name": "Langue de belle-mère",
+      "description": "Sansevieria trifasciata est une plante d'intérieur populaire connue pour ses feuilles en forme d'épée. Elle prospère dans une lumière moyenne et nécessite peu d'eau."
     },
     "it": {
-      "common_name": "Pianta serpente",
-      "description": "Sansevieria trifasciata, conosciuta anche come pianta serpente, è una pianta d'appartamento facile da curare. Cresce in luce media ed è resistente alla siccità, richiedendo poca acqua."
+      "common_name": "Lingua di suocera",
+      "description": "Sansevieria trifasciata è una pianta da appartamento popolare, conosciuta per le sue foglie a forma di spada. Cresce in luce media e richiede poca acqua."
     },
     "es": {
-      "common_name": "Planta serpiente",
-      "description": "Sansevieria trifasciata, también conocida como planta serpiente, es una planta de interior fácil de cuidar. Crece con luz media y es resistente a la sequía, requiriendo poco riego."
+      "common_name": "Lengua de suegra",
+      "description": "Sansevieria trifasciata es una planta de interior popular conocida por sus hojas en forma de espada. Crece con luz media y requiere poca agua."
     },
     "pt": {
-      "common_name": "Planta cobra",
-      "description": "Sansevieria trifasciata, também conhecida como planta cobra, é uma planta de interior fácil de cuidar. Ela cresce com luz média e é resistente à seca, necessitando de pouca água."
+      "common_name": "Língua de sogra",
+      "description": "Sansevieria trifasciata é uma planta popular de interior conhecida pelas suas folhas em forma de espada. Cresce com luz média e requer pouca água."
     },
     "ar": {
-      "common_name": "نبات الأفعى",
-      "description": "Sansevieria trifasciata، المعروفة أيضًا بنبات الأفعى، هي نبتة منزلية سهلة العناية. تنمو في الضوء المتوسط ومقاومة للجفاف، وتحتاج إلى القليل من الماء."
+      "common_name": "نبات سانسيفيريا",
+      "description": "Sansevieria trifasciata هو نبات داخلي شهير معروف بأوراقه على شكل سيف. ينمو في الضوء المتوسط ويحتاج إلى القليل من الماء."
     },
     "hi": {
-      "common_name": "सांसेवियेरिया त्रिफ़ासियाटा",
-      "description": "Sansevieria trifasciata, जिसे साँप पौधा भी कहा जाता है, एक आसान देखभाल वाला पौधा है। यह मध्यम प्रकाश में उगता है और सूखा सहनशील है, बहुत कम पानी की आवश्यकता होती है।"
+      "common_name": "सांसेवियेरिया",
+      "description": "Sansevieria trifasciata एक लोकप्रिय इनडोर पौधा है जो अपनी तलवार जैसी पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश में बढ़ता है और कम पानी की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "蛇植物",
-      "description": "Sansevieria trifasciata，亦称蛇植物，是一种易于护理的室内植物。它在中等光照下生长，并且耐干旱，所需水量较少。"
+      "common_name": "虎尾兰",
+      "description": "Sansevieria trifasciata 是一种受欢迎的室内植物，因其剑状的叶片而闻名。它在中等光照下生长，且需要很少的水分。"
     },
     "ja": {
       "common_name": "サンスベリア",
-      "description": "サンスベリア・トリファスキアータは、サンスベリアとも呼ばれる手入れが簡単な室内植物です。中程度の光で育ち、乾燥に強く、ほとんど水を必要としません。"
+      "description": "Sansevieria trifasciataは、剣のような葉で知られる人気の室内植物です。中程度の光で育ち、水はほとんど必要ありません。"
     },
     "ko": {
-      "common_name": "뱀식물",
-      "description": "Sansevieria trifasciata, 뱀식물로도 알려진 이 식물은 관리가 쉬운 실내 식물입니다. 중간 정도의 빛에서 자라며, 건조한 환경에 강하고 물을 적게 필요로 합니다."
+      "common_name": "산세베리아",
+      "description": "Sansevieria trifasciata는 검 모양의 잎으로 유명한 인기 있는 실내 식물입니다. 중간 정도의 빛에서 자라며 물은 적게 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=828",
-      "https://www.gardeningknowhow.com/houseplants/sansevieria/sansevieria-care.htm"
+      "https://www.gardenia.net/plant/sansevieria-trifasciata",
+      "https://www.rhs.org.uk/plants/1081/sansevieria-trifasciata"
     ]
   }
 }

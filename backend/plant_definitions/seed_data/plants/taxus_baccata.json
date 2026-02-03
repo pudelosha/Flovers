@@ -1,18 +1,18 @@
 {
   "external_id": "taxus_baccata",
-  "name": "European Yew",
+  "name": "English Yew",
   "latin": "Taxus baccata",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "all-purpose",
+    "conifers"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 조명"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, loamy",
-          "pl": "Kwaśna, próchnicza",
-          "de": "Saures, lockeres",
-          "fr": "Acide, limoneuse",
-          "it": "Acido, argilloso",
-          "es": "Ácido, arcilloso",
-          "pt": "Ácido, argiloso",
-          "ar": "حمضي، طيني",
-          "hi": "खट्टा, दोमट",
-          "zh": "酸性，壤土",
-          "ja": "酸性、粘土質",
-          "ko": "산성, 점토질"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Moderat",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "적당한"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
         }
       }
     },
@@ -90,9 +90,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-20°C",
-          "pl": "10-20°C",
-          "de": "10-20°C",
-          "fr": "10-20°C",
-          "it": "10-20°C",
-          "es": "10-20°C",
-          "pt": "10-20°C",
-          "ar": "10-20°C",
-          "hi": "10-20°C",
-          "zh": "10-20°C",
-          "ja": "10-20°C",
-          "ko": "10-20°C"
+          "en": "Cool to moderate",
+          "pl": "Chłodne do umiarkowane",
+          "de": "Kühl bis mäßig",
+          "fr": "Froid à modéré",
+          "it": "Fresco a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽至适中",
+          "ja": "涼しいから中程度",
+          "ko": "차가운에서 적당한"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "नमीयत कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic if ingested",
+          "pl": "Trujący po spożyciu",
+          "de": "Giftig bei Aufnahme",
+          "fr": "Toxique s'il est ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سامة إذا ابتلعتها",
+          "hi": "अगर निगल लिया जाए तो विषाक्त",
+          "zh": "如果摄入则有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الآفات العرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "European Yew",
-      "description": "The European Yew is a conifer native to Europe, known for its evergreen needles and red berries. It grows slowly and prefers shaded environments."
+      "common_name": "English Yew",
+      "description": "Taxus baccata is a slow-growing, evergreen tree. It is toxic if ingested and prefers medium light and well-drained soil."
     },
     "pl": {
       "common_name": "Cis pospolity",
-      "description": "Cis pospolity to iglak rodzimy w Europie, znany z wiecznie zielonych igieł i czerwonych jagód. Rośnie powoli i preferuje zacienione miejsca."
+      "description": "Taxus baccata to powoli rosnące, wiecznie zielone drzewo. Jest trujące po spożyciu i preferuje średnie światło oraz dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Europäische Eibe",
-      "description": "Die Europäische Eibe ist ein Nadelbaum, der in Europa heimisch ist. Sie ist bekannt für ihre immergrünen Nadeln und roten Beeren. Sie wächst langsam und bevorzugt schattige Standorte."
+      "common_name": "Eibenbaum",
+      "description": "Taxus baccata ist ein langsam wachsender, immergrüner Baum. Er ist bei Einnahme giftig und bevorzugt mittleres Licht und gut durchlässigen Boden."
     },
     "fr": {
       "common_name": "If commun",
-      "description": "L'If commun est un conifère originaire d'Europe, connu pour ses aiguilles persistantes et ses baies rouges. Il pousse lentement et préfère les environnements ombragés."
+      "description": "Taxus baccata est un arbre à croissance lente et persistant. Il est toxique s'il est ingéré et préfère une lumière moyenne et un sol bien drainé."
     },
     "it": {
-      "common_name": "Tasso europeo",
-      "description": "Il Tasso europeo è una conifera originaria dell'Europa, conosciuta per le sue foglie sempreverdi e le bacche rosse. Cresce lentamente e preferisce ambienti ombreggiati."
+      "common_name": "Tasso comune",
+      "description": "Taxus baccata è un albero a crescita lenta, sempreverde. È tossico se ingerito e preferisce una luce media e un terreno ben drenato."
     },
     "es": {
-      "common_name": "Tejo europeo",
-      "description": "El Tejo europeo es un árbol de hoja perenne originario de Europa, conocido por sus agujas verdes y bayas rojas. Crece lentamente y prefiere ambientes sombreados."
+      "common_name": "Tejo común",
+      "description": "Taxus baccata es un árbol de crecimiento lento y perenne. Es tóxico si se ingiere y prefiere luz media y suelo bien drenado."
     },
     "pt": {
-      "common_name": "Teixo europeu",
-      "description": "O Teixo europeu é uma conífera nativa da Europa, conhecida por suas agulhas perenes e bagas vermelhas. Cresce lentamente e prefere ambientes sombreados."
+      "common_name": "Teixo comum",
+      "description": "Taxus baccata é uma árvore de crescimento lento e sempre verde. É tóxica se ingerida e prefere luz média e solo bem drenado."
     },
     "ar": {
-      "common_name": "شجرة التاكسوس الأوروبية",
-      "description": "التاكسوس الأوروبية هي شجرة مخروطية موطنها الأصلي في أوروبا، معروفة بإبرها الخضراء الدائمة وبذورها الحمراء. تنمو ببطء وتفضل البيئات المظللة."
+      "common_name": "العرعر الإنجليزي",
+      "description": "Taxus baccata شجرة دائمة الخضرة تنمو ببطء. هي سامة إذا ابتلعتها ويفضل الضوء المتوسط والتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "यूरोपीय यू",
-      "description": "यूरोपीय यू एक शंकुधारी पौधा है जो यूरोप का मूल निवासी है, यह अपनी हरे रंग की पत्तियों और लाल जामुन के लिए जाना जाता है। यह धीरे-धीरे बढ़ता है और छायादार वातावरण पसंद करता है।"
+      "common_name": "अंग्रेजी यु",
+      "description": "Taxus baccata एक धीमी वृद्धि वाली, सदाबहार वृक्ष है। यह निगलने पर विषाक्त होता है और इसे मध्यम रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद है।"
     },
     "zh": {
-      "common_name": "欧洲红豆杉",
-      "description": "欧洲红豆杉是一种原产于欧洲的针叶树，因其常绿的针叶和红色的浆果而闻名。它生长缓慢，喜欢阴凉的环境。"
+      "common_name": "英格兰紫杉",
+      "description": "Taxus baccata 是一种缓慢生长的常绿树木。若摄入有毒，喜欢中等光照和良好排水的土壤。"
     },
     "ja": {
-      "common_name": "ヨーロッパイチイ",
-      "description": "ヨーロッパイチイはヨーロッパ原産の針葉樹で、常緑の葉と赤い実が特徴です。ゆっくり成長し、陰の多い場所を好みます。"
+      "common_name": "イングリッシュイエ",
+      "description": "Taxus baccata は遅く成長する常緑樹です。摂取すると有毒で、中程度の光と良好な排水性土壌を好みます。"
     },
     "ko": {
-      "common_name": "유럽주목",
-      "description": "유럽주목은 유럽 원산지의 침엽수로, 항상 푸른 잎과 붉은 열매로 유명합니다. 서서히 자라며 그늘이 많은 환경을 선호합니다."
+      "common_name": "영국주목",
+      "description": "Taxus baccata는 느리게 자라는 상록수입니다. 섭취하면 독성이 있으며, 중간 정도의 빛과 잘 배수되는 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=113",
-      "https://www.bhg.com/gardening/pests-diseases-conditions/yew-tree-care/"
+      "https://www.rhs.org.uk/plants/10030/taxus-baccata/details",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/taxus-plant-care/"
     ]
   }
 }

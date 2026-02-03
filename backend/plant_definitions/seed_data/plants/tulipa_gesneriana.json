@@ -1,0 +1,275 @@
+{
+  "external_id": "tulipa_gesneriana",
+  "name": "Tulip",
+  "latin": "Tulipa gesneriana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "acid-loving"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tulipa_gesneriana.jpg",
+  "image_thumb": "tulipa_gesneriana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie światło",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "よく排水される土壌",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-15°C",
+          "pl": "10-15°C",
+          "de": "10-15°C",
+          "fr": "10-15°C",
+          "it": "10-15°C",
+          "es": "10-15°C",
+          "pt": "10-15°C",
+          "ar": "10-15°C",
+          "hi": "10-15°C",
+          "zh": "10-15°C",
+          "ja": "10-15°C",
+          "ko": "10-15°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성이 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Up to 30 cm",
+          "pl": "Do 30 cm",
+          "de": "Bis zu 30 cm",
+          "fr": "Jusqu'à 30 cm",
+          "it": "Fino a 30 cm",
+          "es": "Hasta 30 cm",
+          "pt": "Até 30 cm",
+          "ar": "حتى 30 سم",
+          "hi": "30 सेंटीमीटर तक",
+          "zh": "最高30厘米",
+          "ja": "最大30cm",
+          "ko": "최대 30cm"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evitare il troppo irrigazione",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير متكررة",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tulip",
+      "description": "Tulips are spring-flowering plants, known for their colorful blooms. They are often grown outdoors, but can thrive indoors with proper care."
+    },
+    "pl": {
+      "common_name": "Tulipan",
+      "description": "Tulipany to rośliny kwitnące wiosną, znane z kolorowych kwiatów. Często uprawiane na zewnątrz, ale mogą rosnąć w pomieszczeniach przy odpowiedniej opiece."
+    },
+    "de": {
+      "common_name": "Tulpe",
+      "description": "Tulpen sind frühjahrsblühende Pflanzen, bekannt für ihre bunten Blumen. Sie werden oft im Freien angebaut, können aber auch drinnen gedeihen, wenn sie richtig gepflegt werden."
+    },
+    "fr": {
+      "common_name": "Tulipe",
+      "description": "Les tulipes sont des plantes à fleurs printanières, connues pour leurs fleurs colorées. Elles sont souvent cultivées à l'extérieur, mais peuvent prospérer à l'intérieur avec des soins appropriés."
+    },
+    "it": {
+      "common_name": "Tulipano",
+      "description": "I tulipani sono piante che fioriscono in primavera, note per i loro fiori colorati. Spesso coltivati all'aperto, ma possono prosperare all'interno con una cura adeguata."
+    },
+    "es": {
+      "common_name": "Tulipán",
+      "description": "Los tulipanes son plantas que florecen en primavera, conocidas por sus flores coloridas. A menudo se cultivan al aire libre, pero pueden prosperar en el interior con el cuidado adecuado."
+    },
+    "pt": {
+      "common_name": "Tulipa",
+      "description": "As tulipas são plantas que florescem na primavera, conhecidas pelas suas flores coloridas. Muitas vezes cultivadas ao ar livre, mas podem prosperar no interior com os devidos cuidados."
+    },
+    "ar": {
+      "common_name": "توليب",
+      "description": "التوليب هو نبات يزهر في الربيع، ويعرف بأزهاره الملونة. غالباً ما يُزرع في الهواء الطلق، لكنه يمكن أن يزدهر في الداخل مع الرعاية المناسبة."
+    },
+    "hi": {
+      "common_name": "ट्यूलिप",
+      "description": "ट्यूलिप वसंत ऋतु में फूलने वाले पौधे होते हैं, जो अपने रंगीन फूलों के लिए प्रसिद्ध होते हैं। ये आमतौर पर बाहर उगाए जाते हैं, लेकिन उचित देखभाल से इनडोर में भी पनप सकते हैं।"
+    },
+    "zh": {
+      "common_name": "郁金香",
+      "description": "郁金香是春季开花的植物，因其五彩斑斓的花朵而闻名。它们通常在户外种植，但如果得到适当照料，也可以在室内繁茂生长。"
+    },
+    "ja": {
+      "common_name": "チューリップ",
+      "description": "チューリップは春に花を咲かせる植物で、色とりどりの花が特徴です。屋外で栽培されることが多いですが、適切な手入れをすれば室内でも育ちます。"
+    },
+    "ko": {
+      "common_name": "튤립",
+      "description": "튤립은 봄에 꽃이 피는 식물로 다채로운 꽃이 특징입니다. 주로 야외에서 자주 재배되지만 적절한 관리로 실내에서도 잘 자랄 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=870",
+      "https://www.gardenersworld.com/plants/tulip/"
+    ]
+  }
+}

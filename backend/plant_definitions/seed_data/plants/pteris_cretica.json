@@ -7,21 +7,21 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "pteris_cretica.jpg",
   "image_thumb": "pteris_cretica.jpg",
   "traits": [
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 조명"
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lösem Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी की मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土質土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "良好排水土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Regagem moderada",
-          "ar": "الري المعتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "중간 물주기"
+          "en": "Water regularly",
+          "pl": "Podlewać regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित रूप से पानी दें",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물 주기"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepły",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -154,7 +154,7 @@
           "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "독성 없음"
+          "ko": "무독성"
         }
       }
     },
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Moderate growth",
-          "pl": "Średni wzrost",
-          "de": "Mittlere Wachstumsrate",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
           "fr": "Croissance modérée",
           "it": "Crescita moderata",
           "es": "Crecimiento moderado",
           "pt": "Crescimento moderado",
           "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 성장"
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Pesti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-समय की कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Cretan Brake Fern",
-      "description": "Pteris cretica is a fern native to tropical regions. It thrives in moderate light and humid environments."
+      "description": "Pteris cretica, also known as the Cretan Brake Fern, is a popular fern with elegant, lacy fronds. It thrives in medium light and high humidity."
     },
     "pl": {
-      "common_name": "Paproć Kreta",
-      "description": "Pteris cretica to paproć pochodząca z tropikalnych regionów. Wymaga umiarkowanego światła i wilgotnego środowiska."
+      "common_name": "Pteris Cretica",
+      "description": "Pteris cretica, znany również jako paproć cretycka, to popularna paproć o eleganckich, koronkowych liściach. Rośnie najlepiej w średnim świetle i wysokiej wilgotności."
     },
     "de": {
       "common_name": "Kretische Schwertfarn",
-      "description": "Pteris cretica ist ein Farn, der in tropischen Regionen beheimatet ist. Er gedeiht bei mäßigem Licht und hoher Luftfeuchtigkeit."
+      "description": "Pteris cretica, auch bekannt als der kretische Schwertfarn, ist ein beliebter Farn mit eleganten, farnartigen Blättern. Er gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
       "common_name": "Fougère de Crète",
-      "description": "Pteris cretica est une fougère originaire des régions tropicales. Elle prospère dans des environnements à lumière modérée et à forte humidité."
+      "description": "Pteris cretica, également connue sous le nom de fougère de Crète, est une fougère populaire avec des frondes élégantes. Elle prospère à la lumière moyenne et avec une humidité élevée."
     },
     "it": {
       "common_name": "Felce di Creta",
-      "description": "Pteris cretica è una felce originaria delle regioni tropicali. Cresce in ambienti con luce moderata e umidità elevata."
+      "description": "Pteris cretica, conosciuta anche come felce di Creta, è una felce popolare con fronde eleganti. Cresce bene in luce media e umidità elevata."
     },
     "es": {
       "common_name": "Helecho de Creta",
-      "description": "Pteris cretica es un helecho originario de regiones tropicales. Crece en ambientes de luz moderada y alta humedad."
+      "description": "Pteris cretica, también conocido como helecho de Creta, es un helecho popular con frondas elegantes. Crece mejor con luz media y alta humedad."
     },
     "pt": {
       "common_name": "Samambaia de Creta",
-      "description": "Pteris cretica é uma samambaia originária de regiões tropicais. Ela cresce em ambientes de luz moderada e alta umidade."
+      "description": "Pteris cretica, também conhecida como samambaia de Creta, é uma samambaia popular com frondes elegantes. Ela cresce bem em luz média e alta umidade."
     },
     "ar": {
       "common_name": "سرخس كريت",
-      "description": "Pteris cretica هو سرخس موطنه المناطق الاستوائية. ينمو في بيئات ذات إضاءة معتدلة ورطوبة عالية."
+      "description": "Pteris cretica، والمعروفة أيضًا بسرخس كريت، هي سرخس شائع ذو أوراق رقيقة وأنيقة. تنمو بشكل جيد في الضوء المتوسط والرطوبة العالية."
     },
     "hi": {
       "common_name": "क्रीट ब्रेक फर्न",
-      "description": "Pteris cretica एक फर्न है जो उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह मध्यम रोशनी और उच्च आर्द्रता वाले वातावरण में उगता है।"
+      "description": "Pteris cretica, जिसे क्रीट ब्रेक फर्न भी कहा जाता है, एक लोकप्रिय फर्न है जिसकी सजावटी पत्तियाँ होती हैं। यह मध्यम रोशनी और उच्च आर्द्रता में बढ़ता है।"
     },
     "zh": {
       "common_name": "克里特岛蕨",
-      "description": "Pteris cretica 是一种原产于热带地区的蕨类植物。它在中等光照和高湿度的环境中生长。"
+      "description": "Pteris cretica，亦称为克里特岛蕨，是一种受欢迎的蕨类植物，具有优雅的羽状叶片。它适应中等光照和高湿度环境。"
     },
     "ja": {
-      "common_name": "クレタ島のブレークシダ",
-      "description": "Pteris cretica は熱帯地域に自生するシダ植物です。中程度の光と高い湿度の環境で育ちます。"
+      "common_name": "クレタ島のシダ",
+      "description": "Pteris cretica、別名クレタ島のシダは、優雅な羽状の葉を持つ人気のあるシダです。中程度の光と高湿度で育ちます。"
     },
     "ko": {
-      "common_name": "크레타 브레이크 고사리",
-      "description": "Pteris cretica는 열대 지역 원산의 고사리입니다. 중간 정도의 빛과 높은 습도의 환경에서 자랍니다."
+      "common_name": "크레타섬 고사리",
+      "description": "Pteris cretica, 크레타섬 고사리로도 알려져 있으며, 우아한 섬세한 잎을 가진 인기 있는 고사리입니다. 중간 정도의 빛과 높은 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=412",
-      "https://www.gardenia.net/plant/pteris-cretica"
+      "https://www.rhs.org.uk/plants/pteris-cretica",
+      "https://www.gardeningknowhow.com/ornamental/ferns/creta-fern.htm"
     ]
   }
 }

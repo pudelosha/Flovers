@@ -3,24 +3,23 @@
   "name": "Tarragon",
   "latin": "Artemisia dracunculus",
   "sun": "high",
-  "water": "low",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "herbs-vegetables"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 10,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 24,
   "image_hero": "artemisia_dracunculus.jpg",
   "image_thumb": "artemisia_dracunculus.jpg",
   "traits": [
@@ -30,7 +29,7 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonnig",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
@@ -38,8 +37,8 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日向",
-          "ko": "강한 햇빛"
+          "ja": "日なた",
+          "ko": "직사광"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
+          "en": "Well-drained mix",
+          "pl": "Przepuszczalne",
           "de": "Gut drainiert",
           "fr": "Sol drainant",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ給水",
-          "ko": "적은 물"
+          "en": "Dry slightly",
+          "pl": "Lekko przeschnąć",
+          "de": "Leicht antrocknen",
+          "fr": "Laisser sécher",
+          "it": "Lascia asciugare",
+          "es": "Secar un poco",
+          "pt": "Secar um pouco",
+          "ar": "اتركها تجف قليلا",
+          "hi": "थोड़ा सूखने दें",
+          "zh": "稍干再浇",
+          "ja": "やや乾かす",
+          "ko": "약간 말린 뒤"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Easy herb",
+          "pl": "Łatwe zioło",
+          "de": "Einfaches Kraut",
+          "fr": "Herbe facile",
+          "it": "Erba facile",
+          "es": "Hierba fácil",
+          "pt": "Erva fácil",
+          "ar": "عشبة سهلة",
+          "hi": "आसान जड़ी-बूटी",
+          "zh": "易养香草",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°م",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "標準の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets (mild)",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Für Haustiere giftig",
+          "fr": "Toxique animaux",
+          "it": "Tossico per animali",
+          "es": "Tóxico mascotas",
+          "pt": "Tóxico p/animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू हेतु विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
         }
       }
     },
@@ -161,18 +160,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright herb",
-          "pl": "Zioło wzn.",
-          "de": "Aufrecht",
-          "fr": "Herbe dressée",
-          "it": "Erba eretta",
-          "es": "Hierba erguida",
-          "pt": "Erva ereta",
-          "ar": "نمو قائم",
-          "hi": "सीधा बढ़त",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립 성장"
+          "en": "Upright perennial",
+          "pl": "Bylina wzniesiona",
+          "de": "Aufrechte Staude",
+          "fr": "Vivace dressée",
+          "it": "Perenne eretta",
+          "es": "Perenne erecta",
+          "pt": "Perene ereta",
+          "ar": "معمر قائم",
+          "hi": "सीधा बहुवर्षीय",
+          "zh": "直立多年生",
+          "ja": "直立の多年草",
+          "ko": "직립 다년초"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "No ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبتلة",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Generally pest-free",
+          "pl": "Zwykle bez szkodników",
+          "de": "Meist schädlingsfrei",
+          "fr": "Peu de ravageurs",
+          "it": "Di solito senza parassiti",
+          "es": "Pocas plagas",
+          "pt": "Poucas pragas",
+          "ar": "نادرا ما تُصاب",
+          "hi": "कम कीट",
+          "zh": "通常少虫害",
+          "ja": "害虫は少ない",
+          "ko": "해충 거의 없음"
         }
       }
     }
@@ -180,58 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Tarragon",
-      "description": "Artemisia dracunculus is a perennial culinary herb valued for its aromatic leaves. It prefers full sun and well-drained soil. Water sparingly, allowing soil to dry between watering."
+      "description": "Artemisia dracunculus is a perennial culinary herb grown for aromatic leaves. Provide full sun and a very well-drained mix, watering only when the potting mix has started to dry. It can cause mild gastrointestinal upset in pets if eaten in quantity."
     },
     "pl": {
       "common_name": "Estragon",
-      "description": "Artemisia dracunculus to wieloletnie zioło kulinarne o aromatycznych liściach. Wymaga pełnego słońca i przepuszczalnej gleby. Podlewaj oszczędnie po przeschnięciu podłoża."
+      "description": "Artemisia dracunculus to wieloletnie zioło uprawiane dla aromatycznych liści. Zapewnij pełne słońce i bardzo przepuszczalne podłoże, podlewając dopiero po lekkim przeschnięciu. W większej ilości może wywołać łagodne dolegliwości u zwierząt domowych."
     },
     "de": {
       "common_name": "Estragon",
-      "description": "Artemisia dracunculus ist ein mehrjähriges Küchenkraut mit aromatischen Blättern. Es wächst am besten in voller Sonne und gut durchlässigem Boden. Sparsam gießen."
+      "description": "Artemisia dracunculus ist ein mehrjähriges Küchenkraut mit aromatischen Blättern. Stelle es sonnig und in sehr durchlässiges Substrat und gieße erst, wenn die Erde etwas abgetrocknet ist. Bei Haustieren kann die Aufnahme größerer Mengen leichte Magen-Darm-Beschwerden auslösen."
     },
     "fr": {
       "common_name": "Estragon",
-      "description": "Artemisia dracunculus est une herbe vivace appréciée en cuisine. Elle aime le plein soleil et un sol bien drainé. Arroser modérément après séchage du sol."
+      "description": "Artemisia dracunculus est une herbe vivace cultivée pour ses feuilles aromatiques. Donnez-lui du plein soleil et un substrat très drainant, en arrosant seulement quand il a commencé à sécher. L’ingestion en quantité peut provoquer de légers troubles digestifs chez les animaux."
     },
     "it": {
       "common_name": "Dragoncello",
-      "description": "Artemisia dracunculus è un'erba perenne aromatica usata in cucina. Predilige pieno sole e terreno drenante. Innaffiare con moderazione."
+      "description": "Artemisia dracunculus è un’erba perenne coltivata per le foglie aromatiche. Richiede pieno sole e un substrato molto drenante, con irrigazioni solo quando il terriccio inizia ad asciugare. Se ingerita in quantità può causare lievi disturbi gastrointestinali negli animali domestici."
     },
     "es": {
       "common_name": "Estragón",
-      "description": "Artemisia dracunculus es una hierba perenne aromática. Prefiere sol pleno y suelo bien drenado. Regar de forma moderada."
+      "description": "Artemisia dracunculus es una hierba perenne cultivada por sus hojas aromáticas. Dale pleno sol y un sustrato muy drenante, regando solo cuando el sustrato empiece a secarse. En mascotas, la ingestión en cantidad puede causar malestar digestivo leve."
     },
     "pt": {
       "common_name": "Estragão",
-      "description": "Artemisia dracunculus é uma erva perene aromática. Cresce melhor em sol pleno e solo bem drenado. Regar com moderação."
+      "description": "Artemisia dracunculus é uma erva perene cultivada pelas folhas aromáticas. Precisa de sol pleno e substrato bem drenado, regando apenas quando começar a secar. Em pets, a ingestão em quantidade pode causar sinais gastrointestinais leves."
     },
     "ar": {
-      "common_name": "طرخون",
-      "description": "Artemisia dracunculus نبات عشبي معمر يستخدم في الطهي. يفضل الشمس الكاملة والتربة جيدة التصريف. يُروى باعتدال."
+      "common_name": "الطرخون",
+      "description": "Artemisia dracunculus عشبة معمرة تُزرع لأوراقها العطرية. تحتاج إلى شمس كاملة وتربة جيدة الصرف مع ري عند بدء جفاف السطح. قد تسبب تناولها بكميات كبيرة اضطراباً هضمياً خفيفاً للحيوانات الأليفة."
     },
     "hi": {
-      "common_name": "टैरागोन",
-      "description": "Artemisia dracunculus एक बहुवर्षीय सुगंधित जड़ी बूटी है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। कम पानी दें।"
+      "common_name": "तारगोन",
+      "description": "Artemisia dracunculus एक बहुवर्षीय पाक जड़ी-बूटी है जिसकी पत्तियाँ सुगंधित होती हैं। इसे तेज धूप और अच्छी जल-निकासी वाला माध्यम दें, और तभी पानी दें जब मिट्टी कुछ सूख जाए। पालतू जानवरों द्वारा अधिक मात्रा में खाने पर हल्की पेट की परेशानी हो सकती है।"
     },
     "zh": {
       "common_name": "龙蒿",
-      "description": "Artemisia dracunculus 是一种多年生香草植物。喜欢充足阳光和排水良好的土壤。浇水要适量。"
+      "description": "Artemisia dracunculus 是多年生香草，以芳香叶片供食用。需全日照与排水良好的基质，盆土开始变干再浇水。宠物若大量误食，可能出现轻微肠胃不适。"
     },
     "ja": {
       "common_name": "タラゴン",
-      "description": "Artemisia dracunculus は料理に使われる多年草のハーブです。日当たりと水はけの良い土を好みます。水やりは控えめにします。"
+      "description": "Artemisia dracunculus は香りのある葉を利用する多年生ハーブです。日当たりと水はけの良い用土を好み、用土がやや乾いてからたっぷり与えます。ペットが大量に食べると軽い消化器症状が出ることがあります。"
     },
     "ko": {
       "common_name": "타라곤",
-      "description": "Artemisia dracunculus는 향기로운 다년생 허브입니다. 햇빛과 배수가 좋은 토양을 선호합니다. 물은 적게 줍니다."
+      "description": "Artemisia dracunculus는 향이 있는 잎을 사용하는 다년생 허브입니다. 강한 햇빛과 배수가 좋은 흙을 주고, 흙이 약간 마른 뒤에 물을 줍니다. 반려동물이 많은 양을 먹으면 가벼운 위장 증상이 나타날 수 있습니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.rhs.org.uk/herbs/tarragon/grow-your-own",
-      "https://extension.umn.edu/vegetables/growing-herbs-home-garden",
-      "https://www.britannica.com/plant/tarragon"
+      "https://www.rhs.org.uk/plants/1632/artemisia-dracunculus/details",
+      "https://plants.ces.ncsu.edu/plants/artemisia-dracunculus/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/tarragon"
     ]
   }
 }

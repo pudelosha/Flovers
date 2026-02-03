@@ -1,18 +1,18 @@
 {
   "external_id": "streptocarpus_saxorum",
-  "name": "Cape Primrose",
+  "name": "Streptocarpus saxorum",
   "latin": "Streptocarpus saxorum",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -40,7 +40,7 @@
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lehmboden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "التربة الطينية",
-          "hi": "मिट्टी की मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土質土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -74,11 +74,11 @@
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "الري المعتدل",
+          "ar": "سقاية معتدلة",
           "hi": "मध्यम पानी देना",
           "zh": "适量浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中級",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittelschwere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium",
+          "en": "Moderate humidity",
           "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
           "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -145,7 +145,7 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Ungiftig",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
@@ -153,7 +153,7 @@
           "ar": "غير سام",
           "hi": "गैर विषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "비독성"
         }
       }
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact",
-          "pl": "Kompaktowy",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatto",
-          "es": "Compacto",
-          "pt": "Compacto",
-          "ar": "مضغوط",
-          "hi": "कॉम्पैक्ट",
-          "zh": "紧凑型",
-          "ja": "コンパクト",
-          "ko": "콤팩트"
+          "en": "Slow to medium growth",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à moyenne",
+          "it": "Crescita lenta a media",
+          "es": "Crecimiento lento a medio",
+          "pt": "Crescimento lento a médio",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "缓慢到中等生长",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewaj za dużo",
+          "de": "Kein Überwässern",
+          "fr": "Pas de trop d'arrosage",
+          "it": "Non innaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regue demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "水やり過多に注意",
+          "ko": "과도한 물주기 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरवादी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Cape Primrose",
-      "description": "Streptocarpus saxorum is a compact perennial native to southern Africa. Known for its delicate, lavender-colored flowers, it thrives in moderate light and well-drained loamy soil."
+      "common_name": "Saxorum Cape Primrose",
+      "description": "A species of flowering plant native to southern Africa, known for its attractive, tubular flowers. Grows best with moderate light and humidity."
     },
     "pl": {
-      "common_name": "Streptocarpus",
-      "description": "Streptocarpus saxorum to kompaktowa roślina wieloletnia pochodząca z południowej Afryki. Znana z delikatnych, lawendowych kwiatów, rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie próchnicznej."
+      "common_name": "Streptocarpus saxorum",
+      "description": "Roślina kwitnąca pochodząca z południowej Afryki, znana ze swoich atrakcyjnych, rurkowatych kwiatów. Najlepiej rośnie w średnim świetle i wilgotności."
     },
     "de": {
-      "common_name": "Kap-Primel",
-      "description": "Streptocarpus saxorum ist eine kompakte mehrjährige Pflanze aus Südafrika. Bekannt für ihre zarten, lavendelfarbenen Blüten gedeiht sie bei mäßigem Licht und gut durchlässigem, lehmigem Boden."
+      "common_name": "Saxorum-Kap-Primel",
+      "description": "Eine blühende Pflanzenart aus Südafrika, bekannt für ihre attraktiven röhrenförmigen Blüten. Wächst am besten bei mittlerem Licht und Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Primevère du Cap",
-      "description": "Streptocarpus saxorum est une plante vivace compacte originaire d'Afrique du Sud. Connue pour ses fleurs délicates de couleur lavande, elle prospère dans une lumière modérée et un sol bien drainé."
+      "common_name": "Primule du Cap saxorum",
+      "description": "Une plante à fleurs originaire d'Afrique du Sud, connue pour ses fleurs tubulaires attrayantes. Pousse mieux avec une lumière et une humidité modérées."
     },
     "it": {
-      "common_name": "Primula del Capo",
-      "description": "Streptocarpus saxorum è una pianta perenne compatta originaria del Sud Africa. Conosciuta per i suoi fiori delicati di colore lavanda, cresce in luce moderata e in terreni ben drenati."
+      "common_name": "Primula del Capo saxorum",
+      "description": "Una pianta da fiore originaria del Sud Africa, conosciuta per i suoi fiori tubolari attraenti. Cresce meglio con luce e umidità moderate."
     },
     "es": {
-      "common_name": "Primula del Cabo",
-      "description": "Streptocarpus saxorum es una planta perenne compacta originaria de Sudáfrica. Conocida por sus delicadas flores de color lavanda, prospera en luz moderada y suelo bien drenado."
+      "common_name": "Primula del Cabo saxorum",
+      "description": "Planta con flores originaria del sur de África, conocida por sus atractivas flores tubulares. Crece mejor con luz y humedad moderadas."
     },
     "pt": {
-      "common_name": "Primula do Cabo",
-      "description": "Streptocarpus saxorum é uma planta perene compacta originária da África do Sul. Conhecida por suas flores delicadas de cor lavanda, cresce em luz moderada e solo bem drenado."
+      "common_name": "Primula do Cabo saxorum",
+      "description": "Uma planta com flores nativa do sul da África, conhecida pelas suas flores tubulares atraentes. Cresce melhor com luz e umidade moderadas."
     },
     "ar": {
-      "common_name": "زهرة الكيب",
-      "description": "Streptocarpus saxorum هو نبات معمر مضغوط أصلي من جنوب أفريقيا. معروف بزهوره الرقيقة ذات اللون اللافندر، ينمو في الضوء المعتدل والتربة جيدة التصريف."
+      "common_name": "زهرة الكاب الساكسورية",
+      "description": "نبات مزهر موطنه جنوب إفريقيا، معروف بزهوره الأنبوبية الجذابة. ينمو بشكل أفضل مع الضوء المعتدل والرطوبة."
     },
     "hi": {
-      "common_name": "केप प्रिमरोज़",
-      "description": "Streptocarpus saxorum एक संकुचित बारहमासी पौधा है जो दक्षिणी अफ्रीका का मूल निवासी है। इसके नाजुक लैवेंडर रंग के फूलों के लिए जाना जाता है, यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में बढ़ता है।"
+      "common_name": "सैक्सोरम केप प्राइमरोस",
+      "description": "दक्षिण अफ्रीका का एक फूलने वाला पौधा, जिसे आकर्षक, नलिका जैसे फूलों के लिए जाना जाता है। यह मध्यम रोशनी और आर्द्रता में सबसे अच्छा बढ़ता है।"
     },
     "zh": {
-      "common_name": "开普紫罗兰",
-      "description": "Streptocarpus saxorum 是一种紧凑型多年生植物，原产于南非。以其精致的薰衣草色花朵而闻名，适合在适度光照和排水良好的土壤中生长。"
+      "common_name": "萨克索鲁姆开普紫罗兰",
+      "description": "一种原产于南非的开花植物，以其具有吸引力的管状花朵而闻名。在中等光照和湿度下生长最好。"
     },
     "ja": {
-      "common_name": "ケーププリムローズ",
-      "description": "Streptocarpus saxorum は南アフリカ原産のコンパクトな多年草です。繊細なラベンダー色の花で知られ、適度な光と排水性の良い土壌で育ちます。"
+      "common_name": "サクソルム・ケーププリムローズ",
+      "description": "南アフリカ原産の花をつける植物で、魅力的な管状の花が特徴です。中程度の光と湿度で最適に成長します。"
     },
     "ko": {
-      "common_name": "케이프 프림로즈",
-      "description": "Streptocarpus saxorum은 남아프리카 원산지의 콤팩트한 다년생 식물입니다. 섬세한 라벤더색 꽃으로 알려져 있으며, 중간 정도의 빛과 배수가 좋은 토양에서 자랍니다."
+      "common_name": "사크소룸 케이프 프림로즈",
+      "description": "남아프리카 원산의 꽃 식물로, 매력적인 관 형태의 꽃으로 유명합니다. 중간 정도의 빛과 습도에서 가장 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/ornamental/flowers/streptocarpus/streptocarpus-plant-care.htm",
-      "https://www.rhs.org.uk/advice/profile?pid=376"
+      "https://www.rhs.org.uk/Plants/11063/Streptocarpus-saxorum/Details",
+      "https://www.gardenia.net/plant/Streptocarpus-saxorum"
     ]
   }
 }

@@ -4,14 +4,13 @@
   "latin": "Calycanthus floridus",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Part sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Part shade/sun",
+          "pl": "Półcień/słońce",
+          "de": "Halbschatten/Sonne",
+          "fr": "Mi-ombre/soleil",
+          "it": "Mezz'ombra/sole",
+          "es": "Semisombra/sol",
+          "pt": "Meia-sombra/sol",
+          "ar": "ظل جزئي/شمس",
+          "hi": "आंशिक छाया/धूप",
+          "zh": "半阴到全日照",
+          "ja": "半日陰〜日向",
+          "ko": "반그늘~양지"
         }
       }
     },
@@ -48,17 +47,17 @@
       "value": {
         "text": {
           "en": "Moist, well-drained",
-          "pl": "Wilg., przepuszcz.",
-          "de": "Feucht, durchläss.",
+          "pl": "Wilg., przepuszczalna",
+          "de": "Feucht, durchlässig",
           "fr": "Frais, drainé",
-          "it": "Umido, drenante",
-          "es": "Húmedo, drenante",
-          "pt": "Úmido, drenado",
+          "it": "Umido e drenante",
+          "es": "Húmedo y drenante",
+          "pt": "Úmido e drenado",
           "ar": "رطب وجيد الصرف",
           "hi": "नम, जल-निकासी",
-          "zh": "湿润排水好",
-          "ja": "湿り・水はけ良",
-          "ko": "촉촉·배수 양호"
+          "zh": "湿润且排水好",
+          "ja": "適湿・水はけ良",
+          "ko": "촉촉, 배수 좋게"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Water when top dries",
-          "pl": "Gdy wierzch przeschnie",
-          "de": "Gießen bei Trockenheit",
-          "fr": "Arroser si sec dessus",
-          "it": "Annaffia se sopra secco",
-          "es": "Riega si se seca arriba",
-          "pt": "Regue se o topo secar",
-          "ar": "اسقِ عند جفاف السطح",
-          "hi": "ऊपर सूखे तो पानी",
-          "zh": "表土干再浇",
-          "ja": "表土乾いたら水",
-          "ko": "겉흙 마르면 물"
+          "en": "Keep evenly moist",
+          "pl": "Umiark. wilgotno",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder frais",
+          "it": "Terreno sempre umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "حافظ على رطوبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 촉촉하게"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "5–25°C",
-          "pl": "5–25°C",
-          "de": "5–25°C",
-          "fr": "5–25°C",
-          "it": "5–25°C",
-          "es": "5–25°C",
-          "pt": "5–25°C",
-          "ar": "5–25°م",
-          "hi": "5–25°C",
-          "zh": "5–25°C",
-          "ja": "5–25°C",
-          "ko": "5–25°C"
+          "en": "Cold hardy",
+          "pl": "Mrozoodporna",
+          "de": "Winterhart",
+          "fr": "Rustique",
+          "it": "Rustica",
+          "es": "Resistente al frío",
+          "pt": "Resiste ao frio",
+          "ar": "يتحمل البرد",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性あり",
+          "ko": "추위에 강함"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Umiarkowana",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -143,16 +142,16 @@
       "value": {
         "text": {
           "en": "Toxic if eaten",
-          "pl": "Trująca po zjedzeniu",
+          "pl": "Toksyczna po zjedz.",
           "de": "Giftig bei Verzehr",
           "fr": "Toxique si ingéré",
           "it": "Tossica se ingerita",
           "es": "Tóxica si se ingiere",
           "pt": "Tóxica se ingerida",
-          "ar": "سامة عند الأكل",
+          "ar": "سام إذا أُكل",
           "hi": "खाने पर विषाक्त",
           "zh": "误食有毒",
-          "ja": "誤食有毒",
+          "ja": "誤食で有毒",
           "ko": "섭취 시 유독"
         }
       }
@@ -165,9 +164,9 @@
           "pl": "Krzew liściasty",
           "de": "Laubstrauch",
           "fr": "Arbuste caduc",
-          "it": "Arbusto caducifoglio",
+          "it": "Arbusto caducif.",
           "es": "Arbusto caduco",
-          "pt": "Arbusto caducifólio",
+          "pt": "Arbusto caducif.",
           "ar": "شجيرة متساقطة",
           "hi": "पर्णपाती झाड़ी",
           "zh": "落叶灌木",
@@ -175,65 +174,103 @@
           "ko": "낙엽 관목"
         }
       }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj zalewania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evitar encharcar",
+          "pt": "Evitar encharcar",
+          "ar": "تجنب التربة المشبعة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Few pest issues",
+          "pl": "Mało szkodników",
+          "de": "Wenig Schädlingsdruck",
+          "fr": "Peu de ravageurs",
+          "it": "Pochi parassiti",
+          "es": "Pocas plagas",
+          "pt": "Poucas pragas",
+          "ar": "قليل من الآفات",
+          "hi": "कम कीट समस्या",
+          "zh": "病虫害少",
+          "ja": "病害虫は少なめ",
+          "ko": "해충 문제 적음"
+        }
+      }
     }
   ],
   "translations": {
     "en": {
       "common_name": "Carolina allspice",
-      "description": "Calycanthus floridus is a deciduous shrub native to the eastern United States, grown for its fragrant, dark red to brownish flowers. It prefers part sun to full sun and consistently moist, well-drained soil, especially in containers. Plant parts are considered harmful if eaten."
+      "description": "A deciduous shrub grown for its fragrant, unusual flowers and aromatic leaves. It tolerates sun to shade but flowers best with some sun and consistently moist, well-drained soil. Parts of the plant can be harmful if eaten."
     },
     "pl": {
-      "common_name": "Kielichowiec wonny",
-      "description": "Calycanthus floridus to liściasty krzew z wschodnich rejonów USA, ceniony za pachnące, ciemnoczerwone kwiaty. Najlepiej rośnie w półcieniu lub słońcu oraz w wilgotnym, przepuszczalnym podłożu, szczególnie w donicy. Roślina jest uznawana za szkodliwą po spożyciu."
+      "common_name": "Kalykant wonny",
+      "description": "Liściasty krzew ceniony za pachnące kwiaty i aromatyczne liście. Rośnie w słońcu lub półcieniu, ale najlepiej kwitnie przy dostępie do słońca i w stale lekko wilgotnej, przepuszczalnej glebie. Spożycie części rośliny może być szkodliwe."
     },
     "de": {
-      "common_name": "Karolina-Gewürzstrauch",
-      "description": "Calycanthus floridus ist ein laubabwerfender Strauch aus dem Osten der USA mit duftenden, dunkelroten bis bräunlichen Blüten. Er wächst in Halbsonne bis Sonne und in gleichmäßig feuchter, gut drainierter Erde, besonders im Topf. Bei Verzehr gilt die Pflanze als gesundheitsschädlich."
+      "common_name": "Echter Gewürzstrauch",
+      "description": "Ein laubabwerfender Strauch mit duftenden, ungewöhnlichen Blüten und aromatischen Blättern. Er wächst in Sonne bis Schatten, blüht aber am besten mit etwas Sonne und gleichmäßig feuchtem, gut drainiertem Substrat. Pflanzenteile können beim Verzehr schädlich sein."
     },
     "fr": {
-      "common_name": "Calycanthe de Floride",
-      "description": "Calycanthus floridus est un arbuste caduc originaire de l’est des États-Unis, apprécié pour ses fleurs parfumées rouge sombre à brunâtres. Il préfère la mi-ombre à une exposition ensoleillée et un sol frais, bien drainé, surtout en pot. La plante est considérée comme nocive en cas d’ingestion."
+      "common_name": "Calycanthus de Floride",
+      "description": "Arbuste caduc apprécié pour ses fleurs parfumées et son feuillage aromatique. Il supporte du soleil à l’ombre, mais fleurit mieux avec un peu de soleil et un sol frais, bien drainé. L’ingestion de parties de la plante peut être nocive."
     },
     "it": {
       "common_name": "Calicanto della Carolina",
-      "description": "Calycanthus floridus è un arbusto caducifoglio originario degli Stati Uniti orientali, noto per i fiori profumati rosso scuro-brunastri. Preferisce mezz’ombra o sole e un terreno costantemente umido ma drenante, soprattutto in vaso. La pianta è considerata dannosa se ingerita."
+      "description": "Arbusto deciduo coltivato per i fiori profumati e le foglie aromatiche. Tollera sole o mezz’ombra, ma fiorisce meglio con un po’ di sole e terreno uniformemente umido e ben drenato. L’ingestione di parti della pianta può essere dannosa."
     },
     "es": {
-      "common_name": "Cálícanthus de Carolina",
-      "description": "Calycanthus floridus es un arbusto caduco nativo del este de Estados Unidos, cultivado por sus flores fragantes de color rojo oscuro a pardo. Prefiere semisombra a sol y un sustrato húmedo y bien drenado, especialmente en maceta. Se considera perjudicial si se ingiere."
+      "common_name": "Calycanthus de Carolina",
+      "description": "Arbusto caducifolio apreciado por sus flores fragantes y hojas aromáticas. Tolera sol o sombra, pero florece mejor con algo de sol y un sustrato húmedo y bien drenado. La ingestión de partes de la planta puede ser perjudicial."
     },
     "pt": {
-      "common_name": "Calycanthus-da-Carolina",
-      "description": "Calycanthus floridus é um arbusto caducifólio nativo do leste dos EUA, valorizado por flores perfumadas de vermelho escuro a acastanhado. Prefere meia-sombra a sol e substrato consistentemente úmido e bem drenado, especialmente em vaso. É considerado nocivo se ingerido."
+      "common_name": "Calycanthus da Carolina",
+      "description": "Arbusto caducifólio cultivado pelas flores perfumadas e folhas aromáticas. Tolera sol a sombra, mas floresce melhor com alguma luz solar e substrato uniformemente úmido e bem drenado. A ingestão de partes da planta pode ser prejudicial."
     },
     "ar": {
-      "common_name": "كاليكانثوس فلوريدوس",
-      "description": "Calycanthus floridus شجيرة متساقطة الأوراق موطنها شرق الولايات المتحدة وتشتهر بأزهارها العطرية الداكنة. تفضّل شمسًا جزئية إلى شمسًا كاملة وتربة رطبة جيدة الصرف خصوصًا عند زراعتها في أصيص. تُعد أجزاء النبات ضارة إذا تم تناولها."
+      "common_name": "كاليكانثس كارولاينا",
+      "description": "شجيرة متساقطة الأوراق تُزرع لأزهارها العطرة وأوراقها ذات الرائحة. تتحمل الشمس أو الظل لكنها تزهر أفضل مع بعض الشمس وتربة رطبة جيدة الصرف. قد تكون أجزاء من النبات ضارة إذا تم تناولها."
     },
     "hi": {
       "common_name": "कैरोलाइना ऑलस्पाइस",
-      "description": "Calycanthus floridus पूर्वी संयुक्त राज्य अमेरिका का पर्णपाती झाड़ीदार पौधा है, जिसकी सुगंधित गहरे लाल-भूरे फूलों के लिए खेती की जाती है। इसे आंशिक धूप से धूप और लगातार नम, अच्छी जल-निकासी वाली मिट्टी पसंद है, खासकर गमले में। खाने पर इसे हानिकारक माना जाता है।"
+      "description": "यह एक पर्णपाती झाड़ी है जिसे सुगंधित, अनोखे फूलों और खुशबूदार पत्तियों के लिए उगाया जाता है। यह धूप से छाया तक सहन करती है, लेकिन कुछ धूप और नम, अच्छी जल-निकासी वाली मिट्टी में बेहतर बढ़ती है। पौधे के हिस्से खाने पर हानिकारक हो सकते हैं।"
     },
     "zh": {
       "common_name": "卡利坎灌木",
-      "description": "Calycanthus floridus 为原产美国东部的落叶灌木，以芳香的深红至褐色花朵著称。适合半日照到充足光照，并需保持基质湿润且排水良好，盆栽更应注意。误食被认为有害。"
+      "description": "落叶灌木，以芳香而独特的花和带香气的叶片著称。可耐全日照到阴处，但有一定日照并保持土壤湿润且排水良好时开花更好。误食植株部分可能有害。"
     },
     "ja": {
       "common_name": "カリカンサス",
-      "description": "Calycanthus floridus は米国東部原産の落葉低木で、香りのある暗赤色〜褐色の花が特徴です。半日陰〜日向で、特に鉢植えでは湿り気があり水はけの良い用土を好みます。誤食すると有害とされています。"
+      "description": "香りのある独特な花と芳香の葉を楽しむ落葉低木。日向から半日陰まで耐えるが、日照があり土が適度に湿って水はけが良いとよく育つ。誤食すると有害な場合がある。"
     },
     "ko": {
       "common_name": "캐롤라이나 올스파이스",
-      "description": "Calycanthus floridus 는 미국 동부 원산의 낙엽 관목으로, 향기로운 짙은 붉은색~갈색 꽃이 특징입니다. 반그늘부터 양지까지에서 잘 자라며, 특히 화분에서는 촉촉하지만 배수가 좋은 흙을 유지하는 것이 좋습니다. 섭취 시 유해한 식물로 알려져 있습니다."
+      "description": "향기로운 독특한 꽃과 향이 나는 잎이 특징인 낙엽 관목입니다. 양지부터 그늘까지 견디지만, 어느 정도 햇빛과 촉촉하면서 배수 좋은 토양에서 꽃이 더 잘 핍니다. 섭취 시 일부 부위는 유해할 수 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://hgic.clemson.edu/factsheet/sweetshrub/",
+      "https://plants.ces.ncsu.edu/plants/calycanthus-floridus/",
+      "https://www.clemson.edu/cafls/demo/plant_profiles/calycanthus-floridus-carolina-allspice.html",
+      "https://www.chicagobotanic.org/plantevaluation/comparative-evaluation-sweetshrubs",
       "https://www.rhs.org.uk/plants/2817/calycanthus-floridus/details",
-      "https://landscapeplants.oregonstate.edu/plants/calycanthus-floridus",
-      "https://hayloft.co.uk/how-to-grow-calycanthus",
-      "https://plantaddicts.com/carolina-allspice"
+      "https://www.gardendesign.com/shrubs/sweetshrub.html"
     ]
   }
 }

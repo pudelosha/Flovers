@@ -1,8 +1,8 @@
 {
   "external_id": "zelkova_serrata",
-  "name": "Japanese Zelkova",
+  "name": "Zelkova serrata",
   "latin": "Zelkova serrata",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
@@ -11,10 +11,11 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "bonsai"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "강한 햇빛"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Lehm",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
         }
       }
     },
@@ -66,15 +67,15 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlew.",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
           "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium care",
-          "pl": "Średnia pielęgn.",
-          "de": "Mittlerer Bedarf",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to temperate",
-          "pl": "Chłodny umiark.",
-          "de": "Kühl bis mild",
-          "fr": "Frais tempéré",
-          "it": "Fresco temperato",
-          "es": "Fresco templado",
-          "pt": "Fresco temperado",
-          "ar": "معتدل بارد",
-          "hi": "ठंडा समशीतोष्ण",
-          "zh": "凉爽温带",
-          "ja": "冷涼〜温帯",
-          "ko": "서늘한 온대"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilg.",
-          "de": "Normale Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषाक्त नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing tree",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ वृद्धि",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير منتظمة",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Japanese Zelkova",
-      "description": "Zelkova serrata is a deciduous tree native to East Asia. It is valued for its vase-shaped form and resistance to urban conditions. The species prefers full sun and well-drained soil."
+      "description": "Zelkova serrata is a deciduous tree native to Japan. It is known for its elegant shape and resilience in urban environments."
     },
     "pl": {
-      "common_name": "Zelkowa japońska",
-      "description": "Zelkova serrata to drzewo liściaste pochodzące z Azji Wschodniej. Cenione jest za regularny pokrój i odporność na warunki miejskie. Najlepiej rośnie w słońcu i przepuszczalnej glebie."
+      "common_name": "Zelkowa serrata",
+      "description": "Zelkova serrata to drzewo liściaste pochodzące z Japonii. Jest znane ze swojej eleganckiej formy i odporności na środowiska miejskie."
     },
     "de": {
       "common_name": "Japanische Zelkove",
-      "description": "Zelkova serrata ist ein laubabwerfender Baum aus Ostasien. Er wird wegen seiner Form und Stadtverträglichkeit geschätzt. Bevorzugt sonnige Standorte und gut durchlässigen Boden."
+      "description": "Zelkova serrata ist ein Laubbaum, der in Japan beheimatet ist. Er ist bekannt für seine elegante Form und Widerstandsfähigkeit in städtischen Umgebungen."
     },
     "fr": {
       "common_name": "Zelkova du Japon",
-      "description": "Zelkova serrata est un arbre caduc originaire d’Asie de l’Est. Il est apprécié pour sa forme élégante et sa tolérance urbaine. Il préfère le plein soleil et un sol drainé."
+      "description": "Zelkova serrata est un arbre à feuilles caduques originaire du Japon. Il est connu pour sa forme élégante et sa résistance dans les environnements urbains."
     },
     "it": {
       "common_name": "Zelkova giapponese",
-      "description": "Zelkova serrata è un albero deciduo originario dell’Asia orientale. È apprezzato per la forma e la resistenza in ambiente urbano. Predilige pieno sole e terreno ben drenato."
+      "description": "Zelkova serrata è un albero deciduo originario del Giappone. È noto per la sua forma elegante e la sua resistenza negli ambienti urbani."
     },
     "es": {
       "common_name": "Zelkova japonesa",
-      "description": "Zelkova serrata es un árbol caducifolio de Asia oriental. Destaca por su forma y tolerancia a la ciudad. Requiere sol pleno y suelo bien drenado."
+      "description": "Zelkova serrata es un árbol caducifolio originario de Japón. Es conocido por su forma elegante y resistencia en entornos urbanos."
     },
     "pt": {
-      "common_name": "Zelkova-japonesa",
-      "description": "Zelkova serrata é uma árvore caducifólia da Ásia Oriental. É valorizada pela forma e resistência urbana. Prefere sol pleno e solo bem drenado."
+      "common_name": "Zelkova do Japão",
+      "description": "Zelkova serrata é uma árvore caducifólia originária do Japão. É conhecida por sua forma elegante e resistência em ambientes urbanos."
     },
     "ar": {
       "common_name": "زيلكوفا يابانية",
-      "description": "Zelkova serrata شجرة متساقطة الأوراق موطنها شرق آسيا. تتميز بشكلها ومقاومتها للبيئة الحضرية. تفضل الشمس الكاملة وتربة جيدة التصريف."
+      "description": "زيلكوفا سيراتا هي شجرة نفضية موطنها اليابان. تشتهر بشكلها الأنيق ومرونتها في البيئات الحضرية."
     },
     "hi": {
-      "common_name": "जापानी ज़ेल्कोवा",
-      "description": "Zelkova serrata पूर्वी एशिया का पर्णपाती वृक्ष है। यह अपने आकार और शहरी सहनशीलता के लिए जाना जाता है। इसे पूरी धूप और अच्छी जल निकास वाली मिट्टी चाहिए।"
+      "common_name": "जापानी ज़ेलकोवा",
+      "description": "ज़ेलकोवा सेराटा एक पत्तियाँ गिराने वाली पेड़ है जो जापान का मूल निवासी है। यह अपनी सुंदर आकृति और शहरी वातावरण में लचीलापन के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "日本榉树",
-      "description": "Zelkova serrata 原产于东亚，是一种落叶乔木。因其树形优美且耐城市环境而常被种植。喜全日照和排水良好的土壤。"
+      "common_name": "日本榉",
+      "description": "Zelkova serrata 是一种原产于日本的落叶树。它以优雅的形状和在城市环境中的韧性而闻名。"
     },
     "ja": {
-      "common_name": "ケヤキ",
-      "description": "Zelkova serrata は東アジア原産の落葉高木です。樹形の美しさと都市環境への強さで知られています。日当たりと水はけの良い土を好みます。"
+      "common_name": "日本ゼルコバ",
+      "description": "Zelkova serrata は日本原産の落葉樹です。その優雅な形状と都市環境での耐久性で知られています。"
     },
     "ko": {
-      "common_name": "느티나무",
-      "description": "Zelkova serrata는 동아시아 원산의 낙엽수입니다. 수형이 아름답고 도시 환경에 강합니다. 햇빛이 풍부하고 배수가 좋은 토양을 선호합니다."
+      "common_name": "일본 제르코바",
+      "description": "Zelkova serrata는 일본 원산의 낙엽수입니다. 그 우아한 형태와 도시 환경에서의 내구성으로 잘 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a410",
-      "https://plants.ces.ncsu.edu/plants/zelkova-serrata/",
-      "https://www.rhs.org.uk/plants/18441/zelkova-serrata/details"
+      "https://www.rhs.org.uk/advice/profile?pid=523",
+      "https://www.bhg.com/gardening/pests/insects-diseases-pests/zelkova-tree-care/"
     ]
   }
 }

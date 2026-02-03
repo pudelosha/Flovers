@@ -1,6 +1,6 @@
 {
   "external_id": "delosperma_cooperi",
-  "name": "Delosperma cooperi",
+  "name": "Cooper's ice plant",
   "latin": "Delosperma cooperi",
   "sun": "high",
   "water": "low",
@@ -10,15 +10,14 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "delosperma_cooperi.jpg",
@@ -30,16 +29,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonnig",
           "fr": "Plein soleil",
           "it": "Pieno sole",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "ja": "日向",
+          "ko": "직사광"
         }
       }
     },
@@ -47,17 +46,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
+          "en": "Gritty, fast-draining",
           "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainé",
-          "it": "Drenante",
-          "es": "Drenante",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
           "pt": "Bem drenado",
-          "ar": "جيدة التصريف",
-          "hi": "अच्छी जल निकास",
+          "ar": "تربة جيدة التصريف",
+          "hi": "तेजी से निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
+          "ja": "水はけ良い",
           "ko": "배수 잘됨"
         }
       }
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse",
-          "pl": "Oszczędne",
-          "de": "Gering",
-          "fr": "Faible",
-          "it": "Scarso",
-          "es": "Escaso",
-          "pt": "Pouca",
-          "ar": "قليل",
-          "hi": "कम",
-          "zh": "少量",
-          "ja": "控えめ",
-          "ko": "적음"
+          "en": "Soak, then dry out",
+          "pl": "Podlej i przesusz",
+          "de": "Gießen, dann trocknen",
+          "fr": "Arroser puis sécher",
+          "it": "Bagna poi asciuga",
+          "es": "Riega y deja secar",
+          "pt": "Regue e deixe secar",
+          "ar": "اسقِ ثم اتركها تجف",
+          "hi": "भिगोएँ, फिर सुखाएँ",
+          "zh": "浇透后干透",
+          "ja": "乾いてから水やり",
+          "ko": "흠뻑 후 건조"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गरम",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "Cool to warm",
+          "pl": "Chłodno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco a caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽到温暖",
+          "ja": "涼しい〜暖かい",
+          "ko": "서늘~따뜻"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity OK",
+          "pl": "Niska wilgotność OK",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité OK",
+          "it": "Bassa umidità OK",
+          "es": "Baja humedad OK",
+          "pt": "Baixa umidade OK",
+          "ar": "رطوبة منخفضة مناسبة",
+          "hi": "कम नमी ठीक",
+          "zh": "低湿度也行",
+          "ja": "低湿度で可",
+          "ko": "낮은 습도 OK"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Not known toxic",
+          "pl": "Brak danych o toksyczn.",
+          "de": "Nicht als giftig bekannt",
+          "fr": "Non toxique (signalé)",
+          "it": "Non noto tossico",
+          "es": "No se conoce tóxica",
+          "pt": "Não é conhecida tóxica",
+          "ar": "غير معروف أنه سام",
+          "hi": "विषैला नहीं माना",
+          "zh": "未见毒性报告",
+          "ja": "毒性報告なし",
+          "ko": "독성 보고 없음"
         }
       }
     },
@@ -161,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Groundcover",
-          "pl": "Okrywowa",
-          "de": "Bodendecker",
-          "fr": "Couvre-sol",
-          "it": "Tapissante",
-          "es": "Cubresuelos",
-          "pt": "Forração",
-          "ar": "غطاء أرضي",
-          "hi": "भूमि आवरण",
-          "zh": "地被",
-          "ja": "グランドカバー",
-          "ko": "지피식물"
+          "en": "Mat-forming groundcover",
+          "pl": "Płożąca, zadarniająca",
+          "de": "Teppichbildend",
+          "fr": "Couvre-sol tapissant",
+          "it": "Tappezzante",
+          "es": "Cubre suelos",
+          "pt": "Forração rasteira",
+          "ar": "غطاء أرضي زاحف",
+          "hi": "चटाई जैसी फैलती",
+          "zh": "匍匐成毯",
+          "ja": "マット状に広がる",
+          "ko": "매트형 확산"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid wet soil",
+          "pl": "Unikaj mokrej ziemi",
+          "de": "Keine Staunässe",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "गीली मिट्टी से बचें",
+          "zh": "忌积水烂根",
+          "ja": "過湿は避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mealybugs",
+          "pl": "Mszyce, wełnowce",
+          "de": "Blattläuse, Wollläuse",
+          "fr": "Pucerons, cochenilles",
+          "it": "Afidi, cocciniglie",
+          "es": "Pulgones, cochinillas",
+          "pt": "Pulgões, cochonilhas",
+          "ar": "المنّ والبق الدقيقي",
+          "hi": "एफिड, मिलीबग",
+          "zh": "蚜虫、粉蚧",
+          "ja": "アブラムシ、カイガラムシ",
+          "ko": "진딧물, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ice plant",
-      "description": "Delosperma cooperi is a low-growing succulent groundcover native to southern Africa. It produces bright daisy-like flowers and thrives in full sun with excellent drainage."
+      "common_name": "Cooper's ice plant",
+      "description": "A mat-forming evergreen succulent with bright daisy-like flowers. Give very bright light and fast-draining soil, and water only after the mix dries. In pots, keep it on the dry side and protect from prolonged cold and wet."
     },
     "pl": {
-      "common_name": "Delosperma",
-      "description": "Delosperma cooperi to niska roślina sukulentowa pochodząca z południowej Afryki. Kwitnie intensywnie i najlepiej rośnie w pełnym słońcu oraz przepuszczalnej glebie."
+      "common_name": "Przypołudnik Coopera",
+      "description": "Zimozielony sukulent tworzący niskie kobierce i różowo-fioletowe kwiaty. Wymaga pełnego słońca i bardzo przepuszczalnego podłoża; podlewaj dopiero po całkowitym przeschnięciu. W doniczce unikaj nadmiaru wody i długotrwałego chłodu połączonego z wilgocią."
     },
     "de": {
-      "common_name": "Mittagsblume",
-      "description": "Delosperma cooperi ist eine niedrig wachsende sukkulente Pflanze aus dem südlichen Afrika. Sie bevorzugt volle Sonne und sehr gut durchlässigen Boden."
+      "common_name": "Coopers Mittagsblume",
+      "description": "Ein immergrüner, teppichbildender Sukkulent mit auffälligen, margeritenartigen Blüten. Sehr hell stellen und in stark durchlässiges Substrat pflanzen; erst gießen, wenn alles trocken ist. Im Topf Staunässe strikt vermeiden und kalt-nasse Bedingungen verhindern."
     },
     "fr": {
-      "common_name": "Plante des glaces",
-      "description": "Delosperma cooperi est une plante succulente tapissante originaire d’Afrique australe. Elle aime le plein soleil et un sol très bien drainé."
+      "common_name": "Delosperma de Cooper",
+      "description": "Succulente persistante qui forme un tapis et produit des fleurs en forme de marguerite. Offrez-lui un soleil direct et un substrat très drainant, puis arrosez seulement une fois le mélange sec. En pot, évitez l’excès d’eau et l’humidité froide prolongée."
     },
     "it": {
-      "common_name": "Pianta del ghiaccio",
-      "description": "Delosperma cooperi è una succulenta tappezzante originaria dell’Africa meridionale. Cresce bene in pieno sole e in terreni ben drenati."
+      "common_name": "Delosperma di Cooper",
+      "description": "Succulenta sempreverde tappezzante con fiori simili a margherite. Richiede pieno sole e terreno molto drenante; annaffia solo quando il substrato è asciutto. In vaso evita ristagni e condizioni fredde e umide prolungate."
     },
     "es": {
-      "common_name": "Planta del hielo",
-      "description": "Delosperma cooperi es una suculenta cubresuelos originaria del sur de África. Requiere pleno sol y suelos con excelente drenaje."
+      "common_name": "Delosperma de Cooper",
+      "description": "Sukulenta perenne y tapizante con flores tipo margarita. Necesita pleno sol y sustrato muy drenante; riega solo cuando esté completamente seco. En maceta, evita el encharcamiento y el frío húmedo prolongado."
     },
     "pt": {
-      "common_name": "Planta-do-gelo",
-      "description": "Delosperma cooperi é uma suculenta rasteira nativa do sul da África. Desenvolve-se melhor em sol pleno e solo bem drenado."
+      "common_name": "Delosperma de Cooper",
+      "description": "Suculenta perene que forma tapete e produz flores vistosas. Dê sol pleno e substrato bem drenado, regando apenas quando estiver seco. Em vaso, evite encharcamento e frio úmido por longos períodos."
     },
     "ar": {
-      "common_name": "نبات الجليد",
-      "description": "ديلوسبيرما كوبري نبات عصاري منخفض من جنوب أفريقيا. يفضل الشمس الكاملة والتربة جيدة التصريف."
+      "common_name": "ديلوسبيرما كوبر",
+      "description": "نبات عصاري دائم الخضرة يشكّل غطاءً منخفضًا وتظهر عليه أزهار تشبه الأقحوان. يحتاج إلى شمس مباشرة وتربة شديدة التصريف، ويُسقى فقط بعد جفاف الوسط تمامًا. في الأصص تجنّب التربة المبللة والبرد الرطب لفترات طويلة."
     },
     "hi": {
-      "common_name": "आइस प्लांट",
-      "description": "डेलोस्पर्मा कूपेरी दक्षिणी अफ्रीका की एक रसीली भूमि आवरण पौधा है। यह पूरी धूप और अच्छी जल निकास वाली मिट्टी में अच्छा बढ़ता है।"
+      "common_name": "डेलोस्पर्मा कूपरी",
+      "description": "यह एक सदाबहार रसीला पौधा है जो जमीन पर चटाई जैसा फैलता है और डेज़ी जैसे फूल देता है। इसे तेज धूप और अच्छी जल-निकासी वाली मिट्टी दें, और मिट्टी सूखने पर ही पानी दें। गमले में अधिक नमी और लंबे समय तक ठंडी-गीली स्थिति से बचाएँ।"
     },
     "zh": {
-      "common_name": "冰花",
-      "description": "Delosperma cooperi 是原产于非洲南部的多肉地被植物。喜全日照和排水良好的土壤。"
+      "common_name": "库珀冰花",
+      "description": "常绿匍匐型多肉植物，开雏菊状花。需要强光直射与排水良好的基质，基质完全干透后再浇水。盆栽要避免长期潮湿与冷湿环境。"
     },
     "ja": {
-      "common_name": "アイスプラント",
-      "description": "デロスペルマ・クーペリーは南アフリカ原産の多肉植物です。日当たりと水はけの良い土壌を好みます。"
+      "common_name": "デロスペルマ・クーペリー",
+      "description": "常緑でマット状に広がる多肉で、デイジー状の花を咲かせます。強い日光と水はけの良い用土を好み、用土が完全に乾いてから水やりします。鉢植えでは過湿と冷たく湿った環境を避けてください。"
     },
     "ko": {
-      "common_name": "아이스플랜트",
-      "description": "델로스페르마 쿠페리는 남아프리카 원산의 다육성 지피식물입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다."
+      "common_name": "델로스페르마 쿠페리",
+      "description": "상록의 매트형 다육식물로 데이지 같은 꽃이 핍니다. 강한 햇빛과 배수가 좋은 흙이 필요하며, 흙이 완전히 마른 뒤에 물을 주세요. 화분에서는 과습과 차갑고 습한 환경을 오래 유지하지 마세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/5051/delosperma-cooperi/details",
-      "https://extension.colostate.edu/topic-areas/yard-garden/ice-plants-7-406/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c547"
+      "https://www.rhs.org.uk/plants/67143/delosperma-cooperi/details",
+      "https://www.highcountrygardens.com/blogs/perennials/growing-ice-plant-delosperma-planting-care",
+      "https://blog.greatgardenplants.com/all-about-growing-caring-for-ice-plant-delosperma/",
+      "https://www.thespruce.com/purple-ice-plant-2132553"
     ]
   }
 }

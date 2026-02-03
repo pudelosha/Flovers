@@ -1,18 +1,17 @@
 {
   "external_id": "camellia_sinensis",
-  "name": "Tea Plant",
+  "name": "Tea plant",
   "latin": "Camellia sinensis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "acid-loving",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +28,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz brilhante",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़, अप्रत्यक्ष",
           "zh": "明亮散射光",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic well-drained",
-          "pl": "Kwaśna gleba",
-          "de": "Saure Erde",
-          "fr": "Sol acide",
-          "it": "Suolo acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土",
-          "ko": "산성 토양"
+          "en": "Acidic, well-drained",
+          "pl": "Kwaśne, przepuszczalne",
+          "de": "Sauer, durchlässig",
+          "fr": "Acide, drainant",
+          "it": "Acido, drenante",
+          "es": "Ácido, drenante",
+          "pt": "Ácido, drenante",
+          "ar": "حمضي وجيد الصرف",
+          "hi": "अम्लीय, जलनिकासी",
+          "zh": "酸性排水好",
+          "ja": "酸性・水はけ良",
+          "ko": "산성, 배수 좋게"
         }
       }
     },
@@ -68,17 +67,17 @@
       "value": {
         "text": {
           "en": "Keep evenly moist",
-          "pl": "Umiarkowane podlewanie",
+          "pl": "Stale wilgotne",
           "de": "Gleichmäßig feucht",
-          "fr": "Humide régulier",
-          "it": "Umido costante",
-          "es": "Humedad regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "नियमित नमी",
-          "zh": "保持湿润",
-          "ja": "適度に湿潤",
-          "ko": "고르게 물주기"
+          "fr": "Substrat humide",
+          "it": "Terriccio umido",
+          "es": "Sustrato húmedo",
+          "pt": "Substrato úmido",
+          "ar": "تربة رطبة باستمرار",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持微湿",
+          "ja": "土を均一に湿らす",
+          "ko": "흙을 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Anspruch",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°م",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25℃",
-          "ko": "15–25°C"
+          "en": "13–24°C",
+          "pl": "13–24°C",
+          "de": "13–24°C",
+          "fr": "13–24°C",
+          "it": "13–24°C",
+          "es": "13–24°C",
+          "pt": "13–24°C",
+          "ar": "13–24°م",
+          "hi": "13–24°C",
+          "zh": "13–24°C",
+          "ja": "13–24°C",
+          "ko": "13–24°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम नमी",
-          "zh": "中等湿度",
-          "ja": "適度な湿度",
-          "ko": "보통 습도"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक नमी",
+          "zh": "较高湿度",
+          "ja": "高めの湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Non-toxic (pets)",
+          "pl": "Nietoksyczna (zw.)",
+          "de": "Ungiftig (Haust.)",
+          "fr": "Non toxique (anim.)",
+          "it": "Non tossica (anim.)",
+          "es": "No tóxica (masc.)",
+          "pt": "Não tóxica (pets)",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
         }
       }
     },
@@ -162,77 +161,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Shrub growth",
-          "pl": "Krzew",
-          "de": "Strauch",
-          "fr": "Arbuste",
-          "it": "Arbusto",
-          "es": "Arbusto",
-          "pt": "Arbusto",
-          "ar": "شجيرة",
-          "hi": "झाड़ी",
-          "zh": "灌木",
-          "ja": "低木",
-          "ko": "관목"
+          "en": "Evergreen shrub",
+          "pl": "Zimozielony krzew",
+          "de": "Immergrüner Strauch",
+          "fr": "Arbuste persistant",
+          "it": "Arbusto sempreverde",
+          "es": "Arbusto perenne",
+          "pt": "Arbusto perene",
+          "ar": "شجيرة دائمة الخضرة",
+          "hi": "सदाबहार झाड़ी",
+          "zh": "常绿灌木",
+          "ja": "常緑低木",
+          "ko": "상록 관목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No dry soil",
+          "pl": "Nie przesuszać",
+          "de": "Nicht austrocknen",
+          "fr": "Éviter le dessèchement",
+          "it": "No secco",
+          "es": "No dejar secar",
+          "pt": "Não deixar secar",
+          "ar": "لا تتركها تجف",
+          "hi": "सूखने न दें",
+          "zh": "避免干透",
+          "ja": "乾かしすぎない",
+          "ko": "건조 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Scale, aphids",
+          "pl": "Tarczniki, mszyce",
+          "de": "Schildläuse, Blattl.",
+          "fr": "Cochenilles, pucerons",
+          "it": "Cocciniglie, afidi",
+          "es": "Cochinillas, pulgón",
+          "pt": "Cochonilhas, pulgões",
+          "ar": "حشرات قشرية ومنّ",
+          "hi": "स्केल, एफिड्स",
+          "zh": "介壳虫、蚜虫",
+          "ja": "カイガラムシ等",
+          "ko": "깍지벌레, 진딧물"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Tea Plant",
-      "description": "Camellia sinensis is an evergreen shrub native to East Asia. Its young leaves are harvested to produce green, black, and white teas. It prefers acidic soil and consistent moisture."
+      "common_name": "Tea plant",
+      "description": "Camellia sinensis is an evergreen shrub grown for leaves used to make tea. Provide bright, indirect light and an acidic, well-drained mix kept evenly moist. Feed during the growing season and repot about every 2 years for container culture."
     },
     "pl": {
       "common_name": "Herbata chińska",
-      "description": "Camellia sinensis to zimozielony krzew pochodzący z Azji Wschodniej. Młode liście służą do produkcji herbaty. Wymaga kwaśnej gleby i regularnego podlewania."
+      "description": "Camellia sinensis to zimozielony krzew, z którego liści wytwarza się herbatę. Lubi jasne, rozproszone światło oraz kwaśne, przepuszczalne podłoże stale lekko wilgotne. Nawoź w sezonie wzrostu i przesadzaj mniej więcej co 2 lata w uprawie doniczkowej."
     },
     "de": {
       "common_name": "Teepflanze",
-      "description": "Camellia sinensis ist ein immergrüner Strauch aus Ostasien. Aus den jungen Blättern wird Tee hergestellt. Sie mag sauren Boden und gleichmäßige Feuchte."
+      "description": "Camellia sinensis ist ein immergrüner Strauch, dessen Blätter für Tee genutzt werden. Stelle sie hell mit indirektem Licht und halte ein saures, gut drainiertes Substrat gleichmäßig feucht. Dünge in der Wachstumszeit und topfe bei Kübelkultur etwa alle 2 Jahre um."
     },
     "fr": {
       "common_name": "Théier",
-      "description": "Camellia sinensis est un arbuste persistant originaire d’Asie de l’Est. Ses jeunes feuilles servent à produire le thé. Elle apprécie un sol acide et humide."
+      "description": "Camellia sinensis est un arbuste persistant cultivé pour ses feuilles utilisées pour le thé. Offrez une lumière vive indirecte et un substrat acide bien drainé, maintenu uniformément humide. Fertilisez en période de croissance et rempotez environ tous les 2 ans en pot."
     },
     "it": {
       "common_name": "Pianta del tè",
-      "description": "Camellia sinensis è un arbusto sempreverde dell’Asia orientale. Le foglie giovani vengono usate per il tè. Predilige suolo acido e umidità costante."
+      "description": "Camellia sinensis è un arbusto sempreverde coltivato per le foglie usate per il tè. Preferisce luce intensa ma indiretta e un terriccio acido e ben drenante mantenuto uniformemente umido. Concima nella stagione di crescita e rinvasa circa ogni 2 anni in vaso."
     },
     "es": {
       "common_name": "Planta del té",
-      "description": "Camellia sinensis es un arbusto perenne originario de Asia oriental. Sus hojas jóvenes producen té. Requiere suelo ácido y riego regular."
+      "description": "Camellia sinensis es un arbusto perenne cultivado por sus hojas para preparar té. Dale luz brillante indirecta y un sustrato ácido y drenante, manteniéndolo ligeramente húmedo de forma constante. Abona en crecimiento y trasplanta aproximadamente cada 2 años en maceta."
     },
     "pt": {
       "common_name": "Planta do chá",
-      "description": "Camellia sinensis é um arbusto perene da Ásia Oriental. As folhas jovens são usadas para chá. Prefere solo ácido e umidade constante."
+      "description": "Camellia sinensis é um arbusto perene cultivado pelas folhas usadas para chá. Prefere luz forte indireta e substrato ácido bem drenado, mantido uniformemente úmido. Adube na estação de crescimento e replante em vaso cerca de cada 2 anos."
     },
     "ar": {
       "common_name": "نبات الشاي",
-      "description": "Camellia sinensis شجيرة دائمة الخضرة من شرق آسيا. تُستخدم أوراقها الصغيرة لصنع الشاي. تحتاج إلى تربة حمضية ورطوبة منتظمة."
+      "description": "Camellia sinensis شجيرة دائمة الخضرة تُزرع لأوراقها المستخدمة في الشاي. وفّر ضوءًا ساطعًا غير مباشر وتربة حمضية جيدة الصرف مع إبقائها رطبة بشكل متوازن. سمّد خلال موسم النمو وأعد الزراعة في الأصص تقريبًا كل سنتين."
     },
     "hi": {
       "common_name": "चाय का पौधा",
-      "description": "Camellia sinensis पूर्वी एशिया की सदाबहार झाड़ी है। इसकी पत्तियों से चाय बनती है। इसे अम्लीय मिट्टी और नियमित पानी चाहिए।"
+      "description": "Camellia sinensis एक सदाबहार झाड़ी है जिसकी पत्तियों से चाय बनाई जाती है। इसे तेज़ पर अप्रत्यक्ष रोशनी और अम्लीय, अच्छी जलनिकासी वाली मिट्टी दें जिसे समान रूप से नम रखा जाए। बढ़वार के मौसम में खाद दें और गमले में लगभग हर 2 साल में रिपॉट करें।"
     },
     "zh": {
       "common_name": "茶树",
-      "description": "Camellia sinensis 原产于东亚，是常绿灌木。嫩叶用于制作茶。喜酸性土壤和稳定湿度。"
+      "description": "Camellia sinensis 是常绿灌木，其叶片用于制茶。提供明亮散射光，并使用酸性、排水良好的基质，保持均匀微湿。生长期施肥，盆栽约每 2 年换盆一次。"
     },
     "ja": {
       "common_name": "チャノキ",
-      "description": "Camellia sinensis は東アジア原産の常緑低木です。若い葉が茶の原料になります。酸性土と適度な水分を好みます。"
+      "description": "Camellia sinensis は茶葉の原料になる常緑低木です。明るい間接光と、酸性で水はけのよい用土を使い、土を均一に湿らせます。生育期に施肥し、鉢植えは目安として約2年ごとに植え替えます。"
     },
     "ko": {
       "common_name": "차나무",
-      "description": "Camellia sinensis는 동아시아 원산의 상록 관목입니다. 어린 잎으로 차를 만듭니다. 산성 토양과 꾸준한 수분이 필요합니다."
+      "description": "Camellia sinensis 는 차 잎을 얻는 상록 관목입니다. 밝은 간접광과 산성의 배수 좋은 흙을 사용하고 흙을 고르게 촉촉하게 유지하세요. 생장기에 비료를 주고 화분 재배는 약 2년마다 분갈이합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/2742/camellia-sinensis/details",
-      "https://plants.ces.ncsu.edu/plants/camellia-sinensis/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a585"
+      "https://www.rhs.org.uk/plants/2867/camellia-sinensis/details",
+      "https://www.rhs.org.uk/plants/articles/misc/grow-your-own-tea",
+      "https://www.rhs.org.uk/plants/camellia/growing-guide",
+      "https://hgic.clemson.edu/factsheet/camellia-diseases-insect-pests/",
+      "https://www.americancamellias.com/education-and-camellia-care/general-culture-requirements/container-grown-camellias",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/common-camellia"
     ]
   }
 }

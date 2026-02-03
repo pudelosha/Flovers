@@ -2,7 +2,7 @@
   "external_id": "musa_acuminata",
   "name": "Banana Plant",
   "latin": "Musa acuminata",
-  "sun": "high",
+  "sun": "medium",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "musa_acuminata.jpg",
   "image_thumb": "musa_acuminata.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "强光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich well-drained",
-          "pl": "Żyzna gleba",
-          "de": "Nährstoffreich",
-          "fr": "Sol riche",
-          "it": "Terreno ricco",
-          "es": "Suelo rico",
-          "pt": "Solo rico",
-          "ar": "تربة غنية",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃土壤",
-          "ja": "肥沃な土",
-          "ko": "비옥한 흙"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Frequent watering",
-          "pl": "Częste podlewanie",
-          "de": "Häufig gießen",
-          "fr": "Arrosage fréquent",
-          "it": "Annaffiature frequenti",
-          "es": "Riego frecuente",
-          "pt": "Rega frequente",
-          "ar": "ري متكرر",
-          "hi": "बार-बार पानी",
-          "zh": "经常浇水",
-          "ja": "頻繁な水やり",
-          "ko": "자주 물주기"
+          "en": "Water generously",
+          "pl": "Podlewaj obficie",
+          "de": "Generös gießen",
+          "fr": "Arroser généreusement",
+          "it": "Annaffiare generosamente",
+          "es": "Regar generosamente",
+          "pt": "Regar generosamente",
+          "ar": "سقي بحرية",
+          "hi": "अच्छे से पानी देना",
+          "zh": "慷慨浇水",
+          "ja": "たっぷり水をやる",
+          "ko": "넉넉히 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm tropical",
-          "pl": "Ciepły klimat",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "20–30°C",
+          "pl": "20–30°C",
+          "de": "20–30°C",
+          "fr": "20–30°C",
+          "it": "20–30°C",
+          "es": "20–30°C",
+          "pt": "20–30°C",
+          "ar": "20–30°C",
+          "hi": "20–30°C",
+          "zh": "20–30°C",
+          "ja": "20–30°C",
+          "ko": "20–30°C"
         }
       }
     },
@@ -126,13 +126,13 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Feuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성이 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "سريع النمو",
-          "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast-growing plant",
+          "pl": "Szybko rosnąca roślina",
+          "de": "Schnell wachsende Pflanze",
+          "fr": "Plante à croissance rapide",
+          "it": "Pianta a crescita rapida",
+          "es": "Planta de rápido crecimiento",
+          "pt": "Planta de crescimento rápido",
+          "ar": "نبات سريع النمو",
+          "hi": "तेज बढ़ने वाली पौध",
+          "zh": "生长迅速的植物",
+          "ja": "速成型植物",
+          "ko": "빠르게 성장하는 식물"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرो पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Banana Plant",
-      "description": "Musa acuminata is a tropical banana species native to Southeast Asia. It requires bright light, warm temperatures, and consistently moist soil. Indoors it is grown mainly for its large ornamental leaves."
+      "description": "Musa acuminata is a tropical plant known for its edible bananas. It prefers bright, indirect light and high humidity."
     },
     "pl": {
-      "common_name": "Bananowiec",
-      "description": "Musa acuminata to tropikalny gatunek banana pochodzący z Azji Południowo-Wschodniej. Wymaga jasnego światła, ciepła i stale wilgotnej gleby. W uprawie domowej ceniony jest za duże liście."
+      "common_name": "Roślina bananowa",
+      "description": "Musa acuminata to roślina tropikalna, znana z jadalnych bananów. Wymaga jasnego, pośredniego światła i wysokiej wilgotności."
     },
     "de": {
       "common_name": "Bananenpflanze",
-      "description": "Musa acuminata ist eine tropische Bananenart aus Südostasien. Sie benötigt viel Licht, Wärme und gleichmäßig feuchte Erde. In Innenräumen wird sie vor allem als Zierpflanze gehalten."
+      "description": "Musa acuminata ist eine tropische Pflanze, die für ihre essbaren Bananen bekannt ist. Sie bevorzugt helles, indirektes Licht und hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Bananier",
-      "description": "Musa acuminata est une espèce tropicale originaire d’Asie du Sud-Est. Elle a besoin de lumière vive, de chaleur et d’un sol humide. En intérieur, elle est surtout cultivée pour son feuillage."
+      "common_name": "Plante à banane",
+      "description": "Musa acuminata est une plante tropicale connue pour ses bananes comestibles. Elle préfère la lumière indirecte et une humidité élevée."
     },
     "it": {
-      "common_name": "Banano",
-      "description": "Musa acuminata è una specie tropicale originaria del Sud-Est asiatico. Richiede molta luce, temperature calde e terreno costantemente umido. In casa è coltivata soprattutto come pianta ornamentale."
+      "common_name": "Pianta di banana",
+      "description": "Musa acuminata è una pianta tropicale nota per le sue banane commestibili. Preferisce la luce indiretta e un'alta umidità."
     },
     "es": {
-      "common_name": "Planta de banana",
-      "description": "Musa acuminata es una especie tropical originaria del sudeste asiático. Necesita mucha luz, calor y suelo húmedo. En interiores se cultiva principalmente por sus hojas decorativas."
+      "common_name": "Planta de plátano",
+      "description": "Musa acuminata es una planta tropical conocida por sus plátanos comestibles. Prefiere luz indirecta y alta humedad."
     },
     "pt": {
-      "common_name": "Bananeira",
-      "description": "Musa acuminata é uma espécie tropical nativa do Sudeste Asiático. Precisa de luz intensa, calor e solo sempre úmido. Em interiores é cultivada principalmente pelas folhas ornamentais."
+      "common_name": "Planta de banana",
+      "description": "Musa acuminata é uma planta tropical conhecida por suas bananas comestíveis. Prefere luz indireta e alta umidade."
     },
     "ar": {
-      "common_name": "نبات الموز",
-      "description": "موزا أكوميناتـا نبات استوائي موطنه جنوب شرق آسيا. يحتاج إلى ضوء قوي وحرارة ورطوبة منتظمة في التربة. يزرع داخل المنازل غالبًا لأوراقه الكبيرة."
+      "common_name": "نبتة الموز",
+      "description": "Musa acuminata هي نبتة استوائية معروفة بموزها الصالح للأكل. تفضل الضوء الساطع غير المباشر والرطوبة العالية."
     },
     "hi": {
-      "common_name": "केला पौधा",
-      "description": "Musa acuminata एक उष्णकटिबंधीय केला प्रजाति है जो दक्षिण पूर्व एशिया की मूल निवासी है। इसे तेज रोशनी, गर्म तापमान और नम मिट्टी की आवश्यकता होती है। घर के अंदर इसे पत्तियों के लिए उगाया जाता है।"
+      "common_name": "केला का पौधा",
+      "description": "Musa acuminata एक उष्णकटिबंधीय पौधा है जो अपनी खाने योग्य केले के लिए प्रसिद्ध है। इसे उज्ज्वल, अप्रत्यक्ष प्रकाश और उच्च आर्द्रता पसंद है।"
     },
     "zh": {
       "common_name": "香蕉植物",
-      "description": "Musa acuminata 原产于东南亚的热带香蕉物种。它需要充足的光照、温暖的环境和湿润的土壤。在室内主要作为观叶植物栽培。"
+      "description": "Musa acuminata 是一种热带植物，因其可食用的香蕉而闻名。它喜欢明亮的间接光和高湿度。"
     },
     "ja": {
-      "common_name": "バナナの木",
-      "description": "Musa acuminata は東南アジア原産の熱帯性バナナです。強い光と高温、多湿な土壌を好みます。室内では観葉植物として育てられます。"
+      "common_name": "バナナ植物",
+      "description": "Musa acuminata は食用バナナで知られる熱帯植物です。明るい間接光と高湿度を好みます。"
     },
     "ko": {
-      "common_name": "바나나 나무",
-      "description": "Musa acuminata는 동남아시아 원산의 열대 바나나 종입니다. 강한 빛과 따뜻한 온도, 촉촉한 토양이 필요합니다. 실내에서는 주로 잎을 감상합니다."
+      "common_name": "바나나 식물",
+      "description": "Musa acuminata는 먹을 수 있는 바나나로 유명한 열대 식물입니다. 밝은 간접광과 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/musa-acuminata",
-      "https://edis.ifas.ufl.edu/publication/EP059",
-      "https://www.rhs.org.uk/plants/banana/growing-guide"
+      "https://www.rhs.org.uk/advice/profile?pid=724",
+      "https://www.gardenia.net/plant/musa-acuminata"
     ]
   }
 }

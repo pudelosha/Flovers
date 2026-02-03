@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -30,7 +30,7 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaszczysta gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sableux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेत की मिट्टी",
-          "zh": "沙质土壤",
-          "ja": "砂質土壌",
-          "ko": "모래 흙"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -74,7 +74,7 @@
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "الري المعتدل",
+          "ar": "ري الماء المعتدل",
           "hi": "मध्यम पानी देना",
           "zh": "适量浇水",
           "ja": "適度な水やり",
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-30°C",
-          "pl": "20-30°C",
-          "de": "20-30°C",
-          "fr": "20-30°C",
-          "it": "20-30°C",
-          "es": "20-30°C",
-          "pt": "20-30°C",
-          "ar": "20-30°C",
-          "hi": "20-30°C",
-          "zh": "20-30°C",
-          "ja": "20-30°C",
-          "ko": "20-30°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
           "hi": "मध्यम आर्द्रता",
           "zh": "适中湿度",
           "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "ko": "적당한 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "No",
-          "pl": "Nie",
-          "de": "Nein",
-          "fr": "Non",
-          "it": "No",
-          "es": "No",
-          "pt": "Não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "没有",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة خفيفة",
+          "hi": "हल्का विषाक्त",
+          "zh": "轻度有毒",
+          "ja": "軽度毒性",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Powolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느린"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Keine Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि के कीड़े",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,56 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Pygmy Date Palm",
-      "description": "The Phoenix roebelenii, or pygmy date palm, is a small palm native to Southeast Asia. It thrives in bright, indirect light and requires moderate watering."
+      "description": "Phoenix roebelenii is a small palm species native to Southeast Asia. It's well-known for its compact size, making it a popular choice for indoor spaces."
     },
     "pl": {
       "common_name": "Palma karłowata",
-      "description": "Phoenix roebelenii, czyli palma karłowata, to mała palma pochodząca z Azji Południowo-Wschodniej. Rośnie w jasnym, pośrednim świetle i wymaga umiarkowanego podlewania."
+      "description": "Phoenix roebelenii to mała palma pochodząca z Azji Południowo-Wschodniej. Jest znana z kompaktowego rozmiaru, co sprawia, że jest popularnym wyborem do wnętrz."
     },
     "de": {
       "common_name": "Zwerg-Dattelpalme",
-      "description": "Die Phoenix roebelenii, oder Zwerg-Dattelpalme, ist eine kleine Palme aus Südostasien. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+      "description": "Phoenix roebelenii ist eine kleine Palmenart aus Südostasien. Sie ist aufgrund ihrer kompakten Größe eine beliebte Wahl für Innenräume."
     },
     "fr": {
       "common_name": "Palmier nain",
-      "description": "Le Phoenix roebelenii, ou palmier nain, est une petite palmier originaire du sud-est asiatique. Il prospère sous une lumière indirecte brillante et nécessite un arrosage modéré."
+      "description": "Phoenix roebelenii est une petite espèce de palmier originaire d'Asie du Sud-Est. Il est bien connu pour sa taille compacte, ce qui en fait un choix populaire pour les espaces intérieurs."
     },
     "it": {
       "common_name": "Palma nana",
-      "description": "Il Phoenix roebelenii, o palma nana, è una piccola palma originaria del sud-est asiatico. Cresce sotto luce indiretta brillante e richiede annaffiature moderate."
+      "description": "Phoenix roebelenii è una piccola specie di palma originaria del sud-est asiatico. È conosciuta per le sue dimensioni compatte, rendendola una scelta popolare per gli spazi interni."
     },
     "es": {
-      "common_name": "Palma enana",
-      "description": "El Phoenix roebelenii, o palma enana, es una pequeña palma originaria del sudeste asiático. Se desarrolla con luz brillante e indirecta y requiere riego moderado."
+      "common_name": "Palmera enana",
+      "description": "Phoenix roebelenii es una pequeña especie de palmera originaria del sudeste asiático. Es conocida por su tamaño compacto, lo que la convierte en una opción popular para espacios interiores."
     },
     "pt": {
       "common_name": "Palmeira anã",
-      "description": "O Phoenix roebelenii, ou palmeira anã, é uma pequena palma nativa do sudeste asiático. Ela prospera em luz indireta brilhante e requer rega moderada."
+      "description": "Phoenix roebelenii é uma pequena espécie de palmeira originária do Sudeste Asiático. É conhecida por seu tamanho compacto, o que a torna uma opção popular para espaços internos."
     },
     "ar": {
-      "common_name": "نخلة قزمية",
-      "description": "Phoenix roebelenii، أو نخلة قزمية، هي نخلة صغيرة من جنوب شرق آسيا. تنمو في الضوء غير المباشر الساطع وتحتاج إلى ري معتدل."
+      "common_name": "نخيل قزم",
+      "description": "Phoenix roebelenii هو نوع صغير من النخيل موطنه جنوب شرق آسيا. إنه معروف بحجمه الصغير، مما يجعله خيارًا شائعًا للمساحات الداخلية."
     },
     "hi": {
-      "common_name": "बौना ता date डेट पाम",
-      "description": "Phoenix roebelenii, या बौना ता date डेट पाम, दक्षिण-पूर्वी एशिया से एक छोटी ताड़ का पेड़ है। यह उज्ज्वल, अप्रत्यक्ष प्रकाश में उगता है और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "बौना खजूर पाम",
+      "description": "Phoenix roebelenii एक छोटा सा खजूर पौधा है जो दक्षिण-पूर्वी एशिया का मूल निवासी है। यह इसके कॉम्पैक्ट आकार के लिए प्रसिद्ध है, जिससे यह इनडोर स्थानों के लिए एक लोकप्रिय विकल्प बनता है।"
     },
     "zh": {
-      "common_name": "侏儒枣椰树",
-      "description": "Phoenix roebelenii，或侏儒枣椰树，是一种来自东南亚的小型棕榈树。它在明亮的间接光下生长，需要适量浇水。"
+      "common_name": "侏儒枣椰",
+      "description": "Phoenix roebelenii 是一种原产于东南亚的小型棕榈树。它因其紧凑的大小而广受欢迎，是室内空间的热门选择。"
     },
     "ja": {
       "common_name": "ピグミーデーツヤシ",
-      "description": "Phoenix roebelenii、またはピグミーデーツヤシは、東南アジア原産の小さなヤシの木です。明るい間接光で育ち、適度な水やりが必要です。"
+      "description": "Phoenix roebelenii は東南アジア原産の小型のヤシの木です。コンパクトなサイズで知られ、室内スペースに人気があります。"
     },
     "ko": {
       "common_name": "피그미 데이트 팜",
-      "description": "Phoenix roebelenii, 또는 피그미 데이트 팜은 동남아시아 출신의 작은 야자수입니다. 밝은 간접광에서 자라며 적당한 물주기가 필요합니다."
+      "description": "Phoenix roebelenii는 동남아시아 원산지의 작은 야자수입니다. 그 작은 크기로 잘 알려져 있어 실내 공간에서 인기 있는 선택입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/phoenixed"
+      "https://www.rhs.org.uk/advice/profile?pid=533",
+      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-pests/"
     ]
   }
 }

@@ -1,27 +1,27 @@
 {
   "external_id": "cuphea_ignea",
-  "name": "Cigar Plant",
+  "name": "Cigar plant",
   "latin": "Cuphea ignea",
   "sun": "high",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "terracotta",
-    "plastic"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 21,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "cuphea_ignea.jpg",
   "image_thumb": "cuphea_ignea.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
-          "de": "volle Sonne",
-          "fr": "plein soleil",
-          "it": "pieno sole",
-          "es": "pleno sol",
-          "pt": "sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light / sun",
+          "pl": "Jasno / słońce",
+          "de": "Hell / Sonne",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء قوي/شمس",
+          "hi": "तेज रोशनी/धूप",
+          "zh": "强光/日照",
+          "ja": "明るい日光",
+          "ko": "밝은 빛/햇빛"
         }
       }
     },
@@ -48,17 +48,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-drained",
-          "pl": "przepuszczalna",
-          "de": "durchlässig",
-          "fr": "drainé",
-          "it": "ben drenato",
-          "es": "drenado",
-          "pt": "bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
+          "en": "Well-drained mix",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
+          "ja": "水はけ良い",
           "ko": "배수 잘됨"
         }
       }
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "regular",
-          "pl": "regularne",
-          "de": "regelmäßig",
-          "fr": "régulier",
-          "it": "regolare",
-          "es": "regular",
-          "pt": "regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期浇水",
-          "ja": "定期的",
-          "ko": "규칙적"
+          "en": "Moist, not soggy",
+          "pl": "Wilgotno, nie mokro",
+          "de": "Feucht, nicht nass",
+          "fr": "Humide, pas détrempé",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, no encharcar",
+          "pt": "Úmido, sem encharcar",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर जलभराव नहीं",
+          "zh": "保持湿润不积水",
+          "ja": "湿らせ過湿NG",
+          "ko": "촉촉, 과습 금지"
         }
       }
     },
@@ -86,53 +86,15 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwa",
-          "de": "leicht",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
-        }
-      }
-    },
-    {
-      "key": "temperature",
-      "value": {
-        "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "cálido",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
-        }
-      }
-    },
-    {
-      "key": "humidity",
-      "value": {
-        "text": {
-          "en": "average",
-          "pl": "umiarkowana",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسطة",
-          "hi": "सामान्य",
+          "hi": "मध्यम",
           "zh": "中等",
           "ja": "普通",
           "ko": "보통"
@@ -140,18 +102,56 @@
       }
     },
     {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm, frost-free",
+          "pl": "Ciepło, bez mrozu",
+          "de": "Warm, frostfrei",
+          "fr": "Chaud, sans gel",
+          "it": "Caldo, no gelo",
+          "es": "Cálido, sin heladas",
+          "pt": "Quente, sem geada",
+          "ar": "دافئ دون صقيع",
+          "hi": "गर्म, पाला नहीं",
+          "zh": "温暖不受霜冻",
+          "ja": "暖かく霜NG",
+          "ko": "따뜻, 서리 금지"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत आर्द्रता",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietrująca",
-          "de": "ungiftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "hi": "विषैली नहीं",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +162,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "bushy",
-          "pl": "krzaczasta",
-          "de": "buschig",
-          "fr": "buissonnant",
-          "it": "cespugliosa",
-          "es": "arbustiva",
-          "pt": "arbustiva",
-          "ar": "كثيف",
-          "hi": "झाड़ीदार",
-          "zh": "丛生",
-          "ja": "茂る",
-          "ko": "덤불형"
+          "en": "Compact shrub",
+          "pl": "Zwarty krzew",
+          "de": "Kompakter Strauch",
+          "fr": "Arbuste compact",
+          "it": "Arbusto compatto",
+          "es": "Arbusto compacto",
+          "pt": "Arbusto compacto",
+          "ar": "شجيرة مدمجة",
+          "hi": "सघन झाड़ी",
+          "zh": "紧凑灌木",
+          "ja": "コンパクト低木",
+          "ko": "컴팩트 관목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنّب التربة الموحلة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Generally pest-free",
+          "pl": "Zwykle bez szkodników",
+          "de": "Meist schädlingsfrei",
+          "fr": "Peu de ravageurs",
+          "it": "Pochi parassiti",
+          "es": "Pocas plagas",
+          "pt": "Poucas pragas",
+          "ar": "عادة بلا آفات",
+          "hi": "आमतौर पर कीट कम",
+          "zh": "通常少虫害",
+          "ja": "害虫は少なめ",
+          "ko": "해충 드묾"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Cigar Plant",
-      "description": "Cuphea ignea is a compact flowering plant known for its tubular red-orange blooms. It prefers bright sunlight and regular watering. Commonly grown as a houseplant or seasonal outdoor ornamental."
+      "common_name": "Cigar plant",
+      "description": "Cuphea ignea is a tender, floriferous plant with tubular orange-red flowers. It grows best in very bright light and evenly moist, well-drained soil. Protect it from frost and keep it warm indoors in colder climates."
     },
     "pl": {
       "common_name": "Kufea ognista",
-      "description": "Cuphea ignea to niewielka roślina kwitnąca o rurkowatych czerwono-pomarańczowych kwiatach. Lubi dużo słońca i regularne podlewanie. Często uprawiana w donicach."
+      "description": "Cuphea ignea to roślina o rurkowatych, pomarańczowo-czerwonych kwiatach. Najlepiej rośnie w bardzo jasnym miejscu i w przepuszczalnym podłożu utrzymywanym lekko wilgotnym. Jest wrażliwa na mróz, dlatego w chłodnym klimacie zimuje w domu."
     },
     "de": {
       "common_name": "Zigarrenblume",
-      "description": "Cuphea ignea ist eine kompakte Blühpflanze mit röhrenförmigen roten Blüten. Sie benötigt viel Licht und gleichmäßige Wassergaben. Geeignet für Innenräume oder den Sommer im Freien."
+      "description": "Cuphea ignea ist eine frostempfindliche Pflanze mit röhrenförmigen orange-roten Blüten. Sie gedeiht in sehr hellem Licht und in gleichmäßig feuchter, gut drainierter Erde. Vor Frost schützen und in kühlen Regionen hell und warm überwintern."
     },
     "fr": {
       "common_name": "Plante cigare",
-      "description": "Cuphea ignea est une plante fleurie compacte aux fleurs tubulaires rouge orangé. Elle apprécie le plein soleil et un arrosage régulier. Elle est souvent cultivée en pot."
+      "description": "Cuphea ignea est une plante frileuse aux fleurs tubulaires orange-rouge. Elle préfère une lumière très vive et un substrat drainant maintenu légèrement humide. Protégez-la du gel et hivernez-la à l’intérieur si nécessaire."
     },
     "it": {
       "common_name": "Pianta sigaro",
-      "description": "Cuphea ignea è una pianta compatta con fiori tubolari rosso-arancio. Richiede molta luce e annaffiature regolari. Adatta per interni luminosi o balconi."
+      "description": "Cuphea ignea è una specie delicata con fiori tubolari arancio-rossi. Cresce meglio con luce molto intensa e terriccio drenante mantenuto appena umido. Va protetta dal gelo e svernata in casa nelle zone fredde."
     },
     "es": {
       "common_name": "Planta cigarro",
-      "description": "Cuphea ignea es una planta ornamental compacta con flores tubulares rojas. Prefiere sol directo y riego regular. Se cultiva comúnmente en macetas."
+      "description": "Cuphea ignea es una planta sensible a las heladas con flores tubulares rojo anaranjadas. Prefiere luz muy intensa y un sustrato bien drenado, siempre ligeramente húmedo. Protéjela del frío y manténgala en interior donde haya heladas."
     },
     "pt": {
       "common_name": "Planta-charuto",
-      "description": "Cuphea ignea é uma planta compacta com flores tubulares vermelho-alaranjadas. Necessita de bastante sol e rega regular. Muito usada como ornamental."
+      "description": "Cuphea ignea é uma planta sensível ao frio com flores tubulares laranja-avermelhadas. Desenvolve-se melhor com muita luz e substrato bem drenado, mantido levemente úmido. Proteja-a de geadas e inverne em local claro e aquecido em regiões frias."
     },
     "ar": {
       "common_name": "نبات السيجار",
-      "description": "Cuphea ignea نبات مزهر صغير يتميز بأزهاره الأنبوبية الحمراء. يحتاج إلى ضوء قوي وري منتظم. يزرع غالبًا في الأصص."
+      "description": "Cuphea ignea نبات رقيق ذو أزهار أنبوبية برتقالية مائلة للأحمر. ينجح مع ضوء قوي جدًا وتربة جيدة الصرف تبقى رطبة قليلًا دون إغراق. احمه من الصقيع واحتفظ به دافئًا داخل المنزل في المناطق الباردة."
     },
     "hi": {
-      "common_name": "सिगार पौधा",
-      "description": "Cuphea ignea एक छोटा फूलदार पौधा है जिसमें नलिकाकार लाल फूल होते हैं। इसे तेज धूप और नियमित पानी की आवश्यकता होती है। गमलों में उगाया जाता है।"
+      "common_name": "सिगार प्लांट",
+      "description": "Cuphea ignea में नारंगी-लाल नलीनुमा फूल होते हैं और यह ठंड/पाले से संवेदनशील है। इसे तेज रोशनी और अच्छी जल-निकासी वाली मिट्टी में रखें, मिट्टी हल्की नम रहे पर पानी न भरे। ठंडे क्षेत्रों में इसे घर के अंदर गर्म स्थान पर रखें।"
     },
     "zh": {
       "common_name": "雪茄花",
-      "description": "Cuphea ignea 是一种紧凑型开花植物，具有红橙色管状花朵。喜充足阳光和规律浇水。常用于盆栽观赏。"
+      "description": "Cuphea ignea 为不耐寒植物，具橙红色管状花。喜强光与排水良好的基质，保持微湿但不积水。寒冷地区需避霜冻并在室内温暖处越冬。"
     },
     "ja": {
       "common_name": "シガープラント",
-      "description": "Cuphea ignea は赤橙色の筒状の花を咲かせる小型植物です。明るい日光と定期的な水やりを好みます。鉢植えに適しています。"
+      "description": "Cuphea ignea は橙赤色の筒状の花をつける寒さに弱い植物です。非常に明るい場所と水はけの良い用土で、土を軽く湿らせて育てます。霜に当てないようにし、寒冷地では室内で越冬させます。"
     },
     "ko": {
-      "common_name": "시가 플랜트",
-      "description": "Cuphea ignea는 붉은색 관 모양 꽃이 특징인 소형 개화식물입니다. 강한 햇빛과 규칙적인 물주기가 필요합니다. 화분 재배에 적합합니다."
+      "common_name": "시가플랜트",
+      "description": "Cuphea ignea는 주황-붉은 관상형 꽃이 피는 냉해에 약한 식물입니다. 매우 밝은 빛과 배수가 좋은 흙에서 키우고, 흙은 촉촉하되 과습은 피하세요. 서리가 내리는 지역에서는 따뜻한 실내로 들여 월동합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a580",
-      "https://www.rhs.org.uk/plants/4550/cuphea-ignea/details",
-      "https://edis.ifas.ufl.edu/publication/FP162"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282501",
+      "https://www.rhs.org.uk/plants/5037/cuphea-ignea/details",
+      "https://nwdistrict.ifas.ufl.edu/hort/2017/08/17/plant-cupheas-for-summer-flowers-hummingbirds-and-more/",
+      "https://www.thespruce.com/cuphea-plant-care-8649383",
+      "https://plantura.garden/uk/flowers-perennials/cuphea/cuphea-overview",
+      "https://www.pslbg.org/cuphea/"
     ]
   }
 }

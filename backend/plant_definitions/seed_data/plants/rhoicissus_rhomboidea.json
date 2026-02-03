@@ -1,6 +1,6 @@
 {
   "external_id": "rhoicissus_rhomboidea",
-  "name": "Rhoicissus rhomboidea",
+  "name": "Grape Ivy",
   "latin": "Rhoicissus rhomboidea",
   "sun": "medium",
   "water": "medium",
@@ -8,20 +8,20 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 12,
+  "repot_interval_months": 24,
   "image_hero": "rhoicissus_rhomboidea.jpg",
   "image_thumb": "rhoicissus_rhomboidea.jpg",
   "traits": [
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
+          "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中くらいの光",
-          "ko": "중간 빛"
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchniczna",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी वाली मिट्टी",
-          "zh": "粘土土壤",
-          "ja": "粘土質の土",
-          "ko": "점토 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna ziemia",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -71,14 +71,14 @@
           "pl": "Umiarkowane podlewanie",
           "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري ماء معتدل",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
           "hi": "मध्यम पानी देना",
           "zh": "适度浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low to moderate",
-          "pl": "Niskie do średniego",
-          "de": "Niedrig bis mittel",
-          "fr": "Bas à modéré",
-          "it": "Basso a moderato",
-          "es": "Bajo a moderado",
-          "pt": "Baixo a moderado",
-          "ar": "منخفض إلى معتدل",
-          "hi": "निम्न से मध्यम",
-          "zh": "低至中等",
-          "ja": "低から中程度",
-          "ko": "낮음에서 보통"
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Durchschnittliche Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "평균 습도"
         }
       }
     },
@@ -145,15 +145,15 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
+          "ja": "非毒性",
           "ko": "비독성"
         }
       }
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Climbing",
-          "pl": "Pnącze",
-          "de": "Kletternd",
-          "fr": "Grimpant",
-          "it": "Rampicante",
-          "es": "Trepa",
-          "pt": "Trepar",
-          "ar": "تسلق",
-          "hi": "चढ़ाई करने वाला",
-          "zh": "攀爬",
-          "ja": "登る",
-          "ko": "기어오르는"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "적당한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-प्रवृत्त कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "A vigorous climbing plant with glossy, rhomboid leaves. It thrives in warm, humid environments and can be used as a decorative climber in gardens or indoors."
+      "common_name": "Grape Ivy",
+      "description": "Rhoicissus rhomboidea is a fast-growing, attractive climber. It thrives in moderate light and requires regular watering."
     },
     "pl": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "Roślinna pnąca o błyszczących, romboidalnych liściach. Dobrze rośnie w ciepłych, wilgotnych warunkach i może być używana jako ozdobna roślina pnąca w ogrodach lub wewnątrz."
+      "common_name": "Winorośl liściasta",
+      "description": "Rhoicissus rhomboidea to szybko rosnąca roślina pnąca. Rośnie dobrze przy umiarkowanym świetle i wymaga regularnego podlewania."
     },
     "de": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "Eine kräftige Kletterpflanze mit glänzenden, rhombischen Blättern. Sie gedeiht in warmen, feuchten Umgebungen und eignet sich als dekorative Kletterpflanze in Gärten oder drinnen."
+      "common_name": "Weinblatt-Efeu",
+      "description": "Rhoicissus rhomboidea ist eine schnell wachsende Kletterpflanze. Sie gedeiht bei mittlerem Licht und benötigt regelmäßige Bewässerung."
     },
     "fr": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "Plante grimpante vigoureuse avec des feuilles rhomboïdes brillantes. Elle prospère dans des environnements chauds et humides et peut être utilisée comme plante grimpante décorative dans les jardins ou à l'intérieur."
+      "common_name": "Lierre de raisin",
+      "description": "Rhoicissus rhomboidea est une plante grimpante à croissance rapide. Elle préfère une lumière modérée et nécessite un arrosage régulier."
     },
     "it": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "Una pianta rampicante vigorosa con foglie romboidali lucide. Cresce bene in ambienti caldi e umidi ed è utilizzabile come pianta rampicante decorativa nei giardini o in casa."
+      "common_name": "Edera d'uva",
+      "description": "Rhoicissus rhomboidea è una rampicante in rapida crescita. Cresce bene alla luce moderata e ha bisogno di irrigazione regolare."
     },
     "es": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "Planta trepadora vigorosa con hojas romboides brillantes. Prospera en entornos cálidos y húmedos y puede utilizarse como planta trepadora decorativa en jardines o en interiores."
+      "common_name": "Hiedra de uva",
+      "description": "Rhoicissus rhomboidea es una planta trepadora de rápido crecimiento. Prefiere luz moderada y requiere riego regular."
     },
     "pt": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "Planta trepadeira vigorosa com folhas romboides brilhantes. Ela prospera em ambientes quentes e úmidos e pode ser usada como uma trepadeira decorativa em jardins ou dentro de casa."
+      "common_name": "Hera de uva",
+      "description": "Rhoicissus rhomboidea é uma trepadeira de crescimento rápido. Prefere luz moderada e precisa de rega regular."
     },
     "ar": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "نبات متسلق قوي ذو أوراق ماسية لامعة. يزدهر في البيئات الدافئة والرطبة ويمكن استخدامه كنبات زينة متسلق في الحدائق أو في الداخل."
+      "common_name": "لبلاب العنب",
+      "description": "Rhoicissus rhomboidea هو نبات متسلق ينمو بسرعة. ينمو جيدًا في الضوء المعتدل ويحتاج إلى الري المنتظم."
     },
     "hi": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "चमकदार, हीरे के आकार के पत्तों वाली एक मजबूत चढ़ाई करने वाली पौध। यह गर्म, आर्द्र वातावरण में अच्छा बढ़ता है और बगीचों या घरों में सजावटी चढ़ाई पौधे के रूप में उपयोग किया जा सकता है।"
+      "common_name": "अंगूर का आइवी",
+      "description": "Rhoicissus rhomboidea एक तेज़ी से बढ़ने वाला बेलदार पौधा है। यह मध्यम रोशनी में बढ़ता है और नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "一种具有光滑菱形叶子的强健攀缘植物。它在温暖、潮湿的环境中茁壮成长，可以用作花园或室内的装饰性攀缘植物。"
+      "common_name": "葡萄常春藤",
+      "description": "Rhoicissus rhomboidea是一种快速生长的攀缘植物。它在中等光照下生长，并需要定期浇水。"
     },
     "ja": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "光沢のある菱形の葉を持つ丈夫なつる植物。暖かく湿度の高い環境でよく成長し、庭や屋内で装飾的なつる植物として使用できます。"
+      "common_name": "グレープアイビー",
+      "description": "Rhoicissus rhomboideaは成長が速いつる植物です。中程度の光で成長し、定期的な水やりが必要です。"
     },
     "ko": {
-      "common_name": "Rhoicissus rhomboidea",
-      "description": "광택이 나는 마름모 모양의 잎을 가진 강한 덩굴 식물. 따뜻하고 습한 환경에서 잘 자라며 정원이나 실내에서 장식용 덩굴 식물로 사용할 수 있습니다."
+      "common_name": "포도 아이비",
+      "description": "Rhoicissus rhomboidea는 빠르게 자라는 덩굴식물입니다. 중간 정도의 빛에서 잘 자라며 정기적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/229242/rhoicissus-rhomboidea",
-      "https://www.botanicalgarden.ubc.ca"
+      "https://www.rhs.org.uk/plants/15684/rhoicissus-rhomboidea",
+      "https://www.gardenia.net/plant/rhoicissus-rhomboidea"
     ]
   }
 }

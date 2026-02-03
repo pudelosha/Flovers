@@ -7,18 +7,19 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "liriodendron_tulipifera.jpg",
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole diretto",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरा सूर्य",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日向",
-          "ko": "양지"
+          "ja": "完全な日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy, acidic",
-          "pl": "Gliniasta, kwaśna",
-          "de": "Lehmig, sauer",
-          "fr": "Limoneux acide",
-          "it": "Franco acido",
-          "es": "Franco ácido",
-          "pt": "Franco ácido",
-          "ar": "تربة حمضية",
-          "hi": "दोमट मिट्टी",
-          "zh": "酸性壤土",
-          "ja": "弱酸性土",
-          "ko": "산성 양토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,16 +87,16 @@
       "value": {
         "text": {
           "en": "Medium",
-          "pl": "Średnia",
+          "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "普通",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Umiarkowana",
-          "de": "Gemäßigt",
-          "fr": "Tempérée",
-          "it": "Temperata",
-          "es": "Templada",
-          "pt": "Temperado",
-          "ar": "معتدلة",
-          "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中くらいの湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "अविषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast growing",
+          "en": "Fast growth",
           "pl": "Szybki wzrost",
-          "de": "Schnellwachsend",
+          "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
-          "it": "Crescita rapida",
+          "it": "Crescita veloce",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
-          "ar": "سريع النمو",
-          "hi": "तेजी से बढ़ता",
-          "zh": "生长快",
-          "ja": "成長が早い",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "早い成長",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Tulip Tree",
-      "description": "Liriodendron tulipifera is a large deciduous tree native to eastern North America. It is known for its distinctive tulip-shaped flowers and tall straight trunk. The tree prefers full sun and deep, well-drained soil."
+      "description": "The Tulip Tree is a fast-growing tree known for its large, tulip-like flowers. It thrives in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Tulipanowiec amerykański",
-      "description": "Liriodendron tulipifera to duże drzewo liściaste pochodzące ze wschodniej Ameryki Północnej. Wyróżnia się kwiatami w kształcie tulipana i prostym pniem. Najlepiej rośnie w pełnym słońcu i żyznej glebie."
+      "common_name": "Drzewo tulipanowe",
+      "description": "Drzewo tulipanowe to szybko rosnące drzewo, znane z dużych, przypominających tulipany kwiatów. Wymaga pełnego słońca i dobrze przepuszczalnej gleby."
     },
     "de": {
       "common_name": "Tulpenbaum",
-      "description": "Liriodendron tulipifera ist ein großer Laubbaum aus dem Osten Nordamerikas. Er hat auffällige tulpenförmige Blüten und wächst sehr hoch. Bevorzugt sonnige Standorte und tiefgründigen Boden."
+      "description": "Der Tulpenbaum ist ein schnell wachsender Baum, der für seine großen, tulpenähnlichen Blumen bekannt ist. Er gedeiht in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Tulipier de Virginie",
-      "description": "Liriodendron tulipifera est un grand arbre caduc originaire d'Amérique du Nord. Il est apprécié pour ses fleurs en forme de tulipe. Il pousse mieux en plein soleil dans un sol profond."
+      "common_name": "Tulipier",
+      "description": "Le Tulipier est un arbre à croissance rapide, connu pour ses grandes fleurs en forme de tulipe. Il prospère au soleil direct et dans un sol bien drainé."
     },
     "it": {
-      "common_name": "Albero dei tulipani",
-      "description": "Liriodendron tulipifera è un grande albero deciduo originario del Nord America orientale. Produce fiori simili a tulipani ed è a crescita rapida. Predilige pieno sole e terreno profondo."
+      "common_name": "Albero di tulipano",
+      "description": "L'albero di tulipano è una pianta a crescita rapida, nota per i suoi grandi fiori a forma di tulipano. Cresce bene al sole e in terreni ben drenati."
     },
     "es": {
-      "common_name": "Árbol tulípero",
-      "description": "Liriodendron tulipifera es un árbol caducifolio grande de América del Norte oriental. Destaca por sus flores en forma de tulipán. Crece mejor a pleno sol y en suelos bien drenados."
+      "common_name": "Árbol tulipán",
+      "description": "El árbol tulipán es un árbol de rápido crecimiento conocido por sus grandes flores en forma de tulipán. Crece bien a pleno sol y en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Árvore-da-tulipa",
-      "description": "Liriodendron tulipifera é uma árvore caducifólia grande da América do Norte. Possui flores em forma de tulipa e crescimento rápido. Prefere sol pleno e solo profundo."
+      "common_name": "Árvore de tulipa",
+      "description": "A árvore de tulipa é uma árvore de crescimento rápido conhecida por suas grandes flores em forma de tulipa. Ela cresce bem sob luz solar direta e solo bem drenado."
     },
     "ar": {
       "common_name": "شجرة التوليب",
-      "description": "Liriodendron tulipifera شجرة متساقطة الأوراق موطنها أمريكا الشمالية. تشتهر بأزهار تشبه التوليب. تنمو جيدًا في الشمس الكاملة والتربة العميقة."
+      "description": "شجرة التوليب هي شجرة سريعة النمو معروفة بأزهارها الكبيرة التي تشبه التوليب. تنمو بشكل جيد في الشمس الكاملة وفي التربة جيدة التصريف."
     },
     "hi": {
       "common_name": "ट्यूलिप वृक्ष",
-      "description": "Liriodendron tulipifera उत्तरी अमेरिका का एक बड़ा पर्णपाती वृक्ष है। इसमें ट्यूलिप जैसे फूल होते हैं। यह पूर्ण धूप और गहरी मिट्टी में अच्छी तरह बढ़ता है।"
+      "description": "ट्यूलिप वृक्ष एक तेजी से बढ़ने वाला वृक्ष है, जो अपनी बड़ी, ट्यूलिप जैसी फूलों के लिए प्रसिद्ध है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
       "common_name": "郁金香树",
-      "description": "Liriodendron tulipifera 原产于北美东部，是一种大型落叶树。因郁金香状花朵而得名。适合在全日照和排水良好的土壤中生长。"
+      "description": "郁金香树是一种生长快速的树木，因其大如郁金香的花朵而闻名。它在全日照和排水良好的土壤中茁壮成长。"
     },
     "ja": {
-      "common_name": "ユリノキ",
-      "description": "Liriodendron tulipifera は北アメリカ原産の落葉高木です。チューリップ形の花が特徴です。日当たりと深い土壌を好みます。"
+      "common_name": "チューリップツリー",
+      "description": "チューリップツリーは、急速に成長する木で、大きなチューリップのような花で知られています。完全な日光と排水の良い土壌で育ちます。"
     },
     "ko": {
-      "common_name": "튤립나무",
-      "description": "Liriodendron tulipifera 는 북미 원산의 큰 낙엽수입니다. 튤립 모양의 꽃이 특징입니다. 햇볕이 잘 드는 깊은 토양에서 잘 자랍니다."
+      "common_name": "튤립 나무",
+      "description": "튤립 나무는 빠르게 자라는 나무로, 큰 튤립 모양의 꽃으로 유명합니다. 완전한 햇빛과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://plants.usda.gov/home/plantProfile?symbol=LITU",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a437",
-      "https://extension.psu.edu/tuliptree"
+      "https://www.rhs.org.uk/plants/tulip-tree",
+      "https://www.bhg.com/gardening/pests-insects-diseases/tulip-tree-care/"
     ]
   }
 }

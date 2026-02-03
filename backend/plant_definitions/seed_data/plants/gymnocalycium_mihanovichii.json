@@ -1,20 +1,21 @@
 {
   "external_id": "gymnocalycium_mihanovichii",
-  "name": "Moon cactus",
+  "name": "Gymnocalycium mihanovichii",
   "latin": "Gymnocalycium mihanovichii",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect sun",
-          "pl": "Jasne pośrednie",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Ensoleillé",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Bien drainé",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Pouca água",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "물 적게"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "25-30°C",
+          "pl": "25-30°C",
+          "de": "25-30°C",
+          "fr": "25-30°C",
+          "it": "25-30°C",
+          "es": "25-30°C",
+          "pt": "25-30°C",
+          "ar": "25-30°C",
+          "hi": "25-30°C",
+          "zh": "25-30°C",
+          "ja": "25-30°C",
+          "ko": "25-30°C"
         }
       }
     },
@@ -124,14 +125,14 @@
       "value": {
         "text": {
           "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम नमी",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
           "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,13 +162,13 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growth",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
@@ -175,63 +176,100 @@
           "ko": "느린 성장"
         }
       }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
+        }
+      }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Moon cactus",
-      "description": "Gymnocalycium mihanovichii is a small South American cactus often grown as a houseplant. It prefers bright light, sparse watering, and well-draining soil. The plant grows slowly and is well suited to dry indoor conditions."
+      "common_name": "Moon Cactus",
+      "description": "Gymnocalycium mihanovichii, also known as the Moon Cactus, is a small, colorful cactus native to South America. It is known for its vibrant top, which can be red, pink, yellow, or orange."
     },
     "pl": {
-      "common_name": "Kaktus księżycowy",
-      "description": "Gymnocalycium mihanovichii to niewielki kaktus pochodzący z Ameryki Południowej. Wymaga jasnego stanowiska, rzadkiego podlewania i bardzo przepuszczalnego podłoża. Dobrze radzi sobie w suchych warunkach domowych."
+      "common_name": "Kaktus Księżycowy",
+      "description": "Gymnocalycium mihanovichii, znany także jako kaktus księżycowy, to mały, kolorowy kaktus pochodzący z Ameryki Południowej. Charakteryzuje się jaskrawą górną częścią, która może być czerwona, różowa, żółta lub pomarańczowa."
     },
     "de": {
       "common_name": "Mondkaktus",
-      "description": "Gymnocalycium mihanovichii ist ein kleiner Kaktus aus Südamerika. Er bevorzugt helles Licht, wenig Wasser und ein gut durchlässiges Substrat. Die Art wächst langsam und eignet sich für trockene Wohnräume."
+      "description": "Gymnocalycium mihanovichii, auch als Mondkaktus bekannt, ist ein kleiner, bunter Kaktus, der in Südamerika heimisch ist. Er zeichnet sich durch seinen lebendigen oberen Teil aus, der rot, rosa, gelb oder orange sein kann."
     },
     "fr": {
-      "common_name": "Cactus lune",
-      "description": "Gymnocalycium mihanovichii est un petit cactus originaire d’Amérique du Sud. Il apprécie une lumière vive, peu d’arrosage et un sol bien drainé. Sa croissance est lente et il tolère bien l’air sec."
+      "common_name": "Cactus de Lune",
+      "description": "Gymnocalycium mihanovichii, également connu sous le nom de cactus de lune, est un petit cactus coloré originaire d'Amérique du Sud. Il est connu pour sa partie supérieure vibrante, qui peut être rouge, rose, jaune ou orange."
     },
     "it": {
-      "common_name": "Cactus luna",
-      "description": "Gymnocalycium mihanovichii è un piccolo cactus sudamericano. Richiede luce intensa, annaffiature limitate e terreno molto drenante. Cresce lentamente ed è adatto agli ambienti interni asciutti."
+      "common_name": "Cactus della Luna",
+      "description": "Gymnocalycium mihanovichii, noto anche come cactus della luna, è un piccolo cactus colorato originario del Sud America. È noto per la sua parte superiore vibrante, che può essere rossa, rosa, gialla o arancione."
     },
     "es": {
-      "common_name": "Cactus luna",
-      "description": "Gymnocalycium mihanovichii es un cactus pequeño originario de Sudamérica. Necesita luz brillante, riego escaso y un sustrato bien drenado. Su crecimiento es lento y tolera bien el ambiente seco."
+      "common_name": "Cactus Luna",
+      "description": "Gymnocalycium mihanovichii, también conocido como cactus luna, es un pequeño cactus colorido originario de América del Sur. Es conocido por su parte superior vibrante, que puede ser roja, rosa, amarilla o naranja."
     },
     "pt": {
-      "common_name": "Cacto-lua",
-      "description": "Gymnocalycium mihanovichii é um pequeno cacto da América do Sul. Prefere luz intensa, pouca água e solo bem drenado. Tem crescimento lento e adapta-se bem a ambientes internos secos."
+      "common_name": "Cacto Lua",
+      "description": "Gymnocalycium mihanovichii, também conhecido como cacto lua, é um pequeno cacto colorido nativo da América do Sul. É conhecido por sua parte superior vibrante, que pode ser vermelha, rosa, amarela ou laranja."
     },
     "ar": {
       "common_name": "صبار القمر",
-      "description": "Gymnocalycium mihanovichii صبار صغير موطنه أمريكا الجنوبية. يحتاج إلى ضوء ساطع وري محدود وتربة جيدة التصريف. ينمو ببطء ويتحمل الظروف الجافة داخل المنازل."
+      "description": "Gymnocalycium mihanovichii، المعروف أيضًا باسم صبار القمر، هو صبار صغير وملون موطنه أمريكا الجنوبية. يعرف بجزئه العلوي النابض بالحياة، الذي يمكن أن يكون أحمر أو ورديًا أو أصفر أو برتقاليًا."
     },
     "hi": {
-      "common_name": "मून कैक्टस",
-      "description": "Gymnocalycium mihanovichii दक्षिण अमेरिका का एक छोटा कैक्टस है। इसे तेज रोशनी, कम पानी और अच्छी जल निकासी वाली मिट्टी चाहिए। इसकी वृद्धि धीमी होती है और यह सूखे वातावरण में अच्छा रहता है।"
+      "common_name": "चाँद का कैक्टस",
+      "description": "Gymnocalycium mihanovichii, जिसे चाँद का कैक्टस भी कहा जाता है, एक छोटा और रंगीन कैक्टस है जो दक्षिण अमेरिका का मूल निवासी है। यह अपनी जीवंत ऊपरी सतह के लिए जाना जाता है, जो लाल, गुलाबी, पीला या नारंगी हो सकती है।"
     },
     "zh": {
       "common_name": "月亮仙人掌",
-      "description": "Gymnocalycium mihanovichii 是一种原产于南美的小型仙人掌。它需要明亮光照、少量浇水和良好排水的土壤。生长缓慢，适合干燥的室内环境。"
+      "description": "Gymnocalycium mihanovichii，也被称为月亮仙人掌，是一种小型多彩的仙人掌，原产于南美洲。它以其生动的顶部而闻名，颜色可以是红色、粉色、黄色或橙色。"
     },
     "ja": {
-      "common_name": "ムーンカクタス",
-      "description": "Gymnocalycium mihanovichii は南米原産の小型サボテンです。明るい光と控えめな水やり、水はけの良い土を好みます。成長は遅く、乾燥した室内環境に適しています。"
+      "common_name": "月のサボテン",
+      "description": "Gymnocalycium mihanovichii、別名月のサボテンは、南アメリカ原産の小さくてカラフルなサボテンです。鮮やかな上部が特徴で、赤、ピンク、黄色、オレンジのいずれかの色を持っています。"
     },
     "ko": {
-      "common_name": "문 선인장",
-      "description": "Gymnocalycium mihanovichii는 남아메리카 원산의 작은 선인장입니다. 밝은 빛과 적은 물, 배수가 좋은 토양을 선호합니다. 성장 속도가 느리고 건조한 실내 환경에 잘 적응합니다."
+      "common_name": "달빛 선인장",
+      "description": "Gymnocalycium mihanovichii, 달빛 선인장으로도 알려진 이 선인장은 남미 원산지의 작은 다채로운 선인장입니다. 그 상단은 빨강, 분홍, 노랑 또는 오렌지 색상으로 생동감 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/177807/gymnocalycium-mihanovichii/details",
-      "https://www.cactus-art.biz/schede/GYMNOCALYCIUM/Gymnocalycium_mihanovichii/Gymnocalycium_mihanovichii.htm",
-      "https://plants.ces.ncsu.edu/plants/gymnocalycium-mihanovichii/"
+      "https://www.rhs.org.uk/plants/3708/gymnocalycium-mihanovichii",
+      "https://www.gardenia.net/plant/gymnocalycium-mihanovichii"
     ]
   }
 }

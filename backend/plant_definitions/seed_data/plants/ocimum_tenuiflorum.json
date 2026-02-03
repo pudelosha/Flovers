@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高",
-          "ko": "높음"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "壌土",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "22-30°C",
-          "pl": "22-30°C",
-          "de": "22-30°C",
-          "fr": "22-30°C",
-          "it": "22-30°C",
-          "es": "22-30°C",
-          "pt": "22-30°C",
-          "ar": "22-30°C",
-          "hi": "22-30°C",
-          "zh": "22-30°C",
-          "ja": "22-30°C",
-          "ko": "22-30°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Yes, toxic to pets",
+          "pl": "Tak, toksyczna dla zwierząt",
+          "de": "Ja, giftig für Haustiere",
+          "fr": "Oui, toxique pour les animaux",
+          "it": "Sì, tossica per gli animali",
+          "es": "Sí, tóxica para mascotas",
+          "pt": "Sim, tóxica para animais",
+          "ar": "نعم، سامة للحيوانات الأليفة",
+          "hi": "हां, पालतू के लिए जहरीला",
+          "zh": "是的，对宠物有毒",
+          "ja": "はい、ペットに有毒",
+          "ko": "네, 애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाली",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠르게 성장하는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرा पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Holy Basil",
-      "description": "Ocimum tenuiflorum, commonly known as Holy Basil or Tulsi, is a fragrant herb native to India. It is revered in many cultures for its medicinal properties and is often used in herbal teas."
+      "description": "Ocimum tenuiflorum, known as Holy Basil or Tulsi, is an aromatic plant often used in culinary and medicinal contexts. It thrives in warm conditions with plenty of sunlight."
     },
     "pl": {
-      "common_name": "Bazylia święta",
-      "description": "Ocimum tenuiflorum, znana również jako Bazylia Święta lub Tulsi, to pachnąca roślina pochodząca z Indii. Jest ceniona w wielu kulturach za swoje właściwości lecznicze i często stosowana w herbatkach ziołowych."
+      "common_name": "Bazylia Święta",
+      "description": "Ocimum tenuiflorum, znana jako Bazylia Święta lub Tulsi, jest rośliną aromatyczną, często używaną w kulinariach i medycynie. Dobrze rośnie w ciepłych warunkach z dużą ilością światła."
     },
     "de": {
-      "common_name": "Heilige Basilikum",
-      "description": "Ocimum tenuiflorum, auch bekannt als Heiliges Basilikum oder Tulsi, ist ein duftendes Kraut, das in Indien heimisch ist. Es wird in vielen Kulturen für seine heilenden Eigenschaften geschätzt und oft in Kräutertees verwendet."
+      "common_name": "Heiliges Basilikum",
+      "description": "Ocimum tenuiflorum, bekannt als Heiliges Basilikum oder Tulsi, ist eine aromatische Pflanze, die häufig in der Küche und Medizin verwendet wird. Sie gedeiht in warmen Bedingungen mit viel Sonnenlicht."
     },
     "fr": {
       "common_name": "Basilic Sacré",
-      "description": "Ocimum tenuiflorum, connu sous le nom de Basilic Sacré ou Tulsi, est une herbe parfumée originaire d'Inde. Elle est vénérée dans de nombreuses cultures pour ses propriétés médicinales et est souvent utilisée dans les tisanes."
+      "description": "Ocimum tenuiflorum, connu sous le nom de Basilic Sacré ou Tulsi, est une plante aromatique souvent utilisée en cuisine et en médecine. Elle pousse bien dans des conditions chaudes avec beaucoup de soleil."
     },
     "it": {
       "common_name": "Basilico Sacro",
-      "description": "Ocimum tenuiflorum, conosciuto come Basilico Sacro o Tulsi, è una pianta aromatica originaria dell'India. È venerata in molte culture per le sue proprietà medicinali ed è spesso utilizzata nelle tisane."
+      "description": "Ocimum tenuiflorum, conosciuto come Basilico Sacro o Tulsi, è una pianta aromatica spesso utilizzata in cucina e in medicina. Cresce bene in condizioni calde con molta luce solare."
     },
     "es": {
       "common_name": "Albahaca Sagrada",
-      "description": "Ocimum tenuiflorum, conocida como Albahaca Sagrada o Tulsi, es una planta fragante originaria de la India. Es venerada en muchas culturas por sus propiedades medicinales y se utiliza comúnmente en tés herbales."
+      "description": "Ocimum tenuiflorum, conocido como Albahaca Sagrada o Tulsi, es una planta aromática que se utiliza con frecuencia en la cocina y la medicina. Crece bien en condiciones cálidas con mucha luz solar."
     },
     "pt": {
       "common_name": "Manjericão Sagrado",
-      "description": "Ocimum tenuiflorum, conhecido como Manjericão Sagrado ou Tulsi, é uma planta aromática nativa da Índia. É venerado em muitas culturas por suas propriedades medicinais e é frequentemente utilizado em chás de ervas."
+      "description": "Ocimum tenuiflorum, conhecido como Manjericão Sagrado ou Tulsi, é uma planta aromática frequentemente usada na culinária e medicina. Cresce bem em condições quentes com muita luz solar."
     },
     "ar": {
       "common_name": "ريحان مقدس",
-      "description": "Ocimum tenuiflorum، المعروف بالريحان المقدس أو التولسي، هو نبات عطري موطنه الهند. يُعتبر مقدسًا في العديد من الثقافات بسبب خصائصه الطبية وغالبًا ما يستخدم في شاي الأعشاب."
+      "description": "Ocimum tenuiflorum، المعروف بالريحان المقدس أو تولسي، هو نبات عطري يستخدم في الطهي والطب. يزدهر في الظروف الدافئة مع الكثير من ضوء الشمس."
     },
     "hi": {
-      "common_name": "तुलसी",
-      "description": "Ocimum tenuiflorum, जिसे तुलसी के नाम से भी जाना जाता है, भारत का एक सुगंधित पौधा है। यह अपनी औषधीय गुणों के लिए कई संस्कृतियों में पूज्य है और अक्सर हर्बल चाय में उपयोग किया जाता है."
+      "common_name": "पवित्र तुलसी",
+      "description": "Ocimum tenuiflorum, जिसे पवित्र तुलसी के नाम से जाना जाता है, एक सुगंधित पौधा है जिसका उपयोग रसोई और चिकित्सा में किया जाता है। यह गर्म परिस्थितियों में अच्छी तरह से बढ़ता है और बहुत अधिक सूर्य प्रकाश की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "神圣罗勒",
-      "description": "Ocimum tenuiflorum，通常称为神圣罗勒或图尔西，是一种原产于印度的芳香草本植物。它因其药用价值而在许多文化中受到尊敬，常用于草药茶中。"
+      "common_name": "圣罗勒",
+      "description": "Ocimum tenuiflorum，称为圣罗勒或图尔西，是一种芳香植物，常用于烹饪和药用。它在温暖的环境中生长良好，且需要充足的阳光。"
     },
     "ja": {
       "common_name": "ホーリーバジル",
-      "description": "Ocimum tenuiflorum、一般にホーリーバジルまたはトゥルシと呼ばれるこの植物は、インド原産の芳香植物です。多くの文化で薬用効果が評価され、ハーブティーにしばしば使用されます。"
+      "description": "Ocimum tenuiflorum、ホーリーバジルまたはトゥルシとして知られ、料理や医学でよく使われる香りの良い植物です。暖かい環境で十分な日光を必要とします。"
     },
     "ko": {
       "common_name": "성스러운 바질",
-      "description": "Ocimum tenuiflorum, 일반적으로 성스러운 바질 또는 툴시라고 알려진 이 식물은 인도 원산의 향기로운 풀입니다. 그 약용 효과로 많은 문화에서 존경받으며, 허브 차에 자주 사용됩니다."
+      "description": "Ocimum tenuiflorum, 성스러운 바질 또는 툴시로 알려져 있으며, 주로 요리와 약용에 사용되는 향기로운 식물입니다. 따뜻한 환경에서 잘 자라며 많은 햇빛이 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com",
-      "https://www.herbalists.com"
+      "https://www.gardeningknowhow.com/edible/herbs/hbgen/holy-basil.htm",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/holy-basil/"
     ]
   }
 }

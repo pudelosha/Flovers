@@ -1,17 +1,18 @@
 {
   "external_id": "cymbalaria_muralis",
-  "name": "Ivy-leaved toadflax",
+  "name": "Kenilworth Ivy",
   "latin": "Cymbalaria muralis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "cymbalaria_muralis.jpg",
   "image_thumb": "cymbalaria_muralis.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Drenante",
-          "es": "Drenante",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकास",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 좋음"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土壌",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular",
-          "pl": "Regularne",
-          "de": "Regelmäßig",
-          "fr": "Régulier",
-          "it": "Regolare",
-          "es": "Regular",
-          "pt": "Regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
+          "en": "Water regularly",
+          "pl": "Podlewaj regularnie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regar regularmente",
+          "ar": "الري بانتظام",
+          "hi": "नियमित रूप से पानी दें",
           "zh": "定期浇水",
-          "ja": "定期",
-          "ko": "규칙적"
+          "ja": "定期的に水やり",
+          "ko": "정기적으로 물주기"
         }
       }
     },
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -94,9 +95,9 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "简单",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool–mild",
-          "pl": "Chłodno",
-          "de": "Kühl",
-          "fr": "Frais",
-          "it": "Fresco",
-          "es": "Fresco",
-          "pt": "Fresco",
-          "ar": "معتدل",
-          "hi": "हल्का ठंडा",
-          "zh": "凉爽",
-          "ja": "涼しい",
-          "ko": "서늘함"
+          "en": "15-22°C",
+          "pl": "15-22°C",
+          "de": "15-22°C",
+          "fr": "15-22°C",
+          "it": "15-22°C",
+          "es": "15-22°C",
+          "pt": "15-22°C",
+          "ar": "15-22°C",
+          "hi": "15-22°C",
+          "zh": "15-22°C",
+          "ja": "15-22°C",
+          "ko": "15-22°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "普通",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Trailing",
-          "pl": "Płożąca",
-          "de": "Kriechend",
-          "fr": "Retombante",
-          "it": "Ricadente",
-          "es": "Rastrera",
-          "pt": "Rasteira",
-          "ar": "زاحفة",
-          "hi": "फैलने वाली",
-          "zh": "蔓生",
-          "ja": "匍匐性",
-          "ko": "포복형"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज बढ़ने वाला",
+          "zh": "生长快速",
+          "ja": "速い成長",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Ivy-leaved toadflax",
-      "description": "Cymbalaria muralis is a low-growing perennial often found on walls and rocky sites. It prefers partial sun and evenly moist, well-drained soil. The plant spreads gently by trailing stems."
+      "common_name": "Kenilworth Ivy",
+      "description": "Cymbalaria muralis is a fast-growing, non-toxic plant native to Europe. It is well-suited for containers and hanging baskets."
     },
     "pl": {
-      "common_name": "Cymbalaria murowa",
-      "description": "Cymbalaria muralis to niska bylina rosnąca na murach i skałach. Lubi półcień oraz umiarkowanie wilgotną, przepuszczalną glebę. Rozrasta się płożącymi pędami."
+      "common_name": "Bluszcz Kenilwortha",
+      "description": "Cymbalaria muralis to szybko rosnąca roślina, nietoksyczna, pochodząca z Europy. Jest idealna do pojemników i koszy wiszących."
     },
     "de": {
-      "common_name": "Mauer-Zimbelkraut",
-      "description": "Cymbalaria muralis ist eine niedrig wachsende Staude für Mauern und Steinfugen. Sie bevorzugt Halbschatten und gleichmäßig feuchten Boden. Die Pflanze wächst kriechend."
+      "common_name": "Kenilworth-Efeu",
+      "description": "Cymbalaria muralis ist eine schnell wachsende, ungiftige Pflanze aus Europa. Sie eignet sich gut für Container und Hängekörbe."
     },
     "fr": {
-      "common_name": "Cymbalaire des murailles",
-      "description": "Cymbalaria muralis est une vivace tapissante des murs et rocailles. Elle apprécie la mi-ombre et un sol drainant et frais. Sa croissance est retombante."
+      "common_name": "Lierre de Kenilworth",
+      "description": "Cymbalaria muralis est une plante à croissance rapide, non toxique, originaire d'Europe. Elle est idéale pour les pots et les paniers suspendus."
     },
     "it": {
-      "common_name": "Ciombolino murale",
-      "description": "Cymbalaria muralis è una perenne tappezzante che cresce su muri e rocce. Preferisce mezz'ombra e terreno ben drenato. Si espande con fusti ricadenti."
+      "common_name": "Edera di Kenilworth",
+      "description": "Cymbalaria muralis è una pianta a crescita rapida, non tossica, originaria dell'Europa. È adatta per contenitori e cesti sospesi."
     },
     "es": {
-      "common_name": "Cimbalaria",
-      "description": "Cymbalaria muralis es una planta perenne rastrera de muros y rocas. Prefiere semisombra y suelo húmedo pero drenante. Crece formando tapices."
+      "common_name": "Hiedra de Kenilworth",
+      "description": "Cymbalaria muralis es una planta de rápido crecimiento y no tóxica originaria de Europa. Es ideal para macetas y cestas colgantes."
     },
     "pt": {
-      "common_name": "Cimbalária",
-      "description": "Cymbalaria muralis é uma planta perene rasteira comum em muros. Gosta de meia-sombra e solo bem drenado e húmido. O crescimento é pendente."
+      "common_name": "Hera de Kenilworth",
+      "description": "Cymbalaria muralis é uma planta de crescimento rápido e não tóxica, originária da Europa. Ideal para vasos e cestos suspensos."
     },
     "ar": {
-      "common_name": "سيمبالاريا الجدران",
-      "description": "نبات Cymbalaria muralis معمر منخفض ينمو على الجدران والصخور. يفضل الشمس الجزئية وتربة جيدة التصريف ورطبة باعتدال. ينتشر بسيقان زاحفة."
+      "common_name": "عنبية كينيلورث",
+      "description": "Cymbalaria muralis هي نبات سريع النمو وغير سام موطنه أوروبا. مناسب للأواني والسلال المعلقة."
     },
     "hi": {
-      "common_name": "आइवी-लीव्ड टोडफ्लैक्स",
-      "description": "Cymbalaria muralis एक छोटी बहुवर्षीय पौधा है जो दीवारों पर उगता है। इसे आंशिक धूप और अच्छी जल निकासी वाली नम मिट्टी पसंद है। यह फैलने वाली वृद्धि दिखाता है।"
+      "common_name": "केनिलवर्थ आर्ची",
+      "description": "Cymbalaria muralis एक तेजी से बढ़ने वाला, गैर विषैला पौधा है जो यूरोप का मूल निवासी है। यह कंटेनरों और लटकते हुए बास्केट के लिए उपयुक्त है।"
     },
     "zh": {
-      "common_name": "常春藤叶蝇子草",
-      "description": "Cymbalaria muralis 是一种低矮的多年生植物，常生长在墙壁和岩石上。它喜半日照和排水良好的湿润土壤。植株呈蔓生生长。"
+      "common_name": "肯尼尔沃斯常春藤",
+      "description": "Cymbalaria muralis 是一种快速生长、无毒的植物，原产于欧洲。它非常适合容器和悬挂篮子。"
     },
     "ja": {
-      "common_name": "ツタバウンラン",
-      "description": "Cymbalaria muralis は壁や岩の隙間に育つ多年草です。半日陰と水はけの良い湿った土を好みます。茎は匍匐して広がります。"
+      "common_name": "ケニルワースアイビー",
+      "description": "Cymbalaria muralis はヨーロッパ原産の速成長の無毒な植物です。コンテナやハンギングバスケットに最適です。"
     },
     "ko": {
-      "common_name": "담쟁이운란",
-      "description": "Cymbalaria muralis는 벽과 바위 틈에서 자라는 다년생 식물입니다. 반그늘과 배수가 좋은 촉촉한 토양을 선호합니다. 포복형으로 퍼집니다."
+      "common_name": "케닐워스 아이비",
+      "description": "Cymbalaria muralis는 유럽 원산지의 빠르게 자라는 비독성 식물입니다. 화분과 행잉 바구니에 적합합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/4333/cymbalaria-muralis/details",
-      "https://plants.ces.ncsu.edu/plants/cymbalaria-muralis/",
-      "https://www.gardenersworld.com/plants/cymbalaria-muralis/"
+      "https://www.rhs.org.uk/advice/profile?pid=559",
+      "https://www.gardenia.net/plant/cymbalaria-muralis"
     ]
   }
 }

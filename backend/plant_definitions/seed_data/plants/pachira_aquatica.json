@@ -1,6 +1,6 @@
 {
   "external_id": "pachira_aquatica",
-  "name": "Money Tree",
+  "name": "Pachira aquatica",
   "latin": "Pachira aquatica",
   "sun": "medium",
   "water": "medium",
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ja": "中くらいの光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "良好的排水土壤",
-          "ja": "良好な排水性の土",
-          "ko": "배수가 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水性良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम जलवायु",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24 درجة مئوية",
-          "hi": "18–24 डिग्री सेल्सियस",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Medium humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Luftfeuchtigkeit",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "中等湿度",
-          "ja": "中程度の湿度",
-          "ko": "중간 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中くらい",
+          "ko": "중간"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैले",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Slightly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Lentamente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ा विषैला",
+          "zh": "轻微有毒",
+          "ja": "少し毒性あり",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to moderate",
-          "pl": "Wolny do średniego",
-          "de": "Langsam bis mäßig",
-          "fr": "Lent à modéré",
-          "it": "Lento a moderato",
-          "es": "Lento a moderado",
-          "pt": "Lento a moderado",
-          "ar": "بطيء إلى معتدل",
-          "hi": "धीमा से मध्यम",
-          "zh": "慢到中等",
-          "ja": "遅いから中程度",
-          "ko": "느림에서 보통"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水やりすぎを避ける",
+          "ko": "과습을 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Money Tree",
-      "description": "Pachira aquatica, or Money Tree, is native to Central and South America. It is known for its braided trunk and lush green leaves."
+      "description": "Pachira aquatica is a popular indoor plant. It is known for its tolerance to various conditions and easy care."
     },
     "pl": {
-      "common_name": "Drzewo pieniędzy",
-      "description": "Pachira aquatica, znana jako Drzewo Pieniędzy, pochodzi z Ameryki Środkowej i Południowej. Charakteryzuje się splatanym pniem i bujnymi zielonymi liśćmi."
+      "common_name": "Drzewo szczęścia",
+      "description": "Pachira aquatica to popularna roślina doniczkowa. Znana jest z tolerancji na różne warunki i łatwej pielęgnacji."
     },
     "de": {
-      "common_name": "Geldbaum",
-      "description": "Pachira aquatica, auch bekannt als Geldbaum, ist in Mittel- und Südamerika beheimatet. Er zeichnet sich durch einen geflochtenen Stamm und üppige grüne Blätter aus."
+      "common_name": "Glückskastanie",
+      "description": "Pachira aquatica ist eine beliebte Zimmerpflanze. Sie ist bekannt für ihre Toleranz gegenüber verschiedenen Bedingungen und einfache Pflege."
     },
     "fr": {
       "common_name": "Arbre à monnaie",
-      "description": "Pachira aquatica, ou Arbre à Monnaie, est originaire d'Amérique centrale et du Sud. Il est connu pour son tronc tressé et ses feuilles vertes luxuriantes."
+      "description": "Pachira aquatica est une plante d'intérieur populaire. Elle est connue pour sa tolérance à diverses conditions et son entretien facile."
     },
     "it": {
       "common_name": "Albero della moneta",
-      "description": "Pachira aquatica, noto come Albero della Moneta, è originario dell'America Centrale e Meridionale. È famoso per il tronco intrecciato e le foglie verdi lussureggianti."
+      "description": "Pachira aquatica è una pianta d'interno popolare. È conosciuta per la sua tolleranza a diverse condizioni e la sua facile manutenzione."
     },
     "es": {
       "common_name": "Árbol del dinero",
-      "description": "Pachira aquatica, o Árbol del Dinero, es originario de América Central y del Sur. Es conocido por su tronco trenzado y sus hojas verdes y exuberantes."
+      "description": "Pachira aquatica es una planta de interior popular. Es conocida por su tolerancia a diversas condiciones y su cuidado fácil."
     },
     "pt": {
       "common_name": "Árvore da fortuna",
-      "description": "Pachira aquatica, conhecida como Árvore da Fortuna, é nativa da América Central e do Sul. É famosa pelo tronco trançado e pelas folhas verdes exuberantes."
+      "description": "Pachira aquatica é uma planta popular para interiores. É conhecida pela sua tolerância a várias condições e fácil cuidado."
     },
     "ar": {
       "common_name": "شجرة المال",
-      "description": "Pachira aquatica، أو شجرة المال، هي نبتة من أمريكا الوسطى والجنوبية. تشتهر بجذعها المضفر وأوراقها الخضراء الكثيفة."
+      "description": "Pachira aquatica هي نبتة داخلية شهيرة. تعرف بقدرتها على التحمل في ظروف مختلفة ورعايتها السهلة."
     },
     "hi": {
-      "common_name": "पैचिरा ऑक्वेटिका",
-      "description": "पैचिरा ऑक्वेटिका, जिसे मनी ट्री के नाम से जाना जाता है, मध्य और दक्षिणी अमेरिका का मूल निवासी है। इसका तना बिंधारा हुआ होता है और इसके पत्ते हरे और घने होते हैं।"
+      "common_name": "पैचिरा एक्वाटिका",
+      "description": "Pachira aquatica एक लोकप्रिय इनडोर पौधा है। यह विभिन्न परिस्थितियों में सहनशीलता और आसान देखभाल के लिए जाना जाता है।"
     },
     "zh": {
       "common_name": "发财树",
-      "description": "发财树（Pachira aquatica）原产于中美洲和南美洲。以其编织的树干和郁郁葱葱的绿色叶子而闻名。"
+      "description": "Pachira aquatica 是一种流行的室内植物。它因适应各种环境和易于护理而闻名。"
     },
     "ja": {
       "common_name": "マネーツリー",
-      "description": "パキラ・アクアティカ（Pachira aquatica）は中央アメリカおよび南アメリカ原産です。編み込まれた幹と豊かな緑の葉で知られています。"
+      "description": "Pachira aquatica は人気のある室内植物です。さまざまな条件に耐え、手入れが簡単であることで知られています。"
     },
     "ko": {
       "common_name": "머니 트리",
-      "description": "Pachira aquatica, 또는 머니 트리는 중미와 남미가 원산지입니다. 땋은 줄기와 풍성한 초록색 잎으로 잘 알려져 있습니다."
+      "description": "Pachira aquatica는 인기 있는 실내 식물입니다. 다양한 조건에 잘 적응하며 관리가 용이한 것으로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/pachira-aquatica-money-tree",
-      "https://www.rhs.org.uk/plants/pachira-aquatica"
+      "https://www.gardenia.net/plant/pachira-aquatica",
+      "https://www.rhs.org.uk/plants/101156/pachira-aquatica"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "albuca_spiralis",
-  "name": "Albuca Spiralis",
+  "name": "Frizzle Sizzle",
   "latin": "Albuca spiralis",
   "sun": "high",
   "water": "low",
@@ -10,11 +10,10 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -28,18 +27,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright direct sun",
-          "pl": "Jasne słońce",
-          "de": "Viel Sonne",
-          "fr": "Soleil vif",
-          "it": "Sole diretto",
-          "es": "Sol intenso",
-          "pt": "Sol forte",
-          "ar": "شمس قوية",
-          "hi": "तेज धूप",
-          "zh": "强光直射",
-          "ja": "強い日光",
-          "ko": "강한 햇빛"
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz brilhante",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
         }
       }
     },
@@ -47,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Fast draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "जलनिकास वाली मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 흙"
+          "en": "Gritty cactus mix",
+          "pl": "Podłoże do kaktusów",
+          "de": "Kakteenerde, durchlässig",
+          "fr": "Substrat cactus drainant",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactus",
+          "ar": "تربة صبارات جيدة",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "仙人掌颗粒土",
+          "ja": "サボテン用土",
+          "ko": "다육이 배양토"
         }
       }
     },
@@ -66,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlewanie",
-          "de": "Wenig gießen",
-          "fr": "Arrosage léger",
-          "it": "Poca acqua",
-          "es": "Riego escaso",
-          "pt": "Rega moderada",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめな水やり",
-          "ko": "적은 물주기"
+          "en": "Water when dry",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen wenn trocken",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega al secarse",
+          "pt": "Regue quando seco",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水",
+          "ko": "흙 마르면 물"
         }
       }
     },
@@ -85,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia trudność",
-          "de": "Mittlere Pflege",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–24°C",
-          "pl": "10–24°C",
-          "de": "10–24°C",
-          "fr": "10–24°C",
-          "it": "10–24°C",
-          "es": "10–24°C",
-          "pt": "10–24°C",
-          "ar": "10–24°م",
-          "hi": "10–24°C",
-          "zh": "10–24°C",
-          "ja": "10–24℃",
-          "ko": "10–24°C"
+          "en": "15–24°C indoors",
+          "pl": "15–24°C w domu",
+          "de": "15–24°C innen",
+          "fr": "15–24°C intérieur",
+          "it": "15–24°C in casa",
+          "es": "15–24°C interior",
+          "pt": "15–24°C interior",
+          "ar": "15–24°م داخلًا",
+          "hi": "15–24°C घर में",
+          "zh": "15–24°C 室内",
+          "ja": "室内15–24°C",
+          "ko": "실내 15–24°C"
         }
       }
     },
@@ -123,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Niedrige Feuchte",
-          "fr": "Faible humidité",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम नमी",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low to average",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis normal",
+          "fr": "Faible à normale",
+          "it": "Bassa-normale",
+          "es": "Baja a normal",
+          "pt": "Baixa a normal",
+          "ar": "منخفضة لمتوسطة",
+          "hi": "कम से सामान्य",
+          "zh": "偏低到一般",
+          "ja": "低め〜普通",
+          "ko": "낮음~보통"
         }
       }
     },
@@ -142,18 +141,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Harmful if eaten",
+          "pl": "Szkodliwa po zjedzeniu",
+          "de": "Schädlich bei Verzehr",
+          "fr": "Nocive si ingérée",
+          "it": "Nociva se ingerita",
+          "es": "Nociva si se ingiere",
+          "pt": "Nociva se ingerida",
+          "ar": "ضارة إذا أُكلت",
+          "hi": "खाने पर हानिकारक",
+          "zh": "误食有害",
+          "ja": "誤食は有害",
+          "ko": "먹으면 유해"
         }
       }
     },
@@ -161,77 +160,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow growing",
-          "pl": "Wolny wzrost",
-          "de": "Langsam wachsend",
-          "fr": "Croissance lente",
-          "it": "Crescita lenta",
-          "es": "Crecimiento lento",
-          "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "en": "Slow, bulbous",
+          "pl": "Wolny wzrost, cebula",
+          "de": "Langsam, Zwiebel",
+          "fr": "Lent, bulbeux",
+          "it": "Lenta, bulbosa",
+          "es": "Lento, bulboso",
+          "pt": "Lento, bulboso",
+          "ar": "بطيء، بصلي",
+          "hi": "धीमा, कंदीय",
+          "zh": "生长慢，球根",
+          "ja": "遅い・球根性",
+          "ko": "느림, 구근"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Bulb rot if wet",
+          "pl": "Gnije przy przelaniu",
+          "de": "Fäulnis bei Nässe",
+          "fr": "Pourriture si trop d'eau",
+          "it": "Marciume se bagnata",
+          "es": "Pudrición por exceso",
+          "pt": "Apodrece com excesso",
+          "ar": "تعفن مع كثرة الماء",
+          "hi": "ज्यादा पानी से सड़न",
+          "zh": "忌积水，易腐烂",
+          "ja": "過湿で腐りやすい",
+          "ko": "과습하면 썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional mites",
+          "pl": "Czasem przędziorki",
+          "de": "Gelegentlich Milben",
+          "fr": "Acariens parfois",
+          "it": "Acari occasionali",
+          "es": "Ácaros ocasionales",
+          "pt": "Ácaros ocasionais",
+          "ar": "عث أحيانًا",
+          "hi": "कभी-कभी माइट्स",
+          "zh": "偶见螨虫",
+          "ja": "まれにハダニ",
+          "ko": "가끔 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Frizzle Sizzle",
-      "description": "Albuca spiralis is a bulbous succulent native to South Africa known for its tightly curled leaves. It grows actively in cooler seasons and requires bright light to maintain leaf spirals. Overwatering can easily cause bulb rot."
+      "common_name": "Frizzle Sizzle (Corkscrew Albuca)",
+      "description": "Albuca spiralis is a bulbous succulent grown for its naturally curly leaves and scented yellow-green flowers. Give it bright light and a very fast-draining cactus/succulent mix. Water only after the soil dries; reduce watering strongly during summer dormancy."
     },
     "pl": {
-      "common_name": "Albuka spiralna",
-      "description": "Albuca spiralis to cebulowa roślina z Afryki Południowej o spiralnie skręconych liściach. Najlepiej rośnie w jasnym świetle i chłodniejszych porach roku. Nadmiar wody może prowadzić do gnicia cebuli."
+      "common_name": "Albuka spiralna (Frizzle Sizzle)",
+      "description": "Albuca spiralis to cebulowa roślina sukulentowa o charakterystycznie skręconych liściach i pachnących żółtozielonych kwiatach. Wymaga bardzo jasnego stanowiska i przepuszczalnego podłoża dla kaktusów/sukulentów. Podlewaj dopiero po wyschnięciu ziemi, a w okresie letniego spoczynku podlewanie mocno ogranicz."
     },
     "de": {
-      "common_name": "Korkenzieherpflanze",
-      "description": "Albuca spiralis ist eine zwiebelbildende Pflanze aus Südafrika mit spiraligen Blättern. Sie wächst aktiv in kühleren Monaten und benötigt viel Licht. Zu häufiges Gießen kann Fäulnis verursachen."
+      "common_name": "Korkenzieher-Albuca (Frizzle Sizzle)",
+      "description": "Albuca spiralis ist eine zwiebelbildende Sukkulente mit stark gekräuselten Blättern und duftenden gelbgrünen Blüten. Sie braucht sehr helles Licht und ein stark durchlässiges Kakteen-/Sukkulentensubstrat. Erst gießen, wenn das Substrat trocken ist, und in der Sommer-Ruhephase deutlich weniger gießen."
     },
     "fr": {
-      "common_name": "Plante tire-bouchon",
-      "description": "Albuca spiralis est une plante bulbeuse originaire d’Afrique du Sud aux feuilles en spirale. Elle pousse surtout pendant les saisons fraîches avec beaucoup de lumière. Un excès d’eau peut faire pourrir le bulbe."
+      "common_name": "Albuca spirale (Frizzle Sizzle)",
+      "description": "Albuca spiralis est une succulente bulbeuse aux feuilles naturellement en tire-bouchon et aux fleurs jaune-vert parfumées. Offrez une lumière vive et un substrat pour cactus très drainant. Arrosez seulement quand le substrat est sec et réduisez fortement l’arrosage pendant la dormance estivale."
     },
     "it": {
-      "common_name": "Albuca a spirale",
-      "description": "Albuca spiralis è una pianta bulbosa sudafricana con foglie arricciate. Cresce attivamente nei periodi più freschi e richiede luce intensa. L’eccesso d’acqua provoca facilmente marciumi."
+      "common_name": "Albuca a spirale (Frizzle Sizzle)",
+      "description": "Albuca spiralis è una succulenta bulbosa con foglie arricciate e fiori giallo-verdi profumati. Richiede molta luce e un terriccio per cactus/succulente ben drenante. Annaffia solo quando il terreno è asciutto e riduci molto l’acqua durante la dormienza estiva."
     },
     "es": {
-      "common_name": "Planta tirabuzón",
-      "description": "Albuca spiralis es una planta bulbosa de Sudáfrica con hojas en espiral. Prefiere luz intensa y crece en estaciones frescas. El riego excesivo puede causar pudrición."
+      "common_name": "Albuca espiral (Frizzle Sizzle)",
+      "description": "Albuca spiralis es una suculenta bulbosa con hojas en espiral y flores amarillo-verdosas perfumadas. Necesita luz muy brillante y un sustrato para cactus/suculentas de drenaje rápido. Riega solo cuando el sustrato se seque y reduce mucho el riego en la dormancia de verano."
     },
     "pt": {
-      "common_name": "Albuca espiral",
-      "description": "Albuca spiralis é uma planta bulbosa da África do Sul com folhas enroladas. Cresce melhor em clima fresco e luz forte. O excesso de água pode apodrecer o bulbo."
+      "common_name": "Albuca espiral (Frizzle Sizzle)",
+      "description": "Albuca spiralis é uma suculenta bulbosa com folhas naturalmente enroladas e flores amarelo-esverdeadas perfumadas. Precisa de luz bem forte e substrato para cactos/suculentas bem drenante. Regue apenas quando o substrato secar e reduza bastante a rega durante a dormência no verão."
     },
     "ar": {
-      "common_name": "نبات حلزوني",
-      "description": "Albuca spiralis نبات بصلي من جنوب أفريقيا بأوراق ملتفة. ينمو في الفصول الباردة ويحتاج ضوءًا قويًا. الري الزائد يسبب تعفن البصلة."
+      "common_name": "ألبوكا حلزونية (فريزل سيزل)",
+      "description": "Albuca spiralis نبات عصاري بصلي بأوراق ملتفة طبيعيًا وأزهار صفراء مائلة للأخضر ذات رائحة. يحتاج إلى ضوء قوي وتربة صبارات سريعة التصريف. اسقه فقط بعد جفاف التربة وقلل الري كثيرًا أثناء السكون الصيفي."
     },
     "hi": {
-      "common_name": "स्पाइरल एल्बुका",
-      "description": "Albuca spiralis दक्षिण अफ्रीका का एक बल्बनुमा पौधा है जिसकी पत्तियाँ मुड़ी होती हैं। यह ठंडे मौसम में बढ़ता है और तेज रोशनी चाहता है। अधिक पानी से सड़न हो सकती है।"
+      "common_name": "एल्बूका स्पाइरालिस (फ्रिज़ल सिज़ल)",
+      "description": "Albuca spiralis एक कंदीय सक्यूलेंट है जिसकी पत्तियाँ प्राकृतिक रूप से घुमावदार होती हैं और पीले-हरे सुगंधित फूल आते हैं। इसे तेज रोशनी और अच्छी जल-निकासी वाली कैक्टस/सक्यूलेंट मिट्टी दें। मिट्टी सूखने पर ही पानी दें और गर्मियों की सुप्तावस्था में पानी बहुत कम करें।"
     },
     "zh": {
-      "common_name": "卷叶弹簧草",
-      "description": "Albuca spiralis 原产于南非，是一种具有卷曲叶片的球根植物。它在凉爽季节生长，需要充足光照。浇水过多容易导致腐烂。"
+      "common_name": "螺旋天葱（Frizzle Sizzle）",
+      "description": "Albuca spiralis 是球根型多肉，叶片会自然卷曲，并能开带香味的黄绿色花。需要明亮光照与排水很快的仙人掌/多肉基质。土干透再浇水，夏季休眠期要大幅减少浇水。"
     },
     "ja": {
-      "common_name": "アルブカ・スピラリス",
-      "description": "Albuca spiralis は南アフリカ原産の球根植物で、葉がらせん状に巻きます。涼しい季節に成長し、強い光を必要とします。水の与えすぎに注意が必要です。"
+      "common_name": "アルブカ・スピラリス（フリズルシズル）",
+      "description": "Albuca spiralis は球根性の多肉で、くるくる巻く葉と香りのある黄緑色の花が特徴です。明るい光と水はけの良いサボテン用土が必要です。用土が乾いてから水やりし、夏の休眠期は水やりを大幅に減らします。"
     },
     "ko": {
-      "common_name": "알부카 스피랄리스",
-      "description": "Albuca spiralis는 남아프리카 원산의 구근 식물로 나선형 잎이 특징입니다. 서늘한 계절에 잘 자라며 강한 빛이 필요합니다. 물을 너무 많이 주면 썩을 수 있습니다."
+      "common_name": "알부카 스피랄리스 (프리즐 시즐)",
+      "description": "Albuca spiralis 는 구근성 다육으로 자연스러운 곱슬 잎과 향기 나는 황록색 꽃이 특징입니다. 밝은 빛과 배수가 좋은 다육/선인장용 흙이 필요합니다. 흙이 완전히 마른 뒤 물을 주고, 여름 휴면기에는 물주기를 크게 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/187845/albuca-spiralis/details",
-      "https://www.gardenersworld.com/plants/albuca-spiralis/",
-      "https://plants.ces.ncsu.edu/plants/albuca-spiralis/"
+      "https://www.rhs.org.uk/plants/73923/albuca-spiralis/details",
+      "https://www.thejunglecollective.com.au/albuca-spiralis-plant-care-tips/",
+      "https://soltech.com/products/corkscrew-albuca-care",
+      "https://www.ukhouseplants.com/plants/albuca-spiralis",
+      "https://www.thespruce.com/albuca-spiralis-care-guide-7975854"
     ]
   }
 }

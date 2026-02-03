@@ -1,23 +1,23 @@
 {
   "external_id": "peperomia_prostrata",
-  "name": "Peperomia prostrata",
+  "name": "String of Turtles",
   "latin": "Peperomia prostrata",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "green-plants",
     "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中くらいの光",
-          "ko": "중간광"
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka dla roślin aroidów",
-          "de": "Aroid-Mix",
-          "fr": "Mélange aroid",
-          "it": "Mix per aroidi",
-          "es": "Mezcla para aroides",
-          "pt": "Mistura para aroides",
-          "ar": "خليط أرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "阿罗伊混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 믹스"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "잘 배수"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "سقاية متوسطة",
-          "hi": "मध्यम पानी",
-          "zh": "中等浇水",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Medium moisture",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中級",
+          "ja": "中程度",
           "ko": "중간"
         }
       }
@@ -131,11 +131,11 @@
           "it": "Alta",
           "es": "Alta",
           "pt": "Alta",
-          "ar": "مرتفع",
+          "ar": "عالية",
           "hi": "उच्च",
-          "zh": "高湿",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
         }
       }
     },
@@ -151,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "असामान्य नहीं",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Creeping",
-          "pl": "Biegający",
-          "de": "Kriechend",
-          "fr": "Rampant",
-          "it": "Strisciante",
-          "es": "Rastrero",
-          "pt": "Crescimento rasteiro",
-          "ar": "زاحف",
-          "hi": "क्रीपिंग",
-          "zh": "爬行",
-          "ja": "這生長",
-          "ko": "기어가"
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il sovrannumero d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水をやりすぎないように",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "String of Turtles",
-      "description": "Peperomia prostrata, commonly known as String of Turtles, is a low-maintenance trailing plant. Its unique turtle-shell patterned leaves make it a popular choice for indoor gardeners."
+      "description": "Peperomia prostrata, also known as String of Turtles, is a small trailing plant with attractive round, variegated leaves. It thrives in bright indirect light and requires moderate watering."
     },
     "pl": {
-      "common_name": "Wąż Żółwi",
-      "description": "Peperomia prostrata, znana jako Wąż Żółwi, to roślina płożąca o unikalnych liściach w kształcie skorupki żółwia. Jest łatwa w pielęgnacji."
+      "common_name": "Sznur Żółwi",
+      "description": "Peperomia prostrata, znana jako Sznur Żółwi, to mała roślina pnąca o atrakcyjnych, okrągłych, zróżnicowanych liściach. Rośnie w jasnym, pośrednim świetle i wymaga umiarkowanego podlewania."
     },
     "de": {
       "common_name": "Schildkrötenkette",
-      "description": "Peperomia prostrata, auch Schildkrötenkette genannt, ist eine pflegeleichte Kletterpflanze. Ihre einzigartigen Blätter mit Schildkrötenmuster machen sie zu einer beliebten Zimmerpflanze."
+      "description": "Peperomia prostrata, auch bekannt als Schildkrötenkette, ist eine kleine kletternde Pflanze mit attraktiven, runden, gemusterten Blättern. Sie gedeiht bei indirektem Licht und benötigt mäßiges Gießen."
     },
     "fr": {
       "common_name": "Chaîne de Tortues",
-      "description": "Peperomia prostrata, surnommée Chaîne de Tortues, est une plante grimpante facile à entretenir. Ses feuilles à motif de coquille de tortue la rendent très prisée des jardiniers d'intérieur."
+      "description": "Peperomia prostrata, également connue sous le nom de Chaîne de Tortues, est une petite plante rampante aux feuilles rondes et variegées. Elle prospère sous une lumière indirecte et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Catena di Tartarughe",
-      "description": "Peperomia prostrata, conosciuta come Catena di Tartarughe, è una pianta rampicante di facile manutenzione. Le sue foglie con motivo a conchiglia di tartaruga sono molto apprezzate."
+      "description": "Peperomia prostrata, conosciuta anche come Catena di Tartarughe, è una piccola pianta rampicante con foglie rotonde e variegate. Cresce sotto luce indiretta e richiede un'irrigazione moderata."
     },
     "es": {
       "common_name": "Cadena de Tortugas",
-      "description": "Peperomia prostrata, conocida como Cadena de Tortugas, es una planta trepadora fácil de cuidar. Sus hojas con patrón de caparazón de tortuga la hacen popular entre los jardineros."
+      "description": "Peperomia prostrata, también conocida como Cadena de Tortugas, es una pequeña planta trepadora con hojas redondas y variegadas. Prospera con luz indirecta y requiere un riego moderado."
     },
     "pt": {
-      "common_name": "Cadeia de Tartarugas",
-      "description": "Peperomia prostrata, também conhecida como Cadeia de Tartarugas, é uma planta rasteira de fácil manutenção. Suas folhas com padrão de casca de tartaruga são muito apreciadas."
+      "common_name": "Corrente de Tartarugas",
+      "description": "Peperomia prostrata, também conhecida como Corrente de Tartarugas, é uma pequena planta rasteira com folhas redondas e variegadas. Ela prospera sob luz indireta e requer rega moderada."
     },
     "ar": {
       "common_name": "سلسلة السلاحف",
-      "description": "Peperomia prostrata، المعروفة بسلسلة السلاحف، هي نبات متسلق سهل العناية. أوراقها ذات النقش الذي يشبه قوقعة السلحفاة تجعلها محبوبة بين مزارعي النباتات."
+      "description": "Peperomia prostrata، والمعروفة أيضًا باسم سلسلة السلاحف، هي نبات صغير زاحف ذو أوراق مستديرة ومتنوعة. يزدهر في الضوء غير المباشر ويتطلب سقاية معتدلة."
     },
     "hi": {
-      "common_name": "टर्टल स्ट्रिंग",
-      "description": "Peperomia prostrata, जिसे टर्टल स्ट्रिंग कहा जाता है, एक आसान देखभाल वाली लताओं वाली पौधा है। इसके विशिष्ट कछुए के खोल जैसे पत्ते इसे लोकप्रिय बनाते हैं।"
+      "common_name": "कछुए की लड़ी",
+      "description": "Peperomia prostrata, जिसे कछुए की लड़ी के नाम से भी जाना जाता है, एक छोटा लटकता हुआ पौधा है जिसमें आकर्षक गोल और विविध पत्तियाँ होती हैं। यह मध्यम पानी के साथ उज्ज्वल अप्रत्यक्ष प्रकाश में उगता है।"
     },
     "zh": {
-      "common_name": "乌龟链",
-      "description": "Peperomia prostrata，通常称为乌龟链，是一种易于护理的爬藤植物。其独特的乌龟壳图案叶子使其在室内园艺中非常受欢迎。"
+      "common_name": "海龟链",
+      "description": "Peperomia prostrata，也叫海龟链，是一种小型的匍匐植物，具有吸引人的圆形和多色叶子。它喜欢明亮的间接光照，并需要适度浇水。"
     },
     "ja": {
       "common_name": "カメの鎖",
-      "description": "Peperomia prostrata、カメの鎖として知られるこの植物は、手入れが簡単な蔓性植物です。そのユニークな亀の甲羅模様の葉は、室内園芸家に人気です。"
+      "description": "Peperomia prostrata（カメの鎖）は、小さなつる性の植物で、丸い斑入りの葉が特徴です。明るい間接光の下で成長し、適度な水やりを必要とします。"
     },
     "ko": {
-      "common_name": "거북이 줄기",
-      "description": "Peperomia prostrata, 거북이 줄기로 알려진 이 식물은 손쉬운 관리가 가능한 덩굴 식물입니다. 그 독특한 거북이 등껍질 패턴의 잎은 실내 정원사들 사이에서 인기가 많습니다."
+      "common_name": "거북이 체인",
+      "description": "Peperomia prostrata, 일명 거북이 체인은 매력적인 둥글고 변색된 잎을 가진 작은 덩굴 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기를 필요로 합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/peperomia-prostrata",
-      "https://www.gardenia.net/plant/peperomia-prostrata"
+      "https://www.rhs.org.uk/advice/profile?pid=1061",
+      "https://www.gardenersworld.com/plants/peperomia-prostrata/"
     ]
   }
 }

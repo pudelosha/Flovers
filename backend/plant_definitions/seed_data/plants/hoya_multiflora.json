@@ -1,6 +1,6 @@
 {
   "external_id": "hoya_multiflora",
-  "name": "Shooting Star Hoya",
+  "name": "Hoya multiflora",
   "latin": "Hoya multiflora",
   "sun": "medium",
   "water": "medium",
@@ -8,15 +8,16 @@
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "orchid"
+    "green-plants",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "bright indirect light",
-          "pl": "jasne rozproszone",
-          "de": "hell indirekt",
-          "fr": "lumière indirecte",
-          "it": "luce indiretta",
-          "es": "luz indirecta",
-          "pt": "luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "airy orchid mix",
-          "pl": "przepuszczalne",
-          "de": "luftig",
-          "fr": "substrat aéré",
-          "it": "substrato arioso",
-          "es": "sustrato aireado",
-          "pt": "substrato arejado",
-          "ar": "تربة جيدة",
-          "hi": "हवादार मिट्टी",
-          "zh": "透气基质",
-          "ja": "通気性用土",
-          "ko": "통기성 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "even moisture",
-          "pl": "umiarkowane",
-          "de": "mäßig gießen",
-          "fr": "arrosage modéré",
-          "it": "annaffiare medio",
-          "es": "riego moderado",
-          "pt": "rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water moderately",
+          "pl": "Podlewaj umiarkowanie",
+          "de": "Mäßig gießen",
+          "fr": "Arroser modérément",
+          "it": "Annaffiare moderatamente",
+          "es": "Regar moderadamente",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度に水やり",
+          "ko": "적당히 물 주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "moderate care",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26 °C",
-          "pl": "18–26 °C",
-          "de": "18–26 °C",
-          "fr": "18–26 °C",
-          "it": "18–26 °C",
-          "es": "18–26 °C",
-          "pt": "18–26 °C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26℃"
+          "en": "22–28°C",
+          "pl": "22–28°C",
+          "de": "22–28°C",
+          "fr": "22–28°C",
+          "it": "22–28°C",
+          "es": "22–28°C",
+          "pt": "22–28°C",
+          "ar": "22–28°C",
+          "hi": "22–28°C",
+          "zh": "22–28°C",
+          "ja": "22–28°C",
+          "ko": "22–28°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "prefers humid air",
-          "pl": "lubi wilgoć",
-          "de": "mag Feuchte",
-          "fr": "aime l'humidité",
-          "it": "ama umidità",
-          "es": "prefiere humedad",
-          "pt": "gosta de umidade",
-          "ar": "يحب الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润空气",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "non-toxic",
-          "pl": "nietrująca",
-          "de": "ungiftig",
-          "fr": "non toxique",
-          "it": "non tossica",
-          "es": "no tóxica",
-          "pt": "não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "upright shrub",
-          "pl": "krzewiasty",
-          "de": "aufrecht",
-          "fr": "port dressé",
-          "it": "eretta",
-          "es": "erecta",
-          "pt": "ereta",
-          "ar": "نمو قائم",
-          "hi": "सीधा बढ़ाव",
-          "zh": "直立生长",
-          "ja": "直立型",
-          "ko": "직립형"
+          "en": "Slow to moderate",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mittlere Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम वृद्धि",
+          "zh": "生长缓慢到中等",
+          "ja": "成長は遅いから中程度",
+          "ko": "느리게 또는 중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير دائمة",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Shooting Star Hoya",
-      "description": "Hoya multiflora is a tropical evergreen known for its star-shaped white and yellow flowers. It prefers bright, indirect light and evenly moist, well-draining soil. Regular feeding supports flowering indoors."
+      "common_name": "Multifloral Wax Plant",
+      "description": "Hoya multiflora is a tropical climbing plant known for its fragrant clusters of small star-shaped flowers. It thrives in medium light and prefers well-drained soil."
     },
     "pl": {
-      "common_name": "Hoja gwiaździsta",
-      "description": "Hoya multiflora to tropikalna roślina o gwiaździstych kwiatach. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Dobrze rośnie w przewiewnym podłożu."
+      "common_name": "Woskownica wielokwiatowa",
+      "description": "Hoya multiflora to tropikalna roślina pnąca, znana z pachnących kiści małych gwiazdkowatych kwiatów. Preferuje średnie światło i dobrze przepuszczalną glebę."
     },
     "de": {
-      "common_name": "Stern-Hoya",
-      "description": "Hoya multiflora ist eine tropische Pflanze mit sternförmigen Blüten. Sie mag helles, indirektes Licht und gleichmäßige Feuchte. Ein luftiges Substrat ist wichtig."
+      "common_name": "Mehrblütige Wachsblume",
+      "description": "Hoya multiflora ist eine tropische Kletterpflanze, die für ihre duftenden Trauben kleiner, sternförmiger Blüten bekannt ist. Sie gedeiht bei mittlerem Licht und bevorzugt gut durchlässigen Boden."
     },
     "fr": {
-      "common_name": "Hoya étoilé",
-      "description": "Hoya multiflora est une plante tropicale aux fleurs en forme d’étoile. Elle apprécie une lumière vive indirecte et un arrosage régulier. Un substrat bien drainé est essentiel."
+      "common_name": "Plante à fleurs multiples",
+      "description": "Hoya multiflora est une plante grimpante tropicale connue pour ses grappes parfumées de petites fleurs en forme d'étoile. Elle prospère sous une lumière modérée et préfère un sol bien drainé."
     },
     "it": {
-      "common_name": "Hoya stella",
-      "description": "Hoya multiflora è una pianta tropicale con fiori a stella. Preferisce luce indiretta luminosa e terreno leggermente umido. Concimazioni regolari favoriscono la fioritura."
+      "common_name": "Pianta a fiori multipli",
+      "description": "Hoya multiflora è una pianta rampicante tropicale conosciuta per i suoi grappoli profumati di piccoli fiori a forma di stella. Cresce in luce media e predilige un terreno ben drenato."
     },
     "es": {
-      "common_name": "Hoya estrella",
-      "description": "Hoya multiflora es una planta tropical con flores estrelladas. Necesita luz indirecta brillante y riego moderado. El sustrato debe drenar bien."
+      "common_name": "Planta de flores múltiples",
+      "description": "Hoya multiflora es una planta trepadora tropical conocida por sus racimos fragantes de pequeñas flores en forma de estrella. Prosperan con luz media y prefieren un suelo bien drenado."
     },
     "pt": {
-      "common_name": "Hoya estrela",
-      "description": "Hoya multiflora é uma planta tropical de flores estreladas. Gosta de luz indireta intensa e regas regulares. Solo bem drenado é fundamental."
+      "common_name": "Planta de flores múltiplas",
+      "description": "Hoya multiflora é uma planta trepadeira tropical conhecida por seus racemos perfumados de pequenas flores em forma de estrela. Ela cresce sob luz moderada e prefere solo bem drenado."
     },
     "ar": {
-      "common_name": "هويا نجمة",
-      "description": "هويا مولتيفلورا نبات استوائي بزهور نجمية. يفضل الضوء الساطع غير المباشر وريًا معتدلاً. يحتاج تربة جيدة التصريف."
+      "common_name": "نبتة الزهور المتعددة",
+      "description": "Hoya multiflora هي نبات متسلق استوائي معروف بعناقيد عطرية من الزهور الصغيرة على شكل نجمة. ينمو تحت الضوء المتوسط ويفضل التربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "शूटिंग स्टार होया",
-      "description": "होया मल्टीफ्लोरा एक उष्णकटिबंधीय पौधा है जिसमें तारे जैसे फूल होते हैं। इसे तेज अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। अच्छी जल निकासी वाली मिट्टी आवश्यक है।"
+      "common_name": "बहुपुष्पीय होया पौधा",
+      "description": "Hoya multiflora एक उष्णकटिबंधीय चढ़ाई वाला पौधा है, जो अपनी सुगंधित स्टार आकार की छोटी फूलों की कलियों के लिए जाना जाता है। यह मध्यम प्रकाश में अच्छी तरह से बढ़ता है और अच्छी जल निकासी वाली मिट्टी पसंद करता है."
     },
     "zh": {
-      "common_name": "多花球兰",
-      "description": "多花球兰是一种热带常绿植物，花朵呈星形。适合明亮的散射光和均匀浇水。需使用排水良好的基质。"
+      "common_name": "多花蜡花",
+      "description": "Hoya multiflora 是一种热带攀爬植物，以其芳香的小星形花朵簇而闻名。它喜欢中等光照和排水良好的土壤。"
     },
     "ja": {
-      "common_name": "ホヤ・ムルチフローラ",
-      "description": "ホヤ・ムルチフローラは星形の花を咲かせる熱帯植物です。明るい間接光と適度な水やりを好みます。水はけの良い用土が必要です。"
+      "common_name": "多花ホヤ",
+      "description": "Hoya multiflora は、芳香を放つ小さな星形の花の房で知られる熱帯性のつる植物です。中程度の光を好み、排水性の良い土壌を好みます。"
     },
     "ko": {
-      "common_name": "호야 멀티플로라",
-      "description": "호야 멀티플로라는 별 모양 꽃을 피우는 열대 식물입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 배수가 좋은 토양이 필요합니다."
+      "common_name": "다꽃 호야",
+      "description": "Hoya multiflora는 작은 별 모양의 꽃들이 모여 있는 향기로운 꽃송이로 유명한 열대성 덩굴 식물입니다. 중간 빛에서 잘 자라며 배수가 좋은 토양을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/hoya/growing-guide",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/",
-      "https://www.botanicgardens.org.au/hoya-multiflora"
+      "https://www.rhs.org.uk/plants/85964/hoya-multiflora/details",
+      "https://www.gardenia.net/plant/hoya-multiflora"
     ]
   }
 }

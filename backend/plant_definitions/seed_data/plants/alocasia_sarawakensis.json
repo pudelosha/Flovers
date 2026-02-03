@@ -1,24 +1,25 @@
 {
   "external_id": "alocasia_sarawakensis",
-  "name": "Alocasia Sarawakensis",
+  "name": "Alocasia sarawakensis",
   "latin": "Alocasia sarawakensis",
   "sun": "medium",
   "water": "high",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "aroid",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_interval_days": 21,
   "repot_required": true,
   "repot_interval_months": 18,
   "image_hero": "alocasia_sarawakensis.jpg",
@@ -28,10 +29,10 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive",
+          "en": "Bright indirect",
+          "pl": "Jasne, pośrednie",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux indirect",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
@@ -48,17 +49,17 @@
       "value": {
         "text": {
           "en": "Airy aroid mix",
-          "pl": "Przepuszczalne podłoże",
-          "de": "Lockeres Aroid-Substrat",
+          "pl": "Przepuszczalne aroid",
+          "de": "Lockeres Aroid-Sub",
           "fr": "Substrat aéré",
           "it": "Terriccio arioso",
           "es": "Sustrato aireado",
           "pt": "Substrato arejado",
-          "ar": "تربة خفيفة جيدة التصريف",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 좋은 흙"
+          "ar": "خليط أرويد جيد التصريف",
+          "hi": "हवादार ऐरॉइड मिक्स",
+          "zh": "疏松排水基质",
+          "ja": "通気性の良い用土",
+          "ko": "통기성 좋은 배합토"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة ثابتة",
-          "hi": "लगातार नम",
-          "zh": "保持湿润",
-          "ja": "常に湿り気",
-          "ko": "항상 촉촉"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "تربة رطبة قليلًا",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging care",
-          "pl": "Trudna pielęgnacja",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
-          "it": "Difficile",
-          "es": "Exigente",
-          "pt": "Exigente",
-          "ar": "صعبة العناية",
-          "hi": "देखभाल कठिन",
-          "zh": "养护较难",
-          "ja": "管理が難しい",
-          "ko": "관리 어려움"
+          "en": "Intermediate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Intermédiaire",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–30°C",
-          "pl": "18–30°C",
-          "de": "18–30°C",
-          "fr": "18–30°C",
-          "it": "18–30°C",
-          "es": "18–30°C",
-          "pt": "18–30°C",
-          "ar": "18–30°م",
-          "hi": "18–30°C",
-          "zh": "18–30°C",
-          "ja": "18–30℃",
-          "ko": "18–30°C"
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -127,9 +128,9 @@
           "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
           "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام إذا ابتُلِع",
+          "hi": "खाने पर विषैला",
+          "zh": "误食有毒",
+          "ja": "誤食有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Very large leaves",
-          "pl": "Bardzo duże liście",
-          "de": "Sehr große Blätter",
-          "fr": "Très grandes feuilles",
-          "it": "Foglie enormi",
-          "es": "Hojas muy grandes",
-          "pt": "Folhas enormes",
-          "ar": "أوراق ضخمة",
-          "hi": "बहुत बड़े पत्ते",
-          "zh": "巨大叶片",
-          "ja": "非常に大きい葉",
-          "ko": "매우 큰 잎"
+          "en": "Large, vigorous",
+          "pl": "Duża, silna",
+          "de": "Groß, kräftig",
+          "fr": "Grande, vigoureuse",
+          "it": "Grande, vigorosa",
+          "es": "Grande, vigorosa",
+          "pt": "Grande, vigorosa",
+          "ar": "كبيرة وسريعة",
+          "hi": "बड़ी, तेज़ बढ़त",
+          "zh": "大型，生长旺盛",
+          "ja": "大型で旺盛",
+          "ko": "대형, 왕성함"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Rot if soggy",
+          "pl": "Gnije w mokrym",
+          "de": "Fäule bei Nässe",
+          "fr": "Pourrit si détrempé",
+          "it": "Marciume se zuppa",
+          "es": "Pudre si encharca",
+          "pt": "Apodrece encharcada",
+          "ar": "تعفن مع بلل زائد",
+          "hi": "ज्यादा पानी से सड़न",
+          "zh": "积水易烂根",
+          "ja": "過湿で根腐れ",
+          "ko": "과습 시 뿌리썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentl. Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶见虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Giant Alocasia",
-      "description": "Alocasia sarawakensis is a tropical aroid native to Borneo, known for its massive, glossy leaves. It requires warm temperatures, high humidity, and consistently moist but well-draining soil indoors."
+      "common_name": "Yucatan princess (elephant ear)",
+      "description": "Alocasia sarawakensis is a tropical aroid grown for large, glossy leaves. Keep it in bright, filtered light and warm conditions above about 15°C. Water when the top layer starts to dry and feed in spring to autumn; it is toxic if eaten."
     },
     "pl": {
-      "common_name": "Alokazja olbrzymia",
-      "description": "Alocasia sarawakensis pochodzi z Borneo i wyróżnia się ogromnymi liśćmi. W uprawie domowej wymaga ciepła, wysokiej wilgotności i stale lekko wilgotnego podłoża."
+      "common_name": "Yucatan Princess (uszata)",
+      "description": "Alocasia sarawakensis to tropikalny obrazkowaty uprawiany dla dużych, błyszczących liści. Zapewnij jasne, rozproszone światło i temperaturę powyżej ok. 15°C. Podlewaj, gdy wierzch podłoża przesycha, i nawoź od wiosny do jesieni; roślina jest toksyczna po spożyciu."
     },
     "de": {
-      "common_name": "Riesen-Alokasie",
-      "description": "Alocasia sarawakensis stammt aus Borneo und besitzt sehr große Blätter. Sie benötigt Wärme, hohe Luftfeuchtigkeit und gleichmäßig feuchtes Substrat."
+      "common_name": "Yucatan Princess (Elefantenohr)",
+      "description": "Alocasia sarawakensis ist ein tropisches Aronstabgewächs mit großen, glänzenden Blättern. Stelle sie hell, aber ohne direkte Sonne, und halte sie dauerhaft warm über etwa 15°C. Gieße, sobald die oberste Schicht antrocknet, und dünge von Frühjahr bis Herbst; bei Verzehr giftig."
     },
     "fr": {
-      "common_name": "Alocasia géant",
-      "description": "Alocasia sarawakensis est originaire de Bornéo et se distingue par ses feuilles géantes. Elle demande chaleur, forte humidité et un substrat constamment humide."
+      "common_name": "Yucatan Princess (oreille d’éléphant)",
+      "description": "Alocasia sarawakensis est un aroïde tropical cultivé pour ses grandes feuilles brillantes. Placez-la en lumière vive indirecte et gardez-la au-dessus d’environ 15°C. Arrosez lorsque la surface du substrat commence à sécher et fertilisez du printemps à l’automne ; toxique en cas d’ingestion."
     },
     "it": {
-      "common_name": "Alocasia gigante",
-      "description": "Alocasia sarawakensis è una specie tropicale del Borneo con foglie molto grandi. In casa necessita di caldo, elevata umidità e terreno costantemente umido."
+      "common_name": "Yucatan Princess (orecchia d’elefante)",
+      "description": "Alocasia sarawakensis è un’aroide tropicale coltivato per foglie grandi e lucide. Tienila in luce intensa indiretta e in caldo costante sopra circa 15°C. Annaffia quando lo strato superiore inizia ad asciugare e concima da primavera ad autunno; è tossica se ingerita."
     },
     "es": {
-      "common_name": "Alocasia gigante",
-      "description": "Alocasia sarawakensis es originaria de Borneo y destaca por sus hojas enormes. Requiere calor, alta humedad y un sustrato siempre ligeramente húmedo."
+      "common_name": "Yucatan Princess (oreja de elefante)",
+      "description": "Alocasia sarawakensis es una arácea tropical apreciada por sus hojas grandes y brillantes. Colócala con luz brillante indirecta y mantenla por encima de unos 15°C. Riega cuando la capa superior empiece a secarse y abona de primavera a otoño; es tóxica si se ingiere."
     },
     "pt": {
-      "common_name": "Alocásia gigante",
-      "description": "Alocasia sarawakensis é nativa de Bornéu e apresenta folhas gigantes. Precisa de calor, alta umidade e solo constantemente úmido em ambientes internos."
+      "common_name": "Yucatan Princess (orelha-de-elefante)",
+      "description": "Alocasia sarawakensis é uma arácea tropical cultivada por folhas grandes e brilhantes. Mantenha em luz forte indireta e em temperaturas acima de cerca de 15°C. Regue quando a camada superior começar a secar e adube da primavera ao outono; é tóxica se ingerida."
     },
     "ar": {
-      "common_name": "ألوكاسيا عملاقة",
-      "description": "نبات Alocasia sarawakensis موطنه بورنيو ويتميز بأوراق ضخمة. يحتاج إلى دفء ورطوبة عالية وتربة رطبة باستمرار داخل المنزل."
+      "common_name": "يوكاتان برينسِس (أذن الفيل)",
+      "description": "Alocasia sarawakensis نبات استوائي من الفصيلة اللوفية بأوراق كبيرة لامعة. يوضع في ضوء ساطع غير مباشر مع حرارة ثابتة فوق نحو 15°م. اسقِ عندما تجف الطبقة العلوية قليلًا وسمّد من الربيع إلى الخريف؛ النبات سام عند الابتلاع."
     },
     "hi": {
-      "common_name": "जायंट एलोकैसिया",
-      "description": "Alocasia sarawakensis बोर्नियो का उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बहुत बड़ी होती हैं। इसे गर्मी, अधिक नमी और लगातार नम मिट्टी की आवश्यकता होती है।"
+      "common_name": "युकातान प्रिंसेस (एलीफेंट ईयर)",
+      "description": "Alocasia sarawakensis एक उष्णकटिबंधीय एरॉइड है जिसे बड़े, चमकीले पत्तों के लिए उगाया जाता है। इसे तेज़ अप्रत्यक्ष रोशनी में रखें और तापमान लगभग 15°C से ऊपर बनाए रखें। ऊपर की मिट्टी सूखने लगे तब पानी दें और वसंत से शरद तक खाद दें; यह खाने पर विषैला है।"
     },
     "zh": {
-      "common_name": "巨型海芋",
-      "description": "Alocasia sarawakensis 原产于婆罗洲，以巨大的叶片著称。室内养护需要温暖环境、高湿度和持续湿润的基质。"
+      "common_name": "尤卡坦公主海芋",
+      "description": "Alocasia sarawakensis 是热带天南星科观叶植物，叶片巨大且有光泽。放在明亮散射光处，并保持温度高于约 15°C。表土开始变干再浇水，春到秋定期施肥；误食有毒。"
     },
     "ja": {
-      "common_name": "ジャイアントアロカシア",
-      "description": "Alocasia sarawakensis はボルネオ原産で非常に大きな葉を持ちます。室内では高温多湿と常に湿った用土が必要です。"
+      "common_name": "ユカタン・プリンセス（アロカシア）",
+      "description": "Alocasia sarawakensis は大きく光沢のある葉を楽しむ熱帯のサトイモ科植物です。明るい間接光と、約15°C以上の暖かさを保ちます。表土が乾き始めたら水やりし、春〜秋に追肥します；誤食有毒です。"
     },
     "ko": {
-      "common_name": "자이언트 알로카시아",
-      "description": "Alocasia sarawakensis는 보르네오 원산의 대형 잎을 가진 식물입니다. 실내에서는 따뜻함과 높은 습도, 지속적으로 촉촉한 토양이 필요합니다."
+      "common_name": "유카탄 프린세스 알로카시아",
+      "description": "Alocasia sarawakensis 는 크고 윤기 있는 잎을 감상하는 열대 아로이드입니다. 밝은 간접광에 두고 약 15°C 이상으로 따뜻하게 유지하세요. 겉흙이 마르기 시작하면 물을 주고 봄~가을에 비료를 주며, 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/187354/alocasia-sarawakensis/details",
-      "https://www.kew.org/plants/alocasia-sarawakensis",
-      "https://edis.ifas.ufl.edu/publication/EP486"
+      "https://www.rhs.org.uk/plants/316781/alocasia-sarawakensis-yucatan-princess/details",
+      "https://plants.ces.ncsu.edu/plants/alocasia-sarawakensis-yucatan-princess/",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:84243-1",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11222628/"
     ]
   }
 }

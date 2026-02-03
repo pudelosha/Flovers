@@ -1,23 +1,23 @@
 {
   "external_id": "ficus_triangularis",
-  "name": "Triangle Fig",
+  "name": "Ficus triangularis",
   "latin": "Ficus triangularis",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
+    "green-plants",
     "aroid"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenável",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水性",
+          "ko": "배수성 좋은"
         }
       }
     },
@@ -69,13 +69,13 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
+          "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
+          "pt": "Regagem moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
           "zh": "适量浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
@@ -89,15 +89,15 @@
           "en": "Medium care",
           "pl": "Średnia pielęgnacja",
           "de": "Mittlere Pflege",
-          "fr": "Entretien moyen",
+          "fr": "Soin moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
           "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
+          "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の手入れ",
-          "ko": "중간 난이도"
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26°C",
-          "pl": "18–26°C",
-          "de": "18–26°C",
-          "fr": "18–26°C",
-          "it": "18–26°C",
-          "es": "18–26°C",
-          "pt": "18–26°C",
-          "ar": "18–26°م",
-          "hi": "18–26°C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
+          "en": "Moderate humidity",
           "pl": "Średnia wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica para pets",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू जानवरों हेतु विषाक्त",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "반려동물에 독성"
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright shrub",
-          "pl": "Pokrój krzewiasty",
-          "de": "Aufrechter Wuchs",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو قائم",
-          "hi": "सीधी वृद्धि",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립형 성장"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il troppo acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرो पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Od czasu do czasu szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "الحشرات العرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時々害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Triangle Fig",
-      "description": "Ficus triangularis is an evergreen shrub or small tree native to southern Africa. It is valued as a houseplant for its distinctive triangular leaves and upright growth. It prefers bright indirect light and consistent but moderate watering."
+      "common_name": "Triangular Fig",
+      "description": "Ficus triangularis is a tropical plant with distinctive triangular leaves. It is popular for its unique foliage and moderate care requirements."
     },
     "pl": {
       "common_name": "Figowiec trójkątny",
-      "description": "Ficus triangularis to zimozielony krzew lub małe drzewo pochodzące z południowej Afryki. Uprawiany jest jako roślina doniczkowa ze względu na trójkątne liście. Najlepiej rośnie w jasnym, rozproszonym świetle."
+      "description": "Ficus triangularis to tropikalna roślina z charakterystycznymi trójkątnymi liśćmi. Jest popularna ze względu na unikalną roślinność i średnie wymagania pielęgnacyjne."
     },
     "de": {
-      "common_name": "Dreiecks-Feige",
-      "description": "Ficus triangularis ist ein immergrüner Strauch oder kleiner Baum aus dem südlichen Afrika. Er wird als Zimmerpflanze wegen seiner dreieckigen Blätter geschätzt. Er benötigt helles, indirektes Licht und mäßiges Gießen."
+      "common_name": "Dreieckiger Feigenbaum",
+      "description": "Ficus triangularis ist eine tropische Pflanze mit charakteristischen dreieckigen Blättern. Sie ist aufgrund ihres einzigartigen Laubs und der moderaten Pflegeanforderungen beliebt."
     },
     "fr": {
-      "common_name": "Figuier triangulaire",
-      "description": "Ficus triangularis est un arbuste ou petit arbre persistant originaire d’Afrique australe. Il est cultivé en intérieur pour ses feuilles triangulaires décoratives. Il préfère une lumière vive indirecte et un arrosage modéré."
+      "common_name": "Ficus triangulaire",
+      "description": "Le Ficus triangularis est une plante tropicale aux feuilles triangulaires distinctives. Il est populaire pour son feuillage unique et ses exigences de soins modérées."
     },
     "it": {
-      "common_name": "Fico triangolare",
-      "description": "Ficus triangularis è un arbusto o piccolo albero sempreverde originario dell’Africa meridionale. È apprezzato come pianta d’appartamento per le sue foglie triangolari. Richiede luce intensa indiretta e annaffiature regolari ma moderate."
+      "common_name": "Ficus triangolare",
+      "description": "Il Ficus triangularis è una pianta tropicale con foglie triangolari distintive. È popolare per il suo fogliame unico e le sue moderate esigenze di cura."
     },
     "es": {
       "common_name": "Ficus triangular",
-      "description": "Ficus triangularis es un arbusto o árbol pequeño perenne originario del sur de África. Se cultiva como planta de interior por sus hojas triangulares. Necesita luz brillante indirecta y riego moderado."
+      "description": "El Ficus triangularis es una planta tropical con hojas triangulares distintivas. Es popular por su follaje único y sus requisitos de cuidado moderados."
     },
     "pt": {
       "common_name": "Ficus triangular",
-      "description": "Ficus triangularis é um arbusto ou pequena árvore perene nativa do sul da África. É cultivado como planta de interior pelas suas folhas triangulares. Prefere luz indireta brilhante e regas moderadas."
+      "description": "Ficus triangularis é uma planta tropical com folhas triangulares distintas. É popular por sua folhagem única e requisitos de cuidados moderados."
     },
     "ar": {
-      "common_name": "فيكس مثلثي",
-      "description": "نبات Ficus triangularis شجيرة أو شجرة صغيرة دائمة الخضرة موطنها جنوب أفريقيا. يزرع كنبات داخلي لأوراقه المثلثة المميزة. يحتاج إلى ضوء ساطع غير مباشر وري معتدل."
+      "common_name": "التين المثلث",
+      "description": "Ficus triangularis هو نبات استوائي بأوراق مثلثة مميزة. وهو شائع بسبب أوراقه الفريدة ومتطلبات العناية المعتدلة."
     },
     "hi": {
-      "common_name": "त्रिकोण अंजीर",
-      "description": "Ficus triangularis दक्षिणी अफ्रीका का सदाबहार झाड़ी या छोटा पेड़ है। इसे इसकी त्रिकोणीय पत्तियों के कारण घरेलू पौधे के रूप में उगाया जाता है। इसे तेज़ अप्रत्यक्ष रोशनी और मध्यम पानी की आवश्यकता होती है।"
+      "common_name": "त्रिकोणीय अंजीर",
+      "description": "Ficus triangularis एक उष्णकटिबंधीय पौधा है जिसमें त्रिकोणीय पत्तियां होती हैं। यह अपनी विशिष्ट पत्तियों और मध्यम देखभाल आवश्यकताओं के लिए लोकप्रिय है।"
     },
     "zh": {
       "common_name": "三角榕",
-      "description": "Ficus triangularis 原产于非洲南部，是一种常绿灌木或小乔木。因其独特的三角形叶片而作为室内植物栽培。适合明亮的散射光和适量浇水。"
+      "description": "Ficus triangularis 是一种热带植物，具有独特的三角形叶子。由于其独特的叶片和适中的护理要求，它很受欢迎。"
     },
     "ja": {
-      "common_name": "トライアングルフィカス",
-      "description": "フィカス・トリアングラリスは南アフリカ原産の常緑低木または小高木です。三角形の葉が特徴で観葉植物として利用されます。明るい間接光と適度な水やりを好みます。"
+      "common_name": "三角フィカス",
+      "description": "Ficus triangularis は特徴的な三角形の葉を持つ熱帯植物です。そのユニークな葉と適度なケア要件で人気があります。"
     },
     "ko": {
-      "common_name": "삼각 피커스",
-      "description": "Ficus triangularis는 남부 아프리카 원산의 상록 관목 또는 소교목입니다. 삼각형 모양의 잎 때문에 실내 식물로 인기가 있습니다. 밝은 간접광과 중간 정도의 물주기가 필요합니다."
+      "common_name": "삼각형 고무나무",
+      "description": "Ficus triangularis는 독특한 삼각형 모양의 잎을 가진 열대 식물입니다. 그 독특한 잎과 적당한 관리 요구 사항으로 인기가 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/ficus/triangularis/details",
-      "https://plants.ces.ncsu.edu/plants/ficus-triangularis/",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-ficus/"
+      "https://www.rhs.org.uk/plants/ficus-triangularis",
+      "https://www.gardeningknowhow.com/houseplants/ficus/ficus-triangularis-care.htm"
     ]
   }
 }

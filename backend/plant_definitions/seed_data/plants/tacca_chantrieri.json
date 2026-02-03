@@ -1,27 +1,27 @@
 {
   "external_id": "tacca_chantrieri",
-  "name": "Black Bat Flower",
+  "name": "Tacca chantrieri",
   "latin": "Tacca chantrieri",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "loam"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "tacca_chantrieri.jpg",
   "image_thumb": "tacca_chantrieri.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 밝기"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "aroid",
-          "pl": "aroidowy",
-          "de": "Aroid",
-          "fr": "Aroid",
-          "it": "Aroid",
-          "es": "Aroid",
-          "pt": "Aroid",
-          "ar": "أرويد",
-          "hi": "अरोइड",
-          "zh": "阿罗伊德",
-          "ja": "アロイド",
-          "ko": "아로이드"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलिंग",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "warm",
-          "pl": "ciepło",
-          "de": "warm",
-          "fr": "chaud",
-          "it": "caldo",
-          "es": "caliente",
-          "pt": "quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haut taux d'humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "네"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पशुओं के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnąca",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장이 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفرत पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pest occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Black Bat Flower",
-      "description": "The Black Bat Flower, Tacca chantrieri, is known for its unique bat-like flowers. Native to Southeast Asia, it thrives in humid environments with warm temperatures."
+      "common_name": "Chantrier's Tacca",
+      "description": "Tacca chantrieri, known as Chantrier's Tacca, is a tropical plant with dark purple flowers resembling bat wings. It's a slow grower that thrives in high humidity."
     },
     "pl": {
-      "common_name": "Czarny Kwiat Nietoperza",
-      "description": "Czarny Kwiat Nietoperza, Tacca chantrieri, jest znany z unikalnych kwiatów przypominających nietoperze. Pochodzi z Azji Południowo-Wschodniej i rośnie w wilgotnych warunkach w ciepłym klimacie."
+      "common_name": "Tacca Chantrieri",
+      "description": "Tacca chantrieri, znana jako Tacca Chantrieri, to roślina tropikalna o ciemnofioletowych kwiatach przypominających skrzydła nietoperza. Rośnie wolno i wymaga wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Schwarze Fledermausblume",
-      "description": "Die Schwarze Fledermausblume, Tacca chantrieri, ist bekannt für ihre einzigartigen, fledermausartigen Blüten. Sie ist in Südostasien beheimatet und gedeiht in feuchten, warmen Umgebungen."
+      "common_name": "Tacca Chantrieri",
+      "description": "Tacca chantrieri, bekannt als Chantriers Tacca, ist eine tropische Pflanze mit dunkellila Blüten, die an Fledermausflügel erinnern. Sie wächst langsam und benötigt hohe Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Fleur Chauve-Souris Noire",
-      "description": "La Fleur Chauve-Souris Noire, Tacca chantrieri, est connue pour ses fleurs uniques en forme de chauve-souris. Originaire d'Asie du Sud-Est, elle pousse dans des environnements humides à température chaude."
+      "common_name": "Tacca de Chantrier",
+      "description": "Tacca chantrieri, connue sous le nom de Tacca de Chantrier, est une plante tropicale aux fleurs violettes sombres ressemblant à des ailes de chauve-souris. Elle pousse lentement et préfère une humidité élevée."
     },
     "it": {
-      "common_name": "Fiore del Pipistrello Nero",
-      "description": "Il Fiore del Pipistrello Nero, Tacca chantrieri, è noto per i suoi fiori unici simili a pipistrelli. Originario del Sud-est asiatico, cresce in ambienti umidi con temperature calde."
+      "common_name": "Tacca di Chantrier",
+      "description": "Tacca chantrieri, conosciuta come Tacca di Chantrier, è una pianta tropicale con fiori viola scuro che assomigliano alle ali di un pipistrello. Cresce lentamente e richiede alta umidità."
     },
     "es": {
-      "common_name": "Flor Murciélago Negra",
-      "description": "La Flor Murciélago Negra, Tacca chantrieri, es conocida por sus flores únicas en forma de murciélago. Originaria del sudeste asiático, prospera en ambientes húmedos con temperaturas cálidas."
+      "common_name": "Tacca de Chantrier",
+      "description": "Tacca chantrieri, conocida como Tacca de Chantrier, es una planta tropical con flores moradas oscuras que se asemejan a las alas de un murciélago. Crece lentamente y necesita alta humedad."
     },
     "pt": {
-      "common_name": "Flor Morcego Negra",
-      "description": "A Flor Morcego Negra, Tacca chantrieri, é conhecida por suas flores únicas em forma de morcego. Nativa do Sudeste Asiático, cresce em ambientes úmidos com temperaturas quentes."
+      "common_name": "Tacca de Chantrier",
+      "description": "Tacca chantrieri, conhecida como Tacca de Chantrier, é uma planta tropical com flores roxas escuras que se parecem com asas de morcego. Cresce lentamente e precisa de alta umidade."
     },
     "ar": {
-      "common_name": "زهرة خفاش سوداء",
-      "description": "زهرة خفاش سوداء، Tacca chantrieri، معروفة بزهورها الفريدة على شكل خفافيش. موطنها الأصلي جنوب شرق آسيا، تنمو في بيئات رطبة ذات درجات حرارة دافئة."
+      "common_name": "تاكا شانتريري",
+      "description": "تاكا شانتريري هي نبتة استوائية ذات أزهار أرجوانية داكنة تشبه أجنحة الخفافيش. تنمو ببطء وتحتاج إلى رطوبة عالية."
     },
     "hi": {
-      "common_name": "ब्लैक बैट फ्लावर",
-      "description": "ब्लैक बैट फ्लावर, Tacca chantrieri, अपनी अद्वितीय बैट जैसे फूलों के लिए प्रसिद्ध है। यह दक्षिण-पूर्व एशिया का मूल पौधा है और गीले वातावरण में गर्म तापमान पर बढ़ता है।"
+      "common_name": "टक्का चैनट्रिएरी",
+      "description": "टक्का चैनट्रिएरी, जिसे चैनट्रिएरी की टक्का के नाम से जाना जाता है, एक उष्णकटिबंधीय पौधा है जिसमें बैट की पंखों जैसी गहरे बैंगनी रंग की फूल होती हैं। यह धीरे-धीरे बढ़ता है और उच्च आर्द्रता की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "黑蝙蝠花",
-      "description": "黑蝙蝠花，Tacca chantrieri，以其独特的蝙蝠状花朵而闻名。它原产于东南亚，在潮湿的环境中生长，适应温暖的气温。"
+      "common_name": "塔卡·尚特里",
+      "description": "塔卡·尚特里，常被称为尚特里的塔卡，是一种热带植物，具有类似蝙蝠翅膀的深紫色花朵。它生长缓慢，需要高湿度。"
     },
     "ja": {
-      "common_name": "ブラックバットフラワー",
-      "description": "ブラックバットフラワー、Tacca chantrieriはそのユニークなコウモリ型の花で知られています。東南アジア原産で、湿った環境で暖かい温度で成長します。"
+      "common_name": "タッカ・チャントリエリ",
+      "description": "タッカ・チャントリエリは、チャントリエリのタッカとして知られ、コウモリの翼のような暗紫色の花を持つ熱帯植物です。成長が遅く、高い湿度を必要とします。"
     },
     "ko": {
-      "common_name": "검은박쥐꽃",
-      "description": "검은박쥐꽃, Tacca chantrieri,는 독특한 박쥐 모양의 꽃으로 유명합니다. 동남아시아가 원산지이며, 습한 환경에서 따뜻한 온도에서 자랍니다."
+      "common_name": "타카 찬트리에리",
+      "description": "타카 찬트리에리는 밤날개처럼 보이는 어두운 보라색 꽃을 가진 열대 식물입니다. 성장 속도가 느리고 높은 습도가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/tacca-chantrieri",
-      "https://www.gardenia.net/plant/tacca-chantrieri-black-bat-flower"
+      "https://www.botanicgardens.org/plant-care/tacca-chantrieri",
+      "https://www.gardeningknowhow.com/indoor/flowers/tacca-chantrieri-care.htm"
     ]
   }
 }

@@ -3,24 +3,25 @@
   "name": "Monkey Puzzle Tree",
   "latin": "Araucaria araucana",
   "sun": "high",
-  "water": "low",
-  "difficulty": "hard",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "plastic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "acidic",
-    "loam"
+    "conifers",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 180,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
   "image_hero": "araucaria_araucana.jpg",
   "image_thumb": "araucaria_araucana.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
+          "en": "Full sun exposure",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Vollsonne",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "直射日光",
-          "ko": "직사광선"
+          "hi": "पूर्ण धूप",
+          "zh": "充足阳光",
+          "ja": "日光強",
+          "ko": "강한 햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic loam",
-          "pl": "Kwaśna gleba",
-          "de": "Saurer Lehm",
-          "fr": "Sol acide",
-          "it": "Suolo acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土",
-          "ko": "산성 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "排水良土",
+          "ko": "배수가 잘되는 흙"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low water",
-          "pl": "Mało wody",
-          "de": "Wenig Wasser",
-          "fr": "Peu d'eau",
-          "it": "Poca acqua",
-          "es": "Poca agua",
-          "pt": "Pouca água",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "적은 물"
+          "en": "Keep soil moist",
+          "pl": "Utrzymuj wilgotną ziemię",
+          "de": "Boden feucht halten",
+          "fr": "Sol humide",
+          "it": "Terreno umido",
+          "es": "Mantener tierra húmeda",
+          "pt": "Solo úmido",
+          "ar": "حافظ على التربة رطبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持土壤湿润",
+          "ja": "土壌を湿らせる",
+          "ko": "흙 촉촉 유지"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Hard",
-          "pl": "Trudna",
-          "de": "Schwierig",
-          "fr": "Difficile",
-          "it": "Difficile",
-          "es": "Difícil",
-          "pt": "Difícil",
-          "ar": "صعبة",
-          "hi": "कठिन",
-          "zh": "困难",
-          "ja": "難しい",
-          "ko": "어려움"
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado moderado",
+          "pt": "Cuidados moderados",
+          "ar": "رعاية معتدلة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度の手入れ",
+          "ko": "보통 난이도"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool temperate",
-          "pl": "Chłodny klimat",
-          "de": "Kühl gemäßigt",
-          "fr": "Tempéré frais",
-          "it": "Temperato fresco",
-          "es": "Templado fresco",
-          "pt": "Temperado fresco",
-          "ar": "مناخ معتدل",
-          "hi": "शीत जलवायु",
-          "zh": "凉爽气候",
-          "ja": "冷涼気候",
-          "ko": "서늘한 기후"
+          "en": "15–25°C ideal",
+          "pl": "Idealnie 15–25°C",
+          "de": "Ideal 15–25°C",
+          "fr": "15–25°C idéal",
+          "it": "15–25°C ideale",
+          "es": "15–25°C ideal",
+          "pt": "15–25°C ideal",
+          "ar": "مثالي 15–25°C",
+          "hi": "15–25°C आदर्श",
+          "zh": "适宜15–25°C",
+          "ja": "15–25°Cが理想",
+          "ko": "15–25°C 이상적"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Likes humidity",
+          "pl": "Lubi wilgotność",
+          "de": "Mag Feuchtigkeit",
+          "fr": "Aime l'humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de humidade",
+          "ar": "يُحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润",
+          "ja": "湿気好む",
+          "ko": "습도 선호"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अ विषैली",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow tree",
-          "pl": "Wolny wzrost",
-          "de": "Langsames Wachstum",
+          "en": "Slow grower",
+          "pl": "Wolno rośnie",
+          "de": "Langsam wachsend",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
-          "ar": "نمو بطيء",
+          "ar": "نمو بطئ",
           "hi": "धीमी वृद्धि",
           "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느린 성장"
+          "ja": "成長遅い",
+          "ko": "성장 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Kein Überwässern",
+          "fr": "Éviter excès eau",
+          "it": "Evitare troppa acqua",
+          "es": "Evitar exceso agua",
+          "pt": "Evitar excesso água",
+          "ar": "تجنب الإفراط في السقاية",
+          "hi": "अति जल न दें",
+          "zh": "避免过湿",
+          "ja": "過湿を避ける",
+          "ko": "과습 피함"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional scale mites",
+          "pl": "Sporadyczne roztocza",
+          "de": "Gelegentlich Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी कीट",
+          "zh": "偶见害虫",
+          "ja": "時々害虫",
+          "ko": "간헐 해충"
         }
       }
     }
@@ -180,58 +219,59 @@
   "translations": {
     "en": {
       "common_name": "Monkey Puzzle Tree",
-      "description": "Araucaria araucana is a large evergreen conifer native to southern Chile and Argentina. It prefers full sun, acidic soil, and cool temperate climates. This species is slow-growing and best suited for outdoor cultivation."
+      "description": "Araucaria araucana is an evergreen conifer known as the Monkey Puzzle Tree. It prefers full sun and well-drained soil with regular but moderate watering."
     },
     "pl": {
-      "common_name": "Araukaria chilijska",
-      "description": "Araucaria araucana to duże, zimozielone drzewo iglaste pochodzące z południowego Chile i Argentyny. Wymaga pełnego słońca, kwaśnej gleby i chłodnego klimatu. Rośnie wolno i nadaje się głównie do uprawy na zewnątrz."
+      "common_name": "Araukaria olbrzymia",
+      "description": "Araucaria araucana to wiecznie zielona iglasta roślina znana jako drzewo małpiej zagadki. Lubi pełne słońce i przepuszczalną glebę oraz umiarkowane podlewanie."
     },
     "de": {
-      "common_name": "Chilenische Araukarie",
-      "description": "Araucaria araucana ist ein großer immergrüner Nadelbaum aus Südchile und Argentinien. Er bevorzugt volle Sonne, sauren Boden und ein kühles Klima. Die Art wächst langsam und ist für den Außenbereich geeignet."
+      "common_name": "Affenbaum",
+      "description": "Araucaria araucana ist eine immergrüne Konifere, bekannt als Affenbaum. Sie bevorzugt volle Sonne und gut durchlässigen Boden mit mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Désespoir des singes",
-      "description": "Araucaria araucana est un grand conifère persistant originaire du sud du Chili et de l’Argentine. Elle aime le plein soleil, les sols acides et les climats tempérés frais. Sa croissance est lente et elle se cultive surtout en extérieur."
+      "common_name": "Araucaria",
+      "description": "Araucaria araucana est une conifère persistante appelée arbre puzzle. Elle préfère plein soleil et sol bien drainé avec arrosage modéré."
     },
     "it": {
-      "common_name": "Araucaria del Cile",
-      "description": "Araucaria araucana è una grande conifera sempreverde originaria del Cile e dell’Argentina meridionali. Preferisce pieno sole, terreno acido e climi temperati freschi. È a crescita lenta e adatta soprattutto all’esterno."
+      "common_name": "Albero puzzle",
+      "description": "Araucaria araucana è una conifera sempreverde detta albero puzzle. Predilige pieno sole e terreno ben drenato con annaffiature moderate."
     },
     "es": {
-      "common_name": "Pehuén",
-      "description": "Araucaria araucana es una gran conífera perenne nativa del sur de Chile y Argentina. Prefiere pleno sol, suelos ácidos y climas templados frescos. Crece lentamente y se cultiva principalmente al aire libre."
+      "common_name": "Árbol rompecabezas",
+      "description": "Araucaria araucana es una conífera perenne conocida como árbol rompecabezas. Prefiere sol pleno y suelo bien drenado con riego moderado."
     },
     "pt": {
-      "common_name": "Pinheiro-dos-Andes",
-      "description": "Araucaria araucana é uma grande conífera perene nativa do sul do Chile e da Argentina. Prefere sol pleno, solo ácido e clima temperado fresco. Tem crescimento lento e é indicada para áreas externas."
+      "common_name": "Árvore quebra-cabeças",
+      "description": "Araucaria araucana é uma conífera perene chamada árvore quebra-cabeças. Prefere sol pleno e solo drenado com rega moderada."
     },
     "ar": {
       "common_name": "شجرة لغز القرد",
-      "description": "Araucaria araucana شجرة صنوبرية دائمة الخضرة موطنها جنوب تشيلي والأرجنتين. تفضل الشمس الكاملة والتربة الحمضية والمناخ المعتدل البارد. نموها بطيء وتزرع في الهواء الطلق."
+      "description": "Araucaria araucana هي شجرة دائمة الخضرة تُعرف بشجرة لغز القرد. تفضل شمس كاملة وتربة جيدة التصريف مع ري معتدل."
     },
     "hi": {
       "common_name": "मंकी पज़ल वृक्ष",
-      "description": "Araucaria araucana दक्षिणी चिली और अर्जेंटीना का सदाबहार शंकुधारी वृक्ष है। इसे पूरी धूप, अम्लीय मिट्टी और ठंडा समशीतोष्ण जलवायु पसंद है। इसकी वृद्धि धीमी होती है और यह बाहर उगाया जाता है।"
+      "description": "Araucaria araucana एक सदाबहार कॉनिफर है जिसे मंकी पज़ल वृक्ष कहते हैं। यह पूर्ण धूप और अच्छी निकासी वाली मिट्टी पसंद करता है।"
     },
     "zh": {
-      "common_name": "智利南洋杉",
-      "description": "Araucaria araucana 原产于智利和阿根廷南部，是一种大型常绿针叶树。它喜欢全日照、酸性土壤和凉爽的温带气候。生长缓慢，适合户外种植。"
+      "common_name": "猴谜树",
+      "description": "Araucaria araucana 是一种常绿针叶树，称为猴谜树。它喜欢充足阳光和排水良好的土壤，并适度浇水。"
     },
     "ja": {
       "common_name": "モンキーパズルツリー",
-      "description": "Araucaria araucana はチリ南部とアルゼンチン原産の常緑針葉樹です。直射日光と酸性土壌、冷涼な気候を好みます。成長は遅く、屋外向きです。"
+      "description": "Araucaria araucana は常緑針葉樹でモンキーパズルツリーと呼ばれます。十分な日光と排水良好な土壌を好みます。"
     },
     "ko": {
-      "common_name": "아라우카리아",
-      "description": "Araucaria araucana는 칠레와 아르헨티나 남부 원산의 상록 침엽수입니다. 직사광선과 산성 토양, 서늘한 기후를 선호합니다. 성장 속도가 느려 주로 야외에서 재배합니다."
+      "common_name": "몽키퍼즐 나무",
+      "description": "Araucaria araucana 는 상록 침엽수로 몽키퍼즐 나무라 부릅니다. 충분한 햇빛과 배수 좋은 흙을 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/araucaria-araucana",
-      "https://www.rhs.org.uk/plants/1442/araucaria-araucana/details",
-      "https://plants.ces.ncsu.edu/plants/araucaria-araucana/"
+      "https://en.wikipedia.org/wiki/Araucaria_araucana",
+      "https://www.thespruce.com/growing-monkey-puzzle-trees-5083010",
+      "https://plnts.com/en/care/houseplants-family/araucaria",
+      "https://en.jardineriaon.com/araucana-araucana.html"
     ]
   }
 }

@@ -1,9 +1,9 @@
 {
   "external_id": "chamaedorea_cataractarum",
-  "name": "Cat Palm",
+  "name": "Cat palm",
   "latin": "Chamaedorea cataractarum",
   "sun": "medium",
-  "water": "medium",
+  "water": "high",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
+          "en": "Bright indirect",
           "pl": "Jasne, rozproszone",
-          "de": "Helles Streulicht",
+          "de": "Helles indirektes",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
           "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जलनिकास मिट्टी",
-          "zh": "排水良好土壤",
+          "hi": "अच्छी जल-निकासी मिट्टी",
+          "zh": "排水良好基质",
           "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
+          "en": "Evenly moist",
+          "pl": "Stale lekko wilgotne",
           "de": "Gleichmäßig feucht",
           "fr": "Humide régulièrement",
-          "it": "Sempre umido",
+          "it": "Umido costante",
           "es": "Húmedo constante",
-          "pt": "Sempre úmido",
-          "ar": "رطوبة منتظمة",
-          "hi": "समान नमी रखें",
+          "pt": "Úmido constante",
+          "ar": "رطوبة متوازنة",
+          "hi": "समान रूप से नम",
           "zh": "保持均匀湿润",
           "ja": "均一に湿らせる",
-          "ko": "항상 촉촉하게"
+          "ko": "고르게 촉촉하게"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
           "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "易于养护",
-          "ja": "育てやすい",
-          "ko": "관리 쉬움"
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers high humidity",
-          "pl": "Lubi wilgotność",
-          "de": "Mag hohe Luftfeuchte",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "अधिक नमी पसंद",
-          "zh": "喜高湿度",
-          "ja": "高湿度を好む",
-          "ko": "높은 습도 선호"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक नमी",
+          "zh": "偏高湿度",
+          "ja": "高めの湿度",
+          "ko": "습도 높게"
         }
       }
     },
@@ -151,7 +150,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "hi": "गैर-विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +161,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping palm",
-          "pl": "Palma kępiasta",
-          "de": "Horstbildend",
-          "fr": "Palmier en touffe",
-          "it": "Palma cespitosa",
-          "es": "Palmera en mata",
-          "pt": "Palmeira em touceira",
-          "ar": "نمو خصل",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち成長",
-          "ko": "군생 성장"
+          "en": "Clumping, slow",
+          "pl": "Kępiasta, wolna",
+          "de": "Horstig, langsam",
+          "fr": "Touffu, lent",
+          "it": "Cespo, lento",
+          "es": "En mata, lento",
+          "pt": "Em touceira, lenta",
+          "ar": "متكتلة وبطيئة",
+          "hi": "गुच्छेदार, धीमी",
+          "zh": "丛生，生长慢",
+          "ja": "株立ち・ゆっくり",
+          "ko": "포기형, 느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No soggy soil",
+          "pl": "Nie zalewaj",
+          "de": "Keine Staunässe",
+          "fr": "Pas d’excès d’eau",
+          "it": "No ristagni",
+          "es": "No encharcar",
+          "pt": "Não encharcar",
+          "ar": "تجنب التربة الموحلة",
+          "hi": "पानी भराव नहीं",
+          "zh": "避免积水",
+          "ja": "過湿にしない",
+          "ko": "과습 금지"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Spider mites",
+          "pl": "Przędziorki",
+          "de": "Spinnmilben",
+          "fr": "Araignées rouges",
+          "it": "Ragnetto rosso",
+          "es": "Ácaros",
+          "pt": "Ácaros",
+          "ar": "العناكب الحمراء",
+          "hi": "स्पाइडर माइट्स",
+          "zh": "红蜘蛛",
+          "ja": "ハダニ",
+          "ko": "응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Cat Palm",
-      "description": "Chamaedorea cataractarum is a tropical palm native to southern Mexico and Central America. It forms dense clumps of arching fronds and is well suited to indoor environments with bright, indirect light."
+      "common_name": "Cat palm",
+      "description": "A clumping, trunkless palm with arching fronds, commonly grown indoors in bright, indirect light. Keep the potting mix evenly moist but not waterlogged, and avoid cold drafts. It prefers warm room temperatures and moderate to higher humidity."
     },
     "pl": {
       "common_name": "Palma kocia",
-      "description": "Chamaedorea cataractarum to tropikalna palma pochodząca z Meksyku i Ameryki Środkowej. Tworzy gęste kępy liści i dobrze rośnie w jasnych wnętrzach bez bezpośredniego słońca."
+      "description": "Kępiasta, bezpniowa palma o łukowato wygiętych liściach, często uprawiana w domu przy jasnym, rozproszonym świetle. Podłoże utrzymuj stale lekko wilgotne, ale nie mokre, i unikaj zimnych przeciągów. Lubi ciepłe temperatury pokojowe i umiarkowanie wyższą wilgotność."
     },
     "de": {
       "common_name": "Katzenpalme",
-      "description": "Chamaedorea cataractarum ist eine tropische Palme aus Mexiko und Mittelamerika. Sie wächst horstig und eignet sich gut für helle Innenräume ohne direkte Sonne."
+      "description": "Eine horstig wachsende, stammlos wirkende Palme mit bogigen Wedeln, geeignet für helles, indirektes Licht. Das Substrat gleichmäßig feucht halten, aber Staunässe vermeiden und vor kalter Zugluft schützen. Sie mag warme Zimmertemperaturen und mittlere bis höhere Luftfeuchte."
     },
     "fr": {
-      "common_name": "Palmier cataracte",
-      "description": "Chamaedorea cataractarum est un palmier tropical originaire du Mexique et d’Amérique centrale. Il pousse en touffes denses et préfère une lumière vive mais indirecte."
+      "common_name": "Palmier chat",
+      "description": "Palmier en touffe, sans tronc apparent, aux frondes arquées, adapté à une lumière vive et indirecte. Gardez le substrat régulièrement humide sans excès d’eau et évitez les courants d’air froid. Il apprécie une température intérieure chaude et une humidité moyenne à élevée."
     },
     "it": {
-      "common_name": "Palma cataratta",
-      "description": "Chamaedorea cataractarum è una palma tropicale originaria del Messico e dell’America Centrale. Cresce a cespi ed è adatta alla coltivazione in interni luminosi."
+      "common_name": "Palma del gatto",
+      "description": "Palma cespugliosa senza tronco evidente, con fronde arcuate, adatta a luce intensa ma indiretta. Mantieni il terriccio uniformemente umido senza ristagni ed evita correnti fredde. Preferisce temperature calde da interno e umidità medio-alta."
     },
     "es": {
-      "common_name": "Palma catarata",
-      "description": "Chamaedorea cataractarum es una palmera tropical de México y Centroamérica. Forma matas densas y se adapta bien a interiores con luz indirecta."
+      "common_name": "Palma de gato",
+      "description": "Palmera en mata, sin tronco visible, con frondas arqueadas, adecuada para luz brillante e indirecta. Mantén el sustrato uniformemente húmedo sin encharcar y evita corrientes frías. Prefiere temperaturas cálidas de interior y humedad media a alta."
     },
     "pt": {
-      "common_name": "Palmeira-catarata",
-      "description": "Chamaedorea cataractarum é uma palmeira tropical do México e da América Central. Cresce em touceiras e prefere ambientes internos bem iluminados."
+      "common_name": "Palmeira-gato",
+      "description": "Palmeira em touceira, sem tronco aparente, com folhas arqueadas, indicada para luz forte e indireta. Mantenha o substrato uniformemente úmido sem encharcar e evite correntes de ar frio. Prefere temperaturas internas quentes e umidade média a alta."
     },
     "ar": {
-      "common_name": "نخيل القط",
-      "description": "نبات Chamaedorea cataractarum نخيل استوائي موطنه المكسيك وأمريكا الوسطى. ينمو في خصل كثيفة ويناسب الأماكن الداخلية ذات الضوء غير المباشر."
+      "common_name": "نخلة القط",
+      "description": "نخلة تنمو على شكل كتلة بدون جذع واضح وبسعف مقوس، وتنجح داخل المنزل في ضوء ساطع غير مباشر. حافظ على التربة رطبة بشكل متوازن دون إغراق وتجنب التيارات الباردة. تفضل درجات حرارة منزلية دافئة ورطوبة متوسطة إلى أعلى."
     },
     "hi": {
       "common_name": "कैट पाम",
-      "description": "Chamaedorea cataractarum मेक्सिको और मध्य अमेरिका की उष्णकटिबंधीय ताड़ प्रजाति है। यह गुच्छों में बढ़ती है और घर के अंदर अप्रत्यक्ष रोशनी में अच्छी रहती है।"
+      "description": "यह गुच्छेदार, बिना स्पष्ट तने वाली पाम है जिसकी पत्तियाँ धनुषाकार होती हैं और यह तेज अप्रत्यक्ष रोशनी में अच्छी रहती है। मिट्टी को समान रूप से नम रखें, पर पानी भराव न होने दें और ठंडी हवा से बचाएँ। इसे गर्म कमरे का तापमान और मध्यम से अधिक आर्द्रता पसंद है।"
     },
     "zh": {
-      "common_name": "猫棕",
-      "description": "Chamaedorea cataractarum 原产于墨西哥和中美洲，是一种热带棕榈。它成丛生长，适合在明亮但无直射光的室内环境中养护。"
+      "common_name": "猫棕榈",
+      "description": "这是一种丛生、无明显主干的棕榈，叶片呈拱形，适合明亮散射光的室内环境。盆土保持均匀湿润但不要积水，并避免冷风直吹。偏好温暖的室温和中等到较高的空气湿度。"
     },
     "ja": {
       "common_name": "キャットパーム",
-      "description": "チャメドレア・カタラクタルムはメキシコと中米原産の熱帯ヤシです。株立ちで成長し、明るい室内の間接光を好みます。"
+      "description": "株立ちで幹が目立たないヤシで、弓なりの葉が特徴です。明るい間接光で育て、用土は均一に湿らせつつ過湿は避け、冷たいすきま風を避けます。暖かい室温と中〜高めの湿度を好みます。"
     },
     "ko": {
       "common_name": "캣야자",
-      "description": "Chamaedorea cataractarum는 멕시코와 중미 원산의 열대 야자입니다. 군생으로 자라며 밝은 간접광의 실내 환경에 적합합니다."
+      "description": "포기형으로 자라고 뚜렷한 줄기가 없는 야자로, 휘어진 잎이 특징입니다. 밝은 간접광에서 잘 자라며 흙은 고르게 촉촉하게 유지하되 과습은 피하세요. 따뜻한 실내 온도와 중간~높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://edis.ifas.ufl.edu/publication/FP122",
-      "https://www.rhs.org.uk/plants/3331/chamaedorea-cataractarum/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276518"
+      "https://hgic.clemson.edu/factsheet/indoor-palms/",
+      "https://www.thespruce.com/cat-palm-care-guide-7559170",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:54852-2",
+      "https://www.nparks.gov.sg/florafaunaweb/flora/2/6/2611",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chamaedorea"
     ]
   }
 }

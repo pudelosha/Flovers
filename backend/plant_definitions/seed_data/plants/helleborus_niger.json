@@ -1,45 +1,46 @@
 {
   "external_id": "helleborus_niger",
-  "name": "Christmas Rose",
+  "name": "Black Hellebore",
   "latin": "Helleborus niger",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam"
+    "all-purpose",
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 60,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
-  "image_hero": "helleborus_niger.jpg",
-  "image_thumb": "helleborus_niger.jpg",
+  "image_hero": "hellebore_niger.jpg",
+  "image_thumb": "hellebore_niger.jpg",
   "traits": [
     {
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial shade",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezzombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "半阴",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained loam",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
           "fr": "Bien drainé",
           "it": "Ben drenato",
           "es": "Bien drenado",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "よく排水される土",
+          "ko": "잘 배수된 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderata",
-          "es": "Moderado",
-          "pt": "Moderada",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Odporna na chłód",
-          "de": "Kältetolerant",
-          "fr": "Tolère le froid",
-          "it": "Resiste al freddo",
-          "es": "Tolera frío",
-          "pt": "Tolera frio",
-          "ar": "يتحمل البرد",
-          "hi": "ठंड सहनशील",
-          "zh": "耐寒",
-          "ja": "耐寒性",
-          "ko": "내한성"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "一般",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Trująca",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny po spożyciu",
+          "de": "Giftig bei Einnahme",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام إذا تم تناوله",
+          "hi": "अगर निगला जाए तो विषैला",
+          "zh": "摄入有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Staudenhorst",
-          "fr": "Vivace en touffe",
-          "it": "Perenne cespugliosa",
-          "es": "Perenne en mata",
-          "pt": "Perene em touceira",
-          "ar": "معمرة كتلية",
-          "hi": "गुच्छेदार बारहमासी",
-          "zh": "丛生多年生",
-          "ja": "株立ち多年草",
-          "ko": "군생 다년초"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Entwicklung",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Christmas Rose",
-      "description": "Helleborus niger is a hardy perennial known for its white winter flowers. It prefers partial shade and well-drained soil. All parts of the plant are toxic if ingested."
+      "common_name": "Black Hellebore",
+      "description": "Helleborus niger is a perennial plant known for its striking dark flowers. It thrives in shaded environments and requires moderate care."
     },
     "pl": {
-      "common_name": "Ciemiernik biały",
-      "description": "Helleborus niger to odporna bylina o białych kwiatach zimowych. Najlepiej rośnie w półcieniu i przepuszczalnej glebie. Roślina jest trująca."
+      "common_name": "Czarny ciemiernik",
+      "description": "Helleborus niger to roślina wieloletnia, znana z ciemnych kwiatów. Rośnie w zacienionych miejscach i wymaga umiarkowanej opieki."
     },
     "de": {
-      "common_name": "Christrose",
-      "description": "Helleborus niger ist eine winterblühende Staude mit weißen Blüten. Sie wächst bevorzugt im Halbschatten in durchlässigem Boden. Die Pflanze ist giftig."
+      "common_name": "Schwarze Nieswurz",
+      "description": "Helleborus niger ist eine mehrjährige Pflanze, die für ihre dunklen Blüten bekannt ist. Sie gedeiht in schattigen Umgebungen und erfordert mäßige Pflege."
     },
     "fr": {
-      "common_name": "Rose de Noël",
-      "description": "Helleborus niger est une vivace rustique à floraison hivernale blanche. Elle préfère la mi-ombre et un sol bien drainé. La plante est toxique."
+      "common_name": "Hellébore noire",
+      "description": "Helleborus niger est une plante vivace connue pour ses fleurs sombres. Elle prospère dans des environnements ombragés et nécessite des soins modérés."
     },
     "it": {
       "common_name": "Elleboro nero",
-      "description": "Helleborus niger è una perenne resistente con fiori bianchi invernali. Predilige mezzombra e terreno ben drenato. È una pianta tossica."
+      "description": "Helleborus niger è una pianta perenne nota per i suoi fiori scuri. Cresce in ambienti ombreggiati e richiede una cura moderata."
     },
     "es": {
-      "common_name": "Rosa de Navidad",
-      "description": "Helleborus niger es una planta perenne resistente con flores blancas en invierno. Prefiere semisombra y suelo bien drenado. Es tóxica."
+      "common_name": "Helleboro negro",
+      "description": "Helleborus niger es una planta perenne conocida por sus flores oscuras. Crece en entornos sombreados y requiere cuidados moderados."
     },
     "pt": {
-      "common_name": "Rosa-do-Natal",
-      "description": "Helleborus niger é uma planta perene resistente com flores brancas no inverno. Prefere meia-sombra e solo bem drenado. É tóxica."
+      "common_name": "Hellebore negro",
+      "description": "Helleborus niger é uma planta perene conhecida por suas flores escuras. Cresce em ambientes sombreados e requer cuidados moderados."
     },
     "ar": {
-      "common_name": "وردة الميلاد",
-      "description": "Helleborus niger نبات معمر قوي بأزهار بيضاء شتوية. يفضل الظل الجزئي وتربة جيدة التصريف. النبات سام."
+      "common_name": "الهيلوبور الأسود",
+      "description": "Helleborus niger هو نبات معمر معروف بأزهاره الداكنة. ينمو في بيئات مظللة ويتطلب رعاية معتدلة."
     },
     "hi": {
-      "common_name": "क्रिसमस रोज़",
-      "description": "Helleborus niger एक मजबूत बारहमासी पौधा है जिसमें सर्दियों में सफेद फूल आते हैं। इसे आंशिक छाया और अच्छी जलनिकास वाली मिट्टी पसंद है। यह विषैला है।"
+      "common_name": "काले हेलीबोर",
+      "description": "Helleborus niger एक बहुवर्षीय पौधा है जो अपने गहरे फूलों के लिए प्रसिद्ध है। यह छायादार वातावरण में उगता है और इसे मध्यम देखभाल की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "圣诞玫瑰",
-      "description": "Helleborus niger 是一种耐寒多年生植物，冬季开白花。喜半阴和排水良好的土壤。全株有毒。"
+      "common_name": "黑色圣诞玫瑰",
+      "description": "Helleborus niger 是一种多年生植物，以其深色的花朵而闻名。它在阴凉环境中生长，需要适度的护理。"
     },
     "ja": {
-      "common_name": "クリスマスローズ",
-      "description": "Helleborus niger は冬に白い花を咲かせる耐寒性多年草です。半日陰と水はけの良い土を好みます。有毒です。"
+      "common_name": "ブラックヘレボルス",
+      "description": "Helleborus nigerは、暗い花で知られる多年草です。日陰の環境で育ち、適度な手入れが必要です。"
     },
     "ko": {
-      "common_name": "크리스마스로즈",
-      "description": "Helleborus niger는 겨울에 흰 꽃이 피는 내한성 다년초입니다. 반그늘과 배수 좋은 토양을 선호하며 독성이 있습니다."
+      "common_name": "검은 헬리보르스",
+      "description": "Helleborus niger는 어두운 꽃으로 유명한 다년생 식물입니다. 그늘진 환경에서 자라며 적당한 관리가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/helleborus",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a533",
-      "https://www.gardenersworld.com/plants/helleborus-niger/"
+      "https://www.rhs.org.uk/plants/helleborus-niger",
+      "https://www.gardenia.net/plant/helleborus-niger"
     ]
   }
 }

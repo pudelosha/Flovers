@@ -4,15 +4,15 @@
   "latin": "Oxalis triangularis",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "oxalis_triangularis.jpg",
   "image_thumb": "oxalis_triangularis.jpg",
   "traits": [
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Światło średnie",
+          "pl": "Średnie światło",
           "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
+          "fr": "Lumière modérée",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
           "hi": "मध्यम रोशनी",
           "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 광도"
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好的排水",
-          "ja": "排水性が良い",
-          "ko": "배수 좋은"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "보통"
+          "en": "Water moderately",
+          "pl": "Podlewać umiarkowanie",
+          "de": "Mäßig gießen",
+          "fr": "Arroser modérément",
+          "it": "Annaffiare moderatamente",
+          "es": "Regar moderadamente",
+          "pt": "Regar moderadamente",
+          "ar": "الري بشكل معتدل",
+          "hi": "मध्यम पानी दें",
+          "zh": "适量浇水",
+          "ja": "適度に水をやる",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwy",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "简单",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low to Medium",
-          "pl": "Niska do średniej",
-          "de": "Niedrig bis mittel",
-          "fr": "Faible à moyenne",
-          "it": "Bassa a media",
-          "es": "Baja a media",
-          "pt": "Baixa a média",
-          "ar": "منخفض إلى متوسط",
-          "hi": "कम से मध्यम",
-          "zh": "低至中等",
-          "ja": "低〜中",
-          "ko": "낮음에서 중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Yes",
-          "pl": "Tak",
-          "de": "Ja",
-          "fr": "Oui",
-          "it": "Sì",
-          "es": "Sí",
-          "pt": "Sim",
-          "ar": "نعم",
-          "hi": "हाँ",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic if ingested",
+          "pl": "Trujący jeśli spożyty",
+          "de": "Giftig bei Einnahme",
+          "fr": "Toxique s'il est ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام إذا تم ابتلاعه",
+          "hi": "अगर निगल लिया जाए तो विषाक्त",
+          "zh": "吞食有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping",
-          "pl": "Kępiasty",
-          "de": "Buschig",
-          "fr": "Tufte",
-          "it": "A ciuffo",
-          "es": "En racimo",
-          "pt": "Em touceiras",
-          "ar": "كتلة",
-          "hi": "झुंड",
-          "zh": "丛生",
-          "ja": "株立ち",
-          "ko": "덩어리"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "成長が速い",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Purple Shamrock",
-      "description": "A striking plant with purple, heart-shaped leaves and small white flowers. Known for its easy care and vibrant foliage."
+      "description": "Oxalis triangularis, known as the Purple Shamrock, features striking purple leaves and white to pink flowers. It thrives in moderate light and requires careful watering."
     },
     "pl": {
-      "common_name": "Fiołek Trójkątny",
-      "description": "Roślina o purpurowych, sercowatych liściach i drobnych białych kwiatach. Łatwa w pielęgnacji."
+      "common_name": "Fioletowy koniczyniec",
+      "description": "Oxalis triangularis, znany jako Fioletowy koniczyniec, charakteryzuje się uderzającymi fioletowymi liśćmi i białymi lub różowymi kwiatami. Rośnie w umiarkowanym świetle i wymaga ostrożnego podlewania."
     },
     "de": {
-      "common_name": "Lila Glücksklee",
-      "description": "Eine Pflanze mit lila, herzförmigen Blättern und kleinen weißen Blumen. Einfach zu pflegen."
+      "common_name": "Violetter Schamrock",
+      "description": "Oxalis triangularis, auch als Violetter Schamrock bekannt, zeichnet sich durch auffällige violette Blätter und weiße bis rosafarbene Blüten aus. Er gedeiht bei mittlerem Licht und benötigt vorsichtiges Gießen."
     },
     "fr": {
-      "common_name": "Trèfle pourpre",
-      "description": "Plante à feuilles en forme de cœur de couleur pourpre et petites fleurs blanches. Facile à entretenir."
+      "common_name": "Trèfle violet",
+      "description": "Oxalis triangularis, connu sous le nom de Trèfle violet, possède des feuilles violettes frappantes et des fleurs blanches à roses. Il prospère dans une lumière modérée et nécessite un arrosage prudent."
     },
     "it": {
-      "common_name": "Trifoglio Viola",
-      "description": "Una pianta con foglie a forma di cuore di colore viola e piccoli fiori bianchi. Facile da curare."
+      "common_name": "Trifoglio viola",
+      "description": "Oxalis triangularis, conosciuto come Trifoglio viola, presenta foglie viola brillanti e fiori bianchi o rosa. Cresce in luce moderata e richiede un'irrigazione attenta."
     },
     "es": {
-      "common_name": "Trébol Púrpura",
-      "description": "Planta con hojas en forma de corazón de color púrpura y pequeñas flores blancas. Fácil de cuidar."
+      "common_name": "Trébol morado",
+      "description": "Oxalis triangularis, conocido como el Trébol morado, presenta hojas moradas llamativas y flores blancas a rosas. Prosperan con luz moderada y requieren un riego cuidadoso."
     },
     "pt": {
-      "common_name": "Trevo Roxo",
-      "description": "Planta com folhas roxas em forma de coração e pequenas flores brancas. Fácil de cuidar."
+      "common_name": "Trevo roxo",
+      "description": "Oxalis triangularis, conhecido como o Trevo roxo, possui folhas roxas marcantes e flores brancas a rosas. Cresce em luz moderada e exige rega cuidadosa."
     },
     "ar": {
-      "common_name": "الكلأ الأرجواني",
-      "description": "نبات بأوراق على شكل قلب بلون أرجواني وزهور بيضاء صغيرة. سهل العناية."
+      "common_name": "كلخلة بنفسجية",
+      "description": "Oxalis triangularis، المعروف بالكلخلة البنفسجية، يتميز بأوراق بنفسجية لامعة وزهور بيضاء إلى وردية. ينمو في الضوء المعتدل ويتطلب سقاية حذرة."
     },
     "hi": {
-      "common_name": "बैंगनी शेमरॉक",
-      "description": "बैंगनी, दिल के आकार की पत्तियों और छोटे सफेद फूलों वाला पौधा। देखभाल में आसान।"
+      "common_name": "बैंगनी शमरॉक",
+      "description": "ऑक्सालिस ट्रायगोनालिस, जिसे बैंगनी शमरॉक के नाम से जाना जाता है, इसमें आकर्षक बैंगनी पत्तियां और सफेद से गुलाबी रंग के फूल होते हैं। यह मध्यम रोशनी में उगता है और पानी देने में सावधानी बरतनी होती है।"
     },
     "zh": {
       "common_name": "紫色三叶草",
-      "description": "一种具有紫色心形叶子和小白色花朵的植物。易于照料。"
+      "description": "Oxalis triangularis，也叫紫色三叶草，具有引人注目的紫色叶子和白色至粉红色的花朵。它在中等光照下生长，需要小心浇水。"
     },
     "ja": {
-      "common_name": "パープルシャムロック",
-      "description": "紫色のハート型の葉と小さな白い花を持つ植物。お手入れが簡単です。"
+      "common_name": "紫のシャムロック",
+      "description": "Oxalis triangularis、別名紫のシャムロックは、鮮やかな紫色の葉と白からピンクの花を特徴としています。中程度の光で育ち、水やりには注意が必要です。"
     },
     "ko": {
       "common_name": "보라색 클로버",
-      "description": "보라색 하트 모양의 잎과 작은 흰색 꽃을 가진 식물. 관리가 쉽습니다."
+      "description": "Oxalis triangularis, 보라색 클로버로 알려진 이 식물은 눈에 띄는 보라색 잎과 흰색에서 분홍색 꽃을 특징으로 합니다. 중간 밝기에서 잘 자라며, 물 주기에 주의가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardeningknowhow.com/ornamental/flowers/oxalis/oxalis-triangularis-purple-shamrock.htm",
-      "https://www.rhs.org.uk/plants/oxalis-triangularis"
+      "https://www.rhs.org.uk/plants/oxalis-triangularis",
+      "https://www.gardenia.net/plant/oxalis-triangularis"
     ]
   }
 }

@@ -2,17 +2,17 @@
   "external_id": "muscari_armeniacum",
   "name": "Grape Hyacinth",
   "latin": "Muscari armeniacum",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "ceramic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "muscari_armeniacum.jpg",
   "image_thumb": "muscari_armeniacum.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日なた",
-          "ko": "양지"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जलनिकास",
-          "zh": "排水良好",
-          "ja": "水はけ良い",
-          "ko": "배수 좋은 흙"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
+          "de": "Moderate Bewässerung",
           "fr": "Arrosage modéré",
-          "it": "Annaffiatura media",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度に水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Odporna na chłód",
-          "de": "Kälteresistent",
-          "fr": "Tolère le froid",
-          "it": "Resiste al freddo",
-          "es": "Tolera frío",
-          "pt": "Tolera frio",
-          "ar": "تتحمل البرودة",
-          "hi": "ठंड सहनशील",
-          "zh": "耐寒",
-          "ja": "耐寒性",
-          "ko": "내한성"
+          "en": "10-18°C",
+          "pl": "10-18°C",
+          "de": "10-18°C",
+          "fr": "10-18°C",
+          "it": "10-18°C",
+          "es": "10-18°C",
+          "pt": "10-18°C",
+          "ar": "10-18°C",
+          "hi": "10-18°C",
+          "zh": "10-18°C",
+          "ja": "10-18°C",
+          "ko": "10-18°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Low to moderate",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mäßig",
+          "fr": "Faible à modéré",
+          "it": "Bassa a moderata",
+          "es": "Baja a moderada",
+          "pt": "Baixa a moderada",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低到中等",
+          "ja": "低～中程度",
+          "ko": "낮은에서 보통"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Spring bulb",
-          "pl": "Cebula wiosenna",
-          "de": "Frühlingszwiebel",
-          "fr": "Bulbe printanier",
-          "it": "Bulbo primaverile",
-          "es": "Bulbo primaveral",
-          "pt": "Bulbo primaveril",
-          "ar": "بصلة ربيعية",
-          "hi": "वसंत बल्ब",
-          "zh": "春季球根",
-          "ja": "春咲き球根",
-          "ko": "봄 구근"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare il ristagno",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과습을 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मामूली कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Grape Hyacinth",
-      "description": "Muscari armeniacum is a spring-flowering bulb known for its dense blue flower spikes. It grows best in full sun and well-drained soil. The plant is hardy and easy to maintain."
+      "description": "Muscari armeniacum, commonly known as Grape Hyacinth, is a perennial bulbous plant. It produces clusters of small, bell-shaped blue flowers in spring."
     },
     "pl": {
-      "common_name": "Szafirek armeński",
-      "description": "Muscari armeniacum to wiosenna roślina cebulowa o niebieskich kwiatach. Preferuje słońce i przepuszczalną glebę. Jest odporna i łatwa w uprawie."
+      "common_name": "Szafirek groniasty",
+      "description": "Muscari armeniacum, znany jako szafirek groniasty, to bylinowa roślina cebulowa. Wiosną wytwarza skupiska małych, dzwonkowatych, niebieskich kwiatów."
     },
     "de": {
-      "common_name": "Armenische Traubenhyazinthe",
-      "description": "Muscari armeniacum ist eine frühlingsblühende Zwiebelpflanze mit blauen Blüten. Sie bevorzugt sonnige Standorte und gut durchlässigen Boden. Sie gilt als pflegeleicht."
+      "common_name": "Traubenhyazinthe",
+      "description": "Muscari armeniacum, auch Traubenhyazinthe genannt, ist eine mehrjährige Zwiebelpflanze. Sie produziert im Frühling kleine, glockenförmige blaue Blüten."
     },
     "fr": {
-      "common_name": "Muscari d’Arménie",
-      "description": "Muscari armeniacum est une plante à bulbe fleurissant au printemps. Elle aime le plein soleil et les sols bien drainés. Elle est rustique et facile à cultiver."
+      "common_name": "Jacinthe des raisins",
+      "description": "Muscari armeniacum, connu sous le nom de jacinthe des raisins, est une plante vivace à bulbes. Elle produit des grappes de petites fleurs bleues en forme de cloche au printemps."
     },
     "it": {
-      "common_name": "Muscari armeno",
-      "description": "Muscari armeniacum è una pianta bulbosa primaverile dai fiori blu. Predilige il sole pieno e terreni ben drenati. È resistente e semplice da coltivare."
+      "common_name": "Giacinto d'uva",
+      "description": "Muscari armeniacum, conosciuto come giacinto d'uva, è una pianta perenne a bulbo. Produce grappoli di piccoli fiori blu a forma di campana in primavera."
     },
     "es": {
       "common_name": "Jacinto de uva",
-      "description": "Muscari armeniacum es un bulbo de floración primaveral con flores azules. Crece mejor a pleno sol y en suelos drenados. Es fácil de cuidar."
+      "description": "Muscari armeniacum, conocido como jacinto de uva, es una planta perenne bulbosa. Produce racimos de pequeñas flores azules en forma de campana en primavera."
     },
     "pt": {
-      "common_name": "Jacinto-uva",
-      "description": "Muscari armeniacum é um bulbo de floração primaveril com flores azuis. Prefere sol pleno e solo bem drenado. É uma planta resistente."
+      "common_name": "Jacinto de uva",
+      "description": "Muscari armeniacum, conhecido como jacinto de uva, é uma planta perene bulbosa. Produz cachos de pequenas flores azuis em forma de sino na primavera."
     },
     "ar": {
-      "common_name": "الياقوتية العنبية",
-      "description": "Muscari armeniacum نبات بصلي يزهر في الربيع بأزهار زرقاء. يفضل الشمس الكاملة والتربة جيدة الصرف. سهل العناية."
+      "common_name": "سوسن العنب",
+      "description": "Muscari armeniacum، المعروف باسم سوسن العنب، هو نبات معمر بصلي. ينتج مجموعات من الزهور الصغيرة الزرقاء في الربيع."
     },
     "hi": {
-      "common_name": "ग्रेप हायसिंथ",
-      "description": "Muscari armeniacum वसंत ऋतु में खिलने वाला बल्ब पौधा है। इसे धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। यह देखभाल में आसान है।"
+      "common_name": "अंगूर हयासिंथ",
+      "description": "Muscari armeniacum, जिसे अंगूर हयासिंथ कहा जाता है, एक बारहमासी बल्बनुमा पौधा है। यह वसंत में छोटे, घंटी के आकार के नीले फूलों के गुच्छे उगता है।"
     },
     "zh": {
       "common_name": "葡萄风信子",
-      "description": "Muscari armeniacum 是春季开花的球根植物，花序呈蓝色。适合全日照和排水良好的土壤。养护简单。"
+      "description": "Muscari armeniacum，通常称为葡萄风信子，是一种多年生的鳞茎植物。它在春天开出成群的小铃形蓝色花朵。"
     },
     "ja": {
-      "common_name": "ムスカリ",
-      "description": "ムスカリ・アルメニアカムは春に咲く球根植物です。日当たりと水はけの良い土を好みます。育てやすい植物です。"
+      "common_name": "ブドウヒアシンス",
+      "description": "Muscari armeniacum、通称ブドウヒアシンスは多年生の球根植物です。春に小さな鐘型の青い花を房状に咲かせます。"
     },
     "ko": {
-      "common_name": "무스카리",
-      "description": "Muscari armeniacum은 봄에 피는 구근식물입니다. 햇빛과 배수가 좋은 토양을 좋아합니다. 관리가 쉽습니다."
+      "common_name": "포도 히아신스",
+      "description": "Muscari armeniacum, 일반적으로 포도 히아신스라고 불리는 이 식물은 다년생 구근 식물입니다. 봄에 작은 종 모양의 파란 꽃들이 송이로 피어납니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/11741/muscari-armeniacum/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a630"
+      "https://www.rhs.org.uk/plants/1232/muscari-armeniacum",
+      "https://www.gardenersworld.com/plants/muscari-armeniacum/"
     ]
   }
 }

@@ -1,13 +1,14 @@
 {
   "external_id": "anthurium_warocqueanum",
-  "name": "Queen Anthurium",
+  "name": "Queen anthurium",
   "latin": "Anthurium warocqueanum",
-  "sun": "medium",
-  "water": "high",
+  "sun": "high",
+  "water": "medium",
   "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
     "aroid",
@@ -20,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "anthurium_warocqueanum.jpg",
   "image_thumb": "anthurium_warocqueanum.jpg",
   "traits": [
@@ -30,13 +31,13 @@
         "text": {
           "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Hell indirekt",
+          "de": "Helles Indirektlicht",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -49,16 +50,16 @@
         "text": {
           "en": "Airy aroid mix",
           "pl": "Przewiewne podłoże",
-          "de": "Luftiges Substrat",
+          "de": "Luftiges Aroid-Sub.",
           "fr": "Substrat aéré",
-          "it": "Terriccio arioso",
+          "it": "Substrato arioso",
           "es": "Sustrato aireado",
-          "pt": "Substrato leve",
+          "pt": "Substrato arejado",
           "ar": "تربة جيدة التهوية",
-          "hi": "हवादार मिट्टी",
-          "zh": "疏松基质",
-          "ja": "通気性の土",
-          "ko": "통기성 토양"
+          "hi": "हवादार मिश्रण",
+          "zh": "疏松透气基质",
+          "ja": "通気性の良い用土",
+          "ko": "통기성 좋은 배지"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotne",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Sempre umido",
-          "es": "Húmedo constante",
-          "pt": "Úmido constante",
-          "ar": "رطوبة مستمرة",
-          "hi": "लगातार नम",
-          "zh": "保持湿润",
-          "ja": "均一に湿らす",
-          "ko": "항상 촉촉"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "حافظ على رطوبة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿り気を保つ",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -85,16 +86,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Challenging",
-          "pl": "Wymagająca",
-          "de": "Anspruchsvoll",
-          "fr": "Exigeante",
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
           "it": "Difficile",
-          "es": "Exigente",
-          "pt": "Exigente",
+          "es": "Difícil",
+          "pt": "Difícil",
           "ar": "صعبة",
           "hi": "कठिन",
-          "zh": "高难度",
+          "zh": "较难",
           "ja": "難しい",
           "ko": "어려움"
         }
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Very high",
-          "pl": "Bardzo wysoka",
-          "de": "Sehr hoch",
-          "fr": "Très élevée",
-          "it": "Molto alta",
-          "es": "Muy alta",
-          "pt": "Muito alta",
-          "ar": "مرتفعة جدًا",
-          "hi": "बहुत अधिक",
-          "zh": "非常高",
-          "ja": "非常に高い",
-          "ko": "매우 높음"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Forte humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic if eaten",
+          "pl": "Toksyczne po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषैला",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -161,77 +162,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow to medium",
-          "pl": "Wolny wzrost",
-          "de": "Langsam",
-          "fr": "Lente",
-          "it": "Lenta",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "نمو بطيء",
-          "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長は遅い",
-          "ko": "느린 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny–średni",
+          "de": "Langsam–mittel",
+          "fr": "Lente à moyenne",
+          "it": "Lenta–media",
+          "es": "Lento a medio",
+          "pt": "Lento a médio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी–मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅め〜普通",
+          "ko": "느림~보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Prone to root rot",
+          "pl": "Zgnilizna przy przel.",
+          "de": "Wurzelfäule bei Nässe",
+          "fr": "Risque de pourriture",
+          "it": "Marciume da eccesso",
+          "es": "Pudrición por exceso",
+          "pt": "Podridão por excesso",
+          "ar": "تعفن مع زيادة الماء",
+          "hi": "अधिक पानी से सड़न",
+          "zh": "易烂根",
+          "ja": "過湿で根腐れ",
+          "ko": "과습 시 뿌리썩음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Wełnowce, przędziorki",
+          "de": "Wollläuse, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, ácaros",
+          "pt": "Cochonilhas, ácaros",
+          "ar": "بق دقيقي، عناكب",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧、红蜘蛛",
+          "ja": "カイガラムシ、ダニ",
+          "ko": "깍지벌레, 응애"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Queen Anthurium",
-      "description": "Anthurium warocqueanum is a rare tropical aroid known for its long, velvety leaves with striking white veins. It is native to Colombian cloud forests and requires high humidity and stable warmth. This species is best suited for experienced indoor growers."
+      "common_name": "Queen anthurium",
+      "description": "Anthurium warocqueanum is a velvet-leaved aroid grown mainly for its long, dark foliage. Provide bright indirect light, warm temperatures, and high humidity. Water when the top layer starts to dry and avoid waterlogged soil; the plant is toxic if eaten."
     },
     "pl": {
-      "common_name": "Anturium Królowej",
-      "description": "Anthurium warocqueanum to rzadki anturium o długich, aksamitnych liściach z jasnym unerwieniem. Pochodzi z wilgotnych lasów Kolumbii i wymaga wysokiej wilgotności. Jest rośliną dla doświadczonych hodowców."
+      "common_name": "Anturium królewskie",
+      "description": "Anthurium warocqueanum to aroid o aksamitnych, długich liściach uprawiany głównie dla ozdobnego ulistnienia. Wymaga jasnego światła rozproszonego, ciepła i wysokiej wilgotności powietrza. Podlewaj, gdy wierzch podłoża lekko przeschnie, unikaj zastoin wody; roślina jest toksyczna po spożyciu."
     },
     "de": {
       "common_name": "Königin-Anthurie",
-      "description": "Anthurium warocqueanum ist eine seltene tropische Art mit samtigen, länglichen Blättern. Sie stammt aus kolumbianischen Nebelwäldern und benötigt hohe Luftfeuchtigkeit. Die Pflege gilt als anspruchsvoll."
+      "description": "Anthurium warocqueanum ist ein samtblättriges Aronstabgewächs mit sehr langen, dunklen Blättern. Es braucht helles, indirektes Licht, Wärme und hohe Luftfeuchte. Gieße, wenn die obere Schicht leicht abgetrocknet ist, und vermeide Staunässe; bei Verzehr ist die Pflanze giftig."
     },
     "fr": {
       "common_name": "Anthurium reine",
-      "description": "Anthurium warocqueanum est une plante tropicale rare aux longues feuilles veloutées. Originaire des forêts humides de Colombie, elle demande une forte humidité. Elle convient aux amateurs expérimentés."
+      "description": "Anthurium warocqueanum est un aroïde à feuilles veloutées et très allongées, cultivé pour son feuillage. Donnez une lumière vive mais indirecte, de la chaleur et une forte humidité. Arrosez quand la surface commence à sécher et évitez l’excès d’eau; la plante est toxique si ingérée."
     },
     "it": {
-      "common_name": "Anthurium Regina",
-      "description": "Anthurium warocqueanum è una specie tropicale rara con foglie lunghe e vellutate. Proviene dalle foreste nebulose colombiane e necessita di elevata umidità. È adatta a coltivatori esperti."
+      "common_name": "Anthurium regina",
+      "description": "Anthurium warocqueanum è un’aroide a foglie vellutate e molto lunghe, coltivata soprattutto per il fogliame. Richiede luce intensa ma indiretta, caldo e alta umidità. Annaffia quando lo strato superiore inizia ad asciugare ed evita ristagni; è tossica se ingerita."
     },
     "es": {
-      "common_name": "Anthurium Reina",
-      "description": "Anthurium warocqueanum es un anturio tropical raro de hojas largas y aterciopeladas. Es originario de los bosques húmedos de Colombia y requiere mucha humedad. Su cuidado es exigente."
+      "common_name": "Anthurium reina",
+      "description": "Anthurium warocqueanum es un aroide de hojas aterciopeladas y alargadas, apreciado por su follaje. Necesita luz brillante indirecta, calor y alta humedad. Riega cuando la capa superior empiece a secarse y evita el encharcamiento; es tóxico si se ingiere."
     },
     "pt": {
-      "common_name": "Antúrio Rainha",
-      "description": "Anthurium warocqueanum é uma planta tropical rara com folhas longas e aveludadas. Nativa das florestas úmidas da Colômbia, precisa de alta umidade. Indicada para cultivadores experientes."
+      "common_name": "Antúrio rainha",
+      "description": "Anthurium warocqueanum é uma arácea de folhas longas e aveludadas, cultivada pelo folhagem. Prefere luz forte indireta, calor e alta umidade. Regue quando a camada superior começar a secar e evite encharcar; é tóxica se ingerida."
     },
     "ar": {
       "common_name": "أنثوريوم الملكة",
-      "description": "أنثوريوم وركويانوم نبات استوائي نادر بأوراق طويلة مخملية. موطنه غابات كولومبيا الرطبة ويحتاج إلى رطوبة عالية. مناسب لهواة النباتات ذوي الخبرة."
+      "description": "Anthurium warocqueanum نبات أرويد بأوراق مخملية طويلة يُزرع أساسًا لأوراقه. يحتاج إلى ضوء ساطع غير مباشر وحرارة ورطوبة مرتفعة. اسقِ عندما تجف الطبقة العلوية قليلًا وتجنب تشبع التربة بالماء؛ وهو سام عند الابتلاع."
     },
     "hi": {
       "common_name": "क्वीन एन्थूरियम",
-      "description": "Anthurium warocqueanum एक दुर्लभ उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ लंबी और मखमली होती हैं। यह कोलंबिया के नम वनों का मूल निवासी है और उच्च आर्द्रता चाहता है। इसकी देखभाल कठिन मानी जाती है।"
+      "description": "Anthurium warocqueanum मखमली, लंबी पत्तियों वाला एरॉइड है जिसे मुख्यतः पर्ण-सौंदर्य के लिए उगाया जाता है। इसे तेज अप्रत्यक्ष रोशनी, गर्म तापमान और अधिक नमी चाहिए। ऊपर की परत थोड़ी सूखने पर पानी दें और जलभराव से बचें; यह खाने पर विषैला है।"
     },
     "zh": {
-      "common_name": "皇后花烛",
-      "description": "Anthurium warocqueanum 是一种稀有的热带花烛，叶片细长且具有天鹅绒质感。原产于哥伦比亚湿润森林，需要很高的空气湿度。适合有经验的种植者。"
+      "common_name": "女王花烛",
+      "description": "Anthurium warocqueanum 是一种叶片细长、质感如绒的天南星科观叶植物。需明亮散射光、温暖环境与较高空气湿度。表层略干再浇水并避免积水；误食有毒。"
     },
     "ja": {
       "common_name": "クイーンアンスリウム",
-      "description": "Anthurium warocqueanum は細長くベルベット状の葉を持つ希少な熱帯植物です。コロンビアの雲霧林原産で高い湿度を必要とします。栽培は上級者向けです。"
+      "description": "Anthurium warocqueanum はベルベット状の長い葉を楽しむサトイモ科植物です。明るい間接光、温かさ、高湿度を好みます。表面が少し乾いたら水やりし、過湿を避けてください；誤食で有毒です。"
     },
     "ko": {
       "common_name": "퀸 안스리움",
-      "description": "Anthurium warocqueanum은 길고 벨벳 같은 잎이 특징인 희귀한 열대 식물입니다. 콜롬비아의 습윤한 숲이 원산지로 높은 습도가 필요합니다. 관리 난이도가 높은 편입니다."
+      "description": "Anthurium warocqueanum 은 벨벳 질감의 길고 어두운 잎이 특징인 천남성과 식물입니다. 밝은 간접광, 따뜻한 온도, 높은 습도를 요구합니다. 겉흙이 약간 마르면 물을 주고 과습을 피하세요; 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/anthurium-warocqueanum",
-      "https://www.aos.org/orchids/culture-sheets/anthurium.aspx",
-      "https://www.gardenia.net/plant/anthurium-warocqueanum"
+      "https://www.rhsplants.co.uk/plants/_/anthurium-warocqueanum/classid.2000051903/",
+      "https://www.plantsandflowersfoundationholland.org/en/indoor-plantguide/anthurium/",
+      "https://www.petpoisonhelpline.com/poison/anthurium/",
+      "https://www.rareplants.co.nz/post/comprehensive-anthurium-care-guide"
     ]
   }
 }

@@ -1,23 +1,27 @@
 {
   "external_id": "fraxinus_excelsior",
-  "name": "European Ash",
+  "name": "European ash",
   "latin": "Fraxinus excelsior",
   "sun": "high",
   "water": "medium",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "popular": false,
-  "recommended_pot_materials": [],
-  "recommended_soil_mixes": [
-    "loam"
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
   ],
-  "water_required": false,
-  "water_interval_days": null,
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "peat-free"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
   "image_hero": "fraxinus_excelsior.jpg",
   "image_thumb": "fraxinus_excelsior.jpg",
   "traits": [
@@ -33,9 +37,9 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日向",
+          "ja": "日なた",
           "ko": "양지"
         }
       }
@@ -44,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna glina",
-          "de": "Feuchter Lehm",
-          "fr": "Limon humide",
-          "it": "Terreno umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润壤土",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Moist, well-drained",
+          "pl": "Wilg., przepuszcz.",
+          "de": "Feucht, durchläss.",
+          "fr": "Frais, drainant",
+          "it": "Umido, drenante",
+          "es": "Húmedo, drenante",
+          "pt": "Úmido, drenante",
+          "ar": "رطب وصارف",
+          "hi": "नम, जलनिकासी",
+          "zh": "湿润排水好",
+          "ja": "湿り気と排水",
+          "ko": "촉촉 배수 양호"
         }
       }
     },
@@ -63,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Rainfed",
-          "pl": "Opadowe",
-          "de": "Regenwasser",
-          "fr": "Pluie seule",
-          "it": "Pioggia",
-          "es": "Lluvia",
-          "pt": "Chuva",
-          "ar": "مطر فقط",
-          "hi": "वर्षा पर",
-          "zh": "自然降雨",
-          "ja": "降雨のみ",
-          "ko": "자연 강우"
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder frais",
+          "it": "Tieni umido",
+          "es": "Mantén húmedo",
+          "pt": "Mantenha úmido",
+          "ar": "حافظ على الرطوبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 촉촉"
         }
       }
     },
@@ -82,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Średnia",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Hard (tree)",
+          "pl": "Trudna (drzewo)",
+          "de": "Schwierig (Baum)",
+          "fr": "Difficile (arbre)",
+          "it": "Difficile (albero)",
+          "es": "Difícil (árbol)",
+          "pt": "Difícil (árvore)",
+          "ar": "صعبة (شجرة)",
+          "hi": "कठिन (पेड़)",
+          "zh": "较难（乔木）",
+          "ja": "難しい（樹木）",
+          "ko": "어려움(나무)"
         }
       }
     },
@@ -102,17 +106,17 @@
       "value": {
         "text": {
           "en": "Cool temperate",
-          "pl": "Umiarkowany",
-          "de": "Gemäßigt",
-          "fr": "Tempéré",
-          "it": "Temperato",
-          "es": "Templado",
-          "pt": "Temperado",
-          "ar": "معتدل",
-          "hi": "समशीतोष्ण",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "pl": "Umiark. chłodno",
+          "de": "Kühl-gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "معتدل مائل للبرودة",
+          "hi": "ठंडा समशीतोष्ण",
+          "zh": "温带偏凉",
+          "ja": "冷涼な温帯",
+          "ko": "서늘한 온대"
         }
       }
     },
@@ -120,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal outdoor",
-          "pl": "Naturalna",
-          "de": "Natürlich",
-          "fr": "Naturelle",
-          "it": "Naturale",
-          "es": "Natural",
-          "pt": "Natural",
-          "ar": "طبيعية",
-          "hi": "सामान्य",
-          "zh": "自然湿度",
-          "ja": "自然湿度",
-          "ko": "자연 습도"
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
         }
       }
     },
@@ -139,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سام",
-          "hi": "अविषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Not known toxic",
+          "pl": "Brak znanej toks.",
+          "de": "Nicht toxisch bekannt",
+          "fr": "Non toxique connu",
+          "it": "Non noto tossico",
+          "es": "No tóxica conocida",
+          "pt": "Não tóxica conhecida",
+          "ar": "غير معروف كسام",
+          "hi": "विषाक्त नहीं माना",
+          "zh": "未见毒性报告",
+          "ja": "毒性報告なし",
+          "ko": "독성 보고 없음"
         }
       }
     },
@@ -158,77 +162,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Large tree",
-          "pl": "Duże drzewo",
-          "de": "Großer Baum",
-          "fr": "Grand arbre",
-          "it": "Albero grande",
-          "es": "Árbol grande",
-          "pt": "Árvore grande",
-          "ar": "شجرة كبيرة",
-          "hi": "बड़ा वृक्ष",
-          "zh": "大型乔木",
-          "ja": "高木",
-          "ko": "큰 나무"
+          "en": "Fast, large tree",
+          "pl": "Szybki, duży wzrost",
+          "de": "Schnell, großer Baum",
+          "fr": "Rapide, grand arbre",
+          "it": "Rapido, grande albero",
+          "es": "Rápido, gran árbol",
+          "pt": "Rápido, grande árvore",
+          "ar": "سريع وكبير",
+          "hi": "तेज़, बड़ा पेड़",
+          "zh": "生长快、乔木",
+          "ja": "成長早い高木",
+          "ko": "빠른 큰 나무"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid drought",
+          "pl": "Unikaj suszy",
+          "de": "Trockenheit meiden",
+          "fr": "Éviter la sécheresse",
+          "it": "Evita la siccità",
+          "es": "Evita la sequía",
+          "pt": "Evite a seca",
+          "ar": "تجنب الجفاف",
+          "hi": "सूखने न दें",
+          "zh": "避免干旱",
+          "ja": "乾燥を避ける",
+          "ko": "건조 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Generally pest-free",
+          "pl": "Zwykle bez szkodn.",
+          "de": "Meist schädlingsfrei",
+          "fr": "Peu de ravageurs",
+          "it": "Pochi parassiti",
+          "es": "Pocas plagas",
+          "pt": "Poucas pragas",
+          "ar": "نادراً آفات",
+          "hi": "आमतौर पर कम कीट",
+          "zh": "一般少虫害",
+          "ja": "害虫は少なめ",
+          "ko": "해충 드묾"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "European Ash",
-      "description": "Fraxinus excelsior is a large deciduous tree native to Europe. It grows in moist, fertile soils and open woodlands. The species is valued for timber and ecological importance."
+      "common_name": "European ash",
+      "description": "Fraxinus excelsior is a large deciduous tree native to Europe and western Asia. It prefers full sun and moist, well-drained, neutral to alkaline soils. In a container, water when the surface begins to dry and keep it in a very bright, cool-temperate spot."
     },
     "pl": {
       "common_name": "Jesion wyniosły",
-      "description": "Fraxinus excelsior to duże drzewo liściaste pochodzące z Europy. Występuje na wilgotnych, żyznych glebach. Jest ważne dla ekosystemów leśnych."
+      "description": "Fraxinus excelsior to duże drzewo liściaste rodzime dla Europy i zachodniej Azji. Najlepiej rośnie w pełnym słońcu oraz w wilgotnej, przepuszczalnej glebie o odczynie obojętnym do zasadowego. W pojemniku podlewaj, gdy wierzch podłoża zaczyna przesychać, i zapewnij bardzo jasne stanowisko."
     },
     "de": {
       "common_name": "Gemeine Esche",
-      "description": "Fraxinus excelsior ist ein großer Laubbaum Europas. Er wächst auf feuchten, nährstoffreichen Böden. Die Art ist ökologisch und wirtschaftlich bedeutend."
+      "description": "Fraxinus excelsior ist ein großer, laubabwerfender Baum aus Europa und Westasien. Er wächst am besten in voller Sonne und in feuchtem, gut drainiertem, neutral bis kalkhaltigem Boden. Im Topf gleichmäßig feucht halten und sehr hell stellen."
     },
     "fr": {
       "common_name": "Frêne élevé",
-      "description": "Fraxinus excelsior est un grand arbre caduc d’Europe. Il préfère les sols fertiles et humides. Il joue un rôle écologique important."
+      "description": "Fraxinus excelsior est un grand arbre caduc originaire d’Europe et d’Asie occidentale. Il préfère le plein soleil et un sol frais, bien drainé, neutre à calcaire. En pot, arrosez lorsque la surface commence à sécher et gardez-le très lumineux."
     },
     "it": {
       "common_name": "Frassino maggiore",
-      "description": "Fraxinus excelsior è un grande albero deciduo europeo. Cresce in terreni fertili e umidi. È importante dal punto di vista ecologico."
+      "description": "Fraxinus excelsior è un grande albero deciduo originario dell’Europa e dell’Asia occidentale. Preferisce pieno sole e terreno umido ma ben drenato, neutro o calcareo. In vaso, annaffia quando lo strato superiore inizia ad asciugare e tienilo in posizione molto luminosa."
     },
     "es": {
       "common_name": "Fresno común",
-      "description": "Fraxinus excelsior es un árbol caducifolio grande de Europa. Prefiere suelos húmedos y fértiles. Tiene gran valor ecológico."
+      "description": "Fraxinus excelsior es un árbol caducifolio grande, nativo de Europa y Asia occidental. Prefiere pleno sol y un sustrato húmedo pero bien drenado, de pH neutro a alcalino. En maceta, riega cuando la capa superior empiece a secarse y colócalo en un lugar muy luminoso."
     },
     "pt": {
       "common_name": "Freixo-europeu",
-      "description": "Fraxinus excelsior é uma grande árvore caducifólia da Europa. Desenvolve-se em solos húmidos e férteis. É ecologicamente importante."
+      "description": "Fraxinus excelsior é uma árvore caducifólia grande nativa da Europa e da Ásia ocidental. Prefere sol pleno e solo úmido, bem drenado, neutro a alcalino. Em vaso, regue quando a superfície começar a secar e mantenha em local bem iluminado."
     },
     "ar": {
-      "common_name": "الدردار الأوروبي",
-      "description": "Fraxinus excelsior شجرة كبيرة متساقطة الأوراق موطنها أوروبا. تنمو في تربة رطبة وخصبة. لها أهمية بيئية كبيرة."
+      "common_name": "الرماد الأوروبي",
+      "description": "Fraxinus excelsior شجرة نفضية كبيرة موطنها أوروبا وغرب آسيا. تفضّل الشمس الكاملة وتربة رطبة جيدة الصرف وذات تفاعل متعادل إلى قلوي. عند زراعتها في أصيص تُسقى عندما يبدأ سطح التربة بالجفاف وتوضع في مكان شديد الإضاءة."
     },
     "hi": {
       "common_name": "यूरोपीय ऐश",
-      "description": "Fraxinus excelsior यूरोप का एक बड़ा पर्णपाती वृक्ष है। यह नम और उपजाऊ मिट्टी में उगता है। इसका पारिस्थितिक महत्व है।"
+      "description": "Fraxinus excelsior यूरोप और पश्चिमी एशिया का बड़ा पतझड़ी पेड़ है। इसे पूरा सूरज और नमी वाली, अच्छी जलनिकासी वाली, तटस्थ से क्षारीय मिट्टी पसंद है। गमले में ऊपर की मिट्टी सूखने लगे तो पानी दें और बहुत रोशनी वाली जगह रखें।"
     },
     "zh": {
       "common_name": "欧洲白蜡树",
-      "description": "Fraxinus excelsior 是原产于欧洲的大型落叶乔木。适合在湿润肥沃的土壤中生长。具有重要生态价值。"
+      "description": "Fraxinus excelsior 是原产于欧洲至西亚的落叶乔木。它偏好充足日照以及湿润但排水良好的中性到偏碱性土壤。盆栽时表土开始变干再浇水，并放在非常明亮的位置。"
     },
     "ja": {
-      "common_name": "セイヨウトネリコ",
-      "description": "Fraxinus excelsior はヨーロッパ原産の大型落葉樹です。湿った肥沃な土壌を好みます。生態系で重要です。"
+      "common_name": "ヨーロッパトネリコ",
+      "description": "Fraxinus excelsior はヨーロッパから西アジア原産の落葉高木です。日当たりと、湿り気があり排水のよい中性〜アルカリ性の土を好みます。鉢植えでは表土が乾き始めたら水やりし、非常に明るい場所に置きます。"
     },
     "ko": {
       "common_name": "유럽물푸레나무",
-      "description": "Fraxinus excelsior는 유럽 원산의 큰 낙엽수입니다. 습하고 비옥한 토양에서 잘 자랍니다. 생태적으로 중요합니다."
+      "description": "Fraxinus excelsior 는 유럽과 서아시아 원산의 큰 낙엽 교목입니다. 양지와 촉촉하지만 배수가 좋은 중성~알칼리성 토양을 선호합니다. 화분에서는 겉흙이 마르기 시작할 때 물을 주고 매우 밝은 곳에 둡니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/fraxinus-excelsior",
-      "https://www.rhs.org.uk/plants/7813/fraxinus-excelsior/details",
-      "https://www.britannica.com/plant/European-ash"
+      "https://www.rhs.org.uk/plants/7308/fraxinus-excelsior/details",
+      "https://powo.science.kew.org/taxon/609009-1",
+      "https://www.kew.org/plants/european-ash",
+      "https://www.forestresearch.gov.uk/tools-and-resources/tree-species-database/131556-ash-ah/",
+      "https://hort.ifas.ufl.edu/trees/FRAEXCA.pdf",
+      "https://www.gardenersworld.com/plants/fraxinus-excelsior/"
     ]
   }
 }

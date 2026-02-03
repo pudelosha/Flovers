@@ -4,15 +4,15 @@
   "latin": "Saintpaulia ionantha",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "acidic"
+    "green-plants",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universell",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عالمي",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "보편적인"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Regar regularmente",
+          "ar": "سقاية منتظمة",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "easy",
-          "pl": "łatwe",
-          "de": "einfach",
-          "fr": "facile",
-          "it": "facile",
-          "es": "fácil",
-          "pt": "fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "简单",
-          "ja": "簡単",
-          "ko": "쉬운"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 수준의 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-24°C",
-          "pl": "20-24°C",
-          "de": "20-24°C",
-          "fr": "20-24°C",
-          "it": "20-24°C",
-          "es": "20-24°C",
-          "pt": "20-24°C",
-          "ar": "20-24°C",
-          "hi": "20-24°C",
-          "zh": "20-24°C",
-          "ja": "20-24°C",
-          "ko": "20-24°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht toxisch",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "slow",
-          "pl": "wolny",
-          "de": "langsam",
-          "fr": "lent",
-          "it": "lento",
-          "es": "lento",
-          "pt": "lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mäßige Wachstumsrate",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta o moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमे से मध्यम विकास",
+          "zh": "生长缓慢到中等",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리거나 중간 정도의 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il ristagno",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "African Violet",
-      "description": "Saintpaulia ionantha, commonly known as African Violet, is a popular indoor plant appreciated for its beautiful purple flowers. It thrives in indirect sunlight and moderate watering."
+      "description": "Saintpaulia ionantha is a popular houseplant known for its attractive, vibrant flowers. It thrives in moderate light and needs regular watering."
     },
     "pl": {
-      "common_name": "fiołek afrykański",
-      "description": "Saintpaulia ionantha, znany jako fiołek afrykański, jest popularną rośliną doniczkową cenioną za piękne fioletowe kwiaty. Rośnie najlepiej w pośrednim świetle i umiarkowanym podlewaniu."
+      "common_name": "Afrykańska fiołek",
+      "description": "Saintpaulia ionantha to popularna roślina doniczkowa znana ze swoich atrakcyjnych, kolorowych kwiatów. Rośnie najlepiej w średnim świetle i wymaga regularnego podlewania."
     },
     "de": {
       "common_name": "Afrikanisches Veilchen",
-      "description": "Saintpaulia ionantha, auch als Afrikanisches Veilchen bekannt, ist eine beliebte Zimmerpflanze, die für ihre schönen violetten Blumen geschätzt wird. Sie gedeiht bei indirekter Sonneneinstrahlung und mäßigem Gießen."
+      "description": "Saintpaulia ionantha ist eine beliebte Zimmerpflanze, die für ihre attraktiven, lebendigen Blumen bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt regelmäßiges Gießen."
     },
     "fr": {
       "common_name": "Violette africaine",
-      "description": "Saintpaulia ionantha, connue sous le nom de violette africaine, est une plante d'intérieur populaire appréciée pour ses belles fleurs violettes. Elle prospère sous une lumière indirecte et avec un arrosage modéré."
+      "description": "Saintpaulia ionantha est une plante d'intérieur populaire, connue pour ses fleurs attrayantes et vibrantes. Elle prospère sous une lumière modérée et nécessite un arrosage régulier."
     },
     "it": {
       "common_name": "Violetta africana",
-      "description": "Saintpaulia ionantha, conosciuta come violetta africana, è una pianta da interno molto apprezzata per i suoi bellissimi fiori viola. Cresce meglio con luce indiretta e irrigazione moderata."
+      "description": "Saintpaulia ionantha è una pianta da appartamento popolare, nota per i suoi fiori vivaci e attraenti. Cresce bene con luce moderata e necessita di irrigazione regolare."
     },
     "es": {
       "common_name": "Violeta africana",
-      "description": "Saintpaulia ionantha, conocida como violeta africana, es una planta de interior popular apreciada por sus hermosas flores moradas. Crece mejor con luz indirecta y riego moderado."
+      "description": "Saintpaulia ionantha es una planta de interior popular conocida por sus flores vibrantes y atractivas. Crece bien con luz moderada y requiere riego regular."
     },
     "pt": {
       "common_name": "Violeta africana",
-      "description": "Saintpaulia ionantha, conhecida como violeta africana, é uma planta de interior popular apreciada por suas belas flores roxas. Ela cresce melhor com luz indireta e rega moderada."
+      "description": "Saintpaulia ionantha é uma planta popular de interior conhecida pelas suas flores vibrantes e atraentes. Cresce bem com luz moderada e necessita de rega regular."
     },
     "ar": {
-      "common_name": "أفريقي البنفسج",
-      "description": "سانتبوليا إيونانثا، والمعروفة باسم البنفسج الأفريقي، هي نبات منزلي شهير يتميز بأزهارها البنفسجية الجميلة. ينمو بشكل أفضل في الضوء غير المباشر والري المعتدل."
+      "common_name": "أفريقيا البنفسج",
+      "description": "سانتباوليا أيونانثا هي نبات منزلي شهير معروف بزهوره الجذابة والنابضة بالحياة. تنمو بشكل جيد في الضوء المعتدل وتحتاج إلى الري المنتظم."
     },
     "hi": {
       "common_name": "अफ्रीकी वायलेट",
-      "description": "सैंटपूलिया आयोनांथा, जिसे अफ्रीकी वायलेट के नाम से जाना जाता है, एक लोकप्रिय इनडोर पौधा है जिसे इसके सुंदर बैंगनी फूलों के लिए सराहा जाता है। यह अप्रत्यक्ष सूर्यप्रकाश और मध्यम जलने में अच्छा करता है।"
+      "description": "सेंटपॉलिया आयोनान्था एक लोकप्रिय हाउसप्लांट है जो अपनी आकर्षक, जीवंत फूलों के लिए जाना जाता है। यह मध्यम प्रकाश में पनपता है और नियमित पानी देने की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "非洲紫罗兰",
-      "description": "圣保利亚·艾昂安莎，通常称为非洲紫罗兰，是一种受欢迎的室内植物，因其美丽的紫色花朵而受到喜爱。它在间接阳光和适度浇水下茁壮成长。"
+      "description": "圣保利亚·伊奥南莎是一种受欢迎的室内植物，以其迷人、鲜艳的花朵而闻名。它在中等光照下茁壮成长，需要定期浇水。"
     },
     "ja": {
       "common_name": "アフリカスミレ",
-      "description": "サイントパウリア・イオナンサ、アフリカスミレとして知られるこの植物は、美しい紫色の花で人気があります。間接的な日光と適度な水やりでよく育ちます。"
+      "description": "Saintpaulia ionanthaは、魅力的で鮮やかな花で知られる人気の室内植物です。中程度の光で育ち、定期的な水やりが必要です。"
     },
     "ko": {
       "common_name": "아프리카 제비꽃",
-      "description": "세인트폴리아 이오난타, 일반적으로 아프리카 제비꽃으로 알려진 이 식물은 아름다운 보라색 꽃으로 인기가 있습니다. 간접적인 햇빛과 적당한 물주기로 잘 자랍니다."
+      "description": "Saintpaulia ionantha는 매력적이고 생동감 있는 꽃으로 잘 알려진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며 규칙적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgardens.com/africanviolet",
-      "https://www.gardeners.com/plant-care/african-violet"
+      "https://www.rhs.org.uk/advice/profile?pid=531",
+      "https://www.abc-garden.co.uk/african-violet-care-guide/"
     ]
   }
 }

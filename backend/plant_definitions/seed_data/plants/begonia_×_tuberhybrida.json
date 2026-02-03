@@ -1,18 +1,18 @@
 {
   "external_id": "begonia_tuberhybrida",
-  "name": "Tuberous Begonia",
+  "name": "Tuberous begonia",
   "latin": "Begonia × tuberhybrida",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "balcony-flowers",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष",
+          "en": "Bright shade",
+          "pl": "Jasny półcień",
+          "de": "Heller Halbschatten",
+          "fr": "Ombre claire",
+          "it": "Mezz'ombra luminosa",
+          "es": "Sombra luminosa",
+          "pt": "Sombra clara",
+          "ar": "ظل ساطع",
+          "hi": "तेज़ छाया",
           "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "ja": "明るい日陰",
+          "ko": "밝은 그늘"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainé",
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährreich, drainiert",
+          "fr": "Riche, drainant",
           "it": "Ricco e drenante",
-          "es": "Rico y drenado",
+          "es": "Rico y drenante",
           "pt": "Rico e drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "उपजाऊ मिट्टी",
-          "zh": "肥沃排水好",
-          "ja": "肥沃で排水良好",
-          "ko": "배수 좋은 토양"
+          "ar": "غني وجيد الصرف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ良い",
+          "ko": "비옥·배수 좋게"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulière",
-          "it": "Sempre umido",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة منتظمة",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "均一に湿らす",
-          "ko": "항상 촉촉"
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -86,17 +86,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
+          "en": "Moderate",
+          "pl": "Średnia",
           "de": "Mittel",
-          "fr": "Modérée",
+          "fr": "Moyenne",
           "it": "Media",
           "es": "Media",
           "pt": "Média",
           "ar": "متوسطة",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "普通",
           "ko": "보통"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24°C",
-          "pl": "18–24°C",
-          "de": "18–24°C",
-          "fr": "18–24°C",
-          "it": "18–24°C",
-          "es": "18–24°C",
-          "pt": "18–24°C",
-          "ar": "18–24°م",
-          "hi": "18–24°C",
-          "zh": "18–24°C",
-          "ja": "18–24°C",
-          "ko": "18–24°C"
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
+          "ar": "15–24°م",
+          "hi": "15–24°C",
+          "zh": "15–24°C",
+          "ja": "15–24°C",
+          "ko": "15–24°C"
         }
       }
     },
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Likes humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Feuchte",
-          "fr": "Aime humidité",
-          "it": "Ama umidità",
-          "es": "Gusta humedad",
-          "pt": "Gosta umidade",
-          "ar": "يحب الرطوبة",
+          "en": "Prefers humid air",
+          "pl": "Lubi wilgotne pow.",
+          "de": "Mag feuchte Luft",
+          "fr": "Aime l'air humide",
+          "it": "Preferisce umidità",
+          "es": "Prefiere humedad",
+          "pt": "Prefere umidade",
+          "ar": "يفضل رطوبة",
           "hi": "नमी पसंद",
-          "zh": "喜湿润",
-          "ja": "湿度を好む",
+          "zh": "喜较高湿度",
+          "ja": "湿度高めが好み",
           "ko": "습도 선호"
         }
       }
@@ -144,16 +144,16 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig für Tiere",
+          "pl": "Toksyczna dla zw.",
+          "de": "Für Haustiere giftig",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica pets",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू विषैली",
+          "hi": "पालतू हेतु विषाक्त",
           "zh": "对宠物有毒",
-          "ja": "ペット有毒",
+          "ja": "ペットに有毒",
           "ko": "반려동물 유독"
         }
       }
@@ -162,77 +162,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Tuberous perennial",
-          "pl": "Bylina bulwiasta",
-          "de": "Knollenpflanze",
-          "fr": "Vivace tubéreuse",
-          "it": "Perenne tuberosa",
-          "es": "Perenne tuberosa",
-          "pt": "Perene tuberosa",
-          "ar": "درنية معمرة",
-          "hi": "कंदीय बारहमासी",
-          "zh": "块茎多年生",
-          "ja": "球根多年草",
-          "ko": "구근 다년초"
+          "en": "Tuberous, seasonal",
+          "pl": "Bulwiasta, sezonowa",
+          "de": "Knollig, saisonal",
+          "fr": "Tubéreuse, saisonnière",
+          "it": "Tuberosa, stagionale",
+          "es": "Tuberosas, estacional",
+          "pt": "Tuberosa, sazonal",
+          "ar": "درنية موسمية",
+          "hi": "कंदीय, मौसमी",
+          "zh": "块茎型，季节性",
+          "ja": "球根性・季節性",
+          "ko": "구근성, 계절성"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب الغمر بالماء",
+          "hi": "ज्यादा पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, mealybugs",
+          "pl": "Mszyce, wełnowce",
+          "de": "Blattläuse, Wollläuse",
+          "fr": "Pucerons, cochenilles",
+          "it": "Afidi, cocciniglie",
+          "es": "Pulgones, cochinillas",
+          "pt": "Pulgões, cochonilhas",
+          "ar": "منّ وبق دقيقي",
+          "hi": "एफिड, मिलीबग",
+          "zh": "蚜虫、粉蚧",
+          "ja": "アブラムシ、カイガラ",
+          "ko": "진딧물, 깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Tuberous Begonia",
-      "description": "Tuberous begonias are ornamental plants grown for large, colorful flowers. They prefer bright indirect light and consistently moist soil. Dormancy occurs after flowering when tubers rest."
+      "common_name": "Tuberous begonia",
+      "description": "Tuberous begonia is a tuber-forming begonia grown for large summer flowers. Provide bright, indirect light and keep the potting mix lightly moist with good drainage. Protect from cold and reduce watering as growth slows."
     },
     "pl": {
       "common_name": "Begonia bulwiasta",
-      "description": "Begonie bulwiaste są cenione za duże, efektowne kwiaty. Wymagają jasnego, rozproszonego światła i wilgotnej gleby. Po kwitnieniu przechodzą okres spoczynku."
+      "description": "Begonia bulwiasta tworzy bulwy i jest uprawiana dla dużych kwiatów latem. Zapewnij jasne, rozproszone światło i utrzymuj podłoże lekko wilgotne przy dobrym drenażu. Chroń przed chłodem i ogranicz podlewanie, gdy wzrost słabnie."
     },
     "de": {
       "common_name": "Knollenbegonie",
-      "description": "Knollenbegonien werden wegen ihrer großen Blüten kultiviert. Sie benötigen helles, indirektes Licht und gleichmäßige Feuchtigkeit. Nach der Blüte folgt eine Ruhephase."
+      "description": "Die Knollenbegonie bildet Knollen und wird wegen ihrer großen Sommerblüten kultiviert. Stelle sie hell, aber ohne direkte Sonne, und halte das Substrat leicht feucht bei guter Drainage. Vor Kälte schützen und bei nachlassendem Wachstum weniger gießen."
     },
     "fr": {
       "common_name": "Bégonia tubéreux",
-      "description": "Les bégonias tubéreux sont appréciés pour leurs grandes fleurs. Ils aiment la lumière indirecte et un sol humide. Une période de repos suit la floraison."
+      "description": "Le bégonia tubéreux forme des tubercules et est cultivé pour ses grandes fleurs estivales. Offrez une lumière vive mais indirecte et gardez le substrat légèrement humide avec un bon drainage. Protégez du froid et réduisez l’arrosage lorsque la croissance ralentit."
     },
     "it": {
       "common_name": "Begonia tuberosa",
-      "description": "Le begonie tuberose producono fiori grandi e decorativi. Preferiscono luce indiretta e terreno umido. Dopo la fioritura entrano in dormienza."
+      "description": "La begonia tuberosa forma tuberi ed è coltivata per i grandi fiori estivi. Fornisci luce intensa ma indiretta e mantieni il terriccio leggermente umido con buon drenaggio. Proteggi dal freddo e riduci l’acqua quando la crescita rallenta."
     },
     "es": {
       "common_name": "Begonia tuberosa",
-      "description": "Las begonias tuberosas destacan por sus flores vistosas. Requieren luz indirecta y suelo húmedo. Tras la floración pasan a reposo."
+      "description": "La begonia tuberosa forma tubérculos y se cultiva por sus flores grandes de verano. Dale luz brillante e indirecta y mantén el sustrato ligeramente húmedo con buen drenaje. Protégela del frío y reduce el riego cuando baje el crecimiento."
     },
     "pt": {
       "common_name": "Begônia tuberosa",
-      "description": "Begônias tuberosas são cultivadas por flores grandes. Precisam de luz indireta e solo úmido. Após a floração entram em dormência."
+      "description": "A begônia tuberosa forma tubérculos e é cultivada pelas flores grandes de verão. Dê luz forte e indireta e mantenha o substrato levemente úmido com boa drenagem. Proteja do frio e reduza a rega quando o crescimento diminuir."
     },
     "ar": {
       "common_name": "بيغونيا درنية",
-      "description": "تزرع البيغونيا الدرنية لأزهارها الكبيرة. تحتاج إلى ضوء غير مباشر وتربة رطبة. تدخل في فترة سكون بعد الإزهار."
+      "description": "البيغونيا الدرنية تُكوّن درنات وتُزرع لأزهارها الكبيرة في الصيف. وفّر ضوءًا ساطعًا غير مباشر وحافظ على التربة رطبة قليلًا مع تصريف جيد. احمِها من البرد وقلّل الري عند تباطؤ النمو."
     },
     "hi": {
       "common_name": "ट्यूबरस बेगोनिया",
-      "description": "ट्यूबरस बेगोनिया बड़े रंगीन फूलों के लिए उगाई जाती है। इसे अप्रत्यक्ष रोशनी और नम मिट्टी चाहिए। फूलों के बाद यह सुप्तावस्था में जाती है।"
+      "description": "ट्यूबरस बेगोनिया कंद बनाती है और गर्मियों में बड़े फूलों के लिए उगाई जाती है। तेज़ पर अप्रत्यक्ष रोशनी दें और अच्छी जलनिकासी के साथ मिट्टी को हल्का नम रखें। ठंड से बचाएँ और वृद्धि धीमी होने पर पानी कम करें।"
     },
     "zh": {
       "common_name": "球根秋海棠",
-      "description": "球根秋海棠以大型花朵著称。需要明亮散射光和湿润土壤。花后进入休眠期。"
+      "description": "球根秋海棠会形成块茎，以夏季大型花朵为主要观赏点。给予明亮散射光，盆土保持微湿并确保排水良好。避免低温，生长减弱时减少浇水。"
     },
     "ja": {
       "common_name": "球根ベゴニア",
-      "description": "球根ベゴニアは大きな花が特徴です。明るい間接光と湿った土を好みます。開花後は休眠します。"
+      "description": "球根ベゴニアは塊茎を作り、夏に大きな花を咲かせます。明るい日陰で育て、用土は水はけ良く軽く湿らせます。寒さに弱いので低温を避け、生育が落ちたら水やりを控えます。"
     },
     "ko": {
-      "common_name": "튜버 베고니아",
-      "description": "튜버 베고니아는 큰 꽃으로 유명합니다. 밝은 간접광과 촉촉한 토양이 필요합니다. 개화 후 휴면기에 들어갑니다."
+      "common_name": "구근 베고니아",
+      "description": "구근 베고니아는 괴경을 만들며 여름에 큰 꽃을 피웁니다. 밝은 간접광에서 키우고 배수가 잘되도록 하며 흙은 약간 촉촉하게 유지하세요. 추위에 약하므로 저온을 피하고 생장이 느려지면 물을 줄이세요."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/begonia/growing-guide",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c617",
-      "https://plants.ces.ncsu.edu/plants/begonia-x-tuberhybrida/"
+      "https://www.rhs.org.uk/plants/begonias/houseplants",
+      "https://extension.umn.edu/flowers/tuberous-begonias",
+      "https://hgic.clemson.edu/factsheet/growing-begonias-indoors/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a437",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/begonia",
+      "https://plants.ces.ncsu.edu/plants/begonia-tuberous-types/"
     ]
   }
 }

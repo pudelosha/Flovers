@@ -1,23 +1,21 @@
 {
   "external_id": "asplenium_antiquum",
-  "name": "Bird’s Nest Fern",
+  "name": "Japanese Bird's Nest Fern",
   "latin": "Asplenium antiquum",
   "sun": "medium",
   "water": "medium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "orchid"
+    "fern"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,15 +27,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
+          "en": "Bright indirect",
           "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
+          "de": "Helles Indirekt",
           "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,17 +46,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loose, well draining",
-          "pl": "Luźna przepuszczalna",
-          "de": "Locker, drainierend",
-          "fr": "Drainant et léger",
-          "it": "Soffice drenante",
-          "es": "Suelta drenante",
-          "pt": "Solta drenável",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "疏松排水好",
-          "ja": "水はけ良好",
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährreich, locker",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غني وجيد التصريف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "疏松且排水好",
+          "ja": "排水の良い土",
           "ko": "배수 좋은 흙"
         }
       }
@@ -67,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Stale wilgotna",
+          "en": "Evenly moist",
+          "pl": "Stale lekko wilgotne",
           "de": "Gleichmäßig feucht",
-          "fr": "Humide en continu",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطبة باستمرار",
-          "hi": "सदैव नम",
-          "zh": "保持湿润",
-          "ja": "常に湿らせる",
-          "ko": "항상 촉촉"
+          "fr": "Humide sans excès",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo sin encharcar",
+          "pt": "Úmido sem encharcar",
+          "ar": "رطوبة ثابتة",
+          "hi": "लगातार नम",
+          "zh": "保持微湿",
+          "ja": "常にやや湿り気",
+          "ko": "항상 약간 촉촉"
         }
       }
     },
@@ -86,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Moderate care",
+          "pl": "Średnio trudna",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien modéré",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "养护中等",
+          "ja": "手入れは普通",
+          "ko": "관리 보통"
         }
       }
     },
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27℃"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -127,14 +125,14 @@
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
           "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
+          "fr": "Forte humidité",
           "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
-          "zh": "高湿度",
-          "ja": "高湿度",
+          "hi": "अधिक नमी",
+          "zh": "喜高湿",
+          "ja": "高湿度が好み",
           "ko": "높은 습도"
         }
       }
@@ -143,7 +141,7 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non toxic",
+          "en": "Non-toxic",
           "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
@@ -151,7 +149,7 @@
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "विषहीन",
+          "hi": "गैर-विषैली",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +160,116 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Rosette fern",
-          "pl": "Paproć rozetowa",
-          "de": "Rosettenfarn",
-          "fr": "Fougère en rosette",
-          "it": "Felce a rosetta",
-          "es": "Helecho roseta",
-          "pt": "Samambaia roseta",
-          "ar": "سرخس وردي",
-          "hi": "रोसेट फर्न",
-          "zh": "莲座蕨类",
-          "ja": "ロゼット状",
-          "ko": "로제트 성장"
+          "en": "Slow grower",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "ゆっくり成長",
+          "ko": "느리게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid wet crown",
+          "pl": "Nie zalewaj rozety",
+          "de": "Krone nicht nässen",
+          "fr": "Éviter le cœur mouillé",
+          "it": "No acqua nel cuore",
+          "es": "No mojar el centro",
+          "pt": "Não molhar o centro",
+          "ar": "تجنب بلل القلب",
+          "hi": "मध्य में पानी नहीं",
+          "zh": "勿灌入叶心",
+          "ja": "株元に水を溜めない",
+          "ko": "중앙에 물 고임 X"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶见虫害",
+          "ja": "まれに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Bird’s Nest Fern",
-      "description": "Asplenium antiquum is a tropical fern with broad, glossy fronds forming a rosette. It thrives indoors in bright, indirect light with consistently reopening soil. High humidity supports healthy growth."
+      "common_name": "Japanese bird's nest fern",
+      "description": "An evergreen fern with a rosette of glossy, wavy fronds. Provide bright, indirect light and keep the potting mix evenly moist without water sitting in the crown. Prefers warm temperatures and higher humidity and is generally considered non-toxic to pets."
     },
     "pl": {
-      "common_name": "Zanokcica gniazdowa",
-      "description": "Asplenium antiquum to tropikalna paproć o szerokich, błyszczących liściach. Najlepiej rośnie w jasnym, rozproszonym świetle i stale wilgotnym podłożu. Wymaga podwyższonej wilgotności powietrza."
+      "common_name": "Paproć gniazdowa (japońska)",
+      "description": "Zimozielona paproć tworząca rozetę błyszczących, pofalowanych liści. Lubi jasne, rozproszone światło i podłoże stale lekko wilgotne, bez wlewania wody do środka rozety. Preferuje ciepło i wyższą wilgotność powietrza oraz jest uznawana za nietoksyczną dla zwierząt."
     },
     "de": {
-      "common_name": "Nestfarn",
-      "description": "Asplenium antiquum ist ein tropischer Farn mit glänzenden Rosettenblättern. Er bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Eine hohe Luftfeuchtigkeit ist förderlich."
+      "common_name": "Japanischer Nestfarn",
+      "description": "Ein immergrüner Farn mit rosettig angeordneten, glänzenden, welligen Wedeln. Helles, indirektes Licht und gleichmäßig feuchtes Substrat sind ideal, ohne Wasser in die Pflanzenmitte zu gießen. Er mag warme Temperaturen, höhere Luftfeuchte und gilt als haustierfreundlich."
     },
     "fr": {
-      "common_name": "Fougère nid d’oiseau",
-      "description": "Asplenium antiquum est une fougère tropicale à larges frondes brillantes. Elle pousse bien en lumière indirecte avec un substrat toujours légèrement humide. Une forte humidité est recommandée."
+      "common_name": "Fougère nid d’oiseau japonaise",
+      "description": "Fougère persistante formant une rosette de frondes brillantes et ondulées. Offrez une lumière vive indirecte et un substrat uniformément humide, sans laisser d’eau dans le cœur. Elle apprécie la chaleur, une forte humidité et est généralement considérée comme non toxique pour les animaux."
     },
     "it": {
-      "common_name": "Felce nido d’uccello",
-      "description": "Asplenium antiquum è una felce tropicale con fronde larghe e lucide. Predilige luce indiretta e terreno costantemente umido. L’umidità elevata favorisce una crescita sana."
+      "common_name": "Felce nido d’uccello giapponese",
+      "description": "Felce sempreverde con fronde lucide e ondulate disposte a rosetta. Vuole luce intensa ma indiretta e terriccio mantenuto umido in modo uniforme, evitando acqua nel centro. Preferisce temperature miti, buona umidità ed è in genere considerata non tossica per gli animali."
     },
     "es": {
-      "common_name": "Helecho nido de ave",
-      "description": "Asplenium antiquum es un helecho tropical de frondas brillantes. Crece mejor con luz indirecta y suelo uniformemente húmedo. La humedad ambiental alta es importante."
+      "common_name": "Helecho nido de ave japonés",
+      "description": "Helecho perenne con una roseta de frondas brillantes y onduladas. Necesita luz brillante indirecta y sustrato uniformemente húmedo, evitando mojar el centro de la planta. Prefiere temperaturas cálidas, humedad alta y se considera generalmente no tóxico para mascotas."
     },
     "pt": {
-      "common_name": "Samambaia ninho",
-      "description": "Asplenium antiquum é uma samambaia tropical de folhas largas e brilhantes. Desenvolve-se bem em luz indireta e substrato sempre úmido. Prefere ambientes com alta umidade."
+      "common_name": "Samambaia ninho-de-pássaro japonesa",
+      "description": "Samambaia perene com frondes brilhantes e onduladas em forma de roseta. Prefere luz indireta brilhante e substrato sempre levemente úmido, sem deixar água no centro. Gosta de calor e umidade mais alta e é geralmente considerada não tóxica para pets."
     },
     "ar": {
-      "common_name": "سرخس عش الطائر",
-      "description": "نبات Asplenium antiquum سرخس استوائي بأوراق عريضة لامعة. ينمو جيدًا في ضوء غير مباشر وتربة رطبة باستمرار. الرطوبة العالية تساعد على نموه."
+      "common_name": "سرخس عشّ الطائر الياباني",
+      "description": "سرخس دائم الخضرة بأوراق مموجة لامعة على شكل وردة. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار دون سكب الماء في قلب النبات. يفضل الدفء ورطوبة أعلى ويُعد غالبًا غير سام للحيوانات الأليفة."
     },
     "hi": {
-      "common_name": "बर्ड्स नेस्ट फर्न",
-      "description": "Asplenium antiquum एक उष्णकटिबंधीय फर्न है जिसकी पत्तियाँ चमकदार होती हैं। यह अप्रत्यक्ष रोशनी और लगातार नम मिट्टी में अच्छा बढ़ता है। अधिक नमी लाभकारी होती है।"
+      "common_name": "जापानी बर्ड्स नेस्ट फ़र्न",
+      "description": "यह सदाबहार फ़र्न चमकदार, लहरदार पत्तियों की रोसेट बनाता है। तेज़ अप्रत्यक्ष रोशनी दें और मिट्टी को समान रूप से नम रखें, पर बीच में पानी न भरें। इसे गर्मी और अधिक नमी पसंद है और इसे सामान्यतः पालतू जानवरों के लिए गैर-विषैला माना जाता है।"
     },
     "zh": {
-      "common_name": "鸟巢蕨",
-      "description": "Asplenium antiquum 是一种热带蕨类，叶片宽大有光泽。适合明亮散射光和保持湿润的土壤。较高的空气湿度有助于生长。"
+      "common_name": "日本鸟巢蕨",
+      "description": "常绿蕨类，叶片光亮且边缘起伏，呈莲座状生长。适合明亮散射光，盆土保持均匀微湿，避免把水浇进叶心。喜温暖和较高湿度，一般被认为对宠物无毒。"
     },
     "ja": {
-      "common_name": "シマオオタニワタリ",
-      "description": "Asplenium antiquum は光沢のある葉を持つ熱帯性シダです。明るい間接光と適度に湿った用土を好みます。高い湿度が生育に役立ちます。"
+      "common_name": "オオタニワタリ（日本の鳥巣シダ）",
+      "description": "光沢のある波状の葉をロゼット状に展開する常緑シダです。明るい間接光で育て、用土は均一に湿らせつつ株の中心に水を溜めないようにします。温かさと高めの湿度を好み、一般にペットに無毒とされます。"
     },
     "ko": {
-      "common_name": "아스플레니움",
-      "description": "Asplenium antiquum은 광택 있는 잎이 로제트 형태로 자라는 열대 양치식물입니다. 밝은 간접광과 촉촉한 토양을 선호하며 높은 습도가 좋습니다."
+      "common_name": "일본 새둥지 고사리",
+      "description": "윤기 있는 물결 모양 잎이 로제트로 자라는 상록 양치식물입니다. 밝은 간접광과 고르게 촉촉한 흙이 좋으며, 중심부에 물이 고이지 않게 물을 주세요. 따뜻함과 높은 습도를 선호하고 일반적으로 반려동물에 무독성으로 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b650",
-      "https://www.rhs.org.uk/plants/1823/asplenium-antiquum/details",
-      "https://edis.ifas.ufl.edu/publication/FP049"
+      "https://hgic.clemson.edu/how-to-grow-and-care-for-birds-nest-fern-asplenium-nidus/",
+      "https://www.thespruce.com/asplenium-antiquum-care-guide-7556342",
+      "https://www.thespruce.com/grow-asplenium-nidus-ferns-1902716",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/mother-fern"
     ]
   }
 }

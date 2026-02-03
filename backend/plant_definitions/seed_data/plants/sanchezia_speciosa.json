@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "sanchezia_speciosa.jpg",
   "image_thumb": "sanchezia_speciosa.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "universal",
-          "pl": "uniwersalna",
-          "de": "universal",
-          "fr": "universel",
-          "it": "universale",
-          "es": "universal",
-          "pt": "universal",
-          "ar": "عام",
-          "hi": "सार्वभौमिक",
-          "zh": "通用",
-          "ja": "ユニバーサル",
-          "ko": "범용"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "よく排水された土壌",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "20-28°C",
-          "pl": "20-28°C",
-          "de": "20-28°C",
-          "fr": "20-28°C",
-          "it": "20-28°C",
-          "es": "20-28°C",
-          "pt": "20-28°C",
-          "ar": "20-28°C",
-          "hi": "20-28°C",
-          "zh": "20-28°C",
-          "ja": "20-28°C",
-          "ko": "20-28°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
+          "zh": "适度",
           "ja": "中程度",
           "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter le trop d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa is a tropical plant native to Central and South America. It features dark green, glossy leaves with bright yellow veins and clusters of yellow flowers."
+      "description": "Sanchezia speciosa is an ornamental plant known for its glossy, variegated leaves. It thrives in moderate light and requires consistent watering."
     },
     "pl": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa to roślina tropikalna pochodząca z Ameryki Środkowej i Południowej. Ma ciemnozielone, błyszczące liście z jasnożółtymi żyłkami oraz żółte kwiaty."
+      "description": "Sanchezia speciosa to roślina ozdobna, znana z błyszczących, cętkowanych liści. Rośnie w umiarkowanym świetle i wymaga regularnego podlewania."
     },
     "de": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa ist eine tropische Pflanze aus Mittel- und Südamerika. Sie hat dunkelgrüne, glänzende Blätter mit leuchtend gelben Adern und gelbe Blüten."
+      "description": "Sanchezia speciosa ist eine Zierpflanze, die für ihre glänzenden, gefleckten Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt regelmäßige Bewässerung."
     },
     "fr": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa est une plante tropicale originaire d'Amérique centrale et du Sud. Elle possède des feuilles vert foncé et brillantes avec des nervures jaunes et des fleurs jaunes."
+      "description": "Sanchezia speciosa est une plante ornementale connue pour ses feuilles lustrées et panachées. Elle prospère sous une lumière modérée et nécessite un arrosage régulier."
     },
     "it": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa è una pianta tropicale originaria dell'America Centrale e Meridionale. Ha foglie verde scuro e lucide con venature gialle e fiori gialli."
+      "description": "Sanchezia speciosa è una pianta ornamentale conosciuta per le sue foglie lucide e variegate. Cresce in luce moderata e necessita di annaffiature regolari."
     },
     "es": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa es una planta tropical originaria de Centro y Sudamérica. Tiene hojas verde oscuro brillantes con venas amarillas y flores amarillas."
+      "description": "Sanchezia speciosa es una planta ornamental conocida por sus hojas brillantes y variegadas. Crece con luz moderada y requiere riego constante."
     },
     "pt": {
       "common_name": "Sanchezia",
-      "description": "Sanchezia speciosa é uma planta tropical nativa da América Central e do Sul. Possui folhas verde-escuras e brilhantes com veios amarelos e flores amarelas."
+      "description": "Sanchezia speciosa é uma planta ornamental conhecida por suas folhas brilhantes e variegadas. Cresce com luz moderada e precisa de rega constante."
     },
     "ar": {
-      "common_name": "سانشيزيا",
-      "description": "Sanchezia speciosa هي نبات استوائي موطنه أمريكا الوسطى والجنوبية. تتميز بأوراق خضراء داكنة لامعة مع عروق صفراء وزهور صفراء."
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa هي نبتة زينة معروفة بأوراقها اللامعة والمتنوعة. تنمو في ضوء معتدل وتتطلب سقاية منتظمة."
     },
     "hi": {
-      "common_name": "संचेज़िया",
-      "description": "Sanchezia speciosa एक उष्णकटिबंधीय पौधा है जो मध्य और दक्षिण अमेरिका का मूल निवासी है। इसमें गहरे हरे रंग के चमकदार पत्ते होते हैं जिनमें पीली नसें और पीले फूल होते हैं।"
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa एक सजावटी पौधा है जो अपनी चमकदार, धारीदार पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश में उगता है और नियमित रूप से पानी की आवश्यकता होती है."
     },
     "zh": {
-      "common_name": "桑奇西亚",
-      "description": "Sanchezia speciosa 是一种热带植物，原产于中美洲和南美洲。它具有深绿色的光泽叶子，带有明亮的黄色脉络，并且开黄色花。"
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa 是一种观赏植物，以其光亮的斑驳叶子而闻名。它在中等光照下生长，并需要定期浇水。"
     },
     "ja": {
-      "common_name": "サンケジア",
-      "description": "Sanchezia speciosa は中南米原産の熱帯植物です。光沢のある深緑色の葉に鮮やかな黄色の脈があり、黄色い花を咲かせます。"
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa は、その光沢のある斑入りの葉で知られる観葉植物です。中程度の光で育ち、定期的な水やりが必要です。"
     },
     "ko": {
-      "common_name": "산케지아",
-      "description": "Sanchezia speciosa는 중남미가 원산지인 열대 식물입니다. 어두운 녹색의 윤기 나는 잎과 선명한 노란색 줄기를 가지고 있으며, 노란 꽃을 피웁니다."
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa는 광택 있는 얼룩덜룩한 잎으로 유명한 관상용 식물입니다. 중간 정도의 빛에서 자라며 정기적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/91019/sanchezia-speciosa/details",
-      "https://www.gardenia.net/plant/sanchezia-speciosa"
+      "https://www.rhs.org.uk/plants/81004/sanchezia-speciosa",
+      "https://www.botanicgardens.com/sanchezia-care"
     ]
   }
 }

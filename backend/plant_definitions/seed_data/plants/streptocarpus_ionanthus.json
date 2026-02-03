@@ -1,27 +1,27 @@
 {
   "external_id": "streptocarpus_ionanthus",
-  "name": "Streptocarpus ionanthus",
+  "name": "Cape Primrose",
   "latin": "Streptocarpus ionanthus",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "streptocarpus_ionanthus.jpg",
   "image_thumb": "streptocarpus_ionanthus.jpg",
   "traits": [
@@ -30,9 +30,9 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba gliniasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol limoneux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी वाली मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土質の土",
-          "ko": "점토 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -69,14 +69,14 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
+          "de": "Moderates Gießen",
           "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
+          "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适量浇水",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiarkowana wilgotność",
-          "de": "Mäßige Luftfeuchtigkeit",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad moderada",
-          "pt": "Umidade moderada",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "适度湿度",
-          "ja": "適度な湿度",
-          "ko": "적당한 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -151,9 +151,9 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषैला",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
-          "ja": "非毒性",
+          "ja": "無毒",
           "ko": "무독성"
         }
       }
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Umiarkowany wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "中等生长",
-          "ja": "中程度の成長",
-          "ko": "중간 정도의 성장"
+          "en": "Compact growth",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompakter Wuchs",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مدمج",
+          "hi": "संकुचित वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクトな成長",
+          "ko": "컴팩트한 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de rega",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرा पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि-समय कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 있는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Cape Primrose",
-      "description": "Streptocarpus ionanthus is a popular flowering plant known for its vibrant, violet-blue flowers. Native to tropical regions, it thrives in moderate light and temperatures."
+      "description": "Streptocarpus ionanthus, also known as the Cape Primrose, is a popular houseplant with vibrant, tubular flowers. It thrives in moderate light and high humidity."
     },
     "pl": {
-      "common_name": "Streptocarpus ionanthus",
-      "description": "Streptocarpus ionanthus to popularna roślina kwitnąca, znana z intensywnych, fioletowo-niebieskich kwiatów. Pochodzi z tropikalnych regionów, najlepiej rośnie w umiarkowanym świetle i temperaturach."
+      "common_name": "Pierwiosnek z Kapsztadu",
+      "description": "Streptocarpus ionanthus, znany również jako pierwiosnek z Kapsztadu, to popularna roślina doniczkowa o żywych, rurkowatych kwiatach. Rośnie w umiarkowanym świetle i wysokiej wilgotności."
     },
     "de": {
-      "common_name": "Kap Primrose",
-      "description": "Streptocarpus ionanthus ist eine beliebte Blühpflanze, die für ihre lebendigen, violett-blauen Blüten bekannt ist. Ursprünglich aus tropischen Regionen, gedeiht sie bei mäßigem Licht und Temperaturen."
+      "common_name": "Kap-Primel",
+      "description": "Streptocarpus ionanthus, auch Kap-Primel genannt, ist eine beliebte Zimmerpflanze mit lebhaften, röhrenförmigen Blumen. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Primrose du Cap",
-      "description": "Streptocarpus ionanthus est une plante à fleurs populaire, connue pour ses fleurs violettes et bleues vives. Originaire des régions tropicales, elle prospère sous une lumière et des températures modérées."
+      "common_name": "Primevère du Cap",
+      "description": "Streptocarpus ionanthus, également appelée primevère du Cap, est une plante d'intérieur populaire avec des fleurs tubulaires vibrantes. Elle prospère sous une lumière modérée et une humidité élevée."
     },
     "it": {
       "common_name": "Primula del Capo",
-      "description": "Streptocarpus ionanthus è una pianta da fiore popolare, nota per i suoi fiori violetti-blu vivaci. Originaria delle regioni tropicali, cresce bene in condizioni di luce e temperatura moderate."
+      "description": "Streptocarpus ionanthus, conosciuta anche come primula del Capo, è una pianta da appartamento popolare con fiori tubolari vivaci. Cresce in luce moderata e alta umidità."
     },
     "es": {
-      "common_name": "Primula del Cabo",
-      "description": "Streptocarpus ionanthus es una planta de flores popular conocida por sus flores violetas y azules vibrantes. Originaria de las regiones tropicales, prospera con luz y temperaturas moderadas."
+      "common_name": "Prímula del Cabo",
+      "description": "Streptocarpus ionanthus, también conocida como prímula del Cabo, es una planta de interior popular con flores tubulares vibrantes. Crece con luz moderada y alta humedad."
     },
     "pt": {
       "common_name": "Primula do Cabo",
-      "description": "Streptocarpus ionanthus é uma planta popular conhecida por suas flores violeta-azul vibrantes. Nativa das regiões tropicais, prospera em luz e temperaturas moderadas."
+      "description": "Streptocarpus ionanthus, também conhecida como primula do Cabo, é uma planta de interior popular com flores tubulares vibrantes. Cresce sob luz moderada e alta umidade."
     },
     "ar": {
-      "common_name": "زهرة الربيع الكيب",
-      "description": "Streptocarpus ionanthus هو نبات مزهر شهير معروف بأزهاره الزرقاء والبنفسجية الزاهية. موطنه الأصلي المناطق الاستوائية، ويزدهر في الضوء ودرجات الحرارة المعتدلة."
+      "common_name": "زهرة كيب",
+      "description": "ستريبتوكاربس أيونانثوس، والمعروفة أيضًا باسم زهرة كيب، هي نبات منزلي شائع ذو أزهار أنبوبية زاهية. يزدهر في الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "केप प्रिमरोज़",
-      "description": "Streptocarpus ionanthus एक लोकप्रिय फूलने वाली पौधा है, जिसे इसके जीवंत बैंगनी-नीले फूलों के लिए जाना जाता है। यह उष्णकटिबंधीय क्षेत्रों का मूल निवासी है, और इसे मध्यम प्रकाश और तापमान में अच्छे से बढ़ता है।"
+      "common_name": "केप प्राइमरोस",
+      "description": "स्ट्रीप्टोकार्पस आयोनांथस, जिसे केप प्राइमरोस के नाम से भी जाना जाता है, एक लोकप्रिय हाउसप्लांट है जिसमें चमकदार, नलाकार फूल होते हैं। यह मध्यम प्रकाश और उच्च आर्द्रता में बढ़ता है।"
     },
     "zh": {
-      "common_name": "开普紫罗兰",
-      "description": "Streptocarpus ionanthus 是一种受欢迎的开花植物，以其鲜艳的紫蓝色花朵而闻名。原产于热带地区，适应中等光照和温度条件。"
+      "common_name": "开普长春花",
+      "description": "斯特雷普托卡普斯·艾奥南图斯，也叫做开普长春花，是一种受欢迎的室内植物，拥有鲜艳的管状花朵。它在适度的光照和高湿度下生长良好。"
     },
     "ja": {
       "common_name": "ケーププリムローズ",
-      "description": "Streptocarpus ionanthusは、その鮮やかな紫青色の花で知られる人気のある開花植物です。熱帯地域が原産で、適度な光と温度でよく育ちます。"
+      "description": "Streptocarpus ionanthus、通称ケーププリムローズは、鮮やかな筒状の花を持つ人気の室内植物です。中程度の光と高湿度で育ちます。"
     },
     "ko": {
       "common_name": "케이프 프림로즈",
-      "description": "Streptocarpus ionanthus는 생동감 있는 보라색-파란색 꽃으로 유명한 인기 있는 개화식물입니다. 열대 지역이 원산지이며, 적당한 빛과 온도에서 잘 자랍니다."
+      "description": "Streptocarpus ionanthus, 또는 케이프 프림로즈는 생동감 있는 튜브 모양의 꽃을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛과 높은 습도에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/streptocarpus-ionanthus",
-      "https://www.rhs.org.uk/plants/streptocarpus-ionanthus"
+      "https://www.rhs.org.uk/Plants/1160/Streptocarpus-ionanthus/Details",
+      "https://www.gardenia.net/plant-streptocarpus-ionanthus"
     ]
   }
 }

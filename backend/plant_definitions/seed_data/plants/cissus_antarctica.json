@@ -1,6 +1,6 @@
 {
   "external_id": "cissus_antarctica",
-  "name": "Kangaroo Vine",
+  "name": "Kangaroo vine",
   "latin": "Cissus antarctica",
   "sun": "medium",
   "water": "medium",
@@ -11,17 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "peat-free",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 1,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 30,
   "image_hero": "cissus_antarctica.jpg",
   "image_thumb": "cissus_antarctica.jpg",
   "traits": [
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज अप्रत्यक्ष",
+          "en": "Bright filtered light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumiere tamisee",
+          "it": "Luce filtrata",
+          "es": "Luz filtrada",
+          "pt": "Luz filtrada",
+          "ar": "ضوء ساطع مفلتر",
+          "hi": "छनी हुई रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
-          "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podl.",
+          "de": "Gut durchlassig",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Garder leger humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente humedo",
+          "pt": "Levemente umido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -86,16 +86,16 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Latwa",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
+          "es": "Facil",
+          "pt": "Facil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "易养护",
+          "zh": "容易",
           "ja": "簡単",
           "ko": "쉬움"
         }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–26 °C",
-          "pl": "18–26 °C",
-          "de": "18–26 °C",
-          "fr": "18–26 °C",
-          "it": "18–26 °C",
-          "es": "18–26 °C",
-          "pt": "18–26 °C",
-          "ar": "18–26°م",
-          "hi": "18–26 °C",
-          "zh": "18–26°C",
-          "ja": "18–26℃",
-          "ko": "18–26℃"
+          "en": "16-24°C indoors",
+          "pl": "16-24°C w domu",
+          "de": "16-24°C innen",
+          "fr": "16-24°C interieur",
+          "it": "16-24°C in casa",
+          "es": "16-24°C interior",
+          "pt": "16-24°C interior",
+          "ar": "16-24°م داخل",
+          "hi": "16-24°C घर में",
+          "zh": "16-24°C室内",
+          "ja": "16-24°C室内",
+          "ko": "16-24°C 실내"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia",
-          "de": "Normal",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسطة",
-          "hi": "सामान्य",
-          "zh": "中等湿度",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Average to higher",
+          "pl": "Srednia do wyzszej",
+          "de": "Mittel bis hoher",
+          "fr": "Moyenne a elevee",
+          "it": "Media-alta",
+          "es": "Media a alta",
+          "pt": "Media a alta",
+          "ar": "متوسطة لاعلى",
+          "hi": "मध्यम-उच्च",
+          "zh": "中等到较高",
+          "ja": "普通〜やや高め",
+          "ko": "보통-높음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Generally non-toxic",
+          "pl": "Zwykle nietrujaca",
+          "de": "Meist ungiftig",
+          "fr": "Generalement non tox",
+          "it": "In genere non toss",
+          "es": "Generalmente no tox",
+          "pt": "Geralmente nao tox",
+          "ar": "غير سام غالبا",
+          "hi": "आमतौर पर गैर-विषैला",
+          "zh": "通常无毒",
+          "ja": "一般に無毒",
+          "ko": "대체로 무독성"
         }
       }
     },
@@ -162,77 +162,118 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast-growing vine",
-          "pl": "Szybki wzrost",
-          "de": "Schnellwachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Fast trailing vine",
+          "pl": "Szybkie pnacze",
+          "de": "Schnelle Rankpfl.",
+          "fr": "Liane a croissance",
+          "it": "Rampicante rapido",
+          "es": "Enredadera rapida",
+          "pt": "Trepadeira rapida",
+          "ar": "متسلق سريع",
+          "hi": "तेजी से बढ़ने वाली",
+          "zh": "快速攀援藤",
+          "ja": "成長の早いツル",
+          "ko": "빠르게 자라는 덩굴"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Nie przelac",
+          "de": "Staunasse meiden",
+          "fr": "Eviter l'exces d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبتلة",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mealybugs, mites",
+          "pl": "Welnowce, prz.",
+          "de": "Wolllause, Milben",
+          "fr": "Cochenilles, acariens",
+          "it": "Cocciniglie, acari",
+          "es": "Cochinillas, acaros",
+          "pt": "Cochonilhas, acaros",
+          "ar": "بق دقيقي وعناكب",
+          "hi": "मिलीबग, माइट्स",
+          "zh": "粉蚧与螨",
+          "ja": "カイガラムシ,ダニ",
+          "ko": "깍지벌레, 진드기"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Kangaroo Vine",
-      "description": "Cissus antarctica is a vigorous evergreen vine native to eastern Australia. It is commonly grown indoors for its glossy foliage and trailing habit. The plant tolerates a range of indoor conditions and is considered low maintenance."
+      "common_name": "Kangaroo vine",
+      "description": "Cissus antarctica is a vigorous evergreen climber often grown as a trailing houseplant. Give bright, filtered light and keep soil lightly moist during active growth, with less water in winter. It benefits from higher humidity and is commonly potted on every 2–3 years."
     },
     "pl": {
       "common_name": "Cissus australijski",
-      "description": "Cissus antarctica to silnie rosnące pnącze pochodzące ze wschodniej Australii. W uprawie domowej cenione jest za dekoracyjne liście i łatwość pielęgnacji. Dobrze radzi sobie w warunkach mieszkaniowych."
+      "description": "Cissus antarctica to szybko rosnące, zimozielone pnącze uprawiane w domu jako roślina zwisająca. Lubi jasne, rozproszone światło i lekko wilgotne podłoże w okresie wzrostu, a zimą podlewanie ogranicza się. Dobrze reaguje na wyższą wilgotność i przesadzanie co 2–3 lata."
     },
     "de": {
-      "common_name": "Känguruwein",
-      "description": "Cissus antarctica ist eine schnell wachsende Kletterpflanze aus Ost-Australien. Sie wird als Zimmerpflanze wegen ihrer glänzenden Blätter geschätzt. Die Art gilt als robust und pflegeleicht."
+      "common_name": "Känguru-Wein",
+      "description": "Cissus antarctica ist eine kräftige, immergrüne Rankpflanze, die oft überhängend kultiviert wird. Sie bevorzugt helles, gefiltertes Licht und leicht feuchtes Substrat während des Wachstums, im Winter sparsamer gießen. Höhere Luftfeuchte ist hilfreich, und ein Umtopfen alle 2–3 Jahre ist üblich."
     },
     "fr": {
-      "common_name": "Cissus d’Australie",
-      "description": "Cissus antarctica est une plante grimpante originaire de l’est de l’Australie. Elle est cultivée en intérieur pour son feuillage décoratif. Elle supporte bien les conditions domestiques courantes."
+      "common_name": "Vigne kangourou",
+      "description": "Cissus antarctica est une liane persistante vigoureuse, souvent cultivée en plante retombante. Offrez une lumiere vive mais filtree et maintenez le substrat legerement humide en periode de croissance, puis plus sec en hiver. Une humidite plus elevee aide, avec un rempotage tous les 2 a 3 ans."
     },
     "it": {
-      "common_name": "Cisso australiano",
-      "description": "Cissus antarctica è una pianta rampicante sempreverde originaria dell’Australia orientale. È apprezzata come pianta da interno per le sue foglie lucide. Richiede cure semplici e regolari."
+      "common_name": "Vite canguro",
+      "description": "Cissus antarctica e un rampicante sempreverde vigoroso, spesso coltivato come ricadente. Preferisce luce intensa ma filtrata e terriccio leggermente umido durante la crescita, con annaffiature ridotte in inverno. Gradisce umidita piu alta e di solito si rinvasa ogni 2–3 anni."
     },
     "es": {
-      "common_name": "Ciso australiano",
-      "description": "Cissus antarctica es una enredadera perenne originaria del este de Australia. Se cultiva como planta de interior por su follaje ornamental. Es resistente y fácil de mantener."
+      "common_name": "Vid canguro",
+      "description": "Cissus antarctica es una enredadera perenne vigorosa, frecuente como planta colgante. Necesita luz brillante filtrada y sustrato ligeramente humedo en crecimiento, con riego mas escaso en invierno. Se beneficia de mayor humedad y suele trasplantarse cada 2–3 anos."
     },
     "pt": {
-      "common_name": "Cisso-australiano",
-      "description": "Cissus antarctica é uma trepadeira perene nativa do leste da Austrália. É cultivada em interiores devido às suas folhas decorativas. Adapta-se bem a ambientes internos."
+      "common_name": "Videira-canguru",
+      "description": "Cissus antarctica e uma trepadeira perene vigorosa, muitas vezes usada como planta pendente. Prefere luz intensa filtrada e substrato levemente umido durante o crescimento, com menos regas no inverno. Gosta de umidade mais alta e costuma ser reenvasada a cada 2–3 anos."
     },
     "ar": {
-      "common_name": "نبات سيسوس",
-      "description": "Cissus antarctica نبات متسلق موطنه شرق أستراليا. يُزرع كنبات داخلي لأوراقه اللامعة. يتميز بسهولة العناية به داخل المنازل."
+      "common_name": "كرمة الكنغر",
+      "description": "Cissus antarctica متسلق دائم الخضرة سريع النمو ويزرع غالبا كنبات متدل. يحتاج الى ضوء ساطع مفلتر وتربة رطبة قليلا خلال النمو مع تقليل الري شتاء. يستفيد من رطوبة اعلى وعادة يعاد تبديل الوعاء كل 2 الى 3 سنوات."
     },
     "hi": {
       "common_name": "कंगारू बेल",
-      "description": "Cissus antarctica ऑस्ट्रेलिया का एक सदाबहार लता पौधा है। इसे घर के अंदर सजावटी पत्तियों के लिए उगाया जाता है। यह सामान्य घरेलू परिस्थितियों में अच्छी तरह बढ़ता है।"
+      "description": "Cissus antarctica एक तेज़ बढ़ने वाली सदाबहार लता है जिसे अक्सर हैंगिंग पौधे की तरह रखा जाता है। इसे तेज़ लेकिन छनी हुई रोशनी दें और बढ़वार के मौसम में मिट्टी हल्की नम रखें, सर्दियों में पानी कम करें। अधिक नमी मदद करती है और आम तौर पर 2–3 साल में रीपॉट किया जाता है।"
     },
     "zh": {
-      "common_name": "南极西藤",
-      "description": "Cissus antarctica 原产于澳大利亚东部，是一种常绿藤本植物。因其光亮的叶片而常作为室内观叶植物栽培。适应性强，养护简单。"
+      "common_name": "袋鼠葡萄藤",
+      "description": "Cissus antarctica 是生长旺盛的常绿攀援植物，常作为垂吊盆栽。适合明亮散射光，生长期保持基质微湿，冬季减少浇水。较高空气湿度有益，通常每2–3年换盆一次。"
     },
     "ja": {
-      "common_name": "カンガルーアイビー",
-      "description": "Cissus antarctica はオーストラリア東部原産のつる性植物です。光沢のある葉が特徴で観葉植物として利用されます。室内環境に適応しやすいです。"
+      "common_name": "カンガルーグレープ",
+      "description": "Cissus antarctica は生育の早い常緑のつる植物で、吊り鉢でも育てられます。明るい間接光を好み、生育期は土を軽く湿らせ、冬は控えめに水やりします。湿度が高いと調子がよく、植え替えは通常2〜3年ごとです。"
     },
     "ko": {
-      "common_name": "캥거루덩굴",
-      "description": "Cissus antarctica는 호주 동부가 원산지인 상록 덩굴식물입니다. 윤기 있는 잎으로 실내 관엽식물로 많이 재배됩니다. 관리가 쉬운 편입니다."
+      "common_name": "캥거루 덩굴",
+      "description": "Cissus antarctica는 생장이 빠른 상록 덩굴로, 주로 늘어뜨려 키웁니다. 밝은 간접광에서 잘 자라며 성장기에는 흙을 약간 촉촉하게 유지하고 겨울에는 물을 줄입니다. 습도가 높으면 도움이 되며 보통 2–3년에 한 번 분갈이합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/4313/cissus-antarctica/details",
+      "https://www.rhs.org.uk/plants/82571/cissus-antarctica/details",
       "https://plants.ces.ncsu.edu/plants/cissus-antarctica/",
-      "https://www.botanicgardens.sa.gov.au/plant-profile/cissus-antarctica"
+      "https://www.shootgardening.com/plants/cissus-antarctica",
+      "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Cissus~antarctica&page=nswfl",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/grape-ivy",
+      "https://plnts.com/en/care/houseplants-family/cissus"
     ]
   }
 }

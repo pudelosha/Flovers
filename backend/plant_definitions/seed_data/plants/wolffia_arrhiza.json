@@ -1,24 +1,26 @@
 {
   "external_id": "wolffia_arrhiza",
-  "name": "Rootless duckweed",
+  "name": "Watermeal",
   "latin": "Wolffia arrhiza",
-  "sun": "medium",
+  "sun": "low",
   "water": "high",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy"
+    "peat-free",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 1,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
-  "repot_required": false,
+  "repot_required": true,
   "repot_interval_months": null,
   "image_hero": "wolffia_arrhiza.jpg",
   "image_thumb": "wolffia_arrhiza.jpg",
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Niedriges Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "낮은 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Free floating aquatic",
-          "pl": "Roślina pływająca",
-          "de": "Frei schwimmend",
-          "fr": "Plante flottante",
-          "it": "Pianta galleggiante",
-          "es": "Planta flotante",
-          "pt": "Planta flutuante",
-          "ar": "نبات طافٍ",
-          "hi": "तैरता पौधा",
-          "zh": "漂浮水生",
-          "ja": "浮遊水生",
-          "ko": "부유 수생"
+          "en": "Peat-free soil",
+          "pl": "Gleba bez torfu",
+          "de": "Torf-freier Boden",
+          "fr": "Sol sans tourbe",
+          "it": "Terreno senza torba",
+          "es": "Suelo sin turba",
+          "pt": "Solo sem turfa",
+          "ar": "تربة خالية من الخث",
+          "hi": "पीट रहित मिट्टी",
+          "zh": "无泥炭土壤",
+          "ja": "ピートフリー土壌",
+          "ko": "무펄프 토양"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Always in water",
-          "pl": "Zawsze w wodzie",
-          "de": "Ständig im Wasser",
-          "fr": "Toujours dans l’eau",
-          "it": "Sempre in acqua",
-          "es": "Siempre en agua",
-          "pt": "Sempre na água",
-          "ar": "دائمًا في الماء",
-          "hi": "हमेशा पानी में",
-          "zh": "始终在水中",
-          "ja": "常に水中",
-          "ko": "항상 물속"
+          "en": "High water needs",
+          "pl": "Wysokie potrzeby wodne",
+          "de": "Hoher Wasserbedarf",
+          "fr": "Besoins en eau élevés",
+          "it": "Alte necessità d'acqua",
+          "es": "Altas necesidades de agua",
+          "pt": "Altas necessidades de água",
+          "ar": "احتياجات مياه عالية",
+          "hi": "उच्च जल आवश्यकता",
+          "zh": "高水需求",
+          "ja": "高い水の必要性",
+          "ko": "높은 물 필요"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana",
-          "de": "Mittel",
-          "fr": "Modérée",
-          "it": "Moderata",
-          "es": "Moderada",
-          "pt": "Moderada",
-          "ar": "متوسطة",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Hard",
+          "pl": "Trudne",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعب",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려운"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–30 °C",
-          "pl": "15–30 °C",
-          "de": "15–30 °C",
-          "fr": "15–30 °C",
-          "it": "15–30 °C",
-          "es": "15–30 °C",
-          "pt": "15–30 °C",
-          "ar": "15–30°م",
-          "hi": "15–30 °C",
-          "zh": "15–30℃",
-          "ja": "15–30℃",
-          "ko": "15–30℃"
+          "en": "Warm temperature",
+          "pl": "Ciepła temperatura",
+          "de": "Warme Temperatur",
+          "fr": "Température chaude",
+          "it": "Temperatura calda",
+          "es": "Temperatura cálida",
+          "pt": "Temperatura quente",
+          "ar": "درجة حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖的温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
         }
       }
     },
@@ -122,15 +124,15 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Aquatic humidity",
-          "pl": "Wysoka wilgoć",
-          "de": "Hohe Feuchte",
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
-          "it": "Umidità alta",
-          "es": "Humedad alta",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
-          "hi": "उच्च नमी",
+          "hi": "उच्च आर्द्रता",
           "zh": "高湿度",
           "ja": "高湿度",
           "ko": "높은 습도"
@@ -142,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Very fast",
-          "pl": "Bardzo szybki",
-          "de": "Sehr schnell",
-          "fr": "Très rapide",
-          "it": "Molto rapida",
-          "es": "Muy rápido",
-          "pt": "Muito rápido",
-          "ar": "سريع جدًا",
-          "hi": "बहुत तेज़",
-          "zh": "生长迅速",
-          "ja": "非常に速い",
-          "ko": "매우 빠름"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Entwicklung",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Rootless duckweed",
-      "description": "Wolffia arrhiza is the smallest flowering plant, floating freely on still freshwater. It lacks roots and absorbs nutrients directly from water. It is commonly found in ponds and slow-moving lakes."
+      "common_name": "Watermeal",
+      "description": "Wolffia arrhiza, also known as watermeal, is a tiny floating plant found in freshwater. It is the smallest flowering plant in the world."
     },
     "pl": {
-      "common_name": "Wolffia bezkorzeniowa",
-      "description": "Wolffia arrhiza to najmniejsza roślina kwiatowa, swobodnie unosząca się na wodzie. Nie wytwarza korzeni i pobiera składniki bezpośrednio z wody. Występuje w stawach i jeziorach."
+      "common_name": "Wodna zguba",
+      "description": "Wolffia arrhiza, znana także jako wodna zguba, to maleńska roślina pływająca w słodkiej wodzie. Jest najmniejszą kwitnącą rośliną na świecie."
     },
     "de": {
-      "common_name": "Wurzellose Wasserlinse",
-      "description": "Wolffia arrhiza ist die kleinste Blütenpflanze und schwimmt frei auf Süßwasser. Sie besitzt keine Wurzeln und nimmt Nährstoffe direkt aus dem Wasser auf. Sie lebt in ruhigen Gewässern."
+      "common_name": "Wassermahl",
+      "description": "Wolffia arrhiza, auch Wassermahl genannt, ist eine winzige schwimmende Pflanze in Süßwasser. Sie ist die kleinste blühende Pflanze der Welt."
     },
     "fr": {
-      "common_name": "Wolffie sans racines",
-      "description": "Wolffia arrhiza est la plus petite plante à fleurs, flottant librement à la surface de l’eau douce. Elle ne possède pas de racines et absorbe les nutriments directement. On la trouve dans les étangs calmes."
+      "common_name": "Écume d'eau",
+      "description": "Wolffia arrhiza, également connue sous le nom d'écume d'eau, est une petite plante flottante dans l'eau douce. C'est la plus petite plante à fleurs au monde."
     },
     "it": {
-      "common_name": "Wolffia senza radici",
-      "description": "Wolffia arrhiza è la più piccola pianta da fiore e galleggia liberamente in acqua dolce. È priva di radici e assorbe i nutrienti dall’acqua. Vive in stagni e laghi tranquilli."
+      "common_name": "Schiuma d'acqua",
+      "description": "Wolffia arrhiza, conosciuta anche come schiuma d'acqua, è una piccola pianta flottante nelle acque dolci. È la più piccola pianta da fiore del mondo."
     },
     "es": {
-      "common_name": "Lenteja de agua sin raíces",
-      "description": "Wolffia arrhiza es la planta con flores más pequeña y flota libremente en agua dulce. No tiene raíces y absorbe nutrientes directamente del agua. Habita en estanques y aguas tranquilas."
+      "common_name": "Comida de agua",
+      "description": "Wolffia arrhiza, también conocida como comida de agua, es una pequeña planta flotante en agua dulce. Es la planta con flores más pequeña del mundo."
     },
     "pt": {
-      "common_name": "Lentilha-d’água sem raiz",
-      "description": "Wolffia arrhiza é a menor planta com flor, flutuando livremente em água doce. Não possui raízes e absorve nutrientes diretamente da água. Ocorre em lagoas calmas."
+      "common_name": "Comida de água",
+      "description": "Wolffia arrhiza, também conhecida como comida de água, é uma pequena planta flutuante em água doce. É a menor planta com flores do mundo."
     },
     "ar": {
-      "common_name": "عدس الماء عديم الجذور",
-      "description": "Wolffia arrhiza هي أصغر نبات مزهر وتطفو بحرية على المياه العذبة. لا تمتلك جذورًا وتمتص العناصر الغذائية مباشرة من الماء. تعيش في البرك الهادئة."
+      "common_name": "طعام الماء",
+      "description": "Wolffia arrhiza ، المعروفة أيضًا باسم طعام الماء ، هي نبات عائم صغير في المياه العذبة. إنها أصغر نبتة مزهرة في العالم."
     },
     "hi": {
-      "common_name": "जड़हीन डकवीड",
-      "description": "Wolffia arrhiza सबसे छोटा पुष्पीय पौधा है जो मीठे पानी पर तैरता है। इसमें जड़ें नहीं होतीं और यह पोषक तत्व सीधे पानी से लेता है। यह शांत जलाशयों में पाया जाता है।"
+      "common_name": "जल भोजन",
+      "description": "Wolffia arrhiza, जिसे जल भोजन भी कहा जाता है, एक छोटी तैरती हुई पौधा है जो ताजे पानी में पाया जाता है। यह दुनिया का सबसे छोटा फूलवाला पौधा है।"
     },
     "zh": {
-      "common_name": "无根萍",
-      "description": "Wolffia arrhiza 是世界上最小的开花植物，漂浮在淡水水面。它没有根，直接从水中吸收养分。常见于静水池塘。"
+      "common_name": "水餐",
+      "description": "Wolffia arrhiza，也被称为水餐，是一种在淡水中漂浮的小型植物。它是世界上最小的开花植物。"
     },
     "ja": {
-      "common_name": "ムジナモモドキ",
-      "description": "Wolffia arrhiza は最小の被子植物で、淡水に浮かんで生育します。根を持たず、水中から直接養分を吸収します。池や静かな湖に見られます。"
+      "common_name": "水の食物",
+      "description": "Wolffia arrhiza、別名水の食物は淡水に浮かぶ小さな植物です。世界で最も小さな花を咲かせる植物です。"
     },
     "ko": {
-      "common_name": "뿌리없는 개구리밥",
-      "description": "Wolffia arrhiza는 가장 작은 꽃식물로 담수 표면에 떠서 자랍니다. 뿌리가 없고 물에서 직접 영양분을 흡수합니다. 연못과 잔잔한 호수에 분포합니다."
+      "common_name": "물 음식",
+      "description": "Wolffia arrhiza, 물 음식이라고도 알려진 이 식물은 담수에서 떠다니는 작은 식물입니다. 이는 세계에서 가장 작은 꽃을 피우는 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/wolffia-arrhiza",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a623",
-      "https://en.wikipedia.org/wiki/Wolffia_arrhiza"
+      "https://www.botanicgardens.utoronto.ca",
+      "https://www.ncbi.nlm.nih.gov"
     ]
   }
 }

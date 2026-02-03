@@ -7,15 +7,15 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "ceramic"
+    "ceramic",
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "cactus-succulent"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "عالي",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높음"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Voller Sonnenschein",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरी धूप",
+          "zh": "充足阳光",
+          "ja": "直射日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "sandy",
-          "pl": "piaszczysty",
-          "de": "sandig",
-          "fr": "sableux",
-          "it": "sabbioso",
-          "es": "arenoso",
-          "pt": "arenoso",
-          "ar": "رمالي",
-          "hi": "रेतीला",
-          "zh": "沙质",
-          "ja": "砂地",
-          "ko": "모래"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मृदा",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-30°C",
-          "pl": "15-30°C",
-          "de": "15-30°C",
-          "fr": "15-30°C",
-          "it": "15-30°C",
-          "es": "15-30°C",
-          "pt": "15-30°C",
-          "ar": "15-30°C",
-          "hi": "15-30°C",
-          "zh": "15-30°C",
-          "ja": "15-30°C",
-          "ko": "15-30°C"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -143,16 +143,16 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
           "ar": "لا",
           "hi": "नहीं",
-          "zh": "否",
+          "zh": "不",
           "ja": "いいえ",
           "ko": "아니오"
         }
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "średni",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适中",
           "ja": "中程度",
-          "ko": "보통"
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pest control occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधारणीय कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Pomegranate",
-      "description": "Pomegranate is a deciduous shrub or small tree. It produces bright red fruit with edible seeds inside."
+      "description": "The pomegranate is a fruit-bearing shrub native to the Mediterranean region. It thrives in hot climates with full sun exposure and moderate watering."
     },
     "pl": {
-      "common_name": "Granat",
-      "description": "Granat to krzew lub małe drzewo liściaste. Wytwarza czerwone owoce z jadalnymi nasionami."
+      "common_name": "Granatowiec",
+      "description": "Granatowiec to krzew owocowy pochodzący z regionu Morza Śródziemnego. Rośnie najlepiej w gorącym klimacie, w pełnym słońcu, przy umiarkowanym podlewaniu."
     },
     "de": {
       "common_name": "Granatapfel",
-      "description": "Der Granatapfel ist ein laubabwerfender Strauch oder kleiner Baum. Er trägt rote Früchte mit essbaren Samen."
+      "description": "Der Granatapfel ist ein Obststrauch, der ursprünglich aus dem Mittelmeerraum stammt. Er gedeiht in heißen Klimazonen mit voller Sonneneinstrahlung und moderatem Gießen."
     },
     "fr": {
-      "common_name": "Grenade",
-      "description": "La grenade est un arbuste ou un petit arbre à feuilles caduques. Il produit des fruits rouges avec des graines comestibles."
+      "common_name": "Grenadier",
+      "description": "Le grenadier est un arbuste fruitier originaire de la région Méditerranéenne. Il prospère dans des climats chauds avec une exposition directe au soleil et un arrosage modéré."
     },
     "it": {
       "common_name": "Melograno",
-      "description": "Il melograno è un arbusto o piccolo albero a foglie caduche. Produce frutti rossi con semi commestibili."
+      "description": "Il melograno è un arbusto da frutto originario della regione mediterranea. Cresce bene in climi caldi con esposizione diretta al sole e annaffiature moderate."
     },
     "es": {
       "common_name": "Granado",
-      "description": "El granado es un arbusto o pequeño árbol de hojas caducas. Produce frutas rojas con semillas comestibles."
+      "description": "El granado es un arbusto frutal originario de la región mediterránea. Crece bien en climas cálidos con exposición total al sol y riego moderado."
     },
     "pt": {
-      "common_name": "Romã",
-      "description": "A romã é um arbusto ou pequena árvore caducifólia. Produz frutas vermelhas com sementes comestíveis."
+      "common_name": "Romãzeira",
+      "description": "A romãzeira é um arbusto frutífero originário da região mediterrânea. Cresce bem em climas quentes com exposição direta ao sol e rega moderada."
     },
     "ar": {
       "common_name": "رمان",
-      "description": "الرمان هو شجيرة أو شجرة صغيرة متساقطة الأوراق. ينتج فواكه حمراء تحتوي على بذور صالحة للأكل."
+      "description": "الرمان هو شجيرة مثمرة موطنها منطقة البحر الأبيض المتوسط. يزدهر في المناخات الحارة مع التعرض الكامل لأشعة الشمس وري معتدل."
     },
     "hi": {
       "common_name": "अनार",
-      "description": "अनार एक पत्ते गिराने वाली झाड़ी या छोटा पेड़ है। यह लाल फल उत्पन्न करता है जिसमें खाने योग्य बीज होते हैं।"
+      "description": "अनार एक फल देने वाली झाड़ी है, जो भूमध्य सागर क्षेत्र की मूल निवासी है। यह गर्म जलवायु में अच्छे से बढ़ता है और इसे पूर्ण धूप और मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "石榴",
-      "description": "石榴是一种落叶灌木或小树。它会结出红色的果实，里面有可食用的种子。"
+      "description": "石榴是一种果树，原产于地中海地区。它在炎热的气候中生长，喜欢充足的阳光和适度的浇水。"
     },
     "ja": {
       "common_name": "ザクロ",
-      "description": "ザクロは落葉性の低木または小さな木です。食べられる種子を含む赤い果実を生産します。"
+      "description": "ザクロは地中海地域原産の果実をつける低木です。暑い気候で良く育ち、直射日光と適度な水やりを必要とします。"
     },
     "ko": {
       "common_name": "석류",
-      "description": "석류는 낙엽성 관목 또는 작은 나무입니다. 먹을 수 있는 씨앗이 들어 있는 빨간 열매를 생산합니다."
+      "description": "석류는 지중해 지역 원산의 열매를 맺는 관목입니다. 덥고 햇볕이 잘 드는 곳에서 잘 자라며, 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.bhg.com/gardening/pests-insects-diseases/pomegranate-tree-care/",
-      "https://www.gardeningknowhow.com/edible/fruits/pomegranate/pomegranate-planting-and-care.htm"
+      "https://www.rhs.org.uk/advice/profile?pid=353",
+      "https://www.gardenia.net/plant/punica-granatum-pomegranate"
     ]
   }
 }

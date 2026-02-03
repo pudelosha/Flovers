@@ -2,24 +2,26 @@
   "external_id": "kalanchoe_pinnata",
   "name": "Kalanchoe pinnata",
   "latin": "Kalanchoe pinnata",
-  "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus"
+    "cactus-succulent",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 21,
+  "water_interval_days": 14,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "kalanchoe_pinnata.jpg",
   "image_thumb": "kalanchoe_pinnata.jpg",
   "traits": [
@@ -27,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
-          "de": "Helles Licht",
-          "fr": "Lumière vive",
-          "it": "Luce intensa",
-          "es": "Luz brillante",
-          "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
-          "hi": "तेज रोशनी",
-          "zh": "明亮光照",
-          "ja": "明るい光",
-          "ko": "밝은 빛"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -46,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna",
-          "de": "Durchlässig",
-          "fr": "Drainant",
-          "it": "Ben drenato",
-          "es": "Buen drenaje",
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
           "pt": "Bem drenado",
-          "ar": "تربة جيدة",
-          "hi": "अच्छी जलनिकास",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 우수"
+          "ja": "排水性良好",
+          "ko": "배수 좋은"
         }
       }
     },
@@ -65,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Sparse watering",
-          "pl": "Rzadkie podlew.",
-          "de": "Wenig gießen",
-          "fr": "Arrosage rare",
-          "it": "Annaffiature rare",
-          "es": "Riego escaso",
-          "pt": "Rega pouca",
-          "ar": "ري قليل",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "控えめ水やり",
-          "ko": "적은 물"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -84,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易养护",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -103,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm temps",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Cálido",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻함"
+          "en": "18-30°C",
+          "pl": "18-30°C",
+          "de": "18-30°C",
+          "fr": "18-30°C",
+          "it": "18-30°C",
+          "es": "18-30°C",
+          "pt": "18-30°C",
+          "ar": "18-30°C",
+          "hi": "18-30°C",
+          "zh": "18-30°C",
+          "ja": "18-30°C",
+          "ko": "18-30°C"
         }
       }
     },
@@ -122,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilg.",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفضة",
-          "hi": "कम",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮음"
+          "en": "Moderate humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -141,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैली",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Slightly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلا",
+          "hi": "थोड़ी विषैली",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -160,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright growth",
-          "pl": "Wzniesiony",
-          "de": "Aufrecht",
-          "fr": "Dressée",
-          "it": "Eretto",
-          "es": "Erecto",
-          "pt": "Ereto",
-          "ar": "قائم",
-          "hi": "सीधी वृद्धि",
-          "zh": "直立生长",
-          "ja": "直立型",
-          "ko": "직립형"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'arrosage",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات غير متكررة",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Air plant",
-      "description": "Kalanchoe pinnata is a succulent perennial native to Madagascar. It stores water in its fleshy leaves and prefers bright light with infrequent watering. The plant is known for producing plantlets along leaf edges."
+      "common_name": "Chandelier plant",
+      "description": "Kalanchoe pinnata, commonly known as the chandelier plant, is a succulent with fleshy, rounded leaves. It is easy to care for and is often grown for its ornamental value."
     },
     "pl": {
-      "common_name": "Rozchodnik pierzasty",
-      "description": "Kalanchoe pinnata to sukulent pochodzący z Madagaskaru. Gromadzi wodę w mięsistych liściach i wymaga jasnego stanowiska oraz rzadkiego podlewania. Na brzegach liści tworzy młode rośliny."
+      "common_name": "Roślina żyrandolowa",
+      "description": "Kalanchoe pinnata, znana jako roślina żyrandolowa, to sukulent o mięsistych, okrągłych liściach. Jest łatwa w pielęgnacji i często uprawiana ze względu na swoje walory ozdobne."
     },
     "de": {
-      "common_name": "Brutblatt",
-      "description": "Kalanchoe pinnata ist eine sukkulente Pflanze aus Madagaskar. Sie speichert Wasser in dicken Blättern und benötigt viel Licht bei sparsamer Bewässerung. Charakteristisch sind Kindel an den Blatträndern."
+      "common_name": "Lampenpflanze",
+      "description": "Kalanchoe pinnata, auch bekannt als Lampenpflanze, ist eine Sukkulente mit fleischigen, runden Blättern. Sie ist pflegeleicht und wird oft wegen ihres Zierwerts angebaut."
     },
     "fr": {
-      "common_name": "Plante de vie",
-      "description": "Kalanchoe pinnata est une plante succulente originaire de Madagascar. Elle emmagasine l’eau dans ses feuilles et préfère une lumière vive avec peu d’arrosage. Elle produit de jeunes plantules sur les feuilles."
+      "common_name": "Plante lustre",
+      "description": "Kalanchoe pinnata, communément appelée plante lustre, est une plante succulente aux feuilles charnues et arrondies. Elle est facile à entretenir et est souvent cultivée pour sa valeur ornementale."
     },
     "it": {
-      "common_name": "Pianta dell’aria",
-      "description": "Kalanchoe pinnata è una succulenta originaria del Madagascar. Accumula acqua nelle foglie carnose e richiede molta luce con annaffiature limitate. Forma piccole piantine sui margini fogliari."
+      "common_name": "Pianta lampadario",
+      "description": "Kalanchoe pinnata, conosciuta come pianta lampadario, è una succulenta con foglie carnose e rotonde. È facile da curare e viene spesso coltivata per il suo valore ornamentale."
     },
     "es": {
-      "common_name": "Hoja del aire",
-      "description": "Kalanchoe pinnata es una suculenta nativa de Madagascar. Almacena agua en sus hojas gruesas y necesita luz intensa con riego escaso. Se reproduce formando hijuelos en las hojas."
+      "common_name": "Planta candelabro",
+      "description": "Kalanchoe pinnata, comúnmente conocida como planta candelabro, es una suculenta con hojas carnosas y redondeadas. Es fácil de cuidar y se cultiva a menudo por su valor ornamental."
     },
     "pt": {
-      "common_name": "Folha-da-fortuna",
-      "description": "Kalanchoe pinnata é uma planta suculenta de Madagascar. Armazena água nas folhas e prefere luz intensa com pouca rega. Produz mudas ao longo das bordas das folhas."
+      "common_name": "Planta candelabro",
+      "description": "Kalanchoe pinnata, comumente conhecida como planta candelabro, é uma suculenta com folhas carnudas e arredondadas. É fácil de cuidar e frequentemente cultivada pelo seu valor ornamental."
     },
     "ar": {
-      "common_name": "نبات الحياة",
-      "description": "كالانشو بيناتا نبات عصاري موطنه مدغشقر. يخزن الماء في أوراقه السميكة ويحتاج إلى ضوء ساطع وري قليل. يتميز بتكوين نباتات صغيرة على حواف الأوراق."
+      "common_name": "نبات الشمعدان",
+      "description": "Kalanchoe pinnata، المعروف باسم نبات الشمعدان، هو نبات عصاري ذو أوراق سميكة ومدورة. من السهل العناية به وغالبًا ما يُزرع لقيمته الزخرفية."
     },
     "hi": {
-      "common_name": "पाथरचट्टा",
-      "description": "Kalanchoe pinnata एक रसीला पौधा है जो मेडागास्कर का मूल निवासी है। यह अपनी मोटी पत्तियों में पानी जमा करता है और तेज रोशनी तथा कम पानी पसंद करता है। पत्तियों के किनारों पर नए पौधे बनते हैं।"
+      "common_name": "झूमर पौधा",
+      "description": "Kalanchoe pinnata, जिसे झूमर पौधा भी कहा जाता है, एक मांसल पौधा है जिसकी गोल पत्तियाँ होती हैं। यह देखभाल में आसान है और इसे अक्सर इसके सजावटी मूल्य के लिए उगाया जाता है।"
     },
     "zh": {
-      "common_name": "落地生根",
-      "description": "Kalanchoe pinnata 是原产于马达加斯加的多肉植物。它在肥厚的叶片中储存水分，喜明亮光照并需少量浇水。叶缘会长出小植株。"
+      "common_name": "吊灯植物",
+      "description": "Kalanchoe pinnata，通常被称为吊灯植物，是一种多肉植物，具有肉质圆形叶子。它易于护理，通常因其观赏价值而种植。"
     },
     "ja": {
-      "common_name": "セイロンベンケイ",
-      "description": "Kalanchoe pinnata はマダガスカル原産の多肉植物です。厚い葉に水を蓄え、明るい光と控えめな水やりを好みます。葉の縁に子株を形成します。"
+      "common_name": "シャンデリアプランツ",
+      "description": "Kalanchoe pinnata、通称シャンデリアプランツは、肉厚で丸い葉を持つ多肉植物です。手入れが簡単で、観賞価値のためによく栽培されます。"
     },
     "ko": {
-      "common_name": "에어플랜트",
-      "description": "Kalanchoe pinnata는 마다가스카르 원산의 다육식물입니다. 두꺼운 잎에 수분을 저장하며 밝은 빛과 적은 물을 선호합니다. 잎 가장자리에 새 개체가 자랍니다."
+      "common_name": "샹들리에 식물",
+      "description": "Kalanchoe pinnata, 흔히 샹들리에 식물로 알려진 이 다육식물은 두껍고 둥근 잎을 가지고 있습니다. 관리가 쉬워 장식용으로 자주 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/kalanchoe-pinnata",
-      "https://www.rhs.org.uk/plants/9592/kalanchoe-pinnata/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a570"
+      "https://www.gardenia.net/plant/kalanchoe-pinnata",
+      "https://www.gardeningknowhow.com/houseplants/kalanchoe/kalanchoe-pinnata-care.htm"
     ]
   }
 }

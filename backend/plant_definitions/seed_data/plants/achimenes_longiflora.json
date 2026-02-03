@@ -1,6 +1,6 @@
 {
   "external_id": "achimenes_longiflora",
-  "name": "Achimenes longiflora",
+  "name": "Magic flower",
   "latin": "Achimenes longiflora",
   "sun": "medium",
   "water": "medium",
@@ -11,11 +11,11 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 5,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,15 +29,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło",
-          "de": "Helles Streulicht",
-          "fr": "Lumière vive",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
-          "ar": "ضوء ساطع",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ परोक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Light, well-drained",
+          "pl": "Lekka, przepuszczalna",
+          "de": "Locker, durchlässig",
+          "fr": "Léger, drainant",
+          "it": "Leggero, drenante",
+          "es": "Ligero, drenante",
+          "pt": "Leve, bem drenado",
+          "ar": "خفيفة وجيدة الصرف",
+          "hi": "हल्की, जलनिकासी",
+          "zh": "疏松排水好",
+          "ja": "軽く水はけ良い",
+          "ko": "가볍고 배수성"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Even moisture",
-          "pl": "Stała wilgoć",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humidité régulière",
-          "it": "Umidità costante",
-          "es": "Humedad regular",
-          "pt": "Umidade constante",
-          "ar": "رطوبة معتدلة",
-          "hi": "समान नमी",
-          "zh": "均匀湿润",
-          "ja": "適度な湿り気",
-          "ko": "고른 수분"
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "تربة رطبة قليلاً",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿り気",
+          "ko": "약간 촉촉하게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mäßig anspruchsvoll",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–24 °C",
-          "pl": "18–24 °C",
-          "de": "18–24 °C",
-          "fr": "18–24 °C",
-          "it": "18–24 °C",
-          "es": "18–24 °C",
-          "pt": "18–24 °C",
-          "ar": "18–24°م",
-          "hi": "18–24 °C",
-          "zh": "18–24℃",
-          "ja": "18–24℃",
-          "ko": "18–24℃"
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Prefers humidity",
-          "pl": "Lubi wilgoć",
-          "de": "Mag Luftfeuchte",
-          "fr": "Aime l’humidité",
-          "it": "Ama umidità",
-          "es": "Prefiere humedad",
-          "pt": "Gosta de umidade",
-          "ar": "يفضل الرطوبة",
-          "hi": "नमी पसंद",
-          "zh": "喜湿润环境",
-          "ja": "湿度を好む",
-          "ko": "습도 선호"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità più alta",
+          "es": "Más humedad",
+          "pt": "Maior umidade",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक आर्द्रता",
+          "zh": "较高湿度",
+          "ja": "高めの湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Unknown toxicity",
+          "pl": "Toksyczność nieznana",
+          "de": "Toxizität unklar",
+          "fr": "Toxicité inconnue",
+          "it": "Tossicità incerta",
+          "es": "Toxicidad desconocida",
+          "pt": "Toxicidade incerta",
+          "ar": "السمّية غير معروفة",
+          "hi": "विषाक्तता अज्ञात",
+          "zh": "毒性不明",
+          "ja": "毒性不明",
+          "ko": "독성 불명"
         }
       }
     },
@@ -162,77 +162,117 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Rhizomatous perennial",
-          "pl": "Bylina kłączowa",
-          "de": "Rhizomstaude",
-          "fr": "Vivace à rhizome",
-          "it": "Perenne rizomatosa",
-          "es": "Perenne rizomatosa",
-          "pt": "Perene rizomatosa",
-          "ar": "معمرة جذمورية",
-          "hi": "राइज़ोमयुक्त बारहमासी",
-          "zh": "根茎多年生",
-          "ja": "根茎性多年草",
-          "ko": "근경성 다년초"
+          "en": "Seasonal, rhizomes",
+          "pl": "Sezonowa, kłącza",
+          "de": "Saisonal, Rhizome",
+          "fr": "Saisonnier, rhizomes",
+          "it": "Stagionale, rizomi",
+          "es": "Estacional, rizomas",
+          "pt": "Sazonal, rizomas",
+          "ar": "موسمية، جذامير",
+          "hi": "मौसमी, राइजोम",
+          "zh": "季节性根茎",
+          "ja": "季節性の根茎",
+          "ko": "계절성 뿌리줄기"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid soggy soil",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter sol détrempé",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcar",
+          "ar": "تجنب التربة المبللة",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات أحيانًا",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶发虫害",
+          "ja": "害虫は時々",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Cupid’s bow",
-      "description": "Achimenes longiflora is a tropical rhizomatous perennial known for its violet, trumpet-shaped flowers. It grows actively in warm months and enters dormancy after flowering. It is commonly grown as an indoor ornamental plant."
+      "common_name": "Magic flower",
+      "description": "Achimenes longiflora is a rhizomatous gesneriad grown for its summer flowers and compact habit. Give bright, indirect light and keep the potting mix lightly moist during active growth. As stems die back, reduce watering and let the rhizomes rest until growth resumes."
     },
     "pl": {
-      "common_name": "Achimenes długokwiatowy",
-      "description": "Achimenes longiflora to tropikalna bylina kłączowa o fioletowych, rurkowatych kwiatach. Aktywnie rośnie w ciepłych miesiącach i przechodzi okres spoczynku po kwitnieniu. Często uprawiana jest jako roślina doniczkowa."
+      "common_name": "Achimenes",
+      "description": "Achimenes longiflora to kłączowa roślina z rodziny ostrojowatych, ceniona za letnie kwitnienie. Zapewnij jasne, rozproszone światło i utrzymuj podłoże lekko wilgotne w okresie wzrostu. Gdy pędy zasychają, ogranicz podlewanie i pozwól kłączom odpocząć do czasu wznowienia wzrostu."
     },
     "de": {
-      "common_name": "Langblütige Achimene",
-      "description": "Achimenes longiflora ist eine tropische Rhizomstaude mit violetten, trompetenförmigen Blüten. Sie wächst während der warmen Monate aktiv und zieht sich danach zurück. Sie wird häufig als Zimmerpflanze kultiviert."
+      "common_name": "Achimenes",
+      "description": "Achimenes longiflora ist eine rhizombildende Gesnerienpflanze mit Sommerblüten. Stelle sie hell, aber ohne direkte Sonne, und halte das Substrat während des Wachstums leicht feucht. Wenn das Laub einzieht, weniger gießen und die Rhizome ruhen lassen, bis neuer Austrieb erscheint."
     },
     "fr": {
-      "common_name": "Achimène à longues fleurs",
-      "description": "Achimenes longiflora est une vivace tropicale à rhizome avec des fleurs violettes en forme de trompette. Elle pousse activement pendant les mois chauds puis entre en dormance. Elle est souvent cultivée comme plante d’intérieur."
+      "common_name": "Achimènes",
+      "description": "Achimenes longiflora est une gesnériacée à rhizomes cultivée pour ses fleurs d’été. Offrez une lumière vive indirecte et maintenez le substrat légèrement humide en période de croissance. Quand la partie aérienne sèche, réduisez l’arrosage et laissez les rhizomes au repos jusqu’à la reprise."
     },
     "it": {
-      "common_name": "Achimene a fiore lungo",
-      "description": "Achimenes longiflora è una perenne tropicale rizomatosa con fiori viola a tromba. Cresce attivamente nei mesi caldi e va in dormienza dopo la fioritura. È coltivata soprattutto come pianta ornamentale da interno."
+      "common_name": "Achimenes",
+      "description": "Achimenes longiflora è una gesneriacea rizomatosa apprezzata per la fioritura estiva. Fornisci luce intensa ma indiretta e mantieni il terriccio leggermente umido durante la crescita. Quando i fusti seccano, riduci le annaffiature e lascia riposare i rizomi finché la pianta riparte."
     },
     "es": {
-      "common_name": "Achimena de flor larga",
-      "description": "Achimenes longiflora es una planta perenne tropical rizomatosa con flores violetas en forma de trompeta. Crece activamente en los meses cálidos y entra en reposo después de florecer. Se cultiva comúnmente en interiores."
+      "common_name": "Achimenes",
+      "description": "Achimenes longiflora es una gesneriácea con rizomas, cultivada por sus flores de verano. Dale luz brillante e indirecta y mantén el sustrato ligeramente húmedo durante el crecimiento. Cuando la parte aérea se seque, reduce el riego y deja descansar los rizomas hasta que rebrote."
     },
     "pt": {
-      "common_name": "Achimênia-de-flor-longa",
-      "description": "Achimenes longiflora é uma planta perene tropical rizomatosa com flores roxas em forma de trombeta. Cresce ativamente nos meses quentes e entra em dormência após a floração. É popular como planta ornamental de interior."
+      "common_name": "Achimenes",
+      "description": "Achimenes longiflora é uma gesneriácea rizomatosa valorizada pela floração no verão. Prefere luz forte indireta e substrato levemente úmido enquanto está em crescimento. Quando os caules secarem, reduza a rega e deixe os rizomas em repouso até a brotação."
     },
     "ar": {
-      "common_name": "أشيمينس طويلة الزهرة",
-      "description": "Achimenes longiflora نبات معمر استوائي جذموري يتميز بأزهاره البنفسجية الأنبوبية. ينمو بنشاط في الأشهر الدافئة ويدخل في سكون بعد الإزهار. يزرع غالبًا كنبات زينة داخلي."
+      "common_name": "أخيمينس",
+      "description": "Achimenes longiflora نبات ريزومي من الفصيلة الجيسنرية يزهر في الصيف. وفر ضوءًا ساطعًا غير مباشر وأبقِ التربة رطبة قليلًا أثناء النمو. عند جفاف الأجزاء الهوائية خفّف الري واترك الريزومات في سكون حتى يعود النمو."
     },
     "hi": {
-      "common_name": "अचिमेनीस",
-      "description": "Achimenes longiflora एक उष्णकटिबंधीय बहुवर्षीय पौधा है जिसमें बैंगनी तुरही जैसे फूल होते हैं। यह गर्म मौसम में सक्रिय रूप से बढ़ता है और फूलों के बाद सुप्त हो जाता है। इसे सामान्यतः घर के अंदर उगाया जाता है।"
+      "common_name": "अकीमेनेस",
+      "description": "Achimenes longiflora एक राइजोम वाली गेसनेरिएसी पौधा है जो गर्मियों में फूल देता है। तेज़ परोक्ष रोशनी दें और सक्रिय वृद्धि में मिट्टी को हल्का नम रखें। जब ऊपर का भाग सूखने लगे, पानी कम करें और राइजोम को आराम दें, फिर नई कोंपलें आने पर देखभाल बढ़ाएँ।"
     },
     "zh": {
-      "common_name": "长花艾奇梅内斯",
-      "description": "Achimenes longiflora 是一种热带根茎多年生植物，具有紫色喇叭状花朵。它在温暖季节生长旺盛，花后进入休眠期。常作为室内观赏植物栽培。"
+      "common_name": "魔花（Achimenes）",
+      "description": "Achimenes longiflora 为苦苣苔科根茎植物，夏季开花。提供明亮散射光，生长期基质保持微湿。地上部枯萎后减少浇水，让根茎休眠，待重新发芽再恢复养护。"
     },
     "ja": {
-      "common_name": "アキメネス・ロンギフローラ",
-      "description": "Achimenes longiflora は紫色のラッパ状の花を咲かせる熱帯性の多年草です。暖かい時期に生育し、開花後は休眠します。主に観葉・観花用として室内で栽培されます。"
+      "common_name": "アキメネス",
+      "description": "Achimenes longiflora は根茎で休眠するイワタバコ科の植物で、夏に花を咲かせます。明るい間接光で、生育期は用土をやや湿り気のある状態に保ちます。地上部が枯れてきたら水やりを減らし、根茎を休ませて新芽が出たら再開します。"
     },
     "ko": {
-      "common_name": "아키메네스 롱기플로라",
-      "description": "Achimenes longiflora는 보라색 나팔 모양의 꽃을 피우는 열대성 다년초입니다. 따뜻한 계절에 활발히 자라며 개화 후 휴면기에 들어갑니다. 주로 실내 관상용으로 재배됩니다."
+      "common_name": "아키메네스",
+      "description": "Achimenes longiflora 는 뿌리줄기로 휴면하는 게스네리아과 식물로 여름에 꽃을 피웁니다. 밝은 간접광에서 키우고 생장기에는 흙을 약간 촉촉하게 유지하세요. 줄기와 잎이 마르면 물주기를 줄이고 뿌리줄기를 휴면시킨 뒤 새싹이 나오면 다시 관리합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/achimenes",
-      "https://www.gardenersworld.com/plants/achimenes-growing-guide/",
-      "https://plants.ces.ncsu.edu/plants/achimenes/"
+      "https://www.gardeningknowhow.com/ornamental/flowers/achimenes/grow-achimenes-magic-flowers.htm",
+      "https://harvesttotable.com/how-to-grow-achimenes/",
+      "https://www.guide-to-houseplants.com/achimenes.html",
+      "https://www.easytogrowbulbs.com/pages/achimenes-planting-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderListResults.aspx?bt=9"
     ]
   }
 }

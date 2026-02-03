@@ -1,0 +1,275 @@
+{
+  "external_id": "viscum_album",
+  "name": "Mistletoe",
+  "latin": "Viscum album",
+  "sun": "low",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "all-purpose",
+    "peat-free"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 5,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "viscum_album.jpg",
+  "image_thumb": "viscum_album.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "낮은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita l'eccesso di acqua",
+          "es": "Evite el exceso de riego",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرत पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 급수를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि में कीट",
+          "zh": "偶尔出现的害虫",
+          "ja": "時折出現する害虫",
+          "ko": "가끔 발생하는 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mistletoe",
+      "description": "Mistletoe is a parasitic plant found on trees. It has a slow growth rate and requires moderate care."
+    },
+    "pl": {
+      "common_name": "Jemioła",
+      "description": "Jemioła to roślina pasożytnicza, która rośnie na drzewach. Charakteryzuje się wolnym tempem wzrostu i umiarkowaną pielęgnacją."
+    },
+    "de": {
+      "common_name": "Mistel",
+      "description": "Die Mistel ist eine parasitäre Pflanze, die auf Bäumen wächst. Sie hat ein langsames Wachstum und benötigt mäßige Pflege."
+    },
+    "fr": {
+      "common_name": "Gui",
+      "description": "Le gui est une plante parasitaire trouvée sur les arbres. Elle a un taux de croissance lent et nécessite des soins modérés."
+    },
+    "it": {
+      "common_name": "Vischio",
+      "description": "Il vischio è una pianta parassitaria che cresce sugli alberi. Ha una crescita lenta e richiede cure moderate."
+    },
+    "es": {
+      "common_name": "Muérdago",
+      "description": "El muérdago es una planta parasitaria que crece sobre los árboles. Tiene un crecimiento lento y requiere cuidados moderados."
+    },
+    "pt": {
+      "common_name": "Visco",
+      "description": "O visco é uma planta parasitária encontrada em árvores. Tem uma taxa de crescimento lenta e exige cuidados moderados."
+    },
+    "ar": {
+      "common_name": "البلوط",
+      "description": "البلوط هو نبات طفيلي ينمو على الأشجار. لديه معدل نمو بطيء ويتطلب رعاية معتدلة."
+    },
+    "hi": {
+      "common_name": "तुलसी",
+      "description": "तुलसी एक परजीवी पौधा है जो पेड़ों पर उगता है। इसका विकास धीमा है और इसे मध्यम देखभाल की आवश्यकता है।"
+    },
+    "zh": {
+      "common_name": "槲寄生",
+      "description": "槲寄生是一种寄生植物，生长在树木上。它的生长速度较慢，需要适度的护理。"
+    },
+    "ja": {
+      "common_name": "ヤドリギ",
+      "description": "ヤドリギは木に生える寄生植物です。成長が遅く、適度なケアが必要です。"
+    },
+    "ko": {
+      "common_name": "겨우살이",
+      "description": "겨우살이는 나무에 자라는 기생 식물입니다. 성장 속도가 느리고 적당한 관리가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/viscum-album",
+      "https://www.gardeningknowhow.com/plant-problems/pests-diseases/mistletoe-care.htm"
+    ]
+  }
+}

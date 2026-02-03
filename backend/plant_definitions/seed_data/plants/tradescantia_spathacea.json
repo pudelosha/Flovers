@@ -1,0 +1,275 @@
+{
+  "external_id": "tradescantia_spathacea",
+  "name": "Tradescantia spathacea",
+  "latin": "Tradescantia spathacea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "green-plants",
+    "all-purpose"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tradescantia_spathacea.jpg",
+  "image_thumb": "tradescantia_spathacea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenante",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水性",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regularly",
+          "pl": "Regularnie",
+          "de": "Regelmäßig",
+          "fr": "Régulièrement",
+          "it": "Regolarmente",
+          "es": "Regularmente",
+          "pt": "Regularmente",
+          "ar": "بشكل منتظم",
+          "hi": "नियमित रूप से",
+          "zh": "定期",
+          "ja": "定期的に",
+          "ko": "정기적으로"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرूवाटरिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Moses-in-the-cradle",
+      "description": "Tradescantia spathacea is a low-maintenance houseplant. It has attractive purple leaves and white flowers."
+    },
+    "pl": {
+      "common_name": "Moses w łódeczce",
+      "description": "Tradescantia spathacea to roślina łatwa w pielęgnacji. Ma atrakcyjne fioletowe liście i białe kwiaty."
+    },
+    "de": {
+      "common_name": "Moses-in-der-Kutte",
+      "description": "Tradescantia spathacea ist eine pflegeleichte Zimmerpflanze mit attraktiven lila Blättern und weißen Blüten."
+    },
+    "fr": {
+      "common_name": "Moses dans la nacelle",
+      "description": "Tradescantia spathacea est une plante d'intérieur facile à entretenir, avec de jolies feuilles violettes et des fleurs blanches."
+    },
+    "it": {
+      "common_name": "Moses nella culla",
+      "description": "Tradescantia spathacea è una pianta da interno facile da mantenere, con foglie viola e fiori bianchi."
+    },
+    "es": {
+      "common_name": "Moisés en la cuna",
+      "description": "Tradescantia spathacea es una planta de interior fácil de cuidar con hojas moradas y flores blancas."
+    },
+    "pt": {
+      "common_name": "Moisés na cuna",
+      "description": "Tradescantia spathacea é uma planta de interior fácil de cuidar com folhas roxas e flores brancas."
+    },
+    "ar": {
+      "common_name": "موسى في السلة",
+      "description": "Tradescantia spathacea هي نبات منزلي سهل العناية وله أوراق بنفسجية وأزهار بيضاء."
+    },
+    "hi": {
+      "common_name": "मोसेस इन द क्रेडल",
+      "description": "Tradescantia spathacea एक कम रखरखाव वाला हाउसप्लांट है। इसके आकर्षक बैंगनी पत्ते और सफेद फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "摇篮中的摩西",
+      "description": "Tradescantia spathacea 是一种易于打理的室内植物，具有吸引人的紫色叶子和白色花朵。"
+    },
+    "ja": {
+      "common_name": "モーゼス・イン・ザ・クレードル",
+      "description": "Tradescantia spathaceaは、魅力的な紫色の葉と白い花を持つ手入れが簡単な室内植物です。"
+    },
+    "ko": {
+      "common_name": "모세의 요람",
+      "description": "Tradescantia spathacea는 매력적인 보라색 잎과 흰색 꽃을 가진 손쉬운 실내 식물입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/tradescantia-spathacea",
+      "https://www.gardenia.net/plant/tradescantia-spathacea"
+    ]
+  }
+}

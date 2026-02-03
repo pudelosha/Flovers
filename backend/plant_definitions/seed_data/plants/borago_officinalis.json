@@ -11,8 +11,8 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "sandy"
+    "herbs-vegetables",
+    "peat-free"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -39,7 +39,7 @@
           "ar": "شمس كاملة",
           "hi": "पूरी धूप",
           "zh": "全日照",
-          "ja": "日なた",
+          "ja": "日向",
           "ko": "강한 햇빛"
         }
       }
@@ -49,17 +49,17 @@
       "value": {
         "text": {
           "en": "Well-drained soil",
-          "pl": "Gleba przepuszczalna",
+          "pl": "Przepuszczalna gleba",
           "de": "Durchlässiger Boden",
           "fr": "Sol drainé",
-          "it": "Suolo drenato",
+          "it": "Terreno drenato",
           "es": "Suelo drenado",
           "pt": "Solo drenado",
           "ar": "تربة جيدة الصرف",
-          "hi": "जलनिकास वाली मिट्टी",
+          "hi": "अच्छी जल निकासी",
           "zh": "排水良好土壤",
           "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期給水",
+          "ko": "규칙적 물주기"
         }
       }
     },
@@ -88,7 +88,7 @@
         "text": {
           "en": "Easy",
           "pl": "Łatwa",
-          "de": "Einfach",
+          "de": "Leicht",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -109,12 +109,12 @@
           "pl": "Chłodno do ciepło",
           "de": "Kühl bis warm",
           "fr": "Frais à chaud",
-          "it": "Fresco a caldo",
+          "it": "Fresco-caldo",
           "es": "Fresco a cálido",
           "pt": "Fresco a quente",
-          "ar": "معتدل إلى دافئ",
+          "ar": "معتدل",
           "hi": "ठंडा से गर्म",
-          "zh": "凉爽到温暖",
+          "zh": "凉到温暖",
           "ja": "涼〜暖",
           "ko": "서늘~따뜻"
         }
@@ -124,17 +124,17 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "正常湿度",
-          "ja": "通常湿度",
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通湿度",
           "ko": "보통 습도"
         }
       }
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
+          "pl": "Nietoksyczna",
           "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossica",
           "es": "No tóxica",
           "pt": "Não tóxica",
           "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Fast annual growth",
-          "pl": "Szybki wzrost roczny",
-          "de": "Schnell wachsend",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
           "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
           "hi": "तेज़ वृद्धि",
-          "zh": "快速生长",
+          "zh": "生长迅速",
           "ja": "成長が早い",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Unikaj przelania",
+          "de": "Staunässe meiden",
+          "fr": "Éviter l’excès d’eau",
+          "it": "Evita ristagni",
+          "es": "Evitar encharcar",
+          "pt": "Evitar encharcar",
+          "ar": "تجنب الغمر",
+          "hi": "जलभराव न करें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 주의"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Sporadyczne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶见害虫",
+          "ja": "害虫はまれ",
+          "ko": "해충 드묾"
         }
       }
     }
@@ -181,58 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Borage",
-      "description": "Borago officinalis is a fast-growing annual herb known for its blue star-shaped flowers. It prefers full sun and well-drained soil. Water regularly but avoid waterlogging."
+      "description": "Borago officinalis is a fast-growing annual herb known for its blue star-shaped flowers. It prefers full sun and well-drained soil. Leaves and flowers are edible."
     },
     "pl": {
       "common_name": "Ogórecznik lekarski",
-      "description": "Borago officinalis to szybko rosnąca roślina jednoroczna o niebieskich kwiatach. Lubi stanowiska słoneczne i przepuszczalną glebę. Wymaga regularnego podlewania."
+      "description": "Borago officinalis to szybko rosnące zioło jednoroczne o niebieskich kwiatach. Lubi pełne słońce i przepuszczalną glebę. Liście i kwiaty są jadalne."
     },
     "de": {
       "common_name": "Borretsch",
-      "description": "Borago officinalis ist eine einjährige Pflanze mit blauen, sternförmigen Blüten. Sie wächst am besten in voller Sonne und durchlässigem Boden. Gleichmäßig gießen."
+      "description": "Borago officinalis ist ein schnell wachsendes einjähriges Kraut mit blauen Blüten. Es bevorzuga volle Sonne und durchlässigen Boden. Blätter und Blüten sind essbar."
     },
     "fr": {
-      "common_name": "Bourrache officinale",
-      "description": "Borago officinalis est une plante annuelle à fleurs bleues. Elle préfère le plein soleil et un sol bien drainé. Arrosez régulièrement sans excès."
+      "common_name": "Bourrache",
+      "description": "Borago officinalis est une plante annuelle à croissance rapide avec des fleurs bleues. Elle aime le plein soleil et un sol drainé. Feuilles et fleurs sont comestibles."
     },
     "it": {
       "common_name": "Borragine",
-      "description": "Borago officinalis è una pianta annuale a crescita rapida con fiori blu. Predilige pieno sole e terreno drenato. Annaffiare con moderazione."
+      "description": "Borago officinalis è un’erba annuale a crescita rapida con fiori blu. Preferisce pieno sole e terreno ben drenato. Foglie e fiori sono commestibili."
     },
     "es": {
       "common_name": "Borraja",
-      "description": "Borago officinalis es una hierba anual de rápido crecimiento con flores azules. Prefiere sol pleno y suelo bien drenado. Requiere riego regular."
+      "description": "Borago officinalis es una hierba anual de crecimiento rápido con flores azules. Prefiere pleno sol y suelo drenado. Hojas y flores son comestibles."
     },
     "pt": {
-      "common_name": "Borragem",
-      "description": "Borago officinalis é uma planta anual de crescimento rápido com flores azuis. Gosta de sol pleno e solo bem drenado. Regar regularmente."
+      "common_name": "Borraja",
+      "description": "Borago officinalis é uma erva anual de crescimento rápido com flores azuis. Prefere sol pleno e solo drenado. Folhas e flores são comestíveis."
     },
     "ar": {
       "common_name": "لسان الثور",
-      "description": "Borago officinalis نبات حولي سريع النمو بأزهار زرقاء. يفضل الشمس الكاملة وتربة جيدة الصرف. يحتاج إلى ري منتظم."
+      "description": "Borago officinalis نبات عشبي حولي سريع النمو بأزهار زرقاء. يفضل الشمس الكاملة وتربة جيدة الصرف. الأوراق والأزهار صالحة للأكل."
     },
     "hi": {
       "common_name": "बोरेज",
-      "description": "Borago officinalis एक तेजी से बढ़ने वाला वार्षिक पौधा है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। नियमित पानी दें।"
+      "description": "Borago officinalis एक तेज़ी से बढ़ने वाली वार्षिक जड़ी-बूटी है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। पत्तियाँ और फूल खाने योग्य हैं।"
     },
     "zh": {
       "common_name": "琉璃苣",
-      "description": "Borago officinalis 是一种生长迅速的一年生草本植物。它喜欢全日照和排水良好的土壤。需要定期浇水。"
+      "description": "Borago officinalis 是一种生长迅速的一年生草本植物，开蓝色花。喜全日照和良好排水土壤。叶和花可食用。"
     },
     "ja": {
-      "common_name": "ルリジサ",
-      "description": "Borago officinalis は青い星形の花を持つ一年草です。日当たりと水はけの良い土を好みます。定期的に水やりします。"
+      "common_name": "ボリジ",
+      "description": "Borago officinalis は成長の早い一年草のハーブです。日当たりと水はけの良い土を好みます。葉と花は食用です。"
     },
     "ko": {
       "common_name": "보리지",
-      "description": "Borago officinalis는 빠르게 자라는 한해살이 식물입니다. 강한 햇빛과 배수가 좋은 토양을 좋아합니다. 규칙적으로 물을 주세요."
+      "description": "Borago officinalis 는 빠르게 자라는 한해살이 허브입니다. 강한 햇빛과 배수 좋은 흙을 좋아합니다. 잎과 꽃은 식용입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/borago-officinalis/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a482",
-      "https://extension.umn.edu/herbs/borage"
+      "https://www.rhs.org.uk/herbs/borago-officinalis",
+      "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+      "https://www.gardenersworld.com/plants/borago-officinalis/"
     ]
   }
 }

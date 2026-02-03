@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "clay"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 3,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezzombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
-          "ar": "شمس جزئية",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Wet loamy soil",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchter Lehm",
-          "fr": "Sol humide",
-          "it": "Suolo umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "गीली मिट्टी",
-          "zh": "湿润土壤",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Very frequent",
-          "pl": "Bardzo częste",
-          "de": "Sehr häufig",
-          "fr": "Très fréquent",
-          "it": "Molto frequente",
-          "es": "Muy frecuente",
-          "pt": "Muito frequente",
-          "ar": "متكرر جدًا",
-          "hi": "बहुत बार",
-          "zh": "非常频繁",
-          "ja": "非常に頻繁",
-          "ko": "아주 자주"
+          "en": "Water regularly",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arroser régulièrement",
+          "it": "Annaffiare regolarmente",
+          "es": "Regar regularmente",
+          "pt": "Regue regularmente",
+          "ar": "سقي بانتظام",
+          "hi": "नियमित रूप से पानी दें",
+          "zh": "定期浇水",
+          "ja": "定期的に水をやる",
+          "ko": "정기적으로 물 주기"
         }
       }
     },
@@ -87,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–25°C",
-          "pl": "10–25°C",
-          "de": "10–25°C",
-          "fr": "10–25°C",
-          "it": "10–25°C",
-          "es": "10–25°C",
-          "pt": "10–25°C",
-          "ar": "10–25°م",
-          "hi": "10–25°C",
-          "zh": "10–25°C",
-          "ja": "10–25℃",
-          "ko": "10–25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -125,11 +125,11 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilg.",
-          "de": "Hohe Feuchte",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
-          "es": "Alta humedad",
+          "es": "Humedad alta",
           "pt": "Alta umidade",
           "ar": "رطوبة عالية",
           "hi": "उच्च आर्द्रता",
@@ -144,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषरहित",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
           "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast spreading",
+          "en": "Fast growth",
           "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
+          "de": "Schnelles Wachstum",
           "fr": "Croissance rapide",
           "it": "Crescita rapida",
           "es": "Crecimiento rápido",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज़ बढ़त",
-          "zh": "生长迅速",
-          "ja": "成長が早い",
+          "hi": "तेजी से वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
           "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il sovrairrigamento",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎに注意",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधिक कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "たまに害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Water Mint",
-      "description": "Mentha aquatica is a perennial mint native to wetlands and stream edges in Europe. It thrives in consistently wet soil and partial sun. The plant spreads quickly and is aromatic."
+      "description": "Mentha aquatica, known as Water Mint, is a vigorous and aromatic herb. It thrives in moist, well-drained soils and is commonly used in culinary and medicinal applications."
     },
     "pl": {
-      "common_name": "Mięta nadwodna",
-      "description": "Mentha aquatica to wieloletnia mięta rosnąca naturalnie na terenach podmokłych Europy. Wymaga stale wilgotnej gleby i półcienia. Roślina szybko się rozrasta i jest aromatyczna."
+      "common_name": "Mięta wodna",
+      "description": "Mentha aquatica, znana jako mięta wodna, to silnie rosnący i aromatyczny zioło. Rośnie najlepiej w wilgotnych, dobrze przepuszczalnych glebach i jest szeroko stosowana w kuchni oraz medycynie."
     },
     "de": {
       "common_name": "Wasserminze",
-      "description": "Mentha aquatica ist eine mehrjährige Minze aus Feuchtgebieten Europas. Sie bevorzugt dauerhaft feuchten Boden und Halbschatten. Die Pflanze wächst kräftig und duftet stark."
+      "description": "Mentha aquatica, auch als Wasserminze bekannt, ist ein kräftiges und aromatisches Kraut. Es gedeiht in feuchten, gut durchlässigen Böden und wird häufig in der Küche und der Medizin verwendet."
     },
     "fr": {
       "common_name": "Menthe aquatique",
-      "description": "Mentha aquatica est une menthe vivace des zones humides européennes. Elle pousse dans un sol constamment humide et à mi-ombre. La plante est vigoureuse et très aromatique."
+      "description": "Mentha aquatica, connue sous le nom de menthe aquatique, est une herbe vigoureuse et aromatique. Elle prospère dans des sols humides et bien drainés et est couramment utilisée en cuisine et en médecine."
     },
     "it": {
       "common_name": "Menta acquatica",
-      "description": "Mentha aquatica è una menta perenne originaria delle zone umide europee. Cresce in terreni sempre umidi e in mezzombra. È una pianta aromatica a crescita rapida."
+      "description": "Mentha aquatica, conosciuta come menta acquatica, è un'erba vigorosa e aromatica. Cresce bene in terreni umidi e ben drenati ed è comunemente utilizzata in cucina e medicina."
     },
     "es": {
       "common_name": "Menta acuática",
-      "description": "Mentha aquatica es una menta perenne nativa de humedales europeos. Prefiere suelos constantemente húmedos y semisombra. Es aromática y de crecimiento rápido."
+      "description": "Mentha aquatica, conocida como menta acuática, es una hierba vigorosa y aromática. Crece bien en suelos húmedos y bien drenados, y se usa comúnmente en la cocina y la medicina."
     },
     "pt": {
-      "common_name": "Hortelã-d'água",
-      "description": "Mentha aquatica é uma hortelã perene de áreas úmidas da Europa. Desenvolve-se em solo sempre úmido e meia-sombra. A planta é aromática e vigorosa."
+      "common_name": "Hortelã aquática",
+      "description": "Mentha aquatica, conhecida como hortelã aquática, é uma erva vigorosa e aromática. Cresce bem em solos úmidos e bem drenados, sendo amplamente usada na culinária e medicina."
     },
     "ar": {
       "common_name": "نعناع مائي",
-      "description": "Mentha aquatica نبات نعناع معمر ينمو في المناطق الرطبة بأوروبا. يحتاج إلى تربة رطبة باستمرار وضوء شمس جزئي. يتميز برائحة قوية ونمو سريع."
+      "description": "Mentha aquatica، المعروفة بالنعناع المائي، هي عشب قوي وعطري. ينمو في التربة الرطبة والمصرفة جيدًا ويستخدم بشكل شائع في الطهي والطب."
     },
     "hi": {
       "common_name": "जल पुदीना",
-      "description": "Mentha aquatica एक बहुवर्षीय पुदीना है जो यूरोप के आर्द्र क्षेत्रों में पाया जाता है। इसे लगातार गीली मिट्टी और आंशिक धूप चाहिए। पौधा तेजी से फैलता है और सुगंधित होता है।"
+      "description": "Mentha aquatica, जिसे जल पुदीना कहा जाता है, एक मजबूत और सुगंधित जड़ी-बूटी है। यह नम, अच्छी तरह से जल निकासी वाली मिट्टियों में अच्छी तरह से बढ़ता है और आमतौर पर रसोई और औषधि में उपयोग होता है।"
     },
     "zh": {
       "common_name": "水薄荷",
-      "description": "Mentha aquatica 是原产于欧洲湿地的多年生薄荷。它喜欢长期湿润的土壤和半日照环境。植株生长迅速并具有芳香气味。"
+      "description": "Mentha aquatica，也称为水薄荷，是一种旺盛生长的芳香草本植物。它在湿润、排水良好的土壤中生长良好，广泛用于烹饪和药用。"
     },
     "ja": {
       "common_name": "ウォーターミント",
-      "description": "Mentha aquatica はヨーロッパの湿地に自生する多年生のミントです。常に湿った土壌と半日陰を好みます。成長が早く香りがあります。"
+      "description": "Mentha aquatica、ウォーターミントとして知られるこの植物は、旺盛に成長する香り高いハーブです。湿った排水性の良い土壌でよく育ち、料理や薬用に広く使用されています。"
     },
     "ko": {
-      "common_name": "워터 민트",
-      "description": "Mentha aquatica는 유럽의 습지에서 자라는 다년생 민트입니다. 항상 습한 토양과 반그늘을 선호합니다. 향이 강하고 생장이 빠릅니다."
+      "common_name": "수분민트",
+      "description": "Mentha aquatica, 수분민트로 알려진 이 식물은 강한 성장력과 향기를 자랑하는 허브입니다. 습기 있는 배수 좋은 토양에서 잘 자라며 요리 및 약용으로 널리 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/mentha/aquatica/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a580",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:450242-1"
+      "https://www.rhs.org.uk/advice/profile?pid=554",
+      "https://www.gardenia.net/plant/mentha-aquatica"
     ]
   }
 }

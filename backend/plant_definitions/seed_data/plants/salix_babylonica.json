@@ -2,17 +2,17 @@
   "external_id": "salix_babylonica",
   "name": "Weeping Willow",
   "latin": "Salix babylonica",
-  "sun": "high",
+  "sun": "medium",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
-          "de": "Vollsonne",
-          "fr": "ensoleillé",
-          "it": "pieno sole",
-          "es": "sol directo",
-          "pt": "sol pleno",
-          "ar": "الشمس الكاملة",
-          "hi": "पूर्ण सूर्य",
-          "zh": "全日照",
-          "ja": "日当たりの良い",
-          "ko": "완전한 태양"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-drained",
-          "pl": "dobrze przepuszczalna",
-          "de": "gut durchlässig",
-          "fr": "bien drainé",
-          "it": "ben drenato",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "مياه جيدة التصريف",
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
           "hi": "अच्छी जल निकासी",
-          "zh": "良好排水",
+          "zh": "良好的排水",
           "ja": "良好な排水",
-          "ko": "배수가 좋은"
+          "ko": "배수 좋은"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "regular",
-          "pl": "regularnie",
-          "de": "regelmäßig",
-          "fr": "régulier",
-          "it": "regolare",
-          "es": "regular",
-          "pt": "regular",
-          "ar": "منتظم",
-          "hi": "नियमित",
-          "zh": "定期",
-          "ja": "定期的",
-          "ko": "정기적"
+          "en": "High water needs",
+          "pl": "Wysokie potrzeby wodne",
+          "de": "Hoher Wasserbedarf",
+          "fr": "Besoins en eau élevés",
+          "it": "Alto fabbisogno di acqua",
+          "es": "Altas necesidades de agua",
+          "pt": "Altas necessidades de água",
+          "ar": "احتياجات مياه عالية",
+          "hi": "उच्च पानी की आवश्यकता",
+          "zh": "高水需求",
+          "ja": "高い水分要求",
+          "ko": "높은 수분 요구"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "temperate",
-          "pl": "umiarkowany",
-          "de": "gemäßigt",
-          "fr": "tempéré",
-          "it": "temperato",
-          "es": "templado",
-          "pt": "temperado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "温带",
-          "ja": "温帯",
-          "ko": "온대"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "yes",
-          "pl": "tak",
-          "de": "ja",
-          "fr": "oui",
-          "it": "sì",
-          "es": "sí",
-          "pt": "sim",
-          "ar": "نعم",
-          "hi": "हां",
-          "zh": "是",
-          "ja": "はい",
-          "ko": "예"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 유독"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast",
-          "pl": "szybki",
-          "de": "schnell",
-          "fr": "rapide",
-          "it": "veloce",
-          "es": "rápido",
-          "pt": "rápido",
-          "ar": "سريع",
-          "hi": "तेज",
-          "zh": "快速",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري الزائد",
+          "hi": "अفرोवरवाटरिंग से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Weeping Willow",
-      "description": "Salix babylonica, also known as the Weeping Willow, is a fast-growing tree with long, drooping branches. It thrives in moist, well-drained soils and requires regular watering."
+      "description": "The Weeping Willow is a fast-growing tree with long, graceful branches that drape downward. It thrives near water and can grow quite large."
     },
     "pl": {
       "common_name": "Wierzba płacząca",
-      "description": "Salix babylonica, znana jako wierzba płacząca, to szybko rosnące drzewo z długimi, opadającymi gałęziami. Wymaga wilgotnej, dobrze przepuszczalnej gleby i regularnego podlewania."
+      "description": "Wierzba płacząca to szybko rosnące drzewo z długimi, elegancko zwisającymi gałęziami. Rośnie najlepiej w pobliżu wody i może osiągać duże rozmiary."
     },
     "de": {
       "common_name": "Weidenbaum",
-      "description": "Salix babylonica, auch als Weidenbaum bekannt, ist ein schnell wachsender Baum mit langen, herabhängenden Zweigen. Er gedeiht in feuchten, gut durchlässigen Böden und benötigt regelmäßige Bewässerung."
+      "description": "Die Weide ist ein schnell wachsender Baum mit langen, graziösen Zweigen, die nach unten hängen. Sie gedeiht in der Nähe von Wasser und kann ziemlich groß werden."
     },
     "fr": {
       "common_name": "Saule pleureur",
-      "description": "Salix babylonica, également appelé saule pleureur, est un arbre à croissance rapide avec de longues branches tombantes. Il pousse dans des sols bien drainés et nécessite un arrosage régulier."
+      "description": "Le saule pleureur est un arbre à croissance rapide avec de longues branches graciles qui pendent vers le bas. Il prospère près de l'eau et peut devenir assez grand."
     },
     "it": {
       "common_name": "Salice piangente",
-      "description": "Salix babylonica, noto come salice piangente, è un albero a crescita rapida con rami lunghi e pendenti. Cresce in terreni ben drenati e richiede annaffiature regolari."
+      "description": "Il salice piangente è un albero a crescita rapida con rami lunghi e aggraziati che pendono verso il basso. Cresce bene vicino all'acqua e può diventare abbastanza grande."
     },
     "es": {
       "common_name": "Sauce llorón",
-      "description": "Salix babylonica, también conocido como sauce llorón, es un árbol de rápido crecimiento con ramas largas y caídas. Crece en suelos bien drenados y requiere riego regular."
+      "description": "El sauce llorón es un árbol de rápido crecimiento con ramas largas y elegantes que cuelgan hacia abajo. Crece bien cerca del agua y puede alcanzar un tamaño considerable."
     },
     "pt": {
-      "common_name": "Salgueiro chorão",
-      "description": "Salix babylonica, também conhecido como salgueiro chorão, é uma árvore de rápido crescimento com longos galhos caídos. Cresce em solos bem drenados e necessita de rega regular."
+      "common_name": "Salgueiro-chorão",
+      "description": "O salgueiro-chorão é uma árvore de crescimento rápido com galhos longos e graciosos que caem para baixo. Cresce bem perto da água e pode atingir um tamanho considerável."
     },
     "ar": {
-      "common_name": "صفصاف باكستاني",
-      "description": "Salix babylonica، المعروف أيضًا بالصفصاف الباكي، هو شجرة سريعة النمو مع فروع طويلة ومتدلية. تنمو في التربة جيدة التصريف وتحتاج إلى الري المنتظم."
+      "common_name": "صفصاف بكاء",
+      "description": "الصفصاف البكاء هو شجرة سريعة النمو مع فروع طويلة وأنيقة تتدلى للأسفل. تنمو بشكل جيد بالقرب من الماء ويمكن أن تنمو بشكل كبير."
     },
     "hi": {
-      "common_name": "विलपाटी विलो",
-      "description": "Salix babylonica, जिसे विलपाटी विलो के नाम से भी जाना जाता है, एक तेज़ी से बढ़ने वाला पेड़ है जिसमें लम्बी, लटकती शाखाएँ होती हैं। इसे नम, अच्छी जल निकासी वाली मिट्टी में बढ़ने की आवश्यकता होती है और नियमित पानी की जरूरत होती है।"
+      "common_name": "रूद्र वृक्ष",
+      "description": "रूद्र वृक्ष एक तेज़ी से बढ़ने वाला वृक्ष है जिसमें लंबी, सुंदर शाखाएं नीचे की ओर लटकती हैं। यह पानी के पास अच्छा बढ़ता है और बड़ा हो सकता है।"
     },
     "zh": {
       "common_name": "垂柳",
-      "description": "Salix babylonica，又名垂柳，是一种生长迅速的树木，具有长而下垂的枝条。它适应湿润、排水良好的土壤，需要定期浇水。"
+      "description": "垂柳是一种生长快速的树木，长长的优雅的枝条垂下。它喜欢水边生长，可以长得相当大。"
     },
     "ja": {
       "common_name": "しだれ柳",
-      "description": "Salix babylonica、別名しだれ柳は、成長が早い樹木で、長く垂れ下がる枝を持っています。湿った排水性の良い土壌で育ち、定期的な水やりが必要です。"
+      "description": "しだれ柳は急速に成長する木で、長く優雅な枝が下に垂れ下がります。水辺でよく育ち、かなり大きくなることがあります。"
     },
     "ko": {
-      "common_name": "울음버드나무",
-      "description": "Salix babylonica, 울음버드나무로도 알려진 이 나무는 빠르게 자라며 긴 가지가 아래로 처져 있습니다. 습기 있는 잘 배수되는 토양에서 자라며 정기적인 물주기가 필요합니다."
+      "common_name": "버드나무",
+      "description": "버드나무는 빠르게 자라는 나무로 긴 우아한 가지들이 아래로 처집니다. 물 근처에서 잘 자라며 꽤 크게 자랄 수 있습니다."
     }
   },
   "sources": {
     "urls": [
       "https://www.gardenia.net/plant/salix-babylonica",
-      "https://www.bhg.com/gardening/pests-insects-diseases/weeping-willow-tree-care/"
+      "https://www.rhs.org.uk/plants/1659/salix-babylonica"
     ]
   }
 }

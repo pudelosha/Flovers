@@ -8,16 +8,16 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "moisture_required": true,
+  "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "full sun",
-          "pl": "pełne słońce",
+          "en": "Full sun",
+          "pl": "Pełne słońce",
           "de": "Vollsonne",
-          "fr": "plein soleil",
-          "it": "pieno sole",
-          "es": "pleno sol",
-          "pt": "sol pleno",
-          "ar": "شمس ساطعة",
-          "hi": "पूर्ण सूर्य",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
           "zh": "充足阳光",
-          "ja": "日光が十分",
-          "ko": "완전한 햇빛"
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "well-drained",
-          "pl": "dobrze przepuszczalna",
-          "de": "gut durchlässig",
-          "fr": "bien drainé",
-          "it": "ben drenato",
-          "es": "bien drenado",
-          "pt": "bem drenado",
-          "ar": "مصفى جيدًا",
-          "hi": "अच्छी तरह से निथरी हुई",
-          "zh": "排水良好",
-          "ja": "良好な排水",
-          "ko": "배수가 잘되는"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,17 +67,17 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowane",
-          "de": "mäßig",
-          "fr": "modéré",
-          "it": "moderato",
-          "es": "moderado",
-          "pt": "moderado",
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
           "ar": "معتدل",
           "hi": "मध्यम",
           "zh": "适度",
-          "ja": "中程度",
+          "ja": "適度",
           "ko": "보통"
         }
       }
@@ -86,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyen",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysoka",
-          "de": "hoch",
-          "fr": "élevée",
-          "it": "alta",
-          "es": "alta",
-          "pt": "alta",
-          "ar": "عالية",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "toxic",
-          "pl": "trujący",
-          "de": "giftig",
-          "fr": "toxique",
-          "it": "tossico",
-          "es": "tóxico",
-          "pt": "tóxico",
-          "ar": "سام",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة خفيفة",
+          "hi": "हल्का विषाक्त",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "vigorous",
-          "pl": "żywotny",
-          "de": "kräftig",
-          "fr": "vigoureux",
-          "it": "vigoroso",
-          "es": "vigoroso",
-          "pt": "vigoroso",
-          "ar": "قوي",
-          "hi": "तेज़ी से बढ़ने वाला",
-          "zh": "茂盛",
-          "ja": "力強い",
-          "ko": "강력한"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाली",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠르게 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać za dużo",
+          "de": "Nicht überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non innaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "عدم الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりは避けてください",
+          "ko": "과도한 급수 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Blue Passionflower",
-      "description": "Passiflora caerulea, also known as the blue passionflower, is a climbing vine native to South America. It features large, striking blue and purple flowers that attract pollinators."
+      "description": "Passiflora caerulea, also known as the blue passionflower, is a fast-growing vine that produces striking blue and white flowers. It prefers full sun and high humidity."
     },
     "pl": {
-      "common_name": "Błękitny Pasiflor",
-      "description": "Passiflora caerulea, znana również jako błękitny pasiflor, to pnącze pochodzące z Ameryki Południowej. Charakteryzuje się dużymi, uderzającymi niebieskimi i fioletowymi kwiatami przyciągającymi zapylacze."
+      "common_name": "Błękitna pasiflora",
+      "description": "Passiflora caerulea, znana jako błękitna pasiflora, to szybko rosnąca pnącze, które wytwarza efektowne niebieskie i białe kwiaty. Preferuje pełne słońce i wysoką wilgotność."
     },
     "de": {
       "common_name": "Blaue Passionsblume",
-      "description": "Passiflora caerulea, auch als blaue Passionsblume bekannt, ist eine Kletterpflanze aus Südamerika. Sie zeichnet sich durch große, auffällige blaue und lila Blüten aus, die Bestäuber anziehen."
+      "description": "Passiflora caerulea, auch als blaue Passionsblume bekannt, ist eine schnell wachsende Kletterpflanze, die auffällige blaue und weiße Blüten trägt. Sie bevorzugt volle Sonne und hohe Luftfeuchtigkeit."
     },
     "fr": {
       "common_name": "Passiflore bleue",
-      "description": "Passiflora caerulea, aussi connue sous le nom de passiflore bleue, est une plante grimpante originaire d'Amérique du Sud. Elle possède de grandes fleurs bleues et violettes qui attirent les pollinisateurs."
+      "description": "La Passiflora caerulea, également connue sous le nom de passiflore bleue, est une vigne à croissance rapide qui produit des fleurs bleues et blanches saisissantes. Elle préfère le plein soleil et une humidité élevée."
     },
     "it": {
       "common_name": "Passiflora blu",
-      "description": "Passiflora caerulea, conosciuta anche come passiflora blu, è una pianta rampicante originaria del Sud America. Presenta fiori grandi e vistosi di colore blu e viola che attirano gli impollinatori."
+      "description": "La Passiflora caerulea, conosciuta anche come passiflora blu, è una vite a crescita rapida che produce fiori blu e bianchi spettacolari. Preferisce il pieno sole e un'alta umidità."
     },
     "es": {
-      "common_name": "Pasiflora azul",
-      "description": "Passiflora caerulea, también conocida como pasiflora azul, es una planta trepadora originaria de América del Sur. Sus grandes flores azules y moradas atraen a los polinizadores."
+      "common_name": "Flor de la pasión azul",
+      "description": "La Passiflora caerulea, también conocida como la flor de la pasión azul, es una planta trepadora de rápido crecimiento que produce flores azules y blancas llamativas. Prefiere la luz solar directa y alta humedad."
     },
     "pt": {
-      "common_name": "Passiflora azul",
-      "description": "Passiflora caerulea, também conhecida como passiflora azul, é uma planta trepadeira nativa da América do Sul. Possui grandes flores azuis e roxas que atraem polinizadores."
+      "common_name": "Flor de Passiflora azul",
+      "description": "A Passiflora caerulea, também conhecida como flor de passiflora azul, é uma planta trepadeira de rápido crescimento que produz flores azuis e brancas impressionantes. Prefere luz solar direta e alta umidade."
     },
     "ar": {
       "common_name": "زهرة العاطفة الزرقاء",
-      "description": "Passiflora caerulea، المعروفة أيضًا باسم زهرة العاطفة الزرقاء، هي نبات متسلق موطنه أمريكا الجنوبية. يتميز بأزهار زرقاء وبنفسجية كبيرة تجذب الملقحات."
+      "description": "Passiflora caerulea، المعروفة أيضًا باسم زهرة العاطفة الزرقاء، هي نبات متسلق ينمو بسرعة وينتج أزهارًا زرقاء وبيضاء لافتة للنظر. يفضل الشمس الكاملة والرطوبة العالية."
     },
     "hi": {
-      "common_name": "नीली पैशनफ्लावर",
-      "description": "Passiflora caerulea, जिसे नीली पैशनफ्लावर भी कहा जाता है, दक्षिण अमेरिका का एक लता पौधा है। इसमें बड़ी, आकर्षक नीली और बैंगनी रंग की फूल होती हैं जो परागणकों को आकर्षित करती हैं।"
+      "common_name": "ब्लू पैशनफ्लावर",
+      "description": "Passiflora caerulea, जिसे ब्लू पैशनफ्लावर भी कहा जाता है, एक तेजी से बढ़ने वाली बेल है जो आकर्षक नीले और सफेद फूल उत्पन्न करती है। यह पूर्ण सूर्य और उच्च आर्द्रता पसंद करती है।"
     },
     "zh": {
       "common_name": "蓝色西番莲",
-      "description": "Passiflora caerulea，亦称蓝色西番莲，是一种原产于南美的藤本植物。它具有大型、引人注目的蓝色和紫色花朵，吸引了传粉者。"
+      "description": "Passiflora caerulea，亦称蓝色西番莲，是一种快速生长的藤本植物，开出引人注目的蓝白色花朵。它喜欢充足的阳光和高湿度。"
     },
     "ja": {
       "common_name": "青いパッションフラワー",
-      "description": "Passiflora caerulea、青いパッションフラワーとしても知られるこの植物は、南アメリカ原産のつる植物です。大きな青紫の花を咲かせ、花粉を運ぶ動物を引き寄せます。"
+      "description": "Passiflora caerulea（青いパッションフラワー）は、速く成長するツル性植物で、青と白の目を引く花を咲かせます。直射日光と高湿度を好みます。"
     },
     "ko": {
       "common_name": "블루 패션플라워",
-      "description": "Passiflora caerulea, 또는 블루 패션플라워는 남미 원산의 덩굴식물입니다. 크고 눈에 띄는 파란색과 보라색 꽃을 피워 꽃가루를 운반하는 곤충들을 끌어들입니다."
+      "description": "Passiflora caerulea, 또는 블루 패션플라워는 빠르게 자라는 덩굴 식물로, 인상적인 파란색과 흰색 꽃을 생산합니다. 직사광선과 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/passiflora-caerulea",
-      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/how-to-grow-passionflowers/"
+      "https://www.rhs.org.uk/plants/1485/passiflora-caerulea",
+      "https://www.gardenia.net/plant/passiflora-caerulea-blue-passionflower",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/passionflower/"
     ]
   }
 }

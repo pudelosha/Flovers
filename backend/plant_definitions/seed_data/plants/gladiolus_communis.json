@@ -2,16 +2,17 @@
   "external_id": "gladiolus_communis",
   "name": "Common Gladiolus",
   "latin": "Gladiolus communis",
-  "sun": "high",
+  "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "ceramic",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Full sun",
-          "pl": "Pełne słońce",
-          "de": "Volle Sonne",
-          "fr": "Plein soleil",
-          "it": "Pieno sole",
-          "es": "Pleno sol",
-          "pt": "Sol pleno",
-          "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
-          "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "양지"
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezza ombra",
+          "es": "Sombra parcial",
+          "pt": "Sombra parcial",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "部分阳光",
+          "ja": "部分的な日光",
+          "ko": "부분 햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "जलनिकास मिट्टी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水性良好",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Aufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
           "ja": "中程度",
-          "ko": "중간 난이도"
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to warm",
-          "pl": "Chłodno do ciepło",
-          "de": "Kühl bis warm",
-          "fr": "Frais à chaud",
-          "it": "Fresco-caldo",
-          "es": "Fresco a cálido",
-          "pt": "Fresco a quente",
-          "ar": "معتدل إلى دافئ",
-          "hi": "ठंडा से गर्म",
-          "zh": "凉爽至温暖",
-          "ja": "涼しい〜暖かい",
-          "ko": "서늘~따뜻"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal humidity",
-          "pl": "Normalna wilgotność",
-          "de": "Normale Feuchte",
-          "fr": "Humidité normale",
-          "it": "Umidità normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Leggermente tossica",
-          "es": "Ligeramente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻度有毒",
-          "ja": "軽い毒性",
-          "ko": "약간 독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैला नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright flowering",
-          "pl": "Wzniesiony wzrost",
-          "de": "Aufrechter Wuchs",
-          "fr": "Port dressé",
-          "it": "Crescita eretta",
-          "es": "Crecimiento erguido",
-          "pt": "Crescimento ereto",
-          "ar": "نمو عمودي",
-          "hi": "सीधी बढ़त",
-          "zh": "直立生长",
-          "ja": "直立成長",
-          "ko": "직립 성장"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter trop d'eau",
+          "it": "Evitare il sovraccarico d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Common Gladiolus",
-      "description": "Gladiolus communis is a perennial bulb native to southern Europe and the Mediterranean. It produces tall spikes of pink to purple flowers in late spring. It prefers full sun and well-drained soil."
+      "description": "Gladiolus communis is a hardy perennial that produces striking trumpet-shaped flowers in a variety of colors. It is commonly found in gardens and thrives in moderately sunny conditions."
     },
     "pl": {
-      "common_name": "Mieczyk pospolity",
-      "description": "Gladiolus communis to bylina cebulowa pochodząca z południowej Europy. Kwitnie różowo-fioletowymi kwiatami na wysokich pędach. Wymaga słońca i przepuszczalnej gleby."
+      "common_name": "Gladiolus pospolity",
+      "description": "Gladiolus communis to wytrzymała bylina, która wytwarza efektowne kwiaty w kształcie trąbki w różnych kolorach. Często spotykana w ogrodach, rośnie w umiarkowanym nasłonecznieniu."
     },
     "de": {
-      "common_name": "Gewöhnliche Gladiole",
-      "description": "Gladiolus communis ist eine mehrjährige Zwiebelpflanze aus Südeuropa. Sie bildet hohe Blütenstände mit rosa bis violetten Blüten. Bevorzugt Sonne und durchlässigen Boden."
+      "common_name": "Gemeiner Gladiolus",
+      "description": "Gladiolus communis ist eine robuste Staude, die auffällige, trompetenförmige Blüten in verschiedenen Farben produziert. Sie wächst in mäßig sonnigen Bedingungen."
     },
     "fr": {
-      "common_name": "Glaïeul commun",
-      "description": "Gladiolus communis est une plante bulbeuse vivace originaire d’Europe du Sud. Elle porte des hampes florales roses à violettes. Elle aime le plein soleil et les sols drainés."
+      "common_name": "Gladiolus commun",
+      "description": "Gladiolus communis est une plante vivace robuste qui produit des fleurs en forme de trompette dans une variété de couleurs. Elle est couramment trouvée dans les jardins et prospère en conditions modérément ensoleillées."
     },
     "it": {
       "common_name": "Gladiolo comune",
-      "description": "Gladiolus communis è una pianta bulbosa perenne del Mediterraneo. Produce fiori rosa o violacei su steli eretti. Predilige pieno sole e terreno drenato."
+      "description": "Gladiolus communis è una perenne resistente che produce fiori a forma di tromba in vari colori. È comunemente trovata nei giardini e cresce in condizioni di sole moderato."
     },
     "es": {
       "common_name": "Gladiolo común",
-      "description": "Gladiolus communis es una planta bulbosa perenne del sur de Europa. Presenta espigas florales rosadas o púrpuras. Requiere sol pleno y suelo bien drenado."
+      "description": "Gladiolus communis es una planta perenne resistente que produce flores en forma de trompeta de varios colores. Se encuentra comúnmente en jardines y prospera en condiciones de sol moderado."
     },
     "pt": {
-      "common_name": "Gladíolo-comum",
-      "description": "Gladiolus communis é uma planta bulbosa perene do Mediterrâneo. Produz flores rosadas a púrpuras em hastes altas. Prefere sol pleno e solo drenado."
+      "common_name": "Gladiolo comum",
+      "description": "Gladiolus communis é uma planta perene resistente que produz flores em forma de trombeta em várias cores. É comumente encontrada em jardins e cresce em condições de luz solar moderada."
     },
     "ar": {
-      "common_name": "السيفي الشائع",
-      "description": "Gladiolus communis نبات بصلي معمر موطنه جنوب أوروبا. يتميز بأزهار وردية إلى بنفسجية على سيقان طويلة. يفضل الشمس الكاملة والتربة جيدة التصريف."
+      "common_name": "زهرات غلاديوولوس",
+      "description": "غلياديوس كومونيس هو نبات معمر قوي ينتج أزهارًا على شكل بوق بألوان متنوعة. يوجد بشكل شائع في الحدائق وينمو في ظروف مشمسة معتدلة."
     },
     "hi": {
-      "common_name": "ग्लैडियोलस",
-      "description": "Gladiolus communis एक बहुवर्षीय बल्ब पौधा है जो दक्षिणी यूरोप में पाया जाता है। इसमें गुलाबी से बैंगनी फूल आते हैं। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी चाहिए।"
+      "common_name": "कॉमन ग्लेडियोलस",
+      "description": "ग्लेडियोलस कम्युनिस एक मजबूत बारहमासी पौधा है जो विभिन्न रंगों में तुरही के आकार के फूल उगाता है। यह आमतौर पर बगिया में पाया जाता है और मध्यम धूप की स्थितियों में फलता-फूलता है।"
     },
     "zh": {
-      "common_name": "普通唐菖蒲",
-      "description": "Gladiolus communis 是原产于南欧的多年生球根植物。它在春末开粉紫色花。喜全日照和排水良好的土壤。"
+      "common_name": "普通剑兰",
+      "description": "Gladiolus communis是一种耐寒的多年生植物，能开出多种颜色的喇叭形花朵。它通常生长在阳光适中的条件下，常见于花园中。"
     },
     "ja": {
-      "common_name": "グラジオラス",
-      "description": "Gladiolus communis は南ヨーロッパ原産の多年生球根植物です。春にピンクから紫の花を咲かせます。日当たりと水はけを好みます。"
+      "common_name": "コモン・グラディオラス",
+      "description": "Gladiolus communisは丈夫な多年草で、さまざまな色のラッパ型の花を咲かせます。通常は庭園で見られ、やや日当たりの良い場所で育ちます。"
     },
     "ko": {
-      "common_name": "글라디올러스",
-      "description": "Gladiolus communis는 남유럽 원산의 다년생 구근식물입니다. 분홍색에서 보라색 꽃을 피웁니다. 햇볕과 배수 좋은 토양을 선호합니다."
+      "common_name": "일반 글라디올러스",
+      "description": "Gladiolus communis는 다양한 색상의 트럼펫 모양 꽃을 피우는 강한 다년생 식물입니다. 주로 정원에서 자주 발견되며, 적당한 햇볕을 받는 곳에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/8352/gladiolus-communis/details",
-      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:437775-1"
+      "https://www.rhs.org.uk/advice/profile?pid=721",
+      "https://www.gardenia.net/plant/Gladiolus-communis"
     ]
   }
 }

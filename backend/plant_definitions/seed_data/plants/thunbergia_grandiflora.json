@@ -1,18 +1,18 @@
 {
   "external_id": "thunbergia_grandiflora",
-  "name": "Bengal Clock Vine",
+  "name": "Skyflower",
   "latin": "Thunbergia grandiflora",
   "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "thunbergia_grandiflora.jpg",
   "image_thumb": "thunbergia_grandiflora.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "high",
-          "pl": "wysokie",
-          "de": "hoch",
-          "fr": "élevé",
-          "it": "alto",
-          "es": "alto",
-          "pt": "alto",
-          "ar": "مرتفع",
-          "hi": "उच्च",
-          "zh": "高",
-          "ja": "高い",
-          "ko": "높은"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -48,18 +48,17 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "土壌",
-          "ko": "점토"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,17 +85,17 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "25-30°C",
-          "pl": "25-30°C",
-          "de": "25-30°C",
-          "fr": "25-30°C",
-          "it": "25-30°C",
-          "es": "25-30°C",
-          "pt": "25-30°C",
-          "ar": "25-30°C",
-          "hi": "25-30°C",
-          "zh": "25-30°C",
-          "ja": "25-30°C",
-          "ko": "25-30°C"
+          "en": "18-30°C",
+          "pl": "18-30°C",
+          "de": "18-30°C",
+          "fr": "18-30°C",
+          "it": "18-30°C",
+          "es": "18-30°C",
+          "pt": "18-30°C",
+          "ar": "18-30°C",
+          "hi": "18-30°C",
+          "zh": "18-30°C",
+          "ja": "18-30°C",
+          "ko": "18-30°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
           "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당"
         }
       }
     },
@@ -143,18 +142,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "不",
-          "ja": "いいえ",
-          "ko": "아니요"
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny po spożyciu",
+          "de": "Toxisch bei Einnahme",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سمي إذا تم تناوله",
+          "hi": "पेय करने पर विषाक्त",
+          "zh": "摄入时有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
         }
       }
     },
@@ -162,76 +161,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "fast",
-          "pl": "szybki",
-          "de": "schnell",
-          "fr": "rapide",
-          "it": "veloce",
-          "es": "rápido",
-          "pt": "rápido",
-          "ar": "سريع",
-          "hi": "तेज",
-          "zh": "快速",
-          "ja": "速い",
-          "ko": "빠른"
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnellwachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाली",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠르게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفرत्न जल देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Bengal Clock Vine",
-      "description": "Thunbergia grandiflora, commonly known as Bengal Clock Vine, is a fast-growing tropical climber with large, blue to purple funnel-shaped flowers. It thrives in warm, humid conditions and is ideal for growing on trellises or as ground cover."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, known as the Skyflower, is a vigorous climbing vine native to tropical Asia. It produces large, sky-blue flowers and is often used in landscaping and as an ornamental plant."
     },
     "pl": {
-      "common_name": "Wiązówka bengalska",
-      "description": "Thunbergia grandiflora, znana jako Wiązówka bengalska, to szybko rosnąca tropikalna roślina pnąca o dużych, niebieskich lub fioletowych, lejkowatych kwiatach. Rośnie najlepiej w ciepłych i wilgotnych warunkach."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, znana jako Skyflower, to energiczna pnącze pochodzące z tropikalnej Azji. Wytwarza duże, niebieskie kwiaty i jest często wykorzystywana w ogrodnictwie i jako roślina ozdobna."
     },
     "de": {
-      "common_name": "Bengalische Uhrblume",
-      "description": "Thunbergia grandiflora, auch als Bengalische Uhrblume bekannt, ist eine schnellwachsende tropische Kletterpflanze mit großen, blauen bis lila trichterförmigen Blüten. Sie gedeiht in warmen, feuchten Bedingungen."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, bekannt als Skyflower, ist eine kräftige Kletterpflanze, die in tropischem Asien beheimatet ist. Sie produziert große, himmelblaue Blüten und wird häufig in der Landschaftsgestaltung und als Zierpflanze verwendet."
     },
     "fr": {
-      "common_name": "Vigne horloge du Bengale",
-      "description": "Thunbergia grandiflora, connue sous le nom de vigne horloge du Bengale, est une plante grimpante tropicale à croissance rapide avec de grandes fleurs en forme de cône bleu à violet. Elle prospère dans des conditions chaudes et humides."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, connue sous le nom de Skyflower, est une vigoureuse plante grimpante originaire d'Asie tropicale. Elle produit de grandes fleurs bleues et est souvent utilisée dans l'aménagement paysager et comme plante ornementale."
     },
     "it": {
-      "common_name": "Vite orologio del Bengala",
-      "description": "Thunbergia grandiflora, conosciuta come vite orologio del Bengala, è una pianta rampicante tropicale a crescita rapida con grandi fiori a forma di imbuto blu-viola. Cresce bene in condizioni calde e umide."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, conosciuta come Skyflower, è una vigorosa pianta rampicante originaria dell'Asia tropicale. Produce grandi fiori azzurri ed è spesso utilizzata nel paesaggio e come pianta ornamentale."
     },
     "es": {
-      "common_name": "Enredadera reloj de Bengala",
-      "description": "Thunbergia grandiflora, conocida como enredadera reloj de Bengala, es una planta trepadora tropical de rápido crecimiento con grandes flores en forma de embudo de color azul a violeta. Se desarrolla en condiciones cálidas y húmedas."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, conocida como Skyflower, es una vigorosa planta trepadora originaria del sudeste asiático. Produce grandes flores azules y se utiliza a menudo en paisajismo y como planta ornamental."
     },
     "pt": {
-      "common_name": "Vinha relógio de Bengala",
-      "description": "Thunbergia grandiflora, conhecida como vinha relógio de Bengala, é uma planta tropical trepadeira de crescimento rápido com grandes flores em forma de funil de cor azul a violeta. Cresce bem em condições quentes e úmidas."
+      "common_name": "Skyflower",
+      "description": "Thunbergia grandiflora, conhecida como Skyflower, é uma planta trepadeira vigorosa nativa da Ásia tropical. Produz grandes flores azuis e é frequentemente usada na jardinagem paisagística e como planta ornamental."
     },
     "ar": {
-      "common_name": "كرمة ساعة البنغال",
-      "description": "Thunbergia grandiflora، المعروفة باسم كرمة ساعة البنغال، هي نبات متسلق استوائي سريع النمو ذو زهور كبيرة على شكل قمع باللون الأزرق إلى الأرجواني. ينمو بشكل جيد في الظروف الحارة والرطبة."
+      "common_name": "زهرة السماء",
+      "description": "تُعرف Thunbergia grandiflora باسم زهرة السماء، وهي نبات متسلق نشط موطنه آسيا الاستوائية. تنتج أزهارًا كبيرة باللون الأزرق السماوي وغالبًا ما تُستخدم في تنسيق الحدائق والنباتات الزينة."
     },
     "hi": {
-      "common_name": "बंगाल घड़ी बेल",
-      "description": "Thunbergia grandiflora, जिसे बंगाल घड़ी बेल के नाम से जाना जाता है, एक तेजी से बढ़ने वाली उष्णकटिबंधीय लता है जिसमें नीले से बैंगनी रंग के बड़े, फूल होते हैं। यह गर्म, आर्द्र परिस्थितियों में बढ़ता है।"
+      "common_name": "आसमान फूल",
+      "description": "Thunbergia grandiflora, जिसे आसमान फूल कहा जाता है, एक तेज़ी से बढ़ने वाली बेल है जो उष्णकटिबंधीय एशिया का मूल निवासी है। यह बड़े, आसमानी नीले फूल उगाता है और इसे अक्सर लैंडस्केपिंग और सजावटी पौधे के रूप में उपयोग किया जाता है।"
     },
     "zh": {
-      "common_name": "孟加拉钟花藤",
-      "description": "Thunbergia grandiflora, 常称为孟加拉钟花藤，是一种快速生长的热带攀缘植物，拥有蓝色至紫色的大漏斗形花朵。它在温暖、湿润的环境中生长良好。"
+      "common_name": "天花",
+      "description": "Thunbergia grandiflora，也称为天花，是一种源自热带亚洲的强壮攀缘植物。它产生大型天蓝色的花朵，常被用于园艺景观和作为观赏植物。"
     },
     "ja": {
-      "common_name": "ベンガル時計蔓",
-      "description": "Thunbergia grandifloraは、ベンガル時計蔓として知られ、青紫色の大きな漏斗状の花を持つ熱帯性の急速に成長するつる植物です。温暖で湿度の高い環境で育ちます。"
+      "common_name": "スカイフラワー",
+      "description": "Thunbergia grandiflora、別名スカイフラワーは、熱帯アジア原産の元気なツタ植物です。大きな空色の花を咲かせ、風景設計や観賞植物としてよく使用されます。"
     },
     "ko": {
-      "common_name": "벵골 시계 덩굴",
-      "description": "Thunbergia grandiflora, 벵골 시계 덩굴로 알려져 있으며, 파란색에서 보라색의 큰 깔때기 모양 꽃을 가진 열대성 급성장 덩굴식물입니다. 따뜻하고 습한 조건에서 잘 자랍니다."
+      "common_name": "스카이플라워",
+      "description": "Thunbergia grandiflora, 일명 스카이플라워는 열대 아시아 원산지의 강한 덩굴 식물입니다. 큰 하늘색 꽃을 피우며, 풍경 조경과 관상용 식물로 자주 사용됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.botanicalgarden.com/thunbergia-grandiflora",
-      "https://www.gardenreference.com/thunbergia-care"
+      "https://www.rhs.org.uk/plants/238532/thunbergia-grandiflora",
+      "https://www.gardeningknowhow.com/ornamental/vines/thunbergia/grandiflora.htm",
+      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-and-problems/thunbergia-grandiflora-care/"
     ]
   }
 }

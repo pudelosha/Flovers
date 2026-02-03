@@ -1,21 +1,21 @@
 {
   "external_id": "pelargonium_radens",
-  "name": "Raden's Scented Geranium",
+  "name": "Pelargonium radens",
   "latin": "Pelargonium radens",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "loam",
-          "pl": "glina",
-          "de": "Lehm",
-          "fr": "argile",
-          "it": "argilla",
-          "es": "arcilla",
-          "pt": "argila",
-          "ar": "طين",
-          "hi": "क्ले",
-          "zh": "壤土",
-          "ja": "ローム",
-          "ko": "점토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "low",
-          "pl": "niska",
-          "de": "niedrig",
-          "fr": "faible",
-          "it": "bassa",
-          "es": "baja",
-          "pt": "baixa",
-          "ar": "منخفض",
-          "hi": "निम्न",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "no",
-          "pl": "nie",
-          "de": "nein",
-          "fr": "non",
-          "it": "no",
-          "es": "no",
-          "pt": "não",
-          "ar": "لا",
-          "hi": "नहीं",
-          "zh": "否",
-          "ja": "いいえ",
-          "ko": "아니오"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "compact",
-          "pl": "zwarty",
-          "de": "kompakt",
-          "fr": "compact",
-          "it": "compatto",
-          "es": "compacto",
-          "pt": "compacto",
-          "ar": "مضغوط",
-          "hi": "संकुचित",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "콤팩트"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'excès d'arrosage",
+          "it": "Evita l'eccesso d'acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evite rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अत्यधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "सामान्य कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折の害虫",
+          "ko": "가끔씩 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Raden's Scented Geranium",
-      "description": "Pelargonium radens, also known as Raden's scented geranium, is a fragrant plant native to South Africa. It is known for its aromatic foliage and delicate pink flowers."
+      "common_name": "Radical Geranium",
+      "description": "Pelargonium radens is a species of flowering plant native to Southern Africa. It is known for its attractive small flowers and low-maintenance care."
     },
     "pl": {
-      "common_name": "Pelargonium Raden",
-      "description": "Pelargonium radens, znany również jako pelargonia zapachowa Raden, to roślina pochodząca z RPA. Znana jest z aromatycznych liści i delikatnych różowych kwiatów."
+      "common_name": "Geranium radens",
+      "description": "Pelargonium radens to gatunek rośliny kwitnącej pochodzący z Afryki Południowej. Jest znany z atrakcyjnych małych kwiatów i łatwej pielęgnacji."
     },
     "de": {
-      "common_name": "Raden Duftgeranie",
-      "description": "Pelargonium radens, auch bekannt als Raden Duftgeranie, ist eine duftende Pflanze aus Südafrika. Sie ist bekannt für ihr aromatisches Laub und zarte rosa Blüten."
+      "common_name": "Radikalgeranie",
+      "description": "Pelargonium radens ist eine Art von Blühpflanze aus Südafrika. Sie ist bekannt für ihre attraktiven kleinen Blumen und pflegeleicht."
     },
     "fr": {
-      "common_name": "Géranium parfumé de Raden",
-      "description": "Le Pelargonium radens, également connu sous le nom de géranium parfumé de Raden, est une plante aromatique originaire d'Afrique du Sud. Elle est appréciée pour son feuillage parfumé et ses délicates fleurs roses."
+      "common_name": "Géranium radical",
+      "description": "Le Pelargonium radens est une espèce de plante à fleurs originaire d'Afrique du Sud. Il est connu pour ses petites fleurs attrayantes et son entretien facile."
     },
     "it": {
-      "common_name": "Geranio profumato di Raden",
-      "description": "Il Pelargonium radens, noto anche come geranio profumato di Raden, è una pianta fragrante originaria del Sud Africa. È conosciuta per il suo fogliame aromatico e i delicati fiori rosa."
+      "common_name": "Geranio radicale",
+      "description": "Pelargonium radens è una specie di pianta da fiore originaria del Sud Africa. È noto per i suoi piccoli fiori attraenti e la cura facile."
     },
     "es": {
-      "common_name": "Geranio aromático de Raden",
-      "description": "El Pelargonium radens, también conocido como geranio aromático de Raden, es una planta aromática originaria de Sudáfrica. Es conocida por su follaje aromático y sus delicadas flores rosadas."
+      "common_name": "Geranio radical",
+      "description": "Pelargonium radens es una especie de planta con flores originaria de Sudáfrica. Es conocido por sus pequeñas flores atractivas y su fácil mantenimiento."
     },
     "pt": {
-      "common_name": "Gerânio perfumado de Raden",
-      "description": "O Pelargonium radens, também conhecido como gerânio perfumado de Raden, é uma planta aromática nativa da África do Sul. É conhecida por sua folhagem aromática e suas delicadas flores rosas."
+      "common_name": "Gerânio radical",
+      "description": "Pelargonium radens é uma espécie de planta com flores nativa da África do Sul. É conhecido por suas pequenas flores atraentes e fácil cuidado."
     },
     "ar": {
-      "common_name": "الجيرانيوم المعطر من رادن",
-      "description": "بيلارغونيوم رادينس، المعروف أيضًا بالجيراينيوم المعطر من رادن، هو نبات عطري موطنه جنوب أفريقيا. يشتهر بأوراقه العطرية وزهورها الوردية الدقيقة."
+      "common_name": "إبرة الراعي الجذرية",
+      "description": "Pelargonium radens هو نوع من النباتات المزهرة الأصلية في جنوب إفريقيا. إنه معروف بزهوره الصغيرة الجذابة وصيانته السهلة."
     },
     "hi": {
-      "common_name": "राडन की सुगंधित जेरेनियम",
-      "description": "पेलार्गोनियम राडेंस, जिसे राडन की सुगंधित जेरेनियम भी कहा जाता है, दक्षिण अफ्रीका का एक सुगंधित पौधा है। यह अपनी सुगंधित पत्तियों और नाजुक गुलाबी फूलों के लिए जाना जाता है."
+      "common_name": "रैडिकल गेरानियम",
+      "description": "Pelargonium radens एक प्रकार का फूलने वाला पौधा है जो दक्षिण अफ्रीका का मूल निवासी है। यह आकर्षक छोटे फूलों और कम रखरखाव के लिए जाना जाता है।"
     },
     "zh": {
-      "common_name": "拉登香叶天竺葵",
-      "description": "拉登香叶天竺葵（Pelargonium radens）是南非的香草植物。它以其芳香的叶子和精致的粉色花朵而闻名。"
+      "common_name": "根部天竺葵",
+      "description": "Pelargonium radens 是一种原产于南非的开花植物。它以其迷人的小花和低维护而闻名。"
     },
     "ja": {
-      "common_name": "ラデンの香りゼラニウム",
-      "description": "ラデンの香りゼラニウム（Pelargonium radens）は、南アフリカ原産の香りの良い植物です。その芳香のある葉と繊細なピンクの花が特徴です。"
+      "common_name": "ラディカルゼラニウム",
+      "description": "Pelargonium radensは南アフリカ原産の開花植物の一種です。魅力的な小さな花と手間のかからないケアで知られています。"
     },
     "ko": {
-      "common_name": "라덴 향기 제라늄",
-      "description": "Pelargonium radens, 라덴 향기 제라늄은 남아프리카 원산의 향기로운 식물입니다. 향기로운 잎과 섬세한 분홍색 꽃으로 유명합니다."
+      "common_name": "급진 제라늄",
+      "description": "Pelargonium radens는 남아프리카 원산의 꽃 식물입니다. 매력적인 작은 꽃과 쉬운 관리로 잘 알려져 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/pelargonium-radens",
-      "https://www.gardeningknowhow.com/plant-care/soil/pelargonium-care.htm"
+      "https://www.rhs.org.uk/plants/140196/pelargonium-radens/Details",
+      "https://www.gardenia.net/plant/pelargonium-radens"
     ]
   }
 }

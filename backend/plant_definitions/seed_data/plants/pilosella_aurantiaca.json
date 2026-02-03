@@ -2,25 +2,26 @@
   "external_id": "pilosella_aurantiaca",
   "name": "Orange Hawkweed",
   "latin": "Pilosella aurantiaca",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "pilosella_aurantiaca.jpg",
   "image_thumb": "pilosella_aurantiaca.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Średnie światło",
-          "de": "Mittlere Sonneneinstrahlung",
-          "fr": "Lumière modérée",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम धूप",
-          "zh": "中等阳光",
-          "ja": "中程度の光",
-          "ko": "중간 햇빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "全日照",
+          "ja": "完全な日光",
+          "ko": "완전한 햇볕"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam or universal mix",
-          "pl": "Gleba lub mieszanka uniwersalna",
-          "de": "Lehm oder universelle Mischung",
-          "fr": "Sol argileux ou mix universel",
-          "it": "Terreno o miscela universale",
-          "es": "Suelo arcilloso o mezcla universal",
-          "pt": "Solo argiloso ou mistura universal",
-          "ar": "تربة طينية أو خليط عالمي",
-          "hi": "बलूसा या सार्वभौमिक मिश्रण",
-          "zh": "壤土或通用混合土",
-          "ja": "ロームまたはユニバーサルミックス",
-          "ko": "로암 또는 유니버설 믹스"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수됨"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiature moderate",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "سقاية معتدلة",
-          "hi": "मध्यम पानी",
-          "zh": "适度浇水",
-          "ja": "中程度の水やり",
-          "ko": "적당한 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -95,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中程度",
+          "ja": "中",
           "ko": "중간"
         }
       }
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-20°C",
-          "pl": "10-20°C",
-          "de": "10-20°C",
-          "fr": "10-20°C",
-          "it": "10-20°C",
-          "es": "10-20°C",
-          "pt": "10-20°C",
-          "ar": "10-20°C",
-          "hi": "10-20°C",
-          "zh": "10-20°C",
-          "ja": "10-20°C",
-          "ko": "10-20°C"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low to moderate",
-          "pl": "Niskie do umiarkowanych",
-          "de": "Niedrig bis mäßig",
-          "fr": "Faible à modéré",
-          "it": "Bassa a moderata",
-          "es": "Baja a moderada",
-          "pt": "Baixa a moderada",
-          "ar": "منخفض إلى معتدل",
-          "hi": "नमि कम से मध्यम",
-          "zh": "低至中等湿度",
-          "ja": "低から中程度の湿度",
-          "ko": "낮은 습도에서 중간 습도"
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "नमिता कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低から中",
+          "ko": "낮은에서 중간"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "अविषेकी नहीं",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping",
-          "pl": "Kępki",
-          "de": "Horstbildung",
-          "fr": "En touffes",
-          "it": "A cespuglio",
-          "es": "En grupos",
-          "pt": "Em touceiras",
-          "ar": "متكتلة",
-          "hi": "गुच्छों में बढ़ने वाला",
-          "zh": "丛生",
-          "ja": "株状",
-          "ko": "덩어리형"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Brak przelania",
+          "de": "Kein Überwässern",
+          "fr": "Pas d'excès d'eau",
+          "it": "Non innaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりは避けて",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवधि कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Orange Hawkweed",
-      "description": "Pilosella aurantiaca is a hardy, clumping perennial plant known for its bright orange flowers. It thrives in well-drained soils and moderate sunlight."
+      "description": "Pilosella aurantiaca, known as Orange Hawkweed, is a perennial herb native to Europe. It thrives in sunny, well-drained soils and grows rapidly."
     },
     "pl": {
-      "common_name": "Jaskier pomarańczowy",
-      "description": "Pilosella aurantiaca to odporna, kępowa roślina wieloletnia, znana z jasnopomarańczowych kwiatów. Rośnie w dobrze przepuszczalnych glebach i umiarkowanym świetle."
+      "common_name": "Ostreżnica pomarańczowa",
+      "description": "Pilosella aurantiaca, znana jako ostreżnica pomarańczowa, to bylina pochodząca z Europy. Rośnie w słonecznych, dobrze przepuszczalnych glebach i szybko rośnie."
     },
     "de": {
-      "common_name": "Orangen-Habichtskraut",
-      "description": "Pilosella aurantiaca ist eine robuste, horstbildende Staude, die für ihre leuchtend orangefarbenen Blüten bekannt ist. Sie gedeiht in gut durchlässigen Böden und mäßigem Sonnenlicht."
+      "common_name": "Orangengelbe Habichtskraut",
+      "description": "Pilosella aurantiaca, auch bekannt als Orangengelbe Habichtskraut, ist eine mehrjährige Pflanze, die in Europa beheimatet ist. Sie gedeiht in sonnigen, gut durchlässigen Böden und wächst schnell."
     },
     "fr": {
-      "common_name": "Pavot des montagnes",
-      "description": "Pilosella aurantiaca est une plante vivace robuste formant des touffes, connue pour ses fleurs orange vif. Elle prospère dans des sols bien drainés et une lumière modérée."
+      "common_name": "Épervière orangée",
+      "description": "Pilosella aurantiaca, connue sous le nom d'épervière orangée, est une plante vivace originaire d'Europe. Elle prospère dans des sols ensoleillés et bien drainés et croît rapidement."
     },
     "it": {
-      "common_name": "Fiore d'aquila arancione",
-      "description": "Pilosella aurantiaca è una pianta perenne resistente che forma ciuffi, conosciuta per i suoi fiori arancioni brillanti. Cresce in terreni ben drenati e luce moderata."
+      "common_name": "Erba di falco arancione",
+      "description": "Pilosella aurantiaca, conosciuta come erba di falco arancione, è una pianta perenne originaria dell'Europa. Cresce in terreni ben drenati e soleggiati e cresce rapidamente."
     },
     "es": {
-      "common_name": "Hierba del halcón naranja",
-      "description": "Pilosella aurantiaca es una planta perenne resistente, conocida por sus flores de color naranja brillante. Crece en suelos bien drenados y luz moderada."
+      "common_name": "Hierba de halcón naranja",
+      "description": "Pilosella aurantiaca, conocida como hierba de halcón naranja, es una planta perenne originaria de Europa. Crece bien en suelos soleados y bien drenados y tiene un rápido crecimiento."
     },
     "pt": {
-      "common_name": "Erva do Falcão Laranja",
-      "description": "Pilosella aurantiaca é uma planta perene resistente que forma arbustos, conhecida por suas flores laranja brilhante. Cresce em solos bem drenados e luz moderada."
+      "common_name": "Erva de falcão laranja",
+      "description": "Pilosella aurantiaca, conhecida como erva de falcão laranja, é uma planta perene nativa da Europa. Cresce bem em solos bem drenados e ensolarados e cresce rapidamente."
     },
     "ar": {
-      "common_name": "نبات صقر البرتقال",
-      "description": "Pilosella aurantiaca هو نبات معمر قوي يشكل مجموعات، معروف بأزهاره البرتقالية الزاهية. ينمو في التربة جيدة التصريف وأشعة الشمس المعتدلة."
+      "common_name": "نبات الهَوَك البرتقالي",
+      "description": "Pilosella aurantiaca، المعروف باسم نبات الهَوَك البرتقالي، هو نبات معمر موطنه أوروبا. ينمو بشكل جيد في التربة المشمسة جيدة التصريف وينمو بسرعة."
     },
     "hi": {
-      "common_name": "संतरा हॉकवीड",
-      "description": "Pilosella aurantiaca एक मजबूत, गुच्छे में बढ़ने वाला बारहमासी पौधा है, जो अपने चमकीले नारंगी फूलों के लिए जाना जाता है। यह अच्छी तरह से जल निकासी वाली मिट्टी और मध्यम धूप में उगता है।"
+      "common_name": "नारंगी बाज़ पक्षी घास",
+      "description": "Pilosella aurantiaca, जिसे नारंगी बाज़ पक्षी घास कहा जाता है, एक बारहमासी पौधा है जो यूरोप का मूल निवासी है। यह धूप और अच्छी जल निकासी वाली मिट्टी में तेजी से बढ़ता है।"
     },
     "zh": {
       "common_name": "橙色鹰草",
-      "description": "Pilosella aurantiaca 是一种耐寒的丛生多年生植物，因其明亮的橙色花朵而闻名。它在排水良好的土壤和适中的阳光下生长。"
+      "description": "Pilosella aurantiaca，简称橙色鹰草，是一种原产于欧洲的多年生植物。它在阳光充足、排水良好的土壤中快速生长。"
     },
     "ja": {
       "common_name": "オレンジホークウィード",
-      "description": "Pilosella aurantiacaは、明るいオレンジ色の花で知られる丈夫な群生性多年草です。良好な排水性の土壌と適度な日光で育ちます。"
+      "description": "Pilosella aurantiaca、オレンジホークウィードとして知られるこの植物は、ヨーロッパ原産の多年草です。日当たりの良い排水の良い土壌で急速に成長します。"
     },
     "ko": {
       "common_name": "오렌지 호크위드",
-      "description": "Pilosella aurantiaca는 밝은 주황색 꽃으로 잘 알려진 튼튼한 군생성 다년생 식물입니다. 잘 배수되는 토양과 적당한 햇빛에서 자랍니다."
+      "description": "Pilosella aurantiaca, 오렌지 호크위드는 유럽 원산의 다년생 식물입니다. 햇볕이 잘 드는 배수가 좋은 토양에서 빠르게 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/pilosella-aurantiaca",
-      "https://www.gardenia.net/plant/pilosella-aurantiaca"
+      "https://www.rhs.org.uk/Plants/10559/Pilosella-aurantiaca/Details",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/plant-care/"
     ]
   }
 }

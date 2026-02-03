@@ -1,27 +1,27 @@
 {
   "external_id": "justicia_carnea",
-  "name": "Brazilian Plume",
+  "name": "Brazilian Plume Flower",
   "latin": "Justicia carnea",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 3,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
-  "fertilize_interval_days": 14,
+  "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 18,
+  "repot_interval_months": 12,
   "image_hero": "justicia_carnea.jpg",
   "image_thumb": "justicia_carnea.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne, rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Rich, well-drained",
-          "pl": "Żyzna, przepuszczalna",
-          "de": "Nährstoffreich",
-          "fr": "Riche et drainé",
-          "it": "Ricco e drenante",
-          "es": "Rico y drenado",
-          "pt": "Rico e drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "उपजाऊ, जलनिकास",
-          "zh": "肥沃排水好",
-          "ja": "水はけ良好",
-          "ko": "배수 좋은 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 잘되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilgotna",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido costante",
-          "es": "Húmedo regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "नियमित नमी",
-          "zh": "保持湿润",
-          "ja": "適度に湿潤",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlerer Pflegeaufwand",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -126,7 +126,7 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht toxisch",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैली",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Upright shrub",
-          "pl": "Wzniesiony krzew",
-          "de": "Aufrechter Strauch",
-          "fr": "Arbuste dressé",
-          "it": "Arbusto eretto",
-          "es": "Arbusto erguido",
-          "pt": "Arbusto ereto",
-          "ar": "شجيرة قائمة",
-          "hi": "सीधा झाड़ी",
-          "zh": "直立灌木",
-          "ja": "直立低木",
-          "ko": "직립 관목"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "보통 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita l'eccesso d'acqua",
+          "es": "Evite el riego excesivo",
+          "pt": "Evite o excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفرो से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けて",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々発生する害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Brazilian Plume",
-      "description": "Justicia carnea is a tropical ornamental plant known for its bright pink flower plumes. It prefers warm temperatures, bright indirect light, and consistently moist soil. High humidity supports healthy growth and flowering indoors."
+      "common_name": "Brazilian Plume Flower",
+      "description": "Justicia carnea is a striking plant native to South America. Known for its colorful plume-like flowers, it thrives in moderate sunlight and humidity."
     },
     "pl": {
-      "common_name": "Justycja różowa",
-      "description": "Justicia carnea to tropikalna roślina ozdobna o różowych, pióropuszowych kwiatach. Najlepiej rośnie w ciepłych warunkach i jasnym, rozproszonym świetle. Wymaga regularnego podlewania i podwyższonej wilgotności."
+      "common_name": "Kwiat Pióropusza Brazylijskiego",
+      "description": "Justicia carnea to efektowna roślina pochodząca z Ameryki Południowej. Charakteryzuje się kolorowymi, pióropuszowatymi kwiatami, najlepiej rośnie przy umiarkowanym świetle i wilgotności."
     },
     "de": {
-      "common_name": "Brasilianische Federblume",
-      "description": "Justicia carnea ist eine tropische Zierpflanze mit auffälligen rosa Blütenständen. Sie gedeiht bei warmen Temperaturen und hellem, indirektem Licht. Gleichmäßige Feuchtigkeit und hohe Luftfeuchte sind wichtig."
+      "common_name": "Brazilianische Federblume",
+      "description": "Justicia carnea ist eine auffällige Pflanze aus Südamerika. Mit ihren bunten Federblumen wächst sie am besten bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Plume brésilienne",
-      "description": "Justicia carnea est une plante tropicale appréciée pour ses fleurs roses décoratives. Elle préfère une lumière vive sans soleil direct et un sol constamment humide. Une forte humidité favorise sa croissance."
+      "common_name": "Fleur Plume Brésilienne",
+      "description": "Justicia carnea est une plante frappante originaire d'Amérique du Sud. Connue pour ses fleurs en forme de plume, elle préfère la lumière et l'humidité modérées."
     },
     "it": {
-      "common_name": "Piuma brasiliana",
-      "description": "Justicia carnea è una pianta tropicale ornamentale con vistose infiorescenze rosa. Cresce bene con luce indiretta intensa e terreno umido. L’umidità elevata aiuta a mantenere la pianta sana."
+      "common_name": "Fiore a Piuma Brasiliano",
+      "description": "Justicia carnea è una pianta straordinaria originaria del Sud America. Conosciuta per i suoi fiori a forma di piuma, cresce meglio con luce e umidità moderate."
     },
     "es": {
-      "common_name": "Pluma brasileña",
-      "description": "Justicia carnea es una planta tropical ornamental famosa por sus flores rosadas. Prefiere luz indirecta brillante y riego regular. La humedad ambiental alta es beneficiosa."
+      "common_name": "Flor Pluma Brasileña",
+      "description": "Justicia carnea es una planta llamativa originaria de Sudamérica. Conocida por sus flores en forma de pluma, crece mejor con luz y humedad moderadas."
     },
     "pt": {
-      "common_name": "Pluma brasileira",
-      "description": "Justicia carnea é uma planta tropical ornamental com flores rosa vistosas. Desenvolve-se melhor com luz indireta intensa e solo sempre úmido. A umidade elevada favorece seu crescimento."
+      "common_name": "Flor Pluma Brasileira",
+      "description": "Justicia carnea é uma planta marcante originária da América do Sul. Conhecida por suas flores coloridas em forma de pluma, cresce bem com luz e umidade moderadas."
     },
     "ar": {
-      "common_name": "الريشة البرازيلية",
-      "description": "Justicia carnea نبات زينة استوائي يتميز بأزهاره الوردية الزاهية. يفضل الضوء الساطع غير المباشر ودرجة حرارة دافئة. الرطوبة العالية والري المنتظم ضروريان لنموه."
+      "common_name": "زهرة الريش البرازيلية",
+      "description": "Justicia carnea هي نبات لافت للنظر موطنه أمريكا الجنوبية. معروفة بأزهارها الشبيهة بالريش، وتزدهر في الضوء والرطوبة المعتدلة."
     },
     "hi": {
-      "common_name": "ब्राज़ीलियन प्लूम",
-      "description": "Justicia carnea एक उष्णकटिबंधीय सजावटी पौधा है जिसमें गुलाबी फूल होते हैं। इसे तेज लेकिन अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। अधिक आर्द्रता इसके विकास में सहायक होती है।"
+      "common_name": "ब्राजीलियाई प्लम फूल",
+      "description": "Justicia carnea एक अद्भुत पौधा है जो दक्षिण अमेरिका का मूल निवासी है। इसके रंगीन पंख जैसे फूल इसके प्रमुख आकर्षण हैं, और यह मध्यम प्रकाश और आर्द्रता में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "巴西羽花",
-      "description": "Justicia carnea 是一种热带观赏植物，以粉色羽状花序著称。它喜欢明亮的散射光和湿润的土壤。较高的空气湿度有助于健康生长。"
+      "common_name": "巴西羽毛花",
+      "description": "Justicia carnea 是一种来自南美的引人注目的植物。以其羽毛状的彩色花朵著称，它在适中的光照和湿度下生长最好。"
     },
     "ja": {
-      "common_name": "ブラジリアンプルーム",
-      "description": "Justicia carnea は鮮やかなピンク色の花を持つ熱帯性観葉植物です。明るい間接光と適度に湿った土壌を好みます。高い湿度が生育を助けます。"
+      "common_name": "ブラジル羽毛花",
+      "description": "Justicia carneaは南アメリカ原産の目を引く植物です。羽毛のようなカラフルな花で知られ、適度な光と湿度で育ちます。"
     },
     "ko": {
-      "common_name": "브라질리언 플룸",
-      "description": "Justicia carnea는 분홍색 꽃이 특징인 열대 관상식물입니다. 밝은 간접광과 꾸준히 촉촉한 토양을 선호합니다. 높은 습도가 건강한 생장에 도움이 됩니다."
+      "common_name": "브라질 깃털꽃",
+      "description": "Justicia carnea는 남미 원산지의 눈에 띄는 식물입니다. 깃털 모양의 다채로운 꽃으로 알려져 있으며, 적당한 햇빛과 습도에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b332",
-      "https://edis.ifas.ufl.edu/publication/FP330",
-      "https://www.rhs.org.uk/plants/justicia"
+      "https://www.rhs.org.uk/plants/justicia-carnea",
+      "https://www.botanicgardens.utoronto.ca/justicia-carnea-care"
     ]
   }
 }

@@ -7,16 +7,17 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
+    "ceramic",
     "terracotta"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "acidic"
+    "acid-loving"
   ],
   "water_required": true,
-  "water_interval_days": 14,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "acidic",
-          "pl": "kwaśna",
-          "de": "sauer",
-          "fr": "acide",
-          "it": "acido",
-          "es": "ácido",
-          "pt": "ácido",
-          "ar": "حمضي",
-          "hi": "अम्लीय",
-          "zh": "酸性",
-          "ja": "酸性",
-          "ko": "산성"
+          "en": "Orchid mix",
+          "pl": "Mieszanka dla orchidei",
+          "de": "Orchideen-Mix",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "خليط للزهور الأوركيد",
+          "hi": "ऑर्किड मिश्रण",
+          "zh": "兰花土壤",
+          "ja": "オーキッドミックス",
+          "ko": "오키드 믹스"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnie",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
         }
       }
     },
@@ -85,13 +86,13 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "false",
-          "pl": "fałsz",
-          "de": "falsch",
-          "fr": "faux",
-          "it": "falso",
-          "es": "falso",
-          "pt": "falso",
-          "ar": "كاذب",
-          "hi": "झूठा",
-          "zh": "错误",
-          "ja": "偽",
-          "ko": "거짓"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średni",
-          "de": "mittel",
-          "fr": "moyenne",
-          "it": "media",
-          "es": "media",
-          "pt": "média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度な水やりを避ける",
+          "ko": "과도한 물주기를 피하다"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसम के कीड़े",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Provincial Orchid",
-      "description": "A wild orchid native to Europe, known for its pale yellow flowers with red spots. It thrives in forested areas and is typically found in temperate climates."
+      "description": "Orchis provincialis is a species of orchid native to southern Europe. It thrives in well-drained soil with moderate watering."
     },
     "pl": {
       "common_name": "Orchidea prowincjonalna",
-      "description": "Orchidea dzika występująca w Europie, znana ze swoich jasnoniebieskich kwiatów z czerwonymi plamkami. Rośnie w lasach, występuje w klimacie umiarkowanym."
+      "description": "Orchis provincialis to gatunek orchidei występujący w południowej Europie. Preferuje dobrze przepuszczalną glebę i umiarkowane podlewanie."
     },
     "de": {
-      "common_name": "Provincial Orchidee",
-      "description": "Eine wilde Orchidee, die in Europa heimisch ist und für ihre hellgelben Blüten mit roten Flecken bekannt ist. Sie gedeiht in bewaldeten Gebieten in gemäßigten Klimazonen."
+      "common_name": "Provinzialorchidee",
+      "description": "Orchis provincialis ist eine Orchideenart aus Südeuropa. Sie gedeiht in gut durchlässigem Boden mit mäßiger Bewässerung."
     },
     "fr": {
       "common_name": "Orchidée provinciale",
-      "description": "Une orchidée sauvage originaire d'Europe, connue pour ses fleurs jaunes pâles avec des taches rouges. Elle pousse dans les zones forestières et est généralement trouvée dans des climats tempérés."
+      "description": "L'Orchis provincialis est une espèce d'orchidée originaire du sud de l'Europe. Elle prospère dans un sol bien drainé avec un arrosage modéré."
     },
     "it": {
       "common_name": "Orchidea provinciale",
-      "description": "Un'orchidea selvatica originaria dell'Europa, nota per i suoi fiori giallo pallido con macchie rosse. Cresce in zone forestali e si trova tipicamente in climi temperati."
+      "description": "Orchis provincialis è una specie di orchidea originaria del sud Europa. Cresce bene in un terreno ben drenato con annaffiature moderate."
     },
     "es": {
       "common_name": "Orquídea provincial",
-      "description": "Una orquídea silvestre originaria de Europa, conocida por sus flores amarillas pálidas con manchas rojas. Crece en áreas boscosas y se encuentra típicamente en climas templados."
+      "description": "Orchis provincialis es una especie de orquídea originaria del sur de Europa. Crece bien en suelos bien drenados con riego moderado."
     },
     "pt": {
       "common_name": "Orquídea provincial",
-      "description": "Uma orquídea selvagem nativa da Europa, conhecida pelas suas flores amarelas pálidas com manchas vermelhas. Cresce em áreas florestais e é geralmente encontrada em climas temperados."
+      "description": "Orchis provincialis é uma espécie de orquídea nativa do sul da Europa. Cresce bem em solo bem drenado com rega moderada."
     },
     "ar": {
-      "common_name": "أوركيده إقليمية",
-      "description": "زهرة أوركيدية برية موطنها أوروبا، معروفة بأزهارها الصفراء الفاتحة مع بقع حمراء. تنمو في المناطق الغابية وتوجد عادة في المناخات المعتدلة."
+      "common_name": "زهرة الأوركيد الإقليمية",
+      "description": "Orchis provincialis هو نوع من الأوركيد موطنه جنوب أوروبا. يزدهر في التربة جيدة الصرف مع الري المعتدل."
     },
     "hi": {
       "common_name": "प्रांतीय ऑर्किड",
-      "description": "यूरोप की एक जंगली ऑर्किड जो अपनी पीली फूलों के साथ लाल धब्बों के लिए जानी जाती है। यह जंगलों में पाई जाती है और सामान्यत: तापमान वाले क्षेत्रों में पाई जाती है।"
+      "description": "Orchis provincialis एक प्रकार की ऑर्किड है जो दक्षिणी यूरोप का मूल निवासी है। यह अच्छी जल निकासी वाली मिट्टी में और मध्यम पानी के साथ बढ़ता है।"
     },
     "zh": {
       "common_name": "省级兰花",
-      "description": "一种原产于欧洲的野生兰花，因其淡黄色的花瓣和红色斑点而闻名。它生长在森林中，通常出现在温带气候地区。"
+      "description": "Orchis provincialis 是一种原产于南欧的兰花。它在排水良好的土壤中生长，浇水适中。"
     },
     "ja": {
       "common_name": "地方オーキッド",
-      "description": "ヨーロッパ原産の野生のランで、赤い斑点がある淡い黄色の花で知られています。森林地帯に生息し、温帯気候の地域に一般的に見られます。"
+      "description": "Orchis provincialis は南ヨーロッパ原産のオーキッド種です。排水性の良い土壌で、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "지방 난초",
-      "description": "유럽 원산의 야생 난초로, 붉은 반점이 있는 연한 노란색 꽃으로 알려져 있습니다. 숲속 지역에서 자주 자생하며, 온대 기후에서 자주 발견됩니다."
+      "description": "Orchis provincialis는 남유럽 원산지의 난초 종류입니다. 배수가 좋은 토양에서 적당한 물주기로 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/Plants/Orchis-provincialis",
-      "https://www.botanicgardens.org/plant-care-guide/orchis-provincialis"
+      "https://www.rhs.org.uk/advice/profile?pid=975",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/orchid-care/"
     ]
   }
 }

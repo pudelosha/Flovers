@@ -1,6 +1,6 @@
 {
   "external_id": "dracaena_reflexa",
-  "name": "Dracaena reflexa",
+  "name": "Song of India",
   "latin": "Dracaena reflexa",
   "sun": "medium",
   "water": "medium",
@@ -11,17 +11,16 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
-  "moisture_required": false,
-  "moisture_interval_days": null,
+  "water_interval_days": 12,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 30,
   "image_hero": "dracaena_reflexa.jpg",
   "image_thumb": "dracaena_reflexa.jpg",
   "traits": [
@@ -29,15 +28,15 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło pośrednie",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumiere indirecte",
           "it": "Luce indiretta",
           "es": "Luz indirecta",
           "pt": "Luz indireta",
           "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
           "zh": "明亮散射光",
           "ja": "明るい間接光",
           "ko": "밝은 간접광"
@@ -48,18 +47,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Gut drainierte Erde",
-          "fr": "Sol bien drainé",
+          "en": "Well-drained mix",
+          "pl": "Przepuszczalne podloze",
+          "de": "Durchlassige Erde",
+          "fr": "Substrat drainant",
           "it": "Terriccio drenante",
-          "es": "Suelo drenante",
-          "pt": "Solo drenado",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "排水良好土壤",
+          "hi": "अच्छी जल निकासी मिट्टी",
+          "zh": "排水良好土",
           "ja": "水はけの良い土",
-          "ko": "배수 잘되는 흙"
+          "ko": "배수 좋은 흙"
         }
       }
     },
@@ -67,18 +66,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßig gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "ري معتدل",
-          "hi": "मध्यम सिंचाई",
-          "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "보통 물주기"
+          "en": "Let top dry",
+          "pl": "Pozwol przeschnac gore",
+          "de": "Oben antrocknen",
+          "fr": "Secher en surface",
+          "it": "Asciuga in alto",
+          "es": "Seca arriba",
+          "pt": "Secar por cima",
+          "ar": "اترك السطح يجف",
+          "hi": "ऊपरी भाग सूखने दें",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
         }
       }
     },
@@ -86,18 +85,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy care",
-          "pl": "Łatwa w uprawie",
-          "de": "Pflegeleicht",
+          "en": "Easy",
+          "pl": "Latwa",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل العناية",
-          "hi": "आसान देखभाल",
-          "zh": "容易养护",
-          "ja": "育てやすい",
-          "ko": "키우기 쉬움"
+          "es": "Facil",
+          "pt": "Facil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -105,18 +104,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18～27℃",
-          "ko": "18–27°C"
+          "en": "18-30°C",
+          "pl": "18-30°C",
+          "de": "18-30°C",
+          "fr": "18-30°C",
+          "it": "18-30°C",
+          "es": "18-30°C",
+          "pt": "18-30°C",
+          "ar": "18-30°م",
+          "hi": "18-30°C",
+          "zh": "18-30°C",
+          "ja": "18-30°C",
+          "ko": "18-30°C"
         }
       }
     },
@@ -124,18 +123,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "औसत नमी",
-          "zh": "中等湿度",
-          "ja": "平均的な湿度",
-          "ko": "보통 습도"
+          "en": "Average to humid",
+          "pl": "Srednia do wilgotnej",
+          "de": "Mittel bis hoch",
+          "fr": "Moyenne a elevee",
+          "it": "Media-alta",
+          "es": "Media-alta",
+          "pt": "Media a alta",
+          "ar": "رطوبة متوسطة-عالية",
+          "hi": "मध्यम-उच्च नमी",
+          "zh": "中到高湿度",
+          "ja": "中-高湿度",
+          "ko": "중-높은 습도"
         }
       }
     },
@@ -144,17 +143,17 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Tiere",
+          "pl": "Toksyczna dla zwierzat",
+          "de": "Giftig fur Tiere",
           "fr": "Toxique animaux",
-          "it": "Tossica animali",
-          "es": "Tóxica mascotas",
-          "pt": "Tóxica animais",
+          "it": "Tossica per animali",
+          "es": "Toxica para mascotas",
+          "pt": "Toxica p/ animais",
           "ar": "سامة للحيوانات",
-          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "hi": "पालतू के लिए विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "반려동물 유독"
+          "ko": "반려동물에 유독"
         }
       }
     },
@@ -164,75 +163,115 @@
         "text": {
           "en": "Slow to moderate",
           "pl": "Wolny do umiark.",
-          "de": "Langsam bis mäßig",
-          "fr": "Lente à modérée",
+          "de": "Langsam-mittel",
+          "fr": "Lente a moderee",
           "it": "Lenta-moderata",
-          "es": "Lento a moderado",
+          "es": "Lento-moderado",
           "pt": "Lento a moderado",
-          "ar": "نمو بطيء متوسط",
-          "hi": "धीमी से मध्यम वृद्धि",
-          "zh": "缓慢至中等",
-          "ja": "遅い〜中程度",
-          "ko": "느림~보통"
+          "ar": "نمو بطيء-متوسط",
+          "hi": "धीमी- मध्यम वृद्धि",
+          "zh": "慢到中等",
+          "ja": "遅め-普通",
+          "ko": "느림-보통"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie przelewaj",
+          "de": "Nicht zu nass",
+          "fr": "Pas trop arroser",
+          "it": "No eccesso acqua",
+          "es": "No exceso de agua",
+          "pt": "Nao encharcar",
+          "ar": "تجنب كثرة الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "避免积水",
+          "ja": "水のやりすぎ注意",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Mites, mealybugs",
+          "pl": "Przedziorki, welnowce",
+          "de": "Milben, Wolllause",
+          "fr": "Acar., cochenilles",
+          "it": "Acari, cocciniglie",
+          "es": "Acaros, cochinillas",
+          "pt": "Acaros, cochonilhas",
+          "ar": "عث وبق دقيقي",
+          "hi": "माइट्स, मिलीबग",
+          "zh": "红蜘蛛,粉蚧",
+          "ja": "ハダニ,コナカイガ",
+          "ko": "응애,깍지벌레"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Song of India",
-      "description": "Dracaena reflexa is a tropical evergreen shrub native to Madagascar and nearby islands. It is valued for its variegated, arching leaves and adaptability to indoor conditions."
+      "common_name": "Song of India (Malaysian dracaena)",
+      "description": "Dracaena reflexa is a woody tropical houseplant grown for narrow, arching leaves and cane-like stems. Keep it in bright, indirect light and water only when the top layer of mix feels dry. It prefers warm conditions and is toxic to cats and dogs."
     },
     "pl": {
-      "common_name": "Dracena odgięta",
-      "description": "Dracaena reflexa to tropikalny krzew z Madagaskaru. Ceniona jest za pasiastą dekoracyjną rozetę liści i łatwość uprawy w domu."
+      "common_name": "Dracena odwrócona",
+      "description": "Dracaena reflexa to tropikalna roslina doniczkowa o waskich lisciach i zdrewnialych pedach. Ustaw w jasnym, rozproszonym swietle i podlewaj dopiero, gdy wierzch podloza przeschnie. Lubi cieplo i jest toksyczna dla kotow i psow."
     },
     "de": {
-      "common_name": "Drachenbaum",
-      "description": "Dracaena reflexa ist ein tropischer Strauch aus Madagaskar. Sie wird wegen ihrer panaschierten Blätter und Robustheit als Zimmerpflanze geschätzt."
+      "common_name": "Reflex-Drachenbaum",
+      "description": "Dracaena reflexa ist eine tropische Zimmerpflanze mit schmalen, bogigen Blattern und verholztem Stamm. Hell, aber ohne direkte Sonne stellen und erst gieen, wenn die obere Erdschicht trocken ist. Sie mag Warme und ist fur Katzen und Hunde giftig."
     },
     "fr": {
-      "common_name": "Dragonnier réfléchi",
-      "description": "Dracaena reflexa est un arbuste tropical originaire de Madagascar. Elle est appréciée pour son feuillage décoratif et sa culture facile en intérieur."
+      "common_name": "Dragonnier reflexe",
+      "description": "Dracaena reflexa est une plante d'interieur tropicale a tiges ligneuses et feuilles etroites. Placez-la en lumiere vive indirecte et arrosez seulement quand la surface du substrat est seche. Elle aime la chaleur et est toxique pour les chats et les chiens."
     },
     "it": {
-      "common_name": "Dracena",
-      "description": "Dracaena reflexa è una pianta tropicale del Madagascar. È coltivata come pianta da interno per le sue foglie variegate e la manutenzione semplice."
+      "common_name": "Dracena (Song of India)",
+      "description": "Dracaena reflexa e una pianta tropicale da interno con fusti legnosi e foglie strette e arcuate. Tienila in luce intensa ma indiretta e annaffia solo quando lo strato superiore del terriccio e asciutto. Preferisce il caldo ed e tossica per cani e gatti."
     },
     "es": {
-      "common_name": "Drácena",
-      "description": "Dracaena reflexa es un arbusto tropical de Madagascar. Destaca por sus hojas variegadas y su buena adaptación a interiores."
+      "common_name": "Dracaena reflexa (Cancion de India)",
+      "description": "Dracaena reflexa es una planta tropical de interior con tallos leñosos y hojas estrechas. Colocala con luz brillante e indirecta y riega solo cuando la capa superior del sustrato este seca. Prefiere el calor y es toxica para gatos y perros."
     },
     "pt": {
-      "common_name": "Dracena",
-      "description": "Dracaena reflexa é uma planta tropical de Madagascar. É popular em interiores devido às folhas ornamentais e cuidados simples."
+      "common_name": "Dracena (Song of India)",
+      "description": "Dracaena reflexa e uma planta tropical de interior com caules lenhosos e folhas estreitas. Mantenha em luz forte indireta e regue apenas quando a superficie do substrato estiver seca. Gosta de calor e e toxica para caes e gatos."
     },
     "ar": {
-      "common_name": "دراسينا",
-      "description": "دراسينا ريفليكسا نبات استوائي موطنه مدغشقر. يزرع كنبات داخلي لجمال أوراقه وسهولة العناية به."
+      "common_name": "دراسينا ريفلكسا (أغنية الهند)",
+      "description": "Dracaena reflexa نبات منزلي استوائي ذو سيقان خشبية وأوراق ضيقة. ضعها في ضوء ساطع غير مباشر واسقها فقط عندما يجف سطح التربة. تفضل الدفء وهي سامة للقطط والكلاب."
     },
     "hi": {
-      "common_name": "ड्रासेना",
-      "description": "ड्रासेना रिफ्लेक्सा मेडागास्कर का उष्णकटिबंधीय पौधा है। इसे इसकी सजावटी पत्तियों और आसान देखभाल के लिए उगाया जाता है।"
+      "common_name": "ड्रासेना रिफ्लेक्सा",
+      "description": "Dracaena reflexa एक उष्णकटिबंधीय इनडोर पौधा है जिसमें लकड़ी जैसी डंठल और पतली पत्तियां होती हैं। इसे तेज अप्रत्यक्ष रोशनी में रखें और तब ही पानी दें जब ऊपर की मिट्टी सूख जाए। यह गर्म तापमान पसंद करता है और बिल्लियों व कुत्तों के लिए विषाक्त है।"
     },
     "zh": {
-      "common_name": "龙血树",
-      "description": "Dracaena reflexa 原产于马达加斯加的热带植物。因其斑纹叶片和良好的室内适应性而广受欢迎。"
+      "common_name": "马来龙血树（富贵竹柳）",
+      "description": "Dracaena reflexa 是热带观叶室内植物，具木质茎和狭长叶。放在明亮散射光处，表土干后再浇水。喜温暖环境，对猫狗有毒。"
     },
     "ja": {
-      "common_name": "ドラセナ",
-      "description": "ドラセナ・レフレクサはマダガスカル原産の熱帯植物です。観葉植物として丈夫で育てやすいです。"
+      "common_name": "ドラセナ・リフレクサ",
+      "description": "Dracaena reflexa は木質の茎と細い葉を持つ熱帯性の観葉植物です。明るい間接光に置き、表土が乾いてから水やりします。暖かい環境を好み、猫と犬には有毒です。"
     },
     "ko": {
-      "common_name": "드라세나",
-      "description": "드라세나 레플렉사는 마다가스카르 원산의 열대 식물입니다. 무늬 잎과 실내 적응력이 뛰어납니다."
+      "common_name": "드라세나 리플렉사",
+      "description": "Dracaena reflexa 는 목질 줄기와 가는 잎이 특징인 열대 관엽식물입니다. 밝은 간접광에 두고 겉흙이 마른 뒤 물을 주세요. 따뜻한 환경을 좋아하며 고양이와 개에게 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/5440/dracaena-reflexa/details",
-      "https://edis.ifas.ufl.edu/publication/FP170",
-      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/dracaena"
+      "https://www.rhs.org.uk/plants/dracaena/how-to-grow-dracaena",
+      "https://www.rhs.org.uk/plants/dracaena",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=264736",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/malaysian-dracaena",
+      "https://hgic.clemson.edu/factsheet/dracaena/"
     ]
   }
 }

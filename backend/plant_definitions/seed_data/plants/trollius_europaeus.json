@@ -1,9 +1,9 @@
 {
   "external_id": "trollius_europaeus",
-  "name": "Globeflower",
+  "name": "Trollius europaeus",
   "latin": "Trollius europaeus",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,17 +11,17 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "acidic"
+    "all-purpose",
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
-  "fertilize_interval_days": 90,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
   "image_hero": "trollius_europaeus.jpg",
   "image_thumb": "trollius_europaeus.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "part to full shade",
-          "pl": "cieniste do półcien",
-          "de": "Halbschatten bis Schatten",
-          "fr": "ombre partielle",
-          "it": "mezza ombra",
-          "es": "sombra parcial",
-          "pt": "meia sombra",
-          "ar": "ظل جزئي",
-          "hi": "आंशिक छाया",
-          "zh": "部分阴影",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "en": "Medium sunlight",
+          "pl": "Średnie światło",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "moist loam soil",
-          "pl": "wilgotna gleba",
-          "de": "feuchter Lehmboden",
-          "fr": "sol humide",
-          "it": "terreno umido",
-          "es": "suelo húmedo",
-          "pt": "solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "गीली मिट्टी",
-          "zh": "潮湿壤土",
-          "ja": "湿った土壌",
-          "ko": "습한 토양"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良く排水された土壌",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "keep moist",
-          "pl": "utrzymuj wilgotność",
-          "de": "feucht halten",
-          "fr": "garder humide",
-          "it": "mantenere umido",
-          "es": "mantener húmedo",
-          "pt": "manter úmido",
-          "ar": "احتفظ بالرطوبة",
-          "hi": "गीला रखें",
-          "zh": "保持湿润",
-          "ja": "湿らせる",
-          "ko": "촉촉하게 유지"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري مسModerate",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "medium",
-          "pl": "średnia",
-          "de": "mittel",
-          "fr": "moyen",
-          "it": "medio",
-          "es": "medio",
-          "pt": "médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難しさ",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "cool climates",
-          "pl": "chłodny klimat",
-          "de": "kühles Klima",
-          "fr": "climat frais",
-          "it": "clima fresco",
-          "es": "clima fresco",
-          "pt": "clima fresco",
-          "ar": "مناخ بارد",
-          "hi": "ठंडा जलवायु",
-          "zh": "凉爽气候",
-          "ja": "涼しい気候",
-          "ko": "시원한 기후"
+          "en": "Cool to moderate",
+          "pl": "Chłodne do umiarkowane",
+          "de": "Kühl bis mäßig",
+          "fr": "Froid à modéré",
+          "it": "Freddo a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "寒冷至适中",
+          "ja": "寒冷から中程度",
+          "ko": "차가운에서 중간 온도"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "moderate",
-          "pl": "umiarkowana",
-          "de": "mäßig",
-          "fr": "modérée",
-          "it": "moderata",
-          "es": "moderada",
-          "pt": "moderada",
-          "ar": "معتدلة",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "poisonous",
-          "pl": "trujący",
-          "de": "giftig",
-          "fr": "toxique",
-          "it": "velenoso",
-          "es": "tóxico",
-          "pt": "tóxico",
-          "ar": "سامة",
-          "hi": "जहरीला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "perennial",
-          "pl": "bylina",
-          "de": "mehrjährig",
-          "fr": "vivace",
-          "it": "perenne",
-          "es": "perenne",
-          "pt": "perene",
-          "ar": "معمر",
-          "hi": "स्थानिक",
-          "zh": "多年生",
-          "ja": "多年生",
-          "ko": "다년생"
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeide Überbewässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evitare eccessiva irrigazione",
+          "es": "Evitar exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अत्यधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Globeflower",
-      "description": "Trollius europaeus is a perennial wildflower from moist meadows in Europe. It prefers moist, cool conditions and part shade to full shade."
+      "description": "Trollius europaeus is a perennial herb native to Europe, known for its yellow, globe-shaped flowers. It thrives in cooler, moist environments."
     },
     "pl": {
-      "common_name": "Kulisty kwiat",
-      "description": "Trollius europaeus to bylina z wilgotnych łąk Europy. Preferuje wilgotne, chłodne warunki i półcień do cienia."
+      "common_name": "Globoflower",
+      "description": "Trollius europaeus to wieloletnia roślina zielna, pochodząca z Europy, znana ze swoich żółtych, kulistych kwiatów. Rośnie w chłodnych, wilgotnych miejscach."
     },
     "de": {
-      "common_name": "Kugelblume",
-      "description": "Trollius europaeus ist eine mehrjährige Wildblume aus feuchten Wiesen Europas. Sie bevorzugt kühle, feuchte Standorte im Halbschatten."
+      "common_name": "Trollblume",
+      "description": "Trollius europaeus ist eine mehrjährige Pflanze aus Europa, die für ihre gelben, kugelförmigen Blüten bekannt ist. Sie wächst in kühleren, feuchten Umgebungen."
     },
     "fr": {
-      "common_name": "Trollius",
-      "description": "Trollius europaeus est une vivace des prairies humides d'Europe. Elle préfère les sols frais et humide et une ombre partielle."
+      "common_name": "Trollius européen",
+      "description": "Trollius europaeus est une plante vivace originaire d'Europe, connue pour ses fleurs jaunes en forme de globe. Elle préfère des environnements frais et humides."
     },
     "it": {
-      "common_name": "Fiore sferico",
-      "description": "Trollius europaeus è un perenne dei prati umidi europei. Preferisce condizioni fresche e umide e mezzombra."
+      "common_name": "Fiore a globo",
+      "description": "Trollius europaeus è una pianta perenne originaria dell'Europa, conosciuta per i suoi fiori gialli a forma di globo. Cresce in ambienti freschi e umidi."
     },
     "es": {
-      "common_name": "Flor esfera",
-      "description": "Trollius europaeus es una perenne de praderas húmedas europeas. Prefiere condiciones frescas y húmedas y sombra parcial."
+      "common_name": "Flor del globo",
+      "description": "Trollius europaeus es una planta perenne originaria de Europa, conocida por sus flores amarillas en forma de globo. Crece en ambientes frescos y húmedos."
     },
     "pt": {
-      "common_name": "Flor globular",
-      "description": "Trollius europaeus é uma perene de prados húmidos da Europa. Prefere condições frescas e húmidas e sombra parcial."
+      "common_name": "Flor do globo",
+      "description": "Trollius europaeus é uma planta perene originária da Europa, conhecida por suas flores amarelas em forma de globo. Cresce em ambientes frescos e úmidos."
     },
     "ar": {
-      "common_name": "زهرة كروية",
-      "description": "Trollius europaeus نبات معمر من المروج الرطبة في أوروبا. يفضل الظروف الباردة والرطبة والظل الجزئي."
+      "common_name": "زهرة التروزي",
+      "description": "Trollius europaeus هي نبات معمر من أوروبا، معروف بأزهارها الصفراء على شكل كرة. تنمو في بيئات باردة ورطبة."
     },
     "hi": {
       "common_name": "ग्लोबफ्लावर",
-      "description": "Trollius europaeus यूरोप के नम मैदानी हिस्सों का एक पौधा है। यह ठंडी और नम स्थितियों में आंशिक छाया पसंद करता है."
+      "description": "Trollius europaeus एक बारहमासी पौधा है जो यूरोप का मूल निवासी है, जिसे उसके पीले, गोल आकार के फूलों के लिए जाना जाता है। यह ठंडे, नम वातावरण में पनपता है।"
     },
     "zh": {
-      "common_name": "地球花",
-      "description": "Trollius europaeus 是来自欧洲潮湿草地的多年生植物。它喜欢凉爽湿润的环境和部分阴影。"
+      "common_name": "圆花草",
+      "description": "Trollius europaeus是一种原产于欧洲的多年生草本植物，以其黄色的球形花朵而闻名。它在凉爽湿润的环境中茁壮成长。"
     },
     "ja": {
-      "common_name": "グローブフラワー",
-      "description": "Trollius europaeus はヨーロッパの湿った草地の多年草です。 涼しく湿った条件と半日陰を好みます。"
+      "common_name": "トロリウス・ユーロペウス",
+      "description": "Trollius europaeusはヨーロッパ原産の多年生植物で、黄色い球形の花で知られています。涼しく湿った環境でよく育ちます。"
     },
     "ko": {
-      "common_name": "구형꽃",
-      "description": "Trollius europaeus 는 유럽 습지 초원의 다년생 식물입니다. 시원하고 습한 환경과 반그늘을 선호합니다."
+      "common_name": "글로브플라워",
+      "description": "Trollius europaeus는 유럽 원산의 다년생 식물로, 노란색 공 모양의 꽃으로 알려져 있습니다. 시원하고 습한 환경에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=254050",
-      "https://pfaf.org/user/Plant.aspx?LatinName=Trollius+europaeus"
+      "https://www.gardenia.net/plant/trollius-europaeus",
+      "https://www.rhs.org.uk/plants/trollius-europaeus"
     ]
   }
 }

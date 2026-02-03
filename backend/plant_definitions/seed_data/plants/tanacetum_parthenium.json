@@ -7,11 +7,12 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba ilasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土土壌",
-          "ko": "점토질 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "배수 좋음"
         }
       }
     },
@@ -68,16 +69,16 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Mäßig",
+          "de": "Moderat",
           "fr": "Modéré",
           "it": "Moderato",
           "es": "Moderado",
           "pt": "Moderado",
           "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "適度",
-          "ko": "중간"
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
         }
       }
     },
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwe",
+          "pl": "Łatwy",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -94,9 +95,9 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "简单",
           "ja": "簡単",
-          "ko": "쉬운"
+          "ko": "쉬움"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "नमीयत",
-          "zh": "低",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैले",
-          "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "무독성"
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Compact",
-          "pl": "Kompaktowy",
-          "de": "Kompakt",
-          "fr": "Compact",
-          "it": "Compatto",
-          "es": "Compacto",
-          "pt": "Compacto",
-          "ar": "مضغوط",
-          "hi": "संक्षिप्त",
-          "zh": "紧凑",
-          "ja": "コンパクト",
-          "ko": "컴팩트"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'arrosage excessif",
+          "it": "Evitare l'eccesso d'acqua",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرा पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -180,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Feverfew",
-      "description": "Feverfew is a medicinal herb known for its small, daisy-like flowers. It thrives in moderate sunlight and well-drained soil."
+      "description": "Feverfew is a perennial herb used in traditional medicine. It thrives in moderate light and well-drained soil."
     },
     "pl": {
-      "common_name": "Przezroczystość",
-      "description": "Feverfew to zioło lecznicze znane ze swoich małych, kwiatów przypominających stokrotki. Rośnie w umiarkowanym świetle słonecznym i dobrze przepuszczalnej glebie."
+      "common_name": "Parapet",
+      "description": "Parapet to wieloletnia roślina lecznicza. Rośnie w średnim świetle i dobrze przepuszczalnej glebie."
     },
     "de": {
       "common_name": "Fieberkraut",
-      "description": "Fieberkraut ist ein Heilpflanze, bekannt für seine kleinen, daisy-ähnlichen Blüten. Es wächst bei mäßigem Sonnenlicht und gut durchlässigem Boden."
+      "description": "Fieberkraut ist ein mehrjähriges Kraut, das in der traditionellen Medizin verwendet wird. Es wächst bei mäßigem Licht und gut durchlässigem Boden."
     },
     "fr": {
-      "common_name": "Fievre",
-      "description": "La Fievre est une plante médicinale connue pour ses petites fleurs en forme de marguerite. Elle pousse sous une lumière modérée et un sol bien drainé."
+      "common_name": "Parthénium",
+      "description": "Le Parthénium est une plante vivace utilisée en médecine traditionnelle. Elle pousse dans une lumière modérée et un sol bien drainé."
     },
     "it": {
-      "common_name": "Feverfew",
-      "description": "Il Feverfew è una pianta medicinale nota per i suoi piccoli fiori simili a margherite. Cresce alla luce moderata e in terreni ben drenati."
+      "common_name": "Tanaceto",
+      "description": "Il Tanaceto è una pianta perenne usata nella medicina tradizionale. Cresce in luce media e in terreni ben drenati."
     },
     "es": {
-      "common_name": "Feverfew",
-      "description": "Feverfew es una planta medicinal conocida por sus pequeñas flores similares a las margaritas. Crece en luz moderada y en suelos bien drenados."
+      "common_name": "Tanacetum",
+      "description": "El Tanacetum es una planta perenne utilizada en medicina tradicional. Crece en luz moderada y en suelos bien drenados."
     },
     "pt": {
-      "common_name": "Feverfew",
-      "description": "Feverfew é uma erva medicinal conhecida por suas pequenas flores semelhantes a margaridas. Cresce em luz moderada e solo bem drenado."
+      "common_name": "Tanacetum",
+      "description": "O Tanacetum é uma planta perene usada na medicina tradicional. Cresce em luz moderada e solo bem drenado."
     },
     "ar": {
-      "common_name": "النعناع الطبي",
-      "description": "النعناع الطبي هو عشبة طبية معروفة بزهورها الصغيرة المشابهة للبابونج. ينمو في ضوء الشمس المعتدل والتربة جيدة الصرف."
+      "common_name": "التاناسيتوم",
+      "description": "التاناسيتوم هو نبات معمر يستخدم في الطب التقليدي. ينمو في ضوء معتدل وتربة جيدة التصريف."
     },
     "hi": {
-      "common_name": "ताफ़ल",
-      "description": "ताफ़ल एक औषधीय पौधा है जो अपने छोटे, डेज़ी जैसे फूलों के लिए जाना जाता है। यह मध्यम सूर्य प्रकाश और अच्छी तरह से जल निकासी वाली मिट्टी में उगता है।"
+      "common_name": "फीवरफ्यू",
+      "description": "फीवरफ्यू एक पारंपरिक औषधि में उपयोग होने वाली बारहमासी जड़ी-बूटी है। यह मध्यम रोशनी और अच्छी जल निकासी वाली मिट्टी में उगता है।"
     },
     "zh": {
-      "common_name": "菊花草",
-      "description": "菊花草是一种以小巧、类似雏菊的花朵著称的草药植物。它在适中的阳光和排水良好的土壤中生长。"
+      "common_name": "凤仙花",
+      "description": "凤仙花是一种多年生草本植物，常用于传统医学。它生长在中等光照和良好排水的土壤中。"
     },
     "ja": {
       "common_name": "フェバーフュー",
-      "description": "フェバーフューは小さなデイジーのような花で知られる薬草です。適度な日光と排水性の良い土壌で育ちます。"
+      "description": "フェバーフューは伝統的な薬草として使われる多年生植物です。中程度の光と良好な排水の土壌で育ちます。"
     },
     "ko": {
-      "common_name": "피버퓨",
-      "description": "피버퓨는 작은 데이지 같은 꽃으로 알려진 약용 식물입니다. 이 식물은 적당한 햇빛과 잘 배수된 토양에서 자랍니다."
+      "common_name": "페버퓨",
+      "description": "페버퓨는 전통 의학에서 사용되는 다년생 식물입니다. 중간 정도의 빛과 잘 배수되는 토양에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.gardenia.net/plant/tanacetum-parthenium-feverfew",
-      "https://www.rhs.org.uk/Plants/17462/Tanacetum-parthenium/Details"
+      "https://www.rhs.org.uk/plants/feverfew",
+      "https://www.gardenia.net/plant/tanacetum-parthenium"
     ]
   }
 }

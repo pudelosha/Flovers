@@ -7,12 +7,10 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -29,16 +27,16 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright light",
-          "pl": "Jasne światło",
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
           "de": "Helles Licht",
           "fr": "Lumière vive",
           "it": "Luce intensa",
-          "es": "Luz brillante",
+          "es": "Luz intensa",
           "pt": "Luz intensa",
-          "ar": "ضوء ساطع",
+          "ar": "ضوء قوي",
           "hi": "तेज रोशनी",
-          "zh": "明亮光照",
+          "zh": "强光",
           "ja": "明るい光",
           "ko": "밝은 빛"
         }
@@ -48,18 +46,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässige Erde",
-          "fr": "Sol drainant",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 흙"
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährstoffreich, drain.",
+          "fr": "Riche, drainant",
+          "it": "Ricco, drenante",
+          "es": "Rico, drenante",
+          "pt": "Rico, drenante",
+          "ar": "غنية وجيدة الصرف",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥·배수 양호"
         }
       }
     },
@@ -67,18 +65,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "en": "Evenly moist",
+          "pl": "Umiark. wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulière",
+          "it": "Umido costante",
+          "es": "Húmedo constante",
+          "pt": "Úmido constante",
+          "ar": "رطبة باعتدال",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "程よく湿らせる",
+          "ko": "촉촉하게 유지"
         }
       }
     },
@@ -86,18 +84,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgnacja",
-          "de": "Mittlere Pflege",
-          "fr": "Entretien moyen",
-          "it": "Cura media",
-          "es": "Cuidado medio",
-          "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
-          "ko": "중간 관리"
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
         }
       }
     },
@@ -105,18 +103,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm temperatures",
-          "pl": "Ciepła temperatura",
-          "de": "Warme Temperaturen",
-          "fr": "Températures chaudes",
-          "it": "Temperature calde",
-          "es": "Temperaturas cálidas",
-          "pt": "Temperaturas quentes",
-          "ar": "درجات دافئة",
-          "hi": "गर्म तापमान",
-          "zh": "温暖环境",
-          "ja": "暖かい環境",
-          "ko": "따뜻한 온도"
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
         }
       }
     },
@@ -124,18 +122,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Normale Luftfeuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة معتدلة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "通常の湿度",
-          "ko": "보통 습도"
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक आर्द्रता",
+          "zh": "较高湿度",
+          "ja": "高めの湿度",
+          "ko": "높은 습도"
         }
       }
     },
@@ -144,17 +142,17 @@
       "value": {
         "text": {
           "en": "Toxic if ingested",
-          "pl": "Toksyczna po spożyciu",
+          "pl": "Toksyczna po zjedz.",
           "de": "Giftig bei Verzehr",
-          "fr": "Toxique ingéré",
-          "it": "Tossica ingerita",
-          "es": "Tóxica ingerida",
-          "pt": "Tóxica ingerida",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
           "ar": "سامة عند الابتلاع",
-          "hi": "विषैली है",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "hi": "खाने पर विषैली",
+          "zh": "误食有毒",
+          "ja": "誤食で有毒",
+          "ko": "섭취 시 유독"
         }
       }
     },
@@ -165,15 +163,53 @@
           "en": "Fast-growing shrub",
           "pl": "Szybko rosnący krzew",
           "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
+          "fr": "Arbuste vigoureux",
+          "it": "Arbusto vigoroso",
+          "es": "Arbusto vigoroso",
+          "pt": "Arbusto vigoroso",
+          "ar": "شجيرة سريعة النمو",
           "hi": "तेजी से बढ़ता",
-          "zh": "快速生长",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "zh": "生长快的灌木",
+          "ja": "生長が早い低木",
+          "ko": "성장 빠른 관목"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid waterlogging",
+          "pl": "Nie przelewaj",
+          "de": "Staunässe vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evita ristagni",
+          "es": "Evita encharcar",
+          "pt": "Evite encharcamento",
+          "ar": "تجنب تشبع التربة",
+          "hi": "जलभराव से बचें",
+          "zh": "避免积水",
+          "ja": "過湿を避ける",
+          "ko": "과습 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Aphids, whiteflies",
+          "pl": "Mszyce, mączliki",
+          "de": "Blattläuse, Weiße Fl.",
+          "fr": "Pucerons, aleurodes",
+          "it": "Afidi, aleurodidi",
+          "es": "Pulgones, mosca bl.",
+          "pt": "Pulgões, mosca-br.",
+          "ar": "منّ وذبابة بيضاء",
+          "hi": "एफिड, व्हाइटफ्लाई",
+          "zh": "蚜虫、粉虱",
+          "ja": "アブラムシ、コナジラミ",
+          "ko": "진딧물, 가루이"
         }
       }
     }
@@ -181,58 +217,59 @@
   "translations": {
     "en": {
       "common_name": "Night-blooming jasmine",
-      "description": "Cestrum nocturnum is a tropical shrub known for its intensely fragrant flowers that open at night. It prefers bright light, warm temperatures, and regular watering during active growth."
+      "description": "A fast-growing shrub in the Solanaceae family with strongly fragrant flowers that open at night. Keep it in very bright light and water when the top of the mix starts to dry. All parts are toxic if ingested."
     },
     "pl": {
       "common_name": "Jaśmin nocny",
-      "description": "Cestrum nocturnum to tropikalny krzew o silnie pachnących kwiatach otwierających się nocą. Wymaga jasnego światła, ciepła i regularnego podlewania w okresie wzrostu."
+      "description": "Szybko rosnący krzew z rodziny psiankowatych o bardzo intensywnie pachnących kwiatach otwierających się nocą. Ustaw w bardzo jasnym miejscu i podlewaj, gdy wierzch podłoża lekko przeschnie. Wszystkie części są toksyczne po spożyciu."
     },
     "de": {
       "common_name": "Nachtjasmin",
-      "description": "Cestrum nocturnum ist ein tropischer Strauch mit stark duftenden, nachts blühenden Blüten. Er benötigt helles Licht, Wärme und regelmäßiges Gießen."
+      "description": "Schnell wachsender Strauch aus der Familie der Nachtschattengewächse mit stark duftenden, nachts öffnenden Blüten. Sehr hell stellen und gießen, wenn die oberste Schicht antrocknet. Alle Pflanzenteile sind bei Verzehr giftig."
     },
     "fr": {
       "common_name": "Jasmin de nuit",
-      "description": "Cestrum nocturnum est un arbuste tropical célèbre pour ses fleurs très parfumées qui s’ouvrent la nuit. Il aime la lumière vive, la chaleur et un arrosage régulier."
+      "description": "Arbuste vigoureux de la famille des Solanacées, aux fleurs très parfumées qui s'ouvrent la nuit. Placez-le en lumière très vive et arrosez quand la surface du substrat commence à sécher. Toutes les parties sont toxiques en cas d'ingestion."
     },
     "it": {
       "common_name": "Gelsomino notturno",
-      "description": "Cestrum nocturnum è un arbusto tropicale noto per i suoi fiori profumati che sbocciano di notte. Preferisce luce intensa, temperature calde e annaffiature regolari."
+      "description": "Arbusto a crescita rapida della famiglia delle Solanaceae con fiori molto profumati che si aprono di notte. Tienilo in luce molto intensa e annaffia quando lo strato superiore del terriccio inizia ad asciugare. È tossico se ingerito."
     },
     "es": {
-      "common_name": "Dama de noche",
-      "description": "Cestrum nocturnum es un arbusto tropical famoso por sus flores muy fragantes que se abren de noche. Necesita buena luz, calor y riego regular."
+      "common_name": "Jazmín nocturno",
+      "description": "Arbusto de rápido crecimiento de la familia Solanaceae con flores muy fragantes que se abren por la noche. Colócalo con luz muy intensa y riega cuando la capa superior del sustrato empiece a secarse. Todas las partes son tóxicas si se ingieren."
     },
     "pt": {
-      "common_name": "Dama-da-noite",
-      "description": "Cestrum nocturnum é um arbusto tropical conhecido pelas flores perfumadas que se abrem à noite. Gosta de luz intensa, calor e regas regulares."
+      "common_name": "Jasmim-da-noite",
+      "description": "Arbusto de crescimento rápido da família Solanaceae com flores muito perfumadas que abrem à noite. Mantenha em luz muito intensa e regue quando a superfície do substrato começar a secar. É tóxico se ingerido."
     },
     "ar": {
-      "common_name": "مسك الليل",
-      "description": "Cestrum nocturnum شجيرة استوائية معروفة بأزهارها العطرية التي تتفتح ليلاً. تحتاج إلى ضوء ساطع وحرارة وري منتظم."
+      "common_name": "ياسمين الليل",
+      "description": "شجيرة سريعة النمو من الفصيلة الباذنجانية بأزهار شديدة العطر تتفتح ليلاً. توضع في ضوء قوي جداً وتُسقى عندما يبدأ سطح التربة بالجفاف. جميع الأجزاء سامة عند الابتلاع."
     },
     "hi": {
-      "common_name": "रात रानी",
-      "description": "Cestrum nocturnum एक उष्णकटिबंधीय झाड़ी है जिसके फूल रात में बहुत सुगंधित होते हैं। इसे तेज रोशनी, गर्मी और नियमित पानी की आवश्यकता होती है।"
+      "common_name": "नाइट-ब्लूमिंग जैस्मिन",
+      "description": "यह सोलनैसी (Solanaceae) कुल का तेजी से बढ़ने वाला झाड़ीदार पौधा है, जिसके फूल रात में खिलते हैं और तेज़ सुगंध देते हैं। इसे बहुत तेज रोशनी में रखें और जब ऊपर की मिट्टी सूखने लगे तब पानी दें। खाने पर इसके सभी भाग विषैले हैं।"
     },
     "zh": {
       "common_name": "夜来香",
-      "description": "Cestrum nocturnum 是一种热带灌木，以夜间开放的浓香花朵著称。适合明亮光照、温暖环境和定期浇水。"
+      "description": "茄科的快速生长灌木，花在夜间开放并散发浓郁香味。放在非常明亮的光照处，盆土表层开始变干再浇水。误食有毒。"
     },
     "ja": {
-      "common_name": "ナイトジャスミン",
-      "description": "Cestrum nocturnum は夜に強い香りの花を咲かせる熱帯性低木です。明るい光と暖かい環境、定期的な水やりを好みます。"
+      "common_name": "ヨルカオル（夜香木）",
+      "description": "ナス科の生長が早い低木で、夜に咲く強い香りの花が特徴です。非常に明るい場所に置き、用土の表面が乾き始めたら水やりします。誤食すると有毒です。"
     },
     "ko": {
-      "common_name": "나이트 재스민",
-      "description": "Cestrum nocturnum은 밤에 향기로운 꽃을 피우는 열대 관목입니다. 밝은 빛과 따뜻한 환경, 규칙적인 물주기가 필요합니다."
+      "common_name": "야래향",
+      "description": "가지과의 빠르게 자라는 관목으로, 밤에 피는 강한 향의 꽃이 특징입니다. 매우 밝은 빛에서 키우고 흙 윗부분이 마르기 시작하면 물을 줍니다. 섭취 시 유독합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b709",
-      "https://www.rhs.org.uk/plants/cestrum/nocturnum/details",
-      "https://edis.ifas.ufl.edu/publication/FP154"
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?bt=4&taxonid=287193",
+      "https://www.thespruce.com/night-blooming-jasmine-growing-guide-5210438",
+      "https://weeds.dpi.nsw.gov.au/Weeds/Ladyofthenight",
+      "https://www.msdvetmanual.com/toxicology/poisonous-plants/houseplants-and-ornamentals-toxic-to-animals"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "homalomena_rubescens",
-  "name": "Homalomena Rubescens",
+  "name": "Homalomena rubescens",
   "latin": "Homalomena rubescens",
   "sun": "medium",
   "water": "medium",
@@ -11,16 +11,17 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid"
+    "aroid",
+    "green-plants"
   ],
   "water_required": true,
   "water_interval_days": 10,
-  "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "homalomena_rubescens.jpg",
   "image_thumb": "homalomena_rubescens.jpg",
   "traits": [
@@ -28,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne rozproszone",
-          "de": "Helles Streulicht",
-          "fr": "Lumière indirecte",
-          "it": "Luce indiretta",
-          "es": "Luz indirecta",
-          "pt": "Luz indireta",
-          "ar": "ضوء غير مباشر",
-          "hi": "अप्रत्यक्ष रोशनी",
-          "zh": "明亮散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining aroid",
-          "pl": "Przepuszczalne",
-          "de": "Gut drainiert",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 양호"
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep evenly moist",
-          "pl": "Umiarkowanie wilg.",
-          "de": "Gleichmäßig feucht",
-          "fr": "Humide régulièrement",
-          "it": "Umido regolare",
-          "es": "Humedad regular",
-          "pt": "Úmido regular",
-          "ar": "رطوبة معتدلة",
-          "hi": "समान नमी",
-          "zh": "保持湿润",
-          "ja": "適度な湿り気",
-          "ko": "고르게 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Średnia pielęgn.",
-          "de": "Mittlerer Pflege",
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
           "fr": "Entretien moyen",
           "it": "Cura media",
           "es": "Cuidado medio",
           "pt": "Cuidado médio",
-          "ar": "عناية متوسطة",
+          "ar": "رعاية متوسطة",
           "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度",
-          "ko": "중간 난이도"
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27 °C",
-          "pl": "18–27 °C",
-          "de": "18–27 °C",
-          "fr": "18–27 °C",
-          "it": "18–27 °C",
-          "es": "18–27 °C",
-          "pt": "18–27 °C",
-          "ar": "18–27°م",
-          "hi": "18–27 °C",
-          "zh": "18–27°C",
-          "ja": "18–27℃",
-          "ko": "18–27°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -124,8 +125,8 @@
       "value": {
         "text": {
           "en": "High humidity",
-          "pl": "Wysoka wilgotn.",
-          "de": "Hohe Luftfeuchte",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
           "fr": "Humidité élevée",
           "it": "Alta umidità",
           "es": "Alta humedad",
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic if ingested",
-          "pl": "Toksyczna",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossica",
-          "es": "Tóxica",
-          "pt": "Tóxica",
-          "ar": "سامة",
-          "hi": "विषैला",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성 있음"
+          "en": "Toxic to pets",
+          "pl": "Toksyny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
         }
       }
     },
@@ -161,77 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping foliage",
-          "pl": "Kępiasty wzrost",
-          "de": "Horstbildend",
-          "fr": "Touffue",
-          "it": "Crescita a cespo",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو كتلي",
-          "hi": "गुच्छेदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち",
-          "ko": "포기형 성장"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnąca",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느리게 자람"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter le sur-arrosage",
+          "it": "Evitare l'overwatering",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar o excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Red-stem Homalomena",
-      "description": "Homalomena rubescens is a tropical aroid with glossy green leaves and red petioles. It prefers warm temperatures, indirect light, and evenly moist soil. High humidity supports healthy growth indoors."
+      "common_name": "Red Flame Homalomena",
+      "description": "Homalomena rubescens, also known as Red Flame Homalomena, is a slow-growing tropical plant with dark green leaves and red undersides. It thrives in medium light and high humidity."
     },
     "pl": {
-      "common_name": "Homalomena czerwonopędowa",
-      "description": "Homalomena rubescens to tropikalna roślina z rodziny obrazkowatych o zielonych liściach i czerwonych ogonkach. Lubi ciepło, jasne rozproszone światło i umiarkowanie wilgotne podłoże. Wysoka wilgotność powietrza sprzyja wzrostowi."
+      "common_name": "Homalomena rubescens",
+      "description": "Homalomena rubescens, znana również jako Homalomena Czerwona, to wolno rosnąca roślina tropikalna o ciemnozielonych liściach i czerwonych spodach. Preferuje średnie oświetlenie i wysoką wilgotność."
     },
     "de": {
       "common_name": "Rote Homalomena",
-      "description": "Homalomena rubescens ist eine tropische Aronstabpflanze mit glänzenden Blättern und roten Blattstielen. Sie wächst am besten bei Wärme, indirektem Licht und gleichmäßig feuchter Erde. Hohe Luftfeuchtigkeit ist vorteilhaft."
+      "description": "Homalomena rubescens, auch als Rote Homalomena bekannt, ist eine langsam wachsende tropische Pflanze mit dunkelgrünen Blättern und roten Unterseiten. Sie gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit."
     },
     "fr": {
-      "common_name": "Homalomène rouge",
-      "description": "Homalomena rubescens est une plante tropicale aux feuilles brillantes et aux pétioles rouges. Elle apprécie la chaleur, la lumière indirecte et un sol légèrement humide. Une humidité élevée favorise sa croissance."
+      "common_name": "Homalomena rubescens",
+      "description": "Homalomena rubescens, également connue sous le nom de Homalomena Rouge, est une plante tropicale à croissance lente avec des feuilles vert foncé et des dessous rouges. Elle préfère une lumière modérée et une humidité élevée."
     },
     "it": {
-      "common_name": "Homalomena rossa",
-      "description": "Homalomena rubescens è una pianta tropicale con foglie verdi lucide e steli rossastri. Predilige temperature calde, luce indiretta e terreno costantemente umido. L’umidità elevata è benefica."
+      "common_name": "Homalomena rubescens",
+      "description": "Homalomena rubescens, conosciuta anche come Homalomena rossa, è una pianta tropicale a crescita lenta con foglie verdi scure e rossi sul retro. Cresce bene con luce media e alta umidità."
     },
     "es": {
-      "common_name": "Homalomena rojiza",
-      "description": "Homalomena rubescens es una planta tropical con hojas verdes brillantes y pecíolos rojos. Prefiere temperaturas cálidas, luz indirecta y suelo uniformemente húmedo. La alta humedad ambiental es recomendable."
+      "common_name": "Homalomena rubescens",
+      "description": "Homalomena rubescens, también conocida como Homalomena Roja, es una planta tropical de crecimiento lento con hojas verdes oscuras y rojas por debajo. Prefiere luz media y alta humedad."
     },
     "pt": {
-      "common_name": "Homalomena vermelha",
-      "description": "Homalomena rubescens é uma planta tropical com folhas brilhantes e hastes avermelhadas. Gosta de calor, luz indireta e substrato sempre levemente úmido. Umidade elevada ajuda no desenvolvimento."
+      "common_name": "Homalomena rubescens",
+      "description": "Homalomena rubescens, também conhecida como Homalomena Vermelha, é uma planta tropical de crescimento lento com folhas verdes escuras e inferiores vermelhas. Prefere luz média e alta umidade."
     },
     "ar": {
-      "common_name": "هومالومينا حمراء",
-      "description": "Homalomena rubescens نبات استوائي بأوراق خضراء لامعة وسيقان حمراء. يفضل الدفء والضوء غير المباشر وتربة رطبة باعتدال. الرطوبة العالية تساعد على نموه."
+      "common_name": "هومانولينا روبسنس",
+      "description": "هومانولينا روبسنس، والمعروفة أيضًا باسم هومانولينا الحمراء، هي نبات استوائي ينمو ببطء بأوراق خضراء داكنة ووجوه حمراء. يفضل الضوء المعتدل والرطوبة العالية."
     },
     "hi": {
-      "common_name": "रेड होमालोमेना",
-      "description": "Homalomena rubescens एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ चमकदार और डंठल लाल होते हैं। इसे गर्म तापमान, अप्रत्यक्ष रोशनी और समान नमी पसंद है। अधिक आर्द्रता इसके लिए लाभकारी होती है।"
+      "common_name": "हॉमलोमिना रुबेन्सेंस",
+      "description": "हॉमलोमिना रुबेन्सेंस, जिसे रेड फ्लेम हॉमलोमिना भी कहा जाता है, एक धीमी वृद्धि वाली उष्णकटिबंधीय पौधा है जिसमें गहरे हरे पत्ते और लाल अधर होते हैं। यह मध्यम प्रकाश और उच्च आर्द्रता में पनपता है।"
     },
     "zh": {
-      "common_name": "红柄合果芋",
-      "description": "Homalomena rubescens 是一种热带天南星科植物，具有光亮的绿叶和红色叶柄。它适合温暖环境、明亮散射光和均匀湿润的土壤。较高的空气湿度有助于生长。"
+      "common_name": "红焰霍马洛美娜",
+      "description": "Homalomena rubescens，红焰霍马洛美娜，又称红焰霍马洛美娜，是一种生长缓慢的热带植物，具有深绿色的叶子和红色的底面。它喜欢中等光照和高湿度。"
     },
     "ja": {
-      "common_name": "ホマロメナ・ルベスケンス",
-      "description": "Homalomena rubescens は光沢のある葉と赤い葉柄を持つ熱帯植物です。暖かさと明るい間接光、適度に湿った土を好みます。高い湿度が生育を助けます。"
+      "common_name": "ホマロメナ・ルベッセンス",
+      "description": "ホマロメナ・ルベッセンスは、赤い裏面を持つ濃緑色の葉を持つ遅い成長をする熱帯植物です。中程度の光と高い湿度で育ちます。"
     },
     "ko": {
-      "common_name": "레드 호말로메나",
-      "description": "Homalomena rubescens는 윤기 있는 잎과 붉은 잎자루를 가진 열대 식물입니다. 따뜻한 온도와 밝은 간접광, 고르게 촉촉한 토양을 선호합니다. 높은 습도가 성장에 도움이 됩니다."
+      "common_name": "호말로메나 루베센스",
+      "description": "호말로메나 루베센스는 어두운 녹색의 잎과 빨간색의 아래쪽을 가진 느리게 자라는 열대 식물입니다. 중간 정도의 빛과 높은 습도를 선호합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.kew.org/plants/homalomena-rubescens",
-      "https://www.rhs.org.uk/plants/search-results?query=Homalomena",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a123"
+      "https://www.gardeningknowhow.com/houseplants/homalomena-rubescens-care.htm",
+      "https://www.rhs.org.uk/plants/138938/homalomena-rubescens/details"
     ]
   }
 }

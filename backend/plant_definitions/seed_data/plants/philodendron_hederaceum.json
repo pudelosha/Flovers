@@ -1,6 +1,6 @@
 {
   "external_id": "philodendron_hederaceum",
-  "name": "Heartleaf Philodendron",
+  "name": "Philodendron hederaceum",
   "latin": "Philodendron hederaceum",
   "sun": "medium",
   "water": "medium",
@@ -11,13 +11,13 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "all-purpose",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": true,
-  "moisture_interval_days": 7,
+  "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Średnie światło",
+          "en": "Medium light",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम सूरज",
-          "zh": "中等阳光",
-          "ja": "中程度の光",
-          "ko": "중간 햇빛"
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Aroid mix",
-          "pl": "Mieszanka dla roślin aroidów",
-          "de": "Aroid-Mix",
-          "fr": "Mélange pour aroides",
-          "it": "Miscela per aroidi",
-          "es": "Mezcla para aroides",
-          "pt": "Mistura para aroides",
-          "ar": "مزيج للآرويد",
-          "hi": "एरोइड मिश्रण",
-          "zh": "阿罗伊德混合土",
-          "ja": "アロイドミックス",
-          "ko": "아로이드 혼합토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -69,13 +69,13 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
+          "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
           "pt": "Rega moderada",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम पानी",
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी देना",
           "zh": "适度浇水",
           "ja": "適度な水やり",
           "ko": "적당한 물주기"
@@ -95,7 +95,7 @@
           "pt": "Fácil",
           "ar": "سهل",
           "hi": "आसान",
-          "zh": "容易",
+          "zh": "简单",
           "ja": "簡単",
           "ko": "쉬운"
         }
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchtigkeit",
-          "fr": "Haute humidité",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
         }
       }
     },
@@ -144,7 +144,7 @@
       "value": {
         "text": {
           "en": "Toxic to pets",
-          "pl": "Toksyna dla zwierząt",
+          "pl": "Trujące dla zwierząt",
           "de": "Giftig für Haustiere",
           "fr": "Toxique pour les animaux",
           "it": "Tossico per gli animali",
@@ -153,8 +153,8 @@
           "ar": "سامة للحيوانات الأليفة",
           "hi": "पालतू जानवरों के लिए जहरीला",
           "zh": "对宠物有毒",
-          "ja": "ペットには有毒",
-          "ko": "반려동물에 유독"
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 유독"
         }
       }
     },
@@ -165,15 +165,53 @@
           "en": "Fast-growing",
           "pl": "Szybko rosnący",
           "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
+          "fr": "À croissance rapide",
+          "it": "A crescita rapida",
+          "es": "De rápido crecimiento",
           "pt": "Crescimento rápido",
           "ar": "نمو سريع",
-          "hi": "तेज बढ़ता हुआ",
+          "hi": "तेजी से बढ़ने वाला",
           "zh": "生长迅速",
-          "ja": "速く成長する",
-          "ko": "빠르게 성장"
+          "ja": "成長が早い",
+          "ko": "빠르게 성장하는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अفرति पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避けて",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,58 @@
   "translations": {
     "en": {
       "common_name": "Heartleaf Philodendron",
-      "description": "Philodendron hederaceum, also known as the Heartleaf Philodendron, is a popular, easy-care houseplant. It thrives in moderate light and enjoys regular watering and high humidity."
+      "description": "Philodendron hederaceum is a popular houseplant known for its trailing vines and heart-shaped leaves. It thrives in moderate light and needs regular watering."
     },
     "pl": {
-      "common_name": "Filodendron sercowy",
-      "description": "Philodendron hederaceum, znany również jako Filodendron sercowy, to popularna roślina doniczkowa, łatwa w pielęgnacji. Lubi umiarkowane światło, regularne podlewanie i wysoką wilgotność."
+      "common_name": "Filodendron hederaceum",
+      "description": "Filodendron hederaceum to popularna roślina doniczkowa, znana z pnączy i sercowatych liści. Lubi średnie światło i wymaga regularnego podlewania."
     },
     "de": {
       "common_name": "Herzblättriger Philodendron",
-      "description": "Philodendron hederaceum, auch Herzblättriger Philodendron genannt, ist eine beliebte, pflegeleichte Zimmerpflanze. Sie gedeiht bei mittlerem Licht und benötigt regelmäßiges Gießen sowie hohe Luftfeuchtigkeit."
+      "description": "Philodendron hederaceum ist eine beliebte Zimmerpflanze mit hängenden Ranken und herzförmigen Blättern. Sie gedeiht bei mittlerem Licht und benötigt regelmäßiges Gießen."
     },
     "fr": {
       "common_name": "Philodendron à feuilles en cœur",
-      "description": "Le Philodendron hederaceum, également appelé Philodendron à feuilles en cœur, est une plante d'intérieur populaire et facile à entretenir. Elle prospère à la lumière modérée et aime l'arrosage régulier et l'humidité élevée."
+      "description": "Le Philodendron hederaceum est une plante d'intérieur populaire connue pour ses tiges grimpantes et ses feuilles en forme de cœur. Elle préfère une lumière modérée et a besoin d'un arrosage régulier."
     },
     "it": {
-      "common_name": "Philodendron dalle foglie a cuore",
-      "description": "Il Philodendron hederaceum, noto anche come Philodendron dalle foglie a cuore, è una pianta d'appartamento popolare e facile da curare. Cresce bene in luce moderata e richiede annaffiature regolari e alta umidità."
+      "common_name": "Philodendron a foglie a cuore",
+      "description": "Il Philodendron hederaceum è una pianta d'appartamento molto popolare, nota per le sue viti e le foglie a forma di cuore. Cresce bene in luce moderata e ha bisogno di irrigazioni regolari."
     },
     "es": {
       "common_name": "Philodendron de hojas en forma de corazón",
-      "description": "El Philodendron hederaceum, también conocido como Philodendron de hojas en forma de corazón, es una planta de interior popular y fácil de cuidar. Crece bien con luz moderada y requiere riego regular y alta humedad."
+      "description": "El Philodendron hederaceum es una planta de interior popular conocida por sus vides colgantes y hojas en forma de corazón. Se desarrolla bien con luz moderada y requiere riego regular."
     },
     "pt": {
       "common_name": "Philodendron de folhas em forma de coração",
-      "description": "O Philodendron hederaceum, também conhecido como Philodendron de folhas em forma de coração, é uma planta popular e fácil de cuidar. Cresce bem com luz moderada e precisa de rega regular e alta umidade."
+      "description": "O Philodendron hederaceum é uma planta de interior popular, conhecida pelas suas vinhas e folhas em forma de coração. Prefere luz moderada e necessita de rega regular."
     },
     "ar": {
-      "common_name": "فيلوديندرون ذو الأوراق القلبية",
-      "description": "فيلوديندرون هيديراسيوم، المعروف أيضًا باسم فيلوديندرون ذو الأوراق القلبية، هو نبات داخلي شائع وسهل العناية. ينمو بشكل جيد في الضوء المعتدل ويحتاج إلى ري منتظم ورطوبة عالية."
+      "common_name": "فيلوديندرون أوراق القلب",
+      "description": "فيلوديندرون هيديراسيوم هو نبات داخلي شائع يعرف بكرومه وأوراقه على شكل قلب. يفضل الضوء المعتدل ويحتاج إلى سقي منتظم."
     },
     "hi": {
-      "common_name": "हृदयपर्णी फिलोडेंड्रोन",
-      "description": "फिलोडेंड्रोन हेडेरासियम, जिसे हृदयपर्णी फिलोडेंड्रोन भी कहा जाता है, एक लोकप्रिय और देखभाल में आसान पौधा है। यह मध्यम रोशनी में बढ़ता है और नियमित पानी और उच्च आर्द्रता की आवश्यकता होती है।"
+      "common_name": "हृदयपत्तीय फिलोडेंड्रोन",
+      "description": "फिलोडेंड्रोन हेडिरासियम एक लोकप्रिय घर का पौधा है जो अपनी लताओं और दिल के आकार के पत्तों के लिए जाना जाता है। यह मध्यम रोशनी में अच्छे से बढ़ता है और नियमित पानी की आवश्यकता होती है।"
     },
     "zh": {
-      "common_name": "心叶常春藤",
-      "description": "Philodendron hederaceum，也叫心叶常春藤，是一种流行且易于护理的室内植物。它喜欢中等阳光，定期浇水并需要较高的湿度。"
+      "common_name": "心叶铁线蕨",
+      "description": "心叶铁线蕨是一种流行的室内植物，以其垂直的藤蔓和心形叶片而闻名。它喜欢中等光照并需要定期浇水。"
     },
     "ja": {
-      "common_name": "ハートリーフ・フィロデンドロン",
-      "description": "フィロデンドロン・ヘデラケウム（ハートリーフ・フィロデンドロン）は、人気のある手入れが簡単な室内植物です。中程度の光で育ち、定期的な水やりと高湿度が必要です。"
+      "common_name": "ハートリーフフィロデンドロン",
+      "description": "フィロデンドロン・ヘデラセウムは、つる状の茎とハート形の葉が特徴の人気の室内植物です。中程度の光を好み、定期的な水やりが必要です。"
     },
     "ko": {
       "common_name": "하트리프 필로덴드론",
-      "description": "필로덴드론 헤더라케움, 또는 하트리프 필로덴드론은 인기 있고 손쉬운 관리가 가능한 실내 식물입니다. 중간 정도의 햇빛을 좋아하고 규칙적인 물 주기와 높은 습도가 필요합니다."
+      "description": "필로덴드론 헤데라세움은 인기 있는 실내 식물로, 그 덩굴과 심장 모양의 잎으로 유명합니다. 중간 정도의 빛에서 잘 자라며 규칙적인 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
+      "https://www.gardenersworld.com/plants/philodendron-hederaceum-care/",
       "https://www.rhs.org.uk/plants/philodendron-hederaceum",
-      "https://www.gardeningknowhow.com/houseplants/philodendron/philodendron-hederaceum-care.htm"
+      "https://www.pflanzenfreunde.com/philodendron-hederaceum"
     ]
   }
 }

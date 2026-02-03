@@ -7,12 +7,12 @@
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
+    "plastic",
     "ceramic"
   ],
   "recommended_soil_mixes": [
     "orchid",
-    "loam"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -30,17 +30,17 @@
       "value": {
         "text": {
           "en": "Medium light",
-          "pl": "Średnie światło",
+          "pl": "Światło średnie",
           "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 정도의 빛"
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba ilasta",
-          "de": "Lehmiger Boden",
-          "fr": "Sol argileux",
-          "it": "Suolo limoso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी की मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土土壌",
-          "ko": "점질토"
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnia ilość wody",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "مياه متوسطة",
-          "hi": "मध्यम पानी",
-          "zh": "适中水量",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित जलिंग",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の世話",
+          "ko": "중간 난이도"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15–25°C",
-          "pl": "15–25°C",
-          "de": "15–25°C",
-          "fr": "15–25°C",
-          "it": "15–25°C",
-          "es": "15–25°C",
-          "pt": "15–25°C",
-          "ar": "15–25°C",
-          "hi": "15–25°C",
-          "zh": "15–25°C",
-          "ja": "15–25°C",
-          "ko": "15–25°C"
+          "en": "18-22°C",
+          "pl": "18-22°C",
+          "de": "18-22°C",
+          "fr": "18-22°C",
+          "it": "18-22°C",
+          "es": "18-22°C",
+          "pt": "18-22°C",
+          "ar": "18-22°C",
+          "hi": "18-22°C",
+          "zh": "18-22°C",
+          "ja": "18-22°C",
+          "ko": "18-22°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低",
-          "ko": "낮음"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -151,9 +151,9 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अक्षारी",
+          "hi": "अविषाक्त",
           "zh": "无毒",
-          "ja": "非毒性",
+          "ja": "無毒",
           "ko": "비독성"
         }
       }
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Wolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "缓慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Moderat Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري المفرط",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Early Purple Orchid",
-      "description": "Orchis mascula is a hardy orchid native to Europe and Asia. It thrives in temperate woodlands with moderate sunlight and well-drained soil."
+      "description": "Orchis mascula, known as the Early Purple Orchid, is a hardy, perennial flower native to Europe. It blooms in spring with purple flowers."
     },
     "pl": {
-      "common_name": "Wczesny orchidei purpurowy",
-      "description": "Orchis mascula to wytrzymała orchidea występująca w Europie i Azji. Rośnie w umiarkowanych lasach o średnim nasłonecznieniu i dobrze odwodnionych glebach."
+      "common_name": "Storczyk wczesny fioletowy",
+      "description": "Orchis mascula, znany jako storczyk wczesny fioletowy, to wieloletnia roślina kwitnąca na wiosnę fioletowymi kwiatami."
     },
     "de": {
-      "common_name": "Frühpurpur-Orchidee",
-      "description": "Orchis mascula ist eine robuste Orchidee, die in Europa und Asien heimisch ist. Sie wächst in gemäßigten Wäldern mit mäßigem Sonnenlicht und gut durchlässigem Boden."
+      "common_name": "Frühzeitige Purpurorchidee",
+      "description": "Orchis mascula, auch Frühzeitige Purpurorchidee genannt, ist eine mehrjährige Pflanze, die im Frühling mit violetten Blüten blüht."
     },
     "fr": {
       "common_name": "Orchidée pourpre précoce",
-      "description": "Orchis mascula est une orchidée robuste originaire d'Europe et d'Asie. Elle prospère dans les forêts tempérées avec une lumière modérée et un sol bien drainé."
+      "description": "L'Orchis mascula, connue sous le nom d'orchidée pourpre précoce, est une plante vivace qui fleurit au printemps avec des fleurs violettes."
     },
     "it": {
       "common_name": "Orchidea viola precoce",
-      "description": "Orchis mascula è un'orchidea resistente originaria dell'Europa e dell'Asia. Cresce nelle foreste temperate con luce moderata e terreni ben drenati."
+      "description": "L'Orchis mascula, conosciuta come orchidea viola precoce, è una pianta perenne che fiorisce in primavera con fiori viola."
     },
     "es": {
       "common_name": "Orquídea morada temprana",
-      "description": "Orchis mascula es una orquídea resistente originaria de Europa y Asia. Crece en bosques templados con luz moderada y suelos bien drenados."
+      "description": "La Orchis mascula, conocida como la orquídea morada temprana, es una planta perenne que florece en primavera con flores moradas."
     },
     "pt": {
       "common_name": "Orquídea roxa precoce",
-      "description": "Orchis mascula é uma orquídea resistente originária da Europa e Ásia. Cresce em florestas temperadas com luz moderada e solo bem drenado."
+      "description": "A Orchis mascula, conhecida como orquídea roxa precoce, é uma planta perene que floresce na primavera com flores roxas."
     },
     "ar": {
-      "common_name": "زهرة الأوركيد الأرجوانية المبكرة",
-      "description": "Orchis mascula هو نوع من الأوركيد الصلب الأصلي في أوروبا وآسيا. ينمو في الغابات المعتدلة مع ضوء معتدل وتربة جيدة التصريف."
+      "common_name": "زهرة الأوركيد البنفسجية المبكرة",
+      "description": "أوركيس ماسكولا، المعروفة باسم زهرة الأوركيد البنفسجية المبكرة، هي نبات معمر يزهر في الربيع مع أزهار بنفسجية."
     },
     "hi": {
       "common_name": "प्रारंभिक बैंगनी आर्किड",
-      "description": "Orchis mascula एक मजबूत आर्किड है जो यूरोप और एशिया का मूल निवासी है। यह ठंडी जंगलों में उगता है, जहाँ मध्यम सूरज की रोशनी और अच्छी जल निकासी वाली मिट्टी होती है।"
+      "description": "ऑर्किस मास्कुला, जिसे प्रारंभिक बैंगनी आर्किड कहा जाता है, एक जीवित रहनेवाला पौधा है जो वसंत में बैंगनी फूलों के साथ खिलता है।"
     },
     "zh": {
-      "common_name": "早紫兰",
-      "description": "Orchis mascula 是一种耐寒的兰花，原产于欧洲和亚洲。它在温带森林中生长，享受适度的阳光和良好排水的土壤。"
+      "common_name": "早期紫色兰花",
+      "description": "Orchis mascula，又名早期紫色兰花，是一种多年生植物，春季开紫色花朵。"
     },
     "ja": {
-      "common_name": "早紫色のラン",
-      "description": "Orchis masculaはヨーロッパとアジアに自生する耐寒性のランです。適度な日光と良好な排水性土壌の温帯林で育ちます。"
+      "common_name": "早咲きの紫色ラン",
+      "description": "オーキス・マスキュラ（早咲きの紫色ラン）は春に紫色の花を咲かせる多年生植物です。"
     },
     "ko": {
-      "common_name": "조기 자주난초",
-      "description": "Orchis mascula는 유럽과 아시아 원산의 내한성이 강한 난초입니다. 적당한 햇빛과 잘 배수되는 토양을 갖춘 온대 숲에서 자랍니다."
+      "common_name": "초기 자주색 난초",
+      "description": "오르키스 마스큘라(초기 자주색 난초)는 봄에 자주색 꽃을 피우는 다년생 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=360",
-      "https://www.bgci.org/garden_search.php?action=Find&garden=204"
+      "https://www.rhs.org.uk/plants/overview",
+      "https://www.bgci.org/gardens"
     ]
   }
 }

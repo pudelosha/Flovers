@@ -1,18 +1,18 @@
 {
   "external_id": "stapelia_variegata",
-  "name": "Starfish Flower",
+  "name": "Variegated Stapelia",
   "latin": "Stapelia variegata",
   "sun": "medium",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "terracotta",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -37,10 +37,10 @@
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
+          "hi": "मध्यम रोशनी",
           "zh": "中等光照",
           "ja": "中程度の光",
-          "ko": "중간 빛"
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaszczysta gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sableux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेतीली मिट्टी",
-          "zh": "沙质土壤",
-          "ja": "砂地",
-          "ko": "모래 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 잘되는 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "الري المعتدل",
+          "en": "Water moderately",
+          "pl": "Podlewać umiarkowanie",
+          "de": "Mäßig gießen",
+          "fr": "Arroser modérément",
+          "it": "Annaffiare moderatamente",
+          "es": "Regar moderadamente",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
           "hi": "मध्यम पानी देना",
           "zh": "适量浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "ja": "適度に水やり",
+          "ko": "적당히 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18-24°C",
-          "pl": "18-24°C",
-          "de": "18-24°C",
-          "fr": "18-24°C",
-          "it": "18-24°C",
-          "es": "18-24°C",
-          "pt": "18-24°C",
-          "ar": "18-24°C",
-          "hi": "18-24°C",
-          "zh": "18-24°C",
-          "ja": "18-24°C",
-          "ko": "18-24°C"
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
         }
       }
     },
@@ -124,16 +124,16 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niskie",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "नमीयां कम",
-          "zh": "低湿",
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "नमनीयता कम",
+          "zh": "低湿度",
           "ja": "低湿度",
           "ko": "낮은 습도"
         }
@@ -145,16 +145,16 @@
         "text": {
           "en": "Non-toxic",
           "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
+          "de": "Ungiftig",
           "fr": "Non toxique",
           "it": "Non tossico",
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "무독성"
         }
       }
     },
@@ -162,76 +162,114 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow-growing",
-          "pl": "Wolno rosnący",
-          "de": "Langsam wachsend",
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
           "fr": "Croissance lente",
           "it": "Crescita lenta",
           "es": "Crecimiento lento",
           "pt": "Crescimento lento",
           "ar": "نمو بطيء",
           "hi": "धीमी वृद्धि",
-          "zh": "生长缓慢",
-          "ja": "成長が遅い",
-          "ko": "느리게 자라는"
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'arrosage excessif",
+          "it": "Evitare l'irrigazione eccessiva",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기 피하기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時々発生する害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Starfish Flower",
-      "description": "Stapelia variegata is a succulent native to Southern Africa. Known for its star-shaped flowers with striking patterns."
+      "common_name": "Variegated Stapelia",
+      "description": "Stapelia variegata is a succulent plant known for its star-shaped flowers and unique appearance. It thrives in well-drained soil with moderate watering."
     },
     "pl": {
-      "common_name": "Kwiat rozgwiazdy",
-      "description": "Stapelia variegata to sukulent pochodzący z Afryki Południowej. Znany z gwiaździstych kwiatów o wyrazistych wzorach."
+      "common_name": "Variegowana Stapelia",
+      "description": "Stapelia variegata to sukulentna roślina o gwiaździstych kwiatach. Wymaga dobrze przepuszczalnej gleby i umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Sternblumen",
-      "description": "Stapelia variegata ist eine Sukkulente aus Südafrika. Bekannt für ihre sternförmigen Blumen mit markanten Mustern."
+      "common_name": "Variegierte Stapelia",
+      "description": "Stapelia variegata ist eine Sukkulente mit sternförmigen Blüten und einzigartigem Aussehen. Sie gedeiht in gut durchlässigem Boden und mäßigem Gießen."
     },
     "fr": {
-      "common_name": "Fleur étoilée",
-      "description": "Stapelia variegata est une succulente originaire d'Afrique du Sud. Connue pour ses fleurs en forme d'étoile avec des motifs frappants."
+      "common_name": "Stapélia panachée",
+      "description": "Stapelia variegata est une plante succulente avec des fleurs en forme d'étoile. Elle préfère un sol bien drainé et un arrosage modéré."
     },
     "it": {
-      "common_name": "Fiore a stella",
-      "description": "Stapelia variegata è una succulenta originaria del Sudafrica. Conosciuta per i suoi fiori a forma di stella con motivi distintivi."
+      "common_name": "Stapelia variegata",
+      "description": "Stapelia variegata è una pianta succulenta con fiori a forma di stella. Preferisce terreni ben drenati e annaffiature moderate."
     },
     "es": {
-      "common_name": "Flor Estrella",
-      "description": "Stapelia variegata es una suculenta originaria del sur de África. Conocida por sus flores en forma de estrella con patrones distintivos."
+      "common_name": "Stapelia variegata",
+      "description": "Stapelia variegata es una planta suculenta conocida por sus flores en forma de estrella. Crece mejor en suelos bien drenados con riego moderado."
     },
     "pt": {
-      "common_name": "Flor Estrela",
-      "description": "Stapelia variegata é uma suculenta nativa do sul da África. Conhecida por suas flores em forma de estrela com padrões marcantes."
+      "common_name": "Stapelia variegata",
+      "description": "Stapelia variegata é uma planta suculenta com flores em forma de estrela. Prefere solo bem drenado e rega moderada."
     },
     "ar": {
-      "common_name": "زهرة النجمة",
-      "description": "ستابيليا فاريويجاتا هي نبتة عصارية موطنها جنوب أفريقيا. معروفة بأزهارها على شكل نجمة مع أنماط لافتة."
+      "common_name": "ستابيليا متنوع",
+      "description": "Stapelia variegata هي نبات عصاري معروف بأزهاره على شكل نجمة. ينمو في تربة جيدة التصريف مع ري معتدل."
     },
     "hi": {
-      "common_name": "तारा फूल",
-      "description": "स्टेपेलिया वेरिगाटा एक रसीला पौधा है जो दक्षिणी अफ्रीका का मूल निवासी है। यह अपने तारे के आकार के फूलों के लिए प्रसिद्ध है, जो आकर्षक पैटर्नों के साथ होते हैं।"
+      "common_name": "वैरिगेटेड स्टेपेलिया",
+      "description": "Stapelia variegata एक सुगंधित पौधा है जिसमें तारा आकार के फूल होते हैं। यह अच्छे जल निकासी वाली मिट्टी में और मध्यम पानी में उगता है।"
     },
     "zh": {
-      "common_name": "星形花",
-      "description": "斯塔佩利亚·瓦里戈塔是一种原产于南非的多肉植物。以其星形的花朵和独特的图案而闻名。"
+      "common_name": "变种 Stapelia",
+      "description": "Stapelia variegata 是一种多肉植物，具有星形的花朵和独特的外观。它喜欢排水良好的土壤和适度的浇水。"
     },
     "ja": {
-      "common_name": "星形花",
-      "description": "スタペリア・ヴァリエガータは南アフリカ原産の多肉植物です。星形の花と特徴的な模様で知られています。"
+      "common_name": "バリエガタ・ステープリア",
+      "description": "Stapelia variegata は星形の花を持つ多肉植物です。排水の良い土壌と適度な水やりが必要です。"
     },
     "ko": {
-      "common_name": "별꽃",
-      "description": "스태펠리아 바리에가타는 남아프리카 원산의 다육 식물입니다. 별 모양의 꽃과 독특한 패턴으로 유명합니다."
+      "common_name": "변종 스테이펠리아",
+      "description": "Stapelia variegata는 별 모양의 꽃을 가진 다육 식물입니다. 잘 배수되는 토양과 적당한 물주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/74183/stapelia-variegata",
-      "https://www.gardenia.net/plant/stapelia-variegata"
+      "https://www.rhs.org.uk/plants/16255/stapelia-variegata/details",
+      "https://www.botanicalgarden.ubc.ca/palms-and-succulents/"
     ]
   }
 }

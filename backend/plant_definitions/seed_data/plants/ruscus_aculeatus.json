@@ -2,20 +2,20 @@
   "external_id": "ruscus_aculeatus",
   "name": "Butcher's Broom",
   "latin": "Ruscus aculeatus",
-  "sun": "medium",
+  "sun": "low",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta",
-    "plastic"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等光照",
-          "ja": "中光",
-          "ko": "중간 빛"
+          "en": "Low light",
+          "pl": "Słabe światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Luce bassa",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "إضاءة منخفضة",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "저조도"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loamy soil",
-          "pl": "Gleba próchnicza",
-          "de": "Lehmiger Boden",
-          "fr": "Sol limoneux",
-          "it": "Terreno limoso",
-          "es": "Suelo limoso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "लवणयुक्त मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土土壌",
-          "ko": "점토 토양"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性良好",
+          "ko": "배수 잘되는"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate",
           "pl": "Umiarkowane",
-          "de": "Moderat",
+          "de": "Mäßig",
           "fr": "Modéré",
           "it": "Moderato",
           "es": "Moderado",
           "pt": "Moderado",
           "ar": "معتدل",
-          "hi": "मध्यम पानी",
+          "hi": "मध्यम",
           "zh": "适中",
-          "ja": "適度な",
-          "ko": "적당한 물"
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low to medium",
-          "pl": "Niskie do średnie",
-          "de": "Niedrig bis mittel",
-          "fr": "Faible à moyenne",
-          "it": "Bassa a media",
-          "es": "Baja a media",
-          "pt": "Baixa a média",
-          "ar": "منخفض إلى متوسط",
-          "hi": "कम से मध्यम",
-          "zh": "低到中等",
-          "ja": "低〜中",
-          "ko": "낮음에서 중간"
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
         }
       }
     },
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para las mascotas",
-          "pt": "Tóxico para animais",
-          "ar": "سام للحيوانات",
-          "hi": "पालतू जानवरों के लिए जहरीला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에게 독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -163,17 +163,55 @@
       "value": {
         "text": {
           "en": "Slow",
-          "pl": "Powolny",
+          "pl": "Wolny",
           "de": "Langsam",
           "fr": "Lent",
           "it": "Lento",
           "es": "Lento",
           "pt": "Lento",
           "ar": "بطيء",
-          "hi": "धीमे",
+          "hi": "धीमा",
           "zh": "缓慢",
           "ja": "遅い",
           "ko": "느림"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de riego",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물 주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折の害虫",
+          "ko": "간헐적인 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Butcher's Broom",
-      "description": "Ruscus aculeatus, or butcher's broom, is a spiny shrub native to Europe. It is often used for medicinal purposes and has distinctive red berries."
+      "description": "Ruscus aculeatus is an evergreen shrub native to Europe. It is often grown as an ornamental plant."
     },
     "pl": {
-      "common_name": "Miotła rzeźnicza",
-      "description": "Ruscus aculeatus, czyli miotła rzeźnicza, to kolczasty krzew pochodzący z Europy. Jest często wykorzystywany w celach leczniczych, a jego cechą charakterystyczną są czerwone jagody."
+      "common_name": "Ruskus ostrokończysty",
+      "description": "Ruscus aculeatus to zimozielony krzew rodem z Europy. Często uprawiany jako roślina ozdobna."
     },
     "de": {
-      "common_name": "Pfrüchtiger Bärentraube",
-      "description": "Ruscus aculeatus, auch als Pfrüchtige Bärentraube bekannt, ist ein stacheliger Strauch aus Europa. Er wird oft zu medizinischen Zwecken verwendet und hat auffällige rote Beeren."
+      "common_name": "Pfeilspitzenbusch",
+      "description": "Ruscus aculeatus ist ein immergrüner Strauch aus Europa. Er wird oft als Zierpflanze angebaut."
     },
     "fr": {
-      "common_name": "Balai du boucher",
-      "description": "Ruscus aculeatus, ou balai du boucher, est un buisson épineux originaire d'Europe. Il est souvent utilisé à des fins médicinales et possède des baies rouges caractéristiques."
+      "common_name": "Ruscus épineux",
+      "description": "Ruscus aculeatus est un arbuste à feuillage persistant originaire d'Europe. Il est souvent cultivé comme plante ornementale."
     },
     "it": {
-      "common_name": "Scopa del macellaio",
-      "description": "Ruscus aculeatus, noto anche come scopa del macellaio, è un cespuglio spinoso originario dell'Europa. È spesso utilizzato per scopi medicinali e ha bacche rosse caratteristiche."
+      "common_name": "Ruscus aculeatus",
+      "description": "Ruscus aculeatus è un arbusto sempreverde originario dell'Europa. Viene spesso coltivato come pianta ornamentale."
     },
     "es": {
-      "common_name": "Escoba del carnicero",
-      "description": "Ruscus aculeatus, o escoba del carnicero, es un arbusto espinoso originario de Europa. A menudo se utiliza con fines medicinales y tiene bayas rojas distintivas."
+      "common_name": "Ruscus aculeatus",
+      "description": "Ruscus aculeatus es un arbusto perenne originario de Europa. Se cultiva a menudo como planta ornamental."
     },
     "pt": {
-      "common_name": "Vassoura do açougueiro",
-      "description": "Ruscus aculeatus, ou vassoura do açougueiro, é um arbusto espinhoso originário da Europa. É frequentemente utilizado para fins medicinais e possui bagas vermelhas características."
+      "common_name": "Ruscus aculeatus",
+      "description": "Ruscus aculeatus é um arbusto perene nativo da Europa. Frequentemente cultivado como planta ornamental."
     },
     "ar": {
-      "common_name": "مقشة الجزار",
-      "description": "Ruscus aculeatus، أو مقشة الجزار، هو شجيرة شوكية موطنها أوروبا. غالبًا ما يتم استخدامه لأغراض طبية وله توت أحمر مميز."
+      "common_name": "روسكس إيكولياتوس",
+      "description": "Ruscus aculeatus هو شجيرة دائمة الخضرة موطنها أوروبا. يتم زراعته غالبًا كنبات زينة."
     },
     "hi": {
-      "common_name": "बटलर का झाड़ू",
-      "description": "Ruscus aculeatus, या बटलर का झाड़ू, यूरोप का एक कांटेदार झाड़ू है। इसका उपयोग अक्सर औषधीय उद्देश्यों के लिए किया जाता है और इसमें लाल बेर होते हैं।"
+      "common_name": "रुस्कस अक्यूलियाटस",
+      "description": "Ruscus aculeatus एक सदाबहार झाड़ी है जो यूरोप का मूल निवास है। इसे अक्सर सजावटी पौधे के रूप में उगाया जाता है।"
     },
     "zh": {
-      "common_name": "屠夫扫帚",
-      "description": "Ruscus aculeatus，或屠夫扫帚，是一种原产于欧洲的有刺灌木。它常用于药用，具有显著的红色浆果。"
+      "common_name": "刺果蓝花楹",
+      "description": "Ruscus aculeatus 是一种常绿灌木，原产于欧洲。它通常作为观赏植物种植。"
     },
     "ja": {
-      "common_name": "肉屋のほうき",
-      "description": "Ruscus aculeatus、または肉屋のほうきは、ヨーロッパ原産の棘のある低木です。薬用目的でよく使用され、特徴的な赤いベリーがあります。"
+      "common_name": "ルスカス・アクレアタス",
+      "description": "Ruscus aculeatus はヨーロッパ原産の常緑灌木です。観賞用植物としてよく栽培されます。"
     },
     "ko": {
-      "common_name": "정육점 빗자루",
-      "description": "Ruscus aculeatus, 또는 정육점 빗자루는 유럽 원산지의 가시가 있는 관목입니다. 약용으로 자주 사용되며 특징적인 빨간 열매를 가지고 있습니다."
+      "common_name": "부처의 빗자루",
+      "description": "Ruscus aculeatus는 유럽 원산의 상록 관목입니다. 종종 장식용 식물로 재배됩니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10086/ruscus-aculeatus",
-      "https://www.gardenia.net/plant/ruscus-aculeatus-butcher-s-broom"
+      "https://www.rhs.org.uk/plants/10018/rascus-aculeatus/Details",
+      "https://www.gardeningknowhow.com/ornamental/shrubs/ruscus-aculeatus-plant-care.htm"
     ]
   }
 }

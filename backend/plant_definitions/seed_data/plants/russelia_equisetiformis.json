@@ -2,26 +2,26 @@
   "external_id": "russelia_equisetiformis",
   "name": "Firecracker Plant",
   "latin": "Russelia equisetiformis",
-  "sun": "medium",
+  "sun": "high",
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "ceramic",
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "sandy"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 10,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "russelia_equisetiformis.jpg",
   "image_thumb": "russelia_equisetiformis.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 광도"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole diretto",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
         }
       }
     },
@@ -56,10 +56,10 @@
           "es": "Suelo bien drenado",
           "pt": "Solo bem drenado",
           "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
           "zh": "排水良好的土壤",
           "ja": "排水の良い土",
-          "ko": "배수 좋은 토양"
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -69,16 +69,16 @@
         "text": {
           "en": "Moderate watering",
           "pl": "Umiarkowane podlewanie",
-          "de": "Mäßige Bewässerung",
+          "de": "Mäßiges Gießen",
           "fr": "Arrosage modéré",
           "it": "Annaffiatura moderata",
           "es": "Riego moderado",
-          "pt": "Regar moderadamente",
-          "ar": "الري المعتدل",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
           "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
+          "zh": "适量浇水",
           "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -96,7 +96,7 @@
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
-          "ja": "中",
+          "ja": "中級",
           "ko": "중간"
         }
       }
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Caliente",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "Warm, 20-30°C",
+          "pl": "Ciepło, 20-30°C",
+          "de": "Wärme, 20-30°C",
+          "fr": "Chaud, 20-30°C",
+          "it": "Caldo, 20-30°C",
+          "es": "Caliente, 20-30°C",
+          "pt": "Quente, 20-30°C",
+          "ar": "دافئ، 20-30°C",
+          "hi": "गर्म, 20-30°C",
+          "zh": "温暖，20-30°C",
+          "ja": "温暖、20-30°C",
+          "ko": "따뜻함, 20-30°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowana",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderada",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适中",
-          "ja": "中程度",
-          "ko": "적당한"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -151,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "अविषाक्त",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Moderate growth",
-          "pl": "Średni wzrost",
-          "de": "Mäßiges Wachstum",
-          "fr": "Croissance modérée",
-          "it": "Crescita moderata",
-          "es": "Crecimiento moderado",
-          "pt": "Crescimento moderado",
-          "ar": "نمو معتدل",
-          "hi": "मध्यम वृद्धि",
-          "zh": "适中生长",
-          "ja": "中くらいの成長",
-          "ko": "중간 성장"
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare il ristagno",
+          "es": "Evitar el riego excesivo",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الري المفرط",
+          "hi": "अفرत पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "水のやりすぎを避ける",
+          "ko": "과도한 물 주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "अवसरिक कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Firecracker Plant",
-      "description": "The firecracker plant is a shrub with slender, green stems and tubular red flowers. It thrives in well-drained soil and moderate sunlight."
+      "description": "A vibrant, bushy plant with tubular red flowers. It thrives in full sun and requires moderate watering."
     },
     "pl": {
-      "common_name": "Roślina fajerwerkowa",
-      "description": "Roślina fajerwerkowa to krzew o cienkich, zielonych pędach i rurkowatych czerwonych kwiatach. Rośnie w dobrze przepuszczalnej glebie i umiarkowanym świetle."
+      "common_name": "Roślinna petarda",
+      "description": "Roślina o intensywnych czerwonych kwiatach, rosnąca w pełnym słońcu, wymaga umiarkowanego podlewania."
     },
     "de": {
-      "common_name": "Feuerwerksblume",
-      "description": "Die Feuerwerksblume ist ein Strauch mit dünnen, grünen Stängeln und röhrenförmigen roten Blüten. Sie gedeiht in gut durchlässigem Boden und mäßigem Licht."
+      "common_name": "Feuerwerkspflanze",
+      "description": "Eine lebendige Pflanze mit röhrenförmigen roten Blüten. Sie gedeiht in voller Sonne und benötigt mäßiges Gießen."
     },
     "fr": {
-      "common_name": "Plante Feu d'Artifice",
-      "description": "La plante feu d'artifice est un arbuste aux tiges vertes fines et aux fleurs rouges tubulaires. Elle prospère dans un sol bien drainé et une lumière modérée."
+      "common_name": "Plante pétard",
+      "description": "Une plante vibrante avec des fleurs rouges tubulaires. Elle prospère en plein soleil et nécessite un arrosage modéré."
     },
     "it": {
       "common_name": "Pianta Fuochi d'Artificio",
-      "description": "La pianta fuochi d'artificio è un arbusto con steli verdi sottili e fiori rossi tubolari. Cresce in terreno ben drenato e luce moderata."
+      "description": "Una pianta vivace con fiori rossi tubulari. Cresce al sole pieno e richiede irrigazione moderata."
     },
     "es": {
       "common_name": "Planta Cohete",
-      "description": "La planta cohete es un arbusto con tallos delgados y verdes y flores rojas en forma de tubo. Se desarrolla en suelos bien drenados y luz moderada."
+      "description": "Una planta vibrante con flores rojas tubulares. Crece a pleno sol y requiere riego moderado."
     },
     "pt": {
-      "common_name": "Planta Foguete",
-      "description": "A planta foguete é um arbusto com hastes finas e verdes e flores vermelhas em forma de tubo. Cresce em solo bem drenado e luz moderada."
+      "common_name": "Planta de Foguetes",
+      "description": "Uma planta vibrante com flores vermelhas tubulares. Cresce sob luz solar direta e precisa de rega moderada."
     },
     "ar": {
-      "common_name": "نبات الألعاب النارية",
-      "description": "نبات الألعاب النارية هو شجيرة ذات سيقان رقيقة وخضراء وأزهار حمراء أنبوبية. يزدهر في التربة جيدة التصريف وأشعة الشمس المعتدلة."
+      "common_name": "نبات صواريخ",
+      "description": "نبات حيوي ذو زهور حمراء على شكل أنابيب. يزدهر تحت الشمس الكاملة ويتطلب ري معتدل."
     },
     "hi": {
-      "common_name": "आतिशबाज़ी पौधा",
-      "description": "आतिशबाज़ी पौधा एक झाड़ी है जिसमें पतले, हरे तने और लाल रंग के ट्यूब जैसी फूल होते हैं। यह अच्छी तरह से जल निकासी वाली मिट्टी और मध्यम धूप में उगता है।"
+      "common_name": "पटाखा पौधा",
+      "description": "एक जीवंत पौधा जिसमें ट्यूबलर लाल फूल होते हैं। यह पूरी धूप में पनपता है और इसके लिए मध्यम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "烟花植物",
-      "description": "烟花植物是一种灌木，具有细长的绿色茎和红色管状花朵。它在排水良好的土壤和适中的阳光下茁壮成长。"
+      "description": "一种充满活力的植物，拥有管状红色花朵。它在阳光充足的地方茁壮成长，并需要适量浇水。"
     },
     "ja": {
-      "common_name": "花火の植物",
-      "description": "花火の植物は細長い緑の茎と赤い筒状の花を持つ低木です。排水性の良い土壌と適度な光で成長します。"
+      "common_name": "花火植物",
+      "description": "チューブ状の赤い花を持つ活気のある植物。直射日光で成長し、適度な水やりが必要です。"
     },
     "ko": {
       "common_name": "불꽃놀이 식물",
-      "description": "불꽃놀이 식물은 가늘고 초록색 줄기와 빨간색 튜브 모양의 꽃을 가진 관목입니다. 배수가 좋은 토양과 적당한 햇빛에서 잘 자랍니다."
+      "description": "튜브 모양의 빨간 꽃을 가진 활기찬 식물. 직사광선에서 자라며 적당한 물 주기가 필요합니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/popular/firecracker-plant",
-      "https://www.gardenia.net/plant/russelia-equisetiformis"
+      "https://www.rhs.org.uk/advice/profile?pid=503",
+      "https://www.gardenia.net/plant/russelia-equisetiformis-firecracker-plant"
     ]
   }
 }

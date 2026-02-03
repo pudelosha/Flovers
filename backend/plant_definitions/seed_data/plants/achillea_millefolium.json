@@ -3,22 +3,23 @@
   "name": "Yarrow",
   "latin": "Achillea millefolium",
   "sun": "high",
-  "water": "low",
-  "difficulty": "easy",
+  "water": "medium",
+  "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "terracotta",
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
-  "water_interval_days": 14,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "achillea_millefolium.jpg",
@@ -36,10 +37,10 @@
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूरा सूरज",
           "zh": "全日照",
-          "ja": "日当たり良好",
-          "ko": "양지"
+          "ja": "直射日光",
+          "ko": "완전한 햇빛"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenante",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة الصرف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مُصفى جيداً",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "良く排水された土",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Low watering",
-          "pl": "Mało wody",
-          "de": "Wenig gießen",
-          "fr": "Arrosage faible",
-          "it": "Poca acqua",
-          "es": "Riego bajo",
-          "pt": "Pouca água",
-          "ar": "ري خفيف",
-          "hi": "कम पानी",
-          "zh": "少量浇水",
-          "ja": "水控えめ",
-          "ko": "적은 물"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
         }
       }
     },
@@ -85,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Einfach",
-          "fr": "Facile",
-          "it": "Facile",
-          "es": "Fácil",
-          "pt": "Fácil",
-          "ar": "سهل",
-          "hi": "आसान",
-          "zh": "容易",
-          "ja": "簡単",
-          "ko": "쉬움"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool tolerant",
-          "pl": "Odporna na chłód",
-          "de": "Kältetolerant",
-          "fr": "Tolère le froid",
-          "it": "Resiste al freddo",
-          "es": "Tolera frío",
-          "pt": "Tolera frio",
-          "ar": "تتحمل البرودة",
-          "hi": "ठंड सहनशील",
-          "zh": "耐寒",
-          "ja": "耐寒性あり",
-          "ko": "내한성"
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal air",
-          "pl": "Zwykła wilgotność",
-          "de": "Normale Luft",
-          "fr": "Air normal",
-          "it": "Aria normale",
-          "es": "Humedad normal",
-          "pt": "Umidade normal",
-          "ar": "رطوبة عادية",
-          "hi": "सामान्य नमी",
-          "zh": "普通湿度",
-          "ja": "通常湿度",
-          "ko": "보통 습도"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Mildly toxic",
-          "pl": "Lekko toksyczna",
-          "de": "Leicht giftig",
-          "fr": "Légèrement toxique",
-          "it": "Lievemente tossica",
-          "es": "Levemente tóxica",
-          "pt": "Levemente tóxica",
-          "ar": "سامة قليلاً",
-          "hi": "हल्की विषैली",
-          "zh": "轻微有毒",
-          "ja": "軽度有毒",
-          "ko": "약간 독성"
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping perennial",
-          "pl": "Bylina kępowa",
-          "de": "Staudenhorst",
-          "fr": "Vivace touffue",
-          "it": "Perenne cespitosa",
-          "es": "Perenne en mata",
-          "pt": "Perene em touceira",
-          "ar": "معمرة متجمعة",
-          "hi": "गुच्छेदार बहुवर्षीय",
-          "zh": "丛生多年生",
-          "ja": "多年草群生",
-          "ko": "다년생 군생"
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeide Überwässerung",
+          "fr": "Évitez l'excès d'eau",
+          "it": "Evita l'eccesso d'acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Ravageurs occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभार कीट",
+          "zh": "偶尔的害虫",
+          "ja": "時折害虫",
+          "ko": "가끔씩 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Yarrow",
-      "description": "Achillea millefolium is a hardy perennial native to temperate regions. It prefers full sun and well-drained soil. Once established, it is drought tolerant and low maintenance."
+      "description": "Achillea millefolium, commonly known as Yarrow, is a hardy perennial that produces flat clusters of small flowers. It thrives in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Krwawnik pospolity",
-      "description": "Achillea millefolium to odporna bylina stref umiarkowanych. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Po ukorzenieniu wymaga niewielkiej ilości wody."
+      "common_name": "Krwiść",
+      "description": "Achillea millefolium, znana jako Krwiść, to odporna roślina wieloletnia, która wytwarza płaskie kwiatostany. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
     },
     "de": {
-      "common_name": "Gemeine Schafgarbe",
-      "description": "Achillea millefolium ist eine robuste Staude aus gemäßigten Zonen. Sie wächst am besten in voller Sonne und durchlässigem Boden. Nach dem Anwachsen ist sie trockenheitsverträglich."
+      "common_name": "Schafgarbe",
+      "description": "Achillea millefolium, auch Schafgarbe genannt, ist eine robuste Staude mit flachen Blütenständen. Sie gedeiht am besten in voller Sonne und gut durchlässigem Boden."
     },
     "fr": {
       "common_name": "Achillée millefeuille",
-      "description": "Achillea millefolium est une vivace rustique des régions tempérées. Elle préfère le plein soleil et les sols bien drainés. Une fois installée, elle supporte la sécheresse."
+      "description": "Achillea millefolium, communément appelée Achillée millefeuille, est une plante vivace résistante qui produit des inflorescences plates. Elle prospère en plein soleil et dans un sol bien drainé."
     },
     "it": {
       "common_name": "Achillea millefoglie",
-      "description": "Achillea millefolium è una perenne rustica delle zone temperate. Predilige pieno sole e terreni ben drenati. Da adulta richiede poca acqua."
+      "description": "Achillea millefolium, conosciuta come Achillea millefoglie, è una pianta perenne resistente che produce fiori a forma di ombrello. Cresce meglio in pieno sole e in terreni ben drenati."
     },
     "es": {
       "common_name": "Milenrama",
-      "description": "Achillea millefolium es una planta perenne resistente de climas templados. Crece mejor a pleno sol y en suelos bien drenados. Es tolerante a la sequía."
+      "description": "Achillea millefolium, conocida como Milenrama, es una planta perenne resistente que produce flores planas. Crece mejor a pleno sol y en suelos bien drenados."
     },
     "pt": {
       "common_name": "Mil-folhas",
-      "description": "Achillea millefolium é uma perene resistente de regiões temperadas. Prefere sol pleno e solo bem drenado. Após estabelecida, necessita pouca rega."
+      "description": "Achillea millefolium, conhecida como Mil-folhas, é uma planta perene resistente que produz flores planas. Prefere pleno sol e solo bem drenado."
     },
     "ar": {
-      "common_name": "الأخيلية",
-      "description": "Achillea millefolium نبات معمر قوي من المناطق المعتدلة. يفضل الشمس الكاملة والتربة جيدة الصرف. يتحمل الجفاف بعد التأسيس."
+      "common_name": "أكليل الجبل",
+      "description": "Achillea millefolium، والمعروفة باسم أكليل الجبل، هي نبات معمر قوي ينتج مجموعات مسطحة من الزهور الصغيرة. ينمو بشكل أفضل في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
       "common_name": "यारो",
-      "description": "Achillea millefolium समशीतोष्ण क्षेत्रों का एक मजबूत बहुवर्षीय पौधा है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। स्थापित होने पर कम पानी चाहिए।"
+      "description": "Achillea millefolium, जिसे यारो के नाम से जाना जाता है, एक मजबूत बहुवर्षीय पौधा है जो छोटे फूलों का समतल गुच्छा उत्पन्न करता है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
     },
     "zh": {
-      "common_name": "西洋蓍草",
-      "description": "Achillea millefolium 是一种原产温带地区的多年生植物。它喜全日照和排水良好的土壤。成株后具有耐旱性。"
+      "common_name": "蓍草",
+      "description": "Achillea millefolium，通常被称为蓍草，是一种耐寒的多年生植物，开出平坦的花簇。它在全日照和排水良好的土壤中茁壮成长。"
     },
     "ja": {
-      "common_name": "セイヨウノコギリソウ",
-      "description": "Achillea millefolium は温帯原産の丈夫な多年草です。日当たりと水はけの良い土を好みます。定着後は乾燥に強いです。"
+      "common_name": "ヤロー",
+      "description": "Achillea millefolium、通称ヤローは、丈夫な多年草で、小さな花の平らな房をつけます。完全な日光と排水の良い土壌でよく育ちます。"
     },
     "ko": {
-      "common_name": "서양톱풀",
-      "description": "Achillea millefolium은 온대 지역 원산의 강한 다년생 식물입니다. 양지와 배수 좋은 토양을 선호합니다. 활착 후에는 건조에 강합니다."
+      "common_name": "야로",
+      "description": "Achillea millefolium, 흔히 야로라고 불리는 이 식물은 튼튼한 다년생 식물로 작은 꽃들의 평평한 군집을 이룹니다. 햇볕이 잘 드는 곳과 배수가 좋은 토양에서 잘 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/achillea/growing-guide",
-      "https://plants.ces.ncsu.edu/plants/achillea-millefolium/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a960"
+      "https://www.rhs.org.uk/plants/achillea-millefolium",
+      "https://www.gardenia.net/plant/achillea-millefolium-yarrow"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "external_id": "sansevieria_laurentii",
-  "name": "Sansevieria laurentii",
+  "name": "Sansevieria Laurentii",
   "latin": "Sansevieria laurentii",
   "sun": "medium",
   "water": "low",
@@ -8,11 +8,11 @@
   "popular": false,
   "recommended_pot_materials": [
     "ceramic",
-    "terracotta"
+    "plastic"
   ],
   "recommended_soil_mixes": [
-    "cactus",
-    "sandy"
+    "cactus-succulent",
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium sunlight",
-          "pl": "Światło średnie",
-          "de": "Mittleres Sonnenlicht",
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
           "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
           "hi": "मध्यम प्रकाश",
-          "zh": "中等阳光",
-          "ja": "中程度の日光",
-          "ko": "중간 햇빛"
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
         }
       }
     },
@@ -48,17 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Sandy soil",
-          "pl": "Piaskowa gleba",
-          "de": "Sandiger Boden",
-          "fr": "Sol sablonneux",
-          "it": "Terreno sabbioso",
-          "es": "Suelo arenoso",
-          "pt": "Solo arenoso",
-          "ar": "تربة رملية",
-          "hi": "रेत वाली मिट्टी",
-          "zh": "沙土",
-          "ja": "砂地"
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수되는"
         }
       }
     },
@@ -67,14 +68,14 @@
       "value": {
         "text": {
           "en": "Low watering",
-          "pl": "Niskie podlewanie",
+          "pl": "Mało podlewania",
           "de": "Wenig gießen",
           "fr": "Arrosage faible",
           "it": "Annaffiatura bassa",
           "es": "Riego bajo",
-          "pt": "Regar pouco",
-          "ar": "سقي قليل",
-          "hi": "कम पानी देना",
+          "pt": "Rega baixa",
+          "ar": "ري في قليل",
+          "hi": "कम पानी",
           "zh": "少量浇水",
           "ja": "少ない水やり",
           "ko": "적은 물주기"
@@ -86,7 +87,7 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwy",
+          "pl": "Łatwe",
           "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Warm",
-          "pl": "Ciepło",
-          "de": "Warm",
-          "fr": "Chaud",
-          "it": "Caldo",
-          "es": "Caliente",
-          "pt": "Quente",
-          "ar": "دافئ",
-          "hi": "गर्म",
-          "zh": "温暖",
-          "ja": "暖かい",
-          "ko": "따뜻한"
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°C",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low humidity",
-          "pl": "Niska wilgotność",
-          "de": "Geringe Luftfeuchtigkeit",
-          "fr": "Humidité faible",
-          "it": "Bassa umidità",
-          "es": "Baja humedad",
-          "pt": "Baixa umidade",
-          "ar": "رطوبة منخفضة",
-          "hi": "कम आर्द्रता",
-          "zh": "低湿度",
-          "ja": "低湿度",
-          "ko": "낮은 습도"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -142,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic",
-          "pl": "Trujący",
-          "de": "Giftig",
-          "fr": "Toxique",
-          "it": "Tossico",
-          "es": "Tóxico",
-          "pt": "Tóxico",
-          "ar": "سامة",
-          "hi": "विषैले",
-          "zh": "有毒",
-          "ja": "有毒",
-          "ko": "독성"
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Slow",
-          "pl": "Powolny",
-          "de": "Langsam",
-          "fr": "Lent",
-          "it": "Lento",
-          "es": "Lento",
-          "pt": "Lento",
-          "ar": "بطيء",
-          "hi": "धीमा",
-          "zh": "慢",
-          "ja": "遅い",
-          "ko": "느림"
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे बढ़ता है",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewaj za dużo",
+          "de": "Nicht überwässern",
+          "fr": "Ne pas trop arroser",
+          "it": "Non innaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar demais",
+          "ar": "لا تفرط في الري",
+          "hi": "अधिक पानी न दें",
+          "zh": "不要过度浇水",
+          "ja": "水をやり過ぎない",
+          "ko": "과도하게 물주지 않기"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Pestilenze occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,56 +219,56 @@
   "translations": {
     "en": {
       "common_name": "Snake Plant",
-      "description": "Sansevieria laurentii, known as the snake plant, is a hardy, low-maintenance houseplant. It thrives in medium light and requires minimal watering."
+      "description": "Sansevieria laurentii, or the Snake Plant, is a hardy and low-maintenance indoor plant. It thrives in medium light and requires minimal watering."
     },
     "pl": {
       "common_name": "Wężownica",
-      "description": "Sansevieria laurentii, znana jako wężownica, to odporna roślina doniczkowa o niskich wymaganiach pielęgnacyjnych. Rośnie w średnim świetle i wymaga minimalnego podlewania."
+      "description": "Sansevieria laurentii, czyli wężownica, to wytrzymała i łatwa w pielęgnacji roślina doniczkowa. Rośnie najlepiej w średnim świetle i potrzebuje minimalnego podlewania."
     },
     "de": {
       "common_name": "Schwiegermutterzunge",
-      "description": "Sansevieria laurentii, auch als Schwiegermutterzunge bekannt, ist eine robuste Zimmerpflanze mit geringem Pflegeaufwand. Sie gedeiht bei mittlerem Licht und benötigt nur wenig Wasser."
+      "description": "Sansevieria laurentii, auch als Schwiegermutterzunge bekannt, ist eine robuste und pflegeleichte Zimmerpflanze. Sie gedeiht bei mittlerem Licht und benötigt nur wenig Wasser."
     },
     "fr": {
-      "common_name": "Sansevieria",
-      "description": "Sansevieria laurentii, également connue sous le nom de langue de belle-mère, est une plante robuste et facile à entretenir. Elle préfère une lumière moyenne et nécessite peu d'eau."
+      "common_name": "Sansevière",
+      "description": "Sansevieria laurentii, ou la Sansevière, est une plante d'intérieur robuste et facile à entretenir. Elle prospère à lumière moyenne et nécessite peu d'arrosage."
     },
     "it": {
       "common_name": "Sansevieria",
-      "description": "Sansevieria laurentii, conosciuta come lingua di suocera, è una pianta resistente e facile da curare. Cresce con luce media e necessita di poca acqua."
+      "description": "Sansevieria laurentii, o Sansevieria, è una pianta resistente e facile da curare. Cresce bene con luce media e necessita di poca acqua."
     },
     "es": {
       "common_name": "Lengua de suegra",
-      "description": "Sansevieria laurentii, conocida como lengua de suegra, es una planta resistente y fácil de cuidar. Crece en luz media y requiere poco riego."
+      "description": "Sansevieria laurentii, conocida como lengua de suegra, es una planta resistente y de bajo mantenimiento. Crece bien con luz media y requiere poco riego."
     },
     "pt": {
       "common_name": "Espada-de-são-jorge",
-      "description": "Sansevieria laurentii, também conhecida como espada-de-são-jorge, é uma planta resistente e de fácil manutenção. Cresce em luz média e precisa de pouca água."
+      "description": "Sansevieria laurentii, ou espada-de-são-jorge, é uma planta resistente e fácil de cuidar. Prefere luz média e precisa de pouca água."
     },
     "ar": {
-      "common_name": "نبات سانسيفيريا",
-      "description": "Sansevieria laurentii، المعروف باسم نبات سانسيفيريا، هو نبات قوي وسهل العناية. ينمو في الضوء المتوسط ويحتاج إلى ري قليل."
+      "common_name": "نبات الأفعى",
+      "description": "Sansevieria laurentii، أو نبات الأفعى، هو نبات داخلي قوي وسهل العناية. يزدهر في الضوء المتوسط ويحتاج إلى ري قليل."
     },
     "hi": {
-      "common_name": "सांसेवियरिया",
-      "description": "Sansevieria laurentii, जिसे सांसेवियरिया के नाम से जाना जाता है, एक मजबूत और कम रख-रखाव वाली पौधा है। यह मध्यम रोशनी में उगता है और कम पानी की आवश्यकता होती है।"
+      "common_name": "सांसेविएरिया",
+      "description": "Sansevieria laurentii, या सांसेविएरिया, एक मजबूत और कम देखभाल वाली इनडोर पौधा है। यह मध्यम रोशनी में अच्छा बढ़ता है और कम पानी की आवश्यकता होती है।"
     },
     "zh": {
       "common_name": "虎尾兰",
-      "description": "Sansevieria laurentii, 也叫虎尾兰，是一种坚韧、低维护的室内植物。它适应中等光照，且水分需求低。"
+      "description": "Sansevieria laurentii, 或称虎尾兰，是一种耐寒且易于护理的室内植物。它在中等光照下生长良好，并且需要少量的水。"
     },
     "ja": {
       "common_name": "サンセベリア",
-      "description": "Sansevieria laurentii（サンセベリア）は、丈夫で手間のかからない観葉植物です。中程度の光で育ち、少ない水分で十分です。"
+      "description": "Sansevieria laurentii、またの名をサンセベリアは、丈夫で手入れが簡単な室内植物です。中程度の光で成長し、水やりは少なめです。"
     },
     "ko": {
-      "common_name": "산세베리아",
-      "description": "Sansevieria laurentii, 또는 산세베리아는 내구성이 강하고 손쉬운 관리가 가능한 식물입니다. 중간 정도의 햇빛에서 잘 자라며 물을 적게 필요로 합니다."
+      "common_name": "뱀초",
+      "description": "Sansevieria laurentii, 또는 뱀초는 튼튼하고 손쉬운 실내 식물입니다. 중간 정도의 빛에서 잘 자라며, 물을 적게 줍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/advice/profile?pid=476",
+      "https://www.rhs.org.uk/plants/sansevieria",
       "https://www.gardenia.net/plant/sansevieria-laurentii"
     ]
   }

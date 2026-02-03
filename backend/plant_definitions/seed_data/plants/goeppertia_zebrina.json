@@ -3,7 +3,7 @@
   "name": "Zebra Plant",
   "latin": "Goeppertia zebrina",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -11,8 +11,8 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "aroid",
-    "universal"
+    "green-plants",
+    "aroid"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -21,7 +21,7 @@
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 18,
   "image_hero": "goeppertia_zebrina.jpg",
   "image_thumb": "goeppertia_zebrina.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Bright indirect light",
-          "pl": "Jasne światło pośrednie",
-          "de": "Helles indirektes Licht",
-          "fr": "Lumière indirecte vive",
-          "it": "Luce indiretta luminosa",
-          "es": "Luz indirecta brillante",
-          "pt": "Luz indireta brilhante",
-          "ar": "ضوء ساطع غير مباشر",
-          "hi": "तेज़ अप्रत्यक्ष रोशनी",
-          "zh": "明亮的散射光",
-          "ja": "明るい間接光",
-          "ko": "밝은 간접광"
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining rich soil",
-          "pl": "Przepuszczalna żyzna gleba",
-          "de": "Gut drainierende Erde",
-          "fr": "Sol riche drainant",
-          "it": "Terriccio drenante",
-          "es": "Sustrato drenante",
-          "pt": "Substrato drenável",
-          "ar": "تربة غنية جيدة التصريف",
-          "hi": "अच्छी जल निकास मिट्टी",
-          "zh": "排水良好的土壤",
-          "ja": "水はけの良い土",
-          "ko": "배수 좋은 토양"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 잘 되는"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep soil evenly moist",
-          "pl": "Utrzymuj lekko wilgotną",
-          "de": "Gleichmäßig feucht halten",
-          "fr": "Sol toujours humide",
-          "it": "Terreno sempre umido",
-          "es": "Suelo siempre húmedo",
-          "pt": "Solo sempre úmido",
-          "ar": "حافظ على رطوبة التربة",
-          "hi": "मिट्टी नम रखें",
-          "zh": "保持土壤湿润",
-          "ja": "土を湿らせる",
-          "ko": "흙을 촉촉하게"
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적인 급수"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Moderate care",
-          "pl": "Umiarkowana pielęgnacja",
-          "de": "Mäßig anspruchsvoll",
-          "fr": "Entretien modéré",
-          "it": "Cura moderata",
-          "es": "Cuidado moderado",
-          "pt": "Cuidado moderado",
-          "ar": "عناية متوسطة",
-          "hi": "मध्यम देखभाल",
-          "zh": "中等养护",
-          "ja": "中程度の管理",
-          "ko": "중간 난이도"
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "18–27°C",
-          "pl": "18–27°C",
-          "de": "18–27°C",
-          "fr": "18–27°C",
-          "it": "18–27°C",
-          "es": "18–27°C",
-          "pt": "18–27°C",
-          "ar": "18–27°م",
-          "hi": "18–27°C",
-          "zh": "18–27°C",
-          "ja": "18–27°C",
-          "ko": "18–27°C"
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
         }
       }
     },
@@ -126,8 +126,8 @@
         "text": {
           "en": "High humidity",
           "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchte",
-          "fr": "Humidité élevée",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
           "it": "Alta umidità",
           "es": "Alta humedad",
           "pt": "Alta umidade",
@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Mildly toxic",
+          "pl": "Łagodnie trujący",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Lievemente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سمّي قليلاً",
+          "hi": "हल्का जहरीला",
+          "zh": "轻微有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성 있음"
         }
       }
     },
@@ -162,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Clumping foliage",
-          "pl": "Kępiasty wzrost",
-          "de": "Horstbildend",
-          "fr": "Port en touffe",
-          "it": "Crescita cespitosa",
-          "es": "Crecimiento en mata",
-          "pt": "Crescimento em touceira",
-          "ar": "نمو كثيف",
-          "hi": "झाड़ीदार वृद्धि",
-          "zh": "丛生生长",
-          "ja": "株立ち成長",
-          "ko": "군생 성장"
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lente à modérée",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम",
+          "zh": "缓慢到中等",
+          "ja": "遅いから中程度",
+          "ko": "느리거나 중간"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj przelania",
+          "de": "Vermeiden Sie Überwässerung",
+          "fr": "Éviter le trop-plein d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar excesso de água",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過度の水やりを避ける",
+          "ko": "과잉 급수를 피하십시오"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔有害虫",
+          "ja": "時折害虫",
+          "ko": "가끔 해충"
         }
       }
     }
@@ -181,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Zebra Plant",
-      "description": "Goeppertia zebrina is a tropical foliage plant known for its bold striped leaves. It prefers bright indirect light, high humidity, and consistently moist soil. It is commonly grown indoors as an ornamental houseplant."
+      "description": "Goeppertia zebrina, known as the Zebra Plant, is a tropical plant that thrives in medium light and high humidity. It has striking green leaves with purple markings."
     },
     "pl": {
-      "common_name": "Kalatea zebrina",
-      "description": "Goeppertia zebrina to tropikalna roślina ozdobna o pasiastych liściach. Wymaga jasnego, rozproszonego światła, wysokiej wilgotności i stale lekko wilgotnej gleby. Najczęściej uprawiana jest w pomieszczeniach."
+      "common_name": "Roślina zebra",
+      "description": "Goeppertia zebrina, znana jako roślina zebra, to tropikalna roślina, która najlepiej rośnie przy średnim świetle i wysokiej wilgotności. Ma efektowne zielone liście z fioletowymi plamami."
     },
     "de": {
-      "common_name": "Zebrakorbmarante",
-      "description": "Goeppertia zebrina ist eine tropische Blattschmuckpflanze mit markanten Streifen. Sie bevorzugt helles indirektes Licht, hohe Luftfeuchtigkeit und gleichmäßig feuchte Erde. Sie wird meist als Zimmerpflanze kultiviert."
+      "common_name": "Zebra Pflanze",
+      "description": "Goeppertia zebrina, auch Zebra Pflanze genannt, ist eine tropische Pflanze, die bei mittlerem Licht und hoher Luftfeuchtigkeit gedeiht. Sie hat auffällige grüne Blätter mit lila Markierungen."
     },
     "fr": {
-      "common_name": "Plante zébrée",
-      "description": "Goeppertia zebrina est une plante tropicale appréciée pour ses feuilles rayées. Elle aime la lumière indirecte, une forte humidité et un sol constamment humide. Elle est surtout cultivée en intérieur."
+      "common_name": "Plante Zèbre",
+      "description": "Goeppertia zebrina, connue sous le nom de plante zèbre, est une plante tropicale qui se développe sous une lumière moyenne et une humidité élevée. Elle possède des feuilles vertes frappantes avec des marques violettes."
     },
     "it": {
-      "common_name": "Calatea zebrata",
-      "description": "Goeppertia zebrina è una pianta tropicale ornamentale con foglie striate. Predilige luce indiretta, elevata umidità e terreno costantemente umido. È coltivata principalmente come pianta da interno."
+      "common_name": "Pianta zebra",
+      "description": "Goeppertia zebrina, conosciuta come pianta zebra, è una pianta tropicale che cresce meglio con luce media e alta umidità. Ha foglie verdi vistose con segni viola."
     },
     "es": {
-      "common_name": "Planta cebra",
-      "description": "Goeppertia zebrina es una planta tropical conocida por sus hojas rayadas. Necesita luz indirecta brillante, alta humedad y suelo siempre húmedo. Se cultiva comúnmente en interiores."
+      "common_name": "Planta Cebra",
+      "description": "Goeppertia zebrina, conocida como la planta cebra, es una planta tropical que prospera con luz media y alta humedad. Tiene hojas verdes llamativas con marcas moradas."
     },
     "pt": {
-      "common_name": "Planta-zebra",
-      "description": "Goeppertia zebrina é uma planta tropical ornamental com folhas listradas. Prefere luz indireta, alta umidade e solo constantemente úmido. É muito usada como planta de interior."
+      "common_name": "Planta Zebra",
+      "description": "Goeppertia zebrina, conhecida como planta zebra, é uma planta tropical que cresce bem com luz média e alta umidade. Possui folhas verdes impressionantes com marcas roxas."
     },
     "ar": {
-      "common_name": "نبات الحمار الوحشي",
-      "description": "Goeppertia zebrina نبات استوائي يتميز بأوراق مخططة. يفضل الضوء غير المباشر والرطوبة العالية وتربة رطبة باستمرار. يزرع غالبًا كنبات منزلي."
+      "common_name": "نبات الزيبرا",
+      "description": "Goeppertia zebrina، المعروف بالنبات الزيبرا، هو نبات استوائي ينمو في الضوء المتوسط والرطوبة العالية. يحتوي على أوراق خضراء لامعة مع علامات أرجوانية."
     },
     "hi": {
-      "common_name": "ज़ेब्रा प्लांट",
-      "description": "Goeppertia zebrina एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ धारियों वाली होती हैं। इसे अप्रत्यक्ष रोशनी, अधिक आर्द्रता और नम मिट्टी पसंद है। यह आमतौर पर घर के अंदर उगाया जाता है।"
+      "common_name": "ज़ेब्रा पौधा",
+      "description": "Goeppertia zebrina, जिसे ज़ेब्रा पौधा कहा जाता है, एक उष्णकटिबंधीय पौधा है जो मध्यम प्रकाश और उच्च आर्द्रता में बढ़ता है। इसके हरे पत्ते हैं जिन पर बैंगनी धब्बे होते हैं।"
     },
     "zh": {
-      "common_name": "斑马竹芋",
-      "description": "Goeppertia zebrina 是一种热带观叶植物，以条纹叶片著称。它喜欢明亮的散射光、高湿度和持续湿润的土壤。常作为室内植物栽培。"
+      "common_name": "斑马植物",
+      "description": "Goeppertia zebrina，也叫斑马植物，是一种在中等光照和高湿度条件下生长的热带植物。它具有引人注目的绿色叶子和紫色标记。"
     },
     "ja": {
-      "common_name": "ゼブラカラテア",
-      "description": "Goeppertia zebrina は縞模様の葉が特徴の熱帯植物です。明るい間接光と高湿度、常に湿った土を好みます。主に観葉植物として育てられます。"
+      "common_name": "ゼブラプラント",
+      "description": "Goeppertia zebrina、ゼブラプラントとして知られるこの植物は、中程度の光と高い湿度で成長する熱帯植物です。紫色の斑点がある緑の葉が特徴です。"
     },
     "ko": {
-      "common_name": "제브라 칼라데아",
-      "description": "Goeppertia zebrina는 줄무늬 잎이 특징인 열대 식물입니다. 밝은 간접광과 높은 습도, 촉촉한 토양을 선호합니다. 주로 실내 관엽식물로 재배됩니다."
+      "common_name": "얼룩말 식물",
+      "description": "Goeppertia zebrina, 얼룩말 식물로 알려진 이 식물은 중간 정도의 빛과 높은 습도에서 자라는 열대 식물입니다. 보라색 표시가 있는 녹색 잎을 가지고 있습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/23805/goeppertia-zebrina/details",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a328",
-      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-calathea/"
+      "https://www.rhs.org.uk/advice/profile?pid=1180",
+      "https://www.gardenia.net/plant/goeppertia-zebrina"
     ]
   }
 }

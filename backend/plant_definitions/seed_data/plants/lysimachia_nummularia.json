@@ -1,27 +1,27 @@
 {
   "external_id": "lysimachia_nummularia",
-  "name": "Creeping Jenny",
+  "name": "Moneywort",
   "latin": "Lysimachia nummularia",
   "sun": "medium",
-  "water": "high",
+  "water": "medium",
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
-    "terracotta"
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "loam",
-    "universal"
+    "all-purpose",
+    "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
   "repot_required": true,
-  "repot_interval_months": 24,
+  "repot_interval_months": 12,
   "image_hero": "lysimachia_nummularia.jpg",
   "image_thumb": "lysimachia_nummularia.jpg",
   "traits": [
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Partial sun",
-          "pl": "Półcień",
-          "de": "Halbschatten",
-          "fr": "Mi-ombre",
-          "it": "Mezz'ombra",
-          "es": "Semisombra",
-          "pt": "Meia-sombra",
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
           "ar": "ضوء متوسط",
-          "hi": "आंशिक धूप",
-          "zh": "半日照",
-          "ja": "半日陰",
-          "ko": "반그늘"
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Moist loam",
-          "pl": "Wilgotna gleba",
-          "de": "Feuchter Boden",
-          "fr": "Sol humide",
-          "it": "Suolo umido",
-          "es": "Suelo húmedo",
-          "pt": "Solo úmido",
-          "ar": "تربة رطبة",
-          "hi": "नम मिट्टी",
-          "zh": "湿润土壤",
-          "ja": "湿った土",
-          "ko": "습한 토양"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Keep moist",
-          "pl": "Stale wilgotna",
-          "de": "Feucht halten",
-          "fr": "Toujours humide",
-          "it": "Sempre umido",
-          "es": "Siempre húmedo",
-          "pt": "Sempre úmido",
-          "ar": "رطبة دائمًا",
-          "hi": "नम रखें",
-          "zh": "保持湿润",
-          "ja": "湿り気維持",
-          "ko": "항상 촉촉"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderates Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Very easy",
-          "pl": "Bardzo łatwa",
-          "de": "Sehr einfach",
-          "fr": "Très facile",
-          "it": "Molto facile",
-          "es": "Muy fácil",
-          "pt": "Muito fácil",
-          "ar": "سهل جدًا",
-          "hi": "बहुत आसान",
-          "zh": "非常容易",
-          "ja": "とても簡単",
-          "ko": "아주 쉬움"
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬움"
         }
       }
     },
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10–24°C",
-          "pl": "10–24°C",
-          "de": "10–24°C",
-          "fr": "10–24°C",
-          "it": "10–24°C",
-          "es": "10–24°C",
-          "pt": "10–24°C",
-          "ar": "10–24°م",
-          "hi": "10–24°C",
-          "zh": "10–24°C",
-          "ja": "10–24°C",
-          "ko": "10–24°C"
+          "en": "10-24°C",
+          "pl": "10-24°C",
+          "de": "10-24°C",
+          "fr": "10-24°C",
+          "it": "10-24°C",
+          "es": "10-24°C",
+          "pt": "10-24°C",
+          "ar": "10-24°C",
+          "hi": "10-24°C",
+          "zh": "10-24°C",
+          "ja": "10-24°C",
+          "ko": "10-24°C"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Normal",
-          "pl": "Normalna",
-          "de": "Normal",
-          "fr": "Normale",
-          "it": "Normale",
-          "es": "Normal",
-          "pt": "Normal",
-          "ar": "عادية",
-          "hi": "सामान्य",
-          "zh": "正常",
-          "ja": "普通",
-          "ko": "보통"
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
         }
       }
     },
@@ -144,14 +144,14 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietoksyczna",
+          "pl": "Nietoksyczny",
           "de": "Ungiftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
           "ko": "무독성"
@@ -162,77 +162,115 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast spreading",
-          "pl": "Szybki wzrost",
-          "de": "Schnell wachsend",
-          "fr": "Croissance rapide",
-          "it": "Crescita rapida",
-          "es": "Crecimiento rápido",
-          "pt": "Crescimento rápido",
-          "ar": "نمو سريع",
-          "hi": "तेजी से बढ़ता",
-          "zh": "快速蔓延",
-          "ja": "成長が早い",
-          "ko": "빠른 성장"
+          "en": "Creeping groundcover",
+          "pl": "Płożąca się roślina",
+          "de": "Kriechende Bodendecker",
+          "fr": "Plante rampante",
+          "it": "Copertura del suolo strisciante",
+          "es": "Cobertura rastrera",
+          "pt": "Cobertura rastejante",
+          "ar": "غطاء أرضي زاحف",
+          "hi": "फैलने वाली पौध",
+          "zh": "匍匐地被植物",
+          "ja": "這い茎地被植物",
+          "ko": "땅 덮기 식물"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikaj nadmiernego podlewania",
+          "de": "Vermeiden Sie Überbewässerung",
+          "fr": "Évitez le trop d'eau",
+          "it": "Evitare il troppo acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الإفراط في الري",
+          "hi": "अधिक पानी देने से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避ける",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Parasites occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 해충"
         }
       }
     }
   ],
   "translations": {
     "en": {
-      "common_name": "Creeping Jenny",
-      "description": "Lysimachia nummularia is a low-growing perennial groundcover with trailing stems and round leaves. It prefers consistently moist soil and partial sun. Often used outdoors, it can be grown in containers."
+      "common_name": "Moneywort",
+      "description": "Lysimachia nummularia is a low-growing, creeping perennial commonly known as moneywort. It thrives in well-drained soil and moderate watering, making it a popular groundcover plant."
     },
     "pl": {
-      "common_name": "Tojeść rozesłana",
-      "description": "Lysimachia nummularia to niska bylina okrywowa o płożących pędach i okrągłych liściach. Lubi stale wilgotną glebę i półcień. Może być uprawiana w pojemnikach."
+      "common_name": "Płaskomierzyk",
+      "description": "Lysimachia nummularia to nisko rosnąca, płożąca się bylina, znana jako płaskomierzyk. Rośnie w glebie dobrze przepuszczalnej i umiarkowanym podlewaniu, co czyni ją popularnym pokryciem ziemi."
     },
     "de": {
-      "common_name": "Pfennigkraut",
-      "description": "Lysimachia nummularia ist eine niedrig wachsende, kriechende Staude mit runden Blättern. Sie bevorzugt feuchten Boden und Halbschatten. Geeignet für Beete und Töpfe."
+      "common_name": "Geldkraut",
+      "description": "Lysimachia nummularia ist eine niedrig wachsende, kriechende Staude, die als Geldkraut bekannt ist. Sie gedeiht in gut durchlässigem Boden und mittlerem Gießen, was sie zu einer beliebten Bodendeckerpflanze macht."
     },
     "fr": {
       "common_name": "Lysimaque nummulaire",
-      "description": "Lysimachia nummularia est une plante couvre-sol à tiges rampantes et feuilles rondes. Elle aime les sols humides et la mi-ombre. Elle peut aussi pousser en pot."
+      "description": "Lysimachia nummularia est une plante vivace rampante à faible croissance, couramment appelée lysimaque nummulaire. Elle prospère dans un sol bien drainé et un arrosage modéré, ce qui en fait une plante couvre-sol populaire."
     },
     "it": {
-      "common_name": "Lisimachia strisciante",
-      "description": "Lysimachia nummularia è una perenne tappezzante con fusti striscianti e foglie tonde. Predilige terreni umidi e mezz'ombra. Adatta anche alla coltivazione in vaso."
+      "common_name": "Lysimachia",
+      "description": "Lysimachia nummularia è una pianta perenne strisciante a bassa crescita, comunemente conosciuta come lysimachia. Cresce bene in terreni ben drenati e con annaffiature moderate, ed è molto usata come copertura del suolo."
     },
     "es": {
-      "common_name": "Lisimachia rastrera",
-      "description": "Lysimachia nummularia es una planta perenne rastrera con tallos colgantes y hojas redondeadas. Prefiere suelos húmedos y semisombra. Puede cultivarse en macetas."
+      "common_name": "Lysimachia",
+      "description": "Lysimachia nummularia es una planta perenne rastrera de bajo crecimiento, conocida comúnmente como lysimachia. Crece bien en suelos bien drenados y con un riego moderado, lo que la convierte en una planta de cobertura popular."
     },
     "pt": {
-      "common_name": "Lisimáquia-rasteira",
-      "description": "Lysimachia nummularia é uma planta perene rasteira com caules longos e folhas redondas. Gosta de solo úmido e meia-sombra. Pode ser cultivada em vasos."
+      "common_name": "Lysimachia",
+      "description": "Lysimachia nummularia é uma planta perene rastejante de baixo crescimento, conhecida popularmente como lysimachia. Ela cresce bem em solos bem drenados e com rega moderada, sendo uma planta de cobertura comum."
     },
     "ar": {
-      "common_name": "ليسيماكيا زاحفة",
-      "description": "نبات Lysimachia nummularia نبات غطائي منخفض النمو بأوراق مستديرة. يفضل التربة الرطبة والضوء المتوسط. يمكن زراعته في أوعية."
+      "common_name": "ليسيماتشيا",
+      "description": "Lysimachia nummularia هي نبات معمر منخفض النمو ومتسلق يعرف عادة باسم ليسيماتشيا. تنمو بشكل جيد في التربة جيدة التصريف مع ري معتدل مما يجعلها نبات تغطية أرضية شائع."
     },
     "hi": {
-      "common_name": "क्रीपिंग जेनी",
-      "description": "Lysimachia nummularia एक फैलने वाला बारहमासी पौधा है जिसकी पत्तियाँ गोल होती हैं। इसे नम मिट्टी और आंशिक धूप पसंद है। गमलों में भी उगाया जा सकता है।"
+      "common_name": "लिसीमाचिया",
+      "description": "Lysimachia nummularia एक निम्न वृद्धि वाली, फैलने वाली स्थायी पौधा है, जिसे सामान्यत: लिसीमाचिया कहा जाता है। यह अच्छी जल निकासी वाली मिट्टी में और नियमित पानी देने पर अच्छा बढ़ता है, जो इसे एक लोकप्रिय भूमि आवरण बनाता है।"
     },
     "zh": {
-      "common_name": "匍匐珍珠菜",
-      "description": "Lysimachia nummularia 是一种低矮蔓生的多年生植物，叶片圆形。喜欢湿润土壤和半日照。也可盆栽种植。"
+      "common_name": "钱袋花",
+      "description": "Lysimachia nummularia是一种低生长的匍匐性多年生植物，通常被称为钱袋花。它在排水良好的土壤中和适度浇水下生长良好，成为一种流行的地被植物。"
     },
     "ja": {
-      "common_name": "クリーピングジェニー",
-      "description": "Lysimachia nummularia は丸い葉を持つ匍匐性の多年草です。湿った土と半日陰を好みます。鉢植えでも育てられます。"
+      "common_name": "リシマキア",
+      "description": "Lysimachia nummulariaは低く成長する匍匐性の多年草で、一般的にリシマキアとして知られています。良好な排水性土壌と適度な水やりでよく育ち、人気のある地面被覆植物です。"
     },
     "ko": {
-      "common_name": "크리핑 제니",
-      "description": "Lysimachia nummularia는 둥근 잎을 가진 포복성 다년초입니다. 촉촉한 토양과 반그늘을 선호합니다. 화분에서도 재배할 수 있습니다."
+      "common_name": "리시마키아",
+      "description": "Lysimachia nummularia는 낮게 자라는 땅 덮기 식물로, 일반적으로 리시마키아라고 알려져 있습니다. 배수가 좋은 토양과 적당한 물주기로 잘 자라며, 인기 있는 지면 덮개 식물입니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/10162/lysimachia-nummularia/details",
-      "https://plants.ces.ncsu.edu/plants/lysimachia-nummularia/",
-      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=275548"
+      "https://www.rhs.org.uk/plants/lysimachia-nummularia",
+      "https://www.gardeningknowhow.com/ornamental/groundcover/creeping-jenny.htm",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/creeping-jenny/"
     ]
   }
 }

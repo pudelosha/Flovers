@@ -11,8 +11,8 @@
     "terracotta"
   ],
   "recommended_soil_mixes": [
-    "universal",
-    "loam"
+    "all-purpose",
+    "herbs-vegetables"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -32,14 +32,14 @@
           "en": "Medium light",
           "pl": "Średnie światło",
           "de": "Mittleres Licht",
-          "fr": "Lumière modérée",
+          "fr": "Lumière moyenne",
           "it": "Luce media",
           "es": "Luz media",
           "pt": "Luz média",
           "ar": "ضوء متوسط",
           "hi": "मध्यम प्रकाश",
           "zh": "中等光照",
-          "ja": "中程度の光",
+          "ja": "中くらいの光",
           "ko": "중간 빛"
         }
       }
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Loam",
-          "pl": "Urodzajna gleba",
-          "de": "Lehm",
-          "fr": "Terre argileuse",
-          "it": "Terreno argilloso",
-          "es": "Suelo arcilloso",
-          "pt": "Solo argiloso",
-          "ar": "تربة طينية",
-          "hi": "मिट्टी",
-          "zh": "壤土",
-          "ja": "粘土",
-          "ko": "점토"
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium watering",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Rega média",
-          "ar": "ري ماء معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "中くらいの水やり",
-          "ko": "중간 물주기"
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
         }
       }
     },
@@ -90,9 +90,9 @@
           "pl": "Średni",
           "de": "Mittel",
           "fr": "Moyenne",
-          "it": "Medio",
-          "es": "Medio",
-          "pt": "Médio",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
           "ar": "متوسط",
           "hi": "मध्यम",
           "zh": "中等",
@@ -105,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "15-25°C",
-          "pl": "15-25°C",
-          "de": "15-25°C",
-          "fr": "15-25°C",
-          "it": "15-25°C",
-          "es": "15-25°C",
-          "pt": "15-25°C",
-          "ar": "15-25°C",
-          "hi": "15-25°C",
-          "zh": "15-25°C",
-          "ja": "15-25°C",
-          "ko": "15-25°C"
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
         }
       }
     },
@@ -127,15 +127,15 @@
           "en": "Low to medium",
           "pl": "Niska do średniej",
           "de": "Niedrig bis mittel",
-          "fr": "Faible à modéré",
+          "fr": "Faible à moyen",
           "it": "Bassa a media",
           "es": "Baja a media",
           "pt": "Baixa a média",
           "ar": "منخفض إلى متوسط",
-          "hi": "नम आर्द्रता",
-          "zh": "低到中等湿度",
-          "ja": "低から中程度の湿度",
-          "ko": "낮은 습도에서 중간 습도"
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低〜中湿度",
+          "ko": "낮은 습도에서 중간"
         }
       }
     },
@@ -151,10 +151,10 @@
           "es": "No tóxico",
           "pt": "Não tóxico",
           "ar": "غير سام",
-          "hi": "गैर विषाक्त",
+          "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -163,7 +163,7 @@
       "value": {
         "text": {
           "en": "Moderate growth",
-          "pl": "Średni wzrost",
+          "pl": "Umiarkowany wzrost",
           "de": "Mäßiges Wachstum",
           "fr": "Croissance modérée",
           "it": "Crescita moderata",
@@ -171,9 +171,47 @@
           "pt": "Crescimento moderado",
           "ar": "نمو معتدل",
           "hi": "मध्यम वृद्धि",
-          "zh": "适度生长",
-          "ja": "適度な成長",
+          "zh": "适中生长",
+          "ja": "中程度の成長",
           "ko": "중간 성장"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "Avoid overwatering",
+          "pl": "Unikać przelania",
+          "de": "Überwässerung vermeiden",
+          "fr": "Éviter l'excès d'eau",
+          "it": "Evitare l'eccesso di acqua",
+          "es": "Evitar el exceso de agua",
+          "pt": "Evitar rega excessiva",
+          "ar": "تجنب الري الزائد",
+          "hi": "अधिक पानी से बचें",
+          "zh": "避免过度浇水",
+          "ja": "過剰な水やりを避けてください",
+          "ko": "과도한 물주기를 피하세요"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pests occasionnels",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "मौसमी कीट",
+          "zh": "偶尔害虫",
+          "ja": "時々の害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -181,57 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Clary Sage",
-      "description": "Clary Sage is a biennial plant native to Europe. It thrives in moderate light and well-drained soil."
+      "description": "Clary sage is an aromatic herb known for its medicinal properties. It thrives in well-draining soil and moderate light."
     },
     "pl": {
       "common_name": "Szałwia muszkatołowa",
-      "description": "Szałwia muszkatołowa to dwuletnia roślina pochodząca z Europy. Rośnie najlepiej w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+      "description": "Szałwia muszkatołowa to aromatyczne zioło znane ze swoich właściwości leczniczych. Rośnie w dobrze przepuszczalnej glebie i umiarkowanym świetle."
     },
     "de": {
-      "common_name": "Muskateller-Salbei",
-      "description": "Muskateller-Salbei ist eine zweijährige Pflanze aus Europa. Sie gedeiht in mäßigem Licht und gut durchlässigem Boden."
+      "common_name": "Muskatellersalbei",
+      "description": "Muskatellersalbei ist ein aromatisches Kraut, das für seine medizinischen Eigenschaften bekannt ist. Es gedeiht in gut durchlässigem Boden und mittlerem Licht."
     },
     "fr": {
       "common_name": "Sauge sclarée",
-      "description": "La sauge sclarée est une plante bisannuelle originaire d'Europe. Elle préfère une lumière modérée et un sol bien drainé."
+      "description": "La sauge sclarée est une herbe aromatique reconnue pour ses propriétés médicinales. Elle prospère dans un sol bien drainé et une lumière modérée."
     },
     "it": {
       "common_name": "Salvia sclarea",
-      "description": "La Salvia sclarea è una pianta biennale originaria dell'Europa. Cresce bene in luce moderata e terreno ben drenato."
+      "description": "La salvia sclarea è un'erba aromatica nota per le sue proprietà medicinali. Cresce in un terreno ben drenato e con luce moderata."
     },
     "es": {
-      "common_name": "Salvia clara",
-      "description": "La salvia clara es una planta bianual originaria de Europa. Crece bien con luz moderada y suelos bien drenados."
+      "common_name": "Salvia esclarea",
+      "description": "La salvia esclarea es una hierba aromática conocida por sus propiedades medicinales. Crece en suelos bien drenados y con luz moderada."
     },
     "pt": {
-      "common_name": "Sálvia clara",
-      "description": "A sálvia clara é uma planta bienal nativa da Europa. Prefere luz moderada e solos bem drenados."
+      "common_name": "Sálvia esclarecida",
+      "description": "A sálvia esclarecida é uma erva aromática conhecida pelas suas propriedades medicinais. Cresce em solo bem drenado e luz moderada."
     },
     "ar": {
-      "common_name": "المريمية الواضحة",
-      "description": "المريمية الواضحة هي نبات ثنائي السن أصله من أوروبا. ينمو بشكل جيد في الضوء المعتدل والتربة جيدة التصريف."
+      "common_name": "المريمية المسكية",
+      "description": "المريمية المسكية هي عشبة عطرية معروفة بخصائصها الطبية. تنمو في التربة جيدة التصريف والضوء المعتدل."
     },
     "hi": {
-      "common_name": "क्लैरी सैज",
-      "description": "क्लैरी सैज एक द्विवार्षिक पौधा है जो यूरोप का मूल निवासी है। यह मध्यम रोशनी और अच्छी जल निकासी वाली मिट्टी में अच्छा उगता है।"
+      "common_name": "क्लेरी सैज",
+      "description": "क्लेरी सैज एक सुगंधित औषधीय पौधा है। यह अच्छे जल निकासी वाली मिट्टी और मध्यम रोशनी में बढ़ता है।"
     },
     "zh": {
       "common_name": "克拉里鼠尾草",
-      "description": "克拉里鼠尾草是一种二年生植物，原产于欧洲。它喜欢适中的光照和排水良好的土壤。"
+      "description": "克拉里鼠尾草是一种具有药用特性的芳香草本植物。它在排水良好的土壤和中等光照下生长。"
     },
     "ja": {
       "common_name": "クラリーセージ",
-      "description": "クラリーセージはヨーロッパ原産の二年草です。適度な光と排水の良い土壌でよく育ちます。"
+      "description": "クラリーセージはその薬用特性で知られる香りの良いハーブです。良好な排水性の土壌と中程度の光で育ちます。"
     },
     "ko": {
-      "common_name": "클래리 세이지",
-      "description": "클래리 세이지는 유럽 원산의 2년생 식물입니다. 중간 정도의 햇빛과 잘 배수되는 토양에서 잘 자랍니다."
+      "common_name": "클라리 세이지",
+      "description": "클라리 세이지는 약용 특성으로 알려진 향기로운 허브입니다. 배수가 좋은 토양과 중간 정도의 빛에서 자랍니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1213/salvia-sclarea/details",
-      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/growing-clary-sage/"
+      "https://www.rhs.org.uk/plants/1776/salvia-sclarea",
+      "https://www.gardenia.net/plant/salvia-sclarea"
     ]
   }
 }

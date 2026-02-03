@@ -7,20 +7,21 @@
   "difficulty": "easy",
   "popular": false,
   "recommended_pot_materials": [
-    "terracotta"
+    "plastic",
+    "ceramic"
   ],
   "recommended_soil_mixes": [
-    "sandy",
-    "loam"
+    "herbs-vegetables",
+    "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 5,
+  "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": false,
-  "fertilize_interval_days": null,
-  "repot_required": false,
-  "repot_interval_months": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
   "image_hero": "matricaria_chamomilla.jpg",
   "image_thumb": "matricaria_chamomilla.jpg",
   "traits": [
@@ -30,16 +31,16 @@
         "text": {
           "en": "Full sun",
           "pl": "Pełne słońce",
-          "de": "Volle Sonne",
+          "de": "Voller Sonnenschein",
           "fr": "Plein soleil",
-          "it": "Pieno sole",
+          "it": "Sole pieno",
           "es": "Pleno sol",
           "pt": "Sol pleno",
           "ar": "شمس كاملة",
-          "hi": "पूरी धूप",
+          "hi": "पूर्ण सूर्य",
           "zh": "全日照",
-          "ja": "日なた",
-          "ko": "완전한 햇빛"
+          "ja": "直射日光",
+          "ko": "햇볕"
         }
       }
     },
@@ -47,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Przepuszczalna gleba",
-          "de": "Durchlässiger Boden",
-          "fr": "Sol drainé",
-          "it": "Terreno drenato",
-          "es": "Suelo drenado",
-          "pt": "Solo drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "排水良好",
-          "ja": "水はけ良好",
-          "ko": "배수 잘됨"
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيدًا",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性の良い",
+          "ko": "배수가 좋은"
         }
       }
     },
@@ -66,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Regular watering",
-          "pl": "Regularne podlewanie",
-          "de": "Regelmäßig gießen",
-          "fr": "Arrosage régulier",
-          "it": "Annaffiature regolari",
-          "es": "Riego regular",
-          "pt": "Rega regular",
-          "ar": "ري منتظم",
-          "hi": "नियमित पानी",
-          "zh": "定期浇水",
-          "ja": "定期的な水やり",
-          "ko": "규칙적 물주기"
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
         }
       }
     },
@@ -86,8 +87,8 @@
       "value": {
         "text": {
           "en": "Easy",
-          "pl": "Łatwa",
-          "de": "Leicht",
+          "pl": "Łatwy",
+          "de": "Einfach",
           "fr": "Facile",
           "it": "Facile",
           "es": "Fácil",
@@ -96,7 +97,7 @@
           "hi": "आसान",
           "zh": "容易",
           "ja": "簡単",
-          "ko": "쉬움"
+          "ko": "쉬운"
         }
       }
     },
@@ -104,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "Cool to mild",
-          "pl": "Chłodno do umiark.",
-          "de": "Kühl bis mild",
-          "fr": "Frais à doux",
-          "it": "Fresco-mite",
-          "es": "Fresco a templado",
-          "pt": "Fresco a ameno",
-          "ar": "معتدل",
-          "hi": "हल्का मौसम",
-          "zh": "凉爽温和",
-          "ja": "涼しい気候",
-          "ko": "서늘함"
+          "en": "15-20°C",
+          "pl": "15-20°C",
+          "de": "15-20°C",
+          "fr": "15-20°C",
+          "it": "15-20°C",
+          "es": "15-20°C",
+          "pt": "15-20°C",
+          "ar": "15-20°C",
+          "hi": "15-20°C",
+          "zh": "15-20°C",
+          "ja": "15-20°C",
+          "ko": "15-20°C"
         }
       }
     },
@@ -123,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Average humidity",
-          "pl": "Średnia wilgotność",
-          "de": "Mittlere Feuchte",
-          "fr": "Humidité moyenne",
-          "it": "Umidità media",
-          "es": "Humedad media",
-          "pt": "Umidade média",
-          "ar": "رطوبة متوسطة",
-          "hi": "सामान्य नमी",
-          "zh": "中等湿度",
-          "ja": "平均湿度",
-          "ko": "보통 습도"
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
         }
       }
     },
@@ -143,17 +144,17 @@
       "value": {
         "text": {
           "en": "Non-toxic",
-          "pl": "Nietrująca",
-          "de": "Ungiftig",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
           "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "विषहीन",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "비독성"
         }
       }
     },
@@ -161,18 +162,56 @@
       "key": "growth",
       "value": {
         "text": {
-          "en": "Fast annual",
-          "pl": "Szybki jednoroczny",
-          "de": "Schnell einjährig",
-          "fr": "Annuelle rapide",
-          "it": "Annuale rapida",
-          "es": "Anual rápido",
-          "pt": "Anual rápido",
-          "ar": "نمو سنوي سريع",
-          "hi": "तेज़ वार्षिक",
-          "zh": "快速一年生",
-          "ja": "一年草",
-          "ko": "빠른 한해살이"
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    },
+    {
+      "key": "problems",
+      "value": {
+        "text": {
+          "en": "No overwatering",
+          "pl": "Nie podlewać za dużo",
+          "de": "Nicht zu viel gießen",
+          "fr": "Ne pas trop arroser",
+          "it": "Non annaffiare troppo",
+          "es": "No regar en exceso",
+          "pt": "Não regar em excesso",
+          "ar": "لا تسقي كثيرًا",
+          "hi": "अधिक पानी न दें",
+          "zh": "不要过度浇水",
+          "ja": "水を与えすぎない",
+          "ko": "과도하게 물을 주지 않음"
+        }
+      }
+    },
+    {
+      "key": "pests",
+      "value": {
+        "text": {
+          "en": "Occasional pests",
+          "pl": "Okazjonalne szkodniki",
+          "de": "Gelegentliche Schädlinge",
+          "fr": "Pestes occasionnelles",
+          "it": "Parassiti occasionali",
+          "es": "Plagas ocasionales",
+          "pt": "Pragas ocasionais",
+          "ar": "آفات عرضية",
+          "hi": "कभी-कभी कीट",
+          "zh": "偶尔出现害虫",
+          "ja": "時々害虫",
+          "ko": "가끔 발생하는 해충"
         }
       }
     }
@@ -180,58 +219,57 @@
   "translations": {
     "en": {
       "common_name": "Chamomile",
-      "description": "Matricaria chamomilla is a fast-growing annual herb known for its daisy-like flowers. It prefers full sun and well-drained soil. The flowers are widely used for herbal teas."
+      "description": "Matricaria chamomilla, commonly known as chamomile, is a fragrant herb used for its calming properties. It is often used in teas and is easy to grow indoors."
     },
     "pl": {
-      "common_name": "Rumianek pospolity",
-      "description": "Matricaria chamomilla to jednoroczna roślina zielna o kwiatostanach podobnych do stokrotek. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Kwiaty są używane do naparów."
+      "common_name": "Rumianek",
+      "description": "Matricaria chamomilla, znana jako rumianek, to pachnąca roślina, wykorzystywana ze względu na swoje właściwości uspokajające. Często używana w herbatach, łatwa do uprawy w domu."
     },
     "de": {
-      "common_name": "Echte Kamille",
-      "description": "Matricaria chamomilla ist eine einjährige Heilpflanze mit margeritenähnlichen Blüten. Sie wächst am besten in voller Sonne und gut durchlässigem Boden. Die Blüten werden häufig für Tee verwendet."
+      "common_name": "Kamille",
+      "description": "Matricaria chamomilla, allgemein als Kamille bekannt, ist ein duftendes Kraut, das für seine beruhigenden Eigenschaften verwendet wird. Es wird oft in Tees verwendet und ist leicht in Innenräumen zu züchten."
     },
     "fr": {
-      "common_name": "Camomille allemande",
-      "description": "Matricaria chamomilla est une plante annuelle aux fleurs blanches et jaunes. Elle aime le plein soleil et les sols bien drainés. Elle est couramment utilisée en tisane."
+      "common_name": "Camomille",
+      "description": "Matricaria chamomilla, connue sous le nom de camomille, est une plante parfumée utilisée pour ses propriétés apaisantes. Elle est souvent utilisée dans les tisanes et se cultive facilement en intérieur."
     },
     "it": {
-      "common_name": "Camomilla comune",
-      "description": "Matricaria chamomilla è una pianta annuale con fiori simili a margherite. Predilige il pieno sole e terreni ben drenati. I fiori sono usati per infusi."
+      "common_name": "Camomilla",
+      "description": "Matricaria chamomilla, conosciuta come camomilla, è una pianta profumata utilizzata per le sue proprietà calmanti. Viene spesso usata in tisane ed è facile da coltivare in casa."
     },
     "es": {
       "common_name": "Manzanilla",
-      "description": "Matricaria chamomilla es una hierba anual de rápido crecimiento. Requiere pleno sol y suelo bien drenado. Sus flores se usan comúnmente en infusiones."
+      "description": "Matricaria chamomilla, conocida como manzanilla, es una planta aromática utilizada por sus propiedades calmantes. A menudo se usa en tés y es fácil de cultivar en interiores."
     },
     "pt": {
       "common_name": "Camomila",
-      "description": "Matricaria chamomilla é uma planta anual aromática. Cresce melhor em sol pleno e solo bem drenado. As flores são usadas para chás."
+      "description": "Matricaria chamomilla, conhecida como camomila, é uma planta perfumada utilizada por suas propriedades calmantes. É frequentemente usada em chás e é fácil de cultivar dentro de casa."
     },
     "ar": {
-      "common_name": "البابونج",
-      "description": "Matricaria chamomilla نبات عشبي سنوي ذو أزهار تشبه الأقحوان. يفضل الشمس الكاملة والتربة جيدة التصريف. تستخدم أزهاره في شاي الأعشاب."
+      "common_name": "بابونج",
+      "description": "ماتريكاريا كاموميلا، المعروفة بالبابونج، هي عشب ذو رائحة يستخدم لخصائصه المهدئة. غالبًا ما يستخدم في الشاي ومن السهل زراعته في الداخل."
     },
     "hi": {
-      "common_name": "कैमोमाइल",
-      "description": "Matricaria chamomilla एक वार्षिक औषधीय पौधा है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। इसके फूल हर्बल चाय में उपयोग होते हैं।"
+      "common_name": "बबूनज",
+      "description": "मैट्रिकेरिया कैमॉमिला, जिसे बबूनज के नाम से जाना जाता है, एक खुशबूदार पौधा है जिसे शांति देने वाले गुणों के लिए उपयोग किया जाता है। यह अक्सर चाय में प्रयोग किया जाता है और इसे अंदर उगाना आसान होता है।"
     },
     "zh": {
       "common_name": "洋甘菊",
-      "description": "Matricaria chamomilla 是一种一年生草本植物。它喜欢充足阳光和排水良好的土壤。花朵常用于花草茶。"
+      "description": "马特里卡里亚·甘菊（Matricaria chamomilla），俗称洋甘菊，是一种具有安抚作用的芳香草本植物。通常用于泡茶，且易于室内种植。"
     },
     "ja": {
       "common_name": "カモミール",
-      "description": "Matricaria chamomilla は一年生のハーブです。日当たりと水はけの良い土を好みます。花はハーブティーに使われます。"
+      "description": "マトリカリア・カモミラ（Matricaria chamomilla）、一般的にカモミールとして知られているこの植物は、鎮静作用があることで知られる香り高いハーブです。ティーとしてよく使用され、室内でも育てやすいです。"
     },
     "ko": {
       "common_name": "카모마일",
-      "description": "Matricaria chamomilla은 빠르게 자라는 한해살이 허브입니다. 햇빛이 잘 들고 배수가 좋은 토양을 선호합니다. 꽃은 차로 사용됩니다."
+      "description": "마트리카리아 카모밀라(Matiricaria chamomilla), 흔히 카모마일로 알려진 이 식물은 진정 효과가 있는 향기로운 허브입니다. 주로 차로 사용되며 실내에서 재배하기 쉽습니다."
     }
   },
   "sources": {
     "urls": [
-      "https://www.rhs.org.uk/plants/1063/matricaria-chamomilla/details",
-      "https://extension.umn.edu/medicinal-herbs/chamomile",
-      "https://www.kew.org/plants/chamomile"
+      "https://www.gardenia.net/plant/matricaria-chamomilla",
+      "https://www.bhg.com/gardening/pests/insects-diseases-diseases/chamomile/"
     ]
   }
 }
