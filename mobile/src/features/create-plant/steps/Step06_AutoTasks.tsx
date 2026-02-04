@@ -14,6 +14,13 @@ import {
 } from "../constants/create-plant.constants";
 import type { LastRepotted, LastWatered } from "../types/create-plant.types";
 
+// ✅ interval tuning helper
+import {
+  tuneDaysInterval,
+  hasMeaningfulTuningSignals,
+  type IntervalTuningContext,
+} from "../utils/intervalTuning";
+
 // Try slider if installed
 let SliderView: any = View;
 try {
@@ -260,7 +267,7 @@ export default function Step06_AutoTasks() {
   const { state, actions } = useCreatePlantWizard();
   const [openWhich, setOpenWhich] = useState<"watered" | "repotted" | null>(null);
 
-  // main checkbox enabled ONLY if plantDefinition exists (saved by Step02)
+  // main checkbox enabled ONLY if plantDefinition exists
   const plantDefinition = (state as any).selectedPlantDefinition as any;
   const canAutoCreate = !!plantDefinition;
 
@@ -282,32 +289,52 @@ export default function Step06_AutoTasks() {
 
   // Flags
   const waterRequired = plantDefinition?.water_required === true;
-  const mistRequired = plantDefinition?.moisture_required === true; // ✅ treat as MISTING
+  const mistRequired = plantDefinition?.moisture_required === true;
   const fertilizeRequired = plantDefinition?.fertilize_required === true;
   const repotRequired = plantDefinition?.repot_required === true;
 
-  // Intervals from definition
-  const waterInterval =
+  // Base intervals from definition
+  const waterIntervalBase =
     typeof plantDefinition?.water_interval_days === "number"
       ? plantDefinition.water_interval_days
       : 7;
-  const mistInterval =
+  const mistIntervalBase =
     typeof plantDefinition?.moisture_interval_days === "number"
       ? plantDefinition.moisture_interval_days
       : 7;
-  const fertilizeInterval =
+  const fertilizeIntervalBase =
     typeof plantDefinition?.fertilize_interval_days === "number"
       ? plantDefinition.fertilize_interval_days
       : 30;
-  const repotInterval =
+  const repotIntervalBase =
     typeof plantDefinition?.repot_interval_months === "number"
       ? plantDefinition.repot_interval_months
       : 12;
 
+  // ✅ build tuning context from wizard state (earlier steps)
+  const tuningCtx: IntervalTuningContext = useMemo(
+    () => ({
+      lightLevel: state.lightLevel,
+      orientation: state.orientation,
+      distanceCm: state.distanceCm,
+      potMaterial: (state.potMaterial as any) ?? undefined,
+      soilMix: (state.soilMix as any) ?? undefined,
+    }),
+    [state.lightLevel, state.orientation, state.distanceCm, state.potMaterial, state.soilMix]
+  );
+
+  // ✅ compute tuned suggestion (only for watering as requested)
+  const tunedWaterSuggestion = useMemo(() => {
+    return tuneDaysInterval(waterIntervalBase, tuningCtx, {
+      minDays: 1,
+      maxDays: 90,
+      maxDelta: 2,
+    });
+  }, [waterIntervalBase, tuningCtx]);
+
   /**
-   * Prefill intervals ONCE per plantDefinition.
-   * Force disabled tasks OFF (so disabled means actually off).
-   * Do NOT auto-check anything.
+   * Prefill intervals ONCE per plantDefinition (no auto-check).
+   * Force disabled tasks OFF.
    */
   const didInitRef = useRef<string | null>(null);
   useEffect(() => {
@@ -317,9 +344,11 @@ export default function Step06_AutoTasks() {
     if (didInitRef.current === key) return;
     didInitRef.current = key;
 
-    if (typeof plantDefinition?.water_interval_days === "number") {
-      actions.setWaterIntervalDays(plantDefinition.water_interval_days);
-    }
+    // ✅ prefill: watering uses tuned suggestion (but only if meaningful signals exist)
+    const shouldTune = hasMeaningfulTuningSignals(tuningCtx);
+    actions.setWaterIntervalDays(shouldTune ? tunedWaterSuggestion : waterIntervalBase);
+
+    // keep others as-is (you can tune them later if you want)
     if (typeof plantDefinition?.moisture_interval_days === "number") {
       actions.setMoistureInterval(plantDefinition.moisture_interval_days);
     }
@@ -334,7 +363,51 @@ export default function Step06_AutoTasks() {
     if (plantDefinition?.moisture_required !== true) actions.setMoistureRequired(false);
     if (plantDefinition?.fertilize_required !== true) actions.setFertilizeRequired(false);
     if (plantDefinition?.repot_required !== true) actions.setRepotTaskEnabled(false);
-  }, [plantDefinition, actions]);
+  }, [
+    plantDefinition,
+    actions,
+    tuningCtx,
+    tunedWaterSuggestion,
+    waterIntervalBase,
+  ]);
+
+  /**
+   * ✅ If user changes tuning signals after initial init (e.g. goes back to exposure/pot)
+   * update suggested watering interval ONLY if user did NOT manually change it.
+   *
+   * Rule:
+   * - we keep a ref of last "suggested" value
+   * - if current state.waterIntervalDays equals that last suggested (or equals base),
+   *   then we treat it as "not manually edited" and can update it.
+   */
+  const lastSuggestedRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (!plantDefinition) return;
+
+    const shouldTune = hasMeaningfulTuningSignals(tuningCtx);
+    const nextSuggested = shouldTune ? tunedWaterSuggestion : waterIntervalBase;
+
+    const current = state.waterIntervalDays;
+
+    const lastSuggested = lastSuggestedRef.current;
+    const looksAuto =
+      lastSuggested == null
+        ? current === waterIntervalBase || current === 7
+        : current === lastSuggested || current === waterIntervalBase;
+
+    if (looksAuto && current !== nextSuggested) {
+      actions.setWaterIntervalDays(nextSuggested);
+    }
+
+    lastSuggestedRef.current = nextSuggested;
+  }, [
+    plantDefinition,
+    tuningCtx,
+    tunedWaterSuggestion,
+    waterIntervalBase,
+    state.waterIntervalDays,
+    actions,
+  ]);
 
   // If user turns off "createAutoTasks", close dropdowns
   useEffect(() => {
@@ -483,7 +556,8 @@ export default function Step06_AutoTasks() {
                   )}
                 </Text>
                 <DaysSlider
-                  value={state.waterIntervalDays ?? waterInterval}
+                  // ✅ provider now holds tuned suggestion (unless user manually changed)
+                  value={state.waterIntervalDays ?? waterIntervalBase}
                   onChange={(d) => actions.setWaterIntervalDays?.(d)}
                   min={1}
                   max={90}
@@ -516,7 +590,7 @@ export default function Step06_AutoTasks() {
                   )}
                 </Text>
                 <DaysSlider
-                  value={state.moistureIntervalDays ?? mistInterval}
+                  value={state.moistureIntervalDays ?? mistIntervalBase}
                   onChange={(d) => actions.setMoistureInterval(d)}
                   min={1}
                   max={90}
@@ -549,7 +623,7 @@ export default function Step06_AutoTasks() {
                   )}
                 </Text>
                 <DaysSlider
-                  value={state.fertilizeIntervalDays ?? fertilizeInterval}
+                  value={state.fertilizeIntervalDays ?? fertilizeIntervalBase}
                   onChange={(d) => actions.setFertilizeInterval(d)}
                   min={1}
                   max={90}
@@ -612,7 +686,7 @@ export default function Step06_AutoTasks() {
                   )}
                 </Text>
                 <MonthsSlider
-                  value={state.repotIntervalMonths ?? repotInterval}
+                  value={state.repotIntervalMonths ?? repotIntervalBase}
                   onChange={(m) => actions.setRepotIntervalMonths(m)}
                   min={1}
                   max={12}
