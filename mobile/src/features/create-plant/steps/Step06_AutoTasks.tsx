@@ -1,5 +1,5 @@
 ﻿// steps/Step06_AutoTasks.tsx
-import React, { useEffect, useMemo, useState, useCallback } from "react";
+import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { View, Text, Pressable, ScrollView, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -73,7 +73,7 @@ function InlineDropdown<T extends string>({
   onSelect,
   showNotSpecified = true,
   notSpecifiedLabel = "Not specified",
-  notSpecifiedDesc = "Skip if you’re not sure.",
+  notSpecifiedDesc = "Skip if you're not sure.",
 }: {
   open: boolean;
   valueLabel: string;
@@ -135,7 +135,7 @@ function DaysSlider({
   value,
   onChange,
   min = 1,
-  max = 30,
+  max = 90,
   dayLabel = "day",
   daysLabel = "days",
 }: {
@@ -260,13 +260,15 @@ export default function Step06_AutoTasks() {
   const { state, actions } = useCreatePlantWizard();
   const [openWhich, setOpenWhich] = useState<"watered" | "repotted" | null>(null);
 
-  const canAutoCreate = !!state.selectedPlant?.predefined;
+  // ✅ main checkbox enabled ONLY if plantDefinition exists (saved by Step02)
+  const plantDefinition = (state as any).selectedPlantDefinition as any;
+  const canAutoCreate = !!plantDefinition;
 
   // Safe translation (treat key-echo as missing)
   const getTranslation = useCallback(
     (key: string, fallback?: string): string => {
       try {
-        const _lang = currentLanguage; // force dependency for rerender
+        const _lang = currentLanguage;
         void _lang;
         const txt = t(key);
         const isMissing = !txt || txt === key;
@@ -278,51 +280,48 @@ export default function Step06_AutoTasks() {
     [t, currentLanguage]
   );
 
+  // Extract task flags from plant definition
+  const waterRequired = plantDefinition?.water_required === true;
+  const moistureRequired = plantDefinition?.moisture_required === true;
+  const fertilizeRequired = plantDefinition?.fertilize_required === true;
+  const repotRequired = plantDefinition?.repot_required === true;
+
+  // Extract intervals from plant definition
+  const waterInterval = typeof plantDefinition?.water_interval_days === "number" ? plantDefinition.water_interval_days : 7;
+  const moistureInterval = typeof plantDefinition?.moisture_interval_days === "number" ? plantDefinition.moisture_interval_days : 7;
+  const fertilizeInterval = typeof plantDefinition?.fertilize_interval_days === "number" ? plantDefinition.fertilize_interval_days : 30;
+  const repotInterval = typeof plantDefinition?.repot_interval_months === "number" ? plantDefinition.repot_interval_months : 12;
+
   /**
-   * 🔁 Auto-prefill from plant definition
-   * Safe, one-time, never overwrites user input
+   * Prefill intervals ONCE per plantDefinition.
+   * Also: if a checkbox is disabled by flag, force its state OFF.
+   * Do NOT auto-check anything.
    */
+  const didInitRef = useRef<string | null>(null);
   useEffect(() => {
-    if (!canAutoCreate) return;
+    if (!plantDefinition) return;
 
-    const pd: any = (state as any).selectedPlantDefinition;
-    if (!pd) return;
+    const key = String(plantDefinition?.id ?? plantDefinition?.external_id ?? "pd");
+    if (didInitRef.current === key) return;
+    didInitRef.current = key;
 
-    if (!state.createAutoTasks) {
-      actions.setCreateAutoTasks(true);
-    }
+    // prefill intervals (no auto-check)
+    if (typeof plantDefinition?.water_interval_days === "number") actions.setWaterIntervalDays(plantDefinition.water_interval_days);
+    if (typeof plantDefinition?.moisture_interval_days === "number") actions.setMoistureInterval(plantDefinition.moisture_interval_days);
+    if (typeof plantDefinition?.fertilize_interval_days === "number") actions.setFertilizeInterval(plantDefinition.fertilize_interval_days);
+    if (typeof plantDefinition?.repot_interval_months === "number") actions.setRepotIntervalMonths(plantDefinition.repot_interval_months);
 
-    if (pd.water_required && !state.waterTaskEnabled) {
-      actions.setWaterTaskEnabled(true);
-    }
+    // force disabled tasks OFF
+    if (plantDefinition?.water_required !== true) actions.setWaterTaskEnabled(false);
+    if (plantDefinition?.moisture_required !== true) actions.setMoistureRequired(false);
+    if (plantDefinition?.fertilize_required !== true) actions.setFertilizeRequired(false);
+    if (plantDefinition?.repot_required !== true) actions.setRepotTaskEnabled(false);
+  }, [plantDefinition, actions]);
 
-    if (
-      pd.moisture_required &&
-      !state.moistureRequired &&
-      typeof pd.moisture_interval_days === "number"
-    ) {
-      actions.setMoistureRequired(true);
-      actions.setMoistureInterval(pd.moisture_interval_days);
-    }
-
-    if (
-      pd.fertilize_required &&
-      !state.fertilizeRequired &&
-      typeof pd.fertilize_interval_days === "number"
-    ) {
-      actions.setFertilizeRequired(true);
-      actions.setFertilizeInterval(pd.fertilize_interval_days);
-    }
-
-    if (
-      pd.repot_required &&
-      !state.repotTaskEnabled &&
-      typeof pd.repot_interval_months === "number"
-    ) {
-      actions.setRepotTaskEnabled(true);
-      actions.setRepotIntervalMonths(pd.repot_interval_months);
-    }
-  }, [canAutoCreate, state, actions]);
+  // If user turns off "createAutoTasks", close dropdowns
+  useEffect(() => {
+    if (!state.createAutoTasks) setOpenWhich(null);
+  }, [state.createAutoTasks]);
 
   const wateredLabel = useMemo(() => {
     if (!state.lastWatered) return getTranslation("createPlant.step06.notSpecified", "Not specified");
@@ -354,7 +353,6 @@ export default function Step06_AutoTasks() {
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass} pointerEvents="none">
-        {/* Base green gradient (AuthCard match) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0.5 }}
@@ -364,7 +362,6 @@ export default function Step06_AutoTasks() {
           style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
 
-        {/* Fog highlight (AuthCard match) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
@@ -395,9 +392,10 @@ export default function Step06_AutoTasks() {
 
         <SectionCheckbox
           checked={!!state.createAutoTasks}
-          onToggle={() =>
-            canAutoCreate && actions.setCreateAutoTasks(!state.createAutoTasks)
-          }
+          onToggle={() => {
+            if (!canAutoCreate) return;
+            actions.setCreateAutoTasks(!state.createAutoTasks);
+          }}
           label={getTranslation(
             "createPlant.step06.createAutoTasks",
             "Create auto tasks for this plant"
@@ -408,8 +406,8 @@ export default function Step06_AutoTasks() {
         {!canAutoCreate && (
           <Text style={wiz.smallMuted}>
             {getTranslation(
-              "createPlant.step06.requiresPredefined",
-              "This requires a predefined plant."
+              "createPlant.step06.requiresPlantDefinition",
+              "This requires a plant definition."
             )}
           </Text>
         )}
@@ -422,14 +420,19 @@ export default function Step06_AutoTasks() {
             </Text>
             <SectionCheckbox
               checked={!!state.waterTaskEnabled}
-              onToggle={() => actions.setWaterTaskEnabled(!state.waterTaskEnabled)}
+              onToggle={() => {
+                if (!waterRequired) return;
+                actions.setWaterTaskEnabled(!state.waterTaskEnabled);
+                if (state.waterTaskEnabled) setOpenWhich(null);
+              }}
               label={getTranslation(
                 "createPlant.step06.labels.generateWateringTask",
                 "Generate watering task"
               )}
+              disabled={!waterRequired}
             />
 
-            {state.waterTaskEnabled && (
+            {state.waterTaskEnabled && waterRequired && (
               <>
                 <Text style={wiz.smallMuted}>
                   {getTranslation(
@@ -454,8 +457,20 @@ export default function Step06_AutoTasks() {
                   )}
                   notSpecifiedDesc={getTranslation(
                     "createPlant.step06.notSpecifiedDesc",
-                    "Skip if you’re not sure."
+                    "Skip if you're not sure."
                   )}
+                />
+
+                <Text style={wiz.smallMuted}>
+                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                </Text>
+                <DaysSlider
+                  value={state.waterIntervalDays ?? waterInterval}
+                  onChange={(d) => actions.setWaterIntervalDays?.(d)}
+                  min={1}
+                  max={90}
+                  dayLabel={dayLabel}
+                  daysLabel={daysLabel}
                 />
               </>
             )}
@@ -466,21 +481,27 @@ export default function Step06_AutoTasks() {
             </Text>
             <SectionCheckbox
               checked={!!state.moistureRequired}
-              onToggle={() => actions.setMoistureRequired(!state.moistureRequired)}
+              onToggle={() => {
+                if (!moistureRequired) return;
+                actions.setMoistureRequired(!state.moistureRequired);
+              }}
               label={getTranslation(
                 "createPlant.step06.labels.generateMoistureTask",
                 "Generate moisture task"
               )}
+              disabled={!moistureRequired}
             />
 
-            {state.moistureRequired && (
+            {state.moistureRequired && moistureRequired && (
               <>
                 <Text style={wiz.smallMuted}>
                   {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
                 </Text>
                 <DaysSlider
-                  value={state.moistureIntervalDays}
+                  value={state.moistureIntervalDays ?? moistureInterval}
                   onChange={(d) => actions.setMoistureInterval(d)}
+                  min={1}
+                  max={90}
                   dayLabel={dayLabel}
                   daysLabel={daysLabel}
                 />
@@ -493,29 +514,34 @@ export default function Step06_AutoTasks() {
             </Text>
             <SectionCheckbox
               checked={!!state.fertilizeRequired}
-              onToggle={() => actions.setFertilizeRequired(!state.fertilizeRequired)}
+              onToggle={() => {
+                if (!fertilizeRequired) return;
+                actions.setFertilizeRequired(!state.fertilizeRequired);
+              }}
               label={getTranslation(
                 "createPlant.step06.labels.generateFertilisingTask",
                 "Generate fertilising task"
               )}
+              disabled={!fertilizeRequired}
             />
 
-            {state.fertilizeRequired && (
+            {state.fertilizeRequired && fertilizeRequired && (
               <>
                 <Text style={wiz.smallMuted}>
                   {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
                 </Text>
                 <DaysSlider
-                  value={state.fertilizeIntervalDays}
+                  value={state.fertilizeIntervalDays ?? fertilizeInterval}
                   onChange={(d) => actions.setFertilizeInterval(d)}
-                  max={60}
+                  min={1}
+                  max={90}
                   dayLabel={dayLabel}
                   daysLabel={daysLabel}
                 />
               </>
             )}
 
-            {/* CARE */}
+            {/* CARE (always enabled) */}
             <Text style={wiz.sectionTitle}>
               {getTranslation("createPlant.step06.sections.care", "Care / trimming")}
             </Text>
@@ -534,9 +560,10 @@ export default function Step06_AutoTasks() {
                   {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
                 </Text>
                 <DaysSlider
-                  value={state.careIntervalDays}
+                  value={state.careIntervalDays ?? 30}
                   onChange={(d) => actions.setCareInterval(d)}
-                  max={60}
+                  min={1}
+                  max={90}
                   dayLabel={dayLabel}
                   daysLabel={daysLabel}
                 />
@@ -549,21 +576,28 @@ export default function Step06_AutoTasks() {
             </Text>
             <SectionCheckbox
               checked={!!state.repotTaskEnabled}
-              onToggle={() => actions.setRepotTaskEnabled(!state.repotTaskEnabled)}
+              onToggle={() => {
+                if (!repotRequired) return;
+                actions.setRepotTaskEnabled(!state.repotTaskEnabled);
+                if (state.repotTaskEnabled) setOpenWhich(null);
+              }}
               label={getTranslation(
                 "createPlant.step06.labels.generateRepottingTask",
                 "Generate repotting task"
               )}
+              disabled={!repotRequired}
             />
 
-            {state.repotTaskEnabled && (
+            {state.repotTaskEnabled && repotRequired && (
               <>
                 <Text style={wiz.smallMuted}>
                   {getTranslation("createPlant.step06.prompts.recommendedInterval", "Recommended interval")}
                 </Text>
                 <MonthsSlider
-                  value={state.repotIntervalMonths}
+                  value={state.repotIntervalMonths ?? repotInterval}
                   onChange={(m) => actions.setRepotIntervalMonths(m)}
+                  min={1}
+                  max={12}
                   monthLabel={monthLabel}
                   monthsLabel={monthsLabel}
                 />
@@ -591,7 +625,7 @@ export default function Step06_AutoTasks() {
                   )}
                   notSpecifiedDesc={getTranslation(
                     "createPlant.step06.notSpecifiedDesc",
-                    "Skip if you’re not sure."
+                    "Skip if you're not sure."
                   )}
                 />
               </>

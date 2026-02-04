@@ -101,6 +101,9 @@ export type WizardState = {
   plantQuery: string;
   selectedPlant?: SelectedPlant;
 
+  // ✅ ADDED: full plant definition/profile stored from Step02
+  selectedPlantDefinition?: PlantDefinition;
+
   // Step 3
   locations: UserLocation[];
   /** string id if selected; null = explicitly none selected */
@@ -125,10 +128,11 @@ export type WizardState = {
   careRequired?: boolean;
   lastWatered?: LastWatered;
   lastRepotted?: LastRepotted;
-  moistureIntervalDays?: number;   // 1..30
-  fertilizeIntervalDays?: number;  // 1..60
-  careIntervalDays?: number;       // 1..60
-  repotIntervalMonths?: number;    // 1..12
+  waterIntervalDays?: number;     // 1..90
+  moistureIntervalDays?: number;  // 1..90
+  fertilizeIntervalDays?: number; // 1..90
+  careIntervalDays?: number;      // 1..90
+  repotIntervalMonths?: number;   // 1..12
 
   // Step 7 – Photo (local-only)
   photoUri?: string;
@@ -187,6 +191,18 @@ export type PlantDefinition = {
   water: WaterRequirement;
   difficulty: DifficultyLevel;
   popular: boolean;           // popular items come as true from the endpoint
+
+  // Task flags from plant definition
+  water_required?: boolean;
+  moisture_required?: boolean;
+  fertilize_required?: boolean;
+  repot_required?: boolean;
+
+  // Task intervals from plant definition
+  water_interval_days?: number;
+  moisture_interval_days?: number;
+  fertilize_interval_days?: number;
+  repot_interval_months?: number;
 };
 
 // ---- Plant Instance API payload/response ----
@@ -216,6 +232,7 @@ export type ApiPlantInstanceCreatePayload = {
   last_watered: LastWatered | "" | undefined;
   last_repotted: LastRepotted | "" | undefined;
 
+  water_interval_days: number | null;
   moisture_interval_days: number | null;
   fertilize_interval_days: number | null;
   care_interval_days: number | null;
@@ -230,4 +247,3 @@ export type ApiPlantInstance = {
   created_at: string;
   updated_at: string;
 };
-

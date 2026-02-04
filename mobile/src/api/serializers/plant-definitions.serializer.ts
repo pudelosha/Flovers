@@ -4,55 +4,59 @@ import type {
   WaterRequirement,
   DifficultyLevel,
   Suggestion,
+  PlantProfile,
+  PlantTrait,
 } from "../../features/create-plant/types/create-plant.types";
-import type { PlantProfile, PlantTrait } from "../../features/create-plant/types/create-plant.types";
 
-/**
- * Backend returns:
- * - display_name (localized common name) instead of name
- * - external_id
- * - image / image_thumb (profile has both)
- *
- * This serializer maps display_name -> name so UI and textbox keep the selected value.
- */
+/** API TYPES */
 
-/** Full row (popular cards) */
 export type ApiPlantDefinition = {
   id: string | number;
   external_id?: string;
   display_name?: string;
-  name?: string; // legacy
+  name?: string;
   latin: string;
-  image?: string | null; // absolute URL
+  image?: string | null;
   sun: SunRequirement;
   water: WaterRequirement;
   difficulty: DifficultyLevel;
 };
 
-/** Lightweight row for search */
 export type ApiPlantSuggestion = {
   id: string | number;
   external_id?: string;
   display_name?: string;
-  name?: string; // legacy
+  name?: string;
   latin: string;
 };
 
-/** Raw shape expected from Django for a profile */
 export type ApiPlantProfile = {
   id: string | number;
   external_id?: string;
   display_name?: string;
-  name?: string; // legacy
+  name?: string;
   latin: string;
 
-  image?: string | null; // hero absolute URL
+  image?: string | null;
   image_thumb?: string | null;
   description?: string;
-
-  // backend currently keeps traits JSON for now; accept multiple shapes safely
   traits?: any;
+
+  // ✅ AUTO TASK FLAGS
+  water_required?: boolean;
+  water_interval_days?: number | null;
+
+  moisture_required?: boolean;
+  moisture_interval_days?: number | null;
+
+  fertilize_required?: boolean;
+  fertilize_interval_days?: number | null;
+
+  repot_required?: boolean;
+  repot_interval_months?: number | null;
 };
+
+/* helpers */
 
 function toIdString(id: string | number | undefined | null) {
   if (typeof id === "string") return id;
@@ -62,47 +66,55 @@ function toIdString(id: string | number | undefined | null) {
 
 function pickDisplayName(p: { display_name?: any; name?: any; latin?: any }) {
   const v = p?.display_name ?? p?.name ?? "";
-  const s = typeof v === "string" ? v.trim() : "";
-  if (s) return s;
-  const latin = typeof p?.latin === "string" ? p.latin.trim() : "";
-  return latin;
+  if (typeof v === "string" && v.trim()) return v.trim();
+  return typeof p?.latin === "string" ? p.latin : "";
 }
 
+/* serializers */
+
 export function serializePlantProfile(p: ApiPlantProfile): PlantProfile {
-  // Ensure minimal shape even if server omits something
-  const rawTraits = (p as any)?.traits;
-  const traits: PlantTrait[] = Array.isArray(rawTraits) ? rawTraits : [];
+  const traits: PlantTrait[] = Array.isArray(p?.traits) ? p.traits : [];
 
   return {
-    id: toIdString(p?.id),
+    id: toIdString(p.id),
     name: pickDisplayName(p),
-    latin: typeof p?.latin === "string" ? p.latin : "",
-    image: (p as any)?.image ?? null,
-    // keep existing PlantProfile shape; if your type includes imageThumb, you can add it later
-    description: typeof (p as any)?.description === "string" ? (p as any).description : "",
+    latin: p.latin,
+    image: p.image ?? null,
+    description: p.description ?? "",
     traits,
-  } as any;
+
+    // ✅ PASS FLAGS THROUGH
+    water_required: p.water_required,
+    water_interval_days: p.water_interval_days,
+
+    moisture_required: p.moisture_required,
+    moisture_interval_days: p.moisture_interval_days,
+
+    fertilize_required: p.fertilize_required,
+    fertilize_interval_days: p.fertilize_interval_days,
+
+    repot_required: p.repot_required,
+    repot_interval_months: p.repot_interval_months,
+  };
 }
 
 export function serializePlantDefinition(p: ApiPlantDefinition): PlantDefinition {
   return {
-    id: toIdString(p?.id),
+    id: toIdString(p.id),
     name: pickDisplayName(p),
-    latin: typeof p?.latin === "string" ? p.latin : "",
-    image: (p as any)?.image ?? null,
+    latin: p.latin,
+    image: p.image ?? null,
     sun: p.sun,
     water: p.water,
     difficulty: p.difficulty,
-    // popular flag not required here because this endpoint already filters popular
     popular: true,
-  } as any;
+  };
 }
 
 export function serializePlantSuggestion(p: ApiPlantSuggestion): Suggestion {
-  const latinName = p.latin.replace(/_/g, ' '); // Replace underscores with spaces
   return {
-    id: toIdString(p?.id),
+    id: toIdString(p.id),
     name: pickDisplayName(p),
-    latin: latinName, // Use formatted Latin name
+    latin: p.latin.replace(/_/g, " "),
   };
 }

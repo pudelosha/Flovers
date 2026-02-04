@@ -19,6 +19,7 @@ import type {
   SoilMix,
   LastWatered,
   LastRepotted,
+  PlantDefinition,
 } from "../types/create-plant.types";
 import { createPlantInstance } from "../../../api/services/plant-instances.service";
 
@@ -28,6 +29,8 @@ import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage"; //
 type Action =
   | { type: "SET_QUERY"; query: string }
   | { type: "SET_SELECTED_PLANT"; plant?: SelectedPlant }
+  // ✅ ADDED
+  | { type: "SET_SELECTED_PLANT_DEFINITION"; def?: PlantDefinition }
   | { type: "NEXT" }
   | { type: "PREV" }
   | { type: "GOTO"; step: WizardStep }
@@ -53,6 +56,7 @@ type Action =
   | { type: "SET_CARE_REQUIRED"; val: boolean }
   | { type: "SET_CARE_INTERVAL"; val: number }
   | { type: "SET_REPOT_INTERVAL_MONTHS"; val: number }
+  | { type: "SET_WATER_INTERVAL_DAYS"; val: number }
   // Step 7
   | { type: "SET_PHOTO_URI"; uri?: string }
   | { type: "CLEAR_PHOTO" }
@@ -65,6 +69,10 @@ const initial: WizardState = {
   step: "selectPlant",
   plantQuery: "",
   selectedPlant: undefined,
+
+  // ✅ ADDED
+  selectedPlantDefinition: undefined,
+
   locations: [],
   selectedLocationId: null, // must be null (not undefined) per type
   lightLevel: "bright-indirect",
@@ -80,6 +88,7 @@ const initial: WizardState = {
   careRequired: false,
   lastWatered: undefined,
   lastRepotted: undefined,
+  waterIntervalDays: 7,
   moistureIntervalDays: 7,
   fertilizeIntervalDays: 30,
   careIntervalDays: 30,
@@ -110,14 +119,21 @@ function reducer(state: WizardState, action: Action): WizardState {
   switch (action.type) {
     case "SET_QUERY":
       return { ...state, plantQuery: action.query };
+
     case "SET_SELECTED_PLANT":
       return {
         ...state,
-        selectedPlant: action.plant ? {
-          ...action.plant,
-          latin: action.plant.latin.replace(/_/g, ' ') // Replace underscores with spaces
-        } : undefined,
+        selectedPlant: action.plant
+          ? {
+              ...action.plant,
+              latin: action.plant.latin.replace(/_/g, " "), // Replace underscores with spaces
+            }
+          : undefined,
       };
+
+    // ✅ ADDED
+    case "SET_SELECTED_PLANT_DEFINITION":
+      return { ...state, selectedPlantDefinition: action.def };
 
     case "NEXT": {
       const idx = ORDER.indexOf(state.step);
@@ -158,8 +174,9 @@ function reducer(state: WizardState, action: Action): WizardState {
     // Step 6
     case "SET_CREATE_AUTO":
       return action.val
-        ? { ...state, createAutoTasks: true, waterTaskEnabled: true }
+        ? { ...state, createAutoTasks: true } // ✅ DO NOT auto-check any sub checkbox
         : { ...state, createAutoTasks: false };
+
     case "SET_WATER_TASK_ENABLED":
       return { ...state, waterTaskEnabled: action.val };
     case "SET_REPOT_TASK_ENABLED":
@@ -171,17 +188,19 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_MOISTURE_REQUIRED":
       return { ...state, moistureRequired: action.val };
     case "SET_MOISTURE_INTERVAL":
-      return { ...state, moistureIntervalDays: Math.max(1, Math.min(30, action.val)) };
+      return { ...state, moistureIntervalDays: Math.max(1, Math.min(90, action.val)) };
     case "SET_FERTILIZE_REQUIRED":
       return { ...state, fertilizeRequired: action.val };
     case "SET_FERTILIZE_INTERVAL":
-      return { ...state, fertilizeIntervalDays: Math.max(1, Math.min(60, action.val)) };
+      return { ...state, fertilizeIntervalDays: Math.max(1, Math.min(90, action.val)) };
     case "SET_CARE_REQUIRED":
       return { ...state, careRequired: action.val };
     case "SET_CARE_INTERVAL":
-      return { ...state, careIntervalDays: Math.max(1, Math.min(60, action.val)) };
+      return { ...state, careIntervalDays: Math.max(1, Math.min(90, action.val)) };
     case "SET_REPOT_INTERVAL_MONTHS":
       return { ...state, repotIntervalMonths: Math.max(1, Math.min(12, action.val)) };
+    case "SET_WATER_INTERVAL_DAYS":
+      return { ...state, waterIntervalDays: Math.max(1, Math.min(90, action.val)) };
 
     // Step 7
     case "SET_PHOTO_URI":
@@ -207,6 +226,10 @@ const Ctx = createContext<{
   actions: {
     setPlantQuery: (q: string) => void;
     setSelectedPlant: (p?: SelectedPlant) => void;
+
+    // ✅ ADDED
+    setSelectedPlantDefinition: (def?: PlantDefinition) => void;
+
     goNext: () => void;
     goPrev: () => void;
     goTo: (s: WizardStep) => void;
@@ -236,6 +259,7 @@ const Ctx = createContext<{
     setCareRequired: (v: boolean) => void;
     setCareInterval: (d: number) => void;
     setRepotIntervalMonths: (m: number) => void;
+    setWaterIntervalDays: (d: number) => void;
 
     // Step 7
     setPhotoUri: (uri?: string) => void;
@@ -301,12 +325,19 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
   // All other actions are dispatch-only and can be stable
   const actions = useMemo(
     () => ({
+      setPlantQuery: (q: string) => dispatch({ type: "SET_QUERY", query: q }),
+
       setSelectedPlant: (p?: SelectedPlant) => {
         if (p && p.latin) {
-          p.latin = p.latin.replace(/_/g, ' '); // Replace underscores with spaces
+          p.latin = p.latin.replace(/_/g, " "); // Replace underscores with spaces
         }
         dispatch({ type: "SET_SELECTED_PLANT", plant: p });
       },
+
+      // ✅ ADDED
+      setSelectedPlantDefinition: (def?: PlantDefinition) =>
+        dispatch({ type: "SET_SELECTED_PLANT_DEFINITION", def }),
+
       goNext: () => dispatch({ type: "NEXT" }),
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),
@@ -332,12 +363,11 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setMoistureRequired: (v: boolean) => dispatch({ type: "SET_MOISTURE_REQUIRED", val: v }),
       setMoistureInterval: (d: number) => dispatch({ type: "SET_MOISTURE_INTERVAL", val: d }),
       setFertilizeRequired: (v: boolean) => dispatch({ type: "SET_FERTILIZE_REQUIRED", val: v }),
-      setFertilizeInterval: (d: number) =>
-        dispatch({ type: "SET_FERTILIZE_INTERVAL", val: d }),
+      setFertilizeInterval: (d: number) => dispatch({ type: "SET_FERTILIZE_INTERVAL", val: d }),
       setCareRequired: (v: boolean) => dispatch({ type: "SET_CARE_REQUIRED", val: v }),
       setCareInterval: (d: number) => dispatch({ type: "SET_CARE_INTERVAL", val: d }),
-      setRepotIntervalMonths: (m: number) =>
-        dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
+      setRepotIntervalMonths: (m: number) => dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
+      setWaterIntervalDays: (d: number) => dispatch({ type: "SET_WATER_INTERVAL_DAYS", val: d }),
 
       setPhotoUri: (uri?: string) => dispatch({ type: "SET_PHOTO_URI", uri }),
       clearPhoto: () => dispatch({ type: "CLEAR_PHOTO" }),
