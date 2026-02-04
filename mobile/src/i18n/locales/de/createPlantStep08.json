@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "Name und Notizen",
+      "subtitle": "Gib der Pflanze einen Namen, füge Notizen hinzu und lege (optional) das Kaufdatum fest, damit wir ihr Alter schätzen können.",
+      "displayNameLabel": "Name",
+      "placeholderName": "z. B. Monstera aus dem Wohnzimmer",
+      "notesLabel": "Notizen",
+      "notesPlaceholder": "Pflegehinweise, Probleme, wo gekauft…",
+      "purchaseDateLabel": "Kaufdatum (optional)",
+      "notSet": "Nicht festgelegt",
+      "done": "Fertig",
+      "setPurchaseDateTitle": "Kaufdatum festlegen",
+      "datePlaceholder": "RRRR-MM-DD",
+      "cancel": "Abbrechen",
+      "set": "Festlegen",
+      "invalidDateTitle": "Ungültiges Datum",
+      "invalidDateMessage": "Gib ein gültiges Datum im Format RRRR-MM-DD ein.",
+      "nameRequired": "Um eine Pflanze zu erstellen, musst du einen Namen angeben."
+    }
+  }
+}

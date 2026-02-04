@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Schließen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "remove": "Entfernen"
+    },
+    "definition": {
+      "title": "Pflanzendefinition",
+      "traits": "Merkmale",
+      "noId": "Die Kennung der Pflanzendefinition wurde nicht gefunden.",
+      "loadFailed": "Die Pflanzendefinition konnte nicht geladen werden.",
+      "error": "Etwas ist schiefgelaufen.",
+      "empty": "Keine Definitionsdaten vorhanden.",
+      "body": "Dies ist ein Platzhalter-Modal. Die Details der Pflanzendefinition werden später implementiert."
+    },
+    "changeImage": {
+      "title": "Bild ändern",
+      "subtitle": "Dieses Bild wird lokal auf deinem Gerät gespeichert und nicht übertragen.",
+      "noPlantId": "Die Pflanzenkennung wurde nicht gefunden.",
+      "loadFailed": "Das lokale Bild konnte nicht geladen werden.",
+      "error": "Etwas ist schiefgelaufen.",
+      "noPhoto": "Kein Foto ausgewählt",
+      "removedPreview": "Das Bild wird entfernt",
+      "unsaved": "Nicht gespeicherte Änderungen",
+      "takePhoto": "Foto aufnehmen",
+      "chooseGallery": "Aus der Galerie auswählen",
+      "remove": "Bild entfernen",
+      "permissionTitle": "Berechtigungen erforderlich",
+      "permissionCamera": "Erteile Berechtigungen für Kamera und Medien, um ein Foto aufzunehmen.",
+      "permissionGallery": "Erteile Berechtigungen für Medien, um ein Foto auszuwählen.",
+      "cameraErrorTitle": "Kamerafehler",
+      "pickerErrorTitle": "Fehler bei der Bildauswahl",
+      "saveFailedTitle": "Speichern fehlgeschlagen",
+      "saveFailedMsg": "Dieses Bild konnte lokal nicht gespeichert werden.",
+      "confirmRemoveTitle": "Bild entfernen?",
+      "confirmRemoveMsg": "Das Bild wird nach dem Drücken von „Speichern“ entfernt.",
+      "confirmDiscardTitle": "Änderungen verwerfen?",
+      "confirmDiscardMsg": "Die Änderungen werden nicht gespeichert.",
+      "discard": "Verwerfen",
+      "removeFailedTitle": "Entfernen fehlgeschlagen",
+      "removeFailedMsg": "Das lokale Bild konnte nicht entfernt werden."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "createPlant": {
+    "step07": {
+      "title": "Foto hinzufügen",
+      "subtitlePrefix": "Mache ein Foto der Pflanze, damit du sie leichter findest. Das Foto wird lokal auf dem Gerät gespeichert (App-Speicher) und ",
+      "notUploaded": "wird nicht gesendet",
+      "subtitleSuffix": " an unsere Server.",
+      "noPhotoSelected": "Kein Foto ausgewählt",
+      "takePhoto": "Foto aufnehmen",
+      "chooseFromGallery": "Aus Galerie auswählen",
+      "removePhoto": "Foto entfernen",
+      "permissionRequiredTitle": "Erforderliche Berechtigungen",
+      "permissionCameraAndMedia": "Erteile Kamera- und Medienberechtigungen, um ein Foto aufzunehmen.",
+      "permissionMedia": "Erteile Medienberechtigungen, um ein Foto auszuwählen.",
+      "cameraErrorTitle": "Kamerafehler",
+      "pickerErrorTitle": "Fehler bei der Fotoauswahl"
+    }
+  }
+}

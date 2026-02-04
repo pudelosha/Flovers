@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Scanner"
+    },
+    "howItWorks": {
+      "title": "So funktioniert es"
+    },
+    "instruction": "Richte die Kamera auf den QR-Code der Pflanze. Sobald er erkannt wird, öffnet die App automatisch die Details dieser Pflanze.",
+    "hint1": "Jede Pflanze hat ihren eigenen QR-Code. Du kannst ihn speichern, als kleines Etikett ausdrucken, auf den Topf kleben und hier scannen, um die Pflanze sofort zu öffnen.",
+    "qrAvailableIn": "QR-Codes sind verfügbar in:",
+    "qrPath1": "Pflanzen → Pflanze antippen → Pflanzendetails",
+    "qrPath2": "Pflanzen → Kachelmenü → QR-Code anzeigen",
+    "permissionRequired": "Kameraberechtigung erforderlich",
+    "permissionHint": "Aktiviere den Kamerazugriff in den Systemeinstellungen, um QR-Codes scannen zu können.",
+    "openSettings": "Einstellungen öffnen",
+    "initializingCamera": "Kamera wird initialisiert…"
+  }
+}

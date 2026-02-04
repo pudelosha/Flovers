@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "Registrierung",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "termsAgreement": "Ich akzeptiere",
+    "termsLink": "Nutzungsbedingungen",
+    "signUpButton": "Registrieren",
+    "haveAccount": "Hast du bereits ein Konto?",
+    "loginLink": "Anmelden",
+    "errors": {
+      "invalidEmail": "Gib eine gültige E-Mail-Adresse ein.",
+      "shortPassword": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+      "passwordsMismatch": "Die Passwörter stimmen nicht überein.",
+      "termsRequired": "Du musst die Nutzungsbedingungen akzeptieren.",
+      "incompleteForm": "Bitte fülle das Formular aus.",
+      "emailTaken": "Diese E-Mail-Adresse ist bereits vergeben.",
+      "registrationFailed": "Die Registrierung ist fehlgeschlagen. Bitte versuche es erneut.",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "cannotOpenLink": "Der Link kann nicht geöffnet werden."
+    },
+    "success": {
+      "accountCreated": "Konto erstellt. Willkommen!"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Abbrechen",
+      "apply": "Anwenden",
+      "delete": "Löschen",
+      "selectPlant": "Pflanze auswählen",
+      "selectLocation": "Standort auswählen",
+      "datePlaceholder": "RRRR-MM-DD",
+      "taskTypes": {
+        "watering": "Gießen",
+        "moisture": "Feuchtigkeit",
+        "fertilising": "Düngen",
+        "care": "Pflege",
+        "repot": "Umtopfen"
+      }
+    },
+    "delete": {
+      "title": "Verlauf löschen",
+      "scopeLabel": "Bereich",
+      "modes": {
+        "plant": "Für ausgewählte Pflanze löschen",
+        "location": "Für ausgewählten Standort löschen",
+        "types": "Aufgaben des Typs löschen",
+        "olderThan": "Aufgaben löschen, die älter sind als"
+      },
+      "noPlantsHint": "Du hast noch keine Pflanzen im Verlauf.",
+      "noLocationsHint": "Du hast noch keine Standorte im Verlauf.",
+      "daysValue": "{{days}} Tage"
+    },
+    "filter": {
+      "title": "Verlauf filtern",
+      "plantLabel": "Pflanze",
+      "locationLabel": "Standort",
+      "taskTypesLabel": "Aufgabentypen",
+      "completedDateRangeLabel": "Zeitraum der Abschlussdaten",
+      "fromLabel": "Von",
+      "toLabel": "Bis",
+      "anyPlant": "Beliebige Pflanze",
+      "anyLocation": "Beliebiger Standort",
+      "clear": "Leeren"
+    },
+    "sort": {
+      "title": "Verlauf sortieren",
+      "sortByLabel": "Sortieren nach",
+      "directionLabel": "Richtung",
+      "keys": {
+        "completedAt": "Abschlussdatum",
+        "plant": "Pflanzenname",
+        "location": "Standort"
+      },
+      "directions": {
+        "asc": "Aufsteigend",
+        "desc": "Absteigend"
+      },
+      "reset": "Zurücksetzen"
+    }
+  }
+}

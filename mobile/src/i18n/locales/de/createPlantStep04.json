@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Sonneneinstrahlung",
+      "subtitle": "Die Sonneneinstrahlung hilft uns, Bewässerungspläne und Pflegeerinnerungen anzupassen. Sag uns, wie viel Licht diesen Ort erreicht und in welche Richtung das Fenster zeigt.",
+      "lightLevel": "Lichtstärke",
+      "low": "Niedrig",
+      "high": "Hoch",
+      "windowDirection": "Fensterrichtung",
+      "measureLightDirection": "Licht und Richtung messen",
+      "distanceFromWindow": "Abstand vom Fenster",
+      "orientations": {
+        "S": "Süd",
+        "E": "Ost",
+        "W": "West",
+        "N": "Nord"
+      },
+      "modal": {
+        "title": "Messung von Licht und Richtung",
+        "instructions": "Halte das Telefon waagerecht (Bildschirm nach oben) und richte die obere Kante zum Fenster. Bewege das Telefon langsam in Fensternähe und drücke anschließend Messung, um den 5-Sekunden-Test zu starten.",
+        "ambientLive": "Licht (live)",
+        "headingLive": "Richtung (live)",
+        "testLabel": "5-Sekunden-Messung",
+        "running": "(läuft…)",
+        "last": "(letzte)",
+        "done": "fertig",
+        "bestLight": "Licht (bestes in 5 s):",
+        "meanDirection": "Richtung (Mittelwert aus 5 s):",
+        "close": "Schließen",
+        "measure5s": "Messung (5 s)",
+        "measuring": "Messen…",
+        "apply": "Anwenden",
+        "tip": "Hinweis: Bei vielen Telefonen befindet sich der Lichtsensor an der oberen Kante (beim Lautsprecher). Halte das Telefon flach und richte die obere Kante zum Fenster, um den höchsten Messwert zu finden.",
+        "notAvailable": "Nicht verfügbar",
+        "noSensor": "Kein Sensor",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Hell, direkt",
+          "brightIndirect": "Hell, indirekt",
+          "medium": "Mittel / Halbschatten",
+          "low": "Wenig Licht",
+          "veryLow": "Sehr wenig"
+        }
+      }
+    }
+  }
+}

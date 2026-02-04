@@ -1,0 +1,35 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "Pflanze auswählen",
+      "subtitle": "Du kannst unsere vollständige Pflanzenbibliothek durchsuchen, aus einer beliebten Liste auswählen oder eine Pflanze mit der Kamera scannen. Du kannst diesen Schritt auch überspringen, aber die Auswahl einer Pflanze ermöglicht es uns, automatisch Pflegeaufgaben wie das Gießen vorzuschlagen.",
+      "scanButton": "Pflanze scannen",
+      "searchPlaceholder": "Pflanze suchen",
+      "popularPlants": "Beliebte Pflanzen",
+      "noPlantsAvailable": "Keine Pflanzen verfügbar",
+      "errorSearch": "Die Pflanzenliste konnte nicht geladen werden.",
+      "errorPopular": "Beliebte Pflanzen konnten nicht geladen werden"
+    },
+    "scannerModal": {
+      "title": "Pflanze scannen",
+      "selectPlant": "Erkannte Pflanze auswählen",
+      "scanInstructions": "Mache ein Foto oder wähle eines aus der Galerie. Verwende ein klares, qualitativ hochwertiges Bild, das die Blattform der Pflanze gut zeigt, zentriert ist und nicht von anderen Pflanzen oder Objekten verdeckt wird.",
+      "noPhoto": "Kein Foto",
+      "takePhoto": "Foto aufnehmen",
+      "fromGallery": "Aus der Galerie",
+      "recognize": "Pflanze erkennen",
+      "cameraRequired": "Berechtigung erforderlich",
+      "cameraPermissionMessage": "Bitte erteile die Berechtigung für Kamera und Medien, um ein Foto aufzunehmen.",
+      "libraryRequired": "Berechtigung erforderlich",
+      "libraryPermissionMessage": "Bitte erteile die Medienberechtigung, um ein Foto auszuwählen.",
+      "cameraError": "Kamerafehler",
+      "libraryError": "Auswahlfehler",
+      "cameraFailure": "Die Kamera konnte nicht geöffnet werden.",
+      "libraryFailure": "Die Galerie konnte nicht geöffnet werden.",
+      "recognitionFailure": "Die Pflanze konnte nicht erkannt werden.",
+      "noResults": "Keine Ergebnisse. Versuche, ein klareres Foto zu machen.",
+      "back": "Zurück",
+      "close": "Schließen"
+    }
+  }
+}

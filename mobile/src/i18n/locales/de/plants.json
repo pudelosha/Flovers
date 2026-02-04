@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "Pflanzen"
+    },
+    "list": {
+      "unnamed": "Pflanze ohne Namen"
+    },
+    "empty": {
+      "title": "Keine Pflanzen",
+      "desc1": "Tippe auf die Schaltfläche „+“ in der unteren rechten Ecke, um die erste Pflanze hinzuzufügen.",
+      "desc2": "Der Assistent zum Hinzufügen einer Pflanze hilft dir, die Pflanze zu konfigurieren, ihre Parameter festzulegen und Erinnerungen zu planen."
+    },
+    "fab": {
+      "create": "Pflanze hinzufügen",
+      "sort": "Sortieren",
+      "filter": "Filtern",
+      "clearFilter": "Filter zurücksetzen",
+      "locations": "Standorte"
+    },
+    "menu": {
+      "edit": "Pflanze bearbeiten",
+      "reminders": "Erinnerungen anzeigen",
+      "journal": "Pflanzentagebuch anzeigen",
+      "showQr": "QR-Code anzeigen",
+      "delete": "Pflanze löschen"
+    },
+    "toast": {
+      "loadFailed": "Pflanzen konnten nicht geladen werden",
+      "updated": "Pflanze aktualisiert",
+      "deleted": "Pflanze gelöscht",
+      "qrSaved": "Der QR-Code wurde in der Galerie gespeichert.",
+      "qrEmailed": "Eine E-Mail mit diesem QR-Code wird an die Adresse deines Kontos gesendet."
+    },
+    "alert": {
+      "loadFailedTitle": "Ladefehler",
+      "loadFailedMsg": "Die Details der Pflanze konnten nicht geladen werden.",
+      "updateFailedTitle": "Aktualisierungsfehler",
+      "updateFailedMsg": "Diese Pflanze konnte nicht aktualisiert werden.",
+      "deleteFailedTitle": "Löschfehler",
+      "deleteFailedMsg": "Diese Pflanze konnte nicht gelöscht werden."
+    }
+  }
+}

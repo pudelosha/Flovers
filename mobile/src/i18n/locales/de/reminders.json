@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "Erinnerungen",
+    "common": {
+      "unnamedPlant": "Pflanze ohne Namen",
+      "everyN": "alle {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "Tage",
+      "months": "Mon."
+    },
+    "types": {
+      "watering": "Gießen",
+      "moisture": "Besprühen",
+      "fertilising": "Düngen",
+      "care": "Pflege",
+      "repot": "Umtopfen"
+    },
+    "fab": {
+      "add": "Erinnerung hinzufügen",
+      "calendar": "Kalender",
+      "list": "Liste",
+      "sort": "Sortieren",
+      "filter": "Filtern",
+      "clearFilter": "Filter löschen"
+    },
+    "empty": {
+      "title": "Keine Erinnerungen",
+      "description": "Erinnerungen sind mit bestimmten Pflanzen verknüpft. Stelle sicher, dass du mindestens eine Pflanze erstellt hast.\n\nTippe auf die „+“-Schaltfläche, um eine Erinnerung hinzuzufügen. Im Fenster wählst du die Pflanze, den Typ (Gießen, Besprühen, Düngen, Pflege oder Umtopfen) aus und legst das erste Datum sowie die Wiederholungsfrequenz fest."
+    },
+    "menu": {
+      "edit": "Erinnerung bearbeiten",
+      "delete": "Erinnerung löschen"
+    },
+    "tile": {
+      "repeatsEvery": "Wiederholt sich alle {{count}} {{unit}}",
+      "dueToday": "Heute fällig",
+      "dueInOneDay": "Fällig in 1 Tag",
+      "dueInDays": "Fällig in {{count}} Tagen",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "Geplant für {{date}}",
+      "noItems": "Keine Erinnerungen für diesen Tag."
+    },
+    "toast": {
+      "loadFailed": "Erinnerungen konnten nicht geladen werden",
+      "deleted": "Erinnerung gelöscht",
+      "deleteFailed": "Löschen fehlgeschlagen",
+      "deleteFailedWithReason": "Löschen fehlgeschlagen: {{reason}}",
+      "duplicateType": "Diese Pflanze hat bereits eine Erinnerung dieses Typs.",
+      "created": "Erinnerung erstellt",
+      "updated": "Erinnerung aktualisiert",
+      "createFailed": "Erstellung fehlgeschlagen",
+      "createFailedWithReason": "Erstellung fehlgeschlagen: {{reason}}",
+      "updateFailed": "Aktualisierung fehlgeschlagen",
+      "updateFailedWithReason": "Aktualisierung fehlgeschlagen: {{reason}}"
+    }
+  }
+}

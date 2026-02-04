@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "Standorte",
+    "empty": {
+      "title": "Keine Standorte",
+      "description": "Standorte werden automatisch angezeigt, sobald du sie Pflanzen zuweist.\n\nBearbeite eine Pflanze und lege ihren Standort fest, um Pflanzen nach Räumen oder Zonen zu gruppieren."
+    },
+    "fab": {
+      "add": "Standort hinzufügen",
+      "sort": "Sortieren"
+    },
+    "menu": {
+      "edit": "Standort bearbeiten",
+      "delete": "Standort löschen"
+    },
+    "plantCount": {
+      "one": "1 Pflanze",
+      "few": "{{count}} Pflanzen",
+      "many": "{{count}} Pflanzen"
+    },
+    "toast": {
+      "loadFailed": "Standorte konnten nicht geladen werden",
+      "added": "Standort hinzugefügt",
+      "deleted": "Standort gelöscht",
+      "updatedLocal": "Standort aktualisiert (nur lokal)",
+      "saveFailed": "Standort konnte nicht gespeichert werden",
+      "deleteFailed": "Dieser Standort konnte nicht gelöscht werden."
+    },
+    "alert": {
+      "deleteFailedTitle": "Löschen fehlgeschlagen"
+    }
+  }
+}

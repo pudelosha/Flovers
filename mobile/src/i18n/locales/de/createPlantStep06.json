@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Automatische Aufgaben",
+      "subtitle": "Wir können automatisch Erinnerungen (Gießen, Umtopfen, Besprühen, Düngen, Pflege) basierend auf dem Pflanzenprofil erstellen.",
+      "createAutoTasks": "Automatische Aufgaben für diese Pflanze erstellen",
+      "requiresPlantDefinition": "Erfordert eine Pflanzendefinition.",
+      "labels": {
+        "generateWateringTask": "Gießaufgabe erstellen",
+        "generateMistingTask": "Besprühaufgabe erstellen",
+        "generateFertilisingTask": "Düngeaufgabe erstellen",
+        "generateCareTask": "Pflegeaufgabe erstellen",
+        "generateRepottingTask": "Umtopfaufgabe erstellen"
+      },
+      "prompts": {
+        "lastWatered": "Wann wurde zuletzt gegossen?",
+        "selectIntervalDays": "Intervall auswählen (Tage)",
+        "recommendedInterval": "Empfohlenes Intervall",
+        "lastRepotted": "Wann wurde zuletzt umgetopft?"
+      },
+      "notSpecified": "Nicht angegeben",
+      "notSpecifiedDesc": "Überspringen, wenn du dir nicht sicher bist.",
+      "units": {
+        "day": "Tag",
+        "days": "Tage",
+        "month": "Monat",
+        "months": "Monate"
+      },
+      "lastWatered": {
+        "today": "Heute",
+        "yesterday": "Gestern",
+        "three-four-days": "vor 3–4 Tagen",
+        "one-week": "vor einer Woche",
+        "two-weeks": "vor 2 Wochen",
+        "unknown": "Ich erinnere mich nicht"
+      },
+      "lastRepotted": {
+        "this-week": "Diese Woche",
+        "one-week-ago": "vor 1 Woche",
+        "two-weeks-ago": "vor 2 Wochen",
+        "one-month-ago": "vor 1 Monat",
+        "unknown": "Ich erinnere mich nicht"
+      }
+    }
+  }
+}

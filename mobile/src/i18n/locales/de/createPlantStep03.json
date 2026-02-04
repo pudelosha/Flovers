@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Wird geladen...",
+      "title": "Standort auswählen",
+      "subtitle": "Optional, aber hilfreich: Standorte ermöglichen das Gruppieren von Pflanzen sowie späteres Sortieren oder Filtern.",
+      "errorLoadingLocations": "Standorte konnten nicht geladen werden.",
+      "createLocation": "Neuen Standort erstellen",
+      "yourLocations": "Deine Standorte",
+      "categories": {
+        "indoor": "Innenbereich",
+        "outdoor": "Außenbereich",
+        "other": "Andere"
+      },
+      "noLocations": {
+        "indoor": "Keine Standorte im Innenbereich.",
+        "outdoor": "Keine Standorte im Außenbereich.",
+        "other": "Keine anderen Standorte."
+      },
+      "locationExists": "Ein Standort mit diesem Namen existiert bereits.",
+      "errorCreatingLocation": "Standort konnte nicht erstellt werden",
+      "quickSuggestions": "Schnelle Vorschläge"
+    },
+    "locationModal": {
+      "title": "Neuer Standort",
+      "locationName": "Name des Standorts",
+      "category": "Kategorie",
+      "indoor": "Innenbereich",
+      "outdoor": "Außenbereich",
+      "other": "Andere",
+      "create": "Erstellen",
+      "cancel": "Abbrechen",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Wohnzimmer",
+          "kitchen": "Küche",
+          "diningRoom": "Esszimmer",
+          "bedroom": "Schlafzimmer",
+          "bathroom": "Badezimmer",
+          "hallway": "Flur",
+          "office": "Büro",
+          "kidsRoom": "Kinderzimmer"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Terrasse",
+          "patio": "Patio",
+          "garden": "Garten",
+          "frontYard": "Vorgarten",
+          "backyard": "Hintergarten",
+          "porch": "Veranda",
+          "greenhouse": "Gewächshaus"
+        },
+        "other": {
+          "staircase": "Treppenhaus",
+          "garage": "Garage",
+          "basement": "Keller",
+          "lobby": "Lobby",
+          "sunroom": "Wintergarten",
+          "workshop": "Werkstatt",
+          "studio": "Studio",
+          "attic": "Dachboden"
+        }
+      }
+    }
+  }
+}

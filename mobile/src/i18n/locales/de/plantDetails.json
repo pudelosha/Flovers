@@ -1,0 +1,117 @@
+{
+  "plantDetails": {
+    "headerTitle": "Pflanzendetails",
+    "common": {
+      "dash": "—",
+      "plant": "Pflanze"
+    },
+    "errors": {
+      "noId": "Es wurde keine Pflanzen-ID oder kein QR-Code angegeben.",
+      "failedToLoad": "Die Pflanze konnte nicht geladen werden."
+    },
+    "states": {
+      "error": {
+        "title": "Fehler"
+      },
+      "notFound": {
+        "title": "Nicht gefunden",
+        "msg": "Diese Pflanze konnte nicht geladen werden."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Abschluss fehlgeschlagen",
+        "msg": "Diese Erinnerung konnte nicht abgeschlossen werden."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Erinnerung als abgeschlossen markiert.",
+      "qrSaved": "QR-Code in der Galerie gespeichert.",
+      "qrSaveFailed": "QR-Code konnte nicht gespeichert werden.",
+      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an die Adresse Ihres Kontos gesendet."
+    },
+    "permissions": {
+      "storage": {
+        "title": "Speicherberechtigung",
+        "message": "Wir benötigen Zugriff, um den QR-Code in der Galerie zu speichern.",
+        "ok": "OK",
+        "denied": "Speicherberechtigung verweigert."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "Der QR-Code-Renderer ist nicht bereit."
+    },
+    "info": {
+      "fallbackTitle": "Pflanze #{{id}}",
+      "purchased": "Kauf",
+      "notes": "Notizen",
+      "light": "Licht",
+      "orientation": "Ausrichtung",
+      "distance": "Abstand",
+      "pot": "Topf",
+      "soil": "Substrat",
+      "cm": "cm",
+      "orientations": {
+        "N": "Norden",
+        "E": "Osten",
+        "S": "Süden",
+        "W": "Westen"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Pflanzendefinition",
+        "editPlant": "Pflanze bearbeiten",
+        "changeImage": "Bild ändern",
+        "showReminders": "Erinnerungen anzeigen"
+      },
+      "noDefinitionTitle": "Keine Pflanzendefinition",
+      "noDefinitionBody": "Diese Pflanze ist noch nicht mit einer Pflanzendefinition verknüpft.",
+      "editPlant": {
+        "title": "Pflanze bearbeiten",
+        "msg": "Die Bearbeitung dieser Pflanze wird später implementiert."
+      },
+      "showReminders": {
+        "title": "Erinnerungen anzeigen",
+        "msg": "Die Navigation zu den Erinnerungen wird später implementiert."
+      }
+    },
+    "latestReadings": {
+      "title": "Letzte Messungen",
+      "lastRead": {
+        "empty": "Letzte Messung: —",
+        "value": "Letzte Messung: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "QR-Code",
+      "scanner": "Scanner",
+      "saveWord": "speichern",
+      "emailWord": "senden",
+      "desc": {
+        "part1": "Jede Pflanze hat ihren eigenen eindeutigen QR-Code. Wenn Sie diesen Code in der Ansicht scannen,",
+        "part2": "öffnet die App sofort die Details dieser Pflanze.",
+        "part3a": "Sie können",
+        "part3b": "das QR-Code-Bild auf Ihrem Telefon speichern oder",
+        "part3c": "es sich selbst senden und anschließend ausdrucken und am Topf befestigen. Beim nächsten Mal reicht es aus, das Etikett zu scannen, anstatt manuell zu suchen."
+      },
+      "saveBtn": "Speichern",
+      "emailBtn": "Senden"
+    },
+    "reminders": {
+      "title": "Erinnerungen",
+      "menu": {
+        "markComplete": "Als abgeschlossen markieren",
+        "editReminder": "Erinnerung bearbeiten",
+        "showHistory": "Verlauf anzeigen"
+      },
+      "type": {
+        "watering": "Gießen",
+        "fertilising": "Düngen",
+        "moisture": "Besprühen",
+        "care": "Pflege",
+        "repot": "Umtopfen"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Pflanzenprofil",
+      "preferences": "Präferenzen",
+      "errorProfile": "Das Pflanzenprofil konnte nicht abgerufen werden.",
+      "labels": {
+        "sun": "Sonneneinstrahlung",
+        "water": "Gießen",
+        "difficulty": "Schwierigkeit",
+        "potMaterials": "Topfmaterialien",
+        "soilMixes": "Erdenmischungen",
+        "wateringInterval": "Gießen",
+        "moistureInterval": "Feuchtigkeitskontrolle",
+        "fertilizeInterval": "Düngen",
+        "repotInterval": "Umtopfen"
+      },
+      "values": {
+        "everyDays": "Alle {{count}} Tage",
+        "everyMonths": "Alle {{count}} Monate"
+      },
+      "traits": {
+        "sun": "Sonneneinstrahlung",
+        "water": "Gießen",
+        "difficulty": "Schwierigkeit",
+        "soil": "Erde",
+        "temperature": "Temperatur",
+        "humidity": "Luftfeuchtigkeit",
+        "toxic": "Giftig?",
+        "growth": "Wachstum",
+        "light": "Licht",
+        "fertilizer": "Düngen",
+        "recognize": "Pflanze erkennen"
+      }
+    }
+  }
+}

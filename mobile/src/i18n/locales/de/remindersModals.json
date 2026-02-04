@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Abbrechen",
+      "apply": "Anwenden",
+      "clear": "Leeren",
+      "delete": "Löschen",
+      "create": "Erstellen",
+      "update": "Speichern",
+      "reset": "Zurücksetzen"
+    },
+    "confirmDelete": {
+      "title": "Erinnerung löschen",
+      "areYouSurePrefix": "Sind Sie sicher, dass Sie löschen möchten",
+      "areYouSureSuffix": "? Dieser Vorgang kann nicht rückgängig gemacht werden."
+    },
+    "edit": {
+      "titleCreate": "Erinnerung hinzufügen",
+      "titleEdit": "Erinnerung bearbeiten",
+      "typeLabel": "Typ",
+      "plantLabel": "Pflanze",
+      "selectPlant": "Pflanze auswählen",
+      "locationLabel": "Standort",
+      "locationPlaceholder": "Standort",
+      "dueDateLabel": "Fälligkeitsdatum",
+      "datePlaceholder": "RRRR-MM-DD",
+      "intervalLabel": "Häufigkeit",
+      "intervalValuePlaceholder": "Wert"
+    },
+    "filter": {
+      "title": "Erinnerungen filtern",
+      "plantLabel": "Pflanze",
+      "selectPlant": "Pflanze auswählen",
+      "anyPlant": "Beliebige Pflanze",
+      "locationLabel": "Standort",
+      "anyLocation": "Beliebiger Standort",
+      "taskTypesLabel": "Aufgabentypen",
+      "dueDateRangeLabel": "Datumsbereich",
+      "fromLabel": "Von",
+      "toLabel": "Bis",
+      "datePlaceholder": "RRRR-MM-DD"
+    },
+    "sort": {
+      "title": "Erinnerungen sortieren",
+      "sortByLabel": "Sortieren nach",
+      "directionLabel": "Richtung",
+      "keys": {
+        "dueDate": "Fälligkeitsdatum",
+        "plant": "Pflanzenname",
+        "location": "Standort"
+      },
+      "directions": {
+        "asc": "Aufsteigend",
+        "desc": "Absteigend"
+      }
+    }
+  }
+}

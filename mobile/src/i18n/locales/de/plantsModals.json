@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "clear": "Leeren",
+      "apply": "Anwenden",
+      "reset": "Zurücksetzen",
+      "close": "Schließen",
+      "done": "Fertig"
+    },
+    "confirmDelete": {
+      "title": "Pflanze löschen",
+      "messagePrefix": "Möchtest du",
+      "messageSuffix": " wirklich löschen? Alle zugehörigen Daten werden ebenfalls entfernt: Erinnerungen, Geräte und Messwerte, Aufgaben sowie der Aufgabenverlauf. Dieser Vorgang kann nicht rückgängig gemacht werden."
+    },
+    "filter": {
+      "title": "Pflanzen filtern",
+      "anyLocation": "Beliebiger Standort",
+      "anyLatin": "Beliebiger lateinischer/Name"
+    },
+    "sort": {
+      "title": "Pflanzen sortieren",
+      "keyPlant": "Pflanzenname",
+      "keyLocation": "Standort",
+      "dirAsc": "Aufsteigend",
+      "dirDesc": "Absteigend"
+    },
+    "qr": {
+      "title": "QR-Code der Pflanze",
+      "p1": "Jede Pflanze hat einen eindeutigen QR-Code, der ihre Kennung enthält.",
+      "p2": "Wenn du diesen Code mit dem Scanner in der App scannst, wirst du direkt zum Detailbildschirm dieser Pflanze weitergeleitet",
+      "youCan": "Du kannst:",
+      "b1": "das QR-Code-Bild auf dem Telefon speichern oder per E-Mail versenden und anschließend für die Beschriftung ausdrucken,",
+      "b2": "das ausgedruckte Etikett direkt am Blumentopf befestigen, damit der Code immer griffbereit ist,",
+      "b3": "anderen Haushaltsmitgliedern erlauben, das Etikett zu scannen, um diese Pflanze schnell in der App zu öffnen.",
+      "save": "QR-Code speichern",
+      "email": "QR-Code per E-Mail senden"
+    },
+    "edit": {
+      "title": "Pflanze bearbeiten",
+      "namePlaceholder": "Pflanzenname (erforderlich)",
+      "latinPlaceholder": "Lateinischer Name (suchen)…",
+      "locationOptional": "Standort auswählen (optional)",
+      "none": "— Kein —",
+      "notesPlaceholder": "Notizen… (optional)",
+      "purchaseDateLabel": "Kaufdatum",
+      "notSet": "Nicht festgelegt",
+      "fallbackDateTitle": "Kaufdatum festlegen (JJJJ-MM-TT)",
+      "fallbackDatePlaceholder": "JJJJ-MM-TT",
+      "invalidDateTitle": "Ungültiges Datum",
+      "invalidDateMsg": "Verwende das Format JJJJ-MM-TT",
+      "set": "Festlegen",
+      "lightLevelLabel": "Lichtstärke",
+      "low": "Niedrig",
+      "high": "Hoch",
+      "windowDirectionLabel": "Fensterrichtung",
+      "orientations": {
+        "S": "N",
+        "E": "O",
+        "W": "W",
+        "N": "S"
+      },
+      "measureBtn": "Licht und Richtung messen",
+      "distanceLabel": "Abstand zum Fenster",
+      "cm": "cm",
+      "containerMaterialLabel": "Topfmaterial",
+      "soilMixLabel": "Substrat / Mischung",
+      "update": "Speichern"
+    },
+    "journal": {
+      "title": "Pflanzentagebuch",
+      "loading": "Wird geladen...",
+      "error": "Etwas ist schiefgelaufen.",
+      "empty": "Keine Einträge im Tagebuch.",
+      "taskTypes": {
+        "watering": "GIESSEN",
+        "moisture": "BESPRÜHEN",
+        "fertilising": "DÜNGEN",
+        "care": "PFLEGE",
+        "repot": "UMTOPFEN"
+      }
+    }
+  }
+}

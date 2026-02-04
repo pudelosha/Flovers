@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "Start"
+    },
+    "fab": {
+      "showOverdue": "Überfällige anzeigen",
+      "showDueToday": "Für heute anzeigen",
+      "showAllTasks": "Alle anzeigen",
+      "markVisibleAsComplete": "Sichtbare als erledigt markieren",
+      "sort": "Sortieren",
+      "filter": "Filtern",
+      "clearFilter": "Filter löschen",
+      "history": "Verlauf"
+    },
+    "menu": {
+      "markAsComplete": "Als erledigt markieren",
+      "editReminder": "Erinnerung bearbeiten",
+      "goToPlant": "Zur Pflanze gehen",
+      "showHistory": "Verlauf anzeigen",
+      "delete": "Löschen"
+    },
+    "taskTypes": {
+      "watering": "GIESSEN",
+      "moisture": "BESPRÜHEN",
+      "fertilising": "DÜNGEN",
+      "care": "PFLEGE",
+      "repot": "UMTOPFEN"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Aufgaben konnten nicht geladen werden",
+      "taskCompleted": "Aufgabe abgeschlossen",
+      "tasksCompleted": "Aufgaben abgeschlossen",
+      "completeFailed": "Abschluss fehlgeschlagen",
+      "completeSomeFailed": "{{ok}} von {{total}} Aufgaben abgeschlossen",
+      "taskNotLinkedToPlant": "Diese Aufgabe ist keiner Pflanze zugeordnet."
+    },
+    "empty": {
+      "all": {
+        "title": "Keine Aufgaben",
+        "introPrefix": "Diese Seite zeigt deine kommenden",
+        "introBold": "Pflanzenpflege-Aufgaben",
+        "introSuffix": "— Gießen, Düngen, Umtopfen und mehr.",
+        "toGetStarted": "Um zu beginnen:",
+        "bullets": {
+          "createPlantsBold": "Pflanzen hinzufügen",
+          "createPlantsSuffix": "im Tab",
+          "plantsTabBold": "Pflanzen",
+          "addRemindersPrefix": "Füge",
+          "remindersBold": "Erinnerungen",
+          "addRemindersSuffix": "für jede Pflanze hinzu, damit sie hier als Aufgaben erscheinen.",
+          "optionallyConnectPrefix": "Optional verbinde",
+          "iotBold": "IoT-Geräte (Arduino-Boards)",
+          "optionallyConnectMiddle": "im Tab",
+          "readingsTabBold": "Messwerte",
+          "optionallyConnectSuffix": "um Temperatur, Luftfeuchtigkeit, Licht und Bodenfeuchte in Echtzeit zu verfolgen."
+        },
+        "outro": "Sobald dies eingerichtet ist, wird die Startseite zu deinem zentralen Ort, um zu prüfen, was jede Pflanze braucht."
+      },
+      "overdue": {
+        "title": "Keine überfälligen Aufgaben",
+        "body": "Du hast derzeit keine überfälligen Aufgaben.\n\nAlles ist auf dem neuesten Stand — nutze im FAB die Option „Alle anzeigen“, um die vollständige Liste zu sehen, oder wechsle die Filter, um kommende Aufgaben anzusehen."
+      },
+      "today": {
+        "title": "Keine Aufgaben für heute",
+        "body": "Du hast heute keine Aufgaben.\n\nNutze im FAB die Option „Alle anzeigen“, um kommende Erinnerungen zu sehen, oder ändere die Erinnerungspläne bei den Pflanzen."
+      }
+    }
+  }
+}

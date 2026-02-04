@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "Profil"
+    },
+    "common": {
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "change": "Ändern",
+      "delete": "Löschen",
+      "send": "Senden"
+    },
+    "account": {
+      "title": "Konto",
+      "emailLabel": "E-Mail",
+      "createdLabel": "Erstellt",
+      "changeEmail": "E-Mail ändern",
+      "changePassword": "Passwort ändern",
+      "deleteAccount": "Konto löschen",
+      "logout": "Abmelden"
+    },
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "emailSection": "E-Mail",
+      "emailDailyLabel": "Tägliche Zusammenfassung der Aufgaben für heute",
+      "emailDailyHint": "Eine Nachricht pro Tag mit der Zusammenfassung der Aufgaben für heute.",
+      "sendAt": "Senden um",
+      "email24hLabel": "Erinnerung nach 24 Stunden senden",
+      "email24hHint": "Wenn die heutigen Aufgaben unerledigt bleiben, sende morgen eine Erinnerung.",
+      "mobileSection": "Telefon",
+      "pushDailyLabel": "Tägliche Benachrichtigung auf dem Telefon",
+      "pushDailyHint": "Eine Systembenachrichtigung mit der Zusammenfassung der Aufgaben für heute.",
+      "notifyAt": "Benachrichtigen um",
+      "push24hLabel": "Benachrichtigung nach 24 Stunden",
+      "push24hHint": "Wenn Aufgaben offen bleiben, sende am nächsten Tag eine Benachrichtigung."
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "language": "Sprache",
+      "dateTimeFormat": "Datums-/Zeitformat",
+      "temperatureUnits": "Temperatureinheiten",
+      "measurementUnits": "Maßeinheiten",
+      "fabPosition": "FAB-Position",
+      "background": "Hintergrund",
+      "tileMotive": "Kachelmotiv",
+      "tilesTransparency": "Kacheltransparenz",
+      "level": "Ebene",
+      "temperatureOptions": {
+        "C": "°C (Celsius)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Metrisch (cm / m)",
+        "imperial": "Imperial (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Rechts",
+        "left": "Links"
+      },
+      "backgroundOptions": {
+        "bg1": "Hintergrund 1",
+        "bg2": "Hintergrund 2",
+        "bg3": "Hintergrund 3",
+        "bg4": "Hintergrund 4",
+        "bg5": "Hintergrund 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Hell",
+        "dark": "Dunkel"
+      }
+    },
+    "support": {
+      "title": "Support",
+      "contactUs": "Kontaktieren Sie uns",
+      "reportBug": "Fehler melden",
+      "aboutTitle": "Über die App",
+      "versionLabel": "Version",
+      "releaseDateLabel": "Veröffentlichungsdatum",
+      "contactLabel": "Kontakt"
+    },
+    "toasts": {
+      "unauthorized": "Keine Autorisierung",
+      "unauthorizedLoginAgain": "Keine Autorisierung. Bitte melden Sie sich erneut an.",
+      "failedToLoadPreferences": "Profileinstellungen konnten nicht geladen werden. Versuchen Sie es erneut.",
+      "notificationsUpdated": "Benachrichtigungseinstellungen aktualisiert.",
+      "couldNotSaveNotifications": "Benachrichtigungseinstellungen konnten nicht gespeichert werden.",
+      "settingsUpdated": "Einstellungen aktualisiert.",
+      "couldNotSaveSettings": "Einstellungen konnten nicht gespeichert werden."
+    }
+  }
+}

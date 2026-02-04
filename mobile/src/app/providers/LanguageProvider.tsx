@@ -51,7 +51,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const handleChangeLanguage = async (lang: string) => {
     try {
-      // ✅ This is what actually triggers react-i18next updates
+      // This is what actually triggers react-i18next updates
       await i18n.changeLanguage(lang);
 
       // Ensure state matches the final i18n language (including fallbacks)

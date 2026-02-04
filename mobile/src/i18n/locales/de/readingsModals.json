@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "apply": "Anwenden",
+      "clear": "Zurücksetzen",
+      "close": "Schließen",
+      "reset": "Zurücksetzen",
+      "save": "Speichern",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "Messwert löschen",
+      "messageBefore": "Möchten Sie wirklich",
+      "messageAfter": " löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."
+    },
+    "deviceSetup": {
+      "title": "Gerätekonfiguration",
+      "httpEndpoints": "HTTP-Endpunkte",
+      "addReadingPost": "Messwert hinzufügen (POST)",
+      "readReadingsGetPost": "Messwerte abrufen (GET/POST)",
+      "samplePayloads": "Beispiel-Payloads",
+      "addReadingBody": "Anfrageinhalt zum Hinzufügen eines Messwerts",
+      "readRequestBody": "Anfrageinhalt zum Abrufen der Messwerte",
+      "currentAuthSecret": "Aktuelles Autorisierungsgeheimnis",
+      "showAuthSecret": "Autorisierungsgeheimnis anzeigen",
+      "hideAuthSecret": "Autorisierungsgeheimnis verbergen",
+      "generateNewSecret": "Neues Geheimnis generieren",
+      "downloadPdfDocumentation": "PDF-Dokumentation herunterladen",
+      "rotateConfirmTitle": "Geheimnis rotieren?",
+      "rotateConfirmText": "Das Generieren eines neuen Geheimnisses macht das aktuelle ungültig. Aktualisieren Sie anschließend die Gerätekonfiguration.",
+      "rotate": "Rotieren"
+    },
+    "filter": {
+      "title": "Messwerte filtern",
+      "plantLabel": "Pflanze",
+      "locationLabel": "Standort",
+      "statusLabel": "Status",
+      "selectPlant": "Pflanze auswählen",
+      "anyPlant": "Beliebige Pflanze",
+      "anyLocation": "Beliebiger Standort",
+      "anyStatus": "Beliebiger Status",
+      "statusEnabled": "Aktiviert",
+      "statusDisabled": "Deaktiviert"
+    },
+    "sort": {
+      "title": "Messwerte sortieren",
+      "sortBy": "Sortieren nach",
+      "direction": "Richtung",
+      "keyPlantName": "Pflanzenname",
+      "keyLocation": "Standort",
+      "keyLastRead": "Letzter Messwert",
+      "ascending": "Aufsteigend",
+      "descending": "Absteigend"
+    },
+    "upsert": {
+      "linkDeviceTitle": "Gerät verbinden",
+      "editDeviceTitle": "Gerät bearbeiten",
+      "noPlantsText": "Sie haben noch keine Pflanzen. Fügen Sie zuerst eine Pflanze hinzu, um ein Gerät zu verbinden.",
+      "selectPlant": "Pflanze auswählen",
+      "locationPlaceholder": "Standort",
+      "deviceNameRequired": "Gerätename (erforderlich)",
+      "sensors": "Sensoren",
+      "sensorTemperature": "Temperatur",
+      "sensorHumidity": "Luftfeuchtigkeit",
+      "sensorLight": "Licht",
+      "sensorSoilMoisture": "Bodenfeuchtigkeit",
+      "moistAlertLabel": "Benachrichtigungen senden, wenn die Bodenfeuchtigkeit unter den Schwellenwert fällt",
+      "thresholdLabel": "Schwellenwert:",
+      "samplingInterval": "Abtastintervall",
+      "everyXHours": "Alle {{count}} Std.",
+      "authSecret": "Autorisierungsgeheimnis",
+      "deviceKey": "Geräteschlüssel",
+      "sendCodeViaEmail": "Code per E-Mail senden",
+      "saveCodeAsText": "Code als Text speichern",
+      "enabled": "Aktiviert",
+      "ingestReadingsFromDevice": "Messwerte von diesem Gerät erfassen",
+      "notesOptional": "Notizen… (optional)"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Abbrechen",
+      "apply": "Anwenden",
+      "reset": "Zurücksetzen"
+    },
+    "complete": {
+      "title": "Aufgabe als erledigt markieren",
+      "overdueInfo": "Diese Aufgabe ist überfällig. Das nächste Datum wird ab heute {{intervalText}} berechnet.",
+      "noteLabel": "Notiz (optional)",
+      "noteHint": "Diese Notiz wird gespeichert und ist später für die jeweilige Pflanze im Pflanzentagebuch sichtbar.",
+      "notePlaceholder": "Du kannst eine kurze Notiz darüber hinzufügen, was du getan hast, Beobachtungen usw.",
+      "confirm": "Als erledigt markieren"
+    },
+    "completeBulk": {
+      "title": "Markiere {{count}} Aufgaben als erledigt",
+      "overdueInfo": "Einige Aufgaben sind überfällig. Für überfällige Aufgaben wird das nächste Datum ab heute {{intervalText}} berechnet.",
+      "noteHint": "Diese Notiz wird für jede abgeschlossene Aufgabe gespeichert und ist später für die jeweilige Pflanze im Pflanzentagebuch sichtbar.",
+      "confirm": "Als erledigt markieren"
+    },
+    "filter": {
+      "title": "Aufgaben filtern",
+      "plantLabel": "Pflanze",
+      "locationLabel": "Standort",
+      "taskTypesLabel": "Aufgabentypen",
+      "dueDateRangeLabel": "Fälligkeitszeitraum",
+      "fromLabel": "Von",
+      "toLabel": "Bis",
+      "anyPlant": "Beliebige Pflanze",
+      "selectPlant": "Pflanze auswählen",
+      "anyLocation": "Beliebiger Standort",
+      "datePlaceholder": "RRRR-MM-DD",
+      "clear": "Zurücksetzen"
+    },
+    "sort": {
+      "title": "Aufgaben sortieren",
+      "sortByLabel": "Sortieren nach",
+      "directionLabel": "Richtung",
+      "keys": {
+        "dueDate": "Datum",
+        "plant": "Pflanzenname",
+        "location": "Standort"
+      },
+      "directions": {
+        "asc": "Aufsteigend",
+        "desc": "Absteigend"
+      }
+    }
+  }
+}

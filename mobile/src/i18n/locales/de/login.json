@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Anmeldung",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "signIn": "Anmelden",
+    "forgotPassword": "Passwort vergessen?",
+    "resendActivation": "Haben Sie die Aktivierungs-E-Mail nicht erhalten?",
+    "noAccount": "Haben Sie kein Konto?",
+    "signUp": "Registrieren",
+    "errors": {
+      "invalidCredentials": "Ungültige E-Mail-Adresse oder Passwort.",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    },
+    "success": {
+      "welcome": "Willkommen zurück!"
+    }
+  }
+}

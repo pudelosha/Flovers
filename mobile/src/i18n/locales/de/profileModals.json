@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Senden…"
+    },
+    "support": {
+      "copyToMe": "Senden Sie mir ebenfalls eine Kopie per E-Mail"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "E-Mail ändern",
+        "newEmailPlaceholder": "Neue E-Mail",
+        "currentPasswordPlaceholder": "Aktuelles Passwort"
+      },
+      "changePassword": {
+        "title": "Passwort ändern",
+        "currentPasswordPlaceholder": "Aktuelles Passwort",
+        "newPasswordPlaceholder": "Neues Passwort",
+        "confirmNewPasswordPlaceholder": "Neues Passwort bestätigen",
+        "update": "Aktualisieren"
+      },
+      "deleteAccount": {
+        "title": "Konto löschen",
+        "warning": "Diese Aktion ist nicht rückgängig zu machen. Wenn Sie fortfahren, werden Ihr Konto und Ihre Daten dauerhaft gelöscht.",
+        "passwordPlaceholder": "Geben Sie Ihr Passwort zur Bestätigung ein"
+      },
+      "reportBug": {
+        "title": "Fehler melden",
+        "subjectPlaceholder": "Betreff",
+        "descriptionPlaceholder": "Beschreiben Sie das Problem…"
+      },
+      "contactUs": {
+        "title": "Kontaktieren Sie uns",
+        "subjectPlaceholder": "Betreff",
+        "messagePlaceholder": "Wie können wir helfen?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Geben Sie eine neue E-Mail-Adresse ein.",
+      "enterCurrentPassword": "Geben Sie das aktuelle Passwort ein.",
+      "emailUpdated": "Die E-Mail wurde aktualisiert.",
+      "couldNotChangeEmail": "Die E-Mail konnte nicht geändert werden. Überprüfen Sie das Passwort und versuchen Sie es erneut.",
+      "enterNewPassword": "Geben Sie ein neues Passwort ein.",
+      "passwordsDoNotMatch": "Die neuen Passwörter stimmen nicht überein.",
+      "passwordUpdated": "Das Passwort wurde aktualisiert.",
+      "couldNotChangePassword": "Das Passwort konnte nicht geändert werden. Überprüfen Sie das aktuelle Passwort und versuchen Sie es erneut.",
+      "enterSubject": "Geben Sie einen Betreff ein.",
+      "enterMessage": "Geben Sie eine Nachricht ein.",
+      "enterDescription": "Beschreiben Sie das Problem.",
+      "contactSent": "Die Nachricht wurde gesendet. Wir melden uns in Kürze.",
+      "bugSent": "Die Fehlermeldung wurde gesendet. Vielen Dank.",
+      "couldNotSendContact": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es erneut.",
+      "couldNotSendBug": "Die Fehlermeldung konnte nicht gesendet werden. Versuchen Sie es erneut.",
+      "deleteNotImplemented": "Das Löschen des Kontos ist noch nicht verfügbar.",
+      "requestTimedOut": "Zeitüberschreitung. Versuchen Sie es erneut."
+    }
+  }
+}

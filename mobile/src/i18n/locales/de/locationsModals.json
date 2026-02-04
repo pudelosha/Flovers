@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "create": "Erstellen",
+      "save": "Speichern",
+      "apply": "Anwenden",
+      "reset": "Zurücksetzen"
+    },
+    "confirmDelete": {
+      "title": "Standort löschen",
+      "messagePrefix": "Möchtest du wirklich löschen",
+      "messageSuffix": "? Dieser Vorgang kann nicht rückgängig gemacht werden.",
+      "blockedTitle": "Dieser Standort kann nicht gelöscht werden",
+      "blockedMessage": "Diesem Standort sind zugeordnet: {{countLabel}}. Entferne zuerst die Pflanzen oder verschiebe sie an einen anderen Standort und versuche es dann erneut.",
+      "blockedToast": "Dieser Standort kann nicht gelöscht werden, da ihm Pflanzen zugeordnet sind. Entferne sie oder verschiebe sie zuerst."
+    },
+    "edit": {
+      "titleCreate": "Standort hinzufügen",
+      "titleEdit": "Standort bearbeiten",
+      "nameLabel": "Name des Standorts",
+      "namePlaceholder": "z. B. Wohnzimmer, Regal in der Küche",
+      "categoryLabel": "Kategorie",
+      "categories": {
+        "indoor": "Innen",
+        "outdoor": "Außen",
+        "other": "Andere"
+      },
+      "quickSuggestions": "Schnelle Vorschläge",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Wohnzimmer",
+          "kitchen": "Küche",
+          "diningRoom": "Esszimmer",
+          "bedroom": "Schlafzimmer",
+          "bathroom": "Badezimmer",
+          "hallway": "Flur",
+          "office": "Büro",
+          "kidsRoom": "Kinderzimmer"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Terrasse",
+          "patio": "Patio",
+          "garden": "Garten",
+          "frontYard": "Vorgarten",
+          "backyard": "Hintergarten",
+          "porch": "Veranda",
+          "greenhouse": "Gewächshaus"
+        },
+        "other": {
+          "staircase": "Treppenhaus",
+          "garage": "Garage",
+          "basement": "Keller",
+          "lobby": "Lobby",
+          "sunroom": "Wintergarten",
+          "workshop": "Werkstatt",
+          "studio": "Studio",
+          "attic": "Dachboden"
+        }
+      }
+    },
+    "sort": {
+      "title": "Standorte sortieren",
+      "keyName": "Name des Standorts",
+      "keyCount": "Anzahl der Pflanzen",
+      "dirAsc": "Aufsteigend",
+      "dirDesc": "Absteigend"
+    }
+  }
+}

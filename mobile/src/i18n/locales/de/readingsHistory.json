@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Messverlauf",
+    "plantFallback": "Pflanze",
+    "noDevicesFound": "Keine Geräte gefunden.",
+    "unauthorized": "Keine Autorisierung. Bitte melden Sie sich erneut an.",
+    "failedLoadDevices": "Geräte konnten nicht geladen werden.",
+    "failedLoadHistory": "Verlauf konnte nicht geladen werden.",
+    "segment": {
+      "day": "TAG",
+      "week": "WOCHE",
+      "month": "MONAT"
+    },
+    "metric": {
+      "temperatureShort": "Temp",
+      "humidityShort": "Feuchte",
+      "lightShort": "Licht",
+      "moistureShort": "Boden"
+    }
+  }
+}

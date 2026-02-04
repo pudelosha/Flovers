@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Topf und Substrat",
+      "subtitle": "Diese Informationen sind optional. Wähle das Material des Topfes/Behälters sowie das Substrat – oder lasse „Nicht angegeben“ und fahre fort.",
+      "containerMaterial": "Topfmaterial",
+      "soilMix": "Substrat / Mischung",
+      "notSpecified": "Nicht angegeben",
+      "notSpecifiedDesc": "Überspringen, wenn du dir nicht sicher bist.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Kunststoff",
+          "description": "Leicht; hält Feuchtigkeit länger; günstig und vielseitig."
+        },
+        "ceramic": {
+          "label": "Keramik (glasiert)",
+          "description": "Schwerer; hält Feuchtigkeit gut; dekorative Oberfläche."
+        },
+        "terracotta": {
+          "label": "Terrakotta",
+          "description": "Porös; leitet Feuchtigkeit ab; ideal für Sukkulenten und Kakteen."
+        },
+        "clay": {
+          "label": "Ton (unglasiert)",
+          "description": "Ähnlich wie Terrakotta; „atmungsaktiv“, trocknet schneller aus."
+        },
+        "cement": {
+          "label": "Zement",
+          "description": "Sehr schwer; moderner Look; hält Feuchtigkeit recht gut."
+        },
+        "concrete": {
+          "label": "Beton",
+          "description": "Robust und schwer; stabil im Außenbereich; hält Feuchtigkeit."
+        },
+        "metal": {
+          "label": "Metall (allgemein)",
+          "description": "Erhitzt sich schnell in der Sonne; oft ist ein Übertopf/Einsatz nötig."
+        },
+        "stainless": {
+          "label": "Edelstahl",
+          "description": "Modern; korrosionsbeständig; kann sich aufheizen."
+        },
+        "aluminum": {
+          "label": "Aluminium",
+          "description": "Leicht; leitet Wärme; Vorsicht vor Überhitzung in der Sonne."
+        },
+        "iron": {
+          "label": "Eisen / Stahl",
+          "description": "Sehr langlebig; kann rosten; manchmal ist ein Einsatz erforderlich."
+        },
+        "copper": {
+          "label": "Kupfer / Messing",
+          "description": "Dekorativ; kann mit dem Substrat reagieren; meist als Übertopf."
+        },
+        "wood": {
+          "label": "Holz",
+          "description": "Natürliche Optik; kann einen Einsatz benötigen; kann bei dauerhafter Feuchtigkeit verrotten."
+        },
+        "bamboo": {
+          "label": "Bambus",
+          "description": "Leicht und nachhaltig; meist mit Einsatz; besser für Innenräume."
+        },
+        "rattan": {
+          "label": "Rattan / Weide",
+          "description": "Dekorative Übertöpfe; innen einen Produktionstopf verwenden."
+        },
+        "glass": {
+          "label": "Glas",
+          "description": "Gut für Terrarien; kein Ablauf; Feuchtigkeit kontrollieren."
+        },
+        "stone": {
+          "label": "Stein / Marmor",
+          "description": "Sehr schwer und stabil; hält Kühle länger."
+        },
+        "resin": {
+          "label": "Harz",
+          "description": "Leicht und langlebig; gut für draußen; isoliert die Wurzeln."
+        },
+        "fiberglass": {
+          "label": "Glasfaser",
+          "description": "Leicht und robust; gut für draußen; isolierend."
+        },
+        "biodegradable": {
+          "label": "Biologisch abbaubar",
+          "description": "Z. B. Kokosfaser/Torf; Anzuchttöpfe; zersetzen sich mit der Zeit."
+        },
+        "fabric": {
+          "label": "Stofftopf",
+          "description": "Belüftet die Wurzeln; trocknet schnell aus; gut für Gemüse."
+        },
+        "grow-bag": {
+          "label": "Pflanzsack",
+          "description": "Stoffbeutel; mobil; leitet Wasser schnell ab; häufigeres Gießen."
+        },
+        "self-watering": {
+          "label": "Selbstbewässernd",
+          "description": "Behälter mit Docht; erleichtert gleichmäßiges Gießen."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Universalsubstrat",
+          "description": "Gute Startoption für die meisten Zimmerpflanzen."
+        },
+        "green-plants": {
+          "label": "Substrat für Grün- / Zimmerpflanzen",
+          "description": "Universalsubstrat für Grünpflanzen (oft auch für Palmen)."
+        },
+        "balcony-flowers": {
+          "label": "Substrat für Balkon- und Beetpflanzen",
+          "description": "Nährstoffreicher; gut für blühende Pflanzen in Töpfen und Kästen."
+        },
+        "cactus-succulent": {
+          "label": "Substrat für Kakteen und Sukkulenten",
+          "description": "Sehr durchlässig; ideal für Sukkulenten und Kakteen."
+        },
+        "orchid": {
+          "label": "Substrat für Orchideen",
+          "description": "Grob, auf Rindenbasis; sorgt für viel Luft an den Wurzeln."
+        },
+        "aroid": {
+          "label": "Mischung für Aroideen",
+          "description": "Sehr luftig (Rinde/Perlit) für Monstera/Philodendren."
+        },
+        "seed-starting": {
+          "label": "Aussaaterde",
+          "description": "Fein; gut für Bewurzelung und Keimlinge."
+        },
+        "bonsai": {
+          "label": "Bonsai-Substrat",
+          "description": "Körnig und durchlässig; verdichtet sich weniger."
+        },
+        "herbs-vegetables": {
+          "label": "Substrat für Kräuter und Gemüse",
+          "description": "Nährstoffreicher; geeignet für essbare Pflanzen."
+        },
+        "citrus": {
+          "label": "Substrat für Zitruspflanzen",
+          "description": "Durchlässig; geeignet für Zitrus- und mediterrane Pflanzen."
+        },
+        "fern": {
+          "label": "Substrat für Farne",
+          "description": "Feuchtigkeitsliebend; meist mit höherem Anteil organischer Bestandteile."
+        },
+        "conifers": {
+          "label": "Substrat für Nadelgehölze",
+          "description": "Substrat für Koniferen; oft leicht sauer und durchlässig."
+        },
+        "acid-loving": {
+          "label": "Substrat für säureliebende Pflanzen",
+          "description": "Saures Substrat für Heidelbeeren, Heidekraut, Rhododendren, Azaleen usw."
+        },
+        "peat-free": {
+          "label": "Torffreies Substrat",
+          "description": "Nachhaltiger; Zusammensetzung je nach Hersteller."
+        }
+      }
+    }
+  }
+}

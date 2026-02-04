@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "Messwerte"
+    },
+    "defaults": {
+      "thisDevice": "dieses Gerät"
+    },
+    "tile": {
+      "lastReadPrefix": "Letzter Messwert"
+    },
+    "menu": {
+      "history": "Messwertverlauf",
+      "plantDetails": "Pflanzendetails",
+      "editDevice": "Gerät bearbeiten",
+      "deleteDevice": "Gerät löschen"
+    },
+    "fab": {
+      "linkDevice": "Gerät verbinden",
+      "deviceSetup": "Gerätekonfiguration",
+      "sort": "Sortieren",
+      "filter": "Filtern",
+      "clearFilter": "Filter zurücksetzen"
+    },
+    "empty": {
+      "title": "Keine Geräte",
+      "description": "Geräte ermöglichen das Speichern von Messwerten für Temperatur, Luftfeuchtigkeit, Lichtintensität sowie Bodenfeuchte einer Pflanze.\n\nTippe auf die Aktion „+ Gerät verbinden“, um ein neues hinzuzufügen. Wähle eine Pflanze, benenne das Gerät, wähle die Sensoren aus und lege das Abtastintervall fest. Öffne anschließend die Gerätekonfiguration, um das Kontosekret einzusehen, es zu erneuern und die fertige Arduino/ESP-Skizze zum Einfügen zu senden."
+    },
+    "toasts": {
+      "unauthorized": "Keine Autorisierung. Bitte erneut anmelden.",
+      "loadFailed": "Geräte konnten nicht geladen werden",
+      "deviceDeleted": "Gerät gelöscht",
+      "deleteFailed": "Konnte nicht gelöscht werden",
+      "deleteFailedPrefix": "Konnte nicht gelöscht werden",
+      "deviceAdded": "Gerät hinzugefügt",
+      "deviceUpdated": "Gerät aktualisiert",
+      "addFailed": "Konnte nicht hinzugefügt werden",
+      "addFailedPrefix": "Konnte nicht hinzugefügt werden",
+      "updateFailed": "Konnte nicht aktualisiert werden",
+      "updateFailedPrefix": "Konnte nicht aktualisiert werden",
+      "setupLoadFailed": "Konfiguration konnte nicht geladen werden",
+      "setupLoadFailedPrefix": "Konfiguration konnte nicht geladen werden",
+      "secretRotated": "Sekret erneuert",
+      "rotateFailed": "Sekret konnte nicht erneuert werden",
+      "rotateFailedPrefix": "Sekret konnte nicht erneuert werden"
+    }
+  }
+}
