@@ -6,14 +6,9 @@ import {
   Platform,
   Animated,
   TextInput as RNTextInput,
+  Linking,
 } from "react-native";
-import {
-  Text,
-  TextInput,
-  Button,
-  Checkbox,
-  TouchableRipple,
-} from "react-native-paper";
+import { Text, TextInput, Button, Checkbox, TouchableRipple } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
@@ -21,6 +16,22 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 const INPUT_HEIGHT = 64;
+
+// GitHub Pages base (repo name included)
+const WEB_BASE = "https://pudelosha.github.io/Flovers";
+
+function normalizeLang(lang) {
+  if (!lang) return "en";
+  const lc = String(lang).toLowerCase();
+  return lc.startsWith("pl") ? "pl" : "en";
+}
+
+// For Terms specifically, this guarantees:
+// https://pudelosha.github.io/Flovers/en/terms (or /pl/terms)
+function buildTermsUrl(lang) {
+  const safeLang = normalizeLang(lang);
+  return `${WEB_BASE}/${safeLang}/terms`;
+}
 
 /** Reusable animated floating label input (same UX as other screens) */
 const AnimatedFloatingLabel = ({
@@ -85,7 +96,10 @@ const AnimatedFloatingLabel = ({
   return (
     <View style={s.inputContainer}>
       <Animated.Text
-        style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}
+        style={[
+          s.floatingLabel,
+          { top: labelTop, fontSize: labelFontSize, color: labelColor },
+        ]}
       >
         {label}
       </Animated.Text>
@@ -119,30 +133,41 @@ const AnimatedFloatingLabel = ({
 };
 
 // Create a wrapper component that ensures translations are ready
-const TranslatedText = ({ tKey, children, style, variant }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any,
-  variant?: "headlineMedium" | "bodyMedium" | "bodySmall" 
+const TranslatedText = ({
+  tKey,
+  children,
+  style,
+  variant,
+}: {
+  tKey: string;
+  children?: any;
+  style?: any;
+  variant?: "headlineMedium" | "bodyMedium" | "bodySmall";
 }) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  
-  // Use currentLanguage to force re-render when language changes
-  // This ensures the text updates immediately
+
+  // Force re-render on language change
   React.useMemo(() => {}, [currentLanguage]);
-  
+
   try {
     const text = t(tKey);
     if (variant) {
-      return <Text variant={variant} style={style}>{text}</Text>;
+      return (
+        <Text variant={variant} style={style}>
+          {text}
+        </Text>
+      );
     }
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
-    const fallbackText = tKey.split('.').pop() || tKey;
+    const fallbackText = tKey.split(".").pop() || tKey;
     if (variant) {
-      return <Text variant={variant} style={style}>{fallbackText}</Text>;
+      return (
+        <Text variant={variant} style={style}>
+          {fallbackText}
+        </Text>
+      );
     }
     return <Text style={style}>{fallbackText}</Text>;
   }
@@ -151,7 +176,7 @@ const TranslatedText = ({ tKey, children, style, variant }: {
 export default function RegisterScreen({ navigation }: any) {
   const { register } = useAuth() as any;
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage } = useLanguage(); // Use LanguageProvider
 
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
@@ -175,22 +200,42 @@ export default function RegisterScreen({ navigation }: any) {
   const passwordsMatch = pwd && pwd === pwd2;
   const formValid = emailValid && passwordValid && passwordsMatch && agree;
 
-  // Safe translation function that uses both hooks
-  const getTranslation = useCallback((key: string): string => {
+  // Safe translation function
+  const getTranslation = useCallback(
+    (key: string): string => {
+      try {
+        const _lang = currentLanguage; // keep dependency
+        const translation = t(key);
+        return translation || key.split(".").pop() || key;
+      } catch (error) {
+        console.warn("Translation error for key:", key, error);
+        return key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
+
+  // Open Terms page in browser with language from LanguageProvider
+  // Correction: remove canOpenURL to avoid false negatives for https on some setups.
+  const openTerms = useCallback(async () => {
+    const url = buildTermsUrl(currentLanguage);
+
+    // Optional debug (remove later)
+    console.log("Opening Terms URL:", url);
+
     try {
-      // Force dependency on currentLanguage to ensure updates
-      const lang = currentLanguage;
-      const translation = t(key);
-      return translation || key.split('.').pop() || key;
-    } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return key.split('.').pop() || key;
+      await Linking.openURL(url);
+    } catch (e) {
+      setToast({
+        visible: true,
+        msg: getTranslation("register.errors.cannotOpenLink"),
+      });
     }
-  }, [t, currentLanguage]);
+  }, [currentLanguage, getTranslation]);
 
   // Debug: Log when component renders with current language
   React.useEffect(() => {
-    console.log('RegisterScreen rendering with language:', currentLanguage);
+    console.log("RegisterScreen rendering with language:", currentLanguage);
   }, [currentLanguage]);
 
   async function onSubmit() {
@@ -212,7 +257,6 @@ export default function RegisterScreen({ navigation }: any) {
         return;
       }
 
-      // Clear form (optional) and navigate to success screen
       setEmail("");
       setPwd("");
       setPwd2("");
@@ -220,19 +264,27 @@ export default function RegisterScreen({ navigation }: any) {
 
       navigation.replace("RegisterSuccess", { email });
     } catch (e: any) {
-      // Prefer field-level backend errors
       if (e instanceof ApiError) {
         const emailErr = e.body?.errors?.email;
         if (emailErr && Array.isArray(emailErr) && emailErr.length) {
-          setToast({ visible: true, msg: getTranslation("register.errors.emailTaken") });
+          setToast({
+            visible: true,
+            msg: getTranslation("register.errors.emailTaken"),
+          });
           return;
         }
-        const msg = e.body?.message || e.message || getTranslation("register.errors.registrationFailed");
+        const msg =
+          e.body?.message ||
+          e.message ||
+          getTranslation("register.errors.registrationFailed");
         setToast({ visible: true, msg });
         return;
       }
 
-      setToast({ visible: true, msg: getTranslation("register.errors.registrationFailed") });
+      setToast({
+        visible: true,
+        msg: getTranslation("register.errors.registrationFailed"),
+      });
     } finally {
       setLoading(false);
     }
@@ -241,15 +293,10 @@ export default function RegisterScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        {/* Use the safe translation wrapper for the title */}
-        <TranslatedText 
-          tKey="register.title" 
-          variant="headlineMedium"
-          style={s.title} 
-        />
+        <TranslatedText tKey="register.title" variant="headlineMedium" style={s.title} />
 
         <AnimatedFloatingLabel
-          label={getTranslation('register.email')}
+          label={getTranslation("register.email")}
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
@@ -261,7 +308,7 @@ export default function RegisterScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label={getTranslation('register.password')}
+          label={getTranslation("register.password")}
           value={pwd}
           onChangeText={setPwd}
           secureTextEntry={!showPwd}
@@ -280,7 +327,7 @@ export default function RegisterScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label={getTranslation('register.confirmPassword')}
+          label={getTranslation("register.confirmPassword")}
           value={pwd2}
           onChangeText={setPwd2}
           secureTextEntry={!showPwd2}
@@ -298,7 +345,6 @@ export default function RegisterScreen({ navigation }: any) {
           }
         />
 
-        {/* Full-width pressable row with checkbox + wrapping text */}
         <TouchableRipple
           onPress={() => setAgree((v) => !v)}
           accessibilityRole="button"
@@ -315,14 +361,12 @@ export default function RegisterScreen({ navigation }: any) {
               style={s.checkbox}
             />
             <Text style={s.agreeText}>
-              {getTranslation('register.termsAgreement')}{" "}
+              {getTranslation("register.termsAgreement")}{" "}
               <Text
                 style={[s.agreeText, s.linkBold, s.linkUnderline]}
-                onPress={() => {
-                  // navigation.navigate("Terms") or Linking.openURL("https://example.com/terms")
-                }}
+                onPress={openTerms}
               >
-                {getTranslation('register.termsLink')}
+                {getTranslation("register.termsLink")}
               </Text>
             </Text>
           </View>
@@ -335,10 +379,9 @@ export default function RegisterScreen({ navigation }: any) {
           disabled={loading || !formValid}
           style={s.button}
         >
-          {getTranslation('register.signUpButton')}
+          {getTranslation("register.signUpButton")}
         </Button>
 
-        {/* Already have an account? Login */}
         <Button
           onPress={() => navigation.navigate("Login")}
           accessibilityRole="link"
@@ -346,14 +389,13 @@ export default function RegisterScreen({ navigation }: any) {
           style={s.linkButton}
         >
           <Text style={s.linkLabel}>
-            {getTranslation('register.haveAccount')}{" "}
+            {getTranslation("register.haveAccount")}{" "}
             <Text style={[s.linkLabel, s.linkBold]}>
-              {getTranslation('register.loginLink')}
+              {getTranslation("register.loginLink")}
             </Text>
           </Text>
         </Button>
 
-        {/* Shared top toast */}
         <TopSnackbar
           visible={toast.visible}
           message={toast.msg}
@@ -377,7 +419,6 @@ const s = StyleSheet.create({
     marginTop: 20,
   },
 
-  // Animated input styles
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },
   flat: {
@@ -388,10 +429,8 @@ const s = StyleSheet.create({
   },
   contentStyle: { paddingTop: 20, paddingBottom: 8 },
 
-  // CTA
   button: { marginTop: 8 },
 
-  // Agree row (full width, no clipping, wraps nicely)
   agreeRipple: {
     alignSelf: "stretch",
     borderRadius: 12,
@@ -399,8 +438,8 @@ const s = StyleSheet.create({
   agreeRow: {
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 0, // more space left/right
-    paddingVertical: 5,   // taller for checkbox
+    paddingHorizontal: 0,
+    paddingVertical: 5,
     minHeight: 50,
   },
   checkbox: {
@@ -410,12 +449,11 @@ const s = StyleSheet.create({
     fontSize: 14,
     color: "#FFFFFF",
     lineHeight: 20,
-    flex: 1,        // take the remaining width
-    flexShrink: 1,  // allow wrapping
+    flex: 1,
+    flexShrink: 1,
     flexWrap: "wrap",
   },
 
-  // link-style buttons/labels
   linkButton: { alignSelf: "center" },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
   linkBold: { fontWeight: "700" },

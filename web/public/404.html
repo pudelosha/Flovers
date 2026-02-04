@@ -4,9 +4,30 @@
     <meta charset="utf-8" />
     <title>Redirecting…</title>
     <script>
-      const base = "/Flovers/";
-      const path = location.pathname + location.search + location.hash;
-      location.replace(base + "?p=" + encodeURIComponent(path));
+      (function () {
+        // Must match your GitHub repo name exactly
+        var repo = "/Flovers";
+
+        // Example: "/Flovers/pl/terms"
+        var fullPath = window.location.pathname;
+
+        // Strip repo prefix -> "/pl/terms"
+        var p = fullPath.indexOf(repo) === 0 ? fullPath.slice(repo.length) : fullPath;
+        if (!p.startsWith("/")) p = "/" + p;
+
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+
+        // Redirect to index with p=/pl/terms (WITHOUT the repo prefix)
+        var target =
+          repo +
+          "/?p=" +
+          encodeURIComponent(p) +
+          (search ? "&" + search.slice(1) : "") +
+          hash;
+
+        window.location.replace(target);
+      })();
     </script>
   </head>
   <body></body>
