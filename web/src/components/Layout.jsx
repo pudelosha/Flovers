@@ -1,14 +1,22 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import {
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.png";
 
+const SUPPORTED_LANGS = ["pl", "en"];
+const DEFAULT_LANG = "en";
 
-function NavItem({ to, label, onClick }) {
+function NavItem({ to, label, end = false, onClick }) {
   return (
     <NavLink
       to={to}
-      end={to === "/"}
+      end={end}
       onClick={onClick}
       className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
     >
@@ -20,6 +28,11 @@ function NavItem({ to, label, onClick }) {
 export default function Layout() {
   const { t, i18n } = useTranslation("common");
   const location = useLocation();
+  const navigate = useNavigate();
+  const params = useParams();
+
+  // URL language (source of truth)
+  const langFromUrl = params.lang;
 
   // Mobile burger menu
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,26 +43,51 @@ export default function Layout() {
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef(null);
 
+  // Ensure URL has a valid lang, and keep i18n in sync with URL
+  useEffect(() => {
+    const isValid = langFromUrl && SUPPORTED_LANGS.includes(langFromUrl);
+
+    if (!isValid) {
+      // Preserve the rest of the path when redirecting:
+      // current path looks like "/<lang>/something"
+      // If missing/invalid, remove first segment and re-add default lang
+      const parts = location.pathname.split("/").filter(Boolean); // ["xx","docs"]
+      const rest = parts.length > 0 ? parts.slice(1).join("/") : "";
+      const target = `/${DEFAULT_LANG}${rest ? `/${rest}` : ""}`;
+
+      navigate(target, { replace: true });
+      return;
+    }
+
+    if (i18n.language !== langFromUrl) {
+      i18n.changeLanguage(langFromUrl);
+    }
+  }, [langFromUrl, location.pathname, navigate, i18n]);
+
+  // Use URL lang (after redirect it will be valid)
+  const currentLang = SUPPORTED_LANGS.includes(langFromUrl)
+    ? langFromUrl
+    : DEFAULT_LANG;
+
   const navItems = useMemo(
     () => [
-      { to: "/", label: t("nav.start") },
-      { to: "/docs", label: t("nav.docs") },
-      { to: "/schemas", label: t("nav.schemas") },
-      { to: "/faq", label: t("nav.faq") }
+      // IMPORTANT: no trailing slash here; `end: true` makes it only active on "/{lang}"
+      { to: `/${currentLang}`, label: t("nav.start"), end: true },
+      { to: `/${currentLang}/docs`, label: t("nav.docs") },
+      { to: `/${currentLang}/schemas`, label: t("nav.schemas") },
+      { to: `/${currentLang}/faq`, label: t("nav.faq") },
     ],
-    [t]
+    [t, currentLang]
   );
 
-  // Supported languages (extend later)
   const languages = useMemo(
     () => [
       { code: "pl", label: t("language.pl") },
-      { code: "en", label: t("language.en") }
+      { code: "en", label: t("language.en") },
     ],
     [t]
   );
 
-  const currentLang = i18n.language?.startsWith("pl") ? "pl" : "en";
   const currentLangLabel =
     languages.find((x) => x.code === currentLang)?.label ??
     currentLang.toUpperCase();
@@ -70,16 +108,19 @@ export default function Layout() {
     }
 
     function onClickOutside(e) {
-      // burger menu outside
       if (menuOpen) {
         const menuEl = menuRef.current;
         const btnEl = burgerBtnRef.current;
-        if (menuEl && btnEl && !menuEl.contains(e.target) && !btnEl.contains(e.target)) {
+        if (
+          menuEl &&
+          btnEl &&
+          !menuEl.contains(e.target) &&
+          !btnEl.contains(e.target)
+        ) {
           setMenuOpen(false);
         }
       }
 
-      // language dropdown outside
       if (langOpen) {
         const langEl = langRef.current;
         if (langEl && !langEl.contains(e.target)) {
@@ -96,9 +137,20 @@ export default function Layout() {
     };
   }, [menuOpen, langOpen]);
 
+  // When user selects a language: keep same page, swap lang segment
+  const switchLanguage = (newLang) => {
+    if (!SUPPORTED_LANGS.includes(newLang)) return;
+
+    const parts = location.pathname.split("/").filter(Boolean); // ["en","docs",...]
+    const rest = parts.length > 0 ? parts.slice(1).join("/") : "";
+    const target = `/${newLang}${rest ? `/${rest}` : ""}`;
+
+    navigate(target);
+    setLangOpen(false);
+  };
+
   return (
     <div className="app">
-      {/* Top anchor for hard scroll-to-top */}
       <div id="page-top" tabIndex={-1} aria-hidden="true" />
 
       <header className="topbar">
@@ -111,7 +163,7 @@ export default function Layout() {
           {/* Desktop nav */}
           <nav className="nav nav-desktop" aria-label={t("a11y.mainNav")}>
             {navItems.map((x) => (
-              <NavItem key={x.to} to={x.to} label={x.label} />
+              <NavItem key={x.to} to={x.to} label={x.label} end={x.end} />
             ))}
           </nav>
 
@@ -130,16 +182,18 @@ export default function Layout() {
                 <span className="lang-caret" aria-hidden="true" />
               </button>
 
-              <div className={"lang-panel" + (langOpen ? " open" : "")} role="menu">
+              <div
+                className={"lang-panel" + (langOpen ? " open" : "")}
+                role="menu"
+              >
                 {languages.map((l) => (
                   <button
                     key={l.code}
                     type="button"
-                    className={"lang-item" + (l.code === currentLang ? " active" : "")}
-                    onClick={() => {
-                      i18n.changeLanguage(l.code);
-                      setLangOpen(false);
-                    }}
+                    className={
+                      "lang-item" + (l.code === currentLang ? " active" : "")
+                    }
+                    onClick={() => switchLanguage(l.code)}
                   >
                     {l.label}
                   </button>
@@ -180,6 +234,7 @@ export default function Layout() {
                 key={x.to}
                 to={x.to}
                 label={x.label}
+                end={x.end}
                 onClick={() => setMenuOpen(false)}
               />
             ))}
@@ -196,13 +251,13 @@ export default function Layout() {
           <div className="footer-left">© {new Date().getFullYear()} Flovers</div>
 
           <div className="footer-right">
-            <NavLink className="footer-link" to="/terms">
+            <NavLink className="footer-link" to={`/${currentLang}/terms`}>
               {t("footer.terms")}
             </NavLink>
-            <NavLink className="footer-link" to="/privacy-policy">
+            <NavLink className="footer-link" to={`/${currentLang}/privacy-policy`}>
               {t("footer.privacy")}
             </NavLink>
-            <NavLink className="footer-link" to="/contact">
+            <NavLink className="footer-link" to={`/${currentLang}/contact`}>
               {t("footer.contact")}
             </NavLink>
           </div>

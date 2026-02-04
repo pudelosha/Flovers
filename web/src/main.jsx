@@ -6,9 +6,11 @@ import "./styles/app.css";
 import "./i18n";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 
+const BASENAME = "/Flovers";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={BASENAME}>
       <ScrollToTop />
       <App />
     </BrowserRouter>

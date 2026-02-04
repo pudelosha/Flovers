@@ -10,19 +10,24 @@ import Faq from "./routes/Faq.jsx";
 import Docs from "./routes/Docs.jsx";
 import Schemas from "./routes/Schemas.jsx";
 
+export const SUPPORTED_LANGS = ["en", "pl"];
+export const DEFAULT_LANG = "en";
+
 export default function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/docs" element={<Docs />} />
-        <Route path="/schemas" element={<Schemas />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="/:lang" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="docs" element={<Docs />} />
+        <Route path="schemas" element={<Schemas />} />
       </Route>
+
+      <Route path="/" element={<Navigate to={`/${DEFAULT_LANG}`} replace />} />
+      <Route path="*" element={<Navigate to={`/${DEFAULT_LANG}`} replace />} />
     </Routes>
   );
 }

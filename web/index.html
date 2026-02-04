@@ -10,24 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flovers</title>
 
-    <!-- GitHub Pages SPA deep-link restore -->
+    <!-- GitHub Pages SPA deep-link restore (keeps repo subpath) -->
     <script>
       (function () {
         const params = new URLSearchParams(window.location.search);
         const p = params.get("p");
-        if (p) {
-          params.delete("p");
+        if (!p) return;
 
-          const decoded = decodeURIComponent(p);
-          const search = params.toString();
-          const next =
-            decoded +
-            (search
-              ? (decoded.includes("?") ? "&" : "?") + search
-              : "");
+        params.delete("p");
 
-          window.history.replaceState(null, "", next);
-        }
+        // Example first load on GH Pages:
+        //   location.pathname === "/Flovers/"
+        // We want to restore to:
+        //   "/Flovers" + decodedP (e.g. "/pl/terms")
+        const repoBase = window.location.pathname; // "/Flovers/" typically
+        const base = repoBase.endsWith("/") ? repoBase.slice(0, -1) : repoBase;
+
+        const decoded = decodeURIComponent(p);
+        const restoredPath = decoded.startsWith("/") ? decoded : "/" + decoded;
+
+        const search = params.toString();
+        const next =
+          base +
+          restoredPath +
+          (search ? (restoredPath.includes("?") ? "&" : "?") + search : "");
+
+        window.history.replaceState(null, "", next);
       })();
     </script>
   </head>
