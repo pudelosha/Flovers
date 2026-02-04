@@ -2,21 +2,13 @@
   "createPlant": {
     "step06": {
       "title": "Automatic tasks",
-      "subtitle": "We can auto-create reminders (watering, repotting, moisture, fertilising, care) based on your plant profile.",
+      "subtitle": "We can auto-create reminders (watering, repotting, misting, fertilising, care) based on your plant profile.",
       "createAutoTasks": "Create auto tasks for this plant",
-      "requiresPredefined": "This requires a predefined plant.",
-
-      "sections": {
-        "watering": "Watering",
-        "moisture": "Moisture / misting",
-        "fertilising": "Fertilising",
-        "care": "Care / trimming",
-        "repotting": "Repotting"
-      },
+      "requiresPlantDefinition": "This requires a plant definition.",
 
       "labels": {
         "generateWateringTask": "Generate watering task",
-        "generateMoistureTask": "Generate moisture task",
+        "generateMistingTask": "Generate misting task",
         "generateFertilisingTask": "Generate fertilising task",
         "generateCareTask": "Generate care task",
         "generateRepottingTask": "Generate repotting task"

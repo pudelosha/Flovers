@@ -28,7 +28,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 /* ------------------------------------------------------------------ */
-/* UI helpers (unchanged)                                              */
+/* UI helpers                                                         */
 /* ------------------------------------------------------------------ */
 
 function SectionCheckbox({
@@ -260,7 +260,7 @@ export default function Step06_AutoTasks() {
   const { state, actions } = useCreatePlantWizard();
   const [openWhich, setOpenWhich] = useState<"watered" | "repotted" | null>(null);
 
-  // ✅ main checkbox enabled ONLY if plantDefinition exists (saved by Step02)
+  // main checkbox enabled ONLY if plantDefinition exists (saved by Step02)
   const plantDefinition = (state as any).selectedPlantDefinition as any;
   const canAutoCreate = !!plantDefinition;
 
@@ -280,21 +280,33 @@ export default function Step06_AutoTasks() {
     [t, currentLanguage]
   );
 
-  // Extract task flags from plant definition
+  // Flags
   const waterRequired = plantDefinition?.water_required === true;
-  const moistureRequired = plantDefinition?.moisture_required === true;
+  const mistRequired = plantDefinition?.moisture_required === true; // ✅ treat as MISTING
   const fertilizeRequired = plantDefinition?.fertilize_required === true;
   const repotRequired = plantDefinition?.repot_required === true;
 
-  // Extract intervals from plant definition
-  const waterInterval = typeof plantDefinition?.water_interval_days === "number" ? plantDefinition.water_interval_days : 7;
-  const moistureInterval = typeof plantDefinition?.moisture_interval_days === "number" ? plantDefinition.moisture_interval_days : 7;
-  const fertilizeInterval = typeof plantDefinition?.fertilize_interval_days === "number" ? plantDefinition.fertilize_interval_days : 30;
-  const repotInterval = typeof plantDefinition?.repot_interval_months === "number" ? plantDefinition.repot_interval_months : 12;
+  // Intervals from definition
+  const waterInterval =
+    typeof plantDefinition?.water_interval_days === "number"
+      ? plantDefinition.water_interval_days
+      : 7;
+  const mistInterval =
+    typeof plantDefinition?.moisture_interval_days === "number"
+      ? plantDefinition.moisture_interval_days
+      : 7;
+  const fertilizeInterval =
+    typeof plantDefinition?.fertilize_interval_days === "number"
+      ? plantDefinition.fertilize_interval_days
+      : 30;
+  const repotInterval =
+    typeof plantDefinition?.repot_interval_months === "number"
+      ? plantDefinition.repot_interval_months
+      : 12;
 
   /**
    * Prefill intervals ONCE per plantDefinition.
-   * Also: if a checkbox is disabled by flag, force its state OFF.
+   * Force disabled tasks OFF (so disabled means actually off).
    * Do NOT auto-check anything.
    */
   const didInitRef = useRef<string | null>(null);
@@ -305,13 +317,19 @@ export default function Step06_AutoTasks() {
     if (didInitRef.current === key) return;
     didInitRef.current = key;
 
-    // prefill intervals (no auto-check)
-    if (typeof plantDefinition?.water_interval_days === "number") actions.setWaterIntervalDays(plantDefinition.water_interval_days);
-    if (typeof plantDefinition?.moisture_interval_days === "number") actions.setMoistureInterval(plantDefinition.moisture_interval_days);
-    if (typeof plantDefinition?.fertilize_interval_days === "number") actions.setFertilizeInterval(plantDefinition.fertilize_interval_days);
-    if (typeof plantDefinition?.repot_interval_months === "number") actions.setRepotIntervalMonths(plantDefinition.repot_interval_months);
+    if (typeof plantDefinition?.water_interval_days === "number") {
+      actions.setWaterIntervalDays(plantDefinition.water_interval_days);
+    }
+    if (typeof plantDefinition?.moisture_interval_days === "number") {
+      actions.setMoistureInterval(plantDefinition.moisture_interval_days);
+    }
+    if (typeof plantDefinition?.fertilize_interval_days === "number") {
+      actions.setFertilizeInterval(plantDefinition.fertilize_interval_days);
+    }
+    if (typeof plantDefinition?.repot_interval_months === "number") {
+      actions.setRepotIntervalMonths(plantDefinition.repot_interval_months);
+    }
 
-    // force disabled tasks OFF
     if (plantDefinition?.water_required !== true) actions.setWaterTaskEnabled(false);
     if (plantDefinition?.moisture_required !== true) actions.setMoistureRequired(false);
     if (plantDefinition?.fertilize_required !== true) actions.setFertilizeRequired(false);
@@ -386,7 +404,7 @@ export default function Step06_AutoTasks() {
         <Text style={wiz.subtitle}>
           {getTranslation(
             "createPlant.step06.subtitle",
-            "We can auto-create reminders (watering, repotting, moisture, fertilising, care) based on your plant profile."
+            "We can auto-create reminders (watering, repotting, misting, fertilising, care) based on your plant profile."
           )}
         </Text>
 
@@ -415,9 +433,6 @@ export default function Step06_AutoTasks() {
         {canAutoCreate && state.createAutoTasks && (
           <>
             {/* WATERING */}
-            <Text style={wiz.sectionTitle}>
-              {getTranslation("createPlant.step06.sections.watering", "Watering")}
-            </Text>
             <SectionCheckbox
               checked={!!state.waterTaskEnabled}
               onToggle={() => {
@@ -462,7 +477,10 @@ export default function Step06_AutoTasks() {
                 />
 
                 <Text style={wiz.smallMuted}>
-                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                  {getTranslation(
+                    "createPlant.step06.prompts.selectIntervalDays",
+                    "Select interval (days)"
+                  )}
                 </Text>
                 <DaysSlider
                   value={state.waterIntervalDays ?? waterInterval}
@@ -475,30 +493,30 @@ export default function Step06_AutoTasks() {
               </>
             )}
 
-            {/* MOISTURE */}
-            <Text style={wiz.sectionTitle}>
-              {getTranslation("createPlant.step06.sections.moisture", "Moisture / misting")}
-            </Text>
+            {/* MISTING */}
             <SectionCheckbox
               checked={!!state.moistureRequired}
               onToggle={() => {
-                if (!moistureRequired) return;
+                if (!mistRequired) return;
                 actions.setMoistureRequired(!state.moistureRequired);
               }}
               label={getTranslation(
-                "createPlant.step06.labels.generateMoistureTask",
-                "Generate moisture task"
+                "createPlant.step06.labels.generateMistingTask",
+                "Generate misting task"
               )}
-              disabled={!moistureRequired}
+              disabled={!mistRequired}
             />
 
-            {state.moistureRequired && moistureRequired && (
+            {state.moistureRequired && mistRequired && (
               <>
                 <Text style={wiz.smallMuted}>
-                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                  {getTranslation(
+                    "createPlant.step06.prompts.selectIntervalDays",
+                    "Select interval (days)"
+                  )}
                 </Text>
                 <DaysSlider
-                  value={state.moistureIntervalDays ?? moistureInterval}
+                  value={state.moistureIntervalDays ?? mistInterval}
                   onChange={(d) => actions.setMoistureInterval(d)}
                   min={1}
                   max={90}
@@ -509,9 +527,6 @@ export default function Step06_AutoTasks() {
             )}
 
             {/* FERTILISING */}
-            <Text style={wiz.sectionTitle}>
-              {getTranslation("createPlant.step06.sections.fertilising", "Fertilising")}
-            </Text>
             <SectionCheckbox
               checked={!!state.fertilizeRequired}
               onToggle={() => {
@@ -528,7 +543,10 @@ export default function Step06_AutoTasks() {
             {state.fertilizeRequired && fertilizeRequired && (
               <>
                 <Text style={wiz.smallMuted}>
-                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                  {getTranslation(
+                    "createPlant.step06.prompts.selectIntervalDays",
+                    "Select interval (days)"
+                  )}
                 </Text>
                 <DaysSlider
                   value={state.fertilizeIntervalDays ?? fertilizeInterval}
@@ -541,10 +559,7 @@ export default function Step06_AutoTasks() {
               </>
             )}
 
-            {/* CARE (always enabled) */}
-            <Text style={wiz.sectionTitle}>
-              {getTranslation("createPlant.step06.sections.care", "Care / trimming")}
-            </Text>
+            {/* CARE */}
             <SectionCheckbox
               checked={!!state.careRequired}
               onToggle={() => actions.setCareRequired(!state.careRequired)}
@@ -557,7 +572,10 @@ export default function Step06_AutoTasks() {
             {state.careRequired && (
               <>
                 <Text style={wiz.smallMuted}>
-                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                  {getTranslation(
+                    "createPlant.step06.prompts.selectIntervalDays",
+                    "Select interval (days)"
+                  )}
                 </Text>
                 <DaysSlider
                   value={state.careIntervalDays ?? 30}
@@ -571,9 +589,6 @@ export default function Step06_AutoTasks() {
             )}
 
             {/* REPOTTING */}
-            <Text style={wiz.sectionTitle}>
-              {getTranslation("createPlant.step06.sections.repotting", "Repotting")}
-            </Text>
             <SectionCheckbox
               checked={!!state.repotTaskEnabled}
               onToggle={() => {
@@ -591,7 +606,10 @@ export default function Step06_AutoTasks() {
             {state.repotTaskEnabled && repotRequired && (
               <>
                 <Text style={wiz.smallMuted}>
-                  {getTranslation("createPlant.step06.prompts.recommendedInterval", "Recommended interval")}
+                  {getTranslation(
+                    "createPlant.step06.prompts.recommendedInterval",
+                    "Recommended interval"
+                  )}
                 </Text>
                 <MonthsSlider
                   value={state.repotIntervalMonths ?? repotInterval}

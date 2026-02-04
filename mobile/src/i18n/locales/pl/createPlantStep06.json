@@ -2,21 +2,13 @@
   "createPlant": {
     "step06": {
       "title": "Zadania automatyczne",
-      "subtitle": "Możemy automatycznie utworzyć przypomnienia (podlewanie, przesadzanie, wilgotność/zraszanie, nawożenie, pielęgnacja) na podstawie profilu rośliny.",
+      "subtitle": "Możemy automatycznie utworzyć przypomnienia (podlewanie, przesadzanie, zraszanie, nawożenie, pielęgnacja) na podstawie profilu rośliny.",
       "createAutoTasks": "Utwórz automatyczne zadania dla tej rośliny",
-      "requiresPredefined": "Wymaga rośliny z bazy (predefiniowanej).",
-
-      "sections": {
-        "watering": "Podlewanie",
-        "moisture": "Wilgotność / zraszanie",
-        "fertilising": "Nawożenie",
-        "care": "Pielęgnacja / przycinanie",
-        "repotting": "Przesadzanie"
-      },
+      "requiresPlantDefinition": "Wymaga definicji rośliny.",
 
       "labels": {
         "generateWateringTask": "Utwórz zadanie podlewania",
-        "generateMoistureTask": "Utwórz zadanie wilgotności",
+        "generateMistingTask": "Utwórz zadanie zraszania",
         "generateFertilisingTask": "Utwórz zadanie nawożenia",
         "generateCareTask": "Utwórz zadanie pielęgnacji",
         "generateRepottingTask": "Utwórz zadanie przesadzania"
