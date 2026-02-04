@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
+from .utils import normalize_plant_key
 
 from .inference import predict_topk
 from .serializers import PlantRecognitionResultSerializer
@@ -82,11 +83,11 @@ class PlantRecognitionView(APIView):
         # score is treated as probability (0..1)
         raw_results = [
             {
-                "id": None,  # no DB link yet
+                "id": None,
                 "name": p["name"],
                 "latin": p["latin"],
+                "external_id": normalize_plant_key(p["latin"]),
                 "probability": float(p.get("score", 0.0)),
-                # keep old field for backward-compat
                 "confidence": float(p.get("score", 0.0)),
             }
             for p in predictions

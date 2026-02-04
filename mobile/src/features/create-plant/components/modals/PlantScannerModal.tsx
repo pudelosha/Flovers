@@ -167,37 +167,36 @@ export default function PlantScannerModal({
   if (!visible) return null;
 
   const handleSelectCandidate = async (item: ApiRecognitionResult) => {
-  const plant = toSuggestion(item);  // Convert to suggestion object
-  const formattedLatin = plant.latin.replace(/_/g, ' ');  // Format Latin name for display (with spaces)
+    const plant = toSuggestion(item);
 
-  // Convert the Latin name to lowercase for the request (backend expects lowercase)
-  const latinForRequest = formattedLatin.toLowerCase().replace(/ /g, '_');  // Revert spaces to underscores for the request
+    // use backend-normalized key (matches PlantDefinition.external_id)
+    const key = item.external_id;
 
-  console.log('Fetching plant profile for:', latinForRequest);  // Log the request being sent
+    console.log("Fetching plant profile for key:", key);
 
-  try {
-    const plantProfile = await fetchPlantProfile(latinForRequest); // Send the request with the correct Latin name format
+    try {
+      const plantProfile = await fetchPlantProfile(key, {
+        auth: true,
+        lang: currentLanguage,
+      });
 
-    // Now, update the provider with the full plant data
-    onPlantDetected?.({
-      ...plant,
-      latin: formattedLatin,  // Ensure Latin name is formatted (for display)
-      ...plantProfile,  // Add the full plant profile details
-    });
+      onPlantDetected?.({
+        ...plant,
+        // display latin comes from the profile (canonical)
+        latin: plantProfile.latin,
+        ...plantProfile,
+      });
 
-    onClose();  // Close the modal after selecting the plant
-  } catch (error) {
-    // Enhanced error logging for better debugging
-    console.error('Error while fetching plant profile for:', latinForRequest, error);
-    
-    // Optionally handle the error (e.g., show an alert)
-    Alert.alert(
-      "Plant Recognition Error",
-      `Failed to fetch plant details for ${latinForRequest}. ${error.message || 'Please try again.'}`
-    );
-  }
-};
+      onClose();
+    } catch (error: any) {
+      console.error("Error while fetching plant profile for key:", key, error);
 
+      Alert.alert(
+        "Plant Recognition Error",
+        `Failed to fetch plant details for ${key}. ${error?.message || "Please try again."}`
+      );
+    }
+  };
 
   const doLaunchCamera = async () => {
     try {

@@ -11,6 +11,7 @@ export type ApiRecognitionResult = {
 
   // new field from backend (0..1)
   probability: number;
+  external_id: string;
 
   // optional legacy field (0..1)
   confidence?: number;

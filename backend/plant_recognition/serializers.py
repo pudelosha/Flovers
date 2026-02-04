@@ -17,5 +17,6 @@ class PlantRecognitionResultSerializer(serializers.Serializer):
     id = serializers.IntegerField(allow_null=True, required=False)
     name = serializers.CharField()
     latin = serializers.CharField()
+    external_id = serializers.CharField()
     probability = serializers.FloatField()
     confidence = serializers.FloatField(required=False)
