@@ -1,0 +1,35 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "식물 선택",
+      "subtitle": "전체 식물 라이브러리를 검색하거나 인기 목록에서 선택하거나 카메라로 식물을 스캔할 수 있습니다. 이 단계를 건너뛸 수도 있지만, 식물을 선택하면 자동으로 물주기와 같은 관리 작업을 제안할 수 있습니다.",
+      "scanButton": "식물 스캔",
+      "searchPlaceholder": "식물 검색",
+      "popularPlants": "인기 있는 식물",
+      "noPlantsAvailable": "사용 가능한 식물이 없습니다",
+      "errorSearch": "식물 목록을 불러오는 데 실패했습니다.",
+      "errorPopular": "인기 있는 식물을 불러오는 데 실패했습니다"
+    },
+    "scannerModal": {
+      "title": "식물 스캔",
+      "selectPlant": "감지된 식물 선택",
+      "scanInstructions": "사진을 찍거나 갤러리에서 선택하십시오. 식물의 잎 모양이 잘 보이는 선명하고 고품질의 사진을 사용하고, 다른 식물이나 물체에 가려지지 않게 중앙에 배치하십시오.",
+      "noPhoto": "사진 없음",
+      "takePhoto": "사진 찍기",
+      "fromGallery": "갤러리에서",
+      "recognize": "식물 인식",
+      "cameraRequired": "권한이 필요합니다",
+      "cameraPermissionMessage": "사진을 찍으려면 카메라 및 미디어 권한을 부여해주세요.",
+      "libraryRequired": "권한이 필요합니다",
+      "libraryPermissionMessage": "사진을 선택하려면 미디어 권한을 부여해주세요.",
+      "cameraError": "카메라 오류",
+      "libraryError": "사진 선택 오류",
+      "cameraFailure": "카메라를 열 수 없습니다.",
+      "libraryFailure": "갤러리를 열 수 없습니다.",
+      "recognitionFailure": "식물을 인식할 수 없습니다.",
+      "noResults": "결과가 없습니다. 더 선명한 사진을 찍어보세요.",
+      "back": "뒤로",
+      "close": "닫기"
+    }
+  }
+}

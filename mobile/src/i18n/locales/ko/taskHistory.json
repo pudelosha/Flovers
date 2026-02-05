@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "작업 기록"
+    },
+    "fab": {
+      "sort": "정렬",
+      "filter": "필터",
+      "delete": "삭제",
+      "clearFilter": "필터 지우기",
+      "showAllHistory": "전체 기록 보기"
+    },
+    "common": {
+      "unnamedPlant": "이름 없는 식물"
+    },
+    "toasts": {
+      "failedToLoad": "작업 기록을 불러오지 못했습니다.",
+      "historyDeleted": "기록이 삭제되었습니다.",
+      "failedToDeleteHistory": "기록을 삭제하지 못했습니다.",
+      "historyTaskDeleted": "기록 항목이 삭제되었습니다.",
+      "failedToDeleteHistoryTask": "기록 항목을 삭제하지 못했습니다.",
+      "taskNotLinkedToPlant": "이 작업은 식물과 연결되지 않았습니다."
+    },
+    "empty": {
+      "title": "완료된 작업 없음",
+      "descBeforeBold": "이 화면은",
+      "bold": "알림에서 완료된 작업",
+      "descAfterBold": "을(를) 표시합니다 (대기 중인 작업은 여기에 표시되지 않습니다).",
+      "filteredToPlantId": "현재 식물 ID {{plantId}}로 필터링되었습니다.",
+      "openFromTaskHint": "특정 작업에서 기록을 열어 이 식물에 대한 기록만 볼 수 있습니다."
+    },
+    "tile": {
+      "completedOn": "완료일: {{date}}",
+      "noteLabel": "메모"
+    },
+    "menu": {
+      "expand": "확장",
+      "collapse": "축소",
+      "editReminder": "알림 수정",
+      "goToPlant": "식물로 이동",
+      "deleteTask": "작업 삭제"
+    },
+    "types": {
+      "watering": "급수",
+      "fertilising": "비료 주기",
+      "moisture": "분무",
+      "care": "돌봄",
+      "repot": "분갈이"
+    }
+  }
+}

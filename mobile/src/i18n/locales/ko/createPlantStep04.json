@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "햇빛",
+      "subtitle": "햇빛은 물주기 일정과 관리 알림을 조정하는 데 도움을 줍니다. 이 장소에 얼마나 많은 빛이 들어오는지, 그리고 창문이 어느 방향을 향하고 있는지 알려주세요.",
+      "lightLevel": "빛의 수준",
+      "low": "낮음",
+      "high": "높음",
+      "windowDirection": "창문 방향",
+      "measureLightDirection": "빛과 방향 측정",
+      "distanceFromWindow": "창문과의 거리",
+      "orientations": {
+        "S": "남",
+        "E": "동",
+        "W": "서",
+        "N": "북"
+      },
+      "modal": {
+        "title": "빛과 방향 측정",
+        "instructions": "휴대폰을 수평으로 (화면 위로) 들고, 상단 가장자리를 창문 방향으로 향하게 하세요. 창문 근처에서 휴대폰을 천천히 이동시키고, '측정'을 눌러 5초 테스트를 시작하세요.",
+        "ambientLive": "빛 (실시간)",
+        "headingLive": "방향 (실시간)",
+        "testLabel": "5초 측정",
+        "running": "(진행 중…) ",
+        "last": "(마지막)",
+        "done": "완료",
+        "bestLight": "빛 (5초 최적):",
+        "meanDirection": "방향 (5초 평균):",
+        "close": "닫기",
+        "measure5s": "측정 (5초)",
+        "measuring": "측정 중…",
+        "apply": "적용",
+        "tip": "팁: 많은 휴대폰에서 빛 센서는 상단 가장자리 (스피커 근처)에 있습니다. 휴대폰을 평평하게 놓고, 상단 가장자리를 창문 쪽으로 향하게 하여 가장 높은 값을 찾으세요.",
+        "notAvailable": "사용 불가",
+        "noSensor": "센서 없음",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "밝은 직사광선",
+          "brightIndirect": "밝은 간접광",
+          "medium": "중간 / 반그늘",
+          "low": "적은 빛",
+          "veryLow": "매우 적은 빛"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "닫기",
+      "save": "저장",
+      "cancel": "취소",
+      "remove": "삭제"
+    },
+    "definition": {
+      "title": "식물 정의",
+      "traits": "특징",
+      "noId": "식물 정의 ID를 찾을 수 없습니다.",
+      "loadFailed": "식물 정의를 불러오는 데 실패했습니다.",
+      "error": "문제가 발생했습니다.",
+      "empty": "정의 데이터가 없습니다.",
+      "body": "이것은 모달 대체입니다. 식물 정의 세부 사항은 나중에 구현될 예정입니다."
+    },
+    "changeImage": {
+      "title": "사진 변경",
+      "subtitle": "이 사진은 당신의 기기에 로컬로 저장되어 있으며 전송되지 않습니다.",
+      "noPlantId": "식물 ID를 찾을 수 없습니다.",
+      "loadFailed": "로컬 사진을 불러오는 데 실패했습니다.",
+      "error": "문제가 발생했습니다.",
+      "noPhoto": "사진이 선택되지 않았습니다.",
+      "removedPreview": "사진이 삭제됩니다.",
+      "unsaved": "저장되지 않은 변경 사항",
+      "takePhoto": "사진 찍기",
+      "chooseGallery": "갤러리에서 선택",
+      "remove": "사진 삭제",
+      "permissionTitle": "필요한 권한",
+      "permissionCamera": "사진을 찍으려면 카메라와 미디어 권한을 부여하세요.",
+      "permissionGallery": "사진을 선택하려면 미디어 권한을 부여하세요.",
+      "cameraErrorTitle": "카메라 오류",
+      "pickerErrorTitle": "사진 선택 오류",
+      "saveFailedTitle": "저장 실패",
+      "saveFailedMsg": "이 사진을 로컬에 저장하는 데 실패했습니다.",
+      "confirmRemoveTitle": "사진을 삭제하시겠습니까?",
+      "confirmRemoveMsg": "‘저장’ 버튼을 눌러 사진이 삭제됩니다.",
+      "confirmDiscardTitle": "변경 사항을 버리시겠습니까?",
+      "confirmDiscardMsg": "변경 사항은 저장되지 않습니다.",
+      "discard": "버리기",
+      "removeFailedTitle": "삭제 실패",
+      "removeFailedMsg": "로컬 사진을 삭제하는 데 실패했습니다."
+    }
+  }
+}

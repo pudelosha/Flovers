@@ -1,0 +1,117 @@
+{
+  "plantDetails": {
+    "headerTitle": "식물 세부 정보",
+    "common": {
+      "dash": "—",
+      "plant": "식물"
+    },
+    "errors": {
+      "noId": "식물 ID 또는 QR 코드가 제공되지 않았습니다.",
+      "failedToLoad": "식물을 불러오는 데 실패했습니다."
+    },
+    "states": {
+      "error": {
+        "title": "오류"
+      },
+      "notFound": {
+        "title": "찾을 수 없음",
+        "msg": "이 식물을 불러오는 데 실패했습니다."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "완료 실패",
+        "msg": "이 알림을 완료하는 데 실패했습니다."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "알림이 완료됨으로 표시되었습니다.",
+      "qrSaved": "QR 코드가 갤러리에 저장되었습니다.",
+      "qrSaveFailed": "QR 코드를 저장하는 데 실패했습니다.",
+      "qrEmailPlaceholder": "이 QR 코드가 포함된 이메일이 귀하의 계정으로 발송됩니다."
+    },
+    "permissions": {
+      "storage": {
+        "title": "저장 권한",
+        "message": "QR 코드를 갤러리에 저장하려면 접근이 필요합니다.",
+        "ok": "확인",
+        "denied": "저장 권한이 거부되었습니다."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "QR 코드 렌더러가 준비되지 않았습니다."
+    },
+    "info": {
+      "fallbackTitle": "식물 #{{id}}",
+      "purchased": "구입",
+      "notes": "메모",
+      "light": "빛",
+      "orientation": "방향",
+      "distance": "거리",
+      "pot": "화분",
+      "soil": "토양",
+      "cm": "cm",
+      "orientations": {
+        "N": "북",
+        "E": "동",
+        "S": "남",
+        "W": "서"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "식물 정의",
+        "editPlant": "식물 편집",
+        "changeImage": "사진 변경",
+        "showReminders": "알림 보기"
+      },
+      "noDefinitionTitle": "식물 정의 없음",
+      "noDefinitionBody": "이 식물은 아직 식물 정의와 연결되지 않았습니다.",
+      "editPlant": {
+        "title": "식물 편집",
+        "msg": "이 식물을 편집하는 기능은 나중에 구현될 예정입니다."
+      },
+      "showReminders": {
+        "title": "알림 보기",
+        "msg": "알림으로 이동하는 기능은 나중에 구현될 예정입니다."
+      }
+    },
+    "latestReadings": {
+      "title": "최근 읽기",
+      "lastRead": {
+        "empty": "마지막 읽기: —",
+        "value": "마지막 읽기: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "QR 코드",
+      "scanner": "스캐너",
+      "saveWord": "저장",
+      "emailWord": "보내기",
+      "desc": {
+        "part1": "각 식물에는 고유한 QR 코드가 있습니다. 이 코드를 스캔하면",
+        "part2": "앱이 바로 이 식물의 세부 정보를 엽니다.",
+        "part3a": "QR 코드를",
+        "part3b": "휴대폰에 저장하거나",
+        "part3c": "자신에게 보내고 인쇄하여 화분에 부착할 수 있습니다. 다음번에는 라벨을 스캔하기만 하면 수동으로 찾지 않아도 됩니다."
+      },
+      "saveBtn": "저장",
+      "emailBtn": "보내기"
+    },
+    "reminders": {
+      "title": "알림",
+      "menu": {
+        "markComplete": "완료로 표시",
+        "editReminder": "알림 편집",
+        "showHistory": "히스토리 보기"
+      },
+      "type": {
+        "watering": "급수",
+        "fertilising": "비료 주기",
+        "moisture": "습도 조절",
+        "care": "관리",
+        "repot": "화분 갈아주기"
+      }
+    }
+  }
+}

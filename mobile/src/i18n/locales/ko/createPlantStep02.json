@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "식물 프로필",
+      "preferences": "선호도",
+      "errorProfile": "식물 프로필을 가져오는 데 실패했습니다.",
+      "labels": {
+        "sun": "햇빛",
+        "water": "급수",
+        "difficulty": "난이도",
+        "potMaterials": "화분 재료",
+        "soilMixes": "토양 혼합물",
+        "wateringInterval": "급수 간격",
+        "moistureInterval": "습도 점검",
+        "fertilizeInterval": "비료 주기",
+        "repotInterval": "화분 교체 주기"
+      },
+      "values": {
+        "everyDays": "{{count}}일마다",
+        "everyMonths": "{{count}}개월마다"
+      },
+      "traits": {
+        "sun": "햇빛",
+        "water": "급수",
+        "difficulty": "난이도",
+        "soil": "토양",
+        "temperature": "온도",
+        "humidity": "습도",
+        "toxic": "독성 여부?",
+        "growth": "성장",
+        "light": "빛",
+        "fertilizer": "비료",
+        "recognize": "식물 인식"
+      }
+    }
+  }
+}
