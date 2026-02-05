@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "读数历史",
+    "plantFallback": "植物",
+    "noDevicesFound": "未找到设备。",
+    "unauthorized": "未授权。请重新登录。",
+    "failedLoadDevices": "加载设备失败。",
+    "failedLoadHistory": "加载历史记录失败。",
+    "segment": {
+      "day": "天",
+      "week": "周",
+      "month": "月"
+    },
+    "metric": {
+      "temperatureShort": "温度",
+      "humidityShort": "湿度",
+      "lightShort": "光照",
+      "moistureShort": "土壤"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+/* ===== Multi-language section (same as CTA section) ===== */
+.multi-language-section {
+  /* no card, no background */
+  margin-bottom: 40px;
+}
+
+/* Header styling matching the CTA section */
+.multi-language-header {
+  margin-bottom: 24px;
+}
+
+.multi-language-title {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; /* Same font as in CTA section */
+  font-size: 2rem; /* Same size as in the CTA section */
+  font-weight: 700; /* Same weight as in CTA */
+  color: #213547; /* Same color as in CTA section */
+  margin: 0;
+}
+
+.multi-language-description {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; /* Same font */
+  font-size: 1rem; /* Smaller font for description */
+  color: #666; /* Same muted color as in CTA section */
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+/* Layout for icons - 12 icons in one row (no parent frame) */
+.multi-language-icons {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 icons in a single row */
+  gap: 16px;
+  justify-items: center;  /* Keep icons centered */
+  max-width: 100%;
+  margin-top: 16px;
+}
+
+/* Tile for each language icon */
+.multi-language-icon-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 24px; /* You can adjust the size as needed */
+  color: #333;
+  transition: transform 0.2s ease-in-out;
+}
+
+.multi-language-icon-tile:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile responsiveness: 6 icons per row */
+@media (max-width: 720px) {
+  .multi-language-icons {
+    grid-template-columns: repeat(6, 1fr); /* 6 icons per row on smaller screens */
+  }
+}
+
+/* Small phones: 3 icons per row */
+@media (max-width: 520px) {
+  .multi-language-icons {
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row on very small screens */
+  }
+}
+
+/* Extra small screens: 1 icon per row */
+@media (max-width: 360px) {
+  .multi-language-icons {
+    grid-template-columns: 1fr; /* 1 icon per row */
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "시작"
+    },
+    "fab": {
+      "showOverdue": "연체된 항목 보기",
+      "showDueToday": "오늘 해야 할 일 보기",
+      "showAllTasks": "모든 작업 보기",
+      "markVisibleAsComplete": "보이는 항목을 완료로 표시",
+      "sort": "정렬",
+      "filter": "필터",
+      "clearFilter": "필터 지우기",
+      "history": "히스토리"
+    },
+    "menu": {
+      "markAsComplete": "완료로 표시",
+      "editReminder": "알림 수정",
+      "goToPlant": "식물로 이동",
+      "showHistory": "히스토리 보기",
+      "delete": "삭제"
+    },
+    "taskTypes": {
+      "watering": "급수",
+      "moisture": "분무",
+      "fertilising": "비료 주기",
+      "care": "관리",
+      "repot": "분갈이"
+    },
+    "toasts": {
+      "failedToLoadTasks": "작업을 불러오는 데 실패했습니다.",
+      "taskCompleted": "작업 완료",
+      "tasksCompleted": "작업 완료됨",
+      "completeFailed": "완료에 실패했습니다.",
+      "completeSomeFailed": "{{ok}}개의 작업이 완료되었습니다. (총 {{total}}개)",
+      "taskNotLinkedToPlant": "이 작업은 식물과 연결되지 않았습니다."
+    },
+    "empty": {
+      "all": {
+        "title": "작업 없음",
+        "introPrefix": "이 페이지는 당신의 다가오는",
+        "introBold": "식물 관리 작업",
+        "introSuffix": "— 급수, 비료 주기, 분갈이 등입니다.",
+        "toGetStarted": "시작하려면:",
+        "bullets": {
+          "createPlantsBold": "식물 추가",
+          "createPlantsSuffix": "탭에서",
+          "plantsTabBold": "식물",
+          "addRemindersPrefix": "알림 추가",
+          "remindersBold": "알림",
+          "addRemindersSuffix": "각 식물에 대해 알림을 추가하여 여기서 작업으로 나타나게 하세요.",
+          "optionallyConnectPrefix": "선택적으로 연결",
+          "iotBold": "IoT 장치 (아두이노 보드)",
+          "optionallyConnectMiddle": "탭에서",
+          "readingsTabBold": "측정값",
+          "optionallyConnectSuffix": "온도, 습도, 빛, 토양 습도를 실시간으로 추적하려면 연결하세요."
+        },
+        "outro": "설정이 완료되면, 홈 페이지는 각 식물이 필요한 것을 확인할 수 있는 중심지가 될 것입니다."
+      },
+      "overdue": {
+        "title": "연체된 작업 없음",
+        "body": "현재 연체된 작업이 없습니다.\n\n모든 것이 최신 상태입니다 — FAB에서 '모든 작업 보기' 옵션을 사용하거나 필터를 변경하여 다가오는 작업을 미리 확인하세요."
+      },
+      "today": {
+        "title": "오늘 해야 할 작업 없음",
+        "body": "오늘 해야 할 작업이 없습니다.\n\nFAB에서 '모든 작업 보기' 옵션을 사용하거나 식물에서 알림 일정을 변경하세요."
+      }
+    }
+  }
+}

@@ -7,15 +7,16 @@ import QRFlowSection from "./components/QRFlowSection";
 import HowItWorks from "./components/HowItWorks";
 import CTASection from "./components/CTASection";
 import "./styles.css";
+import MultiLanguageSection from "./components/MultiLanguageSection";
 
 export default function Home() {
   return (
     <div className="stack home-wrap">
       <HeroSection />
 
-      {/* Screens strip <AppScreens /> */}
-
       <CoreFeatures />
+
+      <MultiLanguageSection />
 
       <FeatureGrid />
 

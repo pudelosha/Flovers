@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "알림",
+    "common": {
+      "unnamedPlant": "이름 없는 식물",
+      "everyN": "{{count}} {{unit}}마다"
+    },
+    "units": {
+      "days": "일",
+      "months": "개월"
+    },
+    "types": {
+      "watering": "급수",
+      "moisture": "분무",
+      "fertilising": "비료",
+      "care": "관리",
+      "repot": "이식"
+    },
+    "fab": {
+      "add": "알림 추가",
+      "calendar": "캘린더",
+      "list": "목록",
+      "sort": "정렬",
+      "filter": "필터",
+      "clearFilter": "필터 지우기"
+    },
+    "empty": {
+      "title": "알림 없음",
+      "description": "알림은 특정 식물과 연결되어 있습니다. 적어도 하나의 식물이 등록되어 있는지 확인하세요.\n\n'+' 버튼을 눌러 알림을 추가하세요. 창에서 식물, 유형(급수, 분무, 비료, 관리 또는 이식), 첫 번째 날짜 및 반복 빈도를 설정할 수 있습니다."
+    },
+    "menu": {
+      "edit": "알림 편집",
+      "delete": "알림 삭제"
+    },
+    "tile": {
+      "repeatsEvery": "{{count}} {{unit}}마다 반복",
+      "dueToday": "오늘 기한",
+      "dueInOneDay": "1일 후 기한",
+      "dueInDays": "{{count}}일 후 기한",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "{{date}}에 예정됨",
+      "noItems": "이 날짜에 알림이 없습니다."
+    },
+    "toast": {
+      "loadFailed": "알림을 불러올 수 없습니다.",
+      "deleted": "알림이 삭제되었습니다.",
+      "deleteFailed": "삭제에 실패했습니다.",
+      "deleteFailedWithReason": "삭제에 실패했습니다: {{reason}}",
+      "duplicateType": "이 식물에는 이미 이 유형의 알림이 있습니다.",
+      "created": "알림이 생성되었습니다.",
+      "updated": "알림이 업데이트되었습니다.",
+      "createFailed": "생성에 실패했습니다.",
+      "createFailedWithReason": "생성에 실패했습니다: {{reason}}",
+      "updateFailed": "업데이트에 실패했습니다.",
+      "updateFailedWithReason": "업데이트에 실패했습니다: {{reason}}"
+    }
+  }
+}

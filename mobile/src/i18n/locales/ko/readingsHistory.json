@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "읽기 기록",
+    "plantFallback": "식물",
+    "noDevicesFound": "장치를 찾을 수 없습니다.",
+    "unauthorized": "권한이 없습니다. 다시 로그인하세요.",
+    "failedLoadDevices": "장치를 불러오는 데 실패했습니다.",
+    "failedLoadHistory": "기록을 불러오는 데 실패했습니다.",
+    "segment": {
+      "day": "일",
+      "week": "주",
+      "month": "월"
+    },
+    "metric": {
+      "temperatureShort": "온도",
+      "humidityShort": "습도",
+      "lightShort": "빛",
+      "moistureShort": "토양"
+    }
+  }
+}

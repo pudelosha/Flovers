@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "식물"
+    },
+    "list": {
+      "unnamed": "이름 없는 식물"
+    },
+    "empty": {
+      "title": "식물이 없습니다",
+      "desc1": "첫 번째 식물을 추가하려면 오른쪽 하단의 '+' 버튼을 눌러주세요.",
+      "desc2": "식물 추가 마법사가 식물을 설정하고, 파라미터를 설정하며, 알림을 계획하는 데 도움을 줄 것입니다."
+    },
+    "fab": {
+      "create": "식물 추가",
+      "sort": "정렬",
+      "filter": "필터",
+      "clearFilter": "필터 지우기",
+      "locations": "위치"
+    },
+    "menu": {
+      "edit": "식물 편집",
+      "reminders": "알림 보기",
+      "journal": "식물 일지 보기",
+      "showQr": "QR 코드 보기",
+      "delete": "식물 삭제"
+    },
+    "toast": {
+      "loadFailed": "식물을 불러오는 데 실패했습니다",
+      "updated": "식물이 업데이트되었습니다",
+      "deleted": "식물이 삭제되었습니다",
+      "qrSaved": "QR 코드가 갤러리에 저장되었습니다.",
+      "qrEmailed": "이 QR 코드가 귀하의 계정 이메일로 전송됩니다."
+    },
+    "alert": {
+      "loadFailedTitle": "불러오기 오류",
+      "loadFailedMsg": "식물 세부 정보를 불러오는 데 실패했습니다.",
+      "updateFailedTitle": "업데이트 오류",
+      "updateFailedMsg": "이 식물을 업데이트하는 데 실패했습니다.",
+      "deleteFailedTitle": "삭제 오류",
+      "deleteFailedMsg": "이 식물을 삭제하는 데 실패했습니다."
+    }
+  }
+}

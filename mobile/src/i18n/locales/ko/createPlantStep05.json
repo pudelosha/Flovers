@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "화분과 토양",
+      "subtitle": "이 정보는 선택 사항입니다. 화분/용기의 재료와 토양을 선택하세요. '지정되지 않음'으로 두고 계속 진행할 수도 있습니다.",
+      "containerMaterial": "화분 재료",
+      "soilMix": "토양/혼합물",
+      "notSpecified": "지정되지 않음",
+      "notSpecifiedDesc": "확실하지 않으면 건너뛰세요.",
+      "potMaterials": {
+        "plastic": {
+          "label": "플라스틱",
+          "description": "가볍고, 습기를 오래 유지하며, 저렴하고 다용도로 사용 가능합니다."
+        },
+        "ceramic": {
+          "label": "세라믹(유약 처리)",
+          "description": "무겁고, 습기를 잘 유지하며, 장식적인 마감 처리가 되어 있습니다."
+        },
+        "terracotta": {
+          "label": "테라코타",
+          "description": "다공성, 습기를 흡수, 다육식물과 선인장에 적합합니다."
+        },
+        "clay": {
+          "label": "점토(유약 처리 안됨)",
+          "description": "테라코타와 유사, '호흡'을 하고, 빨리 마릅니다."
+        },
+        "cement": {
+          "label": "시멘트",
+          "description": "매우 무겁고, 현대적인 외관을 가지며, 습기를 잘 유지합니다."
+        },
+        "concrete": {
+          "label": "콘크리트",
+          "description": "내구성이 강하고, 외부에서 안정적이며, 습기를 잘 유지합니다."
+        },
+        "metal": {
+          "label": "금속(일반)",
+          "description": "햇볕에서 빨리 가열되며, 종종 보호 덮개나 삽입물이 필요합니다."
+        },
+        "stainless": {
+          "label": "스테인리스 스틸",
+          "description": "현대적이고 부식에 강하며, 가열될 수 있습니다."
+        },
+        "aluminum": {
+          "label": "알루미늄",
+          "description": "가볍고 열을 잘 전달하며, 햇볕에서 과열되지 않도록 주의해야 합니다."
+        },
+        "iron": {
+          "label": "철/강",
+          "description": "매우 내구성이 강하며, 녹슬 수 있고, 때때로 삽입물이 필요합니다."
+        },
+        "copper": {
+          "label": "구리/청동",
+          "description": "장식용, 토양과 반응할 수 있으며, 보통 보호 덮개로 사용됩니다."
+        },
+        "wood": {
+          "label": "나무",
+          "description": "자연스러운 외관을 가지고 있으며, 삽입물이 필요할 수 있고, 지속적인 습기에서 부패할 수 있습니다."
+        },
+        "bamboo": {
+          "label": "대나무",
+          "description": "가볍고 지속 가능하며, 보통 삽입물과 함께 사용되고, 실내에서 더 적합합니다."
+        },
+        "rattan": {
+          "label": "라탄/버들",
+          "description": "장식용 덮개, 내부에 생산용 화분을 넣습니다."
+        },
+        "glass": {
+          "label": "유리",
+          "description": "테라리움에 좋고, 배수가 없으며, 습기를 관리해야 합니다."
+        },
+        "stone": {
+          "label": "돌/대리석",
+          "description": "매우 무겁고 안정적이며, 차가운 온도를 오랫동안 유지합니다."
+        },
+        "resin": {
+          "label": "수지",
+          "description": "가볍고 내구성이 강하며, 외부에 적합하고, 뿌리를 절연합니다."
+        },
+        "fiberglass": {
+          "label": "유리섬유",
+          "description": "가볍고 튼튼하며, 외부에 적합하고, 절연됩니다."
+        },
+        "biodegradable": {
+          "label": "생분해성",
+          "description": "예: 코코넛 섬유/이탄, 시작 화분, 시간이 지나면 분해됩니다."
+        },
+        "fabric": {
+          "label": "직물 화분",
+          "description": "뿌리를 통풍시키고, 빨리 마르며, 채소에 적합합니다."
+        },
+        "grow-bag": {
+          "label": "재배용 가방",
+          "description": "직물 가방, 휴대 가능, 물 빠짐이 빠르며, 자주 물을 줘야 합니다."
+        },
+        "self-watering": {
+          "label": "자기 급수",
+          "description": "심지로 된 물통, 일정한 급수를 유지하는 데 도움이 됩니다."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "다목적 토양",
+          "description": "대부분의 실내 식물에 적합한 좋은 시작 옵션입니다."
+        },
+        "green-plants": {
+          "label": "녹색/실내 식물용 토양",
+          "description": "녹색 식물(종종 야자수에도 적합)용 다목적 토양입니다."
+        },
+        "balcony-flowers": {
+          "label": "발코니 꽃과 화단용 토양",
+          "description": "더 풍부하고, 화분과 상자에서 꽃을 피우는 식물에 적합합니다."
+        },
+        "cactus-succulent": {
+          "label": "선인장과 다육식물용 토양",
+          "description": "매우 배수성이 좋으며, 다육식물과 선인장에 이상적입니다."
+        },
+        "orchid": {
+          "label": "난초용 토양",
+          "description": "굵고, 나무껍질을 바탕으로 하여, 뿌리 주변에 많은 공기를 제공합니다."
+        },
+        "aroid": {
+          "label": "아로이드용 혼합물",
+          "description": "몬스테라/필로덴드론에 적합한 매우 통기성이 좋은 (나무껍질/펄라이트) 토양입니다."
+        },
+        "seed-starting": {
+          "label": "씨앗 발아용 토양",
+          "description": "미세하며, 뿌리 내리기와 발아에 적합합니다."
+        },
+        "bonsai": {
+          "label": "분재용 토양",
+          "description": "거칠고 배수성이 좋으며, 덜 뭉칩니다."
+        },
+        "herbs-vegetables": {
+          "label": "허브 및 채소용 토양",
+          "description": "더 풍부하며, 식용 식물에 적합합니다."
+        },
+        "citrus": {
+          "label": "시트러스용 토양",
+          "description": "배수성이 좋으며, 시트러스와 지중해성 식물에 적합합니다."
+        },
+        "fern": {
+          "label": "양치식물용 토양",
+          "description": "습기를 많이 요구하며, 일반적으로 더 많은 유기물로 구성됩니다."
+        },
+        "conifers": {
+          "label": "침엽수용 토양",
+          "description": "침엽수용 토양, 종종 약간 산성이며 배수성이 좋습니다."
+        },
+        "acid-loving": {
+          "label": "산성 식물용 토양",
+          "description": "블루베리, 히스위스, 로도덴드론, 아잘리아 등과 같은 산성 토양을 선호하는 식물에 적합합니다."
+        },
+        "peat-free": {
+          "label": "이탄 없는 토양",
+          "description": "더 지속 가능한 옵션이며, 성분은 제조업체에 따라 다를 수 있습니다."
+        }
+      }
+    }
+  }
+}

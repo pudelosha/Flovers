@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "植物"
+    },
+    "list": {
+      "unnamed": "无名植物"
+    },
+    "empty": {
+      "title": "没有植物",
+      "desc1": "点击右下角的“+”按钮添加第一棵植物。",
+      "desc2": "植物添加向导将帮助您配置植物，设置其参数并安排提醒。"
+    },
+    "fab": {
+      "create": "添加植物",
+      "sort": "排序",
+      "filter": "筛选",
+      "clearFilter": "清除筛选",
+      "locations": "位置"
+    },
+    "menu": {
+      "edit": "编辑植物",
+      "reminders": "显示提醒",
+      "journal": "显示植物日志",
+      "showQr": "显示二维码",
+      "delete": "删除植物"
+    },
+    "toast": {
+      "loadFailed": "无法加载植物",
+      "updated": "植物已更新",
+      "deleted": "植物已删除",
+      "qrSaved": "二维码已保存至相册。",
+      "qrEmailed": "带有此二维码的电子邮件将发送到您的账户地址。"
+    },
+    "alert": {
+      "loadFailedTitle": "加载错误",
+      "loadFailedMsg": "无法加载植物详情。",
+      "updateFailedTitle": "更新错误",
+      "updateFailedMsg": "无法更新此植物。",
+      "deleteFailedTitle": "删除错误",
+      "deleteFailedMsg": "无法删除此植物。"
+    }
+  }
+}

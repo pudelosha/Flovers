@@ -1,0 +1,12 @@
+{
+  "confirmEmail": {
+    "title": "이메일 확인",
+    "confirming": "이메일 주소 확인 중...",
+    "success": "계정이 활성화되었습니다. 이제 로그인할 수 있습니다.",
+    "invalidLink": "잘못되었거나 누락된 활성화 링크입니다.",
+    "activationFailed": "활성화에 실패했습니다. 링크가 잘못되었거나 만료되었을 수 있습니다.",
+    "goToLogin": "로그인으로 이동",
+    "resendActivation": "활성화 이메일 재전송",
+    "backToLogin": "로그인으로 돌아가기"
+  }
+}

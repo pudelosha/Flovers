@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "취소",
+      "delete": "삭제",
+      "clear": "지우기",
+      "apply": "적용",
+      "reset": "초기화",
+      "close": "닫기",
+      "done": "완료"
+    },
+    "confirmDelete": {
+      "title": "식물 삭제",
+      "messagePrefix": "정말로 삭제하시겠습니까",
+      "messageSuffix": "? 관련된 모든 데이터도 삭제됩니다: 알림, 장치 및 읽기, 작업 및 작업 기록. 이 작업은 취소할 수 없습니다."
+    },
+    "filter": {
+      "title": "식물 필터링",
+      "anyLocation": "모든 위치",
+      "anyLatin": "모든 라틴어/이름"
+    },
+    "sort": {
+      "title": "식물 정렬",
+      "keyPlant": "식물 이름",
+      "keyLocation": "위치",
+      "dirAsc": "오름차순",
+      "dirDesc": "내림차순"
+    },
+    "qr": {
+      "title": "식물 QR 코드",
+      "p1": "각 식물은 고유한 QR 코드를 가지고 있으며, 그 코드에는 식물의 식별자가 포함되어 있습니다.",
+      "p2": "이 코드를 앱의 스캐너로 스캔하면 해당 식물의 상세 화면으로 바로 이동합니다.",
+      "youCan": "할 수 있습니다:",
+      "b1": "QR 코드 이미지를 휴대폰에 저장하거나 이메일로 보내고, 라벨링을 위해 인쇄할 수 있습니다.",
+      "b2": "인쇄된 라벨을 화분에 직접 부착하여 항상 QR 코드를 손쉽게 확인할 수 있습니다.",
+      "b3": "가족들이 라벨을 스캔하여 앱에서 이 식물을 빠르게 열 수 있습니다.",
+      "save": "QR 코드 저장",
+      "email": "QR 코드 이메일로 보내기"
+    },
+    "edit": {
+      "title": "식물 편집",
+      "namePlaceholder": "식물 이름 (필수)",
+      "latinPlaceholder": "라틴어 이름 (검색…)",
+      "locationOptional": "위치 선택 (선택 사항)",
+      "none": "— 없음 —",
+      "notesPlaceholder": "메모… (선택 사항)",
+      "purchaseDateLabel": "구매 날짜",
+      "notSet": "설정되지 않음",
+      "fallbackDateTitle": "구매 날짜 설정 (YYYY-MM-DD)",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
+      "invalidDateTitle": "잘못된 날짜",
+      "invalidDateMsg": "YYYY-MM-DD 형식을 사용하십시오",
+      "set": "설정",
+      "lightLevelLabel": "빛의 수준",
+      "low": "낮음",
+      "high": "높음",
+      "windowDirectionLabel": "창 방향",
+      "orientations": {
+        "S": "남",
+        "E": "동",
+        "W": "서",
+        "N": "북"
+      },
+      "measureBtn": "빛과 방향 측정",
+      "distanceLabel": "창과의 거리",
+      "cm": "cm",
+      "containerMaterialLabel": "화분 재질",
+      "soilMixLabel": "토양/혼합물",
+      "update": "저장"
+    },
+    "journal": {
+      "title": "식물 일지",
+      "loading": "로딩 중...",
+      "error": "뭔가 잘못되었습니다.",
+      "empty": "일지에 항목이 없습니다.",
+      "taskTypes": {
+        "watering": "급수",
+        "moisture": "분무",
+        "fertilising": "비료 주기",
+        "care": "관리",
+        "repot": "화분 갈이"
+      }
+    }
+  }
+}

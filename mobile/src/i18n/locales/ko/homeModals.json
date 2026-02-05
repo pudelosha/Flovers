@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "취소",
+      "apply": "적용",
+      "reset": "초기화"
+    },
+    "complete": {
+      "title": "작업을 완료로 표시",
+      "overdueInfo": "이 작업은 연체되었습니다. 다음 날짜는 오늘 {{intervalText}}부터 계산됩니다.",
+      "noteLabel": "메모 (선택 사항)",
+      "noteHint": "이 메모는 저장되며 나중에 해당 식물의 식물 일지에서 볼 수 있습니다.",
+      "notePlaceholder": "수행한 작업, 관찰 사항 등을 간단히 추가할 수 있습니다.",
+      "confirm": "완료로 표시"
+    },
+    "completeBulk": {
+      "title": "{{count}}개의 작업을 완료로 표시",
+      "overdueInfo": "일부 작업이 연체되었습니다. 연체된 작업은 오늘 {{intervalText}}부터 날짜가 계산됩니다.",
+      "noteHint": "이 메모는 모든 완료된 작업에 대해 저장되며 나중에 해당 식물의 식물 일지에서 볼 수 있습니다.",
+      "confirm": "완료로 표시"
+    },
+    "filter": {
+      "title": "작업 필터링",
+      "plantLabel": "식물",
+      "locationLabel": "위치",
+      "taskTypesLabel": "작업 유형",
+      "dueDateRangeLabel": "완료 날짜 범위",
+      "fromLabel": "부터",
+      "toLabel": "까지",
+      "anyPlant": "모든 식물",
+      "selectPlant": "식물 선택",
+      "anyLocation": "모든 위치",
+      "datePlaceholder": "YYYY-MM-DD",
+      "clear": "지우기"
+    },
+    "sort": {
+      "title": "작업 정렬",
+      "sortByLabel": "정렬 기준",
+      "directionLabel": "방향",
+      "keys": {
+        "dueDate": "날짜",
+        "plant": "식물 이름",
+        "location": "위치"
+      },
+      "directions": {
+        "asc": "오름차순",
+        "desc": "내림차순"
+      }
+    }
+  }
+}

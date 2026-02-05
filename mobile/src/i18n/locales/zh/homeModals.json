@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "取消",
+      "apply": "应用",
+      "reset": "重置"
+    },
+    "complete": {
+      "title": "标记任务为完成",
+      "overdueInfo": "该任务已过期。下一个日期将从今天开始计算 {{intervalText}}。",
+      "noteLabel": "备注（可选）",
+      "noteHint": "该备注将被保存，并在后续在植物日志中显示该植物。",
+      "notePlaceholder": "您可以添加简短的备注，关于您做了什么，观察结果等。",
+      "confirm": "标记为完成"
+    },
+    "completeBulk": {
+      "title": "标记 {{count}} 个任务为完成",
+      "overdueInfo": "一些任务已过期。对于过期任务，下一个日期将从今天开始计算 {{intervalText}}。",
+      "noteHint": "该备注将为每个完成的任务保存，并在后续在植物日志中显示该植物。",
+      "confirm": "标记为完成"
+    },
+    "filter": {
+      "title": "筛选任务",
+      "plantLabel": "植物",
+      "locationLabel": "位置",
+      "taskTypesLabel": "任务类型",
+      "dueDateRangeLabel": "截止日期范围",
+      "fromLabel": "从",
+      "toLabel": "至",
+      "anyPlant": "任何植物",
+      "selectPlant": "选择植物",
+      "anyLocation": "任何位置",
+      "datePlaceholder": "YYYY-MM-DD",
+      "clear": "清除"
+    },
+    "sort": {
+      "title": "排序任务",
+      "sortByLabel": "排序依据",
+      "directionLabel": "方向",
+      "keys": {
+        "dueDate": "日期",
+        "plant": "植物名称",
+        "location": "位置"
+      },
+      "directions": {
+        "asc": "升序",
+        "desc": "降序"
+      }
+    }
+  }
+}

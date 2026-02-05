@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "전송 중…"
+    },
+    "support": {
+      "copyToMe": "이메일로 나에게도 사본을 보내주세요"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "이메일 변경",
+        "newEmailPlaceholder": "새 이메일",
+        "currentPasswordPlaceholder": "현재 비밀번호"
+      },
+      "changePassword": {
+        "title": "비밀번호 변경",
+        "currentPasswordPlaceholder": "현재 비밀번호",
+        "newPasswordPlaceholder": "새 비밀번호",
+        "confirmNewPasswordPlaceholder": "새 비밀번호 확인",
+        "update": "업데이트"
+      },
+      "deleteAccount": {
+        "title": "계정 삭제",
+        "warning": "이 작업은 취소할 수 없습니다. 계속 진행하면 계정과 데이터가 영구적으로 삭제됩니다.",
+        "passwordPlaceholder": "확인을 위해 비밀번호를 입력하세요"
+      },
+      "reportBug": {
+        "title": "버그 신고",
+        "subjectPlaceholder": "주제",
+        "descriptionPlaceholder": "문제를 설명하세요…"
+      },
+      "contactUs": {
+        "title": "연락하기",
+        "subjectPlaceholder": "주제",
+        "messagePlaceholder": "어떻게 도와드릴까요?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "새 이메일 주소를 입력하세요.",
+      "enterCurrentPassword": "현재 비밀번호를 입력하세요.",
+      "emailUpdated": "이메일이 업데이트되었습니다.",
+      "couldNotChangeEmail": "이메일을 변경할 수 없습니다. 비밀번호를 확인하고 다시 시도하세요.",
+      "enterNewPassword": "새 비밀번호를 입력하세요.",
+      "passwordsDoNotMatch": "새 비밀번호가 일치하지 않습니다.",
+      "passwordUpdated": "비밀번호가 업데이트되었습니다.",
+      "couldNotChangePassword": "비밀번호를 변경할 수 없습니다. 현재 비밀번호를 확인하고 다시 시도하세요.",
+      "enterSubject": "주제를 입력하세요.",
+      "enterMessage": "메시지를 입력하세요.",
+      "enterDescription": "문제를 설명하세요.",
+      "contactSent": "메시지가 전송되었습니다. 곧 연락드리겠습니다.",
+      "bugSent": "버그 신고가 전송되었습니다. 감사합니다.",
+      "couldNotSendContact": "메시지를 전송할 수 없습니다. 다시 시도하세요.",
+      "couldNotSendBug": "버그 신고를 전송할 수 없습니다. 다시 시도하세요.",
+      "deleteNotImplemented": "계정 삭제는 아직 구현되지 않았습니다.",
+      "requestTimedOut": "시간 초과되었습니다. 다시 시도하세요."
+    }
+  }
+}

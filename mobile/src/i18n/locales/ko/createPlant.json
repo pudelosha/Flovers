@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "식물 만들기"
+    },
+    "fallbackStep": {
+      "title": "단계 „{{step}}”",
+      "subtitle": "이 단계는 곧 구현될 예정입니다."
+    },
+    "common": {
+      "previous": "뒤로",
+      "next": "다음",
+      "create": "만들기",
+      "cancel": "취소",
+      "done": "완료",
+      "notSpecified": "지정되지 않음"
+    }
+  }
+}

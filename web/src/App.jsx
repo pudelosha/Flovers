@@ -2,6 +2,8 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 
+import { LANGS, DEFAULT_LANG } from "../src/config.js";
+
 import Home from "./routes/Home/index.jsx";
 import Terms from "./routes/Terms.jsx";
 import PrivacyPolicy from "./routes/PrivacyPolicy.jsx";
@@ -9,9 +11,6 @@ import Contact from "./routes/Contact.jsx";
 import Faq from "./routes/Faq.jsx";
 import Docs from "./routes/Docs.jsx";
 import Schemas from "./routes/Schemas.jsx";
-
-export const SUPPORTED_LANGS = ["en", "pl"];
-export const DEFAULT_LANG = "en";
 
 export default function App() {
   return (

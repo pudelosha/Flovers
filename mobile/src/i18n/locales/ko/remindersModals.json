@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "취소",
+      "apply": "적용",
+      "clear": "지우기",
+      "delete": "삭제",
+      "create": "생성",
+      "update": "저장",
+      "reset": "리셋"
+    },
+    "confirmDelete": {
+      "title": "알림 삭제",
+      "areYouSurePrefix": "정말로 삭제하시겠습니까",
+      "areYouSureSuffix": "? 이 작업은 취소할 수 없습니다."
+    },
+    "edit": {
+      "titleCreate": "알림 추가",
+      "titleEdit": "알림 수정",
+      "typeLabel": "유형",
+      "plantLabel": "식물",
+      "selectPlant": "식물 선택",
+      "locationLabel": "위치",
+      "locationPlaceholder": "위치",
+      "dueDateLabel": "기한",
+      "datePlaceholder": "YYYY-MM-DD",
+      "intervalLabel": "간격",
+      "intervalValuePlaceholder": "값"
+    },
+    "filter": {
+      "title": "알림 필터링",
+      "plantLabel": "식물",
+      "selectPlant": "식물 선택",
+      "anyPlant": "모든 식물",
+      "locationLabel": "위치",
+      "anyLocation": "모든 위치",
+      "taskTypesLabel": "작업 유형",
+      "dueDateRangeLabel": "기한 범위",
+      "fromLabel": "부터",
+      "toLabel": "까지",
+      "datePlaceholder": "YYYY-MM-DD"
+    },
+    "sort": {
+      "title": "알림 정렬",
+      "sortByLabel": "정렬 기준",
+      "directionLabel": "방향",
+      "keys": {
+        "dueDate": "기한",
+        "plant": "식물 이름",
+        "location": "위치"
+      },
+      "directions": {
+        "asc": "오름차순",
+        "desc": "내림차순"
+      }
+    }
+  }
+}

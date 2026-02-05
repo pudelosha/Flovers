@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "위치",
+    "empty": {
+      "title": "위치 없음",
+      "description": "식물에 위치를 할당하면 위치가 자동으로 나타납니다.\n\n식물을 편집하고 위치를 설정하여 방이나 구역별로 식물을 그룹화하기 시작하세요."
+    },
+    "fab": {
+      "add": "위치 추가",
+      "sort": "정렬"
+    },
+    "menu": {
+      "edit": "위치 편집",
+      "delete": "위치 삭제"
+    },
+    "plantCount": {
+      "one": "1 식물",
+      "few": "{{count}} 식물",
+      "many": "{{count}} 식물들"
+    },
+    "toast": {
+      "loadFailed": "위치를 불러오지 못했습니다",
+      "added": "위치가 추가되었습니다",
+      "deleted": "위치가 삭제되었습니다",
+      "updatedLocal": "위치가 업데이트되었습니다 (로컬만 업데이트됨)",
+      "saveFailed": "위치를 저장하지 못했습니다",
+      "deleteFailed": "이 위치를 삭제할 수 없습니다."
+    },
+    "alert": {
+      "deleteFailedTitle": "삭제 실패"
+    }
+  }
+}

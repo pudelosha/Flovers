@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "취소",
+      "apply": "적용",
+      "delete": "삭제",
+      "selectPlant": "식물 선택",
+      "selectLocation": "위치 선택",
+      "datePlaceholder": "YYYY-MM-DD",
+      "taskTypes": {
+        "watering": "급수",
+        "moisture": "습도",
+        "fertilising": "비료",
+        "care": "관리",
+        "repot": "분갈이"
+      }
+    },
+    "delete": {
+      "title": "기록 삭제",
+      "scopeLabel": "범위",
+      "modes": {
+        "plant": "선택한 식물에 대해 삭제",
+        "location": "선택한 위치에 대해 삭제",
+        "types": "타입별 작업 삭제",
+        "olderThan": "보다 오래된 작업 삭제"
+      },
+      "noPlantsHint": "아직 기록에 식물이 없습니다.",
+      "noLocationsHint": "아직 기록에 위치가 없습니다.",
+      "daysValue": "{{days}} 일"
+    },
+    "filter": {
+      "title": "기록 필터링",
+      "plantLabel": "식물",
+      "locationLabel": "위치",
+      "taskTypesLabel": "작업 유형",
+      "completedDateRangeLabel": "완료 날짜 범위",
+      "fromLabel": "부터",
+      "toLabel": "까지",
+      "anyPlant": "모든 식물",
+      "anyLocation": "모든 위치",
+      "clear": "지우기"
+    },
+    "sort": {
+      "title": "기록 정렬",
+      "sortByLabel": "정렬 기준",
+      "directionLabel": "방향",
+      "keys": {
+        "completedAt": "완료 날짜",
+        "plant": "식물 이름",
+        "location": "위치"
+      },
+      "directions": {
+        "asc": "오름차순",
+        "desc": "내림차순"
+      },
+      "reset": "초기화"
+    }
+  }
+}
