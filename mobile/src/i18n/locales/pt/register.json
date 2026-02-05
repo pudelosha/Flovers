@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "Registro",
+    "email": "Email",
+    "password": "Senha",
+    "confirmPassword": "Confirme a senha",
+    "termsAgreement": "Aceito",
+    "termsLink": "Termos de uso",
+    "signUpButton": "Registrar",
+    "haveAccount": "Já tem uma conta?",
+    "loginLink": "Faça login",
+    "errors": {
+      "invalidEmail": "Digite um endereço de email válido.",
+      "shortPassword": "A senha deve ter pelo menos 6 caracteres.",
+      "passwordsMismatch": "As senhas não são idênticas.",
+      "termsRequired": "Você deve aceitar os termos de uso.",
+      "incompleteForm": "Por favor, preencha o formulário.",
+      "emailTaken": "Este endereço de e-mail já está em uso.",
+      "registrationFailed": "Falha no registro. Tente novamente.",
+      "generic": "Algo deu errado. Tente novamente.",
+      "cannotOpenLink": "Não é possível abrir o link."
+    },
+    "success": {
+      "accountCreated": "Conta criada. Bem-vindo!"
+    }
+  }
+}

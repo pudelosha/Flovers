@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "جاري التحميل...",
+      "title": "اختر الموقع",
+      "subtitle": "اختياري ولكن مفيد: المواقع تتيح لك تجميع النباتات ومن ثم ترتيبها أو تصفيتها.",
+      "errorLoadingLocations": "فشل تحميل المواقع.",
+      "createLocation": "إنشاء موقع جديد",
+      "yourLocations": "مواقعك",
+      "categories": {
+        "indoor": "داخلية",
+        "outdoor": "خارجية",
+        "other": "أخرى"
+      },
+      "noLocations": {
+        "indoor": "لا توجد مواقع داخلية.",
+        "outdoor": "لا توجد مواقع خارجية.",
+        "other": "لا توجد مواقع أخرى."
+      },
+      "locationExists": "الموقع بالاسم هذا موجود بالفعل.",
+      "errorCreatingLocation": "فشل إنشاء الموقع",
+      "quickSuggestions": "اقتراحات سريعة"
+    },
+    "locationModal": {
+      "title": "موقع جديد",
+      "locationName": "اسم الموقع",
+      "category": "الفئة",
+      "indoor": "داخلي",
+      "outdoor": "خارجي",
+      "other": "آخر",
+      "create": "إنشاء",
+      "cancel": "إلغاء",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "غرفة المعيشة",
+          "kitchen": "المطبخ",
+          "diningRoom": "غرفة الطعام",
+          "bedroom": "غرفة النوم",
+          "bathroom": "الحمام",
+          "hallway": "الردهة",
+          "office": "المكتب",
+          "kidsRoom": "غرفة الأطفال"
+        },
+        "outdoor": {
+          "balcony": "شرفة",
+          "terrace": "تراس",
+          "patio": "فناء",
+          "garden": "حديقة",
+          "frontYard": "الحديقة الأمامية",
+          "backyard": "الحديقة الخلفية",
+          "porch": "المدخل",
+          "greenhouse": "دفيئة"
+        },
+        "other": {
+          "staircase": "سلم",
+          "garage": "كراج",
+          "basement": "قبو",
+          "lobby": "ردهة",
+          "sunroom": "غرفة الشمس",
+          "workshop": "ورشة العمل",
+          "studio": "استوديو",
+          "attic": "علية"
+        }
+      }
+    }
+  }
+}

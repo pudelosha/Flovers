@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "Posizioni",
+    "empty": {
+      "title": "Nessuna posizione",
+      "description": "Le posizioni appariranno automaticamente quando le assegni alle piante.\n\nModifica una pianta e imposta la sua posizione per iniziare a raggruppare le piante per stanze o zone."
+    },
+    "fab": {
+      "add": "Aggiungi posizione",
+      "sort": "Ordina"
+    },
+    "menu": {
+      "edit": "Modifica posizione",
+      "delete": "Elimina posizione"
+    },
+    "plantCount": {
+      "one": "1 pianta",
+      "few": "{{count}} piante",
+      "many": "{{count}} piante"
+    },
+    "toast": {
+      "loadFailed": "Impossibile caricare le posizioni",
+      "added": "Posizione aggiunta",
+      "deleted": "Posizione eliminata",
+      "updatedLocal": "Posizione aggiornata (solo localmente)",
+      "saveFailed": "Impossibile salvare la posizione",
+      "deleteFailed": "Impossibile eliminare questa posizione."
+    },
+    "alert": {
+      "deleteFailedTitle": "Eliminazione non riuscita"
+    }
+  }
+}

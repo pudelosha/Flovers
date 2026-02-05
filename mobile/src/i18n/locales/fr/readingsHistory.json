@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Historique des relevés",
+    "plantFallback": "Plante",
+    "noDevicesFound": "Aucun appareil trouvé.",
+    "unauthorized": "Autorisation manquante. Veuillez vous reconnecter.",
+    "failedLoadDevices": "Impossible de charger les appareils.",
+    "failedLoadHistory": "Impossible de charger l’historique.",
+    "segment": {
+      "day": "JOUR",
+      "week": "SEM",
+      "month": "MOIS"
+    },
+    "metric": {
+      "temperatureShort": "Temp",
+      "humidityShort": "Hum",
+      "lightShort": "Lumière",
+      "moistureShort": "Sol"
+    }
+  }
+}

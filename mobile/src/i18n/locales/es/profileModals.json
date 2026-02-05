@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Enviando..."
+    },
+    "support": {
+      "copyToMe": "Envíame también una copia al correo electrónico"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Cambiar correo electrónico",
+        "newEmailPlaceholder": "Nuevo correo electrónico",
+        "currentPasswordPlaceholder": "Contraseña actual"
+      },
+      "changePassword": {
+        "title": "Cambiar contraseña",
+        "currentPasswordPlaceholder": "Contraseña actual",
+        "newPasswordPlaceholder": "Nueva contraseña",
+        "confirmNewPasswordPlaceholder": "Confirmar nueva contraseña",
+        "update": "Actualizar"
+      },
+      "deleteAccount": {
+        "title": "Eliminar cuenta",
+        "warning": "Esta acción es irreversible. Si continúas, tu cuenta y datos serán eliminados permanentemente.",
+        "passwordPlaceholder": "Ingresa la contraseña para confirmar"
+      },
+      "reportBug": {
+        "title": "Reportar error",
+        "subjectPlaceholder": "Asunto",
+        "descriptionPlaceholder": "Describe el problema..."
+      },
+      "contactUs": {
+        "title": "Contáctanos",
+        "subjectPlaceholder": "Asunto",
+        "messagePlaceholder": "¿Cómo podemos ayudarte?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Ingresa un nuevo correo electrónico.",
+      "enterCurrentPassword": "Ingresa la contraseña actual.",
+      "emailUpdated": "Correo electrónico actualizado.",
+      "couldNotChangeEmail": "No se pudo cambiar el correo electrónico. Verifica la contraseña e inténtalo de nuevo.",
+      "enterNewPassword": "Ingresa una nueva contraseña.",
+      "passwordsDoNotMatch": "Las contraseñas no coinciden.",
+      "passwordUpdated": "Contraseña actualizada.",
+      "couldNotChangePassword": "No se pudo cambiar la contraseña. Verifica la contraseña actual e inténtalo de nuevo.",
+      "enterSubject": "Ingresa el asunto.",
+      "enterMessage": "Ingresa el mensaje.",
+      "enterDescription": "Describe el problema.",
+      "contactSent": "El mensaje ha sido enviado. Nos pondremos en contacto pronto.",
+      "bugSent": "El reporte de error ha sido enviado. Gracias.",
+      "couldNotSendContact": "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      "couldNotSendBug": "No se pudo enviar el reporte de error. Inténtalo de nuevo.",
+      "deleteNotImplemented": "La eliminación de cuentas no está disponible aún.",
+      "requestTimedOut": "Tiempo de espera agotado. Inténtalo de nuevo."
+    }
+  }
+}

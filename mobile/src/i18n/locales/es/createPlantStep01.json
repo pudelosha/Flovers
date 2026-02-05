@@ -1,0 +1,35 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "Elige una planta",
+      "subtitle": "Puedes explorar nuestra biblioteca completa de plantas, elegir de la lista popular o escanear una planta usando la cámara. También puedes omitir este paso, pero seleccionar una planta nos permitirá sugerir automáticamente tareas de cuidado, como el riego.",
+      "scanButton": "Escanear planta",
+      "searchPlaceholder": "Buscar planta",
+      "popularPlants": "Plantas populares",
+      "noPlantsAvailable": "No hay plantas disponibles",
+      "errorSearch": "No se pudo cargar la lista de plantas.",
+      "errorPopular": "No se pudieron cargar las plantas populares"
+    },
+    "scannerModal": {
+      "title": "Escanear planta",
+      "selectPlant": "Selecciona la planta detectada",
+      "scanInstructions": "Toma una foto o elige una de la galería. Usa una imagen clara y de buena calidad que muestre bien la forma de las hojas de la planta, centrada y sin estar bloqueada por otras plantas u objetos.",
+      "noPhoto": "Sin foto",
+      "takePhoto": "Tomar foto",
+      "fromGallery": "Desde la galería",
+      "recognize": "Reconocer planta",
+      "cameraRequired": "Permiso requerido",
+      "cameraPermissionMessage": "Por favor, concede permisos de cámara y medios para tomar una foto.",
+      "libraryRequired": "Permiso requerido",
+      "libraryPermissionMessage": "Por favor, concede permisos de medios para seleccionar una foto.",
+      "cameraError": "Error de cámara",
+      "libraryError": "Error de selección",
+      "cameraFailure": "No se pudo abrir la cámara.",
+      "libraryFailure": "No se pudo abrir la galería.",
+      "recognitionFailure": "No se pudo reconocer la planta.",
+      "noResults": "Sin resultados. Intenta tomar una foto más clara.",
+      "back": "Atrás",
+      "close": "Cerrar"
+    }
+  }
+}

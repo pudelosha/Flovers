@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "नाम और नोट्स",
+      "subtitle": "पौधे को नाम दें, नोट्स जोड़ें और (वैकल्पिक रूप से) खरीदारी की तिथि सेट करें, ताकि हम इसकी उम्र का अनुमान लगा सकें।",
+      "displayNameLabel": "नाम",
+      "placeholderName": "जैसे: लिविंग रूम से मोनस्टेरा",
+      "notesLabel": "नोट्स",
+      "notesPlaceholder": "देखभाल निर्देश, समस्याएं, कहां खरीदी गई…",
+      "purchaseDateLabel": "खरीदारी की तिथि (वैकल्पिक)",
+      "notSet": "सेट नहीं किया गया",
+      "done": "हो गया",
+      "setPurchaseDateTitle": "खरीदारी की तिथि सेट करें",
+      "datePlaceholder": "YYYY-MM-DD",
+      "cancel": "रद्द करें",
+      "set": "सेट करें",
+      "invalidDateTitle": "अमान्य तिथि",
+      "invalidDateMessage": "कृपया YYYY-MM-DD प्रारूप में सही तिथि दर्ज करें।",
+      "nameRequired": "पौधा बनाने के लिए आपको इसका नाम प्रदान करना होगा।"
+    }
+  }
+}

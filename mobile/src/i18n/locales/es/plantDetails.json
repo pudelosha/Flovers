@@ -1,0 +1,117 @@
+{
+  "plantDetails": {
+    "headerTitle": "Detalles de la planta",
+    "common": {
+      "dash": "—",
+      "plant": "Planta"
+    },
+    "errors": {
+      "noId": "No se proporcionó el identificador de la planta ni el código QR.",
+      "failedToLoad": "No se pudo cargar la planta."
+    },
+    "states": {
+      "error": {
+        "title": "Error"
+      },
+      "notFound": {
+        "title": "No encontrado",
+        "msg": "No se pudo cargar esta planta."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "No se pudo completar",
+        "msg": "No se pudo completar este recordatorio."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Recordatorio marcado como completado.",
+      "qrSaved": "Código QR guardado en la galería.",
+      "qrSaveFailed": "No se pudo guardar el código QR.",
+      "qrEmailPlaceholder": "El correo electrónico con este código QR será enviado a la dirección de tu cuenta."
+    },
+    "permissions": {
+      "storage": {
+        "title": "Permiso de almacenamiento",
+        "message": "Necesitamos acceso para guardar el código QR en la galería.",
+        "ok": "OK",
+        "denied": "Permiso de almacenamiento denegado."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "El generador de códigos QR no está listo."
+    },
+    "info": {
+      "fallbackTitle": "Planta #{{id}}",
+      "purchased": "Compra",
+      "notes": "Notas",
+      "light": "Luz",
+      "orientation": "Orientación",
+      "distance": "Distancia",
+      "pot": "Maceta",
+      "soil": "Suelo",
+      "cm": "cm",
+      "orientations": {
+        "N": "Norte",
+        "E": "Este",
+        "S": "Sur",
+        "W": "Oeste"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Definición de la planta",
+        "editPlant": "Editar planta",
+        "changeImage": "Cambiar imagen",
+        "showReminders": "Mostrar recordatorios"
+      },
+      "noDefinitionTitle": "Sin definición de planta",
+      "noDefinitionBody": "Esta planta aún no está vinculada a una definición de planta.",
+      "editPlant": {
+        "title": "Editar planta",
+        "msg": "La edición de esta planta se implementará más adelante."
+      },
+      "showReminders": {
+        "title": "Mostrar recordatorios",
+        "msg": "La transición a los recordatorios se implementará más adelante."
+      }
+    },
+    "latestReadings": {
+      "title": "Últimas lecturas",
+      "lastRead": {
+        "empty": "Última lectura: —",
+        "value": "Última lectura: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "Código QR",
+      "scanner": "Escáner",
+      "saveWord": "guardar",
+      "emailWord": "enviar",
+      "desc": {
+        "part1": "Cada planta tiene su propio código QR. Cuando escaneas este código en la vista",
+        "part2": "la aplicación abrirá automáticamente los detalles de esta planta.",
+        "part3a": "Puedes",
+        "part3b": "guardar la imagen del código QR en tu teléfono o",
+        "part3c": "enviártelo a ti mismo, luego imprimirlo y adjuntarlo a la maceta. La próxima vez, solo tendrás que escanear la etiqueta en lugar de buscarla manualmente."
+      },
+      "saveBtn": "Guardar",
+      "emailBtn": "Enviar"
+    },
+    "reminders": {
+      "title": "Recordatorios",
+      "menu": {
+        "markComplete": "Marcar como completado",
+        "editReminder": "Editar recordatorio",
+        "showHistory": "Mostrar historial"
+      },
+      "type": {
+        "watering": "Riego",
+        "fertilising": "Fertilización",
+        "moisture": "Rociado",
+        "care": "Cuidado",
+        "repot": "Trasplante"
+      }
+    }
+  }
+}

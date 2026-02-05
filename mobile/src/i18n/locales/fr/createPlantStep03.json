@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Chargement...",
+      "title": "Choisir un emplacement",
+      "subtitle": "Optionnel, mais utile : les emplacements permettent de regrouper les plantes et de les trier ou filtrer plus tard.",
+      "errorLoadingLocations": "Impossible de charger les emplacements.",
+      "createLocation": "Créer un nouvel emplacement",
+      "yourLocations": "Vos emplacements",
+      "categories": {
+        "indoor": "Intérieur",
+        "outdoor": "Extérieur",
+        "other": "Autres"
+      },
+      "noLocations": {
+        "indoor": "Aucun emplacement intérieur.",
+        "outdoor": "Aucun emplacement extérieur.",
+        "other": "Aucun autre emplacement."
+      },
+      "locationExists": "Un emplacement portant ce nom existe déjà.",
+      "errorCreatingLocation": "Impossible de créer l’emplacement",
+      "quickSuggestions": "Suggestions rapides"
+    },
+    "locationModal": {
+      "title": "Nouvel emplacement",
+      "locationName": "Nom de l’emplacement",
+      "category": "Catégorie",
+      "indoor": "Intérieur",
+      "outdoor": "Extérieur",
+      "other": "Autre",
+      "create": "Créer",
+      "cancel": "Annuler",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Salon",
+          "kitchen": "Cuisine",
+          "diningRoom": "Salle à manger",
+          "bedroom": "Chambre",
+          "bathroom": "Salle de bain",
+          "hallway": "Couloir",
+          "office": "Bureau",
+          "kidsRoom": "Chambre d’enfants"
+        },
+        "outdoor": {
+          "balcony": "Balcon",
+          "terrace": "Terrasse",
+          "patio": "Patio",
+          "garden": "Jardin",
+          "frontYard": "Jardin avant",
+          "backyard": "Jardin arrière",
+          "porch": "Véranda",
+          "greenhouse": "Serre"
+        },
+        "other": {
+          "staircase": "Escalier",
+          "garage": "Garage",
+          "basement": "Cave",
+          "lobby": "Hall",
+          "sunroom": "Véranda",
+          "workshop": "Atelier",
+          "studio": "Studio",
+          "attic": "Grenier"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "Profil"
+    },
+    "common": {
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "change": "Modifier",
+      "delete": "Supprimer",
+      "send": "Envoyer"
+    },
+    "account": {
+      "title": "Compte",
+      "emailLabel": "E-mail",
+      "createdLabel": "Créé le",
+      "changeEmail": "Modifier l’e-mail",
+      "changePassword": "Modifier le mot de passe",
+      "deleteAccount": "Supprimer le compte",
+      "logout": "Se déconnecter"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "emailSection": "E-mail",
+      "emailDailyLabel": "Résumé quotidien des tâches pour aujourd’hui",
+      "emailDailyHint": "Un e-mail par jour avec le résumé des tâches pour aujourd’hui.",
+      "sendAt": "Envoyer à",
+      "email24hLabel": "Envoyer un rappel après 24 heures",
+      "email24hHint": "Si les tâches d’aujourd’hui restent inachevées, envoyer un rappel demain.",
+      "mobileSection": "Téléphone",
+      "pushDailyLabel": "Notification quotidienne sur le téléphone",
+      "pushDailyHint": "Une notification système avec le résumé des tâches pour aujourd’hui.",
+      "notifyAt": "Notifier à",
+      "push24hLabel": "Notification après 24 heures",
+      "push24hHint": "Si les tâches restent en attente, envoyer une notification le lendemain."
+    },
+    "settings": {
+      "title": "Paramètres",
+      "language": "Langue",
+      "dateTimeFormat": "Format de date / heure",
+      "temperatureUnits": "Unités de température",
+      "measurementUnits": "Unités de mesure",
+      "fabPosition": "Position du FAB",
+      "background": "Arrière-plan",
+      "tileMotive": "Motif des tuiles",
+      "tilesTransparency": "Transparence des tuiles",
+      "level": "Niveau",
+      "temperatureOptions": {
+        "C": "°C (Celsius)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Métriques (cm / m)",
+        "imperial": "Impériales (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Droite",
+        "left": "Gauche"
+      },
+      "backgroundOptions": {
+        "bg1": "Arrière-plan 1",
+        "bg2": "Arrière-plan 2",
+        "bg3": "Arrière-plan 3",
+        "bg4": "Arrière-plan 4",
+        "bg5": "Arrière-plan 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Clair",
+        "dark": "Sombre"
+      }
+    },
+    "support": {
+      "title": "Assistance",
+      "contactUs": "Contactez-nous",
+      "reportBug": "Signaler un bug",
+      "aboutTitle": "À propos de l’application",
+      "versionLabel": "Version",
+      "releaseDateLabel": "Date de publication",
+      "contactLabel": "Contact"
+    },
+    "toasts": {
+      "unauthorized": "Non autorisé",
+      "unauthorizedLoginAgain": "Non autorisé. Veuillez vous reconnecter.",
+      "failedToLoadPreferences": "Impossible de charger les paramètres du profil. Veuillez réessayer.",
+      "notificationsUpdated": "Les paramètres de notification ont été mis à jour.",
+      "couldNotSaveNotifications": "Impossible d’enregistrer les paramètres de notification.",
+      "settingsUpdated": "Les paramètres ont été mis à jour.",
+      "couldNotSaveSettings": "Impossible d’enregistrer les paramètres."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "resendActivation": {
+    "title": "Reenviar ativação",
+    "subtitle": "Insira seu endereço de e-mail e enviaremos um novo link de ativação.",
+    "email": "E-mail",
+    "sendButton": "Reativação",
+    "backToLogin": "Voltar para o login",
+    "errors": {
+      "emailRequired": "Por favor, insira um endereço de e-mail.",
+      "generic": "Algo deu errado. Tente novamente."
+    },
+    "success": {
+      "emailSent": "Se sua conta precisar de ativação, o e-mail foi enviado."
+    }
+  }
+}

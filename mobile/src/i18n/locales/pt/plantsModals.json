@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "delete": "Excluir",
+      "clear": "Limpar",
+      "apply": "Aplicar",
+      "reset": "Redefinir",
+      "close": "Fechar",
+      "done": "Concluído"
+    },
+    "confirmDelete": {
+      "title": "Excluir planta",
+      "messagePrefix": "Tem certeza de que deseja excluir",
+      "messageSuffix": "? Todos os dados relacionados também serão excluídos: lembretes, dispositivos e leituras, tarefas e histórico de tarefas. Esta operação não pode ser desfeita."
+    },
+    "filter": {
+      "title": "Filtrar plantas",
+      "anyLocation": "Qualquer localização",
+      "anyLatin": "Qualquer nome em latim"
+    },
+    "sort": {
+      "title": "Ordenar plantas",
+      "keyPlant": "Nome da planta",
+      "keyLocation": "Localização",
+      "dirAsc": "Crescente",
+      "dirDesc": "Decrescente"
+    },
+    "qr": {
+      "title": "Código QR da planta",
+      "p1": "Cada planta tem um código QR exclusivo que contém seu identificador.",
+      "p2": "Quando você escanear este código com o scanner no aplicativo, você será redirecionado diretamente para a tela de detalhes desta planta",
+      "youCan": "Você pode:",
+      "b1": "salvar a imagem do código QR no seu telefone ou enviá-la por e-mail e depois imprimi-la para etiquetar,",
+      "b2": "fixar a etiqueta impressa diretamente no vaso para que o código esteja sempre à mão,",
+      "b3": "deixar os membros da família escanearem a etiqueta para abrir rapidamente essa planta no aplicativo.",
+      "save": "Salvar código QR",
+      "email": "Enviar código QR por e-mail"
+    },
+    "edit": {
+      "title": "Editar planta",
+      "namePlaceholder": "Nome da planta (obrigatório)",
+      "latinPlaceholder": "Nome em latim (pesquisar)…",
+      "locationOptional": "Escolha a localização (opcional)",
+      "none": "— Nenhum —",
+      "notesPlaceholder": "Notas… (opcional)",
+      "purchaseDateLabel": "Data de compra",
+      "notSet": "Não definido",
+      "fallbackDateTitle": "Defina a data de compra (AAAA-MM-DD)",
+      "fallbackDatePlaceholder": "AAAA-MM-DD",
+      "invalidDateTitle": "Data inválida",
+      "invalidDateMsg": "Use o formato AAAA-MM-DD",
+      "set": "Definir",
+      "lightLevelLabel": "Nível de luz",
+      "low": "Baixo",
+      "high": "Alto",
+      "windowDirectionLabel": "Direção da janela",
+      "orientations": {
+        "S": "Norte",
+        "E": "Leste",
+        "W": "Oeste",
+        "N": "Sul"
+      },
+      "measureBtn": "Medir luz e direção",
+      "distanceLabel": "Distância da janela",
+      "cm": "cm",
+      "containerMaterialLabel": "Material do vaso",
+      "soilMixLabel": "Substrato / mistura",
+      "update": "Salvar"
+    },
+    "journal": {
+      "title": "Diário da planta",
+      "loading": "Carregando...",
+      "error": "Algo deu errado.",
+      "empty": "Nenhuma entrada no diário.",
+      "taskTypes": {
+        "watering": "REGA",
+        "moisture": "MISTURA",
+        "fertilising": "ADUBAÇÃO",
+        "care": "CUIDADOS",
+        "repot": "REPLANTIO"
+      }
+    }
+  }
+}

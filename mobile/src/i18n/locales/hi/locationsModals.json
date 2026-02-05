@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "रद्द करें",
+      "delete": "हटाएं",
+      "create": "बनाएं",
+      "save": "सहेजें",
+      "apply": "लागू करें",
+      "reset": "रीसेट करें"
+    },
+    "confirmDelete": {
+      "title": "स्थान हटाएं",
+      "messagePrefix": "क्या आप वाकई में हटाना चाहते हैं",
+      "messageSuffix": "? इस क्रिया को पूर्ववत नहीं किया जा सकता।",
+      "blockedTitle": "इस स्थान को हटाया नहीं जा सकता",
+      "blockedMessage": "इस स्थान से जोड़े गए हैं: {{countLabel}}। पहले पौधों को हटाएं या उन्हें किसी अन्य स्थान पर स्थानांतरित करें, फिर पुनः प्रयास करें।",
+      "blockedToast": "इस स्थान को हटाया नहीं जा सकता क्योंकि इसमें पौधे जुड़े हुए हैं। उन्हें पहले हटाएं या स्थानांतरित करें।"
+    },
+    "edit": {
+      "titleCreate": "स्थान जोड़ें",
+      "titleEdit": "स्थान संपादित करें",
+      "nameLabel": "स्थान का नाम",
+      "namePlaceholder": "उदाहरण: लिविंग रूम, रसोई की शेल्फ",
+      "categoryLabel": "श्रेणी",
+      "categories": {
+        "indoor": "इनडोर",
+        "outdoor": "आउटडोर",
+        "other": "अन्य"
+      },
+      "quickSuggestions": "त्वरित सुझाव",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "लिविंग रूम",
+          "kitchen": "रसोई",
+          "diningRoom": "भोजन कक्ष",
+          "bedroom": "शयनकक्ष",
+          "bathroom": "बाथरूम",
+          "hallway": "हॉलवे",
+          "office": "दफ्तर",
+          "kidsRoom": "बच्चों का कमरा"
+        },
+        "outdoor": {
+          "balcony": "बालकनी",
+          "terrace": "छत",
+          "patio": "पेटियो",
+          "garden": "बग़ीचा",
+          "frontYard": "आगे का आंगन",
+          "backyard": "पीछे का बग़ीचा",
+          "porch": "बरामदा",
+          "greenhouse": "ग्रीनहाउस"
+        },
+        "other": {
+          "staircase": "सीढ़ियां",
+          "garage": "गैरेज",
+          "basement": "बेसमेंट",
+          "lobby": "लॉबी",
+          "sunroom": "सर्दी का बग़ीचा",
+          "workshop": "वर्कशॉप",
+          "studio": "स्टूडियो",
+          "attic": "अटारी"
+        }
+      }
+    },
+    "sort": {
+      "title": "स्थान सॉर्ट करें",
+      "keyName": "स्थान का नाम",
+      "keyCount": "पौधों की संख्या",
+      "dirAsc": "चढ़ाव",
+      "dirDesc": "गिराव"
+    }
+  }
+}

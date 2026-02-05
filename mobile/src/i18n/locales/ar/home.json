@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "الصفحة الرئيسية"
+    },
+    "fab": {
+      "showOverdue": "عرض المتأخرات",
+      "showDueToday": "عرض المهام لليوم",
+      "showAllTasks": "عرض جميع المهام",
+      "markVisibleAsComplete": "وضع علامة على المهام المرئية كمكتملة",
+      "sort": "ترتيب",
+      "filter": "تصفية",
+      "clearFilter": "مسح الفلتر",
+      "history": "التاريخ"
+    },
+    "menu": {
+      "markAsComplete": "وضع علامة كمكتمل",
+      "editReminder": "تحرير التذكير",
+      "goToPlant": "الذهاب إلى النبات",
+      "showHistory": "عرض التاريخ",
+      "delete": "حذف"
+    },
+    "taskTypes": {
+      "watering": "الري",
+      "moisture": "الرش",
+      "fertilising": "التسميد",
+      "care": "العناية",
+      "repot": "إعادة الزراعة"
+    },
+    "toasts": {
+      "failedToLoadTasks": "فشل في تحميل المهام",
+      "taskCompleted": "تم إكمال المهمة",
+      "tasksCompleted": "تم إكمال المهام",
+      "completeFailed": "فشل في إتمام المهمة",
+      "completeSomeFailed": "تم إتمام {{ok}} من {{total}} المهام",
+      "taskNotLinkedToPlant": "هذه المهمة غير مرتبطة بالنبات."
+    },
+    "empty": {
+      "all": {
+        "title": "لا توجد مهام",
+        "introPrefix": "تظهر هذه الصفحة مهامك القادمة",
+        "introBold": "مهام العناية بالنباتات",
+        "introSuffix": "— الري، التسميد، إعادة الزراعة وغيرها.",
+        "toGetStarted": "للبدء:",
+        "bullets": {
+          "createPlantsBold": "أضف النباتات",
+          "createPlantsSuffix": "في التبويب",
+          "plantsTabBold": "النباتات",
+          "addRemindersPrefix": "أضف",
+          "remindersBold": "التذكيرات",
+          "addRemindersSuffix": "لكل نبات ليظهر هنا كمهام.",
+          "optionallyConnectPrefix": "اختياريًا، قم بربط",
+          "iotBold": "الأجهزة الذكية (أردوينو)",
+          "optionallyConnectMiddle": "في التبويب",
+          "readingsTabBold": "القراءات",
+          "optionallyConnectSuffix": "لمتابعة درجة الحرارة، الرطوبة، الضوء ورطوبة التربة في الوقت الفعلي."
+        },
+        "outro": "عندما تقوم بإعداد ذلك، ستصبح الصفحة الرئيسية مركزك للتحقق مما يحتاجه كل نبات."
+      },
+      "overdue": {
+        "title": "لا توجد مهام متأخرة",
+        "body": "لا توجد لديك مهام متأخرة حالياً.\n\nكل شيء محدث — استخدم خيار 'عرض الكل' في FAB لرؤية القائمة الكاملة أو قم بتغيير الفلاتر لعرض المهام القادمة."
+      },
+      "today": {
+        "title": "لا توجد مهام لليوم",
+        "body": "لا توجد لديك مهام لليوم.\n\nاستخدم خيار 'عرض الكل' في FAB لرؤية التذكيرات القادمة أو قم بتغيير جداول التذكيرات للنباتات."
+      }
+    }
+  }
+}

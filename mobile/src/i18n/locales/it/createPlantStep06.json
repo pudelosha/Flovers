@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Attività automatiche",
+      "subtitle": "Possiamo creare automaticamente promemoria (annaffiatura, rinvaso, nebulizzazione, fertilizzazione, cura) in base al profilo della pianta.",
+      "createAutoTasks": "Crea attività automatiche per questa pianta",
+      "requiresPlantDefinition": "Richiede la definizione della pianta.",
+      "labels": {
+        "generateWateringTask": "Crea attività di annaffiatura",
+        "generateMistingTask": "Crea attività di nebulizzazione",
+        "generateFertilisingTask": "Crea attività di fertilizzazione",
+        "generateCareTask": "Crea attività di cura",
+        "generateRepottingTask": "Crea attività di rinvaso"
+      },
+      "prompts": {
+        "lastWatered": "Quando è stata annaffiata l’ultima volta?",
+        "selectIntervalDays": "Seleziona intervallo (giorni)",
+        "recommendedInterval": "Intervallo consigliato",
+        "lastRepotted": "Quando è stata rinvasata l’ultima volta?"
+      },
+      "notSpecified": "Non specificato",
+      "notSpecifiedDesc": "Salta se non sei sicuro.",
+      "units": {
+        "day": "giorno",
+        "days": "giorni",
+        "month": "mese",
+        "months": "mesi"
+      },
+      "lastWatered": {
+        "today": "Oggi",
+        "yesterday": "Ieri",
+        "three-four-days": "3–4 giorni fa",
+        "one-week": "Una settimana fa",
+        "two-weeks": "2 settimane fa",
+        "unknown": "Non ricordo"
+      },
+      "lastRepotted": {
+        "this-week": "Questa settimana",
+        "one-week-ago": "1 settimana fa",
+        "two-weeks-ago": "2 settimane fa",
+        "one-month-ago": "1 mese fa",
+        "unknown": "Non ricordo"
+      }
+    }
+  }
+}

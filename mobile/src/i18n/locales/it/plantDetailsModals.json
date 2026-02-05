@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Chiudi",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "remove": "Rimuovi"
+    },
+    "definition": {
+      "title": "Definizione della pianta",
+      "traits": "Caratteristiche",
+      "noId": "Identificatore della definizione della pianta non trovato.",
+      "loadFailed": "Impossibile caricare la definizione della pianta.",
+      "error": "Qualcosa è andato storto.",
+      "empty": "Nessun dato di definizione.",
+      "body": "Questo è un modale segnaposto. I dettagli della definizione della pianta saranno implementati in seguito."
+    },
+    "changeImage": {
+      "title": "Cambia immagine",
+      "subtitle": "Questa immagine è salvata localmente sul tuo dispositivo e non viene inviata.",
+      "noPlantId": "Identificatore della pianta non trovato.",
+      "loadFailed": "Impossibile caricare l'immagine locale.",
+      "error": "Qualcosa è andato storto.",
+      "noPhoto": "Nessuna immagine selezionata",
+      "removedPreview": "L'immagine verrà rimossa",
+      "unsaved": "Modifiche non salvate",
+      "takePhoto": "Scatta una foto",
+      "chooseGallery": "Scegli dalla galleria",
+      "remove": "Rimuovi immagine",
+      "permissionTitle": "Autorizzazioni richieste",
+      "permissionCamera": "Concedi le autorizzazioni per fotocamera e contenuti multimediali per scattare una foto.",
+      "permissionGallery": "Concedi le autorizzazioni per i contenuti multimediali per scegliere un'immagine.",
+      "cameraErrorTitle": "Errore della fotocamera",
+      "pickerErrorTitle": "Errore nella selezione dell'immagine",
+      "saveFailedTitle": "Impossibile salvare",
+      "saveFailedMsg": "Impossibile salvare questa immagine localmente.",
+      "confirmRemoveTitle": "Rimuovere l'immagine?",
+      "confirmRemoveMsg": "L'immagine verrà rimossa dopo aver premuto \"Salva\".",
+      "confirmDiscardTitle": "Scartare le modifiche?",
+      "confirmDiscardMsg": "Le modifiche non verranno salvate.",
+      "discard": "Scarta",
+      "removeFailedTitle": "Impossibile rimuovere",
+      "removeFailedMsg": "Impossibile rimuovere l'immagine locale."
+    }
+  }
+}

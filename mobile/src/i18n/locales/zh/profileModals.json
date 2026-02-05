@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "发送中…"
+    },
+    "support": {
+      "copyToMe": "也发送一份到我的邮箱"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "更改邮箱",
+        "newEmailPlaceholder": "新邮箱",
+        "currentPasswordPlaceholder": "当前密码"
+      },
+      "changePassword": {
+        "title": "更改密码",
+        "currentPasswordPlaceholder": "当前密码",
+        "newPasswordPlaceholder": "新密码",
+        "confirmNewPasswordPlaceholder": "确认新密码",
+        "update": "更新"
+      },
+      "deleteAccount": {
+        "title": "删除账户",
+        "warning": "此操作不可逆转。如果继续，您的账户和数据将被永久删除。",
+        "passwordPlaceholder": "请输入密码以确认"
+      },
+      "reportBug": {
+        "title": "报告错误",
+        "subjectPlaceholder": "主题",
+        "descriptionPlaceholder": "描述问题…"
+      },
+      "contactUs": {
+        "title": "联系我们",
+        "subjectPlaceholder": "主题",
+        "messagePlaceholder": "我们如何帮助您？"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "请输入新邮箱地址。",
+      "enterCurrentPassword": "请输入当前密码。",
+      "emailUpdated": "邮箱已更新。",
+      "couldNotChangeEmail": "无法更改邮箱。请检查密码并重试。",
+      "enterNewPassword": "请输入新密码。",
+      "passwordsDoNotMatch": "新密码不一致。",
+      "passwordUpdated": "密码已更新。",
+      "couldNotChangePassword": "无法更改密码。请检查当前密码并重试。",
+      "enterSubject": "请输入主题。",
+      "enterMessage": "请输入消息。",
+      "enterDescription": "描述问题。",
+      "contactSent": "消息已发送。我们会尽快回复。",
+      "bugSent": "错误报告已发送。谢谢。",
+      "couldNotSendContact": "无法发送消息。请重试。",
+      "couldNotSendBug": "无法发送错误报告。请重试。",
+      "deleteNotImplemented": "账户删除功能尚未实现。",
+      "requestTimedOut": "请求超时。请重试。"
+    }
+  }
+}

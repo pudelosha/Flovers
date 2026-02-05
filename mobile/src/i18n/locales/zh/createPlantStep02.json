@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "植物资料",
+      "preferences": "偏好",
+      "errorProfile": "无法获取植物资料。",
+      "labels": {
+        "sun": "阳光",
+        "water": "浇水",
+        "difficulty": "难度",
+        "potMaterials": "花盆材料",
+        "soilMixes": "土壤混合物",
+        "wateringInterval": "浇水间隔",
+        "moistureInterval": "湿度检查",
+        "fertilizeInterval": "施肥间隔",
+        "repotInterval": "换盆间隔"
+      },
+      "values": {
+        "everyDays": "每{{count}}天",
+        "everyMonths": "每{{count}}个月"
+      },
+      "traits": {
+        "sun": "阳光",
+        "water": "浇水",
+        "difficulty": "难度",
+        "soil": "土壤",
+        "temperature": "温度",
+        "humidity": "湿度",
+        "toxic": "有毒？",
+        "growth": "生长",
+        "light": "光照",
+        "fertilizer": "施肥",
+        "recognize": "识别植物"
+      }
+    }
+  }
+}

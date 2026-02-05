@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "Localisations",
+    "empty": {
+      "title": "Aucune localisation",
+      "description": "Les localisations apparaîtront automatiquement lorsque vous les attribuerez aux plantes.\n\nModifiez une plante et définissez sa localisation pour commencer à regrouper les plantes par pièces ou zones."
+    },
+    "fab": {
+      "add": "Ajouter une localisation",
+      "sort": "Trier"
+    },
+    "menu": {
+      "edit": "Modifier la localisation",
+      "delete": "Supprimer la localisation"
+    },
+    "plantCount": {
+      "one": "1 plante",
+      "few": "{{count}} plantes",
+      "many": "{{count}} plantes"
+    },
+    "toast": {
+      "loadFailed": "Impossible de charger les localisations",
+      "added": "Localisation ajoutée",
+      "deleted": "Localisation supprimée",
+      "updatedLocal": "Localisation mise à jour (uniquement en local)",
+      "saveFailed": "Impossible d’enregistrer la localisation",
+      "deleteFailed": "Impossible de supprimer cette localisation."
+    },
+    "alert": {
+      "deleteFailedTitle": "Échec de la suppression"
+    }
+  }
+}

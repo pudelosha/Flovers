@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Fermer",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "remove": "Supprimer"
+    },
+    "definition": {
+      "title": "Définition de la plante",
+      "traits": "Caractéristiques",
+      "noId": "Identifiant de la définition de la plante introuvable.",
+      "loadFailed": "Impossible de charger la définition de la plante.",
+      "error": "Une erreur s’est produite.",
+      "empty": "Aucune donnée de définition.",
+      "body": "Ceci est une modale de remplacement. Les détails de la définition de la plante seront implémentés ultérieurement."
+    },
+    "changeImage": {
+      "title": "Changer la photo",
+      "subtitle": "Cette photo est enregistrée localement sur votre appareil et n’est pas envoyée.",
+      "noPlantId": "Identifiant de la plante introuvable.",
+      "loadFailed": "Impossible de charger la photo locale.",
+      "error": "Une erreur s’est produite.",
+      "noPhoto": "Aucune photo sélectionnée",
+      "removedPreview": "La photo sera supprimée",
+      "unsaved": "Modifications non enregistrées",
+      "takePhoto": "Prendre une photo",
+      "chooseGallery": "Choisir dans la galerie",
+      "remove": "Supprimer la photo",
+      "permissionTitle": "Autorisations requises",
+      "permissionCamera": "Accordez les autorisations de l’appareil photo et des médias pour prendre une photo.",
+      "permissionGallery": "Accordez les autorisations des médias pour choisir une photo.",
+      "cameraErrorTitle": "Erreur de l’appareil photo",
+      "pickerErrorTitle": "Erreur de sélection de la photo",
+      "saveFailedTitle": "Échec de l’enregistrement",
+      "saveFailedMsg": "Impossible d’enregistrer cette photo localement.",
+      "confirmRemoveTitle": "Supprimer la photo ?",
+      "confirmRemoveMsg": "La photo sera supprimée après avoir appuyé sur « Enregistrer ».",
+      "confirmDiscardTitle": "Ignorer les modifications ?",
+      "confirmDiscardMsg": "Les modifications ne seront pas enregistrées.",
+      "discard": "Ignorer",
+      "removeFailedTitle": "Échec de la suppression",
+      "removeFailedMsg": "Impossible de supprimer la photo locale."
+    }
+  }
+}

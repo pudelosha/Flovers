@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "Perfil"
+    },
+    "common": {
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "change": "Alterar",
+      "delete": "Excluir",
+      "send": "Enviar"
+    },
+    "account": {
+      "title": "Conta",
+      "emailLabel": "Email",
+      "createdLabel": "Criado",
+      "changeEmail": "Alterar email",
+      "changePassword": "Alterar senha",
+      "deleteAccount": "Excluir conta",
+      "logout": "Sair"
+    },
+    "notifications": {
+      "title": "Notificações",
+      "emailSection": "Email",
+      "emailDailyLabel": "Resumo diário das tarefas para hoje",
+      "emailDailyHint": "Uma mensagem por dia com o resumo das tarefas para hoje.",
+      "sendAt": "Enviar às",
+      "email24hLabel": "Enviar lembrete após 24 horas",
+      "email24hHint": "Se as tarefas de hoje não forem concluídas, envie um lembrete amanhã.",
+      "mobileSection": "Telefone",
+      "pushDailyLabel": "Notificação diária no telefone",
+      "pushDailyHint": "Uma notificação do sistema com o resumo das tarefas para hoje.",
+      "notifyAt": "Notificar às",
+      "push24hLabel": "Notificação após 24 horas",
+      "push24hHint": "Se as tarefas ficarem pendentes, envie uma notificação no dia seguinte."
+    },
+    "settings": {
+      "title": "Configurações",
+      "language": "Idioma",
+      "dateTimeFormat": "Formato de data/hora",
+      "temperatureUnits": "Unidades de temperatura",
+      "measurementUnits": "Unidades de medida",
+      "fabPosition": "Posição do FAB",
+      "background": "Plano de fundo",
+      "tileMotive": "Motivo do azulejo",
+      "tilesTransparency": "Transparência dos azulejos",
+      "level": "Nível",
+      "temperatureOptions": {
+        "C": "°C (Celsius)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Métrico (cm / m)",
+        "imperial": "Imperial (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Direita",
+        "left": "Esquerda"
+      },
+      "backgroundOptions": {
+        "bg1": "Plano de fundo 1",
+        "bg2": "Plano de fundo 2",
+        "bg3": "Plano de fundo 3",
+        "bg4": "Plano de fundo 4",
+        "bg5": "Plano de fundo 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Claro",
+        "dark": "Escuro"
+      }
+    },
+    "support": {
+      "title": "Suporte",
+      "contactUs": "Entre em contato conosco",
+      "reportBug": "Relatar erro",
+      "aboutTitle": "Sobre o aplicativo",
+      "versionLabel": "Versão",
+      "releaseDateLabel": "Data de lançamento",
+      "contactLabel": "Contato"
+    },
+    "toasts": {
+      "unauthorized": "Sem autorização",
+      "unauthorizedLoginAgain": "Sem autorização. Faça login novamente.",
+      "failedToLoadPreferences": "Falha ao carregar as configurações do perfil. Tente novamente.",
+      "notificationsUpdated": "Configurações de notificações atualizadas.",
+      "couldNotSaveNotifications": "Não foi possível salvar as configurações de notificações.",
+      "settingsUpdated": "Configurações atualizadas.",
+      "couldNotSaveSettings": "Não foi possível salvar as configurações."
+    }
+  }
+}

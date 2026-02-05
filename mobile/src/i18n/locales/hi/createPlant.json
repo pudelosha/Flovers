@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "पौधा बनाएं"
+    },
+    "fallbackStep": {
+      "title": "चरण \"{{step}}\"",
+      "subtitle": "यह चरण जल्द ही लागू किया जाएगा।"
+    },
+    "common": {
+      "previous": "पिछला",
+      "next": "अगला",
+      "create": "बनाएं",
+      "cancel": "रद्द करें",
+      "done": "सम्पन्न",
+      "notSpecified": "निर्धारित नहीं"
+    }
+  }
+}

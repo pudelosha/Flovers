@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "القراءات"
+    },
+    "defaults": {
+      "thisDevice": "هذا الجهاز"
+    },
+    "tile": {
+      "lastReadPrefix": "آخر قراءة"
+    },
+    "menu": {
+      "history": "تاريخ القراءات",
+      "plantDetails": "تفاصيل النبات",
+      "editDevice": "تعديل الجهاز",
+      "deleteDevice": "حذف الجهاز"
+    },
+    "fab": {
+      "linkDevice": "ربط الجهاز",
+      "deviceSetup": "إعداد الجهاز",
+      "sort": "ترتيب",
+      "filter": "تصفية",
+      "clearFilter": "مسح التصفية"
+    },
+    "empty": {
+      "title": "لا توجد أجهزة",
+      "description": "تسمح الأجهزة بتسجيل قراءات درجة الحرارة، الرطوبة، شدة الضوء، ورطوبة التربة للنبات.\n\nاضغط على الإجراء “+ ربط جهاز” لإضافة جهاز جديد. اختر النبات، سمِ الجهاز، حدد المستشعرات، واضبط فترة أخذ العينات. ثم افتح إعدادات الجهاز لعرض سر الحساب، تحديثه، وإرسال مسودة Arduino/ESP جاهزة للنسخ."
+    },
+    "toasts": {
+      "unauthorized": "غير مصرح. يرجى تسجيل الدخول مرة أخرى.",
+      "loadFailed": "فشل تحميل الأجهزة",
+      "deviceDeleted": "تم حذف الجهاز",
+      "deleteFailed": "فشل في الحذف",
+      "deleteFailedPrefix": "فشل في الحذف",
+      "deviceAdded": "تم إضافة الجهاز",
+      "deviceUpdated": "تم تحديث الجهاز",
+      "addFailed": "فشل في الإضافة",
+      "addFailedPrefix": "فشل في الإضافة",
+      "updateFailed": "فشل في التحديث",
+      "updateFailedPrefix": "فشل في التحديث",
+      "setupLoadFailed": "فشل في تحميل الإعدادات",
+      "setupLoadFailedPrefix": "فشل في تحميل الإعدادات",
+      "secretRotated": "تم تحديث السر",
+      "rotateFailed": "فشل في تحديث السر",
+      "rotateFailedPrefix": "فشل في تحديث السر"
+    }
+  }
+}

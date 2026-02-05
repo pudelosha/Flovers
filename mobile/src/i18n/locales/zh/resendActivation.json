@@ -1,0 +1,16 @@
+{
+  "resendActivation": {
+    "title": "重新发送激活",
+    "subtitle": "请输入您的电子邮件地址，我们将发送新的激活链接。",
+    "email": "电子邮件",
+    "sendButton": "重新激活",
+    "backToLogin": "返回登录",
+    "errors": {
+      "emailRequired": "请输入电子邮件地址。",
+      "generic": "出了点问题，请再试一次。"
+    },
+    "success": {
+      "emailSent": "如果您的账户需要激活，电子邮件已经发送。"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "Inscription",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmez le mot de passe",
+    "termsAgreement": "J'accepte",
+    "termsLink": "Conditions générales",
+    "signUpButton": "S'inscrire",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "loginLink": "Connectez-vous",
+    "errors": {
+      "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+      "shortPassword": "Le mot de passe doit comporter au moins 6 caractères.",
+      "passwordsMismatch": "Les mots de passe ne correspondent pas.",
+      "termsRequired": "Vous devez accepter les conditions générales.",
+      "incompleteForm": "Veuillez compléter le formulaire.",
+      "emailTaken": "Cette adresse e-mail est déjà utilisée.",
+      "registrationFailed": "L'inscription a échoué. Veuillez réessayer.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer.",
+      "cannotOpenLink": "Impossible d'ouvrir le lien."
+    },
+    "success": {
+      "accountCreated": "Compte créé. Bienvenue !"
+    }
+  }
+}

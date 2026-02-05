@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Enviando..."
+    },
+    "support": {
+      "copyToMe": "Envie também uma cópia para o meu e-mail"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Alterar e-mail",
+        "newEmailPlaceholder": "Novo e-mail",
+        "currentPasswordPlaceholder": "Senha atual"
+      },
+      "changePassword": {
+        "title": "Alterar senha",
+        "currentPasswordPlaceholder": "Senha atual",
+        "newPasswordPlaceholder": "Nova senha",
+        "confirmNewPasswordPlaceholder": "Confirme a nova senha",
+        "update": "Atualizar"
+      },
+      "deleteAccount": {
+        "title": "Excluir conta",
+        "warning": "Esta ação é irreversível. Se continuar, sua conta e dados serão permanentemente excluídos.",
+        "passwordPlaceholder": "Digite a senha para confirmar"
+      },
+      "reportBug": {
+        "title": "Relatar erro",
+        "subjectPlaceholder": "Assunto",
+        "descriptionPlaceholder": "Descreva o problema..."
+      },
+      "contactUs": {
+        "title": "Fale conosco",
+        "subjectPlaceholder": "Assunto",
+        "messagePlaceholder": "Como podemos ajudar?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Digite um novo endereço de e-mail.",
+      "enterCurrentPassword": "Digite a senha atual.",
+      "emailUpdated": "E-mail atualizado.",
+      "couldNotChangeEmail": "Não foi possível alterar o e-mail. Verifique a senha e tente novamente.",
+      "enterNewPassword": "Digite a nova senha.",
+      "passwordsDoNotMatch": "As novas senhas não coincidem.",
+      "passwordUpdated": "Senha atualizada.",
+      "couldNotChangePassword": "Não foi possível alterar a senha. Verifique a senha atual e tente novamente.",
+      "enterSubject": "Digite o assunto.",
+      "enterMessage": "Digite a mensagem.",
+      "enterDescription": "Descreva o problema.",
+      "contactSent": "Mensagem enviada. Entraremos em contato em breve.",
+      "bugSent": "Erro relatado. Obrigado.",
+      "couldNotSendContact": "Não foi possível enviar a mensagem. Tente novamente.",
+      "couldNotSendBug": "Não foi possível enviar o erro. Tente novamente.",
+      "deleteNotImplemented": "A exclusão de conta ainda não está disponível.",
+      "requestTimedOut": "Tempo limite excedido. Tente novamente."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Iluminación",
+      "subtitle": "La iluminación nos ayuda a ajustar los horarios de riego y los recordatorios de cuidado. Dinos cuánta luz llega a este lugar y en qué dirección está la ventana.",
+      "lightLevel": "Nivel de luz",
+      "low": "Bajo",
+      "high": "Alto",
+      "windowDirection": "Dirección de la ventana",
+      "measureLightDirection": "Medir luz y dirección",
+      "distanceFromWindow": "Distancia a la ventana",
+      "orientations": {
+        "S": "Sur",
+        "E": "Este",
+        "W": "Oeste",
+        "N": "Norte"
+      },
+      "modal": {
+        "title": "Medición de luz y dirección",
+        "instructions": "Sostén el teléfono en horizontal (pantalla hacia arriba) y apunta el borde superior hacia la ventana. Mueve el teléfono lentamente cerca de la ventana y luego pulsa Medir para iniciar la prueba de 5 segundos.",
+        "ambientLive": "Luz (en vivo)",
+        "headingLive": "Dirección (en vivo)",
+        "testLabel": "Medición de 5 segundos",
+        "running": "(en curso…)",
+        "last": "(último)",
+        "done": "listo",
+        "bestLight": "Luz (mejor en 5 s):",
+        "meanDirection": "Dirección (promedio de 5 s):",
+        "close": "Cerrar",
+        "measure5s": "Medir (5 s)",
+        "measuring": "Midiendo…",
+        "apply": "Aplicar",
+        "tip": "Consejo: en muchos teléfonos el sensor de luz está en el borde superior (cerca del altavoz). Mantén el teléfono plano y apunta el borde superior hacia la ventana para encontrar la lectura más alta.",
+        "notAvailable": "No disponible",
+        "noSensor": "Sin sensor",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Brillante, directa",
+          "brightIndirect": "Brillante, indirecta",
+          "medium": "Media / semisombra",
+          "low": "Poca luz",
+          "veryLow": "Muy poca luz"
+        }
+      }
+    }
+  }
+}

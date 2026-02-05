@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "apply": "تطبيق",
+      "clear": "مسح",
+      "close": "إغلاق",
+      "reset": "إعادة تعيين",
+      "save": "حفظ",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "حذف القراءة",
+      "messageBefore": "هل أنت متأكد أنك تريد حذف",
+      "messageAfter": "? هذه العملية لا يمكن التراجع عنها."
+    },
+    "deviceSetup": {
+      "title": "إعداد الجهاز",
+      "httpEndpoints": "نقاط نهاية HTTP",
+      "addReadingPost": "إضافة قراءة (POST)",
+      "readReadingsGetPost": "الحصول على القراءات (GET/POST)",
+      "samplePayloads": "أمثلة الحمولة",
+      "addReadingBody": "محتوى طلب إضافة القراءة",
+      "readRequestBody": "محتوى طلب الحصول على القراءات",
+      "currentAuthSecret": "السر الحالي للمصادقة",
+      "showAuthSecret": "عرض السر للمصادقة",
+      "hideAuthSecret": "إخفاء السر للمصادقة",
+      "generateNewSecret": "إنشاء سر جديد",
+      "downloadPdfDocumentation": "تنزيل الوثائق بصيغة PDF",
+      "rotateConfirmTitle": "دور السر؟",
+      "rotateConfirmText": "إنشاء سر جديد سيبطل السر الحالي. ثم قم بتحديث إعدادات الجهاز.",
+      "rotate": "تدوير"
+    },
+    "filter": {
+      "title": "تصفية القراءات",
+      "plantLabel": "النبات",
+      "locationLabel": "الموقع",
+      "statusLabel": "الحالة",
+      "selectPlant": "اختر النبات",
+      "anyPlant": "أي نبات",
+      "anyLocation": "أي موقع",
+      "anyStatus": "أي حالة",
+      "statusEnabled": "مفعل",
+      "statusDisabled": "معطل"
+    },
+    "sort": {
+      "title": "ترتيب القراءات",
+      "sortBy": "الترتيب حسب",
+      "direction": "الاتجاه",
+      "keyPlantName": "اسم النبات",
+      "keyLocation": "الموقع",
+      "keyLastRead": "آخر قراءة",
+      "ascending": "تصاعدي",
+      "descending": "تنازلي"
+    },
+    "upsert": {
+      "linkDeviceTitle": "ربط الجهاز",
+      "editDeviceTitle": "تعديل الجهاز",
+      "noPlantsText": "ليس لديك أي نباتات حتى الآن. أضف نباتًا أولاً لربط الجهاز.",
+      "selectPlant": "اختر النبات",
+      "locationPlaceholder": "الموقع",
+      "deviceNameRequired": "اسم الجهاز (مطلوب)",
+      "sensors": "أجهزة الاستشعار",
+      "sensorTemperature": "درجة الحرارة",
+      "sensorHumidity": "الرطوبة",
+      "sensorLight": "الضوء",
+      "sensorSoilMoisture": "رطوبة التربة",
+      "moistAlertLabel": "إرسال تنبيهات عند انخفاض رطوبة التربة تحت العتبة",
+      "thresholdLabel": "العتبة:",
+      "samplingInterval": "فترة أخذ العينات",
+      "everyXHours": "كل {{count}} ساعات",
+      "authSecret": "السر للمصادقة",
+      "deviceKey": "مفتاح الجهاز",
+      "sendCodeViaEmail": "إرسال الرمز عبر البريد الإلكتروني",
+      "saveCodeAsText": "حفظ الرمز كنص",
+      "enabled": "مفعل",
+      "ingestReadingsFromDevice": "استيراد القراءات من هذا الجهاز",
+      "notesOptional": "ملاحظات… (اختياري)"
+    }
+  }
+}

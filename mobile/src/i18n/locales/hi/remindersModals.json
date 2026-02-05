@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "रद्द करें",
+      "apply": "लागू करें",
+      "clear": "साफ करें",
+      "delete": "हटाएं",
+      "create": "बनाएं",
+      "update": "सहेजें",
+      "reset": "रीसेट करें"
+    },
+    "confirmDelete": {
+      "title": "याद दिलाने को हटाएं",
+      "areYouSurePrefix": "क्या आप सच में हटाना चाहते हैं",
+      "areYouSureSuffix": "? इस क्रिया को पूर्ववत नहीं किया जा सकता।"
+    },
+    "edit": {
+      "titleCreate": "याद दिलाने को जोड़ें",
+      "titleEdit": "याद दिलाने को संपादित करें",
+      "typeLabel": "प्रकार",
+      "plantLabel": "पौधा",
+      "selectPlant": "पौधा चुनें",
+      "locationLabel": "स्थान",
+      "locationPlaceholder": "स्थान",
+      "dueDateLabel": "अंतिम तिथि",
+      "datePlaceholder": "YYYY-MM-DD",
+      "intervalLabel": "आवृत्ति",
+      "intervalValuePlaceholder": "मूल्य"
+    },
+    "filter": {
+      "title": "याद दिलाने को फ़िल्टर करें",
+      "plantLabel": "पौधा",
+      "selectPlant": "पौधा चुनें",
+      "anyPlant": "कोई भी पौधा",
+      "locationLabel": "स्थान",
+      "anyLocation": "कोई भी स्थान",
+      "taskTypesLabel": "कार्य प्रकार",
+      "dueDateRangeLabel": "अंतिम तिथि की सीमा",
+      "fromLabel": "से",
+      "toLabel": "तक",
+      "datePlaceholder": "YYYY-MM-DD"
+    },
+    "sort": {
+      "title": "याद दिलाने को सॉर्ट करें",
+      "sortByLabel": "इसके द्वारा सॉर्ट करें",
+      "directionLabel": "दिशा",
+      "keys": {
+        "dueDate": "अंतिम तिथि",
+        "plant": "पौधे का नाम",
+        "location": "स्थान"
+      },
+      "directions": {
+        "asc": "बढ़ते क्रम में",
+        "desc": "घटते क्रम में"
+      }
+    }
+  }
+}

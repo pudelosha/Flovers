@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "close": "Fermer",
+      "reset": "Réinitialiser",
+      "save": "Enregistrer",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "Supprimer la mesure",
+      "messageBefore": "Êtes-vous sûr de vouloir supprimer",
+      "messageAfter": " ? Cette opération est irréversible."
+    },
+    "deviceSetup": {
+      "title": "Configuration de l’appareil",
+      "httpEndpoints": "Points de terminaison HTTP",
+      "addReadingPost": "Ajouter une mesure (POST)",
+      "readReadingsGetPost": "Récupérer les mesures (GET/POST)",
+      "samplePayloads": "Exemples de payloads",
+      "addReadingBody": "Corps de la requête d’ajout de mesure",
+      "readRequestBody": "Corps de la requête de récupération des mesures",
+      "currentAuthSecret": "Secret d’autorisation actuel",
+      "showAuthSecret": "Afficher le secret d’autorisation",
+      "hideAuthSecret": "Masquer le secret d’autorisation",
+      "generateNewSecret": "Générer un nouveau secret",
+      "downloadPdfDocumentation": "Télécharger la documentation PDF",
+      "rotateConfirmTitle": "Faire tourner le secret ?",
+      "rotateConfirmText": "La génération d’un nouveau secret invalidera l’actuel. Mettez ensuite à jour la configuration de l’appareil.",
+      "rotate": "Faire tourner"
+    },
+    "filter": {
+      "title": "Filtrer les mesures",
+      "plantLabel": "Plante",
+      "locationLabel": "Emplacement",
+      "statusLabel": "Statut",
+      "selectPlant": "Sélectionner une plante",
+      "anyPlant": "Toute plante",
+      "anyLocation": "Tout emplacement",
+      "anyStatus": "Tout statut",
+      "statusEnabled": "Activé",
+      "statusDisabled": "Désactivé"
+    },
+    "sort": {
+      "title": "Trier les mesures",
+      "sortBy": "Trier par",
+      "direction": "Direction",
+      "keyPlantName": "Nom de la plante",
+      "keyLocation": "Emplacement",
+      "keyLastRead": "Dernière mesure",
+      "ascending": "Croissant",
+      "descending": "Décroissant"
+    },
+    "upsert": {
+      "linkDeviceTitle": "Connecter l’appareil",
+      "editDeviceTitle": "Modifier l’appareil",
+      "noPlantsText": "Vous n’avez encore aucune plante. Ajoutez d’abord une plante pour connecter un appareil.",
+      "selectPlant": "Sélectionner une plante",
+      "locationPlaceholder": "Emplacement",
+      "deviceNameRequired": "Nom de l’appareil (requis)",
+      "sensors": "Capteurs",
+      "sensorTemperature": "Température",
+      "sensorHumidity": "Humidité",
+      "sensorLight": "Lumière",
+      "sensorSoilMoisture": "Humidité du sol",
+      "moistAlertLabel": "Envoyer des alertes lorsque l’humidité du sol descend en dessous du seuil",
+      "thresholdLabel": "Seuil :",
+      "samplingInterval": "Intervalle d’échantillonnage",
+      "everyXHours": "Toutes les {{count}} h",
+      "authSecret": "Secret d’autorisation",
+      "deviceKey": "Clé de l’appareil",
+      "sendCodeViaEmail": "Envoyer le code par e-mail",
+      "saveCodeAsText": "Enregistrer le code en tant que texte",
+      "enabled": "Activé",
+      "ingestReadingsFromDevice": "Récupérer les mesures depuis cet appareil",
+      "notesOptional": "Notes… (optionnel)"
+    }
+  }
+}

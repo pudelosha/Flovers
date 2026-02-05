@@ -1,0 +1,19 @@
+{
+  "createPlant": {
+    "step07": {
+      "title": "Ajouter une photo",
+      "subtitlePrefix": "Prenez une photo de la plante pour la retrouver plus facilement. La photo est enregistrée localement sur l’appareil (stockage de l’application) et ",
+      "notUploaded": "n’est pas envoyée",
+      "subtitleSuffix": " vers nos serveurs.",
+      "noPhotoSelected": "Aucune photo sélectionnée",
+      "takePhoto": "Prendre une photo",
+      "chooseFromGallery": "Choisir depuis la galerie",
+      "removePhoto": "Supprimer la photo",
+      "permissionRequiredTitle": "Autorisations requises",
+      "permissionCameraAndMedia": "Accordez les autorisations de l’appareil photo et des médias pour prendre une photo.",
+      "permissionMedia": "Accordez les autorisations des médias pour choisir une photo.",
+      "cameraErrorTitle": "Erreur de l’appareil photo",
+      "pickerErrorTitle": "Erreur de sélection de la photo"
+    }
+  }
+}

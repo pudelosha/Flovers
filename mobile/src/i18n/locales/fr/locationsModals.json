@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "create": "Créer",
+      "save": "Enregistrer",
+      "apply": "Appliquer",
+      "reset": "Réinitialiser"
+    },
+    "confirmDelete": {
+      "title": "Supprimer l'emplacement",
+      "messagePrefix": "Êtes-vous sûr de vouloir supprimer",
+      "messageSuffix": "? Cette action est irréversible.",
+      "blockedTitle": "Impossible de supprimer cet emplacement",
+      "blockedMessage": "Cet emplacement a des éléments attribués : {{countLabel}}. Supprimez d’abord les plantes ou déplacez-les vers un autre emplacement, puis réessayez.",
+      "blockedToast": "Impossible de supprimer cet emplacement car des plantes y sont attribuées. Supprimez-les ou déplacez-les d’abord."
+    },
+    "edit": {
+      "titleCreate": "Ajouter un emplacement",
+      "titleEdit": "Modifier l'emplacement",
+      "nameLabel": "Nom de l'emplacement",
+      "namePlaceholder": "p. ex. Salon, étagère dans la cuisine",
+      "categoryLabel": "Catégorie",
+      "categories": {
+        "indoor": "Intérieur",
+        "outdoor": "Extérieur",
+        "other": "Autre"
+      },
+      "quickSuggestions": "Suggestions rapides",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Salon",
+          "kitchen": "Cuisine",
+          "diningRoom": "Salle à manger",
+          "bedroom": "Chambre",
+          "bathroom": "Salle de bains",
+          "hallway": "Entrée",
+          "office": "Bureau",
+          "kidsRoom": "Chambre d’enfant"
+        },
+        "outdoor": {
+          "balcony": "Balcon",
+          "terrace": "Terrasse",
+          "patio": "Patio",
+          "garden": "Jardin",
+          "frontYard": "Jardin avant",
+          "backyard": "Jardin arrière",
+          "porch": "Véranda",
+          "greenhouse": "Serre"
+        },
+        "other": {
+          "staircase": "Cage d’escalier",
+          "garage": "Garage",
+          "basement": "Sous-sol",
+          "lobby": "Hall",
+          "sunroom": "Jardin d’hiver",
+          "workshop": "Atelier",
+          "studio": "Studio",
+          "attic": "Grenier"
+        }
+      }
+    },
+    "sort": {
+      "title": "Trier les emplacements",
+      "keyName": "Nom de l'emplacement",
+      "keyCount": "Nombre de plantes",
+      "dirAsc": "Croissant",
+      "dirDesc": "Décroissant"
+    }
+  }
+}

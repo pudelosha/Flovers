@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "登录",
+    "email": "电子邮件",
+    "password": "密码",
+    "signIn": "登录",
+    "forgotPassword": "忘记密码？",
+    "resendActivation": "没有收到激活邮件？",
+    "noAccount": "没有账号？",
+    "signUp": "注册",
+    "errors": {
+      "invalidCredentials": "无效的电子邮件或密码。",
+      "generic": "出了点问题，请再试一次。"
+    },
+    "success": {
+      "welcome": "欢迎回来！"
+    }
+  }
+}

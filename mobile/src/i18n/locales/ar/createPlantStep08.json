@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "الاسم والملاحظات",
+      "subtitle": "امنح النبات اسمًا، أضف ملاحظات و (اختياريًا) حدد تاريخ الشراء حتى نتمكن من تقدير عمره.",
+      "displayNameLabel": "الاسم",
+      "placeholderName": "مثال: مونستيرا من الصالون",
+      "notesLabel": "الملاحظات",
+      "notesPlaceholder": "نصائح العناية، المشاكل، أين تم الشراء…",
+      "purchaseDateLabel": "تاريخ الشراء (اختياري)",
+      "notSet": "لم يتم تعيينه",
+      "done": "تم",
+      "setPurchaseDateTitle": "حدد تاريخ الشراء",
+      "datePlaceholder": "YYYY-MM-DD",
+      "cancel": "إلغاء",
+      "set": "تعيين",
+      "invalidDateTitle": "تاريخ غير صالح",
+      "invalidDateMessage": "أدخل تاريخًا صحيحًا بتنسيق YYYY-MM-DD.",
+      "nameRequired": "لإنشاء النبات، يجب أن تقدم اسمه."
+    }
+  }
+}

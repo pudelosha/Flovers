@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "إغلاق",
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "remove": "إزالة"
+    },
+    "definition": {
+      "title": "تعريف النبات",
+      "traits": "الخصائص",
+      "noId": "لم يتم العثور على معرف تعريف النبات.",
+      "loadFailed": "فشل تحميل تعريف النبات.",
+      "error": "حدث خطأ ما.",
+      "empty": "لا توجد بيانات تعريف.",
+      "body": "هذه نافذة منبثقة بديلة. سيتم تنفيذ تفاصيل تعريف النبات لاحقًا."
+    },
+    "changeImage": {
+      "title": "تغيير الصورة",
+      "subtitle": "تم حفظ هذه الصورة محليًا على جهازك ولم يتم إرسالها.",
+      "noPlantId": "لم يتم العثور على معرف النبات.",
+      "loadFailed": "فشل تحميل الصورة المحلية.",
+      "error": "حدث خطأ ما.",
+      "noPhoto": "لم يتم اختيار صورة",
+      "removedPreview": "سيتم إزالة الصورة",
+      "unsaved": "تغييرات غير محفوظة",
+      "takePhoto": "التقط صورة",
+      "chooseGallery": "اختيار من المعرض",
+      "remove": "إزالة الصورة",
+      "permissionTitle": "الأذونات المطلوبة",
+      "permissionCamera": "منح إذن للوصول إلى الكاميرا والوسائط لالتقاط صورة.",
+      "permissionGallery": "منح إذن للوصول إلى الوسائط لاختيار صورة.",
+      "cameraErrorTitle": "خطأ في الكاميرا",
+      "pickerErrorTitle": "خطأ في اختيار الصورة",
+      "saveFailedTitle": "فشل في الحفظ",
+      "saveFailedMsg": "فشل في حفظ هذه الصورة محليًا.",
+      "confirmRemoveTitle": "هل تريد إزالة الصورة؟",
+      "confirmRemoveMsg": "سيتم إزالة الصورة بعد الضغط على \"حفظ\".",
+      "confirmDiscardTitle": "هل تريد إلغاء التغييرات؟",
+      "confirmDiscardMsg": "لن يتم حفظ التغييرات.",
+      "discard": "إلغاء",
+      "removeFailedTitle": "فشل في الإزالة",
+      "removeFailedMsg": "فشل في إزالة الصورة المحلية."
+    }
+  }
+}

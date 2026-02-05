@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Pot et substrat",
+      "subtitle": "Ces informations sont facultatives. Choisissez le matériau du pot/conteneur et le substrat — ou laissez « Non spécifié » et continuez.",
+      "containerMaterial": "Matériau du pot",
+      "soilMix": "Substrat / mélange",
+      "notSpecified": "Non spécifié",
+      "notSpecifiedDesc": "Ignorez si vous n’êtes pas sûr.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plastique",
+          "description": "Léger ; retient l’humidité plus longtemps ; économique et polyvalent."
+        },
+        "ceramic": {
+          "label": "Céramique (émaillée)",
+          "description": "Plus lourde ; retient bien l’humidité ; finition décorative."
+        },
+        "terracotta": {
+          "label": "Terre cuite",
+          "description": "Poreuse ; évacue l’humidité ; idéale pour les succulentes et les cactus."
+        },
+        "clay": {
+          "label": "Argile (non émaillée)",
+          "description": "Semblable à la terre cuite ; « respire », sèche plus vite."
+        },
+        "cement": {
+          "label": "Ciment",
+          "description": "Très lourd ; aspect moderne ; retient assez bien l’humidité."
+        },
+        "concrete": {
+          "label": "Béton",
+          "description": "Durable et lourd ; stable à l’extérieur ; retient l’humidité."
+        },
+        "metal": {
+          "label": "Métal (général)",
+          "description": "Chauffe rapidement au soleil ; un cache-pot/insert est souvent nécessaire."
+        },
+        "stainless": {
+          "label": "Acier inoxydable",
+          "description": "Moderne ; résistant à la corrosion ; peut chauffer."
+        },
+        "aluminum": {
+          "label": "Aluminium",
+          "description": "Léger ; conduit la chaleur ; attention à la surchauffe au soleil."
+        },
+        "iron": {
+          "label": "Fer / acier",
+          "description": "Très durable ; peut rouiller ; nécessite parfois un insert."
+        },
+        "copper": {
+          "label": "Cuivre / laiton",
+          "description": "Décoratif ; peut réagir avec le substrat ; généralement utilisé comme cache-pot."
+        },
+        "wood": {
+          "label": "Bois",
+          "description": "Aspect naturel ; peut nécessiter un insert ; peut pourrir en cas d’humidité constante."
+        },
+        "bamboo": {
+          "label": "Bambou",
+          "description": "Léger et durable ; généralement avec un insert ; plutôt pour l’intérieur."
+        },
+        "rattan": {
+          "label": "Rotin / osier",
+          "description": "Cache-pots décoratifs ; conservez le pot de culture à l’intérieur."
+        },
+        "glass": {
+          "label": "Verre",
+          "description": "Bien pour les terrariums ; pas de drainage ; contrôlez l’humidité."
+        },
+        "stone": {
+          "label": "Pierre / marbre",
+          "description": "Très lourds et stables ; conservent la fraîcheur plus longtemps."
+        },
+        "resin": {
+          "label": "Résine",
+          "description": "Légère et durable ; bonne pour l’extérieur ; isole les racines."
+        },
+        "fiberglass": {
+          "label": "Fibre de verre",
+          "description": "Légère et résistante ; bonne pour l’extérieur ; isolante."
+        },
+        "biodegradable": {
+          "label": "Biodégradable",
+          "description": "Par ex. fibre de coco/tourbe ; pots de démarrage ; se dégradent avec le temps."
+        },
+        "fabric": {
+          "label": "Pot en tissu",
+          "description": "Aère les racines ; sèche rapidement ; idéal pour les légumes."
+        },
+        "grow-bag": {
+          "label": "Sac de culture",
+          "description": "Sac en tissu ; portable ; draine rapidement l’eau ; arrosages plus fréquents."
+        },
+        "self-watering": {
+          "label": "Auto-arrosant",
+          "description": "Réservoir avec mèche ; facilite un arrosage régulier."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Substrat universel",
+          "description": "Bonne option de départ pour la plupart des plantes d’intérieur."
+        },
+        "green-plants": {
+          "label": "Substrat pour plantes vertes / d’intérieur",
+          "description": "Substrat universel pour plantes vertes (souvent aussi pour les palmiers)."
+        },
+        "balcony-flowers": {
+          "label": "Substrat pour fleurs de balcon et de massif",
+          "description": "Plus riche ; adapté aux plantes fleuries en pots et jardinières."
+        },
+        "cactus-succulent": {
+          "label": "Substrat pour cactus et succulentes",
+          "description": "Très drainant ; idéal pour les succulentes et les cactus."
+        },
+        "orchid": {
+          "label": "Substrat pour orchidées",
+          "description": "Grossier, à base d’écorce ; assure beaucoup d’air aux racines."
+        },
+        "aroid": {
+          "label": "Mélange pour aroïdes",
+          "description": "Très aéré (écorce/perlite) pour Monstera/Philodendron."
+        },
+        "seed-starting": {
+          "label": "Substrat de semis",
+          "description": "Fin ; adapté à l’enracinement et aux semis."
+        },
+        "bonsai": {
+          "label": "Substrat pour bonsaï",
+          "description": "Granuleux et drainant ; se compacte moins."
+        },
+        "herbs-vegetables": {
+          "label": "Substrat pour herbes et légumes",
+          "description": "Plus riche ; adapté aux plantes comestibles."
+        },
+        "citrus": {
+          "label": "Substrat pour agrumes",
+          "description": "Drainant ; adapté aux agrumes et aux plantes méditerranéennes."
+        },
+        "fern": {
+          "label": "Substrat pour fougères",
+          "description": "Plus rétenteur d’humidité ; généralement plus riche en matière organique."
+        },
+        "conifers": {
+          "label": "Substrat pour conifères",
+          "description": "Substrat pour conifères ; souvent légèrement acide et drainant."
+        },
+        "acid-loving": {
+          "label": "Substrat pour plantes acidophiles",
+          "description": "Substrat acide pour myrtilles, bruyères, rhododendrons, azalées, etc."
+        },
+        "peat-free": {
+          "label": "Substrat sans tourbe",
+          "description": "Plus durable ; la composition dépend du fabricant."
+        }
+      }
+    }
+  }
+}

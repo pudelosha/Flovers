@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "रद्द करें",
+      "apply": "लागू करें",
+      "delete": "हटाएं",
+      "selectPlant": "पौधा चुनें",
+      "selectLocation": "स्थान चुनें",
+      "datePlaceholder": "YYYY-MM-DD",
+      "taskTypes": {
+        "watering": "सिंचाई",
+        "moisture": "नमी",
+        "fertilising": "उर्वरक",
+        "care": "देखभाल",
+        "repot": "पौधा बदलना"
+      }
+    },
+    "delete": {
+      "title": "इतिहास हटाएं",
+      "scopeLabel": "सीमा",
+      "modes": {
+        "plant": "चुने हुए पौधे के लिए हटाएं",
+        "location": "चुने हुए स्थान के लिए हटाएं",
+        "types": "टाइप के कार्य हटाएं",
+        "olderThan": "पुराने कार्य हटाएं जो {{days}} दिन से अधिक पुराने हैं"
+      },
+      "noPlantsHint": "आपके पास अभी तक कोई पौधे नहीं हैं।",
+      "noLocationsHint": "आपके पास अभी तक कोई स्थान नहीं हैं।",
+      "daysValue": "{{days}} दिन"
+    },
+    "filter": {
+      "title": "इतिहास फ़िल्टर करें",
+      "plantLabel": "पौधा",
+      "locationLabel": "स्थान",
+      "taskTypesLabel": "कार्य प्रकार",
+      "completedDateRangeLabel": "पूर्णता की तिथि सीमा",
+      "fromLabel": "से",
+      "toLabel": "तक",
+      "anyPlant": "कोई भी पौधा",
+      "anyLocation": "कोई भी स्थान",
+      "clear": "साफ करें"
+    },
+    "sort": {
+      "title": "इतिहास को क्रमबद्ध करें",
+      "sortByLabel": "क्रमबद्ध करें द्वारा",
+      "directionLabel": "दिशा",
+      "keys": {
+        "completedAt": "पूर्णता तिथि",
+        "plant": "पौधे का नाम",
+        "location": "स्थान"
+      },
+      "directions": {
+        "asc": "वृद्धि क्रम में",
+        "desc": "घटाव क्रम में"
+      },
+      "reset": "रीसेट करें"
+    }
+  }
+}

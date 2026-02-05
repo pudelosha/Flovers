@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "إرسال..."
+    },
+    "support": {
+      "copyToMe": "أرسل لي نسخة على البريد الإلكتروني أيضًا"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "تغيير البريد الإلكتروني",
+        "newEmailPlaceholder": "البريد الإلكتروني الجديد",
+        "currentPasswordPlaceholder": "كلمة المرور الحالية"
+      },
+      "changePassword": {
+        "title": "تغيير كلمة المرور",
+        "currentPasswordPlaceholder": "كلمة المرور الحالية",
+        "newPasswordPlaceholder": "كلمة المرور الجديدة",
+        "confirmNewPasswordPlaceholder": "تأكيد كلمة المرور الجديدة",
+        "update": "تحديث"
+      },
+      "deleteAccount": {
+        "title": "حذف الحساب",
+        "warning": "هذه العملية غير قابلة للاسترجاع. إذا واصلت، سيتم حذف حسابك وبياناتك بشكل دائم.",
+        "passwordPlaceholder": "أدخل كلمة المرور لتأكيد"
+      },
+      "reportBug": {
+        "title": "الإبلاغ عن خطأ",
+        "subjectPlaceholder": "الموضوع",
+        "descriptionPlaceholder": "وصف المشكلة..."
+      },
+      "contactUs": {
+        "title": "اتصل بنا",
+        "subjectPlaceholder": "الموضوع",
+        "messagePlaceholder": "كيف يمكننا مساعدتك؟"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "أدخل البريد الإلكتروني الجديد.",
+      "enterCurrentPassword": "أدخل كلمة المرور الحالية.",
+      "emailUpdated": "تم تحديث البريد الإلكتروني.",
+      "couldNotChangeEmail": "لم يتمكن من تغيير البريد الإلكتروني. تحقق من كلمة المرور وحاول مرة أخرى.",
+      "enterNewPassword": "أدخل كلمة المرور الجديدة.",
+      "passwordsDoNotMatch": "كلمات المرور الجديدة غير متطابقة.",
+      "passwordUpdated": "تم تحديث كلمة المرور.",
+      "couldNotChangePassword": "لم يتمكن من تغيير كلمة المرور. تحقق من كلمة المرور الحالية وحاول مرة أخرى.",
+      "enterSubject": "أدخل الموضوع.",
+      "enterMessage": "أدخل الرسالة.",
+      "enterDescription": "وصف المشكلة.",
+      "contactSent": "تم إرسال الرسالة. سنتواصل معك قريبًا.",
+      "bugSent": "تم إرسال تقرير الخطأ. شكرًا.",
+      "couldNotSendContact": "لم يتمكن من إرسال الرسالة. حاول مرة أخرى.",
+      "couldNotSendBug": "لم يتمكن من إرسال تقرير الخطأ. حاول مرة أخرى.",
+      "deleteNotImplemented": "إزالة الحساب غير متاحة حاليًا.",
+      "requestTimedOut": "تم تجاوز المهلة الزمنية. حاول مرة أخرى."
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "plantDetails": {
+    "headerTitle": "Détails de la plante",
+    "common": {
+      "dash": "—",
+      "plant": "Plante"
+    },
+    "errors": {
+      "noId": "Aucun identifiant de plante ni code QR n’a été fourni.",
+      "failedToLoad": "Impossible de charger la plante."
+    },
+    "states": {
+      "error": {
+        "title": "Erreur"
+      },
+      "notFound": {
+        "title": "Introuvable",
+        "msg": "Impossible de charger cette plante."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Échec de la finalisation",
+        "msg": "Impossible de finaliser ce rappel."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Rappel marqué comme terminé.",
+      "qrSaved": "Le code QR a été enregistré dans la galerie.",
+      "qrSaveFailed": "Impossible d’enregistrer le code QR.",
+      "qrEmailPlaceholder": "Un e-mail contenant ce code QR sera envoyé à l’adresse de votre compte."
+    },
+    "permissions": {
+      "storage": {
+        "title": "Autorisation de stockage",
+        "message": "Nous avons besoin d’un accès pour enregistrer le code QR dans la galerie.",
+        "ok": "OK",
+        "denied": "Autorisation de stockage refusée."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "Le moteur de rendu du code QR n’est pas prêt."
+    },
+    "info": {
+      "fallbackTitle": "Plante n°{{id}}",
+      "purchased": "Achat",
+      "notes": "Notes",
+      "light": "Lumière",
+      "orientation": "Orientation",
+      "distance": "Distance",
+      "pot": "Pot",
+      "soil": "Substrat",
+      "cm": "cm",
+      "orientations": {
+        "N": "Nord",
+        "E": "Est",
+        "S": "Sud",
+        "W": "Ouest"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Définition de la plante",
+        "editPlant": "Modifier la plante",
+        "changeImage": "Changer l’image",
+        "showReminders": "Afficher les rappels"
+      },
+      "noDefinitionTitle": "Aucune définition de plante",
+      "noDefinitionBody": "Cette plante n’est pas encore associée à une définition de plante.",
+      "editPlant": {
+        "title": "Modifier la plante",
+        "msg": "La modification de cette plante sera implémentée ultérieurement."
+      },
+      "showReminders": {
+        "title": "Afficher les rappels",
+        "msg": "La navigation vers les rappels sera implémentée ultérieurement."
+      }
+    },
+    "latestReadings": {
+      "title": "Dernières mesures",
+      "lastRead": {
+        "empty": "Dernière mesure : —",
+        "value": "Dernière mesure : {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "Code QR",
+      "scanner": "Scanner",
+      "saveWord": "enregistrer",
+      "emailWord": "envoyer",
+      "desc": {
+        "part1": "Chaque plante possède son propre code QR unique. Lorsque vous scannez ce code dans la vue",
+        "part2": "l’application ouvrira immédiatement les détails de cette plante.",
+        "part3a": "Vous pouvez",
+        "part3b": "l’image du code QR sur votre téléphone ou",
+        "part3c": "vous l’envoyer par e-mail, puis l’imprimer et l’attacher au pot. La prochaine fois, il suffira de scanner l’étiquette au lieu de chercher manuellement."
+      },
+      "saveBtn": "Enregistrer",
+      "emailBtn": "Envoyer"
+    },
+    "reminders": {
+      "title": "Rappels",
+      "menu": {
+        "markComplete": "Marquer comme terminé",
+        "editReminder": "Modifier le rappel",
+        "showHistory": "Afficher l’historique"
+      },
+      "type": {
+        "watering": "Arrosage",
+        "fertilising": "Fertilisation",
+        "moisture": "Brumisation",
+        "care": "Entretien",
+        "repot": "Rempotage"
+      }
+    }
+  }
+}

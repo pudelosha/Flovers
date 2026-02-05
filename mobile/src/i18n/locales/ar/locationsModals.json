@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "create": "إنشاء",
+      "save": "حفظ",
+      "apply": "تطبيق",
+      "reset": "إعادة تعيين"
+    },
+    "confirmDelete": {
+      "title": "حذف الموقع",
+      "messagePrefix": "هل أنت متأكد أنك تريد حذف",
+      "messageSuffix": "? هذه العملية لا يمكن التراجع عنها.",
+      "blockedTitle": "لا يمكن حذف هذا الموقع",
+      "blockedMessage": "هذا الموقع يحتوي على: {{countLabel}}. قم بحذف النباتات أو نقلها إلى موقع آخر ثم حاول مرة أخرى.",
+      "blockedToast": "لا يمكن حذف هذا الموقع لأنه يحتوي على نباتات. قم بحذفها أو نقلها أولاً."
+    },
+    "edit": {
+      "titleCreate": "إضافة موقع",
+      "titleEdit": "تعديل الموقع",
+      "nameLabel": "اسم الموقع",
+      "namePlaceholder": "على سبيل المثال، غرفة المعيشة، رف المطبخ",
+      "categoryLabel": "الفئة",
+      "categories": {
+        "indoor": "داخلي",
+        "outdoor": "خارجي",
+        "other": "آخر"
+      },
+      "quickSuggestions": "اقتراحات سريعة",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "غرفة المعيشة",
+          "kitchen": "المطبخ",
+          "diningRoom": "غرفة الطعام",
+          "bedroom": "غرفة النوم",
+          "bathroom": "الحمام",
+          "hallway": "الردهة",
+          "office": "المكتب",
+          "kidsRoom": "غرفة الأطفال"
+        },
+        "outdoor": {
+          "balcony": "شرفة",
+          "terrace": "تراس",
+          "patio": "فناء",
+          "garden": "حديقة",
+          "frontYard": "الحديقة الأمامية",
+          "backyard": "الحديقة الخلفية",
+          "porch": "مظلة",
+          "greenhouse": "دفيئة"
+        },
+        "other": {
+          "staircase": "سلم",
+          "garage": "كراج",
+          "basement": "قبو",
+          "lobby": "ردهة",
+          "sunroom": "غرفة شمسية",
+          "workshop": "ورشة عمل",
+          "studio": "استوديو",
+          "attic": "عليّة"
+        }
+      }
+    },
+    "sort": {
+      "title": "ترتيب المواقع",
+      "keyName": "اسم الموقع",
+      "keyCount": "عدد النباتات",
+      "dirAsc": "تصاعدي",
+      "dirDesc": "تنازلي"
+    }
+  }
+}

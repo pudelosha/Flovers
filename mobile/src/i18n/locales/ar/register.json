@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "التسجيل",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "termsAgreement": "أوافق",
+    "termsLink": "الشروط والأحكام",
+    "signUpButton": "سجل الآن",
+    "haveAccount": "هل لديك حساب؟",
+    "loginLink": "تسجيل الدخول",
+    "errors": {
+      "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صحيح.",
+      "shortPassword": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.",
+      "passwordsMismatch": "كلمات المرور غير متطابقة.",
+      "termsRequired": "يجب عليك قبول الشروط والأحكام.",
+      "incompleteForm": "يرجى إكمال النموذج.",
+      "emailTaken": "هذا البريد الإلكتروني مأخوذ بالفعل.",
+      "registrationFailed": "فشل التسجيل. حاول مرة أخرى.",
+      "generic": "حدث خطأ ما. حاول مرة أخرى.",
+      "cannotOpenLink": "تعذر فتح الرابط."
+    },
+    "success": {
+      "accountCreated": "تم إنشاء الحساب. مرحباً بك!"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "plantDetails": {
+    "headerTitle": "Detalhes da planta",
+    "common": {
+      "dash": "—",
+      "plant": "Planta"
+    },
+    "errors": {
+      "noId": "Nenhum identificador de planta ou código QR fornecido.",
+      "failedToLoad": "Falha ao carregar a planta."
+    },
+    "states": {
+      "error": {
+        "title": "Erro"
+      },
+      "notFound": {
+        "title": "Não encontrado",
+        "msg": "Não foi possível carregar esta planta."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Não foi possível concluir",
+        "msg": "Não foi possível concluir este lembrete."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Lembrete marcado como concluído.",
+      "qrSaved": "Código QR salvo na galeria.",
+      "qrSaveFailed": "Falha ao salvar o código QR.",
+      "qrEmailPlaceholder": "Um e-mail com este código QR será enviado para o endereço da sua conta."
+    },
+    "permissions": {
+      "storage": {
+        "title": "Permissão de armazenamento",
+        "message": "Precisamos de acesso para salvar o código QR na galeria.",
+        "ok": "OK",
+        "denied": "Permissão de armazenamento negada."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "O renderizador de código QR não está pronto."
+    },
+    "info": {
+      "fallbackTitle": "Planta #{{id}}",
+      "purchased": "Compra",
+      "notes": "Notas",
+      "light": "Luz",
+      "orientation": "Orientação",
+      "distance": "Distância",
+      "pot": "Vaso",
+      "soil": "Solo",
+      "cm": "cm",
+      "orientations": {
+        "N": "Norte",
+        "E": "Leste",
+        "S": "Sul",
+        "W": "Oeste"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Definição da planta",
+        "editPlant": "Editar planta",
+        "changeImage": "Alterar imagem",
+        "showReminders": "Mostrar lembretes"
+      },
+      "noDefinitionTitle": "Definição da planta não encontrada",
+      "noDefinitionBody": "Esta planta ainda não está associada a uma definição de planta.",
+      "editPlant": {
+        "title": "Editar planta",
+        "msg": "A edição desta planta será implementada mais tarde."
+      },
+      "showReminders": {
+        "title": "Mostrar lembretes",
+        "msg": "A transição para lembretes será implementada mais tarde."
+      }
+    },
+    "latestReadings": {
+      "title": "Últimas leituras",
+      "lastRead": {
+        "empty": "Última leitura: —",
+        "value": "Última leitura: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "Código QR",
+      "scanner": "Scanner",
+      "saveWord": "salvar",
+      "emailWord": "enviar",
+      "desc": {
+        "part1": "Cada planta tem seu código QR único. Quando você escanear esse código na visualização",
+        "part2": "o aplicativo abrirá imediatamente os detalhes dessa planta.",
+        "part3a": "Você pode",
+        "part3b": "imagem do código QR no telefone ou",
+        "part3c": "mandá-lo para si mesmo e depois imprimi-lo e fixá-lo no vaso. Da próxima vez, basta escanear a etiqueta em vez de procurar manualmente."
+      },
+      "saveBtn": "Salvar",
+      "emailBtn": "Enviar"
+    },
+    "reminders": {
+      "title": "Lembretes",
+      "menu": {
+        "markComplete": "Marcar como concluído",
+        "editReminder": "Editar lembrete",
+        "showHistory": "Mostrar histórico"
+      },
+      "type": {
+        "watering": "Rega",
+        "fertilising": "Adubação",
+        "moisture": "Nebulização",
+        "care": "Cuidados",
+        "repot": "Replantio"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Tarefas automáticas",
+      "subtitle": "Podemos criar lembretes automaticamente (rega, replantio, pulverização, adubação, cuidado) com base no perfil da planta.",
+      "createAutoTasks": "Criar tarefas automáticas para esta planta",
+      "requiresPlantDefinition": "Requer definição da planta.",
+      "labels": {
+        "generateWateringTask": "Criar tarefa de rega",
+        "generateMistingTask": "Criar tarefa de pulverização",
+        "generateFertilisingTask": "Criar tarefa de adubação",
+        "generateCareTask": "Criar tarefa de cuidado",
+        "generateRepottingTask": "Criar tarefa de replantio"
+      },
+      "prompts": {
+        "lastWatered": "Quando foi regada pela última vez?",
+        "selectIntervalDays": "Escolha o intervalo (dias)",
+        "recommendedInterval": "Intervalo recomendado",
+        "lastRepotted": "Quando foi replantada pela última vez?"
+      },
+      "notSpecified": "Não especificado",
+      "notSpecifiedDesc": "Ignore se não tiver certeza.",
+      "units": {
+        "day": "dia",
+        "days": "dias",
+        "month": "mês",
+        "months": "meses"
+      },
+      "lastWatered": {
+        "today": "Hoje",
+        "yesterday": "Ontem",
+        "three-four-days": "Há 3–4 dias",
+        "one-week": "Há uma semana",
+        "two-weeks": "Há 2 semanas",
+        "unknown": "Não lembro"
+      },
+      "lastRepotted": {
+        "this-week": "Esta semana",
+        "one-week-ago": "Há 1 semana",
+        "two-weeks-ago": "Há 2 semanas",
+        "one-month-ago": "Há 1 mês",
+        "unknown": "Não lembro"
+      }
+    }
+  }
+}

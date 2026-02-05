@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Cronologia delle attività"
+    },
+    "fab": {
+      "sort": "Ordina",
+      "filter": "Filtra",
+      "delete": "Elimina",
+      "clearFilter": "Cancella filtro",
+      "showAllHistory": "Mostra tutta la cronologia"
+    },
+    "common": {
+      "unnamedPlant": "Pianta senza nome"
+    },
+    "toasts": {
+      "failedToLoad": "Impossibile caricare la cronologia delle attività",
+      "historyDeleted": "La cronologia è stata eliminata",
+      "failedToDeleteHistory": "Impossibile eliminare la cronologia",
+      "historyTaskDeleted": "La voce della cronologia è stata eliminata",
+      "failedToDeleteHistoryTask": "Impossibile eliminare la voce della cronologia",
+      "taskNotLinkedToPlant": "Questa attività non è collegata a una pianta."
+    },
+    "empty": {
+      "title": "Nessuna attività completata",
+      "descBeforeBold": "Questa schermata mostra",
+      "bold": "le attività chiuse dai promemoria",
+      "descAfterBold": "dalla tua schermata principale (le attività in sospeso non sono visibili qui).",
+      "filteredToPlantId": "Attualmente filtrato per ID pianta {{plantId}}.",
+      "openFromTaskHint": "Apri la cronologia da un'attività specifica per vedere la cronologia solo per questa pianta."
+    },
+    "tile": {
+      "completedOn": "Completata: {{date}}",
+      "noteLabel": "Nota"
+    },
+    "menu": {
+      "expand": "Espandi",
+      "collapse": "Comprimi",
+      "editReminder": "Modifica promemoria",
+      "goToPlant": "Vai alla pianta",
+      "deleteTask": "Elimina attività"
+    },
+    "types": {
+      "watering": "annaffiatura",
+      "fertilising": "concimazione",
+      "moisture": "nebulizzazione",
+      "care": "cura",
+      "repot": "rinvaso"
+    }
+  }
+}

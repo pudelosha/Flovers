@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "delete": "Excluir",
+      "create": "Criar",
+      "save": "Salvar",
+      "apply": "Aplicar",
+      "reset": "Redefinir"
+    },
+    "confirmDelete": {
+      "title": "Excluir local",
+      "messagePrefix": "Você tem certeza de que deseja excluir",
+      "messageSuffix": "? Esta ação não pode ser desfeita.",
+      "blockedTitle": "Não é possível excluir este local",
+      "blockedMessage": "Este local tem as seguintes plantas atribuídas: {{countLabel}}. Primeiro, exclua as plantas ou mova-as para outro local e tente novamente.",
+      "blockedToast": "Não é possível excluir este local porque ele possui plantas atribuídas. Exclua ou mova-as primeiro."
+    },
+    "edit": {
+      "titleCreate": "Adicionar local",
+      "titleEdit": "Editar local",
+      "nameLabel": "Nome do local",
+      "namePlaceholder": "ex. Sala, Prateleira na cozinha",
+      "categoryLabel": "Categoria",
+      "categories": {
+        "indoor": "Interno",
+        "outdoor": "Externo",
+        "other": "Outro"
+      },
+      "quickSuggestions": "Sugestões rápidas",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Sala de estar",
+          "kitchen": "Cozinha",
+          "diningRoom": "Sala de jantar",
+          "bedroom": "Quarto",
+          "bathroom": "Banheiro",
+          "hallway": "Corredor",
+          "office": "Escritório",
+          "kidsRoom": "Quarto infantil"
+        },
+        "outdoor": {
+          "balcony": "Varanda",
+          "terrace": "Terraço",
+          "patio": "Pátio",
+          "garden": "Jardim",
+          "frontYard": "Jardim da frente",
+          "backyard": "Quintal",
+          "porch": "Alpendre",
+          "greenhouse": "Estufa"
+        },
+        "other": {
+          "staircase": "Escada",
+          "garage": "Garagem",
+          "basement": "Porão",
+          "lobby": "Lobby",
+          "sunroom": "Jardim de inverno",
+          "workshop": "Oficina",
+          "studio": "Estúdio",
+          "attic": "Sótão"
+        }
+      }
+    },
+    "sort": {
+      "title": "Ordenar locais",
+      "keyName": "Nome do local",
+      "keyCount": "Número de plantas",
+      "dirAsc": "Crescente",
+      "dirDesc": "Decrescente"
+    }
+  }
+}

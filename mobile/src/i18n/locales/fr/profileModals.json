@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Envoi…"
+    },
+    "support": {
+      "copyToMe": "M’envoyer également une copie par e-mail"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Changer l’e-mail",
+        "newEmailPlaceholder": "Nouvel e-mail",
+        "currentPasswordPlaceholder": "Mot de passe actuel"
+      },
+      "changePassword": {
+        "title": "Changer le mot de passe",
+        "currentPasswordPlaceholder": "Mot de passe actuel",
+        "newPasswordPlaceholder": "Nouveau mot de passe",
+        "confirmNewPasswordPlaceholder": "Confirmer le nouveau mot de passe",
+        "update": "Mettre à jour"
+      },
+      "deleteAccount": {
+        "title": "Supprimer le compte",
+        "warning": "Cette action est irréversible. Si vous continuez, votre compte et vos données seront définitivement supprimés.",
+        "passwordPlaceholder": "Saisissez le mot de passe pour confirmer"
+      },
+      "reportBug": {
+        "title": "Signaler un bug",
+        "subjectPlaceholder": "Sujet",
+        "descriptionPlaceholder": "Décrivez le problème…"
+      },
+      "contactUs": {
+        "title": "Contactez-nous",
+        "subjectPlaceholder": "Sujet",
+        "messagePlaceholder": "Comment pouvons-nous aider ?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Saisissez une nouvelle adresse e-mail.",
+      "enterCurrentPassword": "Saisissez le mot de passe actuel.",
+      "emailUpdated": "L’e-mail a été mis à jour.",
+      "couldNotChangeEmail": "Impossible de changer l’e-mail. Vérifiez le mot de passe et réessayez.",
+      "enterNewPassword": "Saisissez un nouveau mot de passe.",
+      "passwordsDoNotMatch": "Les nouveaux mots de passe ne correspondent pas.",
+      "passwordUpdated": "Le mot de passe a été mis à jour.",
+      "couldNotChangePassword": "Impossible de changer le mot de passe. Vérifiez le mot de passe actuel et réessayez.",
+      "enterSubject": "Saisissez un sujet.",
+      "enterMessage": "Saisissez un message.",
+      "enterDescription": "Décrivez le problème.",
+      "contactSent": "Le message a été envoyé. Nous vous répondrons bientôt.",
+      "bugSent": "Le signalement de bug a été envoyé. Merci.",
+      "couldNotSendContact": "Impossible d’envoyer le message. Réessayez.",
+      "couldNotSendBug": "Impossible d’envoyer le signalement de bug. Réessayez.",
+      "deleteNotImplemented": "La suppression de compte n’est pas encore disponible.",
+      "requestTimedOut": "Délai dépassé. Réessayez."
+    }
+  }
+}

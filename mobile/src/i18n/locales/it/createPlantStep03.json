@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Caricamento...",
+      "title": "Scegli una posizione",
+      "subtitle": "Opzionale ma utile: le posizioni consentono di raggruppare le piante e successivamente ordinarle o filtrarle.",
+      "errorLoadingLocations": "Impossibile caricare le posizioni.",
+      "createLocation": "Crea una nuova posizione",
+      "yourLocations": "Le tue posizioni",
+      "categories": {
+        "indoor": "Interno",
+        "outdoor": "Esterno",
+        "other": "Altro"
+      },
+      "noLocations": {
+        "indoor": "Nessuna posizione interna.",
+        "outdoor": "Nessuna posizione esterna.",
+        "other": "Nessun'altra posizione."
+      },
+      "locationExists": "Esiste già una posizione con questo nome.",
+      "errorCreatingLocation": "Impossibile creare la posizione",
+      "quickSuggestions": "Suggerimenti rapidi"
+    },
+    "locationModal": {
+      "title": "Nuova posizione",
+      "locationName": "Nome della posizione",
+      "category": "Categoria",
+      "indoor": "Interna",
+      "outdoor": "Esterna",
+      "other": "Altra",
+      "create": "Crea",
+      "cancel": "Annulla",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Soggiorno",
+          "kitchen": "Cucina",
+          "diningRoom": "Sala da pranzo",
+          "bedroom": "Camera da letto",
+          "bathroom": "Bagno",
+          "hallway": "Corridoio",
+          "office": "Ufficio",
+          "kidsRoom": "Camera dei bambini"
+        },
+        "outdoor": {
+          "balcony": "Balcone",
+          "terrace": "Terrazza",
+          "patio": "Patio",
+          "garden": "Giardino",
+          "frontYard": "Giardino anteriore",
+          "backyard": "Giardino posteriore",
+          "porch": "Veranda",
+          "greenhouse": "Serra"
+        },
+        "other": {
+          "staircase": "Scala",
+          "garage": "Garage",
+          "basement": "Cantina",
+          "lobby": "Atrio",
+          "sunroom": "Veranda",
+          "workshop": "Laboratorio",
+          "studio": "Studio",
+          "attic": "Soffitta"
+        }
+      }
+    }
+  }
+}

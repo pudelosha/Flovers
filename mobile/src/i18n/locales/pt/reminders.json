@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "Lembretes",
+    "common": {
+      "unnamedPlant": "Planta sem nome",
+      "everyN": "a cada {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "dias",
+      "months": "meses"
+    },
+    "types": {
+      "watering": "Regar",
+      "moisture": "Pulverizar",
+      "fertilising": "Fertilizar",
+      "care": "Cuidar",
+      "repot": "Replantar"
+    },
+    "fab": {
+      "add": "Adicionar lembrete",
+      "calendar": "Calendário",
+      "list": "Lista",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Limpar filtro"
+    },
+    "empty": {
+      "title": "Sem lembretes",
+      "description": "Os lembretes estão ligados a plantas específicas. Certifique-se de que você tem pelo menos uma planta cadastrada.\n\nToque no botão \"+\" para adicionar um lembrete. Na janela, você escolherá a planta, o tipo (regar, pulverizar, fertilizar, cuidar ou replantar), definirá a primeira data e a frequência de repetição."
+    },
+    "menu": {
+      "edit": "Editar lembrete",
+      "delete": "Excluir lembrete"
+    },
+    "tile": {
+      "repeatsEvery": "Repete a cada {{count}} {{unit}}",
+      "dueToday": "Vencimento hoje",
+      "dueInOneDay": "Vencimento em 1 dia",
+      "dueInDays": "Vencimento em {{count}} dias",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "Agendado para {{date}}",
+      "noItems": "Sem lembretes para este dia."
+    },
+    "toast": {
+      "loadFailed": "Falha ao carregar os lembretes",
+      "deleted": "Lembrete excluído",
+      "deleteFailed": "Falha ao excluir",
+      "deleteFailedWithReason": "Falha ao excluir: {{reason}}",
+      "duplicateType": "Esta planta já tem um lembrete deste tipo.",
+      "created": "Lembrete criado",
+      "updated": "Lembrete atualizado",
+      "createFailed": "Falha ao criar",
+      "createFailedWithReason": "Falha ao criar: {{reason}}",
+      "updateFailed": "Falha ao atualizar",
+      "updateFailedWithReason": "Falha ao atualizar: {{reason}}"
+    }
+  }
+}

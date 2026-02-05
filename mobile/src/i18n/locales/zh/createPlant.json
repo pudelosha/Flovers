@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "创建植物"
+    },
+    "fallbackStep": {
+      "title": "步骤“{{step}}”",
+      "subtitle": "此步骤将很快实现。"
+    },
+    "common": {
+      "previous": "上一步",
+      "next": "下一步",
+      "create": "创建",
+      "cancel": "取消",
+      "done": "完成",
+      "notSpecified": "未指定"
+    }
+  }
+}

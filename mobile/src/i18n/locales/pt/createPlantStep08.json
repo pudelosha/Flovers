@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "Nome e notas",
+      "subtitle": "Dê um nome à planta, adicione notas e (opcionalmente) defina a data de compra para que possamos estimar sua idade.",
+      "displayNameLabel": "Nome",
+      "placeholderName": "ex. Monstera da sala",
+      "notesLabel": "Notas",
+      "notesPlaceholder": "Dicas de cuidados, problemas, onde comprou…",
+      "purchaseDateLabel": "Data de compra (opcional)",
+      "notSet": "Não definido",
+      "done": "Concluído",
+      "setPurchaseDateTitle": "Definir data de compra",
+      "datePlaceholder": "AAAA-MM-DD",
+      "cancel": "Cancelar",
+      "set": "Definir",
+      "invalidDateTitle": "Data inválida",
+      "invalidDateMessage": "Digite uma data válida no formato AAAA-MM-DD.",
+      "nameRequired": "Para criar a planta, você precisa fornecer um nome para ela."
+    }
+  }
+}

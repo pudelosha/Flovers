@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Perfil de la planta",
+      "preferences": "Preferencias",
+      "errorProfile": "No se pudo obtener el perfil de la planta.",
+      "labels": {
+        "sun": "Exposición al sol",
+        "water": "Riego",
+        "difficulty": "Dificultad",
+        "potMaterials": "Materiales de la maceta",
+        "soilMixes": "Mezclas de tierra",
+        "wateringInterval": "Riego",
+        "moistureInterval": "Control de humedad",
+        "fertilizeInterval": "Fertilización",
+        "repotInterval": "Trasplante"
+      },
+      "values": {
+        "everyDays": "Cada {{count}} días",
+        "everyMonths": "Cada {{count}} meses"
+      },
+      "traits": {
+        "sun": "Exposición al sol",
+        "water": "Riego",
+        "difficulty": "Dificultad",
+        "soil": "Tierra",
+        "temperature": "Temperatura",
+        "humidity": "Humedad",
+        "toxic": "¿Tóxica?",
+        "growth": "Crecimiento",
+        "light": "Luz",
+        "fertilizer": "Fertilización",
+        "recognize": "Reconocer planta"
+      }
+    }
+  }
+}

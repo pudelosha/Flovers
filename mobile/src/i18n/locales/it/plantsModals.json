@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Annulla",
+      "delete": "Elimina",
+      "clear": "Cancella",
+      "apply": "Applica",
+      "reset": "Reimposta",
+      "close": "Chiudi",
+      "done": "Fatto"
+    },
+    "confirmDelete": {
+      "title": "Elimina pianta",
+      "messagePrefix": "Sei sicuro di voler eliminare",
+      "messageSuffix": "? Verranno eliminati anche tutti i dati associati: promemoria, dispositivi e letture, attività e cronologia delle attività. Questa operazione non può essere annullata."
+    },
+    "filter": {
+      "title": "Filtra piante",
+      "anyLocation": "Qualsiasi posizione",
+      "anyLatin": "Qualsiasi nome latino"
+    },
+    "sort": {
+      "title": "Ordina piante",
+      "keyPlant": "Nome della pianta",
+      "keyLocation": "Posizione",
+      "dirAsc": "Crescente",
+      "dirDesc": "Decrescente"
+    },
+    "qr": {
+      "title": "Codice QR della pianta",
+      "p1": "Ogni pianta ha un codice QR univoco che contiene il suo identificatore.",
+      "p2": "Quando scansioni questo codice con lo scanner nell’app, verrai reindirizzato direttamente alla schermata dei dettagli di questa pianta",
+      "youCan": "Puoi:",
+      "b1": "salvare l’immagine del codice QR sul telefono o inviarla via e-mail, quindi stamparla per l’etichettatura,",
+      "b2": "fissare l’etichetta stampata direttamente al vaso, così il codice è sempre a portata di mano,",
+      "b3": "permettere ai membri della famiglia di scansionare l’etichetta per aprire rapidamente questa pianta nell’app.",
+      "save": "Salva codice QR",
+      "email": "Invia codice QR via e-mail"
+    },
+    "edit": {
+      "title": "Modifica pianta",
+      "namePlaceholder": "Nome della pianta (obbligatorio)",
+      "latinPlaceholder": "Nome latino (cerca)…",
+      "locationOptional": "Seleziona posizione (facoltativo)",
+      "none": "— Nessuno —",
+      "notesPlaceholder": "Note… (facoltativo)",
+      "purchaseDateLabel": "Data di acquisto",
+      "notSet": "Non impostata",
+      "fallbackDateTitle": "Imposta data di acquisto (RRRR-MM-DD)",
+      "fallbackDatePlaceholder": "RRRR-MM-DD",
+      "invalidDateTitle": "Data non valida",
+      "invalidDateMsg": "Usa il formato RRRR-MM-DD",
+      "set": "Imposta",
+      "lightLevelLabel": "Livello di luce",
+      "low": "Basso",
+      "high": "Alto",
+      "windowDirectionLabel": "Direzione della finestra",
+      "orientations": {
+        "S": "N",
+        "E": "E",
+        "W": "O",
+        "N": "S"
+      },
+      "measureBtn": "Misura luce e direzione",
+      "distanceLabel": "Distanza dalla finestra",
+      "cm": "cm",
+      "containerMaterialLabel": "Materiale del vaso",
+      "soilMixLabel": "Substrato / miscela",
+      "update": "Salva"
+    },
+    "journal": {
+      "title": "Diario della pianta",
+      "loading": "Caricamento...",
+      "error": "Qualcosa è andato storto.",
+      "empty": "Nessuna voce nel diario.",
+      "taskTypes": {
+        "watering": "ANNAFFIATURA",
+        "moisture": "NEBULIZZAZIONE",
+        "fertilising": "CONCIMAZIONE",
+        "care": "CURA",
+        "repot": "RINVASO"
+      }
+    }
+  }
+}

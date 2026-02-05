@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "个人资料"
+    },
+    "common": {
+      "save": "保存",
+      "cancel": "取消",
+      "change": "更改",
+      "delete": "删除",
+      "send": "发送"
+    },
+    "account": {
+      "title": "账户",
+      "emailLabel": "电子邮件",
+      "createdLabel": "创建时间",
+      "changeEmail": "更改电子邮件",
+      "changePassword": "更改密码",
+      "deleteAccount": "删除账户",
+      "logout": "登出"
+    },
+    "notifications": {
+      "title": "通知",
+      "emailSection": "电子邮件",
+      "emailDailyLabel": "今天的任务每日总结",
+      "emailDailyHint": "每天发送一条任务总结邮件。",
+      "sendAt": "发送时间",
+      "email24hLabel": "24小时后发送提醒",
+      "email24hHint": "如果今天的任务未完成，请在明天发送提醒。",
+      "mobileSection": "手机",
+      "pushDailyLabel": "手机每日通知",
+      "pushDailyHint": "每天发送一次任务总结的系统通知。",
+      "notifyAt": "通知时间",
+      "push24hLabel": "24小时后通知",
+      "push24hHint": "如果任务仍然未完成，请在第二天发送提醒通知。"
+    },
+    "settings": {
+      "title": "设置",
+      "language": "语言",
+      "dateTimeFormat": "日期/时间格式",
+      "temperatureUnits": "温度单位",
+      "measurementUnits": "度量单位",
+      "fabPosition": "FAB位置",
+      "background": "背景",
+      "tileMotive": "瓷砖图案",
+      "tilesTransparency": "瓷砖透明度",
+      "level": "级别",
+      "temperatureOptions": {
+        "C": "°C（摄氏度）",
+        "F": "°F（华氏度）",
+        "K": "K（开尔文）"
+      },
+      "measureOptions": {
+        "metric": "公制（厘米/米）",
+        "imperial": "英制（英寸/英尺）"
+      },
+      "fabPositionOptions": {
+        "right": "右侧",
+        "left": "左侧"
+      },
+      "backgroundOptions": {
+        "bg1": "背景 1",
+        "bg2": "背景 2",
+        "bg3": "背景 3",
+        "bg4": "背景 4",
+        "bg5": "背景 5"
+      },
+      "tileMotiveOptions": {
+        "light": "亮色",
+        "dark": "暗色"
+      }
+    },
+    "support": {
+      "title": "支持",
+      "contactUs": "联系我们",
+      "reportBug": "报告错误",
+      "aboutTitle": "关于应用程序",
+      "versionLabel": "版本",
+      "releaseDateLabel": "发布日期",
+      "contactLabel": "联系方式"
+    },
+    "toasts": {
+      "unauthorized": "未授权",
+      "unauthorizedLoginAgain": "未授权。请重新登录。",
+      "failedToLoadPreferences": "加载个人资料设置失败。请重试。",
+      "notificationsUpdated": "通知设置已更新。",
+      "couldNotSaveNotifications": "无法保存通知设置。",
+      "settingsUpdated": "设置已更新。",
+      "couldNotSaveSettings": "无法保存设置。"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "取消",
+      "delete": "删除",
+      "create": "创建",
+      "save": "保存",
+      "apply": "应用",
+      "reset": "重置"
+    },
+    "confirmDelete": {
+      "title": "删除位置",
+      "messagePrefix": "您确定要删除",
+      "messageSuffix": "吗？此操作无法撤销。",
+      "blockedTitle": "无法删除此位置",
+      "blockedMessage": "此位置已分配了：{{countLabel}}。请先删除植物或将它们移动到另一个位置，然后再试一次。",
+      "blockedToast": "无法删除此位置，因为它已分配了植物。请先删除或移动它们。"
+    },
+    "edit": {
+      "titleCreate": "添加位置",
+      "titleEdit": "编辑位置",
+      "nameLabel": "位置名称",
+      "namePlaceholder": "例如：客厅，厨房架子",
+      "categoryLabel": "类别",
+      "categories": {
+        "indoor": "室内",
+        "outdoor": "室外",
+        "other": "其他"
+      },
+      "quickSuggestions": "快速建议",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "客厅",
+          "kitchen": "厨房",
+          "diningRoom": "餐厅",
+          "bedroom": "卧室",
+          "bathroom": "浴室",
+          "hallway": "走廊",
+          "office": "办公室",
+          "kidsRoom": "儿童房"
+        },
+        "outdoor": {
+          "balcony": "阳台",
+          "terrace": "露台",
+          "patio": "庭院",
+          "garden": "花园",
+          "frontYard": "前院",
+          "backyard": "后院",
+          "porch": "门廊",
+          "greenhouse": "温室"
+        },
+        "other": {
+          "staircase": "楼梯",
+          "garage": "车库",
+          "basement": "地下室",
+          "lobby": "大厅",
+          "sunroom": "阳光房",
+          "workshop": "车间",
+          "studio": "工作室",
+          "attic": "阁楼"
+        }
+      }
+    },
+    "sort": {
+      "title": "排序位置",
+      "keyName": "位置名称",
+      "keyCount": "植物数量",
+      "dirAsc": "升序",
+      "dirDesc": "降序"
+    }
+  }
+}

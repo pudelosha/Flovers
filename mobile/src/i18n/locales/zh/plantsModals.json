@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "取消",
+      "delete": "删除",
+      "clear": "清除",
+      "apply": "应用",
+      "reset": "重置",
+      "close": "关闭",
+      "done": "完成"
+    },
+    "confirmDelete": {
+      "title": "删除植物",
+      "messagePrefix": "您确定要删除",
+      "messageSuffix": "吗？所有相关数据也将被删除：提醒、设备和读数、任务以及任务历史。此操作无法撤销。"
+    },
+    "filter": {
+      "title": "筛选植物",
+      "anyLocation": "任何位置",
+      "anyLatin": "任何拉丁名/名称"
+    },
+    "sort": {
+      "title": "排序植物",
+      "keyPlant": "植物名称",
+      "keyLocation": "位置",
+      "dirAsc": "升序",
+      "dirDesc": "降序"
+    },
+    "qr": {
+      "title": "植物二维码",
+      "p1": "每个植物都有一个独特的二维码，包含其标识符。",
+      "p2": "当您在应用程序中的扫描器中扫描此二维码时，您将直接跳转到该植物的详细信息页面。",
+      "youCan": "您可以：",
+      "b1": "将二维码图像保存在手机中或通过电子邮件发送，然后打印以供标签使用，",
+      "b2": "将打印出的标签直接贴在花盆上，以便始终随手可得，",
+      "b3": "让家人扫描标签，以便快速在应用中打开此植物。",
+      "save": "保存二维码",
+      "email": "通过电子邮件发送二维码"
+    },
+    "edit": {
+      "title": "编辑植物",
+      "namePlaceholder": "植物名称（必填）",
+      "latinPlaceholder": "拉丁名（搜索）...",
+      "locationOptional": "选择位置（可选）",
+      "none": "— 无 —",
+      "notesPlaceholder": "备注…（可选）",
+      "purchaseDateLabel": "购买日期",
+      "notSet": "未设置",
+      "fallbackDateTitle": "设置购买日期（YYYY-MM-DD）",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
+      "invalidDateTitle": "无效日期",
+      "invalidDateMsg": "使用格式 YYYY-MM-DD",
+      "set": "设置",
+      "lightLevelLabel": "光照水平",
+      "low": "低",
+      "high": "高",
+      "windowDirectionLabel": "窗户方向",
+      "orientations": {
+        "S": "北",
+        "E": "东",
+        "W": "西",
+        "N": "南"
+      },
+      "measureBtn": "测量光照和方向",
+      "distanceLabel": "距离窗户的距离",
+      "cm": "厘米",
+      "containerMaterialLabel": "花盆材料",
+      "soilMixLabel": "土壤/混合物",
+      "update": "保存"
+    },
+    "journal": {
+      "title": "植物日志",
+      "loading": "加载中...",
+      "error": "出了点问题。",
+      "empty": "日志中没有条目。",
+      "taskTypes": {
+        "watering": "浇水",
+        "moisture": "喷雾",
+        "fertilising": "施肥",
+        "care": "护理",
+        "repot": "换盆"
+      }
+    }
+  }
+}

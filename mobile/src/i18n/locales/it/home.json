@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "Home"
+    },
+    "fab": {
+      "showOverdue": "Mostra scaduti",
+      "showDueToday": "Mostra per oggi",
+      "showAllTasks": "Mostra tutti",
+      "markVisibleAsComplete": "Segna visibili come completati",
+      "sort": "Ordina",
+      "filter": "Filtra",
+      "clearFilter": "Cancella filtro",
+      "history": "Cronologia"
+    },
+    "menu": {
+      "markAsComplete": "Segna come completato",
+      "editReminder": "Modifica promemoria",
+      "goToPlant": "Vai alla pianta",
+      "showHistory": "Mostra cronologia",
+      "delete": "Elimina"
+    },
+    "taskTypes": {
+      "watering": "ANNAFFIATURA",
+      "moisture": "NEBULIZZAZIONE",
+      "fertilising": "CONCIMAZIONE",
+      "care": "CURA",
+      "repot": "RINVASO"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Impossibile caricare le attività",
+      "taskCompleted": "Attività completata",
+      "tasksCompleted": "Attività completate",
+      "completeFailed": "Completamento non riuscito",
+      "completeSomeFailed": "Completate {{ok}} di {{total}} attività",
+      "taskNotLinkedToPlant": "Questa attività non è collegata a una pianta."
+    },
+    "empty": {
+      "all": {
+        "title": "Nessuna attività",
+        "introPrefix": "Questa pagina mostra le tue",
+        "introBold": "attività di cura delle piante",
+        "introSuffix": "— annaffiatura, concimazione, rinvaso e altro.",
+        "toGetStarted": "Per iniziare:",
+        "bullets": {
+          "createPlantsBold": "Aggiungi piante",
+          "createPlantsSuffix": "nella scheda",
+          "plantsTabBold": "Piante",
+          "addRemindersPrefix": "Aggiungi",
+          "remindersBold": "promemoria",
+          "addRemindersSuffix": "per ogni pianta, così compariranno qui come attività.",
+          "optionallyConnectPrefix": "Facoltativamente collega",
+          "iotBold": "dispositivi IoT (schede Arduino)",
+          "optionallyConnectMiddle": "nella scheda",
+          "readingsTabBold": "Letture",
+          "optionallyConnectSuffix": "per monitorare temperatura, umidità, luce e umidità del suolo in tempo reale."
+        },
+        "outro": "Una volta configurato tutto, la Home diventerà il tuo centro per controllare di cosa ha bisogno ogni pianta."
+      },
+      "overdue": {
+        "title": "Nessuna attività scaduta",
+        "body": "Al momento non hai attività scadute.\n\nTutto è aggiornato — usa l’opzione \"Mostra tutti\" nel FAB per vedere l’elenco completo oppure cambia i filtri per visualizzare le attività future."
+      },
+      "today": {
+        "title": "Nessuna attività per oggi",
+        "body": "Oggi non hai attività.\n\nUsa l’opzione \"Mostra tutti\" nel FAB per vedere i promemoria futuri oppure modifica le pianificazioni dei promemoria sulle piante."
+      }
+    }
+  }
+}

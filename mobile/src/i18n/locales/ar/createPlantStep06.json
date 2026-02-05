@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "المهام التلقائية",
+      "subtitle": "يمكننا إنشاء تذكيرات تلقائية (الري، إعادة الزرع، الرش، التسميد، العناية) بناءً على ملف تعريف النبات.",
+      "createAutoTasks": "إنشاء مهام تلقائية لهذا النبات",
+      "requiresPlantDefinition": "يتطلب تعريف النبات.",
+      "labels": {
+        "generateWateringTask": "إنشاء مهمة ري",
+        "generateMistingTask": "إنشاء مهمة رش",
+        "generateFertilisingTask": "إنشاء مهمة تسميد",
+        "generateCareTask": "إنشاء مهمة عناية",
+        "generateRepottingTask": "إنشاء مهمة إعادة الزرع"
+      },
+      "prompts": {
+        "lastWatered": "متى كانت آخر مرة تم ريها فيها؟",
+        "selectIntervalDays": "اختر الفاصل الزمني (بالأيام)",
+        "recommendedInterval": "الفاصل الزمني الموصى به",
+        "lastRepotted": "متى كانت آخر مرة تم إعادة زراعتها فيها؟"
+      },
+      "notSpecified": "لم يتم تحديده",
+      "notSpecifiedDesc": "تجاوز إذا لم تكن متأكدًا.",
+      "units": {
+        "day": "يوم",
+        "days": "أيام",
+        "month": "شهر",
+        "months": "شهور"
+      },
+      "lastWatered": {
+        "today": "اليوم",
+        "yesterday": "أمس",
+        "three-four-days": "منذ 3–4 أيام",
+        "one-week": "منذ أسبوع",
+        "two-weeks": "منذ أسبوعين",
+        "unknown": "لا أذكر"
+      },
+      "lastRepotted": {
+        "this-week": "هذا الأسبوع",
+        "one-week-ago": "منذ أسبوع",
+        "two-weeks-ago": "منذ أسبوعين",
+        "one-month-ago": "منذ شهر",
+        "unknown": "لا أذكر"
+      }
+    }
+  }
+}

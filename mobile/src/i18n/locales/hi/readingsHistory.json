@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "पढ़ाई का इतिहास",
+    "plantFallback": "पौधा",
+    "noDevicesFound": "कोई उपकरण नहीं मिला।",
+    "unauthorized": "अनधिकृत। कृपया फिर से लॉग इन करें।",
+    "failedLoadDevices": "उपकरण लोड करने में विफल।",
+    "failedLoadHistory": "इतिहास लोड करने में विफल।",
+    "segment": {
+      "day": "दिन",
+      "week": "सप्ताह",
+      "month": "महीना"
+    },
+    "metric": {
+      "temperatureShort": "तापमान",
+      "humidityShort": "नमी",
+      "lightShort": "रोशनी",
+      "moistureShort": "मिट्टी"
+    }
+  }
+}

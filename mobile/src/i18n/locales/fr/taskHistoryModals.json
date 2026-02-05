@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Annuler",
+      "apply": "Appliquer",
+      "delete": "Supprimer",
+      "selectPlant": "Sélectionner une plante",
+      "selectLocation": "Sélectionner un emplacement",
+      "datePlaceholder": "RRRR-MM-DD",
+      "taskTypes": {
+        "watering": "Arrosage",
+        "moisture": "Humidité",
+        "fertilising": "Fertilisation",
+        "care": "Entretien",
+        "repot": "Rempotage"
+      }
+    },
+    "delete": {
+      "title": "Supprimer l’historique",
+      "scopeLabel": "Portée",
+      "modes": {
+        "plant": "Supprimer pour la plante sélectionnée",
+        "location": "Supprimer pour l’emplacement sélectionné",
+        "types": "Supprimer les tâches de type",
+        "olderThan": "Supprimer les tâches plus anciennes que"
+      },
+      "noPlantsHint": "Vous n’avez encore aucune plante dans l’historique.",
+      "noLocationsHint": "Vous n’avez encore aucun emplacement dans l’historique.",
+      "daysValue": "{{days}} jours"
+    },
+    "filter": {
+      "title": "Filtrer l’historique",
+      "plantLabel": "Plante",
+      "locationLabel": "Emplacement",
+      "taskTypesLabel": "Types de tâches",
+      "completedDateRangeLabel": "Plage de dates d’achèvement",
+      "fromLabel": "De",
+      "toLabel": "À",
+      "anyPlant": "Toute plante",
+      "anyLocation": "Tout emplacement",
+      "clear": "Effacer"
+    },
+    "sort": {
+      "title": "Trier l’historique",
+      "sortByLabel": "Trier par",
+      "directionLabel": "Direction",
+      "keys": {
+        "completedAt": "Date d’achèvement",
+        "plant": "Nom de la plante",
+        "location": "Emplacement"
+      },
+      "directions": {
+        "asc": "Croissant",
+        "desc": "Décroissant"
+      },
+      "reset": "Réinitialiser"
+    }
+  }
+}

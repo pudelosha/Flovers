@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "日照",
+      "subtitle": "日照帮助我们调整浇水和护理提醒的时间表。告诉我们这个地方有多少光线，以及窗户朝哪个方向。",
+      "lightLevel": "光照水平",
+      "low": "低",
+      "high": "高",
+      "windowDirection": "窗户方向",
+      "measureLightDirection": "测量光线和方向",
+      "distanceFromWindow": "离窗户的距离",
+      "orientations": {
+        "S": "南",
+        "E": "东",
+        "W": "西",
+        "N": "北"
+      },
+      "modal": {
+        "title": "光线和方向测量",
+        "instructions": "将手机保持水平（屏幕朝上），将上边缘朝向窗户。将手机慢慢移动到窗户附近，然后点击“测量”开始5秒测试。",
+        "ambientLive": "光线（实时）",
+        "headingLive": "方向（实时）",
+        "testLabel": "5秒测量",
+        "running": "(正在进行…)",
+        "last": "(最后一次)",
+        "done": "完成",
+        "bestLight": "光线（5秒最佳）:",
+        "meanDirection": "方向（5秒平均）:",
+        "close": "关闭",
+        "measure5s": "测量（5秒）",
+        "measuring": "测量中…",
+        "apply": "应用",
+        "tip": "提示：在许多手机中，光传感器位于上边缘（靠近扬声器）。保持手机平放，并将上边缘朝窗户方向，以找到最高的读数。",
+        "notAvailable": "不可用",
+        "noSensor": "没有传感器",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "明亮，直射光",
+          "brightIndirect": "明亮，散射光",
+          "medium": "中等/半阴",
+          "low": "少光",
+          "veryLow": "非常少光"
+        }
+      }
+    }
+  }
+}

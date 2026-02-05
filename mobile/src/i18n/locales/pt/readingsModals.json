@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "delete": "Excluir",
+      "apply": "Aplicar",
+      "clear": "Limpar",
+      "close": "Fechar",
+      "reset": "Redefinir",
+      "save": "Salvar",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "Excluir leitura",
+      "messageBefore": "Você tem certeza de que deseja excluir",
+      "messageAfter": "? Esta ação não pode ser desfeita."
+    },
+    "deviceSetup": {
+      "title": "Configuração do dispositivo",
+      "httpEndpoints": "Endpoints HTTP",
+      "addReadingPost": "Adicionar leitura (POST)",
+      "readReadingsGetPost": "Obter leituras (GET/POST)",
+      "samplePayloads": "Exemplos de payloads",
+      "addReadingBody": "Corpo da solicitação de adição de leitura",
+      "readRequestBody": "Corpo da solicitação de leitura",
+      "currentAuthSecret": "Segredo de autenticação atual",
+      "showAuthSecret": "Mostrar segredo de autenticação",
+      "hideAuthSecret": "Ocultar segredo de autenticação",
+      "generateNewSecret": "Gerar novo segredo",
+      "downloadPdfDocumentation": "Baixar documentação em PDF",
+      "rotateConfirmTitle": "Rotacionar segredo?",
+      "rotateConfirmText": "Gerar um novo segredo invalidará o atual. Em seguida, atualize a configuração do dispositivo.",
+      "rotate": "Rotacionar"
+    },
+    "filter": {
+      "title": "Filtrar leituras",
+      "plantLabel": "Planta",
+      "locationLabel": "Localização",
+      "statusLabel": "Status",
+      "selectPlant": "Escolher planta",
+      "anyPlant": "Qualquer planta",
+      "anyLocation": "Qualquer localização",
+      "anyStatus": "Qualquer status",
+      "statusEnabled": "Ativado",
+      "statusDisabled": "Desativado"
+    },
+    "sort": {
+      "title": "Classificar leituras",
+      "sortBy": "Classificar por",
+      "direction": "Direção",
+      "keyPlantName": "Nome da planta",
+      "keyLocation": "Localização",
+      "keyLastRead": "Última leitura",
+      "ascending": "Crescente",
+      "descending": "Decrescente"
+    },
+    "upsert": {
+      "linkDeviceTitle": "Conectar dispositivo",
+      "editDeviceTitle": "Editar dispositivo",
+      "noPlantsText": "Você ainda não tem plantas. Adicione uma planta primeiro para conectar o dispositivo.",
+      "selectPlant": "Escolher planta",
+      "locationPlaceholder": "Localização",
+      "deviceNameRequired": "Nome do dispositivo (obrigatório)",
+      "sensors": "Sensores",
+      "sensorTemperature": "Temperatura",
+      "sensorHumidity": "Umidade",
+      "sensorLight": "Luz",
+      "sensorSoilMoisture": "Umidade do solo",
+      "moistAlertLabel": "Enviar alertas quando a umidade do solo cair abaixo do limite",
+      "thresholdLabel": "Limite:",
+      "samplingInterval": "Intervalo de amostragem",
+      "everyXHours": "A cada {{count}} horas",
+      "authSecret": "Segredo de autenticação",
+      "deviceKey": "Chave do dispositivo",
+      "sendCodeViaEmail": "Enviar código por e-mail",
+      "saveCodeAsText": "Salvar código como texto",
+      "enabled": "Ativado",
+      "ingestReadingsFromDevice": "Obter leituras deste dispositivo",
+      "notesOptional": "Notas… (opcional)"
+    }
+  }
+}

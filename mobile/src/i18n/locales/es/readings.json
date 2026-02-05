@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "Lecturas"
+    },
+    "defaults": {
+      "thisDevice": "este dispositivo"
+    },
+    "tile": {
+      "lastReadPrefix": "Última lectura"
+    },
+    "menu": {
+      "history": "Historial de lecturas",
+      "plantDetails": "Detalles de la planta",
+      "editDevice": "Editar dispositivo",
+      "deleteDevice": "Eliminar dispositivo"
+    },
+    "fab": {
+      "linkDevice": "Vincular dispositivo",
+      "deviceSetup": "Configuración del dispositivo",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Limpiar filtro"
+    },
+    "empty": {
+      "title": "No hay dispositivos",
+      "description": "Los dispositivos permiten registrar lecturas de temperatura, humedad, intensidad lumínica y humedad del suelo para la planta.\n\nToca la acción ‘+ Vincular dispositivo’ para agregar uno nuevo. Selecciona la planta, nombra el dispositivo, marca los sensores y ajusta el intervalo de muestreo. Luego abre la Configuración del dispositivo para ver el secreto de la cuenta, actualizarlo y enviar el borrador de Arduino/ESP listo para pegar."
+    },
+    "toasts": {
+      "unauthorized": "No autorizado. Vuelve a iniciar sesión.",
+      "loadFailed": "No se pudieron cargar los dispositivos",
+      "deviceDeleted": "Dispositivo eliminado",
+      "deleteFailed": "No se pudo eliminar",
+      "deleteFailedPrefix": "No se pudo eliminar",
+      "deviceAdded": "Dispositivo agregado",
+      "deviceUpdated": "Dispositivo actualizado",
+      "addFailed": "No se pudo agregar",
+      "addFailedPrefix": "No se pudo agregar",
+      "updateFailed": "No se pudo actualizar",
+      "updateFailedPrefix": "No se pudo actualizar",
+      "setupLoadFailed": "No se pudo cargar la configuración",
+      "setupLoadFailedPrefix": "No se pudo cargar la configuración",
+      "secretRotated": "Secreto actualizado",
+      "rotateFailed": "No se pudo actualizar el secreto",
+      "rotateFailedPrefix": "No se pudo actualizar el secreto"
+    }
+  }
+}

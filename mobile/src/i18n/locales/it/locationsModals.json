@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Annulla",
+      "delete": "Elimina",
+      "create": "Crea",
+      "save": "Salva",
+      "apply": "Applica",
+      "reset": "Reimposta"
+    },
+    "confirmDelete": {
+      "title": "Elimina posizione",
+      "messagePrefix": "Sei sicuro di voler eliminare",
+      "messageSuffix": "? Questa operazione non può essere annullata.",
+      "blockedTitle": "Impossibile eliminare questa posizione",
+      "blockedMessage": "Questa posizione ha assegnati: {{countLabel}}. Prima elimina le piante o spostale in un'altra posizione, poi riprova.",
+      "blockedToast": "Impossibile eliminare questa posizione perché ha piante assegnate. Eliminale o spostale prima."
+    },
+    "edit": {
+      "titleCreate": "Aggiungi posizione",
+      "titleEdit": "Modifica posizione",
+      "nameLabel": "Nome della posizione",
+      "namePlaceholder": "es. Soggiorno, Mensola in cucina",
+      "categoryLabel": "Categoria",
+      "categories": {
+        "indoor": "Interno",
+        "outdoor": "Esterno",
+        "other": "Altro"
+      },
+      "quickSuggestions": "Suggerimenti rapidi",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Soggiorno",
+          "kitchen": "Cucina",
+          "diningRoom": "Sala da pranzo",
+          "bedroom": "Camera da letto",
+          "bathroom": "Bagno",
+          "hallway": "Corridoio",
+          "office": "Ufficio",
+          "kidsRoom": "Camera dei bambini"
+        },
+        "outdoor": {
+          "balcony": "Balcone",
+          "terrace": "Terrazza",
+          "patio": "Patio",
+          "garden": "Giardino",
+          "frontYard": "Giardino anteriore",
+          "backyard": "Giardino posteriore",
+          "porch": "Portico",
+          "greenhouse": "Serra"
+        },
+        "other": {
+          "staircase": "Scala",
+          "garage": "Garage",
+          "basement": "Cantina",
+          "lobby": "Ingresso",
+          "sunroom": "Giardino d'inverno",
+          "workshop": "Laboratorio",
+          "studio": "Studio",
+          "attic": "Soffitta"
+        }
+      }
+    },
+    "sort": {
+      "title": "Ordina posizioni",
+      "keyName": "Nome della posizione",
+      "keyCount": "Numero di piante",
+      "dirAsc": "Crescente",
+      "dirDesc": "Decrescente"
+    }
+  }
+}

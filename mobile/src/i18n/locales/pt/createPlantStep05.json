@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Vaso e substrato",
+      "subtitle": "Essas informações são opcionais. Escolha o material do vaso/conteiner e o substrato — ou deixe como \"Não especificado\" e continue.",
+      "containerMaterial": "Material do vaso",
+      "soilMix": "Substrato / mistura",
+      "notSpecified": "Não especificado",
+      "notSpecifiedDesc": "Ignore se não tiver certeza.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plástico",
+          "description": "Leve; retém mais umidade; barato e versátil."
+        },
+        "ceramic": {
+          "label": "Cerâmica (esmaltada)",
+          "description": "Pesada; retém bem a umidade; acabamento decorativo."
+        },
+        "terracotta": {
+          "label": "Terracota",
+          "description": "Porosa; drena a umidade; excelente para suculentas e cactos."
+        },
+        "clay": {
+          "label": "Argila (não esmaltada)",
+          "description": "Semelhante à terracota; \"respira\", seca mais rapidamente."
+        },
+        "cement": {
+          "label": "Cimento",
+          "description": "Muito pesado; aparência moderna; retém bem a umidade."
+        },
+        "concrete": {
+          "label": "Concreto",
+          "description": "Durável e pesado; estável ao ar livre; retém umidade."
+        },
+        "metal": {
+          "label": "Metal (geral)",
+          "description": "Aquece rapidamente ao sol; frequentemente requer capa/revestimento."
+        },
+        "stainless": {
+          "label": "Aço inoxidável",
+          "description": "Moderno; resistente à corrosão; pode aquecer."
+        },
+        "aluminum": {
+          "label": "Alumínio",
+          "description": "Leve; conduz calor; cuidado com o superaquecimento ao sol."
+        },
+        "iron": {
+          "label": "Ferro / aço",
+          "description": "Muito durável; pode enferrujar; às vezes requer revestimento."
+        },
+        "copper": {
+          "label": "Cobre / latão",
+          "description": "Decorativo; pode reagir com o substrato; normalmente usado como capa."
+        },
+        "wood": {
+          "label": "Madeira",
+          "description": "Aparência natural; pode exigir revestimento; pode apodrecer com umidade constante."
+        },
+        "bamboo": {
+          "label": "Bambu",
+          "description": "Leve e sustentável; normalmente com revestimento; melhor para ambientes internos."
+        },
+        "rattan": {
+          "label": "Rattan / vime",
+          "description": "Capa decorativa; mantenha o vaso de produção dentro."
+        },
+        "glass": {
+          "label": "Vidro",
+          "description": "Bom para terrários; sem drenagem; controle a umidade."
+        },
+        "stone": {
+          "label": "Pedra / mármore",
+          "description": "Muito pesados e estáveis; retém o frio por mais tempo."
+        },
+        "resin": {
+          "label": "Resina",
+          "description": "Leve e durável; boa para o exterior; isola as raízes."
+        },
+        "fiberglass": {
+          "label": "Fibra de vidro",
+          "description": "Leve e durável; boa para o exterior; isola."
+        },
+        "biodegradable": {
+          "label": "Biodegradável",
+          "description": "Exemplo: fibra de coco/turfa; vasos iniciais; se decompõem com o tempo."
+        },
+        "fabric": {
+          "label": "Vaso de tecido",
+          "description": "Areja as raízes; seca rapidamente; bom para hortas."
+        },
+        "grow-bag": {
+          "label": "Saco de cultivo",
+          "description": "Saco de material; portátil; drena água rapidamente; rega mais frequente."
+        },
+        "self-watering": {
+          "label": "Autoirrigação",
+          "description": "Reservatório com corda; facilita a manutenção da rega regular."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Substrato universal",
+          "description": "Boa opção inicial para a maioria das plantas de interior."
+        },
+        "green-plants": {
+          "label": "Substrato para plantas verdes / domésticas",
+          "description": "Substrato universal para plantas verdes (frequentemente também para palmeiras)."
+        },
+        "balcony-flowers": {
+          "label": "Substrato para flores de varanda e canteiros",
+          "description": "Mais nutritivo; bom para plantas com flores em vasos e jardineiras."
+        },
+        "cactus-succulent": {
+          "label": "Substrato para cactos e suculentas",
+          "description": "Muito permeável; ideal para suculentas e cactos."
+        },
+        "orchid": {
+          "label": "Substrato para orquídeas",
+          "description": "Grosso, à base de casca; proporciona muita ventilação nas raízes."
+        },
+        "aroid": {
+          "label": "Mistura para aroides",
+          "description": "Muito arejado (casca/perlita) para Monstera/Filodendros."
+        },
+        "seed-starting": {
+          "label": "Substrato para semeadura",
+          "description": "Fino; bom para enraizar e mudas."
+        },
+        "bonsai": {
+          "label": "Substrato para bonsai",
+          "description": "Granulado e permeável; menos compactado."
+        },
+        "herbs-vegetables": {
+          "label": "Substrato para ervas e vegetais",
+          "description": "Mais nutritivo; adequado para plantas comestíveis."
+        },
+        "citrus": {
+          "label": "Substrato para cítricos",
+          "description": "Permeável; adequado para cítricos e plantas mediterrâneas."
+        },
+        "fern": {
+          "label": "Substrato para samambaias",
+          "description": "Mais amante de umidade; geralmente com mais partes orgânicas."
+        },
+        "conifers": {
+          "label": "Substrato para coníferas",
+          "description": "Substrato para coníferas; frequentemente ligeiramente ácido e permeável."
+        },
+        "acid-loving": {
+          "label": "Substrato para plantas acidófilas",
+          "description": "Substrato ácido para mirtilos, urzes, rododendros, azaléias, etc."
+        },
+        "peat-free": {
+          "label": "Substrato sem turfa",
+          "description": "Mais sustentável; a composição depende do fabricante."
+        }
+      }
+    }
+  }
+}

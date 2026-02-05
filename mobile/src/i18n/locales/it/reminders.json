@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "Promemoria",
+    "common": {
+      "unnamedPlant": "Pianta senza nome",
+      "everyN": "ogni {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "giorni",
+      "months": "mesi"
+    },
+    "types": {
+      "watering": "Annaffiatura",
+      "moisture": "Nebulizzazione",
+      "fertilising": "Concimazione",
+      "care": "Cura",
+      "repot": "Rinvaso"
+    },
+    "fab": {
+      "add": "Aggiungi promemoria",
+      "calendar": "Calendario",
+      "list": "Elenco",
+      "sort": "Ordina",
+      "filter": "Filtra",
+      "clearFilter": "Cancella filtro"
+    },
+    "empty": {
+      "title": "Nessun promemoria",
+      "description": "I promemoria sono associati a piante specifiche. Assicurati di aver creato almeno una pianta.\n\nTocca il pulsante \"+\" per aggiungere un promemoria. Nella finestra sceglierai la pianta, il tipo (annaffiatura, nebulizzazione, concimazione, cura o rinvaso), imposterai la prima data e la frequenza di ripetizione."
+    },
+    "menu": {
+      "edit": "Modifica promemoria",
+      "delete": "Elimina promemoria"
+    },
+    "tile": {
+      "repeatsEvery": "Si ripete ogni {{count}} {{unit}}",
+      "dueToday": "Scade oggi",
+      "dueInOneDay": "Scade tra 1 giorno",
+      "dueInDays": "Scade tra {{count}} giorni",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "Programmato per {{date}}",
+      "noItems": "Nessun promemoria per questo giorno."
+    },
+    "toast": {
+      "loadFailed": "Impossibile caricare i promemoria",
+      "deleted": "Promemoria eliminato",
+      "deleteFailed": "Impossibile eliminare",
+      "deleteFailedWithReason": "Impossibile eliminare: {{reason}}",
+      "duplicateType": "Questa pianta ha già un promemoria di questo tipo.",
+      "created": "Promemoria creato",
+      "updated": "Promemoria aggiornato",
+      "createFailed": "Impossibile creare",
+      "createFailedWithReason": "Impossibile creare: {{reason}}",
+      "updateFailed": "Impossibile aggiornare",
+      "updateFailedWithReason": "Impossibile aggiornare: {{reason}}"
+    }
+  }
+}

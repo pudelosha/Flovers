@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "تاريخ المهام"
+    },
+    "fab": {
+      "sort": "ترتيب",
+      "filter": "تصفية",
+      "delete": "حذف",
+      "clearFilter": "مسح الفلتر",
+      "showAllHistory": "عرض التاريخ الكامل"
+    },
+    "common": {
+      "unnamedPlant": "نبتة بلا اسم"
+    },
+    "toasts": {
+      "failedToLoad": "فشل في تحميل تاريخ المهام",
+      "historyDeleted": "تم حذف التاريخ",
+      "failedToDeleteHistory": "فشل في حذف التاريخ",
+      "historyTaskDeleted": "تم حذف سجل التاريخ",
+      "failedToDeleteHistoryTask": "فشل في حذف سجل التاريخ",
+      "taskNotLinkedToPlant": "هذه المهمة غير مرتبطة بالنبتة."
+    },
+    "empty": {
+      "title": "لا توجد مهام مكتملة",
+      "descBeforeBold": "تُظهر هذه الشاشة",
+      "bold": "المهام المغلقة من التذكيرات",
+      "descAfterBold": "من صفحتك الرئيسية (المهام المعلقة غير مرئية هنا).",
+      "filteredToPlantId": "تم تصفيتها حالياً حسب معرف النبتة {{plantId}}.",
+      "openFromTaskHint": "افتح التاريخ من مهمة معينة لعرض التاريخ الخاص بتلك النبتة فقط."
+    },
+    "tile": {
+      "completedOn": "تم الانتهاء في: {{date}}",
+      "noteLabel": "ملاحظة"
+    },
+    "menu": {
+      "expand": "توسيع",
+      "collapse": "طي",
+      "editReminder": "تحرير التذكير",
+      "goToPlant": "اذهب إلى النبتة",
+      "deleteTask": "حذف المهمة"
+    },
+    "types": {
+      "watering": "ري",
+      "fertilising": "تسميد",
+      "moisture": "رش",
+      "care": "رعاية",
+      "repot": "إعادة الزراعة"
+    }
+  }
+}

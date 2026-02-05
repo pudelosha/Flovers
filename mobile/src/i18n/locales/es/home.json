@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "Inicio"
+    },
+    "fab": {
+      "showOverdue": "Mostrar atrasadas",
+      "showDueToday": "Mostrar para hoy",
+      "showAllTasks": "Mostrar todas",
+      "markVisibleAsComplete": "Marcar visibles como completadas",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Limpiar filtro",
+      "history": "Historial"
+    },
+    "menu": {
+      "markAsComplete": "Marcar como completada",
+      "editReminder": "Editar recordatorio",
+      "goToPlant": "Ir a la planta",
+      "showHistory": "Mostrar historial",
+      "delete": "Eliminar"
+    },
+    "taskTypes": {
+      "watering": "RIEGO",
+      "moisture": "PULVERIZACIÓN",
+      "fertilising": "FERTILIZACIÓN",
+      "care": "CUIDADO",
+      "repot": "TRASPLANTE"
+    },
+    "toasts": {
+      "failedToLoadTasks": "No se pudieron cargar las tareas",
+      "taskCompleted": "Tarea completada",
+      "tasksCompleted": "Tareas completadas",
+      "completeFailed": "No se pudo completar",
+      "completeSomeFailed": "Se completaron {{ok}} de {{total}} tareas",
+      "taskNotLinkedToPlant": "Esta tarea no está vinculada a una planta."
+    },
+    "empty": {
+      "all": {
+        "title": "No hay tareas",
+        "introPrefix": "Esta página muestra tus próximas",
+        "introBold": "tareas de cuidado de plantas",
+        "introSuffix": "— riego, fertilización, trasplante y más.",
+        "toGetStarted": "Para empezar:",
+        "bullets": {
+          "createPlantsBold": "Añade plantas",
+          "createPlantsSuffix": "en la pestaña",
+          "plantsTabBold": "Plantas",
+          "addRemindersPrefix": "Añade",
+          "remindersBold": "recordatorios",
+          "addRemindersSuffix": "para cada planta para que aparezcan aquí como tareas.",
+          "optionallyConnectPrefix": "Opcionalmente conecta",
+          "iotBold": "dispositivos IoT (placas Arduino)",
+          "optionallyConnectMiddle": "en la pestaña",
+          "readingsTabBold": "Lecturas",
+          "optionallyConnectSuffix": "para seguir la temperatura, la humedad, la luz y la humedad del suelo en tiempo real."
+        },
+        "outro": "Cuando configures esto, la página de inicio se convertirá en tu centro para comprobar qué necesita cada planta."
+      },
+      "overdue": {
+        "title": "No hay tareas atrasadas",
+        "body": "No tienes ninguna tarea atrasada en este momento.\n\nTodo está al día — usa la opción «Mostrar todas» en el FAB para ver la lista completa, o cambia los filtros para revisar las próximas tareas."
+      },
+      "today": {
+        "title": "No hay tareas para hoy",
+        "body": "No tienes tareas para hoy.\n\nUsa la opción «Mostrar todas» en el FAB para ver los próximos recordatorios, o cambia los horarios de los recordatorios en las plantas."
+      }
+    }
+  }
+}

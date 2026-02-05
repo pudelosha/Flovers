@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "Nome e note",
+      "subtitle": "Dai un nome alla pianta, aggiungi note e (facoltativamente) imposta la data di acquisto, così potremo stimarne l’età.",
+      "displayNameLabel": "Nome",
+      "placeholderName": "es. Monstera del soggiorno",
+      "notesLabel": "Note",
+      "notesPlaceholder": "Suggerimenti di cura, problemi, dove è stata acquistata…",
+      "purchaseDateLabel": "Data di acquisto (facoltativa)",
+      "notSet": "Non impostata",
+      "done": "Fatto",
+      "setPurchaseDateTitle": "Imposta data di acquisto",
+      "datePlaceholder": "RRRR-MM-DD",
+      "cancel": "Annulla",
+      "set": "Imposta",
+      "invalidDateTitle": "Data non valida",
+      "invalidDateMessage": "Inserisci una data valida nel formato RRRR-MM-DD.",
+      "nameRequired": "Per creare una pianta, devi fornire un nome."
+    }
+  }
+}

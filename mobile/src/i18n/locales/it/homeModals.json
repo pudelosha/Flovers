@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Annulla",
+      "apply": "Applica",
+      "reset": "Reimposta"
+    },
+    "complete": {
+      "title": "Segna attività come completata",
+      "overdueInfo": "Questa attività è in ritardo. La prossima data verrà calcolata a partire da oggi {{intervalText}}.",
+      "noteLabel": "Nota (facoltativa)",
+      "noteHint": "Questa nota verrà salvata e sarà visibile in seguito per la pianta specifica nel Diario delle piante.",
+      "notePlaceholder": "Puoi aggiungere una breve nota su ciò che hai fatto, osservazioni, ecc.",
+      "confirm": "Segna come completata"
+    },
+    "completeBulk": {
+      "title": "Segna {{count}} attività come completate",
+      "overdueInfo": "Alcune attività sono in ritardo. Per le attività in ritardo la prossima data verrà calcolata a partire da oggi {{intervalText}}.",
+      "noteHint": "Questa nota verrà salvata per ogni attività completata e sarà visibile in seguito per la pianta specifica nel Diario delle piante.",
+      "confirm": "Segna come completate"
+    },
+    "filter": {
+      "title": "Filtra attività",
+      "plantLabel": "Pianta",
+      "locationLabel": "Posizione",
+      "taskTypesLabel": "Tipi di attività",
+      "dueDateRangeLabel": "Intervallo date di scadenza",
+      "fromLabel": "Da",
+      "toLabel": "A",
+      "anyPlant": "Qualsiasi pianta",
+      "selectPlant": "Seleziona pianta",
+      "anyLocation": "Qualsiasi posizione",
+      "datePlaceholder": "AAAA-MM-GG",
+      "clear": "Cancella"
+    },
+    "sort": {
+      "title": "Ordina attività",
+      "sortByLabel": "Ordina per",
+      "directionLabel": "Direzione",
+      "keys": {
+        "dueDate": "Data",
+        "plant": "Nome della pianta",
+        "location": "Posizione"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      }
+    }
+  }
+}

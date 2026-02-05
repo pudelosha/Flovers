@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "自动任务",
+      "subtitle": "我们可以根据植物的配置文件自动创建提醒（浇水、换盆、喷雾、施肥、护理）。",
+      "createAutoTasks": "为这株植物创建自动任务",
+      "requiresPlantDefinition": "需要植物定义。",
+      "labels": {
+        "generateWateringTask": "创建浇水任务",
+        "generateMistingTask": "创建喷雾任务",
+        "generateFertilisingTask": "创建施肥任务",
+        "generateCareTask": "创建护理任务",
+        "generateRepottingTask": "创建换盆任务"
+      },
+      "prompts": {
+        "lastWatered": "最后一次浇水是什么时候？",
+        "selectIntervalDays": "选择间隔（天）",
+        "recommendedInterval": "推荐间隔",
+        "lastRepotted": "最后一次换盆是什么时候？"
+      },
+      "notSpecified": "未指定",
+      "notSpecifiedDesc": "如果不确定，请跳过。",
+      "units": {
+        "day": "天",
+        "days": "天",
+        "month": "月",
+        "months": "个月"
+      },
+      "lastWatered": {
+        "today": "今天",
+        "yesterday": "昨天",
+        "three-four-days": "3–4 天前",
+        "one-week": "一周前",
+        "two-weeks": "两周前",
+        "unknown": "我记不清了"
+      },
+      "lastRepotted": {
+        "this-week": "本周",
+        "one-week-ago": "一周前",
+        "two-weeks-ago": "两周前",
+        "one-month-ago": "一个月前",
+        "unknown": "我记不清了"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "关闭",
+      "save": "保存",
+      "cancel": "取消",
+      "remove": "删除"
+    },
+    "definition": {
+      "title": "植物定义",
+      "traits": "特征",
+      "noId": "未找到植物定义标识符。",
+      "loadFailed": "无法加载植物定义。",
+      "error": "出了点问题。",
+      "empty": "没有定义数据。",
+      "body": "这是一个模态替代项。植物定义的详细信息将在稍后实现。"
+    },
+    "changeImage": {
+      "title": "更改照片",
+      "subtitle": "此照片保存在您的设备本地，并未上传。",
+      "noPlantId": "未找到植物标识符。",
+      "loadFailed": "无法加载本地照片。",
+      "error": "出了点问题。",
+      "noPhoto": "未选择照片",
+      "removedPreview": "照片将被删除",
+      "unsaved": "未保存的更改",
+      "takePhoto": "拍照",
+      "chooseGallery": "从图库选择",
+      "remove": "删除照片",
+      "permissionTitle": "所需权限",
+      "permissionCamera": "请授予相机和媒体权限以拍摄照片。",
+      "permissionGallery": "请授予媒体权限以选择照片。",
+      "cameraErrorTitle": "相机错误",
+      "pickerErrorTitle": "选择照片错误",
+      "saveFailedTitle": "保存失败",
+      "saveFailedMsg": "无法将此照片保存到本地。",
+      "confirmRemoveTitle": "删除照片？",
+      "confirmRemoveMsg": "点击“保存”后，照片将被删除。",
+      "confirmDiscardTitle": "放弃更改？",
+      "confirmDiscardMsg": "更改将不会保存。",
+      "discard": "放弃",
+      "removeFailedTitle": "删除失败",
+      "removeFailedMsg": "无法删除本地照片。"
+    }
+  }
+}

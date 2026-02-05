@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Annulla",
+      "apply": "Applica",
+      "clear": "Cancella",
+      "delete": "Elimina",
+      "create": "Crea",
+      "update": "Salva",
+      "reset": "Reimposta"
+    },
+    "confirmDelete": {
+      "title": "Elimina promemoria",
+      "areYouSurePrefix": "Sei sicuro di voler eliminare",
+      "areYouSureSuffix": "? Questa operazione non può essere annullata."
+    },
+    "edit": {
+      "titleCreate": "Aggiungi promemoria",
+      "titleEdit": "Modifica promemoria",
+      "typeLabel": "Tipo",
+      "plantLabel": "Pianta",
+      "selectPlant": "Seleziona pianta",
+      "locationLabel": "Posizione",
+      "locationPlaceholder": "Posizione",
+      "dueDateLabel": "Scadenza",
+      "datePlaceholder": "RRRR-MM-DD",
+      "intervalLabel": "Frequenza",
+      "intervalValuePlaceholder": "Valore"
+    },
+    "filter": {
+      "title": "Filtra promemoria",
+      "plantLabel": "Pianta",
+      "selectPlant": "Seleziona pianta",
+      "anyPlant": "Qualsiasi pianta",
+      "locationLabel": "Posizione",
+      "anyLocation": "Qualsiasi posizione",
+      "taskTypesLabel": "Tipi di attività",
+      "dueDateRangeLabel": "Intervallo di scadenza",
+      "fromLabel": "Da",
+      "toLabel": "A",
+      "datePlaceholder": "RRRR-MM-DD"
+    },
+    "sort": {
+      "title": "Ordina promemoria",
+      "sortByLabel": "Ordina per",
+      "directionLabel": "Direzione",
+      "keys": {
+        "dueDate": "Scadenza",
+        "plant": "Nome della pianta",
+        "location": "Posizione"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "إلغاء",
+      "apply": "تطبيق",
+      "delete": "حذف",
+      "selectPlant": "اختر النبات",
+      "selectLocation": "اختر الموقع",
+      "datePlaceholder": "YYYY-MM-DD",
+      "taskTypes": {
+        "watering": "الري",
+        "moisture": "الرطوبة",
+        "fertilising": "التسميد",
+        "care": "العناية",
+        "repot": "إعادة الزرع"
+      }
+    },
+    "delete": {
+      "title": "حذف السجل",
+      "scopeLabel": "النطاق",
+      "modes": {
+        "plant": "حذف للنبات المحدد",
+        "location": "حذف للموقع المحدد",
+        "types": "حذف المهام من النوع",
+        "olderThan": "حذف المهام الأقدم من"
+      },
+      "noPlantsHint": "ليس لديك أي نباتات في السجل بعد.",
+      "noLocationsHint": "ليس لديك أي مواقع في السجل بعد.",
+      "daysValue": "{{days}} أيام"
+    },
+    "filter": {
+      "title": "تصفية السجل",
+      "plantLabel": "النبات",
+      "locationLabel": "الموقع",
+      "taskTypesLabel": "أنواع المهام",
+      "completedDateRangeLabel": "نطاق تاريخ الانتهاء",
+      "fromLabel": "من",
+      "toLabel": "إلى",
+      "anyPlant": "أي نبات",
+      "anyLocation": "أي موقع",
+      "clear": "مسح"
+    },
+    "sort": {
+      "title": "ترتيب السجل",
+      "sortByLabel": "ترتيب حسب",
+      "directionLabel": "الاتجاه",
+      "keys": {
+        "completedAt": "تاريخ الانتهاء",
+        "plant": "اسم النبات",
+        "location": "الموقع"
+      },
+      "directions": {
+        "asc": "تصاعدي",
+        "desc": "تنازلي"
+      },
+      "reset": "إعادة تعيين"
+    }
+  }
+}

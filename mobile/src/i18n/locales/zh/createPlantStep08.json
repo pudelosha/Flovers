@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "名称和备注",
+      "subtitle": "为植物命名，添加备注，并（可选）设置购买日期，以便我们估算其年龄。",
+      "displayNameLabel": "名称",
+      "placeholderName": "例如：客厅的 monstera",
+      "notesLabel": "备注",
+      "notesPlaceholder": "护理提示、问题、购买地点……",
+      "purchaseDateLabel": "购买日期（可选）",
+      "notSet": "未设置",
+      "done": "完成",
+      "setPurchaseDateTitle": "设置购买日期",
+      "datePlaceholder": "YYYY-MM-DD",
+      "cancel": "取消",
+      "set": "设置",
+      "invalidDateTitle": "无效的日期",
+      "invalidDateMessage": "请输入正确格式的日期（YYYY-MM-DD）。",
+      "nameRequired": "要创建植物，您必须提供植物的名称。"
+    }
+  }
+}

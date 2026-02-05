@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Histórico de tarefas"
+    },
+    "fab": {
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "delete": "Excluir",
+      "clearFilter": "Limpar filtro",
+      "showAllHistory": "Mostrar todo o histórico"
+    },
+    "common": {
+      "unnamedPlant": "Planta sem nome"
+    },
+    "toasts": {
+      "failedToLoad": "Falha ao carregar o histórico de tarefas",
+      "historyDeleted": "Histórico excluído",
+      "failedToDeleteHistory": "Falha ao excluir o histórico",
+      "historyTaskDeleted": "Entrada do histórico excluída",
+      "failedToDeleteHistoryTask": "Falha ao excluir a entrada do histórico",
+      "taskNotLinkedToPlant": "Esta tarefa não está vinculada a uma planta."
+    },
+    "empty": {
+      "title": "Sem tarefas concluídas",
+      "descBeforeBold": "Esta tela mostra",
+      "bold": "tarefas concluídas de lembretes",
+      "descAfterBold": "da sua página inicial (tarefas pendentes não são visíveis aqui).",
+      "filteredToPlantId": "Atualmente filtrado por id da planta {{plantId}}.",
+      "openFromTaskHint": "Abra o histórico de uma tarefa específica para ver o histórico apenas para essa planta."
+    },
+    "tile": {
+      "completedOn": "Concluído em: {{date}}",
+      "noteLabel": "Nota"
+    },
+    "menu": {
+      "expand": "Expandir",
+      "collapse": "Recolher",
+      "editReminder": "Editar lembrete",
+      "goToPlant": "Ir para a planta",
+      "deleteTask": "Excluir tarefa"
+    },
+    "types": {
+      "watering": "rega",
+      "fertilising": "fertilização",
+      "moisture": "umidade",
+      "care": "cuidados",
+      "repot": "replantio"
+    }
+  }
+}

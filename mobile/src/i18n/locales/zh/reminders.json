@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "提醒",
+    "common": {
+      "unnamedPlant": "没有名字的植物",
+      "everyN": "每 {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "天",
+      "months": "月"
+    },
+    "types": {
+      "watering": "浇水",
+      "moisture": "喷雾",
+      "fertilising": "施肥",
+      "care": "护理",
+      "repot": "换盆"
+    },
+    "fab": {
+      "add": "添加提醒",
+      "calendar": "日历",
+      "list": "列表",
+      "sort": "排序",
+      "filter": "筛选",
+      "clearFilter": "清除筛选"
+    },
+    "empty": {
+      "title": "没有提醒",
+      "description": "提醒与特定植物相关。请确保您至少创建了一种植物。\n\n点击“+”按钮添加提醒。在弹出的窗口中选择植物、类型（浇水、喷雾、施肥、护理或换盆）、设置第一次提醒的日期和重复频率。"
+    },
+    "menu": {
+      "edit": "编辑提醒",
+      "delete": "删除提醒"
+    },
+    "tile": {
+      "repeatsEvery": "每 {{count}} {{unit}} 重复",
+      "dueToday": "今天到期",
+      "dueInOneDay": "1天后到期",
+      "dueInDays": "{{count}}天后到期",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "计划在 {{date}}",
+      "noItems": "今天没有提醒。"
+    },
+    "toast": {
+      "loadFailed": "加载提醒失败",
+      "deleted": "已删除提醒",
+      "deleteFailed": "删除失败",
+      "deleteFailedWithReason": "删除失败：{{reason}}",
+      "duplicateType": "该植物已有此类型的提醒。",
+      "created": "已创建提醒",
+      "updated": "已更新提醒",
+      "createFailed": "创建失败",
+      "createFailedWithReason": "创建失败：{{reason}}",
+      "updateFailed": "更新失败",
+      "updateFailedWithReason": "更新失败：{{reason}}"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Profilo della pianta",
+      "preferences": "Preferenze",
+      "errorProfile": "Non è stato possibile recuperare il profilo della pianta.",
+      "labels": {
+        "sun": "Esposizione al sole",
+        "water": "Annaffiatura",
+        "difficulty": "Difficoltà",
+        "potMaterials": "Materiali del vaso",
+        "soilMixes": "Miscele di terriccio",
+        "wateringInterval": "Annaffiatura",
+        "moistureInterval": "Controllo dell'umidità",
+        "fertilizeInterval": "Concimazione",
+        "repotInterval": "Rinvaso"
+      },
+      "values": {
+        "everyDays": "Ogni {{count}} giorni",
+        "everyMonths": "Ogni {{count}} mesi"
+      },
+      "traits": {
+        "sun": "Esposizione al sole",
+        "water": "Annaffiatura",
+        "difficulty": "Difficoltà",
+        "soil": "Terriccio",
+        "temperature": "Temperatura",
+        "humidity": "Umidità",
+        "toxic": "Tossica?",
+        "growth": "Crescita",
+        "light": "Luce",
+        "fertilizer": "Concimazione",
+        "recognize": "Riconosci la pianta"
+      }
+    }
+  }
+}

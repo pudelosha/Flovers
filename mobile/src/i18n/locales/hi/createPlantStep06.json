@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "स्वचालित कार्य",
+      "subtitle": "हम पौधे की प्रोफ़ाइल के आधार पर स्वचालित रूप से अनुस्मारक (पानी देना, पुनः रोपना, धुंआ देना, खाद देना, देखभाल) बना सकते हैं।",
+      "createAutoTasks": "इस पौधे के लिए स्वचालित कार्य बनाएं",
+      "requiresPlantDefinition": "पौधे की परिभाषा आवश्यक है।",
+      "labels": {
+        "generateWateringTask": "पानी देने का कार्य बनाएं",
+        "generateMistingTask": "धुंआ देने का कार्य बनाएं",
+        "generateFertilisingTask": "खाद देने का कार्य बनाएं",
+        "generateCareTask": "देखभाल का कार्य बनाएं",
+        "generateRepottingTask": "पुनः रोपने का कार्य बनाएं"
+      },
+      "prompts": {
+        "lastWatered": "अंतिम बार पानी कब दिया गया था?",
+        "selectIntervalDays": "अंतराल चुनें (दिन)",
+        "recommendedInterval": "सुझाया गया अंतराल",
+        "lastRepotted": "अंतिम बार पुनः रोपण कब किया गया था?"
+      },
+      "notSpecified": "निर्धारित नहीं किया गया",
+      "notSpecifiedDesc": "यदि आप सुनिश्चित नहीं हैं तो इसे छोड़ दें।",
+      "units": {
+        "day": "दिन",
+        "days": "दिन",
+        "month": "महीना",
+        "months": "महीने"
+      },
+      "lastWatered": {
+        "today": "आज",
+        "yesterday": "कल",
+        "three-four-days": "3-4 दिन पहले",
+        "one-week": "एक सप्ताह पहले",
+        "two-weeks": "2 सप्ताह पहले",
+        "unknown": "मुझे याद नहीं"
+      },
+      "lastRepotted": {
+        "this-week": "इस सप्ताह",
+        "one-week-ago": "1 सप्ताह पहले",
+        "two-weeks-ago": "2 सप्ताह पहले",
+        "one-month-ago": "1 माह पहले",
+        "unknown": "मुझे याद नहीं"
+      }
+    }
+  }
+}

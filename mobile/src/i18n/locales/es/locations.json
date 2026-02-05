@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "Ubicaciones",
+    "empty": {
+      "title": "Sin ubicaciones",
+      "description": "Las ubicaciones aparecerán automáticamente cuando las asignes a las plantas.\n\nEdita una planta y establece su ubicación para empezar a agrupar las plantas por habitaciones o zonas."
+    },
+    "fab": {
+      "add": "Añadir ubicación",
+      "sort": "Ordenar"
+    },
+    "menu": {
+      "edit": "Editar ubicación",
+      "delete": "Eliminar ubicación"
+    },
+    "plantCount": {
+      "one": "1 planta",
+      "few": "{{count}} plantas",
+      "many": "{{count}} plantas"
+    },
+    "toast": {
+      "loadFailed": "No se pudieron cargar las ubicaciones",
+      "added": "Ubicación añadida",
+      "deleted": "Ubicación eliminada",
+      "updatedLocal": "Ubicación actualizada (solo localmente)",
+      "saveFailed": "No se pudo guardar la ubicación",
+      "deleteFailed": "No se pudo eliminar esta ubicación."
+    },
+    "alert": {
+      "deleteFailedTitle": "La eliminación falló"
+    }
+  }
+}

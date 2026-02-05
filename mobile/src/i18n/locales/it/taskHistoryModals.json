@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Annulla",
+      "apply": "Applica",
+      "delete": "Elimina",
+      "selectPlant": "Seleziona pianta",
+      "selectLocation": "Seleziona posizione",
+      "datePlaceholder": "RRRR-MM-DD",
+      "taskTypes": {
+        "watering": "Annaffiatura",
+        "moisture": "Umidità",
+        "fertilising": "Concimazione",
+        "care": "Cura",
+        "repot": "Rinvaso"
+      }
+    },
+    "delete": {
+      "title": "Elimina cronologia",
+      "scopeLabel": "Ambito",
+      "modes": {
+        "plant": "Elimina per la pianta selezionata",
+        "location": "Elimina per la posizione selezionata",
+        "types": "Elimina attività di tipo",
+        "olderThan": "Elimina attività più vecchie di"
+      },
+      "noPlantsHint": "Non hai ancora nessuna pianta nella cronologia.",
+      "noLocationsHint": "Non hai ancora nessuna posizione nella cronologia.",
+      "daysValue": "{{days}} giorni"
+    },
+    "filter": {
+      "title": "Filtra cronologia",
+      "plantLabel": "Pianta",
+      "locationLabel": "Posizione",
+      "taskTypesLabel": "Tipi di attività",
+      "completedDateRangeLabel": "Intervallo date di completamento",
+      "fromLabel": "Da",
+      "toLabel": "A",
+      "anyPlant": "Qualsiasi pianta",
+      "anyLocation": "Qualsiasi posizione",
+      "clear": "Cancella"
+    },
+    "sort": {
+      "title": "Ordina cronologia",
+      "sortByLabel": "Ordina per",
+      "directionLabel": "Direzione",
+      "keys": {
+        "completedAt": "Data di completamento",
+        "plant": "Nome della pianta",
+        "location": "Posizione"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      },
+      "reset": "Reimposta"
+    }
+  }
+}

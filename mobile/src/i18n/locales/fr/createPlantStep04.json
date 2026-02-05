@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Ensoleillement",
+      "subtitle": "L’ensoleillement nous aide à ajuster les calendriers d’arrosage et les rappels d’entretien. Dites-nous combien de lumière atteint cet endroit et de quel côté se trouve la fenêtre.",
+      "lightLevel": "Niveau de lumière",
+      "low": "Faible",
+      "high": "Élevé",
+      "windowDirection": "Orientation de la fenêtre",
+      "measureLightDirection": "Mesurer la lumière et l’orientation",
+      "distanceFromWindow": "Distance par rapport à la fenêtre",
+      "orientations": {
+        "S": "Sud",
+        "E": "Est",
+        "W": "Ouest",
+        "N": "Nord"
+      },
+      "modal": {
+        "title": "Mesure de la lumière et de l’orientation",
+        "instructions": "Tenez le téléphone à l’horizontale (écran vers le haut) et orientez le bord supérieur vers la fenêtre. Déplacez lentement le téléphone près de la fenêtre, puis appuyez sur Mesure pour lancer le test de 5 secondes.",
+        "ambientLive": "Lumière (en direct)",
+        "headingLive": "Orientation (en direct)",
+        "testLabel": "Mesure de 5 secondes",
+        "running": "(en cours…)",
+        "last": "(dernier)",
+        "done": "terminé",
+        "bestLight": "Lumière (meilleure en 5 s) :",
+        "meanDirection": "Orientation (moyenne sur 5 s) :",
+        "close": "Fermer",
+        "measure5s": "Mesure (5 s)",
+        "measuring": "Mesure…",
+        "apply": "Appliquer",
+        "tip": "Astuce : sur de nombreux téléphones, le capteur de lumière se trouve sur le bord supérieur (près du haut-parleur). Tenez le téléphone à plat et orientez le bord supérieur vers la fenêtre pour obtenir la lecture la plus élevée.",
+        "notAvailable": "Indisponible",
+        "noSensor": "Aucun capteur",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Luminosité élevée, directe",
+          "brightIndirect": "Luminosité élevée, indirecte",
+          "medium": "Moyenne / mi-ombre",
+          "low": "Peu de lumière",
+          "veryLow": "Très peu de lumière"
+        }
+      }
+    }
+  }
+}

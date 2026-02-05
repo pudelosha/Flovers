@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "Piante"
+    },
+    "list": {
+      "unnamed": "Pianta senza nome"
+    },
+    "empty": {
+      "title": "Nessuna pianta",
+      "desc1": "Tocca il pulsante \"+\" nell’angolo in basso a destra per aggiungere la prima pianta.",
+      "desc2": "La procedura guidata di aggiunta della pianta ti aiuterà a configurare la pianta, impostarne i parametri e pianificare i promemoria."
+    },
+    "fab": {
+      "create": "Aggiungi pianta",
+      "sort": "Ordina",
+      "filter": "Filtra",
+      "clearFilter": "Cancella filtro",
+      "locations": "Posizioni"
+    },
+    "menu": {
+      "edit": "Modifica pianta",
+      "reminders": "Mostra promemoria",
+      "journal": "Mostra diario della pianta",
+      "showQr": "Mostra codice QR",
+      "delete": "Elimina pianta"
+    },
+    "toast": {
+      "loadFailed": "Impossibile caricare le piante",
+      "updated": "Pianta aggiornata",
+      "deleted": "Pianta eliminata",
+      "qrSaved": "Il codice QR è stato salvato nella galleria.",
+      "qrEmailed": "Un’e-mail con questo codice QR verrà inviata all’indirizzo del tuo account."
+    },
+    "alert": {
+      "loadFailedTitle": "Errore di caricamento",
+      "loadFailedMsg": "Impossibile caricare i dettagli della pianta.",
+      "updateFailedTitle": "Errore di aggiornamento",
+      "updateFailedMsg": "Impossibile aggiornare questa pianta.",
+      "deleteFailedTitle": "Errore di eliminazione",
+      "deleteFailedMsg": "Impossibile eliminare questa pianta."
+    }
+  }
+}

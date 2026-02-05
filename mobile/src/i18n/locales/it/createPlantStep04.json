@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Esposizione alla luce",
+      "subtitle": "L’esposizione alla luce ci aiuta a regolare i programmi di irrigazione e i promemoria di cura. Dicci quanta luce arriva in questo punto e in quale direzione si trova la finestra.",
+      "lightLevel": "Livello di luce",
+      "low": "Basso",
+      "high": "Alto",
+      "windowDirection": "Direzione della finestra",
+      "measureLightDirection": "Misura luce e direzione",
+      "distanceFromWindow": "Distanza dalla finestra",
+      "orientations": {
+        "S": "Sud",
+        "E": "Est",
+        "W": "Ovest",
+        "N": "Nord"
+      },
+      "modal": {
+        "title": "Misurazione della luce e della direzione",
+        "instructions": "Tieni il telefono in orizzontale (schermo verso l’alto) e orienta il bordo superiore verso la finestra. Muovi lentamente il telefono vicino alla finestra, quindi premi Misurazione per avviare il test di 5 secondi.",
+        "ambientLive": "Luce (in tempo reale)",
+        "headingLive": "Direzione (in tempo reale)",
+        "testLabel": "Misurazione di 5 secondi",
+        "running": "(in corso…)",
+        "last": "(ultimo)",
+        "done": "fatto",
+        "bestLight": "Luce (migliore in 5 s):",
+        "meanDirection": "Direzione (media su 5 s):",
+        "close": "Chiudi",
+        "measure5s": "Misurazione (5 s)",
+        "measuring": "Misurazione…",
+        "apply": "Applica",
+        "tip": "Suggerimento: su molti telefoni il sensore di luce si trova sul bordo superiore (vicino all’altoparlante). Tieni il telefono piatto e orienta il bordo superiore verso la finestra per trovare la lettura più alta.",
+        "notAvailable": "Non disponibile",
+        "noSensor": "Nessun sensore",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Luminoso, diretto",
+          "brightIndirect": "Luminoso, diffuso",
+          "medium": "Medio / mezz’ombra",
+          "low": "Poca luce",
+          "veryLow": "Molto poca"
+        }
+      }
+    }
+  }
+}

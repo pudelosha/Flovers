@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "Accueil"
+    },
+    "fab": {
+      "showOverdue": "Afficher en retard",
+      "showDueToday": "Afficher pour aujourd’hui",
+      "showAllTasks": "Afficher toutes les tâches",
+      "markVisibleAsComplete": "Marquer les visibles comme terminées",
+      "sort": "Trier",
+      "filter": "Filtrer",
+      "clearFilter": "Effacer le filtre",
+      "history": "Historique"
+    },
+    "menu": {
+      "markAsComplete": "Marquer comme terminée",
+      "editReminder": "Modifier le rappel",
+      "goToPlant": "Aller à la plante",
+      "showHistory": "Afficher l’historique",
+      "delete": "Supprimer"
+    },
+    "taskTypes": {
+      "watering": "ARROSAGE",
+      "moisture": "BRUMISATION",
+      "fertilising": "FERTILISATION",
+      "care": "ENTRETIEN",
+      "repot": "REMPOTAGE"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Échec du chargement des tâches",
+      "taskCompleted": "Tâche terminée",
+      "tasksCompleted": "Tâches terminées",
+      "completeFailed": "Impossible de terminer",
+      "completeSomeFailed": "{{ok}} tâches sur {{total}} terminées",
+      "taskNotLinkedToPlant": "Cette tâche n’est pas liée à une plante."
+    },
+    "empty": {
+      "all": {
+        "title": "Aucune tâche",
+        "introPrefix": "Cette page affiche vos prochaines",
+        "introBold": "tâches d’entretien des plantes",
+        "introSuffix": "— arrosage, fertilisation, rempotage et plus encore.",
+        "toGetStarted": "Pour commencer :",
+        "bullets": {
+          "createPlantsBold": "Ajoutez des plantes",
+          "createPlantsSuffix": "dans l’onglet",
+          "plantsTabBold": "Plantes",
+          "addRemindersPrefix": "Ajoutez des",
+          "remindersBold": "rappels",
+          "addRemindersSuffix": "pour chaque plante afin qu’ils apparaissent ici comme des tâches.",
+          "optionallyConnectPrefix": "Vous pouvez également connecter",
+          "iotBold": "des appareils IoT (cartes Arduino)",
+          "optionallyConnectMiddle": "dans l’onglet",
+          "readingsTabBold": "Mesures",
+          "optionallyConnectSuffix": "pour suivre en temps réel la température, l’humidité, la lumière et l’humidité du sol."
+        },
+        "outro": "Une fois configuré, l’écran d’accueil deviendra votre centre pour vérifier ce dont chaque plante a besoin."
+      },
+      "overdue": {
+        "title": "Aucune tâche en retard",
+        "body": "Vous n’avez actuellement aucune tâche en retard.\n\nTout est à jour — utilisez l’option « Afficher toutes les tâches » dans le FAB pour voir la liste complète, ou changez les filtres pour consulter les tâches à venir."
+      },
+      "today": {
+        "title": "Aucune tâche pour aujourd’hui",
+        "body": "Vous n’avez aucune tâche aujourd’hui.\n\nUtilisez l’option « Afficher toutes les tâches » dans le FAB pour voir les rappels à venir, ou modifiez les plannings de rappel sur les plantes."
+      }
+    }
+  }
+}

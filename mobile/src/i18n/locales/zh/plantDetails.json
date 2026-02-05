@@ -1,0 +1,117 @@
+{
+  "plantDetails": {
+    "headerTitle": "植物详情",
+    "common": {
+      "dash": "—",
+      "plant": "植物"
+    },
+    "errors": {
+      "noId": "未提供植物标识符或二维码。",
+      "failedToLoad": "加载植物失败。"
+    },
+    "states": {
+      "error": {
+        "title": "错误"
+      },
+      "notFound": {
+        "title": "未找到",
+        "msg": "无法加载此植物。"
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "未完成",
+        "msg": "未能完成此提醒。"
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "提醒已标记为完成。",
+      "qrSaved": "二维码已保存到图库。",
+      "qrSaveFailed": "无法保存二维码。",
+      "qrEmailPlaceholder": "带有此二维码的电子邮件将发送到您的账户邮箱。"
+    },
+    "permissions": {
+      "storage": {
+        "title": "存储权限",
+        "message": "我们需要访问权限以将二维码保存到图库。",
+        "ok": "确定",
+        "denied": "存储权限被拒绝。"
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "二维码渲染器尚未准备好。"
+    },
+    "info": {
+      "fallbackTitle": "植物 #{{id}}",
+      "purchased": "购买",
+      "notes": "备注",
+      "light": "光照",
+      "orientation": "方向",
+      "distance": "距离",
+      "pot": "花盆",
+      "soil": "土壤",
+      "cm": "厘米",
+      "orientations": {
+        "N": "北",
+        "E": "东",
+        "S": "南",
+        "W": "西"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "植物定义",
+        "editPlant": "编辑植物",
+        "changeImage": "更换图片",
+        "showReminders": "显示提醒"
+      },
+      "noDefinitionTitle": "没有植物定义",
+      "noDefinitionBody": "此植物尚未与植物定义关联。",
+      "editPlant": {
+        "title": "编辑植物",
+        "msg": "此植物的编辑功能稍后会实现。"
+      },
+      "showReminders": {
+        "title": "显示提醒",
+        "msg": "跳转到提醒功能会稍后实现。"
+      }
+    },
+    "latestReadings": {
+      "title": "最新读数",
+      "lastRead": {
+        "empty": "最后读数：—",
+        "value": "最后读数：{{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "二维码",
+      "scanner": "扫描仪",
+      "saveWord": "保存",
+      "emailWord": "发送",
+      "desc": {
+        "part1": "每个植物都有一个独特的二维码。当您在应用中扫描此二维码时，",
+        "part2": "应用将立即打开此植物的详细信息。",
+        "part3a": "您可以",
+        "part3b": "将二维码图像保存在手机上，或者",
+        "part3c": "打印并附加到花盆上。下次只需扫描标签即可，不必手动查找。"
+      },
+      "saveBtn": "保存",
+      "emailBtn": "发送"
+    },
+    "reminders": {
+      "title": "提醒",
+      "menu": {
+        "markComplete": "标记为完成",
+        "editReminder": "编辑提醒",
+        "showHistory": "显示历史"
+      },
+      "type": {
+        "watering": "浇水",
+        "fertilising": "施肥",
+        "moisture": "喷雾",
+        "care": "护理",
+        "repot": "换盆"
+      }
+    }
+  }
+}

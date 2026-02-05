@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "प्रारंभ"
+    },
+    "fab": {
+      "showOverdue": "बकाया दिखाएँ",
+      "showDueToday": "आज के लिए दिखाएँ",
+      "showAllTasks": "सभी कार्य दिखाएँ",
+      "markVisibleAsComplete": "दिखाई दे रहे कार्यों को पूर्ण के रूप में चिह्नित करें",
+      "sort": "क्रमबद्ध करें",
+      "filter": "फ़िल्टर करें",
+      "clearFilter": "फ़िल्टर साफ़ करें",
+      "history": "इतिहास"
+    },
+    "menu": {
+      "markAsComplete": "पूर्ण के रूप में चिह्नित करें",
+      "editReminder": "अनुस्मारक संपादित करें",
+      "goToPlant": "पौधे पर जाएं",
+      "showHistory": "इतिहास दिखाएँ",
+      "delete": "हटाएँ"
+    },
+    "taskTypes": {
+      "watering": "पानी देना",
+      "moisture": "नम करना",
+      "fertilising": "खाद देना",
+      "care": "देखभाल",
+      "repot": "पुनः पोषित करना"
+    },
+    "toasts": {
+      "failedToLoadTasks": "कार्य लोड करने में विफल",
+      "taskCompleted": "कार्य पूरा हुआ",
+      "tasksCompleted": "कार्य पूरे हुए",
+      "completeFailed": "पूरा करने में विफल",
+      "completeSomeFailed": "{{ok}} में से {{total}} कार्य पूरे हुए",
+      "taskNotLinkedToPlant": "यह कार्य पौधे से जुड़ा नहीं है।"
+    },
+    "empty": {
+      "all": {
+        "title": "कोई कार्य नहीं",
+        "introPrefix": "यह पृष्ठ आपके आगामी",
+        "introBold": "पौधे की देखभाल कार्यों को दिखाता है",
+        "introSuffix": "— पानी देना, खाद देना, पुनः पोषित करना और अन्य।",
+        "toGetStarted": "शुरू करने के लिए:",
+        "bullets": {
+          "createPlantsBold": "पौधे जोड़ें",
+          "createPlantsSuffix": "टैब में",
+          "plantsTabBold": "पौधे",
+          "addRemindersPrefix": "याद दिलाने वाले जोड़ें",
+          "remindersBold": "अनुस्मारक",
+          "addRemindersSuffix": "प्रत्येक पौधे के लिए, ताकि वे यहाँ कार्यों के रूप में दिखाई दें।",
+          "optionallyConnectPrefix": "वैकल्पिक रूप से कनेक्ट करें",
+          "iotBold": "IoT डिवाइस (Arduino बोर्ड)",
+          "optionallyConnectMiddle": "टैब में",
+          "readingsTabBold": "पढ़ाई",
+          "optionallyConnectSuffix": "ताकि आप तापमान, आर्द्रता, प्रकाश और मृदा आर्द्रता को वास्तविक समय में ट्रैक कर सकें।"
+        },
+        "outro": "जब आप इसे सेट कर लें, तो होम पेज आपके प्रत्येक पौधे की जरूरतों की जाँच करने के लिए आपका केंद्र बन जाएगा।"
+      },
+      "overdue": {
+        "title": "कोई बकाया कार्य नहीं",
+        "body": "आपके पास अभी कोई बकाया कार्य नहीं है।\n\nसभी कार्य अपडेट हैं — “सभी कार्य दिखाएँ” विकल्प का उपयोग करें या फ़िल्टर स्विच करके आगामी कार्यों को देखें।"
+      },
+      "today": {
+        "title": "आज के लिए कोई कार्य नहीं",
+        "body": "आज आपके पास कोई कार्य नहीं है।\n\n“सभी कार्य दिखाएँ” विकल्प का उपयोग करें या पौधों पर अनुस्मारक अनुसूची को बदलें।"
+      }
+    }
+  }
+}

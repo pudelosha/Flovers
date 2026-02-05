@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "Créer une plante"
+    },
+    "fallbackStep": {
+      "title": "Étape « {{step}} »",
+      "subtitle": "Cette étape sera implémentée prochainement."
+    },
+    "common": {
+      "previous": "Retour",
+      "next": "Suivant",
+      "create": "Créer",
+      "cancel": "Annuler",
+      "done": "Terminé",
+      "notSpecified": "Non spécifié"
+    }
+  }
+}

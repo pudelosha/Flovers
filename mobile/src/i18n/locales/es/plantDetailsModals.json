@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Cerrar",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "remove": "Eliminar"
+    },
+    "definition": {
+      "title": "Definición de la planta",
+      "traits": "Características",
+      "noId": "No se encontró el identificador de la definición de la planta.",
+      "loadFailed": "No se pudo cargar la definición de la planta.",
+      "error": "Algo salió mal.",
+      "empty": "No hay datos de la definición.",
+      "body": "Este es un modal de sustitución. Los detalles de la definición de la planta se implementarán más adelante."
+    },
+    "changeImage": {
+      "title": "Cambiar foto",
+      "subtitle": "Esta foto está guardada localmente en tu dispositivo y no se envía.",
+      "noPlantId": "No se encontró el identificador de la planta.",
+      "loadFailed": "No se pudo cargar la foto local.",
+      "error": "Algo salió mal.",
+      "noPhoto": "No se ha seleccionado una foto",
+      "removedPreview": "La foto será eliminada",
+      "unsaved": "Cambios no guardados",
+      "takePhoto": "Tomar foto",
+      "chooseGallery": "Elegir de la galería",
+      "remove": "Eliminar foto",
+      "permissionTitle": "Permisos requeridos",
+      "permissionCamera": "Otorga permisos para cámara y multimedia para tomar una foto.",
+      "permissionGallery": "Otorga permisos para multimedia para seleccionar una foto.",
+      "cameraErrorTitle": "Error de cámara",
+      "pickerErrorTitle": "Error al elegir foto",
+      "saveFailedTitle": "No se pudo guardar",
+      "saveFailedMsg": "No se pudo guardar esta foto localmente.",
+      "confirmRemoveTitle": "¿Eliminar foto?",
+      "confirmRemoveMsg": "La foto será eliminada al presionar 'Guardar'.",
+      "confirmDiscardTitle": "¿Descartar cambios?",
+      "confirmDiscardMsg": "Los cambios no serán guardados.",
+      "discard": "Descartar",
+      "removeFailedTitle": "No se pudo eliminar",
+      "removeFailedMsg": "No se pudo eliminar la foto local."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "apply": "Aplicar",
+      "clear": "Borrar",
+      "close": "Cerrar",
+      "reset": "Restablecer",
+      "save": "Guardar",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "Eliminar lectura",
+      "messageBefore": "¿Estás seguro de que deseas eliminar",
+      "messageAfter": "? Esta operación no se puede deshacer."
+    },
+    "deviceSetup": {
+      "title": "Configuración del dispositivo",
+      "httpEndpoints": "Puntos finales HTTP",
+      "addReadingPost": "Agregar lectura (POST)",
+      "readReadingsGetPost": "Obtener lecturas (GET/POST)",
+      "samplePayloads": "Cargas útiles de ejemplo",
+      "addReadingBody": "Cuerpo de la solicitud para agregar lectura",
+      "readRequestBody": "Cuerpo de la solicitud para obtener lecturas",
+      "currentAuthSecret": "Secreto de autorización actual",
+      "showAuthSecret": "Mostrar secreto de autorización",
+      "hideAuthSecret": "Ocultar secreto de autorización",
+      "generateNewSecret": "Generar nuevo secreto",
+      "downloadPdfDocumentation": "Descargar documentación en PDF",
+      "rotateConfirmTitle": "¿Rotar el secreto?",
+      "rotateConfirmText": "Generar un nuevo secreto invalidará el actual. Luego actualiza la configuración del dispositivo.",
+      "rotate": "Rotar"
+    },
+    "filter": {
+      "title": "Filtrar lecturas",
+      "plantLabel": "Planta",
+      "locationLabel": "Ubicación",
+      "statusLabel": "Estado",
+      "selectPlant": "Seleccionar planta",
+      "anyPlant": "Cualquier planta",
+      "anyLocation": "Cualquier ubicación",
+      "anyStatus": "Cualquier estado",
+      "statusEnabled": "Habilitado",
+      "statusDisabled": "Deshabilitado"
+    },
+    "sort": {
+      "title": "Ordenar lecturas",
+      "sortBy": "Ordenar por",
+      "direction": "Dirección",
+      "keyPlantName": "Nombre de la planta",
+      "keyLocation": "Ubicación",
+      "keyLastRead": "Última lectura",
+      "ascending": "Ascendente",
+      "descending": "Descendente"
+    },
+    "upsert": {
+      "linkDeviceTitle": "Vincular dispositivo",
+      "editDeviceTitle": "Editar dispositivo",
+      "noPlantsText": "Aún no tienes plantas. Primero agrega una planta para vincular el dispositivo.",
+      "selectPlant": "Seleccionar planta",
+      "locationPlaceholder": "Ubicación",
+      "deviceNameRequired": "Nombre del dispositivo (requerido)",
+      "sensors": "Sensores",
+      "sensorTemperature": "Temperatura",
+      "sensorHumidity": "Humedad",
+      "sensorLight": "Luz",
+      "sensorSoilMoisture": "Humedad del suelo",
+      "moistAlertLabel": "Enviar alertas cuando la humedad del suelo baje de un umbral",
+      "thresholdLabel": "Umbral:",
+      "samplingInterval": "Intervalo de muestreo",
+      "everyXHours": "Cada {{count}} horas",
+      "authSecret": "Secreto de autorización",
+      "deviceKey": "Clave del dispositivo",
+      "sendCodeViaEmail": "Enviar código por correo electrónico",
+      "saveCodeAsText": "Guardar código como texto",
+      "enabled": "Habilitado",
+      "ingestReadingsFromDevice": "Obtener lecturas de este dispositivo",
+      "notesOptional": "Notas… (opcional)"
+    }
+  }
+}

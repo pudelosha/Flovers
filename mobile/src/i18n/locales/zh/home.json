@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "开始"
+    },
+    "fab": {
+      "showOverdue": "显示逾期任务",
+      "showDueToday": "显示今天的任务",
+      "showAllTasks": "显示所有任务",
+      "markVisibleAsComplete": "将可见任务标记为完成",
+      "sort": "排序",
+      "filter": "筛选",
+      "clearFilter": "清除筛选",
+      "history": "历史"
+    },
+    "menu": {
+      "markAsComplete": "标记为完成",
+      "editReminder": "编辑提醒",
+      "goToPlant": "前往植物",
+      "showHistory": "显示历史",
+      "delete": "删除"
+    },
+    "taskTypes": {
+      "watering": "浇水",
+      "moisture": "喷雾",
+      "fertilising": "施肥",
+      "care": "护理",
+      "repot": "换盆"
+    },
+    "toasts": {
+      "failedToLoadTasks": "无法加载任务",
+      "taskCompleted": "任务已完成",
+      "tasksCompleted": "任务已完成",
+      "completeFailed": "完成失败",
+      "completeSomeFailed": "已完成{{ok}}个任务中的{{total}}个",
+      "taskNotLinkedToPlant": "此任务未与植物关联。"
+    },
+    "empty": {
+      "all": {
+        "title": "没有任务",
+        "introPrefix": "此页面显示您的即将到来",
+        "introBold": "植物护理任务",
+        "introSuffix": "— 浇水、施肥、换盆等。",
+        "toGetStarted": "开始使用：",
+        "bullets": {
+          "createPlantsBold": "添加植物",
+          "createPlantsSuffix": "在“植物”标签页",
+          "plantsTabBold": "植物",
+          "addRemindersPrefix": "添加",
+          "remindersBold": "提醒",
+          "addRemindersSuffix": "为每个植物设置提醒，使它们出现在此处作为任务。",
+          "optionallyConnectPrefix": "可选连接",
+          "iotBold": "物联网设备（Arduino板）",
+          "optionallyConnectMiddle": "在“读数”标签页",
+          "readingsTabBold": "读数",
+          "optionallyConnectSuffix": "以实时跟踪温度、湿度、光照和土壤湿度。"
+        },
+        "outro": "配置完成后，首页将成为您检查每个植物需求的中心。"
+      },
+      "overdue": {
+        "title": "没有逾期任务",
+        "body": "现在没有逾期任务。\n\n一切都按时进行 — 使用FAB选项“显示所有”查看完整任务列表，或切换筛选器查看即将到来的任务。"
+      },
+      "today": {
+        "title": "今天没有任务",
+        "body": "今天没有任务。\n\n使用FAB选项“显示所有”查看即将到来的提醒，或更改植物的提醒安排。"
+      }
+    }
+  }
+}

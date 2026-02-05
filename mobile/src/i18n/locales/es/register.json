@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "Registro",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "termsAgreement": "Acepto",
+    "termsLink": "Términos y condiciones",
+    "signUpButton": "Registrarse",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión",
+    "errors": {
+      "invalidEmail": "Introduce una dirección de correo electrónico válida.",
+      "shortPassword": "La contraseña debe tener al menos 6 caracteres.",
+      "passwordsMismatch": "Las contraseñas no coinciden.",
+      "termsRequired": "Debes aceptar los términos y condiciones.",
+      "incompleteForm": "Por favor, completa el formulario.",
+      "emailTaken": "Esta dirección de correo electrónico ya está en uso.",
+      "registrationFailed": "El registro ha fallado. Intenta de nuevo.",
+      "generic": "Algo salió mal. Intenta de nuevo.",
+      "cannotOpenLink": "No se puede abrir el enlace."
+    },
+    "success": {
+      "accountCreated": "Cuenta creada. ¡Bienvenido!"
+    }
+  }
+}

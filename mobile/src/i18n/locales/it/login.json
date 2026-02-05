@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Accesso",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Accedi",
+    "forgotPassword": "Hai dimenticato la password?",
+    "resendActivation": "Non hai ricevuto l'e-mail di attivazione?",
+    "noAccount": "Non hai un account?",
+    "signUp": "Registrati",
+    "errors": {
+      "invalidCredentials": "Email o password non validi.",
+      "generic": "Qualcosa è andato storto. Riprova."
+    },
+    "success": {
+      "welcome": "Bentornato!"
+    }
+  }
+}

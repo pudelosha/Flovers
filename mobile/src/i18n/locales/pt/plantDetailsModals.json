@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Fechar",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "remove": "Remover"
+    },
+    "definition": {
+      "title": "Definição da planta",
+      "traits": "Características",
+      "noId": "Não foi encontrado o identificador da definição da planta.",
+      "loadFailed": "Não foi possível carregar a definição da planta.",
+      "error": "Algo deu errado.",
+      "empty": "Sem dados de definição.",
+      "body": "Este é um modal-substituto. Os detalhes da definição da planta serão implementados posteriormente."
+    },
+    "changeImage": {
+      "title": "Mudar foto",
+      "subtitle": "Esta foto está salva localmente no seu dispositivo e não está sendo enviada.",
+      "noPlantId": "Não foi encontrado o identificador da planta.",
+      "loadFailed": "Não foi possível carregar a foto local.",
+      "error": "Algo deu errado.",
+      "noPhoto": "Nenhuma foto selecionada",
+      "removedPreview": "A foto será removida",
+      "unsaved": "Alterações não salvas",
+      "takePhoto": "Tirar foto",
+      "chooseGallery": "Escolher da galeria",
+      "remove": "Remover foto",
+      "permissionTitle": "Permissões necessárias",
+      "permissionCamera": "Conceda permissões para câmera e mídia para tirar uma foto.",
+      "permissionGallery": "Conceda permissões para mídia para selecionar uma foto.",
+      "cameraErrorTitle": "Erro na câmera",
+      "pickerErrorTitle": "Erro na seleção de foto",
+      "saveFailedTitle": "Falha ao salvar",
+      "saveFailedMsg": "Não foi possível salvar esta foto localmente.",
+      "confirmRemoveTitle": "Remover foto?",
+      "confirmRemoveMsg": "A foto será removida após pressionar 'Salvar'.",
+      "confirmDiscardTitle": "Descartar alterações?",
+      "confirmDiscardMsg": "As alterações não serão salvas.",
+      "discard": "Descartar",
+      "removeFailedTitle": "Falha ao remover",
+      "removeFailedMsg": "Não foi possível remover a foto local."
+    }
+  }
+}

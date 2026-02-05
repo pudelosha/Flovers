@@ -1,0 +1,35 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "选择植物",
+      "subtitle": "您可以浏览我们的完整植物库，选择流行列表中的植物，或使用相机扫描植物。您也可以跳过此步骤，但选择植物将帮助我们自动建议护理任务，例如浇水。",
+      "scanButton": "扫描植物",
+      "searchPlaceholder": "搜索植物",
+      "popularPlants": "流行植物",
+      "noPlantsAvailable": "没有可用的植物",
+      "errorSearch": "无法加载植物列表。",
+      "errorPopular": "无法加载流行植物"
+    },
+    "scannerModal": {
+      "title": "扫描植物",
+      "selectPlant": "选择已检测到的植物",
+      "scanInstructions": "拍摄一张照片或从图库中选择一张。请使用清晰、高质量的照片，确保植物的叶子形状清晰可见，居中且没有被其他植物或物品挡住。",
+      "noPhoto": "没有照片",
+      "takePhoto": "拍照",
+      "fromGallery": "从图库",
+      "recognize": "识别植物",
+      "cameraRequired": "需要授权",
+      "cameraPermissionMessage": "请授权相机和媒体权限以拍摄照片。",
+      "libraryRequired": "需要授权",
+      "libraryPermissionMessage": "请授权媒体权限以选择照片。",
+      "cameraError": "相机错误",
+      "libraryError": "选择错误",
+      "cameraFailure": "无法打开相机。",
+      "libraryFailure": "无法打开图库。",
+      "recognitionFailure": "无法识别植物。",
+      "noResults": "没有结果。请尝试拍摄更清晰的照片。",
+      "back": "返回",
+      "close": "关闭"
+    }
+  }
+}

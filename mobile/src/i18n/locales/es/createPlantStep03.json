@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Cargando...",
+      "title": "Elige una ubicación",
+      "subtitle": "Opcional, pero útil: las ubicaciones permiten agrupar plantas y luego ordenarlas o filtrarlas.",
+      "errorLoadingLocations": "No se pudieron cargar las ubicaciones.",
+      "createLocation": "Crear nueva ubicación",
+      "yourLocations": "Tus ubicaciones",
+      "categories": {
+        "indoor": "Interiores",
+        "outdoor": "Exteriores",
+        "other": "Otros"
+      },
+      "noLocations": {
+        "indoor": "No hay ubicaciones interiores.",
+        "outdoor": "No hay ubicaciones exteriores.",
+        "other": "No hay otras ubicaciones."
+      },
+      "locationExists": "Ya existe una ubicación con este nombre.",
+      "errorCreatingLocation": "No se pudo crear la ubicación",
+      "quickSuggestions": "Sugerencias rápidas"
+    },
+    "locationModal": {
+      "title": "Nueva ubicación",
+      "locationName": "Nombre de la ubicación",
+      "category": "Categoría",
+      "indoor": "Interior",
+      "outdoor": "Exterior",
+      "other": "Otra",
+      "create": "Crear",
+      "cancel": "Cancelar",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Salón",
+          "kitchen": "Cocina",
+          "diningRoom": "Comedor",
+          "bedroom": "Dormitorio",
+          "bathroom": "Baño",
+          "hallway": "Pasillo",
+          "office": "Oficina",
+          "kidsRoom": "Habitación infantil"
+        },
+        "outdoor": {
+          "balcony": "Balcón",
+          "terrace": "Terraza",
+          "patio": "Patio",
+          "garden": "Jardín",
+          "frontYard": "Jardín delantero",
+          "backyard": "Jardín trasero",
+          "porch": "Porche",
+          "greenhouse": "Invernadero"
+        },
+        "other": {
+          "staircase": "Escalera",
+          "garage": "Garaje",
+          "basement": "Sótano",
+          "lobby": "Vestíbulo",
+          "sunroom": "Galería",
+          "workshop": "Taller",
+          "studio": "Estudio",
+          "attic": "Ático"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "पौधे की प्रोफ़ाइल",
+      "preferences": "प्राथमिकताएँ",
+      "errorProfile": "पौधे की प्रोफ़ाइल प्राप्त करने में विफल रहा।",
+      "labels": {
+        "sun": "सूरज की रोशनी",
+        "water": "पानी देना",
+        "difficulty": "कठिनाई",
+        "potMaterials": "गमले की सामग्री",
+        "soilMixes": "मिट्टी के मिश्रण",
+        "wateringInterval": "पानी देना",
+        "moistureInterval": "नमी की जांच",
+        "fertilizeInterval": "उर्वरक देना",
+        "repotInterval": "गमला बदलना"
+      },
+      "values": {
+        "everyDays": "हर {{count}} दिन",
+        "everyMonths": "हर {{count}} महीने"
+      },
+      "traits": {
+        "sun": "सूरज की रोशनी",
+        "water": "पानी देना",
+        "difficulty": "कठिनाई",
+        "soil": "मिट्टी",
+        "temperature": "तापमान",
+        "humidity": "नमी",
+        "toxic": "विषाक्त?",
+        "growth": "विकास",
+        "light": "प्रकाश",
+        "fertilizer": "उर्वरक",
+        "recognize": "पौधे को पहचानें"
+      }
+    }
+  }
+}

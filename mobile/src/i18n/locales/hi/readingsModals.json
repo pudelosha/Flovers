@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "रद्द करें",
+      "delete": "हटाएं",
+      "apply": "लागू करें",
+      "clear": "साफ़ करें",
+      "close": "बंद करें",
+      "reset": "रीसेट करें",
+      "save": "सहेजें",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "पढ़ाई हटाएं",
+      "messageBefore": "क्या आप वाकई इसे हटाना चाहते हैं",
+      "messageAfter": "? इस क्रिया को रद्द नहीं किया जा सकता।"
+    },
+    "deviceSetup": {
+      "title": "डिवाइस सेटअप",
+      "httpEndpoints": "HTTP एन्डपॉइंट्स",
+      "addReadingPost": "पढ़ाई जोड़ें (POST)",
+      "readReadingsGetPost": "पढ़ाई प्राप्त करें (GET/POST)",
+      "samplePayloads": "नमूना पेलोड्स",
+      "addReadingBody": "पढ़ाई जोड़ने का अनुरोध बॉडी",
+      "readRequestBody": "पढ़ाई प्राप्त करने का अनुरोध बॉडी",
+      "currentAuthSecret": "वर्तमान प्रमाणीकरण गुप्त कोड",
+      "showAuthSecret": "प्रमाणीकरण गुप्त कोड दिखाएं",
+      "hideAuthSecret": "प्रमाणीकरण गुप्त कोड छिपाएं",
+      "generateNewSecret": "नया गुप्त कोड उत्पन्न करें",
+      "downloadPdfDocumentation": "PDF दस्तावेज़ डाउनलोड करें",
+      "rotateConfirmTitle": "गुप्त कोड घुमाएं?",
+      "rotateConfirmText": "नया गुप्त कोड उत्पन्न करने से वर्तमान को अमान्य कर दिया जाएगा। फिर डिवाइस सेटअप को अपडेट करें।",
+      "rotate": "घुमाएं"
+    },
+    "filter": {
+      "title": "पढ़ाई को फ़िल्टर करें",
+      "plantLabel": "पौधा",
+      "locationLabel": "स्थान",
+      "statusLabel": "स्थिति",
+      "selectPlant": "पौधा चुनें",
+      "anyPlant": "कोई भी पौधा",
+      "anyLocation": "कोई भी स्थान",
+      "anyStatus": "कोई भी स्थिति",
+      "statusEnabled": "सक्षम",
+      "statusDisabled": "निष्क्रिय"
+    },
+    "sort": {
+      "title": "पढ़ाई को छांटें",
+      "sortBy": "के अनुसार छांटें",
+      "direction": "दिशा",
+      "keyPlantName": "पौधे का नाम",
+      "keyLocation": "स्थान",
+      "keyLastRead": "अंतिम पढ़ाई",
+      "ascending": "चढ़ाई",
+      "descending": "उतराई"
+    },
+    "upsert": {
+      "linkDeviceTitle": "डिवाइस जोड़ें",
+      "editDeviceTitle": "डिवाइस संपादित करें",
+      "noPlantsText": "आपके पास अभी कोई पौधे नहीं हैं। कृपया पहले पौधा जोड़ें, फिर डिवाइस जोड़ें।",
+      "selectPlant": "पौधा चुनें",
+      "locationPlaceholder": "स्थान",
+      "deviceNameRequired": "डिवाइस का नाम (आवश्यक)",
+      "sensors": "सेंसर",
+      "sensorTemperature": "तापमान",
+      "sensorHumidity": "आर्द्रता",
+      "sensorLight": "प्रकाश",
+      "sensorSoilMoisture": "मिट्टी की नमी",
+      "moistAlertLabel": "जब मिट्टी की नमी सीमा से नीचे गिर जाए, तो अलर्ट भेजें",
+      "thresholdLabel": "सीमा:",
+      "samplingInterval": "नमूना अंतराल",
+      "everyXHours": "हर {{count}} घंटे",
+      "authSecret": "प्रमाणीकरण गुप्त कोड",
+      "deviceKey": "डिवाइस कुंजी",
+      "sendCodeViaEmail": "ईमेल द्वारा कोड भेजें",
+      "saveCodeAsText": "कोड को टेक्स्ट के रूप में सहेजें",
+      "enabled": "सक्षम",
+      "ingestReadingsFromDevice": "इस डिवाइस से पढ़ाई प्राप्त करें",
+      "notesOptional": "नोट्स… (वैकल्पिक)"
+    }
+  }
+}

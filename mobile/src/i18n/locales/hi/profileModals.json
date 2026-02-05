@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "भेजना..."
+    },
+    "support": {
+      "copyToMe": "ईमेल पर मुझे भी एक प्रति भेजें"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "ईमेल बदलें",
+        "newEmailPlaceholder": "नया ईमेल",
+        "currentPasswordPlaceholder": "वर्तमान पासवर्ड"
+      },
+      "changePassword": {
+        "title": "पासवर्ड बदलें",
+        "currentPasswordPlaceholder": "वर्तमान पासवर्ड",
+        "newPasswordPlaceholder": "नया पासवर्ड",
+        "confirmNewPasswordPlaceholder": "नए पासवर्ड की पुष्टि करें",
+        "update": "अपडेट करें"
+      },
+      "deleteAccount": {
+        "title": "खाता हटाएं",
+        "warning": "यह क्रिया अपरिवर्तनीय है। यदि आप जारी रखते हैं, तो आपका खाता और डेटा स्थायी रूप से हटा दिया जाएगा।",
+        "passwordPlaceholder": "पुष्टि करने के लिए पासवर्ड दर्ज करें"
+      },
+      "reportBug": {
+        "title": "बग रिपोर्ट करें",
+        "subjectPlaceholder": "विषय",
+        "descriptionPlaceholder": "समस्या का विवरण दें..."
+      },
+      "contactUs": {
+        "title": "हमसे संपर्क करें",
+        "subjectPlaceholder": "विषय",
+        "messagePlaceholder": "हम आपकी कैसे मदद कर सकते हैं?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "नया ईमेल दर्ज करें।",
+      "enterCurrentPassword": "वर्तमान पासवर्ड दर्ज करें।",
+      "emailUpdated": "ईमेल को अपडेट किया गया है।",
+      "couldNotChangeEmail": "ईमेल बदलने में असमर्थ। कृपया पासवर्ड जांचें और पुनः प्रयास करें।",
+      "enterNewPassword": "नया पासवर्ड दर्ज करें।",
+      "passwordsDoNotMatch": "नए पासवर्ड मेल नहीं खाते।",
+      "passwordUpdated": "पासवर्ड को अपडेट किया गया है।",
+      "couldNotChangePassword": "पासवर्ड बदलने में असमर्थ। कृपया वर्तमान पासवर्ड जांचें और पुनः प्रयास करें।",
+      "enterSubject": "विषय दर्ज करें।",
+      "enterMessage": "संदेश दर्ज करें।",
+      "enterDescription": "समस्या का विवरण दर्ज करें।",
+      "contactSent": "संदेश भेजा गया है। हम जल्द ही संपर्क करेंगे।",
+      "bugSent": "बग रिपोर्ट भेजी गई है। धन्यवाद।",
+      "couldNotSendContact": "संदेश भेजने में असमर्थ। कृपया पुनः प्रयास करें।",
+      "couldNotSendBug": "बग रिपोर्ट भेजने में असमर्थ। कृपया पुनः प्रयास करें।",
+      "deleteNotImplemented": "खाता हटाने की प्रक्रिया अभी उपलब्ध नहीं है।",
+      "requestTimedOut": "समय सीमा समाप्त हो गई। कृपया पुनः प्रयास करें।"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Scanner"
+    },
+    "howItWorks": {
+      "title": "Come funziona"
+    },
+    "instruction": "Punta la fotocamera sul codice QR della pianta. Quando viene riconosciuto, l’app aprirà automaticamente i dettagli di quella pianta.",
+    "hint1": "Ogni pianta ha il proprio codice QR. Puoi salvarlo, stamparlo come una piccola etichetta, attaccarlo al vaso e scansionarlo qui per aprire immediatamente la pianta.",
+    "qrAvailableIn": "I codici QR sono disponibili in:",
+    "qrPath1": "Piante → tocca la pianta → Dettagli della pianta",
+    "qrPath2": "Piante → menu della scheda → Mostra codice QR",
+    "permissionRequired": "Autorizzazione della fotocamera richiesta",
+    "permissionHint": "Abilita l’accesso alla fotocamera nelle impostazioni di sistema per scansionare i codici QR.",
+    "openSettings": "Apri impostazioni",
+    "initializingCamera": "Inizializzazione della fotocamera…"
+  }
+}

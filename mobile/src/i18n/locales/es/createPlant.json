@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "Crear planta"
+    },
+    "fallbackStep": {
+      "title": "Krok „{{step}}”",
+      "subtitle": "Este paso se implementará pronto."
+    },
+    "common": {
+      "previous": "Atrás",
+      "next": "Siguiente",
+      "create": "Crear",
+      "cancel": "Cancelar",
+      "done": "Listo",
+      "notSpecified": "No especificado"
+    }
+  }
+}

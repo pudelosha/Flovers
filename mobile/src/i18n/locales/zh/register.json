@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "注册",
+    "email": "电子邮件",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "termsAgreement": "我接受",
+    "termsLink": "条款",
+    "signUpButton": "注册",
+    "haveAccount": "已经有账户？",
+    "loginLink": "登录",
+    "errors": {
+      "invalidEmail": "请输入有效的电子邮件地址。",
+      "shortPassword": "密码必须至少包含6个字符。",
+      "passwordsMismatch": "密码不匹配。",
+      "termsRequired": "您必须接受条款。",
+      "incompleteForm": "请填写完整表单。",
+      "emailTaken": "该电子邮件地址已被注册。",
+      "registrationFailed": "注册失败。请再试一次。",
+      "generic": "出现问题。请再试一次。",
+      "cannotOpenLink": "无法打开链接。"
+    },
+    "success": {
+      "accountCreated": "账户创建成功。欢迎！"
+    }
+  }
+}

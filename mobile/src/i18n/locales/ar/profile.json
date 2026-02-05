@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "الملف الشخصي"
+    },
+    "common": {
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "change": "تغيير",
+      "delete": "حذف",
+      "send": "إرسال"
+    },
+    "account": {
+      "title": "الحساب",
+      "emailLabel": "البريد الإلكتروني",
+      "createdLabel": "تم الإنشاء",
+      "changeEmail": "تغيير البريد الإلكتروني",
+      "changePassword": "تغيير كلمة المرور",
+      "deleteAccount": "حذف الحساب",
+      "logout": "تسجيل الخروج"
+    },
+    "notifications": {
+      "title": "الإشعارات",
+      "emailSection": "البريد الإلكتروني",
+      "emailDailyLabel": "ملخص يومي للمهام لليوم",
+      "emailDailyHint": "رسالة واحدة يوميًا تحتوي على ملخص المهام لليوم.",
+      "sendAt": "إرسال في",
+      "email24hLabel": "إرسال تذكير بعد 24 ساعة",
+      "email24hHint": "إذا كانت المهام لليوم غير مكتملة، إرسال تذكير غدًا.",
+      "mobileSection": "الهاتف",
+      "pushDailyLabel": "إشعار يومي على الهاتف",
+      "pushDailyHint": "إشعار نظامي واحد مع ملخص المهام لليوم.",
+      "notifyAt": "إشعار في",
+      "push24hLabel": "إشعار بعد 24 ساعة",
+      "push24hHint": "إذا كانت المهام متأخرة، إرسال إشعار في اليوم التالي."
+    },
+    "settings": {
+      "title": "الإعدادات",
+      "language": "اللغة",
+      "dateTimeFormat": "تنسيق التاريخ / الوقت",
+      "temperatureUnits": "وحدات درجة الحرارة",
+      "measurementUnits": "وحدات القياس",
+      "fabPosition": "موقع الزر العائم",
+      "background": "الخلفية",
+      "tileMotive": "نمط البلاط",
+      "tilesTransparency": "شفافية البلاط",
+      "level": "المستوى",
+      "temperatureOptions": {
+        "C": "°C (مئوي)",
+        "F": "°F (فهرنهايت)",
+        "K": "K (كلفن)"
+      },
+      "measureOptions": {
+        "metric": "مترية (سم / م)",
+        "imperial": "إمبراطوري (بوصة / قدم)"
+      },
+      "fabPositionOptions": {
+        "right": "يمين",
+        "left": "يسار"
+      },
+      "backgroundOptions": {
+        "bg1": "خلفية 1",
+        "bg2": "خلفية 2",
+        "bg3": "خلفية 3",
+        "bg4": "خلفية 4",
+        "bg5": "خلفية 5"
+      },
+      "tileMotiveOptions": {
+        "light": "فاتح",
+        "dark": "داكن"
+      }
+    },
+    "support": {
+      "title": "الدعم",
+      "contactUs": "اتصل بنا",
+      "reportBug": "الإبلاغ عن خطأ",
+      "aboutTitle": "حول التطبيق",
+      "versionLabel": "الإصدار",
+      "releaseDateLabel": "تاريخ الإصدار",
+      "contactLabel": "التواصل"
+    },
+    "toasts": {
+      "unauthorized": "غير مصرح به",
+      "unauthorizedLoginAgain": "غير مصرح به. قم بتسجيل الدخول مرة أخرى.",
+      "failedToLoadPreferences": "فشل تحميل إعدادات الملف الشخصي. حاول مرة أخرى.",
+      "notificationsUpdated": "تم تحديث إعدادات الإشعارات.",
+      "couldNotSaveNotifications": "فشل حفظ إعدادات الإشعارات.",
+      "settingsUpdated": "تم تحديث الإعدادات.",
+      "couldNotSaveSettings": "فشل حفظ الإعدادات."
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "Plantes"
+    },
+    "list": {
+      "unnamed": "Plante sans nom"
+    },
+    "empty": {
+      "title": "Aucune plante",
+      "desc1": "Appuyez sur le bouton « + » dans le coin inférieur droit pour ajouter votre première plante.",
+      "desc2": "L’assistant d’ajout de plante vous aidera à configurer la plante, définir ses paramètres et planifier des rappels."
+    },
+    "fab": {
+      "create": "Ajouter une plante",
+      "sort": "Trier",
+      "filter": "Filtrer",
+      "clearFilter": "Effacer le filtre",
+      "locations": "Emplacements"
+    },
+    "menu": {
+      "edit": "Modifier la plante",
+      "reminders": "Afficher les rappels",
+      "journal": "Afficher le journal de la plante",
+      "showQr": "Afficher le code QR",
+      "delete": "Supprimer la plante"
+    },
+    "toast": {
+      "loadFailed": "Échec du chargement des plantes",
+      "updated": "Plante mise à jour",
+      "deleted": "Plante supprimée",
+      "qrSaved": "Le code QR a été enregistré dans la galerie.",
+      "qrEmailed": "Un e-mail avec ce code QR sera envoyé à l’adresse de votre compte."
+    },
+    "alert": {
+      "loadFailedTitle": "Erreur de chargement",
+      "loadFailedMsg": "Impossible de charger les détails de la plante.",
+      "updateFailedTitle": "Erreur de mise à jour",
+      "updateFailedMsg": "Impossible de mettre à jour cette plante.",
+      "deleteFailedTitle": "Erreur de suppression",
+      "deleteFailedMsg": "Impossible de supprimer cette plante."
+    }
+  }
+}

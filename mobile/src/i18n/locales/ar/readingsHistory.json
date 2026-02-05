@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "تاريخ القراءات",
+    "plantFallback": "نبات",
+    "noDevicesFound": "لم يتم العثور على أجهزة.",
+    "unauthorized": "لا يوجد إذن. يرجى تسجيل الدخول مرة أخرى.",
+    "failedLoadDevices": "فشل في تحميل الأجهزة.",
+    "failedLoadHistory": "فشل في تحميل التاريخ.",
+    "segment": {
+      "day": "يوم",
+      "week": "أسبوع",
+      "month": "شهر"
+    },
+    "metric": {
+      "temperatureShort": "درجة الحرارة",
+      "humidityShort": "رطوبة",
+      "lightShort": "ضوء",
+      "moistureShort": "رطوبة التربة"
+    }
+  }
+}

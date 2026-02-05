@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "कार्य इतिहास"
+    },
+    "fab": {
+      "sort": "छांटें",
+      "filter": "फ़िल्टर करें",
+      "delete": "हटाएं",
+      "clearFilter": "फ़िल्टर साफ़ करें",
+      "showAllHistory": "सारी इतिहास दिखाएं"
+    },
+    "common": {
+      "unnamedPlant": "नामित पौधा"
+    },
+    "toasts": {
+      "failedToLoad": "कार्य इतिहास लोड करने में विफल",
+      "historyDeleted": "इतिहास हटा दिया गया",
+      "failedToDeleteHistory": "इतिहास हटाने में विफल",
+      "historyTaskDeleted": "इतिहास प्रविष्टि हटा दी गई",
+      "failedToDeleteHistoryTask": "इतिहास प्रविष्टि हटाने में विफल",
+      "taskNotLinkedToPlant": "यह कार्य पौधे से जुड़ा नहीं है।"
+    },
+    "empty": {
+      "title": "कोई पूर्ण कार्य नहीं हैं",
+      "descBeforeBold": "यह स्क्रीन दिखाती है",
+      "bold": "स्मरणों से बंद किए गए कार्य",
+      "descAfterBold": "आपके होम पेज से (अधूरी कार्य यहाँ नहीं दिखेंगी)।",
+      "filteredToPlantId": "वर्तमान में पौधे के आईडी {{plantId}} द्वारा फ़िल्टर किया गया।",
+      "openFromTaskHint": "केवल इस पौधे के लिए इतिहास देखने के लिए किसी विशेष कार्य से इतिहास खोलें।"
+    },
+    "tile": {
+      "completedOn": "पूरा हुआ: {{date}}",
+      "noteLabel": "नोट"
+    },
+    "menu": {
+      "expand": "विस्तार करें",
+      "collapse": "संकुचित करें",
+      "editReminder": "स्मरण संपादित करें",
+      "goToPlant": "पौधे पर जाएं",
+      "deleteTask": "कार्य हटाएं"
+    },
+    "types": {
+      "watering": "सिंचाई",
+      "fertilising": "खाद देना",
+      "moisture": "नम करना",
+      "care": "देखभाल",
+      "repot": "पौधे को फिर से लगाना"
+    }
+  }
+}

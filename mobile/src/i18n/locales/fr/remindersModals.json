@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Annuler",
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "delete": "Supprimer",
+      "create": "Créer",
+      "update": "Enregistrer",
+      "reset": "Réinitialiser"
+    },
+    "confirmDelete": {
+      "title": "Supprimer le rappel",
+      "areYouSurePrefix": "Êtes-vous sûr de vouloir supprimer",
+      "areYouSureSuffix": "? Cette opération est irréversible."
+    },
+    "edit": {
+      "titleCreate": "Ajouter un rappel",
+      "titleEdit": "Modifier le rappel",
+      "typeLabel": "Type",
+      "plantLabel": "Plante",
+      "selectPlant": "Sélectionner une plante",
+      "locationLabel": "Localisation",
+      "locationPlaceholder": "Localisation",
+      "dueDateLabel": "Date d’échéance",
+      "datePlaceholder": "RRRR-MM-DD",
+      "intervalLabel": "Fréquence",
+      "intervalValuePlaceholder": "Valeur"
+    },
+    "filter": {
+      "title": "Filtrer les rappels",
+      "plantLabel": "Plante",
+      "selectPlant": "Sélectionner une plante",
+      "anyPlant": "Toute plante",
+      "locationLabel": "Localisation",
+      "anyLocation": "Toute localisation",
+      "taskTypesLabel": "Types de tâches",
+      "dueDateRangeLabel": "Plage de dates d’échéance",
+      "fromLabel": "De",
+      "toLabel": "À",
+      "datePlaceholder": "RRRR-MM-DD"
+    },
+    "sort": {
+      "title": "Trier les rappels",
+      "sortByLabel": "Trier par",
+      "directionLabel": "Ordre",
+      "keys": {
+        "dueDate": "Échéance",
+        "plant": "Nom de la plante",
+        "location": "Localisation"
+      },
+      "directions": {
+        "asc": "Croissant",
+        "desc": "Décroissant"
+      }
+    }
+  }
+}

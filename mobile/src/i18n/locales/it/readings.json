@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "Letture"
+    },
+    "defaults": {
+      "thisDevice": "questo dispositivo"
+    },
+    "tile": {
+      "lastReadPrefix": "Ultima lettura"
+    },
+    "menu": {
+      "history": "Cronologia delle letture",
+      "plantDetails": "Dettagli della pianta",
+      "editDevice": "Modifica dispositivo",
+      "deleteDevice": "Elimina dispositivo"
+    },
+    "fab": {
+      "linkDevice": "Collega dispositivo",
+      "deviceSetup": "Configurazione del dispositivo",
+      "sort": "Ordina",
+      "filter": "Filtra",
+      "clearFilter": "Cancella filtro"
+    },
+    "empty": {
+      "title": "Nessun dispositivo",
+      "description": "I dispositivi consentono di registrare letture di temperatura, umidità, intensità luminosa e umidità del suolo per la pianta.\n\nTocca l'azione «+ Collega dispositivo» per aggiungerne uno nuovo. Seleziona la pianta, assegna un nome al dispositivo, seleziona i sensori e imposta l'intervallo di campionamento. Quindi apri la Configurazione del dispositivo per visualizzare il segreto dell'account, aggiornarlo e inviare lo sketch Arduino/ESP pronto da incollare."
+    },
+    "toasts": {
+      "unauthorized": "Nessuna autorizzazione. Accedi di nuovo.",
+      "loadFailed": "Impossibile caricare i dispositivi",
+      "deviceDeleted": "Dispositivo eliminato",
+      "deleteFailed": "Impossibile eliminare",
+      "deleteFailedPrefix": "Impossibile eliminare",
+      "deviceAdded": "Dispositivo aggiunto",
+      "deviceUpdated": "Dispositivo aggiornato",
+      "addFailed": "Impossibile aggiungere",
+      "addFailedPrefix": "Impossibile aggiungere",
+      "updateFailed": "Impossibile aggiornare",
+      "updateFailedPrefix": "Impossibile aggiornare",
+      "setupLoadFailed": "Impossibile caricare la configurazione",
+      "setupLoadFailedPrefix": "Impossibile caricare la configurazione",
+      "secretRotated": "Segreto aggiornato",
+      "rotateFailed": "Impossibile aggiornare il segreto",
+      "rotateFailedPrefix": "Impossibile aggiornare il segreto"
+    }
+  }
+}

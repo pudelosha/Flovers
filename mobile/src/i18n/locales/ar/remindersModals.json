@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "إلغاء",
+      "apply": "تطبيق",
+      "clear": "مسح",
+      "delete": "حذف",
+      "create": "إنشاء",
+      "update": "حفظ",
+      "reset": "إعادة تعيين"
+    },
+    "confirmDelete": {
+      "title": "حذف التذكير",
+      "areYouSurePrefix": "هل أنت متأكد أنك تريد حذف",
+      "areYouSureSuffix": "? هذه العملية لا يمكن التراجع عنها."
+    },
+    "edit": {
+      "titleCreate": "إضافة تذكير",
+      "titleEdit": "تحرير التذكير",
+      "typeLabel": "النوع",
+      "plantLabel": "النبات",
+      "selectPlant": "اختر النبات",
+      "locationLabel": "الموقع",
+      "locationPlaceholder": "الموقع",
+      "dueDateLabel": "التاريخ المستحق",
+      "datePlaceholder": "YYYY-MM-DD",
+      "intervalLabel": "التردد",
+      "intervalValuePlaceholder": "القيمة"
+    },
+    "filter": {
+      "title": "تصفية التذكيرات",
+      "plantLabel": "النبات",
+      "selectPlant": "اختر النبات",
+      "anyPlant": "أي نبات",
+      "locationLabel": "الموقع",
+      "anyLocation": "أي موقع",
+      "taskTypesLabel": "أنواع المهام",
+      "dueDateRangeLabel": "نطاق التاريخ المستحق",
+      "fromLabel": "من",
+      "toLabel": "إلى",
+      "datePlaceholder": "YYYY-MM-DD"
+    },
+    "sort": {
+      "title": "ترتيب التذكيرات",
+      "sortByLabel": "ترتيب حسب",
+      "directionLabel": "الاتجاه",
+      "keys": {
+        "dueDate": "التاريخ المستحق",
+        "plant": "اسم النبات",
+        "location": "الموقع"
+      },
+      "directions": {
+        "asc": "تصاعدي",
+        "desc": "تنازلي"
+      }
+    }
+  }
+}

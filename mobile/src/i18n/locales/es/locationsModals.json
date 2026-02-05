@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "create": "Crear",
+      "save": "Guardar",
+      "apply": "Aplicar",
+      "reset": "Restablecer"
+    },
+    "confirmDelete": {
+      "title": "Eliminar ubicación",
+      "messagePrefix": "¿Seguro que quieres eliminar",
+      "messageSuffix": "? Esta acción no se puede deshacer.",
+      "blockedTitle": "No se puede eliminar esta ubicación",
+      "blockedMessage": "Esta ubicación tiene asignados: {{countLabel}}. Primero elimina las plantas o muévelas a otra ubicación y luego inténtalo de nuevo.",
+      "blockedToast": "No se puede eliminar esta ubicación porque tiene plantas asignadas. Elimínalas o muévelas primero."
+    },
+    "edit": {
+      "titleCreate": "Agregar ubicación",
+      "titleEdit": "Editar ubicación",
+      "nameLabel": "Nombre de la ubicación",
+      "namePlaceholder": "p. ej., Salón, Estante en la cocina",
+      "categoryLabel": "Categoría",
+      "categories": {
+        "indoor": "Interior",
+        "outdoor": "Exterior",
+        "other": "Otros"
+      },
+      "quickSuggestions": "Sugerencias rápidas",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Salón",
+          "kitchen": "Cocina",
+          "diningRoom": "Comedor",
+          "bedroom": "Dormitorio",
+          "bathroom": "Baño",
+          "hallway": "Pasillo",
+          "office": "Oficina",
+          "kidsRoom": "Habitación infantil"
+        },
+        "outdoor": {
+          "balcony": "Balcón",
+          "terrace": "Terraza",
+          "patio": "Patio",
+          "garden": "Jardín",
+          "frontYard": "Jardín delantero",
+          "backyard": "Jardín trasero",
+          "porch": "Porche",
+          "greenhouse": "Invernadero"
+        },
+        "other": {
+          "staircase": "Escalera",
+          "garage": "Garaje",
+          "basement": "Sótano",
+          "lobby": "Vestíbulo",
+          "sunroom": "Jardín de invierno",
+          "workshop": "Taller",
+          "studio": "Estudio",
+          "attic": "Ático"
+        }
+      }
+    },
+    "sort": {
+      "title": "Ordenar ubicaciones",
+      "keyName": "Nombre de la ubicación",
+      "keyCount": "Número de plantas",
+      "dirAsc": "Ascendente",
+      "dirDesc": "Descendente"
+    }
+  }
+}

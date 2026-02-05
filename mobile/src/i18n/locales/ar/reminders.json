@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "التذكيرات",
+    "common": {
+      "unnamedPlant": "نبتة بدون اسم",
+      "everyN": "كل {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "أيام",
+      "months": "شهور"
+    },
+    "types": {
+      "watering": "الري",
+      "moisture": "الرش",
+      "fertilising": "التسميد",
+      "care": "العناية",
+      "repot": "إعادة الزراعة"
+    },
+    "fab": {
+      "add": "إضافة تذكير",
+      "calendar": "التقويم",
+      "list": "القائمة",
+      "sort": "ترتيب",
+      "filter": "تصفية",
+      "clearFilter": "مسح التصفية"
+    },
+    "empty": {
+      "title": "لا تذكيرات",
+      "description": "التذكيرات مرتبطة بالنباتات المحددة. تأكد من أنك قد أنشأت نباتًا واحدًا على الأقل.\n\nاضغط على الزر '+' لإضافة تذكير. في النافذة، اختر النبات والنوع (الري، الرش، التسميد، العناية أو إعادة الزراعة)، حدد أول تاريخ وتكرار التذكير."
+    },
+    "menu": {
+      "edit": "تعديل التذكير",
+      "delete": "حذف التذكير"
+    },
+    "tile": {
+      "repeatsEvery": "يتكرر كل {{count}} {{unit}}",
+      "dueToday": "الموعد اليوم",
+      "dueInOneDay": "الموعد في يوم واحد",
+      "dueInDays": "الموعد في {{count}} أيام",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "مجدول في {{date}}",
+      "noItems": "لا توجد تذكيرات لهذا اليوم."
+    },
+    "toast": {
+      "loadFailed": "فشل تحميل التذكيرات",
+      "deleted": "تم حذف التذكير",
+      "deleteFailed": "فشل الحذف",
+      "deleteFailedWithReason": "فشل الحذف: {{reason}}",
+      "duplicateType": "هذه النبتة تحتوي بالفعل على تذكير من هذا النوع.",
+      "created": "تم إنشاء التذكير",
+      "updated": "تم تحديث التذكير",
+      "createFailed": "فشل الإنشاء",
+      "createFailedWithReason": "فشل الإنشاء: {{reason}}",
+      "updateFailed": "فشل التحديث",
+      "updateFailedWithReason": "فشل التحديث: {{reason}}"
+    }
+  }
+}

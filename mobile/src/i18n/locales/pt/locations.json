@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "Localizações",
+    "empty": {
+      "title": "Nenhuma localização",
+      "description": "As localizações aparecerão automaticamente quando você as atribuir às plantas.\n\nEdite a planta e defina sua localização para começar a agrupar as plantas por ambientes ou zonas."
+    },
+    "fab": {
+      "add": "Adicionar localização",
+      "sort": "Ordenar"
+    },
+    "menu": {
+      "edit": "Editar localização",
+      "delete": "Excluir localização"
+    },
+    "plantCount": {
+      "one": "1 planta",
+      "few": "{{count}} plantas",
+      "many": "{{count}} plantas"
+    },
+    "toast": {
+      "loadFailed": "Falha ao carregar localização",
+      "added": "Localização adicionada",
+      "deleted": "Localização excluída",
+      "updatedLocal": "Localização atualizada (somente localmente)",
+      "saveFailed": "Falha ao salvar localização",
+      "deleteFailed": "Falha ao excluir esta localização."
+    },
+    "alert": {
+      "deleteFailedTitle": "Falha na exclusão"
+    }
+  }
+}

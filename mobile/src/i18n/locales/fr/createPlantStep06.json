@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Tâches automatiques",
+      "subtitle": "Nous pouvons créer automatiquement des rappels (arrosage, rempotage, brumisation, fertilisation, entretien) en fonction du profil de la plante.",
+      "createAutoTasks": "Créer des tâches automatiques pour cette plante",
+      "requiresPlantDefinition": "Nécessite une définition de la plante.",
+      "labels": {
+        "generateWateringTask": "Créer une tâche d’arrosage",
+        "generateMistingTask": "Créer une tâche de brumisation",
+        "generateFertilisingTask": "Créer une tâche de fertilisation",
+        "generateCareTask": "Créer une tâche d’entretien",
+        "generateRepottingTask": "Créer une tâche de rempotage"
+      },
+      "prompts": {
+        "lastWatered": "Quand a-t-elle été arrosée pour la dernière fois ?",
+        "selectIntervalDays": "Sélectionner l’intervalle (jours)",
+        "recommendedInterval": "Intervalle recommandé",
+        "lastRepotted": "Quand a-t-elle été rempotée pour la dernière fois ?"
+      },
+      "notSpecified": "Non spécifié",
+      "notSpecifiedDesc": "Ignorez si vous n’êtes pas sûr.",
+      "units": {
+        "day": "jour",
+        "days": "jours",
+        "month": "mois",
+        "months": "mois"
+      },
+      "lastWatered": {
+        "today": "Aujourd’hui",
+        "yesterday": "Hier",
+        "three-four-days": "Il y a 3–4 jours",
+        "one-week": "Il y a une semaine",
+        "two-weeks": "Il y a 2 semaines",
+        "unknown": "Je ne me souviens pas"
+      },
+      "lastRepotted": {
+        "this-week": "Cette semaine",
+        "one-week-ago": "Il y a 1 semaine",
+        "two-weeks-ago": "Il y a 2 semaines",
+        "one-month-ago": "Il y a 1 mois",
+        "unknown": "Je ne me souviens pas"
+      }
+    }
+  }
+}

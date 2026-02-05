@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Invio…"
+    },
+    "support": {
+      "copyToMe": "Inviami anche una copia via email"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Cambia email",
+        "newEmailPlaceholder": "Nuova email",
+        "currentPasswordPlaceholder": "Password attuale"
+      },
+      "changePassword": {
+        "title": "Cambia password",
+        "currentPasswordPlaceholder": "Password attuale",
+        "newPasswordPlaceholder": "Nuova password",
+        "confirmNewPasswordPlaceholder": "Conferma nuova password",
+        "update": "Aggiorna"
+      },
+      "deleteAccount": {
+        "title": "Elimina account",
+        "warning": "Questa azione è irreversibile. Se continui, il tuo account e i dati verranno eliminati definitivamente.",
+        "passwordPlaceholder": "Inserisci la password per confermare"
+      },
+      "reportBug": {
+        "title": "Segnala un bug",
+        "subjectPlaceholder": "Oggetto",
+        "descriptionPlaceholder": "Descrivi il problema…"
+      },
+      "contactUs": {
+        "title": "Contattaci",
+        "subjectPlaceholder": "Oggetto",
+        "messagePlaceholder": "Come possiamo aiutarti?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Inserisci un nuovo indirizzo email.",
+      "enterCurrentPassword": "Inserisci la password attuale.",
+      "emailUpdated": "L'email è stata aggiornata.",
+      "couldNotChangeEmail": "Impossibile cambiare l'email. Controlla la password e riprova.",
+      "enterNewPassword": "Inserisci una nuova password.",
+      "passwordsDoNotMatch": "Le nuove password non corrispondono.",
+      "passwordUpdated": "La password è stata aggiornata.",
+      "couldNotChangePassword": "Impossibile cambiare la password. Controlla la password attuale e riprova.",
+      "enterSubject": "Inserisci l'oggetto.",
+      "enterMessage": "Inserisci il messaggio.",
+      "enterDescription": "Descrivi il problema.",
+      "contactSent": "Il messaggio è stato inviato. Ti risponderemo a breve.",
+      "bugSent": "La segnalazione del bug è stata inviata. Grazie.",
+      "couldNotSendContact": "Impossibile inviare il messaggio. Riprova.",
+      "couldNotSendBug": "Impossibile inviare la segnalazione del bug. Riprova.",
+      "deleteNotImplemented": "L'eliminazione dell'account non è ancora disponibile.",
+      "requestTimedOut": "Tempo scaduto. Riprova."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Historique des tâches"
+    },
+    "fab": {
+      "sort": "Trier",
+      "filter": "Filtrer",
+      "delete": "Supprimer",
+      "clearFilter": "Effacer le filtre",
+      "showAllHistory": "Afficher tout l’historique"
+    },
+    "common": {
+      "unnamedPlant": "Plante sans nom"
+    },
+    "toasts": {
+      "failedToLoad": "Impossible de charger l’historique des tâches",
+      "historyDeleted": "L’historique a été supprimé",
+      "failedToDeleteHistory": "Impossible de supprimer l’historique",
+      "historyTaskDeleted": "L’entrée de l’historique a été supprimée",
+      "failedToDeleteHistoryTask": "Impossible de supprimer l’entrée de l’historique",
+      "taskNotLinkedToPlant": "Cette tâche n’est pas liée à une plante."
+    },
+    "empty": {
+      "title": "Aucune tâche terminée",
+      "descBeforeBold": "Cet écran affiche",
+      "bold": "les tâches clôturées issues des rappels",
+      "descAfterBold": "de votre page d’accueil (les tâches en attente n’y sont pas visibles).",
+      "filteredToPlantId": "Actuellement filtré par l’identifiant de la plante {{plantId}}.",
+      "openFromTaskHint": "Ouvrez l’historique depuis une tâche spécifique pour voir l’historique uniquement pour cette plante."
+    },
+    "tile": {
+      "completedOn": "Terminé : {{date}}",
+      "noteLabel": "Note"
+    },
+    "menu": {
+      "expand": "Développer",
+      "collapse": "Réduire",
+      "editReminder": "Modifier le rappel",
+      "goToPlant": "Aller à la plante",
+      "deleteTask": "Supprimer la tâche"
+    },
+    "types": {
+      "watering": "arrosage",
+      "fertilising": "fertilisation",
+      "moisture": "brumisation",
+      "care": "entretien",
+      "repot": "rempotage"
+    }
+  }
+}

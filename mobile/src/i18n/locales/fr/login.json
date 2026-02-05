@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Connexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "forgotPassword": "Mot de passe oublié ?",
+    "resendActivation": "Vous n’avez pas reçu l’e-mail d’activation ?",
+    "noAccount": "Vous n’avez pas de compte ?",
+    "signUp": "S’inscrire",
+    "errors": {
+      "invalidCredentials": "E-mail ou mot de passe incorrect.",
+      "generic": "Une erreur s’est produite. Veuillez réessayer."
+    },
+    "success": {
+      "welcome": "Bon retour !"
+    }
+  }
+}

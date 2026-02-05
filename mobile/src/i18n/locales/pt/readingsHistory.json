@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Histórico de leituras",
+    "plantFallback": "Planta",
+    "noDevicesFound": "Nenhum dispositivo encontrado.",
+    "unauthorized": "Sem autorização. Faça login novamente.",
+    "failedLoadDevices": "Não foi possível carregar os dispositivos.",
+    "failedLoadHistory": "Não foi possível carregar o histórico.",
+    "segment": {
+      "day": "DIA",
+      "week": "SEM",
+      "month": "MÊS"
+    },
+    "metric": {
+      "temperatureShort": "Temp",
+      "humidityShort": "Umid",
+      "lightShort": "Luz",
+      "moistureShort": "Solo"
+    }
+  }
+}

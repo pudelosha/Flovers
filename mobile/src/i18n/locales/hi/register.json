@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "रजिस्टर",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "termsAgreement": "स्वीकार करें",
+    "termsLink": "नियम और शर्तें",
+    "signUpButton": "साइन अप करें",
+    "haveAccount": "क्या आपके पास पहले से खाता है?",
+    "loginLink": "लॉग इन करें",
+    "errors": {
+      "invalidEmail": "सही ईमेल पता दर्ज करें।",
+      "shortPassword": "पासवर्ड में कम से कम 6 वर्ण होने चाहिए।",
+      "passwordsMismatch": "पासवर्ड मेल नहीं खाते।",
+      "termsRequired": "आपको नियम और शर्तें स्वीकार करनी चाहिए।",
+      "incompleteForm": "कृपया फ़ॉर्म को पूरा करें।",
+      "emailTaken": "यह ईमेल पता पहले से लिया गया है।",
+      "registrationFailed": "रजिस्ट्रेशन विफल। कृपया पुनः प्रयास करें।",
+      "generic": "कुछ गलत हुआ है। कृपया पुनः प्रयास करें।",
+      "cannotOpenLink": "लिंक नहीं खोला जा सकता।"
+    },
+    "success": {
+      "accountCreated": "खाता बन गया। स्वागत है!"
+    }
+  }
+}

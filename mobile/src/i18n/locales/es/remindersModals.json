@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "apply": "Aplicar",
+      "clear": "Limpiar",
+      "delete": "Eliminar",
+      "create": "Crear",
+      "update": "Guardar",
+      "reset": "Restablecer"
+    },
+    "confirmDelete": {
+      "title": "Eliminar recordatorio",
+      "areYouSurePrefix": "¿Estás seguro de que deseas eliminar",
+      "areYouSureSuffix": "? Esta acción no se puede deshacer."
+    },
+    "edit": {
+      "titleCreate": "Agregar recordatorio",
+      "titleEdit": "Editar recordatorio",
+      "typeLabel": "Tipo",
+      "plantLabel": "Planta",
+      "selectPlant": "Selecciona una planta",
+      "locationLabel": "Ubicación",
+      "locationPlaceholder": "Ubicación",
+      "dueDateLabel": "Fecha de vencimiento",
+      "datePlaceholder": "AAAA-MM-DD",
+      "intervalLabel": "Frecuencia",
+      "intervalValuePlaceholder": "Valor"
+    },
+    "filter": {
+      "title": "Filtrar recordatorios",
+      "plantLabel": "Planta",
+      "selectPlant": "Selecciona una planta",
+      "anyPlant": "Cualquier planta",
+      "locationLabel": "Ubicación",
+      "anyLocation": "Cualquier ubicación",
+      "taskTypesLabel": "Tipos de tareas",
+      "dueDateRangeLabel": "Rango de fechas de vencimiento",
+      "fromLabel": "Desde",
+      "toLabel": "Hasta",
+      "datePlaceholder": "AAAA-MM-DD"
+    },
+    "sort": {
+      "title": "Ordenar recordatorios",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Dirección",
+      "keys": {
+        "dueDate": "Fecha de vencimiento",
+        "plant": "Nombre de la planta",
+        "location": "Ubicación"
+      },
+      "directions": {
+        "asc": "Ascendente",
+        "desc": "Descendente"
+      }
+    }
+  }
+}

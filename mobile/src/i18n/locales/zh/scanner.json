@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "扫描仪"
+    },
+    "howItWorks": {
+      "title": "如何使用"
+    },
+    "instruction": "将相机对准植物的二维码。识别后，应用将自动打开该植物的详细信息。",
+    "hint1": "每个植物都有自己的二维码。您可以将其保存、打印成小标签、粘贴到花盆上，并在此扫描以立即打开该植物。",
+    "qrAvailableIn": "二维码可用在：",
+    "qrPath1": "植物 → 点击植物 → 植物详情",
+    "qrPath2": "植物 → 磁贴菜单 → 显示二维码",
+    "permissionRequired": "需要相机权限",
+    "permissionHint": "在系统设置中启用相机访问权限以扫描二维码。",
+    "openSettings": "打开设置",
+    "initializingCamera": "初始化相机…"
+  }
+}

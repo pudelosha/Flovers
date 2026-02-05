@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Maceta y sustrato",
+      "subtitle": "Esta información es opcional. Elige el material de la maceta/recipiente y el sustrato — o deja «No especificado» y continúa.",
+      "containerMaterial": "Material de la maceta",
+      "soilMix": "Sustrato / mezcla",
+      "notSpecified": "No especificado",
+      "notSpecifiedDesc": "Omite si no estás seguro.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plástico",
+          "description": "Ligero; retiene la humedad por más tiempo; barato y versátil."
+        },
+        "ceramic": {
+          "label": "Cerámica (esmaltada)",
+          "description": "Más pesada; retiene bien la humedad; acabado decorativo."
+        },
+        "terracotta": {
+          "label": "Terracota",
+          "description": "Porosa; drena la humedad; ideal para suculentas y cactus."
+        },
+        "clay": {
+          "label": "Arcilla (sin esmaltar)",
+          "description": "Similar a la terracota; «respira» y se seca más rápido."
+        },
+        "cement": {
+          "label": "Cemento",
+          "description": "Muy pesado; aspecto moderno; retiene bastante bien la humedad."
+        },
+        "concrete": {
+          "label": "Hormigón",
+          "description": "Duradero y pesado; estable en exteriores; retiene la humedad."
+        },
+        "metal": {
+          "label": "Metal (general)",
+          "description": "Se calienta rápido al sol; a menudo requiere funda/recipiente interior."
+        },
+        "stainless": {
+          "label": "Acero inoxidable",
+          "description": "Moderno; resistente a la corrosión; puede calentarse."
+        },
+        "aluminum": {
+          "label": "Aluminio",
+          "description": "Ligero; conduce el calor; cuidado con el sobrecalentamiento al sol."
+        },
+        "iron": {
+          "label": "Hierro / acero",
+          "description": "Muy duradero; puede oxidarse; a veces requiere recipiente interior."
+        },
+        "copper": {
+          "label": "Cobre / latón",
+          "description": "Decorativo; puede reaccionar con el sustrato; suele usarse como funda."
+        },
+        "wood": {
+          "label": "Madera",
+          "description": "Aspecto natural; puede requerir recipiente interior; puede pudrirse con humedad constante."
+        },
+        "bamboo": {
+          "label": "Bambú",
+          "description": "Ligero y sostenible; normalmente con recipiente interior; mejor para interiores."
+        },
+        "rattan": {
+          "label": "Ratán / mimbre",
+          "description": "Fundas decorativas; dentro coloca la maceta de producción."
+        },
+        "glass": {
+          "label": "Vidrio",
+          "description": "Bueno para terrarios; sin drenaje; controla la humedad."
+        },
+        "stone": {
+          "label": "Piedra / mármol",
+          "description": "Muy pesado y estable; mantiene el frescor por más tiempo."
+        },
+        "resin": {
+          "label": "Resina",
+          "description": "Ligera y duradera; buena para exteriores; aísla las raíces."
+        },
+        "fiberglass": {
+          "label": "Fibra de vidrio",
+          "description": "Ligera y resistente; buena para exteriores; aísla."
+        },
+        "biodegradable": {
+          "label": "Biodegradables",
+          "description": "Por ejemplo, fibra de coco/turba; macetas de inicio; se degradan con el tiempo."
+        },
+        "fabric": {
+          "label": "Maceta de tela",
+          "description": "Airea las raíces; se seca rápido; buena para hortalizas."
+        },
+        "grow-bag": {
+          "label": "Bolsa de cultivo",
+          "description": "Bolsa de tela; portátil; drena el agua rápidamente; requiere riegos más frecuentes."
+        },
+        "self-watering": {
+          "label": "Autorriego",
+          "description": "Depósito con mecha; facilita mantener un riego regular."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Sustrato universal",
+          "description": "Buena opción inicial para la mayoría de las plantas de interior."
+        },
+        "green-plants": {
+          "label": "Sustrato para plantas verdes / de interior",
+          "description": "Sustrato universal para plantas verdes (a menudo también para palmeras)."
+        },
+        "balcony-flowers": {
+          "label": "Sustrato para flores de balcón y parterres",
+          "description": "Más nutritivo; adecuado para plantas con flor en macetas y jardineras."
+        },
+        "cactus-succulent": {
+          "label": "Sustrato para cactus y suculentas",
+          "description": "Muy drenante; ideal para suculentas y cactus."
+        },
+        "orchid": {
+          "label": "Sustrato para orquídeas",
+          "description": "Grueso, a base de corteza; proporciona mucho aire a las raíces."
+        },
+        "aroid": {
+          "label": "Mezcla para aráceas",
+          "description": "Muy aireada (corteza/perlita) para Monstera/Filodendros."
+        },
+        "seed-starting": {
+          "label": "Sustrato para siembra",
+          "description": "Fino; adecuado para enraizar y plántulas."
+        },
+        "bonsai": {
+          "label": "Sustrato para bonsái",
+          "description": "Granuloso y drenante; se compacta menos."
+        },
+        "herbs-vegetables": {
+          "label": "Sustrato para hierbas y hortalizas",
+          "description": "Más nutritivo; adecuado para plantas comestibles."
+        },
+        "citrus": {
+          "label": "Sustrato para cítricos",
+          "description": "Drenante; adecuado para cítricos y plantas mediterráneas."
+        },
+        "fern": {
+          "label": "Sustrato para helechos",
+          "description": "Más amante de la humedad; normalmente con mayor contenido de materia orgánica."
+        },
+        "conifers": {
+          "label": "Sustrato para coníferas",
+          "description": "Sustrato para coníferas; a menudo ligeramente ácido y drenante."
+        },
+        "acid-loving": {
+          "label": "Sustrato para plantas acidófilas",
+          "description": "Sustrato ácido para arándanos, brezos, rododendros, azaleas, etc."
+        },
+        "peat-free": {
+          "label": "Sustrato sin turba",
+          "description": "Más sostenible; la composición depende del fabricante."
+        }
+      }
+    }
+  }
+}

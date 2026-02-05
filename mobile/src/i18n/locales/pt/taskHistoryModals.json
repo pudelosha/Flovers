@@ -1,0 +1,59 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "apply": "Aplicar",
+      "delete": "Excluir",
+      "selectPlant": "Selecionar planta",
+      "selectLocation": "Selecionar localização",
+      "datePlaceholder": "AAAA-MM-DD",
+      "taskTypes": {
+        "watering": "Rega",
+        "moisture": "Umidade",
+        "fertilising": "Fertilização",
+        "care": "Cuidado",
+        "repot": "Replantio"
+      }
+    },
+    "delete": {
+      "title": "Excluir histórico",
+      "scopeLabel": "Escopo",
+      "modes": {
+        "plant": "Excluir para a planta selecionada",
+        "location": "Excluir para a localização selecionada",
+        "types": "Excluir tarefas do tipo",
+        "olderThan": "Excluir tarefas mais antigas que"
+      },
+      "noPlantsHint": "Você ainda não tem plantas no histórico.",
+      "noLocationsHint": "Você ainda não tem localizações no histórico.",
+      "daysValue": "{{days}} dias"
+    },
+    "filter": {
+      "title": "Filtrar histórico",
+      "plantLabel": "Planta",
+      "locationLabel": "Localização",
+      "taskTypesLabel": "Tipos de tarefas",
+      "completedDateRangeLabel": "Faixa de datas de conclusão",
+      "fromLabel": "De",
+      "toLabel": "Até",
+      "anyPlant": "Qualquer planta",
+      "anyLocation": "Qualquer localização",
+      "clear": "Limpar"
+    },
+    "sort": {
+      "title": "Classificar histórico",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Direção",
+      "keys": {
+        "completedAt": "Data de conclusão",
+        "plant": "Nome da planta",
+        "location": "Localização"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      },
+      "reset": "Redefinir"
+    }
+  }
+}

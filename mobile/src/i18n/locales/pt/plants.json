@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "Plantas"
+    },
+    "list": {
+      "unnamed": "Planta sem nome"
+    },
+    "empty": {
+      "title": "Sem plantas",
+      "desc1": "Toque no botão '+' no canto inferior direito para adicionar a primeira planta.",
+      "desc2": "O assistente de adição de plantas ajudará você a configurar a planta, definir seus parâmetros e planejar lembretes."
+    },
+    "fab": {
+      "create": "Adicionar planta",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Limpar filtro",
+      "locations": "Localizações"
+    },
+    "menu": {
+      "edit": "Editar planta",
+      "reminders": "Mostrar lembretes",
+      "journal": "Mostrar diário da planta",
+      "showQr": "Mostrar código QR",
+      "delete": "Excluir planta"
+    },
+    "toast": {
+      "loadFailed": "Falha ao carregar plantas",
+      "updated": "Planta atualizada",
+      "deleted": "Planta excluída",
+      "qrSaved": "Código QR salvo na galeria.",
+      "qrEmailed": "Um e-mail com este código QR será enviado para o endereço de e-mail da sua conta."
+    },
+    "alert": {
+      "loadFailedTitle": "Erro ao carregar",
+      "loadFailedMsg": "Falha ao carregar os detalhes da planta.",
+      "updateFailedTitle": "Erro ao atualizar",
+      "updateFailedMsg": "Falha ao atualizar esta planta.",
+      "deleteFailedTitle": "Erro ao excluir",
+      "deleteFailedMsg": "Falha ao excluir esta planta."
+    }
+  }
+}

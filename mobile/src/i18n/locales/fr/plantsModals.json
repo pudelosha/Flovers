@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "clear": "Effacer",
+      "apply": "Appliquer",
+      "reset": "Réinitialiser",
+      "close": "Fermer",
+      "done": "Terminé"
+    },
+    "confirmDelete": {
+      "title": "Supprimer la plante",
+      "messagePrefix": "Êtes-vous sûr de vouloir supprimer",
+      "messageSuffix": " ? Toutes les données associées seront également supprimées : rappels, appareils et relevés, tâches et historique des tâches. Cette opération est irréversible."
+    },
+    "filter": {
+      "title": "Filtrer les plantes",
+      "anyLocation": "Tout emplacement",
+      "anyLatin": "Tout nom latin"
+    },
+    "sort": {
+      "title": "Trier les plantes",
+      "keyPlant": "Nom de la plante",
+      "keyLocation": "Emplacement",
+      "dirAsc": "Croissant",
+      "dirDesc": "Décroissant"
+    },
+    "qr": {
+      "title": "Code QR de la plante",
+      "p1": "Chaque plante possède un code QR unique qui contient son identifiant.",
+      "p2": "Lorsque vous scannez ce code avec le scanner de l’application, vous serez redirigé directement vers l’écran de détails de cette plante",
+      "youCan": "Vous pouvez :",
+      "b1": "enregistrer l’image du code QR sur votre téléphone ou l’envoyer par e-mail, puis l’imprimer pour l’étiquetage,",
+      "b2": "fixer l’étiquette imprimée directement sur le pot afin que le code soit toujours à portée de main,",
+      "b3": "permettre aux membres du foyer de scanner l’étiquette pour ouvrir rapidement cette plante dans l’application.",
+      "save": "Enregistrer le code QR",
+      "email": "Envoyer le code QR par e-mail"
+    },
+    "edit": {
+      "title": "Modifier la plante",
+      "namePlaceholder": "Nom de la plante (requis)",
+      "latinPlaceholder": "Nom latin (rechercher)…",
+      "locationOptional": "Choisir un emplacement (optionnel)",
+      "none": "— Aucun —",
+      "notesPlaceholder": "Notes… (optionnel)",
+      "purchaseDateLabel": "Date d’achat",
+      "notSet": "Non défini",
+      "fallbackDateTitle": "Définir la date d’achat (RRRR-MM-DD)",
+      "fallbackDatePlaceholder": "RRRR-MM-DD",
+      "invalidDateTitle": "Date invalide",
+      "invalidDateMsg": "Utilisez le format RRRR-MM-DD",
+      "set": "Définir",
+      "lightLevelLabel": "Niveau de lumière",
+      "low": "Faible",
+      "high": "Élevé",
+      "windowDirectionLabel": "Orientation de la fenêtre",
+      "orientations": {
+        "S": "N",
+        "E": "E",
+        "W": "O",
+        "N": "S"
+      },
+      "measureBtn": "Mesurer la lumière et l’orientation",
+      "distanceLabel": "Distance par rapport à la fenêtre",
+      "cm": "cm",
+      "containerMaterialLabel": "Matériau du pot",
+      "soilMixLabel": "Substrat / mélange",
+      "update": "Enregistrer"
+    },
+    "journal": {
+      "title": "Journal de la plante",
+      "loading": "Chargement...",
+      "error": "Une erreur s’est produite.",
+      "empty": "Aucune entrée dans le journal.",
+      "taskTypes": {
+        "watering": "ARROSAGE",
+        "moisture": "BRUMISATION",
+        "fertilising": "FERTILISATION",
+        "care": "ENTRETIEN",
+        "repot": "REMPOTAGE"
+      }
+    }
+  }
+}

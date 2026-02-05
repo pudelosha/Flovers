@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Exposição à luz",
+      "subtitle": "A exposição à luz ajuda-nos a ajustar os horários de rega e as lembretes de cuidados. Diga-nos quanto de luz chega a este local e para que direção está a janela.",
+      "lightLevel": "Nível de luz",
+      "low": "Baixo",
+      "high": "Alto",
+      "windowDirection": "Direção da janela",
+      "measureLightDirection": "Meça a luz e a direção",
+      "distanceFromWindow": "Distância da janela",
+      "orientations": {
+        "S": "Sul",
+        "E": "Leste",
+        "W": "Oeste",
+        "N": "Norte"
+      },
+      "modal": {
+        "title": "Medir a luz e direção",
+        "instructions": "Segure o telefone na horizontal (tela para cima) e a borda superior em direção à janela. Mova o telefone lentamente perto da janela e depois pressione Medir para iniciar o teste de 5 segundos.",
+        "ambientLive": "Luz (ao vivo)",
+        "headingLive": "Direção (ao vivo)",
+        "testLabel": "Teste de 5 segundos",
+        "running": "(em execução…) ",
+        "last": "(último)",
+        "done": "feito",
+        "bestLight": "Luz (melhor em 5 s):",
+        "meanDirection": "Direção (média de 5 s):",
+        "close": "Fechar",
+        "measure5s": "Medir (5 s)",
+        "measuring": "Medindo…",
+        "apply": "Aplicar",
+        "tip": "Dica: em muitos telefones, o sensor de luz está na borda superior (perto do alto-falante). Mantenha o telefone plano e direcione a borda superior em direção à janela para encontrar a leitura mais alta.",
+        "notAvailable": "Indisponível",
+        "noSensor": "Sem sensor",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Brilhante, direta",
+          "brightIndirect": "Brilhante, difusa",
+          "medium": "Média / sombra parcial",
+          "low": "Pouca luz",
+          "veryLow": "Muito pouca luz"
+        }
+      }
+    }
+  }
+}

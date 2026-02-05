@@ -1,0 +1,58 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "apply": "Aplicar",
+      "clear": "Limpar",
+      "delete": "Excluir",
+      "create": "Criar",
+      "update": "Salvar",
+      "reset": "Redefinir"
+    },
+    "confirmDelete": {
+      "title": "Excluir lembrete",
+      "areYouSurePrefix": "Tem certeza de que deseja excluir",
+      "areYouSureSuffix": "? Esta ação não pode ser desfeita."
+    },
+    "edit": {
+      "titleCreate": "Adicionar lembrete",
+      "titleEdit": "Editar lembrete",
+      "typeLabel": "Tipo",
+      "plantLabel": "Planta",
+      "selectPlant": "Escolher planta",
+      "locationLabel": "Localização",
+      "locationPlaceholder": "Localização",
+      "dueDateLabel": "Data de vencimento",
+      "datePlaceholder": "AAAA-MM-DD",
+      "intervalLabel": "Frequência",
+      "intervalValuePlaceholder": "Valor"
+    },
+    "filter": {
+      "title": "Filtrar lembretes",
+      "plantLabel": "Planta",
+      "selectPlant": "Escolher planta",
+      "anyPlant": "Qualquer planta",
+      "locationLabel": "Localização",
+      "anyLocation": "Qualquer localização",
+      "taskTypesLabel": "Tipos de tarefas",
+      "dueDateRangeLabel": "Intervalo de data de vencimento",
+      "fromLabel": "De",
+      "toLabel": "Até",
+      "datePlaceholder": "AAAA-MM-DD"
+    },
+    "sort": {
+      "title": "Ordenar lembretes",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Direção",
+      "keys": {
+        "dueDate": "Data de vencimento",
+        "plant": "Nome da planta",
+        "location": "Localização"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      }
+    }
+  }
+}

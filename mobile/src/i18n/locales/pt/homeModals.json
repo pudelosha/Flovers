@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Cancelar",
+      "apply": "Aplicar",
+      "reset": "Reiniciar"
+    },
+    "complete": {
+      "title": "Marcar tarefa como concluída",
+      "overdueInfo": "Esta tarefa está em atraso. A próxima data será calculada a partir de hoje {{intervalText}}.",
+      "noteLabel": "Nota (opcional)",
+      "noteHint": "Esta nota será salva e ficará visível mais tarde para a planta no Diário da Planta.",
+      "notePlaceholder": "Você pode adicionar uma nota curta sobre o que fez, observações, etc.",
+      "confirm": "Marcar como concluída"
+    },
+    "completeBulk": {
+      "title": "Marcar {{count}} tarefas como concluídas",
+      "overdueInfo": "Algumas tarefas estão em atraso. Para as tarefas em atraso, a próxima data será calculada a partir de hoje {{intervalText}}.",
+      "noteHint": "Esta nota será salva para cada tarefa concluída e ficará visível mais tarde para a planta no Diário da Planta.",
+      "confirm": "Marcar como concluída"
+    },
+    "filter": {
+      "title": "Filtrar tarefas",
+      "plantLabel": "Planta",
+      "locationLabel": "Localização",
+      "taskTypesLabel": "Tipos de tarefas",
+      "dueDateRangeLabel": "Faixa de datas de conclusão",
+      "fromLabel": "De",
+      "toLabel": "Até",
+      "anyPlant": "Qualquer planta",
+      "selectPlant": "Escolher planta",
+      "anyLocation": "Qualquer localização",
+      "datePlaceholder": "AAAA-MM-DD",
+      "clear": "Limpar"
+    },
+    "sort": {
+      "title": "Ordenar tarefas",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Direção",
+      "keys": {
+        "dueDate": "Data",
+        "plant": "Nome da planta",
+        "location": "Localização"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      }
+    }
+  }
+}

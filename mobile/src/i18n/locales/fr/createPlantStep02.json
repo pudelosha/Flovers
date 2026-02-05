@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Profil de la plante",
+      "preferences": "Préférences",
+      "errorProfile": "Impossible de récupérer le profil de la plante.",
+      "labels": {
+        "sun": "Ensoleillement",
+        "water": "Arrosage",
+        "difficulty": "Difficulté",
+        "potMaterials": "Matériaux du pot",
+        "soilMixes": "Mélanges de terre",
+        "wateringInterval": "Arrosage",
+        "moistureInterval": "Contrôle de l’humidité",
+        "fertilizeInterval": "Fertilisation",
+        "repotInterval": "Rempotage"
+      },
+      "values": {
+        "everyDays": "Tous les {{count}} jours",
+        "everyMonths": "Tous les {{count}} mois"
+      },
+      "traits": {
+        "sun": "Ensoleillement",
+        "water": "Arrosage",
+        "difficulty": "Difficulté",
+        "soil": "Terre",
+        "temperature": "Température",
+        "humidity": "Humidité",
+        "toxic": "Toxique ?",
+        "growth": "Croissance",
+        "light": "Lumière",
+        "fertilizer": "Fertilisation",
+        "recognize": "Reconnaître la plante"
+      }
+    }
+  }
+}

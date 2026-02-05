@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "Rappels",
+    "common": {
+      "unnamedPlant": "Plante sans nom",
+      "everyN": "tous les {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "jours",
+      "months": "mois"
+    },
+    "types": {
+      "watering": "Arrosage",
+      "moisture": "Brumisation",
+      "fertilising": "Fertilisation",
+      "care": "Entretien",
+      "repot": "Rempotage"
+    },
+    "fab": {
+      "add": "Ajouter un rappel",
+      "calendar": "Calendrier",
+      "list": "Liste",
+      "sort": "Trier",
+      "filter": "Filtrer",
+      "clearFilter": "Effacer le filtre"
+    },
+    "empty": {
+      "title": "Aucun rappel",
+      "description": "Les rappels sont liés à des plantes spécifiques. Assurez-vous d’avoir créé au moins une plante.\n\nAppuyez sur le bouton « + » pour ajouter un rappel. Dans la fenêtre, vous choisirez la plante, le type (arrosage, brumisation, fertilisation, entretien ou rempotage), définirez la première date ainsi que la fréquence de répétition."
+    },
+    "menu": {
+      "edit": "Modifier le rappel",
+      "delete": "Supprimer le rappel"
+    },
+    "tile": {
+      "repeatsEvery": "Se répète tous les {{count}} {{unit}}",
+      "dueToday": "Échéance aujourd’hui",
+      "dueInOneDay": "Échéance dans 1 jour",
+      "dueInDays": "Échéance dans {{count}} jours",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "Planifié pour le {{date}}",
+      "noItems": "Aucun rappel pour ce jour."
+    },
+    "toast": {
+      "loadFailed": "Impossible de charger les rappels",
+      "deleted": "Rappel supprimé",
+      "deleteFailed": "Impossible de supprimer",
+      "deleteFailedWithReason": "Impossible de supprimer : {{reason}}",
+      "duplicateType": "Cette plante a déjà un rappel de ce type.",
+      "created": "Rappel créé",
+      "updated": "Rappel mis à jour",
+      "createFailed": "Impossible de créer",
+      "createFailedWithReason": "Impossible de créer : {{reason}}",
+      "updateFailed": "Impossible de mettre à jour",
+      "updateFailedWithReason": "Impossible de mettre à jour : {{reason}}"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resendActivation": "¿No recibiste el correo electrónico de activación?",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Regístrate",
+    "errors": {
+      "invalidCredentials": "Correo electrónico o contraseña incorrectos.",
+      "generic": "Algo salió mal. Inténtalo de nuevo."
+    },
+    "success": {
+      "welcome": "¡Bienvenido de nuevo!"
+    }
+  }
+}

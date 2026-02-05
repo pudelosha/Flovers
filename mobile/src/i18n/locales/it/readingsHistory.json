@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Storico delle letture",
+    "plantFallback": "Pianta",
+    "noDevicesFound": "Nessun dispositivo trovato.",
+    "unauthorized": "Autorizzazione mancante. Accedi di nuovo.",
+    "failedLoadDevices": "Impossibile caricare i dispositivi.",
+    "failedLoadHistory": "Impossibile caricare la cronologia.",
+    "segment": {
+      "day": "GIORNO",
+      "week": "SETT",
+      "month": "MESE"
+    },
+    "metric": {
+      "temperatureShort": "Temp",
+      "humidityShort": "Umid",
+      "lightShort": "Luce",
+      "moistureShort": "Suolo"
+    }
+  }
+}

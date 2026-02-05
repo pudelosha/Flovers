@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "Recordatorios",
+    "common": {
+      "unnamedPlant": "Planta sin nombre",
+      "everyN": "cada {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "días",
+      "months": "meses"
+    },
+    "types": {
+      "watering": "Riego",
+      "moisture": "Rociado",
+      "fertilising": "Fertilización",
+      "care": "Cuidado",
+      "repot": "Trasplante"
+    },
+    "fab": {
+      "add": "Añadir recordatorio",
+      "calendar": "Calendario",
+      "list": "Lista",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Borrar filtro"
+    },
+    "empty": {
+      "title": "No hay recordatorios",
+      "description": "Los recordatorios están asociados a plantas específicas. Asegúrate de tener al menos una planta creada.\n\nToca el botón '+' para añadir un recordatorio. En la ventana seleccionarás la planta, el tipo (riego, rociado, fertilización, cuidado o trasplante), establecerás la primera fecha y la frecuencia de repetición."
+    },
+    "menu": {
+      "edit": "Editar recordatorio",
+      "delete": "Eliminar recordatorio"
+    },
+    "tile": {
+      "repeatsEvery": "Se repite cada {{count}} {{unit}}",
+      "dueToday": "Vence hoy",
+      "dueInOneDay": "Vence en 1 día",
+      "dueInDays": "Vence en {{count}} días",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "Programado para {{date}}",
+      "noItems": "No hay recordatorios para este día."
+    },
+    "toast": {
+      "loadFailed": "No se pudieron cargar los recordatorios",
+      "deleted": "Recordatorio eliminado",
+      "deleteFailed": "No se pudo eliminar",
+      "deleteFailedWithReason": "No se pudo eliminar: {{reason}}",
+      "duplicateType": "Esta planta ya tiene un recordatorio de este tipo.",
+      "created": "Recordatorio creado",
+      "updated": "Recordatorio actualizado",
+      "createFailed": "No se pudo crear",
+      "createFailedWithReason": "No se pudo crear: {{reason}}",
+      "updateFailed": "No se pudo actualizar",
+      "updateFailedWithReason": "No se pudo actualizar: {{reason}}"
+    }
+  }
+}

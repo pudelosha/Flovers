@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "Início"
+    },
+    "fab": {
+      "showOverdue": "Mostrar tarefas em atraso",
+      "showDueToday": "Mostrar para hoje",
+      "showAllTasks": "Mostrar todas",
+      "markVisibleAsComplete": "Marcar como concluído",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Limpar filtro",
+      "history": "Histórico"
+    },
+    "menu": {
+      "markAsComplete": "Marcar como concluído",
+      "editReminder": "Editar lembrete",
+      "goToPlant": "Ir para planta",
+      "showHistory": "Mostrar histórico",
+      "delete": "Excluir"
+    },
+    "taskTypes": {
+      "watering": "REGA",
+      "moisture": "NEBULIZAÇÃO",
+      "fertilising": "ADUBAÇÃO",
+      "care": "CUidados",
+      "repot": "REPLANTIO"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Falha ao carregar tarefas",
+      "taskCompleted": "Tarefa concluída",
+      "tasksCompleted": "Tarefas concluídas",
+      "completeFailed": "Falha ao concluir",
+      "completeSomeFailed": "Concluído {{ok}} de {{total}} tarefas",
+      "taskNotLinkedToPlant": "Esta tarefa não está vinculada a uma planta."
+    },
+    "empty": {
+      "all": {
+        "title": "Sem tarefas",
+        "introPrefix": "Esta página mostra suas próximas",
+        "introBold": "tarefas de cuidados com as plantas",
+        "introSuffix": "— rega, adubação, replante e outras.",
+        "toGetStarted": "Para começar:",
+        "bullets": {
+          "createPlantsBold": "Adicione plantas",
+          "createPlantsSuffix": "na aba",
+          "plantsTabBold": "Plantas",
+          "addRemindersPrefix": "Adicione",
+          "remindersBold": "lembretes",
+          "addRemindersSuffix": "para cada planta, para que apareçam aqui como tarefas.",
+          "optionallyConnectPrefix": "Opcionalmente, conecte",
+          "iotBold": "dispositivos IoT (placas Arduino)",
+          "optionallyConnectMiddle": "na aba",
+          "readingsTabBold": "Leituras",
+          "optionallyConnectSuffix": "para monitorar temperatura, umidade, luz e umidade do solo em tempo real."
+        },
+        "outro": "Quando isso for configurado, a página inicial será seu centro para verificar o que cada planta precisa."
+      },
+      "overdue": {
+        "title": "Sem tarefas em atraso",
+        "body": "Você não tem tarefas em atraso agora.\n\nTudo está em dia — use a opção 'Mostrar todas' no FAB para ver a lista completa ou altere os filtros para visualizar as tarefas futuras."
+      },
+      "today": {
+        "title": "Sem tarefas para hoje",
+        "body": "Você não tem tarefas para hoje.\n\nUse a opção 'Mostrar todas' no FAB para ver os lembretes futuros ou altere os horários dos lembretes nas plantas."
+      }
+    }
+  }
+}

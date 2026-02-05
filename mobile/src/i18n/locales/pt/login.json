@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Senha",
+    "signIn": "Entrar",
+    "forgotPassword": "Esqueceu a senha?",
+    "resendActivation": "Não recebeu o e-mail de ativação?",
+    "noAccount": "Não tem uma conta?",
+    "signUp": "Cadastre-se",
+    "errors": {
+      "invalidCredentials": "E-mail ou senha inválidos.",
+      "generic": "Algo deu errado. Tente novamente."
+    },
+    "success": {
+      "welcome": "Bem-vindo de volta!"
+    }
+  }
+}

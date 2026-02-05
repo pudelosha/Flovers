@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "Leituras"
+    },
+    "defaults": {
+      "thisDevice": "este dispositivo"
+    },
+    "tile": {
+      "lastReadPrefix": "Última leitura"
+    },
+    "menu": {
+      "history": "Histórico de leituras",
+      "plantDetails": "Detalhes da planta",
+      "editDevice": "Editar dispositivo",
+      "deleteDevice": "Excluir dispositivo"
+    },
+    "fab": {
+      "linkDevice": "Conectar dispositivo",
+      "deviceSetup": "Configuração do dispositivo",
+      "sort": "Ordenar",
+      "filter": "Filtrar",
+      "clearFilter": "Limpar filtro"
+    },
+    "empty": {
+      "title": "Sem dispositivos",
+      "description": "Os dispositivos permitem salvar leituras de temperatura, umidade, intensidade de luz e umidade do solo para a planta.\n\nToque na ação “+ Conectar dispositivo” para adicionar um novo. Selecione a planta, nomeie o dispositivo, marque os sensores e configure o intervalo de amostragem. Em seguida, abra a Configuração do dispositivo para visualizar o segredo da conta, atualizá-lo e enviar o esboço Arduino/ESP pronto para ser copiado."
+    },
+    "toasts": {
+      "unauthorized": "Sem autorização. Faça login novamente.",
+      "loadFailed": "Não foi possível carregar os dispositivos",
+      "deviceDeleted": "Dispositivo excluído",
+      "deleteFailed": "Falha ao excluir",
+      "deleteFailedPrefix": "Falha ao excluir",
+      "deviceAdded": "Dispositivo adicionado",
+      "deviceUpdated": "Dispositivo atualizado",
+      "addFailed": "Falha ao adicionar",
+      "addFailedPrefix": "Falha ao adicionar",
+      "updateFailed": "Falha ao atualizar",
+      "updateFailedPrefix": "Falha ao atualizar",
+      "setupLoadFailed": "Falha ao carregar a configuração",
+      "setupLoadFailedPrefix": "Falha ao carregar a configuração",
+      "secretRotated": "Segredo atualizado",
+      "rotateFailed": "Falha ao atualizar o segredo",
+      "rotateFailedPrefix": "Falha ao atualizar o segredo"
+    }
+  }
+}

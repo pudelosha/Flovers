@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "取消",
+      "delete": "删除",
+      "apply": "应用",
+      "clear": "清除",
+      "close": "关闭",
+      "reset": "重置",
+      "save": "保存",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "删除读取",
+      "messageBefore": "您确定要删除",
+      "messageAfter": "吗？此操作无法撤销。"
+    },
+    "deviceSetup": {
+      "title": "设备设置",
+      "httpEndpoints": "HTTP 端点",
+      "addReadingPost": "添加读取 (POST)",
+      "readReadingsGetPost": "获取读取 (GET/POST)",
+      "samplePayloads": "示例负载",
+      "addReadingBody": "添加读取请求正文",
+      "readRequestBody": "获取读取请求正文",
+      "currentAuthSecret": "当前授权密钥",
+      "showAuthSecret": "显示授权密钥",
+      "hideAuthSecret": "隐藏授权密钥",
+      "generateNewSecret": "生成新密钥",
+      "downloadPdfDocumentation": "下载 PDF 文档",
+      "rotateConfirmTitle": "旋转密钥？",
+      "rotateConfirmText": "生成新密钥将使当前密钥失效。然后更新设备配置。",
+      "rotate": "旋转"
+    },
+    "filter": {
+      "title": "筛选读取",
+      "plantLabel": "植物",
+      "locationLabel": "位置",
+      "statusLabel": "状态",
+      "selectPlant": "选择植物",
+      "anyPlant": "任何植物",
+      "anyLocation": "任何位置",
+      "anyStatus": "任何状态",
+      "statusEnabled": "启用",
+      "statusDisabled": "禁用"
+    },
+    "sort": {
+      "title": "排序读取",
+      "sortBy": "排序依据",
+      "direction": "方向",
+      "keyPlantName": "植物名称",
+      "keyLocation": "位置",
+      "keyLastRead": "最后读取",
+      "ascending": "升序",
+      "descending": "降序"
+    },
+    "upsert": {
+      "linkDeviceTitle": "连接设备",
+      "editDeviceTitle": "编辑设备",
+      "noPlantsText": "您还没有任何植物。请先添加植物以连接设备。",
+      "selectPlant": "选择植物",
+      "locationPlaceholder": "位置",
+      "deviceNameRequired": "设备名称（必填）",
+      "sensors": "传感器",
+      "sensorTemperature": "温度",
+      "sensorHumidity": "湿度",
+      "sensorLight": "光照",
+      "sensorSoilMoisture": "土壤湿度",
+      "moistAlertLabel": "当土壤湿度低于阈值时发送警报",
+      "thresholdLabel": "阈值：",
+      "samplingInterval": "采样间隔",
+      "everyXHours": "每 {{count}} 小时",
+      "authSecret": "授权密钥",
+      "deviceKey": "设备密钥",
+      "sendCodeViaEmail": "通过电子邮件发送代码",
+      "saveCodeAsText": "将代码保存为文本",
+      "enabled": "启用",
+      "ingestReadingsFromDevice": "从此设备获取读取",
+      "notesOptional": "备注…（可选）"
+    }
+  }
+}

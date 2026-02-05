@@ -1,0 +1,35 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "Choisissez une plante",
+      "subtitle": "Vous pouvez parcourir notre bibliothèque complète de plantes, choisir dans une liste populaire ou scanner une plante à l’aide de la caméra. Vous pouvez également ignorer cette étape, mais le choix d’une plante nous permettra de suggérer automatiquement des tâches d’entretien, comme l’arrosage.",
+      "scanButton": "Scanner une plante",
+      "searchPlaceholder": "Rechercher une plante",
+      "popularPlants": "Plantes populaires",
+      "noPlantsAvailable": "Aucune plante disponible",
+      "errorSearch": "Impossible de charger la liste des plantes.",
+      "errorPopular": "Impossible de charger les plantes populaires"
+    },
+    "scannerModal": {
+      "title": "Scanner une plante",
+      "selectPlant": "Sélectionnez la plante détectée",
+      "scanInstructions": "Prenez une photo ou choisissez-en une depuis la galerie. Utilisez une photo claire et de bonne qualité qui montre bien la forme des feuilles de la plante, centrée et non obstruée par d’autres plantes ou objets.",
+      "noPhoto": "Aucune photo",
+      "takePhoto": "Prendre une photo",
+      "fromGallery": "Depuis la galerie",
+      "recognize": "Reconnaître la plante",
+      "cameraRequired": "Autorisation requise",
+      "cameraPermissionMessage": "Veuillez accorder les autorisations de la caméra et des médias afin de prendre une photo.",
+      "libraryRequired": "Autorisation requise",
+      "libraryPermissionMessage": "Veuillez accorder les autorisations d’accès aux médias afin de sélectionner une photo.",
+      "cameraError": "Erreur de la caméra",
+      "libraryError": "Erreur de sélection",
+      "cameraFailure": "Impossible d’ouvrir la caméra.",
+      "libraryFailure": "Impossible d’ouvrir la galerie.",
+      "recognitionFailure": "Impossible de reconnaître la plante.",
+      "noResults": "Aucun résultat. Essayez de prendre une photo plus nette.",
+      "back": "Retour",
+      "close": "Fermer"
+    }
+  }
+}

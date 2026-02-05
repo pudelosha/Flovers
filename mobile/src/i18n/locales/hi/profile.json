@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "प्रोफ़ाइल"
+    },
+    "common": {
+      "save": "सहेजें",
+      "cancel": "रद्द करें",
+      "change": "बदलें",
+      "delete": "हटाएं",
+      "send": "भेजें"
+    },
+    "account": {
+      "title": "खाता",
+      "emailLabel": "ईमेल",
+      "createdLabel": "निर्मित",
+      "changeEmail": "ईमेल बदलें",
+      "changePassword": "पासवर्ड बदलें",
+      "deleteAccount": "खाता हटाएं",
+      "logout": "लॉगआउट"
+    },
+    "notifications": {
+      "title": "सूचनाएँ",
+      "emailSection": "ईमेल",
+      "emailDailyLabel": "आज के कार्यों का दैनिक सारांश",
+      "emailDailyHint": "आज के कार्यों का सारांश के साथ एक संदेश प्रतिदिन।",
+      "sendAt": "भेजें समय",
+      "email24hLabel": "24 घंटों बाद अनुस्मारक भेजें",
+      "email24hHint": "यदि आज के कार्य पूरे नहीं होते हैं, तो कल अनुस्मारक भेजें।",
+      "mobileSection": "फोन",
+      "pushDailyLabel": "फोन पर दैनिक सूचना",
+      "pushDailyHint": "आज के कार्यों का सारांश के साथ एक सिस्टम सूचना।",
+      "notifyAt": "सूचित करें समय",
+      "push24hLabel": "24 घंटे बाद सूचना",
+      "push24hHint": "यदि कार्य बाकी रहते हैं, तो अगले दिन सूचना भेजें।"
+    },
+    "settings": {
+      "title": "सेटिंग्स",
+      "language": "भाषा",
+      "dateTimeFormat": "तिथि / समय प्रारूप",
+      "temperatureUnits": "तापमान इकाइयाँ",
+      "measurementUnits": "माप इकाइयाँ",
+      "fabPosition": "FAB स्थिति",
+      "background": "पृष्ठभूमि",
+      "tileMotive": "टाइल प्रेरणा",
+      "tilesTransparency": "टाइल पारदर्शिता",
+      "level": "स्तर",
+      "temperatureOptions": {
+        "C": "°C (सेल्सियस)",
+        "F": "°F (फारेनहाइट)",
+        "K": "K (केल्विन)"
+      },
+      "measureOptions": {
+        "metric": "मेट्रिक (सेंटीमीटर / मीटर)",
+        "imperial": "इम्पीरियल (इंच / फीट)"
+      },
+      "fabPositionOptions": {
+        "right": "दायां",
+        "left": "बायां"
+      },
+      "backgroundOptions": {
+        "bg1": "पृष्ठभूमि 1",
+        "bg2": "पृष्ठभूमि 2",
+        "bg3": "पृष्ठभूमि 3",
+        "bg4": "पृष्ठभूमि 4",
+        "bg5": "पृष्ठभूमि 5"
+      },
+      "tileMotiveOptions": {
+        "light": "रोशन",
+        "dark": "अंधेरा"
+      }
+    },
+    "support": {
+      "title": "सहायता",
+      "contactUs": "हमसे संपर्क करें",
+      "reportBug": "बग रिपोर्ट करें",
+      "aboutTitle": "ऐप के बारे में",
+      "versionLabel": "संस्करण",
+      "releaseDateLabel": "रिलीज़ तिथि",
+      "contactLabel": "संपर्क"
+    },
+    "toasts": {
+      "unauthorized": "अनधिकृत",
+      "unauthorizedLoginAgain": "अनधिकृत। कृपया फिर से लॉगिन करें।",
+      "failedToLoadPreferences": "प्रोफ़ाइल सेटिंग्स लोड करने में विफल। कृपया फिर से प्रयास करें।",
+      "notificationsUpdated": "सूचना सेटिंग्स को अपडेट किया गया।",
+      "couldNotSaveNotifications": "सूचना सेटिंग्स को सहेजने में विफल।",
+      "settingsUpdated": "सेटिंग्स को अपडेट किया गया।",
+      "couldNotSaveSettings": "सेटिंग्स को सहेजने में विफल।"
+    }
+  }
+}

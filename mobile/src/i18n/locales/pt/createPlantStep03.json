@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Carregando...",
+      "title": "Escolha a localização",
+      "subtitle": "Opcional, mas útil: as localizações permitem agrupar plantas e depois classificar ou filtrar.",
+      "errorLoadingLocations": "Não foi possível carregar as localizações.",
+      "createLocation": "Criar nova localização",
+      "yourLocations": "Suas localizações",
+      "categories": {
+        "indoor": "Interno",
+        "outdoor": "Externo",
+        "other": "Outro"
+      },
+      "noLocations": {
+        "indoor": "Nenhuma localização interna.",
+        "outdoor": "Nenhuma localização externa.",
+        "other": "Nenhuma outra localização."
+      },
+      "locationExists": "Já existe uma localização com esse nome.",
+      "errorCreatingLocation": "Não foi possível criar a localização",
+      "quickSuggestions": "Sugestões rápidas"
+    },
+    "locationModal": {
+      "title": "Nova localização",
+      "locationName": "Nome da localização",
+      "category": "Categoria",
+      "indoor": "Interna",
+      "outdoor": "Externa",
+      "other": "Outra",
+      "create": "Criar",
+      "cancel": "Cancelar",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Sala de estar",
+          "kitchen": "Cozinha",
+          "diningRoom": "Sala de jantar",
+          "bedroom": "Quarto",
+          "bathroom": "Banheiro",
+          "hallway": "Corredor",
+          "office": "Escritório",
+          "kidsRoom": "Quarto das crianças"
+        },
+        "outdoor": {
+          "balcony": "Varanda",
+          "terrace": "Terraço",
+          "patio": "Pátio",
+          "garden": "Jardim",
+          "frontYard": "Jardim da frente",
+          "backyard": "Jardim de trás",
+          "porch": "Alpendre",
+          "greenhouse": "Estufa"
+        },
+        "other": {
+          "staircase": "Escada",
+          "garage": "Garagem",
+          "basement": "Porão",
+          "lobby": "Saguão",
+          "sunroom": "Sala de sol",
+          "workshop": "Oficina",
+          "studio": "Estúdio",
+          "attic": "Sótão"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "Perfil"
+    },
+    "common": {
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "change": "Cambiar",
+      "delete": "Eliminar",
+      "send": "Enviar"
+    },
+    "account": {
+      "title": "Cuenta",
+      "emailLabel": "Correo electrónico",
+      "createdLabel": "Creado",
+      "changeEmail": "Cambiar correo electrónico",
+      "changePassword": "Cambiar contraseña",
+      "deleteAccount": "Eliminar cuenta",
+      "logout": "Cerrar sesión"
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "emailSection": "Correo electrónico",
+      "emailDailyLabel": "Resumen diario de tareas para hoy",
+      "emailDailyHint": "Un mensaje diario con el resumen de las tareas de hoy.",
+      "sendAt": "Enviar a las",
+      "email24hLabel": "Enviar recordatorio después de 24 horas",
+      "email24hHint": "Si las tareas de hoy quedan incompletas, enviar recordatorio mañana.",
+      "mobileSection": "Teléfono",
+      "pushDailyLabel": "Notificación diaria en el teléfono",
+      "pushDailyHint": "Una notificación del sistema con el resumen de las tareas de hoy.",
+      "notifyAt": "Notificar a las",
+      "push24hLabel": "Notificación después de 24 horas",
+      "push24hHint": "Si las tareas quedan pendientes, enviar notificación al día siguiente."
+    },
+    "settings": {
+      "title": "Configuraciones",
+      "language": "Idioma",
+      "dateTimeFormat": "Formato de fecha / hora",
+      "temperatureUnits": "Unidades de temperatura",
+      "measurementUnits": "Unidades de medida",
+      "fabPosition": "Posición del FAB",
+      "background": "Fondo",
+      "tileMotive": "Motivo de los azulejos",
+      "tilesTransparency": "Transparencia de los azulejos",
+      "level": "Nivel",
+      "temperatureOptions": {
+        "C": "°C (Celsius)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Métrico (cm / m)",
+        "imperial": "Imperial (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Derecha",
+        "left": "Izquierda"
+      },
+      "backgroundOptions": {
+        "bg1": "Fondo 1",
+        "bg2": "Fondo 2",
+        "bg3": "Fondo 3",
+        "bg4": "Fondo 4",
+        "bg5": "Fondo 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Claro",
+        "dark": "Oscuro"
+      }
+    },
+    "support": {
+      "title": "Soporte",
+      "contactUs": "Contáctanos",
+      "reportBug": "Informar error",
+      "aboutTitle": "Acerca de la aplicación",
+      "versionLabel": "Versión",
+      "releaseDateLabel": "Fecha de lanzamiento",
+      "contactLabel": "Contacto"
+    },
+    "toasts": {
+      "unauthorized": "No autorizado",
+      "unauthorizedLoginAgain": "No autorizado. Inicia sesión nuevamente.",
+      "failedToLoadPreferences": "No se pudieron cargar las configuraciones del perfil. Intenta de nuevo.",
+      "notificationsUpdated": "Configuraciones de notificaciones actualizadas.",
+      "couldNotSaveNotifications": "No se pudieron guardar las configuraciones de notificaciones.",
+      "settingsUpdated": "Configuraciones actualizadas.",
+      "couldNotSaveSettings": "No se pudieron guardar las configuraciones."
+    }
+  }
+}

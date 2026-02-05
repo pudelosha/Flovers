@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "ملف النبات",
+      "preferences": "التفضيلات",
+      "errorProfile": "فشل في تحميل ملف النبات.",
+      "labels": {
+        "sun": "التعرض للشمس",
+        "water": "الري",
+        "difficulty": "الصعوبة",
+        "potMaterials": "مواد الوعاء",
+        "soilMixes": "خلطات التربة",
+        "wateringInterval": "فترة الري",
+        "moistureInterval": "فترة رطوبة التربة",
+        "fertilizeInterval": "فترة التسميد",
+        "repotInterval": "فترة إعادة الزراعة"
+      },
+      "values": {
+        "everyDays": "كل {{count}} أيام",
+        "everyMonths": "كل {{count}} أشهر"
+      },
+      "traits": {
+        "sun": "التعرض للشمس",
+        "water": "الري",
+        "difficulty": "الصعوبة",
+        "soil": "التربة",
+        "temperature": "درجة الحرارة",
+        "humidity": "الرطوبة",
+        "toxic": "سامة؟",
+        "growth": "النمو",
+        "light": "الضوء",
+        "fertilizer": "التسميد",
+        "recognize": "تعرف على النبات"
+      }
+    }
+  }
+}

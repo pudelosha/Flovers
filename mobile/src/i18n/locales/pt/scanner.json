@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Scanner"
+    },
+    "howItWorks": {
+      "title": "Como funciona"
+    },
+    "instruction": "Aponte a câmera para o código QR da planta. Quando for reconhecido, o aplicativo abrirá automaticamente os detalhes dessa planta.",
+    "hint1": "Cada planta tem seu próprio código QR. Você pode salvá-lo, imprimi-lo como uma etiqueta pequena, colá-lo no vaso e escaneá-lo aqui para abrir imediatamente a planta.",
+    "qrAvailableIn": "Códigos QR estão disponíveis em:",
+    "qrPath1": "Plantas → toque na planta → Detalhes da planta",
+    "qrPath2": "Plantas → menu do bloco → Mostrar código QR",
+    "permissionRequired": "Permissão de câmera necessária",
+    "permissionHint": "Ative o acesso à câmera nas configurações do sistema para escanear códigos QR.",
+    "openSettings": "Abrir configurações",
+    "initializingCamera": "Inicializando a câmera..."
+  }
+}

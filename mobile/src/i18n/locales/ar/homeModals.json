@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "إلغاء",
+      "apply": "تطبيق",
+      "reset": "إعادة تعيين"
+    },
+    "complete": {
+      "title": "حدد المهمة كمكتملة",
+      "overdueInfo": "هذه المهمة متأخرة. سيتم حساب التاريخ التالي اعتبارًا من اليوم {{intervalText}}.",
+      "noteLabel": "ملاحظة (اختياري)",
+      "noteHint": "سيتم حفظ هذه الملاحظة وستكون مرئية لاحقًا للنبتة المعنية في دفتر ملاحظات النباتات.",
+      "notePlaceholder": "يمكنك إضافة ملاحظة قصيرة حول ما قمت به، الملاحظات، إلخ.",
+      "confirm": "حدد كمكتمل"
+    },
+    "completeBulk": {
+      "title": "حدد {{count}} مهام كمكتملة",
+      "overdueInfo": "بعض المهام متأخرة. بالنسبة للمهام المتأخرة، سيتم حساب التاريخ التالي اعتبارًا من اليوم {{intervalText}}.",
+      "noteHint": "سيتم حفظ هذه الملاحظة لكل مهمة مكتملة وستكون مرئية لاحقًا للنبتة المعنية في دفتر ملاحظات النباتات.",
+      "confirm": "حدد كمكتمل"
+    },
+    "filter": {
+      "title": "تصفية المهام",
+      "plantLabel": "نبتة",
+      "locationLabel": "الموقع",
+      "taskTypesLabel": "أنواع المهام",
+      "dueDateRangeLabel": "نطاق تاريخ الاستحقاق",
+      "fromLabel": "من",
+      "toLabel": "إلى",
+      "anyPlant": "أي نبتة",
+      "selectPlant": "اختر نبتة",
+      "anyLocation": "أي موقع",
+      "datePlaceholder": "YYYY-MM-DD",
+      "clear": "مسح"
+    },
+    "sort": {
+      "title": "ترتيب المهام",
+      "sortByLabel": "ترتيب حسب",
+      "directionLabel": "الاتجاه",
+      "keys": {
+        "dueDate": "التاريخ",
+        "plant": "اسم النبتة",
+        "location": "الموقع"
+      },
+      "directions": {
+        "asc": "تصاعدي",
+        "desc": "تنازلي"
+      }
+    }
+  }
+}

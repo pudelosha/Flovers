@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "加载中...",
+      "title": "选择位置",
+      "subtitle": "可选，但很有帮助：位置允许对植物进行分组，并且后续可以排序或过滤。",
+      "errorLoadingLocations": "无法加载位置。",
+      "createLocation": "创建新位置",
+      "yourLocations": "你的位置",
+      "categories": {
+        "indoor": "室内",
+        "outdoor": "室外",
+        "other": "其他"
+      },
+      "noLocations": {
+        "indoor": "没有室内位置。",
+        "outdoor": "没有室外位置。",
+        "other": "没有其他位置。"
+      },
+      "locationExists": "该名称的位置信息已存在。",
+      "errorCreatingLocation": "创建位置失败",
+      "quickSuggestions": "快速建议"
+    },
+    "locationModal": {
+      "title": "新位置",
+      "locationName": "位置名称",
+      "category": "类别",
+      "indoor": "室内",
+      "outdoor": "室外",
+      "other": "其他",
+      "create": "创建",
+      "cancel": "取消",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "客厅",
+          "kitchen": "厨房",
+          "diningRoom": "餐厅",
+          "bedroom": "卧室",
+          "bathroom": "浴室",
+          "hallway": "走廊",
+          "office": "办公室",
+          "kidsRoom": "儿童房"
+        },
+        "outdoor": {
+          "balcony": "阳台",
+          "terrace": "露台",
+          "patio": "庭院",
+          "garden": "花园",
+          "frontYard": "前院",
+          "backyard": "后院",
+          "porch": "门廊",
+          "greenhouse": "温室"
+        },
+        "other": {
+          "staircase": "楼梯",
+          "garage": "车库",
+          "basement": "地下室",
+          "lobby": "大厅",
+          "sunroom": "日光房",
+          "workshop": "车间",
+          "studio": "工作室",
+          "attic": "阁楼"
+        }
+      }
+    }
+  }
+}

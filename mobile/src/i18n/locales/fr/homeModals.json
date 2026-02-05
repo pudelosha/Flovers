@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Annuler",
+      "apply": "Appliquer",
+      "reset": "Réinitialiser"
+    },
+    "complete": {
+      "title": "Marquer la tâche comme terminée",
+      "overdueInfo": "Cette tâche est en retard. La prochaine date sera calculée à partir d’aujourd’hui {{intervalText}}.",
+      "noteLabel": "Note (facultative)",
+      "noteHint": "Cette note sera enregistrée et visible ultérieurement pour la plante concernée dans le Journal des plantes.",
+      "notePlaceholder": "Vous pouvez ajouter une courte note sur ce que vous avez fait, vos observations, etc.",
+      "confirm": "Marquer comme terminée"
+    },
+    "completeBulk": {
+      "title": "Marquer {{count}} tâches comme terminées",
+      "overdueInfo": "Certaines tâches sont en retard. Pour les tâches en retard, la prochaine date sera calculée à partir d’aujourd’hui {{intervalText}}.",
+      "noteHint": "Cette note sera enregistrée pour chaque tâche terminée et sera visible ultérieurement pour la plante concernée dans le Journal des plantes.",
+      "confirm": "Marquer comme terminées"
+    },
+    "filter": {
+      "title": "Filtrer les tâches",
+      "plantLabel": "Plante",
+      "locationLabel": "Emplacement",
+      "taskTypesLabel": "Types de tâches",
+      "dueDateRangeLabel": "Plage de dates d’exécution",
+      "fromLabel": "Du",
+      "toLabel": "Au",
+      "anyPlant": "N’importe quelle plante",
+      "selectPlant": "Sélectionner une plante",
+      "anyLocation": "N’importe quel emplacement",
+      "datePlaceholder": "AAAA-MM-JJ",
+      "clear": "Effacer"
+    },
+    "sort": {
+      "title": "Trier les tâches",
+      "sortByLabel": "Trier par",
+      "directionLabel": "Direction",
+      "keys": {
+        "dueDate": "Date",
+        "plant": "Nom de la plante",
+        "location": "Emplacement"
+      },
+      "directions": {
+        "asc": "Croissant",
+        "desc": "Décroissant"
+      }
+    }
+  }
+}

@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "أنشئ نبتة"
+    },
+    "fallbackStep": {
+      "title": "الخطوة «{{step}}»",
+      "subtitle": "سيتم تنفيذ هذه الخطوة قريبًا."
+    },
+    "common": {
+      "previous": "السابق",
+      "next": "التالي",
+      "create": "إنشاء",
+      "cancel": "إلغاء",
+      "done": "تم",
+      "notSpecified": "لم يحدد"
+    }
+  }
+}

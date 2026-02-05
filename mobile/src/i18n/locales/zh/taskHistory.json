@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "任务历史"
+    },
+    "fab": {
+      "sort": "排序",
+      "filter": "筛选",
+      "delete": "删除",
+      "clearFilter": "清除筛选",
+      "showAllHistory": "显示所有历史记录"
+    },
+    "common": {
+      "unnamedPlant": "未命名的植物"
+    },
+    "toasts": {
+      "failedToLoad": "加载任务历史失败",
+      "historyDeleted": "历史记录已删除",
+      "failedToDeleteHistory": "删除历史记录失败",
+      "historyTaskDeleted": "历史条目已删除",
+      "failedToDeleteHistoryTask": "删除历史条目失败",
+      "taskNotLinkedToPlant": "此任务未与植物关联。"
+    },
+    "empty": {
+      "title": "没有完成的任务",
+      "descBeforeBold": "此屏幕显示",
+      "bold": "来自提醒的已关闭任务",
+      "descAfterBold": "来自你的主页（未完成的任务不会显示在这里）。",
+      "filteredToPlantId": "当前已按植物ID {{plantId}} 进行筛选。",
+      "openFromTaskHint": "从特定任务打开历史记录，只查看该植物的历史记录。"
+    },
+    "tile": {
+      "completedOn": "完成日期: {{date}}",
+      "noteLabel": "备注"
+    },
+    "menu": {
+      "expand": "展开",
+      "collapse": "收起",
+      "editReminder": "编辑提醒",
+      "goToPlant": "前往植物",
+      "deleteTask": "删除任务"
+    },
+    "types": {
+      "watering": "浇水",
+      "fertilising": "施肥",
+      "moisture": "喷雾",
+      "care": "护理",
+      "repot": "换盆"
+    }
+  }
+}

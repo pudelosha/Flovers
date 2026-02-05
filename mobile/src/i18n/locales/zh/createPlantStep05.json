@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "花盆和土壤",
+      "subtitle": "这些信息是可选的。选择花盆/容器材料和土壤——或者选择“不指定”并继续。",
+      "containerMaterial": "花盆材料",
+      "soilMix": "土壤/混合物",
+      "notSpecified": "不指定",
+      "notSpecifiedDesc": "如果不确定，可以跳过。",
+      "potMaterials": {
+        "plastic": {
+          "label": "塑料",
+          "description": "轻便；保持水分时间长；便宜且通用。"
+        },
+        "ceramic": {
+          "label": "陶瓷（上釉）",
+          "description": "较重；保持水分良好；装饰性强。"
+        },
+        "terracotta": {
+          "label": "陶土",
+          "description": "多孔；排水良好；非常适合多肉植物和仙人掌。"
+        },
+        "clay": {
+          "label": "黏土（未上釉）",
+          "description": "类似陶土；透气性好；干燥较快。"
+        },
+        "cement": {
+          "label": "水泥",
+          "description": "非常重；现代感强；保持水分较好。"
+        },
+        "concrete": {
+          "label": "混凝土",
+          "description": "耐用且沉重；户外稳定性好；保持水分。"
+        },
+        "metal": {
+          "label": "金属（一般）",
+          "description": "在阳光下快速加热；通常需要保护罩/衬垫。"
+        },
+        "stainless": {
+          "label": "不锈钢",
+          "description": "现代感；防腐蚀；可能会加热。"
+        },
+        "aluminum": {
+          "label": "铝",
+          "description": "轻便；导热性强；注意避免阳光下过热。"
+        },
+        "iron": {
+          "label": "铁/钢",
+          "description": "非常耐用；可能会生锈；有时需要内衬。"
+        },
+        "copper": {
+          "label": "铜/黄铜",
+          "description": "装饰性强；可能与土壤反应；通常作为保护罩。"
+        },
+        "wood": {
+          "label": "木材",
+          "description": "自然外观；可能需要内衬；在潮湿环境中可能腐烂。"
+        },
+        "bamboo": {
+          "label": "竹子",
+          "description": "轻便且可持续；通常需要内衬；更适合室内使用。"
+        },
+        "rattan": {
+          "label": "藤条/柳条",
+          "description": "装饰性保护罩；内部保持生产花盆。"
+        },
+        "glass": {
+          "label": "玻璃",
+          "description": "适用于 terrariums；无排水孔；需要控制湿度。"
+        },
+        "stone": {
+          "label": "石材/大理石",
+          "description": "非常沉重且稳定；长时间保持凉爽。"
+        },
+        "resin": {
+          "label": "树脂",
+          "description": "轻便且耐用；适合户外使用；隔离根部。"
+        },
+        "fiberglass": {
+          "label": "玻璃纤维",
+          "description": "轻便且坚固；适合户外使用；隔离根部。"
+        },
+        "biodegradable": {
+          "label": "可生物降解",
+          "description": "例如，椰子纤维/泥炭；起始花盆；随时间降解。"
+        },
+        "fabric": {
+          "label": "布质花盆",
+          "description": "透气根部；快速干燥；适合种植蔬菜。"
+        },
+        "grow-bag": {
+          "label": "生长袋",
+          "description": "布质袋子；便于携带；迅速排水；需要更频繁的浇水。"
+        },
+        "self-watering": {
+          "label": "自浇水",
+          "description": "带绳的水箱；帮助维持定期浇水。"
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "通用土壤",
+          "description": "大多数室内植物的良好起始选择。"
+        },
+        "green-plants": {
+          "label": "绿色植物/室内植物土壤",
+          "description": "适用于绿色植物的通用土壤（通常也适用于棕榈类植物）。"
+        },
+        "balcony-flowers": {
+          "label": "阳台花卉和花坛土壤",
+          "description": "更富含营养；适用于盆栽和花箱中的开花植物。"
+        },
+        "cactus-succulent": {
+          "label": "仙人掌和多肉植物土壤",
+          "description": "非常透气；非常适合多肉植物和仙人掌。"
+        },
+        "orchid": {
+          "label": "兰花土壤",
+          "description": "粗糙，基于树皮；为根部提供大量空气。"
+        },
+        "aroid": {
+          "label": "阿罗伊植物土壤混合物",
+          "description": "非常透气（树皮/珍珠岩）适用于怪兽/天南星科植物。"
+        },
+        "seed-starting": {
+          "label": "播种土壤",
+          "description": "细粒；适合发芽和育苗。"
+        },
+        "bonsai": {
+          "label": "盆栽土壤",
+          "description": "颗粒粗且透气；不容易压实。"
+        },
+        "herbs-vegetables": {
+          "label": "草本和蔬菜土壤",
+          "description": "富含营养；适用于食用植物。"
+        },
+        "citrus": {
+          "label": "柑橘类植物土壤",
+          "description": "透气性好；适合柑橘类植物和地中海植物。"
+        },
+        "fern": {
+          "label": "蕨类植物土壤",
+          "description": "喜湿性；通常含有更多有机物质。"
+        },
+        "conifers": {
+          "label": "针叶树土壤",
+          "description": "适合针叶树的土壤；通常略微酸性且透气性好。"
+        },
+        "acid-loving": {
+          "label": "酸性植物土壤",
+          "description": "适合蓝莓、杜鹃花、枸橼等酸性土壤植物。"
+        },
+        "peat-free": {
+          "label": "无泥炭土壤",
+          "description": "更加可持续；成分取决于生产商。"
+        }
+      }
+    }
+  }
+}
