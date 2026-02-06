@@ -1,0 +1,94 @@
+{
+  "docs_create_plant_wizard": {
+    "title": "Asistente para agregar planta",
+    "sections": [
+      {
+        "heading": "Objetivo de este proceso",
+        "body": [
+          "El asistente para agregar una planta es un proceso guiado en 9 pasos que sirve para crear una nueva instancia de planta en tu cuenta.",
+          "Ayuda (de manera opcional) a vincular la planta con una definición de planta de la base de datos de Flovers, recopilar el contexto (ubicación, exposición) y opcionalmente generar recordatorios basados en las preferencias de cuidado.",
+          "El asistente se utiliza únicamente para crear una nueva planta. La edición de una planta existente se realiza en otra vista/proceso."
+        ]
+      },
+      {
+        "heading": "Paso 01 — Selección de definición de planta (opcional)",
+        "body": [
+          "Puedes buscar una definición de planta (perfil de especie incorporado) usando el campo de búsqueda.",
+          "Debajo del campo hay una lista de plantas populares de interior que funciona como un acceso rápido.",
+          "Opcionalmente, puedes usar el Reconocimiento de plantas: inicia un escaneo, toma una foto o selecciona una de la galería, y el sistema te devolverá los 3 resultados más compatibles.",
+          "Si aceptas la sugerencia, la definición de planta seleccionada se aplicará a la planta que estás creando."
+        ]
+      },
+      {
+        "heading": "Paso 02 — Vista previa de la definición",
+        "body": [
+          "Si se ha seleccionado una definición de planta, en este paso se muestran sus detalles: imagen y características y preferencias básicas.",
+          "Este es un paso de verificación que permite confirmar el perfil correcto antes de continuar."
+        ]
+      },
+      {
+        "heading": "Paso 03 — Selección de ubicación (requerido)",
+        "body": [
+          "Selecciona la ubicación donde se encuentra la planta (por ejemplo, cocina, sala, balcón).",
+          "En este punto también puedes agregar una nueva ubicación.",
+          "Actualmente, la selección de ubicación es obligatoria para continuar con los siguientes pasos."
+        ]
+      },
+      {
+        "heading": "Paso 04 — Exposición (mediciones opcionales)",
+        "body": [
+          "Este paso permite registrar el contexto de exposición: dirección, nivel de luz y distancia desde la ventana.",
+          "La dirección se puede medir usando la brújula del teléfono, si la aplicación tiene permisos para usar la brújula/sensores.",
+          "El nivel de luz se puede medir si el dispositivo tiene el sensor adecuado y se han otorgado los permisos necesarios.",
+          "Los valores de exposición son opcionales: puedes completarlos manualmente o omitirlos."
+        ]
+      },
+      {
+        "heading": "Paso 05 — Maceta y sustrato (opcional)",
+        "body": [
+          "Especifica el tipo de contenedor/maceta (por ejemplo, plástico, cerámica) y el tipo de sustrato.",
+          "Estos campos son opcionales, pero pueden ayudar a una mejor adaptación de los intervalos sugeridos cuando se activan las tareas automáticas."
+        ]
+      },
+      {
+        "heading": "Paso 06 — Tareas automáticas (opcional, con definición de planta)",
+        "body": [
+          "Si la planta está vinculada a una definición de planta, Flovers puede crear automáticamente recordatorios/tareas basados en las preferencias de la base de datos.",
+          "Marca la casilla principal para activar la generación automática, luego selecciona los tipos de tareas que deben crearse (por ejemplo, riego, pulverización, fertilización, trasplante, cuidado).",
+          "Los intervalos sugeridos se basan en la definición de planta y pueden ajustarse según la exposición y la maceta/sustrato, si esos datos están disponibles.",
+          "Puedes omitir este paso y crear los recordatorios manualmente más tarde."
+        ]
+      },
+      {
+        "heading": "Paso 07 — Agregar una foto propia (opcional)",
+        "body": [
+          "Puedes agregar una foto propia de la planta desde tu teléfono.",
+          "Este paso es opcional y, dependiendo de tu flujo en la aplicación, también podría ser posible más tarde."
+        ]
+      },
+      {
+        "heading": "Paso 08 — Datos finales (nombre requerido)",
+        "body": [
+          "Configura el nombre que se mostrará para la planta (requerido).",
+          "Opcionalmente, agrega notas y la fecha de compra.",
+          "Esta información será visible en los detalles de la planta y ayudará a llevar un registro claro del cuidado."
+        ]
+      },
+      {
+        "heading": "Paso 09 — Resumen y confirmación",
+        "body": [
+          "Después de agregar la planta correctamente, el asistente muestra una pantalla de confirmación/resumen.",
+          "Desde aquí, puedes ir a la lista de plantas o abrir la nueva planta creada, dependiendo de la navegación de la aplicación."
+        ]
+      },
+      {
+        "heading": "Notas y permisos",
+        "body": [
+          "El reconocimiento de plantas requiere acceso a la cámara y/o galería, dependiendo de la forma en que se proporcione la foto.",
+          "Las mediciones de exposición pueden requerir permisos para sensores (por ejemplo, brújula) y dependen de la disponibilidad del hardware en el dispositivo.",
+          "La vinculación con una definición de planta es opcional: puedes omitir este paso y aún así crear la planta, añadiendo los recordatorios manualmente."
+        ]
+      }
+    ]
+  }
+}

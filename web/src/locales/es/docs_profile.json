@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Perfil",
+    "sections": [
+      {
+        "heading": "Objetivo de esta vista",
+        "body": [
+          "La vista de Perfil es el lugar central para gestionar los datos de la cuenta, las configuraciones de notificaciones, la configuración de la aplicación y el soporte.",
+          "Permite al usuario controlar tanto los datos personales como el comportamiento de la aplicación Flovers."
+        ]
+      },
+      {
+        "heading": "Cuenta",
+        "body": [
+          "La sección Cuenta muestra la información básica de la cuenta, como la dirección de correo electrónico y la fecha de creación de la cuenta.",
+          "Desde este lugar, el usuario puede cambiar la dirección de correo electrónico (se requiere confirmación de la contraseña), cambiar la contraseña actual, cerrar sesión o eliminar permanentemente la cuenta.",
+          "Eliminar la cuenta causa la eliminación irreversible de todos los datos del usuario, incluidas las plantas, los recordatorios, las tareas, las lecturas y los dispositivos."
+        ]
+      },
+      {
+        "heading": "Notificaciones",
+        "body": [
+          "La sección Notificaciones permite gestionar los permisos y las preferencias para las notificaciones por correo electrónico y push.",
+          "Para ambos canales, el usuario puede activar o desactivar dos tipos de notificaciones: el resumen diario que informa sobre las tareas programadas para hoy y un recordatorio enviado 24 horas después si las tareas aún no se han completado.",
+          "Para cada tipo de notificación, el usuario especifica la hora de envío (hora exacta, por ejemplo, 14:00)."
+        ]
+      },
+      {
+        "heading": "Configuraciones",
+        "body": [
+          "La sección Configuraciones permite controlar el comportamiento general y la apariencia de la aplicación.",
+          "Las opciones disponibles incluyen la selección del idioma, el formato de fecha y hora, las unidades de temperatura (Celsius, Fahrenheit, Kelvin), las unidades de medida (métricas o imperiales) y la posición del botón FAB (lado izquierdo o derecho).",
+          "El usuario también puede personalizar la apariencia de la aplicación, eligiendo una imagen de fondo, el tema de los mosaicos (claro u oscuro) y el nivel de transparencia de los mosaicos."
+        ]
+      },
+      {
+        "heading": "Soporte",
+        "body": [
+          "La sección Soporte permite contactar directamente con el equipo de Flovers.",
+          "El usuario puede informar de un problema o enviar una consulta al equipo de soporte técnico.",
+          "Informar de errores ayuda en el desarrollo continuo y mejora la calidad de la aplicación."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "docs_locations": {
+    "title": "Ubicaciones",
+    "sections": [
+      {
+        "heading": "Objetivo de esta vista",
+        "body": [
+          "La vista de Ubicaciones se utiliza para gestionar los lugares donde se encuentran tus plantas, como habitaciones, balcones u otras áreas.",
+          "Las ubicaciones se utilizan principalmente para organizar las plantas y facilitar el filtrado, ordenación y agrupamiento de datos en la aplicación."
+        ]
+      },
+      {
+        "heading": "Lista de ubicaciones",
+        "body": [
+          "La pantalla muestra una lista de todas las ubicaciones definidas por el usuario.",
+          "Las ubicaciones pueden ser nombres predeterminados o nombres personalizados creados por el usuario.",
+          "Cada ubicación muestra el número de plantas actualmente asociadas con ella."
+        ]
+      },
+      {
+        "heading": "Acciones en la ubicación (menú de 3 puntos)",
+        "body": [
+          "Cada ubicación tiene un menú de 3 puntos con las acciones disponibles.",
+          "El usuario puede editar el nombre de la ubicación para reflejar mejor el lugar real de almacenamiento de las plantas.",
+          "La eliminación de una ubicación solo es posible si no hay plantas asignadas a ella."
+        ]
+      },
+      {
+        "heading": "Botón de acción (FAB)",
+        "body": [
+          "El botón FAB ofrece acciones rápidas relacionadas con la gestión de ubicaciones.",
+          "El usuario puede agregar una nueva ubicación en cualquier momento.",
+          "Las ubicaciones se pueden ordenar por nombre de ubicación o por el número de plantas asignadas."
+        ]
+      },
+      {
+        "heading": "Uso de ubicaciones",
+        "body": [
+          "Las ubicaciones se usan en toda la aplicación para agrupar lógicamente las plantas.",
+          "Pueden utilizarse como criterios de filtrado y ordenación en vistas como Plantas, Recordatorios o Historial de tareas.",
+          "El uso de ubicaciones facilita mantener el orden, especialmente con un mayor número de plantas."
+        ]
+      }
+    ]
+  }
+}

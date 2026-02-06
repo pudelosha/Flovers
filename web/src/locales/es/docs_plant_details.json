@@ -1,0 +1,71 @@
+{
+  "docs_plant_details": {
+    "title": "Detalles de la planta",
+    "sections": [
+      {
+        "heading": "Propósito de esta vista",
+        "body": [
+          "La vista Detalles de la planta es el lugar central para ver y gestionar una sola planta creada por el usuario.",
+          "Conecta información sobre la planta, recordatorios asignados, tareas, lecturas de sensores (si están disponibles) y acciones rápidas relacionadas con esta planta."
+        ]
+      },
+      {
+        "heading": "Información sobre la planta",
+        "body": [
+          "En la parte superior de la pantalla se muestra la imagen de la planta, su nombre, el nombre opcional de la definición de la planta y la ubicación asignada.",
+          "A continuación se presentan los parámetros detallados proporcionados durante la creación de la planta, como la fecha de compra, notas, condiciones de luz, orientación, distancia de la ventana, tipo de maceta y tipo de sustrato.",
+          "Esta información ayuda a interpretar mejor los recordatorios, las lecturas y las decisiones relacionadas con el cuidado."
+        ]
+      },
+      {
+        "heading": "Acciones a nivel de planta (menú de 3 puntos)",
+        "body": [
+          "El menú de 3 puntos asociado con el encabezado de la planta ofrece acciones adicionales relacionadas con la propia planta.",
+          "Las opciones disponibles incluyen mostrar la Definición de la planta (si la planta está vinculada a ella), editar los datos de la planta, cambiar la imagen y acceder a los Recordatorios filtrados para esta planta.",
+          "Cambiar la imagen permite reemplazar la imagen predeterminada, agregar una foto propia desde el teléfono o eliminar la imagen."
+        ]
+      },
+      {
+        "heading": "Definición de la planta",
+        "body": [
+          "Si la planta está vinculada a una Definición de planta desde la base de datos de Flovers, el usuario puede abrir la vista dedicada de la Definición.",
+          "Esta vista presenta información sobre la especie, como la descripción de la planta, las preferencias de cuidado, características, nivel de dificultad, rango de temperaturas, humedad, toxicidad y tipo de crecimiento.",
+          "Las definiciones de plantas ofrecen pautas generales y deben ser interpretadas en el contexto de las condiciones reales del usuario."
+        ]
+      },
+      {
+        "heading": "Recordatorios y tareas",
+        "body": [
+          "La sección Recordatorios muestra todos los recordatorios activos asignados a una planta en particular.",
+          "Cada recordatorio tiene su propio menú de 3 puntos, que permite cerrar la tarea, editar el recordatorio o ver el historial de tareas.",
+          "Al cerrar una tarea, el usuario puede agregar una nota, que se convierte en parte del historial de cuidado de la planta."
+        ]
+      },
+      {
+        "heading": "Últimas lecturas",
+        "body": [
+          "Si la planta está vinculada a un dispositivo de medición, las últimas lecturas de los sensores se muestran en esta vista.",
+          "Las lecturas admitidas incluyen la temperatura del aire, la humedad del aire, el nivel de luz y la humedad del suelo.",
+          "La sección muestra los últimos valores junto con la información sobre el momento en que se realizaron las mediciones.",
+          "Tocar el mosaico de lecturas lleva al usuario a la vista Historial de lecturas, donde se presentan gráficos detallados y resúmenes (diarios/semanales/mensuales) para la temperatura, la humedad, la luz y la humedad del suelo (si el dispositivo está vinculado a la planta)."
+        ]
+      },
+      {
+        "heading": "Código QR y acceso rápido",
+        "body": [
+          "Cada planta tiene un código QR único que se muestra en la parte inferior de la pantalla.",
+          "Escanear este código en la vista del escáner lleva directamente a la vista Detalles de la planta.",
+          "El código QR se puede guardar en el dispositivo o enviar por correo electrónico, lo que permite imprimirlo y colocarlo en la maceta."
+        ]
+      },
+      {
+        "heading": "Información importante",
+        "body": [
+          "Las fotos añadidas por el usuario se almacenan exclusivamente en el dispositivo del usuario y no se guardan en el backend de Flovers.",
+          "Las imágenes predeterminadas de las plantas provienen del backend de Flovers y pueden generarse utilizando IA.",
+          "Las lecturas de los sensores y las acciones sugeridas son solo informativas y deben combinarse con la propia evaluación del usuario."
+        ]
+      }
+    ]
+  }
+}

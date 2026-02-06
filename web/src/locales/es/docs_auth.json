@@ -1,0 +1,56 @@
+{
+  "docs_auth": {
+    "title": "Inicio de sesión y registro",
+    "sections": [
+      {
+        "heading": "Creación de una nueva cuenta (Registro)",
+        "body": [
+          "Para utilizar Flovers, es necesario crear una cuenta de usuario individual. El registro se realiza directamente en la aplicación móvil.",
+          "Durante el registro, solo se requiere una dirección de correo electrónico y una contraseña. En esta etapa no se requieren datos personales adicionales.",
+          "La contraseña debe tener al menos 8 caracteres e incluir al menos un número y un carácter especial para garantizar un nivel básico de seguridad.",
+          "Antes de finalizar el registro, el usuario debe aceptar los Términos y Condiciones y la Política de Privacidad."
+        ]
+      },
+      {
+        "heading": "Activación de la cuenta por correo electrónico",
+        "body": [
+          "Después de enviar el formulario de registro, se enviará un mensaje de activación a la dirección de correo electrónico proporcionada.",
+          "Para activar la cuenta, debe hacer clic en el enlace de confirmación que se encuentra en el mensaje recibido.",
+          "Hasta que se active la cuenta, no es posible iniciar sesión en la aplicación."
+        ]
+      },
+      {
+        "heading": "Reenvío del correo electrónico de activación",
+        "body": [
+          "Si el correo electrónico de activación no ha llegado, el usuario puede solicitar que se reenvíe desde la aplicación.",
+          "Esta opción está disponible en la pantalla de inicio de sesión o registro y puede usarse si el mensaje se perdió, retrasó o fue enviado a la carpeta de spam.",
+          "Antes de volver a enviarlo, es recomendable revisar la carpeta de spam o otros filtros de correo."
+        ]
+      },
+      {
+        "heading": "Iniciar sesión en una cuenta existente",
+        "body": [
+          "Para iniciar sesión, solo se requiere la dirección de correo electrónico y la contraseña asociada a la cuenta.",
+          "Si la cuenta aún no ha sido activada, la aplicación notificará la necesidad de confirmar la dirección de correo electrónico.",
+          "Los datos de inicio de sesión se verifican de forma segura en el servidor; las contraseñas no se almacenan en texto claro."
+        ]
+      },
+      {
+        "heading": "Restablecer la contraseña olvidada",
+        "body": [
+          "Si el usuario no puede iniciar sesión debido a una contraseña olvidada, puede solicitar el envío de un correo electrónico para restablecer la contraseña.",
+          "El mensaje contiene instrucciones y un enlace seguro para establecer una nueva contraseña.",
+          "Después de configurar la nueva contraseña, es posible iniciar sesión en la aplicación de inmediato."
+        ]
+      },
+      {
+        "heading": "Notas sobre seguridad",
+        "body": [
+          "Cada cuenta de usuario está protegida por una contraseña individual configurada durante el registro.",
+          "Por razones de seguridad, no se deben compartir los datos de inicio de sesión con terceros.",
+          "Si se sospecha de un acceso no autorizado a la cuenta, se recomienda cambiar la contraseña inmediatamente."
+        ]
+      }
+    ]
+  }
+}

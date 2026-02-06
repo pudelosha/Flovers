@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "Copiar",
+    "copied": "Copiado"
+  },
+  "title": "Esquemas de dispositivos y cableado",
+  "lead": "Esta página describe cómo enviar lecturas de sensores IoT a Flovers. Aquí encontrarás los endpoints, la estructura del payload y un ejemplo de código Arduino para ESP32/ESP8266 para sensores populares. También hay un marcador de posición para una imagen de cableado (Fritzing) que se reemplazará más adelante.",
+  "endpoints": {
+    "title": "Endpoints API",
+    "note": "Los endpoints son ejemplos. Cámbialos por la dirección de producción del backend cuando conectes el dispositivo.",
+    "ingest": {
+      "label": "Ingesta de lecturas (POST)",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "Obtención de lecturas (GET/POST)",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "Documentación POST ingest",
+    "desc": "Envía una muestra de lectura como JSON. El backend verifica device_key + secret y guarda las métricas bajo el dispositivo.",
+    "schemaLabel": "Estructura del payload (JSON)",
+    "psLabel": "Ejemplo PowerShell (POST)"
+  },
+  "read": {
+    "title": "GET / documentación de lectura",
+    "desc": "Obtén lecturas para un dispositivo dentro de un rango de tiempo. Si el backend soporta consultas POST, puedes enviar el cuerpo en JSON en lugar de parámetros en la URL.",
+    "exampleLabel": "Ejemplos (GET + POST opcional)"
+  },
+  "arduino": {
+    "title": "Arduino (ESP32/ESP8266) — código de ejemplo",
+    "desc": "Implementación de referencia: se conecta al Wi-Fi, lee sensores y envía JSON POST al endpoint de ingest en intervalos establecidos. Calibra los valores del sensor de humedad (húmedo/seco) para que los porcentajes tengan sentido.",
+    "codeLabel": "Muestra Arduino (Wi-Fi + POST ingest)",
+    "note": "Si necesitas marcas de tiempo correctas, agrega sincronización de tiempo NTP (configTime) y genera ISO-8601 UTC en el dispositivo.",
+    "sensors": {
+      "bh1750": "BH1750 (GY-302) — intensidad de luz por I2C",
+      "moisture": "Sensor capacitivo de humedad del suelo — lectura analógica (requiere calibración húmedo/seco)",
+      "bme280": "BME280 — temperatura y humedad por I2C (presión opcional)"
+    }
+  },
+  "wiring": {
+    "title": "Esquema de cableado",
+    "desc": "Agrega aquí más tarde una imagen de Fritzing. Este marcador de posición estabiliza el diseño de la página hasta que el esquema esté listo.",
+    "aria": "Marcador de posición del esquema de cableado",
+    "placeholderTitle": "Marcador de posición Fritzing",
+    "placeholderSub": "Reemplaza este bloque por la imagen cuando exportes el esquema."
+  }
+}

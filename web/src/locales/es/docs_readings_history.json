@@ -1,0 +1,43 @@
+{
+  "docs_readings_history": {
+    "title": "Historial de lecturas",
+    "sections": [
+      {
+        "heading": "Objetivo de esta vista",
+        "body": [
+          "La vista Historial de lecturas proporciona una visión completa de los datos de medición pasados para el dispositivo y la planta vinculados.",
+          "A diferencia de la lista de Lecturas (donde principalmente se muestran los valores más recientes), esta vista se utiliza para analizar tendencias y cambios a lo largo del tiempo en los gráficos."
+        ]
+      },
+      {
+        "heading": "Rangos de tiempo: Día, Semana, Mes",
+        "body": [
+          "El usuario puede alternar entre tres rangos: Día, Semana y Mes.",
+          "La vista Día presenta las lecturas de un solo día en intervalos horarios (suponiendo que el dispositivo envíe datos cada hora y el usuario acepte un mayor consumo de batería en el dispositivo).",
+          "Las vistas Semana y Mes muestran los datos en una perspectiva más amplia, lo que facilita la detección de tendencias."
+        ]
+      },
+      {
+        "heading": "Selección del parámetro de medición",
+        "body": [
+          "Los gráficos están disponibles para los parámetros: temperatura del aire, humedad del aire, nivel de luz y humedad del suelo (dependiendo de lo que mida el dispositivo).",
+          "El parámetro se selecciona con los botones debajo del gráfico (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Navegación por períodos anteriores",
+        "body": [
+          "Las flechas junto al período seleccionado permiten navegar entre días, semanas o meses anteriores.",
+          "La navegación solo está disponible para los períodos en los que existen datos: los períodos futuros no se muestran."
+        ]
+      },
+      {
+        "heading": "Disponibilidad de datos e interpretación",
+        "body": [
+          "Si el dispositivo no ha entregado lecturas para el período seleccionado, el gráfico estará vacío o puede contener datos faltantes.",
+          "Los datos de los sensores son informativos y deben ser interpretados junto con la observación de las plantas y la conciencia sobre el impacto de la calibración, la ubicación de los sensores y las condiciones ambientales."
+        ]
+      }
+    ]
+  }
+}

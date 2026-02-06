@@ -1,0 +1,91 @@
+{
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: {{date}}",
+    "section1": {
+      "title": "§ 1. Disposiciones generales",
+      "p1": "El responsable del tratamiento de los datos personales procesados en relación con el uso del sitio web Flovers y la aplicación móvil Flovers es Marcin Janowski Copy Paste IT Solutions, con sede en ul. płk. Francesco Nullo 30/115, 31-543 Cracovia, Polonia, correo electrónico: info@flovers.app, en adelante denominado 'Responsable'.",
+      "p2": "El Responsable procesa los datos personales de acuerdo con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 (RGPD).",
+      "p3": "Esta Política de Privacidad se aplica al sitio web Flovers, a la aplicación móvil Flovers (Android y, en el futuro, iOS) y a la infraestructura backend asociada con su funcionamiento."
+    },
+    "section2": {
+      "title": "§ 2. Ámbito y fines del tratamiento de datos personales",
+      "intro": "El Responsable procesa los datos personales con los siguientes fines:",
+      "list": [
+        "crear y gestionar la cuenta del usuario en la aplicación",
+        "autenticar al usuario y realizar el proceso de inicio de sesión",
+        "enviar mensajes del sistema, incluidos correos electrónicos de verificación y restablecimiento de contraseña",
+        "gestionar las solicitudes enviadas a través del formulario de contacto",
+        "garantizar el funcionamiento adecuado de la aplicación y el servicio",
+        "realizar recordatorios, tareas y notificaciones relacionadas con el cuidado de las plantas",
+        "garantizar la seguridad del sistema y mantener los registros técnicos"
+      ],
+      "legalBasis": "La base legal para el tratamiento de los datos es el art. 6, párrafo 1, letra b del RGPD (ejecución de un contrato), el art. 6, párrafo 1, letra c del RGPD (obligación legal) y el art. 6, párrafo 1, letra f del RGPD (interés legítimo del Responsable)."
+    },
+    "section3": {
+      "title": "§ 3. Tipo de datos procesados",
+      "intro": "Dependiendo de cómo se utilice la aplicación o el servicio, el Responsable puede procesar los siguientes datos:",
+      "list": [
+        "dirección de correo electrónico del usuario",
+        "contraseña cifrada del usuario",
+        "información del perfil y preferencias del usuario",
+        "datos técnicos del dispositivo (tipo de dispositivo, sistema operativo, versión de la aplicación)",
+        "dirección IP",
+        "datos sobre la orientación del dispositivo (por ejemplo, para optimizar la exposición de las plantas a la luz)",
+        "datos introducidos por el usuario sobre plantas, mediciones y sensores IoT"
+      ],
+      "note": "Las fotos tomadas por el usuario generalmente se procesan localmente en el dispositivo, a menos que el usuario elija utilizarlas en funciones que requieran procesamiento en el servidor."
+    },
+    "section4": {
+      "title": "§ 4. Cuentas de usuario y seguridad",
+      "p1": "Los usuarios de la aplicación Flovers crean cuentas individuales protegidas por contraseña.",
+      "p2": "Las contraseñas se almacenan en formato cifrado (hash).",
+      "p3": "La cuenta del usuario requiere la verificación de la dirección de correo electrónico.",
+      "p4": "El usuario puede cambiar su contraseña en cualquier momento o utilizar el procedimiento de restablecimiento de contraseña."
+    },
+    "section5": {
+      "title": "§ 5. Notificaciones y comunicación",
+      "p1": "El Responsable solo envía mensajes de carácter transaccional, especialmente relacionados con el inicio de sesión, la verificación de la cuenta y el restablecimiento de contraseña.",
+      "p2": "La aplicación puede utilizar notificaciones push (por ejemplo, a través de Firebase) para recordar las tareas relacionadas con el cuidado de las plantas.",
+      "p3": "El Responsable se reserva el derecho de introducir un boletín informativo en el futuro, siendo el envío de información comercial realizado únicamente tras obtener el consentimiento explícito del usuario."
+    },
+    "section6": {
+      "title": "§ 6. Cookies y tecnologías similares",
+      "p1": "El sitio web Flovers puede utilizar cookies necesarias para el funcionamiento adecuado del sitio.",
+      "p2": "Las cookies se utilizan exclusivamente con fines técnicos y funcionales.",
+      "p3": "El sitio no utiliza herramientas analíticas ni de marketing de terceros."
+    },
+    "section7": {
+      "title": "§ 7. Destinatarios de los datos y lugar de procesamiento",
+      "p1": "Los datos personales se procesan en servidores ubicados en la Unión Europea.",
+      "p2": "La infraestructura del servidor está gestionada por Hetzner Online GmbH.",
+      "p3": "El Responsable puede utilizar los servicios de Firebase para gestionar las notificaciones push.",
+      "p4": "El Responsable no transfiere datos personales a países fuera de la UE."
+    },
+    "section8": {
+      "title": "§ 8. Periodo de conservación de los datos",
+      "p1": "Los datos personales se conservan durante el tiempo que exista la cuenta del usuario.",
+      "p2": "Tras eliminar la cuenta, los datos se eliminan de forma permanente o se anonimiza, salvo que la ley disponga lo contrario."
+    },
+    "section9": {
+      "title": "§ 9. Derechos de las personas afectadas",
+      "intro": "A cada persona cuyos datos sean procesados, le asisten los siguientes derechos:",
+      "list": [
+        "acceso a sus datos",
+        "corrección de sus datos",
+        "eliminación de los datos",
+        "limitación del tratamiento",
+        "oponerse al tratamiento",
+        "retirar el consentimiento en cualquier momento"
+      ],
+      "p2": "Para ejercer los derechos mencionados, debe ponerse en contacto con el Responsable por correo electrónico a la dirección: info@flovers.app.",
+      "p3": "La persona afectada también tiene derecho a presentar una queja ante el Presidente de la Oficina de Protección de Datos Personales."
+    },
+    "section10": {
+      "title": "§ 10. Disposiciones finales",
+      "p1": "El Responsable aplica las medidas técnicas y organizativas adecuadas para proteger los datos personales.",
+      "p2": "El Responsable se reserva el derecho a actualizar esta Política de Privacidad.",
+      "p3": "La versión actual de la Política de Privacidad está siempre disponible en el sitio web de Flovers y en la aplicación móvil."
+    }
+  }
+}

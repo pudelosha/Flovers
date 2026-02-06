@@ -1,0 +1,71 @@
+{
+  "docs_reminders": {
+    "title": "Recordatorios",
+    "sections": [
+      {
+        "heading": "Objetivo de esta vista",
+        "body": [
+          "La vista de Recordatorios se utiliza para gestionar los horarios cíclicos de cuidado de las plantas.",
+          "Un recordatorio especifica qué debe hacerse (tipo de tarea), con qué frecuencia debe repetirse (intervalo) y a qué planta está asignado. Con esta información, Flovers genera automáticamente las tareas a lo largo del tiempo."
+        ]
+      },
+      {
+        "heading": "Dos vistas: lista de recordatorios y calendario",
+        "body": [
+          "Esta pantalla tiene dos modos: lista de recordatorios y vista de calendario.",
+          "Puedes alternar entre ellos deslizando la pantalla hacia la izquierda/derecha o seleccionando el cambio de vista desde el menú FAB.",
+          "Ambas vistas muestran los mismos datos, pero de manera diferente, según si deseas revisar rápidamente las reglas o ver el plan en el tiempo."
+        ]
+      },
+      {
+        "heading": "Vista de lista de recordatorios",
+        "body": [
+          "En la vista de lista, cada ficha representa un recordatorio creado por el usuario.",
+          "La ficha muestra el tipo de tarea (ícono y nombre), el nombre de la planta, la ubicación (si está asignada), la frecuencia y la fecha de la próxima ejecución.",
+          "Es la manera más rápida de revisar todas las reglas cíclicas activas en la cuenta."
+        ]
+      },
+      {
+        "heading": "Acciones en la ficha del recordatorio (Editar / Eliminar)",
+        "body": [
+          "Cada recordatorio tiene dos acciones: Editar y Eliminar.",
+          "La edición permite cambiar los parámetros del recordatorio, como el intervalo, el tipo de tarea, la planta asociada y otras configuraciones (dependiendo del tipo de recordatorio).",
+          "Eliminar un recordatorio es permanente y evitará que se generen tareas de esa regla en el futuro."
+        ]
+      },
+      {
+        "heading": "Vista del calendario",
+        "body": [
+          "En la vista del calendario, los recordatorios se presentan como elementos programados para días específicos.",
+          "Para ver los detalles, haz clic en un día del calendario; los elementos programados para ese día aparecerán debajo del calendario.",
+          "El calendario utiliza marcas de color/iconos para indicar los tipos de tareas programadas para un día determinado y facilitar la evaluación de la distribución de las responsabilidades."
+        ]
+      },
+      {
+        "heading": "Menú FAB",
+        "body": [
+          "El botón FAB ofrece acciones rápidas relacionadas con los recordatorios y el cambio de vista.",
+          "Las opciones disponibles son: Agregar recordatorio, cambiar vista (Lista/Calendario), Ordenar y Filtrar.",
+          "El orden puede realizarse por fecha de vencimiento, nombre de la planta o ubicación.",
+          "El filtrado puede incluir: nombre de la planta, ubicación, tipo de tarea y rango de fechas (rango de fechas de vencimiento)."
+        ]
+      },
+      {
+        "heading": "Cómo los recordatorios generan tareas (lógica general)",
+        "body": [
+          "Un recordatorio es una regla cíclica (por ejemplo, regar cada 7 días).",
+          "Con base en los recordatorios, Flovers genera tareas y las muestra en la pantalla de inicio como elementos a realizar.",
+          "Después de cerrar una tarea, se planifica la siguiente según el intervalo del recordatorio (lo que asegura que la rutina continúe automáticamente)."
+        ]
+      },
+      {
+        "heading": "Comentarios y consejos prácticos",
+        "body": [
+          "Los recordatorios ayudan a mantener la regularidad, pero no garantizan la salud de las plantas; las condiciones reales pueden requerir ajustes en los intervalos.",
+          "Si las condiciones cambian (época del año, luz, sustrato, tamaño de la maceta), considera actualizar los recordatorios.",
+          "Si deseas gestionar tareas cerradas y notas, usa la vista de Historia de tareas (descrita por separado)."
+        ]
+      }
+    ]
+  }
+}

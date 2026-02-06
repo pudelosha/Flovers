@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Plantas",
+    "sections": [
+      {
+        "heading": "Objetivo de esta vista",
+        "body": [
+          "La vista Plantas muestra todas las Instancias de plantas creadas en tu cuenta.",
+          "Cada mosaico representa una planta (tu ejemplar). Desde el mosaico puedes acceder a los Detalles de la planta o utilizar los accesos directos en el menú de tres puntos (por ejemplo, recordatorios, diario, código QR)."
+        ]
+      },
+      {
+        "heading": "Mosaicos de plantas (lista)",
+        "body": [
+          "El mosaico de la planta muestra el nombre de la planta y (si está disponible) el nombre de la definición asociada de la planta (especie) y la Ubicación asignada.",
+          "Tocar el contenido del mosaico (fuera del menú de tres puntos) lleva a la vista de Detalles de la planta."
+        ]
+      },
+      {
+        "heading": "Menú de tres puntos (acciones de la planta)",
+        "body": [
+          "Cada mosaico tiene un menú de tres puntos que contiene acciones para la planta seleccionada:",
+          "Editar planta: abre la edición de los datos y parámetros de la planta.",
+          "Mostrar recordatorios: va a la vista de Recordatorios con el filtro establecido en recordatorios relacionados con la planta seleccionada.",
+          "Mostrar diario de la planta: abre un modal con el historial de tareas completadas (con notas del usuario). Las notas son visibles y no se ocultan.",
+          "Mostrar código QR: abre un modal con el código QR de la planta, una breve descripción y opciones para guardar (descargar) o enviar el código a tu propio correo electrónico.",
+          "Eliminar planta: elimina permanentemente la planta y los datos relacionados, como tareas, recordatorios y enlaces a dispositivos."
+        ]
+      },
+      {
+        "heading": "Menú del botón FAB",
+        "body": [
+          "El FAB en la vista de Plantas ofrece acciones rápidas:",
+          "Crear planta: inicia el Asistente para crear una planta (proceso de 9 pasos) donde puedes definir con precisión la planta.",
+          "Ordenar: ordena los mosaicos de las plantas por Nombre de la planta o Ubicación.",
+          "Filtrar: filtra la lista por Ubicación.",
+          "Ubicaciones: va a la vista de Ubicaciones, donde puedes agregar, editar y administrar ubicaciones utilizadas para agrupar y filtrar."
+        ]
+      },
+      {
+        "heading": "Eliminación de la planta (información importante)",
+        "body": [
+          "Eliminar una planta es una operación permanente y no se puede deshacer.",
+          "Eliminar la planta elimina la Instancia de la planta y los datos relacionados, como las tareas generadas, los recordatorios asignados a esa planta y los enlaces a dispositivos."
+        ]
+      },
+      {
+        "heading": "Cuando no se ven plantas",
+        "body": [
+          "Si la lista está vacía, utiliza la acción Crear planta desde el menú FAB para agregar la primera Instancia de planta.",
+          "Después de agregar plantas, puedes agruparlas mediante Ubicación y gestionar las rutinas de cuidado a través de los Recordatorios."
+        ]
+      }
+    ]
+  }
+}
