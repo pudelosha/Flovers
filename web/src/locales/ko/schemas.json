@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "복사",
+    "copied": "복사됨"
+  },
+  "title": "장치 도식 및 배선",
+  "lead": "이 페이지는 IoT 센서에서 Flovers로 읽기를 보내는 방법을 설명합니다. 여기에는 엔드포인트, 페이로드 구조 및 인기 있는 센서를 위한 ESP32/ESP8266용 Arduino 샘플 코드가 포함되어 있습니다. 나중에 교체할 수 있는 배선 다이어그램(Fritzing) 이미지 자리 표시자도 있습니다.",
+  "endpoints": {
+    "title": "API 엔드포인트",
+    "note": "엔드포인트는 예시입니다. 장치를 연결할 때는 이를 실제 백엔드 주소로 교체하세요.",
+    "ingest": {
+      "label": "읽기 수집 (POST)",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "읽기 (GET/POST)",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "POST 수집 문서",
+    "desc": "하나의 읽기 샘플을 JSON 형식으로 보내세요. 백엔드는 device_key와 secret을 검증하고 장치에 대한 메트릭을 저장합니다.",
+    "schemaLabel": "페이로드 구조 (JSON)",
+    "psLabel": "PowerShell 예시 (POST)"
+  },
+  "read": {
+    "title": "GET / 읽기 문서",
+    "desc": "장치에 대한 읽기를 시간 범위 내에서 가져옵니다. 백엔드가 POST 쿼리를 지원하면, URL 파라미터 대신 JSON 본문을 보낼 수 있습니다.",
+    "exampleLabel": "예시 (GET + 선택적 POST)"
+  },
+  "arduino": {
+    "title": "Arduino (ESP32/ESP8266) — 샘플 코드",
+    "desc": "참조 구현: Wi-Fi에 연결하고, 센서를 읽고, 정해진 간격으로 ingest 엔드포인트에 JSON POST를 보냅니다. 습도 센서 값을 보정하여 백분율이 의미를 가지게 하세요.",
+    "codeLabel": "Arduino 샘플 (Wi-Fi + POST ingest)",
+    "note": "정확한 타임스탬프가 필요하면 NTP 시간 동기화(configTime)를 추가하고 장치에서 ISO-8601 UTC를 생성하세요.",
+    "sensors": {
+      "bh1750": "BH1750 (GY-302) — I2C로 조도 측정",
+      "moisture": "용량성 토양 습도 센서 — 아날로그 읽기 (습기/건조 보정 필요)",
+      "bme280": "BME280 — I2C로 온도 및 습도 측정 (선택적 압력)"
+    }
+  },
+  "wiring": {
+    "title": "배선 다이어그램",
+    "desc": "나중에 Fritzing 이미지를 여기에 추가하세요. 이 자리 표시자는 다이어그램이 준비될 때까지 페이지 레이아웃을 안정화시킵니다.",
+    "aria": "배선 다이어그램 자리 표시자",
+    "placeholderTitle": "Fritzing 자리 표시자",
+    "placeholderSub": "다이어그램을 내보낼 때 이 블록을 이미지로 교체하세요."
+  }
+}

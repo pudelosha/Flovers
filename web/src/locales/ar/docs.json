@@ -1,0 +1,48 @@
+{
+  "title": "الوثائق",
+  "placeholder": {
+    "heading": "قريبًا",
+    "body": "سيتم توفير الوثائق التفصيلية لهذه الشاشة قريبًا."
+  },
+  "screens": {
+    "overview": {
+      "title": "نظرة عامة"
+    },
+    "auth": {
+      "title": "تسجيل الدخول والتسجيل"
+    },
+    "home": {
+      "title": "الشاشة الرئيسية"
+    },
+    "taskHistory": {
+      "title": "تاريخ المهام"
+    },
+    "plants": {
+      "title": "النباتات"
+    },
+    "plantDetails": {
+      "title": "تفاصيل النبات"
+    },
+    "createPlantWizard": {
+      "title": "معالج إضافة النبات"
+    },
+    "locations": {
+      "title": "المواقع"
+    },
+    "reminders": {
+      "title": "التذكيرات"
+    },
+    "readings": {
+      "title": "القراءات"
+    },
+    "readingsHistory": {
+      "title": "تاريخ القراءات"
+    },
+    "scanner": {
+      "title": "الماسح الضوئي (QR)"
+    },
+    "profile": {
+      "title": "الملف الشخصي والإعدادات"
+    }
+  }
+}

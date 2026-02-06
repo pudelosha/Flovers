@@ -1,0 +1,48 @@
+{
+  "title": "문서",
+  "placeholder": {
+    "heading": "곧 출시 예정",
+    "body": "이 화면에 대한 자세한 문서는 곧 제공될 예정입니다."
+  },
+  "screens": {
+    "overview": {
+      "title": "개요"
+    },
+    "auth": {
+      "title": "로그인 및 회원가입"
+    },
+    "home": {
+      "title": "홈 화면"
+    },
+    "taskHistory": {
+      "title": "작업 기록"
+    },
+    "plants": {
+      "title": "식물"
+    },
+    "plantDetails": {
+      "title": "식물 세부사항"
+    },
+    "createPlantWizard": {
+      "title": "식물 추가 마법사"
+    },
+    "locations": {
+      "title": "위치"
+    },
+    "reminders": {
+      "title": "알림"
+    },
+    "readings": {
+      "title": "측정값"
+    },
+    "readingsHistory": {
+      "title": "측정값 기록"
+    },
+    "scanner": {
+      "title": "스캐너 (QR)"
+    },
+    "profile": {
+      "title": "프로필 및 설정"
+    }
+  }
+}

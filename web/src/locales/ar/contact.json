@@ -1,0 +1,24 @@
+{
+  "title": "اتصال",
+  "subtitle": "أرسل رسالة إلى الدعم. عادةً ما نرد في 1–3 أيام عمل.",
+  "form": {
+    "subjectLabel": "الموضوع",
+    "subjectPlaceholder": "مثال: مشكلة في تسجيل الدخول",
+    "messageLabel": "الرسالة",
+    "messagePlaceholder": "وصف المشكلة أو السؤال...",
+    "copyToMe": "أرسل لي نسخة",
+    "send": "إرسال",
+    "sending": "جاري الإرسال...",
+    "mailtoFallback": "اكتب بريدًا إلكترونيًا",
+    "note": "إذا لم يعمل النموذج، استخدم زر البريد الإلكتروني."
+  },
+  "toasts": {
+    "enterSubject": "أدخل الموضوع.",
+    "enterMessage": "أدخل الرسالة.",
+    "contactSent": "تم إرسال الرسالة.",
+    "couldNotSendContact": "تعذر إرسال الرسالة. حاول مرة أخرى لاحقًا.",
+    "requestTimedOut": "انتهت المهلة. حاول مرة أخرى.",
+    "unauthorizedLoginAgain": "انتهت الجلسة. قم بتسجيل الدخول مرة أخرى.",
+    "missingApiBase": "لم يتم تكوين عنوان API."
+  }
+}
