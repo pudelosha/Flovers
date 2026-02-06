@@ -1,0 +1,144 @@
+{
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: {{date}}",
+    "section1": {
+      "title": "§ 1. Allgemeine Bestimmungen",
+      "p1": "Diese Nutzungsbedingungen legen die Regeln für die Nutzung der Website Flovers und der Flovers-Mobilanwendung (Android, künftig auch iOS) sowie die Bedingungen für die Erbringung von Dienstleistungen durch den Anbieter elektronisch fest.",
+      "p2": "Der Anbieter ist Marcin Janowski Copy Paste IT Solutions, ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Polen, E-Mail: info@flovers.app (im Folgenden: „Anbieter“).",
+      "p3": "Durch die Nutzung des Dienstes (einschließlich der Registrierung eines Kontos, der Anmeldung, der Nutzung von Funktionen der Anwendung oder der Website) akzeptiert der Benutzer die Nutzungsbedingungen und verpflichtet sich, diese einzuhalten.",
+      "p4": "In Fragen, die nicht durch diese Nutzungsbedingungen geregelt sind, gelten insbesondere: das Gesetz über die Erbringung von Dienstleistungen im elektronischen Geschäftsverkehr, das Bürgerliche Gesetzbuch, das Gesetz über Verbraucherrechte sowie andere einschlägige Vorschriften des polnischen Rechts und des EU-Rechts."
+    },
+    "section2": {
+      "title": "§ 2. Definitionen",
+      "items": [
+        "„Dienstleistung“ – elektronisch erbrachte Dienstleistungen des Anbieters im Rahmen von Flovers, einschließlich der mobilen Anwendung, der Website und der zugehörigen Backend-Infrastruktur.",
+        "„Anwendung“ – die Flovers-Mobilanwendung, die für mobile Geräte (Android; künftig auch iOS) bereitgestellt wird.",
+        "„Website“ – die Flovers-Website mit Dokumentation und Informationen.",
+        "„Benutzer“ – eine Person, die den Dienst nutzt; im Falle der Registrierung eine Person, die ein Konto erstellt hat.",
+        "„Konto“ – das individuelle Benutzerprofil im System des Anbieters, das durch ein Passwort geschützt ist.",
+        "„Gerät“ – das Gerät, mit dem der Benutzer den Dienst nutzt (z. B. Telefon, Tablet) sowie – falls zutreffend – das Messgerät (z. B. Arduino), das Messwerte an den Dienst sendet.",
+        "„Pflanzendefinition“ – eine vom Anbieter erstellte Karte/Datensatz einer Pflanze, der u. a. Merkmale, Vorlieben und Empfehlungen (z. B. Gießen, Sprühen, Düngen) enthält und automatisch generierte Elemente (z. B. KI-Inhalte) enthalten kann.",
+        "„Pflanzeninstanz“ – eine vom Benutzer im Konto definierte Pflanze (sein eigenes Exemplar), die mit der Pflanzendefinition verknüpft sein kann.",
+        "„Messwerte / Sensordaten“ – Daten von Sensoren (z. B. Lufttemperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit, Lichtintensität), die der Pflanzeninstanz zugeordnet sind.",
+        "„Erinnerung“ – Definition einer wiederkehrenden Aufgabe (z. B. Gießen, Sprühen, Umtopfen, Pflege, Düngen), auf deren Grundlage Aufgaben erstellt werden.",
+        "„Aufgabe“ – ein Element der Aufgabenliste, das basierend auf einer Erinnerung erstellt wird; der Benutzer kann es als erledigt markieren und Notizen hinzufügen.",
+        "„Benutzerdaten“ – Daten, die der Benutzer in den Dienst eingibt oder pflegt (z. B. Pflanzeninstanzen, Notizen, Aufgabenhistorie, Pflanzenjournal, Gerätezusammenhänge, Messdaten).",
+        "„Pflanzenbestimmung“ – eine Funktion, bei der ein vom Benutzer bereitgestelltes Bild analysiert wird und das System des Anbieters ein Bestimmungsergebnis liefert.",
+        "„Nutzungsbedingungen“ – diese Nutzungsbedingungen für Flovers."
+      ]
+    },
+    "section3": {
+      "title": "§ 3. Umfang der Dienstleistung und Funktionen",
+      "intro": "Der Dienst kann insbesondere Folgendes umfassen:",
+      "list": [
+        "Registrierung und Verwaltung des Kontos (Anmeldung, E-Mail-Bestätigung, Passwortzurücksetzung, erneutes Senden des Aktivierungslinks)",
+        "Bibliothek von Pflanzendefinitionen und zugehörige Tipps",
+        "Erstellung von Pflanzeninstanzen und Pflege eines Journals/Verlaufs (Notizen, Aufgabenhistorie)",
+        "Erinnerungen und Aufgaben zur Pflanzenpflege (z. B. Gießen, Sprühen, Düngen, Umtopfen)",
+        "Pflanzenbestimmung anhand eines vom Benutzer hochgeladenen Bildes",
+        "Integration mit Messgeräten und Speicherung sowie Anzeige von Messdaten",
+        "Erstellung und Scannen von QR-Codes, die zu Benutzerressourcen führen (z. B. zu einer Pflanzeninstanz)",
+        "Dokumentation und FAQ-Bereich"
+      ],
+      "p1": "Der Dienst wird derzeit als kostenlose Version (Beta) angeboten. Der Anbieter kann in Zukunft kostenpflichtige Tarife, Einschränkungen für den kostenlosen Tarif, Werbung oder Abonnements einführen – darüber wird der Benutzer im Dienst und/oder auf der Website informiert.",
+      "p2": "Der Anbieter kann die Funktionen, das Interface und die Funktionsweise des Dienstes ändern, einschließlich des Hinzufügens oder Entfernens von Funktionen, solange dies nicht gegen zwingende gesetzliche Vorschriften verstößt."
+    },
+    "section4": {
+      "title": "§ 4. Technische Anforderungen",
+      "items": [
+        "Gerät mit Internetzugang.",
+        "Aktueller Webbrowser (für die Website) oder kompatibles Android-Betriebssystem (für die Anwendung).",
+        "Aktive E-Mail-Adresse (für die Registrierung und Verwaltung des Kontos).",
+        "Aktivierte Unterstützung für JavaScript und Cookies im Browser (für die Website), falls erforderlich für die ordnungsgemäße Funktion."
+      ]
+    },
+    "section5": {
+      "title": "§ 5. Konto und Sicherheit",
+      "p1": "Für die Nutzung der meisten Funktionen des Dienstes ist die Erstellung eines Kontos erforderlich.",
+      "p2": "Der Benutzer ist verpflichtet, wahrheitsgemäße Angaben zu machen und die Vertraulichkeit der Anmeldedaten zu wahren.",
+      "p3": "Der Benutzer ist für alle Handlungen verantwortlich, die unter seinem Konto durchgeführt werden, es sei denn, sie resultieren aus Fehlern des Anbieters.",
+      "p4": "Der Anbieter kann den Zugang zum Konto oder zum Dienst vorübergehend sperren, wenn Missbrauch, Sicherheitsverstöße oder Verstöße gegen die Nutzungsbedingungen festgestellt werden."
+    },
+    "section6": {
+      "title": "§ 6. Benutzerdaten und Lizenz",
+      "p1": "Der Benutzer behält die Rechte an seinen Benutzerdaten, soweit diese ihm nach dem Gesetz zustehen.",
+      "p2": "Der Benutzer gewährt dem Anbieter eine nicht-exklusive, unentgeltliche, widerrufbare (durch Löschung des Kontos oder der Daten), übertragbare Lizenz in dem für die Erbringung des Dienstes erforderlichen Umfang, um Benutzerdaten zu speichern, zu reproduzieren, anzuzeigen und zu verarbeiten, ausschließlich zum Zweck der Bereitstellung und Aufrechterhaltung des Dienstes.",
+      "p3": "Im Rahmen der Pflanzenbestimmung kann der Benutzer ein Bild an das System des Anbieters senden. Der Anbieter erklärt, dass Bilder, die zur Bestimmung verwendet werden, nicht länger als notwendig gespeichert werden, es sei denn, der Benutzer wählt ausdrücklich eine Funktion, die deren Speicherung erfordert.",
+      "p4": "Der Benutzer erklärt, dass er die Rechte an den Inhalten besitzt, die er dem Dienst zur Verfügung stellt, und dass diese keine Rechte Dritter verletzen."
+    },
+    "section7": {
+      "title": "§ 7. Nutzungsregeln und Verbote",
+      "intro": "Der Benutzer verpflichtet sich, den Dienst gemäß den Gesetzen, den guten Sitten und unter Wahrung der Rechte anderer Personen zu nutzen. Insbesondere ist es verboten:",
+      "list": [
+        "Versuche zur Umgehung von Authentifizierung, Sicherheitsmaßnahmen oder technischen Beschränkungen zu unternehmen",
+        "Missbrauch der API, Endpunkte oder Integrationsmechanismen (einschließlich der mit Messgeräten verbundenen), die den Betrieb des Dienstes stören können",
+        "Illegale, beleidigende Inhalte oder Inhalte, die Persönlichkeitsrechte, Urheberrechte oder geistige Eigentumsrechte verletzen, in den Dienst einzuführen",
+        "Spam oder massenhaftes Werbematerial über Kontakt- oder Supportfunktionen zu versenden",
+        "Handlungen zu unternehmen, die zu unbefugtem Zugang zu den Daten anderer Benutzer führen"
+      ],
+      "p1": "Der Anbieter kann den Zugang zum Dienst oder zum Konto bei Verstößen gegen diese Regeln einschränken."
+    },
+    "section8": {
+      "title": "§ 8. QR-Codes, Links und „Geheime Schlüssel“",
+      "p1": "Der Dienst kann die Erstellung von QR-Codes oder Links (z. B. zu einer Pflanzeninstanz) ermöglichen. Der Benutzer ist für deren Speicherung und Weitergabe verantwortlich.",
+      "p2": "Wenn der Benutzer Links, Identifikatoren oder Zugangsschlüssel (z. B. zum Abrufen von Messdaten) an Dritte weitergibt, können diese auf die angegebenen Informationen gemäß den bereitgestellten Berechtigungen zugreifen. Der Benutzer trägt das Risiko solcher Weitergaben."
+    },
+    "section9": {
+      "title": "§ 9. Zahlungen und Tarife (Zukunftsinformationen)",
+      "p1": "Zum Zeitpunkt der Veröffentlichung dieser Nutzungsbedingungen wird der Dienst kostenlos im Beta-Modell angeboten.",
+      "p2": "Der Anbieter kann in Zukunft kostenpflichtige Tarife, Abonnements, Werbung oder Einschränkungen (z. B. die Anzahl der Pflanzen) einführen. Die Einführung von kostenpflichtigen Tarifen kann u. a. über Google Play oder den Apple App Store erfolgen.",
+      "p3": "Sollten Abonnements eingeführt werden, können diese automatisch erneuerbar sein. Die Zahlungsbedingungen, Abrechnungen und eventuelle Rückerstattungen können den Richtlinien des jeweiligen Shops (Google/Apple) sowie den Informationen im Dienst zum Zeitpunkt des Kaufs entsprechen."
+    },
+    "section10": {
+      "title": "§ 10. Haftung und Haftungsausschlüsse",
+      "p1": "Der Dienst ist informativ und dient der Unterstützung bei der Pflanzenpflege. Der Anbieter garantiert nicht das Erreichen bestimmter Ergebnisse (z. B. Pflanzenwachstum, Vermeidung von Pflanzenkrankheiten, Vermeidung von Pflegefehlern). Entscheidungen zur Pflanzenpflege trifft der Benutzer auf eigenes Risiko.",
+      "p2": "Der Anbieter stellt den Dienst im „Ist-Zustand“ (nach bestem Wissen und Gewissen) zur Verfügung. Es kann zu technischen Ausfällen oder Verfügbarkeitsbeschränkungen aufgrund von Wartungsarbeiten, Entwicklungen oder Störungen kommen.",
+      "p3": "Der Anbieter haftet nicht für Schäden, die durch: unsachgemäße Nutzung des Dienstes, fehlerhafte Benutzerdaten, fehlerhafte Messgeräte des Benutzers, Internetunterbrechungen oder andere vom Anbieter unabhängige Umstände entstehen, im gesetzlich zulässigen Umfang.",
+      "p4": "Die Bestimmungen dieses Paragraphen schließen keine Rechte des Verbrauchers aus oder schränken diese ein, die aus zwingend geltenden Rechtsvorschriften resultieren."
+    },
+    "section11": {
+      "title": "§ 11. Beschwerden und Kontakt",
+      "p1": "Benutzer können Beschwerden über die Funktionsweise des Dienstes per E-Mail an info@flovers.app einreichen.",
+      "p2": "In der Beschwerde sollten das Problem, das Datum und die Umstände des Vorfalls sowie – wenn möglich – Informationen zur Identifikation des Falls (z. B. Screenshots) angegeben werden.",
+      "p3": "Der Anbieter wird auf die Beschwerde ohne unnötige Verzögerung antworten, spätestens jedoch innerhalb von 14 Tagen."
+    },
+    "section12": {
+      "title": "§ 12. Vertragsbeendigung, Kontolöschung",
+      "p1": "Der Benutzer kann jederzeit sein Konto über die Anwendung löschen, was zur dauerhaften Löschung des Kontos und der damit verbundenen Daten im System des Anbieters führt (ohne „versteckten“ Modus).",
+      "p2": "Der Anbieter kann die Dienstleistung gegenüber dem Benutzer bei Verstößen gegen die Nutzungsbedingungen, rechtswidrigem Verhalten oder Handlungen, die die Sicherheit des Dienstes gefährden, aussetzen oder beenden.",
+      "p3": "Der Anbieter kann die Dienstleistung (ganz oder teilweise) aus wichtigen Gründen (z. B. technische oder rechtliche Gründe) beenden, indem er die Benutzer mit ausreichendem Vorlauf informiert, sofern dies möglich ist."
+    },
+    "section13": {
+      "title": "§ 13. Geistiges Eigentum",
+      "p1": "Die Software, das Design, die Logos, der Name Flovers, die Dokumentation und die Inhalte, die vom Anbieter im Rahmen des Dienstes bereitgestellt werden, sind rechtlich geschützt, einschließlich des Urheberrechts, und gehören dem Anbieter oder berechtigten Dritten.",
+      "p2": "Es ist untersagt, Teile des Dienstes ohne die Zustimmung des Anbieters zu kopieren, zu ändern, zu verbreiten oder zu nutzen, es sei denn, es handelt sich um eine zulässige Nutzung nach den gesetzlichen Vorschriften."
+    },
+    "section14": {
+      "title": "§ 14. Benutzeralter",
+      "p1": "Der Dienst ist für Personen gedacht, die mindestens 16 Jahre alt sind.",
+      "p2": "Wenn der Benutzer noch nicht 16 Jahre alt ist, sollte er kein Konto erstellen oder den Dienst nutzen."
+    },
+    "section15": {
+      "title": "§ 15. Verknüpfte Dokumente",
+      "intro": "Mit dem Dienst verbundene Dokumente und Informationen sind:",
+      "list": [
+        "Datenschutzrichtlinie",
+        "Cookie-Richtlinie",
+        "Dokumentation und FAQ"
+      ]
+    },
+    "section16": {
+      "title": "§ 16. Anwendbares Recht und Streitbeilegung",
+      "p1": "Die Nutzungsbedingungen unterliegen dem polnischen Recht, vorbehaltlich der zwingend geltenden Vorschriften zum Schutz der Verbraucher.",
+      "p2": "Streitigkeiten sollten zunächst einvernehmlich gelöst werden (z. B. durch E-Mail-Kontakt und Versuche, eine Einigung zu erzielen).",
+      "p3": "Verbraucher können außergerichtliche Streitbeilegungsverfahren sowie die ODR-Plattform (Online Dispute Resolution) unter der Adresse: https://ec.europa.eu/consumers/odr/ nutzen.",
+      "p4": "Die Zuständigkeit der Gerichte in Streitfällen mit Verbrauchern wird nach den Vorschriften des allgemein geltenden Rechts festgelegt."
+    },
+    "section17": {
+      "title": "§ 17. Änderungen der Nutzungsbedingungen",
+      "p1": "Der Anbieter kann die Nutzungsbedingungen aus wichtigen Gründen (z. B. gesetzliche Änderungen, Weiterentwicklung des Dienstes, technologische Veränderungen) ändern.",
+      "p2": "Der Anbieter wird die Benutzer auf Änderungen der Nutzungsbedingungen auf der Website und/oder in der Anwendung hinweisen. Die weitere Nutzung des Dienstes nach Inkrafttreten der Änderungen gilt als Zustimmung zu den aktualisierten Nutzungsbedingungen."
+    }
+  }
+}

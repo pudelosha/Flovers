@@ -1,0 +1,125 @@
+{
+  "title": "Häufig gestellte Fragen",
+  "items": [
+    {
+      "q": "Was ist Flovers und wofür kann ich es verwenden?",
+      "a": "Flovers ist eine App zur Pflanzenpflege, die Aufgaben organisiert und Pflanzenparameter basierend auf Sensordaten überwacht. Sie bietet Erinnerungen, Tipps und Informationen, die bei der täglichen Pflege helfen."
+    },
+    {
+      "q": "Ist Flovers kostenlos?",
+      "a": "Ja. Derzeit ist Flovers kostenlos verfügbar."
+    },
+    {
+      "q": "Welche Plattformen unterstützt Flovers?",
+      "a": "Flovers ist derzeit für Android verfügbar. In Zukunft ist auch eine Unterstützung für iOS geplant."
+    },
+    {
+      "q": "Benötige ich ein Konto, um Flovers zu nutzen?",
+      "a": "Ja. Ein Konto muss erstellt werden, um die App und ihre Funktionen zu nutzen."
+    },
+    {
+      "q": "Ist Flovers in mehreren Sprachen verfügbar?",
+      "a": "Ja. Flovers unterstützt viele Sprachen, darunter Englisch, Polnisch, Deutsch, Italienisch, Französisch, Spanisch, Portugiesisch, Arabisch, Hindi, Chinesisch, Japanisch und Koreanisch."
+    },
+    {
+      "q": "Wie kann ich ein Konto erstellen?",
+      "a": "Die Registrierung kann direkt in der App erfolgen. Nach der Registrierung ist eine Bestätigung des Kontos per E-Mail erforderlich. Falls nötig, kann die Aktivierungs-E-Mail erneut gesendet werden."
+    },
+    {
+      "q": "Ich habe keine Aktivierungs-E-Mail erhalten – was soll ich tun?",
+      "a": "Du kannst direkt in der App eine erneute Aktivierungs-E-Mail anfordern."
+    },
+    {
+      "q": "Wie kann ich mein Passwort zurücksetzen?",
+      "a": "Du kannst eine E-Mail zum Zurücksetzen des Passworts in der App anfordern. Wenn du eingeloggt bist, kannst du das Passwort auch direkt in den Kontoeinstellungen ändern."
+    },
+    {
+      "q": "Kann ich die mit meinem Konto verbundene E-Mail-Adresse ändern?",
+      "a": "Ja. Nach dem Einloggen kannst du die E-Mail-Adresse auf dem Profilbildschirm der App ändern."
+    },
+    {
+      "q": "Wie kann ich mein Konto und meine Daten löschen?",
+      "a": "Das Konto kann dauerhaft über den Profilbildschirm nach dem Einloggen gelöscht werden. Dieser Vorgang ist irreversibel und führt zur Löschung aller damit verbundenen Daten."
+    },
+    {
+      "q": "Was ist der Unterschied zwischen der Pflanzen-Definition und meiner Pflanze?",
+      "a": "Die Pflanzen-Definition ist ein eingebauter Datensatz in der Flovers-Datenbank, der allgemeine Informationen über eine bestimmte Art enthält, wie Vorlieben, Merkmale, Bilder, Licht- und Bodenanforderungen sowie empfohlene Bewässerungs- oder Sprühintervalle. Deine Pflanze ist eine konkrete Instanz, die du selbst verwaltest."
+    },
+    {
+      "q": "Wie genau ist die Pflanzen-Erkennungsfunktion?",
+      "a": "Die Genauigkeit hängt von der Qualität des Bildes und der Art der Aufnahme der Pflanze ab. Das Erkennungssystem wurde mit einer Datenbank von über 700 Pflanzenarten trainiert."
+    },
+    {
+      "q": "Werden die Bilder, die zur Pflanzen-Erkennung hochgeladen werden, gespeichert?",
+      "a": "Nein. Die Bilder werden vom Backend ausschließlich für die Erkennung verarbeitet und nicht dauerhaft gespeichert."
+    },
+    {
+      "q": "Kann ich mehrere Pflanzen gleichzeitig verfolgen?",
+      "a": "Ja. Derzeit gibt es keine Begrenzung für die Anzahl der Pflanzen oder Messgeräte, die hinzugefügt werden können. Jede Pflanze kann mit einem Messgerät verbunden werden."
+    },
+    {
+      "q": "Kann ich Notizen hinzufügen oder ein Pflanzentagebuch führen?",
+      "a": "Ja. Du kannst Notizen zu Pflanzen und abgeschlossenen Aufgaben hinzufügen und ein Pflegetagebuch erstellen."
+    },
+    {
+      "q": "Wie funktionieren Erinnerungen und Aufgaben?",
+      "a": "Der Benutzer erstellt eine Erinnerung mit einem bestimmten Zyklusintervall. Basierend darauf werden automatisch Aufgaben erstellt. Nachdem eine Aufgabe als erledigt markiert wurde, wird die nächste Aufgabe entsprechend dem Intervall geplant. Je nach den Einstellungen kannst du E-Mail- oder Push-Benachrichtigungen für Aufgaben heute oder überfällig um einen Tag erhalten."
+    },
+    {
+      "q": "Welche Arten von Pflegetasks werden unterstützt?",
+      "a": "Unterstützte Aufgabenarten sind u.a. Bewässerung, Sprühen, Düngen, Umtopfen und allgemeine Pflege."
+    },
+    {
+      "q": "Was passiert, wenn ich eine Aufgabe vergesse?",
+      "a": "Wenn eine Aufgabe nicht erledigt wird, kann die App nach 24 Stunden eine Erinnerung senden. Andernfalls bleibt die Aufgabe als überfällig markiert, bis sie erledigt wird."
+    },
+    {
+      "q": "Kann ich Erinnerungen ausschalten oder bearbeiten?",
+      "a": "Du kannst Erinnerungen jederzeit bearbeiten oder löschen. Derzeit gibt es keine Möglichkeit, sie vorübergehend zu pausieren."
+    },
+    {
+      "q": "Garantieren Erinnerungen, dass meine Pflanzen gesund bleiben?",
+      "a": "Nein. Flovers liefert Erinnerungen und Tipps, aber Entscheidungen zur Pflege und deren Ergebnisse hängen vom Benutzer ab."
+    },
+    {
+      "q": "Welche Sensoren und Geräte kann ich mit Flovers verbinden?",
+      "a": "Flovers unterstützt Sensoren zur Messung der Lufttemperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit. Empfohlene Gerätkonfigurationen sind in der App-Dokumentation zu finden."
+    },
+    {
+      "q": "Wie oft werden die Sensordaten aktualisiert?",
+      "a": "Messwerte können alle 5 Minuten gesendet werden. Für die Speicherung werden die Daten derzeit in stündlichen Intervallen gespeichert."
+    },
+    {
+      "q": "Was passiert, wenn mein Messgerät nicht mehr funktioniert?",
+      "a": "Die App informiert nicht über fehlende Messwerte. Sie kann jedoch eine Benachrichtigung senden, wenn der Bodenfeuchtigkeitswert unter einen festgelegten Schwellenwert fällt."
+    },
+    {
+      "q": "Werden die Sensordaten in der Cloud gespeichert?",
+      "a": "Ja. Die Sensordaten werden auf einem VPS-Server in der Cloud gespeichert."
+    },
+    {
+      "q": "Können andere Personen meine Sensormesswerte sehen?",
+      "a": "Derzeit nicht. In Zukunft könnten Optionen zum Teilen eingeführt werden. Benutzer können auch Daten über die API abrufen, um sie mit anderen Geräten wie automatischen Bewässerungssystemen zu integrieren."
+    },
+    {
+      "q": "Wozu dienen QR-Codes in Flovers?",
+      "a": "Benutzer können QR-Codes erstellen und ausdrucken und diese auf Blumentöpfe anbringen. Jeder Code führt zu einer spezifischen Pflanzeninstanz. Nach dem Scannen des Codes in der App wird der Benutzer sofort zu den Pflanzendetails weitergeleitet."
+    },
+    {
+      "q": "Ist es sicher, den QR-Code oder den Link zur Pflanze zu teilen?",
+      "a": "Im Allgemeinen ja. Die Pflanzendetails sind nur für den eingeloggten Benutzer sichtbar, der der Eigentümer ist."
+    },
+    {
+      "q": "Kann ich meine Pflanzen öffentlich machen oder sie Freunden zur Verfügung stellen?",
+      "a": "Nicht derzeit. Funktionen zum öffentlichen Teilen könnten in Zukunft hinzugefügt werden."
+    },
+    {
+      "q": "Warum erhalte ich keine Benachrichtigungen?",
+      "a": "Stelle sicher, dass Push-Benachrichtigungen sowohl in den Geräteeinstellungen als auch in den App-Einstellungen auf dem Profilbildschirm aktiviert sind."
+    },
+    {
+      "q": "Wie kann ich den Support kontaktieren oder ein Problem melden?",
+      "a": "Du kannst das Kontaktformular auf der Flovers-Website oder das Kontaktformular in der App auf dem Profilbildschirm nutzen."
+    }
+  ]
+}

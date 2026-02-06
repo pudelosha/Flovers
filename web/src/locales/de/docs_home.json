@@ -1,0 +1,77 @@
+{
+  "docs_home": {
+    "title": "Home",
+    "sections": [
+      {
+        "heading": "Ziel des Home-Bildschirms",
+        "body": [
+          "Home ist der Hauptbildschirm, der nach erfolgreichem Anmelden angezeigt wird.",
+          "Er konzentriert sich auf tägliche Aufgaben: Es zeigt Aufgaben an, die auf Erinnerungen basieren, sodass schnell erkennbar wird, was heute Aufmerksamkeit benötigt oder bereits überfällig ist.",
+          "Wenn keine Aufgaben zum Erledigen vorhanden sind, wird eine Informationskachel angezeigt, die eine Nachricht über das Fehlen geplanter Aufgaben und Vorschläge für die nächsten Schritte enthält, z. B. das Erstellen von Erinnerungen."
+        ]
+      },
+      {
+        "heading": "Aufgabenliste (Kacheln, die aus Erinnerungen generiert werden)",
+        "body": [
+          "Jede Kachel stellt eine einzelne Aufgabe dar, die basierend auf der Definition der Erinnerung generiert wurde (z. B. Bewässerung, Sprühen, Düngen, Umpflanzen oder Pflege).",
+          "Aufgaben erscheinen automatisch, wenn sie gemäß den Zyklusregeln in der Erinnerung erforderlich werden.",
+          "Eine Kachel enthält normalerweise den Aufgabentyp, den Pflanzennamen, den Standort und den Status des Termins (z. B. Für heute oder Überfällig)."
+        ]
+      },
+      {
+        "heading": "Aufgaben-Kachel-Menü (Aktionen für einzelne Aufgaben)",
+        "body": [
+          "Jede Aufgabe hat ein Kontextmenü (Menü mit drei Punkten), das Aktionen für die jeweilige Aufgabe enthält.",
+          "Als erledigt markieren: Schließt die Aufgabe ab und ermöglicht optional das Hinzufügen einer Notiz, was hilft, die Pflegehistorie aufzubauen.",
+          "Erinnerung bearbeiten: Öffnet die Erinnerung, die mit der Aufgabe verbunden ist, um die Zykluseinstellungen zu ändern.",
+          "Zur Pflanze gehen: Führt zum Pflanzendetails-Bildschirm der der Aufgabe zugeordneten Pflanze.",
+          "Historie anzeigen: Öffnet die Aufgabenhistorie, die bereits erledigte Aufgaben für diese Pflanze oder Erinnerung zeigt."
+        ]
+      },
+      {
+        "heading": "FAB-Schaltfläche (schnelle Aktionen)",
+        "body": [
+          "Auf dem Home-Bildschirm gibt es eine FAB-Schaltfläche, die ein Set schneller Aktionen zum Arbeiten mit Aufgaben erweitert.",
+          "Überfällige anzeigen: Wendet einen schnellen Filter an, der nur überfällige Aufgaben anzeigt.",
+          "Für heute anzeigen: Wendet einen schnellen Filter an, der Aufgaben anzeigt, die für heute geplant sind.",
+          "Sortieren: Ändert die Reihenfolge der angezeigten Aufgaben in der Liste.",
+          "Filtern: Verengt die Aufgabenliste basierend auf ausgewählten Kriterien.",
+          "Historie: Führt zum Aufgabenhistorie-Bildschirm, der separat dokumentiert wird."
+        ]
+      },
+      {
+        "heading": "Sortieroptionen",
+        "body": [
+          "Die Sortierung ermöglicht es, die Aufgabenliste an Ihre Arbeitsweise anzupassen.",
+          "Verfügbare Sortieroptionen sind: Ausführungsdatum (Termin), Pflanzenname und Standort."
+        ]
+      },
+      {
+        "heading": "Filteroptionen",
+        "body": [
+          "Filter helfen, sich auf eine ausgewählte Gruppe von Aufgaben zu konzentrieren.",
+          "Aufgaben können gefiltert werden nach: Pflanzenname, Standort, Aufgabentyp und Ausführungsdatumsbereich.",
+          "Filter können kombiniert werden, z. B. um nur Bewässerungsaufgaben für Pflanzen an einem bestimmten Standort anzuzeigen."
+        ]
+      },
+      {
+        "heading": "Massenaufgaben schließen (Bulk)",
+        "body": [
+          "Das Massen-Schließen von Aufgaben ist verfügbar, wenn Sie Schnellansichten wie 'Überfällige anzeigen' oder 'Für heute anzeigen' verwenden.",
+          "Wenn einer dieser Filter aktiv ist, zeigt die FAB-Schaltfläche vorübergehend eine zusätzliche Aktion wie „Alle sichtbaren als erledigt markieren“.",
+          "Diese Aktion schließt alle aktuell sichtbaren Aufgaben gleichzeitig, ohne dass einzelne Kacheln manuell ausgewählt werden müssen.",
+          "Das Massen-Schließen wurde für Situationen entwickelt, in denen Sie dieselbe Pflegeaufgabe für mehrere Pflanzen gleichzeitig durchführen.",
+          "Je nach gewähltem Workflow ist es möglicherweise immer noch möglich, Notizen zu den geschlossenen Aufgaben hinzuzufügen, nachdem die Massenaktion ausgeführt wurde."
+        ]
+      },
+      {
+        "heading": "Navigation vom Home-Bildschirm",
+        "body": [
+          "Der Home-Bildschirm ermöglicht ein schnelles Navigieren zu anderen Teilen der App durch Aktionen auf den Kacheln und FAB-Verknüpfungen.",
+          "Vom einzelnen Aufgabenbildschirm aus können Sie direkt zu den Pflanzendetails oder zur Aufgabenhistorie wechseln.",
+          "Vom FAB aus können Sie die Aufgabenhistorie öffnen oder die Aufgabenliste mithilfe von Sortierung und Filtern eingrenzen."
+        ]
+      }
+    ]
+  }
+}

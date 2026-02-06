@@ -1,0 +1,71 @@
+{
+  "docs_plant_details": {
+    "title": "Pflanzendetails",
+    "sections": [
+      {
+        "heading": "Ziel dieser Ansicht",
+        "body": [
+          "Die Pflanzendetails-Ansicht ist der zentrale Ort, um eine einzelne vom Benutzer erstellte Pflanze anzusehen und zu verwalten.",
+          "Sie kombiniert Pflanzeninformationen, zugewiesene Erinnerungen, Aufgaben, Sensormesswerte (sofern verfügbar) und schnelle Aktionen im Zusammenhang mit dieser Pflanze."
+        ]
+      },
+      {
+        "heading": "Pflanzeninformationen",
+        "body": [
+          "Im oberen Bereich des Bildschirms wird das Bild der Pflanze, ihr Name, der optionale Pflanzenbezeichnungsname und der zugewiesene Standort angezeigt.",
+          "Darunter werden detaillierte Parameter angezeigt, die während der Erstellung der Pflanze angegeben wurden, wie Kaufdatum, Notizen, Lichtverhältnisse, Ausrichtung, Fensterabstand, Topfart und Bodenart.",
+          "Diese Informationen helfen, Erinnerungen, Messwerte und Pflegeentscheidungen besser zu interpretieren."
+        ]
+      },
+      {
+        "heading": "Pflanzenaktionen (3-Punkte-Menü)",
+        "body": [
+          "Das 3-Punkte-Menü, das mit dem Pflanzentitel verbunden ist, bietet zusätzliche Aktionen für die Pflanze selbst.",
+          "Verfügbare Optionen umfassen das Anzeigen der Pflanzenbezeichnung (sofern die Pflanze damit verknüpft ist), das Bearbeiten von Pflanzendaten, das Ändern des Bildes und den Wechsel zu Erinnerungen, die für diese Pflanze gefiltert sind.",
+          "Das Ändern des Bildes ermöglicht es, das Standardbild zu ersetzen, ein eigenes Foto vom Telefon hinzuzufügen oder das Bild zu entfernen."
+        ]
+      },
+      {
+        "heading": "Pflanzenbezeichnung",
+        "body": [
+          "Wenn die Pflanze mit einer Pflanzenbezeichnung aus der Flovers-Datenbank verknüpft ist, kann der Benutzer die dedizierte Pflanzenbezeichnungsansicht öffnen.",
+          "Diese Ansicht zeigt artspezifische Informationen wie die Pflanzenbeschreibung, Pflegepräferenzen, Merkmale, Schwierigkeitsgrad, Temperaturbereiche, Feuchtigkeit, Toxizität und Wuchsverhalten.",
+          "Pflanzenbezeichnungen bieten allgemeine Hinweise und sollten im Kontext der tatsächlichen Bedingungen des Benutzers interpretiert werden."
+        ]
+      },
+      {
+        "heading": "Erinnerungen und Aufgaben",
+        "body": [
+          "Der Abschnitt Erinnerungen zeigt alle aktiven Erinnerungen an, die der jeweiligen Pflanze zugewiesen sind.",
+          "Jede Erinnerung hat ein eigenes 3-Punkte-Menü, mit dem das Aufgabenziel geschlossen, die Erinnerung bearbeitet oder die Aufgabenhistorie angezeigt werden kann.",
+          "Beim Schließen einer Aufgabe kann der Benutzer eine Notiz hinzufügen, die Teil der Pflegehistorie der Pflanze wird."
+        ]
+      },
+      {
+        "heading": "Neueste Messwerte",
+        "body": [
+          "Wenn die Pflanze mit einem Messgerät verbunden ist, zeigt diese Ansicht die neuesten Sensormesswerte an.",
+          "Unterstützte Messwerte umfassen Lufttemperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit.",
+          "Der Abschnitt zeigt die letzten Werte zusammen mit der Information zur Messzeit an.",
+          "Ein Tippen auf das Messwertfeld führt den Benutzer zur Ansicht Messwert-Historie, in der detaillierte Diagramme und Zusammenfassungen (täglich/wöchentlich/monatlich) für Temperatur, Feuchtigkeit, Licht und Bodenfeuchtigkeit angezeigt werden (sofern das Gerät mit der Pflanze verbunden ist)."
+        ]
+      },
+      {
+        "heading": "QR-Code und schneller Zugriff",
+        "body": [
+          "Jede Pflanze hat einen einzigartigen QR-Code, der am unteren Bildschirmrand angezeigt wird.",
+          "Das Scannen dieses Codes im Scanner-Modus führt direkt zur Pflanzendetails-Ansicht.",
+          "Der QR-Code kann auf dem Gerät gespeichert oder per E-Mail versendet werden, was den Ausdruck und das Anbringen auf dem Topf ermöglicht."
+        ]
+      },
+      {
+        "heading": "Wichtige Informationen",
+        "body": [
+          "Vom Benutzer hinzugefügte Fotos werden ausschließlich auf dem Gerät des Benutzers gespeichert und nicht im Flovers-Backend gespeichert.",
+          "Standardpflanzenbilder stammen aus dem Flovers-Backend und können mithilfe von KI generiert werden.",
+          "Sensormesswerte und empfohlene Aktionen sind informativ und sollten mit der eigenen Beurteilung des Benutzers kombiniert werden."
+        ]
+      }
+    ]
+  }
+}

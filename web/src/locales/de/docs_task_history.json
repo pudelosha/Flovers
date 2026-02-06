@@ -1,0 +1,81 @@
+{
+  "docs_task_history": {
+    "title": "Aufgabenhistorie",
+    "sections": [
+      {
+        "heading": "Ziel der Ansicht Aufgabenhistorie",
+        "body": [
+          "Die Aufgabenhistorie dient dazu, abgeschlossene Aufgaben anzusehen und zu verwalten.",
+          "Es erleichtert die Analyse dessen, was getan wurde, wann es getan wurde und welche Pflanzen betroffen waren.",
+          "Die Ansicht kann mit einem aktiven Filter geöffnet werden (z. B. Historie für eine ausgewählte Pflanze) oder alle abgeschlossenen Aufgaben anzeigen."
+        ]
+      },
+      {
+        "heading": "Kacheln abgeschlossener Aufgaben",
+        "body": [
+          "Jede Kachel repräsentiert eine einzelne abgeschlossene Aufgabe und enthält unter anderem den Aufgabentyp (z. B. Bewässerung, Sprühen, Düngen), den Namen der Pflanze, den Standort und das Ausführungsdatum.",
+          "Abgeschlossene Aufgaben können eine Notiz enthalten, die beim Markieren der Aufgabe als erledigt hinzugefügt wurde.",
+          "Notizen sind erst sichtbar, wenn die Kachel aufgeklappt wird."
+        ]
+      },
+      {
+        "heading": "Notizvorschau: Aufklappen und Zuklappen",
+        "body": [
+          "Um eine Notiz für eine abgeschlossene Aufgabe zu sehen, kannst du die Kachel durch Antippen aufklappen.",
+          "Du kannst auch das Menü mit den drei Punkten verwenden, um die Aktion Aufklappen/Zuklappen auszuführen (je nach aktuellem Zustand).",
+          "Auf diese Weise bleibt die Liste übersichtlich und kompakt, während Details auf Anfrage verfügbar sind."
+        ]
+      },
+      {
+        "heading": "Kachelmenü (drei Punkte)",
+        "body": [
+          "Jede Kachel einer abgeschlossenen Aufgabe verfügt über ein Kontextmenü mit Aktionen, die diese spezifische Position in der Historie betreffen.",
+          "Aufklappen/Zuklappen: Zeigt oder verbirgt den Notizbereich innerhalb der Kachel.",
+          "Erinnerrung bearbeiten: Leitet zur Erinnerung, die mit der Aufgabe verbunden ist, um die Häufigkeit oder andere Parameter zu ändern.",
+          "Zur Pflanze gehen: Leitet zur Detailansicht der Pflanze, die mit der Aufgabe verbunden ist.",
+          "Aufgabe löschen: Löscht die ausgewählte abgeschlossene Aufgabe dauerhaft vom Benutzerkonto."
+        ]
+      },
+      {
+        "heading": "FAB-Aktionen (Floating Action Button)",
+        "body": [
+          "Die Ansicht Aufgabenhistorie enthält einen FAB-Button mit Aktionen zur Arbeit auf der gesamten Liste.",
+          "Sortieren: Ändert die Reihenfolge der Anzeige abgeschlossener Aufgaben.",
+          "Filtern: Verengt die Historienliste auf ausgewählte Kriterien.",
+          "Löschen: Ermöglicht das Massenlöschen von Aufgaben basierend auf Kriterien (z. B. Aufgaben für eine ausgewählte Pflanze, für einen Standort, für einen Aufgabentyp oder Aufgaben, die älter als ein bestimmtes Datum sind)."
+        ]
+      },
+      {
+        "heading": "Sortieroptionen",
+        "body": [
+          "Sortieren hilft dabei, die Historie in der Reihenfolge zu durchsuchen, die am besten zu deinem Arbeitsstil passt.",
+          "Verfügbare Sortieroptionen sind: Ausführungsdatum, Pflanzenname und Standort."
+        ]
+      },
+      {
+        "heading": "Filteroptionen",
+        "body": [
+          "Filter ermöglichen es, sich auf einen ausgewählten Teilbereich der abgeschlossenen Aufgaben zu konzentrieren.",
+          "Du kannst nach folgenden Kriterien filtern: Pflanzenname, Standort, Aufgabentyp und Zeitraum der Ausführung.",
+          "Filter können kombiniert werden, z. B. um Düngen, das in einem bestimmten Monat an einem bestimmten Standort durchgeführt wurde, anzuzeigen."
+        ]
+      },
+      {
+        "heading": "Massenlöschung (Aktion Löschen)",
+        "body": [
+          "Massenlöschung ermöglicht es, mehrere abgeschlossene Aufgaben gleichzeitig basierend auf ausgewählten Kriterien dauerhaft zu löschen.",
+          "Typische Szenarien sind: Löschen der Historie einer einzelnen Pflanze, Löschen von Aufgaben für einen Standort, Löschen nur eines Aufgabentyps oder Löschen von Aufgaben, die älter als ein bestimmtes Datum sind.",
+          "Die Massenlöschung ist dauerhaft und kann nicht rückgängig gemacht werden."
+        ]
+      },
+      {
+        "heading": "Unterschiede zwischen Aufgabenhistorie und Home",
+        "body": [
+          "Home konzentriert sich auf aktuelle Aufgaben (heute und überfällig) und deren Ausführung.",
+          "Die Aufgabenhistorie konzentriert sich auf abgeschlossene Aufgaben und unterstützt das Durchsuchen, Sortieren, Filtern und Löschen historischer Einträge.",
+          "Zusammen ermöglichen diese Ansichten sowohl die Durchführung von täglichen Aufgaben (Home) als auch die Analyse der langfristigen Pflegehistorie (Aufgabenhistorie)."
+        ]
+      }
+    ]
+  }
+}

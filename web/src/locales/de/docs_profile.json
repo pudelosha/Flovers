@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Profil",
+    "sections": [
+      {
+        "heading": "Zweck dieser Ansicht",
+        "body": [
+          "Die Profilansicht ist der zentrale Ort zur Verwaltung von Kontodaten, Benachrichtigungseinstellungen, App-Konfiguration und Support.",
+          "Sie ermöglicht es dem Benutzer, sowohl seine persönlichen Daten als auch das Verhalten der Flovers-App zu steuern."
+        ]
+      },
+      {
+        "heading": "Konto",
+        "body": [
+          "Der Abschnitt Konto zeigt grundlegende Kontoinformationen wie E-Mail-Adresse und Kontoregistrierungsdatum an.",
+          "Von hier aus kann der Benutzer seine E-Mail-Adresse ändern (Passwortbestätigung erforderlich), das aktuelle Passwort ändern, sich abmelden oder das Konto dauerhaft löschen.",
+          "Das Löschen des Kontos führt zur unwiederbringlichen Löschung aller Benutzerdaten, einschließlich Pflanzen, Erinnerungen, Aufgaben, Lesungen und Geräte."
+        ]
+      },
+      {
+        "heading": "Benachrichtigungen",
+        "body": [
+          "Der Abschnitt Benachrichtigungen ermöglicht das Verwalten von Zustimmungen und Präferenzen für E-Mail- und Push-Benachrichtigungen.",
+          "Für beide Kanäle kann der Benutzer zwei Arten von Benachrichtigungen ein- oder ausschalten: eine tägliche Zusammenfassung der für den Tag geplanten Aufgaben und eine Erinnerung, die 24 Stunden später gesendet wird, wenn die Aufgaben noch nicht erledigt wurden.",
+          "Für jede Art von Benachrichtigung legt der Benutzer die Versandzeit fest (volle Stunde, z.B. 14:00)."
+        ]
+      },
+      {
+        "heading": "Einstellungen",
+        "body": [
+          "Der Abschnitt Einstellungen ermöglicht es, das allgemeine Verhalten und Aussehen der App zu steuern.",
+          "Verfügbare Optionen umfassen die Auswahl der Sprache, das Datums- und Zeitformat, die Temperatureinheit (Celsius, Fahrenheit, Kelvin), die Maßeinheit (metrisch oder imperial) und die Position des FAB-Buttons (linke oder rechte Seite).",
+          "Der Benutzer kann auch das Aussehen der App anpassen, indem er ein Hintergrundbild, ein Kachelthema (hell oder dunkel) und die Transparenzstufe der Kacheln auswählt."
+        ]
+      },
+      {
+        "heading": "Support",
+        "body": [
+          "Der Abschnitt Support ermöglicht den direkten Kontakt mit dem Flovers-Team.",
+          "Der Benutzer kann ein Problem melden oder eine Anfrage an den technischen Support senden.",
+          "Fehlermeldungen tragen zur Weiterentwicklung und Verbesserung der Qualität der App bei."
+        ]
+      }
+    ]
+  }
+}

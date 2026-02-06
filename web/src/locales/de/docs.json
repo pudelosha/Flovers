@@ -1,0 +1,48 @@
+{
+  "title": "Dokumentation",
+  "placeholder": {
+    "heading": "Bald verfügbar",
+    "body": "Detaillierte Dokumentation für diesen Bildschirm wird bald verfügbar sein."
+  },
+  "screens": {
+    "overview": {
+      "title": "Übersicht"
+    },
+    "auth": {
+      "title": "Anmeldung und Registrierung"
+    },
+    "home": {
+      "title": "Startbildschirm"
+    },
+    "taskHistory": {
+      "title": "Aufgabenhistorie"
+    },
+    "plants": {
+      "title": "Pflanzen"
+    },
+    "plantDetails": {
+      "title": "Pflanzendetails"
+    },
+    "createPlantWizard": {
+      "title": "Pflanzenerstellungsassistent"
+    },
+    "locations": {
+      "title": "Standorte"
+    },
+    "reminders": {
+      "title": "Erinnerungen"
+    },
+    "readings": {
+      "title": "Messwerte"
+    },
+    "readingsHistory": {
+      "title": "Messwertgeschichte"
+    },
+    "scanner": {
+      "title": "Scanner (QR)"
+    },
+    "profile": {
+      "title": "Profil und Einstellungen"
+    }
+  }
+}

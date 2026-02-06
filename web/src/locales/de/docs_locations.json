@@ -1,0 +1,46 @@
+{
+  "docs_locations": {
+    "title": "Standorte",
+    "sections": [
+      {
+        "heading": "Zweck dieser Ansicht",
+        "body": [
+          "Die Standortansicht dient der Verwaltung der Orte, an denen sich deine Pflanzen befinden, z. B. Räume, Balkone oder andere Bereiche.",
+          "Standorte werden hauptsächlich verwendet, um Pflanzen zu organisieren und das Filtern, Sortieren und Gruppieren von Daten in der App zu erleichtern."
+        ]
+      },
+      {
+        "heading": "Standortliste",
+        "body": [
+          "Der Bildschirm zeigt eine Liste aller vom Benutzer definierten Standorte.",
+          "Standorte können Standardnamen oder benutzerdefinierte Namen sein, die vom Benutzer erstellt wurden.",
+          "Jeder Standort zeigt die Anzahl der Pflanzen, die derzeit mit ihm verbunden sind."
+        ]
+      },
+      {
+        "heading": "Aktionen am Standort (3-Punkte-Menü)",
+        "body": [
+          "Jeder Standort hat ein 3-Punkte-Menü mit verfügbaren Aktionen.",
+          "Der Benutzer kann den Namen des Standorts bearbeiten, um ihn besser an den tatsächlichen Aufbewahrungsort der Pflanzen anzupassen.",
+          "Das Löschen eines Standorts ist nur möglich, wenn keine Pflanzen diesem zugewiesen sind."
+        ]
+      },
+      {
+        "heading": "Aktionsbutton (FAB)",
+        "body": [
+          "Der FAB-Button bietet schnelle Aktionen zur Verwaltung von Standorten.",
+          "Der Benutzer kann jederzeit einen neuen Standort hinzufügen.",
+          "Standorte können nach dem Namen des Standorts oder der Anzahl der zugewiesenen Pflanzen sortiert werden."
+        ]
+      },
+      {
+        "heading": "Verwendung von Standorten",
+        "body": [
+          "Standorte werden in der gesamten App zur logischen Gruppierung von Pflanzen verwendet.",
+          "Sie können als Filter- und Sortierkriterien in Ansichten wie Pflanzen, Erinnerungen oder Aufgabenhistorie verwendet werden.",
+          "Die Verwendung von Standorten erleichtert das Ordnen, insbesondere bei einer größeren Anzahl von Pflanzen."
+        ]
+      }
+    ]
+  }
+}

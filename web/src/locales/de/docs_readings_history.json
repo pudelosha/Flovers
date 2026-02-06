@@ -1,0 +1,43 @@
+{
+  "docs_readings_history": {
+    "title": "Lesegeschichte",
+    "sections": [
+      {
+        "heading": "Zweck dieser Ansicht",
+        "body": [
+          "Die Ansicht Lesegeschichte bietet einen vollständigen Einblick in die Messdaten aus der Vergangenheit für das verbundene Gerät und die Anlage.",
+          "Im Gegensatz zur Liste der Messwerte (wo hauptsächlich die letzten Werte sichtbar sind), dient diese Ansicht der Analyse von Trends und Veränderungen im Zeitverlauf auf Diagrammen."
+        ]
+      },
+      {
+        "heading": "Zeitrahmen: Tag, Woche, Monat",
+        "body": [
+          "Der Benutzer kann zwischen drei Zeitrahmen wechseln: Tag, Woche und Monat.",
+          "Die Ansicht Tag zeigt Messwerte für einen einzelnen Tag im Stundenintervall an (vorausgesetzt, das Gerät sendet Daten jede Stunde und der Benutzer akzeptiert einen höheren Batterieverbrauch auf der Seite des Geräts).",
+          "Die Ansichten Woche und Monat zeigen Daten über einen längeren Zeitraum an, was das Erkennen von Trends erleichtert."
+        ]
+      },
+      {
+        "heading": "Auswahl des Messparameters",
+        "body": [
+          "Diagramme sind für die folgenden Parameter verfügbar: Lufttemperatur, Luftfeuchtigkeit, Lichtniveau und Bodenfeuchtigkeit (je nachdem, was das Gerät misst).",
+          "Der Parameter wird mit den Schaltflächen unter dem Diagramm ausgewählt (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Navigation zu früheren Zeiträumen",
+        "body": [
+          "Pfeile neben dem ausgewählten Zeitraum ermöglichen das Navigieren zwischen früheren Tagen, Wochen oder Monaten.",
+          "Die Navigation ist nur für Zeiträume verfügbar, für die Daten vorhanden sind – zukünftige Zeiträume werden nicht angezeigt."
+        ]
+      },
+      {
+        "heading": "Verfügbarkeit der Daten und Interpretation",
+        "body": [
+          "Wenn das Gerät für den ausgewählten Zeitraum keine Messwerte geliefert hat, ist das Diagramm leer oder enthält möglicherweise Datenlücken.",
+          "Die Sensordaten dienen nur zu Informationszwecken und sollten zusammen mit der Beobachtung der Pflanzen sowie unter Berücksichtigung der Kalibrierung, Positionierung der Sensoren und der Umgebungsbedingungen interpretiert werden."
+        ]
+      }
+    ]
+  }
+}

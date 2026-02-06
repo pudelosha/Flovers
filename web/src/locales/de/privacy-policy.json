@@ -1,0 +1,91 @@
+{
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Letzte Aktualisierung: {{date}}",
+    "section1": {
+      "title": "§ 1. Allgemeine Bestimmungen",
+      "p1": "Der Verantwortliche für die Verarbeitung personenbezogener Daten im Zusammenhang mit der Nutzung der Flovers-Website und der Flovers-Mobile-App ist Marcin Janowski Copy Paste IT Solutions, mit Sitz in der ul. płk. Francesco Nullo 30/115, 31-543 Krakau, Polen, E-Mail-Adresse: info@flovers.app, im Folgenden als „Verantwortlicher“ bezeichnet.",
+      "p2": "Der Verantwortliche verarbeitet personenbezogene Daten gemäß der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 (DSGVO).",
+      "p3": "Diese Datenschutzerklärung gilt für die Flovers-Website, die Flovers-Mobile-App (Android und zukünftig iOS) sowie die Backend-Infrastruktur, die mit ihrer Funktionsweise verbunden ist."
+    },
+    "section2": {
+      "title": "§ 2. Umfang und Zwecke der Verarbeitung personenbezogener Daten",
+      "intro": "Der Verantwortliche verarbeitet personenbezogene Daten zu folgenden Zwecken:",
+      "list": [
+        "Erstellung und Verwaltung eines Benutzerkontos in der App",
+        "Authentifizierung des Benutzers und Durchführung des Anmeldeprozesses",
+        "Versand von Systemnachrichten, einschließlich Verifizierungs-E-Mails und Passwortzurücksetzungen",
+        "Bearbeitung von Anfragen, die über das Kontaktformular gesendet werden",
+        "Gewährleistung des ordnungsgemäßen Betriebs der App und der Website",
+        "Durchführung von Erinnerungen, Aufgaben und Benachrichtigungen im Zusammenhang mit der Pflanzenpflege",
+        "Sicherstellung der Systemsicherheit und Durchführung technischer Protokolle"
+      ],
+      "legalBasis": "Die rechtliche Grundlage für die Verarbeitung personenbezogener Daten ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), Art. 6 Abs. 1 lit. c DSGVO (gesetzliche Verpflichtung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse des Verantwortlichen)."
+    },
+    "section3": {
+      "title": "§ 3. Art der verarbeiteten Daten",
+      "intro": "Je nach Nutzung der App oder Website kann der Verantwortliche folgende Daten verarbeiten:",
+      "list": [
+        "E-Mail-Adresse des Benutzers",
+        "verschlüsseltes Passwort des Benutzers",
+        "Informationen zum Profil und den Präferenzen des Benutzers",
+        "Technische Daten des Geräts (Gerätetyp, Betriebssystem, App-Version)",
+        "IP-Adresse",
+        "Daten zur Ausrichtung des Geräts (z.B. zur Optimierung der Lichtaussetzung für Pflanzen)",
+        "Vom Benutzer eingegebene Daten zu Pflanzen, Messungen und IoT-Sensoren"
+      ],
+      "note": "Fotos, die vom Benutzer aufgenommen werden, werden grundsätzlich lokal auf dem Gerät verarbeitet, es sei denn, der Benutzer entscheidet sich, sie in Funktionen zu verwenden, die eine serverseitige Verarbeitung erfordern."
+    },
+    "section4": {
+      "title": "§ 4. Benutzerkonten und Sicherheit",
+      "p1": "Benutzer der Flovers-App erstellen individuelle Konten, die mit einem Passwort gesichert sind.",
+      "p2": "Passwörter werden verschlüsselt (gehasht) gespeichert.",
+      "p3": "Ein Benutzerkonto erfordert die Verifizierung der E-Mail-Adresse.",
+      "p4": "Der Benutzer kann jederzeit das Passwort ändern oder die Passwortzurücksetzungsprozedur verwenden."
+    },
+    "section5": {
+      "title": "§ 5. Benachrichtigungen und Kommunikation",
+      "p1": "Der Verantwortliche sendet ausschließlich transaktionsbezogene Nachrichten, insbesondere zu Themen wie Anmeldung, Konto-Verifizierung und Passwortzurücksetzung.",
+      "p2": "Die App kann Push-Benachrichtigungen (z.B. über Firebase) verwenden, um an Aufgaben im Zusammenhang mit der Pflanzenpflege zu erinnern.",
+      "p3": "Der Verantwortliche behält sich vor, in Zukunft einen Newsletter einzuführen, wobei Marketinginformationen nur nach ausdrücklicher Zustimmung des Benutzers versendet werden."
+    },
+    "section6": {
+      "title": "§ 6. Cookies und ähnliche Technologien",
+      "p1": "Die Flovers-Website kann Cookies verwenden, die für das ordnungsgemäße Funktionieren der Seite erforderlich sind.",
+      "p2": "Cookies werden ausschließlich zu technischen und funktionalen Zwecken verwendet.",
+      "p3": "Der Dienst verwendet keine Analyse- oder Marketing-Tools von Drittanbietern."
+    },
+    "section7": {
+      "title": "§ 7. Empfänger der Daten und Datenverarbeitungsort",
+      "p1": "Personenbezogene Daten werden auf Servern innerhalb der Europäischen Union verarbeitet.",
+      "p2": "Die Serverinfrastruktur wird von Hetzner Online GmbH bereitgestellt.",
+      "p3": "Der Verantwortliche kann Firebase-Dienste für die Verwaltung von Push-Benachrichtigungen nutzen.",
+      "p4": "Der Verantwortliche überträgt keine personenbezogenen Daten in Drittländer außerhalb der EU."
+    },
+    "section8": {
+      "title": "§ 8. Aufbewahrungsdauer der Daten",
+      "p1": "Personenbezogene Daten werden so lange aufbewahrt, wie das Benutzerkonto besteht.",
+      "p2": "Nach der Löschung des Kontos werden die Daten dauerhaft gelöscht oder anonymisiert, es sei denn, gesetzliche Bestimmungen verlangen etwas anderes."
+    },
+    "section9": {
+      "title": "§ 9. Rechte der betroffenen Personen",
+      "intro": "Jede betroffene Person hat das Recht auf:",
+      "list": [
+        "Zugang zu ihren Daten",
+        "Berichtigung ihrer Daten",
+        "Löschung ihrer Daten",
+        "Einschränkung der Verarbeitung",
+        "Widerspruch gegen die Verarbeitung",
+        "Widerruf der Zustimmung zu jedem Zeitpunkt"
+      ],
+      "p2": "Um diese Rechte auszuüben, wenden Sie sich bitte an den Verantwortlichen unter der E-Mail-Adresse: info@flovers.app.",
+      "p3": "Betroffene Personen haben auch das Recht, eine Beschwerde beim Präsidenten des Amtes für den Schutz personenbezogener Daten einzureichen."
+    },
+    "section10": {
+      "title": "§ 10. Schlussbestimmungen",
+      "p1": "Der Verantwortliche trifft geeignete technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten.",
+      "p2": "Der Verantwortliche behält sich das Recht vor, diese Datenschutzerklärung zu aktualisieren.",
+      "p3": "Die aktuelle Version der Datenschutzerklärung ist immer auf der Flovers-Website und in der mobilen App verfügbar."
+    }
+  }
+}

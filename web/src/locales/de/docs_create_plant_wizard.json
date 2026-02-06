@@ -1,0 +1,94 @@
+{
+  "docs_create_plant_wizard": {
+    "title": "Pflanzenhinzufügungs-Assistent",
+    "sections": [
+      {
+        "heading": "Ziel dieses Prozesses",
+        "body": [
+          "Der Pflanzenhinzufügungs-Assistent ist ein geführter Prozess in 9 Schritten, der dazu dient, eine neue Pflanzeninstanz in deinem Konto zu erstellen.",
+          "Er hilft (optional), die Pflanze mit einer Pflanzenbeschreibung aus der Flovers-Datenbank zu verknüpfen, den Kontext (Standort, Belichtung) zu sammeln und optional Erinnerungen basierend auf Pflegepräferenzen zu generieren.",
+          "Der Assistent dient ausschließlich zur Erstellung einer neuen Pflanze. Die Bearbeitung einer bestehenden Pflanze erfolgt in einer anderen Ansicht/einem anderen Prozess."
+        ]
+      },
+      {
+        "heading": "Schritt 01 — Auswahl der Pflanzenbeschreibung (optional)",
+        "body": [
+          "Du kannst eine Pflanzenbeschreibung (eingebaute Art-Profil) mit dem Suchfeld suchen.",
+          "Unter dem Feld befindet sich eine Liste populärer Zimmerpflanzen, die als schnelle Verknüpfung dient.",
+          "Optional kannst du die Pflanzenbestimmung verwenden: starte die Erkennung, mache ein Foto oder wähle es aus der Galerie, und das System wird die 3 am besten passenden Ergebnisse anzeigen.",
+          "Wenn du den Vorschlag akzeptierst, wird die ausgewählte Pflanzenbeschreibung auf die zu erstellende Pflanze angewendet."
+        ]
+      },
+      {
+        "heading": "Schritt 02 — Vorschau der Pflanzenbeschreibung",
+        "body": [
+          "Wenn eine Pflanzenbeschreibung ausgewählt wurde, werden in diesem Schritt die Details angezeigt: Bild sowie grundlegende Merkmale und Präferenzen.",
+          "Dies ist ein Verifizierungsschritt, der es ermöglicht, das richtige Profil zu bestätigen, bevor du weitergehst."
+        ]
+      },
+      {
+        "heading": "Schritt 03 — Auswahl des Standorts (erforderlich)",
+        "body": [
+          "Wähle den Standort aus, an dem sich die Pflanze befindet (z. B. Küche, Wohnzimmer, Balkon).",
+          "An dieser Stelle kannst du auch einen neuen Standort hinzufügen.",
+          "Die Auswahl des Standorts ist derzeit erforderlich, um mit den nächsten Schritten fortzufahren."
+        ]
+      },
+      {
+        "heading": "Schritt 04 — Belichtung (optionale Messungen)",
+        "body": [
+          "Dieser Schritt ermöglicht es, den Kontext der Belichtung zu speichern: Richtung, Lichtstärke und Entfernung zum Fenster.",
+          "Die Richtung kann mit dem Kompass des Telefons gemessen werden, wenn die App die Berechtigung für den Kompass/Sensoren erhalten hat.",
+          "Die Lichtstärke kann gemessen werden, wenn das Gerät über einen entsprechenden Sensor verfügt und die erforderlichen Berechtigungen erteilt wurden.",
+          "Die Belichtungswerte sind optional — du kannst sie manuell ausfüllen oder überspringen."
+        ]
+      },
+      {
+        "heading": "Schritt 05 — Topf und Substrat (optional)",
+        "body": [
+          "Gib die Art des Behälters/Tops (z. B. Plastik, Keramik) und des Substrats an.",
+          "Diese Felder sind optional, können jedoch helfen, die empfohlenen Intervalle besser anzupassen, wenn automatische Aufgaben aktiviert sind."
+        ]
+      },
+      {
+        "heading": "Schritt 06 — Automatische Aufgaben (optional, bei Pflanzenbeschreibung)",
+        "body": [
+          "Wenn die Pflanze mit einer Pflanzenbeschreibung verknüpft ist, kann Flovers automatisch Erinnerungen/Aufgaben basierend auf den Präferenzen aus der Datenbank erstellen.",
+          "Aktiviere das Hauptkästchen, um die automatische Erstellung zu aktivieren, und wähle dann die Arten von Aufgaben aus, die erstellt werden sollen (z. B. Gießen, Sprühen, Düngen, Umtopfen, Pflege).",
+          "Die empfohlenen Intervalle basieren auf der Pflanzenbeschreibung und können anhand der Belichtung sowie des Topfes/Substrats angepasst werden, wenn diese Daten verfügbar sind.",
+          "Du kannst diesen Schritt überspringen und die Erinnerungen später manuell erstellen."
+        ]
+      },
+      {
+        "heading": "Schritt 07 — Hinzufügen eines eigenen Fotos (optional)",
+        "body": [
+          "Du kannst ein eigenes Foto der Pflanze von deinem Telefon hinzufügen.",
+          "Dieser Schritt ist optional und kann je nach deinem App-Workflow später ebenfalls möglich sein."
+        ]
+      },
+      {
+        "heading": "Schritt 08 — Enddaten (erforderlicher Name)",
+        "body": [
+          "Lege den angezeigten Namen der Pflanze fest (erforderlich).",
+          "Optional kannst du Notizen und das Kaufdatum hinzufügen.",
+          "Diese Informationen sind in den Pflanzendetails sichtbar und helfen, eine übersichtliche Pflegerecorde zu führen."
+        ]
+      },
+      {
+        "heading": "Schritt 09 — Zusammenfassung und Bestätigung",
+        "body": [
+          "Nach dem erfolgreichen Hinzufügen der Pflanze zeigt der Assistent einen Bestätigungs-/Zusammenfassungsbildschirm an.",
+          "Von hier aus kannst du zur Pflanzenliste wechseln oder die neu erstellte Pflanze öffnen — je nach Navigation in der App."
+        ]
+      },
+      {
+        "heading": "Hinweise und Berechtigungen",
+        "body": [
+          "Die Pflanzenbestimmung erfordert Zugriff auf die Kamera und/oder Galerie, je nach der Methode zur Bereitstellung des Fotos.",
+          "Die Belichtungsmessungen können Berechtigungen für Sensoren (z. B. Kompass) erfordern und hängen von der Verfügbarkeit der Hardware im Gerät ab.",
+          "Die Verknüpfung mit einer Pflanzenbeschreibung ist optional — du kannst diesen Schritt überspringen und die Pflanze dennoch erstellen, und Erinnerungen später manuell hinzufügen."
+        ]
+      }
+    ]
+  }
+}

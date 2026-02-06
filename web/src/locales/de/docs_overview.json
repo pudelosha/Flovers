@@ -1,0 +1,97 @@
+{
+  "docs_overview": {
+    "title": "Übersicht",
+    "sections": [
+      {
+        "heading": "Was ist Flovers?",
+        "body": [
+          "Flovers ist ein Pflanzenpflege-Assistent, der hilft, tägliche Aufgaben zu organisieren, Pflegehistorie zu verfolgen und Messwerte von eigenen IoT-Geräten zu überwachen.",
+          "Die App kombiniert Erinnerungen und Aufgaben mit Pflanzenprofilen (Ihre Pflanzen) und Pflanzenbeschreibungen (eingebaute Artprofile mit Empfehlungen).",
+          "Flovers unterstützt Ihre Entscheidungen, ersetzt sie jedoch nicht – die Pflegeergebnisse hängen von den Bedingungen und der Anwendung der Tipps ab.",
+          "Der Service umfasst die mobile App (Android; künftig iOS), ein Backend-API und eine Website mit Dokumentation und rechtlichen Informationen."
+        ]
+      },
+      {
+        "heading": "Wichtige Begriffe (wie die App-Struktur funktioniert)",
+        "body": [
+          "Pflanzenbeschreibung: Eingebautes Artprofil mit allgemeinen Merkmalen und Empfehlungen (Licht, Gießen/Besprühen, Düngen usw.).",
+          "Pflanzeninstanz: Ihre eigene Pflanze (Ihr Exemplar), optional mit der Pflanzenbeschreibung verknüpft, um bessere Standardtipps zu erhalten.",
+          "Erinnerung: Eine zyklische Regel (z. B. Gießen alle X Tage), auf deren Grundlage automatisch Aufgaben erstellt werden.",
+          "Aufgabe: Eine spezifische Handlung, die aus einer Erinnerung generiert wurde; Sie können sie als erledigt markieren und eine Notiz hinzufügen, um die Pflegehistorie aufzubauen."
+        ]
+      },
+      {
+        "heading": "Wichtigste Funktionen im Überblick",
+        "body": [
+          "Benutzerkonto: Registrierung, Anmeldung, E-Mail-Bestätigung, Passwort zurücksetzen und Profil-Einstellungen verwalten.",
+          "Pflanzenverwaltung: Pflanzen hinzufügen, nach Standorten gruppieren, Notizen und Anzeige der Aktivitätsgeschichte.",
+          "Erinnerungen und Aufgaben: Erstellen zyklischer Routinen (Gießen, Besprühen, Düngen, Umtopfen, Pflege) und deren Ausführung.",
+          "IoT-Messwerte: Verbindung eigener Geräte und Speicherung von Daten wie Temperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtintensität."
+        ]
+      },
+      {
+        "heading": "Pflanzen erkennen (auf Basis eines Fotos)",
+        "body": [
+          "Flovers ermöglicht die Pflanzenbestimmung anhand eines Fotos, um die Pflanzenbeschreibung leichter anzupassen und mit besseren Standard-Einstellungen zu starten.",
+          "Die Bestimmung erfolgt auf der Serverseite mit einem eigenen ML-System des Anbieters, das auf über 700 Arten trainiert wurde.",
+          "Fotos, die zur Bestimmung übermittelt werden, werden ausschließlich zur Durchführung des Bestimmungsprozesses verwendet und sind nicht für eine dauerhafte Speicherung vorgesehen.",
+          "Die Ergebnisse hängen von der Qualität des Fotos, der Beleuchtung, der Schärfe, der Sichtbarkeit der Pflanze und der Ähnlichkeit zu anderen Arten ab."
+        ]
+      },
+      {
+        "heading": "IoT-Geräte und Sensordaten",
+        "body": [
+          "Flovers unterstützt eigene oder externe Geräte (z. B. Arduino), die Messwerte an Ihr Konto senden.",
+          "Unterstützte Messwerte: Lufttemperatur, Luftfeuchtigkeit, Bodenfeuchtigkeit und Lichtniveau.",
+          "Messwerte werden im Backend gespeichert und in der App als aktuelle Werte sowie Historie (tägliche/wöchentliche/monatliche Zusammenfassungen) angezeigt.",
+          "Sie haben die Kontrolle über das Pairing und die Verwendung – Stabilität, Kalibrierung und Montage der Geräte liegen in Ihrer Verantwortung."
+        ]
+      },
+      {
+        "heading": "QR-Codes und schneller Zugriff",
+        "body": [
+          "Sie können QR-Codes generieren, die einen Link zu einer bestimmten Pflanzeninstanz in Ihrem Konto enthalten.",
+          "Ein typisches Szenario ist, den Code auszudrucken und auf dem Blumentopf anzubringen, um ihn dann zu scannen und schnell zu den Pflanzendetails zu gelangen.",
+          "QR-Codes dienen der Bequemlichkeit; behandeln Sie sie als Zugangshinweise und geben Sie sie nicht öffentlich weiter, wenn sie Metadaten offenbaren könnten.",
+          "Derzeit sind die Pflanzendetails hauptsächlich für den angemeldeten Besitzer sichtbar."
+        ]
+      },
+      {
+        "heading": "Benachrichtigungen und Erinnerungen",
+        "body": [
+          "Flovers kann Push-Benachrichtigungen (über Firebase) zu Aufgaben für heute oder überfällige Aufgaben senden – abhängig von den Einstellungen.",
+          "Die Benachrichtigungseinstellungen finden Sie im Profil; auch wenn Push-Benachrichtigungen deaktiviert sind, bleiben Erinnerungen und Aufgaben in der App.",
+          "E-Mail-Nachrichten werden derzeit hauptsächlich für konto-bezogene Aktivitäten verwendet (Aktivierung und Passwort zurücksetzen).",
+          "Benachrichtigungen haben unterstützende Funktion – Flovers garantiert nicht die Gesundheit der Pflanzen oder dass Erinnerungen Schäden verhindern."
+        ]
+      },
+      {
+        "heading": "Datenschutz, Sicherheit und Ihre Daten",
+        "body": [
+          "Flovers speichert Kontodaten sowie Daten, die zur Erbringung des Dienstes erforderlich sind (Pflanzen, Erinnerungen, Aufgaben, Notizen und Messwerte).",
+          "Passwörter werden in verschlüsselter Form gespeichert; die Kontoaktivierung erfordert eine E-Mail-Verifizierung.",
+          "Es wird davon ausgegangen, dass die Daten in der EU verarbeitet werden; das Hosting ist auf Hetzner (EU) geplant, und Push-Benachrichtigungen werden von Firebase bereitgestellt.",
+          "Details finden Sie in der Datenschutzrichtlinie und den Nutzungsbedingungen, die auf der Website und in der App verfügbar sind."
+        ]
+      },
+      {
+        "heading": "Einschränkungen und wichtige Hinweise",
+        "body": [
+          "Flovers ist ein Planungs- und Überwachungstool; es ist kein professionelles Beratungssystem und ersetzt nicht gärtnerisches Wissen.",
+          "Messwerte von Sensoren können ungenau sein (Kalibrierung, Montage, Bedingungen); in wichtigen Situationen sollten Sie diese selbst überprüfen.",
+          "Pflegeempfehlungen sind allgemein und passen möglicherweise nicht zu Ihren Bedingungen (Boden, Topf, Licht, Feuchtigkeit, Saison).",
+          "Wenn etwas nicht richtig aussieht, verlassen Sie sich auf Ihre eigene Einschätzung – passen Sie Routinen an und nutzen Sie vertrauenswürdige Quellen."
+        ]
+      },
+      {
+        "heading": "Was kommt als Nächstes?",
+        "body": [
+          "Wenn Sie anfangen, gehen Sie zu Login & Registrierung und erstellen Sie dann die erste Pflanzeninstanz im Pflanzen-Assistenten.",
+          "Richten Sie dann Erinnerungen ein und erledigen Sie Aufgaben, um eine Routine aufrechtzuerhalten und eine Pflegehistorie aufzubauen.",
+          "Wenn Sie ein Gerät haben, öffnen Sie Messwerte, konfigurieren Sie es und verwenden Sie die Messwertgeschichte, um Trends zu beobachten.",
+          "Nutzen Sie das FAQ für schnelle Antworten sowie die Dokumente Nutzungsbedingungen/Datenschutzrichtlinie für formelle Angelegenheiten."
+        ]
+      }
+    ]
+  }
+}

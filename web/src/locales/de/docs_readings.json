@@ -1,0 +1,88 @@
+{
+  "docs_readings": {
+    "title": "Ablesungen",
+    "sections": [
+      {
+        "heading": "Zweck dieser Ansicht",
+        "body": [
+          "Die Ansicht Ablesungen ermöglicht das Durchsuchen und Verwalten von IoT-Geräten, die mit Pflanzen verbunden sind.",
+          "Jedes Gerät kann Messwerte wie Lufttemperatur, Luftfeuchtigkeit, Lichtniveau und Bodenfeuchtigkeit an Flovers übertragen.",
+          "Diese Funktion ist für Benutzer gedacht, die ihre eigenen Geräte (z. B. auf Basis von Arduino oder ESP) zur Überwachung der Pflanzenbedingungen bauen."
+        ]
+      },
+      {
+        "heading": "Gerätetiles und letzte Ablesungen",
+        "body": [
+          "Auf dem Bildschirm wird eine Liste von Kacheln angezeigt, wobei jede Kachel ein verbundenes Gerät darstellt.",
+          "Jede Kachel zeigt den Namen der Pflanze, den Standort und die neuesten Messwerte von Sensoren an.",
+          "Wenn noch keine Daten empfangen wurden, werden anstelle von Werten Platzhalter-Symbole angezeigt."
+        ]
+      },
+      {
+        "heading": "Interaktionen mit der Kachel",
+        "body": [
+          "Ein Klick auf den Bereich der Kachel führt den Benutzer direkt zur Ansicht der Ablesungshistorie für das betreffende Gerät.",
+          "Ein Klick auf das Symbol eines bestimmten Parameters (z. B. Feuchtigkeit oder Temperatur) öffnet die Ablesungshistorie mit dem ausgewählten Parameter.",
+          "Dies ermöglicht einen schnellen Zugriff auf detaillierte Diagramme."
+        ]
+      },
+      {
+        "heading": "Gerätemenü (drei Punkte)",
+        "body": [
+          "Jede Geräte-Kachel hat ein Drei-Punkte-Menü mit zusätzlichen Aktionen.",
+          "Verfügbare Optionen sind: Ablesungshistorie, Pflanzendetails, Gerät bearbeiten und Gerät löschen.",
+          "Das Löschen eines Geräts ist dauerhaft und entfernt seine Verbindung zur Pflanze."
+        ]
+      },
+      {
+        "heading": "Ablesungshistorie",
+        "body": [
+          "Die Ansicht Ablesungshistorie zeigt detaillierte Diagramme der gesammelten Messdaten.",
+          "Daten können täglich, wöchentlich oder monatlich angezeigt werden.",
+          "Diagramme sind für Lufttemperatur, Luftfeuchtigkeit, Lichtniveau und Bodenfeuchtigkeit verfügbar (abhängig vom Gerät)."
+        ]
+      },
+      {
+        "heading": "FAB-Menü",
+        "body": [
+          "Der FAB-Button bietet Aktionen zur Geräteverwaltung.",
+          "Verfügbare Optionen sind: Gerät verbinden, Gerätekonfiguration, Sortieren und Filtern.",
+          "Das Sortieren kann nach Pflanzenname, Standort oder dem Zeitpunkt der letzten Ablesung erfolgen.",
+          "Das Filtern umfasst Pflanzenname, Standort und Gerätestatus (aktiv, inaktiv)."
+        ]
+      },
+      {
+        "heading": "Gerät verbinden",
+        "body": [
+          "Die Option Gerät verbinden dient zum Hinzufügen eines neuen Messgeräts und dessen Zuordnung zu einer Pflanze.",
+          "Bei der Konfiguration werden die auf der Kachel angezeigten Parameter sowie optionale Alarme (z. B. niedriger Bodenfeuchtigkeitsstand) ausgewählt.",
+          "Jedes Gerät erhält eine eindeutige Geräte-ID und einen geheimen Geräteschlüssel."
+        ]
+      },
+      {
+        "heading": "Geräteautorisierung und Datenfluss",
+        "body": [
+          "Geräte autorisieren sich mit der Geräte-ID und dem geheimen Schlüssel.",
+          "Für das Speichern von Ablesungen ist keine Benutzerautorisierung erforderlich – der Zugriff wird ausschließlich durch die Gerätedaten kontrolliert.",
+          "Dieser Ansatz vereinfacht die IoT-Integration und -Kommunikation."
+        ]
+      },
+      {
+        "heading": "Gerätekonfiguration und Dokumentation",
+        "body": [
+          "Die Option Gerätekonfiguration bietet technische Anweisungen zur Hardwareintegration.",
+          "Sie enthält Informationen zu API-Endpunkten (POST zum Senden von Ablesungen, GET zum Abrufen), Beispiel-Payloads und Einstellungen.",
+          "Der Benutzer kann die vollständige Dokumentation herunterladen, einschließlich Beispielcode, Verbindungsschemata (Fritzing) und empfohlene Sensoren."
+        ]
+      },
+      {
+        "heading": "Wichtige Informationen",
+        "body": [
+          "Die Stabilität des Geräts, die Kalibrierung der Sensoren und die physische Montage liegen in der Verantwortung des Benutzers.",
+          "Ablesungen von Sensoren dienen nur zu Informationszwecken und sollten zusammen mit der Beobachtung der Pflanzen interpretiert werden.",
+          "Flovers garantiert nicht die Genauigkeit von Daten, die von externen Geräten oder selbstgebauten Geräten stammen."
+        ]
+      }
+    ]
+  }
+}

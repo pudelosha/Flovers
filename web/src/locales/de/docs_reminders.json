@@ -1,0 +1,71 @@
+{
+  "docs_reminders": {
+    "title": "Erinnerungen",
+    "sections": [
+      {
+        "heading": "Zweck dieser Ansicht",
+        "body": [
+          "Die Erinnerungsansicht dient der Verwaltung von zyklischen Pflegeplänen für Pflanzen.",
+          "Eine Erinnerung legt fest, was erledigt werden muss (Aufgabentyp), wie oft sie wiederholt wird (Intervall) und welcher Pflanze sie zugeordnet ist. Basierend darauf generiert Flovers automatisch Aufgaben im Zeitverlauf."
+        ]
+      },
+      {
+        "heading": "Zwei Ansichten: Erinnerungsübersicht und Kalender",
+        "body": [
+          "Dieser Bildschirm hat zwei Modi: die Erinnerungsübersicht und die Kalenderansicht.",
+          "Du kannst zwischen ihnen wechseln, indem du den Bildschirm nach links/rechts schiebst oder die Ansicht im FAB-Menü änderst.",
+          "Beide Ansichten zeigen die gleichen Daten an, jedoch auf unterschiedliche Weise – je nachdem, ob du schnell die Regeln durchsehen oder den Plan im Zeitverlauf ansehen möchtest."
+        ]
+      },
+      {
+        "heading": "Erinnerungsliste Ansicht",
+        "body": [
+          "In der Listenansicht stellt jede Kachel eine vom Benutzer erstellte Erinnerung dar.",
+          "Die Kachel zeigt den Aufgabentyp (Symbol und Name), den Pflanzennamen, den Standort (falls zugewiesen), die Häufigkeit und den nächsten Fälligkeitstermin an.",
+          "Dies ist der schnellste Weg, um alle aktiven zyklischen Regeln auf dem Konto zu überprüfen."
+        ]
+      },
+      {
+        "heading": "Aktionen auf der Erinnerungskachel (Bearbeiten / Löschen)",
+        "body": [
+          "Jede Erinnerung hat zwei Aktionen: Bearbeiten und Löschen.",
+          "Das Bearbeiten ermöglicht das Ändern von Erinnerungsparametern wie Intervall, Aufgabentyp, zugeordneter Pflanze und anderen Einstellungen (je nach Erinnerungstyp).",
+          "Das Löschen einer Erinnerung ist dauerhaft und verhindert, dass zukünftige Aufgaben basierend auf dieser Regel erstellt werden."
+        ]
+      },
+      {
+        "heading": "Kalenderansicht",
+        "body": [
+          "In der Kalenderansicht werden Erinnerungen als geplante Elemente an bestimmten Tagen angezeigt.",
+          "Um Details zu sehen, klicke auf einen Tag im Kalender – die geplanten Positionen für diesen Tag erscheinen unter dem Kalender.",
+          "Der Kalender verwendet Farbetiketten/Icons, um die Aufgabentypen für den jeweiligen Tag anzuzeigen und die Beurteilung der Aufgabenverteilung zu erleichtern."
+        ]
+      },
+      {
+        "heading": "FAB-Menü",
+        "body": [
+          "Die FAB-Schaltfläche bietet schnelle Aktionen im Zusammenhang mit Erinnerungen und dem Wechsel der Ansicht.",
+          "Verfügbare Optionen sind: Erinnerung hinzufügen, Ansichtswechsel (Liste/Kalender), Sortieren und Filtern.",
+          "Das Sortieren kann nach Fälligkeitsdatum, Pflanzenname oder Standort erfolgen.",
+          "Das Filtern kann folgende Kriterien umfassen: Pflanzenname, Standort, Aufgabentyp und Datumsbereich (Fälligkeitsdatum)."
+        ]
+      },
+      {
+        "heading": "Wie Erinnerungen Aufgaben generieren (allgemeine Logik)",
+        "body": [
+          "Eine Erinnerung ist eine zyklische Regel (z. B. Gießen alle 7 Tage).",
+          "Basierend auf den Erinnerungen generiert Flovers Aufgaben und zeigt sie auf dem Home-Bildschirm als auszuführende Elemente an.",
+          "Nach Abschluss einer Aufgabe wird die nächste gemäß dem Erinnerungsintervall geplant (damit wird die Routine automatisch fortgesetzt)."
+        ]
+      },
+      {
+        "heading": "Hinweise und praktische Tipps",
+        "body": [
+          "Erinnerungen helfen, die Regelmäßigkeit aufrechtzuerhalten, garantieren jedoch nicht die Gesundheit der Pflanzen – tatsächliche Bedingungen können Anpassungen der Intervalle erfordern.",
+          "Wenn sich die Bedingungen ändern (Jahreszeit, Licht, Substrat, Topfgröße), erwäge eine Aktualisierung der Erinnerungen.",
+          "Wenn du abgeschlossene Aufgaben und Notizen verwalten möchtest, verwende die Ansicht „Aufgabenverlauf“ (die separat beschrieben wird)."
+        ]
+      }
+    ]
+  }
+}

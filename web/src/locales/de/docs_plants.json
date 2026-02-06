@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Pflanzen",
+    "sections": [
+      {
+        "heading": "Ziel dieser Ansicht",
+        "body": [
+          "Die Pflanzenansicht zeigt alle Pflanzeninstanzen an, die in deinem Konto erstellt wurden.",
+          "Jede Kachel stellt eine Pflanze (dein Exemplar) dar. Von der Kachel aus kannst du zu den Pflanzendetails wechseln oder die Schnellzugriffsmenüoptionen über das Drei-Punkte-Menü verwenden (z. B. Erinnerungen, Tagebuch, QR-Code)."
+        ]
+      },
+      {
+        "heading": "Pflanzenkacheln (Liste)",
+        "body": [
+          "Die Pflanzenkachel zeigt den Namen der Pflanze sowie (falls verfügbar) den Namen der zugehörigen Pflanzendefinition (Art) und den zugewiesenen Standort.",
+          "Das Tippen auf den Inhalt der Kachel (außerhalb des Drei-Punkte-Menüs) führt zu den Pflanzendetails."
+        ]
+      },
+      {
+        "heading": "Drei-Punkte-Menü (Pflanzenaktionen)",
+        "body": [
+          "Jede Kachel hat ein Drei-Punkte-Menü mit Aktionen für die ausgewählte Pflanze:",
+          "Pflanze bearbeiten: öffnet die Bearbeitung der Pflanzendaten und -parameter.",
+          "Erinnerungen anzeigen: geht zur Erinnerungsansicht mit einem Filter, der auf Erinnerungen eingestellt ist, die mit der ausgewählten Pflanze verbunden sind.",
+          "Pflanzenjournal anzeigen: öffnet ein Modal mit der Historie abgeschlossener Aufgaben (einschließlich Benutzernotizen). Notizen sind sichtbar und werden nicht ausgeblendet.",
+          "QR-Code anzeigen: öffnet ein Modal mit dem QR-Code der Pflanze, einer kurzen Beschreibung und Optionen zum Speichern (Herunterladen) oder Senden des Codes an die eigene E-Mail-Adresse.",
+          "Pflanze löschen: entfernt die Pflanze dauerhaft sowie alle zugehörigen Daten wie Aufgaben, Erinnerungen und Verbindungen zu Geräten."
+        ]
+      },
+      {
+        "heading": "FAB-Schaltflächenmenü",
+        "body": [
+          "Die FAB im Pflanzenbereich bietet schnelle Aktionen:",
+          "Pflanze erstellen: startet den Pflanzen-Erstellungsassistenten (9-Schritte-Prozess), bei dem die Pflanze präzise definiert werden kann.",
+          "Sortieren: sortiert die Pflanzenkacheln nach Pflanzenname oder Standort.",
+          "Filtern: filtert die Liste nach Standort.",
+          "Standorte: geht zur Standortansicht, in der Standorte hinzugefügt, bearbeitet und verwaltet werden können, die für das Gruppieren und Filtern verwendet werden."
+        ]
+      },
+      {
+        "heading": "Pflanze löschen (wichtige Informationen)",
+        "body": [
+          "Das Löschen einer Pflanze ist ein permanenter Vorgang und kann nicht rückgängig gemacht werden.",
+          "Das Löschen einer Pflanze entfernt die Pflanzeninstanz sowie zugehörige Daten wie generierte Aufgaben, an diese Pflanze zugewiesene Erinnerungen und Links zu Geräten."
+        ]
+      },
+      {
+        "heading": "Wenn keine Pflanzen angezeigt werden",
+        "body": [
+          "Wenn die Liste leer ist, verwende die Aktion 'Pflanze erstellen' im FAB-Menü, um die erste Pflanzeninstanz hinzuzufügen.",
+          "Nach dem Hinzufügen von Pflanzen kannst du sie nach Standorten gruppieren und Pflege-Routinen über Erinnerungen verwalten."
+        ]
+      }
+    ]
+  }
+}

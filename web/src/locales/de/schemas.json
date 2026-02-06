@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "Kopieren",
+    "copied": "Kopiert"
+  },
+  "title": "Geräteschemas und Verkabelung",
+  "lead": "Diese Seite beschreibt, wie man IoT-Sensordaten an Flovers sendet. Hier findest du Endpunkte, die Payload-Struktur und Beispielcode für Arduino mit ESP32/ESP8266 für gängige Sensoren. Es gibt auch einen Platzhalter für das Verkabelungsbild (Fritzing), das später ersetzt wird.",
+  "endpoints": {
+    "title": "API-Endpunkte",
+    "note": "Die Endpunkte sind beispielhaft. Ersetze sie durch die Produktionsadresse des Backends, wenn du das Gerät anschließt.",
+    "ingest": {
+      "label": "Datenaufnahme (POST)",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "Abrufen von Messwerten (GET/POST)",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "POST-Datenaufnahme-Dokumentation",
+    "desc": "Sende eine Messwertprobe als JSON. Das Backend überprüft den device_key + secret und speichert die Metriken unter dem Gerät.",
+    "schemaLabel": "Payload-Struktur (JSON)",
+    "psLabel": "PowerShell-Beispiel (POST)"
+  },
+  "read": {
+    "title": "GET / Lese-Dokumentation",
+    "desc": "Lade Messwerte für ein Gerät im angegebenen Zeitraum. Wenn das Backend POST-Anfragen unterstützt, kannst du den JSON-Body statt der URL-Parameter senden.",
+    "exampleLabel": "Beispiele (GET + optionales POST)"
+  },
+  "arduino": {
+    "title": "Arduino (ESP32/ESP8266) — Beispielcode",
+    "desc": "Referenzimplementierung: verbindet sich mit Wi-Fi, liest Sensoren und sendet JSON-POST an den ingest-Endpunkt in festgelegten Intervallen. Kalibriere die Feuchtigkeitssensorwerte (nass/trocken), damit die Prozentsätze sinnvoll sind.",
+    "codeLabel": "Arduino-Beispiel (Wi-Fi + POST ingest)",
+    "note": "Wenn du korrekte Zeitstempel benötigst, füge die NTP-Zeitsynchronisation (configTime) hinzu und generiere ISO-8601 UTC auf dem Gerät.",
+    "sensors": {
+      "bh1750": "BH1750 (GY-302) — Lichtstärke über I2C",
+      "moisture": "Kapazitiver Bodenfeuchtigkeitssensor — analoger Messwert (erfordert Kalibrierung nass/trocken)",
+      "bme280": "BME280 — Temperatur und Luftfeuchtigkeit über I2C (optional auch Druck)"
+    }
+  },
+  "wiring": {
+    "title": "Verkabelungsschema",
+    "desc": "Füge später hier das Bild aus Fritzing hinzu. Dieser Platzhalter stabilisiert das Layout der Seite, bis das Schema fertig ist.",
+    "aria": "Platzhalter für Verkabelungsschema",
+    "placeholderTitle": "Fritzing-Platzhalter",
+    "placeholderSub": "Ersetze diesen Block durch ein Bild, wenn du das Schema exportierst."
+  }
+}

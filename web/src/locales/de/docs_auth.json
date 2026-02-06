@@ -1,0 +1,56 @@
+{
+  "docs_auth": {
+    "title": "Anmeldung und Registrierung",
+    "sections": [
+      {
+        "heading": "Erstellen eines neuen Kontos (Registrierung)",
+        "body": [
+          "Um Flovers zu nutzen, muss ein individuelles Benutzerkonto erstellt werden. Die Registrierung erfolgt direkt in der mobilen App.",
+          "Für die Registrierung ist lediglich eine E-Mail-Adresse und ein Passwort erforderlich. Zu diesem Zeitpunkt sind keine zusätzlichen persönlichen Daten notwendig.",
+          "Das Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl sowie ein Sonderzeichen enthalten, um ein grundlegendes Sicherheitsniveau zu gewährleisten.",
+          "Vor Abschluss der Registrierung muss der Benutzer die Nutzungsbedingungen und die Datenschutzrichtlinie akzeptieren."
+        ]
+      },
+      {
+        "heading": "Aktivierung des Kontos per E-Mail",
+        "body": [
+          "Nach dem Absenden des Registrierungsformulars wird eine Aktivierungs-E-Mail an die angegebene Adresse gesendet.",
+          "Um das Konto zu aktivieren, muss der Bestätigungslink in der erhaltenen Nachricht angeklickt werden.",
+          "Bis zur Aktivierung des Kontos ist das Anmelden in der App nicht möglich."
+        ]
+      },
+      {
+        "heading": "Erneutes Senden der Aktivierungs-E-Mail",
+        "body": [
+          "Falls die Aktivierungs-E-Mail nicht angekommen ist, kann der Benutzer deren erneutes Senden über die App anfordern.",
+          "Diese Option ist auf dem Anmelde- oder Registrierungsbildschirm verfügbar und kann verwendet werden, wenn die Nachricht verloren gegangen, verzögert oder im Spam-Ordner gelandet ist.",
+          "Es ist ratsam, vor dem erneuten Senden den Spam-Ordner oder andere E-Mail-Filter zu überprüfen."
+        ]
+      },
+      {
+        "heading": "Anmeldung in ein bestehendes Konto",
+        "body": [
+          "Für die Anmeldung ist nur die E-Mail-Adresse und das zum Konto gehörende Passwort erforderlich.",
+          "Falls das Konto noch nicht aktiviert wurde, informiert die App darüber, dass die E-Mail-Adresse bestätigt werden muss.",
+          "Die Anmeldedaten werden sicher serverseitig überprüft; Passwörter werden nicht im Klartext gespeichert."
+        ]
+      },
+      {
+        "heading": "Zurücksetzen des vergessenen Passworts",
+        "body": [
+          "Falls der Benutzer sich aufgrund eines vergessenen Passworts nicht anmelden kann, kann er eine E-Mail zum Zurücksetzen des Passworts anfordern.",
+          "Die Nachricht enthält Anweisungen sowie einen sicheren Link, mit dem ein neues Passwort festgelegt werden kann.",
+          "Nach dem Festlegen des neuen Passworts ist eine sofortige Anmeldung in der App möglich."
+        ]
+      },
+      {
+        "heading": "Sicherheitsmaßnahmen",
+        "body": [
+          "Jedes Benutzerkonto ist durch ein individuelles Passwort geschützt, das bei der Registrierung festgelegt wird.",
+          "Aus Sicherheitsgründen sollten Anmeldedaten nicht an Dritte weitergegeben werden.",
+          "Bei Verdacht auf unbefugten Zugriff auf das Konto wird empfohlen, das Passwort unverzüglich zu ändern."
+        ]
+      }
+    ]
+  }
+}
