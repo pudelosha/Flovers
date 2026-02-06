@@ -1,0 +1,77 @@
+{
+  "docs_home": {
+    "title": "Accueil",
+    "sections": [
+      {
+        "heading": "Objectif de la vue Accueil",
+        "body": [
+          "Accueil est l'écran principal visible après une connexion réussie.",
+          "Il se concentre sur les actions quotidiennes : il affiche les Tâches générées à partir des Rappels, permettant ainsi de voir rapidement ce qui nécessite une attention aujourd'hui ou ce qui est déjà en retard.",
+          "S'il n'y a aucune tâche à effectuer, un carreau informatif est affiché avec un message indiquant l'absence de tâches planifiées et des suggestions d'étapes suivantes, par exemple la création de rappels."
+        ]
+      },
+      {
+        "heading": "Liste des tâches (carreaux générés à partir des rappels)",
+        "body": [
+          "Chaque carreau représente une tâche individuelle générée à partir de la définition d'un Rappel (par exemple, Arrosage, Pulvérisation, Fertilisation, Rempotage ou Entretien).",
+          "Les tâches apparaissent automatiquement lorsqu'elles deviennent nécessaires selon les règles de périodicité définies dans le Rappel.",
+          "Le carreau contient généralement le type de tâche, le nom de la plante, la localisation et le statut de la date limite (par exemple, Pour aujourd'hui ou En retard)."
+        ]
+      },
+      {
+        "heading": "Menu du carreau de tâche (actions pour une tâche individuelle)",
+        "body": [
+          "Chaque tâche possède un menu contextuel (menu avec trois points) contenant des actions liées à cette tâche spécifique.",
+          "Marquer comme terminé : ferme la tâche et permet éventuellement d'ajouter une note, ce qui aide à construire l'historique des soins.",
+          "Modifier le rappel : ouvre le Rappel lié à la tâche pour modifier les paramètres de périodicité.",
+          "Aller à la plante : vous mène à la vue Détails de la plante assignée à la tâche.",
+          "Afficher l'historique : ouvre l'historique des tâches montrant les tâches précédemment effectuées pour la même plante ou le même rappel."
+        ]
+      },
+      {
+        "heading": "Bouton FAB (actions rapides)",
+        "body": [
+          "L'écran Accueil dispose d'un bouton FAB qui déploie un ensemble d'actions rapides pour travailler avec les tâches.",
+          "Afficher les en retard : applique un filtre rapide affichant uniquement les tâches en retard.",
+          "Afficher pour aujourd'hui : applique un filtre rapide affichant les tâches planifiées pour aujourd'hui.",
+          "Trier : change l'ordre d'affichage des tâches dans la liste.",
+          "Filtrer : affine la liste des tâches selon les critères choisis.",
+          "Historique : vous mène à la vue Historique des tâches, qui est documentée séparément."
+        ]
+      },
+      {
+        "heading": "Options de tri",
+        "body": [
+          "Le tri permet d'adapter la liste des tâches à votre manière de travailler.",
+          "Les options de tri disponibles sont : Date d'exécution (date limite), Nom de la plante et Localisation."
+        ]
+      },
+      {
+        "heading": "Options de filtrage",
+        "body": [
+          "Les filtres aident à se concentrer sur un groupe spécifique de tâches.",
+          "Les tâches peuvent être filtrées par : Nom de la plante, Localisation, Type de tâche et Plage de dates d'exécution.",
+          "Les filtres peuvent être combinés, par exemple pour afficher uniquement les tâches d'Arrosage pour des plantes dans une localisation donnée."
+        ]
+      },
+      {
+        "heading": "Fermeture groupée des tâches (en masse)",
+        "body": [
+          "La fermeture groupée des tâches est disponible lors de l'utilisation des vues de raccourci : Afficher les en retard ou Afficher pour aujourd'hui.",
+          "Lorsque l'un de ces filtres est actif, le bouton FAB affiche temporairement une action supplémentaire, telle que « Marquer les visibles comme terminées ».",
+          "Cette action ferme toutes les tâches actuellement visibles en une seule fois, sans avoir besoin de marquer manuellement chaque carreau.",
+          "La fermeture groupée a été conçue pour les situations où vous effectuez la même tâche de soins pour plusieurs plantes en même temps.",
+          "En fonction du flux choisi, il peut être possible d'ajouter des notes aux tâches fermées après l'exécution de l'action groupée."
+        ]
+      },
+      {
+        "heading": "Navigation depuis l'écran Accueil",
+        "body": [
+          "L'écran Accueil permet de passer rapidement à d'autres parties de l'application via des actions sur les carreaux et des raccourcis FAB.",
+          "Depuis une tâche individuelle, vous pouvez passer directement aux Détails de la plante ou à l'historique des tâches.",
+          "Depuis FAB, vous pouvez ouvrir l'Historique des tâches ou affiner la liste des tâches en utilisant le tri et les filtres."
+        ]
+      }
+    ]
+  }
+}

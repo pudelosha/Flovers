@@ -1,0 +1,56 @@
+{
+  "docs_auth": {
+    "title": "Connexion et inscription",
+    "sections": [
+      {
+        "heading": "Créer un nouveau compte (Inscription)",
+        "body": [
+          "Pour utiliser Flovers, vous devez créer un compte utilisateur individuel. L'inscription se fait directement dans l'application mobile.",
+          "Lors de l'inscription, seule l'adresse e-mail et le mot de passe sont requis. Aucune donnée personnelle supplémentaire n'est nécessaire à ce stade.",
+          "Le mot de passe doit comporter au moins 8 caractères et inclure au moins un chiffre et un caractère spécial pour assurer un niveau de sécurité de base.",
+          "Avant de terminer l'inscription, l'utilisateur doit accepter les Conditions Générales et la Politique de Confidentialité."
+        ]
+      },
+      {
+        "heading": "Activation du compte par e-mail",
+        "body": [
+          "Après l'envoi du formulaire d'inscription, un e-mail d'activation est envoyé à l'adresse e-mail fournie.",
+          "Pour activer le compte, cliquez sur le lien de confirmation contenu dans l'e-mail reçu.",
+          "Jusqu'à l'activation du compte, il n'est pas possible de se connecter à l'application."
+        ]
+      },
+      {
+        "heading": "Renvoi de l'e-mail d'activation",
+        "body": [
+          "Si l'e-mail d'activation n'est pas arrivé, l'utilisateur peut demander son renvoi depuis l'application.",
+          "Cette option est disponible sur l'écran de connexion ou d'inscription et peut être utilisée si le message a été perdu, retardé ou est arrivé dans les spams.",
+          "Avant de redemander l'envoi, il est recommandé de vérifier le dossier spam ou d'autres filtres de messagerie."
+        ]
+      },
+      {
+        "heading": "Connexion à un compte existant",
+        "body": [
+          "Pour se connecter, seule l'adresse e-mail et le mot de passe associé au compte sont nécessaires.",
+          "Si le compte n'a pas encore été activé, l'application informera qu'il est nécessaire de confirmer l'adresse e-mail.",
+          "Les informations de connexion sont vérifiées en toute sécurité côté serveur ; les mots de passe ne sont pas stockés en texte clair."
+        ]
+      },
+      {
+        "heading": "Réinitialisation du mot de passe oublié",
+        "body": [
+          "Si l'utilisateur ne peut pas se connecter en raison d'un mot de passe oublié, il peut demander l'envoi d'un e-mail pour réinitialiser le mot de passe.",
+          "Le message contient des instructions ainsi qu'un lien sécurisé permettant de définir un nouveau mot de passe.",
+          "Après avoir défini un nouveau mot de passe, il est possible de se connecter immédiatement à l'application."
+        ]
+      },
+      {
+        "heading": "Consignes de sécurité",
+        "body": [
+          "Chaque compte utilisateur est protégé par un mot de passe individuel défini lors de l'inscription.",
+          "Pour des raisons de sécurité, il est recommandé de ne pas partager les informations de connexion avec des tiers.",
+          "En cas de soupçon d'accès non autorisé au compte, il est recommandé de changer immédiatement le mot de passe."
+        ]
+      }
+    ]
+  }
+}

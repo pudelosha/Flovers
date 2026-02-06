@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Profil",
+    "sections": [
+      {
+        "heading": "Objectif de cette vue",
+        "body": [
+          "La vue Profil est l'endroit central pour gérer les données du compte, les paramètres de notification, la configuration de l'application et le support.",
+          "Elle permet à l'utilisateur de contrôler à la fois ses données personnelles et le comportement de l'application Flovers."
+        ]
+      },
+      {
+        "heading": "Compte",
+        "body": [
+          "La section Compte affiche les informations de base du compte, telles que l'adresse e-mail et la date de création du compte.",
+          "De cet endroit, l'utilisateur peut modifier son adresse e-mail (la confirmation par mot de passe est requise), changer son mot de passe actuel, se déconnecter ou supprimer définitivement le compte.",
+          "La suppression du compte entraîne la suppression irréversible de toutes les données de l'utilisateur, y compris les plantes, les rappels, les tâches, les lectures et les appareils."
+        ]
+      },
+      {
+        "heading": "Notifications",
+        "body": [
+          "La section Notifications permet de gérer les autorisations et les préférences pour les notifications par e-mail et push.",
+          "Pour les deux canaux, l'utilisateur peut activer ou désactiver deux types de notifications : un résumé quotidien des tâches planifiées pour aujourd'hui et un rappel envoyé 24 heures plus tard si les tâches n'ont toujours pas été effectuées.",
+          "Pour chaque type de notification, l'utilisateur définit l'heure d'envoi (heure pleine, par exemple 14h00)."
+        ]
+      },
+      {
+        "heading": "Paramètres",
+        "body": [
+          "La section Paramètres permet de contrôler le comportement général et l'apparence de l'application.",
+          "Les options disponibles incluent le choix de la langue, le format de la date et de l'heure, les unités de température (Celsius, Fahrenheit, Kelvin), les unités de mesure (métriques ou impériales) et la position du bouton FAB (côté gauche ou droit).",
+          "L'utilisateur peut également personnaliser l'apparence de l'application en choisissant une image de fond, un thème de tuiles (clair ou sombre) et le niveau de transparence des tuiles."
+        ]
+      },
+      {
+        "heading": "Support",
+        "body": [
+          "La section Support permet de contacter directement l'équipe Flovers.",
+          "L'utilisateur peut signaler un problème ou envoyer une demande à l'équipe de support technique.",
+          "Signaler des erreurs aide à améliorer le développement et la qualité de l'application."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "docs_readings_history": {
+    "title": "Historique des lectures",
+    "sections": [
+      {
+        "heading": "Objectif de cette vue",
+        "body": [
+          "La vue Historique des lectures offre une vue complète des données de mesure passées pour l'appareil et la plante associés.",
+          "Contrairement à la liste des lectures (où seules les dernières valeurs sont visibles), cette vue est utilisée pour analyser les tendances et les changements dans le temps sur les graphiques."
+        ]
+      },
+      {
+        "heading": "Plages de temps : Jour, Semaine, Mois",
+        "body": [
+          "L'utilisateur peut basculer entre trois plages : Jour, Semaine et Mois.",
+          "La vue Jour présente les lectures pour une journée entière dans un intervalle horaire (en supposant que l'appareil envoie des données toutes les heures et que l'utilisateur accepte une plus grande consommation de batterie de l'appareil).",
+          "Les vues Semaine et Mois montrent les données sur une période plus longue, facilitant ainsi la détection des tendances."
+        ]
+      },
+      {
+        "heading": "Choix du paramètre de mesure",
+        "body": [
+          "Les graphiques sont disponibles pour les paramètres suivants : température de l'air, humidité de l'air, niveau de lumière et humidité du sol (selon ce que mesure l'appareil).",
+          "Le paramètre est sélectionné à l'aide des boutons sous le graphique (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Navigation dans les périodes précédentes",
+        "body": [
+          "Les flèches à côté de la période sélectionnée permettent de naviguer entre les jours, semaines ou mois précédents.",
+          "La navigation est disponible uniquement pour les périodes pour lesquelles des données existent — les périodes futures ne sont pas affichées."
+        ]
+      },
+      {
+        "heading": "Disponibilité des données et interprétation",
+        "body": [
+          "Si l'appareil n'a pas fourni de lectures pour la période sélectionnée, le graphique sera vide ou pourra contenir des lacunes dans les données.",
+          "Les données des capteurs sont à titre informatif et doivent être interprétées en tenant compte de l'observation des plantes ainsi que de l'impact de la calibration, du placement des capteurs et des conditions environnementales."
+        ]
+      }
+    ]
+  }
+}

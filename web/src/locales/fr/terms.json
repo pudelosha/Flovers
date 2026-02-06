@@ -1,0 +1,144 @@
+{
+  "terms": {
+    "title": "Règlement",
+    "lastUpdated": "Dernière mise à jour : {{date}}",
+    "section1": {
+      "title": "§ 1. Dispositions générales",
+      "p1": "Le présent Règlement définit les règles d'utilisation du service en ligne Flovers ainsi que de l'application mobile Flovers (Android, et à l'avenir iOS), ainsi que les conditions de prestation des services par voie électronique par le Fournisseur de services.",
+      "p2": "Le Fournisseur de services est Marcin Janowski Copy Paste IT Solutions, ul. płk. Francesco Nullo 30/115, 31-543 Cracovie, Pologne, e-mail : info@flovers.app (ci-après : « Fournisseur de services »).",
+      "p3": "En utilisant le Service (y compris en créant un Compte, en se connectant, en utilisant les fonctions de l'application ou du service), l'Utilisateur accepte le Règlement et s'engage à le respecter.",
+      "p4": "Dans les cas non régis par le Règlement, les dispositions suivantes s'appliquent notamment : la loi sur la prestation de services électroniques, le Code civil, la loi sur les droits des consommateurs, ainsi que d'autres dispositions pertinentes du droit polonais et du droit de l'UE."
+    },
+    "section2": {
+      "title": "§ 2. Définitions",
+      "items": [
+        "« Service » – services fournis par voie électronique par le Fournisseur de services dans le cadre de Flovers, comprenant l'application mobile, le site web et l'infrastructure backend associée.",
+        "« Application » – application mobile Flovers disponible pour les appareils mobiles (Android ; à l'avenir iOS).",
+        "« Service » – site web Flovers avec sa documentation et informations.",
+        "« Utilisateur » – personne utilisant le Service ; en cas d'enregistrement – personne ayant créé un Compte.",
+        "« Compte » – profil individuel de l'Utilisateur dans le système du Fournisseur de services, protégé par mot de passe.",
+        "« Appareil » – appareil utilisé par l'Utilisateur pour utiliser le Service (par exemple, téléphone, tablette) et – si applicable – appareil de mesure (par exemple, Arduino) envoyant des lectures au Service.",
+        "« Définition de la plante » – fiche/record de la plante élaborée par le Fournisseur de services contenant, entre autres, les caractéristiques, préférences et recommandations (par exemple, arrosage, brumisation, fertilisation), pouvant inclure des éléments générés automatiquement (par exemple, contenus IA).",
+        "« Instance de plante » – plante définie par l'Utilisateur dans son Compte (son propre exemplaire), pouvant être liée à une Définition de la plante.",
+        "« Lectures / Données de mesure » – données provenant des capteurs (par exemple, température de l'air, humidité de l'air, humidité du sol, niveau de lumière) associées à l'Instance de la plante.",
+        "« Rappel » – définition d'une tâche récurrente (par exemple, arrosage, brumisation, rempotage, entretien, fertilisation), à partir de laquelle des Tâches sont créées.",
+        "« Tâche » – élément d'une liste d'actions à accomplir créé à partir d'un Rappel ; l'Utilisateur peut marquer la tâche comme effectuée et ajouter des notes.",
+        "« Contenus de l'Utilisateur » – données que l'Utilisateur saisit ou conserve dans le Service (par exemple, Instances de plantes, notes, historique des tâches, journal de la plante, liens avec des appareils, données de mesure).",
+        "« Reconnaissance des plantes » – fonctionnalité consistant à analyser une photo fournie par l'Utilisateur et à retourner un résultat de reconnaissance par le système du Fournisseur de services.",
+        "« Règlement » – les présentes conditions d'utilisation de Flovers."
+      ]
+    },
+    "section3": {
+      "title": "§ 3. Étendue du Service et fonctionnalités",
+      "intro": "Le Service peut inclure, entre autres :",
+      "list": [
+        "enregistrement et gestion du Compte (connexion, confirmation par e-mail, réinitialisation du mot de passe, renvoi du lien d'activation)",
+        "bibliothèque de Définitions des plantes et conseils associés",
+        "création d'Instances de plantes et gestion du journal/historique (notes, historique des tâches)",
+        "Rappels et Tâches relatives à l'entretien des plantes (par exemple, arrosage, brumisation, fertilisation, rempotage)",
+        "Reconnaissance des plantes à partir de photos envoyées par l'Utilisateur",
+        "intégration avec des appareils de mesure et enregistrement et présentation des Données de mesure",
+        "génération et numérisation de codes QR menant aux ressources de l'Utilisateur (par exemple, vers l'Instance de la plante)",
+        "documentation et section FAQ"
+      ],
+      "p1": "Le Service est actuellement disponible en version gratuite (bêta). Le Fournisseur de services peut, à l'avenir, introduire des plans payants, des restrictions pour le plan gratuit, des publicités ou des abonnements – ce dont les Utilisateurs seront informés dans le Service et/ou sur le Site.",
+      "p2": "Le Fournisseur de services peut modifier les fonctionnalités, l'interface et le fonctionnement du Service, y compris supprimer ou ajouter des fonctions, tant que cela ne viole pas les dispositions impératives du droit."
+    },
+    "section4": {
+      "title": "§ 4. Exigences techniques",
+      "items": [
+        "Appareil avec accès à Internet.",
+        "Navigateur web actuel (pour le Site) ou système Android compatible (pour l'Application).",
+        "Adresse e-mail active (pour l'enregistrement et la gestion du Compte).",
+        "Support JavaScript et cookies activé dans le navigateur (pour le Site), si nécessaire pour le bon fonctionnement."
+      ]
+    },
+    "section5": {
+      "title": "§ 5. Compte et sécurité",
+      "p1": "Pour utiliser la plupart des fonctionnalités du Service, la création d'un Compte est requise.",
+      "p2": "L'Utilisateur doit fournir des informations véridiques et maintenir la confidentialité de ses données de connexion.",
+      "p3": "L'Utilisateur est responsable des actions effectuées avec son Compte, sauf si elles résultent de causes imputables au Fournisseur de services.",
+      "p4": "Le Fournisseur de services peut temporairement bloquer l'accès au Compte ou au Service en cas de détection d'abus, de violations de sécurité ou de violations du Règlement."
+    },
+    "section6": {
+      "title": "§ 6. Contenus de l'Utilisateur et licence",
+      "p1": "L'Utilisateur conserve les droits sur ses Contenus de l'Utilisateur dans la mesure où ces droits lui sont attribués en vertu de la loi.",
+      "p2": "L'Utilisateur accorde au Fournisseur de services une licence non exclusive, gratuite, révocable (par la suppression du Compte ou des Contenus), transférable dans la mesure nécessaire à la fourniture du Service, pour stocker, conserver, reproduire, afficher et traiter les Contenus de l'Utilisateur uniquement dans le but de fournir et de maintenir le Service.",
+      "p3": "Dans le cadre de la Reconnaissance des plantes, l'Utilisateur peut soumettre une photo au système du Fournisseur de services. Le Fournisseur de services déclare que les photos utilisées pour la reconnaissance ne sont pas conservées plus longtemps que nécessaire pour accomplir le processus de reconnaissance, sauf si l'Utilisateur choisit explicitement une fonction nécessitant leur stockage.",
+      "p4": "L'Utilisateur déclare qu'il détient les droits sur les contenus qu'il soumet au Service et que ces contenus ne portent pas atteinte aux droits de tiers."
+    },
+    "section7": {
+      "title": "§ 7. Règles d'utilisation et interdictions",
+      "intro": "L'Utilisateur s'engage à utiliser le Service conformément à la loi, aux bonnes mœurs et dans le respect des droits d'autrui. Il est notamment interdit de :",
+      "list": [
+        "tenter de contourner l'authentification, les sécurités ou les restrictions techniques",
+        "abuser de l'API, des points de terminaison ou des mécanismes d'intégration (y compris ceux liés aux appareils de mesure) de manière à perturber le fonctionnement du Service",
+        "introduire dans le Service des contenus illégaux, offensants, portant atteinte à la vie privée, aux droits d'auteur ou aux droits de propriété intellectuelle",
+        "envoyer des spams ou des contenus promotionnels/masse via les fonctions de contact ou de support",
+        "agir de manière à accéder illégalement aux données d'autres Utilisateurs"
+      ],
+      "p1": "Le Fournisseur de services peut limiter l'accès au Service ou au Compte en cas de violations des règles susmentionnées."
+    },
+    "section8": {
+      "title": "§ 8. Codes QR, liens et « clés secrètes »",
+      "p1": "Le Service peut permettre la génération de codes QR ou de liens (par exemple, vers l'Instance de la plante). L'Utilisateur est responsable de leur stockage et de leur partage.",
+      "p2": "Si l'Utilisateur partage des liens, identifiants ou clés d'accès (par exemple, pour lire les données de mesure), ces personnes peuvent accéder aux informations indiquées conformément aux droits d'accès fournis. L'Utilisateur assume le risque associé à ce partage."
+    },
+    "section9": {
+      "title": "§ 9. Paiements et plans (information pour l'avenir)",
+      "p1": "Au moment de la publication de ce Règlement, le Service est fourni gratuitement en version bêta.",
+      "p2": "Le Fournisseur de services peut à l'avenir introduire des plans payants, des abonnements renouvelables, des publicités ou des limites (par exemple, le nombre de plantes). L'introduction des plans payants pourra se faire notamment via Google Play ou l'App Store.",
+      "p3": "Si des abonnements sont introduits, ils pourront être renouvelables automatiquement. Les conditions de paiement, de facturation et de remboursement éventuel pourront être régies par les règles du magasin (Google/Apple) ainsi que par les informations fournies dans le Service au moment de l'achat."
+    },
+    "section10": {
+      "title": "§ 10. Responsabilité et exclusions",
+      "p1": "Le Service est informatif et destiné à aider à l'entretien des plantes. Le Fournisseur de services ne garantit pas l'obtention de résultats spécifiques (par exemple, la croissance des plantes, l'évitement des maladies des plantes, l'évitement des erreurs de soin). Les décisions relatives à l'entretien des plantes sont prises par l'Utilisateur sous sa propre responsabilité.",
+      "p2": "Le Fournisseur de services fournit le Service en mode « tel quel » (selon ses meilleurs efforts). Il peut y avoir des interruptions techniques ou des limitations d'accès liées à la maintenance, au développement ou aux pannes.",
+      "p3": "Le Fournisseur de services n'est pas responsable des dommages résultant de : une mauvaise utilisation du Service, des données incorrectes fournies par l'Utilisateur, du mauvais fonctionnement des Appareils de mesure de l'Utilisateur, des interruptions d'accès à Internet ou d'autres circonstances indépendantes du Fournisseur de services, dans la mesure permise par la loi.",
+      "p4": "Les dispositions du présent paragraphe ne limitent ni n'excluent les droits du consommateur découlant des dispositions impératives du droit."
+    },
+    "section11": {
+      "title": "§ 11. Réclamations et contact",
+      "p1": "L'Utilisateur peut soumettre une réclamation concernant le Service par voie électronique à l'adresse : info@flovers.app.",
+      "p2": "La réclamation doit décrire le problème, indiquer la date et les circonstances de l'incident et, si possible, joindre des informations facilitant l'identification du problème (par exemple, des captures d'écran).",
+      "p3": "Le Fournisseur de services répondra sans délai injustifié, dans la mesure du possible, dans un délai de 14 jours."
+    },
+    "section12": {
+      "title": "§ 12. Résiliation du contrat, suppression du compte",
+      "p1": "L'Utilisateur peut supprimer son Compte à tout moment depuis l'Application, ce qui entraîne la suppression définitive du Compte et des données associées dans le système du Fournisseur de services (sans mode « caché »).",
+      "p2": "Le Fournisseur de services peut suspendre ou arrêter de fournir le Service à l'Utilisateur en cas de violation du Règlement, d'actions illégales ou d'actions mettant en danger la sécurité du Service.",
+      "p3": "Le Fournisseur de services peut cesser de fournir le Service (en totalité ou en partie) pour des raisons valables (par exemple, raisons techniques, juridiques), en informant les Utilisateurs à l'avance, dans la mesure du possible."
+    },
+    "section13": {
+      "title": "§ 13. Propriété intellectuelle",
+      "p1": "Le logiciel, l'apparence, les logos, le nom Flovers, la documentation et les contenus fournis par le Fournisseur de services dans le cadre du Service sont protégés par le droit, y compris le droit d'auteur, et appartiennent au Fournisseur de services ou aux entités autorisées.",
+      "p2": "Il est interdit de copier, modifier, distribuer ou utiliser des éléments du Service sans l'autorisation du Fournisseur de services, sauf dans le cadre de l'utilisation autorisée par la loi."
+    },
+    "section14": {
+      "title": "§ 14. Âge de l'Utilisateur",
+      "p1": "Le Service est destiné aux personnes ayant plus de 16 ans.",
+      "p2": "Si l'Utilisateur n'a pas atteint 16 ans, il ne doit pas créer de Compte ni utiliser le Service."
+    },
+    "section15": {
+      "title": "§ 15. Documents associés",
+      "intro": "Les documents et informations suivants sont liés au Service :",
+      "list": [
+        "Politique de confidentialité",
+        "Politique de cookies",
+        "Documentation et FAQ"
+      ]
+    },
+    "section16": {
+      "title": "§ 16. Droit applicable et résolution des litiges",
+      "p1": "Le Règlement est soumis au droit polonais, sous réserve des dispositions impératives relatives à la protection des consommateurs.",
+      "p2": "Les litiges doivent être résolus à l'amiable en priorité (par exemple, par e-mail et tentative de conciliation).",
+      "p3": "Le consommateur peut recourir à des méthodes extrajudiciaires de résolution des litiges et à la plateforme ODR (Online Dispute Resolution) disponible à l'adresse : https://ec.europa.eu/consumers/odr/.",
+      "p4": "La compétence du tribunal en cas de litiges avec des consommateurs est déterminée conformément aux règles du droit applicable."
+    },
+    "section17": {
+      "title": "§ 17. Modifications du Règlement",
+      "p1": "Le Fournisseur de services peut modifier le Règlement pour des raisons valables (par exemple, modifications légales, évolution du Service, changements technologiques).",
+      "p2": "Le Fournisseur de services informera les Utilisateurs des modifications du Règlement sur le Site et/ou dans l'Application. L'utilisation continue du Service après l'entrée en vigueur des modifications constitue l'acceptation du Règlement mis à jour."
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "docs_create_plant_wizard": {
+    "title": "Assistant de création de plante",
+    "sections": [
+      {
+        "heading": "Objectif de ce processus",
+        "body": [
+          "L'Assistant de création de plante est un processus guidé en 9 étapes qui permet de créer une nouvelle instance de plante sur votre compte.",
+          "Il aide (facultatif) à lier la plante à une définition de plante de la base Flovers, à collecter des informations contextuelles (localisation, exposition) et, facultativement, à générer des rappels en fonction des préférences de soins.",
+          "L'Assistant est uniquement destiné à la création de nouvelles plantes. La modification d'une plante existante se fait dans une autre vue/processus."
+        ]
+      },
+      {
+        "heading": "Étape 01 — Sélection de la définition de la plante (facultatif)",
+        "body": [
+          "Vous pouvez rechercher une définition de plante (profil d'espèce intégré) à l'aide du champ de recherche.",
+          "Sous le champ, il y a une liste de plantes d'intérieur populaires, qui sert de raccourci.",
+          "Vous pouvez également utiliser la reconnaissance de plantes : lancez le scan, prenez une photo ou sélectionnez-la dans la galerie, et le système renverra les 3 résultats les plus correspondants.",
+          "Si vous acceptez la suggestion, la définition de la plante choisie sera appliquée à la plante en cours de création."
+        ]
+      },
+      {
+        "heading": "Étape 02 — Aperçu de la définition",
+        "body": [
+          "Si une définition de plante a été sélectionnée, les détails de celle-ci s'affichent à cette étape : image, caractéristiques de base et préférences.",
+          "C'est une étape de vérification permettant de confirmer le bon profil avant de continuer."
+        ]
+      },
+      {
+        "heading": "Étape 03 — Sélection de la localisation (obligatoire)",
+        "body": [
+          "Choisissez la localisation où se trouve la plante (par exemple, Cuisine, Salon, Balcon).",
+          "À cette étape, vous pouvez également ajouter une nouvelle localisation.",
+          "La sélection de la localisation est actuellement requise pour passer aux étapes suivantes."
+        ]
+      },
+      {
+        "heading": "Étape 04 — Exposition (mesures facultatives)",
+        "body": [
+          "Cette étape permet d'enregistrer les informations sur l'exposition : direction, niveau de lumière et distance par rapport à la fenêtre.",
+          "La direction peut être mesurée à l'aide de la boussole du téléphone si l'application dispose des autorisations nécessaires pour la boussole/capteurs.",
+          "Le niveau de lumière peut être mesuré si l'appareil dispose du capteur approprié et si les autorisations nécessaires sont accordées.",
+          "Les valeurs d'exposition sont facultatives — vous pouvez les compléter manuellement ou les ignorer."
+        ]
+      },
+      {
+        "heading": "Étape 05 — Pot et substrat (facultatif)",
+        "body": [
+          "Indiquez le type de contenant/pot (par exemple, plastique, céramique) et le type de substrat.",
+          "Ces champs sont facultatifs, mais peuvent aider à mieux ajuster les intervalles suggérés lorsque les tâches automatiques sont activées."
+        ]
+      },
+      {
+        "heading": "Étape 06 — Tâches automatiques (facultatif, avec une définition de plante)",
+        "body": [
+          "Si la plante est liée à une définition de plante, Flovers peut automatiquement créer des rappels/tâches en fonction des préférences de la base.",
+          "Cochez la case principale pour activer la génération automatique, puis sélectionnez les types de tâches à créer (par exemple, arrosage, pulvérisation, fertilisation, rempotage, entretien).",
+          "Les intervalles suggérés sont basés sur la définition de la plante et peuvent être ajustés en fonction de l'exposition et du pot/substrat si ces données sont disponibles.",
+          "Vous pouvez ignorer cette étape et créer les rappels manuellement plus tard."
+        ]
+      },
+      {
+        "heading": "Étape 07 — Ajouter votre propre photo (facultatif)",
+        "body": [
+          "Vous pouvez ajouter votre propre photo de la plante depuis votre téléphone.",
+          "Cette étape est facultative et peut également être possible plus tard en fonction de votre flux dans l'application."
+        ]
+      },
+      {
+        "heading": "Étape 08 — Informations finales (nom requis)",
+        "body": [
+          "Définissez le nom affiché de la plante (obligatoire).",
+          "Ajoutez facultativement des notes et la date d'achat.",
+          "Ces informations sont visibles dans les détails de la plante et aident à tenir un historique lisible des soins."
+        ]
+      },
+      {
+        "heading": "Étape 09 — Résumé et confirmation",
+        "body": [
+          "Après avoir ajouté correctement la plante, l'assistant affiche l'écran de confirmation/résumé.",
+          "À partir de cet écran, vous pouvez accéder à la liste des plantes ou ouvrir la plante nouvellement créée — en fonction de la navigation dans l'application."
+        ]
+      },
+      {
+        "heading": "Notes et autorisations",
+        "body": [
+          "La reconnaissance des plantes nécessite l'accès à l'appareil photo et/ou à la galerie, en fonction de la manière dont la photo est fournie.",
+          "Les mesures d'exposition peuvent nécessiter des autorisations pour les capteurs (par exemple, boussole) et dépendent de la disponibilité du matériel dans l'appareil.",
+          "L'association avec la définition de la plante est facultative — vous pouvez ignorer cette étape et toujours créer la plante, puis ajouter des rappels manuellement."
+        ]
+      }
+    ]
+  }
+}

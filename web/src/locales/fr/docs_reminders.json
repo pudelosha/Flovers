@@ -1,0 +1,71 @@
+{
+  "docs_reminders": {
+    "title": "Rappels",
+    "sections": [
+      {
+        "heading": "Objectif de cette vue",
+        "body": [
+          "La vue Rappels est utilisée pour gérer les calendriers cycliques de soin des plantes.",
+          "Un rappel définit ce qui doit être fait (type de tâche), à quelle fréquence il doit se répéter (intervalle) et à quelle plante il est associé. Sur cette base, Flovers génère automatiquement les tâches au fil du temps."
+        ]
+      },
+      {
+        "heading": "Deux vues : liste des rappels et calendrier",
+        "body": [
+          "Cet écran dispose de deux modes : la liste des rappels et la vue du calendrier.",
+          "Vous pouvez basculer entre les deux en glissant l'écran à gauche/droite ou en choisissant de changer de vue depuis le menu FAB.",
+          "Les deux vues présentent les mêmes données, mais de manière différente, en fonction de si vous souhaitez rapidement consulter les règles ou voir le planning dans le temps."
+        ]
+      },
+      {
+        "heading": "Vue de la liste des rappels",
+        "body": [
+          "Dans la vue de la liste, chaque tuile représente un rappel créé par l'utilisateur.",
+          "La tuile affiche le type de tâche (icône et nom), le nom de la plante, la localisation (si assignée), les informations sur la fréquence et la date limite de la prochaine exécution.",
+          "C'est le moyen le plus rapide pour consulter toutes les règles cycliques actives sur le compte."
+        ]
+      },
+      {
+        "heading": "Actions sur la tuile du rappel (Modifier / Supprimer)",
+        "body": [
+          "Chaque rappel dispose de deux actions : Modifier et Supprimer.",
+          "La modification permet de changer les paramètres du rappel, tels que l'intervalle, le type de tâche, la plante associée et d'autres paramètres (en fonction du type de rappel).",
+          "Supprimer un rappel est permanent et empêche la génération de tâches à partir de cette règle dans le futur."
+        ]
+      },
+      {
+        "heading": "Vue du calendrier",
+        "body": [
+          "Dans la vue du calendrier, les rappels sont présentés comme des éléments planifiés sur des jours spécifiques.",
+          "Pour voir les détails, cliquez sur un jour dans le calendrier — les éléments planifiés pour ce jour apparaîtront sous le calendrier.",
+          "Le calendrier utilise des marqueurs colorés/icônes pour indiquer les types de tâches planifiées pour un jour donné et faciliter l'évaluation de la répartition des tâches."
+        ]
+      },
+      {
+        "heading": "Menu FAB",
+        "body": [
+          "Le bouton FAB fournit des actions rapides liées aux rappels et au changement de vue.",
+          "Les options disponibles sont : Ajouter un rappel, changer de vue (Liste/Calendrier), Trier et Filtrer.",
+          "Le tri peut se faire par date limite (due date), nom de la plante ou localisation.",
+          "Le filtrage peut inclure : nom de la plante, localisation, type de tâche et plage de dates (plage de dates de due date)."
+        ]
+      },
+      {
+        "heading": "Comment les rappels génèrent des tâches (logique générale)",
+        "body": [
+          "Un rappel est une règle cyclique (par exemple, Arroser tous les 7 jours).",
+          "À partir des rappels, Flovers génère des tâches et les présente à l'écran d'accueil comme des éléments à accomplir.",
+          "Une fois qu'une tâche est terminée, la suivante est planifiée selon l'intervalle du rappel (ce qui permet de maintenir automatiquement la routine)."
+        ]
+      },
+      {
+        "heading": "Remarques et conseils pratiques",
+        "body": [
+          "Les rappels aident à maintenir la régularité, mais ne garantissent pas la santé des plantes — les conditions réelles peuvent nécessiter un ajustement des intervalles.",
+          "Si les conditions changent (saison, lumière, sol, taille du pot), envisagez de mettre à jour les rappels.",
+          "Si vous souhaitez gérer les tâches et les notes terminées, utilisez la vue Historique des tâches (décrite séparément)."
+        ]
+      }
+    ]
+  }
+}

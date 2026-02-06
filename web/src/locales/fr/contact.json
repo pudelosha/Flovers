@@ -1,0 +1,24 @@
+{
+  "title": "Contact",
+  "subtitle": "Envoyez un message au support. Nous répondons généralement sous 1 à 3 jours ouvrables.",
+  "form": {
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "ex. Problème de connexion",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Décrivez votre problème ou question…",
+    "copyToMe": "Envoyez-moi une copie",
+    "send": "Envoyer",
+    "sending": "Envoi en cours…",
+    "mailtoFallback": "Envoyer un e-mail",
+    "note": "Si le formulaire ne fonctionne pas, utilisez le bouton e-mail."
+  },
+  "toasts": {
+    "enterSubject": "Entrez le sujet.",
+    "enterMessage": "Entrez un message.",
+    "contactSent": "Message envoyé.",
+    "couldNotSendContact": "Impossible d'envoyer le message. Essayez à nouveau plus tard.",
+    "requestTimedOut": "Le délai d'attente est expiré. Essayez à nouveau.",
+    "unauthorizedLoginAgain": "La session a expiré. Veuillez vous reconnecter.",
+    "missingApiBase": "L'adresse API n'est pas configurée."
+  }
+}

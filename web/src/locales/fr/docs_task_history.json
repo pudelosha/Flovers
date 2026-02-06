@@ -1,0 +1,81 @@
+{
+  "docs_task_history": {
+    "title": "Historique des tâches",
+    "sections": [
+      {
+        "heading": "Objectif de la vue Historique des tâches",
+        "body": [
+          "L'historique des tâches sert à examiner et à gérer les tâches qui ont été effectuées (closes).",
+          "Il facilite l'analyse de ce qui a été fait, quand cela a été effectué et sur quelles plantes les actions ont eu lieu.",
+          "La vue peut être ouverte avec un filtre actif (par exemple, l'historique pour une plante sélectionnée) ou afficher toutes les tâches fermées."
+        ]
+      },
+      {
+        "heading": "Tuiles des tâches fermées",
+        "body": [
+          "Chaque tuile représente une tâche fermée individuelle et contient notamment le type de tâche (par exemple, Arrosage, Pulvérisation, Fertilisation), le nom de la plante, l'emplacement et la date d'exécution.",
+          "Les tâches fermées peuvent contenir une note ajoutée lors de la marquage de la tâche comme effectuée.",
+          "Les notes ne sont visibles qu'après avoir développé la tuile."
+        ]
+      },
+      {
+        "heading": "Aperçu des notes : développer et réduire",
+        "body": [
+          "Pour voir la note d'une tâche fermée, vous pouvez développer la tuile en tapant dessus.",
+          "Vous pouvez également utiliser le menu à trois points pour effectuer l'action Développer/Réduire (selon l'état actuel).",
+          "Cela permet à la liste de rester lisible et compacte, et les détails sont accessibles à la demande."
+        ]
+      },
+      {
+        "heading": "Menu de la tuile (trois points)",
+        "body": [
+          "Chaque tuile de tâche fermée dispose d'un menu contextuel avec des actions liées à cet élément spécifique de l'historique.",
+          "Développer/Réduire : affiche ou cache la section de la note à l'intérieur de la tuile.",
+          "Modifier le rappel : redirige vers le Rappel associé à la tâche pour modifier la fréquence ou d'autres paramètres.",
+          "Aller à la plante : redirige vers la vue Détails de la plante associée à la tâche.",
+          "Supprimer la tâche : supprime définitivement la tâche fermée sélectionnée du compte Utilisateur."
+        ]
+      },
+      {
+        "heading": "Actions FAB (Floating Action Button)",
+        "body": [
+          "La vue Historique des tâches possède un bouton FAB avec des actions pour travailler sur toute la liste.",
+          "Trier : modifie l'ordre d'affichage des tâches fermées.",
+          "Filtrer : restreint la liste des historiques en fonction de critères sélectionnés.",
+          "Supprimer : permet de supprimer en masse des tâches sur la base de critères (par exemple, des tâches pour une plante sélectionnée, pour un emplacement, pour un type de tâche ou des tâches plus anciennes qu'une date spécifiée)."
+        ]
+      },
+      {
+        "heading": "Options de tri",
+        "body": [
+          "Le tri aide à parcourir l'historique dans un ordre qui correspond le mieux à votre façon de travailler.",
+          "Les options de tri disponibles sont : Date d'exécution, Nom de la plante et Emplacement."
+        ]
+      },
+      {
+        "heading": "Options de filtrage",
+        "body": [
+          "Les filtres permettent de se concentrer sur un sous-ensemble spécifique de tâches fermées.",
+          "Vous pouvez filtrer par : Nom de la plante, Emplacement, Type de tâche et Plage de dates d'exécution.",
+          "Les filtres peuvent être combinés, par exemple pour afficher les Fertilisations effectuées dans un emplacement donné au cours d'un mois sélectionné."
+        ]
+      },
+      {
+        "heading": "Suppression en masse (action Supprimer)",
+        "body": [
+          "La suppression en masse permet de supprimer définitivement plusieurs tâches fermées à la fois en fonction des critères sélectionnés.",
+          "Les scénarios typiques incluent : vider l'historique d'une plante, supprimer des tâches pour un emplacement, supprimer un seul type de tâche ou supprimer des tâches plus anciennes qu'une date spécifiée.",
+          "La suppression en masse est permanente et ne peut pas être annulée."
+        ]
+      },
+      {
+        "heading": "Différences entre l'Historique des tâches et Accueil",
+        "body": [
+          "Accueil se concentre sur les tâches en cours (pour aujourd'hui et en retard) et leur exécution.",
+          "L'Historique des tâches se concentre sur les tâches effectuées et soutient la révision, le tri, le filtrage et la suppression des enregistrements historiques.",
+          "Ensemble, ces vues permettent à la fois d'effectuer des actions quotidiennes (Accueil) et d'analyser l'historique à long terme des soins (Historique des tâches)."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Plantes",
+    "sections": [
+      {
+        "heading": "Objectif de cette vue",
+        "body": [
+          "La vue Plantes affiche toutes les Instances de plantes créées dans votre compte.",
+          "Chaque tuile représente une plante (votre exemplaire). Vous pouvez accéder aux Détails de la plante ou utiliser les raccourcis du menu des trois points (par exemple, rappels, journal, code QR)."
+        ]
+      },
+      {
+        "heading": "Tuiles de plantes (liste)",
+        "body": [
+          "La tuile de la plante affiche le nom de la plante ainsi que (si disponible) le nom de la définition associée à la plante (espèce) et la Localisation attribuée.",
+          "Toucher le contenu de la tuile (en dehors du menu à trois points) vous mène à la vue Détails de la plante."
+        ]
+      },
+      {
+        "heading": "Menu des trois points (actions de la plante)",
+        "body": [
+          "Chaque tuile a un menu à trois points contenant des actions pour la plante sélectionnée :",
+          "Modifier la plante : ouvre l'édition des données et des paramètres de la plante.",
+          "Afficher les rappels : accède à la vue Rappels avec un filtre défini sur les rappels liés à la plante sélectionnée.",
+          "Afficher le journal de la plante : ouvre une fenêtre modale avec l'historique des tâches terminées (avec les notes de l'utilisateur). Les notes sont visibles et ne sont pas masquées.",
+          "Afficher le code QR : ouvre une fenêtre modale avec le code QR de la plante, une brève description et des options pour enregistrer (télécharger) ou envoyer le code à votre propre adresse e-mail.",
+          "Supprimer la plante : supprime définitivement la plante ainsi que les données associées, telles que les tâches, les rappels et les connexions avec les appareils."
+        ]
+      },
+      {
+        "heading": "Menu du bouton FAB",
+        "body": [
+          "Le FAB dans la vue Plantes propose des actions rapides :",
+          "Créer une plante : lance l'Assistant de création de plante (processus en 9 étapes), où vous pouvez définir précisément la plante.",
+          "Trier : trie les tuiles des plantes par Nom de la plante ou Localisation.",
+          "Filtrer : filtre la liste par Localisation.",
+          "Localisations : accède à la vue Localisations, où vous pouvez ajouter, modifier et gérer les localisations utilisées pour regrouper et filtrer."
+        ]
+      },
+      {
+        "heading": "Suppression de la plante (informations importantes)",
+        "body": [
+          "La suppression d'une plante est une opération permanente et ne peut pas être annulée.",
+          "La suppression d'une plante supprime l'Instance de la plante ainsi que les données associées, telles que les tâches générées, les rappels attribués à cette plante et les liens vers les appareils."
+        ]
+      },
+      {
+        "heading": "Lorsque aucune plante n'est visible",
+        "body": [
+          "Si la liste est vide, utilisez l'action Créer une plante dans le menu FAB pour ajouter la première Instance de plante.",
+          "Une fois les plantes ajoutées, vous pouvez les regrouper par Localisation et gérer les routines d'entretien via les Rappels."
+        ]
+      }
+    ]
+  }
+}

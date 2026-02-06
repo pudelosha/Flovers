@@ -1,0 +1,46 @@
+{
+  "docs_locations": {
+    "title": "Localisations",
+    "sections": [
+      {
+        "heading": "Objectif de cette vue",
+        "body": [
+          "La vue Localisations est utilisée pour gérer les endroits où se trouvent vos plantes, par exemple les pièces, les balcons ou d'autres zones.",
+          "Les localisations sont principalement utilisées pour organiser les plantes et faciliter le filtrage, le tri et le regroupement des données dans l'application."
+        ]
+      },
+      {
+        "heading": "Liste des localisations",
+        "body": [
+          "L'écran affiche la liste de toutes les localisations définies par l'utilisateur.",
+          "Les localisations peuvent être des noms par défaut ou des noms personnalisés créés par l'utilisateur.",
+          "Chaque localisation affiche le nombre de plantes actuellement associées à celle-ci."
+        ]
+      },
+      {
+        "heading": "Actions sur la localisation (menu à 3 points)",
+        "body": [
+          "Chaque localisation possède un menu à 3 points avec les actions disponibles.",
+          "L'utilisateur peut modifier le nom de la localisation pour qu'il reflète mieux l'endroit réel de stockage des plantes.",
+          "La suppression d'une localisation n'est possible que si aucune plante n'y est assignée."
+        ]
+      },
+      {
+        "heading": "Bouton d'action (FAB)",
+        "body": [
+          "Le bouton FAB propose des actions rapides liées à la gestion des localisations.",
+          "L'utilisateur peut ajouter une nouvelle localisation à tout moment.",
+          "Les localisations peuvent être triées par nom de localisation ou par nombre de plantes assignées."
+        ]
+      },
+      {
+        "heading": "Utilisation des localisations",
+        "body": [
+          "Les localisations sont utilisées dans toute l'application pour regrouper logiquement les plantes.",
+          "Elles peuvent être utilisées comme critères de filtrage et de tri dans des vues telles que Plantes, Rappels ou Historique des tâches.",
+          "L'utilisation des localisations facilite le maintien de l'ordre, surtout lorsqu'il y a un grand nombre de plantes."
+        ]
+      }
+    ]
+  }
+}

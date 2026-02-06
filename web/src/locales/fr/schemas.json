@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "Copier",
+    "copied": "Copié"
+  },
+  "title": "Schémas des dispositifs et câblage",
+  "lead": "Cette page décrit comment envoyer des lectures des capteurs IoT vers Flovers. Vous y trouverez des points de terminaison, la structure du payload et un exemple de code Arduino pour ESP32/ESP8266 pour les capteurs populaires. Il y a aussi un espace réservé pour l'image du câblage (Fritzing) à remplacer plus tard.",
+  "endpoints": {
+    "title": "Points de terminaison de l'API",
+    "note": "Les points de terminaison sont des exemples. Remplacez-les par l'adresse du backend en production lorsque vous connecterez un dispositif.",
+    "ingest": {
+      "label": "Ingestion des lectures (POST)",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "Récupération des lectures (GET/POST)",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "Documentation POST ingest",
+    "desc": "Envoyez un échantillon de lecture sous forme de JSON. Le backend vérifie device_key + secret et enregistre les métriques sous le dispositif.",
+    "schemaLabel": "Structure du payload (JSON)",
+    "psLabel": "Exemple PowerShell (POST)"
+  },
+  "read": {
+    "title": "GET / documentation des lectures",
+    "desc": "Récupérez les lectures pour un dispositif sur une plage de temps. Si le backend prend en charge les requêtes POST, vous pouvez envoyer le corps JSON au lieu des paramètres dans l'URL.",
+    "exampleLabel": "Exemples (GET + POST optionnel)"
+  },
+  "arduino": {
+    "title": "Arduino (ESP32/ESP8266) — code exemple",
+    "desc": "Implémentation de référence : se connecte au Wi-Fi, lit les capteurs et envoie un POST JSON au point de terminaison d'ingestion à un intervalle défini. Calibrez les valeurs du capteur d'humidité (mouillé/sec) pour que les pourcentages aient du sens.",
+    "codeLabel": "Exemple Arduino (Wi-Fi + POST ingestion)",
+    "note": "Si vous avez besoin de timestamps corrects, ajoutez la synchronisation NTP (configTime) et générez l'ISO-8601 UTC sur le dispositif.",
+    "sensors": {
+      "bh1750": "BH1750 (GY-302) — intensité lumineuse via I2C",
+      "moisture": "Capteur capacitif d'humidité du sol — lecture analogique (nécessite une calibration mouillé/sec)",
+      "bme280": "BME280 — température et humidité via I2C (pression en option)"
+    }
+  },
+  "wiring": {
+    "title": "Schéma de câblage",
+    "desc": "Ajoutez ici plus tard l'image de Fritzing. Cet espace réservé stabilise la mise en page jusqu'à ce que le schéma soit prêt.",
+    "aria": "Espace réservé pour le schéma de câblage",
+    "placeholderTitle": "Espace réservé Fritzing",
+    "placeholderSub": "Remplacez ce bloc par une image lorsque vous exportez le schéma."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "docs_readings": {
+    "title": "Lectures",
+    "sections": [
+      {
+        "heading": "Objectif de cette vue",
+        "body": [
+          "La vue Lectures permet de parcourir et de gérer les appareils IoT associés aux plantes.",
+          "Chaque appareil peut envoyer à Flovers des mesures telles que la température de l'air, l'humidité de l'air, le niveau de lumière et l'humidité du sol.",
+          "Cette fonctionnalité est destinée aux utilisateurs qui construisent leurs propres appareils (par exemple, à base d'Arduino ou d'ESP) pour surveiller les conditions des plantes."
+        ]
+      },
+      {
+        "heading": "Tuiles des appareils et dernières lectures",
+        "body": [
+          "L'écran affiche une liste de tuiles, où chaque tuile représente un appareil associé.",
+          "Chaque tuile affiche le nom de la plante, l'emplacement et les dernières lectures des capteurs.",
+          "Si les données n'ont pas encore été reçues, des symboles de remplacement sont affichés à la place des valeurs."
+        ]
+      },
+      {
+        "heading": "Interactions avec la tuile",
+        "body": [
+          "Un clic sur la zone de la tuile redirige l'utilisateur directement vers la vue Historique des lectures de l'appareil concerné.",
+          "Un clic sur l'icône d'un paramètre spécifique (par exemple, humidité ou température) ouvre l'Historique des lectures avec ce paramètre sélectionné.",
+          "Cela permet un accès rapide aux graphiques détaillés."
+        ]
+      },
+      {
+        "heading": "Actions de l'appareil (menu à trois points)",
+        "body": [
+          "Chaque tuile d'appareil possède un menu à trois points avec des actions supplémentaires.",
+          "Les options disponibles sont : Historique des lectures, Détails de la plante, Modifier l'appareil et Supprimer l'appareil.",
+          "La suppression d'un appareil est permanente et supprime son association avec la plante."
+        ]
+      },
+      {
+        "heading": "Historique des lectures",
+        "body": [
+          "La vue Historique des lectures présente des graphiques détaillés des données mesurées.",
+          "Les données peuvent être affichées sous forme journalière, hebdomadaire ou mensuelle.",
+          "Les graphiques sont disponibles pour la température de l'air, l'humidité de l'air, le niveau de lumière et l'humidité du sol (en fonction de l'appareil)."
+        ]
+      },
+      {
+        "heading": "Menu FAB",
+        "body": [
+          "Le bouton FAB propose des actions liées à la gestion des appareils.",
+          "Les options disponibles sont : Connecter un appareil, Configuration de l'appareil, Trier et Filtrer.",
+          "Le tri peut se faire par nom de la plante, emplacement ou date de la dernière lecture.",
+          "Le filtrage inclut le nom de la plante, l'emplacement et le statut de l'appareil (actif, inactif)."
+        ]
+      },
+      {
+        "heading": "Connexion de l'appareil",
+        "body": [
+          "L'option Connecter un appareil permet d'ajouter un nouvel appareil de mesure et de l'associer à une plante.",
+          "Lors de la configuration, les paramètres affichés sur la tuile ainsi que les alertes optionnelles (par exemple, faible niveau d'humidité du sol) sont sélectionnés.",
+          "Chaque appareil reçoit un identifiant unique et une clé secrète."
+        ]
+      },
+      {
+        "heading": "Autorisation de l'appareil et flux de données",
+        "body": [
+          "Les appareils s'autorisent à l'aide de leur identifiant et de leur clé secrète.",
+          "L'autorisation de l'utilisateur n'est pas requise pour l'enregistrement des lectures — l'accès est uniquement contrôlé par les données de l'appareil.",
+          "Cette approche simplifie l'intégration et la communication IoT."
+        ]
+      },
+      {
+        "heading": "Configuration de l'appareil et documentation",
+        "body": [
+          "L'option Configuration de l'appareil fournit des instructions techniques pour l'intégration du matériel.",
+          "Elle contient des informations sur les points de terminaison API (POST pour l'envoi des lectures, GET pour leur récupération), des exemples de charges utiles et des paramètres.",
+          "L'utilisateur peut télécharger la documentation complète, y compris le code exemple, les schémas de connexion (Fritzing) et les capteurs recommandés."
+        ]
+      },
+      {
+        "heading": "Informations importantes",
+        "body": [
+          "La stabilité de l'appareil, l'étalonnage des capteurs et l'installation physique sont de la responsabilité de l'utilisateur.",
+          "Les lectures des capteurs sont informatives et doivent être interprétées en combinaison avec l'observation des plantes.",
+          "Flovers ne garantit pas l'exactitude des données provenant des appareils externes ou faits maison."
+        ]
+      }
+    ]
+  }
+}

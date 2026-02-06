@@ -1,0 +1,48 @@
+{
+  "title": "Documentation",
+  "placeholder": {
+    "heading": "Bientôt",
+    "body": "Une documentation détaillée pour cet écran sera disponible bientôt."
+  },
+  "screens": {
+    "overview": {
+      "title": "Aperçu"
+    },
+    "auth": {
+      "title": "Connexion et inscription"
+    },
+    "home": {
+      "title": "Écran principal"
+    },
+    "taskHistory": {
+      "title": "Historique des tâches"
+    },
+    "plants": {
+      "title": "Plantes"
+    },
+    "plantDetails": {
+      "title": "Détails de la plante"
+    },
+    "createPlantWizard": {
+      "title": "Assistant d'ajout de plante"
+    },
+    "locations": {
+      "title": "Emplacements"
+    },
+    "reminders": {
+      "title": "Rappels"
+    },
+    "readings": {
+      "title": "Lectures"
+    },
+    "readingsHistory": {
+      "title": "Historique des lectures"
+    },
+    "scanner": {
+      "title": "Scanner (QR)"
+    },
+    "profile": {
+      "title": "Profil et paramètres"
+    }
+  }
+}
