@@ -1,0 +1,48 @@
+{
+  "title": "ドキュメンテーション",
+  "placeholder": {
+    "heading": "近日公開",
+    "body": "この画面の詳細なドキュメンテーションは近日公開予定です。"
+  },
+  "screens": {
+    "overview": {
+      "title": "概要"
+    },
+    "auth": {
+      "title": "ログインと登録"
+    },
+    "home": {
+      "title": "ホーム画面"
+    },
+    "taskHistory": {
+      "title": "タスク履歴"
+    },
+    "plants": {
+      "title": "植物"
+    },
+    "plantDetails": {
+      "title": "植物の詳細"
+    },
+    "createPlantWizard": {
+      "title": "植物追加ウィザード"
+    },
+    "locations": {
+      "title": "ロケーション"
+    },
+    "reminders": {
+      "title": "リマインダー"
+    },
+    "readings": {
+      "title": "読み取り"
+    },
+    "readingsHistory": {
+      "title": "読み取り履歴"
+    },
+    "scanner": {
+      "title": "スキャナー (QR)"
+    },
+    "profile": {
+      "title": "プロフィールと設定"
+    }
+  }
+}
