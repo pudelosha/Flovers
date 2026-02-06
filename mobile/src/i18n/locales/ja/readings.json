@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "読み取り"
+    },
+    "defaults": {
+      "thisDevice": "このデバイス"
+    },
+    "tile": {
+      "lastReadPrefix": "最後の読み取り"
+    },
+    "menu": {
+      "history": "読み取り履歴",
+      "plantDetails": "植物の詳細",
+      "editDevice": "デバイスの編集",
+      "deleteDevice": "デバイスの削除"
+    },
+    "fab": {
+      "linkDevice": "デバイスをリンク",
+      "deviceSetup": "デバイスの設定",
+      "sort": "並べ替え",
+      "filter": "フィルタ",
+      "clearFilter": "フィルタのクリア"
+    },
+    "empty": {
+      "title": "デバイスがありません",
+      "description": "デバイスは植物の温度、湿度、光の強さ、土壌の湿度の読み取りを保存することができます。\n\n「+ デバイスをリンク」をタップして新しいデバイスを追加してください。植物を選び、デバイスに名前を付け、センサーを選んでサンプリング間隔を設定します。その後、デバイス設定を開き、アカウントの秘密情報を確認し、更新して、Arduino/ESPの準備完了スケッチを送信します。"
+    },
+    "toasts": {
+      "unauthorized": "認証エラー。再ログインしてください。",
+      "loadFailed": "デバイスの読み込みに失敗しました",
+      "deviceDeleted": "デバイスが削除されました",
+      "deleteFailed": "削除に失敗しました",
+      "deleteFailedPrefix": "削除に失敗しました",
+      "deviceAdded": "デバイスが追加されました",
+      "deviceUpdated": "デバイスが更新されました",
+      "addFailed": "追加に失敗しました",
+      "addFailedPrefix": "追加に失敗しました",
+      "updateFailed": "更新に失敗しました",
+      "updateFailedPrefix": "更新に失敗しました",
+      "setupLoadFailed": "設定の読み込みに失敗しました",
+      "setupLoadFailedPrefix": "設定の読み込みに失敗しました",
+      "secretRotated": "秘密情報が更新されました",
+      "rotateFailed": "秘密情報の更新に失敗しました",
+      "rotateFailedPrefix": "秘密情報の更新に失敗しました"
+    }
+  }
+}

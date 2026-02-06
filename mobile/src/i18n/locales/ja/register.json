@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "登録",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワードの確認",
+    "termsAgreement": "同意する",
+    "termsLink": "規約",
+    "signUpButton": "登録",
+    "haveAccount": "すでにアカウントをお持ちですか？",
+    "loginLink": "ログイン",
+    "errors": {
+      "invalidEmail": "正しいメールアドレスを入力してください。",
+      "shortPassword": "パスワードは6文字以上でなければなりません。",
+      "passwordsMismatch": "パスワードが一致しません。",
+      "termsRequired": "規約に同意する必要があります。",
+      "incompleteForm": "フォームを記入してください。",
+      "emailTaken": "このメールアドレスはすでに使用されています。",
+      "registrationFailed": "登録に失敗しました。再度お試しください。",
+      "generic": "何か問題が発生しました。再度お試しください。",
+      "cannotOpenLink": "リンクを開けません。"
+    },
+    "success": {
+      "accountCreated": "アカウントが作成されました。ようこそ！"
+    }
+  }
+}

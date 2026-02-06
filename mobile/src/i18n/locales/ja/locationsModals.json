@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "create": "作成",
+      "save": "保存",
+      "apply": "適用",
+      "reset": "リセット"
+    },
+    "confirmDelete": {
+      "title": "ロケーションを削除",
+      "messagePrefix": "本当に削除しますか",
+      "messageSuffix": "? この操作は取り消せません。",
+      "blockedTitle": "このロケーションは削除できません",
+      "blockedMessage": "このロケーションには{{countLabel}}が割り当てられています。まず植物を削除するか、別のロケーションに移動してから再度試してください。",
+      "blockedToast": "このロケーションには植物が割り当てられているため削除できません。まずそれらを削除するか、移動してください。"
+    },
+    "edit": {
+      "titleCreate": "ロケーションを追加",
+      "titleEdit": "ロケーションを編集",
+      "nameLabel": "ロケーション名",
+      "namePlaceholder": "例: リビングルーム、キッチンの棚",
+      "categoryLabel": "カテゴリ",
+      "categories": {
+        "indoor": "屋内",
+        "outdoor": "屋外",
+        "other": "その他"
+      },
+      "quickSuggestions": "クイック提案",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "リビングルーム",
+          "kitchen": "キッチン",
+          "diningRoom": "ダイニングルーム",
+          "bedroom": "寝室",
+          "bathroom": "バスルーム",
+          "hallway": "廊下",
+          "office": "オフィス",
+          "kidsRoom": "子供部屋"
+        },
+        "outdoor": {
+          "balcony": "バルコニー",
+          "terrace": "テラス",
+          "patio": "パティオ",
+          "garden": "庭",
+          "frontYard": "前庭",
+          "backyard": "裏庭",
+          "porch": "ポーチ",
+          "greenhouse": "温室"
+        },
+        "other": {
+          "staircase": "階段",
+          "garage": "ガレージ",
+          "basement": "地下室",
+          "lobby": "ロビー",
+          "sunroom": "サンルーム",
+          "workshop": "ワークショップ",
+          "studio": "スタジオ",
+          "attic": "屋根裏部屋"
+        }
+      }
+    },
+    "sort": {
+      "title": "ロケーションを並べ替え",
+      "keyName": "ロケーション名",
+      "keyCount": "植物の数",
+      "dirAsc": "昇順",
+      "dirDesc": "降順"
+    }
+  }
+}

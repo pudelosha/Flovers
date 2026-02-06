@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "閉じる",
+      "save": "保存",
+      "cancel": "キャンセル",
+      "remove": "削除"
+    },
+    "definition": {
+      "title": "植物の定義",
+      "traits": "特徴",
+      "noId": "植物の定義IDが見つかりません。",
+      "loadFailed": "植物の定義の読み込みに失敗しました。",
+      "error": "何かがうまくいきませんでした。",
+      "empty": "定義データがありません。",
+      "body": "これはモーダル代替です。植物の定義の詳細は後で実装されます。"
+    },
+    "changeImage": {
+      "title": "写真を変更",
+      "subtitle": "この写真はあなたのデバイスにローカルで保存されており、送信されません。",
+      "noPlantId": "植物のIDが見つかりません。",
+      "loadFailed": "ローカル写真の読み込みに失敗しました。",
+      "error": "何かがうまくいきませんでした。",
+      "noPhoto": "写真が選択されていません",
+      "removedPreview": "写真は削除されます",
+      "unsaved": "保存されていない変更",
+      "takePhoto": "写真を撮る",
+      "chooseGallery": "ギャラリーから選択",
+      "remove": "写真を削除",
+      "permissionTitle": "必要な権限",
+      "permissionCamera": "写真を撮るためにカメラとメディアの権限を付与してください。",
+      "permissionGallery": "写真を選択するためにメディアの権限を付与してください。",
+      "cameraErrorTitle": "カメラエラー",
+      "pickerErrorTitle": "写真選択エラー",
+      "saveFailedTitle": "保存に失敗しました",
+      "saveFailedMsg": "この写真をローカルに保存できませんでした。",
+      "confirmRemoveTitle": "写真を削除しますか？",
+      "confirmRemoveMsg": "「保存」をクリックすると写真が削除されます。",
+      "confirmDiscardTitle": "変更を破棄しますか？",
+      "confirmDiscardMsg": "変更は保存されません。",
+      "discard": "破棄",
+      "removeFailedTitle": "削除に失敗しました",
+      "removeFailedMsg": "ローカル写真を削除できませんでした。"
+    }
+  }
+}

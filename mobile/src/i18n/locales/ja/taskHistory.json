@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "タスク履歴"
+    },
+    "fab": {
+      "sort": "並べ替え",
+      "filter": "フィルター",
+      "delete": "削除",
+      "clearFilter": "フィルターをクリア",
+      "showAllHistory": "すべての履歴を表示"
+    },
+    "common": {
+      "unnamedPlant": "名前のない植物"
+    },
+    "toasts": {
+      "failedToLoad": "タスク履歴の読み込みに失敗しました",
+      "historyDeleted": "履歴が削除されました",
+      "failedToDeleteHistory": "履歴の削除に失敗しました",
+      "historyTaskDeleted": "履歴エントリが削除されました",
+      "failedToDeleteHistoryTask": "履歴エントリの削除に失敗しました",
+      "taskNotLinkedToPlant": "このタスクは植物に関連付けられていません。"
+    },
+    "empty": {
+      "title": "完了したタスクはありません",
+      "descBeforeBold": "この画面には",
+      "bold": "リマインダーからの完了したタスク",
+      "descAfterBold": "が表示されます（保留中のタスクは表示されません）。",
+      "filteredToPlantId": "現在、植物ID {{plantId}} でフィルタリングされています。",
+      "openFromTaskHint": "特定のタスクから履歴を開いて、この植物のみの履歴を表示してください。"
+    },
+    "tile": {
+      "completedOn": "完了日: {{date}}",
+      "noteLabel": "ノート"
+    },
+    "menu": {
+      "expand": "展開",
+      "collapse": "折りたたむ",
+      "editReminder": "リマインダーを編集",
+      "goToPlant": "植物へ移動",
+      "deleteTask": "タスクを削除"
+    },
+    "types": {
+      "watering": "水やり",
+      "fertilising": "肥料",
+      "moisture": "霧吹き",
+      "care": "手入れ",
+      "repot": "植え替え"
+    }
+  }
+}

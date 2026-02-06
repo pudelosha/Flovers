@@ -1,1 +1,19 @@
-﻿{}
+{
+  "createPlant": {
+    "header": {
+      "title": "植物を作成"
+    },
+    "fallbackStep": {
+      "title": "ステップ「{{step}}」",
+      "subtitle": "このステップは近日中に実装されます。"
+    },
+    "common": {
+      "previous": "戻る",
+      "next": "次へ",
+      "create": "作成",
+      "cancel": "キャンセル",
+      "done": "完了",
+      "notSpecified": "指定なし"
+    }
+  }
+}

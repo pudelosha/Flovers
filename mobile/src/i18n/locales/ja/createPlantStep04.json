@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "日光",
+      "subtitle": "日光は、私たちが水やりのスケジュールやメンテナンスのリマインダーを調整するのに役立ちます。この場所にどれくらいの光が届いているか、そして窓の方向を教えてください。",
+      "lightLevel": "光のレベル",
+      "low": "低い",
+      "high": "高い",
+      "windowDirection": "窓の方向",
+      "measureLightDirection": "光と方向を測定",
+      "distanceFromWindow": "窓からの距離",
+      "orientations": {
+        "S": "南",
+        "E": "東",
+        "W": "西",
+        "N": "北"
+      },
+      "modal": {
+        "title": "光と方向の測定",
+        "instructions": "電話を水平に保持（画面を上に）、上端を窓の方向に向けます。電話を窓の近くでゆっくり移動させ、その後「測定」を押して5秒間のテストを開始してください。",
+        "ambientLive": "光（ライブ）",
+        "headingLive": "方向（ライブ）",
+        "testLabel": "5秒間測定",
+        "running": "(実行中…)",
+        "last": "(最後)",
+        "done": "完了",
+        "bestLight": "光（5秒間で最良）:",
+        "meanDirection": "方向（5秒間の平均）:",
+        "close": "閉じる",
+        "measure5s": "測定（5秒）",
+        "measuring": "測定中…",
+        "apply": "適用",
+        "tip": "ヒント：多くの電話の光センサーは上端（スピーカーの近く）にあります。電話を平らに保ち、上端を窓の方向に向けて、最高の読み取り値を見つけてください。",
+        "notAvailable": "利用不可",
+        "noSensor": "センサーなし",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "明るい直射光",
+          "brightIndirect": "明るい拡散光",
+          "medium": "中程度/半陰",
+          "low": "少ない光",
+          "veryLow": "非常に少ない"
+        }
+      }
+    }
+  }
+}

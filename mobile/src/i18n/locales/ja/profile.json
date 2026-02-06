@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "header": {
+      "title": "プロフィール"
+    },
+    "common": {
+      "save": "保存",
+      "cancel": "キャンセル",
+      "change": "変更",
+      "delete": "削除",
+      "send": "送信"
+    },
+    "account": {
+      "title": "アカウント",
+      "emailLabel": "メールアドレス",
+      "createdLabel": "作成日",
+      "changeEmail": "メールアドレスを変更",
+      "changePassword": "パスワードを変更",
+      "deleteAccount": "アカウントを削除",
+      "logout": "ログアウト"
+    },
+    "notifications": {
+      "title": "通知",
+      "emailSection": "メール",
+      "emailDailyLabel": "今日のタスクの毎日の概要",
+      "emailDailyHint": "今日のタスクの概要を含む1通のメッセージ。",
+      "sendAt": "送信時刻",
+      "email24hLabel": "24時間後にリマインダーを送信",
+      "email24hHint": "今日のタスクが未完了の場合、翌日にリマインダーを送信。",
+      "mobileSection": "電話",
+      "pushDailyLabel": "電話の毎日の通知",
+      "pushDailyHint": "今日のタスクの概要を含むシステム通知1通。",
+      "notifyAt": "通知時刻",
+      "push24hLabel": "24時間後に通知",
+      "push24hHint": "タスクが未完了の場合、翌日に通知を送信。"
+    },
+    "settings": {
+      "title": "設定",
+      "language": "言語",
+      "dateTimeFormat": "日付 / 時間の形式",
+      "temperatureUnits": "温度単位",
+      "measurementUnits": "計測単位",
+      "fabPosition": "FABの位置",
+      "background": "背景",
+      "tileMotive": "タイルのモチーフ",
+      "tilesTransparency": "タイルの透明度",
+      "level": "レベル",
+      "temperatureOptions": {
+        "C": "°C (摂氏)",
+        "F": "°F (華氏)",
+        "K": "K (ケルビン)"
+      },
+      "measureOptions": {
+        "metric": "メトリック (cm / m)",
+        "imperial": "インペリアル (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "右",
+        "left": "左"
+      },
+      "backgroundOptions": {
+        "bg1": "背景1",
+        "bg2": "背景2",
+        "bg3": "背景3",
+        "bg4": "背景4",
+        "bg5": "背景5"
+      },
+      "tileMotiveOptions": {
+        "light": "明るい",
+        "dark": "暗い"
+      }
+    },
+    "support": {
+      "title": "サポート",
+      "contactUs": "お問い合わせ",
+      "reportBug": "バグを報告",
+      "aboutTitle": "アプリについて",
+      "versionLabel": "バージョン",
+      "releaseDateLabel": "リリース日",
+      "contactLabel": "連絡先"
+    },
+    "toasts": {
+      "unauthorized": "認証エラー",
+      "unauthorizedLoginAgain": "認証エラー。再度ログインしてください。",
+      "failedToLoadPreferences": "プロフィール設定の読み込みに失敗しました。再試行してください。",
+      "notificationsUpdated": "通知設定が更新されました。",
+      "couldNotSaveNotifications": "通知設定の保存に失敗しました。",
+      "settingsUpdated": "設定が更新されました。",
+      "couldNotSaveSettings": "設定の保存に失敗しました。"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "自動タスク",
+      "subtitle": "植物のプロフィールに基づいて、リマインダー（灌水、植え替え、ミスト、 fertilizing、手入れ）を自動的に作成できます。",
+      "createAutoTasks": "この植物の自動タスクを作成",
+      "requiresPlantDefinition": "植物の定義が必要です。",
+      "labels": {
+        "generateWateringTask": "灌水タスクを作成",
+        "generateMistingTask": "ミストタスクを作成",
+        "generateFertilisingTask": "肥料タスクを作成",
+        "generateCareTask": "手入れタスクを作成",
+        "generateRepottingTask": "植え替えタスクを作成"
+      },
+      "prompts": {
+        "lastWatered": "最後に水をやったのはいつですか？",
+        "selectIntervalDays": "間隔（日）を選択",
+        "recommendedInterval": "推奨間隔",
+        "lastRepotted": "最後に植え替えをしたのはいつですか？"
+      },
+      "notSpecified": "指定されていません",
+      "notSpecifiedDesc": "不明な場合はスキップしてください。",
+      "units": {
+        "day": "日",
+        "days": "日",
+        "month": "月",
+        "months": "月"
+      },
+      "lastWatered": {
+        "today": "今日",
+        "yesterday": "昨日",
+        "three-four-days": "3〜4日前",
+        "one-week": "1週間前",
+        "two-weeks": "2週間前",
+        "unknown": "覚えていません"
+      },
+      "lastRepotted": {
+        "this-week": "今週",
+        "one-week-ago": "1週間前",
+        "two-weeks-ago": "2週間前",
+        "one-month-ago": "1ヶ月前",
+        "unknown": "覚えていません"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "キャンセル",
+      "apply": "適用",
+      "reset": "リセット"
+    },
+    "complete": {
+      "title": "タスクを完了としてマークする",
+      "overdueInfo": "このタスクは期限切れです。次の期日は今日から計算された{{intervalText}}になります。",
+      "noteLabel": "メモ（オプション）",
+      "noteHint": "このメモは保存され、後でその植物の植物日誌に表示されます。",
+      "notePlaceholder": "あなたが行ったこと、観察結果などについて簡単なメモを追加できます。",
+      "confirm": "完了としてマークする"
+    },
+    "completeBulk": {
+      "title": "{{count}}件のタスクを完了としてマークする",
+      "overdueInfo": "いくつかのタスクが期限切れです。期限切れのタスクには、次の期日が今日から計算された{{intervalText}}になります。",
+      "noteHint": "このメモは、完了した各タスクに保存され、後でその植物の日誌に表示されます。",
+      "confirm": "完了としてマークする"
+    },
+    "filter": {
+      "title": "タスクをフィルタリング",
+      "plantLabel": "植物",
+      "locationLabel": "場所",
+      "taskTypesLabel": "タスクの種類",
+      "dueDateRangeLabel": "期日の範囲",
+      "fromLabel": "開始日",
+      "toLabel": "終了日",
+      "anyPlant": "任意の植物",
+      "selectPlant": "植物を選択",
+      "anyLocation": "任意の場所",
+      "datePlaceholder": "YYYY-MM-DD",
+      "clear": "クリア"
+    },
+    "sort": {
+      "title": "タスクを並べ替え",
+      "sortByLabel": "並べ替え基準",
+      "directionLabel": "方向",
+      "keys": {
+        "dueDate": "期日",
+        "plant": "植物名",
+        "location": "場所"
+      },
+      "directions": {
+        "asc": "昇順",
+        "desc": "降順"
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "clear": "クリア",
+      "apply": "適用",
+      "reset": "リセット",
+      "close": "閉じる",
+      "done": "完了"
+    },
+    "confirmDelete": {
+      "title": "植物を削除",
+      "messagePrefix": "本当に削除してもよろしいですか",
+      "messageSuffix": "? すべての関連データも削除されます：リマインダー、デバイスと読み取り、タスク、およびタスク履歴。この操作は元に戻せません。"
+    },
+    "filter": {
+      "title": "植物をフィルタリング",
+      "anyLocation": "任意の場所",
+      "anyLatin": "任意のラテン語/名前"
+    },
+    "sort": {
+      "title": "植物を並べ替え",
+      "keyPlant": "植物名",
+      "keyLocation": "場所",
+      "dirAsc": "昇順",
+      "dirDesc": "降順"
+    },
+    "qr": {
+      "title": "植物のQRコード",
+      "p1": "各植物にはユニークなQRコードがあり、そのIDが含まれています。",
+      "p2": "このコードをアプリのスキャナーでスキャンすると、直接その植物の詳細画面に遷移します。",
+      "youCan": "できます:",
+      "b1": "QRコードの画像を電話に保存したり、メールで送信してラベル用に印刷する。",
+      "b2": "印刷したラベルを鉢に直接取り付けて、コードがすぐに見えるようにする。",
+      "b3": "家族がラベルをスキャンして、アプリでこの植物をすばやく開けるようにする。",
+      "save": "QRコードを保存",
+      "email": "QRコードをメールで送信"
+    },
+    "edit": {
+      "title": "植物を編集",
+      "namePlaceholder": "植物名（必須）",
+      "latinPlaceholder": "ラテン名（検索中）...",
+      "locationOptional": "場所を選択（オプション）",
+      "none": "— なし —",
+      "notesPlaceholder": "メモ...（オプション）",
+      "purchaseDateLabel": "購入日",
+      "notSet": "未設定",
+      "fallbackDateTitle": "購入日を設定（YYYY-MM-DD）",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
+      "invalidDateTitle": "無効な日付",
+      "invalidDateMsg": "YYYY-MM-DD形式を使用してください",
+      "set": "設定",
+      "lightLevelLabel": "光の強さ",
+      "low": "低",
+      "high": "高",
+      "windowDirectionLabel": "窓の方向",
+      "orientations": {
+        "S": "北",
+        "E": "東",
+        "W": "西",
+        "N": "南"
+      },
+      "measureBtn": "光と方向を測定",
+      "distanceLabel": "窓からの距離",
+      "cm": "cm",
+      "containerMaterialLabel": "鉢の素材",
+      "soilMixLabel": "土壌/混合物",
+      "update": "保存"
+    },
+    "journal": {
+      "title": "植物の日誌",
+      "loading": "読み込み中...",
+      "error": "何かがうまくいきませんでした。",
+      "empty": "日誌に記録がありません。",
+      "taskTypes": {
+        "watering": "水やり",
+        "moisture": "霧吹き",
+        "fertilising": "肥料",
+        "care": "手入れ",
+        "repot": "植え替え"
+      }
+    }
+  }
+}

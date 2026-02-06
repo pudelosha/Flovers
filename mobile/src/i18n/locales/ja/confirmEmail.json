@@ -1,0 +1,12 @@
+{
+  "confirmEmail": {
+    "title": "メール確認",
+    "confirming": "メールアドレスの確認中...",
+    "success": "アカウントが有効化されました。今すぐログインできます。",
+    "invalidLink": "無効または不足しているアクティベーションリンクです。",
+    "activationFailed": "アクティベーションに失敗しました。リンクが無効か期限切れの可能性があります。",
+    "goToLogin": "ログインページへ移動",
+    "resendActivation": "アクティベーションメールを再送信",
+    "backToLogin": "ログイン画面に戻る"
+  }
+}

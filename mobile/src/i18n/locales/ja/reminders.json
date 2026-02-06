@@ -1,0 +1,60 @@
+{
+  "reminders": {
+    "headerTitle": "リマインダー",
+    "common": {
+      "unnamedPlant": "名前のない植物",
+      "everyN": "毎{{count}}{{unit}}"
+    },
+    "units": {
+      "days": "日",
+      "months": "ヶ月"
+    },
+    "types": {
+      "watering": "水やり",
+      "moisture": "霧吹き",
+      "fertilising": "肥料",
+      "care": "手入れ",
+      "repot": "植え替え"
+    },
+    "fab": {
+      "add": "リマインダーを追加",
+      "calendar": "カレンダー",
+      "list": "リスト",
+      "sort": "並べ替え",
+      "filter": "フィルター",
+      "clearFilter": "フィルターをクリア"
+    },
+    "empty": {
+      "title": "リマインダーはありません",
+      "description": "リマインダーは特定の植物に関連しています。少なくとも1つの植物を作成してください。\n\n「+」ボタンをタップしてリマインダーを追加します。ウィンドウ内で植物、タイプ（水やり、霧吹き、肥料、手入れ、または植え替え）、最初の日付、および繰り返し頻度を選択します。"
+    },
+    "menu": {
+      "edit": "リマインダーを編集",
+      "delete": "リマインダーを削除"
+    },
+    "tile": {
+      "repeatsEvery": "{{count}} {{unit}} ごとに繰り返し",
+      "dueToday": "今日が期限",
+      "dueInOneDay": "1日後が期限",
+      "dueInDays": "{{count}}日後が期限",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+    "calendar": {
+      "scheduledOn": "{{date}} に予定されています",
+      "noItems": "この日にリマインダーはありません。"
+    },
+    "toast": {
+      "loadFailed": "リマインダーの読み込みに失敗しました",
+      "deleted": "リマインダーを削除しました",
+      "deleteFailed": "削除に失敗しました",
+      "deleteFailedWithReason": "削除に失敗しました: {{reason}}",
+      "duplicateType": "この植物にはすでにこのタイプのリマインダーがあります。",
+      "created": "リマインダーを作成しました",
+      "updated": "リマインダーを更新しました",
+      "createFailed": "作成に失敗しました",
+      "createFailedWithReason": "作成に失敗しました: {{reason}}",
+      "updateFailed": "更新に失敗しました",
+      "updateFailedWithReason": "更新に失敗しました: {{reason}}"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "plantDetails": {
+    "headerTitle": "植物の詳細",
+    "common": {
+      "dash": "—",
+      "plant": "植物"
+    },
+    "errors": {
+      "noId": "植物の識別子またはQRコードが指定されていません。",
+      "failedToLoad": "植物の読み込みに失敗しました。"
+    },
+    "states": {
+      "error": {
+        "title": "エラー"
+      },
+      "notFound": {
+        "title": "見つかりません",
+        "msg": "この植物の読み込みに失敗しました。"
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "完了できませんでした",
+        "msg": "このリマインダーの完了に失敗しました。"
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "リマインダーが完了としてマークされました。",
+      "qrSaved": "QRコードがギャラリーに保存されました。",
+      "qrSaveFailed": "QRコードの保存に失敗しました。",
+      "qrEmailPlaceholder": "このQRコードを含むメールがあなたのアカウントのアドレスに送信されます。"
+    },
+    "permissions": {
+      "storage": {
+        "title": "ストレージの権限",
+        "message": "QRコードをギャラリーに保存するためにアクセスが必要です。",
+        "ok": "OK",
+        "denied": "ストレージの権限が拒否されました。"
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "QRコードレンダラーが準備できていません。"
+    },
+    "info": {
+      "fallbackTitle": "植物 #{{id}}",
+      "purchased": "購入",
+      "notes": "メモ",
+      "light": "光",
+      "orientation": "方位",
+      "distance": "距離",
+      "pot": "鉢",
+      "soil": "土壌",
+      "cm": "cm",
+      "orientations": {
+        "N": "北",
+        "E": "東",
+        "S": "南",
+        "W": "西"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "植物の定義",
+        "editPlant": "植物を編集",
+        "changeImage": "画像を変更",
+        "showReminders": "リマインダーを表示"
+      },
+      "noDefinitionTitle": "植物の定義がありません",
+      "noDefinitionBody": "この植物はまだ植物の定義に関連付けられていません。",
+      "editPlant": {
+        "title": "植物を編集",
+        "msg": "この植物の編集は後で実装されます。"
+      },
+      "showReminders": {
+        "title": "リマインダーを表示",
+        "msg": "リマインダーへの移動は後で実装されます。"
+      }
+    },
+    "latestReadings": {
+      "title": "最新の読み取り",
+      "lastRead": {
+        "empty": "最後の読み取り: —",
+        "value": "最後の読み取り: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "QRコード",
+      "scanner": "スキャナー",
+      "saveWord": "保存",
+      "emailWord": "送信",
+      "desc": {
+        "part1": "各植物にはユニークなQRコードがあります。このコードをスキャンすると、アプリは即座に植物の詳細を表示します。",
+        "part2": "あなたは",
+        "part3a": "QRコードの画像を携帯電話に保存して",
+        "part3b": "自分に送って、印刷して鉢に貼り付けることができます。次回はラベルをスキャンするだけで、手動で探す必要はありません。"
+      },
+      "saveBtn": "保存",
+      "emailBtn": "送信"
+    },
+    "reminders": {
+      "title": "リマインダー",
+      "menu": {
+        "markComplete": "完了としてマーク",
+        "editReminder": "リマインダーを編集",
+        "showHistory": "履歴を表示"
+      },
+      "type": {
+        "watering": "水やり",
+        "fertilising": "肥料",
+        "moisture": "加湿",
+        "care": "手入れ",
+        "repot": "植え替え"
+      }
+    }
+  }
+}

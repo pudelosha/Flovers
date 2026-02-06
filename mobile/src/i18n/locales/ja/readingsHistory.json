@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "読み取り履歴",
+    "plantFallback": "植物",
+    "noDevicesFound": "デバイスが見つかりません。",
+    "unauthorized": "認証されていません。再度ログインしてください。",
+    "failedLoadDevices": "デバイスの読み込みに失敗しました。",
+    "failedLoadHistory": "履歴の読み込みに失敗しました。",
+    "segment": {
+      "day": "日",
+      "week": "週",
+      "month": "月"
+    },
+    "metric": {
+      "temperatureShort": "温度",
+      "humidityShort": "湿度",
+      "lightShort": "光",
+      "moistureShort": "土壌"
+    }
+  }
+}

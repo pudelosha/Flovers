@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "送信中..."
+    },
+    "support": {
+      "copyToMe": "メールで自分にもコピーを送信"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "メールアドレスの変更",
+        "newEmailPlaceholder": "新しいメールアドレス",
+        "currentPasswordPlaceholder": "現在のパスワード"
+      },
+      "changePassword": {
+        "title": "パスワードの変更",
+        "currentPasswordPlaceholder": "現在のパスワード",
+        "newPasswordPlaceholder": "新しいパスワード",
+        "confirmNewPasswordPlaceholder": "新しいパスワードの確認",
+        "update": "更新"
+      },
+      "deleteAccount": {
+        "title": "アカウントの削除",
+        "warning": "この操作は取り消せません。続行すると、アカウントとデータは永久に削除されます。",
+        "passwordPlaceholder": "確認のためにパスワードを入力"
+      },
+      "reportBug": {
+        "title": "バグの報告",
+        "subjectPlaceholder": "件名",
+        "descriptionPlaceholder": "問題を説明..."
+      },
+      "contactUs": {
+        "title": "お問い合わせ",
+        "subjectPlaceholder": "件名",
+        "messagePlaceholder": "どうお手伝いできますか？"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "新しいメールアドレスを入力してください。",
+      "enterCurrentPassword": "現在のパスワードを入力してください。",
+      "emailUpdated": "メールアドレスが更新されました。",
+      "couldNotChangeEmail": "メールアドレスの変更に失敗しました。パスワードを確認して再試行してください。",
+      "enterNewPassword": "新しいパスワードを入力してください。",
+      "passwordsDoNotMatch": "新しいパスワードが一致しません。",
+      "passwordUpdated": "パスワードが更新されました。",
+      "couldNotChangePassword": "パスワードの変更に失敗しました。現在のパスワードを確認して再試行してください。",
+      "enterSubject": "件名を入力してください。",
+      "enterMessage": "メッセージを入力してください。",
+      "enterDescription": "問題を説明してください。",
+      "contactSent": "メッセージが送信されました。近日中にご連絡いたします。",
+      "bugSent": "バグの報告が送信されました。ありがとうございます。",
+      "couldNotSendContact": "メッセージの送信に失敗しました。再試行してください。",
+      "couldNotSendBug": "バグ報告の送信に失敗しました。再試行してください。",
+      "deleteNotImplemented": "アカウント削除機能はまだ利用できません。",
+      "requestTimedOut": "タイムアウトしました。再試行してください。"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "ログイン",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "signIn": "ログイン",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "resendActivation": "アクティベーションメールを受け取っていませんか？",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "signUp": "サインアップ",
+    "errors": {
+      "invalidCredentials": "無効なメールアドレスまたはパスワードです。",
+      "generic": "何かがうまくいきませんでした。再試行してください。"
+    },
+    "success": {
+      "welcome": "お帰りなさい！"
+    }
+  }
+}

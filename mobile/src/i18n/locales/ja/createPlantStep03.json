@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "読み込み中...",
+      "title": "ロケーションを選択",
+      "subtitle": "オプションですが役立ちます: ロケーションは植物をグループ化し、その後の並べ替えやフィルタリングに役立ちます。",
+      "errorLoadingLocations": "ロケーションの読み込みに失敗しました。",
+      "createLocation": "新しいロケーションを作成",
+      "yourLocations": "あなたのロケーション",
+      "categories": {
+        "indoor": "屋内",
+        "outdoor": "屋外",
+        "other": "その他"
+      },
+      "noLocations": {
+        "indoor": "屋内ロケーションはありません。",
+        "outdoor": "屋外ロケーションはありません。",
+        "other": "その他のロケーションはありません。"
+      },
+      "locationExists": "この名前のロケーションはすでに存在します。",
+      "errorCreatingLocation": "ロケーションの作成に失敗しました",
+      "quickSuggestions": "クイック提案"
+    },
+    "locationModal": {
+      "title": "新しいロケーション",
+      "locationName": "ロケーション名",
+      "category": "カテゴリー",
+      "indoor": "屋内",
+      "outdoor": "屋外",
+      "other": "その他",
+      "create": "作成",
+      "cancel": "キャンセル",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "リビングルーム",
+          "kitchen": "キッチン",
+          "diningRoom": "ダイニングルーム",
+          "bedroom": "寝室",
+          "bathroom": "バスルーム",
+          "hallway": "廊下",
+          "office": "オフィス",
+          "kidsRoom": "子供部屋"
+        },
+        "outdoor": {
+          "balcony": "バルコニー",
+          "terrace": "テラス",
+          "patio": "パティオ",
+          "garden": "庭",
+          "frontYard": "前庭",
+          "backyard": "裏庭",
+          "porch": "ポーチ",
+          "greenhouse": "温室"
+        },
+        "other": {
+          "staircase": "階段",
+          "garage": "ガレージ",
+          "basement": "地下室",
+          "lobby": "ロビー",
+          "sunroom": "サンルーム",
+          "workshop": "ワークショップ",
+          "studio": "スタジオ",
+          "attic": "屋根裏"
+        }
+      }
+    }
+  }
+}

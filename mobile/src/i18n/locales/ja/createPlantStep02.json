@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "植物のプロフィール",
+      "preferences": "好み",
+      "errorProfile": "植物のプロフィールを取得できませんでした。",
+      "labels": {
+        "sun": "日光",
+        "water": "水やり",
+        "difficulty": "難易度",
+        "potMaterials": "鉢の素材",
+        "soilMixes": "土の混合物",
+        "wateringInterval": "水やりの間隔",
+        "moistureInterval": "湿度の管理",
+        "fertilizeInterval": "肥料の間隔",
+        "repotInterval": "植え替え"
+      },
+      "values": {
+        "everyDays": "{{count}}日ごと",
+        "everyMonths": "{{count}}ヶ月ごと"
+      },
+      "traits": {
+        "sun": "日光",
+        "water": "水やり",
+        "difficulty": "難易度",
+        "soil": "土",
+        "temperature": "温度",
+        "humidity": "湿度",
+        "toxic": "毒性あり？",
+        "growth": "成長",
+        "light": "光",
+        "fertilizer": "肥料",
+        "recognize": "植物を識別する"
+      }
+    }
+  }
+}

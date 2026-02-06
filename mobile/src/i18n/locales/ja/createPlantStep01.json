@@ -1,0 +1,35 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "植物を選択",
+      "subtitle": "私たちの植物ライブラリ全体を検索したり、人気のリストから選んだり、カメラで植物をスキャンしたりできます。このステップをスキップすることもできますが、植物を選択すると、自動的に水やりなどのケアタスクが提案されます。",
+      "scanButton": "植物をスキャン",
+      "searchPlaceholder": "植物を検索",
+      "popularPlants": "人気の植物",
+      "noPlantsAvailable": "利用可能な植物はありません",
+      "errorSearch": "植物のリストを読み込めませんでした。",
+      "errorPopular": "人気の植物を読み込めませんでした"
+    },
+    "scannerModal": {
+      "title": "植物をスキャン",
+      "selectPlant": "検出された植物を選択",
+      "scanInstructions": "写真を撮るか、ギャラリーから選んでください。葉の形がはっきりと見える高品質な写真を使い、中央に配置し、他の植物や物でブロックされていないようにしてください。",
+      "noPhoto": "写真がありません",
+      "takePhoto": "写真を撮る",
+      "fromGallery": "ギャラリーから",
+      "recognize": "植物を認識",
+      "cameraRequired": "許可が必要",
+      "cameraPermissionMessage": "写真を撮るためにカメラとメディアの権限を付与してください。",
+      "libraryRequired": "許可が必要",
+      "libraryPermissionMessage": "写真を選ぶためにメディアの権限を付与してください。",
+      "cameraError": "カメラエラー",
+      "libraryError": "選択エラー",
+      "cameraFailure": "カメラを開けませんでした。",
+      "libraryFailure": "ギャラリーを開けませんでした。",
+      "recognitionFailure": "植物を認識できませんでした。",
+      "noResults": "結果がありません。より明確な写真を試してください。",
+      "back": "戻る",
+      "close": "閉じる"
+    }
+  }
+}

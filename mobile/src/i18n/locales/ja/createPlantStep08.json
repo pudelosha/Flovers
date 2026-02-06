@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "名前とメモ",
+      "subtitle": "植物に名前を付け、メモを追加し、（オプションで）購入日を設定して、年齢を推定できるようにします。",
+      "displayNameLabel": "名前",
+      "placeholderName": "例: リビングのモンステラ",
+      "notesLabel": "メモ",
+      "notesPlaceholder": "ケアのヒント、問題、購入場所など…",
+      "purchaseDateLabel": "購入日（オプション）",
+      "notSet": "設定されていません",
+      "done": "完了",
+      "setPurchaseDateTitle": "購入日を設定",
+      "datePlaceholder": "YYYY-MM-DD",
+      "cancel": "キャンセル",
+      "set": "設定",
+      "invalidDateTitle": "無効な日付",
+      "invalidDateMessage": "正しい日付をYYYY-MM-DD形式で入力してください。",
+      "nameRequired": "植物を作成するには名前を入力する必要があります。"
+    }
+  }
+}

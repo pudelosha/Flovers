@@ -1,0 +1,44 @@
+{
+  "plants": {
+    "header": {
+      "title": "植物"
+    },
+    "list": {
+      "unnamed": "名前のない植物"
+    },
+    "empty": {
+      "title": "植物がありません",
+      "desc1": "右下の「+」ボタンをタップして、最初の植物を追加してください。",
+      "desc2": "植物追加ウィザードが、植物の設定やパラメータの設定、リマインダーの計画をサポートします。"
+    },
+    "fab": {
+      "create": "植物を追加",
+      "sort": "並べ替え",
+      "filter": "フィルタ",
+      "clearFilter": "フィルタをクリア",
+      "locations": "場所"
+    },
+    "menu": {
+      "edit": "植物を編集",
+      "reminders": "リマインダーを表示",
+      "journal": "植物のジャーナルを表示",
+      "showQr": "QRコードを表示",
+      "delete": "植物を削除"
+    },
+    "toast": {
+      "loadFailed": "植物の読み込みに失敗しました",
+      "updated": "植物が更新されました",
+      "deleted": "植物が削除されました",
+      "qrSaved": "QRコードがギャラリーに保存されました。",
+      "qrEmailed": "このQRコードを含むメールがあなたのアカウントに送信されます。"
+    },
+    "alert": {
+      "loadFailedTitle": "読み込みエラー",
+      "loadFailedMsg": "植物の詳細を読み込めませんでした。",
+      "updateFailedTitle": "更新エラー",
+      "updateFailedMsg": "この植物を更新できませんでした。",
+      "deleteFailedTitle": "削除エラー",
+      "deleteFailedMsg": "この植物を削除できませんでした。"
+    }
+  }
+}

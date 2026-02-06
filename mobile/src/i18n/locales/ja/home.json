@@ -1,0 +1,70 @@
+{
+  "home": {
+    "header": {
+      "title": "スタート"
+    },
+    "fab": {
+      "showOverdue": "遅れているタスクを表示",
+      "showDueToday": "今日のタスクを表示",
+      "showAllTasks": "すべてのタスクを表示",
+      "markVisibleAsComplete": "表示されているタスクを完了としてマーク",
+      "sort": "並べ替え",
+      "filter": "フィルター",
+      "clearFilter": "フィルターをクリア",
+      "history": "履歴"
+    },
+    "menu": {
+      "markAsComplete": "完了としてマーク",
+      "editReminder": "リマインダーを編集",
+      "goToPlant": "植物のページに移動",
+      "showHistory": "履歴を表示",
+      "delete": "削除"
+    },
+    "taskTypes": {
+      "watering": "水やり",
+      "moisture": "霧吹き",
+      "fertilising": "肥料",
+      "care": "手入れ",
+      "repot": "植え替え"
+    },
+    "toasts": {
+      "failedToLoadTasks": "タスクの読み込みに失敗しました",
+      "taskCompleted": "タスクが完了しました",
+      "tasksCompleted": "タスクが完了しました",
+      "completeFailed": "完了できませんでした",
+      "completeSomeFailed": "{{ok}} 件のタスクが完了しました（{{total}} 件中）",
+      "taskNotLinkedToPlant": "このタスクは植物に関連付けられていません。"
+    },
+    "empty": {
+      "all": {
+        "title": "タスクがありません",
+        "introPrefix": "このページでは、あなたの次の",
+        "introBold": "植物の手入れタスク",
+        "introSuffix": "（水やり、肥料、植え替えなど）を表示します。",
+        "toGetStarted": "開始するには：",
+        "bullets": {
+          "createPlantsBold": "植物を追加",
+          "createPlantsSuffix": "タブで",
+          "plantsTabBold": "植物",
+          "addRemindersPrefix": "リマインダーを追加",
+          "remindersBold": "リマインダー",
+          "addRemindersSuffix": "各植物にリマインダーを設定して、ここに表示させます。",
+          "optionallyConnectPrefix": "オプションで接続する",
+          "iotBold": "IoTデバイス（Arduinoボード）",
+          "optionallyConnectMiddle": "タブで",
+          "readingsTabBold": "測定値",
+          "optionallyConnectSuffix": "温度、湿度、光、土壌の湿度をリアルタイムで追跡できます。"
+        },
+        "outro": "これを設定すると、ホームページは各植物の必要事項を確認するための中心となります。"
+      },
+      "overdue": {
+        "title": "遅れているタスクはありません",
+        "body": "現在、遅れているタスクはありません。\n\nすべて順調です — FABの「すべてを表示」オプションを使用してタスクリストを表示するか、フィルターを切り替えて今後のタスクを確認してください。"
+      },
+      "today": {
+        "title": "今日のタスクはありません",
+        "body": "今日はタスクがありません。\n\nFABの「すべてを表示」オプションを使用して今後のリマインダーを表示するか、植物のリマインダーのスケジュールを変更してください。"
+      }
+    }
+  }
+}

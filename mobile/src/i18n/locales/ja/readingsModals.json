@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "apply": "適用",
+      "clear": "クリア",
+      "close": "閉じる",
+      "reset": "リセット",
+      "save": "保存",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "読み取りを削除",
+      "messageBefore": "本当に削除しますか",
+      "messageAfter": "？この操作は元に戻せません。"
+    },
+    "deviceSetup": {
+      "title": "デバイス設定",
+      "httpEndpoints": "HTTP エンドポイント",
+      "addReadingPost": "読み取りを追加 (POST)",
+      "readReadingsGetPost": "読み取りを取得 (GET/POST)",
+      "samplePayloads": "サンプル ペイロード",
+      "addReadingBody": "読み取り追加リクエストの本文",
+      "readRequestBody": "読み取り取得リクエストの本文",
+      "currentAuthSecret": "現在の認証シークレット",
+      "showAuthSecret": "認証シークレットを表示",
+      "hideAuthSecret": "認証シークレットを隠す",
+      "generateNewSecret": "新しいシークレットを生成",
+      "downloadPdfDocumentation": "PDF ドキュメントをダウンロード",
+      "rotateConfirmTitle": "シークレットをローテートしますか？",
+      "rotateConfirmText": "新しいシークレットを生成すると現在のシークレットは無効になります。その後、デバイス設定を更新してください。",
+      "rotate": "ローテート"
+    },
+    "filter": {
+      "title": "読み取りをフィルタリング",
+      "plantLabel": "植物",
+      "locationLabel": "場所",
+      "statusLabel": "ステータス",
+      "selectPlant": "植物を選択",
+      "anyPlant": "任意の植物",
+      "anyLocation": "任意の場所",
+      "anyStatus": "任意のステータス",
+      "statusEnabled": "有効",
+      "statusDisabled": "無効"
+    },
+    "sort": {
+      "title": "読み取りを並べ替え",
+      "sortBy": "並べ替え基準",
+      "direction": "方向",
+      "keyPlantName": "植物名",
+      "keyLocation": "場所",
+      "keyLastRead": "最終読み取り",
+      "ascending": "昇順",
+      "descending": "降順"
+    },
+    "upsert": {
+      "linkDeviceTitle": "デバイスをリンク",
+      "editDeviceTitle": "デバイスを編集",
+      "noPlantsText": "まだ植物がありません。デバイスをリンクするにはまず植物を追加してください。",
+      "selectPlant": "植物を選択",
+      "locationPlaceholder": "場所",
+      "deviceNameRequired": "デバイス名（必須）",
+      "sensors": "センサー",
+      "sensorTemperature": "温度",
+      "sensorHumidity": "湿度",
+      "sensorLight": "光",
+      "sensorSoilMoisture": "土壌湿度",
+      "moistAlertLabel": "土壌湿度がしきい値を下回ると警告を送信",
+      "thresholdLabel": "しきい値：",
+      "samplingInterval": "サンプリング間隔",
+      "everyXHours": "毎{{count}}時間",
+      "authSecret": "認証シークレット",
+      "deviceKey": "デバイスキー",
+      "sendCodeViaEmail": "コードをメールで送信",
+      "saveCodeAsText": "コードをテキストとして保存",
+      "enabled": "有効",
+      "ingestReadingsFromDevice": "このデバイスから読み取りを取得",
+      "notesOptional": "ノート…（オプション）"
+    }
+  }
+}

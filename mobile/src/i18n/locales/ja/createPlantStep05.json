@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "鉢と土壌",
+      "subtitle": "これらの情報は任意です。鉢/容器の素材と土壌を選んでください — もしくは「指定なし」を選択して次へ進んでください。",
+      "containerMaterial": "鉢の素材",
+      "soilMix": "土壌 / ミックス",
+      "notSpecified": "指定なし",
+      "notSpecifiedDesc": "不確かな場合はスキップしてください。",
+      "potMaterials": {
+        "plastic": {
+          "label": "プラスチック",
+          "description": "軽量; 水分を長時間保持; 安価で万能。"
+        },
+        "ceramic": {
+          "label": "陶器（釉薬あり）",
+          "description": "重め; 水分をよく保持; 装飾的な仕上げ。"
+        },
+        "terracotta": {
+          "label": "テラコッタ",
+          "description": "多孔質; 水分を排出; サボテンや多肉植物に最適。"
+        },
+        "clay": {
+          "label": "粘土（釉薬なし）",
+          "description": "テラコッタに似ている; 呼吸する; より速く乾燥する。"
+        },
+        "cement": {
+          "label": "セメント",
+          "description": "非常に重い; モダンな外観; 水分をそこそこ保持。"
+        },
+        "concrete": {
+          "label": "コンクリート",
+          "description": "耐久性があり重い; 屋外で安定; 水分を保持。"
+        },
+        "metal": {
+          "label": "金属（一般的な）",
+          "description": "太陽の下で素早く熱くなる; カバー/インサートが必要な場合がある。"
+        },
+        "stainless": {
+          "label": "ステンレススチール",
+          "description": "モダン; 耐腐食性; 熱くなることがある。"
+        },
+        "aluminum": {
+          "label": "アルミニウム",
+          "description": "軽量; 熱を伝導; 太陽の下で過熱に注意。"
+        },
+        "iron": {
+          "label": "鉄 / スチール",
+          "description": "非常に耐久性がある; 錆びることがある; インサートが必要な場合がある。"
+        },
+        "copper": {
+          "label": "銅 / 真鍮",
+          "description": "装飾的; 土壌と反応することがある; 通常はカバーとして使用。"
+        },
+        "wood": {
+          "label": "木材",
+          "description": "自然な外観; インサートが必要な場合がある; 継続的な湿気で腐ることがある。"
+        },
+        "bamboo": {
+          "label": "竹",
+          "description": "軽量で持続可能; 通常はインサート付き; 室内向け。"
+        },
+        "rattan": {
+          "label": "ラタン / 籐",
+          "description": "装飾的なカバー; 内部に生産用鉢を保持。"
+        },
+        "glass": {
+          "label": "ガラス",
+          "description": "テラリウムに最適; 排水なし; 湿度を管理。"
+        },
+        "stone": {
+          "label": "石 / 大理石",
+          "description": "非常に重く安定している; 冷たさを長く保持。"
+        },
+        "resin": {
+          "label": "樹脂",
+          "description": "軽量で耐久性があり; 屋外に適している; 根を絶縁。"
+        },
+        "fiberglass": {
+          "label": "繊維強化プラスチック",
+          "description": "軽量で耐久性がある; 屋外に適している; 絶縁性。"
+        },
+        "biodegradable": {
+          "label": "生分解性",
+          "description": "例: ココナッツファイバー/ピート; スタート用鉢; 時間が経つと分解する。"
+        },
+        "fabric": {
+          "label": "布製鉢",
+          "description": "根を通気; 速乾性; 野菜に最適。"
+        },
+        "grow-bag": {
+          "label": "成長バッグ",
+          "description": "布製バッグ; 持ち運び可能; 水を速く排出; より頻繁な水やりが必要。"
+        },
+        "self-watering": {
+          "label": "自動水やり",
+          "description": "紐付きタンク; 定期的な水やりを維持しやすい。"
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "万能土",
+          "description": "ほとんどの室内植物に良いスタートオプション。"
+        },
+        "green-plants": {
+          "label": "観葉植物 / 室内用土",
+          "description": "観葉植物用の万能土（しばしばヤシの木にも使用）。"
+        },
+        "balcony-flowers": {
+          "label": "バルコニー用花と花壇用土",
+          "description": "より栄養豊富; 鉢や箱で咲く植物に最適。"
+        },
+        "cactus-succulent": {
+          "label": "サボテンと多肉植物用土",
+          "description": "非常に通気性が良い; サボテンと多肉植物に最適。"
+        },
+        "orchid": {
+          "label": "蘭用土",
+          "description": "粗い、樹皮基盤; 根元に多くの空気を提供。"
+        },
+        "aroid": {
+          "label": "アロイド用ミックス",
+          "description": "非常に通気性が良い（樹皮/パーライト）モンステラ/フィロデンドロン用。"
+        },
+        "seed-starting": {
+          "label": "種まき用土",
+          "description": "細かい; 根を育てるためと苗に適している。"
+        },
+        "bonsai": {
+          "label": "盆栽用土",
+          "description": "粗く通気性が良い; より圧縮されにくい。"
+        },
+        "herbs-vegetables": {
+          "label": "ハーブと野菜用土",
+          "description": "より栄養豊富; 食用植物に適している。"
+        },
+        "citrus": {
+          "label": "柑橘類用土",
+          "description": "通気性が良い; 柑橘類や地中海植物に適している。"
+        },
+        "fern": {
+          "label": "シダ用土",
+          "description": "湿気を好む; 通常はより多くの有機物を含む。"
+        },
+        "conifers": {
+          "label": "針葉樹用土",
+          "description": "針葉樹用土; よく軽く酸性で通気性が良い。"
+        },
+        "acid-loving": {
+          "label": "酸性土用植物",
+          "description": "ブルーベリー、ヒース、ツツジ、アザレアなどのための酸性土。"
+        },
+        "peat-free": {
+          "label": "ピートなし土",
+          "description": "より持続可能; 成分はメーカーによる。"
+        }
+      }
+    }
+  }
+}
