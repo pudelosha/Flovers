@@ -1,0 +1,97 @@
+{
+  "docs_overview": {
+    "title": "Visão geral",
+    "sections": [
+      {
+        "heading": "O que é o Flovers?",
+        "body": [
+          "Flovers é um assistente de cuidados com plantas que ajuda a organizar atividades diárias, acompanhar o histórico de cuidados e monitorar leituras dos seus próprios dispositivos IoT.",
+          "O aplicativo combina lembretes e tarefas com perfis de plantas (Suas plantas) e definições de plantas (perfis de espécies integrados com recomendações).",
+          "O Flovers apoia suas decisões, mas não as substitui—os resultados dos cuidados dependem das condições e da forma de aplicação das orientações.",
+          "O serviço inclui um aplicativo móvel (Android; futuramente iOS), uma API de backend e um site com documentação e informações legais."
+        ]
+      },
+      {
+        "heading": "Conceitos-chave (como funciona a estrutura do aplicativo)",
+        "body": [
+          "Definição da planta: perfil de espécie integrado que contém características gerais e recomendações (luz, rega/pulverização, fertilização etc.).",
+          "Instância da planta: a sua própria planta (seu exemplar), opcionalmente vinculada a uma Definição da planta para obter melhores orientações padrão.",
+          "Lembrete: regra cíclica (por exemplo, regar a cada X dias) com base na qual as Tarefas são criadas automaticamente.",
+          "Tarefa: ação específica gerada a partir de um Lembrete; você pode marcá-la como concluída e adicionar uma nota, construindo o histórico de cuidados."
+        ]
+      },
+      {
+        "heading": "Principais funcionalidades em resumo",
+        "body": [
+          "Conta do usuário: registro, login, confirmação de e-mail, redefinição de senha e gerenciamento das configurações do perfil.",
+          "Gerenciamento de plantas: adicionar plantas, agrupar por Localizações, notas e visualização do histórico de atividades.",
+          "Lembretes e tarefas: criação de rotinas cíclicas (rega, pulverização, fertilização, transplante, cuidados) e sua execução.",
+          "Leituras IoT: conexão de dispositivos próprios e registro de dados como temperatura, umidade do ar, umidade do solo e intensidade da luz."
+        ]
+      },
+      {
+        "heading": "Reconhecimento de plantas (a partir de foto)",
+        "body": [
+          "O Flovers permite reconhecer plantas a partir de uma foto para facilitar a correspondência com a Definição da planta e começar com melhores configurações padrão.",
+          "O reconhecimento ocorre no servidor usando o sistema de ML proprietário do Prestador de Serviço, treinado em mais de 700 espécies.",
+          "As fotos enviadas para reconhecimento são usadas exclusivamente para realizar o processo de reconhecimento e não se destinam ao armazenamento permanente.",
+          "Os resultados dependem da qualidade da foto, iluminação, nitidez, visibilidade da planta e semelhança com outras espécies."
+        ]
+      },
+      {
+        "heading": "Dispositivos IoT e dados de sensores",
+        "body": [
+          "O Flovers oferece suporte a dispositivos próprios ou de terceiros (por exemplo, Arduino) que enviam leituras associadas à sua conta.",
+          "Leituras suportadas: temperatura do ar, umidade do ar, umidade do solo e nível de luz.",
+          "As leituras são armazenadas no backend e apresentadas no aplicativo como valores atuais e histórico (resumos diários/semanais/mensais).",
+          "Você tem controle sobre o pareamento e o uso—estabilidade, calibração e instalação dos dispositivos ficam sob sua responsabilidade."
+        ]
+      },
+      {
+        "heading": "Códigos QR e acesso rápido",
+        "body": [
+          "Você pode gerar códigos QR contendo um link para uma Instância de planta específica na sua conta.",
+          "Um cenário típico é imprimir e colar o código no vaso e, em seguida, escanear para acessar rapidamente os detalhes da planta.",
+          "Os códigos QR servem para conveniência; trate-os como indicadores de acesso e não os compartilhe publicamente se puderem revelar metadados.",
+          "Atualmente, os detalhes das plantas destinam-se principalmente à visualização pelo proprietário autenticado."
+        ]
+      },
+      {
+        "heading": "Notificações e lembretes",
+        "body": [
+          "O Flovers pode enviar notificações push (via Firebase) sobre tarefas de hoje ou atrasadas—dependendo das configurações.",
+          "As configurações de notificação estão no Perfil; mesmo com o push desativado, lembretes e tarefas permanecem no aplicativo.",
+          "As mensagens por e-mail são usadas atualmente principalmente para ações relacionadas à conta (ativação e redefinição de senha).",
+          "As notificações têm caráter de apoio—o Flovers não garante a saúde das plantas nem que os lembretes evitarão perdas."
+        ]
+      },
+      {
+        "heading": "Privacidade, segurança e seus dados",
+        "body": [
+          "O Flovers armazena dados da conta e os dados necessários para a prestação do Serviço (plantas, lembretes, tarefas, notas e leituras).",
+          "As senhas são armazenadas de forma criptografada; a ativação da conta requer verificação de e-mail.",
+          "A premissa é o processamento de dados na UE; a hospedagem está planejada na Hetzner (UE), e as notificações push são realizadas pelo Firebase.",
+          "Os detalhes estão na Política de Privacidade e nos Termos disponíveis no site e no aplicativo."
+        ]
+      },
+      {
+        "heading": "Limitações e avisos importantes",
+        "body": [
+          "O Flovers é uma ferramenta de planejamento e monitoramento; não é um sistema profissional de aconselhamento e não substitui o conhecimento em jardinagem.",
+          "As leituras dos sensores podem ser imprecisas (calibração, instalação, condições); em situações importantes, verifique-as por conta própria.",
+          "As recomendações de cuidados são gerais e podem não se adequar às suas condições (substrato, vaso, luz, umidade, estação).",
+          "Se algo parecer incorreto, confie na sua própria avaliação—ajuste as rotinas e use fontes confiáveis."
+        ]
+      },
+      {
+        "heading": "E agora?",
+        "body": [
+          "Se você está começando, vá para Login & Register e, em seguida, crie sua primeira Instância de planta no assistente Create Plant Wizard.",
+          "Depois, configure Lembretes e execute Tarefas para manter a rotina e construir o histórico de cuidados.",
+          "Se você tiver um dispositivo, abra Readings, configure-o e use Readings History para observar tendências.",
+          "Use o FAQ para respostas rápidas e os documentos Termos/Política de Privacidade para questões formais."
+        ]
+      }
+    ]
+  }
+}

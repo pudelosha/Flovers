@@ -1,0 +1,48 @@
+{
+  "title": "Documentação",
+  "placeholder": {
+    "heading": "Em breve",
+    "body": "A documentação detalhada para esta tela aparecerá em breve."
+  },
+  "screens": {
+    "overview": {
+      "title": "Visão geral"
+    },
+    "auth": {
+      "title": "Login e registo"
+    },
+    "home": {
+      "title": "Ecrã principal"
+    },
+    "taskHistory": {
+      "title": "Histórico de tarefas"
+    },
+    "plants": {
+      "title": "Plantas"
+    },
+    "plantDetails": {
+      "title": "Detalhes da planta"
+    },
+    "createPlantWizard": {
+      "title": "Assistente de adição de planta"
+    },
+    "locations": {
+      "title": "Localizações"
+    },
+    "reminders": {
+      "title": "Lembretes"
+    },
+    "readings": {
+      "title": "Leituras"
+    },
+    "readingsHistory": {
+      "title": "Histórico de leituras"
+    },
+    "scanner": {
+      "title": "Scanner (QR)"
+    },
+    "profile": {
+      "title": "Perfil e definições"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Perfil",
+    "sections": [
+      {
+        "heading": "Objetivo desta vista",
+        "body": [
+          "A vista Perfil é o local central para gerir os dados da conta, as definições de notificações, a configuração da aplicação e o suporte.",
+          "Permite ao utilizador controlar tanto os dados pessoais como o comportamento da aplicação Flovers."
+        ]
+      },
+      {
+        "heading": "Conta",
+        "body": [
+          "A secção Conta apresenta informações básicas da conta, como o endereço de e-mail e a data de criação da conta.",
+          "A partir daqui, o utilizador pode alterar o endereço de e-mail (é necessária confirmação com palavra-passe), alterar a palavra-passe atual, terminar sessão ou eliminar permanentemente a conta.",
+          "A eliminação da conta resulta na remoção irreversível de todos os dados do utilizador, incluindo plantas, lembretes, tarefas, leituras e dispositivos."
+        ]
+      },
+      {
+        "heading": "Notificações",
+        "body": [
+          "A secção Notificações permite gerir os consentimentos e preferências para notificações por e-mail e push.",
+          "Para ambos os canais, o utilizador pode ativar ou desativar dois tipos de notificações: um resumo diário que informa sobre as tarefas agendadas para hoje e um lembrete enviado 24 horas depois, caso as tarefas ainda não tenham sido concluídas.",
+          "Para cada tipo de notificação, o utilizador define a hora de envio (hora cheia, por exemplo, 14:00)."
+        ]
+      },
+      {
+        "heading": "Definições",
+        "body": [
+          "A secção Definições permite controlar o comportamento geral e o aspeto da aplicação.",
+          "As opções disponíveis incluem a seleção do idioma, o formato de data e hora, as unidades de temperatura (Celsius, Fahrenheit, Kelvin), as unidades de medida (métricas ou imperiais) e a posição do botão FAB (lado esquerdo ou direito).",
+          "O utilizador também pode personalizar o aspeto da aplicação, escolhendo a imagem de fundo, o tema dos blocos (claro ou escuro) e o nível de transparência dos blocos."
+        ]
+      },
+      {
+        "heading": "Suporte",
+        "body": [
+          "A secção Suporte permite o contacto direto com a equipa da Flovers.",
+          "O utilizador pode reportar um problema ou enviar uma questão à equipa de suporte técnico.",
+          "O reporte de erros ajuda no desenvolvimento contínuo e na melhoria da qualidade da aplicação."
+        ]
+      }
+    ]
+  }
+}

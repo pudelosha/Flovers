@@ -1,0 +1,43 @@
+{
+  "docs_readings_history": {
+    "title": "Histórico de leituras",
+    "sections": [
+      {
+        "heading": "Objetivo desta visualização",
+        "body": [
+          "A visualização Histórico de leituras fornece uma visão completa dos dados de medição passados para o dispositivo e a planta associados.",
+          "Ao contrário da lista de Leituras (onde são visíveis principalmente os valores mais recentes), esta visualização serve para analisar tendências e alterações ao longo do tempo nos gráficos."
+        ]
+      },
+      {
+        "heading": "Intervalos de tempo: Dia, Semana, Mês",
+        "body": [
+          "O utilizador pode alternar entre três intervalos: Dia, Semana e Mês.",
+          "A visualização Dia apresenta leituras de um único dia em intervalos horários (assumindo que o dispositivo envia dados de hora a hora e que o utilizador aceita um maior consumo de bateria por parte do dispositivo).",
+          "As visualizações Semana e Mês mostram os dados numa perspetiva mais longa, facilitando a deteção de tendências."
+        ]
+      },
+      {
+        "heading": "Seleção do parâmetro de medição",
+        "body": [
+          "Os gráficos estão disponíveis para os parâmetros: temperatura do ar, humidade do ar, nível de luz e humidade do solo (dependendo do que o dispositivo mede).",
+          "O parâmetro é selecionado através dos botões abaixo do gráfico (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Navegação por períodos anteriores",
+        "body": [
+          "As setas junto ao período selecionado permitem navegar entre dias, semanas ou meses anteriores.",
+          "A navegação está disponível apenas para períodos para os quais existem dados — períodos futuros não são apresentados."
+        ]
+      },
+      {
+        "heading": "Disponibilidade dos dados e interpretação",
+        "body": [
+          "Se o dispositivo não tiver fornecido leituras para o período selecionado, o gráfico estará vazio ou poderá conter lacunas de dados.",
+          "Os dados dos sensores têm caráter informativo e devem ser interpretados juntamente com a observação das plantas e com a consciência da influência da calibração, da localização dos sensores e das condições ambientais."
+        ]
+      }
+    ]
+  }
+}

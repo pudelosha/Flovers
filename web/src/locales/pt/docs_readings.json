@@ -1,0 +1,88 @@
+{
+  "docs_readings": {
+    "title": "Leituras",
+    "sections": [
+      {
+        "heading": "Objetivo desta visualização",
+        "body": [
+          "A visualização Leituras permite navegar e gerenciar dispositivos IoT associados a plantas.",
+          "Cada dispositivo pode enviar para o Flovers medições como temperatura do ar, umidade do ar, nível de luz e umidade do solo.",
+          "Essa funcionalidade é destinada a usuários que constroem seus próprios dispositivos (por exemplo, baseados em Arduino ou ESP) para monitorar as condições das plantas."
+        ]
+      },
+      {
+        "heading": "Cartões de dispositivos e últimas leituras",
+        "body": [
+          "Na tela é exibida uma lista de cartões, onde cada cartão representa um dispositivo associado.",
+          "Cada cartão mostra o nome da planta, a localização e as leituras mais recentes dos sensores.",
+          "Se os dados ainda não tiverem sido recebidos, símbolos de espaço reservado são exibidos no lugar dos valores."
+        ]
+      },
+      {
+        "heading": "Interações com o cartão",
+        "body": [
+          "Clicar na área do cartão leva o usuário diretamente para a visualização Histórico de leituras do dispositivo.",
+          "Clicar no ícone de um parâmetro específico (por exemplo, umidade ou temperatura) abre o Histórico de leituras com esse parâmetro selecionado.",
+          "Isso permite acesso rápido a gráficos detalhados."
+        ]
+      },
+      {
+        "heading": "Ações do dispositivo (menu de 3 pontos)",
+        "body": [
+          "Cada cartão de dispositivo possui um menu de 3 pontos com ações adicionais.",
+          "As opções disponíveis são: Histórico de leituras, Detalhes da planta, Editar dispositivo e Remover dispositivo.",
+          "A remoção do dispositivo é permanente e elimina sua associação com a planta."
+        ]
+      },
+      {
+        "heading": "Histórico de leituras",
+        "body": [
+          "A visualização Histórico de leituras apresenta gráficos detalhados dos dados de medição coletados.",
+          "Os dados podem ser exibidos em visão diária, semanal e mensal.",
+          "Os gráficos estão disponíveis para temperatura do ar, umidade do ar, nível de luz e umidade do solo (dependendo do dispositivo)."
+        ]
+      },
+      {
+        "heading": "Menu FAB",
+        "body": [
+          "O botão FAB disponibiliza ações relacionadas ao gerenciamento de dispositivos.",
+          "As opções disponíveis são: Conectar dispositivo, Configuração do dispositivo, Ordenar e Filtrar.",
+          "A ordenação pode ser feita pelo nome da planta, localização ou horário da última leitura.",
+          "A filtragem inclui nome da planta, localização e status do dispositivo (ativo, inativo)."
+        ]
+      },
+      {
+        "heading": "Conexão do dispositivo",
+        "body": [
+          "A opção Conectar dispositivo é usada para adicionar um novo dispositivo de medição e vinculá-lo a uma planta.",
+          "Durante a configuração, são selecionados os parâmetros exibidos no cartão e alertas opcionais (por exemplo, baixo nível de umidade do solo).",
+          "Cada dispositivo recebe um identificador exclusivo do dispositivo e uma chave secreta do dispositivo."
+        ]
+      },
+      {
+        "heading": "Autorização do dispositivo e fluxo de dados",
+        "body": [
+          "Os dispositivos se autorizam usando o identificador do dispositivo e a chave secreta.",
+          "Para salvar leituras, não é necessária autorização do usuário — o acesso é controlado exclusivamente pelos dados do dispositivo.",
+          "Essa abordagem simplifica a integração e a comunicação IoT."
+        ]
+      },
+      {
+        "heading": "Configuração do dispositivo e documentação",
+        "body": [
+          "A opção Configuração do dispositivo fornece instruções técnicas sobre a integração do hardware.",
+          "Inclui informações sobre endpoints da API (POST para envio de leituras, GET para obtê-las), payloads de exemplo e configurações.",
+          "O usuário pode baixar a documentação completa, incluindo código de exemplo, esquemas de conexão (Fritzing) e sensores sugeridos."
+        ]
+      },
+      {
+        "heading": "Informações importantes",
+        "body": [
+          "A estabilidade do dispositivo, a calibração dos sensores e a montagem física são de responsabilidade do usuário.",
+          "As leituras dos sensores têm caráter informativo e devem ser interpretadas juntamente com a observação das plantas.",
+          "O Flovers não garante a precisão dos dados provenientes de dispositivos externos ou de construção própria."
+        ]
+      }
+    ]
+  }
+}

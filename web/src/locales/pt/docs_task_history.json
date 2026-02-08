@@ -1,0 +1,81 @@
+{
+  "docs_task_history": {
+    "title": "Histórico de tarefas",
+    "sections": [
+      {
+        "heading": "Objetivo da visualização Histórico de tarefas",
+        "body": [
+          "O Histórico de tarefas serve para visualizar e gerenciar tarefas que já foram realizadas (fechadas).",
+          "Facilita a análise do que foi feito, quando foi feito e a quais plantas as ações se referiam.",
+          "A visualização pode ser aberta com um filtro ativo (por exemplo, histórico de uma planta selecionada) ou apresentar todas as tarefas fechadas."
+        ]
+      },
+      {
+        "heading": "Cartões de tarefas fechadas",
+        "body": [
+          "Cada cartão representa uma única tarefa fechada e contém, entre outros, o tipo de tarefa (por exemplo, Rega, Pulverização, Fertilização), o nome da planta, a localização e a data de execução.",
+          "As tarefas fechadas podem conter uma nota adicionada ao marcar a tarefa como concluída.",
+          "As notas só ficam visíveis após expandir o cartão."
+        ]
+      },
+      {
+        "heading": "Visualização de notas: expandir e recolher",
+        "body": [
+          "Para ver a nota de uma tarefa fechada, você pode expandir o cartão tocando nele.",
+          "Você também pode usar o menu de três pontos para executar a ação Expandir/Recolher (dependendo do estado atual).",
+          "Dessa forma, a lista pode permanecer legível e compacta, enquanto os detalhes ficam disponíveis sob demanda."
+        ]
+      },
+      {
+        "heading": "Menu do cartão (três pontos)",
+        "body": [
+          "Cada cartão de tarefa fechada possui um menu contextual com ações relacionadas a esse item específico do histórico.",
+          "Expandir/Recolher: mostra ou oculta a seção de notas dentro do cartão.",
+          "Editar lembrete: leva ao Lembrete associado à tarefa para alterar as configurações de recorrência ou outros parâmetros.",
+          "Ir para a planta: leva à visualização Detalhes da planta associada à tarefa.",
+          "Excluir tarefa: remove permanentemente a tarefa fechada selecionada da conta do Usuário."
+        ]
+      },
+      {
+        "heading": "Ações FAB (Floating Action Button)",
+        "body": [
+          "A visualização Histórico de tarefas possui um botão FAB com ações para trabalhar em toda a lista.",
+          "Ordenar: altera a ordem de exibição das tarefas fechadas.",
+          "Filtrar: restringe a lista do histórico aos critérios selecionados.",
+          "Excluir: permite a exclusão em massa de tarefas com base em critérios (por exemplo, tarefas de uma planta selecionada, de uma localização, de um tipo de tarefa ou tarefas mais antigas que uma data especificada)."
+        ]
+      },
+      {
+        "heading": "Opções de ordenação",
+        "body": [
+          "A ordenação ajuda a visualizar o histórico na ordem que melhor se adapta à sua forma de trabalhar.",
+          "As opções de ordenação disponíveis são: Data de execução, Nome da planta e Localização."
+        ]
+      },
+      {
+        "heading": "Opções de filtragem",
+        "body": [
+          "Os filtros permitem focar em um subconjunto selecionado de tarefas fechadas.",
+          "Você pode filtrar por: Nome da planta, Localização, Tipo de tarefa e Intervalo de datas de execução.",
+          "Os filtros podem ser combinados, por exemplo, para exibir Fertilização realizada em uma determinada localização em um mês selecionado."
+        ]
+      },
+      {
+        "heading": "Exclusão em massa (ação Excluir)",
+        "body": [
+          "A exclusão em massa permite remover permanentemente várias tarefas fechadas ao mesmo tempo com base nos critérios selecionados.",
+          "Cenários típicos incluem: limpar o histórico de uma planta, remover tarefas de uma localização, remover apenas um tipo de tarefa ou remover tarefas mais antigas que a data indicada.",
+          "A exclusão em massa é permanente e não pode ser desfeita."
+        ]
+      },
+      {
+        "heading": "Diferenças entre Histórico de tarefas e Home",
+        "body": [
+          "Home se concentra nas tarefas atuais (para hoje e atrasadas) e em sua execução.",
+          "O Histórico de tarefas se concentra nas tarefas concluídas e oferece suporte à visualização, ordenação, filtragem e exclusão de registros históricos.",
+          "Juntas, essas visualizações permitem tanto executar ações diárias (Home) quanto analisar o histórico de cuidados de longo prazo (Histórico de tarefas)."
+        ]
+      }
+    ]
+  }
+}

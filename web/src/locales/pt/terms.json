@@ -1,0 +1,144 @@
+{
+  "terms": {
+    "title": "Regulamento",
+    "lastUpdated": "Última atualização: {{date}}",
+    "section1": {
+      "title": "§ 1. Disposições gerais",
+      "p1": "O presente Regulamento define as regras de utilização do serviço online Flovers e da aplicação móvel Flovers (Android e, no futuro, iOS), bem como as condições de prestação de serviços por via eletrónica pelo Prestador de Serviços.",
+      "p2": "O Prestador de Serviços é Marcin Janowski Copy Paste IT Solutions, ul. płk. Francesco Nullo 30/115, 31-543 Cracóvia, Polónia, e-mail: info@flovers.app (doravante: \"Prestador de Serviços\").",
+      "p3": "Ao utilizar o Serviço (incluindo através do registo de uma Conta, início de sessão, utilização das funcionalidades da aplicação ou do serviço), o Utilizador aceita o Regulamento e compromete-se a cumpri-lo.",
+      "p4": "Nos assuntos não regulados pelo Regulamento aplicam-se, em particular: a lei sobre a prestação de serviços por via eletrónica, o Código Civil, a lei dos direitos do consumidor, bem como outras disposições relevantes do direito polaco e do direito da UE."
+    },
+    "section2": {
+      "title": "§ 2. Definições",
+      "items": [
+        "\"Serviço\" – serviços prestados por via eletrónica pelo Prestador de Serviços no âmbito do Flovers, incluindo a aplicação móvel, o serviço online e a infraestrutura backend associada.",
+        "\"Aplicação\" – a aplicação móvel Flovers disponibilizada para dispositivos móveis (Android; no futuro iOS).",
+        "\"Serviço Online\" – o site Flovers juntamente com a documentação e informações.",
+        "\"Utilizador\" – a pessoa que utiliza o Serviço; no caso de registo – a pessoa que criou uma Conta.",
+        "\"Conta\" – o perfil individual do Utilizador no sistema do Prestador de Serviços, protegido por palavra-passe.",
+        "\"Dispositivo\" – o dispositivo a partir do qual o Utilizador utiliza o Serviço (por exemplo, telefone, tablet) e, se aplicável, o dispositivo de medição (por exemplo, Arduino) que envia leituras para o Serviço.",
+        "\"Definição de planta\" – ficha/registo de planta elaborado pelo Prestador de Serviços que contém, entre outros, características, preferências e recomendações (por exemplo, rega, pulverização, fertilização), podendo incluir elementos gerados automaticamente (por exemplo, conteúdos de IA).",
+        "\"Instância de planta\" – planta definida pelo Utilizador na Conta (o seu próprio exemplar), que pode estar associada a uma Definição de planta.",
+        "\"Leituras / Dados de medição\" – dados de sensores (por exemplo, temperatura do ar, humidade do ar, humidade do solo, nível de luz) atribuídos a uma Instância de planta.",
+        "\"Lembrete\" – definição de uma atividade cíclica (por exemplo, rega, pulverização, transplante, cuidados, fertilização), com base na qual são criadas Tarefas.",
+        "\"Tarefa\" – item da lista de atividades a realizar criado com base num Lembrete; o Utilizador pode marcá-lo como concluído e adicionar notas.",
+        "\"Conteúdos do Utilizador\" – dados que o Utilizador introduz ou mantém no Serviço (por exemplo, Instâncias de plantas, notas, histórico de tarefas, diário da planta, associações a dispositivos, dados de medição).",
+        "\"Reconhecimento de plantas\" – funcionalidade que consiste na análise de uma fotografia fornecida pelo Utilizador e no retorno de um resultado de reconhecimento pelo sistema do Prestador de Serviços.",
+        "\"Regulamento\" – os presentes termos de utilização do Flovers."
+      ]
+    },
+    "section3": {
+      "title": "§ 3. Âmbito do Serviço e funcionalidades",
+      "intro": "O Serviço pode incluir, em particular:",
+      "list": [
+        "registo e gestão da Conta (início de sessão, confirmação de e-mail, reposição de palavra-passe, reenvio do link de ativação)",
+        "biblioteca de Definições de plantas e orientações associadas",
+        "criação de Instâncias de plantas e manutenção de diário/histórico (notas, histórico de tarefas)",
+        "Lembretes e Tarefas relacionadas com o cuidado das plantas (por exemplo, rega, pulverização, fertilização, transplante)",
+        "Reconhecimento de plantas com base numa fotografia enviada pelo Utilizador",
+        "integração com dispositivos de medição e armazenamento e apresentação de Dados de medição",
+        "geração e leitura de códigos QR que conduzem a recursos do Utilizador (por exemplo, a uma Instância de planta)",
+        "documentação e secção de FAQ"
+      ],
+      "p1": "O Serviço é atualmente disponibilizado como versão gratuita (beta). O Prestador de Serviços pode, no futuro, introduzir planos pagos, limitações para o plano gratuito, publicidade ou subscrições – informando os Utilizadores no Serviço e/ou no Serviço Online.",
+      "p2": "O Prestador de Serviços pode alterar as funcionalidades, a interface e a forma de funcionamento do Serviço, incluindo remover ou adicionar funcionalidades, desde que não viole disposições legais imperativas."
+    },
+    "section4": {
+      "title": "§ 4. Requisitos técnicos",
+      "items": [
+        "Dispositivo com acesso à Internet.",
+        "Navegador de Internet atualizado (para o Serviço Online) ou sistema Android compatível (para a Aplicação).",
+        "Endereço de e-mail ativo (para registo e gestão da Conta).",
+        "Suporte ativado para JavaScript e cookies no navegador (para o Serviço Online), se necessário para o correto funcionamento."
+      ]
+    },
+    "section5": {
+      "title": "§ 5. Conta e segurança",
+      "p1": "Para utilizar a maioria das funcionalidades do Serviço é necessário criar uma Conta.",
+      "p2": "O Utilizador é obrigado a fornecer dados verdadeiros e a manter a confidencialidade dos dados de início de sessão.",
+      "p3": "O Utilizador é responsável pelas ações realizadas com a sua Conta, salvo se resultarem de causas imputáveis ao Prestador de Serviços.",
+      "p4": "O Prestador de Serviços pode bloquear temporariamente o acesso à Conta ou ao Serviço em caso de deteção de abusos, violações de segurança ou violações do Regulamento."
+    },
+    "section6": {
+      "title": "§ 6. Conteúdos do Utilizador e licença",
+      "p1": "O Utilizador mantém os direitos sobre os seus Conteúdos do Utilizador na medida em que lhe sejam atribuídos por lei.",
+      "p2": "O Utilizador concede ao Prestador de Serviços uma licença não exclusiva, gratuita, revogável (através da eliminação da Conta ou dos Conteúdos), transferível na medida necessária para a prestação do Serviço, para armazenar, fixar, reproduzir, exibir e processar os Conteúdos do Utilizador exclusivamente para a execução e manutenção do Serviço.",
+      "p3": "No âmbito do Reconhecimento de plantas, o Utilizador pode enviar uma fotografia para o sistema do Prestador de Serviços. O Prestador de Serviços declara que as fotografias utilizadas para reconhecimento não são armazenadas por mais tempo do que o necessário para a realização do processo de reconhecimento, salvo se o Utilizador utilizar expressamente uma funcionalidade que exija o seu armazenamento.",
+      "p4": "O Utilizador declara que detém os direitos sobre os conteúdos que fornece ao Serviço e que estes não violam direitos de terceiros."
+    },
+    "section7": {
+      "title": "§ 7. Regras de utilização e proibições",
+      "intro": "O Utilizador compromete-se a utilizar o Serviço de acordo com a lei, os bons costumes e com respeito pelos direitos de terceiros. É proibido, em particular:",
+      "list": [
+        "tentar contornar a autenticação, as medidas de segurança ou as limitações técnicas",
+        "abuso da API, endpoints ou mecanismos de integração (incluindo os relacionados com dispositivos de medição) de forma que possa perturbar o funcionamento do Serviço",
+        "introduzir no Serviço conteúdos ilegais, ofensivos, que violem direitos de personalidade, direitos de autor ou direitos de propriedade intelectual",
+        "envio de spam ou conteúdos promocionais/em massa através das funcionalidades de contacto ou suporte",
+        "ações que conduzam a acesso não autorizado aos dados de outros Utilizadores"
+      ],
+      "p1": "O Prestador de Serviços pode limitar o acesso ao Serviço ou à Conta em caso de violação das regras acima."
+    },
+    "section8": {
+      "title": "§ 8. Códigos QR, links e \"chaves secretas\"",
+      "p1": "O Serviço pode permitir a geração de códigos QR ou links (por exemplo, para uma Instância de planta). O Utilizador é responsável pela sua guarda e partilha.",
+      "p2": "Se o Utilizador partilhar com terceiros links, identificadores ou chaves de acesso (por exemplo, para leitura de dados de medição), essas pessoas podem obter acesso às informações indicadas de acordo com as permissões concedidas. O Utilizador assume o risco associado a tal partilha."
+    },
+    "section9": {
+      "title": "§ 9. Pagamentos e planos (informação futura)",
+      "p1": "À data de publicação do presente Regulamento, o Serviço é disponibilizado gratuitamente em modelo beta.",
+      "p2": "O Prestador de Serviços pode, no futuro, introduzir planos pagos, subscrições renováveis, publicidade ou limites (por exemplo, número de plantas). A introdução de planos pagos pode ocorrer, entre outros, através do Google Play ou da Apple App Store.",
+      "p3": "Caso sejam introduzidas subscrições, estas podem ter caráter de renovação automática. As condições de pagamento, faturação e eventuais reembolsos podem resultar das regras da loja (Google/Apple) e das informações apresentadas no Serviço no momento da compra."
+    },
+    "section10": {
+      "title": "§ 10. Responsabilidade e ressalvas",
+      "p1": "O Serviço tem caráter informativo e utilitário e destina-se a apoiar o cuidado das plantas. O Prestador de Serviços não garante a obtenção de resultados específicos (por exemplo, crescimento das plantas, prevenção de doenças das plantas, evitar erros de cuidados). As decisões relativas ao cuidado das plantas são tomadas pelo Utilizador por sua própria responsabilidade.",
+      "p2": "O Prestador de Serviços fornece o Serviço no modelo \"as is\" (de acordo com os melhores esforços). Podem ocorrer interrupções técnicas ou limitações de disponibilidade relacionadas com manutenção, desenvolvimento ou avarias.",
+      "p3": "O Prestador de Serviços não se responsabiliza por danos resultantes de: utilização incorreta do Serviço, dados incorretos introduzidos pelo Utilizador, funcionamento defeituoso dos Dispositivos de medição do lado do Utilizador, interrupções no acesso à Internet ou outras circunstâncias fora do controlo do Prestador de Serviços, na medida permitida por lei.",
+      "p4": "As disposições do presente parágrafo não excluem nem limitam os direitos do consumidor resultantes de disposições legais imperativas."
+    },
+    "section11": {
+      "title": "§ 11. Reclamações e contacto",
+      "p1": "O Utilizador pode apresentar reclamações relativas ao funcionamento do Serviço por via eletrónica para o endereço: info@flovers.app.",
+      "p2": "A reclamação deve descrever o problema, indicar a data e as circunstâncias da ocorrência e – se possível – anexar informações que facilitem a identificação do caso (por exemplo, capturas de ecrã).",
+      "p3": "O Prestador de Serviços responderá sem demora injustificada, sempre que possível no prazo máximo de 14 dias."
+    },
+    "section12": {
+      "title": "§ 12. Rescisão do contrato, eliminação da conta",
+      "p1": "O Utilizador pode, a qualquer momento, eliminar a Conta a partir da Aplicação, o que resulta na eliminação permanente da Conta e dos dados associados no sistema do Prestador de Serviços (sem modo \"oculto\").",
+      "p2": "O Prestador de Serviços pode suspender ou cessar a prestação do Serviço ao Utilizador em caso de violação do Regulamento, ações ilegais ou ações que ameacem a segurança do Serviço.",
+      "p3": "O Prestador de Serviços pode cessar a prestação do Serviço (no todo ou em parte) por motivos relevantes (por exemplo, razões técnicas ou legais), informando os Utilizadores com a antecedência adequada, sempre que possível."
+    },
+    "section13": {
+      "title": "§ 13. Propriedade intelectual",
+      "p1": "O software, o design, os logótipos, o nome Flovers, a documentação e os conteúdos disponibilizados pelo Prestador de Serviços no âmbito do Serviço estão protegidos por lei, incluindo direitos de autor, e pertencem ao Prestador de Serviços ou a entidades autorizadas.",
+      "p2": "É proibido copiar, modificar, distribuir ou utilizar elementos do Serviço sem o consentimento do Prestador de Serviços, salvo o uso permitido nos termos da lei."
+    },
+    "section14": {
+      "title": "§ 14. Idade do Utilizador",
+      "p1": "O Serviço destina-se a pessoas que tenham completado 16 anos de idade.",
+      "p2": "Se o Utilizador não tiver completado 16 anos de idade, não deve criar uma Conta nem utilizar o Serviço."
+    },
+    "section15": {
+      "title": "§ 15. Documentos relacionados",
+      "intro": "Os seguintes documentos e informações estão relacionados com o Serviço:",
+      "list": [
+        "Política de Privacidade",
+        "Política de Cookies",
+        "Documentação e FAQ"
+      ]
+    },
+    "section16": {
+      "title": "§ 16. Lei aplicável e resolução de litígios",
+      "p1": "O Regulamento é regido pela lei polaca, sem prejuízo das disposições legais imperativas de proteção do consumidor.",
+      "p2": "Em primeiro lugar, os litígios devem ser resolvidos de forma amigável (por exemplo, através de contacto por e-mail e tentativa de acordo).",
+      "p3": "O consumidor pode recorrer a meios extrajudiciais de resolução de litígios e à plataforma ODR (Online Dispute Resolution) disponível no endereço: https://ec.europa.eu/consumers/odr/.",
+      "p4": "A competência do tribunal em litígios com consumidores é determinada de acordo com as disposições legais aplicáveis."
+    },
+    "section17": {
+      "title": "§ 17. Alterações ao Regulamento",
+      "p1": "O Prestador de Serviços pode alterar o Regulamento por motivos relevantes (por exemplo, alterações legais, desenvolvimento do Serviço, alterações tecnológicas).",
+      "p2": "O Prestador de Serviços informará sobre as alterações ao Regulamento no Serviço Online e/ou na Aplicação. A continuação da utilização do Serviço após a entrada em vigor das alterações significa a aceitação do Regulamento atualizado."
+    }
+  }
+}

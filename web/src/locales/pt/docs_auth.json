@@ -1,0 +1,56 @@
+{
+  "docs_auth": {
+    "title": "Login e registo",
+    "sections": [
+      {
+        "heading": "Criação de uma nova conta (Registo)",
+        "body": [
+          "Para utilizar o Flovers, é necessário criar uma conta de utilizador individual. O registo é efetuado diretamente na aplicação móvel.",
+          "Durante o registo, é necessário apenas um endereço de e-mail e uma palavra-passe. Nesta fase, não são exigidos quaisquer dados pessoais adicionais.",
+          "A palavra-passe deve ter pelo menos 8 caracteres e conter pelo menos um número e um carácter especial, de modo a garantir um nível básico de segurança.",
+          "Antes de concluir o registo, o utilizador deve aceitar os Termos e Condições e a Política de Privacidade."
+        ]
+      },
+      {
+        "heading": "Ativação da conta por e-mail",
+        "body": [
+          "Após o envio do formulário de registo, é enviada uma mensagem de ativação para o endereço de e-mail indicado.",
+          "Para ativar a conta, é necessário clicar no link de confirmação presente na mensagem recebida.",
+          "Até que a conta seja ativada, não é possível iniciar sessão na aplicação."
+        ]
+      },
+      {
+        "heading": "Reenvio do e-mail de ativação",
+        "body": [
+          "Se o e-mail de ativação não tiver sido recebido, o utilizador pode solicitar o seu reenvio através da aplicação.",
+          "Esta opção está disponível no ecrã de login ou de registo e pode ser utilizada se a mensagem tiver sido perdida, atrasada ou encaminhada para o spam.",
+          "Antes de solicitar um novo envio, recomenda-se verificar a pasta de spam ou outros filtros de correio."
+        ]
+      },
+      {
+        "heading": "Login numa conta existente",
+        "body": [
+          "Para iniciar sessão, é necessário apenas o endereço de e-mail e a palavra-passe associados à conta.",
+          "Se a conta ainda não tiver sido ativada, a aplicação informará sobre a necessidade de confirmar o endereço de e-mail.",
+          "As credenciais de login são verificadas de forma segura no servidor; as palavras-passe não são armazenadas em texto simples."
+        ]
+      },
+      {
+        "heading": "Reposição de palavra-passe esquecida",
+        "body": [
+          "Se o utilizador não conseguir iniciar sessão devido a uma palavra-passe esquecida, pode solicitar o envio de um e-mail para redefinição da palavra-passe.",
+          "A mensagem contém instruções e um link seguro que permite definir uma nova palavra-passe.",
+          "Após definir uma nova palavra-passe, é possível iniciar sessão imediatamente na aplicação."
+        ]
+      },
+      {
+        "heading": "Notas sobre segurança",
+        "body": [
+          "Cada conta de utilizador é protegida por uma palavra-passe individual definida durante o registo.",
+          "Por motivos de segurança, os dados de login não devem ser partilhados com terceiros.",
+          "Em caso de suspeita de acesso não autorizado à conta, recomenda-se a alteração imediata da palavra-passe."
+        ]
+      }
+    ]
+  }
+}

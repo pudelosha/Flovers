@@ -1,0 +1,71 @@
+{
+  "docs_plant_details": {
+    "title": "Detalhes da planta",
+    "sections": [
+      {
+        "heading": "Objetivo desta vista",
+        "body": [
+          "A vista Detalhes da planta é o local central para visualizar e gerir uma planta individual criada pelo utilizador.",
+          "Reúne informações sobre a planta, lembretes atribuídos, tarefas, leituras de sensores (se disponíveis) e ações rápidas relacionadas com esta planta."
+        ]
+      },
+      {
+        "heading": "Informações da planta",
+        "body": [
+          "Na parte superior do ecrã é apresentada a imagem da planta, o seu nome, o nome opcional da definição da planta e a localização atribuída.",
+          "Abaixo são apresentados os parâmetros detalhados fornecidos durante a criação da planta, como a data de compra, notas, condições de iluminação, orientação, distância da janela, tipo de vaso e tipo de substrato.",
+          "Estas informações ajudam a interpretar melhor os lembretes, as leituras e as decisões relacionadas com os cuidados."
+        ]
+      },
+      {
+        "heading": "Ações ao nível da planta (menu de 3 pontos)",
+        "body": [
+          "O menu de 3 pontos associado ao cabeçalho da planta disponibiliza ações adicionais relacionadas com a própria planta.",
+          "As opções disponíveis incluem visualizar a Definição da planta (se a planta estiver associada a uma), editar os dados da planta, alterar a imagem e aceder aos Lembretes filtrados para esta planta.",
+          "A alteração da imagem permite substituir a imagem predefinida, adicionar uma fotografia própria a partir do telefone ou remover a imagem."
+        ]
+      },
+      {
+        "heading": "Definição da planta",
+        "body": [
+          "Se a planta estiver associada a uma Definição da planta da base Flovers, o utilizador pode abrir a vista dedicada da Definição.",
+          "Esta vista apresenta informações da espécie, como a descrição da planta, preferências de cuidados, características, nível de dificuldade, intervalo de temperaturas, humidade, toxicidade e hábito de crescimento.",
+          "As definições de plantas fornecem orientações gerais e devem ser interpretadas no contexto das condições reais do utilizador."
+        ]
+      },
+      {
+        "heading": "Lembretes e tarefas",
+        "body": [
+          "A secção Lembretes apresenta todos os lembretes ativos atribuídos à planta.",
+          "Cada lembrete possui o seu próprio menu de 3 pontos, permitindo concluir a tarefa, editar o lembrete ou visualizar o histórico de tarefas.",
+          "Ao concluir uma tarefa, o utilizador pode adicionar uma nota, que passa a fazer parte do histórico de cuidados da planta."
+        ]
+      },
+      {
+        "heading": "Leituras mais recentes",
+        "body": [
+          "Se a planta estiver associada a um dispositivo de medição, as leituras mais recentes dos sensores são apresentadas nesta vista.",
+          "As leituras suportadas incluem temperatura do ar, humidade do ar, nível de luz e humidade do solo.",
+          "A secção mostra os últimos valores juntamente com a informação sobre o momento em que a medição foi efetuada.",
+          "Tocar no cartão das leituras leva o utilizador à vista Histórico de leituras, onde são apresentados gráficos detalhados e resumos (diários/semanais/mensais) de temperatura, humidade, luz e humidade do solo (desde que o dispositivo esteja associado à planta)."
+        ]
+      },
+      {
+        "heading": "Código QR e acesso rápido",
+        "body": [
+          "Cada planta possui um código QR único apresentado na parte inferior do ecrã.",
+          "A leitura deste código na vista do Scanner permite o acesso direto à vista Detalhes da planta.",
+          "O código QR pode ser guardado no dispositivo ou enviado por e-mail, permitindo a sua impressão e colocação no vaso."
+        ]
+      },
+      {
+        "heading": "Informações importantes",
+        "body": [
+          "As fotografias adicionadas pelo utilizador são armazenadas exclusivamente no dispositivo do utilizador e não são guardadas no backend do Flovers.",
+          "As imagens predefinidas das plantas provêm do backend do Flovers e podem ser geradas com recurso a IA.",
+          "As leituras dos sensores e as ações sugeridas têm caráter informativo e devem ser combinadas com a avaliação do próprio utilizador."
+        ]
+      }
+    ]
+  }
+}

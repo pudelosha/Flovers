@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Plantas",
+    "sections": [
+      {
+        "heading": "Objetivo desta visualização",
+        "body": [
+          "A visualização Plantas exibe todas as Instâncias de plantas criadas na sua conta.",
+          "Cada cartão representa uma planta (o seu exemplar). A partir do cartão, você pode acessar os Detalhes da planta ou usar atalhos no menu de três pontos (por exemplo, lembretes, diário, código QR)."
+        ]
+      },
+      {
+        "heading": "Cartões de plantas (lista)",
+        "body": [
+          "O cartão da planta mostra o nome da planta e (se disponível) o nome da definição de planta associada (espécie) e a Localização atribuída.",
+          "Tocar no conteúdo do cartão (fora do menu de três pontos) leva à visualização Detalhes da planta."
+        ]
+      },
+      {
+        "heading": "Menu de três pontos (ações da planta)",
+        "body": [
+          "Cada cartão possui um menu de três pontos contendo ações para a planta selecionada:",
+          "Editar planta: abre a edição dos dados e parâmetros da planta.",
+          "Mostrar lembretes: vai para a visualização Lembretes com o filtro definido para lembretes associados à planta selecionada.",
+          "Mostrar diário da planta: abre um modal com o histórico de tarefas concluídas (incluindo notas do usuário). As notas são visíveis e não são ocultadas.",
+          "Mostrar código QR: abre um modal com o código QR da planta, uma breve descrição e opções para salvar (baixar) ou enviar o código para o seu próprio endereço de e-mail.",
+          "Excluir planta: remove permanentemente a planta e os dados associados, como tarefas, lembretes e conexões com dispositivos."
+        ]
+      },
+      {
+        "heading": "Menu do botão FAB",
+        "body": [
+          "O FAB na visualização Plantas fornece ações rápidas:",
+          "Criar planta: inicia o Assistente de criação de planta (processo de 9 etapas), no qual é possível definir a planta com precisão.",
+          "Ordenar: ordena os cartões de plantas pelo Nome da planta ou pela Localização.",
+          "Filtrar: filtra a lista por Localização.",
+          "Localizações: vai para a visualização Localizações, onde é possível adicionar, editar e gerenciar localizações usadas para agrupamento e filtragem."
+        ]
+      },
+      {
+        "heading": "Exclusão da planta (informações importantes)",
+        "body": [
+          "A exclusão de uma planta é uma operação permanente e não pode ser desfeita.",
+          "A exclusão da planta remove a Instância da planta e os dados associados, como tarefas geradas, lembretes atribuídos a esta planta e links para dispositivos."
+        ]
+      },
+      {
+        "heading": "Quando nenhuma planta é exibida",
+        "body": [
+          "Se a lista estiver vazia, use a ação Criar planta no menu FAB para adicionar a primeira Instância de planta.",
+          "Após adicionar plantas, você pode agrupá-las usando Localizações e gerenciar rotinas de cuidados por meio de Lembretes."
+        ]
+      }
+    ]
+  }
+}

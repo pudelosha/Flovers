@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "title": "Flovers",
+    "subtitle": "Cuide das plantas com um plano claro, rotinas e histórico.",
+    "purpose": "Adicione suas plantas, vincule definições de espécies para receber dicas, configure lembretes recorrentes e acompanhe o histórico de cuidados — opcionalmente monitore leituras de sensores ou use códigos QR.",
+    "cta": {
+      "googlePlayUrl": "",
+      "appStoreUrl": ""
+    }
+  },
+  "homeNew": {
+    "cta": {
+      "title": "Comece simples. Mantenha a rotina com consistência.",
+      "subtitle": "Adicione plantas, vincule definições para obter dicas, configure lembretes recorrentes e deixe o Flovers criar tarefas automaticamente. Use notificações diárias, escaneie etiquetas QR para ir direto à planta e, opcionalmente, valide rotinas com leituras de sensores."
+    },
+    "sections": {
+      "how": {
+        "title": "Como funciona",
+        "subtitle": "Um ciclo simples: adicionar → definir → executar → manter a rotina. O Flovers garante a continuidade para que você foque nas plantas, não no planejamento."
+      }
+    },
+    "steps": {
+      "s1": {
+        "title": "Adicione uma planta: reconheça pela foto ou pesquise no banco",
+        "text": "Você adiciona uma planta em poucos segundos. Pesquise no banco com mais de 700 definições ou use o reconhecimento por foto para receber uma sugestão de correspondência. Depois de adicionada, todos os cuidados, tarefas e histórico ficam vinculados a essa única planta."
+      },
+      "s2": {
+        "title": "Vincule uma definição, ajuste o contexto e calcule intervalos realistas",
+        "text": "Conecte a planta a uma definição para desbloquear características de cuidado e configurações padrão. Adicione contexto: tamanho do vaso, tipo de substrato, localização e nível de luz. Com base nisso, o Flovers ajuda a calcular intervalos de lembrete realistas, que você pode ajustar a qualquer momento."
+      },
+      "s3": {
+        "title": "Execute tarefas rapidamente e construa um histórico de cuidados limpo",
+        "text": "Os lembretes criam tarefas automaticamente com prazos. A tela Home mostra o que precisa ser feito, e a tela da planta oferece o contexto completo. Ao concluir uma tarefa, você pode adicionar uma nota, e o Flovers agenda a próxima — assim a rotina funciona sem planejamento manual."
+      },
+      "s4": {
+        "title": "Siga o plano com notificações diárias",
+        "text": "Nas configurações do perfil, escolha notificações push ou e-mail e defina o horário de envio. Você receberá um resumo diário com as tarefas do dia e lembretes opcionais caso algo fique pendente — para que nada passe despercebido."
+      }
+    }
+  },
+  "featureGrid": {
+    "header": {
+      "title": "Funcionalidades que mantêm a rotina de cuidados",
+      "subtitle": "O Flovers se baseia em soluções práticas: intervalos iniciais realistas, tarefas a partir de lembretes, notificações diárias, atalhos QR e leituras IoT opcionais — para que as plantas fiquem bem sem pensar demais."
+    },
+    "tiles": {
+      "intervals": {
+        "title": "Intervalos sugeridos a partir das definições das plantas",
+        "text": "Vincule a planta a uma definição e o Flovers sugerirá intervalos iniciais com base na espécie e nas suas condições. Você pode aceitá-los, ajustá-los ou seguir seu próprio ritmo."
+      },
+      "tasks": {
+        "title": "Lembretes que viram tarefas",
+        "text": "Configure um lembrete recorrente (rega, pulverização, fertilização, transplante, cuidados). O Flovers os transforma em tarefas com prazos. Ao concluir uma, a próxima é criada automaticamente."
+      },
+      "notifications": {
+        "title": "Notificações diárias por push ou e-mail",
+        "text": "Nas configurações do perfil, você escolhe push ou e-mail. O Flovers pode enviar um resumo diário no horário escolhido (por exemplo, 14:00) com as tarefas do dia e, opcionalmente, lembrar cerca de ~24h depois se algo estiver pendente."
+      },
+      "qr": {
+        "title": "Escaneie o QR e vá direto para a tela da planta",
+        "text": "Imprima um código QR para a planta e cole-o no vaso. Escaneie e abra instantaneamente os Detalhes da planta — o caminho mais rápido para verificar o contexto e marcar os cuidados como concluídos."
+      },
+      "iot": {
+        "title": "Leituras IoT em tempo real e tendências",
+        "text": "Conecte seu próprio dispositivo ESP ou Arduino e envie leituras como temperatura, umidade, luz e umidade do solo. No app, você tem gráficos diários, semanais e mensais para identificar padrões e ajustar rotinas."
+      }
+    },
+    "images": {
+      "createPlantAlt": "Tela de adição de planta",
+      "readingsHistoryAlt": "Tela do histórico de leituras"
+    }
+  },
+  "core": {
+    "title": "Duas coisas que o Flovers faz melhor",
+    "lead": "Uma base sólida de plantas e reconhecimento rápido por foto. Você escolhe a correspondência, vincula uma vez e tem um ponto de partida sensato para os cuidados.",
+    "tiles": {
+      "defs": {
+        "title": "Mais de 700 definições de plantas com dicas práticas",
+        "desc": "Explore definições com fotos e características principais. Vincule a planta e o Flovers guiará você com configurações padrão bem pensadas.",
+        "bullets": [
+          "Características de cuidado: luz, solo, rega, umidade, temperatura.",
+          "Um bom ponto de partida que você pode ajustar às suas condições.",
+          "Vinculação rápida para que cada planta tenha uma base clara."
+        ]
+      },
+      "recognition": {
+        "title": "Reconhecimento por foto com sugestão da melhor correspondência",
+        "desc": "Tire uma foto ou adicione da galeria, e o Flovers sugerirá o que pode ser. Você escolhe a melhor correspondência e segue em frente.",
+        "bullets": [
+          "Funciona melhor com fotos nítidas e bem iluminadas.",
+          "Mostra várias opções semelhantes para escolher.",
+          "Projetado para economizar tempo, não para travar você em uma única tentativa."
+        ]
+      }
+    }
+  },
+  "qr": {
+    "title": "Scanner QR: um atalho físico",
+    "lead": "Gere um código QR para cada planta, imprima, cole no vaso e depois escaneie para ir direto aos detalhes e tarefas dessa planta.",
+    "image": {
+      "alt": "Escaneando o código QR de uma planta no app Flovers"
+    },
+    "blocks": {
+      "create": {
+        "title": "Criar → imprimir → colar",
+        "text": "Cada planta tem seu próprio ID. Nos Detalhes da planta, você pode gerar um código QR, salvá-lo no telefone ou enviá-lo por e-mail para imprimir e colar no vaso."
+      },
+      "scan": {
+        "title": "Escanear → confirmar → abrir Detalhes da planta",
+        "text": "Use o scanner QR integrado. Após a confirmação do código pelo backend, você será levado diretamente para a planta — com tarefas, lembretes, notas, leituras e todo o contexto."
+      },
+      "care": {
+        "title": "Cuidados no momento",
+        "text": "Regue a planta, escaneie a etiqueta e marque a tarefa como concluída — ou simplesmente escaneie para verificar se há algo a fazer. Uma conexão rápida entre a planta física e seus dados."
+      }
+    }
+  },
+  "store": {
+    "google": {
+      "alt": "Baixar no Google Play"
+    },
+    "apple": {
+      "alt": "Baixar na App Store"
+    }
+  }
+}

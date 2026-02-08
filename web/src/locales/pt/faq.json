@@ -1,0 +1,125 @@
+{
+  "title": "Perguntas frequentes",
+  "items": [
+    {
+      "q": "O que é o Flovers e para que posso usá-lo?",
+      "a": "Flovers é um aplicativo que auxilia no cuidado com plantas, organizando tarefas e monitorando parâmetros das plantas com base em dados de sensores. Ele fornece lembretes, dicas e informações úteis para o cultivo diário."
+    },
+    {
+      "q": "O Flovers é gratuito?",
+      "a": "Sim. Atualmente, o Flovers está disponível gratuitamente."
+    },
+    {
+      "q": "Quais plataformas o Flovers oferece suporte?",
+      "a": "Atualmente, o Flovers está disponível para Android. No futuro, está planejado o suporte para iOS."
+    },
+    {
+      "q": "É necessário ter uma conta para usar o Flovers?",
+      "a": "Sim. A criação de uma conta é necessária para utilizar o aplicativo e suas funcionalidades."
+    },
+    {
+      "q": "O Flovers está disponível em vários idiomas?",
+      "a": "Sim. O Flovers oferece suporte a vários idiomas, incluindo inglês, polonês, alemão, italiano, francês, espanhol, português, árabe, hindi, chinês, japonês e coreano."
+    },
+    {
+      "q": "Como posso criar uma conta?",
+      "a": "O cadastro pode ser feito diretamente no aplicativo. Após o registro, é necessário confirmar a conta por meio de um e-mail. Se necessário, é possível reenviar o e-mail de ativação."
+    },
+    {
+      "q": "Não recebi o e-mail de ativação — o que fazer?",
+      "a": "Você pode solicitar o reenvio do e-mail de ativação diretamente no aplicativo."
+    },
+    {
+      "q": "Como posso redefinir a senha?",
+      "a": "Você pode solicitar um e-mail para redefinição de senha no aplicativo. Se estiver logado(a), também pode alterar a senha diretamente nas configurações da conta."
+    },
+    {
+      "q": "Posso alterar o endereço de e-mail associado à conta?",
+      "a": "Sim. Após fazer login, você pode alterar o endereço de e-mail na tela Perfil do aplicativo."
+    },
+    {
+      "q": "Como posso excluir a conta e os dados?",
+      "a": "A conta pode ser excluída permanentemente na tela Perfil após o login. Essa operação é irreversível e resulta na exclusão de todos os dados associados."
+    },
+    {
+      "q": "Qual é a diferença entre a definição de planta e a minha planta?",
+      "a": "A definição de planta é um registro integrado na base de dados do Flovers que contém informações gerais sobre uma determinada espécie, como preferências, características, imagens, requisitos de luz, solo e intervalos recomendados de rega ou pulverização. Sua planta é uma instância específica que você gerencia individualmente."
+    },
+    {
+      "q": "Quão precisa é a função de reconhecimento de plantas?",
+      "a": "A precisão depende da qualidade da foto e da forma como a planta é enquadrada. O sistema de reconhecimento é treinado com uma base que abrange mais de 700 espécies de plantas."
+    },
+    {
+      "q": "As fotos enviadas para reconhecimento de plantas são armazenadas?",
+      "a": "Não. As fotos são processadas pelo backend apenas para fins de reconhecimento e não são armazenadas permanentemente."
+    },
+    {
+      "q": "Posso acompanhar várias plantas ao mesmo tempo?",
+      "a": "Sim. Atualmente, não há limite para o número de plantas nem de dispositivos de medição que podem ser adicionados. Cada planta pode ser associada a um único dispositivo de medição."
+    },
+    {
+      "q": "Posso adicionar anotações ou manter um diário das plantas?",
+      "a": "Sim. Você pode adicionar anotações às plantas e às tarefas concluídas, criando um diário de cuidados."
+    },
+    {
+      "q": "Como funcionam os lembretes e as tarefas?",
+      "a": "O usuário cria um lembrete com um intervalo cíclico definido. Com base nisso, as tarefas são criadas automaticamente. Após marcar uma tarefa como concluída, a próxima tarefa é agendada de acordo com o intervalo. Dependendo das configurações, você pode receber notificações por e-mail ou push sobre tarefas de hoje ou atrasadas em um dia."
+    },
+    {
+      "q": "Quais tipos de tarefas de cuidado são suportados?",
+      "a": "Os tipos de tarefas suportados incluem, entre outros, rega, pulverização, fertilização, replantio e cuidados gerais."
+    },
+    {
+      "q": "O que acontece se eu esquecer de realizar uma tarefa?",
+      "a": "Se a tarefa não for realizada, o aplicativo pode enviar um lembrete após 24 horas. Caso contrário, a tarefa permanecerá marcada como pendente até ser concluída."
+    },
+    {
+      "q": "Posso desativar ou editar os lembretes?",
+      "a": "Você pode editar ou remover lembretes a qualquer momento. Atualmente, não é possível pausá-los temporariamente."
+    },
+    {
+      "q": "Os lembretes garantem que minhas plantas ficarão saudáveis?",
+      "a": "Não. O Flovers fornece lembretes e dicas, porém as decisões de cuidado e seus resultados dependem do usuário."
+    },
+    {
+      "q": "Quais sensores e dispositivos posso conectar ao Flovers?",
+      "a": "O Flovers oferece suporte a sensores que medem temperatura do ar, umidade do ar, nível de luz e umidade do solo. As configurações recomendadas de dispositivos estão disponíveis na documentação do aplicativo."
+    },
+    {
+      "q": "Com que frequência os dados dos sensores são atualizados?",
+      "a": "As leituras podem ser enviadas a cada 5 minutos. Para fins de armazenamento, os dados são atualmente registrados em intervalos horários."
+    },
+    {
+      "q": "O que acontece se meu dispositivo de medição parar de funcionar?",
+      "a": "O aplicativo não informa sobre a ausência de leituras. No entanto, pode enviar uma notificação se o nível de umidade do solo cair abaixo de um determinado limite."
+    },
+    {
+      "q": "Os dados dos sensores são armazenados na nuvem?",
+      "a": "Sim. Os dados dos sensores são armazenados em um servidor VPS na nuvem."
+    },
+    {
+      "q": "Outras pessoas podem ver minhas leituras dos sensores?",
+      "a": "Atualmente, não. No futuro, podem ser introduzidas opções de compartilhamento. O usuário também pode baixar dados da API para integração com outros dispositivos, como irrigação automática."
+    },
+    {
+      "q": "Para que servem os códigos QR no Flovers?",
+      "a": "O usuário pode gerar e imprimir códigos QR e colocá-los nos vasos. Cada código leva a uma instância específica da planta. Após escanear o código no aplicativo, o usuário é imediatamente direcionado para os detalhes da planta."
+    },
+    {
+      "q": "Compartilhar um código QR ou link para a planta é seguro?",
+      "a": "Em geral, sim. Os detalhes da planta são visíveis apenas para o usuário autenticado que é seu proprietário."
+    },
+    {
+      "q": "Posso tornar minhas plantas públicas ou compartilhá-las com amigos?",
+      "a": "Não no momento. Funcionalidades de compartilhamento público podem ser adicionadas no futuro."
+    },
+    {
+      "q": "Por que não estou recebendo notificações?",
+      "a": "Certifique-se de que as notificações push estejam ativadas tanto nas configurações do sistema do dispositivo quanto nas configurações do aplicativo disponíveis na tela Perfil."
+    },
+    {
+      "q": "Como posso entrar em contato com o suporte técnico ou relatar um problema?",
+      "a": "Você pode usar o formulário de contato no site do Flovers ou o formulário de contato disponível no aplicativo, na tela Perfil."
+    }
+  ]
+}

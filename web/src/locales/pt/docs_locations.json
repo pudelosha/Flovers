@@ -1,0 +1,46 @@
+{
+  "docs_locations": {
+    "title": "Localizações",
+    "sections": [
+      {
+        "heading": "Objetivo desta visualização",
+        "body": [
+          "A visualização Localizações é usada para gerenciar os lugares onde as suas plantas estão localizadas, por exemplo, cômodos, varandas ou outras áreas.",
+          "As localizações são usadas principalmente para organizar as plantas e facilitar a filtragem, ordenação e agrupamento de dados no aplicativo."
+        ]
+      },
+      {
+        "heading": "Lista de localizações",
+        "body": [
+          "A tela exibe uma lista de todas as localizações definidas pelo usuário.",
+          "As localizações podem ser nomes padrão ou nomes personalizados criados pelo usuário.",
+          "Cada localização mostra o número de plantas atualmente associadas a ela."
+        ]
+      },
+      {
+        "heading": "Ações na localização (menu de 3 pontos)",
+        "body": [
+          "Cada localização possui um menu de 3 pontos com ações disponíveis.",
+          "O usuário pode editar o nome da localização para que reflita melhor o local real onde as plantas estão.",
+          "A exclusão de uma localização só é possível quando não há plantas associadas a ela."
+        ]
+      },
+      {
+        "heading": "Botão de ação (FAB)",
+        "body": [
+          "O botão FAB oferece ações rápidas relacionadas ao gerenciamento de localizações.",
+          "O usuário pode adicionar uma nova localização a qualquer momento.",
+          "As localizações podem ser ordenadas pelo nome da localização ou pelo número de plantas associadas."
+        ]
+      },
+      {
+        "heading": "Uso das localizações",
+        "body": [
+          "As localizações são usadas em todo o aplicativo para o agrupamento lógico das plantas.",
+          "Elas podem ser usadas como critérios de filtragem e ordenação em visualizações como Plantas, Lembretes ou Histórico de tarefas.",
+          "O uso de localizações facilita a manutenção da organização, especialmente quando há um grande número de plantas."
+        ]
+      }
+    ]
+  }
+}
