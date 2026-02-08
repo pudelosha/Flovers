@@ -1,0 +1,48 @@
+{
+  "title": "文档",
+  "placeholder": {
+    "heading": "即将推出",
+    "body": "该界面的详细文档将很快提供。"
+  },
+  "screens": {
+    "overview": {
+      "title": "概览"
+    },
+    "auth": {
+      "title": "登录与注册"
+    },
+    "home": {
+      "title": "主屏幕"
+    },
+    "taskHistory": {
+      "title": "任务历史"
+    },
+    "plants": {
+      "title": "植物"
+    },
+    "plantDetails": {
+      "title": "植物详情"
+    },
+    "createPlantWizard": {
+      "title": "添加植物向导"
+    },
+    "locations": {
+      "title": "位置"
+    },
+    "reminders": {
+      "title": "提醒"
+    },
+    "readings": {
+      "title": "读数"
+    },
+    "readingsHistory": {
+      "title": "读数历史"
+    },
+    "scanner": {
+      "title": "扫描器（QR）"
+    },
+    "profile": {
+      "title": "个人资料与设置"
+    }
+  }
+}

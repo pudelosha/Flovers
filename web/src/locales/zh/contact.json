@@ -1,0 +1,24 @@
+{
+  "title": "联系",
+  "subtitle": "向支持团队发送消息。我们通常在 1–3 个工作日内回复。",
+  "form": {
+    "subjectLabel": "主题",
+    "subjectPlaceholder": "例如 登录问题",
+    "messageLabel": "消息",
+    "messagePlaceholder": "描述问题或疑问…",
+    "copyToMe": "给我发送一份副本",
+    "send": "发送",
+    "sending": "发送中…",
+    "mailtoFallback": "写电子邮件",
+    "note": "如果表单无法使用，请使用电子邮件按钮。"
+  },
+  "toasts": {
+    "enterSubject": "请输入主题。",
+    "enterMessage": "请输入消息。",
+    "contactSent": "消息已发送。",
+    "couldNotSendContact": "无法发送消息。请稍后再试。",
+    "requestTimedOut": "请求超时。请重试。",
+    "unauthorizedLoginAgain": "会话已过期。请重新登录。",
+    "missingApiBase": "未配置 API 地址。"
+  }
+}

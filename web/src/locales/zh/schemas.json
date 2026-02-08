@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "复制",
+    "copied": "已复制"
+  },
+  "title": "设备示意图与布线",
+  "lead": "本页面说明如何将 IoT 传感器读数发送到 Flovers。你将在此找到接口端点、payload 结构，以及适用于 ESP32/ESP8266 和常见传感器的 Arduino 示例代码。这里还预留了一个用于布线图（Fritzing）的占位符，供之后替换。",
+  "endpoints": {
+    "title": "API 端点",
+    "note": "这些端点仅为示例。在连接设备时，请将其替换为生产环境的后端地址。",
+    "ingest": {
+      "label": "读数接收（POST）",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "读取数据（GET/POST）",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "POST ingest 文档",
+    "desc": "以 JSON 形式发送单条读数样本。后端会校验 device_key + secret，并将指标保存到对应设备下。",
+    "schemaLabel": "Payload 结构（JSON）",
+    "psLabel": "PowerShell 示例（POST）"
+  },
+  "read": {
+    "title": "GET / 读数文档",
+    "desc": "在指定时间范围内获取设备的读数。如果后端支持通过 POST 查询，你可以发送 JSON body 来替代 URL 参数。",
+    "exampleLabel": "示例（GET + 可选 POST）"
+  },
+  "arduino": {
+    "title": "Arduino（ESP32/ESP8266）— 示例代码",
+    "desc": "参考实现：连接 Wi-Fi、读取传感器，并按固定时间间隔向 ingest 端点发送 JSON POST。请校准土壤湿度传感器的数值（湿/干），以确保百分比有意义。",
+    "codeLabel": "Arduino 示例（Wi-Fi + POST ingest）",
+    "note": "如果需要准确的时间戳，请添加 NTP 时间同步（configTime），并在设备上生成 ISO-8601 UTC。",
+    "sensors": {
+      "bh1750": "BH1750（GY-302）— 通过 I2C 测量光照强度",
+      "moisture": "电容式土壤湿度传感器 — 模拟读数（需要湿/干校准）",
+      "bme280": "BME280 — 通过 I2C 测量温度和湿度（压力为可选）"
+    }
+  },
+  "wiring": {
+    "title": "布线示意图",
+    "desc": "稍后在此添加 Fritzing 图片。该占位符在示意图准备好之前用于稳定页面布局。",
+    "aria": "布线示意图占位符",
+    "placeholderTitle": "Fritzing 占位符",
+    "placeholderSub": "导出示意图后，用图片替换此区块。"
+  }
+}
