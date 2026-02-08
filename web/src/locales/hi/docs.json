@@ -1,0 +1,48 @@
+{
+  "title": "दस्तावेज़ीकरण",
+  "placeholder": {
+    "heading": "जल्द ही",
+    "body": "इस स्क्रीन के लिए विस्तृत दस्तावेज़ीकरण जल्द ही उपलब्ध होगा।"
+  },
+  "screens": {
+    "overview": {
+      "title": "समीक्षा"
+    },
+    "auth": {
+      "title": "लॉगिन और पंजीकरण"
+    },
+    "home": {
+      "title": "मुख्य स्क्रीन"
+    },
+    "taskHistory": {
+      "title": "कार्य इतिहास"
+    },
+    "plants": {
+      "title": "पौधे"
+    },
+    "plantDetails": {
+      "title": "पौधे का विवरण"
+    },
+    "createPlantWizard": {
+      "title": "पौधा जोड़ने का विज़ार्ड"
+    },
+    "locations": {
+      "title": "स्थान"
+    },
+    "reminders": {
+      "title": "स्मरण पत्र"
+    },
+    "readings": {
+      "title": "पढ़ाई"
+    },
+    "readingsHistory": {
+      "title": "पढ़ाई का इतिहास"
+    },
+    "scanner": {
+      "title": "स्कैनर (QR)"
+    },
+    "profile": {
+      "title": "प्रोफ़ाइल और सेटिंग्स"
+    }
+  }
+}
