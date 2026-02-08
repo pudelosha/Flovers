@@ -1,0 +1,43 @@
+{
+  "docs_readings_history": {
+    "title": "Storico delle letture",
+    "sections": [
+      {
+        "heading": "Scopo di questa vista",
+        "body": [
+          "La vista Storico delle letture fornisce una panoramica completa dei dati di misurazione storici per il dispositivo e la pianta associati.",
+          "A differenza dell'elenco delle Letture (dove sono visibili principalmente gli ultimi valori), questa vista serve per analizzare trend e variazioni nel tempo tramite grafici."
+        ]
+      },
+      {
+        "heading": "Intervalli di tempo: Giorno, Settimana, Mese",
+        "body": [
+          "L'utente può passare tra tre intervalli: Giorno, Settimana e Mese.",
+          "La vista Giorno presenta le letture per un singolo giorno con intervallo orario (supponendo che il dispositivo invii dati ogni ora e che l'utente accetti un maggiore consumo della batteria da parte del dispositivo).",
+          "Le viste Settimana e Mese mostrano i dati su un orizzonte più lungo, facilitando l'individuazione dei trend."
+        ]
+      },
+      {
+        "heading": "Selezione del parametro di misurazione",
+        "body": [
+          "I grafici sono disponibili per i parametri: temperatura dell'aria, umidità dell'aria, livello di luce e umidità del suolo (a seconda di ciò che misura il dispositivo).",
+          "Il parametro viene selezionato tramite i pulsanti sotto il grafico (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Navigazione nei periodi precedenti",
+        "body": [
+          "Le frecce accanto al periodo selezionato consentono di passare tra giorni, settimane o mesi precedenti.",
+          "La navigazione è disponibile solo per i periodi per i quali esistono dati — i periodi futuri non vengono visualizzati."
+        ]
+      },
+      {
+        "heading": "Disponibilità dei dati e interpretazione",
+        "body": [
+          "Se il dispositivo non ha fornito letture per il periodo selezionato, il grafico sarà vuoto o potrebbe contenere lacune nei dati.",
+          "I dati dei sensori hanno carattere informativo e dovrebbero essere interpretati insieme all'osservazione delle piante e con la consapevolezza dell'influenza della calibrazione, del posizionamento dei sensori e delle condizioni ambientali."
+        ]
+      }
+    ]
+  }
+}

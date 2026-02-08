@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Piante",
+    "sections": [
+      {
+        "heading": "Obiettivo di questa vista",
+        "body": [
+          "La vista Piante mostra tutte le istanze di piante create nel tuo account.",
+          "Ogni riquadro rappresenta una singola pianta (il tuo esemplare). Dal riquadro puoi accedere ai Dettagli della pianta oppure utilizzare le scorciatoie nel menu a tre puntini (ad esempio promemoria, diario, codice QR)."
+        ]
+      },
+      {
+        "heading": "Riquadri delle piante (lista)",
+        "body": [
+          "Il riquadro della pianta mostra il nome della pianta e (se disponibile) il nome della definizione di pianta associata (specie) e la Localizzazione assegnata.",
+          "Toccando il contenuto del riquadro (escluso il menu a tre puntini) si accede alla vista Dettagli della pianta."
+        ]
+      },
+      {
+        "heading": "Menu a tre puntini (azioni della pianta)",
+        "body": [
+          "Ogni riquadro dispone di un menu a tre puntini che contiene le azioni per la pianta selezionata:",
+          "Modifica pianta: apre la modifica dei dati e dei parametri della pianta.",
+          "Mostra promemoria: passa alla vista Promemoria con il filtro impostato sui promemoria associati alla pianta selezionata.",
+          "Mostra diario della pianta: apre una modale con la cronologia delle attività completate (incluse le note dell’utente). Le note sono visibili e non vengono nascoste.",
+          "Mostra codice QR: apre una modale con il codice QR della pianta, una breve descrizione e le opzioni per salvare (scaricare) o inviare il codice al proprio indirizzo e-mail.",
+          "Elimina pianta: elimina definitivamente la pianta e i dati associati, come attività, promemoria e connessioni ai dispositivi."
+        ]
+      },
+      {
+        "heading": "Menu del pulsante FAB",
+        "body": [
+          "Il FAB nella vista Piante offre azioni rapide:",
+          "Crea pianta: avvia la Procedura guidata di creazione della pianta (processo in 9 passaggi), che consente di definire la pianta in modo dettagliato.",
+          "Ordina: ordina i riquadri delle piante per Nome della pianta o Localizzazione.",
+          "Filtra: filtra l’elenco per Localizzazione.",
+          "Localizzazioni: passa alla vista Localizzazioni, dove è possibile aggiungere, modificare e gestire le localizzazioni utilizzate per il raggruppamento e il filtraggio."
+        ]
+      },
+      {
+        "heading": "Eliminazione della pianta (informazioni importanti)",
+        "body": [
+          "L’eliminazione di una pianta è un’operazione definitiva e non può essere annullata.",
+          "L’eliminazione della pianta rimuove l’istanza della pianta e i dati associati, come le attività generate, i promemoria assegnati a questa pianta e i collegamenti ai dispositivi."
+        ]
+      },
+      {
+        "heading": "Quando non sono visibili piante",
+        "body": [
+          "Se l’elenco è vuoto, utilizza l’azione Crea pianta dal menu FAB per aggiungere la prima istanza di pianta.",
+          "Dopo aver aggiunto le piante, puoi raggrupparle tramite le Localizzazioni e gestire le routine di cura tramite i Promemoria."
+        ]
+      }
+    ]
+  }
+}

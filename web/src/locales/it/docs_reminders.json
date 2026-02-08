@@ -1,0 +1,71 @@
+{
+  "docs_reminders": {
+    "title": "Promemoria",
+    "sections": [
+      {
+        "heading": "Obiettivo di questa vista",
+        "body": [
+          "La vista Promemoria serve per gestire i programmi ciclici di cura delle piante.",
+          "Il promemoria definisce cosa deve essere fatto (tipo di attività), con quale frequenza deve ripetersi (intervallo) e a quale pianta è associato. Su questa base Flovers genera automaticamente le attività nel tempo."
+        ]
+      },
+      {
+        "heading": "Due viste: elenco promemoria e calendario",
+        "body": [
+          "Questa schermata ha due modalità: l’elenco dei promemoria e la vista calendario.",
+          "Puoi passare da una all’altra scorrendo lo schermo a sinistra/destra oppure selezionando il cambio di vista dal menu FAB.",
+          "Entrambe le viste mostrano gli stessi dati, ma in modo diverso — a seconda che tu voglia rivedere rapidamente le regole o visualizzare il piano nel tempo."
+        ]
+      },
+      {
+        "heading": "Vista elenco promemoria",
+        "body": [
+          "Nella vista elenco, ogni scheda rappresenta un singolo promemoria creato dall’utente.",
+          "La scheda mostra il tipo di attività (icona e nome), il nome della pianta, la posizione (se assegnata), le informazioni sulla frequenza e la data della prossima esecuzione.",
+          "È il modo più rapido per rivedere tutte le regole cicliche attive nell’account."
+        ]
+      },
+      {
+        "heading": "Azioni sulla scheda del promemoria (Modifica / Elimina)",
+        "body": [
+          "Ogni promemoria ha due azioni: Modifica ed Elimina.",
+          "La modifica consente di cambiare i parametri del promemoria, come l’intervallo, il tipo di attività, la pianta associata e altre impostazioni (a seconda del tipo di promemoria).",
+          "L’eliminazione del promemoria è permanente e comporta che in futuro non verranno più generate attività da questa regola."
+        ]
+      },
+      {
+        "heading": "Vista calendario",
+        "body": [
+          "Nella vista calendario i promemoria sono presentati come voci pianificate in giorni specifici.",
+          "Per vedere i dettagli, tocca un giorno nel calendario — le voci pianificate per quel giorno appariranno sotto il calendario.",
+          "Il calendario utilizza indicatori cromatici/icone per mostrare i tipi di attività pianificate in un determinato giorno e facilitare la valutazione della distribuzione degli impegni."
+        ]
+      },
+      {
+        "heading": "Menu FAB",
+        "body": [
+          "Il pulsante FAB fornisce azioni rapide relative ai promemoria e al cambio di vista.",
+          "Le opzioni disponibili sono: Aggiungi promemoria, cambio vista (Elenco/Calendario), Ordina e Filtra.",
+          "L’ordinamento può essere effettuato per data di scadenza (due date), nome della pianta o posizione.",
+          "Il filtraggio può includere: nome della pianta, posizione, tipo di attività e intervallo di date (due date range)."
+        ]
+      },
+      {
+        "heading": "Come i promemoria generano le attività (logica generale)",
+        "body": [
+          "Un promemoria è una regola ciclica (ad esempio: Innaffia ogni 7 giorni).",
+          "Sulla base dei promemoria, Flovers genera le attività e le presenta nella schermata Home come elementi da completare.",
+          "Dopo la chiusura di un’attività, la successiva viene pianificata secondo l’intervallo del promemoria (in questo modo la routine viene proseguita automaticamente)."
+        ]
+      },
+      {
+        "heading": "Note e suggerimenti pratici",
+        "body": [
+          "I promemoria aiutano a mantenere la regolarità, ma non garantiscono la salute delle piante — le condizioni reali possono richiedere aggiustamenti degli intervalli.",
+          "Se le condizioni cambiano (stagione, luce, substrato, dimensione del vaso), valuta l’aggiornamento dei promemoria.",
+          "Se vuoi gestire le attività chiuse e le note, utilizza la vista Cronologia attività (descritta separatamente)."
+        ]
+      }
+    ]
+  }
+}

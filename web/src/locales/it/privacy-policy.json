@@ -1,0 +1,91 @@
+{
+  "privacy": {
+    "title": "Informativa sulla Privacy",
+    "lastUpdated": "Ultimo aggiornamento: {{date}}",
+    "section1": {
+      "title": "§ 1. Disposizioni generali",
+      "p1": "Il titolare del trattamento dei dati personali trattati in relazione all'utilizzo del servizio web Flovers e dell'applicazione mobile Flovers è Marcin Janowski Copy Paste IT Solutions, con sede in ul. płk. Francesco Nullo 30/115, 31-543 Cracovia, Polonia, indirizzo e-mail: info@flovers.app, di seguito denominato \"Titolare\".",
+      "p2": "Il Titolare tratta i dati personali in conformità al Regolamento (UE) 2016/679 del Parlamento Europeo e del Consiglio del 27 aprile 2016 (GDPR).",
+      "p3": "La presente Informativa sulla Privacy riguarda il servizio web Flovers, l'applicazione mobile Flovers (Android e, in futuro, iOS) e l'infrastruttura backend ad essi correlata."
+    },
+    "section2": {
+      "title": "§ 2. Ambito e finalità del trattamento dei dati personali",
+      "intro": "Il Titolare tratta i dati personali per le seguenti finalità:",
+      "list": [
+        "creazione e gestione dell'account utente nell'applicazione",
+        "autenticazione dell'utente ed esecuzione del processo di accesso",
+        "invio di messaggi di sistema, inclusi e-mail di verifica e di reimpostazione della password",
+        "gestione delle segnalazioni inviate tramite il modulo di contatto",
+        "garanzia del corretto funzionamento dell'applicazione e del servizio",
+        "gestione di promemoria, attività e notifiche relative alla cura delle piante",
+        "garanzia della sicurezza del sistema e gestione dei log tecnici"
+      ],
+      "legalBasis": "La base giuridica del trattamento dei dati è l'art. 6, par. 1, lett. b del GDPR (esecuzione del contratto), l'art. 6, par. 1, lett. c del GDPR (obbligo legale) e l'art. 6, par. 1, lett. f del GDPR (legittimo interesse del Titolare)."
+    },
+    "section3": {
+      "title": "§ 3. Tipologia di dati trattati",
+      "intro": "A seconda delle modalità di utilizzo dell'applicazione o del servizio, il Titolare può trattare i seguenti dati:",
+      "list": [
+        "indirizzo e-mail dell'utente",
+        "password dell'utente crittografata",
+        "informazioni sul profilo e sulle preferenze dell'utente",
+        "dati tecnici del dispositivo (tipo di dispositivo, sistema operativo, versione dell'applicazione)",
+        "indirizzo IP",
+        "dati relativi all'orientamento del dispositivo (ad es. ai fini dell'ottimizzazione dell'esposizione delle piante alla luce)",
+        "dati inseriti dall'utente relativi a piante, misurazioni e sensori IoT"
+      ],
+      "note": "Le foto scattate dall'utente sono, di norma, trattate localmente sul dispositivo, salvo che l'utente decida di utilizzarle in funzionalità che richiedono il trattamento lato server."
+    },
+    "section4": {
+      "title": "§ 4. Account utente e sicurezza",
+      "p1": "Gli utenti dell'applicazione Flovers creano account individuali protetti da password.",
+      "p2": "Le password sono conservate in forma crittografata (hash).",
+      "p3": "L'account utente richiede la verifica dell'indirizzo e-mail.",
+      "p4": "L'utente può in qualsiasi momento modificare la password o utilizzare la procedura di reimpostazione."
+    },
+    "section5": {
+      "title": "§ 5. Notifiche e comunicazione",
+      "p1": "Il Titolare invia esclusivamente comunicazioni di natura transazionale, in particolare relative all'accesso, alla verifica dell'account e alla reimpostazione della password.",
+      "p2": "L'applicazione può utilizzare notifiche push (ad es. tramite Firebase) per ricordare le attività legate alla cura delle piante.",
+      "p3": "Il Titolare si riserva la possibilità di introdurre una newsletter in futuro; l'invio di comunicazioni di marketing avverrà esclusivamente previo ottenimento di un consenso separato da parte dell'utente."
+    },
+    "section6": {
+      "title": "§ 6. Cookie e tecnologie simili",
+      "p1": "Il servizio web Flovers può utilizzare cookie necessari al corretto funzionamento del sito.",
+      "p2": "I cookie sono utilizzati esclusivamente per finalità tecniche e funzionali.",
+      "p3": "Il servizio non utilizza strumenti analitici o di marketing di terze parti."
+    },
+    "section7": {
+      "title": "§ 7. Destinatari dei dati e luogo del trattamento",
+      "p1": "I dati personali sono trattati su server situati all'interno dell'Unione Europea.",
+      "p2": "L'infrastruttura server è gestita da Hetzner Online GmbH.",
+      "p3": "Il Titolare può avvalersi dei servizi Firebase per la gestione delle notifiche push.",
+      "p4": "Il Titolare non trasferisce i dati personali a paesi terzi al di fuori dell'UE."
+    },
+    "section8": {
+      "title": "§ 8. Periodo di conservazione dei dati",
+      "p1": "I dati personali sono conservati per la durata dell'esistenza dell'account utente.",
+      "p2": "Dopo la cancellazione dell'account, i dati vengono eliminati in modo permanente o anonimizzati, salvo diversa disposizione di legge."
+    },
+    "section9": {
+      "title": "§ 9. Diritti degli interessati",
+      "intro": "Ogni interessato ha il diritto di:",
+      "list": [
+        "accedere ai propri dati",
+        "rettificarli",
+        "cancellare i dati",
+        "limitare il trattamento",
+        "opporsi al trattamento",
+        "revocare il consenso in qualsiasi momento"
+      ],
+      "p2": "Per esercitare i diritti sopra indicati, è possibile contattare il Titolare all'indirizzo e-mail: info@flovers.app.",
+      "p3": "L'interessato ha inoltre il diritto di proporre reclamo al Presidente dell'Autorità Garante per la Protezione dei Dati Personali."
+    },
+    "section10": {
+      "title": "§ 10. Disposizioni finali",
+      "p1": "Il Titolare adotta adeguate misure tecniche e organizzative per la protezione dei dati personali.",
+      "p2": "Il Titolare si riserva il diritto di aggiornare la presente Informativa sulla Privacy.",
+      "p3": "La versione aggiornata dell'Informativa sulla Privacy è sempre disponibile sul sito web Flovers e nell'applicazione mobile."
+    }
+  }
+}

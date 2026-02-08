@@ -1,0 +1,46 @@
+{
+  "docs_locations": {
+    "title": "Posizioni",
+    "sections": [
+      {
+        "heading": "Scopo di questa vista",
+        "body": [
+          "La vista Posizioni serve per gestire i luoghi in cui si trovano le tue piante, ad esempio stanze, balconi o altre aree.",
+          "Le posizioni sono utilizzate principalmente per organizzare le piante e facilitare il filtraggio, l’ordinamento e il raggruppamento dei dati nell’applicazione."
+        ]
+      },
+      {
+        "heading": "Elenco delle posizioni",
+        "body": [
+          "La schermata mostra l’elenco di tutte le posizioni definite dall’utente.",
+          "Le posizioni possono essere nomi predefiniti o nomi personalizzati creati dall’utente.",
+          "Ogni posizione mostra il numero di piante attualmente ad essa associate."
+        ]
+      },
+      {
+        "heading": "Azioni sulla posizione (menu a 3 punti)",
+        "body": [
+          "Ogni posizione dispone di un menu a 3 punti con le azioni disponibili.",
+          "L’utente può modificare il nome della posizione per riflettere meglio il luogo reale in cui sono conservate le piante.",
+          "L’eliminazione di una posizione è possibile solo quando non vi sono piante ad essa assegnate."
+        ]
+      },
+      {
+        "heading": "Pulsante di azione (FAB)",
+        "body": [
+          "Il pulsante FAB offre azioni rapide relative alla gestione delle posizioni.",
+          "L’utente può aggiungere una nuova posizione in qualsiasi momento.",
+          "Le posizioni possono essere ordinate per nome della posizione o per numero di piante assegnate."
+        ]
+      },
+      {
+        "heading": "Utilizzo delle posizioni",
+        "body": [
+          "Le posizioni sono utilizzate in tutta l’applicazione per il raggruppamento logico delle piante.",
+          "Possono essere usate come criteri di filtraggio e ordinamento in viste come Piante, Promemoria o Cronologia delle attività.",
+          "L’uso delle posizioni facilita il mantenimento dell’ordine, soprattutto con un numero elevato di piante."
+        ]
+      }
+    ]
+  }
+}

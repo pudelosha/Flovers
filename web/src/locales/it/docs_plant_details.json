@@ -1,0 +1,71 @@
+{
+  "docs_plant_details": {
+    "title": "Dettagli della pianta",
+    "sections": [
+      {
+        "heading": "Scopo di questa vista",
+        "body": [
+          "La vista Dettagli della pianta è il luogo centrale per visualizzare e gestire una singola pianta creata dall’utente.",
+          "Riunisce le informazioni sulla pianta, i promemoria assegnati, le attività, le letture dei sensori (se disponibili) e le azioni rapide relative a questa pianta."
+        ]
+      },
+      {
+        "heading": "Informazioni sulla pianta",
+        "body": [
+          "Nella parte superiore dello schermo vengono visualizzati l’immagine della pianta, il suo nome, un nome opzionale della definizione della pianta e la posizione assegnata.",
+          "Di seguito sono mostrati i parametri dettagliati forniti durante la creazione della pianta, come la data di acquisto, le note, le condizioni di illuminazione, l’orientamento, la distanza dalla finestra, il tipo di vaso e il tipo di substrato.",
+          "Queste informazioni aiutano a interpretare meglio i promemoria, le letture e le decisioni relative alla cura."
+        ]
+      },
+      {
+        "heading": "Azioni a livello di pianta (menu a 3 punti)",
+        "body": [
+          "Il menu a 3 punti associato all’intestazione della pianta offre azioni aggiuntive relative alla pianta stessa.",
+          "Le opzioni disponibili includono la visualizzazione della Definizione della pianta (se la pianta è associata), la modifica dei dati della pianta, il cambio dell’immagine e l’accesso ai Promemoria filtrati per questa pianta.",
+          "Il cambio dell’immagine consente di sostituire l’immagine predefinita, aggiungere una propria foto dal telefono o rimuovere l’immagine."
+        ]
+      },
+      {
+        "heading": "Definizione della pianta",
+        "body": [
+          "Se la pianta è associata a una Definizione della pianta dal database Flovers, l’utente può aprire la vista dedicata della Definizione.",
+          "Questa vista presenta informazioni sulla specie, come la descrizione della pianta, le preferenze di cura, le caratteristiche, il livello di difficoltà, l’intervallo di temperatura, l’umidità, la tossicità e il tipo di crescita.",
+          "Le definizioni delle piante forniscono indicazioni generali e dovrebbero essere interpretate nel contesto delle condizioni reali dell’utente."
+        ]
+      },
+      {
+        "heading": "Promemoria e attività",
+        "body": [
+          "La sezione Promemoria mostra tutti i promemoria attivi assegnati alla pianta.",
+          "Ogni promemoria ha il proprio menu a 3 punti, che consente di chiudere l’attività, modificare il promemoria o visualizzare la cronologia delle attività.",
+          "Durante la chiusura di un’attività, l’utente può aggiungere una nota che diventa parte della cronologia di cura della pianta."
+        ]
+      },
+      {
+        "heading": "Letture più recenti",
+        "body": [
+          "Se la pianta è associata a un dispositivo di misurazione, in questa vista vengono mostrate le letture più recenti dei sensori.",
+          "Le letture supportate includono la temperatura dell’aria, l’umidità dell’aria, il livello di luce e l’umidità del suolo.",
+          "La sezione mostra gli ultimi valori insieme all’informazione sull’orario della misurazione.",
+          "Toccando il riquadro delle letture, l’utente viene portato alla vista Cronologia delle letture, dove sono presentati grafici dettagliati e riepiloghi (giornalieri/settimanali/mensili) per temperatura, umidità, luce e umidità del suolo (se il dispositivo è associato alla pianta)."
+        ]
+      },
+      {
+        "heading": "Codice QR e accesso rapido",
+        "body": [
+          "Ogni pianta dispone di un codice QR univoco visualizzato nella parte inferiore dello schermo.",
+          "La scansione di questo codice nella vista Scanner porta direttamente alla vista Dettagli della pianta.",
+          "Il codice QR può essere salvato sul dispositivo o inviato via e-mail, consentendo di stamparlo e posizionarlo sul vaso."
+        ]
+      },
+      {
+        "heading": "Informazioni importanti",
+        "body": [
+          "Le foto aggiunte dall’utente sono memorizzate esclusivamente sul dispositivo dell’utente e non vengono salvate nel backend di Flovers.",
+          "Le immagini predefinite delle piante provengono dal backend di Flovers e possono essere generate utilizzando l’IA.",
+          "Le letture dei sensori e le azioni suggerite hanno carattere informativo e dovrebbero essere combinate con la valutazione personale dell’utente."
+        ]
+      }
+    ]
+  }
+}

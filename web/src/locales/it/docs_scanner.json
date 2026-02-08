@@ -1,0 +1,63 @@
+{
+  "docs_scanner": {
+    "title": "Scanner QR",
+    "sections": [
+      {
+        "heading": "A cosa serve lo Scanner",
+        "body": [
+          "La vista Scanner consente di scansionare i codici QR generati in precedenza per le piante in Flovers.",
+          "Lo scenario più comune è stampare il codice QR e posizionarlo sul vaso, in modo da aprire rapidamente la pianta corretta nell’applicazione in un secondo momento.",
+          "La scansione QR serve principalmente per una navigazione comoda e veloce — senza dover cercare manualmente nell’elenco."
+        ]
+      },
+      {
+        "heading": "Accesso alla fotocamera richiesto",
+        "body": [
+          "Per utilizzare la funzione Scanner QR, l’applicazione Flovers richiede il consenso all’accesso alla fotocamera del telefono.",
+          "La fotocamera viene utilizzata esclusivamente per la scansione dei codici QR in tempo reale e non serve per registrare video né per scattare foto al di fuori di questo processo.",
+          "Se l’accesso alla fotocamera viene negato, la funzione Scanner non funzionerà fino a quando non verranno concessi i permessi appropriati nelle impostazioni di sistema del dispositivo."
+        ]
+      },
+      {
+        "heading": "Cosa contiene il codice QR in Flovers",
+        "body": [
+          "Il codice QR in Flovers contiene un riferimento a Flovers e un identificatore (ID) della specifica istanza della pianta nell’account dell’utente.",
+          "Dopo una scansione corretta, l’applicazione lo riconosce ed esegue il reindirizzamento alla pianta indicata.",
+          "I codici QR sono destinati principalmente all’uso con le proprie piante salvate nell’account."
+        ]
+      },
+      {
+        "heading": "Cosa succede dopo una scansione corretta",
+        "body": [
+          "Dopo una scansione corretta del codice QR nella vista Scanner, l’utente viene automaticamente reindirizzato alla vista Dettagli della pianta (Plant Details).",
+          "Nei Dettagli della pianta sono disponibili informazioni sulla pianta, attività correlate e le letture più recenti (se la pianta è collegata a un dispositivo).",
+          "In questo modo, lo Scanner è il metodo più rapido per accedere alla vista completa di una determinata pianta."
+        ]
+      },
+      {
+        "heading": "Dove visualizzare il codice QR della pianta",
+        "body": [
+          "L’anteprima del codice QR è disponibile nell’elenco delle piante nella vista Piante (Plants) — basta aprire il menu a discesa per la pianta selezionata e scegliere l’opzione del codice QR.",
+          "Il codice QR può essere visualizzato anche direttamente nella vista Dettagli della pianta (Plant Details).",
+          "In entrambi i casi viene visualizzato lo stesso codice QR assegnato alla pianta."
+        ]
+      },
+      {
+        "heading": "Salvataggio o invio del codice QR",
+        "body": [
+          "Sia dalla vista Piante (Plants) sia dai Dettagli della pianta (Plant Details) è possibile salvare il codice QR sul telefono.",
+          "È anche possibile inviare il codice QR al proprio indirizzo e-mail — ad esempio per una stampa successiva o per conservare una copia di backup.",
+          "Durante la stampa, assicurati che il codice sia leggibile (buon contrasto, nessuna piega, assenza di riflessi di luce)."
+        ]
+      },
+      {
+        "heading": "Risoluzione dei problemi di scansione",
+        "body": [
+          "Se la scansione non funziona, prova a migliorare l’illuminazione e assicurati che il codice sia piatto e completamente visibile nell’inquadratura della fotocamera.",
+          "Se il codice è danneggiato o sfocato, salvalo nuovamente dall’applicazione oppure invialo via e-mail e stampa una nuova copia.",
+          "Se il codice apre la pianta sbagliata, assicurati che durante il salvataggio o l’esportazione sia stata selezionata la pianta corretta."
+        ]
+      }
+    ]
+  }
+}

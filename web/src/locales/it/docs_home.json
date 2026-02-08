@@ -1,0 +1,77 @@
+{
+  "docs_home": {
+    "title": "Home",
+    "sections": [
+      {
+        "heading": "Obiettivo della vista Home",
+        "body": [
+          "Home è la schermata principale visibile dopo un accesso corretto.",
+          "Si concentra sulle attività quotidiane: mostra le Attività generate in base ai Promemoria, permettendo di vedere rapidamente cosa richiede attenzione oggi o cosa è già in ritardo.",
+          "Se non ci sono attività da svolgere, viene visualizzata una tessera informativa con un messaggio sull’assenza di attività pianificate e suggerimenti sui passi successivi, ad esempio la creazione di promemoria."
+        ]
+      },
+      {
+        "heading": "Elenco delle attività (tessere generate dai promemoria)",
+        "body": [
+          "Ogni tessera rappresenta una singola Attività generata sulla base della definizione di un Promemoria (ad es. Annaffiatura, Irrigazione, Concimazione, Rinvaso o Cura).",
+          "Le attività compaiono automaticamente quando diventano necessarie in base alle regole di ricorrenza definite nel Promemoria.",
+          "La tessera di solito contiene il tipo di attività, il nome della pianta, la posizione e lo stato della scadenza (ad es. Oggi o In ritardo)."
+        ]
+      },
+      {
+        "heading": "Menu della tessera attività (azioni per una singola attività)",
+        "body": [
+          "Ogni attività dispone di un menu contestuale (menu con tre punti) contenente azioni relative a quella specifica attività.",
+          "Segna come completata: chiude l’attività e consente opzionalmente di aggiungere una nota, aiutando a costruire la cronologia di cura.",
+          "Modifica promemoria: apre il Promemoria associato all’attività per modificare le impostazioni di ricorrenza.",
+          "Vai alla pianta: porta alla vista Dettagli della pianta associata all’attività.",
+          "Mostra cronologia: apre la cronologia delle attività mostrando le attività completate in precedenza per la stessa pianta o promemoria."
+        ]
+      },
+      {
+        "heading": "Pulsante FAB (azioni rapide)",
+        "body": [
+          "Nella schermata Home è disponibile un pulsante FAB che espande un set di azioni rapide per lavorare con le attività.",
+          "Mostra in ritardo: applica un filtro rapido che visualizza solo le attività in ritardo.",
+          "Mostra oggi: applica un filtro rapido che visualizza le attività pianificate per oggi.",
+          "Ordina: modifica l’ordine di visualizzazione delle attività nell’elenco.",
+          "Filtra: restringe l’elenco delle attività in base ai criteri selezionati.",
+          "Cronologia: porta alla vista Cronologia delle attività, documentata separatamente."
+        ]
+      },
+      {
+        "heading": "Opzioni di ordinamento",
+        "body": [
+          "L’ordinamento consente di adattare l’elenco delle attività al tuo modo di lavorare.",
+          "Le opzioni di ordinamento disponibili sono: Data di esecuzione (scadenza), Nome della pianta e Posizione."
+        ]
+      },
+      {
+        "heading": "Opzioni di filtro",
+        "body": [
+          "I filtri aiutano a concentrarsi su un gruppo selezionato di attività.",
+          "Le attività possono essere filtrate per: Nome della pianta, Posizione, Tipo di attività e Intervallo di date di esecuzione.",
+          "I filtri possono essere combinati, ad esempio per visualizzare solo le attività di Annaffiatura per le piante in una posizione selezionata."
+        ]
+      },
+      {
+        "heading": "Chiusura massiva delle attività (bulk)",
+        "body": [
+          "La chiusura massiva delle attività è disponibile quando si utilizzano le viste rapide: Mostra in ritardo o Mostra oggi.",
+          "Quando uno di questi filtri è attivo, il pulsante FAB visualizza temporaneamente un’azione aggiuntiva, come \"Segna visibili come completate\".",
+          "Questa azione chiude tutte le attività attualmente visibili contemporaneamente, senza la necessità di selezionare manualmente le singole tessere.",
+          "La chiusura massiva è stata progettata per situazioni in cui si esegue la stessa operazione di cura per molte piante nello stesso momento.",
+          "A seconda del flusso selezionato, potrebbe essere ancora possibile aggiungere note alle attività chiuse dopo aver eseguito l’azione massiva."
+        ]
+      },
+      {
+        "heading": "Navigazione dalla schermata Home",
+        "body": [
+          "La schermata Home consente una navigazione rapida verso altre parti dell’app tramite azioni sulle tessere e scorciatoie FAB.",
+          "Da una singola attività puoi passare direttamente ai Dettagli della pianta o alla cronologia delle attività.",
+          "Dal FAB puoi aprire la Cronologia delle attività o restringere l’elenco delle attività tramite ordinamento e filtri."
+        ]
+      }
+    ]
+  }
+}

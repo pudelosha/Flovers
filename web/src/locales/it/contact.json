@@ -1,0 +1,24 @@
+{
+  "title": "Contatto",
+  "subtitle": "Invia un messaggio all'assistenza. Di solito rispondiamo entro 1–3 giorni lavorativi.",
+  "form": {
+    "subjectLabel": "Oggetto",
+    "subjectPlaceholder": "es. Problema di accesso",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Descrivi il problema o la domanda…",
+    "copyToMe": "Inviami una copia",
+    "send": "Invia",
+    "sending": "Invio…",
+    "mailtoFallback": "Scrivi un'e-mail",
+    "note": "Se il modulo non funziona, usa il pulsante e-mail."
+  },
+  "toasts": {
+    "enterSubject": "Inserisci l'oggetto.",
+    "enterMessage": "Inserisci il messaggio.",
+    "contactSent": "Messaggio inviato.",
+    "couldNotSendContact": "Impossibile inviare il messaggio. Riprova più tardi.",
+    "requestTimedOut": "Tempo scaduto. Riprova.",
+    "unauthorizedLoginAgain": "La sessione è scaduta. Accedi di nuovo.",
+    "missingApiBase": "Indirizzo API non configurato."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Documentazione",
+  "placeholder": {
+    "heading": "Prossimamente",
+    "body": "La documentazione dettagliata per questa schermata sarà disponibile a breve."
+  },
+  "screens": {
+    "overview": {
+      "title": "Panoramica"
+    },
+    "auth": {
+      "title": "Accesso e registrazione"
+    },
+    "home": {
+      "title": "Schermata principale"
+    },
+    "taskHistory": {
+      "title": "Cronologia delle attività"
+    },
+    "plants": {
+      "title": "Piante"
+    },
+    "plantDetails": {
+      "title": "Dettagli della pianta"
+    },
+    "createPlantWizard": {
+      "title": "Procedura guidata di aggiunta della pianta"
+    },
+    "locations": {
+      "title": "Posizioni"
+    },
+    "reminders": {
+      "title": "Promemoria"
+    },
+    "readings": {
+      "title": "Letture"
+    },
+    "readingsHistory": {
+      "title": "Cronologia delle letture"
+    },
+    "scanner": {
+      "title": "Scanner (QR)"
+    },
+    "profile": {
+      "title": "Profilo e impostazioni"
+    }
+  }
+}

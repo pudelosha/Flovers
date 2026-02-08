@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Profilo",
+    "sections": [
+      {
+        "heading": "Scopo di questa vista",
+        "body": [
+          "La vista Profilo è il luogo centrale per gestire i dati dell’account, le impostazioni delle notifiche, la configurazione dell’applicazione e il supporto.",
+          "Consente all’utente di controllare sia i dati personali sia il comportamento dell’applicazione Flovers."
+        ]
+      },
+      {
+        "heading": "Account",
+        "body": [
+          "La sezione Account visualizza le informazioni di base dell’account, come l’indirizzo e-mail e la data di creazione dell’account.",
+          "Da qui l’utente può cambiare l’indirizzo e-mail (è richiesta la conferma tramite password), modificare la password attuale, disconnettersi oppure eliminare definitivamente l’account.",
+          "L’eliminazione dell’account comporta la cancellazione irreversibile di tutti i dati dell’utente, inclusi piante, promemoria, attività, letture e dispositivi."
+        ]
+      },
+      {
+        "heading": "Notifiche",
+        "body": [
+          "La sezione Notifiche consente di gestire i consensi e le preferenze per le notifiche e-mail e push.",
+          "Per entrambi i canali l’utente può attivare o disattivare due tipi di notifiche: il riepilogo giornaliero che informa sulle attività pianificate per oggi e il promemoria inviato 24 ore dopo, se le attività non sono ancora state completate.",
+          "Per ogni tipo di notifica l’utente specifica l’orario di invio (ora intera, ad esempio 14:00)."
+        ]
+      },
+      {
+        "heading": "Impostazioni",
+        "body": [
+          "La sezione Impostazioni permette di controllare il comportamento generale e l’aspetto dell’applicazione.",
+          "Le opzioni disponibili includono la scelta della lingua, il formato di data e ora, le unità di temperatura (Celsius, Fahrenheit, Kelvin), le unità di misura (metriche o imperiali) e la posizione del pulsante FAB (lato sinistro o destro).",
+          "L’utente può inoltre personalizzare l’aspetto dell’applicazione scegliendo l’immagine di sfondo, il tema delle tessere (chiaro o scuro) e il livello di trasparenza delle tessere."
+        ]
+      },
+      {
+        "heading": "Supporto",
+        "body": [
+          "La sezione Supporto consente il contatto diretto con il team Flovers.",
+          "L’utente può segnalare un problema o inviare una richiesta al team di supporto tecnico.",
+          "La segnalazione degli errori aiuta nel continuo sviluppo e nel miglioramento della qualità dell’applicazione."
+        ]
+      }
+    ]
+  }
+}

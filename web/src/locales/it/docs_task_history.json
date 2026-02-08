@@ -1,0 +1,81 @@
+{
+  "docs_task_history": {
+    "title": "Cronologia delle attività",
+    "sections": [
+      {
+        "heading": "Obiettivo della vista Cronologia delle attività",
+        "body": [
+          "La Cronologia delle attività serve per visualizzare e gestire le attività che sono state completate (chiuse).",
+          "Facilita l’analisi di ciò che è stato fatto, quando è stato fatto e a quali piante si riferivano le azioni.",
+          "La vista può essere aperta con un filtro attivo (ad es. cronologia per una pianta selezionata) oppure mostrare tutte le attività chiuse."
+        ]
+      },
+      {
+        "heading": "Riquadri delle attività chiuse",
+        "body": [
+          "Ogni riquadro rappresenta una singola attività chiusa e contiene, tra l’altro, il tipo di attività (ad es. Annaffiatura, Nebulizzazione, Concimazione), il nome della pianta, la posizione e la data di esecuzione.",
+          "Le attività chiuse possono includere una nota aggiunta durante la marcatura dell’attività come completata.",
+          "Le note sono visibili solo dopo l’espansione del riquadro."
+        ]
+      },
+      {
+        "heading": "Anteprima delle note: espansione e compressione",
+        "body": [
+          "Per visualizzare la nota di un’attività chiusa, puoi espandere il riquadro toccandolo.",
+          "Puoi anche usare il menu con i tre puntini per eseguire l’azione Espandi/Comprimi (a seconda dello stato attuale).",
+          "In questo modo l’elenco può rimanere leggibile e compatto, mentre i dettagli sono disponibili su richiesta."
+        ]
+      },
+      {
+        "heading": "Menu del riquadro (tre puntini)",
+        "body": [
+          "Ogni riquadro di un’attività chiusa dispone di un menu contestuale con azioni relative a quella specifica voce della cronologia.",
+          "Espandi/Comprimi: mostra o nasconde la sezione delle note all’interno del riquadro.",
+          "Modifica promemoria: porta al Promemoria associato all’attività per modificare le impostazioni di ricorrenza o altri parametri.",
+          "Vai alla pianta: porta alla vista Dettagli della pianta associata all’attività.",
+          "Elimina attività: rimuove definitivamente l’attività chiusa selezionata dall’account dell’Utente."
+        ]
+      },
+      {
+        "heading": "Azioni FAB (Floating Action Button)",
+        "body": [
+          "La vista Cronologia delle attività dispone di un pulsante FAB con azioni per operare sull’intero elenco.",
+          "Ordina: cambia l’ordine di visualizzazione delle attività chiuse.",
+          "Filtra: restringe l’elenco della cronologia ai criteri selezionati.",
+          "Elimina: consente l’eliminazione in blocco delle attività in base a criteri (ad es. attività per una pianta selezionata, per posizione, per tipo di attività o attività più vecchie di una data specificata)."
+        ]
+      },
+      {
+        "heading": "Opzioni di ordinamento",
+        "body": [
+          "L’ordinamento aiuta a consultare la cronologia nell’ordine più adatto al tuo modo di lavorare.",
+          "Le opzioni di ordinamento disponibili sono: Data di esecuzione, Nome della pianta e Posizione."
+        ]
+      },
+      {
+        "heading": "Opzioni di filtraggio",
+        "body": [
+          "I filtri permettono di concentrarsi su un sottoinsieme selezionato di attività chiuse.",
+          "Puoi filtrare per: Nome della pianta, Posizione, Tipo di attività e Intervallo di date di esecuzione.",
+          "I filtri possono essere combinati, ad es. per visualizzare la Concimazione eseguita in una determinata posizione nel mese selezionato."
+        ]
+      },
+      {
+        "heading": "Eliminazione in blocco (azione Elimina)",
+        "body": [
+          "L’eliminazione in blocco consente di rimuovere definitivamente più attività chiuse contemporaneamente in base ai criteri selezionati.",
+          "Gli scenari tipici includono: pulizia della cronologia di una singola pianta, rimozione delle attività per una posizione, eliminazione di un solo tipo di attività o rimozione delle attività più vecchie della data indicata.",
+          "L’eliminazione in blocco è permanente e non può essere annullata."
+        ]
+      },
+      {
+        "heading": "Differenze tra Cronologia delle attività e Home",
+        "body": [
+          "Home si concentra sulle attività correnti (per oggi e in arretrato) e sulla loro esecuzione.",
+          "La Cronologia delle attività si concentra sulle attività completate e supporta la consultazione, l’ordinamento, il filtraggio e l’eliminazione delle voci storiche.",
+          "Insieme, queste viste consentono sia di svolgere le attività quotidiane (Home) sia di analizzare la cronologia di cura a lungo termine (Cronologia delle attività)."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "docs_create_plant_wizard": {
+    "title": "Procedura guidata per l'aggiunta di una pianta",
+    "sections": [
+      {
+        "heading": "Obiettivo di questo processo",
+        "body": [
+          "La procedura guidata per l'aggiunta di una pianta è un processo assistito in 9 passaggi che serve a creare una nuova Istanza di pianta sul tuo account.",
+          "Aiuta (opzionalmente) a collegare la pianta a una Definizione di pianta dal database Flovers, a raccogliere il contesto (posizione, esposizione) e a generare opzionalmente promemoria in base alle preferenze di cura.",
+          "La procedura guidata serve esclusivamente a creare una nuova pianta. La modifica di una pianta esistente avviene in un'altra vista/processo."
+        ]
+      },
+      {
+        "heading": "Passaggio 01 — Selezione della definizione della pianta (opzionale)",
+        "body": [
+          "Puoi cercare una Definizione di pianta (profilo di specie integrato) utilizzando il campo di ricerca.",
+          "Sotto il campo è presente un elenco di piante da interno popolari che funge da scorciatoia rapida.",
+          "Facoltativamente puoi usare il Riconoscimento delle piante: avvia la scansione, scatta una foto o sceglila dalla galleria e il sistema restituirà i 3 risultati più pertinenti.",
+          "Se accetti la proposta, la Definizione di pianta selezionata verrà applicata alla pianta in fase di creazione."
+        ]
+      },
+      {
+        "heading": "Passaggio 02 — Anteprima della definizione",
+        "body": [
+          "Se è stata selezionata una Definizione di pianta, in questo passaggio vengono visualizzati i suoi dettagli: immagine e caratteristiche e preferenze di base.",
+          "È un passaggio di verifica che consente di confermare il profilo corretto prima di procedere."
+        ]
+      },
+      {
+        "heading": "Passaggio 03 — Selezione della posizione (obbligatoria)",
+        "body": [
+          "Seleziona la Posizione in cui si trova la pianta (ad es. Cucina, Soggiorno, Balcone).",
+          "In questa fase puoi anche aggiungere una nuova Posizione.",
+          "Attualmente la selezione della Posizione è obbligatoria per procedere ai passaggi successivi."
+        ]
+      },
+      {
+        "heading": "Passaggio 04 — Esposizione (misurazioni opzionali)",
+        "body": [
+          "Questo passaggio consente di salvare il contesto dell'esposizione: direzione, livello di luce e distanza dalla finestra.",
+          "La direzione può essere misurata utilizzando la bussola del telefono, se all'app sono state concesse le autorizzazioni alla bussola/sensori.",
+          "Il livello di luce può essere misurato se il dispositivo dispone del sensore appropriato e sono state concesse le autorizzazioni richieste.",
+          "I valori di esposizione sono opzionali — puoi inserirli manualmente oppure saltarli."
+        ]
+      },
+      {
+        "heading": "Passaggio 05 — Vaso e substrato (opzionale)",
+        "body": [
+          "Specifica il tipo di contenitore/vaso (ad es. plastica, ceramica) e il tipo di terreno/substrato.",
+          "Questi campi sono opzionali, ma possono aiutare a una migliore corrispondenza degli intervalli suggeriti quando sono attive le attività automatiche."
+        ]
+      },
+      {
+        "heading": "Passaggio 06 — Attività automatiche (opzionale, con Definizione di pianta)",
+        "body": [
+          "Se la pianta è collegata a una Definizione di pianta, Flovers può creare automaticamente promemoria/attività in base alle preferenze del database.",
+          "Seleziona la casella di controllo principale per abilitare la generazione automatica, quindi scegli i tipi di attività da creare (ad es. annaffiatura, nebulizzazione, concimazione, rinvaso, cura).",
+          "Gli intervalli suggeriti si basano sulla Definizione di pianta e possono essere adattati in base all'Esposizione e al Vaso/Substrato, se questi dati sono disponibili.",
+          "Puoi saltare questo passaggio e creare i promemoria manualmente in un secondo momento."
+        ]
+      },
+      {
+        "heading": "Passaggio 07 — Aggiunta di una foto personale (opzionale)",
+        "body": [
+          "Puoi aggiungere una tua foto della pianta dal telefono.",
+          "Questo passaggio è opzionale e, a seconda del tuo flusso nell'app, potrebbe essere possibile anche in un secondo momento."
+        ]
+      },
+      {
+        "heading": "Passaggio 08 — Dati finali (nome obbligatorio)",
+        "body": [
+          "Imposta il nome visualizzato della pianta (obbligatorio).",
+          "Aggiungi facoltativamente note e la data di acquisto.",
+          "Queste informazioni sono visibili nei Dettagli della pianta e aiutano a mantenere una cronologia di cura chiara."
+        ]
+      },
+      {
+        "heading": "Passaggio 09 — Riepilogo e conferma",
+        "body": [
+          "Dopo l'aggiunta corretta della pianta, la procedura guidata mostra una schermata di conferma/riepilogo.",
+          "Da qui puoi andare all'elenco delle piante o aprire la pianta appena creata — a seconda della navigazione nell'app."
+        ]
+      },
+      {
+        "heading": "Note e autorizzazioni",
+        "body": [
+          "Il riconoscimento delle piante richiede l'accesso alla fotocamera e/o alla galleria, a seconda del metodo di fornitura della foto.",
+          "Le misurazioni dell'esposizione possono richiedere autorizzazioni ai sensori (ad es. bussola) e dipendono dalla disponibilità dell'hardware nel dispositivo.",
+          "Il collegamento a una Definizione di pianta è opzionale — puoi saltare questa fase e creare comunque la pianta, aggiungendo i promemoria manualmente."
+        ]
+      }
+    ]
+  }
+}
