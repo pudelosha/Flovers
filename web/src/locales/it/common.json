@@ -1,23 +1,33 @@
 {
   "nav": {
-    "start": "Inizio",
+    "start": "Home",
     "docs": "Documentazione",
     "schemas": "Schemi",
     "faq": "FAQ"
   },
   "footer": {
-    "terms": "Termini e condizioni",
+    "terms": "Termini",
     "privacy": "Informativa sulla privacy",
-    "contact": "Contatti"
+    "contact": "Contatto"
   },
   "a11y": {
     "mainNav": "Navigazione principale",
-    "languageSwitch": "Selezione della lingua",
+    "languageSwitch": "Selezione lingua",
     "openMenu": "Apri menu",
     "mobileMenu": "Menu mobile"
   },
   "language": {
     "pl": "Polacco",
-    "en": "Inglese"
+    "en": "Inglese",
+    "de": "Tedesco",
+    "it": "Italiano",
+    "fr": "Francese",
+    "es": "Spagnolo",
+    "pt": "Portoghese",
+    "ar": "Arabo",
+    "hi": "Hindi",
+    "zh": "Cinese",
+    "ja": "Giapponese",
+    "ko": "Coreano"
   }
 }

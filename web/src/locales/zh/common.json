@@ -1,8 +1,8 @@
 {
   "nav": {
-    "start": "开始",
+    "start": "首页",
     "docs": "文档",
-    "schemas": "架构",
+    "schemas": "模式",
     "faq": "常见问题"
   },
   "footer": {
@@ -14,10 +14,20 @@
     "mainNav": "主导航",
     "languageSwitch": "语言选择",
     "openMenu": "打开菜单",
-    "mobileMenu": "移动端菜单"
+    "mobileMenu": "移动菜单"
   },
   "language": {
     "pl": "波兰语",
-    "en": "英语"
+    "en": "英语",
+    "de": "德语",
+    "it": "意大利语",
+    "fr": "法语",
+    "es": "西班牙语",
+    "pt": "葡萄牙语",
+    "ar": "阿拉伯语",
+    "hi": "印地语",
+    "zh": "中文",
+    "ja": "日语",
+    "ko": "韩语"
   }
 }

@@ -1,23 +1,33 @@
 {
   "nav": {
-    "start": "시작",
+    "start": "홈",
     "docs": "문서",
     "schemas": "스키마",
-    "faq": "자주 묻는 질문"
+    "faq": "FAQ"
   },
   "footer": {
-    "terms": "이용 약관",
-    "privacy": "개인정보 보호정책",
-    "contact": "연락처"
+    "terms": "약관",
+    "privacy": "개인정보 처리방침",
+    "contact": "문의"
   },
   "a11y": {
-    "mainNav": "주 내비게이션",
+    "mainNav": "주요 탐색",
     "languageSwitch": "언어 선택",
     "openMenu": "메뉴 열기",
     "mobileMenu": "모바일 메뉴"
   },
   "language": {
     "pl": "폴란드어",
-    "en": "영어"
+    "en": "영어",
+    "de": "독일어",
+    "it": "이탈리아어",
+    "fr": "프랑스어",
+    "es": "스페인어",
+    "pt": "포르투갈어",
+    "ar": "아랍어",
+    "hi": "힌디어",
+    "zh": "중국어",
+    "ja": "일본어",
+    "ko": "한국어"
   }
 }
