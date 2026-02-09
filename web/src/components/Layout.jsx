@@ -9,8 +9,7 @@ import {
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.png";
 
-const SUPPORTED_LANGS = ["pl", "en"];
-const DEFAULT_LANG = "en";
+import { LANGS, DEFAULT_LANG } from "../config.js";
 
 function NavItem({ to, label, end = false, onClick }) {
   return (
@@ -45,7 +44,7 @@ export default function Layout() {
 
   // Ensure URL has a valid lang, and keep i18n in sync with URL
   useEffect(() => {
-    const isValid = langFromUrl && SUPPORTED_LANGS.includes(langFromUrl);
+    const isValid = langFromUrl && LANGS.includes(langFromUrl);
 
     if (!isValid) {
       // Preserve the rest of the path when redirecting:
@@ -65,9 +64,7 @@ export default function Layout() {
   }, [langFromUrl, location.pathname, navigate, i18n]);
 
   // Use URL lang (after redirect it will be valid)
-  const currentLang = SUPPORTED_LANGS.includes(langFromUrl)
-    ? langFromUrl
-    : DEFAULT_LANG;
+  const currentLang = LANGS.includes(langFromUrl) ? langFromUrl : DEFAULT_LANG;
 
   const navItems = useMemo(
     () => [
@@ -80,17 +77,52 @@ export default function Layout() {
     [t, currentLang]
   );
 
+  const flagFor = (code) => {
+    switch (code) {
+      case "pl":
+        return "🇵🇱";
+      case "en":
+        return "🇬🇧";
+      case "de":
+        return "🇩🇪";
+      case "it":
+        return "🇮🇹";
+      case "fr":
+        return "🇫🇷";
+      case "es":
+        return "🇪🇸";
+      case "pt":
+        return "🇵🇹";
+      case "ar":
+        return "🇸🇦";
+      case "hi":
+        return "🇮🇳";
+      case "zh":
+        return "🇨🇳";
+      case "ja":
+        return "🇯🇵";
+      case "ko":
+        return "🇰🇷";
+      default:
+        return "";
+    }
+  };
+
   const languages = useMemo(
-    () => [
-      { code: "pl", label: t("language.pl") },
-      { code: "en", label: t("language.en") },
-    ],
+    () =>
+      LANGS.map((code) => ({
+        code,
+        // uses i18n labels if present, else fallback to CODE
+        label: t(`language.${code}`, { defaultValue: code.toUpperCase() }),
+        flag: flagFor(code),
+      })),
     [t]
   );
 
+  const currentLangObj = languages.find((x) => x.code === currentLang);
   const currentLangLabel =
-    languages.find((x) => x.code === currentLang)?.label ??
-    currentLang.toUpperCase();
+    currentLangObj?.label ?? currentLang.toUpperCase();
+  const currentLangFlag = currentLangObj?.flag ?? "";
 
   // Close menus on route change
   useEffect(() => {
@@ -139,7 +171,7 @@ export default function Layout() {
 
   // When user selects a language: keep same page, swap lang segment
   const switchLanguage = (newLang) => {
-    if (!SUPPORTED_LANGS.includes(newLang)) return;
+    if (!LANGS.includes(newLang)) return;
 
     const parts = location.pathname.split("/").filter(Boolean); // ["en","docs",...]
     const rest = parts.length > 0 ? parts.slice(1).join("/") : "";
@@ -178,7 +210,10 @@ export default function Layout() {
                 aria-expanded={langOpen ? "true" : "false"}
                 onClick={() => setLangOpen((v) => !v)}
               >
-                <span className="lang-trigger-text">{currentLangLabel}</span>
+                <span className="lang-trigger-text">
+                  {currentLangFlag ? `${currentLangFlag} ` : ""}
+                  {currentLangLabel}
+                </span>
                 <span className="lang-caret" aria-hidden="true" />
               </button>
 
@@ -195,6 +230,7 @@ export default function Layout() {
                     }
                     onClick={() => switchLanguage(l.code)}
                   >
+                    {l.flag ? `${l.flag} ` : ""}
                     {l.label}
                   </button>
                 ))}
