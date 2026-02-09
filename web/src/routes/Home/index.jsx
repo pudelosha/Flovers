@@ -16,7 +16,7 @@ export default function Home() {
 
       <CoreFeatures />
 
-      <MultiLanguageSection />
+      {/* <MultiLanguageSection /> */}
 
       <FeatureGrid />
 
