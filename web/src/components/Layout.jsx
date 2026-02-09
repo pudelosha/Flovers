@@ -47,10 +47,7 @@ export default function Layout() {
     const isValid = langFromUrl && LANGS.includes(langFromUrl);
 
     if (!isValid) {
-      // Preserve the rest of the path when redirecting:
-      // current path looks like "/<lang>/something"
-      // If missing/invalid, remove first segment and re-add default lang
-      const parts = location.pathname.split("/").filter(Boolean); // ["xx","docs"]
+      const parts = location.pathname.split("/").filter(Boolean);
       const rest = parts.length > 0 ? parts.slice(1).join("/") : "";
       const target = `/${DEFAULT_LANG}${rest ? `/${rest}` : ""}`;
 
@@ -63,12 +60,10 @@ export default function Layout() {
     }
   }, [langFromUrl, location.pathname, navigate, i18n]);
 
-  // Use URL lang (after redirect it will be valid)
   const currentLang = LANGS.includes(langFromUrl) ? langFromUrl : DEFAULT_LANG;
 
   const navItems = useMemo(
     () => [
-      // IMPORTANT: no trailing slash here; `end: true` makes it only active on "/{lang}"
       { to: `/${currentLang}`, label: t("nav.start"), end: true },
       { to: `/${currentLang}/docs`, label: t("nav.docs") },
       { to: `/${currentLang}/schemas`, label: t("nav.schemas") },
@@ -77,32 +72,33 @@ export default function Layout() {
     [t, currentLang]
   );
 
+  // flag-icons class mapping
   const flagFor = (code) => {
     switch (code) {
       case "pl":
-        return "🇵🇱";
+        return "fi fi-pl";
       case "en":
-        return "🇬🇧";
+        return "fi fi-gb";
       case "de":
-        return "🇩🇪";
+        return "fi fi-de";
       case "it":
-        return "🇮🇹";
+        return "fi fi-it";
       case "fr":
-        return "🇫🇷";
+        return "fi fi-fr";
       case "es":
-        return "🇪🇸";
+        return "fi fi-es";
       case "pt":
-        return "🇵🇹";
+        return "fi fi-pt";
       case "ar":
-        return "🇸🇦";
+        return "fi fi-sa";
       case "hi":
-        return "🇮🇳";
+        return "fi fi-in";
       case "zh":
-        return "🇨🇳";
+        return "fi fi-cn";
       case "ja":
-        return "🇯🇵";
+        return "fi fi-jp";
       case "ko":
-        return "🇰🇷";
+        return "fi fi-kr";
       default:
         return "";
     }
@@ -112,7 +108,6 @@ export default function Layout() {
     () =>
       LANGS.map((code) => ({
         code,
-        // uses i18n labels if present, else fallback to CODE
         label: t(`language.${code}`, { defaultValue: code.toUpperCase() }),
         flag: flagFor(code),
       })),
@@ -124,13 +119,11 @@ export default function Layout() {
     currentLangObj?.label ?? currentLang.toUpperCase();
   const currentLangFlag = currentLangObj?.flag ?? "";
 
-  // Close menus on route change
   useEffect(() => {
     setMenuOpen(false);
     setLangOpen(false);
   }, [location.pathname]);
 
-  // Close on outside click + ESC
   useEffect(() => {
     function onKeyDown(e) {
       if (e.key === "Escape") {
@@ -169,11 +162,10 @@ export default function Layout() {
     };
   }, [menuOpen, langOpen]);
 
-  // When user selects a language: keep same page, swap lang segment
   const switchLanguage = (newLang) => {
     if (!LANGS.includes(newLang)) return;
 
-    const parts = location.pathname.split("/").filter(Boolean); // ["en","docs",...]
+    const parts = location.pathname.split("/").filter(Boolean);
     const rest = parts.length > 0 ? parts.slice(1).join("/") : "";
     const target = `/${newLang}${rest ? `/${rest}` : ""}`;
 
@@ -192,7 +184,6 @@ export default function Layout() {
             <span className="brand-name">Flovers</span>
           </div>
 
-          {/* Desktop nav */}
           <nav className="nav nav-desktop" aria-label={t("a11y.mainNav")}>
             {navItems.map((x) => (
               <NavItem key={x.to} to={x.to} label={x.label} end={x.end} />
@@ -200,7 +191,6 @@ export default function Layout() {
           </nav>
 
           <div className="topbar-actions">
-            {/* Custom language dropdown */}
             <div className="lang-menu" ref={langRef}>
               <button
                 type="button"
@@ -211,7 +201,9 @@ export default function Layout() {
                 onClick={() => setLangOpen((v) => !v)}
               >
                 <span className="lang-trigger-text">
-                  {currentLangFlag ? `${currentLangFlag} ` : ""}
+                  {currentLangFlag && (
+                    <span className={currentLangFlag} aria-hidden="true" />
+                  )}
                   {currentLangLabel}
                 </span>
                 <span className="lang-caret" aria-hidden="true" />
@@ -230,14 +222,15 @@ export default function Layout() {
                     }
                     onClick={() => switchLanguage(l.code)}
                   >
-                    {l.flag ? `${l.flag} ` : ""}
+                    {l.flag && (
+                      <span className={l.flag} aria-hidden="true" />
+                    )}
                     {l.label}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Burger button (mobile) */}
             <button
               ref={burgerBtnRef}
               type="button"
@@ -256,7 +249,6 @@ export default function Layout() {
           </div>
         </div>
 
-        {/* Mobile dropdown menu */}
         <div
           id="mobile-menu"
           ref={menuRef}
@@ -290,7 +282,10 @@ export default function Layout() {
             <NavLink className="footer-link" to={`/${currentLang}/terms`}>
               {t("footer.terms")}
             </NavLink>
-            <NavLink className="footer-link" to={`/${currentLang}/privacy-policy`}>
+            <NavLink
+              className="footer-link"
+              to={`/${currentLang}/privacy-policy`}
+            >
               {t("footer.privacy")}
             </NavLink>
             <NavLink className="footer-link" to={`/${currentLang}/contact`}>

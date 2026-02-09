@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "./styles/app.css";
 import "./i18n";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import "flag-icons/css/flag-icons.min.css";
 
 const BASENAME = "/Flovers";
 

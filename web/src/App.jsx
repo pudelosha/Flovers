@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 
 import { LANGS, DEFAULT_LANG } from "../src/config.js";
+import "./App.css";
 
 import Home from "./routes/Home/index.jsx";
 import Terms from "./routes/Terms.jsx";

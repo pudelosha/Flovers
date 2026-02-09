@@ -3,11 +3,33 @@ import { useTranslation } from "react-i18next";
 import Reveal from "./common/Reveal";
 import phoneMock from "../../../assets/phone-reminders.png";
 
-// Store badges (language variants)
-import googlePlayBannerEn from "../../../assets/GooglePlay_en.png";
-import googlePlayBannerPl from "../../../assets/GooglePlay_pl.png";
-import iosStoreBannerEn from "../../../assets/iOSStore_en.svg";
-import iosStoreBannerPl from "../../../assets/iOSStore_pl.svg";
+// Google Play badges
+import googlePlayEn from "../../../assets/GooglePlay_en.png";
+import googlePlayPl from "../../../assets/GooglePlay_pl.png";
+import googlePlayDe from "../../../assets/GooglePlay_de.png";
+import googlePlayFr from "../../../assets/GooglePlay_fr.png";
+import googlePlayEs from "../../../assets/GooglePlay_es.png";
+import googlePlayIt from "../../../assets/GooglePlay_it.png";
+import googlePlayPt from "../../../assets/GooglePlay_pt.png";
+import googlePlayAr from "../../../assets/GooglePlay_ar.png";
+import googlePlayHi from "../../../assets/GooglePlay_hi.png";
+import googlePlayZh from "../../../assets/GooglePlay_zh.png";
+import googlePlayJa from "../../../assets/GooglePlay_ja.png";
+import googlePlayKo from "../../../assets/GooglePlay_ko.png";
+
+// App Store badges
+import iosStoreEn from "../../../assets/iOSStore_en.svg";
+import iosStorePl from "../../../assets/iOSStore_pl.svg";
+import iosStoreDe from "../../../assets/iOSStore_de.svg";
+import iosStoreFr from "../../../assets/iOSStore_fr.svg";
+import iosStoreEs from "../../../assets/iOSStore_es.svg";
+import iosStoreIt from "../../../assets/iOSStore_it.svg";
+import iosStorePt from "../../../assets/iOSStore_pt.svg";
+import iosStoreAr from "../../../assets/iOSStore_ar.svg";
+import iosStoreHi from "../../../assets/iOSStore_hi.svg";
+import iosStoreZh from "../../../assets/iOSStore_zh.svg";
+import iosStoreJa from "../../../assets/iOSStore_ja.svg";
+import iosStoreKo from "../../../assets/iOSStore_ko.svg";
 
 import "./HeroSection.css";
 
@@ -17,19 +39,50 @@ export default function HeroSection() {
   const heroTitle = t("hero.title", { defaultValue: "Flovers" });
 
   const heroSubtitle = t("hero.subtitle", {
-    defaultValue: "Care for your plants with clarity, routines, and history."
+    defaultValue: "Care for your plants with clarity, routines, and history.",
   });
 
   const purpose = t("hero.purpose", {
     defaultValue:
-      "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details."
+      "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details.",
   });
 
-  const lng = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
-  const isPl = lng.startsWith("pl");
+  const lng = (i18n.resolvedLanguage || i18n.language || "en")
+    .toLowerCase()
+    .split("-")[0];
 
-  const googlePlayBanner = isPl ? googlePlayBannerPl : googlePlayBannerEn;
-  const iosStoreBanner = isPl ? iosStoreBannerPl : iosStoreBannerEn;
+  const googlePlayByLang = {
+    en: googlePlayEn,
+    pl: googlePlayPl,
+    de: googlePlayDe,
+    fr: googlePlayFr,
+    es: googlePlayEs,
+    it: googlePlayIt,
+    pt: googlePlayPt,
+    ar: googlePlayAr,
+    hi: googlePlayHi,
+    zh: googlePlayZh,
+    ja: googlePlayJa,
+    ko: googlePlayKo,
+  };
+
+  const iosStoreByLang = {
+    en: iosStoreEn,
+    pl: iosStorePl,
+    de: iosStoreDe,
+    fr: iosStoreFr,
+    es: iosStoreEs,
+    it: iosStoreIt,
+    pt: iosStorePt,
+    ar: iosStoreAr,
+    hi: iosStoreHi,
+    zh: iosStoreZh,
+    ja: iosStoreJa,
+    ko: iosStoreKo,
+  };
+
+  const googlePlayBanner = googlePlayByLang[lng] || googlePlayEn;
+  const iosStoreBanner = iosStoreByLang[lng] || iosStoreEn;
 
   const googlePlayUrl = t("hero.cta.googlePlayUrl", { defaultValue: "" });
   const appStoreUrl = t("hero.cta.appStoreUrl", { defaultValue: "" });
@@ -42,7 +95,12 @@ export default function HeroSection() {
       <div className="home-hero-bg" aria-hidden="true" />
 
       <div className="home-hero-phone" aria-hidden="true">
-        <img src={phoneMock} alt="" className="home-hero-phone-img" loading="lazy" />
+        <img
+          src={phoneMock}
+          alt=""
+          className="home-hero-phone-img"
+          loading="lazy"
+        />
       </div>
 
       <div className="home-hero-inner">
@@ -66,7 +124,9 @@ export default function HeroSection() {
               <img
                 className="home-store-badge-img"
                 src={googlePlayBanner}
-                alt={t("store.google.alt", { defaultValue: "Get it on Google Play" })}
+                alt={t("store.google.alt", {
+                  defaultValue: "Get it on Google Play",
+                })}
               />
             </a>
 
@@ -84,7 +144,9 @@ export default function HeroSection() {
               <img
                 className="home-store-badge-img"
                 src={iosStoreBanner}
-                alt={t("store.apple.alt", { defaultValue: "Download on the App Store" })}
+                alt={t("store.apple.alt", {
+                  defaultValue: "Download on the App Store",
+                })}
               />
             </a>
           </div>
