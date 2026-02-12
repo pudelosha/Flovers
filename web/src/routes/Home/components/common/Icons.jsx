@@ -48,6 +48,62 @@ export function IconLeaf() {
   );
 }
 
+/**
+ * NEW: better semantic icons
+ * - IconRepeat: "intervals/cadence"
+ * - IconClipboardCheck: "reminders -> tasks"
+ * - IconActivity: "readings/trends"
+ */
+export function IconRepeat() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M17 2l4 4-4 4v-3H7a3 3 0 0 0-3 3v1H2v-1a5 5 0 0 1 5-5h10V2z"
+      />
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M7 22l-4-4 4-4v3h10a3 3 0 0 0 3-3v-1h2v1a5 5 0 0 1-5 5H7v3z"
+      />
+    </svg>
+  );
+}
+
+export function IconClipboardCheck() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M16 4h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1zm-2 0V4h-4v0h4z"
+      />
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M10.2 14.6 9 13.4l-1.4 1.4 2.6 2.6 6-6-1.4-1.4-4.6 4.6z"
+      />
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M9 7h6v2H9V7zm0 3h6v2H9v-2z"
+      />
+    </svg>
+  );
+}
+
+export function IconActivity() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M22 12h-4.2l-2.3 5.6a1 1 0 0 1-1.9-.1L9.9 6.9 7.6 12H2v-2h4.3l2.4-5.3a1 1 0 0 1 1.9.1l3.8 10.5 1.8-4.3a1 1 0 0 1 .9-.6H22v2z"
+      />
+    </svg>
+  );
+}
 
 export function IconQR() {
   return (
@@ -122,6 +178,18 @@ export function IconGlobe() {
         fill="currentColor"
         d="M12 21c-5.5 0-10-4.5-10-10S6.5 1 12 1s10 4.5 10 10-4.5 10-10 10zm0-18c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm1 13h-2v-2h2v2zm0-4h-2V7h2v5z"
         opacity="0.95"
+      />
+    </svg>
+  );
+}
+
+export function IconTimer() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        opacity="0.95"
+        d="M10 2h4v2h-4V2zm2 4a9 9 0 1 1 0 18 9 9 0 0 1 0-18zm0 2a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm-1 2h2v5.2l3.2 2-1 1.7L11 16V10z"
       />
     </svg>
   );

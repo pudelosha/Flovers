@@ -1,7 +1,14 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "./common/Reveal";
-import { IconTasks, IconCalendar, IconQR, IconSensor, IconBell } from "./common/Icons";
+import {
+  IconBell,
+  IconQR,
+  IconRepeat,
+  IconClipboardCheck,
+  IconTimer,
+  IconActivity
+} from "./common/Icons";
 import createPlantImg from "../../../assets/create_plant.png";
 import readingsHistoryImg from "../../../assets/readings_history.png";
 import "./FeatureGrid.css";
@@ -34,7 +41,7 @@ export default function FeatureGrid() {
       // 1) Suggested intervals
       {
         key: "intervals",
-        icon: <IconCalendar />,
+        icon: <IconRepeat />,
         title: t("featureGrid.tiles.intervals.title", { defaultValue: "Suggested intervals from plant definitions" }),
         text: t("featureGrid.tiles.intervals.text", {
           defaultValue:
@@ -46,7 +53,7 @@ export default function FeatureGrid() {
       // 2) Tasks from reminders
       {
         key: "tasks",
-        icon: <IconTasks />,
+        icon: <IconTimer />,
         title: t("featureGrid.tiles.tasks.title", { defaultValue: "Reminders that turn into tasks" }),
         text: t("featureGrid.tiles.tasks.text", {
           defaultValue:
@@ -67,7 +74,7 @@ export default function FeatureGrid() {
         tone: "glass"
       },
 
-      // 4) QR
+      // 4) QR (kept)
       {
         key: "qr",
         icon: <IconQR />,
@@ -82,7 +89,7 @@ export default function FeatureGrid() {
       // 5) IoT
       {
         key: "iot",
-        icon: <IconSensor />,
+        icon: <IconActivity />,
         title: t("featureGrid.tiles.iot.title", { defaultValue: "Live IoT readings with trends" }),
         text: t("featureGrid.tiles.iot.text", {
           defaultValue:
