@@ -30,7 +30,7 @@ def send_templated_email(
     *,
     to_email: str,
     template_name: str,
-    subject_key: str,
+    subject_key: Optional[str] = None,
     context: Optional[dict[str, Any]] = None,
     lang: Optional[str] = None,
     from_email: Optional[str] = None,
@@ -85,7 +85,18 @@ def send_templated_email(
     ctx: dict[str, Any] = {**base_ctx, **scope_ctx, **caller_ctx}
 
     # Subject (with optional prefix)
-    subject = t(subject_key, lang=lang, default="Flovers")
+    # Priority:
+    # 1) subject_key via t()
+    # 2) scope JSON "subject"
+    # 3) fallback "Flovers"
+    subject: str = ""
+    if subject_key:
+        subject = t(subject_key, lang=lang, default="") or ""
+    if not subject:
+        subject = (scope_ctx.get("subject") or "").strip()
+    if not subject:
+        subject = "Flovers"
+
     prefix = (getattr(settings, "EMAIL_SUBJECT_PREFIX", "") or "")
     if prefix and not prefix.endswith(" "):
         prefix = prefix + " "

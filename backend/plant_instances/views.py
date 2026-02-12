@@ -1,8 +1,17 @@
+import base64
+from io import BytesIO
+
+import qrcode
+from django.conf import settings
+from urllib.parse import quote
+
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.views import APIView
+
+from core.emailing import send_templated_email
 
 from .models import PlantInstance
 from .serializers import (
@@ -115,3 +124,56 @@ class PlantInstanceByQRView(APIView):
         # return the READ shape, same as list/detail GET (list shape is fine here)
         data = PlantInstanceListSerializer(plant, context={"request": request}).data
         return Response(data, status=status.HTTP_200_OK)
+
+class PlantInstanceSendQREmailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, plant_id: int, *args, **kwargs):
+        plant = (
+            PlantInstance.objects
+            .filter(id=plant_id, user=request.user)
+            .select_related("location", "plant_definition")
+            .first()
+        )
+        if not plant:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+
+        to_email = (getattr(request.user, "email", "") or "").strip()
+        if not to_email:
+            return Response(
+                {"detail": "Your account has no email address set."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        public_base = (getattr(settings, "PUBLIC_WEB_BASE", "") or getattr(settings, "SITE_URL", "") or "").strip()
+        public_base = public_base.rstrip("/")
+        if not public_base:
+            return Response(
+                {"detail": "Server is missing PUBLIC_WEB_BASE (or SITE_URL) configuration."},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+        # Match the mobile app QR format
+        qr_payload = f"{public_base}/api/plant-instances/by-qr/?code={quote(plant.qr_code)}"
+
+        img = qrcode.make(qr_payload)
+        buf = BytesIO()
+        img.save(buf, format="PNG")
+        qr_png_b64 = base64.b64encode(buf.getvalue()).decode("ascii")
+
+        ctx = {
+            "qr_code": plant.qr_code,
+            "qr_payload": qr_payload,
+            "qr_png_b64": qr_png_b64,
+            "plant_name": plant.display_name or "",
+        }
+
+        send_templated_email(
+            to_email=to_email,
+            template_name="plant_instances/qr_code",
+            subject_key=None,
+            context=ctx,
+            lang=getattr(request.user, "lang", None),
+        )
+
+        return Response({"detail": "QR code email sent."}, status=status.HTTP_200_OK)

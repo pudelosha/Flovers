@@ -1,0 +1,35 @@
+<h2 style="margin:0 0 12px 0;font-size:20px;line-height:1.25;">
+  {{ title }}
+</h2>
+
+<p style="margin:0 0 16px 0;font-size:15px;color:rgba(233,243,239,0.92);">
+  {{ intro }}
+</p>
+
+<div style="margin:16px 0 18px 0;">
+  <img
+    src="data:image/png;base64,{{ qr_png_b64 }}"
+    alt="Plant QR code"
+    style="width:220px;height:220px;border-radius:16px;background:#ffffff;padding:10px;"
+  />
+</div>
+
+<p style="margin:0 0 14px 0;font-size:15px;color:rgba(233,243,239,0.92);">
+  {{ instructions }}
+</p>
+
+<p style="margin:0 0 6px 0;color:rgba(233,243,239,0.80);font-size:13px;line-height:1.45;">
+  {{ code_label }}:
+  <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">
+    {{ qr_code }}
+  </span>
+</p>
+
+{% if qr_payload %}
+<p style="margin:0;color:rgba(233,243,239,0.80);font-size:13px;line-height:1.45;">
+  {{ payload_label }}:
+  <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">
+    {{ qr_payload }}
+  </span>
+</p>
+{% endif %}

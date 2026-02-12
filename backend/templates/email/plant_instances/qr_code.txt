@@ -1,0 +1,10 @@
+{{ title }}
+
+{{ intro }}
+
+{{ instructions }}
+
+{{ code_label }}: {{ qr_code }}
+{% if qr_payload %}
+{{ payload_label }}: {{ qr_payload }}
+{% endif %}

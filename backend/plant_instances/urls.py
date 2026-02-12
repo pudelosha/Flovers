@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PlantInstanceListCreateView, PlantInstanceDetailView, PlantInstanceByQRView
+from .views import PlantInstanceListCreateView, PlantInstanceDetailView, PlantInstanceByQRView, PlantInstanceSendQREmailView
 from reminders.views import PlantJournalView
 
 urlpatterns = [
@@ -7,4 +7,5 @@ urlpatterns = [
     path("<int:pk>/", PlantInstanceDetailView.as_view(), name="plant-instance-detail"),
     path("by-qr/", PlantInstanceByQRView.as_view(), name="plant-instance-by-qr"),
     path("<int:plant_id>/journal/", PlantJournalView.as_view(), name="plant-instance-journal"),
+    path("<int:plant_id>/send-qr-email/", PlantInstanceSendQREmailView.as_view(), name="plant-instance-send-qr-email"),
 ]

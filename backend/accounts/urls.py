@@ -2,9 +2,9 @@ from django.urls import path
 from .views import (
     RegisterView, LoginView, ActivateAccountView,
     ResendActivationView, ForgotPasswordView, ResetPasswordView,
-    ChangePasswordView, ChangeEmailView,  # NEW
+    ChangePasswordView, ChangeEmailView,
 )
-from .views_open import open_activate, open_reset_password  # NEW
+from .views_open import open_activate, open_reset_password
 
 urlpatterns = [
     path("register/", RegisterView.as_view(), name="register"),

@@ -23,7 +23,7 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "purchase_date",
-            # ✅ IMPORTANT: do not accept/store photo from the client
+            # IMPORTANT: do not accept/store photo from the client
             # "photo_uri",
             # exposure
             "light_level",
@@ -170,7 +170,7 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "image": hero,         # optional fallback
         }
 
-# NEW: detail serializer for GET /api/plant-instances/<id>/
+# detail serializer for GET /api/plant-instances/<id>/
 # returns the full editable payload + nested read bits
 class PlantInstanceDetailSerializer(serializers.ModelSerializer):
     location = serializers.SerializerMethodField()
@@ -193,7 +193,7 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "purchase_date",
-            # ✅ IMPORTANT: do not return backend photo_uri (local-only on device)
+            # do not return backend photo_uri (local-only on device)
             # "photo_uri",
             # exposure
             "light_level",
