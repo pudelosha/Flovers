@@ -4,7 +4,7 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
   Platform,
-  Linking,
+  Pressable,
 } from "react-native";
 import { Text, Button, ActivityIndicator } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
@@ -12,13 +12,12 @@ import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 type ConfirmParams = {
   token?: string;
   uid?: string;
   email?: string;
-  /** Optional convenience if you pass a raw URL to this screen */
   url?: string;
 };
 
@@ -43,70 +42,117 @@ function parseQuery(url: string): Record<string, string> {
 }
 
 // Create a wrapper component that ensures translations are ready
-const TranslatedText = ({ tKey, children, style, variant }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any,
-  variant?: "headlineMedium" | "bodyMedium" | "bodySmall" 
+const TranslatedText = ({
+  tKey,
+  children,
+  style,
+  variant,
+}: {
+  tKey: string;
+  children?: any;
+  style?: any;
+  variant?: "headlineMedium" | "bodyMedium" | "bodySmall";
 }) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  
-  // Use currentLanguage to force re-render when language changes
+
+  // Force re-render on language change
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useMemo(() => {}, [currentLanguage]);
-  
+
   try {
     const text = t(tKey);
     if (variant) {
-      return <Text variant={variant} style={style}>{text}</Text>;
+      return (
+        <Text variant={variant} style={style}>
+          {text}
+        </Text>
+      );
     }
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
-    const fallbackText = tKey.split('.').pop() || tKey;
+    const fallbackText = tKey.split(".").pop() || tKey;
     if (variant) {
-      return <Text variant={variant} style={style}>{fallbackText}</Text>;
+      return (
+        <Text variant={variant} style={style}>
+          {fallbackText}
+        </Text>
+      );
     }
     return <Text style={style}>{fallbackText}</Text>;
   }
+};
+
+/**
+ * Fix for long translated "link" text:
+ * Paper <Button compact> often clips instead of wrapping.
+ * Use Pressable + Text so it can wrap to 2 lines.
+ */
+const LinkText = ({
+  onPress,
+  text,
+  style,
+  numberOfLines = 2,
+}: {
+  onPress: () => void;
+  text: string;
+  style?: any;
+  numberOfLines?: number;
+}) => {
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="link"
+      style={({ pressed }) => [s.linkPressable, pressed && s.linkPressed, style]}
+    >
+      <Text style={s.linkLabel} numberOfLines={numberOfLines} ellipsizeMode="tail">
+        {text}
+      </Text>
+    </Pressable>
+  );
 };
 
 export default function ConfirmEmailScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ConfirmEmail">>();
   const { confirmEmail } = useAuth() as any;
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage } = useLanguage();
 
   const [loading, setLoading] = useState(true);
   const [ok, setOk] = useState<boolean | null>(null);
   const [message, setMessage] = useState<string>("");
-  const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
+  const [toast, setToast] = useState<{
+    visible: boolean;
+    msg: string;
+    variant?: "default" | "success" | "error";
+  }>({
     visible: false,
     msg: "",
     variant: "default",
   });
 
   // Safe translation function that uses both hooks
-  const getTranslation = useCallback((key: string, fallback?: string): string => {
-    try {
-      // Force dependency on currentLanguage to ensure updates
-      const lang = currentLanguage;
-      const translation = t(key);
-      return translation || fallback || key.split('.').pop() || key;
-    } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return fallback || key.split('.').pop() || key;
-    }
-  }, [t, currentLanguage]);
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        void currentLanguage; // keep dependency
+        const translation = t(key);
+        return translation || fallback || key.split(".").pop() || key;
+      } catch (error) {
+        console.warn("Translation error for key:", key, error);
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
-    console.log('ConfirmEmailScreen rendering with language:', currentLanguage);
+    console.log("ConfirmEmailScreen rendering with language:", currentLanguage);
   }, [currentLanguage]);
 
   // Initialize message with translation
   useEffect(() => {
-    setMessage(getTranslation('confirmEmail.confirming', 'Confirming...'));
+    setMessage(getTranslation("confirmEmail.confirming", "Confirming..."));
   }, [getTranslation]);
 
   // Gather params from either route params or a full URL
@@ -134,7 +180,9 @@ export default function ConfirmEmailScreen({ navigation }: any) {
 
       if (!token || !uid) {
         setOk(false);
-        setMessage(getTranslation('confirmEmail.invalidLink', 'Invalid or expired confirmation link.'));
+        setMessage(
+          getTranslation("confirmEmail.invalidLink", "Invalid or expired confirmation link.")
+        );
         setLoading(false);
         return;
       }
@@ -143,17 +191,26 @@ export default function ConfirmEmailScreen({ navigation }: any) {
         if (typeof confirmEmail === "function") {
           await confirmEmail({ token, uid });
         } else {
-          // If backend/hook isn't wired yet, pretend the call succeeded so you can test flow
           await new Promise((r) => setTimeout(r, 500));
         }
         if (!cancelled) {
           setOk(true);
-          setMessage(getTranslation('confirmEmail.success', 'Your email has been confirmed successfully!'));
+          setMessage(
+            getTranslation(
+              "confirmEmail.success",
+              "Your email has been confirmed successfully!"
+            )
+          );
         }
       } catch (e: any) {
         if (!cancelled) {
           const msg =
-            e instanceof ApiError ? e.body?.message || e.message : getTranslation('confirmEmail.activationFailed', 'Activation failed. Please try again.');
+            e instanceof ApiError
+              ? e.body?.message || e.message
+              : getTranslation(
+                  "confirmEmail.activationFailed",
+                  "Activation failed. Please try again."
+                );
           setOk(false);
           setMessage(msg);
           setToast({ visible: true, msg, variant: "error" });
@@ -169,12 +226,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        {/* Use the safe translation wrapper for the title */}
-        <TranslatedText 
-          tKey="confirmEmail.title" 
-          variant="headlineMedium"
-          style={s.title} 
-        />
+        <TranslatedText tKey="confirmEmail.title" variant="headlineMedium" style={s.title} />
 
         <View style={s.resultBox}>
           {loading ? (
@@ -183,20 +235,14 @@ export default function ConfirmEmailScreen({ navigation }: any) {
               <Text style={s.resultText}>  {message}</Text>
             </View>
           ) : (
-            <Text style={[s.resultText, ok ? s.resultOk : s.resultErr]}>
-              {message}
-            </Text>
+            <Text style={[s.resultText, ok ? s.resultOk : s.resultErr]}>{message}</Text>
           )}
         </View>
 
         {/* Primary CTA depends on result */}
         {!loading && ok === true && (
-          <Button
-            mode="contained"
-            onPress={() => navigation.navigate("Login")}
-            style={s.button}
-          >
-            {getTranslation('confirmEmail.goToLogin', 'Go to Login')}
+          <Button mode="contained" onPress={() => navigation.navigate("Login")} style={s.button}>
+            {getTranslation("confirmEmail.goToLogin", "Go to Login")}
           </Button>
         )}
 
@@ -206,23 +252,17 @@ export default function ConfirmEmailScreen({ navigation }: any) {
             onPress={() => navigation.navigate("ResendActivation", { email: derived.email })}
             style={s.button}
           >
-            {getTranslation('confirmEmail.resendActivation', 'Resend Activation Email')}
+            {getTranslation("confirmEmail.resendActivation", "Resend Activation Email")}
           </Button>
         )}
 
-        {/* Fallback / extra actions */}
-        <Button
+        {/* FIXED: link-like action rendered with Pressable so it wraps */}
+        <LinkText
           onPress={() => navigation.navigate("Login")}
-          accessibilityRole="link"
-          compact
-          style={s.linkButton}
-        >
-          <Text style={s.linkLabel}>
-            {getTranslation('confirmEmail.backToLogin', 'Back to Login')}
-          </Text>
-        </Button>
+          text={getTranslation("confirmEmail.backToLogin", "Back to Login")}
+          style={s.linkTight}
+        />
 
-        {/* Shared top toast */}
         <TopSnackbar
           visible={toast.visible}
           message={toast.msg}
@@ -254,6 +294,17 @@ const s = StyleSheet.create({
   resultOk: { color: "#E6FFFA" },
   resultErr: { color: "#FFE6E6" },
   button: { marginTop: 8 },
-  linkButton: { alignSelf: "center" },
-  linkLabel: { fontSize: 14, color: "#FFFFFF" },
+
+  linkPressable: {
+    alignSelf: "center",
+    maxWidth: "100%",
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+  },
+  linkPressed: {
+    opacity: 0.75,
+  },
+  linkTight: { marginTop: -4 },
+
+  linkLabel: { fontSize: 14, color: "#FFFFFF", textAlign: "center", flexShrink: 1 },
 });

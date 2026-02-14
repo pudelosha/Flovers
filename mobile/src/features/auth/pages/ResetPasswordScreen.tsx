@@ -6,6 +6,7 @@ import {
   Platform,
   Animated,
   TextInput as RNTextInput,
+  Pressable,
 } from "react-native";
 import { Text, TextInput, Button } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
@@ -13,7 +14,7 @@ import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 const INPUT_HEIGHT = 64;
 
@@ -41,9 +42,20 @@ const AnimatedFloatingLabel = ({
     Animated.timing(animatedLabel, { toValue, duration: 200, useNativeDriver: false }).start();
   };
 
-  const handleFocus = () => { setIsFocused(true); animateLabel(1); onFocus?.(); };
-  const handleBlur = () => { setIsFocused(false); if (!value) animateLabel(0); onBlur?.(); };
-  const handleChangeText = (text: string) => { if (!isFocused && text) animateLabel(1); onChangeText(text); };
+  const handleFocus = () => {
+    setIsFocused(true);
+    animateLabel(1);
+    onFocus?.();
+  };
+  const handleBlur = () => {
+    setIsFocused(false);
+    if (!value) animateLabel(0);
+    onBlur?.();
+  };
+  const handleChangeText = (text: string) => {
+    if (!isFocused && text) animateLabel(1);
+    onChangeText(text);
+  };
 
   const labelTop = animatedLabel.interpolate({ inputRange: [0, 1], outputRange: [22, 8] });
   const labelFontSize = animatedLabel.interpolate({ inputRange: [0, 1], outputRange: [16, 12] });
@@ -54,7 +66,11 @@ const AnimatedFloatingLabel = ({
 
   return (
     <View style={s.inputContainer}>
-      <Animated.Text style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}>{label}</Animated.Text>
+      <Animated.Text
+        style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}
+      >
+        {label}
+      </Animated.Text>
       <TextInput
         mode="flat"
         value={value}
@@ -84,29 +100,42 @@ const AnimatedFloatingLabel = ({
 };
 
 // Create a wrapper component that ensures translations are ready
-const TranslatedText = ({ tKey, children, style, variant }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any,
-  variant?: "headlineMedium" | "bodyMedium" | "bodySmall" 
+const TranslatedText = ({
+  tKey,
+  children,
+  style,
+  variant,
+}: {
+  tKey: string;
+  children?: any;
+  style?: any;
+  variant?: "headlineMedium" | "bodyMedium" | "bodySmall";
 }) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  
+
   // Use currentLanguage to force re-render when language changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useMemo(() => {}, [currentLanguage]);
-  
+
   try {
     const text = t(tKey);
     if (variant) {
-      return <Text variant={variant} style={style}>{text}</Text>;
+      return (
+        <Text variant={variant} style={style}>
+          {text}
+        </Text>
+      );
     }
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
-    const fallbackText = tKey.split('.').pop() || tKey;
+    const fallbackText = tKey.split(".").pop() || tKey;
     if (variant) {
-      return <Text variant={variant} style={style}>{fallbackText}</Text>;
+      return (
+        <Text variant={variant} style={style}>
+          {fallbackText}
+        </Text>
+      );
     }
     return <Text style={style}>{fallbackText}</Text>;
   }
@@ -119,21 +148,52 @@ function parseQuery(url: string): Record<string, string> {
   try {
     const q = url.split("?")[1] || "";
     const out: Record<string, string> = {};
-    q.split("&").filter(Boolean).forEach((pair) => {
-      const [k, v] = pair.split("=");
-      if (k) out[decodeURIComponent(k)] = decodeURIComponent(v || "");
-    });
+    q.split("&")
+      .filter(Boolean)
+      .forEach((pair) => {
+        const [k, v] = pair.split("=");
+        if (k) out[decodeURIComponent(k)] = decodeURIComponent(v || "");
+      });
     return out;
   } catch {
     return {};
   }
 }
 
+/**
+ * Fix for long translated link text:
+ * Paper <Button compact> often clips instead of wrapping.
+ * Use Pressable + Text so it can wrap to 2 lines.
+ */
+const LinkText = ({
+  onPress,
+  text,
+  style,
+  numberOfLines = 2,
+}: {
+  onPress: () => void;
+  text: string;
+  style?: any;
+  numberOfLines?: number;
+}) => {
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="link"
+      style={({ pressed }) => [s.linkPressable, pressed && s.linkPressed, style]}
+    >
+      <Text style={s.linkLabel} numberOfLines={numberOfLines} ellipsizeMode="tail">
+        {text}
+      </Text>
+    </Pressable>
+  );
+};
+
 export default function ResetPasswordScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ResetPassword">>();
   const { resetPassword } = useAuth() as any;
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage } = useLanguage();
 
   const params = route.params || {};
   const derived = useMemo(() => {
@@ -156,7 +216,11 @@ export default function ResetPasswordScreen({ navigation }: any) {
   const [showPwd2, setShowPwd2] = useState(false);
 
   const [loading, setLoading] = useState(false);
-  const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
+  const [toast, setToast] = useState<{
+    visible: boolean;
+    msg: string;
+    variant?: "default" | "success" | "error";
+  }>({
     visible: false,
     msg: "",
     variant: "default",
@@ -169,30 +233,33 @@ export default function ResetPasswordScreen({ navigation }: any) {
   const passwordsMatch = pwd && pwd === pwd2;
   const formValid = passwordValid && passwordsMatch && !!derived.token && !!derived.uid;
 
-  // Safe translation function that uses both hooks
-  const getTranslation = useCallback((key: string, fallback?: string): string => {
-    try {
-      // Force dependency on currentLanguage to ensure updates
-      const lang = currentLanguage;
-      const translation = t(key);
-      return translation || fallback || key.split('.').pop() || key;
-    } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return fallback || key.split('.').pop() || key;
-    }
-  }, [t, currentLanguage]);
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        void currentLanguage; // keep dependency
+        const translation = t(key);
+        return translation || fallback || key.split(".").pop() || key;
+      } catch (error) {
+        console.warn("Translation error for key:", key, error);
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
-    console.log('ResetPasswordScreen rendering with language:', currentLanguage);
+    console.log("ResetPasswordScreen rendering with language:", currentLanguage);
   }, [currentLanguage]);
 
   async function onSubmit() {
     if (!formValid) {
       let msg = getTranslation("resetPassword.error", "Please fix the errors below");
-      if (!derived.token || !derived.uid) msg = getTranslation("resetPassword.invalidLink", "Invalid or expired reset link");
-      else if (!passwordValid) msg = getTranslation("resetPassword.passwordTooShort", "Password must be at least 6 characters");
-      else if (!passwordsMatch) msg = getTranslation("resetPassword.passwordsDoNotMatch", "Passwords do not match");
+      if (!derived.token || !derived.uid)
+        msg = getTranslation("resetPassword.invalidLink", "Invalid or expired reset link");
+      else if (!passwordValid)
+        msg = getTranslation("resetPassword.passwordTooShort", "Password must be at least 6 characters");
+      else if (!passwordsMatch)
+        msg = getTranslation("resetPassword.passwordsDoNotMatch", "Passwords do not match");
       setToast({ visible: true, msg, variant: "error" });
       return;
     }
@@ -204,7 +271,11 @@ export default function ResetPasswordScreen({ navigation }: any) {
       } else {
         await new Promise((r) => setTimeout(r, 500));
       }
-      setToast({ visible: true, msg: getTranslation("resetPassword.success", "Password reset successfully"), variant: "success" });
+      setToast({
+        visible: true,
+        msg: getTranslation("resetPassword.success", "Password reset successfully"),
+        variant: "success",
+      });
       navigation.navigate("Login");
     } catch (e: any) {
       const msg =
@@ -230,12 +301,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        {/* Use the safe translation wrapper for the title */}
-        <TranslatedText 
-          tKey="resetPassword.resetPassword" 
-          variant="headlineMedium"
-          style={s.title} 
-        />
+        <TranslatedText tKey="resetPassword.resetPassword" variant="headlineMedium" style={s.title} />
 
         <AnimatedFloatingLabel
           label={getTranslation("resetPassword.newPassword", "New Password")}
@@ -285,9 +351,12 @@ export default function ResetPasswordScreen({ navigation }: any) {
           {getTranslation("resetPassword.changePassword", "Change Password")}
         </Button>
 
-        <Button onPress={() => navigation.navigate("Login")} accessibilityRole="link" compact style={s.linkButton}>
-          <Text style={s.linkLabel}>{getTranslation("resetPassword.backToLogin", "Back to Login")}</Text>
-        </Button>
+        {/* FIXED: link-like action rendered with Pressable so it wraps */}
+        <LinkText
+          onPress={() => navigation.navigate("Login")}
+          text={getTranslation("resetPassword.backToLogin", "Back to Login")}
+          style={s.linkTight}
+        />
 
         <TopSnackbar
           visible={toast.visible}
@@ -303,11 +372,27 @@ export default function ResetPasswordScreen({ navigation }: any) {
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
   title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
+
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },
-  flat: { backgroundColor: "rgba(255,255,255,0.12)", borderRadius: 14, height: INPUT_HEIGHT, paddingHorizontal: 12 },
+  flat: {
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderRadius: 14,
+    height: INPUT_HEIGHT,
+    paddingHorizontal: 12,
+  },
   contentStyle: { paddingTop: 20, paddingBottom: 8 },
+
   button: { marginTop: 8 },
-  linkButton: { alignSelf: "center" },
-  linkLabel: { fontSize: 14, color: "#FFFFFF" },
+
+  linkPressable: {
+    alignSelf: "center",
+    maxWidth: "100%",
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+  },
+  linkPressed: { opacity: 0.75 },
+  linkTight: { marginTop: -4 },
+
+  linkLabel: { fontSize: 14, color: "#FFFFFF", textAlign: "center", flexShrink: 1 },
 });
