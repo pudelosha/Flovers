@@ -6,6 +6,7 @@ import {
   Platform,
   TextInput as RNTextInput,
   Animated,
+  Pressable,
 } from "react-native";
 import { Text, TextInput, Button } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
@@ -110,8 +111,6 @@ const TranslatedText = ({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
-  // Use currentLanguage to force re-render when language changes
-  // This ensures the text updates immediately
   // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useMemo(() => {}, [currentLanguage]);
 
@@ -119,9 +118,33 @@ const TranslatedText = ({
     const text = t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
     return <Text style={style}>{tKey.split(".").pop()}</Text>;
   }
+};
+
+/**
+ * Alternative fix:
+ * Paper <Button compact> tends to constrain its label to a single line / clipped layout.
+ * Replace link-like Buttons with Pressable + Text so React Native can wrap naturally.
+ */
+const LinkText = ({
+  text,
+  onPress,
+  style,
+  numberOfLines = 2,
+}: {
+  text: string;
+  onPress: () => void;
+  style?: any;
+  numberOfLines?: number;
+}) => {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="link" style={({ pressed }) => [s.linkPressable, pressed && s.linkPressed, style]}>
+      <Text style={s.linkLabel} numberOfLines={numberOfLines} ellipsizeMode="tail">
+        {text}
+      </Text>
+    </Pressable>
+  );
 };
 
 export default function LoginScreen({ navigation }: any) {
@@ -146,11 +169,9 @@ export default function LoginScreen({ navigation }: any) {
   const pwdRef = useRef<RNTextInput | null>(null);
   const emailRef = useRef<RNTextInput | null>(null);
 
-  // Safe translation function that reacts to language changes
   const getTranslation = React.useCallback(
     (key: string): string => {
       try {
-        // dependency on currentLanguage ensures recalculation on language switch
         void currentLanguage;
         const translation = t(key);
         return translation || key.split(".").pop() || key;
@@ -167,13 +188,7 @@ export default function LoginScreen({ navigation }: any) {
     try {
       await login({ email, password });
     } catch (e: any) {
-      /**
-       * Backend sends English messages ("Login failed.") and/or serializer error payloads.
-       * Do NOT show backend message directly; always show localized UI strings.
-       */
       const isApi = e instanceof ApiError;
-
-      // Heuristic: login invalid credentials comes as 400 most commonly
       const status = (isApi ? (e as any)?.status : undefined) ?? (e as any)?.response?.status;
 
       const msg =
@@ -187,7 +202,6 @@ export default function LoginScreen({ navigation }: any) {
     }
   }
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
     console.log("LoginScreen rendering with language:", currentLanguage);
   }, [currentLanguage]);
@@ -195,7 +209,6 @@ export default function LoginScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        {/* Use the safe translation wrapper for the title */}
         <TranslatedText tKey="login.title" style={s.title} />
 
         <AnimatedFloatingLabel
@@ -233,37 +246,31 @@ export default function LoginScreen({ navigation }: any) {
           {getTranslation("login.signIn")}
         </Button>
 
-        <Button
+        {/* Link-like actions: use Pressable + Text so long translations wrap to 2 lines */}
+        <LinkText
+          text={getTranslation("login.forgotPassword")}
           onPress={() => navigation.navigate("ForgotPassword")}
-          accessibilityRole="link"
-          compact
-          style={s.linkButton}
-        >
-          <Text style={s.linkLabel}>{getTranslation("login.forgotPassword")}</Text>
-        </Button>
+          style={s.linkTight}
+        />
 
-        <Button
+        <LinkText
+          text={getTranslation("login.resendActivation")}
           onPress={() => navigation.navigate("ResendActivation")}
-          accessibilityRole="link"
-          compact
-          style={[s.linkButton, s.linkTight]}
-        >
-          <Text style={s.linkLabel}>{getTranslation("login.resendActivation")}</Text>
-        </Button>
+          style={s.linkTight}
+        />
 
-        <Button
+        {/* Mixed styling (bold part) -> keep as Pressable with nested Text, still wraps */}
+        <Pressable
           onPress={() => navigation.navigate("Register")}
           accessibilityRole="link"
-          compact
-          style={[s.linkButton, s.linkTight]}
+          style={({ pressed }) => [s.linkPressable, pressed && s.linkPressed, s.linkTight]}
         >
-          <Text style={s.linkLabel}>
+          <Text style={s.linkLabel} numberOfLines={2} ellipsizeMode="tail">
             {getTranslation("login.noAccount")}{" "}
             <Text style={[s.linkLabel, s.linkBold]}>{getTranslation("login.signUp")}</Text>
           </Text>
-        </Button>
+        </Pressable>
 
-        {/* Top toast (shared UI) */}
         <TopSnackbar
           visible={toast.visible}
           message={toast.msg}
@@ -277,16 +284,19 @@ export default function LoginScreen({ navigation }: any) {
 
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
+
   title: {
     color: "#fff",
     textAlign: "center",
     marginBottom: 6,
     fontWeight: "800",
     marginTop: 20,
-    fontSize: 24, // Added explicit font size
+    fontSize: 24,
   },
+
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },
+
   flat: {
     backgroundColor: "rgba(255,255,255,0.12)",
     borderRadius: 14,
@@ -294,9 +304,25 @@ const s = StyleSheet.create({
     paddingHorizontal: 12,
   },
   contentStyle: { paddingTop: 20, paddingBottom: 8 },
+
   button: { marginTop: 8 },
-  linkButton: { alignSelf: "center" },
+
+  linkPressable: {
+    alignSelf: "center",
+    maxWidth: "100%",
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+  },
+  linkPressed: {
+    opacity: 0.75,
+  },
   linkTight: { marginTop: -4 },
-  linkLabel: { fontSize: 14, color: "#FFFFFF" },
+
+  linkLabel: {
+    fontSize: 14,
+    color: "#FFFFFF",
+    textAlign: "center",
+    flexShrink: 1,
+  },
   linkBold: { fontWeight: "700" },
 });

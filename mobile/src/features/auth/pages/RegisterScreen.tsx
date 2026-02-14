@@ -7,6 +7,7 @@ import {
   Animated,
   TextInput as RNTextInput,
   Linking,
+  Pressable,
 } from "react-native";
 import { Text, TextInput, Button, Checkbox, TouchableRipple } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
@@ -20,7 +21,7 @@ const INPUT_HEIGHT = 64;
 // GitHub Pages base (repo name included)
 const WEB_BASE = "https://pudelosha.github.io/Flovers";
 
-function normalizeLang(lang) {
+function normalizeLang(lang: any) {
   if (!lang) return "en";
   const lc = String(lang).toLowerCase();
   return lc.startsWith("pl") ? "pl" : "en";
@@ -28,7 +29,7 @@ function normalizeLang(lang) {
 
 // For Terms specifically, this guarantees:
 // https://pudelosha.github.io/Flovers/en/terms (or /pl/terms)
-function buildTermsUrl(lang) {
+function buildTermsUrl(lang: any) {
   const safeLang = normalizeLang(lang);
   return `${WEB_BASE}/${safeLang}/terms`;
 }
@@ -148,6 +149,7 @@ const TranslatedText = ({
   const { currentLanguage } = useLanguage();
 
   // Force re-render on language change
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useMemo(() => {}, [currentLanguage]);
 
   try {
@@ -171,6 +173,31 @@ const TranslatedText = ({
     }
     return <Text style={style}>{fallbackText}</Text>;
   }
+};
+
+/**
+ * Fix for long translated link at the bottom:
+ * Paper <Button compact> often constrains label and clips instead of wrapping.
+ * Use Pressable + Text so the line can wrap (up to 2 lines).
+ */
+const LinkText = ({
+  onPress,
+  children,
+  style,
+}: {
+  onPress: () => void;
+  children: React.ReactNode;
+  style?: any;
+}) => {
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="link"
+      style={({ pressed }) => [s.linkPressable, pressed && s.linkPressed, style]}
+    >
+      {children}
+    </Pressable>
+  );
 };
 
 export default function RegisterScreen({ navigation }: any) {
@@ -204,7 +231,8 @@ export default function RegisterScreen({ navigation }: any) {
   const getTranslation = useCallback(
     (key: string): string => {
       try {
-        const _lang = currentLanguage; // keep dependency
+        // keep dependency
+        void currentLanguage;
         const translation = t(key);
         return translation || key.split(".").pop() || key;
       } catch (error) {
@@ -216,11 +244,9 @@ export default function RegisterScreen({ navigation }: any) {
   );
 
   // Open Terms page in browser with language from LanguageProvider
-  // Correction: remove canOpenURL to avoid false negatives for https on some setups.
   const openTerms = useCallback(async () => {
     const url = buildTermsUrl(currentLanguage);
 
-    // Optional debug (remove later)
     console.log("Opening Terms URL:", url);
 
     try {
@@ -233,7 +259,6 @@ export default function RegisterScreen({ navigation }: any) {
     }
   }, [currentLanguage, getTranslation]);
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
     console.log("RegisterScreen rendering with language:", currentLanguage);
   }, [currentLanguage]);
@@ -274,9 +299,7 @@ export default function RegisterScreen({ navigation }: any) {
           return;
         }
         const msg =
-          e.body?.message ||
-          e.message ||
-          getTranslation("register.errors.registrationFailed");
+          e.body?.message || e.message || getTranslation("register.errors.registrationFailed");
         setToast({ visible: true, msg });
         return;
       }
@@ -362,10 +385,7 @@ export default function RegisterScreen({ navigation }: any) {
             />
             <Text style={s.agreeText}>
               {getTranslation("register.termsAgreement")}{" "}
-              <Text
-                style={[s.agreeText, s.linkBold, s.linkUnderline]}
-                onPress={openTerms}
-              >
+              <Text style={[s.agreeText, s.linkBold, s.linkUnderline]} onPress={openTerms}>
                 {getTranslation("register.termsLink")}
               </Text>
             </Text>
@@ -382,19 +402,13 @@ export default function RegisterScreen({ navigation }: any) {
           {getTranslation("register.signUpButton")}
         </Button>
 
-        <Button
-          onPress={() => navigation.navigate("Login")}
-          accessibilityRole="link"
-          compact
-          style={s.linkButton}
-        >
-          <Text style={s.linkLabel}>
+        {/* FIXED: use Pressable so long translations wrap instead of being clipped */}
+        <LinkText onPress={() => navigation.navigate("Login")} style={s.linkTight}>
+          <Text style={s.linkLabel} numberOfLines={2} ellipsizeMode="tail">
             {getTranslation("register.haveAccount")}{" "}
-            <Text style={[s.linkLabel, s.linkBold]}>
-              {getTranslation("register.loginLink")}
-            </Text>
+            <Text style={[s.linkLabel, s.linkBold]}>{getTranslation("register.loginLink")}</Text>
           </Text>
-        </Button>
+        </LinkText>
 
         <TopSnackbar
           visible={toast.visible}
@@ -454,8 +468,24 @@ const s = StyleSheet.create({
     flexWrap: "wrap",
   },
 
-  linkButton: { alignSelf: "center" },
-  linkLabel: { fontSize: 14, color: "#FFFFFF" },
+  // NEW: link wrapper that can grow in height and allow wrapping
+  linkPressable: {
+    alignSelf: "center",
+    maxWidth: "100%",
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+  },
+  linkPressed: {
+    opacity: 0.75,
+  },
+  linkTight: { marginTop: -4 },
+
+  linkLabel: {
+    fontSize: 14,
+    color: "#FFFFFF",
+    textAlign: "center",
+    flexShrink: 1,
+  },
   linkBold: { fontWeight: "700" },
   linkUnderline: { textDecorationLine: "underline" },
 });
