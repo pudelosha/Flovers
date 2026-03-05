@@ -15,8 +15,8 @@ if env_file.exists():
 
 # --- Core ---
 SECRET_KEY = env("SECRET_KEY", default="dev-secret")
-DEBUG = env.bool("DEBUG", default=True)
-ALLOWED_HOSTS = ["*"]  # ok for dev
+DEBUG = env.bool("DEBUG", default=False)
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["api.flovers.app"])
 
 # --- Apps ---
 INSTALLED_APPS = [
@@ -138,13 +138,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # --- CORS (dev: open) ---
 CORS_ALLOW_ALL_ORIGINS = True
 
-# --- Email (MailHog in Docker by default) ---
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = env("EMAIL_HOST", default="mailhog")
-EMAIL_PORT = env.int("EMAIL_PORT", default=1025)
-EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.local")
-
 # --- Celery / Redis ---
 CELERY_BROKER_URL = env("CELERY_BROKER_URL", default="redis://redis:6379/0")
 CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND", default="redis://redis:6379/1")
@@ -189,7 +182,7 @@ EMAIL_PORT = env.int("EMAIL_PORT", default=1025)
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.local")
 
-# NEW: email + i18n helpers
+# Email + i18n helpers
 EMAIL_SUBJECT_PREFIX = env("EMAIL_SUBJECT_PREFIX", default="[Flovers] ").strip()
 EMAIL_DEFAULT_LANG = env("EMAIL_DEFAULT_LANG", default="en").strip()
 

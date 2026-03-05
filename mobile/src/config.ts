@@ -5,11 +5,12 @@ function trimSlashEnd(v: string) {
 }
 
 // Base used for in-app API calls
+// Force production API as default fallback (even if env is missing)
 export const API_BASE =
-  (Config.API_BASE && Config.API_BASE.trim()) || "http://192.168.0.99:8000";
+  (Config.API_BASE && Config.API_BASE.trim()) || "https://api.flovers.app";
 
 export const PUBLIC_BASE_URL =
-  (Config.PUBLIC_BASE_URL && Config.PUBLIC_BASE_URL.trim()) || API_BASE;
+  (Config.PUBLIC_BASE_URL && Config.PUBLIC_BASE_URL.trim()) || "https://flovers.app";
 
 // Normalized (no trailing slash) to prevent // in URLs
 export const API_BASE_NORM = trimSlashEnd(API_BASE);

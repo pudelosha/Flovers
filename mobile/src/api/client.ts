@@ -8,7 +8,8 @@
 // Authorization token is read from an in-memory variable (setAuthToken),
 // not from AsyncStorage on every request.
 
-import { API_BASE } from "../config";
+import { API_BASE_NORM } from "../config";
+
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
@@ -97,7 +98,7 @@ export async function request<T>(
   opts: RequestOpts = { auth: false, timeoutMs: 15000 }
 ): Promise<T> {
   const headers: Record<string, string> = {};
-  const url = `${API_BASE}${path}`;
+  const url = `${API_BASE_NORM}${path}`;
 
   // Attach token from memory (no AsyncStorage access here)
   if (opts.auth && inMemoryToken) {

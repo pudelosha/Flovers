@@ -7,7 +7,7 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 /** React-native-config env mapping */
 project.ext.envConfigFiles = [
-    debug: ".env.development",
+    debug: ".env.production",
     release: ".env.production"
 ]
 
