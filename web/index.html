@@ -13,7 +13,7 @@
     <!-- GitHub Pages SPA deep-link restore (repo-aware) -->
     <script>
       (function () {
-        const REPO = "/";
+        const REPO = window.location.hostname === "pudelosha.github.io" ? "/Flovers" : "";
 
         const params = new URLSearchParams(window.location.search);
         const p = params.get("p");

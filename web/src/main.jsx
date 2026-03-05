@@ -7,7 +7,8 @@ import "./i18n";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import "flag-icons/css/flag-icons.min.css";
 
-const BASENAME = "/Flovers";
+const BASENAME =
+  window.location.hostname === "pudelosha.github.io" ? "/Flovers" : "";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

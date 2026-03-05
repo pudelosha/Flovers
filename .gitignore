@@ -7,10 +7,19 @@ __pycache__/
 *.pyd
 *.sqlite3
 *.log
-
+############################
 # Django artefacts
+############################
 staticfiles/
 media/
+
+############################
+# Celery
+############################
+celerybeat-schedule
+celerybeat-schedule.*
+backend/celerybeat-schedule
+backend/celerybeat-schedule.*
 
 ############################
 # Virtual envs
