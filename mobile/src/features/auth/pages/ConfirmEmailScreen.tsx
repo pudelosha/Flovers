@@ -186,13 +186,10 @@ export default function ConfirmEmailScreen({ navigation }: any) {
         }
       } catch (e: any) {
         if (!cancelled) {
-          const msg =
-            e instanceof ApiError
-              ? e.body?.message || e.message
-              : getTranslation(
-                  "confirmEmail.activationFailed",
-                  "Activation failed. Please try again."
-                );
+          const msg = getTranslation(
+            "confirmEmail.activationFailed",
+            "Activation failed. Please try again."
+          );
 
           setOk(false);
           setMessage(msg);
