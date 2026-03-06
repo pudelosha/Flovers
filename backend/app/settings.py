@@ -177,10 +177,14 @@ TEMPLATES = [{
 
 # --- Email (MailHog in Docker by default) ---
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = env("EMAIL_HOST", default="mailhog")
-EMAIL_PORT = env.int("EMAIL_PORT", default=1025)
-EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.local")
+EMAIL_HOST = env("EMAIL_HOST", default="postfix")
+EMAIL_PORT = env.int("EMAIL_PORT", default=25)
+EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=False)
+EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
+EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.app")
+SERVER_EMAIL = env("SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 
 # Email + i18n helpers
 EMAIL_SUBJECT_PREFIX = env("EMAIL_SUBJECT_PREFIX", default="[Flovers] ").strip()
@@ -193,5 +197,4 @@ I18N_LOCALES_DIR = BASE_DIR / "i18n" / "locales"
 SUPPORTED_LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
 
 # Contact (Support/Report Bug) inbox
-SUPPORT_INBOX_EMAIL = "hello@flovers.app"  # or your admin inbox
-
+SUPPORT_INBOX_EMAIL = env("SUPPORT_INBOX_EMAIL", default="support@flovers.app")

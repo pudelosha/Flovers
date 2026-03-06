@@ -214,7 +214,7 @@ export default function ResendActivationScreen({ navigation }: any) {
     }
     setLoading(true);
     try {
-      if (typeof resendActivation === "function") await resendActivation({ email });
+      if (typeof resendActivation === "function") await resendActivation(email);
       setToast({
         visible: true,
         msg: getTranslation(

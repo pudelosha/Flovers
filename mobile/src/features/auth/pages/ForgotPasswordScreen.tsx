@@ -214,7 +214,7 @@ export default function ForgotPasswordScreen({ navigation }: any) {
     }
     setLoading(true);
     try {
-      if (typeof requestPasswordReset === "function") await requestPasswordReset({ email });
+      if (typeof requestPasswordReset === "function") await requestPasswordReset(email);
       setToast({
         visible: true,
         msg: getTranslation(

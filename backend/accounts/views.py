@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import logging
+
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.utils.http import urlsafe_base64_decode
 from django.utils.encoding import force_str
+from django.utils.http import urlsafe_base64_decode
 
 from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -14,15 +16,18 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import (
     RegisterSerializer,
     LoginSerializer,
+    EmailOnlySerializer,
     ForgotPasswordSerializer,
     ResetPasswordSerializer,
     ChangePasswordSerializer,
     ChangeEmailSerializer,
 )
-from .tokens import activation_token, reset_password_token
 from .tasks import send_activation_email_task, send_password_reset_email_task
+from .tokens import activation_token, reset_password_token
 
 User = get_user_model()
+
+logger = logging.getLogger(__name__)
 
 
 def ok(message: str, data: dict | None = None, code=status.HTTP_200_OK):
@@ -68,12 +73,14 @@ class RegisterView(APIView):
         try:
             send_activation_email_task.delay(user.id, lang=lang)
         except Exception:
-            pass
+            logger.exception("Failed to enqueue activation email for user_id=%s", user.id)
+            return fail("Could not send activation email at the moment.", code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return ok(
             "Account created. Please check your email to activate your account.",
             code=status.HTTP_201_CREATED,
         )
+
 
 class LoginView(APIView):
     permission_classes = [AllowAny]
@@ -131,10 +138,11 @@ class ResendActivationView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
-        email = (request.data.get("email") or "").strip().lower()
-        if not email:
-            return fail("Email is required.", code=status.HTTP_400_BAD_REQUEST)
+        ser = EmailOnlySerializer(data=request.data)
+        if not ser.is_valid():
+            return fail("Please provide a valid email address.", ser.errors)
 
+        email = ser.validated_data["email"].strip().lower()
         lang = _request_lang(request)
 
         try:
@@ -148,7 +156,8 @@ class ResendActivationView(APIView):
         try:
             send_activation_email_task.delay(user.id, lang=lang)
         except Exception:
-            pass
+            logger.exception("Failed to enqueue activation email resend for user_id=%s", user.id)
+            return fail("Could not send activation email at the moment.", code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return ok("Activation email resent.")
 
@@ -175,7 +184,8 @@ class ForgotPasswordView(APIView):
         try:
             send_password_reset_email_task.delay(user.id, lang=lang)
         except Exception:
-            pass
+            logger.exception("Failed to enqueue password reset email for user_id=%s", user.id)
+            return fail("Could not send reset email at the moment.", code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return ok("If an account exists for this email, a reset link has been sent.")
 

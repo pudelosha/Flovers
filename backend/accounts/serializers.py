@@ -7,6 +7,7 @@ from profiles.models import ProfileSettings
 
 User = get_user_model()
 
+
 class RegisterSerializer(serializers.Serializer):
     email = serializers.EmailField(validators=[EmailValidator()])
     password = serializers.CharField(write_only=True, min_length=8, max_length=128)
@@ -52,6 +53,7 @@ class RegisterSerializer(serializers.Serializer):
 
         return user
 
+
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
@@ -73,8 +75,14 @@ class LoginSerializer(serializers.Serializer):
         attrs["user"] = user
         return attrs
 
+
+class EmailOnlySerializer(serializers.Serializer):
+    email = serializers.EmailField()
+
+
 class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
+
 
 class ResetPasswordSerializer(serializers.Serializer):
     uid = serializers.CharField()
