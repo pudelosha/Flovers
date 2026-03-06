@@ -19,7 +19,7 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 const INPUT_HEIGHT = 64;
 
 // GitHub Pages base (repo name included)
-const WEB_BASE = "https://pudelosha.github.io/Flovers";
+const WEB_BASE = "https://flovers.app";
 
 function normalizeLang(lang: any) {
   if (!lang) return "en";
@@ -28,7 +28,7 @@ function normalizeLang(lang: any) {
 }
 
 // For Terms specifically, this guarantees:
-// https://pudelosha.github.io/Flovers/en/terms (or /pl/terms)
+// https://flovers.app/en/terms (or /pl/terms)
 function buildTermsUrl(lang: any) {
   const safeLang = normalizeLang(lang);
   return `${WEB_BASE}/${safeLang}/terms`;
