@@ -42,6 +42,7 @@ import type { LocationCategory } from "../../create-plant/types/create-plant.typ
 import {
   fetchUserLocations,
   createLocation,
+  updateLocation,
   deleteLocation,
   type ApiLocation,
 } from "../../../api/services/locations.service";
@@ -353,14 +354,16 @@ export default function LocationsScreen() {
         setLocations((prev) => [...prev, loc]);
         showToast(tr("locations.toast.added", "Location added"), "success");
       } else if (editMode === "edit" && editingId) {
-        // No updateLocation API yet; update locally
+        const updated = await updateLocation(
+          editingId,
+          { name, category },
+          { auth: true }
+        );
+        const loc = mapApiToLocation(updated);
         setLocations((prev) =>
-          prev.map((l) => (l.id === editingId ? { ...l, name, category } : l))
+          prev.map((l) => (l.id === editingId ? loc : l))
         );
-        showToast(
-          tr("locations.toast.updatedLocal", "Location updated (local only)"),
-          "success"
-        );
+        showToast(tr("locations.toast.updated", "Location updated"), "success");
       }
     } catch (e: any) {
       showToast(

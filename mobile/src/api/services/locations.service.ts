@@ -5,6 +5,8 @@ export type ApiLocation = {
   name: string;
   category: "indoor" | "outdoor" | "other";
   plant_count?: number;
+  created_at?: string;
+  updated_at?: string;
 };
 
 export async function fetchUserLocations(
@@ -34,9 +36,34 @@ export async function createLocation(
   } catch (e) {
     if (e instanceof ApiError && (e.status === 409 || e.status === 400)) {
       const msg =
-        (e.data as any)?.message ||
-        (e.data as any)?.detail ||
+        (e.body as any)?.message ||
+        (e.body as any)?.detail ||
         "Could not create location.";
+      throw new Error(String(msg));
+    }
+    throw e;
+  }
+}
+
+export async function updateLocation(
+  id: string,
+  payload: { name: string; category: "indoor" | "outdoor" | "other" },
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiLocation> {
+  try {
+    const data = await request<ApiLocation>(
+      `/api/locations/${id}/`,
+      "PATCH",
+      payload,
+      { auth: opts.auth ?? true }
+    );
+    return data;
+  } catch (e) {
+    if (e instanceof ApiError && (e.status === 409 || e.status === 400)) {
+      const msg =
+        (e.body as any)?.message ||
+        (e.body as any)?.detail ||
+        "Could not update location.";
       throw new Error(String(msg));
     }
     throw e;
@@ -55,8 +82,8 @@ export async function deleteLocation(
     // Bubble up readable message for UI (e.g. ProtectedError 409)
     if (e instanceof ApiError && (e.status === 409 || e.status === 400)) {
       const msg =
-        (e.data as any)?.message ||
-        (e.data as any)?.detail ||
+        (e.body as any)?.message ||
+        (e.body as any)?.detail ||
         "Could not delete location.";
       throw new Error(String(msg));
     }

@@ -1,39 +1,34 @@
+from django.shortcuts import get_object_or_404
+from django.db import IntegrityError
+from django.db.models import Count, ProtectedError
+
+from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import status
-from django.db.models.functions import Lower
-from django.db.models import Count
+
 from .models import Location
 from .serializers import LocationSerializer
-from django.shortcuts import get_object_or_404
-from django.db.models import Count
-from django.db.models import ProtectedError
+
 
 class LocationsListCreateView(APIView):
-    """
-    GET  /api/locations/        -> list current user's locations (+ plant_count)
-    POST /api/locations/ {name, category} -> create if not duplicate (case-insensitive)
-    """
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
         qs = (
             Location.objects
             .filter(user=request.user)
-            .only("id", "name", "category")  # created_at/updated_at are accessed but that's fine
-            .annotate(
-                plant_count=Count("plant_instances")  # uses related_name from PlantInstance
-            )
+            .annotate(plant_count=Count("plant_instances"))
         )
         data = LocationSerializer(qs, many=True).data
         return Response(data)
 
     def post(self, request):
         payload = {k: request.data.get(k) for k in ("name", "category")}
-        # Case-insensitive duplicate check
+
         exists = Location.objects.filter(
-            user=request.user, name__iexact=(payload.get("name") or "").strip()
+            user=request.user,
+            name__iexact=(payload.get("name") or "").strip()
         ).exists()
         if exists:
             return Response(
@@ -43,19 +38,21 @@ class LocationsListCreateView(APIView):
 
         ser = LocationSerializer(data=payload)
         ser.is_valid(raise_exception=True)
-        obj = ser.save(user=request.user)
 
-        # brand-new location: 0 plants
-        obj.plant_count = 0  # attribute for serializer
+        try:
+            obj = ser.save(user=request.user)
+        except IntegrityError:
+            return Response(
+                {"message": "Location with this name already exists."},
+                status=status.HTTP_409_CONFLICT,
+            )
+
+        obj.plant_count = 0
         data = LocationSerializer(obj).data
         return Response(data, status=status.HTTP_201_CREATED)
-    
+
+
 class LocationDetailView(APIView):
-    """
-    GET    /api/locations/<id>/      -> single location with plant_count
-    PATCH  /api/locations/<id>/      -> update name/category (duplicate-safe)
-    DELETE /api/locations/<id>/      -> delete location (409 if plants linked)
-    """
     permission_classes = [IsAuthenticated]
 
     def get_object(self, request, pk):
@@ -70,6 +67,7 @@ class LocationDetailView(APIView):
         )
         if not obj:
             return Response(status=status.HTTP_404_NOT_FOUND)
+
         data = LocationSerializer(obj).data
         return Response(data)
 
@@ -81,13 +79,14 @@ class LocationDetailView(APIView):
             "category": request.data.get("category", loc.category),
         }
 
-        # If name changed, enforce case-insensitive uniqueness per user
         new_name = (payload.get("name") or "").strip()
         if new_name.lower() != loc.name.strip().lower():
-            exists = Location.objects.filter(
-                user=request.user,
-                name__iexact=new_name,
-            ).exclude(pk=loc.pk).exists()
+            exists = (
+                Location.objects
+                .filter(user=request.user, name__iexact=new_name)
+                .exclude(pk=loc.pk)
+                .exists()
+            )
             if exists:
                 return Response(
                     {"message": "Location with this name already exists."},
@@ -96,9 +95,15 @@ class LocationDetailView(APIView):
 
         ser = LocationSerializer(loc, data=payload, partial=True)
         ser.is_valid(raise_exception=True)
-        obj = ser.save()
 
-        # annotate plant_count for response
+        try:
+            obj = ser.save()
+        except IntegrityError:
+            return Response(
+                {"message": "Location with this name already exists."},
+                status=status.HTTP_409_CONFLICT,
+            )
+
         obj.plant_count = obj.plant_instances.count()
         data = LocationSerializer(obj).data
         return Response(data)
@@ -108,7 +113,6 @@ class LocationDetailView(APIView):
         try:
             loc.delete()
         except ProtectedError:
-            # There are PlantInstance rows pointing to this location
             return Response(
                 {"message": "Cannot delete a location that has plants assigned."},
                 status=status.HTTP_409_CONFLICT,
