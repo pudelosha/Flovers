@@ -5,6 +5,9 @@
     <title>Redirecting…</title>
     <script>
       (function () {
+        var isGitHubPages = window.location.hostname === "pudelosha.github.io";
+        if (!isGitHubPages) return;
+
         // Must match your GitHub repo name exactly
         var repo = "/Flovers";
 
