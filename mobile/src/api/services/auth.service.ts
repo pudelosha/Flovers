@@ -14,8 +14,6 @@ export type RegisterPayload = {
   password: string;
   first_name?: string;
   last_name?: string;
-
-  // Your RegisterScreen sends this:
   lang?: string;
 };
 
@@ -41,6 +39,16 @@ export type LoginResult = {
   user: AuthUserInfo;
 };
 
+export type ForgotPasswordResponse = { message: string };
+
+export type ResetPasswordPayload = {
+  uid: string;
+  token: string;
+  new_password: string;
+};
+
+export type ResetPasswordResponse = { message: string };
+
 const TOKEN_KEY = "auth_token";
 
 export async function bootstrapToken(): Promise<string | null> {
@@ -61,6 +69,14 @@ export async function registerUser(p: RegisterPayload): Promise<RegisterResponse
 
 export async function resendActivation(email: string): Promise<{ message: string }> {
   return request<{ message: string }>("/api/auth/resend-activation/", "POST", { email });
+}
+
+export async function requestPasswordReset(email: string): Promise<ForgotPasswordResponse> {
+  return request<ForgotPasswordResponse>("/api/auth/forgot-password/", "POST", { email });
+}
+
+export async function resetPassword(p: ResetPasswordPayload): Promise<ResetPasswordResponse> {
+  return request<ResetPasswordResponse>("/api/auth/reset-password/", "POST", p);
 }
 
 export async function loginUser(p: LoginPayload): Promise<LoginResult> {

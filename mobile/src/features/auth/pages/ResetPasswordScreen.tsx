@@ -267,7 +267,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
     setLoading(true);
     try {
       if (typeof resetPassword === "function") {
-        await resetPassword({ token: derived.token, uid: derived.uid, password: pwd });
+        await resetPassword({ token: derived.token, uid: derived.uid, new_password: pwd });
       } else {
         await new Promise((r) => setTimeout(r, 500));
       }
