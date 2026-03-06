@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.http import HttpResponse
 from urllib.parse import urlencode
 
@@ -39,18 +38,51 @@ _HTML = """<!doctype html>
 </html>
 """
 
+
 def _html_response(deeplink: str) -> HttpResponse:
     html = _HTML.format(deeplink=deeplink.replace('"', '&quot;'))
     return HttpResponse(html, content_type="text/html; charset=utf-8")
 
+
+def _bad_link_response() -> HttpResponse:
+    html = """<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Invalid link</title>
+  <style>
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#0e1f1a; color:#fff; }
+    .wrap { min-height:100vh; display:grid; place-items:center; padding:24px; }
+    .card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); border-radius:16px; padding:20px; max-width:520px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h2>Invalid link</h2>
+      <p>This link is missing required parameters.</p>
+    </div>
+  </div>
+</body>
+</html>
+"""
+    return HttpResponse(html, status=400, content_type="text/html; charset=utf-8")
+
+
 def open_activate(request):
     uid = request.GET.get("uid") or ""
     token = request.GET.get("token") or ""
+    if not uid or not token:
+        return _bad_link_response()
     deeplink = build_mobile_deeplink("confirm-email", {"uid": uid, "token": token})
     return _html_response(deeplink)
+
 
 def open_reset_password(request):
     uid = request.GET.get("uid") or ""
     token = request.GET.get("token") or ""
+    if not uid or not token:
+        return _bad_link_response()
     deeplink = build_mobile_deeplink("reset-password", {"uid": uid, "token": token})
     return _html_response(deeplink)

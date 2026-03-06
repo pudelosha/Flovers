@@ -266,11 +266,12 @@ export default function ResetPasswordScreen({ navigation }: any) {
 
     setLoading(true);
     try {
-      if (typeof resetPassword === "function") {
-        await resetPassword({ token: derived.token, uid: derived.uid, new_password: pwd });
-      } else {
-        await new Promise((r) => setTimeout(r, 500));
+      if (typeof resetPassword !== "function") {
+        throw new Error("resetPassword is not available");
       }
+
+      await resetPassword({ token: derived.token, uid: derived.uid, new_password: pwd });
+
       setToast({
         visible: true,
         msg: getTranslation("resetPassword.success", "Password reset successfully"),

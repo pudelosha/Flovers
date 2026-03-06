@@ -49,6 +49,13 @@ export type ResetPasswordPayload = {
 
 export type ResetPasswordResponse = { message: string };
 
+export type ConfirmEmailPayload = {
+  uid: string;
+  token: string;
+};
+
+export type ConfirmEmailResponse = { message: string };
+
 const TOKEN_KEY = "auth_token";
 
 export async function bootstrapToken(): Promise<string | null> {
@@ -77,6 +84,15 @@ export async function requestPasswordReset(email: string): Promise<ForgotPasswor
 
 export async function resetPassword(p: ResetPasswordPayload): Promise<ResetPasswordResponse> {
   return request<ResetPasswordResponse>("/api/auth/reset-password/", "POST", p);
+}
+
+export async function confirmEmail(p: ConfirmEmailPayload): Promise<ConfirmEmailResponse> {
+  const qs = new URLSearchParams({
+    uid: p.uid,
+    token: p.token,
+  }).toString();
+
+  return request<ConfirmEmailResponse>(`/api/auth/activate/?${qs}`, "GET");
 }
 
 export async function loginUser(p: LoginPayload): Promise<LoginResult> {

@@ -8,6 +8,7 @@ import {
   resendActivation as resendActivationSvc,
   requestPasswordReset as requestPasswordResetSvc,
   resetPassword as resetPasswordSvc,
+  confirmEmail as confirmEmailSvc,
   bootstrapToken,
   persistToken,
   clearToken,
@@ -23,6 +24,7 @@ type AuthContextType = {
   resendActivation: (email: string) => Promise<{ message: string }>;
   requestPasswordReset: (email: string) => Promise<{ message: string }>;
   resetPassword: (p: { uid: string; token: string; new_password: string }) => Promise<{ message: string }>;
+  confirmEmail: (p: { uid: string; token: string }) => Promise<{ message: string }>;
 };
 
 export const AuthContext = createContext<AuthContextType>({} as any);
@@ -96,6 +98,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     []
   );
 
+  const confirmEmail = useCallback(async (p: { uid: string; token: string }) => {
+    return confirmEmailSvc(p);
+  }, []);
+
   const value = useMemo(
     () => ({
       loading,
@@ -107,6 +113,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       resendActivation,
       requestPasswordReset,
       resetPassword,
+      confirmEmail,
     }),
     [
       loading,
@@ -118,6 +125,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       resendActivation,
       requestPasswordReset,
       resetPassword,
+      confirmEmail,
     ]
   );
 

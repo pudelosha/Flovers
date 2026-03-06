@@ -188,11 +188,12 @@ export default function ConfirmEmailScreen({ navigation }: any) {
       }
 
       try {
-        if (typeof confirmEmail === "function") {
-          await confirmEmail({ token, uid });
-        } else {
-          await new Promise((r) => setTimeout(r, 500));
+        if (typeof confirmEmail !== "function") {
+          throw new Error("confirmEmail is not available");
         }
+
+        await confirmEmail({ token, uid });
+
         if (!cancelled) {
           setOk(true);
           setMessage(
