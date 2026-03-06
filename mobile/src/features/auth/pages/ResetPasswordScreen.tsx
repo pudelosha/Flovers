@@ -253,13 +253,19 @@ export default function ResetPasswordScreen({ navigation }: any) {
 
   async function onSubmit() {
     if (!formValid) {
-      let msg = getTranslation("resetPassword.error", "Please fix the errors below");
+      let msg = getTranslation("resetPassword.errors.generic", "Please fix the errors below");
       if (!derived.token || !derived.uid)
-        msg = getTranslation("resetPassword.invalidLink", "Invalid or expired reset link");
+        msg = getTranslation("resetPassword.errors.invalidLink", "Invalid or expired reset link");
       else if (!passwordValid)
-        msg = getTranslation("resetPassword.passwordTooShort", "Password must be at least 6 characters");
+        msg = getTranslation(
+          "resetPassword.errors.passwordTooShort",
+          "Password must be at least 6 characters"
+        );
       else if (!passwordsMatch)
-        msg = getTranslation("resetPassword.passwordsDoNotMatch", "Passwords do not match");
+        msg = getTranslation(
+          "resetPassword.errors.passwordsDoNotMatch",
+          "Passwords do not match"
+        );
       setToast({ visible: true, msg, variant: "error" });
       return;
     }
@@ -274,7 +280,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
 
       setToast({
         visible: true,
-        msg: getTranslation("resetPassword.success", "Password reset successfully"),
+        msg: getTranslation("resetPassword.success.changed", "Password reset successfully"),
         variant: "success",
       });
       navigation.navigate("Login");
@@ -282,7 +288,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
       const msg =
         e instanceof ApiError
           ? e.body?.message || e.message
-          : getTranslation("resetPassword.error", "Something went wrong. Please try again.");
+          : getTranslation("resetPassword.errors.generic", "Something went wrong. Please try again.");
       setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
@@ -293,7 +299,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
     if (!derived.token || !derived.uid) {
       setToast({
         visible: true,
-        msg: getTranslation("resetPassword.invalidLink", "Invalid or expired reset link"),
+        msg: getTranslation("resetPassword.errors.invalidLink", "Invalid or expired reset link"),
         variant: "default",
       });
     }
@@ -302,7 +308,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <TranslatedText tKey="resetPassword.resetPassword" variant="headlineMedium" style={s.title} />
+        <TranslatedText tKey="resetPassword.title" variant="headlineMedium" style={s.title} />
 
         <AnimatedFloatingLabel
           label={getTranslation("resetPassword.newPassword", "New Password")}
@@ -372,7 +378,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
 
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
-  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
+  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20, fontSize: 24 },
 
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },

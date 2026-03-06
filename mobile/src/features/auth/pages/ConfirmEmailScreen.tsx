@@ -41,7 +41,6 @@ function parseQuery(url: string): Record<string, string> {
   }
 }
 
-// Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
   tKey,
   children,
@@ -56,8 +55,6 @@ const TranslatedText = ({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
-  // Force re-render on language change
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useMemo(() => {}, [currentLanguage]);
 
   try {
@@ -70,7 +67,7 @@ const TranslatedText = ({
       );
     }
     return <Text style={style}>{text}</Text>;
-  } catch (error) {
+  } catch {
     const fallbackText = tKey.split(".").pop() || tKey;
     if (variant) {
       return (
@@ -83,11 +80,6 @@ const TranslatedText = ({
   }
 };
 
-/**
- * Fix for long translated "link" text:
- * Paper <Button compact> often clips instead of wrapping.
- * Use Pressable + Text so it can wrap to 2 lines.
- */
 const LinkText = ({
   onPress,
   text,
@@ -121,6 +113,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
   const [loading, setLoading] = useState(true);
   const [ok, setOk] = useState<boolean | null>(null);
   const [message, setMessage] = useState<string>("");
+
   const [toast, setToast] = useState<{
     visible: boolean;
     msg: string;
@@ -131,31 +124,23 @@ export default function ConfirmEmailScreen({ navigation }: any) {
     variant: "default",
   });
 
-  // Safe translation function that uses both hooks
   const getTranslation = useCallback(
     (key: string, fallback?: string): string => {
       try {
-        void currentLanguage; // keep dependency
+        void currentLanguage;
         const translation = t(key);
         return translation || fallback || key.split(".").pop() || key;
-      } catch (error) {
-        console.warn("Translation error for key:", key, error);
+      } catch {
         return fallback || key.split(".").pop() || key;
       }
     },
     [t, currentLanguage]
   );
 
-  React.useEffect(() => {
-    console.log("ConfirmEmailScreen rendering with language:", currentLanguage);
-  }, [currentLanguage]);
-
-  // Initialize message with translation
   useEffect(() => {
     setMessage(getTranslation("confirmEmail.confirming", "Confirming..."));
   }, [getTranslation]);
 
-  // Gather params from either route params or a full URL
   const params = route.params || {};
   const derived = useMemo(() => {
     const { token, uid, email, url } = params;
@@ -188,10 +173,6 @@ export default function ConfirmEmailScreen({ navigation }: any) {
       }
 
       try {
-        if (typeof confirmEmail !== "function") {
-          throw new Error("confirmEmail is not available");
-        }
-
         await confirmEmail({ token, uid });
 
         if (!cancelled) {
@@ -212,6 +193,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
                   "confirmEmail.activationFailed",
                   "Activation failed. Please try again."
                 );
+
           setOk(false);
           setMessage(msg);
           setToast({ visible: true, msg, variant: "error" });
@@ -229,18 +211,15 @@ export default function ConfirmEmailScreen({ navigation }: any) {
       <View style={s.container}>
         <TranslatedText tKey="confirmEmail.title" variant="headlineMedium" style={s.title} />
 
-        <View style={s.resultBox}>
-          {loading ? (
-            <View style={s.centerRow}>
-              <ActivityIndicator animating size="small" />
-              <Text style={s.resultText}>  {message}</Text>
-            </View>
-          ) : (
-            <Text style={[s.resultText, ok ? s.resultOk : s.resultErr]}>{message}</Text>
-          )}
-        </View>
+        {loading ? (
+          <View style={s.centerRow}>
+            <ActivityIndicator animating size="small" />
+            <Text style={s.description}>  {message}</Text>
+          </View>
+        ) : (
+          <Text style={s.description}>{message}</Text>
+        )}
 
-        {/* Primary CTA depends on result */}
         {!loading && ok === true && (
           <Button mode="contained" onPress={() => navigation.navigate("Login")} style={s.button}>
             {getTranslation("confirmEmail.goToLogin", "Go to Login")}
@@ -257,7 +236,6 @@ export default function ConfirmEmailScreen({ navigation }: any) {
           </Button>
         )}
 
-        {/* FIXED: link-like action rendered with Pressable so it wraps */}
         <LinkText
           onPress={() => navigation.navigate("Login")}
           text={getTranslation("confirmEmail.backToLogin", "Back to Login")}
@@ -277,23 +255,24 @@ export default function ConfirmEmailScreen({ navigation }: any) {
 
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
+
   title: {
     color: "#fff",
     textAlign: "center",
     marginBottom: 6,
     fontWeight: "800",
     marginTop: 20,
+    fontSize: 24,
   },
-  resultBox: {
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderRadius: 14,
-    paddingVertical: 14,
-    paddingHorizontal: 14,
+
+  description: {
+    color: "rgba(255,255,255,0.92)",
+    textAlign: "center",
+    lineHeight: 20,
   },
-  centerRow: { flexDirection: "row", alignItems: "center" },
-  resultText: { color: "rgba(255,255,255,0.95)" },
-  resultOk: { color: "#E6FFFA" },
-  resultErr: { color: "#FFE6E6" },
+
+  centerRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
+
   button: { marginTop: 8 },
 
   linkPressable: {
@@ -302,9 +281,9 @@ const s = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 8,
   },
-  linkPressed: {
-    opacity: 0.75,
-  },
+
+  linkPressed: { opacity: 0.75 },
+
   linkTight: { marginTop: -4 },
 
   linkLabel: { fontSize: 14, color: "#FFFFFF", textAlign: "center", flexShrink: 1 },

@@ -431,6 +431,7 @@ const s = StyleSheet.create({
     marginBottom: 6,
     fontWeight: "800",
     marginTop: 20,
+    fontSize: 24,
   },
 
   inputContainer: { position: "relative" },

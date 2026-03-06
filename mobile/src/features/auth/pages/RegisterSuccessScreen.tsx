@@ -1,6 +1,6 @@
 import React from "react";
-import { View, StyleSheet, Pressable } from "react-native";
-import { Text } from "react-native-paper";
+import { View, StyleSheet } from "react-native";
+import { Text, Button } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 
 export default function RegisterSuccessScreen({ navigation, route }: any) {
@@ -19,16 +19,13 @@ export default function RegisterSuccessScreen({ navigation, route }: any) {
 
       {!!email && <Text style={s.email}>{email}</Text>}
 
-      {/* FIX: use Pressable so long translations can wrap instead of clipping */}
-      <Pressable
+      <Button
+        mode="contained"
         onPress={() => navigation.replace("Login")}
-        accessibilityRole="button"
-        style={({ pressed }) => [s.primaryPressable, pressed && s.primaryPressed]}
+        style={s.button}
       >
-        <Text style={s.primaryLabel} numberOfLines={2} ellipsizeMode="tail">
-          {t("registerSuccess.returnToLogin")}
-        </Text>
-      </Pressable>
+        {t("registerSuccess.returnToLogin")}
+      </Button>
     </View>
   );
 }
@@ -42,6 +39,7 @@ const s = StyleSheet.create({
     marginBottom: 6,
     fontWeight: "800",
     marginTop: 20,
+    fontSize: 24,
   },
 
   body: {
@@ -57,24 +55,7 @@ const s = StyleSheet.create({
     marginTop: 6,
   },
 
-  primaryPressable: {
+  button: {
     marginTop: 8,
-    alignSelf: "stretch",
-    borderRadius: 20,
-    minHeight: 40,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#6750A4", // close to Paper default primary in MD3 themes
-  },
-  primaryPressed: {
-    opacity: 0.85,
-  },
-  primaryLabel: {
-    color: "#FFFFFF",
-    textAlign: "center",
-    fontWeight: "600",
-    flexShrink: 1,
   },
 });

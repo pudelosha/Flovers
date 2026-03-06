@@ -277,7 +277,7 @@ export default function ResendActivationScreen({ navigation }: any) {
 
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
-  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
+  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20, fontSize: 24 },
   subtitle: { color: "rgba(255,255,255,0.85)", textAlign: "center", marginBottom: 4 },
 
   // Animated input styles
