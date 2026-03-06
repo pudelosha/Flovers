@@ -10,13 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flovers</title>
 
-    <!-- GitHub Pages SPA deep-link restore (repo-aware) -->
+    <!-- SPA deep-link restore -->
     <script>
       (function () {
         const isGitHubPages = window.location.hostname === "pudelosha.github.io";
-        if (!isGitHubPages) return;
-
-        const REPO = "/Flovers";
+        const REPO = isGitHubPages ? "/Flovers" : "";
 
         const params = new URLSearchParams(window.location.search);
         const p = params.get("p");
@@ -24,7 +22,6 @@
 
         params.delete("p");
 
-        // p should be like "/pl/terms" (NO "/Flovers" prefix)
         const decoded = decodeURIComponent(p);
         const restoredPath = decoded.startsWith("/") ? decoded : "/" + decoded;
 
