@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, useEffect, useRef } from "react";
-import { Image, View, StyleSheet, Animated } from "react-native";
+import { View, StyleSheet, Animated } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PanGestureHandler, State as GHState } from "react-native-gesture-handler";
@@ -8,7 +8,7 @@ import { PanGestureHandler, State as GHState } from "react-native-gesture-handle
 import LanguageFAB from "../../../shared/ui/LanguageFAB";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 
-type Props = PropsWithChildren<{ showDrops?: boolean }>;
+type Props = PropsWithChildren;
 
 const MAX_DRIFT = 20; // max px drift
 const ACTIVATE = 6; // drag threshold before panning starts
@@ -17,7 +17,7 @@ const ACTIVATE = 6; // drag threshold before panning starts
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
-export default function AuthCard({ children, showDrops = false }: Props) {
+export default function AuthCard({ children }: Props) {
   const insets = useSafeAreaInsets();
 
   // language state (available on all auth screens)
@@ -145,15 +145,9 @@ export default function AuthCard({ children, showDrops = false }: Props) {
               style={StyleSheet.absoluteFill}
             />
 
-            {/* Keep your existing tint/border/drops/content EXACTLY as-is */}
+            {/* Keep your existing tint/border/content EXACTLY as-is */}
             <View style={s.cardTint} />
             <View pointerEvents="none" style={s.cardBorder} />
-
-            {showDrops && (
-              <View pointerEvents="none" style={s.dropsWrap}>
-                <Image source={drops} style={s.drops} resizeMode="cover" />
-              </View>
-            )}
 
             <View style={s.content}>{children}</View>
           </View>
@@ -193,8 +187,6 @@ const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.2)",
     zIndex: 2,
   },
-  dropsWrap: { ...StyleSheet.absoluteFillObject, zIndex: 2 },
-  drops: { ...StyleSheet.absoluteFillObject, opacity: 0.5 },
 
   content: { padding: 22, gap: 12, zIndex: 3 },
 });

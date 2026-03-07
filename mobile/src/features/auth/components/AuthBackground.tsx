@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from "react";
-import { Image, View, StyleSheet, Platform } from "react-native";
+import { View, StyleSheet, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-type Props = PropsWithChildren<{ showDrops?: boolean }>;
+type Props = PropsWithChildren;
 
-export default function AuthBackground({ children, showDrops = false }: Props) {
+export default function AuthBackground({ children }: Props) {
   const insets = useSafeAreaInsets();
 
   return (
@@ -26,11 +26,6 @@ export default function AuthBackground({ children, showDrops = false }: Props) {
           />
           <View style={s.cardTint} />
           <View pointerEvents="none" style={s.cardBorder} />
-          {showDrops && (
-            <View pointerEvents="none" style={s.dropsWrap}>
-              <Image source={drops} style={s.drops} resizeMode="cover" />
-            </View>
-          )}
           <View style={s.content}>{children}</View>
         </View>
       </View>
@@ -63,7 +58,5 @@ const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.2)",
     zIndex: 2,
   },
-  dropsWrap: { ...StyleSheet.absoluteFillObject, zIndex: 2 },
-  drops: { ...StyleSheet.absoluteFillObject, opacity: 0.5 },
   content: { padding: 22, gap: 12, zIndex: 3 },
 });
