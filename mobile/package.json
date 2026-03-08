@@ -1,6 +1,6 @@
 {
   "name": "mobile",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -9,7 +9,8 @@
     "start": "react-native start",
     "test": "jest",
     "prestart": "node scripts/generate-build-info.js",
-    "prebuild": "node scripts/generate-build-info.js"
+    "prebuild": "node scripts/generate-build-info.js",
+    "android:release": "node scripts/generate-build-info.js && cd android && gradlew clean installRelease"
   },
   "dependencies": {
     "@notifee/react-native": "^9.1.8",

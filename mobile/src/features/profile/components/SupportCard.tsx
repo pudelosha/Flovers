@@ -46,7 +46,7 @@ export default function SupportCard({
           {t("profile.support.releaseDateLabel")}: <Text style={controls.aboutStrong}>{BUILD_INFO.releaseDate}</Text>
         </Text>
         <Text style={controls.aboutLine}>
-          Release tag: <Text style={controls.aboutStrong}>{BUILD_INFO.releaseTag}</Text>
+          Tag: <Text style={controls.aboutStrong}>{BUILD_INFO.releaseTag}</Text>
         </Text>
         <Text style={controls.aboutLine}>
           {t("profile.support.contactLabel")}: <Text style={controls.aboutStrong}>hello@flovers.app</Text>
