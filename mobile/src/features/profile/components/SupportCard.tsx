@@ -4,6 +4,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTranslation } from "react-i18next";
 import GlassCard from "./../components/GlassCard";
 import { card, controls } from "../styles/profile.styles";
+import { BUILD_INFO } from "../../../buildInfo";
 
 export default function SupportCard({
   onContact,
@@ -39,10 +40,13 @@ export default function SupportCard({
       <View style={controls.aboutBox}>
         <Text style={controls.aboutTitle}>{t("profile.support.aboutTitle")}</Text>
         <Text style={controls.aboutLine}>
-          {t("profile.support.versionLabel")}: <Text style={controls.aboutStrong}>1.0.0</Text>
+          {t("profile.support.versionLabel")}: <Text style={controls.aboutStrong}>{BUILD_INFO.version}</Text>
         </Text>
         <Text style={controls.aboutLine}>
-          {t("profile.support.releaseDateLabel")}: <Text style={controls.aboutStrong}>07.10.2025</Text>
+          {t("profile.support.releaseDateLabel")}: <Text style={controls.aboutStrong}>{BUILD_INFO.releaseDate}</Text>
+        </Text>
+        <Text style={controls.aboutLine}>
+          Release tag: <Text style={controls.aboutStrong}>{BUILD_INFO.releaseTag}</Text>
         </Text>
         <Text style={controls.aboutLine}>
           {t("profile.support.contactLabel")}: <Text style={controls.aboutStrong}>hello@flovers.app</Text>
