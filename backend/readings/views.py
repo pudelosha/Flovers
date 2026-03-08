@@ -6,6 +6,7 @@ from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import api_view, permission_classes, throttle_classes, action
 from rest_framework.response import Response
 from datetime import timedelta
+from rest_framework.throttling import AnonRateThrottle
 
 from .models import ReadingDevice, Reading, AccountSecret
 from .serializers import ReadingDeviceSerializer, ReadingSerializer
@@ -237,7 +238,7 @@ def device_setup(request):
 
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
-@throttle_classes([IngestPerDeviceThrottle])
+@throttle_classes([AnonRateThrottle, IngestPerDeviceThrottle])
 def ingest(request):
     """
     Body:
@@ -324,7 +325,7 @@ def ingest(request):
 
 @api_view(["GET"])
 @permission_classes([permissions.AllowAny])
-@throttle_classes([FeedPerDeviceThrottle])
+@throttle_classes([AnonRateThrottle, FeedPerDeviceThrottle])
 def feed(request):
     """
     Query: ?secret=...&device_key=AB12CD34[&device_id=123][&from=ISO][&to=ISO]

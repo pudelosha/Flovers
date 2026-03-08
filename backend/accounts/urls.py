@@ -2,7 +2,7 @@ from django.urls import path
 from .views import (
     RegisterView, LoginView, ActivateAccountView,
     ResendActivationView, ForgotPasswordView, ResetPasswordView,
-    ChangePasswordView, ChangeEmailView,
+    ChangePasswordView, ChangeEmailView, TokenRefreshView,
 )
 from .views_open import open_activate, open_reset_password
 
@@ -19,4 +19,6 @@ urlpatterns = [
 
     path("open/activate/", open_activate, name="open-activate"),
     path("open/reset-password/", open_reset_password, name="open-reset-password"),
+
+    path("token/refresh/", TokenRefreshView.as_view(), name="token-refresh"),
 ]

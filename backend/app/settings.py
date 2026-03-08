@@ -101,7 +101,7 @@ REST_FRAMEWORK = {
         "user": "200/min",
         "anon": "50/min",
         "ingest_per_device": "60/hour",
-        "feed_per_device": "120/hour",
+        "feed_per_device": "60/hour",
     },
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
 }
