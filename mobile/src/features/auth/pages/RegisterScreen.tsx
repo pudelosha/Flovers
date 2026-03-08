@@ -15,6 +15,7 @@ import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { LANGS } from "../../../i18n/locales/index";
 
 const INPUT_HEIGHT = 64;
 
@@ -23,8 +24,11 @@ const WEB_BASE = "https://flovers.app";
 
 function normalizeLang(lang: any) {
   if (!lang) return "en";
-  const lc = String(lang).toLowerCase();
-  return lc.startsWith("pl") ? "pl" : "en";
+
+  const raw = String(lang).toLowerCase();
+  const base = raw.split("-")[0];
+
+  return (LANGS as readonly string[]).includes(base) ? base : "en";
 }
 
 // For Terms specifically, this guarantees:
