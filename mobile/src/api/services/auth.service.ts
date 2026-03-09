@@ -36,6 +36,7 @@ type LoginApiResponse = {
 
 export type LoginResult = {
   access: string;
+  refresh: string;
   user: AuthUserInfo;
 };
 
@@ -56,18 +57,67 @@ export type ConfirmEmailPayload = {
 
 export type ConfirmEmailResponse = { message: string };
 
-const TOKEN_KEY = "auth_token";
+const ACCESS_TOKEN_KEY = "auth_access_token";
+const REFRESH_TOKEN_KEY = "auth_refresh_token";
+const USER_KEY = "auth_user";
 
+export async function bootstrapAuth(): Promise<{
+  access: string | null;
+  refresh: string | null;
+  user: AuthUserInfo;
+}> {
+  const [access, refresh, userRaw] = await Promise.all([
+    AsyncStorage.getItem(ACCESS_TOKEN_KEY),
+    AsyncStorage.getItem(REFRESH_TOKEN_KEY),
+    AsyncStorage.getItem(USER_KEY),
+  ]);
+
+  let user: AuthUserInfo = null;
+
+  try {
+    user = userRaw ? (JSON.parse(userRaw) as AuthUserInfo) : null;
+  } catch {
+    user = null;
+  }
+
+  return { access, refresh, user };
+}
+
+export async function persistAuth(
+  access: string,
+  refresh: string,
+  user: AuthUserInfo
+): Promise<void> {
+  await Promise.all([
+    AsyncStorage.setItem(ACCESS_TOKEN_KEY, access),
+    AsyncStorage.setItem(REFRESH_TOKEN_KEY, refresh),
+    AsyncStorage.setItem(USER_KEY, JSON.stringify(user ?? null)),
+  ]);
+}
+
+export async function updateStoredAccessToken(access: string): Promise<void> {
+  await AsyncStorage.setItem(ACCESS_TOKEN_KEY, access);
+}
+
+export async function clearAuth(): Promise<void> {
+  await Promise.all([
+    AsyncStorage.removeItem(ACCESS_TOKEN_KEY),
+    AsyncStorage.removeItem(REFRESH_TOKEN_KEY),
+    AsyncStorage.removeItem(USER_KEY),
+  ]);
+}
+
+// compatibility wrappers (safe to keep if referenced elsewhere)
 export async function bootstrapToken(): Promise<string | null> {
-  return AsyncStorage.getItem(TOKEN_KEY);
+  return AsyncStorage.getItem(ACCESS_TOKEN_KEY);
 }
 
 export async function persistToken(access: string): Promise<void> {
-  await AsyncStorage.setItem(TOKEN_KEY, access);
+  await AsyncStorage.setItem(ACCESS_TOKEN_KEY, access);
 }
 
 export async function clearToken(): Promise<void> {
-  await AsyncStorage.removeItem(TOKEN_KEY);
+  await AsyncStorage.removeItem(ACCESS_TOKEN_KEY);
 }
 
 export async function registerUser(p: RegisterPayload): Promise<RegisterResponse> {
@@ -99,9 +149,10 @@ export async function loginUser(p: LoginPayload): Promise<LoginResult> {
   const resp = await request<LoginApiResponse>("/api/auth/login/", "POST", p);
 
   const access = resp.access ?? resp.data?.access ?? null;
+  const refresh = resp.refresh ?? resp.data?.refresh ?? null;
   const user = (resp.user ?? resp.data?.user ?? null) as AuthUserInfo;
 
-  if (!access) {
+  if (!access || !refresh) {
     throw new ApiError(
       401,
       resp,
@@ -109,5 +160,5 @@ export async function loginUser(p: LoginPayload): Promise<LoginResult> {
     );
   }
 
-  return { access, user };
+  return { access, refresh, user };
 }

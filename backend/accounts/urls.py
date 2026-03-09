@@ -2,8 +2,9 @@ from django.urls import path
 from .views import (
     RegisterView, LoginView, ActivateAccountView,
     ResendActivationView, ForgotPasswordView, ResetPasswordView,
-    ChangePasswordView, ChangeEmailView, TokenRefreshView,
+    ChangePasswordView, ChangeEmailView,
 )
+from rest_framework_simplejwt.views import TokenRefreshView
 from .views_open import open_activate, open_reset_password
 
 urlpatterns = [

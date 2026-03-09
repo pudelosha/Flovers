@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useEffect, useMemo, useState } from "react";
-import { setAuthToken, onUnauthorized } from "../../api/client";
+import { setAuthToken, onUnauthorized, configureTokenRefresh } from "../../api/client";
 import {
   AuthUserInfo,
   RegisterPayload,
@@ -9,9 +9,10 @@ import {
   requestPasswordReset as requestPasswordResetSvc,
   resetPassword as resetPasswordSvc,
   confirmEmail as confirmEmailSvc,
-  bootstrapToken,
-  persistToken,
-  clearToken,
+  bootstrapAuth,
+  persistAuth,
+  clearAuth,
+  updateStoredAccessToken,
 } from "../../api/services/auth.service";
 
 type AuthContextType = {
@@ -32,16 +33,37 @@ export const AuthContext = createContext<AuthContextType>({} as any);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState<string | null>(null);
+  const [refreshToken, setRefreshToken] = useState<string | null>(null);
   const [user, setUser] = useState<AuthUserInfo>(null);
 
   useEffect(() => {
     (async () => {
-      const t = await bootstrapToken();
-      setToken(t);
-      setAuthToken(t);
+      const auth = await bootstrapAuth();
+      setToken(auth.access);
+      setRefreshToken(auth.refresh);
+      setUser(auth.user);
+      setAuthToken(auth.access);
       setLoading(false);
     })();
   }, []);
+
+  useEffect(() => {
+    configureTokenRefresh({
+      getRefreshToken: async () => refreshToken,
+      onAccessTokenRefreshed: async (newAccessToken: string) => {
+        setAuthToken(newAccessToken);
+        setToken(newAccessToken);
+        await updateStoredAccessToken(newAccessToken);
+      },
+      onRefreshFailed: async () => {
+        await clearAuth();
+        setAuthToken(null);
+        setToken(null);
+        setRefreshToken(null);
+        setUser(null);
+      },
+    });
+  }, [refreshToken]);
 
   useEffect(() => {
     const unsubscribe = onUnauthorized(() => {
@@ -49,8 +71,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         if (!prev) return prev;
 
         (async () => {
-          await clearToken();
+          await clearAuth();
           setAuthToken(null);
+          setRefreshToken(null);
           setUser(null);
         })().catch(() => {});
 
@@ -66,20 +89,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const login = useCallback(async (p: { email: string; password: string }) => {
-    const { access, user } = await loginUser(p);
+    const { access, refresh, user } = await loginUser(p);
 
-    await persistToken(access);
+    await persistAuth(access, refresh, user);
 
     setAuthToken(access);
     setToken(access);
+    setRefreshToken(refresh);
     setUser(user);
   }, []);
 
   const logout = useCallback(async () => {
-    await clearToken();
+    await clearAuth();
 
     setAuthToken(null);
     setToken(null);
+    setRefreshToken(null);
     setUser(null);
   }, []);
 

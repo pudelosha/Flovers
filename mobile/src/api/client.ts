@@ -10,7 +10,6 @@
 
 import { API_BASE_NORM } from "../config";
 
-
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 // In-memory token store
@@ -19,6 +18,19 @@ let inMemoryToken: string | null = null;
 // Call this from AuthProvider when token changes
 export function setAuthToken(token: string | null) {
   inMemoryToken = token;
+}
+
+type TokenRefreshConfig = {
+  getRefreshToken: () => Promise<string | null>;
+  onAccessTokenRefreshed: (token: string) => Promise<void> | void;
+  onRefreshFailed: () => Promise<void> | void;
+};
+
+let tokenRefreshConfig: TokenRefreshConfig | null = null;
+let refreshInFlight: Promise<string | null> | null = null;
+
+export function configureTokenRefresh(config: TokenRefreshConfig) {
+  tokenRefreshConfig = config;
 }
 
 export class ApiError extends Error {
@@ -91,11 +103,90 @@ function emitUnauthorized() {
   });
 }
 
-export async function request<T>(
+async function performTokenRefresh(timeoutMs: number): Promise<string | null> {
+  if (!tokenRefreshConfig) {
+    return null;
+  }
+
+  if (refreshInFlight) {
+    return refreshInFlight;
+  }
+
+  refreshInFlight = (async () => {
+    const refresh = await tokenRefreshConfig!.getRefreshToken();
+
+    if (!refresh) {
+      return null;
+    }
+
+    const controller =
+      typeof AbortController !== "undefined" ? new AbortController() : null;
+
+    let timeoutId: any = null;
+
+    const fetchPromise = fetch(`${API_BASE_NORM}/api/auth/token/refresh/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ refresh }),
+      signal: controller?.signal as any,
+    });
+
+    const timeoutPromise = new Promise<Response>((_, reject) => {
+      timeoutId = setTimeout(() => {
+        try {
+          controller?.abort();
+        } catch {
+          // ignore abort failures
+        }
+
+        reject(new ApiError(408, { message: "Request timed out" }, "Request timed out"));
+      }, timeoutMs);
+    });
+
+    let res: Response;
+    try {
+      res = (await Promise.race([fetchPromise, timeoutPromise])) as Response;
+    } finally {
+      if (timeoutId) clearTimeout(timeoutId);
+    }
+
+    const raw = await res.text().catch(() => "");
+    const bodyParsed = isJsonContent(res) ? safeJsonParse(raw) : raw;
+
+    if (!res.ok) {
+      return null;
+    }
+
+    const nextAccess =
+      bodyParsed?.access ?? bodyParsed?.data?.access ?? null;
+
+    if (!nextAccess || typeof nextAccess !== "string") {
+      return null;
+    }
+
+    inMemoryToken = nextAccess;
+    await tokenRefreshConfig!.onAccessTokenRefreshed(nextAccess);
+
+    return nextAccess;
+  })();
+
+  try {
+    return await refreshInFlight;
+  } catch {
+    return null;
+  } finally {
+    refreshInFlight = null;
+  }
+}
+
+async function requestInternal<T>(
   path: string,
   method: HttpMethod = "GET",
   body?: any,
-  opts: RequestOpts = { auth: false, timeoutMs: 15000 }
+  opts: RequestOpts = { auth: false, timeoutMs: 15000 },
+  hasRetriedAfterRefresh: boolean = false
 ): Promise<T> {
   const headers: Record<string, string> = {};
   const url = `${API_BASE_NORM}${path}`;
@@ -173,8 +264,27 @@ export async function request<T>(
   if (!res.ok) {
     const bodyParsed = isJsonContent(res) ? safeJsonParse(raw) : raw;
 
-    // emit global 401 only for authenticated requests
-    if (res.status === 401 && opts.auth) {
+    if (res.status === 401 && opts.auth && !hasRetriedAfterRefresh) {
+      const refreshedAccess = await performTokenRefresh(timeoutMs);
+
+      if (refreshedAccess) {
+        return requestInternal<T>(path, method, body, opts, true);
+      }
+
+      try {
+        await tokenRefreshConfig?.onRefreshFailed?.();
+      } catch {
+        // ignore cleanup failures
+      }
+
+      emitUnauthorized();
+    } else if (res.status === 401 && opts.auth) {
+      try {
+        await tokenRefreshConfig?.onRefreshFailed?.();
+      } catch {
+        // ignore cleanup failures
+      }
+
       emitUnauthorized();
     }
 
@@ -218,4 +328,13 @@ export async function request<T>(
 
   // Non-JSON successful response -> return text
   return raw as unknown as T;
+}
+
+export async function request<T>(
+  path: string,
+  method: HttpMethod = "GET",
+  body?: any,
+  opts: RequestOpts = { auth: false, timeoutMs: 15000 }
+): Promise<T> {
+  return requestInternal<T>(path, method, body, opts, false);
 }
