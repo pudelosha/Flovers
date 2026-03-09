@@ -7,6 +7,7 @@ __pycache__/
 *.pyd
 *.sqlite3
 *.log
+
 ############################
 # Django artefacts
 ############################
@@ -22,7 +23,7 @@ backend/celerybeat-schedule
 backend/celerybeat-schedule.*
 
 ############################
-# Virtual envs
+# Virtual environments
 ############################
 .venv/
 venv/
@@ -54,16 +55,43 @@ Thumbs.db
 # React Native (mobile)
 ############################
 mobile/node_modules/
-mobile/android/.gradle/
-mobile/android/local.properties
-mobile/android/app/debug.keystore
-mobile/android/app/*.keystore
-mobile/ios/Pods/
-mobile/ios/build/
-mobile/ios/*.xcworkspace/
+mobile/.metro-cache/
 mobile/.expo/
 mobile/.expo-shared/
 mobile/.DS_Store
+
+############################
+# Android (React Native)
+############################
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/build/
+mobile/android/app/build/
+
+############################
+# Android signing keys
+############################
+mobile/android/app/*.keystore
+mobile/android/app/*.jks
+mobile/android/keystore.properties
+
+############################
+# CI generated Android files
+############################
+mobile/android/play-service-account.json
+mobile/android/app/upload-keystore.jks
+
+############################
+# Firebase (generated in CI)
+############################
+mobile/android/app/google-services.json
+
+############################
+# iOS (React Native)
+############################
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/*.xcworkspace/
 
 ############################
 # Web (React + Vite)
@@ -72,39 +100,28 @@ web/node_modules/
 web/dist/
 web/.env
 web/.DS_Store
-
-# Vite cache (just in case)
 web/node_modules/.vite/
 
 ############################
 # ML / training
 ############################
-/ml/data/
-/ml/checkpoints/
-/ml/logs/
-/ml/runs/
-/ml/__pycache__/
-/ml/.venv/
-/ml/venv/
-/ml/**/*.log
+ml/data/
+ml/checkpoints/
+ml/logs/
+ml/runs/
+ml/__pycache__/
+ml/.venv/
+ml/venv/
+ml/**/*.log
 
 ############################
 # Assets / generated data
 ############################
-/plants/
-/translations/
+plants/
+translations/
 
 ############################
-# Secrets
+# Backend secrets
 ############################
 backend/secrets/firebase.json
 backend/secrets/*.json
-mobile/android/app/google-services.json
-
-############################
-# Android signing keys
-############################
-mobile/android/app/debug.keystore
-mobile/android/app/*.keystore
-mobile/android/app/*.jks
-mobile/android/keystore.properties

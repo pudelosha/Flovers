@@ -40,11 +40,11 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     // MUST match Firebase Android app package
-    namespace "com.flovers"
+    namespace "com.flovers.mobile"
 
     defaultConfig {
         // MUST match Firebase Android app package
-        applicationId "com.flovers"
+        applicationId "com.flovers.mobile"
 
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion

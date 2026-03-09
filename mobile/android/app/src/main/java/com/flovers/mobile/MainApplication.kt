@@ -1,4 +1,4 @@
-package com.flovers
+package com.flovers.mobile
 
 import android.app.Application
 import com.facebook.react.PackageList
@@ -7,8 +7,8 @@ import com.facebook.react.ReactHost
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
-import com.flovers.sensors.LightSensorPackage
-import com.flovers.heading.HeadingPackage
+import com.flovers.mobile.sensors.LightSensorPackage
+import com.flovers.mobile.heading.HeadingPackage
 
 class MainApplication : Application(), ReactApplication {
 

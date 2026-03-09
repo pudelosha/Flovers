@@ -1,4 +1,4 @@
-package com.flovers.heading
+package com.flovers.mobile.heading
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

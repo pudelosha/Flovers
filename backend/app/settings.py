@@ -151,7 +151,7 @@ DEEP_LINK_HOST = env("DEEP_LINK_HOST", default="")  # keep empty -> flovers://pa
 DEEP_LINK_ENABLED = env.bool("DEEP_LINK_ENABLED", default=True)
 PUBLIC_WEB_BASE = env("PUBLIC_WEB_BASE", default=SITE_URL)  # where /open/* is served
 
-ANDROID_PACKAGE_NAME = "com.flovers"  # <-- set your actual appId
+ANDROID_PACKAGE_NAME = "com.flovers.mobile"  # <-- set your actual appId
 
 # --- Celery ---
 CELERY_BEAT_SCHEDULE = {

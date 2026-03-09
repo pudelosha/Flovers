@@ -1,4 +1,4 @@
-package com.flovers.sensors
+package com.flovers.mobile.sensors
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
