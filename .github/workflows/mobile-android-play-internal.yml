@@ -142,16 +142,16 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-- name: Publish to Google Play Internal
-  shell: bash
-  run: |
-    fastlane supply \
-      --aab android/app/build/outputs/bundle/release/app-release.aab \
-      --package_name "${PACKAGE_NAME}" \
-      --track internal \
-      --release_status draft \
-      --json_key android/play-service-account.json \
-      --skip_upload_metadata true \
-      --skip_upload_images true \
-      --skip_upload_screenshots true \
-      --skip_upload_changelogs true
+      - name: Publish to Google Play Internal
+        shell: bash
+        run: |
+          fastlane supply \
+            --aab android/app/build/outputs/bundle/release/app-release.aab \
+            --package_name "${PACKAGE_NAME}" \
+            --track internal \
+            --release_status draft \
+            --json_key android/play-service-account.json \
+            --skip_upload_metadata true \
+            --skip_upload_images true \
+            --skip_upload_screenshots true \
+            --skip_upload_changelogs true
