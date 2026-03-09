@@ -100,3 +100,11 @@ web/node_modules/.vite/
 backend/secrets/firebase.json
 backend/secrets/*.json
 mobile/android/app/google-services.json
+
+############################
+# Android signing keys
+############################
+mobile/android/app/debug.keystore
+mobile/android/app/*.keystore
+mobile/android/app/*.jks
+mobile/android/keystore.properties
