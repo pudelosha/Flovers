@@ -27,6 +27,13 @@
       "care": "PIELĘGNACJA",
       "repot": "PRZESADZANIE"
     },
+    "due": {
+      "today": "Dziś",
+      "tomorrow": "Jutro",
+      "inDays": "Za {{count}} dni",
+      "overdueByDays": "{{count}} dni po terminie",
+      "nextWeek": "W przyszłym tygodniu"
+    },
     "toasts": {
       "failedToLoadTasks": "Nie udało się wczytać zadań",
       "taskCompleted": "Zadanie ukończone",

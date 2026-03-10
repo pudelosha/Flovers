@@ -38,6 +38,7 @@ export function buildUITasks(
     const p = r ? plantById.get(r.plant) : undefined;
 
     const type: TaskType = toTaskType(r?.type ?? "care");
+    const dueInfo = getDueInfo(t.due_date);
 
     const ui: Task & { reminderId: string } = {
       id: String(t.id),                  // task id (used for complete)
@@ -48,8 +49,9 @@ export function buildUITasks(
 
       plant: plantName(p),
       location: p?.location?.name || "",
-      due: dueLabel(t.due_date),         // Today/Tomorrow/… (simple label)
+      due: dueInfo.fallbackLabel,        // fallback only; UI should prefer dueDiffDays
       dueDate: new Date(t.due_date),     // exact date
+      dueDiffDays: dueInfo.diffDays,     // used by UI for localized labels
 
       // used for Delete/Edit routing
       reminderId: String(r?.id ?? ""),
@@ -63,13 +65,18 @@ export function buildUITasks(
   });
 }
 
-function dueLabel(iso: string): string {
-  const today = new Date(); today.setHours(0,0,0,0);
-  const d = new Date(iso); d.setHours(0,0,0,0);
+function getDueInfo(iso: string): { diffDays: number; fallbackLabel: string } {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const d = new Date(iso);
+  d.setHours(0, 0, 0, 0);
+
   const diff = Math.round((+d - +today) / (1000 * 60 * 60 * 24));
-  if (diff === 0) return "Today";
-  if (diff === 1) return "Tomorrow";
-  if (diff > 1 && diff < 7) return `${diff} days`;
-  if (diff < 0) return "Overdue";
-  return "Next week";
+
+  if (diff === 0) return { diffDays: diff, fallbackLabel: "Today" };
+  if (diff === 1) return { diffDays: diff, fallbackLabel: "Tomorrow" };
+  if (diff > 1 && diff < 7) return { diffDays: diff, fallbackLabel: `${diff} days` };
+  if (diff < 0) return { diffDays: diff, fallbackLabel: "Overdue" };
+  return { diffDays: diff, fallbackLabel: "Next week" };
 }

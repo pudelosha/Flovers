@@ -43,9 +43,23 @@ export default function TaskTile({
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
-  // Detect overdue by label text (e.g. "Overdue", "Overdue by 2 days")
+  const dueText =
+    typeof task.dueDiffDays === "number"
+      ? task.dueDiffDays === 0
+        ? t("home.due.today")
+        : task.dueDiffDays === 1
+          ? t("home.due.tomorrow")
+          : task.dueDiffDays > 1 && task.dueDiffDays < 7
+            ? t("home.due.inDays", { count: task.dueDiffDays })
+            : task.dueDiffDays < 0
+              ? t("home.due.overdueByDays", { count: Math.abs(task.dueDiffDays) })
+              : t("home.due.nextWeek")
+      : task.due;
+
   const isOverdue =
-    typeof task.due === "string" && task.due.toLowerCase().includes("overdue");
+    typeof task.dueDiffDays === "number"
+      ? task.dueDiffDays < 0
+      : typeof task.due === "string" && task.due.toLowerCase().includes("overdue");
 
   const formattedDate = formatDateWithPattern(task.dueDate, settings.dateFormat);
 
@@ -185,7 +199,7 @@ export default function TaskTile({
           ) : null}
 
           <View style={s.dueRow}>
-            <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{task.due}</Text>
+            <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{dueText}</Text>
             <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>
               {formattedDate}
             </Text>

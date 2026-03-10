@@ -27,6 +27,13 @@
       "care": "CARE",
       "repot": "REPOT"
     },
+    "due": {
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "inDays": "In {{count}} days",
+      "overdueByDays": "Overdue by {{count}} days",
+      "nextWeek": "Next week"
+    },
     "toasts": {
       "failedToLoadTasks": "Failed to load tasks",
       "taskCompleted": "Task completed",

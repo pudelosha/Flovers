@@ -1,4 +1,3 @@
-// PlantInfoTile.tsx
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -47,7 +46,7 @@ function ImageMasked({ uri }: { uri: string }) {
   return <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
 }
 
-/** ✅ RN Image cache-buster for local file URIs */
+/** RN Image cache-buster for local file URIs */
 function withCacheBuster(uri: string | null | undefined): string | null {
   if (!uri) return null;
   const sep = uri.includes("?") ? "&" : "?";
@@ -112,7 +111,7 @@ export default function PlantInfoTile({
 
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // ✅ in-app prompt when plant has no definition link (matches ChangePlantImageModal confirm style)
+  // in-app prompt when plant has no definition link (matches ChangePlantImageModal confirm style)
   const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] = useState(false);
 
   // local photo uri for THIS plant id
@@ -291,7 +290,7 @@ export default function PlantInfoTile({
                   if (plantDefinitionIdSafe != null) {
                     onOpenDefinition?.(plantDefinitionIdSafe);
                   } else {
-                    // ✅ Replace native Alert with in-app sheet (no dimming backdrop)
+                    // Replace native Alert with in-app sheet (no dimming backdrop)
                     setNoDefinitionPromptVisible(true);
                   }
                 }}
@@ -458,7 +457,7 @@ const styles = StyleSheet.create({
   infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
   infoValue: { color: "rgba(255,255,255,0.95)", fontWeight: "600", flex: 1 },
 
-  // ✅ prompt sheet styles (copied from your ChangePlantImageModal approach)
+  // prompt sheet styles (copied from your ChangePlantImageModal approach)
   confirmOverlay: {
     ...StyleSheet.absoluteFillObject,
     zIndex: 1200,

@@ -48,6 +48,19 @@ function formatDate(d: string | Date | null | undefined): string {
   const yyyy = dt.getFullYear();
   return `${dd}.${mm}.${yyyy}`;
 }
+
+function getDueDiffDays(d: string | Date | null | undefined): number | null {
+  if (!d) return null;
+  const dt = d instanceof Date ? new Date(d) : new Date(d);
+  if (Number.isNaN(+dt)) return null;
+
+  dt.setHours(0, 0, 0, 0);
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  return Math.round((+dt - +today) / (1000 * 60 * 60 * 24));
+}
 /* --------------------------------------------- */
 
 type Props = {
@@ -142,6 +155,22 @@ export default function PlantRemindersTile({
 
           const typeLabel = tr(`plantDetails.reminders.type.${displayType}`, displayType);
 
+          const diff = getDueDiffDays(r.dueDate);
+          const dueLabel =
+            diff == null
+              ? r.when
+              : diff === 0
+                ? tr("home.due.today", "Today")
+                : diff === 1
+                  ? tr("home.due.tomorrow", "Tomorrow")
+                  : diff > 1 && diff < 7
+                    ? tr("home.due.inDays", "In {{count}} days", { count: diff })
+                    : diff < 0
+                      ? tr("home.due.overdueByDays", "Overdue by {{count}} days", {
+                          count: Math.abs(diff),
+                        })
+                      : tr("home.due.nextWeek", "Next week");
+
           return (
             <View key={r.id} style={[styles.row, isOpen && styles.rowRaised]}>
               <View style={styles.left}>
@@ -153,7 +182,7 @@ export default function PlantRemindersTile({
                     {String(typeLabel).toUpperCase()}
                   </Text>
                   <Text style={styles.whenText} numberOfLines={1}>
-                    {r.when}
+                    {dueLabel}
                     {dateSuffix}
                   </Text>
                 </View>

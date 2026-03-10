@@ -11,8 +11,9 @@ export type Task = {
   location: string;
 
   // Home screen due information
-  due: string;   // e.g. "Today"
+  due: string;   // fallback label
   dueDate: Date; // exact date
+  dueDiffDays?: number; // relative offset from today; negative = overdue
 
   // fields used by Task History (filled when task is completed)
   completedAt?: string; // ISO string from backend
