@@ -374,7 +374,6 @@ def feed(request):
 
 
 # ---------- New: Authenticated history endpoint for charts ----------
-
 @api_view(["GET"])
 @permission_classes([permissions.IsAuthenticated])
 def history(request):
@@ -387,15 +386,18 @@ def history(request):
       - metric: "temperature" | "humidity" | "light" | "moisture" (default "temperature")
       - anchor: ISO datetime for the anchor day (optional, defaults to now)
 
-    Returns:
+    Returns locale-neutral points:
       {
         "device": {...},
         "range": "day" | "week" | "month",
         "metric": "...",
         "unit": "°C" | "%" | "lx",
         "span": { "from": "...", "to": "..." },
-        "points": [{ "label": string, "value": number }, ...]
+        "points": [{ "at": string, "value": number }, ...]
       }
+
+    `at` is the ISO datetime representing the start of the bucket.
+    The frontend is responsible for formatting localized x-axis labels.
     """
     device_id = request.query_params.get("device_id")
     if not device_id:
@@ -455,7 +457,7 @@ def history(request):
         except (TypeError, ValueError):
             continue
 
-        # ✅ NEW: skip non-finite values (NaN, +inf, -inf) so JSON stays valid
+        # skip non-finite values (NaN, +inf, -inf) so JSON stays valid
         if not math.isfinite(val_f):
             continue
 
@@ -469,22 +471,14 @@ def history(request):
         else:
             values.append(0.0)
 
-    # Build labels like your RN chart:
+    # Return locale-neutral bucket start timestamps instead of display labels
     if range_str == "day":
-        labels = [str(h) if h % 3 == 0 else "" for h in range(24)]
-    elif range_str == "week":
-        labels = [_weekday_short(span_from + timedelta(days=i)) for i in range(bin_count)]
+        bucket_starts = [span_from + timedelta(hours=i) for i in range(bin_count)]
     else:
-        days = bin_count
-        labels = []
-        for i in range(days):
-            day_num = i + 1
-            is_every_3rd = ((day_num - 1) % 3) == 0  # 1,4,7,10,...
-            is_last = day_num == days
-            labels.append(str(day_num) if (is_every_3rd or is_last) else "")
+        bucket_starts = [span_from + timedelta(days=i) for i in range(bin_count)]
 
     points = [
-        {"label": labels[i], "value": values[i]}
+        {"at": bucket_starts[i].isoformat(), "value": values[i]}
         for i in range(bin_count)
     ]
 

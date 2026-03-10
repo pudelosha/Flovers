@@ -83,6 +83,40 @@ function spanFor(range: HistoryRange, anchor: Date): DateSpan {
   return { from: firstOfMonth(anchor), to: lastOfMonth(anchor) };
 }
 
+function normalizeLocaleTag(lang?: string): string {
+  if (!lang) return "en";
+  const lower = String(lang).toLowerCase();
+  if (lower.startsWith("pl")) return "pl-PL";
+  if (lower.startsWith("en")) return "en-US";
+  return lang;
+}
+
+function formatHistoryPointLabel(
+  atISO: string,
+  range: HistoryRange,
+  locale: string,
+  monthBinCount?: number
+): string {
+  const dt = new Date(atISO);
+  if (Number.isNaN(+dt)) return "";
+
+  if (range === "day") {
+    const hour = dt.getHours();
+    return hour % 3 === 0 ? String(hour) : "";
+  }
+
+  if (range === "week") {
+    return new Intl.DateTimeFormat(normalizeLocaleTag(locale), {
+      weekday: "short",
+    }).format(dt);
+  }
+
+  const dayNum = dt.getDate();
+  const isEvery3rd = ((dayNum - 1) % 3) === 0; // 1,4,7,10,...
+  const isLast = monthBinCount != null && dayNum === monthBinCount;
+  return isEvery3rd || isLast ? String(dayNum) : "";
+}
+
 /* -------------------- Error helper (401 detection) ------------------- */
 function isUnauthorizedError(e: any): boolean {
   const status = (e?.response?.status ?? e?.status) as number | undefined;
@@ -103,7 +137,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsHistoryScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const nav = useNavigation();
   const route = useRoute<any>();
@@ -322,8 +356,16 @@ export default function ReadingsHistoryScreen() {
 
         if (!mounted) return;
 
-        setLabels(resp.points.map((p) => p.label));
+        const monthBinCount =
+          range === "month" ? new Date(span.to.getFullYear(), span.to.getMonth() + 1, 0).getDate() : undefined;
+
+        setLabels(
+          resp.points.map((p) =>
+            formatHistoryPointLabel(p.at, range, i18n.language, monthBinCount)
+          )
+        );
         setValues(resp.points.map((p) => p.value));
+
       } catch (e: any) {
         if (!mounted) return;
         setLabels([]);
@@ -359,7 +401,7 @@ export default function ReadingsHistoryScreen() {
     return () => {
       mounted = false;
     };
-  }, [device, range, metric, anchor, showToast, t]);
+  }, [device, range, metric, anchor, span, showToast, t, i18n.language]);
 
   const navTo = useCallback(
     (name: string) => {

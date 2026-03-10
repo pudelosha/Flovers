@@ -2,7 +2,7 @@ export type HistoryRange = "day" | "week" | "month";
 export type MetricKey = "temperature" | "humidity" | "light" | "moisture";
 
 export type HistoryPoint = {
-  label: string;   // x-axis label
+  at: string;      // bucket start ISO datetime
   value: number;   // numeric value
 };
 

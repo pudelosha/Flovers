@@ -155,7 +155,7 @@ export async function fetchReadingsFeed(params: {
 /* ============================== AUTH'D HISTORY (FOR CHART) ============================== */
 
 export type ApiHistoryPoint = {
-  label: string;
+  at: string;   // ISO datetime of bucket start; UI formats localized label
   value: number;
 };
 
