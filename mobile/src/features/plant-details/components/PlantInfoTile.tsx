@@ -54,6 +54,41 @@ function withCacheBuster(uri: string | null | undefined): string | null {
   return `${uri}${sep}t=${Date.now()}`;
 }
 
+/**
+ * Align backend/raw values to the existing i18n structure in createPlantStep04.json.
+ *
+ * Supported existing keys:
+ * - createPlant.step04.low
+ * - createPlant.step04.high
+ * - createPlant.step04.modal.levels.brightDirect
+ * - createPlant.step04.modal.levels.brightIndirect
+ * - createPlant.step04.modal.levels.medium
+ * - createPlant.step04.modal.levels.low
+ * - createPlant.step04.modal.levels.veryLow
+ */
+function normalizeLightLevelKey(v: any):
+  | "low"
+  | "high"
+  | "medium"
+  | "brightDirect"
+  | "brightIndirect"
+  | "veryLow"
+  | null {
+  if (!v) return null;
+
+  const raw = String(v).trim();
+  const x = raw.toLowerCase().replace(/[\s_-]+/g, "");
+
+  if (x === "low" || x === "lowlight") return "low";
+  if (x === "high" || x === "highlight") return "high";
+  if (x === "medium" || x === "mid" || x === "mediumlight" || x === "partialshade") return "medium";
+  if (x === "brightdirect" || x === "direct") return "brightDirect";
+  if (x === "brightindirect" || x === "indirect") return "brightIndirect";
+  if (x === "verylow" || x === "verylowlight") return "veryLow";
+
+  return null;
+}
+
 export default function PlantInfoTile({
   plant,
   collapseMenusSignal,
@@ -138,13 +173,18 @@ export default function PlantInfoTile({
     return pd?.image || pd?.image_thumb || null;
   }, [localPlantPhotoUri, plant.plant_definition]);
 
-  const lightValue = plant.light_level
-    ? tr(`createPlant.step04.lightLevels.${String(plant.light_level)}.label`, String(plant.light_level))
-    : tr("plantDetails.common.dash", "—");
+  const lightKey = normalizeLightLevelKey(plant.light_level);
+  const lightValue = lightKey
+    ? lightKey === "low" || lightKey === "high"
+      ? tr(`createPlant.step04.${lightKey}`, String(plant.light_level))
+      : tr(`createPlant.step04.modal.levels.${lightKey}`, String(plant.light_level))
+    : plant.light_level
+      ? String(plant.light_level)
+      : tr("plantDetails.common.dash", "—");
 
   const oKey = normalizeOrientationKey(plant.orientation);
   const orientationValue = oKey
-    ? tr(`plantDetails.info.orientations.${oKey}`, tr(`createPlant.step04.orientations.${oKey}.label`, oKey))
+    ? tr(`plantDetails.info.orientations.${oKey}`, tr(`createPlant.step04.orientations.${oKey}`, oKey))
     : tr("plantDetails.common.dash", "—");
 
   const potValue = plant.pot_material
