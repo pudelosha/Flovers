@@ -67,7 +67,7 @@ export default function ReportBugModal({ visible, onClose, showToast }: Props) {
         { auth: true }
       );
 
-      showToast(res?.message || t("profileModals.toasts.bugSent"), "success");
+      showToast(t("profileModals.toasts.bugSent"), "success");
       onClose();
     } catch (e: any) {
       console.warn("Bug report failed", e);

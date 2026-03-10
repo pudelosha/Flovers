@@ -69,7 +69,7 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
         { auth: true }
       );
 
-      showToast(res?.message || t("profileModals.toasts.contactSent"), "success");
+      showToast(t("profileModals.toasts.contactSent"), "success");
       onClose();
     } catch (e: any) {
       console.warn("Contact support failed", e);
