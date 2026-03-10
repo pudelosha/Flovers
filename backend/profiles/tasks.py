@@ -1,4 +1,3 @@
-# profiles/tasks.py
 from __future__ import annotations
 
 import logging
@@ -22,6 +21,7 @@ from reminders.models import ReminderTask
 from core.emailing import send_templated_email
 from .models import ProfileNotifications, NotificationDeliveryLog, PushDevice
 from .push import send_fcm_multicast
+from .utils import build_reminders_link
 
 logger = logging.getLogger(__name__)
 User = get_user_model()
@@ -94,14 +94,14 @@ def _get_user_lang(user) -> str:
         pass
     return default
 
+
 def _send_email_due_today(user, due_count: int) -> bool:
     if not user.email:
         return False
 
     lang = _get_user_lang(user)
-
-    # JSON: profiles.due_today.line1 contains "{count}"
     line1 = t("profiles.due_today.line1", lang=lang, default="").format(count=due_count)
+    link = build_reminders_link()
 
     send_templated_email(
         to_email=user.email,
@@ -112,19 +112,19 @@ def _send_email_due_today(user, due_count: int) -> bool:
             "user": user,
             "count": due_count,
             "line1": line1,
-            # Optional: provide a link so CTA can be clickable in template
-            # "link": "<your deep link or web url>",
+            "link": link,
         },
     )
     return True
+
 
 def _send_email_overdue_1d(user, overdue_count: int) -> bool:
     if not user.email:
         return False
 
     lang = _get_user_lang(user)
-
     line1 = t("profiles.overdue_1d.line1", lang=lang, default="").format(count=overdue_count)
+    link = build_reminders_link()
 
     send_templated_email(
         to_email=user.email,
@@ -135,10 +135,11 @@ def _send_email_overdue_1d(user, overdue_count: int) -> bool:
             "user": user,
             "count": overdue_count,
             "line1": line1,
-            # "link": "<your deep link or web url>",
+            "link": link,
         },
     )
     return True
+
 
 def _get_android_tokens(user_id: int) -> list[str]:
     return list(
