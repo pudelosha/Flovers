@@ -41,9 +41,12 @@ export type ApiReadingDevice = {
     humidity: boolean;
     light: boolean;
     moisture: boolean;
-    moisture_alert_enabled?: boolean;
-    moisture_alert_pct?: number | null; // 0..100
   };
+
+  // moisture alert (top-level backend fields)
+  moisture_alert_enabled?: boolean;
+  moisture_alert_threshold?: number | null;
+  moisture_alert_active?: boolean;
 
   // latest snapshot (optional convenience)
   last_read_at?: string | null; // ISO
@@ -63,9 +66,9 @@ export type ApiReadingDeviceCreatePayload = {
     humidity: boolean;
     light: boolean;
     moisture: boolean;
-    moisture_alert_enabled?: boolean;
-    moisture_alert_pct?: number; // 0..100
   };
+  moisture_alert_enabled?: boolean;
+  moisture_alert_threshold?: number | null;
 };
 
 export type ApiReadingDeviceUpdatePayload = Partial<{
@@ -79,7 +82,7 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
     humidity?: boolean;
     light?: boolean;
     moisture?: boolean;
-    moisture_alert_enabled?: boolean;
-    moisture_alert_pct?: number | null;
   };
+  moisture_alert_enabled: boolean;
+  moisture_alert_threshold: number | null;
 }>;

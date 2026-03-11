@@ -61,7 +61,7 @@ type Props = {
       light: boolean;
       moisture: boolean;
       moistureAlertEnabled?: boolean;
-      moistureAlertPct?: number; // 0..100 when enabled
+      moistureAlertPct?: number;
     };
     intervalHours: number;
   }) => void;
@@ -115,10 +115,10 @@ export default function UpsertReadingDeviceModal({
       ? initialMoistureAlertPct
       : typeof initialHumidityAlertPct === "number"
       ? initialHumidityAlertPct
-      : 30;
+      : 300;
 
   const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(Boolean(initialMoistureAlertEnabled));
-  const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(100, defaultMoistPct)));
+  const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(1000, defaultMoistPct)));
 
   const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
   const [intervalHours, setIntervalHours] = React.useState<number>(clamp(initialIntervalHours, 1, 24));
@@ -148,10 +148,10 @@ export default function UpsertReadingDeviceModal({
         ? initialMoistureAlertPct
         : typeof initialHumidityAlertPct === "number"
         ? initialHumidityAlertPct
-        : 30;
+        : 300;
 
     setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
-    setMoistAlertPct(Math.max(0, Math.min(100, moistPct)));
+    setMoistAlertPct(Math.max(0, Math.min(1000, moistPct)));
 
     setIntervalHours(clamp(initialIntervalHours ?? 5, 1, 24));
     setShowSecret(false);
@@ -337,15 +337,15 @@ export default function UpsertReadingDeviceModal({
                         ]}
                       >
                         {t("readingsModals.upsert.thresholdLabel")}{" "}
-                        <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}%</Text>
+                        <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}</Text>
                       </Text>
                       {Slider ? (
                         <Slider
                           minimumValue={0}
-                          maximumValue={100}
-                          step={1}
+                          maximumValue={1000}
+                          step={10}
                           value={moistAlertPct}
-                          onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))))}
+                          onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(1000, Math.round(v))))}
                           style={{ marginBottom: 12 }}
                         />
                       ) : (
@@ -355,10 +355,11 @@ export default function UpsertReadingDeviceModal({
                           value={String(moistAlertPct)}
                           onChangeText={(t2) => {
                             const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
-                            const v = Number.isFinite(n) ? n : 30;
-                            setMoistAlertPct(Math.max(0, Math.min(100, v)));
+                            const v = Number.isFinite(n) ? n : 300;
+                            const stepped = Math.round(v / 10) * 10;
+                            setMoistAlertPct(Math.max(0, Math.min(1000, stepped)));
                           }}
-                          placeholder="30"
+                          placeholder="300"
                           placeholderTextColor="rgba(255,255,255,0.7)"
                         />
                       )}

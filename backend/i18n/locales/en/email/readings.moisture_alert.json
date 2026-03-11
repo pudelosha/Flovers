@@ -1,0 +1,8 @@
+{
+  "subject": "Soil moisture alert",
+  "title": "Soil moisture alert",
+  "line1": "The soil moisture reading for \"{device_name}\" is {value}, below your threshold of {threshold}.",
+  "cta": "Open readings",
+  "push_title": "Soil moisture alert",
+  "push_body": "{device_name}: moisture {value} is below threshold {threshold}."
+}

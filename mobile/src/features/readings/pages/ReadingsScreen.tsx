@@ -436,6 +436,12 @@ export default function ReadingsScreen() {
       intervalHours: number;
     }) => {
       const isCreate = payload.mode === "add";
+      const moistureAlertEnabled = !!(payload.sensors.moisture && payload.sensors.moistureAlertEnabled);
+      const moistureAlertThreshold =
+        payload.sensors.moisture && payload.sensors.moistureAlertEnabled
+          ? payload.sensors.moistureAlertPct ?? null
+          : null;
+
       try {
         if (isCreate) {
           await createReadingDevice({
@@ -448,9 +454,9 @@ export default function ReadingsScreen() {
               humidity: payload.sensors.humidity,
               light: payload.sensors.light,
               moisture: payload.sensors.moisture,
-              moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
-              moisture_alert_pct: payload.sensors.moistureAlertPct,
             },
+            moisture_alert_enabled: moistureAlertEnabled,
+            moisture_alert_threshold: moistureAlertThreshold,
           });
         } else {
           if (!upsertReadingId) return;
@@ -465,9 +471,9 @@ export default function ReadingsScreen() {
               humidity: payload.sensors.humidity,
               light: payload.sensors.light,
               moisture: payload.sensors.moisture,
-              moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
-              moisture_alert_pct: payload.sensors.moistureAlertPct ?? null,
             },
+            moisture_alert_enabled: moistureAlertEnabled,
+            moisture_alert_threshold: moistureAlertThreshold,
           });
         }
 
@@ -826,16 +832,16 @@ export default function ReadingsScreen() {
         initialMoistureAlertEnabled={
           upsertMode === "edit"
             ? (() => {
-                const ss = devicesRaw.find((d) => String(d.id) === upsertReadingId)?.sensors;
-                return Boolean(ss?.moisture_alert_enabled);
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return Boolean(dev?.moisture_alert_enabled);
               })()
             : undefined
         }
         initialMoistureAlertPct={
           upsertMode === "edit"
             ? (() => {
-                const ss = devicesRaw.find((d) => String(d.id) === upsertReadingId)?.sensors;
-                return typeof ss?.moisture_alert_pct === "number" ? ss!.moisture_alert_pct! : undefined;
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return typeof dev?.moisture_alert_threshold === "number" ? dev.moisture_alert_threshold : undefined;
               })()
             : undefined
         }

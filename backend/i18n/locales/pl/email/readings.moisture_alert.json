@@ -1,0 +1,8 @@
+{
+  "subject": "Alert wilgotności gleby",
+  "title": "Alert wilgotności gleby",
+  "line1": "Odczyt wilgotności gleby dla \"{device_name}\" wynosi {value} i jest poniżej ustawionego progu {threshold}.",
+  "cta": "Otwórz odczyty",
+  "push_title": "Alert wilgotności gleby",
+  "push_body": "{device_name}: wilgotność {value} jest poniżej progu {threshold}."
+}

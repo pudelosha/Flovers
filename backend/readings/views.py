@@ -14,6 +14,7 @@ from .utils import parse_ts_or_now
 from .throttles import IngestPerDeviceThrottle, FeedPerDeviceThrottle
 from .codegen import generate_arduino_code
 from .emails import send_device_code_email
+from .notifications import send_moisture_alert_notifications
 
 import secrets
 from django.utils import timezone
@@ -253,7 +254,9 @@ def ingest(request):
       - Timestamps are rounded down to the full hour (e.g. 14:26 -> 14:00).
       - If a reading for (device, rounded_hour) exists, it is UPDATED instead of rejected.
       - The previous 59-minute minimum interval check has been removed.
-      - Moisture alert state is updated based on threshold crossing, but no notification is sent yet.
+      - Moisture alert state is updated based on threshold crossing.
+      - When crossing into the low-moisture state, push and email notifications are sent once.
+      - When moisture rises back above threshold, the active alert state is reset.
     """
     device_id = request.data.get("device_id")
     device_key = request.data.get("device_key")
@@ -289,6 +292,9 @@ def ingest(request):
 
     try:
         with transaction.atomic():
+            should_send_moisture_alert = False
+            alert_moisture_value = None
+
             # Either create a new hourly record or update the existing one
             rec, created = Reading.objects.get_or_create(
                 device=device,
@@ -309,7 +315,7 @@ def ingest(request):
                 rec.moisture = metrics.get("moisture")
                 rec.save(update_fields=["temperature", "humidity", "light", "moisture"])
 
-            # Update moisture alert state (state only, no notification dispatch yet)
+            # Update moisture alert state and schedule notification dispatch on threshold crossing
             moisture_value = rec.moisture
             if (
                 moisture_value is not None
@@ -327,6 +333,8 @@ def ingest(request):
                     if moisture_f < threshold_f:
                         if not device.moisture_alert_active:
                             device.moisture_alert_active = True
+                            should_send_moisture_alert = True
+                            alert_moisture_value = moisture_f
                     else:
                         if device.moisture_alert_active:
                             device.moisture_alert_active = False
@@ -344,6 +352,14 @@ def ingest(request):
                 "moisture": rec.moisture,
             }
             device.save(update_fields=["last_read_at", "latest_snapshot", "moisture_alert_active", "updated_at"])
+
+            if should_send_moisture_alert and alert_moisture_value is not None:
+                transaction.on_commit(
+                    lambda device_id=device.id, moisture_value=alert_moisture_value: send_moisture_alert_notifications(
+                        device_id=device_id,
+                        moisture_value=moisture_value,
+                    )
+                )
     except IntegrityError:
         # Very unlikely with get_or_create, but keep behavior consistent / idempotent
         pass
