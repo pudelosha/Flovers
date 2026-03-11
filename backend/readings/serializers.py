@@ -17,6 +17,9 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "notes",
             "interval_hours",
             "sensors",
+            "moisture_alert_enabled",
+            "moisture_alert_threshold",
+            "moisture_alert_active",
             "last_read_at",
             "latest",
             "created_at",
@@ -26,6 +29,7 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "device_key",
             "plant_name",
             "plant_location",
+            "moisture_alert_active",
             "last_read_at",
             "latest",
             "created_at",
@@ -41,14 +45,31 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
         return v
 
     def validate(self, attrs):
-        sensors = attrs.get("sensors", {})
-        if sensors and sensors.get("moisture_alert_enabled"):
-            pct = sensors.get("moisture_alert_pct", None)
-            if pct is None or not (0 <= int(pct) <= 100):
+        enabled = attrs.get("moisture_alert_enabled", getattr(self.instance, "moisture_alert_enabled", False))
+        threshold = attrs.get("moisture_alert_threshold", getattr(self.instance, "moisture_alert_threshold", None))
+
+        if enabled:
+            if threshold is None:
                 raise serializers.ValidationError(
-                    {"sensors": {"moisture_alert_pct": "0..100 required when alert is enabled"}}
+                    {"moisture_alert_threshold": "This field is required when moisture alert is enabled."}
                 )
+            try:
+                threshold_f = float(threshold)
+            except (TypeError, ValueError):
+                raise serializers.ValidationError(
+                    {"moisture_alert_threshold": "A valid number is required."}
+                )
+            if threshold_f < 0:
+                raise serializers.ValidationError(
+                    {"moisture_alert_threshold": "Must be greater than or equal to 0."}
+                )
+
         return attrs
+
+    def update(self, instance, validated_data):
+        if validated_data.get("moisture_alert_enabled") is False:
+            validated_data["moisture_alert_active"] = False
+        return super().update(instance, validated_data)
 
 class ReadingSerializer(serializers.ModelSerializer):
     class Meta:

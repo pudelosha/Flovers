@@ -253,6 +253,7 @@ def ingest(request):
       - Timestamps are rounded down to the full hour (e.g. 14:26 -> 14:00).
       - If a reading for (device, rounded_hour) exists, it is UPDATED instead of rejected.
       - The previous 59-minute minimum interval check has been removed.
+      - Moisture alert state is updated based on threshold crossing, but no notification is sent yet.
     """
     device_id = request.data.get("device_id")
     device_key = request.data.get("device_key")
@@ -308,6 +309,32 @@ def ingest(request):
                 rec.moisture = metrics.get("moisture")
                 rec.save(update_fields=["temperature", "humidity", "light", "moisture"])
 
+            # Update moisture alert state (state only, no notification dispatch yet)
+            moisture_value = rec.moisture
+            if (
+                moisture_value is not None
+                and device.moisture_alert_enabled
+                and device.moisture_alert_threshold is not None
+            ):
+                try:
+                    moisture_f = float(moisture_value)
+                    threshold_f = float(device.moisture_alert_threshold)
+                except (TypeError, ValueError):
+                    moisture_f = None
+                    threshold_f = None
+
+                if moisture_f is not None and threshold_f is not None:
+                    if moisture_f < threshold_f:
+                        if not device.moisture_alert_active:
+                            device.moisture_alert_active = True
+                    else:
+                        if device.moisture_alert_active:
+                            device.moisture_alert_active = False
+            elif device.moisture_alert_active and (
+                not device.moisture_alert_enabled or device.moisture_alert_threshold is None
+            ):
+                device.moisture_alert_active = False
+
             # Update device's cached fields (last_read_at keeps the REAL timestamp)
             device.last_read_at = ts
             device.latest_snapshot = {
@@ -316,7 +343,7 @@ def ingest(request):
                 "light": rec.light,
                 "moisture": rec.moisture,
             }
-            device.save(update_fields=["last_read_at", "latest_snapshot", "updated_at"])
+            device.save(update_fields=["last_read_at", "latest_snapshot", "moisture_alert_active", "updated_at"])
     except IntegrityError:
         # Very unlikely with get_or_create, but keep behavior consistent / idempotent
         pass

@@ -37,6 +37,10 @@ class ReadingDevice(models.Model):
     interval_hours = models.PositiveSmallIntegerField(default=5)  # 1..24
     sensors = models.JSONField(default=dict)  # {temperature, humidity, light, moisture, ...}
 
+    moisture_alert_enabled = models.BooleanField(default=False)
+    moisture_alert_threshold = models.FloatField(null=True, blank=True)
+    moisture_alert_active = models.BooleanField(default=False)
+
     last_read_at = models.DateTimeField(null=True, blank=True)
     latest_snapshot = models.JSONField(null=True, blank=True)
 
