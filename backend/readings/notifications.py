@@ -1,15 +1,8 @@
 from __future__ import annotations
 
 import logging
-from typing import Optional
 
 from django.conf import settings
-from django.utils import timezone
-
-try:
-    from zoneinfo import ZoneInfo
-except Exception:  # pragma: no cover
-    ZoneInfo = None
 
 from core.emailing import send_templated_email
 from core.i18n import t
@@ -17,38 +10,9 @@ from profiles.models import PushDevice
 from profiles.push import send_fcm_multicast
 
 from .models import ReadingDevice
+from .utils import build_readings_link
 
 logger = logging.getLogger(__name__)
-
-DEFAULT_TZ = "Europe/Warsaw"
-
-
-def _safe_zoneinfo(tz_name: Optional[str]):
-    tz_name = tz_name or DEFAULT_TZ
-
-    if ZoneInfo is None:
-        return timezone.get_current_timezone()
-
-    try:
-        return ZoneInfo(tz_name)
-    except Exception:
-        try:
-            return ZoneInfo(DEFAULT_TZ)
-        except Exception:
-            return timezone.get_current_timezone()
-
-
-def _deeplink_base() -> str:
-    scheme = getattr(settings, "DEEP_LINK_SCHEME", "flovers").strip()
-    host = (getattr(settings, "DEEP_LINK_HOST", "") or "").strip().strip("/")
-    return f"{scheme}://{host}" if host else f"{scheme}://"
-
-
-def _build_readings_link() -> str:
-    base = _deeplink_base()
-    if base.endswith("://"):
-        return f"{base}readings"
-    return f"{base}/readings"
 
 
 def _format_metric(value) -> str:
@@ -132,7 +96,7 @@ def _send_moisture_alert_email(device: ReadingDevice, moisture_value: float) -> 
         return False
 
     lang = _get_user_lang(user)
-    link = _build_readings_link()
+    link = build_readings_link()
 
     device_name = device.device_name or device.plant_name or f"Device #{device.pk}"
     threshold = _format_metric(device.moisture_alert_threshold)
