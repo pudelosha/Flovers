@@ -65,12 +65,14 @@ function MetricColPressable({
   value,
   unit,
   onPress,
+  decimals,
 }: {
   icon: string;
   color: string;
   value: number | null;
   unit: string;
   onPress: () => void;
+  decimals?: number;
 }) {
   return (
     <Pressable
@@ -82,7 +84,9 @@ function MetricColPressable({
         <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
       </View>
       <Text style={s.metricValue}>
-        {value === null || value === undefined ? "—" : `${value}${unit}`}
+        {value === null || value === undefined
+          ? "—"
+          : `${typeof decimals === "number" ? value.toFixed(decimals) : value}${unit}`}
       </Text>
     </Pressable>
   );
@@ -189,6 +193,7 @@ export default function ReadingTile({
             color={ICON_BG.temperature}
             value={data.metrics.temperature}
             unit={METRIC_UNITS.temperature}
+            decimals={1}
             onPress={() => onMetricPress("temperature")}
           />
         )}
@@ -198,6 +203,7 @@ export default function ReadingTile({
             color={ICON_BG.humidity}
             value={data.metrics.humidity}
             unit={METRIC_UNITS.humidity}
+            decimals={1}
             onPress={() => onMetricPress("humidity")}
           />
         )}

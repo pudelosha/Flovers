@@ -41,7 +41,7 @@ import { fetchPlantInstances, type ApiPlantInstanceListItem } from "../../../api
 // i18n
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 // ===== Extend the reading model locally (non-breaking) =====
 type Status = "enabled" | "disabled";
@@ -66,7 +66,7 @@ export default function ReadingsScreen() {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
