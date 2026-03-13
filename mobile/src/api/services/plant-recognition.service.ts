@@ -8,10 +8,11 @@ export type ApiRecognitionResult = {
   id: number | null; // currently null
   name: string;
   latin: string;
+  external_id: string;
+  image_thumb?: string | null;
 
   // new field from backend (0..1)
   probability: number;
-  external_id: string;
 
   // optional legacy field (0..1)
   confidence?: number;

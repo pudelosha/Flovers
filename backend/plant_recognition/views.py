@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 import logging
 
+from django.conf import settings
 from PIL import Image, UnidentifiedImageError
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
@@ -19,14 +20,41 @@ logger = logging.getLogger(__name__)
 
 def _abs_media_url(request, value) -> str | None:
     """
-    Build an absolute URL for ImageField/FileField values.
+    Build an absolute URL that works for real devices.
+
+    Supports:
+    - ImageField/FileField (has .url)
+    - raw strings:
+        - full URL: https://...
+        - relative media path: plants/thumb/x.jpg
+        - bare filename: x.jpg (assumes plants/thumb/)
     """
     if not value:
         return None
 
     rel = getattr(value, "url", None)
+
+    # Support string values too
+    if not rel and isinstance(value, str):
+        v = value.strip()
+        if not v:
+            return None
+
+        if v.startswith("http://") or v.startswith("https://"):
+            return v
+
+        v = v.replace("\\", "/").lstrip("/")
+        if "/" not in v:
+            rel = f"{settings.MEDIA_URL.rstrip('/')}/plants/thumb/{v}"
+        else:
+            rel = f"{settings.MEDIA_URL.rstrip('/')}/{v}"
+
     if not rel:
         return None
+
+    base = (getattr(settings, "SITE_URL", "") or "").strip()
+    if base:
+        return base.rstrip("/") + rel
 
     return request.build_absolute_uri(rel) if request else rel
 
@@ -95,7 +123,11 @@ class PlantRecognitionView(APIView):
             )
 
         # Ensure best-first ordering regardless of inference output
-        predictions = sorted(predictions, key=lambda p: float(p.get("score", 0.0)), reverse=True)[:topk]
+        predictions = sorted(
+            predictions,
+            key=lambda p: float(p.get("score", 0.0)),
+            reverse=True,
+        )[:topk]
 
         external_ids = [normalize_plant_key(p["latin"]) for p in predictions]
 

@@ -543,28 +543,48 @@ export default function PlantScannerModal({
                         style={styles.candidateCard}
                         android_ripple={{ color: "rgba(255,255,255,0.10)" }}
                       >
-                        <View style={{ flex: 1 }}>
-                          <Text style={styles.candidateName} numberOfLines={1}>
-                            {item.name}
-                          </Text>
-                          {!!item.latin && (
-                            <Text style={styles.candidateLatin} numberOfLines={1}>
-                              {item.latin}
-                            </Text>
+                        <View style={styles.candidateImageWrap}>
+                          {item.image_thumb ? (
+                            <Image
+                              source={{ uri: item.image_thumb }}
+                              style={styles.candidateImage}
+                              resizeMode="cover"
+                            />
+                          ) : (
+                            <View style={styles.candidateImagePlaceholder}>
+                              <MaterialCommunityIcons
+                                name="leaf"
+                                size={22}
+                                color="rgba(255,255,255,0.9)"
+                              />
+                            </View>
                           )}
                         </View>
 
-                        <View style={styles.candidateRight}>
-                          {pct ? (
-                            <View style={styles.pill}>
-                              <Text style={styles.pillText}>{pct}</Text>
-                            </View>
-                          ) : null}
-                          <MaterialCommunityIcons
-                            name="chevron-right"
-                            size={22}
-                            color="rgba(255,255,255,0.9)"
-                          />
+                        <View style={styles.candidateContent}>
+                          <View style={{ flex: 1 }}>
+                            <Text style={styles.candidateName} numberOfLines={1}>
+                              {item.name}
+                            </Text>
+                            {!!item.latin && (
+                              <Text style={styles.candidateLatin} numberOfLines={1}>
+                                {item.latin}
+                              </Text>
+                            )}
+                          </View>
+
+                          <View style={styles.candidateRight}>
+                            {pct ? (
+                              <View style={styles.pill}>
+                                <Text style={styles.pillText}>{pct}</Text>
+                              </View>
+                            ) : null}
+                            <MaterialCommunityIcons
+                              name="chevron-right"
+                              size={22}
+                              color="rgba(255,255,255,0.9)"
+                            />
+                          </View>
                         </View>
                       </Pressable>
                     );
@@ -679,13 +699,39 @@ const styles = StyleSheet.create({
   candidateCard: {
     flexDirection: "row",
     alignItems: "center",
-    paddingVertical: 14,
-    paddingHorizontal: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 12,
     borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.14)",
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.14)",
     overflow: "hidden",
+    gap: 12,
+  },
+  candidateImageWrap: {
+    width: 56,
+    height: 56,
+    borderRadius: 12,
+    overflow: "hidden",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.14)",
+  },
+  candidateImage: {
+    width: "100%",
+    height: "100%",
+  },
+  candidateImagePlaceholder: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.08)",
+  },
+  candidateContent: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    minWidth: 0,
   },
   candidateName: {
     color: "#FFFFFF",
@@ -702,6 +748,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
+    marginLeft: 10,
   },
   pill: {
     paddingHorizontal: 10,

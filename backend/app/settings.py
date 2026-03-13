@@ -143,7 +143,10 @@ CELERY_BROKER_URL = env("CELERY_BROKER_URL", default="redis://redis:6379/0")
 CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND", default="redis://redis:6379/1")
 
 # --- Public base URL (used for email links) ---
-SITE_URL = env("SITE_URL", default="http://127.0.0.1:8000")
+SITE_URL = env(
+    "SITE_URL",
+    default="http://127.0.0.1:8000" if DEBUG else "https://api.flovers.app",
+)
 
 # --- Deep link config for mobile ---
 DEEP_LINK_SCHEME = env("DEEP_LINK_SCHEME", default="flovers")
