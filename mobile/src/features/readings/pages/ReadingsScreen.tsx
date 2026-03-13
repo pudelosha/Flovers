@@ -30,6 +30,7 @@ import {
   rotateAccountSecret,
   toReadingTile,
   fetchDeviceSetup,
+  sendDeviceCodeByEmail,
 } from "../../../api/services/readings.service";
 
 // Pull the API type from centralized readings types
@@ -174,7 +175,7 @@ export default function ReadingsScreen() {
     }, [load])
   );
 
-  // 🔁 On focus: ensure page is reset (hide all modals/sheets, close menus, scroll to top)
+  // On focus: ensure page is reset (hide all modals/sheets, close menus, scroll to top)
   useFocusEffect(
     useCallback(() => {
       // hide all modals/sheets
@@ -500,6 +501,28 @@ export default function ReadingsScreen() {
     [upsertReadingId, load, showToast, tr]
   );
 
+  const handleSendCodeByEmail = useCallback(async () => {
+    if (!upsertReadingId) {
+      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      return;
+    }
+
+    try {
+      const res = await sendDeviceCodeByEmail(Number(upsertReadingId));
+      showToast(
+        res?.detail || tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
+        "success"
+      );
+    } catch (e: any) {
+      showToast(
+        e?.message
+          ? `${tr("readings.toasts.sendCodeEmailFailedPrefix", "Send email failed")}: ${e.message}`
+          : tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
+        "error"
+      );
+    }
+  }, [upsertReadingId, showToast, tr]);
+
   // ---- Device setup: fetch endpoints + secret then show modal ----
   const openDeviceSetup = useCallback(async () => {
     try {
@@ -804,9 +827,9 @@ export default function ReadingsScreen() {
           upsertMode === "edit"
             ? (() => {
                 const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
-                return dev?.interval_hours ?? 5;
+                return dev?.interval_hours ?? 1;
               })()
-            : 5
+            : 1
         }
         initialNotes={
           upsertMode === "edit"
@@ -856,6 +879,7 @@ export default function ReadingsScreen() {
         }
         onCancel={() => setUpsertVisible(false)}
         onSave={handleUpsertSave}
+        onSendCodeByEmail={handleSendCodeByEmail}
       />
 
       {/* Sort modal */}

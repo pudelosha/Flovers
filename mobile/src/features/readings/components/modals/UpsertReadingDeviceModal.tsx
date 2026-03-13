@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, TextInput, ScrollView, Switch } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Clipboard from "@react-native-clipboard/clipboard";
 import { useTranslation } from "react-i18next";
 
 // Match the Edit Plant modal styling:
@@ -86,7 +87,7 @@ export default function UpsertReadingDeviceModal({
   initialMoistureAlertEnabled,
   initialMoistureAlertPct,
   initialHumidityAlertPct, // legacy
-  initialIntervalHours = 5,
+  initialIntervalHours = 1,
   deviceKey,
   authSecret,
   onCancel,
@@ -115,10 +116,10 @@ export default function UpsertReadingDeviceModal({
       ? initialMoistureAlertPct
       : typeof initialHumidityAlertPct === "number"
       ? initialHumidityAlertPct
-      : 300;
+      : 30;
 
   const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(Boolean(initialMoistureAlertEnabled));
-  const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(1000, defaultMoistPct)));
+  const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(100, defaultMoistPct)));
 
   const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
   const [intervalHours, setIntervalHours] = React.useState<number>(clamp(initialIntervalHours, 1, 24));
@@ -148,12 +149,12 @@ export default function UpsertReadingDeviceModal({
         ? initialMoistureAlertPct
         : typeof initialHumidityAlertPct === "number"
         ? initialHumidityAlertPct
-        : 300;
+        : 30;
 
     setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
-    setMoistAlertPct(Math.max(0, Math.min(1000, moistPct)));
+    setMoistAlertPct(Math.max(0, Math.min(100, moistPct)));
 
-    setIntervalHours(clamp(initialIntervalHours ?? 5, 1, 24));
+    setIntervalHours(clamp(initialIntervalHours ?? 1, 1, 24));
     setShowSecret(false);
   }, [
     visible,
@@ -189,6 +190,11 @@ export default function UpsertReadingDeviceModal({
     const loc = p.location ? ` – ${p.location}` : "";
     return `${p.name}${loc}`;
   };
+
+  const copyToClipboard = React.useCallback((value?: string | null) => {
+    if (!value) return;
+    Clipboard.setString(value);
+  }, []);
 
   // Required: both plantId and non-empty device name
   const canSave = Boolean(plantId) && Boolean((name || "").trim());
@@ -337,15 +343,15 @@ export default function UpsertReadingDeviceModal({
                         ]}
                       >
                         {t("readingsModals.upsert.thresholdLabel")}{" "}
-                        <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}</Text>
+                        <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}%</Text>
                       </Text>
                       {Slider ? (
                         <Slider
                           minimumValue={0}
-                          maximumValue={1000}
-                          step={10}
+                          maximumValue={100}
+                          step={1}
                           value={moistAlertPct}
-                          onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(1000, Math.round(v))))}
+                          onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))))}
                           style={{ marginBottom: 12 }}
                         />
                       ) : (
@@ -355,11 +361,10 @@ export default function UpsertReadingDeviceModal({
                           value={String(moistAlertPct)}
                           onChangeText={(t2) => {
                             const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
-                            const v = Number.isFinite(n) ? n : 300;
-                            const stepped = Math.round(v / 10) * 10;
-                            setMoistAlertPct(Math.max(0, Math.min(1000, stepped)));
+                            const v = Number.isFinite(n) ? n : 30;
+                            setMoistAlertPct(Math.max(0, Math.min(100, v)));
                           }}
-                          placeholder="300"
+                          placeholder="30"
                           placeholderTextColor="rgba(255,255,255,0.7)"
                         />
                       )}
@@ -398,11 +403,11 @@ export default function UpsertReadingDeviceModal({
                   value={String(intervalHours)}
                   onChangeText={(t2) => {
                     const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
-                    const v = Number.isFinite(n) ? n : 5;
+                    const v = Number.isFinite(n) ? n : 1;
                     const clamped = Math.max(1, Math.min(24, v));
                     setIntervalHours(clamped);
                   }}
-                  placeholder="5"
+                  placeholder="1"
                   placeholderTextColor="rgba(255,255,255,0.7)"
                 />
               )}
@@ -414,7 +419,8 @@ export default function UpsertReadingDeviceModal({
                 <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16, marginBottom: 6 }]}>
                   {t("readingsModals.upsert.authSecret")}
                 </Text>
-                <View
+                <Pressable
+                  onPress={() => copyToClipboard(authSecret)}
                   style={{
                     marginHorizontal: 16,
                     padding: 12,
@@ -428,45 +434,87 @@ export default function UpsertReadingDeviceModal({
                   <Text style={sp.dropdownValue} selectable={showSecret}>
                     {authSecret ? (showSecret ? authSecret : "••••••••••••••") : t("readingsModals.common.dash")}
                   </Text>
-                  {authSecret ? (
-                    <Pressable
-                      onPress={() => setShowSecret((v) => !v)}
-                      hitSlop={8}
-                      accessibilityRole="button"
-                      accessibilityLabel={
-                        showSecret
-                          ? t("readingsModals.deviceSetup.hideAuthSecret")
-                          : t("readingsModals.deviceSetup.showAuthSecret")
-                      }
-                    >
+                  <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+                    {authSecret ? (
+                      <Pressable
+                        onPress={() => setShowSecret((v) => !v)}
+                        hitSlop={8}
+                        accessibilityRole="button"
+                        accessibilityLabel={
+                          showSecret
+                            ? t("readingsModals.deviceSetup.hideAuthSecret")
+                            : t("readingsModals.deviceSetup.showAuthSecret")
+                        }
+                      >
+                        <MaterialCommunityIcons
+                          name={showSecret ? "eye-off-outline" : "eye-outline"}
+                          size={20}
+                          color="#FFFFFF"
+                        />
+                      </Pressable>
+                    ) : null}
+                    {authSecret ? (
                       <MaterialCommunityIcons
-                        name={showSecret ? "eye-off-outline" : "eye-outline"}
-                        size={20}
+                        name="content-copy"
+                        size={18}
                         color="#FFFFFF"
                       />
-                    </Pressable>
-                  ) : null}
-                </View>
+                    ) : null}
+                  </View>
+                </Pressable>
 
                 <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 10, marginBottom: 6 }]}>
                   {t("readingsModals.upsert.deviceKey")}
                 </Text>
-                <View style={{ marginHorizontal: 16, padding: 12, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.10)" }}>
+                <Pressable
+                  onPress={() => copyToClipboard(deviceKey)}
+                  style={{
+                    marginHorizontal: 16,
+                    padding: 12,
+                    borderRadius: 12,
+                    backgroundColor: "rgba(255,255,255,0.10)",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
                   <Text style={sp.dropdownValue}>{deviceKey ? deviceKey : t("readingsModals.common.dash")}</Text>
-                </View>
+                  {deviceKey ? (
+                    <MaterialCommunityIcons
+                      name="content-copy"
+                      size={18}
+                      color="#FFFFFF"
+                    />
+                  ) : null}
+                </Pressable>
 
                 <View style={{ flexDirection: "row", gap: 10, marginHorizontal: 16, marginTop: 12 }}>
                   {/* Make these primary (blue) to match Save */}
-                  <Pressable onPress={onSendCodeByEmail} style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}>
+
+                  <Pressable
+                    onPress={onSendCodeByEmail}
+                    style={[
+                      pr.promptBtn,
+                      pr.promptPrimary,
+                      {
+                        flex: 1,
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 8,
+
+                        height: undefined,
+                        paddingVertical: 12,
+                        paddingHorizontal: 16,
+                      },
+                    ]}
+                  >
+                    <MaterialCommunityIcons name="email-send-outline" size={18} color="#FFFFFF" />
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
                       {t("readingsModals.upsert.sendCodeViaEmail")}
                     </Text>
                   </Pressable>
-                  <Pressable onPress={onSaveCodeAsText} style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}>
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
-                      {t("readingsModals.upsert.saveCodeAsText")}
-                    </Text>
-                  </Pressable>
+
                 </View>
 
                 <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>

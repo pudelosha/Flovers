@@ -105,6 +105,18 @@ export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }
   );
 }
 
+export async function sendDeviceCodeByEmail(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ detail?: string }> {
+  return await request<{ detail?: string }>(
+    `${DEVICES_URL}${id}/send-code-email/`,
+    "POST",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
 /* ============================== READ FEED (LATEST ONLY) ============================== */
 
 /**
