@@ -3,6 +3,7 @@ from __future__ import annotations
 from django.conf import settings
 
 from core.emailing import send_templated_email
+from core.i18n import t
 
 
 def _get_user_lang(user) -> str:
