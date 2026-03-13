@@ -34,7 +34,7 @@ class ReadingDevice(models.Model):
     device_key = models.CharField(max_length=16, unique=True, editable=False)
     notes = models.TextField(null=True, blank=True)
 
-    interval_hours = models.PositiveSmallIntegerField(default=5)  # 1..24
+    interval_hours = models.PositiveSmallIntegerField(default=1)  # 1..24
     sensors = models.JSONField(default=dict)  # {temperature, humidity, light, moisture, ...}
 
     moisture_alert_enabled = models.BooleanField(default=False)

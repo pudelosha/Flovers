@@ -138,6 +138,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
         device = self.get_object()
         secret = _get_secret_str(request.user)
         base_url = getattr(settings, "SITE_URL", "http://127.0.0.1:8000")
+
         code = generate_arduino_code(
             base_url=base_url,
             secret=secret,
@@ -146,8 +147,16 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             interval_hours=device.interval_hours,
             sensors=device.sensors or {},
         )
-        send_device_code_email(user=request.user, device=device, code_text=code)
-        return Response({"status": "sent"})
+
+        send_device_code_email(
+            user=request.user,
+            device=device,
+            code_text=code,
+        )
+
+        return Response({
+            "detail": f"Device code was sent to {request.user.email}."
+        })
 
     @action(detail=True, methods=["get"], url_path="doc.pdf")
     def doc_pdf(self, request, pk=None):
