@@ -10,6 +10,8 @@ class PlantRecognitionResultSerializer(serializers.Serializer):
         id: number | null;
         name: string;
         latin: string;
+        external_id: string;
+        image_thumb: string | null;
         probability: number;  # 0..1
         confidence: number;   # kept for backward compatibility
       }
@@ -18,5 +20,6 @@ class PlantRecognitionResultSerializer(serializers.Serializer):
     name = serializers.CharField()
     latin = serializers.CharField()
     external_id = serializers.CharField()
+    image_thumb = serializers.CharField(allow_null=True, required=False)
     probability = serializers.FloatField()
     confidence = serializers.FloatField(required=False)

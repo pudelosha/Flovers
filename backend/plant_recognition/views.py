@@ -12,8 +12,23 @@ from .utils import normalize_plant_key
 
 from .inference import predict_topk
 from .serializers import PlantRecognitionResultSerializer
+from plant_definitions.models import PlantDefinition
 
 logger = logging.getLogger(__name__)
+
+
+def _abs_media_url(request, value) -> str | None:
+    """
+    Build an absolute URL for ImageField/FileField values.
+    """
+    if not value:
+        return None
+
+    rel = getattr(value, "url", None)
+    if not rel:
+        return None
+
+    return request.build_absolute_uri(rel) if request else rel
 
 
 class PlantRecognitionView(APIView):
@@ -30,6 +45,8 @@ class PlantRecognitionView(APIView):
           "id": null,
           "name": "Nephrolepis exaltata",
           "latin": "Nephrolepis exaltata",
+          "external_id": "nephrolepis_exaltata",
+          "image_thumb": "https://example.com/media/plants/thumb/nephrolepis.jpg",
           "probability": 0.85,
           "confidence": 0.85
         },
@@ -80,18 +97,37 @@ class PlantRecognitionView(APIView):
         # Ensure best-first ordering regardless of inference output
         predictions = sorted(predictions, key=lambda p: float(p.get("score", 0.0)), reverse=True)[:topk]
 
+        external_ids = [normalize_plant_key(p["latin"]) for p in predictions]
+
+        plant_definitions = PlantDefinition.objects.filter(
+            external_id__in=external_ids
+        ).only("external_id", "image_thumb")
+
+        plant_definitions_map = {
+            plant.external_id: plant for plant in plant_definitions
+        }
+
         # score is treated as probability (0..1)
-        raw_results = [
-            {
-                "id": None,
-                "name": p["name"],
-                "latin": p["latin"],
-                "external_id": normalize_plant_key(p["latin"]),
-                "probability": float(p.get("score", 0.0)),
-                "confidence": float(p.get("score", 0.0)),
-            }
-            for p in predictions
-        ]
+        raw_results = []
+        for p in predictions:
+            external_id = normalize_plant_key(p["latin"])
+            plant_definition = plant_definitions_map.get(external_id)
+
+            image_thumb = None
+            if plant_definition and plant_definition.image_thumb:
+                image_thumb = _abs_media_url(request, plant_definition.image_thumb)
+
+            raw_results.append(
+                {
+                    "id": None,
+                    "name": p["name"],
+                    "latin": p["latin"],
+                    "external_id": external_id,
+                    "image_thumb": image_thumb,
+                    "probability": float(p.get("score", 0.0)),
+                    "confidence": float(p.get("score", 0.0)),
+                }
+            )
 
         serializer = PlantRecognitionResultSerializer(data=raw_results, many=True)
         serializer.is_valid(raise_exception=True)
