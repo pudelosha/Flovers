@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+  useRef,
+} from "react";
 import {
   View,
   Pressable,
@@ -17,7 +23,6 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
-
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
 import type { Suggestion } from "../../types/create-plant.types";
@@ -25,7 +30,6 @@ import {
   recognizePlantFromUri,
   type ApiRecognitionResult,
 } from "../../../../api/services/plant-recognition.service";
-
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
 
@@ -40,9 +44,9 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
 
   const perms: string[] = [
     PermissionsAndroid.PERMISSIONS.CAMERA,
-    (Number(Platform.Version) >= 33
+    Number(Platform.Version) >= 33
       ? (PermissionsAndroid.PERMISSIONS as any).READ_MEDIA_IMAGES
-      : PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE),
+      : PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
   ].filter(Boolean) as string[];
 
   const results = await PermissionsAndroid.requestMultiple(perms);
@@ -60,6 +64,13 @@ function toPercent(prob01: number | undefined | null): string | null {
   return `${Math.round(pct * 10) / 10}%`;
 }
 
+function toPercentNumber(prob01: number | undefined | null): number {
+  if (prob01 === null || prob01 === undefined) return 0;
+  const n = Number(prob01);
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(1, n)) * 100;
+}
+
 function toSuggestion(item: ApiRecognitionResult): Suggestion {
   return {
     id: item.id ?? `ml:${item.latin}`,
@@ -68,36 +79,14 @@ function toSuggestion(item: ApiRecognitionResult): Suggestion {
   } as Suggestion;
 }
 
-// Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
-  tKey,
-  children,
+  text,
   style,
-  variant,
 }: {
-  tKey: string;
-  children?: any;
+  text: string;
   style?: any;
-  variant?: "title" | "subtitle" | "body";
 }) => {
-  const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
-
-  // Use currentLanguage to force re-render when language changes
-  React.useMemo(() => {}, [currentLanguage]);
-
-  try {
-    const text = t(tKey);
-
-    // Treat "key echo" as missing translation
-    const isMissing = !text || text === tKey;
-    const fallbackText = tKey.split(".").pop() || tKey;
-
-    return <Text style={style}>{isMissing ? fallbackText : text}</Text>;
-  } catch {
-    const fallbackText = tKey.split(".").pop() || tKey;
-    return <Text style={style}>{fallbackText}</Text>;
-  }
+  return <Text style={style}>{text}</Text>;
 };
 
 export default function PlantScannerModal({
@@ -109,12 +98,12 @@ export default function PlantScannerModal({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const insets = useSafeAreaInsets();
+  const scrollRef = useRef<ScrollView>(null);
 
   const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [isPicking, setIsPicking] = useState(false);
   const [isRecognizing, setIsRecognizing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const [candidates, setCandidates] = useState<ApiRecognitionResult[] | null>(
     null
   );
@@ -126,29 +115,115 @@ export default function PlantScannerModal({
     [candidates]
   );
 
-  // Safe translation function that treats key-echo as missing
-  const getTranslation = useCallback(
-    (key: string, fallback?: string): string => {
-      try {
-        const translation = t(key);
-        const isMissing = !translation || translation === key;
+  const closestMatch = candidates?.[0] ?? null;
 
-        return (
-          (isMissing ? undefined : translation) ||
-          fallback ||
-          key.split(".").pop() ||
-          key
-        );
-      } catch (err) {
-        console.warn("Translation error for key:", key, err);
-        return fallback || key.split(".").pop() || key;
-      }
+  const getTranslation = useCallback(
+    (key: string, fallback: string): string => {
+      const translated = t(key, { defaultValue: fallback });
+      if (!translated || translated === key) return fallback;
+      return translated;
     },
     [t, currentLanguage]
   );
 
-  // Debug: Log when component renders with current language
-  React.useEffect(() => {
+  const i18nText = useMemo(
+    () => ({
+      title: getTranslation("createPlant.scannerModal.title", "Scan Plant"),
+      selectPlant: getTranslation(
+        "createPlant.scannerModal.selectPlant",
+        "Select the detected plant"
+      ),
+      scanInstructions: getTranslation(
+        "createPlant.scannerModal.scanInstructions",
+        "Take a photo or choose one from your gallery. Please use a clear, good-quality image that shows the plant's leaf shape well, centered and not blocked by other plants or objects."
+      ),
+      noPhoto: getTranslation(
+        "createPlant.scannerModal.noPhoto",
+        "No photo selected"
+      ),
+      takePhoto: getTranslation(
+        "createPlant.scannerModal.takePhoto",
+        "Take a photo"
+      ),
+      fromGallery: getTranslation(
+        "createPlant.scannerModal.fromGallery",
+        "From gallery"
+      ),
+      recognize: getTranslation(
+        "createPlant.scannerModal.recognize",
+        "Recognize plant"
+      ),
+      cameraRequired: getTranslation(
+        "createPlant.scannerModal.cameraRequired",
+        "Permission required"
+      ),
+      cameraPermissionMessage: getTranslation(
+        "createPlant.scannerModal.cameraPermissionMessage",
+        "Please grant camera and media permissions to take a photo."
+      ),
+      libraryRequired: getTranslation(
+        "createPlant.scannerModal.libraryRequired",
+        "Permission required"
+      ),
+      libraryPermissionMessage: getTranslation(
+        "createPlant.scannerModal.libraryPermissionMessage",
+        "Please grant media permissions to pick a photo."
+      ),
+      cameraError: getTranslation(
+        "createPlant.scannerModal.cameraError",
+        "Camera error"
+      ),
+      libraryError: getTranslation(
+        "createPlant.scannerModal.libraryError",
+        "Picker error"
+      ),
+      cameraFailure: getTranslation(
+        "createPlant.scannerModal.cameraFailure",
+        "Failed to open camera."
+      ),
+      libraryFailure: getTranslation(
+        "createPlant.scannerModal.libraryFailure",
+        "Failed to open gallery."
+      ),
+      recognitionFailure: getTranslation(
+        "createPlant.scannerModal.recognitionFailure",
+        "Failed to recognize the plant."
+      ),
+      noResults: getTranslation(
+        "createPlant.scannerModal.noResults",
+        "No results returned. Try a clearer photo."
+      ),
+      resultsDescription: getTranslation(
+        "createPlant.scannerModal.resultsDescription",
+        "These are the top 3 matches based on the provided picture. Tap one of the 3 images below to select the plant definition."
+      ),
+      matchRate: getTranslation(
+        "createPlant.scannerModal.matchRate",
+        "Match rate"
+      ),
+      closestMatch: getTranslation(
+        "createPlant.scannerModal.closestMatch",
+        "Closest match"
+      ),
+      back: getTranslation("createPlant.scannerModal.back", "Back"),
+      close: getTranslation("createPlant.scannerModal.close", "Close"),
+      plantRecognitionErrorTitle: getTranslation(
+        "createPlant.scannerModal.plantRecognitionErrorTitle",
+        "Plant Recognition Error"
+      ),
+      plantRecognitionErrorMessage: getTranslation(
+        "createPlant.scannerModal.plantRecognitionErrorMessage",
+        "Failed to fetch plant details for {{key}}. {{message}}"
+      ),
+      tryAgain: getTranslation(
+        "createPlant.scannerModal.tryAgain",
+        "Please try again."
+      ),
+    }),
+    [getTranslation]
+  );
+
+  useEffect(() => {
     if (visible) {
       console.log("PlantScannerModal rendering with language:", currentLanguage);
     }
@@ -161,15 +236,20 @@ export default function PlantScannerModal({
       setIsPicking(false);
       setIsRecognizing(false);
       setCandidates(null);
+      setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: false }), 0);
     }
   }, [visible]);
+
+  useEffect(() => {
+    if (visible) {
+      setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: false }), 0);
+    }
+  }, [stage, visible]);
 
   if (!visible) return null;
 
   const handleSelectCandidate = async (item: ApiRecognitionResult) => {
     const plant = toSuggestion(item);
-
-    // use backend-normalized key (matches PlantDefinition.external_id)
     const key = item.external_id;
 
     console.log("Fetching plant profile for key:", key);
@@ -182,7 +262,6 @@ export default function PlantScannerModal({
 
       onPlantDetected?.({
         ...plant,
-        // display latin comes from the profile (canonical)
         latin: plantProfile.latin,
         ...plantProfile,
       });
@@ -192,8 +271,14 @@ export default function PlantScannerModal({
       console.error("Error while fetching plant profile for key:", key, error);
 
       Alert.alert(
-        "Plant Recognition Error",
-        `Failed to fetch plant details for ${key}. ${error?.message || "Please try again."}`
+        i18nText.plantRecognitionErrorTitle,
+        t("createPlant.scannerModal.plantRecognitionErrorMessage", {
+          key,
+          message: error?.message || i18nText.tryAgain,
+          defaultValue: `Failed to fetch plant details for ${key}. ${
+            error?.message || i18nText.tryAgain
+          }`,
+        })
       );
     }
   };
@@ -206,16 +291,7 @@ export default function PlantScannerModal({
 
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
-        Alert.alert(
-          getTranslation(
-            "createPlant.scannerModal.cameraRequired",
-            "Permission required"
-          ),
-          getTranslation(
-            "createPlant.scannerModal.cameraPermissionMessage",
-            "Please grant camera and media permissions to take a photo."
-          )
-        );
+        Alert.alert(i18nText.cameraRequired, i18nText.cameraPermissionMessage);
         return;
       }
 
@@ -226,23 +302,19 @@ export default function PlantScannerModal({
       });
 
       if (res.didCancel) return;
+
       if (res.errorCode) {
-        Alert.alert(
-          getTranslation("createPlant.scannerModal.cameraError", "Camera error"),
-          String(res.errorMessage)
-        );
+        Alert.alert(i18nText.cameraError, String(res.errorMessage));
         return;
       }
 
       const uri = res.assets?.[0]?.uri;
-      if (uri) setPhotoUri(uri);
+      if (uri) {
+        setPhotoUri(uri);
+        setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
+      }
     } catch {
-      setError(
-        getTranslation(
-          "createPlant.scannerModal.cameraFailure",
-          "Failed to open camera."
-        )
-      );
+      setError(i18nText.cameraFailure);
     } finally {
       setIsPicking(false);
     }
@@ -256,16 +328,7 @@ export default function PlantScannerModal({
 
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
-        Alert.alert(
-          getTranslation(
-            "createPlant.scannerModal.libraryRequired",
-            "Permission required"
-          ),
-          getTranslation(
-            "createPlant.scannerModal.libraryPermissionMessage",
-            "Please grant media permissions to pick a photo."
-          )
-        );
+        Alert.alert(i18nText.libraryRequired, i18nText.libraryPermissionMessage);
         return;
       }
 
@@ -277,23 +340,19 @@ export default function PlantScannerModal({
       });
 
       if (res.didCancel) return;
+
       if (res.errorCode) {
-        Alert.alert(
-          getTranslation("createPlant.scannerModal.libraryError", "Picker error"),
-          String(res.errorMessage)
-        );
+        Alert.alert(i18nText.libraryError, String(res.errorMessage));
         return;
       }
 
       const uri = res.assets?.[0]?.uri;
-      if (uri) setPhotoUri(uri);
+      if (uri) {
+        setPhotoUri(uri);
+        setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
+      }
     } catch {
-      setError(
-        getTranslation(
-          "createPlant.scannerModal.libraryFailure",
-          "Failed to open gallery."
-        )
-      );
+      setError(i18nText.libraryFailure);
     } finally {
       setIsPicking(false);
     }
@@ -311,25 +370,18 @@ export default function PlantScannerModal({
 
       if (results.length === 0) {
         setCandidates(null);
-        setError(
-          getTranslation(
-            "createPlant.scannerModal.noResults",
-            "No results returned. Try a clearer photo."
-          )
-        );
+        setError(i18nText.noResults);
         return;
       }
 
       setCandidates(results);
+      setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
     } catch (e: any) {
       setCandidates(null);
       setError(
         e?.message ??
           (e?.response?.data?.detail as string) ??
-          getTranslation(
-            "createPlant.scannerModal.recognitionFailure",
-            "Failed to recognize the plant."
-          )
+          i18nText.recognitionFailure
       );
     } finally {
       setIsRecognizing(false);
@@ -338,7 +390,6 @@ export default function PlantScannerModal({
 
   return (
     <>
-      {/* Backdrop */}
       <Pressable
         style={remindersStyles.promptBackdrop}
         onPress={() => {
@@ -371,28 +422,25 @@ export default function PlantScannerModal({
           ]}
         >
           <ScrollView
+            ref={scrollRef}
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={styles.scrollContent}
+            contentContainerStyle={[styles.scrollContent, { paddingBottom: 80 }]}
+            showsVerticalScrollIndicator={false}
           >
-            {/* Title */}
-            <Text style={[remindersStyles.promptTitle, { paddingHorizontal: 0 }]}>
-              {stage === "photo"
-                ? getTranslation("createPlant.scannerModal.title", "Scan Plant")
-                : getTranslation(
-                    "createPlant.scannerModal.selectPlant",
-                    "Select the detected plant"
-                  )}
+            <Text
+              style={[
+                remindersStyles.promptTitle,
+                styles.modalTitle,
+                stage === "results" ? styles.resultsTitle : null,
+              ]}
+            >
+              {stage === "photo" ? i18nText.title : i18nText.selectPlant}
             </Text>
 
             {stage === "photo" ? (
               <>
-                {/* Subtitle */}
-                <TranslatedText
-                  tKey="createPlant.scannerModal.scanInstructions"
-                  style={wiz.subtitle}
-                />
+                <TranslatedText text={i18nText.scanInstructions} style={wiz.subtitle} />
 
-                {/* Preview */}
                 <View style={[wiz.hero, styles.previewFrame]}>
                   {photoUri ? (
                     <Image
@@ -407,17 +455,11 @@ export default function PlantScannerModal({
                         size={28}
                         color="#FFFFFF"
                       />
-                      <Text style={styles.previewText}>
-                        {getTranslation(
-                          "createPlant.scannerModal.noPhoto",
-                          "No photo selected"
-                        )}
-                      </Text>
+                      <Text style={styles.previewText}>{i18nText.noPhoto}</Text>
                     </View>
                   )}
                 </View>
 
-                {/* Actions row */}
                 <View style={styles.actionsRow}>
                   <Pressable
                     disabled={busy}
@@ -425,9 +467,7 @@ export default function PlantScannerModal({
                     onPress={doLaunchCamera}
                   >
                     <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
-                    <Text style={styles.actionLabel}>
-                      {getTranslation("createPlant.scannerModal.takePhoto", "Take a photo")}
-                    </Text>
+                    <Text style={styles.actionLabel}>{i18nText.takePhoto}</Text>
                   </Pressable>
 
                   <Pressable
@@ -440,13 +480,10 @@ export default function PlantScannerModal({
                       size={24}
                       color="#FFFFFF"
                     />
-                    <Text style={styles.actionLabel}>
-                      {getTranslation("createPlant.scannerModal.fromGallery", "From gallery")}
-                    </Text>
+                    <Text style={styles.actionLabel}>{i18nText.fromGallery}</Text>
                   </Pressable>
                 </View>
 
-                {/* Recognize button */}
                 <Pressable
                   disabled={!photoUri || isRecognizing}
                   onPress={handleRecognize}
@@ -471,7 +508,7 @@ export default function PlantScannerModal({
                         style={{ opacity: !photoUri ? 0.55 : 1 }}
                       />
                       <Text style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}>
-                        {getTranslation("createPlant.scannerModal.recognize", "Recognize plant")}
+                        {i18nText.recognize}
                       </Text>
                     </>
                   )}
@@ -483,7 +520,6 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Close button */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -491,21 +527,16 @@ export default function PlantScannerModal({
                       if (!busy) onClose();
                     }}
                   >
-                    <Text style={styles.bottomBtnText}>
-                      {getTranslation("createPlant.scannerModal.close", "Close")}
-                    </Text>
+                    <Text style={styles.bottomBtnText}>{i18nText.close}</Text>
                   </Pressable>
                 </View>
               </>
             ) : (
               <>
-                {/* Results view subtitle */}
-                <TranslatedText
-                  tKey="createPlant.scannerModal.selectPlant"
-                  style={wiz.subtitle}
-                />
+                <Text style={[wiz.subtitle, styles.resultsDescription]}>
+                  {i18nText.resultsDescription}
+                </Text>
 
-                {/* Preview mini */}
                 <View style={styles.previewMiniWrap}>
                   <View style={styles.previewMiniFrame}>
                     {photoUri ? (
@@ -518,24 +549,54 @@ export default function PlantScannerModal({
                       <View style={styles.previewPlaceholder}>
                         <MaterialCommunityIcons
                           name="image-plus"
-                          size={22}
+                          size={28}
                           color="#FFFFFF"
                         />
-                        <Text style={styles.previewText}>
-                          {getTranslation(
-                            "createPlant.scannerModal.noPhoto",
-                            "No photo selected"
-                          )}
-                        </Text>
+                        <Text style={styles.previewText}>{i18nText.noPhoto}</Text>
                       </View>
                     )}
                   </View>
+
+                  <View style={styles.previewArrowWrap}>
+                    <MaterialCommunityIcons
+                      name="arrow-right"
+                      size={34}
+                      color="rgba(255,255,255,0.95)"
+                    />
+                  </View>
+
+                  <View style={styles.closestMatchFrame}>
+                    {closestMatch?.image_thumb ? (
+                      <Image
+                        source={{ uri: closestMatch.image_thumb }}
+                        style={{ width: "100%", height: "100%" }}
+                        resizeMode="cover"
+                      />
+                    ) : (
+                      <View style={styles.candidateImagePlaceholder}>
+                        <MaterialCommunityIcons
+                          name="leaf"
+                          size={28}
+                          color="rgba(255,255,255,0.9)"
+                        />
+                      </View>
+                    )}
+
+                    <View style={styles.closestMatchBadge}>
+                      <Text style={styles.closestMatchBadgeText}>
+                        {i18nText.closestMatch}
+                      </Text>
+                    </View>
+                  </View>
                 </View>
 
-                {/* Candidates list */}
                 <View style={{ marginTop: 12, gap: 10 }}>
                   {(candidates ?? []).slice(0, 3).map((item, idx) => {
                     const pct = toPercent(item.probability ?? item.confidence);
+                    const pctValue = toPercentNumber(
+                      item.probability ?? item.confidence
+                    );
+
                     return (
                       <Pressable
                         key={`${item.latin}-${idx}`}
@@ -554,7 +615,7 @@ export default function PlantScannerModal({
                             <View style={styles.candidateImagePlaceholder}>
                               <MaterialCommunityIcons
                                 name="leaf"
-                                size={22}
+                                size={28}
                                 color="rgba(255,255,255,0.9)"
                               />
                             </View>
@@ -562,28 +623,28 @@ export default function PlantScannerModal({
                         </View>
 
                         <View style={styles.candidateContent}>
-                          <View style={{ flex: 1 }}>
-                            <Text style={styles.candidateName} numberOfLines={1}>
-                              {item.name}
+                          <Text style={styles.candidateLatin} numberOfLines={1}>
+                            {item.latin || item.name}
+                          </Text>
+
+                          <View style={styles.matchMetaRow}>
+                            <Text style={styles.matchLabelText}>
+                              {i18nText.matchRate}
                             </Text>
-                            {!!item.latin && (
-                              <Text style={styles.candidateLatin} numberOfLines={1}>
-                                {item.latin}
-                              </Text>
-                            )}
                           </View>
 
-                          <View style={styles.candidateRight}>
-                            {pct ? (
-                              <View style={styles.pill}>
-                                <Text style={styles.pillText}>{pct}</Text>
-                              </View>
-                            ) : null}
-                            <MaterialCommunityIcons
-                              name="chevron-right"
-                              size={22}
-                              color="rgba(255,255,255,0.9)"
+                          <View style={styles.matchBarTrack}>
+                            <View
+                              style={[
+                                styles.matchBarFill,
+                                { width: `${pctValue}%` },
+                              ]}
                             />
+                            <View style={styles.matchBarTextOverlay}>
+                              <Text style={styles.matchPercentText}>
+                                {pct ?? "0%"}
+                              </Text>
+                            </View>
                           </View>
                         </View>
                       </Pressable>
@@ -597,7 +658,6 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Bottom buttons: Back + Close */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -605,11 +665,13 @@ export default function PlantScannerModal({
                       if (busy) return;
                       setCandidates(null);
                       setError(null);
+                      setTimeout(
+                        () => scrollRef.current?.scrollTo({ y: 0, animated: true }),
+                        0
+                      );
                     }}
                   >
-                    <Text style={styles.bottomBtnText}>
-                      {getTranslation("createPlant.scannerModal.back", "Back")}
-                    </Text>
+                    <Text style={styles.bottomBtnText}>{i18nText.back}</Text>
                   </Pressable>
 
                   <Pressable
@@ -618,9 +680,7 @@ export default function PlantScannerModal({
                       if (!busy) onClose();
                     }}
                   >
-                    <Text style={styles.bottomBtnText}>
-                      {getTranslation("createPlant.scannerModal.close", "Close")}
-                    </Text>
+                    <Text style={styles.bottomBtnText}>{i18nText.close}</Text>
                   </Pressable>
                 </View>
               </>
@@ -636,7 +696,19 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingHorizontal: 16,
     paddingTop: 16,
-    paddingBottom: 0,
+  },
+
+  modalTitle: {
+    paddingHorizontal: 0,
+    marginLeft: 2,
+  },
+
+  resultsTitle: {},
+
+  resultsDescription: {
+    marginTop: 2,
+    marginBottom: 10,
+    paddingHorizontal: 2,
   },
 
   previewFrame: {
@@ -684,34 +756,70 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flexDirection: "row",
     alignItems: "center",
+    width: "100%",
     gap: 12,
   },
   previewMiniFrame: {
-    width: 72,
-    height: 72,
-    borderRadius: 14,
+    flex: 43,
+    aspectRatio: 0.92,
+    borderRadius: 16,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.08)",
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.18)",
   },
+  previewArrowWrap: {
+    flex: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 2,
+  },
+  closestMatchFrame: {
+    flex: 43,
+    aspectRatio: 0.92,
+    borderRadius: 16,
+    overflow: "hidden",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    position: "relative",
+  },
+  closestMatchBadge: {
+    position: "absolute",
+    left: 8,
+    right: 8,
+    bottom: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    borderRadius: 10,
+    backgroundColor: "rgba(0,0,0,0.58)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.16)",
+  },
+  closestMatchBadgeText: {
+    color: "#FFFFFF",
+    fontSize: 12,
+    fontWeight: "800",
+    textAlign: "center",
+  },
 
   candidateCard: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "stretch",
     paddingVertical: 12,
-    paddingHorizontal: 12,
-    borderRadius: 16,
+    paddingHorizontal: 14,
+    borderRadius: 18,
     backgroundColor: "rgba(255,255,255,0.14)",
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.14)",
     overflow: "hidden",
-    gap: 12,
+    gap: 14,
+    minHeight: 92,
   },
   candidateImageWrap: {
-    width: 56,
-    height: 56,
-    borderRadius: 12,
+    width: 84,
+    height: 84,
+    borderRadius: 14,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.08)",
     borderWidth: 1,
@@ -729,8 +837,7 @@ const styles = StyleSheet.create({
   },
   candidateContent: {
     flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "center",
     minWidth: 0,
   },
   candidateName: {
@@ -739,10 +846,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   candidateLatin: {
-    marginTop: 2,
-    color: "rgba(255,255,255,0.78)",
-    fontWeight: "600",
-    fontSize: 13,
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 16,
   },
   candidateRight: {
     flexDirection: "row",
@@ -750,6 +856,57 @@ const styles = StyleSheet.create({
     gap: 10,
     marginLeft: 10,
   },
+  matchMetaRow: {
+    marginTop: 10,
+    marginBottom: 6,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
+  matchLabelText: {
+    color: "rgba(255,255,255,0.82)",
+    fontWeight: "700",
+    fontSize: 12,
+  },
+  matchBarTrack: {
+    width: "100%",
+    height: 20,
+    borderRadius: 999,
+    overflow: "hidden",
+    backgroundColor: "rgba(255,255,255,0.16)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+    position: "relative",
+    justifyContent: "center",
+  },
+  matchBarFill: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    bottom: 0,
+    minWidth: 36,
+    borderRadius: 999,
+    backgroundColor: "rgba(11,114,133,0.95)",
+  },
+  matchBarTextOverlay: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 6,
+  },
+  matchPercentText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 12,
+    lineHeight: 14,
+    textAlign: "center",
+    paddingVertical: 1,
+  },
+
   pill: {
     paddingHorizontal: 10,
     paddingVertical: 6,

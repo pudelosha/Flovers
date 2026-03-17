@@ -28,6 +28,12 @@
       "libraryFailure": "Failed to open gallery.",
       "recognitionFailure": "Failed to recognize the plant.",
       "noResults": "No results returned. Try a clearer photo.",
+      "resultsDescription": "These are the top 3 matches based on the provided picture. Tap one of the 3 images below to select the plant definition.",
+      "matchRate": "Match rate",
+      "closestMatch": "Closest match",
+      "plantRecognitionErrorTitle": "Plant Recognition Error",
+      "plantRecognitionErrorMessage": "Failed to fetch plant details for {{key}}. {{message}}",
+      "tryAgain": "Please try again.",
       "back": "Back",
       "close": "Close"
     }
