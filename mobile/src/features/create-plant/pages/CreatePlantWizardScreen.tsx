@@ -105,6 +105,23 @@ function WizardBody() {
     setScannerModalOpen(false);
   };
 
+  useFocusEffect(
+    React.useCallback(() => {
+      scrollRef.current?.scrollTo({ y: 0, animated: false });
+      setLocationModalOpen(false);
+      setMeasureModalOpen(false);
+      setScannerModalOpen(false);
+      locationCreateHandlerRef.current = null;
+      scannerResultHandlerRef.current = null;
+
+      return () => {
+        setLocationModalOpen(false);
+        setMeasureModalOpen(false);
+        setScannerModalOpen(false);
+      };
+    }, [])
+  );
+
   useEffect(() => {
     if (state.step !== "location") setLocationModalOpen(false);
     if (state.step !== "exposure") setMeasureModalOpen(false);
