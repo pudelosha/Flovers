@@ -88,6 +88,9 @@ export const TRAIT_ICON_BY_KEY: Record<string, string> = {
   moisture: "spray-bottle",
   fertilizer: "sprout",
   light: "white-balance-sunny",
+
+  problems: "alert-circle-outline",
+  pests: "bug-outline",
 };
 
 export const TRAIT_LABEL_BY_KEY: Record<string, string> = {
@@ -109,6 +112,9 @@ export const TRAIT_LABEL_BY_KEY: Record<string, string> = {
   moisture: "Moisture",
   fertilizer: "Fertilizer",
   light: "Light",
+
+  problems: "Problems",
+  pests: "Pests",
 };
 
 // ---------- Step 3 predefined location suggestions ----------

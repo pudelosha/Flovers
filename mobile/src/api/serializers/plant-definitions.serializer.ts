@@ -42,7 +42,7 @@ export type ApiPlantProfile = {
   description?: string;
   traits?: any;
 
-  // ✅ AUTO TASK FLAGS
+  // AUTO TASK FLAGS
   water_required?: boolean;
   water_interval_days?: number | null;
 
@@ -83,7 +83,7 @@ export function serializePlantProfile(p: ApiPlantProfile): PlantProfile {
     description: p.description ?? "",
     traits,
 
-    // ✅ PASS FLAGS THROUGH
+    // PASS FLAGS THROUGH
     water_required: p.water_required,
     water_interval_days: p.water_interval_days,
 

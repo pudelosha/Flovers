@@ -101,7 +101,7 @@ export type WizardState = {
   plantQuery: string;
   selectedPlant?: SelectedPlant;
 
-  // ✅ ADDED: full plant definition/profile stored from Step02
+  // full plant definition/profile stored from Step02
   selectedPlantDefinition?: PlantDefinition;
 
   // Step 3

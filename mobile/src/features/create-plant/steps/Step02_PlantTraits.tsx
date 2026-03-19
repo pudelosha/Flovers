@@ -1,5 +1,4 @@
-﻿// Step02_PlantTraits.tsx
-import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
+﻿import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { ActivityIndicator, Text, View, StyleSheet, ImageBackground } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
