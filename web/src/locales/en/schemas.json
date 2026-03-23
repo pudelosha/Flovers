@@ -3,39 +3,39 @@
     "copy": "Copy",
     "copied": "Copied"
   },
-  "title": "Device schemas & wiring",
-  "lead": "This page documents how to send IoT sensor readings to Flovers. You’ll find endpoint references, payload shape, and sample ESP32/ESP8266 Arduino code for common sensors. A wiring diagram placeholder is included and can be replaced with a Fritzing image later.",
+  "title": "Device API & wiring",
+  "lead": "This page documents how devices integrate with Flovers. Devices send sensor readings to the ingest endpoint and can read the latest device feed from the feed endpoint, for example to trigger actions such as launching a water pump. You’ll also find the payload format and the same Arduino firmware structure that is generated for device setup.",
   "endpoints": {
     "title": "API endpoints",
-    "note": "Endpoints shown here are examples. Replace with your production backend URL when wiring devices.",
+    "note": "Devices send telemetry to the ingest endpoint and can read the latest device feed from the feed endpoint.",
     "ingest": {
-      "label": "Ingest readings (POST)",
-      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+      "label": "Ingest readings (device → backend)",
+      "value": "https://api.flovers.app/api/readings/ingest/"
     },
-    "read": {
-      "label": "Read readings (GET/POST)",
-      "value": "http://127.0.0.1:8000/api/readings/"
+    "feed": {
+      "label": "Read device feed (device → backend)",
+      "value": "https://api.flovers.app/api/readings/feed/"
     }
   },
   "ingest": {
     "title": "POST ingest documentation",
-    "desc": "Send one reading sample as JSON. The backend validates device_key + secret and stores metrics under the device.",
+    "desc": "Send one reading sample as JSON. The backend authenticates the device using device_key and secret, then stores the provided metrics under that device.",
     "schemaLabel": "Payload shape (JSON)",
     "psLabel": "PowerShell example (POST)"
   },
-  "read": {
-    "title": "GET / read documentation",
-    "desc": "Fetch readings for a device in a time range. If your backend supports POST-based queries, you can send a JSON body instead of query params.",
-    "exampleLabel": "Examples (GET + optional POST)"
+  "feed": {
+    "title": "GET feed documentation",
+    "desc": "Read the latest device feed from the backend. Devices can use this endpoint to receive current state or actions, for example launching a water pump.",
+    "exampleLabel": "Example request"
   },
   "arduino": {
-    "title": "Arduino (ESP32/ESP8266) sample code",
-    "desc": "Reference implementation: connects to Wi-Fi, reads sensors, and POSTs JSON to the ingest endpoint on a fixed interval. Calibrate your soil sensor values for wet/dry to get meaningful %.",
-    "codeLabel": "Arduino sample (Wi-Fi + POST ingest)",
-    "note": "If you need accurate timestamps, add NTP time sync (configTime) and produce ISO-8601 UTC timestamps from the device clock.",
+    "title": "Arduino (ESP32/ESP8266) generated firmware",
+    "desc": "The generated firmware connects to Wi-Fi, synchronizes time with NTP, reads enabled sensors, and posts JSON to the ingest endpoint on a fixed interval. The same device can also read the feed endpoint to retrieve the latest actionable state from the backend.",
+    "codeLabel": "Generated Arduino firmware",
+    "note": "Use the generated firmware as provided for the device. Before uploading, set Wi-Fi credentials and verify sensor wiring, pin assignments, and soil calibration values.",
     "sensors": {
       "bh1750": "BH1750 (GY-302) — light intensity over I2C",
-      "moisture": "Capacitive soil moisture sensor — analog read (calibrate wet/dry)",
+      "moisture": "Capacitive soil moisture sensor — analog read with wet/dry calibration",
       "bme280": "BME280 — temperature & humidity over I2C (pressure optional)"
     }
   },

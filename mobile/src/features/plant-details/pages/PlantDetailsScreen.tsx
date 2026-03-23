@@ -40,6 +40,12 @@ import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 
 import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
 import ChangePlantImageModal from "../components/modals/ChangePlantImageModal";
+import EditPlantModal from "../../plants/components/modals/EditPlantModal";
+
+import {
+  fetchPlantInstanceForEdit,
+  updatePlantInstanceFromForm,
+} from "../../../api/services/plant-instances.service";
 
 // ✅ use env-driven public base URL (dev/prod aware)
 import { PUBLIC_BASE_URL_NORM } from "../../../config";
@@ -47,6 +53,13 @@ import { PUBLIC_BASE_URL_NORM } from "../../../config";
 // Same green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
+type LightLevel5 =
+  | "very-low"
+  | "low"
+  | "medium"
+  | "bright-indirect"
+  | "bright-direct";
 
 export default function PlantDetailsScreen() {
   const { t } = useTranslation();
@@ -119,6 +132,26 @@ export default function PlantDetailsScreen() {
     setChangeImgVisible(false);
     setChangeImgPlantId(null);
   }, []);
+
+  // EDIT MODAL state
+  const [editOpen, setEditOpen] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
+
+  const [fName, setFName] = useState("");
+  const [fLatinQuery, setFLatinQuery] = useState("");
+  const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(undefined);
+  const [fLocation, setFLocation] = useState<string | undefined>(undefined);
+  const [fNotes, setFNotes] = useState("");
+
+  const [fPurchaseDateISO, setFPurchaseDateISO] = useState<string | null | undefined>(null);
+  const [fLightLevel, setFLightLevel] = useState<LightLevel5>("medium");
+  const [fOrientation, setFOrientation] = useState<"N" | "E" | "S" | "W">("S");
+  const [fDistanceCm, setFDistanceCm] = useState<number>(0);
+  const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(undefined);
+  const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
+
+  const [editLoading, setEditLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
 
   const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
     setToastMsg(message);
@@ -239,6 +272,113 @@ export default function PlantDetailsScreen() {
     );
   };
 
+  const openEditModal = useCallback(
+    async (plantId: string) => {
+      setDismissMenusTick((t) => t + 1);
+      setEditingId(plantId);
+      setEditLoading(true);
+
+      try {
+        const detail = await fetchPlantInstanceForEdit(Number(plantId), {
+          auth: true,
+        });
+
+        const resolvedName =
+          detail.display_name?.trim() ||
+          detail.plant_definition?.name?.trim() ||
+          tr("plants.list.unnamed", "Unnamed plant");
+
+        setFName(resolvedName);
+        setFLatinQuery(detail.plant_definition?.name || "");
+        setFLatinSelected(detail.plant_definition?.name || undefined);
+        setFLocation(detail.location?.name || undefined);
+        setFNotes(detail.notes || "");
+
+        setFPurchaseDateISO(
+          detail.purchase_date === undefined ? null : detail.purchase_date
+        );
+
+        setFLightLevel((detail.light_level as LightLevel5) || "medium");
+        setFOrientation((detail.orientation as any) || "S");
+        setFDistanceCm(detail.distance_cm ?? 0);
+
+        setFPotMaterial(detail.pot_material ?? undefined);
+        setFSoilMix(detail.soil_mix ?? undefined);
+
+        setEditOpen(true);
+      } catch (e: any) {
+        Alert.alert(
+          t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
+          e?.message ||
+            t("plants.alert.loadFailedMsg", {
+              defaultValue: "Could not load plant details.",
+            })
+        );
+      } finally {
+        setEditLoading(false);
+      }
+    },
+    [t, tr]
+  );
+
+  const closeEdit = useCallback(() => {
+    setEditOpen(false);
+    setEditingId(null);
+  }, []);
+
+  const onUpdate = useCallback(async () => {
+    if (!editingId) return;
+    if (!fName.trim()) return;
+
+    setSaving(true);
+    try {
+      const form = {
+        display_name: fName.trim(),
+        notes: fNotes ?? "",
+        purchase_date: fPurchaseDateISO ?? null,
+        light_level: fLightLevel,
+        orientation: fOrientation,
+        distance_cm: fDistanceCm,
+        pot_material: fPotMaterial ?? "",
+        soil_mix: fSoilMix ?? "",
+      } as const;
+
+      await updatePlantInstanceFromForm(Number(editingId), form, { auth: true });
+
+      closeEdit();
+      await loadDetails();
+      setRefreshCounter((c) => c + 1);
+
+      showToast(
+        t("plants.toast.updated", { defaultValue: "Plant updated" }),
+        "success"
+      );
+    } catch (e: any) {
+      Alert.alert(
+        t("plants.alert.updateFailedTitle", { defaultValue: "Update failed" }),
+        e?.message ||
+          t("plants.alert.updateFailedMsg", {
+            defaultValue: "Could not update this plant.",
+          })
+      );
+    } finally {
+      setSaving(false);
+    }
+  }, [
+    editingId,
+    fName,
+    fNotes,
+    fPurchaseDateISO,
+    fLightLevel,
+    fOrientation,
+    fDistanceCm,
+    fPotMaterial,
+    fSoilMix,
+    closeEdit,
+    loadDetails,
+    t,
+  ]);
+
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
   const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
@@ -304,8 +444,9 @@ export default function PlantDetailsScreen() {
 
         closeDefinition();
         closeChangeImage(); // (close on blur/unmount)
+        closeEdit();
       };
-    }, [entry, loadDetails, tr, closeDefinition, closeChangeImage])
+    }, [entry, loadDetails, tr, closeDefinition, closeChangeImage, closeEdit])
   );
 
   const latestRead = details?.latestReadings ?? null;
@@ -320,6 +461,20 @@ export default function PlantDetailsScreen() {
     moisture: null,
     tsISO: null,
   };
+
+  const latinOptions = useMemo(() => {
+    const set = new Set<string>();
+    const latin = details?.plant?.plant_definition?.latin;
+    if (latin) set.add(latin);
+    return Array.from(set);
+  }, [details]);
+
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    const location = details?.plant?.location?.name;
+    if (location) set.add(location);
+    return Array.from(set);
+  }, [details]);
 
   const openCompleteModal = (reminderId: string) => {
     setCompleteReminderId(reminderId);
@@ -426,6 +581,10 @@ export default function PlantDetailsScreen() {
                     setDismissMenusTick((t) => t + 1);
                     openDefinition(plantDefinitionId);
                   }}
+                  onOpenEditPlant={(plantId) => {
+                    setDismissMenusTick((t) => t + 1);
+                    openEditModal(plantId);
+                  }}
                   onOpenChangeImage={(plantId) => {
                     setDismissMenusTick((t) => t + 1);
                     openChangeImage(plantId);
@@ -500,6 +659,17 @@ export default function PlantDetailsScreen() {
 
       {loading && details && !error && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
 
+      {(editLoading || saving) && (
+        <View
+          style={[
+            StyleSheet.absoluteFill,
+            { justifyContent: "center", alignItems: "center" },
+          ]}
+        >
+          <CenteredSpinner size={46} color="#FFFFFF" />
+        </View>
+      )}
+
       {/* Screen-level modals (full screen overlays) */}
       <PlantDefinitionModal visible={defModalVisible} onClose={closeDefinition} plantDefinitionId={defPlantDefinitionId} />
 
@@ -511,6 +681,36 @@ export default function PlantDetailsScreen() {
           // Force PlantInfoTile to reload local uri (since the modal is no longer inside it)
           setPhotoReloadSignal((v) => v + 1);
         }}
+      />
+
+      <EditPlantModal
+        visible={editOpen}
+        latinCatalog={latinOptions}
+        locations={locationOptions}
+        fName={fName}
+        setFName={setFName}
+        fLatinQuery={fLatinQuery}
+        setFLatinQuery={setFLatinQuery}
+        fLatinSelected={fLatinSelected}
+        setFLatinSelected={setFLatinSelected}
+        fLocation={fLocation}
+        setFLocation={setFLocation}
+        fNotes={fNotes}
+        setFNotes={setFNotes}
+        fPurchaseDateISO={fPurchaseDateISO ?? null}
+        setFPurchaseDateISO={setFPurchaseDateISO}
+        fLightLevel={fLightLevel}
+        setFLightLevel={setFLightLevel}
+        fOrientation={fOrientation}
+        setFOrientation={setFOrientation}
+        fDistanceCm={fDistanceCm}
+        setFDistanceCm={setFDistanceCm}
+        fPotMaterial={fPotMaterial}
+        setFPotMaterial={setFPotMaterial}
+        fSoilMix={fSoilMix}
+        setFSoilMix={setFSoilMix}
+        onCancel={closeEdit}
+        onSave={onUpdate}
       />
 
       <CompleteTaskModal

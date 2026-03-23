@@ -18,6 +18,7 @@ type Props = {
   collapseMenusSignal?: number;
 
   onOpenDefinition?: (plantDefinitionId: number) => void;
+  onOpenEditPlant?: (plantId: string) => void;
 
   /**
    * open Change Image modal at SCREEN level (parent renders modal).
@@ -92,6 +93,7 @@ export default function PlantInfoTile({
   plant,
   collapseMenusSignal,
   onOpenDefinition,
+  onOpenEditPlant,
   onOpenChangeImage,
   photoReloadSignal,
 }: Props) {
@@ -296,7 +298,11 @@ export default function PlantInfoTile({
                 }}
                 onEditPlant={() => {
                   closeMenu();
-                  nav.navigate("Plants", { editPlantId: String(plant.id) });
+                  if (onOpenEditPlant) {
+                    onOpenEditPlant(String(plant.id));
+                  } else {
+                    nav.navigate("Plants", { editPlantId: String(plant.id) });
+                  }
                 }}
                 onChangeImage={() => {
                   closeMenu();

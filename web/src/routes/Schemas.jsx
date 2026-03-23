@@ -46,20 +46,19 @@ function InfoRow({ label, value }) {
 export default function Schema() {
   const { t } = useTranslation("schemas");
 
-  // You can wire these later (env/config). Keeping defaults copy-paste friendly.
   const ingestEndpoint = t("endpoints.ingest.value", {
-    defaultValue: "http://127.0.0.1:8000/api/readings/ingest/",
+    defaultValue: "https://api.flovers.app/api/readings/ingest/",
   });
 
-  const readEndpoint = t("endpoints.read.value", {
-    defaultValue: "http://127.0.0.1:8000/api/readings/",
+  const feedEndpoint = t("endpoints.feed.value", {
+    defaultValue: "https://api.flovers.app/api/readings/feed/",
   });
 
   const powershellSample = useMemo(
     () => `# PowerShell example (POST ingest)
 $body = @'
 {
-  "secret":   "YOUR_SECRET",
+  "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
   "timestamp": "2026-01-06T10:11:00Z",
   "metrics": {
@@ -86,183 +85,417 @@ Invoke-RestMethod \`
   "device_key": "string",
   "timestamp": "ISO-8601 UTC string",
   "metrics": {
-    "temperature": "number (°C)",
-    "humidity": "number (%)",
-    "light": "number (lux or raw)",
-    "moisture": "number (0-100 or raw)"
+    "temperature": "number (optional)",
+    "humidity": "number (optional)",
+    "light": "number (optional)",
+    "moisture": "number (optional)"
   }
 }`,
     []
   );
 
-  const readRequestExample = useMemo(
+  const feedRequestExample = useMemo(
     () => `# Example (GET)
-# ${readEndpoint}?device_key=YOUR_DEVICE_KEY&from=2026-01-01T00:00:00Z&to=2026-01-02T00:00:00Z
+# ${feedEndpoint}?device_key=YOUR_DEVICE_KEY&secret=YOUR_SECRET
 
-# Example (POST body style, if you support it)
+# Example response
 {
-  "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
-  "from": "2026-01-01T00:00:00Z",
-  "to": "2026-01-02T00:00:00Z"
+  "timestamp": "2026-01-06T10:12:00Z",
+  "actions": {
+    "pump": true
+  }
 }`,
-    [readEndpoint]
+    [feedEndpoint]
   );
 
   const arduinoSample = useMemo(
-    () => `/*
-  ESP32/ESP8266 sample: Wi-Fi + HTTPS/HTTP POST to Flovers backend
-
-  Sensors mentioned:
-  - BH1750 (GY-302) over I2C
-  - BME280 over I2C (temperature/humidity/pressure)
-  - Capacitive soil moisture sensor (analog)
-
-  Notes:
-  - On ESP32, choose a valid ADC pin for moisture (example uses GPIO34).
-  - On ESP8266, use A0 for analog moisture (scale may differ).
-  - If your backend is HTTPS, consider WiFiClientSecure + certificate pinning.
-*/
-
-#include <Arduino.h>
-
-#if defined(ESP32)
-  #include <WiFi.h>
-  #include <HTTPClient.h>
-#elif defined(ESP8266)
-  #include <ESP8266WiFi.h>
-  #include <ESP8266HTTPClient.h>
-#endif
-
+    () => `#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <HTTPClient.h>
 #include <Wire.h>
-#include <Adafruit_BME280.h>
 #include <BH1750.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BME280.h>
+#include <time.h>
 
-static const char* WIFI_SSID = "YOUR_WIFI_SSID";
-static const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
+// -------------------- WiFi --------------------
+// Fill in your WiFi credentials before uploading.
 
-static const char* INGEST_URL  = "${ingestEndpoint}";
-static const char* DEVICE_KEY  = "YOUR_DEVICE_KEY";
-static const char* SECRET      = "YOUR_SECRET";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
-// --- I2C sensors ---
+// -------------------- API ---------------------
+
+const char* apiUrl = "${ingestEndpoint}";
+const char* secret = "YOUR_SECRET";
+const char* deviceKey = "YOUR_DEVICE_KEY";
+
+// -------------------- Pins --------------------
+
+#define SDA_PIN 9
+#define SCL_PIN 8
+#define SOIL_PIN 3
+
+// -------------------- Calibration --------------------
+
+#define SOIL_DRY_VALUE 3900
+#define SOIL_WET_VALUE 1300
+
+// -------------------- Sensors --------------------
+
+#define BME280_ADDRESS 0x76
+
+const bool SENSOR_TEMPERATURE_ENABLED = true;
+const bool SENSOR_HUMIDITY_ENABLED = true;
+const bool SENSOR_LIGHT_ENABLED = true;
+const bool SENSOR_MOISTURE_ENABLED = true;
+
+BH1750 lightMeter(0x23);
 Adafruit_BME280 bme;
-BH1750 lightMeter;
 
-// --- Soil moisture (capacitive) ---
-#if defined(ESP32)
-  const int MOISTURE_PIN = 34;  // ADC pin (input only)
-#elif defined(ESP8266)
-  const int MOISTURE_PIN = A0;
-#endif
+// -------------------- Timing --------------------
 
-// Map raw analog to 0..100 (calibrate!)
-int moisturePercentFromRaw(int raw) {
-  // Example calibration (adjust to your sensor):
-  // "wet"  -> lower raw
-  // "dry"  -> higher raw
-  const int wetRaw = 1400;   // TODO: measure in water
-  const int dryRaw = 3200;   // TODO: measure in air
-  int clamped = raw;
-  if (clamped < wetRaw) clamped = wetRaw;
-  if (clamped > dryRaw) clamped = dryRaw;
+const unsigned long SEND_INTERVAL_MS = 3600000UL;
+unsigned long lastSendMs = 0;
 
-  float pct = 100.0f * (1.0f - (float)(clamped - wetRaw) / (float)(dryRaw - wetRaw));
-  if (pct < 0) pct = 0;
-  if (pct > 100) pct = 100;
-  return (int)(pct + 0.5f);
+// -------------------- NTP --------------------
+
+const char* ntpServer1 = "pool.ntp.org";
+const char* ntpServer2 = "time.nist.gov";
+
+// ========================================================
+// TIME
+// ========================================================
+
+String getIsoTimestampUTC()
+{
+    struct tm timeinfo;
+
+    if (!getLocalTime(&timeinfo, 5000))
+        return "";
+
+    char buf[25];
+    strftime(buf, sizeof(buf), "%Y-%m-%dT%H:%M:%SZ", &timeinfo);
+
+    return String(buf);
 }
 
-String isoTimestampUtc() {
-  // Minimal placeholder. Prefer real NTP time:
-  // - ESP32: configTime + getLocalTime
-  // - ESP8266: configTime + time(nullptr)
-  return "2026-01-06T10:11:00Z";
+// ========================================================
+// WIFI
+// ========================================================
+
+bool connectWiFi(unsigned long timeoutMs = 20000)
+{
+    WiFi.mode(WIFI_STA);
+    WiFi.begin(ssid, password);
+
+    Serial.print("Connecting to WiFi");
+
+    unsigned long start = millis();
+
+    while (WiFi.status() != WL_CONNECTED &&
+           millis() - start < timeoutMs)
+    {
+        delay(500);
+        Serial.print(".");
+    }
+
+    Serial.println();
+
+    if (WiFi.status() == WL_CONNECTED)
+    {
+        Serial.println("WiFi connected");
+        Serial.print("ESP32 IP: ");
+        Serial.println(WiFi.localIP());
+        return true;
+    }
+
+    Serial.println("WiFi connection failed");
+    return false;
 }
 
-void connectWiFi() {
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(400);
-  }
+// ========================================================
+// TIME SYNC
+// ========================================================
+
+bool syncTime()
+{
+    configTime(0, 0, ntpServer1, ntpServer2);
+
+    Serial.println("Synchronizing time with NTP...");
+
+    struct tm timeinfo;
+
+    if (getLocalTime(&timeinfo, 10000))
+    {
+        Serial.println("Time synchronized");
+        Serial.println(getIsoTimestampUTC());
+        return true;
+    }
+
+    Serial.println("Failed to synchronize time");
+    return false;
 }
 
-void setup() {
-  Serial.begin(115200);
-  delay(300);
+// ========================================================
+// SENSOR INIT
+// ========================================================
 
-  connectWiFi();
+bool initSensors()
+{
+    bool ok = true;
 
-  Wire.begin();
+    Wire.begin(SDA_PIN, SCL_PIN);
 
-  // BME280 (I2C address usually 0x76 or 0x77)
-  bool bmeOk = bme.begin(0x76);
-  if (!bmeOk) {
-    Serial.println("BME280 not found at 0x76; try 0x77");
-    bmeOk = bme.begin(0x77);
-  }
+    if (SENSOR_LIGHT_ENABLED)
+    {
+        if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE))
+            Serial.println("BH1750 OK");
+        else
+        {
+            Serial.println("BH1750 ERROR");
+            ok = false;
+        }
+    }
 
-  // BH1750
-  lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE);
+    if (SENSOR_TEMPERATURE_ENABLED || SENSOR_HUMIDITY_ENABLED)
+    {
+        if (bme.begin(BME280_ADDRESS))
+            Serial.println("BME280 OK");
+        else
+        {
+            Serial.println("BME280 ERROR");
+            ok = false;
+        }
+    }
 
-  Serial.println("Ready.");
+    return ok;
 }
 
-void loop() {
-  if (WiFi.status() != WL_CONNECTED) {
-    connectWiFi();
-  }
+// ========================================================
+// SOIL SENSOR
+// ========================================================
 
-  // Read sensors
-  float temperature = bme.readTemperature();     // °C
-  float humidity    = bme.readHumidity();        // %
-  float lux         = lightMeter.readLightLevel();
+int readSoilRaw()
+{
+    long sum = 0;
 
-  int rawMoist = analogRead(MOISTURE_PIN);
-  int moisture = moisturePercentFromRaw(rawMoist);
+    for (int i = 0; i < 20; i++)
+    {
+        sum += analogRead(SOIL_PIN);
+        delay(5);
+    }
 
-  // Build JSON (match your backend format)
-  String json =
-    String("{") +
-      "\\"secret\\":\\"" + SECRET + "\\"," +
-      "\\"device_key\\":\\"" + DEVICE_KEY + "\\"," +
-      "\\"timestamp\\":\\"" + isoTimestampUtc() + "\\"," +
-      "\\"metrics\\":{" +
-        "\\"temperature\\":" + String(temperature, 2) + "," +
-        "\\"humidity\\":" + String(humidity, 2) + "," +
-        "\\"light\\":" + String(lux, 0) + "," +
-        "\\"moisture\\":" + String(moisture) +
-      "}" +
-    "}";
-
-#if defined(ESP32)
-  HTTPClient http;
-  http.begin(INGEST_URL);
-  http.addHeader("Content-Type", "application/json");
-
-  int code = http.POST((uint8_t*)json.c_str(), json.length());
-  String resp = http.getString();
-  http.end();
-#elif defined(ESP8266)
-  WiFiClient client;
-  HTTPClient http;
-  http.begin(client, INGEST_URL);
-  http.addHeader("Content-Type", "application/json");
-
-  int code = http.POST(json);
-  String resp = http.getString();
-  http.end();
-#endif
-
-  Serial.print("POST code: ");
-  Serial.println(code);
-  // Serial.println(resp);
-
-  // Send every 10 minutes (adjust)
-  delay(10 * 60 * 1000);
+    return sum / 20;
 }
-`,
+
+int soilPercent(int raw)
+{
+    int percent = map(raw, SOIL_DRY_VALUE, SOIL_WET_VALUE, 0, 100);
+    return constrain(percent, 0, 100);
+}
+
+// ========================================================
+// JSON PAYLOAD
+// ========================================================
+
+String buildPayload(
+    bool hasTemperature,
+    float temperature,
+    bool hasHumidity,
+    float humidity,
+    bool hasLight,
+    float light,
+    bool hasMoisture,
+    int moisture,
+    const String& timestamp)
+{
+    String json = "{";
+
+    json += "\\"secret\\":\\"" + String(secret) + "\\",";
+    json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
+    json += "\\"timestamp\\":\\"" + timestamp + "\\",";
+    json += "\\"metrics\\":{";
+
+    bool firstMetric = true;
+
+    if (hasTemperature)
+    {
+        json += "\\"temperature\\":" + String(temperature, 2);
+        firstMetric = false;
+    }
+
+    if (hasHumidity)
+    {
+        if (!firstMetric) json += ",";
+        json += "\\"humidity\\":" + String(humidity, 2);
+        firstMetric = false;
+    }
+
+    if (hasLight)
+    {
+        if (!firstMetric) json += ",";
+        json += "\\"light\\":" + String(light, 0);
+        firstMetric = false;
+    }
+
+    if (hasMoisture)
+    {
+        if (!firstMetric) json += ",";
+        json += "\\"moisture\\":" + String(moisture);
+    }
+
+    json += "}";
+    json += "}";
+
+    return json;
+}
+
+// ========================================================
+// SEND DATA
+// ========================================================
+
+bool sendReading()
+{
+    if (WiFi.status() != WL_CONNECTED)
+    {
+        Serial.println("WiFi not connected, retrying...");
+        if (!connectWiFi())
+            return false;
+    }
+
+    String timestamp = getIsoTimestampUTC();
+
+    if (timestamp.length() == 0)
+        return false;
+
+    bool hasTemperature = false;
+    bool hasHumidity = false;
+    bool hasLight = false;
+    bool hasMoisture = false;
+
+    float temperature = 0.0f;
+    float humidity = 0.0f;
+    float light = 0.0f;
+    int moisture = 0;
+
+    if (SENSOR_TEMPERATURE_ENABLED)
+    {
+        temperature = bme.readTemperature();
+        hasTemperature = true;
+        Serial.print("Temp: ");
+        Serial.println(temperature);
+    }
+
+    if (SENSOR_HUMIDITY_ENABLED)
+    {
+        humidity = bme.readHumidity();
+        hasHumidity = true;
+        Serial.print("Humidity: ");
+        Serial.println(humidity);
+    }
+
+    if (SENSOR_LIGHT_ENABLED)
+    {
+        light = lightMeter.readLightLevel();
+        hasLight = true;
+        Serial.print("Light: ");
+        Serial.println(light);
+    }
+
+    if (SENSOR_MOISTURE_ENABLED)
+    {
+        int raw = readSoilRaw();
+        moisture = soilPercent(raw);
+        hasMoisture = true;
+
+        Serial.print("Soil raw: ");
+        Serial.println(raw);
+
+        Serial.print("Soil %: ");
+        Serial.println(moisture);
+    }
+
+    String json = buildPayload(
+        hasTemperature,
+        temperature,
+        hasHumidity,
+        humidity,
+        hasLight,
+        light,
+        hasMoisture,
+        moisture,
+        timestamp);
+
+    Serial.println("Sending:");
+    Serial.println(json);
+
+    WiFiClientSecure client;
+    client.setInsecure();
+
+    HTTPClient http;
+    http.setTimeout(15000);
+
+    if (!http.begin(client, apiUrl))
+        return false;
+
+    http.addHeader("Content-Type", "application/json");
+
+    int code = http.POST((uint8_t*)json.c_str(), json.length());
+
+    Serial.print("HTTP code: ");
+    Serial.println(code);
+
+    Serial.println(http.getString());
+
+    http.end();
+    client.stop();
+
+    return (code >= 200 && code < 300);
+}
+
+// ========================================================
+// SETUP
+// ========================================================
+
+void setup()
+{
+    Serial.begin(115200);
+    delay(1500);
+
+    Serial.println("Starting sensor uploader");
+
+    analogReadResolution(12);
+    analogSetPinAttenuation(SOIL_PIN, ADC_11db);
+
+    initSensors();
+
+    if (connectWiFi())
+        syncTime();
+
+    sendReading();
+
+    lastSendMs = millis();
+}
+
+// ========================================================
+// LOOP
+// ========================================================
+
+void loop()
+{
+    if (millis() - lastSendMs >= SEND_INTERVAL_MS)
+    {
+        Serial.println("Sending periodic update");
+
+        sendReading();
+
+        lastSendMs = millis();
+    }
+
+    delay(1000);
+}`,
     [ingestEndpoint]
   );
 
@@ -272,14 +505,13 @@ void loop() {
       <p className="muted schema-lead">{t("lead")}</p>
 
       <div className="schema-grid">
-        {/* LEFT: API + code */}
         <div className="schema-col">
           <section className="schema-section">
             <h2 className="h2">{t("endpoints.title")}</h2>
 
             <div className="schema-endpoints">
               <InfoRow label={t("endpoints.ingest.label")} value={ingestEndpoint} />
-              <InfoRow label={t("endpoints.read.label")} value={readEndpoint} />
+              <InfoRow label={t("endpoints.feed.label")} value={feedEndpoint} />
             </div>
 
             <div className="schema-note muted">{t("endpoints.note")}</div>
@@ -294,10 +526,10 @@ void loop() {
           </section>
 
           <section className="schema-section">
-            <h2 className="h2">{t("read.title")}</h2>
-            <p className="muted">{t("read.desc")}</p>
+            <h2 className="h2">{t("feed.title")}</h2>
+            <p className="muted">{t("feed.desc")}</p>
 
-            <CodeBlock label={t("read.exampleLabel")} text={readRequestExample} />
+            <CodeBlock label={t("feed.exampleLabel")} text={feedRequestExample} />
           </section>
 
           <section className="schema-section">
@@ -316,7 +548,6 @@ void loop() {
           </section>
         </div>
 
-        {/* RIGHT: wiring placeholder */}
         <aside className="schema-aside">
           <section className="schema-section">
             <h2 className="h2">{t("wiring.title")}</h2>
