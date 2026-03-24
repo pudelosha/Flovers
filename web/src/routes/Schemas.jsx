@@ -43,6 +43,17 @@ function InfoRow({ label, value }) {
   );
 }
 
+function WiringPlaceholder({ ariaLabel, title, sub }) {
+  return (
+    <div className="schema-wiring" role="img" aria-label={ariaLabel}>
+      <div className="schema-wiring-inner">
+        <div className="schema-wiring-title">{title}</div>
+        <div className="schema-wiring-sub muted">{sub}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function Schema() {
   const { t } = useTranslation("schemas");
 
@@ -94,22 +105,7 @@ Invoke-RestMethod \`
     []
   );
 
-  const feedRequestExample = useMemo(
-    () => `# Example (GET)
-# ${feedEndpoint}?device_key=YOUR_DEVICE_KEY&secret=YOUR_SECRET
-
-# Example response
-{
-  "device_key": "YOUR_DEVICE_KEY",
-  "timestamp": "2026-01-06T10:12:00Z",
-  "actions": {
-    "pump": true
-  }
-}`,
-    [feedEndpoint]
-  );
-
-  const arduinoSample = useMemo(
+  const postArduinoSample = useMemo(
     () => `#include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <HTTPClient.h>
@@ -499,6 +495,281 @@ void loop()
     [ingestEndpoint]
   );
 
+  const feedRequestExample = useMemo(
+    () => `# Example (GET)
+# ${feedEndpoint}?device_key=YOUR_DEVICE_KEY&secret=YOUR_SECRET`,
+    [feedEndpoint]
+  );
+
+  const feedResponseExample = useMemo(
+    () => `{
+  "device_key": "YOUR_DEVICE_KEY",
+  "timestamp": "2026-01-06T10:12:00Z",
+  "actions": {
+    "pump": true
+  },
+  "metrics": {
+    "moisture": 22
+  }
+}`,
+    []
+  );
+
+  const getPumpControlSample = useMemo(
+    () => `#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <HTTPClient.h>
+
+// ========================================================
+// WIFI
+// ========================================================
+
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
+
+// ========================================================
+// API
+// ========================================================
+
+const char* feedUrl =
+  "${feedEndpoint}?device_key=YOUR_DEVICE_KEY&secret=YOUR_SECRET";
+
+// ========================================================
+// PINS
+// ========================================================
+
+// Relay input pin connected to ESP32
+#define RELAY_PIN 7
+
+// Many relay boards are active LOW.
+// Change these if your relay is active HIGH.
+#define RELAY_ON LOW
+#define RELAY_OFF HIGH
+
+// ========================================================
+// WATERING SETTINGS
+// ========================================================
+
+// Water only if moisture is below this threshold.
+const int MOISTURE_THRESHOLD = 25;
+
+// Pump runtime in milliseconds.
+// Example: 15000 = 15 seconds.
+unsigned long pumpRunMs = 15000UL;
+
+// Delay before next check.
+// Example: 900000 = 15 minutes.
+unsigned long pollIntervalMs = 900000UL;
+
+// ========================================================
+// WIFI
+// ========================================================
+
+bool connectWiFi(unsigned long timeoutMs = 20000)
+{
+    WiFi.mode(WIFI_STA);
+    WiFi.begin(ssid, password);
+
+    Serial.print("Connecting to WiFi");
+
+    unsigned long start = millis();
+
+    while (WiFi.status() != WL_CONNECTED &&
+           millis() - start < timeoutMs)
+    {
+        delay(500);
+        Serial.print(".");
+    }
+
+    Serial.println();
+
+    if (WiFi.status() == WL_CONNECTED)
+    {
+        Serial.println("WiFi connected");
+        Serial.print("ESP32 IP: ");
+        Serial.println(WiFi.localIP());
+        return true;
+    }
+
+    Serial.println("WiFi connection failed");
+    return false;
+}
+
+// ========================================================
+// RELAY / PUMP
+// ========================================================
+
+void pumpOff()
+{
+    digitalWrite(RELAY_PIN, RELAY_OFF);
+    Serial.println("Pump OFF");
+}
+
+void pumpOn()
+{
+    digitalWrite(RELAY_PIN, RELAY_ON);
+    Serial.println("Pump ON");
+}
+
+void runPump(unsigned long durationMs)
+{
+    pumpOn();
+    delay(durationMs);
+    pumpOff();
+}
+
+// ========================================================
+// SIMPLE JSON HELPERS
+// ========================================================
+
+// This example performs simple string-based parsing and looks for:
+//   "pump": true
+//   "moisture": 22
+//
+// For a stricter implementation you can later switch to ArduinoJson.
+
+bool extractPumpAction(const String& json)
+{
+    int actionIndex = json.indexOf("\\"pump\\":");
+    if (actionIndex < 0) return false;
+
+    String tail = json.substring(actionIndex);
+    return tail.indexOf("true") >= 0;
+}
+
+bool extractMoistureValue(const String& json, int& moistureOut)
+{
+    int keyIndex = json.indexOf("\\"moisture\\":");
+    if (keyIndex < 0) return false;
+
+    int colonIndex = json.indexOf(':', keyIndex);
+    if (colonIndex < 0) return false;
+
+    int start = colonIndex + 1;
+    while (start < json.length() && (json[start] == ' ' || json[start] == '\\t'))
+        start++;
+
+    int end = start;
+    while (end < json.length() && isDigit(json[end]))
+        end++;
+
+    if (end <= start) return false;
+
+    moistureOut = json.substring(start, end).toInt();
+    return true;
+}
+
+// ========================================================
+// FEED REQUEST
+// ========================================================
+
+bool readFeedAndMaybeWater()
+{
+    if (WiFi.status() != WL_CONNECTED)
+    {
+        Serial.println("WiFi not connected, retrying...");
+        if (!connectWiFi())
+            return false;
+    }
+
+    WiFiClientSecure client;
+    client.setInsecure();
+
+    HTTPClient http;
+    http.setTimeout(15000);
+
+    if (!http.begin(client, feedUrl))
+    {
+        Serial.println("Failed to start HTTP client");
+        return false;
+    }
+
+    int code = http.GET();
+
+    Serial.print("HTTP code: ");
+    Serial.println(code);
+
+    if (code <= 0)
+    {
+        Serial.println("GET request failed");
+        http.end();
+        client.stop();
+        return false;
+    }
+
+    String response = http.getString();
+
+    Serial.println("Feed response:");
+    Serial.println(response);
+
+    http.end();
+    client.stop();
+
+    if (code < 200 || code >= 300)
+        return false;
+
+    bool shouldPump = extractPumpAction(response);
+    int moisture = -1;
+    bool hasMoisture = extractMoistureValue(response, moisture);
+
+    Serial.print("Pump action from backend: ");
+    Serial.println(shouldPump ? "true" : "false");
+
+    if (hasMoisture)
+    {
+        Serial.print("Moisture from payload: ");
+        Serial.println(moisture);
+    }
+    else
+    {
+        Serial.println("No moisture value found in payload");
+    }
+
+    if (shouldPump && hasMoisture && moisture < MOISTURE_THRESHOLD)
+    {
+        Serial.println("Conditions met -> watering now");
+        runPump(pumpRunMs);
+    }
+    else
+    {
+        Serial.println("Conditions not met -> pump remains off");
+    }
+
+    return true;
+}
+
+// ========================================================
+// SETUP
+// ========================================================
+
+void setup()
+{
+    Serial.begin(115200);
+    delay(1500);
+
+    pinMode(RELAY_PIN, OUTPUT);
+    pumpOff();
+
+    Serial.println("Starting feed-based pump controller");
+
+    connectWiFi();
+    readFeedAndMaybeWater();
+}
+
+// ========================================================
+// LOOP
+// ========================================================
+
+void loop()
+{
+    Serial.println("Waiting until next poll...");
+    delay(pollIntervalMs);
+
+    readFeedAndMaybeWater();
+}`,
+    [feedEndpoint]
+  );
+
   return (
     <article className="card prose schema-page">
       <h1 className="h1 h1-auth">{t("title")}</h1>
@@ -526,25 +797,41 @@ void loop()
           </section>
 
           <section className="schema-section">
+            <h2 className="h2">{t("ingest.arduinoTitle")}</h2>
+            <p className="muted">{t("ingest.arduinoDesc")}</p>
+
+            <ul className="schema-list">
+              <li>{t("ingest.sensors.bh1750")}</li>
+              <li>{t("ingest.sensors.moisture")}</li>
+              <li>{t("ingest.sensors.bme280")}</li>
+            </ul>
+
+            <CodeBlock
+              label={t("ingest.arduinoCodeLabel")}
+              text={postArduinoSample}
+            />
+
+            <div className="schema-footnote muted">{t("ingest.arduinoNote")}</div>
+          </section>
+
+          <section className="schema-section">
             <h2 className="h2">{t("feed.title")}</h2>
             <p className="muted">{t("feed.desc")}</p>
 
             <CodeBlock label={t("feed.exampleLabel")} text={feedRequestExample} />
+            <CodeBlock label={t("feed.responseLabel")} text={feedResponseExample} />
           </section>
 
           <section className="schema-section">
-            <h2 className="h2">{t("arduino.title")}</h2>
-            <p className="muted">{t("arduino.desc")}</p>
+            <h2 className="h2">{t("feed.controlTitle")}</h2>
+            <p className="muted">{t("feed.controlDesc")}</p>
 
-            <ul className="schema-list">
-              <li>{t("arduino.sensors.bh1750")}</li>
-              <li>{t("arduino.sensors.moisture")}</li>
-              <li>{t("arduino.sensors.bme280")}</li>
-            </ul>
+            <CodeBlock
+              label={t("feed.controlCodeLabel")}
+              text={getPumpControlSample}
+            />
 
-            <CodeBlock label={t("arduino.codeLabel")} text={arduinoSample} />
-
-            <div className="schema-footnote muted">{t("arduino.note")}</div>
+            <div className="schema-footnote muted">{t("feed.controlNote")}</div>
           </section>
         </div>
 
@@ -553,11 +840,18 @@ void loop()
             <h2 className="h2">{t("wiring.title")}</h2>
             <p className="muted">{t("wiring.desc")}</p>
 
-            <div className="schema-wiring" role="img" aria-label={t("wiring.aria")}>
-              <div className="schema-wiring-inner">
-                <div className="schema-wiring-title">{t("wiring.placeholderTitle")}</div>
-                <div className="schema-wiring-sub muted">{t("wiring.placeholderSub")}</div>
-              </div>
+            <div className="schema-wiring-stack">
+              <WiringPlaceholder
+                ariaLabel={t("wiring.ariaPrimary")}
+                title={t("wiring.placeholderTitlePrimary")}
+                sub={t("wiring.placeholderSubPrimary")}
+              />
+
+              <WiringPlaceholder
+                ariaLabel={t("wiring.ariaPump")}
+                title={t("wiring.placeholderTitlePump")}
+                sub={t("wiring.placeholderSubPump")}
+              />
             </div>
           </section>
         </aside>
