@@ -44,12 +44,12 @@
   },
   "wiring": {
     "title": "Wiring diagrams",
-    "desc": "Add Fritzing wiring images here later. These placeholders keep layout stable until the diagrams are ready.",
-    "ariaPrimary": "Primary wiring diagram placeholder",
+    "desc": "Below is a sample device wiring schema for sending POST requests to the Flovers backend. Click the image to open it in full screen.",
+    "ariaPrimary": "Sample device wiring schema for POST requests",
     "ariaPump": "Pump relay wiring diagram placeholder",
-    "placeholderTitlePrimary": "Fritzing wiring placeholder",
-    "placeholderSubPrimary": "Replace this box with the main sensor wiring diagram image.",
-    "placeholderTitlePump": "Fritzing pump / relay placeholder",
-    "placeholderSubPump": "Replace this box with the relay and water pump wiring diagram image."
+    "placeholderTitlePrimary": "Sample device wiring schema (POST)",
+    "placeholderSubPrimary": "Click the image to display it in full screen.",
+    "placeholderTitlePump": "Pump / relay wiring schema",
+    "placeholderSubPump": "Add the second wiring diagram here later."
   }
 }
