@@ -13,7 +13,7 @@
 .schema-grid {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 2fr 1fr;
   gap: 18px;
   align-items: start;
 }
