@@ -2,8 +2,8 @@
   "locations": {
     "headerTitle": "位置",
     "empty": {
-      "title": "没有位置",
-      "description": "当你将位置分配给植物时，位置将自动显示。\n\n编辑植物并设置其位置，以便开始按房间或区域对植物进行分组。"
+      "title": "尚无位置",
+      "description": "当你将位置分配给植物时，位置会自动出现。\n\n编辑一个植物并设置其位置，以便按房间或区域对植物进行分组。"
     },
     "fab": {
       "add": "添加位置",
@@ -15,16 +15,16 @@
     },
     "plantCount": {
       "one": "1 株植物",
-      "few": "{{count}} 株植物",
-      "many": "{{count}} 株植物"
+      "other": "{{count}} 株植物"
     },
     "toast": {
       "loadFailed": "加载位置失败",
-      "added": "已添加位置",
-      "deleted": "已删除位置",
-      "updatedLocal": "已更新位置（仅限本地）",
-      "saveFailed": "保存位置失败",
-      "deleteFailed": "无法删除该位置。"
+      "added": "位置已添加",
+      "deleted": "位置已删除",
+      "updated": "位置已更新",
+      "updatedLocal": "位置已更新（仅本地）",
+      "saveFailed": "无法保存位置",
+      "deleteFailed": "无法删除此位置。"
     },
     "alert": {
       "deleteFailedTitle": "删除失败"

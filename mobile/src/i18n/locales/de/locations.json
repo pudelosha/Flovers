@@ -2,8 +2,8 @@
   "locations": {
     "headerTitle": "Standorte",
     "empty": {
-      "title": "Keine Standorte",
-      "description": "Standorte werden automatisch angezeigt, sobald du sie Pflanzen zuweist.\n\nBearbeite eine Pflanze und lege ihren Standort fest, um Pflanzen nach Räumen oder Zonen zu gruppieren."
+      "title": "Noch keine Standorte",
+      "description": "Standorte werden automatisch angezeigt, wenn du sie deinen Pflanzen zuweist.\n\nBearbeite eine Pflanze und lege ihren Standort fest, um Pflanzen nach Räumen oder Bereichen zu gruppieren."
     },
     "fab": {
       "add": "Standort hinzufügen",
@@ -15,13 +15,13 @@
     },
     "plantCount": {
       "one": "1 Pflanze",
-      "few": "{{count}} Pflanzen",
-      "many": "{{count}} Pflanzen"
+      "other": "{{count}} Pflanzen"
     },
     "toast": {
       "loadFailed": "Standorte konnten nicht geladen werden",
       "added": "Standort hinzugefügt",
       "deleted": "Standort gelöscht",
+      "updated": "Standort aktualisiert",
       "updatedLocal": "Standort aktualisiert (nur lokal)",
       "saveFailed": "Standort konnte nicht gespeichert werden",
       "deleteFailed": "Dieser Standort konnte nicht gelöscht werden."

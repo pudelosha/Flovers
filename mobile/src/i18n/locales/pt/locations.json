@@ -2,8 +2,8 @@
   "locations": {
     "headerTitle": "Localizações",
     "empty": {
-      "title": "Nenhuma localização",
-      "description": "As localizações aparecerão automaticamente quando você as atribuir às plantas.\n\nEdite a planta e defina sua localização para começar a agrupar as plantas por ambientes ou zonas."
+      "title": "Ainda não há localizações",
+      "description": "As localizações aparecem automaticamente quando você as atribui às suas plantas.\n\nEdite uma planta e defina sua localização para começar a agrupar plantas por cômodos ou áreas."
     },
     "fab": {
       "add": "Adicionar localização",
@@ -15,19 +15,19 @@
     },
     "plantCount": {
       "one": "1 planta",
-      "few": "{{count}} plantas",
-      "many": "{{count}} plantas"
+      "other": "{{count}} plantas"
     },
     "toast": {
-      "loadFailed": "Falha ao carregar localização",
+      "loadFailed": "Falha ao carregar localizações",
       "added": "Localização adicionada",
       "deleted": "Localização excluída",
-      "updatedLocal": "Localização atualizada (somente localmente)",
-      "saveFailed": "Falha ao salvar localização",
-      "deleteFailed": "Falha ao excluir esta localização."
+      "updated": "Localização atualizada",
+      "updatedLocal": "Localização atualizada (apenas local)",
+      "saveFailed": "Não foi possível salvar a localização",
+      "deleteFailed": "Não foi possível excluir esta localização."
     },
     "alert": {
-      "deleteFailedTitle": "Falha na exclusão"
+      "deleteFailedTitle": "Falha ao excluir"
     }
   }
 }

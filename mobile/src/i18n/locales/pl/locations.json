@@ -3,7 +3,7 @@
     "headerTitle": "Lokalizacje",
     "empty": {
       "title": "Brak lokalizacji",
-      "description": "Lokalizacje pojawią się automatycznie, gdy przypiszesz je do roślin.\n\nEdytuj roślinę i ustaw jej lokalizację, aby zacząć grupować rośliny według pomieszczeń lub stref."
+      "description": "Lokalizacje pojawiają się automatycznie, gdy przypiszesz je do swoich roślin.\n\nEdytuj roślinę i ustaw jej lokalizację, aby zacząć grupować rośliny według pomieszczeń lub obszarów."
     },
     "fab": {
       "add": "Dodaj lokalizację",
@@ -15,20 +15,19 @@
     },
     "plantCount": {
       "one": "1 roślina",
-      "few": "{{count}} rośliny",
-      "many": "{{count}} roślin"
+      "other": "{{count}} roślin"
     },
     "toast": {
       "loadFailed": "Nie udało się wczytać lokalizacji",
-      "added": "Dodano lokalizację",
-      "deleted": "Usunięto lokalizację",
-      "updated": "Zaktualizowano lokalizację",
-      "updatedLocal": "Zaktualizowano lokalizację (tylko lokalnie)",
-      "saveFailed": "Nie udało się zapisać lokalizacji",
-      "deleteFailed": "Nie udało się usunąć tej lokalizacji."
+      "added": "Lokalizacja dodana",
+      "deleted": "Lokalizacja usunięta",
+      "updated": "Lokalizacja zaktualizowana",
+      "updatedLocal": "Lokalizacja zaktualizowana (tylko lokalnie)",
+      "saveFailed": "Nie można zapisać lokalizacji",
+      "deleteFailed": "Nie można usunąć tej lokalizacji."
     },
     "alert": {
-      "deleteFailedTitle": "Usuwanie nie powiodło się"
+      "deleteFailedTitle": "Usunięcie nie powiodło się"
     }
   }
 }

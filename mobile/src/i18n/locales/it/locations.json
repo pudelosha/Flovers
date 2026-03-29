@@ -2,8 +2,8 @@
   "locations": {
     "headerTitle": "Posizioni",
     "empty": {
-      "title": "Nessuna posizione",
-      "description": "Le posizioni appariranno automaticamente quando le assegni alle piante.\n\nModifica una pianta e imposta la sua posizione per iniziare a raggruppare le piante per stanze o zone."
+      "title": "Nessuna posizione ancora",
+      "description": "Le posizioni vengono visualizzate automaticamente quando le assegni alle tue piante.\n\nModifica una pianta e imposta la sua posizione per iniziare a raggruppare le piante per stanze o aree."
     },
     "fab": {
       "add": "Aggiungi posizione",
@@ -15,14 +15,14 @@
     },
     "plantCount": {
       "one": "1 pianta",
-      "few": "{{count}} piante",
-      "many": "{{count}} piante"
+      "other": "{{count}} piante"
     },
     "toast": {
       "loadFailed": "Impossibile caricare le posizioni",
       "added": "Posizione aggiunta",
       "deleted": "Posizione eliminata",
-      "updatedLocal": "Posizione aggiornata (solo localmente)",
+      "updated": "Posizione aggiornata",
+      "updatedLocal": "Posizione aggiornata (solo locale)",
       "saveFailed": "Impossibile salvare la posizione",
       "deleteFailed": "Impossibile eliminare questa posizione."
     },

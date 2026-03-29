@@ -142,12 +142,13 @@ export default function Step09_Creating() {
               : getTranslation("createPlant.step09.success", "plant created successfully")}
           </Text>
 
-          {/* Reserve space for ID line so height never changes */}
+          {/* Reserve space for ID line so height never changes 
           <Text style={[wiz.smallMuted, { textAlign: "center", minHeight: 20, marginTop: 4 }]}>
             {status === "success" && state.createdPlantId
               ? `${getTranslation("createPlant.step09.idPrefix", "ID")}: ${state.createdPlantId}`
               : "\u00A0"}
           </Text>
+          */}
         </View>
       </View>
     </View>
