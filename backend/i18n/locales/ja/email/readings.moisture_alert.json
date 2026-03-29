@@ -1,0 +1,8 @@
+{
+  "subject": "土壌水分アラート",
+  "title": "土壌水分アラート",
+  "line1": "\"{device_name}\" の土壌水分の測定値は {value} で、設定したしきい値 {threshold} を下回っています。",
+  "cta": "測定値を開く",
+  "push_title": "土壌水分アラート",
+  "push_body": "{device_name}: 水分 {value} がしきい値 {threshold} を下回っています。"
+}

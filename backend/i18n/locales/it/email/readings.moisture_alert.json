@@ -1,0 +1,8 @@
+{
+  "subject": "Allerta umidità del suolo",
+  "title": "Allerta umidità del suolo",
+  "line1": "La lettura dell'umidità del suolo per \"{device_name}\" è {value}, al di sotto della soglia di {threshold}.",
+  "cta": "Apri letture",
+  "push_title": "Allerta umidità del suolo",
+  "push_body": "{device_name}: umidità {value} è al di sotto della soglia {threshold}."
+}

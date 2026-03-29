@@ -1,0 +1,8 @@
+{
+  "subject": "土壤湿度警报",
+  "title": "土壤湿度警报",
+  "line1": "设备“{device_name}”的土壤湿度读数为 {value}，低于您设定的阈值 {threshold}。",
+  "cta": "打开读数",
+  "push_title": "土壤湿度警报",
+  "push_body": "{device_name}：湿度 {value} 低于阈值 {threshold}。"
+}

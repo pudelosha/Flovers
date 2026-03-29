@@ -1,0 +1,8 @@
+{
+  "subject": "토양 수분 알림",
+  "title": "토양 수분 알림",
+  "line1": "\"{device_name}\"의 토양 수분 측정값이 {value}로, 설정한 임계값 {threshold}보다 낮습니다.",
+  "cta": "측정값 열기",
+  "push_title": "토양 수분 알림",
+  "push_body": "{device_name}: 수분 {value}이(가) 임계값 {threshold}보다 낮습니다."
+}

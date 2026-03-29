@@ -1,0 +1,8 @@
+{
+  "subject": "Alerta de humedad del suelo",
+  "title": "Alerta de humedad del suelo",
+  "line1": "La lectura de humedad del suelo para \"{device_name}\" es {value}, por debajo de su umbral de {threshold}.",
+  "cta": "Abrir lecturas",
+  "push_title": "Alerta de humedad del suelo",
+  "push_body": "{device_name}: humedad {value} está por debajo del umbral {threshold}."
+}

@@ -1,0 +1,8 @@
+{
+  "subject": "Alerta de umidade do solo",
+  "title": "Alerta de umidade do solo",
+  "line1": "A leitura de umidade do solo para \"{device_name}\" é {value}, abaixo do seu limite de {threshold}.",
+  "cta": "Abrir leituras",
+  "push_title": "Alerta de umidade do solo",
+  "push_body": "{device_name}: umidade {value} está abaixo do limite {threshold}."
+}

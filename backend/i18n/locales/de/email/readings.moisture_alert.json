@@ -1,0 +1,8 @@
+{
+  "subject": "Bodenfeuchte-Warnung",
+  "title": "Bodenfeuchte-Warnung",
+  "line1": "Der Bodenfeuchtewert für \"{device_name}\" beträgt {value} und liegt unter Ihrem Schwellenwert von {threshold}.",
+  "cta": "Messwerte öffnen",
+  "push_title": "Bodenfeuchte-Warnung",
+  "push_body": "{device_name}: Feuchtigkeit {value} liegt unter dem Schwellenwert {threshold}."
+}

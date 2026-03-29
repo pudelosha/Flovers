@@ -1,0 +1,8 @@
+{
+  "subject": "Alerte d'humidité du sol",
+  "title": "Alerte d'humidité du sol",
+  "line1": "La mesure d'humidité du sol pour \"{device_name}\" est de {value}, en dessous de votre seuil de {threshold}.",
+  "cta": "Ouvrir les relevés",
+  "push_title": "Alerte d'humidité du sol",
+  "push_body": "{device_name} : l'humidité {value} est inférieure au seuil {threshold}."
+}
