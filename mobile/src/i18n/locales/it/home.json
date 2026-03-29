@@ -4,17 +4,17 @@
       "title": "Home"
     },
     "fab": {
-      "showOverdue": "Mostra scaduti",
-      "showDueToday": "Mostra per oggi",
-      "showAllTasks": "Mostra tutti",
-      "markVisibleAsComplete": "Segna visibili come completati",
+      "showOverdue": "Mostra in ritardo",
+      "showDueToday": "Mostra in scadenza oggi",
+      "showAllTasks": "Mostra tutte le attività",
+      "markVisibleAsComplete": "Segna visibili come completate",
       "sort": "Ordina",
       "filter": "Filtra",
       "clearFilter": "Cancella filtro",
       "history": "Cronologia"
     },
     "menu": {
-      "markAsComplete": "Segna come completato",
+      "markAsComplete": "Segna come completata",
       "editReminder": "Modifica promemoria",
       "goToPlant": "Vai alla pianta",
       "showHistory": "Mostra cronologia",
@@ -27,6 +27,13 @@
       "care": "CURA",
       "repot": "RINVASO"
     },
+    "due": {
+      "today": "Oggi",
+      "tomorrow": "Domani",
+      "inDays": "Tra {{count}} giorni",
+      "overdueByDays": "In ritardo di {{count}} giorni",
+      "nextWeek": "La prossima settimana"
+    },
     "toasts": {
       "failedToLoadTasks": "Impossibile caricare le attività",
       "taskCompleted": "Attività completata",
@@ -37,33 +44,33 @@
     },
     "empty": {
       "all": {
-        "title": "Nessuna attività",
-        "introPrefix": "Questa pagina mostra le tue",
-        "introBold": "attività di cura delle piante",
+        "title": "Nessuna attività ancora",
+        "introPrefix": "Questa pagina mostra i tuoi prossimi",
+        "introBold": "promemoria per la cura delle piante",
         "introSuffix": "— annaffiatura, concimazione, rinvaso e altro.",
         "toGetStarted": "Per iniziare:",
         "bullets": {
-          "createPlantsBold": "Aggiungi piante",
-          "createPlantsSuffix": "nella scheda",
+          "createPlantsBold": "Crea le tue piante",
+          "createPlantsSuffix": "nella",
           "plantsTabBold": "Piante",
           "addRemindersPrefix": "Aggiungi",
           "remindersBold": "promemoria",
-          "addRemindersSuffix": "per ogni pianta, così compariranno qui come attività.",
-          "optionallyConnectPrefix": "Facoltativamente collega",
+          "addRemindersSuffix": "per ogni pianta in modo che appaiano qui come attività.",
+          "optionallyConnectPrefix": "Collega opzionalmente",
           "iotBold": "dispositivi IoT (schede Arduino)",
           "optionallyConnectMiddle": "nella scheda",
           "readingsTabBold": "Letture",
           "optionallyConnectSuffix": "per monitorare temperatura, umidità, luce e umidità del suolo in tempo reale."
         },
-        "outro": "Una volta configurato tutto, la Home diventerà il tuo centro per controllare di cosa ha bisogno ogni pianta."
+        "outro": "Una volta configurati, la schermata Home diventerà il tuo punto centrale per vedere di cosa ha bisogno ogni pianta oggi."
       },
       "overdue": {
-        "title": "Nessuna attività scaduta",
-        "body": "Al momento non hai attività scadute.\n\nTutto è aggiornato — usa l’opzione \"Mostra tutti\" nel FAB per vedere l’elenco completo oppure cambia i filtri per visualizzare le attività future."
+        "title": "Nessuna attività in ritardo",
+        "body": "Al momento non hai attività in ritardo.\n\nSei aggiornato — usa \"Mostra tutte le attività\" dal FAB per vedere tutto, oppure cambia i filtri per esplorare le attività in arrivo."
       },
       "today": {
-        "title": "Nessuna attività per oggi",
-        "body": "Oggi non hai attività.\n\nUsa l’opzione \"Mostra tutti\" nel FAB per vedere i promemoria futuri oppure modifica le pianificazioni dei promemoria sulle piante."
+        "title": "Nessuna attività prevista per oggi",
+        "body": "Non hai attività previste per oggi.\n\nUsa \"Mostra tutte le attività\" dal FAB per vedere i promemoria futuri, oppure modifica le pianificazioni dei promemoria nelle tue piante."
       }
     }
   }

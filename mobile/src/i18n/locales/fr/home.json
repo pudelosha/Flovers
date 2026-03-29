@@ -1,69 +1,76 @@
 {
   "home": {
     "header": {
-      "title": "Accueil"
+      "title": "Home"
     },
     "fab": {
-      "showOverdue": "Afficher en retard",
-      "showDueToday": "Afficher pour aujourd’hui",
-      "showAllTasks": "Afficher toutes les tâches",
-      "markVisibleAsComplete": "Marquer les visibles comme terminées",
-      "sort": "Trier",
-      "filter": "Filtrer",
-      "clearFilter": "Effacer le filtre",
-      "history": "Historique"
+      "showOverdue": "Mostra in ritardo",
+      "showDueToday": "Mostra in scadenza oggi",
+      "showAllTasks": "Mostra tutte le attività",
+      "markVisibleAsComplete": "Segna visibili come completate",
+      "sort": "Ordina",
+      "filter": "Filtra",
+      "clearFilter": "Cancella filtro",
+      "history": "Cronologia"
     },
     "menu": {
-      "markAsComplete": "Marquer comme terminée",
-      "editReminder": "Modifier le rappel",
-      "goToPlant": "Aller à la plante",
-      "showHistory": "Afficher l’historique",
-      "delete": "Supprimer"
+      "markAsComplete": "Segna come completata",
+      "editReminder": "Modifica promemoria",
+      "goToPlant": "Vai alla pianta",
+      "showHistory": "Mostra cronologia",
+      "delete": "Elimina"
     },
     "taskTypes": {
-      "watering": "ARROSAGE",
-      "moisture": "BRUMISATION",
-      "fertilising": "FERTILISATION",
-      "care": "ENTRETIEN",
-      "repot": "REMPOTAGE"
+      "watering": "ANNAFFIATURA",
+      "moisture": "NEBULIZZAZIONE",
+      "fertilising": "CONCIMAZIONE",
+      "care": "CURA",
+      "repot": "RINVASO"
+    },
+    "due": {
+      "today": "Oggi",
+      "tomorrow": "Domani",
+      "inDays": "Tra {{count}} giorni",
+      "overdueByDays": "In ritardo di {{count}} giorni",
+      "nextWeek": "La prossima settimana"
     },
     "toasts": {
-      "failedToLoadTasks": "Échec du chargement des tâches",
-      "taskCompleted": "Tâche terminée",
-      "tasksCompleted": "Tâches terminées",
-      "completeFailed": "Impossible de terminer",
-      "completeSomeFailed": "{{ok}} tâches sur {{total}} terminées",
-      "taskNotLinkedToPlant": "Cette tâche n’est pas liée à une plante."
+      "failedToLoadTasks": "Impossibile caricare le attività",
+      "taskCompleted": "Attività completata",
+      "tasksCompleted": "Attività completate",
+      "completeFailed": "Completamento non riuscito",
+      "completeSomeFailed": "Completate {{ok}} di {{total}} attività",
+      "taskNotLinkedToPlant": "Questa attività non è collegata a una pianta."
     },
     "empty": {
       "all": {
-        "title": "Aucune tâche",
-        "introPrefix": "Cette page affiche vos prochaines",
-        "introBold": "tâches d’entretien des plantes",
-        "introSuffix": "— arrosage, fertilisation, rempotage et plus encore.",
-        "toGetStarted": "Pour commencer :",
+        "title": "Nessuna attività ancora",
+        "introPrefix": "Questa pagina mostra i tuoi prossimi",
+        "introBold": "promemoria per la cura delle piante",
+        "introSuffix": "— annaffiatura, concimazione, rinvaso e altro.",
+        "toGetStarted": "Per iniziare:",
         "bullets": {
-          "createPlantsBold": "Ajoutez des plantes",
-          "createPlantsSuffix": "dans l’onglet",
-          "plantsTabBold": "Plantes",
-          "addRemindersPrefix": "Ajoutez des",
-          "remindersBold": "rappels",
-          "addRemindersSuffix": "pour chaque plante afin qu’ils apparaissent ici comme des tâches.",
-          "optionallyConnectPrefix": "Vous pouvez également connecter",
-          "iotBold": "des appareils IoT (cartes Arduino)",
-          "optionallyConnectMiddle": "dans l’onglet",
-          "readingsTabBold": "Mesures",
-          "optionallyConnectSuffix": "pour suivre en temps réel la température, l’humidité, la lumière et l’humidité du sol."
+          "createPlantsBold": "Crea le tue piante",
+          "createPlantsSuffix": "nella",
+          "plantsTabBold": "Piante",
+          "addRemindersPrefix": "Aggiungi",
+          "remindersBold": "promemoria",
+          "addRemindersSuffix": "per ogni pianta in modo che appaiano qui come attività.",
+          "optionallyConnectPrefix": "Collega opzionalmente",
+          "iotBold": "dispositivi IoT (schede Arduino)",
+          "optionallyConnectMiddle": "nella scheda",
+          "readingsTabBold": "Letture",
+          "optionallyConnectSuffix": "per monitorare temperatura, umidità, luce e umidità del suolo in tempo reale."
         },
-        "outro": "Une fois configuré, l’écran d’accueil deviendra votre centre pour vérifier ce dont chaque plante a besoin."
+        "outro": "Una volta configurati, la schermata Home diventerà il tuo punto centrale per vedere di cosa ha bisogno ogni pianta oggi."
       },
       "overdue": {
-        "title": "Aucune tâche en retard",
-        "body": "Vous n’avez actuellement aucune tâche en retard.\n\nTout est à jour — utilisez l’option « Afficher toutes les tâches » dans le FAB pour voir la liste complète, ou changez les filtres pour consulter les tâches à venir."
+        "title": "Nessuna attività in ritardo",
+        "body": "Al momento non hai attività in ritardo.\n\nSei aggiornato — usa \"Mostra tutte le attività\" dal FAB per vedere tutto, oppure cambia i filtri per esplorare le attività in arrivo."
       },
       "today": {
-        "title": "Aucune tâche pour aujourd’hui",
-        "body": "Vous n’avez aucune tâche aujourd’hui.\n\nUtilisez l’option « Afficher toutes les tâches » dans le FAB pour voir les rappels à venir, ou modifiez les plannings de rappel sur les plantes."
+        "title": "Nessuna attività prevista per oggi",
+        "body": "Non hai attività previste per oggi.\n\nUsa \"Mostra tutte le attività\" dal FAB per vedere i promemoria futuri, oppure modifica le pianificazioni dei promemoria nelle tue piante."
       }
     }
   }

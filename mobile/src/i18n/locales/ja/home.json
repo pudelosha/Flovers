@@ -1,14 +1,14 @@
 {
   "home": {
     "header": {
-      "title": "スタート"
+      "title": "ホーム"
     },
     "fab": {
-      "showOverdue": "遅れているタスクを表示",
-      "showDueToday": "今日のタスクを表示",
+      "showOverdue": "期限超過を表示",
+      "showDueToday": "本日分を表示",
       "showAllTasks": "すべてのタスクを表示",
-      "markVisibleAsComplete": "表示されているタスクを完了としてマーク",
-      "sort": "並べ替え",
+      "markVisibleAsComplete": "表示中を完了としてマーク",
+      "sort": "並び替え",
       "filter": "フィルター",
       "clearFilter": "フィルターをクリア",
       "history": "履歴"
@@ -16,54 +16,61 @@
     "menu": {
       "markAsComplete": "完了としてマーク",
       "editReminder": "リマインダーを編集",
-      "goToPlant": "植物のページに移動",
+      "goToPlant": "植物へ移動",
       "showHistory": "履歴を表示",
       "delete": "削除"
     },
     "taskTypes": {
       "watering": "水やり",
       "moisture": "霧吹き",
-      "fertilising": "肥料",
-      "care": "手入れ",
+      "fertilising": "施肥",
+      "care": "ケア",
       "repot": "植え替え"
+    },
+    "due": {
+      "today": "今日",
+      "tomorrow": "明日",
+      "inDays": "{{count}}日後",
+      "overdueByDays": "{{count}}日遅れ",
+      "nextWeek": "来週"
     },
     "toasts": {
       "failedToLoadTasks": "タスクの読み込みに失敗しました",
       "taskCompleted": "タスクが完了しました",
       "tasksCompleted": "タスクが完了しました",
-      "completeFailed": "完了できませんでした",
-      "completeSomeFailed": "{{ok}} 件のタスクが完了しました（{{total}} 件中）",
-      "taskNotLinkedToPlant": "このタスクは植物に関連付けられていません。"
+      "completeFailed": "完了に失敗しました",
+      "completeSomeFailed": "{{total}}件中{{ok}}件のタスクを完了しました",
+      "taskNotLinkedToPlant": "このタスクは植物に紐付けられていません。"
     },
     "empty": {
       "all": {
-        "title": "タスクがありません",
-        "introPrefix": "このページでは、あなたの次の",
-        "introBold": "植物の手入れタスク",
-        "introSuffix": "（水やり、肥料、植え替えなど）を表示します。",
-        "toGetStarted": "開始するには：",
+        "title": "タスクはまだありません",
+        "introPrefix": "このページには、今後の",
+        "introBold": "植物のお世話リマインダー",
+        "introSuffix": "（水やり、施肥、植え替えなど）が表示されます。",
+        "toGetStarted": "始めるには：",
         "bullets": {
-          "createPlantsBold": "植物を追加",
-          "createPlantsSuffix": "タブで",
+          "createPlantsBold": "植物を作成",
+          "createPlantsSuffix": "します（",
           "plantsTabBold": "植物",
-          "addRemindersPrefix": "リマインダーを追加",
+          "addRemindersPrefix": "各植物に",
           "remindersBold": "リマインダー",
-          "addRemindersSuffix": "各植物にリマインダーを設定して、ここに表示させます。",
-          "optionallyConnectPrefix": "オプションで接続する",
+          "addRemindersSuffix": "を追加すると、ここにタスクとして表示されます。",
+          "optionallyConnectPrefix": "必要に応じて、",
           "iotBold": "IoTデバイス（Arduinoボード）",
-          "optionallyConnectMiddle": "タブで",
+          "optionallyConnectMiddle": "を",
           "readingsTabBold": "測定値",
-          "optionallyConnectSuffix": "温度、湿度、光、土壌の湿度をリアルタイムで追跡できます。"
+          "optionallyConnectSuffix": "タブで接続し、温度・湿度・光・土壌水分をリアルタイムで追跡できます。"
         },
-        "outro": "これを設定すると、ホームページは各植物の必要事項を確認するための中心となります。"
+        "outro": "これらを設定すると、ホーム画面は各植物が今日必要としていることを確認するための中心的な場所になります。"
       },
       "overdue": {
-        "title": "遅れているタスクはありません",
-        "body": "現在、遅れているタスクはありません。\n\nすべて順調です — FABの「すべてを表示」オプションを使用してタスクリストを表示するか、フィルターを切り替えて今後のタスクを確認してください。"
+        "title": "期限超過のタスクはありません",
+        "body": "現在、期限超過のタスクはありません。\n\nすべて完了しています — FABの「すべてのタスクを表示」を使って全体を確認するか、フィルターを切り替えて今後のタスクを確認してください。"
       },
       "today": {
-        "title": "今日のタスクはありません",
-        "body": "今日はタスクがありません。\n\nFABの「すべてを表示」オプションを使用して今後のリマインダーを表示するか、植物のリマインダーのスケジュールを変更してください。"
+        "title": "本日期限のタスクはありません",
+        "body": "本日期限のタスクはありません。\n\nFABの「すべてのタスクを表示」で今後のリマインダーを確認するか、植物のリマインダースケジュールを調整してください。"
       }
     }
   }

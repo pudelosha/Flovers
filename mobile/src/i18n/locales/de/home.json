@@ -1,12 +1,12 @@
 {
   "home": {
     "header": {
-      "title": "Start"
+      "title": "Startseite"
     },
     "fab": {
       "showOverdue": "Überfällige anzeigen",
-      "showDueToday": "Für heute anzeigen",
-      "showAllTasks": "Alle anzeigen",
+      "showDueToday": "Heute fällige anzeigen",
+      "showAllTasks": "Alle Aufgaben anzeigen",
       "markVisibleAsComplete": "Sichtbare als erledigt markieren",
       "sort": "Sortieren",
       "filter": "Filtern",
@@ -27,43 +27,50 @@
       "care": "PFLEGE",
       "repot": "UMTOPFEN"
     },
+    "due": {
+      "today": "Heute",
+      "tomorrow": "Morgen",
+      "inDays": "In {{count}} Tagen",
+      "overdueByDays": "Seit {{count}} Tagen überfällig",
+      "nextWeek": "Nächste Woche"
+    },
     "toasts": {
       "failedToLoadTasks": "Aufgaben konnten nicht geladen werden",
-      "taskCompleted": "Aufgabe abgeschlossen",
-      "tasksCompleted": "Aufgaben abgeschlossen",
-      "completeFailed": "Abschluss fehlgeschlagen",
-      "completeSomeFailed": "{{ok}} von {{total}} Aufgaben abgeschlossen",
+      "taskCompleted": "Aufgabe erledigt",
+      "tasksCompleted": "Aufgaben erledigt",
+      "completeFailed": "Abschließen fehlgeschlagen",
+      "completeSomeFailed": "{{ok}} von {{total}} Aufgaben erledigt",
       "taskNotLinkedToPlant": "Diese Aufgabe ist keiner Pflanze zugeordnet."
     },
     "empty": {
       "all": {
-        "title": "Keine Aufgaben",
+        "title": "Noch keine Aufgaben",
         "introPrefix": "Diese Seite zeigt deine kommenden",
-        "introBold": "Pflanzenpflege-Aufgaben",
+        "introBold": "Pflanzenpflege-Erinnerungen",
         "introSuffix": "— Gießen, Düngen, Umtopfen und mehr.",
         "toGetStarted": "Um zu beginnen:",
         "bullets": {
-          "createPlantsBold": "Pflanzen hinzufügen",
-          "createPlantsSuffix": "im Tab",
+          "createPlantsBold": "Erstelle deine Pflanzen",
+          "createPlantsSuffix": "im",
           "plantsTabBold": "Pflanzen",
           "addRemindersPrefix": "Füge",
           "remindersBold": "Erinnerungen",
           "addRemindersSuffix": "für jede Pflanze hinzu, damit sie hier als Aufgaben erscheinen.",
-          "optionallyConnectPrefix": "Optional verbinde",
+          "optionallyConnectPrefix": "Verbinde optional",
           "iotBold": "IoT-Geräte (Arduino-Boards)",
-          "optionallyConnectMiddle": "im Tab",
+          "optionallyConnectMiddle": "im",
           "readingsTabBold": "Messwerte",
-          "optionallyConnectSuffix": "um Temperatur, Luftfeuchtigkeit, Licht und Bodenfeuchte in Echtzeit zu verfolgen."
+          "optionallyConnectSuffix": "Tab, um Temperatur, Luftfeuchtigkeit, Licht und Bodenfeuchtigkeit in Echtzeit zu verfolgen."
         },
-        "outro": "Sobald dies eingerichtet ist, wird die Startseite zu deinem zentralen Ort, um zu prüfen, was jede Pflanze braucht."
+        "outro": "Sobald du diese eingerichtet hast, wird dein Startbildschirm zum zentralen Ort, um zu sehen, was jede Pflanze heute braucht."
       },
       "overdue": {
         "title": "Keine überfälligen Aufgaben",
-        "body": "Du hast derzeit keine überfälligen Aufgaben.\n\nAlles ist auf dem neuesten Stand — nutze im FAB die Option „Alle anzeigen“, um die vollständige Liste zu sehen, oder wechsle die Filter, um kommende Aufgaben anzusehen."
+        "body": "Du hast derzeit keine überfälligen Aufgaben.\n\nDu bist auf dem neuesten Stand — verwende „Alle Aufgaben anzeigen“ aus dem FAB, um alles zu sehen, oder wechsle die Filter, um kommende Aufgaben zu erkunden."
       },
       "today": {
-        "title": "Keine Aufgaben für heute",
-        "body": "Du hast heute keine Aufgaben.\n\nNutze im FAB die Option „Alle anzeigen“, um kommende Erinnerungen zu sehen, oder ändere die Erinnerungspläne bei den Pflanzen."
+        "title": "Heute keine fälligen Aufgaben",
+        "body": "Du hast heute keine fälligen Aufgaben.\n\nVerwende „Alle Aufgaben anzeigen“ aus dem FAB, um kommende Erinnerungen zu sehen, oder passe die Erinnerungspläne deiner Pflanzen an."
       }
     }
   }
