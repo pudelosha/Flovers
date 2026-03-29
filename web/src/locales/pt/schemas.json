@@ -3,47 +3,53 @@
     "copy": "Copiar",
     "copied": "Copiado"
   },
-  "title": "Esquemas de dispositivos e cabeamento",
-  "lead": "Esta página descreve como enviar leituras de sensores IoT para o Flovers. Você encontrará endpoints, a estrutura do payload e código Arduino de exemplo para ESP32/ESP8266 para sensores populares. Há também um placeholder para uma imagem de cabeamento (Fritzing) para substituição posterior.",
+  "title": "API de Dispositivo & ligação",
+  "lead": "Esta página documenta como os dispositivos se integram com a Flovers. Os dispositivos enviam leituras de sensores para o endpoint de ingestão e podem ler o feed mais recente do dispositivo a partir do endpoint de feed, por exemplo para acionar ações como iniciar uma bomba de água. Você também encontrará o formato do payload, um exemplo de firmware Arduino gerado para enviar leituras e um exemplo simples de controle ESP32/Arduino para ler o feed do dispositivo e ativar a rega.",
   "endpoints": {
     "title": "Endpoints da API",
-    "note": "Os endpoints são exemplos. Substitua-os pelo endereço de produção do backend ao conectar o dispositivo.",
+    "note": "Os dispositivos enviam telemetria para o endpoint de ingestão e podem ler o feed mais recente do dispositivo a partir do endpoint de feed.",
     "ingest": {
-      "label": "Ingestão de leituras (POST)",
-      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+      "label": "Ingerir leituras (dispositivo → backend)",
+      "value": "https://api.flovers.app/api/readings/ingest/"
     },
-    "read": {
-      "label": "Recuperação de leituras (GET/POST)",
-      "value": "http://127.0.0.1:8000/api/readings/"
+    "feed": {
+      "label": "Ler feed do dispositivo (dispositivo → backend)",
+      "value": "https://api.flovers.app/api/readings/feed/"
     }
   },
   "ingest": {
-    "title": "Documentação do POST ingest",
-    "desc": "Envie uma única amostra de leitura como JSON. O backend verifica device_key + secret e grava as métricas associadas ao dispositivo.",
-    "schemaLabel": "Estrutura do payload (JSON)",
-    "psLabel": "Exemplo em PowerShell (POST)"
-  },
-  "read": {
-    "title": "GET / documentação de leitura",
-    "desc": "Recupere leituras de um dispositivo em um intervalo de tempo. Se o backend suportar consultas via POST, você pode enviar um body JSON em vez de parâmetros na URL.",
-    "exampleLabel": "Exemplos (GET + POST opcional)"
-  },
-  "arduino": {
-    "title": "Arduino (ESP32/ESP8266) — código de exemplo",
-    "desc": "Implementação de referência: conecta-se ao Wi-Fi, lê os sensores e envia um POST JSON para o endpoint ingest em um intervalo definido. Calibre os valores do sensor de umidade (molhado/seco) para que as porcentagens façam sentido.",
-    "codeLabel": "Exemplo Arduino (Wi-Fi + POST ingest)",
-    "note": "Se você precisar de timestamps corretos, adicione sincronização de tempo via NTP (configTime) e gere ISO-8601 UTC no dispositivo.",
+    "title": "Documentação POST ingest",
+    "desc": "Envie uma amostra de leitura como JSON. O backend autentica o dispositivo usando device_key e secret, depois armazena as métricas fornecidas sob esse dispositivo.",
+    "schemaLabel": "Formato do payload (JSON)",
+    "psLabel": "Exemplo PowerShell (POST)",
+    "arduinoTitle": "Firmware gerado Arduino (ESP32/ESP8266)",
+    "arduinoDesc": "O firmware gerado conecta-se ao Wi-Fi, sincroniza o tempo com NTP, lê sensores habilitados e envia JSON para o endpoint de ingestão em um intervalo fixo.",
+    "arduinoCodeLabel": "Firmware Arduino gerado (POST leituras)",
+    "arduinoNote": "Use o firmware gerado conforme fornecido para o dispositivo. Antes de enviar, configure as credenciais Wi-Fi e verifique a fiação dos sensores, atribuições de pinos e valores de calibração do solo.",
     "sensors": {
       "bh1750": "BH1750 (GY-302) — intensidade de luz via I2C",
-      "moisture": "Sensor capacitivo de umidade do solo — leitura analógica (requer calibração molhado/seco)",
-      "bme280": "BME280 — temperatura e umidade via I2C (pressão opcional)"
+      "moisture": "Sensor capacitivo de umidade do solo — leitura analógica com calibração seco/molhado",
+      "bme280": "BME280 — temperatura & umidade via I2C (pressão opcional)"
     }
   },
+  "feed": {
+    "title": "Documentação GET feed",
+    "desc": "Leia o feed mais recente do dispositivo a partir do backend. Os dispositivos podem usar este endpoint para receber o estado atual ou ações, por exemplo iniciar uma bomba de água.",
+    "exampleLabel": "Exemplo de requisição",
+    "responseLabel": "Exemplo de payload de resposta",
+    "controlTitle": "Exemplo de rega ESP32 / Arduino (GET)",
+    "controlDesc": "Este exemplo mostra como um ESP32 pode chamar o endpoint de feed, analisar a resposta mais recente, comparar a umidade do solo com um limite definido e ativar uma bomba de água controlada por relé por uma duração configurável. Após regar ou verificar as condições, o dispositivo aguarda um intervalo configurável antes de verificar novamente.",
+    "controlCodeLabel": "Exemplo ESP32 / Arduino — GET feed e acionar bomba",
+    "controlNote": "Ajuste a lógica do relé, o tempo de funcionamento da bomba, o limite de umidade e o atraso de polling para o seu hardware. Muitos módulos de relé são ativos em LOW, então verifique se LOW ou HIGH liga o seu relé."
+  },
   "wiring": {
-    "title": "Esquema de cabeamento",
-    "desc": "Adicione aqui posteriormente uma imagem do Fritzing. Este placeholder estabiliza o layout da página até que o esquema esteja pronto.",
-    "aria": "Placeholder do esquema de cabeamento",
-    "placeholderTitle": "Placeholder do Fritzing",
-    "placeholderSub": "Substitua este bloco pela imagem quando exportar o esquema."
+    "title": "Diagramas de ligação",
+    "desc": "Abaixo está um esquema de ligação de dispositivo de exemplo para enviar requisições POST ao backend da Flovers. Clique na imagem para abri-la em tela cheia.",
+    "ariaPrimary": "Esquema de ligação de dispositivo de exemplo para requisições POST",
+    "ariaPump": "Espaço reservado para diagrama de ligação do relé da bomba",
+    "placeholderTitlePrimary": "Esquema de ligação de dispositivo de exemplo (POST)",
+    "placeholderSubPrimary": "Clique na imagem para exibi-la em tela cheia.",
+    "placeholderTitlePump": "Esquema de ligação da bomba / relé",
+    "placeholderSubPump": "Adicione o segundo diagrama de ligação aqui posteriormente."
   }
 }

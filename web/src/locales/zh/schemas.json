@@ -3,47 +3,53 @@
     "copy": "复制",
     "copied": "已复制"
   },
-  "title": "设备示意图与布线",
-  "lead": "本页面说明如何将 IoT 传感器读数发送到 Flovers。你将在此找到接口端点、payload 结构，以及适用于 ESP32/ESP8266 和常见传感器的 Arduino 示例代码。这里还预留了一个用于布线图（Fritzing）的占位符，供之后替换。",
+  "title": "设备 API 与接线",
+  "lead": "本页面介绍设备如何与 Flovers 集成。设备将传感器读数发送到 ingest 端点，并可以从 feed 端点读取最新的设备数据流，例如用于触发启动水泵等操作。你还可以在此找到数据负载格式、用于发送读数的 Arduino 固件生成示例，以及一个简单的 ESP32/Arduino 控制示例，用于读取设备数据流并激活浇水。",
   "endpoints": {
     "title": "API 端点",
-    "note": "这些端点仅为示例。在连接设备时，请将其替换为生产环境的后端地址。",
+    "note": "设备将遥测数据发送到 ingest 端点，并可以从 feed 端点读取最新的设备数据流。",
     "ingest": {
-      "label": "读数接收（POST）",
-      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+      "label": "接收读数（设备 → 后端）",
+      "value": "https://api.flovers.app/api/readings/ingest/"
     },
-    "read": {
-      "label": "读取数据（GET/POST）",
-      "value": "http://127.0.0.1:8000/api/readings/"
+    "feed": {
+      "label": "读取设备数据流（设备 → 后端）",
+      "value": "https://api.flovers.app/api/readings/feed/"
     }
   },
   "ingest": {
     "title": "POST ingest 文档",
-    "desc": "以 JSON 形式发送单条读数样本。后端会校验 device_key + secret，并将指标保存到对应设备下。",
-    "schemaLabel": "Payload 结构（JSON）",
-    "psLabel": "PowerShell 示例（POST）"
-  },
-  "read": {
-    "title": "GET / 读数文档",
-    "desc": "在指定时间范围内获取设备的读数。如果后端支持通过 POST 查询，你可以发送 JSON body 来替代 URL 参数。",
-    "exampleLabel": "示例（GET + 可选 POST）"
-  },
-  "arduino": {
-    "title": "Arduino（ESP32/ESP8266）— 示例代码",
-    "desc": "参考实现：连接 Wi-Fi、读取传感器，并按固定时间间隔向 ingest 端点发送 JSON POST。请校准土壤湿度传感器的数值（湿/干），以确保百分比有意义。",
-    "codeLabel": "Arduino 示例（Wi-Fi + POST ingest）",
-    "note": "如果需要准确的时间戳，请添加 NTP 时间同步（configTime），并在设备上生成 ISO-8601 UTC。",
+    "desc": "以 JSON 格式发送一个读数样本。后端使用 device_key 和 secret 对设备进行身份验证，然后将提供的指标存储在该设备下。",
+    "schemaLabel": "数据结构（JSON）",
+    "psLabel": "PowerShell 示例（POST）",
+    "arduinoTitle": "Arduino（ESP32/ESP8266）生成固件",
+    "arduinoDesc": "生成的固件连接到 Wi-Fi，与 NTP 同步时间，读取已启用的传感器，并以固定间隔将 JSON 发送到 ingest 端点。",
+    "arduinoCodeLabel": "生成的 Arduino 固件（POST 读数）",
+    "arduinoNote": "按提供的生成固件用于设备。在上传之前，请设置 Wi-Fi 凭据并验证传感器接线、引脚分配以及土壤校准值。",
     "sensors": {
       "bh1750": "BH1750（GY-302）— 通过 I2C 测量光照强度",
-      "moisture": "电容式土壤湿度传感器 — 模拟读数（需要湿/干校准）",
-      "bme280": "BME280 — 通过 I2C 测量温度和湿度（压力为可选）"
+      "moisture": "电容式土壤湿度传感器 — 模拟读取并进行干/湿校准",
+      "bme280": "BME280 — 通过 I2C 测量温度和湿度（气压可选）"
     }
   },
+  "feed": {
+    "title": "GET feed 文档",
+    "desc": "从后端读取最新的设备数据流。设备可以使用此端点接收当前状态或操作，例如启动水泵。",
+    "exampleLabel": "示例请求",
+    "responseLabel": "示例响应数据",
+    "controlTitle": "ESP32 / Arduino 浇水示例（GET）",
+    "controlDesc": "此示例展示 ESP32 如何调用 feed 端点，解析最新响应，将土壤湿度与设定阈值进行比较，并在可配置的时间内激活继电器控制的水泵。在浇水或检查条件后，设备会等待一个可配置的时间间隔再进行下一次检查。",
+    "controlCodeLabel": "ESP32 / Arduino 示例 — GET 数据流并触发水泵",
+    "controlNote": "根据你的硬件调整继电器逻辑、水泵运行时间、湿度阈值和轮询延迟。许多继电器模块为低电平触发，因此请确认是 LOW 还是 HIGH 会开启你的继电器。"
+  },
   "wiring": {
-    "title": "布线示意图",
-    "desc": "稍后在此添加 Fritzing 图片。该占位符在示意图准备好之前用于稳定页面布局。",
-    "aria": "布线示意图占位符",
-    "placeholderTitle": "Fritzing 占位符",
-    "placeholderSub": "导出示意图后，用图片替换此区块。"
+    "title": "接线图",
+    "desc": "以下是一个用于向 Flovers 后端发送 POST 请求的示例设备接线方案。点击图片可全屏查看。",
+    "ariaPrimary": "用于 POST 请求的示例设备接线方案",
+    "ariaPump": "水泵继电器接线图占位符",
+    "placeholderTitlePrimary": "示例设备接线方案（POST）",
+    "placeholderSubPrimary": "点击图片以全屏显示。",
+    "placeholderTitlePump": "水泵 / 继电器接线方案",
+    "placeholderSubPump": "稍后在此添加第二个接线图。"
   }
 }

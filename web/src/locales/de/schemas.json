@@ -3,47 +3,53 @@
     "copy": "Kopieren",
     "copied": "Kopiert"
   },
-  "title": "Geräteschemas und Verkabelung",
-  "lead": "Diese Seite beschreibt, wie man IoT-Sensordaten an Flovers sendet. Hier findest du Endpunkte, die Payload-Struktur und Beispielcode für Arduino mit ESP32/ESP8266 für gängige Sensoren. Es gibt auch einen Platzhalter für das Verkabelungsbild (Fritzing), das später ersetzt wird.",
+  "title": "Geräte-API & Verkabelung",
+  "lead": "Diese Seite dokumentiert, wie Geräte mit Flovers integriert werden. Geräte senden Sensordaten an den Ingest-Endpunkt und können den neuesten Geräte-Feed vom Feed-Endpunkt lesen, z. B. um Aktionen wie das Starten einer Wasserpumpe auszulösen. Außerdem finden Sie das Payload-Format, ein generiertes Arduino-Firmware-Beispiel zum Senden von Messwerten sowie ein einfaches ESP32/Arduino-Steuerungsbeispiel zum Lesen des Geräte-Feeds und Aktivieren der Bewässerung.",
   "endpoints": {
     "title": "API-Endpunkte",
-    "note": "Die Endpunkte sind beispielhaft. Ersetze sie durch die Produktionsadresse des Backends, wenn du das Gerät anschließt.",
+    "note": "Geräte senden Telemetriedaten an den Ingest-Endpunkt und können den neuesten Geräte-Feed vom Feed-Endpunkt lesen.",
     "ingest": {
-      "label": "Datenaufnahme (POST)",
-      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+      "label": "Messwerte erfassen (Gerät → Backend)",
+      "value": "https://api.flovers.app/api/readings/ingest/"
     },
-    "read": {
-      "label": "Abrufen von Messwerten (GET/POST)",
-      "value": "http://127.0.0.1:8000/api/readings/"
+    "feed": {
+      "label": "Geräte-Feed lesen (Gerät → Backend)",
+      "value": "https://api.flovers.app/api/readings/feed/"
     }
   },
   "ingest": {
-    "title": "POST-Datenaufnahme-Dokumentation",
-    "desc": "Sende eine Messwertprobe als JSON. Das Backend überprüft den device_key + secret und speichert die Metriken unter dem Gerät.",
+    "title": "POST-Ingest-Dokumentation",
+    "desc": "Senden Sie eine Messprobe als JSON. Das Backend authentifiziert das Gerät mithilfe von device_key und secret und speichert anschließend die bereitgestellten Messwerte unter diesem Gerät.",
     "schemaLabel": "Payload-Struktur (JSON)",
-    "psLabel": "PowerShell-Beispiel (POST)"
-  },
-  "read": {
-    "title": "GET / Lese-Dokumentation",
-    "desc": "Lade Messwerte für ein Gerät im angegebenen Zeitraum. Wenn das Backend POST-Anfragen unterstützt, kannst du den JSON-Body statt der URL-Parameter senden.",
-    "exampleLabel": "Beispiele (GET + optionales POST)"
-  },
-  "arduino": {
-    "title": "Arduino (ESP32/ESP8266) — Beispielcode",
-    "desc": "Referenzimplementierung: verbindet sich mit Wi-Fi, liest Sensoren und sendet JSON-POST an den ingest-Endpunkt in festgelegten Intervallen. Kalibriere die Feuchtigkeitssensorwerte (nass/trocken), damit die Prozentsätze sinnvoll sind.",
-    "codeLabel": "Arduino-Beispiel (Wi-Fi + POST ingest)",
-    "note": "Wenn du korrekte Zeitstempel benötigst, füge die NTP-Zeitsynchronisation (configTime) hinzu und generiere ISO-8601 UTC auf dem Gerät.",
+    "psLabel": "PowerShell-Beispiel (POST)",
+    "arduinoTitle": "Arduino (ESP32/ESP8266) generierte Firmware",
+    "arduinoDesc": "Die generierte Firmware verbindet sich mit dem WLAN, synchronisiert die Zeit über NTP, liest aktivierte Sensoren aus und sendet JSON in festen Intervallen an den Ingest-Endpunkt.",
+    "arduinoCodeLabel": "Generierte Arduino-Firmware (POST Messwerte)",
+    "arduinoNote": "Verwenden Sie die generierte Firmware wie bereitgestellt für das Gerät. Stellen Sie vor dem Hochladen die WLAN-Zugangsdaten ein und überprüfen Sie die Sensorverkabelung, Pinbelegungen und Kalibrierwerte für den Boden.",
     "sensors": {
-      "bh1750": "BH1750 (GY-302) — Lichtstärke über I2C",
-      "moisture": "Kapazitiver Bodenfeuchtigkeitssensor — analoger Messwert (erfordert Kalibrierung nass/trocken)",
-      "bme280": "BME280 — Temperatur und Luftfeuchtigkeit über I2C (optional auch Druck)"
+      "bh1750": "BH1750 (GY-302) — Lichtintensität über I2C",
+      "moisture": "Kapazitiver Bodenfeuchtesensor — analoges Auslesen mit Nass-/Trocken-Kalibrierung",
+      "bme280": "BME280 — Temperatur & Luftfeuchtigkeit über I2C (Druck optional)"
     }
   },
+  "feed": {
+    "title": "GET-Feed-Dokumentation",
+    "desc": "Lesen Sie den neuesten Geräte-Feed aus dem Backend. Geräte können diesen Endpunkt verwenden, um den aktuellen Status oder Aktionen zu erhalten, z. B. das Starten einer Wasserpumpe.",
+    "exampleLabel": "Beispielanfrage",
+    "responseLabel": "Beispiel-Antwort-Payload",
+    "controlTitle": "ESP32 / Arduino Bewässerungsbeispiel (GET)",
+    "controlDesc": "Dieses Beispiel zeigt, wie ein ESP32 den Feed-Endpunkt aufrufen, die neueste Antwort auswerten, die Bodenfeuchte mit einem definierten Schwellenwert vergleichen und eine relaisgesteuerte Wasserpumpe für eine konfigurierbare Dauer aktivieren kann. Nach der Bewässerung oder der Prüfung der Bedingungen wartet das Gerät ein konfigurierbares Intervall, bevor es erneut prüft.",
+    "controlCodeLabel": "ESP32 / Arduino Beispiel — GET Feed und Pumpe auslösen",
+    "controlNote": "Passen Sie Relaislogik, Pumpenlaufzeit, Feuchtigkeitsschwellenwert und Abfrageintervall an Ihre Hardware an. Viele Relaismodule sind LOW-aktiv, überprüfen Sie daher, ob LOW oder HIGH Ihr Relais einschaltet."
+  },
   "wiring": {
-    "title": "Verkabelungsschema",
-    "desc": "Füge später hier das Bild aus Fritzing hinzu. Dieser Platzhalter stabilisiert das Layout der Seite, bis das Schema fertig ist.",
-    "aria": "Platzhalter für Verkabelungsschema",
-    "placeholderTitle": "Fritzing-Platzhalter",
-    "placeholderSub": "Ersetze diesen Block durch ein Bild, wenn du das Schema exportierst."
+    "title": "Verdrahtungsdiagramme",
+    "desc": "Unten sehen Sie ein Beispiel für ein Geräte-Verdrahtungsschema zum Senden von POST-Anfragen an das Flovers-Backend. Klicken Sie auf das Bild, um es im Vollbildmodus zu öffnen.",
+    "ariaPrimary": "Beispiel für ein Geräte-Verdrahtungsschema für POST-Anfragen",
+    "ariaPump": "Platzhalter für Pumpen-/Relais-Verdrahtungsdiagramm",
+    "placeholderTitlePrimary": "Beispiel für Geräte-Verdrahtungsschema (POST)",
+    "placeholderSubPrimary": "Klicken Sie auf das Bild, um es im Vollbildmodus anzuzeigen.",
+    "placeholderTitlePump": "Pumpen-/Relais-Verdrahtungsschema",
+    "placeholderSubPump": "Fügen Sie hier später das zweite Verdrahtungsdiagramm hinzu."
   }
 }

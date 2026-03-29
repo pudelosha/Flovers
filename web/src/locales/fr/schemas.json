@@ -3,47 +3,53 @@
     "copy": "Copier",
     "copied": "Copié"
   },
-  "title": "Schémas des dispositifs et câblage",
-  "lead": "Cette page décrit comment envoyer des lectures des capteurs IoT vers Flovers. Vous y trouverez des points de terminaison, la structure du payload et un exemple de code Arduino pour ESP32/ESP8266 pour les capteurs populaires. Il y a aussi un espace réservé pour l'image du câblage (Fritzing) à remplacer plus tard.",
+  "title": "API des appareils et câblage",
+  "lead": "Cette page documente comment les appareils s’intègrent à Flovers. Les appareils envoient des relevés de capteurs au point de terminaison d’ingestion et peuvent lire le flux le plus récent de l’appareil depuis le point de terminaison de flux, par exemple pour déclencher des actions telles que le lancement d’une pompe à eau. Vous trouverez également le format de charge utile, un exemple de firmware Arduino généré pour envoyer des relevés, et un exemple simple de contrôle ESP32/Arduino pour lire le flux de l’appareil et activer l’arrosage.",
   "endpoints": {
-    "title": "Points de terminaison de l'API",
-    "note": "Les points de terminaison sont des exemples. Remplacez-les par l'adresse du backend en production lorsque vous connecterez un dispositif.",
+    "title": "Points de terminaison API",
+    "note": "Les appareils envoient des données de télémétrie au point de terminaison d’ingestion et peuvent lire le flux le plus récent de l’appareil depuis le point de terminaison de flux.",
     "ingest": {
-      "label": "Ingestion des lectures (POST)",
-      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+      "label": "Ingérer les relevés (appareil → backend)",
+      "value": "https://api.flovers.app/api/readings/ingest/"
     },
-    "read": {
-      "label": "Récupération des lectures (GET/POST)",
-      "value": "http://127.0.0.1:8000/api/readings/"
+    "feed": {
+      "label": "Lire le flux de l’appareil (appareil → backend)",
+      "value": "https://api.flovers.app/api/readings/feed/"
     }
   },
   "ingest": {
     "title": "Documentation POST ingest",
-    "desc": "Envoyez un échantillon de lecture sous forme de JSON. Le backend vérifie device_key + secret et enregistre les métriques sous le dispositif.",
-    "schemaLabel": "Structure du payload (JSON)",
-    "psLabel": "Exemple PowerShell (POST)"
-  },
-  "read": {
-    "title": "GET / documentation des lectures",
-    "desc": "Récupérez les lectures pour un dispositif sur une plage de temps. Si le backend prend en charge les requêtes POST, vous pouvez envoyer le corps JSON au lieu des paramètres dans l'URL.",
-    "exampleLabel": "Exemples (GET + POST optionnel)"
-  },
-  "arduino": {
-    "title": "Arduino (ESP32/ESP8266) — code exemple",
-    "desc": "Implémentation de référence : se connecte au Wi-Fi, lit les capteurs et envoie un POST JSON au point de terminaison d'ingestion à un intervalle défini. Calibrez les valeurs du capteur d'humidité (mouillé/sec) pour que les pourcentages aient du sens.",
-    "codeLabel": "Exemple Arduino (Wi-Fi + POST ingestion)",
-    "note": "Si vous avez besoin de timestamps corrects, ajoutez la synchronisation NTP (configTime) et générez l'ISO-8601 UTC sur le dispositif.",
+    "desc": "Envoyez un échantillon de relevé sous forme de JSON. Le backend authentifie l’appareil à l’aide de device_key et secret, puis stocke les métriques fournies sous cet appareil.",
+    "schemaLabel": "Structure de la charge utile (JSON)",
+    "psLabel": "Exemple PowerShell (POST)",
+    "arduinoTitle": "Firmware généré Arduino (ESP32/ESP8266)",
+    "arduinoDesc": "Le firmware généré se connecte au Wi-Fi, synchronise l’heure avec NTP, lit les capteurs activés et envoie du JSON au point de terminaison d’ingestion à intervalle fixe.",
+    "arduinoCodeLabel": "Firmware Arduino généré (POST relevés)",
+    "arduinoNote": "Utilisez le firmware généré tel quel pour l’appareil. Avant le téléversement, configurez les identifiants Wi-Fi et vérifiez le câblage des capteurs, les affectations de broches et les valeurs de calibration du sol.",
     "sensors": {
       "bh1750": "BH1750 (GY-302) — intensité lumineuse via I2C",
-      "moisture": "Capteur capacitif d'humidité du sol — lecture analogique (nécessite une calibration mouillé/sec)",
-      "bme280": "BME280 — température et humidité via I2C (pression en option)"
+      "moisture": "Capteur capacitif d’humidité du sol — lecture analogique avec calibration humide/sec",
+      "bme280": "BME280 — température et humidité via I2C (pression optionnelle)"
     }
   },
+  "feed": {
+    "title": "Documentation GET feed",
+    "desc": "Lire le flux le plus récent de l’appareil depuis le backend. Les appareils peuvent utiliser ce point de terminaison pour recevoir l’état actuel ou des actions, par exemple le lancement d’une pompe à eau.",
+    "exampleLabel": "Exemple de requête",
+    "responseLabel": "Exemple de charge utile de réponse",
+    "controlTitle": "Exemple d’arrosage ESP32 / Arduino (GET)",
+    "controlDesc": "Cet exemple montre comment un ESP32 peut appeler le point de terminaison de flux, analyser la dernière réponse, comparer l’humidité du sol à un seuil défini et activer une pompe à eau contrôlée par relais pendant une durée configurable. Après l’arrosage ou la vérification des conditions, l’appareil attend un intervalle configurable avant de vérifier à nouveau.",
+    "controlCodeLabel": "Exemple ESP32 / Arduino — GET flux et déclenchement de la pompe",
+    "controlNote": "Ajustez la logique du relais, la durée de fonctionnement de la pompe, le seuil d’humidité et le délai d’interrogation en fonction de votre matériel. De nombreux modules relais sont actifs en LOW, vérifiez donc si LOW ou HIGH active votre relais."
+  },
   "wiring": {
-    "title": "Schéma de câblage",
-    "desc": "Ajoutez ici plus tard l'image de Fritzing. Cet espace réservé stabilise la mise en page jusqu'à ce que le schéma soit prêt.",
-    "aria": "Espace réservé pour le schéma de câblage",
-    "placeholderTitle": "Espace réservé Fritzing",
-    "placeholderSub": "Remplacez ce bloc par une image lorsque vous exportez le schéma."
+    "title": "Schémas de câblage",
+    "desc": "Ci-dessous se trouve un exemple de schéma de câblage d’un appareil pour envoyer des requêtes POST au backend Flovers. Cliquez sur l’image pour l’ouvrir en plein écran.",
+    "ariaPrimary": "Exemple de schéma de câblage d’un appareil pour les requêtes POST",
+    "ariaPump": "Espace réservé pour le schéma de câblage du relais de pompe",
+    "placeholderTitlePrimary": "Exemple de schéma de câblage d’un appareil (POST)",
+    "placeholderSubPrimary": "Cliquez sur l’image pour l’afficher en plein écran.",
+    "placeholderTitlePump": "Schéma de câblage pompe / relais",
+    "placeholderSubPump": "Ajoutez ici le deuxième schéma de câblage ultérieurement."
   }
 }

@@ -3,47 +3,53 @@
     "copy": "Kopiuj",
     "copied": "Skopiowano"
   },
-  "title": "Schematy urządzeń i okablowanie",
-  "lead": "Ta strona opisuje, jak wysyłać odczyty z czujników IoT do Flovers. Znajdziesz tu endpointy, strukturę payloadu oraz przykładowy kod Arduino dla ESP32/ESP8266 dla popularnych czujników. Jest też placeholder na obrazek z okablowaniem (Fritzing) do podmiany później.",
+  "title": "API urządzenia i okablowanie",
+  "lead": "Ta strona opisuje, jak urządzenia integrują się z Flovers. Urządzenia wysyłają odczyty czujników do punktu końcowego ingest i mogą odczytywać najnowszy kanał urządzenia z punktu końcowego feed, na przykład aby wyzwalać działania takie jak uruchomienie pompy wodnej. Znajdziesz tu również format payloadu, wygenerowany przykład firmware Arduino do wysyłania odczytów oraz prosty przykład sterowania ESP32/Arduino do odczytu kanału urządzenia i aktywowania podlewania.",
   "endpoints": {
-    "title": "API endpointy",
-    "note": "Endpointy są przykładowe. Podmień je na produkcyjny adres backendu, gdy będziesz podpinać urządzenie.",
+    "title": "Punkty końcowe API",
+    "note": "Urządzenia wysyłają telemetrię do punktu końcowego ingest i mogą odczytywać najnowszy kanał urządzenia z punktu końcowego feed.",
     "ingest": {
-      "label": "Ingest odczytów (POST)",
-      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+      "label": "Przyjmowanie odczytów (urządzenie → backend)",
+      "value": "https://api.flovers.app/api/readings/ingest/"
     },
-    "read": {
-      "label": "Pobieranie odczytów (GET/POST)",
-      "value": "http://127.0.0.1:8000/api/readings/"
+    "feed": {
+      "label": "Odczyt kanału urządzenia (urządzenie → backend)",
+      "value": "https://api.flovers.app/api/readings/feed/"
     }
   },
   "ingest": {
     "title": "Dokumentacja POST ingest",
-    "desc": "Wyślij jedną próbkę odczytu jako JSON. Backend weryfikuje device_key + secret i zapisuje metryki pod urządzeniem.",
+    "desc": "Wyślij jedną próbkę odczytu jako JSON. Backend uwierzytelnia urządzenie za pomocą device_key i secret, a następnie zapisuje dostarczone metryki dla tego urządzenia.",
     "schemaLabel": "Struktura payloadu (JSON)",
-    "psLabel": "Przykład PowerShell (POST)"
-  },
-  "read": {
-    "title": "GET / dokumentacja odczytu",
-    "desc": "Pobieraj odczyty dla urządzenia w zakresie czasu. Jeśli backend wspiera zapytania przez POST, możesz wysłać body JSON zamiast parametrów w URL.",
-    "exampleLabel": "Przykłady (GET + opcjonalny POST)"
-  },
-  "arduino": {
-    "title": "Arduino (ESP32/ESP8266) — przykładowy kod",
-    "desc": "Referencyjna implementacja: łączy się z Wi-Fi, czyta czujniki i wysyła JSON POST do endpointu ingest w ustalonym interwale. Skalibruj wartości czujnika wilgotności (mokro/sucho), żeby procenty miały sens.",
-    "codeLabel": "Arduino sample (Wi-Fi + POST ingest)",
-    "note": "Jeśli potrzebujesz poprawnych timestampów, dodaj synchronizację czasu NTP (configTime) i generuj ISO-8601 UTC na urządzeniu.",
+    "psLabel": "Przykład PowerShell (POST)",
+    "arduinoTitle": "Wygenerowany firmware Arduino (ESP32/ESP8266)",
+    "arduinoDesc": "Wygenerowany firmware łączy się z Wi-Fi, synchronizuje czas z NTP, odczytuje włączone czujniki i wysyła JSON do punktu końcowego ingest w stałych odstępach czasu.",
+    "arduinoCodeLabel": "Wygenerowany firmware Arduino (POST odczyty)",
+    "arduinoNote": "Użyj wygenerowanego firmware zgodnie z przeznaczeniem dla urządzenia. Przed wgraniem ustaw dane Wi-Fi oraz sprawdź okablowanie czujników, przypisania pinów i wartości kalibracji gleby.",
     "sensors": {
-      "bh1750": "BH1750 (GY-302) — natężenie światła po I2C",
-      "moisture": "Pojemnościowy czujnik wilgotności gleby — odczyt analogowy (wymaga kalibracji mokro/sucho)",
-      "bme280": "BME280 — temperatura i wilgotność po I2C (ciśnienie opcjonalnie)"
+      "bh1750": "BH1750 (GY-302) — natężenie światła przez I2C",
+      "moisture": "Pojemnościowy czujnik wilgotności gleby — odczyt analogowy z kalibracją mokre/suche",
+      "bme280": "BME280 — temperatura i wilgotność przez I2C (ciśnienie opcjonalne)"
     }
   },
+  "feed": {
+    "title": "Dokumentacja GET feed",
+    "desc": "Odczytaj najnowszy kanał urządzenia z backendu. Urządzenia mogą używać tego punktu końcowego do odbierania bieżącego stanu lub działań, na przykład uruchomienia pompy wodnej.",
+    "exampleLabel": "Przykładowe żądanie",
+    "responseLabel": "Przykładowy payload odpowiedzi",
+    "controlTitle": "Przykład podlewania ESP32 / Arduino (GET)",
+    "controlDesc": "Ten przykład pokazuje, jak ESP32 może wywołać punkt końcowy feed, sparsować najnowszą odpowiedź, porównać wilgotność gleby z określonym progiem i aktywować pompę wodną sterowaną przekaźnikiem na konfigurowalny czas. Po podlaniu lub sprawdzeniu warunków urządzenie czeka określony czas przed ponownym sprawdzeniem.",
+    "controlCodeLabel": "Przykład ESP32 / Arduino — GET feed i uruchomienie pompy",
+    "controlNote": "Dostosuj logikę przekaźnika, czas pracy pompy, próg wilgotności i opóźnienie odpytywania do swojego sprzętu. Wiele modułów przekaźników jest aktywnych w stanie LOW, więc sprawdź, czy LOW lub HIGH włącza przekaźnik."
+  },
   "wiring": {
-    "title": "Schemat okablowania",
-    "desc": "Dodaj tu później obrazek z Fritzing. Ten placeholder stabilizuje układ strony, dopóki schemat nie będzie gotowy.",
-    "aria": "Placeholder schematu okablowania",
-    "placeholderTitle": "Placeholder Fritzing",
-    "placeholderSub": "Podmień ten blok na obrazek, gdy wyeksportujesz schemat."
+    "title": "Schematy okablowania",
+    "desc": "Poniżej znajduje się przykładowy schemat okablowania urządzenia do wysyłania żądań POST do backendu Flovers. Kliknij obraz, aby otworzyć go na pełnym ekranie.",
+    "ariaPrimary": "Przykładowy schemat okablowania urządzenia dla żądań POST",
+    "ariaPump": "Miejsce na schemat okablowania przekaźnika pompy",
+    "placeholderTitlePrimary": "Przykładowy schemat okablowania urządzenia (POST)",
+    "placeholderSubPrimary": "Kliknij obraz, aby wyświetlić go na pełnym ekranie.",
+    "placeholderTitlePump": "Schemat okablowania pompy / przekaźnika",
+    "placeholderSubPump": "Dodaj tutaj drugi schemat okablowania później."
   }
 }
