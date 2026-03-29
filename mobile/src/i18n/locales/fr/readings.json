@@ -1,30 +1,30 @@
 {
   "readings": {
     "header": {
-      "title": "Relevés"
+      "title": "Lectures"
     },
     "defaults": {
       "thisDevice": "cet appareil"
     },
     "tile": {
-      "lastReadPrefix": "Dernier relevé"
+      "lastReadPrefix": "Dernière lecture"
     },
     "menu": {
-      "history": "Historique des relevés",
+      "history": "Historique des lectures",
       "plantDetails": "Détails de la plante",
       "editDevice": "Modifier l’appareil",
       "deleteDevice": "Supprimer l’appareil"
     },
     "fab": {
-      "linkDevice": "Connecter un appareil",
+      "linkDevice": "Lier un appareil",
       "deviceSetup": "Configuration de l’appareil",
       "sort": "Trier",
       "filter": "Filtrer",
       "clearFilter": "Effacer le filtre"
     },
     "empty": {
-      "title": "Aucun appareil",
-      "description": "Les appareils permettent d’enregistrer les relevés de température, d’humidité, d’intensité lumineuse et d’humidité du sol pour une plante.\n\nAppuyez sur l’action « + Connecter un appareil » pour en ajouter un nouveau. Choisissez une plante, nommez l’appareil, sélectionnez les capteurs et définissez l’intervalle d’échantillonnage. Ensuite, ouvrez la Configuration de l’appareil pour consulter le secret du compte, le rafraîchir et envoyer le croquis Arduino/ESP prêt à être collé."
+      "title": "Aucun appareil pour le moment",
+      "description": "Les appareils vous permettent d’ingérer des relevés de température, d’humidité, de lumière et d’humidité du sol pour une plante.\n\nAppuyez sur l’action « + Lier un appareil » pour en ajouter un. Choisissez une plante, nommez l’appareil, sélectionnez les capteurs et définissez un intervalle d’échantillonnage. Vous pouvez ensuite ouvrir Configuration de l’appareil pour voir le secret de votre compte, le faire pivoter et envoyer par e-mail un sketch Arduino/ESP prêt à coller."
     },
     "toasts": {
       "unauthorized": "Non autorisé. Veuillez vous reconnecter.",
@@ -40,9 +40,9 @@
       "updateFailedPrefix": "Échec de la mise à jour",
       "setupLoadFailed": "Échec du chargement de la configuration",
       "setupLoadFailedPrefix": "Échec du chargement de la configuration",
-      "secretRotated": "Secret rafraîchi",
-      "rotateFailed": "Échec du rafraîchissement du secret",
-      "rotateFailedPrefix": "Échec du rafraîchissement du secret"
+      "secretRotated": "Secret renouvelé",
+      "rotateFailed": "Échec du renouvellement",
+      "rotateFailedPrefix": "Échec du renouvellement"
     }
   }
 }

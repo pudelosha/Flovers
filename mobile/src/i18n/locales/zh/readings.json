@@ -7,7 +7,7 @@
       "thisDevice": "此设备"
     },
     "tile": {
-      "lastReadPrefix": "最后一次读数"
+      "lastReadPrefix": "最后读取"
     },
     "menu": {
       "history": "读数历史",
@@ -23,8 +23,8 @@
       "clearFilter": "清除筛选"
     },
     "empty": {
-      "title": "没有设备",
-      "description": "设备可以保存植物的温度、湿度、光照强度和土壤湿度读数。\n\n点击“+ 连接设备”操作以添加新设备。选择植物，命名设备，选择传感器并设置采样间隔。然后打开设备设置以查看账户密钥，刷新密钥并发送准备好的Arduino/ESP草图进行粘贴。"
+      "title": "暂无设备",
+      "description": "设备可让您采集植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 连接设备”操作以添加一个。选择植物，命名设备，选择传感器，并设置采样间隔。然后您可以打开设备设置以查看您的账户密钥、进行轮换，并通过电子邮件发送可直接粘贴的 Arduino/ESP 示例代码。"
     },
     "toasts": {
       "unauthorized": "未授权。请重新登录。",
@@ -40,9 +40,9 @@
       "updateFailedPrefix": "更新失败",
       "setupLoadFailed": "加载设置失败",
       "setupLoadFailedPrefix": "加载设置失败",
-      "secretRotated": "密钥已刷新",
-      "rotateFailed": "刷新密钥失败",
-      "rotateFailedPrefix": "刷新密钥失败"
+      "secretRotated": "密钥已轮换",
+      "rotateFailed": "轮换失败",
+      "rotateFailedPrefix": "轮换失败"
     }
   }
 }

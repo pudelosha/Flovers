@@ -10,39 +10,39 @@
       "lastReadPrefix": "Ultima lettura"
     },
     "menu": {
-      "history": "Cronologia delle letture",
+      "history": "Cronologia letture",
       "plantDetails": "Dettagli della pianta",
       "editDevice": "Modifica dispositivo",
       "deleteDevice": "Elimina dispositivo"
     },
     "fab": {
       "linkDevice": "Collega dispositivo",
-      "deviceSetup": "Configurazione del dispositivo",
+      "deviceSetup": "Configurazione dispositivo",
       "sort": "Ordina",
       "filter": "Filtra",
       "clearFilter": "Cancella filtro"
     },
     "empty": {
-      "title": "Nessun dispositivo",
-      "description": "I dispositivi consentono di registrare letture di temperatura, umidità, intensità luminosa e umidità del suolo per la pianta.\n\nTocca l'azione «+ Collega dispositivo» per aggiungerne uno nuovo. Seleziona la pianta, assegna un nome al dispositivo, seleziona i sensori e imposta l'intervallo di campionamento. Quindi apri la Configurazione del dispositivo per visualizzare il segreto dell'account, aggiornarlo e inviare lo sketch Arduino/ESP pronto da incollare."
+      "title": "Nessun dispositivo ancora",
+      "description": "I dispositivi ti permettono di acquisire letture di temperatura, umidità, luce e umidità del suolo per una pianta.\n\nTocca l’azione “+ Collega dispositivo” per aggiungerne uno. Scegli una pianta, assegna un nome al dispositivo, seleziona i sensori e imposta un intervallo di campionamento. Puoi quindi aprire Configurazione dispositivo per visualizzare il segreto del tuo account, ruotarlo e inviare via email uno sketch Arduino/ESP pronto da incollare."
     },
     "toasts": {
-      "unauthorized": "Nessuna autorizzazione. Accedi di nuovo.",
-      "loadFailed": "Impossibile caricare i dispositivi",
+      "unauthorized": "Non autorizzato. Effettua nuovamente l’accesso.",
+      "loadFailed": "Caricamento dei dispositivi non riuscito",
       "deviceDeleted": "Dispositivo eliminato",
-      "deleteFailed": "Impossibile eliminare",
-      "deleteFailedPrefix": "Impossibile eliminare",
+      "deleteFailed": "Eliminazione non riuscita",
+      "deleteFailedPrefix": "Eliminazione non riuscita",
       "deviceAdded": "Dispositivo aggiunto",
       "deviceUpdated": "Dispositivo aggiornato",
-      "addFailed": "Impossibile aggiungere",
-      "addFailedPrefix": "Impossibile aggiungere",
-      "updateFailed": "Impossibile aggiornare",
-      "updateFailedPrefix": "Impossibile aggiornare",
-      "setupLoadFailed": "Impossibile caricare la configurazione",
-      "setupLoadFailedPrefix": "Impossibile caricare la configurazione",
-      "secretRotated": "Segreto aggiornato",
-      "rotateFailed": "Impossibile aggiornare il segreto",
-      "rotateFailedPrefix": "Impossibile aggiornare il segreto"
+      "addFailed": "Aggiunta non riuscita",
+      "addFailedPrefix": "Aggiunta non riuscita",
+      "updateFailed": "Aggiornamento non riuscito",
+      "updateFailedPrefix": "Aggiornamento non riuscito",
+      "setupLoadFailed": "Caricamento della configurazione non riuscito",
+      "setupLoadFailedPrefix": "Caricamento della configurazione non riuscito",
+      "secretRotated": "Segreto ruotato",
+      "rotateFailed": "Rotazione non riuscita",
+      "rotateFailedPrefix": "Rotazione non riuscita"
     }
   }
 }

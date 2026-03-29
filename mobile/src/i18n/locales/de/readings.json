@@ -7,7 +7,7 @@
       "thisDevice": "dieses Gerät"
     },
     "tile": {
-      "lastReadPrefix": "Letzter Messwert"
+      "lastReadPrefix": "Zuletzt gelesen"
     },
     "menu": {
       "history": "Messwertverlauf",
@@ -16,33 +16,33 @@
       "deleteDevice": "Gerät löschen"
     },
     "fab": {
-      "linkDevice": "Gerät verbinden",
-      "deviceSetup": "Gerätekonfiguration",
+      "linkDevice": "Gerät verknüpfen",
+      "deviceSetup": "Geräteeinrichtung",
       "sort": "Sortieren",
       "filter": "Filtern",
-      "clearFilter": "Filter zurücksetzen"
+      "clearFilter": "Filter löschen"
     },
     "empty": {
-      "title": "Keine Geräte",
-      "description": "Geräte ermöglichen das Speichern von Messwerten für Temperatur, Luftfeuchtigkeit, Lichtintensität sowie Bodenfeuchte einer Pflanze.\n\nTippe auf die Aktion „+ Gerät verbinden“, um ein neues hinzuzufügen. Wähle eine Pflanze, benenne das Gerät, wähle die Sensoren aus und lege das Abtastintervall fest. Öffne anschließend die Gerätekonfiguration, um das Kontosekret einzusehen, es zu erneuern und die fertige Arduino/ESP-Skizze zum Einfügen zu senden."
+      "title": "Noch keine Geräte",
+      "description": "Geräte ermöglichen es dir, Temperatur-, Feuchtigkeits-, Licht- und Bodenfeuchtigkeitswerte für eine Pflanze zu erfassen.\n\nTippe auf die Aktion „+ Gerät verknüpfen“, um eines hinzuzufügen. Wähle eine Pflanze aus, benenne das Gerät, wähle Sensoren und lege ein Abtastintervall fest. Anschließend kannst du die Geräteeinrichtung öffnen, um dein Kontogeheimnis anzuzeigen, es zu rotieren und eine einfügebereite Arduino/ESP-Skizze per E-Mail zu senden."
     },
     "toasts": {
-      "unauthorized": "Keine Autorisierung. Bitte erneut anmelden.",
+      "unauthorized": "Nicht autorisiert. Bitte melde dich erneut an.",
       "loadFailed": "Geräte konnten nicht geladen werden",
       "deviceDeleted": "Gerät gelöscht",
-      "deleteFailed": "Konnte nicht gelöscht werden",
-      "deleteFailedPrefix": "Konnte nicht gelöscht werden",
+      "deleteFailed": "Löschen fehlgeschlagen",
+      "deleteFailedPrefix": "Löschen fehlgeschlagen",
       "deviceAdded": "Gerät hinzugefügt",
       "deviceUpdated": "Gerät aktualisiert",
-      "addFailed": "Konnte nicht hinzugefügt werden",
-      "addFailedPrefix": "Konnte nicht hinzugefügt werden",
-      "updateFailed": "Konnte nicht aktualisiert werden",
-      "updateFailedPrefix": "Konnte nicht aktualisiert werden",
-      "setupLoadFailed": "Konfiguration konnte nicht geladen werden",
-      "setupLoadFailedPrefix": "Konfiguration konnte nicht geladen werden",
-      "secretRotated": "Sekret erneuert",
-      "rotateFailed": "Sekret konnte nicht erneuert werden",
-      "rotateFailedPrefix": "Sekret konnte nicht erneuert werden"
+      "addFailed": "Hinzufügen fehlgeschlagen",
+      "addFailedPrefix": "Hinzufügen fehlgeschlagen",
+      "updateFailed": "Aktualisierung fehlgeschlagen",
+      "updateFailedPrefix": "Aktualisierung fehlgeschlagen",
+      "setupLoadFailed": "Einrichtung konnte nicht geladen werden",
+      "setupLoadFailedPrefix": "Einrichtung konnte nicht geladen werden",
+      "secretRotated": "Geheimnis rotiert",
+      "rotateFailed": "Rotation fehlgeschlagen",
+      "rotateFailedPrefix": "Rotation fehlgeschlagen"
     }
   }
 }
