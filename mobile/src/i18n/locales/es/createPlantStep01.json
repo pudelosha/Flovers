@@ -1,21 +1,21 @@
 {
   "createPlant": {
     "step01": {
-      "title": "Elige una planta",
-      "subtitle": "Puedes explorar nuestra biblioteca completa de plantas, elegir de la lista popular o escanear una planta usando la cámara. También puedes omitir este paso, pero seleccionar una planta nos permitirá sugerir automáticamente tareas de cuidado, como el riego.",
+      "title": "Selecciona una planta",
+      "subtitle": "Puedes buscar en nuestra biblioteca completa de plantas, elegir de la lista popular o escanear una planta usando tu cámara. También puedes omitir este paso, pero seleccionar una planta nos permite sugerirte automáticamente tareas de cuidado como el riego.",
       "scanButton": "Escanear planta",
       "searchPlaceholder": "Buscar planta",
       "popularPlants": "Plantas populares",
       "noPlantsAvailable": "No hay plantas disponibles",
-      "errorSearch": "No se pudo cargar la lista de plantas.",
-      "errorPopular": "No se pudieron cargar las plantas populares"
+      "errorSearch": "Error al cargar la lista de plantas.",
+      "errorPopular": "Error al cargar las plantas populares"
     },
     "scannerModal": {
       "title": "Escanear planta",
       "selectPlant": "Selecciona la planta detectada",
-      "scanInstructions": "Toma una foto o elige una de la galería. Usa una imagen clara y de buena calidad que muestre bien la forma de las hojas de la planta, centrada y sin estar bloqueada por otras plantas u objetos.",
-      "noPhoto": "Sin foto",
-      "takePhoto": "Tomar foto",
+      "scanInstructions": "Toma una foto o elige una de tu galería. Usa una imagen clara y de buena calidad que muestre bien la forma de las hojas de la planta, centrada y sin estar bloqueada por otras plantas u objetos.",
+      "noPhoto": "No se ha seleccionado ninguna foto",
+      "takePhoto": "Tomar una foto",
       "fromGallery": "Desde la galería",
       "recognize": "Reconocer planta",
       "cameraRequired": "Permiso requerido",
@@ -23,11 +23,17 @@
       "libraryRequired": "Permiso requerido",
       "libraryPermissionMessage": "Por favor, concede permisos de medios para seleccionar una foto.",
       "cameraError": "Error de cámara",
-      "libraryError": "Error de selección",
+      "libraryError": "Error del selector",
       "cameraFailure": "No se pudo abrir la cámara.",
       "libraryFailure": "No se pudo abrir la galería.",
       "recognitionFailure": "No se pudo reconocer la planta.",
-      "noResults": "Sin resultados. Intenta tomar una foto más clara.",
+      "noResults": "No se obtuvieron resultados. Intenta con una foto más clara.",
+      "resultsDescription": "Estas son las 3 mejores coincidencias basadas en la imagen proporcionada. Toca una de las 3 imágenes de abajo para seleccionar la definición de la planta.",
+      "matchRate": "Porcentaje de coincidencia",
+      "closestMatch": "Coincidencia más cercana",
+      "plantRecognitionErrorTitle": "Error de reconocimiento de planta",
+      "plantRecognitionErrorMessage": "Error al obtener detalles de la planta para {{key}}. {{message}}",
+      "tryAgain": "Por favor, inténtalo de nuevo.",
       "back": "Atrás",
       "close": "Cerrar"
     }
