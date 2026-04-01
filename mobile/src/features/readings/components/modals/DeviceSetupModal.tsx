@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text, Pressable, ScrollView, Platform } from "react-native";
+import { View, Text, Pressable, ScrollView, Platform, Linking } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { LANGS } from "../../../../i18n/locales/index";
 
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -12,15 +14,30 @@ type Props = {
 
   // Content props you can pass from screen (or hardcode for now)
   writeEndpoint?: string; // POST add reading
-  readEndpoint?: string;  // GET/POST read readings
+  readEndpoint?: string; // GET/POST read readings
   authSecret?: string;
 
   onClose: () => void;
 
-  // Optional hooks to wire later
+  // Optional hook to wire later
   onRotateSecret?: () => Promise<void> | void;
-  onDownloadPdf?: () => void;
 };
+
+const WEB_BASE = "https://flovers.app";
+
+function normalizeLang(lang: any) {
+  if (!lang) return "en";
+
+  const raw = String(lang).toLowerCase();
+  const base = raw.split("-")[0];
+
+  return (LANGS as readonly string[]).includes(base) ? base : "en";
+}
+
+function buildSchemasUrl(lang: any) {
+  const safeLang = normalizeLang(lang);
+  return `${WEB_BASE}/${safeLang}/schemas`;
+}
 
 export default function DeviceSetupModal({
   visible,
@@ -29,18 +46,27 @@ export default function DeviceSetupModal({
   authSecret = "••••••••••••••",
   onClose,
   onRotateSecret,
-  onDownloadPdf,
 }: Props) {
   const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
 
   const [showConfirmRotate, setShowConfirmRotate] = React.useState(false);
   const [revealSecret, setRevealSecret] = React.useState(false);
 
-  // Move the hook ABOVE the conditional return
   const masked = React.useMemo(() => {
     const len = Math.max(10, (authSecret || "").replace(/\s/g, "").length || 12);
     return "•".repeat(len);
   }, [authSecret]);
+
+  const openSchemas = React.useCallback(async () => {
+    const url = buildSchemasUrl(currentLanguage);
+
+    try {
+      await Linking.openURL(url);
+    } catch (error) {
+      console.warn("Failed to open schemas URL:", url, error);
+    }
+  }, [currentLanguage]);
 
   if (!visible) return null;
 
@@ -115,7 +141,9 @@ export default function DeviceSetupModal({
             </Block>
 
             {/* Current secret + rotate */}
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+            <View
+              style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}
+            >
               <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.currentAuthSecret")}</Text>
               <Pressable
                 onPress={() => setRevealSecret((v) => !v)}
@@ -162,12 +190,14 @@ export default function DeviceSetupModal({
                 alignItems: "center",
               }}
             >
-              <Text style={s.promptBtnText}>{t("readingsModals.deviceSetup.generateNewSecret")}</Text>
+              <Text style={s.promptBtnText}>
+                {t("readingsModals.deviceSetup.generateNewSecret")}
+              </Text>
             </Pressable>
 
-            {/* Download PDF doc */}
+            {/* Open website docs */}
             <Pressable
-              onPress={onDownloadPdf}
+              onPress={openSchemas}
               style={{
                 marginTop: 12,
                 paddingVertical: 12,
@@ -176,7 +206,9 @@ export default function DeviceSetupModal({
                 alignItems: "center",
               }}
             >
-              <Text style={s.promptPrimaryText}>{t("readingsModals.deviceSetup.downloadPdfDocumentation")}</Text>
+              <Text style={s.promptPrimaryText}>
+                {t("readingsModals.deviceSetup.openSchemasDocumentation")}
+              </Text>
             </Pressable>
 
             {/* Footer buttons (inside scroll, like EditPlantModal) */}
@@ -228,7 +260,9 @@ export default function DeviceSetupModal({
                     }
                   }}
                 >
-                  <Text style={s.promptPrimaryText}>{t("readingsModals.deviceSetup.rotate")}</Text>
+                  <Text style={s.promptPrimaryText}>
+                    {t("readingsModals.deviceSetup.rotate")}
+                  </Text>
                 </Pressable>
               </View>
             </View>
