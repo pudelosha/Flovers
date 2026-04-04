@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { Image, ImageBackground, StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../providers/useAuth";
@@ -47,7 +47,6 @@ const linking = {
   prefixes: ["flovers://"],
   config: {
     screens: {
-      // auth
       Login: "login",
       Register: "register",
       ForgotPassword: "forgot-password",
@@ -55,7 +54,6 @@ const linking = {
       ConfirmEmail: "confirm-email",
       ResetPassword: "reset-password",
 
-      // app tabs
       Home: "home",
       Plants: "plants",
       Reminders: "reminders",
@@ -63,17 +61,13 @@ const linking = {
       Profile: "profile",
       Scanner: "scanner",
 
-      // readings flow
       ReadingsHistory: "readings-history",
       ReadingDetails: "reading-details",
       EditSensors: "edit-sensors",
       SortHistory: "sort-history",
       FilterHistory: "filter-history",
 
-      // task history
       TaskHistory: "task-history",
-
-      // locations
       PlantLocations: "locations",
     },
   },
@@ -152,11 +146,13 @@ export default function RootNavigator() {
 
   if (loading) {
     return (
-      <ImageBackground
-        source={bgSource}
-        style={{ flex: 1 }}
-        resizeMode="cover"
-      />
+      <View style={styles.splashContainer}>
+        <Image
+          source={require("../../assets/images/splash_logo.png")}
+          style={styles.splashLogo}
+          resizeMode="contain"
+        />
+      </View>
     );
   }
 
@@ -165,7 +161,6 @@ export default function RootNavigator() {
       <ImageBackground source={bgSource} style={{ flex: 1 }} resizeMode="cover">
         {token ? <AppNavigator /> : <AuthNavigator />}
 
-        {/* block interaction while settings refresh (no visual change) */}
         {settingsLoading ? (
           <View pointerEvents="auto" style={StyleSheet.absoluteFillObject} />
         ) : null}
@@ -173,3 +168,16 @@ export default function RootNavigator() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  splashContainer: {
+    flex: 1,
+    backgroundColor: "#0B1820",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  splashLogo: {
+    width: 220,
+    height: 220,
+  },
+});

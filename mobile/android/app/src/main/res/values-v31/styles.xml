@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Theme.Flovers.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#0B1820</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_empty</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+    </style>
+
+</resources>

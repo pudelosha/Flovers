@@ -10,7 +10,7 @@ import java.io.FileInputStream
 
 /** React-native-config env mapping */
 project.ext.envConfigFiles = [
-    debug: ".env.production",
+    debug  : ".env.production",
     release: ".env.production"
 ]
 
@@ -19,14 +19,14 @@ react {
 }
 
 /**
- * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
+ * Set this to true to run Proguard on release builds to minify the Java bytecode.
  */
 def enableProguardInReleaseBuilds = false
 
 /**
  * JavaScriptCore flavor (used when Hermes is disabled)
  */
-def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
+def jscFlavor = "io.github.react-native-community:jsc-android:2026004.+"
 
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -39,13 +39,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    // MUST match Firebase Android app package
     namespace "com.flovers.mobile"
 
     defaultConfig {
-        // MUST match Firebase Android app package
         applicationId "com.flovers.mobile"
-
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
 
@@ -95,9 +92,12 @@ dependencies {
     // React Native core
     implementation("com.facebook.react:react-android")
 
+    // Android 12+ splash screen support
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
-        implementation jscFlavor
+        implementation(jscFlavor)
     }
 }
