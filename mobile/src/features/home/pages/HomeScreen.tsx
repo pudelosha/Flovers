@@ -87,6 +87,9 @@ export default function HomeScreen() {
 
   // FlatList ref to snap back to the top on focus
   const listRef = useRef<any>(null);
+  const didInitialLoadRef = useRef(false);
+  const skipNextFocusRefreshRef = useRef(true);
+  const loadInFlightRef = useRef<Promise<void> | null>(null);
 
   // Local view filter for FAB "Show overdue" / "Show due today"
   const [viewFilter, setViewFilter] = useState<ViewFilter>("all");
@@ -134,38 +137,61 @@ export default function HomeScreen() {
     setCompleteIntervalText("");
   }, []);
 
-  const load = useCallback(async () => {
-    try {
-      const data = await fetchHomeTasks();
-      setTasks(data);
-      setHasLoadedOnce(true);
-    } catch (e: any) {
-      showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
-      setTasks([]);
-      setHasLoadedOnce(true);
-    } finally {
-      setLoading(false);
-    }
-  }, [t]);
+  const load = useCallback(
+    async ({ showSpinner = false }: { showSpinner?: boolean } = {}) => {
+      if (loadInFlightRef.current) {
+        return loadInFlightRef.current;
+      }
 
-  // Refresh data when the screen is focused, but do NOT show stale tiles first.
-  // Adjustment: on entry (focus), always reset viewFilter to "all" so Home opens unfiltered.
-  useFocusEffect(
-    useCallback(() => {
-      let mounted = true;
-      (async () => {
-        setViewFilter("all");
+      if (showSpinner) {
         setLoading(true);
-        setTasks([]); // clear stale tiles right away to avoid flash
+      }
+
+      const request = (async () => {
         try {
-          await load();
+          const data = await fetchHomeTasks();
+          setTasks(data);
+          setHasLoadedOnce(true);
+        } catch (e: any) {
+          showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
+          setTasks([]);
+          setHasLoadedOnce(true);
         } finally {
-          if (!mounted) return;
+          if (showSpinner) {
+            setLoading(false);
+          }
         }
       })();
-      return () => {
-        mounted = false;
-      };
+
+      loadInFlightRef.current = request;
+
+      try {
+        await request;
+      } finally {
+        loadInFlightRef.current = null;
+      }
+    },
+    [t]
+  );
+
+  useEffect(() => {
+    if (didInitialLoadRef.current) return;
+    didInitialLoadRef.current = true;
+    load({ showSpinner: true });
+  }, [load]);
+
+  // Refresh data on later returns to the screen, but skip the first focus after mount
+  useFocusEffect(
+    useCallback(() => {
+      setViewFilter("all");
+
+      if (skipNextFocusRefreshRef.current) {
+        skipNextFocusRefreshRef.current = false;
+        return undefined;
+      }
+
+      load({ showSpinner: false });
+      return undefined;
     }, [load])
   );
 
@@ -187,7 +213,7 @@ export default function HomeScreen() {
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
-      await load();
+      await load({ showSpinner: false });
     } finally {
       setRefreshing(false);
     }
@@ -481,7 +507,7 @@ export default function HomeScreen() {
       closeCompleteModal();
 
       // Reload from backend so cloned/next task appears
-      await load(); // load() will setLoading(false) in its finally
+      await load({ showSpinner: true });
 
       const okCount = results.filter((r) => r.status === "fulfilled").length;
       const failCount = results.length - okCount;
@@ -506,7 +532,7 @@ export default function HomeScreen() {
       }
     } catch (e: any) {
       closeCompleteModal();
-      setLoading(false); // in case load() was not reached
+      setLoading(false);
       showToast(
         e?.message
           ? `${t("home.toasts.completeFailed")}: ${e.message}`
@@ -663,11 +689,11 @@ export default function HomeScreen() {
             <Animated.View
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
-                isOpen && { zIndex: 50, elevation: 50 }, // keep open row above others
+                isOpen && { zIndex: 50, elevation: 50 },
               ]}
             >
               <TaskTile
-                task={item as Task} // HomeTask extends Task
+                task={item as Task}
                 isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(item.id)}
                 onMarkComplete={() => {
@@ -699,7 +725,7 @@ export default function HomeScreen() {
 
                   nav.navigate(
                     "PlantDetails" as never,
-                    { id: plantId } as never // PlantDetailsScreen reads route.params.id / plantId
+                    { id: plantId } as never
                   );
                 }}
                 onShowHistory={() => {
@@ -728,9 +754,7 @@ export default function HomeScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ListEmptyComponent={() => {
-          // Different empty frames based on viewFilter
           if (viewFilter === "all") {
-            // Original "no tasks yet" frame for truly empty app
             return (
               <Animated.View
                 style={[
@@ -745,7 +769,6 @@ export default function HomeScreen() {
                 ]}
               >
                 <View style={s.emptyGlass}>
-                  {/* Gradient instead of Blur */}
                   <LinearGradient
                     pointerEvents="none"
                     start={{ x: 0, y: 0.5 }}
@@ -767,9 +790,7 @@ export default function HomeScreen() {
                     style={StyleSheet.absoluteFill}
                   />
 
-                  {/* White tint for readability */}
                   <View pointerEvents="none" style={s.emptyTint} />
-                  {/* Thin border */}
                   <View pointerEvents="none" style={s.emptyBorder} />
 
                   <View style={s.emptyInner}>
@@ -822,7 +843,6 @@ export default function HomeScreen() {
             );
           }
 
-          // For "overdue" / "today" view filters, show a filter-specific frame
           const isOverdue = viewFilter === "overdue";
           const title = isOverdue
             ? t("home.empty.overdue.title")
@@ -849,7 +869,6 @@ export default function HomeScreen() {
               ]}
             >
               <View style={s.emptyGlass}>
-                {/* Gradient instead of Blur */}
                 <LinearGradient
                   pointerEvents="none"
                   start={{ x: 0, y: 0.5 }}
@@ -892,7 +911,6 @@ export default function HomeScreen() {
         }}
       />
 
-      {/* Capture taps on the FAB (including the main button) to hide any open tile menu */}
       {showFAB && (
         <View
           onStartShouldSetResponderCapture={() => {
@@ -903,12 +921,11 @@ export default function HomeScreen() {
           <FAB
             icon="plus"
             actions={fabActions}
-            position={settings.fabPosition} // left/right from settings
+            position={settings.fabPosition}
           />
         </View>
       )}
 
-      {/* Sort & Filter modals */}
       <SortHomeTasksModal
         visible={sortOpen}
         sortKey={sortKey}
@@ -941,7 +958,6 @@ export default function HomeScreen() {
         }}
       />
 
-      {/* Complete-with-note modal (single + bulk) */}
       <CompleteTaskModal
         visible={completeModalVisible}
         note={completeNote}
@@ -954,7 +970,6 @@ export default function HomeScreen() {
         intervalText={completeIntervalText}
       />
 
-      {/* Top Snackbar (toast) */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
