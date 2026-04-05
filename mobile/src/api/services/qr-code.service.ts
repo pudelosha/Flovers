@@ -6,12 +6,6 @@ export type QrCodeSvgRef = {
   toDataURL?: (callback: (base64: string) => void) => void;
 };
 
-export type SendQrCodeEmailPayload = {
-  plant_id?: number;
-  plant_name?: string;
-  qr_value: string;
-};
-
 export type SendQrCodeEmailResponse = {
   detail?: string;
   success?: boolean;
@@ -34,23 +28,28 @@ export type SaveQrCodeToDeviceResponse = {
 
 /* ============================== ENDPOINTS ============================== */
 
-const QR_CODES_URL = "/api/qr-codes/";
+const PLANT_INSTANCES_URL = "/api/plant-instances/";
 
 /* ============================== EMAIL ============================== */
 
 /**
  * Request backend to send QR code image to the authenticated user's email.
+ * Backend endpoint:
+ * POST /api/plant-instances/<plant_id>/send-qr-email/
  */
 export async function sendQrCodeByEmail(
-  payload: SendQrCodeEmailPayload,
+  plantId: number,
+  lang?: string,
   opts: { auth?: boolean } = { auth: true }
 ): Promise<SendQrCodeEmailResponse> {
-  if (!payload?.qr_value?.trim()) {
-    throw new Error("qr_value is required.");
+  if (!plantId || Number.isNaN(Number(plantId))) {
+    throw new Error("plantId is required.");
   }
 
+  const payload = lang?.trim() ? { lang: lang.trim() } : undefined;
+
   return await request<SendQrCodeEmailResponse>(
-    `${QR_CODES_URL}send-email/`,
+    `${PLANT_INSTANCES_URL}${plantId}/send-qr-email/`,
     "POST",
     payload,
     { auth: opts.auth ?? true }

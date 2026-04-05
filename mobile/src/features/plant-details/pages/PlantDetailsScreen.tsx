@@ -21,6 +21,7 @@ import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/plant-
 import { s } from "../styles/plant-details.styles";
 
 import { fetchPlantDetailsById, fetchPlantDetailsByQr } from "../../../api/services/plant-details.service";
+import { sendQrCodeByEmail } from "../../../api/services/qr-code.service";
 
 import type { PlantMetricKey, PlantDetailsComposite, LatestReadings } from "../types/plant-details.types";
 
@@ -47,10 +48,8 @@ import {
   updatePlantInstanceFromForm,
 } from "../../../api/services/plant-instances.service";
 
-// ✅ use env-driven public base URL (dev/prod aware)
 import { PUBLIC_BASE_URL_NORM } from "../../../config";
 
-// Same green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
@@ -89,7 +88,6 @@ export default function PlantDetailsScreen() {
   const [completeReminderId, setCompleteReminderId] = useState<string | null>(null);
   const [completeNote, setCompleteNote] = useState("");
 
-  // Overdue info for modal (single-task)
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
   const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
 
@@ -103,7 +101,6 @@ export default function PlantDetailsScreen() {
   const scrollRef = useRef<ScrollView | null>(null);
   const plantQrRef = useRef<any>(null);
 
-  // Plant Definition modal state (screen root)
   const [defModalVisible, setDefModalVisible] = useState(false);
   const [defPlantDefinitionId, setDefPlantDefinitionId] = useState<number | null>(null);
 
@@ -117,11 +114,9 @@ export default function PlantDetailsScreen() {
     setDefPlantDefinitionId(null);
   }, []);
 
-  // Change Image modal state (screen root) — NEW
   const [changeImgVisible, setChangeImgVisible] = useState(false);
   const [changeImgPlantId, setChangeImgPlantId] = useState<string | null>(null);
 
-  // Signal for PlantInfoTile to reload local photo from storage — NEW
   const [photoReloadSignal, setPhotoReloadSignal] = useState(0);
 
   const openChangeImage = useCallback((plantId: string) => {
@@ -134,7 +129,6 @@ export default function PlantDetailsScreen() {
     setChangeImgPlantId(null);
   }, []);
 
-  // EDIT MODAL state
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
@@ -160,7 +154,6 @@ export default function PlantDetailsScreen() {
     setToastVisible(true);
   };
 
-  // Date helpers (local time)
   const startOfTodayMs = useCallback(() => {
     const d = new Date();
     d.setHours(0, 0, 0, 0);
@@ -172,7 +165,6 @@ export default function PlantDetailsScreen() {
     return d.getTime();
   }, []);
 
-  // Overdue test for a reminder row (uses reminder.dueDate)
   const isReminderOverdue = useCallback(
     (r: any) => {
       const due = r?.dueDate;
@@ -183,14 +175,12 @@ export default function PlantDetailsScreen() {
     [normDateMs, startOfTodayMs]
   );
 
-  // Interval helper (best-effort; requires intervalValue/intervalUnit on reminder)
   const buildIntervalText = useCallback(
     (r: any) => {
       const v = r?.intervalValue;
       const u = r?.intervalUnit;
       if (!v || !u) return "";
 
-      // If you add homeModals.interval.days/months in i18n, this becomes localized.
       const maybe = t(`homeModals.interval.${u}`, { count: v });
       if (typeof maybe === "string" && maybe.startsWith("homeModals.interval.")) {
         const unitLabel =
@@ -222,7 +212,6 @@ export default function PlantDetailsScreen() {
     }
   }, [qrFromNav, idFromNav, tr]);
 
-  // ✅ FIX: no hardcoded flovers.app; use PUBLIC_BASE_URL_NORM
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || "";
     if (!code) return "";
@@ -442,12 +431,11 @@ export default function PlantDetailsScreen() {
         setCompleteReminderId(null);
         setCompleteNote("");
 
-        // Reset overdue info
         setCompleteIsOverdue(false);
         setCompleteIntervalText("");
 
         closeDefinition();
-        closeChangeImage(); // (close on blur/unmount)
+        closeChangeImage();
         closeEdit();
 
         plantQrRef.current = null;
@@ -486,7 +474,6 @@ export default function PlantDetailsScreen() {
     setCompleteReminderId(reminderId);
     setCompleteNote("");
 
-    // Compute overdue + interval for this reminder (single)
     const r = details?.reminders?.find((x) => x.id === reminderId);
     const overdue = r ? isReminderOverdue(r) : false;
     setCompleteIsOverdue(overdue);
@@ -500,7 +487,6 @@ export default function PlantDetailsScreen() {
     setCompleteReminderId(null);
     setCompleteNote("");
 
-    // Reset overdue info
     setCompleteIsOverdue(false);
     setCompleteIntervalText("");
   };
@@ -643,19 +629,25 @@ export default function PlantDetailsScreen() {
                     } catch (err: any) {
                       console.warn("[PlantDetails] save QR failed:", err);
                       showToast(
-                        err?.message || tr("plantDetails.toasts.qrSaveFailed", "Failed to save QR code."),
+                        tr("plantDetails.toasts.qrSaveFailed", "Failed to save QR code."),
                         "error"
                       );
                     }
                   }}
-                  onPressEmail={() => {
-                    showToast(
-                      tr(
-                        "plantDetails.toasts.qrEmailPlaceholder",
-                        "An email with this QR code will be sent to your account address."
-                      ),
-                      "default"
-                    );
+                  onPressEmail={async () => {
+                    try {
+                      await sendQrCodeByEmail(Number(details.plant.id), currentLanguage);
+                      showToast(
+                        tr("plantDetails.toasts.qrEmailed", "QR code email sent."),
+                        "success"
+                      );
+                    } catch (err: any) {
+                      console.warn("[PlantDetails] send QR email failed:", err);
+                      showToast(
+                        tr("plantDetails.toasts.qrEmailFailed", "Failed to send QR code email."),
+                        "error"
+                      );
+                    }
                   }}
                 />
               </GlassFrame>

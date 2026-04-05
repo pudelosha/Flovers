@@ -1,9 +1,9 @@
 import base64
 from io import BytesIO
+from urllib.parse import quote
 
 import qrcode
 from django.conf import settings
-from urllib.parse import quote
 
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -19,6 +19,21 @@ from .serializers import (
     PlantInstanceListSerializer,
     PlantInstanceDetailSerializer,
 )
+
+
+def _normalize_lang(lang: str | None) -> str:
+    default = getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en"
+    if not lang:
+        return default
+    lang = str(lang).strip().lower()
+    supported = set(getattr(settings, "SUPPORTED_LANGS", [])) or {default}
+    return lang if lang in supported else default
+
+
+def _request_lang(request) -> str:
+    lang = request.data.get("lang") if hasattr(request, "data") else None
+    return _normalize_lang(lang)
+
 
 class PlantInstanceListCreateView(ListCreateAPIView):
     """
@@ -108,8 +123,10 @@ class PlantInstanceByQRView(APIView):
     def get(self, request, *args, **kwargs):
         code = request.query_params.get("code")
         if not code:
-            return Response({"detail": "Missing 'code' query parameter."},
-                            status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"detail": "Missing 'code' query parameter."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
         plant = (
             PlantInstance.objects
@@ -124,6 +141,7 @@ class PlantInstanceByQRView(APIView):
         # return the READ shape, same as list/detail GET (list shape is fine here)
         data = PlantInstanceListSerializer(plant, context={"request": request}).data
         return Response(data, status=status.HTTP_200_OK)
+
 
 class PlantInstanceSendQREmailView(APIView):
     permission_classes = [IsAuthenticated]
@@ -145,13 +163,19 @@ class PlantInstanceSendQREmailView(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        public_base = (getattr(settings, "PUBLIC_WEB_BASE", "") or getattr(settings, "SITE_URL", "") or "").strip()
+        public_base = (
+            getattr(settings, "PUBLIC_WEB_BASE", "")
+            or getattr(settings, "SITE_URL", "")
+            or ""
+        ).strip()
         public_base = public_base.rstrip("/")
         if not public_base:
             return Response(
                 {"detail": "Server is missing PUBLIC_WEB_BASE (or SITE_URL) configuration."},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+        lang = _request_lang(request)
 
         # Match the mobile app QR format
         qr_payload = f"{public_base}/api/plant-instances/by-qr/?code={quote(plant.qr_code)}"
@@ -165,7 +189,7 @@ class PlantInstanceSendQREmailView(APIView):
             "qr_code": plant.qr_code,
             "qr_payload": qr_payload,
             "qr_png_b64": qr_png_b64,
-            "plant_name": plant.display_name or "",
+            "plant_name": plant.display_name or getattr(plant.plant_definition, "name", "") or "",
         }
 
         send_templated_email(
@@ -173,7 +197,7 @@ class PlantInstanceSendQREmailView(APIView):
             template_name="plant_instances/qr_code",
             subject_key=None,
             context=ctx,
-            lang=getattr(request.user, "lang", None),
+            lang=lang,
         )
 
         return Response({"detail": "QR code email sent."}, status=status.HTTP_200_OK)

@@ -57,6 +57,7 @@ import {
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import RNFS from "react-native-fs";
 import { CameraRoll } from "@react-native-camera-roll/camera-roll";
+import { sendQrCodeByEmail } from "../../../api/services/qr-code.service";
 
 type LightLevel5 =
   | "very-low"
@@ -97,7 +98,6 @@ function norm(v?: string) {
   return (v || "").toLowerCase().trim();
 }
 
-// Empty-state gradient (match Home / TaskHistory)
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
@@ -114,7 +114,6 @@ export default function PlantsScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // TOAST
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] =
@@ -128,7 +127,6 @@ export default function PlantsScreen() {
     setToastVisible(true);
   };
 
-  // EDIT MODAL
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
@@ -154,24 +152,21 @@ export default function PlantsScreen() {
   const [editLoading, setEditLoading] = useState(false);
   const [saving, setSaving] = useState(false);
 
-  // SORT / FILTER
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("plant");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
 
-  // Rename from `filters` -> `activeFilters` to avoid Hermes/runtime symbol issues
   const [activeFilters, setActiveFilters] = useState<{ location?: string; latin?: string }>(
     {}
   );
 
-  // QR MODAL
   const [qrVisible, setQrVisible] = useState(false);
   const [qrValue, setQrValue] = useState("");
   const [qrPlantName, setQrPlantName] = useState("");
+  const [qrPlantId, setQrPlantId] = useState<string>("");
   const qrModalRef = useRef<any>(null);
 
-  // JOURNAL MODAL
   const [journalVisible, setJournalVisible] = useState(false);
   const [journalPlantName, setJournalPlantName] = useState("");
   const [journalPlantId, setJournalPlantId] = useState<string>("");
@@ -223,16 +218,15 @@ export default function PlantsScreen() {
     [tr]
   );
 
-  // Hide modals/menus on focus
   useFocusEffect(
     useCallback(() => {
       setEditOpen(false);
       setEditingId(null);
       setMenuOpenId(null);
       setQrVisible(false);
+      setQrPlantId("");
       qrModalRef.current = null;
 
-      // also reset journal
       setJournalVisible(false);
       setJournalPlantName("");
       setJournalPlantId("");
@@ -246,14 +240,13 @@ export default function PlantsScreen() {
     [t, currentLanguage]
   );
 
-  // helper: overlay local photos onto mapped list items
   const attachLocalPhotos = useCallback(async (list: Plant[]) => {
     const results = await Promise.all(
       list.map(async (p) => {
         try {
           const local = await getPlantPhotoUri(p.id);
           if (local) {
-            return { ...p, imageUrl: local }; // local overrides definition image
+            return { ...p, imageUrl: local };
           }
         } catch {
           // ignore
@@ -264,7 +257,6 @@ export default function PlantsScreen() {
     return results;
   }, []);
 
-  // MAIN LOAD
   const load = useCallback(async () => {
     try {
       const data = await fetchPlantInstances({ auth: true });
@@ -299,7 +291,6 @@ export default function PlantsScreen() {
     nav.navigate("CreatePlantWizard");
   };
 
-  // Journal open
   const openJournal = (p: Plant) => {
     setMenuOpenId(null);
     setJournalPlantId(p.id);
@@ -307,7 +298,6 @@ export default function PlantsScreen() {
     setJournalVisible(true);
   };
 
-  // EDIT MODAL open
   const openEditModal = useCallback(
     async (p: Plant) => {
       setMenuOpenId(null);
@@ -360,7 +350,6 @@ export default function PlantsScreen() {
     [t]
   );
 
-  // helper: open edit modal by id without loading tiles
   const openEditModalById = useCallback(
     async (id: string) => {
       const stub: Plant = {
@@ -377,7 +366,6 @@ export default function PlantsScreen() {
     [openEditModal]
   );
 
-  // Focus load: if editPlantId is provided => show spinner only + open modal, skip tiles load
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
@@ -397,7 +385,7 @@ export default function PlantsScreen() {
           if (!mounted) return;
 
           setLoading(true);
-          setPlants([]); // ensure no tiles flash
+          setPlants([]);
 
           try {
             await openEditModalById(String(incomingEditId));
@@ -408,9 +396,8 @@ export default function PlantsScreen() {
           return;
         }
 
-        // Original behavior
         setLoading(true);
-        setPlants([]); // avoid stale flash
+        setPlants([]);
         try {
           await load();
         } finally {
@@ -449,7 +436,6 @@ export default function PlantsScreen() {
         { auth: true }
       );
 
-      // keep local photo override after update
       const mapped = mapApiToPlant(updatedListItem, unnamedFallback);
       const withLocal = await attachLocalPhotos([mapped]);
 
@@ -475,7 +461,6 @@ export default function PlantsScreen() {
     }
   };
 
-  // DELETE
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
@@ -508,22 +493,21 @@ export default function PlantsScreen() {
     }
   };
 
-  // QR modal open
   const openShowQr = (p: Plant) => {
     setMenuOpenId(null);
 
-    const code = p.qrCode || p.id; // fallback if missing
+    const code = p.qrCode || p.id;
     const value = `${PUBLIC_BASE_URL_NORM}/api/plant-instances/by-qr/?code=${encodeURIComponent(
       code
     )}`;
 
+    setQrPlantId(p.id);
     setQrPlantName(p.name);
     setQrValue(value);
     qrModalRef.current = null;
     setQrVisible(true);
   };
 
-  // dropdown options
   const locationOptions = useMemo(() => {
     const set = new Set<string>();
     plants.forEach((p) => p.location && set.add(p.location));
@@ -536,7 +520,6 @@ export default function PlantsScreen() {
     return Array.from(set).sort((a, b) => norm(a).localeCompare(norm(b)));
   }, [plants]);
 
-  // filters + sort
   const derivedPlants = useMemo(() => {
     const filtered = plants.filter((p) => {
       if (activeFilters.location && norm(p.location) !== norm(activeFilters.location))
@@ -571,7 +554,6 @@ export default function PlantsScreen() {
     !qrVisible &&
     !journalVisible;
 
-  // animations for tiles
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -606,10 +588,8 @@ export default function PlantsScreen() {
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, derivedPlants.length]);
+  }, [loading, derivedPlants.length, primeAnimations, runStaggerIn, derivedPlants]);
 
-  // empty-state animation
   const emptyAnim = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     if (loading) {
@@ -639,7 +619,6 @@ export default function PlantsScreen() {
   });
   const emptyOpacity = emptyAnim;
 
-  // skeleton
   if (loading) {
     return (
       <View style={{ flex: 1 }}>
@@ -935,6 +914,7 @@ export default function PlantsScreen() {
         }}
         onClose={() => {
           setQrVisible(false);
+          setQrPlantId("");
           qrModalRef.current = null;
         }}
         onPressSave={async () => {
@@ -949,22 +929,31 @@ export default function PlantsScreen() {
           } catch (err: any) {
             console.warn("[Plants] save QR failed:", err);
             showToast(
-              err?.message ||
-                t("plants.toast.qrSaveFailed", {
-                  defaultValue: "Failed to save QR code.",
-                }),
+              t("plants.toast.qrSaveFailed", {
+                defaultValue: "Failed to save QR code.",
+              }),
               "error"
             );
           }
         }}
-        onPressEmail={() => {
-          showToast(
-            t("plants.toast.qrEmailed", {
-              defaultValue:
-                "An email with this QR code will be sent to your account address.",
-            }),
-            "default"
-          );
+        onPressEmail={async () => {
+          try {
+            await sendQrCodeByEmail(Number(qrPlantId), currentLanguage);
+            showToast(
+              t("plants.toast.qrEmailed", {
+                defaultValue: "QR code email sent.",
+              }),
+              "success"
+            );
+          } catch (err: any) {
+            console.warn("[Plants] send QR email failed:", err);
+            showToast(
+              t("plants.toast.qrEmailFailed", {
+                defaultValue: "Failed to send QR code email.",
+              }),
+              "error"
+            );
+          }
         }}
       />
 
