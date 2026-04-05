@@ -1,5 +1,4 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plants\components\modals\PlantQrModal.tsx
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import QRCode from "react-native-qrcode-svg";
@@ -16,6 +15,7 @@ type Props = {
   onClose: () => void;
   onPressSave: () => void;
   onPressEmail: () => void;
+  onQrRef?: (ref: any | null) => void;
 };
 
 export default function PlantQrModal({
@@ -25,9 +25,11 @@ export default function PlantQrModal({
   onClose,
   onPressSave,
   onPressEmail,
+  onQrRef,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const qrRef = useRef<any>(null);
 
   const tr = useCallback(
     (key: string, fallback?: string) => {
@@ -38,6 +40,20 @@ export default function PlantQrModal({
     },
     [t, currentLanguage]
   );
+
+  const setQrInstance = useCallback(
+    (ref: any | null) => {
+      qrRef.current = ref;
+      onQrRef?.(ref);
+    },
+    [onQrRef]
+  );
+
+  useEffect(() => {
+    if (!visible) {
+      setQrInstance(null);
+    }
+  }, [visible, setQrInstance]);
 
   if (!visible) return null;
 
@@ -110,7 +126,7 @@ export default function PlantQrModal({
                 marginBottom: 16,
               }}
             >
-              <QRCode value={qrValue} size={220} />
+              <QRCode value={qrValue} size={220} getRef={setQrInstance} />
             </View>
 
             <View style={[s.promptButtonsRow, { justifyContent: "space-between" }]}>

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useRef } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import QRCode from "react-native-qrcode-svg";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -9,11 +9,18 @@ type Props = {
   qrCodeValue: string;
   onPressSave: () => void;
   onPressEmail: () => void;
+  onQrRef?: (ref: any | null) => void;
 };
 
-export default function PlantQrTile({ qrCodeValue, onPressSave, onPressEmail }: Props) {
+export default function PlantQrTile({
+  qrCodeValue,
+  onPressSave,
+  onPressEmail,
+  onQrRef,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const qrRef = useRef<any>(null);
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -23,6 +30,14 @@ export default function PlantQrTile({ qrCodeValue, onPressSave, onPressEmail }: 
       return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
     },
     [t, currentLanguage]
+  );
+
+  const setQrInstance = useCallback(
+    (ref: any | null) => {
+      qrRef.current = ref;
+      onQrRef?.(ref);
+    },
+    [onQrRef]
   );
 
   if (!qrCodeValue) return null;
@@ -53,18 +68,32 @@ export default function PlantQrTile({ qrCodeValue, onPressSave, onPressEmail }: 
       </Text>
 
       <View style={styles.qrBox}>
-        <QRCode value={qrCodeValue} size={220} getRef={(c) => ((global as any).__qrRef = c)} />
+        <QRCode value={qrCodeValue} size={220} getRef={setQrInstance} />
       </View>
 
       <View style={styles.btnRow}>
         <Pressable style={styles.btn} onPress={onPressSave}>
-          <MaterialCommunityIcons name="download" size={18} color="#FFFFFF" style={{ marginRight: 6 }} />
-          <Text style={styles.btnText}>{tr("plantDetails.qr.saveBtn", "Save QR code")}</Text>
+          <MaterialCommunityIcons
+            name="download"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 6 }}
+          />
+          <Text style={styles.btnText}>
+            {tr("plantDetails.qr.saveBtn", "Save QR code")}
+          </Text>
         </Pressable>
 
         <Pressable style={styles.btn} onPress={onPressEmail}>
-          <MaterialCommunityIcons name="email-outline" size={18} color="#FFFFFF" style={{ marginRight: 6 }} />
-          <Text style={styles.btnText}>{tr("plantDetails.qr.emailBtn", "Email QR code")}</Text>
+          <MaterialCommunityIcons
+            name="email-outline"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 6 }}
+          />
+          <Text style={styles.btnText}>
+            {tr("plantDetails.qr.emailBtn", "Email QR code")}
+          </Text>
         </Pressable>
       </View>
     </View>

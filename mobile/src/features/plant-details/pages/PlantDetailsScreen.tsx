@@ -33,7 +33,7 @@ import CompleteTaskModal from "../../home/components/modals/CompleteTaskModal";
 import { markHomeTaskComplete } from "../../../api/services/home.service";
 
 import RNFS from "react-native-fs";
-import CameraRoll from "@react-native-camera-roll/camera-roll";
+import { CameraRoll } from "@react-native-camera-roll/camera-roll";
 
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -101,6 +101,7 @@ export default function PlantDetailsScreen() {
   const [dismissMenusTick, setDismissMenusTick] = useState(0);
 
   const scrollRef = useRef<ScrollView | null>(null);
+  const plantQrRef = useRef<any>(null);
 
   // Plant Definition modal state (screen root)
   const [defModalVisible, setDefModalVisible] = useState(false);
@@ -241,15 +242,18 @@ export default function PlantDetailsScreen() {
     const filePath = `${RNFS.CachesDirectoryPath}/plant_qr_${Date.now()}.png`;
     await RNFS.writeFile(filePath, base64, "base64");
 
-    if (Platform.OS === "android") {
-      const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE, {
-        title: tr("plantDetails.permissions.storage.title", "Storage permission"),
-        message: tr(
-          "plantDetails.permissions.storage.message",
-          "We need access to save the QR code to your gallery."
-        ),
-        buttonPositive: tr("plantDetails.permissions.storage.ok", "OK"),
-      });
+    if (Platform.OS === "android" && Platform.Version <= 29) {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+        {
+          title: tr("plantDetails.permissions.storage.title", "Storage permission"),
+          message: tr(
+            "plantDetails.permissions.storage.message",
+            "We need access to save the QR code to your gallery."
+          ),
+          buttonPositive: tr("plantDetails.permissions.storage.ok", "OK"),
+        }
+      );
       if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
         throw new Error(tr("plantDetails.permissions.storage.denied", "Storage permission denied."));
       }
@@ -445,6 +449,8 @@ export default function PlantDetailsScreen() {
         closeDefinition();
         closeChangeImage(); // (close on blur/unmount)
         closeEdit();
+
+        plantQrRef.current = null;
       };
     }, [entry, loadDetails, tr, closeDefinition, closeChangeImage, closeEdit])
   );
@@ -627,9 +633,12 @@ export default function PlantDetailsScreen() {
               <GlassFrame>
                 <PlantQrTile
                   qrCodeValue={qrCodeValue}
+                  onQrRef={(ref) => {
+                    plantQrRef.current = ref;
+                  }}
                   onPressSave={async () => {
                     try {
-                      await onSaveQr((global as any).__qrRef);
+                      await onSaveQr(plantQrRef.current);
                       showToast(tr("plantDetails.toasts.qrSaved", "QR code saved to your gallery."), "success");
                     } catch (err: any) {
                       console.warn("[PlantDetails] save QR failed:", err);
@@ -670,7 +679,6 @@ export default function PlantDetailsScreen() {
         </View>
       )}
 
-      {/* Screen-level modals (full screen overlays) */}
       <PlantDefinitionModal visible={defModalVisible} onClose={closeDefinition} plantDefinitionId={defPlantDefinitionId} />
 
       <ChangePlantImageModal
@@ -678,7 +686,6 @@ export default function PlantDetailsScreen() {
         onClose={closeChangeImage}
         plantId={changeImgPlantId}
         onChanged={() => {
-          // Force PlantInfoTile to reload local uri (since the modal is no longer inside it)
           setPhotoReloadSignal((v) => v + 1);
         }}
       />
@@ -733,7 +740,6 @@ function GlassFrame({ children, center }: { children: React.ReactNode; center?: 
   return (
     <View style={styles.frameWrap}>
       <View style={s.cardGlass}>
-        {/* Base green gradient */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0.5 }}
@@ -743,7 +749,6 @@ function GlassFrame({ children, center }: { children: React.ReactNode; center?: 
           style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
 
-        {/* Fog highlight */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}

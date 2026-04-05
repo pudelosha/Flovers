@@ -14,6 +14,8 @@ import {
   StyleSheet,
   Animated,
   Easing,
+  PermissionsAndroid,
+  Platform,
 } from "react-native";
 import { PUBLIC_BASE_URL_NORM } from "../../../config";
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
@@ -53,6 +55,8 @@ import {
 } from "../../../api/services/plant-instances.service";
 
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
+import RNFS from "react-native-fs";
+import { CameraRoll } from "@react-native-camera-roll/camera-roll";
 
 type LightLevel5 =
   | "very-low"
@@ -165,11 +169,59 @@ export default function PlantsScreen() {
   const [qrVisible, setQrVisible] = useState(false);
   const [qrValue, setQrValue] = useState("");
   const [qrPlantName, setQrPlantName] = useState("");
+  const qrModalRef = useRef<any>(null);
 
   // JOURNAL MODAL
   const [journalVisible, setJournalVisible] = useState(false);
   const [journalPlantName, setJournalPlantName] = useState("");
   const [journalPlantId, setJournalPlantId] = useState<string>("");
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+    },
+    [t, currentLanguage]
+  );
+
+  const onSaveQr = useCallback(
+    async (svgRef: any) => {
+      if (!svgRef?.toDataURL) {
+        throw new Error(tr("plants.qrErrors.rendererNotReady", "QR renderer not ready."));
+      }
+
+      const dataUrl: string = await new Promise((res, rej) =>
+        svgRef.toDataURL((d: string) => (d ? res(d) : rej(new Error("No dataURL"))))
+      );
+
+      const base64 = dataUrl.replace(/^data:image\/png;base64,/, "");
+      const filePath = `${RNFS.CachesDirectoryPath}/plant_qr_${Date.now()}.png`;
+      await RNFS.writeFile(filePath, base64, "base64");
+
+      if (Platform.OS === "android" && Platform.Version <= 29) {
+        const granted = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+          {
+            title: tr("plants.permissions.storage.title", "Storage permission"),
+            message: tr(
+              "plants.permissions.storage.message",
+              "We need access to save the QR code to your gallery."
+            ),
+            buttonPositive: tr("plants.permissions.storage.ok", "OK"),
+          }
+        );
+
+        if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
+          throw new Error(tr("plants.permissions.storage.denied", "Storage permission denied."));
+        }
+      }
+
+      await CameraRoll.save(filePath, { type: "photo" });
+    },
+    [tr]
+  );
 
   // Hide modals/menus on focus
   useFocusEffect(
@@ -178,6 +230,7 @@ export default function PlantsScreen() {
       setEditingId(null);
       setMenuOpenId(null);
       setQrVisible(false);
+      qrModalRef.current = null;
 
       // also reset journal
       setJournalVisible(false);
@@ -466,6 +519,7 @@ export default function PlantsScreen() {
 
     setQrPlantName(p.name);
     setQrValue(value);
+    qrModalRef.current = null;
     setQrVisible(true);
   };
 
@@ -683,7 +737,6 @@ export default function PlantsScreen() {
               },
             ]}
           >
-            {/* Empty-state now matches Home: gradient glass, no BlurView */}
             <View style={s.emptyGlass}>
               <LinearGradient
                 pointerEvents="none"
@@ -738,7 +791,6 @@ export default function PlantsScreen() {
         )}
       />
 
-      {/* FAB */}
       {showFAB && (
         <View
           onStartShouldSetResponderCapture={() => {
@@ -796,7 +848,6 @@ export default function PlantsScreen() {
         </View>
       )}
 
-      {/* Modals */}
       <EditPlantModal
         visible={editOpen}
         latinCatalog={latinOptions}
@@ -879,14 +930,32 @@ export default function PlantsScreen() {
         visible={qrVisible}
         plantName={qrPlantName}
         qrValue={qrValue}
-        onClose={() => setQrVisible(false)}
-        onPressSave={() => {
-          showToast(
-            t("plants.toast.qrSaved", {
-              defaultValue: "QR code saved to your gallery.",
-            }),
-            "default"
-          );
+        onQrRef={(ref) => {
+          qrModalRef.current = ref;
+        }}
+        onClose={() => {
+          setQrVisible(false);
+          qrModalRef.current = null;
+        }}
+        onPressSave={async () => {
+          try {
+            await onSaveQr(qrModalRef.current);
+            showToast(
+              t("plants.toast.qrSaved", {
+                defaultValue: "QR code saved to your gallery.",
+              }),
+              "success"
+            );
+          } catch (err: any) {
+            console.warn("[Plants] save QR failed:", err);
+            showToast(
+              err?.message ||
+                t("plants.toast.qrSaveFailed", {
+                  defaultValue: "Failed to save QR code.",
+                }),
+              "error"
+            );
+          }
         }}
         onPressEmail={() => {
           showToast(
