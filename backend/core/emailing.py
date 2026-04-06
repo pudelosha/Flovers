@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from typing import Any, Optional
+from email.mime.image import MIMEImage
 
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
@@ -35,6 +36,7 @@ def send_templated_email(
     lang: Optional[str] = None,
     from_email: Optional[str] = None,
     reply_to: Optional[list[str]] = None,
+    inline_attachments: Optional[list[dict[str, Any]]] = None,
 ) -> bool:
     """
     Renders:
@@ -49,9 +51,19 @@ def send_templated_email(
       - "accounts/password_reset"
       - "profiles/due_today"
       - "profiles/overdue_1d"
+
+    inline_attachments example:
+      [
+        {
+          "content_id": "plant_qr_code",
+          "filename": "plant-qr.png",
+          "content": b"...",
+          "mimetype": "image/png",
+        }
+      ]
     """
     if not to_email:
-        return False
+      return False
 
     lang = (lang or getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en").strip().lower()
 
@@ -132,6 +144,25 @@ def send_templated_email(
     )
     if html:
         msg.attach_alternative(html, "text/html")
+
+    for item in inline_attachments or []:
+        content = item.get("content")
+        content_id = (item.get("content_id") or "").strip()
+        filename = (item.get("filename") or "").strip()
+        mimetype = (item.get("mimetype") or "image/png").strip().lower()
+
+        if not content or not content_id:
+            continue
+
+        maintype, _, subtype = mimetype.partition("/")
+        if maintype != "image":
+            logger.warning("Unsupported inline attachment mimetype for CID email: %s", mimetype)
+            continue
+
+        image = MIMEImage(content, _subtype=subtype or "png")
+        image.add_header("Content-ID", f"<{content_id}>")
+        image.add_header("Content-Disposition", "inline", filename=filename or content_id)
+        msg.attach(image)
 
     msg.send(fail_silently=False)
     return True

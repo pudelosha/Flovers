@@ -183,7 +183,8 @@ class PlantInstanceSendQREmailView(APIView):
         img = qrcode.make(qr_payload)
         buf = BytesIO()
         img.save(buf, format="PNG")
-        qr_png_b64 = base64.b64encode(buf.getvalue()).decode("ascii")
+        qr_png_bytes = buf.getvalue()
+        qr_png_b64 = base64.b64encode(qr_png_bytes).decode("ascii")
 
         ctx = {
             "qr_code": plant.qr_code,
@@ -198,6 +199,14 @@ class PlantInstanceSendQREmailView(APIView):
             subject_key=None,
             context=ctx,
             lang=lang,
+            inline_attachments=[
+                {
+                    "content_id": "plant_qr_code",
+                    "filename": "plant-qr.png",
+                    "content": qr_png_bytes,
+                    "mimetype": "image/png",
+                }
+            ],
         )
 
         return Response({"detail": "QR code email sent."}, status=status.HTTP_200_OK)
