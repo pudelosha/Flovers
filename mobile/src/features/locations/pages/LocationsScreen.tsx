@@ -67,7 +67,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function LocationsScreen() {
-  const nav = useNavigation();
+  const nav = useNavigation<any>();
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -402,6 +402,8 @@ export default function LocationsScreen() {
           title={tr("locations.headerTitle", "Locations")}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
+          rightIconName="qrcode-scan"
+          onPressRight={() => nav.navigate("Scanner")}
           showSeparator={false}
         />
         <CenteredSpinner size={56} color="#FFFFFF" />
@@ -415,6 +417,8 @@ export default function LocationsScreen() {
         title={tr("locations.headerTitle", "Locations")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
+        rightIconName="qrcode-scan"
+        onPressRight={() => nav.navigate("Scanner")}
         showSeparator={false}
       />
 
@@ -472,7 +476,6 @@ export default function LocationsScreen() {
               },
             ]}
           >
-            {/* ✅ Empty-state now matches Home: gradient glass, no BlurView */}
             <View style={s.emptyGlass}>
               <LinearGradient
                 pointerEvents="none"

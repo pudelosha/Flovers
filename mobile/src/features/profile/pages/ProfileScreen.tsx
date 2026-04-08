@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { View, ScrollView, Animated, Easing } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
@@ -55,6 +55,7 @@ function isUnauthorizedError(e: any): boolean {
 
 export default function ProfileScreen() {
   const { t } = useTranslation();
+  const nav = useNavigation<any>();
 
   const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
@@ -262,6 +263,8 @@ export default function ProfileScreen() {
         title={t("profile.header.title")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
+        rightIconName="qrcode-scan"
+        onPressRight={() => nav.navigate("Scanner")}
         showSeparator={false}
       />
 

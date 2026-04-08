@@ -74,7 +74,7 @@ export default function PlantDetailsScreen() {
     [t, currentLanguage]
   );
 
-  const nav = useNavigation();
+  const nav = useNavigation<any>();
   const route = useRoute<any>();
 
   const qrFromNav: string | undefined = route.params?.qrCode;
@@ -253,7 +253,7 @@ export default function PlantDetailsScreen() {
 
   const goHistory = (metric?: PlantMetricKey) => {
     nav.navigate(
-      "ReadingsHistory" as never,
+      "ReadingsHistory",
       {
         metric: metric || "temperature",
         range: "day",
@@ -261,7 +261,7 @@ export default function PlantDetailsScreen() {
           details?.plant.display_name ||
           details?.plant.plant_definition?.name ||
           tr("plantDetails.common.plant", "Plant"),
-      } as never
+      }
     );
   };
 
@@ -530,6 +530,8 @@ export default function PlantDetailsScreen() {
         title={tr("plantDetails.headerTitle", "Plant details")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
+        rightIconName="qrcode-scan"
+        onPressRight={() => nav.navigate("Scanner")}
         showSeparator={false}
       />
 
@@ -598,10 +600,10 @@ export default function PlantDetailsScreen() {
                 reminders={reminders}
                 onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
                 onEditReminder={(reminderId) => {
-                  nav.navigate("Reminders" as never, { editReminderId: String(reminderId) } as never);
+                  nav.navigate("Reminders", { editReminderId: String(reminderId) });
                 }}
                 onShowHistory={() => {
-                  nav.navigate("TaskHistory" as never, { plantId: String(details.plant.id) } as never);
+                  nav.navigate("TaskHistory", { plantId: String(details.plant.id) });
                 }}
               />
             )}
