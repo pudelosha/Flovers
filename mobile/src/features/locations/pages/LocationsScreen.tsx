@@ -79,28 +79,33 @@ export default function LocationsScreen() {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+
+      if (!isMissing) return txt;
+
+      let result = fallback ?? key.split(".").pop() ?? key;
+
+      if (values) {
+        Object.entries(values).forEach(([k, v]) => {
+          result = result.replace(new RegExp(`{{\\s*${k}\\s*}}`, "g"), String(v));
+        });
+      }
+
+      return result;
     },
     [t, currentLanguage]
   );
 
   const plantCountLabel = useCallback(
     (count: number) => {
-      // EN: one/other
-      // PL: one/few/many/other
       if (currentLanguage === "pl") {
-        const mod10 = count % 10;
-        const mod100 = count % 100;
-        if (count === 1)
-          return tr("locations.plantCount.one", "1 roślina", { count });
-        if (mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)) {
-          return tr("locations.plantCount.few", "{{count}} rośliny", { count });
-        }
-        return tr("locations.plantCount.many", "{{count}} roślin", { count });
+        return tr("locations.plantCount.label", "Liczba roślin: {{count}}", {
+          count,
+        });
       }
 
-      if (count === 1) return tr("locations.plantCount.one", "1 plant", { count });
-      return tr("locations.plantCount.other", "{{count}} plants", { count });
+      return tr("locations.plantCount.label", "Plant count: {{count}}", {
+        count,
+      });
     },
     [currentLanguage, tr]
   );

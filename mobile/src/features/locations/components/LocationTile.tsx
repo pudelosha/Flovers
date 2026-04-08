@@ -37,27 +37,30 @@ export default function LocationTile({
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+
+      if (!isMissing) return txt;
+
+      let result = fallback ?? key.split(".").pop() ?? key;
+
+      if (values) {
+        Object.entries(values).forEach(([k, v]) => {
+          result = result.replace(new RegExp(`{{\\s*${k}\\s*}}`, "g"), String(v));
+        });
+      }
+
+      return result;
     },
     [t, currentLanguage]
   );
 
-  const plantLabel = (() => {
-    const c = location.plantCount;
-
-    if (currentLanguage === "pl") {
-      const mod10 = c % 10;
-      const mod100 = c % 100;
-      if (c === 1) return tr("locations.plantCount.one", "1 roślina", { count: c });
-      if (mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)) {
-        return tr("locations.plantCount.few", "{{count}} rośliny", { count: c });
-      }
-      return tr("locations.plantCount.many", "{{count}} roślin", { count: c });
-    }
-
-    if (c === 1) return tr("locations.plantCount.one", "1 plant", { count: c });
-    return tr("locations.plantCount.other", "{{count}} plants", { count: c });
-  })();
+  const plantLabel =
+    currentLanguage === "pl"
+      ? tr("locations.plantCount.label", "Liczba roślin: {{count}}", {
+          count: location.plantCount,
+        })
+      : tr("locations.plantCount.label", "Plant count: {{count}}", {
+          count: location.plantCount,
+        });
 
   return (
     <View style={s.cardWrap}>

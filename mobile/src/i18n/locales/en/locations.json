@@ -14,8 +14,7 @@
       "delete": "Delete location"
     },
     "plantCount": {
-      "one": "1 plant",
-      "other": "{{count}} plants"
+      "label": "Plant count: {{count}}"
     },
     "toast": {
       "loadFailed": "Failed to load locations",
