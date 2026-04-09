@@ -10,8 +10,13 @@
       "failedToLoad": "Nie udało się wczytać rośliny."
     },
     "states": {
-      "error": { "title": "Błąd" },
-      "notFound": { "title": "Nie znaleziono", "msg": "Nie udało się wczytać tej rośliny." }
+      "error": {
+        "title": "Błąd"
+      },
+      "notFound": {
+        "title": "Nie znaleziono",
+        "msg": "Nie udało się wczytać tej rośliny."
+      }
     },
     "alerts": {
       "completeFailed": {
@@ -23,6 +28,8 @@
       "reminderCompleted": "Przypomnienie oznaczone jako ukończone.",
       "qrSaved": "Kod QR zapisano w galerii.",
       "qrSaveFailed": "Nie udało się zapisać kodu QR.",
+      "qrEmailed": "E-mail z kodem QR został wysłany.",
+      "qrEmailFailed": "Nie udało się wysłać e-maila z kodem QR.",
       "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres Twojego konta."
     },
     "permissions": {
@@ -87,11 +94,11 @@
         "part1": "Każda roślina ma swój unikalny kod QR. Gdy zeskanujesz ten kod w widoku",
         "part2": "aplikacja od razu otworzy szczegóły tej rośliny.",
         "part3a": "Możesz",
-        "part3b": "obraz kodu QR na telefonie albo",
+        "part3b": "zapisać obraz kodu QR na telefonie albo wysłać",
         "part3c": "go do siebie, a potem wydrukować i przymocować do doniczki. Następnym razem wystarczy zeskanować etykietę zamiast szukać ręcznie."
       },
-      "saveBtn": "Zapisz",
-      "emailBtn": "Wyślij"
+      "saveBtn": "Zapisz kod QR",
+      "emailBtn": "Wyślij kod QR"
     },
     "reminders": {
       "title": "Przypomnienia",

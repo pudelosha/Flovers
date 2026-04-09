@@ -10,8 +10,13 @@
       "failedToLoad": "Failed to load plant."
     },
     "states": {
-      "error": { "title": "Error" },
-      "notFound": { "title": "Not found", "msg": "We couldn’t load this plant." }
+      "error": {
+        "title": "Error"
+      },
+      "notFound": {
+        "title": "Not found",
+        "msg": "We couldn’t load this plant."
+      }
     },
     "alerts": {
       "completeFailed": {
@@ -23,6 +28,8 @@
       "reminderCompleted": "Reminder marked as complete.",
       "qrSaved": "QR code saved to your gallery.",
       "qrSaveFailed": "Failed to save QR code.",
+      "qrEmailed": "QR code email sent.",
+      "qrEmailFailed": "Failed to send QR code email.",
       "qrEmailPlaceholder": "An email with this QR code will be sent to your account address."
     },
     "permissions": {
