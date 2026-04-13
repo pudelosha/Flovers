@@ -576,14 +576,21 @@ function RowSwitch({
   );
 }
 
-/** White checkbox row used for the soil moisture alert toggle — smaller text/weight. */
 function CheckRow({
   label,
   checked,
   onToggle,
 }: { label: string; checked: boolean; onToggle: () => void }) {
   return (
-    <Pressable onPress={onToggle} style={{ flexDirection: "row", alignItems: "center" }}>
+    <Pressable
+      onPress={onToggle}
+      style={{
+        width: "100%",
+        flexDirection: "row",
+        alignItems: "flex-start",
+        paddingRight: 8,
+      }}
+    >
       <View
         style={{
           width: 20,
@@ -594,11 +601,29 @@ function CheckRow({
           alignItems: "center",
           justifyContent: "center",
           marginRight: 10,
+          marginTop: 1,
+          flexShrink: 0,
         }}
       >
         {checked ? <MaterialCommunityIcons name="check" size={16} color="#FFFFFF" /> : null}
       </View>
-      <Text style={[sp.dropdownItemText, { fontWeight: "600", fontSize: 12, opacity: 0.9 }]}>{label}</Text>
+
+      <Text
+        style={[
+          sp.dropdownItemText,
+          {
+            flex: 1,
+            flexShrink: 1,
+            minWidth: 0,
+            fontWeight: "600",
+            fontSize: 12,
+            opacity: 0.9,
+            lineHeight: 18,
+          },
+        ]}
+      >
+        {label}
+      </Text>
     </Pressable>
   );
 }
