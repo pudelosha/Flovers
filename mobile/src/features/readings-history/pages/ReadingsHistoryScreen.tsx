@@ -112,7 +112,7 @@ function formatHistoryPointLabel(
   }
 
   const dayNum = dt.getDate();
-  const isEvery3rd = ((dayNum - 1) % 3) === 0; // 1,4,7,10,...
+  const isEvery3rd = (dayNum - 1) % 3 === 0; // 1,4,7,10,...
   const isLast = monthBinCount != null && dayNum === monthBinCount;
   return isEvery3rd || isLast ? String(dayNum) : "";
 }
@@ -157,12 +157,6 @@ export default function ReadingsHistoryScreen() {
 
   // date anchor (center for current range)
   const [anchor, setAnchor] = useState<Date>(new Date());
-
-  // ✅ react to param changes even when mounted
-  useEffect(() => {
-    if (params.metric) setMetric(params.metric);
-    if (params.range) setRange(params.range);
-  }, [params.metric, params.range]);
 
   const span = useMemo(() => spanFor(range, anchor), [range, anchor]);
 
@@ -357,7 +351,9 @@ export default function ReadingsHistoryScreen() {
         if (!mounted) return;
 
         const monthBinCount =
-          range === "month" ? new Date(span.to.getFullYear(), span.to.getMonth() + 1, 0).getDate() : undefined;
+          range === "month"
+            ? new Date(span.to.getFullYear(), span.to.getMonth() + 1, 0).getDate()
+            : undefined;
 
         setLabels(
           resp.points.map((p) =>
@@ -365,18 +361,11 @@ export default function ReadingsHistoryScreen() {
           )
         );
         setValues(resp.points.map((p) => p.value));
-
       } catch (e: any) {
         if (!mounted) return;
         setLabels([]);
         setValues([]);
 
-        // 🔍 RAW error output for debugging
-        if (__DEV__) {
-          // eslint-disable-next-line no-console
-        }
-
-        // Try to show the backend payload directly; fallback to message / generic
         let msg = t("readingsHistory.failedLoadHistory");
         if (e?.response?.data) {
           try {
@@ -410,7 +399,7 @@ export default function ReadingsHistoryScreen() {
     [nav]
   );
 
-  // ---------- ✨ ENTER/EXIT ANIMATION (like Profile/Login) ----------
+  // ---------- ✨ ENTER/EXIT ANIMATION + reset current period ----------
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
   const contentTranslateY = entry.interpolate({
@@ -424,6 +413,14 @@ export default function ReadingsHistoryScreen() {
 
   useFocusEffect(
     useCallback(() => {
+      const now = new Date();
+
+      if (params.metric) setMetric(params.metric);
+      if (params.range) setRange(params.range);
+
+      // always reset visible date span to current day/week/month on re-entry
+      setAnchor(now);
+
       Animated.timing(entry, {
         toValue: 1,
         duration: 220,
@@ -439,7 +436,7 @@ export default function ReadingsHistoryScreen() {
           useNativeDriver: true,
         }).start();
       };
-    }, [entry])
+    }, [entry, params.metric, params.range])
   );
   // -----------------------------------------------------------------
 
@@ -467,14 +464,13 @@ export default function ReadingsHistoryScreen() {
     range === "day"
       ? addDays(anchor, 1)
       : range === "week"
-      ? addWeeks(anchor, 1)
-      : addMonths(anchor, 1);
+        ? addWeeks(anchor, 1)
+        : addMonths(anchor, 1);
   const nextCandidateSpan = spanFor(range, nextCandidateAnchor);
   const canGoNext = nextCandidateSpan.from <= today;
   // -----------------------------------------------------------------
 
   if (loadingDevice && !device) {
-    // initial loading state (no device selected yet)
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
@@ -498,7 +494,6 @@ export default function ReadingsHistoryScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* measure header height */}
       <View onLayout={onHeaderLayout}>
         <GlassHeader
           title={t("readingsHistory.headerTitle")}
@@ -521,10 +516,8 @@ export default function ReadingsHistoryScreen() {
           contentContainerStyle={s.screenContent}
           showsVerticalScrollIndicator={false}
         >
-          {/* Glass frame */}
           <View style={s.frameWrap}>
             <View style={s.frameGlass}>
-              {/* Base green gradient: light -> dark */}
               <LinearGradient
                 pointerEvents="none"
                 start={{ x: 0, y: 0.5 }}
@@ -534,7 +527,6 @@ export default function ReadingsHistoryScreen() {
                 style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
               />
 
-              {/* Fog highlight */}
               <LinearGradient
                 pointerEvents="none"
                 start={{ x: 0, y: 0 }}
@@ -553,17 +545,14 @@ export default function ReadingsHistoryScreen() {
             </View>
 
             <View style={s.inner}>
-              {/* Top segmented menu */}
               <View onLayout={onLayoutSeg}>
                 <HistorySegmented value={range} onChange={setRange} />
               </View>
 
-              {/* Plant name */}
               <View onLayout={onLayoutName}>
                 <Text style={s.plantName}>{plantName}</Text>
               </View>
 
-              {/* Date navigator */}
               <View onLayout={onLayoutDate}>
                 <DateNavigator
                   range={range}
@@ -574,7 +563,6 @@ export default function ReadingsHistoryScreen() {
                 />
               </View>
 
-              {/* Chart with dynamic height */}
               <HistoryChart
                 labels={labels}
                 values={values}
@@ -586,7 +574,6 @@ export default function ReadingsHistoryScreen() {
                 }
               />
 
-              {/* Metric buttons */}
               <View onLayout={onLayoutPills}>
                 <MetricPills value={metric} onChange={setMetric} />
               </View>
@@ -597,10 +584,8 @@ export default function ReadingsHistoryScreen() {
         </ScrollView>
       </Animated.View>
 
-      {/* Overlay spinner while history is loading */}
       {loadingHistory && <CenteredSpinner overlay size={40} color="#FFFFFF" />}
 
-      {/* Top toast */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
