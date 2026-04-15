@@ -80,15 +80,13 @@ export default function HomeScreen() {
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
 
-  // Loading UX (match Plants behavior so the first paint shows the spinner)
+  // Loading UX (match Plants behavior so entry/re-entry clears old list first)
   const [loading, setLoading] = useState(true);
   const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
   // FlatList ref to snap back to the top on focus
   const listRef = useRef<any>(null);
-  const didInitialLoadRef = useRef(false);
-  const skipNextFocusRefreshRef = useRef(true);
   const loadInFlightRef = useRef<Promise<void> | null>(null);
 
   // Local view filter for FAB "Show overdue" / "Show due today"
@@ -137,61 +135,53 @@ export default function HomeScreen() {
     setCompleteIntervalText("");
   }, []);
 
-  const load = useCallback(
-    async ({ showSpinner = false }: { showSpinner?: boolean } = {}) => {
-      if (loadInFlightRef.current) {
-        return loadInFlightRef.current;
-      }
+  const load = useCallback(async () => {
+    if (loadInFlightRef.current) {
+      return loadInFlightRef.current;
+    }
 
-      if (showSpinner) {
+    const request = (async () => {
+      try {
+        const data = await fetchHomeTasks();
+        setTasks(data);
+        setHasLoadedOnce(true);
+      } catch (e: any) {
+        showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
+        setTasks([]);
+        setHasLoadedOnce(true);
+      }
+    })();
+
+    loadInFlightRef.current = request;
+
+    try {
+      await request;
+    } finally {
+      loadInFlightRef.current = null;
+    }
+  }, [t]);
+
+  // Refresh data on entry and every later return to the screen,
+  // matching Plants: clear old list first, then load, then animate tiles
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
+
+      (async () => {
+        setViewFilter("all");
         setLoading(true);
-      }
+        setTasks([]);
 
-      const request = (async () => {
         try {
-          const data = await fetchHomeTasks();
-          setTasks(data);
-          setHasLoadedOnce(true);
-        } catch (e: any) {
-          showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
-          setTasks([]);
-          setHasLoadedOnce(true);
+          await load();
         } finally {
-          if (showSpinner) {
-            setLoading(false);
-          }
+          if (mounted) setLoading(false);
         }
       })();
 
-      loadInFlightRef.current = request;
-
-      try {
-        await request;
-      } finally {
-        loadInFlightRef.current = null;
-      }
-    },
-    [t]
-  );
-
-  useEffect(() => {
-    if (didInitialLoadRef.current) return;
-    didInitialLoadRef.current = true;
-    load({ showSpinner: true });
-  }, [load]);
-
-  // Refresh data on later returns to the screen, but skip the first focus after mount
-  useFocusEffect(
-    useCallback(() => {
-      setViewFilter("all");
-
-      if (skipNextFocusRefreshRef.current) {
-        skipNextFocusRefreshRef.current = false;
-        return undefined;
-      }
-
-      load({ showSpinner: false });
-      return undefined;
+      return () => {
+        mounted = false;
+      };
     }, [load])
   );
 
@@ -213,7 +203,7 @@ export default function HomeScreen() {
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
-      await load({ showSpinner: false });
+      await load();
     } finally {
       setRefreshing(false);
     }
@@ -410,8 +400,7 @@ export default function HomeScreen() {
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, viewFilter, derivedTasks.length]);
+  }, [loading, derivedTasks.length, primeAnimations, runStaggerIn, derivedTasks]);
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
@@ -507,7 +496,9 @@ export default function HomeScreen() {
       closeCompleteModal();
 
       // Reload from backend so cloned/next task appears
-      await load({ showSpinner: true });
+      await load();
+
+      setLoading(false);
 
       const okCount = results.filter((r) => r.status === "fulfilled").length;
       const failCount = results.length - okCount;
@@ -818,7 +809,8 @@ export default function HomeScreen() {
                         <Text style={s.inlineBold}>
                           {t("home.empty.all.bullets.plantsTabBold")}
                         </Text>
-                        .{"\n"}• {t("home.empty.all.bullets.addRemindersPrefix")}{" "}
+                        .
+                        {"\n"}• {t("home.empty.all.bullets.addRemindersPrefix")}{" "}
                         <Text style={s.inlineBold}>
                           {t("home.empty.all.bullets.remindersBold")}
                         </Text>{" "}
