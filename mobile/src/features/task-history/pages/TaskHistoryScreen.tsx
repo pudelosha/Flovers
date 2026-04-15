@@ -321,7 +321,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen && !deleteOpen && !openMenuId;
+    !loading && !sortOpen && !filterOpen && !deleteOpen;
 
   // FAB actions
   const baseFabActions = [
