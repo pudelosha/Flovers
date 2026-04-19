@@ -5,13 +5,13 @@ import {
   ActivityIndicator,
   Text
 } from "react-native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider"; // Import LanguageProvider
 import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
+import LinearGradient from "react-native-linear-gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
@@ -27,6 +27,10 @@ import {
   WATER_LABEL_BY_LEVEL,
   DIFFICULTY_LABEL_BY_LEVEL,
 } from "../constants/create-plant.constants";
+
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 type Props = {
   onScrollToTop: () => void;
@@ -213,14 +217,30 @@ export default function Step01_SelectPlant({
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass} pointerEvents="none">
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base green gradient (AuthCard match) */}
+        <LinearGradient
           pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={{ position: "absolute", inset: 0, borderRadius: 28 } as any}
         />
+
+        {/* Fog highlight (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={{ position: "absolute", inset: 0 } as any}
+        />
+
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
