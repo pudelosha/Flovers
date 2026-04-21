@@ -1,9 +1,11 @@
-﻿import React, { useEffect, useMemo, useState, useCallback } from "react";
-import { 
-  View, 
-  Pressable, 
+﻿import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
+import {
+  View,
+  Pressable,
   ActivityIndicator,
-  Text
+  Text,
+  Animated,
+  Easing,
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
@@ -32,6 +34,9 @@ import {
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
+// EXACT SAME blue as PreviousNextBar next button
+const CTA_BLUE = "#0B7285";
+
 type Props = {
   onScrollToTop: () => void;
   onOpenScanner: () => void;
@@ -48,18 +53,20 @@ function formatPlantName(name: string): string {
   return name.replace(/_/g, " ");
 }
 
-// Create a wrapper component that ensures translations are ready
-const TranslatedText = ({ tKey, children, style }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any 
+const TranslatedText = ({
+  tKey,
+  children,
+  style,
+}: {
+  tKey: string;
+  children?: any;
+  style?: any;
 }) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  
-  // Use currentLanguage to force re-render when language changes
+
   React.useMemo(() => {}, [currentLanguage]);
-  
+
   try {
     const text = t(tKey);
     return <Text style={style}>{text}</Text>;
@@ -82,7 +89,6 @@ export default function Step01_SelectPlant({
   const initialQuery = useMemo(() => {
     const fromState = (state as any).plantQuery?.trim?.() || "";
 
-    // Prefer latin (formatted for display) so we don't show localized/common name when coming back
     const latinRaw = String((state as any).selectedPlant?.latin ?? "").trim();
     const latinDisplay = latinRaw ? latinRaw.replace(/_/g, " ") : "";
 
@@ -103,6 +109,37 @@ export default function Step01_SelectPlant({
   const [searchIndex, setSearchIndex] = useState<Suggestion[]>([]);
   const [loadingSearch, setLoadingSearch] = useState(true);
   const [errorSearch, setErrorSearch] = useState<string | null>(null);
+
+  // Pulse animation for ML scanner button
+  const scanPulse = useRef(new Animated.Value(0)).current;
+  const scanPulseLoopRef = useRef<Animated.CompositeAnimation | null>(null);
+
+  useEffect(() => {
+    scanPulseLoopRef.current?.stop();
+    scanPulseLoopRef.current = null;
+
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(scanPulse, {
+          toValue: 1,
+          duration: 1300,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(scanPulse, {
+          toValue: 0,
+          duration: 1300,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+      ])
+    );
+
+    scanPulseLoopRef.current = loop;
+    loop.start();
+
+    return () => loop.stop();
+  }, [scanPulse]);
 
   const getTranslation = useCallback((key: string, fallback?: string): string => {
     try {
@@ -147,8 +184,14 @@ export default function Step01_SelectPlant({
         setErrorSearch(null);
       } catch (e: any) {
         if (!mounted) return;
-        setErrorPopular(e?.message ?? getTranslation("createPlant.step01.errorPopular", "Failed to load popular plants"));
-        setErrorSearch(e?.message ?? getTranslation("createPlant.step01.errorSearch", "Failed to load plant search"));
+        setErrorPopular(
+          e?.message ??
+            getTranslation("createPlant.step01.errorPopular", "Failed to load popular plants")
+        );
+        setErrorSearch(
+          e?.message ??
+            getTranslation("createPlant.step01.errorSearch", "Failed to load plant search")
+        );
       } finally {
         if (mounted) {
           setLoadingPopular(false);
@@ -187,21 +230,24 @@ export default function Step01_SelectPlant({
     onScrollToTop();
   };
 
-  const onScanPlantDetected = useCallback((plant: Suggestion) => {
-    const formattedLatin = plant.latin.replace(/_/g, " ");
-    setQuery(formattedLatin);
-    setShowSuggestions(false);
+  const onScanPlantDetected = useCallback(
+    (plant: Suggestion) => {
+      const formattedLatin = plant.latin.replace(/_/g, " ");
+      setQuery(formattedLatin);
+      setShowSuggestions(false);
 
-    actions.setSelectedPlant({
-      id: plant.id,
-      name: formattedLatin,
-      latin: plant.latin,
-      predefined: false,
-    });
+      actions.setSelectedPlant({
+        id: plant.id,
+        name: formattedLatin,
+        latin: plant.latin,
+        predefined: false,
+      });
 
-    onScrollToTop();
-    actions.goTo("traits");
-  }, [actions, onScrollToTop]);
+      onScrollToTop();
+      actions.goTo("traits");
+    },
+    [actions, onScrollToTop]
+  );
 
   useEffect(() => {
     onRegisterScanResultHandler(onScanPlantDetected);
@@ -237,15 +283,8 @@ export default function Step01_SelectPlant({
       </View>
 
       <View style={wiz.cardInner}>
-        <TranslatedText
-          tKey="createPlant.step01.title"
-          style={wiz.title}
-        />
-
-        <TranslatedText
-          tKey="createPlant.step01.subtitle"
-          style={wiz.subtitle}
-        />
+        <TranslatedText tKey="createPlant.step01.title" style={wiz.title} />
+        <TranslatedText tKey="createPlant.step01.subtitle" style={wiz.subtitle} />
 
         <View
           style={{
@@ -266,11 +305,47 @@ export default function Step01_SelectPlant({
               borderRadius: 14,
               backgroundColor: "rgba(255,255,255,0.16)",
               overflow: "hidden",
+              position: "relative",
             }}
             android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
             accessibilityRole="button"
             accessibilityLabel={getTranslation("createPlant.step01.scanButton", "Scan plant")}
           >
+            <Animated.View
+              pointerEvents="none"
+              style={{
+                position: "absolute",
+                inset: 0,
+                borderRadius: 14,
+                backgroundColor: CTA_BLUE,
+                opacity: scanPulse.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0.18, 0.75],
+                }),
+                transform: [
+                  {
+                    scale: scanPulse.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [1, 1.06],
+                    }),
+                  },
+                ],
+              }}
+            />
+
+            <Animated.View
+              pointerEvents="none"
+              style={{
+                position: "absolute",
+                inset: 0,
+                borderRadius: 14,
+                opacity: scanPulse.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0.35, 0.9],
+                }),
+              }}
+            />
+
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
 
@@ -287,15 +362,15 @@ export default function Step01_SelectPlant({
               setShowSuggestions={setShowSuggestions}
               onSelectSuggestion={onSelectFromSearch}
               suggestions={searchIndex}
-              placeholder={getTranslation("createPlant.step01.searchPlaceholder", "Search for a plant...")}
+              placeholder={getTranslation(
+                "createPlant.step01.searchPlaceholder",
+                "Search for a plant..."
+              )}
             />
           </View>
         </View>
 
-        <TranslatedText
-          tKey="createPlant.step01.popularPlants"
-          style={wiz.sectionTitle}
-        />
+        <TranslatedText tKey="createPlant.step01.popularPlants" style={wiz.sectionTitle} />
 
         {loadingPopular ? (
           <View style={{ paddingVertical: 8 }}>
@@ -313,11 +388,7 @@ export default function Step01_SelectPlant({
                   style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}
                 >
                   <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
-                    <SafeImage
-                      uri={(item as any).image}
-                      style={wiz.thumb}
-                      resizeMode="cover"
-                    />
+                    <SafeImage uri={(item as any).image} style={wiz.thumb} resizeMode="cover" />
 
                     <View style={{ flex: 1 }}>
                       <Text style={wiz.rowName} numberOfLines={1}>
