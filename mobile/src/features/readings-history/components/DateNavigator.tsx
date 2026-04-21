@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/readings-history.styles";
 import type { DateSpan, HistoryRange } from "../types/readings-history.types";
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 type Props = {
   range: HistoryRange;
   span: DateSpan;
   onPrev: () => void;
   onNext: () => void;
-  // when false, the "next" arrow is visually disabled and non-interactive
   canGoNext?: boolean;
 };
 
@@ -17,8 +17,37 @@ function pad2(n: number) {
   return n < 10 ? `0${n}` : String(n);
 }
 
-function fmtDM(d: Date) {
-  return `${pad2(d.getDate())}.${pad2(d.getMonth() + 1)}`;
+function formatDateBySettings(
+  d: Date,
+  settings?: any,
+  opts?: { withYear?: boolean }
+) {
+  const dd = pad2(d.getDate());
+  const mm = pad2(d.getMonth() + 1);
+  const yyyy = String(d.getFullYear());
+  const withYear = !!opts?.withYear;
+
+  const fmt = settings?.dateFormat;
+
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return withYear ? `${mm}${sep}${dd}${sep}${yyyy}` : `${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return withYear ? `${yyyy}${sep}${mm}${sep}${dd}` : `${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") {
+    return withYear ? `${dd}/${mm}/${yyyy}` : `${dd}/${mm}`;
+  }
+
+  if (fmt === "DD-MM-YYYY") {
+    return withYear ? `${dd}-${mm}-${yyyy}` : `${dd}-${mm}`;
+  }
+
+  return withYear ? `${dd}.${mm}.${yyyy}` : `${dd}.${mm}`;
 }
 
 export default function DateNavigator({
@@ -28,10 +57,18 @@ export default function DateNavigator({
   onNext,
   canGoNext = true,
 }: Props) {
-  const text =
-    range === "day"
-      ? `${fmtDM(span.from)}.${span.from.getFullYear()}`
-      : `${fmtDM(span.from)} - ${fmtDM(span.to)}`;
+  const { settings } = useSettings();
+
+  const text = useMemo(() => {
+    if (range === "day") {
+      return formatDateBySettings(span.from, settings, { withYear: true });
+    }
+
+    return `${formatDateBySettings(span.from, settings)} - ${formatDateBySettings(
+      span.to,
+      settings
+    )}`;
+  }, [range, span, settings]);
 
   const disableNext = !canGoNext;
 
@@ -52,7 +89,9 @@ export default function DateNavigator({
         onPress={disableNext ? undefined : onNext}
         disabled={disableNext}
         android_ripple={
-          disableNext ? undefined : { color: "rgba(255,255,255,0.2)", borderless: true }
+          disableNext
+            ? undefined
+            : { color: "rgba(255,255,255,0.2)", borderless: true }
         }
       >
         <MaterialCommunityIcons
