@@ -33,15 +33,6 @@ import DeleteAccountModal from "../components/modals/DeleteAccountModal";
 import ContactUsModal from "../components/modals/ContactUsModal";
 import ReportBugModal from "../components/modals/ReportBugModal";
 
-function formatDate(d?: string | Date | null) {
-  if (!d) return "—";
-  const date = typeof d === "string" ? new Date(d) : d;
-  const dd = String(date.getDate()).padStart(2, "0");
-  const mm = String(date.getMonth() + 1).padStart(2, "0");
-  const yyyy = date.getFullYear();
-  return `${dd}.${mm}.${yyyy}`;
-}
-
 function isUnauthorizedError(e: any): boolean {
   const status = (e?.response?.status ?? e?.status) as number | undefined;
   const msg = String(e?.message ?? "").toLowerCase();
@@ -282,7 +273,12 @@ export default function ProfileScreen() {
         >
           <AccountCard
             email={user?.email}
-            createdText={formatDate((user as any)?.date_joined)}
+            createdAt={
+              (user as any)?.date_joined ??
+              (user as any)?.created_at ??
+              (user as any)?.created ??
+              null
+            }
             onPrompt={setPrompt}
             onLogout={logout}
           />
