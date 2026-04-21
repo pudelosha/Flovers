@@ -6,6 +6,7 @@ import { s } from "../../styles/home.styles";
 import type { TaskType } from "../../types/home.types";
 import { ACCENT_BY_TYPE } from "../../constants/home.constants";
 import { useTranslation } from "react-i18next";
+import { useSettings } from "../../../../app/providers/SettingsProvider";
 
 let DateTimePicker: any = null;
 try {
@@ -42,11 +43,24 @@ function isValidDateYYYYMMDD(v?: string) {
   const [Y, M, D] = v.split("-").map(Number);
   return d.getUTCFullYear() === Y && d.getUTCMonth() + 1 === M && d.getUTCDate() === D;
 }
+
 function toYYYYMMDD(d: Date) {
   const Y = d.getFullYear();
   const M = String(d.getMonth() + 1).padStart(2, "0");
   const D = String(d.getDate()).padStart(2, "0");
   return `${Y}-${M}-${D}`;
+}
+
+function formatDateForDisplay(iso?: string, pattern?: string) {
+  if (!iso || !isValidDateYYYYMMDD(iso)) return "";
+
+  const [yyyy, mm, dd] = iso.split("-");
+  const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
+
+  return fmt
+    .replace("YYYY", yyyy)
+    .replace("MM", mm)
+    .replace("DD", dd);
 }
 
 // tiny helper for tinted backgrounds
@@ -76,6 +90,7 @@ export default function FilterHomeTasksModal({
   onClearAll,
 }: Props) {
   const { t } = useTranslation();
+  const { settings } = useSettings();
 
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
@@ -278,9 +293,9 @@ export default function FilterHomeTasksModal({
               >
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder={t("homeModals.filter.datePlaceholder")}
+                  placeholder={settings.dateFormat || "DD.MM.YYYY"}
                   placeholderTextColor="rgba(255,255,255,0.7)"
-                  value={dueFrom}
+                  value={formatDateForDisplay(dueFrom, settings.dateFormat)}
                   editable={false}
                   pointerEvents="none"
                 />
@@ -309,9 +324,9 @@ export default function FilterHomeTasksModal({
               >
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder={t("homeModals.filter.datePlaceholder")}
+                  placeholder={settings.dateFormat || "DD.MM.YYYY"}
                   placeholderTextColor="rgba(255,255,255,0.7)"
-                  value={dueTo}
+                  value={formatDateForDisplay(dueTo, settings.dateFormat)}
                   editable={false}
                   pointerEvents="none"
                 />

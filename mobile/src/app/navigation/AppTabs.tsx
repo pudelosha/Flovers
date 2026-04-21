@@ -318,7 +318,7 @@ const s = StyleSheet.create({
     borderRadius: 0,
     overflow: "hidden",
     borderTopWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderColor: "rgba(255,255,255,0.20)",
   },
   tabInner: {
     height: 64,
