@@ -32,6 +32,8 @@ import {
   fetchHistoryItems,
   deleteHistoryEntry,
   bulkDeleteHistoryEntries,
+  sendHistoryExportEmail,
+  type HistoryExportEmailRequest,
 } from "../../../api/services/history.service";
 
 import SortHistoryTasksModal, {
@@ -44,6 +46,7 @@ import FilterHistoryTasksModal, {
 import DeleteHistoryTasksModal, {
   HistoryDeletePayload,
 } from "../components/modals/DeleteHistoryTasksModal";
+import SendHistoryExportModal from "../components/modals/SendHistoryExportModal";
 
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
@@ -96,13 +99,15 @@ export default function TaskHistoryScreen() {
     setToastVisible(true);
   };
 
-  // --- SORT / FILTER / DELETE STATE ---
+  // --- SORT / FILTER / DELETE / EXPORT STATE ---
   const [filters, setFilters] = useState<HistoryFilters>(INITIAL_FILTERS);
   const [sortKey, setSortKey] = useState<HistorySortKey>("completedAt");
   const [sortDir, setSortDir] = useState<HistorySortDir>("desc");
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
+  const [exportOpen, setExportOpen] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   const isFilterActive = useMemo(
     () =>
@@ -148,6 +153,7 @@ export default function TaskHistoryScreen() {
       setSortOpen(false);
       setFilterOpen(false);
       setDeleteOpen(false);
+      setExportOpen(false);
       setOpenMenuId(null);
       setFilters(INITIAL_FILTERS);
       setSortKey("completedAt");
@@ -198,6 +204,34 @@ export default function TaskHistoryScreen() {
     });
     return Array.from(set);
   }, [items]);
+
+  const effectiveExportFilters = useMemo<HistoryExportEmailRequest>(() => {
+    return {
+      plantId: plantIdFilter || filters.plantId || undefined,
+      location: filters.location || undefined,
+      types:
+        filters.types && filters.types.length > 0 ? filters.types : undefined,
+      completedFrom: filters.completedFrom || undefined,
+      completedTo: filters.completedTo || undefined,
+      sortKey,
+      sortDir,
+    };
+  }, [filters, plantIdFilter, sortKey, sortDir]);
+
+  const exportPlantName = useMemo(() => {
+    const effectivePlantId = effectiveExportFilters.plantId;
+    if (!effectivePlantId) return undefined;
+
+    const fromOptions = plantOptions.find((p) => p.id === effectivePlantId)?.name;
+    if (fromOptions) return fromOptions;
+
+    const fromItems = items.find(
+      (item) => String((item as any).plantId || "") === String(effectivePlantId)
+    )?.plant;
+    if (fromItems) return fromItems;
+
+    return undefined;
+  }, [effectiveExportFilters.plantId, plantOptions, items]);
 
   // ===== DERIVED LIST (sort + filter) =====
   const derivedItems = useMemo(() => {
@@ -321,7 +355,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen && !deleteOpen;
+    !loading && !sortOpen && !filterOpen && !deleteOpen && !exportOpen;
 
   // FAB actions
   const baseFabActions = [
@@ -336,6 +370,15 @@ export default function TaskHistoryScreen() {
       label: t("taskHistory.fab.filter"),
       icon: "filter-variant",
       onPress: () => setFilterOpen(true),
+    },
+    {
+      key: "sendExport",
+      label: t("taskHistory.fab.sendExport"),
+      icon: "email-send-outline",
+      onPress: () => {
+        setOpenMenuId(null);
+        setExportOpen(true);
+      },
     },
     {
       key: "delete",
@@ -390,6 +433,33 @@ export default function TaskHistoryScreen() {
         e?.message || t("taskHistory.toasts.failedToDeleteHistory"),
         "error"
       );
+    }
+  };
+
+  const handleSendExport = async (includePending: boolean) => {
+    setOpenMenuId(null);
+
+    try {
+      setExporting(true);
+
+      await sendHistoryExportEmail({
+        ...effectiveExportFilters,
+        includePending,
+      });
+
+      setExportOpen(false);
+      showToast(t("taskHistory.toasts.exportSent"), "success");
+    } catch (e: any) {
+      if (e?.status === 404) {
+        showToast(t("taskHistory.toasts.exportNotAvailableYet"), "error");
+      } else {
+        showToast(
+          e?.message || t("taskHistory.toasts.failedToSendExport"),
+          "error"
+        );
+      }
+    } finally {
+      setExporting(false);
     }
   };
 
@@ -595,7 +665,7 @@ export default function TaskHistoryScreen() {
         }
       />
 
-      {/* FAB: Sort / Filter / Delete / Clear filter / Show all history (when plantIdFilter) */}
+      {/* FAB: Sort / Filter / Send export / Delete / Clear filter / Show all history (when plantIdFilter) */}
       {showFAB && (
         <View
           onStartShouldSetResponderCapture={() => {
@@ -637,6 +707,18 @@ export default function TaskHistoryScreen() {
           setFilters(nextFilters);
           setFilterOpen(false);
         }}
+      />
+
+      {/* Export modal */}
+      <SendHistoryExportModal
+        visible={exportOpen}
+        effectiveFilters={effectiveExportFilters}
+        plantName={exportPlantName}
+        sending={exporting}
+        onCancel={() => {
+          if (!exporting) setExportOpen(false);
+        }}
+        onSend={handleSendExport}
       />
 
       {/* Delete modal */}

@@ -6,6 +6,7 @@
     "fab": {
       "sort": "Sort",
       "filter": "Filter",
+      "sendExport": "Send export",
       "delete": "Delete",
       "clearFilter": "Clear filter",
       "showAllHistory": "Show all history"
@@ -19,7 +20,10 @@
       "failedToDeleteHistory": "Failed to delete history",
       "historyTaskDeleted": "History task deleted",
       "failedToDeleteHistoryTask": "Failed to delete history task",
-      "taskNotLinkedToPlant": "This task is not linked to a plant."
+      "taskNotLinkedToPlant": "This task is not linked to a plant.",
+      "exportSent": "Task history export request sent",
+      "failedToSendExport": "Failed to send task history export",
+      "exportNotAvailableYet": "Export is not available yet."
     },
     "empty": {
       "title": "No completed tasks yet",

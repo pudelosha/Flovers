@@ -1,4 +1,5 @@
 // src/api/services/history.service.ts
+import { request } from "../client";
 import {
   listReminderTasks,
   listReminders,
@@ -63,4 +64,39 @@ export async function bulkDeleteHistoryEntries(
   payload: HistoryBulkDeleteRequest
 ): Promise<void> {
   await bulkDeleteReminderTasks(payload as any, { auth: true });
+}
+
+export type HistoryExportSortKey = "completedAt" | "plant" | "location";
+export type HistoryExportSortDir = "asc" | "desc";
+
+export type HistoryExportEmailRequest = {
+  plantId?: string;
+  location?: string;
+  types?: TaskType[];
+  completedFrom?: string;
+  completedTo?: string;
+  sortKey?: HistoryExportSortKey;
+  sortDir?: HistoryExportSortDir;
+  includePending?: boolean;
+};
+
+/**
+ * Send task history export email request.
+ *
+ * Backend expected:
+ *   POST /api/reminders/tasks/export-email/
+ *   body = HistoryExportEmailRequest
+ *
+ * Response:
+ *   200/202 when export email request is accepted.
+ */
+export async function sendHistoryExportEmail(
+  payload: HistoryExportEmailRequest
+): Promise<void> {
+  await request<void>(
+    "/api/reminders/tasks/export-email/",
+    "POST",
+    payload,
+    { auth: true }
+  );
 }

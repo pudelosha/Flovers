@@ -54,6 +54,27 @@
         "desc": "Descending"
       },
       "reset": "Reset"
+    },
+    "export": {
+      "title": "Send history export",
+      "noticeTitle": "The Excel export will use the currently applied criteria.",
+      "noticeFiltered": "Only task history matching the filters shown below will be included. If you need different data, change the filters first and then send again.",
+      "noticeAllData": "No filters are currently applied, so the export will include all available task history data for this screen.",
+      "criteriaTitle": "Applied criteria",
+      "plantLabel": "Plant",
+      "locationLabel": "Location",
+      "taskTypesLabel": "Task types",
+      "completedFromLabel": "Completed from",
+      "completedToLabel": "Completed to",
+      "sortByLabel": "Sort by",
+      "directionLabel": "Direction",
+      "anyPlant": "Any plant",
+      "anyLocation": "Any location",
+      "allTaskTypes": "All task types",
+      "notSet": "Not set",
+      "includePending": "Include pending tasks as well",
+      "send": "Send",
+      "sending": "Sending..."
     }
   }
 }
