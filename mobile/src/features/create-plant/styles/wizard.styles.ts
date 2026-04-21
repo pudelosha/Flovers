@@ -31,7 +31,7 @@ export const wiz = StyleSheet.create({
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1, // thicker like Profile
+    borderWidth: 1,
     borderColor: "rgba(255,255,255,0.20)",
     zIndex: 2,
   },
@@ -85,9 +85,17 @@ export const wiz = StyleSheet.create({
 
   /** Popular / list row */
   rowItem: { flexDirection: "row", alignItems: "center", gap: 12 },
-  thumb: { width: 48, height: 48, borderRadius: 10, backgroundColor: "rgba(255,255,255,0.12)" },
+
+  // 2x larger than before: 48 -> 96
+  thumb: {
+    width: 96,
+    height: 96,
+    borderRadius: 10,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+
   rowName: { color: "#FFFFFF", fontWeight: "800" },
-  rowLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic", marginTop: 2 },
+  rowLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic", marginTop: 6 },
   tagRow: { flexDirection: "row", alignItems: "center", marginTop: 6 },
 
   /** Footer buttons – flat, borderless */

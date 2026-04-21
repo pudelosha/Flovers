@@ -9,7 +9,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useNavigation } from "@react-navigation/native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Import LanguageProvider
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -45,7 +45,7 @@ function pickName(item: any): string {
 }
 
 function formatPlantName(name: string): string {
-  return name.replace(/_/g, ' '); // Replace underscores with spaces
+  return name.replace(/_/g, " ");
 }
 
 // Create a wrapper component that ensures translations are ready
@@ -64,8 +64,7 @@ const TranslatedText = ({ tKey, children, style }: {
     const text = t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
-    const fallbackText = tKey.split('.').pop() || tKey;
+    const fallbackText = tKey.split(".").pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
 };
@@ -76,7 +75,7 @@ export default function Step01_SelectPlant({
   onRegisterScanResultHandler,
 }: Props) {
   const { t, i18n } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage, changeLanguage } = useLanguage();
   const navigation = useNavigation<any>();
   const { state, actions } = useCreatePlantWizard();
 
@@ -105,27 +104,23 @@ export default function Step01_SelectPlant({
   const [loadingSearch, setLoadingSearch] = useState(true);
   const [errorSearch, setErrorSearch] = useState<string | null>(null);
 
-  // Safe translation function that uses both hooks
   const getTranslation = useCallback((key: string, fallback?: string): string => {
     try {
-      // Force dependency on currentLanguage to ensure updates
       const lang = currentLanguage;
       const translation = t(key);
-      return translation || fallback || key.split('.').pop() || key;
+      return translation || fallback || key.split(".").pop() || key;
     } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return fallback || key.split('.').pop() || key;
+      console.warn("Translation error for key:", key, error);
+      return fallback || key.split(".").pop() || key;
     }
   }, [t, currentLanguage]);
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
-    console.log('Step01_SelectPlant rendering with language:', currentLanguage);
+    console.log("Step01_SelectPlant rendering with language:", currentLanguage);
   }, [currentLanguage]);
 
   useFocusEffect(
     React.useCallback(() => {
-      // if provider is reset, initialQuery will be ""
       setQuery(initialQuery);
       setShowSuggestions(false);
       return () => {};
@@ -152,8 +147,8 @@ export default function Step01_SelectPlant({
         setErrorSearch(null);
       } catch (e: any) {
         if (!mounted) return;
-        setErrorPopular(e?.message ?? getTranslation('createPlant.step01.errorPopular', 'Failed to load popular plants'));
-        setErrorSearch(e?.message ?? getTranslation('createPlant.step01.errorSearch', 'Failed to load plant search'));
+        setErrorPopular(e?.message ?? getTranslation("createPlant.step01.errorPopular", "Failed to load popular plants"));
+        setErrorSearch(e?.message ?? getTranslation("createPlant.step01.errorSearch", "Failed to load plant search"));
       } finally {
         if (mounted) {
           setLoadingPopular(false);
@@ -167,13 +162,13 @@ export default function Step01_SelectPlant({
   }, [getTranslation, currentLanguage]);
 
   const onSelectFromSearch = (item: Suggestion) => {
-    const latinName = item.latin;  // Use the Latin name here
-    setQuery(latinName);           // Update the query with the Latin name
+    const latinName = item.latin;
+    setQuery(latinName);
     setShowSuggestions(false);
     actions.setSelectedPlant({
       id: item.id,
-      name: latinName,             // Store the Latin name
-      latin: latinName,            // Store the Latin name
+      name: latinName,
+      latin: latinName,
       predefined: true,
     });
   };
@@ -181,32 +176,30 @@ export default function Step01_SelectPlant({
   const onPickPopular = (item: PopularPlant) => {
     const latinName = (item as any).latin;
 
-    setQuery(latinName);  // Set the query to Latin name
+    setQuery(latinName);
     setShowSuggestions(false);
     actions.setSelectedPlant({
       id: (item as any).id,
-      name: latinName,     // Store the Latin name
-      latin: latinName,    // Store the Latin name
+      name: latinName,
+      latin: latinName,
       predefined: true,
     });
     onScrollToTop();
   };
 
   const onScanPlantDetected = useCallback((plant: Suggestion) => {
-    const formattedLatin = plant.latin.replace(/_/g, " "); // display
+    const formattedLatin = plant.latin.replace(/_/g, " ");
     setQuery(formattedLatin);
     setShowSuggestions(false);
 
     actions.setSelectedPlant({
       id: plant.id,
-      name: formattedLatin,   // display
-      latin: plant.latin,     // keep underscores for internal/backend if that’s what you want
+      name: formattedLatin,
+      latin: plant.latin,
       predefined: false,
     });
 
     onScrollToTop();
-
-    // jump to Step02 after scan selection
     actions.goTo("traits");
   }, [actions, onScrollToTop]);
 
@@ -217,7 +210,6 @@ export default function Step01_SelectPlant({
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass} pointerEvents="none">
-        {/* Base green gradient (AuthCard match) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0.5 }}
@@ -227,7 +219,6 @@ export default function Step01_SelectPlant({
           style={{ position: "absolute", inset: 0, borderRadius: 28 } as any}
         />
 
-        {/* Fog highlight (AuthCard match) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
@@ -246,14 +237,14 @@ export default function Step01_SelectPlant({
       </View>
 
       <View style={wiz.cardInner}>
-        <TranslatedText 
-          tKey="createPlant.step01.title" 
-          style={wiz.title} 
+        <TranslatedText
+          tKey="createPlant.step01.title"
+          style={wiz.title}
         />
-        
-        <TranslatedText 
-          tKey="createPlant.step01.subtitle" 
-          style={wiz.subtitle} 
+
+        <TranslatedText
+          tKey="createPlant.step01.subtitle"
+          style={wiz.subtitle}
         />
 
         <View
@@ -278,7 +269,7 @@ export default function Step01_SelectPlant({
             }}
             android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
             accessibilityRole="button"
-            accessibilityLabel={getTranslation('createPlant.step01.scanButton', 'Scan plant')}
+            accessibilityLabel={getTranslation("createPlant.step01.scanButton", "Scan plant")}
           >
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
@@ -296,14 +287,14 @@ export default function Step01_SelectPlant({
               setShowSuggestions={setShowSuggestions}
               onSelectSuggestion={onSelectFromSearch}
               suggestions={searchIndex}
-              placeholder={getTranslation('createPlant.step01.searchPlaceholder', 'Search for a plant...')}
+              placeholder={getTranslation("createPlant.step01.searchPlaceholder", "Search for a plant...")}
             />
           </View>
         </View>
 
-        <TranslatedText 
-          tKey="createPlant.step01.popularPlants" 
-          style={wiz.sectionTitle} 
+        <TranslatedText
+          tKey="createPlant.step01.popularPlants"
+          style={wiz.sectionTitle}
         />
 
         {loadingPopular ? (
@@ -322,7 +313,12 @@ export default function Step01_SelectPlant({
                   style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}
                 >
                   <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
-                    <SafeImage uri={(item as any).image} style={wiz.thumb} resizeMode="cover" />
+                    <SafeImage
+                      uri={(item as any).image}
+                      style={wiz.thumb}
+                      resizeMode="cover"
+                    />
+
                     <View style={{ flex: 1 }}>
                       <Text style={wiz.rowName} numberOfLines={1}>
                         {displayName}
@@ -331,6 +327,7 @@ export default function Step01_SelectPlant({
                         {(item as any).latin}
                       </Text>
 
+                      {/*
                       <View style={[wiz.tagRow, { gap: 12 }]}>
                         <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
                           <MaterialCommunityIcons
@@ -383,6 +380,7 @@ export default function Step01_SelectPlant({
                           </Text>
                         </View>
                       </View>
+                      */}
                     </View>
                   </Pressable>
                 </View>
@@ -391,7 +389,7 @@ export default function Step01_SelectPlant({
           </View>
         ) : (
           <Text style={[wiz.subtitle, { color: "rgba(255,255,255,0.7)" }]}>
-            {getTranslation('createPlant.step01.noPlantsAvailable', 'No plants available')}
+            {getTranslation("createPlant.step01.noPlantsAvailable", "No plants available")}
           </Text>
         )}
 
