@@ -15,6 +15,10 @@ import { s } from "../../styles/reminders.styles";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
+import {
+  ACCENT_BY_TYPE,
+  ICON_BY_TYPE,
+} from "../../constants/reminders.constants";
 
 export type ReminderType =
   | "watering"
@@ -193,6 +197,9 @@ export default function EditReminderModal(props: Props) {
 
   const unitLabel = (u: "days" | "months") => tr(`reminders.units.${u}`, u);
 
+  const selectedTypeTint = ACCENT_BY_TYPE[fType];
+  const selectedTypeIcon = ICON_BY_TYPE[fType];
+
   return (
     <>
       <Pressable
@@ -249,7 +256,28 @@ export default function EditReminderModal(props: Props) {
                 }}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
-                <Text style={s.dropdownValue}>{typeLabel(fType)}</Text>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: 10,
+                    flex: 1,
+                    minWidth: 0,
+                  }}
+                >
+                  <MaterialCommunityIcons
+                    name={selectedTypeIcon}
+                    size={18}
+                    color={selectedTypeTint}
+                  />
+                  <Text
+                    style={[s.dropdownValue, { color: selectedTypeTint, flexShrink: 1 }]}
+                    numberOfLines={1}
+                  >
+                    {typeLabel(fType)}
+                  </Text>
+                </View>
+
                 <MaterialCommunityIcons
                   name={typeOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -259,25 +287,55 @@ export default function EditReminderModal(props: Props) {
 
               {typeOpen && (
                 <View style={s.dropdownList}>
-                  {TYPE_OPTIONS.map((opt) => (
-                    <Pressable
-                      key={opt}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setFType(opt);
-                        setTypeOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{typeLabel(opt)}</Text>
-                      {fType === opt && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
+                  {TYPE_OPTIONS.map((opt) => {
+                    const tint = ACCENT_BY_TYPE[opt];
+                    const icon = ICON_BY_TYPE[opt];
+                    const selected = fType === opt;
+
+                    return (
+                      <Pressable
+                        key={opt}
+                        style={s.dropdownItem}
+                        onPress={() => {
+                          setFType(opt);
+                          setTypeOpen(false);
+                        }}
+                      >
+                        <View
+                          style={{
+                            flexDirection: "row",
+                            alignItems: "center",
+                            gap: 10,
+                            flex: 1,
+                            minWidth: 0,
+                          }}
+                        >
+                          <MaterialCommunityIcons
+                            name={icon}
+                            size={18}
+                            color={tint}
+                          />
+                          <Text
+                            style={[
+                              s.dropdownItemText,
+                              { color: selected ? tint : "#FFFFFF", flexShrink: 1 },
+                            ]}
+                            numberOfLines={1}
+                          >
+                            {typeLabel(opt)}
+                          </Text>
+                        </View>
+
+                        {selected && (
+                          <MaterialCommunityIcons
+                            name="check"
+                            size={18}
+                            color={tint}
+                          />
+                        )}
+                      </Pressable>
+                    );
+                  })}
                 </View>
               )}
             </View>
