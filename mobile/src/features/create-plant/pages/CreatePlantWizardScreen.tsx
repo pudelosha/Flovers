@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/create-plant.constants";
@@ -59,6 +60,7 @@ function ResetOnFocus() {
 function WizardBody() {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
   const { state, actions } = useCreatePlantWizard();
@@ -184,7 +186,10 @@ function WizardBody() {
             />
           )}
           {state.step === "exposure" && (
-            <Step04_Exposure onOpenMeasureModal={() => setMeasureModalOpen(true)} />
+            <Step04_Exposure
+              measureUnit={settings.measureUnit === "imperial" ? "imperial" : "metric"}
+              onOpenMeasureModal={() => setMeasureModalOpen(true)}
+            />
           )}
           {state.step === "potType" && <Step05_ContainerAndSoil />}
           {state.step === "autoTasks" && <Step06_AutoTasks />}

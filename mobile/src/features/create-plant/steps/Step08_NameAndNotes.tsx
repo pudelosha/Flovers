@@ -7,6 +7,7 @@ import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 let DateTimePicker: any = null;
 try {
@@ -32,9 +33,32 @@ function parseISODate(s: string): Date | null {
   return dt;
 }
 
+function formatISOForDisplay(iso?: string, settings?: any) {
+  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return "";
+
+  const [yyyy, mm, dd] = iso.split("-");
+  const fmt = settings?.dateFormat;
+
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
+  return `${dd}.${mm}.${yyyy}`;
+}
+
 export default function Step08_NameAndNotes() {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
 
   const { state, actions } = useCreatePlantWizard();
   const [showPicker, setShowPicker] = useState(false);
@@ -62,6 +86,12 @@ export default function Step08_NameAndNotes() {
       : state.selectedPlant?.name ??
           getTranslation("createPlant.step08.placeholderName", "e.g. Living room Monstera");
   }, [state.displayName, state.selectedPlant?.name, getTranslation]);
+
+  const purchaseDateDisplay = useMemo(() => {
+    return state.purchaseDateISO
+      ? formatISOForDisplay(state.purchaseDateISO, settings)
+      : "";
+  }, [state.purchaseDateISO, settings]);
 
   const onChangeDateNative = (_: any, date?: Date) => {
     if (Platform.OS === "android") setShowPicker(false);
@@ -179,7 +209,7 @@ export default function Step08_NameAndNotes() {
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <Text style={wiz.selectValue}>
-              {state.purchaseDateISO ?? getTranslation("createPlant.step08.notSet", "Not set")}
+              {purchaseDateDisplay || getTranslation("createPlant.step08.notSet", "Not set")}
             </Text>
             <View style={wiz.selectChevronPad}>
               <MaterialCommunityIcons name="calendar" size={20} color="#FFFFFF" />

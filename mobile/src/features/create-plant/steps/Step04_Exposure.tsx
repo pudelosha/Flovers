@@ -22,6 +22,14 @@ type Props = {
   onOpenMeasureModal: () => void;
 };
 
+function cmToInches(cm: number) {
+  return cm / 2.54;
+}
+
+function inchesToCm(inches: number) {
+  return inches * 2.54;
+}
+
 export default function Step04_Exposure({
   measureUnit = "metric",
   onOpenMeasureModal,
@@ -41,8 +49,31 @@ export default function Step04_Exposure({
     [t, currentLanguage]
   );
 
+  const displayDistanceValue = useMemo(() => {
+    if (measureUnit === "imperial") {
+      return Math.round(cmToInches(state.distanceCm));
+    }
+    return state.distanceCm;
+  }, [measureUnit, state.distanceCm]);
+
   const toDisplay = (cm: number) =>
-    measureUnit === "imperial" ? `${Math.round(cm / 2.54)} in` : `${cm} cm`;
+    measureUnit === "imperial"
+      ? `${Math.round(cmToInches(cm))} in`
+      : `${cm} cm`;
+
+  const displayMin = 0;
+  const displayMax = measureUnit === "imperial" ? Math.round(cmToInches(100)) : 100;
+  const displayStep = measureUnit === "imperial" ? 1 : 10;
+
+  const onDistanceChange = (displayValue: number) => {
+    const cm =
+      measureUnit === "imperial"
+        ? Math.round(inchesToCm(displayValue))
+        : Math.round(displayValue);
+
+    const clamped = Math.max(0, Math.min(100, cm));
+    actions.setDistanceCm(clamped);
+  };
 
   // Map slider index <-> LightLevel
   const lightOrder = useMemo(
@@ -210,12 +241,12 @@ export default function Step04_Exposure({
           </Text>
 
           <Slider
-            value={state.distanceCm}
-            onValueChange={(v) => actions.setDistanceCm(Math.round(v))}
-            onSlidingComplete={(v) => actions.setDistanceCm(Math.round(v))}
-            minimumValue={0}
-            maximumValue={100}
-            step={10}
+            value={displayDistanceValue}
+            onValueChange={onDistanceChange}
+            onSlidingComplete={onDistanceChange}
+            minimumValue={displayMin}
+            maximumValue={displayMax}
+            step={displayStep}
             minimumTrackTintColor={theme.colors.primary}
             maximumTrackTintColor="rgba(255,255,255,0.35)"
             thumbTintColor={theme.colors.primary}

@@ -93,6 +93,82 @@ function normalizeTraitKey(raw: string): string {
   return map[k] ?? k;
 }
 
+function getTemperatureUnitFromSettings(settings?: any): "C" | "F" | "K" {
+  const raw =
+    settings?.temperatureUnit ??
+    settings?.tempUnit ??
+    settings?.units?.temperature ??
+    "C";
+
+  const normalized = String(raw).trim().toLowerCase();
+
+  if (normalized === "f" || normalized === "°f" || normalized === "fahrenheit") {
+    return "F";
+  }
+
+  if (normalized === "k" || normalized === "kelvin") {
+    return "K";
+  }
+
+  return "C";
+}
+
+function cToF(c: number) {
+  return (c * 9) / 5 + 32;
+}
+
+function cToK(c: number) {
+  return c + 273.15;
+}
+
+function formatConvertedTemp(n: number) {
+  const rounded = Math.round(n * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+}
+
+function convertSingleCelsiusValue(celsius: number, targetUnit: "C" | "F" | "K") {
+  if (targetUnit === "F") return `${formatConvertedTemp(cToF(celsius))}°F`;
+  if (targetUnit === "K") return `${formatConvertedTemp(cToK(celsius))} K`;
+  return `${formatConvertedTemp(celsius)}°C`;
+}
+
+function convertTemperatureText(value: string, settings?: any) {
+  const targetUnit = getTemperatureUnitFromSettings(settings);
+  if (targetUnit === "C") return value;
+
+  let out = value;
+
+  // ranges like 18-24°C or 18 – 24 C
+  out = out.replace(
+    /(-?\d+(?:[.,]\d+)?)\s*(?:-|–|—|to)\s*(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi,
+    (_, a, b) => {
+      const n1 = Number(String(a).replace(",", "."));
+      const n2 = Number(String(b).replace(",", "."));
+      if (!Number.isFinite(n1) || !Number.isFinite(n2)) return _;
+      const v1 = targetUnit === "F" ? cToF(n1) : cToK(n1);
+      const v2 = targetUnit === "F" ? cToF(n2) : cToK(n2);
+      const unit = targetUnit === "F" ? "°F" : " K";
+      return `${formatConvertedTemp(v1)}-${formatConvertedTemp(v2)}${unit}`;
+    }
+  );
+
+  // single values like 22°C or 22 C
+  out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi, (_, a) => {
+    const n = Number(String(a).replace(",", "."));
+    if (!Number.isFinite(n)) return _;
+    return convertSingleCelsiusValue(n, targetUnit);
+  });
+
+  // word forms like 22 Celsius
+  out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*Celsius\b/gi, (_, a) => {
+    const n = Number(String(a).replace(",", "."));
+    if (!Number.isFinite(n)) return _;
+    return convertSingleCelsiusValue(n, targetUnit);
+  });
+
+  return out;
+}
+
 // Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
   tKey,
@@ -275,8 +351,12 @@ export default function Step02_PlantTraits() {
     for (const tr of traits) {
       const rawKey = String(tr?.key ?? "").trim();
       const key = normalizeTraitKey(rawKey);
-      const value = pickTextValue(tr?.value, preferredLang);
+      let value = pickTextValue(tr?.value, preferredLang);
       if (!key || !value) continue;
+
+      if (key === "temperature") {
+        value = convertTemperatureText(value, settings);
+      }
 
       if (seen.has(key)) continue;
       seen.add(key);
@@ -290,8 +370,11 @@ export default function Step02_PlantTraits() {
     }
 
     const addCore = (key: string, rawValue: any, fallbackIcon: string) => {
-      const value = pickTextValue(rawValue, preferredLang);
+      let value = pickTextValue(rawValue, preferredLang);
       if (!value) return;
+      if (key === "temperature") {
+        value = convertTemperatureText(value, settings);
+      }
       if (seen.has(key)) return;
       seen.add(key);
 
@@ -306,6 +389,7 @@ export default function Step02_PlantTraits() {
     if (p?.sun != null) addCore("sun", p.sun, "white-balance-sunny");
     if (p?.water != null) addCore("water", p.water, "watering-can-outline");
     if (p?.difficulty != null) addCore("difficulty", p.difficulty, "arm-flex");
+    if (p?.temperature != null) addCore("temperature", p.temperature, "thermometer");
 
     const pots = Array.isArray(p?.recommended_pot_materials) ? p.recommended_pot_materials : [];
     if (pots.length) {
@@ -378,7 +462,7 @@ export default function Step02_PlantTraits() {
     }
 
     return out;
-  }, [profile, preferredLang, getTranslation]);
+  }, [profile, preferredLang, getTranslation, settings]);
 
   const heroImageUrl = useMemo(() => {
     const p: any = profile;
