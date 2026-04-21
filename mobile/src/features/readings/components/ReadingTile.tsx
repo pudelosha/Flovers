@@ -48,6 +48,7 @@ function formatDateBySettings(d: Date, settings?: any) {
     const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
     return `${mm}${sep}${dd}${sep}${yyyy}`;
   }
+
   if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
     const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
     return `${yyyy}${sep}${mm}${sep}${dd}`;
@@ -57,6 +58,55 @@ function formatDateBySettings(d: Date, settings?: any) {
   if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
 
   return `${dd}.${mm}.${yyyy}`;
+}
+
+function getTemperatureUnitFromSettings(settings?: any): "C" | "F" {
+  const raw =
+    settings?.temperatureUnit ??
+    settings?.tempUnit ??
+    settings?.units?.temperature ??
+    "C";
+
+  const normalized = String(raw).trim().toLowerCase();
+
+  if (
+    normalized === "f" ||
+    normalized === "°f" ||
+    normalized === "fahrenheit"
+  ) {
+    return "F";
+  }
+
+  return "C";
+}
+
+function celsiusToFahrenheit(celsius: number) {
+  return (celsius * 9) / 5 + 32;
+}
+
+function getDisplayTemperature(
+  value: number | null | undefined,
+  settings?: any
+): { value: number | null; unit: string; decimals: number } {
+  if (value === null || value === undefined) {
+    return { value: null, unit: "°C", decimals: 1 };
+  }
+
+  const unitPref = getTemperatureUnitFromSettings(settings);
+
+  if (unitPref === "F") {
+    return {
+      value: celsiusToFahrenheit(value),
+      unit: "°F",
+      decimals: 1,
+    };
+  }
+
+  return {
+    value,
+    unit: "°C",
+    decimals: 1,
+  };
 }
 
 function MetricColPressable({
@@ -126,10 +176,20 @@ export default function ReadingTile({
 
   const lastText = useMemo(() => {
     if (!dt) return `${tr("readings.tile.lastReadPrefix", "Last read")}: —`;
+
     const date = formatDateBySettings(dt, settings);
-    const time = dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+    const time = dt.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
     return `${tr("readings.tile.lastReadPrefix", "Last read")}: ${date} ${time}`;
   }, [dt, tr, settings]);
+
+  const displayTemperature = useMemo(() => {
+    return getDisplayTemperature(data.metrics.temperature, settings);
+  }, [data.metrics.temperature, settings]);
 
   const showTemp = sensors ? !!sensors.temperature : true;
   const showHum = sensors ? !!sensors.humidity : true;
@@ -182,7 +242,11 @@ export default function ReadingTile({
           android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
           hitSlop={8}
         >
-          <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
+          <MaterialCommunityIcons
+            name="dots-horizontal"
+            size={20}
+            color="#FFFFFF"
+          />
         </Pressable>
       </View>
 
@@ -191,12 +255,13 @@ export default function ReadingTile({
           <MetricColPressable
             icon="thermometer"
             color={ICON_BG.temperature}
-            value={data.metrics.temperature}
-            unit={METRIC_UNITS.temperature}
-            decimals={1}
+            value={displayTemperature.value}
+            unit={displayTemperature.unit}
+            decimals={displayTemperature.decimals}
             onPress={() => onMetricPress("temperature")}
           />
         )}
+
         {showHum && (
           <MetricColPressable
             icon="water-percent"
@@ -207,6 +272,7 @@ export default function ReadingTile({
             onPress={() => onMetricPress("humidity")}
           />
         )}
+
         {showLight && (
           <MetricColPressable
             icon="white-balance-sunny"
@@ -216,6 +282,7 @@ export default function ReadingTile({
             onPress={() => onMetricPress("light")}
           />
         )}
+
         {showMoist && (
           <MetricColPressable
             icon="water"
