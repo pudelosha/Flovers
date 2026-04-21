@@ -20,9 +20,6 @@ export const s = StyleSheet.create({
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
-
-    // If you still want elevation, use ONLY elevation (Android) and keep iOS shadow off.
-    // iOS shadow with overlay layers is the main source of the inner-rect shade.
     elevation: 8,
   },
 
@@ -32,14 +29,12 @@ export const s = StyleSheet.create({
     overflow: "hidden",
   },
 
-  // MATCH AuthCard/Plant: lower tint opacity (prevents inner-rectangle artifact)
   cardTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
 
-  // MATCH PlantTile: thinner-looking border
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
@@ -94,11 +89,8 @@ export const s = StyleSheet.create({
     position: "absolute",
     right: 6,
     top: -6,
-
-    // Keep it above siblings
     zIndex: 999,
     elevation: 999,
-
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,
@@ -192,7 +184,11 @@ export const s = StyleSheet.create({
     fontWeight: "800",
     fontSize: 14,
   },
-  calendarNoItems: { color: "rgba(255,255,255,0.9)", fontWeight: "600", marginTop: 6 },
+  calendarNoItems: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    marginTop: 6,
+  },
 
   // Inside-frame list
   calendarListBox: {
@@ -232,7 +228,12 @@ export const s = StyleSheet.create({
     fontSize: 12,
     marginTop: 2,
   },
-  miniTag: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 11, marginTop: 4 },
+  miniTag: {
+    color: "rgba(255,255,255,0.92)",
+    fontWeight: "700",
+    fontSize: 11,
+    marginTop: 4,
+  },
   miniActions: { flexDirection: "row", alignItems: "center", marginLeft: 8 },
   miniActionBtn: {
     width: 30,
@@ -247,9 +248,13 @@ export const s = StyleSheet.create({
 
   // ===== PLACEHOLDERS =====
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
-  placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
+  placeholderHint: {
+    color: "rgba(255,255,255,0.9)",
+    marginTop: 6,
+    fontWeight: "600",
+  },
 
-  // ===== MODALS / FORMS (match Profile prompt styling) =====
+  // ===== MODALS / FORMS =====
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -262,7 +267,11 @@ export const s = StyleSheet.create({
     zIndex: 21,
     paddingHorizontal: 24,
   },
-  promptGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 18, overflow: "hidden" },
+  promptGlass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 18,
+    overflow: "hidden",
+  },
   promptInner: {
     width: "100%",
     maxWidth: 520,
@@ -280,7 +289,7 @@ export const s = StyleSheet.create({
     paddingTop: 16,
   },
 
-  // ---- FLAT, BORDERLESS INPUTS ----
+  // Inputs
   inputLabel: {
     marginTop: 8,
     marginBottom: 6,
@@ -302,7 +311,7 @@ export const s = StyleSheet.create({
   },
   inputInline: { marginHorizontal: 0, marginBottom: 0 },
 
-  // ---- FLAT, BORDERLESS DROPDOWNS ----
+  // Dropdowns
   dropdown: { marginHorizontal: 16, marginBottom: 10 },
   dropdownHeader: {
     flexDirection: "row",
@@ -334,10 +343,10 @@ export const s = StyleSheet.create({
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
   codeBlockText: { fontSize: 12, color: "#FFFFFF", fontWeight: "700" },
 
-  // 50:50 rows that fill the width
+  // 50:50 rows
   inlineRow: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",
     marginHorizontal: 16,
     marginBottom: 10,
     gap: 12,
@@ -345,7 +354,7 @@ export const s = StyleSheet.create({
   inlineHalfLeft: { flex: 1, minWidth: 0 },
   inlineHalfRight: { flex: 1, minWidth: 0 },
 
-  // ---- FLAT BUTTONS (no borders) ----
+  // Buttons
   promptButtonsRow: {
     flexDirection: "row",
     justifyContent: "flex-end",
@@ -365,9 +374,13 @@ export const s = StyleSheet.create({
   promptPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   promptPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
   promptDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
-  confirmText: { color: "rgba(255,255,255,0.95)", paddingHorizontal: 16, marginBottom: 10 },
+  confirmText: {
+    color: "rgba(255,255,255,0.95)",
+    paddingHorizontal: 16,
+    marginBottom: 10,
+  },
 
-  // ===== SORT/FILTER EXTRAS =====
+  // Extras
   sectionTitle: {
     color: "#FFFFFF",
     fontWeight: "800",
@@ -399,7 +412,7 @@ export const s = StyleSheet.create({
     backgroundColor: "#FFFFFF",
   },
 
-  // borderless chips; color/glaze set inline
+  // Chips
   chipRow: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -414,7 +427,11 @@ export const s = StyleSheet.create({
   chipSelected: {
     backgroundColor: "rgba(11,114,133,0.25)",
   },
-  chipText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
+  chipText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 12,
+  },
 
   /* ---------- EMPTY STATE ---------- */
   emptyWrap: { marginTop: 0 },
