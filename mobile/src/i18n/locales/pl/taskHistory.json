@@ -6,6 +6,7 @@
     "fab": {
       "sort": "Sortuj",
       "filter": "Filtruj",
+      "sendExport": "Wyślij eksport",
       "delete": "Usuń",
       "clearFilter": "Wyczyść filtr",
       "showAllHistory": "Pokaż całą historię"
@@ -14,23 +15,26 @@
       "unnamedPlant": "Nienazwana roślina"
     },
     "toasts": {
-      "failedToLoad": "Nie udało się wczytać historii zadań",
-      "historyDeleted": "Historia została usunięta",
+      "failedToLoad": "Nie udało się załadować historii zadań",
+      "historyDeleted": "Historia usunięta",
       "failedToDeleteHistory": "Nie udało się usunąć historii",
-      "historyTaskDeleted": "Wpis historii został usunięty",
-      "failedToDeleteHistoryTask": "Nie udało się usunąć wpisu historii",
-      "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną."
+      "historyTaskDeleted": "Zadanie z historii usunięte",
+      "failedToDeleteHistoryTask": "Nie udało się usunąć zadania z historii",
+      "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną.",
+      "exportSent": "Wysłano żądanie eksportu historii zadań",
+      "failedToSendExport": "Nie udało się wysłać eksportu historii zadań",
+      "exportNotAvailableYet": "Eksport nie jest jeszcze dostępny."
     },
     "empty": {
       "title": "Brak ukończonych zadań",
       "descBeforeBold": "Ten ekran pokazuje",
-      "bold": "zamknięte zadania z przypomnień",
-      "descAfterBold": "z Twojej strony głównej (zadania oczekujące nie są tu widoczne).",
-      "filteredToPlantId": "Aktualnie przefiltrowano po id rośliny {{plantId}}.",
-      "openFromTaskHint": "Otwórz historię z konkretnego zadania, aby zobaczyć historię tylko dla tej rośliny."
+      "bold": "zamknięte zadania przypomnień",
+      "descAfterBold": "z Twojej strony głównej (oczekujące zadania nie są wyświetlane).",
+      "filteredToPlantId": "Obecnie filtrowane według rośliny o id {{plantId}}.",
+      "openFromTaskHint": "Otwórz z poziomu konkretnego zadania, aby zobaczyć historię tylko dla tej rośliny."
     },
     "tile": {
-      "completedOn": "Ukończono: {{date}}",
+      "completedOn": "Ukończono {{date}}",
       "noteLabel": "Notatka"
     },
     "menu": {
@@ -43,7 +47,7 @@
     "types": {
       "watering": "podlewanie",
       "fertilising": "nawożenie",
-      "moisture": "zraszanie",
+      "moisture": "wilgotność",
       "care": "pielęgnacja",
       "repot": "przesadzanie"
     }

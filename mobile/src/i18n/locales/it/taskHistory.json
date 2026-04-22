@@ -1,11 +1,12 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Cronologia delle attività"
+      "title": "Cronologia attività"
     },
     "fab": {
       "sort": "Ordina",
       "filter": "Filtra",
+      "sendExport": "Invia esportazione",
       "delete": "Elimina",
       "clearFilter": "Cancella filtro",
       "showAllHistory": "Mostra tutta la cronologia"
@@ -15,22 +16,25 @@
     },
     "toasts": {
       "failedToLoad": "Impossibile caricare la cronologia delle attività",
-      "historyDeleted": "La cronologia è stata eliminata",
+      "historyDeleted": "Cronologia eliminata",
       "failedToDeleteHistory": "Impossibile eliminare la cronologia",
-      "historyTaskDeleted": "La voce della cronologia è stata eliminata",
-      "failedToDeleteHistoryTask": "Impossibile eliminare la voce della cronologia",
-      "taskNotLinkedToPlant": "Questa attività non è collegata a una pianta."
+      "historyTaskDeleted": "Attività della cronologia eliminata",
+      "failedToDeleteHistoryTask": "Impossibile eliminare l'attività della cronologia",
+      "taskNotLinkedToPlant": "Questa attività non è collegata a una pianta.",
+      "exportSent": "Richiesta di esportazione della cronologia attività inviata",
+      "failedToSendExport": "Impossibile inviare l'esportazione della cronologia attività",
+      "exportNotAvailableYet": "L'esportazione non è ancora disponibile."
     },
     "empty": {
-      "title": "Nessuna attività completata",
+      "title": "Nessuna attività completata ancora",
       "descBeforeBold": "Questa schermata mostra",
-      "bold": "le attività chiuse dai promemoria",
-      "descAfterBold": "dalla tua schermata principale (le attività in sospeso non sono visibili qui).",
-      "filteredToPlantId": "Attualmente filtrato per ID pianta {{plantId}}.",
-      "openFromTaskHint": "Apri la cronologia da un'attività specifica per vedere la cronologia solo per questa pianta."
+      "bold": "attività di promemoria chiuse",
+      "descAfterBold": "dalla tua pagina Home (le attività in sospeso non sono mostrate).",
+      "filteredToPlantId": "Attualmente filtrato per l'id pianta {{plantId}}.",
+      "openFromTaskHint": "Aprilo da un'attività specifica per vedere la cronologia solo per quella pianta."
     },
     "tile": {
-      "completedOn": "Completata: {{date}}",
+      "completedOn": "Completato il {{date}}",
       "noteLabel": "Nota"
     },
     "menu": {
@@ -41,9 +45,9 @@
       "deleteTask": "Elimina attività"
     },
     "types": {
-      "watering": "annaffiatura",
-      "fertilising": "concimazione",
-      "moisture": "nebulizzazione",
+      "watering": "irrigazione",
+      "fertilising": "fertilizzazione",
+      "moisture": "umidità",
       "care": "cura",
       "repot": "rinvaso"
     }

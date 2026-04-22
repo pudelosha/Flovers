@@ -6,6 +6,7 @@
     "fab": {
       "sort": "Trier",
       "filter": "Filtrer",
+      "sendExport": "Envoyer l’export",
       "delete": "Supprimer",
       "clearFilter": "Effacer le filtre",
       "showAllHistory": "Afficher tout l’historique"
@@ -14,23 +15,26 @@
       "unnamedPlant": "Plante sans nom"
     },
     "toasts": {
-      "failedToLoad": "Impossible de charger l’historique des tâches",
-      "historyDeleted": "L’historique a été supprimé",
-      "failedToDeleteHistory": "Impossible de supprimer l’historique",
-      "historyTaskDeleted": "L’entrée de l’historique a été supprimée",
-      "failedToDeleteHistoryTask": "Impossible de supprimer l’entrée de l’historique",
-      "taskNotLinkedToPlant": "Cette tâche n’est pas liée à une plante."
+      "failedToLoad": "Échec du chargement de l’historique des tâches",
+      "historyDeleted": "Historique supprimé",
+      "failedToDeleteHistory": "Échec de la suppression de l’historique",
+      "historyTaskDeleted": "Tâche d’historique supprimée",
+      "failedToDeleteHistoryTask": "Échec de la suppression de la tâche d’historique",
+      "taskNotLinkedToPlant": "Cette tâche n’est pas liée à une plante.",
+      "exportSent": "Demande d’export de l’historique des tâches envoyée",
+      "failedToSendExport": "Échec de l’envoi de l’export de l’historique des tâches",
+      "exportNotAvailableYet": "L’export n’est pas encore disponible."
     },
     "empty": {
-      "title": "Aucune tâche terminée",
+      "title": "Aucune tâche terminée pour le moment",
       "descBeforeBold": "Cet écran affiche",
-      "bold": "les tâches clôturées issues des rappels",
-      "descAfterBold": "de votre page d’accueil (les tâches en attente n’y sont pas visibles).",
-      "filteredToPlantId": "Actuellement filtré par l’identifiant de la plante {{plantId}}.",
-      "openFromTaskHint": "Ouvrez l’historique depuis une tâche spécifique pour voir l’historique uniquement pour cette plante."
+      "bold": "les tâches de rappel clôturées",
+      "descAfterBold": "de votre page d’accueil (les tâches en attente ne sont pas affichées).",
+      "filteredToPlantId": "Actuellement filtré sur l’identifiant de plante {{plantId}}.",
+      "openFromTaskHint": "Ouvrez-le depuis une tâche spécifique pour voir l’historique uniquement pour cette plante."
     },
     "tile": {
-      "completedOn": "Terminé : {{date}}",
+      "completedOn": "Terminé le {{date}}",
       "noteLabel": "Note"
     },
     "menu": {
@@ -43,7 +47,7 @@
     "types": {
       "watering": "arrosage",
       "fertilising": "fertilisation",
-      "moisture": "brumisation",
+      "moisture": "humidité",
       "care": "entretien",
       "repot": "rempotage"
     }

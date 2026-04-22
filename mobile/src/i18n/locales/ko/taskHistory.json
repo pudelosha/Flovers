@@ -6,45 +6,49 @@
     "fab": {
       "sort": "정렬",
       "filter": "필터",
+      "sendExport": "내보내기 전송",
       "delete": "삭제",
-      "clearFilter": "필터 지우기",
-      "showAllHistory": "전체 기록 보기"
+      "clearFilter": "필터 초기화",
+      "showAllHistory": "모든 기록 보기"
     },
     "common": {
       "unnamedPlant": "이름 없는 식물"
     },
     "toasts": {
-      "failedToLoad": "작업 기록을 불러오지 못했습니다.",
-      "historyDeleted": "기록이 삭제되었습니다.",
-      "failedToDeleteHistory": "기록을 삭제하지 못했습니다.",
-      "historyTaskDeleted": "기록 항목이 삭제되었습니다.",
-      "failedToDeleteHistoryTask": "기록 항목을 삭제하지 못했습니다.",
-      "taskNotLinkedToPlant": "이 작업은 식물과 연결되지 않았습니다."
+      "failedToLoad": "작업 기록을 불러오지 못했습니다",
+      "historyDeleted": "기록이 삭제되었습니다",
+      "failedToDeleteHistory": "기록 삭제에 실패했습니다",
+      "historyTaskDeleted": "기록 작업이 삭제되었습니다",
+      "failedToDeleteHistoryTask": "기록 작업 삭제에 실패했습니다",
+      "taskNotLinkedToPlant": "이 작업은 식물과 연결되어 있지 않습니다.",
+      "exportSent": "작업 기록 내보내기 요청이 전송되었습니다",
+      "failedToSendExport": "작업 기록 내보내기 전송에 실패했습니다",
+      "exportNotAvailableYet": "내보내기를 아직 사용할 수 없습니다."
     },
     "empty": {
-      "title": "완료된 작업 없음",
+      "title": "완료된 작업이 아직 없습니다",
       "descBeforeBold": "이 화면은",
-      "bold": "알림에서 완료된 작업",
-      "descAfterBold": "을(를) 표시합니다 (대기 중인 작업은 여기에 표시되지 않습니다).",
-      "filteredToPlantId": "현재 식물 ID {{plantId}}로 필터링되었습니다.",
-      "openFromTaskHint": "특정 작업에서 기록을 열어 이 식물에 대한 기록만 볼 수 있습니다."
+      "bold": "완료된 알림 작업",
+      "descAfterBold": "을(를) 홈 페이지에서 표시합니다 (대기 중인 작업은 표시되지 않습니다).",
+      "filteredToPlantId": "현재 식물 ID {{plantId}}로 필터링되어 있습니다.",
+      "openFromTaskHint": "특정 작업에서 열어 해당 식물의 기록만 확인하세요."
     },
     "tile": {
-      "completedOn": "완료일: {{date}}",
+      "completedOn": "{{date}}에 완료됨",
       "noteLabel": "메모"
     },
     "menu": {
       "expand": "확장",
-      "collapse": "축소",
+      "collapse": "접기",
       "editReminder": "알림 수정",
       "goToPlant": "식물로 이동",
       "deleteTask": "작업 삭제"
     },
     "types": {
-      "watering": "급수",
+      "watering": "물 주기",
       "fertilising": "비료 주기",
-      "moisture": "분무",
-      "care": "돌봄",
+      "moisture": "습도",
+      "care": "관리",
       "repot": "분갈이"
     }
   }

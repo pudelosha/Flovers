@@ -6,6 +6,7 @@
     "fab": {
       "sort": "Ordenar",
       "filter": "Filtrar",
+      "sendExport": "Enviar exportación",
       "delete": "Eliminar",
       "clearFilter": "Borrar filtro",
       "showAllHistory": "Mostrar todo el historial"
@@ -14,28 +15,31 @@
       "unnamedPlant": "Planta sin nombre"
     },
     "toasts": {
-      "failedToLoad": "No se pudo cargar el historial de tareas",
-      "historyDeleted": "El historial ha sido eliminado",
-      "failedToDeleteHistory": "No se pudo eliminar el historial",
-      "historyTaskDeleted": "La entrada del historial ha sido eliminada",
-      "failedToDeleteHistoryTask": "No se pudo eliminar la entrada del historial",
-      "taskNotLinkedToPlant": "Esta tarea no está vinculada a una planta."
+      "failedToLoad": "Error al cargar el historial de tareas",
+      "historyDeleted": "Historial eliminado",
+      "failedToDeleteHistory": "Error al eliminar el historial",
+      "historyTaskDeleted": "Tarea del historial eliminada",
+      "failedToDeleteHistoryTask": "Error al eliminar la tarea del historial",
+      "taskNotLinkedToPlant": "Esta tarea no está vinculada a una planta.",
+      "exportSent": "Solicitud de exportación del historial de tareas enviada",
+      "failedToSendExport": "Error al enviar la exportación del historial de tareas",
+      "exportNotAvailableYet": "La exportación aún no está disponible."
     },
     "empty": {
-      "title": "No hay tareas completadas",
+      "title": "Aún no hay tareas completadas",
       "descBeforeBold": "Esta pantalla muestra",
-      "bold": "tareas cerradas de recordatorios",
-      "descAfterBold": "de tu página principal (las tareas pendientes no son visibles aquí).",
-      "filteredToPlantId": "Actualmente filtrado por el ID de planta {{plantId}}.",
-      "openFromTaskHint": "Abre el historial desde una tarea específica para ver solo el historial de esa planta."
+      "bold": "tareas de recordatorio cerradas",
+      "descAfterBold": "de tu página de inicio (las tareas pendientes no se muestran).",
+      "filteredToPlantId": "Actualmente filtrado por el id de planta {{plantId}}.",
+      "openFromTaskHint": "Ábrelo desde una tarea específica para ver el historial solo de esa planta."
     },
     "tile": {
-      "completedOn": "Completado: {{date}}",
+      "completedOn": "Completado el {{date}}",
       "noteLabel": "Nota"
     },
     "menu": {
       "expand": "Expandir",
-      "collapse": "Contraer",
+      "collapse": "Colapsar",
       "editReminder": "Editar recordatorio",
       "goToPlant": "Ir a la planta",
       "deleteTask": "Eliminar tarea"
@@ -43,7 +47,7 @@
     "types": {
       "watering": "riego",
       "fertilising": "fertilización",
-      "moisture": "humedecimiento",
+      "moisture": "humedad",
       "care": "cuidado",
       "repot": "trasplante"
     }

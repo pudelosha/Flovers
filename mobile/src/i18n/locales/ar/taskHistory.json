@@ -1,51 +1,55 @@
 {
   "taskHistory": {
     "header": {
-      "title": "تاريخ المهام"
+      "title": "سجل المهام"
     },
     "fab": {
       "sort": "ترتيب",
       "filter": "تصفية",
+      "sendExport": "إرسال التصدير",
       "delete": "حذف",
-      "clearFilter": "مسح الفلتر",
-      "showAllHistory": "عرض التاريخ الكامل"
+      "clearFilter": "مسح التصفية",
+      "showAllHistory": "عرض كل السجل"
     },
     "common": {
-      "unnamedPlant": "نبتة بلا اسم"
+      "unnamedPlant": "نبتة بدون اسم"
     },
     "toasts": {
-      "failedToLoad": "فشل في تحميل تاريخ المهام",
-      "historyDeleted": "تم حذف التاريخ",
-      "failedToDeleteHistory": "فشل في حذف التاريخ",
-      "historyTaskDeleted": "تم حذف سجل التاريخ",
-      "failedToDeleteHistoryTask": "فشل في حذف سجل التاريخ",
-      "taskNotLinkedToPlant": "هذه المهمة غير مرتبطة بالنبتة."
+      "failedToLoad": "فشل تحميل سجل المهام",
+      "historyDeleted": "تم حذف السجل",
+      "failedToDeleteHistory": "فشل حذف السجل",
+      "historyTaskDeleted": "تم حذف مهمة من السجل",
+      "failedToDeleteHistoryTask": "فشل حذف مهمة من السجل",
+      "taskNotLinkedToPlant": "هذه المهمة غير مرتبطة بنبتة.",
+      "exportSent": "تم إرسال طلب تصدير سجل المهام",
+      "failedToSendExport": "فشل إرسال تصدير سجل المهام",
+      "exportNotAvailableYet": "التصدير غير متاح بعد."
     },
     "empty": {
-      "title": "لا توجد مهام مكتملة",
-      "descBeforeBold": "تُظهر هذه الشاشة",
-      "bold": "المهام المغلقة من التذكيرات",
-      "descAfterBold": "من صفحتك الرئيسية (المهام المعلقة غير مرئية هنا).",
-      "filteredToPlantId": "تم تصفيتها حالياً حسب معرف النبتة {{plantId}}.",
-      "openFromTaskHint": "افتح التاريخ من مهمة معينة لعرض التاريخ الخاص بتلك النبتة فقط."
+      "title": "لا توجد مهام مكتملة بعد",
+      "descBeforeBold": "تعرض هذه الشاشة",
+      "bold": "مهام التذكير المغلقة",
+      "descAfterBold": "من صفحتك الرئيسية (المهام المعلقة غير معروضة).",
+      "filteredToPlantId": "مصفّى حاليًا على معرف النبتة {{plantId}}.",
+      "openFromTaskHint": "افتحه من مهمة محددة لرؤية السجل الخاص بتلك النبتة فقط."
     },
     "tile": {
-      "completedOn": "تم الانتهاء في: {{date}}",
+      "completedOn": "اكتملت في {{date}}",
       "noteLabel": "ملاحظة"
     },
     "menu": {
       "expand": "توسيع",
       "collapse": "طي",
-      "editReminder": "تحرير التذكير",
-      "goToPlant": "اذهب إلى النبتة",
+      "editReminder": "تعديل التذكير",
+      "goToPlant": "الانتقال إلى النبتة",
       "deleteTask": "حذف المهمة"
     },
     "types": {
-      "watering": "ري",
-      "fertilising": "تسميد",
-      "moisture": "رش",
-      "care": "رعاية",
-      "repot": "إعادة الزراعة"
+      "watering": "الري",
+      "fertilising": "التسميد",
+      "moisture": "الرطوبة",
+      "care": "العناية",
+      "repot": "إعادة الزراعة في وعاء"
     }
   }
 }

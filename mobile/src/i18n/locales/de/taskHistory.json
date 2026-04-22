@@ -6,36 +6,40 @@
     "fab": {
       "sort": "Sortieren",
       "filter": "Filtern",
+      "sendExport": "Export senden",
       "delete": "Löschen",
-      "clearFilter": "Filter zurücksetzen",
+      "clearFilter": "Filter löschen",
       "showAllHistory": "Gesamten Verlauf anzeigen"
     },
     "common": {
       "unnamedPlant": "Unbenannte Pflanze"
     },
     "toasts": {
-      "failedToLoad": "Der Aufgabenverlauf konnte nicht geladen werden",
-      "historyDeleted": "Der Verlauf wurde gelöscht",
-      "failedToDeleteHistory": "Der Verlauf konnte nicht gelöscht werden",
-      "historyTaskDeleted": "Der Verlaufseintrag wurde gelöscht",
-      "failedToDeleteHistoryTask": "Der Verlaufseintrag konnte nicht gelöscht werden",
-      "taskNotLinkedToPlant": "Diese Aufgabe ist keiner Pflanze zugeordnet."
+      "failedToLoad": "Aufgabenverlauf konnte nicht geladen werden",
+      "historyDeleted": "Verlauf gelöscht",
+      "failedToDeleteHistory": "Verlauf konnte nicht gelöscht werden",
+      "historyTaskDeleted": "Verlaufsaufgabe gelöscht",
+      "failedToDeleteHistoryTask": "Verlaufsaufgabe konnte nicht gelöscht werden",
+      "taskNotLinkedToPlant": "Diese Aufgabe ist keiner Pflanze zugeordnet.",
+      "exportSent": "Exportanforderung für den Aufgabenverlauf gesendet",
+      "failedToSendExport": "Export für den Aufgabenverlauf konnte nicht gesendet werden",
+      "exportNotAvailableYet": "Export ist noch nicht verfügbar."
     },
     "empty": {
-      "title": "Keine abgeschlossenen Aufgaben",
+      "title": "Noch keine abgeschlossenen Aufgaben",
       "descBeforeBold": "Dieser Bildschirm zeigt",
       "bold": "abgeschlossene Erinnerungsaufgaben",
-      "descAfterBold": "von deiner Startseite (ausstehende Aufgaben werden hier nicht angezeigt).",
-      "filteredToPlantId": "Aktuell nach Pflanzen-ID {{plantId}} gefiltert.",
-      "openFromTaskHint": "Öffne den Verlauf aus einer bestimmten Aufgabe, um den Verlauf nur für diese Pflanze anzuzeigen."
+      "descAfterBold": "von deiner Startseite (ausstehende Aufgaben werden nicht angezeigt).",
+      "filteredToPlantId": "Derzeit gefiltert nach Pflanzen-ID {{plantId}}.",
+      "openFromTaskHint": "Öffne es aus einer bestimmten Aufgabe, um den Verlauf nur für diese Pflanze zu sehen."
     },
     "tile": {
-      "completedOn": "Abgeschlossen am: {{date}}",
+      "completedOn": "Abgeschlossen am {{date}}",
       "noteLabel": "Notiz"
     },
     "menu": {
       "expand": "Erweitern",
-      "collapse": "Einklappen",
+      "collapse": "Reduzieren",
       "editReminder": "Erinnerung bearbeiten",
       "goToPlant": "Zur Pflanze gehen",
       "deleteTask": "Aufgabe löschen"
@@ -43,7 +47,7 @@
     "types": {
       "watering": "Gießen",
       "fertilising": "Düngen",
-      "moisture": "Besprühen",
+      "moisture": "Feuchtigkeit",
       "care": "Pflege",
       "repot": "Umtopfen"
     }
