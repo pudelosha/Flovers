@@ -5,12 +5,12 @@
       "apply": "適用",
       "delete": "削除",
       "selectPlant": "植物を選択",
-      "selectLocation": "ロケーションを選択",
+      "selectLocation": "場所を選択",
       "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
         "watering": "水やり",
         "moisture": "湿度",
-        "fertilising": "肥料",
+        "fertilising": "施肥",
         "care": "ケア",
         "repot": "植え替え"
       }
@@ -19,41 +19,62 @@
       "title": "履歴を削除",
       "scopeLabel": "範囲",
       "modes": {
-        "plant": "選択した植物のために削除",
-        "location": "選択したロケーションのために削除",
-        "types": "タイプのタスクを削除",
-        "olderThan": "{{days}} より古いタスクを削除"
+        "plant": "選択した植物の履歴を削除",
+        "location": "選択した場所の履歴を削除",
+        "types": "種類別タスクを削除",
+        "olderThan": "指定日より古いタスクを削除"
       },
-      "noPlantsHint": "まだ履歴に植物はありません。",
-      "noLocationsHint": "まだ履歴にロケーションはありません。",
+      "noPlantsHint": "履歴に植物がまだありません。",
+      "noLocationsHint": "履歴に場所がまだありません。",
       "daysValue": "{{days}} 日"
     },
     "filter": {
-      "title": "履歴をフィルタ",
+      "title": "履歴をフィルター",
       "plantLabel": "植物",
-      "locationLabel": "ロケーション",
-      "taskTypesLabel": "タスクタイプ",
+      "locationLabel": "場所",
+      "taskTypesLabel": "タスクの種類",
       "completedDateRangeLabel": "完了日範囲",
-      "fromLabel": "から",
-      "toLabel": "まで",
-      "anyPlant": "任意の植物",
-      "anyLocation": "任意のロケーション",
+      "fromLabel": "開始",
+      "toLabel": "終了",
+      "anyPlant": "すべての植物",
+      "anyLocation": "すべての場所",
       "clear": "クリア"
     },
     "sort": {
-      "title": "履歴を並べ替え",
-      "sortByLabel": "並べ替え",
+      "title": "履歴を並び替え",
+      "sortByLabel": "並び替え基準",
       "directionLabel": "方向",
       "keys": {
         "completedAt": "完了日",
         "plant": "植物名",
-        "location": "ロケーション"
+        "location": "場所"
       },
       "directions": {
         "asc": "昇順",
         "desc": "降順"
       },
       "reset": "リセット"
+    },
+    "export": {
+      "title": "履歴エクスポートを送信",
+      "noticeTitle": "Excelエクスポートは現在適用されている条件を使用します。",
+      "noticeFiltered": "以下に表示されているフィルターに一致するタスク履歴のみが含まれます。異なるデータが必要な場合は、先にフィルターを変更してから再度送信してください。",
+      "noticeAllData": "現在フィルターは適用されていないため、この画面の利用可能なすべてのタスク履歴データがエクスポートに含まれます。",
+      "criteriaTitle": "適用条件",
+      "plantLabel": "植物",
+      "locationLabel": "場所",
+      "taskTypesLabel": "タスクの種類",
+      "completedFromLabel": "完了（開始）",
+      "completedToLabel": "完了（終了）",
+      "sortByLabel": "並び替え基準",
+      "directionLabel": "方向",
+      "anyPlant": "すべての植物",
+      "anyLocation": "すべての場所",
+      "allTaskTypes": "すべてのタスクの種類",
+      "notSet": "未設定",
+      "includePending": "保留中のタスクも含める",
+      "send": "送信",
+      "sending": "送信中..."
     }
   }
 }

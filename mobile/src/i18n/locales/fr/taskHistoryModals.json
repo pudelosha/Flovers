@@ -6,34 +6,34 @@
       "delete": "Supprimer",
       "selectPlant": "Sélectionner une plante",
       "selectLocation": "Sélectionner un emplacement",
-      "datePlaceholder": "RRRR-MM-DD",
+      "datePlaceholder": "AAAA-MM-JJ",
       "taskTypes": {
         "watering": "Arrosage",
         "moisture": "Humidité",
         "fertilising": "Fertilisation",
         "care": "Entretien",
-        "repot": "Rempotage"
+        "repot": "Rempoter"
       }
     },
     "delete": {
-      "title": "Supprimer l’historique",
+      "title": "Supprimer l'historique",
       "scopeLabel": "Portée",
       "modes": {
         "plant": "Supprimer pour la plante sélectionnée",
-        "location": "Supprimer pour l’emplacement sélectionné",
+        "location": "Supprimer pour l'emplacement sélectionné",
         "types": "Supprimer les tâches de type",
         "olderThan": "Supprimer les tâches plus anciennes que"
       },
-      "noPlantsHint": "Vous n’avez encore aucune plante dans l’historique.",
-      "noLocationsHint": "Vous n’avez encore aucun emplacement dans l’historique.",
+      "noPlantsHint": "Vous n'avez pas encore de plantes dans l'historique.",
+      "noLocationsHint": "Vous n'avez pas encore d'emplacements dans l'historique.",
       "daysValue": "{{days}} jours"
     },
     "filter": {
-      "title": "Filtrer l’historique",
+      "title": "Filtrer l'historique",
       "plantLabel": "Plante",
       "locationLabel": "Emplacement",
       "taskTypesLabel": "Types de tâches",
-      "completedDateRangeLabel": "Plage de dates d’achèvement",
+      "completedDateRangeLabel": "Plage de dates de complétion",
       "fromLabel": "De",
       "toLabel": "À",
       "anyPlant": "Toute plante",
@@ -41,11 +41,11 @@
       "clear": "Effacer"
     },
     "sort": {
-      "title": "Trier l’historique",
+      "title": "Trier l'historique",
       "sortByLabel": "Trier par",
       "directionLabel": "Direction",
       "keys": {
-        "completedAt": "Date d’achèvement",
+        "completedAt": "Date de complétion",
         "plant": "Nom de la plante",
         "location": "Emplacement"
       },
@@ -54,6 +54,27 @@
         "desc": "Décroissant"
       },
       "reset": "Réinitialiser"
+    },
+    "export": {
+      "title": "Envoyer l'export de l'historique",
+      "noticeTitle": "L'export Excel utilisera les critères actuellement appliqués.",
+      "noticeFiltered": "Seul l'historique des tâches correspondant aux filtres ci-dessous sera inclus. Si vous avez besoin de données différentes, modifiez d'abord les filtres puis renvoyez.",
+      "noticeAllData": "Aucun filtre n'est actuellement appliqué, donc l'export inclura toutes les données d'historique des tâches disponibles pour cet écran.",
+      "criteriaTitle": "Critères appliqués",
+      "plantLabel": "Plante",
+      "locationLabel": "Emplacement",
+      "taskTypesLabel": "Types de tâches",
+      "completedFromLabel": "Terminé depuis",
+      "completedToLabel": "Terminé jusqu'à",
+      "sortByLabel": "Trier par",
+      "directionLabel": "Direction",
+      "anyPlant": "Toute plante",
+      "anyLocation": "Tout emplacement",
+      "allTaskTypes": "Tous les types de tâches",
+      "notSet": "Non défini",
+      "includePending": "Inclure également les tâches en attente",
+      "send": "Envoyer",
+      "sending": "Envoi..."
     }
   }
 }

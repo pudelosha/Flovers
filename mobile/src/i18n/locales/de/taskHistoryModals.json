@@ -6,7 +6,7 @@
       "delete": "Löschen",
       "selectPlant": "Pflanze auswählen",
       "selectLocation": "Standort auswählen",
-      "datePlaceholder": "RRRR-MM-DD",
+      "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
         "watering": "Gießen",
         "moisture": "Feuchtigkeit",
@@ -33,12 +33,12 @@
       "plantLabel": "Pflanze",
       "locationLabel": "Standort",
       "taskTypesLabel": "Aufgabentypen",
-      "completedDateRangeLabel": "Zeitraum der Abschlussdaten",
+      "completedDateRangeLabel": "Abschlusszeitraum",
       "fromLabel": "Von",
       "toLabel": "Bis",
       "anyPlant": "Beliebige Pflanze",
       "anyLocation": "Beliebiger Standort",
-      "clear": "Leeren"
+      "clear": "Zurücksetzen"
     },
     "sort": {
       "title": "Verlauf sortieren",
@@ -54,6 +54,27 @@
         "desc": "Absteigend"
       },
       "reset": "Zurücksetzen"
+    },
+    "export": {
+      "title": "Verlaufsexport senden",
+      "noticeTitle": "Der Excel-Export verwendet die aktuell angewendeten Kriterien.",
+      "noticeFiltered": "Es wird nur der Aufgabenverlauf berücksichtigt, der den unten angezeigten Filtern entspricht. Wenn du andere Daten benötigst, ändere zuerst die Filter und sende dann erneut.",
+      "noticeAllData": "Derzeit sind keine Filter angewendet, daher enthält der Export alle verfügbaren Aufgabenverlaufsdaten für diesen Bildschirm.",
+      "criteriaTitle": "Angewendete Kriterien",
+      "plantLabel": "Pflanze",
+      "locationLabel": "Standort",
+      "taskTypesLabel": "Aufgabentypen",
+      "completedFromLabel": "Abgeschlossen von",
+      "completedToLabel": "Abgeschlossen bis",
+      "sortByLabel": "Sortieren nach",
+      "directionLabel": "Richtung",
+      "anyPlant": "Beliebige Pflanze",
+      "anyLocation": "Beliebiger Standort",
+      "allTaskTypes": "Alle Aufgabentypen",
+      "notSet": "Nicht festgelegt",
+      "includePending": "Auch ausstehende Aufgaben einbeziehen",
+      "send": "Senden",
+      "sending": "Wird gesendet..."
     }
   }
 }

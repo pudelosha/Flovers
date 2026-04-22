@@ -12,7 +12,7 @@
         "moisture": "الرطوبة",
         "fertilising": "التسميد",
         "care": "العناية",
-        "repot": "إعادة الزرع"
+        "repot": "إعادة الزراعة"
       }
     },
     "delete": {
@@ -24,16 +24,16 @@
         "types": "حذف المهام من النوع",
         "olderThan": "حذف المهام الأقدم من"
       },
-      "noPlantsHint": "ليس لديك أي نباتات في السجل بعد.",
-      "noLocationsHint": "ليس لديك أي مواقع في السجل بعد.",
-      "daysValue": "{{days}} أيام"
+      "noPlantsHint": "لا توجد لديك أي نباتات في السجل بعد.",
+      "noLocationsHint": "لا توجد لديك أي مواقع في السجل بعد.",
+      "daysValue": "{{days}} يوم"
     },
     "filter": {
       "title": "تصفية السجل",
       "plantLabel": "النبات",
       "locationLabel": "الموقع",
       "taskTypesLabel": "أنواع المهام",
-      "completedDateRangeLabel": "نطاق تاريخ الانتهاء",
+      "completedDateRangeLabel": "نطاق تاريخ الإكمال",
       "fromLabel": "من",
       "toLabel": "إلى",
       "anyPlant": "أي نبات",
@@ -41,11 +41,11 @@
       "clear": "مسح"
     },
     "sort": {
-      "title": "ترتيب السجل",
-      "sortByLabel": "ترتيب حسب",
+      "title": "فرز السجل",
+      "sortByLabel": "الفرز حسب",
       "directionLabel": "الاتجاه",
       "keys": {
-        "completedAt": "تاريخ الانتهاء",
+        "completedAt": "تاريخ الإكمال",
         "plant": "اسم النبات",
         "location": "الموقع"
       },
@@ -54,6 +54,27 @@
         "desc": "تنازلي"
       },
       "reset": "إعادة تعيين"
+    },
+    "export": {
+      "title": "إرسال تصدير السجل",
+      "noticeTitle": "سيستخدم تصدير Excel المعايير المطبقة حاليًا.",
+      "noticeFiltered": "سيتم تضمين سجل المهام المطابق للفلاتر المعروضة أدناه فقط. إذا كنت بحاجة إلى بيانات مختلفة، قم بتغيير الفلاتر أولاً ثم أرسل مرة أخرى.",
+      "noticeAllData": "لا توجد فلاتر مطبقة حاليًا، لذلك سيتضمن التصدير جميع بيانات سجل المهام المتاحة لهذه الشاشة.",
+      "criteriaTitle": "المعايير المطبقة",
+      "plantLabel": "النبات",
+      "locationLabel": "الموقع",
+      "taskTypesLabel": "أنواع المهام",
+      "completedFromLabel": "مكتمل من",
+      "completedToLabel": "مكتمل إلى",
+      "sortByLabel": "الفرز حسب",
+      "directionLabel": "الاتجاه",
+      "anyPlant": "أي نبات",
+      "anyLocation": "أي موقع",
+      "allTaskTypes": "جميع أنواع المهام",
+      "notSet": "غير محدد",
+      "includePending": "تضمين المهام المعلقة أيضًا",
+      "send": "إرسال",
+      "sending": "جارٍ الإرسال..."
     }
   }
 }

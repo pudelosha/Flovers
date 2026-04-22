@@ -8,24 +8,24 @@
       "selectLocation": "स्थान चुनें",
       "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
-        "watering": "सिंचाई",
+        "watering": "पानी देना",
         "moisture": "नमी",
-        "fertilising": "उर्वरक",
+        "fertilising": "उर्वरक डालना",
         "care": "देखभाल",
-        "repot": "पौधा बदलना"
+        "repot": "दोबारा गमले में लगाना"
       }
     },
     "delete": {
       "title": "इतिहास हटाएं",
-      "scopeLabel": "सीमा",
+      "scopeLabel": "दायरा",
       "modes": {
-        "plant": "चुने हुए पौधे के लिए हटाएं",
-        "location": "चुने हुए स्थान के लिए हटाएं",
-        "types": "टाइप के कार्य हटाएं",
-        "olderThan": "पुराने कार्य हटाएं जो {{days}} दिन से अधिक पुराने हैं"
+        "plant": "चयनित पौधे के लिए हटाएं",
+        "location": "चयनित स्थान के लिए हटाएं",
+        "types": "प्रकार के कार्य हटाएं",
+        "olderThan": "इससे पुराने कार्य हटाएं"
       },
-      "noPlantsHint": "आपके पास अभी तक कोई पौधे नहीं हैं।",
-      "noLocationsHint": "आपके पास अभी तक कोई स्थान नहीं हैं।",
+      "noPlantsHint": "आपके इतिहास में अभी कोई पौधे नहीं हैं।",
+      "noLocationsHint": "आपके इतिहास में अभी कोई स्थान नहीं हैं।",
       "daysValue": "{{days}} दिन"
     },
     "filter": {
@@ -33,27 +33,48 @@
       "plantLabel": "पौधा",
       "locationLabel": "स्थान",
       "taskTypesLabel": "कार्य प्रकार",
-      "completedDateRangeLabel": "पूर्णता की तिथि सीमा",
+      "completedDateRangeLabel": "पूर्ण होने की तारीख सीमा",
       "fromLabel": "से",
       "toLabel": "तक",
       "anyPlant": "कोई भी पौधा",
       "anyLocation": "कोई भी स्थान",
-      "clear": "साफ करें"
+      "clear": "साफ़ करें"
     },
     "sort": {
-      "title": "इतिहास को क्रमबद्ध करें",
-      "sortByLabel": "क्रमबद्ध करें द्वारा",
+      "title": "इतिहास क्रमबद्ध करें",
+      "sortByLabel": "इसके अनुसार क्रमबद्ध करें",
       "directionLabel": "दिशा",
       "keys": {
-        "completedAt": "पूर्णता तिथि",
+        "completedAt": "पूर्ण होने की तारीख",
         "plant": "पौधे का नाम",
         "location": "स्थान"
       },
       "directions": {
-        "asc": "वृद्धि क्रम में",
-        "desc": "घटाव क्रम में"
+        "asc": "आरोही",
+        "desc": "अवरोही"
       },
-      "reset": "रीसेट करें"
+      "reset": "रीसेट"
+    },
+    "export": {
+      "title": "इतिहास निर्यात भेजें",
+      "noticeTitle": "Excel निर्यात वर्तमान में लागू मानदंडों का उपयोग करेगा।",
+      "noticeFiltered": "केवल नीचे दिखाए गए फ़िल्टर से मेल खाने वाला कार्य इतिहास शामिल किया जाएगा। यदि आपको अलग डेटा चाहिए, तो पहले फ़िल्टर बदलें और फिर दोबारा भेजें।",
+      "noticeAllData": "वर्तमान में कोई फ़िल्टर लागू नहीं हैं, इसलिए निर्यात में इस स्क्रीन के लिए उपलब्ध सभी कार्य इतिहास डेटा शामिल होगा।",
+      "criteriaTitle": "लागू मानदंड",
+      "plantLabel": "पौधा",
+      "locationLabel": "स्थान",
+      "taskTypesLabel": "कार्य प्रकार",
+      "completedFromLabel": "से पूर्ण",
+      "completedToLabel": "तक पूर्ण",
+      "sortByLabel": "इसके अनुसार क्रमबद्ध करें",
+      "directionLabel": "दिशा",
+      "anyPlant": "कोई भी पौधा",
+      "anyLocation": "कोई भी स्थान",
+      "allTaskTypes": "सभी कार्य प्रकार",
+      "notSet": "सेट नहीं है",
+      "includePending": "लंबित कार्य भी शामिल करें",
+      "send": "भेजें",
+      "sending": "भेजा जा रहा है..."
     }
   }
 }

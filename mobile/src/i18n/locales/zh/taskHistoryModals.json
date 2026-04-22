@@ -19,25 +19,25 @@
       "title": "删除历史记录",
       "scopeLabel": "范围",
       "modes": {
-        "plant": "删除选定植物的记录",
-        "location": "删除选定位置的记录",
-        "types": "删除特定类型的任务",
-        "olderThan": "删除早于此日期的任务"
+        "plant": "删除所选植物的记录",
+        "location": "删除所选位置的记录",
+        "types": "删除该类型的任务",
+        "olderThan": "删除早于此时间的任务"
       },
-      "noPlantsHint": "您的历史记录中还没有植物。",
-      "noLocationsHint": "您的历史记录中还没有位置。",
+      "noPlantsHint": "您还没有任何植物历史记录。",
+      "noLocationsHint": "您还没有任何位置历史记录。",
       "daysValue": "{{days}} 天"
     },
     "filter": {
-      "title": "过滤历史记录",
+      "title": "筛选历史记录",
       "plantLabel": "植物",
       "locationLabel": "位置",
       "taskTypesLabel": "任务类型",
       "completedDateRangeLabel": "完成日期范围",
       "fromLabel": "从",
       "toLabel": "到",
-      "anyPlant": "任何植物",
-      "anyLocation": "任何位置",
+      "anyPlant": "任意植物",
+      "anyLocation": "任意位置",
       "clear": "清除"
     },
     "sort": {
@@ -54,6 +54,27 @@
         "desc": "降序"
       },
       "reset": "重置"
+    },
+    "export": {
+      "title": "发送历史导出",
+      "noticeTitle": "Excel 导出将使用当前应用的条件。",
+      "noticeFiltered": "仅包含符合以下筛选条件的任务历史记录。如果需要不同的数据，请先更改筛选条件，然后再次发送。",
+      "noticeAllData": "当前未应用任何筛选条件，因此导出将包含此页面的所有可用任务历史数据。",
+      "criteriaTitle": "已应用的条件",
+      "plantLabel": "植物",
+      "locationLabel": "位置",
+      "taskTypesLabel": "任务类型",
+      "completedFromLabel": "完成起始日期",
+      "completedToLabel": "完成结束日期",
+      "sortByLabel": "排序依据",
+      "directionLabel": "方向",
+      "anyPlant": "任意植物",
+      "anyLocation": "任意位置",
+      "allTaskTypes": "所有任务类型",
+      "notSet": "未设置",
+      "includePending": "同时包含待处理任务",
+      "send": "发送",
+      "sending": "发送中..."
     }
   }
 }

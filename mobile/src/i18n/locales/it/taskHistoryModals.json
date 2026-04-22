@@ -6,11 +6,11 @@
       "delete": "Elimina",
       "selectPlant": "Seleziona pianta",
       "selectLocation": "Seleziona posizione",
-      "datePlaceholder": "RRRR-MM-DD",
+      "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
-        "watering": "Annaffiatura",
+        "watering": "Irrigazione",
         "moisture": "Umidità",
-        "fertilising": "Concimazione",
+        "fertilising": "Fertilizzazione",
         "care": "Cura",
         "repot": "Rinvaso"
       }
@@ -24,8 +24,8 @@
         "types": "Elimina attività di tipo",
         "olderThan": "Elimina attività più vecchie di"
       },
-      "noPlantsHint": "Non hai ancora nessuna pianta nella cronologia.",
-      "noLocationsHint": "Non hai ancora nessuna posizione nella cronologia.",
+      "noPlantsHint": "Non hai ancora piante nella cronologia.",
+      "noLocationsHint": "Non hai ancora posizioni nella cronologia.",
       "daysValue": "{{days}} giorni"
     },
     "filter": {
@@ -54,6 +54,27 @@
         "desc": "Decrescente"
       },
       "reset": "Reimposta"
+    },
+    "export": {
+      "title": "Invia esportazione cronologia",
+      "noticeTitle": "L'esportazione Excel utilizzerà i criteri attualmente applicati.",
+      "noticeFiltered": "Verrà inclusa solo la cronologia delle attività che corrisponde ai filtri mostrati di seguito. Se hai bisogno di dati diversi, modifica prima i filtri e poi invia di nuovo.",
+      "noticeAllData": "Attualmente non sono applicati filtri, quindi l'esportazione includerà tutti i dati disponibili della cronologia delle attività per questa schermata.",
+      "criteriaTitle": "Criteri applicati",
+      "plantLabel": "Pianta",
+      "locationLabel": "Posizione",
+      "taskTypesLabel": "Tipi di attività",
+      "completedFromLabel": "Completato da",
+      "completedToLabel": "Completato a",
+      "sortByLabel": "Ordina per",
+      "directionLabel": "Direzione",
+      "anyPlant": "Qualsiasi pianta",
+      "anyLocation": "Qualsiasi posizione",
+      "allTaskTypes": "Tutti i tipi di attività",
+      "notSet": "Non impostato",
+      "includePending": "Includi anche le attività in sospeso",
+      "send": "Invia",
+      "sending": "Invio in corso..."
     }
   }
 }

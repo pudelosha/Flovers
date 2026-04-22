@@ -8,9 +8,9 @@
       "selectLocation": "위치 선택",
       "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
-        "watering": "급수",
-        "moisture": "습도",
-        "fertilising": "비료",
+        "watering": "물 주기",
+        "moisture": "수분",
+        "fertilising": "비료 주기",
         "care": "관리",
         "repot": "분갈이"
       }
@@ -19,31 +19,31 @@
       "title": "기록 삭제",
       "scopeLabel": "범위",
       "modes": {
-        "plant": "선택한 식물에 대해 삭제",
-        "location": "선택한 위치에 대해 삭제",
-        "types": "타입별 작업 삭제",
-        "olderThan": "보다 오래된 작업 삭제"
+        "plant": "선택한 식물의 기록 삭제",
+        "location": "선택한 위치의 기록 삭제",
+        "types": "유형별 작업 삭제",
+        "olderThan": "다음보다 오래된 작업 삭제"
       },
       "noPlantsHint": "아직 기록에 식물이 없습니다.",
       "noLocationsHint": "아직 기록에 위치가 없습니다.",
-      "daysValue": "{{days}} 일"
+      "daysValue": "{{days}}일"
     },
     "filter": {
-      "title": "기록 필터링",
+      "title": "기록 필터",
       "plantLabel": "식물",
       "locationLabel": "위치",
       "taskTypesLabel": "작업 유형",
       "completedDateRangeLabel": "완료 날짜 범위",
-      "fromLabel": "부터",
-      "toLabel": "까지",
+      "fromLabel": "시작",
+      "toLabel": "종료",
       "anyPlant": "모든 식물",
       "anyLocation": "모든 위치",
-      "clear": "지우기"
+      "clear": "초기화"
     },
     "sort": {
       "title": "기록 정렬",
       "sortByLabel": "정렬 기준",
-      "directionLabel": "방향",
+      "directionLabel": "정렬 방향",
       "keys": {
         "completedAt": "완료 날짜",
         "plant": "식물 이름",
@@ -54,6 +54,27 @@
         "desc": "내림차순"
       },
       "reset": "초기화"
+    },
+    "export": {
+      "title": "기록 내보내기 전송",
+      "noticeTitle": "Excel 내보내기는 현재 적용된 기준을 사용합니다.",
+      "noticeFiltered": "아래에 표시된 필터와 일치하는 작업 기록만 포함됩니다. 다른 데이터가 필요하면 먼저 필터를 변경한 후 다시 전송하세요.",
+      "noticeAllData": "현재 적용된 필터가 없으므로, 이 화면의 모든 작업 기록 데이터가 내보내기에 포함됩니다.",
+      "criteriaTitle": "적용된 기준",
+      "plantLabel": "식물",
+      "locationLabel": "위치",
+      "taskTypesLabel": "작업 유형",
+      "completedFromLabel": "완료 시작",
+      "completedToLabel": "완료 종료",
+      "sortByLabel": "정렬 기준",
+      "directionLabel": "정렬 방향",
+      "anyPlant": "모든 식물",
+      "anyLocation": "모든 위치",
+      "allTaskTypes": "모든 작업 유형",
+      "notSet": "설정되지 않음",
+      "includePending": "대기 중인 작업도 포함",
+      "send": "전송",
+      "sending": "전송 중..."
     }
   }
 }

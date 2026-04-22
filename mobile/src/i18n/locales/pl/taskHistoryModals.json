@@ -6,7 +6,7 @@
       "delete": "Usuń",
       "selectPlant": "Wybierz roślinę",
       "selectLocation": "Wybierz lokalizację",
-      "datePlaceholder": "RRRR-MM-DD",
+      "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
         "watering": "Podlewanie",
         "moisture": "Wilgotność",
@@ -33,7 +33,7 @@
       "plantLabel": "Roślina",
       "locationLabel": "Lokalizacja",
       "taskTypesLabel": "Typy zadań",
-      "completedDateRangeLabel": "Zakres dat ukończenia",
+      "completedDateRangeLabel": "Zakres dat wykonania",
       "fromLabel": "Od",
       "toLabel": "Do",
       "anyPlant": "Dowolna roślina",
@@ -42,10 +42,10 @@
     },
     "sort": {
       "title": "Sortuj historię",
-      "sortByLabel": "Sortuj wg",
+      "sortByLabel": "Sortuj według",
       "directionLabel": "Kierunek",
       "keys": {
-        "completedAt": "Data ukończenia",
+        "completedAt": "Data wykonania",
         "plant": "Nazwa rośliny",
         "location": "Lokalizacja"
       },
@@ -54,6 +54,27 @@
         "desc": "Malejąco"
       },
       "reset": "Resetuj"
+    },
+    "export": {
+      "title": "Wyślij eksport historii",
+      "noticeTitle": "Eksport do Excela użyje aktualnie zastosowanych kryteriów.",
+      "noticeFiltered": "Uwzględniona zostanie tylko historia zadań pasująca do poniższych filtrów. Jeśli potrzebujesz innych danych, najpierw zmień filtry, a następnie wyślij ponownie.",
+      "noticeAllData": "Obecnie nie zastosowano żadnych filtrów, więc eksport będzie zawierał wszystkie dostępne dane historii zadań dla tego widoku.",
+      "criteriaTitle": "Zastosowane kryteria",
+      "plantLabel": "Roślina",
+      "locationLabel": "Lokalizacja",
+      "taskTypesLabel": "Typy zadań",
+      "completedFromLabel": "Wykonane od",
+      "completedToLabel": "Wykonane do",
+      "sortByLabel": "Sortuj według",
+      "directionLabel": "Kierunek",
+      "anyPlant": "Dowolna roślina",
+      "anyLocation": "Dowolna lokalizacja",
+      "allTaskTypes": "Wszystkie typy zadań",
+      "notSet": "Nie ustawiono",
+      "includePending": "Uwzględnij również zadania oczekujące",
+      "send": "Wyślij",
+      "sending": "Wysyłanie..."
     }
   }
 }

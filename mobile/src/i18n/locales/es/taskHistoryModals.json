@@ -6,13 +6,13 @@
       "delete": "Eliminar",
       "selectPlant": "Seleccionar planta",
       "selectLocation": "Seleccionar ubicación",
-      "datePlaceholder": "AAAA-MM-DD",
+      "datePlaceholder": "YYYY-MM-DD",
       "taskTypes": {
         "watering": "Riego",
         "moisture": "Humedad",
         "fertilising": "Fertilización",
         "care": "Cuidado",
-        "repot": "Trasplante"
+        "repot": "Trasplantar"
       }
     },
     "delete": {
@@ -22,7 +22,7 @@
         "plant": "Eliminar para la planta seleccionada",
         "location": "Eliminar para la ubicación seleccionada",
         "types": "Eliminar tareas de tipo",
-        "olderThan": "Eliminar tareas más antiguas que"
+        "olderThan": "Eliminar tareas anteriores a"
       },
       "noPlantsHint": "Aún no tienes plantas en el historial.",
       "noLocationsHint": "Aún no tienes ubicaciones en el historial.",
@@ -32,7 +32,7 @@
       "title": "Filtrar historial",
       "plantLabel": "Planta",
       "locationLabel": "Ubicación",
-      "taskTypesLabel": "Tipos de tareas",
+      "taskTypesLabel": "Tipos de tarea",
       "completedDateRangeLabel": "Rango de fechas de finalización",
       "fromLabel": "Desde",
       "toLabel": "Hasta",
@@ -54,6 +54,27 @@
         "desc": "Descendente"
       },
       "reset": "Restablecer"
+    },
+    "export": {
+      "title": "Enviar exportación del historial",
+      "noticeTitle": "La exportación de Excel usará los criterios aplicados actualmente.",
+      "noticeFiltered": "Solo se incluirá el historial de tareas que coincida con los filtros mostrados a continuación. Si necesitas datos diferentes, cambia primero los filtros y luego vuelve a enviar.",
+      "noticeAllData": "Actualmente no hay filtros aplicados, por lo que la exportación incluirá todos los datos de historial de tareas disponibles para esta pantalla.",
+      "criteriaTitle": "Criterios aplicados",
+      "plantLabel": "Planta",
+      "locationLabel": "Ubicación",
+      "taskTypesLabel": "Tipos de tarea",
+      "completedFromLabel": "Completado desde",
+      "completedToLabel": "Completado hasta",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Dirección",
+      "anyPlant": "Cualquier planta",
+      "anyLocation": "Cualquier ubicación",
+      "allTaskTypes": "Todos los tipos de tarea",
+      "notSet": "No establecido",
+      "includePending": "Incluir también tareas pendientes",
+      "send": "Enviar",
+      "sending": "Enviando..."
     }
   }
 }
