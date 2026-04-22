@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useCallback, useRef } from "react";
 import { View, Text, Pressable, ScrollView, StyleSheet, Keyboard } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../../app/providers/SettingsProvider";
 import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
 import { TRAIT_ICON_BY_KEY } from "../../../create-plant/constants/create-plant.constants";
 
@@ -62,9 +63,86 @@ function titleCaseKey(key: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+function getTemperatureUnitFromSettings(settings?: any): "C" | "F" | "K" {
+  const raw =
+    settings?.temperatureUnit ??
+    settings?.tempUnit ??
+    settings?.units?.temperature ??
+    "C";
+
+  const normalized = String(raw).trim().toLowerCase();
+
+  if (normalized === "f" || normalized === "°f" || normalized === "fahrenheit") {
+    return "F";
+  }
+
+  if (normalized === "k" || normalized === "kelvin") {
+    return "K";
+  }
+
+  return "C";
+}
+
+function cToF(c: number) {
+  return (c * 9) / 5 + 32;
+}
+
+function cToK(c: number) {
+  return c + 273.15;
+}
+
+function formatConvertedTemp(n: number) {
+  const rounded = Math.round(n * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+}
+
+function convertSingleCelsiusValue(celsius: number, targetUnit: "C" | "F" | "K") {
+  if (targetUnit === "F") return `${formatConvertedTemp(cToF(celsius))}°F`;
+  if (targetUnit === "K") return `${formatConvertedTemp(cToK(celsius))} K`;
+  return `${formatConvertedTemp(celsius)}°C`;
+}
+
+function convertTemperatureText(value: string, settings?: any) {
+  const targetUnit = getTemperatureUnitFromSettings(settings);
+  if (targetUnit === "C") return value;
+
+  let out = value;
+
+  // ranges like 18-24°C or 18 – 24 C
+  out = out.replace(
+    /(-?\d+(?:[.,]\d+)?)\s*(?:-|–|—|to)\s*(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi,
+    (_, a, b) => {
+      const n1 = Number(String(a).replace(",", "."));
+      const n2 = Number(String(b).replace(",", "."));
+      if (!Number.isFinite(n1) || !Number.isFinite(n2)) return _;
+      const v1 = targetUnit === "F" ? cToF(n1) : cToK(n1);
+      const v2 = targetUnit === "F" ? cToF(n2) : cToK(n2);
+      const unit = targetUnit === "F" ? "°F" : " K";
+      return `${formatConvertedTemp(v1)}-${formatConvertedTemp(v2)}${unit}`;
+    }
+  );
+
+  // single values like 22°C or 22 C
+  out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi, (_, a) => {
+    const n = Number(String(a).replace(",", "."));
+    if (!Number.isFinite(n)) return _;
+    return convertSingleCelsiusValue(n, targetUnit);
+  });
+
+  // word forms like 22 Celsius
+  out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*Celsius\b/gi, (_, a) => {
+    const n = Number(String(a).replace(",", "."));
+    if (!Number.isFinite(n)) return _;
+    return convertSingleCelsiusValue(n, targetUnit);
+  });
+
+  return out;
+}
+
 export default function PlantDefinitionModal({ visible, onClose, plantDefinitionId }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
   const insets = useSafeAreaInsets();
 
   const preferredLang = normalizeLang(currentLanguage);
@@ -140,10 +218,14 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     for (const trt of traits) {
       const rawKey = String(trt?.key ?? "").trim();
       const key = normalizeTraitKey(rawKey);
-      const value = pickText(trt?.value, preferredLang);
+      let value = pickText(trt?.value, preferredLang);
       if (!key || !value) continue;
       if (seen.has(key)) continue;
       seen.add(key);
+
+      if (key === "temperature") {
+        value = convertTemperatureText(value, settings);
+      }
 
       out.push({
         key,
@@ -154,7 +236,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     }
 
     return out;
-  }, [profile, tr, preferredLang]);
+  }, [profile, tr, preferredLang, settings]);
 
   const bottomButtonHeight = 52;
   const bottomGap = Math.max(insets.bottom, 0) + 12;
