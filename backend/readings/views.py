@@ -80,39 +80,26 @@ def _autosize_worksheet_columns(ws):
         ws.column_dimensions[col_letter].width = min(max(max_len + 2, 12), 42)
 
 
-def _build_readings_export_workbook(devices, sort_key: str, sort_dir: str) -> bytes:
+def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> bytes:
     # lazy import so missing dependency would affect only this endpoint
     from openpyxl import Workbook
     from openpyxl.styles import Font
 
     rows = []
 
-    for device in devices:
-        latest = device.latest_snapshot or {}
+    for reading in readings:
+        device = reading.device
 
         rows.append({
-            "device_id": device.id,
-            "plant_id": device.plant_id,
             "plant_name": device.plant_name or "",
-            "plant_location": device.plant_location or "",
+            "location": device.plant_location or "",
             "device_name": device.device_name or "",
-            "status_label": "Enabled" if device.is_active else "Disabled",
-            "last_read_at": _format_dt_local(device.last_read_at),
-            "interval_hours": device.interval_hours,
-            "sensor_temperature": _bool_label(bool((device.sensors or {}).get("temperature"))),
-            "sensor_humidity": _bool_label(bool((device.sensors or {}).get("humidity"))),
-            "sensor_light": _bool_label(bool((device.sensors or {}).get("light"))),
-            "sensor_moisture": _bool_label(bool((device.sensors or {}).get("moisture"))),
-            "latest_temperature": latest.get("temperature"),
-            "latest_humidity": latest.get("humidity"),
-            "latest_light": latest.get("light"),
-            "latest_moisture": latest.get("moisture"),
-            "moisture_alert_enabled": _bool_label(bool(device.moisture_alert_enabled)),
-            "moisture_alert_threshold": device.moisture_alert_threshold,
-            "moisture_alert_active": _bool_label(bool(device.moisture_alert_active)),
-            "notes": device.notes or "",
-            "created_at": _format_dt_local(device.created_at),
-            "updated_at": _format_dt_local(device.updated_at),
+            "latest_temperature": reading.temperature,
+            "latest_humidity": reading.humidity,
+            "latest_light": reading.light,
+            "latest_moisture": reading.moisture,
+            "created_at": _format_dt_local(reading.timestamp),
+            "_ts": reading.timestamp,
         })
 
     reverse = sort_dir == "desc"
@@ -122,21 +109,23 @@ def _build_readings_export_workbook(devices, sort_key: str, sort_dir: str) -> by
             key=lambda r: (
                 (r["plant_name"] or "").lower(),
                 (r["device_name"] or "").lower(),
+                r["_ts"],
             ),
             reverse=reverse,
         )
     elif sort_key == "location":
         rows.sort(
             key=lambda r: (
-                (r["plant_location"] or "").lower(),
+                (r["location"] or "").lower(),
                 (r["plant_name"] or "").lower(),
                 (r["device_name"] or "").lower(),
+                r["_ts"],
             ),
             reverse=reverse,
         )
     else:  # lastRead
         rows.sort(
-            key=lambda r: (r["last_read_at"] or ""),
+            key=lambda r: r["_ts"],
             reverse=reverse,
         )
 
@@ -145,28 +134,14 @@ def _build_readings_export_workbook(devices, sort_key: str, sort_dir: str) -> by
     ws.title = "Readings"
 
     headers = [
-        "Device ID",
-        "Plant ID",
         "Plant Name",
         "Location",
         "Device Name",
-        "Status",
-        "Last Read At",
-        "Interval Hours",
-        "Temperature Sensor",
-        "Humidity Sensor",
-        "Light Sensor",
-        "Moisture Sensor",
         "Latest Temperature",
         "Latest Humidity",
         "Latest Light",
         "Latest Moisture",
-        "Moisture Alert Enabled",
-        "Moisture Alert Threshold",
-        "Moisture Alert Active",
-        "Notes",
         "Created At",
-        "Updated At",
     ]
     ws.append(headers)
 
@@ -175,28 +150,14 @@ def _build_readings_export_workbook(devices, sort_key: str, sort_dir: str) -> by
 
     for row in rows:
         ws.append([
-            row["device_id"],
-            row["plant_id"],
             row["plant_name"],
-            row["plant_location"],
+            row["location"],
             row["device_name"],
-            row["status_label"],
-            row["last_read_at"],
-            row["interval_hours"],
-            row["sensor_temperature"],
-            row["sensor_humidity"],
-            row["sensor_light"],
-            row["sensor_moisture"],
             row["latest_temperature"],
             row["latest_humidity"],
             row["latest_light"],
             row["latest_moisture"],
-            row["moisture_alert_enabled"],
-            row["moisture_alert_threshold"],
-            row["moisture_alert_active"],
-            row["notes"],
             row["created_at"],
-            row["updated_at"],
         ])
 
     _autosize_worksheet_columns(ws)
@@ -204,7 +165,6 @@ def _build_readings_export_workbook(devices, sort_key: str, sort_dir: str) -> by
     stream = BytesIO()
     wb.save(stream)
     return stream.getvalue()
-
 
 # ---- History helpers (for new /history/ endpoint) ----
 
@@ -445,26 +405,32 @@ def readings_export_email(request):
     sort_key = data.get("sortKey", "name")
     sort_dir = data.get("sortDir", "asc")
 
-    qs = (
+    device_qs = (
         ReadingDevice.objects
         .filter(user=request.user)
         .select_related("plant")
     )
 
     if plant_id:
-        qs = qs.filter(plant_id=plant_id)
+        device_qs = device_qs.filter(plant_id=plant_id)
 
     if location:
-        qs = qs.filter(plant_location=location)
+        device_qs = device_qs.filter(plant_location=location)
 
     if status_value == "enabled":
-        qs = qs.filter(is_active=True)
+        device_qs = device_qs.filter(is_active=True)
     elif status_value == "disabled":
-        qs = qs.filter(is_active=False)
+        device_qs = device_qs.filter(is_active=False)
 
-    devices = list(qs)
+    readings_qs = (
+        Reading.objects
+        .filter(device__in=device_qs)
+        .select_related("device")
+    )
+
+    readings = list(readings_qs)
     xlsx_bytes = _build_readings_export_workbook(
-        devices,
+        readings,
         sort_key=sort_key,
         sort_dir=sort_dir,
     )
@@ -478,7 +444,7 @@ def readings_export_email(request):
         "status_value": status_value or "Any status",
         "sort_key_value": sort_key,
         "sort_dir_value": sort_dir,
-        "total_count": len(devices),
+        "total_count": len(readings),
         "attachment_filename": attachment_filename,
     }
 
