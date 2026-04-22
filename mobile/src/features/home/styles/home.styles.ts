@@ -357,4 +357,12 @@ export const s = StyleSheet.create({
     backgroundColor: "rgba(11,114,133,0.25)",
   },
   chipText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
+  locationRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 2,
+  },
+  locationIcon: {
+    marginRight: 6,
+  },
 });
