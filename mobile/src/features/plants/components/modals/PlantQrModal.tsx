@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
+import { View, Text, Pressable, ScrollView, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import QRCode from "react-native-qrcode-svg";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -89,32 +89,18 @@ export default function PlantQrModal({
               {tr("plantsModals.qr.title", "Plant QR code")}
             </Text>
 
-            <Text style={[s.confirmText, { marginBottom: 12 }]}>
+            <Text style={[s.confirmText, { marginBottom: 10 }]}>
               {tr(
                 "plantsModals.qr.p1",
-                "Each plant has a unique QR code that encodes its identifier."
-              )}{" "}
-              {tr(
-                "plantsModals.qr.p2",
-                "When you scan this code with the in-app scanner, you’ll be redirected straight to the details screen of this plant"
+                "Each plant has a unique QR code. Scanning it in the app opens this plant instantly."
               )}{" "}
               <Text style={{ fontWeight: "800" }}>({plantName})</Text>.
-              {"\n\n"}
-              {tr("plantsModals.qr.youCan", "You can:")}
-              {"\n"}•{" "}
+            </Text>
+
+            <Text style={[s.confirmText, { marginBottom: 14 }]}>
               {tr(
-                "plantsModals.qr.b1",
-                "save the QR image to your phone or email it, then print it for labeling,"
-              )}
-              {"\n"}•{" "}
-              {tr(
-                "plantsModals.qr.b2",
-                "attach the printed label directly to the pot so the code is always easy to access,"
-              )}
-              {"\n"}•{" "}
-              {tr(
-                "plantsModals.qr.b3",
-                "let anyone in your household scan the label to quickly open this plant in the app."
+                "plantsModals.qr.p2",
+                "You can save or send the QR code, print it, and attach it to the pot for quick access later."
               )}
             </Text>
 
@@ -133,13 +119,9 @@ export default function PlantQrModal({
               <Pressable
                 style={[
                   s.promptBtn,
-                  {
-                    flex: 1,
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginRight: 8,
-                  },
+                  s.promptPrimary,
+                  styles.actionBtn,
+                  { marginRight: 8 },
                 ]}
                 android_ripple={{ color: "rgba(255,255,255,0.16)" }}
                 onPress={onPressSave}
@@ -150,21 +132,17 @@ export default function PlantQrModal({
                   color="#FFFFFF"
                   style={{ marginRight: 6 }}
                 />
-                <Text style={s.promptBtnText}>
-                  {tr("plantsModals.qr.save", "Save QR code")}
+                <Text style={s.promptPrimaryText}>
+                  {tr("plantsModals.qr.save", "Save")}
                 </Text>
               </Pressable>
 
               <Pressable
                 style={[
                   s.promptBtn,
-                  {
-                    flex: 1,
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginLeft: 8,
-                  },
+                  s.promptPrimary,
+                  styles.actionBtn,
+                  { marginLeft: 8 },
                 ]}
                 android_ripple={{ color: "rgba(255,255,255,0.16)" }}
                 onPress={onPressEmail}
@@ -175,8 +153,8 @@ export default function PlantQrModal({
                   color="#FFFFFF"
                   style={{ marginRight: 6 }}
                 />
-                <Text style={s.promptBtnText}>
-                  {tr("plantsModals.qr.email", "Email QR code")}
+                <Text style={s.promptPrimaryText}>
+                  {tr("plantsModals.qr.email", "Send")}
                 </Text>
               </Pressable>
             </View>
@@ -198,3 +176,12 @@ export default function PlantQrModal({
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  actionBtn: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

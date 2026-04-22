@@ -28,14 +28,10 @@
     },
     "qr": {
       "title": "Plant QR code",
-      "p1": "Each plant has a unique QR code that encodes its identifier.",
-      "p2": "When you scan this code with the in-app scanner, you’ll be redirected straight to the details screen of this plant",
-      "youCan": "You can:",
-      "b1": "save the QR image to your phone or email it, then print it for labeling,",
-      "b2": "attach the printed label directly to the pot so the code is always easy to access,",
-      "b3": "let anyone in your household scan the label to quickly open this plant in the app.",
-      "save": "Save QR code",
-      "email": "Email QR code"
+      "p1": "Each plant has a unique QR code. Scanning it in the app opens this plant instantly.",
+      "p2": "You can save or send the QR code, print it, and attach it to the pot for quick access later.",
+      "save": "Save",
+      "email": "Send"
     },
     "edit": {
       "title": "Edit plant",
