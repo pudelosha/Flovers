@@ -52,7 +52,33 @@
       "keyLocation": "Location",
       "keyLastRead": "Last read",
       "ascending": "Ascending",
-      "descending": "Descending"
+      "descending": "Descending",
+      "keys": {
+        "name": "Plant name",
+        "location": "Location",
+        "lastRead": "Last read"
+      },
+      "directions": {
+        "asc": "Ascending",
+        "desc": "Descending"
+      }
+    },
+    "export": {
+      "title": "Send readings export",
+      "noticeTitle": "The Excel export will use the currently applied criteria.",
+      "noticeFiltered": "Only readings data matching the filters shown below will be included. If you need different data, change the filters first and then send again.",
+      "noticeAllData": "No filters are currently applied, so the export will include all available readings data for this screen.",
+      "plantLabel": "Plant",
+      "locationLabel": "Location",
+      "statusLabel": "Status",
+      "sortByLabel": "Sort by",
+      "directionLabel": "Direction",
+      "anyPlant": "Any plant",
+      "anyLocation": "Any location",
+      "anyStatus": "Any status",
+      "notSet": "Not set",
+      "send": "Send",
+      "sending": "Sending..."
     },
     "upsert": {
       "linkDeviceTitle": "Link device",

@@ -117,6 +117,33 @@ export async function sendDeviceCodeByEmail(
   );
 }
 
+/* ============================== READINGS EXPORT EMAIL ============================== */
+
+export type ReadingsExportStatus = "enabled" | "disabled";
+export type ReadingsExportSortKey = "name" | "location" | "lastRead";
+export type ReadingsExportSortDir = "asc" | "desc";
+
+export type ReadingsExportEmailRequest = {
+  plantId?: string;
+  location?: string;
+  status?: ReadingsExportStatus;
+  sortKey?: ReadingsExportSortKey;
+  sortDir?: ReadingsExportSortDir;
+  lang?: string;
+};
+
+export async function sendReadingsExportEmail(
+  payload: ReadingsExportEmailRequest,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ detail?: string }> {
+  return await request<{ detail?: string }>(
+    "/api/readings/export-email/",
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
+}
+
 /* ============================== READ FEED (LATEST ONLY) ============================== */
 
 /**

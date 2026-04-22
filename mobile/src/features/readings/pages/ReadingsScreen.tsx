@@ -20,6 +20,7 @@ import FilterReadingsModal from "../components/modals/FilterReadingsModal";
 import ConfirmDeleteReadingModal from "../components/modals/ConfirmDeleteReadingModal";
 import DeviceSetupModal from "../components/modals/DeviceSetupModal";
 import UpsertReadingDeviceModal from "../components/modals/UpsertReadingDeviceModal";
+import SendReadingsExportModal from "../components/modals/SendReadingsExportModal";
 
 // === Services (readings) ===
 import {
@@ -31,6 +32,8 @@ import {
   toReadingTile,
   fetchDeviceSetup,
   sendDeviceCodeByEmail,
+  sendReadingsExportEmail,
+  type ReadingsExportEmailRequest,
 } from "../../../api/services/readings.service";
 
 // Pull the API type from centralized readings types
@@ -65,7 +68,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function ReadingsScreen() {
   const nav = useNavigation();
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
 
@@ -99,6 +102,10 @@ export default function ReadingsScreen() {
   // Filter modal state
   const [filterModalVisible, setFilterModalVisible] = useState(false);
   const [filters, setFilters] = useState<Filters>({}); // plantId, location, status
+
+  // Export modal state
+  const [exportModalVisible, setExportModalVisible] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   // Backwards-compat: legacy quick filter query (maps to "name contains"), keep existing logic intact
   const [filterQuery, setFilterQuery] = useState<string>("");
@@ -181,6 +188,7 @@ export default function ReadingsScreen() {
       // hide all modals/sheets
       setSortModalVisible(false);
       setFilterModalVisible(false);
+      setExportModalVisible(false);
       setDeleteVisible(false);
       setDeviceSetupVisible(false);
       setUpsertVisible(false);
@@ -221,6 +229,21 @@ export default function ReadingsScreen() {
     });
     return Array.from(set);
   }, [items]);
+
+  const effectiveExportFilters = useMemo<ReadingsExportEmailRequest>(() => {
+    return {
+      plantId: filters.plantId || undefined,
+      location: filters.location || undefined,
+      status: filters.status || undefined,
+      sortKey,
+      sortDir,
+    };
+  }, [filters, sortKey, sortDir]);
+
+  const exportPlantName = useMemo(() => {
+    if (!effectiveExportFilters.plantId) return undefined;
+    return plantOptions.find((p) => p.id === effectiveExportFilters.plantId)?.name;
+  }, [effectiveExportFilters.plantId, plantOptions]);
 
   // ---------- ✨ ENTRANCE ANIMATION (tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -347,6 +370,7 @@ export default function ReadingsScreen() {
     !filterSheetOpen &&
     !sortModalVisible &&
     !filterModalVisible &&
+    !exportModalVisible &&
     !deleteVisible &&
     !deviceSetupVisible &&
     !upsertVisible;
@@ -382,6 +406,39 @@ export default function ReadingsScreen() {
       setDeleteName("");
     }
   }, [deleteId, showToast, tr]);
+
+  const handleSendExport = useCallback(async () => {
+    setMenuOpenId(null);
+
+    try {
+      setExporting(true);
+
+      const res = await sendReadingsExportEmail({
+        ...effectiveExportFilters,
+        lang: (i18n.language || currentLanguage || "en").split("-")[0],
+      });
+
+      setExportModalVisible(false);
+      showToast(
+        res?.detail || tr("readings.toasts.exportSent", "Readings export request sent"),
+        "success"
+      );
+    } catch (e: any) {
+      if (e?.status === 404) {
+        showToast(
+          tr("readings.toasts.exportNotAvailableYet", "Export is not available yet."),
+          "error"
+        );
+      } else {
+        showToast(
+          e?.message || tr("readings.toasts.failedToSendExport", "Failed to send readings export"),
+          "error"
+        );
+      }
+    } finally {
+      setExporting(false);
+    }
+  }, [effectiveExportFilters, i18n.language, currentLanguage, showToast, tr]);
 
   // ---- Upsert (add/edit) handlers ----
   const openAddDevice = useCallback(async () => {
@@ -731,6 +788,15 @@ export default function ReadingsScreen() {
                   setFilterModalVisible(true);
                 },
               },
+              {
+                key: "send-export",
+                icon: "email-send-outline",
+                label: tr("readings.fab.sendExport", "Send export"),
+                onPress: () => {
+                  setMenuOpenId(null);
+                  setExportModalVisible(true);
+                },
+              },
               ...(isFilterActive
                 ? [
                     {
@@ -925,6 +991,18 @@ export default function ReadingsScreen() {
           setFilterModalVisible(false);
           setFilterSheetOpen(false);
         }}
+      />
+
+      {/* Export modal */}
+      <SendReadingsExportModal
+        visible={exportModalVisible}
+        effectiveFilters={effectiveExportFilters}
+        plantName={exportPlantName}
+        sending={exporting}
+        onCancel={() => {
+          if (!exporting) setExportModalVisible(false);
+        }}
+        onSend={handleSendExport}
       />
 
       {/* Top Snackbar (shared toast) */}

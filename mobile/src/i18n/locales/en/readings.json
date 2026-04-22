@@ -20,6 +20,7 @@
       "deviceSetup": "Device setup",
       "sort": "Sort",
       "filter": "Filter",
+      "sendExport": "Send export",
       "clearFilter": "Clear filter"
     },
     "empty": {
@@ -42,7 +43,10 @@
       "setupLoadFailedPrefix": "Failed to load setup",
       "secretRotated": "Secret rotated",
       "rotateFailed": "Rotate failed",
-      "rotateFailedPrefix": "Rotate failed"
+      "rotateFailedPrefix": "Rotate failed",
+      "exportSent": "Readings export request sent",
+      "failedToSendExport": "Failed to send readings export",
+      "exportNotAvailableYet": "Export is not available yet."
     }
   }
 }
