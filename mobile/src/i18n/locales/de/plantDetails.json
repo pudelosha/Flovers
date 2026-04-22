@@ -6,8 +6,8 @@
       "plant": "Pflanze"
     },
     "errors": {
-      "noId": "Es wurde keine Pflanzen-ID oder kein QR-Code angegeben.",
-      "failedToLoad": "Die Pflanze konnte nicht geladen werden."
+      "noId": "Keine Pflanzen-ID oder QR-Code angegeben.",
+      "failedToLoad": "Pflanze konnte nicht geladen werden."
     },
     "states": {
       "error": {
@@ -20,37 +20,40 @@
     },
     "alerts": {
       "completeFailed": {
-        "title": "Abschluss fehlgeschlagen",
+        "title": "Abschließen fehlgeschlagen",
         "msg": "Diese Erinnerung konnte nicht abgeschlossen werden."
       }
     },
     "toasts": {
-      "reminderCompleted": "Erinnerung als abgeschlossen markiert.",
-      "qrSaved": "QR-Code in der Galerie gespeichert.",
+      "reminderCompleted": "Erinnerung als erledigt markiert.",
+      "qrSaved": "QR-Code in Ihrer Galerie gespeichert.",
       "qrSaveFailed": "QR-Code konnte nicht gespeichert werden.",
-      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an die Adresse Ihres Kontos gesendet."
+      "qrEmailed": "QR-Code per E-Mail gesendet.",
+      "qrEmailFailed": "QR-Code konnte nicht per E-Mail gesendet werden.",
+      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an Ihre Kontoadresse gesendet."
     },
     "permissions": {
       "storage": {
         "title": "Speicherberechtigung",
-        "message": "Wir benötigen Zugriff, um den QR-Code in der Galerie zu speichern.",
+        "message": "Wir benötigen Zugriff, um den QR-Code in Ihrer Galerie zu speichern.",
         "ok": "OK",
         "denied": "Speicherberechtigung verweigert."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Der QR-Code-Renderer ist nicht bereit."
+      "rendererNotReady": "QR-Renderer nicht bereit."
     },
     "info": {
       "fallbackTitle": "Pflanze #{{id}}",
-      "purchased": "Kauf",
+      "purchased": "Gekauft",
       "notes": "Notizen",
       "light": "Licht",
       "orientation": "Ausrichtung",
       "distance": "Abstand",
       "pot": "Topf",
-      "soil": "Substrat",
+      "soil": "Erde",
       "cm": "cm",
+      "in": "in",
       "orientations": {
         "N": "Norden",
         "E": "Osten",
@@ -65,50 +68,44 @@
         "changeImage": "Bild ändern",
         "showReminders": "Erinnerungen anzeigen"
       },
-      "noDefinitionTitle": "Keine Pflanzendefinition",
-      "noDefinitionBody": "Diese Pflanze ist noch nicht mit einer Pflanzendefinition verknüpft.",
+      "noDefinitionTitle": "Pflanzendefinition nicht verfügbar",
+      "noDefinitionBody": "Diese Pflanze ist noch keiner Pflanzendefinition zugeordnet.",
       "editPlant": {
         "title": "Pflanze bearbeiten",
-        "msg": "Die Bearbeitung dieser Pflanze wird später implementiert."
+        "msg": "Das Bearbeiten dieser Pflanze wird später implementiert."
       },
       "showReminders": {
         "title": "Erinnerungen anzeigen",
-        "msg": "Die Navigation zu den Erinnerungen wird später implementiert."
+        "msg": "Die Verknüpfung zu Erinnerungen wird später implementiert."
       }
     },
     "latestReadings": {
-      "title": "Letzte Messungen",
+      "title": "Letzte Messwerte",
       "lastRead": {
-        "empty": "Letzte Messung: —",
-        "value": "Letzte Messung: {{date}} {{time}}"
+        "empty": "Zuletzt gelesen: —",
+        "value": "Zuletzt gelesen: {{date}} {{time}}"
       }
     },
     "qr": {
       "title": "QR-Code",
-      "scanner": "Scanner",
-      "saveWord": "speichern",
-      "emailWord": "senden",
       "desc": {
-        "part1": "Jede Pflanze hat ihren eigenen eindeutigen QR-Code. Wenn Sie diesen Code in der Ansicht scannen,",
-        "part2": "öffnet die App sofort die Details dieser Pflanze.",
-        "part3a": "Sie können",
-        "part3b": "das QR-Code-Bild auf Ihrem Telefon speichern oder",
-        "part3c": "es sich selbst senden und anschließend ausdrucken und am Topf befestigen. Beim nächsten Mal reicht es aus, das Etikett zu scannen, anstatt manuell zu suchen."
+        "primary": "Jede Pflanze hat ihren eigenen eindeutigen QR-Code. Das Scannen in der Scanner-Ansicht öffnet sofort die Details dieser Pflanze.",
+        "secondary": "Sie können den QR-Code auf Ihrem Telefon speichern oder sich per E-Mail senden, ihn dann ausdrucken und am Topf befestigen, um später schnell darauf zuzugreifen."
       },
-      "saveBtn": "Speichern",
-      "emailBtn": "Senden"
+      "saveBtn": "QR-Code speichern",
+      "emailBtn": "QR-Code per E-Mail senden"
     },
     "reminders": {
       "title": "Erinnerungen",
       "menu": {
-        "markComplete": "Als abgeschlossen markieren",
+        "markComplete": "Als erledigt markieren",
         "editReminder": "Erinnerung bearbeiten",
         "showHistory": "Verlauf anzeigen"
       },
       "type": {
         "watering": "Gießen",
         "fertilising": "Düngen",
-        "moisture": "Besprühen",
+        "moisture": "Feuchtigkeit",
         "care": "Pflege",
         "repot": "Umtopfen"
       }

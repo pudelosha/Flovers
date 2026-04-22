@@ -14,8 +14,7 @@
       "delete": "Eliminar ubicación"
     },
     "plantCount": {
-      "one": "1 planta",
-      "other": "{{count}} plantas"
+      "label": "Cantidad de plantas: {{count}}"
     },
     "toast": {
       "loadFailed": "Error al cargar las ubicaciones",

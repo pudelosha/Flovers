@@ -3,7 +3,7 @@
     "headerTitle": "Lokalizacje",
     "empty": {
       "title": "Brak lokalizacji",
-      "description": "Lokalizacje pojawiają się automatycznie po przypisaniu ich do roślin.\n\nEdytuj roślinę i ustaw jej lokalizację, aby zacząć grupować rośliny według pomieszczeń lub obszarów."
+      "description": "Lokalizacje pojawiają się automatycznie, gdy przypiszesz je do swoich roślin.\n\nEdytuj roślinę i ustaw jej lokalizację, aby zacząć grupować rośliny według pomieszczeń lub obszarów."
     },
     "fab": {
       "add": "Dodaj lokalizację",
@@ -22,8 +22,8 @@
       "deleted": "Usunięto lokalizację",
       "updated": "Zaktualizowano lokalizację",
       "updatedLocal": "Zaktualizowano lokalizację (tylko lokalnie)",
-      "saveFailed": "Nie udało się zapisać lokalizacji",
-      "deleteFailed": "Nie udało się usunąć tej lokalizacji."
+      "saveFailed": "Nie można zapisać lokalizacji",
+      "deleteFailed": "Nie można usunąć tej lokalizacji."
     },
     "alert": {
       "deleteFailedTitle": "Usuwanie nie powiodło się"

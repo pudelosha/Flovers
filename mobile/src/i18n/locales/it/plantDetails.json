@@ -6,7 +6,7 @@
       "plant": "Pianta"
     },
     "errors": {
-      "noId": "Non è stato fornito l'identificatore della pianta né il codice QR.",
+      "noId": "Nessun ID pianta o codice QR fornito.",
       "failedToLoad": "Impossibile caricare la pianta."
     },
     "states": {
@@ -15,42 +15,45 @@
       },
       "notFound": {
         "title": "Non trovato",
-        "msg": "Impossibile caricare questa pianta."
+        "msg": "Non siamo riusciti a caricare questa pianta."
       }
     },
     "alerts": {
       "completeFailed": {
-        "title": "Impossibile completare",
+        "title": "Completamento non riuscito",
         "msg": "Impossibile completare questo promemoria."
       }
     },
     "toasts": {
       "reminderCompleted": "Promemoria contrassegnato come completato.",
-      "qrSaved": "Codice QR salvato nella galleria.",
+      "qrSaved": "Codice QR salvato nella tua galleria.",
       "qrSaveFailed": "Impossibile salvare il codice QR.",
-      "qrEmailPlaceholder": "Un'e-mail con questo codice QR verrà inviata all'indirizzo del tuo account."
+      "qrEmailed": "Email del codice QR inviata.",
+      "qrEmailFailed": "Impossibile inviare l'email del codice QR.",
+      "qrEmailPlaceholder": "Un'email con questo codice QR verrà inviata al tuo indirizzo account."
     },
     "permissions": {
       "storage": {
         "title": "Autorizzazione di archiviazione",
-        "message": "Abbiamo bisogno dell'accesso per salvare il codice QR nella galleria.",
+        "message": "Abbiamo bisogno dell'accesso per salvare il codice QR nella tua galleria.",
         "ok": "OK",
         "denied": "Autorizzazione di archiviazione negata."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Il renderer del codice QR non è pronto."
+      "rendererNotReady": "Renderer QR non pronto."
     },
     "info": {
       "fallbackTitle": "Pianta #{{id}}",
-      "purchased": "Acquisto",
+      "purchased": "Acquistata",
       "notes": "Note",
       "light": "Luce",
       "orientation": "Orientamento",
       "distance": "Distanza",
       "pot": "Vaso",
-      "soil": "Substrato",
+      "soil": "Terreno",
       "cm": "cm",
+      "in": "in",
       "orientations": {
         "N": "Nord",
         "E": "Est",
@@ -65,15 +68,15 @@
         "changeImage": "Cambia immagine",
         "showReminders": "Mostra promemoria"
       },
-      "noDefinitionTitle": "Nessuna definizione della pianta",
-      "noDefinitionBody": "Questa pianta non è ancora associata a una definizione della pianta.",
+      "noDefinitionTitle": "Definizione della pianta non disponibile",
+      "noDefinitionBody": "Questa pianta non è ancora collegata a una definizione di pianta.",
       "editPlant": {
         "title": "Modifica pianta",
-        "msg": "La modifica di questa pianta verrà implementata in seguito."
+        "msg": "La modifica di questa pianta sarà implementata in seguito."
       },
       "showReminders": {
         "title": "Mostra promemoria",
-        "msg": "La navigazione ai promemoria verrà implementata in seguito."
+        "msg": "Il collegamento ai promemoria sarà implementato in seguito."
       }
     },
     "latestReadings": {
@@ -85,30 +88,24 @@
     },
     "qr": {
       "title": "Codice QR",
-      "scanner": "Scanner",
-      "saveWord": "salva",
-      "emailWord": "invia",
       "desc": {
-        "part1": "Ogni pianta ha il proprio codice QR univoco. Quando scansioni questo codice nella vista",
-        "part2": "l'app aprirà immediatamente i dettagli di questa pianta.",
-        "part3a": "Puoi",
-        "part3b": "l'immagine del codice QR sul telefono oppure",
-        "part3c": "inviarlo a te stesso, quindi stamparlo e attaccarlo al vaso. La prossima volta basterà scansionare l'etichetta invece di cercare manualmente."
+        "primary": "Ogni pianta ha il proprio codice QR unico. Scansionandolo nella vista Scanner si aprono immediatamente i dettagli di questa pianta.",
+        "secondary": "Puoi salvare il codice QR sul tuo telefono o inviartelo via email, quindi stamparlo e attaccarlo al vaso per un accesso rapido in seguito."
       },
-      "saveBtn": "Salva",
-      "emailBtn": "Invia"
+      "saveBtn": "Salva codice QR",
+      "emailBtn": "Invia codice QR via email"
     },
     "reminders": {
       "title": "Promemoria",
       "menu": {
-        "markComplete": "Contrassegna come completato",
+        "markComplete": "Segna come completato",
         "editReminder": "Modifica promemoria",
         "showHistory": "Mostra cronologia"
       },
       "type": {
         "watering": "Annaffiatura",
-        "fertilising": "Concimazione",
-        "moisture": "Nebulizzazione",
+        "fertilising": "Fertilizzazione",
+        "moisture": "Umidità",
         "care": "Cura",
         "repot": "Rinvaso"
       }

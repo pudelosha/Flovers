@@ -1,30 +1,29 @@
 {
   "locations": {
-    "headerTitle": "Emplacements",
+    "headerTitle": "Lieux",
     "empty": {
-      "title": "Aucun emplacement pour le moment",
-      "description": "Les emplacements apparaissent automatiquement lorsque vous les assignez à vos plantes.\n\nModifiez une plante et définissez son emplacement pour commencer à regrouper les plantes par pièces ou zones."
+      "title": "Aucun lieu pour le moment",
+      "description": "Les lieux apparaissent automatiquement lorsque vous les attribuez à vos plantes.\n\nModifiez une plante et définissez son lieu pour commencer à regrouper les plantes par pièces ou zones."
     },
     "fab": {
-      "add": "Ajouter un emplacement",
+      "add": "Ajouter un lieu",
       "sort": "Trier"
     },
     "menu": {
-      "edit": "Modifier l'emplacement",
-      "delete": "Supprimer l'emplacement"
+      "edit": "Modifier le lieu",
+      "delete": "Supprimer le lieu"
     },
     "plantCount": {
-      "one": "1 plante",
-      "other": "{{count}} plantes"
+      "label": "Nombre de plantes : {{count}}"
     },
     "toast": {
-      "loadFailed": "Échec du chargement des emplacements",
-      "added": "Emplacement ajouté",
-      "deleted": "Emplacement supprimé",
-      "updated": "Emplacement mis à jour",
-      "updatedLocal": "Emplacement mis à jour (local uniquement)",
-      "saveFailed": "Impossible d'enregistrer l'emplacement",
-      "deleteFailed": "Impossible de supprimer cet emplacement."
+      "loadFailed": "Échec du chargement des lieux",
+      "added": "Lieu ajouté",
+      "deleted": "Lieu supprimé",
+      "updated": "Lieu mis à jour",
+      "updatedLocal": "Lieu mis à jour (local uniquement)",
+      "saveFailed": "Impossible d’enregistrer le lieu",
+      "deleteFailed": "Impossible de supprimer ce lieu."
     },
     "alert": {
       "deleteFailedTitle": "Échec de la suppression"

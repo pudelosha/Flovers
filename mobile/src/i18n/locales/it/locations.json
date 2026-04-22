@@ -1,30 +1,29 @@
 {
   "locations": {
-    "headerTitle": "Posizioni",
+    "headerTitle": "Luoghi",
     "empty": {
-      "title": "Nessuna posizione ancora",
-      "description": "Le posizioni vengono visualizzate automaticamente quando le assegni alle tue piante.\n\nModifica una pianta e imposta la sua posizione per iniziare a raggruppare le piante per stanze o aree."
+      "title": "Nessun luogo ancora",
+      "description": "I luoghi appaiono automaticamente quando li assegni alle tue piante.\n\nModifica una pianta e imposta il suo luogo per iniziare a raggruppare le piante per stanze o aree."
     },
     "fab": {
-      "add": "Aggiungi posizione",
+      "add": "Aggiungi luogo",
       "sort": "Ordina"
     },
     "menu": {
-      "edit": "Modifica posizione",
-      "delete": "Elimina posizione"
+      "edit": "Modifica luogo",
+      "delete": "Elimina luogo"
     },
     "plantCount": {
-      "one": "1 pianta",
-      "other": "{{count}} piante"
+      "label": "Numero di piante: {{count}}"
     },
     "toast": {
-      "loadFailed": "Impossibile caricare le posizioni",
-      "added": "Posizione aggiunta",
-      "deleted": "Posizione eliminata",
-      "updated": "Posizione aggiornata",
-      "updatedLocal": "Posizione aggiornata (solo locale)",
-      "saveFailed": "Impossibile salvare la posizione",
-      "deleteFailed": "Impossibile eliminare questa posizione."
+      "loadFailed": "Impossibile caricare i luoghi",
+      "added": "Luogo aggiunto",
+      "deleted": "Luogo eliminato",
+      "updated": "Luogo aggiornato",
+      "updatedLocal": "Luogo aggiornato (solo locale)",
+      "saveFailed": "Impossibile salvare il luogo",
+      "deleteFailed": "Impossibile eliminare questo luogo."
     },
     "alert": {
       "deleteFailedTitle": "Eliminazione non riuscita"

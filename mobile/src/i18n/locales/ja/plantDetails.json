@@ -6,7 +6,7 @@
       "plant": "植物"
     },
     "errors": {
-      "noId": "植物の識別子またはQRコードが指定されていません。",
+      "noId": "植物IDまたはQRコードが提供されていません。",
       "failedToLoad": "植物の読み込みに失敗しました。"
     },
     "states": {
@@ -15,42 +15,45 @@
       },
       "notFound": {
         "title": "見つかりません",
-        "msg": "この植物の読み込みに失敗しました。"
+        "msg": "この植物を読み込めませんでした。"
       }
     },
     "alerts": {
       "completeFailed": {
-        "title": "完了できませんでした",
-        "msg": "このリマインダーの完了に失敗しました。"
+        "title": "完了に失敗しました",
+        "msg": "このリマインダーを完了できませんでした。"
       }
     },
     "toasts": {
       "reminderCompleted": "リマインダーが完了としてマークされました。",
       "qrSaved": "QRコードがギャラリーに保存されました。",
       "qrSaveFailed": "QRコードの保存に失敗しました。",
-      "qrEmailPlaceholder": "このQRコードを含むメールがあなたのアカウントのアドレスに送信されます。"
+      "qrEmailed": "QRコードのメールを送信しました。",
+      "qrEmailFailed": "QRコードのメール送信に失敗しました。",
+      "qrEmailPlaceholder": "このQRコードを含むメールがあなたのアカウントのメールアドレスに送信されます。"
     },
     "permissions": {
       "storage": {
-        "title": "ストレージの権限",
+        "title": "ストレージ権限",
         "message": "QRコードをギャラリーに保存するためにアクセスが必要です。",
         "ok": "OK",
-        "denied": "ストレージの権限が拒否されました。"
+        "denied": "ストレージ権限が拒否されました。"
       }
     },
     "qrErrors": {
-      "rendererNotReady": "QRコードレンダラーが準備できていません。"
+      "rendererNotReady": "QRレンダラーの準備ができていません。"
     },
     "info": {
       "fallbackTitle": "植物 #{{id}}",
-      "purchased": "購入",
+      "purchased": "購入日",
       "notes": "メモ",
       "light": "光",
-      "orientation": "方位",
+      "orientation": "向き",
       "distance": "距離",
       "pot": "鉢",
       "soil": "土壌",
       "cm": "cm",
+      "in": "in",
       "orientations": {
         "N": "北",
         "E": "東",
@@ -65,37 +68,32 @@
         "changeImage": "画像を変更",
         "showReminders": "リマインダーを表示"
       },
-      "noDefinitionTitle": "植物の定義がありません",
-      "noDefinitionBody": "この植物はまだ植物の定義に関連付けられていません。",
+      "noDefinitionTitle": "植物の定義が利用できません",
+      "noDefinitionBody": "この植物はまだ植物定義にリンクされていません。",
       "editPlant": {
         "title": "植物を編集",
-        "msg": "この植物の編集は後で実装されます。"
+        "msg": "この植物の編集機能は後で実装されます。"
       },
       "showReminders": {
         "title": "リマインダーを表示",
-        "msg": "リマインダーへの移動は後で実装されます。"
+        "msg": "リマインダーへのリンクは後で実装されます。"
       }
     },
     "latestReadings": {
-      "title": "最新の読み取り",
+      "title": "最新の測定値",
       "lastRead": {
-        "empty": "最後の読み取り: —",
-        "value": "最後の読み取り: {{date}} {{time}}"
+        "empty": "最終測定: —",
+        "value": "最終測定: {{date}} {{time}}"
       }
     },
     "qr": {
       "title": "QRコード",
-      "scanner": "スキャナー",
-      "saveWord": "保存",
-      "emailWord": "送信",
       "desc": {
-        "part1": "各植物にはユニークなQRコードがあります。このコードをスキャンすると、アプリは即座に植物の詳細を表示します。",
-        "part2": "あなたは",
-        "part3a": "QRコードの画像を携帯電話に保存して",
-        "part3b": "自分に送って、印刷して鉢に貼り付けることができます。次回はラベルをスキャンするだけで、手動で探す必要はありません。"
+        "primary": "各植物には固有のQRコードがあります。スキャナービューでスキャンすると、この植物の詳細がすぐに開きます。",
+        "secondary": "QRコードをスマートフォンに保存したり、自分にメールで送信して印刷し、後で簡単にアクセスできるように鉢に貼り付けることができます。"
       },
-      "saveBtn": "保存",
-      "emailBtn": "送信"
+      "saveBtn": "QRコードを保存",
+      "emailBtn": "QRコードをメールで送信"
     },
     "reminders": {
       "title": "リマインダー",
@@ -106,9 +104,9 @@
       },
       "type": {
         "watering": "水やり",
-        "fertilising": "肥料",
-        "moisture": "加湿",
-        "care": "手入れ",
+        "fertilising": "施肥",
+        "moisture": "湿度",
+        "care": "ケア",
         "repot": "植え替え"
       }
     }

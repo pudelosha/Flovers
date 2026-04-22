@@ -7,7 +7,7 @@
     },
     "errors": {
       "noId": "Nie podano identyfikatora rośliny ani kodu QR.",
-      "failedToLoad": "Nie udało się wczytać rośliny."
+      "failedToLoad": "Nie udało się załadować rośliny."
     },
     "states": {
       "error": {
@@ -15,44 +15,45 @@
       },
       "notFound": {
         "title": "Nie znaleziono",
-        "msg": "Nie udało się wczytać tej rośliny."
+        "msg": "Nie udało się załadować tej rośliny."
       }
     },
     "alerts": {
       "completeFailed": {
-        "title": "Nie udało się ukończyć",
+        "title": "Niepowodzenie ukończenia",
         "msg": "Nie udało się ukończyć tego przypomnienia."
       }
     },
     "toasts": {
       "reminderCompleted": "Przypomnienie oznaczone jako ukończone.",
-      "qrSaved": "Kod QR zapisano w galerii.",
+      "qrSaved": "Kod QR zapisany w galerii.",
       "qrSaveFailed": "Nie udało się zapisać kodu QR.",
-      "qrEmailed": "E-mail z kodem QR został wysłany.",
+      "qrEmailed": "Wysłano e-mail z kodem QR.",
       "qrEmailFailed": "Nie udało się wysłać e-maila z kodem QR.",
       "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres Twojego konta."
     },
     "permissions": {
       "storage": {
-        "title": "Uprawnienie do pamięci",
-        "message": "Potrzebujemy dostępu, aby zapisać kod QR w galerii.",
+        "title": "Uprawnienia do pamięci",
+        "message": "Potrzebujemy dostępu, aby zapisać kod QR w Twojej galerii.",
         "ok": "OK",
-        "denied": "Odmówiono uprawnienia do pamięci."
+        "denied": "Odmowa dostępu do pamięci."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Renderer kodu QR nie jest gotowy."
+      "rendererNotReady": "Renderowanie kodu QR nie jest gotowe."
     },
     "info": {
       "fallbackTitle": "Roślina #{{id}}",
-      "purchased": "Zakup",
+      "purchased": "Zakupiono",
       "notes": "Notatki",
       "light": "Światło",
       "orientation": "Orientacja",
       "distance": "Odległość",
       "pot": "Doniczka",
-      "soil": "Podłoże",
+      "soil": "Gleba",
       "cm": "cm",
+      "in": "in",
       "orientations": {
         "N": "Północ",
         "E": "Wschód",
@@ -64,22 +65,22 @@
       "items": {
         "plantDefinition": "Definicja rośliny",
         "editPlant": "Edytuj roślinę",
-        "changeImage": "Zmień zdjęcie",
+        "changeImage": "Zmień obraz",
         "showReminders": "Pokaż przypomnienia"
       },
-      "noDefinitionTitle": "Brak definicji rośliny",
+      "noDefinitionTitle": "Definicja rośliny niedostępna",
       "noDefinitionBody": "Ta roślina nie jest jeszcze powiązana z definicją rośliny.",
       "editPlant": {
         "title": "Edytuj roślinę",
-        "msg": "Edycja tej rośliny zostanie zaimplementowana później."
+        "msg": "Edytowanie tej rośliny zostanie wdrożone później."
       },
       "showReminders": {
         "title": "Pokaż przypomnienia",
-        "msg": "Przejście do przypomnień zostanie zaimplementowane później."
+        "msg": "Powiązanie z przypomnieniami zostanie wdrożone później."
       }
     },
     "latestReadings": {
-      "title": "Ostatnie odczyty",
+      "title": "Najnowsze odczyty",
       "lastRead": {
         "empty": "Ostatni odczyt: —",
         "value": "Ostatni odczyt: {{date}} {{time}}"
@@ -87,18 +88,12 @@
     },
     "qr": {
       "title": "Kod QR",
-      "scanner": "Skaner",
-      "saveWord": "zapisz",
-      "emailWord": "wyślij",
       "desc": {
-        "part1": "Każda roślina ma swój unikalny kod QR. Gdy zeskanujesz ten kod w widoku",
-        "part2": "aplikacja od razu otworzy szczegóły tej rośliny.",
-        "part3a": "Możesz",
-        "part3b": "zapisać obraz kodu QR na telefonie albo wysłać",
-        "part3c": "go do siebie, a potem wydrukować i przymocować do doniczki. Następnym razem wystarczy zeskanować etykietę zamiast szukać ręcznie."
+        "primary": "Każda roślina ma swój unikalny kod QR. Zeskanowanie go w widoku skanera natychmiast otwiera szczegóły tej rośliny.",
+        "secondary": "Możesz zapisać kod QR w telefonie lub wysłać go na e-mail, a następnie wydrukować i przymocować do doniczki, aby mieć szybki dostęp później."
       },
       "saveBtn": "Zapisz kod QR",
-      "emailBtn": "Wyślij kod QR"
+      "emailBtn": "Wyślij kod QR e-mailem"
     },
     "reminders": {
       "title": "Przypomnienia",
@@ -110,7 +105,7 @@
       "type": {
         "watering": "Podlewanie",
         "fertilising": "Nawożenie",
-        "moisture": "Zraszanie",
+        "moisture": "Wilgotność",
         "care": "Pielęgnacja",
         "repot": "Przesadzanie"
       }

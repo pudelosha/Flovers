@@ -3,7 +3,7 @@
     "headerTitle": "Standorte",
     "empty": {
       "title": "Noch keine Standorte",
-      "description": "Standorte werden automatisch angezeigt, wenn du sie deinen Pflanzen zuweist.\n\nBearbeite eine Pflanze und lege ihren Standort fest, um Pflanzen nach Räumen oder Bereichen zu gruppieren."
+      "description": "Standorte erscheinen automatisch, wenn Sie sie Ihren Pflanzen zuweisen.\n\nBearbeiten Sie eine Pflanze und legen Sie ihren Standort fest, um Pflanzen nach Räumen oder Bereichen zu gruppieren."
     },
     "fab": {
       "add": "Standort hinzufügen",
@@ -14,8 +14,7 @@
       "delete": "Standort löschen"
     },
     "plantCount": {
-      "one": "1 Pflanze",
-      "other": "{{count}} Pflanzen"
+      "label": "Pflanzenanzahl: {{count}}"
     },
     "toast": {
       "loadFailed": "Standorte konnten nicht geladen werden",
