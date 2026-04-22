@@ -7,7 +7,7 @@
       "thisDevice": "此设备"
     },
     "tile": {
-      "lastReadPrefix": "最后读取"
+      "lastReadPrefix": "上次读取"
     },
     "menu": {
       "history": "读数历史",
@@ -20,11 +20,12 @@
       "deviceSetup": "设备设置",
       "sort": "排序",
       "filter": "筛选",
+      "sendExport": "发送导出",
       "clearFilter": "清除筛选"
     },
     "empty": {
-      "title": "暂无设备",
-      "description": "设备可让您采集植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 连接设备”操作以添加一个。选择植物，命名设备，选择传感器，并设置采样间隔。然后您可以打开设备设置以查看您的账户密钥、进行轮换，并通过电子邮件发送可直接粘贴的 Arduino/ESP 示例代码。"
+      "title": "尚无设备",
+      "description": "设备可用于采集植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 连接设备”操作来添加设备。选择植物，为设备命名，选择传感器，并设置采样间隔。随后您可以打开设备设置以查看您的账户密钥、进行轮换，并通过电子邮件发送可直接粘贴的 Arduino/ESP 示例代码。"
     },
     "toasts": {
       "unauthorized": "未授权。请重新登录。",
@@ -42,7 +43,10 @@
       "setupLoadFailedPrefix": "加载设置失败",
       "secretRotated": "密钥已轮换",
       "rotateFailed": "轮换失败",
-      "rotateFailedPrefix": "轮换失败"
+      "rotateFailedPrefix": "轮换失败",
+      "exportSent": "读数导出请求已发送",
+      "failedToSendExport": "发送读数导出失败",
+      "exportNotAvailableYet": "导出尚不可用。"
     }
   }
 }

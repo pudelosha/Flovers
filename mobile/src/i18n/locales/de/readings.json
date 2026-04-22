@@ -20,11 +20,12 @@
       "deviceSetup": "Geräteeinrichtung",
       "sort": "Sortieren",
       "filter": "Filtern",
-      "clearFilter": "Filter löschen"
+      "sendExport": "Export senden",
+      "clearFilter": "Filter zurücksetzen"
     },
     "empty": {
       "title": "Noch keine Geräte",
-      "description": "Geräte ermöglichen es dir, Temperatur-, Feuchtigkeits-, Licht- und Bodenfeuchtigkeitswerte für eine Pflanze zu erfassen.\n\nTippe auf die Aktion „+ Gerät verknüpfen“, um eines hinzuzufügen. Wähle eine Pflanze aus, benenne das Gerät, wähle Sensoren und lege ein Abtastintervall fest. Anschließend kannst du die Geräteeinrichtung öffnen, um dein Kontogeheimnis anzuzeigen, es zu rotieren und eine einfügebereite Arduino/ESP-Skizze per E-Mail zu senden."
+      "description": "Geräte ermöglichen es dir, Temperatur-, Feuchtigkeits-, Licht- und Bodenfeuchtigkeitswerte für eine Pflanze zu erfassen.\n\nTippe auf die Aktion „+ Gerät verknüpfen“, um eines hinzuzufügen. Wähle eine Pflanze, benenne das Gerät, wähle Sensoren aus und lege ein Abtastintervall fest. Anschließend kannst du die Geräteeinrichtung öffnen, um dein Kontogeheimnis einzusehen, es zu rotieren und eine sofort einsetzbare Arduino/ESP-Skizze per E-Mail zu versenden."
     },
     "toasts": {
       "unauthorized": "Nicht autorisiert. Bitte melde dich erneut an.",
@@ -42,7 +43,10 @@
       "setupLoadFailedPrefix": "Einrichtung konnte nicht geladen werden",
       "secretRotated": "Geheimnis rotiert",
       "rotateFailed": "Rotation fehlgeschlagen",
-      "rotateFailedPrefix": "Rotation fehlgeschlagen"
+      "rotateFailedPrefix": "Rotation fehlgeschlagen",
+      "exportSent": "Exportanforderung für Messwerte gesendet",
+      "failedToSendExport": "Senden des Messwert-Exports fehlgeschlagen",
+      "exportNotAvailableYet": "Export ist noch nicht verfügbar."
     }
   }
 }

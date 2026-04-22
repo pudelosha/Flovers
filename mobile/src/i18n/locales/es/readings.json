@@ -20,6 +20,7 @@
       "deviceSetup": "Configuración del dispositivo",
       "sort": "Ordenar",
       "filter": "Filtrar",
+      "sendExport": "Enviar exportación",
       "clearFilter": "Borrar filtro"
     },
     "empty": {
@@ -42,7 +43,10 @@
       "setupLoadFailedPrefix": "Error al cargar la configuración",
       "secretRotated": "Secreto rotado",
       "rotateFailed": "Error al rotar",
-      "rotateFailedPrefix": "Error al rotar"
+      "rotateFailedPrefix": "Error al rotar",
+      "exportSent": "Solicitud de exportación de lecturas enviada",
+      "failedToSendExport": "Error al enviar la exportación de lecturas",
+      "exportNotAvailableYet": "La exportación aún no está disponible."
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "readings": {
     "header": {
-      "title": "Lectures"
+      "title": "Relevés"
     },
     "defaults": {
       "thisDevice": "cet appareil"
@@ -10,7 +10,7 @@
       "lastReadPrefix": "Dernière lecture"
     },
     "menu": {
-      "history": "Historique des lectures",
+      "history": "Historique des relevés",
       "plantDetails": "Détails de la plante",
       "editDevice": "Modifier l’appareil",
       "deleteDevice": "Supprimer l’appareil"
@@ -20,11 +20,12 @@
       "deviceSetup": "Configuration de l’appareil",
       "sort": "Trier",
       "filter": "Filtrer",
+      "sendExport": "Envoyer l’export",
       "clearFilter": "Effacer le filtre"
     },
     "empty": {
       "title": "Aucun appareil pour le moment",
-      "description": "Les appareils vous permettent d’ingérer des relevés de température, d’humidité, de lumière et d’humidité du sol pour une plante.\n\nAppuyez sur l’action « + Lier un appareil » pour en ajouter un. Choisissez une plante, nommez l’appareil, sélectionnez les capteurs et définissez un intervalle d’échantillonnage. Vous pouvez ensuite ouvrir Configuration de l’appareil pour voir le secret de votre compte, le faire pivoter et envoyer par e-mail un sketch Arduino/ESP prêt à coller."
+      "description": "Les appareils vous permettent de collecter des relevés de température, d’humidité, de lumière et d’humidité du sol pour une plante.\n\nAppuyez sur l’action « + Lier un appareil » pour en ajouter un. Choisissez une plante, nommez l’appareil, sélectionnez les capteurs et définissez un intervalle d’échantillonnage. Vous pouvez ensuite ouvrir Configuration de l’appareil pour consulter le secret de votre compte, le renouveler et envoyer par e-mail un sketch Arduino/ESP prêt à coller."
     },
     "toasts": {
       "unauthorized": "Non autorisé. Veuillez vous reconnecter.",
@@ -42,7 +43,10 @@
       "setupLoadFailedPrefix": "Échec du chargement de la configuration",
       "secretRotated": "Secret renouvelé",
       "rotateFailed": "Échec du renouvellement",
-      "rotateFailedPrefix": "Échec du renouvellement"
+      "rotateFailedPrefix": "Échec du renouvellement",
+      "exportSent": "Demande d’export des relevés envoyée",
+      "failedToSendExport": "Échec de l’envoi de l’export des relevés",
+      "exportNotAvailableYet": "L’export n’est pas encore disponible."
     }
   }
 }

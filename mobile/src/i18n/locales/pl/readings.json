@@ -20,11 +20,12 @@
       "deviceSetup": "Konfiguracja urządzenia",
       "sort": "Sortuj",
       "filter": "Filtruj",
+      "sendExport": "Wyślij eksport",
       "clearFilter": "Wyczyść filtr"
     },
     "empty": {
       "title": "Brak urządzeń",
-      "description": "Urządzenia pozwalają na zbieranie odczytów temperatury, wilgotności, światła i wilgotności gleby dla rośliny.\n\nDotknij akcji „+ Połącz urządzenie”, aby dodać nowe. Wybierz roślinę, nazwij urządzenie, wybierz czujniki i ustaw interwał próbkowania. Następnie możesz otworzyć Konfigurację urządzenia, aby wyświetlić sekret konta, obrócić go i wysłać e-mailem gotowy do wklejenia szkic Arduino/ESP."
+      "description": "Urządzenia umożliwiają zbieranie odczytów temperatury, wilgotności, światła i wilgotności gleby dla rośliny.\n\nDotknij akcji „+ Połącz urządzenie”, aby dodać nowe. Wybierz roślinę, nazwij urządzenie, wybierz czujniki i ustaw interwał próbkowania. Następnie możesz otworzyć Konfigurację urządzenia, aby zobaczyć sekret konta, zmienić go i wysłać gotowy do wklejenia szkic Arduino/ESP e-mailem."
     },
     "toasts": {
       "unauthorized": "Brak autoryzacji. Zaloguj się ponownie.",
@@ -40,9 +41,12 @@
       "updateFailedPrefix": "Aktualizacja nie powiodła się",
       "setupLoadFailed": "Nie udało się załadować konfiguracji",
       "setupLoadFailedPrefix": "Nie udało się załadować konfiguracji",
-      "secretRotated": "Sekret został zmieniony",
-      "rotateFailed": "Zmiana sekretu nie powiodła się",
-      "rotateFailedPrefix": "Zmiana sekretu nie powiodła się"
+      "secretRotated": "Sekret zmieniony",
+      "rotateFailed": "Zmiana nie powiodła się",
+      "rotateFailedPrefix": "Zmiana nie powiodła się",
+      "exportSent": "Wysłano żądanie eksportu odczytów",
+      "failedToSendExport": "Nie udało się wysłać eksportu odczytów",
+      "exportNotAvailableYet": "Eksport nie jest jeszcze dostępny."
     }
   }
 }

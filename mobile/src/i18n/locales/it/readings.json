@@ -10,7 +10,7 @@
       "lastReadPrefix": "Ultima lettura"
     },
     "menu": {
-      "history": "Cronologia letture",
+      "history": "Cronologia delle letture",
       "plantDetails": "Dettagli della pianta",
       "editDevice": "Modifica dispositivo",
       "deleteDevice": "Elimina dispositivo"
@@ -20,6 +20,7 @@
       "deviceSetup": "Configurazione dispositivo",
       "sort": "Ordina",
       "filter": "Filtra",
+      "sendExport": "Invia esportazione",
       "clearFilter": "Cancella filtro"
     },
     "empty": {
@@ -28,7 +29,7 @@
     },
     "toasts": {
       "unauthorized": "Non autorizzato. Effettua nuovamente l’accesso.",
-      "loadFailed": "Caricamento dei dispositivi non riuscito",
+      "loadFailed": "Impossibile caricare i dispositivi",
       "deviceDeleted": "Dispositivo eliminato",
       "deleteFailed": "Eliminazione non riuscita",
       "deleteFailedPrefix": "Eliminazione non riuscita",
@@ -38,11 +39,14 @@
       "addFailedPrefix": "Aggiunta non riuscita",
       "updateFailed": "Aggiornamento non riuscito",
       "updateFailedPrefix": "Aggiornamento non riuscito",
-      "setupLoadFailed": "Caricamento della configurazione non riuscito",
-      "setupLoadFailedPrefix": "Caricamento della configurazione non riuscito",
-      "secretRotated": "Segreto ruotato",
+      "setupLoadFailed": "Impossibile caricare la configurazione",
+      "setupLoadFailedPrefix": "Impossibile caricare la configurazione",
+      "secretRotated": "Segreto aggiornato",
       "rotateFailed": "Rotazione non riuscita",
-      "rotateFailedPrefix": "Rotazione non riuscita"
+      "rotateFailedPrefix": "Rotazione non riuscita",
+      "exportSent": "Richiesta di esportazione delle letture inviata",
+      "failedToSendExport": "Invio dell’esportazione delle letture non riuscito",
+      "exportNotAvailableYet": "L’esportazione non è ancora disponibile."
     }
   }
 }
