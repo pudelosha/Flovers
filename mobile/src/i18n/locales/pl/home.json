@@ -46,9 +46,9 @@
       "all": {
         "title": "Brak zadań",
         "introPrefix": "Ta strona pokazuje Twoje nadchodzące",
-        "introBold": "przypomnienia o pielęgnacji roślin",
+        "introBold": "przypomnienia dotyczące pielęgnacji roślin",
         "introSuffix": "— podlewanie, nawożenie, przesadzanie i więcej.",
-        "toGetStarted": "Aby zacząć:",
+        "toGetStarted": "Aby rozpocząć:",
         "bullets": {
           "createPlantsBold": "Utwórz swoje rośliny",
           "createPlantsSuffix": "w zakładce",
@@ -56,21 +56,21 @@
           "addRemindersPrefix": "Dodaj",
           "remindersBold": "przypomnienia",
           "addRemindersSuffix": "dla każdej rośliny, aby pojawiły się tutaj jako zadania.",
-          "optionallyConnectPrefix": "Opcjonalnie połącz",
+          "optionallyConnectPrefix": "Opcjonalnie podłącz",
           "iotBold": "urządzenia IoT (płytki Arduino)",
           "optionallyConnectMiddle": "w zakładce",
           "readingsTabBold": "Odczyty",
           "optionallyConnectSuffix": "aby śledzić temperaturę, wilgotność, światło i wilgotność gleby w czasie rzeczywistym."
         },
-        "outro": "Po skonfigurowaniu tego wszystkiego ekran Strona główna stanie się centralnym miejscem, gdzie zobaczysz, czego każda roślina potrzebuje dzisiaj."
+        "outro": "Po skonfigurowaniu wszystkiego ekran główny stanie się centralnym miejscem do sprawdzania, czego każda roślina potrzebuje dzisiaj."
       },
       "overdue": {
         "title": "Brak zaległych zadań",
-        "body": "Nie masz obecnie żadnych zaległych zadań.\n\nWszystko jest na bieżąco — użyj \"Pokaż wszystkie zadania\" z FAB, aby zobaczyć wszystko, lub zmień filtry, aby przejrzeć nadchodzące zadania."
+        "body": "Nie masz obecnie żadnych zaległych zadań.\n\nWszystko jest na bieżąco — użyj „Pokaż wszystkie zadania” z FAB, aby zobaczyć wszystko, lub zmień filtry, aby przejrzeć nadchodzące zadania."
       },
       "today": {
         "title": "Brak zadań na dziś",
-        "body": "Nie masz żadnych zadań zaplanowanych na dziś.\n\nUżyj \"Pokaż wszystkie zadania\" z FAB, aby zobaczyć nadchodzące przypomnienia, lub dostosuj harmonogramy przypomnień dla swoich roślin."
+        "body": "Nie masz dziś żadnych zadań.\n\nUżyj „Pokaż wszystkie zadania” z FAB, aby zobaczyć nadchodzące przypomnienia, lub dostosuj harmonogramy przypomnień dla swoich roślin."
       }
     }
   }

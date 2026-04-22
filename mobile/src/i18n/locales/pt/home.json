@@ -4,7 +4,7 @@
       "title": "Início"
     },
     "fab": {
-      "showOverdue": "Mostrar atrasados",
+      "showOverdue": "Mostrar atrasadas",
       "showDueToday": "Mostrar para hoje",
       "showAllTasks": "Mostrar todas as tarefas",
       "markVisibleAsComplete": "Marcar visíveis como concluídas",
@@ -18,14 +18,14 @@
       "editReminder": "Editar lembrete",
       "goToPlant": "Ir para a planta",
       "showHistory": "Mostrar histórico",
-      "delete": "Excluir"
+      "delete": "Eliminar"
     },
     "taskTypes": {
       "watering": "REGA",
       "moisture": "PULVERIZAÇÃO",
       "fertilising": "FERTILIZAÇÃO",
-      "care": "CUIDADO",
-      "repot": "REPLANTIO"
+      "care": "CUIDADOS",
+      "repot": "REPLANTAR"
     },
     "due": {
       "today": "Hoje",
@@ -40,37 +40,37 @@
       "tasksCompleted": "Tarefas concluídas",
       "completeFailed": "Falha ao concluir",
       "completeSomeFailed": "Concluídas {{ok}} de {{total}} tarefas",
-      "taskNotLinkedToPlant": "Esta tarefa não está vinculada a uma planta."
+      "taskNotLinkedToPlant": "Esta tarefa não está ligada a uma planta."
     },
     "empty": {
       "all": {
-        "title": "Nenhuma tarefa ainda",
-        "introPrefix": "Esta página mostra seus próximos",
+        "title": "Ainda não há tarefas",
+        "introPrefix": "Esta página mostra as suas próximas",
         "introBold": "lembretes de cuidados com plantas",
-        "introSuffix": "— rega, fertilização, replantio e mais.",
+        "introSuffix": "— rega, fertilização, replantação e mais.",
         "toGetStarted": "Para começar:",
         "bullets": {
-          "createPlantsBold": "Crie suas plantas",
-          "createPlantsSuffix": "na aba",
+          "createPlantsBold": "Crie as suas plantas",
+          "createPlantsSuffix": "no",
           "plantsTabBold": "Plantas",
           "addRemindersPrefix": "Adicione",
           "remindersBold": "lembretes",
           "addRemindersSuffix": "para cada planta para que apareçam aqui como tarefas.",
-          "optionallyConnectPrefix": "Opcionalmente conecte",
+          "optionallyConnectPrefix": "Opcionalmente, ligue",
           "iotBold": "dispositivos IoT (placas Arduino)",
-          "optionallyConnectMiddle": "na aba",
+          "optionallyConnectMiddle": "no",
           "readingsTabBold": "Leituras",
-          "optionallyConnectSuffix": "para acompanhar temperatura, umidade, luz e umidade do solo em tempo real."
+          "optionallyConnectSuffix": "separador para acompanhar temperatura, humidade, luz e humidade do solo em tempo real."
         },
-        "outro": "Depois de configurar isso, sua tela Início se tornará o local central para ver do que cada planta precisa hoje."
+        "outro": "Depois de configurar isso, o ecrã Início tornar-se-á o seu local central para ver do que cada planta precisa hoje."
       },
       "overdue": {
-        "title": "Nenhuma tarefa atrasada",
-        "body": "Você não tem tarefas atrasadas no momento.\n\nVocê está em dia — use \"Show all tasks\" no FAB para ver tudo, ou altere os filtros para explorar tarefas futuras."
+        "title": "Sem tarefas em atraso",
+        "body": "Não tem tarefas em atraso neste momento.\n\nEstá tudo em dia — use \"Mostrar todas as tarefas\" no FAB para ver tudo, ou mude os filtros para explorar as próximas tarefas."
       },
       "today": {
-        "title": "Nenhuma tarefa para hoje",
-        "body": "Você não tem tarefas para hoje.\n\nUse \"Show all tasks\" no FAB para ver lembretes futuros ou ajuste as programações de lembretes nas suas plantas."
+        "title": "Sem tarefas para hoje",
+        "body": "Não tem tarefas para hoje.\n\nUse \"Mostrar todas as tarefas\" no FAB para ver os próximos lembretes, ou ajuste os horários de lembrete nas suas plantas."
       }
     }
   }

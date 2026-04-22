@@ -23,7 +23,7 @@
     "taskTypes": {
       "watering": "ANNAFFIATURA",
       "moisture": "NEBULIZZAZIONE",
-      "fertilising": "CONCIMAZIONE",
+      "fertilising": "FERTILIZZAZIONE",
       "care": "CURA",
       "repot": "RINVASO"
     },
@@ -47,30 +47,30 @@
         "title": "Nessuna attività ancora",
         "introPrefix": "Questa pagina mostra i tuoi prossimi",
         "introBold": "promemoria per la cura delle piante",
-        "introSuffix": "— annaffiatura, concimazione, rinvaso e altro.",
+        "introSuffix": "— annaffiatura, fertilizzazione, rinvaso e altro.",
         "toGetStarted": "Per iniziare:",
         "bullets": {
           "createPlantsBold": "Crea le tue piante",
-          "createPlantsSuffix": "nella",
+          "createPlantsSuffix": "nella scheda",
           "plantsTabBold": "Piante",
           "addRemindersPrefix": "Aggiungi",
           "remindersBold": "promemoria",
-          "addRemindersSuffix": "per ogni pianta in modo che appaiano qui come attività.",
-          "optionallyConnectPrefix": "Collega opzionalmente",
+          "addRemindersSuffix": "per ogni pianta così che appaiano qui come attività.",
+          "optionallyConnectPrefix": "Facoltativamente collega",
           "iotBold": "dispositivi IoT (schede Arduino)",
           "optionallyConnectMiddle": "nella scheda",
           "readingsTabBold": "Letture",
           "optionallyConnectSuffix": "per monitorare temperatura, umidità, luce e umidità del suolo in tempo reale."
         },
-        "outro": "Una volta configurati, la schermata Home diventerà il tuo punto centrale per vedere di cosa ha bisogno ogni pianta oggi."
+        "outro": "Una volta configurato tutto, la schermata Home diventerà il tuo punto centrale per vedere di cosa ha bisogno ogni pianta oggi."
       },
       "overdue": {
         "title": "Nessuna attività in ritardo",
-        "body": "Al momento non hai attività in ritardo.\n\nSei aggiornato — usa \"Mostra tutte le attività\" dal FAB per vedere tutto, oppure cambia i filtri per esplorare le attività in arrivo."
+        "body": "Non hai attività in ritardo al momento.\n\nSei in pari — usa \"Mostra tutte le attività\" dal FAB per vedere tutto, oppure cambia i filtri per esplorare le attività in arrivo."
       },
       "today": {
-        "title": "Nessuna attività prevista per oggi",
-        "body": "Non hai attività previste per oggi.\n\nUsa \"Mostra tutte le attività\" dal FAB per vedere i promemoria futuri, oppure modifica le pianificazioni dei promemoria nelle tue piante."
+        "title": "Nessuna attività in scadenza oggi",
+        "body": "Non hai attività in scadenza oggi.\n\nUsa \"Mostra tutte le attività\" dal FAB per vedere i promemoria futuri, oppure modifica le pianificazioni dei promemoria nelle tue piante."
       }
     }
   }

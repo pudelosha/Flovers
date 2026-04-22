@@ -6,7 +6,7 @@
       "plant": "Planta"
     },
     "errors": {
-      "noId": "Nenhum id da planta ou código QR fornecido.",
+      "noId": "Nenhum id de planta ou código QR fornecido.",
       "failedToLoad": "Falha ao carregar a planta."
     },
     "states": {
@@ -69,7 +69,7 @@
         "showReminders": "Mostrar lembretes"
       },
       "noDefinitionTitle": "Definição da planta indisponível",
-      "noDefinitionBody": "Esta planta ainda não está ligada a uma definição de planta.",
+      "noDefinitionBody": "Esta planta ainda não está vinculada a uma definição de planta.",
       "editPlant": {
         "title": "Editar planta",
         "msg": "A edição desta planta será implementada posteriormente."
@@ -89,11 +89,11 @@
     "qr": {
       "title": "Código QR",
       "desc": {
-        "primary": "Cada planta tem o seu próprio código QR único. Ao digitalizá-lo na vista do Scanner, abre-se instantaneamente os detalhes desta planta.",
-        "secondary": "Pode guardar o código QR no seu telemóvel ou enviá-lo por e-mail para si mesmo, depois imprimi-lo e anexá-lo ao vaso para acesso rápido mais tarde."
+        "primary": "Cada planta tem o seu próprio código QR único. Ao digitalizá-lo na vista Scanner, os detalhes desta planta são abertos instantaneamente.",
+        "secondary": "Pode guardar o código QR no seu telefone ou enviá-lo por e-mail para si mesmo, depois imprimi-lo e anexá-lo ao vaso para acesso rápido mais tarde."
       },
-      "saveBtn": "Guardar código QR",
-      "emailBtn": "Enviar código QR por e-mail"
+      "saveBtn": "Guardar",
+      "emailBtn": "E-mail"
     },
     "reminders": {
       "title": "Lembretes",

@@ -20,8 +20,8 @@
     },
     "alerts": {
       "completeFailed": {
-        "title": "Niepowodzenie ukończenia",
-        "msg": "Nie udało się ukończyć tego przypomnienia."
+        "title": "Nie udało się ukończyć",
+        "msg": "Nie można było ukończyć tego przypomnienia."
       }
     },
     "toasts": {
@@ -30,14 +30,14 @@
       "qrSaveFailed": "Nie udało się zapisać kodu QR.",
       "qrEmailed": "Wysłano e-mail z kodem QR.",
       "qrEmailFailed": "Nie udało się wysłać e-maila z kodem QR.",
-      "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres Twojego konta."
+      "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres przypisany do Twojego konta."
     },
     "permissions": {
       "storage": {
-        "title": "Uprawnienia do pamięci",
+        "title": "Uprawnienie do pamięci",
         "message": "Potrzebujemy dostępu, aby zapisać kod QR w Twojej galerii.",
         "ok": "OK",
-        "denied": "Odmowa dostępu do pamięci."
+        "denied": "Odmówiono uprawnienia do pamięci."
       }
     },
     "qrErrors": {
@@ -89,11 +89,11 @@
     "qr": {
       "title": "Kod QR",
       "desc": {
-        "primary": "Każda roślina ma swój unikalny kod QR. Zeskanowanie go w widoku skanera natychmiast otwiera szczegóły tej rośliny.",
-        "secondary": "Możesz zapisać kod QR w telefonie lub wysłać go na e-mail, a następnie wydrukować i przymocować do doniczki, aby mieć szybki dostęp później."
+        "primary": "Każda roślina ma swój unikalny kod QR. Zeskanowanie go w widoku Skanera natychmiast otwiera szczegóły tej rośliny.",
+        "secondary": "Możesz zapisać kod QR na swoim telefonie lub wysłać go sobie e-mailem, a następnie wydrukować i przymocować do doniczki, aby mieć do niego szybki dostęp później."
       },
-      "saveBtn": "Zapisz kod QR",
-      "emailBtn": "Wyślij kod QR e-mailem"
+      "saveBtn": "Zapisz",
+      "emailBtn": "E-mail"
     },
     "reminders": {
       "title": "Przypomnienia",

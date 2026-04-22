@@ -5,7 +5,7 @@
     },
     "fab": {
       "showOverdue": "期限超過を表示",
-      "showDueToday": "本日分を表示",
+      "showDueToday": "今日の予定を表示",
       "showAllTasks": "すべてのタスクを表示",
       "markVisibleAsComplete": "表示中を完了としてマーク",
       "sort": "並び替え",
@@ -36,41 +36,41 @@
     },
     "toasts": {
       "failedToLoadTasks": "タスクの読み込みに失敗しました",
-      "taskCompleted": "タスクが完了しました",
-      "tasksCompleted": "タスクが完了しました",
+      "taskCompleted": "タスクを完了しました",
+      "tasksCompleted": "タスクを完了しました",
       "completeFailed": "完了に失敗しました",
       "completeSomeFailed": "{{total}}件中{{ok}}件のタスクを完了しました",
-      "taskNotLinkedToPlant": "このタスクは植物に紐付けられていません。"
+      "taskNotLinkedToPlant": "このタスクは植物にリンクされていません。"
     },
     "empty": {
       "all": {
-        "title": "タスクはまだありません",
-        "introPrefix": "このページには、今後の",
-        "introBold": "植物のお世話リマインダー",
-        "introSuffix": "（水やり、施肥、植え替えなど）が表示されます。",
-        "toGetStarted": "始めるには：",
+        "title": "まだタスクはありません",
+        "introPrefix": "このページでは今後の",
+        "introBold": "植物ケアのリマインダー",
+        "introSuffix": "— 水やり、施肥、植え替えなどを表示します。",
+        "toGetStarted": "始めるには:",
         "bullets": {
           "createPlantsBold": "植物を作成",
-          "createPlantsSuffix": "します（",
-          "plantsTabBold": "植物",
-          "addRemindersPrefix": "各植物に",
+          "createPlantsSuffix": "して",
+          "plantsTabBold": "「植物」",
+          "addRemindersPrefix": "",
           "remindersBold": "リマインダー",
-          "addRemindersSuffix": "を追加すると、ここにタスクとして表示されます。",
-          "optionallyConnectPrefix": "必要に応じて、",
+          "addRemindersSuffix": "を各植物に追加すると、ここにタスクとして表示されます。",
+          "optionallyConnectPrefix": "必要に応じて",
           "iotBold": "IoTデバイス（Arduinoボード）",
           "optionallyConnectMiddle": "を",
-          "readingsTabBold": "測定値",
-          "optionallyConnectSuffix": "タブで接続し、温度・湿度・光・土壌水分をリアルタイムで追跡できます。"
+          "readingsTabBold": "「計測」",
+          "optionallyConnectSuffix": "タブで接続し、温度、湿度、光、土壌水分をリアルタイムで追跡できます。"
         },
-        "outro": "これらを設定すると、ホーム画面は各植物が今日必要としていることを確認するための中心的な場所になります。"
+        "outro": "これらを設定すると、ホーム画面は各植物が今日必要としていることを確認する中心的な場所になります。"
       },
       "overdue": {
         "title": "期限超過のタスクはありません",
-        "body": "現在、期限超過のタスクはありません。\n\nすべて完了しています — FABの「すべてのタスクを表示」を使って全体を確認するか、フィルターを切り替えて今後のタスクを確認してください。"
+        "body": "現在、期限超過のタスクはありません。\n\nすべて完了しています — FABの「すべてのタスクを表示」を使用して全体を確認するか、フィルターを切り替えて今後のタスクを確認してください。"
       },
       "today": {
-        "title": "本日期限のタスクはありません",
-        "body": "本日期限のタスクはありません。\n\nFABの「すべてのタスクを表示」で今後のリマインダーを確認するか、植物のリマインダースケジュールを調整してください。"
+        "title": "今日のタスクはありません",
+        "body": "今日期限のタスクはありません。\n\nFABの「すべてのタスクを表示」を使用して今後のリマインダーを確認するか、植物のリマインダースケジュールを調整してください。"
       }
     }
   }

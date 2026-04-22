@@ -20,28 +20,28 @@
     },
     "alerts": {
       "completeFailed": {
-        "title": "Abschließen fehlgeschlagen",
+        "title": "Abschluss fehlgeschlagen",
         "msg": "Diese Erinnerung konnte nicht abgeschlossen werden."
       }
     },
     "toasts": {
-      "reminderCompleted": "Erinnerung als erledigt markiert.",
-      "qrSaved": "QR-Code in Ihrer Galerie gespeichert.",
+      "reminderCompleted": "Erinnerung als abgeschlossen markiert.",
+      "qrSaved": "QR-Code in deiner Galerie gespeichert.",
       "qrSaveFailed": "QR-Code konnte nicht gespeichert werden.",
       "qrEmailed": "QR-Code per E-Mail gesendet.",
       "qrEmailFailed": "QR-Code konnte nicht per E-Mail gesendet werden.",
-      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an Ihre Kontoadresse gesendet."
+      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an deine Kontoadresse gesendet."
     },
     "permissions": {
       "storage": {
         "title": "Speicherberechtigung",
-        "message": "Wir benötigen Zugriff, um den QR-Code in Ihrer Galerie zu speichern.",
+        "message": "Wir benötigen Zugriff, um den QR-Code in deiner Galerie zu speichern.",
         "ok": "OK",
         "denied": "Speicherberechtigung verweigert."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "QR-Renderer nicht bereit."
+      "rendererNotReady": "QR-Renderer ist nicht bereit."
     },
     "info": {
       "fallbackTitle": "Pflanze #{{id}}",
@@ -72,7 +72,7 @@
       "noDefinitionBody": "Diese Pflanze ist noch keiner Pflanzendefinition zugeordnet.",
       "editPlant": {
         "title": "Pflanze bearbeiten",
-        "msg": "Das Bearbeiten dieser Pflanze wird später implementiert."
+        "msg": "Die Bearbeitung dieser Pflanze wird später implementiert."
       },
       "showReminders": {
         "title": "Erinnerungen anzeigen",
@@ -89,16 +89,16 @@
     "qr": {
       "title": "QR-Code",
       "desc": {
-        "primary": "Jede Pflanze hat ihren eigenen eindeutigen QR-Code. Das Scannen in der Scanner-Ansicht öffnet sofort die Details dieser Pflanze.",
-        "secondary": "Sie können den QR-Code auf Ihrem Telefon speichern oder sich per E-Mail senden, ihn dann ausdrucken und am Topf befestigen, um später schnell darauf zuzugreifen."
+        "primary": "Jede Pflanze hat ihren eigenen eindeutigen QR-Code. Wenn du ihn in der Scanner-Ansicht scannst, werden die Details dieser Pflanze sofort geöffnet.",
+        "secondary": "Du kannst den QR-Code auf deinem Telefon speichern oder ihn dir per E-Mail senden, dann ausdrucken und für schnellen Zugriff später am Topf anbringen."
       },
-      "saveBtn": "QR-Code speichern",
-      "emailBtn": "QR-Code per E-Mail senden"
+      "saveBtn": "Speichern",
+      "emailBtn": "E-Mail"
     },
     "reminders": {
       "title": "Erinnerungen",
       "menu": {
-        "markComplete": "Als erledigt markieren",
+        "markComplete": "Als abgeschlossen markieren",
         "editReminder": "Erinnerung bearbeiten",
         "showHistory": "Verlauf anzeigen"
       },

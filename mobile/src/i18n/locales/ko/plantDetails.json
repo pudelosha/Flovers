@@ -1,6 +1,6 @@
 {
   "plantDetails": {
-    "headerTitle": "식물 세부 정보",
+    "headerTitle": "식물 상세",
     "common": {
       "dash": "—",
       "plant": "식물"
@@ -29,7 +29,7 @@
       "qrSaved": "QR 코드가 갤러리에 저장되었습니다.",
       "qrSaveFailed": "QR 코드를 저장하지 못했습니다.",
       "qrEmailed": "QR 코드 이메일이 전송되었습니다.",
-      "qrEmailFailed": "QR 코드 이메일 전송에 실패했습니다.",
+      "qrEmailFailed": "QR 코드 이메일을 보내지 못했습니다.",
       "qrEmailPlaceholder": "이 QR 코드가 포함된 이메일이 계정 주소로 전송됩니다."
     },
     "permissions": {
@@ -69,18 +69,18 @@
         "showReminders": "알림 보기"
       },
       "noDefinitionTitle": "식물 정의를 사용할 수 없음",
-      "noDefinitionBody": "이 식물은 아직 식물 정의에 연결되지 않았습니다.",
+      "noDefinitionBody": "이 식물은 아직 식물 정의에 연결되어 있지 않습니다.",
       "editPlant": {
         "title": "식물 수정",
-        "msg": "이 식물 수정 기능은 추후 구현될 예정입니다."
+        "msg": "이 식물의 수정 기능은 나중에 구현될 예정입니다."
       },
       "showReminders": {
         "title": "알림 보기",
-        "msg": "알림 연결 기능은 추후 구현될 예정입니다."
+        "msg": "알림 연결 기능은 나중에 구현될 예정입니다."
       }
     },
     "latestReadings": {
-      "title": "최신 측정값",
+      "title": "최근 측정값",
       "lastRead": {
         "empty": "마지막 측정: —",
         "value": "마지막 측정: {{date}} {{time}}"
@@ -89,11 +89,11 @@
     "qr": {
       "title": "QR 코드",
       "desc": {
-        "primary": "각 식물에는 고유한 QR 코드가 있습니다. 스캐너 보기에서 이를 스캔하면 이 식물의 세부 정보가 즉시 열립니다.",
-        "secondary": "QR 코드를 휴대폰에 저장하거나 자신에게 이메일로 보내 인쇄한 후 화분에 부착하여 나중에 빠르게 접근할 수 있습니다."
+        "primary": "각 식물에는 고유한 QR 코드가 있습니다. 스캐너 화면에서 이를 스캔하면 이 식물의 상세 정보가 즉시 열립니다.",
+        "secondary": "QR 코드를 휴대폰에 저장하거나 이메일로 보내 인쇄한 뒤 화분에 부착하면 나중에 빠르게 접근할 수 있습니다."
       },
-      "saveBtn": "QR 코드 저장",
-      "emailBtn": "QR 코드 이메일로 보내기"
+      "saveBtn": "저장",
+      "emailBtn": "이메일"
     },
     "reminders": {
       "title": "알림",

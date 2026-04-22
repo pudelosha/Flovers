@@ -118,7 +118,21 @@ ml/**/*.log
 # Assets / generated data
 ############################
 plants/
-translations/
+
+# Ignore everything inside translations
+translations/*
+
+# Allow files directly in translations root
+!translations/*.py
+!translations/*.json
+!translations/*.txt
+!translations/*.bat
+
+# (optional) allow specific files only
+#!translations/config.py
+
+# But still ignore all subdirectories
+translations/*/
 
 ############################
 # Backend secrets

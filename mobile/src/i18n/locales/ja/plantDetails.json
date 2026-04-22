@@ -30,7 +30,7 @@
       "qrSaveFailed": "QRコードの保存に失敗しました。",
       "qrEmailed": "QRコードのメールを送信しました。",
       "qrEmailFailed": "QRコードのメール送信に失敗しました。",
-      "qrEmailPlaceholder": "このQRコードを含むメールがあなたのアカウントのメールアドレスに送信されます。"
+      "qrEmailPlaceholder": "このQRコードを含むメールがあなたのアカウントのアドレスに送信されます。"
     },
     "permissions": {
       "storage": {
@@ -69,10 +69,10 @@
         "showReminders": "リマインダーを表示"
       },
       "noDefinitionTitle": "植物の定義が利用できません",
-      "noDefinitionBody": "この植物はまだ植物定義にリンクされていません。",
+      "noDefinitionBody": "この植物はまだ植物の定義にリンクされていません。",
       "editPlant": {
         "title": "植物を編集",
-        "msg": "この植物の編集機能は後で実装されます。"
+        "msg": "この植物の編集は後で実装されます。"
       },
       "showReminders": {
         "title": "リマインダーを表示",
@@ -82,18 +82,18 @@
     "latestReadings": {
       "title": "最新の測定値",
       "lastRead": {
-        "empty": "最終測定: —",
-        "value": "最終測定: {{date}} {{time}}"
+        "empty": "最終読み取り: —",
+        "value": "最終読み取り: {{date}} {{time}}"
       }
     },
     "qr": {
       "title": "QRコード",
       "desc": {
         "primary": "各植物には固有のQRコードがあります。スキャナービューでスキャンすると、この植物の詳細がすぐに開きます。",
-        "secondary": "QRコードをスマートフォンに保存したり、自分にメールで送信して印刷し、後で簡単にアクセスできるように鉢に貼り付けることができます。"
+        "secondary": "QRコードを携帯に保存するか、自分にメールで送信し、それを印刷して鉢に貼り付けることで、後で素早くアクセスできます。"
       },
-      "saveBtn": "QRコードを保存",
-      "emailBtn": "QRコードをメールで送信"
+      "saveBtn": "保存",
+      "emailBtn": "メール"
     },
     "reminders": {
       "title": "リマインダー",

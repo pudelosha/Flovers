@@ -22,7 +22,7 @@
     },
     "taskTypes": {
       "watering": "RIEGO",
-      "moisture": "NEBULIZACIÓN",
+      "moisture": "PULVERIZACIÓN",
       "fertilising": "FERTILIZACIÓN",
       "care": "CUIDADO",
       "repot": "TRASPLANTE"
@@ -60,17 +60,17 @@
           "iotBold": "dispositivos IoT (placas Arduino)",
           "optionallyConnectMiddle": "en la pestaña",
           "readingsTabBold": "Lecturas",
-          "optionallyConnectSuffix": "para seguir la temperatura, humedad, luz y la humedad del suelo en tiempo real."
+          "optionallyConnectSuffix": "para rastrear temperatura, humedad, luz y humedad del suelo en tiempo real."
         },
-        "outro": "Una vez que hayas configurado eso, tu pantalla de Inicio se convertirá en tu lugar central para ver qué necesita cada planta hoy."
+        "outro": "Una vez que configures todo eso, tu pantalla de Inicio se convertirá en tu lugar central para ver qué necesita cada planta hoy."
       },
       "overdue": {
         "title": "No hay tareas atrasadas",
-        "body": "No tienes ninguna tarea atrasada en este momento.\n\nEstás al día — usa \"Mostrar todas las tareas\" desde el FAB para ver todo, o cambia los filtros para explorar las próximas tareas."
+        "body": "No tienes tareas atrasadas en este momento.\n\nEstás al día — usa \"Mostrar todas las tareas\" desde el FAB para ver todo, o cambia los filtros para explorar las próximas tareas."
       },
       "today": {
         "title": "No hay tareas para hoy",
-        "body": "No tienes ninguna tarea para hoy.\n\nUsa \"Mostrar todas las tareas\" desde el FAB para ver los próximos recordatorios, o ajusta los horarios de tus recordatorios en tus plantas."
+        "body": "No tienes tareas programadas para hoy.\n\nUsa \"Mostrar todas las tareas\" desde el FAB para ver los próximos recordatorios, o ajusta los horarios de tus recordatorios en tus plantas."
       }
     }
   }

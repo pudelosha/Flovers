@@ -4,8 +4,8 @@
       "title": "홈"
     },
     "fab": {
-      "showOverdue": "기한 초과 보기",
-      "showDueToday": "오늘 마감 보기",
+      "showOverdue": "연체된 항목 보기",
+      "showDueToday": "오늘 예정 보기",
       "showAllTasks": "모든 작업 보기",
       "markVisibleAsComplete": "보이는 항목 완료로 표시",
       "sort": "정렬",
@@ -21,9 +21,9 @@
       "delete": "삭제"
     },
     "taskTypes": {
-      "watering": "물주기",
+      "watering": "물 주기",
       "moisture": "분무",
-      "fertilising": "비료주기",
+      "fertilising": "비료 주기",
       "care": "관리",
       "repot": "분갈이"
     },
@@ -31,46 +31,46 @@
       "today": "오늘",
       "tomorrow": "내일",
       "inDays": "{{count}}일 후",
-      "overdueByDays": "{{count}}일 지남",
+      "overdueByDays": "{{count}}일 연체됨",
       "nextWeek": "다음 주"
     },
     "toasts": {
       "failedToLoadTasks": "작업을 불러오지 못했습니다",
-      "taskCompleted": "작업 완료",
-      "tasksCompleted": "작업 완료됨",
-      "completeFailed": "완료 실패",
-      "completeSomeFailed": "{{total}}개 중 {{ok}}개 작업 완료",
+      "taskCompleted": "작업이 완료되었습니다",
+      "tasksCompleted": "작업들이 완료되었습니다",
+      "completeFailed": "완료 처리 실패",
+      "completeSomeFailed": "{{total}}개 중 {{ok}}개 작업 완료됨",
       "taskNotLinkedToPlant": "이 작업은 식물과 연결되어 있지 않습니다."
     },
     "empty": {
       "all": {
         "title": "아직 작업이 없습니다",
-        "introPrefix": "이 페이지에는 예정된",
+        "introPrefix": "이 페이지는 예정된",
         "introBold": "식물 관리 알림",
-        "introSuffix": "— 물주기, 비료주기, 분갈이 등 — 이 표시됩니다.",
+        "introSuffix": "을(를) 보여줍니다 — 물 주기, 비료 주기, 분갈이 등.",
         "toGetStarted": "시작하려면:",
         "bullets": {
-          "createPlantsBold": "식물 추가",
-          "createPlantsSuffix": "를",
+          "createPlantsBold": "식물을 생성하세요",
+          "createPlantsSuffix": "에서",
           "plantsTabBold": "식물",
           "addRemindersPrefix": "",
           "remindersBold": "알림",
-          "addRemindersSuffix": "을 각 식물에 추가하여 여기에서 작업으로 표시되도록 하세요.",
+          "addRemindersSuffix": "을(를) 각 식물에 추가하여 여기에서 작업으로 표시되도록 하세요.",
           "optionallyConnectPrefix": "선택적으로",
-          "iotBold": "IoT 기기 (Arduino 보드)",
+          "iotBold": "IoT 기기(Arduino 보드)",
           "optionallyConnectMiddle": "를",
           "readingsTabBold": "측정값",
-          "optionallyConnectSuffix": "탭에서 연결하여 온도, 습도, 빛, 토양 수분을 실시간으로 추적하세요."
+          "optionallyConnectSuffix": "탭에서 연결하여 온도, 습도, 조도 및 토양 수분을 실시간으로 추적하세요."
         },
-        "outro": "이 설정을 완료하면 홈 화면은 각 식물이 오늘 무엇을 필요로 하는지 확인하는 중심 공간이 됩니다."
+        "outro": "이 설정을 완료하면 홈 화면이 각 식물이 오늘 무엇이 필요한지 확인하는 중앙 장소가 됩니다."
       },
       "overdue": {
-        "title": "기한 초과 작업 없음",
-        "body": "현재 기한이 지난 작업이 없습니다.\n\n모두 완료되었습니다 — FAB에서 \"모든 작업 보기\"를 사용하여 전체를 확인하거나, 필터를 전환하여 예정된 작업을 확인하세요."
+        "title": "연체된 작업이 없습니다",
+        "body": "현재 연체된 작업이 없습니다.\n\n모두 완료되었습니다 — FAB에서 \"모든 작업 보기\"를 사용하여 전체를 확인하거나 필터를 전환하여 예정된 작업을 살펴보세요."
       },
       "today": {
-        "title": "오늘 마감 작업 없음",
-        "body": "오늘 마감된 작업이 없습니다.\n\nFAB에서 \"모든 작업 보기\"를 사용하여 예정된 알림을 확인하거나, 식물의 알림 일정을 조정하세요."
+        "title": "오늘 예정된 작업이 없습니다",
+        "body": "오늘 예정된 작업이 없습니다.\n\nFAB에서 \"모든 작업 보기\"를 사용하여 예정된 알림을 확인하거나 식물의 알림 일정을 조정하세요."
       }
     }
   }

@@ -21,7 +21,7 @@
     "alerts": {
       "completeFailed": {
         "title": "Échec de la complétion",
-        "msg": "Impossible de terminer ce rappel."
+        "msg": "Impossible de compléter ce rappel."
       }
     },
     "toasts": {
@@ -30,7 +30,7 @@
       "qrSaveFailed": "Échec de l’enregistrement du code QR.",
       "qrEmailed": "E-mail du code QR envoyé.",
       "qrEmailFailed": "Échec de l’envoi de l’e-mail du code QR.",
-      "qrEmailPlaceholder": "Un e-mail avec ce code QR sera envoyé à l’adresse de votre compte."
+      "qrEmailPlaceholder": "Un e-mail contenant ce code QR sera envoyé à l’adresse de votre compte."
     },
     "permissions": {
       "storage": {
@@ -41,11 +41,11 @@
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Le rendu du QR n’est pas prêt."
+      "rendererNotReady": "Le générateur de QR n’est pas prêt."
     },
     "info": {
       "fallbackTitle": "Plante #{{id}}",
-      "purchased": "Acheté",
+      "purchased": "Achetée",
       "notes": "Notes",
       "light": "Lumière",
       "orientation": "Orientation",
@@ -53,7 +53,7 @@
       "pot": "Pot",
       "soil": "Sol",
       "cm": "cm",
-      "in": "in",
+      "in": "po",
       "orientations": {
         "N": "Nord",
         "E": "Est",
@@ -72,11 +72,11 @@
       "noDefinitionBody": "Cette plante n’est pas encore liée à une définition de plante.",
       "editPlant": {
         "title": "Modifier la plante",
-        "msg": "La modification de cette plante sera implémentée plus tard."
+        "msg": "La modification de cette plante sera implémentée ultérieurement."
       },
       "showReminders": {
         "title": "Afficher les rappels",
-        "msg": "La liaison aux rappels sera implémentée plus tard."
+        "msg": "Le lien vers les rappels sera implémenté ultérieurement."
       }
     },
     "latestReadings": {
@@ -90,10 +90,10 @@
       "title": "Code QR",
       "desc": {
         "primary": "Chaque plante possède son propre code QR unique. Le scanner dans la vue Scanner ouvre instantanément les détails de cette plante.",
-        "secondary": "Vous pouvez enregistrer le code QR sur votre téléphone ou vous l’envoyer par e-mail, puis l’imprimer et l’attacher au pot pour un accès rapide plus tard."
+        "secondary": "Vous pouvez enregistrer le code QR sur votre téléphone ou vous l’envoyer par e-mail, puis l’imprimer et l’attacher au pot pour un accès rapide ultérieur."
       },
-      "saveBtn": "Enregistrer le code QR",
-      "emailBtn": "Envoyer le code QR par e-mail"
+      "saveBtn": "Enregistrer",
+      "emailBtn": "E-mail"
     },
     "reminders": {
       "title": "Rappels",

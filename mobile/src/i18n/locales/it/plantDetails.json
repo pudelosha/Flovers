@@ -28,9 +28,9 @@
       "reminderCompleted": "Promemoria contrassegnato come completato.",
       "qrSaved": "Codice QR salvato nella tua galleria.",
       "qrSaveFailed": "Impossibile salvare il codice QR.",
-      "qrEmailed": "Email del codice QR inviata.",
-      "qrEmailFailed": "Impossibile inviare l'email del codice QR.",
-      "qrEmailPlaceholder": "Un'email con questo codice QR verrà inviata al tuo indirizzo account."
+      "qrEmailed": "Email con codice QR inviata.",
+      "qrEmailFailed": "Impossibile inviare l'email con il codice QR.",
+      "qrEmailPlaceholder": "Un'email con questo codice QR verrà inviata all'indirizzo del tuo account."
     },
     "permissions": {
       "storage": {
@@ -92,8 +92,8 @@
         "primary": "Ogni pianta ha il proprio codice QR unico. Scansionandolo nella vista Scanner si aprono immediatamente i dettagli di questa pianta.",
         "secondary": "Puoi salvare il codice QR sul tuo telefono o inviartelo via email, quindi stamparlo e attaccarlo al vaso per un accesso rapido in seguito."
       },
-      "saveBtn": "Salva codice QR",
-      "emailBtn": "Invia codice QR via email"
+      "saveBtn": "Salva",
+      "emailBtn": "Email"
     },
     "reminders": {
       "title": "Promemoria",

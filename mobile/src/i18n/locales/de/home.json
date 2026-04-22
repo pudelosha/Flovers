@@ -10,7 +10,7 @@
       "markVisibleAsComplete": "Sichtbare als erledigt markieren",
       "sort": "Sortieren",
       "filter": "Filtern",
-      "clearFilter": "Filter löschen",
+      "clearFilter": "Filter zurücksetzen",
       "history": "Verlauf"
     },
     "menu": {
@@ -38,17 +38,17 @@
       "failedToLoadTasks": "Aufgaben konnten nicht geladen werden",
       "taskCompleted": "Aufgabe erledigt",
       "tasksCompleted": "Aufgaben erledigt",
-      "completeFailed": "Abschließen fehlgeschlagen",
+      "completeFailed": "Erledigen fehlgeschlagen",
       "completeSomeFailed": "{{ok}} von {{total}} Aufgaben erledigt",
       "taskNotLinkedToPlant": "Diese Aufgabe ist keiner Pflanze zugeordnet."
     },
     "empty": {
       "all": {
         "title": "Noch keine Aufgaben",
-        "introPrefix": "Diese Seite zeigt deine kommenden",
+        "introPrefix": "Diese Seite zeigt deine bevorstehenden",
         "introBold": "Pflanzenpflege-Erinnerungen",
         "introSuffix": "— Gießen, Düngen, Umtopfen und mehr.",
-        "toGetStarted": "Um zu beginnen:",
+        "toGetStarted": "So legst du los:",
         "bullets": {
           "createPlantsBold": "Erstelle deine Pflanzen",
           "createPlantsSuffix": "im",
@@ -62,15 +62,15 @@
           "readingsTabBold": "Messwerte",
           "optionallyConnectSuffix": "Tab, um Temperatur, Luftfeuchtigkeit, Licht und Bodenfeuchtigkeit in Echtzeit zu verfolgen."
         },
-        "outro": "Sobald du diese eingerichtet hast, wird dein Startbildschirm zum zentralen Ort, um zu sehen, was jede Pflanze heute braucht."
+        "outro": "Sobald du das eingerichtet hast, wird dein Startbildschirm zum zentralen Ort, um zu sehen, was jede Pflanze heute braucht."
       },
       "overdue": {
         "title": "Keine überfälligen Aufgaben",
-        "body": "Du hast derzeit keine überfälligen Aufgaben.\n\nDu bist auf dem neuesten Stand — verwende „Alle Aufgaben anzeigen“ aus dem FAB, um alles zu sehen, oder wechsle die Filter, um kommende Aufgaben zu erkunden."
+        "body": "Du hast derzeit keine überfälligen Aufgaben.\n\nDu bist auf dem neuesten Stand — nutze „Alle Aufgaben anzeigen“ im FAB, um alles zu sehen, oder wechsle die Filter, um kommende Aufgaben zu erkunden."
       },
       "today": {
         "title": "Heute keine fälligen Aufgaben",
-        "body": "Du hast heute keine fälligen Aufgaben.\n\nVerwende „Alle Aufgaben anzeigen“ aus dem FAB, um kommende Erinnerungen zu sehen, oder passe die Erinnerungspläne deiner Pflanzen an."
+        "body": "Du hast heute keine fälligen Aufgaben.\n\nNutze „Alle Aufgaben anzeigen“ im FAB, um kommende Erinnerungen zu sehen, oder passe die Erinnerungspläne deiner Pflanzen an."
       }
     }
   }

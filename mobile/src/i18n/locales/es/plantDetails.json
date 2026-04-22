@@ -6,7 +6,7 @@
       "plant": "Planta"
     },
     "errors": {
-      "noId": "No se proporcionó un id de planta ni un código QR.",
+      "noId": "No se proporcionó id de planta ni código QR.",
       "failedToLoad": "No se pudo cargar la planta."
     },
     "states": {
@@ -27,9 +27,9 @@
     "toasts": {
       "reminderCompleted": "Recordatorio marcado como completado.",
       "qrSaved": "Código QR guardado en tu galería.",
-      "qrSaveFailed": "No se pudo guardar el código QR.",
-      "qrEmailed": "Correo con el código QR enviado.",
-      "qrEmailFailed": "No se pudo enviar el correo con el código QR.",
+      "qrSaveFailed": "Error al guardar el código QR.",
+      "qrEmailed": "Correo del código QR enviado.",
+      "qrEmailFailed": "Error al enviar el correo del código QR.",
       "qrEmailPlaceholder": "Se enviará un correo con este código QR a la dirección de tu cuenta."
     },
     "permissions": {
@@ -90,10 +90,10 @@
       "title": "Código QR",
       "desc": {
         "primary": "Cada planta tiene su propio código QR único. Al escanearlo en la vista de Escáner se abren los detalles de esta planta al instante.",
-        "secondary": "Puedes guardar el código QR en tu teléfono o enviártelo por correo electrónico, luego imprimirlo y colocarlo en la maceta para acceder rápidamente más tarde."
+        "secondary": "Puedes guardar el código QR en tu teléfono o enviártelo por correo, luego imprimirlo y adjuntarlo a la maceta para un acceso rápido más tarde."
       },
-      "saveBtn": "Guardar código QR",
-      "emailBtn": "Enviar código QR por correo"
+      "saveBtn": "Guardar",
+      "emailBtn": "Correo"
     },
     "reminders": {
       "title": "Recordatorios",
@@ -107,7 +107,7 @@
         "fertilising": "Fertilización",
         "moisture": "Humedad",
         "care": "Cuidado",
-        "repot": "Trasplantar"
+        "repot": "Trasplante"
       }
     }
   }
