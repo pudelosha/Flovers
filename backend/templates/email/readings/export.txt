@@ -1,0 +1,15 @@
+{{ title }}
+
+{{ intro }}
+
+{{ attachment_note }} {{ attachment_filename }}
+
+{{ summary_intro }}
+
+{{ plant_label }}: {{ plant_value }}
+{{ location_label }}: {{ location_value }}
+{{ status_label }}: {{ status_value }}
+{{ sort_by_label }}: {{ sort_key_value }}
+{{ direction_label }}: {{ sort_dir_value }}
+
+{{ total_count_label }}: {{ total_count }}

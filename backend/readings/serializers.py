@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import ReadingDevice, Reading
 
+
 class ReadingDeviceSerializer(serializers.ModelSerializer):
     latest = serializers.SerializerMethodField()
 
@@ -71,7 +72,28 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             validated_data["moisture_alert_active"] = False
         return super().update(instance, validated_data)
 
+
 class ReadingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reading
         fields = ("timestamp", "temperature", "humidity", "light", "moisture")
+
+
+class ReadingsExportEmailSerializer(serializers.Serializer):
+    plantId = serializers.IntegerField(required=False)
+    location = serializers.CharField(required=False, allow_blank=False)
+    status = serializers.ChoiceField(
+        choices=["enabled", "disabled"],
+        required=False,
+    )
+    sortKey = serializers.ChoiceField(
+        choices=["name", "location", "lastRead"],
+        required=False,
+        default="name",
+    )
+    sortDir = serializers.ChoiceField(
+        choices=["asc", "desc"],
+        required=False,
+        default="asc",
+    )
+    lang = serializers.CharField(required=False, allow_blank=True)

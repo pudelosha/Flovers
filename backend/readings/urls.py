@@ -7,6 +7,7 @@ from .views import (
     feed,
     device_setup,
     history,
+    readings_export_email,
 )
 from .views_open import open_readings
 
@@ -20,6 +21,7 @@ urlpatterns = [
     path("ingest/", ingest, name="ingest"),
     path("feed/", feed, name="feed"),
     path("history/", history, name="history"),
+    path("export-email/", readings_export_email, name="readings-export-email"),
 
     # App open / deep-link fallbacks
     path("open/readings/", open_readings, name="open-readings"),

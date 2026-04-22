@@ -1,0 +1,28 @@
+<h2 style="margin:0 0 12px 0;font-size:20px;line-height:1.25;">
+  {{ title }}
+</h2>
+
+<p style="margin:0 0 16px 0;font-size:15px;color:rgba(233,243,239,0.92);">
+  {{ intro }}
+</p>
+
+<p style="margin:0 0 14px 0;font-size:15px;color:rgba(233,243,239,0.92);">
+  {{ attachment_note }}
+  <strong>{{ attachment_filename }}</strong>
+</p>
+
+<p style="margin:0 0 10px 0;font-size:15px;color:rgba(233,243,239,0.92);">
+  {{ summary_intro }}
+</p>
+
+<ul style="margin:0 0 16px 20px;padding:0;color:rgba(233,243,239,0.92);font-size:14px;line-height:1.6;">
+  <li>{{ plant_label }}: {{ plant_value }}</li>
+  <li>{{ location_label }}: {{ location_value }}</li>
+  <li>{{ status_label }}: {{ status_value }}</li>
+  <li>{{ sort_by_label }}: {{ sort_key_value }}</li>
+  <li>{{ direction_label }}: {{ sort_dir_value }}</li>
+</ul>
+
+<p style="margin:0;color:rgba(233,243,239,0.92);font-size:14px;line-height:1.6;">
+  {{ total_count_label }}: <strong>{{ total_count }}</strong>
+</p>

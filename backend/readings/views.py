@@ -1,24 +1,33 @@
+from io import BytesIO
+import math
+import secrets
+from datetime import timedelta
+
 from django.conf import settings
 from django.http import HttpResponse, Http404
 from django.shortcuts import get_object_or_404
 from django.db import IntegrityError, transaction
+from django.utils import timezone
+
 from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import api_view, permission_classes, throttle_classes, action
 from rest_framework.response import Response
-from datetime import timedelta
 from rest_framework.throttling import AnonRateThrottle
 
+from core.emailing import send_templated_email
+
 from .models import ReadingDevice, Reading, AccountSecret
-from .serializers import ReadingDeviceSerializer, ReadingSerializer
+from .serializers import (
+    ReadingDeviceSerializer,
+    ReadingSerializer,
+    ReadingsExportEmailSerializer,
+)
 from .utils import parse_ts_or_now
 from .throttles import IngestPerDeviceThrottle, FeedPerDeviceThrottle
 from .codegen import generate_arduino_code
 from .emails import send_device_code_email
 from .notifications import send_moisture_alert_notifications
 
-import secrets
-from django.utils import timezone
-import math  # NEW: needed to detect NaN/Infinity
 
 # ---------- helpers ----------
 
@@ -28,8 +37,174 @@ def _get_or_create_secret(user) -> AccountSecret:
         obj.save(update_fields=["secret"])
     return obj
 
+
 def _get_secret_str(user) -> str:
     return _get_or_create_secret(user).secret
+
+
+def _normalize_lang(lang: str | None) -> str:
+    default = getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en"
+    if not lang:
+        return default
+    lang = str(lang).strip().lower()
+    supported = set(getattr(settings, "SUPPORTED_LANGS", [])) or {default}
+    return lang if lang in supported else default
+
+
+def _request_lang(request) -> str:
+    lang = request.data.get("lang") if hasattr(request, "data") else None
+    return _normalize_lang(lang)
+
+
+def _format_dt_local(dt):
+    if not dt:
+        return ""
+    return timezone.localtime(dt).strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _bool_label(v: bool) -> str:
+    return "Yes" if v else "No"
+
+
+def _autosize_worksheet_columns(ws):
+    for col in ws.columns:
+        max_len = 0
+        col_letter = col[0].column_letter
+        for cell in col:
+            try:
+                value = str(cell.value or "")
+            except Exception:
+                value = ""
+            if len(value) > max_len:
+                max_len = len(value)
+        ws.column_dimensions[col_letter].width = min(max(max_len + 2, 12), 42)
+
+
+def _build_readings_export_workbook(devices, sort_key: str, sort_dir: str) -> bytes:
+    # lazy import so missing dependency would affect only this endpoint
+    from openpyxl import Workbook
+    from openpyxl.styles import Font
+
+    rows = []
+
+    for device in devices:
+        latest = device.latest_snapshot or {}
+
+        rows.append({
+            "device_id": device.id,
+            "plant_id": device.plant_id,
+            "plant_name": device.plant_name or "",
+            "plant_location": device.plant_location or "",
+            "device_name": device.device_name or "",
+            "status_label": "Enabled" if device.is_active else "Disabled",
+            "last_read_at": _format_dt_local(device.last_read_at),
+            "interval_hours": device.interval_hours,
+            "sensor_temperature": _bool_label(bool((device.sensors or {}).get("temperature"))),
+            "sensor_humidity": _bool_label(bool((device.sensors or {}).get("humidity"))),
+            "sensor_light": _bool_label(bool((device.sensors or {}).get("light"))),
+            "sensor_moisture": _bool_label(bool((device.sensors or {}).get("moisture"))),
+            "latest_temperature": latest.get("temperature"),
+            "latest_humidity": latest.get("humidity"),
+            "latest_light": latest.get("light"),
+            "latest_moisture": latest.get("moisture"),
+            "moisture_alert_enabled": _bool_label(bool(device.moisture_alert_enabled)),
+            "moisture_alert_threshold": device.moisture_alert_threshold,
+            "moisture_alert_active": _bool_label(bool(device.moisture_alert_active)),
+            "notes": device.notes or "",
+            "created_at": _format_dt_local(device.created_at),
+            "updated_at": _format_dt_local(device.updated_at),
+        })
+
+    reverse = sort_dir == "desc"
+
+    if sort_key == "name":
+        rows.sort(
+            key=lambda r: (
+                (r["plant_name"] or "").lower(),
+                (r["device_name"] or "").lower(),
+            ),
+            reverse=reverse,
+        )
+    elif sort_key == "location":
+        rows.sort(
+            key=lambda r: (
+                (r["plant_location"] or "").lower(),
+                (r["plant_name"] or "").lower(),
+                (r["device_name"] or "").lower(),
+            ),
+            reverse=reverse,
+        )
+    else:  # lastRead
+        rows.sort(
+            key=lambda r: (r["last_read_at"] or ""),
+            reverse=reverse,
+        )
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Readings"
+
+    headers = [
+        "Device ID",
+        "Plant ID",
+        "Plant Name",
+        "Location",
+        "Device Name",
+        "Status",
+        "Last Read At",
+        "Interval Hours",
+        "Temperature Sensor",
+        "Humidity Sensor",
+        "Light Sensor",
+        "Moisture Sensor",
+        "Latest Temperature",
+        "Latest Humidity",
+        "Latest Light",
+        "Latest Moisture",
+        "Moisture Alert Enabled",
+        "Moisture Alert Threshold",
+        "Moisture Alert Active",
+        "Notes",
+        "Created At",
+        "Updated At",
+    ]
+    ws.append(headers)
+
+    for cell in ws[1]:
+        cell.font = Font(bold=True)
+
+    for row in rows:
+        ws.append([
+            row["device_id"],
+            row["plant_id"],
+            row["plant_name"],
+            row["plant_location"],
+            row["device_name"],
+            row["status_label"],
+            row["last_read_at"],
+            row["interval_hours"],
+            row["sensor_temperature"],
+            row["sensor_humidity"],
+            row["sensor_light"],
+            row["sensor_moisture"],
+            row["latest_temperature"],
+            row["latest_humidity"],
+            row["latest_light"],
+            row["latest_moisture"],
+            row["moisture_alert_enabled"],
+            row["moisture_alert_threshold"],
+            row["moisture_alert_active"],
+            row["notes"],
+            row["created_at"],
+            row["updated_at"],
+        ])
+
+    _autosize_worksheet_columns(ws)
+
+    stream = BytesIO()
+    wb.save(stream)
+    return stream.getvalue()
+
 
 # ---- History helpers (for new /history/ endpoint) ----
 
@@ -201,6 +376,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
         resp["Content-Disposition"] = f'attachment; filename="device-{device.id}-setup.pdf"'
         return resp
 
+
 # ---------- Account secret ----------
 
 @api_view(["POST"])
@@ -243,6 +419,89 @@ def device_setup(request):
         },
         "secret": secret,
     })
+
+
+# ---------- Export readings by email ----------
+
+@api_view(["POST"])
+@permission_classes([permissions.IsAuthenticated])
+def readings_export_email(request):
+    serializer = ReadingsExportEmailSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    data = serializer.validated_data
+
+    to_email = (getattr(request.user, "email", "") or "").strip()
+    if not to_email:
+        return Response(
+            {"detail": "Your account has no email address set."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    lang = _request_lang(request)
+
+    plant_id = data.get("plantId")
+    location = data.get("location")
+    status_value = data.get("status")
+    sort_key = data.get("sortKey", "name")
+    sort_dir = data.get("sortDir", "asc")
+
+    qs = (
+        ReadingDevice.objects
+        .filter(user=request.user)
+        .select_related("plant")
+    )
+
+    if plant_id:
+        qs = qs.filter(plant_id=plant_id)
+
+    if location:
+        qs = qs.filter(plant_location=location)
+
+    if status_value == "enabled":
+        qs = qs.filter(is_active=True)
+    elif status_value == "disabled":
+        qs = qs.filter(is_active=False)
+
+    devices = list(qs)
+    xlsx_bytes = _build_readings_export_workbook(
+        devices,
+        sort_key=sort_key,
+        sort_dir=sort_dir,
+    )
+
+    now_label = timezone.localtime(timezone.now()).strftime("%Y%m%d-%H%M%S")
+    attachment_filename = f"flovers-readings-{now_label}.xlsx"
+
+    context = {
+        "plant_value": str(plant_id) if plant_id else "Any plant",
+        "location_value": location or "Any location",
+        "status_value": status_value or "Any status",
+        "sort_key_value": sort_key,
+        "sort_dir_value": sort_dir,
+        "total_count": len(devices),
+        "attachment_filename": attachment_filename,
+    }
+
+    send_templated_email(
+        to_email=to_email,
+        template_name="readings/export",
+        subject_key=None,
+        context=context,
+        lang=lang,
+        attachments=[
+            {
+                "filename": attachment_filename,
+                "content": xlsx_bytes,
+                "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            }
+        ],
+    )
+
+    return Response(
+        {"detail": "Readings export email sent."},
+        status=status.HTTP_200_OK,
+    )
+
 
 # ---------- IoT endpoints (no JWT) ----------
 
@@ -374,6 +633,7 @@ def ingest(request):
         pass
 
     return Response({"status": "ok"}, status=status.HTTP_202_ACCEPTED)
+
 
 @api_view(["GET"])
 @permission_classes([permissions.AllowAny])
