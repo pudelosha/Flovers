@@ -48,22 +48,15 @@ export default function PlantQrTile({
 
       <Text style={styles.desc}>
         {tr(
-          "plantDetails.qr.desc.part1",
-          "Each plant has its own unique QR code. When you scan this code in the"
-        )}{" "}
-        <Text style={styles.bold}>{tr("plantDetails.qr.scanner", "Scanner")}</Text>{" "}
-        {tr(
-          "plantDetails.qr.desc.part2",
-          "view, the app opens this plant's details instantly."
+          "plantDetails.qr.desc.primary",
+          "Each plant has its own unique QR code. Scanning it in the Scanner view opens this plant’s details instantly."
         )}
-        {"\n\n"}
-        {tr("plantDetails.qr.desc.part3a", "You can")}{" "}
-        <Text style={styles.bold}>{tr("plantDetails.qr.saveWord", "save")}</Text>{" "}
-        {tr("plantDetails.qr.desc.part3b", "the QR image on your phone or")}{" "}
-        <Text style={styles.bold}>{tr("plantDetails.qr.emailWord", "email")}</Text>{" "}
+      </Text>
+
+      <Text style={styles.desc}>
         {tr(
-          "plantDetails.qr.desc.part3c",
-          "it to yourself, then print it and attach it to the plant pot. Next time you want to check on this plant, just scan the tag instead of searching manually."
+          "plantDetails.qr.desc.secondary",
+          "You can save the QR code to your phone or email it to yourself, then print it and attach it to the pot for quick access later."
         )}
       </Text>
 
@@ -72,7 +65,7 @@ export default function PlantQrTile({
       </View>
 
       <View style={styles.btnRow}>
-        <Pressable style={styles.btn} onPress={onPressSave}>
+        <Pressable style={[styles.btn, styles.primaryBtn]} onPress={onPressSave}>
           <MaterialCommunityIcons
             name="download"
             size={18}
@@ -84,7 +77,7 @@ export default function PlantQrTile({
           </Text>
         </Pressable>
 
-        <Pressable style={styles.btn} onPress={onPressEmail}>
+        <Pressable style={[styles.btn, styles.primaryBtn]} onPress={onPressEmail}>
           <MaterialCommunityIcons
             name="email-outline"
             size={18}
@@ -102,15 +95,16 @@ export default function PlantQrTile({
 
 const styles = StyleSheet.create({
   wrap: { alignSelf: "stretch" },
-  title: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 8 },
+  title: { color: "#FFFFFF", fontWeight: "800", fontSize: 18, marginBottom: 8 },
   desc: {
     color: "rgba(255,255,255,0.92)",
-    fontWeight: "600",
-    fontSize: 12,
-    lineHeight: 17,
-    marginBottom: 14,
+    fontSize: 13,
+    fontWeight: "400",
+    textAlign: "left",
+    marginTop: 6,
+    marginBottom: 8,
+    lineHeight: 18,
   },
-  bold: { color: "#FFFFFF", fontWeight: "800" },
   qrBox: { alignItems: "center", justifyContent: "center", marginBottom: 16 },
   btnRow: { flexDirection: "row", justifyContent: "center", gap: 10 },
   btn: {
@@ -119,7 +113,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderRadius: 18,
-    backgroundColor: "rgba(255,255,255,0.16)",
+  },
+  primaryBtn: {
+    backgroundColor: "rgba(11,114,133,0.92)",
   },
   btnText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
 });

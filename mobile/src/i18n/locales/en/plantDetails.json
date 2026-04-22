@@ -53,6 +53,7 @@
       "pot": "Pot",
       "soil": "Soil",
       "cm": "cm",
+      "in": "in",
       "orientations": {
         "N": "North",
         "E": "East",
@@ -87,15 +88,9 @@
     },
     "qr": {
       "title": "QR Code",
-      "scanner": "Scanner",
-      "saveWord": "save",
-      "emailWord": "email",
       "desc": {
-        "part1": "Each plant has its own unique QR code. When you scan this code in the",
-        "part2": "view, the app opens this plant's details instantly.",
-        "part3a": "You can",
-        "part3b": "the QR image on your phone or",
-        "part3c": "it to yourself, then print it and attach it to the plant pot. Next time you want to check on this plant, just scan the tag instead of searching manually."
+        "primary": "Each plant has its own unique QR code. Scanning it in the Scanner view opens this plant’s details instantly.",
+        "secondary": "You can save the QR code to your phone or email it to yourself, then print it and attach it to the pot for quick access later."
       },
       "saveBtn": "Save QR code",
       "emailBtn": "Email QR code"
