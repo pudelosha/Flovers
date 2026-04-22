@@ -3,7 +3,7 @@
     "common": {
       "cancel": "Cancelar",
       "delete": "Eliminar",
-      "clear": "Borrar",
+      "clear": "Limpiar",
       "apply": "Aplicar",
       "reset": "Restablecer",
       "close": "Cerrar",
@@ -11,13 +11,13 @@
     },
     "confirmDelete": {
       "title": "Eliminar planta",
-      "messagePrefix": "¿Estás seguro de que deseas eliminar",
-      "messageSuffix": "? También se eliminarán todos los datos relacionados: recordatorios, dispositivos y lecturas, tareas e historial de tareas. Esta operación no se puede deshacer."
+      "messagePrefix": "¿Estás seguro de que quieres eliminar",
+      "messageSuffix": "? Todos los datos asociados también se eliminarán: recordatorios, dispositivos y lecturas, tareas y el historial de tareas. Esta acción no se puede deshacer."
     },
     "filter": {
       "title": "Filtrar plantas",
       "anyLocation": "Cualquier ubicación",
-      "anyLatin": "Cualquier nombre en latín"
+      "anyLatin": "Cualquier nombre latino/tipo"
     },
     "sort": {
       "title": "Ordenar plantas",
@@ -28,57 +28,53 @@
     },
     "qr": {
       "title": "Código QR de la planta",
-      "p1": "Cada planta tiene un código QR único que contiene su identificador.",
-      "p2": "Cuando escanees este código en el escáner de la aplicación, serás redirigido directamente a la pantalla de detalles de esta planta",
-      "youCan": "Puedes:",
-      "b1": "guardar la imagen del código QR en tu teléfono o enviarla por correo electrónico y luego imprimirla para etiquetar,",
-      "b2": "adjuntar la etiqueta impresa directamente a la maceta para que el código esté siempre a la mano,",
-      "b3": "dejar que los miembros del hogar escaneen la etiqueta para abrir rápidamente esta planta en la aplicación.",
-      "save": "Guardar código QR",
-      "email": "Enviar código QR por correo electrónico"
+      "p1": "Cada planta tiene un código QR único. Al escanearlo en la aplicación se abre esta planta al instante.",
+      "p2": "Puedes guardar o enviar el código QR, imprimirlo y colocarlo en la maceta para acceder rápidamente más tarde.",
+      "save": "Guardar",
+      "email": "Enviar"
     },
     "edit": {
       "title": "Editar planta",
       "namePlaceholder": "Nombre de la planta (obligatorio)",
-      "latinPlaceholder": "Nombre en latín (buscar)…",
+      "latinPlaceholder": "Nombre latino (buscar)…",
       "locationOptional": "Seleccionar ubicación (opcional)",
       "none": "— Ninguno —",
       "notesPlaceholder": "Notas… (opcional)",
       "purchaseDateLabel": "Fecha de compra",
       "notSet": "No establecido",
-      "fallbackDateTitle": "Establecer fecha de compra (AAAA-MM-DD)",
-      "fallbackDatePlaceholder": "AAAA-MM-DD",
+      "fallbackDateTitle": "Establecer fecha de compra (YYYY-MM-DD)",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
       "invalidDateTitle": "Fecha inválida",
-      "invalidDateMsg": "Usa el formato AAAA-MM-DD",
+      "invalidDateMsg": "Usa el formato YYYY-MM-DD",
       "set": "Establecer",
       "lightLevelLabel": "Nivel de luz",
       "low": "Bajo",
       "high": "Alto",
       "windowDirectionLabel": "Dirección de la ventana",
       "orientations": {
-        "S": "Norte",
+        "S": "Sur",
         "E": "Este",
         "W": "Oeste",
-        "N": "Sur"
+        "N": "Norte"
       },
       "measureBtn": "Medir luz y dirección",
-      "distanceLabel": "Distancia de la ventana",
+      "distanceLabel": "Distancia desde la ventana",
       "cm": "cm",
-      "containerMaterialLabel": "Material de la maceta",
-      "soilMixLabel": "Sustrato / mezcla",
-      "update": "Guardar"
+      "containerMaterialLabel": "Material del contenedor",
+      "soilMixLabel": "Sustrato / mezcla para macetas",
+      "update": "Actualizar"
     },
     "journal": {
       "title": "Diario de la planta",
       "loading": "Cargando...",
       "error": "Algo salió mal.",
-      "empty": "No hay entradas en el diario.",
+      "empty": "Aún no hay entradas en el diario.",
       "taskTypes": {
         "watering": "RIEGO",
-        "moisture": "ROCIADO",
+        "moisture": "PULVERIZACIÓN",
         "fertilising": "FERTILIZACIÓN",
         "care": "CUIDADO",
-        "repot": "REPLANTE"
+        "repot": "TRASPLANTE"
       }
     }
   }

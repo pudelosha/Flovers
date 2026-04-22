@@ -11,13 +11,13 @@
     },
     "confirmDelete": {
       "title": "Pflanze löschen",
-      "messagePrefix": "Möchtest du",
-      "messageSuffix": " wirklich löschen? Alle zugehörigen Daten werden ebenfalls entfernt: Erinnerungen, Geräte und Messwerte, Aufgaben sowie der Aufgabenverlauf. Dieser Vorgang kann nicht rückgängig gemacht werden."
+      "messagePrefix": "Sind Sie sicher, dass Sie löschen",
+      "messageSuffix": "? Alle zugehörigen Daten werden ebenfalls gelöscht: Erinnerungen, Geräte und Messwerte, Aufgaben und Aufgabenverlauf. Diese Aktion kann nicht rückgängig gemacht werden."
     },
     "filter": {
       "title": "Pflanzen filtern",
       "anyLocation": "Beliebiger Standort",
-      "anyLatin": "Beliebiger lateinischer/Name"
+      "anyLatin": "Beliebiger lateinischer Name/Typ"
     },
     "sort": {
       "title": "Pflanzen sortieren",
@@ -28,51 +28,47 @@
     },
     "qr": {
       "title": "QR-Code der Pflanze",
-      "p1": "Jede Pflanze hat einen eindeutigen QR-Code, der ihre Kennung enthält.",
-      "p2": "Wenn du diesen Code mit dem Scanner in der App scannst, wirst du direkt zum Detailbildschirm dieser Pflanze weitergeleitet",
-      "youCan": "Du kannst:",
-      "b1": "das QR-Code-Bild auf dem Telefon speichern oder per E-Mail versenden und anschließend für die Beschriftung ausdrucken,",
-      "b2": "das ausgedruckte Etikett direkt am Blumentopf befestigen, damit der Code immer griffbereit ist,",
-      "b3": "anderen Haushaltsmitgliedern erlauben, das Etikett zu scannen, um diese Pflanze schnell in der App zu öffnen.",
-      "save": "QR-Code speichern",
-      "email": "QR-Code per E-Mail senden"
+      "p1": "Jede Pflanze hat einen eindeutigen QR-Code. Wenn Sie ihn in der App scannen, wird diese Pflanze sofort geöffnet.",
+      "p2": "Sie können den QR-Code speichern oder senden, ausdrucken und am Topf befestigen, um später schnell darauf zuzugreifen.",
+      "save": "Speichern",
+      "email": "Senden"
     },
     "edit": {
       "title": "Pflanze bearbeiten",
       "namePlaceholder": "Pflanzenname (erforderlich)",
-      "latinPlaceholder": "Lateinischer Name (suchen)…",
+      "latinPlaceholder": "Lateinischer Name (Suche)…",
       "locationOptional": "Standort auswählen (optional)",
-      "none": "— Kein —",
+      "none": "— Keine —",
       "notesPlaceholder": "Notizen… (optional)",
       "purchaseDateLabel": "Kaufdatum",
       "notSet": "Nicht festgelegt",
-      "fallbackDateTitle": "Kaufdatum festlegen (JJJJ-MM-TT)",
-      "fallbackDatePlaceholder": "JJJJ-MM-TT",
+      "fallbackDateTitle": "Kaufdatum festlegen (YYYY-MM-DD)",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
       "invalidDateTitle": "Ungültiges Datum",
-      "invalidDateMsg": "Verwende das Format JJJJ-MM-TT",
+      "invalidDateMsg": "Format YYYY-MM-DD verwenden",
       "set": "Festlegen",
-      "lightLevelLabel": "Lichtstärke",
+      "lightLevelLabel": "Lichtniveau",
       "low": "Niedrig",
       "high": "Hoch",
-      "windowDirectionLabel": "Fensterrichtung",
+      "windowDirectionLabel": "Fensterausrichtung",
       "orientations": {
-        "S": "N",
-        "E": "O",
-        "W": "W",
-        "N": "S"
+        "S": "Süden",
+        "E": "Osten",
+        "W": "Westen",
+        "N": "Norden"
       },
-      "measureBtn": "Licht und Richtung messen",
-      "distanceLabel": "Abstand zum Fenster",
+      "measureBtn": "Licht & Ausrichtung messen",
+      "distanceLabel": "Abstand vom Fenster",
       "cm": "cm",
-      "containerMaterialLabel": "Topfmaterial",
-      "soilMixLabel": "Substrat / Mischung",
-      "update": "Speichern"
+      "containerMaterialLabel": "Material des Behälters",
+      "soilMixLabel": "Erde / Substratmischung",
+      "update": "Aktualisieren"
     },
     "journal": {
-      "title": "Pflanzentagebuch",
+      "title": "Pflanzenjournal",
       "loading": "Wird geladen...",
       "error": "Etwas ist schiefgelaufen.",
-      "empty": "Keine Einträge im Tagebuch.",
+      "empty": "Noch keine Einträge.",
       "taskTypes": {
         "watering": "GIESSEN",
         "moisture": "BESPRÜHEN",

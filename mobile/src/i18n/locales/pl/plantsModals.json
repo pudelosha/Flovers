@@ -12,12 +12,12 @@
     "confirmDelete": {
       "title": "Usuń roślinę",
       "messagePrefix": "Czy na pewno chcesz usunąć",
-      "messageSuffix": "? Zostaną również usunięte wszystkie powiązane dane: przypomnienia, urządzenia i odczyty, zadania oraz historia zadań. Tej operacji nie można cofnąć."
+      "messageSuffix": "? Wszystkie powiązane dane również zostaną usunięte: przypomnienia, urządzenia i odczyty, zadania oraz historia zadań. Tej operacji nie można cofnąć."
     },
     "filter": {
       "title": "Filtruj rośliny",
       "anyLocation": "Dowolna lokalizacja",
-      "anyLatin": "Dowolna łacińska/nazwa"
+      "anyLatin": "Dowolna łacińska/nazwa typu"
     },
     "sort": {
       "title": "Sortuj rośliny",
@@ -28,49 +28,45 @@
     },
     "qr": {
       "title": "Kod QR rośliny",
-      "p1": "Każda roślina ma unikalny kod QR, który zawiera jej identyfikator.",
-      "p2": "Gdy zeskanujesz ten kod w skanerze w aplikacji, zostaniesz przekierowany bezpośrednio do ekranu szczegółów tej rośliny",
-      "youCan": "Możesz:",
-      "b1": "zapisać obraz kodu QR w telefonie lub wysłać go e-mailem, a następnie wydrukować do etykietowania,",
-      "b2": "przymocować wydrukowaną etykietę bezpośrednio do doniczki, aby kod był zawsze pod ręką,",
-      "b3": "pozwolić domownikom zeskanować etykietę, aby szybko otworzyć tę roślinę w aplikacji.",
-      "save": "Zapisz kod QR",
-      "email": "Wyślij kod QR e-mailem"
+      "p1": "Każda roślina ma unikalny kod QR. Zeskanowanie go w aplikacji natychmiast otwiera tę roślinę.",
+      "p2": "Możesz zapisać lub wysłać kod QR, wydrukować go i przymocować do doniczki, aby mieć szybki dostęp później.",
+      "save": "Zapisz",
+      "email": "Wyślij"
     },
     "edit": {
       "title": "Edytuj roślinę",
-      "namePlaceholder": "Nazwa rośliny (wymagana)",
-      "latinPlaceholder": "Nazwa łacińska (wyszukaj)…",
+      "namePlaceholder": "Nazwa rośliny (wymagane)",
+      "latinPlaceholder": "Nazwa łacińska (szukaj)…",
       "locationOptional": "Wybierz lokalizację (opcjonalnie)",
       "none": "— Brak —",
       "notesPlaceholder": "Notatki… (opcjonalnie)",
       "purchaseDateLabel": "Data zakupu",
       "notSet": "Nie ustawiono",
-      "fallbackDateTitle": "Ustaw datę zakupu (RRRR-MM-DD)",
-      "fallbackDatePlaceholder": "RRRR-MM-DD",
+      "fallbackDateTitle": "Ustaw datę zakupu (YYYY-MM-DD)",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
       "invalidDateTitle": "Nieprawidłowa data",
-      "invalidDateMsg": "Użyj formatu RRRR-MM-DD",
+      "invalidDateMsg": "Użyj formatu YYYY-MM-DD",
       "set": "Ustaw",
       "lightLevelLabel": "Poziom światła",
       "low": "Niski",
       "high": "Wysoki",
       "windowDirectionLabel": "Kierunek okna",
       "orientations": {
-        "S": "Płn",
-        "E": "Wsch",
-        "W": "Zach",
-        "N": "Płd"
+        "S": "Południe",
+        "E": "Wschód",
+        "W": "Zachód",
+        "N": "Północ"
       },
       "measureBtn": "Zmierz światło i kierunek",
       "distanceLabel": "Odległość od okna",
       "cm": "cm",
       "containerMaterialLabel": "Materiał doniczki",
-      "soilMixLabel": "Podłoże / mieszanka",
-      "update": "Zapisz"
+      "soilMixLabel": "Gleba / mieszanka podłoża",
+      "update": "Aktualizuj"
     },
     "journal": {
       "title": "Dziennik rośliny",
-      "loading": "Wczytywanie...",
+      "loading": "Ładowanie...",
       "error": "Coś poszło nie tak.",
       "empty": "Brak wpisów w dzienniku.",
       "taskTypes": {

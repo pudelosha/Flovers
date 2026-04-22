@@ -11,13 +11,13 @@
     },
     "confirmDelete": {
       "title": "植物を削除",
-      "messagePrefix": "本当に削除してもよろしいですか",
-      "messageSuffix": "? すべての関連データも削除されます：リマインダー、デバイスと読み取り、タスク、およびタスク履歴。この操作は元に戻せません。"
+      "messagePrefix": "本当に削除しますか",
+      "messageSuffix": "? 関連するすべてのデータも削除されます：リマインダー、デバイスと測定値、タスク、およびタスク履歴。この操作は元に戻せません。"
     },
     "filter": {
-      "title": "植物をフィルタリング",
-      "anyLocation": "任意の場所",
-      "anyLatin": "任意のラテン語/名前"
+      "title": "植物をフィルター",
+      "anyLocation": "すべての場所",
+      "anyLatin": "すべてのラテン名/タイプ"
     },
     "sort": {
       "title": "植物を並べ替え",
@@ -28,56 +28,52 @@
     },
     "qr": {
       "title": "植物のQRコード",
-      "p1": "各植物にはユニークなQRコードがあり、そのIDが含まれています。",
-      "p2": "このコードをアプリのスキャナーでスキャンすると、直接その植物の詳細画面に遷移します。",
-      "youCan": "できます:",
-      "b1": "QRコードの画像を電話に保存したり、メールで送信してラベル用に印刷する。",
-      "b2": "印刷したラベルを鉢に直接取り付けて、コードがすぐに見えるようにする。",
-      "b3": "家族がラベルをスキャンして、アプリでこの植物をすばやく開けるようにする。",
-      "save": "QRコードを保存",
-      "email": "QRコードをメールで送信"
+      "p1": "各植物には固有のQRコードがあります。アプリでスキャンすると、この植物がすぐに開きます。",
+      "p2": "QRコードを保存または送信したり、印刷して鉢に貼り付けて後で素早くアクセスできます。",
+      "save": "保存",
+      "email": "送信"
     },
     "edit": {
       "title": "植物を編集",
       "namePlaceholder": "植物名（必須）",
-      "latinPlaceholder": "ラテン名（検索中）...",
-      "locationOptional": "場所を選択（オプション）",
+      "latinPlaceholder": "ラテン名（検索）…",
+      "locationOptional": "場所を選択（任意）",
       "none": "— なし —",
-      "notesPlaceholder": "メモ...（オプション）",
+      "notesPlaceholder": "メモ…（任意）",
       "purchaseDateLabel": "購入日",
       "notSet": "未設定",
       "fallbackDateTitle": "購入日を設定（YYYY-MM-DD）",
       "fallbackDatePlaceholder": "YYYY-MM-DD",
       "invalidDateTitle": "無効な日付",
-      "invalidDateMsg": "YYYY-MM-DD形式を使用してください",
+      "invalidDateMsg": "形式 YYYY-MM-DD を使用してください",
       "set": "設定",
-      "lightLevelLabel": "光の強さ",
+      "lightLevelLabel": "光のレベル",
       "low": "低",
       "high": "高",
-      "windowDirectionLabel": "窓の方向",
+      "windowDirectionLabel": "窓の向き",
       "orientations": {
-        "S": "北",
+        "S": "南",
         "E": "東",
         "W": "西",
-        "N": "南"
+        "N": "北"
       },
-      "measureBtn": "光と方向を測定",
+      "measureBtn": "光と向きを測定",
       "distanceLabel": "窓からの距離",
       "cm": "cm",
-      "containerMaterialLabel": "鉢の素材",
-      "soilMixLabel": "土壌/混合物",
-      "update": "保存"
+      "containerMaterialLabel": "容器の素材",
+      "soilMixLabel": "土壌 / 培養土",
+      "update": "更新"
     },
     "journal": {
-      "title": "植物の日誌",
+      "title": "植物ジャーナル",
       "loading": "読み込み中...",
-      "error": "何かがうまくいきませんでした。",
-      "empty": "日誌に記録がありません。",
+      "error": "問題が発生しました。",
+      "empty": "まだジャーナルの記録がありません。",
       "taskTypes": {
         "watering": "水やり",
         "moisture": "霧吹き",
-        "fertilising": "肥料",
-        "care": "手入れ",
+        "fertilising": "施肥",
+        "care": "ケア",
         "repot": "植え替え"
       }
     }
