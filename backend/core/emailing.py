@@ -37,6 +37,7 @@ def send_templated_email(
     from_email: Optional[str] = None,
     reply_to: Optional[list[str]] = None,
     inline_attachments: Optional[list[dict[str, Any]]] = None,
+    attachments: Optional[list[dict[str, Any]]] = None,
 ) -> bool:
     """
     Renders:
@@ -46,12 +47,6 @@ def send_templated_email(
       templates/email/base.html
       templates/email/base.txt
 
-    template_name examples:
-      - "accounts/activation"
-      - "accounts/password_reset"
-      - "profiles/due_today"
-      - "profiles/overdue_1d"
-
     inline_attachments example:
       [
         {
@@ -59,6 +54,15 @@ def send_templated_email(
           "filename": "plant-qr.png",
           "content": b"...",
           "mimetype": "image/png",
+        }
+      ]
+
+    attachments example:
+      [
+        {
+          "filename": "task-history.xlsx",
+          "content": b"...",
+          "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         }
       ]
     """
@@ -85,22 +89,17 @@ def send_templated_email(
     # Caller context (highest precedence)
     caller_ctx = dict(context or {})
 
-    # Convenience mapping: tasks often pass activation_link/reset_link, templates expect "link"
+    # Convenience mapping
     if "link" not in caller_ctx:
         if "activation_link" in caller_ctx:
             caller_ctx["link"] = caller_ctx["activation_link"]
         elif "reset_link" in caller_ctx:
             caller_ctx["link"] = caller_ctx["reset_link"]
 
-    # Final context:
-    # base.json < scope.json < caller_ctx
+    # Final context
     ctx: dict[str, Any] = {**base_ctx, **scope_ctx, **caller_ctx}
 
-    # Subject (with optional prefix)
-    # Priority:
-    # 1) subject_key via t()
-    # 2) scope JSON "subject"
-    # 3) fallback "Flovers"
+    # Subject
     subject: str = ""
     if subject_key:
         subject = t(subject_key, lang=lang, default="") or ""
@@ -163,6 +162,16 @@ def send_templated_email(
         image.add_header("Content-ID", f"<{content_id}>")
         image.add_header("Content-Disposition", "inline", filename=filename or content_id)
         msg.attach(image)
+
+    for item in attachments or []:
+        content = item.get("content")
+        filename = (item.get("filename") or "").strip()
+        mimetype = (item.get("mimetype") or "application/octet-stream").strip().lower()
+
+        if not content or not filename:
+            continue
+
+        msg.attach(filename, content, mimetype)
 
     msg.send(fail_silently=False)
     return True

@@ -69,7 +69,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function TaskHistoryScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const nav = useNavigation();
   const route = useRoute<any>();
@@ -445,6 +445,7 @@ export default function TaskHistoryScreen() {
       await sendHistoryExportEmail({
         ...effectiveExportFilters,
         includePending,
+        lang: i18n.language,
       });
 
       setExportOpen(false);

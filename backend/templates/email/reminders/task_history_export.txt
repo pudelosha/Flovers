@@ -1,0 +1,20 @@
+{{ title }}
+
+{{ intro }}
+
+{{ attachment_note }} {{ attachment_filename }}
+
+{{ summary_intro }}
+
+{{ plant_label }}: {{ plant_value }}
+{{ location_label }}: {{ location_value }}
+{{ task_types_label }}: {{ types_value }}
+{{ completed_from_label }}: {{ completed_from_value }}
+{{ completed_to_label }}: {{ completed_to_value }}
+{{ sort_by_label }}: {{ sort_key_value }}
+{{ direction_label }}: {{ sort_dir_value }}
+{{ include_pending_label }}: {% if include_pending %}{{ yes_label }}{% else %}{{ no_label }}{% endif %}
+
+{{ total_count_label }}: {{ total_count }}
+{{ completed_count_label }}: {{ completed_count }}
+{{ pending_count_label }}: {{ pending_count }}

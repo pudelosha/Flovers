@@ -78,6 +78,7 @@ export type HistoryExportEmailRequest = {
   sortKey?: HistoryExportSortKey;
   sortDir?: HistoryExportSortDir;
   includePending?: boolean;
+  lang?: string;
 };
 
 /**
