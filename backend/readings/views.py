@@ -137,10 +137,10 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
         "Plant Name",
         "Location",
         "Device Name",
-        "Latest Temperature",
-        "Latest Humidity",
-        "Latest Light",
-        "Latest Moisture",
+        "Temperature",
+        "Humidity",
+        "Light",
+        "Soil Moisture",
         "Created At",
     ]
     ws.append(headers)

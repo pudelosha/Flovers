@@ -5,6 +5,7 @@ import LinearGradient from "react-native-linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider";
 import { useNavigation } from "@react-navigation/native";
 
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
@@ -54,6 +55,24 @@ function withCacheBuster(uri: string | null | undefined): string | null {
   return `${uri}${sep}t=${Date.now()}`;
 }
 
+function cmToInches(cm: number) {
+  return cm / 2.54;
+}
+
+function formatDistanceBySettings(
+  cm: number | null | undefined,
+  measureUnit: "metric" | "imperial" | undefined,
+  tr: (key: string, fallback?: string, values?: any) => string
+) {
+  if (cm == null) return tr("plantDetails.common.dash", "—");
+
+  if (measureUnit === "imperial") {
+    return `${Math.round(cmToInches(cm))} ${tr("plantDetails.info.in", "in")}`;
+  }
+
+  return `${cm} ${tr("plantDetails.info.cm", "cm")}`;
+}
+
 /**
  * Align backend/raw values to the existing i18n structure in createPlantStep04.json.
  *
@@ -99,6 +118,7 @@ export default function PlantInfoTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
   const nav = useNavigation<any>();
 
   const tr = useCallback(
@@ -199,9 +219,11 @@ export default function PlantInfoTile({
   const purchaseValue = plant.purchase_date || tr("plantDetails.common.dash", "—");
   const notesValue = plant.notes || tr("plantDetails.common.dash", "—");
 
-  const distanceValue =
-    (plant.distance_cm ?? tr("plantDetails.common.dash", "—")) +
-    (plant.distance_cm != null ? ` ${tr("plantDetails.info.cm", "cm")}` : "");
+  const distanceValue = formatDistanceBySettings(
+    plant.distance_cm ?? null,
+    settings?.measureUnit,
+    tr
+  );
 
   const plantDefinitionId =
     (plant.plant_definition?.id ?? (plant as any).plant_definition_id) != null
