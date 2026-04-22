@@ -4,7 +4,7 @@
       "cancel": "Cancelar",
       "delete": "Eliminar",
       "apply": "Aplicar",
-      "clear": "Borrar",
+      "clear": "Limpiar",
       "close": "Cerrar",
       "reset": "Restablecer",
       "save": "Guardar",
@@ -13,23 +13,23 @@
     "confirmDelete": {
       "title": "Eliminar lectura",
       "messageBefore": "¿Estás seguro de que deseas eliminar",
-      "messageAfter": "? Esta operación no se puede deshacer."
+      "messageAfter": "? Esta acción no se puede deshacer."
     },
     "deviceSetup": {
       "title": "Configuración del dispositivo",
-      "httpEndpoints": "Puntos finales HTTP",
+      "httpEndpoints": "Endpoints HTTP",
       "addReadingPost": "Agregar lectura (POST)",
-      "readReadingsGetPost": "Obtener lecturas (GET/POST)",
-      "samplePayloads": "Cargas útiles de ejemplo",
-      "addReadingBody": "Cuerpo de la solicitud para agregar lectura",
-      "readRequestBody": "Cuerpo de la solicitud para obtener lecturas",
-      "currentAuthSecret": "Secreto de autorización actual",
-      "showAuthSecret": "Mostrar secreto de autorización",
-      "hideAuthSecret": "Ocultar secreto de autorización",
+      "readReadingsGetPost": "Leer lecturas (GET/POST)",
+      "samplePayloads": "Ejemplos de payloads",
+      "addReadingBody": "Cuerpo para agregar lectura",
+      "readRequestBody": "Cuerpo de la solicitud de lectura",
+      "currentAuthSecret": "Secreto de autenticación actual",
+      "showAuthSecret": "Mostrar secreto de autenticación",
+      "hideAuthSecret": "Ocultar secreto de autenticación",
       "generateNewSecret": "Generar nuevo secreto",
-      "downloadPdfDocumentation": "Descargar documentación en PDF",
-      "rotateConfirmTitle": "¿Rotar el secreto?",
-      "rotateConfirmText": "Generar un nuevo secreto invalidará el actual. Luego actualiza la configuración del dispositivo.",
+      "openSchemasDocumentation": "Abrir documentación",
+      "rotateConfirmTitle": "¿Rotar secreto?",
+      "rotateConfirmText": "Generar un nuevo secreto invalidará el actual. Actualiza la configuración de tu dispositivo después.",
       "rotate": "Rotar"
     },
     "filter": {
@@ -52,30 +52,56 @@
       "keyLocation": "Ubicación",
       "keyLastRead": "Última lectura",
       "ascending": "Ascendente",
-      "descending": "Descendente"
+      "descending": "Descendente",
+      "keys": {
+        "name": "Nombre de la planta",
+        "location": "Ubicación",
+        "lastRead": "Última lectura"
+      },
+      "directions": {
+        "asc": "Ascendente",
+        "desc": "Descendente"
+      }
+    },
+    "export": {
+      "title": "Enviar exportación de lecturas",
+      "noticeTitle": "La exportación a Excel utilizará los criterios actualmente aplicados.",
+      "noticeFiltered": "Solo se incluirán los datos de lecturas que coincidan con los filtros mostrados a continuación. Si necesitas datos diferentes, cambia primero los filtros y luego envía nuevamente.",
+      "noticeAllData": "No hay filtros aplicados actualmente, por lo que la exportación incluirá todos los datos de lecturas disponibles para esta pantalla.",
+      "plantLabel": "Planta",
+      "locationLabel": "Ubicación",
+      "statusLabel": "Estado",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Dirección",
+      "anyPlant": "Cualquier planta",
+      "anyLocation": "Cualquier ubicación",
+      "anyStatus": "Cualquier estado",
+      "notSet": "No establecido",
+      "send": "Enviar",
+      "sending": "Enviando..."
     },
     "upsert": {
       "linkDeviceTitle": "Vincular dispositivo",
       "editDeviceTitle": "Editar dispositivo",
-      "noPlantsText": "Aún no tienes plantas. Primero agrega una planta para vincular el dispositivo.",
+      "noPlantsText": "Aún no tienes plantas. Por favor, agrega una planta primero para vincular un dispositivo.",
       "selectPlant": "Seleccionar planta",
       "locationPlaceholder": "Ubicación",
-      "deviceNameRequired": "Nombre del dispositivo (requerido)",
+      "deviceNameRequired": "Nombre del dispositivo (obligatorio)",
       "sensors": "Sensores",
       "sensorTemperature": "Temperatura",
       "sensorHumidity": "Humedad",
       "sensorLight": "Luz",
       "sensorSoilMoisture": "Humedad del suelo",
-      "moistAlertLabel": "Enviar alertas cuando la humedad del suelo baje de un umbral",
+      "moistAlertLabel": "Enviar alertas cuando la humedad del suelo esté por debajo del umbral",
       "thresholdLabel": "Umbral:",
       "samplingInterval": "Intervalo de muestreo",
-      "everyXHours": "Cada {{count}} horas",
-      "authSecret": "Secreto de autorización",
+      "everyXHours": "Cada {{count}} hora",
+      "authSecret": "Secreto de autenticación",
       "deviceKey": "Clave del dispositivo",
       "sendCodeViaEmail": "Enviar código por correo electrónico",
       "saveCodeAsText": "Guardar código como texto",
       "enabled": "Habilitado",
-      "ingestReadingsFromDevice": "Obtener lecturas de este dispositivo",
+      "ingestReadingsFromDevice": "Ingerir lecturas de este dispositivo",
       "notesOptional": "Notas… (opcional)"
     }
   }

@@ -11,53 +11,79 @@
       "dash": "—"
     },
     "confirmDelete": {
-      "title": "删除读取",
+      "title": "删除读数",
       "messageBefore": "您确定要删除",
       "messageAfter": "吗？此操作无法撤销。"
     },
     "deviceSetup": {
       "title": "设备设置",
       "httpEndpoints": "HTTP 端点",
-      "addReadingPost": "添加读取 (POST)",
-      "readReadingsGetPost": "获取读取 (GET/POST)",
+      "addReadingPost": "添加读数（POST）",
+      "readReadingsGetPost": "读取读数（GET/POST）",
       "samplePayloads": "示例负载",
-      "addReadingBody": "添加读取请求正文",
-      "readRequestBody": "获取读取请求正文",
-      "currentAuthSecret": "当前授权密钥",
-      "showAuthSecret": "显示授权密钥",
-      "hideAuthSecret": "隐藏授权密钥",
+      "addReadingBody": "添加读数主体",
+      "readRequestBody": "读取请求主体",
+      "currentAuthSecret": "当前认证密钥",
+      "showAuthSecret": "显示认证密钥",
+      "hideAuthSecret": "隐藏认证密钥",
       "generateNewSecret": "生成新密钥",
-      "downloadPdfDocumentation": "下载 PDF 文档",
-      "rotateConfirmTitle": "旋转密钥？",
-      "rotateConfirmText": "生成新密钥将使当前密钥失效。然后更新设备配置。",
-      "rotate": "旋转"
+      "openSchemasDocumentation": "打开文档",
+      "rotateConfirmTitle": "轮换密钥？",
+      "rotateConfirmText": "生成新的密钥将使当前密钥失效。之后请更新您的设备配置。",
+      "rotate": "轮换"
     },
     "filter": {
-      "title": "筛选读取",
+      "title": "筛选读数",
       "plantLabel": "植物",
       "locationLabel": "位置",
       "statusLabel": "状态",
       "selectPlant": "选择植物",
-      "anyPlant": "任何植物",
-      "anyLocation": "任何位置",
-      "anyStatus": "任何状态",
-      "statusEnabled": "启用",
-      "statusDisabled": "禁用"
+      "anyPlant": "任意植物",
+      "anyLocation": "任意位置",
+      "anyStatus": "任意状态",
+      "statusEnabled": "已启用",
+      "statusDisabled": "已禁用"
     },
     "sort": {
-      "title": "排序读取",
-      "sortBy": "排序依据",
+      "title": "排序读数",
+      "sortBy": "排序方式",
       "direction": "方向",
       "keyPlantName": "植物名称",
       "keyLocation": "位置",
       "keyLastRead": "最后读取",
       "ascending": "升序",
-      "descending": "降序"
+      "descending": "降序",
+      "keys": {
+        "name": "植物名称",
+        "location": "位置",
+        "lastRead": "最后读取"
+      },
+      "directions": {
+        "asc": "升序",
+        "desc": "降序"
+      }
+    },
+    "export": {
+      "title": "发送读数导出",
+      "noticeTitle": "Excel 导出将使用当前应用的条件。",
+      "noticeFiltered": "仅包含符合以下筛选条件的读数数据。如果需要不同的数据，请先更改筛选条件，然后再发送。",
+      "noticeAllData": "当前未应用任何筛选条件，因此导出将包含此界面所有可用的读数数据。",
+      "plantLabel": "植物",
+      "locationLabel": "位置",
+      "statusLabel": "状态",
+      "sortByLabel": "排序方式",
+      "directionLabel": "方向",
+      "anyPlant": "任意植物",
+      "anyLocation": "任意位置",
+      "anyStatus": "任意状态",
+      "notSet": "未设置",
+      "send": "发送",
+      "sending": "发送中..."
     },
     "upsert": {
-      "linkDeviceTitle": "连接设备",
+      "linkDeviceTitle": "关联设备",
       "editDeviceTitle": "编辑设备",
-      "noPlantsText": "您还没有任何植物。请先添加植物以连接设备。",
+      "noPlantsText": "您还没有任何植物。请先添加植物以关联设备。",
       "selectPlant": "选择植物",
       "locationPlaceholder": "位置",
       "deviceNameRequired": "设备名称（必填）",
@@ -66,16 +92,16 @@
       "sensorHumidity": "湿度",
       "sensorLight": "光照",
       "sensorSoilMoisture": "土壤湿度",
-      "moistAlertLabel": "当土壤湿度低于阈值时发送警报",
+      "moistAlertLabel": "当土壤湿度低于阈值时发送提醒",
       "thresholdLabel": "阈值：",
       "samplingInterval": "采样间隔",
       "everyXHours": "每 {{count}} 小时",
-      "authSecret": "授权密钥",
+      "authSecret": "认证密钥",
       "deviceKey": "设备密钥",
       "sendCodeViaEmail": "通过电子邮件发送代码",
       "saveCodeAsText": "将代码保存为文本",
-      "enabled": "启用",
-      "ingestReadingsFromDevice": "从此设备获取读取",
+      "enabled": "已启用",
+      "ingestReadingsFromDevice": "从该设备接收读数",
       "notesOptional": "备注…（可选）"
     }
   }

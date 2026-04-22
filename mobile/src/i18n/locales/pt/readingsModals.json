@@ -12,24 +12,24 @@
     },
     "confirmDelete": {
       "title": "Excluir leitura",
-      "messageBefore": "Você tem certeza de que deseja excluir",
+      "messageBefore": "Tem certeza de que deseja excluir",
       "messageAfter": "? Esta ação não pode ser desfeita."
     },
     "deviceSetup": {
       "title": "Configuração do dispositivo",
       "httpEndpoints": "Endpoints HTTP",
       "addReadingPost": "Adicionar leitura (POST)",
-      "readReadingsGetPost": "Obter leituras (GET/POST)",
+      "readReadingsGetPost": "Ler leituras (GET/POST)",
       "samplePayloads": "Exemplos de payloads",
-      "addReadingBody": "Corpo da solicitação de adição de leitura",
+      "addReadingBody": "Corpo da adição de leitura",
       "readRequestBody": "Corpo da solicitação de leitura",
       "currentAuthSecret": "Segredo de autenticação atual",
       "showAuthSecret": "Mostrar segredo de autenticação",
       "hideAuthSecret": "Ocultar segredo de autenticação",
       "generateNewSecret": "Gerar novo segredo",
-      "downloadPdfDocumentation": "Baixar documentação em PDF",
+      "openSchemasDocumentation": "Abrir documentação",
       "rotateConfirmTitle": "Rotacionar segredo?",
-      "rotateConfirmText": "Gerar um novo segredo invalidará o atual. Em seguida, atualize a configuração do dispositivo.",
+      "rotateConfirmText": "Gerar um novo segredo invalidará o atual. Atualize a configuração do seu dispositivo depois.",
       "rotate": "Rotacionar"
     },
     "filter": {
@@ -37,7 +37,7 @@
       "plantLabel": "Planta",
       "locationLabel": "Localização",
       "statusLabel": "Status",
-      "selectPlant": "Escolher planta",
+      "selectPlant": "Selecionar planta",
       "anyPlant": "Qualquer planta",
       "anyLocation": "Qualquer localização",
       "anyStatus": "Qualquer status",
@@ -45,20 +45,46 @@
       "statusDisabled": "Desativado"
     },
     "sort": {
-      "title": "Classificar leituras",
-      "sortBy": "Classificar por",
+      "title": "Ordenar leituras",
+      "sortBy": "Ordenar por",
       "direction": "Direção",
       "keyPlantName": "Nome da planta",
       "keyLocation": "Localização",
       "keyLastRead": "Última leitura",
       "ascending": "Crescente",
-      "descending": "Decrescente"
+      "descending": "Decrescente",
+      "keys": {
+        "name": "Nome da planta",
+        "location": "Localização",
+        "lastRead": "Última leitura"
+      },
+      "directions": {
+        "asc": "Crescente",
+        "desc": "Decrescente"
+      }
+    },
+    "export": {
+      "title": "Enviar exportação de leituras",
+      "noticeTitle": "A exportação para Excel usará os critérios atualmente aplicados.",
+      "noticeFiltered": "Somente os dados de leituras que correspondem aos filtros abaixo serão incluídos. Se precisar de dados diferentes, altere os filtros primeiro e depois envie novamente.",
+      "noticeAllData": "Nenhum filtro está aplicado no momento, então a exportação incluirá todos os dados de leituras disponíveis para esta tela.",
+      "plantLabel": "Planta",
+      "locationLabel": "Localização",
+      "statusLabel": "Status",
+      "sortByLabel": "Ordenar por",
+      "directionLabel": "Direção",
+      "anyPlant": "Qualquer planta",
+      "anyLocation": "Qualquer localização",
+      "anyStatus": "Qualquer status",
+      "notSet": "Não definido",
+      "send": "Enviar",
+      "sending": "Enviando..."
     },
     "upsert": {
-      "linkDeviceTitle": "Conectar dispositivo",
+      "linkDeviceTitle": "Vincular dispositivo",
       "editDeviceTitle": "Editar dispositivo",
-      "noPlantsText": "Você ainda não tem plantas. Adicione uma planta primeiro para conectar o dispositivo.",
-      "selectPlant": "Escolher planta",
+      "noPlantsText": "Você ainda não tem plantas. Adicione uma planta primeiro para vincular um dispositivo.",
+      "selectPlant": "Selecionar planta",
       "locationPlaceholder": "Localização",
       "deviceNameRequired": "Nome do dispositivo (obrigatório)",
       "sensors": "Sensores",
@@ -66,16 +92,16 @@
       "sensorHumidity": "Umidade",
       "sensorLight": "Luz",
       "sensorSoilMoisture": "Umidade do solo",
-      "moistAlertLabel": "Enviar alertas quando a umidade do solo cair abaixo do limite",
+      "moistAlertLabel": "Enviar alertas quando a umidade do solo estiver abaixo do limite",
       "thresholdLabel": "Limite:",
       "samplingInterval": "Intervalo de amostragem",
-      "everyXHours": "A cada {{count}} horas",
+      "everyXHours": "A cada {{count}} hora",
       "authSecret": "Segredo de autenticação",
       "deviceKey": "Chave do dispositivo",
       "sendCodeViaEmail": "Enviar código por e-mail",
       "saveCodeAsText": "Salvar código como texto",
       "enabled": "Ativado",
-      "ingestReadingsFromDevice": "Obter leituras deste dispositivo",
+      "ingestReadingsFromDevice": "Ingerir leituras deste dispositivo",
       "notesOptional": "Notas… (opcional)"
     }
   }

@@ -2,7 +2,7 @@
   "readingsModals": {
     "common": {
       "cancel": "रद्द करें",
-      "delete": "हटाएं",
+      "delete": "हटाएँ",
       "apply": "लागू करें",
       "clear": "साफ़ करें",
       "close": "बंद करें",
@@ -11,29 +11,29 @@
       "dash": "—"
     },
     "confirmDelete": {
-      "title": "पढ़ाई हटाएं",
-      "messageBefore": "क्या आप वाकई इसे हटाना चाहते हैं",
-      "messageAfter": "? इस क्रिया को रद्द नहीं किया जा सकता।"
+      "title": "रीडिंग हटाएँ",
+      "messageBefore": "क्या आप वाकई हटाना चाहते हैं",
+      "messageAfter": "? यह क्रिया पूर्ववत नहीं की जा सकती।"
     },
     "deviceSetup": {
       "title": "डिवाइस सेटअप",
-      "httpEndpoints": "HTTP एन्डपॉइंट्स",
-      "addReadingPost": "पढ़ाई जोड़ें (POST)",
-      "readReadingsGetPost": "पढ़ाई प्राप्त करें (GET/POST)",
+      "httpEndpoints": "HTTP एंडपॉइंट्स",
+      "addReadingPost": "रीडिंग जोड़ें (POST)",
+      "readReadingsGetPost": "रीडिंग पढ़ें (GET/POST)",
       "samplePayloads": "नमूना पेलोड्स",
-      "addReadingBody": "पढ़ाई जोड़ने का अनुरोध बॉडी",
-      "readRequestBody": "पढ़ाई प्राप्त करने का अनुरोध बॉडी",
-      "currentAuthSecret": "वर्तमान प्रमाणीकरण गुप्त कोड",
-      "showAuthSecret": "प्रमाणीकरण गुप्त कोड दिखाएं",
-      "hideAuthSecret": "प्रमाणीकरण गुप्त कोड छिपाएं",
-      "generateNewSecret": "नया गुप्त कोड उत्पन्न करें",
-      "downloadPdfDocumentation": "PDF दस्तावेज़ डाउनलोड करें",
-      "rotateConfirmTitle": "गुप्त कोड घुमाएं?",
-      "rotateConfirmText": "नया गुप्त कोड उत्पन्न करने से वर्तमान को अमान्य कर दिया जाएगा। फिर डिवाइस सेटअप को अपडेट करें।",
-      "rotate": "घुमाएं"
+      "addReadingBody": "रीडिंग जोड़ने का बॉडी",
+      "readRequestBody": "रीड रिक्वेस्ट बॉडी",
+      "currentAuthSecret": "वर्तमान ऑथ सीक्रेट",
+      "showAuthSecret": "ऑथ सीक्रेट दिखाएँ",
+      "hideAuthSecret": "ऑथ सीक्रेट छिपाएँ",
+      "generateNewSecret": "नया सीक्रेट बनाएं",
+      "openSchemasDocumentation": "डॉक्यूमेंटेशन खोलें",
+      "rotateConfirmTitle": "सीक्रेट बदलें?",
+      "rotateConfirmText": "नया सीक्रेट बनाने से वर्तमान सीक्रेट अमान्य हो जाएगा। बाद में अपने डिवाइस कॉन्फ़िगरेशन को अपडेट करें।",
+      "rotate": "बदलें"
     },
     "filter": {
-      "title": "पढ़ाई को फ़िल्टर करें",
+      "title": "रीडिंग फ़िल्टर करें",
       "plantLabel": "पौधा",
       "locationLabel": "स्थान",
       "statusLabel": "स्थिति",
@@ -41,23 +41,49 @@
       "anyPlant": "कोई भी पौधा",
       "anyLocation": "कोई भी स्थान",
       "anyStatus": "कोई भी स्थिति",
-      "statusEnabled": "सक्षम",
+      "statusEnabled": "सक्रिय",
       "statusDisabled": "निष्क्रिय"
     },
     "sort": {
-      "title": "पढ़ाई को छांटें",
-      "sortBy": "के अनुसार छांटें",
+      "title": "रीडिंग क्रमबद्ध करें",
+      "sortBy": "इसके अनुसार क्रमबद्ध करें",
       "direction": "दिशा",
       "keyPlantName": "पौधे का नाम",
       "keyLocation": "स्थान",
-      "keyLastRead": "अंतिम पढ़ाई",
-      "ascending": "चढ़ाई",
-      "descending": "उतराई"
+      "keyLastRead": "अंतिम रीड",
+      "ascending": "आरोही",
+      "descending": "अवरोही",
+      "keys": {
+        "name": "पौधे का नाम",
+        "location": "स्थान",
+        "lastRead": "अंतिम रीड"
+      },
+      "directions": {
+        "asc": "आरोही",
+        "desc": "अवरोही"
+      }
+    },
+    "export": {
+      "title": "रीडिंग निर्यात भेजें",
+      "noticeTitle": "Excel निर्यात वर्तमान में लागू मानदंडों का उपयोग करेगा।",
+      "noticeFiltered": "नीचे दिखाए गए फ़िल्टर से मेल खाने वाले केवल रीडिंग डेटा शामिल होंगे। यदि आपको अलग डेटा चाहिए, तो पहले फ़िल्टर बदलें और फिर दोबारा भेजें।",
+      "noticeAllData": "वर्तमान में कोई फ़िल्टर लागू नहीं है, इसलिए निर्यात में इस स्क्रीन के सभी उपलब्ध रीडिंग डेटा शामिल होंगे।",
+      "plantLabel": "पौधा",
+      "locationLabel": "स्थान",
+      "statusLabel": "स्थिति",
+      "sortByLabel": "इसके अनुसार क्रमबद्ध करें",
+      "directionLabel": "दिशा",
+      "anyPlant": "कोई भी पौधा",
+      "anyLocation": "कोई भी स्थान",
+      "anyStatus": "कोई भी स्थिति",
+      "notSet": "सेट नहीं",
+      "send": "भेजें",
+      "sending": "भेजा जा रहा है..."
     },
     "upsert": {
-      "linkDeviceTitle": "डिवाइस जोड़ें",
+      "linkDeviceTitle": "डिवाइस लिंक करें",
       "editDeviceTitle": "डिवाइस संपादित करें",
-      "noPlantsText": "आपके पास अभी कोई पौधे नहीं हैं। कृपया पहले पौधा जोड़ें, फिर डिवाइस जोड़ें।",
+      "noPlantsText": "आपके पास अभी कोई पौधे नहीं हैं। कृपया डिवाइस लिंक करने के लिए पहले एक पौधा जोड़ें।",
       "selectPlant": "पौधा चुनें",
       "locationPlaceholder": "स्थान",
       "deviceNameRequired": "डिवाइस का नाम (आवश्यक)",
@@ -66,16 +92,16 @@
       "sensorHumidity": "आर्द्रता",
       "sensorLight": "प्रकाश",
       "sensorSoilMoisture": "मिट्टी की नमी",
-      "moistAlertLabel": "जब मिट्टी की नमी सीमा से नीचे गिर जाए, तो अलर्ट भेजें",
+      "moistAlertLabel": "जब मिट्टी की नमी सीमा से कम हो तो अलर्ट भेजें",
       "thresholdLabel": "सीमा:",
-      "samplingInterval": "नमूना अंतराल",
-      "everyXHours": "हर {{count}} घंटे",
-      "authSecret": "प्रमाणीकरण गुप्त कोड",
+      "samplingInterval": "सैंपलिंग अंतराल",
+      "everyXHours": "हर {{count}} घंटा",
+      "authSecret": "ऑथ सीक्रेट",
       "deviceKey": "डिवाइस कुंजी",
-      "sendCodeViaEmail": "ईमेल द्वारा कोड भेजें",
+      "sendCodeViaEmail": "कोड ईमेल के माध्यम से भेजें",
       "saveCodeAsText": "कोड को टेक्स्ट के रूप में सहेजें",
-      "enabled": "सक्षम",
-      "ingestReadingsFromDevice": "इस डिवाइस से पढ़ाई प्राप्त करें",
+      "enabled": "सक्रिय",
+      "ingestReadingsFromDevice": "इस डिवाइस से रीडिंग प्राप्त करें",
       "notesOptional": "नोट्स… (वैकल्पिक)"
     }
   }

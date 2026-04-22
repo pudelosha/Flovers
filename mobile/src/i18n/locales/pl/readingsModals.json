@@ -17,20 +17,20 @@
     },
     "deviceSetup": {
       "title": "Konfiguracja urządzenia",
-      "httpEndpoints": "Endpointy HTTP",
+      "httpEndpoints": "Punkty końcowe HTTP",
       "addReadingPost": "Dodaj odczyt (POST)",
-      "readReadingsGetPost": "Pobierz odczyty (GET/POST)",
-      "samplePayloads": "Przykładowe payloady",
-      "addReadingBody": "Treść żądania dodania odczytu",
-      "readRequestBody": "Treść żądania pobrania odczytów",
+      "readReadingsGetPost": "Odczytaj dane (GET/POST)",
+      "samplePayloads": "Przykładowe dane",
+      "addReadingBody": "Treść dodawania odczytu",
+      "readRequestBody": "Treść żądania odczytu",
       "currentAuthSecret": "Aktualny sekret autoryzacji",
       "showAuthSecret": "Pokaż sekret autoryzacji",
       "hideAuthSecret": "Ukryj sekret autoryzacji",
       "generateNewSecret": "Wygeneruj nowy sekret",
-      "downloadPdfDocumentation": "Pobierz dokumentację PDF",
-      "rotateConfirmTitle": "Zrotować sekret?",
+      "openSchemasDocumentation": "Otwórz dokumentację",
+      "rotateConfirmTitle": "Zmienić sekret?",
       "rotateConfirmText": "Wygenerowanie nowego sekretu unieważni obecny. Następnie zaktualizuj konfigurację urządzenia.",
-      "rotate": "Rotuj"
+      "rotate": "Zmień"
     },
     "filter": {
       "title": "Filtruj odczyty",
@@ -41,8 +41,8 @@
       "anyPlant": "Dowolna roślina",
       "anyLocation": "Dowolna lokalizacja",
       "anyStatus": "Dowolny status",
-      "statusEnabled": "Włączone",
-      "statusDisabled": "Wyłączone"
+      "statusEnabled": "Włączony",
+      "statusDisabled": "Wyłączony"
     },
     "sort": {
       "title": "Sortuj odczyty",
@@ -52,12 +52,38 @@
       "keyLocation": "Lokalizacja",
       "keyLastRead": "Ostatni odczyt",
       "ascending": "Rosnąco",
-      "descending": "Malejąco"
+      "descending": "Malejąco",
+      "keys": {
+        "name": "Nazwa rośliny",
+        "location": "Lokalizacja",
+        "lastRead": "Ostatni odczyt"
+      },
+      "directions": {
+        "asc": "Rosnąco",
+        "desc": "Malejąco"
+      }
+    },
+    "export": {
+      "title": "Wyślij eksport odczytów",
+      "noticeTitle": "Eksport do Excela użyje aktualnie zastosowanych kryteriów.",
+      "noticeFiltered": "Uwzględnione zostaną tylko dane odczytów spełniające poniższe filtry. Jeśli potrzebujesz innych danych, najpierw zmień filtry, a następnie wyślij ponownie.",
+      "noticeAllData": "Obecnie nie zastosowano żadnych filtrów, więc eksport będzie zawierał wszystkie dostępne dane odczytów dla tego widoku.",
+      "plantLabel": "Roślina",
+      "locationLabel": "Lokalizacja",
+      "statusLabel": "Status",
+      "sortByLabel": "Sortuj według",
+      "directionLabel": "Kierunek",
+      "anyPlant": "Dowolna roślina",
+      "anyLocation": "Dowolna lokalizacja",
+      "anyStatus": "Dowolny status",
+      "notSet": "Nie ustawiono",
+      "send": "Wyślij",
+      "sending": "Wysyłanie..."
     },
     "upsert": {
       "linkDeviceTitle": "Połącz urządzenie",
       "editDeviceTitle": "Edytuj urządzenie",
-      "noPlantsText": "Nie masz jeszcze żadnych roślin. Dodaj najpierw roślinę, aby połączyć urządzenie.",
+      "noPlantsText": "Nie masz jeszcze żadnych roślin. Najpierw dodaj roślinę, aby połączyć urządzenie.",
       "selectPlant": "Wybierz roślinę",
       "locationPlaceholder": "Lokalizacja",
       "deviceNameRequired": "Nazwa urządzenia (wymagana)",
@@ -66,15 +92,15 @@
       "sensorHumidity": "Wilgotność",
       "sensorLight": "Światło",
       "sensorSoilMoisture": "Wilgotność gleby",
-      "moistAlertLabel": "Wyślij alerty, gdy wilgotność gleby spadnie poniżej progu",
+      "moistAlertLabel": "Wysyłaj powiadomienia, gdy wilgotność gleby spadnie poniżej progu",
       "thresholdLabel": "Próg:",
       "samplingInterval": "Interwał próbkowania",
-      "everyXHours": "Co {{count}} godz.",
+      "everyXHours": "Co {{count}} godzinę",
       "authSecret": "Sekret autoryzacji",
       "deviceKey": "Klucz urządzenia",
       "sendCodeViaEmail": "Wyślij kod e-mailem",
       "saveCodeAsText": "Zapisz kod jako tekst",
-      "enabled": "Włączone",
+      "enabled": "Włączony",
       "ingestReadingsFromDevice": "Pobieraj odczyty z tego urządzenia",
       "notesOptional": "Notatki… (opcjonalnie)"
     }

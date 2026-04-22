@@ -11,29 +11,29 @@
       "dash": "—"
     },
     "confirmDelete": {
-      "title": "Supprimer la mesure",
+      "title": "Supprimer la lecture",
       "messageBefore": "Êtes-vous sûr de vouloir supprimer",
-      "messageAfter": " ? Cette opération est irréversible."
+      "messageAfter": "? Cette action ne peut pas être annulée."
     },
     "deviceSetup": {
       "title": "Configuration de l’appareil",
       "httpEndpoints": "Points de terminaison HTTP",
-      "addReadingPost": "Ajouter une mesure (POST)",
-      "readReadingsGetPost": "Récupérer les mesures (GET/POST)",
-      "samplePayloads": "Exemples de payloads",
-      "addReadingBody": "Corps de la requête d’ajout de mesure",
-      "readRequestBody": "Corps de la requête de récupération des mesures",
-      "currentAuthSecret": "Secret d’autorisation actuel",
-      "showAuthSecret": "Afficher le secret d’autorisation",
-      "hideAuthSecret": "Masquer le secret d’autorisation",
+      "addReadingPost": "Ajouter une lecture (POST)",
+      "readReadingsGetPost": "Lire les lectures (GET/POST)",
+      "samplePayloads": "Exemples de charges utiles",
+      "addReadingBody": "Corps de la requête d’ajout de lecture",
+      "readRequestBody": "Corps de la requête de lecture",
+      "currentAuthSecret": "Secret d’authentification actuel",
+      "showAuthSecret": "Afficher le secret d’authentification",
+      "hideAuthSecret": "Masquer le secret d’authentification",
       "generateNewSecret": "Générer un nouveau secret",
-      "downloadPdfDocumentation": "Télécharger la documentation PDF",
+      "openSchemasDocumentation": "Ouvrir la documentation",
       "rotateConfirmTitle": "Faire tourner le secret ?",
-      "rotateConfirmText": "La génération d’un nouveau secret invalidera l’actuel. Mettez ensuite à jour la configuration de l’appareil.",
+      "rotateConfirmText": "La génération d’un nouveau secret invalidera l’actuel. Mettez à jour la configuration de votre appareil ensuite.",
       "rotate": "Faire tourner"
     },
     "filter": {
-      "title": "Filtrer les mesures",
+      "title": "Filtrer les lectures",
       "plantLabel": "Plante",
       "locationLabel": "Emplacement",
       "statusLabel": "Statut",
@@ -45,37 +45,63 @@
       "statusDisabled": "Désactivé"
     },
     "sort": {
-      "title": "Trier les mesures",
+      "title": "Trier les lectures",
       "sortBy": "Trier par",
       "direction": "Direction",
       "keyPlantName": "Nom de la plante",
       "keyLocation": "Emplacement",
-      "keyLastRead": "Dernière mesure",
-      "ascending": "Croissant",
-      "descending": "Décroissant"
+      "keyLastRead": "Dernière lecture",
+      "ascending": "Ascendant",
+      "descending": "Descendant",
+      "keys": {
+        "name": "Nom de la plante",
+        "location": "Emplacement",
+        "lastRead": "Dernière lecture"
+      },
+      "directions": {
+        "asc": "Ascendant",
+        "desc": "Descendant"
+      }
+    },
+    "export": {
+      "title": "Envoyer l’export des lectures",
+      "noticeTitle": "L’export Excel utilisera les critères actuellement appliqués.",
+      "noticeFiltered": "Seules les données de lecture correspondant aux filtres ci-dessous seront incluses. Si vous avez besoin de données différentes, modifiez d’abord les filtres puis renvoyez.",
+      "noticeAllData": "Aucun filtre n’est actuellement appliqué, l’export inclura donc toutes les données de lecture disponibles pour cet écran.",
+      "plantLabel": "Plante",
+      "locationLabel": "Emplacement",
+      "statusLabel": "Statut",
+      "sortByLabel": "Trier par",
+      "directionLabel": "Direction",
+      "anyPlant": "Toute plante",
+      "anyLocation": "Tout emplacement",
+      "anyStatus": "Tout statut",
+      "notSet": "Non défini",
+      "send": "Envoyer",
+      "sending": "Envoi..."
     },
     "upsert": {
-      "linkDeviceTitle": "Connecter l’appareil",
+      "linkDeviceTitle": "Lier un appareil",
       "editDeviceTitle": "Modifier l’appareil",
-      "noPlantsText": "Vous n’avez encore aucune plante. Ajoutez d’abord une plante pour connecter un appareil.",
+      "noPlantsText": "Vous n’avez pas encore de plantes. Veuillez d’abord ajouter une plante pour lier un appareil.",
       "selectPlant": "Sélectionner une plante",
       "locationPlaceholder": "Emplacement",
-      "deviceNameRequired": "Nom de l’appareil (requis)",
+      "deviceNameRequired": "Nom de l’appareil (obligatoire)",
       "sensors": "Capteurs",
       "sensorTemperature": "Température",
       "sensorHumidity": "Humidité",
       "sensorLight": "Lumière",
       "sensorSoilMoisture": "Humidité du sol",
-      "moistAlertLabel": "Envoyer des alertes lorsque l’humidité du sol descend en dessous du seuil",
+      "moistAlertLabel": "Envoyer des alertes lorsque l’humidité du sol est inférieure au seuil",
       "thresholdLabel": "Seuil :",
       "samplingInterval": "Intervalle d’échantillonnage",
-      "everyXHours": "Toutes les {{count}} h",
-      "authSecret": "Secret d’autorisation",
+      "everyXHours": "Toutes les {{count}} heure",
+      "authSecret": "Secret d’authentification",
       "deviceKey": "Clé de l’appareil",
       "sendCodeViaEmail": "Envoyer le code par e-mail",
       "saveCodeAsText": "Enregistrer le code en tant que texte",
       "enabled": "Activé",
-      "ingestReadingsFromDevice": "Récupérer les mesures depuis cet appareil",
+      "ingestReadingsFromDevice": "Collecter les lectures depuis cet appareil",
       "notesOptional": "Notes… (optionnel)"
     }
   }
