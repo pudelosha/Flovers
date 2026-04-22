@@ -1,0 +1,20 @@
+{
+  "subject": "您的任务历史导出",
+  "title": "您的任务历史导出",
+  "intro": "我们已附上包含您导出的任务历史数据的 Excel 文件。",
+  "attachment_note": "附件文件：",
+  "summary_intro": "导出是根据以下条件生成的：",
+  "plant_label": "工厂",
+  "location_label": "位置",
+  "task_types_label": "任务类型",
+  "completed_from_label": "完成时间（起）",
+  "completed_to_label": "完成时间（止）",
+  "sort_by_label": "排序依据",
+  "direction_label": "排序方向",
+  "include_pending_label": "同时包含待处理任务",
+  "total_count_label": "总行数",
+  "completed_count_label": "已完成任务",
+  "pending_count_label": "待处理任务",
+  "yes_label": "是",
+  "no_label": "否"
+}
