@@ -11,6 +11,7 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import { useSettings } from "../../../../app/providers/SettingsProvider";
 
 import { s } from "../../styles/plants.styles";
 
@@ -42,10 +43,30 @@ const ICON_BY_TYPE: Record<JournalType, string> = {
   repot: "pot",
 };
 
-function formatISOToDDMMYYYY(iso: string) {
+function formatISODateBySettings(iso: string, settings?: any) {
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
   if (!m) return iso;
-  return `${m[3]}.${m[2]}.${m[1]}`;
+
+  const yyyy = m[1];
+  const mm = m[2];
+  const dd = m[3];
+
+  const fmt = settings?.dateFormat;
+
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
+  return `${dd}.${mm}.${yyyy}`;
 }
 
 type Props = {
@@ -63,6 +84,7 @@ export default function PlantJournalModal({
 }: Props) {
   // hooks always called (never conditional)
   const { t } = useTranslation();
+  const { settings } = useSettings();
 
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -194,7 +216,7 @@ export default function PlantJournalModal({
                   defaultValue: String(e.type).toUpperCase(),
                 });
 
-                const dateLabel = formatISOToDDMMYYYY(e.completedAtISO);
+                const dateLabel = formatISODateBySettings(e.completedAtISO, settings);
 
                 return (
                   <View key={e.id} style={local.rowWrap}>
