@@ -4,6 +4,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import LinearGradient from "react-native-linear-gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import { s } from "../styles/plant-details.styles";
 import type { PlantReminderSummary } from "../types/plant-details.types";
@@ -38,14 +39,33 @@ function hexToRgba(hex?: string, alpha = 1) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
-/** Same format as Home TaskTile: dd.mm.yyyy */
-function formatDate(d: string | Date | null | undefined): string {
+function formatDateBySettings(
+  d: string | Date | null | undefined,
+  settings?: any
+): string {
   if (!d) return "";
   const dt = d instanceof Date ? d : new Date(d);
   if (Number.isNaN(+dt)) return "";
+
   const dd = String(dt.getDate()).padStart(2, "0");
   const mm = String(dt.getMonth() + 1).padStart(2, "0");
-  const yyyy = dt.getFullYear();
+  const yyyy = String(dt.getFullYear());
+
+  const fmt = settings?.dateFormat;
+
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
   return `${dd}.${mm}.${yyyy}`;
 }
 
@@ -84,6 +104,7 @@ export default function PlantRemindersTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -151,7 +172,8 @@ export default function PlantRemindersTile({
           const icon = ICON_BY_TYPE[displayType] ?? "calendar";
 
           const isOpen = menuOpenId === r.id;
-          const dateSuffix = r.dueDate ? `     ${formatDate(r.dueDate)}` : "";
+          const formattedDate = formatDateBySettings(r.dueDate, settings);
+          const dateSuffix = formattedDate ? `     ${formattedDate}` : "";
 
           const typeLabel = tr(`plantDetails.reminders.type.${displayType}`, displayType);
 
