@@ -7,10 +7,11 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 type Props = {
-  onHistory: () => void;
   onEdit: () => void;
-  onDelete: () => void;
+  onDeviceDetails: () => void;
+  onHistory: () => void;
   onPlantDetails: () => void;
+  onDelete: () => void;
 };
 
 type ItemProps = {
@@ -27,7 +28,7 @@ const Item = ({ icon, label, onPress, danger }: ItemProps) => (
   </Pressable>
 );
 
-export default function ReadingMenu({ onHistory, onEdit, onDelete, onPlantDetails }: Props) {
+export default function ReadingMenu({ onEdit, onDeviceDetails, onHistory, onPlantDetails, onDelete }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -43,9 +44,10 @@ export default function ReadingMenu({ onHistory, onEdit, onDelete, onPlantDetail
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
+      <Item icon="pencil-outline" label={tr("readings.menu.editDevice", "Edit device")} onPress={onEdit} />
+      <Item icon="information-outline" label={tr("readings.menu.deviceDetails", "Device details")} onPress={onDeviceDetails} />
       <Item icon="chart-line" label={tr("readings.menu.history", "Readings history")} onPress={onHistory} />
       <Item icon="sprout-outline" label={tr("readings.menu.plantDetails", "Plant details")} onPress={onPlantDetails} />
-      <Item icon="pencil-outline" label={tr("readings.menu.editDevice", "Edit device")} onPress={onEdit} />
       <Item icon="trash-can-outline" label={tr("readings.menu.deleteDevice", "Delete device")} danger onPress={onDelete} />
     </View>
   );

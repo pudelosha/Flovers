@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
-import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text } from "react-native";
+import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text, Modal } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
@@ -121,6 +121,16 @@ export default function ReadingsScreen() {
   const [setupIngest, setSetupIngest] = useState<string>("");
   const [setupRead, setSetupRead] = useState<string>("");
 
+  // Device details placeholder modal state
+  const [deviceDetailsVisible, setDeviceDetailsVisible] = useState(false);
+  const [deviceDetailsId, setDeviceDetailsId] = useState<string | null>(null);
+  const [deviceDetailsName, setDeviceDetailsName] = useState<string>("");
+
+  // Watering schedule placeholder modal state
+  const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
+  const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
+  const [wateringScheduleName, setWateringScheduleName] = useState<string>("");
+
   // Upsert (add/edit) device modal state
   const [upsertVisible, setUpsertVisible] = useState(false);
   const [upsertMode, setUpsertMode] = useState<"add" | "edit">("add");
@@ -191,9 +201,17 @@ export default function ReadingsScreen() {
       setExportModalVisible(false);
       setDeleteVisible(false);
       setDeviceSetupVisible(false);
+      setDeviceDetailsVisible(false);
+      setWateringScheduleVisible(false);
       setUpsertVisible(false);
       setSortSheetOpen(false);
       setFilterSheetOpen(false);
+
+      // clear placeholder modal state
+      setDeviceDetailsId(null);
+      setDeviceDetailsName("");
+      setWateringScheduleId(null);
+      setWateringScheduleName("");
 
       // close any 3-dot dropdown
       setMenuOpenId(null);
@@ -373,6 +391,8 @@ export default function ReadingsScreen() {
     !exportModalVisible &&
     !deleteVisible &&
     !deviceSetupVisible &&
+    !deviceDetailsVisible &&
+    !wateringScheduleVisible &&
     !upsertVisible;
 
   // ---- Delete handlers ----
@@ -472,6 +492,26 @@ export default function ReadingsScreen() {
       setUpsertReadingId(id);
       setUpsertReadingName(item?.name);
       setUpsertVisible(true);
+    },
+    [items]
+  );
+
+  const openDeviceDetails = useCallback(
+    (id: string) => {
+      const item = items.find((x) => x.id === id);
+      setDeviceDetailsId(id);
+      setDeviceDetailsName(item?.name ?? "");
+      setDeviceDetailsVisible(true);
+    },
+    [items]
+  );
+
+  const openWateringSchedule = useCallback(
+    (id: string) => {
+      const item = items.find((x) => x.id === id);
+      setWateringScheduleId(id);
+      setWateringScheduleName(item?.name ?? "");
+      setWateringScheduleVisible(true);
     },
     [items]
   );
@@ -674,23 +714,27 @@ export default function ReadingsScreen() {
                 isMenuOpen={menuOpenId === item.id}
                 onPressBody={() => nav.navigate("ReadingDetails" as never, { id: item.id } as never)}
                 onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
-                onHistory={() => {
-                  setMenuOpenId(null);
-                  nav.navigate("ReadingsHistory" as never, { id: item.id } as never);
-                }}
                 onEdit={() => {
                   setMenuOpenId(null);
                   openEditDevice(item.id);
                 }}
-                onDelete={() => {
+                onDeviceDetails={() => {
                   setMenuOpenId(null);
-                  openDeleteFor(item.id);
+                  openDeviceDetails(item.id);
+                }}
+                onHistory={() => {
+                  setMenuOpenId(null);
+                  nav.navigate("ReadingsHistory" as never, { id: item.id } as never);
                 }}
                 onPlantDetails={() => {
                   setMenuOpenId(null);
                   if (dev?.plant) {
                     nav.navigate("PlantDetails" as never, { id: String(dev.plant) } as never);
                   }
+                }}
+                onDelete={() => {
+                  setMenuOpenId(null);
+                  openDeleteFor(item.id);
                 }}
                 onMetricPress={(metric) => nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)}
                 deviceName={dev?.device_name}
@@ -700,6 +744,7 @@ export default function ReadingsScreen() {
                   light: !!dev?.sensors?.light,
                   moisture: !!dev?.sensors?.moisture,
                 }}
+                onLaunchPump={() => openWateringSchedule(item.id)}
               />
             </Animated.View>
           );
@@ -870,6 +915,88 @@ export default function ReadingsScreen() {
           }
         }}
       />
+
+      {/* Device details placeholder modal */}
+      <Modal
+        visible={deviceDetailsVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setDeviceDetailsVisible(false)}
+      >
+        <View style={placeholderModalStyles.overlay}>
+          <View style={placeholderModalStyles.card}>
+            <Text style={placeholderModalStyles.title}>
+              {tr("readings.deviceDetailsModal.title", "Device details")}
+            </Text>
+            <Text style={placeholderModalStyles.text}>
+              {tr(
+                "readings.deviceDetailsModal.description",
+                "This is a placeholder modal for device details. The full implementation will be added later."
+              )}
+            </Text>
+            {!!deviceDetailsName && (
+              <Text style={placeholderModalStyles.meta}>
+                {tr("readings.deviceDetailsModal.deviceLabel", "Device")}: {deviceDetailsName}
+              </Text>
+            )}
+            {!!deviceDetailsId && (
+              <Text style={placeholderModalStyles.meta}>
+                ID: {deviceDetailsId}
+              </Text>
+            )}
+
+            <Pressable
+              style={placeholderModalStyles.closeButton}
+              onPress={() => setDeviceDetailsVisible(false)}
+            >
+              <Text style={placeholderModalStyles.closeButtonText}>
+                {tr("common.close", "Close")}
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
+      {/* Watering schedule placeholder modal */}
+      <Modal
+        visible={wateringScheduleVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setWateringScheduleVisible(false)}
+      >
+        <View style={placeholderModalStyles.overlay}>
+          <View style={placeholderModalStyles.card}>
+            <Text style={placeholderModalStyles.title}>
+              {tr("readings.wateringScheduleModal.title", "Schedule watering")}
+            </Text>
+            <Text style={placeholderModalStyles.text}>
+              {tr(
+                "readings.wateringScheduleModal.description",
+                "This is a placeholder modal for scheduling watering. The full implementation will be added later."
+              )}
+            </Text>
+            {!!wateringScheduleName && (
+              <Text style={placeholderModalStyles.meta}>
+                {tr("readings.wateringScheduleModal.deviceLabel", "Device")}: {wateringScheduleName}
+              </Text>
+            )}
+            {!!wateringScheduleId && (
+              <Text style={placeholderModalStyles.meta}>
+                ID: {wateringScheduleId}
+              </Text>
+            )}
+
+            <Pressable
+              style={placeholderModalStyles.closeButton}
+              onPress={() => setWateringScheduleVisible(false)}
+            >
+              <Text style={placeholderModalStyles.closeButtonText}>
+                {tr("common.close", "Close")}
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
 
       {/* Upsert (add/edit) reading device */}
       <UpsertReadingDeviceModal
@@ -1071,3 +1198,51 @@ export default function ReadingsScreen() {
     </View>
   );
 }
+
+const placeholderModalStyles = StyleSheet.create({
+  overlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.55)",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
+  },
+  card: {
+    width: "100%",
+    maxWidth: 420,
+    borderRadius: 20,
+    backgroundColor: "#17392F",
+    padding: 20,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+  },
+  title: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "700",
+    marginBottom: 10,
+  },
+  text: {
+    color: "rgba(255,255,255,0.88)",
+    fontSize: 14,
+    lineHeight: 20,
+  },
+  meta: {
+    color: "rgba(255,255,255,0.72)",
+    fontSize: 13,
+    marginTop: 10,
+  },
+  closeButton: {
+    marginTop: 18,
+    alignSelf: "flex-end",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  closeButtonText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 14,
+  },
+});

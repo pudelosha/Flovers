@@ -20,10 +20,11 @@ type Props = {
   onPressBody: () => void;
   onPressMenu: () => void;
 
-  onHistory: () => void;
   onEdit: () => void;
-  onDelete: () => void;
+  onDeviceDetails: () => void;
+  onHistory: () => void;
   onPlantDetails: () => void;
+  onDelete: () => void;
 
   onMetricPress: (metric: MetricKey) => void;
 
@@ -157,10 +158,11 @@ export default function ReadingTile({
   isMenuOpen,
   onPressBody,
   onPressMenu,
-  onHistory,
   onEdit,
-  onDelete,
+  onDeviceDetails,
+  onHistory,
   onPlantDetails,
+  onDelete,
   onMetricPress,
   deviceName,
   sensors,
@@ -299,10 +301,11 @@ export default function ReadingTile({
 
       {isMenuOpen && (
         <ReadingMenu
-          onHistory={onHistory}
           onEdit={onEdit}
-          onDelete={onDelete}
+          onDeviceDetails={onDeviceDetails}
+          onHistory={onHistory}
           onPlantDetails={onPlantDetails}
+          onDelete={onDelete}
         />
       )}
 
@@ -393,7 +396,7 @@ export default function ReadingTile({
             disabled={isLaunchingPump}
           >
             <Text style={pumpStyles.launchButtonText}>
-              {isLaunchingPump ? "Uruchamianie..." : "Uruchom pompę"}
+              {isLaunchingPump ? "Otwieranie..." : "Schedule watering"}
             </Text>
           </Pressable>
         </>
