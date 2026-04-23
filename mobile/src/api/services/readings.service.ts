@@ -89,9 +89,9 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
     location: api.plant_location ?? null,  // Now `location` maps correctly to `ReadingTileModel`
     status: api.is_active ? "enabled" : "disabled",  // Map status based on is_active
     lastPumpRunAt: api.last_pump_run_at ?? null,  // Add last pump run timestamp
-    pumpIncluded: api.pumpIncluded,  // Flag for pump inclusion
-    automaticPumpLaunch: api.automaticPumpLaunch,  // Flag for auto watering
-    pumpThresholdPct: api.pumpThresholdPct ?? undefined,  // Default to undefined if null
+    pumpIncluded: api.pump_included,  // Flag for pump inclusion
+    automaticPumpLaunch: api.automatic_pump_launch,  // Flag for auto watering
+    pumpThresholdPct: api.pump_threshold_pct ?? undefined,  // Default to undefined if null
   };
 }
 

@@ -44,6 +44,13 @@ type Props = {
   // sampling interval 1..24h
   initialIntervalHours?: number;
 
+  // notifications / pump initial values
+  initialSendEmailNotifications?: boolean;
+  initialSendPushNotifications?: boolean;
+  initialPumpIncluded?: boolean;
+  initialAutomaticPumpLaunch?: boolean;
+  initialPumpThresholdPct?: number;
+
   // read-only (edit only)
   deviceKey?: string;
   authSecret?: string;
@@ -93,6 +100,11 @@ export default function UpsertReadingDeviceModal({
   initialMoistureAlertPct,
   initialHumidityAlertPct, // legacy
   initialIntervalHours = 1,
+  initialSendEmailNotifications = false,
+  initialSendPushNotifications = false,
+  initialPumpIncluded = false,
+  initialAutomaticPumpLaunch = false,
+  initialPumpThresholdPct = 30,
   deviceKey,
   authSecret,
   onCancel,
@@ -105,6 +117,13 @@ export default function UpsertReadingDeviceModal({
   // ---- hooks (always run) ----
   const [plantOpen, setPlantOpen] = React.useState(false);
 
+  const defaultMoistPct =
+    typeof initialMoistureAlertPct === "number"
+      ? initialMoistureAlertPct
+      : typeof initialHumidityAlertPct === "number"
+      ? initialHumidityAlertPct
+      : 30;
+
   // Local state (will be reset by sync effect below when props/visibility change)
   const [plantId, setPlantId] = React.useState<string>(mode === "edit" && initialPlantId ? initialPlantId : "");
   const [name, setName] = React.useState<string>(initialName ?? "");
@@ -116,30 +135,78 @@ export default function UpsertReadingDeviceModal({
   const [sensorLight, setSensorLight] = React.useState<boolean>(initialSensors?.light ?? true);
   const [sensorMoist, setSensorMoist] = React.useState<boolean>(initialSensors?.moisture ?? true);
 
-  const defaultMoistPct =
-    typeof initialMoistureAlertPct === "number"
-      ? initialMoistureAlertPct
-      : typeof initialHumidityAlertPct === "number"
-      ? initialHumidityAlertPct
-      : 30;
-
   const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(Boolean(initialMoistureAlertEnabled));
   const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(100, defaultMoistPct)));
 
   const [intervalHours, setIntervalHours] = React.useState<number>(Math.max(initialIntervalHours, 1));
 
   // Additional state for notifications and pump control
-  const [sendEmailNotifications, setSendEmailNotifications] = React.useState(false);
-  const [sendPushNotifications, setSendPushNotifications] = React.useState(false);
-  const [pumpIncluded, setPumpIncluded] = React.useState(false);
-  const [automaticPumpLaunch, setAutomaticPumpLaunch] = React.useState(false);
-  const [pumpThresholdPct, setPumpThresholdPct] = React.useState(30);
+  const [sendEmailNotifications, setSendEmailNotifications] = React.useState<boolean>(initialSendEmailNotifications);
+  const [sendPushNotifications, setSendPushNotifications] = React.useState<boolean>(initialSendPushNotifications);
+  const [pumpIncluded, setPumpIncluded] = React.useState<boolean>(initialPumpIncluded);
+  const [automaticPumpLaunch, setAutomaticPumpLaunch] = React.useState<boolean>(initialAutomaticPumpLaunch);
+  const [pumpThresholdPct, setPumpThresholdPct] = React.useState<number>(
+    Math.max(0, Math.min(100, initialPumpThresholdPct))
+  );
 
   // show/hide secret
   const [showSecret, setShowSecret] = React.useState(false);
 
   // Close dropdown when modal opens
   React.useEffect(() => { if (visible) setPlantOpen(false); }, [visible]);
+
+  // Reset local state whenever modal opens / source props change
+  React.useEffect(() => {
+    if (!visible) return;
+
+    const nextDefaultMoistPct =
+      typeof initialMoistureAlertPct === "number"
+        ? initialMoistureAlertPct
+        : typeof initialHumidityAlertPct === "number"
+        ? initialHumidityAlertPct
+        : 30;
+
+    setPlantOpen(false);
+    setPlantId(mode === "edit" && initialPlantId ? initialPlantId : "");
+    setName(initialName ?? "");
+    setNotes(initialNotes ?? "");
+    setEnabled(initialEnabled);
+
+    setSensorTemp(initialSensors?.temperature ?? true);
+    setSensorHum(initialSensors?.humidity ?? true);
+    setSensorLight(initialSensors?.light ?? true);
+    setSensorMoist(initialSensors?.moisture ?? true);
+
+    setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
+    setMoistAlertPct(Math.max(0, Math.min(100, nextDefaultMoistPct)));
+
+    setIntervalHours(Math.max(initialIntervalHours, 1));
+
+    setSendEmailNotifications(Boolean(initialSendEmailNotifications));
+    setSendPushNotifications(Boolean(initialSendPushNotifications));
+    setPumpIncluded(Boolean(initialPumpIncluded));
+    setAutomaticPumpLaunch(Boolean(initialAutomaticPumpLaunch));
+    setPumpThresholdPct(Math.max(0, Math.min(100, initialPumpThresholdPct)));
+
+    setShowSecret(false);
+  }, [
+    visible,
+    mode,
+    initialPlantId,
+    initialName,
+    initialNotes,
+    initialEnabled,
+    initialSensors,
+    initialMoistureAlertEnabled,
+    initialMoistureAlertPct,
+    initialHumidityAlertPct,
+    initialIntervalHours,
+    initialSendEmailNotifications,
+    initialSendPushNotifications,
+    initialPumpIncluded,
+    initialAutomaticPumpLaunch,
+    initialPumpThresholdPct,
+  ]);
 
   const selectedPlant = React.useMemo(
     () => plants.find((p) => p.id === plantId),
@@ -162,6 +229,10 @@ export default function UpsertReadingDeviceModal({
 
   const handleSave = () => {
     if (!canSave) return;
+
+    const shouldEnableMoistureAlert =
+      sensorMoist && (sendEmailNotifications || sendPushNotifications || moistAlertEnabled);
+
     onSave({
       mode,
       plantId,
@@ -173,8 +244,8 @@ export default function UpsertReadingDeviceModal({
         humidity: sensorHum,
         light: sensorLight,
         moisture: sensorMoist,
-        moistureAlertEnabled: sensorMoist ? moistAlertEnabled : undefined,
-        moistureAlertPct: sensorMoist && moistAlertEnabled ? moistAlertPct : undefined,
+        moistureAlertEnabled: sensorMoist ? shouldEnableMoistureAlert : undefined,
+        moistureAlertPct: sensorMoist && shouldEnableMoistureAlert ? moistAlertPct : undefined,
       },
       intervalHours,
       sendEmailNotifications,
@@ -290,17 +361,22 @@ export default function UpsertReadingDeviceModal({
                     checked={sendPushNotifications}
                     onToggle={() => setSendPushNotifications((v) => !v)}
                   />
-                  <View style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 5 }}>
-                    <Slider
-                      minimumValue={0}
-                      maximumValue={100}
-                      step={1}
-                      value={moistAlertPct}
-                      onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))))}
-                      style={{ flex: 1 }}
-                    />
-                    <Text style={{ color: "#fff", fontWeight: "600", marginLeft: 8 }}>{moistAlertPct}%</Text>
-                  </View>
+                  {Slider ? (
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 5 }}>
+                      <Slider
+                        minimumValue={0}
+                        maximumValue={100}
+                        step={1}
+                        value={moistAlertPct}
+                        onValueChange={(v: number) => {
+                          setMoistAlertEnabled(true);
+                          setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))));
+                        }}
+                        style={{ flex: 1 }}
+                      />
+                      <Text style={{ color: "#fff", fontWeight: "600", marginLeft: 8 }}>{moistAlertPct}%</Text>
+                    </View>
+                  ) : null}
                 </View>
               </>
             )}
@@ -322,7 +398,7 @@ export default function UpsertReadingDeviceModal({
                   onToggle={() => setAutomaticPumpLaunch((v) => !v)}
                 />
               )}
-              {automaticPumpLaunch && (
+              {automaticPumpLaunch && Slider ? (
                 <View style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 16, marginRight: 16 }}>
                   <Slider
                     minimumValue={0}
@@ -334,7 +410,7 @@ export default function UpsertReadingDeviceModal({
                   />
                   <Text style={{ color: "#fff", fontWeight: "600", marginLeft: 8 }}>{pumpThresholdPct}%</Text>
                 </View>
-              )}
+              ) : null}
             </View>
 
             {/* Footer */}

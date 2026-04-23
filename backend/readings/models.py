@@ -41,6 +41,14 @@ class ReadingDevice(models.Model):
     moisture_alert_threshold = models.FloatField(null=True, blank=True)
     moisture_alert_active = models.BooleanField(default=False)
 
+    send_email_notifications = models.BooleanField(default=False)
+    send_push_notifications = models.BooleanField(default=False)
+
+    pump_included = models.BooleanField(default=False)
+    automatic_pump_launch = models.BooleanField(default=False)
+    pump_threshold_pct = models.FloatField(null=True, blank=True)
+    last_pump_run_at = models.DateTimeField(null=True, blank=True)
+
     last_read_at = models.DateTimeField(null=True, blank=True)
     latest_snapshot = models.JSONField(null=True, blank=True)
 

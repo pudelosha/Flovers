@@ -91,6 +91,9 @@ def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: st
 
 
 def _send_moisture_alert_email(device: ReadingDevice, moisture_value: float) -> bool:
+    if not device.send_email_notifications:
+        return False
+
     user = device.user
     if not user.email:
         return False
@@ -132,6 +135,9 @@ def _send_moisture_alert_email(device: ReadingDevice, moisture_value: float) -> 
 
 
 def _send_moisture_alert_push(device: ReadingDevice, moisture_value: float) -> int:
+    if not device.send_push_notifications:
+        return 0
+
     user = device.user
     lang = _get_user_lang(user)
 

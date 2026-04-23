@@ -12,7 +12,7 @@ export type ReadingTileModel = {
     light: number | null;
     moisture: number | null;
   };
-  location: string | null;      // Added location field
+  location: string | null;       // Added location field
   lastPumpRunAt?: string | null; // Timestamp of last pump run
   pumpIncluded: boolean;         // Flag to indicate if pump is included
   automaticPumpLaunch: boolean;  // Flag to indicate if auto watering is enabled
@@ -50,39 +50,59 @@ export type ApiReadingDevice = {
   moisture_alert_active?: boolean;
   last_read_at?: string | null;
   latest?: ApiReadingMetrics | null;
-  sendEmailNotifications?: boolean;
-  sendPushNotifications?: boolean;
-  pumpIncluded: boolean;
-  automaticPumpLaunch: boolean;
-  pumpThresholdPct?: number | null;  // Correctly typed to handle undefined or null
-  last_pump_run_at?: string | null;  // Timestamp of last pump run
+
+  send_email_notifications?: boolean;
+  send_push_notifications?: boolean;
+
+  pump_included: boolean;
+  automatic_pump_launch: boolean;
+  pump_threshold_pct?: number | null;
+  last_pump_run_at?: string | null;
+
   created_at: string;
   updated_at: string;
 };
 
 export type ApiReadingDeviceCreatePayload = {
-  plant: number;
-  device_name: string;
+  // Canonical backend fields
+  plant?: number;
+  device_name?: string;
   notes?: string;
-  interval_hours: number; // 1..24
+  is_active?: boolean;
+  interval_hours?: number; // 1..24
   sensors: {
     temperature: boolean;
     humidity: boolean;
     light: boolean;
     moisture: boolean;
+    moistureAlertEnabled?: boolean;
+    moistureAlertPct?: number;
   };
   moisture_alert_enabled?: boolean;
   moisture_alert_threshold?: number | null;
 
-  // New fields for notifications and pump configuration
-  sendEmailNotifications: boolean;  // Flag for email notifications
-  sendPushNotifications: boolean;  // Flag for push notifications
-  pumpIncluded: boolean;           // Flag for pump inclusion
-  automaticPumpLaunch: boolean;    // Flag for auto watering
-  pumpThresholdPct: number;        // Threshold percentage for automatic watering
+  send_email_notifications?: boolean;
+  send_push_notifications?: boolean;
+  pump_included?: boolean;
+  automatic_pump_launch?: boolean;
+  pump_threshold_pct?: number | null;
+
+  // UI alias fields accepted by backend serializer
+  mode?: "add" | "edit";
+  plantId?: string | number;
+  name?: string;
+  enabled?: boolean;
+  intervalHours?: number;
+
+  sendEmailNotifications?: boolean;
+  sendPushNotifications?: boolean;
+  pumpIncluded?: boolean;
+  automaticPumpLaunch?: boolean;
+  pumpThresholdPct?: number | null;
 };
 
 export type ApiReadingDeviceUpdatePayload = Partial<{
+  // Canonical backend fields
   plant: number;
   device_name: string;
   notes: string | null;
@@ -93,14 +113,28 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
     humidity?: boolean;
     light?: boolean;
     moisture?: boolean;
+    moistureAlertEnabled?: boolean;
+    moistureAlertPct?: number;
   };
   moisture_alert_enabled: boolean;
   moisture_alert_threshold: number | null;
 
-  // New fields for notifications and pump configuration
-  sendEmailNotifications: boolean;  // Flag for email notifications
-  sendPushNotifications: boolean;  // Flag for push notifications
-  pumpIncluded: boolean;           // Flag for pump inclusion
-  automaticPumpLaunch: boolean;    // Flag for auto watering
-  pumpThresholdPct: number;        // Threshold percentage for automatic watering
+  send_email_notifications: boolean;
+  send_push_notifications: boolean;
+  pump_included: boolean;
+  automatic_pump_launch: boolean;
+  pump_threshold_pct: number | null;
+
+  // UI alias fields accepted by backend serializer
+  mode: "add" | "edit";
+  plantId: string | number;
+  name: string;
+  enabled: boolean;
+  intervalHours: number;
+
+  sendEmailNotifications: boolean;
+  sendPushNotifications: boolean;
+  pumpIncluded: boolean;
+  automaticPumpLaunch: boolean;
+  pumpThresholdPct: number | null;
 }>;
