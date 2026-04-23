@@ -1,4 +1,3 @@
-// src/features/readings/styles/readings.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -9,13 +8,6 @@ export const s = StyleSheet.create({
     overflow: "visible",
     position: "relative",
     minHeight: 148,
-
-    // remove inner-shade-causing shadows
-    // shadowColor: "#000",
-    // shadowOpacity: 0.25,
-    // shadowRadius: 16,
-    // shadowOffset: { width: 0, height: 8 },
-    // elevation: 8,
   },
 
   cardGlass: {
@@ -75,13 +67,6 @@ export const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 6,
-
-    // remove per-icon shadow to keep tiles consistent + avoid artifacts
-    // shadowColor: "#000",
-    // shadowOpacity: 0.15,
-    // shadowRadius: 6,
-    // shadowOffset: { width: 0, height: 3 },
-    // elevation: 2,
   },
 
   metricValue: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
@@ -115,36 +100,27 @@ export const s = StyleSheet.create({
     paddingTop: 0,
   },
 
-  // ADDED (styles are in this separate file, as requested)
-  emptyGlass: {
-    borderRadius: 28,
-    overflow: "hidden",
-    minHeight: 140,
-  },
-  emptyTint: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.14)",
-  },
-  emptyBorder: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 28,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+  // Separator line for headers and sections (white for testing)
+  separatorLine: {
+    borderBottomWidth: 1,
+    borderBottomColor: "#FFFFFF", // White separator line for testing
+    marginVertical: 12, // Adjust for better spacing
   },
 
-  emptyInner: { padding: 16, alignItems: "center" },
-  emptyTitle: {
+  // Header for left-aligned text, ensuring consistency
+  headerLeft: {
     color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "800",
-    marginBottom: 8,
-    textAlign: "center",
+    fontWeight: "700", // Aligning text to match other headers
+    fontSize: 16,
+    marginLeft: 16, // Ensures alignment with other elements
+    marginBottom: 6, // Small space after the header
   },
-  emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
-  emptyText: {
-    color: "rgba(255,255,255,0.95)",
-    fontWeight: "600",
-    lineHeight: 18,
+
+  // Adding styles for sensors, notifications, and water pump headers
+  headerText: {
+    color: "#FFFFFF",
+    fontWeight: "700",  // Same as other headers
+    fontSize: 16,
+    marginLeft: 16,  // Align all headers to the left
   },
-  inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });

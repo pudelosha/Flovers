@@ -102,7 +102,16 @@
       "saveCodeAsText": "Save code as text",
       "enabled": "Enabled",
       "ingestReadingsFromDevice": "Ingest readings from this device",
-      "notesOptional": "Notes… (optional)"
+      "notesOptional": "Notes… (optional)",
+      "notifications": "Notifications",
+      "sendEmailNotifications": "Send email notifications when soil moisture is beneath threshold",
+      "sendPushNotifications": "Send push notifications when soil moisture is beneath threshold",
+      "waterPump": "Water Pump",
+      "pumpIncluded": "Include water pump with this device",
+      "automaticPumpLaunch": "Automatic pump launch when soil moisture is beneath threshold",
+      "pumpThreshold": "Threshold: ",
+      "pumpThresholdValue": "{{value}}%",
+      "samplingIntervalRemoved": "Sampling interval has been removed"
     }
   }
 }

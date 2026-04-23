@@ -6,7 +6,7 @@ import Clipboard from "@react-native-clipboard/clipboard";
 import { useTranslation } from "react-i18next";
 
 // Match the Edit Plant modal styling:
-import { s as sp } from "../../../plants/styles/plants.styles";        // dropdown / inputs styles
+import { s as sp } from "../../../plants/styles/plants.styles"; // dropdown / inputs styles
 import { prompts as pr } from "../../../profile/styles/profile.styles"; // prompt chrome (backdrop/sheet/buttons)
 
 type Mode = "add" | "edit";
@@ -65,6 +65,11 @@ type Props = {
       moistureAlertPct?: number;
     };
     intervalHours: number;
+    sendEmailNotifications?: boolean;
+    sendPushNotifications?: boolean;
+    pumpIncluded?: boolean;
+    automaticPumpLaunch?: boolean;
+    pumpThresholdPct?: number;
   }) => void;
 
   // edit-only convenience actions
@@ -121,64 +126,20 @@ export default function UpsertReadingDeviceModal({
   const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(Boolean(initialMoistureAlertEnabled));
   const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(100, defaultMoistPct)));
 
-  const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
-  const [intervalHours, setIntervalHours] = React.useState<number>(clamp(initialIntervalHours, 1, 24));
+  const [intervalHours, setIntervalHours] = React.useState<number>(Math.max(initialIntervalHours, 1));
+
+  // Additional state for notifications and pump control
+  const [sendEmailNotifications, setSendEmailNotifications] = React.useState(false);
+  const [sendPushNotifications, setSendPushNotifications] = React.useState(false);
+  const [pumpIncluded, setPumpIncluded] = React.useState(false);
+  const [automaticPumpLaunch, setAutomaticPumpLaunch] = React.useState(false);
+  const [pumpThresholdPct, setPumpThresholdPct] = React.useState(30);
 
   // show/hide secret
   const [showSecret, setShowSecret] = React.useState(false);
 
   // Close dropdown when modal opens
   React.useEffect(() => { if (visible) setPlantOpen(false); }, [visible]);
-
-  // ✅ SYNC EFFECT: when opening the modal (or when any initial* changes), re-seed local state
-  React.useEffect(() => {
-    if (!visible) return;
-    const nextPlantId = mode === "edit" && initialPlantId ? initialPlantId : "";
-    setPlantId(nextPlantId);
-    setName(initialName ?? "");
-    setNotes(initialNotes ?? "");
-    setEnabled(initialEnabled);
-
-    setSensorTemp(initialSensors?.temperature ?? true);
-    setSensorHum(initialSensors?.humidity ?? true);
-    setSensorLight(initialSensors?.light ?? true);
-    setSensorMoist(initialSensors?.moisture ?? true);
-
-    const moistPct =
-      typeof initialMoistureAlertPct === "number"
-        ? initialMoistureAlertPct
-        : typeof initialHumidityAlertPct === "number"
-        ? initialHumidityAlertPct
-        : 30;
-
-    setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
-    setMoistAlertPct(Math.max(0, Math.min(100, moistPct)));
-
-    setIntervalHours(clamp(initialIntervalHours ?? 1, 1, 24));
-    setShowSecret(false);
-  }, [
-    visible,
-    mode,
-    initialPlantId,
-    initialName,
-    initialNotes,
-    initialEnabled,
-    initialSensors?.temperature,
-    initialSensors?.humidity,
-    initialSensors?.light,
-    initialSensors?.moisture,
-    initialMoistureAlertEnabled,
-    initialMoistureAlertPct,
-    initialHumidityAlertPct,
-    initialIntervalHours,
-  ]);
-
-  // Keep plantId valid if it points to a missing plant; do NOT auto-pick first in add mode.
-  React.useEffect(() => {
-    if (plantId && !plants.some((p) => p.id === plantId)) {
-      setPlantId("");
-    }
-  }, [plants, plantId]);
 
   const selectedPlant = React.useMemo(
     () => plants.find((p) => p.id === plantId),
@@ -216,39 +177,16 @@ export default function UpsertReadingDeviceModal({
         moistureAlertPct: sensorMoist && moistAlertEnabled ? moistAlertPct : undefined,
       },
       intervalHours,
+      sendEmailNotifications,
+      sendPushNotifications,
+      pumpIncluded,
+      automaticPumpLaunch,
+      pumpThresholdPct,
     });
   };
 
   // ---- UI ----
   if (!visible) return null;
-
-  // Empty plants state
-  if (plants.length === 0) {
-    return (
-      <>
-        <Pressable style={pr.backdrop} onPress={onCancel} />
-        <View style={pr.promptWrap}>
-          <View style={pr.promptGlass}>
-            <BlurView style={{ position: "absolute", inset: 0 } as any} blurType="light" blurAmount={14} reducedTransparencyFallbackColor="rgba(255,255,255,0.25)" />
-            <View pointerEvents="none" style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any} />
-          </View>
-          <View style={[pr.promptInner, { maxHeight: "86%" }]}>
-            <ScrollView contentContainerStyle={{ paddingBottom: 24 }}>
-              <Text style={pr.promptTitle}>{t("readingsModals.upsert.linkDeviceTitle")}</Text>
-              <Text style={{ color: "rgba(255,255,255,0.95)", paddingHorizontal: 16 }}>
-                {t("readingsModals.upsert.noPlantsText")}
-              </Text>
-              <View style={[pr.promptButtonsRow, { marginTop: 12 }]}>
-                <Pressable style={pr.promptBtn} onPress={onCancel}>
-                  <Text style={pr.promptBtnText}>{t("readingsModals.common.close")}</Text>
-                </Pressable>
-              </View>
-            </ScrollView>
-          </View>
-        </View>
-      </>
-    );
-  }
 
   const title = mode === "add" ? t("readingsModals.upsert.linkDeviceTitle") : t("readingsModals.upsert.editDeviceTitle");
 
@@ -316,222 +254,7 @@ export default function UpsertReadingDeviceModal({
               onChangeText={setName}
             />
 
-            {/* Sensors */}
-            <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 8 }]}>
-              {t("readingsModals.upsert.sensors")}
-            </Text>
-            <View style={{ gap: 10, marginHorizontal: 16, marginTop: 6 }}>
-              <RowSwitch label={t("readingsModals.upsert.sensorTemperature")} value={sensorTemp} onValueChange={setSensorTemp} weight="600" />
-              <RowSwitch label={t("readingsModals.upsert.sensorHumidity")} value={sensorHum} onValueChange={setSensorHum} weight="600" />
-              <RowSwitch label={t("readingsModals.upsert.sensorLight")} value={sensorLight} onValueChange={setSensorLight} weight="600" />
-              <RowSwitch label={t("readingsModals.upsert.sensorSoilMoisture")} value={sensorMoist} onValueChange={setSensorMoist} weight="600" />
-
-              {/* Soil moisture alert controls */}
-              {sensorMoist && (
-                <View style={{ marginLeft: 8, gap: 10 }}>
-                  <CheckRow
-                    label={t("readingsModals.upsert.moistAlertLabel")}
-                    checked={moistAlertEnabled}
-                    onToggle={() => setMoistAlertEnabled((v) => !v)}
-                  />
-                  {moistAlertEnabled && (
-                    <View style={{ marginLeft: 8 }}>
-                      <Text
-                        style={[
-                          sp.dropdownItemText,
-                          { fontWeight: "600", fontSize: 12, opacity: 0.9, marginBottom: 6 }
-                        ]}
-                      >
-                        {t("readingsModals.upsert.thresholdLabel")}{" "}
-                        <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}%</Text>
-                      </Text>
-                      {Slider ? (
-                        <Slider
-                          minimumValue={0}
-                          maximumValue={100}
-                          step={1}
-                          value={moistAlertPct}
-                          onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))))}
-                          style={{ marginBottom: 12 }}
-                        />
-                      ) : (
-                        <TextInput
-                          style={pr.input}
-                          keyboardType="numeric"
-                          value={String(moistAlertPct)}
-                          onChangeText={(t2) => {
-                            const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
-                            const v = Number.isFinite(n) ? n : 30;
-                            setMoistAlertPct(Math.max(0, Math.min(100, v)));
-                          }}
-                          placeholder="30"
-                          placeholderTextColor="rgba(255,255,255,0.7)"
-                        />
-                      )}
-                    </View>
-                  )}
-                </View>
-              )}
-            </View>
-
-            {/* Sampling interval */}
-            <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>
-              {t("readingsModals.upsert.samplingInterval")}
-            </Text>
-            <Text
-              style={[
-                sp.dropdownItemText,
-                { marginHorizontal: 16, marginTop: 4, fontWeight: "600", fontSize: 12, opacity: 0.9 }
-              ]}
-            >
-              {t("readingsModals.upsert.everyXHours", { count: intervalHours })}
-            </Text>
-            <View style={{ marginTop: 6, marginHorizontal: 16 }}>
-              {Slider ? (
-                <Slider
-                  minimumValue={1}
-                  maximumValue={24}
-                  step={1}
-                  value={intervalHours}
-                  onValueChange={(v: number) => setIntervalHours(Math.max(1, Math.min(24, Math.round(v))))}
-                  style={{ marginBottom: 12 }}
-                />
-              ) : (
-                <TextInput
-                  style={pr.input}
-                  keyboardType="numeric"
-                  value={String(intervalHours)}
-                  onChangeText={(t2) => {
-                    const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
-                    const v = Number.isFinite(n) ? n : 1;
-                    const clamped = Math.max(1, Math.min(24, v));
-                    setIntervalHours(clamped);
-                  }}
-                  placeholder="1"
-                  placeholderTextColor="rgba(255,255,255,0.7)"
-                />
-              )}
-            </View>
-
-            {/* Edit-only connectivity + actions */}
-            {mode === "edit" && (
-              <>
-                <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16, marginBottom: 6 }]}>
-                  {t("readingsModals.upsert.authSecret")}
-                </Text>
-                <Pressable
-                  onPress={() => copyToClipboard(authSecret)}
-                  style={{
-                    marginHorizontal: 16,
-                    padding: 12,
-                    borderRadius: 12,
-                    backgroundColor: "rgba(255,255,255,0.10)",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Text style={sp.dropdownValue} selectable={showSecret}>
-                    {authSecret ? (showSecret ? authSecret : "••••••••••••••") : t("readingsModals.common.dash")}
-                  </Text>
-                  <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-                    {authSecret ? (
-                      <Pressable
-                        onPress={() => setShowSecret((v) => !v)}
-                        hitSlop={8}
-                        accessibilityRole="button"
-                        accessibilityLabel={
-                          showSecret
-                            ? t("readingsModals.deviceSetup.hideAuthSecret")
-                            : t("readingsModals.deviceSetup.showAuthSecret")
-                        }
-                      >
-                        <MaterialCommunityIcons
-                          name={showSecret ? "eye-off-outline" : "eye-outline"}
-                          size={20}
-                          color="#FFFFFF"
-                        />
-                      </Pressable>
-                    ) : null}
-                    {authSecret ? (
-                      <MaterialCommunityIcons
-                        name="content-copy"
-                        size={18}
-                        color="#FFFFFF"
-                      />
-                    ) : null}
-                  </View>
-                </Pressable>
-
-                <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 10, marginBottom: 6 }]}>
-                  {t("readingsModals.upsert.deviceKey")}
-                </Text>
-                <Pressable
-                  onPress={() => copyToClipboard(deviceKey)}
-                  style={{
-                    marginHorizontal: 16,
-                    padding: 12,
-                    borderRadius: 12,
-                    backgroundColor: "rgba(255,255,255,0.10)",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Text style={sp.dropdownValue}>{deviceKey ? deviceKey : t("readingsModals.common.dash")}</Text>
-                  {deviceKey ? (
-                    <MaterialCommunityIcons
-                      name="content-copy"
-                      size={18}
-                      color="#FFFFFF"
-                    />
-                  ) : null}
-                </Pressable>
-
-                <View style={{ flexDirection: "row", gap: 10, marginHorizontal: 16, marginTop: 12 }}>
-                  {/* Make these primary (blue) to match Save */}
-
-                  <Pressable
-                    onPress={onSendCodeByEmail}
-                    style={[
-                      pr.promptBtn,
-                      pr.promptPrimary,
-                      {
-                        flex: 1,
-                        flexDirection: "row",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: 8,
-
-                        height: undefined,
-                        paddingVertical: 12,
-                        paddingHorizontal: 16,
-                      },
-                    ]}
-                  >
-                    <MaterialCommunityIcons name="email-send-outline" size={18} color="#FFFFFF" />
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
-                      {t("readingsModals.upsert.sendCodeViaEmail")}
-                    </Text>
-                  </Pressable>
-
-                </View>
-
-                <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>
-                  {t("readingsModals.upsert.enabled")}
-                </Text>
-                <View style={{ marginHorizontal: 16 }}>
-                  <RowSwitch
-                    label={t("readingsModals.upsert.ingestReadingsFromDevice")}
-                    value={enabled}
-                    onValueChange={setEnabled}
-                    weight="600"
-                  />
-                </View>
-              </>
-            )}
-
-            {/* Notes */}
+            {/* Move notes up and place it beneath Device Name */}
             <TextInput
               style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
               placeholder={t("readingsModals.upsert.notesOptional")}
@@ -541,18 +264,93 @@ export default function UpsertReadingDeviceModal({
               multiline
             />
 
+            {/* Sensors Section */}
+            <View style={styles.separatorLine} />
+            <Text style={styles.sectionHeader}>{t("readingsModals.upsert.sensors")}</Text>
+            <View style={{ gap: 10, marginHorizontal: 16, marginTop: 6 }}>
+              <RowSwitch label={t("readingsModals.upsert.sensorTemperature")} value={sensorTemp} onValueChange={setSensorTemp} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorHumidity")} value={sensorHum} onValueChange={setSensorHum} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorLight")} value={sensorLight} onValueChange={setSensorLight} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorSoilMoisture")} value={sensorMoist} onValueChange={setSensorMoist} weight="600" />
+            </View>
+
+            {/* Notifications Section - Only shown if Soil Moisture toggle is enabled */}
+            {sensorMoist && (
+              <>
+                <View style={styles.separatorLine} />
+                <Text style={styles.sectionHeader}>{t("readingsModals.upsert.notifications")}</Text>
+                <View style={{ marginHorizontal: 16, marginTop: 10, marginBottom: 10 }}>
+                  <CheckRow
+                    label={t("readingsModals.upsert.sendEmailNotifications")}
+                    checked={sendEmailNotifications}
+                    onToggle={() => setSendEmailNotifications((v) => !v)}
+                  />
+                  <CheckRow
+                    label={t("readingsModals.upsert.sendPushNotifications")}
+                    checked={sendPushNotifications}
+                    onToggle={() => setSendPushNotifications((v) => !v)}
+                  />
+                  <View style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 5 }}>
+                    <Slider
+                      minimumValue={0}
+                      maximumValue={100}
+                      step={1}
+                      value={moistAlertPct}
+                      onValueChange={(v: number) => setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))))}
+                      style={{ flex: 1 }}
+                    />
+                    <Text style={{ color: "#fff", fontWeight: "600", marginLeft: 8 }}>{moistAlertPct}%</Text>
+                  </View>
+                </View>
+              </>
+            )}
+
+            {/* Water Pump Section */}
+            <View style={styles.separatorLine} />
+            <Text style={styles.sectionHeader}>{t("readingsModals.upsert.waterPump")}</Text>
+            <View style={{ marginHorizontal: 16 }}>
+              <RowSwitch
+                label={t("readingsModals.upsert.pumpIncluded")}
+                value={pumpIncluded}
+                onValueChange={setPumpIncluded}
+                weight="600"
+              />
+              {pumpIncluded && (
+                <CheckRow
+                  label={t("readingsModals.upsert.automaticPumpLaunch")}
+                  checked={automaticPumpLaunch}
+                  onToggle={() => setAutomaticPumpLaunch((v) => !v)}
+                />
+              )}
+              {automaticPumpLaunch && (
+                <View style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 16, marginRight: 16 }}>
+                  <Slider
+                    minimumValue={0}
+                    maximumValue={100}
+                    step={1}
+                    value={pumpThresholdPct}
+                    onValueChange={(v: number) => setPumpThresholdPct(Math.max(0, Math.min(100, Math.round(v))))}
+                    style={{ flex: 1 }}
+                  />
+                  <Text style={{ color: "#fff", fontWeight: "600", marginLeft: 8 }}>{pumpThresholdPct}%</Text>
+                </View>
+              )}
+            </View>
+
             {/* Footer */}
-            <View style={pr.promptButtonsRow}>
-              <Pressable style={pr.promptBtn} onPress={onCancel}>
-                <Text style={pr.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
-              </Pressable>
-              <Pressable
-                style={[pr.promptBtn, pr.promptPrimary, (!canSave ? { opacity: 0.5 } : null)]}
-                disabled={!canSave}
-                onPress={handleSave}
-              >
-                <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>{t("readingsModals.common.save")}</Text>
-              </Pressable>
+            <View style={{ paddingVertical: 16 }}>
+              <View style={pr.promptButtonsRow}>
+                <Pressable style={pr.promptBtn} onPress={onCancel}>
+                  <Text style={pr.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
+                </Pressable>
+                <Pressable
+                  style={[pr.promptBtn, pr.promptPrimary, (!canSave ? { opacity: 0.5 } : null)]}
+                  disabled={!canSave}
+                  onPress={handleSave}
+                >
+                  <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>{t("readingsModals.common.save")}</Text>
+                </Pressable>
+              </View>
             </View>
           </ScrollView>
         </View>
@@ -561,7 +359,7 @@ export default function UpsertReadingDeviceModal({
   );
 }
 
-/** Slimmer label switch (less font weight). */
+// Helper components
 function RowSwitch({
   label,
   value,
@@ -627,3 +425,25 @@ function CheckRow({
     </Pressable>
   );
 }
+
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  // Separator line - white for testing, matches the visual style
+  separatorLine: {
+    borderBottomWidth: 1,
+    borderBottomColor: "#FFFFFF", // White for testing purposes
+    marginVertical: 12,
+    marginHorizontal: 16,
+  },
+
+  // Section headers: identical font style to pr.promptTitle
+  sectionHeader: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 18,
+    marginLeft: 16,
+    marginBottom: 8,
+    letterSpacing: 0.1,
+  },
+});
