@@ -492,6 +492,11 @@ export default function ReadingsScreen() {
         moistureAlertPct?: number;
       };
       intervalHours: number;
+      sendEmailNotifications?: boolean;
+      sendPushNotifications?: boolean;
+      pumpIncluded?: boolean;
+      automaticPumpLaunch?: boolean;
+      pumpThresholdPct?: number;
     }) => {
       const isCreate = payload.mode === "add";
       const moistureAlertEnabled = !!(payload.sensors.moisture && payload.sensors.moistureAlertEnabled);
@@ -515,6 +520,14 @@ export default function ReadingsScreen() {
             },
             moisture_alert_enabled: moistureAlertEnabled,
             moisture_alert_threshold: moistureAlertThreshold,
+            send_email_notifications: !!payload.sendEmailNotifications,
+            send_push_notifications: !!payload.sendPushNotifications,
+            pump_included: !!payload.pumpIncluded,
+            automatic_pump_launch: !!payload.automaticPumpLaunch,
+            pump_threshold_pct:
+              payload.pumpIncluded && payload.automaticPumpLaunch
+                ? payload.pumpThresholdPct ?? null
+                : null,
           });
         } else {
           if (!upsertReadingId) return;
@@ -532,6 +545,14 @@ export default function ReadingsScreen() {
             },
             moisture_alert_enabled: moistureAlertEnabled,
             moisture_alert_threshold: moistureAlertThreshold,
+            send_email_notifications: !!payload.sendEmailNotifications,
+            send_push_notifications: !!payload.sendPushNotifications,
+            pump_included: !!payload.pumpIncluded,
+            automatic_pump_launch: !!payload.automaticPumpLaunch,
+            pump_threshold_pct:
+              payload.pumpIncluded && payload.automaticPumpLaunch
+                ? payload.pumpThresholdPct ?? null
+                : null,
           });
         }
 
@@ -933,6 +954,46 @@ export default function ReadingsScreen() {
                 return typeof dev?.moisture_alert_threshold === "number" ? dev.moisture_alert_threshold : undefined;
               })()
             : undefined
+        }
+        initialSendEmailNotifications={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return Boolean(dev?.send_email_notifications);
+              })()
+            : false
+        }
+        initialSendPushNotifications={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return Boolean(dev?.send_push_notifications);
+              })()
+            : false
+        }
+        initialPumpIncluded={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return Boolean(dev?.pump_included);
+              })()
+            : false
+        }
+        initialAutomaticPumpLaunch={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return Boolean(dev?.automatic_pump_launch);
+              })()
+            : false
+        }
+        initialPumpThresholdPct={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                return typeof dev?.pump_threshold_pct === "number" ? dev.pump_threshold_pct : 30;
+              })()
+            : 30
         }
         authSecret={upsertMode === "edit" ? (setupSecret ?? "••••••••••••••") : undefined}
         deviceKey={

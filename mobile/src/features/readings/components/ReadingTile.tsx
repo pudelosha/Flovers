@@ -187,7 +187,7 @@ export default function ReadingTile({
   const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
 
   const effectivePumpIncluded = !!data.pumpIncluded;
-  const effectiveAutoPumpEnabled = autoPumpEnabled ?? data.automaticPumpLaunch;
+  const effectiveAutoPumpEnabled = autoPumpEnabled ?? data.automaticPumpLaunch ?? false;
   const effectiveSoilMoistureThreshold = soilMoistureThreshold ?? data.pumpThresholdPct ?? 30;
   const effectiveLastPumpLaunchDate = lastPumpLaunchDate ?? data.lastPumpRunAt ?? null;
 
@@ -213,19 +213,18 @@ export default function ReadingTile({
   const showLight = sensors ? !!sensors.light : true;
   const showMoist = sensors ? !!sensors.moisture : true;
 
-  // Format last pump launch date
   const lastPumpText = useMemo(() => {
     if (!effectiveLastPumpLaunchDate) {
       return "Ostatnie uruchomienie: —";
     }
-    
+
     const pumpDate = new Date(effectiveLastPumpLaunchDate);
     const date = formatDateBySettings(pumpDate, settings);
     const time = pumpDate.toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
     });
-    
+
     return `Ostatnie uruchomienie: ${date} ${time}`;
   }, [effectiveLastPumpLaunchDate, settings]);
 
@@ -283,6 +282,15 @@ export default function ReadingTile({
         </Pressable>
       </View>
 
+      {isMenuOpen && (
+        <ReadingMenu
+          onHistory={onHistory}
+          onEdit={onEdit}
+          onDelete={onDelete}
+          onPlantDetails={onPlantDetails}
+        />
+      )}
+
       <View style={s.metricsRow}>
         {showTemp && (
           <MetricColPressable
@@ -333,46 +341,40 @@ export default function ReadingTile({
 
       {effectivePumpIncluded && (
         <>
-          {/* Horizontal Line - pale, with margins */}
           <View style={horizontalLineStyles.line} />
 
-          {/* Auto Pump Section - artificially set to always show */}
-          <>
-            <View style={pumpStyles.autoPumpContainer}>
-              <View style={pumpStyles.autoPumpTextContainer}>
-                <Text style={pumpStyles.autoPumpLabel}>Automatyczna pompa</Text>
-                <Text style={pumpStyles.autoPumpSubtext}>
-                  Gdy wilgotność gleby &lt;{effectiveSoilMoistureThreshold}%
-                </Text>
-              </View>
-              <Switch
-                value={effectiveAutoPumpEnabled}
-                onValueChange={onAutoPumpToggle}
-                trackColor={{ false: "rgba(255,255,255,0.3)", true: "#4CAF50" }}
-                thumbColor="#FFFFFF"
-              />
-            </View>
-
-            {/* Last Pump Launch - clock icon and date */}
-            <View style={pumpStyles.lastPumpRow}>
-              <MaterialCommunityIcons name="clock-outline" size={14} color="rgba(255,255,255,0.88)" />
-              <Text style={pumpStyles.lastPumpText}>{lastPumpText}</Text>
-            </View>
-
-            {/* Launch Pump Button - same style as Login button */}
-            <Pressable
-              style={({ pressed }) => [
-                pumpStyles.launchButton,
-                pressed && pumpStyles.launchButtonPressed,
-              ]}
-              onPress={onLaunchPump}
-              disabled={isLaunchingPump}
-            >
-              <Text style={pumpStyles.launchButtonText}>
-                {isLaunchingPump ? "Uruchamianie..." : "Uruchom pompę"}
+          <View style={pumpStyles.autoPumpContainer}>
+            <View style={pumpStyles.autoPumpTextContainer}>
+              <Text style={pumpStyles.autoPumpLabel}>Automatyczna pompa</Text>
+              <Text style={pumpStyles.autoPumpSubtext}>
+                Gdy wilgotność gleby &lt;{effectiveSoilMoistureThreshold}%
               </Text>
-            </Pressable>
-          </>
+            </View>
+            <Switch
+              value={!!effectiveAutoPumpEnabled}
+              onValueChange={onAutoPumpToggle}
+              trackColor={{ false: "rgba(255,255,255,0.3)", true: "#4CAF50" }}
+              thumbColor="#FFFFFF"
+            />
+          </View>
+
+          <View style={pumpStyles.lastPumpRow}>
+            <MaterialCommunityIcons name="clock-outline" size={14} color="rgba(255,255,255,0.88)" />
+            <Text style={pumpStyles.lastPumpText}>{lastPumpText}</Text>
+          </View>
+
+          <Pressable
+            style={({ pressed }) => [
+              pumpStyles.launchButton,
+              pressed && pumpStyles.launchButtonPressed,
+            ]}
+            onPress={onLaunchPump}
+            disabled={isLaunchingPump}
+          >
+            <Text style={pumpStyles.launchButtonText}>
+              {isLaunchingPump ? "Uruchamianie..." : "Uruchom pompę"}
+            </Text>
+          </Pressable>
         </>
       )}
     </View>
