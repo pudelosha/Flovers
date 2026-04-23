@@ -38,7 +38,7 @@ export default function PlantTile({
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass card (overflow hidden so layers don’t “shade” inside the frame) */}
+      {/* Glass card */}
       <View style={s.cardGlass}>
         <LinearGradient
           pointerEvents="none"
@@ -137,9 +137,17 @@ export default function PlantTile({
               )}
 
               {!!plant.location && (
-                <Text style={s.location} numberOfLines={1}>
-                  {plant.location}
-                </Text>
+                <View style={s.locationRow}>
+                  <MaterialCommunityIcons
+                    name="map-marker"
+                    size={12}
+                    color="#FFFFFF" // White icon color
+                    style={s.locationIcon}
+                  />
+                  <Text style={s.location} numberOfLines={1}>
+                    {plant.location}
+                  </Text>
+                </View>
               )}
             </View>
           </Pressable>

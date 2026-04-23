@@ -65,12 +65,6 @@ export const s = StyleSheet.create({
   // Center
   centerCol: { flex: 1, paddingHorizontal: 6 },
   plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
-  location: {
-    color: "rgba(255,255,255,0.9)",
-    fontWeight: "600",
-    fontSize: 12,
-    marginTop: 2,
-  },
 
   // Right column (menu)
   rightCol: { width: 56, alignItems: "flex-end", justifyContent: "center" },
@@ -467,4 +461,19 @@ export const s = StyleSheet.create({
     lineHeight: 18,
   },
   inlineBold: { color: "#FFFFFF", fontWeight: "800" },
+    locationRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 2, // Optional, adjust if needed
+  },
+
+  locationIcon: {
+    marginRight: 6, // Space between the icon and the text
+  },
+
+  location: {
+    color: "#FFFFFF", // White text color for location
+    fontSize: 12,
+    fontWeight: "600",
+  },
 });

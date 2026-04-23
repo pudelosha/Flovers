@@ -1,4 +1,3 @@
-// src/features/reminders/components/ReminderTile.tsx
 import React, { useCallback, useMemo } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -216,9 +215,21 @@ export default function ReminderTile({
             <Text style={s.plantName} numberOfLines={1}>
               {reminder.plant}
             </Text>
-            <Text style={s.location} numberOfLines={1}>
-              {reminder.location}
-            </Text>
+
+            {/* Added location with icon */}
+            {reminder.location && (
+              <View style={s.locationRow}>
+                <MaterialCommunityIcons
+                  name="map-marker"
+                  size={12}
+                  color="#FFFFFF" // White icon color
+                  style={s.locationIcon}
+                />
+                <Text style={s.location} numberOfLines={1}>
+                  {reminder.location}
+                </Text>
+              </View>
+            )}
 
             {!!everyStr && (
               <Text style={local.metaCompact} numberOfLines={1}>

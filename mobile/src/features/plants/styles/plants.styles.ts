@@ -112,12 +112,6 @@ export const s = StyleSheet.create({
     fontStyle: "italic",
     marginTop: 2,
   },
-  location: {
-    color: "rgba(255,255,255,0.9)",
-    fontWeight: "600",
-    fontSize: 12,
-    marginTop: 2,
-  },
 
   menuBtn: {
     width: 36,
@@ -302,4 +296,19 @@ export const s = StyleSheet.create({
   },
 
   inlineBold: { color: "#FFFFFF", fontWeight: "800" },
+    locationRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 2, // Optional, adjust if needed
+  },
+
+  locationIcon: {
+    marginRight: 6, // Space between the icon and the text
+  },
+
+  location: {
+    color: "#FFFFFF", // White text color for location
+    fontSize: 12,
+    fontWeight: "600",
+  },
 });
