@@ -150,6 +150,7 @@ function MetricColPressable({
 
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const PUMP_BLUE = "rgba(11,114,133,0.92)";
 
 export default function ReadingTile({
   data,
@@ -190,12 +191,12 @@ export default function ReadingTile({
   const effectiveAutoPumpEnabled = autoPumpEnabled ?? data.automaticPumpLaunch ?? false;
   const effectiveSoilMoistureThreshold = soilMoistureThreshold ?? data.pumpThresholdPct ?? 30;
   const effectiveLastPumpLaunchDate = lastPumpLaunchDate ?? data.lastPumpRunAt ?? null;
+  const effectiveLocation = data.location ?? null;
 
   const lastText = useMemo(() => {
     if (!dt) return `${tr("readings.tile.lastReadPrefix", "Last read")}: —`;
 
     const date = formatDateBySettings(dt, settings);
-
     const time = dt.toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
@@ -257,7 +258,7 @@ export default function ReadingTile({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <View style={s.topRow}>
+      <View style={[s.topRow, localStyles.topRow]}>
         <Pressable
           style={{ flex: 1, paddingRight: 8 }}
           onPress={onPressBody}
@@ -266,11 +267,25 @@ export default function ReadingTile({
           <Text style={s.name} numberOfLines={1}>
             {deviceName ?? data.name}
           </Text>
+
+          {!!effectiveLocation && (
+            <View style={localStyles.locationRow}>
+              <MaterialCommunityIcons
+                name="map-marker"
+                size={12}
+                color="#FFFFFF"
+                style={localStyles.locationIcon}
+              />
+              <Text style={localStyles.location} numberOfLines={1}>
+                {effectiveLocation}
+              </Text>
+            </View>
+          )}
         </Pressable>
 
         <Pressable
           onPress={onPressMenu}
-          style={s.dotsBtn}
+          style={[s.dotsBtn, localStyles.dotsBtnTop]}
           android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
           hitSlop={8}
         >
@@ -335,7 +350,13 @@ export default function ReadingTile({
         )}
       </View>
 
-      <View style={s.lastRow}>
+      <View style={localStyles.lastReadRow}>
+        <MaterialCommunityIcons
+          name="update"
+          size={14}
+          color="rgba(255,255,255,0.88)"
+          style={localStyles.infoIcon}
+        />
         <Text style={s.lastText}>{lastText}</Text>
       </View>
 
@@ -353,13 +374,13 @@ export default function ReadingTile({
             <Switch
               value={!!effectiveAutoPumpEnabled}
               onValueChange={onAutoPumpToggle}
-              trackColor={{ false: "rgba(255,255,255,0.3)", true: "#4CAF50" }}
+              trackColor={{ false: "rgba(255,255,255,0.3)", true: PUMP_BLUE }}
               thumbColor="#FFFFFF"
             />
           </View>
 
           <View style={pumpStyles.lastPumpRow}>
-            <MaterialCommunityIcons name="clock-outline" size={14} color="rgba(255,255,255,0.88)" />
+            <MaterialCommunityIcons name="timer-cog-outline" size={14} color="rgba(255,255,255,0.88)" />
             <Text style={pumpStyles.lastPumpText}>{lastPumpText}</Text>
           </View>
 
@@ -384,9 +405,9 @@ export default function ReadingTile({
 const horizontalLineStyles = StyleSheet.create({
   line: {
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.2)", // Pale white
-    marginHorizontal: 18, // Margins from edges
-    marginVertical: 12,
+    borderBottomColor: "rgba(255,255,255,0.2)",
+    marginHorizontal: 18,
+    marginVertical: 6,
   },
 });
 
@@ -424,7 +445,7 @@ const pumpStyles = StyleSheet.create({
     fontSize: 10,
   },
   launchButton: {
-    backgroundColor: "rgba(11,114,133,0.92)",
+    backgroundColor: PUMP_BLUE,
     borderRadius: 14,
     paddingVertical: 12,
     marginHorizontal: 18,
@@ -440,5 +461,40 @@ const pumpStyles = StyleSheet.create({
     fontWeight: "700",
     fontSize: 14,
     letterSpacing: 0.5,
+  },
+});
+
+const localStyles = StyleSheet.create({
+  topRow: {
+    alignItems: "flex-start",
+  },
+  dotsBtnTop: {
+    alignSelf: "flex-start",
+  },
+  locationRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 2,
+    marginBottom: 10,
+  },
+  locationIcon: {
+    marginRight: 4,
+    marginBottom: 10,
+  },
+  location: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    fontSize: 12,
+    flexShrink: 1,
+    marginBottom: 10,
+  },
+  lastReadRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 18,
+    paddingVertical: 6,
+  },
+  infoIcon: {
+    marginRight: 8,
   },
 });
