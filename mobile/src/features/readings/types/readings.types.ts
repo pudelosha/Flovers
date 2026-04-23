@@ -12,6 +12,12 @@ export type ReadingTileModel = {
     light: number | null;
     moisture: number | null;
   };
+  location: string | null;      // Added location field
+  lastPumpRunAt?: string | null; // Timestamp of last pump run
+  pumpIncluded: boolean;         // Flag to indicate if pump is included
+  automaticPumpLaunch: boolean;  // Flag to indicate if auto watering is enabled
+  pumpThresholdPct?: number | null | undefined; // Allow null or undefined values
+  status: "enabled" | "disabled"; // Added status field
 };
 
 /* ============================== API TYPES (from backend) ============================== */
@@ -24,34 +30,32 @@ export type ApiReadingMetrics = {
 };
 
 export type ApiReadingDevice = {
-  id: number;                   // device id (PK)
-  plant: number;                // FK -> Plant Instance
-  plant_name: string;           // convenient display from backend
+  id: number;
+  plant: number;
+  plant_name: string;
   plant_location?: string | null;
-
-  device_name: string;          // user-facing device name
-  is_active: boolean;           // enabled/disabled
-  device_key: string;           // 8+ chars, readonly
+  device_name: string;
+  is_active: boolean;
+  device_key: string;
   notes?: string | null;
-
-  // sampling / sensors
-  interval_hours: number;       // 1..24
+  interval_hours: number;
   sensors: {
     temperature: boolean;
     humidity: boolean;
     light: boolean;
     moisture: boolean;
   };
-
-  // moisture alert (top-level backend fields)
   moisture_alert_enabled?: boolean;
   moisture_alert_threshold?: number | null;
   moisture_alert_active?: boolean;
-
-  // latest snapshot (optional convenience)
-  last_read_at?: string | null; // ISO
+  last_read_at?: string | null;
   latest?: ApiReadingMetrics | null;
-
+  sendEmailNotifications?: boolean;
+  sendPushNotifications?: boolean;
+  pumpIncluded: boolean;
+  automaticPumpLaunch: boolean;
+  pumpThresholdPct?: number | null;  // Correctly typed to handle undefined or null
+  last_pump_run_at?: string | null;  // Timestamp of last pump run
   created_at: string;
   updated_at: string;
 };
@@ -69,6 +73,13 @@ export type ApiReadingDeviceCreatePayload = {
   };
   moisture_alert_enabled?: boolean;
   moisture_alert_threshold?: number | null;
+
+  // New fields for notifications and pump configuration
+  sendEmailNotifications: boolean;  // Flag for email notifications
+  sendPushNotifications: boolean;  // Flag for push notifications
+  pumpIncluded: boolean;           // Flag for pump inclusion
+  automaticPumpLaunch: boolean;    // Flag for auto watering
+  pumpThresholdPct: number;        // Threshold percentage for automatic watering
 };
 
 export type ApiReadingDeviceUpdatePayload = Partial<{
@@ -85,4 +96,11 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
   };
   moisture_alert_enabled: boolean;
   moisture_alert_threshold: number | null;
+
+  // New fields for notifications and pump configuration
+  sendEmailNotifications: boolean;  // Flag for email notifications
+  sendPushNotifications: boolean;  // Flag for push notifications
+  pumpIncluded: boolean;           // Flag for pump inclusion
+  automaticPumpLaunch: boolean;    // Flag for auto watering
+  pumpThresholdPct: number;        // Threshold percentage for automatic watering
 }>;

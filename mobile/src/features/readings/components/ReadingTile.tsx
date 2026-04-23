@@ -1,6 +1,5 @@
-// src/features/readings/components/ReadingTile.tsx
-import React, { useMemo } from "react";
-import { View, Pressable, Text, StyleSheet } from "react-native";
+import React, { useMemo, useState } from "react";
+import { View, Pressable, Text, StyleSheet, Switch } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -35,6 +34,13 @@ type Props = {
     light?: boolean;
     moisture?: boolean;
   };
+  // New props for pump functionality
+  autoPumpEnabled?: boolean;
+  soilMoistureThreshold?: number;
+  lastPumpLaunchDate?: string | null;
+  onAutoPumpToggle?: (enabled: boolean) => void;
+  onLaunchPump?: () => void;
+  isLaunchingPump?: boolean;
 };
 
 function formatDateBySettings(d: Date, settings?: any) {
@@ -157,6 +163,12 @@ export default function ReadingTile({
   onMetricPress,
   deviceName,
   sensors,
+  autoPumpEnabled = false,
+  soilMoistureThreshold = 30,
+  lastPumpLaunchDate = null,
+  onAutoPumpToggle,
+  onLaunchPump,
+  isLaunchingPump = false,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -195,6 +207,22 @@ export default function ReadingTile({
   const showHum = sensors ? !!sensors.humidity : true;
   const showLight = sensors ? !!sensors.light : true;
   const showMoist = sensors ? !!sensors.moisture : true;
+
+  // Format last pump launch date
+  const lastPumpText = useMemo(() => {
+    if (!lastPumpLaunchDate) {
+      return "Ostatnie uruchomienie: —";
+    }
+    
+    const pumpDate = new Date(lastPumpLaunchDate);
+    const date = formatDateBySettings(pumpDate, settings);
+    const time = pumpDate.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    
+    return `Ostatnie uruchomienie: ${date} ${time}`;
+  }, [lastPumpLaunchDate, settings]);
 
   return (
     <View style={s.cardWrap}>
@@ -298,14 +326,108 @@ export default function ReadingTile({
         <Text style={s.lastText}>{lastText}</Text>
       </View>
 
-      {isMenuOpen && (
-        <ReadingMenu
-          onHistory={onHistory}
-          onEdit={onEdit}
-          onDelete={onDelete}
-          onPlantDetails={onPlantDetails}
-        />
-      )}
+      {/* Horizontal Line - pale, with margins */}
+      <View style={horizontalLineStyles.line} />
+
+      {/* Auto Pump Section - artificially set to always show */}
+      <>
+        <View style={pumpStyles.autoPumpContainer}>
+          <View style={pumpStyles.autoPumpTextContainer}>
+            <Text style={pumpStyles.autoPumpLabel}>Automatyczna pompa</Text>
+            <Text style={pumpStyles.autoPumpSubtext}>
+              Gdy wilgotność gleby &lt;{soilMoistureThreshold}%
+            </Text>
+          </View>
+          <Switch
+            value={autoPumpEnabled}
+            onValueChange={onAutoPumpToggle}
+            trackColor={{ false: "rgba(255,255,255,0.3)", true: "#4CAF50" }}
+            thumbColor="#FFFFFF"
+          />
+        </View>
+
+        {/* Last Pump Launch - clock icon and date */}
+        <View style={pumpStyles.lastPumpRow}>
+          <MaterialCommunityIcons name="clock-outline" size={14} color="rgba(255,255,255,0.88)" />
+          <Text style={pumpStyles.lastPumpText}>{lastPumpText}</Text>
+        </View>
+
+        {/* Launch Pump Button - same style as Login button */}
+        <Pressable
+          style={({ pressed }) => [
+            pumpStyles.launchButton,
+            pressed && pumpStyles.launchButtonPressed,
+          ]}
+          onPress={onLaunchPump}
+          disabled={isLaunchingPump}
+        >
+          <Text style={pumpStyles.launchButtonText}>
+            {isLaunchingPump ? "Uruchamianie..." : "Uruchom pompę"}
+          </Text>
+        </Pressable>
+      </>
     </View>
   );
 }
+
+const horizontalLineStyles = StyleSheet.create({
+  line: {
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255,255,255,0.2)", // Pale white
+    marginHorizontal: 18, // Margins from edges
+    marginVertical: 12,
+  },
+});
+
+const pumpStyles = StyleSheet.create({
+  autoPumpContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 18,
+    paddingVertical: 8,
+  },
+  autoPumpTextContainer: {
+    flex: 1,
+  },
+  autoPumpLabel: {
+    color: "#FFFFFF",
+    fontWeight: "600",
+    fontSize: 15,
+  },
+  autoPumpSubtext: {
+    color: "rgba(255,255,255,0.7)",
+    fontSize: 11,
+    marginTop: 2,
+  },
+  lastPumpRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 18,
+    paddingVertical: 6,
+    gap: 8,
+  },
+  lastPumpText: {
+    color: "rgba(255,255,255,0.88)",
+    fontWeight: "600",
+    fontSize: 10,
+  },
+  launchButton: {
+    backgroundColor: "rgba(11,114,133,0.92)",
+    borderRadius: 14,
+    paddingVertical: 12,
+    marginHorizontal: 18,
+    marginTop: 10,
+    marginBottom: 12,
+    alignItems: "center",
+  },
+  launchButtonPressed: {
+    opacity: 0.85,
+  },
+  launchButtonText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 14,
+    letterSpacing: 0.5,
+  },
+});

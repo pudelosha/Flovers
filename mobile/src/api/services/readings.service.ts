@@ -86,16 +86,17 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
       light: null,
       moisture: null,
     },
-    // extra convenience for filters (not in base type, used by screen)
-    // @ts-ignore allow extra fields at runtime where needed
-    location: api.plant_location ?? null,
-    // @ts-ignore same
-    status: api.is_active ? "enabled" : "disabled",
+    location: api.plant_location ?? null,  // Now `location` maps correctly to `ReadingTileModel`
+    status: api.is_active ? "enabled" : "disabled",  // Map status based on is_active
+    lastPumpRunAt: api.last_pump_run_at ?? null,  // Add last pump run timestamp
+    pumpIncluded: api.pumpIncluded,  // Flag for pump inclusion
+    automaticPumpLaunch: api.automaticPumpLaunch,  // Flag for auto watering
+    pumpThresholdPct: api.pumpThresholdPct ?? undefined,  // Default to undefined if null
   };
 }
 
 /* ============================== DEVICE SETUP (ENDPOINTS + SECRET) ============================== */
-export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }):
+export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }): 
   Promise<{ endpoints: { ingest: string; read: string }, sample_payloads: any, secret: string }> {
   return await request(
     "/api/readings/device-setup/",
