@@ -1,7 +1,16 @@
 import React from "react";
-import { View, Text, Pressable, ScrollView, Platform, Linking } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  ScrollView,
+  Platform,
+  Linking,
+  StyleSheet,
+} from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Clipboard from "@react-native-clipboard/clipboard";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { LANGS } from "../../../../i18n/locales/index";
@@ -68,6 +77,18 @@ export default function DeviceSetupModal({
     }
   }, [currentLanguage]);
 
+  const copyToClipboard = React.useCallback((value?: string | null) => {
+    if (!value) return;
+    Clipboard.setString(value);
+  }, []);
+
+  React.useEffect(() => {
+    if (!visible) {
+      setRevealSecret(false);
+      setShowConfirmRotate(false);
+    }
+  }, [visible]);
+
   if (!visible) return null;
 
   const sampleWritePayload = `{
@@ -90,6 +111,7 @@ export default function DeviceSetupModal({
   return (
     <>
       <Pressable style={s.promptBackdrop} onPress={onClose} />
+
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
@@ -99,156 +121,173 @@ export default function DeviceSetupModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore RN shorthand
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            }}
           />
         </View>
 
-        {/* Sheet — full width like Profile/Plants; entire content scrollable with capped height */}
         <View style={[s.promptInner, { maxHeight: "86%" }]}>
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{ paddingBottom: 80, gap: 12 }}
           >
-            <Text style={s.promptTitle}>{t("readingsModals.deviceSetup.title")}</Text>
+            <Text style={s.promptTitle}>
+              {t("readingsModals.deviceSetup.title")}
+            </Text>
 
-            {/* Endpoints */}
-            <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.httpEndpoints")}</Text>
+            <View style={{ marginHorizontal: 16, gap: 12 }}>
+              {/* Endpoints */}
+              <Text style={styles.inputLabel}>
+                {t("readingsModals.deviceSetup.httpEndpoints")}
+              </Text>
 
-            <InfoRow
-              icon="cloud-upload-outline"
-              label={t("readingsModals.deviceSetup.addReadingPost")}
-              value={writeEndpoint}
-            />
-            <InfoRow
-              icon="cloud-download-outline"
-              label={t("readingsModals.deviceSetup.readReadingsGetPost")}
-              value={readEndpoint}
-            />
+              <InfoRow
+                icon="cloud-upload-outline"
+                label={t("readingsModals.deviceSetup.addReadingPost")}
+                value={writeEndpoint}
+              />
 
-            {/* Sample payloads */}
-            <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.samplePayloads")}</Text>
+              <InfoRow
+                icon="cloud-download-outline"
+                label={t("readingsModals.deviceSetup.readReadingsGetPost")}
+                value={readEndpoint}
+              />
 
-            <Block label={t("readingsModals.deviceSetup.addReadingBody")}>
-              <CodeBlock text={sampleWritePayload} />
-            </Block>
+              {/* Sample payloads */}
+              <Text style={[styles.inputLabel, { marginTop: 4 }]}>
+                {t("readingsModals.deviceSetup.samplePayloads")}
+              </Text>
 
-            <Block label={t("readingsModals.deviceSetup.readRequestBody")}>
-              <CodeBlock text={sampleReadQuery} />
-            </Block>
+              <Block label={t("readingsModals.deviceSetup.addReadingBody")}>
+                <CodeBlock text={sampleWritePayload} />
+              </Block>
 
-            {/* Current secret + rotate */}
-            <View
-              style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}
-            >
-              <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.currentAuthSecret")}</Text>
-              <Pressable
-                onPress={() => setRevealSecret((v) => !v)}
-                accessibilityRole="button"
-                accessibilityLabel={
+              <Block label={t("readingsModals.deviceSetup.readRequestBody")}>
+                <CodeBlock text={sampleReadQuery} />
+              </Block>
+
+              {/* Current secret + rotate */}
+              <Text style={[styles.inputLabel, { marginTop: 4 }]}>
+                {t("readingsModals.deviceSetup.currentAuthSecret")}
+              </Text>
+
+              <SecretRow
+                value={revealSecret ? authSecret : masked}
+                selectable={revealSecret}
+                isRevealActive={revealSecret}
+                onToggleReveal={() => setRevealSecret((v) => !v)}
+                onCopy={() => copyToClipboard(authSecret)}
+                revealAccessibilityLabel={
                   revealSecret
                     ? t("readingsModals.deviceSetup.hideAuthSecret")
                     : t("readingsModals.deviceSetup.showAuthSecret")
                 }
-                hitSlop={10}
-                style={{ padding: 4 }}
+                copyAccessibilityLabel={t(
+                  "readingsModals.deviceSetup.copyAuthSecret",
+                  "Copy Auth Secret Key"
+                )}
+              />
+
+              <Pressable
+                onPress={() => setShowConfirmRotate(true)}
+                style={{
+                  marginTop: 8,
+                  paddingVertical: 12,
+                  borderRadius: 16,
+                  backgroundColor: "rgba(255,255,255,0.12)",
+                  alignItems: "center",
+                }}
               >
-                <MaterialCommunityIcons
-                  name={revealSecret ? "eye-off-outline" : "eye-outline"}
-                  size={20}
-                  color="#fff"
-                />
+                <Text style={s.promptBtnText}>
+                  {t("readingsModals.deviceSetup.generateNewSecret")}
+                </Text>
               </Pressable>
-            </View>
 
-            <View
-              style={{
-                padding: 12,
-                borderRadius: 12,
-                backgroundColor: "rgba(255,255,255,0.10)",
-                position: "relative",
-              }}
-            >
-              <Text
-                style={[s.dropdownValue, { fontVariant: ["tabular-nums"] }]}
-                selectable={revealSecret}
+              {/* Open website docs */}
+              <Pressable
+                onPress={openSchemas}
+                style={{
+                  marginTop: 12,
+                  paddingVertical: 12,
+                  borderRadius: 16,
+                  backgroundColor: "rgba(11,114,133,0.92)",
+                  alignItems: "center",
+                }}
               >
-                {revealSecret ? authSecret : masked}
-              </Text>
-            </View>
-
-            <Pressable
-              onPress={() => setShowConfirmRotate(true)}
-              style={{
-                marginTop: 8,
-                paddingVertical: 12,
-                borderRadius: 16,
-                backgroundColor: "rgba(255,255,255,0.12)",
-                alignItems: "center",
-              }}
-            >
-              <Text style={s.promptBtnText}>
-                {t("readingsModals.deviceSetup.generateNewSecret")}
-              </Text>
-            </Pressable>
-
-            {/* Open website docs */}
-            <Pressable
-              onPress={openSchemas}
-              style={{
-                marginTop: 12,
-                paddingVertical: 12,
-                borderRadius: 16,
-                backgroundColor: "rgba(11,114,133,0.92)",
-                alignItems: "center",
-              }}
-            >
-              <Text style={s.promptPrimaryText}>
-                {t("readingsModals.deviceSetup.openSchemasDocumentation")}
-              </Text>
-            </Pressable>
-
-            {/* Footer buttons (inside scroll, like EditPlantModal) */}
-            <View style={s.promptButtonsRow}>
-              <Pressable style={s.promptBtn} onPress={onClose}>
-                <Text style={s.promptBtnText}>{t("readingsModals.common.close")}</Text>
+                <Text style={s.promptPrimaryText}>
+                  {t("readingsModals.deviceSetup.openSchemasDocumentation")}
+                </Text>
               </Pressable>
+
+              {/* Footer buttons */}
+              <View style={[s.promptButtonsRow, { marginTop: 4 }]}>
+                <Pressable style={s.promptBtn} onPress={onClose}>
+                  <Text style={s.promptBtnText}>
+                    {t("readingsModals.common.close")}
+                  </Text>
+                </Pressable>
+              </View>
             </View>
           </ScrollView>
         </View>
       </View>
 
-      {/* Confirm rotate secret (inline lightweight modal) */}
+      {/* Confirm rotate secret */}
       {showConfirmRotate && (
         <>
-          <Pressable style={s.promptBackdrop} onPress={() => setShowConfirmRotate(false)} />
+          <Pressable
+            style={s.promptBackdrop}
+            onPress={() => setShowConfirmRotate(false)}
+          />
+
           <View style={s.promptWrap}>
             <View style={s.promptGlass}>
               <BlurView
-                // @ts-ignore
+                // @ts-ignore RN shorthand
                 style={{ position: "absolute", inset: 0 }}
                 blurType="light"
                 blurAmount={14}
                 reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
               />
+
               <View
                 pointerEvents="none"
-                // @ts-ignore
-                style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+                // @ts-ignore RN shorthand
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  backgroundColor: "rgba(0,0,0,0.35)",
+                }}
               />
             </View>
 
             <View style={s.promptInner}>
-              <Text style={s.promptTitle}>{t("readingsModals.deviceSetup.rotateConfirmTitle")}</Text>
-              <Text style={s.confirmText}>{t("readingsModals.deviceSetup.rotateConfirmText")}</Text>
+              <Text style={s.promptTitle}>
+                {t("readingsModals.deviceSetup.rotateConfirmTitle")}
+              </Text>
+
+              <Text style={s.confirmText}>
+                {t("readingsModals.deviceSetup.rotateConfirmText")}
+              </Text>
 
               <View style={s.promptButtonsRow}>
-                <Pressable style={s.promptBtn} onPress={() => setShowConfirmRotate(false)}>
-                  <Text style={s.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
+                <Pressable
+                  style={s.promptBtn}
+                  onPress={() => setShowConfirmRotate(false)}
+                >
+                  <Text style={s.promptBtnText}>
+                    {t("readingsModals.common.cancel")}
+                  </Text>
                 </Pressable>
+
                 <Pressable
                   style={[s.promptBtn, s.promptPrimary]}
                   onPress={async () => {
@@ -256,7 +295,7 @@ export default function DeviceSetupModal({
                       await onRotateSecret?.();
                     } finally {
                       setShowConfirmRotate(false);
-                      setRevealSecret(false); // hide again after rotate
+                      setRevealSecret(false);
                     }
                   }}
                 >
@@ -273,15 +312,40 @@ export default function DeviceSetupModal({
   );
 }
 
-function InfoRow({ icon, label, value }: { icon: string; label: string; value: string }) {
+function InfoRow({
+  icon,
+  label,
+  value,
+}: {
+  icon: string;
+  label: string;
+  value: string;
+}) {
   return (
     <View style={{ gap: 6 }}>
       <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
         <MaterialCommunityIcons name={icon as any} size={18} color="#fff" />
         <Text style={s.dropdownValue}>{label}</Text>
       </View>
-      <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.10)" }}>
-        <Text style={[s.codeBlockText, { fontVariant: ["tabular-nums"] }]} selectable>
+
+      <View
+        style={{
+          padding: 12,
+          borderRadius: 12,
+          backgroundColor: "rgba(255,255,255,0.10)",
+        }}
+      >
+        <Text
+          style={[
+            s.codeBlockText,
+            {
+              fontVariant: ["tabular-nums"],
+              fontSize: 12,
+              lineHeight: 18,
+            },
+          ]}
+          selectable
+        >
           {value}
         </Text>
       </View>
@@ -289,7 +353,86 @@ function InfoRow({ icon, label, value }: { icon: string; label: string; value: s
   );
 }
 
-function Block({ label, children }: { label: string; children: React.ReactNode }) {
+function SecretRow({
+  value,
+  selectable,
+  isRevealActive,
+  onToggleReveal,
+  onCopy,
+  revealAccessibilityLabel,
+  copyAccessibilityLabel,
+}: {
+  value: string;
+  selectable?: boolean;
+  isRevealActive?: boolean;
+  onToggleReveal: () => void;
+  onCopy: () => void;
+  revealAccessibilityLabel?: string;
+  copyAccessibilityLabel?: string;
+}) {
+  return (
+    <View
+      style={{
+        padding: 12,
+        borderRadius: 12,
+        backgroundColor: "rgba(255,255,255,0.10)",
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 8,
+      }}
+    >
+      <Text
+        style={[
+          s.codeBlockText,
+          {
+            fontVariant: ["tabular-nums"],
+            flex: 1,
+            minWidth: 0,
+            fontSize: 10,
+            lineHeight: 20,
+          },
+        ]}
+        selectable={selectable}
+        numberOfLines={1}
+        ellipsizeMode="tail"
+      >
+        {value}
+      </Text>
+
+      <Pressable
+        onPress={onToggleReveal}
+        accessibilityRole="button"
+        accessibilityLabel={revealAccessibilityLabel}
+        hitSlop={10}
+        style={{ padding: 4 }}
+      >
+        <MaterialCommunityIcons
+          name={isRevealActive ? "eye-off-outline" : "eye-outline"}
+          size={20}
+          color="#fff"
+        />
+      </Pressable>
+
+      <Pressable
+        onPress={onCopy}
+        accessibilityRole="button"
+        accessibilityLabel={copyAccessibilityLabel}
+        hitSlop={10}
+        style={{ padding: 4 }}
+      >
+        <MaterialCommunityIcons name="content-copy" size={20} color="#fff" />
+      </Pressable>
+    </View>
+  );
+}
+
+function Block({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <View style={{ gap: 6 }}>
       <Text style={s.dropdownValue}>{label}</Text>
@@ -300,11 +443,24 @@ function Block({ label, children }: { label: string; children: React.ReactNode }
 
 function CodeBlock({ text }: { text: string }) {
   return (
-    <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(0,0,0,0.35)" }}>
+    <View
+      style={{
+        padding: 12,
+        borderRadius: 12,
+        backgroundColor: "rgba(0,0,0,0.35)",
+      }}
+    >
       <Text
         style={[
           s.codeBlockText,
-          { fontFamily: Platform.select({ ios: "Menlo", android: "monospace" }) as any },
+          {
+            fontFamily: Platform.select({
+              ios: "Menlo",
+              android: "monospace",
+            }) as any,
+            fontSize: 10,
+            lineHeight: 15,
+          },
         ]}
         selectable
       >
@@ -313,3 +469,14 @@ function CodeBlock({ text }: { text: string }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  inputLabel: {
+    marginTop: 8,
+    marginBottom: 6,
+    color: "rgba(255,255,255,0.92)",
+    fontWeight: "800",
+    letterSpacing: 0.2,
+    fontSize: 12,
+  },
+});
