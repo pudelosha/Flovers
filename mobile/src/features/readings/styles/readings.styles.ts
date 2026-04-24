@@ -1,7 +1,11 @@
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
-  listContent: { paddingHorizontal: 16, paddingTop: 21, paddingBottom: 24 },
+  listContent: {
+    paddingHorizontal: 16,
+    paddingTop: 21,
+    paddingBottom: 24,
+  },
 
   cardWrap: {
     borderRadius: 28,
@@ -38,7 +42,11 @@ export const s = StyleSheet.create({
     paddingTop: 14,
   },
 
-  name: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
+  name: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 17,
+  },
 
   dotsBtn: {
     width: 36,
@@ -58,7 +66,10 @@ export const s = StyleSheet.create({
     gap: 10,
   },
 
-  col: { flex: 1, alignItems: "center" },
+  col: {
+    flex: 1,
+    alignItems: "center",
+  },
 
   iconCircle: {
     width: 46,
@@ -69,10 +80,23 @@ export const s = StyleSheet.create({
     marginBottom: 6,
   },
 
-  metricValue: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
+  metricValue: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 16,
+  },
 
-  lastRow: { paddingHorizontal: 25, paddingTop: 8, paddingBottom: 14 },
-  lastText: { color: "rgba(255,255,255,0.88)", fontWeight: "600", fontSize: 10 },
+  lastRow: {
+    paddingHorizontal: 25,
+    paddingTop: 8,
+    paddingBottom: 14,
+  },
+
+  lastText: {
+    color: "rgba(255,255,255,0.88)",
+    fontWeight: "600",
+    fontSize: 10,
+  },
 
   menuSheet: {
     position: "absolute",
@@ -89,10 +113,26 @@ export const s = StyleSheet.create({
     gap: 6,
   },
 
-  menuItem: { flexDirection: "row", alignItems: "center", paddingVertical: 6, paddingHorizontal: 2 },
-  menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 2,
+  },
 
-  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "transparent" },
+  menuItemText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    letterSpacing: 0.2,
+    fontSize: 12,
+  },
+
+  backdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "transparent",
+  },
+
+  /* ---------- EMPTY STATE ---------- */
 
   emptyWrap: {
     marginTop: 0,
@@ -100,27 +140,71 @@ export const s = StyleSheet.create({
     paddingTop: 0,
   },
 
-  // Separator line for headers and sections (white for testing)
+  emptyGlass: {
+    borderRadius: 28,
+    overflow: "hidden",
+    minHeight: 140,
+  },
+
+  emptyTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
+  },
+
+  emptyBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    zIndex: 2,
+  },
+
+  emptyInner: {
+    padding: 16,
+    alignItems: "center",
+    zIndex: 3,
+  },
+
+  emptyTitle: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
+    marginBottom: 8,
+    textAlign: "center",
+  },
+
+  emptyDescBox: {
+    alignSelf: "stretch",
+    marginTop: 20,
+  },
+
+  emptyText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+  },
+
+  /* ---------- SHARED SECTION STYLES ---------- */
+
   separatorLine: {
     borderBottomWidth: 1,
-    borderBottomColor: "#FFFFFF", // White separator line for testing
-    marginVertical: 12, // Adjust for better spacing
+    borderBottomColor: "#FFFFFF",
+    marginVertical: 12,
   },
 
-  // Header for left-aligned text, ensuring consistency
   headerLeft: {
     color: "#FFFFFF",
-    fontWeight: "700", // Aligning text to match other headers
+    fontWeight: "700",
     fontSize: 16,
-    marginLeft: 16, // Ensures alignment with other elements
-    marginBottom: 6, // Small space after the header
+    marginLeft: 16,
+    marginBottom: 6,
   },
 
-  // Adding styles for sensors, notifications, and water pump headers
   headerText: {
     color: "#FFFFFF",
-    fontWeight: "700",  // Same as other headers
+    fontWeight: "700",
     fontSize: 16,
-    marginLeft: 16,  // Align all headers to the left
+    marginLeft: 16,
   },
 });
