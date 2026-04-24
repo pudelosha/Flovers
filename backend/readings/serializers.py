@@ -230,7 +230,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
         return super().update(instance, validated_data)
 
-
 class ReadingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reading

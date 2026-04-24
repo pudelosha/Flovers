@@ -566,8 +566,8 @@ export default function ReadingsScreen() {
             pump_included: !!payload.pumpIncluded,
             automatic_pump_launch: !!payload.automaticPumpLaunch,
             pump_threshold_pct:
-              payload.pumpIncluded && payload.automaticPumpLaunch
-                ? payload.pumpThresholdPct ?? null
+              payload.pumpIncluded
+                ? payload.pumpThresholdPct ?? 30
                 : null,
           });
         } else {
@@ -591,8 +591,8 @@ export default function ReadingsScreen() {
             pump_included: !!payload.pumpIncluded,
             automatic_pump_launch: !!payload.automaticPumpLaunch,
             pump_threshold_pct:
-              payload.pumpIncluded && payload.automaticPumpLaunch
-                ? payload.pumpThresholdPct ?? null
+              payload.pumpIncluded
+                ? payload.pumpThresholdPct ?? 30
                 : null,
           });
         }
