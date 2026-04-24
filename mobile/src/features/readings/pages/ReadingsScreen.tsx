@@ -509,7 +509,6 @@ export default function ReadingsScreen() {
   const openDeviceDetails = useCallback(
     async (id: string) => {
       setDeviceDetailsId(id);
-      setDeviceDetailsVisible(true);
       setDeviceDetailsLoading(true);
       setDeviceDetailsData(null);
       setDeviceDetailsSecret("");
@@ -522,6 +521,7 @@ export default function ReadingsScreen() {
 
         setDeviceDetailsData(device);
         setDeviceDetailsSecret(setup?.secret || "");
+        setDeviceDetailsVisible(true);
       } catch (e: any) {
         showToast(
           e?.message || tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
