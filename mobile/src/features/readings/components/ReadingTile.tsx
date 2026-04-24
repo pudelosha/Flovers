@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { View, Pressable, Text, StyleSheet, Switch } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
@@ -35,7 +35,7 @@ type Props = {
     light?: boolean;
     moisture?: boolean;
   };
-  // New props for pump functionality
+
   autoPumpEnabled?: boolean;
   soilMoistureThreshold?: number;
   lastPumpLaunchDate?: string | null;
@@ -383,7 +383,11 @@ export default function ReadingTile({
           </View>
 
           <View style={pumpStyles.lastPumpRow}>
-            <MaterialCommunityIcons name="timer-cog-outline" size={14} color="rgba(255,255,255,0.88)" />
+            <MaterialCommunityIcons
+              name="timer-cog-outline"
+              size={14}
+              color="rgba(255,255,255,0.88)"
+            />
             <Text style={pumpStyles.lastPumpText}>{lastPumpText}</Text>
           </View>
 

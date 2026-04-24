@@ -5,7 +5,6 @@ import {
   ApiReadingDevice,
   ApiReadingDeviceCreatePayload,
   ApiReadingDeviceUpdatePayload,
-  ApiReadingMetrics,
   ReadingTileModel,
 } from "../../features/readings/types/readings.types";
 
@@ -241,6 +240,25 @@ export async function fetchReadingsHistory(
     `/api/readings/history/?${q.toString()}`,
     "GET",
     undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/* ============================== AUTO PUMP TOGGLE ============================== */
+
+export type ToggleAutoPumpPayload = {
+  automatic_pump_launch: boolean;
+};
+
+export async function toggleAutoPump(
+  id: number,
+  payload: ToggleAutoPumpPayload,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiReadingDevice> {
+  return await request<ApiReadingDevice>(
+    `${DEVICES_URL}${id}/auto-pump/`,
+    "PATCH",
+    payload,
     { auth: opts.auth ?? true }
   );
 }

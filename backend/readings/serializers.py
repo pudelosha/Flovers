@@ -2,6 +2,10 @@ from rest_framework import serializers
 from .models import ReadingDevice, Reading
 
 
+class ReadingDeviceAutoPumpSerializer(serializers.Serializer):
+    automatic_pump_launch = serializers.BooleanField()
+
+
 class ReadingDeviceSerializer(serializers.ModelSerializer):
     latest = serializers.SerializerMethodField()
 
@@ -222,9 +226,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
         if validated_data.get("pump_included") is False:
             validated_data["automatic_pump_launch"] = False
-            validated_data["pump_threshold_pct"] = None
-
-        if validated_data.get("automatic_pump_launch") is False:
             validated_data["pump_threshold_pct"] = None
 
         return super().update(instance, validated_data)

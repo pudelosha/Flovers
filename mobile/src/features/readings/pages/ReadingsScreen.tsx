@@ -33,6 +33,7 @@ import {
   fetchDeviceSetup,
   sendDeviceCodeByEmail,
   sendReadingsExportEmail,
+  toggleAutoPump,
   type ReadingsExportEmailRequest,
 } from "../../../api/services/readings.service";
 
@@ -641,6 +642,73 @@ export default function ReadingsScreen() {
     }
   }, [upsertReadingId, showToast, tr]);
 
+  const handleToggleAutoPump = useCallback(
+    async (id: string, enabled: boolean) => {
+      const prevItems = items;
+      const prevDevicesRaw = devicesRaw;
+
+      // optimistic update
+      setItems((curr) =>
+        curr.map((x) =>
+          x.id === id ? { ...x, automaticPumpLaunch: enabled } : x
+        )
+      );
+
+      setDevicesRaw((curr) =>
+        curr.map((d) =>
+          String(d.id) === id ? { ...d, automatic_pump_launch: enabled } : d
+        )
+      );
+
+      try {
+        const updated = await toggleAutoPump(Number(id), {
+          automatic_pump_launch: enabled,
+        });
+
+        setDevicesRaw((curr) =>
+          curr.map((d) => (String(d.id) === id ? updated : d))
+        );
+
+        setItems((curr) =>
+          curr.map((x) =>
+            x.id === id
+              ? {
+                  ...x,
+                  automaticPumpLaunch: updated.automatic_pump_launch,
+                  pumpIncluded: updated.pump_included,
+                  pumpThresholdPct: updated.pump_threshold_pct ?? undefined,
+                  lastPumpRunAt: updated.last_pump_run_at ?? null,
+                  status: updated.is_active ? "enabled" : "disabled",
+                  location: updated.plant_location ?? null,
+                }
+              : x
+          )
+        );
+
+        showToast(
+          enabled
+            ? tr("readings.toasts.autoPumpEnabled", "Automatic pump enabled")
+            : tr("readings.toasts.autoPumpDisabled", "Automatic pump disabled"),
+          "success"
+        );
+      } catch (e: any) {
+        // rollback
+        setItems(prevItems);
+        setDevicesRaw(prevDevicesRaw);
+
+        showToast(
+          e?.message ||
+            tr(
+              "readings.toasts.autoPumpUpdateFailed",
+              "Failed to update automatic pump setting"
+            ),
+          "error"
+        );
+      }
+    },
+    [items, devicesRaw, showToast, tr]
+  );
+
   // ---- Device setup: fetch endpoints + secret then show modal ----
   const openDeviceSetup = useCallback(async () => {
     try {
@@ -745,6 +813,7 @@ export default function ReadingsScreen() {
                   moisture: !!dev?.sensors?.moisture,
                 }}
                 onLaunchPump={() => openWateringSchedule(item.id)}
+                onAutoPumpToggle={(enabled) => handleToggleAutoPump(item.id, enabled)}
               />
             </Animated.View>
           );

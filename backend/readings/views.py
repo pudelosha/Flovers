@@ -19,6 +19,7 @@ from core.emailing import send_templated_email
 from .models import ReadingDevice, Reading, AccountSecret
 from .serializers import (
     ReadingDeviceSerializer,
+    ReadingDeviceAutoPumpSerializer,
     ReadingSerializer,
     ReadingsExportEmailSerializer,
 )
@@ -251,6 +252,43 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+    @action(detail=True, methods=["patch"], url_path="auto-pump")
+    def auto_pump(self, request, pk=None):
+        device = self.get_object()
+
+        serializer = ReadingDeviceAutoPumpSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        enabled = serializer.validated_data["automatic_pump_launch"]
+        moisture_sensor_enabled = bool((device.sensors or {}).get("moisture", True))
+
+        if enabled:
+            if not device.pump_included:
+                return Response(
+                    {"detail": "Pump must be included to enable automatic pump launch."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+
+            if not moisture_sensor_enabled:
+                return Response(
+                    {"detail": "Moisture sensor must be enabled to use automatic pump launch."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+
+            if device.pump_threshold_pct is None:
+                return Response(
+                    {"detail": "Pump threshold must be configured before enabling automatic pump launch."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+
+        device.automatic_pump_launch = enabled
+        device.save(update_fields=["automatic_pump_launch", "updated_at"])
+
+        return Response(
+            ReadingDeviceSerializer(device, context={"request": request}).data,
+            status=status.HTTP_200_OK,
+        )
 
     # Optional convenience actions (auth)
     @action(detail=True, methods=["post"], url_path="code.txt")
