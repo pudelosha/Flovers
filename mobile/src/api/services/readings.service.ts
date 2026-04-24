@@ -24,6 +24,18 @@ export async function listReadingDevices(
   );
 }
 
+export async function getReadingDevice(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiReadingDevice> {
+  return await request<ApiReadingDevice>(
+    `${DEVICES_URL}${id}/`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
 export async function createReadingDevice(
   payload: ApiReadingDeviceCreatePayload,
   opts: { auth?: boolean } = { auth: true }
@@ -85,17 +97,17 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
       light: null,
       moisture: null,
     },
-    location: api.plant_location ?? null,  // Now `location` maps correctly to `ReadingTileModel`
-    status: api.is_active ? "enabled" : "disabled",  // Map status based on is_active
-    lastPumpRunAt: api.last_pump_run_at ?? null,  // Add last pump run timestamp
-    pumpIncluded: api.pump_included,  // Flag for pump inclusion
-    automaticPumpLaunch: api.automatic_pump_launch,  // Flag for auto watering
-    pumpThresholdPct: api.pump_threshold_pct ?? undefined,  // Default to undefined if null
+    location: api.plant_location ?? null,
+    status: api.is_active ? "enabled" : "disabled",
+    lastPumpRunAt: api.last_pump_run_at ?? null,
+    pumpIncluded: api.pump_included,
+    automaticPumpLaunch: api.automatic_pump_launch,
+    pumpThresholdPct: api.pump_threshold_pct ?? undefined,
   };
 }
 
 /* ============================== DEVICE SETUP (ENDPOINTS + SECRET) ============================== */
-export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }): 
+export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }):
   Promise<{ endpoints: { ingest: string; read: string }, sample_payloads: any, secret: string }> {
   return await request(
     "/api/readings/device-setup/",

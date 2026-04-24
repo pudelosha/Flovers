@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
-import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text, Modal } from "react-native";
+import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
@@ -19,12 +19,15 @@ import SortReadingsModal, { SortKey, SortDir } from "../components/modals/SortRe
 import FilterReadingsModal from "../components/modals/FilterReadingsModal";
 import ConfirmDeleteReadingModal from "../components/modals/ConfirmDeleteReadingModal";
 import DeviceSetupModal from "../components/modals/DeviceSetupModal";
+import DeviceDetailsModal from "../components/modals/DeviceDetailsModal";
+import WateringScheduleModal from "../components/modals/WateringScheduleModal";
 import UpsertReadingDeviceModal from "../components/modals/UpsertReadingDeviceModal";
 import SendReadingsExportModal from "../components/modals/SendReadingsExportModal";
 
 // === Services (readings) ===
 import {
   listReadingDevices,
+  getReadingDevice,
   createReadingDevice,
   updateReadingDevice,
   deleteReadingDevice as apiDeleteReadingDevice,
@@ -122,12 +125,15 @@ export default function ReadingsScreen() {
   const [setupIngest, setSetupIngest] = useState<string>("");
   const [setupRead, setSetupRead] = useState<string>("");
 
-  // Device details placeholder modal state
+  // Device details modal state
   const [deviceDetailsVisible, setDeviceDetailsVisible] = useState(false);
   const [deviceDetailsId, setDeviceDetailsId] = useState<string | null>(null);
-  const [deviceDetailsName, setDeviceDetailsName] = useState<string>("");
+  const [deviceDetailsLoading, setDeviceDetailsLoading] = useState(false);
+  const [deviceDetailsSending, setDeviceDetailsSending] = useState(false);
+  const [deviceDetailsData, setDeviceDetailsData] = useState<ApiReadingDevice | null>(null);
+  const [deviceDetailsSecret, setDeviceDetailsSecret] = useState<string>("");
 
-  // Watering schedule placeholder modal state
+  // Watering schedule modal state
   const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
   const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
   const [wateringScheduleName, setWateringScheduleName] = useState<string>("");
@@ -208,9 +214,12 @@ export default function ReadingsScreen() {
       setSortSheetOpen(false);
       setFilterSheetOpen(false);
 
-      // clear placeholder modal state
+      // clear modal state
       setDeviceDetailsId(null);
-      setDeviceDetailsName("");
+      setDeviceDetailsData(null);
+      setDeviceDetailsSecret("");
+      setDeviceDetailsLoading(false);
+      setDeviceDetailsSending(false);
       setWateringScheduleId(null);
       setWateringScheduleName("");
 
@@ -498,14 +507,59 @@ export default function ReadingsScreen() {
   );
 
   const openDeviceDetails = useCallback(
-    (id: string) => {
-      const item = items.find((x) => x.id === id);
+    async (id: string) => {
       setDeviceDetailsId(id);
-      setDeviceDetailsName(item?.name ?? "");
       setDeviceDetailsVisible(true);
+      setDeviceDetailsLoading(true);
+      setDeviceDetailsData(null);
+      setDeviceDetailsSecret("");
+
+      try {
+        const [device, setup] = await Promise.all([
+          getReadingDevice(Number(id)),
+          fetchDeviceSetup(),
+        ]);
+
+        setDeviceDetailsData(device);
+        setDeviceDetailsSecret(setup?.secret || "");
+      } catch (e: any) {
+        showToast(
+          e?.message || tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
+          "error"
+        );
+      } finally {
+        setDeviceDetailsLoading(false);
+      }
     },
-    [items]
+    [showToast, tr]
   );
+
+  const handleEmailCodeFromDeviceDetails = useCallback(async () => {
+    if (!deviceDetailsId) {
+      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      return;
+    }
+
+    try {
+      setDeviceDetailsSending(true);
+
+      const res = await sendDeviceCodeByEmail(Number(deviceDetailsId));
+
+      showToast(
+        res?.detail || tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
+        "success"
+      );
+    } catch (e: any) {
+      showToast(
+        e?.message
+          ? `${tr("readings.toasts.sendCodeEmailFailedPrefix", "Send email failed")}: ${e.message}`
+          : tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
+        "error"
+      );
+    } finally {
+      setDeviceDetailsSending(false);
+    }
+  }, [deviceDetailsId, showToast, tr]);
 
   const openWateringSchedule = useCallback(
     (id: string) => {
@@ -985,87 +1039,65 @@ export default function ReadingsScreen() {
         }}
       />
 
-      {/* Device details placeholder modal */}
-      <Modal
+      {/* Device details */}
+      <DeviceDetailsModal
         visible={deviceDetailsVisible}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setDeviceDetailsVisible(false)}
-      >
-        <View style={placeholderModalStyles.overlay}>
-          <View style={placeholderModalStyles.card}>
-            <Text style={placeholderModalStyles.title}>
-              {tr("readings.deviceDetailsModal.title", "Device details")}
-            </Text>
-            <Text style={placeholderModalStyles.text}>
-              {tr(
-                "readings.deviceDetailsModal.description",
-                "This is a placeholder modal for device details. The full implementation will be added later."
-              )}
-            </Text>
-            {!!deviceDetailsName && (
-              <Text style={placeholderModalStyles.meta}>
-                {tr("readings.deviceDetailsModal.deviceLabel", "Device")}: {deviceDetailsName}
-              </Text>
-            )}
-            {!!deviceDetailsId && (
-              <Text style={placeholderModalStyles.meta}>
-                ID: {deviceDetailsId}
-              </Text>
-            )}
+        loading={deviceDetailsLoading}
+        sending={deviceDetailsSending}
+        accountSecret={deviceDetailsSecret || "—"}
+        deviceId={deviceDetailsData?.id ?? deviceDetailsId}
+        deviceKey={deviceDetailsData?.device_key ?? "—"}
+        deviceName={deviceDetailsData?.device_name ?? "—"}
+        plantName={deviceDetailsData?.plant_name ?? "—"}
+        location={deviceDetailsData?.plant_location ?? "—"}
+        sensors={deviceDetailsData?.sensors ?? null}
+        pumpIncluded={Boolean(deviceDetailsData?.pump_included)}
+        onClose={() => {
+          setDeviceDetailsVisible(false);
+          setDeviceDetailsId(null);
+          setDeviceDetailsData(null);
+          setDeviceDetailsSecret("");
+          setDeviceDetailsLoading(false);
+          setDeviceDetailsSending(false);
+        }}
+        onEmailCode={handleEmailCodeFromDeviceDetails}
+      />
 
-            <Pressable
-              style={placeholderModalStyles.closeButton}
-              onPress={() => setDeviceDetailsVisible(false)}
-            >
-              <Text style={placeholderModalStyles.closeButtonText}>
-                {tr("common.close", "Close")}
-              </Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
-
-      {/* Watering schedule placeholder modal */}
-      <Modal
+      {/* Watering schedule */}
+      <WateringScheduleModal
         visible={wateringScheduleVisible}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setWateringScheduleVisible(false)}
-      >
-        <View style={placeholderModalStyles.overlay}>
-          <View style={placeholderModalStyles.card}>
-            <Text style={placeholderModalStyles.title}>
-              {tr("readings.wateringScheduleModal.title", "Schedule watering")}
-            </Text>
-            <Text style={placeholderModalStyles.text}>
-              {tr(
-                "readings.wateringScheduleModal.description",
-                "This is a placeholder modal for scheduling watering. The full implementation will be added later."
-              )}
-            </Text>
-            {!!wateringScheduleName && (
-              <Text style={placeholderModalStyles.meta}>
-                {tr("readings.wateringScheduleModal.deviceLabel", "Device")}: {wateringScheduleName}
-              </Text>
-            )}
-            {!!wateringScheduleId && (
-              <Text style={placeholderModalStyles.meta}>
-                ID: {wateringScheduleId}
-              </Text>
-            )}
-
-            <Pressable
-              style={placeholderModalStyles.closeButton}
-              onPress={() => setWateringScheduleVisible(false)}
-            >
-              <Text style={placeholderModalStyles.closeButtonText}>
-                {tr("common.close", "Close")}
-              </Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
+        deviceId={wateringScheduleId}
+        deviceName={wateringScheduleName}
+        plantName={
+          (() => {
+            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            return dev?.plant_name ?? "—";
+          })()
+        }
+        location={
+          (() => {
+            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            return dev?.plant_location ?? "—";
+          })()
+        }
+        pumpIncluded={
+          (() => {
+            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            return Boolean(dev?.pump_included);
+          })()
+        }
+        lastPumpRunAt={
+          (() => {
+            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            return dev?.last_pump_run_at ?? "—";
+          })()
+        }
+        onClose={() => {
+          setWateringScheduleVisible(false);
+          setWateringScheduleId(null);
+          setWateringScheduleName("");
+        }}
+      />
 
       {/* Upsert (add/edit) reading device */}
       <UpsertReadingDeviceModal
