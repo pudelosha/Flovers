@@ -4,6 +4,7 @@ import {
   ScrollView,
   LayoutChangeEvent,
   Text,
+  Pressable,
   useWindowDimensions,
   Animated,
   Easing,
@@ -14,6 +15,7 @@ import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/nativ
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { useTranslation } from "react-i18next";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -147,6 +149,9 @@ export default function ReadingsHistoryScreen() {
   const [range, setRange] = useState<HistoryRange>("day");
   const [metric, setMetric] = useState<MetricKey>("temperature");
 
+  // dummy chart options menu
+  const [chartMenuOpen, setChartMenuOpen] = useState(false);
+
   // selected device (id + names, fetched under auth)
   const [device, setDevice] = useState<
     Pick<ApiReadingDevice, "id" | "device_name" | "plant_name"> | null
@@ -161,6 +166,7 @@ export default function ReadingsHistoryScreen() {
   const span = useMemo(() => spanFor(range, anchor), [range, anchor]);
 
   const prevSpan = useCallback(() => {
+    setChartMenuOpen(false);
     setAnchor((a) =>
       range === "day" ? addDays(a, -1) : range === "week" ? addWeeks(a, -1) : addMonths(a, -1)
     );
@@ -168,6 +174,7 @@ export default function ReadingsHistoryScreen() {
 
   // ⛔ Block navigation into future spans
   const nextSpan = useCallback(() => {
+    setChartMenuOpen(false);
     setAnchor((a) => {
       const candidate =
         range === "day" ? addDays(a, 1) : range === "week" ? addWeeks(a, 1) : addMonths(a, 1);
@@ -420,6 +427,7 @@ export default function ReadingsHistoryScreen() {
 
       // always reset visible date span to current day/week/month on re-entry
       setAnchor(now);
+      setChartMenuOpen(false);
 
       Animated.timing(entry, {
         toValue: 1,
@@ -550,7 +558,167 @@ export default function ReadingsHistoryScreen() {
               </View>
 
               <View onLayout={onLayoutName}>
-                <Text style={s.plantName}>{plantName}</Text>
+                <View
+                  style={{
+                    position: "relative",
+                    minHeight: 34,
+                    justifyContent: "center",
+                    marginBottom: 8,
+                  }}
+                >
+                  <Text
+                    style={[
+                      s.plantName,
+                      {
+                        paddingRight: 42,
+                        textAlign: "left",
+                        alignSelf: "stretch",
+                      },
+                    ]}
+                    numberOfLines={1}
+                    ellipsizeMode="tail"
+                  >
+                    {plantName}
+                  </Text>
+
+                  <Pressable
+                    style={[
+                      s.dateBtn,
+                      {
+                        position: "absolute",
+                        right: 0,
+                        top: 0,
+                      },
+                    ]}
+                    onPress={() => setChartMenuOpen((v) => !v)}
+                    android_ripple={{ color: "rgba(255,255,255,0.2)", borderless: true }}
+                  >
+                    <MaterialCommunityIcons
+                      name="dots-vertical"
+                      size={22}
+                      color="#FFFFFF"
+                    />
+                  </Pressable>
+
+                  {chartMenuOpen && (
+                    <View
+                      pointerEvents="auto"
+                      style={{
+                        position: "absolute",
+                        top: 40,
+                        right: 0,
+                        zIndex: 50,
+                        minWidth: 170,
+                        paddingVertical: 6,
+                        borderRadius: 16,
+                        backgroundColor: "rgba(0,0,0,0.82)",
+                        borderWidth: 1,
+                        borderColor: "rgba(255,255,255,0.14)",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Pressable
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          paddingHorizontal: 12,
+                          paddingVertical: 10,
+                        }}
+                        onPress={() => setChartMenuOpen(false)}
+                      >
+                        <MaterialCommunityIcons
+                          name="chart-line"
+                          size={16}
+                          color="#FFFFFF"
+                          style={{ marginRight: 8 }}
+                        />
+                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
+                          Show average
+                        </Text>
+                      </Pressable>
+
+                      <Pressable
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          paddingHorizontal: 12,
+                          paddingVertical: 10,
+                        }}
+                        onPress={() => setChartMenuOpen(false)}
+                      >
+                        <MaterialCommunityIcons
+                          name="arrow-up-bold-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={{ marginRight: 8 }}
+                        />
+                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
+                          Show max
+                        </Text>
+                      </Pressable>
+
+                      <Pressable
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          paddingHorizontal: 12,
+                          paddingVertical: 10,
+                        }}
+                        onPress={() => setChartMenuOpen(false)}
+                      >
+                        <MaterialCommunityIcons
+                          name="arrow-down-bold-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={{ marginRight: 8 }}
+                        />
+                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
+                          Show min
+                        </Text>
+                      </Pressable>
+
+                      <Pressable
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          paddingHorizontal: 12,
+                          paddingVertical: 10,
+                        }}
+                        onPress={() => setChartMenuOpen(false)}
+                      >
+                        <MaterialCommunityIcons
+                          name="tag-off-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={{ marginRight: 8 }}
+                        />
+                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
+                          Hide labels
+                        </Text>
+                      </Pressable>
+
+                      <Pressable
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          paddingHorizontal: 12,
+                          paddingVertical: 10,
+                        }}
+                        onPress={() => setChartMenuOpen(false)}
+                      >
+                        <MaterialCommunityIcons
+                          name="tag-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={{ marginRight: 8 }}
+                        />
+                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
+                          Show labels
+                        </Text>
+                      </Pressable>
+                    </View>
+                  )}
+                </View>
               </View>
 
               <View onLayout={onLayoutDate}>
