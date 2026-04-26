@@ -4,6 +4,7 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -98,6 +99,11 @@ export default function WateringScheduleModal({
         </View>
 
         <View style={[s.promptInner, { maxHeight: "86%" }]}>
+          <ModalCloseButton
+            onPress={onClose}
+            accessibilityLabel={tr("readingsModals.common.close", "Close")}
+          />
+
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
@@ -151,7 +157,11 @@ export default function WateringScheduleModal({
                       }}
                     >
                       <StatusLine
-                        icon={scheduledJobExists ? "clock-check-outline" : "clock-outline"}
+                        icon={
+                          scheduledJobExists
+                            ? "clock-check-outline"
+                            : "clock-outline"
+                        }
                         text={
                           scheduledJobExists
                             ? tr(
@@ -250,7 +260,11 @@ export default function WateringScheduleModal({
 
                   <Pressable
                     disabled={!canScheduleOrRecall}
-                    onPress={scheduledJobExists ? onRecallWatering : onScheduleWatering}
+                    onPress={
+                      scheduledJobExists
+                        ? onRecallWatering
+                        : onScheduleWatering
+                    }
                     style={{
                       marginTop: 12,
                       paddingVertical: 12,
@@ -266,7 +280,11 @@ export default function WateringScheduleModal({
                     }}
                   >
                     <MaterialCommunityIcons
-                      name={scheduledJobExists ? "calendar-remove-outline" : "calendar-plus-outline"}
+                      name={
+                        scheduledJobExists
+                          ? "calendar-remove-outline"
+                          : "calendar-plus-outline"
+                      }
                       size={18}
                       color="#fff"
                     />
@@ -279,7 +297,10 @@ export default function WateringScheduleModal({
                       }
                     >
                       {working
-                        ? tr("readingsModals.wateringSchedule.working", "Updating...")
+                        ? tr(
+                            "readingsModals.wateringSchedule.working",
+                            "Updating..."
+                          )
                         : scheduledJobExists
                         ? tr(
                             "readingsModals.wateringSchedule.recallWatering",
