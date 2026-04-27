@@ -4,8 +4,9 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../../app/providers/SettingsProvider";
 import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
-import type { ApiPumpTask } from "../types/readings.types";
+import type { ApiPumpTask } from "../../types/readings.types";
 
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -42,6 +43,44 @@ type Props = {
   onRecallWatering?: () => Promise<void> | void;
 };
 
+function formatDateWithSettings(d: Date, settings: any) {
+  const dd = String(d.getDate()).padStart(2, "0");
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const yyyy = d.getFullYear();
+
+  const fmt = settings?.dateFormat;
+
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
+  return `${dd}.${mm}.${yyyy}`;
+}
+
+function formatTime(d: Date) {
+  const hh = String(d.getHours()).padStart(2, "0");
+  const min = String(d.getMinutes()).padStart(2, "0");
+  return `${hh}:${min}`;
+}
+
+function formatDateTimeWithSettings(value?: Date | string | null, settings?: any) {
+  if (!value) return "";
+
+  const date = typeof value === "string" ? new Date(value) : value;
+  if (!(date instanceof Date) || isNaN(+date)) return "";
+
+  return `${formatDateWithSettings(date, settings)} ${formatTime(date)}`;
+}
+
 export default function WateringScheduleModal({
   visible,
   loading = false,
@@ -61,13 +100,29 @@ export default function WateringScheduleModal({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
 
   const tr = React.useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, any>) => {
       void currentLanguage;
+
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+
+      if (!isMissing) return txt;
+
+      let fallbackText = fallback ?? key.split(".").pop() ?? key;
+
+      if (values) {
+        Object.entries(values).forEach(([name, value]) => {
+          fallbackText = fallbackText.replace(
+            new RegExp(`{{\\s*${name}\\s*}}`, "g"),
+            String(value ?? "")
+          );
+        });
+      }
+
+      return fallbackText;
     },
     [t, currentLanguage]
   );
@@ -77,7 +132,10 @@ export default function WateringScheduleModal({
   const pendingTaskCreatedAt =
     pendingPumpTask?.requested_at ?? scheduledJobCreatedAt ?? null;
 
-  const pendingTaskExpiresAt = pendingPumpTask?.expires_at ?? null;
+  const formattedPendingTaskCreatedAt = React.useMemo(
+    () => formatDateTimeWithSettings(pendingTaskCreatedAt, settings),
+    [pendingTaskCreatedAt, settings]
+  );
 
   const canScheduleOrRecall =
     Boolean(pumpIncluded) &&
@@ -205,27 +263,14 @@ export default function WateringScheduleModal({
                       />
 
                       {hasPendingTask && (
-                        <>
-                          <StatusLine
-                            icon="calendar-clock"
-                            text={tr(
-                              "readingsModals.wateringSchedule.scheduledAt",
-                              "Scheduled at: {{value}}",
-                              { value: pendingTaskCreatedAt || "—" }
-                            )}
-                          />
-
-                          {!!pendingTaskExpiresAt && (
-                            <StatusLine
-                              icon="timer-sand"
-                              text={tr(
-                                "readingsModals.wateringSchedule.expiresAt",
-                                "Expires at: {{value}}",
-                                { value: pendingTaskExpiresAt }
-                              )}
-                            />
+                        <StatusLine
+                          icon="calendar-clock"
+                          text={tr(
+                            "readingsModals.wateringSchedule.scheduledAt",
+                            "Scheduled at: {{value}}",
+                            { value: formattedPendingTaskCreatedAt || "—" }
                           )}
-                        </>
+                        />
                       )}
                     </View>
                   </Block>
@@ -321,7 +366,7 @@ export default function WateringScheduleModal({
                       name={
                         hasPendingTask
                           ? "calendar-remove-outline"
-                          : "calendar-plus-outline"
+                          : "calendar-blank-outline"
                       }
                       size={18}
                       color="#fff"
