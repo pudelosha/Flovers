@@ -37,7 +37,10 @@ PUMP_TASK_TTL_HOURS = 2
 
 
 def _get_or_create_secret(user) -> AccountSecret:
-    obj, created = AccountSecret.objects.get_or_create(user=user, defaults={"secret": secrets.token_urlsafe(32)})
+    obj, created = AccountSecret.objects.get_or_create(
+        user=user,
+        defaults={"secret": secrets.token_urlsafe(32)},
+    )
     if created:
         obj.save(update_fields=["secret"])
     return obj
@@ -97,6 +100,47 @@ def _serialize_pump_task_for_app(task):
     data.pop("expires_at", None)
 
     return data
+
+
+def _resolve_device_from_secret_and_key(request):
+    device_id = request.data.get("device_id")
+    device_key = request.data.get("device_key")
+    secret_str = request.data.get("secret")
+
+    if not (device_key and secret_str):
+        return None, Response(
+            {"detail": "device_key and secret are required"},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
+    if not acct:
+        return None, Response(
+            {"detail": "invalid credentials"},
+            status=status.HTTP_403_FORBIDDEN,
+        )
+
+    if device_id:
+        device = get_object_or_404(
+            ReadingDevice,
+            id=device_id,
+            device_key=device_key,
+            user=acct.user,
+        )
+    else:
+        device = get_object_or_404(
+            ReadingDevice,
+            device_key=device_key,
+            user=acct.user,
+        )
+
+    if not device.is_active:
+        return None, Response(
+            {"detail": "device disabled"},
+            status=status.HTTP_403_FORBIDDEN,
+        )
+
+    return device, None
 
 
 def _autosize_worksheet_columns(ws):
@@ -670,38 +714,14 @@ def ingest(request):
       - Moisture alert state is updated based on threshold crossing.
       - When crossing into the low-moisture state, push and email notifications are sent once.
       - When moisture rises back above threshold, the active alert state is reset.
-      - If a manual pump task is pending, a pump instruction is returned.
+      - Pump task lookup is intentionally handled by /pump-next-task/.
       - Automatic pump decisions are handled by the Arduino sketch, not by the backend.
     """
-    device_id = request.data.get("device_id")
-    device_key = request.data.get("device_key")
-    secret_str = request.data.get("secret")
+    device, error_response = _resolve_device_from_secret_and_key(request)
+    if error_response is not None:
+        return error_response
+
     metrics = request.data.get("metrics") or {}
-
-    pump_instruction = {
-        "run": False,
-        "task_id": None,
-        "source": None,
-        "reason": None,
-    }
-
-    # Require at least secret + device_key
-    if not (device_key and secret_str):
-        return Response({"detail": "device_key and secret are required"}, status=400)
-
-    # Resolve account by secret first
-    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
-    if not acct:
-        return Response({"detail": "invalid credentials"}, status=403)
-
-    # Find device: prefer id+key if id provided, else key within this user's devices
-    if device_id:
-        device = get_object_or_404(ReadingDevice, id=device_id, device_key=device_key, user=acct.user)
-    else:
-        device = get_object_or_404(ReadingDevice, device_key=device_key, user=acct.user)
-
-    if not device.is_active:
-        return Response({"detail": "device disabled"}, status=403)
 
     # Original timestamp (for "last_read_at" / UX)
     ts = parse_ts_or_now(request.data.get("timestamp"))
@@ -714,7 +734,7 @@ def ingest(request):
             should_send_moisture_alert = False
             alert_moisture_value = None
 
-            # Lock the device row while we update readings and check manual pump tasks.
+            # Lock the device row while we update readings.
             device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
 
             # Either create a new hourly record or update the existing one
@@ -764,34 +784,6 @@ def ingest(request):
             ):
                 device.moisture_alert_active = False
 
-            # Manual pump instruction only.
-            # Automatic watering is handled inside the Arduino sketch and later reported to /pump-complete/.
-            if device.pump_included:
-                _expire_old_pump_tasks(device)
-
-                manual_task = (
-                    device.pump_tasks
-                    .filter(
-                        source=PumpTask.SOURCE_MANUAL,
-                        status=PumpTask.STATUS_PENDING,
-                    )
-                    .order_by("requested_at")
-                    .first()
-                )
-
-                if manual_task:
-                    now = timezone.now()
-                    manual_task.status = PumpTask.STATUS_DELIVERED
-                    manual_task.delivered_at = now
-                    manual_task.save(update_fields=["status", "delivered_at", "updated_at"])
-
-                    pump_instruction = {
-                        "run": True,
-                        "task_id": manual_task.id,
-                        "source": PumpTask.SOURCE_MANUAL,
-                        "reason": "manual_scheduled",
-                    }
-
             # Update device's cached fields (last_read_at keeps the REAL timestamp)
             device.last_read_at = ts
             device.latest_snapshot = {
@@ -814,12 +806,73 @@ def ingest(request):
         pass
 
     return Response(
-        {
-            "status": "ok",
-            "pump": pump_instruction,
-        },
+        {"status": "ok"},
         status=status.HTTP_202_ACCEPTED,
     )
+
+
+@api_view(["POST"])
+@permission_classes([permissions.AllowAny])
+@throttle_classes([AnonRateThrottle, FeedPerDeviceThrottle])
+def pump_next_task(request):
+    """
+    Body:
+    {
+      "secret": "...",
+      "device_key": "AB12CD34",
+      "device_id": 123 optional
+    }
+
+    Used by Arduino/device after sending readings.
+    It checks whether a manual watering task is pending.
+    If a task is found, it is marked as delivered and returned to the device.
+    """
+    device, error_response = _resolve_device_from_secret_and_key(request)
+    if error_response is not None:
+        return error_response
+
+    if not device.pump_included:
+        return Response({
+            "run": False,
+            "task_id": None,
+            "source": None,
+            "reason": "pump_not_included",
+        })
+
+    with transaction.atomic():
+        device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
+        _expire_old_pump_tasks(device)
+
+        task = (
+            device.pump_tasks
+            .select_for_update()
+            .filter(
+                source=PumpTask.SOURCE_MANUAL,
+                status=PumpTask.STATUS_PENDING,
+            )
+            .order_by("requested_at")
+            .first()
+        )
+
+        if not task:
+            return Response({
+                "run": False,
+                "task_id": None,
+                "source": None,
+                "reason": None,
+            })
+
+        now = timezone.now()
+        task.status = PumpTask.STATUS_DELIVERED
+        task.delivered_at = now
+        task.save(update_fields=["status", "delivered_at", "updated_at"])
+
+    return Response({
+        "run": True,
+        "task_id": task.id,
+        "source": PumpTask.SOURCE_MANUAL,
+        "reason": "manual_scheduled",
+    })
 
 
 @api_view(["POST"])
@@ -832,6 +885,7 @@ def pump_complete(request):
       "secret": "...",
       "device_key": "AB12CD34",
       "task_id": 123,
+      "source": "manual",
       "success": true,
       "error_message": "optional"
     }
@@ -847,8 +901,10 @@ def pump_complete(request):
 
     This endpoint is intentionally unauthenticated by JWT, but validates device_key + account secret.
     """
-    device_key = request.data.get("device_key")
-    secret_str = request.data.get("secret")
+    device, error_response = _resolve_device_from_secret_and_key(request)
+    if error_response is not None:
+        return error_response
+
     task_id = request.data.get("task_id")
     success = _parse_bool(request.data.get("success", True), default=True)
     error_message = request.data.get("error_message")
@@ -857,27 +913,11 @@ def pump_complete(request):
     if source not in {PumpTask.SOURCE_MANUAL, PumpTask.SOURCE_AUTOMATIC}:
         source = PumpTask.SOURCE_MANUAL
 
-    if not (device_key and secret_str):
-        return Response(
-            {"detail": "device_key and secret are required"},
-            status=400,
-        )
-
-    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
-    if not acct:
-        return Response({"detail": "invalid credentials"}, status=403)
-
-    device = get_object_or_404(
-        ReadingDevice,
-        device_key=device_key,
-        user=acct.user,
-    )
-
-    if not device.is_active:
-        return Response({"detail": "device disabled"}, status=403)
-
     if not device.pump_included:
-        return Response({"detail": "Pump is not included for this device."}, status=400)
+        return Response(
+            {"detail": "Pump is not included for this device."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
 
     now = timezone.now()
 
@@ -899,7 +939,7 @@ def pump_complete(request):
             if task.status in [PumpTask.STATUS_CANCELLED, PumpTask.STATUS_EXPIRED]:
                 return Response(
                     {"detail": f"Task is already {task.status}."},
-                    status=409,
+                    status=status.HTTP_409_CONFLICT,
                 )
 
             if success:
