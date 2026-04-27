@@ -1,13 +1,33 @@
 from rest_framework import serializers
-from .models import ReadingDevice, Reading
+from .models import ReadingDevice, Reading, PumpTask
 
 
 class ReadingDeviceAutoPumpSerializer(serializers.Serializer):
     automatic_pump_launch = serializers.BooleanField()
 
 
+class PumpTaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PumpTask
+        fields = (
+            "id",
+            "source",
+            "status",
+            "requested_at",
+            "delivered_at",
+            "executed_at",
+            "cancelled_at",
+            "expires_at",
+            "moisture_at_request",
+            "threshold_at_request",
+            "error_message",
+        )
+        read_only_fields = fields
+
+
 class ReadingDeviceSerializer(serializers.ModelSerializer):
     latest = serializers.SerializerMethodField()
+    pending_pump_task = serializers.SerializerMethodField()
 
     # UI alias fields (write-only) so current modal payload can be sent as-is
     mode = serializers.CharField(write_only=True, required=False)
@@ -44,6 +64,9 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "automatic_pump_launch",
             "pump_threshold_pct",
             "last_pump_run_at",
+            "last_pump_run_source",
+            "pump_cooldown_minutes",
+            "pending_pump_task",
             "moisture_alert_active",
             "last_read_at",
             "latest",
@@ -67,6 +90,8 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "plant_name",
             "plant_location",
             "last_pump_run_at",
+            "last_pump_run_source",
+            "pending_pump_task",
             "moisture_alert_active",
             "last_read_at",
             "latest",
@@ -76,6 +101,18 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
     def get_latest(self, obj):
         return obj.latest_snapshot or None
+
+    def get_pending_pump_task(self, obj):
+        task = (
+            obj.pump_tasks
+            .filter(
+                source=PumpTask.SOURCE_MANUAL,
+                status__in=[PumpTask.STATUS_PENDING, PumpTask.STATUS_DELIVERED],
+            )
+            .order_by("-requested_at")
+            .first()
+        )
+        return PumpTaskSerializer(task).data if task else None
 
     def to_internal_value(self, data):
         data = data.copy()
@@ -229,6 +266,7 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             validated_data["pump_threshold_pct"] = None
 
         return super().update(instance, validated_data)
+
 
 class ReadingSerializer(serializers.ModelSerializer):
     class Meta:

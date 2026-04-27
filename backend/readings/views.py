@@ -16,12 +16,13 @@ from rest_framework.throttling import AnonRateThrottle
 
 from core.emailing import send_templated_email
 
-from .models import ReadingDevice, Reading, AccountSecret
+from .models import ReadingDevice, Reading, AccountSecret, PumpTask
 from .serializers import (
     ReadingDeviceSerializer,
     ReadingDeviceAutoPumpSerializer,
     ReadingSerializer,
     ReadingsExportEmailSerializer,
+    PumpTaskSerializer,
 )
 from .utils import parse_ts_or_now
 from .throttles import IngestPerDeviceThrottle, FeedPerDeviceThrottle
@@ -31,6 +32,9 @@ from .notifications import send_moisture_alert_notifications
 
 
 # ---------- helpers ----------
+
+PUMP_TASK_TTL_HOURS = 2
+
 
 def _get_or_create_secret(user) -> AccountSecret:
     obj, created = AccountSecret.objects.get_or_create(user=user, defaults={"secret": secrets.token_urlsafe(32)})
@@ -167,6 +171,54 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
     wb.save(stream)
     return stream.getvalue()
 
+
+def _expire_old_pump_tasks(device: ReadingDevice):
+    now = timezone.now()
+
+    old_tasks = device.pump_tasks.filter(
+        status__in=[PumpTask.STATUS_PENDING, PumpTask.STATUS_DELIVERED],
+        expires_at__isnull=False,
+        expires_at__lt=now,
+    )
+
+    old_tasks.update(status=PumpTask.STATUS_EXPIRED, updated_at=now)
+
+
+def _get_open_manual_pump_task(device: ReadingDevice):
+    _expire_old_pump_tasks(device)
+
+    return (
+        device.pump_tasks
+        .filter(
+            source=PumpTask.SOURCE_MANUAL,
+            status__in=[PumpTask.STATUS_PENDING, PumpTask.STATUS_DELIVERED],
+        )
+        .order_by("-requested_at")
+        .first()
+    )
+
+
+def _device_can_run_pump(device: ReadingDevice):
+    if not device.pump_included:
+        return False, "Pump is not included for this device."
+
+    if not device.is_active:
+        return False, "Device is disabled."
+
+    return True, ""
+
+
+def _pump_cooldown_active(device: ReadingDevice):
+    if not device.last_pump_run_at:
+        return False
+
+    cooldown_minutes = device.pump_cooldown_minutes or 0
+    if cooldown_minutes <= 0:
+        return False
+
+    return timezone.now() < device.last_pump_run_at + timedelta(minutes=cooldown_minutes)
+
+
 # ---- History helpers (for new /history/ endpoint) ----
 
 HISTORY_UNITS = {
@@ -289,6 +341,75 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             ReadingDeviceSerializer(device, context={"request": request}).data,
             status=status.HTTP_200_OK,
         )
+
+    @action(detail=True, methods=["get"], url_path="pump-status")
+    def pump_status(self, request, pk=None):
+        device = self.get_object()
+        task = _get_open_manual_pump_task(device)
+
+        return Response({
+            "pump_included": device.pump_included,
+            "last_pump_run_at": device.last_pump_run_at,
+            "last_pump_run_source": device.last_pump_run_source,
+            "pending_pump_task": PumpTaskSerializer(task).data if task else None,
+        })
+
+    @action(detail=True, methods=["post"], url_path="pump-schedule")
+    def pump_schedule(self, request, pk=None):
+        device = self.get_object()
+
+        ok, reason = _device_can_run_pump(device)
+        if not ok:
+            return Response({"detail": reason}, status=status.HTTP_400_BAD_REQUEST)
+
+        with transaction.atomic():
+            device = ReadingDevice.objects.select_for_update().get(pk=device.pk, user=request.user)
+            existing = _get_open_manual_pump_task(device)
+
+            if existing:
+                return Response({
+                    "detail": "Watering is already scheduled.",
+                    "pending_pump_task": PumpTaskSerializer(existing).data,
+                }, status=status.HTTP_200_OK)
+
+            now = timezone.now()
+            task = PumpTask.objects.create(
+                device=device,
+                source=PumpTask.SOURCE_MANUAL,
+                status=PumpTask.STATUS_PENDING,
+                requested_at=now,
+                expires_at=now + timedelta(hours=PUMP_TASK_TTL_HOURS),
+                created_by_user=request.user,
+            )
+
+        return Response({
+            "detail": "Watering scheduled.",
+            "pending_pump_task": PumpTaskSerializer(task).data,
+        }, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=["post"], url_path="pump-recall")
+    def pump_recall(self, request, pk=None):
+        device = self.get_object()
+
+        with transaction.atomic():
+            device = ReadingDevice.objects.select_for_update().get(pk=device.pk, user=request.user)
+            task = _get_open_manual_pump_task(device)
+
+            if not task:
+                return Response({
+                    "detail": "No pending watering request.",
+                    "pending_pump_task": None,
+                }, status=status.HTTP_200_OK)
+
+            now = timezone.now()
+            task.status = PumpTask.STATUS_CANCELLED
+            task.cancelled_at = now
+            task.save(update_fields=["status", "cancelled_at", "updated_at"])
+
+        return Response({
+            "detail": "Scheduled watering recalled.",
+            "pending_pump_task": None,
+        }, status=status.HTTP_200_OK)
 
     # Optional convenience actions (auth)
     @action(detail=True, methods=["post"], url_path="code.txt")
@@ -529,11 +650,19 @@ def ingest(request):
       - Moisture alert state is updated based on threshold crossing.
       - When crossing into the low-moisture state, push and email notifications are sent once.
       - When moisture rises back above threshold, the active alert state is reset.
+      - If a pump task is pending, or automatic pump conditions are met, a pump instruction is returned.
     """
     device_id = request.data.get("device_id")
     device_key = request.data.get("device_key")
     secret_str = request.data.get("secret")
     metrics = request.data.get("metrics") or {}
+
+    pump_instruction = {
+        "run": False,
+        "task_id": None,
+        "source": None,
+        "reason": None,
+    }
 
     # Require at least secret + device_key
     if not (device_key and secret_str):
@@ -566,6 +695,9 @@ def ingest(request):
         with transaction.atomic():
             should_send_moisture_alert = False
             alert_moisture_value = None
+
+            # Lock the device row while we decide pump tasks for this ingest.
+            device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
 
             # Either create a new hourly record or update the existing one
             rec, created = Reading.objects.get_or_create(
@@ -615,6 +747,66 @@ def ingest(request):
             ):
                 device.moisture_alert_active = False
 
+            # Pump instruction: manual task has priority over automatic pump.
+            if device.pump_included:
+                _expire_old_pump_tasks(device)
+
+                manual_task = (
+                    device.pump_tasks
+                    .filter(
+                        source=PumpTask.SOURCE_MANUAL,
+                        status=PumpTask.STATUS_PENDING,
+                    )
+                    .order_by("requested_at")
+                    .first()
+                )
+
+                if manual_task:
+                    now = timezone.now()
+                    manual_task.status = PumpTask.STATUS_DELIVERED
+                    manual_task.delivered_at = now
+                    manual_task.save(update_fields=["status", "delivered_at", "updated_at"])
+
+                    pump_instruction = {
+                        "run": True,
+                        "task_id": manual_task.id,
+                        "source": PumpTask.SOURCE_MANUAL,
+                        "reason": "manual_scheduled",
+                    }
+
+                elif (
+                    device.automatic_pump_launch
+                    and device.pump_threshold_pct is not None
+                    and rec.moisture is not None
+                    and not _pump_cooldown_active(device)
+                ):
+                    try:
+                        moisture_f = float(rec.moisture)
+                        threshold_f = float(device.pump_threshold_pct)
+                    except (TypeError, ValueError):
+                        moisture_f = None
+                        threshold_f = None
+
+                    if moisture_f is not None and threshold_f is not None and moisture_f < threshold_f:
+                        now = timezone.now()
+                        auto_task = PumpTask.objects.create(
+                            device=device,
+                            source=PumpTask.SOURCE_AUTOMATIC,
+                            status=PumpTask.STATUS_DELIVERED,
+                            requested_at=now,
+                            delivered_at=now,
+                            expires_at=now + timedelta(hours=PUMP_TASK_TTL_HOURS),
+                            moisture_at_request=moisture_f,
+                            threshold_at_request=threshold_f,
+                        )
+
+                        pump_instruction = {
+                            "run": True,
+                            "task_id": auto_task.id,
+                            "source": PumpTask.SOURCE_AUTOMATIC,
+                            "reason": "moisture_below_threshold",
+                        }
+
             # Update device's cached fields (last_read_at keeps the REAL timestamp)
             device.last_read_at = ts
             device.latest_snapshot = {
@@ -636,7 +828,98 @@ def ingest(request):
         # Very unlikely with get_or_create, but keep behavior consistent / idempotent
         pass
 
-    return Response({"status": "ok"}, status=status.HTTP_202_ACCEPTED)
+    return Response(
+        {
+            "status": "ok",
+            "pump": pump_instruction,
+        },
+        status=status.HTTP_202_ACCEPTED,
+    )
+
+
+@api_view(["POST"])
+@permission_classes([permissions.AllowAny])
+@throttle_classes([AnonRateThrottle, FeedPerDeviceThrottle])
+def pump_complete(request):
+    """
+    Body:
+    {
+      "secret": "...",
+      "device_key": "AB12CD34",
+      "task_id": 123,
+      "success": true,
+      "error_message": "optional"
+    }
+
+    Used by Arduino/device after it receives a pump instruction from /ingest/.
+    This endpoint is intentionally unauthenticated by JWT, but validates device_key + account secret.
+    """
+    device_key = request.data.get("device_key")
+    secret_str = request.data.get("secret")
+    task_id = request.data.get("task_id")
+    success = bool(request.data.get("success", True))
+    error_message = request.data.get("error_message")
+
+    if not (device_key and secret_str and task_id):
+        return Response(
+            {"detail": "device_key, secret, and task_id are required"},
+            status=400,
+        )
+
+    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
+    if not acct:
+        return Response({"detail": "invalid credentials"}, status=403)
+
+    device = get_object_or_404(
+        ReadingDevice,
+        device_key=device_key,
+        user=acct.user,
+    )
+
+    if not device.is_active:
+        return Response({"detail": "device disabled"}, status=403)
+
+    task = get_object_or_404(PumpTask, id=task_id, device=device)
+
+    now = timezone.now()
+
+    with transaction.atomic():
+        device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
+        task = PumpTask.objects.select_for_update().get(id=task.id)
+
+        # Idempotent success for repeated Arduino retries
+        if task.status == PumpTask.STATUS_EXECUTED:
+            return Response({
+                "detail": "Pump execution was already recorded.",
+                "last_pump_run_at": device.last_pump_run_at,
+                "last_pump_run_source": device.last_pump_run_source,
+            })
+
+        if task.status in [PumpTask.STATUS_CANCELLED, PumpTask.STATUS_EXPIRED]:
+            return Response(
+                {"detail": f"Task is already {task.status}."},
+                status=409,
+            )
+
+        if success:
+            task.status = PumpTask.STATUS_EXECUTED
+            task.executed_at = now
+            task.error_message = None
+
+            device.last_pump_run_at = now
+            device.last_pump_run_source = task.source
+            device.save(update_fields=["last_pump_run_at", "last_pump_run_source", "updated_at"])
+        else:
+            task.status = PumpTask.STATUS_FAILED
+            task.error_message = error_message or "Pump execution failed."
+
+        task.save(update_fields=["status", "executed_at", "error_message", "updated_at"])
+
+    return Response({
+        "detail": "Pump execution recorded." if success else "Pump failure recorded.",
+        "last_pump_run_at": device.last_pump_run_at,
+        "last_pump_run_source": device.last_pump_run_source,
+    })
 
 
 @api_view(["GET"])
