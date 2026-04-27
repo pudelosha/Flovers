@@ -11,8 +11,10 @@ def generate_arduino_code(
     secret: str,
     device_id: int,
     device_key: str,
-    interval_hours: int,
     sensors: dict | None = None,
+    pump_included: bool = False,
+    automatic_pump_launch: bool = False,
+    pump_threshold_pct: float | int | None = None,
 ) -> str:
     sensors = sensors or {}
 
@@ -21,8 +23,400 @@ def generate_arduino_code(
     use_light = _bool_flag(sensors.get("light", True))
     use_moisture = _bool_flag(sensors.get("moisture", True))
 
-    send_interval_ms = max(1, int(interval_hours)) * 60 * 60 * 1000
+    pump_enabled = bool(pump_included)
+
+    # Pump code is generated only when the device is declared as pump-capable.
+    # Automatic watering then depends on:
+    # - automatic_pump_launch
+    # - moisture sensor enabled
+    # - current moisture below threshold
+    # - local Arduino cooldown
+    auto_pump_enabled = bool(
+        pump_enabled
+        and automatic_pump_launch
+        and sensors.get("moisture", True)
+    )
+
+    pump_threshold = 30 if pump_threshold_pct is None else int(round(float(pump_threshold_pct)))
+
     api_url = f"{base_url.rstrip('/')}/api/readings/ingest/"
+    pump_complete_url = f"{base_url.rstrip('/')}/api/readings/pump-complete/"
+
+    pump_config = ""
+    pump_setup = ""
+    pump_after_success = ""
+    pump_functions = ""
+
+    if pump_enabled:
+        pump_config = dedent(
+            f"""
+            // -------------------- Pump ---------------------
+
+            const char* pumpCompleteUrl = "{pump_complete_url}";
+
+            #define PUMP_PIN 4
+
+            // Default pump run time. Adjust manually if your pump needs more or less time.
+            const unsigned long PUMP_RUN_MS = 30000UL;
+
+            // Safety cooldown for automatic watering only.
+            // Manual scheduled watering ignores this cooldown.
+            const unsigned long AUTO_PUMP_MIN_INTERVAL_MS = 60UL * 60UL * 1000UL;
+
+            const bool PUMP_INCLUDED = true;
+            const bool AUTO_PUMP_ENABLED = {_bool_flag(auto_pump_enabled)};
+            const int AUTO_PUMP_THRESHOLD_PCT = {pump_threshold};
+
+            unsigned long lastAutoPumpMs = 0;
+            """
+        ).strip()
+
+        pump_setup = dedent(
+            """
+            pinMode(PUMP_PIN, OUTPUT);
+            digitalWrite(PUMP_PIN, LOW);
+            """
+        ).strip()
+
+        pump_after_success = dedent(
+            """
+            bool manualPumpRan = handleManualPumpInstruction(responseBody);
+
+            // Automatic watering is decided locally by Arduino.
+            // It does not ask the backend for permission.
+            // Manual scheduled watering has priority in the same cycle to avoid double watering.
+            if (!manualPumpRan)
+            {
+                handleAutomaticPump(
+                    hasMoisture,
+                    moisture
+                );
+            }
+            """
+        ).strip()
+
+        pump_functions = dedent(
+            """
+            // ========================================================
+            // SIMPLE JSON HELPERS
+            // ========================================================
+
+            int findJsonValueStart(const String& json, const String& key)
+            {
+                String quotedKey = "\\\"" + key + "\\\"";
+                int keyIndex = json.indexOf(quotedKey);
+
+                if (keyIndex < 0)
+                    return -1;
+
+                int colonIndex = json.indexOf(":", keyIndex + quotedKey.length());
+
+                if (colonIndex < 0)
+                    return -1;
+
+                int valueIndex = colonIndex + 1;
+
+                while (
+                    valueIndex < json.length() &&
+                    (
+                        json[valueIndex] == ' ' ||
+                        json[valueIndex] == '\\n' ||
+                        json[valueIndex] == '\\r' ||
+                        json[valueIndex] == '\\t'
+                    )
+                )
+                {
+                    valueIndex++;
+                }
+
+                return valueIndex;
+            }
+
+            bool jsonBoolValue(const String& json, const String& key, bool fallbackValue = false)
+            {
+                int valueIndex = findJsonValueStart(json, key);
+
+                if (valueIndex < 0)
+                    return fallbackValue;
+
+                if (json.substring(valueIndex, valueIndex + 4) == "true")
+                    return true;
+
+                if (json.substring(valueIndex, valueIndex + 5) == "false")
+                    return false;
+
+                return fallbackValue;
+            }
+
+            long jsonLongValue(const String& json, const String& key, long fallbackValue = -1)
+            {
+                int valueIndex = findJsonValueStart(json, key);
+
+                if (valueIndex < 0)
+                    return fallbackValue;
+
+                String number = "";
+
+                while (valueIndex < json.length())
+                {
+                    char c = json[valueIndex];
+
+                    if ((c >= '0' && c <= '9') || c == '-')
+                    {
+                        number += c;
+                        valueIndex++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if (number.length() == 0)
+                    return fallbackValue;
+
+                return number.toInt();
+            }
+
+            String jsonStringValue(const String& json, const String& key, const String& fallbackValue = "")
+            {
+                int valueIndex = findJsonValueStart(json, key);
+
+                if (valueIndex < 0)
+                    return fallbackValue;
+
+                if (json[valueIndex] != '"')
+                    return fallbackValue;
+
+                valueIndex++;
+
+                String value = "";
+
+                while (valueIndex < json.length())
+                {
+                    char c = json[valueIndex];
+
+                    if (c == '"')
+                        break;
+
+                    value += c;
+                    valueIndex++;
+                }
+
+                return value;
+            }
+
+
+
+            // ========================================================
+            // PUMP
+            // ========================================================
+
+            bool runPumpForMs(unsigned long durationMs)
+            {
+                Serial.print("Running pump for ");
+                Serial.print(durationMs);
+                Serial.println(" ms");
+
+                digitalWrite(PUMP_PIN, HIGH);
+                delay(durationMs);
+                digitalWrite(PUMP_PIN, LOW);
+
+                Serial.println("Pump run completed");
+
+                return true;
+            }
+
+            String buildPumpCompletePayload(
+                long taskId,
+                const String& source,
+                bool success,
+                const String& errorMessage)
+            {
+                String json = "{";
+
+                json += "\\"secret\\":\\"" + String(secret) + "\\",";
+                json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
+
+                if (taskId > 0)
+                {
+                    json += "\\"task_id\\":" + String(taskId) + ",";
+                }
+
+                json += "\\"source\\":\\"" + source + "\\",";
+                json += "\\"success\\":" + String(success ? "true" : "false");
+
+                if (errorMessage.length() > 0)
+                {
+                    json += ",\\"error_message\\":\\"" + errorMessage + "\\"";
+                }
+
+                json += "}";
+
+                return json;
+            }
+
+            bool sendPumpComplete(
+                long taskId,
+                const String& source,
+                bool success,
+                const String& errorMessage = "")
+            {
+                if (WiFi.status() != WL_CONNECTED)
+                {
+                    Serial.println("WiFi not connected before pump completion report, retrying...");
+                    if (!connectWiFi())
+                        return false;
+                }
+
+                String json = buildPumpCompletePayload(
+                    taskId,
+                    source,
+                    success,
+                    errorMessage
+                );
+
+                Serial.println("Sending pump completion:");
+                Serial.println(json);
+
+                WiFiClientSecure client;
+                client.setInsecure();
+
+                HTTPClient http;
+                http.setTimeout(15000);
+
+                if (!http.begin(client, pumpCompleteUrl))
+                {
+                    Serial.println("Failed to start pump completion HTTP request");
+                    return false;
+                }
+
+                http.addHeader("Content-Type", "application/json");
+
+                int code = http.POST((uint8_t*)json.c_str(), json.length());
+
+                Serial.print("Pump completion HTTP code: ");
+                Serial.println(code);
+
+                String responseBody = http.getString();
+                Serial.println(responseBody);
+
+                http.end();
+                client.stop();
+
+                return (code >= 200 && code < 300);
+            }
+
+            bool handleManualPumpInstruction(const String& responseBody)
+            {
+                bool shouldRunPump = jsonBoolValue(responseBody, "run", false);
+
+                if (!shouldRunPump)
+                {
+                    Serial.println("No manual pump task returned by backend");
+                    return false;
+                }
+
+                long taskId = jsonLongValue(responseBody, "task_id", -1);
+                String source = jsonStringValue(responseBody, "source", "");
+                String reason = jsonStringValue(responseBody, "reason", "");
+
+                Serial.println("Pump task received");
+                Serial.print("Task ID: ");
+                Serial.println(taskId);
+                Serial.print("Source: ");
+                Serial.println(source);
+                Serial.print("Reason: ");
+                Serial.println(reason);
+
+                if (source != "manual")
+                {
+                    Serial.println("Ignoring non-manual backend pump instruction");
+                    return false;
+                }
+
+                if (taskId <= 0)
+                {
+                    Serial.println("Manual pump task missing valid task_id; cannot report completion");
+                    return false;
+                }
+
+                // Manual scheduled watering intentionally ignores:
+                // - soil moisture
+                // - automatic watering threshold
+                // - automatic watering cooldown
+                bool success = runPumpForMs(PUMP_RUN_MS);
+
+                sendPumpComplete(
+                    taskId,
+                    "manual",
+                    success,
+                    success ? "" : "Manual pump run failed"
+                );
+
+                return success;
+            }
+
+            bool automaticPumpCooldownActive()
+            {
+                if (lastAutoPumpMs == 0)
+                    return false;
+
+                unsigned long elapsed = millis() - lastAutoPumpMs;
+
+                return elapsed < AUTO_PUMP_MIN_INTERVAL_MS;
+            }
+
+            void handleAutomaticPump(
+                bool hasMoisture,
+                int moisture)
+            {
+                if (!AUTO_PUMP_ENABLED)
+                {
+                    Serial.println("Automatic pump disabled");
+                    return;
+                }
+
+                if (!SENSOR_MOISTURE_ENABLED || !hasMoisture)
+                {
+                    Serial.println("Automatic pump skipped: moisture sensor not enabled or no moisture value");
+                    return;
+                }
+
+                if (moisture >= AUTO_PUMP_THRESHOLD_PCT)
+                {
+                    Serial.println("Automatic pump skipped: moisture is above threshold");
+                    return;
+                }
+
+                if (automaticPumpCooldownActive())
+                {
+                    Serial.println("Automatic pump skipped: cooldown active");
+                    return;
+                }
+
+                Serial.println("Automatic pump condition met");
+                Serial.print("Moisture: ");
+                Serial.println(moisture);
+                Serial.print("Threshold: ");
+                Serial.println(AUTO_PUMP_THRESHOLD_PCT);
+
+                bool success = runPumpForMs(PUMP_RUN_MS);
+
+                if (success)
+                {
+                    lastAutoPumpMs = millis();
+                }
+
+                sendPumpComplete(
+                    -1,
+                    "automatic",
+                    success,
+                    success ? "" : "Automatic pump run failed"
+                );
+            }
+            """
+        ).strip()
 
     return dedent(
         f"""
@@ -46,6 +440,10 @@ def generate_arduino_code(
         const char* apiUrl = "{api_url}";
         const char* secret = "{secret}";
         const char* deviceKey = "{device_key}";
+
+        // -------------------- Device ------------------
+
+        const int DEVICE_ID = {device_id};
 
         // -------------------- Pins --------------------
 
@@ -71,9 +469,13 @@ def generate_arduino_code(
         Adafruit_BME280 bme;
 
         // -------------------- Timing --------------------
+        // Backend stores and displays readings hourly.
+        // You can adjust this value manually in the sketch if needed.
 
-        const unsigned long SEND_INTERVAL_MS = {send_interval_ms}UL;
+        const unsigned long SEND_INTERVAL_MS = 60UL * 60UL * 1000UL;
         unsigned long lastSendMs = 0;
+
+        {pump_config}
 
         // -------------------- NTP --------------------
 
@@ -283,6 +685,10 @@ def generate_arduino_code(
 
 
 
+        {pump_functions}
+
+
+
         // ========================================================
         // SEND DATA
         // ========================================================
@@ -378,12 +784,20 @@ def generate_arduino_code(
             Serial.print("HTTP code: ");
             Serial.println(code);
 
-            Serial.println(http.getString());
+            String responseBody = http.getString();
+            Serial.println(responseBody);
 
             http.end();
             client.stop();
 
-            return (code >= 200 && code < 300);
+            bool ok = (code >= 200 && code < 300);
+
+            if (ok)
+            {{
+                {pump_after_success}
+            }}
+
+            return ok;
         }}
 
 
@@ -401,6 +815,8 @@ def generate_arduino_code(
 
             analogReadResolution(12);
             analogSetPinAttenuation(SOIL_PIN, ADC_11db);
+
+            {pump_setup}
 
             initSensors();
 
@@ -432,4 +848,4 @@ def generate_arduino_code(
             delay(1000);
         }}
         """
-    ).strip() + "\\n"
+    ).strip() + "\n"
