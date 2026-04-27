@@ -6,6 +6,7 @@ import {
   ApiReadingDeviceCreatePayload,
   ApiReadingDeviceUpdatePayload,
   ReadingTileModel,
+  ApiPumpTask,
 } from "../../features/readings/types/readings.types";
 
 /* ============================== ENDPOINTS ============================== */
@@ -107,8 +108,9 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
 }
 
 /* ============================== DEVICE SETUP (ENDPOINTS + SECRET) ============================== */
-export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }):
-  Promise<{ endpoints: { ingest: string; read: string }, sample_payloads: any, secret: string }> {
+export async function fetchDeviceSetup(
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ endpoints: { ingest: string; read: string }, sample_payloads: any, secret: string }> {
   return await request(
     "/api/readings/device-setup/",
     "GET",
@@ -123,6 +125,56 @@ export async function sendDeviceCodeByEmail(
 ): Promise<{ detail?: string }> {
   return await request<{ detail?: string }>(
     `${DEVICES_URL}${id}/send-code-email/`,
+    "POST",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/* ============================== PUMP TASKS ============================== */
+
+export type ApiPumpStatusResponse = {
+  pump_included: boolean;
+  last_pump_run_at?: string | null;
+  last_pump_run_source?: "manual" | "automatic" | null;
+  pending_pump_task?: ApiPumpTask | null;
+};
+
+export type ApiPumpMutationResponse = {
+  detail?: string;
+  pending_pump_task?: ApiPumpTask | null;
+};
+
+export async function fetchPumpStatus(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPumpStatusResponse> {
+  return await request<ApiPumpStatusResponse>(
+    `${DEVICES_URL}${id}/pump-status/`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+export async function schedulePumpWatering(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPumpMutationResponse> {
+  return await request<ApiPumpMutationResponse>(
+    `${DEVICES_URL}${id}/pump-schedule/`,
+    "POST",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+export async function recallPumpWatering(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPumpMutationResponse> {
+  return await request<ApiPumpMutationResponse>(
+    `${DEVICES_URL}${id}/pump-recall/`,
     "POST",
     undefined,
     { auth: opts.auth ?? true }

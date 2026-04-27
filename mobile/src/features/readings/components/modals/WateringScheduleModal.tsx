@@ -5,6 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import type { ApiPumpTask } from "../types/readings.types";
 
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -22,17 +23,18 @@ type Props = {
   lastPumpRunAt?: string | null;
 
   /**
-   * True when backend says there is already a pending watering job.
-   * Example backend fields:
-   * - scheduled_task_insert_date is not null
-   * - task_executed === false
+   * Preferred new backend shape.
+   * Comes from:
+   * - GET /api/readings/devices/:id/pump-status/
+   * - pending_pump_task
    */
-  scheduledJobExists?: boolean;
+  pendingPumpTask?: ApiPumpTask | null;
 
   /**
-   * Optional display value from backend.
-   * Example: scheduled_task_insert_date
+   * Backwards-compatible props.
+   * Safe to remove later after ReadingsScreen is fully switched to pendingPumpTask.
    */
+  scheduledJobExists?: boolean;
   scheduledJobCreatedAt?: string | null;
 
   onClose: () => void;
@@ -50,6 +52,7 @@ export default function WateringScheduleModal({
   location,
   pumpIncluded,
   lastPumpRunAt,
+  pendingPumpTask,
   scheduledJobExists = false,
   scheduledJobCreatedAt,
   onClose,
@@ -69,7 +72,33 @@ export default function WateringScheduleModal({
     [t, currentLanguage]
   );
 
-  const canScheduleOrRecall = Boolean(pumpIncluded) && !loading && !working;
+  const hasPendingTask = Boolean(pendingPumpTask) || scheduledJobExists;
+
+  const pendingTaskCreatedAt =
+    pendingPumpTask?.requested_at ?? scheduledJobCreatedAt ?? null;
+
+  const pendingTaskExpiresAt = pendingPumpTask?.expires_at ?? null;
+
+  const canScheduleOrRecall =
+    Boolean(pumpIncluded) &&
+    !loading &&
+    !working &&
+    (hasPendingTask ? Boolean(onRecallWatering) : Boolean(onScheduleWatering));
+
+  const handleScheduleButtonPress = React.useCallback(() => {
+    if (!canScheduleOrRecall) return;
+
+    if (hasPendingTask) {
+      onRecallWatering?.();
+    } else {
+      onScheduleWatering?.();
+    }
+  }, [
+    canScheduleOrRecall,
+    hasPendingTask,
+    onRecallWatering,
+    onScheduleWatering,
+  ]);
 
   if (!visible) return null;
 
@@ -150,7 +179,7 @@ export default function WateringScheduleModal({
                       style={{
                         padding: 12,
                         borderRadius: 12,
-                        backgroundColor: scheduledJobExists
+                        backgroundColor: hasPendingTask
                           ? "rgba(11,114,133,0.28)"
                           : "rgba(255,255,255,0.10)",
                         gap: 8,
@@ -158,12 +187,12 @@ export default function WateringScheduleModal({
                     >
                       <StatusLine
                         icon={
-                          scheduledJobExists
+                          hasPendingTask
                             ? "clock-check-outline"
                             : "clock-outline"
                         }
                         text={
-                          scheduledJobExists
+                          hasPendingTask
                             ? tr(
                                 "readingsModals.wateringSchedule.pendingJob",
                                 "A watering job is currently scheduled and waiting for the device to pick it up."
@@ -175,15 +204,28 @@ export default function WateringScheduleModal({
                         }
                       />
 
-                      {scheduledJobExists && (
-                        <StatusLine
-                          icon="calendar-clock"
-                          text={tr(
-                            "readingsModals.wateringSchedule.scheduledAt",
-                            "Scheduled at: {{value}}",
-                            { value: scheduledJobCreatedAt || "—" }
+                      {hasPendingTask && (
+                        <>
+                          <StatusLine
+                            icon="calendar-clock"
+                            text={tr(
+                              "readingsModals.wateringSchedule.scheduledAt",
+                              "Scheduled at: {{value}}",
+                              { value: pendingTaskCreatedAt || "—" }
+                            )}
+                          />
+
+                          {!!pendingTaskExpiresAt && (
+                            <StatusLine
+                              icon="timer-sand"
+                              text={tr(
+                                "readingsModals.wateringSchedule.expiresAt",
+                                "Expires at: {{value}}",
+                                { value: pendingTaskExpiresAt }
+                              )}
+                            />
                           )}
-                        />
+                        </>
                       )}
                     </View>
                   </Block>
@@ -260,16 +302,12 @@ export default function WateringScheduleModal({
 
                   <Pressable
                     disabled={!canScheduleOrRecall}
-                    onPress={
-                      scheduledJobExists
-                        ? onRecallWatering
-                        : onScheduleWatering
-                    }
+                    onPress={handleScheduleButtonPress}
                     style={{
                       marginTop: 12,
                       paddingVertical: 12,
                       borderRadius: 16,
-                      backgroundColor: scheduledJobExists
+                      backgroundColor: hasPendingTask
                         ? "rgba(255,255,255,0.12)"
                         : "rgba(11,114,133,0.92)",
                       alignItems: "center",
@@ -281,7 +319,7 @@ export default function WateringScheduleModal({
                   >
                     <MaterialCommunityIcons
                       name={
-                        scheduledJobExists
+                        hasPendingTask
                           ? "calendar-remove-outline"
                           : "calendar-plus-outline"
                       }
@@ -291,7 +329,7 @@ export default function WateringScheduleModal({
 
                     <Text
                       style={
-                        scheduledJobExists
+                        hasPendingTask
                           ? s.promptBtnText
                           : s.promptPrimaryText
                       }
@@ -301,7 +339,7 @@ export default function WateringScheduleModal({
                             "readingsModals.wateringSchedule.working",
                             "Updating..."
                           )
-                        : scheduledJobExists
+                        : hasPendingTask
                         ? tr(
                             "readingsModals.wateringSchedule.recallWatering",
                             "Recall scheduled watering"

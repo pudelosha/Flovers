@@ -29,6 +29,20 @@ export type ApiReadingMetrics = {
   moisture: number | null;
 };
 
+export type ApiPumpTask = {
+  id: number | string;
+  source: "manual" | "automatic";
+  status: "pending" | "delivered" | "executed" | "cancelled" | "expired" | "failed";
+  requested_at: string;
+  delivered_at?: string | null;
+  executed_at?: string | null;
+  cancelled_at?: string | null;
+  expires_at?: string | null;
+  moisture_at_request?: number | null;
+  threshold_at_request?: number | null;
+  error_message?: string | null;
+};
+
 export type ApiReadingDevice = {
   id: number;
   plant: number;
@@ -58,6 +72,9 @@ export type ApiReadingDevice = {
   automatic_pump_launch: boolean;
   pump_threshold_pct?: number | null;
   last_pump_run_at?: string | null;
+  last_pump_run_source?: "manual" | "automatic" | null;
+  pump_cooldown_minutes?: number;
+  pending_pump_task?: ApiPumpTask | null;
 
   created_at: string;
   updated_at: string;

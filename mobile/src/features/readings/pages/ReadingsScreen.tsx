@@ -37,11 +37,14 @@ import {
   sendDeviceCodeByEmail,
   sendReadingsExportEmail,
   toggleAutoPump,
+  fetchPumpStatus,
+  schedulePumpWatering,
+  recallPumpWatering,
   type ReadingsExportEmailRequest,
 } from "../../../api/services/readings.service";
 
 // Pull the API type from centralized readings types
-import { ApiReadingDevice } from "../types/readings.types";
+import { ApiReadingDevice, ApiPumpTask } from "../types/readings.types";
 
 // === Services (plants → Plant Instances) ===
 import { fetchPlantInstances, type ApiPlantInstanceListItem } from "../../../api/services/plant-instances.service";
@@ -137,6 +140,10 @@ export default function ReadingsScreen() {
   const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
   const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
   const [wateringScheduleName, setWateringScheduleName] = useState<string>("");
+  const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
+  const [wateringScheduleWorking, setWateringScheduleWorking] = useState(false);
+  const [wateringSchedulePendingTask, setWateringSchedulePendingTask] = useState<ApiPumpTask | null>(null);
+  const [wateringScheduleLastPumpRunAt, setWateringScheduleLastPumpRunAt] = useState<string | null>(null);
 
   // Upsert (add/edit) device modal state
   const [upsertVisible, setUpsertVisible] = useState(false);
@@ -220,8 +227,13 @@ export default function ReadingsScreen() {
       setDeviceDetailsSecret("");
       setDeviceDetailsLoading(false);
       setDeviceDetailsSending(false);
+
       setWateringScheduleId(null);
       setWateringScheduleName("");
+      setWateringScheduleLoading(false);
+      setWateringScheduleWorking(false);
+      setWateringSchedulePendingTask(null);
+      setWateringScheduleLastPumpRunAt(null);
 
       // close any 3-dot dropdown
       setMenuOpenId(null);
@@ -562,14 +574,160 @@ export default function ReadingsScreen() {
   }, [deviceDetailsId, showToast, tr]);
 
   const openWateringSchedule = useCallback(
-    (id: string) => {
+    async (id: string) => {
       const item = items.find((x) => x.id === id);
+
       setWateringScheduleId(id);
       setWateringScheduleName(item?.name ?? "");
+      setWateringSchedulePendingTask(null);
+      setWateringScheduleLastPumpRunAt(null);
+      setWateringScheduleLoading(true);
+      setWateringScheduleWorking(false);
       setWateringScheduleVisible(true);
+
+      try {
+        const res = await fetchPumpStatus(Number(id));
+
+        setWateringSchedulePendingTask(res.pending_pump_task ?? null);
+        setWateringScheduleLastPumpRunAt(res.last_pump_run_at ?? null);
+
+        setDevicesRaw((curr) =>
+          curr.map((d) =>
+            String(d.id) === id
+              ? {
+                  ...d,
+                  pending_pump_task: res.pending_pump_task ?? null,
+                  last_pump_run_at: res.last_pump_run_at ?? null,
+                  last_pump_run_source: res.last_pump_run_source ?? null,
+                }
+              : d
+          )
+        );
+
+        setItems((curr) =>
+          curr.map((x) =>
+            x.id === id
+              ? {
+                  ...x,
+                  lastPumpRunAt: res.last_pump_run_at ?? null,
+                }
+              : x
+          )
+        );
+      } catch (e: any) {
+        showToast(
+          e?.message ||
+            tr(
+              "readings.toasts.pumpStatusLoadFailed",
+              "Failed to load watering schedule"
+            ),
+          "error"
+        );
+      } finally {
+        setWateringScheduleLoading(false);
+      }
     },
-    [items]
+    [items, showToast, tr]
   );
+
+  const handleScheduleWatering = useCallback(async () => {
+    if (!wateringScheduleId) {
+      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      return;
+    }
+
+    try {
+      setWateringScheduleWorking(true);
+
+      const res = await schedulePumpWatering(Number(wateringScheduleId));
+      const pendingTask = res.pending_pump_task ?? null;
+
+      setWateringSchedulePendingTask(pendingTask);
+
+      setDevicesRaw((curr) =>
+        curr.map((d) =>
+          String(d.id) === wateringScheduleId
+            ? {
+                ...d,
+                pending_pump_task: pendingTask,
+              }
+            : d
+        )
+      );
+
+      showToast(
+        res?.detail || tr("readings.toasts.wateringScheduled", "Watering scheduled"),
+        "success"
+      );
+    } catch (e: any) {
+      showToast(
+        e?.message ||
+          tr(
+            "readings.toasts.wateringScheduleFailed",
+            "Failed to schedule watering"
+          ),
+        "error"
+      );
+    } finally {
+      setWateringScheduleWorking(false);
+    }
+  }, [wateringScheduleId, showToast, tr]);
+
+  const handleRecallWatering = useCallback(async () => {
+    if (!wateringScheduleId) {
+      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      return;
+    }
+
+    try {
+      setWateringScheduleWorking(true);
+
+      const res = await recallPumpWatering(Number(wateringScheduleId));
+
+      setWateringSchedulePendingTask(null);
+
+      setDevicesRaw((curr) =>
+        curr.map((d) =>
+          String(d.id) === wateringScheduleId
+            ? {
+                ...d,
+                pending_pump_task: null,
+              }
+            : d
+        )
+      );
+
+      showToast(
+        res?.detail ||
+          tr(
+            "readings.toasts.wateringRecalled",
+            "Scheduled watering recalled"
+          ),
+        "success"
+      );
+    } catch (e: any) {
+      showToast(
+        e?.message ||
+          tr(
+            "readings.toasts.wateringRecallFailed",
+            "Failed to recall watering"
+          ),
+        "error"
+      );
+    } finally {
+      setWateringScheduleWorking(false);
+    }
+  }, [wateringScheduleId, showToast, tr]);
+
+  const closeWateringSchedule = useCallback(() => {
+    setWateringScheduleVisible(false);
+    setWateringScheduleId(null);
+    setWateringScheduleName("");
+    setWateringScheduleLoading(false);
+    setWateringScheduleWorking(false);
+    setWateringSchedulePendingTask(null);
+    setWateringScheduleLastPumpRunAt(null);
+  }, []);
 
   const handleUpsertSave = useCallback(
     async (payload: {
@@ -1066,6 +1224,8 @@ export default function ReadingsScreen() {
       {/* Watering schedule */}
       <WateringScheduleModal
         visible={wateringScheduleVisible}
+        loading={wateringScheduleLoading}
+        working={wateringScheduleWorking}
         deviceId={wateringScheduleId}
         deviceName={wateringScheduleName}
         plantName={
@@ -1087,16 +1247,18 @@ export default function ReadingsScreen() {
           })()
         }
         lastPumpRunAt={
+          wateringScheduleLastPumpRunAt ??
           (() => {
             const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
             return dev?.last_pump_run_at ?? "—";
           })()
         }
-        onClose={() => {
-          setWateringScheduleVisible(false);
-          setWateringScheduleId(null);
-          setWateringScheduleName("");
-        }}
+        pendingPumpTask={wateringSchedulePendingTask}
+        scheduledJobExists={Boolean(wateringSchedulePendingTask)}
+        scheduledJobCreatedAt={wateringSchedulePendingTask?.requested_at ?? null}
+        onScheduleWatering={handleScheduleWatering}
+        onRecallWatering={handleRecallWatering}
+        onClose={closeWateringSchedule}
       />
 
       {/* Upsert (add/edit) reading device */}
