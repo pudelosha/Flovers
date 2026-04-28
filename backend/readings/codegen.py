@@ -138,15 +138,40 @@ def _section_sensors(
     )
 
 
-def _section_timing() -> str:
+def _section_timing(*, pump_enabled: bool) -> str:
+    if not pump_enabled:
+        return _clean_section(
+            """
+            // -------------------- Timing --------------------
+            // Backend stores and displays readings hourly.
+            // You can adjust this value manually in the sketch if needed.
+
+            const unsigned long SEND_INTERVAL_MS = 60UL * 60UL * 1000UL;
+            unsigned long lastSendMs = 0;
+            """
+        )
+
     return _clean_section(
         """
         // -------------------- Timing --------------------
         // Backend stores and displays readings hourly.
-        // You can adjust this value manually in the sketch if needed.
+        // You can adjust these values manually in the sketch if needed.
+        //
+        // SEND_INTERVAL_MS:
+        // - sends sensor readings
+        // - checks manual watering
+        // - checks automatic watering
+        //
+        // MANUAL_PUMP_CHECK_INTERVAL_MS:
+        // - checks only scheduled manual watering jobs
+        // - does not send readings
+        // - does not run automatic watering
 
         const unsigned long SEND_INTERVAL_MS = 60UL * 60UL * 1000UL;
+        const unsigned long MANUAL_PUMP_CHECK_INTERVAL_MS = 60UL * 1000UL;
+
         unsigned long lastSendMs = 0;
+        unsigned long lastManualPumpCheckMs = 0;
         """
     )
 
@@ -159,9 +184,9 @@ def _section_pump_config(*, fallback_pump_threshold: int) -> str:
         // Default pump run time. Adjust manually if your pump needs more or less time.
         const unsigned long PUMP_RUN_MS = 30000UL;
 
-        // Safety cooldown for automatic watering only.
-        // Manual scheduled watering ignores this cooldown.
-        const unsigned long AUTO_PUMP_MIN_INTERVAL_MS = 30UL * 60UL * 1000UL;
+        // Safety cooldown for automatic watering.
+        // This applies after automatic watering and after manual watering.
+        const unsigned long AUTO_PUMP_MIN_INTERVAL_MS = 60UL * 60UL * 1000UL;
 
         const bool PUMP_INCLUDED = true;
 
@@ -1009,15 +1034,35 @@ def _section_cycle(*, pump_enabled: bool) -> str:
 
             PumpTaskCheck pumpCheck = checkAndRunManualPumpTask();
 
-            // Automatic watering is decided by Arduino using current backend config.
             // Manual scheduled watering has priority in the same cycle to avoid double watering.
-            if (!pumpCheck.manualPumpRan)
+            // If manual watering runs, it also starts the automatic watering cooldown.
+            if (pumpCheck.manualPumpRan)
             {
+                lastAutoPumpMs = millis();
+            }
+            else
+            {
+                // Automatic watering is decided by Arduino using current backend config.
                 handleAutomaticPump(
                     readings.hasMoisture,
                     readings.moisture,
                     pumpCheck
                 );
+            }
+        }
+
+        void runManualPumpCheckOnly()
+        {
+            // This check runs more often than the full reading cycle.
+            // It only handles scheduled manual watering.
+            // It does not send sensor readings and does not run automatic watering.
+            PumpTaskCheck pumpCheck = checkAndRunManualPumpTask();
+
+            // If manual watering ran between hourly reading cycles,
+            // block automatic watering for AUTO_PUMP_MIN_INTERVAL_MS.
+            if (pumpCheck.manualPumpRan)
+            {
+                lastAutoPumpMs = millis();
             }
         }
         """
@@ -1081,12 +1126,36 @@ def _section_setup(*, pump_enabled: bool) -> str:
             runCycle();
 
             lastSendMs = millis();
+            lastManualPumpCheckMs = millis();
         }
         """
     )
 
 
-def _section_loop() -> str:
+def _section_loop(*, pump_enabled: bool) -> str:
+    if not pump_enabled:
+        return _clean_section(
+            """
+            // ========================================================
+            // LOOP
+            // ========================================================
+
+            void loop()
+            {
+                if (millis() - lastSendMs >= SEND_INTERVAL_MS)
+                {
+                    Serial.println("Starting periodic cycle");
+
+                    runCycle();
+
+                    lastSendMs = millis();
+                }
+
+                delay(1000);
+            }
+            """
+        )
+
     return _clean_section(
         """
         // ========================================================
@@ -1095,13 +1164,33 @@ def _section_loop() -> str:
 
         void loop()
         {
-            if (millis() - lastSendMs >= SEND_INTERVAL_MS)
-            {
-                Serial.println("Starting periodic cycle");
+            unsigned long nowMs = millis();
 
+            if (nowMs - lastSendMs >= SEND_INTERVAL_MS)
+            {
+                Serial.println("Starting full periodic cycle");
+
+                // Full cycle:
+                // 1. read sensors
+                // 2. send reading
+                // 3. check/run scheduled manual watering
+                // 4. check/run automatic watering if manual watering did not run
                 runCycle();
 
                 lastSendMs = millis();
+                lastManualPumpCheckMs = millis();
+            }
+            else if (nowMs - lastManualPumpCheckMs >= MANUAL_PUMP_CHECK_INTERVAL_MS)
+            {
+                Serial.println("Checking scheduled manual watering only");
+
+                // Manual-only cycle:
+                // 1. check/run scheduled manual watering
+                // 2. do not send readings
+                // 3. do not run automatic watering
+                runManualPumpCheckOnly();
+
+                lastManualPumpCheckMs = millis();
             }
 
             delay(1000);
@@ -1131,7 +1220,7 @@ def generate_arduino_code(
     pump_enabled = bool(pump_included)
 
     # This is now only a fallback for generated code.
-    # The actual automatic pump toggle and threshold are fetched from backend during each cycle.
+    # The actual automatic pump toggle and threshold are fetched from backend during each full cycle.
     fallback_pump_threshold = _safe_int(pump_threshold_pct, fallback=30)
 
     base = base_url.rstrip("/")
@@ -1159,7 +1248,7 @@ def generate_arduino_code(
             use_light=use_light,
             use_moisture=use_moisture,
         ),
-        _section_timing(),
+        _section_timing(pump_enabled=pump_enabled),
     ]
 
     if pump_enabled:
@@ -1197,7 +1286,7 @@ def generate_arduino_code(
             _section_send_reading(),
             _section_cycle(pump_enabled=pump_enabled),
             _section_setup(pump_enabled=pump_enabled),
-            _section_loop(),
+            _section_loop(pump_enabled=pump_enabled),
         ]
     )
 
