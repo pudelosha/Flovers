@@ -279,6 +279,23 @@ def _device_can_run_pump(device: ReadingDevice):
 
     return True, ""
 
+def _auto_pump_config_for_device(device: ReadingDevice) -> dict:
+    sensors = device.sensors or {}
+    moisture_sensor_enabled = bool(sensors.get("moisture", True))
+
+    return {
+        "pump_included": bool(device.pump_included),
+        "auto_pump_enabled": bool(
+            device.pump_included
+            and device.automatic_pump_launch
+            and moisture_sensor_enabled
+            and device.pump_threshold_pct is not None
+            and device.is_active
+        ),
+        "auto_pump_threshold_pct": device.pump_threshold_pct,
+        "moisture_sensor_enabled": moisture_sensor_enabled,
+    }
+
 
 # ---- History helpers (for new /history/ endpoint) ----
 
@@ -824,12 +841,19 @@ def pump_next_task(request):
     }
 
     Used by Arduino/device after sending readings.
-    It checks whether a manual watering task is pending.
-    If a task is found, it is marked as delivered and returned to the device.
+
+    Returns:
+      - manual watering task info, if one is pending
+      - current backend automatic pump config
+
+    Automatic watering is still executed locally by Arduino, but only after
+    backend confirms the current app-controlled auto-pump settings.
     """
     device, error_response = _resolve_device_from_secret_and_key(request)
     if error_response is not None:
         return error_response
+
+    auto_config = _auto_pump_config_for_device(device)
 
     if not device.pump_included:
         return Response({
@@ -837,11 +861,14 @@ def pump_next_task(request):
             "task_id": None,
             "source": None,
             "reason": "pump_not_included",
+            **auto_config,
         })
 
     with transaction.atomic():
         device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
         _expire_old_pump_tasks(device)
+
+        auto_config = _auto_pump_config_for_device(device)
 
         task = (
             device.pump_tasks
@@ -860,6 +887,7 @@ def pump_next_task(request):
                 "task_id": None,
                 "source": None,
                 "reason": None,
+                **auto_config,
             })
 
         now = timezone.now()
@@ -872,6 +900,7 @@ def pump_next_task(request):
         "task_id": task.id,
         "source": PumpTask.SOURCE_MANUAL,
         "reason": "manual_scheduled",
+        **auto_config,
     })
 
 

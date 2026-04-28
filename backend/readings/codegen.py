@@ -60,47 +60,47 @@ def _section_api_config(
     pump_next_task_url: str,
     pump_complete_url: str,
 ) -> str:
-    pump_urls = ""
+    lines = [
+        "// -------------------- API ---------------------",
+        "",
+        f'const char* apiUrl = "{api_url}";',
+        f'const char* secret = "{secret}";',
+        f'const char* deviceKey = "{device_key}";',
+    ]
 
     if pump_enabled:
-        pump_urls = f"""
-const char* pumpNextTaskUrl = "{pump_next_task_url}";
-const char* pumpCompleteUrl = "{pump_complete_url}";
-"""
+        lines.extend(
+            [
+                f'const char* pumpNextTaskUrl = "{pump_next_task_url}";',
+                f'const char* pumpCompleteUrl = "{pump_complete_url}";',
+            ]
+        )
 
-    return _clean_section(
-        f"""
-        // -------------------- API ---------------------
-
-        const char* apiUrl = "{api_url}";
-        const char* secret = "{secret}";
-        const char* deviceKey = "{device_key}";
-        {pump_urls}
-        // -------------------- Device ------------------
-
-        const int DEVICE_ID = {device_id};
-        """
+    lines.extend(
+        [
+            "",
+            "// -------------------- Device ------------------",
+            "",
+            f"const int DEVICE_ID = {device_id};",
+        ]
     )
+
+    return "\n".join(lines).strip()
 
 
 def _section_pins(*, pump_enabled: bool) -> str:
-    pump_pin = ""
+    lines = [
+        "// -------------------- Pins --------------------",
+        "",
+        "#define SDA_PIN 9",
+        "#define SCL_PIN 8",
+        "#define SOIL_PIN 3",
+    ]
 
     if pump_enabled:
-        pump_pin = """
-#define PUMP_PIN 4
-"""
+        lines.append("#define PUMP_PIN 4")
 
-    return _clean_section(
-        f"""
-        // -------------------- Pins --------------------
-
-        #define SDA_PIN 9
-        #define SCL_PIN 8
-        #define SOIL_PIN 3
-        {pump_pin}
-        """
-    )
+    return "\n".join(lines).strip()
 
 
 def _section_calibration() -> str:
@@ -151,11 +151,7 @@ def _section_timing() -> str:
     )
 
 
-def _section_pump_config(
-    *,
-    auto_pump_enabled: bool,
-    pump_threshold: int,
-) -> str:
+def _section_pump_config(*, fallback_pump_threshold: int) -> str:
     return _clean_section(
         f"""
         // -------------------- Pump ---------------------
@@ -168,8 +164,9 @@ def _section_pump_config(
         const unsigned long AUTO_PUMP_MIN_INTERVAL_MS = 30UL * 60UL * 1000UL;
 
         const bool PUMP_INCLUDED = true;
-        const bool AUTO_PUMP_ENABLED = {_bool_flag(auto_pump_enabled)};
-        const int AUTO_PUMP_THRESHOLD_PCT = {pump_threshold};
+
+        // Used only as a fallback if backend does not return a valid threshold.
+        const int FALLBACK_AUTO_PUMP_THRESHOLD_PCT = {fallback_pump_threshold};
 
         unsigned long lastAutoPumpMs = 0;
         """
@@ -187,15 +184,31 @@ def _section_ntp() -> str:
     )
 
 
-def _section_types() -> str:
+def _section_types(*, pump_enabled: bool) -> str:
+    pump_type = ""
+
+    if pump_enabled:
+        pump_type = """
+struct PumpTaskCheck
+{
+    bool requestOk;
+    bool manualPumpRan;
+
+    bool backendPumpIncluded;
+    bool autoPumpEnabled;
+    bool moistureSensorEnabled;
+    int autoPumpThresholdPct;
+};
+"""
+
     return _clean_section(
-        """
+        f"""
         // ========================================================
         // TYPES
         // ========================================================
 
         struct SensorReadings
-        {
+        {{
             bool hasTemperature;
             bool hasHumidity;
             bool hasLight;
@@ -205,7 +218,9 @@ def _section_types() -> str:
             float humidity;
             float light;
             int moisture;
-        };
+        }};
+
+        {pump_type}
         """
     )
 
@@ -452,6 +467,7 @@ def _section_reading_payload() -> str:
 
             json += "\\"secret\\":\\"" + String(secret) + "\\",";
             json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
+            json += "\\"device_id\\":" + String(DEVICE_ID) + ",";
             json += "\\"timestamp\\":\\"" + timestamp + "\\",";
 
             json += "\\"metrics\\":{";
@@ -638,6 +654,19 @@ def _section_json_helpers() -> str:
             return number.toInt();
         }
 
+        int jsonIntValue(const String& json, const String& key, int fallbackValue)
+        {
+            long value = jsonLongValue(json, key, fallbackValue);
+
+            if (value < 0)
+                return 0;
+
+            if (value > 100)
+                return 100;
+
+            return (int)value;
+        }
+
         String jsonStringValue(const String& json, const String& key, const String& fallbackValue = "")
         {
             int valueIndex = findJsonValueStart(json, key);
@@ -696,7 +725,8 @@ def _section_pump_helpers() -> str:
             String json = "{";
 
             json += "\\"secret\\":\\"" + String(secret) + "\\",";
-            json += "\\"device_key\\":\\"" + String(deviceKey) + "\\"";
+            json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
+            json += "\\"device_id\\":" + String(DEVICE_ID);
 
             json += "}";
 
@@ -713,6 +743,7 @@ def _section_pump_helpers() -> str:
 
             json += "\\"secret\\":\\"" + String(secret) + "\\",";
             json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
+            json += "\\"device_id\\":" + String(DEVICE_ID) + ",";
 
             if (taskId > 0)
             {
@@ -754,8 +785,18 @@ def _section_pump_helpers() -> str:
             );
         }
 
-        bool checkAndRunManualPumpTask()
+        PumpTaskCheck checkAndRunManualPumpTask()
         {
+            PumpTaskCheck result;
+
+            result.requestOk = false;
+            result.manualPumpRan = false;
+
+            result.backendPumpIncluded = false;
+            result.autoPumpEnabled = false;
+            result.moistureSensorEnabled = false;
+            result.autoPumpThresholdPct = FALLBACK_AUTO_PUMP_THRESHOLD_PCT;
+
             String responseBody = "";
             String json = buildPumpNextTaskPayload();
 
@@ -763,21 +804,31 @@ def _section_pump_helpers() -> str:
                 pumpNextTaskUrl,
                 json,
                 responseBody,
-                "manual pump task check"
+                "manual pump task and auto config check"
             );
 
             if (!ok)
             {
-                Serial.println("Manual pump task check failed");
-                return false;
+                Serial.println("Pump task/config check failed. Automatic pump will not run without backend confirmation.");
+                return result;
             }
+
+            result.requestOk = true;
+            result.backendPumpIncluded = jsonBoolValue(responseBody, "pump_included", false);
+            result.autoPumpEnabled = jsonBoolValue(responseBody, "auto_pump_enabled", false);
+            result.moistureSensorEnabled = jsonBoolValue(responseBody, "moisture_sensor_enabled", false);
+            result.autoPumpThresholdPct = jsonIntValue(
+                responseBody,
+                "auto_pump_threshold_pct",
+                FALLBACK_AUTO_PUMP_THRESHOLD_PCT
+            );
 
             bool shouldRunPump = jsonBoolValue(responseBody, "run", false);
 
             if (!shouldRunPump)
             {
                 Serial.println("No manual pump task scheduled");
-                return false;
+                return result;
             }
 
             long taskId = jsonLongValue(responseBody, "task_id", -1);
@@ -795,13 +846,13 @@ def _section_pump_helpers() -> str:
             if (source != "manual")
             {
                 Serial.println("Ignoring non-manual pump task");
-                return false;
+                return result;
             }
 
             if (taskId <= 0)
             {
                 Serial.println("Manual pump task missing valid task_id; cannot report completion");
-                return false;
+                return result;
             }
 
             // Manual scheduled watering intentionally ignores:
@@ -817,7 +868,8 @@ def _section_pump_helpers() -> str:
                 success ? "" : "Manual pump run failed"
             );
 
-            return success;
+            result.manualPumpRan = success;
+            return result;
         }
 
         bool automaticPumpCooldownActive()
@@ -830,21 +882,36 @@ def _section_pump_helpers() -> str:
             return elapsed < AUTO_PUMP_MIN_INTERVAL_MS;
         }
 
-        void handleAutomaticPump(bool hasMoisture, int moisture)
+        void handleAutomaticPump(
+            bool hasMoisture,
+            int moisture,
+            const PumpTaskCheck& pumpCheck)
         {
-            if (!AUTO_PUMP_ENABLED)
+            if (!pumpCheck.requestOk)
             {
-                Serial.println("Automatic pump disabled");
+                Serial.println("Automatic pump skipped: backend pump config was not confirmed");
                 return;
             }
 
-            if (!SENSOR_MOISTURE_ENABLED || !hasMoisture)
+            if (!pumpCheck.backendPumpIncluded)
+            {
+                Serial.println("Automatic pump skipped: backend says pump is not included");
+                return;
+            }
+
+            if (!pumpCheck.autoPumpEnabled)
+            {
+                Serial.println("Automatic pump disabled by backend");
+                return;
+            }
+
+            if (!pumpCheck.moistureSensorEnabled || !SENSOR_MOISTURE_ENABLED || !hasMoisture)
             {
                 Serial.println("Automatic pump skipped: moisture sensor not enabled or no moisture value");
                 return;
             }
 
-            if (moisture >= AUTO_PUMP_THRESHOLD_PCT)
+            if (moisture >= pumpCheck.autoPumpThresholdPct)
             {
                 Serial.println("Automatic pump skipped: moisture is above threshold");
                 return;
@@ -859,8 +926,8 @@ def _section_pump_helpers() -> str:
             Serial.println("Automatic pump condition met");
             Serial.print("Moisture: ");
             Serial.println(moisture);
-            Serial.print("Threshold: ");
-            Serial.println(AUTO_PUMP_THRESHOLD_PCT);
+            Serial.print("Backend threshold: ");
+            Serial.println(pumpCheck.autoPumpThresholdPct);
 
             bool success = runPumpForMs(PUMP_RUN_MS);
 
@@ -909,57 +976,92 @@ def _section_send_reading() -> str:
 
 
 def _section_cycle(*, pump_enabled: bool) -> str:
-    pump_cycle = ""
+    if not pump_enabled:
+        return _clean_section(
+            """
+            // ========================================================
+            // CYCLE
+            // ========================================================
 
-    if pump_enabled:
-        pump_cycle = """
-    bool manualPumpRan = checkAndRunManualPumpTask();
+            void runCycle()
+            {
+                SensorReadings readings = readSensors();
 
-    // Automatic watering is decided locally by Arduino.
-    // It does not ask the backend for permission.
-    // Manual scheduled watering has priority in the same cycle to avoid double watering.
-    if (!manualPumpRan)
-    {
-        handleAutomaticPump(readings.hasMoisture, readings.moisture);
-    }
-"""
+                // Reading upload is independent from watering.
+                sendReading(readings);
+            }
+            """
+        )
 
     return _clean_section(
-        f"""
+        """
         // ========================================================
         // CYCLE
         // ========================================================
 
         void runCycle()
-        {{
+        {
             SensorReadings readings = readSensors();
 
             // Reading upload is independent from watering.
-            // If this request fails, manual task check and local automatic watering can still run.
+            // If this request fails, pump task/config check can still run.
             sendReading(readings);
-        {pump_cycle}
-        }}
+
+            PumpTaskCheck pumpCheck = checkAndRunManualPumpTask();
+
+            // Automatic watering is decided by Arduino using current backend config.
+            // Manual scheduled watering has priority in the same cycle to avoid double watering.
+            if (!pumpCheck.manualPumpRan)
+            {
+                handleAutomaticPump(
+                    readings.hasMoisture,
+                    readings.moisture,
+                    pumpCheck
+                );
+            }
+        }
         """
     )
 
 
 def _section_setup(*, pump_enabled: bool) -> str:
-    pump_setup = ""
+    if not pump_enabled:
+        return _clean_section(
+            """
+            // ========================================================
+            // SETUP
+            // ========================================================
 
-    if pump_enabled:
-        pump_setup = """
-    pinMode(PUMP_PIN, OUTPUT);
-    digitalWrite(PUMP_PIN, LOW);
-"""
+            void setup()
+            {
+                Serial.begin(115200);
+                delay(1500);
+
+                Serial.println("Starting sensor uploader");
+
+                analogReadResolution(12);
+                analogSetPinAttenuation(SOIL_PIN, ADC_11db);
+
+                initSensors();
+
+                if (connectWiFi())
+                    syncTime();
+
+                runCycle();
+
+                lastSendMs = millis();
+            }
+            """
+        )
 
     return _clean_section(
-        f"""
+        """
         // ========================================================
         // SETUP
         // ========================================================
 
         void setup()
-        {{
+        {
             Serial.begin(115200);
             delay(1500);
 
@@ -967,7 +1069,10 @@ def _section_setup(*, pump_enabled: bool) -> str:
 
             analogReadResolution(12);
             analogSetPinAttenuation(SOIL_PIN, ADC_11db);
-        {pump_setup}
+
+            pinMode(PUMP_PIN, OUTPUT);
+            digitalWrite(PUMP_PIN, LOW);
+
             initSensors();
 
             if (connectWiFi())
@@ -976,7 +1081,7 @@ def _section_setup(*, pump_enabled: bool) -> str:
             runCycle();
 
             lastSendMs = millis();
-        }}
+        }
         """
     )
 
@@ -1024,15 +1129,10 @@ def generate_arduino_code(
     use_moisture = _bool_flag(sensors.get("moisture", True))
 
     pump_enabled = bool(pump_included)
-    moisture_sensor_enabled = bool(sensors.get("moisture", True))
 
-    auto_pump_enabled = bool(
-        pump_enabled
-        and automatic_pump_launch
-        and moisture_sensor_enabled
-    )
-
-    pump_threshold = _safe_int(pump_threshold_pct, fallback=30)
+    # This is now only a fallback for generated code.
+    # The actual automatic pump toggle and threshold are fetched from backend during each cycle.
+    fallback_pump_threshold = _safe_int(pump_threshold_pct, fallback=30)
 
     base = base_url.rstrip("/")
     api_url = f"{base}/api/readings/ingest/"
@@ -1065,15 +1165,14 @@ def generate_arduino_code(
     if pump_enabled:
         sections.append(
             _section_pump_config(
-                auto_pump_enabled=auto_pump_enabled,
-                pump_threshold=pump_threshold,
+                fallback_pump_threshold=fallback_pump_threshold,
             )
         )
 
     sections.extend(
         [
             _section_ntp(),
-            _section_types(),
+            _section_types(pump_enabled=pump_enabled),
             _section_time_helpers(),
             _section_wifi_helpers(),
             _section_time_sync(),

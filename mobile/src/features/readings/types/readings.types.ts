@@ -1,7 +1,7 @@
 // Domain metric keys used across UI
 export type MetricKey = "temperature" | "humidity" | "light" | "moisture";
 
-/** Tile model already used by the UI (unchanged) */
+/** Tile model already used by the UI */
 export type ReadingTileModel = {
   id: string;
   name: string;                 // plant display name
@@ -12,12 +12,14 @@ export type ReadingTileModel = {
     light: number | null;
     moisture: number | null;
   };
-  location: string | null;       // Added location field
-  lastPumpRunAt?: string | null; // Timestamp of last pump run
-  pumpIncluded: boolean;         // Flag to indicate if pump is included
-  automaticPumpLaunch: boolean;  // Flag to indicate if auto watering is enabled
-  pumpThresholdPct?: number | null | undefined; // Allow null or undefined values
-  status: "enabled" | "disabled"; // Added status field
+  location: string | null;
+  lastPumpRunAt?: string | null;
+  pumpIncluded: boolean;
+  automaticPumpLaunch: boolean;
+  pumpThresholdPct?: number | null | undefined;
+  sendEmailWateringNotifications?: boolean;
+  sendPushWateringNotifications?: boolean;
+  status: "enabled" | "disabled";
 };
 
 /* ============================== API TYPES (from backend) ============================== */
@@ -32,7 +34,13 @@ export type ApiReadingMetrics = {
 export type ApiPumpTask = {
   id: number | string;
   source: "manual" | "automatic";
-  status: "pending" | "delivered" | "executed" | "cancelled" | "expired" | "failed";
+  status:
+    | "pending"
+    | "delivered"
+    | "executed"
+    | "cancelled"
+    | "expired"
+    | "failed";
   requested_at: string;
   delivered_at?: string | null;
   executed_at?: string | null;
@@ -76,6 +84,9 @@ export type ApiReadingDevice = {
   pump_cooldown_minutes?: number;
   pending_pump_task?: ApiPumpTask | null;
 
+  send_email_watering_notifications?: boolean;
+  send_push_watering_notifications?: boolean;
+
   created_at: string;
   updated_at: string;
 };
@@ -100,9 +111,13 @@ export type ApiReadingDeviceCreatePayload = {
 
   send_email_notifications?: boolean;
   send_push_notifications?: boolean;
+
   pump_included?: boolean;
   automatic_pump_launch?: boolean;
   pump_threshold_pct?: number | null;
+
+  send_email_watering_notifications?: boolean;
+  send_push_watering_notifications?: boolean;
 
   // UI alias fields accepted by backend serializer
   mode?: "add" | "edit";
@@ -113,9 +128,13 @@ export type ApiReadingDeviceCreatePayload = {
 
   sendEmailNotifications?: boolean;
   sendPushNotifications?: boolean;
+
   pumpIncluded?: boolean;
   automaticPumpLaunch?: boolean;
   pumpThresholdPct?: number | null;
+
+  sendEmailWateringNotifications?: boolean;
+  sendPushWateringNotifications?: boolean;
 };
 
 export type ApiReadingDeviceUpdatePayload = Partial<{
@@ -138,9 +157,13 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
 
   send_email_notifications: boolean;
   send_push_notifications: boolean;
+
   pump_included: boolean;
   automatic_pump_launch: boolean;
   pump_threshold_pct: number | null;
+
+  send_email_watering_notifications: boolean;
+  send_push_watering_notifications: boolean;
 
   // UI alias fields accepted by backend serializer
   mode: "add" | "edit";
@@ -151,7 +174,11 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
 
   sendEmailNotifications: boolean;
   sendPushNotifications: boolean;
+
   pumpIncluded: boolean;
   automaticPumpLaunch: boolean;
   pumpThresholdPct: number | null;
+
+  sendEmailWateringNotifications: boolean;
+  sendPushWateringNotifications: boolean;
 }>;

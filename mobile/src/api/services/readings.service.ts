@@ -75,6 +75,7 @@ export async function deleteReadingDevice(
 }
 
 /* ============================== ACCOUNT SECRET ============================== */
+
 export async function rotateAccountSecret(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ secret: string }> {
@@ -87,6 +88,7 @@ export async function rotateAccountSecret(
 }
 
 /* ============================== UI MAPPER ============================== */
+
 export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
   return {
     id: String(api.id),
@@ -104,13 +106,22 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
     pumpIncluded: api.pump_included,
     automaticPumpLaunch: api.automatic_pump_launch,
     pumpThresholdPct: api.pump_threshold_pct ?? undefined,
+    sendEmailWateringNotifications:
+      api.send_email_watering_notifications ?? false,
+    sendPushWateringNotifications:
+      api.send_push_watering_notifications ?? false,
   };
 }
 
 /* ============================== DEVICE SETUP (ENDPOINTS + SECRET) ============================== */
+
 export async function fetchDeviceSetup(
   opts: { auth?: boolean } = { auth: true }
-): Promise<{ endpoints: { ingest: string; read: string }, sample_payloads: any, secret: string }> {
+): Promise<{
+  endpoints: { ingest: string; read: string };
+  sample_payloads: any;
+  secret: string;
+}> {
   return await request(
     "/api/readings/device-setup/",
     "GET",
@@ -223,7 +234,12 @@ export type ApiReading = {
 };
 
 export type ApiFeedResponse = {
-  device: { id: number; device_name: string; plant_name: string | null; interval_hours: number };
+  device: {
+    id: number;
+    device_name: string;
+    plant_name: string | null;
+    interval_hours: number;
+  };
   readings: ApiReading[]; // at most 1 item with current backend
 };
 
@@ -231,14 +247,17 @@ export type ApiFeedResponse = {
  * Wrapper for /api/readings/feed/.
  * Generally used by devices/Arduino; kept here for completeness.
  */
-export async function fetchReadingsFeed(params: {
-  deviceKey: string;   // device.device_key
-  secret: string;      // account secret
-  from?: string;       // ISO
-  to?: string;         // ISO
-  limit?: number;      // default 200, server max 1000 (though you now get only latest)
-  deviceId?: number;
-}, opts: { auth?: boolean } = { auth: true }): Promise<ApiFeedResponse> {
+export async function fetchReadingsFeed(
+  params: {
+    deviceKey: string;   // device.device_key
+    secret: string;      // account secret
+    from?: string;       // ISO
+    to?: string;         // ISO
+    limit?: number;      // default 200, server max 1000 (though you now get only latest)
+    deviceId?: number;
+  },
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiFeedResponse> {
   const q = new URLSearchParams();
   q.set("secret", params.secret);
   q.set("device_key", params.deviceKey);

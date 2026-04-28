@@ -1,5 +1,13 @@
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
-import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text } from "react-native";
+import {
+  View,
+  RefreshControl,
+  Pressable,
+  Animated,
+  Easing,
+  StyleSheet,
+  Text,
+} from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
@@ -11,11 +19,17 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/readings.styles";
 import ReadingTile from "../components/ReadingTile";
-import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/readings.constants";
+import {
+  HEADER_GRADIENT_TINT,
+  HEADER_SOLID_FALLBACK,
+} from "../constants/readings.constants";
 import type { ReadingTileModel as BaseReadingTileModel } from "../types/readings.types";
 
 // Modals
-import SortReadingsModal, { SortKey, SortDir } from "../components/modals/SortReadingsModal";
+import SortReadingsModal, {
+  SortKey,
+  SortDir,
+} from "../components/modals/SortReadingsModal";
 import FilterReadingsModal from "../components/modals/FilterReadingsModal";
 import ConfirmDeleteReadingModal from "../components/modals/ConfirmDeleteReadingModal";
 import DeviceSetupModal from "../components/modals/DeviceSetupModal";
@@ -47,7 +61,10 @@ import {
 import { ApiReadingDevice, ApiPumpTask } from "../types/readings.types";
 
 // === Services (plants → Plant Instances) ===
-import { fetchPlantInstances, type ApiPlantInstanceListItem } from "../../../api/services/plant-instances.service";
+import {
+  fetchPlantInstances,
+  type ApiPlantInstanceListItem,
+} from "../../../api/services/plant-instances.service";
 
 // i18n
 import { useTranslation } from "react-i18next";
@@ -142,25 +159,32 @@ export default function ReadingsScreen() {
   const [wateringScheduleName, setWateringScheduleName] = useState<string>("");
   const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
   const [wateringScheduleWorking, setWateringScheduleWorking] = useState(false);
-  const [wateringSchedulePendingTask, setWateringSchedulePendingTask] = useState<ApiPumpTask | null>(null);
-  const [wateringScheduleLastPumpRunAt, setWateringScheduleLastPumpRunAt] = useState<string | null>(null);
+  const [wateringSchedulePendingTask, setWateringSchedulePendingTask] =
+    useState<ApiPumpTask | null>(null);
+  const [wateringScheduleLastPumpRunAt, setWateringScheduleLastPumpRunAt] =
+    useState<string | null>(null);
 
   // Upsert (add/edit) device modal state
   const [upsertVisible, setUpsertVisible] = useState(false);
   const [upsertMode, setUpsertMode] = useState<"add" | "edit">("add");
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
-  const [upsertReadingName, setUpsertReadingName] = useState<string | undefined>(undefined);
+  const [upsertReadingName, setUpsertReadingName] =
+    useState<string | undefined>(undefined);
 
   // Shared toast (TopSnackbar)
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
+  const [toastVariant, setToastVariant] =
+    useState<"default" | "success" | "error">("default");
 
-  const showToast = useCallback((message: string, variant: "default" | "success" | "error" = "default") => {
-    setToastMsg(message);
-    setToastVariant(variant);
-    setToastVisible(true);
-  }, []);
+  const showToast = useCallback(
+    (message: string, variant: "default" | "success" | "error" = "default") => {
+      setToastMsg(message);
+      setToastVariant(variant);
+      setToastVisible(true);
+    },
+    []
+  );
 
   // FlatList ref to force scroll-to-top on focus
   const listRef = useRef<Animated.FlatList<any>>(null);
@@ -168,7 +192,10 @@ export default function ReadingsScreen() {
   // ===== Load devices and plant instances =====
   const load = useCallback(async () => {
     try {
-      const [devices, plantsList] = await Promise.all([listReadingDevices(), fetchPlantInstances()]);
+      const [devices, plantsList] = await Promise.all([
+        listReadingDevices(),
+        fetchPlantInstances(),
+      ]);
 
       setDevicesRaw(devices);
       setPlantInstances(Array.isArray(plantsList) ? plantsList : []);
@@ -177,7 +204,8 @@ export default function ReadingsScreen() {
       setItems(tiles);
     } catch (e: any) {
       const msg =
-        typeof e?.message === "string" && e.message.toLowerCase().includes("401")
+        typeof e?.message === "string" &&
+        e.message.toLowerCase().includes("401")
           ? tr("readings.toasts.unauthorized", "Unauthorized. Please log in again.")
           : e?.message || tr("readings.toasts.loadFailed", "Failed to load devices");
       showToast(msg, "error");
@@ -261,7 +289,11 @@ export default function ReadingsScreen() {
   }, [load]);
 
   // ----- Derived plants & locations for Filter modal options -----
-  const plantOptions = useMemo(() => items.map((x) => ({ id: x.id, name: x.name })), [items]);
+  const plantOptions = useMemo(
+    () => items.map((x) => ({ id: x.id, name: x.name })),
+    [items]
+  );
+
   const locationOptions = useMemo(() => {
     const set = new Set<string>();
     items.forEach((x) => {
@@ -287,6 +319,7 @@ export default function ReadingsScreen() {
 
   // ---------- ✨ ENTRANCE ANIMATION (tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
+
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
     if (!m.has(id)) m.set(id, new Animated.Value(0));
@@ -314,7 +347,12 @@ export default function ReadingsScreen() {
 
   // Is any filter active? (includes legacy text query)
   const isFilterActive = useMemo(() => {
-    return Boolean(filters.plantId || filters.location || filters.status || (filterQuery && filterQuery.trim().length > 0));
+    return Boolean(
+      filters.plantId ||
+        filters.location ||
+        filters.status ||
+        (filterQuery && filterQuery.trim().length > 0)
+    );
   }, [filters, filterQuery]);
 
   // ----- Apply filtering & sorting -----
@@ -334,7 +372,9 @@ export default function ReadingsScreen() {
 
     // Filter by location (exact)
     if (filters.location) {
-      arr = arr.filter((x) => (x.location ?? "").toLowerCase() === filters.location!.toLowerCase());
+      arr = arr.filter(
+        (x) => (x.location ?? "").toLowerCase() === filters.location!.toLowerCase()
+      );
     }
 
     // Filter by status (exact)
@@ -398,10 +438,12 @@ export default function ReadingsScreen() {
     inputRange: [0, 1],
     outputRange: [10, 0],
   });
+
   const emptyScale = emptyAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0.98, 1],
   });
+
   const emptyOpacity = emptyAnim;
 
   // Keep FAB visible even when a 3-dot tile menu is open
@@ -473,7 +515,8 @@ export default function ReadingsScreen() {
         );
       } else {
         showToast(
-          e?.message || tr("readings.toasts.failedToSendExport", "Failed to send readings export"),
+          e?.message ||
+            tr("readings.toasts.failedToSendExport", "Failed to send readings export"),
           "error"
         );
       }
@@ -509,6 +552,7 @@ export default function ReadingsScreen() {
         // keep going; modal will show masked secret if fetch fails
         setSetupSecret(null);
       }
+
       const item = items.find((x) => x.id === id);
       setUpsertMode("edit");
       setUpsertReadingId(id);
@@ -536,7 +580,11 @@ export default function ReadingsScreen() {
         setDeviceDetailsVisible(true);
       } catch (e: any) {
         showToast(
-          e?.message || tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
+          e?.message ||
+            tr(
+              "readings.toasts.deviceDetailsLoadFailed",
+              "Failed to load device details"
+            ),
           "error"
         );
       } finally {
@@ -662,10 +710,7 @@ export default function ReadingsScreen() {
     } catch (e: any) {
       showToast(
         e?.message ||
-          tr(
-            "readings.toasts.wateringScheduleFailed",
-            "Failed to schedule watering"
-          ),
+          tr("readings.toasts.wateringScheduleFailed", "Failed to schedule watering"),
         "error"
       );
     } finally {
@@ -699,19 +744,13 @@ export default function ReadingsScreen() {
 
       showToast(
         res?.detail ||
-          tr(
-            "readings.toasts.wateringRecalled",
-            "Scheduled watering recalled"
-          ),
+          tr("readings.toasts.wateringRecalled", "Scheduled watering recalled"),
         "success"
       );
     } catch (e: any) {
       showToast(
         e?.message ||
-          tr(
-            "readings.toasts.wateringRecallFailed",
-            "Failed to recall watering"
-          ),
+          tr("readings.toasts.wateringRecallFailed", "Failed to recall watering"),
         "error"
       );
     } finally {
@@ -750,13 +789,22 @@ export default function ReadingsScreen() {
       pumpIncluded?: boolean;
       automaticPumpLaunch?: boolean;
       pumpThresholdPct?: number;
+      sendEmailWateringNotifications?: boolean;
+      sendPushWateringNotifications?: boolean;
     }) => {
       const isCreate = payload.mode === "add";
-      const moistureAlertEnabled = !!(payload.sensors.moisture && payload.sensors.moistureAlertEnabled);
+
+      const moistureAlertEnabled = !!(
+        payload.sensors.moisture && payload.sensors.moistureAlertEnabled
+      );
+
       const moistureAlertThreshold =
         payload.sensors.moisture && payload.sensors.moistureAlertEnabled
           ? payload.sensors.moistureAlertPct ?? null
           : null;
+
+      const pumpIncluded = !!payload.pumpIncluded;
+      const automaticPumpLaunch = pumpIncluded && !!payload.automaticPumpLaunch;
 
       try {
         if (isCreate) {
@@ -773,22 +821,43 @@ export default function ReadingsScreen() {
             },
             moisture_alert_enabled: moistureAlertEnabled,
             moisture_alert_threshold: moistureAlertThreshold,
-            send_email_notifications: !!payload.sendEmailNotifications,
-            send_push_notifications: !!payload.sendPushNotifications,
-            pump_included: !!payload.pumpIncluded,
-            automatic_pump_launch: !!payload.automaticPumpLaunch,
-            pump_threshold_pct:
-              payload.pumpIncluded
-                ? payload.pumpThresholdPct ?? 30
-                : null,
+
+            // Soil moisture notifications are only applied if moisture sensor is enabled.
+            // The modal preserves checkbox state locally while locked.
+            send_email_notifications: payload.sensors.moisture
+              ? !!payload.sendEmailNotifications
+              : false,
+            send_push_notifications: payload.sensors.moisture
+              ? !!payload.sendPushNotifications
+              : false,
+
+            pump_included: pumpIncluded,
+
+            // Auto watering is only applied if pump is included.
+            // The modal preserves checkbox state locally while locked.
+            automatic_pump_launch: automaticPumpLaunch,
+            pump_threshold_pct: automaticPumpLaunch
+              ? payload.pumpThresholdPct ?? 30
+              : null,
+
+            // Watering-complete notifications are only applied if pump is included.
+            // The modal preserves checkbox state locally while locked.
+            send_email_watering_notifications: pumpIncluded
+              ? !!payload.sendEmailWateringNotifications
+              : false,
+            send_push_watering_notifications: pumpIncluded
+              ? !!payload.sendPushWateringNotifications
+              : false,
           });
         } else {
           if (!upsertReadingId) return;
+
           await updateReadingDevice(Number(upsertReadingId), {
             plant: Number(payload.plantId),
             device_name: payload.name,
             notes: payload.notes ?? null,
-            is_active: typeof payload.enabled === "boolean" ? payload.enabled : undefined,
+            is_active:
+              typeof payload.enabled === "boolean" ? payload.enabled : undefined,
             interval_hours: payload.intervalHours,
             sensors: {
               temperature: payload.sensors.temperature,
@@ -798,25 +867,51 @@ export default function ReadingsScreen() {
             },
             moisture_alert_enabled: moistureAlertEnabled,
             moisture_alert_threshold: moistureAlertThreshold,
-            send_email_notifications: !!payload.sendEmailNotifications,
-            send_push_notifications: !!payload.sendPushNotifications,
-            pump_included: !!payload.pumpIncluded,
-            automatic_pump_launch: !!payload.automaticPumpLaunch,
-            pump_threshold_pct:
-              payload.pumpIncluded
-                ? payload.pumpThresholdPct ?? 30
-                : null,
+
+            // Soil moisture notifications are only applied if moisture sensor is enabled.
+            // The modal preserves checkbox state locally while locked.
+            send_email_notifications: payload.sensors.moisture
+              ? !!payload.sendEmailNotifications
+              : false,
+            send_push_notifications: payload.sensors.moisture
+              ? !!payload.sendPushNotifications
+              : false,
+
+            pump_included: pumpIncluded,
+
+            // Auto watering is only applied if pump is included.
+            // The modal preserves checkbox state locally while locked.
+            automatic_pump_launch: automaticPumpLaunch,
+            pump_threshold_pct: automaticPumpLaunch
+              ? payload.pumpThresholdPct ?? 30
+              : null,
+
+            // Watering-complete notifications are only applied if pump is included.
+            // The modal preserves checkbox state locally while locked.
+            send_email_watering_notifications: pumpIncluded
+              ? !!payload.sendEmailWateringNotifications
+              : false,
+            send_push_watering_notifications: pumpIncluded
+              ? !!payload.sendPushWateringNotifications
+              : false,
           });
         }
 
         setUpsertVisible(false);
         await load(); // refresh devices + plant instances
+
         showToast(
-          tr(isCreate ? "readings.toasts.deviceAdded" : "readings.toasts.deviceUpdated", isCreate ? "Device added" : "Device updated"),
+          tr(
+            isCreate
+              ? "readings.toasts.deviceAdded"
+              : "readings.toasts.deviceUpdated",
+            isCreate ? "Device added" : "Device updated"
+          ),
           "success"
         );
       } catch (e: any) {
         setUpsertVisible(false);
+
         showToast(
           isCreate
             ? e?.message
@@ -890,6 +985,10 @@ export default function ReadingsScreen() {
                   pumpIncluded: updated.pump_included,
                   pumpThresholdPct: updated.pump_threshold_pct ?? undefined,
                   lastPumpRunAt: updated.last_pump_run_at ?? null,
+                  sendEmailWateringNotifications:
+                    updated.send_email_watering_notifications ?? false,
+                  sendPushWateringNotifications:
+                    updated.send_push_watering_notifications ?? false,
                   status: updated.is_active ? "enabled" : "disabled",
                   location: updated.plant_location ?? null,
                 }
@@ -971,7 +1070,9 @@ export default function ReadingsScreen() {
         showSeparator={false}
       />
 
-      {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
+      {menuOpenId && (
+        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />
+      )}
 
       <Animated.FlatList
         ref={listRef}
@@ -980,20 +1081,32 @@ export default function ReadingsScreen() {
         keyExtractor={(x) => x.id}
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
-          const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
-          const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+          const translateY = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [14, 0],
+          });
+          const scale = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0.98, 1],
+          });
           const opacity = v;
 
           // Look up the raw device to get device_name, sensors, *and plant id*
           const dev = devicesRaw.find((d) => String(d.id) === item.id);
 
           return (
-            <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+            <Animated.View
+              style={{ opacity, transform: [{ translateY }, { scale }] }}
+            >
               <ReadingTile
                 data={item}
                 isMenuOpen={menuOpenId === item.id}
-                onPressBody={() => nav.navigate("ReadingDetails" as never, { id: item.id } as never)}
-                onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
+                onPressBody={() =>
+                  nav.navigate("ReadingDetails" as never, { id: item.id } as never)
+                }
+                onPressMenu={() =>
+                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
+                }
                 onEdit={() => {
                   setMenuOpenId(null);
                   openEditDevice(item.id);
@@ -1009,14 +1122,22 @@ export default function ReadingsScreen() {
                 onPlantDetails={() => {
                   setMenuOpenId(null);
                   if (dev?.plant) {
-                    nav.navigate("PlantDetails" as never, { id: String(dev.plant) } as never);
+                    nav.navigate(
+                      "PlantDetails" as never,
+                      { id: String(dev.plant) } as never
+                    );
                   }
                 }}
                 onDelete={() => {
                   setMenuOpenId(null);
                   openDeleteFor(item.id);
                 }}
-                onMetricPress={(metric) => nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)}
+                onMetricPress={(metric) =>
+                  nav.navigate(
+                    "ReadingsHistory" as never,
+                    { metric, range: "day", id: item.id } as never
+                  )
+                }
                 deviceName={dev?.device_name}
                 sensors={{
                   temperature: !!dev?.sensors?.temperature,
@@ -1025,7 +1146,9 @@ export default function ReadingsScreen() {
                   moisture: !!dev?.sensors?.moisture,
                 }}
                 onLaunchPump={() => openWateringSchedule(item.id)}
-                onAutoPumpToggle={(enabled) => handleToggleAutoPump(item.id, enabled)}
+                onAutoPumpToggle={(enabled) =>
+                  handleToggleAutoPump(item.id, enabled)
+                }
               />
             </Animated.View>
           );
@@ -1036,7 +1159,9 @@ export default function ReadingsScreen() {
         contentContainerStyle={s.listContent}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
         ListEmptyComponent={
           !loading ? (
             <Animated.View
@@ -1076,8 +1201,15 @@ export default function ReadingsScreen() {
                 <View pointerEvents="none" style={s.emptyBorder} />
 
                 <View style={s.emptyInner}>
-                  <MaterialCommunityIcons name="access-point" size={26} color="#FFFFFF" style={{ marginBottom: 10 }} />
-                  <Text style={s.emptyTitle}>{tr("readings.empty.title", "No devices yet")}</Text>
+                  <MaterialCommunityIcons
+                    name="access-point"
+                    size={26}
+                    color="#FFFFFF"
+                    style={{ marginBottom: 10 }}
+                  />
+                  <Text style={s.emptyTitle}>
+                    {tr("readings.empty.title", "No devices yet")}
+                  </Text>
 
                   <View style={s.emptyDescBox}>
                     <Text style={s.emptyText}>
@@ -1103,7 +1235,7 @@ export default function ReadingsScreen() {
         >
           <FAB
             bottomOffset={92}
-            position={settings.fabPosition} // 👈 NEW (left/right)
+            position={settings.fabPosition}
             actions={[
               {
                 key: "link-device",
@@ -1230,26 +1362,34 @@ export default function ReadingsScreen() {
         deviceName={wateringScheduleName}
         plantName={
           (() => {
-            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            const dev = devicesRaw.find(
+              (d) => String(d.id) === wateringScheduleId
+            );
             return dev?.plant_name ?? "—";
           })()
         }
         location={
           (() => {
-            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            const dev = devicesRaw.find(
+              (d) => String(d.id) === wateringScheduleId
+            );
             return dev?.plant_location ?? "—";
           })()
         }
         pumpIncluded={
           (() => {
-            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            const dev = devicesRaw.find(
+              (d) => String(d.id) === wateringScheduleId
+            );
             return Boolean(dev?.pump_included);
           })()
         }
         lastPumpRunAt={
           wateringScheduleLastPumpRunAt ??
           (() => {
-            const dev = devicesRaw.find((d) => String(d.id) === wateringScheduleId);
+            const dev = devicesRaw.find(
+              (d) => String(d.id) === wateringScheduleId
+            );
             return dev?.last_pump_run_at ?? "—";
           })()
         }
@@ -1279,7 +1419,9 @@ export default function ReadingsScreen() {
         initialPlantId={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return dev ? String(dev.plant) : "";
               })()
             : ""
@@ -1287,7 +1429,9 @@ export default function ReadingsScreen() {
         initialName={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return dev?.device_name ?? "";
               })()
             : ""
@@ -1295,7 +1439,9 @@ export default function ReadingsScreen() {
         initialEnabled={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return dev ? !!dev.is_active : true;
               })()
             : true
@@ -1303,7 +1449,9 @@ export default function ReadingsScreen() {
         initialIntervalHours={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return dev?.interval_hours ?? 1;
               })()
             : 1
@@ -1311,7 +1459,9 @@ export default function ReadingsScreen() {
         initialNotes={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return (dev?.notes ?? "") || "";
               })()
             : ""
@@ -1319,7 +1469,9 @@ export default function ReadingsScreen() {
         initialSensors={
           upsertMode === "edit"
             ? (() => {
-                const ss = devicesRaw.find((d) => String(d.id) === upsertReadingId)?.sensors;
+                const ss = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                )?.sensors;
                 return {
                   temperature: !!ss?.temperature,
                   humidity: !!ss?.humidity,
@@ -1332,7 +1484,9 @@ export default function ReadingsScreen() {
         initialMoistureAlertEnabled={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return Boolean(dev?.moisture_alert_enabled);
               })()
             : undefined
@@ -1340,15 +1494,21 @@ export default function ReadingsScreen() {
         initialMoistureAlertPct={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
-                return typeof dev?.moisture_alert_threshold === "number" ? dev.moisture_alert_threshold : undefined;
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
+                return typeof dev?.moisture_alert_threshold === "number"
+                  ? dev.moisture_alert_threshold
+                  : undefined;
               })()
             : undefined
         }
         initialSendEmailNotifications={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return Boolean(dev?.send_email_notifications);
               })()
             : false
@@ -1356,7 +1516,9 @@ export default function ReadingsScreen() {
         initialSendPushNotifications={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return Boolean(dev?.send_push_notifications);
               })()
             : false
@@ -1364,7 +1526,9 @@ export default function ReadingsScreen() {
         initialPumpIncluded={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return Boolean(dev?.pump_included);
               })()
             : false
@@ -1372,7 +1536,9 @@ export default function ReadingsScreen() {
         initialAutomaticPumpLaunch={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return Boolean(dev?.automatic_pump_launch);
               })()
             : false
@@ -1380,16 +1546,44 @@ export default function ReadingsScreen() {
         initialPumpThresholdPct={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
-                return typeof dev?.pump_threshold_pct === "number" ? dev.pump_threshold_pct : 30;
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
+                return typeof dev?.pump_threshold_pct === "number"
+                  ? dev.pump_threshold_pct
+                  : 30;
               })()
             : 30
         }
-        authSecret={upsertMode === "edit" ? (setupSecret ?? "••••••••••••••") : undefined}
+        initialSendEmailWateringNotifications={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
+                return Boolean(dev?.send_email_watering_notifications);
+              })()
+            : false
+        }
+        initialSendPushWateringNotifications={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
+                return Boolean(dev?.send_push_watering_notifications);
+              })()
+            : false
+        }
+        authSecret={
+          upsertMode === "edit" ? setupSecret ?? "••••••••••••••" : undefined
+        }
         deviceKey={
           upsertMode === "edit"
             ? (() => {
-                const dev = devicesRaw.find((d) => String(d.id) === upsertReadingId);
+                const dev = devicesRaw.find(
+                  (d) => String(d.id) === upsertReadingId
+                );
                 return dev?.device_key ?? "—";
               })()
             : undefined
@@ -1457,7 +1651,12 @@ export default function ReadingsScreen() {
       />
 
       {/* Top Snackbar (shared toast) */}
-      <TopSnackbar visible={toastVisible} message={toastMsg} variant={toastVariant} onDismiss={() => setToastVisible(false)} />
+      <TopSnackbar
+        visible={toastVisible}
+        message={toastMsg}
+        variant={toastVariant}
+        onDismiss={() => setToastVisible(false)}
+      />
     </View>
   );
 }
