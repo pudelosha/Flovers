@@ -54,6 +54,9 @@ class ReadingDevice(models.Model):
     send_email_notifications = models.BooleanField(default=False)
     send_push_notifications = models.BooleanField(default=False)
 
+    send_email_watering_notifications = models.BooleanField(default=False)
+    send_push_watering_notifications = models.BooleanField(default=False)
+
     pump_included = models.BooleanField(default=False)
     automatic_pump_launch = models.BooleanField(default=False)
     pump_threshold_pct = models.FloatField(null=True, blank=True)

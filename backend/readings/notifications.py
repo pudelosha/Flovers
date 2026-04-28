@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 
 from django.conf import settings
+from django.utils import timezone
 
 from core.emailing import send_templated_email
 from core.i18n import t
@@ -59,7 +60,12 @@ def _looks_unregistered(exc: Exception) -> bool:
     )
 
 
-def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: str, data: dict[str, str]) -> int:
+def _send_push_and_deactivate_bad_tokens(
+    tokens: list[str],
+    title: str,
+    body: str,
+    data: dict[str, str],
+) -> int:
     tokens = [t for t in tokens if t]
     if not tokens:
         return 0
@@ -127,7 +133,17 @@ def _send_moisture_alert_email(device: ReadingDevice, moisture_value: float) -> 
             "plant_name": device.plant_name,
             "value": value,
             "threshold": threshold,
+            "title": t(
+                "readings.moisture_alert.title",
+                lang=lang,
+                default="Soil moisture alert",
+            ),
             "line1": line1,
+            "cta": t(
+                "readings.moisture_alert.cta",
+                lang=lang,
+                default="Open readings",
+            ),
             "link": link,
         },
     )
@@ -185,7 +201,10 @@ def send_moisture_alert_notifications(*, device_id: int, moisture_value: float) 
             .get(id=device_id)
         )
     except ReadingDevice.DoesNotExist:
-        logger.warning("Moisture alert notification skipped; device %s no longer exists", device_id)
+        logger.warning(
+            "Moisture alert notification skipped; device %s no longer exists",
+            device_id,
+        )
         return
 
     try:
@@ -197,3 +216,178 @@ def send_moisture_alert_notifications(*, device_id: int, moisture_value: float) 
         _send_moisture_alert_push(device, moisture_value)
     except Exception:
         logger.exception("Failed to send moisture alert push for device=%s", device_id)
+
+
+def _watering_source_label(source: str | None, lang: str) -> str:
+    if source == "automatic":
+        return t(
+            "readings.watering_completed.source_automatic",
+            lang=lang,
+            default="Automatic",
+        )
+
+    return t(
+        "readings.watering_completed.source_manual",
+        lang=lang,
+        default="Manual",
+    )
+
+
+def _send_watering_completed_email(device: ReadingDevice, source: str | None = None) -> bool:
+    if not device.send_email_watering_notifications:
+        return False
+
+    if not device.pump_included:
+        return False
+
+    user = device.user
+    if not user.email:
+        return False
+
+    lang = _get_user_lang(user)
+    link = build_readings_link()
+
+    device_name = device.device_name or device.plant_name or f"Device #{device.pk}"
+    plant_name = device.plant_name or ""
+    location = device.plant_location or ""
+    source_value = source or device.last_pump_run_source or "manual"
+    source_label = _watering_source_label(source_value, lang)
+
+    completed_at_dt = device.last_pump_run_at or timezone.now()
+    completed_at = timezone.localtime(completed_at_dt).strftime("%Y-%m-%d %H:%M:%S")
+
+    line1 = t(
+        "readings.watering_completed.line1",
+        lang=lang,
+        default="Watering for {device_name} has completed.",
+    ).format(
+        device_name=device_name,
+        plant_name=plant_name,
+        location=location,
+        source=source_value,
+        source_label=source_label,
+        completed_at=completed_at,
+    )
+
+    details = t(
+        "readings.watering_completed.details",
+        lang=lang,
+        default="Type: {source_label}. Plant: {plant_name}. Location: {location}. Completed at: {completed_at}.",
+    ).format(
+        device_name=device_name,
+        plant_name=plant_name or "—",
+        location=location or "—",
+        source=source_value,
+        source_label=source_label,
+        completed_at=completed_at,
+    )
+
+    send_templated_email(
+        to_email=user.email,
+        subject_key="readings.watering_completed.subject",
+        template_name="readings/watering_completed",
+        lang=lang,
+        context={
+            "user": user,
+            "device": device,
+            "device_name": device_name,
+            "plant_name": plant_name,
+            "location": location,
+            "source": source_value,
+            "source_label": source_label,
+            "completed_at": completed_at,
+            "title": t(
+                "readings.watering_completed.title",
+                lang=lang,
+                default="Watering completed",
+            ),
+            "line1": line1,
+            "details": details,
+            "cta": t(
+                "readings.watering_completed.cta",
+                lang=lang,
+                default="Open readings",
+            ),
+            "link": link,
+        },
+    )
+    return True
+
+
+def _send_watering_completed_push(device: ReadingDevice, source: str | None = None) -> int:
+    if not device.send_push_watering_notifications:
+        return 0
+
+    if not device.pump_included:
+        return 0
+
+    user = device.user
+    lang = _get_user_lang(user)
+
+    device_name = device.device_name or device.plant_name or f"Device #{device.pk}"
+    source_value = source or device.last_pump_run_source or "manual"
+    source_label = _watering_source_label(source_value, lang)
+
+    title = t(
+        "readings.watering_completed.push_title",
+        lang=lang,
+        default="Watering completed",
+    )
+
+    body = t(
+        "readings.watering_completed.push_body",
+        lang=lang,
+        default="{device_name}: {source_label} watering has completed.",
+    ).format(
+        device_name=device_name,
+        plant_name=device.plant_name or "",
+        source=source_value,
+        source_label=source_label,
+    )
+
+    tokens = _get_android_tokens(user.id)
+    if not tokens:
+        return 0
+
+    return _send_push_and_deactivate_bad_tokens(
+        tokens=tokens,
+        title=title,
+        body=body,
+        data={
+            "kind": "watering_completed",
+            "route": "Readings",
+            "deviceId": str(device.id),
+            "source": source_value,
+        },
+    )
+
+
+def send_watering_completed_notifications(*, device_id: int, source: str | None = None) -> None:
+    try:
+        device = (
+            ReadingDevice.objects
+            .select_related("user")
+            .get(id=device_id)
+        )
+    except ReadingDevice.DoesNotExist:
+        logger.warning(
+            "Watering completed notification skipped; device %s no longer exists",
+            device_id,
+        )
+        return
+
+    try:
+        _send_watering_completed_email(device, source)
+    except Exception:
+        logger.exception(
+            "Failed to send watering completed email for device=%s",
+            device_id,
+        )
+
+    try:
+        _send_watering_completed_push(device, source)
+    except Exception:
+        logger.exception(
+            "Failed to send watering completed push for device=%s",
+            device_id,
+        )

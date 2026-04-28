@@ -1,0 +1,11 @@
+{
+  "subject": "浇水已完成",
+  "title": "浇水已完成",
+  "line1": "“{device_name}”的浇水已完成。",
+  "details": "类型：{source_label}。植物：{plant_name}。位置：{location}。完成时间：{completed_at}。",
+  "cta": "打开读数",
+  "source_manual": "手动",
+  "source_automatic": "自动",
+  "push_title": "浇水已完成",
+  "push_body": "{device_name}：{source_label}浇水已完成。"
+}

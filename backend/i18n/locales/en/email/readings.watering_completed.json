@@ -1,0 +1,11 @@
+{
+  "subject": "Watering completed",
+  "title": "Watering completed",
+  "line1": "Watering for \"{device_name}\" has completed.",
+  "details": "Type: {source_label}. Plant: {plant_name}. Location: {location}. Completed at: {completed_at}.",
+  "cta": "Open readings",
+  "source_manual": "Manual",
+  "source_automatic": "Automatic",
+  "push_title": "Watering completed",
+  "push_body": "{device_name}: {source_label} watering has completed."
+}

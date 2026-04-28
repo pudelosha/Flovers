@@ -1,0 +1,11 @@
+{
+  "subject": "Arrosage terminé",
+  "title": "Arrosage terminé",
+  "line1": "L’arrosage pour \"{device_name}\" est terminé.",
+  "details": "Type : {source_label}. Plante : {plant_name}. Emplacement : {location}. Terminé à : {completed_at}.",
+  "cta": "Ouvrir les relevés",
+  "source_manual": "Manuel",
+  "source_automatic": "Automatique",
+  "push_title": "Arrosage terminé",
+  "push_body": "{device_name} : l’arrosage {source_label} est terminé."
+}

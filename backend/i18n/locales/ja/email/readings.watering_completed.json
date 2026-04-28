@@ -1,0 +1,11 @@
+{
+  "subject": "水やりが完了しました",
+  "title": "水やりが完了しました",
+  "line1": "\"{device_name}\" の水やりが完了しました。",
+  "details": "種類: {source_label}. 植物: {plant_name}. 場所: {location}. 完了時刻: {completed_at}.",
+  "cta": "測定値を開く",
+  "source_manual": "手動",
+  "source_automatic": "自動",
+  "push_title": "水やりが完了しました",
+  "push_body": "{device_name}: {source_label} の水やりが完了しました。"
+}

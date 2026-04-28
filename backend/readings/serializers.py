@@ -38,9 +38,13 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
     sendEmailNotifications = serializers.BooleanField(write_only=True, required=False)
     sendPushNotifications = serializers.BooleanField(write_only=True, required=False)
+
     pumpIncluded = serializers.BooleanField(write_only=True, required=False)
     automaticPumpLaunch = serializers.BooleanField(write_only=True, required=False)
     pumpThresholdPct = serializers.FloatField(write_only=True, required=False)
+
+    sendEmailWateringNotifications = serializers.BooleanField(write_only=True, required=False)
+    sendPushWateringNotifications = serializers.BooleanField(write_only=True, required=False)
 
     class Meta:
         model = ReadingDevice
@@ -56,18 +60,26 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "notes",
             "interval_hours",
             "sensors",
+
             "moisture_alert_enabled",
             "moisture_alert_threshold",
+            "moisture_alert_active",
+
             "send_email_notifications",
             "send_push_notifications",
+
             "pump_included",
             "automatic_pump_launch",
             "pump_threshold_pct",
+
+            "send_email_watering_notifications",
+            "send_push_watering_notifications",
+
             "last_pump_run_at",
             "last_pump_run_source",
             "pump_cooldown_minutes",
             "pending_pump_task",
-            "moisture_alert_active",
+
             "last_read_at",
             "latest",
             "created_at",
@@ -79,11 +91,16 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "name",
             "enabled",
             "intervalHours",
+
             "sendEmailNotifications",
             "sendPushNotifications",
+
             "pumpIncluded",
             "automaticPumpLaunch",
             "pumpThresholdPct",
+
+            "sendEmailWateringNotifications",
+            "sendPushWateringNotifications",
         )
         read_only_fields = (
             "device_key",
@@ -112,7 +129,13 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             .order_by("-requested_at")
             .first()
         )
-        return PumpTaskSerializer(task).data if task else None
+
+        if not task:
+            return None
+
+        data = PumpTaskSerializer(task).data
+        data.pop("expires_at", None)
+        return data
 
     def to_internal_value(self, data):
         data = data.copy()
@@ -144,6 +167,22 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
         if "pumpThresholdPct" in data and "pump_threshold_pct" not in data:
             data["pump_threshold_pct"] = data.get("pumpThresholdPct")
+
+        if (
+            "sendEmailWateringNotifications" in data
+            and "send_email_watering_notifications" not in data
+        ):
+            data["send_email_watering_notifications"] = data.get(
+                "sendEmailWateringNotifications"
+            )
+
+        if (
+            "sendPushWateringNotifications" in data
+            and "send_push_watering_notifications" not in data
+        ):
+            data["send_push_watering_notifications"] = data.get(
+                "sendPushWateringNotifications"
+            )
 
         # ---- nested modal sensors payload ----
         sensors = data.get("sensors")
@@ -198,27 +237,38 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             getattr(instance, "pump_threshold_pct", None),
         )
 
-        # If moisture sensor is off, dependent features are disabled/reset
+        # If moisture sensor is off, dependent moisture features are disabled/reset.
+        # This keeps backend state valid even if an older app or manual API request sends inconsistent values.
         if not moisture_sensor_enabled:
             attrs["moisture_alert_enabled"] = False
             attrs["moisture_alert_threshold"] = None
+            attrs["send_email_notifications"] = False
+            attrs["send_push_notifications"] = False
+
+            # Automatic watering depends on soil moisture readings.
             attrs["automatic_pump_launch"] = False
             attrs["pump_threshold_pct"] = None
 
         # Validate moisture alert threshold
-        final_moisture_alert_enabled = attrs.get("moisture_alert_enabled", moisture_alert_enabled)
+        final_moisture_alert_enabled = attrs.get(
+            "moisture_alert_enabled",
+            moisture_alert_enabled,
+        )
+
         if final_moisture_alert_enabled:
             threshold = attrs.get("moisture_alert_threshold", moisture_alert_threshold)
             if threshold is None:
                 raise serializers.ValidationError({
                     "moisture_alert_threshold": "This field is required when moisture alert is enabled."
                 })
+
             try:
                 threshold_f = float(threshold)
             except (TypeError, ValueError):
                 raise serializers.ValidationError({
                     "moisture_alert_threshold": "A valid number is required."
                 })
+
             if threshold_f < 0 or threshold_f > 100:
                 raise serializers.ValidationError({
                     "moisture_alert_threshold": "Must be between 0 and 100."
@@ -226,11 +276,16 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
         # Normalize pump fields
         final_pump_included = attrs.get("pump_included", pump_included)
-        final_automatic_pump_launch = attrs.get("automatic_pump_launch", automatic_pump_launch)
+        final_automatic_pump_launch = attrs.get(
+            "automatic_pump_launch",
+            automatic_pump_launch,
+        )
 
         if not final_pump_included:
             attrs["automatic_pump_launch"] = False
             attrs["pump_threshold_pct"] = None
+            attrs["send_email_watering_notifications"] = False
+            attrs["send_push_watering_notifications"] = False
 
         # Validate pump threshold
         if attrs.get("automatic_pump_launch", final_automatic_pump_launch):
@@ -244,12 +299,14 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError({
                     "pump_threshold_pct": "This field is required when automatic pump launch is enabled."
                 })
+
             try:
                 threshold_f = float(threshold)
             except (TypeError, ValueError):
                 raise serializers.ValidationError({
                     "pump_threshold_pct": "A valid number is required."
                 })
+
             if threshold_f < 0 or threshold_f > 100:
                 raise serializers.ValidationError({
                     "pump_threshold_pct": "Must be between 0 and 100."
@@ -264,6 +321,8 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
         if validated_data.get("pump_included") is False:
             validated_data["automatic_pump_launch"] = False
             validated_data["pump_threshold_pct"] = None
+            validated_data["send_email_watering_notifications"] = False
+            validated_data["send_push_watering_notifications"] = False
 
         return super().update(instance, validated_data)
 

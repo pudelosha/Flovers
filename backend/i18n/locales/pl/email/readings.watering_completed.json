@@ -1,0 +1,11 @@
+{
+  "subject": "Podlewanie zakończone",
+  "title": "Podlewanie zakończone",
+  "line1": "Podlewanie dla „{device_name}” zostało zakończone.",
+  "details": "Typ: {source_label}. Roślina: {plant_name}. Lokalizacja: {location}. Zakończono o: {completed_at}.",
+  "cta": "Otwórz odczyty",
+  "source_manual": "Ręczne",
+  "source_automatic": "Automatyczne",
+  "push_title": "Podlewanie zakończone",
+  "push_body": "{device_name}: podlewanie {source_label} zostało zakończone."
+}

@@ -1,0 +1,11 @@
+{
+  "subject": "Rega concluída",
+  "title": "Rega concluída",
+  "line1": "A rega de \"{device_name}\" foi concluída.",
+  "details": "Tipo: {source_label}. Planta: {plant_name}. Localização: {location}. Concluída em: {completed_at}.",
+  "cta": "Abrir leituras",
+  "source_manual": "Manual",
+  "source_automatic": "Automática",
+  "push_title": "Rega concluída",
+  "push_body": "{device_name}: a rega {source_label} foi concluída."
+}

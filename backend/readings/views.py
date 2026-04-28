@@ -28,7 +28,10 @@ from .utils import parse_ts_or_now
 from .throttles import IngestPerDeviceThrottle, FeedPerDeviceThrottle
 from .codegen import generate_arduino_code
 from .emails import send_device_code_email
-from .notifications import send_moisture_alert_notifications
+from .notifications import (
+    send_moisture_alert_notifications,
+    send_watering_completed_notifications,
+)
 
 
 # ---------- helpers ----------
@@ -278,6 +281,7 @@ def _device_can_run_pump(device: ReadingDevice):
         return False, "Device is disabled."
 
     return True, ""
+
 
 def _auto_pump_config_for_device(device: ReadingDevice) -> dict:
     sensors = device.sensors or {}
@@ -809,7 +813,12 @@ def ingest(request):
                 "light": rec.light,
                 "moisture": rec.moisture,
             }
-            device.save(update_fields=["last_read_at", "latest_snapshot", "moisture_alert_active", "updated_at"])
+            device.save(update_fields=[
+                "last_read_at",
+                "latest_snapshot",
+                "moisture_alert_active",
+                "updated_at",
+            ])
 
             if should_send_moisture_alert and alert_moisture_value is not None:
                 transaction.on_commit(
@@ -978,9 +987,25 @@ def pump_complete(request):
 
                 device.last_pump_run_at = now
                 device.last_pump_run_source = task.source
-                device.save(update_fields=["last_pump_run_at", "last_pump_run_source", "updated_at"])
+                device.save(update_fields=[
+                    "last_pump_run_at",
+                    "last_pump_run_source",
+                    "updated_at",
+                ])
 
-                task.save(update_fields=["status", "executed_at", "error_message", "updated_at"])
+                task.save(update_fields=[
+                    "status",
+                    "executed_at",
+                    "error_message",
+                    "updated_at",
+                ])
+
+                transaction.on_commit(
+                    lambda device_id=device.id, task_source=task.source: send_watering_completed_notifications(
+                        device_id=device_id,
+                        source=task_source,
+                    )
+                )
             else:
                 task.status = PumpTask.STATUS_FAILED
                 task.error_message = error_message or "Pump execution failed."
@@ -1006,7 +1031,18 @@ def pump_complete(request):
         if success:
             device.last_pump_run_at = now
             device.last_pump_run_source = task.source
-            device.save(update_fields=["last_pump_run_at", "last_pump_run_source", "updated_at"])
+            device.save(update_fields=[
+                "last_pump_run_at",
+                "last_pump_run_source",
+                "updated_at",
+            ])
+
+            transaction.on_commit(
+                lambda device_id=device.id, task_source=task.source: send_watering_completed_notifications(
+                    device_id=device_id,
+                    source=task_source,
+                )
+            )
 
     return Response({
         "detail": "Pump execution recorded." if success else "Pump failure recorded.",
@@ -1037,9 +1073,21 @@ def feed(request):
         return Response({"detail": "invalid credentials"}, status=403)
 
     if device_id:
-        device = get_object_or_404(ReadingDevice, id=device_id, device_key=device_key, user=acct.user)
+        device = get_object_or_404(
+            ReadingDevice,
+            id=device_id,
+            device_key=device_key,
+            user=acct.user,
+        )
     else:
-        device = get_object_or_404(ReadingDevice, device_key=device_key, user=acct.user)
+        device = get_object_or_404(
+            ReadingDevice,
+            device_key=device_key,
+            user=acct.user,
+        )
+
+    if not device.is_active:
+        return Response({"detail": "device disabled"}, status=403)
 
     qs = device.readings.all()
     if "from" in request.query_params:
@@ -1066,6 +1114,7 @@ def feed(request):
 
 
 # ---------- New: Authenticated history endpoint for charts ----------
+
 @api_view(["GET"])
 @permission_classes([permissions.IsAuthenticated])
 def history(request):
@@ -1106,7 +1155,9 @@ def history(request):
 
     metric = request.query_params.get("metric", "temperature")
     if metric not in VALID_METRICS:
-        return Response({"detail": "metric must be one of: temperature, humidity, light, moisture"}, status=400)
+        return Response({
+            "detail": "metric must be one of: temperature, humidity, light, moisture"
+        }, status=400)
 
     # Anchor date (defaults to now); parse_ts_or_now handles None/invalid gracefully
     anchor = parse_ts_or_now(request.query_params.get("anchor"))
@@ -1115,7 +1166,10 @@ def history(request):
     span_from, span_to = _span_for(range_str, anchor_local)
 
     # Django will convert local aware datetimes to UTC when comparing with stored timestamps
-    qs = device.readings.filter(timestamp__gte=span_from, timestamp__lte=span_to).order_by("timestamp")
+    qs = device.readings.filter(
+        timestamp__gte=span_from,
+        timestamp__lte=span_to,
+    ).order_by("timestamp")
 
     # Determine number of bins
     if range_str == "day":

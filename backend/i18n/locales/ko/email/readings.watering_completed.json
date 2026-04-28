@@ -1,0 +1,11 @@
+{
+  "subject": "물주기 완료",
+  "title": "물주기 완료",
+  "line1": "\"{device_name}\"의 물주기가 완료되었습니다.",
+  "details": "유형: {source_label}. 식물: {plant_name}. 위치: {location}. 완료 시간: {completed_at}.",
+  "cta": "측정값 열기",
+  "source_manual": "수동",
+  "source_automatic": "자동",
+  "push_title": "물주기 완료",
+  "push_body": "{device_name}: {source_label} 물주기가 완료되었습니다."
+}

@@ -1,0 +1,11 @@
+{
+  "subject": "पानी देना पूरा हुआ",
+  "title": "पानी देना पूरा हुआ",
+  "line1": "\"{device_name}\" के लिए पानी देना पूरा हो गया है।",
+  "details": "प्रकार: {source_label}. पौधा: {plant_name}. स्थान: {location}. पूरा हुआ: {completed_at}.",
+  "cta": "रीडिंग खोलें",
+  "source_manual": "मैनुअल",
+  "source_automatic": "स्वचालित",
+  "push_title": "पानी देना पूरा हुआ",
+  "push_body": "{device_name}: {source_label} द्वारा पानी देना पूरा हो गया है।"
+}

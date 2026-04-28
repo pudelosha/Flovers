@@ -1,0 +1,11 @@
+{
+  "subject": "Irrigazione completata",
+  "title": "Irrigazione completata",
+  "line1": "L'irrigazione per \"{device_name}\" è stata completata.",
+  "details": "Tipo: {source_label}. Pianta: {plant_name}. Posizione: {location}. Completata alle: {completed_at}.",
+  "cta": "Apri letture",
+  "source_manual": "Manuale",
+  "source_automatic": "Automatica",
+  "push_title": "Irrigazione completata",
+  "push_body": "{device_name}: l'irrigazione {source_label} è stata completata."
+}

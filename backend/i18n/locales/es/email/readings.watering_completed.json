@@ -1,0 +1,11 @@
+{
+  "subject": "Riego completado",
+  "title": "Riego completado",
+  "line1": "El riego de \"{device_name}\" se ha completado.",
+  "details": "Tipo: {source_label}. Planta: {plant_name}. Ubicación: {location}. Completado a las: {completed_at}.",
+  "cta": "Abrir lecturas",
+  "source_manual": "Manual",
+  "source_automatic": "Automático",
+  "push_title": "Riego completado",
+  "push_body": "{device_name}: el riego {source_label} se ha completado."
+}

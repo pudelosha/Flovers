@@ -1,0 +1,11 @@
+{
+  "subject": "Bewässerung abgeschlossen",
+  "title": "Bewässerung abgeschlossen",
+  "line1": "Die Bewässerung für \"{device_name}\" wurde abgeschlossen.",
+  "details": "Typ: {source_label}. Pflanze: {plant_name}. Standort: {location}. Abgeschlossen um: {completed_at}.",
+  "cta": "Messwerte öffnen",
+  "source_manual": "Manuell",
+  "source_automatic": "Automatisch",
+  "push_title": "Bewässerung abgeschlossen",
+  "push_body": "{device_name}: {source_label}-Bewässerung wurde abgeschlossen."
+}
