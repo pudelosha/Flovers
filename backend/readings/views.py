@@ -160,17 +160,21 @@ def _autosize_worksheet_columns(ws):
         ws.column_dimensions[col_letter].width = min(max(max_len + 2, 12), 42)
 
 
-def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> bytes:
+def _build_readings_export_workbook(readings, pump_tasks, sort_key: str, sort_dir: str) -> bytes:
     # lazy import so missing dependency would affect only this endpoint
     from openpyxl import Workbook
     from openpyxl.styles import Font
 
-    rows = []
+    reverse = sort_dir == "desc"
+
+    # ============================== SHEET 1: READINGS ==============================
+
+    reading_rows = []
 
     for reading in readings:
         device = reading.device
 
-        rows.append({
+        reading_rows.append({
             "plant_name": device.plant_name or "",
             "location": device.plant_location or "",
             "device_name": device.device_name or "",
@@ -182,10 +186,8 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
             "_ts": reading.timestamp,
         })
 
-    reverse = sort_dir == "desc"
-
     if sort_key == "name":
-        rows.sort(
+        reading_rows.sort(
             key=lambda r: (
                 (r["plant_name"] or "").lower(),
                 (r["device_name"] or "").lower(),
@@ -194,7 +196,7 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
             reverse=reverse,
         )
     elif sort_key == "location":
-        rows.sort(
+        reading_rows.sort(
             key=lambda r: (
                 (r["location"] or "").lower(),
                 (r["plant_name"] or "").lower(),
@@ -204,16 +206,17 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
             reverse=reverse,
         )
     else:  # lastRead
-        rows.sort(
+        reading_rows.sort(
             key=lambda r: r["_ts"],
             reverse=reverse,
         )
 
     wb = Workbook()
-    ws = wb.active
-    ws.title = "Readings"
 
-    headers = [
+    ws_readings = wb.active
+    ws_readings.title = "Readings"
+
+    readings_headers = [
         "Plant Name",
         "Location",
         "Device Name",
@@ -223,13 +226,13 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
         "Soil Moisture",
         "Created At",
     ]
-    ws.append(headers)
+    ws_readings.append(readings_headers)
 
-    for cell in ws[1]:
+    for cell in ws_readings[1]:
         cell.font = Font(bold=True)
 
-    for row in rows:
-        ws.append([
+    for row in reading_rows:
+        ws_readings.append([
             row["plant_name"],
             row["location"],
             row["device_name"],
@@ -240,7 +243,94 @@ def _build_readings_export_workbook(readings, sort_key: str, sort_dir: str) -> b
             row["created_at"],
         ])
 
-    _autosize_worksheet_columns(ws)
+    _autosize_worksheet_columns(ws_readings)
+
+    # ============================== SHEET 2: WATERING TASKS ==============================
+
+    task_rows = []
+
+    for task in pump_tasks:
+        device = task.device
+
+        task_rows.append({
+            "plant_name": device.plant_name or "",
+            "location": device.plant_location or "",
+            "device_name": device.device_name or "",
+            "source": task.source or "",
+            "status": task.status or "",
+            "requested_at": _format_dt_local(task.requested_at),
+            "delivered_at": _format_dt_local(task.delivered_at),
+            "executed_at": _format_dt_local(task.executed_at),
+            "cancelled_at": _format_dt_local(task.cancelled_at),
+            "moisture_at_request": task.moisture_at_request,
+            "threshold_at_request": task.threshold_at_request,
+            "error_message": task.error_message or "",
+            "_ts": task.requested_at,
+        })
+
+    if sort_key == "name":
+        task_rows.sort(
+            key=lambda r: (
+                (r["plant_name"] or "").lower(),
+                (r["device_name"] or "").lower(),
+                r["_ts"],
+            ),
+            reverse=reverse,
+        )
+    elif sort_key == "location":
+        task_rows.sort(
+            key=lambda r: (
+                (r["location"] or "").lower(),
+                (r["plant_name"] or "").lower(),
+                (r["device_name"] or "").lower(),
+                r["_ts"],
+            ),
+            reverse=reverse,
+        )
+    else:  # lastRead / task timestamp
+        task_rows.sort(
+            key=lambda r: r["_ts"],
+            reverse=reverse,
+        )
+
+    ws_tasks = wb.create_sheet("Watering Tasks")
+
+    tasks_headers = [
+        "Plant Name",
+        "Location",
+        "Device Name",
+        "Source",
+        "Status",
+        "Requested At",
+        "Delivered At",
+        "Executed At",
+        "Cancelled At",
+        "Moisture At Request",
+        "Threshold At Request",
+        "Error Message",
+    ]
+    ws_tasks.append(tasks_headers)
+
+    for cell in ws_tasks[1]:
+        cell.font = Font(bold=True)
+
+    for row in task_rows:
+        ws_tasks.append([
+            row["plant_name"],
+            row["location"],
+            row["device_name"],
+            row["source"],
+            row["status"],
+            row["requested_at"],
+            row["delivered_at"],
+            row["executed_at"],
+            row["cancelled_at"],
+            row["moisture_at_request"],
+            row["threshold_at_request"],
+            row["error_message"],
+        ])
+
+    _autosize_worksheet_columns(ws_tasks)
 
     stream = BytesIO()
     wb.save(stream)
@@ -550,6 +640,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
                 {"detail": "PDF generation requires reportlab. pip install reportlab"},
                 status=status.HTTP_501_NOT_IMPLEMENTED,
             )
+
         device = self.get_object()
         secret = _get_secret_str(request.user)
         buf = BytesIO()
@@ -602,7 +693,7 @@ def device_setup(request):
     return Response({
         "endpoints": {
             "ingest": f"{base}/api/readings/ingest/",
-            "read":   f"{base}/api/readings/feed/",
+            "read": f"{base}/api/readings/feed/",
         },
         "sample_payloads": {
             "ingest": {
@@ -611,16 +702,21 @@ def device_setup(request):
                 # "device_id": 123,
                 "device_key": "AB12CD34",
                 "timestamp": "2025-10-31T13:45:00Z",
-                "metrics": {"temperature": 22.8, "humidity": 41.2, "light": 771, "moisture": 29}
+                "metrics": {
+                    "temperature": 22.8,
+                    "humidity": 41.2,
+                    "light": 771,
+                    "moisture": 29,
+                },
             },
             "read": {
                 "secret": "ACCOUNT_SECRET",
                 # "device_id": 123,  # optional
                 "device_key": "AB12CD34",
                 "from": "2025-10-30T00:00:00Z",
-                "to":   "2025-10-31T23:59:59Z",
-                "limit": 200
-            }
+                "to": "2025-10-31T23:59:59Z",
+                "limit": 200,
+            },
         },
         "secret": secret,
     })
@@ -673,9 +769,18 @@ def readings_export_email(request):
         .select_related("device")
     )
 
+    pump_tasks_qs = (
+        PumpTask.objects
+        .filter(device__in=device_qs)
+        .select_related("device")
+    )
+
     readings = list(readings_qs)
+    pump_tasks = list(pump_tasks_qs)
+
     xlsx_bytes = _build_readings_export_workbook(
-        readings,
+        readings=readings,
+        pump_tasks=pump_tasks,
         sort_key=sort_key,
         sort_dir=sort_dir,
     )
@@ -690,6 +795,7 @@ def readings_export_email(request):
         "sort_key_value": sort_key,
         "sort_dir_value": sort_dir,
         "total_count": len(readings),
+        "watering_tasks_count": len(pump_tasks),
         "attachment_filename": attachment_filename,
     }
 
@@ -1198,6 +1304,7 @@ def history(request):
         val = getattr(rec, metric, None)
         if val is None:
             continue
+
         try:
             val_f = float(val)
         except (TypeError, ValueError):
