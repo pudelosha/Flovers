@@ -7,12 +7,19 @@
       "thisDevice": "dieses Gerät"
     },
     "tile": {
-      "lastReadPrefix": "Zuletzt gelesen"
+      "lastReadPrefix": "Zuletzt gemessen",
+      "lastPumpRunPrefix": "Letzter Pumpenlauf",
+      "automaticPump": "Automatische Pumpe",
+      "automaticPumpThreshold": "Wenn Bodenfeuchtigkeit < {{value}}%",
+      "opening": "Wird geöffnet...",
+      "scheduleWatering": "Bewässerung planen",
+      "unscheduleWatering": "Bewässerung abbestellen"
     },
     "menu": {
-      "history": "Messwertverlauf",
+      "history": "Messwerteverlauf",
       "plantDetails": "Pflanzendetails",
       "editDevice": "Gerät bearbeiten",
+      "deviceDetails": "Gerätedetails",
       "deleteDevice": "Gerät löschen"
     },
     "fab": {
@@ -21,11 +28,11 @@
       "sort": "Sortieren",
       "filter": "Filtern",
       "sendExport": "Export senden",
-      "clearFilter": "Filter zurücksetzen"
+      "clearFilter": "Filter löschen"
     },
     "empty": {
       "title": "Noch keine Geräte",
-      "description": "Geräte ermöglichen es dir, Temperatur-, Feuchtigkeits-, Licht- und Bodenfeuchtigkeitswerte für eine Pflanze zu erfassen.\n\nTippe auf die Aktion „+ Gerät verknüpfen“, um eines hinzuzufügen. Wähle eine Pflanze, benenne das Gerät, wähle Sensoren aus und lege ein Abtastintervall fest. Anschließend kannst du die Geräteeinrichtung öffnen, um dein Kontogeheimnis einzusehen, es zu rotieren und eine sofort einsetzbare Arduino/ESP-Skizze per E-Mail zu versenden."
+      "description": "Mit Geräten kannst du Temperatur-, Luftfeuchtigkeits-, Licht- und Bodenfeuchtigkeitsmesswerte für eine Pflanze erfassen.\n\nTippe auf die Aktion „+ Gerät verknüpfen“, um eines hinzuzufügen. Wähle eine Pflanze aus, benenne das Gerät, wähle Sensoren aus und lege ein Abtastintervall fest. Anschließend kannst du die Geräteeinrichtung öffnen, um dein Kontogeheimnis anzusehen, es zu rotieren und dir einen einfügebereiten Arduino-/ESP-Sketch per E-Mail zusenden zu lassen."
     },
     "toasts": {
       "unauthorized": "Nicht autorisiert. Bitte melde dich erneut an.",
@@ -44,8 +51,21 @@
       "secretRotated": "Geheimnis rotiert",
       "rotateFailed": "Rotation fehlgeschlagen",
       "rotateFailedPrefix": "Rotation fehlgeschlagen",
-      "exportSent": "Exportanforderung für Messwerte gesendet",
-      "failedToSendExport": "Senden des Messwert-Exports fehlgeschlagen",
+      "deviceDetailsLoadFailed": "Gerätedetails konnten nicht geladen werden",
+      "missingDeviceId": "Geräte-ID fehlt",
+      "codeSentByEmail": "Code wurde an deine E-Mail gesendet",
+      "sendCodeEmailFailed": "E-Mail-Versand fehlgeschlagen",
+      "sendCodeEmailFailedPrefix": "E-Mail-Versand fehlgeschlagen",
+      "pumpStatusLoadFailed": "Bewässerungsplan konnte nicht geladen werden",
+      "wateringScheduled": "Bewässerung geplant",
+      "wateringScheduleFailed": "Bewässerung konnte nicht geplant werden",
+      "wateringRecalled": "Geplante Bewässerung zurückgerufen",
+      "wateringRecallFailed": "Bewässerung konnte nicht zurückgerufen werden",
+      "autoPumpEnabled": "Automatische Pumpe aktiviert",
+      "autoPumpDisabled": "Automatische Pumpe deaktiviert",
+      "autoPumpUpdateFailed": "Einstellung der automatischen Pumpe konnte nicht aktualisiert werden",
+      "exportSent": "Anfrage zum Export der Messwerte gesendet",
+      "failedToSendExport": "Export der Messwerte konnte nicht gesendet werden",
       "exportNotAvailableYet": "Export ist noch nicht verfügbar."
     }
   }

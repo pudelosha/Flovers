@@ -7,12 +7,19 @@
       "thisDevice": "this device"
     },
     "tile": {
-      "lastReadPrefix": "Last read"
+      "lastReadPrefix": "Last read",
+      "lastPumpRunPrefix": "Last pump run",
+      "automaticPump": "Automatic pump",
+      "automaticPumpThreshold": "When soil moisture < {{value}}%",
+      "opening": "Opening...",
+      "scheduleWatering": "Schedule watering",
+      "unscheduleWatering": "Unschedule watering"
     },
     "menu": {
       "history": "Readings history",
       "plantDetails": "Plant details",
       "editDevice": "Edit device",
+      "deviceDetails": "Device details",
       "deleteDevice": "Delete device"
     },
     "fab": {
@@ -30,20 +37,40 @@
     "toasts": {
       "unauthorized": "Unauthorized. Please log in again.",
       "loadFailed": "Failed to load devices",
+
       "deviceDeleted": "Device deleted",
       "deleteFailed": "Delete failed",
       "deleteFailedPrefix": "Delete failed",
+
       "deviceAdded": "Device added",
       "deviceUpdated": "Device updated",
       "addFailed": "Add failed",
       "addFailedPrefix": "Add failed",
       "updateFailed": "Update failed",
       "updateFailedPrefix": "Update failed",
+
       "setupLoadFailed": "Failed to load setup",
       "setupLoadFailedPrefix": "Failed to load setup",
       "secretRotated": "Secret rotated",
       "rotateFailed": "Rotate failed",
       "rotateFailedPrefix": "Rotate failed",
+
+      "deviceDetailsLoadFailed": "Failed to load device details",
+      "missingDeviceId": "Missing device ID",
+      "codeSentByEmail": "Code sent to your email",
+      "sendCodeEmailFailed": "Send email failed",
+      "sendCodeEmailFailedPrefix": "Send email failed",
+
+      "pumpStatusLoadFailed": "Failed to load watering schedule",
+      "wateringScheduled": "Watering scheduled",
+      "wateringScheduleFailed": "Failed to schedule watering",
+      "wateringRecalled": "Scheduled watering recalled",
+      "wateringRecallFailed": "Failed to recall watering",
+
+      "autoPumpEnabled": "Automatic pump enabled",
+      "autoPumpDisabled": "Automatic pump disabled",
+      "autoPumpUpdateFailed": "Failed to update automatic pump setting",
+
       "exportSent": "Readings export request sent",
       "failedToSendExport": "Failed to send readings export",
       "exportNotAvailableYet": "Export is not available yet."

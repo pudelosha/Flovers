@@ -7,12 +7,19 @@
       "thisDevice": "questo dispositivo"
     },
     "tile": {
-      "lastReadPrefix": "Ultima lettura"
+      "lastReadPrefix": "Ultima lettura",
+      "lastPumpRunPrefix": "Ultimo avvio della pompa",
+      "automaticPump": "Pompa automatica",
+      "automaticPumpThreshold": "Quando l'umidità del suolo < {{value}}%",
+      "opening": "Apertura...",
+      "scheduleWatering": "Programma irrigazione",
+      "unscheduleWatering": "Annulla programmazione irrigazione"
     },
     "menu": {
-      "history": "Cronologia delle letture",
-      "plantDetails": "Dettagli della pianta",
+      "history": "Cronologia letture",
+      "plantDetails": "Dettagli pianta",
       "editDevice": "Modifica dispositivo",
+      "deviceDetails": "Dettagli dispositivo",
       "deleteDevice": "Elimina dispositivo"
     },
     "fab": {
@@ -24,11 +31,11 @@
       "clearFilter": "Cancella filtro"
     },
     "empty": {
-      "title": "Nessun dispositivo ancora",
-      "description": "I dispositivi ti permettono di acquisire letture di temperatura, umidità, luce e umidità del suolo per una pianta.\n\nTocca l’azione “+ Collega dispositivo” per aggiungerne uno. Scegli una pianta, assegna un nome al dispositivo, seleziona i sensori e imposta un intervallo di campionamento. Puoi quindi aprire Configurazione dispositivo per visualizzare il segreto del tuo account, ruotarlo e inviare via email uno sketch Arduino/ESP pronto da incollare."
+      "title": "Ancora nessun dispositivo",
+      "description": "I dispositivi ti consentono di acquisire letture di temperatura, umidità, luce e umidità del suolo per una pianta.\n\nTocca l'azione “+ Collega dispositivo” per aggiungerne uno. Scegli una pianta, assegna un nome al dispositivo, scegli i sensori e imposta un intervallo di campionamento. Puoi quindi aprire Configurazione dispositivo per visualizzare il segreto del tuo account, ruotarlo e inviare via email uno sketch Arduino/ESP pronto da incollare."
     },
     "toasts": {
-      "unauthorized": "Non autorizzato. Effettua nuovamente l’accesso.",
+      "unauthorized": "Non autorizzato. Effettua di nuovo l'accesso.",
       "loadFailed": "Impossibile caricare i dispositivi",
       "deviceDeleted": "Dispositivo eliminato",
       "deleteFailed": "Eliminazione non riuscita",
@@ -41,12 +48,25 @@
       "updateFailedPrefix": "Aggiornamento non riuscito",
       "setupLoadFailed": "Impossibile caricare la configurazione",
       "setupLoadFailedPrefix": "Impossibile caricare la configurazione",
-      "secretRotated": "Segreto aggiornato",
+      "secretRotated": "Segreto ruotato",
       "rotateFailed": "Rotazione non riuscita",
       "rotateFailedPrefix": "Rotazione non riuscita",
+      "deviceDetailsLoadFailed": "Impossibile caricare i dettagli del dispositivo",
+      "missingDeviceId": "ID dispositivo mancante",
+      "codeSentByEmail": "Codice inviato alla tua email",
+      "sendCodeEmailFailed": "Invio email non riuscito",
+      "sendCodeEmailFailedPrefix": "Invio email non riuscito",
+      "pumpStatusLoadFailed": "Impossibile caricare la programmazione dell'irrigazione",
+      "wateringScheduled": "Irrigazione programmata",
+      "wateringScheduleFailed": "Impossibile programmare l'irrigazione",
+      "wateringRecalled": "Irrigazione programmata richiamata",
+      "wateringRecallFailed": "Impossibile richiamare l'irrigazione",
+      "autoPumpEnabled": "Pompa automatica abilitata",
+      "autoPumpDisabled": "Pompa automatica disabilitata",
+      "autoPumpUpdateFailed": "Impossibile aggiornare l'impostazione della pompa automatica",
       "exportSent": "Richiesta di esportazione delle letture inviata",
-      "failedToSendExport": "Invio dell’esportazione delle letture non riuscito",
-      "exportNotAvailableYet": "L’esportazione non è ancora disponibile."
+      "failedToSendExport": "Impossibile inviare l'esportazione delle letture",
+      "exportNotAvailableYet": "L'esportazione non è ancora disponibile."
     }
   }
 }

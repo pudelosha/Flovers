@@ -7,12 +7,19 @@
       "thisDevice": "este dispositivo"
     },
     "tile": {
-      "lastReadPrefix": "Última lectura"
+      "lastReadPrefix": "Última lectura",
+      "lastPumpRunPrefix": "Último funcionamiento de la bomba",
+      "automaticPump": "Bomba automática",
+      "automaticPumpThreshold": "Cuando la humedad del suelo < {{value}}%",
+      "opening": "Abriendo...",
+      "scheduleWatering": "Programar riego",
+      "unscheduleWatering": "Cancelar riego programado"
     },
     "menu": {
       "history": "Historial de lecturas",
       "plantDetails": "Detalles de la planta",
       "editDevice": "Editar dispositivo",
+      "deviceDetails": "Detalles del dispositivo",
       "deleteDevice": "Eliminar dispositivo"
     },
     "fab": {
@@ -25,10 +32,10 @@
     },
     "empty": {
       "title": "Aún no hay dispositivos",
-      "description": "Los dispositivos te permiten recopilar lecturas de temperatura, humedad, luz y humedad del suelo para una planta.\n\nToca la acción “+ Vincular dispositivo” para añadir uno. Elige una planta, nombra el dispositivo, selecciona sensores y establece un intervalo de muestreo. Luego puedes abrir Configuración del dispositivo para ver el secreto de tu cuenta, rotarlo y enviar por correo un sketch de Arduino/ESP listo para pegar."
+      "description": "Los dispositivos te permiten ingerir lecturas de temperatura, humedad, luz y humedad del suelo para una planta.\n\nToca la acción “+ Vincular dispositivo” para añadir uno. Elige una planta, nombra el dispositivo, selecciona sensores y establece un intervalo de muestreo. Luego puedes abrir Configuración del dispositivo para ver el secreto de tu cuenta, rotarlo y enviar por correo electrónico un sketch de Arduino/ESP listo para pegar."
     },
     "toasts": {
-      "unauthorized": "No autorizado. Por favor, inicia sesión de nuevo.",
+      "unauthorized": "No autorizado. Inicia sesión de nuevo.",
       "loadFailed": "Error al cargar los dispositivos",
       "deviceDeleted": "Dispositivo eliminado",
       "deleteFailed": "Error al eliminar",
@@ -44,6 +51,19 @@
       "secretRotated": "Secreto rotado",
       "rotateFailed": "Error al rotar",
       "rotateFailedPrefix": "Error al rotar",
+      "deviceDetailsLoadFailed": "Error al cargar los detalles del dispositivo",
+      "missingDeviceId": "Falta el ID del dispositivo",
+      "codeSentByEmail": "Código enviado a tu correo electrónico",
+      "sendCodeEmailFailed": "Error al enviar el correo electrónico",
+      "sendCodeEmailFailedPrefix": "Error al enviar el correo electrónico",
+      "pumpStatusLoadFailed": "Error al cargar el programa de riego",
+      "wateringScheduled": "Riego programado",
+      "wateringScheduleFailed": "Error al programar el riego",
+      "wateringRecalled": "Riego programado cancelado",
+      "wateringRecallFailed": "Error al cancelar el riego",
+      "autoPumpEnabled": "Bomba automática activada",
+      "autoPumpDisabled": "Bomba automática desactivada",
+      "autoPumpUpdateFailed": "Error al actualizar la configuración de la bomba automática",
       "exportSent": "Solicitud de exportación de lecturas enviada",
       "failedToSendExport": "Error al enviar la exportación de lecturas",
       "exportNotAvailableYet": "La exportación aún no está disponible."

@@ -7,12 +7,19 @@
       "thisDevice": "이 기기"
     },
     "tile": {
-      "lastReadPrefix": "마지막 측정"
+      "lastReadPrefix": "마지막 측정",
+      "lastPumpRunPrefix": "마지막 펌프 작동",
+      "automaticPump": "자동 펌프",
+      "automaticPumpThreshold": "토양 수분 < {{value}}%일 때",
+      "opening": "여는 중...",
+      "scheduleWatering": "물 주기 예약",
+      "unscheduleWatering": "물 주기 예약 취소"
     },
     "menu": {
       "history": "측정 기록",
-      "plantDetails": "식물 상세",
+      "plantDetails": "식물 세부정보",
       "editDevice": "기기 수정",
+      "deviceDetails": "기기 세부정보",
       "deleteDevice": "기기 삭제"
     },
     "fab": {
@@ -25,27 +32,40 @@
     },
     "empty": {
       "title": "아직 기기가 없습니다",
-      "description": "기기를 사용하면 식물의 온도, 습도, 빛, 토양 수분 측정값을 수집할 수 있습니다.\n\n“+ Link device” 동작을 눌러 추가하세요. 식물을 선택하고, 기기 이름을 지정하고, 센서를 선택하고, 샘플링 간격을 설정하세요. 그런 다음 기기 설정을 열어 계정 비밀 키를 확인하고, 교체(회전)하고, 바로 붙여넣을 수 있는 Arduino/ESP 스케치를 이메일로 보낼 수 있습니다."
+      "description": "기기를 사용하면 식물의 온도, 습도, 조도 및 토양 수분 측정값을 수집할 수 있습니다.\n\n기기를 추가하려면 “+ Link device” 작업을 탭하세요. 식물을 선택하고, 기기 이름을 지정하고, 센서를 선택한 다음 샘플링 간격을 설정하세요. 그런 다음 기기 설정을 열어 계정 비밀 키를 확인하고, 교체하고, 바로 붙여넣을 수 있는 Arduino/ESP 스케치를 이메일로 보낼 수 있습니다."
     },
     "toasts": {
-      "unauthorized": "권한이 없습니다. 다시 로그인해 주세요.",
+      "unauthorized": "권한이 없습니다. 다시 로그인하세요.",
       "loadFailed": "기기를 불러오지 못했습니다",
       "deviceDeleted": "기기가 삭제되었습니다",
-      "deleteFailed": "삭제 실패",
+      "deleteFailed": "삭제에 실패했습니다",
       "deleteFailedPrefix": "삭제 실패",
       "deviceAdded": "기기가 추가되었습니다",
       "deviceUpdated": "기기가 업데이트되었습니다",
-      "addFailed": "추가 실패",
+      "addFailed": "추가에 실패했습니다",
       "addFailedPrefix": "추가 실패",
-      "updateFailed": "업데이트 실패",
+      "updateFailed": "업데이트에 실패했습니다",
       "updateFailedPrefix": "업데이트 실패",
       "setupLoadFailed": "설정을 불러오지 못했습니다",
-      "setupLoadFailedPrefix": "설정을 불러오지 못했습니다",
-      "secretRotated": "비밀 키가 갱신되었습니다",
-      "rotateFailed": "회전 실패",
-      "rotateFailedPrefix": "회전 실패",
-      "exportSent": "측정값 내보내기 요청을 보냈습니다",
-      "failedToSendExport": "측정값 내보내기 전송에 실패했습니다",
+      "setupLoadFailedPrefix": "설정 불러오기 실패",
+      "secretRotated": "비밀 키가 교체되었습니다",
+      "rotateFailed": "교체에 실패했습니다",
+      "rotateFailedPrefix": "교체 실패",
+      "deviceDetailsLoadFailed": "기기 세부정보를 불러오지 못했습니다",
+      "missingDeviceId": "기기 ID가 없습니다",
+      "codeSentByEmail": "코드가 이메일로 전송되었습니다",
+      "sendCodeEmailFailed": "이메일 전송에 실패했습니다",
+      "sendCodeEmailFailedPrefix": "이메일 전송 실패",
+      "pumpStatusLoadFailed": "물 주기 일정을 불러오지 못했습니다",
+      "wateringScheduled": "물 주기가 예약되었습니다",
+      "wateringScheduleFailed": "물 주기 예약에 실패했습니다",
+      "wateringRecalled": "예약된 물 주기가 취소되었습니다",
+      "wateringRecallFailed": "물 주기 취소에 실패했습니다",
+      "autoPumpEnabled": "자동 펌프가 활성화되었습니다",
+      "autoPumpDisabled": "자동 펌프가 비활성화되었습니다",
+      "autoPumpUpdateFailed": "자동 펌프 설정을 업데이트하지 못했습니다",
+      "exportSent": "측정값 내보내기 요청이 전송되었습니다",
+      "failedToSendExport": "측정값 내보내기를 전송하지 못했습니다",
       "exportNotAvailableYet": "내보내기를 아직 사용할 수 없습니다."
     }
   }

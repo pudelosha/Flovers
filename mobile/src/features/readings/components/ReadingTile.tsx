@@ -181,9 +181,13 @@ export default function ReadingTile({
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
-      const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+
+      const txt = t(key, {
+        ...(values || {}),
+        defaultValue: fallback ?? key.split(".").pop() ?? key,
+      });
+
+      return txt || fallback || key.split(".").pop() || key;
     },
     [t, currentLanguage]
   );
@@ -236,6 +240,14 @@ export default function ReadingTile({
 
     return `${tr("readings.tile.lastPumpRunPrefix", "Last pump run")}: ${date} ${time}`;
   }, [effectiveLastPumpLaunchDate, settings, tr]);
+
+  const autoPumpThresholdText = useMemo(() => {
+    return tr(
+      "readings.tile.automaticPumpThreshold",
+      `When soil moisture < ${effectiveSoilMoistureThreshold}%`,
+      { value: effectiveSoilMoistureThreshold }
+    );
+  }, [effectiveSoilMoistureThreshold, tr]);
 
   return (
     <View style={s.cardWrap}>
@@ -375,9 +387,11 @@ export default function ReadingTile({
 
           <View style={pumpStyles.autoPumpContainer}>
             <View style={pumpStyles.autoPumpTextContainer}>
-              <Text style={pumpStyles.autoPumpLabel}>Automatic pump</Text>
+              <Text style={pumpStyles.autoPumpLabel}>
+                {tr("readings.tile.automaticPump", "Automatic pump")}
+              </Text>
               <Text style={pumpStyles.autoPumpSubtext}>
-                When soil moisture &lt; {effectiveSoilMoistureThreshold}%
+                {autoPumpThresholdText}
               </Text>
             </View>
 

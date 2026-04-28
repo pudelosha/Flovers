@@ -1,52 +1,72 @@
 {
   "readings": {
     "header": {
-      "title": "读数"
+      "title": "測定値"
     },
     "defaults": {
-      "thisDevice": "此设备"
+      "thisDevice": "このデバイス"
     },
     "tile": {
-      "lastReadPrefix": "上次读取"
+      "lastReadPrefix": "最終読み取り",
+      "lastPumpRunPrefix": "ポンプの最終稼働",
+      "automaticPump": "自動ポンプ",
+      "automaticPumpThreshold": "土壌水分 < {{value}}% の場合",
+      "opening": "開いています...",
+      "scheduleWatering": "水やりをスケジュール",
+      "unscheduleWatering": "水やりのスケジュールを解除"
     },
     "menu": {
-      "history": "读数历史",
-      "plantDetails": "植物详情",
-      "editDevice": "编辑设备",
-      "deleteDevice": "删除设备"
+      "history": "測定履歴",
+      "plantDetails": "植物の詳細",
+      "editDevice": "デバイスを編集",
+      "deviceDetails": "デバイスの詳細",
+      "deleteDevice": "デバイスを削除"
     },
     "fab": {
-      "linkDevice": "连接设备",
-      "deviceSetup": "设备设置",
-      "sort": "排序",
-      "filter": "筛选",
-      "sendExport": "发送导出",
-      "clearFilter": "清除筛选"
+      "linkDevice": "デバイスをリンク",
+      "deviceSetup": "デバイス設定",
+      "sort": "並べ替え",
+      "filter": "フィルター",
+      "sendExport": "エクスポートを送信",
+      "clearFilter": "フィルターをクリア"
     },
     "empty": {
-      "title": "尚无设备",
-      "description": "设备可用于采集植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 连接设备”操作来添加设备。选择植物，为设备命名，选择传感器，并设置采样间隔。随后您可以打开设备设置以查看您的账户密钥、进行轮换，并通过电子邮件发送可直接粘贴的 Arduino/ESP 示例代码。"
+      "title": "まだデバイスがありません",
+      "description": "デバイスを使うと、植物の温度、湿度、光、土壌水分の測定値を取り込めます。\n\n「+ デバイスをリンク」アクションをタップして追加してください。植物を選択し、デバイスに名前を付け、センサーを選び、サンプリング間隔を設定します。その後、デバイス設定を開いてアカウントシークレットを表示したり、ローテーションしたり、すぐに貼り付けられる Arduino/ESP スケッチをメールで送信したりできます。"
     },
     "toasts": {
-      "unauthorized": "未授权。请重新登录。",
-      "loadFailed": "加载设备失败",
-      "deviceDeleted": "设备已删除",
-      "deleteFailed": "删除失败",
-      "deleteFailedPrefix": "删除失败",
-      "deviceAdded": "设备已添加",
-      "deviceUpdated": "设备已更新",
-      "addFailed": "添加失败",
-      "addFailedPrefix": "添加失败",
-      "updateFailed": "更新失败",
-      "updateFailedPrefix": "更新失败",
-      "setupLoadFailed": "加载设置失败",
-      "setupLoadFailedPrefix": "加载设置失败",
-      "secretRotated": "密钥已轮换",
-      "rotateFailed": "轮换失败",
-      "rotateFailedPrefix": "轮换失败",
-      "exportSent": "读数导出请求已发送",
-      "failedToSendExport": "发送读数导出失败",
-      "exportNotAvailableYet": "导出尚不可用。"
+      "unauthorized": "認証されていません。もう一度ログインしてください。",
+      "loadFailed": "デバイスの読み込みに失敗しました",
+      "deviceDeleted": "デバイスを削除しました",
+      "deleteFailed": "削除に失敗しました",
+      "deleteFailedPrefix": "削除に失敗しました",
+      "deviceAdded": "デバイスを追加しました",
+      "deviceUpdated": "デバイスを更新しました",
+      "addFailed": "追加に失敗しました",
+      "addFailedPrefix": "追加に失敗しました",
+      "updateFailed": "更新に失敗しました",
+      "updateFailedPrefix": "更新に失敗しました",
+      "setupLoadFailed": "設定の読み込みに失敗しました",
+      "setupLoadFailedPrefix": "設定の読み込みに失敗しました",
+      "secretRotated": "シークレットをローテーションしました",
+      "rotateFailed": "ローテーションに失敗しました",
+      "rotateFailedPrefix": "ローテーションに失敗しました",
+      "deviceDetailsLoadFailed": "デバイス詳細の読み込みに失敗しました",
+      "missingDeviceId": "デバイス ID がありません",
+      "codeSentByEmail": "コードをメールに送信しました",
+      "sendCodeEmailFailed": "メール送信に失敗しました",
+      "sendCodeEmailFailedPrefix": "メール送信に失敗しました",
+      "pumpStatusLoadFailed": "水やりスケジュールの読み込みに失敗しました",
+      "wateringScheduled": "水やりをスケジュールしました",
+      "wateringScheduleFailed": "水やりのスケジュールに失敗しました",
+      "wateringRecalled": "スケジュールされた水やりを取り消しました",
+      "wateringRecallFailed": "水やりの取り消しに失敗しました",
+      "autoPumpEnabled": "自動ポンプを有効にしました",
+      "autoPumpDisabled": "自動ポンプを無効にしました",
+      "autoPumpUpdateFailed": "自動ポンプ設定の更新に失敗しました",
+      "exportSent": "測定値のエクスポートリクエストを送信しました",
+      "failedToSendExport": "測定値のエクスポート送信に失敗しました",
+      "exportNotAvailableYet": "エクスポートはまだ利用できません。"
     }
   }
 }

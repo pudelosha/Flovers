@@ -7,12 +7,19 @@
       "thisDevice": "to urządzenie"
     },
     "tile": {
-      "lastReadPrefix": "Ostatni odczyt"
+      "lastReadPrefix": "Ostatni odczyt",
+      "lastPumpRunPrefix": "Ostatnie uruchomienie pompy",
+      "automaticPump": "Pompa automatyczna",
+      "automaticPumpThreshold": "Gdy wilgotność gleby < {{value}}%",
+      "opening": "Otwieranie...",
+      "scheduleWatering": "Zaplanuj podlewanie",
+      "unscheduleWatering": "Anuluj zaplanowane podlewanie"
     },
     "menu": {
       "history": "Historia odczytów",
       "plantDetails": "Szczegóły rośliny",
       "editDevice": "Edytuj urządzenie",
+      "deviceDetails": "Szczegóły urządzenia",
       "deleteDevice": "Usuń urządzenie"
     },
     "fab": {
@@ -24,12 +31,12 @@
       "clearFilter": "Wyczyść filtr"
     },
     "empty": {
-      "title": "Brak urządzeń",
-      "description": "Urządzenia umożliwiają zbieranie odczytów temperatury, wilgotności, światła i wilgotności gleby dla rośliny.\n\nDotknij akcji „+ Połącz urządzenie”, aby dodać nowe. Wybierz roślinę, nazwij urządzenie, wybierz czujniki i ustaw interwał próbkowania. Następnie możesz otworzyć Konfigurację urządzenia, aby zobaczyć sekret konta, zmienić go i wysłać gotowy do wklejenia szkic Arduino/ESP e-mailem."
+      "title": "Nie ma jeszcze urządzeń",
+      "description": "Urządzenia pozwalają zbierać odczyty temperatury, wilgotności, światła i wilgotności gleby dla rośliny.\n\nStuknij akcję „+ Połącz urządzenie”, aby dodać urządzenie. Wybierz roślinę, nazwij urządzenie, wybierz czujniki i ustaw interwał próbkowania. Następnie możesz otworzyć Konfigurację urządzenia, aby zobaczyć sekret konta, odnowić go i wysłać e-mailem gotowy do wklejenia szkic Arduino/ESP."
     },
     "toasts": {
       "unauthorized": "Brak autoryzacji. Zaloguj się ponownie.",
-      "loadFailed": "Nie udało się załadować urządzeń",
+      "loadFailed": "Nie udało się wczytać urządzeń",
       "deviceDeleted": "Urządzenie usunięte",
       "deleteFailed": "Usuwanie nie powiodło się",
       "deleteFailedPrefix": "Usuwanie nie powiodło się",
@@ -39,12 +46,25 @@
       "addFailedPrefix": "Dodawanie nie powiodło się",
       "updateFailed": "Aktualizacja nie powiodła się",
       "updateFailedPrefix": "Aktualizacja nie powiodła się",
-      "setupLoadFailed": "Nie udało się załadować konfiguracji",
-      "setupLoadFailedPrefix": "Nie udało się załadować konfiguracji",
-      "secretRotated": "Sekret zmieniony",
-      "rotateFailed": "Zmiana nie powiodła się",
-      "rotateFailedPrefix": "Zmiana nie powiodła się",
-      "exportSent": "Wysłano żądanie eksportu odczytów",
+      "setupLoadFailed": "Nie udało się wczytać konfiguracji",
+      "setupLoadFailedPrefix": "Nie udało się wczytać konfiguracji",
+      "secretRotated": "Sekret odnowiony",
+      "rotateFailed": "Odnowienie nie powiodło się",
+      "rotateFailedPrefix": "Odnowienie nie powiodło się",
+      "deviceDetailsLoadFailed": "Nie udało się wczytać szczegółów urządzenia",
+      "missingDeviceId": "Brak identyfikatora urządzenia",
+      "codeSentByEmail": "Kod wysłano na Twój e-mail",
+      "sendCodeEmailFailed": "Wysyłanie e-maila nie powiodło się",
+      "sendCodeEmailFailedPrefix": "Wysyłanie e-maila nie powiodło się",
+      "pumpStatusLoadFailed": "Nie udało się wczytać harmonogramu podlewania",
+      "wateringScheduled": "Podlewanie zaplanowane",
+      "wateringScheduleFailed": "Nie udało się zaplanować podlewania",
+      "wateringRecalled": "Zaplanowane podlewanie odwołane",
+      "wateringRecallFailed": "Nie udało się odwołać podlewania",
+      "autoPumpEnabled": "Pompa automatyczna włączona",
+      "autoPumpDisabled": "Pompa automatyczna wyłączona",
+      "autoPumpUpdateFailed": "Nie udało się zaktualizować ustawienia pompy automatycznej",
+      "exportSent": "Żądanie eksportu odczytów wysłane",
       "failedToSendExport": "Nie udało się wysłać eksportu odczytów",
       "exportNotAvailableYet": "Eksport nie jest jeszcze dostępny."
     }

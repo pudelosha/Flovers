@@ -7,12 +7,19 @@
       "thisDevice": "هذا الجهاز"
     },
     "tile": {
-      "lastReadPrefix": "آخر قراءة"
+      "lastReadPrefix": "آخر قراءة",
+      "lastPumpRunPrefix": "آخر تشغيل للمضخة",
+      "automaticPump": "المضخة التلقائية",
+      "automaticPumpThreshold": "عندما تكون رطوبة التربة < {{value}}%",
+      "opening": "جارٍ الفتح...",
+      "scheduleWatering": "جدولة الري",
+      "unscheduleWatering": "إلغاء جدولة الري"
     },
     "menu": {
       "history": "سجل القراءات",
       "plantDetails": "تفاصيل النبات",
       "editDevice": "تعديل الجهاز",
+      "deviceDetails": "تفاصيل الجهاز",
       "deleteDevice": "حذف الجهاز"
     },
     "fab": {
@@ -25,18 +32,18 @@
     },
     "empty": {
       "title": "لا توجد أجهزة بعد",
-      "description": "تتيح لك الأجهزة جمع قراءات درجة الحرارة والرطوبة والضوء ورطوبة التربة لنبات.\n\nاضغط على إجراء “+ ربط جهاز” لإضافة واحد. اختر نباتًا، واسمِ الجهاز، وحدد المستشعرات، واضبط فترة أخذ العينات. يمكنك بعد ذلك فتح إعداد الجهاز لعرض سر حسابك، وتدويره، وإرسال بريد إلكتروني يحتوي على كود Arduino/ESP جاهز للنسخ واللصق."
+      "description": "تتيح لك الأجهزة إدخال قراءات درجة الحرارة والرطوبة والضوء ورطوبة التربة لنبات.\n\nاضغط على إجراء “+ ربط جهاز” لإضافة جهاز. اختر نباتًا، وسمِّ الجهاز، واختر المستشعرات، واضبط فاصل أخذ العينات. يمكنك بعد ذلك فتح إعداد الجهاز لعرض سر حسابك، وتدويره، وإرسال مخطط Arduino/ESP جاهز للصق عبر البريد الإلكتروني."
     },
     "toasts": {
-      "unauthorized": "غير مصرح. يرجى تسجيل الدخول مرة أخرى.",
+      "unauthorized": "غير مصرح. يُرجى تسجيل الدخول مرة أخرى.",
       "loadFailed": "فشل تحميل الأجهزة",
       "deviceDeleted": "تم حذف الجهاز",
       "deleteFailed": "فشل الحذف",
       "deleteFailedPrefix": "فشل الحذف",
       "deviceAdded": "تمت إضافة الجهاز",
       "deviceUpdated": "تم تحديث الجهاز",
-      "addFailed": "فشل الإضافة",
-      "addFailedPrefix": "فشل الإضافة",
+      "addFailed": "فشلت الإضافة",
+      "addFailedPrefix": "فشلت الإضافة",
       "updateFailed": "فشل التحديث",
       "updateFailedPrefix": "فشل التحديث",
       "setupLoadFailed": "فشل تحميل الإعداد",
@@ -44,6 +51,19 @@
       "secretRotated": "تم تدوير السر",
       "rotateFailed": "فشل التدوير",
       "rotateFailedPrefix": "فشل التدوير",
+      "deviceDetailsLoadFailed": "فشل تحميل تفاصيل الجهاز",
+      "missingDeviceId": "معرّف الجهاز مفقود",
+      "codeSentByEmail": "تم إرسال الرمز إلى بريدك الإلكتروني",
+      "sendCodeEmailFailed": "فشل إرسال البريد الإلكتروني",
+      "sendCodeEmailFailedPrefix": "فشل إرسال البريد الإلكتروني",
+      "pumpStatusLoadFailed": "فشل تحميل جدول الري",
+      "wateringScheduled": "تمت جدولة الري",
+      "wateringScheduleFailed": "فشلت جدولة الري",
+      "wateringRecalled": "تم استدعاء الري المجدول",
+      "wateringRecallFailed": "فشل استدعاء الري",
+      "autoPumpEnabled": "تم تمكين المضخة التلقائية",
+      "autoPumpDisabled": "تم تعطيل المضخة التلقائية",
+      "autoPumpUpdateFailed": "فشل تحديث إعداد المضخة التلقائية",
       "exportSent": "تم إرسال طلب تصدير القراءات",
       "failedToSendExport": "فشل إرسال تصدير القراءات",
       "exportNotAvailableYet": "التصدير غير متاح بعد."

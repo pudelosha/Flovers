@@ -7,16 +7,23 @@
       "thisDevice": "此设备"
     },
     "tile": {
-      "lastReadPrefix": "上次读取"
+      "lastReadPrefix": "上次读取",
+      "lastPumpRunPrefix": "上次水泵运行",
+      "automaticPump": "自动水泵",
+      "automaticPumpThreshold": "当土壤湿度 < {{value}}%",
+      "opening": "正在打开...",
+      "scheduleWatering": "安排浇水",
+      "unscheduleWatering": "取消安排浇水"
     },
     "menu": {
       "history": "读数历史",
       "plantDetails": "植物详情",
       "editDevice": "编辑设备",
+      "deviceDetails": "设备详情",
       "deleteDevice": "删除设备"
     },
     "fab": {
-      "linkDevice": "连接设备",
+      "linkDevice": "关联设备",
       "deviceSetup": "设备设置",
       "sort": "排序",
       "filter": "筛选",
@@ -25,7 +32,7 @@
     },
     "empty": {
       "title": "尚无设备",
-      "description": "设备可用于采集植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 连接设备”操作来添加设备。选择植物，为设备命名，选择传感器，并设置采样间隔。随后您可以打开设备设置以查看您的账户密钥、进行轮换，并通过电子邮件发送可直接粘贴的 Arduino/ESP 示例代码。"
+      "description": "设备可让你采集某株植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 关联设备”操作来添加一个设备。选择一株植物，为设备命名，选择传感器，并设置采样间隔。之后你可以打开设备设置来查看你的账户密钥、轮换密钥，并通过电子邮件发送可直接粘贴的 Arduino/ESP 草图代码。"
     },
     "toasts": {
       "unauthorized": "未授权。请重新登录。",
@@ -44,6 +51,19 @@
       "secretRotated": "密钥已轮换",
       "rotateFailed": "轮换失败",
       "rotateFailedPrefix": "轮换失败",
+      "deviceDetailsLoadFailed": "加载设备详情失败",
+      "missingDeviceId": "缺少设备 ID",
+      "codeSentByEmail": "代码已发送到你的邮箱",
+      "sendCodeEmailFailed": "发送邮件失败",
+      "sendCodeEmailFailedPrefix": "发送邮件失败",
+      "pumpStatusLoadFailed": "加载浇水计划失败",
+      "wateringScheduled": "浇水已安排",
+      "wateringScheduleFailed": "安排浇水失败",
+      "wateringRecalled": "已取消安排的浇水",
+      "wateringRecallFailed": "取消浇水失败",
+      "autoPumpEnabled": "自动水泵已启用",
+      "autoPumpDisabled": "自动水泵已禁用",
+      "autoPumpUpdateFailed": "更新自动水泵设置失败",
       "exportSent": "读数导出请求已发送",
       "failedToSendExport": "发送读数导出失败",
       "exportNotAvailableYet": "导出尚不可用。"

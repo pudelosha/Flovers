@@ -7,13 +7,20 @@
       "thisDevice": "यह डिवाइस"
     },
     "tile": {
-      "lastReadPrefix": "अंतिम पढ़ाई"
+      "lastReadPrefix": "अंतिम रीडिंग",
+      "lastPumpRunPrefix": "अंतिम पंप रन",
+      "automaticPump": "स्वचालित पंप",
+      "automaticPumpThreshold": "जब मिट्टी की नमी < {{value}}%",
+      "opening": "खुल रहा है...",
+      "scheduleWatering": "पानी देने का समय निर्धारित करें",
+      "unscheduleWatering": "पानी देने का समय रद्द करें"
     },
     "menu": {
       "history": "रीडिंग्स इतिहास",
       "plantDetails": "पौधे का विवरण",
       "editDevice": "डिवाइस संपादित करें",
-      "deleteDevice": "डिवाइस हटाएँ"
+      "deviceDetails": "डिवाइस विवरण",
+      "deleteDevice": "डिवाइस हटाएं"
     },
     "fab": {
       "linkDevice": "डिवाइस लिंक करें",
@@ -25,25 +32,38 @@
     },
     "empty": {
       "title": "अभी तक कोई डिवाइस नहीं",
-      "description": "डिवाइस आपको एक पौधे के लिए तापमान, आर्द्रता, प्रकाश और मिट्टी की नमी की रीडिंग्स एकत्र करने की सुविधा देते हैं.\n\nएक जोड़ने के लिए “+ डिवाइस लिंक करें” क्रिया पर टैप करें. एक पौधा चुनें, डिवाइस का नाम रखें, सेंसर चुनें, और सैंपलिंग अंतराल सेट करें. इसके बाद आप डिवाइस सेटअप खोलकर अपना खाता सीक्रेट देख सकते हैं, उसे रोटेट कर सकते हैं, और एक तैयार-टू-पेस्ट Arduino/ESP स्केच ईमेल कर सकते हैं."
+      "description": "डिवाइस आपको किसी पौधे के लिए तापमान, आर्द्रता, प्रकाश और मिट्टी की नमी की रीडिंग प्राप्त करने देते हैं.\n\nएक जोड़ने के लिए “+ डिवाइस लिंक करें” क्रिया पर टैप करें. कोई पौधा चुनें, डिवाइस का नाम रखें, सेंसर चुनें, और सैंपलिंग अंतराल सेट करें. फिर आप अपना खाता सीक्रेट देखने, उसे रोटेट करने, और पेस्ट करने के लिए तैयार Arduino/ESP स्केच ईमेल करने हेतु डिवाइस सेटअप खोल सकते हैं."
     },
     "toasts": {
       "unauthorized": "अनधिकृत. कृपया फिर से लॉग इन करें.",
       "loadFailed": "डिवाइस लोड करने में विफल",
-      "deviceDeleted": "डिवाइस हटाया गया",
-      "deleteFailed": "हटाना विफल",
-      "deleteFailedPrefix": "हटाना विफल",
+      "deviceDeleted": "डिवाइस हटा दिया गया",
+      "deleteFailed": "हटाना विफल रहा",
+      "deleteFailedPrefix": "हटाना विफल रहा",
       "deviceAdded": "डिवाइस जोड़ा गया",
       "deviceUpdated": "डिवाइस अपडेट किया गया",
-      "addFailed": "जोड़ना विफल",
-      "addFailedPrefix": "जोड़ना विफल",
-      "updateFailed": "अपडेट विफल",
-      "updateFailedPrefix": "अपडेट विफल",
+      "addFailed": "जोड़ना विफल रहा",
+      "addFailedPrefix": "जोड़ना विफल रहा",
+      "updateFailed": "अपडेट विफल रहा",
+      "updateFailedPrefix": "अपडेट विफल रहा",
       "setupLoadFailed": "सेटअप लोड करने में विफल",
       "setupLoadFailedPrefix": "सेटअप लोड करने में विफल",
       "secretRotated": "सीक्रेट रोटेट किया गया",
-      "rotateFailed": "रोटेट विफल",
-      "rotateFailedPrefix": "रोटेट विफल",
+      "rotateFailed": "रोटेट करना विफल रहा",
+      "rotateFailedPrefix": "रोटेट करना विफल रहा",
+      "deviceDetailsLoadFailed": "डिवाइस विवरण लोड करने में विफल",
+      "missingDeviceId": "डिवाइस ID गायब है",
+      "codeSentByEmail": "कोड आपके ईमेल पर भेज दिया गया",
+      "sendCodeEmailFailed": "ईमेल भेजना विफल रहा",
+      "sendCodeEmailFailedPrefix": "ईमेल भेजना विफल रहा",
+      "pumpStatusLoadFailed": "पानी देने का शेड्यूल लोड करने में विफल",
+      "wateringScheduled": "पानी देना शेड्यूल किया गया",
+      "wateringScheduleFailed": "पानी देना शेड्यूल करने में विफल",
+      "wateringRecalled": "शेड्यूल किया गया पानी देना वापस लिया गया",
+      "wateringRecallFailed": "पानी देना वापस लेने में विफल",
+      "autoPumpEnabled": "स्वचालित पंप सक्षम किया गया",
+      "autoPumpDisabled": "स्वचालित पंप अक्षम किया गया",
+      "autoPumpUpdateFailed": "स्वचालित पंप सेटिंग अपडेट करने में विफल",
       "exportSent": "रीडिंग्स निर्यात अनुरोध भेजा गया",
       "failedToSendExport": "रीडिंग्स निर्यात भेजने में विफल",
       "exportNotAvailableYet": "निर्यात अभी उपलब्ध नहीं है."

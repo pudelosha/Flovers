@@ -7,12 +7,19 @@
       "thisDevice": "este dispositivo"
     },
     "tile": {
-      "lastReadPrefix": "Última leitura"
+      "lastReadPrefix": "Última leitura",
+      "lastPumpRunPrefix": "Última execução da bomba",
+      "automaticPump": "Bomba automática",
+      "automaticPumpThreshold": "Quando a umidade do solo < {{value}}%",
+      "opening": "Abrindo...",
+      "scheduleWatering": "Agendar rega",
+      "unscheduleWatering": "Cancelar rega agendada"
     },
     "menu": {
       "history": "Histórico de leituras",
       "plantDetails": "Detalhes da planta",
       "editDevice": "Editar dispositivo",
+      "deviceDetails": "Detalhes do dispositivo",
       "deleteDevice": "Excluir dispositivo"
     },
     "fab": {
@@ -24,11 +31,11 @@
       "clearFilter": "Limpar filtro"
     },
     "empty": {
-      "title": "Nenhum dispositivo ainda",
-      "description": "Os dispositivos permitem coletar leituras de temperatura, umidade, luz e umidade do solo para uma planta.\n\nToque na ação “+ Vincular dispositivo” para adicionar um. Escolha uma planta, nomeie o dispositivo, selecione os sensores e defina um intervalo de amostragem. Em seguida, você pode abrir Configuração do dispositivo para ver o segredo da sua conta, rotacioná-lo e enviar por e-mail um sketch Arduino/ESP pronto para colar."
+      "title": "Ainda não há dispositivos",
+      "description": "Os dispositivos permitem coletar leituras de temperatura, umidade, luz e umidade do solo para uma planta.\n\nToque na ação “+ Vincular dispositivo” para adicionar um. Escolha uma planta, nomeie o dispositivo, escolha os sensores e defina um intervalo de amostragem. Em seguida, você pode abrir a Configuração do dispositivo para ver o segredo da sua conta, alterá-lo e enviar por e-mail um sketch Arduino/ESP pronto para colar."
     },
     "toasts": {
-      "unauthorized": "Não autorizado. Por favor, faça login novamente.",
+      "unauthorized": "Não autorizado. Faça login novamente.",
       "loadFailed": "Falha ao carregar dispositivos",
       "deviceDeleted": "Dispositivo excluído",
       "deleteFailed": "Falha ao excluir",
@@ -39,11 +46,24 @@
       "addFailedPrefix": "Falha ao adicionar",
       "updateFailed": "Falha ao atualizar",
       "updateFailedPrefix": "Falha ao atualizar",
-      "setupLoadFailed": "Falha ao carregar a configuração",
-      "setupLoadFailedPrefix": "Falha ao carregar a configuração",
-      "secretRotated": "Segredo rotacionado",
-      "rotateFailed": "Falha ao rotacionar",
-      "rotateFailedPrefix": "Falha ao rotacionar",
+      "setupLoadFailed": "Falha ao carregar configuração",
+      "setupLoadFailedPrefix": "Falha ao carregar configuração",
+      "secretRotated": "Segredo alterado",
+      "rotateFailed": "Falha ao alterar",
+      "rotateFailedPrefix": "Falha ao alterar",
+      "deviceDetailsLoadFailed": "Falha ao carregar detalhes do dispositivo",
+      "missingDeviceId": "ID do dispositivo ausente",
+      "codeSentByEmail": "Código enviado para seu e-mail",
+      "sendCodeEmailFailed": "Falha ao enviar e-mail",
+      "sendCodeEmailFailedPrefix": "Falha ao enviar e-mail",
+      "pumpStatusLoadFailed": "Falha ao carregar agenda de rega",
+      "wateringScheduled": "Rega agendada",
+      "wateringScheduleFailed": "Falha ao agendar rega",
+      "wateringRecalled": "Rega agendada cancelada",
+      "wateringRecallFailed": "Falha ao cancelar rega",
+      "autoPumpEnabled": "Bomba automática ativada",
+      "autoPumpDisabled": "Bomba automática desativada",
+      "autoPumpUpdateFailed": "Falha ao atualizar a configuração da bomba automática",
       "exportSent": "Solicitação de exportação de leituras enviada",
       "failedToSendExport": "Falha ao enviar exportação de leituras",
       "exportNotAvailableYet": "A exportação ainda não está disponível."
