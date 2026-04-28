@@ -12,9 +12,7 @@ from selenium import webdriver
 from selenium.common.exceptions import (
     ElementClickInterceptedException,
     JavascriptException,
-    NoSuchElementException,
     StaleElementReferenceException,
-    TimeoutException,
 )
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -233,7 +231,7 @@ def send_message(driver: webdriver.Chrome, text: str) -> bool:
 
 
 def load_prompt_file() -> dict:
-    return json.loads(config.PROMPT_FILE.read_text(encoding="utf-8"))
+    return json.loads(config.PROMPT_FILE.read_text(encoding="utf-8-sig"))
 
 
 def parse_args() -> argparse.Namespace:
@@ -271,14 +269,14 @@ def validate_input_file(path_str: str) -> Path:
 
 
 def read_json_file(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def is_valid_json_file(path: Path) -> bool:
     try:
         if not path.exists() or path.stat().st_size == 0:
             return False
-        json.loads(path.read_text(encoding="utf-8"))
+        json.loads(path.read_text(encoding="utf-8-sig"))
         return True
     except Exception:
         return False
@@ -332,14 +330,6 @@ def get_last_assistant_message(driver: webdriver.Chrome) -> Optional[WebElement]
         return msgs[-1]
     except Exception:
         return None
-
-
-def get_assistant_messages_after_index(driver: webdriver.Chrome, prev_count: int) -> list[WebElement]:
-    try:
-        msgs = driver.find_elements(By.CSS_SELECTOR, "div[data-message-author-role='assistant']")
-        return msgs[prev_count:]
-    except Exception:
-        return []
 
 
 def normalize_text(text: str) -> str:
@@ -448,34 +438,6 @@ def wait_for_new_assistant_message(
         current = count_assistant_messages(driver)
         if current > prev_assistant_count:
             return True
-        time.sleep(poll_s)
-
-    return False
-
-
-def wait_for_response_finish(
-    driver: webdriver.Chrome,
-    prev_assistant_count: int,
-    timeout_s: int,
-    poll_s: float = 0.8,
-) -> bool:
-    deadline = time.time() + timeout_s
-    saw_new = False
-    stable_loops = 0
-
-    while time.time() < deadline:
-        current = count_assistant_messages(driver)
-        if current > prev_assistant_count:
-            saw_new = True
-
-        if saw_new:
-            if is_generation_in_progress(driver):
-                stable_loops = 0
-            else:
-                stable_loops += 1
-                if stable_loops >= 2:
-                    return True
-
         time.sleep(poll_s)
 
     return False

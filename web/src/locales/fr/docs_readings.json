@@ -1,86 +1,200 @@
 {
   "docs_readings": {
-    "title": "Lectures",
+    "title": "Relevés",
     "sections": [
       {
-        "heading": "Objectif de cette vue",
+        "heading": "Objectif de cet écran",
         "body": [
-          "La vue Lectures permet de parcourir et de gérer les appareils IoT associés aux plantes.",
-          "Chaque appareil peut envoyer à Flovers des mesures telles que la température de l'air, l'humidité de l'air, le niveau de lumière et l'humidité du sol.",
-          "Cette fonctionnalité est destinée aux utilisateurs qui construisent leurs propres appareils (par exemple, à base d'Arduino ou d'ESP) pour surveiller les conditions des plantes."
+          "L’écran Relevés vous permet de consulter et de gérer les appareils IoT liés à vos plantes.",
+          "Chaque appareil peut envoyer à Flovers des mesures environnementales telles que la température de l’air, l’humidité de l’air, le niveau de lumière et l’humidité du sol.",
+          "Cette fonctionnalité est conçue pour les utilisateurs qui construisent ou utilisent leurs propres appareils, par exemple des cartes Arduino ou basées sur ESP, et souhaitent surveiller les conditions des plantes au fil du temps.",
+          "Les appareils peuvent également être configurés avec une pompe à eau pour un arrosage manuel programmé et un arrosage automatique basé sur l’humidité du sol."
         ]
       },
       {
-        "heading": "Tuiles des appareils et dernières lectures",
+        "heading": "Tuiles des appareils et derniers relevés",
         "body": [
-          "L'écran affiche une liste de tuiles, où chaque tuile représente un appareil associé.",
-          "Chaque tuile affiche le nom de la plante, l'emplacement et les dernières lectures des capteurs.",
-          "Si les données n'ont pas encore été reçues, des symboles de remplacement sont affichés à la place des valeurs."
+          "L’écran affiche une liste de tuiles, où chaque tuile représente un appareil lié.",
+          "Chaque tuile affiche le nom de l’appareil ou de la plante, l’emplacement et les derniers relevés reçus de l’appareil.",
+          "Selon les capteurs activés pour l’appareil, la tuile peut afficher la température de l’air, l’humidité de l’air, le niveau de lumière et l’humidité du sol.",
+          "Si aucune donnée n’a encore été reçue, des espaces réservés sont affichés à la place des valeurs.",
+          "Si l’appareil est configuré avec une pompe à eau, la tuile affiche également les commandes et informations liées à la pompe, y compris la dernière heure de fonctionnement de la pompe."
         ]
       },
       {
-        "heading": "Interactions avec la tuile",
+        "heading": "Section pompe à eau sur les tuiles des appareils",
         "body": [
-          "Un clic sur la zone de la tuile redirige l'utilisateur directement vers la vue Historique des lectures de l'appareil concerné.",
-          "Un clic sur l'icône d'un paramètre spécifique (par exemple, humidité ou température) ouvre l'Historique des lectures avec ce paramètre sélectionné.",
-          "Cela permet un accès rapide aux graphiques détaillés."
+          "Lorsqu’un appareil dispose de la prise en charge de la pompe à eau activée, sa tuile affiche des commandes supplémentaires pour la pompe.",
+          "La tuile peut indiquer si l’arrosage automatique par pompe est activé, le seuil d’humidité du sol utilisé pour l’arrosage automatique, le dernier fonctionnement de pompe enregistré et un bouton pour l’arrosage manuel programmé.",
+          "Le bouton d’arrosage manuel change d’état selon qu’une demande d’arrosage en attente existe déjà ou non.",
+          "Si aucune demande d’arrosage manuel n’est en attente, le bouton affiche Programmer l’arrosage.",
+          "Si une demande d’arrosage manuel est déjà en attente, le bouton affiche Annuler la programmation de l’arrosage.",
+          "Cela rend visible directement depuis la tuile si un arrosage a déjà été demandé pour cet appareil."
         ]
       },
       {
-        "heading": "Actions de l'appareil (menu à trois points)",
+        "heading": "Interactions avec les tuiles",
         "body": [
-          "Chaque tuile d'appareil possède un menu à trois points avec des actions supplémentaires.",
-          "Les options disponibles sont : Historique des lectures, Détails de la plante, Modifier l'appareil et Supprimer l'appareil.",
-          "La suppression d'un appareil est permanente et supprime son association avec la plante."
+          "Appuyer sur le corps de la tuile permet d’accéder directement à l’écran Historique des relevés pour cet appareil.",
+          "Appuyer sur une icône de relevé spécifique, par exemple la température, l’humidité, la lumière ou l’humidité du sol, ouvre l’écran Historique des relevés avec cette mesure présélectionnée.",
+          "Cela permet un accès rapide aux graphiques détaillés pour un type de relevé spécifique."
         ]
       },
       {
-        "heading": "Historique des lectures",
+        "heading": "Actions de l’appareil",
         "body": [
-          "La vue Historique des lectures présente des graphiques détaillés des données mesurées.",
-          "Les données peuvent être affichées sous forme journalière, hebdomadaire ou mensuelle.",
-          "Les graphiques sont disponibles pour la température de l'air, l'humidité de l'air, le niveau de lumière et l'humidité du sol (en fonction de l'appareil)."
+          "Chaque tuile d’appareil comprend un menu à 3 points avec des actions supplémentaires.",
+          "Les options disponibles incluent Historique des relevés, Détails de la plante, Détails de l’appareil, Modifier l’appareil et Supprimer l’appareil.",
+          "L’action Détails de l’appareil ouvre une fenêtre modale contenant les informations de configuration de l’appareil sélectionné, y compris les identifiants générés, les capteurs activés, la configuration de la pompe et le secret du compte utilisé par l’appareil.",
+          "La suppression d’un appareil le supprime définitivement ainsi que son association avec la plante."
         ]
       },
       {
-        "heading": "Menu FAB",
+        "heading": "Historique des relevés",
         "body": [
-          "Le bouton FAB propose des actions liées à la gestion des appareils.",
-          "Les options disponibles sont : Connecter un appareil, Configuration de l'appareil, Trier et Filtrer.",
-          "Le tri peut se faire par nom de la plante, emplacement ou date de la dernière lecture.",
-          "Le filtrage inclut le nom de la plante, l'emplacement et le statut de l'appareil (actif, inactif)."
+          "L’écran Historique des relevés affiche des graphiques détaillés pour les données de capteurs collectées.",
+          "Les données peuvent être consultées avec une agrégation quotidienne, hebdomadaire et mensuelle.",
+          "Des graphiques sont disponibles pour la température de l’air, l’humidité de l’air, le niveau de lumière et l’humidité du sol.",
+          "Seules les données fournies par l’appareil peuvent être affichées.",
+          "Le backend stocke les relevés dans des compartiments horaires. Si l’appareil envoie plusieurs relevés pour la même heure, l’enregistrement horaire existant est mis à jour plutôt que dupliqué."
         ]
       },
       {
-        "heading": "Connexion de l'appareil",
+        "heading": "Actions du FAB",
         "body": [
-          "L'option Connecter un appareil permet d'ajouter un nouvel appareil de mesure et de l'associer à une plante.",
-          "Lors de la configuration, les paramètres affichés sur la tuile ainsi que les alertes optionnelles (par exemple, faible niveau d'humidité du sol) sont sélectionnés.",
-          "Chaque appareil reçoit un identifiant unique et une clé secrète."
+          "Le bouton d’action flottant fournit des actions liées à la gestion et à la configuration des appareils.",
+          "Les actions disponibles incluent Lier un appareil, Configuration de l’appareil, Trier, Filtrer, Envoyer l’export et Effacer le filtre lorsque des filtres sont actifs.",
+          "Le tri peut être appliqué par nom de plante, emplacement ou heure du dernier relevé.",
+          "Le filtrage peut être appliqué par plante, emplacement et statut de l’appareil, par exemple activé ou désactivé.",
+          "L’action Envoyer l’export envoie par e-mail une exportation des relevés sous forme de feuille de calcul. L’export inclut les enregistrements de relevés et les enregistrements de tâches d’arrosage. Si des filtres sont appliqués, les données exportées reflètent ces filtres."
         ]
       },
       {
-        "heading": "Autorisation de l'appareil et flux de données",
+        "heading": "Lier un appareil",
         "body": [
-          "Les appareils s'autorisent à l'aide de leur identifiant et de leur clé secrète.",
-          "L'autorisation de l'utilisateur n'est pas requise pour l'enregistrement des lectures — l'accès est uniquement contrôlé par les données de l'appareil.",
-          "Cette approche simplifie l'intégration et la communication IoT."
+          "Lier un appareil sert à configurer un nouvel appareil de relevé et à l’associer à une plante.",
+          "Pendant la configuration, vous pouvez configurer le nom de l’appareil, la plante liée, l’état activé ou désactivé, l’intervalle de relevé, les capteurs activés, les alertes de faible humidité du sol, les notifications par e-mail et push pour faible humidité du sol, la prise en charge de la pompe à eau, le lancement automatique de la pompe, le seuil d’humidité du sol pour l’arrosage automatique, ainsi que les notifications par e-mail et push après la fin de l’arrosage.",
+          "Chaque appareil reçoit une Device Key générée. Le compte utilisateur possède également une Auth Secret Key. Ensemble, ces identifiants permettent à l’appareil physique de communiquer avec le backend."
         ]
       },
       {
-        "heading": "Configuration de l'appareil et documentation",
+        "heading": "Authentification de l’appareil et flux de données",
         "body": [
-          "L'option Configuration de l'appareil fournit des instructions techniques pour l'intégration du matériel.",
-          "Elle contient des informations sur les points de terminaison API (POST pour l'envoi des lectures, GET pour leur récupération), des exemples de charges utiles et des paramètres.",
-          "L'utilisateur peut télécharger la documentation complète, y compris le code exemple, les schémas de connexion (Fritzing) et les capteurs recommandés."
+          "Les appareils s’authentifient à l’aide de l’Auth Secret Key, de la Device Key et de l’ID d’appareil facultatif.",
+          "Aucun jeton de connexion utilisateur n’est requis pour les points de terminaison d’ingestion des appareils. L’autorisation est gérée au moyen des identifiants de l’appareil.",
+          "Cela permet des intégrations IoT simples où la carte peut envoyer des données directement à Flovers.",
+          "Le code Arduino ou ESP généré contient les points de terminaison et les identifiants requis pour l’appareil sélectionné. Avant de téléverser le code, l’utilisateur doit renseigner son propre SSID WiFi et son mot de passe."
         ]
       },
       {
-        "heading": "Informations importantes",
+        "heading": "Configuration de l’appareil",
         "body": [
-          "La stabilité de l'appareil, l'étalonnage des capteurs et l'installation physique sont de la responsabilité de l'utilisateur.",
-          "Les lectures des capteurs sont informatives et doivent être interprétées en combinaison avec l'observation des plantes.",
-          "Flovers ne garantit pas l'exactitude des données provenant des appareils externes ou faits maison."
+          "L’option Configuration de l’appareil fournit des informations techniques pour configurer le matériel.",
+          "Elle inclut le point de terminaison d’ingestion pour l’envoi des relevés, le point de terminaison de flux pour récupérer les derniers relevés, des exemples de charges utiles, l’Auth Secret Key du compte et l’option de rotation de l’Auth Secret Key.",
+          "La rotation de l’Auth Secret Key invalide l’ancien secret ; tout code d’appareil existant utilisant l’ancien secret doit donc être mis à jour."
+        ]
+      },
+      {
+        "heading": "Détails de l’appareil",
+        "body": [
+          "La fenêtre modale Détails de l’appareil affiche les informations d’un appareil spécifique.",
+          "Elle inclut le nom de l’appareil, la Device Key, l’Auth Secret Key, la plante liée, les capteurs activés et indique si une pompe à eau est liée.",
+          "La fenêtre modale permet également à l’utilisateur d’envoyer par e-mail le code Arduino généré pour l’appareil sélectionné. L’e-mail inclut le code généré dans le corps du message et sous forme de pièce jointe .ino.",
+          "Le code généré est basé sur la configuration de l’appareil sélectionné, y compris les capteurs activés, la prise en charge de la pompe, les paramètres d’arrosage automatique, la Device Key, l’ID d’appareil et l’Auth Secret Key."
+        ]
+      },
+      {
+        "heading": "Arrosage manuel programmé",
+        "body": [
+          "Si un appareil dispose de la prise en charge de la pompe à eau activée, l’utilisateur peut programmer une demande d’arrosage manuel.",
+          "L’arrosage manuel ne lance pas immédiatement la pompe depuis l’application mobile. Au lieu de cela, le backend crée une tâche de pompe en attente pour l’appareil.",
+          "La carte physique vérifie auprès du backend s’il existe des tâches d’arrosage manuel en attente. Si une tâche en attente existe et que la carte dispose d’une logique de contrôle de la pompe, elle peut lancer la pompe puis signaler la fin de l’opération au backend.",
+          "L’arrosage manuel programmé ignore la valeur actuelle d’humidité du sol, le seuil d’arrosage automatique et le délai de récupération de l’arrosage automatique.",
+          "Cela signifie que l’arrosage manuel est traité comme une demande explicite de l’utilisateur.",
+          "Une demande d’arrosage manuel programmée peut également être rappelée avant que l’appareil ne la récupère."
+        ]
+      },
+      {
+        "heading": "Timing des tâches d’arrosage manuel",
+        "body": [
+          "Le code d’appareil généré utilise des temporisations distinctes pour les relevés et les vérifications de l’arrosage manuel.",
+          "Par défaut, les relevés des capteurs sont envoyés une fois par heure.",
+          "Les vérifications de l’arrosage automatique ont lieu dans le cadre du cycle de relevé horaire.",
+          "Les tâches d’arrosage manuel en attente sont vérifiées plus fréquemment, par défaut une fois par minute.",
+          "Cela permet aux demandes d’arrosage manuel d’être récupérées plus rapidement sans envoyer de relevés de capteurs toutes les minutes.",
+          "L’ordre d’exécution reste le suivant : envoyer les relevés pendant le cycle de relevé normal, vérifier les arrosages manuels en attente et, si aucun arrosage manuel n’a été exécuté, vérifier les conditions d’arrosage automatique.",
+          "Lorsque la vérification d’arrosage manuel d’une minute s’exécute en dehors du cycle de relevé horaire, elle vérifie uniquement les tâches d’arrosage manuel en attente."
+        ]
+      },
+      {
+        "heading": "Arrosage automatique",
+        "body": [
+          "Si la prise en charge de la pompe à eau est activée, l’arrosage automatique peut également être activé.",
+          "L’arrosage automatique utilise les relevés d’humidité du sol et un seuil configuré.",
+          "La carte demande au backend la configuration actuelle de la pompe, y compris si l’arrosage automatique est activé et quel seuil doit être utilisé.",
+          "Si l’arrosage automatique est activé et que l’humidité actuelle du sol est inférieure au seuil configuré, la carte peut lancer la pompe.",
+          "L’arrosage automatique dépend de l’activation de la prise en charge de la pompe à eau, de l’activation du capteur d’humidité du sol, de l’activation du lancement automatique de la pompe, d’un seuil d’humidité du sol valide, de l’appareil actif et de la confirmation par le backend des paramètres actuels de la pompe.",
+          "L’arrosage automatique dispose d’un délai de récupération afin d’éviter une activation répétée de la pompe trop fréquente.",
+          "L’arrosage manuel est prioritaire sur l’arrosage automatique dans le même cycle. Si l’arrosage manuel s’exécute, l’arrosage automatique est ignoré pour ce cycle."
+        ]
+      },
+      {
+        "heading": "Rapport de fin de fonctionnement de la pompe",
+        "body": [
+          "Après un fonctionnement de la pompe, l’appareil signale la fin de l’opération au backend.",
+          "La fin de fonctionnement de la pompe peut être signalée pour un arrosage manuel programmé ou un arrosage automatique déclenché par l’humidité du sol.",
+          "Lorsqu’un fonctionnement de pompe est enregistré avec succès, le backend met à jour l’heure du dernier fonctionnement de la pompe, la source du dernier fonctionnement de la pompe et le statut de la tâche de pompe associée, le cas échéant.",
+          "Si les notifications de fin d’arrosage sont activées, le backend peut envoyer des notifications par e-mail et push après la fin de l’arrosage."
+        ]
+      },
+      {
+        "heading": "Notifications d’arrosage",
+        "body": [
+          "Les appareils peuvent être configurés pour envoyer des notifications après la fin de l’arrosage.",
+          "Les types de notifications pris en charge sont la notification par e-mail et la notification push.",
+          "Celles-ci sont distinctes des alertes de faible humidité du sol.",
+          "Les notifications d’arrosage ne sont pertinentes que lorsque l’appareil dispose de la prise en charge de la pompe à eau activée.",
+          "Une notification d’arrosage peut être envoyée après la fin d’un arrosage manuel ou automatique, selon le rapport de fin de fonctionnement de la pompe reçu de l’appareil."
+        ]
+      },
+      {
+        "heading": "Alertes de faible humidité du sol",
+        "body": [
+          "Les appareils dotés d’un capteur d’humidité du sol peuvent être configurés pour envoyer des alertes lorsque l’humidité du sol passe sous un seuil configuré.",
+          "Les alertes de faible humidité du sol prennent en charge les notifications par e-mail et les notifications push.",
+          "Le backend suit l’état de l’alerte afin que l’utilisateur ne soit pas notifié à plusieurs reprises à chaque relevé tant que la plante reste sous le seuil.",
+          "Une nouvelle alerte est envoyée lorsque la valeur d’humidité passe dans l’état de faible humidité. L’état de l’alerte est réinitialisé lorsque l’humidité remonte au-dessus du seuil.",
+          "Les alertes de faible humidité du sol sont indépendantes des notifications de fin d’arrosage."
+        ]
+      },
+      {
+        "heading": "Exportation des données",
+        "body": [
+          "L’exportation des relevés envoie une feuille de calcul à l’utilisateur par e-mail.",
+          "La feuille de calcul inclut les données de relevés et les enregistrements de tâches d’arrosage.",
+          "L’onglet des relevés inclut les relevés de capteurs tels que la température, l’humidité, la lumière et l’humidité du sol.",
+          "L’onglet des tâches d’arrosage inclut les enregistrements de tâches de pompe tels que la source manuelle ou automatique, le statut, l’heure de demande, l’heure de livraison, l’heure d’exécution, l’heure d’annulation, l’humidité au moment de la demande, le seuil au moment de la demande et le message d’erreur.",
+          "Si des filtres sont appliqués dans l’écran Relevés, l’exportation respecte ces filtres. Par exemple, si l’exportation est limitée à une plante particulière ou à une portée d’appareils particulière, les enregistrements de tâches d’arrosage sont également limités aux appareils correspondants."
+        ]
+      },
+      {
+        "heading": "Code Arduino ou ESP généré",
+        "body": [
+          "Le code généré est destiné à servir de point de départ prêt à modifier pour les cartes de type ESP32.",
+          "Il inclut la logique de connexion WiFi, de synchronisation de l’heure, d’initialisation des capteurs, de lecture des capteurs activés, d’envoi des relevés au backend, de vérification des tâches d’arrosage manuel, de vérification des paramètres d’arrosage automatique contrôlés par le backend, de lancement d’une pompe lorsque nécessaire et de rapport de fin de fonctionnement de la pompe.",
+          "Le code généré garde séparés le téléversement des relevés et les vérifications des tâches d’arrosage manuel.",
+          "Par défaut, les relevés sont envoyés toutes les heures, tandis que les tâches d’arrosage manuel sont vérifiées une fois par minute.",
+          "Les utilisateurs doivent examiner et ajuster le code généré pour leur propre matériel, leurs broches, leurs valeurs d’étalonnage, le câblage du relais de pompe et le type de carte."
+        ]
+      },
+      {
+        "heading": "Notes importantes",
+        "body": [
+          "La stabilité de l’appareil, l’étalonnage, le câblage physique et l’installation relèvent de la responsabilité de l’utilisateur.",
+          "Les relevés de capteurs sont fournis à titre informatif et doivent être interprétés avec une observation du monde réel.",
+          "Le contrôle d’une pompe à eau nécessite une attention particulière. Les utilisateurs doivent s’assurer que leur relais, pompe, alimentation électrique, tuyauterie et source d’eau sont installés en toute sécurité.",
+          "Flovers enregistre et affiche les données des appareils, mais ne garantit pas l’exactitude des capteurs tiers ou fabriqués par l’utilisateur.",
+          "Flovers ne garantit pas non plus qu’une pompe physique fonctionnera correctement. L’exécution de la pompe dépend du matériel de l’utilisateur, du code généré, de la connectivité WiFi et de la configuration correcte de l’appareil."
         ]
       }
     ]

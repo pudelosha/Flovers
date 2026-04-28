@@ -7,30 +7,45 @@
         "body": [
           "The Readings screen allows you to view and manage IoT devices linked to your plants.",
           "Each device can send environmental measurements such as air temperature, air humidity, light level, and soil moisture to Flovers.",
-          "This feature is designed for users who build or use their own devices (for example based on Arduino or ESP boards) and want to monitor plant conditions over time."
+          "This feature is designed for users who build or use their own devices, for example Arduino or ESP-based boards, and want to monitor plant conditions over time.",
+          "Devices may also be configured with a water pump for manual scheduled watering and automatic soil-moisture-based watering."
         ]
       },
       {
         "heading": "Device tiles and latest readings",
         "body": [
           "The screen displays a list of tiles, where each tile represents one linked device.",
-          "Each tile shows the plant name, location, and the latest readings received from the device.",
-          "If no data has been received yet, placeholders are shown instead of values."
+          "Each tile shows the device or plant name, location, and the latest readings received from the device.",
+          "Depending on the sensors enabled for the device, the tile can show air temperature, air humidity, light level, and soil moisture.",
+          "If no data has been received yet, placeholders are shown instead of values.",
+          "If the device is configured with a water pump, the tile also shows pump-related controls and information, including the latest pump run time."
+        ]
+      },
+      {
+        "heading": "Water pump section on device tiles",
+        "body": [
+          "When a device has water pump support enabled, its tile displays additional pump controls.",
+          "The tile can show whether automatic pump watering is enabled, the soil moisture threshold used for automatic watering, the last recorded pump run, and a button for manual scheduled watering.",
+          "The manual watering button changes state depending on whether a pending watering request already exists.",
+          "If no manual watering request is pending, the button shows Schedule watering.",
+          "If a manual watering request is already pending, the button shows Unschedule watering.",
+          "This makes it visible directly from the tile whether watering has already been requested for that device."
         ]
       },
       {
         "heading": "Tile interactions",
         "body": [
           "Tapping the tile body navigates directly to the Readings History screen for that device.",
-          "Tapping a specific reading icon (for example humidity or temperature) opens the Readings History screen with that parameter preselected.",
-          "This allows quick access to detailed charts for a specific measurement."
+          "Tapping a specific reading icon, for example temperature, humidity, light, or soil moisture, opens the Readings History screen with that measurement preselected.",
+          "This allows quick access to detailed charts for a specific reading type."
         ]
       },
       {
-        "heading": "Device actions (3-dot menu)",
+        "heading": "Device actions",
         "body": [
           "Each device tile includes a 3-dot menu with additional actions.",
-          "Available options are: Readings history, Plant details, Edit device, and Delete device.",
+          "Available options include Readings history, Plant details, Device details, Edit device, and Delete device.",
+          "The Device details action opens a modal with setup information for the selected device, including generated identifiers, enabled sensors, pump configuration, and the account secret used by the device.",
           "Deleting a device permanently removes it and its association with the plant."
         ]
       },
@@ -38,49 +53,148 @@
         "heading": "Readings History",
         "body": [
           "The Readings History screen displays detailed charts for collected sensor data.",
-          "Data can be viewed with daily, weekly, and monthly aggregation.",
-          "Charts are available for air temperature, air humidity, light level, and soil moisture (depending on what the device provides)."
+          "Data can be viewed using daily, weekly, and monthly aggregation.",
+          "Charts are available for air temperature, air humidity, light level, and soil moisture.",
+          "Only data provided by the device can be displayed.",
+          "The backend stores readings in hourly buckets. If the device sends multiple readings for the same hour, the existing hourly record is updated rather than duplicated."
         ]
       },
       {
         "heading": "FAB actions",
         "body": [
-          "The Floating Action Button (FAB) provides actions related to device management and configuration.",
-          "Available actions include: Link device, Device setup, Sort, and Filter.",
+          "The Floating Action Button provides actions related to device management and configuration.",
+          "Available actions include Link device, Device setup, Sort, Filter, Send export, and Clear filter when filters are active.",
           "Sorting can be applied by plant name, location, or last read time.",
-          "Filtering can be applied by plant name, location, and device status (enabled or disabled)."
+          "Filtering can be applied by plant, location, and device status, such as enabled or disabled.",
+          "The Send export action emails a spreadsheet export of readings. The export includes reading records and watering task records. If filters are applied, the exported data reflects those filters."
         ]
       },
       {
         "heading": "Linking a device",
         "body": [
           "Link device is used to set up a new reading device and associate it with a plant.",
-          "During setup, you select which readings should be displayed on the tile and optionally configure alerts (for example for low soil moisture).",
-          "Each device is assigned a unique Device ID and a secret Device Key used for authorization."
+          "During setup, you can configure the device name, linked plant, enabled or disabled state, reading interval, enabled sensors, low soil moisture alerts, email and push notifications for low soil moisture, water pump support, automatic pump launch, automatic watering soil moisture threshold, and email and push notifications after watering completes.",
+          "Each device receives a generated Device Key. The user account also has an Auth Secret Key. Together, these credentials allow the physical device to communicate with the backend."
         ]
       },
       {
         "heading": "Device authentication and data flow",
         "body": [
-          "Devices authenticate using a Device ID and secret Device Key when sending readings to the backend.",
-          "No user authentication is required for inserting readings — authorization is handled entirely by the device credentials.",
-          "This design allows simple and lightweight IoT integrations."
+          "Devices authenticate using the Auth Secret Key, Device Key, and optional Device ID.",
+          "No user login token is required for device ingestion endpoints. Authorization is handled through the device credentials.",
+          "This allows simple IoT integrations where the board can send data directly to Flovers.",
+          "The generated Arduino or ESP code contains the required endpoints and credentials for the selected device. Before uploading the code, the user must fill in their own WiFi SSID and password."
         ]
       },
       {
-        "heading": "Device setup and documentation",
+        "heading": "Device setup",
         "body": [
-          "The Device setup option provides technical guidance for configuring your hardware.",
-          "It includes API endpoints (POST for sending readings, GET for retrieving data), example payloads, and configuration details.",
-          "Users can download full documentation, including sample code, wiring diagrams, suggested sensors, and setup instructions for supported boards."
+          "The Device setup option provides technical information for configuring hardware.",
+          "It includes the ingest endpoint for sending readings, the feed endpoint for retrieving latest readings, example payloads, the account Auth Secret Key, and the option to rotate the Auth Secret Key.",
+          "Rotating the Auth Secret Key invalidates the old secret, so any existing device code using the previous secret must be updated."
+        ]
+      },
+      {
+        "heading": "Device details",
+        "body": [
+          "The Device details modal shows information for a specific device.",
+          "It includes the device name, Device Key, Auth Secret Key, linked plant, enabled sensors, and whether a water pump is linked.",
+          "The modal also allows the user to email generated Arduino code for the selected device. The email includes the generated code in the email body and as an .ino attachment.",
+          "The generated code is based on the selected device configuration, including enabled sensors, pump support, automatic watering settings, Device Key, Device ID, and Auth Secret Key."
+        ]
+      },
+      {
+        "heading": "Manual scheduled watering",
+        "body": [
+          "If a device has water pump support enabled, the user can schedule a manual watering request.",
+          "Manual watering does not immediately run the pump from the mobile app. Instead, the backend creates a pending pump task for the device.",
+          "The physical board checks the backend for pending manual watering tasks. If a pending task exists and the board has pump-control logic, it can run the pump and then report completion back to the backend.",
+          "Manual scheduled watering ignores the current soil moisture value, automatic watering threshold, and automatic watering cooldown.",
+          "This means manual watering is treated as an explicit user request.",
+          "A scheduled manual watering request can also be recalled before the device picks it up."
+        ]
+      },
+      {
+        "heading": "Manual watering task timing",
+        "body": [
+          "The generated device code uses separate timing for readings and manual watering checks.",
+          "By default, sensor readings are sent once per hour.",
+          "Automatic watering checks happen as part of the hourly reading cycle.",
+          "Pending manual watering tasks are checked more frequently, by default once per minute.",
+          "This allows manual watering requests to be picked up faster without sending sensor readings every minute.",
+          "The execution order remains: send readings during the normal reading cycle, check for pending manual watering, and if no manual watering ran, check automatic watering conditions.",
+          "When the one-minute manual watering check runs outside the hourly reading cycle, it checks only for pending manual watering tasks."
+        ]
+      },
+      {
+        "heading": "Automatic watering",
+        "body": [
+          "If water pump support is enabled, automatic watering can also be enabled.",
+          "Automatic watering uses soil moisture readings and a configured threshold.",
+          "The board asks the backend for the current pump configuration, including whether automatic watering is enabled and what threshold should be used.",
+          "If automatic watering is enabled and the current soil moisture is below the configured threshold, the board can run the pump.",
+          "Automatic watering depends on water pump support being enabled, the soil moisture sensor being enabled, automatic pump launch being enabled, a valid soil moisture threshold, the device being active, and backend confirmation of the current pump settings.",
+          "Automatic watering has a cooldown to avoid repeated pump activation too frequently.",
+          "Manual watering has priority over automatic watering in the same cycle. If manual watering runs, automatic watering is skipped for that cycle."
+        ]
+      },
+      {
+        "heading": "Pump completion reporting",
+        "body": [
+          "After a pump run, the device reports completion back to the backend.",
+          "Pump completion may be reported for manual scheduled watering or automatic watering triggered by soil moisture.",
+          "When a pump run is successfully recorded, the backend updates the last pump run time, the last pump run source, and the related pump task status where applicable.",
+          "If watering completion notifications are enabled, the backend can send email and push notifications after watering completes."
+        ]
+      },
+      {
+        "heading": "Watering notifications",
+        "body": [
+          "Devices can be configured to send notifications after watering completes.",
+          "Supported notification types are email notification and push notification.",
+          "These are separate from low soil moisture alerts.",
+          "Watering notifications are only relevant when the device has water pump support enabled.",
+          "A watering notification can be sent after either manual or automatic watering completes, depending on the pump completion report received from the device."
+        ]
+      },
+      {
+        "heading": "Low soil moisture alerts",
+        "body": [
+          "Devices with a soil moisture sensor can be configured to send alerts when soil moisture falls below a configured threshold.",
+          "Low soil moisture alerts support email notifications and push notifications.",
+          "The backend tracks alert state so the user is not repeatedly notified on every reading while the plant remains below the threshold.",
+          "A new alert is sent when the moisture value crosses into the low-moisture state. The alert state resets after moisture rises back above the threshold.",
+          "Low soil moisture alerts are independent from watering-completion notifications."
+        ]
+      },
+      {
+        "heading": "Data export",
+        "body": [
+          "The Readings export sends a spreadsheet to the user by email.",
+          "The spreadsheet includes readings data and watering task records.",
+          "The readings tab includes sensor readings such as temperature, humidity, light, and soil moisture.",
+          "The watering tasks tab includes pump task records such as manual or automatic source, status, requested time, delivered time, executed time, cancelled time, moisture at request, threshold at request, and error message.",
+          "If filters are applied in the Readings screen, the export respects those filters. For example, if the export is limited to a particular plant or device scope, the watering task records are limited to the matching devices as well."
+        ]
+      },
+      {
+        "heading": "Generated Arduino or ESP code",
+        "body": [
+          "The generated code is intended as a ready-to-edit starting point for ESP32-style boards.",
+          "It includes logic for WiFi connection, time synchronization, sensor initialization, reading enabled sensors, sending readings to the backend, checking for manual watering tasks, checking backend-controlled automatic watering settings, running a pump when required, and reporting pump completion.",
+          "The generated code keeps reading upload and manual watering task checks separate.",
+          "By default, readings are sent hourly, while manual watering tasks are checked once per minute.",
+          "Users must review and adjust the generated code for their own hardware, pins, calibration values, pump relay wiring, and board type."
         ]
       },
       {
         "heading": "Important notes",
         "body": [
-          "Device stability, calibration, and physical installation are the responsibility of the user.",
-          "Sensor readings are informative and should be interpreted together with real-world observation.",
-          "Flovers does not guarantee accuracy of third-party or self-built devices."
+          "Device stability, calibration, physical wiring, and installation are the responsibility of the user.",
+          "Sensor readings are informational and should be interpreted together with real-world observation.",
+          "Water pump control requires extra care. Users should ensure their relay, pump, power supply, tubing, and water source are installed safely.",
+          "Flovers records and displays device data, but it does not guarantee the accuracy of third-party or self-built sensors.",
+          "Flovers also does not guarantee that a physical pump will run successfully. Pump execution depends on the user’s hardware, generated code, WiFi connectivity, and correct device configuration."
         ]
       }
     ]

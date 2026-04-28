@@ -3,84 +3,198 @@
     "title": "Letture",
     "sections": [
       {
-        "heading": "Obiettivo di questa vista",
+        "heading": "Scopo di questa schermata",
         "body": [
-          "La vista Letture consente di visualizzare e gestire i dispositivi IoT associati alle piante.",
-          "Ogni dispositivo può inviare a Flovers misurazioni come temperatura dell’aria, umidità dell’aria, livello di luce e umidità del suolo.",
-          "Questa funzionalità è pensata per utenti che costruiscono i propri dispositivi (ad es. basati su Arduino o ESP) per monitorare le condizioni delle piante."
+          "La schermata Letture consente di visualizzare e gestire i dispositivi IoT collegati alle tue piante.",
+          "Ogni dispositivo può inviare a Flovers misurazioni ambientali come temperatura dell’aria, umidità dell’aria, livello di luce e umidità del terreno.",
+          "Questa funzionalità è pensata per gli utenti che costruiscono o utilizzano i propri dispositivi, ad esempio schede Arduino o basate su ESP, e desiderano monitorare le condizioni delle piante nel tempo.",
+          "I dispositivi possono anche essere configurati con una pompa dell’acqua per l’irrigazione manuale programmata e l’irrigazione automatica basata sull’umidità del terreno."
         ]
       },
       {
         "heading": "Riquadri dei dispositivi e ultime letture",
         "body": [
-          "Nella schermata viene visualizzato un elenco di riquadri, in cui ciascun riquadro rappresenta un dispositivo associato.",
-          "Ogni riquadro mostra il nome della pianta, la posizione e le letture più recenti dei sensori.",
-          "Se i dati non sono ancora stati ricevuti, al posto dei valori vengono visualizzati segnaposto."
+          "La schermata mostra un elenco di riquadri, in cui ogni riquadro rappresenta un dispositivo collegato.",
+          "Ogni riquadro mostra il nome del dispositivo o della pianta, la posizione e le ultime letture ricevute dal dispositivo.",
+          "A seconda dei sensori abilitati per il dispositivo, il riquadro può mostrare temperatura dell’aria, umidità dell’aria, livello di luce e umidità del terreno.",
+          "Se non sono ancora stati ricevuti dati, vengono mostrati dei segnaposto al posto dei valori.",
+          "Se il dispositivo è configurato con una pompa dell’acqua, il riquadro mostra anche controlli e informazioni relativi alla pompa, incluso l’ultimo orario di esecuzione della pompa."
         ]
       },
       {
-        "heading": "Interazioni con il riquadro",
+        "heading": "Sezione della pompa dell’acqua nei riquadri dei dispositivi",
         "body": [
-          "Facendo clic sull’area del riquadro, l’utente viene portato direttamente alla vista Storico delle letture per il dispositivo selezionato.",
-          "Facendo clic sull’icona di un parametro specifico (ad es. umidità o temperatura) si apre lo Storico delle letture con quel parametro selezionato.",
-          "Questo consente un accesso rapido a grafici dettagliati."
+          "Quando un dispositivo ha il supporto per la pompa dell’acqua abilitato, il suo riquadro mostra controlli aggiuntivi per la pompa.",
+          "Il riquadro può mostrare se l’irrigazione automatica con pompa è abilitata, la soglia di umidità del terreno usata per l’irrigazione automatica, l’ultima esecuzione della pompa registrata e un pulsante per l’irrigazione manuale programmata.",
+          "Il pulsante di irrigazione manuale cambia stato a seconda che esista già una richiesta di irrigazione in sospeso.",
+          "Se non è presente alcuna richiesta di irrigazione manuale in sospeso, il pulsante mostra Programma irrigazione.",
+          "Se una richiesta di irrigazione manuale è già in sospeso, il pulsante mostra Annulla programmazione irrigazione.",
+          "Questo rende visibile direttamente dal riquadro se l’irrigazione è già stata richiesta per quel dispositivo."
         ]
       },
       {
-        "heading": "Azioni del dispositivo (menu a 3 puntini)",
+        "heading": "Interazioni con i riquadri",
         "body": [
-          "Ogni riquadro del dispositivo dispone di un menu a 3 puntini con azioni aggiuntive.",
-          "Le opzioni disponibili sono: Storico delle letture, Dettagli della pianta, Modifica dispositivo ed Elimina dispositivo.",
-          "L’eliminazione del dispositivo è permanente e rimuove la sua associazione con la pianta."
+          "Toccando il corpo del riquadro si passa direttamente alla schermata Cronologia letture per quel dispositivo.",
+          "Toccando un’icona di lettura specifica, ad esempio temperatura, umidità, luce o umidità del terreno, si apre la schermata Cronologia letture con quella misurazione preselezionata.",
+          "Questo consente un accesso rapido ai grafici dettagliati per un tipo di lettura specifico."
         ]
       },
       {
-        "heading": "Storico delle letture",
+        "heading": "Azioni del dispositivo",
         "body": [
-          "La vista Storico delle letture presenta grafici dettagliati dei dati di misurazione raccolti.",
-          "I dati possono essere visualizzati su base giornaliera, settimanale e mensile.",
-          "I grafici sono disponibili per la temperatura dell’aria, l’umidità dell’aria, il livello di luce e l’umidità del suolo (a seconda del dispositivo)."
+          "Ogni riquadro dispositivo include un menu a 3 punti con azioni aggiuntive.",
+          "Le opzioni disponibili includono Cronologia letture, Dettagli pianta, Dettagli dispositivo, Modifica dispositivo ed Elimina dispositivo.",
+          "L’azione Dettagli dispositivo apre una finestra modale con informazioni di configurazione per il dispositivo selezionato, inclusi identificatori generati, sensori abilitati, configurazione della pompa e il segreto dell’account usato dal dispositivo.",
+          "L’eliminazione di un dispositivo lo rimuove definitivamente insieme alla sua associazione con la pianta."
         ]
       },
       {
-        "heading": "Menu FAB",
+        "heading": "Cronologia letture",
         "body": [
-          "Il pulsante FAB offre azioni relative alla gestione dei dispositivi.",
-          "Le opzioni disponibili sono: Collega dispositivo, Configurazione dispositivo, Ordina e Filtra.",
-          "L’ordinamento può avvenire per nome della pianta, posizione o ora dell’ultima lettura.",
-          "Il filtraggio include il nome della pianta, la posizione e lo stato del dispositivo (attivo, inattivo)."
+          "La schermata Cronologia letture mostra grafici dettagliati per i dati dei sensori raccolti.",
+          "I dati possono essere visualizzati usando l’aggregazione giornaliera, settimanale e mensile.",
+          "Sono disponibili grafici per temperatura dell’aria, umidità dell’aria, livello di luce e umidità del terreno.",
+          "Possono essere visualizzati solo i dati forniti dal dispositivo.",
+          "Il backend archivia le letture in intervalli orari. Se il dispositivo invia più letture per la stessa ora, il record orario esistente viene aggiornato anziché duplicato."
         ]
       },
       {
-        "heading": "Collegamento del dispositivo",
+        "heading": "Azioni FAB",
         "body": [
-          "L’opzione Collega dispositivo serve per aggiungere un nuovo dispositivo di misurazione e associarlo a una pianta.",
-          "Durante la configurazione vengono selezionati i parametri visualizzati sul riquadro e gli avvisi opzionali (ad es. basso livello di umidità del suolo).",
-          "Ogni dispositivo riceve un identificatore univoco del dispositivo e una chiave segreta del dispositivo."
+          "Il Floating Action Button fornisce azioni relative alla gestione e alla configurazione dei dispositivi.",
+          "Le azioni disponibili includono Collega dispositivo, Configurazione dispositivo, Ordina, Filtra, Invia esportazione e Cancella filtro quando i filtri sono attivi.",
+          "L’ordinamento può essere applicato per nome della pianta, posizione o orario dell’ultima lettura.",
+          "Il filtro può essere applicato per pianta, posizione e stato del dispositivo, ad esempio abilitato o disabilitato.",
+          "L’azione Invia esportazione invia via email un’esportazione delle letture in formato foglio di calcolo. L’esportazione include i record delle letture e i record delle attività di irrigazione. Se sono applicati dei filtri, i dati esportati riflettono tali filtri."
         ]
       },
       {
-        "heading": "Autorizzazione del dispositivo e flusso dei dati",
+        "heading": "Collegare un dispositivo",
         "body": [
-          "I dispositivi si autorizzano utilizzando l’identificatore del dispositivo e la chiave segreta.",
-          "Per la registrazione delle letture non è richiesta l’autorizzazione dell’utente: l’accesso è controllato esclusivamente dai dati del dispositivo.",
-          "Questo approccio semplifica l’integrazione e la comunicazione IoT."
+          "Collega dispositivo viene usato per configurare un nuovo dispositivo di lettura e associarlo a una pianta.",
+          "Durante la configurazione, puoi configurare il nome del dispositivo, la pianta collegata, lo stato abilitato o disabilitato, l’intervallo di lettura, i sensori abilitati, gli avvisi di bassa umidità del terreno, le notifiche email e push per bassa umidità del terreno, il supporto per la pompa dell’acqua, l’avvio automatico della pompa, la soglia di umidità del terreno per l’irrigazione automatica e le notifiche email e push al completamento dell’irrigazione.",
+          "Ogni dispositivo riceve una Device Key generata. Anche l’account utente dispone di una Auth Secret Key. Insieme, queste credenziali consentono al dispositivo fisico di comunicare con il backend."
         ]
       },
       {
-        "heading": "Configurazione del dispositivo e documentazione",
+        "heading": "Autenticazione del dispositivo e flusso dei dati",
         "body": [
-          "L’opzione Configurazione dispositivo fornisce istruzioni tecniche per l’integrazione dell’hardware.",
-          "Include informazioni sugli endpoint API (POST per l’invio delle letture, GET per il loro recupero), payload di esempio e impostazioni.",
-          "L’utente può scaricare la documentazione completa, inclusi codice di esempio, schemi di collegamento (Fritzing) e sensori consigliati."
+          "I dispositivi si autenticano usando la Auth Secret Key, la Device Key e l’eventuale Device ID.",
+          "Non è richiesto alcun token di accesso utente per gli endpoint di ingestione dei dispositivi. L’autorizzazione viene gestita tramite le credenziali del dispositivo.",
+          "Questo consente integrazioni IoT semplici in cui la scheda può inviare dati direttamente a Flovers.",
+          "Il codice Arduino o ESP generato contiene gli endpoint e le credenziali richiesti per il dispositivo selezionato. Prima di caricare il codice, l’utente deve inserire il proprio SSID WiFi e la propria password."
         ]
       },
       {
-        "heading": "Informazioni importanti",
+        "heading": "Configurazione dispositivo",
         "body": [
-          "La stabilità del dispositivo, la calibrazione dei sensori e il montaggio fisico sono responsabilità dell’utente.",
-          "Le letture dei sensori hanno carattere informativo e dovrebbero essere interpretate insieme all’osservazione delle piante.",
-          "Flovers non garantisce l’accuratezza dei dati provenienti da dispositivi esterni o autocostruiti."
+          "L’opzione Configurazione dispositivo fornisce informazioni tecniche per configurare l’hardware.",
+          "Include l’endpoint di ingestione per inviare letture, l’endpoint feed per recuperare le letture più recenti, payload di esempio, la Auth Secret Key dell’account e l’opzione per ruotare la Auth Secret Key.",
+          "La rotazione della Auth Secret Key invalida il vecchio segreto, quindi qualsiasi codice dispositivo esistente che usa il segreto precedente deve essere aggiornato."
+        ]
+      },
+      {
+        "heading": "Dettagli dispositivo",
+        "body": [
+          "La finestra modale Dettagli dispositivo mostra informazioni per un dispositivo specifico.",
+          "Include il nome del dispositivo, la Device Key, la Auth Secret Key, la pianta collegata, i sensori abilitati e se è collegata una pompa dell’acqua.",
+          "La finestra modale consente inoltre all’utente di inviare via email il codice Arduino generato per il dispositivo selezionato. L’email include il codice generato nel corpo dell’email e come allegato .ino.",
+          "Il codice generato si basa sulla configurazione del dispositivo selezionato, inclusi sensori abilitati, supporto pompa, impostazioni di irrigazione automatica, Device Key, Device ID e Auth Secret Key."
+        ]
+      },
+      {
+        "heading": "Irrigazione manuale programmata",
+        "body": [
+          "Se un dispositivo ha il supporto per la pompa dell’acqua abilitato, l’utente può programmare una richiesta di irrigazione manuale.",
+          "L’irrigazione manuale non avvia immediatamente la pompa dall’app mobile. Invece, il backend crea un’attività pompa in sospeso per il dispositivo.",
+          "La scheda fisica controlla il backend per verificare la presenza di attività di irrigazione manuale in sospeso. Se esiste un’attività in sospeso e la scheda dispone di logica di controllo della pompa, può avviare la pompa e poi segnalare il completamento al backend.",
+          "L’irrigazione manuale programmata ignora il valore corrente di umidità del terreno, la soglia di irrigazione automatica e il tempo di attesa dell’irrigazione automatica.",
+          "Ciò significa che l’irrigazione manuale viene trattata come una richiesta esplicita dell’utente.",
+          "Una richiesta di irrigazione manuale programmata può anche essere richiamata prima che il dispositivo la prelevi."
+        ]
+      },
+      {
+        "heading": "Tempistiche delle attività di irrigazione manuale",
+        "body": [
+          "Il codice dispositivo generato usa tempistiche separate per le letture e i controlli dell’irrigazione manuale.",
+          "Per impostazione predefinita, le letture dei sensori vengono inviate una volta all’ora.",
+          "I controlli dell’irrigazione automatica avvengono come parte del ciclo di lettura orario.",
+          "Le attività di irrigazione manuale in sospeso vengono controllate più frequentemente, per impostazione predefinita una volta al minuto.",
+          "Questo consente alle richieste di irrigazione manuale di essere prelevate più rapidamente senza inviare letture dei sensori ogni minuto.",
+          "L’ordine di esecuzione rimane: inviare le letture durante il normale ciclo di lettura, controllare l’irrigazione manuale in sospeso e, se non è stata eseguita alcuna irrigazione manuale, controllare le condizioni di irrigazione automatica.",
+          "Quando il controllo dell’irrigazione manuale di un minuto viene eseguito al di fuori del ciclo di lettura orario, controlla solo la presenza di attività di irrigazione manuale in sospeso."
+        ]
+      },
+      {
+        "heading": "Irrigazione automatica",
+        "body": [
+          "Se il supporto per la pompa dell’acqua è abilitato, può essere abilitata anche l’irrigazione automatica.",
+          "L’irrigazione automatica usa le letture dell’umidità del terreno e una soglia configurata.",
+          "La scheda chiede al backend la configurazione corrente della pompa, incluso se l’irrigazione automatica è abilitata e quale soglia deve essere usata.",
+          "Se l’irrigazione automatica è abilitata e l’umidità corrente del terreno è inferiore alla soglia configurata, la scheda può avviare la pompa.",
+          "L’irrigazione automatica dipende dall’abilitazione del supporto per la pompa dell’acqua, dall’abilitazione del sensore di umidità del terreno, dall’abilitazione dell’avvio automatico della pompa, da una soglia di umidità del terreno valida, dall’attivazione del dispositivo e dalla conferma del backend delle impostazioni correnti della pompa.",
+          "L’irrigazione automatica ha un tempo di attesa per evitare attivazioni ripetute della pompa troppo frequenti.",
+          "L’irrigazione manuale ha priorità sull’irrigazione automatica nello stesso ciclo. Se viene eseguita l’irrigazione manuale, l’irrigazione automatica viene saltata per quel ciclo."
+        ]
+      },
+      {
+        "heading": "Segnalazione del completamento della pompa",
+        "body": [
+          "Dopo l’esecuzione della pompa, il dispositivo segnala il completamento al backend.",
+          "Il completamento della pompa può essere segnalato per irrigazione manuale programmata o irrigazione automatica attivata dall’umidità del terreno.",
+          "Quando l’esecuzione di una pompa viene registrata correttamente, il backend aggiorna l’ultimo orario di esecuzione della pompa, l’ultima origine di esecuzione della pompa e lo stato dell’attività pompa correlata, ove applicabile.",
+          "Se le notifiche di completamento dell’irrigazione sono abilitate, il backend può inviare notifiche email e push dopo il completamento dell’irrigazione."
+        ]
+      },
+      {
+        "heading": "Notifiche di irrigazione",
+        "body": [
+          "I dispositivi possono essere configurati per inviare notifiche al completamento dell’irrigazione.",
+          "I tipi di notifica supportati sono notifica email e notifica push.",
+          "Queste sono separate dagli avvisi di bassa umidità del terreno.",
+          "Le notifiche di irrigazione sono rilevanti solo quando il dispositivo ha il supporto per la pompa dell’acqua abilitato.",
+          "Una notifica di irrigazione può essere inviata dopo il completamento dell’irrigazione manuale o automatica, a seconda del report di completamento della pompa ricevuto dal dispositivo."
+        ]
+      },
+      {
+        "heading": "Avvisi di bassa umidità del terreno",
+        "body": [
+          "I dispositivi con un sensore di umidità del terreno possono essere configurati per inviare avvisi quando l’umidità del terreno scende al di sotto di una soglia configurata.",
+          "Gli avvisi di bassa umidità del terreno supportano notifiche email e notifiche push.",
+          "Il backend tiene traccia dello stato degli avvisi affinché l’utente non venga notificato ripetutamente a ogni lettura mentre la pianta rimane sotto la soglia.",
+          "Un nuovo avviso viene inviato quando il valore di umidità entra nello stato di bassa umidità. Lo stato dell’avviso si reimposta dopo che l’umidità risale sopra la soglia.",
+          "Gli avvisi di bassa umidità del terreno sono indipendenti dalle notifiche di completamento dell’irrigazione."
+        ]
+      },
+      {
+        "heading": "Esportazione dati",
+        "body": [
+          "L’esportazione delle Letture invia all’utente un foglio di calcolo via email.",
+          "Il foglio di calcolo include i dati delle letture e i record delle attività di irrigazione.",
+          "La scheda delle letture include letture dei sensori come temperatura, umidità, luce e umidità del terreno.",
+          "La scheda delle attività di irrigazione include record delle attività pompa come origine manuale o automatica, stato, orario della richiesta, orario di consegna, orario di esecuzione, orario di annullamento, umidità al momento della richiesta, soglia al momento della richiesta e messaggio di errore.",
+          "Se nella schermata Letture sono applicati filtri, l’esportazione rispetta tali filtri. Ad esempio, se l’esportazione è limitata a una particolare pianta o ambito di dispositivo, anche i record delle attività di irrigazione sono limitati ai dispositivi corrispondenti."
+        ]
+      },
+      {
+        "heading": "Codice Arduino o ESP generato",
+        "body": [
+          "Il codice generato è pensato come punto di partenza pronto da modificare per schede in stile ESP32.",
+          "Include logica per la connessione WiFi, la sincronizzazione dell’orario, l’inizializzazione dei sensori, la lettura dei sensori abilitati, l’invio delle letture al backend, il controllo delle attività di irrigazione manuale, il controllo delle impostazioni di irrigazione automatica gestite dal backend, l’avvio di una pompa quando richiesto e la segnalazione del completamento della pompa.",
+          "Il codice generato mantiene separati il caricamento delle letture e i controlli delle attività di irrigazione manuale.",
+          "Per impostazione predefinita, le letture vengono inviate ogni ora, mentre le attività di irrigazione manuale vengono controllate una volta al minuto.",
+          "Gli utenti devono rivedere e adattare il codice generato al proprio hardware, pin, valori di calibrazione, cablaggio del relè della pompa e tipo di scheda."
+        ]
+      },
+      {
+        "heading": "Note importanti",
+        "body": [
+          "La stabilità del dispositivo, la calibrazione, il cablaggio fisico e l’installazione sono responsabilità dell’utente.",
+          "Le letture dei sensori sono informative e devono essere interpretate insieme all’osservazione del mondo reale.",
+          "Il controllo della pompa dell’acqua richiede particolare attenzione. Gli utenti devono assicurarsi che relè, pompa, alimentatore, tubi e fonte d’acqua siano installati in modo sicuro.",
+          "Flovers registra e mostra i dati del dispositivo, ma non garantisce l’accuratezza di sensori di terze parti o autocostruiti.",
+          "Flovers inoltre non garantisce che una pompa fisica venga eseguita correttamente. L’esecuzione della pompa dipende dall’hardware dell’utente, dal codice generato, dalla connettività WiFi e dalla corretta configurazione del dispositivo."
         ]
       }
     ]

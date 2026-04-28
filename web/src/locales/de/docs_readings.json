@@ -1,86 +1,200 @@
 {
   "docs_readings": {
-    "title": "Ablesungen",
+    "title": "Messwerte",
     "sections": [
       {
-        "heading": "Zweck dieser Ansicht",
+        "heading": "Zweck dieses Bildschirms",
         "body": [
-          "Die Ansicht Ablesungen ermöglicht das Durchsuchen und Verwalten von IoT-Geräten, die mit Pflanzen verbunden sind.",
-          "Jedes Gerät kann Messwerte wie Lufttemperatur, Luftfeuchtigkeit, Lichtniveau und Bodenfeuchtigkeit an Flovers übertragen.",
-          "Diese Funktion ist für Benutzer gedacht, die ihre eigenen Geräte (z. B. auf Basis von Arduino oder ESP) zur Überwachung der Pflanzenbedingungen bauen."
+          "Der Bildschirm „Messwerte“ ermöglicht es dir, IoT-Geräte anzuzeigen und zu verwalten, die mit deinen Pflanzen verknüpft sind.",
+          "Jedes Gerät kann Umweltmesswerte wie Lufttemperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchtigkeit an Flovers senden.",
+          "Diese Funktion ist für Nutzer gedacht, die ihre eigenen Geräte bauen oder verwenden, zum Beispiel Arduino- oder ESP-basierte Boards, und die Pflanzenbedingungen über längere Zeit überwachen möchten.",
+          "Geräte können außerdem mit einer Wasserpumpe für manuell geplantes Gießen und automatisches Gießen basierend auf der Bodenfeuchtigkeit konfiguriert werden."
         ]
       },
       {
-        "heading": "Gerätetiles und letzte Ablesungen",
+        "heading": "Gerätekacheln und neueste Messwerte",
         "body": [
-          "Auf dem Bildschirm wird eine Liste von Kacheln angezeigt, wobei jede Kachel ein verbundenes Gerät darstellt.",
-          "Jede Kachel zeigt den Namen der Pflanze, den Standort und die neuesten Messwerte von Sensoren an.",
-          "Wenn noch keine Daten empfangen wurden, werden anstelle von Werten Platzhalter-Symbole angezeigt."
+          "Der Bildschirm zeigt eine Liste von Kacheln an, wobei jede Kachel ein verknüpftes Gerät darstellt.",
+          "Jede Kachel zeigt den Geräte- oder Pflanzennamen, den Standort und die neuesten vom Gerät empfangenen Messwerte.",
+          "Je nach den für das Gerät aktivierten Sensoren kann die Kachel Lufttemperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchtigkeit anzeigen.",
+          "Wenn noch keine Daten empfangen wurden, werden anstelle von Werten Platzhalter angezeigt.",
+          "Wenn das Gerät mit einer Wasserpumpe konfiguriert ist, zeigt die Kachel außerdem pumpenbezogene Steuerelemente und Informationen an, einschließlich der letzten Pumpenlaufzeit."
         ]
       },
       {
-        "heading": "Interaktionen mit der Kachel",
+        "heading": "Wasserpumpenbereich auf Gerätekacheln",
         "body": [
-          "Ein Klick auf den Bereich der Kachel führt den Benutzer direkt zur Ansicht der Ablesungshistorie für das betreffende Gerät.",
-          "Ein Klick auf das Symbol eines bestimmten Parameters (z. B. Feuchtigkeit oder Temperatur) öffnet die Ablesungshistorie mit dem ausgewählten Parameter.",
-          "Dies ermöglicht einen schnellen Zugriff auf detaillierte Diagramme."
+          "Wenn für ein Gerät die Wasserpumpenunterstützung aktiviert ist, zeigt seine Kachel zusätzliche Pumpensteuerungen an.",
+          "Die Kachel kann anzeigen, ob automatisches Gießen per Pumpe aktiviert ist, welcher Bodenfeuchtigkeitsschwellenwert für automatisches Gießen verwendet wird, den zuletzt aufgezeichneten Pumpenlauf sowie eine Schaltfläche für manuell geplantes Gießen.",
+          "Die Schaltfläche für manuelles Gießen ändert ihren Status abhängig davon, ob bereits eine ausstehende Gießanfrage vorhanden ist.",
+          "Wenn keine manuelle Gießanfrage aussteht, zeigt die Schaltfläche Gießen planen.",
+          "Wenn bereits eine manuelle Gießanfrage aussteht, zeigt die Schaltfläche Gießen abplanen.",
+          "So ist direkt auf der Kachel sichtbar, ob für dieses Gerät bereits Gießen angefordert wurde."
         ]
       },
       {
-        "heading": "Gerätemenü (drei Punkte)",
+        "heading": "Kachelinteraktionen",
         "body": [
-          "Jede Geräte-Kachel hat ein Drei-Punkte-Menü mit zusätzlichen Aktionen.",
-          "Verfügbare Optionen sind: Ablesungshistorie, Pflanzendetails, Gerät bearbeiten und Gerät löschen.",
-          "Das Löschen eines Geräts ist dauerhaft und entfernt seine Verbindung zur Pflanze."
+          "Durch Tippen auf den Kachelbereich gelangst du direkt zum Bildschirm „Messwertverlauf“ für dieses Gerät.",
+          "Durch Tippen auf ein bestimmtes Messwertsymbol, zum Beispiel Temperatur, Luftfeuchtigkeit, Licht oder Bodenfeuchtigkeit, wird der Bildschirm „Messwertverlauf“ mit dieser vorab ausgewählten Messgröße geöffnet.",
+          "Dies ermöglicht schnellen Zugriff auf detaillierte Diagramme für einen bestimmten Messwerttyp."
         ]
       },
       {
-        "heading": "Ablesungshistorie",
+        "heading": "Geräteaktionen",
         "body": [
-          "Die Ansicht Ablesungshistorie zeigt detaillierte Diagramme der gesammelten Messdaten.",
-          "Daten können täglich, wöchentlich oder monatlich angezeigt werden.",
-          "Diagramme sind für Lufttemperatur, Luftfeuchtigkeit, Lichtniveau und Bodenfeuchtigkeit verfügbar (abhängig vom Gerät)."
+          "Jede Gerätekachel enthält ein 3-Punkte-Menü mit zusätzlichen Aktionen.",
+          "Zu den verfügbaren Optionen gehören Messwertverlauf, Pflanzendetails, Gerätedetails, Gerät bearbeiten und Gerät löschen.",
+          "Die Aktion „Gerätedetails“ öffnet ein Modal mit Einrichtungsinformationen für das ausgewählte Gerät, einschließlich generierter Kennungen, aktivierter Sensoren, Pumpenkonfiguration und des vom Gerät verwendeten Kontogeheimnisses.",
+          "Das Löschen eines Geräts entfernt es und seine Zuordnung zur Pflanze dauerhaft."
         ]
       },
       {
-        "heading": "FAB-Menü",
+        "heading": "Messwertverlauf",
         "body": [
-          "Der FAB-Button bietet Aktionen zur Geräteverwaltung.",
-          "Verfügbare Optionen sind: Gerät verbinden, Gerätekonfiguration, Sortieren und Filtern.",
-          "Das Sortieren kann nach Pflanzenname, Standort oder dem Zeitpunkt der letzten Ablesung erfolgen.",
-          "Das Filtern umfasst Pflanzenname, Standort und Gerätestatus (aktiv, inaktiv)."
+          "Der Bildschirm „Messwertverlauf“ zeigt detaillierte Diagramme für erfasste Sensordaten an.",
+          "Daten können mit täglicher, wöchentlicher und monatlicher Aggregation angezeigt werden.",
+          "Diagramme sind für Lufttemperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchtigkeit verfügbar.",
+          "Nur vom Gerät bereitgestellte Daten können angezeigt werden.",
+          "Das Backend speichert Messwerte in stündlichen Buckets. Wenn das Gerät mehrere Messwerte für dieselbe Stunde sendet, wird der vorhandene stündliche Datensatz aktualisiert, statt dupliziert zu werden."
         ]
       },
       {
-        "heading": "Gerät verbinden",
+        "heading": "FAB-Aktionen",
         "body": [
-          "Die Option Gerät verbinden dient zum Hinzufügen eines neuen Messgeräts und dessen Zuordnung zu einer Pflanze.",
-          "Bei der Konfiguration werden die auf der Kachel angezeigten Parameter sowie optionale Alarme (z. B. niedriger Bodenfeuchtigkeitsstand) ausgewählt.",
-          "Jedes Gerät erhält eine eindeutige Geräte-ID und einen geheimen Geräteschlüssel."
+          "Der Floating Action Button bietet Aktionen im Zusammenhang mit Geräteverwaltung und Konfiguration.",
+          "Zu den verfügbaren Aktionen gehören Gerät verknüpfen, Geräteeinrichtung, Sortieren, Filtern, Export senden und Filter löschen, wenn Filter aktiv sind.",
+          "Sortieren kann nach Pflanzenname, Standort oder letztem Lesezeitpunkt angewendet werden.",
+          "Filtern kann nach Pflanze, Standort und Gerätestatus, z. B. aktiviert oder deaktiviert, angewendet werden.",
+          "Die Aktion „Export senden“ sendet einen Tabellenexport der Messwerte per E-Mail. Der Export enthält Messwertdatensätze und Gießaufgabendatensätze. Wenn Filter angewendet sind, spiegeln die exportierten Daten diese Filter wider."
         ]
       },
       {
-        "heading": "Geräteautorisierung und Datenfluss",
+        "heading": "Ein Gerät verknüpfen",
         "body": [
-          "Geräte autorisieren sich mit der Geräte-ID und dem geheimen Schlüssel.",
-          "Für das Speichern von Ablesungen ist keine Benutzerautorisierung erforderlich – der Zugriff wird ausschließlich durch die Gerätedaten kontrolliert.",
-          "Dieser Ansatz vereinfacht die IoT-Integration und -Kommunikation."
+          "Gerät verknüpfen wird verwendet, um ein neues Messgerät einzurichten und es einer Pflanze zuzuordnen.",
+          "Während der Einrichtung kannst du den Gerätenamen, die verknüpfte Pflanze, den aktivierten oder deaktivierten Zustand, das Messintervall, aktivierte Sensoren, Warnungen bei niedriger Bodenfeuchtigkeit, E-Mail- und Push-Benachrichtigungen bei niedriger Bodenfeuchtigkeit, Wasserpumpenunterstützung, automatischen Pumpenstart, den Bodenfeuchtigkeitsschwellenwert für automatisches Gießen sowie E-Mail- und Push-Benachrichtigungen nach Abschluss des Gießens konfigurieren.",
+          "Jedes Gerät erhält einen generierten Device Key. Das Benutzerkonto verfügt außerdem über einen Auth Secret Key. Zusammen ermöglichen diese Zugangsdaten dem physischen Gerät, mit dem Backend zu kommunizieren."
         ]
       },
       {
-        "heading": "Gerätekonfiguration und Dokumentation",
+        "heading": "Geräteauthentifizierung und Datenfluss",
         "body": [
-          "Die Option Gerätekonfiguration bietet technische Anweisungen zur Hardwareintegration.",
-          "Sie enthält Informationen zu API-Endpunkten (POST zum Senden von Ablesungen, GET zum Abrufen), Beispiel-Payloads und Einstellungen.",
-          "Der Benutzer kann die vollständige Dokumentation herunterladen, einschließlich Beispielcode, Verbindungsschemata (Fritzing) und empfohlene Sensoren."
+          "Geräte authentifizieren sich mit dem Auth Secret Key, Device Key und optionaler Device ID.",
+          "Für Geräte-Ingestion-Endpunkte ist kein Benutzer-Login-Token erforderlich. Die Autorisierung erfolgt über die Gerätezugangsdaten.",
+          "Dies ermöglicht einfache IoT-Integrationen, bei denen das Board Daten direkt an Flovers senden kann.",
+          "Der generierte Arduino- oder ESP-Code enthält die erforderlichen Endpunkte und Zugangsdaten für das ausgewählte Gerät. Vor dem Hochladen des Codes muss der Nutzer seine eigene WLAN-SSID und sein Passwort eintragen."
         ]
       },
       {
-        "heading": "Wichtige Informationen",
+        "heading": "Geräteeinrichtung",
         "body": [
-          "Die Stabilität des Geräts, die Kalibrierung der Sensoren und die physische Montage liegen in der Verantwortung des Benutzers.",
-          "Ablesungen von Sensoren dienen nur zu Informationszwecken und sollten zusammen mit der Beobachtung der Pflanzen interpretiert werden.",
-          "Flovers garantiert nicht die Genauigkeit von Daten, die von externen Geräten oder selbstgebauten Geräten stammen."
+          "Die Option „Geräteeinrichtung“ bietet technische Informationen zur Konfiguration der Hardware.",
+          "Sie enthält den Ingest-Endpunkt zum Senden von Messwerten, den Feed-Endpunkt zum Abrufen der neuesten Messwerte, Beispiel-Payloads, den Auth Secret Key des Kontos und die Option, den Auth Secret Key zu rotieren.",
+          "Das Rotieren des Auth Secret Key macht das alte Geheimnis ungültig, daher muss jeder vorhandene Gerätecode, der das vorherige Geheimnis verwendet, aktualisiert werden."
+        ]
+      },
+      {
+        "heading": "Gerätedetails",
+        "body": [
+          "Das Modal „Gerätedetails“ zeigt Informationen zu einem bestimmten Gerät an.",
+          "Es enthält den Gerätenamen, Device Key, Auth Secret Key, die verknüpfte Pflanze, aktivierte Sensoren und ob eine Wasserpumpe verknüpft ist.",
+          "Das Modal ermöglicht es dem Nutzer außerdem, generierten Arduino-Code für das ausgewählte Gerät per E-Mail zu senden. Die E-Mail enthält den generierten Code im E-Mail-Text und als .ino-Anhang.",
+          "Der generierte Code basiert auf der ausgewählten Gerätekonfiguration, einschließlich aktivierter Sensoren, Pumpenunterstützung, Einstellungen für automatisches Gießen, Device Key, Device ID und Auth Secret Key."
+        ]
+      },
+      {
+        "heading": "Manuell geplantes Gießen",
+        "body": [
+          "Wenn für ein Gerät die Wasserpumpenunterstützung aktiviert ist, kann der Nutzer eine manuelle Gießanfrage planen.",
+          "Manuelles Gießen startet die Pumpe nicht sofort über die mobile App. Stattdessen erstellt das Backend eine ausstehende Pumpenaufgabe für das Gerät.",
+          "Das physische Board prüft das Backend auf ausstehende manuelle Gießaufgaben. Wenn eine ausstehende Aufgabe vorhanden ist und das Board über eine Pumpensteuerungslogik verfügt, kann es die Pumpe starten und anschließend den Abschluss an das Backend zurückmelden.",
+          "Manuell geplantes Gießen ignoriert den aktuellen Bodenfeuchtigkeitswert, den Schwellenwert für automatisches Gießen und die Abklingzeit für automatisches Gießen.",
+          "Das bedeutet, dass manuelles Gießen als ausdrückliche Nutzeranfrage behandelt wird.",
+          "Eine geplante manuelle Gießanfrage kann außerdem zurückgerufen werden, bevor das Gerät sie abholt."
+        ]
+      },
+      {
+        "heading": "Zeitsteuerung manueller Gießaufgaben",
+        "body": [
+          "Der generierte Gerätecode verwendet separate Zeitsteuerung für Messwerte und Prüfungen auf manuelles Gießen.",
+          "Standardmäßig werden Sensormesswerte einmal pro Stunde gesendet.",
+          "Prüfungen für automatisches Gießen erfolgen im Rahmen des stündlichen Messzyklus.",
+          "Ausstehende manuelle Gießaufgaben werden häufiger geprüft, standardmäßig einmal pro Minute.",
+          "Dadurch können manuelle Gießanfragen schneller aufgenommen werden, ohne jede Minute Sensormesswerte zu senden.",
+          "Die Ausführungsreihenfolge bleibt: Messwerte während des normalen Messzyklus senden, auf ausstehendes manuelles Gießen prüfen und, falls kein manuelles Gießen ausgeführt wurde, Bedingungen für automatisches Gießen prüfen.",
+          "Wenn die einminütige Prüfung auf manuelles Gießen außerhalb des stündlichen Messzyklus ausgeführt wird, prüft sie nur auf ausstehende manuelle Gießaufgaben."
+        ]
+      },
+      {
+        "heading": "Automatisches Gießen",
+        "body": [
+          "Wenn Wasserpumpenunterstützung aktiviert ist, kann auch automatisches Gießen aktiviert werden.",
+          "Automatisches Gießen verwendet Bodenfeuchtigkeitsmesswerte und einen konfigurierten Schwellenwert.",
+          "Das Board fragt das Backend nach der aktuellen Pumpenkonfiguration, einschließlich ob automatisches Gießen aktiviert ist und welcher Schwellenwert verwendet werden soll.",
+          "Wenn automatisches Gießen aktiviert ist und die aktuelle Bodenfeuchtigkeit unter dem konfigurierten Schwellenwert liegt, kann das Board die Pumpe starten.",
+          "Automatisches Gießen hängt davon ab, dass Wasserpumpenunterstützung aktiviert ist, der Bodenfeuchtigkeitssensor aktiviert ist, automatischer Pumpenstart aktiviert ist, ein gültiger Bodenfeuchtigkeitsschwellenwert vorhanden ist, das Gerät aktiv ist und das Backend die aktuellen Pumpeneinstellungen bestätigt.",
+          "Automatisches Gießen hat eine Abklingzeit, um zu häufige wiederholte Pumpenaktivierungen zu vermeiden.",
+          "Manuelles Gießen hat im selben Zyklus Vorrang vor automatischem Gießen. Wenn manuelles Gießen ausgeführt wird, wird automatisches Gießen für diesen Zyklus übersprungen."
+        ]
+      },
+      {
+        "heading": "Meldung des Pumpenabschlusses",
+        "body": [
+          "Nach einem Pumpenlauf meldet das Gerät den Abschluss an das Backend zurück.",
+          "Der Pumpenabschluss kann für manuell geplantes Gießen oder durch Bodenfeuchtigkeit ausgelöstes automatisches Gießen gemeldet werden.",
+          "Wenn ein Pumpenlauf erfolgreich aufgezeichnet wurde, aktualisiert das Backend die letzte Pumpenlaufzeit, die Quelle des letzten Pumpenlaufs und, falls zutreffend, den Status der zugehörigen Pumpenaufgabe.",
+          "Wenn Benachrichtigungen zum Gießabschluss aktiviert sind, kann das Backend nach Abschluss des Gießens E-Mail- und Push-Benachrichtigungen senden."
+        ]
+      },
+      {
+        "heading": "Gießbenachrichtigungen",
+        "body": [
+          "Geräte können so konfiguriert werden, dass sie nach Abschluss des Gießens Benachrichtigungen senden.",
+          "Unterstützte Benachrichtigungstypen sind E-Mail-Benachrichtigung und Push-Benachrichtigung.",
+          "Diese sind getrennt von Warnungen bei niedriger Bodenfeuchtigkeit.",
+          "Gießbenachrichtigungen sind nur relevant, wenn für das Gerät Wasserpumpenunterstützung aktiviert ist.",
+          "Eine Gießbenachrichtigung kann gesendet werden, nachdem entweder manuelles oder automatisches Gießen abgeschlossen wurde, abhängig von der vom Gerät empfangenen Pumpenabschlussmeldung."
+        ]
+      },
+      {
+        "heading": "Warnungen bei niedriger Bodenfeuchtigkeit",
+        "body": [
+          "Geräte mit einem Bodenfeuchtigkeitssensor können so konfiguriert werden, dass sie Warnungen senden, wenn die Bodenfeuchtigkeit unter einen konfigurierten Schwellenwert fällt.",
+          "Warnungen bei niedriger Bodenfeuchtigkeit unterstützen E-Mail-Benachrichtigungen und Push-Benachrichtigungen.",
+          "Das Backend verfolgt den Warnstatus, damit der Nutzer nicht bei jedem Messwert erneut benachrichtigt wird, solange die Pflanze unter dem Schwellenwert bleibt.",
+          "Eine neue Warnung wird gesendet, wenn der Feuchtigkeitswert in den Zustand niedriger Feuchtigkeit übergeht. Der Warnstatus wird zurückgesetzt, nachdem die Feuchtigkeit wieder über den Schwellenwert steigt.",
+          "Warnungen bei niedriger Bodenfeuchtigkeit sind unabhängig von Benachrichtigungen zum Gießabschluss."
+        ]
+      },
+      {
+        "heading": "Datenexport",
+        "body": [
+          "Der Messwerte-Export sendet dem Nutzer eine Tabelle per E-Mail.",
+          "Die Tabelle enthält Messwertdaten und Gießaufgabendatensätze.",
+          "Der Messwerte-Tab enthält Sensormesswerte wie Temperatur, Luftfeuchtigkeit, Licht und Bodenfeuchtigkeit.",
+          "Der Gießaufgaben-Tab enthält Pumpenaufgabendatensätze wie manuelle oder automatische Quelle, Status, angeforderte Zeit, zugestellte Zeit, ausgeführte Zeit, stornierte Zeit, Feuchtigkeit bei Anfrage, Schwellenwert bei Anfrage und Fehlermeldung.",
+          "Wenn Filter im Bildschirm „Messwerte“ angewendet sind, berücksichtigt der Export diese Filter. Wenn der Export beispielsweise auf eine bestimmte Pflanze oder einen bestimmten Gerätebereich beschränkt ist, sind auch die Gießaufgabendatensätze auf die passenden Geräte beschränkt."
+        ]
+      },
+      {
+        "heading": "Generierter Arduino- oder ESP-Code",
+        "body": [
+          "Der generierte Code ist als sofort bearbeitbarer Ausgangspunkt für ESP32-ähnliche Boards gedacht.",
+          "Er enthält Logik für WLAN-Verbindung, Zeitsynchronisierung, Sensorinitialisierung, das Auslesen aktivierter Sensoren, das Senden von Messwerten an das Backend, das Prüfen auf manuelle Gießaufgaben, das Prüfen backendgesteuerter Einstellungen für automatisches Gießen, das Starten einer Pumpe bei Bedarf und das Melden des Pumpenabschlusses.",
+          "Der generierte Code hält das Hochladen von Messwerten und Prüfungen auf manuelle Gießaufgaben getrennt.",
+          "Standardmäßig werden Messwerte stündlich gesendet, während manuelle Gießaufgaben einmal pro Minute geprüft werden.",
+          "Nutzer müssen den generierten Code für ihre eigene Hardware, Pins, Kalibrierungswerte, Pumpenrelais-Verdrahtung und den Board-Typ überprüfen und anpassen."
+        ]
+      },
+      {
+        "heading": "Wichtige Hinweise",
+        "body": [
+          "Gerätestabilität, Kalibrierung, physische Verdrahtung und Installation liegen in der Verantwortung des Nutzers.",
+          "Sensormesswerte dienen der Information und sollten zusammen mit Beobachtungen in der realen Umgebung interpretiert werden.",
+          "Die Steuerung einer Wasserpumpe erfordert besondere Vorsicht. Nutzer sollten sicherstellen, dass Relais, Pumpe, Stromversorgung, Schläuche und Wasserquelle sicher installiert sind.",
+          "Flovers zeichnet Gerätedaten auf und zeigt sie an, garantiert jedoch nicht die Genauigkeit von Drittanbieter- oder selbstgebauten Sensoren.",
+          "Flovers garantiert außerdem nicht, dass eine physische Pumpe erfolgreich läuft. Die Pumpenausführung hängt von der Hardware des Nutzers, dem generierten Code, der WLAN-Verbindung und der korrekten Gerätekonfiguration ab."
         ]
       }
     ]
