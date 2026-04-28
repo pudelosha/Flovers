@@ -203,14 +203,11 @@ export default function ReadingsScreen() {
 
       const tiles = devices.map(toReadingTile);
       setItems(tiles);
-    } catch (e: any) {
-      const msg =
-        typeof e?.message === "string" &&
-        e.message.toLowerCase().includes("401")
-          ? tr("readings.toasts.unauthorized", "Unauthorized. Please log in again.")
-          : e?.message || tr("readings.toasts.loadFailed", "Failed to load devices");
-
-      showToast(msg, "error");
+    } catch {
+      showToast(
+        tr("readings.toasts.loadFailed", "Failed to load devices"),
+        "error"
+      );
       setDevicesRaw([]);
       setPlantInstances([]);
       setItems([]);
@@ -473,12 +470,14 @@ export default function ReadingsScreen() {
       await apiDeleteReadingDevice(Number(deleteId));
       setItems((prev) => prev.filter((x) => x.id !== deleteId));
       setDevicesRaw((prev) => prev.filter((d) => String(d.id) !== deleteId));
-      showToast(tr("readings.toasts.deviceDeleted", "Device deleted"), "success");
-    } catch (e: any) {
+
       showToast(
-        e?.message
-          ? `${tr("readings.toasts.deleteFailedPrefix", "Delete failed")}: ${e.message}`
-          : tr("readings.toasts.deleteFailed", "Delete failed"),
+        tr("readings.toasts.deviceDeleted", "Device deleted"),
+        "success"
+      );
+    } catch {
+      showToast(
+        tr("readings.toasts.deleteFailed", "Delete failed"),
         "error"
       );
     } finally {
@@ -494,14 +493,15 @@ export default function ReadingsScreen() {
     try {
       setExporting(true);
 
-      const res = await sendReadingsExportEmail({
+      await sendReadingsExportEmail({
         ...effectiveExportFilters,
         lang: (i18n.language || currentLanguage || "en").split("-")[0],
       });
 
       setExportModalVisible(false);
+
       showToast(
-        res?.detail || tr("readings.toasts.exportSent", "Readings export request sent"),
+        tr("readings.toasts.exportSent", "Readings export request sent"),
         "success"
       );
     } catch (e: any) {
@@ -512,8 +512,7 @@ export default function ReadingsScreen() {
         );
       } else {
         showToast(
-          e?.message ||
-            tr("readings.toasts.failedToSendExport", "Failed to send readings export"),
+          tr("readings.toasts.failedToSendExport", "Failed to send readings export"),
           "error"
         );
       }
@@ -573,10 +572,9 @@ export default function ReadingsScreen() {
         setDeviceDetailsData(device);
         setDeviceDetailsSecret(setup?.secret || "");
         setDeviceDetailsVisible(true);
-      } catch (e: any) {
+      } catch {
         showToast(
-          e?.message ||
-            tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
+          tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
           "error"
         );
       } finally {
@@ -588,24 +586,25 @@ export default function ReadingsScreen() {
 
   const handleEmailCodeFromDeviceDetails = useCallback(async () => {
     if (!deviceDetailsId) {
-      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      showToast(
+        tr("readings.toasts.missingDeviceId", "Missing device ID"),
+        "error"
+      );
       return;
     }
 
     try {
       setDeviceDetailsSending(true);
 
-      const res = await sendDeviceCodeByEmail(Number(deviceDetailsId));
+      await sendDeviceCodeByEmail(Number(deviceDetailsId));
 
       showToast(
-        res?.detail || tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
+        tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
         "success"
       );
-    } catch (e: any) {
+    } catch {
       showToast(
-        e?.message
-          ? `${tr("readings.toasts.sendCodeEmailFailedPrefix", "Send email failed")}: ${e.message}`
-          : tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
+        tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
         "error"
       );
     } finally {
@@ -656,13 +655,12 @@ export default function ReadingsScreen() {
         );
 
         setWateringScheduleVisible(true);
-      } catch (e: any) {
+      } catch {
         showToast(
-          e?.message ||
-            tr(
-              "readings.toasts.pumpStatusLoadFailed",
-              "Failed to load watering schedule"
-            ),
+          tr(
+            "readings.toasts.pumpStatusLoadFailed",
+            "Failed to load watering schedule"
+          ),
           "error"
         );
       } finally {
@@ -674,7 +672,10 @@ export default function ReadingsScreen() {
 
   const handleScheduleWatering = useCallback(async () => {
     if (!wateringScheduleId) {
-      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      showToast(
+        tr("readings.toasts.missingDeviceId", "Missing device ID"),
+        "error"
+      );
       return;
     }
 
@@ -709,13 +710,12 @@ export default function ReadingsScreen() {
       );
 
       showToast(
-        res?.detail || tr("readings.toasts.wateringScheduled", "Watering scheduled"),
+        tr("readings.toasts.wateringScheduled", "Watering scheduled"),
         "success"
       );
-    } catch (e: any) {
+    } catch {
       showToast(
-        e?.message ||
-          tr("readings.toasts.wateringScheduleFailed", "Failed to schedule watering"),
+        tr("readings.toasts.wateringScheduleFailed", "Failed to schedule watering"),
         "error"
       );
     } finally {
@@ -725,14 +725,17 @@ export default function ReadingsScreen() {
 
   const handleRecallWatering = useCallback(async () => {
     if (!wateringScheduleId) {
-      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      showToast(
+        tr("readings.toasts.missingDeviceId", "Missing device ID"),
+        "error"
+      );
       return;
     }
 
     try {
       setWateringScheduleWorking(true);
 
-      const res = await recallPumpWatering(Number(wateringScheduleId));
+      await recallPumpWatering(Number(wateringScheduleId));
 
       setWateringSchedulePendingTask(null);
 
@@ -759,14 +762,12 @@ export default function ReadingsScreen() {
       );
 
       showToast(
-        res?.detail ||
-          tr("readings.toasts.wateringRecalled", "Scheduled watering recalled"),
+        tr("readings.toasts.wateringRecalled", "Scheduled watering recalled"),
         "success"
       );
-    } catch (e: any) {
+    } catch {
       showToast(
-        e?.message ||
-          tr("readings.toasts.wateringRecallFailed", "Failed to recall watering"),
+        tr("readings.toasts.wateringRecallFailed", "Failed to recall watering"),
         "error"
       );
     } finally {
@@ -905,16 +906,12 @@ export default function ReadingsScreen() {
           ),
           "success"
         );
-      } catch (e: any) {
+      } catch {
         setUpsertVisible(false);
 
         showToast(
           isCreate
-            ? e?.message
-              ? `${tr("readings.toasts.addFailedPrefix", "Add failed")}: ${e.message}`
-              : tr("readings.toasts.addFailed", "Add failed")
-            : e?.message
-            ? `${tr("readings.toasts.updateFailedPrefix", "Update failed")}: ${e.message}`
+            ? tr("readings.toasts.addFailed", "Add failed")
             : tr("readings.toasts.updateFailed", "Update failed"),
           "error"
         );
@@ -925,21 +922,23 @@ export default function ReadingsScreen() {
 
   const handleSendCodeByEmail = useCallback(async () => {
     if (!upsertReadingId) {
-      showToast(tr("readings.toasts.missingDeviceId", "Missing device ID"), "error");
+      showToast(
+        tr("readings.toasts.missingDeviceId", "Missing device ID"),
+        "error"
+      );
       return;
     }
 
     try {
-      const res = await sendDeviceCodeByEmail(Number(upsertReadingId));
+      await sendDeviceCodeByEmail(Number(upsertReadingId));
+
       showToast(
-        res?.detail || tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
+        tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
         "success"
       );
-    } catch (e: any) {
+    } catch {
       showToast(
-        e?.message
-          ? `${tr("readings.toasts.sendCodeEmailFailedPrefix", "Send email failed")}: ${e.message}`
-          : tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
+        tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
         "error"
       );
     }
@@ -998,16 +997,15 @@ export default function ReadingsScreen() {
             : tr("readings.toasts.autoPumpDisabled", "Automatic pump disabled"),
           "success"
         );
-      } catch (e: any) {
+      } catch {
         setItems(prevItems);
         setDevicesRaw(prevDevicesRaw);
 
         showToast(
-          e?.message ||
-            tr(
-              "readings.toasts.autoPumpUpdateFailed",
-              "Failed to update automatic pump setting"
-            ),
+          tr(
+            "readings.toasts.autoPumpUpdateFailed",
+            "Failed to update automatic pump setting"
+          ),
           "error"
         );
       }
@@ -1021,11 +1019,9 @@ export default function ReadingsScreen() {
       setSetupSecret(data.secret);
       setSetupIngest(data.endpoints?.ingest || "");
       setSetupRead(data.endpoints?.read || "");
-    } catch (e: any) {
+    } catch {
       showToast(
-        e?.message
-          ? `${tr("readings.toasts.setupLoadFailedPrefix", "Failed to load setup")}: ${e.message}`
-          : tr("readings.toasts.setupLoadFailed", "Failed to load setup"),
+        tr("readings.toasts.setupLoadFailed", "Failed to load setup"),
         "error"
       );
       setSetupSecret(null);
@@ -1306,12 +1302,14 @@ export default function ReadingsScreen() {
           try {
             const { secret } = await rotateAccountSecret();
             setSetupSecret(secret);
-            showToast(tr("readings.toasts.secretRotated", "Secret rotated"), "success");
-          } catch (e: any) {
+
             showToast(
-              e?.message
-                ? `${tr("readings.toasts.rotateFailedPrefix", "Rotate failed")}: ${e.message}`
-                : tr("readings.toasts.rotateFailed", "Rotate failed"),
+              tr("readings.toasts.secretRotated", "Secret rotated"),
+              "success"
+            );
+          } catch {
+            showToast(
+              tr("readings.toasts.rotateFailed", "Rotate failed"),
               "error"
             );
           }
