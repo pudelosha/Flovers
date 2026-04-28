@@ -75,17 +75,17 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 type Status = "enabled" | "disabled";
 type ReadingTileModel = BaseReadingTileModel & {
   location?: string | null;
-  status?: Status; // whether the linked device is enabled/disabled
+  status?: Status;
 };
 
 // ===== Filters shape for the modal =====
 type Filters = {
-  plantId?: string; // exact plant from dropdown
-  location?: string; // exact
-  status?: Status; // exact
+  plantId?: string;
+  location?: string;
+  status?: Status;
 };
 
-// Empty-state gradient colors (keep local, do not change logic elsewhere)
+// Empty-state gradient colors
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
@@ -114,24 +114,24 @@ export default function ReadingsScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // FAB-related flags (to hide FAB only for sheets/modals; NOT for per-tile menus)
+  // FAB-related flags
   const [sortSheetOpen, setSortSheetOpen] = useState(false);
   const [filterSheetOpen, setFilterSheetOpen] = useState(false);
 
   // Sort modal state
   const [sortModalVisible, setSortModalVisible] = useState(false);
-  const [sortKey, setSortKey] = useState<SortKey>("name"); // name | location | lastRead
-  const [sortDir, setSortDir] = useState<SortDir>("asc"); // asc | desc
+  const [sortKey, setSortKey] = useState<SortKey>("name");
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
 
   // Filter modal state
   const [filterModalVisible, setFilterModalVisible] = useState(false);
-  const [filters, setFilters] = useState<Filters>({}); // plantId, location, status
+  const [filters, setFilters] = useState<Filters>({});
 
   // Export modal state
   const [exportModalVisible, setExportModalVisible] = useState(false);
   const [exporting, setExporting] = useState(false);
 
-  // Backwards-compat: legacy quick filter query (maps to "name contains"), keep existing logic intact
+  // Backwards-compat: legacy quick filter query
   const [filterQuery, setFilterQuery] = useState<string>("");
 
   // Delete modal state
@@ -150,7 +150,8 @@ export default function ReadingsScreen() {
   const [deviceDetailsId, setDeviceDetailsId] = useState<string | null>(null);
   const [deviceDetailsLoading, setDeviceDetailsLoading] = useState(false);
   const [deviceDetailsSending, setDeviceDetailsSending] = useState(false);
-  const [deviceDetailsData, setDeviceDetailsData] = useState<ApiReadingDevice | null>(null);
+  const [deviceDetailsData, setDeviceDetailsData] =
+    useState<ApiReadingDevice | null>(null);
   const [deviceDetailsSecret, setDeviceDetailsSecret] = useState<string>("");
 
   // Watering schedule modal state
@@ -164,14 +165,14 @@ export default function ReadingsScreen() {
   const [wateringScheduleLastPumpRunAt, setWateringScheduleLastPumpRunAt] =
     useState<string | null>(null);
 
-  // Upsert (add/edit) device modal state
+  // Upsert modal state
   const [upsertVisible, setUpsertVisible] = useState(false);
   const [upsertMode, setUpsertMode] = useState<"add" | "edit">("add");
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
   const [upsertReadingName, setUpsertReadingName] =
     useState<string | undefined>(undefined);
 
-  // Shared toast (TopSnackbar)
+  // Shared toast
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] =
@@ -208,6 +209,7 @@ export default function ReadingsScreen() {
         e.message.toLowerCase().includes("401")
           ? tr("readings.toasts.unauthorized", "Unauthorized. Please log in again.")
           : e?.message || tr("readings.toasts.loadFailed", "Failed to load devices");
+
       showToast(msg, "error");
       setDevicesRaw([]);
       setPlantInstances([]);
@@ -215,29 +217,31 @@ export default function ReadingsScreen() {
     }
   }, [showToast, tr]);
 
-  // Clear stale tiles on entry so only spinner is visible, then load and animate
+  // Clear stale tiles on entry so only spinner is visible
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
+
       (async () => {
         setLoading(true);
-        setItems([]); // clear to avoid stale flash
+        setItems([]);
+
         try {
           await load();
         } finally {
           if (mounted) setLoading(false);
         }
       })();
+
       return () => {
         mounted = false;
       };
     }, [load])
   );
 
-  // On focus: ensure page is reset (hide all modals/sheets, close menus, scroll to top)
+  // On focus: reset page state
   useFocusEffect(
     useCallback(() => {
-      // hide all modals/sheets
       setSortModalVisible(false);
       setFilterModalVisible(false);
       setExportModalVisible(false);
@@ -249,7 +253,6 @@ export default function ReadingsScreen() {
       setSortSheetOpen(false);
       setFilterSheetOpen(false);
 
-      // clear modal state
       setDeviceDetailsId(null);
       setDeviceDetailsData(null);
       setDeviceDetailsSecret("");
@@ -263,14 +266,11 @@ export default function ReadingsScreen() {
       setWateringSchedulePendingTask(null);
       setWateringScheduleLastPumpRunAt(null);
 
-      // close any 3-dot dropdown
       setMenuOpenId(null);
 
-      // reset all filters
       setFilters({});
       setFilterQuery("");
 
-      // scroll to top
       requestAnimationFrame(() => {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
@@ -288,7 +288,7 @@ export default function ReadingsScreen() {
     }
   }, [load]);
 
-  // ----- Derived plants & locations for Filter modal options -----
+  // ----- Derived plants & locations -----
   const plantOptions = useMemo(
     () => items.map((x) => ({ id: x.id, name: x.name })),
     [items]
@@ -317,7 +317,7 @@ export default function ReadingsScreen() {
     return plantOptions.find((p) => p.id === effectiveExportFilters.plantId)?.name;
   }, [effectiveExportFilters.plantId, plantOptions]);
 
-  // ---------- ✨ ENTRANCE ANIMATION (tiles) ----------
+  // ---------- Entrance animation ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
 
   const getAnimForId = (id: string) => {
@@ -345,7 +345,6 @@ export default function ReadingsScreen() {
     Animated.stagger(50, seq).start();
   }, []);
 
-  // Is any filter active? (includes legacy text query)
   const isFilterActive = useMemo(() => {
     return Boolean(
       filters.plantId ||
@@ -359,44 +358,40 @@ export default function ReadingsScreen() {
   const derivedItems = useMemo(() => {
     let arr = [...items];
 
-    // Filter by plant (exact via dropdown)
     if (filters.plantId) {
       arr = arr.filter((x) => x.id === filters.plantId);
     }
 
-    // Legacy: contains filter by name
     const q = (filterQuery || "").trim().toLowerCase();
     if (q) {
       arr = arr.filter((x) => x.name?.toLowerCase().includes(q));
     }
 
-    // Filter by location (exact)
     if (filters.location) {
       arr = arr.filter(
         (x) => (x.location ?? "").toLowerCase() === filters.location!.toLowerCase()
       );
     }
 
-    // Filter by status (exact)
     if (filters.status) {
       arr = arr.filter((x) => (x.status ?? "enabled") === filters.status);
     }
 
-    // Sorting
     const collator = new Intl.Collator(undefined, { sensitivity: "base" });
 
     arr.sort((a, b) => {
       let cmp = 0;
+
       if (sortKey === "name") {
         cmp = collator.compare(a.name ?? "", b.name ?? "");
       } else if (sortKey === "location") {
         cmp = collator.compare(a.location ?? "", b.location ?? "");
       } else {
-        // lastRead
         const ad = a.lastReadISO ? new Date(a.lastReadISO).getTime() : -Infinity;
         const bd = b.lastReadISO ? new Date(b.lastReadISO).getTime() : -Infinity;
         cmp = ad === bd ? 0 : ad < bd ? -1 : 1;
       }
+
       return sortDir === "asc" ? cmp : -cmp;
     });
 
@@ -405,14 +400,16 @@ export default function ReadingsScreen() {
 
   useEffect(() => {
     if (loading) return;
+
     const ids = derivedItems.map((x) => x.id);
     primeAnimations(ids);
+
     const raf = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, derivedItems.length]);
 
-  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ("No devices yet") ----------
+  // ---------- Empty-state animation ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -446,7 +443,6 @@ export default function ReadingsScreen() {
 
   const emptyOpacity = emptyAnim;
 
-  // Keep FAB visible even when a 3-dot tile menu is open
   const showFAB =
     !sortSheetOpen &&
     !filterSheetOpen &&
@@ -472,6 +468,7 @@ export default function ReadingsScreen() {
 
   const confirmDelete = useCallback(async () => {
     if (!deleteId) return;
+
     try {
       await apiDeleteReadingDevice(Number(deleteId));
       setItems((prev) => prev.filter((x) => x.id !== deleteId));
@@ -525,15 +522,15 @@ export default function ReadingsScreen() {
     }
   }, [effectiveExportFilters, i18n.language, currentLanguage, showToast, tr]);
 
-  // ---- Upsert (add/edit) handlers ----
+  // ---- Upsert handlers ----
   const openAddDevice = useCallback(async () => {
-    // If plants didn't load yet (or were empty due to a race), fetch right now
     if (!plantInstances || plantInstances.length === 0) {
       try {
         const latest = await fetchPlantInstances();
         setPlantInstances(Array.isArray(latest) ? latest : []);
       } catch {}
     }
+
     setUpsertMode("add");
     setUpsertReadingId(null);
     setUpsertReadingName(undefined);
@@ -542,14 +539,12 @@ export default function ReadingsScreen() {
 
   const openEditDevice = useCallback(
     async (id: string) => {
-      // ensure we have a fresh secret before opening the edit modal
       try {
         const data = await fetchDeviceSetup();
         setSetupSecret(data.secret);
         setSetupIngest(data.endpoints?.ingest || "");
         setSetupRead(data.endpoints?.read || "");
       } catch {
-        // keep going; modal will show masked secret if fetch fails
         setSetupSecret(null);
       }
 
@@ -581,10 +576,7 @@ export default function ReadingsScreen() {
       } catch (e: any) {
         showToast(
           e?.message ||
-            tr(
-              "readings.toasts.deviceDetailsLoadFailed",
-              "Failed to load device details"
-            ),
+            tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
           "error"
         );
       } finally {
@@ -631,7 +623,6 @@ export default function ReadingsScreen() {
       setWateringScheduleLastPumpRunAt(null);
       setWateringScheduleLoading(true);
       setWateringScheduleWorking(false);
-      setWateringScheduleVisible(true);
 
       try {
         const res = await fetchPumpStatus(Number(id));
@@ -658,10 +649,13 @@ export default function ReadingsScreen() {
               ? {
                   ...x,
                   lastPumpRunAt: res.last_pump_run_at ?? null,
+                  pendingPumpTask: res.pending_pump_task ?? null,
                 }
               : x
           )
         );
+
+        setWateringScheduleVisible(true);
       } catch (e: any) {
         showToast(
           e?.message ||
@@ -703,6 +697,17 @@ export default function ReadingsScreen() {
         )
       );
 
+      setItems((curr) =>
+        curr.map((x) =>
+          x.id === wateringScheduleId
+            ? {
+                ...x,
+                pendingPumpTask: pendingTask,
+              }
+            : x
+        )
+      );
+
       showToast(
         res?.detail || tr("readings.toasts.wateringScheduled", "Watering scheduled"),
         "success"
@@ -739,6 +744,17 @@ export default function ReadingsScreen() {
                 pending_pump_task: null,
               }
             : d
+        )
+      );
+
+      setItems((curr) =>
+        curr.map((x) =>
+          x.id === wateringScheduleId
+            ? {
+                ...x,
+                pendingPumpTask: null,
+              }
+            : x
         )
       );
 
@@ -821,27 +837,17 @@ export default function ReadingsScreen() {
             },
             moisture_alert_enabled: moistureAlertEnabled,
             moisture_alert_threshold: moistureAlertThreshold,
-
-            // Soil moisture notifications are only applied if moisture sensor is enabled.
-            // The modal preserves checkbox state locally while locked.
             send_email_notifications: payload.sensors.moisture
               ? !!payload.sendEmailNotifications
               : false,
             send_push_notifications: payload.sensors.moisture
               ? !!payload.sendPushNotifications
               : false,
-
             pump_included: pumpIncluded,
-
-            // Auto watering is only applied if pump is included.
-            // The modal preserves checkbox state locally while locked.
             automatic_pump_launch: automaticPumpLaunch,
             pump_threshold_pct: automaticPumpLaunch
               ? payload.pumpThresholdPct ?? 30
               : null,
-
-            // Watering-complete notifications are only applied if pump is included.
-            // The modal preserves checkbox state locally while locked.
             send_email_watering_notifications: pumpIncluded
               ? !!payload.sendEmailWateringNotifications
               : false,
@@ -867,27 +873,17 @@ export default function ReadingsScreen() {
             },
             moisture_alert_enabled: moistureAlertEnabled,
             moisture_alert_threshold: moistureAlertThreshold,
-
-            // Soil moisture notifications are only applied if moisture sensor is enabled.
-            // The modal preserves checkbox state locally while locked.
             send_email_notifications: payload.sensors.moisture
               ? !!payload.sendEmailNotifications
               : false,
             send_push_notifications: payload.sensors.moisture
               ? !!payload.sendPushNotifications
               : false,
-
             pump_included: pumpIncluded,
-
-            // Auto watering is only applied if pump is included.
-            // The modal preserves checkbox state locally while locked.
             automatic_pump_launch: automaticPumpLaunch,
             pump_threshold_pct: automaticPumpLaunch
               ? payload.pumpThresholdPct ?? 30
               : null,
-
-            // Watering-complete notifications are only applied if pump is included.
-            // The modal preserves checkbox state locally while locked.
             send_email_watering_notifications: pumpIncluded
               ? !!payload.sendEmailWateringNotifications
               : false,
@@ -898,7 +894,7 @@ export default function ReadingsScreen() {
         }
 
         setUpsertVisible(false);
-        await load(); // refresh devices + plant instances
+        await load();
 
         showToast(
           tr(
@@ -954,7 +950,6 @@ export default function ReadingsScreen() {
       const prevItems = items;
       const prevDevicesRaw = devicesRaw;
 
-      // optimistic update
       setItems((curr) =>
         curr.map((x) =>
           x.id === id ? { ...x, automaticPumpLaunch: enabled } : x
@@ -989,6 +984,7 @@ export default function ReadingsScreen() {
                     updated.send_email_watering_notifications ?? false,
                   sendPushWateringNotifications:
                     updated.send_push_watering_notifications ?? false,
+                  pendingPumpTask: updated.pending_pump_task ?? null,
                   status: updated.is_active ? "enabled" : "disabled",
                   location: updated.plant_location ?? null,
                 }
@@ -1003,7 +999,6 @@ export default function ReadingsScreen() {
           "success"
         );
       } catch (e: any) {
-        // rollback
         setItems(prevItems);
         setDevicesRaw(prevDevicesRaw);
 
@@ -1020,7 +1015,6 @@ export default function ReadingsScreen() {
     [items, devicesRaw, showToast, tr]
   );
 
-  // ---- Device setup: fetch endpoints + secret then show modal ----
   const openDeviceSetup = useCallback(async () => {
     try {
       const data = await fetchDeviceSetup();
@@ -1028,7 +1022,6 @@ export default function ReadingsScreen() {
       setSetupIngest(data.endpoints?.ingest || "");
       setSetupRead(data.endpoints?.read || "");
     } catch (e: any) {
-      // keep modal usable even if fetch fails
       showToast(
         e?.message
           ? `${tr("readings.toasts.setupLoadFailedPrefix", "Failed to load setup")}: ${e.message}`
@@ -1091,7 +1084,6 @@ export default function ReadingsScreen() {
           });
           const opacity = v;
 
-          // Look up the raw device to get device_name, sensors, *and plant id*
           const dev = devicesRaw.find((d) => String(d.id) === item.id);
 
           return (
@@ -1173,7 +1165,6 @@ export default function ReadingsScreen() {
                 },
               ]}
             >
-              {/* CHANGED: BlurView block replaced by gradient-based glass frame (logic unchanged) */}
               <View style={s.emptyGlass}>
                 <LinearGradient
                   pointerEvents="none"
@@ -1294,7 +1285,6 @@ export default function ReadingsScreen() {
         </View>
       )}
 
-      {/* Delete modal */}
       <ConfirmDeleteReadingModal
         visible={deleteVisible}
         name={deleteName}
@@ -1306,7 +1296,6 @@ export default function ReadingsScreen() {
         onConfirm={confirmDelete}
       />
 
-      {/* Device setup */}
       <DeviceSetupModal
         visible={deviceSetupVisible}
         writeEndpoint={setupIngest || "—"}
@@ -1329,7 +1318,6 @@ export default function ReadingsScreen() {
         }}
       />
 
-      {/* Device details */}
       <DeviceDetailsModal
         visible={deviceDetailsVisible}
         loading={deviceDetailsLoading}
@@ -1353,7 +1341,6 @@ export default function ReadingsScreen() {
         onEmailCode={handleEmailCodeFromDeviceDetails}
       />
 
-      {/* Watering schedule */}
       <WateringScheduleModal
         visible={wateringScheduleVisible}
         loading={wateringScheduleLoading}
@@ -1401,7 +1388,6 @@ export default function ReadingsScreen() {
         onClose={closeWateringSchedule}
       />
 
-      {/* Upsert (add/edit) reading device */}
       <UpsertReadingDeviceModal
         visible={upsertVisible}
         mode={upsertMode}
@@ -1593,7 +1579,6 @@ export default function ReadingsScreen() {
         onSendCodeByEmail={handleSendCodeByEmail}
       />
 
-      {/* Sort modal */}
       <SortReadingsModal
         visible={sortModalVisible}
         sortKey={sortKey}
@@ -1616,7 +1601,6 @@ export default function ReadingsScreen() {
         }}
       />
 
-      {/* Filter modal */}
       <FilterReadingsModal
         visible={filterModalVisible}
         plants={plantOptions}
@@ -1638,7 +1622,6 @@ export default function ReadingsScreen() {
         }}
       />
 
-      {/* Export modal */}
       <SendReadingsExportModal
         visible={exportModalVisible}
         effectiveFilters={effectiveExportFilters}
@@ -1650,7 +1633,6 @@ export default function ReadingsScreen() {
         onSend={handleSendExport}
       />
 
-      {/* Top Snackbar (shared toast) */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
@@ -1660,51 +1642,3 @@ export default function ReadingsScreen() {
     </View>
   );
 }
-
-const placeholderModalStyles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.55)",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 20,
-  },
-  card: {
-    width: "100%",
-    maxWidth: 420,
-    borderRadius: 20,
-    backgroundColor: "#17392F",
-    padding: 20,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.12)",
-  },
-  title: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "700",
-    marginBottom: 10,
-  },
-  text: {
-    color: "rgba(255,255,255,0.88)",
-    fontSize: 14,
-    lineHeight: 20,
-  },
-  meta: {
-    color: "rgba(255,255,255,0.72)",
-    fontSize: 13,
-    marginTop: 10,
-  },
-  closeButton: {
-    marginTop: 18,
-    alignSelf: "flex-end",
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  closeButtonText: {
-    color: "#FFFFFF",
-    fontWeight: "700",
-    fontSize: 14,
-  },
-});

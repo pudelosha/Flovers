@@ -110,6 +110,7 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
       api.send_email_watering_notifications ?? false,
     sendPushWateringNotifications:
       api.send_push_watering_notifications ?? false,
+    pendingPumpTask: api.pending_pump_task ?? null,
   };
 }
 

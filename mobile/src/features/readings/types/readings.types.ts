@@ -1,27 +1,6 @@
 // Domain metric keys used across UI
 export type MetricKey = "temperature" | "humidity" | "light" | "moisture";
 
-/** Tile model already used by the UI */
-export type ReadingTileModel = {
-  id: string;
-  name: string;                 // plant display name
-  lastReadISO?: string | null;  // ISO string or null if missing
-  metrics: {
-    temperature: number | null;
-    humidity: number | null;
-    light: number | null;
-    moisture: number | null;
-  };
-  location: string | null;
-  lastPumpRunAt?: string | null;
-  pumpIncluded: boolean;
-  automaticPumpLaunch: boolean;
-  pumpThresholdPct?: number | null | undefined;
-  sendEmailWateringNotifications?: boolean;
-  sendPushWateringNotifications?: boolean;
-  status: "enabled" | "disabled";
-};
-
 /* ============================== API TYPES (from backend) ============================== */
 
 export type ApiReadingMetrics = {
@@ -49,6 +28,28 @@ export type ApiPumpTask = {
   moisture_at_request?: number | null;
   threshold_at_request?: number | null;
   error_message?: string | null;
+};
+
+/** Tile model already used by the UI */
+export type ReadingTileModel = {
+  id: string;
+  name: string;                 // plant display name
+  lastReadISO?: string | null;  // ISO string or null if missing
+  metrics: {
+    temperature: number | null;
+    humidity: number | null;
+    light: number | null;
+    moisture: number | null;
+  };
+  location: string | null;
+  lastPumpRunAt?: string | null;
+  pumpIncluded: boolean;
+  automaticPumpLaunch: boolean;
+  pumpThresholdPct?: number | null | undefined;
+  sendEmailWateringNotifications?: boolean;
+  sendPushWateringNotifications?: boolean;
+  pendingPumpTask?: ApiPumpTask | null;
+  status: "enabled" | "disabled";
 };
 
 export type ApiReadingDevice = {

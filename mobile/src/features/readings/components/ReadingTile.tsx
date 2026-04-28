@@ -140,6 +140,7 @@ function MetricColPressable({
       <View style={[s.iconCircle, { backgroundColor: color }]}>
         <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
       </View>
+
       <Text style={s.metricValue}>
         {value === null || value === undefined
           ? "—"
@@ -190,10 +191,15 @@ export default function ReadingTile({
   const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
 
   const effectivePumpIncluded = !!data.pumpIncluded;
-  const effectiveAutoPumpEnabled = autoPumpEnabled ?? data.automaticPumpLaunch ?? false;
-  const effectiveSoilMoistureThreshold = soilMoistureThreshold ?? data.pumpThresholdPct ?? 30;
-  const effectiveLastPumpLaunchDate = lastPumpLaunchDate ?? data.lastPumpRunAt ?? null;
+  const effectiveAutoPumpEnabled =
+    autoPumpEnabled ?? data.automaticPumpLaunch ?? false;
+  const effectiveSoilMoistureThreshold =
+    soilMoistureThreshold ?? data.pumpThresholdPct ?? 30;
+  const effectiveLastPumpLaunchDate =
+    lastPumpLaunchDate ?? data.lastPumpRunAt ?? null;
   const effectiveLocation = data.location ?? null;
+
+  const hasPendingWatering = Boolean(data.pendingPumpTask);
 
   const lastText = useMemo(() => {
     if (!dt) return `${tr("readings.tile.lastReadPrefix", "Last read")}: —`;
@@ -218,7 +224,7 @@ export default function ReadingTile({
 
   const lastPumpText = useMemo(() => {
     if (!effectiveLastPumpLaunchDate) {
-      return "Ostatnie uruchomienie: —";
+      return `${tr("readings.tile.lastPumpRunPrefix", "Last pump run")}: —`;
     }
 
     const pumpDate = new Date(effectiveLastPumpLaunchDate);
@@ -228,8 +234,8 @@ export default function ReadingTile({
       minute: "2-digit",
     });
 
-    return `Ostatnie uruchomienie: ${date} ${time}`;
-  }, [effectiveLastPumpLaunchDate, settings]);
+    return `${tr("readings.tile.lastPumpRunPrefix", "Last pump run")}: ${date} ${time}`;
+  }, [effectiveLastPumpLaunchDate, settings, tr]);
 
   return (
     <View style={s.cardWrap}>
@@ -369,11 +375,12 @@ export default function ReadingTile({
 
           <View style={pumpStyles.autoPumpContainer}>
             <View style={pumpStyles.autoPumpTextContainer}>
-              <Text style={pumpStyles.autoPumpLabel}>Automatyczna pompa</Text>
+              <Text style={pumpStyles.autoPumpLabel}>Automatic pump</Text>
               <Text style={pumpStyles.autoPumpSubtext}>
-                Gdy wilgotność gleby &lt;{effectiveSoilMoistureThreshold}%
+                When soil moisture &lt; {effectiveSoilMoistureThreshold}%
               </Text>
             </View>
+
             <Switch
               value={!!effectiveAutoPumpEnabled}
               onValueChange={onAutoPumpToggle}
@@ -394,13 +401,18 @@ export default function ReadingTile({
           <Pressable
             style={({ pressed }) => [
               pumpStyles.launchButton,
+              hasPendingWatering && pumpStyles.unscheduleButton,
               pressed && pumpStyles.launchButtonPressed,
             ]}
             onPress={onLaunchPump}
             disabled={isLaunchingPump}
           >
             <Text style={pumpStyles.launchButtonText}>
-              {isLaunchingPump ? "Otwieranie..." : "Schedule watering"}
+              {isLaunchingPump
+                ? tr("readings.tile.opening", "Opening...")
+                : hasPendingWatering
+                ? tr("readings.tile.unscheduleWatering", "Unschedule watering")
+                : tr("readings.tile.scheduleWatering", "Schedule watering")}
             </Text>
           </Pressable>
         </>
@@ -459,6 +471,9 @@ const pumpStyles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 12,
     alignItems: "center",
+  },
+  unscheduleButton: {
+    backgroundColor: "rgba(255,255,255,0.12)",
   },
   launchButtonPressed: {
     opacity: 0.85,
