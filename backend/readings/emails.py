@@ -8,6 +8,7 @@ from core.i18n import t
 
 def _get_user_lang(user) -> str:
     default = getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en"
+
     try:
         ps = getattr(user, "profile_settings", None)
         if ps and getattr(ps, "language", None):
@@ -16,7 +17,15 @@ def _get_user_lang(user) -> str:
             return lang if lang in supported else default
     except Exception:
         pass
+
     return default
+
+
+def _safe_arduino_filename(device) -> str:
+    device_id = getattr(device, "id", None) or "device"
+    device_key = getattr(device, "device_key", None) or "flovers"
+
+    return f"flovers-device-{device_id}-{device_key}.ino"
 
 
 def send_device_code_email(*, user, device, code_text: str) -> bool:
@@ -46,8 +55,17 @@ def send_device_code_email(*, user, device, code_text: str) -> bool:
             "user": user,
             "device": device,
             "device_name": device.device_name,
+            "plant_name": device.plant_name,
+            "device_key": device.device_key,
             "code_text": code_text,
             "intro_line1": intro_line1,
             "intro_line2": intro_line2,
         },
+        attachments=[
+            {
+                "filename": _safe_arduino_filename(device),
+                "content": code_text.encode("utf-8"),
+                "mimetype": "text/x-arduino",
+            }
+        ],
     )
