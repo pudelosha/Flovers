@@ -32,6 +32,7 @@ import {
 } from "../../../../api/services/plant-recognition.service";
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 type Props = {
   visible: boolean;
@@ -55,19 +56,24 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
 
 function toPercent(prob01: number | undefined | null): string | null {
   if (prob01 === null || prob01 === undefined) return null;
+
   const n = Number(prob01);
   if (!Number.isFinite(n)) return null;
 
   const pct = Math.max(0, Math.min(1, n)) * 100;
   const rounded = Math.round(pct);
+
   if (Math.abs(pct - rounded) < 0.05) return `${rounded}%`;
+
   return `${Math.round(pct * 10) / 10}%`;
 }
 
 function toPercentNumber(prob01: number | undefined | null): number {
   if (prob01 === null || prob01 === undefined) return 0;
+
   const n = Number(prob01);
   if (!Number.isFinite(n)) return 0;
+
   return Math.max(0, Math.min(1, n)) * 100;
 }
 
@@ -100,6 +106,8 @@ export default function PlantScannerModal({
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
 
+  void settings;
+
   const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [isPicking, setIsPicking] = useState(false);
   const [isRecognizing, setIsRecognizing] = useState(false);
@@ -119,8 +127,11 @@ export default function PlantScannerModal({
 
   const getTranslation = useCallback(
     (key: string, fallback: string): string => {
+      void currentLanguage;
+
       const translated = t(key, { defaultValue: fallback });
       if (!translated || translated === key) return fallback;
+
       return translated;
     },
     [t, currentLanguage]
@@ -290,6 +301,7 @@ export default function PlantScannerModal({
       setIsPicking(true);
 
       const ok = await ensureAndroidPermissionCameraAndRead();
+
       if (!ok) {
         Alert.alert(i18nText.cameraRequired, i18nText.cameraPermissionMessage);
         return;
@@ -309,6 +321,7 @@ export default function PlantScannerModal({
       }
 
       const uri = res.assets?.[0]?.uri;
+
       if (uri) {
         setPhotoUri(uri);
         setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
@@ -327,6 +340,7 @@ export default function PlantScannerModal({
       setIsPicking(true);
 
       const ok = await ensureAndroidPermissionCameraAndRead();
+
       if (!ok) {
         Alert.alert(i18nText.libraryRequired, i18nText.libraryPermissionMessage);
         return;
@@ -347,6 +361,7 @@ export default function PlantScannerModal({
       }
 
       const uri = res.assets?.[0]?.uri;
+
       if (uri) {
         setPhotoUri(uri);
         setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
@@ -365,7 +380,11 @@ export default function PlantScannerModal({
       setError(null);
       setIsRecognizing(true);
 
-      const resp = await recognizePlantFromUri(photoUri, { auth: true, topk: 3 });
+      const resp = await recognizePlantFromUri(photoUri, {
+        auth: true,
+        topk: 3,
+      });
+
       const results = (resp?.results ?? []).slice(0, 3);
 
       if (results.length === 0) {
@@ -405,26 +424,39 @@ export default function PlantScannerModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
+            style={
+              {
+                position: "absolute",
+                inset: 0,
+                backgroundColor: "rgba(0,0,0,0.35)",
+              } as any
+            }
           />
         </View>
 
         <View
           style={[
             remindersStyles.promptInner,
-            { maxHeight: "86%", paddingBottom: insets.bottom || 12 },
+            {
+              maxHeight: "86%",
+              position: "relative",
+              paddingBottom: insets.bottom || 12,
+            },
           ]}
         >
           <ScrollView
             ref={scrollRef}
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[styles.scrollContent, { paddingBottom: 80 }]}
+            contentContainerStyle={[
+              styles.scrollContent,
+              {
+                paddingTop: 44,
+                paddingBottom: 120,
+              },
+            ]}
             showsVerticalScrollIndicator={false}
           >
             <Text
@@ -439,7 +471,10 @@ export default function PlantScannerModal({
 
             {stage === "photo" ? (
               <>
-                <TranslatedText text={i18nText.scanInstructions} style={wiz.subtitle} />
+                <TranslatedText
+                  text={i18nText.scanInstructions}
+                  style={wiz.subtitle}
+                />
 
                 <View style={[wiz.hero, styles.previewFrame]}>
                   {photoUri ? (
@@ -466,7 +501,11 @@ export default function PlantScannerModal({
                     style={[styles.actionCard, busy && { opacity: 0.6 }]}
                     onPress={doLaunchCamera}
                   >
-                    <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
+                    <MaterialCommunityIcons
+                      name="camera"
+                      size={24}
+                      color="#FFFFFF"
+                    />
                     <Text style={styles.actionLabel}>{i18nText.takePhoto}</Text>
                   </Pressable>
 
@@ -507,7 +546,10 @@ export default function PlantScannerModal({
                         color="#FFFFFF"
                         style={{ opacity: !photoUri ? 0.55 : 1 }}
                       />
-                      <Text style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}>
+
+                      <Text
+                        style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}
+                      >
                         {i18nText.recognize}
                       </Text>
                     </>
@@ -637,9 +679,12 @@ export default function PlantScannerModal({
                             <View
                               style={[
                                 styles.matchBarFill,
-                                { width: `${pctValue}%` },
+                                {
+                                  width: `${pctValue}%`,
+                                },
                               ]}
                             />
+
                             <View style={styles.matchBarTextOverlay}>
                               <Text style={styles.matchPercentText}>
                                 {pct ?? "0%"}
@@ -663,8 +708,10 @@ export default function PlantScannerModal({
                     style={[styles.bottomBtn, { flex: 1 }]}
                     onPress={() => {
                       if (busy) return;
+
                       setCandidates(null);
                       setError(null);
+
                       setTimeout(
                         () => scrollRef.current?.scrollTo({ y: 0, animated: true }),
                         0
@@ -686,6 +733,18 @@ export default function PlantScannerModal({
               </>
             )}
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={() => {
+              if (!busy) onClose();
+            }}
+            accessibilityLabel={i18nText.close}
+            style={{
+              top: 8,
+              right: 8,
+              opacity: busy ? 0.5 : 1,
+            }}
+          />
         </View>
       </View>
     </>
@@ -695,7 +754,6 @@ export default function PlantScannerModal({
 const styles = StyleSheet.create({
   scrollContent: {
     paddingHorizontal: 16,
-    paddingTop: 16,
   },
 
   modalTitle: {
