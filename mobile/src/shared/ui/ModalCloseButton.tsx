@@ -26,9 +26,10 @@ export default function ModalCloseButton({
       style={[
         {
           position: "absolute",
-          top: 2,
-          right: 2,
-          zIndex: 20,
+          top: 8,
+          right: 8,
+          zIndex: 999,
+          elevation: 999,
           width: size,
           height: size,
           borderRadius: size / 2,

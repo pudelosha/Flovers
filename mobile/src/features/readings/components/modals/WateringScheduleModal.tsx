@@ -186,16 +186,23 @@ export default function WateringScheduleModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
-          <ModalCloseButton
-            onPress={onClose}
-            accessibilityLabel={tr("readingsModals.common.close", "Close")}
-          />
-
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80, gap: 12 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+              gap: 12,
+            }}
           >
             <Text style={s.promptTitle}>
               {tr("readingsModals.wateringSchedule.title", "Schedule watering")}
@@ -387,6 +394,15 @@ export default function WateringScheduleModal({
               </View>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onClose}
+            accessibilityLabel={tr("readingsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>

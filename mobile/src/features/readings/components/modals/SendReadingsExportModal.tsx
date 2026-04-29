@@ -3,6 +3,8 @@ import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 import { s } from "../../../reminders/styles/reminders.styles";
 import type {
   ReadingsExportEmailRequest,
@@ -91,6 +93,7 @@ export default function SendReadingsExportModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -102,11 +105,22 @@ export default function SendReadingsExportModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 92 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>
               {t("readingsModals.export.title")}
@@ -132,6 +146,7 @@ export default function SendReadingsExportModal({
               >
                 {t("readingsModals.export.noticeTitle")}
               </Text>
+
               <Text
                 style={{
                   color: "rgba(255,255,255,0.92)",
@@ -150,6 +165,7 @@ export default function SendReadingsExportModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.export.plantLabel")}
             </Text>
+
             <View style={[s.input, { justifyContent: "center" }]}>
               <Text style={{ color: "#FFFFFF", fontWeight: "700" }}>
                 {plantValue}
@@ -159,6 +175,7 @@ export default function SendReadingsExportModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.export.locationLabel")}
             </Text>
+
             <View style={[s.input, { justifyContent: "center" }]}>
               <Text style={{ color: "#FFFFFF", fontWeight: "700" }}>
                 {locationValue}
@@ -168,6 +185,7 @@ export default function SendReadingsExportModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.export.statusLabel")}
             </Text>
+
             <View style={[s.input, { justifyContent: "center" }]}>
               <Text style={{ color: "#FFFFFF", fontWeight: "700" }}>
                 {statusValue}
@@ -177,6 +195,7 @@ export default function SendReadingsExportModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.export.sortByLabel")}
             </Text>
+
             <View style={[s.input, { justifyContent: "center" }]}>
               <Text style={{ color: "#FFFFFF", fontWeight: "700" }}>
                 {sortKeyValue}
@@ -186,6 +205,7 @@ export default function SendReadingsExportModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.export.directionLabel")}
             </Text>
+
             <View style={[s.input, { justifyContent: "center" }]}>
               <Text style={{ color: "#FFFFFF", fontWeight: "700" }}>
                 {sortDirValue}
@@ -214,6 +234,16 @@ export default function SendReadingsExportModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={sending ? () => {} : onCancel}
+            accessibilityLabel={t("readingsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+              opacity: sending ? 0.5 : 1,
+            }}
+          />
         </View>
       </View>
     </>

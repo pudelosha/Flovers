@@ -6,6 +6,8 @@ import Clipboard from "@react-native-clipboard/clipboard";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
 
@@ -134,11 +136,23 @@ export default function DeviceDetailsModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80, gap: 12 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+              gap: 12,
+            }}
           >
             <Text style={s.promptTitle}>
               {tr("readingsModals.deviceDetails.title", "Device details")}
@@ -163,7 +177,10 @@ export default function DeviceDetailsModal({
                   }}
                 >
                   <Text style={s.dropdownValue}>
-                    {tr("readingsModals.deviceDetails.loading", "Loading device details...")}
+                    {tr(
+                      "readingsModals.deviceDetails.loading",
+                      "Loading device details..."
+                    )}
                   </Text>
                 </View>
               ) : (
@@ -239,6 +256,7 @@ export default function DeviceDetailsModal({
                               size={18}
                               color="#fff"
                             />
+
                             <Text style={s.dropdownValue}>{item}</Text>
                           </View>
                         ))
@@ -281,6 +299,7 @@ export default function DeviceDetailsModal({
                     }}
                   >
                     <MaterialCommunityIcons name="email-outline" size={18} color="#fff" />
+
                     <Text style={s.promptPrimaryText}>
                       {sending
                         ? tr("readingsModals.deviceDetails.emailingCode", "Sending...")
@@ -299,6 +318,15 @@ export default function DeviceDetailsModal({
               </View>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onClose}
+            accessibilityLabel={tr("readingsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>

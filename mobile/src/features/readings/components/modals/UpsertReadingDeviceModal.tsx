@@ -13,6 +13,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Clipboard from "@react-native-clipboard/clipboard";
 import { useTranslation } from "react-i18next";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 // Match the Edit Plant modal styling:
 import { s as sp } from "../../../plants/styles/plants.styles"; // dropdown / inputs styles
 import { prompts as pr } from "../../../profile/styles/profile.styles"; // prompt chrome (backdrop/sheet/buttons)
@@ -349,6 +351,7 @@ export default function UpsertReadingDeviceModal({
   return (
     <>
       <Pressable style={pr.backdrop} onPress={onCancel} />
+
       <View style={pr.promptWrap}>
         <View style={pr.promptGlass}>
           <BlurView
@@ -357,21 +360,35 @@ export default function UpsertReadingDeviceModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            } as any}
+            style={
+              {
+                position: "absolute",
+                inset: 0,
+                backgroundColor: "rgba(0,0,0,0.35)",
+              } as any
+            }
           />
         </View>
 
-        <View style={[pr.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            pr.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={pr.promptTitle}>{title}</Text>
 
@@ -387,12 +404,14 @@ export default function UpsertReadingDeviceModal({
                     ? selectedPlant.name
                     : t("readingsModals.upsert.selectPlant")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={plantOpen ? "chevron-up" : "chevron-down"}
                   size={20}
                   color="#FFFFFF"
                 />
               </Pressable>
+
               {plantOpen && (
                 <View style={sp.dropdownList}>
                   {plants.map((p) => (
@@ -402,10 +421,14 @@ export default function UpsertReadingDeviceModal({
                       onPress={() => {
                         setPlantId(p.id);
                         setPlantOpen(false);
-                        if (!(name || "").trim()) setName(buildNameFromPlant(p)); // auto-fill only if empty
+
+                        if (!(name || "").trim()) {
+                          setName(buildNameFromPlant(p));
+                        }
                       }}
                     >
                       <Text style={sp.dropdownItemText}>{p.name}</Text>
+
                       {plantId === p.id && (
                         <MaterialCommunityIcons
                           name="check"
@@ -453,9 +476,11 @@ export default function UpsertReadingDeviceModal({
 
             {/* Sensors Section */}
             <View style={styles.separatorLine} />
+
             <Text style={styles.sectionHeader}>
               {t("readingsModals.upsert.sensors")}
             </Text>
+
             <View style={{ gap: 10, marginHorizontal: 16, marginTop: 6 }}>
               <RowSwitch
                 label={t("readingsModals.upsert.sensorTemperature")}
@@ -463,18 +488,21 @@ export default function UpsertReadingDeviceModal({
                 onValueChange={setSensorTemp}
                 weight="600"
               />
+
               <RowSwitch
                 label={t("readingsModals.upsert.sensorHumidity")}
                 value={sensorHum}
                 onValueChange={setSensorHum}
                 weight="600"
               />
+
               <RowSwitch
                 label={t("readingsModals.upsert.sensorLight")}
                 value={sensorLight}
                 onValueChange={setSensorLight}
                 weight="600"
               />
+
               <RowSwitch
                 label={t("readingsModals.upsert.sensorSoilMoisture")}
                 value={sensorMoist}
@@ -485,9 +513,11 @@ export default function UpsertReadingDeviceModal({
 
             {/* Water Pump Section */}
             <View style={styles.separatorLine} />
+
             <Text style={styles.sectionHeader}>
               {t("readingsModals.upsert.waterPump")}
             </Text>
+
             <View style={{ marginHorizontal: 16 }}>
               <RowSwitch
                 label={t("readingsModals.upsert.pumpIncluded")}
@@ -530,6 +560,7 @@ export default function UpsertReadingDeviceModal({
                     }
                     style={{ flex: 1 }}
                   />
+
                   <Text
                     style={{
                       color: "#fff",
@@ -545,6 +576,7 @@ export default function UpsertReadingDeviceModal({
 
             {/* Notifications Section */}
             <View style={styles.separatorLine} />
+
             <Text style={styles.sectionHeader}>
               {t("readingsModals.upsert.notifications")}
             </Text>
@@ -600,6 +632,7 @@ export default function UpsertReadingDeviceModal({
                     }}
                     style={{ flex: 1 }}
                   />
+
                   <Text
                     style={{
                       color: "#fff",
@@ -652,6 +685,7 @@ export default function UpsertReadingDeviceModal({
                     {t("readingsModals.common.cancel")}
                   </Text>
                 </Pressable>
+
                 <Pressable
                   style={[
                     pr.promptBtn,
@@ -668,6 +702,15 @@ export default function UpsertReadingDeviceModal({
               </View>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={t("readingsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
@@ -698,6 +741,7 @@ function RowSwitch({
       <Text style={[sp.dropdownItemText, { fontWeight: weight as any }]}>
         {label}
       </Text>
+
       <Switch value={value} onValueChange={onValueChange} />
     </View>
   );

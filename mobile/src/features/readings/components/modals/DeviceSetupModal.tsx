@@ -15,6 +15,8 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { LANGS } from "../../../../i18n/locales/index";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
 
@@ -133,11 +135,23 @@ export default function DeviceSetupModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80, gap: 12 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+              gap: 12,
+            }}
           >
             <Text style={s.promptTitle}>
               {t("readingsModals.deviceSetup.title")}
@@ -237,6 +251,15 @@ export default function DeviceSetupModal({
               </View>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onClose}
+            accessibilityLabel={t("readingsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
 

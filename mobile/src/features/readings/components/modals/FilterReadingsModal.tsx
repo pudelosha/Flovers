@@ -4,6 +4,8 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 // Reuse Reminders modal look & feel
 import { s } from "../../../reminders/styles/reminders.styles";
 
@@ -85,6 +87,7 @@ export default function FilterReadingsModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -96,18 +99,36 @@ export default function FilterReadingsModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              height: "86%",
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
+            style={{ flex: 1 }}
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
-            <Text style={s.promptTitle}>{t("readingsModals.filter.title")}</Text>
+            <Text style={s.promptTitle}>
+              {t("readingsModals.filter.title")}
+            </Text>
 
             {/* Plant dropdown */}
             <Text style={s.inputLabel}>
               {t("readingsModals.filter.plantLabel")}
             </Text>
+
             <View style={s.dropdown}>
               <Pressable
                 style={s.dropdownHeader}
@@ -124,6 +145,7 @@ export default function FilterReadingsModal({
                       t("readingsModals.filter.selectPlant")
                     : t("readingsModals.filter.anyPlant")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={plantOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -144,6 +166,7 @@ export default function FilterReadingsModal({
                     <Text style={s.dropdownItemText}>
                       {t("readingsModals.filter.anyPlant")}
                     </Text>
+
                     {!plantId && (
                       <MaterialCommunityIcons
                         name="check"
@@ -163,6 +186,7 @@ export default function FilterReadingsModal({
                       }}
                     >
                       <Text style={s.dropdownItemText}>{p.name}</Text>
+
                       {plantId === p.id && (
                         <MaterialCommunityIcons
                           name="check"
@@ -180,6 +204,7 @@ export default function FilterReadingsModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.filter.locationLabel")}
             </Text>
+
             <View style={s.dropdown}>
               <Pressable
                 style={s.dropdownHeader}
@@ -193,6 +218,7 @@ export default function FilterReadingsModal({
                 <Text style={s.dropdownValue}>
                   {location ? location : t("readingsModals.filter.anyLocation")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={locOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -213,6 +239,7 @@ export default function FilterReadingsModal({
                     <Text style={s.dropdownItemText}>
                       {t("readingsModals.filter.anyLocation")}
                     </Text>
+
                     {!location && (
                       <MaterialCommunityIcons
                         name="check"
@@ -232,6 +259,7 @@ export default function FilterReadingsModal({
                       }}
                     >
                       <Text style={s.dropdownItemText}>{loc}</Text>
+
                       {location === loc && (
                         <MaterialCommunityIcons
                           name="check"
@@ -249,6 +277,7 @@ export default function FilterReadingsModal({
             <Text style={s.inputLabel}>
               {t("readingsModals.filter.statusLabel")}
             </Text>
+
             <View style={s.dropdown}>
               <Pressable
                 style={s.dropdownHeader}
@@ -266,6 +295,7 @@ export default function FilterReadingsModal({
                     ? t("readingsModals.filter.statusDisabled")
                     : t("readingsModals.filter.anyStatus")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={statusOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -324,7 +354,10 @@ export default function FilterReadingsModal({
             <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
               <Pressable
                 onPress={handleClearAll}
-                style={[s.promptBtn, { backgroundColor: "rgba(255,107,107,0.22)" }]}
+                style={[
+                  s.promptBtn,
+                  { backgroundColor: "rgba(255,107,107,0.22)" },
+                ]}
               >
                 <Text
                   style={[
@@ -358,6 +391,15 @@ export default function FilterReadingsModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={t("readingsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
