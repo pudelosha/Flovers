@@ -10,6 +10,7 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 import { locStyles as s } from "../../styles/locations.styles";
 import type { LocationCategory } from "../../../create-plant/types/create-plant.types";
@@ -69,6 +70,11 @@ export default function EditLocationModal({
     scrollRef.current?.scrollTo({ y: 0, animated: true });
   };
 
+  const closeModal = () => {
+    Keyboard.dismiss();
+    onCancel();
+  };
+
   const handleSave = () => {
     if (!canSave) return;
     Keyboard.dismiss();
@@ -86,13 +92,8 @@ export default function EditLocationModal({
 
   return (
     <>
-      <Pressable
-        style={s.promptBackdrop}
-        onPress={() => {
-          Keyboard.dismiss();
-          onCancel();
-        }}
-      />
+      <Pressable style={s.promptBackdrop} onPress={closeModal} />
+
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
@@ -101,6 +102,7 @@ export default function EditLocationModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             style={
@@ -113,12 +115,27 @@ export default function EditLocationModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              height: "86%",
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             ref={scrollRef}
+            style={{ flex: 1 }}
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={{ paddingBottom: 80 }}
             showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>
               {mode === "create"
@@ -129,6 +146,7 @@ export default function EditLocationModal({
             <Text style={s.inputLabel}>
               {tr("locationsModals.edit.nameLabel", "Location name")}
             </Text>
+
             <TextInput
               style={s.input}
               placeholder={tr(
@@ -147,10 +165,17 @@ export default function EditLocationModal({
             <View style={s.segmentRow}>
               {(["indoor", "outdoor", "other"] as LocationCategory[]).map((k) => {
                 const isActive = cat === k;
+
                 return (
                   <Pressable
                     key={k}
-                    style={[s.segBtn, isActive ? s.segActive : s.segInactive]}
+                    style={[
+                      s.segBtn,
+                      isActive ? s.segActive : s.segInactive,
+                      {
+                        borderWidth: 0,
+                      },
+                    ]}
                     onPress={() => setCat(k)}
                     android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                   >
@@ -161,20 +186,18 @@ export default function EditLocationModal({
             </View>
 
             <View style={s.promptButtonsRow}>
-              <Pressable
-                style={s.promptBtn}
-                onPress={() => {
-                  Keyboard.dismiss();
-                  onCancel();
-                }}
-              >
+              <Pressable style={s.promptBtn} onPress={closeModal}>
                 <Text style={s.promptBtnText}>
                   {tr("locationsModals.common.cancel", "Cancel")}
                 </Text>
               </Pressable>
 
               <Pressable
-                style={[s.promptBtn, s.promptPrimary, !canSave && { opacity: 0.5 }]}
+                style={[
+                  s.promptBtn,
+                  s.promptPrimary,
+                  !canSave && { opacity: 0.5 },
+                ]}
                 disabled={!canSave}
                 onPress={handleSave}
               >
@@ -193,9 +216,11 @@ export default function EditLocationModal({
                 </Text>
 
                 <Text style={s.locationCat}>{categoryLabel("indoor")}</Text>
+
                 <View style={s.chipRow}>
                   {PREDEFINED_LOCATIONS.indoor.slice(0, 8).map((labelKey) => {
                     const label = suggestionLabel("indoor", labelKey);
+
                     return (
                       <Pressable
                         key={`ind-${labelKey}`}
@@ -210,9 +235,11 @@ export default function EditLocationModal({
                 </View>
 
                 <Text style={s.locationCat}>{categoryLabel("outdoor")}</Text>
+
                 <View style={s.chipRow}>
                   {PREDEFINED_LOCATIONS.outdoor.slice(0, 8).map((labelKey) => {
                     const label = suggestionLabel("outdoor", labelKey);
+
                     return (
                       <Pressable
                         key={`out-${labelKey}`}
@@ -227,9 +254,11 @@ export default function EditLocationModal({
                 </View>
 
                 <Text style={s.locationCat}>{categoryLabel("other")}</Text>
+
                 <View style={s.chipRow}>
                   {PREDEFINED_LOCATIONS.other.slice(0, 8).map((labelKey) => {
                     const label = suggestionLabel("other", labelKey);
+
                     return (
                       <Pressable
                         key={`oth-${labelKey}`}
@@ -245,6 +274,15 @@ export default function EditLocationModal({
               </>
             )}
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={closeModal}
+            accessibilityLabel={tr("locationsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
