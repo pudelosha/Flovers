@@ -14,6 +14,7 @@ import type { TaskType } from "../../types/home.types";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../constants/home.constants";
 import { useTranslation } from "react-i18next";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 let DateTimePicker: any = null;
 try {
@@ -23,11 +24,11 @@ try {
 type PlantOption = { id: string; name: string };
 
 export type HomeFilters = {
-  plantId?: string; // specific plant or undefined for Any
-  location?: string; // specific location or undefined for Any
-  types?: TaskType[]; // multi
-  dueFrom?: string; // "YYYY-MM-DD"
-  dueTo?: string; // "YYYY-MM-DD"
+  plantId?: string;
+  location?: string;
+  types?: TaskType[];
+  dueFrom?: string;
+  dueTo?: string;
 };
 
 type Props = {
@@ -51,9 +52,12 @@ const TYPE_OPTIONS: TaskType[] = [
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+
   const d = new Date(v);
   if (isNaN(+d)) return false;
+
   const [Y, M, D] = v.split("-").map(Number);
+
   return (
     d.getUTCFullYear() === Y &&
     d.getUTCMonth() + 1 === M &&
@@ -79,17 +83,30 @@ function formatDateForDisplay(iso?: string, pattern?: string) {
 
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(255,255,255,${alpha})`;
+
   if (!hex || typeof hex !== "string") return fallback;
+
   let h = hex.trim();
   if (!h.startsWith("#")) h = `#${h}`;
+
   h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+
+  if (h.length === 3) {
+    h = h
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+
   if (h.length !== 6) return fallback;
+
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
+
   const r = (bigint >> 16) & 255;
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
+
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
@@ -141,6 +158,19 @@ export default function FilterHomeTasksModal({
     );
   };
 
+  const handleClearAll = () => {
+    setPlantOpen(false);
+    setLocOpen(false);
+    setShowFromPicker(false);
+    setShowToPicker(false);
+    setTypes([]);
+    setPlantId(undefined);
+    setLocation(undefined);
+    setDueFrom("");
+    setDueTo("");
+    onClearAll();
+  };
+
   if (!visible) return null;
 
   return (
@@ -156,6 +186,7 @@ export default function FilterHomeTasksModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -167,16 +198,25 @@ export default function FilterHomeTasksModal({
           />
         </View>
 
-        {/* Sheet */}
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>{t("homeModals.filter.title")}</Text>
 
-            {/* Plant dropdown */}
             <Text style={s.inputLabel}>{t("homeModals.filter.plantLabel")}</Text>
             <View style={s.dropdown}>
               <Pressable
@@ -195,6 +235,7 @@ export default function FilterHomeTasksModal({
                       t("homeModals.filter.selectPlant")
                     : t("homeModals.filter.anyPlant")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={plantOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -215,6 +256,7 @@ export default function FilterHomeTasksModal({
                     <Text style={s.dropdownItemText}>
                       {t("homeModals.filter.anyPlant")}
                     </Text>
+
                     {!plantId && (
                       <MaterialCommunityIcons
                         name="check"
@@ -234,6 +276,7 @@ export default function FilterHomeTasksModal({
                       }}
                     >
                       <Text style={s.dropdownItemText}>{p.name}</Text>
+
                       {plantId === p.id && (
                         <MaterialCommunityIcons
                           name="check"
@@ -247,7 +290,6 @@ export default function FilterHomeTasksModal({
               )}
             </View>
 
-            {/* Location dropdown */}
             <Text style={s.inputLabel}>
               {t("homeModals.filter.locationLabel")}
             </Text>
@@ -265,6 +307,7 @@ export default function FilterHomeTasksModal({
                 <Text style={s.dropdownValue}>
                   {location ? location : t("homeModals.filter.anyLocation")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={locOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -285,6 +328,7 @@ export default function FilterHomeTasksModal({
                     <Text style={s.dropdownItemText}>
                       {t("homeModals.filter.anyLocation")}
                     </Text>
+
                     {!location && (
                       <MaterialCommunityIcons
                         name="check"
@@ -304,6 +348,7 @@ export default function FilterHomeTasksModal({
                       }}
                     >
                       <Text style={s.dropdownItemText}>{loc}</Text>
+
                       {location === loc && (
                         <MaterialCommunityIcons
                           name="check"
@@ -317,7 +362,6 @@ export default function FilterHomeTasksModal({
               )}
             </View>
 
-            {/* Types (chips) */}
             <Text style={s.inputLabel}>
               {t("homeModals.filter.taskTypesLabel")}
             </Text>
@@ -360,11 +404,8 @@ export default function FilterHomeTasksModal({
                       },
                     ]}
                   >
-                    <MaterialCommunityIcons
-                      name={icon}
-                      size={16}
-                      color={tint}
-                    />
+                    <MaterialCommunityIcons name={icon} size={16} color={tint} />
+
                     <Text
                       style={[
                         s.chipText,
@@ -380,14 +421,12 @@ export default function FilterHomeTasksModal({
               })}
             </View>
 
-            {/* Due date range */}
             <Text style={[s.inputLabel, { marginTop: 12 }]}>
               {t("homeModals.filter.dueDateRangeLabel")}
             </Text>
 
             <View style={s.inlineRow}>
               <View style={s.inlineHalfLeft}>
-
                 <Pressable
                   onPress={() => {
                     setPlantOpen(false);
@@ -447,7 +486,6 @@ export default function FilterHomeTasksModal({
               </View>
 
               <View style={s.inlineHalfRight}>
-
                 <Pressable
                   onPress={() => {
                     setPlantOpen(false);
@@ -507,9 +545,8 @@ export default function FilterHomeTasksModal({
               </View>
             </View>
 
-            {/* Footer */}
             <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
-              <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
+              <Pressable onPress={handleClearAll} style={[s.promptBtn, s.promptDanger]}>
                 <Text
                   style={[
                     s.promptBtnText,
@@ -544,6 +581,15 @@ export default function FilterHomeTasksModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={t("homeModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
