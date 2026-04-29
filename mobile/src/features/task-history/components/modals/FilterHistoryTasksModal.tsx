@@ -10,6 +10,7 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import { s } from "../../styles/task-history.styles";
 import type { TaskType } from "../../../home/types/home.types";
 import {
@@ -18,7 +19,6 @@ import {
 } from "../../../home/constants/home.constants";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-// Optional datetime picker
 let DateTimePicker: any = null;
 try {
   DateTimePicker = require("@react-native-community/datetimepicker").default;
@@ -30,8 +30,8 @@ export type HistoryFilters = {
   plantId?: string;
   location?: string;
   types?: TaskType[];
-  completedFrom?: string; // "YYYY-MM-DD"
-  completedTo?: string; // "YYYY-MM-DD"
+  completedFrom?: string;
+  completedTo?: string;
 };
 
 type Props = {
@@ -55,9 +55,12 @@ const TYPE_OPTIONS: TaskType[] = [
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+
   const d = new Date(v);
   if (isNaN(+d)) return false;
+
   const [Y, M, D] = v.split("-").map(Number);
+
   return (
     d.getUTCFullYear() === Y &&
     d.getUTCMonth() + 1 === M &&
@@ -84,16 +87,28 @@ function formatDateForDisplay(iso?: string, pattern?: string) {
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(255,255,255,${alpha})`;
   if (!hex || typeof hex !== "string") return fallback;
+
   let h = hex.trim();
   if (!h.startsWith("#")) h = `#${h}`;
+
   h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+
+  if (h.length === 3) {
+    h = h
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+
   if (h.length !== 6) return fallback;
+
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
+
   const r = (bigint >> 16) & 255;
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
+
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
@@ -177,6 +192,7 @@ export default function FilterHistoryTasksModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -188,17 +204,28 @@ export default function FilterHistoryTasksModal({
           />
         </View>
 
-        <View style={[s.promptInner, s.promptInner28, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            s.promptInner28,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>
               {t("taskHistoryModals.filter.title")}
             </Text>
 
-            {/* Plant dropdown */}
             <Text style={s.inputLabel}>
               {t("taskHistoryModals.filter.plantLabel")}
             </Text>
@@ -219,6 +246,7 @@ export default function FilterHistoryTasksModal({
                       t("taskHistoryModals.common.selectPlant")
                     : t("taskHistoryModals.filter.anyPlant")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={plantOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -239,6 +267,7 @@ export default function FilterHistoryTasksModal({
                     <Text style={s.dropdownItemText}>
                       {t("taskHistoryModals.filter.anyPlant")}
                     </Text>
+
                     {!plantId && (
                       <MaterialCommunityIcons
                         name="check"
@@ -258,6 +287,7 @@ export default function FilterHistoryTasksModal({
                       }}
                     >
                       <Text style={s.dropdownItemText}>{p.name}</Text>
+
                       {plantId === p.id && (
                         <MaterialCommunityIcons
                           name="check"
@@ -271,7 +301,6 @@ export default function FilterHistoryTasksModal({
               )}
             </View>
 
-            {/* Location dropdown */}
             <Text style={s.inputLabel}>
               {t("taskHistoryModals.filter.locationLabel")}
             </Text>
@@ -291,6 +320,7 @@ export default function FilterHistoryTasksModal({
                     ? location
                     : t("taskHistoryModals.filter.anyLocation")}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={locOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -311,6 +341,7 @@ export default function FilterHistoryTasksModal({
                     <Text style={s.dropdownItemText}>
                       {t("taskHistoryModals.filter.anyLocation")}
                     </Text>
+
                     {!location && (
                       <MaterialCommunityIcons
                         name="check"
@@ -330,6 +361,7 @@ export default function FilterHistoryTasksModal({
                       }}
                     >
                       <Text style={s.dropdownItemText}>{loc}</Text>
+
                       {location === loc && (
                         <MaterialCommunityIcons
                           name="check"
@@ -343,7 +375,6 @@ export default function FilterHistoryTasksModal({
               )}
             </View>
 
-            {/* Task type chips */}
             <Text style={s.inputLabel}>
               {t("taskHistoryModals.filter.taskTypesLabel")}
             </Text>
@@ -386,11 +417,8 @@ export default function FilterHistoryTasksModal({
                       },
                     ]}
                   >
-                    <MaterialCommunityIcons
-                      name={icon}
-                      size={16}
-                      color={tint}
-                    />
+                    <MaterialCommunityIcons name={icon} size={16} color={tint} />
+
                     <Text
                       style={[
                         s.chipText,
@@ -406,7 +434,6 @@ export default function FilterHistoryTasksModal({
               })}
             </View>
 
-            {/* Completed date range */}
             <Text style={[s.inputLabel, { marginTop: 12 }]}>
               {t("taskHistoryModals.filter.completedDateRangeLabel")}
             </Text>
@@ -537,7 +564,6 @@ export default function FilterHistoryTasksModal({
               </View>
             </View>
 
-            {/* Footer */}
             <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
               <Pressable
                 onPress={handleClearAll}
@@ -546,7 +572,10 @@ export default function FilterHistoryTasksModal({
                 <Text
                   style={[
                     s.promptBtnText,
-                    { color: "#FF6B6B", fontWeight: "800" },
+                    {
+                      color: "#FF6B6B",
+                      fontWeight: "800",
+                    },
                   ]}
                 >
                   {t("taskHistoryModals.filter.clear")}
@@ -577,6 +606,15 @@ export default function FilterHistoryTasksModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={t("taskHistoryModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>

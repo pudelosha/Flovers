@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import { s } from "../../styles/task-history.styles";
 
 export type HistorySortKey = "completedAt" | "plant" | "location";
@@ -47,8 +48,8 @@ export default function SortHistoryTasksModal({
     k === "completedAt"
       ? t("taskHistoryModals.sort.keys.completedAt")
       : k === "plant"
-        ? t("taskHistoryModals.sort.keys.plant")
-        : t("taskHistoryModals.sort.keys.location");
+      ? t("taskHistoryModals.sort.keys.plant")
+      : t("taskHistoryModals.sort.keys.location");
 
   return (
     <>
@@ -63,122 +64,209 @@ export default function SortHistoryTasksModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            }}
           />
         </View>
 
-        <View style={[s.promptInner, s.promptInner28]}>
-          <Text style={s.promptTitle}>{t("taskHistoryModals.sort.title")}</Text>
+        <View
+          style={[
+            s.promptInner,
+            s.promptInner28,
+            {
+              height: "86%",
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
+          <ScrollView
+            style={{ flex: 1 }}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
+          >
+            <Text style={s.promptTitle}>
+              {t("taskHistoryModals.sort.title")}
+            </Text>
 
-          {/* Sort key dropdown */}
-          <Text style={s.inputLabel}>{t("taskHistoryModals.sort.sortByLabel")}</Text>
-          <View style={s.dropdown}>
-            <Pressable
-              style={[s.dropdownHeader, s.flatDropdownHeader]}
-              onPress={() => {
-                setDirOpen(false);
-                setKeyOpen((o) => !o);
-              }}
-              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-            >
-              <Text style={s.dropdownValue}>{sortKeyLabel}</Text>
-              <MaterialCommunityIcons
-                name={keyOpen ? "chevron-up" : "chevron-down"}
-                size={20}
-                color="#FFFFFF"
-              />
-            </Pressable>
+            <Text style={s.inputLabel}>
+              {t("taskHistoryModals.sort.sortByLabel")}
+            </Text>
+            <View style={s.dropdown}>
+              <Pressable
+                style={[s.dropdownHeader, s.flatDropdownHeader]}
+                onPress={() => {
+                  setDirOpen(false);
+                  setKeyOpen((o) => !o);
+                }}
+                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+              >
+                <Text style={s.dropdownValue}>{sortKeyLabel}</Text>
 
-            {keyOpen && (
-              <View style={[s.dropdownList, s.flatDropdownList]}>
-                {([
-                  { key: "completedAt", label: t("taskHistoryModals.sort.keys.completedAt") },
-                  { key: "plant", label: t("taskHistoryModals.sort.keys.plant") },
-                  { key: "location", label: t("taskHistoryModals.sort.keys.location") },
-                ] as const).map((opt) => (
-                  <Pressable
-                    key={opt.key}
-                    style={[s.dropdownItem, s.flatDropdownItem]}
-                    onPress={() => {
-                      setK(opt.key);
-                      setKeyOpen(false);
-                    }}
+                <MaterialCommunityIcons
+                  name={keyOpen ? "chevron-up" : "chevron-down"}
+                  size={20}
+                  color="#FFFFFF"
+                />
+              </Pressable>
+
+              {keyOpen && (
+                <View style={[s.dropdownList, s.flatDropdownList]}>
+                  {([
+                    {
+                      key: "completedAt",
+                      label: t("taskHistoryModals.sort.keys.completedAt"),
+                    },
+                    {
+                      key: "plant",
+                      label: t("taskHistoryModals.sort.keys.plant"),
+                    },
+                    {
+                      key: "location",
+                      label: t("taskHistoryModals.sort.keys.location"),
+                    },
+                  ] as const).map((opt) => (
+                    <Pressable
+                      key={opt.key}
+                      style={[s.dropdownItem, s.flatDropdownItem]}
+                      onPress={() => {
+                        setK(opt.key);
+                        setKeyOpen(false);
+                      }}
+                    >
+                      <Text style={s.dropdownItemText}>{opt.label}</Text>
+
+                      {k === opt.key && (
+                        <MaterialCommunityIcons
+                          name="check"
+                          size={18}
+                          color="#FFFFFF"
+                        />
+                      )}
+                    </Pressable>
+                  ))}
+                </View>
+              )}
+            </View>
+
+            <Text style={s.inputLabel}>
+              {t("taskHistoryModals.sort.directionLabel")}
+            </Text>
+            <View style={s.dropdown}>
+              <Pressable
+                style={[s.dropdownHeader, s.flatDropdownHeader]}
+                onPress={() => {
+                  setKeyOpen(false);
+                  setDirOpen((o) => !o);
+                }}
+                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+              >
+                <Text style={s.dropdownValue}>
+                  {d === "asc"
+                    ? t("taskHistoryModals.sort.directions.asc")
+                    : t("taskHistoryModals.sort.directions.desc")}
+                </Text>
+
+                <MaterialCommunityIcons
+                  name={dirOpen ? "chevron-up" : "chevron-down"}
+                  size={20}
+                  color="#FFFFFF"
+                />
+              </Pressable>
+
+              {dirOpen && (
+                <View style={[s.dropdownList, s.flatDropdownList]}>
+                  {([
+                    {
+                      key: "asc",
+                      label: t("taskHistoryModals.sort.directions.asc"),
+                    },
+                    {
+                      key: "desc",
+                      label: t("taskHistoryModals.sort.directions.desc"),
+                    },
+                  ] as const).map((opt) => (
+                    <Pressable
+                      key={opt.key}
+                      style={[s.dropdownItem, s.flatDropdownItem]}
+                      onPress={() => {
+                        setD(opt.key);
+                        setDirOpen(false);
+                      }}
+                    >
+                      <Text style={s.dropdownItemText}>{opt.label}</Text>
+
+                      {d === opt.key && (
+                        <MaterialCommunityIcons
+                          name="check"
+                          size={18}
+                          color="#FFFFFF"
+                        />
+                      )}
+                    </Pressable>
+                  ))}
+                </View>
+              )}
+            </View>
+
+            <View style={s.promptButtonsRow}>
+              {onReset ? (
+                <Pressable
+                  onPress={onReset}
+                  style={[s.promptBtn, s.promptDanger]}
+                >
+                  <Text
+                    style={[
+                      s.promptBtnText,
+                      {
+                        color: "#FF6B6B",
+                        fontWeight: "800",
+                      },
+                    ]}
                   >
-                    <Text style={s.dropdownItemText}>{opt.label}</Text>
-                    {k === opt.key && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                    )}
-                  </Pressable>
-                ))}
-              </View>
-            )}
-          </View>
+                    {t("taskHistoryModals.sort.reset")}
+                  </Text>
+                </Pressable>
+              ) : null}
 
-          {/* Direction dropdown */}
-          <Text style={s.inputLabel}>{t("taskHistoryModals.sort.directionLabel")}</Text>
-          <View style={s.dropdown}>
-            <Pressable
-              style={[s.dropdownHeader, s.flatDropdownHeader]}
-              onPress={() => {
-                setKeyOpen(false);
-                setDirOpen((o) => !o);
-              }}
-              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-            >
-              <Text style={s.dropdownValue}>
-                {d === "asc"
-                  ? t("taskHistoryModals.sort.directions.asc")
-                  : t("taskHistoryModals.sort.directions.desc")}
-              </Text>
-              <MaterialCommunityIcons
-                name={dirOpen ? "chevron-up" : "chevron-down"}
-                size={20}
-                color="#FFFFFF"
-              />
-            </Pressable>
-
-            {dirOpen && (
-              <View style={[s.dropdownList, s.flatDropdownList]}>
-                {([
-                  { key: "asc", label: t("taskHistoryModals.sort.directions.asc") },
-                  { key: "desc", label: t("taskHistoryModals.sort.directions.desc") },
-                ] as const).map((opt) => (
-                  <Pressable
-                    key={opt.key}
-                    style={[s.dropdownItem, s.flatDropdownItem]}
-                    onPress={() => {
-                      setD(opt.key);
-                      setDirOpen(false);
-                    }}
-                  >
-                    <Text style={s.dropdownItemText}>{opt.label}</Text>
-                    {d === opt.key && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                    )}
-                  </Pressable>
-                ))}
-              </View>
-            )}
-          </View>
-
-          <View style={s.promptButtonsRow}>
-            {onReset ? (
-              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
-                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                  {t("taskHistoryModals.sort.reset")}
+              <Pressable onPress={onCancel} style={s.promptBtn}>
+                <Text style={s.promptBtnText}>
+                  {t("taskHistoryModals.common.cancel")}
                 </Text>
               </Pressable>
-            ) : null}
-            <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>{t("taskHistoryModals.common.cancel")}</Text>
-            </Pressable>
-            <Pressable onPress={() => onApply(k, d)} style={[s.promptBtn, s.promptPrimary]}>
-              <Text style={s.promptPrimaryText}>{t("taskHistoryModals.common.apply")}</Text>
-            </Pressable>
-          </View>
+
+              <Pressable
+                onPress={() => onApply(k, d)}
+                style={[s.promptBtn, s.promptPrimary]}
+              >
+                <Text style={s.promptPrimaryText}>
+                  {t("taskHistoryModals.common.apply")}
+                </Text>
+              </Pressable>
+            </View>
+          </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={t("taskHistoryModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>

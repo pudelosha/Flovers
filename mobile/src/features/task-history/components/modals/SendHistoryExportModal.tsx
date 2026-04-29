@@ -3,6 +3,7 @@ import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 import { useSettings } from "../../../../app/providers/SettingsProvider";
 import { s } from "../../styles/task-history.styles";
@@ -25,9 +26,12 @@ type Props = {
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+
   const d = new Date(v);
   if (isNaN(+d)) return false;
+
   const [Y, M, D] = v.split("-").map(Number);
+
   return (
     d.getUTCFullYear() === Y &&
     d.getUTCMonth() + 1 === M &&
@@ -138,6 +142,7 @@ export default function SendHistoryExportModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -149,11 +154,23 @@ export default function SendHistoryExportModal({
           />
         </View>
 
-        <View style={[s.promptInner, s.promptInner28, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            s.promptInner28,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 92 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>
               {t("taskHistoryModals.export.title")}
@@ -178,6 +195,7 @@ export default function SendHistoryExportModal({
                 color="#FFFFFF"
                 style={{ marginTop: 1 }}
               />
+
               <View style={{ flex: 1 }}>
                 <Text
                   style={{
@@ -189,6 +207,7 @@ export default function SendHistoryExportModal({
                 >
                   {t("taskHistoryModals.export.noticeTitle")}
                 </Text>
+
                 <Text
                   style={{
                     color: "rgba(255,255,255,0.92)",
@@ -272,35 +291,36 @@ export default function SendHistoryExportModal({
               </Text>
             </View>
 
-<Pressable
-  onPress={sending ? undefined : () => setIncludePending((v) => !v)}
-  style={{
-    flexDirection: "row",
-    alignItems: "center",
-    marginHorizontal: 16,
-    marginTop: 12,
-    marginBottom: 4,
-  }}
->
-  <MaterialCommunityIcons
-    name={includePending ? "checkbox-marked" : "checkbox-blank-outline"}
-    size={22}
-    color="#FFFFFF"
-    style={{ marginRight: 10 }}
-  />
+            <Pressable
+              onPress={sending ? undefined : () => setIncludePending((v) => !v)}
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                marginHorizontal: 16,
+                marginTop: 12,
+                marginBottom: 4,
+                opacity: sending ? 0.6 : 1,
+              }}
+            >
+              <MaterialCommunityIcons
+                name={includePending ? "checkbox-marked" : "checkbox-blank-outline"}
+                size={22}
+                color="#FFFFFF"
+                style={{ marginRight: 10 }}
+              />
 
-  <Text
-    style={{
-      flex: 1,
-      color: "#FFFFFF",
-      fontWeight: "700",
-      fontSize: 13,
-      lineHeight: 18,
-    }}
-  >
-    {t("taskHistoryModals.export.includePending")}
-  </Text>
-</Pressable>
+              <Text
+                style={{
+                  flex: 1,
+                  color: "#FFFFFF",
+                  fontWeight: "700",
+                  fontSize: 13,
+                  lineHeight: 18,
+                }}
+              >
+                {t("taskHistoryModals.export.includePending")}
+              </Text>
+            </Pressable>
 
             <View style={[s.promptButtonsRow, { marginTop: 6, marginBottom: 12 }]}>
               <Pressable
@@ -324,6 +344,18 @@ export default function SendHistoryExportModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={() => {
+              if (!sending) onCancel();
+            }}
+            accessibilityLabel={t("taskHistoryModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+              opacity: sending ? 0.5 : 1,
+            }}
+          />
         </View>
       </View>
     </>
