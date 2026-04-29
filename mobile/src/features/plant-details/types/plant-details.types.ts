@@ -1,4 +1,5 @@
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
+import type { ApiPumpTask } from "../../readings/types/readings.types";
 
 /**
  * Metrics supported by the readings backend.
@@ -23,6 +24,22 @@ export type PlantSensorsConfig = {
   humidity?: boolean;
   light?: boolean;
   moisture?: boolean;
+};
+
+export type PlantReadingDeviceSummary = {
+  id: number;
+  plant: number | null;
+  plantName?: string | null;
+  plantLocation?: string | null;
+  deviceName: string;
+  isActive: boolean;
+
+  pumpIncluded: boolean;
+  automaticPumpLaunch: boolean;
+  pumpThresholdPct?: number | null;
+  lastPumpRunAt?: string | null;
+  lastPumpRunSource?: "manual" | "automatic" | null;
+  pendingPumpTask?: ApiPumpTask | null;
 };
 
 /**
@@ -60,10 +77,11 @@ export type PlantReminderSummary = {
 /**
  * Composite object consumed by PlantDetailsScreen:
  * - plant: full editable payload
- * - latestReadings: latest device snapshot for this plant (if any)
+ * - latestReadings: latest device snapshot for this plant, if any
  * - deviceLinked: whether a ReadingDevice is linked to this plant
  * - deviceName: optional device name for UI
  * - sensors: which metrics are enabled on the device
+ * - readingDevice: linked ReadingDevice summary, including pump fields
  * - reminders: upcoming reminder tasks for this plant
  */
 export type PlantDetailsComposite = {
@@ -73,6 +91,8 @@ export type PlantDetailsComposite = {
   deviceLinked: boolean;
   deviceName?: string | null;
   sensors: PlantSensorsConfig;
+
+  readingDevice?: PlantReadingDeviceSummary | null;
 
   reminders: PlantReminderSummary[];
 };

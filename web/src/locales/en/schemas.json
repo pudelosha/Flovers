@@ -4,52 +4,154 @@
     "copied": "Copied"
   },
   "title": "Device API & wiring",
-  "lead": "This page documents how devices integrate with Flovers. Devices send sensor readings to the ingest endpoint and can read the latest device feed from the feed endpoint, for example to trigger actions such as launching a water pump. You’ll also find the payload format, a generated Arduino firmware example for sending readings, and a simple ESP32/Arduino control example for reading the device feed and activating watering.",
+  "lead": "This page documents how IoT devices integrate with Flovers. Devices can send environmental readings to the backend, check whether a manual watering job has been scheduled from the mobile app, and report completed pump runs back to Flovers. The generated Arduino/ESP firmware can support both readings and watering control in one sketch.",
+  "overview": {
+    "title": "What the generated firmware does",
+    "intro": "The generated firmware can connect to Wi-Fi, synchronize time using NTP, read enabled sensors, send readings to Flovers, check for scheduled manual watering jobs, run the pump when a manual watering job is pending, check backend-controlled automatic watering settings, run automatic watering when soil moisture is below the configured threshold, and report watering completion back to the backend.",
+    "defaultBehavior": "By default, readings are sent once per hour. Manual watering jobs are checked more frequently, for example once per minute, so a watering request created from the mobile app can be picked up without waiting for the next hourly reading cycle.",
+    "adjustmentNote": "Some values should be adjusted for your hardware and preferences, especially Wi-Fi credentials, pin numbers, soil moisture calibration, pump runtime, reading interval, manual job polling interval, and automatic watering cooldown."
+  },
   "endpoints": {
     "title": "API endpoints",
-    "note": "Devices send telemetry to the ingest endpoint and can read the latest device feed from the feed endpoint.",
+    "note": "Devices send telemetry to the ingest endpoint, can check for pending pump jobs, can report completed watering, and can read the latest device feed for diagnostics or simple integrations.",
     "ingest": {
       "label": "Ingest readings (device → backend)",
-      "value": "https://api.flovers.app/api/readings/ingest/"
+      "value": "https://api.flovers.app/api/readings/ingest/",
+      "desc": "Devices use this endpoint to send sensor readings. The backend authenticates the request using secret, device_key, and optionally device_id."
+    },
+    "pumpNextTask": {
+      "label": "Check next pump task (device → backend)",
+      "value": "https://api.flovers.app/api/readings/pump-next-task/",
+      "desc": "Devices with pump support use this endpoint to check whether a manual watering job is waiting. The response also includes the current backend-controlled automatic pump configuration."
+    },
+    "pumpComplete": {
+      "label": "Report pump completion (device → backend)",
+      "value": "https://api.flovers.app/api/readings/pump-complete/",
+      "desc": "Devices use this endpoint after the pump has run. This can report either a scheduled manual watering task or an automatic watering event."
     },
     "feed": {
-      "label": "Read device feed (device → backend)",
-      "value": "https://api.flovers.app/api/readings/feed/"
+      "label": "Read latest device feed (device → backend)",
+      "value": "https://api.flovers.app/api/readings/feed/",
+      "desc": "This endpoint returns the latest reading data for a device. It is still useful for simple integrations or diagnostics, but pump-enabled generated firmware uses pump-next-task and pump-complete for watering control."
     }
   },
   "ingest": {
     "title": "POST ingest documentation",
-    "desc": "Send one reading sample as JSON. The backend authenticates the device using device_key and secret, then stores the provided metrics under that device.",
+    "desc": "Send one reading sample as JSON. The backend authenticates the device and stores the provided metrics under the matching device.",
     "schemaLabel": "Payload shape (JSON)",
-    "psLabel": "PowerShell example (POST)",
-    "arduinoTitle": "Arduino (ESP32/ESP8266) generated firmware",
-    "arduinoDesc": "The generated firmware connects to Wi-Fi, synchronizes time with NTP, reads enabled sensors, and posts JSON to the ingest endpoint on a fixed interval.",
-    "arduinoCodeLabel": "Generated Arduino firmware (POST readings)",
-    "arduinoNote": "Use the generated firmware as provided for the device. Before uploading, set Wi-Fi credentials and verify sensor wiring, pin assignments, and soil calibration values.",
-    "sensors": {
-      "bh1750": "BH1750 (GY-302) — light intensity over I2C",
-      "moisture": "Capacitive soil moisture sensor — analog read with wet/dry calibration",
-      "bme280": "BME280 — temperature & humidity over I2C (pressure optional)"
-    }
+    "exampleLabel": "Example payload",
+    "psLabel": "PowerShell example",
+    "schemaCode": "{\n  \"secret\": \"string\",\n  \"device_key\": \"string\",\n  \"device_id\": \"number optional\",\n  \"timestamp\": \"ISO-8601 UTC string\",\n  \"metrics\": {\n    \"temperature\": \"number optional\",\n    \"humidity\": \"number optional\",\n    \"light\": \"number optional\",\n    \"moisture\": \"number optional\"\n  }\n}",
+    "exampleCode": "{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12,\n  \"timestamp\": \"2026-01-06T10:11:00Z\",\n  \"metrics\": {\n    \"temperature\": 20.5,\n    \"humidity\": 40.0,\n    \"light\": 520,\n    \"moisture\": 40\n  }\n}",
+    "psCode": "# PowerShell example: send one reading\n\n$body = @'\n{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12,\n  \"timestamp\": \"2026-01-06T10:11:00Z\",\n  \"metrics\": {\n    \"temperature\": 20.5,\n    \"humidity\": 40.0,\n    \"light\": 520,\n    \"moisture\": 40\n  }\n}\n'@\n\nInvoke-RestMethod `\n  -Uri \"https://api.flovers.app/api/readings/ingest/\" `\n  -Method POST `\n  -ContentType \"application/json\" `\n  -Body $body"
+  },
+  "pumpNextTask": {
+    "title": "POST pump-next-task documentation",
+    "desc": "This endpoint is used by devices with pump support. The device asks the backend whether a scheduled manual watering job exists. The backend returns whether the pump should run now, the task ID if a manual watering task exists, and the current automatic pump settings.",
+    "schemaLabel": "Payload shape (JSON)",
+    "exampleLabel": "Example payload",
+    "responseNoTaskLabel": "Example response with no manual watering job",
+    "responseTaskLabel": "Example response with a manual watering job",
+    "psLabel": "PowerShell example",
+    "schemaCode": "{\n  \"secret\": \"string\",\n  \"device_key\": \"string\",\n  \"device_id\": \"number optional\"\n}",
+    "exampleCode": "{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12\n}",
+    "responseNoTaskCode": "{\n  \"run\": false,\n  \"task_id\": null,\n  \"source\": null,\n  \"reason\": null,\n  \"pump_included\": true,\n  \"auto_pump_enabled\": true,\n  \"auto_pump_threshold_pct\": 30,\n  \"moisture_sensor_enabled\": true\n}",
+    "responseTaskCode": "{\n  \"run\": true,\n  \"task_id\": 123,\n  \"source\": \"manual\",\n  \"reason\": \"manual_scheduled\",\n  \"pump_included\": true,\n  \"auto_pump_enabled\": true,\n  \"auto_pump_threshold_pct\": 30,\n  \"moisture_sensor_enabled\": true\n}",
+    "psCode": "# PowerShell example: check for pending manual watering task\n\n$body = @'\n{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12\n}\n'@\n\nInvoke-RestMethod `\n  -Uri \"https://api.flovers.app/api/readings/pump-next-task/\" `\n  -Method POST `\n  -ContentType \"application/json\" `\n  -Body $body"
+  },
+  "pumpComplete": {
+    "title": "POST pump-complete documentation",
+    "desc": "After the pump runs, the device reports completion. For manual watering, include the task_id returned by pump-next-task. For automatic watering, omit task_id and use source: \"automatic\".",
+    "manualLabel": "Manual watering completion payload",
+    "automaticLabel": "Automatic watering completion payload",
+    "failedLabel": "Failed pump run payload",
+    "psLabel": "PowerShell example",
+    "manualCode": "{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12,\n  \"task_id\": 123,\n  \"source\": \"manual\",\n  \"success\": true\n}",
+    "automaticCode": "{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12,\n  \"source\": \"automatic\",\n  \"success\": true\n}",
+    "failedCode": "{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12,\n  \"task_id\": 123,\n  \"source\": \"manual\",\n  \"success\": false,\n  \"error_message\": \"Pump execution failed\"\n}",
+    "psCode": "# PowerShell example: report manual watering completion\n\n$body = @'\n{\n  \"secret\": \"YOUR_SECRET\",\n  \"device_key\": \"YOUR_DEVICE_KEY\",\n  \"device_id\": 12,\n  \"task_id\": 123,\n  \"source\": \"manual\",\n  \"success\": true\n}\n'@\n\nInvoke-RestMethod `\n  -Uri \"https://api.flovers.app/api/readings/pump-complete/\" `\n  -Method POST `\n  -ContentType \"application/json\" `\n  -Body $body"
   },
   "feed": {
     "title": "GET feed documentation",
-    "desc": "Read the latest device feed from the backend. Devices can use this endpoint to receive current state or actions, for example launching a water pump.",
+    "desc": "The feed endpoint returns the latest reading for a device. It can be used for diagnostics or simple integrations that only need to read the latest stored values.",
     "exampleLabel": "Example request",
-    "responseLabel": "Example response payload",
-    "controlTitle": "ESP32 / Arduino watering example (GET)",
-    "controlDesc": "This example shows how an ESP32 can call the feed endpoint, parse the latest response, compare soil moisture against a defined threshold, and activate a relay-controlled water pump for a configurable duration. After watering or checking conditions, the device waits for a configurable interval before checking again.",
-    "controlCodeLabel": "ESP32 / Arduino example — GET feed and trigger pump",
-    "controlNote": "Adjust relay logic, pump runtime, moisture threshold, and polling delay for your hardware. Many relay modules are active LOW, so verify whether LOW or HIGH turns your relay on."
+    "responseLabel": "Example response",
+    "exampleCode": "https://api.flovers.app/api/readings/feed/?device_key=YOUR_DEVICE_KEY&secret=YOUR_SECRET",
+    "responseCode": "{\n  \"device\": {\n    \"id\": 12,\n    \"device_name\": \"Plant sensor\",\n    \"plant_name\": \"Monstera\",\n    \"interval_hours\": 1\n  },\n  \"readings\": [\n    {\n      \"id\": 456,\n      \"timestamp\": \"2026-01-06T10:00:00Z\",\n      \"temperature\": 20.5,\n      \"humidity\": 40.0,\n      \"light\": 520,\n      \"moisture\": 40\n    }\n  ]\n}"
+  },
+  "firmware": {
+    "title": "Generated Arduino / ESP32 firmware",
+    "desc": "The app can generate firmware for the selected device. The generated firmware includes the correct API endpoints, auth secret, device key, device ID, enabled sensors, and pump settings for that device.",
+    "pumpDesc": "If the device is configured with a water pump, the generated code includes both readings and water pump control. It checks manual watering jobs separately from the hourly reading cycle, and automatic watering uses the backend-controlled threshold and toggle.",
+    "adjustBeforeUpload": "Before uploading the sketch, adjust the values for your hardware.",
+    "adjustments": {
+      "wifi": "Wi-Fi SSID and password",
+      "i2cPins": "SDA_PIN and SCL_PIN",
+      "soilPin": "SOIL_PIN",
+      "pumpPin": "PUMP_PIN",
+      "soilCalibration": "SOIL_DRY_VALUE and SOIL_WET_VALUE",
+      "pumpRunTime": "PUMP_RUN_MS",
+      "readingInterval": "SEND_INTERVAL_MS",
+      "manualPollingInterval": "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "automaticCooldown": "AUTO_PUMP_MIN_INTERVAL_MS"
+    },
+    "codeLabel": "Generated Arduino firmware: readings + water pump control",
+    "codeNote": "The generated code shown here is an example. Your app-generated code will contain the selected device ID, device key, auth secret, enabled sensors, and pump configuration."
+  },
+  "behavior": {
+    "title": "Firmware behavior summary",
+    "fullCycleTitle": "Full hourly cycle",
+    "fullCycleDesc": "Every SEND_INTERVAL_MS, the board runs a full cycle: reads sensors, sends readings to the ingest endpoint, checks for scheduled manual watering, runs manual watering if a task is pending, otherwise checks automatic watering conditions, and runs automatic watering if backend settings allow it and soil moisture is below threshold.",
+    "manualCheckTitle": "Manual watering check",
+    "manualCheckDesc": "Every MANUAL_PUMP_CHECK_INTERVAL_MS, the board checks only for scheduled manual watering jobs. This shorter check does not send readings and does not run automatic watering. It only runs a pending manual watering job if one exists.",
+    "manualCheckBenefit": "This allows the app’s Schedule watering action to be picked up quickly without forcing sensor readings to be sent every minute.",
+    "automaticTitle": "Automatic watering",
+    "automaticDesc": "Automatic watering is controlled by the backend settings configured in the mobile app.",
+    "automaticConditions": {
+      "pumpEnabled": "Pump support is enabled",
+      "autoEnabled": "Automatic pump launch is enabled",
+      "moistureEnabled": "The moisture sensor is enabled",
+      "belowThreshold": "The latest measured soil moisture is below the backend threshold",
+      "cooldownPassed": "The automatic watering cooldown has passed"
+    },
+    "cooldownDesc": "After either manual watering or automatic watering runs, the firmware starts the automatic watering cooldown. This helps avoid a manual watering job and automatic watering happening too close together.",
+    "manualTitle": "Manual watering",
+    "manualDesc": "Manual watering is scheduled from the mobile app. Manual watering intentionally ignores current soil moisture, automatic watering threshold, and automatic watering cooldown. This means that when the user manually schedules watering, the board treats it as an explicit request to run the pump once."
+  },
+  "hardware": {
+    "title": "Hardware notes",
+    "desc": "The generated firmware assumes common ESP32-compatible components.",
+    "components": {
+      "bh1750": "BH1750 / GY-302 light sensor over I2C",
+      "bme280": "BME280 temperature and humidity sensor over I2C",
+      "moisture": "Capacitive soil moisture sensor on an analog pin",
+      "pump": "Relay or pump driver connected to a digital output pin"
+    },
+    "warning": "Verify all wiring before powering the pump.",
+    "relayNote": "Some relay modules are active LOW, while others are active HIGH. If your relay works in reverse, you may need to swap the HIGH and LOW values used when running the pump.",
+    "relayCodeLabel": "Pump output example",
+    "relayCode": "digitalWrite(PUMP_PIN, HIGH);\ndelay(PUMP_RUN_MS);\ndigitalWrite(PUMP_PIN, LOW);"
+  },
+  "calibration": {
+    "title": "Calibration notes",
+    "desc": "Soil moisture sensors must be calibrated for reliable results.",
+    "exampleLabel": "Default calibration example",
+    "exampleCode": "#define SOIL_DRY_VALUE 3900\n#define SOIL_WET_VALUE 1300",
+    "note": "These values are examples only. Measure your sensor value in dry soil or air, then measure it again in wet soil or water, and update these constants accordingly."
+  },
+  "safety": {
+    "title": "Safety notes",
+    "desc": "The generated firmware is a starting point. Before leaving a pump unattended, test the pump manually, confirm the relay logic, verify that the pump turns off correctly, use a safe pump runtime, confirm that soil moisture values are realistic, protect electronics from water, and use a suitable power supply and isolation for the pump.",
+    "responsibility": "Flovers stores readings and watering events, but device wiring, calibration, pump behavior, and physical installation remain the user’s responsibility."
   },
   "wiring": {
     "title": "Wiring diagrams",
-    "desc": "Below is a sample device wiring schema for sending POST requests to the Flovers backend. Click the image to open it in full screen.",
-    "ariaPrimary": "Sample device wiring schema for POST requests",
-    "ariaPump": "Pump relay wiring diagram placeholder",
-    "placeholderTitlePrimary": "Sample device wiring schema (POST)",
+    "desc": "Below is a sample device wiring schema for sending readings and optionally controlling a water pump. Click the image to open it in full screen.",
+    "ariaPrimary": "Sample device wiring schema for readings",
+    "ariaPump": "Pump relay wiring diagram",
+    "placeholderTitlePrimary": "Sample device wiring schema",
     "placeholderSubPrimary": "Click the image to display it in full screen.",
     "placeholderTitlePump": "Pump / relay wiring schema",
-    "placeholderSubPump": "Add the second wiring diagram here later."
+    "placeholderSubPump": "Add the pump wiring diagram here later."
   }
 }
