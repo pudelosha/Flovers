@@ -12,6 +12,8 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../../styles/reminders.styles";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
@@ -45,7 +47,7 @@ type Props = {
   fPlantId?: string;
   setFPlantId: (id?: string) => void;
 
-  fDueDate: string; // "YYYY-MM-DD"
+  fDueDate: string;
   setFDueDate: (v: string) => void;
 
   fIntervalValue?: number;
@@ -200,15 +202,14 @@ export default function EditReminderModal(props: Props) {
   const selectedTypeTint = ACCENT_BY_TYPE[fType];
   const selectedTypeIcon = ICON_BY_TYPE[fType];
 
+  const closeModal = () => {
+    Keyboard.dismiss();
+    onCancel();
+  };
+
   return (
     <>
-      <Pressable
-        style={s.promptBackdrop}
-        onPress={() => {
-          Keyboard.dismiss();
-          onCancel();
-        }}
-      />
+      <Pressable style={s.promptBackdrop} onPress={closeModal} />
 
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
@@ -219,6 +220,7 @@ export default function EditReminderModal(props: Props) {
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -230,11 +232,22 @@ export default function EditReminderModal(props: Props) {
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>
               {mode === "create"
@@ -271,7 +284,10 @@ export default function EditReminderModal(props: Props) {
                     color={selectedTypeTint}
                   />
                   <Text
-                    style={[s.dropdownValue, { color: selectedTypeTint, flexShrink: 1 }]}
+                    style={[
+                      s.dropdownValue,
+                      { color: selectedTypeTint, flexShrink: 1 },
+                    ]}
                     numberOfLines={1}
                   >
                     {typeLabel(fType)}
@@ -318,7 +334,10 @@ export default function EditReminderModal(props: Props) {
                           <Text
                             style={[
                               s.dropdownItemText,
-                              { color: selected ? tint : "#FFFFFF", flexShrink: 1 },
+                              {
+                                color: selected ? tint : "#FFFFFF",
+                                flexShrink: 1,
+                              },
                             ]}
                             numberOfLines={1}
                           >
@@ -504,20 +523,18 @@ export default function EditReminderModal(props: Props) {
             </View>
 
             <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
-              <Pressable
-                style={s.promptBtn}
-                onPress={() => {
-                  Keyboard.dismiss();
-                  onCancel();
-                }}
-              >
+              <Pressable style={s.promptBtn} onPress={closeModal}>
                 <Text style={s.promptBtnText}>
                   {tr("remindersModals.common.cancel", "Cancel")}
                 </Text>
               </Pressable>
 
               <Pressable
-                style={[s.promptBtn, s.promptPrimary, !canSave && { opacity: 0.5 }]}
+                style={[
+                  s.promptBtn,
+                  s.promptPrimary,
+                  !canSave && { opacity: 0.5 },
+                ]}
                 disabled={!canSave}
                 onPress={() => {
                   Keyboard.dismiss();
@@ -532,6 +549,15 @@ export default function EditReminderModal(props: Props) {
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={closeModal}
+            accessibilityLabel={tr("remindersModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>

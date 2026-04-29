@@ -16,11 +16,12 @@ import {
   ICON_BY_TYPE,
 } from "../../constants/reminders.constants";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
 
-// Optional datetime picker (same pattern as EditReminderModal)
 let DateTimePicker: any = null;
 try {
   DateTimePicker = require("@react-native-community/datetimepicker").default;
@@ -29,11 +30,11 @@ try {
 type PlantOption = { id: string; name: string; location?: string };
 
 type Filters = {
-  plantId?: string; // specific plant or undefined for Any
-  location?: string; // specific location or undefined for Any
-  types?: ReminderType[]; // multi
-  dueFrom?: string; // "YYYY-MM-DD"
-  dueTo?: string; // "YYYY-MM-DD"
+  plantId?: string;
+  location?: string;
+  types?: ReminderType[];
+  dueFrom?: string;
+  dueTo?: string;
 };
 
 type Props = {
@@ -194,6 +195,7 @@ export default function FilterRemindersModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -205,11 +207,22 @@ export default function FilterRemindersModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
             <Text style={s.promptTitle}>
               {tr("remindersModals.filter.title", "Filter reminders")}
@@ -586,6 +599,15 @@ export default function FilterRemindersModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={tr("remindersModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
