@@ -5,6 +5,7 @@ import QRCode from "react-native-qrcode-svg";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 import { s } from "../../styles/plants.styles";
 
@@ -69,6 +70,7 @@ export default function PlantQrModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             style={{
@@ -79,10 +81,21 @@ export default function PlantQrModal({
           />
         </View>
 
-        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
             showsVerticalScrollIndicator={false}
           >
             <Text style={s.promptTitle}>
@@ -132,6 +145,7 @@ export default function PlantQrModal({
                   color="#FFFFFF"
                   style={{ marginRight: 6 }}
                 />
+
                 <Text style={s.promptPrimaryText}>
                   {tr("plantsModals.qr.save", "Save")}
                 </Text>
@@ -153,6 +167,7 @@ export default function PlantQrModal({
                   color="#FFFFFF"
                   style={{ marginRight: 6 }}
                 />
+
                 <Text style={s.promptPrimaryText}>
                   {tr("plantsModals.qr.email", "Send")}
                 </Text>
@@ -171,6 +186,15 @@ export default function PlantQrModal({
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={onClose}
+            accessibilityLabel={tr("plantsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>

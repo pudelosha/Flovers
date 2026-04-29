@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plants\components\modals\EditPlantModal.tsx
 import React, { useMemo, useState, useCallback } from "react";
 import {
   View,
@@ -15,16 +14,15 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Slider from "@react-native-community/slider";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
-// Keep plant dropdown styles (identical look), etc.
 import { s } from "../../styles/plants.styles";
-// Import the Profile modal styles to match formatting/look
 import { prompts as pr } from "../../../profile/styles/profile.styles";
 
 import {
-  ORIENTATIONS, // [{ key: 'N'|'E'|'S'|'W', label: string }]
-  POT_MATERIALS, // [{ key: string }]
-  SOIL_MIXES, // [{ key: string }]
+  ORIENTATIONS,
+  POT_MATERIALS,
+  SOIL_MIXES,
 } from "../../../create-plant/constants/create-plant.constants";
 
 import type {
@@ -32,7 +30,6 @@ import type {
   SoilMixKey,
 } from "../../../create-plant/constants/create-plant.constants";
 
-// 🔁 Reuse the create-plant measure modal
 import MeasureExposureModal from "../../../create-plant/components/modals/MeasureExposureModal";
 import type { LightLevel } from "../../../create-plant/types/create-plant.types";
 
@@ -54,24 +51,27 @@ function toISODate(d: Date) {
   const day = String(d.getDate()).padStart(2, "0");
   return `${y}-${m}-${day}`;
 }
-function parseISODate(s: string): Date | null {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return null;
-  const [y, m, d] = s.split("-").map(Number);
+
+function parseISODate(s0: string): Date | null {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(s0)) return null;
+  const [y, m, d] = s0.split("-").map(Number);
   const dt = new Date(y, m - 1, d);
-  if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d)
+
+  if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d) {
     return null;
+  }
+
   if (dt.getTime() > Date.now()) return null;
+
   return dt;
 }
 
 type Props = {
   visible: boolean;
 
-  // suggestions + locations (display names) from backend
   latinCatalog: string[];
   locations: string[];
 
-  // existing controlled fields
   fName: string;
   setFName: (v: string) => void;
 
@@ -86,7 +86,6 @@ type Props = {
   fNotes: string;
   setFNotes: (v: string) => void;
 
-  // new controlled fields
   fPurchaseDateISO?: string | null;
   setFPurchaseDateISO: (v: string | null) => void;
 
@@ -96,7 +95,7 @@ type Props = {
   fOrientation: "N" | "E" | "S" | "W";
   setFOrientation: (v: "N" | "E" | "S" | "W") => void;
 
-  fDistanceCm: number; // 0..100
+  fDistanceCm: number;
   setFDistanceCm: (n: number) => void;
 
   fPotMaterial?: string;
@@ -143,7 +142,6 @@ export default function EditPlantModal(props: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
-  // Safe t() (treat key-echo as missing)
   const tr = useCallback(
     (key: string, fallback?: string) => {
       void currentLanguage;
@@ -156,8 +154,6 @@ export default function EditPlantModal(props: Props) {
 
   const [showLatin, setShowLatin] = useState(false);
   const [locOpen, setLocOpen] = useState(false);
-
-  // ✅ these were in your file; keep and use them
   const [matOpen, setMatOpen] = useState(false);
   const [soilOpen, setSoilOpen] = useState(false);
 
@@ -167,7 +163,6 @@ export default function EditPlantModal(props: Props) {
     fPurchaseDateISO ?? ""
   );
 
-  // 👉 Measure light & direction modal
   const [measureVisible, setMeasureVisible] = useState(false);
 
   const lightOrder: LightLevel5[] = [
@@ -177,25 +172,26 @@ export default function EditPlantModal(props: Props) {
     "bright-indirect",
     "bright-direct",
   ];
+
   const lightIndex = Math.max(0, lightOrder.indexOf(fLightLevel));
 
   const suggestions = useMemo(() => {
     const q = fLatinQuery.trim().toLowerCase();
     if (!q) return [];
-    return latinCatalog
-      .filter((n) => n.toLowerCase().includes(q))
-      .slice(0, 6);
+    return latinCatalog.filter((n) => n.toLowerCase().includes(q)).slice(0, 6);
   }, [latinCatalog, fLatinQuery]);
 
-  // ✅ Same pattern as Step05_ContainerAndSoil:
-  // derive translated label for currently selected pot material / soil mix
   const potMaterialLabel = useMemo(() => {
-    if (!fPotMaterial)
+    if (!fPotMaterial) {
       return tr("createPlant.step05.notSpecified", "Not specified");
+    }
 
     const key = String(fPotMaterial) as PotMaterialKey;
     const found = POT_MATERIALS.find((p) => p.key === key);
-    if (!found) return tr("createPlant.step05.notSpecified", "Not specified");
+
+    if (!found) {
+      return tr("createPlant.step05.notSpecified", "Not specified");
+    }
 
     return tr(
       `createPlant.step05.potMaterials.${found.key}.label`,
@@ -204,11 +200,16 @@ export default function EditPlantModal(props: Props) {
   }, [fPotMaterial, tr]);
 
   const soilMixLabel = useMemo(() => {
-    if (!fSoilMix) return tr("createPlant.step05.notSpecified", "Not specified");
+    if (!fSoilMix) {
+      return tr("createPlant.step05.notSpecified", "Not specified");
+    }
 
     const key = String(fSoilMix) as SoilMixKey;
     const found = SOIL_MIXES.find((s0) => s0.key === key);
-    if (!found) return tr("createPlant.step05.notSpecified", "Not specified");
+
+    if (!found) {
+      return tr("createPlant.step05.notSpecified", "Not specified");
+    }
 
     return tr(
       `createPlant.step05.soilMixes.${found.key}.label`,
@@ -218,16 +219,14 @@ export default function EditPlantModal(props: Props) {
 
   if (!visible) return null;
 
+  const closeModal = () => {
+    Keyboard.dismiss();
+    onCancel();
+  };
+
   return (
     <>
-      {/* Backdrop */}
-      <Pressable
-        style={pr.backdrop}
-        onPress={() => {
-          Keyboard.dismiss();
-          onCancel();
-        }}
-      />
+      <Pressable style={pr.backdrop} onPress={closeModal} />
 
       <View style={pr.promptWrap}>
         <View style={pr.promptGlass}>
@@ -237,6 +236,7 @@ export default function EditPlantModal(props: Props) {
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             style={{
@@ -247,18 +247,27 @@ export default function EditPlantModal(props: Props) {
           />
         </View>
 
-        {/* Sheet */}
-        <View style={[pr.promptInner, { maxHeight: "86%" }]}>
+        <View
+          style={[
+            pr.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
             showsVerticalScrollIndicator={false}
           >
             <Text style={pr.promptTitle}>
               {tr("plantsModals.edit.title", "Edit plant")}
             </Text>
 
-            {/* Name */}
             <TextInput
               style={pr.input}
               placeholder={tr(
@@ -270,7 +279,6 @@ export default function EditPlantModal(props: Props) {
               onChangeText={setFName}
             />
 
-            {/* Latin live search */}
             <View style={{ position: "relative" }}>
               <TextInput
                 style={pr.input}
@@ -302,6 +310,7 @@ export default function EditPlantModal(props: Props) {
                       }}
                     >
                       <Text style={s.suggestText}>{latin}</Text>
+
                       {fLatinSelected === latin && (
                         <MaterialCommunityIcons
                           name="check"
@@ -315,7 +324,6 @@ export default function EditPlantModal(props: Props) {
               )}
             </View>
 
-            {/* Location dropdown */}
             <View style={[s.dropdown, { marginHorizontal: 16 }]}>
               <Pressable
                 style={s.dropdownHeader}
@@ -334,6 +342,7 @@ export default function EditPlantModal(props: Props) {
                       "Select location (optional)"
                     )}{" "}
                 </Text>
+
                 <MaterialCommunityIcons
                   name={locOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -353,6 +362,7 @@ export default function EditPlantModal(props: Props) {
                       }}
                     >
                       <Text style={s.dropdownItemText}>{loc}</Text>
+
                       {fLocation === loc && (
                         <MaterialCommunityIcons
                           name="check"
@@ -373,6 +383,7 @@ export default function EditPlantModal(props: Props) {
                     <Text style={s.dropdownItemText}>
                       {tr("plantsModals.edit.none", "— None —")}
                     </Text>
+
                     {!fLocation && (
                       <MaterialCommunityIcons
                         name="check"
@@ -385,11 +396,14 @@ export default function EditPlantModal(props: Props) {
               )}
             </View>
 
-            {/* Notes */}
             <TextInput
               style={[
                 pr.input,
-                { height: 120, textAlignVertical: "top", paddingTop: 10 },
+                {
+                  height: 120,
+                  textAlignVertical: "top",
+                  paddingTop: 10,
+                },
               ]}
               placeholder={tr(
                 "plantsModals.edit.notesPlaceholder",
@@ -401,16 +415,7 @@ export default function EditPlantModal(props: Props) {
               multiline
             />
 
-            {/* Purchase date */}
-            <Text
-              style={{
-                color: "#FFFFFF",
-                fontWeight: "800",
-                marginHorizontal: 16,
-                marginTop: 6,
-                marginBottom: 8,
-              }}
-            >
+            <Text style={styles.sectionLabel}>
               {tr("plantsModals.edit.purchaseDateLabel", "Purchase date")}
             </Text>
 
@@ -431,9 +436,9 @@ export default function EditPlantModal(props: Props) {
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {fPurchaseDateISO ??
-                  tr("plantsModals.edit.notSet", "Not set")}
+                {fPurchaseDateISO ?? tr("plantsModals.edit.notSet", "Not set")}
               </Text>
+
               <MaterialCommunityIcons name="calendar" size={20} color="#FFFFFF" />
             </Pressable>
 
@@ -453,8 +458,15 @@ export default function EditPlantModal(props: Props) {
                   }}
                   maximumDate={new Date()}
                 />
+
                 {Platform.OS === "ios" && (
-                  <View style={{ marginTop: 8, flexDirection: "row", justifyContent: "flex-end" }}>
+                  <View
+                    style={{
+                      marginTop: 8,
+                      flexDirection: "row",
+                      justifyContent: "flex-end",
+                    }}
+                  >
                     <Pressable
                       onPress={() => setNativePickerOpen(false)}
                       style={[pr.promptBtn, pr.promptPrimary]}
@@ -471,6 +483,7 @@ export default function EditPlantModal(props: Props) {
             {fallbackOpen && (
               <>
                 <Pressable style={pr.backdrop} onPress={() => setFallbackOpen(false)} />
+
                 <View style={[s.dropdownList, { marginHorizontal: 16 }]}>
                   <View style={{ padding: 12 }}>
                     <Text style={[s.dropdownValue, { marginBottom: 8 }]}>
@@ -492,7 +505,10 @@ export default function EditPlantModal(props: Props) {
                     />
 
                     <View style={[pr.promptButtonsRow, { marginTop: 8 }]}>
-                      <Pressable style={pr.promptBtn} onPress={() => setFallbackOpen(false)}>
+                      <Pressable
+                        style={pr.promptBtn}
+                        onPress={() => setFallbackOpen(false)}
+                      >
                         <Text style={pr.promptBtnText}>
                           {tr("plantsModals.common.cancel", "Cancel")}
                         </Text>
@@ -506,14 +522,20 @@ export default function EditPlantModal(props: Props) {
                             setFallbackOpen(false);
                             return;
                           }
+
                           const dt = parseISODate(fallbackDate.trim());
+
                           if (!dt) {
                             Alert.alert(
                               tr("plantsModals.edit.invalidDateTitle", "Invalid date"),
-                              tr("plantsModals.edit.invalidDateMsg", "Use format YYYY-MM-DD")
+                              tr(
+                                "plantsModals.edit.invalidDateMsg",
+                                "Use format YYYY-MM-DD"
+                              )
                             );
                             return;
                           }
+
                           setFPurchaseDateISO?.(toISODate(dt));
                           setFallbackOpen(false);
                         }}
@@ -528,16 +550,7 @@ export default function EditPlantModal(props: Props) {
               </>
             )}
 
-            {/* Light level */}
-            <Text
-              style={{
-                color: "#FFFFFF",
-                fontWeight: "800",
-                marginHorizontal: 16,
-                marginTop: 6,
-                marginBottom: 8,
-              }}
-            >
+            <Text style={styles.sectionLabel}>
               {tr("plantsModals.edit.lightLevelLabel", "Light level")}
             </Text>
 
@@ -546,6 +559,7 @@ export default function EditPlantModal(props: Props) {
                 <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
                   {tr("plantsModals.edit.low", "Low")}
                 </Text>
+
                 <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
                   {tr("plantsModals.edit.high", "High")}
                 </Text>
@@ -570,27 +584,21 @@ export default function EditPlantModal(props: Props) {
               />
             </View>
 
-            {/* Window direction */}
-            <Text
-              style={{
-                color: "#FFFFFF",
-                fontWeight: "800",
-                marginHorizontal: 16,
-                marginTop: 6,
-                marginBottom: 8,
-              }}
-            >
+            <Text style={styles.sectionLabel}>
               {tr("plantsModals.edit.windowDirectionLabel", "Window direction")}
             </Text>
 
-            <View style={{ flexDirection: "row", gap: 8, marginBottom: 6, marginHorizontal: 16 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                gap: 8,
+                marginBottom: 6,
+                marginHorizontal: 16,
+              }}
+            >
               {ORIENTATIONS.map(({ key, label }) => {
                 const active = fOrientation === key;
-                // ✅ translate direction labels
-                const translated = tr(
-                  `plantsModals.edit.orientations.${key}`,
-                  label
-                );
+                const translated = tr(`plantsModals.edit.orientations.${key}`, label);
 
                 return (
                   <Pressable
@@ -612,7 +620,13 @@ export default function EditPlantModal(props: Props) {
                       },
                     ]}
                   >
-                    <Text style={{ color: "#FFFFFF", fontWeight: "800", fontSize: 12 }}>
+                    <Text
+                      style={{
+                        color: "#FFFFFF",
+                        fontWeight: "800",
+                        fontSize: 12,
+                      }}
+                    >
                       {translated}
                     </Text>
                   </Pressable>
@@ -620,7 +634,6 @@ export default function EditPlantModal(props: Props) {
               })}
             </View>
 
-            {/* Measure light & direction */}
             <View style={{ marginHorizontal: 16, marginBottom: 6 }}>
               <Pressable
                 style={[
@@ -640,22 +653,14 @@ export default function EditPlantModal(props: Props) {
                   size={18}
                   color="#FFFFFF"
                 />
+
                 <Text style={pr.promptBtnText}>
                   {tr("plantsModals.edit.measureBtn", "Measure light & direction")}
                 </Text>
               </Pressable>
             </View>
 
-            {/* Distance */}
-            <Text
-              style={{
-                color: "#FFFFFF",
-                fontWeight: "800",
-                marginHorizontal: 16,
-                marginTop: 6,
-                marginBottom: 8,
-              }}
-            >
+            <Text style={styles.sectionLabel}>
               {tr("plantsModals.edit.distanceLabel", "Distance from window")}
             </Text>
 
@@ -670,6 +675,7 @@ export default function EditPlantModal(props: Props) {
               >
                 {fDistanceCm} {tr("plantsModals.edit.cm", "cm")}
               </Text>
+
               <Slider
                 value={fDistanceCm}
                 onValueChange={(v) => setFDistanceCm?.(Math.round(v))}
@@ -683,16 +689,7 @@ export default function EditPlantModal(props: Props) {
               />
             </View>
 
-            {/* Container material */}
-            <Text
-              style={{
-                color: "#FFFFFF",
-                fontWeight: "800",
-                marginHorizontal: 16,
-                marginTop: 6,
-                marginBottom: 8,
-              }}
-            >
+            <Text style={styles.sectionLabel}>
               {tr("plantsModals.edit.containerMaterialLabel", "Container material")}
             </Text>
 
@@ -707,6 +704,7 @@ export default function EditPlantModal(props: Props) {
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>{potMaterialLabel}</Text>
+
               <MaterialCommunityIcons
                 name={matOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -728,13 +726,15 @@ export default function EditPlantModal(props: Props) {
                       <Text style={s.dropdownItemText}>
                         {tr("createPlant.step05.notSpecified", "Not specified")}
                       </Text>
-                      <Text style={{ color: "rgba(255,255,255,0.8)", marginTop: 2 }}>
+
+                      <Text style={styles.dropdownDescription}>
                         {tr(
                           "createPlant.step05.notSpecifiedDesc",
                           "Skip this if you’re not sure."
                         )}
                       </Text>
                     </View>
+
                     {!fPotMaterial && (
                       <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
@@ -762,14 +762,18 @@ export default function EditPlantModal(props: Props) {
                       >
                         <View style={{ flex: 1 }}>
                           <Text style={s.dropdownItemText}>{label}</Text>
+
                           {!!desc && (
-                            <Text style={{ color: "rgba(255,255,255,0.8)", marginTop: 2 }}>
-                              {desc}
-                            </Text>
+                            <Text style={styles.dropdownDescription}>{desc}</Text>
                           )}
                         </View>
+
                         {selected && (
-                          <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                          <MaterialCommunityIcons
+                            name="check"
+                            size={18}
+                            color="#FFFFFF"
+                          />
                         )}
                       </Pressable>
                     );
@@ -778,16 +782,7 @@ export default function EditPlantModal(props: Props) {
               </View>
             )}
 
-            {/* Soil mix */}
-            <Text
-              style={{
-                color: "#FFFFFF",
-                fontWeight: "800",
-                marginHorizontal: 16,
-                marginTop: 6,
-                marginBottom: 8,
-              }}
-            >
+            <Text style={styles.sectionLabel}>
               {tr("plantsModals.edit.soilMixLabel", "Soil / potting mix")}
             </Text>
 
@@ -802,6 +797,7 @@ export default function EditPlantModal(props: Props) {
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>{soilMixLabel}</Text>
+
               <MaterialCommunityIcons
                 name={soilOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -823,13 +819,15 @@ export default function EditPlantModal(props: Props) {
                       <Text style={s.dropdownItemText}>
                         {tr("createPlant.step05.notSpecified", "Not specified")}
                       </Text>
-                      <Text style={{ color: "rgba(255,255,255,0.8)", marginTop: 2 }}>
+
+                      <Text style={styles.dropdownDescription}>
                         {tr(
                           "createPlant.step05.notSpecifiedDesc",
                           "Skip this if you’re not sure."
                         )}
                       </Text>
                     </View>
+
                     {!fSoilMix && (
                       <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
@@ -857,14 +855,18 @@ export default function EditPlantModal(props: Props) {
                       >
                         <View style={{ flex: 1 }}>
                           <Text style={s.dropdownItemText}>{label}</Text>
+
                           {!!desc && (
-                            <Text style={{ color: "rgba(255,255,255,0.8)", marginTop: 2 }}>
-                              {desc}
-                            </Text>
+                            <Text style={styles.dropdownDescription}>{desc}</Text>
                           )}
                         </View>
+
                         {selected && (
-                          <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                          <MaterialCommunityIcons
+                            name="check"
+                            size={18}
+                            color="#FFFFFF"
+                          />
                         )}
                       </Pressable>
                     );
@@ -873,9 +875,8 @@ export default function EditPlantModal(props: Props) {
               </View>
             )}
 
-            {/* Footer */}
             <View style={pr.promptButtonsRow}>
-              <Pressable style={pr.promptBtn} onPress={onCancel}>
+              <Pressable style={pr.promptBtn} onPress={closeModal}>
                 <Text style={pr.promptBtnText}>
                   {tr("plantsModals.common.cancel", "Cancel")}
                 </Text>
@@ -896,10 +897,18 @@ export default function EditPlantModal(props: Props) {
               </Pressable>
             </View>
           </ScrollView>
+
+          <ModalCloseButton
+            onPress={closeModal}
+            accessibilityLabel={tr("plantsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
 
-      {/* Measure light & direction modal */}
       <MeasureExposureModal
         visible={measureVisible}
         onClose={() => setMeasureVisible(false)}
@@ -907,6 +916,7 @@ export default function EditPlantModal(props: Props) {
           if (light) {
             setFLightLevel(light as LightLevel5 as LightLevel);
           }
+
           if (orientation) {
             setFOrientation(orientation);
           }
@@ -915,3 +925,18 @@ export default function EditPlantModal(props: Props) {
     </>
   );
 }
+
+const styles = {
+  sectionLabel: {
+    color: "#FFFFFF",
+    fontWeight: "800" as const,
+    marginHorizontal: 16,
+    marginTop: 6,
+    marginBottom: 8,
+  },
+
+  dropdownDescription: {
+    color: "rgba(255,255,255,0.8)",
+    marginTop: 2,
+  },
+};

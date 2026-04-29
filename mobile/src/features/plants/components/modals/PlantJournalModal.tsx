@@ -12,10 +12,10 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 
 import { s } from "../../styles/plants.styles";
 
-// live fetch + mapping
 import { fetchPlantJournal } from "../../../../api/services/plant-instances.service";
 import {
   buildUIJournalEntries,
@@ -26,13 +26,12 @@ import {
 type JournalType = JournalTypeUI;
 type JournalEntry = UIJournalEntry;
 
-// keep colors/icons consistent with your preferred palette
 const ACCENT_BY_TYPE: Record<JournalType, string> = {
-  watering: "#4dabf7", // blue
-  moisture: "#20c997", // green
-  fertilising: "#ffd43b", // yellow
-  care: "#e599f7", // purple
-  repot: "#8B5E3C", // brown
+  watering: "#4dabf7",
+  moisture: "#20c997",
+  fertilising: "#ffd43b",
+  care: "#e599f7",
+  repot: "#8B5E3C",
 };
 
 const ICON_BY_TYPE: Record<JournalType, string> = {
@@ -82,7 +81,6 @@ export default function PlantJournalModal({
   plantName,
   onClose,
 }: Props) {
-  // hooks always called (never conditional)
   const { t } = useTranslation();
   const { settings } = useSettings();
 
@@ -90,12 +88,12 @@ export default function PlantJournalModal({
   const [error, setError] = React.useState<string | null>(null);
   const [entries, setEntries] = React.useState<JournalEntry[]>([]);
 
-  // Fetch when modal becomes visible (and plantId changes)
   React.useEffect(() => {
     let cancelled = false;
 
     async function run() {
       if (!visible) return;
+
       if (!plantId) {
         setEntries([]);
         setError(null);
@@ -109,7 +107,10 @@ export default function PlantJournalModal({
         const idNum = Number(plantId);
         const resp = await fetchPlantJournal(idNum, { auth: true });
         const ui = buildUIJournalEntries(resp);
-        if (!cancelled) setEntries(ui);
+
+        if (!cancelled) {
+          setEntries(ui);
+        }
       } catch (e: any) {
         if (!cancelled) {
           setEntries([]);
@@ -120,31 +121,30 @@ export default function PlantJournalModal({
           );
         }
       } finally {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     }
 
     run();
+
     return () => {
       cancelled = true;
     };
   }, [visible, plantId]);
 
-  // after hooks, safe early return
   if (!visible) return null;
+
+  const closeModal = () => {
+    Keyboard.dismiss();
+    onClose();
+  };
 
   return (
     <>
-      {/* Backdrop */}
-      <Pressable
-        style={s.promptBackdrop}
-        onPress={() => {
-          Keyboard.dismiss();
-          onClose();
-        }}
-      />
+      <Pressable style={s.promptBackdrop} onPress={closeModal} />
 
-      {/* Centered glass card */}
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
@@ -154,6 +154,7 @@ export default function PlantJournalModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             // @ts-ignore
@@ -165,25 +166,35 @@ export default function PlantJournalModal({
           />
         </View>
 
-        <View style={s.promptInner}>
-          <Text style={s.promptTitle}>
-            {t("plantsModals.journal.title", { defaultValue: "Plant Journal" })}
-          </Text>
-
-          {plantName ? (
-            <Text style={local.subTitle} numberOfLines={2}>
-              {plantName}
-            </Text>
-          ) : null}
-
-          {/* List */}
+        <View
+          style={[
+            s.promptInner,
+            {
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
           <ScrollView
-            style={local.list}
-            contentContainerStyle={local.listContent}
+            keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
           >
+            <Text style={s.promptTitle}>
+              {t("plantsModals.journal.title", { defaultValue: "Plant Journal" })}
+            </Text>
+
+            {plantName ? (
+              <Text style={local.subTitle} numberOfLines={2}>
+                {plantName}
+              </Text>
+            ) : null}
+
             {loading ? (
-              <View style={local.stateBox}>
+              <View style={[local.stateBox, { marginHorizontal: 16 }]}>
                 <ActivityIndicator />
                 <Text style={local.stateText}>
                   {t("plantsModals.journal.loading", {
@@ -192,7 +203,7 @@ export default function PlantJournalModal({
                 </Text>
               </View>
             ) : error ? (
-              <View style={local.stateBox}>
+              <View style={[local.stateBox, { marginHorizontal: 16 }]}>
                 <Text style={local.stateText}>
                   {t("plantsModals.journal.error", {
                     defaultValue: "Something went wrong.",
@@ -200,7 +211,7 @@ export default function PlantJournalModal({
                 </Text>
               </View>
             ) : entries.length === 0 ? (
-              <View style={local.stateBox}>
+              <View style={[local.stateBox, { marginHorizontal: 16 }]}>
                 <Text style={local.stateText}>
                   {t("plantsModals.journal.empty", {
                     defaultValue: "No journal entries yet.",
@@ -208,66 +219,77 @@ export default function PlantJournalModal({
                 </Text>
               </View>
             ) : (
-              entries.map((e) => {
-                const icon = ICON_BY_TYPE[e.type];
-                const accent = ACCENT_BY_TYPE[e.type];
+              <View style={{ paddingHorizontal: 16 }}>
+                {entries.map((e) => {
+                  const icon = ICON_BY_TYPE[e.type];
+                  const accent = ACCENT_BY_TYPE[e.type];
 
-                const typeLabel = t(`plantsModals.journal.taskTypes.${e.type}`, {
-                  defaultValue: String(e.type).toUpperCase(),
-                });
+                  const typeLabel = t(`plantsModals.journal.taskTypes.${e.type}`, {
+                    defaultValue: String(e.type).toUpperCase(),
+                  });
 
-                const dateLabel = formatISODateBySettings(e.completedAtISO, settings);
+                  const dateLabel = formatISODateBySettings(
+                    e.completedAtISO,
+                    settings
+                  );
 
-                return (
-                  <View key={e.id} style={local.rowWrap}>
-                    <View style={local.rowTop}>
-                      {/* Left icon circle */}
-                      <View
-                        style={[local.iconCircle, { backgroundColor: accent }]}
-                      >
-                        <MaterialCommunityIcons
-                          name={icon as any}
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      </View>
-
-                      {/* Center content */}
-                      <View style={local.rowCenter}>
-                        <View style={local.rowLine}>
-                          <Text style={local.typeText} numberOfLines={1}>
-                            {typeLabel}
-                          </Text>
-                          <Text style={local.dateText} numberOfLines={1}>
-                            {dateLabel}
-                          </Text>
+                  return (
+                    <View key={e.id} style={local.rowWrap}>
+                      <View style={local.rowTop}>
+                        <View
+                          style={[
+                            local.iconCircle,
+                            {
+                              backgroundColor: accent,
+                            },
+                          ]}
+                        >
+                          <MaterialCommunityIcons
+                            name={icon as any}
+                            size={18}
+                            color="#FFFFFF"
+                          />
                         </View>
 
-                        {!!e.note && (
-                          <Text style={local.noteText}>{e.note}</Text>
-                        )}
+                        <View style={local.rowCenter}>
+                          <View style={local.rowLine}>
+                            <Text style={local.typeText} numberOfLines={1}>
+                              {typeLabel}
+                            </Text>
+
+                            <Text style={local.dateText} numberOfLines={1}>
+                              {dateLabel}
+                            </Text>
+                          </View>
+
+                          {!!e.note && <Text style={local.noteText}>{e.note}</Text>}
+                        </View>
                       </View>
                     </View>
-                  </View>
-                );
-              })
+                  );
+                })}
+              </View>
             )}
+
+            <View style={[s.promptButtonsRow, { marginTop: 6 }]}>
+              <Pressable style={s.promptBtn} onPress={closeModal}>
+                <Text style={s.promptBtnText}>
+                  {t("plantsModals.common.close", { defaultValue: "Close" })}
+                </Text>
+              </Pressable>
+            </View>
           </ScrollView>
 
-          {/* Buttons */}
-          <View style={s.promptButtonsRow}>
-            <Pressable
-              style={[s.promptBtn, s.promptPrimary]}
-              onPress={() => {
-                Keyboard.dismiss();
-                onClose();
-              }}
-            >
-              <Text style={[s.promptBtnText, s.promptPrimaryText]}>
-                {t("plantsModals.common.close", { defaultValue: "Close" })}
-              </Text>
-            </Pressable>
-          </View>
+          <ModalCloseButton
+            onPress={closeModal}
+            accessibilityLabel={t("plantsModals.common.close", {
+              defaultValue: "Close",
+            })}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
@@ -280,14 +302,6 @@ const local = StyleSheet.create({
     fontWeight: "700",
     paddingHorizontal: 16,
     marginBottom: 10,
-  },
-
-  list: {
-    maxHeight: 420,
-  },
-  listContent: {
-    paddingHorizontal: 16,
-    paddingBottom: 6,
   },
 
   stateBox: {

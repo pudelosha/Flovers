@@ -1,8 +1,9 @@
 import React, { useCallback } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import { s } from "../../styles/plants.styles";
 
 type Props = {
@@ -36,6 +37,7 @@ export default function ConfirmDeleteModal({
   return (
     <>
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
+
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
@@ -44,6 +46,7 @@ export default function ConfirmDeleteModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+
           <View
             pointerEvents="none"
             style={{
@@ -54,30 +57,74 @@ export default function ConfirmDeleteModal({
           />
         </View>
 
-        <View style={s.promptInner}>
-          <Text style={s.promptTitle}>
-            {tr("plantsModals.confirmDelete.title", "Delete plant")}
-          </Text>
+        <View
+          style={[
+            s.promptInner,
+            {
+              height: "86%",
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
+          <ScrollView
+            style={{ flex: 1 }}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
+          >
+            <Text style={s.promptTitle}>
+              {tr("plantsModals.confirmDelete.title", "Delete plant")}
+            </Text>
 
-          <Text style={s.confirmText}>
-            {tr("plantsModals.confirmDelete.messagePrefix", "Are you sure you want to delete")}{" "}
-            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>
-            {tr("plantsModals.confirmDelete.messageSuffix", "? This action cannot be undone.")}
-          </Text>
+            <Text style={s.confirmText}>
+              {tr(
+                "plantsModals.confirmDelete.messagePrefix",
+                "Are you sure you want to delete"
+              )}{" "}
+              <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>
+              {tr(
+                "plantsModals.confirmDelete.messageSuffix",
+                "? This action cannot be undone."
+              )}
+            </Text>
 
-          <View style={s.promptButtonsRow}>
-            <Pressable style={s.promptBtn} onPress={onCancel}>
-              <Text style={s.promptBtnText}>
-                {tr("plantsModals.common.cancel", "Cancel")}
-              </Text>
-            </Pressable>
+            <View style={s.promptButtonsRow}>
+              <Pressable style={s.promptBtn} onPress={onCancel}>
+                <Text style={s.promptBtnText}>
+                  {tr("plantsModals.common.cancel", "Cancel")}
+                </Text>
+              </Pressable>
 
-            <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
-              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                {tr("plantsModals.common.delete", "Delete")}
-              </Text>
-            </Pressable>
-          </View>
+              <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
+                <Text
+                  style={[
+                    s.promptBtnText,
+                    {
+                      color: "#FF6B6B",
+                      fontWeight: "800",
+                    },
+                  ]}
+                >
+                  {tr("plantsModals.common.delete", "Delete")}
+                </Text>
+              </Pressable>
+            </View>
+          </ScrollView>
+
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={tr("plantsModals.common.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
     </>
