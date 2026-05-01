@@ -6,12 +6,12 @@
       "apply": "Applica",
       "clear": "Cancella",
       "close": "Chiudi",
-      "reset": "Ripristina",
+      "reset": "Reimposta",
       "save": "Salva",
       "dash": "—"
     },
     "confirmDelete": {
-      "title": "Elimina lettura",
+      "title": "Elimina dispositivo",
       "messageBefore": "Sei sicuro di voler eliminare",
       "messageAfter": "? Questa azione non può essere annullata."
     },
@@ -35,7 +35,7 @@
     },
     "deviceDetails": {
       "title": "Dettagli dispositivo",
-      "description": "Questo modale mostra le informazioni di configurazione del dispositivo, gli identificatori generati, i sensori abilitati, se una pompa dell’acqua è collegata a questo dispositivo e il segreto dell’account usato dal dispositivo. Puoi anche inviare un’email con codice Arduino di esempio che corrisponde alle impostazioni del dispositivo selezionato, inclusi sensori e configurazione della pompa dell’acqua. Il codice generato viene compilato con la Device Key dedicata di questo dispositivo e la Auth Secret Key. La Auth Secret Key può essere reimpostata in seguito da FAB → Configurazione dispositivo.",
+      "description": "Questa finestra modale mostra le informazioni di configurazione del dispositivo, gli identificatori generati, i sensori abilitati, se una pompa dell’acqua è collegata a questo dispositivo e il segreto dell’account utilizzato dal dispositivo. Puoi anche inviare un’email con codice Arduino di esempio che corrisponde alle impostazioni del dispositivo selezionato, inclusi sensori e configurazione della pompa dell’acqua. Il codice generato viene compilato con la Device Key dedicata e l’Auth Secret Key di questo dispositivo. L’Auth Secret Key può essere reimpostata in seguito da FAB → Configurazione dispositivo.",
       "loading": "Caricamento dettagli dispositivo...",
       "deviceName": "Nome dispositivo",
       "deviceKey": "Chiave dispositivo",
@@ -55,23 +55,23 @@
       "yes": "Sì",
       "no": "No",
       "emailCode": "Invia codice via email",
-      "emailingCode": "Invio..."
+      "emailingCode": "Invio in corso..."
     },
     "wateringSchedule": {
       "title": "Programma irrigazione",
-      "description": "L’irrigazione manuale funziona creando un lavoro pompa in sospeso per questo dispositivo. L’app mobile non avvia direttamente la pompa. Invece, il backend memorizza il lavoro programmato e la scheda Arduino verifica la presenza di lavori in sospeso quando invia la prossima lettura. Se esiste un lavoro in sospeso e la scheda dispone di logica di controllo della pompa, può avviare la pompa dell’acqua e quindi contrassegnare il lavoro come eseguito.",
+      "description": "L’irrigazione manuale funziona creando un lavoro della pompa in sospeso per questo dispositivo. L’app mobile non aziona direttamente la pompa. Invece, il backend memorizza il lavoro programmato e la scheda Arduino controlla se ci sono lavori in sospeso quando invia la lettura successiva. Se esiste un lavoro in sospeso e la scheda dispone della logica di controllo della pompa, può avviare la pompa dell’acqua e poi contrassegnare il lavoro come eseguito.",
       "currentSchedule": "Richiesta di irrigazione attuale",
-      "pendingJob": "Un lavoro di irrigazione è attualmente programmato e in attesa che il dispositivo lo prenda in carico.",
-      "noPendingJob": "Non c’è alcun lavoro di irrigazione in sospeso per questo dispositivo.",
-      "scheduledAt": "Programmato per: {{value}}",
+      "pendingJob": "Un lavoro di irrigazione è attualmente programmato e in attesa che il dispositivo lo rilevi.",
+      "noPendingJob": "Non ci sono lavori di irrigazione in sospeso per questo dispositivo.",
+      "scheduledAt": "Programmato alle: {{value}}",
       "howItWorks": "Come funziona",
-      "step1": "Quando programmi l’irrigazione, il backend memorizza un lavoro pompa in sospeso per questo dispositivo.",
-      "step2": "La scheda Arduino normalmente invia letture circa una volta all’ora. Durante quella richiesta, può anche chiedere al backend se è in attesa un lavoro pompa.",
-      "step3": "Se la scheda dispone di logica di controllo della pompa e trova un lavoro in sospeso, può avviare la pompa e quindi segnalare che il lavoro è stato eseguito.",
-      "step4": "L’irrigazione manuale programmata è indipendente dall’irrigazione automatica basata sull’umidità. Non controlla il livello attuale di umidità del suolo prima dell’esecuzione.",
+      "step1": "Quando programmi l’irrigazione, il backend memorizza un lavoro della pompa in sospeso per questo dispositivo.",
+      "step2": "La scheda Arduino normalmente invia letture circa una volta all’ora. Durante quella richiesta, può anche chiedere al backend se c’è un lavoro della pompa in attesa.",
+      "step3": "Se la scheda dispone della logica di controllo della pompa e trova un lavoro in sospeso, può avviare la pompa e poi segnalare che il lavoro è stato eseguito.",
+      "step4": "L’irrigazione manuale programmata è indipendente dall’irrigazione automatica basata sull’umidità. Non controlla il livello attuale di umidità del suolo prima di avviarsi.",
       "pumpRequiredTitle": "Pompa richiesta",
-      "pumpRequiredText": "Questo dispositivo non è configurato con una pompa dell’acqua. Abilita il supporto della pompa dell’acqua nelle impostazioni del dispositivo prima di programmare l’irrigazione.",
-      "working": "Aggiornamento...",
+      "pumpRequiredText": "Questo dispositivo non è configurato con una pompa dell’acqua. Abilita il supporto per la pompa dell’acqua nelle impostazioni del dispositivo prima di programmare l’irrigazione.",
+      "working": "Aggiornamento in corso...",
       "recallWatering": "Richiama irrigazione programmata",
       "scheduleWatering": "Programma irrigazione"
     },
@@ -110,7 +110,7 @@
       "title": "Invia esportazione letture",
       "noticeTitle": "L’esportazione Excel userà i criteri attualmente applicati.",
       "noticeFiltered": "Saranno inclusi solo i dati delle letture che corrispondono ai filtri mostrati di seguito. Se hai bisogno di dati diversi, modifica prima i filtri e poi invia di nuovo.",
-      "noticeAllData": "Al momento non è applicato alcun filtro, quindi l’esportazione includerà tutti i dati delle letture disponibili per questa schermata.",
+      "noticeAllData": "Al momento non sono applicati filtri, quindi l’esportazione includerà tutti i dati delle letture disponibili per questa schermata.",
       "plantLabel": "Pianta",
       "locationLabel": "Posizione",
       "statusLabel": "Stato",
@@ -121,7 +121,7 @@
       "anyStatus": "Qualsiasi stato",
       "notSet": "Non impostato",
       "send": "Invia",
-      "sending": "Invio..."
+      "sending": "Invio in corso..."
     },
     "upsert": {
       "linkDeviceTitle": "Collega dispositivo",
@@ -147,7 +147,7 @@
       "ingestReadingsFromDevice": "Acquisisci letture da questo dispositivo",
       "notesOptional": "Note… (opzionale)",
       "notifications": "Notifiche",
-      "notificationsSoilMoistureInfo": "Gli avvisi di umidità del suolo sono disponibili solo quando il sensore di umidità del suolo è abilitato.",
+      "notificationsSoilMoistureInfo": "Gli avvisi sull’umidità del suolo sono disponibili solo quando il sensore Umidità del suolo è abilitato.",
       "sendEmailNotifications": "Invia notifiche email quando l’umidità del suolo è sotto la soglia",
       "sendPushNotifications": "Invia notifiche push quando l’umidità del suolo è sotto la soglia",
       "waterPump": "Pompa dell’acqua",
@@ -155,9 +155,9 @@
       "automaticPumpLaunch": "Avvio automatico della pompa quando l’umidità del suolo è sotto la soglia",
       "pumpThreshold": "Soglia: ",
       "pumpThresholdValue": "{{value}}%",
-      "wateringNotificationsInfo": "Le notifiche di completamento dell’irrigazione sono disponibili solo quando questo dispositivo include una pompa dell’acqua. Possono essere inviate dopo il completamento dell’irrigazione programmata o dopo che l’irrigazione automatica è stata attivata e completata.",
-      "sendEmailWateringNotifications": "Invia notifica email quando l’irrigazione è completa",
-      "sendPushWateringNotifications": "Invia notifica push quando l’irrigazione è completa",
+      "wateringNotificationsInfo": "Le notifiche di completamento dell’irrigazione sono disponibili solo quando questo dispositivo include una pompa dell’acqua. Possono essere inviate dopo il completamento dell’irrigazione programmata o dopo l’attivazione e il completamento dell’irrigazione automatica.",
+      "sendEmailWateringNotifications": "Invia notifica email quando l’irrigazione è completata",
+      "sendPushWateringNotifications": "Invia notifica push quando l’irrigazione è completata",
       "samplingIntervalRemoved": "L’intervallo di campionamento è stato rimosso"
     }
   }

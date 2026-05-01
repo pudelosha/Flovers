@@ -6,7 +6,7 @@
       "plant": "Planta"
     },
     "errors": {
-      "noId": "No se proporcionó id de planta ni código QR.",
+      "noId": "No se proporcionó ningún ID de planta ni código QR.",
       "failedToLoad": "No se pudo cargar la planta."
     },
     "states": {
@@ -20,17 +20,23 @@
     },
     "alerts": {
       "completeFailed": {
-        "title": "Error al completar",
+        "title": "No se pudo completar",
         "msg": "No se pudo completar este recordatorio."
       }
     },
     "toasts": {
       "reminderCompleted": "Recordatorio marcado como completado.",
       "qrSaved": "Código QR guardado en tu galería.",
-      "qrSaveFailed": "Error al guardar el código QR.",
-      "qrEmailed": "Correo del código QR enviado.",
-      "qrEmailFailed": "Error al enviar el correo del código QR.",
-      "qrEmailPlaceholder": "Se enviará un correo con este código QR a la dirección de tu cuenta."
+      "qrSaveFailed": "No se pudo guardar el código QR.",
+      "qrEmailed": "Correo electrónico con el código QR enviado.",
+      "qrEmailFailed": "No se pudo enviar el correo electrónico con el código QR.",
+      "qrEmailPlaceholder": "Se enviará un correo electrónico con este código QR a la dirección de tu cuenta.",
+      "missingDeviceId": "Falta el ID del dispositivo",
+      "pumpStatusLoadFailed": "No se pudo cargar el horario de riego",
+      "wateringScheduled": "Riego programado",
+      "wateringScheduleFailed": "No se pudo programar el riego",
+      "wateringRecalled": "Riego programado cancelado",
+      "wateringRecallFailed": "No se pudo cancelar el riego"
     },
     "permissions": {
       "storage": {
@@ -44,14 +50,14 @@
       "rendererNotReady": "El renderizador de QR no está listo."
     },
     "info": {
-      "fallbackTitle": "Planta #{{id}}",
-      "purchased": "Comprado",
+      "fallbackTitle": "Planta n.º {{id}}",
+      "purchased": "Comprada",
       "notes": "Notas",
       "light": "Luz",
       "orientation": "Orientación",
       "distance": "Distancia",
       "pot": "Maceta",
-      "soil": "Suelo",
+      "soil": "Tierra",
       "cm": "cm",
       "in": "in",
       "orientations": {
@@ -63,12 +69,12 @@
     },
     "infoMenu": {
       "items": {
-        "plantDefinition": "Definición de planta",
+        "plantDefinition": "Definición de la planta",
         "editPlant": "Editar planta",
         "changeImage": "Cambiar imagen",
         "showReminders": "Mostrar recordatorios"
       },
-      "noDefinitionTitle": "Definición de planta no disponible",
+      "noDefinitionTitle": "Definición de la planta no disponible",
       "noDefinitionBody": "Esta planta aún no está vinculada a una definición de planta.",
       "editPlant": {
         "title": "Editar planta",
@@ -76,11 +82,16 @@
       },
       "showReminders": {
         "title": "Mostrar recordatorios",
-        "msg": "La vinculación a recordatorios se implementará más adelante."
+        "msg": "La vinculación a los recordatorios se implementará más adelante."
       }
     },
     "latestReadings": {
-      "title": "Últimas lecturas",
+      "title": "Lecturas más recientes",
+      "lastReadPrefix": "Última lectura",
+      "lastPumpRunPrefix": "Último funcionamiento de la bomba",
+      "opening": "Abriendo...",
+      "scheduleWatering": "Programar riego",
+      "unscheduleWatering": "Cancelar riego",
       "lastRead": {
         "empty": "Última lectura: —",
         "value": "Última lectura: {{date}} {{time}}"
@@ -89,11 +100,11 @@
     "qr": {
       "title": "Código QR",
       "desc": {
-        "primary": "Cada planta tiene su propio código QR único. Al escanearlo en la vista de Escáner se abren los detalles de esta planta al instante.",
-        "secondary": "Puedes guardar el código QR en tu teléfono o enviártelo por correo, luego imprimirlo y adjuntarlo a la maceta para un acceso rápido más tarde."
+        "primary": "Cada planta tiene su propio código QR único. Al escanearlo en la vista Escáner, se abren al instante los detalles de esta planta.",
+        "secondary": "Puedes guardar el código QR en tu teléfono o enviártelo por correo electrónico, luego imprimirlo y fijarlo a la maceta para acceder rápidamente más adelante."
       },
       "saveBtn": "Guardar",
-      "emailBtn": "Correo"
+      "emailBtn": "Correo electrónico"
     },
     "reminders": {
       "title": "Recordatorios",
@@ -107,7 +118,7 @@
         "fertilising": "Fertilización",
         "moisture": "Humedad",
         "care": "Cuidado",
-        "repot": "Trasplante"
+        "repot": "Trasplantar"
       }
     }
   }

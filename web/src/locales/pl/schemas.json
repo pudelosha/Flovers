@@ -4,52 +4,240 @@
     "copied": "Skopiowano"
   },
   "title": "API urządzenia i okablowanie",
-  "lead": "Ta strona opisuje, jak urządzenia integrują się z Flovers. Urządzenia wysyłają odczyty czujników do punktu końcowego ingest i mogą odczytywać najnowszy kanał urządzenia z punktu końcowego feed, na przykład aby wyzwalać działania takie jak uruchomienie pompy wodnej. Znajdziesz tu również format payloadu, wygenerowany przykład firmware Arduino do wysyłania odczytów oraz prosty przykład sterowania ESP32/Arduino do odczytu kanału urządzenia i aktywowania podlewania.",
+  "lead": [
+    "Ta strona dokumentuje sposób integracji urządzeń IoT z Flovers.",
+    "Urządzenia mogą wysyłać odczyty środowiskowe do backendu, sprawdzać, czy z aplikacji mobilnej zaplanowano ręczne podlewanie, oraz zgłaszać zakończone uruchomienia pompy z powrotem do Flovers.",
+    "Wygenerowane oprogramowanie układowe Arduino/ESP może obsługiwać zarówno odczyty, jak i sterowanie podlewaniem w jednym szkicu. Jeśli połączone urządzenie zostało skonfigurowane z pompą wody, wygenerowany kod zawiera endpointy pompy i logikę sterowania pompą. Jeśli urządzenie zostało skonfigurowane bez pompy, wygenerowane oprogramowanie układowe można uprościć tak, aby wysyłało tylko odczyty."
+  ],
+  "firmwareIntro": {
+    "title": "Co robi wygenerowane oprogramowanie układowe",
+    "lead": "Wygenerowane oprogramowanie układowe może:",
+    "items": [
+      "łączyć się z Wi-Fi",
+      "synchronizować czas za pomocą NTP",
+      "odczytywać włączone czujniki",
+      "wysyłać odczyty do Flovers",
+      "sprawdzać zaplanowane ręczne zadania podlewania",
+      "uruchamiać pompę, gdy oczekuje ręczne zadanie podlewania",
+      "sprawdzać ustawienia automatycznego podlewania kontrolowane przez backend",
+      "uruchamiać automatyczne podlewanie, gdy wilgotność gleby jest poniżej skonfigurowanego progu",
+      "zgłaszać zakończenie podlewania z powrotem do backendu"
+    ],
+    "defaultTiming": "Domyślnie odczyty są wysyłane raz na godzinę. Ręczne zadania podlewania są sprawdzane częściej, na przykład raz na minutę, dzięki czemu żądanie podlewania utworzone z aplikacji mobilnej może zostać odebrane bez czekania na następny godzinny cykl odczytów.",
+    "adjustmentNote": "Niektóre wartości należy dostosować do sprzętu i preferencji, zwłaszcza dane logowania do Wi-Fi, numery pinów, kalibrację wilgotności gleby, czas pracy pompy, interwał odczytów, interwał odpytywania ręcznych zadań oraz czas wyciszenia automatycznego podlewania."
+  },
   "endpoints": {
-    "title": "Punkty końcowe API",
-    "note": "Urządzenia wysyłają telemetrię do punktu końcowego ingest i mogą odczytywać najnowszy kanał urządzenia z punktu końcowego feed.",
+    "title": "Endpointy API",
     "ingest": {
-      "label": "Przyjmowanie odczytów (urządzenie → backend)",
-      "value": "https://api.flovers.app/api/readings/ingest/"
+      "title": "Przyjmowanie odczytów",
+      "direction": "Urządzenie → backend",
+      "desc": [
+        "Urządzenia używają tego endpointu do wysyłania odczytów z czujników.",
+        "Backend uwierzytelnia żądanie za pomocą:",
+        "Backend zapisuje odczyty pod pasującym urządzeniem. Odczyty mogą obejmować temperaturę, wilgotność powietrza, światło, wilgotność gleby lub dowolny podzbiór włączonych metryk."
+      ],
+      "authItems": [
+        "secret",
+        "device_key",
+        "opcjonalnie device_id"
+      ]
+    },
+    "pumpNextTask": {
+      "title": "Sprawdź następne zadanie pompy",
+      "direction": "Urządzenie → backend",
+      "desc": [
+        "Urządzenia z obsługą pompy używają tego endpointu, aby sprawdzić, czy oczekuje ręczne zadanie podlewania.",
+        "Odpowiedź zawiera także bieżącą konfigurację automatycznej pompy kontrolowaną przez backend, na przykład informację, czy automatyczne podlewanie jest włączone i jakiego progu wilgotności gleby należy użyć."
+      ]
+    },
+    "pumpComplete": {
+      "title": "Zgłoś zakończenie pracy pompy",
+      "direction": "Urządzenie → backend",
+      "desc": [
+        "Urządzenia używają tego endpointu po uruchomieniu pompy.",
+        "Może on zgłosić jedno z poniższych:"
+      ],
+      "items": [
+        "zaplanowane ręczne zadanie podlewania, przy użyciu task_id",
+        "lub automatyczne zdarzenie podlewania, przy użyciu source: \"automatic\""
+      ]
     },
     "feed": {
-      "label": "Odczyt kanału urządzenia (urządzenie → backend)",
-      "value": "https://api.flovers.app/api/readings/feed/"
+      "title": "Odczytaj najnowszy feed",
+      "direction": "Urządzenie → backend",
+      "desc": [
+        "Ten endpoint zwraca najnowsze dane odczytu dla urządzenia. Nadal jest przydatny w prostych integracjach lub diagnostyce, ale wygenerowane oprogramowanie układowe z obsługą pompy używa pump-next-task i pump-complete do sterowania podlewaniem."
+      ]
     }
   },
   "ingest": {
     "title": "Dokumentacja POST ingest",
-    "desc": "Wyślij jedną próbkę odczytu jako JSON. Backend uwierzytelnia urządzenie za pomocą device_key i secret, a następnie zapisuje dostarczone metryki dla tego urządzenia.",
-    "schemaLabel": "Struktura payloadu (JSON)",
-    "psLabel": "Przykład PowerShell (POST)",
-    "arduinoTitle": "Wygenerowany firmware Arduino (ESP32/ESP8266)",
-    "arduinoDesc": "Wygenerowany firmware łączy się z Wi-Fi, synchronizuje czas z NTP, odczytuje włączone czujniki i wysyła JSON do punktu końcowego ingest w stałych odstępach czasu.",
-    "arduinoCodeLabel": "Wygenerowany firmware Arduino (POST odczyty)",
-    "arduinoNote": "Użyj wygenerowanego firmware zgodnie z przeznaczeniem dla urządzenia. Przed wgraniem ustaw dane Wi-Fi oraz sprawdź okablowanie czujników, przypisania pinów i wartości kalibracji gleby.",
-    "sensors": {
-      "bh1750": "BH1750 (GY-302) — natężenie światła przez I2C",
-      "moisture": "Pojemnościowy czujnik wilgotności gleby — odczyt analogowy z kalibracją mokre/suche",
-      "bme280": "BME280 — temperatura i wilgotność przez I2C (ciśnienie opcjonalne)"
-    }
+    "desc": "Wyślij jedną próbkę odczytu jako JSON. Backend uwierzytelnia urządzenie i zapisuje podane metryki.",
+    "payloadShape": "Struktura payloadu",
+    "examplePayload": "Przykładowy payload",
+    "powershellExample": "Przykład PowerShell"
+  },
+  "pumpNextTask": {
+    "title": "Dokumentacja POST pump-next-task",
+    "desc": [
+      "Ten endpoint jest używany przez urządzenia z obsługą pompy.",
+      "Urządzenie pyta backend, czy istnieje zaplanowane ręczne zadanie podlewania. Backend zwraca:"
+    ],
+    "items": [
+      "czy pompa powinna uruchomić się teraz",
+      "ID zadania, jeśli istnieje ręczne zadanie podlewania",
+      "bieżące ustawienia automatycznej pompy",
+      "czy według backendu pompa i czujnik wilgotności są włączone"
+    ],
+    "payloadShape": "Struktura payloadu",
+    "examplePayload": "Przykładowy payload",
+    "responseNoTask": "Przykładowa odpowiedź bez ręcznego zadania podlewania",
+    "responseWithTask": "Przykładowa odpowiedź z ręcznym zadaniem podlewania",
+    "powershellExample": "Przykład PowerShell"
+  },
+  "pumpComplete": {
+    "title": "Dokumentacja POST pump-complete",
+    "desc": [
+      "Po uruchomieniu pompy urządzenie zgłasza zakończenie.",
+      "W przypadku ręcznego podlewania dołącz task_id zwrócone przez pump-next-task.",
+      "W przypadku automatycznego podlewania pomiń task_id i użyj source: \"automatic\"."
+    ],
+    "manualPayload": "Payload zakończenia ręcznego podlewania",
+    "automaticPayload": "Payload zakończenia automatycznego podlewania",
+    "failedPayload": "Payload nieudanego uruchomienia pompy",
+    "powershellExample": "Przykład PowerShell"
   },
   "feed": {
     "title": "Dokumentacja GET feed",
-    "desc": "Odczytaj najnowszy kanał urządzenia z backendu. Urządzenia mogą używać tego punktu końcowego do odbierania bieżącego stanu lub działań, na przykład uruchomienia pompy wodnej.",
-    "exampleLabel": "Przykładowe żądanie",
-    "responseLabel": "Przykładowy payload odpowiedzi",
-    "controlTitle": "Przykład podlewania ESP32 / Arduino (GET)",
-    "controlDesc": "Ten przykład pokazuje, jak ESP32 może wywołać punkt końcowy feed, sparsować najnowszą odpowiedź, porównać wilgotność gleby z określonym progiem i aktywować pompę wodną sterowaną przekaźnikiem na konfigurowalny czas. Po podlaniu lub sprawdzeniu warunków urządzenie czeka określony czas przed ponownym sprawdzeniem.",
-    "controlCodeLabel": "Przykład ESP32 / Arduino — GET feed i uruchomienie pompy",
-    "controlNote": "Dostosuj logikę przekaźnika, czas pracy pompy, próg wilgotności i opóźnienie odpytywania do swojego sprzętu. Wiele modułów przekaźników jest aktywnych w stanie LOW, więc sprawdź, czy LOW lub HIGH włącza przekaźnik."
+    "desc": [
+      "Endpoint feed zwraca najnowszy odczyt dla urządzenia.",
+      "Może być używany do diagnostyki lub prostych integracji, które potrzebują tylko odczytać najnowsze zapisane wartości."
+    ],
+    "exampleRequest": "Przykładowe żądanie",
+    "exampleResponse": "Przykładowa odpowiedź"
+  },
+  "generatedFirmware": {
+    "title": "Wygenerowane oprogramowanie układowe Arduino / ESP32",
+    "desc": [
+      "Aplikacja może wygenerować oprogramowanie układowe dla wybranego urządzenia.",
+      "Wygenerowane oprogramowanie układowe zawiera poprawne endpointy API, sekret uwierzytelniania, klucz urządzenia, ID urządzenia, włączone czujniki oraz ustawienia pompy dla tego urządzenia.",
+      "Jeśli urządzenie jest skonfigurowane z pompą wody, wygenerowany kod obejmuje zarówno odczyty, jak i sterowanie pompą wody. Sprawdza ręczne zadania podlewania niezależnie od godzinnego cyklu odczytów, a automatyczne podlewanie używa progu i przełącznika kontrolowanych przez backend."
+    ],
+    "adjustIntro": "Przed wgraniem szkicu dostosuj następujące wartości do swojego sprzętu:",
+    "adjustItems": [
+      "SSID i hasło Wi-Fi",
+      "SDA_PIN i SCL_PIN",
+      "SOIL_PIN",
+      "PUMP_PIN",
+      "SOIL_DRY_VALUE i SOIL_WET_VALUE",
+      "PUMP_RUN_MS",
+      "SEND_INTERVAL_MS",
+      "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "AUTO_PUMP_MIN_INTERVAL_MS"
+    ],
+    "codeLabel": "Wygenerowane oprogramowanie układowe Arduino: odczyty + sterowanie pompą wody"
+  },
+  "behavior": {
+    "title": "Podsumowanie działania oprogramowania układowego",
+    "fullCycle": {
+      "title": "Pełny cykl godzinny",
+      "desc": "Co SEND_INTERVAL_MS płytka wykonuje pełny cykl:",
+      "items": [
+        "odczytuje czujniki",
+        "wysyła odczyty do endpointu ingest",
+        "sprawdza zaplanowane ręczne podlewanie",
+        "uruchamia ręczne podlewanie, jeśli zadanie oczekuje",
+        "w przeciwnym razie sprawdza warunki automatycznego podlewania",
+        "uruchamia automatyczne podlewanie, jeśli ustawienia backendu na to pozwalają, a wilgotność gleby jest poniżej progu"
+      ]
+    },
+    "manualCheck": {
+      "title": "Sprawdzanie ręcznego podlewania",
+      "desc": [
+        "Co MANUAL_PUMP_CHECK_INTERVAL_MS płytka sprawdza tylko zaplanowane ręczne zadania podlewania.",
+        "To krótsze sprawdzanie:",
+        "Dzięki temu akcja „Zaplanuj podlewanie” w aplikacji może zostać szybko odebrana bez wymuszania wysyłania odczytów z czujników co minutę."
+      ],
+      "items": [
+        "nie wysyła odczytów",
+        "nie uruchamia automatycznego podlewania",
+        "uruchamia tylko oczekujące ręczne zadanie podlewania, jeśli takie istnieje"
+      ]
+    },
+    "automatic": {
+      "title": "Automatyczne podlewanie",
+      "desc": [
+        "Automatyczne podlewanie jest kontrolowane przez ustawienia backendu skonfigurowane w aplikacji mobilnej.",
+        "Płytka uruchamia automatyczne podlewanie tylko wtedy, gdy:"
+      ],
+      "items": [
+        "obsługa pompy jest włączona",
+        "automatyczne uruchamianie pompy jest włączone",
+        "czujnik wilgotności jest włączony",
+        "ostatnio zmierzona wilgotność gleby jest poniżej progu z backendu",
+        "upłynął czas wyciszenia automatycznego podlewania"
+      ],
+      "cooldown": "Po uruchomieniu ręcznego lub automatycznego podlewania oprogramowanie układowe rozpoczyna czas wyciszenia automatycznego podlewania. Pomaga to uniknąć sytuacji, w której ręczne i automatyczne podlewanie następują zbyt blisko siebie."
+    },
+    "manual": {
+      "title": "Ręczne podlewanie",
+      "desc": [
+        "Ręczne podlewanie jest planowane z aplikacji mobilnej.",
+        "Ręczne podlewanie celowo ignoruje:",
+        "Oznacza to, że gdy użytkownik ręcznie zaplanuje podlewanie, płytka traktuje to jako wyraźne żądanie jednorazowego uruchomienia pompy."
+      ],
+      "items": [
+        "bieżącą wilgotność gleby",
+        "próg automatycznego podlewania",
+        "czas wyciszenia automatycznego podlewania"
+      ]
+    }
+  },
+  "hardware": {
+    "title": "Uwagi dotyczące sprzętu",
+    "desc": "Wygenerowane oprogramowanie układowe zakłada użycie typowych komponentów zgodnych z ESP32:",
+    "items": [
+      "czujnik światła BH1750 / GY-302 przez I2C",
+      "czujnik temperatury i wilgotności BME280 przez I2C",
+      "pojemnościowy czujnik wilgotności gleby na pinie analogowym",
+      "przekaźnik lub sterownik pompy podłączony do cyfrowego pinu wyjściowego"
+    ],
+    "verify": "Sprawdź całe okablowanie przed zasileniem pompy.",
+    "relayNote": "Niektóre moduły przekaźników są aktywne w stanie LOW, a inne aktywne w stanie HIGH. Wygenerowany przykład używa:",
+    "relayReverse": "Jeśli Twój przekaźnik działa odwrotnie, może być konieczna zamiana wartości HIGH i LOW.",
+    "relayCodeLabel": "Przykład wyjścia pompy"
+  },
+  "calibration": {
+    "title": "Uwagi dotyczące kalibracji",
+    "desc": [
+      "Czujniki wilgotności gleby muszą zostać skalibrowane, aby zapewnić wiarygodne wyniki.",
+      "Wygenerowany kod używa:",
+      "Te wartości są tylko przykładami.",
+      "Zmierz wartość czujnika w suchej glebie lub w powietrzu, następnie zmierz ją ponownie w mokrej glebie lub wodzie i odpowiednio zaktualizuj te stałe."
+    ],
+    "codeLabel": "Domyślne wartości kalibracji"
+  },
+  "safety": {
+    "title": "Uwagi dotyczące bezpieczeństwa",
+    "desc": [
+      "Wygenerowane oprogramowanie układowe jest punktem wyjścia. Przed pozostawieniem pompy bez nadzoru:",
+      "Flovers zapisuje odczyty i zdarzenia podlewania, ale okablowanie urządzenia, kalibracja, działanie pompy i fizyczna instalacja pozostają odpowiedzialnością użytkownika."
+    ],
+    "items": [
+      "przetestuj pompę ręcznie",
+      "potwierdź logikę przekaźnika",
+      "sprawdź, czy pompa poprawnie się wyłącza",
+      "użyj bezpiecznego czasu pracy pompy",
+      "potwierdź, że wartości wilgotności gleby są realistyczne",
+      "chroń elektronikę przed wodą",
+      "użyj odpowiedniego zasilacza i izolacji dla pompy"
+    ]
   },
   "wiring": {
     "title": "Schematy okablowania",
-    "desc": "Poniżej znajduje się przykładowy schemat okablowania urządzenia do wysyłania żądań POST do backendu Flovers. Kliknij obraz, aby otworzyć go na pełnym ekranie.",
-    "ariaPrimary": "Przykładowy schemat okablowania urządzenia dla żądań POST",
-    "ariaPump": "Miejsce na schemat okablowania przekaźnika pompy",
-    "placeholderTitlePrimary": "Przykładowy schemat okablowania urządzenia (POST)",
-    "placeholderSubPrimary": "Kliknij obraz, aby wyświetlić go na pełnym ekranie.",
-    "placeholderTitlePump": "Schemat okablowania pompy / przekaźnika",
-    "placeholderSubPump": "Dodaj tutaj drugi schemat okablowania później."
+    "desc": "Poniżej znajduje się przykładowy schemat okablowania urządzenia. Kliknij obraz, aby otworzyć go na pełnym ekranie.",
+    "ariaPrimary": "Przykładowy schemat okablowania urządzenia",
+    "placeholderTitlePrimary": "Przykładowy schemat okablowania urządzenia",
+    "placeholderSubPrimary": "Kliknij obraz, aby wyświetlić go na pełnym ekranie."
   }
 }

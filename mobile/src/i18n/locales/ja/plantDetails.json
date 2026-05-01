@@ -7,7 +7,7 @@
     },
     "errors": {
       "noId": "植物IDまたはQRコードが提供されていません。",
-      "failedToLoad": "植物の読み込みに失敗しました。"
+      "failedToLoad": "植物を読み込めませんでした。"
     },
     "states": {
       "error": {
@@ -25,17 +25,23 @@
       }
     },
     "toasts": {
-      "reminderCompleted": "リマインダーが完了としてマークされました。",
-      "qrSaved": "QRコードがギャラリーに保存されました。",
+      "reminderCompleted": "リマインダーを完了としてマークしました。",
+      "qrSaved": "QRコードをギャラリーに保存しました。",
       "qrSaveFailed": "QRコードの保存に失敗しました。",
       "qrEmailed": "QRコードのメールを送信しました。",
       "qrEmailFailed": "QRコードのメール送信に失敗しました。",
-      "qrEmailPlaceholder": "このQRコードを含むメールがあなたのアカウントのアドレスに送信されます。"
+      "qrEmailPlaceholder": "このQRコードを含むメールがアカウントのメールアドレスに送信されます。",
+      "missingDeviceId": "デバイスIDがありません",
+      "pumpStatusLoadFailed": "水やりスケジュールの読み込みに失敗しました",
+      "wateringScheduled": "水やりをスケジュールしました",
+      "wateringScheduleFailed": "水やりのスケジュールに失敗しました",
+      "wateringRecalled": "スケジュールされた水やりを取り消しました",
+      "wateringRecallFailed": "水やりの取り消しに失敗しました"
     },
     "permissions": {
       "storage": {
         "title": "ストレージ権限",
-        "message": "QRコードをギャラリーに保存するためにアクセスが必要です。",
+        "message": "QRコードをギャラリーに保存するにはアクセス権が必要です。",
         "ok": "OK",
         "denied": "ストレージ権限が拒否されました。"
       }
@@ -51,7 +57,7 @@
       "orientation": "向き",
       "distance": "距離",
       "pot": "鉢",
-      "soil": "土壌",
+      "soil": "土",
       "cm": "cm",
       "in": "in",
       "orientations": {
@@ -63,13 +69,13 @@
     },
     "infoMenu": {
       "items": {
-        "plantDefinition": "植物の定義",
+        "plantDefinition": "植物定義",
         "editPlant": "植物を編集",
         "changeImage": "画像を変更",
         "showReminders": "リマインダーを表示"
       },
-      "noDefinitionTitle": "植物の定義が利用できません",
-      "noDefinitionBody": "この植物はまだ植物の定義にリンクされていません。",
+      "noDefinitionTitle": "植物定義を利用できません",
+      "noDefinitionBody": "この植物はまだ植物定義にリンクされていません。",
       "editPlant": {
         "title": "植物を編集",
         "msg": "この植物の編集は後で実装されます。"
@@ -81,6 +87,11 @@
     },
     "latestReadings": {
       "title": "最新の測定値",
+      "lastReadPrefix": "最終読み取り",
+      "lastPumpRunPrefix": "最後のポンプ作動",
+      "opening": "開いています...",
+      "scheduleWatering": "水やりをスケジュール",
+      "unscheduleWatering": "水やりのスケジュールを解除",
       "lastRead": {
         "empty": "最終読み取り: —",
         "value": "最終読み取り: {{date}} {{time}}"
@@ -89,8 +100,8 @@
     "qr": {
       "title": "QRコード",
       "desc": {
-        "primary": "各植物には固有のQRコードがあります。スキャナービューでスキャンすると、この植物の詳細がすぐに開きます。",
-        "secondary": "QRコードを携帯に保存するか、自分にメールで送信し、それを印刷して鉢に貼り付けることで、後で素早くアクセスできます。"
+        "primary": "各植物には、それぞれ固有のQRコードがあります。スキャナー画面でスキャンすると、この植物の詳細がすぐに開きます。",
+        "secondary": "QRコードをスマートフォンに保存したり、自分宛にメールで送信したりできます。その後、印刷して鉢に貼り付けておけば、後で素早くアクセスできます。"
       },
       "saveBtn": "保存",
       "emailBtn": "メール"

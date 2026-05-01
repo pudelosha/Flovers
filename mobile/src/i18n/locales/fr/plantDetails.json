@@ -6,7 +6,7 @@
       "plant": "Plante"
     },
     "errors": {
-      "noId": "Aucun identifiant de plante ou code QR fourni.",
+      "noId": "Aucun identifiant de plante ni code QR fourni.",
       "failedToLoad": "Échec du chargement de la plante."
     },
     "states": {
@@ -20,40 +20,46 @@
     },
     "alerts": {
       "completeFailed": {
-        "title": "Échec de la complétion",
-        "msg": "Impossible de compléter ce rappel."
+        "title": "Échec de la finalisation",
+        "msg": "Impossible de finaliser ce rappel."
       }
     },
     "toasts": {
       "reminderCompleted": "Rappel marqué comme terminé.",
       "qrSaved": "Code QR enregistré dans votre galerie.",
       "qrSaveFailed": "Échec de l’enregistrement du code QR.",
-      "qrEmailed": "E-mail du code QR envoyé.",
-      "qrEmailFailed": "Échec de l’envoi de l’e-mail du code QR.",
-      "qrEmailPlaceholder": "Un e-mail contenant ce code QR sera envoyé à l’adresse de votre compte."
+      "qrEmailed": "E-mail contenant le code QR envoyé.",
+      "qrEmailFailed": "Échec de l’envoi de l’e-mail contenant le code QR.",
+      "qrEmailPlaceholder": "Un e-mail avec ce code QR sera envoyé à l’adresse de votre compte.",
+      "missingDeviceId": "ID de l’appareil manquant",
+      "pumpStatusLoadFailed": "Échec du chargement du programme d’arrosage",
+      "wateringScheduled": "Arrosage programmé",
+      "wateringScheduleFailed": "Échec de la programmation de l’arrosage",
+      "wateringRecalled": "Arrosage programmé annulé",
+      "wateringRecallFailed": "Échec de l’annulation de l’arrosage"
     },
     "permissions": {
       "storage": {
         "title": "Autorisation de stockage",
-        "message": "Nous avons besoin d’un accès pour enregistrer le code QR dans votre galerie.",
+        "message": "Nous avons besoin de l’accès pour enregistrer le code QR dans votre galerie.",
         "ok": "OK",
         "denied": "Autorisation de stockage refusée."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Le générateur de QR n’est pas prêt."
+      "rendererNotReady": "Générateur de QR non prêt."
     },
     "info": {
-      "fallbackTitle": "Plante #{{id}}",
+      "fallbackTitle": "Plante n°{{id}}",
       "purchased": "Achetée",
       "notes": "Notes",
       "light": "Lumière",
       "orientation": "Orientation",
       "distance": "Distance",
       "pot": "Pot",
-      "soil": "Sol",
+      "soil": "Terreau",
       "cm": "cm",
-      "in": "po",
+      "in": "in",
       "orientations": {
         "N": "Nord",
         "E": "Est",
@@ -81,6 +87,11 @@
     },
     "latestReadings": {
       "title": "Dernières mesures",
+      "lastReadPrefix": "Dernière lecture",
+      "lastPumpRunPrefix": "Dernier fonctionnement de la pompe",
+      "opening": "Ouverture...",
+      "scheduleWatering": "Programmer l’arrosage",
+      "unscheduleWatering": "Annuler l’arrosage programmé",
       "lastRead": {
         "empty": "Dernière lecture : —",
         "value": "Dernière lecture : {{date}} {{time}}"
@@ -90,7 +101,7 @@
       "title": "Code QR",
       "desc": {
         "primary": "Chaque plante possède son propre code QR unique. Le scanner dans la vue Scanner ouvre instantanément les détails de cette plante.",
-        "secondary": "Vous pouvez enregistrer le code QR sur votre téléphone ou vous l’envoyer par e-mail, puis l’imprimer et l’attacher au pot pour un accès rapide ultérieur."
+        "secondary": "Vous pouvez enregistrer le code QR sur votre téléphone ou vous l’envoyer par e-mail, puis l’imprimer et le fixer au pot pour un accès rapide ultérieur."
       },
       "saveBtn": "Enregistrer",
       "emailBtn": "E-mail"
@@ -107,7 +118,7 @@
         "fertilising": "Fertilisation",
         "moisture": "Humidité",
         "care": "Entretien",
-        "repot": "Rempoter"
+        "repot": "Rempotage"
       }
     }
   }

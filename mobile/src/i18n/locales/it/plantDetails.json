@@ -30,7 +30,13 @@
       "qrSaveFailed": "Impossibile salvare il codice QR.",
       "qrEmailed": "Email con codice QR inviata.",
       "qrEmailFailed": "Impossibile inviare l'email con il codice QR.",
-      "qrEmailPlaceholder": "Un'email con questo codice QR verrà inviata all'indirizzo del tuo account."
+      "qrEmailPlaceholder": "Un'email con questo codice QR verrà inviata all'indirizzo del tuo account.",
+      "missingDeviceId": "ID dispositivo mancante",
+      "pumpStatusLoadFailed": "Impossibile caricare il programma di irrigazione",
+      "wateringScheduled": "Irrigazione programmata",
+      "wateringScheduleFailed": "Impossibile programmare l'irrigazione",
+      "wateringRecalled": "Irrigazione programmata annullata",
+      "wateringRecallFailed": "Impossibile annullare l'irrigazione"
     },
     "permissions": {
       "storage": {
@@ -51,7 +57,7 @@
       "orientation": "Orientamento",
       "distance": "Distanza",
       "pot": "Vaso",
-      "soil": "Terreno",
+      "soil": "Terriccio",
       "cm": "cm",
       "in": "in",
       "orientations": {
@@ -63,24 +69,29 @@
     },
     "infoMenu": {
       "items": {
-        "plantDefinition": "Definizione della pianta",
+        "plantDefinition": "Definizione pianta",
         "editPlant": "Modifica pianta",
         "changeImage": "Cambia immagine",
         "showReminders": "Mostra promemoria"
       },
-      "noDefinitionTitle": "Definizione della pianta non disponibile",
+      "noDefinitionTitle": "Definizione pianta non disponibile",
       "noDefinitionBody": "Questa pianta non è ancora collegata a una definizione di pianta.",
       "editPlant": {
         "title": "Modifica pianta",
-        "msg": "La modifica di questa pianta sarà implementata in seguito."
+        "msg": "La modifica di questa pianta verrà implementata in seguito."
       },
       "showReminders": {
         "title": "Mostra promemoria",
-        "msg": "Il collegamento ai promemoria sarà implementato in seguito."
+        "msg": "Il collegamento ai promemoria verrà implementato in seguito."
       }
     },
     "latestReadings": {
       "title": "Ultime letture",
+      "lastReadPrefix": "Ultima lettura",
+      "lastPumpRunPrefix": "Ultima attivazione della pompa",
+      "opening": "Apertura...",
+      "scheduleWatering": "Programma irrigazione",
+      "unscheduleWatering": "Annulla irrigazione programmata",
       "lastRead": {
         "empty": "Ultima lettura: —",
         "value": "Ultima lettura: {{date}} {{time}}"
@@ -89,8 +100,8 @@
     "qr": {
       "title": "Codice QR",
       "desc": {
-        "primary": "Ogni pianta ha il proprio codice QR unico. Scansionandolo nella vista Scanner si aprono immediatamente i dettagli di questa pianta.",
-        "secondary": "Puoi salvare il codice QR sul tuo telefono o inviartelo via email, quindi stamparlo e attaccarlo al vaso per un accesso rapido in seguito."
+        "primary": "Ogni pianta ha il proprio codice QR univoco. Scansionandolo nella vista Scanner si aprono immediatamente i dettagli di questa pianta.",
+        "secondary": "Puoi salvare il codice QR sul tuo telefono o inviartelo via email, poi stamparlo e attaccarlo al vaso per accedervi rapidamente in seguito."
       },
       "saveBtn": "Salva",
       "emailBtn": "Email"
@@ -103,8 +114,8 @@
         "showHistory": "Mostra cronologia"
       },
       "type": {
-        "watering": "Annaffiatura",
-        "fertilising": "Fertilizzazione",
+        "watering": "Irrigazione",
+        "fertilising": "Concimazione",
         "moisture": "Umidità",
         "care": "Cura",
         "repot": "Rinvaso"

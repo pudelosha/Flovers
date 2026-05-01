@@ -3,53 +3,241 @@
     "copy": "Copiar",
     "copied": "Copiado"
   },
-  "title": "API de dispositivos y cableado",
-  "lead": "Esta página documenta cómo los dispositivos se integran con Flovers. Los dispositivos envían lecturas de sensores al endpoint de ingestión y pueden leer el feed más reciente del dispositivo desde el endpoint de feed, por ejemplo para activar acciones como iniciar una bomba de agua. También encontrarás el formato de payload, un ejemplo de firmware Arduino generado para enviar lecturas y un ejemplo simple de control ESP32/Arduino para leer el feed del dispositivo y activar el riego.",
+  "title": "API del dispositivo y cableado",
+  "lead": [
+    "Esta página documenta cómo los dispositivos IoT se integran con Flovers.",
+    "Los dispositivos pueden enviar lecturas ambientales al backend, comprobar si se ha programado una tarea de riego manual desde la aplicación móvil e informar a Flovers sobre ejecuciones de la bomba completadas.",
+    "El firmware generado para Arduino/ESP puede admitir tanto lecturas como control de riego en un solo sketch. Si el dispositivo vinculado se configuró con una bomba de agua, el código generado incluye endpoints de bomba y lógica de control de bomba. Si el dispositivo se configuró sin bomba, el firmware generado puede simplificarse para enviar solo lecturas."
+  ],
+  "firmwareIntro": {
+    "title": "Qué hace el firmware generado",
+    "lead": "El firmware generado puede:",
+    "items": [
+      "conectarse a Wi-Fi",
+      "sincronizar la hora mediante NTP",
+      "leer sensores habilitados",
+      "enviar lecturas a Flovers",
+      "comprobar si hay tareas de riego manual programadas",
+      "ejecutar la bomba cuando haya una tarea de riego manual pendiente",
+      "comprobar la configuración de riego automático controlada por el backend",
+      "ejecutar el riego automático cuando la humedad del suelo esté por debajo del umbral configurado",
+      "informar al backend sobre la finalización del riego"
+    ],
+    "defaultTiming": "De forma predeterminada, las lecturas se envían una vez por hora. Las tareas de riego manual se comprueban con mayor frecuencia, por ejemplo una vez por minuto, para que una solicitud de riego creada desde la aplicación móvil pueda detectarse sin esperar al siguiente ciclo de lectura por hora.",
+    "adjustmentNote": "Algunos valores deben ajustarse según tu hardware y tus preferencias, especialmente las credenciales de Wi-Fi, los números de pines, la calibración de la humedad del suelo, el tiempo de ejecución de la bomba, el intervalo de lectura, el intervalo de consulta de tareas manuales y el enfriamiento del riego automático."
+  },
   "endpoints": {
     "title": "Endpoints de la API",
-    "note": "Los dispositivos envían telemetría al endpoint de ingestión y pueden leer el feed más reciente del dispositivo desde el endpoint de feed.",
     "ingest": {
-      "label": "Ingestar lecturas (dispositivo → backend)",
-      "value": "https://api.flovers.app/api/readings/ingest/"
+      "title": "Ingerir lecturas",
+      "direction": "Dispositivo → backend",
+      "desc": [
+        "Los dispositivos utilizan este endpoint para enviar lecturas de sensores.",
+        "El backend autentica la solicitud usando:",
+        "El backend almacena las lecturas bajo el dispositivo correspondiente. Las lecturas pueden incluir temperatura, humedad, luz, humedad del suelo o cualquier subconjunto de métricas habilitadas."
+      ],
+      "authItems": [
+        "secret",
+        "device_key",
+        "opcionalmente device_id"
+      ]
+    },
+    "pumpNextTask": {
+      "title": "Comprobar la siguiente tarea de la bomba",
+      "direction": "Dispositivo → backend",
+      "desc": [
+        "Los dispositivos con soporte de bomba utilizan este endpoint para comprobar si hay una tarea de riego manual en espera.",
+        "La respuesta también incluye la configuración actual de la bomba automática controlada por el backend, como si el riego automático está habilitado y qué umbral de humedad del suelo debe usarse."
+      ]
+    },
+    "pumpComplete": {
+      "title": "Informar finalización de la bomba",
+      "direction": "Dispositivo → backend",
+      "desc": [
+        "Los dispositivos utilizan este endpoint después de que la bomba haya funcionado.",
+        "Esto puede informar cualquiera de los siguientes:"
+      ],
+      "items": [
+        "una tarea de riego manual programada, usando task_id",
+        "o un evento de riego automático, usando source: \"automatic\""
+      ]
     },
     "feed": {
-      "label": "Leer feed del dispositivo (dispositivo → backend)",
-      "value": "https://api.flovers.app/api/readings/feed/"
+      "title": "Leer el feed más reciente",
+      "direction": "Dispositivo → backend",
+      "desc": [
+        "Este endpoint devuelve los datos de lectura más recientes de un dispositivo. Sigue siendo útil para integraciones simples o diagnósticos, pero el firmware generado con bomba habilitada utiliza pump-next-task y pump-complete para el control del riego."
+      ]
     }
   },
   "ingest": {
-    "title": "Documentación POST ingest",
-    "desc": "Envía una muestra de lectura como JSON. El backend autentica el dispositivo usando device_key y secret, luego almacena las métricas proporcionadas bajo ese dispositivo.",
-    "schemaLabel": "Estructura del payload (JSON)",
-    "psLabel": "Ejemplo PowerShell (POST)",
-    "arduinoTitle": "Firmware generado para Arduino (ESP32/ESP8266)",
-    "arduinoDesc": "El firmware generado se conecta a Wi-Fi, sincroniza la hora con NTP, lee los sensores habilitados y envía JSON al endpoint de ingestión en un intervalo fijo.",
-    "arduinoCodeLabel": "Firmware Arduino generado (POST lecturas)",
-    "arduinoNote": "Usa el firmware generado tal como está para el dispositivo. Antes de subirlo, configura las credenciales Wi-Fi y verifica el cableado de los sensores, la asignación de pines y los valores de calibración del suelo.",
-    "sensors": {
-      "bh1750": "BH1750 (GY-302) — intensidad de luz a través de I2C",
-      "moisture": "Sensor capacitivo de humedad del suelo — lectura analógica con calibración húmedo/seco",
-      "bme280": "BME280 — temperatura y humedad a través de I2C (presión opcional)"
-    }
+    "title": "Documentación de POST ingest",
+    "desc": "Envía una muestra de lectura como JSON. El backend autentica el dispositivo y almacena las métricas proporcionadas.",
+    "payloadShape": "Forma del payload",
+    "examplePayload": "Payload de ejemplo",
+    "powershellExample": "Ejemplo de PowerShell"
+  },
+  "pumpNextTask": {
+    "title": "Documentación de POST pump-next-task",
+    "desc": [
+      "Este endpoint lo utilizan los dispositivos con soporte de bomba.",
+      "El dispositivo pregunta al backend si existe una tarea de riego manual programada. El backend devuelve:"
+    ],
+    "items": [
+      "si la bomba debe ejecutarse ahora",
+      "el ID de la tarea si existe una tarea de riego manual",
+      "la configuración actual de la bomba automática",
+      "si el backend considera que la bomba y el sensor de humedad están habilitados"
+    ],
+    "payloadShape": "Forma del payload",
+    "examplePayload": "Payload de ejemplo",
+    "responseNoTask": "Respuesta de ejemplo sin tarea de riego manual",
+    "responseWithTask": "Respuesta de ejemplo con una tarea de riego manual",
+    "powershellExample": "Ejemplo de PowerShell"
+  },
+  "pumpComplete": {
+    "title": "Documentación de POST pump-complete",
+    "desc": [
+      "Después de que la bomba funcione, el dispositivo informa la finalización.",
+      "Para el riego manual, incluye el task_id devuelto por pump-next-task.",
+      "Para el riego automático, omite task_id y usa source: \"automatic\"."
+    ],
+    "manualPayload": "Payload de finalización de riego manual",
+    "automaticPayload": "Payload de finalización de riego automático",
+    "failedPayload": "Payload de ejecución fallida de la bomba",
+    "powershellExample": "Ejemplo de PowerShell"
   },
   "feed": {
-    "title": "Documentación GET feed",
-    "desc": "Lee el feed más reciente del dispositivo desde el backend. Los dispositivos pueden usar este endpoint para recibir el estado actual o acciones, por ejemplo iniciar una bomba de agua.",
-    "exampleLabel": "Ejemplo de solicitud",
-    "responseLabel": "Ejemplo de payload de respuesta",
-    "controlTitle": "Ejemplo de riego ESP32 / Arduino (GET)",
-    "controlDesc": "Este ejemplo muestra cómo un ESP32 puede llamar al endpoint de feed, analizar la última respuesta, comparar la humedad del suelo con un umbral definido y activar una bomba de agua controlada por relé durante una duración configurable. Después de regar o verificar las condiciones, el dispositivo espera un intervalo configurable antes de volver a comprobar.",
-    "controlCodeLabel": "Ejemplo ESP32 / Arduino — GET feed y activar bomba",
-    "controlNote": "Ajusta la lógica del relé, el tiempo de funcionamiento de la bomba, el umbral de humedad y el intervalo de consulta según tu hardware. Muchos módulos de relé son activos en LOW, así que verifica si LOW o HIGH activa tu relé."
+    "title": "Documentación de GET feed",
+    "desc": [
+      "El endpoint de feed devuelve la lectura más reciente de un dispositivo.",
+      "Puede utilizarse para diagnósticos o integraciones simples que solo necesiten leer los últimos valores almacenados."
+    ],
+    "exampleRequest": "Solicitud de ejemplo",
+    "exampleResponse": "Respuesta de ejemplo"
+  },
+  "generatedFirmware": {
+    "title": "Firmware generado para Arduino / ESP32",
+    "desc": [
+      "La aplicación puede generar firmware para el dispositivo seleccionado.",
+      "El firmware generado incluye los endpoints de API correctos, el secreto de autenticación, la clave del dispositivo, el ID del dispositivo, los sensores habilitados y la configuración de la bomba para ese dispositivo.",
+      "Si el dispositivo está configurado con una bomba de agua, el código generado incluye tanto lecturas como control de la bomba de agua. Comprueba las tareas de riego manual por separado del ciclo de lectura por hora, y el riego automático utiliza el umbral y el interruptor controlados por el backend."
+    ],
+    "adjustIntro": "Antes de cargar el sketch, ajusta los siguientes valores para tu hardware:",
+    "adjustItems": [
+      "SSID y contraseña de Wi-Fi",
+      "SDA_PIN y SCL_PIN",
+      "SOIL_PIN",
+      "PUMP_PIN",
+      "SOIL_DRY_VALUE y SOIL_WET_VALUE",
+      "PUMP_RUN_MS",
+      "SEND_INTERVAL_MS",
+      "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "AUTO_PUMP_MIN_INTERVAL_MS"
+    ],
+    "codeLabel": "Firmware generado para Arduino: lecturas + control de bomba de agua"
+  },
+  "behavior": {
+    "title": "Resumen del comportamiento del firmware",
+    "fullCycle": {
+      "title": "Ciclo completo por hora",
+      "desc": "Cada SEND_INTERVAL_MS, la placa ejecuta un ciclo completo:",
+      "items": [
+        "lee sensores",
+        "envía lecturas al endpoint de ingest",
+        "comprueba si hay riego manual programado",
+        "ejecuta el riego manual si hay una tarea pendiente",
+        "de lo contrario, comprueba las condiciones de riego automático",
+        "ejecuta el riego automático si la configuración del backend lo permite y la humedad del suelo está por debajo del umbral"
+      ]
+    },
+    "manualCheck": {
+      "title": "Comprobación de riego manual",
+      "desc": [
+        "Cada MANUAL_PUMP_CHECK_INTERVAL_MS, la placa comprueba solo si hay tareas de riego manual programadas.",
+        "Esta comprobación más corta:",
+        "Esto permite que la acción “Programar riego” de la aplicación se detecte rápidamente sin obligar a enviar lecturas de sensores cada minuto."
+      ],
+      "items": [
+        "no envía lecturas",
+        "no ejecuta riego automático",
+        "solo ejecuta una tarea de riego manual pendiente si existe"
+      ]
+    },
+    "automatic": {
+      "title": "Riego automático",
+      "desc": [
+        "El riego automático está controlado por la configuración del backend definida en la aplicación móvil.",
+        "La placa solo ejecuta el riego automático cuando:"
+      ],
+      "items": [
+        "el soporte de bomba está habilitado",
+        "el inicio automático de la bomba está habilitado",
+        "el sensor de humedad está habilitado",
+        "la última humedad del suelo medida está por debajo del umbral del backend",
+        "ha pasado el enfriamiento del riego automático"
+      ],
+      "cooldown": "Después de que se ejecute el riego manual o automático, el firmware inicia el enfriamiento del riego automático. Esto ayuda a evitar que una tarea de riego manual y el riego automático ocurran demasiado cerca entre sí."
+    },
+    "manual": {
+      "title": "Riego manual",
+      "desc": [
+        "El riego manual se programa desde la aplicación móvil.",
+        "El riego manual ignora intencionalmente:",
+        "Esto significa que cuando el usuario programa manualmente el riego, la placa lo trata como una solicitud explícita para ejecutar la bomba una vez."
+      ],
+      "items": [
+        "humedad actual del suelo",
+        "umbral de riego automático",
+        "enfriamiento del riego automático"
+      ]
+    }
+  },
+  "hardware": {
+    "title": "Notas de hardware",
+    "desc": "El firmware generado asume componentes comunes compatibles con ESP32:",
+    "items": [
+      "sensor de luz BH1750 / GY-302 por I2C",
+      "sensor de temperatura y humedad BME280 por I2C",
+      "sensor capacitivo de humedad del suelo en un pin analógico",
+      "relé o controlador de bomba conectado a un pin de salida digital"
+    ],
+    "verify": "Verifica todo el cableado antes de alimentar la bomba.",
+    "relayNote": "Algunos módulos de relé son activos en LOW, mientras que otros son activos en HIGH. El ejemplo generado usa:",
+    "relayReverse": "Si tu relé funciona al revés, es posible que debas intercambiar los valores HIGH y LOW.",
+    "relayCodeLabel": "Ejemplo de salida de bomba"
+  },
+  "calibration": {
+    "title": "Notas de calibración",
+    "desc": [
+      "Los sensores de humedad del suelo deben calibrarse para obtener resultados fiables.",
+      "El código generado usa:",
+      "Estos valores son solo ejemplos.",
+      "Mide el valor de tu sensor en suelo seco o al aire, luego mídelo de nuevo en suelo húmedo o agua, y actualiza estas constantes según corresponda."
+    ],
+    "codeLabel": "Valores de calibración predeterminados"
+  },
+  "safety": {
+    "title": "Notas de seguridad",
+    "desc": [
+      "El firmware generado es un punto de partida. Antes de dejar una bomba sin supervisión:",
+      "Flovers almacena lecturas y eventos de riego, pero el cableado del dispositivo, la calibración, el comportamiento de la bomba y la instalación física siguen siendo responsabilidad del usuario."
+    ],
+    "items": [
+      "prueba la bomba manualmente",
+      "confirma la lógica del relé",
+      "verifica que la bomba se apague correctamente",
+      "usa un tiempo de ejecución seguro de la bomba",
+      "confirma que los valores de humedad del suelo sean realistas",
+      "protege la electrónica del agua",
+      "usa una fuente de alimentación e aislamiento adecuados para la bomba"
+    ]
   },
   "wiring": {
     "title": "Diagramas de cableado",
-    "desc": "A continuación se muestra un esquema de cableado de ejemplo para un dispositivo que envía solicitudes POST al backend de Flovers. Haz clic en la imagen para abrirla en pantalla completa.",
-    "ariaPrimary": "Esquema de cableado de ejemplo para solicitudes POST",
-    "ariaPump": "Marcador de posición del diagrama de cableado del relé de la bomba",
-    "placeholderTitlePrimary": "Esquema de cableado de ejemplo (POST)",
-    "placeholderSubPrimary": "Haz clic en la imagen para mostrarla en pantalla completa.",
-    "placeholderTitlePump": "Esquema de cableado de bomba / relé",
-    "placeholderSubPump": "Añade aquí el segundo diagrama de cableado más adelante."
+    "desc": "A continuación se muestra un esquema de cableado de dispositivo de ejemplo. Haz clic en la imagen para abrirla en pantalla completa.",
+    "ariaPrimary": "Esquema de cableado de dispositivo de ejemplo",
+    "placeholderTitlePrimary": "Esquema de cableado de dispositivo de ejemplo",
+    "placeholderSubPrimary": "Haz clic en la imagen para mostrarla en pantalla completa."
   }
 }

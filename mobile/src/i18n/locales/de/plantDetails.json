@@ -6,7 +6,7 @@
       "plant": "Pflanze"
     },
     "errors": {
-      "noId": "Keine Pflanzen-ID oder QR-Code angegeben.",
+      "noId": "Keine Pflanzen-ID oder kein QR-Code angegeben.",
       "failedToLoad": "Pflanze konnte nicht geladen werden."
     },
     "states": {
@@ -15,22 +15,28 @@
       },
       "notFound": {
         "title": "Nicht gefunden",
-        "msg": "Diese Pflanze konnte nicht geladen werden."
+        "msg": "Wir konnten diese Pflanze nicht laden."
       }
     },
     "alerts": {
       "completeFailed": {
-        "title": "Abschluss fehlgeschlagen",
+        "title": "Abschließen fehlgeschlagen",
         "msg": "Diese Erinnerung konnte nicht abgeschlossen werden."
       }
     },
     "toasts": {
       "reminderCompleted": "Erinnerung als abgeschlossen markiert.",
-      "qrSaved": "QR-Code in deiner Galerie gespeichert.",
+      "qrSaved": "QR-Code wurde in deiner Galerie gespeichert.",
       "qrSaveFailed": "QR-Code konnte nicht gespeichert werden.",
-      "qrEmailed": "QR-Code per E-Mail gesendet.",
-      "qrEmailFailed": "QR-Code konnte nicht per E-Mail gesendet werden.",
-      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an deine Kontoadresse gesendet."
+      "qrEmailed": "QR-Code-E-Mail wurde gesendet.",
+      "qrEmailFailed": "QR-Code-E-Mail konnte nicht gesendet werden.",
+      "qrEmailPlaceholder": "Eine E-Mail mit diesem QR-Code wird an die E-Mail-Adresse deines Kontos gesendet.",
+      "missingDeviceId": "Geräte-ID fehlt",
+      "pumpStatusLoadFailed": "Bewässerungsplan konnte nicht geladen werden",
+      "wateringScheduled": "Bewässerung geplant",
+      "wateringScheduleFailed": "Bewässerung konnte nicht geplant werden",
+      "wateringRecalled": "Geplante Bewässerung wurde zurückgerufen",
+      "wateringRecallFailed": "Bewässerung konnte nicht zurückgerufen werden"
     },
     "permissions": {
       "storage": {
@@ -69,18 +75,23 @@
         "showReminders": "Erinnerungen anzeigen"
       },
       "noDefinitionTitle": "Pflanzendefinition nicht verfügbar",
-      "noDefinitionBody": "Diese Pflanze ist noch keiner Pflanzendefinition zugeordnet.",
+      "noDefinitionBody": "Diese Pflanze ist noch nicht mit einer Pflanzendefinition verknüpft.",
       "editPlant": {
         "title": "Pflanze bearbeiten",
-        "msg": "Die Bearbeitung dieser Pflanze wird später implementiert."
+        "msg": "Das Bearbeiten dieser Pflanze wird später implementiert."
       },
       "showReminders": {
         "title": "Erinnerungen anzeigen",
-        "msg": "Die Verknüpfung zu Erinnerungen wird später implementiert."
+        "msg": "Die Verknüpfung mit Erinnerungen wird später implementiert."
       }
     },
     "latestReadings": {
-      "title": "Letzte Messwerte",
+      "title": "Neueste Messwerte",
+      "lastReadPrefix": "Zuletzt gelesen",
+      "lastPumpRunPrefix": "Letzter Pumpenlauf",
+      "opening": "Wird geöffnet...",
+      "scheduleWatering": "Bewässerung planen",
+      "unscheduleWatering": "Bewässerung abplanen",
       "lastRead": {
         "empty": "Zuletzt gelesen: —",
         "value": "Zuletzt gelesen: {{date}} {{time}}"
@@ -90,7 +101,7 @@
       "title": "QR-Code",
       "desc": {
         "primary": "Jede Pflanze hat ihren eigenen eindeutigen QR-Code. Wenn du ihn in der Scanner-Ansicht scannst, werden die Details dieser Pflanze sofort geöffnet.",
-        "secondary": "Du kannst den QR-Code auf deinem Telefon speichern oder ihn dir per E-Mail senden, dann ausdrucken und für schnellen Zugriff später am Topf anbringen."
+        "secondary": "Du kannst den QR-Code auf deinem Smartphone speichern oder ihn dir per E-Mail senden, ihn dann ausdrucken und für den schnellen Zugriff später am Topf befestigen."
       },
       "saveBtn": "Speichern",
       "emailBtn": "E-Mail"
@@ -103,7 +114,7 @@
         "showHistory": "Verlauf anzeigen"
       },
       "type": {
-        "watering": "Gießen",
+        "watering": "Bewässerung",
         "fertilising": "Düngen",
         "moisture": "Feuchtigkeit",
         "care": "Pflege",

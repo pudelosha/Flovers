@@ -4,52 +4,240 @@
     "copied": "Kopiert"
   },
   "title": "Geräte-API & Verkabelung",
-  "lead": "Diese Seite dokumentiert, wie Geräte mit Flovers integriert werden. Geräte senden Sensordaten an den Ingest-Endpunkt und können den neuesten Geräte-Feed vom Feed-Endpunkt lesen, z. B. um Aktionen wie das Starten einer Wasserpumpe auszulösen. Außerdem finden Sie das Payload-Format, ein generiertes Arduino-Firmware-Beispiel zum Senden von Messwerten sowie ein einfaches ESP32/Arduino-Steuerungsbeispiel zum Lesen des Geräte-Feeds und Aktivieren der Bewässerung.",
+  "lead": [
+    "Diese Seite dokumentiert, wie IoT-Geräte in Flovers integriert werden.",
+    "Geräte können Umgebungswerte an das Backend senden, prüfen, ob über die mobile App eine manuelle Bewässerungsaufgabe geplant wurde, und abgeschlossene Pumpenläufe an Flovers zurückmelden.",
+    "Die generierte Arduino-/ESP-Firmware kann sowohl Messwerte als auch die Bewässerungssteuerung in einem Sketch unterstützen. Wenn das verknüpfte Gerät mit einer Wasserpumpe konfiguriert wurde, enthält der generierte Code Pumpen-Endpunkte und Pumpensteuerungslogik. Wenn das Gerät ohne Pumpe konfiguriert wurde, kann die generierte Firmware vereinfacht werden, sodass sie nur Messwerte sendet."
+  ],
+  "firmwareIntro": {
+    "title": "Was die generierte Firmware tut",
+    "lead": "Die generierte Firmware kann:",
+    "items": [
+      "eine Verbindung zu Wi-Fi herstellen",
+      "die Zeit per NTP synchronisieren",
+      "aktivierte Sensoren auslesen",
+      "Messwerte an Flovers senden",
+      "auf geplante manuelle Bewässerungsaufgaben prüfen",
+      "die Pumpe starten, wenn eine manuelle Bewässerungsaufgabe aussteht",
+      "backend-gesteuerte Einstellungen für automatische Bewässerung prüfen",
+      "automatische Bewässerung ausführen, wenn die Bodenfeuchtigkeit unter dem konfigurierten Schwellenwert liegt",
+      "den Abschluss der Bewässerung an das Backend zurückmelden"
+    ],
+    "defaultTiming": "Standardmäßig werden Messwerte einmal pro Stunde gesendet. Manuelle Bewässerungsaufgaben werden häufiger geprüft, zum Beispiel einmal pro Minute, damit eine über die mobile App erstellte Bewässerungsanforderung übernommen werden kann, ohne auf den nächsten stündlichen Messzyklus zu warten.",
+    "adjustmentNote": "Einige Werte sollten an Ihre Hardware und Vorlieben angepasst werden, insbesondere Wi-Fi-Zugangsdaten, Pin-Nummern, Kalibrierung der Bodenfeuchtigkeit, Pumpenlaufzeit, Messintervall, Abfrageintervall für manuelle Aufgaben und Abkühlzeit für automatische Bewässerung."
+  },
   "endpoints": {
     "title": "API-Endpunkte",
-    "note": "Geräte senden Telemetriedaten an den Ingest-Endpunkt und können den neuesten Geräte-Feed vom Feed-Endpunkt lesen.",
     "ingest": {
-      "label": "Messwerte erfassen (Gerät → Backend)",
-      "value": "https://api.flovers.app/api/readings/ingest/"
+      "title": "Messwerte aufnehmen",
+      "direction": "Gerät → Backend",
+      "desc": [
+        "Geräte verwenden diesen Endpunkt, um Sensorwerte zu senden.",
+        "Das Backend authentifiziert die Anfrage mit:",
+        "Das Backend speichert Messwerte unter dem passenden Gerät. Messwerte können Temperatur, Luftfeuchtigkeit, Licht, Bodenfeuchtigkeit oder eine beliebige Teilmenge aktivierter Metriken enthalten."
+      ],
+      "authItems": [
+        "secret",
+        "device_key",
+        "optional device_id"
+      ]
+    },
+    "pumpNextTask": {
+      "title": "Nächste Pumpenaufgabe prüfen",
+      "direction": "Gerät → Backend",
+      "desc": [
+        "Geräte mit Pumpenunterstützung verwenden diesen Endpunkt, um zu prüfen, ob eine manuelle Bewässerungsaufgabe wartet.",
+        "Die Antwort enthält außerdem die aktuelle backend-gesteuerte automatische Pumpenkonfiguration, zum Beispiel ob automatische Bewässerung aktiviert ist und welcher Schwellenwert für die Bodenfeuchtigkeit verwendet werden soll."
+      ]
+    },
+    "pumpComplete": {
+      "title": "Pumpenabschluss melden",
+      "direction": "Gerät → Backend",
+      "desc": [
+        "Geräte verwenden diesen Endpunkt, nachdem die Pumpe gelaufen ist.",
+        "Dies kann entweder melden:"
+      ],
+      "items": [
+        "eine geplante manuelle Bewässerungsaufgabe unter Verwendung von task_id",
+        "oder ein automatisches Bewässerungsereignis unter Verwendung von source: \"automatic\""
+      ]
     },
     "feed": {
-      "label": "Geräte-Feed lesen (Gerät → Backend)",
-      "value": "https://api.flovers.app/api/readings/feed/"
+      "title": "Neuesten Feed lesen",
+      "direction": "Gerät → Backend",
+      "desc": [
+        "Dieser Endpunkt gibt die neuesten Messdaten für ein Gerät zurück. Er ist weiterhin nützlich für einfache Integrationen oder Diagnosezwecke, aber die generierte pumpenfähige Firmware verwendet pump-next-task und pump-complete für die Bewässerungssteuerung."
+      ]
     }
   },
   "ingest": {
-    "title": "POST-Ingest-Dokumentation",
-    "desc": "Senden Sie eine Messprobe als JSON. Das Backend authentifiziert das Gerät mithilfe von device_key und secret und speichert anschließend die bereitgestellten Messwerte unter diesem Gerät.",
-    "schemaLabel": "Payload-Struktur (JSON)",
-    "psLabel": "PowerShell-Beispiel (POST)",
-    "arduinoTitle": "Arduino (ESP32/ESP8266) generierte Firmware",
-    "arduinoDesc": "Die generierte Firmware verbindet sich mit dem WLAN, synchronisiert die Zeit über NTP, liest aktivierte Sensoren aus und sendet JSON in festen Intervallen an den Ingest-Endpunkt.",
-    "arduinoCodeLabel": "Generierte Arduino-Firmware (POST Messwerte)",
-    "arduinoNote": "Verwenden Sie die generierte Firmware wie bereitgestellt für das Gerät. Stellen Sie vor dem Hochladen die WLAN-Zugangsdaten ein und überprüfen Sie die Sensorverkabelung, Pinbelegungen und Kalibrierwerte für den Boden.",
-    "sensors": {
-      "bh1750": "BH1750 (GY-302) — Lichtintensität über I2C",
-      "moisture": "Kapazitiver Bodenfeuchtesensor — analoges Auslesen mit Nass-/Trocken-Kalibrierung",
-      "bme280": "BME280 — Temperatur & Luftfeuchtigkeit über I2C (Druck optional)"
-    }
+    "title": "POST ingest-Dokumentation",
+    "desc": "Senden Sie eine Messprobe als JSON. Das Backend authentifiziert das Gerät und speichert die bereitgestellten Metriken.",
+    "payloadShape": "Payload-Struktur",
+    "examplePayload": "Beispiel-Payload",
+    "powershellExample": "PowerShell-Beispiel"
+  },
+  "pumpNextTask": {
+    "title": "POST pump-next-task-Dokumentation",
+    "desc": [
+      "Dieser Endpunkt wird von Geräten mit Pumpenunterstützung verwendet.",
+      "Das Gerät fragt das Backend, ob eine geplante manuelle Bewässerungsaufgabe vorhanden ist. Das Backend gibt zurück:"
+    ],
+    "items": [
+      "ob die Pumpe jetzt laufen soll",
+      "die Aufgaben-ID, wenn eine manuelle Bewässerungsaufgabe vorhanden ist",
+      "die aktuellen automatischen Pumpeneinstellungen",
+      "ob das Backend die Pumpe und den Feuchtigkeitssensor als aktiviert betrachtet"
+    ],
+    "payloadShape": "Payload-Struktur",
+    "examplePayload": "Beispiel-Payload",
+    "responseNoTask": "Beispielantwort ohne manuelle Bewässerungsaufgabe",
+    "responseWithTask": "Beispielantwort mit einer manuellen Bewässerungsaufgabe",
+    "powershellExample": "PowerShell-Beispiel"
+  },
+  "pumpComplete": {
+    "title": "POST pump-complete-Dokumentation",
+    "desc": [
+      "Nachdem die Pumpe gelaufen ist, meldet das Gerät den Abschluss.",
+      "Für manuelle Bewässerung fügen Sie die von pump-next-task zurückgegebene task_id ein.",
+      "Für automatische Bewässerung lassen Sie task_id weg und verwenden Sie source: \"automatic\"."
+    ],
+    "manualPayload": "Payload für Abschluss der manuellen Bewässerung",
+    "automaticPayload": "Payload für Abschluss der automatischen Bewässerung",
+    "failedPayload": "Payload für fehlgeschlagenen Pumpenlauf",
+    "powershellExample": "PowerShell-Beispiel"
   },
   "feed": {
-    "title": "GET-Feed-Dokumentation",
-    "desc": "Lesen Sie den neuesten Geräte-Feed aus dem Backend. Geräte können diesen Endpunkt verwenden, um den aktuellen Status oder Aktionen zu erhalten, z. B. das Starten einer Wasserpumpe.",
-    "exampleLabel": "Beispielanfrage",
-    "responseLabel": "Beispiel-Antwort-Payload",
-    "controlTitle": "ESP32 / Arduino Bewässerungsbeispiel (GET)",
-    "controlDesc": "Dieses Beispiel zeigt, wie ein ESP32 den Feed-Endpunkt aufrufen, die neueste Antwort auswerten, die Bodenfeuchte mit einem definierten Schwellenwert vergleichen und eine relaisgesteuerte Wasserpumpe für eine konfigurierbare Dauer aktivieren kann. Nach der Bewässerung oder der Prüfung der Bedingungen wartet das Gerät ein konfigurierbares Intervall, bevor es erneut prüft.",
-    "controlCodeLabel": "ESP32 / Arduino Beispiel — GET Feed und Pumpe auslösen",
-    "controlNote": "Passen Sie Relaislogik, Pumpenlaufzeit, Feuchtigkeitsschwellenwert und Abfrageintervall an Ihre Hardware an. Viele Relaismodule sind LOW-aktiv, überprüfen Sie daher, ob LOW oder HIGH Ihr Relais einschaltet."
+    "title": "GET feed-Dokumentation",
+    "desc": [
+      "Der Feed-Endpunkt gibt den neuesten Messwert für ein Gerät zurück.",
+      "Er kann für Diagnosezwecke oder einfache Integrationen verwendet werden, die nur die neuesten gespeicherten Werte lesen müssen."
+    ],
+    "exampleRequest": "Beispielanfrage",
+    "exampleResponse": "Beispielantwort"
+  },
+  "generatedFirmware": {
+    "title": "Generierte Arduino- / ESP32-Firmware",
+    "desc": [
+      "Die App kann Firmware für das ausgewählte Gerät generieren.",
+      "Die generierte Firmware enthält die richtigen API-Endpunkte, das Authentifizierungs-Secret, den Geräteschlüssel, die Geräte-ID, aktivierte Sensoren und Pumpeneinstellungen für dieses Gerät.",
+      "Wenn das Gerät mit einer Wasserpumpe konfiguriert ist, enthält der generierte Code sowohl Messwerte als auch Wasserpumpensteuerung. Er prüft manuelle Bewässerungsaufgaben getrennt vom stündlichen Messzyklus, und automatische Bewässerung verwendet den backend-gesteuerten Schwellenwert und Schalter."
+    ],
+    "adjustIntro": "Passen Sie vor dem Hochladen des Sketches die folgenden Werte an Ihre Hardware an:",
+    "adjustItems": [
+      "Wi-Fi-SSID und Passwort",
+      "SDA_PIN und SCL_PIN",
+      "SOIL_PIN",
+      "PUMP_PIN",
+      "SOIL_DRY_VALUE und SOIL_WET_VALUE",
+      "PUMP_RUN_MS",
+      "SEND_INTERVAL_MS",
+      "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "AUTO_PUMP_MIN_INTERVAL_MS"
+    ],
+    "codeLabel": "Generierte Arduino-Firmware: Messwerte + Wasserpumpensteuerung"
+  },
+  "behavior": {
+    "title": "Zusammenfassung des Firmware-Verhaltens",
+    "fullCycle": {
+      "title": "Vollständiger stündlicher Zyklus",
+      "desc": "Alle SEND_INTERVAL_MS führt das Board einen vollständigen Zyklus aus:",
+      "items": [
+        "liest Sensoren aus",
+        "sendet Messwerte an den ingest-Endpunkt",
+        "prüft auf geplante manuelle Bewässerung",
+        "führt manuelle Bewässerung aus, wenn eine Aufgabe aussteht",
+        "prüft andernfalls die Bedingungen für automatische Bewässerung",
+        "führt automatische Bewässerung aus, wenn die Backend-Einstellungen dies erlauben und die Bodenfeuchtigkeit unter dem Schwellenwert liegt"
+      ]
+    },
+    "manualCheck": {
+      "title": "Prüfung der manuellen Bewässerung",
+      "desc": [
+        "Alle MANUAL_PUMP_CHECK_INTERVAL_MS prüft das Board nur auf geplante manuelle Bewässerungsaufgaben.",
+        "Diese kürzere Prüfung:",
+        "Dadurch kann die Aktion „Bewässerung planen“ der App schnell übernommen werden, ohne dass Sensorwerte jede Minute gesendet werden müssen."
+      ],
+      "items": [
+        "sendet keine Messwerte",
+        "führt keine automatische Bewässerung aus",
+        "führt nur eine ausstehende manuelle Bewässerungsaufgabe aus, wenn eine vorhanden ist"
+      ]
+    },
+    "automatic": {
+      "title": "Automatische Bewässerung",
+      "desc": [
+        "Automatische Bewässerung wird durch die in der mobilen App konfigurierten Backend-Einstellungen gesteuert.",
+        "Das Board führt automatische Bewässerung nur aus, wenn:"
+      ],
+      "items": [
+        "Pumpenunterstützung aktiviert ist",
+        "automatischer Pumpenstart aktiviert ist",
+        "der Feuchtigkeitssensor aktiviert ist",
+        "die zuletzt gemessene Bodenfeuchtigkeit unter dem Backend-Schwellenwert liegt",
+        "die Abkühlzeit für automatische Bewässerung abgelaufen ist"
+      ],
+      "cooldown": "Nachdem entweder manuelle Bewässerung oder automatische Bewässerung ausgeführt wurde, startet die Firmware die Abkühlzeit für automatische Bewässerung. Dies hilft zu vermeiden, dass eine manuelle Bewässerungsaufgabe und automatische Bewässerung zu dicht aufeinander folgen."
+    },
+    "manual": {
+      "title": "Manuelle Bewässerung",
+      "desc": [
+        "Manuelle Bewässerung wird über die mobile App geplant.",
+        "Manuelle Bewässerung ignoriert absichtlich:",
+        "Das bedeutet, dass das Board es als ausdrückliche Aufforderung behandelt, die Pumpe einmal laufen zu lassen, wenn der Benutzer manuell eine Bewässerung plant."
+      ],
+      "items": [
+        "aktuelle Bodenfeuchtigkeit",
+        "Schwellenwert für automatische Bewässerung",
+        "Abkühlzeit für automatische Bewässerung"
+      ]
+    }
+  },
+  "hardware": {
+    "title": "Hardware-Hinweise",
+    "desc": "Die generierte Firmware geht von gängigen ESP32-kompatiblen Komponenten aus:",
+    "items": [
+      "BH1750- / GY-302-Lichtsensor über I2C",
+      "BME280-Temperatur- und Luftfeuchtigkeitssensor über I2C",
+      "kapazitiver Bodenfeuchtigkeitssensor an einem analogen Pin",
+      "Relais oder Pumpentreiber, verbunden mit einem digitalen Ausgangspin"
+    ],
+    "verify": "Überprüfen Sie die gesamte Verkabelung, bevor Sie die Pumpe mit Strom versorgen.",
+    "relayNote": "Einige Relaismodule sind aktiv LOW, andere aktiv HIGH. Das generierte Beispiel verwendet:",
+    "relayReverse": "Wenn Ihr Relais umgekehrt arbeitet, müssen Sie möglicherweise die HIGH- und LOW-Werte vertauschen.",
+    "relayCodeLabel": "Beispiel für Pumpenausgang"
+  },
+  "calibration": {
+    "title": "Kalibrierungshinweise",
+    "desc": [
+      "Bodenfeuchtigkeitssensoren müssen für zuverlässige Ergebnisse kalibriert werden.",
+      "Der generierte Code verwendet:",
+      "Diese Werte sind nur Beispiele.",
+      "Messen Sie den Sensorwert in trockener Erde oder Luft, messen Sie ihn dann erneut in nasser Erde oder Wasser und aktualisieren Sie diese Konstanten entsprechend."
+    ],
+    "codeLabel": "Standard-Kalibrierungswerte"
+  },
+  "safety": {
+    "title": "Sicherheitshinweise",
+    "desc": [
+      "Die generierte Firmware ist ein Ausgangspunkt. Bevor Sie eine Pumpe unbeaufsichtigt lassen:",
+      "Flovers speichert Messwerte und Bewässerungsereignisse, aber Geräteverkabelung, Kalibrierung, Pumpenverhalten und physische Installation bleiben in der Verantwortung des Benutzers."
+    ],
+    "items": [
+      "die Pumpe manuell testen",
+      "die Relaislogik bestätigen",
+      "überprüfen, dass sich die Pumpe korrekt ausschaltet",
+      "eine sichere Pumpenlaufzeit verwenden",
+      "bestätigen, dass die Bodenfeuchtigkeitswerte realistisch sind",
+      "Elektronik vor Wasser schützen",
+      "geeignete Stromversorgung und Isolierung für die Pumpe verwenden"
+    ]
   },
   "wiring": {
-    "title": "Verdrahtungsdiagramme",
-    "desc": "Unten sehen Sie ein Beispiel für ein Geräte-Verdrahtungsschema zum Senden von POST-Anfragen an das Flovers-Backend. Klicken Sie auf das Bild, um es im Vollbildmodus zu öffnen.",
-    "ariaPrimary": "Beispiel für ein Geräte-Verdrahtungsschema für POST-Anfragen",
-    "ariaPump": "Platzhalter für Pumpen-/Relais-Verdrahtungsdiagramm",
-    "placeholderTitlePrimary": "Beispiel für Geräte-Verdrahtungsschema (POST)",
-    "placeholderSubPrimary": "Klicken Sie auf das Bild, um es im Vollbildmodus anzuzeigen.",
-    "placeholderTitlePump": "Pumpen-/Relais-Verdrahtungsschema",
-    "placeholderSubPump": "Fügen Sie hier später das zweite Verdrahtungsdiagramm hinzu."
+    "title": "Schaltpläne",
+    "desc": "Unten finden Sie ein beispielhaftes Verdrahtungsschema für ein Gerät. Klicken Sie auf das Bild, um es im Vollbildmodus zu öffnen.",
+    "ariaPrimary": "Beispielhaftes Verdrahtungsschema für ein Gerät",
+    "placeholderTitlePrimary": "Beispielhaftes Verdrahtungsschema für ein Gerät",
+    "placeholderSubPrimary": "Klicken Sie auf das Bild, um es im Vollbildmodus anzuzeigen."
   }
 }

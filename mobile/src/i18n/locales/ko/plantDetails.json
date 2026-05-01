@@ -1,6 +1,6 @@
 {
   "plantDetails": {
-    "headerTitle": "식물 상세",
+    "headerTitle": "식물 상세 정보",
     "common": {
       "dash": "—",
       "plant": "식물"
@@ -30,7 +30,13 @@
       "qrSaveFailed": "QR 코드를 저장하지 못했습니다.",
       "qrEmailed": "QR 코드 이메일이 전송되었습니다.",
       "qrEmailFailed": "QR 코드 이메일을 보내지 못했습니다.",
-      "qrEmailPlaceholder": "이 QR 코드가 포함된 이메일이 계정 주소로 전송됩니다."
+      "qrEmailPlaceholder": "이 QR 코드가 포함된 이메일이 계정 주소로 전송됩니다.",
+      "missingDeviceId": "기기 ID가 없습니다",
+      "pumpStatusLoadFailed": "급수 일정을 불러오지 못했습니다",
+      "wateringScheduled": "급수가 예약되었습니다",
+      "wateringScheduleFailed": "급수를 예약하지 못했습니다",
+      "wateringRecalled": "예약된 급수가 취소되었습니다",
+      "wateringRecallFailed": "급수 예약을 취소하지 못했습니다"
     },
     "permissions": {
       "storage": {
@@ -51,7 +57,7 @@
       "orientation": "방향",
       "distance": "거리",
       "pot": "화분",
-      "soil": "토양",
+      "soil": "흙",
       "cm": "cm",
       "in": "in",
       "orientations": {
@@ -64,23 +70,28 @@
     "infoMenu": {
       "items": {
         "plantDefinition": "식물 정의",
-        "editPlant": "식물 수정",
+        "editPlant": "식물 편집",
         "changeImage": "이미지 변경",
-        "showReminders": "알림 보기"
+        "showReminders": "알림 표시"
       },
       "noDefinitionTitle": "식물 정의를 사용할 수 없음",
       "noDefinitionBody": "이 식물은 아직 식물 정의에 연결되어 있지 않습니다.",
       "editPlant": {
-        "title": "식물 수정",
-        "msg": "이 식물의 수정 기능은 나중에 구현될 예정입니다."
+        "title": "식물 편집",
+        "msg": "이 식물 편집 기능은 나중에 구현될 예정입니다."
       },
       "showReminders": {
-        "title": "알림 보기",
-        "msg": "알림 연결 기능은 나중에 구현될 예정입니다."
+        "title": "알림 표시",
+        "msg": "알림으로 연결하는 기능은 나중에 구현될 예정입니다."
       }
     },
     "latestReadings": {
       "title": "최근 측정값",
+      "lastReadPrefix": "마지막 측정",
+      "lastPumpRunPrefix": "마지막 펌프 작동",
+      "opening": "여는 중...",
+      "scheduleWatering": "급수 예약",
+      "unscheduleWatering": "급수 예약 취소",
       "lastRead": {
         "empty": "마지막 측정: —",
         "value": "마지막 측정: {{date}} {{time}}"
@@ -89,8 +100,8 @@
     "qr": {
       "title": "QR 코드",
       "desc": {
-        "primary": "각 식물에는 고유한 QR 코드가 있습니다. 스캐너 화면에서 이를 스캔하면 이 식물의 상세 정보가 즉시 열립니다.",
-        "secondary": "QR 코드를 휴대폰에 저장하거나 이메일로 보내 인쇄한 뒤 화분에 부착하면 나중에 빠르게 접근할 수 있습니다."
+        "primary": "각 식물에는 고유한 QR 코드가 있습니다. 스캐너 화면에서 스캔하면 이 식물의 상세 정보가 즉시 열립니다.",
+        "secondary": "QR 코드를 휴대폰에 저장하거나 자신에게 이메일로 보낸 다음, 인쇄하여 화분에 붙여 나중에 빠르게 접근할 수 있습니다."
       },
       "saveBtn": "저장",
       "emailBtn": "이메일"
@@ -99,13 +110,13 @@
       "title": "알림",
       "menu": {
         "markComplete": "완료로 표시",
-        "editReminder": "알림 수정",
+        "editReminder": "알림 편집",
         "showHistory": "기록 보기"
       },
       "type": {
-        "watering": "물주기",
+        "watering": "급수",
         "fertilising": "비료 주기",
-        "moisture": "습도",
+        "moisture": "수분",
         "care": "관리",
         "repot": "분갈이"
       }

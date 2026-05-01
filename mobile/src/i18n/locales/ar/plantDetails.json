@@ -6,7 +6,7 @@
       "plant": "النبات"
     },
     "errors": {
-      "noId": "لم يتم توفير معرف النبات أو رمز QR.",
+      "noId": "لم يتم توفير معرّف النبات أو رمز QR.",
       "failedToLoad": "فشل تحميل النبات."
     },
     "states": {
@@ -15,39 +15,45 @@
       },
       "notFound": {
         "title": "غير موجود",
-        "msg": "تعذر تحميل هذا النبات."
+        "msg": "تعذّر علينا تحميل هذا النبات."
       }
     },
     "alerts": {
       "completeFailed": {
         "title": "فشل الإكمال",
-        "msg": "تعذر إكمال هذا التذكير."
+        "msg": "تعذّر إكمال هذا التذكير."
       }
     },
     "toasts": {
       "reminderCompleted": "تم وضع علامة على التذكير كمكتمل.",
-      "qrSaved": "تم حفظ رمز QR في معرض الصور.",
+      "qrSaved": "تم حفظ رمز QR في معرض الصور لديك.",
       "qrSaveFailed": "فشل حفظ رمز QR.",
-      "qrEmailed": "تم إرسال بريد إلكتروني برمز QR.",
-      "qrEmailFailed": "فشل إرسال بريد إلكتروني برمز QR.",
-      "qrEmailPlaceholder": "سيتم إرسال بريد إلكتروني يحتوي على رمز QR هذا إلى عنوان حسابك."
+      "qrEmailed": "تم إرسال بريد رمز QR.",
+      "qrEmailFailed": "فشل إرسال بريد رمز QR.",
+      "qrEmailPlaceholder": "سيتم إرسال بريد إلكتروني يحتوي على رمز QR هذا إلى عنوان حسابك.",
+      "missingDeviceId": "معرّف الجهاز مفقود",
+      "pumpStatusLoadFailed": "فشل تحميل جدول الري",
+      "wateringScheduled": "تم جدولة الري",
+      "wateringScheduleFailed": "فشل جدولة الري",
+      "wateringRecalled": "تم إلغاء الري المجدول",
+      "wateringRecallFailed": "فشل إلغاء الري"
     },
     "permissions": {
       "storage": {
         "title": "إذن التخزين",
-        "message": "نحتاج إلى الوصول لحفظ رمز QR في معرض الصور.",
-        "ok": "حسنًا",
+        "message": "نحتاج إلى الوصول لحفظ رمز QR في معرض الصور لديك.",
+        "ok": "موافق",
         "denied": "تم رفض إذن التخزين."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "عارض QR غير جاهز."
+      "rendererNotReady": "عارض رمز QR غير جاهز."
     },
     "info": {
       "fallbackTitle": "النبات #{{id}}",
       "purchased": "تم الشراء",
       "notes": "ملاحظات",
-      "light": "الإضاءة",
+      "light": "الضوء",
       "orientation": "الاتجاه",
       "distance": "المسافة",
       "pot": "الأصيص",
@@ -68,7 +74,7 @@
         "changeImage": "تغيير الصورة",
         "showReminders": "عرض التذكيرات"
       },
-      "noDefinitionTitle": "تعريف النبات غير متوفر",
+      "noDefinitionTitle": "تعريف النبات غير متاح",
       "noDefinitionBody": "هذا النبات غير مرتبط بتعريف نبات حتى الآن.",
       "editPlant": {
         "title": "تعديل النبات",
@@ -81,6 +87,11 @@
     },
     "latestReadings": {
       "title": "أحدث القراءات",
+      "lastReadPrefix": "آخر قراءة",
+      "lastPumpRunPrefix": "آخر تشغيل للمضخة",
+      "opening": "جارٍ الفتح...",
+      "scheduleWatering": "جدولة الري",
+      "unscheduleWatering": "إلغاء جدولة الري",
       "lastRead": {
         "empty": "آخر قراءة: —",
         "value": "آخر قراءة: {{date}} {{time}}"
@@ -89,11 +100,11 @@
     "qr": {
       "title": "رمز QR",
       "desc": {
-        "primary": "لكل نبات رمز QR فريد خاص به. مسحه في عرض الماسح يفتح تفاصيل هذا النبات فورًا.",
-        "secondary": "يمكنك حفظ رمز QR على هاتفك أو إرساله بالبريد الإلكتروني إلى نفسك، ثم طباعته وإرفاقه بالأصيص للوصول السريع لاحقًا."
+        "primary": "لكل نبات رمز QR فريد خاص به. عند مسحه في عرض الماسح، تُفتح تفاصيل هذا النبات فورًا.",
+        "secondary": "يمكنك حفظ رمز QR على هاتفك أو إرساله إلى نفسك بالبريد الإلكتروني، ثم طباعته وإرفاقه بالأصيص للوصول السريع لاحقًا."
       },
       "saveBtn": "حفظ",
-      "emailBtn": "بريد إلكتروني"
+      "emailBtn": "البريد الإلكتروني"
     },
     "reminders": {
       "title": "التذكيرات",

@@ -4,52 +4,240 @@
     "copied": "已复制"
   },
   "title": "设备 API 与接线",
-  "lead": "本页面介绍设备如何与 Flovers 集成。设备将传感器读数发送到 ingest 端点，并可以从 feed 端点读取最新的设备数据流，例如用于触发启动水泵等操作。你还可以在此找到数据负载格式、用于发送读数的 Arduino 固件生成示例，以及一个简单的 ESP32/Arduino 控制示例，用于读取设备数据流并激活浇水。",
+  "lead": [
+    "本页面说明 IoT 设备如何与 Flovers 集成。",
+    "设备可以向后端发送环境读数，检查是否已从移动应用安排了手动浇水任务，并将已完成的水泵运行情况报告回 Flovers。",
+    "生成的 Arduino/ESP 固件可以在一个草图中同时支持读数和浇水控制。如果关联设备配置了水泵，生成的代码会包含水泵端点和水泵控制逻辑。如果设备未配置水泵，生成的固件可以简化为仅发送读数。"
+  ],
+  "firmwareIntro": {
+    "title": "生成的固件会做什么",
+    "lead": "生成的固件可以：",
+    "items": [
+      "连接到 Wi-Fi",
+      "使用 NTP 同步时间",
+      "读取已启用的传感器",
+      "向 Flovers 发送读数",
+      "检查已安排的手动浇水任务",
+      "当有待处理的手动浇水任务时运行水泵",
+      "检查后端控制的自动浇水设置",
+      "当土壤湿度低于配置阈值时运行自动浇水",
+      "将浇水完成情况报告回后端"
+    ],
+    "defaultTiming": "默认情况下，读数每小时发送一次。手动浇水任务会更频繁地检查，例如每分钟一次，因此从移动应用创建的浇水请求可以被获取，而无需等待下一次每小时读数周期。",
+    "adjustmentNote": "应根据你的硬件和偏好调整某些值，尤其是 Wi-Fi 凭据、引脚编号、土壤湿度校准、水泵运行时间、读数间隔、手动任务轮询间隔和自动浇水冷却时间。"
+  },
   "endpoints": {
     "title": "API 端点",
-    "note": "设备将遥测数据发送到 ingest 端点，并可以从 feed 端点读取最新的设备数据流。",
     "ingest": {
-      "label": "接收读数（设备 → 后端）",
-      "value": "https://api.flovers.app/api/readings/ingest/"
+      "title": "接收读数",
+      "direction": "设备 → 后端",
+      "desc": [
+        "设备使用此端点发送传感器读数。",
+        "后端使用以下内容对请求进行身份验证：",
+        "后端将读数存储在匹配的设备下。读数可以包括温度、湿度、光照、土壤湿度，或已启用指标的任意子集。"
+      ],
+      "authItems": [
+        "secret",
+        "device_key",
+        "可选的 device_id"
+      ]
+    },
+    "pumpNextTask": {
+      "title": "检查下一个水泵任务",
+      "direction": "设备 → 后端",
+      "desc": [
+        "支持水泵的设备使用此端点检查是否有手动浇水任务正在等待。",
+        "响应还包括当前由后端控制的自动水泵配置，例如是否启用自动浇水以及应使用的土壤湿度阈值。"
+      ]
+    },
+    "pumpComplete": {
+      "title": "报告水泵完成",
+      "direction": "设备 → 后端",
+      "desc": [
+        "设备在水泵运行后使用此端点。",
+        "这可以报告以下任一项："
+      ],
+      "items": [
+        "使用 task_id 的已安排手动浇水任务",
+        "或使用 source: \"automatic\" 的自动浇水事件"
+      ]
     },
     "feed": {
-      "label": "读取设备数据流（设备 → 后端）",
-      "value": "https://api.flovers.app/api/readings/feed/"
+      "title": "读取最新 Feed",
+      "direction": "设备 → 后端",
+      "desc": [
+        "此端点返回设备的最新读数数据。它仍然适用于简单集成或诊断，但生成的支持水泵的固件会使用 pump-next-task 和 pump-complete 进行浇水控制。"
+      ]
     }
   },
   "ingest": {
-    "title": "POST ingest 文档",
-    "desc": "以 JSON 格式发送一个读数样本。后端使用 device_key 和 secret 对设备进行身份验证，然后将提供的指标存储在该设备下。",
-    "schemaLabel": "数据结构（JSON）",
-    "psLabel": "PowerShell 示例（POST）",
-    "arduinoTitle": "Arduino（ESP32/ESP8266）生成固件",
-    "arduinoDesc": "生成的固件连接到 Wi-Fi，与 NTP 同步时间，读取已启用的传感器，并以固定间隔将 JSON 发送到 ingest 端点。",
-    "arduinoCodeLabel": "生成的 Arduino 固件（POST 读数）",
-    "arduinoNote": "按提供的生成固件用于设备。在上传之前，请设置 Wi-Fi 凭据并验证传感器接线、引脚分配以及土壤校准值。",
-    "sensors": {
-      "bh1750": "BH1750（GY-302）— 通过 I2C 测量光照强度",
-      "moisture": "电容式土壤湿度传感器 — 模拟读取并进行干/湿校准",
-      "bme280": "BME280 — 通过 I2C 测量温度和湿度（气压可选）"
-    }
+    "title": "POST 接收读数文档",
+    "desc": "以 JSON 形式发送一个读数样本。后端对设备进行身份验证并存储提供的指标。",
+    "payloadShape": "负载结构",
+    "examplePayload": "示例负载",
+    "powershellExample": "PowerShell 示例"
+  },
+  "pumpNextTask": {
+    "title": "POST pump-next-task 文档",
+    "desc": [
+      "此端点由支持水泵的设备使用。",
+      "设备询问后端是否存在已安排的手动浇水任务。后端返回："
+    ],
+    "items": [
+      "水泵现在是否应运行",
+      "如果存在手动浇水任务，则返回任务 ID",
+      "当前自动水泵设置",
+      "后端是否认为水泵和湿度传感器已启用"
+    ],
+    "payloadShape": "负载结构",
+    "examplePayload": "示例负载",
+    "responseNoTask": "无手动浇水任务时的示例响应",
+    "responseWithTask": "有手动浇水任务时的示例响应",
+    "powershellExample": "PowerShell 示例"
+  },
+  "pumpComplete": {
+    "title": "POST pump-complete 文档",
+    "desc": [
+      "水泵运行后，设备会报告完成情况。",
+      "对于手动浇水，请包含 pump-next-task 返回的 task_id。",
+      "对于自动浇水，请省略 task_id 并使用 source: \"automatic\"。"
+    ],
+    "manualPayload": "手动浇水完成负载",
+    "automaticPayload": "自动浇水完成负载",
+    "failedPayload": "水泵运行失败负载",
+    "powershellExample": "PowerShell 示例"
   },
   "feed": {
     "title": "GET feed 文档",
-    "desc": "从后端读取最新的设备数据流。设备可以使用此端点接收当前状态或操作，例如启动水泵。",
-    "exampleLabel": "示例请求",
-    "responseLabel": "示例响应数据",
-    "controlTitle": "ESP32 / Arduino 浇水示例（GET）",
-    "controlDesc": "此示例展示 ESP32 如何调用 feed 端点，解析最新响应，将土壤湿度与设定阈值进行比较，并在可配置的时间内激活继电器控制的水泵。在浇水或检查条件后，设备会等待一个可配置的时间间隔再进行下一次检查。",
-    "controlCodeLabel": "ESP32 / Arduino 示例 — GET 数据流并触发水泵",
-    "controlNote": "根据你的硬件调整继电器逻辑、水泵运行时间、湿度阈值和轮询延迟。许多继电器模块为低电平触发，因此请确认是 LOW 还是 HIGH 会开启你的继电器。"
+    "desc": [
+      "feed 端点返回设备的最新读数。",
+      "它可用于诊断或仅需读取最新存储值的简单集成。"
+    ],
+    "exampleRequest": "示例请求",
+    "exampleResponse": "示例响应"
+  },
+  "generatedFirmware": {
+    "title": "生成的 Arduino / ESP32 固件",
+    "desc": [
+      "应用可以为所选设备生成固件。",
+      "生成的固件包含该设备的正确 API 端点、身份验证密钥、设备密钥、设备 ID、已启用传感器和水泵设置。",
+      "如果设备配置了水泵，生成的代码会同时包含读数和水泵控制。它会独立于每小时读数周期检查手动浇水任务，并且自动浇水使用由后端控制的阈值和开关。"
+    ],
+    "adjustIntro": "上传草图之前，请根据你的硬件调整以下值：",
+    "adjustItems": [
+      "Wi-Fi SSID 和密码",
+      "SDA_PIN 和 SCL_PIN",
+      "SOIL_PIN",
+      "PUMP_PIN",
+      "SOIL_DRY_VALUE 和 SOIL_WET_VALUE",
+      "PUMP_RUN_MS",
+      "SEND_INTERVAL_MS",
+      "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "AUTO_PUMP_MIN_INTERVAL_MS"
+    ],
+    "codeLabel": "生成的 Arduino 固件：读数 + 水泵控制"
+  },
+  "behavior": {
+    "title": "固件行为摘要",
+    "fullCycle": {
+      "title": "完整每小时周期",
+      "desc": "每隔 SEND_INTERVAL_MS，开发板会运行一个完整周期：",
+      "items": [
+        "读取传感器",
+        "将读数发送到接收端点",
+        "检查已安排的手动浇水",
+        "如果有待处理任务，则运行手动浇水",
+        "否则检查自动浇水条件",
+        "如果后端设置允许且土壤湿度低于阈值，则运行自动浇水"
+      ]
+    },
+    "manualCheck": {
+      "title": "手动浇水检查",
+      "desc": [
+        "每隔 MANUAL_PUMP_CHECK_INTERVAL_MS，开发板只检查已安排的手动浇水任务。",
+        "这种较短的检查：",
+        "这允许应用的“安排浇水”操作被快速获取，而无需强制每分钟发送一次传感器读数。"
+      ],
+      "items": [
+        "不发送读数",
+        "不运行自动浇水",
+        "仅当存在待处理的手动浇水任务时才运行该任务"
+      ]
+    },
+    "automatic": {
+      "title": "自动浇水",
+      "desc": [
+        "自动浇水由移动应用中配置的后端设置控制。",
+        "开发板仅在以下情况下运行自动浇水："
+      ],
+      "items": [
+        "已启用水泵支持",
+        "已启用自动水泵启动",
+        "已启用湿度传感器",
+        "最新测得的土壤湿度低于后端阈值",
+        "自动浇水冷却时间已结束"
+      ],
+      "cooldown": "在手动浇水或自动浇水运行后，固件会启动自动浇水冷却时间。这有助于避免手动浇水任务和自动浇水发生得过于接近。"
+    },
+    "manual": {
+      "title": "手动浇水",
+      "desc": [
+        "手动浇水从移动应用中安排。",
+        "手动浇水会有意忽略：",
+        "这意味着当用户手动安排浇水时，开发板会将其视为明确请求运行水泵一次。"
+      ],
+      "items": [
+        "当前土壤湿度",
+        "自动浇水阈值",
+        "自动浇水冷却时间"
+      ]
+    }
+  },
+  "hardware": {
+    "title": "硬件说明",
+    "desc": "生成的固件假定使用常见的 ESP32 兼容组件：",
+    "items": [
+      "通过 I2C 连接的 BH1750 / GY-302 光照传感器",
+      "通过 I2C 连接的 BME280 温湿度传感器",
+      "连接到模拟引脚的电容式土壤湿度传感器",
+      "连接到数字输出引脚的继电器或水泵驱动器"
+    ],
+    "verify": "在给水泵供电之前，请确认所有接线。",
+    "relayNote": "一些继电器模块为低电平有效，而另一些为高电平有效。生成的示例使用：",
+    "relayReverse": "如果你的继电器工作方式相反，可能需要交换 HIGH 和 LOW 值。",
+    "relayCodeLabel": "水泵输出示例"
+  },
+  "calibration": {
+    "title": "校准说明",
+    "desc": [
+      "土壤湿度传感器必须校准以获得可靠结果。",
+      "生成的代码使用：",
+      "这些值仅为示例。",
+      "先测量传感器在干土或空气中的值，然后再测量其在湿土或水中的值，并相应更新这些常量。"
+    ],
+    "codeLabel": "默认校准值"
+  },
+  "safety": {
+    "title": "安全说明",
+    "desc": [
+      "生成的固件是一个起点。在让水泵无人看管之前：",
+      "Flovers 会存储读数和浇水事件，但设备接线、校准、水泵行为和物理安装仍由用户负责。"
+    ],
+    "items": [
+      "手动测试水泵",
+      "确认继电器逻辑",
+      "验证水泵能正确关闭",
+      "使用安全的水泵运行时间",
+      "确认土壤湿度值真实合理",
+      "保护电子设备远离水",
+      "为水泵使用合适的电源和隔离"
+    ]
   },
   "wiring": {
     "title": "接线图",
-    "desc": "以下是一个用于向 Flovers 后端发送 POST 请求的示例设备接线方案。点击图片可全屏查看。",
-    "ariaPrimary": "用于 POST 请求的示例设备接线方案",
-    "ariaPump": "水泵继电器接线图占位符",
-    "placeholderTitlePrimary": "示例设备接线方案（POST）",
-    "placeholderSubPrimary": "点击图片以全屏显示。",
-    "placeholderTitlePump": "水泵 / 继电器接线方案",
-    "placeholderSubPump": "稍后在此添加第二个接线图。"
+    "desc": "下面是一个示例设备接线方案。点击图片可全屏打开。",
+    "ariaPrimary": "示例设备接线方案",
+    "placeholderTitlePrimary": "示例设备接线方案",
+    "placeholderSubPrimary": "点击图片以全屏显示。"
   }
 }

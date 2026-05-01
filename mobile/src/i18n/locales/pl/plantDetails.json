@@ -7,7 +7,7 @@
     },
     "errors": {
       "noId": "Nie podano identyfikatora rośliny ani kodu QR.",
-      "failedToLoad": "Nie udało się załadować rośliny."
+      "failedToLoad": "Nie udało się wczytać rośliny."
     },
     "states": {
       "error": {
@@ -15,22 +15,28 @@
       },
       "notFound": {
         "title": "Nie znaleziono",
-        "msg": "Nie udało się załadować tej rośliny."
+        "msg": "Nie mogliśmy wczytać tej rośliny."
       }
     },
     "alerts": {
       "completeFailed": {
-        "title": "Nie udało się ukończyć",
-        "msg": "Nie można było ukończyć tego przypomnienia."
+        "title": "Nie udało się oznaczyć jako ukończone",
+        "msg": "Nie udało się ukończyć tego przypomnienia."
       }
     },
     "toasts": {
-      "reminderCompleted": "Przypomnienie oznaczone jako ukończone.",
-      "qrSaved": "Kod QR zapisany w galerii.",
+      "reminderCompleted": "Przypomnienie oznaczono jako ukończone.",
+      "qrSaved": "Kod QR zapisano w Twojej galerii.",
       "qrSaveFailed": "Nie udało się zapisać kodu QR.",
-      "qrEmailed": "Wysłano e-mail z kodem QR.",
+      "qrEmailed": "E-mail z kodem QR został wysłany.",
       "qrEmailFailed": "Nie udało się wysłać e-maila z kodem QR.",
-      "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres przypisany do Twojego konta."
+      "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres przypisany do Twojego konta.",
+      "missingDeviceId": "Brak identyfikatora urządzenia",
+      "pumpStatusLoadFailed": "Nie udało się wczytać harmonogramu podlewania",
+      "wateringScheduled": "Podlewanie zaplanowane",
+      "wateringScheduleFailed": "Nie udało się zaplanować podlewania",
+      "wateringRecalled": "Zaplanowane podlewanie wycofane",
+      "wateringRecallFailed": "Nie udało się wycofać podlewania"
     },
     "permissions": {
       "storage": {
@@ -41,11 +47,11 @@
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Renderowanie kodu QR nie jest gotowe."
+      "rendererNotReady": "Generator kodu QR nie jest gotowy."
     },
     "info": {
       "fallbackTitle": "Roślina #{{id}}",
-      "purchased": "Zakupiono",
+      "purchased": "Kupiono",
       "notes": "Notatki",
       "light": "Światło",
       "orientation": "Orientacja",
@@ -72,15 +78,20 @@
       "noDefinitionBody": "Ta roślina nie jest jeszcze powiązana z definicją rośliny.",
       "editPlant": {
         "title": "Edytuj roślinę",
-        "msg": "Edytowanie tej rośliny zostanie wdrożone później."
+        "msg": "Edycja tej rośliny zostanie wdrożona później."
       },
       "showReminders": {
         "title": "Pokaż przypomnienia",
-        "msg": "Powiązanie z przypomnieniami zostanie wdrożone później."
+        "msg": "Łączenie z przypomnieniami zostanie wdrożone później."
       }
     },
     "latestReadings": {
       "title": "Najnowsze odczyty",
+      "lastReadPrefix": "Ostatni odczyt",
+      "lastPumpRunPrefix": "Ostatnie uruchomienie pompy",
+      "opening": "Otwieranie...",
+      "scheduleWatering": "Zaplanuj podlewanie",
+      "unscheduleWatering": "Anuluj zaplanowane podlewanie",
       "lastRead": {
         "empty": "Ostatni odczyt: —",
         "value": "Ostatni odczyt: {{date}} {{time}}"
@@ -89,8 +100,8 @@
     "qr": {
       "title": "Kod QR",
       "desc": {
-        "primary": "Każda roślina ma swój unikalny kod QR. Zeskanowanie go w widoku Skanera natychmiast otwiera szczegóły tej rośliny.",
-        "secondary": "Możesz zapisać kod QR na swoim telefonie lub wysłać go sobie e-mailem, a następnie wydrukować i przymocować do doniczki, aby mieć do niego szybki dostęp później."
+        "primary": "Każda roślina ma własny unikalny kod QR. Zeskanowanie go w widoku skanera natychmiast otwiera szczegóły tej rośliny.",
+        "secondary": "Możesz zapisać kod QR na telefonie lub wysłać go do siebie e-mailem, a następnie wydrukować i przymocować do doniczki, aby mieć do niego szybki dostęp później."
       },
       "saveBtn": "Zapisz",
       "emailBtn": "E-mail"

@@ -6,7 +6,7 @@
       "plant": "Planta"
     },
     "errors": {
-      "noId": "Nenhum id de planta ou código QR fornecido.",
+      "noId": "Nenhum ID de planta ou código QR fornecido.",
       "failedToLoad": "Falha ao carregar a planta."
     },
     "states": {
@@ -26,22 +26,28 @@
     },
     "toasts": {
       "reminderCompleted": "Lembrete marcado como concluído.",
-      "qrSaved": "Código QR salvo na sua galeria.",
-      "qrSaveFailed": "Falha ao salvar o código QR.",
-      "qrEmailed": "E-mail com código QR enviado.",
-      "qrEmailFailed": "Falha ao enviar o e-mail com código QR.",
-      "qrEmailPlaceholder": "Um e-mail com este código QR será enviado para o endereço da sua conta."
+      "qrSaved": "Código QR guardado na sua galeria.",
+      "qrSaveFailed": "Falha ao guardar o código QR.",
+      "qrEmailed": "Email com o código QR enviado.",
+      "qrEmailFailed": "Falha ao enviar o email com o código QR.",
+      "qrEmailPlaceholder": "Será enviado um email com este código QR para o endereço da sua conta.",
+      "missingDeviceId": "ID do dispositivo em falta",
+      "pumpStatusLoadFailed": "Falha ao carregar o horário de rega",
+      "wateringScheduled": "Rega agendada",
+      "wateringScheduleFailed": "Falha ao agendar a rega",
+      "wateringRecalled": "Rega agendada cancelada",
+      "wateringRecallFailed": "Falha ao cancelar a rega"
     },
     "permissions": {
       "storage": {
         "title": "Permissão de armazenamento",
-        "message": "Precisamos de acesso para salvar o código QR na sua galeria.",
+        "message": "Precisamos de acesso para guardar o código QR na sua galeria.",
         "ok": "OK",
         "denied": "Permissão de armazenamento negada."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Renderizador de QR não está pronto."
+      "rendererNotReady": "Renderizador de QR não pronto."
     },
     "info": {
       "fallbackTitle": "Planta #{{id}}",
@@ -69,18 +75,23 @@
         "showReminders": "Mostrar lembretes"
       },
       "noDefinitionTitle": "Definição da planta indisponível",
-      "noDefinitionBody": "Esta planta ainda não está vinculada a uma definição de planta.",
+      "noDefinitionBody": "Esta planta ainda não está associada a uma definição de planta.",
       "editPlant": {
         "title": "Editar planta",
-        "msg": "A edição desta planta será implementada posteriormente."
+        "msg": "A edição desta planta será implementada mais tarde."
       },
       "showReminders": {
         "title": "Mostrar lembretes",
-        "msg": "A ligação aos lembretes será implementada posteriormente."
+        "msg": "A ligação aos lembretes será implementada mais tarde."
       }
     },
     "latestReadings": {
-      "title": "Leituras mais recentes",
+      "title": "Últimas leituras",
+      "lastReadPrefix": "Última leitura",
+      "lastPumpRunPrefix": "Último funcionamento da bomba",
+      "opening": "A abrir...",
+      "scheduleWatering": "Agendar rega",
+      "unscheduleWatering": "Cancelar rega",
       "lastRead": {
         "empty": "Última leitura: —",
         "value": "Última leitura: {{date}} {{time}}"
@@ -89,11 +100,11 @@
     "qr": {
       "title": "Código QR",
       "desc": {
-        "primary": "Cada planta tem o seu próprio código QR único. Ao digitalizá-lo na vista Scanner, os detalhes desta planta são abertos instantaneamente.",
-        "secondary": "Pode guardar o código QR no seu telefone ou enviá-lo por e-mail para si mesmo, depois imprimi-lo e anexá-lo ao vaso para acesso rápido mais tarde."
+        "primary": "Cada planta tem o seu próprio código QR único. Ao digitalizá-lo na vista do Scanner, os detalhes desta planta abrem instantaneamente.",
+        "secondary": "Pode guardar o código QR no seu telemóvel ou enviá-lo por email para si mesmo, depois imprimi-lo e fixá-lo ao vaso para acesso rápido mais tarde."
       },
       "saveBtn": "Guardar",
-      "emailBtn": "E-mail"
+      "emailBtn": "Email"
     },
     "reminders": {
       "title": "Lembretes",
