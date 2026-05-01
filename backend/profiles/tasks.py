@@ -141,6 +141,42 @@ def _send_email_overdue_1d(user, overdue_count: int) -> bool:
     return True
 
 
+def _get_push_due_today_text(user, due_count: int) -> tuple[str, str]:
+    lang = _get_user_lang(user)
+
+    title = t(
+        "profiles.due_today.push_title",
+        lang=lang,
+        default="Plant tasks",
+    )
+
+    body = t(
+        "profiles.due_today.push_body",
+        lang=lang,
+        default="You have {count} plant task(s) due today.",
+    ).format(count=due_count)
+
+    return title, body
+
+
+def _get_push_overdue_1d_text(user, overdue_count: int) -> tuple[str, str]:
+    lang = _get_user_lang(user)
+
+    title = t(
+        "profiles.overdue_1d.push_title",
+        lang=lang,
+        default="Overdue plant tasks",
+    )
+
+    body = t(
+        "profiles.overdue_1d.push_body",
+        lang=lang,
+        default="You have {count} plant task(s) overdue since yesterday.",
+    ).format(count=overdue_count)
+
+    return title, body
+
+
 def _get_android_tokens(user_id: int) -> list[str]:
     return list(
         PushDevice.objects.filter(
@@ -257,10 +293,12 @@ def check_and_send_daily_task_notifications(self):
             )
 
             if should and due_count > 0:
+                title, body = _get_push_due_today_text(user, due_count)
+
                 sent = _send_push_and_deactivate_bad_tokens(
                     tokens=tokens,
-                    title="Plant tasks",
-                    body=f"You have {due_count} task(s) due today.",
+                    title=title,
+                    body=body,
                     data={"kind": "due_today", "route": "Home"},
                 )
                 logger.info("push_due_today result user=%s sent=%s", user.id, sent)
@@ -274,10 +312,12 @@ def check_and_send_daily_task_notifications(self):
                 overdue_count = _count_due_on_date(user.id, yesterday)
                 if overdue_count > 0:
                     tokens = _get_android_tokens(user.id)
+                    title, body = _get_push_overdue_1d_text(user, overdue_count)
+
                     sent = _send_push_and_deactivate_bad_tokens(
                         tokens=tokens,
-                        title="Plant tasks",
-                        body=f"You have {overdue_count} task(s) overdue since yesterday.",
+                        title=title,
+                        body=body,
                         data={"kind": "overdue_1d", "route": "Home"},
                     )
                     if sent > 0:

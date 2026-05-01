@@ -2,5 +2,7 @@
   "subject": "You still have overdue tasks",
   "title": "Overdue tasks",
   "line1": "You have {count} pending plant task(s) that were due yesterday and are still not completed.",
-  "cta": "Open app"
+  "cta": "Open app",
+  "push_title": "Overdue plant tasks",
+  "push_body": "You have {count} plant task(s) overdue since yesterday."
 }

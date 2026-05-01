@@ -1,6 +1,8 @@
 {
-  "subject": "Hai attività per oggi",
-  "title": "Attività di oggi",
-  "line1": "Hai {count} attività arretrate/pianificate per oggi.",
-  "cta": "Apri l'applicazione"
+  "subject": "Hai attività in scadenza oggi",
+  "title": "Attività in scadenza oggi",
+  "line1": "Hai {count} attività per le piante in sospeso in scadenza oggi.",
+  "cta": "Apri l'app",
+  "push_title": "Attività per le piante",
+  "push_body": "Hai {count} attività per le piante in scadenza oggi."
 }

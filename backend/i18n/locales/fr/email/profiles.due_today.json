@@ -1,6 +1,8 @@
 {
-  "subject": "Vous avez des tâches pour aujourd’hui",
-  "title": "Tâches pour aujourd’hui",
-  "line1": "Vous avez {count} tâches en retard/planifiées pour aujourd’hui.",
-  "cta": "Ouvrir l’application"
+  "subject": "Vous avez des tâches à effectuer aujourd’hui",
+  "title": "Tâches à effectuer aujourd’hui",
+  "line1": "Vous avez {count} tâche(s) de plante en attente à effectuer aujourd’hui.",
+  "cta": "Ouvrir l’application",
+  "push_title": "Tâches de plantes",
+  "push_body": "Vous avez {count} tâche(s) de plante à effectuer aujourd’hui."
 }

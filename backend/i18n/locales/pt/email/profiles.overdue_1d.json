@@ -1,6 +1,8 @@
 {
-  "subject": "Ainda tens tarefas pendentes",
-  "title": "Tarefas em atraso",
-  "line1": "Tens {count} tarefas que eram para ontem e ainda não foram concluídas.",
-  "cta": "Abre a aplicação"
+  "subject": "Você ainda tem tarefas atrasadas",
+  "title": "Tarefas atrasadas",
+  "line1": "Você tem {count} tarefa(s) de planta pendente(s) que venciam ontem e ainda não foram concluídas.",
+  "cta": "Abrir app",
+  "push_title": "Tarefas de planta atrasadas",
+  "push_body": "Você tem {count} tarefa(s) de planta atrasada(s) desde ontem."
 }

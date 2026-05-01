@@ -1,6 +1,8 @@
 {
-  "subject": "Tens tarefas para hoje",
+  "subject": "Você tem tarefas para hoje",
   "title": "Tarefas para hoje",
-  "line1": "Tens {count} tarefas pendentes/planeadas para hoje.",
-  "cta": "Abre a aplicação"
+  "line1": "Você tem {count} tarefa(s) de planta pendente(s) para hoje.",
+  "cta": "Abrir app",
+  "push_title": "Tarefas de plantas",
+  "push_body": "Você tem {count} tarefa(s) de planta para hoje."
 }

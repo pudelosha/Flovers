@@ -1,6 +1,8 @@
 {
-  "subject": "Hai ancora attività in sospeso",
-  "title": "Attività in sospeso",
-  "line1": "Hai {count} attività che erano previste per ieri e non sono ancora state completate.",
-  "cta": "Apri l'app"
+  "subject": "Hai ancora attività in ritardo",
+  "title": "Attività in ritardo",
+  "line1": "Hai {count} attività relativa/e alle piante in sospeso che doveva/no essere completata/e ieri e non è/sono ancora completata/e.",
+  "cta": "Apri l'app",
+  "push_title": "Attività relative alle piante in ritardo",
+  "push_body": "Hai {count} attività relativa/e alle piante in ritardo da ieri."
 }

@@ -1,6 +1,8 @@
 {
-  "subject": "Masz zadania na dziś",
-  "title": "Zadania na dziś",
-  "line1": "Masz {count} zaległych/zaplanowanych zadań na dziś.",
-  "cta": "Otwórz aplikację"
+  "subject": "Masz zadania do wykonania dzisiaj",
+  "title": "Zadania do wykonania dzisiaj",
+  "line1": "Masz {count} oczekujące zadanie/zadania dotyczące roślin do wykonania dzisiaj.",
+  "cta": "Otwórz aplikację",
+  "push_title": "Zadania dotyczące roślin",
+  "push_body": "Masz {count} zadanie/zadania dotyczące roślin do wykonania dzisiaj."
 }

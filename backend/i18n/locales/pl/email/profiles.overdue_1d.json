@@ -1,6 +1,8 @@
 {
   "subject": "Nadal masz zaległe zadania",
   "title": "Zaległe zadania",
-  "line1": "Masz {count} zadań, które były na wczoraj i nadal nie są wykonane.",
-  "cta": "Otwórz aplikację"
+  "line1": "Masz {count} oczekujące zadanie/zadania dotyczące roślin, które miały termin wczoraj i nadal nie zostały ukończone.",
+  "cta": "Otwórz aplikację",
+  "push_title": "Zaległe zadania dotyczące roślin",
+  "push_body": "Masz {count} zadanie/zadania dotyczące roślin zaległe od wczoraj."
 }

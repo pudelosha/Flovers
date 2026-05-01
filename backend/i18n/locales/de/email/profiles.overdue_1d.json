@@ -1,6 +1,8 @@
 {
-  "subject": "Du hast noch überfällige Aufgaben",
+  "subject": "Sie haben noch überfällige Aufgaben",
   "title": "Überfällige Aufgaben",
-  "line1": "Du hast {count} Aufgaben, die für gestern fällig waren und noch nicht erledigt sind.",
-  "cta": "App öffnen"
+  "line1": "Sie haben {count} ausstehende Pflanzenaufgabe(n), die gestern fällig waren und noch nicht abgeschlossen sind.",
+  "cta": "App öffnen",
+  "push_title": "Überfällige Pflanzenaufgaben",
+  "push_body": "Sie haben {count} Pflanzenaufgabe(n), die seit gestern überfällig sind."
 }

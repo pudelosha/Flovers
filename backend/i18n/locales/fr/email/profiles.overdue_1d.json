@@ -1,6 +1,8 @@
 {
   "subject": "Vous avez encore des tâches en retard",
   "title": "Tâches en retard",
-  "line1": "Vous avez {count} tâches qui étaient prévues pour hier et ne sont toujours pas terminées.",
-  "cta": "Ouvrir l’application"
+  "line1": "Vous avez {count} tâche(s) de plante en attente qui étaient dues hier et ne sont toujours pas terminées.",
+  "cta": "Ouvrir l’application",
+  "push_title": "Tâches de plante en retard",
+  "push_body": "Vous avez {count} tâche(s) de plante en retard depuis hier."
 }
