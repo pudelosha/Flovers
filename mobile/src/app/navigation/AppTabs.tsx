@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Pressable, StyleSheet, Text } from "react-native";
+import { BackHandler, View, Pressable, StyleSheet, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -102,7 +102,7 @@ const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
 const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
 const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
-function GlassTabBar({ state, descriptors, navigation }: any) {
+function GlassTabBar({ state, navigation }: any) {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
 
@@ -150,6 +150,34 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     (activeRouteName && PARENT_FOR_ROUTE[activeRouteName]) ||
     activeRouteName ||
     "Home";
+
+  React.useEffect(() => {
+    const sub = BackHandler.addEventListener("hardwareBackPress", () => {
+      const currentRouteName: string | undefined = state.routes[state.index]?.name;
+      const parentForHiddenRoute = currentRouteName
+        ? PARENT_FOR_ROUTE[currentRouteName]
+        : undefined;
+
+      if (navigation.canGoBack()) {
+        navigation.goBack();
+        return true;
+      }
+
+      if (parentForHiddenRoute) {
+        navigation.navigate(parentForHiddenRoute);
+        return true;
+      }
+
+      if (currentRouteName && currentRouteName !== "Home") {
+        navigation.navigate("Home");
+        return true;
+      }
+
+      return false;
+    });
+
+    return () => sub.remove();
+  }, [navigation, state.index, state.routes]);
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
