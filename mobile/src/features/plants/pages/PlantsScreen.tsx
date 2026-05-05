@@ -687,7 +687,7 @@ export default function PlantsScreen() {
             <Animated.View
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
-                isOpen && { zIndex: 50, elevation: 50 },
+                isOpen && { zIndex: 50 },
               ]}
             >
               <PlantTile

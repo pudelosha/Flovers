@@ -20,7 +20,9 @@ export const s = StyleSheet.create({
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
-    elevation: 8,
+  },
+  cardWrapRaised: {
+    zIndex: 30,
   },
 
   cardGlass: {
@@ -48,6 +50,12 @@ export const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 14,
+  },
+  cardBodyPressable: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "stretch",
   },
 
   // Left column
@@ -84,7 +92,6 @@ export const s = StyleSheet.create({
     right: 6,
     top: -6,
     zIndex: 999,
-    elevation: 999,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,

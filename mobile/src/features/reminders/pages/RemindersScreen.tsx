@@ -41,7 +41,6 @@ import {
 import {
   listReminders,
   listReminderTasks,
-  completeReminderTask,
   updateReminder,
   deleteReminder,
   createReminder,
@@ -136,13 +135,12 @@ export default function RemindersScreen() {
   );
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [fabCloseSignal, setFabCloseSignal] = useState(0);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
   const [selectedDate, setSelectedDate] = useState<string>(todayISO());
 
   const [loading, setLoading] = useState(false);
-  const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const [uiReminders, setUiReminders] = useState<UIReminder[]>([]);
   const [plantOptions, setPlantOptions] = useState<PlantOption[]>([]);
@@ -197,6 +195,16 @@ export default function RemindersScreen() {
     setToastVisible(true);
   };
 
+  const closeFloatingMenus = useCallback(() => {
+    setMenuOpenId(null);
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
+  const onToggleMenu = useCallback((id: string) => {
+    setFabCloseSignal((value) => value + 1);
+    setMenuOpenId((curr) => (curr === id || id === "" ? null : id));
+  }, []);
+
   const uiTypeToApi = (
     tt: "watering" | "moisture" | "fertilising" | "care" | "repot"
   ): "water" | "moisture" | "fertilize" | "care" | "repot" =>
@@ -204,7 +212,6 @@ export default function RemindersScreen() {
 
   const load = useCallback(async () => {
     setLoading(true);
-    setError(null);
     try {
       const [tasks, reminders, plants] = await Promise.all([
         listReminderTasks({ status: "pending", auth: true }),
@@ -219,15 +226,12 @@ export default function RemindersScreen() {
           tr("reminders.common.unnamedPlant", "Unnamed plant")
         )
       );
-      setHasLoadedOnce(true);
     } catch (e: any) {
       const msg =
         e?.message ||
         tr("reminders.toast.loadFailed", "Failed to load reminders");
-      setError(msg);
       setUiReminders([]);
       setPlantOptions([]);
-      setHasLoadedOnce(true);
       // toast on unauthorized / any load error
       showToast(msg, "error");
     } finally {
@@ -277,8 +281,8 @@ export default function RemindersScreen() {
 
       setFilterOpen(false);
       setSortOpen(false);
-      setMenuOpenId(null);
-    }, [route])
+      closeFloatingMenus();
+    }, [closeFloatingMenus, route])
   );
 
   /** ALWAYS close all modals and menus when this screen becomes focused */
@@ -290,9 +294,9 @@ export default function RemindersScreen() {
       setConfirmDeleteName("");
       setSortOpen(false);
       setFilterOpen(false);
-      setMenuOpenId(null);
+      closeFloatingMenus();
       return undefined;
-    }, [])
+    }, [closeFloatingMenus])
   );
 
   // --- handle "editReminderId" navigation param from Home ---
@@ -326,17 +330,21 @@ export default function RemindersScreen() {
   // pull-to-refresh handler
   const onPullRefresh = useCallback(async () => {
     setRefreshing(true);
+    closeFloatingMenus();
     try {
       await load();
     } finally {
       setRefreshing(false);
     }
-  }, [load]);
-
-  const onToggleMenu = (id: string) =>
-    setMenuOpenId((curr) => (curr === id ? null : id));
-  const openList = () => setViewMode("list");
-  const openCalendar = () => setViewMode("calendar");
+  }, [closeFloatingMenus, load]);
+  const openList = () => {
+    closeFloatingMenus();
+    setViewMode("list");
+  };
+  const openCalendar = () => {
+    closeFloatingMenus();
+    setViewMode("calendar");
+  };
 
   // Swipe: toggle on every horizontal swipe (left or right)
   const panResponder = useMemo(
@@ -352,11 +360,12 @@ export default function RemindersScreen() {
         },
         onPanResponderRelease: (_e, g) => {
           if (Math.abs(g.dx) >= 40) {
+            closeFloatingMenus();
             setViewMode((prev) => (prev === "list" ? "calendar" : "list"));
           }
         },
       }),
-    []
+    [closeFloatingMenus]
   );
 
   // FAB "Add" opens the same modal in CREATE mode
@@ -368,26 +377,14 @@ export default function RemindersScreen() {
     setFIntervalValue(7);
     setFIntervalUnit("days");
     setEditOpen(true);
-    setMenuOpenId(null);
-  };
-
-  const onComplete = async (rid: string) => {
-    setMenuOpenId(null);
-    const idNum = Number(rid);
-    if (!idNum) return;
-    try {
-      await completeReminderTask(idNum, { auth: true });
-      await load();
-    } catch {
-      // no-op
-    }
+    closeFloatingMenus();
   };
 
   // --- DELETE FLOW ---
   const askDelete = (r: UIReminder) => {
+    closeFloatingMenus();
     setConfirmDeleteReminderId(r.reminderId);
     setConfirmDeleteName(r.plant);
-    setMenuOpenId(null);
   };
   const cancelDelete = () => {
     setConfirmDeleteReminderId(null);
@@ -445,7 +442,7 @@ export default function RemindersScreen() {
     setFIntervalUnit(r.intervalUnit || (r.type === "repot" ? "months" : "days"));
 
     setEditOpen(true);
-    setMenuOpenId(null);
+    closeFloatingMenus();
   };
   const closeEdit = () => setEditOpen(false);
 
@@ -742,7 +739,7 @@ export default function RemindersScreen() {
 
       {menuOpenId && (
         <Pressable
-          onPress={() => setMenuOpenId(null)}
+          onPress={closeFloatingMenus}
           style={s.backdrop}
           pointerEvents="auto"
         />
@@ -763,16 +760,20 @@ export default function RemindersScreen() {
               outputRange: [0.98, 1],
             });
             const opacity = v;
+            const isOpen = menuOpenId === item.id;
 
             return (
               <Animated.View
-                style={{ opacity, transform: [{ translateY }, { scale }] }}
+                style={[
+                  { opacity, transform: [{ translateY }, { scale }] },
+                  isOpen && { zIndex: 50 },
+                ]}
               >
                 <ReminderTile
                   reminder={item}
-                  isMenuOpen={menuOpenId === item.id}
+                  isMenuOpen={isOpen}
                   onToggleMenu={() => onToggleMenu(item.id)}
-                  onPressBody={() => {}}
+                  onPressBody={closeFloatingMenus}
                   onEdit={() => openEditModal(item)}
                   onDelete={() => askDelete(item)}
                 />
@@ -784,7 +785,7 @@ export default function RemindersScreen() {
           contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
-          onScrollBeginDrag={() => setMenuOpenId(null)}
+          onScrollBeginDrag={closeFloatingMenus}
           refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />
           }
@@ -861,13 +862,10 @@ export default function RemindersScreen() {
           reminders={derivedReminders}
           selectedDate={selectedDate}
           onSelectDate={(iso) => {
+            closeFloatingMenus();
             setSelectedDate(iso);
-            setMenuOpenId(null);
           }}
-          menuOpenId={menuOpenId}
-          onToggleMenu={(id) =>
-            setMenuOpenId((curr) => (curr === id || id === "" ? null : id))
-          }
+          onToggleMenu={onToggleMenu}
           onEdit={openEditModal}
           onDelete={askDelete}
         />
@@ -881,7 +879,11 @@ export default function RemindersScreen() {
             return false;
           }}
         >
-          <FAB actions={fabActions} position={settings.fabPosition} />
+          <FAB
+            actions={fabActions}
+            closeSignal={fabCloseSignal}
+            position={settings.fabPosition}
+          />
         </View>
       )}
 

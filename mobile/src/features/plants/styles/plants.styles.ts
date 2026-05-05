@@ -71,16 +71,10 @@ export const s = StyleSheet.create({
     borderRadius: 28,
     overflow: "visible", // allow submenu to escape
     position: "relative",
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
-    elevation: 8,
   },
   // raised when menu is open (like Home)
   cardWrapRaised: {
     zIndex: 30,
-    elevation: 30,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -129,7 +123,6 @@ export const s = StyleSheet.create({
     right: 6,
     top: -6,
     zIndex: 40,
-    elevation: 40,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,

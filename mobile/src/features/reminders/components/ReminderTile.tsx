@@ -156,7 +156,7 @@ export default function ReminderTile({
   }, [reminder.dueDate, tr, settings]);
 
   return (
-    <View style={s.cardWrap}>
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* CLIPPED SURFACE: gradients/tint/border/content */}
       <View style={s.cardGlass}>
         {/* Base green gradient: EXACT match to AuthCard */}
@@ -204,43 +204,49 @@ export default function ReminderTile({
 
         {/* Content */}
         <View style={[s.cardRow, { paddingVertical: 4 }]}>
-          <View style={s.leftCol}>
-            <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
-              <MaterialCommunityIcons name={icon} size={20} color={accent} />
-            </View>
-            <Text style={[s.leftCaption, { color: accent }]}>{typeLabel.toUpperCase()}</Text>
-          </View>
-
-          <Pressable style={s.centerCol} onPress={onPressBody}>
-            <Text style={s.plantName} numberOfLines={1}>
-              {reminder.plant}
-            </Text>
-
-            {/* Added location with icon */}
-            {reminder.location && (
-              <View style={s.locationRow}>
-                <MaterialCommunityIcons
-                  name="map-marker"
-                  size={12}
-                  color="#FFFFFF" // White icon color
-                  style={s.locationIcon}
-                />
-                <Text style={s.location} numberOfLines={1}>
-                  {reminder.location}
-                </Text>
+          <Pressable
+            accessible={false}
+            style={s.cardBodyPressable}
+            onPress={onPressBody}
+          >
+            <View style={s.leftCol}>
+              <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
+                <MaterialCommunityIcons name={icon} size={20} color={accent} />
               </View>
-            )}
+              <Text style={[s.leftCaption, { color: accent }]}>{typeLabel.toUpperCase()}</Text>
+            </View>
 
-            {!!everyStr && (
-              <Text style={local.metaCompact} numberOfLines={1}>
-                {everyStr}
+            <View style={s.centerCol}>
+              <Text style={s.plantName} numberOfLines={1}>
+                {reminder.plant}
               </Text>
-            )}
-            {!!dueLine && (
-              <Text style={local.metaCompact} numberOfLines={1}>
-                {dueLine}
-              </Text>
-            )}
+
+              {/* Added location with icon */}
+              {reminder.location && (
+                <View style={s.locationRow}>
+                  <MaterialCommunityIcons
+                    name="map-marker"
+                    size={12}
+                    color="#FFFFFF" // White icon color
+                    style={s.locationIcon}
+                  />
+                  <Text style={s.location} numberOfLines={1}>
+                    {reminder.location}
+                  </Text>
+                </View>
+              )}
+
+              {!!everyStr && (
+                <Text style={local.metaCompact} numberOfLines={1}>
+                  {everyStr}
+                </Text>
+              )}
+              {!!dueLine && (
+                <Text style={local.metaCompact} numberOfLines={1}>
+                  {dueLine}
+                </Text>
+              )}
+            </View>
           </Pressable>
 
           <View style={s.rightCol}>

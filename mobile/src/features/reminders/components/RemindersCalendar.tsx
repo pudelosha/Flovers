@@ -18,7 +18,6 @@ type Props = {
   reminders: UIReminder[];
   selectedDate: string;
   onSelectDate: (isoDate: string) => void;
-  menuOpenId: string | null;
   onToggleMenu: (id: string) => void;
   onEdit: (r: UIReminder) => void;
   onDelete: (r: UIReminder) => void;
@@ -79,7 +78,6 @@ export default function RemindersCalendar({
   reminders,
   selectedDate,
   onSelectDate,
-  menuOpenId,
   onToggleMenu,
   onEdit,
   onDelete,
