@@ -37,7 +37,7 @@ export default function PlantTile({
   const imgUri = plant.imageUrl; // ✅ no random picsum
 
   return (
-    <View style={s.cardWrap}>
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* Glass card */}
       <View style={s.cardGlass}>
         <LinearGradient

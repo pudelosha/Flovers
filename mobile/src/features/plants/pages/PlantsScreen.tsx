@@ -113,6 +113,7 @@ export default function PlantsScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [fabCloseSignal, setFabCloseSignal] = useState(0);
 
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
@@ -171,14 +172,26 @@ export default function PlantsScreen() {
   const [journalPlantName, setJournalPlantName] = useState("");
   const [journalPlantId, setJournalPlantId] = useState<string>("");
 
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
+
+  const closeFloatingMenus = useCallback(() => {
+    setMenuOpenId(null);
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
+  const onToggleMenu = useCallback((id: string) => {
+    setFabCloseSignal((value) => value + 1);
+    setMenuOpenId((curr) => (curr === id ? null : id));
+  }, []);
+
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
-      void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
       return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
     },
-    [t, currentLanguage]
+    [t]
   );
 
   const onSaveQr = useCallback(
@@ -222,7 +235,11 @@ export default function PlantsScreen() {
     useCallback(() => {
       setEditOpen(false);
       setEditingId(null);
-      setMenuOpenId(null);
+      closeFloatingMenus();
+      setSortOpen(false);
+      setFilterOpen(false);
+      setConfirmDeleteId(null);
+      setConfirmDeleteName("");
       setQrVisible(false);
       setQrPlantId("");
       qrModalRef.current = null;
@@ -232,12 +249,12 @@ export default function PlantsScreen() {
       setJournalPlantId("");
 
       return undefined;
-    }, [])
+    }, [closeFloatingMenus])
   );
 
   const unnamedFallback = useMemo(
     () => t("plants.list.unnamed", { defaultValue: "Unnamed plant" }),
-    [t, currentLanguage]
+    [t]
   );
 
   const attachLocalPhotos = useCallback(async (list: Plant[]) => {
@@ -275,24 +292,25 @@ export default function PlantsScreen() {
       );
       setPlants([]);
     }
-  }, [t, currentLanguage, unnamedFallback, attachLocalPhotos]);
+  }, [t, unnamedFallback, attachLocalPhotos]);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
+    closeFloatingMenus();
     try {
       await load();
     } finally {
       setRefreshing(false);
     }
-  }, [load]);
+  }, [closeFloatingMenus, load]);
 
   const openCreatePlantWizard = () => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
     nav.navigate("CreatePlantWizard");
   };
 
   const openJournal = (p: Plant) => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
     setJournalPlantId(p.id);
     setJournalPlantName(p.name);
     setJournalVisible(true);
@@ -300,7 +318,7 @@ export default function PlantsScreen() {
 
   const openEditModal = useCallback(
     async (p: Plant) => {
-      setMenuOpenId(null);
+      closeFloatingMenus();
       setEditingId(p.id);
       setEditLoading(true);
 
@@ -347,7 +365,7 @@ export default function PlantsScreen() {
         setEditLoading(false);
       }
     },
-    [t]
+    [closeFloatingMenus, t]
   );
 
   const openEditModalById = useCallback(
@@ -461,13 +479,10 @@ export default function PlantsScreen() {
     }
   };
 
-  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
-  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
-
   const askDelete = (p: Plant) => {
+    closeFloatingMenus();
     setConfirmDeleteId(p.id);
     setConfirmDeleteName(p.name);
-    setMenuOpenId(null);
   };
 
   const confirmDelete = async () => {
@@ -494,7 +509,7 @@ export default function PlantsScreen() {
   };
 
   const openShowQr = (p: Plant) => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
 
     const code = p.qrCode || p.id;
     const value = `${PUBLIC_BASE_URL_NORM}/api/plant-instances/by-qr/?code=${encodeURIComponent(
@@ -647,7 +662,7 @@ export default function PlantsScreen() {
       />
 
       {menuOpenId && (
-        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />
+        <Pressable onPress={closeFloatingMenus} style={s.backdrop} />
       )}
 
       <Animated.FlatList
@@ -678,17 +693,19 @@ export default function PlantsScreen() {
               <PlantTile
                 plant={item}
                 isMenuOpen={isOpen}
-                onPressBody={() => nav.navigate("PlantDetails", { id: item.id })}
-                onPressMenu={() =>
-                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
-                }
+                onPressBody={() => {
+                  closeFloatingMenus();
+                  nav.navigate("PlantDetails", { id: item.id });
+                }}
+                onPressMenu={() => onToggleMenu(item.id)}
                 onEdit={() => openEditModal(item)}
-                onReminders={() =>
+                onReminders={() => {
+                  closeFloatingMenus();
                   nav.navigate("Reminders", {
                     plantId: item.id,
                     plantName: item.name,
-                  })
-                }
+                  });
+                }}
                 onJournal={() => openJournal(item)}
                 onDelete={() => askDelete(item)}
                 onShowQr={() => openShowQr(item)}
@@ -701,7 +718,7 @@ export default function PlantsScreen() {
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
-        onScrollBeginDrag={() => setMenuOpenId(null)}
+        onScrollBeginDrag={closeFloatingMenus}
         keyboardShouldPersistTaps="handled"
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
@@ -779,6 +796,7 @@ export default function PlantsScreen() {
         >
           <FAB
             bottomOffset={92}
+            closeSignal={fabCloseSignal}
             position={settings.fabPosition}
             actions={[
               {
@@ -818,7 +836,7 @@ export default function PlantsScreen() {
                   defaultValue: "Locations",
                 }),
                 onPress: () => {
-                  setMenuOpenId(null);
+                  closeFloatingMenus();
                   nav.navigate("PlantLocations");
                 },
               },
