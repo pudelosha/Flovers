@@ -14,7 +14,10 @@ if env_file.exists():
     environ.Env.read_env(env_file)
 
 # --- Core ---
-SECRET_KEY = env("SECRET_KEY", default="dev-secret")
+SECRET_KEY = env(
+    "SECRET_KEY",
+    default="django-insecure-local-dev-secret-key-change-me-32-bytes-min",
+)
 DEBUG = env.bool("DEBUG", default=False)
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["api.flovers.app"])
 
@@ -107,9 +110,15 @@ REST_FRAMEWORK = {
 }
 
 # --- JWT ---
+JWT_SIGNING_KEY = env(
+    "JWT_SIGNING_KEY",
+    default="simplejwt-local-dev-signing-key-change-me-32-bytes-min",
+)
+
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+    "SIGNING_KEY": JWT_SIGNING_KEY,
 }
 
 # --- I18N / TZ ---

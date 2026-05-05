@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, get_user_model, password_validation
+from django.contrib.auth import get_user_model, password_validation
 from django.core.validators import EmailValidator
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
@@ -59,18 +59,19 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField(write_only=True)
 
     def validate(self, attrs):
-        email = attrs.get("email")
+        email = attrs.get("email", "").strip()
         password = attrs.get("password")
 
-        user = authenticate(request=self.context.get("request"), email=email, password=password)
-        if not user:
+        try:
+            user = User.objects.get(email__iexact=email)
+        except User.DoesNotExist:
+            raise serializers.ValidationError({"message": _("Invalid credentials.")})
+
+        if not user.check_password(password):
             raise serializers.ValidationError({"message": _("Invalid credentials.")})
 
         if not user.is_active:
             raise serializers.ValidationError({"message": _("Account is not activated.")})
-
-        if not user.is_authenticated:
-            raise serializers.ValidationError({"message": _("Authentication failed.")})
 
         attrs["user"] = user
         return attrs
