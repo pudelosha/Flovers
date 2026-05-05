@@ -18,6 +18,7 @@ type Props = {
   onEdit: () => void;
   onGoToPlant: () => void;
   onShowHistory?: () => void;
+  onPressBody?: () => void;
   // Intentionally omit onDelete to remove the Delete action from the menu on Home
 };
 
@@ -35,6 +36,7 @@ export default function TaskTile({
   onEdit,
   onGoToPlant,
   onShowHistory,
+  onPressBody,
 }: Props) {
   const { t } = useTranslation();
   const { settings } = useSettings();
@@ -151,37 +153,43 @@ export default function TaskTile({
 
       {/* Content row */}
       <View style={[s.cardRow, { paddingVertical: 4 }]}>
-        {/* Left: icon + caption */}
-        <View style={s.leftCol}>
-          <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
-            <MaterialCommunityIcons name={icon} size={20} color={accent} />
-          </View>
-          <Text style={[s.leftCaption, { color: accent }]}>{t(`home.taskTypes.${task.type}`)}</Text>
-        </View>
-
-        {/* Center: title, location, due */}
-        <View style={s.centerCol}>
-          <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
-
-          {task.location ? (
-            <View style={s.locationRow}>
-              <MaterialCommunityIcons
-                name="map-marker"
-                size={12}
-                color="#FFFFFF"
-                style={s.locationIcon}
-              />
-              <Text style={s.location} numberOfLines={1}>
-                {task.location}
-              </Text>
+        <Pressable
+          accessible={false}
+          style={s.cardBodyPressable}
+          onPress={onPressBody}
+        >
+          {/* Left: icon + caption */}
+          <View style={s.leftCol}>
+            <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
+              <MaterialCommunityIcons name={icon} size={20} color={accent} />
             </View>
-          ) : null}
-
-          <View style={s.dueRow}>
-            <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{dueText}</Text>
-            <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>{formattedDate}</Text>
+            <Text style={[s.leftCaption, { color: accent }]}>{t(`home.taskTypes.${task.type}`)}</Text>
           </View>
-        </View>
+
+          {/* Center: title, location, due */}
+          <View style={s.centerCol}>
+            <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
+
+            {task.location ? (
+              <View style={s.locationRow}>
+                <MaterialCommunityIcons
+                  name="map-marker"
+                  size={12}
+                  color="#FFFFFF"
+                  style={s.locationIcon}
+                />
+                <Text style={s.location} numberOfLines={1}>
+                  {task.location}
+                </Text>
+              </View>
+            ) : null}
+
+            <View style={s.dueRow}>
+              <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{dueText}</Text>
+              <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>{formattedDate}</Text>
+            </View>
+          </View>
+        </Pressable>
 
         {/* Right: menu button */}
         <View style={s.rightCol}>

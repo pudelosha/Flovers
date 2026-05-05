@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -21,6 +21,7 @@ type Props = {
   rightOffset?: number;
   /** Horizontal position: "left" or "right". Defaults to "right". */
   position?: "left" | "right";
+  closeSignal?: number;
 };
 
 export default function FAB({
@@ -28,9 +29,15 @@ export default function FAB({
   bottomOffset = 92,
   rightOffset = 16,
   position = "right",
+  closeSignal,
 }: Props) {
   const insets = useSafeAreaInsets();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (closeSignal === undefined) return;
+    setOpen(false);
+  }, [closeSignal]);
 
   // Anchor the FAB container to the correct side
   const horizontalStyle =

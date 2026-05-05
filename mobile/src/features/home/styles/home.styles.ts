@@ -57,6 +57,12 @@ export const s = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 14,
   },
+  cardBodyPressable: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "stretch",
+  },
 
   // Left column
   leftCol: { width: 75, alignItems: "center", justifyContent: "center" },

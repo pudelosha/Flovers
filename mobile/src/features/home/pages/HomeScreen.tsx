@@ -30,7 +30,6 @@ import {
 import {
   fetchHomeTasks,
   markHomeTaskComplete,
-  deleteHomeTask,
   type HomeTask,
 } from "../../../api/services/home.service";
 
@@ -78,11 +77,11 @@ export default function HomeScreen() {
   const { settings } = useSettings();
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [fabCloseSignal, setFabCloseSignal] = useState(0);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
 
   // Loading UX (match Plants behavior so entry/re-entry clears old list first)
   const [loading, setLoading] = useState(true);
-  const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
   // FlatList ref to snap back to the top on focus
@@ -135,6 +134,11 @@ export default function HomeScreen() {
     setCompleteIntervalText("");
   }, []);
 
+  const closeFloatingMenus = useCallback(() => {
+    setMenuOpenId(null);
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
   const load = useCallback(async () => {
     if (loadInFlightRef.current) {
       return loadInFlightRef.current;
@@ -144,11 +148,9 @@ export default function HomeScreen() {
       try {
         const data = await fetchHomeTasks();
         setTasks(data);
-        setHasLoadedOnce(true);
       } catch (e: any) {
         showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
         setTasks([]);
-        setHasLoadedOnce(true);
       }
     })();
 
@@ -188,7 +190,7 @@ export default function HomeScreen() {
   // On every focus — close any open menu/modals and scroll list to top
   useFocusEffect(
     useCallback(() => {
-      setMenuOpenId(null);
+      closeFloatingMenus();
       setSortOpen(false);
       setFilterOpen(false);
       closeCompleteModal(); // ✅ ensures complete modal won't remain open
@@ -197,7 +199,7 @@ export default function HomeScreen() {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
       return undefined;
-    }, [closeCompleteModal])
+    }, [closeCompleteModal, closeFloatingMenus])
   );
 
   const onRefresh = useCallback(async () => {
@@ -209,9 +211,10 @@ export default function HomeScreen() {
     }
   }, [load]);
 
-  const onToggleMenu = (id: string) => {
+  const onToggleMenu = useCallback((id: string) => {
+    setFabCloseSignal((value) => value + 1);
     setMenuOpenId((curr) => (curr === id ? null : id));
-  };
+  }, []);
 
   // Helpers for date checks (local time)
   const startOfToday = () => {
@@ -651,7 +654,7 @@ export default function HomeScreen() {
       {/* Backdrop to dismiss menus (keep no zIndex so menus sit above) */}
       {menuOpenId && (
         <Pressable
-          onPress={() => setMenuOpenId(null)}
+          onPress={closeFloatingMenus}
           style={s.backdrop}
           pointerEvents="auto"
         />
@@ -687,6 +690,7 @@ export default function HomeScreen() {
                 task={item as Task}
                 isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(item.id)}
+                onPressBody={closeFloatingMenus}
                 onMarkComplete={() => {
                   setMenuOpenId(null);
                   openCompleteModal([item as HomeTask], "single");
@@ -740,7 +744,7 @@ export default function HomeScreen() {
         contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
-        onScrollBeginDrag={() => setMenuOpenId(null)}
+        onScrollBeginDrag={closeFloatingMenus}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
@@ -911,7 +915,7 @@ export default function HomeScreen() {
           }}
         >
           <FAB
-            icon="plus"
+            closeSignal={fabCloseSignal}
             actions={fabActions}
             position={settings.fabPosition}
           />
