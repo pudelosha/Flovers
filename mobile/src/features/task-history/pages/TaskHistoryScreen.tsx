@@ -123,6 +123,17 @@ export default function TaskHistoryScreen() {
 
   // --- MENU STATE (only one open at a time, like Home / Reminders) ---
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
+  const [fabCloseSignal, setFabCloseSignal] = useState(0);
+
+  const closeFloatingMenus = useCallback(() => {
+    setOpenMenuId(null);
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
+  const onToggleMenu = useCallback((id: string) => {
+    setFabCloseSignal((value) => value + 1);
+    setOpenMenuId((curr) => (curr === id ? null : id));
+  }, []);
 
   // --- DATA LOAD (completed tasks) ---
   const load = useCallback(async () => {
@@ -154,7 +165,7 @@ export default function TaskHistoryScreen() {
       setFilterOpen(false);
       setDeleteOpen(false);
       setExportOpen(false);
-      setOpenMenuId(null);
+      closeFloatingMenus();
       setFilters(INITIAL_FILTERS);
       setSortKey("completedAt");
       setSortDir("desc");
@@ -172,18 +183,18 @@ export default function TaskHistoryScreen() {
       return () => {
         mounted = false;
       };
-    }, [load])
+    }, [closeFloatingMenus, load])
   );
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
-    setOpenMenuId(null);
+    closeFloatingMenus();
     try {
       await load();
     } finally {
       setRefreshing(false);
     }
-  }, [load]);
+  }, [closeFloatingMenus, load]);
 
   // Options for plant & location dropdowns (derived from items)
   const plantOptions = useMemo(() => {
@@ -321,7 +332,7 @@ export default function TaskHistoryScreen() {
       })
     );
     Animated.stagger(50, seq).start();
-  }, [loading, derivedItems.length]);
+  }, [loading, derivedItems]);
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
@@ -542,7 +553,7 @@ export default function TaskHistoryScreen() {
           style={s.backdrop}
           pointerEvents="auto"
           onStartShouldSetResponder={() => {
-            setOpenMenuId(null);
+            closeFloatingMenus();
             return true;
           }}
         />
@@ -577,9 +588,8 @@ export default function TaskHistoryScreen() {
               <TaskHistoryTile
                 item={item}
                 isMenuOpen={isOpen}
-                onToggleMenu={() =>
-                  setOpenMenuId((curr) => (curr === item.id ? null : item.id))
-                }
+                onToggleMenu={() => onToggleMenu(item.id)}
+                onPressBody={closeFloatingMenus}
                 onDelete={handleDeleteItem}
                 onEditReminder={handleEditHistoryReminder}
                 onGoToPlant={handleGoToPlant}
@@ -596,7 +606,7 @@ export default function TaskHistoryScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         onScrollBeginDrag={() => {
-          if (openMenuId) setOpenMenuId(null);
+          closeFloatingMenus();
         }}
         ListEmptyComponent={
           !loading ? (
@@ -674,7 +684,11 @@ export default function TaskHistoryScreen() {
             return false;
           }}
         >
-          <FAB actions={fabActions} position={fabPosition} />
+          <FAB
+            actions={fabActions}
+            closeSignal={fabCloseSignal}
+            position={fabPosition}
+          />
         </View>
       )}
 

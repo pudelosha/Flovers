@@ -64,6 +64,7 @@ type Props = {
   onDelete?: (item: TaskHistoryItem) => void;
   onEditReminder?: (item: TaskHistoryItem) => void;
   onGoToPlant?: (item: TaskHistoryItem) => void;
+  onPressBody?: () => void;
 };
 
 export default function TaskHistoryTile({
@@ -73,6 +74,7 @@ export default function TaskHistoryTile({
   onDelete,
   onEditReminder,
   onGoToPlant,
+  onPressBody,
 }: Props) {
   const { t } = useTranslation();
 
@@ -117,6 +119,7 @@ export default function TaskHistoryTile({
   };
 
   const onToggleBody = () => {
+    onPressBody?.();
     if (!hasNote) return;
     if (expanded) collapse();
     else expand();
@@ -216,6 +219,7 @@ export default function TaskHistoryTile({
       <View style={[s.cardRow, !expanded && hasNote && styles.compactRow]}>
         {/* BODY (pressable): left + center – expands/collapses */}
         <Pressable
+          accessible={false}
           style={styles.bodyPressable}
           onPress={onToggleBody}
           android_ripple={{ color: "rgba(255,255,255,0.10)" }}
