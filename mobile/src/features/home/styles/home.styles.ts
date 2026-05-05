@@ -84,8 +84,8 @@ export const s = StyleSheet.create({
     marginTop: 2,
   },
   dueRow: { flexDirection: "row", alignItems: "center", gap: 16, marginTop: 6 },
-  dueWhen: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
-  dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 },
+  dueWhen: { color: "#FFFFFF", fontWeight: "700", fontSize: 10 },
+  dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 },
 
   // 🔴 Overdue styling (applied to both label & date)
   dueOverdue: {

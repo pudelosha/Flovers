@@ -1,11 +1,13 @@
 import pytest
 from django.contrib.auth import get_user_model
+from django.test import override_settings
 from django.urls import reverse
 from rest_framework.test import APIClient
+from unittest.mock import patch
 
 from locations.models import Location
 from plant_instances.models import PlantInstance
-from readings.models import PumpTask, ReadingDevice
+from readings.models import AccountSecret, PumpTask, ReadingDevice
 
 User = get_user_model()
 
@@ -136,6 +138,55 @@ def test_auto_pump_action_rejects_device_without_pump():
 
 
 @pytest.mark.django_db
+def test_auto_pump_action_enables_auto_pump_when_device_is_ready():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = ReadingDevice.objects.create(
+        user=user,
+        plant=_plant(user),
+        device_name="Sensor",
+        sensors={"moisture": True},
+        pump_included=True,
+        pump_threshold_pct=30,
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.patch(
+        reverse("reading-device-auto-pump", args=[device.id]),
+        data={"automatic_pump_launch": True},
+        format="json",
+    )
+
+    data = response.json()
+    device.refresh_from_db()
+    assert response.status_code == 200
+    assert data["automatic_pump_launch"] is True
+    assert device.automatic_pump_launch is True
+
+
+@pytest.mark.django_db
+def test_pump_status_returns_pending_manual_task():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = ReadingDevice.objects.create(
+        user=user,
+        plant=_plant(user),
+        device_name="Sensor",
+        pump_included=True,
+    )
+    task = PumpTask.objects.create(device=device, status=PumpTask.STATUS_PENDING)
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.get(reverse("reading-device-pump-status", args=[device.id]))
+
+    data = response.json()
+    assert response.status_code == 200
+    assert data["pump_included"] is True
+    assert data["pending_pump_task"]["id"] == task.id
+    assert "expires_at" not in data["pending_pump_task"]
+
+
+@pytest.mark.django_db
 def test_pump_schedule_creates_manual_pending_task_and_is_idempotent():
     user = User.objects.create_user(email="test@example.com", password="strong-password-123")
     device = ReadingDevice.objects.create(
@@ -180,3 +231,65 @@ def test_pump_recall_cancels_pending_manual_task():
     assert data["detail"] == "Scheduled watering recalled."
     assert data["pending_pump_task"] is None
     assert task.status == PumpTask.STATUS_CANCELLED
+
+
+@pytest.mark.django_db
+@override_settings(SITE_URL="https://api.example.com")
+def test_code_text_returns_generated_arduino_code():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = ReadingDevice.objects.create(
+        user=user,
+        plant=_plant(user),
+        device_name="Sensor",
+        sensors={"temperature": True, "moisture": True},
+        pump_included=True,
+    )
+    AccountSecret.objects.create(user=user, secret="secret-123")
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(reverse("reading-device-code-text", args=[device.id]), format="json")
+
+    content = response.content.decode()
+    assert response.status_code == 200
+    assert response["Content-Type"].startswith("text/plain")
+    assert "https://api.example.com/api/readings/ingest/" in content
+    assert f'const char* deviceKey = "{device.device_key}";' in content
+    assert 'const char* secret = "secret-123";' in content
+
+
+@pytest.mark.django_db
+@patch("readings.views.send_device_code_email")
+def test_send_code_email_sends_generated_device_code(mock_send):
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = ReadingDevice.objects.create(user=user, plant=_plant(user), device_name="Sensor")
+    AccountSecret.objects.create(user=user, secret="secret-123")
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(reverse("reading-device-send-code-email", args=[device.id]), format="json")
+
+    data = response.json()
+    assert response.status_code == 200
+    assert data["detail"] == "Device code was sent to test@example.com."
+    mock_send.assert_called_once()
+    assert mock_send.call_args.kwargs["user"] == user
+    assert mock_send.call_args.kwargs["device"] == device
+    assert "secret-123" in mock_send.call_args.kwargs["code_text"]
+
+
+@pytest.mark.django_db
+@override_settings(SITE_URL="https://api.example.com")
+def test_doc_pdf_returns_pdf_response():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = ReadingDevice.objects.create(user=user, plant=_plant(user), device_name="Sensor")
+    AccountSecret.objects.create(user=user, secret="secret-123")
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.get(reverse("reading-device-doc-pdf", args=[device.id]))
+
+    assert response.status_code == 200
+    assert response["Content-Type"] == "application/pdf"
+    assert response["Content-Disposition"] == f'attachment; filename="device-{device.id}-setup.pdf"'
+    assert response.content.startswith(b"%PDF")
