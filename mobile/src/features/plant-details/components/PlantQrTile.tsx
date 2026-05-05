@@ -70,7 +70,7 @@ export default function PlantQrTile({
             name="download"
             size={18}
             color="#FFFFFF"
-            style={{ marginRight: 6 }}
+            style={styles.btnIcon}
           />
           <Text style={styles.btnText}>
             {tr("plantDetails.qr.saveBtn", "Save QR code")}
@@ -82,7 +82,7 @@ export default function PlantQrTile({
             name="email-outline"
             size={18}
             color="#FFFFFF"
-            style={{ marginRight: 6 }}
+            style={styles.btnIcon}
           />
           <Text style={styles.btnText}>
             {tr("plantDetails.qr.emailBtn", "Email QR code")}
@@ -94,8 +94,17 @@ export default function PlantQrTile({
 }
 
 const styles = StyleSheet.create({
-  wrap: { alignSelf: "stretch" },
-  title: { color: "#FFFFFF", fontWeight: "800", fontSize: 18, marginBottom: 8 },
+  wrap: {
+    alignSelf: "stretch",
+  },
+
+  title: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 18,
+    marginBottom: 8,
+  },
+
   desc: {
     color: "rgba(255,255,255,0.92)",
     fontSize: 13,
@@ -105,17 +114,42 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     lineHeight: 18,
   },
-  qrBox: { alignItems: "center", justifyContent: "center", marginBottom: 16 },
-  btnRow: { flexDirection: "row", justifyContent: "center", gap: 10 },
+
+  qrBox: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 16,
+  },
+
+  btnRow: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 10,
+    alignSelf: "stretch",
+  },
+
   btn: {
+    flex: 1,
+    minWidth: 0,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderRadius: 18,
   },
+
   primaryBtn: {
     backgroundColor: "rgba(11,114,133,0.92)",
   },
-  btnText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
+
+  btnIcon: {
+    marginRight: 6,
+  },
+
+  btnText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 12,
+  },
 });
