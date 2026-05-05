@@ -1,6 +1,7 @@
-import React, { useMemo, useCallback } from "react";
+import React, { useMemo, useCallback, useEffect } from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import Calendar from "react-native-calendars/src/calendar";
+import { LocaleConfig } from "react-native-calendars";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -35,13 +36,14 @@ function toISODateOnly(d?: Date | string): string {
 
 const ORDER: ReminderType[] = ["watering", "moisture", "fertilising", "care", "repot"];
 
-function monthYearLabel(input: any, settings?: any) {
+function monthYearLabel(input: any, settings?: any, currentLanguage?: string) {
   const d: Date =
     (input && typeof input?.toDate === "function" && input.toDate()) ||
     (input instanceof Date ? input : new Date(input));
 
-  const rawLocale = settings?.locale || undefined;
+  const rawLocale = settings?.locale || currentLanguage || undefined;
   const raw = d.toLocaleString(rawLocale, { month: "long", year: "numeric" });
+
   return raw.replace(/^\p{Ll}/u, (m) => m.toUpperCase());
 }
 
@@ -95,6 +97,75 @@ export default function RemindersCalendar({
     },
     [t, currentLanguage]
   );
+
+  const calendarLocaleKey = useMemo(
+    () => `app-reminders-calendar-${currentLanguage || settings?.locale || "en"}`,
+    [currentLanguage, settings?.locale]
+  );
+
+  const calendarLocale = useMemo(
+    () => ({
+      monthNames: [
+        tr("reminders.calendar.months.january", "January"),
+        tr("reminders.calendar.months.february", "February"),
+        tr("reminders.calendar.months.march", "March"),
+        tr("reminders.calendar.months.april", "April"),
+        tr("reminders.calendar.months.may", "May"),
+        tr("reminders.calendar.months.june", "June"),
+        tr("reminders.calendar.months.july", "July"),
+        tr("reminders.calendar.months.august", "August"),
+        tr("reminders.calendar.months.september", "September"),
+        tr("reminders.calendar.months.october", "October"),
+        tr("reminders.calendar.months.november", "November"),
+        tr("reminders.calendar.months.december", "December"),
+      ],
+
+      monthNamesShort: [
+        tr("reminders.calendar.monthsShort.january", "Jan"),
+        tr("reminders.calendar.monthsShort.february", "Feb"),
+        tr("reminders.calendar.monthsShort.march", "Mar"),
+        tr("reminders.calendar.monthsShort.april", "Apr"),
+        tr("reminders.calendar.monthsShort.may", "May"),
+        tr("reminders.calendar.monthsShort.june", "Jun"),
+        tr("reminders.calendar.monthsShort.july", "Jul"),
+        tr("reminders.calendar.monthsShort.august", "Aug"),
+        tr("reminders.calendar.monthsShort.september", "Sep"),
+        tr("reminders.calendar.monthsShort.october", "Oct"),
+        tr("reminders.calendar.monthsShort.november", "Nov"),
+        tr("reminders.calendar.monthsShort.december", "Dec"),
+      ],
+
+      // react-native-calendars expects Sunday-first arrays here.
+      // firstDay={1} below rotates display to Monday-first.
+      dayNames: [
+        tr("reminders.calendar.weekdays.sunday", "Sunday"),
+        tr("reminders.calendar.weekdays.monday", "Monday"),
+        tr("reminders.calendar.weekdays.tuesday", "Tuesday"),
+        tr("reminders.calendar.weekdays.wednesday", "Wednesday"),
+        tr("reminders.calendar.weekdays.thursday", "Thursday"),
+        tr("reminders.calendar.weekdays.friday", "Friday"),
+        tr("reminders.calendar.weekdays.saturday", "Saturday"),
+      ],
+
+      dayNamesShort: [
+        tr("reminders.calendar.weekdaysShort.sun", "Sun"),
+        tr("reminders.calendar.weekdaysShort.mon", "Mon"),
+        tr("reminders.calendar.weekdaysShort.tue", "Tue"),
+        tr("reminders.calendar.weekdaysShort.wed", "Wed"),
+        tr("reminders.calendar.weekdaysShort.thu", "Thu"),
+        tr("reminders.calendar.weekdaysShort.fri", "Fri"),
+        tr("reminders.calendar.weekdaysShort.sat", "Sat"),
+      ],
+
+      today: tr("reminders.calendar.today", "Today"),
+    }),
+    [tr]
+  );
+
+  useEffect(() => {
+    LocaleConfig.locales[calendarLocaleKey] = calendarLocale;
+    LocaleConfig.defaultLocale = calendarLocaleKey;
+  }, [calendarLocaleKey, calendarLocale]);
 
   // multi-dot marks
   const dotsByDate = useMemo(() => {
@@ -179,7 +250,9 @@ export default function RemindersCalendar({
         <View pointerEvents="none" style={s.calendarBorder} />
 
         <Calendar
+          key={calendarLocaleKey}
           current={selectedDate}
+          firstDay={1}
           onDayPress={(d) => onSelectDate(d.dateString)}
           markedDates={markedDates}
           markingType="multi-dot"
@@ -196,7 +269,9 @@ export default function RemindersCalendar({
           }}
           renderHeader={(dateObj) => (
             <View style={s.calHeaderRow}>
-              <Text style={s.calHeaderTitle}>{monthYearLabel(dateObj, settings)}</Text>
+              <Text style={s.calHeaderTitle}>
+                {monthYearLabel(dateObj, settings, currentLanguage)}
+              </Text>
             </View>
           )}
           renderArrow={(direction) => (
