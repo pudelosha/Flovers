@@ -18,6 +18,14 @@ from .models import (
 
 
 class ProfileSettingsSerializer(serializers.ModelSerializer):
+    tile_transparency = serializers.DecimalField(
+        max_digits=4,
+        decimal_places=3,
+        min_value=Decimal("0.00"),
+        max_value=Decimal("0.60"),
+        required=False,
+    )
+
     class Meta:
         model = ProfileSettings
         fields = [
@@ -119,6 +127,8 @@ class ProfileNotificationsSerializer(serializers.ModelSerializer):
         return v
 
 class PushDeviceSerializer(serializers.ModelSerializer):
+    platform = serializers.CharField(required=False)
+
     class Meta:
         model = PushDevice
         fields = ["token", "platform", "is_active", "last_seen_at"]
