@@ -192,8 +192,6 @@ export default function ReadingTile({
     [t, currentLanguage]
   );
 
-  const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
-
   const effectivePumpIncluded = !!data.pumpIncluded;
   const effectiveAutoPumpEnabled =
     autoPumpEnabled ?? data.automaticPumpLaunch ?? false;
@@ -206,6 +204,7 @@ export default function ReadingTile({
   const hasPendingWatering = Boolean(data.pendingPumpTask);
 
   const lastText = useMemo(() => {
+    const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
     if (!dt) return `${tr("readings.tile.lastReadPrefix", "Last read")}: —`;
 
     const date = formatDateBySettings(dt, settings);
@@ -215,7 +214,7 @@ export default function ReadingTile({
     });
 
     return `${tr("readings.tile.lastReadPrefix", "Last read")}: ${date} ${time}`;
-  }, [dt, tr, settings]);
+  }, [data.lastReadISO, tr, settings]);
 
   const displayTemperature = useMemo(() => {
     return getDisplayTemperature(data.metrics.temperature, settings);
@@ -250,7 +249,7 @@ export default function ReadingTile({
   }, [effectiveSoilMoistureThreshold, tr]);
 
   return (
-    <View style={s.cardWrap}>
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       <View style={s.cardGlass}>
         <LinearGradient
           pointerEvents="none"
@@ -280,6 +279,7 @@ export default function ReadingTile({
 
       <View style={[s.topRow, localStyles.topRow]}>
         <Pressable
+          accessible={false}
           style={{ flex: 1, paddingRight: 8 }}
           onPress={onPressBody}
           android_ripple={{ color: "rgba(255,255,255,0.08)" }}
@@ -386,31 +386,42 @@ export default function ReadingTile({
           <View style={horizontalLineStyles.line} />
 
           <View style={pumpStyles.autoPumpContainer}>
-            <View style={pumpStyles.autoPumpTextContainer}>
+            <Pressable
+              accessible={false}
+              style={pumpStyles.autoPumpTextContainer}
+              onPress={onPressBody}
+            >
               <Text style={pumpStyles.autoPumpLabel}>
                 {tr("readings.tile.automaticPump", "Automatic pump")}
               </Text>
               <Text style={pumpStyles.autoPumpSubtext}>
                 {autoPumpThresholdText}
               </Text>
-            </View>
+            </Pressable>
 
             <Switch
               value={!!effectiveAutoPumpEnabled}
-              onValueChange={onAutoPumpToggle}
+              onValueChange={(enabled) => {
+                onPressBody();
+                onAutoPumpToggle?.(enabled);
+              }}
               trackColor={{ false: "rgba(255,255,255,0.3)", true: PUMP_BLUE }}
               thumbColor="#FFFFFF"
             />
           </View>
 
-          <View style={pumpStyles.lastPumpRow}>
+          <Pressable
+            accessible={false}
+            style={pumpStyles.lastPumpRow}
+            onPress={onPressBody}
+          >
             <MaterialCommunityIcons
               name="timer-cog-outline"
               size={14}
               color="rgba(255,255,255,0.88)"
             />
             <Text style={pumpStyles.lastPumpText}>{lastPumpText}</Text>
-          </View>
+          </Pressable>
 
           <Pressable
             style={({ pressed }) => [
@@ -418,7 +429,10 @@ export default function ReadingTile({
               hasPendingWatering && pumpStyles.unscheduleButton,
               pressed && pumpStyles.launchButtonPressed,
             ]}
-            onPress={onLaunchPump}
+            onPress={() => {
+              onPressBody();
+              onLaunchPump?.();
+            }}
             disabled={isLaunchingPump}
           >
             <Text style={pumpStyles.launchButtonText}>

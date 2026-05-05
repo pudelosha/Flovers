@@ -113,6 +113,7 @@ export default function ReadingsScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [fabCloseSignal, setFabCloseSignal] = useState(0);
 
   // FAB-related flags
   const [sortSheetOpen, setSortSheetOpen] = useState(false);
@@ -169,8 +170,6 @@ export default function ReadingsScreen() {
   const [upsertVisible, setUpsertVisible] = useState(false);
   const [upsertMode, setUpsertMode] = useState<"add" | "edit">("add");
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
-  const [upsertReadingName, setUpsertReadingName] =
-    useState<string | undefined>(undefined);
 
   // Shared toast
   const [toastVisible, setToastVisible] = useState(false);
@@ -186,6 +185,16 @@ export default function ReadingsScreen() {
     },
     []
   );
+
+  const closeFloatingMenus = useCallback(() => {
+    setMenuOpenId(null);
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
+  const onToggleMenu = useCallback((id: string) => {
+    setFabCloseSignal((value) => value + 1);
+    setMenuOpenId((curr) => (curr === id ? null : id));
+  }, []);
 
   // FlatList ref to force scroll-to-top on focus
   const listRef = useRef<Animated.FlatList<any>>(null);
@@ -263,7 +272,7 @@ export default function ReadingsScreen() {
       setWateringSchedulePendingTask(null);
       setWateringScheduleLastPumpRunAt(null);
 
-      setMenuOpenId(null);
+      closeFloatingMenus();
 
       setFilters({});
       setFilterQuery("");
@@ -273,17 +282,18 @@ export default function ReadingsScreen() {
       });
 
       return undefined;
-    }, [])
+    }, [closeFloatingMenus])
   );
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
+    closeFloatingMenus();
     try {
       await load();
     } finally {
       setRefreshing(false);
     }
-  }, [load]);
+  }, [closeFloatingMenus, load]);
 
   // ----- Derived plants & locations -----
   const plantOptions = useMemo(
@@ -455,12 +465,13 @@ export default function ReadingsScreen() {
   // ---- Delete handlers ----
   const openDeleteFor = useCallback(
     (id: string) => {
+      closeFloatingMenus();
       const item = items.find((x) => x.id === id);
       setDeleteId(id);
       setDeleteName(item?.name ?? tr("readings.defaults.thisDevice", "this device"));
       setDeleteVisible(true);
     },
-    [items, tr]
+    [closeFloatingMenus, items, tr]
   );
 
   const confirmDelete = useCallback(async () => {
@@ -488,7 +499,7 @@ export default function ReadingsScreen() {
   }, [deleteId, showToast, tr]);
 
   const handleSendExport = useCallback(async () => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
 
     try {
       setExporting(true);
@@ -519,10 +530,12 @@ export default function ReadingsScreen() {
     } finally {
       setExporting(false);
     }
-  }, [effectiveExportFilters, i18n.language, currentLanguage, showToast, tr]);
+  }, [closeFloatingMenus, effectiveExportFilters, i18n.language, currentLanguage, showToast, tr]);
 
   // ---- Upsert handlers ----
   const openAddDevice = useCallback(async () => {
+    closeFloatingMenus();
+
     if (!plantInstances || plantInstances.length === 0) {
       try {
         const latest = await fetchPlantInstances();
@@ -532,12 +545,13 @@ export default function ReadingsScreen() {
 
     setUpsertMode("add");
     setUpsertReadingId(null);
-    setUpsertReadingName(undefined);
     setUpsertVisible(true);
-  }, [plantInstances]);
+  }, [closeFloatingMenus, plantInstances]);
 
   const openEditDevice = useCallback(
     async (id: string) => {
+      closeFloatingMenus();
+
       try {
         const data = await fetchDeviceSetup();
         setSetupSecret(data.secret);
@@ -547,17 +561,17 @@ export default function ReadingsScreen() {
         setSetupSecret(null);
       }
 
-      const item = items.find((x) => x.id === id);
       setUpsertMode("edit");
       setUpsertReadingId(id);
-      setUpsertReadingName(item?.name);
       setUpsertVisible(true);
     },
-    [items]
+    [closeFloatingMenus]
   );
 
   const openDeviceDetails = useCallback(
     async (id: string) => {
+      closeFloatingMenus();
+
       setDeviceDetailsId(id);
       setDeviceDetailsLoading(true);
       setDeviceDetailsData(null);
@@ -581,7 +595,7 @@ export default function ReadingsScreen() {
         setDeviceDetailsLoading(false);
       }
     },
-    [showToast, tr]
+    [closeFloatingMenus, showToast, tr]
   );
 
   const handleEmailCodeFromDeviceDetails = useCallback(async () => {
@@ -614,6 +628,8 @@ export default function ReadingsScreen() {
 
   const openWateringSchedule = useCallback(
     async (id: string) => {
+      closeFloatingMenus();
+
       const item = items.find((x) => x.id === id);
 
       setWateringScheduleId(id);
@@ -667,7 +683,7 @@ export default function ReadingsScreen() {
         setWateringScheduleLoading(false);
       }
     },
-    [items, showToast, tr]
+    [closeFloatingMenus, items, showToast, tr]
   );
 
   const handleScheduleWatering = useCallback(async () => {
@@ -946,6 +962,8 @@ export default function ReadingsScreen() {
 
   const handleToggleAutoPump = useCallback(
     async (id: string, enabled: boolean) => {
+      closeFloatingMenus();
+
       const prevItems = items;
       const prevDevicesRaw = devicesRaw;
 
@@ -1010,10 +1028,12 @@ export default function ReadingsScreen() {
         );
       }
     },
-    [items, devicesRaw, showToast, tr]
+    [closeFloatingMenus, items, devicesRaw, showToast, tr]
   );
 
   const openDeviceSetup = useCallback(async () => {
+    closeFloatingMenus();
+
     try {
       const data = await fetchDeviceSetup();
       setSetupSecret(data.secret);
@@ -1030,7 +1050,7 @@ export default function ReadingsScreen() {
     } finally {
       setDeviceSetupVisible(true);
     }
-  }, [showToast, tr]);
+  }, [closeFloatingMenus, showToast, tr]);
 
   if (loading) {
     return (
@@ -1060,7 +1080,7 @@ export default function ReadingsScreen() {
       />
 
       {menuOpenId && (
-        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />
+        <Pressable onPress={closeFloatingMenus} style={s.backdrop} />
       )}
 
       <Animated.FlatList
@@ -1081,34 +1101,32 @@ export default function ReadingsScreen() {
           const opacity = v;
 
           const dev = devicesRaw.find((d) => String(d.id) === item.id);
+          const isOpen = menuOpenId === item.id;
 
           return (
             <Animated.View
-              style={{ opacity, transform: [{ translateY }, { scale }] }}
+              style={[
+                { opacity, transform: [{ translateY }, { scale }] },
+                isOpen && { zIndex: 50 },
+              ]}
             >
               <ReadingTile
                 data={item}
-                isMenuOpen={menuOpenId === item.id}
-                onPressBody={() =>
-                  nav.navigate("ReadingDetails" as never, { id: item.id } as never)
-                }
-                onPressMenu={() =>
-                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
-                }
+                isMenuOpen={isOpen}
+                onPressBody={closeFloatingMenus}
+                onPressMenu={() => onToggleMenu(item.id)}
                 onEdit={() => {
-                  setMenuOpenId(null);
                   openEditDevice(item.id);
                 }}
                 onDeviceDetails={() => {
-                  setMenuOpenId(null);
                   openDeviceDetails(item.id);
                 }}
                 onHistory={() => {
-                  setMenuOpenId(null);
+                  closeFloatingMenus();
                   nav.navigate("ReadingsHistory" as never, { id: item.id } as never);
                 }}
                 onPlantDetails={() => {
-                  setMenuOpenId(null);
+                  closeFloatingMenus();
                   if (dev?.plant) {
                     nav.navigate(
                       "PlantDetails" as never,
@@ -1117,15 +1135,15 @@ export default function ReadingsScreen() {
                   }
                 }}
                 onDelete={() => {
-                  setMenuOpenId(null);
                   openDeleteFor(item.id);
                 }}
-                onMetricPress={(metric) =>
+                onMetricPress={(metric) => {
+                  closeFloatingMenus();
                   nav.navigate(
                     "ReadingsHistory" as never,
                     { metric, range: "day", id: item.id } as never
-                  )
-                }
+                  );
+                }}
                 deviceName={dev?.device_name}
                 sensors={{
                   temperature: !!dev?.sensors?.temperature,
@@ -1146,7 +1164,7 @@ export default function ReadingsScreen() {
         ListFooterComponent={() => <View style={{ height: 200 }} />}
         contentContainerStyle={s.listContent}
         showsVerticalScrollIndicator={false}
-        onScrollBeginDrag={() => setMenuOpenId(null)}
+        onScrollBeginDrag={closeFloatingMenus}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
@@ -1222,6 +1240,7 @@ export default function ReadingsScreen() {
         >
           <FAB
             bottomOffset={92}
+            closeSignal={fabCloseSignal}
             position={settings.fabPosition}
             actions={[
               {
@@ -1241,6 +1260,7 @@ export default function ReadingsScreen() {
                 icon: "sort",
                 label: tr("readings.fab.sort", "Sort"),
                 onPress: () => {
+                  closeFloatingMenus();
                   setSortSheetOpen(true);
                   setSortModalVisible(true);
                 },
@@ -1250,6 +1270,7 @@ export default function ReadingsScreen() {
                 icon: "filter-variant",
                 label: tr("readings.fab.filter", "Filter"),
                 onPress: () => {
+                  closeFloatingMenus();
                   setFilterSheetOpen(true);
                   setFilterModalVisible(true);
                 },
@@ -1259,7 +1280,7 @@ export default function ReadingsScreen() {
                 icon: "email-send-outline",
                 label: tr("readings.fab.sendExport", "Send export"),
                 onPress: () => {
-                  setMenuOpenId(null);
+                  closeFloatingMenus();
                   setExportModalVisible(true);
                 },
               },
@@ -1270,6 +1291,7 @@ export default function ReadingsScreen() {
                       icon: "filter-remove",
                       label: tr("readings.fab.clearFilter", "Clear filter"),
                       onPress: () => {
+                        closeFloatingMenus();
                         setFilters({});
                         setFilterQuery("");
                       },

@@ -13,6 +13,9 @@ export const s = StyleSheet.create({
     position: "relative",
     minHeight: 148,
   },
+  cardWrapRaised: {
+    zIndex: 30,
+  },
 
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -103,7 +106,6 @@ export const s = StyleSheet.create({
     right: 6,
     top: 6,
     zIndex: 10,
-    elevation: 10,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,
