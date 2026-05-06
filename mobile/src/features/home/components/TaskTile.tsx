@@ -152,60 +152,46 @@ export default function TaskTile({
       </View>
 
       {/* Content row */}
-      <View style={[s.cardRow, { paddingVertical: 4 }]}>
-        <Pressable
-          accessible={false}
-          style={s.cardBodyPressable}
-          onPress={onPressBody}
-        >
-          {/* Left: icon + caption */}
-          <View style={s.leftCol}>
-            <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
-              <MaterialCommunityIcons name={icon} size={20} color={accent} />
-            </View>
-            <Text style={[s.leftCaption, { color: accent }]}>{t(`home.taskTypes.${task.type}`)}</Text>
+<Pressable
+        accessible={false}
+        style={[s.cardRow, s.cardBodyPressable, { paddingVertical: 4 }]}
+        onPress={onPressBody}
+      >
+        {/* Left: icon only */}
+        <View style={s.leftCol}>
+          <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}> 
+            <MaterialCommunityIcons name={icon} size={24} color={accent} />
           </View>
-
-          {/* Center: title, location, due */}
-          <View style={s.centerCol}>
-            <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
-
-            {task.location ? (
-              <View style={s.locationRow}>
-                <MaterialCommunityIcons
-                  name="map-marker"
-                  size={12}
-                  color="#FFFFFF"
-                  style={s.locationIcon}
-                />
-                <Text style={s.location} numberOfLines={1}>
-                  {task.location}
-                </Text>
-              </View>
-            ) : null}
-
-            <View style={s.dueRow}>
-              <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{dueText}</Text>
-              <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>{formattedDate}</Text>
-            </View>
-          </View>
-        </Pressable>
-
-        {/* Right: menu button */}
-        <View style={s.rightCol}>
-          <Pressable
-            onPress={onToggleMenu}
-            style={s.menuBtn}
-            android_ripple={{
-              color: "rgba(255,255,255,0.16)",
-              borderless: true,
-            }}
-            hitSlop={8}
-          >
-            <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
-          </Pressable>
         </View>
-      </View>
+
+        {/* Center: task type label, plant name, location */}
+        <View style={s.centerCol}>
+          <Text style={[s.taskTypeLabel, { color: accent }]}>{t(`home.taskTypes.${task.type}`)}</Text>
+          <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
+
+          {task.location ? (
+            <View style={s.locationRow}>
+              <MaterialCommunityIcons
+                name="map-marker"
+                size={12}
+                color="#FFFFFF"
+                style={s.locationIcon}
+              />
+              <Text style={s.location} numberOfLines={1}>
+                {task.location}
+              </Text>
+            </View>
+          ) : null}
+        </View>
+
+        <View style={s.separator} />
+
+        {/* Right: due text and date */}
+        <View style={s.rightCol}>
+          <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{dueText}</Text>
+          <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>{formattedDate}</Text>
+        </View>
+      </Pressable>
 
       {/* Floating menu */}
       {isMenuOpen && (

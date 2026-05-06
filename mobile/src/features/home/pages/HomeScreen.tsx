@@ -690,7 +690,7 @@ export default function HomeScreen() {
                 task={item as Task}
                 isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(item.id)}
-                onPressBody={closeFloatingMenus}
+                onPressBody={() => onToggleMenu(item.id)}
                 onMarkComplete={() => {
                   setMenuOpenId(null);
                   openCompleteModal([item as HomeTask], "single");

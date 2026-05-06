@@ -16,7 +16,7 @@ export const s = StyleSheet.create({
 
   /* ---------- TASK TILES (match Reminders/Plants tones + NO shadow artifacts) ---------- */
   cardWrap: {
-    height: 100,
+    height: 90,
     borderRadius: 28,
     overflow: "visible", // allow dropdown to escape
     position: "relative",
@@ -56,33 +56,42 @@ export const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 14,
+    paddingRight: 18,
   },
   cardBodyPressable: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "stretch",
+    justifyContent: "space-between",
   },
 
   // Left column
-  leftCol: { width: 75, alignItems: "center", justifyContent: "center" },
+  leftCol: { width: 56, alignItems: "center", justifyContent: "center" },
   leftIconBubble: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 6,
   },
-  leftCaption: {
+  taskTypeLabel: {
+    color: "#FFFFFF",
+    fontSize: 10,
+    fontWeight: "800",
+    letterSpacing: 0.7,
+    textTransform: "uppercase",
+    marginBottom: 4,
+  },
+  icftCaption: {
     fontSize: 9,
     letterSpacing: 0.7,
     fontWeight: "800",
   },
 
   // Center column
-  centerCol: { flex: 1, paddingHorizontal: 6 },
-  plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
+  centerCol: { flex: 1, paddingHorizontal: 6, justifyContent: "center" },
+  plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginTop: 2 },
   location: {
     color: "rgba(255,255,255,0.9)",
     fontWeight: "600",
@@ -90,8 +99,8 @@ export const s = StyleSheet.create({
     marginTop: 2,
   },
   dueRow: { flexDirection: "row", alignItems: "center", gap: 16, marginTop: 6 },
-  dueWhen: { color: "#FFFFFF", fontWeight: "700", fontSize: 10 },
-  dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 },
+  dueWhen: { color: "#FFFFFF", fontWeight: "700", fontSize: 11 },
+  dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 11, marginTop: 4 },
 
   // 🔴 Overdue styling (applied to both label & date)
   dueOverdue: {
@@ -99,7 +108,7 @@ export const s = StyleSheet.create({
   },
 
   // Right column
-  rightCol: { width: 56, alignItems: "flex-end", justifyContent: "center" },
+  rightCol: { width: 80, alignItems: "flex-end", justifyContent: "center" },
   menuBtn: {
     width: 36,
     height: 36,
@@ -108,6 +117,13 @@ export const s = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "transparent",
     borderWidth: 0,
+  },
+  separator: {
+    width: 1,
+    height: 56,
+    marginHorizontal: 12,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderRadius: 1,
   },
 
   // MENU SHEET
