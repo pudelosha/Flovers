@@ -485,6 +485,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
 
         enabled = serializer.validated_data["automatic_pump_launch"]
+        threshold = serializer.validated_data.get("pump_threshold_pct")
         moisture_sensor_enabled = bool((device.sensors or {}).get("moisture", True))
 
         if enabled:
@@ -500,6 +501,14 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
+            if threshold is not None:
+                if threshold < 0 or threshold > 100:
+                    return Response(
+                        {"detail": "Pump threshold must be between 0 and 100."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+                device.pump_threshold_pct = threshold
+
             if device.pump_threshold_pct is None:
                 return Response(
                     {"detail": "Pump threshold must be configured before enabling automatic pump launch."},
@@ -507,7 +516,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
                 )
 
         device.automatic_pump_launch = enabled
-        device.save(update_fields=["automatic_pump_launch", "updated_at"])
+        device.save(update_fields=["automatic_pump_launch", "pump_threshold_pct", "updated_at"])
 
         return Response(
             ReadingDeviceSerializer(device, context={"request": request}).data,

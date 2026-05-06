@@ -966,22 +966,40 @@ export default function ReadingsScreen() {
 
       const prevItems = items;
       const prevDevicesRaw = devicesRaw;
+      const currentDevice = devicesRaw.find((d) => String(d.id) === id);
+      const pumpThresholdPct =
+        typeof currentDevice?.pump_threshold_pct === "number"
+          ? currentDevice.pump_threshold_pct
+          : 30;
 
       setItems((curr) =>
         curr.map((x) =>
-          x.id === id ? { ...x, automaticPumpLaunch: enabled } : x
+          x.id === id
+            ? {
+                ...x,
+                automaticPumpLaunch: enabled,
+                pumpThresholdPct: enabled ? x.pumpThresholdPct ?? pumpThresholdPct : x.pumpThresholdPct,
+              }
+            : x
         )
       );
 
       setDevicesRaw((curr) =>
         curr.map((d) =>
-          String(d.id) === id ? { ...d, automatic_pump_launch: enabled } : d
+          String(d.id) === id
+            ? {
+                ...d,
+                automatic_pump_launch: enabled,
+                pump_threshold_pct: enabled ? d.pump_threshold_pct ?? pumpThresholdPct : d.pump_threshold_pct,
+              }
+            : d
         )
       );
 
       try {
         const updated = await toggleAutoPump(Number(id), {
           automatic_pump_launch: enabled,
+          ...(enabled ? { pump_threshold_pct: pumpThresholdPct } : {}),
         });
 
         setDevicesRaw((curr) =>

@@ -332,6 +332,7 @@ export async function fetchReadingsHistory(
 
 export type ToggleAutoPumpPayload = {
   automatic_pump_launch: boolean;
+  pump_threshold_pct?: number | null;
 };
 
 export async function toggleAutoPump(

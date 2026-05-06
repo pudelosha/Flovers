@@ -4,6 +4,7 @@ from .models import ReadingDevice, Reading, PumpTask
 
 class ReadingDeviceAutoPumpSerializer(serializers.Serializer):
     automatic_pump_launch = serializers.BooleanField()
+    pump_threshold_pct = serializers.FloatField(required=False, allow_null=True)
 
 
 class PumpTaskSerializer(serializers.ModelSerializer):

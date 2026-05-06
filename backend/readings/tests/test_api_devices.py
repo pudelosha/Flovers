@@ -165,6 +165,35 @@ def test_auto_pump_action_enables_auto_pump_when_device_is_ready():
 
 
 @pytest.mark.django_db
+def test_auto_pump_action_accepts_threshold_when_existing_threshold_is_missing():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = ReadingDevice.objects.create(
+        user=user,
+        plant=_plant(user),
+        device_name="Sensor",
+        sensors={"moisture": True},
+        pump_included=True,
+        pump_threshold_pct=None,
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.patch(
+        reverse("reading-device-auto-pump", args=[device.id]),
+        data={"automatic_pump_launch": True, "pump_threshold_pct": 30},
+        format="json",
+    )
+
+    data = response.json()
+    device.refresh_from_db()
+    assert response.status_code == 200
+    assert data["automatic_pump_launch"] is True
+    assert data["pump_threshold_pct"] == 30
+    assert device.automatic_pump_launch is True
+    assert device.pump_threshold_pct == 30
+
+
+@pytest.mark.django_db
 def test_pump_status_returns_pending_manual_task():
     user = User.objects.create_user(email="test@example.com", password="strong-password-123")
     device = ReadingDevice.objects.create(
