@@ -1,11 +1,11 @@
-import React, { useCallback, useRef } from "react";
+import React from "react";
 import { View, Text, Pressable, ScrollView, StyleSheet, Keyboard } from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
 import { TRAIT_ICON_BY_KEY } from "../../../create-plant/constants/create-plant.constants";
 
@@ -143,7 +143,6 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
-  const insets = useSafeAreaInsets();
 
   const preferredLang = normalizeLang(currentLanguage);
 
@@ -238,10 +237,6 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     return out;
   }, [profile, tr, preferredLang, settings]);
 
-  const bottomButtonHeight = 52;
-  const bottomGap = Math.max(insets.bottom, 0) + 12;
-  const scrollPadBottom = bottomButtonHeight + bottomGap + 24;
-
   if (!visible) return null;
 
   const showOnlySpinner = loading && !profile && !error;
@@ -250,7 +245,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     <>
       <Pressable style={styles.backdrop} onPress={close} />
 
-      <View style={[styles.wrap, { paddingTop: Math.max(insets.top, 12) }]}>
+      <View style={styles.wrap}>
         <View style={styles.glass} pointerEvents="none">
           <BlurView
             style={StyleSheet.absoluteFill}
@@ -265,14 +260,15 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
         <View style={styles.inner}>
           {showOnlySpinner ? (
-            <View style={[styles.spinnerBox, { paddingBottom: scrollPadBottom }]}>
+            <View style={styles.spinnerBox}>
               <CenteredSpinner size={42} />
             </View>
           ) : error ? (
             <ScrollView
+              style={styles.scroll}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
-              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+              contentContainerStyle={styles.scrollContent}
             >
               <View style={styles.stateBox}>
                 <Text style={styles.stateText}>
@@ -280,24 +276,38 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
                 </Text>
                 <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
               </View>
+
+              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+                <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                  {tr("plantDetailsModals.common.close", "Close")}
+                </Text>
+              </Pressable>
             </ScrollView>
           ) : !profile ? (
             <ScrollView
+              style={styles.scroll}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
-              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+              contentContainerStyle={styles.scrollContent}
             >
               <View style={styles.stateBox}>
                 <Text style={styles.stateText}>
                   {tr("plantDetailsModals.definition.empty", "No definition data available.")}
                 </Text>
               </View>
+
+              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+                <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                  {tr("plantDetailsModals.common.close", "Close")}
+                </Text>
+              </Pressable>
             </ScrollView>
           ) : (
             <ScrollView
+              style={styles.scroll}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
-              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+              contentContainerStyle={styles.scrollContent}
             >
               <Text style={styles.title} numberOfLines={2}>
                 {name || tr("plantDetailsModals.definition.title", "Plant definition")}
@@ -328,16 +338,20 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
                   </View>
                 </>
               )}
+
+              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+                <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                  {tr("plantDetailsModals.common.close", "Close")}
+                </Text>
+              </Pressable>
             </ScrollView>
           )}
 
-          <View style={[styles.bottomBar, { paddingBottom: bottomGap }]}>
-            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
-              <Text style={[styles.btnText, styles.btnPrimaryText]}>
-                {tr("plantDetailsModals.common.close", "Close")}
-              </Text>
-            </Pressable>
-          </View>
+          <ModalCloseButton
+            onPress={close}
+            accessibilityLabel={tr("plantDetailsModals.common.close", "Close")}
+            style={styles.closeButton}
+          />
         </View>
       </View>
     </>
@@ -379,13 +393,23 @@ const styles = StyleSheet.create({
     position: "relative",
     backgroundColor: "transparent",
     minHeight: 220,
+    height: "86%",
+    maxHeight: "86%",
+  },
+
+  scroll: { flex: 1 },
+  scrollContent: {
+    paddingTop: 44,
+    paddingBottom: 120,
   },
 
   spinnerBox: {
+    flex: 1,
     minHeight: 220,
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 16,
+    paddingTop: 44,
     paddingVertical: 22,
   },
 
@@ -395,7 +419,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 6,
     paddingHorizontal: 16,
-    paddingTop: 16,
   },
   latin: {
     marginBottom: 10,
@@ -446,17 +469,6 @@ const styles = StyleSheet.create({
   prefLabel: { color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: "700", flex: 1 },
   prefValue: { color: "#FFFFFF", fontSize: 12, fontWeight: "800" },
 
-  bottomBar: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    bottom: 0,
-    paddingHorizontal: 24,
-    zIndex: 999,
-    elevation: 999,
-    backgroundColor: "transparent",
-  },
-
   btn: {
     alignSelf: "stretch",
     height: 44,
@@ -464,10 +476,16 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.12)",
     alignItems: "center",
     justifyContent: "center",
+    marginHorizontal: 16,
+    marginTop: 14,
   },
 
   btnText: { color: "#FFFFFF", fontWeight: "800" },
 
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   btnPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
+  closeButton: {
+    top: 8,
+    right: 8,
+  },
 });

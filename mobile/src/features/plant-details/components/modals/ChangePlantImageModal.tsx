@@ -13,10 +13,10 @@ import {
   Image,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import {
   launchCamera,
   launchImageLibrary,
@@ -79,7 +79,6 @@ type PendingAction =
 export default function ChangePlantImageModal({ visible, onClose, plantId, onChanged }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const insets = useSafeAreaInsets();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -172,9 +171,6 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       cancelled = true;
     };
   }, [visible, plantId, tr]);
-
-  const bottomGap = Math.max(insets.bottom, 0) + 12;
-  const scrollPadBottom = 44 + bottomGap + 24;
 
   const showOnlySpinner = loading && !error;
 
@@ -320,15 +316,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     <>
       <Pressable style={styles.backdrop} onPress={close} />
 
-      <View
-        style={[
-          styles.wrap,
-          {
-            paddingTop: Math.max(insets.top, 12),
-            paddingBottom: Math.max(insets.bottom, 12),
-          },
-        ]}
-      >
+      <View style={styles.wrap}>
         <View style={styles.glass} pointerEvents="none">
           <BlurView
             style={StyleSheet.absoluteFill}
@@ -343,28 +331,35 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
 
         <View style={styles.inner}>
           {showOnlySpinner ? (
-            <View style={[styles.spinnerBox, { paddingBottom: scrollPadBottom }]}>
+            <View style={styles.spinnerBox}>
               <CenteredSpinner size={42} />
             </View>
           ) : error ? (
             <ScrollView
+              style={styles.scroll}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
-              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+              contentContainerStyle={styles.scrollContent}
             >
               <View style={styles.stateBox}>
                 <Text style={styles.stateText}>{tr("plantDetailsModals.changeImage.error", "Something went wrong.")}</Text>
                 <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
               </View>
+
+              <View style={styles.bottomRow}>
+                <Pressable style={[styles.btn, styles.btnGhost]} onPress={close} disabled={loading}>
+                  <Text style={styles.btnText}>{tr("plantDetailsModals.common.close", "Close")}</Text>
+                </Pressable>
+              </View>
             </ScrollView>
           ) : (
             <ScrollView
+              style={styles.scroll}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
-              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+              contentContainerStyle={styles.scrollContent}
             >
               <View style={styles.headerRow}>
-                <MaterialCommunityIcons name="image-edit-outline" size={22} color="#FFFFFF" style={{ marginRight: 10 }} />
                 <Text style={styles.title} numberOfLines={2}>
                   {tr("plantDetailsModals.changeImage.title", "Change image")}
                 </Text>
@@ -429,20 +424,24 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
                   </Pressable>
                 )}
               </View>
+
+              <View style={styles.bottomRow}>
+                <Pressable style={[styles.btn, styles.btnGhost]} onPress={close} disabled={loading}>
+                  <Text style={styles.btnText}>{tr("plantDetailsModals.common.close", "Close")}</Text>
+                </Pressable>
+
+                <Pressable style={[styles.btn, styles.btnPrimary, !canSave && { opacity: 0.55 }]} onPress={applyChanges} disabled={!canSave}>
+                  <Text style={[styles.btnText, styles.btnPrimaryText]}>{tr("plantDetailsModals.common.save", "Save")}</Text>
+                </Pressable>
+              </View>
             </ScrollView>
           )}
 
-          <View style={[styles.bottomBar, { paddingBottom: bottomGap }]}>
-            <View style={styles.bottomRow}>
-              <Pressable style={[styles.btn, styles.btnGhost]} onPress={close} disabled={loading}>
-                <Text style={styles.btnText}>{tr("plantDetailsModals.common.close", "Close")}</Text>
-              </Pressable>
-
-              <Pressable style={[styles.btn, styles.btnPrimary, !canSave && { opacity: 0.55 }]} onPress={applyChanges} disabled={!canSave}>
-                <Text style={[styles.btnText, styles.btnPrimaryText]}>{tr("plantDetailsModals.common.save", "Save")}</Text>
-              </Pressable>
-            </View>
-          </View>
+          <ModalCloseButton
+            onPress={close}
+            accessibilityLabel={tr("plantDetailsModals.common.close", "Close")}
+            style={styles.closeButton}
+          />
 
           {/* In-app confirm sheet: Remove (NO dimming backdrop) */}
           {confirmRemoveVisible && (
@@ -530,18 +529,30 @@ const styles = StyleSheet.create({
     position: "relative",
     backgroundColor: "transparent",
     minHeight: 260,
-    maxHeight: "100%",
+    height: "86%",
+    maxHeight: "86%",
+  },
+
+  scroll: { flex: 1 },
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: "center",
+    paddingTop: 44,
+    paddingBottom: 120,
   },
 
   spinnerBox: {
+    flex: 1,
     minHeight: 260,
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 16,
+    paddingTop: 44,
     paddingVertical: 22,
   },
 
-  headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingTop: 16, marginBottom: 6 },
+  headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, marginBottom: 6 },
+  headerIcon: { marginRight: 10 },
   title: { color: "#FFFFFF", fontWeight: "800", fontSize: 18, flex: 1 },
 
   desc: {
@@ -609,17 +620,7 @@ const styles = StyleSheet.create({
   actionPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   actionText: { color: "#FFFFFF", fontWeight: "800" },
 
-  bottomBar: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    bottom: 0,
-    paddingHorizontal: 16,
-    zIndex: 999,
-    elevation: 999,
-    backgroundColor: "transparent",
-  },
-  bottomRow: { flexDirection: "row", gap: 10 },
+  bottomRow: { flexDirection: "row", gap: 10, paddingHorizontal: 16, paddingTop: 12 },
 
   btn: {
     flex: 1,
@@ -634,6 +635,10 @@ const styles = StyleSheet.create({
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   btnPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
   btnGhost: { backgroundColor: "rgba(255,255,255,0.12)" },
+  closeButton: {
+    top: 8,
+    right: 8,
+  },
 
   // custom confirm sheet (NO dimming backdrop)
   confirmOverlay: {
