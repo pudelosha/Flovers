@@ -85,6 +85,13 @@ function toSuggestion(item: ApiRecognitionResult): Suggestion {
   } as Suggestion;
 }
 
+function formatPlantDisplayName(value: string | undefined | null): string {
+  return String(value || "")
+    .replace(/_/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 const TranslatedText = ({
   text,
   style,
@@ -528,6 +535,7 @@ export default function PlantScannerModal({
                   onPress={handleRecognize}
                   style={[
                     wiz.actionFull,
+                    styles.recognizeButton,
                     {
                       marginTop: 12,
                       backgroundColor: "rgba(11,114,133,0.9)",
@@ -536,10 +544,11 @@ export default function PlantScannerModal({
                   ]}
                   android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                 >
-                  {isRecognizing ? (
-                    <ActivityIndicator />
-                  ) : (
-                    <>
+                  <View style={styles.recognizeButtonContent}>
+                    {isRecognizing ? (
+                      <ActivityIndicator size="small" color="#FFFFFF" />
+                    ) : (
+                      <>
                       <MaterialCommunityIcons
                         name="leaf"
                         size={18}
@@ -552,8 +561,9 @@ export default function PlantScannerModal({
                       >
                         {i18nText.recognize}
                       </Text>
-                    </>
-                  )}
+                      </>
+                    )}
+                  </View>
                 </Pressable>
 
                 {error && (
@@ -665,8 +675,12 @@ export default function PlantScannerModal({
                         </View>
 
                         <View style={styles.candidateContent}>
-                          <Text style={styles.candidateLatin} numberOfLines={1}>
-                            {item.latin || item.name}
+                          <Text
+                            style={styles.candidateLatin}
+                            numberOfLines={2}
+                            ellipsizeMode="tail"
+                          >
+                            {formatPlantDisplayName(item.latin || item.name)}
                           </Text>
 
                           <View style={styles.matchMetaRow}>
@@ -809,6 +823,17 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#FFFFFF",
   },
+  recognizeButton: {
+    height: 44,
+    paddingVertical: 0,
+  },
+  recognizeButtonContent: {
+    height: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+  },
 
   previewMiniWrap: {
     marginTop: 10,
@@ -863,7 +888,8 @@ const styles = StyleSheet.create({
 
   candidateCard: {
     flexDirection: "row",
-    alignItems: "stretch",
+    alignItems: "center",
+    height: 108,
     paddingVertical: 12,
     paddingHorizontal: 14,
     borderRadius: 18,
@@ -872,7 +898,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.14)",
     overflow: "hidden",
     gap: 14,
-    minHeight: 92,
   },
   candidateImageWrap: {
     width: 84,
@@ -895,8 +920,10 @@ const styles = StyleSheet.create({
   },
   candidateContent: {
     flex: 1,
+    height: 84,
     justifyContent: "center",
     minWidth: 0,
+    overflow: "hidden",
   },
   candidateName: {
     color: "#FFFFFF",
@@ -906,7 +933,9 @@ const styles = StyleSheet.create({
   candidateLatin: {
     color: "#FFFFFF",
     fontWeight: "800",
-    fontSize: 16,
+    fontSize: 15,
+    flexShrink: 1,
+    lineHeight: 18,
   },
   candidateRight: {
     flexDirection: "row",
@@ -915,8 +944,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   matchMetaRow: {
-    marginTop: 10,
-    marginBottom: 6,
+    marginTop: 4,
+    marginBottom: 4,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
@@ -924,11 +953,12 @@ const styles = StyleSheet.create({
   matchLabelText: {
     color: "rgba(255,255,255,0.82)",
     fontWeight: "700",
-    fontSize: 12,
+    fontSize: 11,
+    lineHeight: 13,
   },
   matchBarTrack: {
     width: "100%",
-    height: 20,
+    height: 18,
     borderRadius: 999,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.16)",
