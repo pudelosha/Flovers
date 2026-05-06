@@ -117,6 +117,10 @@ export default function PlantDetailsScreen() {
   const [refreshCounter, setRefreshCounter] = useState(0);
   const [dismissMenusTick, setDismissMenusTick] = useState(0);
 
+  const dismissMenus = useCallback(() => {
+    setDismissMenusTick((t) => t + 1);
+  }, []);
+
   const scrollRef = useRef<ScrollView | null>(null);
   const plantQrRef = useRef<any>(null);
 
@@ -778,6 +782,7 @@ export default function PlantDetailsScreen() {
                 <PlantInfoTile
                   plant={details.plant}
                   collapseMenusSignal={dismissMenusTick}
+                  onTileTouch={dismissMenus}
                   photoReloadSignal={photoReloadSignal}
                   onOpenDefinition={(plantDefinitionId) => {
                     setDismissMenusTick((t) => t + 1);
@@ -806,6 +811,7 @@ export default function PlantDetailsScreen() {
                 key={refreshCounter}
                 collapseMenusSignal={dismissMenusTick}
                 reminders={reminders}
+                onTileTouch={dismissMenus}
                 onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
                 onEditReminder={(reminderId) => {
                   nav.navigate("Reminders", { editReminderId: String(reminderId) });
@@ -820,7 +826,7 @@ export default function PlantDetailsScreen() {
               <PlantLatestReadingsTile
                 latestReadings={latestReadSafe}
                 sensors={details.sensors}
-                onTilePress={() => goHistory()}
+                onTileTouch={dismissMenus}
                 onMetricPress={(metric) => goHistory(metric)}
                 pumpIncluded={Boolean(details.readingDevice?.pumpIncluded)}
                 lastPumpLaunchDate={details.readingDevice?.lastPumpRunAt ?? null}
@@ -839,6 +845,7 @@ export default function PlantDetailsScreen() {
                   onQrRef={(ref) => {
                     plantQrRef.current = ref;
                   }}
+                  onTileTouch={dismissMenus}
                   onPressSave={async () => {
                     try {
                       await onSaveQr(plantQrRef.current);

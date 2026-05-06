@@ -89,6 +89,7 @@ type Props = {
   onEditReminder: (reminderId: string) => void;
   onShowHistory: () => void;
   collapseMenusSignal?: number;
+  onTileTouch?: () => void;
 };
 
 // Same green tones as AuthCard / PlantTile
@@ -101,6 +102,7 @@ export default function PlantRemindersTile({
   onEditReminder,
   onShowHistory,
   collapseMenusSignal,
+  onTileTouch,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -121,6 +123,10 @@ export default function PlantRemindersTile({
   const toggleMenu = (id: string) => {
     setMenuOpenId((curr) => (curr === id ? null : id));
   };
+  const handleTileTouch = useCallback(() => {
+    setMenuOpenId(null);
+    onTileTouch?.();
+  }, [onTileTouch]);
 
   useEffect(() => {
     setMenuOpenId(null);
@@ -164,7 +170,9 @@ export default function PlantRemindersTile({
       </View>
 
       <View style={styles.inner}>
-        <Text style={styles.title}>{tr("plantDetails.reminders.title", "Reminders")}</Text>
+        <Pressable onPressIn={handleTileTouch} accessible={false}>
+          <Text style={styles.title}>{tr("plantDetails.reminders.title", "Reminders")}</Text>
+        </Pressable>
 
         {reminders.map((r) => {
           const displayType = toDisplayType(r.type);
@@ -195,7 +203,11 @@ export default function PlantRemindersTile({
 
           return (
             <View key={r.id} style={[styles.row, isOpen && styles.rowRaised]}>
-              <View style={styles.left}>
+              <Pressable
+                style={styles.left}
+                onPressIn={handleTileTouch}
+                accessible={false}
+              >
                 <View style={[styles.iconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
                   <MaterialCommunityIcons name={icon} size={20} color={accent} />
                 </View>
@@ -208,7 +220,7 @@ export default function PlantRemindersTile({
                     {dateSuffix}
                   </Text>
                 </View>
-              </View>
+              </Pressable>
 
               <View style={styles.right}>
                 <Pressable
@@ -256,7 +268,7 @@ const styles = StyleSheet.create({
 
     marginBottom: 14,
   },
-  cardWrapRaised: { zIndex: 40, elevation: 40 },
+  cardWrapRaised: { zIndex: 40, elevation: 0, shadowOpacity: 0 },
   inner: { padding: 16 },
   title: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 8 },
   row: {
@@ -268,7 +280,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: "rgba(255,255,255,0.15)",
   },
-  rowRaised: { zIndex: 30, elevation: 30 },
+  rowRaised: { zIndex: 30, elevation: 0, shadowOpacity: 0 },
   left: { flexDirection: "row", alignItems: "center", flex: 1, columnGap: 10 },
   right: { justifyContent: "center", alignItems: "flex-end" },
   iconBubble: { width: 32, height: 32, borderRadius: 16, alignItems: "center", justifyContent: "center" },

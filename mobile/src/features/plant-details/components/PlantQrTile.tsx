@@ -10,6 +10,7 @@ type Props = {
   onPressSave: () => void;
   onPressEmail: () => void;
   onQrRef?: (ref: any | null) => void;
+  onTileTouch?: () => void;
 };
 
 export default function PlantQrTile({
@@ -17,6 +18,7 @@ export default function PlantQrTile({
   onPressSave,
   onPressEmail,
   onQrRef,
+  onTileTouch,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -43,7 +45,7 @@ export default function PlantQrTile({
   if (!qrCodeValue) return null;
 
   return (
-    <View style={styles.wrap}>
+    <View style={styles.wrap} onTouchStart={onTileTouch}>
       <Text style={styles.title}>{tr("plantDetails.qr.title", "QR Code")}</Text>
 
       <Text style={styles.desc}>

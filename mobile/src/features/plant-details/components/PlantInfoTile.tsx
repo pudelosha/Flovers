@@ -17,6 +17,7 @@ import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
   collapseMenusSignal?: number;
+  onTileTouch?: () => void;
 
   onOpenDefinition?: (plantDefinitionId: number) => void;
   onOpenEditPlant?: (plantId: string) => void;
@@ -111,6 +112,7 @@ function normalizeLightLevelKey(v: any):
 export default function PlantInfoTile({
   plant,
   collapseMenusSignal,
+  onTileTouch,
   onOpenDefinition,
   onOpenEditPlant,
   onOpenChangeImage,
@@ -141,6 +143,10 @@ export default function PlantInfoTile({
 
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
+  const handleTileTouch = useCallback(() => {
+    setMenuOpen(false);
+    onTileTouch?.();
+  }, [onTileTouch]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -170,6 +176,15 @@ export default function PlantInfoTile({
     };
   }, [plant?.id, photoReloadSignal]);
 
+  // prefer local user photo; fallback to plant definition images
+  const imageUrl = useMemo(() => {
+    if (!plant) return null;
+    if (localPlantPhotoUri) return localPlantPhotoUri;
+
+    const pd: any = plant.plant_definition;
+    return pd?.image || pd?.image_thumb || null;
+  }, [localPlantPhotoUri, plant]);
+
   if (!plant) {
     return (
       <View>
@@ -185,14 +200,6 @@ export default function PlantInfoTile({
 
   const latin = plant.plant_definition?.latin || "";
   const locationName = plant.location?.name || "";
-
-  // prefer local user photo; fallback to plant definition images
-  const imageUrl = useMemo(() => {
-    if (localPlantPhotoUri) return localPlantPhotoUri;
-
-    const pd: any = plant.plant_definition;
-    return pd?.image || pd?.image_thumb || null;
-  }, [localPlantPhotoUri, plant.plant_definition]);
 
   const lightKey = normalizeLightLevelKey(plant.light_level);
   const lightValue = lightKey
@@ -239,69 +246,71 @@ export default function PlantInfoTile({
   return (
     <View style={[styles.root, menuOpen && styles.rootRaised]}>
       <View style={styles.heroOuter}>
-        <View style={styles.heroClip}>
-          {imageUrl ? (
-            <View style={styles.heroImage}>
-              <MaskedView
-                style={StyleSheet.absoluteFill}
-                maskElement={
-                  <LinearGradient
-                    colors={[
-                      "rgba(0,0,0,1.00)",
-                      "rgba(0,0,0,0.92)",
-                      "rgba(0,0,0,0.75)",
-                      "rgba(0,0,0,0.50)",
-                      "rgba(0,0,0,0.22)",
-                      "rgba(0,0,0,0.00)",
-                    ]}
-                    locations={[0, 0.1, 0.45, 0.68, 0.88, 1]}
-                    style={StyleSheet.absoluteFill}
-                  />
-                }
-              >
-                <ImageMasked uri={imageUrl} />
-              </MaskedView>
-
-              <LinearGradient
-                pointerEvents="none"
-                colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0.00)"]}
-                locations={[0, 1]}
-                style={styles.heroTopScrim}
-              />
-
-              <View style={styles.heroText}>
-                <Text style={styles.h1} numberOfLines={1}>
-                  {title}
-                </Text>
-
-                {!!latin && (
-                  <Text style={styles.latin} numberOfLines={1}>
-                    {latin}
-                  </Text>
-                )}
-
-                {!!locationName && (
-                  <View style={styles.locRow}>
-                    <MaterialCommunityIcons
-                      name="map-marker-outline"
-                      size={16}
-                      color="#FFFFFF"
-                      style={{ marginRight: 8, opacity: 0.95 }}
+        <Pressable onPressIn={handleTileTouch} accessible={false}>
+          <View style={styles.heroClip}>
+            {imageUrl ? (
+              <View style={styles.heroImage}>
+                <MaskedView
+                  style={StyleSheet.absoluteFill}
+                  maskElement={
+                    <LinearGradient
+                      colors={[
+                        "rgba(0,0,0,1.00)",
+                        "rgba(0,0,0,0.92)",
+                        "rgba(0,0,0,0.75)",
+                        "rgba(0,0,0,0.50)",
+                        "rgba(0,0,0,0.22)",
+                        "rgba(0,0,0,0.00)",
+                      ]}
+                      locations={[0, 0.1, 0.45, 0.68, 0.88, 1]}
+                      style={StyleSheet.absoluteFill}
                     />
-                    <Text style={styles.sub} numberOfLines={1}>
-                      {locationName}
+                  }
+                >
+                  <ImageMasked uri={imageUrl} />
+                </MaskedView>
+
+                <LinearGradient
+                  pointerEvents="none"
+                  colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0.00)"]}
+                  locations={[0, 1]}
+                  style={styles.heroTopScrim}
+                />
+
+                <View style={styles.heroText}>
+                  <Text style={styles.h1} numberOfLines={1}>
+                    {title}
+                  </Text>
+
+                  {!!latin && (
+                    <Text style={styles.latin} numberOfLines={1}>
+                      {latin}
                     </Text>
-                  </View>
-                )}
+                  )}
+
+                  {!!locationName && (
+                    <View style={styles.locRow}>
+                      <MaterialCommunityIcons
+                        name="map-marker-outline"
+                        size={16}
+                        color="#FFFFFF"
+                        style={{ marginRight: 8, opacity: 0.95 }}
+                      />
+                      <Text style={styles.sub} numberOfLines={1}>
+                        {locationName}
+                      </Text>
+                    </View>
+                  )}
+                </View>
               </View>
-            </View>
-          ) : (
-            <View style={[styles.heroImage, styles.heroPlaceholder]}>
-              <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
-              <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
-            </View>
-          )}
-        </View>
+            ) : (
+              <View style={[styles.heroImage, styles.heroPlaceholder]}>
+                <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
+                <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
+              </View>
+            )}
+          </View>
+        </Pressable>
 
         {menuOpen && (
           <View style={styles.menuOverlay} pointerEvents="box-none">
@@ -353,7 +362,7 @@ export default function PlantInfoTile({
         )}
       </View>
 
-      <View style={{ marginTop: 10 }}>
+      <Pressable style={styles.infoBody} onPressIn={handleTileTouch} accessible={false}>
         <View style={styles.infoGrid}>
           {[
             { icon: "calendar", label: tr("plantDetails.info.purchased", "Purchased"), value: purchaseValue },
@@ -373,7 +382,7 @@ export default function PlantInfoTile({
             </View>
           ))}
         </View>
-      </View>
+      </Pressable>
 
       {/* In-app prompt: No plant definition (NO dimming backdrop, full black card) */}
       {noDefinitionPromptVisible && (
@@ -461,6 +470,7 @@ const styles = StyleSheet.create({
     elevation: 210,
   },
 
+  infoBody: { marginTop: 10 },
   h1: { color: "#FFFFFF", fontWeight: "800", fontSize: 22, marginBottom: 6 },
   latin: {
     color: "rgba(255,255,255,0.92)",

@@ -22,7 +22,7 @@ import {
 type Props = {
   latestReadings: LatestReadings;
   sensors?: PlantSensorsConfig;
-  onTilePress: () => void;
+  onTileTouch?: () => void;
   onMetricPress: (metric: PlantMetricKey) => void;
 
   /**
@@ -148,7 +148,7 @@ function MetricColPressable({
 export default function PlantLatestReadingsTile({
   latestReadings,
   sensors,
-  onTilePress,
+  onTileTouch,
   onMetricPress,
   pumpIncluded = false,
   lastPumpLaunchDate = null,
@@ -216,7 +216,7 @@ export default function PlantLatestReadingsTile({
   }, [lastPumpLaunchDate, settings, tr]);
 
   return (
-    <View style={styles.cardWrap}>
+    <View style={styles.cardWrap} onTouchStart={onTileTouch}>
       <View style={s.cardGlass}>
         <LinearGradient
           pointerEvents="none"
@@ -244,11 +244,7 @@ export default function PlantLatestReadingsTile({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <Pressable
-        style={styles.bodyPressable}
-        onPress={onTilePress}
-        android_ripple={{ color: "rgba(255,255,255,0.08)" }}
-      >
+      <View style={styles.body}>
         <View style={styles.topRow}>
           <Text style={styles.title}>
             {tr("plantDetails.latestReadings.title", "Latest readings")}
@@ -308,7 +304,7 @@ export default function PlantLatestReadingsTile({
           />
           <Text style={styles.lastText}>{lastText}</Text>
         </View>
-      </Pressable>
+      </View>
 
       {pumpIncluded && (
         <>
@@ -362,7 +358,7 @@ const styles = StyleSheet.create({
     marginBottom: 14,
   },
 
-  bodyPressable: {
+  body: {
     paddingTop: 16,
   },
 
