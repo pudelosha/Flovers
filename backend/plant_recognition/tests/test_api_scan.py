@@ -102,6 +102,45 @@ def test_scan_returns_sorted_predictions_with_matching_definition_thumb(mock_pre
 
 
 @pytest.mark.django_db
+@override_settings(SITE_URL="https://api.example.com", MEDIA_URL="/media/")
+@patch("plant_recognition.views.predict_topk")
+def test_scan_matches_legacy_punctuated_external_id_by_canonical_latin(mock_predict):
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    PlantDefinition.objects.create(
+        external_id="echeveria_'black_prince'",
+        name="Echeveria Black Prince",
+        latin="Echeveria 'Black Prince'",
+        sun="high",
+        water="low",
+        difficulty="easy",
+        image_thumb="plants/thumb/echeveria_black_prince.jpg",
+    )
+    mock_predict.return_value = [
+        {
+            "name": "Echeveria Black Prince",
+            "latin": "Echeveria 'Black Prince'",
+            "score": 0.87,
+            "rank": 1,
+        },
+    ]
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(
+        reverse("plant-recognition-scan"),
+        data={"image": _image_file(), "topk": "1"},
+        format="multipart",
+    )
+
+    data = response.json()
+    assert response.status_code == 200
+    assert data["results"][0]["external_id"] == "echeveria_black_prince"
+    assert data["results"][0]["image_thumb"] == (
+        "https://api.example.com/media/plants/thumb/echeveria_black_prince.jpg"
+    )
+
+
+@pytest.mark.django_db
 @patch("plant_recognition.views.predict_topk")
 def test_scan_clamps_invalid_topk_to_default(mock_predict):
     user = User.objects.create_user(email="test@example.com", password="strong-password-123")

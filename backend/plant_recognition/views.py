@@ -10,10 +10,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from .utils import normalize_plant_key
+from plant_definitions.utils import map_plant_definitions_by_keys
 
 from .inference import predict_topk
 from .serializers import PlantRecognitionResultSerializer
-from plant_definitions.models import PlantDefinition
 
 logger = logging.getLogger(__name__)
 
@@ -129,15 +129,9 @@ class PlantRecognitionView(APIView):
             reverse=True,
         )[:topk]
 
-        external_ids = [normalize_plant_key(p["latin"]) for p in predictions]
-
-        plant_definitions = PlantDefinition.objects.filter(
-            external_id__in=external_ids
-        ).only("external_id", "image_thumb")
-
-        plant_definitions_map = {
-            plant.external_id: plant for plant in plant_definitions
-        }
+        plant_definitions_map = map_plant_definitions_by_keys(
+            p.get("latin", "") for p in predictions
+        )
 
         # score is treated as probability (0..1)
         raw_results = []

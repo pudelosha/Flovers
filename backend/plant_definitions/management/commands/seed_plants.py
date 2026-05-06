@@ -9,6 +9,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from plant_definitions.models import PlantDefinition, PlantDefinitionTranslation
+from plant_definitions.utils import normalize_plant_key
 
 LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
 MAX_TRAIT_TEXT_LEN = 40
@@ -151,7 +152,7 @@ class Command(BaseCommand):
                 validate_plant_payload(payload)
 
                 latin = payload["latin"].strip()
-                desired_external_id = (payload.get("external_id") or "").strip()
+                desired_external_id = normalize_plant_key(payload.get("external_id") or latin)
 
                 # Idempotent write: DB uniqueness is on latin, so upsert by latin
                 with transaction.atomic():

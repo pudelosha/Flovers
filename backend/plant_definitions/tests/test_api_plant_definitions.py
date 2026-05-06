@@ -120,3 +120,26 @@ def test_profile_by_external_id_returns_profile():
     assert response.status_code == 200
     assert data["id"] == plant.id
     assert data["external_id"] == "monstera_deliciosa"
+
+
+@pytest.mark.django_db
+def test_profile_by_key_resolves_canonical_key_against_legacy_punctuated_external_id():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    plant = _plant(
+        external_id="echeveria_'black_prince'",
+        name="Echeveria Black Prince",
+        latin="Echeveria 'Black Prince'",
+        sun="high",
+        water="low",
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.get(
+        reverse("plant-definitions-profile-by-key", args=["echeveria_black_prince"])
+    )
+
+    data = response.json()
+    assert response.status_code == 200
+    assert data["id"] == plant.id
+    assert data["external_id"] == "echeveria_'black_prince'"

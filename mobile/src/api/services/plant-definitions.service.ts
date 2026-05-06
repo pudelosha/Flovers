@@ -3,7 +3,6 @@ import type { PlantDefinition } from "../../features/create-plant/types/create-p
 import {
   serializePlantDefinition,
   serializePlantSuggestion,
-  serializePlantProfile,
   type ApiPlantDefinition,
   type ApiPlantSuggestion,
   type ApiPlantProfile,
@@ -17,7 +16,7 @@ const ENDPOINTS = {
   profile: (idOrKey: string | number) =>
     typeof idOrKey === "number"
       ? `/api/plant-definitions/${idOrKey}/profile/`
-      : `/api/plant-definitions/by-key/${idOrKey}/profile/`,
+      : `/api/plant-definitions/by-key/${encodeURIComponent(idOrKey)}/profile/`,
 };
 
 function withLang(url: string, lang?: string) {

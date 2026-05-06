@@ -9,6 +9,7 @@ from .serializers import (
     PlantDefinitionSuggestionSerializer,
     PlantDefinitionProfileSerializer,
 )
+from .utils import resolve_plant_definition_by_key
 
 def _pick_language(request) -> str:
     """
@@ -107,7 +108,9 @@ class PlantDefinitionProfileByKeyView(RetrieveAPIView):
         try:
             plant_key = kwargs.get("external_id")
             print(f"Fetching plant profile for external_id: {plant_key}")  # Log the external_id
-            plant = self.get_object()
+            plant = resolve_plant_definition_by_key(plant_key)
+            if plant is None:
+                return Response({"error": "Plant not found"}, status=404)
             serializer = self.get_serializer(plant)
             return Response(serializer.data)
         except PlantDefinition.DoesNotExist:
