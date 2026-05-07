@@ -645,7 +645,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     zIndex: 1200,
     elevation: 1200,
-    justifyContent: "flex-end",
+    justifyContent: "center",
   },
   confirmCard: {
     margin: 12,
