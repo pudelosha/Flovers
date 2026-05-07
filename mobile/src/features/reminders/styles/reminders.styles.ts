@@ -50,32 +50,82 @@ export const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 14,
+    paddingRight: 18,
   },
   cardBodyPressable: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "stretch",
+    justifyContent: "space-between",
   },
 
   // Left column
-  leftCol: { width: 75, alignItems: "center", justifyContent: "center" },
+  leftCol: { width: 56, alignItems: "center", justifyContent: "center" },
   leftIconBubble: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 6,
   },
   leftCaption: { fontSize: 9, letterSpacing: 0.7, fontWeight: "800" },
 
   // Center
-  centerCol: { flex: 1, paddingHorizontal: 6 },
-  plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
+  centerCol: { flex: 1, paddingHorizontal: 6, justifyContent: "center" },
+  taskTypeLabel: {
+    color: "#FFFFFF",
+    fontSize: 10,
+    fontWeight: "800",
+    letterSpacing: 0.7,
+    textTransform: "uppercase",
+    marginBottom: 4,
+  },
+  plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginTop: 2 },
+  metaCompact: {
+    fontSize: 11,
+    lineHeight: 14,
+    opacity: 0.9,
+    color: "rgba(255,255,255,0.85)",
+    marginTop: 2,
+  },
 
-  // Right column (menu)
-  rightCol: { width: 56, alignItems: "flex-end", justifyContent: "center" },
+  separator: {
+    width: 1,
+    height: 56,
+    marginHorizontal: 12,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderRadius: 1,
+  },
+
+  // Right column
+  rightCol: { width: 96, alignItems: "flex-end", justifyContent: "center" },
+  recurrenceText: {
+    width: "100%",
+    color: "rgba(255,255,255,0.85)",
+    fontWeight: "700",
+    fontSize: 11,
+    lineHeight: 12,
+    marginBottom: 6,
+    textAlign: "right",
+  },
+  dueWhen: {
+    width: "100%",
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 11,
+    lineHeight: 12,
+    textAlign: "right",
+  },
+  dueDateText: {
+    width: "100%",
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "700",
+    fontSize: 11,
+    lineHeight: 12,
+    marginTop: 1,
+    textAlign: "right",
+  },
   menuBtn: {
     width: 36,
     height: 36,
@@ -482,5 +532,6 @@ export const s = StyleSheet.create({
     color: "#FFFFFF", // White text color for location
     fontSize: 12,
     fontWeight: "600",
+    flex: 1,
   },
 });

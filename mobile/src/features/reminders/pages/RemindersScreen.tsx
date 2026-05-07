@@ -200,6 +200,10 @@ export default function RemindersScreen() {
     setFabCloseSignal((value) => value + 1);
   }, []);
 
+  const closeFabMenu = useCallback(() => {
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
   const onToggleMenu = useCallback((id: string) => {
     setFabCloseSignal((value) => value + 1);
     setMenuOpenId((curr) => (curr === id || id === "" ? null : id));
@@ -773,7 +777,7 @@ export default function RemindersScreen() {
                   reminder={item}
                   isMenuOpen={isOpen}
                   onToggleMenu={() => onToggleMenu(item.id)}
-                  onPressBody={closeFloatingMenus}
+                  onPressBody={closeFabMenu}
                   onEdit={() => openEditModal(item)}
                   onDelete={() => askDelete(item)}
                 />
@@ -883,6 +887,7 @@ export default function RemindersScreen() {
             actions={fabActions}
             closeSignal={fabCloseSignal}
             position={settings.fabPosition}
+            onInteraction={() => setMenuOpenId(null)}
           />
         </View>
       )}

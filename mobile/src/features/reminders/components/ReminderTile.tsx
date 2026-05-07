@@ -136,24 +136,21 @@ export default function ReminderTile({
     });
   }, [reminder.intervalValue, reminder.intervalUnit, tr, unitLabel]);
 
-  const dueLine = useMemo(() => {
+  const dueDateText = useMemo(
+    () => (reminder.dueDate ? formatDate(reminder.dueDate, settings) : ""),
+    [reminder.dueDate, settings]
+  );
+
+  const dueText = useMemo(() => {
     const dueDays = daysUntil(reminder.dueDate);
-    const dateStr = reminder.dueDate ? formatDate(reminder.dueDate, settings) : "";
-    if (dueDays === null || !dateStr) return "";
+    if (dueDays === null || !dueDateText) return "";
 
-    let prefix = "";
-    if (dueDays === 0) prefix = tr("reminders.tile.dueToday", "Due today");
-    else if (dueDays === 1) prefix = tr("reminders.tile.dueInOneDay", "Due in 1 day");
-    else
-      prefix = tr("reminders.tile.dueInDays", "Due in {{count}} days", {
-        count: dueDays,
-      });
-
-    return tr("reminders.tile.dueLine", "{{prefix}} on {{date}}", {
-      prefix,
-      date: dateStr,
+    if (dueDays === 0) return tr("reminders.tile.dueToday", "Due today");
+    if (dueDays === 1) return tr("reminders.tile.dueInOneDay", "Due in 1 day");
+    return tr("reminders.tile.dueInDays", "Due in {{count}} days", {
+      count: dueDays,
     });
-  }, [reminder.dueDate, tr, settings]);
+  }, [reminder.dueDate, dueDateText, tr]);
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
@@ -203,20 +200,25 @@ export default function ReminderTile({
         <View pointerEvents="none" style={s.cardBorder} />
 
         {/* Content */}
-        <View style={[s.cardRow, { paddingVertical: 4 }]}>
+        <View style={s.cardRow}>
           <Pressable
             accessible={false}
             style={s.cardBodyPressable}
-            onPress={onPressBody}
+            onPress={() => {
+              onPressBody();
+              onToggleMenu();
+            }}
           >
             <View style={s.leftCol}>
               <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
-                <MaterialCommunityIcons name={icon} size={20} color={accent} />
+                <MaterialCommunityIcons name={icon} size={24} color={accent} />
               </View>
-              <Text style={[s.leftCaption, { color: accent }]}>{typeLabel.toUpperCase()}</Text>
             </View>
 
             <View style={s.centerCol}>
+              <Text style={[s.taskTypeLabel, { color: accent }]} numberOfLines={1}>
+                {typeLabel}
+              </Text>
               <Text style={s.plantName} numberOfLines={1}>
                 {reminder.plant}
               </Text>
@@ -227,7 +229,7 @@ export default function ReminderTile({
                   <MaterialCommunityIcons
                     name="map-marker"
                     size={12}
-                    color="#FFFFFF" // White icon color
+                    color="#FFFFFF"
                     style={s.locationIcon}
                   />
                   <Text style={s.location} numberOfLines={1}>
@@ -236,29 +238,28 @@ export default function ReminderTile({
                 </View>
               )}
 
+            </View>
+
+            <View style={s.separator} />
+
+            <View style={s.rightCol}>
               {!!everyStr && (
-                <Text style={local.metaCompact} numberOfLines={1}>
+                <Text style={s.recurrenceText} numberOfLines={2}>
                   {everyStr}
                 </Text>
               )}
-              {!!dueLine && (
-                <Text style={local.metaCompact} numberOfLines={1}>
-                  {dueLine}
+              {!!dueText && (
+                <Text style={s.dueWhen} numberOfLines={2}>
+                  {dueText}
+                </Text>
+              )}
+              {!!dueDateText && (
+                <Text style={s.dueDateText} numberOfLines={1}>
+                  {dueDateText}
                 </Text>
               )}
             </View>
           </Pressable>
-
-          <View style={s.rightCol}>
-            <Pressable
-              onPress={onToggleMenu}
-              style={s.menuBtn}
-              android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
-              hitSlop={8}
-            >
-              <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
-            </Pressable>
-          </View>
         </View>
       </View>
 
@@ -268,12 +269,3 @@ export default function ReminderTile({
   );
 }
 
-const local = StyleSheet.create({
-  metaCompact: {
-    fontSize: 11,
-    lineHeight: 14,
-    opacity: 0.9,
-    color: "rgba(255,255,255,0.85)",
-    marginTop: 2,
-  },
-});
