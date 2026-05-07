@@ -865,6 +865,7 @@ export default function RemindersScreen() {
         <RemindersCalendar
           reminders={derivedReminders}
           selectedDate={selectedDate}
+          openMenuId={menuOpenId}
           onSelectDate={(iso) => {
             closeFloatingMenus();
             setSelectedDate(iso);

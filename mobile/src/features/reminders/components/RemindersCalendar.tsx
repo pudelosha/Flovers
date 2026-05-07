@@ -17,6 +17,7 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 type Props = {
   reminders: UIReminder[];
   selectedDate: string;
+  openMenuId: string | null;
   onSelectDate: (isoDate: string) => void;
   onToggleMenu: (id: string) => void;
   onEdit: (r: UIReminder) => void;
@@ -77,6 +78,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function RemindersCalendar({
   reminders,
   selectedDate,
+  openMenuId,
   onSelectDate,
   onToggleMenu,
   onEdit,
@@ -307,15 +309,24 @@ export default function RemindersCalendar({
           </Text>
         ) : (
           <View style={s.calendarListBox}>
-            {remindersForSelected.map((item) => (
-              <View key={item.id} style={{ marginBottom: 8 }}>
-                <ReminderMiniTile
-                  reminder={item}
-                  onEdit={() => onEdit(item)}
-                  onDelete={() => onDelete(item)}
-                />
-              </View>
-            ))}
+            {remindersForSelected.map((item) => {
+              const isMenuOpen = openMenuId === item.id;
+
+              return (
+                <View
+                  key={item.id}
+                  style={[styles.miniTileSlot, isMenuOpen && styles.miniTileSlotRaised]}
+                >
+                  <ReminderMiniTile
+                    reminder={item}
+                    isMenuOpen={isMenuOpen}
+                    onToggleMenu={() => onToggleMenu(item.id)}
+                    onEdit={() => onEdit(item)}
+                    onDelete={() => onDelete(item)}
+                  />
+                </View>
+              );
+            })}
           </View>
         )}
       </View>
@@ -324,3 +335,14 @@ export default function RemindersCalendar({
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  miniTileSlot: {
+    marginBottom: 8,
+    zIndex: 1,
+  },
+  miniTileSlotRaised: {
+    zIndex: 50,
+    elevation: 50,
+  },
+});

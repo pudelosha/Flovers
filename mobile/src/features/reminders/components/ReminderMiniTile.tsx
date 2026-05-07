@@ -4,14 +4,15 @@ import { s } from "../styles/reminders.styles";
 import type { Reminder as UIReminder } from "../types/reminders.types";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
+import ReminderMiniTileMenu from "./ReminderMiniTileMenu";
 
 type Props = {
   reminder: UIReminder;
-  onPress?: () => void;
+  isMenuOpen: boolean;
+  onToggleMenu: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
 };
@@ -48,13 +49,10 @@ function formatISOForLabel(iso: string, settings?: any) {
   return `${dd}.${mm}.${yyyy}`;
 }
 
-// Same green tones as PlantTile / AuthCard
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
-
 export default function ReminderMiniTile({
   reminder,
-  onPress,
+  isMenuOpen,
+  onToggleMenu,
   onEdit,
   onDelete,
 }: Props) {
@@ -74,13 +72,12 @@ export default function ReminderMiniTile({
 
   const typeKey = toTypeKey(reminder.type);
   const color = ACCENT_BY_TYPE[typeKey as any];
-  const typeLabel =
-    tr(
-      `reminders.types.${typeKey}`,
-      typeKey === "fertilising"
-        ? "Fertilising"
-        : typeKey.charAt(0).toUpperCase() + typeKey.slice(1)
-    );
+  const typeLabel = tr(
+    `reminders.types.${typeKey}`,
+    typeKey === "fertilising"
+      ? "Fertilising"
+      : typeKey.charAt(0).toUpperCase() + typeKey.slice(1)
+  );
 
   const unitKey = reminder.intervalUnit === "months" ? "months" : "days";
   const unitLabel = tr(`reminders.units.${unitKey}`, unitKey);
@@ -102,92 +99,84 @@ export default function ReminderMiniTile({
   })();
 
   return (
-    <Pressable onPress={onPress} style={styles.wrap}>
-      {/* Base green gradient */}
-      <LinearGradient
-        pointerEvents="none"
-        start={{ x: 0, y: 0.5 }}
-        end={{ x: 1, y: 0.5 }}
-        colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
-        locations={[0, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
-      {/* Fog highlight */}
-      <LinearGradient
-        pointerEvents="none"
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        colors={[
-          "rgba(255, 255, 255, 0.06)",
-          "rgba(255, 255, 255, 0.02)",
-          "rgba(255, 255, 255, 0.08)",
-        ]}
-        locations={[0, 0.5, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
-      <View pointerEvents="none" style={styles.tint} />
-
-      <View
-        style={[
-          s.miniIconBubble,
-          { backgroundColor: color + "22", borderColor: color + "66" },
-        ]}
+    <View style={[styles.root, isMenuOpen && styles.rootRaised]}>
+      <Pressable
+        onPress={onToggleMenu}
+        style={styles.wrap}
+        android_ripple={{ color: "rgba(255,255,255,0.08)" }}
       >
-        <Icon name={ICON_BY_TYPE[typeKey as any]} size={16} color={color} />
-      </View>
+        <View
+          style={[
+            s.miniIconBubble,
+            styles.iconBubble,
+            { backgroundColor: color + "22", borderColor: color + "66" },
+          ]}
+        >
+          <Icon name={ICON_BY_TYPE[typeKey as any]} size={20} color={color} />
+        </View>
 
-      <View style={s.miniContent}>
-        <Text style={s.miniTitle} numberOfLines={1}>
-          {reminder.plant}
-        </Text>
-
-        {!!reminder.location && (
-          <Text style={s.miniSub} numberOfLines={1}>
-            {reminder.location}
+        <View style={s.miniContent}>
+          <Text style={s.miniTitle} numberOfLines={1}>
+            {reminder.plant}
           </Text>
-        )}
 
-        <Text style={s.miniTag} numberOfLines={1}>
-          {typeLabel.toUpperCase()}
-          {intervalPart ? ` • ${intervalPart}` : ""}
-          {iso ? ` • ${formatISOForLabel(iso, settings)}` : ""}
-        </Text>
-      </View>
+          {!!reminder.location && (
+            <View style={styles.locationRow}>
+              <Icon
+                name="map-marker"
+                size={12}
+                color="#FFFFFF"
+                style={styles.locationIcon}
+              />
+              <Text style={s.miniSub} numberOfLines={1}>
+                {reminder.location}
+              </Text>
+            </View>
+          )}
 
-      <View style={s.miniActions}>
-        {onEdit ? (
-          <Pressable onPress={onEdit} hitSlop={8} style={s.miniActionBtn}>
-            <Icon name="pencil" size={16} color="#FFFFFF" />
-          </Pressable>
-        ) : null}
-        {onDelete ? (
-          <Pressable
-            onPress={onDelete}
-            hitSlop={8}
-            style={[s.miniActionBtn, { marginLeft: 6 }]}
-          >
-            <Icon name="trash-can-outline" size={16} color="#FFFFFF" />
-          </Pressable>
-        ) : null}
-      </View>
-    </Pressable>
+          <Text style={s.miniTag} numberOfLines={1}>
+            {typeLabel.toUpperCase()}
+            {intervalPart ? ` • ${intervalPart}` : ""}
+            {iso ? ` • ${formatISOForLabel(iso, settings)}` : ""}
+          </Text>
+        </View>
+      </Pressable>
+
+      {isMenuOpen && <ReminderMiniTileMenu onEdit={onEdit} onDelete={onDelete} />}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  root: {
+    position: "relative",
+    overflow: "visible",
+  },
+  rootRaised: {
+    zIndex: 50,
+    elevation: 50,
+  },
   wrap: {
     position: "relative",
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
     paddingVertical: 10,
-    borderRadius: 18,
+    borderRadius: 14,
     overflow: "hidden",
+    backgroundColor: "rgba(255,255,255,0.08)",
   },
-  tint: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.14)",
+  iconBubble: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+  },
+  locationRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 2,
+  },
+  locationIcon: {
+    marginRight: 6,
   },
 });

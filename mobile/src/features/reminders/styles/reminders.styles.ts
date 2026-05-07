@@ -245,7 +245,7 @@ export const s = StyleSheet.create({
   calendarListBox: {
     marginTop: 8,
     borderRadius: 12,
-    overflow: "hidden",
+    overflow: "visible",
     maxHeight: 460,
     paddingHorizontal: 0,
     paddingVertical: 0,
