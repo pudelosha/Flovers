@@ -180,6 +180,10 @@ export default function PlantsScreen() {
     setFabCloseSignal((value) => value + 1);
   }, []);
 
+  const closeFabMenu = useCallback(() => {
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
   const onToggleMenu = useCallback((id: string) => {
     setFabCloseSignal((value) => value + 1);
     setMenuOpenId((curr) => (curr === id ? null : id));
@@ -693,11 +697,12 @@ export default function PlantsScreen() {
               <PlantTile
                 plant={item}
                 isMenuOpen={isOpen}
-                onPressBody={() => {
+                onPressBody={closeFabMenu}
+                onPressMenu={() => onToggleMenu(item.id)}
+                onDetails={() => {
                   closeFloatingMenus();
                   nav.navigate("PlantDetails", { id: item.id });
                 }}
-                onPressMenu={() => onToggleMenu(item.id)}
                 onEdit={() => openEditModal(item)}
                 onReminders={() => {
                   closeFloatingMenus();
@@ -798,6 +803,7 @@ export default function PlantsScreen() {
             bottomOffset={92}
             closeSignal={fabCloseSignal}
             position={settings.fabPosition}
+            onInteraction={() => setMenuOpenId(null)}
             actions={[
               {
                 key: "create",

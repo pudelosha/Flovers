@@ -95,8 +95,41 @@ export const s = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 18,
-    gap: 8,
+    paddingRight: 20,
+    zIndex: 3,
+  },
+  cardBodyPressable: {
+    flex: 1,
+    alignSelf: "stretch",
+    justifyContent: "center",
+  },
+  plantImageEdge: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    bottom: 0,
+    width: "100%",
+    zIndex: 0,
+  },
+  plantImagePlaceholder: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "flex-start",
+    justifyContent: "center",
+    paddingLeft: 26,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  plantImageTopScrim: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 38,
+  },
+  plantTextCol: {
+    marginLeft: "50%",
+    flex: 1,
+    minWidth: 0,
+    justifyContent: "center",
   },
   plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
   latin: {
@@ -303,5 +336,6 @@ export const s = StyleSheet.create({
     color: "#FFFFFF", // White text color for location
     fontSize: 12,
     fontWeight: "600",
+    flex: 1,
   },
 });

@@ -8,6 +8,7 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { s } from "../styles/plants.styles";
 
 type Props = {
+  onDetails: () => void;
   onEdit: () => void;
   onReminders: () => void;
   onJournal: () => void;
@@ -15,7 +16,14 @@ type Props = {
   onShowQr: () => void;
 };
 
-export default function PlantMenu({ onEdit, onReminders, onJournal, onDelete, onShowQr }: Props) {
+export default function PlantMenu({
+  onDetails,
+  onEdit,
+  onReminders,
+  onJournal,
+  onDelete,
+  onShowQr,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -31,6 +39,12 @@ export default function PlantMenu({ onEdit, onReminders, onJournal, onDelete, on
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
+      <MenuItem
+        label={tr("plants.menu.details", "Plant details")}
+        icon="flower-outline"
+        onPress={onDetails}
+      />
+
       <MenuItem
         label={tr("plants.menu.edit", "Edit plant")}
         icon="pencil-outline"

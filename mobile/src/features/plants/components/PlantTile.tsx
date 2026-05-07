@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Pressable, Text, StyleSheet, Image } from "react-native";
+import { View, Pressable, Text, StyleSheet, ImageBackground } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import MaskedView from "@react-native-masked-view/masked-view";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { s } from "../styles/plants.styles";
@@ -12,6 +13,7 @@ type Props = {
   isMenuOpen: boolean;
   onPressBody: () => void;
   onPressMenu: () => void;
+  onDetails: () => void;
   onEdit: () => void;
   onReminders: () => void;
   onJournal: () => void;
@@ -19,7 +21,6 @@ type Props = {
   onShowQr: () => void;
 };
 
-// Same green tones as AuthCard
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
@@ -28,17 +29,22 @@ export default function PlantTile({
   isMenuOpen,
   onPressBody,
   onPressMenu,
+  onDetails,
   onEdit,
   onReminders,
   onJournal,
   onDelete,
   onShowQr,
 }: Props) {
-  const imgUri = plant.imageUrl; // ✅ no random picsum
+  const imgUri = plant.imageUrl;
+
+  const handleTilePress = () => {
+    onPressBody();
+    onPressMenu();
+  };
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass card */}
       <View style={s.cardGlass}>
         <LinearGradient
           pointerEvents="none"
@@ -61,6 +67,52 @@ export default function PlantTile({
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
+
+        <View pointerEvents="none" style={s.plantImageEdge}>
+          <MaskedView
+            style={StyleSheet.absoluteFill}
+            maskElement={
+              <LinearGradient
+                colors={[
+                  "rgba(0,0,0,1.00)",
+                  "rgba(0,0,0,0.92)",
+                  "rgba(0,0,0,0.75)",
+                  "rgba(0,0,0,0.50)",
+                  "rgba(0,0,0,0.22)",
+                  "rgba(0,0,0,0.00)",
+                  "rgba(0,0,0,0.00)",
+                ]}
+                locations={[0, 0.07, 0.3, 0.46, 0.58, 0.66, 1]}
+                start={{ x: 0, y: 0.5 }}
+                end={{ x: 1, y: 0.5 }}
+                style={StyleSheet.absoluteFill}
+              />
+            }
+          >
+            {imgUri ? (
+              <ImageBackground
+                source={{ uri: imgUri }}
+                resizeMode="cover"
+                style={StyleSheet.absoluteFill}
+              />
+            ) : (
+              <View style={s.plantImagePlaceholder}>
+                <MaterialCommunityIcons
+                  name="image-off-outline"
+                  size={26}
+                  color="rgba(255,255,255,0.92)"
+                />
+              </View>
+            )}
+          </MaskedView>
+
+          <LinearGradient
+            pointerEvents="none"
+            colors={["rgba(0,0,0,0.20)", "rgba(0,0,0,0.00)"]}
+            locations={[0, 1]}
+            style={s.plantImageTopScrim}
+          />
+        </View>
 
         <View
           pointerEvents="none"
@@ -89,43 +141,11 @@ export default function PlantTile({
 
         <View style={s.cardRow}>
           <Pressable
-            style={{
-              flex: 1,
-              paddingRight: 8,
-              flexDirection: "row",
-              alignItems: "center",
-              gap: 12,
-            }}
-            onPress={onPressBody}
+            style={s.cardBodyPressable}
+            onPress={handleTilePress}
             android_ripple={{ color: "rgba(255,255,255,0.08)" }}
           >
-            {imgUri ? (
-              <Image
-                source={{ uri: imgUri }}
-                style={{ width: 60, height: 60, borderRadius: 15 }}
-              />
-            ) : (
-              <View
-                style={{
-                  width: 60,
-                  height: 60,
-                  borderRadius: 15,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  backgroundColor: "rgba(255,255,255,0.10)",
-                  borderWidth: 1,
-                  borderColor: "rgba(255,255,255,0.14)",
-                }}
-              >
-                <MaterialCommunityIcons
-                  name="image-off-outline"
-                  size={20}
-                  color="rgba(255,255,255,0.92)"
-                />
-              </View>
-            )}
-
-            <View style={{ flex: 1 }}>
+            <View style={s.plantTextCol}>
               <Text style={s.plantName} numberOfLines={1}>
                 {plant.name}
               </Text>
@@ -141,7 +161,7 @@ export default function PlantTile({
                   <MaterialCommunityIcons
                     name="map-marker"
                     size={12}
-                    color="#FFFFFF" // White icon color
+                    color="#FFFFFF"
                     style={s.locationIcon}
                   />
                   <Text style={s.location} numberOfLines={1}>
@@ -151,24 +171,12 @@ export default function PlantTile({
               )}
             </View>
           </Pressable>
-
-          <Pressable
-            onPress={onPressMenu}
-            style={s.menuBtn}
-            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
-            hitSlop={8}
-          >
-            <MaterialCommunityIcons
-              name="dots-horizontal"
-              size={20}
-              color="#FFFFFF"
-            />
-          </Pressable>
         </View>
       </View>
 
       {isMenuOpen && (
         <PlantMenu
+          onDetails={onDetails}
           onEdit={onEdit}
           onReminders={onReminders}
           onJournal={onJournal}
