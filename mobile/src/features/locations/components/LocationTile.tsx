@@ -63,7 +63,7 @@ export default function LocationTile({
         });
 
   return (
-    <View style={s.cardWrap}>
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* Glass background (BlurView -> gradients like Plants) */}
       <View style={s.cardGlass}>
         {/* Base green gradient: light -> dark (AuthCard match) */}
@@ -95,7 +95,14 @@ export default function LocationTile({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <View style={s.cardRow}>
+      <Pressable
+        style={s.cardRow}
+        onPress={() => {
+          onPressBody();
+          onPressMenu();
+        }}
+        android_ripple={{ color: "rgba(255,255,255,0.08)" }}
+      >
         <View style={s.iconCircle}>
           <MaterialCommunityIcons name="map-marker-outline" size={18} color="#FFFFFF" />
         </View>
@@ -108,50 +115,41 @@ export default function LocationTile({
             {plantLabel}
           </Text>
         </View>
+      </Pressable>
 
-        <Pressable
-          onPress={onPressMenu}
-          style={s.menuBtn}
-          android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
-          hitSlop={8}
-        >
-          <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
-        </Pressable>
+      {isMenuOpen && (
+        <View style={s.menuSheet}>
+          <Pressable
+            style={s.menuItem}
+            onPress={onEdit}
+            android_ripple={{ color: "rgba(255,255,255,0.16)" }}
+          >
+            <MaterialCommunityIcons
+              name="pencil-outline"
+              size={16}
+              color="#FFFFFF"
+              style={{ marginRight: 6 }}
+            />
+            <Text style={s.menuItemText}>{tr("locations.menu.edit", "Edit location")}</Text>
+          </Pressable>
 
-        {isMenuOpen && (
-          <View style={s.menuSheet}>
-            <Pressable
-              style={s.menuItem}
-              onPress={onEdit}
-              android_ripple={{ color: "rgba(255,255,255,0.16)" }}
-            >
-              <MaterialCommunityIcons
-                name="pencil-outline"
-                size={16}
-                color="#FFFFFF"
-                style={{ marginRight: 6 }}
-              />
-              <Text style={s.menuItemText}>{tr("locations.menu.edit", "Edit location")}</Text>
-            </Pressable>
-
-            <Pressable
-              style={s.menuItem}
-              onPress={onDelete}
-              android_ripple={{ color: "rgba(255,107,107,0.18)" }}
-            >
-              <MaterialCommunityIcons
-                name="delete-outline"
-                size={16}
-                color="#FF6B6B"
-                style={{ marginRight: 6 }}
-              />
-              <Text style={[s.menuItemText, s.menuItemDangerText]}>
-                {tr("locations.menu.delete", "Delete location")}
-              </Text>
-            </Pressable>
-          </View>
-        )}
-      </View>
+          <Pressable
+            style={s.menuItem}
+            onPress={onDelete}
+            android_ripple={{ color: "rgba(255,107,107,0.18)" }}
+          >
+            <MaterialCommunityIcons
+              name="delete-outline"
+              size={16}
+              color="#FF6B6B"
+              style={{ marginRight: 6 }}
+            />
+            <Text style={[s.menuItemText, s.menuItemDangerText]}>
+              {tr("locations.menu.delete", "Delete location")}
+            </Text>
+          </Pressable>
+        </View>
+      )}
     </View>
   );
 }

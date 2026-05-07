@@ -21,6 +21,10 @@ export const locStyles = StyleSheet.create({
     overflow: "visible",
     position: "relative",
   },
+  cardWrapRaised: {
+    zIndex: 50,
+    elevation: 50,
+  },
 
   cardGlass: {
     ...StyleSheet.absoluteFillObject,

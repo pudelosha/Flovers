@@ -95,26 +95,12 @@ export default function LocationsScreen() {
     [t, currentLanguage]
   );
 
-  const plantCountLabel = useCallback(
-    (count: number) => {
-      if (currentLanguage === "pl") {
-        return tr("locations.plantCount.label", "Liczba roślin: {{count}}", {
-          count,
-        });
-      }
-
-      return tr("locations.plantCount.label", "Plant count: {{count}}", {
-        count,
-      });
-    },
-    [currentLanguage, tr]
-  );
-
   const [locations, setLocations] = useState<PlantLocation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [refreshing, setRefreshing] = useState<boolean>(false);
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [fabCloseSignal, setFabCloseSignal] = useState(0);
 
   // Toast / snackbar
   const [toastVisible, setToastVisible] = useState(false);
@@ -130,6 +116,20 @@ export default function LocationsScreen() {
     setToastVariant(variant);
     setToastVisible(true);
   };
+
+  const closeFloatingMenus = useCallback(() => {
+    setMenuOpenId(null);
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
+  const closeFabMenu = useCallback(() => {
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
+  const onToggleMenu = useCallback((id: string) => {
+    setFabCloseSignal((value) => value + 1);
+    setMenuOpenId((curr) => (curr === id ? null : id));
+  }, []);
 
   // Add/Edit Location modal
   const [editOpen, setEditOpen] = useState(false);
@@ -175,7 +175,7 @@ export default function LocationsScreen() {
       setEditingId(null);
       setEditingName("");
       setEditingCategory("indoor");
-      setMenuOpenId(null);
+      closeFloatingMenus();
       setConfirmDeleteId(null);
       setConfirmDeleteName("");
       setSortOpen(false);
@@ -193,11 +193,12 @@ export default function LocationsScreen() {
       return () => {
         mounted = false;
       };
-    }, [load])
+    }, [closeFloatingMenus, load])
   );
 
   const onRefresh = async () => {
     setRefreshing(true);
+    closeFloatingMenus();
     try {
       await load();
     } finally {
@@ -291,13 +292,8 @@ export default function LocationsScreen() {
   });
   const emptyOpacity = emptyAnim;
 
-  const handlePressLocationBody = (loc: PlantLocation) => {
-    const label = plantCountLabel(loc.plantCount);
-    showToast(`${loc.name}: ${label}`);
-  };
-
   const openAddLocation = () => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
     setEditingId(null);
     setEditingName("");
     setEditingCategory("indoor");
@@ -306,7 +302,7 @@ export default function LocationsScreen() {
   };
 
   const openEditLocation = (loc: PlantLocation) => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
     setEditingId(loc.id);
     setEditingName(loc.name);
     setEditingCategory(loc.category);
@@ -315,7 +311,7 @@ export default function LocationsScreen() {
   };
 
   const askDeleteLocation = (loc: PlantLocation) => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
     setConfirmDeleteId(loc.id);
     setConfirmDeleteName(loc.name);
     setConfirmDeleteCount(loc.plantCount ?? 0);
@@ -384,7 +380,7 @@ export default function LocationsScreen() {
   };
 
   const openSortModal = () => {
-    setMenuOpenId(null);
+    closeFloatingMenus();
     setSortOpen(true);
   };
 
@@ -423,7 +419,7 @@ export default function LocationsScreen() {
       />
 
       {menuOpenId && (
-        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />
+        <Pressable onPress={closeFloatingMenus} style={s.backdrop} />
       )}
 
       <Animated.FlatList
@@ -442,15 +438,20 @@ export default function LocationsScreen() {
           });
           const opacity = v;
 
+          const isOpen = menuOpenId === item.id;
+
           return (
-            <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+            <Animated.View
+              style={[
+                { opacity, transform: [{ translateY }, { scale }] },
+                isOpen && { zIndex: 50, elevation: 50 },
+              ]}
+            >
               <LocationTile
                 location={item}
-                isMenuOpen={menuOpenId === item.id}
-                onPressBody={() => handlePressLocationBody(item)}
-                onPressMenu={() =>
-                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
-                }
+                isMenuOpen={isOpen}
+                onPressBody={closeFabMenu}
+                onPressMenu={() => onToggleMenu(item.id)}
                 onEdit={() => openEditLocation(item)}
                 onDelete={() => askDeleteLocation(item)}
               />
@@ -462,7 +463,7 @@ export default function LocationsScreen() {
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
-        onScrollBeginDrag={() => setMenuOpenId(null)}
+        onScrollBeginDrag={closeFloatingMenus}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
@@ -535,6 +536,8 @@ export default function LocationsScreen() {
           <FAB
             bottomOffset={92}
             position={settings.fabPosition}
+            closeSignal={fabCloseSignal}
+            onInteraction={() => setMenuOpenId(null)}
             actions={[
               {
                 key: "add",
