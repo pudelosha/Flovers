@@ -6,7 +6,10 @@ import { useTranslation } from "react-i18next";
 import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import { s } from "../../styles/task-history.styles";
 import type { TaskType } from "../../../home/types/home.types";
-import { ACCENT_BY_TYPE } from "../../../home/constants/home.constants";
+import {
+  ACCENT_BY_TYPE,
+  ICON_BY_TYPE,
+} from "../../../home/constants/home.constants";
 
 export type HistoryDeleteMode = "plant" | "location" | "types" | "olderThan";
 
@@ -161,15 +164,19 @@ export default function DeleteHistoryTasksModal({
             s.promptInner,
             s.promptInner28,
             {
+              height: "86%",
               maxHeight: "86%",
               position: "relative",
             },
           ]}
         >
           <ScrollView
+            style={{ flex: 1 }}
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
               paddingTop: 44,
               paddingBottom: 120,
             }}
@@ -349,10 +356,22 @@ export default function DeleteHistoryTasksModal({
             </Pressable>
 
             {mode === "types" && (
-              <View style={[s.chipRow, { marginTop: 4 }]}>
+              <View
+                style={[
+                  s.chipRow,
+                  {
+                    marginTop: 4,
+                    paddingHorizontal: 16,
+                    justifyContent: "space-between",
+                    rowGap: 10,
+                    columnGap: 10,
+                  },
+                ]}
+              >
                 {TYPE_OPTIONS.map((tt) => {
                   const selected = selectedTypes.includes(tt);
                   const tint = ACCENT_BY_TYPE[tt];
+                  const icon = ICON_BY_TYPE[tt];
 
                   return (
                     <Pressable
@@ -361,13 +380,34 @@ export default function DeleteHistoryTasksModal({
                       style={[
                         s.chip,
                         {
+                          width: "48%",
+                          minHeight: 44,
+                          flexDirection: "row",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          gap: 8,
+                          borderWidth: 0,
+                          borderColor: selected
+                            ? hexToRgba(tint, 0.95)
+                            : hexToRgba(tint, 0.45),
                           backgroundColor: selected
                             ? hexToRgba(tint, 0.22)
-                            : "rgba(255,255,255,0.12)",
+                            : hexToRgba(tint, 0.14),
                         },
                       ]}
                     >
-                      <Text style={s.chipText}>{tt.toUpperCase()}</Text>
+                      <MaterialCommunityIcons name={icon} size={16} color={tint} />
+
+                      <Text
+                        style={[
+                          s.chipText,
+                          {
+                            color: tint,
+                          },
+                        ]}
+                      >
+                        {t(`home.taskTypes.${tt}`)}
+                      </Text>
                     </Pressable>
                   );
                 })}
