@@ -22,6 +22,7 @@ type Props = {
   /** Horizontal position: "left" or "right". Defaults to "right". */
   position?: "left" | "right";
   closeSignal?: number;
+  onInteraction?: () => void;
 };
 
 export default function FAB({
@@ -30,6 +31,7 @@ export default function FAB({
   rightOffset = 16,
   position = "right",
   closeSignal,
+  onInteraction,
 }: Props) {
   const insets = useSafeAreaInsets();
   const [open, setOpen] = useState(false);
@@ -59,7 +61,10 @@ export default function FAB({
       {open && (
         <Pressable
           style={StyleSheet.absoluteFill}
-          onPress={() => setOpen(false)}
+          onPress={() => {
+            onInteraction?.();
+            setOpen(false);
+          }}
         />
       )}
 
@@ -79,6 +84,7 @@ export default function FAB({
               <Pressable
                 key={a.key}
                 onPress={() => {
+                  onInteraction?.();
                   setOpen(false);
                   requestAnimationFrame(() => a.onPress());
                 }}
@@ -128,7 +134,10 @@ export default function FAB({
 
         {/* Main FAB */}
         <Pressable
-          onPress={() => setOpen((v) => !v)}
+          onPress={() => {
+            onInteraction?.();
+            setOpen((v) => !v);
+          }}
           android_ripple={{ color: "rgba(255,255,255,0.2)", borderless: true }}
           style={s.mainFab}
         >

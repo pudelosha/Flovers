@@ -31,7 +31,6 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function TaskTile({
   task,
   isMenuOpen,
-  onToggleMenu,
   onMarkComplete,
   onEdit,
   onGoToPlant,
@@ -188,8 +187,12 @@ export default function TaskTile({
 
         {/* Right: due text and date */}
         <View style={s.rightCol}>
-          <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{dueText}</Text>
-          <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>{formattedDate}</Text>
+          <Text style={[s.dueWhen, isOverdue && s.dueOverdue]} numberOfLines={2}>
+            {dueText}
+          </Text>
+          <Text style={[s.dueDateText, isOverdue && s.dueOverdue]} numberOfLines={1}>
+            {formattedDate}
+          </Text>
         </View>
       </Pressable>
 

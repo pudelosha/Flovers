@@ -130,6 +130,10 @@ export default function TaskHistoryScreen() {
     setFabCloseSignal((value) => value + 1);
   }, []);
 
+  const closeFabMenu = useCallback(() => {
+    setFabCloseSignal((value) => value + 1);
+  }, []);
+
   const onToggleMenu = useCallback((id: string) => {
     setFabCloseSignal((value) => value + 1);
     setOpenMenuId((curr) => (curr === id ? null : id));
@@ -589,7 +593,7 @@ export default function TaskHistoryScreen() {
                 item={item}
                 isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(item.id)}
-                onPressBody={closeFloatingMenus}
+                onPressBody={closeFabMenu}
                 onDelete={handleDeleteItem}
                 onEditReminder={handleEditHistoryReminder}
                 onGoToPlant={handleGoToPlant}
@@ -688,6 +692,7 @@ export default function TaskHistoryScreen() {
             actions={fabActions}
             closeSignal={fabCloseSignal}
             position={fabPosition}
+            onInteraction={() => setOpenMenuId(null)}
           />
         </View>
       )}

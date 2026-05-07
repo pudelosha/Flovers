@@ -1,6 +1,14 @@
 // src/features/task-history/components/TaskHistoryTile.tsx
 import React, { useState, useMemo, useRef } from "react";
-import { View, Text, Pressable, StyleSheet, Animated, Easing } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  Animated,
+  Easing,
+} from "react-native";
+import type { GestureResponderEvent } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -120,9 +128,7 @@ export default function TaskHistoryTile({
 
   const onToggleBody = () => {
     onPressBody?.();
-    if (!hasNote) return;
-    if (expanded) collapse();
-    else expand();
+    onToggleMenu();
   };
 
   const animatedHeight =
@@ -152,6 +158,13 @@ export default function TaskHistoryTile({
   const handleCollapseFromMenu = () => {
     onToggleMenu();
     collapse();
+  };
+
+  const handleToggleNoteFromIcon = (event: GestureResponderEvent) => {
+    event.stopPropagation();
+    onPressBody?.();
+    if (expanded) collapse();
+    else expand();
   };
 
   const handleEditReminder = () => {
@@ -216,40 +229,42 @@ export default function TaskHistoryTile({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <View style={[s.cardRow, !expanded && hasNote && styles.compactRow]}>
-        {/* BODY (pressable): left + center – expands/collapses */}
+      <View style={[s.cardRow, expanded && styles.expandedRow]}>
+        {/* BODY (pressable): opens the inline menu */}
         <Pressable
           accessible={false}
-          style={styles.bodyPressable}
+          style={[s.cardBodyPressable, expanded && styles.expandedBody]}
           onPress={onToggleBody}
           android_ripple={{ color: "rgba(255,255,255,0.10)" }}
         >
-          {/* Left: icon + type label */}
-          <View style={s.leftCol}>
+          {/* Left: icon only */}
+          <View style={[s.leftCol, expanded && styles.expandedLeftCol]}>
             <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000000", 0.15) }]}>
-              <MaterialCommunityIcons name={icon} size={20} color={accent} />
+              <MaterialCommunityIcons name={icon} size={24} color={accent} />
             </View>
-            <Text style={[s.leftCaption, { color: accent }]}>
-              {typeLabel.toUpperCase()}
-            </Text>
           </View>
 
-          {/* Center: plant + location + completed date + animated note */}
+          {/* Center: type + plant + location + animated note */}
           <View style={s.centerCol}>
+            <Text style={[s.taskTypeLabel, { color: accent }]} numberOfLines={1}>
+              {typeLabel}
+            </Text>
             <Text style={s.plantName} numberOfLines={1}>
               {item.plant}
             </Text>
 
             {!!item.location && (
-              <Text style={s.location} numberOfLines={1}>
-                {item.location}
-              </Text>
-            )}
-
-            {!!completedLabel && (
-              <Text style={s.metaCompact} numberOfLines={1}>
-                {t("taskHistory.tile.completedOn", { date: completedLabel })}
-              </Text>
+              <View style={s.locationRow}>
+                <MaterialCommunityIcons
+                  name="map-marker"
+                  size={12}
+                  color="#FFFFFF"
+                  style={s.locationIcon}
+                />
+                <Text style={s.location} numberOfLines={1}>
+                  {item.location}
+                </Text>
+              </View>
             )}
 
             {hasNote && (
@@ -288,19 +303,36 @@ export default function TaskHistoryTile({
               </>
             )}
           </View>
-        </Pressable>
 
-        {/* Right: 3-dot menu */}
-        <View style={s.rightCol}>
-          <Pressable
-            onPress={onToggleMenu}
-            style={s.menuBtn}
-            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
-            hitSlop={8}
-          >
-            <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
-          </Pressable>
-        </View>
+          <View style={s.separator} />
+
+          <View style={s.rightCol}>
+            {!!completedLabel && (
+              <>
+                <Text style={s.completedLabel} numberOfLines={2}>
+                  {t("taskHistory.tile.completed", { defaultValue: "Completed" })}
+                </Text>
+                <Text style={s.completedDateText} numberOfLines={1}>
+                  {completedLabel}
+                </Text>
+              </>
+            )}
+            {hasNote && (
+              <Pressable
+                style={s.noteIndicatorButton}
+                onPress={handleToggleNoteFromIcon}
+                android_ripple={{ color: "rgba(255,255,255,0.14)", borderless: true }}
+                hitSlop={8}
+              >
+                <MaterialCommunityIcons
+                  name="note-edit-outline"
+                  size={18}
+                  color="rgba(255,255,255,0.92)"
+                />
+              </Pressable>
+            )}
+          </View>
+        </Pressable>
       </View>
 
       {/* Inline menu */}
@@ -372,19 +404,20 @@ export default function TaskHistoryTile({
 }
 
 const styles = StyleSheet.create({
-  bodyPressable: {
-    flex: 1,
-    flexDirection: "row",
+  expandedRow: {
     alignItems: "flex-start",
+    paddingVertical: 8,
+  },
+  expandedBody: {
+    alignItems: "flex-start",
+  },
+  expandedLeftCol: {
+    marginTop: 17,
   },
   noteMeasureWrapper: {
     position: "absolute",
     opacity: 0,
     left: 0,
     right: 0,
-  },
-  compactRow: {
-    paddingTop: 8,
-    paddingBottom: 4,
   },
 });

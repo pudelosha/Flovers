@@ -99,8 +99,22 @@ export const s = StyleSheet.create({
     marginTop: 2,
   },
   dueRow: { flexDirection: "row", alignItems: "center", gap: 16, marginTop: 6 },
-  dueWhen: { color: "#FFFFFF", fontWeight: "700", fontSize: 11 },
-  dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 11, marginTop: 4 },
+  dueWhen: {
+    width: "100%",
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 11,
+    lineHeight: 13,
+    textAlign: "right",
+  },
+  dueDateText: {
+    width: "100%",
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "700",
+    fontSize: 11,
+    marginTop: 4,
+    textAlign: "right",
+  },
 
   // 🔴 Overdue styling (applied to both label & date)
   dueOverdue: {
@@ -108,7 +122,7 @@ export const s = StyleSheet.create({
   },
 
   // Right column
-  rightCol: { width: 80, alignItems: "flex-end", justifyContent: "center" },
+  rightCol: { width: 96, alignItems: "flex-end", justifyContent: "center" },
   menuBtn: {
     width: 36,
     height: 36,

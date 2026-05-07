@@ -21,7 +21,7 @@ export const s = StyleSheet.create({
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
-    minHeight: 72,
+    minHeight: 90,
 
     // ✅ REMOVE shadows/elevation that caused inner shade artifacts
     // shadowColor: "#000",
@@ -62,25 +62,31 @@ export const s = StyleSheet.create({
   cardRow: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "flex-start", // pin content to top, no centering jump
+    alignItems: "center",
     paddingHorizontal: 14,
-    paddingVertical: 8,
+    paddingRight: 18,
+    minHeight: 90,
+  },
+  cardBodyPressable: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "stretch",
+    justifyContent: "space-between",
   },
 
   // Left column
   leftCol: {
-    width: 75,
-    alignItems: "center",
-    justifyContent: "flex-start",
-    paddingTop: 2,
-  },
-  leftIconBubble: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 56,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 6,
+  },
+  leftIconBubble: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
   },
   leftCaption: {
     fontSize: 9,
@@ -92,17 +98,35 @@ export const s = StyleSheet.create({
   centerCol: {
     flex: 1,
     paddingHorizontal: 6,
+    justifyContent: "center",
+  },
+  taskTypeLabel: {
+    color: "#FFFFFF",
+    fontSize: 10,
+    fontWeight: "800",
+    letterSpacing: 0.7,
+    textTransform: "uppercase",
+    marginBottom: 4,
   },
   plantName: {
     color: "#FFFFFF",
     fontWeight: "800",
-    fontSize: 14,
+    fontSize: 16,
+    marginTop: 2,
+  },
+  locationRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 2,
+  },
+  locationIcon: {
+    marginRight: 6,
   },
   location: {
     color: "rgba(255,255,255,0.9)",
     fontWeight: "600",
     fontSize: 12,
-    marginTop: 2,
+    flex: 1,
   },
   metaCompact: {
     fontSize: 11,
@@ -112,10 +136,42 @@ export const s = StyleSheet.create({
     marginTop: 2,
   },
 
-  // Right column (menu button)
+  separator: {
+    width: 1,
+    height: 56,
+    marginHorizontal: 12,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderRadius: 1,
+  },
+
+  // Right column
   rightCol: {
-    width: 56,
+    width: 96,
     alignItems: "flex-end",
+    justifyContent: "center",
+  },
+  completedLabel: {
+    width: "100%",
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 11,
+    lineHeight: 13,
+    textAlign: "right",
+  },
+  completedDateText: {
+    width: "100%",
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "700",
+    fontSize: 11,
+    marginTop: 4,
+    textAlign: "right",
+  },
+  noteIndicatorButton: {
+    marginTop: 8,
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    alignItems: "center",
     justifyContent: "center",
   },
   menuBtn: {
@@ -166,8 +222,6 @@ export const s = StyleSheet.create({
   // Note area (inner content)
   noteBox: {
     paddingTop: 8,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.25)",
   },
   noteLabel: {
     color: "rgba(255,255,255,0.9)",
