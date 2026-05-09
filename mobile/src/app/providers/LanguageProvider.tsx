@@ -1,4 +1,11 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+  useEffect,
+} from "react";
 import i18n from "../../i18n"; // Import i18n directly
 import { LANGS } from "../../i18n";
 
@@ -49,7 +56,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
     };
   }, []);
 
-  const handleChangeLanguage = async (lang: string) => {
+  const handleChangeLanguage = useCallback(async (lang: string) => {
     try {
       // This is what actually triggers react-i18next updates
       await i18n.changeLanguage(lang);
@@ -63,7 +70,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
       console.warn("LanguageProvider: i18n.changeLanguage failed", e);
       return false;
     }
-  };
+  }, []);
+
+  const value = useMemo(
+    () => ({
+      currentLanguage,
+      availableLanguages: LANGS,
+      changeLanguage: handleChangeLanguage,
+      isReady,
+    }),
+    [currentLanguage, handleChangeLanguage, isReady]
+  );
 
   // Optional: Show loading while i18n initializes
   if (!isReady) {
@@ -71,15 +88,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   }
 
   return (
-    <LanguageContext.Provider
-      value={{
-        currentLanguage,
-        availableLanguages: LANGS,
-        changeLanguage: handleChangeLanguage,
-        isReady,
-      }}
-    >
-      {children}
-    </LanguageContext.Provider>
+    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
   );
 };

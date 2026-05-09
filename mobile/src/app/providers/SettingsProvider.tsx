@@ -89,7 +89,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
 
   // ✅ Use LanguageProvider to apply language (single source of truth)
-  const { changeLanguage: changeAppLanguage, currentLanguage } = useLanguage();
+  const { changeLanguage: changeAppLanguage } = useLanguage();
 
   const applyServerSettings = useCallback((api: ApiProfileSettings) => {
     setSettings((prev) => {
@@ -130,7 +130,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       applyServerSettings(api);
 
       // ✅ Apply server language via LanguageProvider (not i18n directly)
-      if (api.language && api.language !== currentLanguage) {
+      if (api.language && api.language !== i18n.language?.split("-")?.[0]) {
         await changeAppLanguage(api.language);
       }
     } catch (e) {
@@ -139,7 +139,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     } finally {
       setLoading(false);
     }
-  }, [user, applyServerSettings, changeAppLanguage, currentLanguage]);
+  }, [user, applyServerSettings, changeAppLanguage]);
 
   // ✅ Mirror any i18n language changes into settings + persistence
   // This makes FAB changes persist even when SettingsProvider is mounted.
@@ -214,7 +214,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         await persistSettings(next);
 
         // ✅ Apply server language via LanguageProvider
-        if (next.language && next.language !== currentLanguage) {
+        if (next.language && next.language !== i18n.language?.split("-")?.[0]) {
           await changeAppLanguage(next.language);
         }
       } catch (e) {
@@ -234,7 +234,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, [user, changeAppLanguage, currentLanguage]);
+  }, [user, changeAppLanguage]);
 
   const value: SettingsContextValue = {
     settings,

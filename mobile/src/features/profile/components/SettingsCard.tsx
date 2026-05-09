@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
+import { Text, Pressable } from "react-native";
 import { useTranslation } from "react-i18next";
 import GlassCard from "./../components/GlassCard";
 import Dropdown from "./../components/Dropdown";
@@ -37,16 +37,16 @@ export default function SettingsCard({
   setMeasureUnit,
   measureOpen,
   setMeasureOpen,
-  tileTransparency,
-  setTileTransparency,
+  tileTransparency: _tileTransparency,
+  setTileTransparency: _setTileTransparency,
   background,
   setBackground,
   bgOpen,
   setBgOpen,
-  tileMotive,
-  setTileMotive,
-  tileMotiveOpen,
-  setTileMotiveOpen,
+  tileMotive: _tileMotive,
+  setTileMotive: _setTileMotive,
+  tileMotiveOpen: _tileMotiveOpen,
+  setTileMotiveOpen: _setTileMotiveOpen,
   fabPosition,
   setFabPosition,
   fabOpen,
@@ -54,7 +54,7 @@ export default function SettingsCard({
   onSave,
 }: {
   language: LangCode;
-  setLanguage: (c: LangCode) => void;
+  setLanguage: (c: LangCode) => void | Promise<void>;
   langOpen: boolean;
   setLangOpen: (o: boolean | ((o: boolean) => boolean)) => void;
 

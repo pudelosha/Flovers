@@ -1,5 +1,10 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { View, ScrollView, Animated, Easing } from "react-native";
+import type {
+  LayoutChangeEvent,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
@@ -11,7 +16,7 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { layout as ly } from "../styles/profile.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
-import type { PromptKey } from "../types/profile.types";
+import type { LangCode, PromptKey } from "../types/profile.types";
 
 import AccountCard from "../components/AccountCard";
 import NotificationsCard from "../components/NotificationsCard";
@@ -44,6 +49,18 @@ function isUnauthorizedError(e: any): boolean {
   );
 }
 
+function waitForNextFrame() {
+  return new Promise<void>((resolve) => {
+    requestAnimationFrame(() => resolve());
+  });
+}
+
+async function waitForFrames(count: number) {
+  for (let i = 0; i < count; i += 1) {
+    await waitForNextFrame();
+  }
+}
+
 export default function ProfileScreen() {
   const { t } = useTranslation();
   const nav = useNavigation<any>();
@@ -57,6 +74,35 @@ export default function ProfileScreen() {
   const scrollToTop = useCallback(() => {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, []);
+  const scrollYRef = useRef(0);
+  const settingsTileYRef = useRef(0);
+  const settingsTileViewportYRef = useRef<number | null>(null);
+  const restoreScrollYRef = useRef<number | null>(null);
+  const handleScroll = useCallback((event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    if (restoreScrollYRef.current !== null) return;
+    scrollYRef.current = event.nativeEvent.contentOffset.y;
+  }, []);
+  const restoreSettingsScrollPosition = useCallback(() => {
+    const settingsTileViewportY = settingsTileViewportYRef.current;
+    const fallbackScrollY = restoreScrollYRef.current;
+
+    if (settingsTileViewportY === null && fallbackScrollY === null) return;
+
+    const nextScrollY =
+      settingsTileViewportY === null
+        ? fallbackScrollY ?? 0
+        : Math.max(settingsTileYRef.current - settingsTileViewportY, 0);
+
+    scrollRef.current?.scrollTo({ y: nextScrollY, animated: false });
+    scrollYRef.current = nextScrollY;
+  }, []);
+  const handleSettingsLayout = useCallback(
+    (event: LayoutChangeEvent) => {
+      settingsTileYRef.current = event.nativeEvent.layout.y;
+      restoreSettingsScrollPosition();
+    },
+    [restoreSettingsScrollPosition]
+  );
 
   // PROMPTS (modal selector)
   const [prompt, setPrompt] = useState<PromptKey | "contact" | "bug" | null>(null);
@@ -67,6 +113,7 @@ export default function ProfileScreen() {
   // Saving states
   const [savingNotif, setSavingNotif] = useState<boolean>(false);
   const [savingSettings, setSavingSettings] = useState<boolean>(false);
+  const [switchingLanguage, setSwitchingLanguage] = useState(false);
 
   // Toast
   const [toastVisible, setToastVisible] = useState(false);
@@ -116,6 +163,42 @@ export default function ProfileScreen() {
 
   const [fabPosition, setFabPosition] = useState(settings.fabPosition);
   const [fabOpen, setFabOpen] = useState(false);
+
+  const handleLanguageChange = useCallback(
+    async (nextLanguage: LangCode) => {
+      const scrollY = scrollYRef.current;
+      settingsTileViewportYRef.current = settingsTileYRef.current - scrollY;
+      restoreScrollYRef.current = scrollY;
+      setLanguage(nextLanguage);
+
+      if (nextLanguage === currentLanguage?.split("-")?.[0]) {
+        settingsTileViewportYRef.current = null;
+        restoreScrollYRef.current = null;
+        return;
+      }
+
+      setSwitchingLanguage(true);
+      await waitForNextFrame();
+
+      const changed = await changeAppLanguage(nextLanguage);
+      if (!changed) {
+        console.warn("ProfileScreen: failed to apply language", nextLanguage);
+        showToast(t("profile.toasts.couldNotSaveSettings"), "error");
+        settingsTileViewportYRef.current = null;
+        restoreScrollYRef.current = null;
+        setSwitchingLanguage(false);
+        return;
+      }
+
+      await waitForFrames(2);
+      restoreSettingsScrollPosition();
+      settingsTileViewportYRef.current = null;
+      restoreScrollYRef.current = null;
+      await waitForNextFrame();
+      setSwitchingLanguage(false);
+    },
+    [changeAppLanguage, currentLanguage, restoreSettingsScrollPosition, t]
+  );
 
   // Initial fetch: notifications
   useEffect(() => {
@@ -269,6 +352,9 @@ export default function ProfileScreen() {
         <ScrollView
           ref={scrollRef}
           contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}
+          onContentSizeChange={restoreSettingsScrollPosition}
+          onScroll={handleScroll}
+          scrollEventThrottle={16}
           showsVerticalScrollIndicator={false}
         >
           <AccountCard
@@ -302,39 +388,41 @@ export default function ProfileScreen() {
             onSave={handleSaveNotifications}
           />
 
-          <SettingsCard
-            language={language}
-            setLanguage={setLanguage}
-            langOpen={langOpen}
-            setLangOpen={setLangOpen}
-            dateFormat={dateFormat}
-            setDateFormat={setDateFormat}
-            dateOpen={dateOpen}
-            setDateOpen={setDateOpen}
-            temperatureUnit={temperatureUnit}
-            setTemperatureUnit={setTemperatureUnit}
-            tempOpen={tempOpen}
-            setTempOpen={setTempOpen}
-            measureUnit={measureUnit}
-            setMeasureUnit={setMeasureUnit}
-            measureOpen={measureOpen}
-            setMeasureOpen={setMeasureOpen}
-            tileTransparency={tileTransparency}
-            setTileTransparency={setTileTransparency}
-            background={background}
-            setBackground={setBackground}
-            bgOpen={bgOpen}
-            setBgOpen={setBgOpen}
-            tileMotive={tileMotive}
-            setTileMotive={setTileMotive}
-            tileMotiveOpen={tileMotiveOpen}
-            setTileMotiveOpen={setTileMotiveOpen}
-            fabPosition={fabPosition}
-            setFabPosition={setFabPosition}
-            fabOpen={fabOpen}
-            setFabOpen={setFabOpen}
-            onSave={handleSaveSettings}
-          />
+          <View onLayout={handleSettingsLayout}>
+            <SettingsCard
+              language={language}
+              setLanguage={handleLanguageChange}
+              langOpen={langOpen}
+              setLangOpen={setLangOpen}
+              dateFormat={dateFormat}
+              setDateFormat={setDateFormat}
+              dateOpen={dateOpen}
+              setDateOpen={setDateOpen}
+              temperatureUnit={temperatureUnit}
+              setTemperatureUnit={setTemperatureUnit}
+              tempOpen={tempOpen}
+              setTempOpen={setTempOpen}
+              measureUnit={measureUnit}
+              setMeasureUnit={setMeasureUnit}
+              measureOpen={measureOpen}
+              setMeasureOpen={setMeasureOpen}
+              tileTransparency={tileTransparency}
+              setTileTransparency={setTileTransparency}
+              background={background}
+              setBackground={setBackground}
+              bgOpen={bgOpen}
+              setBgOpen={setBgOpen}
+              tileMotive={tileMotive}
+              setTileMotive={setTileMotive}
+              tileMotiveOpen={tileMotiveOpen}
+              setTileMotiveOpen={setTileMotiveOpen}
+              fabPosition={fabPosition}
+              setFabPosition={setFabPosition}
+              fabOpen={fabOpen}
+              setFabOpen={setFabOpen}
+              onSave={handleSaveSettings}
+            />
+          </View>
 
           <SupportCard onContact={() => setPrompt("contact")} onBug={() => setPrompt("bug")} />
         </ScrollView>
@@ -343,6 +431,7 @@ export default function ProfileScreen() {
       {showLoadingOverlay && <CenteredSpinner overlay size={48} color="#FFFFFF" />}
       {savingNotif && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
       {savingSettings && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
+      {switchingLanguage && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
 
       {/* MODALS */}
       <ChangeEmailModal
