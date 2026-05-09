@@ -41,7 +41,59 @@
     },
     "calendar": {
       "scheduledOn": "{{date}} पर निर्धारित",
-      "noItems": "इस दिन के लिए कोई स्मरणपत्र नहीं है।"
+      "noItems": "इस दिन के लिए कोई स्मरणपत्र नहीं है।",
+
+      "today": "आज",
+
+      "weekdays": {
+        "monday": "सोमवार",
+        "tuesday": "मंगलवार",
+        "wednesday": "बुधवार",
+        "thursday": "गुरुवार",
+        "friday": "शुक्रवार",
+        "saturday": "शनिवार",
+        "sunday": "रविवार"
+      },
+
+      "weekdaysShort": {
+        "mon": "सोम",
+        "tue": "मंगल",
+        "wed": "बुध",
+        "thu": "गुरु",
+        "fri": "शुक्र",
+        "sat": "शनि",
+        "sun": "रवि"
+      },
+
+      "months": {
+        "january": "जनवरी",
+        "february": "फ़रवरी",
+        "march": "मार्च",
+        "april": "अप्रैल",
+        "may": "मई",
+        "june": "जून",
+        "july": "जुलाई",
+        "august": "अगस्त",
+        "september": "सितंबर",
+        "october": "अक्टूबर",
+        "november": "नवंबर",
+        "december": "दिसंबर"
+      },
+
+      "monthsShort": {
+        "january": "जन",
+        "february": "फ़र",
+        "march": "मार्च",
+        "april": "अप्रै",
+        "may": "मई",
+        "june": "जून",
+        "july": "जुल",
+        "august": "अग",
+        "september": "सितं",
+        "october": "अक्टू",
+        "november": "नवं",
+        "december": "दिसं"
+      }
     },
     "toast": {
       "loadFailed": "स्मरणपत्र लोड करने में विफल",

@@ -41,7 +41,59 @@
     },
     "calendar": {
       "scheduledOn": "Planifié pour le {{date}}",
-      "noItems": "Aucun rappel pour ce jour."
+      "noItems": "Aucun rappel pour ce jour.",
+
+      "today": "Aujourd'hui",
+
+      "weekdays": {
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
+      },
+
+      "weekdaysShort": {
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mer",
+        "thu": "Jeu",
+        "fri": "Ven",
+        "sat": "Sam",
+        "sun": "Dim"
+      },
+
+      "months": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juillet",
+        "august": "Août",
+        "september": "Septembre",
+        "october": "Octobre",
+        "november": "Novembre",
+        "december": "Décembre"
+      },
+
+      "monthsShort": {
+        "january": "Jan",
+        "february": "Fév",
+        "march": "Mar",
+        "april": "Avr",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juil",
+        "august": "Août",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Déc"
+      }
     },
     "toast": {
       "loadFailed": "Impossible de charger les rappels",

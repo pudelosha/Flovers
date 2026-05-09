@@ -41,7 +41,59 @@
     },
     "calendar": {
       "scheduledOn": "{{date}}에 예정됨",
-      "noItems": "이 날짜에 알림이 없습니다."
+      "noItems": "이 날짜에 알림이 없습니다.",
+
+      "today": "오늘",
+
+      "weekdays": {
+        "monday": "월요일",
+        "tuesday": "화요일",
+        "wednesday": "수요일",
+        "thursday": "목요일",
+        "friday": "금요일",
+        "saturday": "토요일",
+        "sunday": "일요일"
+      },
+
+      "weekdaysShort": {
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토",
+        "sun": "일"
+      },
+
+      "months": {
+        "january": "1월",
+        "february": "2월",
+        "march": "3월",
+        "april": "4월",
+        "may": "5월",
+        "june": "6월",
+        "july": "7월",
+        "august": "8월",
+        "september": "9월",
+        "october": "10월",
+        "november": "11월",
+        "december": "12월"
+      },
+
+      "monthsShort": {
+        "january": "1월",
+        "february": "2월",
+        "march": "3월",
+        "april": "4월",
+        "may": "5월",
+        "june": "6월",
+        "july": "7월",
+        "august": "8월",
+        "september": "9월",
+        "october": "10월",
+        "november": "11월",
+        "december": "12월"
+      }
     },
     "toast": {
       "loadFailed": "알림을 불러올 수 없습니다.",
