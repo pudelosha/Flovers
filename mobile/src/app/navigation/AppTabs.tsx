@@ -362,11 +362,11 @@ const s = StyleSheet.create({
   },
   focusPill: {
     position: "absolute",
-    top: 6,
-    bottom: 6,
-    left: 6,
-    right: 6,
-    borderRadius: 12,
+    top: 4,
+    bottom: 4,
+    left: 2,
+    right: 2,
+    borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.12)",
   },
   icon: {
