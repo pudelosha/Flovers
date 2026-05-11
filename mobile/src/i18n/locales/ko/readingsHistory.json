@@ -16,6 +16,13 @@
       "humidityShort": "습도",
       "lightShort": "빛",
       "moistureShort": "토양"
+    },
+    "chartMenu": {
+      "showAverage": "평균 표시",
+      "showMax": "최대값 표시",
+      "showMin": "최소값 표시",
+      "hideLabels": "레이블 숨기기",
+      "showLabels": "레이블 표시"
     }
   }
 }

@@ -602,117 +602,80 @@ export default function ReadingsHistoryScreen() {
                   {chartMenuOpen && (
                     <View
                       pointerEvents="auto"
-                      style={{
-                        position: "absolute",
-                        top: 40,
-                        right: 0,
-                        zIndex: 50,
-                        minWidth: 170,
-                        paddingVertical: 6,
-                        borderRadius: 16,
-                        backgroundColor: "#000000",
-                        borderWidth: 1,
-                        borderColor: "rgba(255,255,255,0.14)",
-                        overflow: "hidden",
-                      }}
+                      style={chartMenuStyles.sheet}
                     >
                       <Pressable
-                        style={{
-                          flexDirection: "row",
-                          alignItems: "center",
-                          paddingHorizontal: 12,
-                          paddingVertical: 10,
-                        }}
+                        style={chartMenuStyles.item}
                         onPress={() => setChartMenuOpen(false)}
                       >
                         <MaterialCommunityIcons
-                          name="chart-line"
+                          name="chart-bell-curve"
                           size={16}
                           color="#FFFFFF"
-                          style={{ marginRight: 8 }}
+                          style={chartMenuStyles.icon}
                         />
-                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
-                          Show average
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.showAverage")}
                         </Text>
                       </Pressable>
 
                       <Pressable
-                        style={{
-                          flexDirection: "row",
-                          alignItems: "center",
-                          paddingHorizontal: 12,
-                          paddingVertical: 10,
-                        }}
+                        style={chartMenuStyles.item}
                         onPress={() => setChartMenuOpen(false)}
                       >
                         <MaterialCommunityIcons
                           name="arrow-up-bold-outline"
                           size={16}
                           color="#FFFFFF"
-                          style={{ marginRight: 8 }}
+                          style={chartMenuStyles.icon}
                         />
-                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
-                          Show max
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.showMax")}
                         </Text>
                       </Pressable>
 
                       <Pressable
-                        style={{
-                          flexDirection: "row",
-                          alignItems: "center",
-                          paddingHorizontal: 12,
-                          paddingVertical: 10,
-                        }}
+                        style={chartMenuStyles.item}
                         onPress={() => setChartMenuOpen(false)}
                       >
                         <MaterialCommunityIcons
                           name="arrow-down-bold-outline"
                           size={16}
                           color="#FFFFFF"
-                          style={{ marginRight: 8 }}
+                          style={chartMenuStyles.icon}
                         />
-                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
-                          Show min
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.showMin")}
                         </Text>
                       </Pressable>
 
                       <Pressable
-                        style={{
-                          flexDirection: "row",
-                          alignItems: "center",
-                          paddingHorizontal: 12,
-                          paddingVertical: 10,
-                        }}
+                        style={chartMenuStyles.item}
                         onPress={() => setChartMenuOpen(false)}
                       >
                         <MaterialCommunityIcons
                           name="tag-off-outline"
                           size={16}
                           color="#FFFFFF"
-                          style={{ marginRight: 8 }}
+                          style={chartMenuStyles.icon}
                         />
-                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
-                          Hide labels
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.hideLabels")}
                         </Text>
                       </Pressable>
 
                       <Pressable
-                        style={{
-                          flexDirection: "row",
-                          alignItems: "center",
-                          paddingHorizontal: 12,
-                          paddingVertical: 10,
-                        }}
+                        style={chartMenuStyles.item}
                         onPress={() => setChartMenuOpen(false)}
                       >
                         <MaterialCommunityIcons
                           name="tag-outline"
                           size={16}
                           color="#FFFFFF"
-                          style={{ marginRight: 8 }}
+                          style={chartMenuStyles.icon}
                         />
-                        <Text style={{ color: "#FFFFFF", fontSize: 13 }}>
-                          Show labels
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.showLabels")}
                         </Text>
                       </Pressable>
                     </View>
@@ -762,3 +725,34 @@ export default function ReadingsHistoryScreen() {
     </View>
   );
 }
+
+const chartMenuStyles = StyleSheet.create({
+  sheet: {
+    position: "absolute",
+    top: 40,
+    right: 0,
+    zIndex: 50,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 12,
+    backgroundColor: "#000000",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    gap: 6,
+  },
+  item: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 2,
+  },
+  icon: {
+    marginRight: 8,
+  },
+  text: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    letterSpacing: 0.2,
+    fontSize: 12,
+  },
+});

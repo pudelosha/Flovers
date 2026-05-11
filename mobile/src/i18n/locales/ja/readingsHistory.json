@@ -16,6 +16,13 @@
       "humidityShort": "湿度",
       "lightShort": "光",
       "moistureShort": "土壌"
+    },
+    "chartMenu": {
+      "showAverage": "平均を表示",
+      "showMax": "最大値を表示",
+      "showMin": "最小値を表示",
+      "hideLabels": "ラベルを非表示",
+      "showLabels": "ラベルを表示"
     }
   }
 }
