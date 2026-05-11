@@ -143,18 +143,18 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt domowych",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali domestici",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 유독함"
         }
       }
     },
@@ -222,8 +222,8 @@
       "description": "Achillea millefolium, commonly known as Yarrow, is a hardy perennial that produces flat clusters of small flowers. It thrives in full sun and well-drained soil."
     },
     "pl": {
-      "common_name": "Krwiść",
-      "description": "Achillea millefolium, znana jako Krwiść, to odporna roślina wieloletnia, która wytwarza płaskie kwiatostany. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
+      "common_name": "Krwawnik pospolity",
+      "description": "Achillea millefolium, znana jako krwawnik pospolity, to odporna roślina wieloletnia, która wytwarza płaskie kwiatostany. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
     },
     "de": {
       "common_name": "Schafgarbe",
@@ -246,8 +246,8 @@
       "description": "Achillea millefolium, conhecida como Mil-folhas, é uma planta perene resistente que produz flores planas. Prefere pleno sol e solo bem drenado."
     },
     "ar": {
-      "common_name": "أكليل الجبل",
-      "description": "Achillea millefolium، والمعروفة باسم أكليل الجبل، هي نبات معمر قوي ينتج مجموعات مسطحة من الزهور الصغيرة. ينمو بشكل أفضل في الشمس الكاملة والتربة جيدة التصريف."
+      "common_name": "الأخيلية ألفية الأوراق",
+      "description": "Achillea millefolium، والمعروفة باسم الأخيلية ألفية الأوراق، هي نبات معمر قوي ينتج مجموعات مسطحة من الزهور الصغيرة. ينمو بشكل أفضل في الشمس الكاملة والتربة جيدة التصريف."
     },
     "hi": {
       "common_name": "यारो",
