@@ -273,6 +273,8 @@ export default function RemindersScreen() {
         ? String(params.plantId)
         : undefined;
 
+      setViewMode("list");
+
       setFilters(() => {
         if (plantIdFromRoute) {
           return {

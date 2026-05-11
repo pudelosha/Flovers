@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useEffect } from "react";
+import React, { useMemo, useCallback, useEffect, useState } from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import Calendar from "react-native-calendars/src/calendar";
 import { LocaleConfig } from "react-native-calendars";
@@ -36,12 +36,12 @@ function toISODateOnly(d?: Date | string): string {
 
 const ORDER: ReminderType[] = ["watering", "moisture", "fertilising", "care", "repot"];
 
-function monthYearLabel(input: any, settings?: any, currentLanguage?: string) {
+function monthYearLabel(input: any, settings?: any, activeLanguage?: string) {
   const d: Date =
     (input && typeof input?.toDate === "function" && input.toDate()) ||
     (input instanceof Date ? input : new Date(input));
 
-  const rawLocale = settings?.locale || currentLanguage || undefined;
+  const rawLocale = activeLanguage || settings?.locale || undefined;
   const raw = d.toLocaleString(rawLocale, { month: "long", year: "numeric" });
 
   return raw.replace(/^\p{Ll}/u, (m) => m.toUpperCase());
@@ -84,23 +84,38 @@ export default function RemindersCalendar({
   onEdit,
   onDelete,
 }: Props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const i18nResolvedLanguage = (i18n as any).resolvedLanguage as
+    | string
+    | undefined;
+  const activeLanguage = useMemo(
+    () =>
+      currentLanguage ||
+      i18nResolvedLanguage ||
+      i18n.language ||
+      settings?.locale ||
+      "en",
+    [currentLanguage, i18nResolvedLanguage, i18n.language, settings?.locale]
+  );
+  const [localeRevision, setLocaleRevision] = useState(0);
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
-      void currentLanguage;
-      const txt = values ? t(key, values) : t(key);
+      const txt = t(
+        key,
+        values ? { ...values, lng: activeLanguage } : { lng: activeLanguage }
+      );
       const isMissing = !txt || txt === key;
       return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, activeLanguage]
   );
 
   const calendarLocaleKey = useMemo(
-    () => `app-reminders-calendar-${currentLanguage || settings?.locale || "en"}`,
-    [currentLanguage, settings?.locale]
+    () => `app-reminders-calendar-${activeLanguage}`,
+    [activeLanguage]
   );
 
   const calendarLocale = useMemo(
@@ -165,7 +180,13 @@ export default function RemindersCalendar({
   useEffect(() => {
     LocaleConfig.locales[calendarLocaleKey] = calendarLocale;
     LocaleConfig.defaultLocale = calendarLocaleKey;
+    setLocaleRevision((value) => value + 1);
   }, [calendarLocaleKey, calendarLocale]);
+
+  const calendarRenderKey = useMemo(
+    () => `${calendarLocaleKey}-${localeRevision}`,
+    [calendarLocaleKey, localeRevision]
+  );
 
   // multi-dot marks
   const dotsByDate = useMemo(() => {
@@ -250,7 +271,7 @@ export default function RemindersCalendar({
         <View pointerEvents="none" style={s.calendarBorder} />
 
         <Calendar
-          key={calendarLocaleKey}
+          key={calendarRenderKey}
           current={selectedDate}
           firstDay={1}
           onDayPress={(d) => onSelectDate(d.dateString)}
@@ -270,7 +291,7 @@ export default function RemindersCalendar({
           renderHeader={(dateObj) => (
             <View style={s.calHeaderRow}>
               <Text style={s.calHeaderTitle}>
-                {monthYearLabel(dateObj, settings, currentLanguage)}
+                {monthYearLabel(dateObj, settings, activeLanguage)}
               </Text>
             </View>
           )}
