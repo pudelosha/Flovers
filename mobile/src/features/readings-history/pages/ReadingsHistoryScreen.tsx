@@ -137,6 +137,7 @@ function isUnauthorizedError(e: any): boolean {
 /* -------------------------------------------------------------------- */
 
 type RouteParams = Partial<{ metric: MetricKey; range: HistoryRange; id: string; name?: string }>;
+type BarLabelMode = "latest" | "hidden" | "all";
 
 // Same green tones as PlantTile / AuthCard
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -156,6 +157,7 @@ export default function ReadingsHistoryScreen() {
 
   // dummy chart options menu
   const [chartMenuOpen, setChartMenuOpen] = useState(false);
+  const [barLabelMode, setBarLabelMode] = useState<BarLabelMode>("latest");
 
   // selected device (id + names, fetched under auth)
   const [device, setDevice] = useState<
@@ -431,6 +433,7 @@ export default function ReadingsHistoryScreen() {
       if (params.metric) setMetric(params.metric);
       if (params.range) setRange(params.range);
       setHistoryStat("avg");
+      setBarLabelMode("latest");
 
       // always reset visible date span to current day/week/month on re-entry
       setAnchor(now);
@@ -461,17 +464,22 @@ export default function ReadingsHistoryScreen() {
   // Is currently selected span the "current" day/week/month (contains today)?
   const isCurrentSpan = span.from <= today && span.to >= today;
 
-  // Latest available non-empty reading index in the current span
-  // Treat 0 as "no reading" so we pick the latest bin that actually has data
-  let latestIndexInCurrentSpan: number | null = null;
-  if (isCurrentSpan) {
+  // The "latest label" mode shows the latest non-empty hour on day view.
+  // For week/month view it points at today's bin when the selected span contains today.
+  let latestLabelIndex: number | null = null;
+  if (range === "day") {
     for (let i = values.length - 1; i >= 0; i--) {
       const v = values[i];
       if (typeof v === "number" && Number.isFinite(v) && v > 0) {
-        latestIndexInCurrentSpan = i;
+        latestLabelIndex = i;
         break;
       }
     }
+  } else if (isCurrentSpan) {
+    latestLabelIndex =
+      range === "week"
+        ? Math.floor((today.getTime() - span.from.getTime()) / (24 * 60 * 60 * 1000))
+        : today.getDate() - 1;
   }
 
   // Whether the "next" arrow should be enabled (span starting in the future is blocked)
@@ -691,12 +699,69 @@ export default function ReadingsHistoryScreen() {
                               />
                             )}
                           </Pressable>
+
+                          <View style={chartMenuStyles.divider} />
                         </>
                       )}
 
                       <Pressable
                         style={chartMenuStyles.item}
-                        onPress={() => setChartMenuOpen(false)}
+                        onPress={() => {
+                          setBarLabelMode("latest");
+                          setChartMenuOpen(false);
+                        }}
+                      >
+                        <MaterialCommunityIcons
+                          name="clock-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={chartMenuStyles.icon}
+                        />
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.showLatestLabel")}
+                        </Text>
+                        {barLabelMode === "latest" && (
+                          <MaterialCommunityIcons
+                            name="check"
+                            size={15}
+                            color="#FFFFFF"
+                            style={chartMenuStyles.checkIcon}
+                          />
+                        )}
+                      </Pressable>
+
+                      <Pressable
+                        style={chartMenuStyles.item}
+                        onPress={() => {
+                          setBarLabelMode("all");
+                          setChartMenuOpen(false);
+                        }}
+                      >
+                        <MaterialCommunityIcons
+                          name="tag-multiple-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={chartMenuStyles.icon}
+                        />
+                        <Text style={chartMenuStyles.text}>
+                          {t("readingsHistory.chartMenu.showLabels")}
+                        </Text>
+                        {barLabelMode === "all" && (
+                          <MaterialCommunityIcons
+                            name="check"
+                            size={15}
+                            color="#FFFFFF"
+                            style={chartMenuStyles.checkIcon}
+                          />
+                        )}
+                      </Pressable>
+
+                      <Pressable
+                        style={chartMenuStyles.item}
+                        onPress={() => {
+                          setBarLabelMode("hidden");
+                          setChartMenuOpen(false);
+                        }}
                       >
                         <MaterialCommunityIcons
                           name="tag-off-outline"
@@ -707,21 +772,14 @@ export default function ReadingsHistoryScreen() {
                         <Text style={chartMenuStyles.text}>
                           {t("readingsHistory.chartMenu.hideLabels")}
                         </Text>
-                      </Pressable>
-
-                      <Pressable
-                        style={chartMenuStyles.item}
-                        onPress={() => setChartMenuOpen(false)}
-                      >
-                        <MaterialCommunityIcons
-                          name="tag-outline"
-                          size={16}
-                          color="#FFFFFF"
-                          style={chartMenuStyles.icon}
-                        />
-                        <Text style={chartMenuStyles.text}>
-                          {t("readingsHistory.chartMenu.showLabels")}
-                        </Text>
+                        {barLabelMode === "hidden" && (
+                          <MaterialCommunityIcons
+                            name="check"
+                            size={15}
+                            color="#FFFFFF"
+                            style={chartMenuStyles.checkIcon}
+                          />
+                        )}
                       </Pressable>
                     </View>
                   )}
@@ -744,9 +802,8 @@ export default function ReadingsHistoryScreen() {
                 color={METRIC_COLORS[metric]}
                 yTicks={4}
                 height={chartHeight}
-                fixedLabelIndex={
-                  latestIndexInCurrentSpan !== null ? latestIndexInCurrentSpan : undefined
-                }
+                fixedLabelIndex={latestLabelIndex !== null ? latestLabelIndex : undefined}
+                labelMode={barLabelMode}
               />
 
               <View onLayout={onLayoutPills}>
@@ -793,6 +850,11 @@ const chartMenuStyles = StyleSheet.create({
   },
   icon: {
     marginRight: 8,
+  },
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: "rgba(255,255,255,0.22)",
+    marginVertical: 2,
   },
   text: {
     color: "#FFFFFF",

@@ -113,19 +113,22 @@ export const s = StyleSheet.create({
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
   },
-  valueLabelBubble: {
+  valueLabelSlot: {
     position: "absolute",
     left: "50%",
-    // vertical position comes from bottom: <pixels> in component
-    transform: [{ translateX: -20 }, { translateY: -6 }],
+    width: 80,
+    transform: [{ translateX: -40 }, { translateY: -6 }],
+    alignItems: "center",
+    zIndex: 10,
+  },
+  valueLabelBubble: {
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 10,
     backgroundColor: "rgba(0,0,0,0.8)",
-    minWidth: 40,
+    minWidth: 22,
     alignItems: "center",
     justifyContent: "center",
-    zIndex: 10,
   },
   valueLabelText: {
     color: "#FFFFFF",

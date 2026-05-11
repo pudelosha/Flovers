@@ -2,6 +2,8 @@ import React, { useMemo, useState, useEffect } from "react";
 import { View, Text, Pressable } from "react-native";
 import { s } from "../styles/readings-history.styles";
 
+type LabelOverride = "show" | "hide";
+
 type Props = {
   labels: string[];
   values: number[];
@@ -11,6 +13,7 @@ type Props = {
   maxY?: number; // optional clamp (minimum scale)
   // index of bar which should always show a label (latest reading in current span)
   fixedLabelIndex?: number;
+  labelMode?: "latest" | "hidden" | "all";
 };
 
 export default function HistoryChart({
@@ -21,6 +24,7 @@ export default function HistoryChart({
   height,
   maxY,
   fixedLabelIndex,
+  labelMode = "latest",
 }: Props) {
   // Add a bit of headroom so tallest bar doesn't stick to the top
   const max = useMemo(() => {
@@ -35,32 +39,44 @@ export default function HistoryChart({
     return <View key={i} style={[s.guideLine, { top: `${top}%` }]} />;
   });
 
-  // Which bars currently show labels due to user interaction
-  const [visibleLabelIndexes, setVisibleLabelIndexes] = useState<Set<number>>(new Set());
+  const [labelOverrides, setLabelOverrides] = useState<Record<number, LabelOverride>>({});
 
-  // Reset toggled labels whenever data set changes
+  // Reset individual label changes whenever data set or global label mode changes.
   useEffect(() => {
-    setVisibleLabelIndexes(new Set());
-  }, [labels, values]);
-
-  const toggleLabel = (index: number) => {
-    // user shouldn't be able to hide the "fixed" latest reading label
-    if (fixedLabelIndex === index) return;
-
-    setVisibleLabelIndexes((prev) => {
-      const next = new Set(prev);
-      if (next.has(index)) {
-        next.delete(index);
-      } else {
-        next.add(index);
-      }
-      return next;
-    });
-  };
+    setLabelOverrides({});
+  }, [labels, values, labelMode]);
 
   const formatValue = (v: number) => {
     if (!Number.isFinite(v)) return "";
     return Number.isInteger(v) ? String(v) : v.toFixed(1);
+  };
+
+  const canDisplayLabel = (value: number) => {
+    const label = formatValue(value);
+    return label !== "" && label !== "0" && label !== "0.0";
+  };
+
+  const shouldShowLabel = (index: number, value: number) => {
+    if (!canDisplayLabel(value)) return false;
+
+    const override = labelOverrides[index];
+    if (override === "show") return true;
+    if (override === "hide") return false;
+
+    if (labelMode === "all") return true;
+    if (labelMode === "hidden") return false;
+
+    return labelMode === "latest" && fixedLabelIndex === index;
+  };
+
+  const toggleLabel = (index: number, value: number) => {
+    if (!canDisplayLabel(value)) return;
+
+    const isVisible = shouldShowLabel(index, value);
+    setLabelOverrides((prev) => ({
+      ...prev,
+      [index]: isVisible ? "hide" : "show",
+    }));
   };
 
   return (
@@ -70,9 +86,7 @@ export default function HistoryChart({
         <View style={[s.chartArea, { height }]}>
           {values.map((v, idx) => {
             const hPct = Math.max(0, Math.min(100, (v / max) * 100));
-            const isFixed = fixedLabelIndex === idx;
-            const isToggled = visibleLabelIndexes.has(idx);
-            const showLabel = isFixed || isToggled;
+            const showLabel = shouldShowLabel(idx, v);
 
             const barHeightStyle = { height: `${hPct}%` };
             // convert percentage-based bar height to pixels so we can position the bubble
@@ -80,16 +94,17 @@ export default function HistoryChart({
             const labelPosStyle = { bottom: labelBottom };
 
             return (
-              <Pressable key={idx} style={s.barTapArea} onPress={() => toggleLabel(idx)}>
+              <Pressable key={idx} style={s.barTapArea} onPress={() => toggleLabel(idx, v)}>
                 {showLabel && Number.isFinite(v) && (
-                  <View style={[s.valueLabelBubble, labelPosStyle]}>
-                    <Text
-                      style={s.valueLabelText}
-                      numberOfLines={1}
-                      ellipsizeMode="tail"
-                    >
-                      {formatValue(v)}
-                    </Text>
+                  <View style={[s.valueLabelSlot, labelPosStyle]}>
+                    <View style={s.valueLabelBubble}>
+                      <Text
+                        style={s.valueLabelText}
+                        numberOfLines={1}
+                      >
+                        {formatValue(v)}
+                      </Text>
+                    </View>
                   </View>
                 )}
                 <View style={[s.bar, barHeightStyle, { backgroundColor: color }]} />
