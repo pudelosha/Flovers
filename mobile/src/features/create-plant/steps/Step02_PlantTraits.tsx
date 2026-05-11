@@ -180,8 +180,6 @@ const TranslatedText = ({
   values?: any;
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = values ? t(tKey, values) : t(tKey);
@@ -224,6 +222,11 @@ export default function Step02_PlantTraits() {
   const selected = state.selectedPlant;
   const selectedId = selected?.id;
   const selectedName = selected?.name?.trim() || "";
+  const selectedRef = useRef(selected);
+
+  useEffect(() => {
+    selectedRef.current = selected;
+  }, [selected]);
 
   const [profile, setProfile] = useState<PlantProfile | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -232,8 +235,10 @@ export default function Step02_PlantTraits() {
   const getTranslation = useCallback(
     (key: string, fallback?: string, values?: any): string => {
       try {
-        void currentLanguage;
-        const translation = values ? t(key, values) : t(key);
+        const translation = t(
+          key,
+          values ? { ...values, lng: currentLanguage } : { lng: currentLanguage }
+        );
         return translation || fallback || key.split(".").pop() || key;
       } catch {
         return fallback || key.split(".").pop() || key;
@@ -242,8 +247,9 @@ export default function Step02_PlantTraits() {
     [t, currentLanguage]
   );
 
-  const persistProfile = (p: PlantProfile) => {
+  const persistProfile = useCallback((p: PlantProfile) => {
     const a: any = actionsRef.current;
+    const currentSelected = selectedRef.current;
 
     if (typeof a?.setSelectedPlantDefinition === "function") {
       a.setSelectedPlantDefinition(p);
@@ -252,30 +258,30 @@ export default function Step02_PlantTraits() {
 
     if (typeof a?.setSelectedPlant === "function") {
       a.setSelectedPlant({
-        ...(selected ?? {}),
-        id: (p as any)?.id ?? selected?.id,
+        ...(currentSelected ?? {}),
+        id: (p as any)?.id ?? currentSelected?.id,
 
         // IMPORTANT: do not overwrite selectedPlant.name (Step01 wants to show latin-display there)
-        name: (selected as any)?.name,
+        name: (currentSelected as any)?.name,
 
-        latin: (p as any)?.latin ?? (selected as any)?.latin,
-        predefined: (selected as any)?.predefined ?? true,
+        latin: (p as any)?.latin ?? (currentSelected as any)?.latin,
+        predefined: (currentSelected as any)?.predefined ?? true,
       });
     }
-  };
+  }, []);
 
-  const fetchSearchIndexWithLang = async (): Promise<Suggestion[]> => {
+  const fetchSearchIndexWithLang = useCallback(async (): Promise<Suggestion[]> => {
     const url = `${ENDPOINTS.searchIndex}?lang=${encodeURIComponent(preferredLang)}`;
     const data = await request<ApiPlantSuggestion[]>(url, "GET", undefined, { auth: true });
     return (data ?? []).map(serializePlantSuggestion);
-  };
+  }, [preferredLang]);
 
-  const fetchProfileWithLang = async (idOrExternalId: string | number): Promise<PlantProfile> => {
+  const fetchProfileWithLang = useCallback(async (idOrExternalId: string | number): Promise<PlantProfile> => {
     const base = ENDPOINTS.profile(idOrExternalId);
     const url = `${base}?lang=${encodeURIComponent(preferredLang)}`;
     const data = await request<ApiPlantProfile>(url, "GET", undefined, { auth: true });
     return serializePlantProfile(data);
-  };
+  }, [preferredLang]);
 
   useEffect(() => {
     let alive = true;
@@ -329,9 +335,18 @@ export default function Step02_PlantTraits() {
     return () => {
       alive = false;
     };
-  }, [selectedId, selectedName, selected?.latin, preferredLang, getTranslation]);
+  }, [
+    selectedId,
+    selectedName,
+    selected?.latin,
+    preferredLang,
+    getTranslation,
+    fetchProfileWithLang,
+    fetchSearchIndexWithLang,
+    persistProfile,
+  ]);
 
-  const getLabelForKey = (key: string) => {
+  const getLabelForKey = useCallback((key: string) => {
     const i18nKey = `createPlant.step02.traits.${key}`;
     const localized = getTranslation(i18nKey);
     if (localized && localized !== i18nKey) return localized;
@@ -340,7 +355,7 @@ export default function Step02_PlantTraits() {
     if (typeof constant === "string" && constant.trim()) return constant.trim();
 
     return titleCaseKey(key) || key;
-  };
+  }, [getTranslation]);
 
   const preferences = useMemo(() => {
     const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
@@ -454,7 +469,7 @@ export default function Step02_PlantTraits() {
       out.push({
         key: "repot_interval_months",
         label: getTranslation("createPlant.step02.labels.repotInterval", "Repotting"),
-        icon: "flower-pot",
+        icon: "pot",
         value: getTranslation("createPlant.step02.values.everyMonths", "Every {{count}} months", {
           count: p.repot_interval_months,
         }),
@@ -462,7 +477,7 @@ export default function Step02_PlantTraits() {
     }
 
     return out;
-  }, [profile, preferredLang, getTranslation, settings]);
+  }, [profile, preferredLang, getTranslation, settings, getLabelForKey]);
 
   const heroImageUrl = useMemo(() => {
     const p: any = profile;

@@ -532,6 +532,7 @@ const localStyles = StyleSheet.create({
   locationIcon: {
     marginRight: 4,
     marginBottom: 10,
+    transform: [{ translateY: 2 }],
   },
   location: {
     color: "rgba(255,255,255,0.9)",

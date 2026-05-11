@@ -1,4 +1,3 @@
-﻿import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 import type { SunRequirement, WaterRequirement, DifficultyLevel } from "../types/create-plant.types";
 
 // Header tint (consistent with your app)
@@ -87,6 +86,9 @@ export const TRAIT_ICON_BY_KEY: Record<string, string> = {
   watering: "watering-can-outline",
   moisture: "spray-bottle",
   fertilizer: "sprout",
+  repot: "pot",
+  repotting: "pot",
+  repot_interval_months: "pot",
   light: "white-balance-sunny",
 
   problems: "alert-circle-outline",
@@ -111,6 +113,9 @@ export const TRAIT_LABEL_BY_KEY: Record<string, string> = {
   watering: "Watering",
   moisture: "Moisture",
   fertilizer: "Fertilizer",
+  repot: "Repotting",
+  repotting: "Repotting",
+  repot_interval_months: "Repotting",
   light: "Light",
 
   problems: "Problems",
