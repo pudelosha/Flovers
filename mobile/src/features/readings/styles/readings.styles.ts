@@ -60,13 +60,21 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
+  metricsFrame: {
+    marginHorizontal: 18,
+    marginTop: 0,
+    paddingHorizontal: 12,
+    paddingTop: 15,
+    paddingBottom: 10,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+
   metricsRow: {
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    paddingHorizontal: 18,
-    paddingTop: 5,
-    gap: 10,
+    gap: 8,
   },
 
   col: {
@@ -75,18 +83,18 @@ export const s = StyleSheet.create({
   },
 
   iconCircle: {
-    width: 46,
-    height: 46,
-    borderRadius: 23,
+    width: 42,
+    height: 42,
+    borderRadius: 21,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 6,
+    marginBottom: 5,
   },
 
   metricValue: {
     color: "#FFFFFF",
     fontWeight: "800",
-    fontSize: 16,
+    fontSize: 15,
   },
 
   lastRow: {

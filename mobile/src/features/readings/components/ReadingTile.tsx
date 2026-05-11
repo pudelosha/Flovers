@@ -327,48 +327,50 @@ export default function ReadingTile({
         />
       )}
 
-      <View style={s.metricsRow}>
-        {showTemp && (
-          <MetricColPressable
-            icon="thermometer"
-            color={ICON_BG.temperature}
-            value={displayTemperature.value}
-            unit={displayTemperature.unit}
-            decimals={displayTemperature.decimals}
-            onPress={() => onMetricPress("temperature")}
-          />
-        )}
+      <View style={s.metricsFrame}>
+        <View style={s.metricsRow}>
+          {showTemp && (
+            <MetricColPressable
+              icon="thermometer"
+              color={ICON_BG.temperature}
+              value={displayTemperature.value}
+              unit={displayTemperature.unit}
+              decimals={displayTemperature.decimals}
+              onPress={() => onMetricPress("temperature")}
+            />
+          )}
 
-        {showHum && (
-          <MetricColPressable
-            icon="water-percent"
-            color={ICON_BG.humidity}
-            value={data.metrics.humidity}
-            unit={METRIC_UNITS.humidity}
-            decimals={1}
-            onPress={() => onMetricPress("humidity")}
-          />
-        )}
+          {showHum && (
+            <MetricColPressable
+              icon="water-percent"
+              color={ICON_BG.humidity}
+              value={data.metrics.humidity}
+              unit={METRIC_UNITS.humidity}
+              decimals={1}
+              onPress={() => onMetricPress("humidity")}
+            />
+          )}
 
-        {showLight && (
-          <MetricColPressable
-            icon="white-balance-sunny"
-            color={ICON_BG.light}
-            value={data.metrics.light}
-            unit={METRIC_UNITS.light}
-            onPress={() => onMetricPress("light")}
-          />
-        )}
+          {showLight && (
+            <MetricColPressable
+              icon="white-balance-sunny"
+              color={ICON_BG.light}
+              value={data.metrics.light}
+              unit={METRIC_UNITS.light}
+              onPress={() => onMetricPress("light")}
+            />
+          )}
 
-        {showMoist && (
-          <MetricColPressable
-            icon="water"
-            color={ICON_BG.moisture}
-            value={data.metrics.moisture}
-            unit={METRIC_UNITS.moisture}
-            onPress={() => onMetricPress("moisture")}
-          />
-        )}
+          {showMoist && (
+            <MetricColPressable
+              icon="water"
+              color={ICON_BG.moisture}
+              value={data.metrics.moisture}
+              unit={METRIC_UNITS.moisture}
+              onPress={() => onMetricPress("moisture")}
+            />
+          )}
+        </View>
       </View>
 
       <View style={localStyles.lastReadRow}>
@@ -536,7 +538,7 @@ const localStyles = StyleSheet.create({
     fontWeight: "600",
     fontSize: 12,
     flexShrink: 1,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   lastReadRow: {
     flexDirection: "row",
