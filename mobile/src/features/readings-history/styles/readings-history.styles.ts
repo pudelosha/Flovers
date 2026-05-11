@@ -30,15 +30,20 @@ export const s = StyleSheet.create({
 
   inner: { paddingHorizontal: 16, paddingTop: 14, paddingBottom: 16 },
 
-  // Segmented control (borderless)
-  segRow: { flexDirection: "row", gap: 10, marginBottom: 10 },
+  // Segmented control (merged)
+  segRow: {
+    flexDirection: "row",
+    marginBottom: 10,
+    borderRadius: 14,
+    backgroundColor: "rgba(255,255,255,0.13)",
+    overflow: "hidden",
+  },
   segBtn: {
     flex: 1,
     height: 40,
-    borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.13)", // no border
+    backgroundColor: "transparent",
   },
   segBtnActive: { backgroundColor: "rgba(11,114,133,0.92)" },
   segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 13, letterSpacing: 0.3 },
@@ -139,12 +144,13 @@ export const s = StyleSheet.create({
   pillsRow: { flexDirection: "row", gap: 10, marginTop: 4 },
   pill: {
     flex: 1,
-    height: 40,
+    height: 44,
     borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.13)", // no border
+    opacity: 0.45,
   },
-  pillActive: { backgroundColor: "rgba(11,114,133,0.92)" },
-  pillText: { color: "#FFFFFF", fontWeight: "800", fontSize: 13 },
+  pillActive: { opacity: 1 },
+  pillIcon: { marginBottom: 2 },
+  pillText: { color: "#FFFFFF", fontWeight: "800", fontSize: 8 },
 });
