@@ -75,14 +75,14 @@ export default function PlantTile({
               <LinearGradient
                 colors={[
                   "rgba(0,0,0,1.00)",
-                  "rgba(0,0,0,0.92)",
-                  "rgba(0,0,0,0.75)",
-                  "rgba(0,0,0,0.50)",
-                  "rgba(0,0,0,0.22)",
+                  "rgba(0,0,0,0.82)",
+                  "rgba(0,0,0,0.64)",
+                  "rgba(0,0,0,0.42)",
+                  "rgba(0,0,0,0.18)",
                   "rgba(0,0,0,0.00)",
                   "rgba(0,0,0,0.00)",
                 ]}
-                locations={[0, 0.07, 0.3, 0.46, 0.58, 0.66, 1]}
+                locations={[0, 0.14, 0.28, 0.44, 0.58, 0.66, 1]}
                 start={{ x: 0, y: 0.5 }}
                 end={{ x: 1, y: 0.5 }}
                 style={StyleSheet.absoluteFill}
@@ -93,7 +93,7 @@ export default function PlantTile({
               <ImageBackground
                 source={{ uri: imgUri }}
                 resizeMode="cover"
-                style={StyleSheet.absoluteFill}
+                style={s.plantImageShifted}
               />
             ) : (
               <View style={s.plantImagePlaceholder}>
@@ -114,16 +114,18 @@ export default function PlantTile({
           />
         </View>
 
-        <View
+        <LinearGradient
           pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFillObject,
-            {
-              backgroundColor: "rgba(255,255,255,0.14)",
-              borderRadius: 28,
-              zIndex: 1,
-            },
+          colors={[
+            "rgba(255,255,255,0.04)",
+            "rgba(255,255,255,0.08)",
+            "rgba(255,255,255,0.14)",
+            "rgba(255,255,255,0.14)",
           ]}
+          locations={[0, 0.42, 0.58, 1]}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          style={s.cardImageTint}
         />
 
         <View

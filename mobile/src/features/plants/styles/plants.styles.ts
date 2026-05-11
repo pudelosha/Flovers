@@ -91,6 +91,11 @@ export const s = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.20)",
   },
+  cardImageTint: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    zIndex: 1,
+  },
   cardRow: {
     flex: 1,
     flexDirection: "row",
@@ -110,6 +115,13 @@ export const s = StyleSheet.create({
     bottom: 0,
     width: "100%",
     zIndex: 0,
+  },
+  plantImageShifted: {
+    position: "absolute",
+    left: -36,
+    right: 0,
+    top: 0,
+    bottom: 0,
   },
   plantImagePlaceholder: {
     ...StyleSheet.absoluteFillObject,
