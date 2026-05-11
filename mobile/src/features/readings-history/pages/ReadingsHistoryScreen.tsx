@@ -32,7 +32,6 @@ import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
   METRIC_COLORS,
-  TILE_BLUR,
 } from "../constants/readings-history.constants";
 
 import { listReadingDevices, fetchReadingsHistory } from "../../../api/services/readings.service";
@@ -611,7 +610,7 @@ export default function ReadingsHistoryScreen() {
                         minWidth: 170,
                         paddingVertical: 6,
                         borderRadius: 16,
-                        backgroundColor: "rgba(0,0,0,0.82)",
+                        backgroundColor: "#000000",
                         borderWidth: 1,
                         borderColor: "rgba(255,255,255,0.14)",
                         overflow: "hidden",

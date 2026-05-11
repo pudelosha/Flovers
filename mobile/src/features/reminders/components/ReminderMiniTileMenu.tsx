@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   menuSheet: {
     zIndex: 1000,
     elevation: 1000,
-    backgroundColor: "rgba(0,0,0,0.92)",
+    backgroundColor: "#000000",
   },
   menuIcon: {
     marginRight: 8,
