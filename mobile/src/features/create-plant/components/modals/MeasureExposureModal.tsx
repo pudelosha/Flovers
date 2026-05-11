@@ -22,6 +22,8 @@ import type { LightLevel, Orientation } from "../../types/create-plant.types";
 import { Sensors } from "../../services/Sensors";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
 
+const MEASURE_GREEN = "rgba(16,80,63,0.92)";
+
 function luxToLightLevel(lux: number | null): LightLevel | null {
   if (lux == null || Number.isNaN(lux)) return null;
   if (lux >= 10000) return "bright-direct";
@@ -493,10 +495,8 @@ export default function MeasureExposureModal({
               <Pressable
                 style={[
                   wiz.btn,
-                  {
-                    minWidth: 110,
-                  },
-                  isTestRunning ? { opacity: 0.9 } : undefined,
+                  styles.measureButton,
+                  isTestRunning ? styles.measureButtonDisabled : undefined,
                 ]}
                 onPress={isTestRunning ? undefined : start5sTest}
                 disabled={isTestRunning}
@@ -592,6 +592,13 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     gap: 10,
     marginTop: 12,
+  },
+  measureButton: {
+    minWidth: 110,
+    backgroundColor: MEASURE_GREEN,
+  },
+  measureButtonDisabled: {
+    opacity: 0.9,
   },
   tipText: {
     color: "rgba(255,255,255,0.82)",

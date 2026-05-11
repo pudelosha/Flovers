@@ -13,25 +13,20 @@ import { fetchUserLocations, createLocation } from "../../../api/services/locati
 // EXACT SAME green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const ACTION_BLUE = "rgba(11,114,133,0.92)";
+const EMPTY_LOCATIONS: any[] = [];
 
 // Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
   tKey,
-  children,
   style,
-  variant,
   values,
 }: {
   tKey: string;
-  children?: any;
   style?: any;
-  variant?: "title" | "subtitle" | "body";
   values?: any;
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
-
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = values ? t(tKey, values) : t(tKey);
@@ -55,7 +50,7 @@ export default function Step03_SelectLocation({
   const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
 
-  const locations = (state as any)?.locations ?? [];
+  const locations = (state as any)?.locations ?? EMPTY_LOCATIONS;
 
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -231,7 +226,7 @@ export default function Step03_SelectLocation({
             wiz.nextBtnWide,
             {
               alignSelf: "stretch",
-              backgroundColor: "rgba(255,255,255,0.12)",
+              backgroundColor: ACTION_BLUE,
               justifyContent: "center",
               gap: 10,
               opacity: pressed || loading ? 0.92 : 1,
@@ -252,25 +247,19 @@ export default function Step03_SelectLocation({
         {(["indoor", "outdoor", "other"] as LocationCategory[]).map((cat) => {
           const arr = (grouped as any)[cat] as any[];
           return (
-            <View key={cat} style={{ marginBottom: 8 }}>
-              <View style={{ marginBottom: 5 }}>
+            <View key={cat} style={localStyles.locationGroupFrame}>
+              <View style={localStyles.locationGroupHeader}>
                 <Text style={[wiz.locationCat, { fontWeight: "800", fontStyle: "italic" }]}>
                   {getTranslation(
                     `createPlant.step03.categories.${cat}`,
                     cat.charAt(0).toUpperCase() + cat.slice(1)
                   )}
                 </Text>
-                <View
-                  style={{
-                    height: 1,
-                    backgroundColor: "rgba(255,255,255,0.18)",
-                    marginTop: 4,
-                  }}
-                />
+                <View style={localStyles.locationGroupDivider} />
               </View>
 
               {arr.length === 0 ? (
-                <Text style={{ color: "rgba(255,255,255,0.7)", marginTop: 6 }}>
+                <Text style={localStyles.emptyGroupText}>
                   {loading
                     ? getTranslation("createPlant.step03.loading", "Loading...")
                     : getTranslation(`createPlant.step03.noLocations.${cat}`, `No ${cat} locations`)}
@@ -301,3 +290,24 @@ export default function Step03_SelectLocation({
     </View>
   );
 }
+
+const localStyles = StyleSheet.create({
+  locationGroupFrame: {
+    marginBottom: 10,
+    padding: 14,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  locationGroupHeader: {
+    marginBottom: 5,
+  },
+  locationGroupDivider: {
+    height: 1,
+    backgroundColor: "rgba(255,255,255,0.18)",
+    marginTop: 4,
+  },
+  emptyGroupText: {
+    color: "rgba(255,255,255,0.7)",
+    marginTop: 6,
+  },
+});

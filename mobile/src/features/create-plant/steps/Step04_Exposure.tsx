@@ -16,6 +16,7 @@ const ORIENTATION_KEYS = ["S", "E", "W", "N"] as const;
 // EXACT SAME green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const ACTION_BLUE = "rgba(11,114,133,0.92)";
 
 type Props = {
   measureUnit?: "metric" | "imperial";
@@ -214,7 +215,7 @@ export default function Step04_Exposure({
         </View>
 
         <Pressable
-          style={[wiz.actionFull, { marginTop: 10, marginBottom: 10 }]}
+          style={[wiz.actionFull, localStyles.measureButton]}
           onPress={onOpenMeasureModal}
           android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
@@ -256,3 +257,11 @@ export default function Step04_Exposure({
     </View>
   );
 }
+
+const localStyles = StyleSheet.create({
+  measureButton: {
+    marginTop: 10,
+    marginBottom: 10,
+    backgroundColor: ACTION_BLUE,
+  },
+});

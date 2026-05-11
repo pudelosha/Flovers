@@ -52,22 +52,16 @@ function SectionCheckbox({
   return (
     <Pressable
       onPress={!disabled ? onToggle : undefined}
-      style={{
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 10,
-        marginTop: 10,
-        marginBottom: 6,
-        opacity: disabled ? 0.55 : 1,
-      }}
+      style={[localStyles.checkboxRow, disabled && localStyles.checkboxRowDisabled]}
       android_ripple={{ color: "rgba(255,255,255,0.12)" }}
     >
       <MaterialCommunityIcons
         name={checked ? "checkbox-marked" : "checkbox-blank-outline"}
         size={22}
         color="#FFFFFF"
+        style={localStyles.checkboxIcon}
       />
-      <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>{label}</Text>
+      <Text style={localStyles.checkboxLabel}>{label}</Text>
     </Pressable>
   );
 }
@@ -137,6 +131,29 @@ function InlineDropdown<T extends string>({
     </>
   );
 }
+
+const localStyles = StyleSheet.create({
+  checkboxRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    marginTop: 10,
+    marginBottom: 6,
+  },
+  checkboxRowDisabled: {
+    opacity: 0.55,
+  },
+  checkboxIcon: {
+    flexShrink: 0,
+  },
+  checkboxLabel: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    flex: 1,
+    flexShrink: 1,
+    minWidth: 0,
+  },
+});
 
 function DaysSlider({
   value,
