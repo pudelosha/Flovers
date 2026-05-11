@@ -1,5 +1,6 @@
 export type HistoryRange = "day" | "week" | "month";
 export type MetricKey = "temperature" | "humidity" | "light" | "moisture";
+export type HistoryStat = "avg" | "max" | "min";
 
 export type HistoryPoint = {
   at: string;      // bucket start ISO datetime

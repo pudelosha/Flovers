@@ -79,3 +79,85 @@ def test_history_rejects_invalid_metric():
 
     assert response.status_code == 400
     assert "metric must be one of" in response.json()["detail"]
+
+
+@pytest.mark.django_db
+def test_history_week_supports_daily_max_stat():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = _device(user)
+    Reading.objects.create(
+        device=device,
+        timestamp=timezone.datetime(2026, 5, 4, 8, 0, tzinfo=dt_timezone.utc),
+        temperature=18,
+    )
+    Reading.objects.create(
+        device=device,
+        timestamp=timezone.datetime(2026, 5, 4, 16, 0, tzinfo=dt_timezone.utc),
+        temperature=24,
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.get(
+        reverse("history"),
+        data={
+            "device_id": device.id,
+            "range": "week",
+            "metric": "temperature",
+            "stat": "max",
+            "anchor": "2026-05-05T12:00:00Z",
+        },
+    )
+
+    data = response.json()
+    assert response.status_code == 200
+    assert data["stat"] == "max"
+    assert len(data["points"]) == 7
+    assert data["points"][0]["value"] == 24.0
+
+
+@pytest.mark.django_db
+def test_history_month_supports_daily_min_stat():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = _device(user)
+    Reading.objects.create(
+        device=device,
+        timestamp=timezone.datetime(2026, 5, 10, 8, 0, tzinfo=dt_timezone.utc),
+        moisture=55,
+    )
+    Reading.objects.create(
+        device=device,
+        timestamp=timezone.datetime(2026, 5, 10, 18, 0, tzinfo=dt_timezone.utc),
+        moisture=42,
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.get(
+        reverse("history"),
+        data={
+            "device_id": device.id,
+            "range": "month",
+            "metric": "moisture",
+            "stat": "min",
+            "anchor": "2026-05-12T12:00:00Z",
+        },
+    )
+
+    data = response.json()
+    assert response.status_code == 200
+    assert data["stat"] == "min"
+    assert data["points"][9]["value"] == 42.0
+
+
+@pytest.mark.django_db
+def test_history_rejects_invalid_stat():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    device = _device(user)
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.get(reverse("history"), data={"device_id": device.id, "stat": "median"})
+
+    assert response.status_code == 400
+    assert "stat must be one of" in response.json()["detail"]

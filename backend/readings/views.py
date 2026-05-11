@@ -402,6 +402,7 @@ HISTORY_UNITS = {
 
 VALID_METRICS = set(HISTORY_UNITS.keys())
 VALID_RANGES = {"day", "week", "month"}
+VALID_HISTORY_STATS = {"avg", "max", "min"}
 
 
 def _start_of_week_mon(dt: timezone.datetime) -> timezone.datetime:
@@ -1240,6 +1241,7 @@ def history(request):
       - device_id: required, ID of ReadingDevice belonging to current user
       - range: "day" | "week" | "month"  (default "day")
       - metric: "temperature" | "humidity" | "light" | "moisture" (default "temperature")
+      - stat: "avg" | "max" | "min" for week/month daily buckets (default "avg")
       - anchor: ISO datetime for the anchor day (optional, defaults to now)
 
     Returns locale-neutral points:
@@ -1274,6 +1276,10 @@ def history(request):
             "detail": "metric must be one of: temperature, humidity, light, moisture"
         }, status=400)
 
+    requested_stat = request.query_params.get("stat", "avg")
+    if requested_stat not in VALID_HISTORY_STATS:
+        return Response({"detail": "stat must be one of: avg, max, min"}, status=400)
+
     # Anchor date (defaults to now); parse_ts_or_now handles None/invalid gracefully
     anchor = parse_ts_or_now(request.query_params.get("anchor"))
     anchor_local = timezone.localtime(anchor)
@@ -1294,7 +1300,7 @@ def history(request):
     else:
         bin_count = _month_day_count(anchor_local)
 
-    bins = [{"sum": 0.0, "cnt": 0} for _ in range(bin_count)]
+    bins = [{"sum": 0.0, "cnt": 0, "min": None, "max": None} for _ in range(bin_count)]
 
     for rec in qs:
         ts_local = timezone.localtime(rec.timestamp)
@@ -1325,13 +1331,20 @@ def history(request):
 
         bins[idx]["sum"] += val_f
         bins[idx]["cnt"] += 1
+        bins[idx]["min"] = val_f if bins[idx]["min"] is None else min(bins[idx]["min"], val_f)
+        bins[idx]["max"] = val_f if bins[idx]["max"] is None else max(bins[idx]["max"], val_f)
 
     values = []
+    effective_stat = "avg" if range_str == "day" else requested_stat
     for b in bins:
-        if b["cnt"]:
-            values.append(round(b["sum"] / b["cnt"], 2))
-        else:
+        if not b["cnt"]:
             values.append(0.0)
+        elif effective_stat == "max":
+            values.append(round(b["max"], 2))
+        elif effective_stat == "min":
+            values.append(round(b["min"], 2))
+        else:
+            values.append(round(b["sum"] / b["cnt"], 2))
 
     # Return locale-neutral bucket start timestamps instead of display labels
     if range_str == "day":
@@ -1353,6 +1366,7 @@ def history(request):
         },
         "range": range_str,
         "metric": metric,
+        "stat": effective_stat,
         "unit": HISTORY_UNITS[metric],
         "span": {
             "from": span_from.isoformat(),

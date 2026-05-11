@@ -27,7 +27,12 @@ import MetricPills from "../components/MetricPills";
 import HistoryChart from "../components/HistoryChart";
 import DateNavigator from "../components/DateNavigator";
 
-import type { HistoryRange, MetricKey, DateSpan } from "../types/readings-history.types";
+import type {
+  HistoryRange,
+  MetricKey,
+  DateSpan,
+  HistoryStat,
+} from "../types/readings-history.types";
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
@@ -147,6 +152,7 @@ export default function ReadingsHistoryScreen() {
   // Defaults: Daily + Temperature
   const [range, setRange] = useState<HistoryRange>("day");
   const [metric, setMetric] = useState<MetricKey>("temperature");
+  const [historyStat, setHistoryStat] = useState<HistoryStat>("avg");
 
   // dummy chart options menu
   const [chartMenuOpen, setChartMenuOpen] = useState(false);
@@ -349,6 +355,7 @@ export default function ReadingsHistoryScreen() {
             deviceId: device.id,
             range,
             metric,
+            stat: range === "day" ? undefined : historyStat,
             anchor: anchor.toISOString(),
           },
           { auth: true }
@@ -396,7 +403,7 @@ export default function ReadingsHistoryScreen() {
     return () => {
       mounted = false;
     };
-  }, [device, range, metric, anchor, span, showToast, t, i18n.language]);
+  }, [device, range, metric, historyStat, anchor, span, showToast, t, i18n.language]);
 
   const navTo = useCallback(
     (name: string) => {
@@ -423,6 +430,7 @@ export default function ReadingsHistoryScreen() {
 
       if (params.metric) setMetric(params.metric);
       if (params.range) setRange(params.range);
+      setHistoryStat("avg");
 
       // always reset visible date span to current day/week/month on re-entry
       setAnchor(now);
@@ -604,50 +612,87 @@ export default function ReadingsHistoryScreen() {
                       pointerEvents="auto"
                       style={chartMenuStyles.sheet}
                     >
-                      <Pressable
-                        style={chartMenuStyles.item}
-                        onPress={() => setChartMenuOpen(false)}
-                      >
-                        <MaterialCommunityIcons
-                          name="chart-bell-curve"
-                          size={16}
-                          color="#FFFFFF"
-                          style={chartMenuStyles.icon}
-                        />
-                        <Text style={chartMenuStyles.text}>
-                          {t("readingsHistory.chartMenu.showAverage")}
-                        </Text>
-                      </Pressable>
+                      {range !== "day" && (
+                        <>
+                          <Pressable
+                            style={chartMenuStyles.item}
+                            onPress={() => {
+                              setHistoryStat("avg");
+                              setChartMenuOpen(false);
+                            }}
+                          >
+                            <MaterialCommunityIcons
+                              name="chart-bell-curve"
+                              size={16}
+                              color="#FFFFFF"
+                              style={chartMenuStyles.icon}
+                            />
+                            <Text style={chartMenuStyles.text}>
+                              {t("readingsHistory.chartMenu.showAverage")}
+                            </Text>
+                            {historyStat === "avg" && (
+                              <MaterialCommunityIcons
+                                name="check"
+                                size={15}
+                                color="#FFFFFF"
+                                style={chartMenuStyles.checkIcon}
+                              />
+                            )}
+                          </Pressable>
 
-                      <Pressable
-                        style={chartMenuStyles.item}
-                        onPress={() => setChartMenuOpen(false)}
-                      >
-                        <MaterialCommunityIcons
-                          name="arrow-up-bold-outline"
-                          size={16}
-                          color="#FFFFFF"
-                          style={chartMenuStyles.icon}
-                        />
-                        <Text style={chartMenuStyles.text}>
-                          {t("readingsHistory.chartMenu.showMax")}
-                        </Text>
-                      </Pressable>
+                          <Pressable
+                            style={chartMenuStyles.item}
+                            onPress={() => {
+                              setHistoryStat("max");
+                              setChartMenuOpen(false);
+                            }}
+                          >
+                            <MaterialCommunityIcons
+                              name="arrow-up-bold-outline"
+                              size={16}
+                              color="#FFFFFF"
+                              style={chartMenuStyles.icon}
+                            />
+                            <Text style={chartMenuStyles.text}>
+                              {t("readingsHistory.chartMenu.showMax")}
+                            </Text>
+                            {historyStat === "max" && (
+                              <MaterialCommunityIcons
+                                name="check"
+                                size={15}
+                                color="#FFFFFF"
+                                style={chartMenuStyles.checkIcon}
+                              />
+                            )}
+                          </Pressable>
 
-                      <Pressable
-                        style={chartMenuStyles.item}
-                        onPress={() => setChartMenuOpen(false)}
-                      >
-                        <MaterialCommunityIcons
-                          name="arrow-down-bold-outline"
-                          size={16}
-                          color="#FFFFFF"
-                          style={chartMenuStyles.icon}
-                        />
-                        <Text style={chartMenuStyles.text}>
-                          {t("readingsHistory.chartMenu.showMin")}
-                        </Text>
-                      </Pressable>
+                          <Pressable
+                            style={chartMenuStyles.item}
+                            onPress={() => {
+                              setHistoryStat("min");
+                              setChartMenuOpen(false);
+                            }}
+                          >
+                            <MaterialCommunityIcons
+                              name="arrow-down-bold-outline"
+                              size={16}
+                              color="#FFFFFF"
+                              style={chartMenuStyles.icon}
+                            />
+                            <Text style={chartMenuStyles.text}>
+                              {t("readingsHistory.chartMenu.showMin")}
+                            </Text>
+                            {historyStat === "min" && (
+                              <MaterialCommunityIcons
+                                name="check"
+                                size={15}
+                                color="#FFFFFF"
+                                style={chartMenuStyles.checkIcon}
+                              />
+                            )}
+                          </Pressable>
+                        </>
+                      )}
 
                       <Pressable
                         style={chartMenuStyles.item}
@@ -754,5 +799,8 @@ const chartMenuStyles = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 0.2,
     fontSize: 12,
+  },
+  checkIcon: {
+    marginLeft: 12,
   },
 });

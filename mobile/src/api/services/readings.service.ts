@@ -291,6 +291,7 @@ export type ApiHistoryResponse = {
   };
   range: "day" | "week" | "month";
   metric: "temperature" | "humidity" | "light" | "moisture";
+  stat?: "avg" | "max" | "min";
   unit: string;
   span: {
     from: string; // ISO
@@ -308,6 +309,7 @@ export async function fetchReadingsHistory(
     deviceId: number;
     range: "day" | "week" | "month";
     metric: "temperature" | "humidity" | "light" | "moisture";
+    stat?: "avg" | "max" | "min";
     anchor?: string; // ISO datetime; defaults to now on backend if omitted
   },
   opts: { auth?: boolean } = { auth: true }
@@ -316,6 +318,9 @@ export async function fetchReadingsHistory(
   q.set("device_id", String(params.deviceId));
   q.set("range", params.range);
   q.set("metric", params.metric);
+  if (params.stat) {
+    q.set("stat", params.stat);
+  }
   if (params.anchor) {
     q.set("anchor", params.anchor);
   }
