@@ -3,8 +3,8 @@
   "name": "Adiantum formosum",
   "latin": "Adiantum formosum",
   "sun": "medium",
-  "water": "medium",
-  "difficulty": "medium",
+  "water": "high",
+  "difficulty": "hard",
   "popular": false,
   "recommended_pot_materials": [
     "plastic",
@@ -15,7 +15,7 @@
     "fern"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 4,
   "moisture_required": true,
   "moisture_interval_days": 3,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Średnie światło",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中くらいの光",
-          "ko": "중간 광도"
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "排水良好的土壤",
-          "ja": "排水性の良い土",
-          "ko": "배수가 좋은 토양"
+          "en": "Rich, well-drained",
+          "pl": "Żyzne, przepuszcz.",
+          "de": "Nährreich, locker",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "تربة غنية مُصرّفة",
+          "hi": "उपजाऊ, जलनिकासी",
+          "zh": "疏松、排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥, 배수 좋음"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Rega moderada",
-          "ar": "سقي معتدل",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 급수"
+          "en": "Keep evenly moist",
+          "pl": "Stała lekka wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Substrat humide",
+          "it": "Sempre legger umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة ثابتة",
+          "hi": "लगातार नम रखें",
+          "zh": "保持微湿",
+          "ja": "常にやや湿らせる",
+          "ko": "항상 촉촉하게"
         }
       }
     },
@@ -86,18 +86,18 @@
       "key": "difficulty",
       "value": {
         "text": {
-          "en": "Medium",
-          "pl": "Średni",
-          "de": "Mittel",
-          "fr": "Moyenne",
-          "it": "Media",
-          "es": "Media",
-          "pt": "Média",
-          "ar": "متوسط",
-          "hi": "मध्यम",
-          "zh": "中等",
-          "ja": "中程度",
-          "ko": "중간"
+          "en": "Fussy indoors",
+          "pl": "Kapryśna w domu",
+          "de": "Empfindlich drinnen",
+          "fr": "Délicate en intérieur",
+          "it": "Delicata in casa",
+          "es": "Delicada en interior",
+          "pt": "Exigente em casa",
+          "ar": "حساسة داخل المنزل",
+          "hi": "घर में नाज़ुक",
+          "zh": "室内较挑剔",
+          "ja": "室内で繊細",
+          "ko": "실내에서 예민"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Moderate humidity",
-          "pl": "Umiarkowana wilgotność",
-          "de": "Mäßige Luftfeuchtigkeit",
-          "fr": "Humidité modérée",
-          "it": "Umidità moderata",
-          "es": "Humedad moderada",
-          "pt": "Umidade moderada",
-          "ar": "رطوبة معتدلة",
-          "hi": "मध्यम आर्द्रता",
-          "zh": "适中湿度",
-          "ja": "適度な湿度",
-          "ko": "적당한 습도"
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Forte humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
         }
       }
     },

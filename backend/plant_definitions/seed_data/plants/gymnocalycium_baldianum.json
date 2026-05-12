@@ -3,7 +3,7 @@
   "name": "Bald's Gymnocalycium",
   "latin": "Gymnocalycium baldianum",
   "sun": "medium",
-  "water": "medium",
+  "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Medium water",
-          "pl": "Średnie podlewanie",
-          "de": "Mittlere Bewässerung",
-          "fr": "Arrosage moyen",
-          "it": "Annaffiatura media",
-          "es": "Riego medio",
-          "pt": "Água média",
-          "ar": "سقي متوسط",
-          "hi": "मध्यम पानी",
-          "zh": "中等水分",
-          "ja": "中程度の水やり",
-          "ko": "중간 물주기"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Gießen, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando asciutto",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "干时浇水",
+          "ja": "乾いたら水をやる",
+          "ko": "마르면 물주기"
         }
       }
     },

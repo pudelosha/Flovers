@@ -2,7 +2,7 @@
   "external_id": "wolffia_arrhiza",
   "name": "Watermeal",
   "latin": "Wolffia arrhiza",
-  "sun": "low",
+  "sun": "high",
   "water": "high",
   "difficulty": "hard",
   "popular": false,
@@ -15,7 +15,7 @@
     "all-purpose"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 2,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": false,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Low light",
-          "pl": "Niskie światło",
-          "de": "Niedriges Licht",
-          "fr": "Lumière faible",
-          "it": "Luce bassa",
-          "es": "Luz baja",
-          "pt": "Luz baixa",
-          "ar": "ضوء منخفض",
-          "hi": "कम रोशनी",
-          "zh": "低光",
-          "ja": "低光",
-          "ko": "낮은 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonnig",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Peat-free soil",
-          "pl": "Gleba bez torfu",
-          "de": "Torf-freier Boden",
-          "fr": "Sol sans tourbe",
-          "it": "Terreno senza torba",
-          "es": "Suelo sin turba",
-          "pt": "Solo sem turfa",
-          "ar": "تربة خالية من الخث",
-          "hi": "पीट रहित मिट्टी",
-          "zh": "无泥炭土壤",
-          "ja": "ピートフリー土壌",
-          "ko": "무펄프 토양"
+          "en": "No soil; aquatic",
+          "pl": "Bez gleby; wodna",
+          "de": "Keine Erde; aquatisch",
+          "fr": "Sans sol; aquatique",
+          "it": "Senza terreno; acquatica",
+          "es": "Sin suelo; acuática",
+          "pt": "Sem solo; aquática",
+          "ar": "بلا تربة؛ مائية",
+          "hi": "मिट्टी नहीं; जलीय",
+          "zh": "无土；水生",
+          "ja": "土不要；水生",
+          "ko": "흙 없음; 수생"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "High water needs",
-          "pl": "Wysokie potrzeby wodne",
-          "de": "Hoher Wasserbedarf",
-          "fr": "Besoins en eau élevés",
-          "it": "Alte necessità d'acqua",
-          "es": "Altas necesidades de agua",
-          "pt": "Altas necessidades de água",
-          "ar": "احتياجات مياه عالية",
-          "hi": "उच्च जल आवश्यकता",
-          "zh": "高水需求",
-          "ja": "高い水の必要性",
-          "ko": "높은 물 필요"
+          "en": "Keep in shallow water",
+          "pl": "Płytka woda stale",
+          "de": "Stets flach im Wasser",
+          "fr": "Eau peu profonde",
+          "it": "Acqua bassa costante",
+          "es": "Agua poco profunda",
+          "pt": "Água rasa constante",
+          "ar": "ماء ضحل دائم",
+          "hi": "उथला पानी रखें",
+          "zh": "保持浅水",
+          "ja": "浅水を保つ",
+          "ko": "얕은 물 유지"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchtigkeit",
-          "fr": "Humidité élevée",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Aquatic plant",
+          "pl": "Roślina wodna",
+          "de": "Wasserpflanze",
+          "fr": "Plante aquatique",
+          "it": "Pianta acquatica",
+          "es": "Planta acuática",
+          "pt": "Planta aquática",
+          "ar": "نبات مائي",
+          "hi": "जलीय पौधा",
+          "zh": "水生植物",
+          "ja": "水生植物",
+          "ko": "수생식물"
         }
       }
     },

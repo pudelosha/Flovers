@@ -2,7 +2,7 @@
   "external_id": "sarracenia_purpurea",
   "name": "Purple Pitcher Plant",
   "latin": "Sarracenia purpurea",
-  "sun": "medium",
+  "sun": "high",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Światło średnie",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम रोशनी",
-          "zh": "中等光照",
-          "ja": "中程度の光",
-          "ko": "중간 빛"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonnig",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광"
         }
       }
     },

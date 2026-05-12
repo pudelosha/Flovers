@@ -3,7 +3,7 @@
   "name": "Mother of Thousands",
   "latin": "Kalanchoe daigremontiana",
   "sun": "high",
-  "water": "medium",
+  "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate",
-          "pl": "Umiarkowane",
-          "de": "Mäßig",
-          "fr": "Modéré",
-          "it": "Moderato",
-          "es": "Moderado",
-          "pt": "Moderado",
-          "ar": "معتدل",
-          "hi": "मध्यम",
-          "zh": "适度",
-          "ja": "適度",
-          "ko": "적당"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Gießen, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando asciutto",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "干时浇水",
+          "ja": "乾いたら水をやる",
+          "ko": "마르면 물주기"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "Low",
-          "pl": "Niska",
-          "de": "Niedrig",
-          "fr": "Faible",
-          "it": "Bassa",
-          "es": "Baja",
-          "pt": "Baixa",
-          "ar": "منخفض",
-          "hi": "कम",
-          "zh": "低",
-          "ja": "低い",
-          "ko": "낮음"
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
         }
       }
     },

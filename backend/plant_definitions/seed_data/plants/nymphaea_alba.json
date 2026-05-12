@@ -2,7 +2,7 @@
   "external_id": "nymphaea_alba",
   "name": "White Water Lily",
   "latin": "Nymphaea alba",
-  "sun": "medium",
+  "sun": "high",
   "water": "high",
   "difficulty": "medium",
   "popular": false,
@@ -15,7 +15,7 @@
     "green-plants"
   ],
   "water_required": true,
-  "water_interval_days": 7,
+  "water_interval_days": 2,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
@@ -29,18 +29,18 @@
       "key": "sun",
       "value": {
         "text": {
-          "en": "Medium light",
-          "pl": "Światło średnie",
-          "de": "Mittleres Licht",
-          "fr": "Lumière moyenne",
-          "it": "Luce media",
-          "es": "Luz media",
-          "pt": "Luz média",
-          "ar": "ضوء متوسط",
-          "hi": "मध्यम प्रकाश",
-          "zh": "中等光照",
-          "ja": "中くらいの光",
-          "ko": "중간광"
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonnig",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광"
         }
       }
     },
@@ -48,18 +48,18 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "排水良好的土壤",
-          "ja": "排水性の良い土壌",
-          "ko": "배수가 좋은 토양"
+          "en": "Muddy, pond soil",
+          "pl": "Mulista ziemia",
+          "de": "Schlammiger Boden",
+          "fr": "Sol vaseux",
+          "it": "Suolo fangoso",
+          "es": "Suelo fangoso",
+          "pt": "Solo lodoso",
+          "ar": "تربة طينية",
+          "hi": "कीचड़ वाली मिट्टी",
+          "zh": "泥质土",
+          "ja": "泥質の土",
+          "ko": "진흙 토양"
         }
       }
     },
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Frequent watering",
-          "pl": "Częste podlewanie",
-          "de": "Häufiges Gießen",
-          "fr": "Arrosage fréquent",
-          "it": "Annaffiature frequenti",
-          "es": "Riego frecuente",
-          "pt": "Rega frequente",
-          "ar": "الري المتكرر",
-          "hi": "बार-बार पानी देना",
-          "zh": "频繁浇水",
-          "ja": "頻繁な水やり",
-          "ko": "자주 물주기"
+          "en": "Keep in shallow water",
+          "pl": "Płytka woda stale",
+          "de": "Stets flach im Wasser",
+          "fr": "Eau peu profonde",
+          "it": "Acqua bassa costante",
+          "es": "Agua poco profunda",
+          "pt": "Água rasa constante",
+          "ar": "ماء ضحل دائم",
+          "hi": "उथला पानी रखें",
+          "zh": "保持浅水",
+          "ja": "浅水を保つ",
+          "ko": "얕은 물 유지"
         }
       }
     },
@@ -124,18 +124,18 @@
       "key": "humidity",
       "value": {
         "text": {
-          "en": "High humidity",
-          "pl": "Wysoka wilgotność",
-          "de": "Hohe Luftfeuchtigkeit",
-          "fr": "Haute humidité",
-          "it": "Alta umidità",
-          "es": "Alta humedad",
-          "pt": "Alta umidade",
-          "ar": "رطوبة عالية",
-          "hi": "उच्च आर्द्रता",
-          "zh": "高湿度",
-          "ja": "高湿度",
-          "ko": "높은 습도"
+          "en": "Aquatic plant",
+          "pl": "Roślina wodna",
+          "de": "Wasserpflanze",
+          "fr": "Plante aquatique",
+          "it": "Pianta acquatica",
+          "es": "Planta acuática",
+          "pt": "Planta aquática",
+          "ar": "نبات مائي",
+          "hi": "जलीय पौधा",
+          "zh": "水生植物",
+          "ja": "水生植物",
+          "ko": "수생식물"
         }
       }
     },

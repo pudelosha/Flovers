@@ -3,7 +3,7 @@
   "name": "Kalanchoe Gastonis-Bonnieri",
   "latin": "Kalanchoe gastonis-bonnieri",
   "sun": "medium",
-  "water": "medium",
+  "water": "low",
   "difficulty": "medium",
   "popular": false,
   "recommended_pot_materials": [
@@ -67,18 +67,18 @@
       "key": "watering",
       "value": {
         "text": {
-          "en": "Moderate watering",
-          "pl": "Umiarkowane podlewanie",
-          "de": "Mäßiges Gießen",
-          "fr": "Arrosage modéré",
-          "it": "Annaffiatura moderata",
-          "es": "Riego moderado",
-          "pt": "Regar moderadamente",
-          "ar": "سقاية معتدلة",
-          "hi": "मध्यम पानी देना",
-          "zh": "适度浇水",
-          "ja": "適度な水やり",
-          "ko": "적당한 물주기"
+          "en": "Water when dry",
+          "pl": "Podlewać, gdy suche",
+          "de": "Gießen, wenn trocken",
+          "fr": "Arroser quand sec",
+          "it": "Annaffiare quando asciutto",
+          "es": "Regar cuando esté seco",
+          "pt": "Regar quando seco",
+          "ar": "سقي عندما يكون جافًا",
+          "hi": "सूखा होने पर पानी देना",
+          "zh": "干时浇水",
+          "ja": "乾いたら水をやる",
+          "ko": "마르면 물주기"
         }
       }
     },
