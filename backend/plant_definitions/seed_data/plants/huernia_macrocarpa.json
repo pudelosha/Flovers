@@ -1,13 +1,17 @@
 {
   "external_id": "huernia_macrocarpa",
-  "name": "Huernia macrocarpa",
+  "name": "Dragon flower",
   "latin": "Huernia macrocarpa",
   "sun": "high",
   "water": "low",
   "difficulty": "medium",
   "popular": false,
-  "recommended_pot_materials": ["terracotta"],
-  "recommended_soil_mixes": ["cactus-succulent"],
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus-succulent"
+  ],
   "water_required": true,
   "water_interval_days": 14,
   "moisture_required": false,
