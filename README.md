@@ -1,6 +1,6 @@
 # Flovers — Plant care, reminders & IoT readings
 
-Flovers is a **React Native** app (TypeScript) backed by a **Django** API that helps you manage your plants, schedule care routines, and monitor **real sensor readings** (temperature, humidity, light, soil moisture) from linked devices. Users can create “Plant Instances”, attach reminders, and connect IoT devices to see current and historical data — all secured with **JWT authentication**.
+Flovers is a **React Native** app (TypeScript) backed by a **Django** API that helps you manage your plants, schedule care routines, recognize plant species with ML, and monitor **real sensor readings** (temperature, humidity, light, soil moisture) from linked devices. Users can create “Plant Instances”, attach reminders, connect IoT devices, and control watering pumps — all secured with **JWT authentication**.
 
 ---
 
@@ -17,12 +17,18 @@ Flovers is a **React Native** app (TypeScript) backed by a **Django** API that h
 ### ⏰ Reminders
 - Schedule care tasks for:
   - Watering
-  - Moisture checks
+  - Misting / spraying
   - Fertilising
   - General care
   - Repotting
 - Repeating intervals (days or months)
-- Track task progress and mark as **pending / completed / skipped**
+- Track task progress and mark tasks as **pending / completed**
+
+### 🤖 Plant Recognition
+- Identify plants from the mobile camera or gallery
+- Backend ML model trained on **700+ plant species**
+- Recognition results are linked with plant definitions, pictures, and care metadata
+- Use recognition during plant creation to prefill species-based care suggestions
 
 ### 🌡️ Readings (IoT Devices)
 - Link a device to a specific plant
@@ -31,6 +37,15 @@ Flovers is a **React Native** app (TypeScript) backed by a **Django** API that h
 - Enable **moisture alerts** with a threshold slider (0–100%)
 - View the latest snapshot per tile or open detailed history
 - Enable/disable device ingestion and rotate account secrets for security
+- Configure devices with an optional **watering pump**
+- Let the backend automatically schedule watering when moisture drops below a threshold
+- Schedule or recall pump watering tasks manually from the mobile app
+
+### 🔔 Notifications & Profile
+- Email and push notification preferences for reminder and moisture events
+- Multilingual UI and email templates
+- Profile settings for language, units, background, tile style, and FAB position
+- Account management, password/email changes, support messages, and bug reports
 
 ### 🔐 Authentication
 - Full **JWT** register/login system
@@ -45,6 +60,8 @@ Flovers is a **React Native** app (TypeScript) backed by a **Django** API that h
 - **Auth:** JWT (JSON Web Token)
 - **UI/UX:** Glass/blur overlays, animated lists, modern modals & sliders
 - **State/data:** Typed service layer with API mappers for UI isolation
+- **ML:** Backend plant-recognition model trained on 700+ plants with definitions and pictures
+- **Deployment:** VPS-hosted backend and React documentation site
 
 ---
 
@@ -58,7 +75,7 @@ The app uses **JWT** authentication. Tokens are attached automatically to API re
 
 ### Prerequisites
 
-- Node 18+
+- Node 20+
 - Yarn or npm
 - React Native environment set up (Android Studio and/or Xcode)
 - Python 3.11+ with Django & DRF
@@ -98,7 +115,7 @@ Flovers includes a complete **Docker Compose setup** for the backend stack.
 | **beat** | Celery Beat scheduler for periodic tasks |
 | **redis** | Message broker used by Celery |
 | **db** | PostgreSQL 16 database |
-| **mailhog** | Local SMTP testing server with web UI at [http://localhost:8025](http://localhost:8025) |
+| **mailhog** | Optional local SMTP testing service with web UI at [http://localhost:8025](http://localhost:8025) |
 
 ### Example `docker-compose.yml`
 
@@ -182,8 +199,10 @@ docker compose up --build
 
 Once running:
 - Backend available at: **http://localhost:8000**
-- MailHog UI: **http://localhost:8025**
+- MailHog UI, if enabled for local email testing: **http://localhost:8025**
 - PostgreSQL: **localhost:5432**
+
+Production email delivery is handled from the VPS environment; MailHog remains useful for local development and testing.
 
 ### Environment variables
 
@@ -200,13 +219,11 @@ POSTGRES_PASSWORD=apppass
 
 ---
 
-## 🗺️ Roadmap
+## 🌍 Deployment & Web
 
-- 🤖 **ML-based plant recognition:** detect plant species using the mobile camera and backend ML model.
-- 🧠 **Smart reminder planning:** schedule reminders based on plant preferences and light exposure (shade/full sun).
-- 📊 **Charts & insights:** visualize reading history and detect anomalies.
-- 🔔 **Push notifications:** notify users about reminders and low moisture alerts.
-- 🌍 **Offline-first support:** caching and optimistic updates for poor connectivity.
+- Backend is hosted on a VPS
+- Web documentation site: [https://flovers.app/](https://flovers.app/)
+- The web project is a React documentation/presentation site for the mobile app and backend ecosystem
 
 ---
 
