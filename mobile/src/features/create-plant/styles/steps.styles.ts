@@ -1,3 +1,5 @@
 ﻿import React from "react";
 import { View } from "react-native";
-export default function StubComponent() { return <View />; }
+export default function StubComponent() {
+  return React.createElement(View);
+}

@@ -1,0 +1,68 @@
+appId: com.flovers.mobile
+name: Flovers mobile smoke
+env:
+  FLOVERS_TEST_EMAIL: test@example.com
+  FLOVERS_TEST_PASSWORD: password
+  FLOVERS_TEST_PLANT: Test fern
+  FLOVERS_TEST_LOCATION: Living room
+  FLOVERS_TEST_DEVICE: Test ESP32
+---
+- launchApp
+- assertVisible: "Login"
+- tapOn: "Email"
+- inputText: ${FLOVERS_TEST_EMAIL}
+- tapOn: "Password"
+- inputText: ${FLOVERS_TEST_PASSWORD}
+- tapOn: "Sign in"
+
+# Create a plant.
+- assertVisible: "Home"
+- tapOn: "Plants"
+- tapOn:
+    point: "90%,82%"
+- tapOn: "Create plant"
+- assertVisible: "Select a plant"
+- tapOn: "Next"
+- assertVisible: "Choose a location"
+- tapOn: ${FLOVERS_TEST_LOCATION}
+- tapOn: "Next"
+- repeat:
+    times: 5
+    commands:
+      - tapOn: "Next"
+- tapOn: "Display name"
+- inputText: ${FLOVERS_TEST_PLANT}
+- tapOn: "Create"
+- extendedWaitUntil:
+    visible: ${FLOVERS_TEST_PLANT}
+    timeout: 15000
+
+# Create a reminder for the plant.
+- tapOn: "Reminders"
+- tapOn:
+    point: "90%,82%"
+- tapOn: "Add reminder"
+- assertVisible: "Add reminder"
+- tapOn: "Select plant"
+- tapOn: ${FLOVERS_TEST_PLANT}
+- tapOn: "Misting"
+- tapOn: "Save"
+- assertVisible: "Reminder created"
+
+# Configure a readings device with pump support.
+- tapOn: "Readings"
+- tapOn:
+    point: "90%,82%"
+- tapOn: "Link device"
+- assertVisible: "Link device"
+- tapOn: "Select plant"
+- tapOn: ${FLOVERS_TEST_PLANT}
+- tapOn: "Device name (required)"
+- inputText: ${FLOVERS_TEST_DEVICE}
+- scrollUntilVisible:
+    element: "Include water pump with this device"
+    direction: DOWN
+- tapOn: "Include water pump with this device"
+- tapOn: "Automatic pump launch when soil moisture is beneath threshold"
+- tapOn: "Save"
+- assertVisible: "Device added"
