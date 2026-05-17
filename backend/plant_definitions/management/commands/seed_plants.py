@@ -36,7 +36,6 @@ def normalize_traits_in_place(payload: dict) -> None:
         if not isinstance(t, dict):
             continue
         t["key"] = normalize_trait_key(t.get("key", ""))
-    # drop empties
     payload["traits"] = [t for t in traits if isinstance(t, dict) and (t.get("key") or "").strip()]
 
 
@@ -48,13 +47,11 @@ def _media_root() -> Path:
 
 
 def _seed_dir() -> Path:
-    # plant_definitions/management/commands/seed_plants.py -> plant_definitions/
     app_dir = Path(__file__).resolve().parents[2]
     return app_dir / "seed_data" / "plants"
 
 
 def normalize_difficulty(value: str) -> str:
-    # Your DIFFICULTY_CHOICES: easy, medium, hard
     if value == "very_easy":
         return "easy"
     return value
@@ -72,7 +69,6 @@ def validate_plant_payload(p: dict) -> None:
     if not isinstance(p["translations"], dict):
         raise CommandError("translations must be an object/dict keyed by language code")
 
-    # Validate trait multi-lang text length
     for trait in p["traits"]:
         if "key" not in trait or "value" not in trait:
             raise CommandError("Each trait must have 'key' and 'value'")
@@ -126,7 +122,6 @@ class Command(BaseCommand):
 
         files = sorted(seed_dir.glob("*.json"))
         if only:
-            # Interpret --only as filename stem first.
             candidate = seed_dir / f"{only}.json"
             if candidate.exists():
                 files = [candidate]
@@ -146,7 +141,6 @@ class Command(BaseCommand):
             try:
                 payload = json.loads(fp.read_text(encoding="utf-8"))
 
-                # Normalize trait keys before validating/storing (consistency fix)
                 normalize_traits_in_place(payload)
 
                 validate_plant_payload(payload)
@@ -154,12 +148,10 @@ class Command(BaseCommand):
                 latin = payload["latin"].strip()
                 desired_external_id = normalize_plant_key(payload.get("external_id") or latin)
 
-                # Idempotent write: DB uniqueness is on latin, so upsert by latin
                 with transaction.atomic():
                     obj, created = PlantDefinition.objects.update_or_create(
                         latin=latin,
                         defaults={
-                            # IMPORTANT: do NOT blindly set external_id here, because it may be unique too
                             "name": (payload.get("name") or "").strip(),
                             "sun": payload["sun"],
                             "water": payload["water"],
@@ -179,7 +171,6 @@ class Command(BaseCommand):
                         },
                     )
 
-                    # Safely normalize external_id (only if provided and not taken by another row)
                     if desired_external_id:
                         taken = (
                             PlantDefinition.objects.filter(external_id=desired_external_id)
@@ -190,7 +181,6 @@ class Command(BaseCommand):
                             obj.external_id = desired_external_id
                             obj.save(update_fields=["external_id"])
 
-                # Translations
                 translations = payload["translations"]
                 for lang in LANGS:
                     tr = translations.get(lang) or {}
@@ -213,29 +203,23 @@ class Command(BaseCommand):
                         defaults={"common_name": common_name, "description": description},
                     )
 
-                # ---- Images ----
                 hero_name = (payload.get("image_hero") or "").strip()
                 thumb_name = (payload.get("image_thumb") or "").strip()
 
-                # Clear old bad values (e.g. 'plants/hero/...' stored inside the field name)
                 if obj.image_hero and _is_probably_bad_image_name(obj.image_hero.name):
                     obj.image_hero.delete(save=False)
                 if obj.image_thumb and _is_probably_bad_image_name(obj.image_thumb.name):
                     obj.image_thumb.delete(save=False)
 
-                # Attach hero (always if force_images, otherwise if empty)
                 if hero_name and (force_images or not obj.image_hero):
                     hero_path = media_root / "plants" / "hero" / hero_name
                     if hero_path.exists():
                         with open(hero_path, "rb") as f:
-                            # IMPORTANT: pass only filename; upload_to adds plants/hero/
                             obj.image_hero.save(hero_name, File(f), save=False)
 
-                # Attach thumb (always if force_images, otherwise if empty)
                 if thumb_name and (force_images or not obj.image_thumb):
                     thumb_path = media_root / "plants" / "thumb" / thumb_name
 
-                    # Fallback: some setups store thumbs in hero folder too
                     if not thumb_path.exists():
                         alt = media_root / "plants" / "hero" / thumb_name
                         if alt.exists():

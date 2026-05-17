@@ -16,7 +16,6 @@ MEASURE_CHOICES = [("metric", "Metric"), ("imperial", "Imperial")]
 BACKGROUND_CHOICES = [("bg1", "Background 1"), ("bg2", "Background 2"), ("bg3", "Background 3"), ("bg4", "Background 4"), ("bg5", "Background 5")]
 FAB_CHOICES = [("left", "Left"), ("right", "Right")]
 
-# Tile motive choices (light / dark tiles)
 TILE_MOTIVE_CHOICES = [
     ("light", "Light"),
     ("dark", "Dark"),
@@ -40,14 +39,12 @@ class ProfileSettings(TimeStampedModel):
     temperature_unit = models.CharField(max_length=1, choices=TEMP_CHOICES, default="C")
     measure_unit = models.CharField(max_length=8, choices=MEASURE_CHOICES, default="metric")
 
-    # 0.00 .. 0.60
     tile_transparency = models.DecimalField(
         max_digits=3, decimal_places=2, default=0.12,
         validators=[MinValueValidator(0.0), MaxValueValidator(0.6)],
         help_text="UI overlay transparency (0.00 – 0.60).",
     )
 
-    # Light / dark tile motive
     tile_motive = models.CharField(
         max_length=5,
         choices=TILE_MOTIVE_CHOICES,
@@ -101,7 +98,7 @@ class NotificationDeliveryLog(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="notification_delivery_logs")
     channel = models.CharField(max_length=16, choices=CHANNEL_CHOICES)
     kind = models.CharField(max_length=32, choices=KIND_CHOICES, default=KIND_DUE_TODAY)
-    local_date = models.DateField()  # date in user's timezone (send date)
+    local_date = models.DateField()
     created_at = models.DateTimeField(default=timezone.now, editable=False)
 
     class Meta:
@@ -163,12 +160,10 @@ class SupportMessage(models.Model):
     kind = models.CharField(max_length=16, choices=KIND_CHOICES)
     subject = models.CharField(max_length=200)
 
-    # contact uses "message", bug uses "description" — we store both normalized in "body"
     body = models.TextField()
 
     copy_to_user = models.BooleanField(default=True)
 
-    # optional diagnostics (can be expanded later)
     user_email = models.EmailField(blank=True, default="")
     user_agent = models.CharField(max_length=255, blank=True, default="")
     app_version = models.CharField(max_length=64, blank=True, default="")

@@ -8,7 +8,6 @@ from reminders.models import Reminder
 from plant_definitions.serializers import _abs_media_url
 
 class PlantInstanceSerializer(serializers.ModelSerializer):
-    # incoming payload uses these simple ids
     plant_definition_id = serializers.IntegerField(required=False, allow_null=True)
     location_id = serializers.IntegerField(required=True)
 
@@ -16,23 +15,18 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
         model = PlantInstance
         fields = [
             "id",
-            # FKs as ids
             "plant_definition_id",
             "location_id",
-            # display
             "display_name",
             "notes",
             "purchase_date",
             # IMPORTANT: do not accept/store photo from the client
             # "photo_uri",
-            # exposure
             "light_level",
             "orientation",
             "distance_cm",
-            # container / soil
             "pot_material",
             "soil_mix",
-            # auto tasks prefs
             "create_auto_tasks",
             "water_task_enabled",
             "repot_task_enabled",
@@ -45,7 +39,6 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             "fertilize_interval_days",
             "care_interval_days",
             "repot_interval_months",
-            # QR & meta
             "qr_code",
             "created_at",
             "updated_at",
@@ -81,9 +74,6 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
         )
         obj.save()
 
-        # ---------------------------
-        # Auto-reminders initialization
-        # ---------------------------
         def _mk_reminder(_type: str, interval_value: int, unit: str):
             r, _ = Reminder.objects.get_or_create(
                 plant=obj,
@@ -92,30 +82,25 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
                 defaults={
                     "start_date": timezone.localdate(),
                     "interval_value": interval_value,
-                    "interval_unit": unit,  # "days" | "months"
+                    "interval_unit": unit,
                     "is_active": True,
                 },
             )
             r.ensure_one_pending_task()
 
         if obj.create_auto_tasks:
-            # Watering (NOTE: currently reusing moisture_interval_days for water as well)
             if obj.water_task_enabled and obj.moisture_interval_days:
                 _mk_reminder("water", int(obj.moisture_interval_days), "days")
 
-            # Misting / moisture (NEW)
             if obj.moisture_required and obj.moisture_interval_days:
                 _mk_reminder("moisture", int(obj.moisture_interval_days), "days")
 
-            # Fertilising
             if obj.fertilize_required and obj.fertilize_interval_days:
                 _mk_reminder("fertilize", int(obj.fertilize_interval_days), "days")
 
-            # General care
             if obj.care_required and obj.care_interval_days:
                 _mk_reminder("care", int(obj.care_interval_days), "days")
 
-            # Repotting (months)
             if obj.repot_task_enabled and obj.repot_interval_months:
                 _mk_reminder("repot", int(obj.repot_interval_months), "months")
 
@@ -166,8 +151,8 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "id": obj.plant_definition_id,
             "name": obj.plant_definition.name,
             "latin": obj.plant_definition.latin,
-            "image_thumb": thumb,  # preferred
-            "image": hero,         # optional fallback
+            "image_thumb": thumb,
+            "image": hero,
         }
 
 # detail serializer for GET /api/plant-instances/<id>/
@@ -175,7 +160,6 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
 class PlantInstanceDetailSerializer(serializers.ModelSerializer):
     location = serializers.SerializerMethodField()
     plant_definition = serializers.SerializerMethodField()
-    # include ids as well for convenience on the client
     plant_definition_id = serializers.IntegerField(source="plant_definition.id", read_only=True)
     location_id = serializers.IntegerField(source="location.id", read_only=True)
 
@@ -183,26 +167,20 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
         model = PlantInstance
         fields = [
             "id",
-            # nested read
             "plant_definition",
             "location",
-            # ids (read)
             "plant_definition_id",
             "location_id",
-            # display
             "display_name",
             "notes",
             "purchase_date",
             # do not return backend photo_uri (local-only on device)
             # "photo_uri",
-            # exposure
             "light_level",
             "orientation",
             "distance_cm",
-            # container / soil
             "pot_material",
             "soil_mix",
-            # auto tasks prefs
             "create_auto_tasks",
             "water_task_enabled",
             "repot_task_enabled",
@@ -215,7 +193,6 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "fertilize_interval_days",
             "care_interval_days",
             "repot_interval_months",
-            # QR & meta
             "qr_code",
             "created_at",
             "updated_at",

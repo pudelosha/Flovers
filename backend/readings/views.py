@@ -99,7 +99,6 @@ def _serialize_pump_task_for_app(task):
 
     data = PumpTaskSerializer(task).data
 
-    # Keep expiry in the model/backend safety logic, but do not expose it to the app modal.
     data.pop("expires_at", None)
 
     return data
@@ -161,13 +160,10 @@ def _autosize_worksheet_columns(ws):
 
 
 def _build_readings_export_workbook(readings, pump_tasks, sort_key: str, sort_dir: str) -> bytes:
-    # lazy import so missing dependency would affect only this endpoint
     from openpyxl import Workbook
     from openpyxl.styles import Font
 
     reverse = sort_dir == "desc"
-
-    # ============================== SHEET 1: READINGS ==============================
 
     reading_rows = []
 
@@ -244,8 +240,6 @@ def _build_readings_export_workbook(readings, pump_tasks, sort_key: str, sort_di
         ])
 
     _autosize_worksheet_columns(ws_readings)
-
-    # ============================== SHEET 2: WATERING TASKS ==============================
 
     task_rows = []
 
@@ -456,7 +450,6 @@ def _span_for(range_str: str, anchor_dt: timezone.datetime):
         s = _start_of_week_mon(anchor_dt)
         e = _end_of_week_sun(anchor_dt)
         return s, e
-    # month
     s = _first_of_month(anchor_dt)
     e = _last_of_month(anchor_dt)
     return s, e
@@ -593,7 +586,6 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             "pending_pump_task": None,
         }, status=status.HTTP_200_OK)
 
-    # Optional convenience actions (auth)
     @action(detail=True, methods=["post"], url_path="code.txt")
     def code_text(self, request, pk=None):
         device = self.get_object()
@@ -708,8 +700,6 @@ def device_setup(request):
         "sample_payloads": {
             "ingest": {
                 "secret": "ACCOUNT_SECRET",
-                # device_id is optional when device_key is provided
-                # "device_id": 123,
                 "device_key": "AB12CD34",
                 "timestamp": "2025-10-31T13:45:00Z",
                 "metrics": {
@@ -721,7 +711,6 @@ def device_setup(request):
             },
             "read": {
                 "secret": "ACCOUNT_SECRET",
-                # "device_id": 123,  # optional
                 "device_key": "AB12CD34",
                 "from": "2025-10-30T00:00:00Z",
                 "to": "2025-10-31T23:59:59Z",
@@ -860,10 +849,8 @@ def ingest(request):
 
     metrics = request.data.get("metrics") or {}
 
-    # Original timestamp (for "last_read_at" / UX)
     ts = parse_ts_or_now(request.data.get("timestamp"))
 
-    # Round timestamp down to full hour for storage in Reading.timestamp
     ts_rounded = ts.replace(minute=0, second=0, microsecond=0)
 
     try:
@@ -871,10 +858,8 @@ def ingest(request):
             should_send_moisture_alert = False
             alert_moisture_value = None
 
-            # Lock the device row while we update readings.
             device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
 
-            # Either create a new hourly record or update the existing one
             rec, created = Reading.objects.get_or_create(
                 device=device,
                 timestamp=ts_rounded,
@@ -893,7 +878,6 @@ def ingest(request):
                 rec.moisture = metrics.get("moisture")
                 rec.save(update_fields=["temperature", "humidity", "light", "moisture"])
 
-            # Update moisture alert state and schedule notification dispatch on threshold crossing
             moisture_value = rec.moisture
             if (
                 moisture_value is not None
@@ -921,7 +905,6 @@ def ingest(request):
             ):
                 device.moisture_alert_active = False
 
-            # Update device's cached fields (last_read_at keeps the REAL timestamp)
             device.last_read_at = ts
             device.latest_snapshot = {
                 "temperature": rec.temperature,
@@ -944,7 +927,6 @@ def ingest(request):
                     )
                 )
     except IntegrityError:
-        # Very unlikely with get_or_create, but keep behavior consistent / idempotent
         pass
 
     return Response(
@@ -1082,7 +1064,6 @@ def pump_complete(request):
             task = get_object_or_404(PumpTask, id=task_id, device=device)
             task = PumpTask.objects.select_for_update().get(id=task.id)
 
-            # Idempotent success for repeated Arduino retries
             if task.status == PumpTask.STATUS_EXECUTED:
                 return Response({
                     "detail": "Pump execution was already recorded.",
@@ -1133,7 +1114,6 @@ def pump_complete(request):
                 "last_pump_run_source": device.last_pump_run_source,
             })
 
-        # No task_id means this is a device-local pump event, normally automatic watering.
         task = PumpTask.objects.create(
             device=device,
             source=source,
@@ -1211,7 +1191,6 @@ def feed(request):
     if "to" in request.query_params:
         qs = qs.filter(timestamp__lte=request.query_params["to"])
 
-    # Only the latest reading (matching optional filters)
     latest = qs.order_by("-timestamp").first()
     if latest is None:
         readings_data = []
@@ -1280,19 +1259,16 @@ def history(request):
     if requested_stat not in VALID_HISTORY_STATS:
         return Response({"detail": "stat must be one of: avg, max, min"}, status=400)
 
-    # Anchor date (defaults to now); parse_ts_or_now handles None/invalid gracefully
     anchor = parse_ts_or_now(request.query_params.get("anchor"))
     anchor_local = timezone.localtime(anchor)
 
     span_from, span_to = _span_for(range_str, anchor_local)
 
-    # Django will convert local aware datetimes to UTC when comparing with stored timestamps
     qs = device.readings.filter(
         timestamp__gte=span_from,
         timestamp__lte=span_to,
     ).order_by("timestamp")
 
-    # Determine number of bins
     if range_str == "day":
         bin_count = 24
     elif range_str == "week":
@@ -1325,7 +1301,6 @@ def history(request):
         except (TypeError, ValueError):
             continue
 
-        # skip non-finite values (NaN, +inf, -inf) so JSON stays valid
         if not math.isfinite(val_f):
             continue
 
@@ -1346,7 +1321,6 @@ def history(request):
         else:
             values.append(round(b["sum"] / b["cnt"], 2))
 
-    # Return locale-neutral bucket start timestamps instead of display labels
     if range_str == "day":
         bucket_starts = [span_from + timedelta(hours=i) for i in range(bin_count)]
     else:

@@ -74,7 +74,6 @@ def send_fcm_multicast(
 
     payload_data = {str(k): str(v) for k, v in (data or {}).items() if v is not None}
 
-    # Newer SDK path
     if hasattr(messaging, "send_each_for_multicast"):
         msg = messaging.MulticastMessage(
             tokens=tokens,
@@ -82,11 +81,8 @@ def send_fcm_multicast(
             data=payload_data,
         )
         resp = messaging.send_each_for_multicast(msg)
-        # resp is a BatchResponse-like object:
-        # resp.responses, resp.success_count, resp.failure_count
         return resp
 
-    # Older SDK fallback: send one-by-one
     responses: list[SendResponseLike] = []
     success_count = 0
     failure_count = 0

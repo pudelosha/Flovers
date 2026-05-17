@@ -82,7 +82,6 @@ def _log_sent(user_id: int, channel: str, kind: str, local_date) -> None:
 
 
 def _get_user_lang(user) -> str:
-    # Prefer ProfileSettings.language if present, else fallback to settings default.
     default = getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en"
     try:
         ps = getattr(user, "profile_settings", None)
@@ -260,21 +259,18 @@ def check_and_send_daily_task_notifications(self):
         email_time_match = _matches_minute(now_local, pn.email_hour, pn.email_minute)
         push_time_match = _matches_minute(now_local, pn.push_hour, pn.push_minute)
 
-        # --- EMAIL: due today ---
         if pn.email_daily and email_time_match:
             if _should_send(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_DUE_TODAY, local_date):
                 due_count = _count_due_on_date(user.id, local_date)
                 if due_count > 0 and _send_email_due_today(user, due_count):
                     _log_sent(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
 
-        # --- EMAIL: overdue 1 day ---
         if pn.email_24h and email_time_match:
             if _should_send(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date):
                 overdue_count = _count_due_on_date(user.id, yesterday)
                 if overdue_count > 0 and _send_email_overdue_1d(user, overdue_count):
                     _log_sent(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date)
 
-        # --- PUSH: due today ---
         if pn.push_daily and push_time_match:
             should = _should_send(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
             due_count = _count_due_on_date(user.id, local_date) if should else 0
@@ -306,7 +302,6 @@ def check_and_send_daily_task_notifications(self):
                 if sent > 0:
                     _log_sent(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
 
-        # --- PUSH: overdue 1 day ---
         if pn.push_24h and push_time_match:
             if _should_send(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date):
                 overdue_count = _count_due_on_date(user.id, yesterday)

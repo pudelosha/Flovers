@@ -43,7 +43,6 @@ class PlantInstanceListCreateView(ListCreateAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_serializer_class(self):
-        # read-optimized on GET; write serializer on POST
         if self.request.method == "GET":
             return PlantInstanceListSerializer
         return PlantInstanceSerializer
@@ -78,14 +77,11 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        # protect by user
         return (
             PlantInstance.objects
             .filter(user=self.request.user)
             .select_related("location", "plant_definition")
         )
-
-    # keep default write serializer choice for PATCH/PUT via DRF, but override responses
 
     def retrieve(self, request, *args, **kwargs):
         """Return FULL detail shape needed by the mobile edit screen."""
@@ -135,10 +131,8 @@ class PlantInstanceByQRView(APIView):
             .first()
         )
         if not plant:
-            # 404 to avoid leaking whether the code exists for other users
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
 
-        # return the READ shape, same as list/detail GET (list shape is fine here)
         data = PlantInstanceListSerializer(plant, context={"request": request}).data
         return Response(data, status=status.HTTP_200_OK)
 
@@ -177,7 +171,6 @@ class PlantInstanceSendQREmailView(APIView):
 
         lang = _request_lang(request)
 
-        # Match the mobile app QR format
         qr_payload = f"{public_base}/api/plant-instances/by-qr/?code={quote(plant.qr_code)}"
 
         img = qrcode.make(qr_payload)

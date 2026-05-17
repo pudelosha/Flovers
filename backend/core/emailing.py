@@ -71,7 +71,6 @@ def send_templated_email(
 
     lang = (lang or getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en").strip().lower()
 
-    # Base context (base.json + global fields)
     base_ctx = merge_base(
         {},
         lang=lang,
@@ -82,24 +81,19 @@ def send_templated_email(
         },
     )
 
-    # Scope context from JSON (accounts.activation, profiles.due_today, ...)
     scope = template_name.replace("/", ".")
     scope_ctx = load_email_scope(scope, lang=lang)
 
-    # Caller context (highest precedence)
     caller_ctx = dict(context or {})
 
-    # Convenience mapping
     if "link" not in caller_ctx:
         if "activation_link" in caller_ctx:
             caller_ctx["link"] = caller_ctx["activation_link"]
         elif "reset_link" in caller_ctx:
             caller_ctx["link"] = caller_ctx["reset_link"]
 
-    # Final context
     ctx: dict[str, Any] = {**base_ctx, **scope_ctx, **caller_ctx}
 
-    # Subject
     subject: str = ""
     if subject_key:
         subject = t(subject_key, lang=lang, default="") or ""
@@ -115,11 +109,9 @@ def send_templated_email(
 
     base_from = from_email or getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
 
-    # Render fragments
     html_fragment = _render_optional(f"email/{template_name}.html", ctx)
     txt_fragment = _render_optional(f"email/{template_name}.txt", ctx)
 
-    # Wrap with base templates
     html = ""
     txt = ""
 
@@ -128,7 +120,6 @@ def send_templated_email(
     if txt_fragment:
         txt = _render_optional("email/base.txt", {**ctx, "content_txt": txt_fragment})
 
-    # Fallbacks
     if not txt and html:
         txt = strip_tags(html)
     if not html and txt:

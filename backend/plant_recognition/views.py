@@ -34,7 +34,6 @@ def _abs_media_url(request, value) -> str | None:
 
     rel = getattr(value, "url", None)
 
-    # Support string values too
     if not rel and isinstance(value, str):
         v = value.strip()
         if not v:
@@ -101,7 +100,6 @@ class PlantRecognitionView(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        # topk: between 1 and 10, default 3
         try:
             topk_raw = request.data.get("topk", "3")
             topk = max(1, min(10, int(topk_raw)))
@@ -109,11 +107,6 @@ class PlantRecognitionView(APIView):
             topk = 3
 
         try:
-            # predictions example:
-            # [
-            #   { "id": "ml-0", "name": "...", "latin": "...", "score": 0.85, "rank": 1 },
-            #   ...
-            # ]
             predictions = predict_topk(image, topk=topk)
         except Exception as e:
             logger.exception("Plant recognition failed")
@@ -122,7 +115,6 @@ class PlantRecognitionView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
 
-        # Ensure best-first ordering regardless of inference output
         predictions = sorted(
             predictions,
             key=lambda p: float(p.get("score", 0.0)),
@@ -133,7 +125,6 @@ class PlantRecognitionView(APIView):
             p.get("latin", "") for p in predictions
         )
 
-        # score is treated as probability (0..1)
         raw_results = []
         for p in predictions:
             external_id = normalize_plant_key(p["latin"])

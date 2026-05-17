@@ -16,10 +16,6 @@ from PIL import Image
 BASE_DIR = Path(__file__).resolve().parent
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 
-# Choose which model to load via env var (optional).
-# Examples:
-#   setx PLANT_MODEL web_scrapped_resnet18_v1
-#   setx PLANT_MODEL plants_downloaded_resnet18_v1
 MODEL_NAME = os.environ.get("PLANT_MODEL", "web_scrapped_resnet18_v1")
 
 WEIGHTS_PATH = ARTIFACTS_DIR / f"{MODEL_NAME}_best.pth"
@@ -61,7 +57,6 @@ def _load_class_names() -> list[str]:
     if isinstance(data, list):
         return data
     if isinstance(data, dict):
-        # keys "0", "1", ...
         return [data[str(i)] for i in range(len(data))]
     raise ValueError("Unsupported classes.json format")
 
@@ -94,16 +89,11 @@ def _load_model() -> nn.Module:
     try:
         state = torch.load(WEIGHTS_PATH, map_location=DEVICE)
 
-        # In your training, "best.pth" is saved via torch.save(model.state_dict(), ...),
-        # so 'state' should be a state_dict. This handles both formats safely:
         if isinstance(state, dict) and "model_state" in state:
-            # checkpoint-style dict (if ever used)
             state_dict = state["model_state"]
         else:
-            # state_dict-style (expected)
             state_dict = state
 
-        # strict=True is safer; if you ever change heads/classes it should fail loudly.
         model.load_state_dict(state_dict, strict=True)
 
     except Exception as e:
@@ -116,7 +106,6 @@ def _load_model() -> nn.Module:
     return model
 
 
-# Single global model instance, loaded once at import time
 MODEL: nn.Module = _load_model()
 
 # --- Public prediction API -------------------------------------------------
@@ -155,7 +144,7 @@ def predict_topk(
         name = CLASS_NAMES[idx]
         results.append(
             {
-                "id": f"ml-{idx}",  # views.py maps this to id=None for API output
+                "id": f"ml-{idx}",
                 "name": name,
                 "latin": name,
                 "score": float(p),

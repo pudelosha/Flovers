@@ -11,18 +11,16 @@ def _pick_language(request) -> str:
     if request is None:
         return "en"
     
-    # Check query parameters for 'lang'
     lang = (request.query_params.get("lang") or "").strip().lower()
     if lang:
         return lang
     
-    # Otherwise, check the 'Accept-Language' header
     accept = (request.headers.get("Accept-Language") or "").strip().lower()
     if accept:
         first = accept.split(",")[0].strip()
         return first.split("-")[0] if first else "en"
     
-    return "en"  # Default to 'en' if nothing is found
+    return "en"
 
 
 def _get_translation(obj: PlantDefinition, lang: str) -> PlantDefinitionTranslation | None:
@@ -52,7 +50,6 @@ def _abs_media_url(request, value) -> str | None:
 
     rel = getattr(value, "url", None)
 
-    # Support string values too (in case some rows were seeded differently)
     if not rel and isinstance(value, str):
         v = value.strip()
         if not v:
@@ -95,7 +92,7 @@ class PopularPlantDefinitionSerializer(serializers.ModelSerializer):
 
     def get_display_name(self, obj: PlantDefinition):
         request = self.context.get("request")
-        lang = self.context.get("lang", "en")  # Ensure we get the language context
+        lang = self.context.get("lang", "en")
         tr = _get_translation(obj, lang)
         if tr and tr.common_name.strip():
             return tr.common_name.strip()

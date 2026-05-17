@@ -30,7 +30,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
     latest = serializers.SerializerMethodField()
     pending_pump_task = serializers.SerializerMethodField()
 
-    # UI alias fields (write-only) so current modal payload can be sent as-is
     mode = serializers.CharField(write_only=True, required=False)
     plantId = serializers.IntegerField(write_only=True, required=False)
     name = serializers.CharField(write_only=True, required=False)
@@ -50,7 +49,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReadingDevice
         fields = (
-            # canonical API/model fields
             "id",
             "plant",
             "plant_name",
@@ -86,7 +84,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
 
-            # UI alias fields (write-only)
             "mode",
             "plantId",
             "name",
@@ -141,7 +138,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
     def to_internal_value(self, data):
         data = data.copy()
 
-        # ---- UI aliases -> model fields ----
         if "plantId" in data and "plant" not in data:
             data["plant"] = data.get("plantId")
 
@@ -185,7 +181,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
                 "sendPushWateringNotifications"
             )
 
-        # ---- nested modal sensors payload ----
         sensors = data.get("sensors")
         if isinstance(sensors, dict):
             if "moistureAlertEnabled" in sensors and "moisture_alert_enabled" not in data:
@@ -194,13 +189,11 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             if "moistureAlertPct" in sensors and "moisture_alert_threshold" not in data:
                 data["moisture_alert_threshold"] = sensors.get("moistureAlertPct")
 
-            # keep only actual sensor toggles in sensors JSON
             normalized_sensors = dict(sensors)
             normalized_sensors.pop("moistureAlertEnabled", None)
             normalized_sensors.pop("moistureAlertPct", None)
             data["sensors"] = normalized_sensors
 
-        # UI-only field, ignored by backend
         data.pop("mode", None)
 
         return super().to_internal_value(data)
@@ -246,11 +239,9 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             attrs["send_email_notifications"] = False
             attrs["send_push_notifications"] = False
 
-            # Automatic watering depends on soil moisture readings.
             attrs["automatic_pump_launch"] = False
             attrs["pump_threshold_pct"] = None
 
-        # Validate moisture alert threshold
         final_moisture_alert_enabled = attrs.get(
             "moisture_alert_enabled",
             moisture_alert_enabled,
@@ -275,7 +266,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
                     "moisture_alert_threshold": "Must be between 0 and 100."
                 })
 
-        # Normalize pump fields
         final_pump_included = attrs.get("pump_included", pump_included)
         final_automatic_pump_launch = attrs.get(
             "automatic_pump_launch",
@@ -288,7 +278,6 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             attrs["send_email_watering_notifications"] = False
             attrs["send_push_watering_notifications"] = False
 
-        # Validate pump threshold
         if attrs.get("automatic_pump_launch", final_automatic_pump_launch):
             if not attrs.get("pump_included", final_pump_included):
                 raise serializers.ValidationError({

@@ -1,4 +1,3 @@
-# views.py
 from __future__ import annotations
 
 from django.db import IntegrityError, transaction
@@ -86,8 +85,6 @@ class PushDeviceRegisterView(APIView):
                     },
                 )
         except IntegrityError:
-            # If two requests race, unique(token) can raise.
-            # Recover by fetching and updating.
             obj = PushDevice.objects.get(token=token)
             created = False
             PushDevice.objects.filter(pk=obj.pk).update(

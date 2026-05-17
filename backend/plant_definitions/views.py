@@ -19,24 +19,22 @@ def _pick_language(request) -> str:
     if request is None:
         return "en"
     
-    # Check query parameters for 'lang'
     lang = (request.query_params.get("lang") or "").strip().lower()
     if lang:
         return lang
     
-    # Otherwise, check the 'Accept-Language' header
     accept = (request.headers.get("Accept-Language") or "").strip().lower()
     if accept:
         first = accept.split(",")[0].strip()
         return first.split("-")[0] if first else "en"
     
-    return "en"  # Default to 'en' if nothing is found
+    return "en"
 
 class PopularPlantDefinitionsView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        lang = _pick_language(request)  # Retrieve the language from the query params
+        lang = _pick_language(request)
         qs = (
             PlantDefinition.objects.filter(popular=True)
             .prefetch_related("translations")
@@ -62,17 +60,14 @@ class PlantDefinitionSearchIndexView(APIView):
     def get(self, request):
         search_query = request.query_params.get("search", "").strip()
 
-        # If there's a search query, filter by the latin field (with or without underscores)
         if search_query:
-            # Replace underscores with spaces before querying
             search_query = search_query.replace("_", " ")
             qs = (
-                PlantDefinition.objects.filter(latin__icontains=search_query)  # Case insensitive search
+                PlantDefinition.objects.filter(latin__icontains=search_query)
                 .prefetch_related("translations")
                 .only("id", "external_id", "name", "latin")
             )
         else:
-            # If no search query, return all plants
             qs = (
                 PlantDefinition.objects.all()
                 .prefetch_related("translations")
@@ -107,7 +102,7 @@ class PlantDefinitionProfileByKeyView(RetrieveAPIView):
     def get(self, request, *args, **kwargs):
         try:
             plant_key = kwargs.get("external_id")
-            print(f"Fetching plant profile for external_id: {plant_key}")  # Log the external_id
+            print(f"Fetching plant profile for external_id: {plant_key}")
             plant = resolve_plant_definition_by_key(plant_key)
             if plant is None:
                 return Response({"error": "Plant not found"}, status=404)
@@ -116,5 +111,5 @@ class PlantDefinitionProfileByKeyView(RetrieveAPIView):
         except PlantDefinition.DoesNotExist:
             return Response({"error": "Plant not found"}, status=404)
         except Exception as e:
-            print(f"Error fetching plant profile: {str(e)}")  # Log the error for debugging
+            print(f"Error fetching plant profile: {str(e)}")
             return Response({"error": str(e)}, status=500)

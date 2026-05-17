@@ -29,18 +29,14 @@ class PlantDefinition(models.Model):
     water = models.CharField(max_length=10, choices=WATER_CHOICES)
     difficulty = models.CharField(max_length=10, choices=DIFFICULTY_CHOICES)
 
-    # Images (Option C: filesystem media)
     image_thumb = models.ImageField(upload_to="plants/thumb/", blank=True, null=True)
     image_hero = models.ImageField(upload_to="plants/hero/", blank=True, null=True)
 
-    # Keep existing traits JSON for backward compatibility
     traits = models.JSONField(default=list, blank=True)
 
-    # recommended keys (frontend translates)
     recommended_pot_materials = models.JSONField(default=list, blank=True)
     recommended_soil_mixes = models.JSONField(default=list, blank=True)
 
-    # intervals + required flags
     water_required = models.BooleanField(default=True)
     water_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
 
@@ -68,7 +64,7 @@ class PlantDefinitionTranslation(models.Model):
     plant_definition = models.ForeignKey(
         PlantDefinition, on_delete=models.CASCADE, related_name="translations"
     )
-    language_code = models.CharField(max_length=10, db_index=True)  # "en", "pl", "de", ...
+    language_code = models.CharField(max_length=10, db_index=True)
 
     common_name = models.CharField(max_length=160, blank=True, default="")
     description = models.TextField(blank=True, default="")

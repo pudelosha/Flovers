@@ -9,7 +9,7 @@ from rest_framework import status
 
 from core.emailing import send_templated_email
 from .models import SupportMessage
-from .views import ok, err  # reuse your ok/err helpers
+from .views import ok, err
 from .serializers_support import SupportContactSerializer, SupportBugSerializer
 
 logger = logging.getLogger(__name__)
@@ -65,7 +65,6 @@ class SupportContactView(APIView):
         user_lang = _get_user_lang(request.user)
 
         try:
-            # 1) Email to admin (always English)
             send_templated_email(
                 to_email=admin_email,
                 template_name="profiles/support_contact_admin",
@@ -79,7 +78,6 @@ class SupportContactView(APIView):
                 },
             )
 
-            # 2) Optional copy to user (localized)
             if copy_to_user and request.user.email:
                 send_templated_email(
                     to_email=request.user.email,
@@ -138,7 +136,6 @@ class SupportBugView(APIView):
         }
 
         try:
-            # 1) Email to admin (always English)
             send_templated_email(
                 to_email=admin_email,
                 template_name="profiles/support_bug_admin",
@@ -153,7 +150,6 @@ class SupportBugView(APIView):
                 },
             )
 
-            # 2) Optional copy to user (localized)
             if copy_to_user and request.user.email:
                 send_templated_email(
                     to_email=request.user.email,

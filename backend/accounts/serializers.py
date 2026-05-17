@@ -24,7 +24,6 @@ class RegisterSerializer(serializers.Serializer):
         value = (value or "").strip().lower()
         if not value:
             return "en"
-        # accept "en-US" -> "en"
         if "-" in value:
             value = value.split("-", 1)[0]
         allowed = {"en", "pl", "de", "fr", "es", "it", "pt", "zh", "hi", "ar"}
@@ -45,7 +44,6 @@ class RegisterSerializer(serializers.Serializer):
             is_active=False,
         )
 
-        # Create ProfileSettings with selected language
         ProfileSettings.objects.get_or_create(
             user=user,
             defaults={"language": lang},
@@ -94,8 +92,6 @@ class ResetPasswordSerializer(serializers.Serializer):
         password_validation.validate_password(value)
         return value
 
-
-# --- Change Password ---
 class ChangePasswordSerializer(serializers.Serializer):
     current_password = serializers.CharField(write_only=True)
     new_password = serializers.CharField(write_only=True, min_length=8, max_length=128)
@@ -111,8 +107,6 @@ class ChangePasswordSerializer(serializers.Serializer):
         password_validation.validate_password(new, user=user)
         return attrs
 
-
-# --- Change Email ---
 class ChangeEmailSerializer(serializers.Serializer):
     new_email = serializers.EmailField(validators=[EmailValidator()])
     password = serializers.CharField(write_only=True)

@@ -4,7 +4,7 @@ from django.conf import settings
 from django.db import models, transaction
 from django.utils import timezone
 
-# We’ll relate to PlantInstance in plant_instances app
+
 class Reminder(models.Model):
     TYPE_CHOICES = [
         ("water", "Watering"),
@@ -46,7 +46,6 @@ class Reminder(models.Model):
     def __str__(self):
         return f"{self.plant_id}:{self.type} every {self.interval_value} {self.interval_unit}"
 
-    # ---- scheduling logic ----
     def _next_due_from_anchor(self, today=None):
         """
         Rules:
@@ -65,16 +64,13 @@ class Reminder(models.Model):
                 return sd
             if sd == today:
                 return sd + timedelta(days=self.interval_value)
-            # sd < today
             diff_days = (today - sd).days
-            # number of completed intervals
             n = diff_days // self.interval_value
             candidate = sd + timedelta(days=(n * self.interval_value))
             if candidate <= today:
                 candidate = candidate + timedelta(days=self.interval_value)
             return candidate
 
-        # months
         from dateutil.relativedelta import relativedelta
 
         if sd > today:
@@ -82,12 +78,9 @@ class Reminder(models.Model):
         if sd == today:
             return sd + relativedelta(months=self.interval_value)
 
-        # sd < today
         months_passed = (today.year - sd.year) * 12 + (today.month - sd.month)
-        # find n s.t. sd + n*interval > today
         n = months_passed // self.interval_value
         candidate = sd + relativedelta(months=n * self.interval_value)
-        # adjust day-of-month rollover edge-cases automatically handled by relativedelta
         if candidate <= today:
             candidate = candidate + relativedelta(months=self.interval_value)
         return candidate
@@ -162,16 +155,13 @@ class ReminderTask(models.Model):
 
         rem = self.reminder
 
-        # Guard: do not create duplicates
         existing = rem.tasks.filter(status="pending").first()
         if existing:
             return existing
 
-        # Choose anchor date
         today = timezone.localdate()
         anchor = today if self.due_date < today else self.due_date
 
-        # Compute next due date
         if rem.interval_unit == "days":
             from datetime import timedelta
             next_due = anchor + timedelta(days=rem.interval_value)
@@ -185,4 +175,3 @@ class ReminderTask(models.Model):
             due_date=next_due,
             status="pending",
         )
-

@@ -76,7 +76,6 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
         return v
 
     def validate_tile_transparency(self, v):
-        # Accept numbers/strings; coerce to Decimal within bounds 0.00..0.60
         try:
             d = Decimal(str(v))
         except (InvalidOperation, TypeError, ValueError):
@@ -134,7 +133,6 @@ class PushDeviceSerializer(serializers.ModelSerializer):
         fields = ["token", "platform", "is_active", "last_seen_at"]
         read_only_fields = ["is_active", "last_seen_at"]
         extra_kwargs = {
-            # IMPORTANT: allow re-posting same token (upsert in the view)
             "token": {"validators": []},
         }
 
