@@ -1,5 +1,4 @@
 // ChangePlantImageModal.tsx
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\modals\ChangePlantImageModal.tsx
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,

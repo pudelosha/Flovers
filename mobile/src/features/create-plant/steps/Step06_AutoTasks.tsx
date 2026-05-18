@@ -1,4 +1,3 @@
-﻿// steps/Step06_AutoTasks.tsx
 import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { View, Text, Pressable, ScrollView, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -14,7 +13,6 @@ import {
 } from "../constants/create-plant.constants";
 import type { LastRepotted, LastWatered } from "../types/create-plant.types";
 
-// ✅ interval tuning helper
 import {
   tuneDaysInterval,
   hasMeaningfulTuningSignals,
@@ -328,7 +326,6 @@ export default function Step06_AutoTasks() {
       ? plantDefinition.repot_interval_months
       : 12;
 
-  // ✅ build tuning context from wizard state (earlier steps)
   const tuningCtx: IntervalTuningContext = useMemo(
     () => ({
       lightLevel: state.lightLevel,
@@ -340,7 +337,6 @@ export default function Step06_AutoTasks() {
     [state.lightLevel, state.orientation, state.distanceCm, state.potMaterial, state.soilMix]
   );
 
-  // ✅ compute tuned suggestion (only for watering as requested)
   const tunedWaterSuggestion = useMemo(() => {
     return tuneDaysInterval(waterIntervalBase, tuningCtx, {
       minDays: 1,
@@ -361,7 +357,6 @@ export default function Step06_AutoTasks() {
     if (didInitRef.current === key) return;
     didInitRef.current = key;
 
-    // ✅ prefill: watering uses tuned suggestion (but only if meaningful signals exist)
     const shouldTune = hasMeaningfulTuningSignals(tuningCtx);
     actions.setWaterIntervalDays(shouldTune ? tunedWaterSuggestion : waterIntervalBase);
 
@@ -389,7 +384,7 @@ export default function Step06_AutoTasks() {
   ]);
 
   /**
-   * ✅ If user changes tuning signals after initial init (e.g. goes back to exposure/pot)
+   * If user changes tuning signals after initial init (e.g. goes back to exposure/pot)
    * update suggested watering interval ONLY if user did NOT manually change it.
    *
    * Rule:
@@ -573,7 +568,6 @@ export default function Step06_AutoTasks() {
                   )}
                 </Text>
                 <DaysSlider
-                  // ✅ provider now holds tuned suggestion (unless user manually changed)
                   value={state.waterIntervalDays ?? waterIntervalBase}
                   onChange={(d) => actions.setWaterIntervalDays?.(d)}
                   min={1}

@@ -183,7 +183,6 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
       setLoading(true);
 
       try {
-        // ✅ IMPORTANT: request localized content from backend
         const p = await fetchPlantProfile(Number(plantDefinitionId), { auth: true, lang: preferredLang });
         if (!cancelled) setProfile(p);
       } catch (e: any) {

@@ -1,4 +1,3 @@
-// src/features/task-history/components/TaskHistoryTile.tsx
 import React, { useState, useMemo, useRef } from "react";
 import {
   View,

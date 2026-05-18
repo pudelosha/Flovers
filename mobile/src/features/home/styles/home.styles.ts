@@ -116,7 +116,6 @@ export const s = StyleSheet.create({
     textAlign: "right",
   },
 
-  // 🔴 Overdue styling (applied to both label & date)
   dueOverdue: {
     color: "#FF4B4B",
   },

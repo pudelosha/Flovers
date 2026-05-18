@@ -257,7 +257,6 @@ export default function ResendActivationScreen({ navigation }: any) {
           {getTranslation("resendActivation.sendButton", "Resend Activation Email")}
         </Button>
 
-        {/* FIXED: link-like action rendered with Pressable so it wraps */}
         <LinkText
           onPress={() => navigation.navigate("Login")}
           text={getTranslation("resendActivation.backToLogin", "Back to Login")}

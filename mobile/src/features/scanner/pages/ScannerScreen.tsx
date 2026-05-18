@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\scanner\pages\ScannerScreen.tsx
 import React, { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import {
   View,

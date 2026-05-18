@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\api\services\reminders.service.ts
 import { request } from "../client";
 
 export type ApiReminder = {
@@ -21,7 +20,6 @@ export type ApiReminderTask = {
   completed_at: string | null;
   created_at: string;
   updated_at: string;
-  // NEW: optional note from backend (can be null)
   note?: string | null;
 };
 

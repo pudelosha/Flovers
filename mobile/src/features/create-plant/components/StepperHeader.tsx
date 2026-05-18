@@ -1,4 +1,3 @@
-﻿// src/features/create-plant/components/StepperHeader.tsx
 import React from "react";
 import { View, Text } from "react-native";
 import { wizard } from "../styles/wizard.styles";

@@ -262,7 +262,6 @@ export default function ForgotPasswordScreen({ navigation }: any) {
           {getTranslation("forgotPassword.sendButton", "Send Reset Email")}
         </Button>
 
-        {/* FIXED: link-like action rendered with Pressable so it wraps */}
         <LinkText
           onPress={() => navigation.navigate("Login")}
           text={getTranslation("forgotPassword.backToLogin", "Back to Login")}

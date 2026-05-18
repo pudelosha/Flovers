@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\shared\ui\TopSnackbar.tsx
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Portal, Snackbar } from "react-native-paper";

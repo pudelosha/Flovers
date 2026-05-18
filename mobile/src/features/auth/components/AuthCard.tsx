@@ -95,7 +95,6 @@ export default function AuthCard({ children }: Props) {
         { paddingTop: insets.top + 24, paddingBottom: insets.bottom + 24 },
       ]}
     >
-      {/* NEW: fixed FAB (outside the pan handler so it doesn't drift with the card) */}
       <LanguageFAB position="right" />
 
       {/* Pan handler wraps the card; pan activates only after small drag */}

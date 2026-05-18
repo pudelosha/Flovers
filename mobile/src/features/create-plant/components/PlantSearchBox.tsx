@@ -10,7 +10,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { TextInput } from "react-native-paper";
 import { wiz } from "../styles/wizard.styles";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 type Suggestion = { id: string; name: string; latin: string };
 
@@ -23,10 +23,9 @@ type Props = {
   suggestions: Suggestion[];
   compact?: boolean;
   style?: ViewStyle;
-  placeholder?: string; // Add placeholder prop for flexibility
+  placeholder?: string;
 };
 
-// Create a wrapper component that ensures translations are ready
 const TranslatedText = ({ tKey, children, style }: { 
   tKey: string, 
   children?: any, 
@@ -35,14 +34,12 @@ const TranslatedText = ({ tKey, children, style }: {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   
-  // Use currentLanguage to force re-render when language changes
   React.useMemo(() => {}, [currentLanguage]);
   
   try {
     const text = t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
     const fallbackText = tKey.split('.').pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
@@ -60,7 +57,7 @@ export default function PlantSearchBox({
   placeholder,
 }: Props) {
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage, changeLanguage } = useLanguage();
 
   const safeValue = typeof value === "string" ? value : "";
 
@@ -71,9 +68,9 @@ export default function PlantSearchBox({
         : (suggestions ?? []).filter((s) => {
             const name = (s?.name ?? "").toLowerCase();
             const latin = (s?.latin ?? "").toLowerCase();
-            const formattedLatin = latin.replace(/_/g, ' '); // Replace underscores with spaces
+            const formattedLatin = latin.replace(/_/g, ' ');
             const q = safeValue.toLowerCase();
-            return formattedLatin.includes(q) || name.includes(q); // Compare with Latin first
+            return formattedLatin.includes(q) || name.includes(q);
           }),
     [safeValue, suggestions]
   );
@@ -97,10 +94,8 @@ export default function PlantSearchBox({
     }
   }, [safeValue, isFocused]);
 
-  // Safe translation function that uses both hooks
   const getTranslation = useCallback((key: string, fallback?: string): string => {
     try {
-      // Force dependency on currentLanguage to ensure updates
       const lang = currentLanguage;
       const translation = t(key);
       return translation || fallback || key.split('.').pop() || key;
@@ -110,7 +105,6 @@ export default function PlantSearchBox({
     }
   }, [t, currentLanguage]);
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
     console.log('PlantSearchBox rendering with language:', currentLanguage);
   }, [currentLanguage]);
@@ -129,7 +123,7 @@ export default function PlantSearchBox({
   const handleChangeText = (t: string) => {
     const next = typeof t === "string" ? t : "";
     if (!isFocused && next) animateLabel(1);
-    onChange(next);  // The value passed to onChange should always be in Latin format
+    onChange(next);
   };
 
   const labelTop = animatedLabel.interpolate({
@@ -159,7 +153,6 @@ export default function PlantSearchBox({
   const labelLeft = 12 + 18 + 10;
   const suggestTop = 64;
 
-  // Determine placeholder text - UPDATED to match your JSON
   const placeholderText = placeholder || getTranslation('createPlant.step01.searchPlaceholder', 'Search plant');
 
   return (
@@ -229,7 +222,6 @@ export default function PlantSearchBox({
         )}
       </View>
 
-      {/* Suggestions dropdown */}
       {showSuggestions && data.length > 0 && (
         <View style={[wiz.suggestBox, { top: suggestTop }]}>
           {data.map((item) => (
@@ -237,7 +229,7 @@ export default function PlantSearchBox({
               key={item.id}
               style={wiz.suggestItem}
               onPress={() => {
-                onSelectSuggestion(item);  // Pass the selected suggestion, which will always have the Latin name
+                onSelectSuggestion(item);
                 setShowSuggestions(false);
               }}
             >

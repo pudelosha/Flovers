@@ -26,17 +26,16 @@ function withLang(url: string, lang?: string) {
   return `${url}${join}lang=${encodeURIComponent(l)}`;
 }
 
-// Function to fetch popular plants
 export async function fetchPopularPlants(
   opts: { auth?: boolean; useFallbackOnError?: boolean; lang?: string } = {
     auth: true,
     useFallbackOnError: true,
   }
 ): Promise<PlantDefinition[]> {
-  const lang = opts.lang || 'en';  // Use the language passed from the component
+  const lang = opts.lang || 'en';
 
   try {
-    const url = withLang(ENDPOINTS.popular, lang);  // Append language to the URL
+    const url = withLang(ENDPOINTS.popular, lang);
     const data = await request<ApiPlantDefinition[]>(
       url,
       "GET",
@@ -57,10 +56,10 @@ export async function fetchPlantSearchIndex(
     useFallbackOnError: true,
   }
 ) {
-  const lang = opts.lang || 'en';  // Use the language passed from the component
+  const lang = opts.lang || 'en';
 
   try {
-    const url = withLang(ENDPOINTS.searchIndex, lang);  // Append language to the URL
+    const url = withLang(ENDPOINTS.searchIndex, lang);
     const data = await request<ApiPlantSuggestion[]>(
       url,
       "GET",
@@ -75,23 +74,20 @@ export async function fetchPlantSearchIndex(
   }
 }
 
-/** Full plant profile */
 export async function fetchPlantProfile(idOrExternalId: string | number, opts: { auth?: boolean; lang?: string } = { auth: true }) {
   const url = withLang(ENDPOINTS.profile(idOrExternalId), opts.lang);
 
-  console.log(`Fetching plant profile from URL: ${url}`); // Log the URL
+  console.log(`Fetching plant profile from URL: ${url}`);
 
   try {
     const response = await request<ApiPlantProfile>(url, "GET", undefined, { auth: opts.auth ?? true });
 
-    // Log the response object to inspect it
     console.log('Received plant profile response:', response);
 
     if (!response) {
       throw new Error('Received undefined response');
     }
 
-    // The response should already be a parsed object. Ensure it's valid.
     if (!response.latin) {
       throw new Error('Invalid plant profile response, missing "latin" field');
     }
@@ -99,7 +95,7 @@ export async function fetchPlantProfile(idOrExternalId: string | number, opts: {
     return response;
 
   } catch (error) {
-    console.error("Error while fetching plant profile:", error); // Enhanced error logging
+    console.error("Error while fetching plant profile:", error);
     throw new Error(`Failed to fetch plant profile: ${error.message || 'Unknown error'}`);
   }
 }

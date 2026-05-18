@@ -358,7 +358,6 @@ export default function ResetPasswordScreen({ navigation }: any) {
           {getTranslation("resetPassword.changePassword", "Change Password")}
         </Button>
 
-        {/* FIXED: link-like action rendered with Pressable so it wraps */}
         <LinkText
           onPress={() => navigation.navigate("Login")}
           text={getTranslation("resetPassword.backToLogin", "Back to Login")}

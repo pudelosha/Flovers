@@ -626,7 +626,6 @@ export default function TaskHistoryScreen() {
                 },
               ]}
             >
-              {/* ✅ Empty-state frame now matches Home (gradient glass) */}
               <View style={s.emptyGlass}>
                 <LinearGradient
                   pointerEvents="none"

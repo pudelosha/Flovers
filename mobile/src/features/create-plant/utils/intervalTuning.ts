@@ -143,7 +143,7 @@ export function tuneMonthsInterval(
   opts?: { minMonths?: number; maxMonths?: number; maxDelta?: number }
 ): number {
   const minMonths = opts?.minMonths ?? 1;
-  const maxMonths = opts?.maxMonths ?? 48; // ✅ allow 24-month plants (and more)
+  const maxMonths = opts?.maxMonths ?? 48;
   const maxDelta = opts?.maxDelta ?? 1;
 
   const base = clampInt(baseMonths, minMonths, maxMonths);

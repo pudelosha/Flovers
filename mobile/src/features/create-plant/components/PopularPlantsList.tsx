@@ -5,9 +5,8 @@ import GlassCard from "../../profile/components/GlassCard";
 import { TRAIT_ICON_BY_KEY } from "../constants/create-plant.constants";
 import type { PlantOption } from "../types/create-plant.types";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
-// Create a wrapper component that ensures translations are ready
 const TranslatedText = ({ tKey, children, style }: { 
   tKey: string, 
   children?: any, 
@@ -16,21 +15,16 @@ const TranslatedText = ({ tKey, children, style }: {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   
-  // Use currentLanguage to force re-render when language changes
   React.useMemo(() => {}, [currentLanguage]);
   
   try {
     const text = t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
     const fallbackText = tKey.split('.').pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
 };
-
-// Note: This component doesn't appear to use translations directly in the provided code,
-// but if it needs translations in the future, we've prepared it with the pattern.
 
 export default function PopularPlantsList({
   items,
@@ -42,12 +36,10 @@ export default function PopularPlantsList({
   onSelect: (p: PlantOption) => void;
 }) {
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage, changeLanguage } = useLanguage();
 
-  // Safe translation function that uses both hooks
   const getTranslation = useCallback((key: string, fallback?: string): string => {
     try {
-      // Force dependency on currentLanguage to ensure updates
       const lang = currentLanguage;
       const translation = t(key);
       return translation || fallback || key.split('.').pop() || key;
@@ -57,7 +49,6 @@ export default function PopularPlantsList({
     }
   }, [t, currentLanguage]);
 
-  // Debug: Log when component renders with current language
   React.useEffect(() => {
     console.log('PopularPlantsList rendering with language:', currentLanguage);
   }, [currentLanguage]);
@@ -71,7 +62,7 @@ export default function PopularPlantsList({
           plant={item}
           active={selectedId === item.id}
           onPress={() => onSelect(item)}
-          getTranslation={getTranslation} // Pass translation function if needed
+          getTranslation={getTranslation}
         />
       )}
       ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
@@ -93,7 +84,7 @@ function PlantRow({
   plant,
   active,
   onPress,
-  getTranslation, // Optional translation function if needed
+  getTranslation,
 }: {
   plant: PlantOption;
   active: boolean;

@@ -1,37 +1,25 @@
-// src/features/task-history/styles/task-history.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
-  // LIST / LAYOUT
   listContent: {
     paddingHorizontal: 16,
     paddingTop: 21,
     paddingBottom: 24,
   },
 
-  // Backdrop if you later add menus/modals
   backdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "transparent",
   },
 
-  // ===== HISTORY TILES (unified with Reminders/Home/Plants; NO inner shadow) =====
   cardWrap: {
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
     minHeight: 90,
-
-    // ✅ REMOVE shadows/elevation that caused inner shade artifacts
-    // shadowColor: "#000",
-    // shadowOpacity: 0.25,
-    // shadowRadius: 16,
-    // shadowOffset: { width: 0, height: 8 },
-    // elevation: 8,
   },
 
-  // raised state when menu is open (so it floats above neighbours)
   cardWrapRaised: {
     zIndex: 50,
     elevation: 50,
@@ -43,14 +31,12 @@ export const s = StyleSheet.create({
     overflow: "hidden",
   },
 
-  // ✅ Match AuthCard/Plants: lower tint opacity to avoid inner-rectangle artifact
   cardTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
 
-  // ✅ Match Plants: thinner border
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,

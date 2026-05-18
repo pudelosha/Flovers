@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\scanner\components\ScannerOverlay.tsx
 import React from "react";
 import { View, Pressable, StyleSheet } from "react-native";
 import { Text } from "react-native-paper";

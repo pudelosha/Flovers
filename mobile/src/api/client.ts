@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\api\client.ts
 // A tiny HTTP helper + error class to talk to your Django API.
 // - Automatically prefixes requests with API_BASE
 // - Optionally attaches JWT Authorization header (when opts.auth === true)
@@ -12,10 +11,8 @@ import { API_BASE_NORM } from "../config";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
-// In-memory token store
 let inMemoryToken: string | null = null;
 
-// Call this from AuthProvider when token changes
 export function setAuthToken(token: string | null) {
   inMemoryToken = token;
 }
@@ -98,7 +95,6 @@ function emitUnauthorized() {
     try {
       cb();
     } catch {
-      // ignore listener errors
     }
   });
 }
@@ -138,7 +134,6 @@ async function performTokenRefresh(timeoutMs: number): Promise<string | null> {
         try {
           controller?.abort();
         } catch {
-          // ignore abort failures
         }
 
         reject(new ApiError(408, { message: "Request timed out" }, "Request timed out"));
@@ -191,7 +186,6 @@ async function requestInternal<T>(
   const headers: Record<string, string> = {};
   const url = `${API_BASE_NORM}${path}`;
 
-  // Attach token from memory (no AsyncStorage access here)
   if (opts.auth && inMemoryToken) {
     headers.Authorization = `Bearer ${inMemoryToken}`;
   }
@@ -230,10 +224,8 @@ async function requestInternal<T>(
       try {
         controller?.abort();
       } catch {
-        // ignore abort failures
       }
 
-      // Normalize timeout as ApiError(408) so UI can handle it.
       reject(new ApiError(408, { message: "Request timed out" }, "Request timed out"));
     }, timeoutMs);
   });
@@ -242,7 +234,6 @@ async function requestInternal<T>(
   try {
     res = (await Promise.race([fetchPromise, timeoutPromise])) as Response;
   } catch (e: any) {
-    // Network / DNS / connection-level error OR AbortError (timeout) OR ApiError(408)
     if (__DEV__) {
       if (e instanceof ApiError && e.status === 408) {
         console.debug("[api] request timed out", { url, method, timeoutMs });
@@ -254,13 +245,11 @@ async function requestInternal<T>(
     }
     throw e;
   } finally {
-    // critical: always clear timer to avoid later firing + leaks
     if (timeoutId) clearTimeout(timeoutId);
   }
 
   const raw = await res.text().catch(() => "");
 
-  // Handle non-2xx
   if (!res.ok) {
     const bodyParsed = isJsonContent(res) ? safeJsonParse(raw) : raw;
 
@@ -274,7 +263,6 @@ async function requestInternal<T>(
       try {
         await tokenRefreshConfig?.onRefreshFailed?.();
       } catch {
-        // ignore cleanup failures
       }
 
       emitUnauthorized();
@@ -282,13 +270,11 @@ async function requestInternal<T>(
       try {
         await tokenRefreshConfig?.onRefreshFailed?.();
       } catch {
-        // ignore cleanup failures
       }
 
       emitUnauthorized();
     }
 
-    // Avoid RN redbox for expected 400/401/403 during normal flows
     if (__DEV__) {
       const payload = { url, method, status: res.status, body: bodyParsed };
 
@@ -297,11 +283,9 @@ async function requestInternal<T>(
       } else {
         console.error("[api] error", payload);
 
-        // force-print full JSON for debugging (only for unexpected errors)
         try {
           console.error("[api] error JSON", JSON.stringify(bodyParsed, null, 2));
         } catch {
-          // ignore stringify errors
         }
       }
     }
@@ -309,12 +293,10 @@ async function requestInternal<T>(
     throw new ApiError(res.status, bodyParsed, `Request failed with status ${res.status}`);
   }
 
-  // Handle empty responses (valid for 204, DELETE, etc.)
   if (!raw) {
     return undefined as unknown as T;
   }
 
-  // JSON response
   if (isJsonContent(res)) {
     try {
       return JSON.parse(raw) as T;
@@ -326,7 +308,6 @@ async function requestInternal<T>(
     }
   }
 
-  // Non-JSON successful response -> return text
   return raw as unknown as T;
 }
 

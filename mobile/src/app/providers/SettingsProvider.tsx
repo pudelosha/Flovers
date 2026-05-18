@@ -12,10 +12,8 @@ import { fetchProfileSettings, type ApiProfileSettings } from "../../api/service
 import { DEFAULT_SETTINGS } from "../settings/settings.defaults";
 import type { AppSettings } from "../settings/settings.types";
 
-// We use i18n ONLY to listen to language changes
 import i18n from "../../i18n";
 
-// Primary source of truth for changing language
 import { useLanguage } from "./LanguageProvider";
 
 const SETTINGS_STORAGE_KEY = "app:settings:v1";
@@ -31,7 +29,6 @@ type SettingsContextValue = {
 
 const SettingsContext = createContext<SettingsContextValue | undefined>(undefined);
 
-// Ensure tile transparency is always a valid number between 0 and 0.6.
 function normalizeTileTransparency(v: any): number {
   let n: number;
   if (typeof v === "number") {
@@ -67,7 +64,6 @@ async function persistSettings(settings: AppSettings) {
   try {
     await AsyncStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
   } catch {
-    // non-fatal: ignore persistence errors
   }
 }
 
@@ -88,7 +84,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // ✅ Use LanguageProvider to apply language (single source of truth)
   const { changeLanguage: changeAppLanguage } = useLanguage();
 
   const applyServerSettings = useCallback((api: ApiProfileSettings) => {
@@ -98,7 +93,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         ...prev,
         ...mapped,
       };
-      // persist but don't block UI
       persistSettings(next);
       return next;
     });
@@ -120,7 +114,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
   const reloadFromServer = useCallback(async () => {
     if (!user) {
-      // no user => nothing to fetch
       return;
     }
     setLoading(true);
@@ -129,7 +122,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       const api = await fetchProfileSettings({ auth: true });
       applyServerSettings(api);
 
-      // ✅ Apply server language via LanguageProvider (not i18n directly)
       if (api.language && api.language !== i18n.language?.split("-")?.[0]) {
         await changeAppLanguage(api.language);
       }
@@ -141,8 +133,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     }
   }, [user, applyServerSettings, changeAppLanguage]);
 
-  // ✅ Mirror any i18n language changes into settings + persistence
-  // This makes FAB changes persist even when SettingsProvider is mounted.
   useEffect(() => {
     const handleLanguageChanged = (lng: string) => {
       setSettings((prev) => {
@@ -159,7 +149,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // Initial hydrate + react to auth changes
   useEffect(() => {
     let cancelled = false;
 
@@ -167,7 +156,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       setLoading(true);
       setError(null);
 
-      // If user is not logged in, just use defaults and persist them
       if (!user) {
         const next = DEFAULT_SETTINGS;
         setSettings(next);
@@ -176,7 +164,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      // 1) Load from storage as a cheap fallback
       const cached = await loadSettingsFromStorage();
       if (!cancelled && cached) {
         setSettings((prev) => ({
@@ -188,7 +175,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         }));
       }
 
-      // 2) Always try to refresh from backend
       try {
         const api = await fetchProfileSettings({ auth: true });
         if (cancelled) return;
@@ -213,7 +199,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         setSettings(next);
         await persistSettings(next);
 
-        // ✅ Apply server language via LanguageProvider
         if (next.language && next.language !== i18n.language?.split("-")?.[0]) {
           await changeAppLanguage(next.language);
         }

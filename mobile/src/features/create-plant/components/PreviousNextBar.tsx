@@ -1,4 +1,3 @@
-// src/features/create-plant/components/PreviousNextBar.tsx
 import React, { useMemo, useState } from "react";
 import { View, Pressable } from "react-native";
 import { Text } from "react-native-paper";

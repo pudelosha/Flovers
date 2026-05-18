@@ -21,7 +21,6 @@ const theme = {
 };
 
 export default function App() {
-  // One-time log to verify env wiring
   useEffect(() => {
     console.log("[App] API_BASE =", API_BASE_NORM);
   }, []);

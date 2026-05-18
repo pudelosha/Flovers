@@ -22,14 +22,11 @@ import type {
   PlantDefinition,
 } from "../types/create-plant.types";
 import { createPlantInstance } from "../../../api/services/plant-instances.service";
-
-// NEW: promote temp local photo into plants/<plantId>.* after create
-import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage"; // adjust path
+import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage";
 
 type Action =
   | { type: "SET_QUERY"; query: string }
   | { type: "SET_SELECTED_PLANT"; plant?: SelectedPlant }
-  // ✅ ADDED
   | { type: "SET_SELECTED_PLANT_DEFINITION"; def?: PlantDefinition }
   | { type: "NEXT" }
   | { type: "PREV" }
@@ -69,12 +66,10 @@ const initial: WizardState = {
   step: "selectPlant",
   plantQuery: "",
   selectedPlant: undefined,
-
-  // ✅ ADDED
   selectedPlantDefinition: undefined,
 
   locations: [],
-  selectedLocationId: null, // must be null (not undefined) per type
+  selectedLocationId: null,
   lightLevel: "bright-indirect",
   orientation: "E",
   distanceCm: 20,
@@ -100,7 +95,6 @@ const initial: WizardState = {
   createdPlantId: undefined,
 };
 
-// 🔵 ORDER: Step 9 = "creating", then we can go to "summary"
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
@@ -108,11 +102,11 @@ const ORDER: WizardStep[] = [
   "exposure",
   "potType",
   "autoTasks",
-  "photo",      // 7
-  "name",       // 8
-  "creating",   // 9
-  "summary",    // 10
-  "distance",   // 11
+  "photo",
+  "name",
+  "creating",
+  "summary",
+  "distance",
 ];
 
 function reducer(state: WizardState, action: Action): WizardState {
@@ -126,12 +120,11 @@ function reducer(state: WizardState, action: Action): WizardState {
         selectedPlant: action.plant
           ? {
               ...action.plant,
-              latin: action.plant.latin.replace(/_/g, " "), // Replace underscores with spaces
+              latin: action.plant.latin.replace(/_/g, " "),
             }
           : undefined,
       };
 
-    // ✅ ADDED
     case "SET_SELECTED_PLANT_DEFINITION":
       return { ...state, selectedPlantDefinition: action.def };
 
@@ -171,10 +164,9 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_SOIL_MIX":
       return { ...state, soilMix: action.val };
 
-    // Step 6
     case "SET_CREATE_AUTO":
       return action.val
-        ? { ...state, createAutoTasks: true } // ✅ DO NOT auto-check any sub checkbox
+        ? { ...state, createAutoTasks: true }
         : { ...state, createAutoTasks: false };
 
     case "SET_WATER_TASK_ENABLED":
@@ -202,13 +194,11 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_WATER_INTERVAL_DAYS":
       return { ...state, waterIntervalDays: Math.max(1, Math.min(90, action.val)) };
 
-    // Step 7
     case "SET_PHOTO_URI":
       return { ...state, photoUri: action.uri };
     case "CLEAR_PHOTO":
       return { ...state, photoUri: undefined };
 
-    // Step 8
     case "SET_DISPLAY_NAME":
       return { ...state, displayName: action.val };
     case "SET_NOTES":
@@ -227,7 +217,6 @@ const Ctx = createContext<{
     setPlantQuery: (q: string) => void;
     setSelectedPlant: (p?: SelectedPlant) => void;
 
-    // ✅ ADDED
     setSelectedPlantDefinition: (def?: PlantDefinition) => void;
 
     goNext: () => void;
@@ -246,7 +235,6 @@ const Ctx = createContext<{
     setPotMaterial: (m?: PotMaterial) => void;
     setSoilMix: (m?: SoilMix) => void;
 
-    // Step 6
     setCreateAutoTasks: (v: boolean) => void;
     setWaterTaskEnabled: (v: boolean) => void;
     setRepotTaskEnabled: (v: boolean) => void;
@@ -261,16 +249,13 @@ const Ctx = createContext<{
     setRepotIntervalMonths: (m: number) => void;
     setWaterIntervalDays: (d: number) => void;
 
-    // Step 7
     setPhotoUri: (uri?: string) => void;
     clearPhoto: () => void;
 
-    // Step 8
     setDisplayName: (v: string) => void;
     setNotes: (v: string) => void;
     setPurchaseDateISO: (v?: string) => void;
 
-    // Step 9
     createPlant: () => Promise<string>;
   };
 } | null>(null);
@@ -282,13 +267,11 @@ function genId() {
 export function CreatePlantProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initial);
 
-  // Keep a ref to latest state so createPlant can be stable but still use fresh data
   const stateRef = useRef(state);
   useEffect(() => {
     stateRef.current = state;
   }, [state]);
 
-  // Stable function: no deps; reads latest state from ref.
   const createPlant = useCallback(async (): Promise<string> => {
     const s = stateRef.current;
 
@@ -299,7 +282,6 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
     const created = await createPlantInstance(s, { auth: true });
     const newId = String(created.id);
 
-    // Option A: if we have a temp local photo, promote it to Flovers/plants/<id>.ext
     if (s.photoUri) {
       try {
         const finalUri = await promoteTempPhotoToPlant({
@@ -312,7 +294,6 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
           patch: { createdPlantId: newId, photoUri: finalUri },
         });
       } catch {
-        // If move fails, still create plant; keep existing temp uri so user doesn't lose it
         dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
       }
     } else {
@@ -322,19 +303,17 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
     return newId;
   }, []);
 
-  // All other actions are dispatch-only and can be stable
   const actions = useMemo(
     () => ({
       setPlantQuery: (q: string) => dispatch({ type: "SET_QUERY", query: q }),
 
       setSelectedPlant: (p?: SelectedPlant) => {
         if (p && p.latin) {
-          p.latin = p.latin.replace(/_/g, " "); // Replace underscores with spaces
+          p.latin = p.latin.replace(/_/g, " ");
         }
         dispatch({ type: "SET_SELECTED_PLANT", plant: p });
       },
 
-      // ✅ ADDED
       setSelectedPlantDefinition: (def?: PlantDefinition) =>
         dispatch({ type: "SET_SELECTED_PLANT_DEFINITION", def }),
 

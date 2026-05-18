@@ -113,18 +113,15 @@ export default function HomeScreen() {
     setToastVisible(true);
   };
 
-  // "mark complete" modal state (single + bulk)
   type CompleteMode = "single" | "bulk";
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
   const [completeMode, setCompleteMode] = useState<CompleteMode>("single");
   const [completeTaskIds, setCompleteTaskIds] = useState<string[]>([]);
   const [completeNote, setCompleteNote] = useState("");
 
-  // overdue info for modal
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
   const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
 
-  // ✅ Define closeCompleteModal BEFORE using it in useFocusEffect/load handlers
   const closeCompleteModal = useCallback(() => {
     setCompleteModalVisible(false);
     setCompleteMode("single");
@@ -193,7 +190,7 @@ export default function HomeScreen() {
       closeFloatingMenus();
       setSortOpen(false);
       setFilterOpen(false);
-      closeCompleteModal(); // ✅ ensures complete modal won't remain open
+      closeCompleteModal();
 
       requestAnimationFrame(() => {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });

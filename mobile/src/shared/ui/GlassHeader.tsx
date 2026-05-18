@@ -15,7 +15,6 @@ type Props = {
   solidFallback: string;
   rightIconName?: string;
   onPressRight?: () => void;
-  /** NEW: show/hide the thin divider under the title (default true) */
   showSeparator?: boolean;
   children?: React.ReactNode;
 };

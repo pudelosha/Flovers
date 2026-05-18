@@ -1,4 +1,3 @@
-// src/api/serializers/reminders.serializer.ts
 import type { ApiReminder, ApiReminderTask } from "../services/reminders.service";
 import type { ApiPlantInstanceListItem } from "../services/plant-instances.service";
 
@@ -33,13 +32,13 @@ export function formatDueLabel(dueISO: string): { label: string; date: Date } {
 
 /** What ReminderTile expects */
 export type UIReminder = {
-  id: string;                 // 🔹 task id
-  reminderId: string;         // 🔹 NEW: reminder id (use this for DELETE/PATCH)
+  id: string;
+  reminderId: string;
   type: ReminderTypeUI;
   plant: string;
   plantId?: string;
   location?: string;
-  due: string;                // "Today" / "Tomorrow" / "3 days" / short date
+  due: string;
   dueDate: Date;
   intervalValue?: number;
   intervalUnit?: "days" | "months";

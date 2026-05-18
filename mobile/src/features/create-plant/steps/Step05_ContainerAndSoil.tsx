@@ -1,4 +1,3 @@
-﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\steps\Step05_ContainerAndSoil.tsx
 
 import React, { useEffect, useMemo, useState, useCallback } from "react";
 import { View, Text, Pressable, ScrollView, Image, StyleSheet } from "react-native";

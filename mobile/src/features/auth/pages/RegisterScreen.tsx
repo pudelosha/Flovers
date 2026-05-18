@@ -406,7 +406,6 @@ export default function RegisterScreen({ navigation }: any) {
           {getTranslation("register.signUpButton")}
         </Button>
 
-        {/* FIXED: use Pressable so long translations wrap instead of being clipped */}
         <LinkText onPress={() => navigation.navigate("Login")} style={s.linkTight}>
           <Text style={s.linkLabel} numberOfLines={2} ellipsizeMode="tail">
             {getTranslation("register.haveAccount")}{" "}
@@ -473,7 +472,6 @@ const s = StyleSheet.create({
     flexWrap: "wrap",
   },
 
-  // NEW: link wrapper that can grow in height and allow wrapping
   linkPressable: {
     alignSelf: "center",
     maxWidth: "100%",
