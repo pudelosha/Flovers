@@ -26,6 +26,7 @@ import HistorySegmented from "../components/HistorySegmented";
 import MetricPills from "../components/MetricPills";
 import HistoryChart from "../components/HistoryChart";
 import DateNavigator from "../components/DateNavigator";
+import DeleteReadingsModal from "../components/modals/DeleteReadingsModal";
 
 import type {
   HistoryRange,
@@ -39,7 +40,16 @@ import {
   METRIC_COLORS,
 } from "../constants/readings-history.constants";
 
-import { listReadingDevices, fetchReadingsHistory } from "../../../api/services/readings.service";
+import {
+  bulkDeleteReadings,
+  fetchReadingsDeleteOptions,
+  listReadingDevices,
+  fetchReadingsHistory,
+} from "../../../api/services/readings.service";
+import type {
+  ApiReadingsDeleteOptions,
+  ReadingsBulkDeleteRequest,
+} from "../../../api/services/readings.service";
 import type { ApiReadingDevice } from "../../readings/types/readings.types";
 
 /* ------------ Date helpers for spans and label generation ------------ */
@@ -158,6 +168,9 @@ export default function ReadingsHistoryScreen() {
   // dummy chart options menu
   const [chartMenuOpen, setChartMenuOpen] = useState(false);
   const [barLabelMode, setBarLabelMode] = useState<BarLabelMode>("latest");
+  const [deleteModalVisible, setDeleteModalVisible] = useState(false);
+  const [deleteOptions, setDeleteOptions] = useState<ApiReadingsDeleteOptions | null>(null);
+  const [reloadToken, setReloadToken] = useState(0);
 
   // selected device (id + names, fetched under auth)
   const [device, setDevice] = useState<
@@ -293,6 +306,48 @@ export default function ReadingsHistoryScreen() {
     []
   );
 
+  const openDeleteReadings = useCallback(async () => {
+    setChartMenuOpen(false);
+    if (!device) {
+      showToast(t("readingsHistory.noDevicesFound"), "error");
+      return;
+    }
+
+    try {
+      setLoadingHistory(true);
+      const options = await fetchReadingsDeleteOptions(device.id, { auth: true });
+      setDeleteOptions(options);
+      setDeleteModalVisible(true);
+    } catch (e: any) {
+      showToast(e?.message || t("readingsHistory.deleteToast.failed"), "error");
+    } finally {
+      setLoadingHistory(false);
+    }
+  }, [device, showToast, t]);
+
+  const confirmDeleteReadings = useCallback(
+    async (payload: ReadingsBulkDeleteRequest) => {
+      try {
+        setLoadingHistory(true);
+        const response = await bulkDeleteReadings(payload, { auth: true });
+        setDeleteModalVisible(false);
+        setDeleteOptions(null);
+        setReloadToken((current) => current + 1);
+
+        const affected = response.deleted + response.updated;
+        showToast(
+          t("readingsHistory.deleteToast.success", { count: affected }),
+          "success"
+        );
+      } catch (e: any) {
+        showToast(e?.message || t("readingsHistory.deleteToast.failed"), "error");
+      } finally {
+        setLoadingHistory(false);
+      }
+    },
+    [showToast, t]
+  );
+
   // initial fetch: list devices, pick one (optionally based on params.id)
   useEffect(() => {
     let mounted = true;
@@ -405,7 +460,7 @@ export default function ReadingsHistoryScreen() {
     return () => {
       mounted = false;
     };
-  }, [device, range, metric, historyStat, anchor, span, showToast, t, i18n.language]);
+  }, [device, range, metric, historyStat, anchor, span, reloadToken, showToast, t, i18n.language]);
 
   const navTo = useCallback(
     (name: string) => {
@@ -781,6 +836,23 @@ export default function ReadingsHistoryScreen() {
                           />
                         )}
                       </Pressable>
+
+                      <View style={chartMenuStyles.divider} />
+
+                      <Pressable
+                        style={chartMenuStyles.item}
+                        onPress={openDeleteReadings}
+                      >
+                        <MaterialCommunityIcons
+                          name="trash-can-outline"
+                          size={16}
+                          color="#FFB3B3"
+                          style={chartMenuStyles.icon}
+                        />
+                        <Text style={[chartMenuStyles.text, chartMenuStyles.dangerText]}>
+                          {t("readingsHistory.chartMenu.deleteReadings")}
+                        </Text>
+                      </Pressable>
                     </View>
                   )}
                 </View>
@@ -817,6 +889,14 @@ export default function ReadingsHistoryScreen() {
       </Animated.View>
 
       {loadingHistory && <CenteredSpinner overlay size={40} color="#FFFFFF" />}
+
+      <DeleteReadingsModal
+        visible={deleteModalVisible}
+        deviceId={device?.id ?? null}
+        options={deleteOptions}
+        onCancel={() => setDeleteModalVisible(false)}
+        onConfirm={confirmDeleteReadings}
+      />
 
       <TopSnackbar
         visible={toastVisible}
@@ -861,6 +941,9 @@ const chartMenuStyles = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 0.2,
     fontSize: 12,
+  },
+  dangerText: {
+    color: "#FFB3B3",
   },
   checkIcon: {
     marginLeft: 12,

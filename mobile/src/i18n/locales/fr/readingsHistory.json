@@ -23,7 +23,30 @@
       "showMin": "Afficher le min",
       "showLatestLabel": "Afficher la dernière étiquette",
       "showLabels": "Afficher toutes les étiquettes",
-      "hideLabels": "Masquer toutes les étiquettes"
+      "hideLabels": "Masquer toutes les étiquettes",
+      "deleteReadings": "Supprimer les relevés"
+    },
+    "deleteModal": {
+      "title": "Supprimer les relevés",
+      "description": "Choisissez les relevés à supprimer. Cette action est irréversible.",
+      "modeDay": "Supprimer un jour",
+      "modeWeek": "Supprimer une semaine",
+      "modeMonth": "Supprimer un mois",
+      "modeTypes": "Supprimer les relevés par type",
+      "modeOlderThan": "Supprimer les relevés plus anciens que",
+      "selectDay": "Jour",
+      "selectWeek": "Semaine",
+      "selectMonth": "Mois",
+      "selectTypes": "Type de relevé",
+      "selectOlderThan": "Plus anciens que",
+      "daysOption": "{{count}} jours",
+      "noTypes": "Aucun type de relevé trouvé.",
+      "cancel": "Annuler",
+      "delete": "Supprimer"
+    },
+    "deleteToast": {
+      "success": "{{count}} relevés supprimés",
+      "failed": "Impossible de supprimer les relevés"
     }
   }
 }

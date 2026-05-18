@@ -23,7 +23,30 @@
       "showMin": "Pokaż minimum",
       "showLatestLabel": "Pokaż najnowszą etykietę",
       "showLabels": "Pokaż wszystkie etykiety",
-      "hideLabels": "Ukryj wszystkie etykiety"
+      "hideLabels": "Ukryj wszystkie etykiety",
+      "deleteReadings": "Usuń odczyty"
+    },
+    "deleteModal": {
+      "title": "Usuń odczyty",
+      "description": "Wybierz, które odczyty mają zostać usunięte. Tej akcji nie można cofnąć.",
+      "modeDay": "Usuń dzień",
+      "modeWeek": "Usuń tydzień",
+      "modeMonth": "Usuń miesiąc",
+      "modeTypes": "Usuń odczyty danego typu",
+      "modeOlderThan": "Usuń odczyty starsze niż",
+      "selectDay": "Dzień",
+      "selectWeek": "Tydzień",
+      "selectMonth": "Miesiąc",
+      "selectTypes": "Typ odczytu",
+      "selectOlderThan": "Starsze niż",
+      "daysOption": "{{count}} dni",
+      "noTypes": "Nie znaleziono typów odczytów.",
+      "cancel": "Anuluj",
+      "delete": "Usuń"
+    },
+    "deleteToast": {
+      "success": "Usunięto {{count}} odczytów",
+      "failed": "Nie udało się usunąć odczytów"
     }
   }
 }

@@ -1,7 +1,7 @@
 from io import BytesIO
 import math
 import secrets
-from datetime import timedelta
+from datetime import date, datetime, time, timedelta
 
 from django.conf import settings
 from django.http import HttpResponse, Http404
@@ -397,6 +397,7 @@ HISTORY_UNITS = {
 VALID_METRICS = set(HISTORY_UNITS.keys())
 VALID_RANGES = {"day", "week", "month"}
 VALID_HISTORY_STATS = {"avg", "max", "min"}
+VALID_READING_DELETE_MODES = {"day", "week", "month", "types", "olderThan"}
 
 
 def _start_of_week_mon(dt: timezone.datetime) -> timezone.datetime:
@@ -457,6 +458,49 @@ def _span_for(range_str: str, anchor_dt: timezone.datetime):
 
 def _weekday_short(dt: timezone.datetime) -> str:
     return ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][dt.weekday()]
+
+
+def _parse_date(value: str | None) -> date | None:
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(str(value))
+    except (TypeError, ValueError):
+        return None
+
+
+def _parse_month(value: str | None) -> date | None:
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(f"{str(value)}-01")
+    except (TypeError, ValueError):
+        return None
+
+
+def _aware_start_of_day(day: date) -> timezone.datetime:
+    return timezone.make_aware(datetime.combine(day, time.min), timezone.get_current_timezone())
+
+
+def _aware_end_of_day(day: date) -> timezone.datetime:
+    return timezone.make_aware(datetime.combine(day, time.max), timezone.get_current_timezone())
+
+
+def _refresh_device_latest(device: ReadingDevice) -> None:
+    latest = device.readings.order_by("-timestamp").first()
+    if latest:
+        device.last_read_at = latest.timestamp
+        device.latest_snapshot = {
+            "temperature": latest.temperature,
+            "humidity": latest.humidity,
+            "light": latest.light,
+            "moisture": latest.moisture,
+        }
+    else:
+        device.last_read_at = None
+        device.latest_snapshot = None
+
+    device.save(update_fields=["last_read_at", "latest_snapshot", "updated_at"])
 
 
 # ---------- ViewSet: Devices CRUD ----------
@@ -1347,4 +1391,152 @@ def history(request):
             "to": span_to.isoformat(),
         },
         "points": points,
+    })
+
+
+@api_view(["GET"])
+@permission_classes([permissions.IsAuthenticated])
+def history_delete_options(request):
+    device_id = request.query_params.get("device_id")
+    if not device_id:
+        return Response({"detail": "device_id is required"}, status=400)
+
+    try:
+        device = ReadingDevice.objects.get(id=device_id, user=request.user)
+    except ReadingDevice.DoesNotExist:
+        raise Http404
+
+    readings = device.readings.order_by("-timestamp")
+    local_days = sorted(
+        {timezone.localtime(reading.timestamp).date() for reading in readings},
+        reverse=True,
+    )
+
+    week_starts = sorted(
+        {day - timedelta(days=day.weekday()) for day in local_days},
+        reverse=True,
+    )
+
+    month_starts = sorted(
+        {day.replace(day=1) for day in local_days},
+        reverse=True,
+    )
+
+    available_types = [
+        metric
+        for metric in ["temperature", "humidity", "light", "moisture"]
+        if readings.filter(**{f"{metric}__isnull": False}).exists()
+    ]
+
+    return Response({
+        "days": [{"key": day.isoformat(), "label": day.isoformat()} for day in local_days],
+        "weeks": [
+            {
+                "key": start.isoformat(),
+                "label": f"{start.isoformat()} - {(start + timedelta(days=6)).isoformat()}",
+                "start": start.isoformat(),
+                "end": (start + timedelta(days=6)).isoformat(),
+            }
+            for start in week_starts
+        ],
+        "months": [
+            {
+                "key": month.isoformat()[:7],
+                "label": month.isoformat()[:7],
+                "start": month.isoformat(),
+            }
+            for month in month_starts
+        ],
+        "types": available_types,
+    })
+
+
+@api_view(["POST"])
+@permission_classes([permissions.IsAuthenticated])
+def history_bulk_delete(request):
+    device_id = request.data.get("device_id")
+    if not device_id:
+        return Response({"detail": "device_id is required"}, status=400)
+
+    try:
+        device = ReadingDevice.objects.get(id=device_id, user=request.user)
+    except ReadingDevice.DoesNotExist:
+        raise Http404
+
+    mode = request.data.get("mode")
+    if mode not in VALID_READING_DELETE_MODES:
+        return Response({"detail": "mode must be one of: day, week, month, types, olderThan"}, status=400)
+
+    deleted_count = 0
+    updated_count = 0
+
+    with transaction.atomic():
+        qs = device.readings.all()
+
+        if mode == "day":
+            day = _parse_date(request.data.get("day"))
+            if not day:
+                return Response({"detail": "day must be a valid ISO date"}, status=400)
+            deleted_count, _ = qs.filter(
+                timestamp__gte=_aware_start_of_day(day),
+                timestamp__lte=_aware_end_of_day(day),
+            ).delete()
+
+        elif mode == "week":
+            week_start = _parse_date(request.data.get("weekStart"))
+            if not week_start:
+                return Response({"detail": "weekStart must be a valid ISO date"}, status=400)
+            week_end = week_start + timedelta(days=6)
+            deleted_count, _ = qs.filter(
+                timestamp__gte=_aware_start_of_day(week_start),
+                timestamp__lte=_aware_end_of_day(week_end),
+            ).delete()
+
+        elif mode == "month":
+            month_start = _parse_month(request.data.get("month"))
+            if not month_start:
+                return Response({"detail": "month must be a valid YYYY-MM value"}, status=400)
+            if month_start.month == 12:
+                next_month = month_start.replace(year=month_start.year + 1, month=1)
+            else:
+                next_month = month_start.replace(month=month_start.month + 1)
+            month_end = next_month - timedelta(days=1)
+            deleted_count, _ = qs.filter(
+                timestamp__gte=_aware_start_of_day(month_start),
+                timestamp__lte=_aware_end_of_day(month_end),
+            ).delete()
+
+        elif mode == "olderThan":
+            try:
+                days = int(request.data.get("days"))
+            except (TypeError, ValueError):
+                return Response({"detail": "days must be a positive integer"}, status=400)
+            if days <= 0:
+                return Response({"detail": "days must be a positive integer"}, status=400)
+            cutoff = timezone.now() - timedelta(days=days)
+            deleted_count, _ = qs.filter(timestamp__lt=cutoff).delete()
+
+        else:
+            metric_types = request.data.get("types") or []
+            if not isinstance(metric_types, list):
+                return Response({"detail": "types must be a list"}, status=400)
+            metric_types = [metric for metric in metric_types if metric in VALID_METRICS]
+            if not metric_types:
+                return Response({"detail": "types must include at least one valid reading type"}, status=400)
+
+            update_payload = {metric: None for metric in metric_types}
+            updated_count = qs.update(**update_payload)
+            empty_count, _ = qs.filter(
+                temperature__isnull=True,
+                humidity__isnull=True,
+                light__isnull=True,
+                moisture__isnull=True,
+            ).delete()
+            deleted_count = empty_count
+
+        _refresh_device_latest(device)
+
+    return Response({
+        "deleted": deleted_count,
+        "updated": updated_count,
     })

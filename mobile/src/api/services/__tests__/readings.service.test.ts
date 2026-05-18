@@ -4,6 +4,7 @@ import {
   deleteReadingDevice,
   fetchDeviceSetup,
   fetchPumpStatus,
+  fetchReadingsDeleteOptions,
   fetchReadingsFeed,
   fetchReadingsHistory,
   getReadingDevice,
@@ -16,6 +17,7 @@ import {
   toReadingTile,
   toggleAutoPump,
   updateReadingDevice,
+  bulkDeleteReadings,
 } from "../readings.service";
 import type { ApiReadingDevice } from "../../../features/readings/types/readings.types";
 
@@ -249,6 +251,25 @@ describe("readings.service", () => {
       "/api/readings/history/?device_id=9&range=week&metric=moisture&stat=avg&anchor=2026-05-13T00%3A00%3A00Z",
       "GET",
       undefined,
+      { auth: false }
+    );
+
+    await fetchReadingsDeleteOptions(9, { auth: false });
+    expect(mockedRequest).toHaveBeenLastCalledWith(
+      "/api/readings/history/delete-options/?device_id=9",
+      "GET",
+      undefined,
+      { auth: false }
+    );
+
+    await bulkDeleteReadings(
+      { deviceId: 9, mode: "week", weekStart: "2026-05-18" },
+      { auth: false }
+    );
+    expect(mockedRequest).toHaveBeenLastCalledWith(
+      "/api/readings/history/bulk-delete/",
+      "POST",
+      { device_id: 9, mode: "week", weekStart: "2026-05-18" },
       { auth: false }
     );
 

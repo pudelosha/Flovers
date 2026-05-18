@@ -23,7 +23,30 @@
       "showMin": "최소값 표시",
       "showLatestLabel": "최신 레이블 표시",
       "showLabels": "모든 레이블 표시",
-      "hideLabels": "모든 레이블 숨기기"
+      "hideLabels": "모든 레이블 숨기기",
+      "deleteReadings": "측정값 삭제"
+    },
+    "deleteModal": {
+      "title": "측정값 삭제",
+      "description": "삭제할 측정값을 선택하세요. 이 작업은 되돌릴 수 없습니다.",
+      "modeDay": "하루 삭제",
+      "modeWeek": "주 삭제",
+      "modeMonth": "월 삭제",
+      "modeTypes": "유형별 측정값 삭제",
+      "modeOlderThan": "다음보다 오래된 측정값 삭제",
+      "selectDay": "일",
+      "selectWeek": "주",
+      "selectMonth": "월",
+      "selectTypes": "측정 유형",
+      "selectOlderThan": "다음보다 오래됨",
+      "daysOption": "{{count}}일",
+      "noTypes": "측정 유형을 찾을 수 없습니다.",
+      "cancel": "취소",
+      "delete": "삭제"
+    },
+    "deleteToast": {
+      "success": "측정값 {{count}}개를 삭제했습니다",
+      "failed": "측정값 삭제에 실패했습니다"
     }
   }
 }

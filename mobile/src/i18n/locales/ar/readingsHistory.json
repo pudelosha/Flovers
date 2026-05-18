@@ -23,7 +23,30 @@
       "showMin": "عرض الحد الأدنى",
       "showLatestLabel": "عرض أحدث تسمية",
       "showLabels": "عرض كل التسميات",
-      "hideLabels": "إخفاء كل التسميات"
+      "hideLabels": "إخفاء كل التسميات",
+      "deleteReadings": "حذف القراءات"
+    },
+    "deleteModal": {
+      "title": "حذف القراءات",
+      "description": "اختر القراءات التي تريد حذفها. لا يمكن التراجع عن هذا الإجراء.",
+      "modeDay": "حذف يوم",
+      "modeWeek": "حذف أسبوع",
+      "modeMonth": "حذف شهر",
+      "modeTypes": "حذف القراءات حسب النوع",
+      "modeOlderThan": "حذف القراءات الأقدم من",
+      "selectDay": "اليوم",
+      "selectWeek": "الأسبوع",
+      "selectMonth": "الشهر",
+      "selectTypes": "نوع القراءة",
+      "selectOlderThan": "أقدم من",
+      "daysOption": "{{count}} يوم",
+      "noTypes": "لم يتم العثور على أنواع قراءات.",
+      "cancel": "إلغاء",
+      "delete": "حذف"
+    },
+    "deleteToast": {
+      "success": "تم حذف {{count}} قراءة",
+      "failed": "فشل حذف القراءات"
     }
   }
 }

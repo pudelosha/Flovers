@@ -23,7 +23,30 @@
       "showMin": "Show min",
       "showLatestLabel": "Show latest label",
       "showLabels": "Show all labels",
-      "hideLabels": "Hide all labels"
+      "hideLabels": "Hide all labels",
+      "deleteReadings": "Delete readings"
+    },
+    "deleteModal": {
+      "title": "Delete readings",
+      "description": "Choose which readings should be removed. This cannot be undone.",
+      "modeDay": "Delete day",
+      "modeWeek": "Delete week",
+      "modeMonth": "Delete month",
+      "modeTypes": "Delete readings of type",
+      "modeOlderThan": "Delete readings older than",
+      "selectDay": "Day",
+      "selectWeek": "Week",
+      "selectMonth": "Month",
+      "selectTypes": "Reading type",
+      "selectOlderThan": "Older than",
+      "daysOption": "{{count}} days",
+      "noTypes": "No reading types found.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "deleteToast": {
+      "success": "Deleted {{count}} readings",
+      "failed": "Failed to delete readings"
     }
   }
 }

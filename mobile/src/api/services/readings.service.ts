@@ -333,6 +333,61 @@ export async function fetchReadingsHistory(
   );
 }
 
+export type ApiReadingsDeleteOption = {
+  key: string;
+  label: string;
+  start?: string;
+  end?: string;
+};
+
+export type ApiReadingsDeleteOptions = {
+  days: ApiReadingsDeleteOption[];
+  weeks: ApiReadingsDeleteOption[];
+  months: ApiReadingsDeleteOption[];
+  types: Array<"temperature" | "humidity" | "light" | "moisture">;
+};
+
+export type ReadingsBulkDeleteRequest =
+  | { deviceId: number; mode: "day"; day: string }
+  | { deviceId: number; mode: "week"; weekStart: string }
+  | { deviceId: number; mode: "month"; month: string }
+  | { deviceId: number; mode: "types"; types: Array<"temperature" | "humidity" | "light" | "moisture"> }
+  | { deviceId: number; mode: "olderThan"; days: number };
+
+export type ApiReadingsBulkDeleteResponse = {
+  deleted: number;
+  updated: number;
+};
+
+export async function fetchReadingsDeleteOptions(
+  deviceId: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiReadingsDeleteOptions> {
+  const q = new URLSearchParams();
+  q.set("device_id", String(deviceId));
+
+  return await request<ApiReadingsDeleteOptions>(
+    `/api/readings/history/delete-options/?${q.toString()}`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+export async function bulkDeleteReadings(
+  payload: ReadingsBulkDeleteRequest,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiReadingsBulkDeleteResponse> {
+  const { deviceId, ...body } = payload;
+
+  return await request<ApiReadingsBulkDeleteResponse>(
+    "/api/readings/history/bulk-delete/",
+    "POST",
+    { device_id: deviceId, ...body },
+    { auth: opts.auth ?? true }
+  );
+}
+
 /* ============================== AUTO PUMP TOGGLE ============================== */
 
 export type ToggleAutoPumpPayload = {

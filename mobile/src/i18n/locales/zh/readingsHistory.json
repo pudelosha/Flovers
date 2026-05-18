@@ -23,7 +23,30 @@
       "showMin": "显示最小值",
       "showLatestLabel": "显示最新标签",
       "showLabels": "显示所有标签",
-      "hideLabels": "隐藏所有标签"
+      "hideLabels": "隐藏所有标签",
+      "deleteReadings": "删除读数"
+    },
+    "deleteModal": {
+      "title": "删除读数",
+      "description": "选择要移除的读数。此操作无法撤销。",
+      "modeDay": "删除某天",
+      "modeWeek": "删除某周",
+      "modeMonth": "删除某月",
+      "modeTypes": "按类型删除读数",
+      "modeOlderThan": "删除早于以下时间的读数",
+      "selectDay": "日期",
+      "selectWeek": "周",
+      "selectMonth": "月份",
+      "selectTypes": "读数类型",
+      "selectOlderThan": "早于",
+      "daysOption": "{{count}} 天",
+      "noTypes": "未找到读数类型。",
+      "cancel": "取消",
+      "delete": "删除"
+    },
+    "deleteToast": {
+      "success": "已删除 {{count}} 条读数",
+      "failed": "删除读数失败"
     }
   }
 }

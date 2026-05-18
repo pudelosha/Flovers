@@ -23,7 +23,30 @@
       "showMin": "न्यूनतम दिखाएँ",
       "showLatestLabel": "नवीनतम लेबल दिखाएँ",
       "showLabels": "सभी लेबल दिखाएँ",
-      "hideLabels": "सभी लेबल छिपाएँ"
+      "hideLabels": "सभी लेबल छिपाएँ",
+      "deleteReadings": "रीडिंग्स हटाएँ"
+    },
+    "deleteModal": {
+      "title": "रीडिंग्स हटाएँ",
+      "description": "चुनें कि कौन सी रीडिंग्स हटानी हैं। यह कार्रवाई वापस नहीं की जा सकती।",
+      "modeDay": "दिन हटाएँ",
+      "modeWeek": "सप्ताह हटाएँ",
+      "modeMonth": "महीना हटाएँ",
+      "modeTypes": "प्रकार के अनुसार रीडिंग्स हटाएँ",
+      "modeOlderThan": "इससे पुरानी रीडिंग्स हटाएँ",
+      "selectDay": "दिन",
+      "selectWeek": "सप्ताह",
+      "selectMonth": "महीना",
+      "selectTypes": "रीडिंग प्रकार",
+      "selectOlderThan": "इससे पुरानी",
+      "daysOption": "{{count}} दिन",
+      "noTypes": "कोई रीडिंग प्रकार नहीं मिला।",
+      "cancel": "रद्द करें",
+      "delete": "हटाएँ"
+    },
+    "deleteToast": {
+      "success": "{{count}} रीडिंग्स हटाई गईं",
+      "failed": "रीडिंग्स हटाने में विफल"
     }
   }
 }

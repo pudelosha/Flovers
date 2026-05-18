@@ -23,7 +23,30 @@
       "showMin": "Minimum anzeigen",
       "showLatestLabel": "Neueste Beschriftung anzeigen",
       "showLabels": "Alle Beschriftungen anzeigen",
-      "hideLabels": "Alle Beschriftungen ausblenden"
+      "hideLabels": "Alle Beschriftungen ausblenden",
+      "deleteReadings": "Messwerte löschen"
+    },
+    "deleteModal": {
+      "title": "Messwerte löschen",
+      "description": "Wähle aus, welche Messwerte entfernt werden sollen. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "modeDay": "Tag löschen",
+      "modeWeek": "Woche löschen",
+      "modeMonth": "Monat löschen",
+      "modeTypes": "Messwerte nach Typ löschen",
+      "modeOlderThan": "Messwerte älter als löschen",
+      "selectDay": "Tag",
+      "selectWeek": "Woche",
+      "selectMonth": "Monat",
+      "selectTypes": "Messwerttyp",
+      "selectOlderThan": "Älter als",
+      "daysOption": "{{count}} Tage",
+      "noTypes": "Keine Messwerttypen gefunden.",
+      "cancel": "Abbrechen",
+      "delete": "Löschen"
+    },
+    "deleteToast": {
+      "success": "{{count}} Messwerte gelöscht",
+      "failed": "Messwerte konnten nicht gelöscht werden"
     }
   }
 }

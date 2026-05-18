@@ -23,7 +23,30 @@
       "showMin": "Mostrar mínimo",
       "showLatestLabel": "Mostrar etiqueta más reciente",
       "showLabels": "Mostrar todas las etiquetas",
-      "hideLabels": "Ocultar todas las etiquetas"
+      "hideLabels": "Ocultar todas las etiquetas",
+      "deleteReadings": "Eliminar lecturas"
+    },
+    "deleteModal": {
+      "title": "Eliminar lecturas",
+      "description": "Elige qué lecturas se eliminarán. Esta acción no se puede deshacer.",
+      "modeDay": "Eliminar día",
+      "modeWeek": "Eliminar semana",
+      "modeMonth": "Eliminar mes",
+      "modeTypes": "Eliminar lecturas por tipo",
+      "modeOlderThan": "Eliminar lecturas anteriores a",
+      "selectDay": "Día",
+      "selectWeek": "Semana",
+      "selectMonth": "Mes",
+      "selectTypes": "Tipo de lectura",
+      "selectOlderThan": "Anteriores a",
+      "daysOption": "{{count}} días",
+      "noTypes": "No se encontraron tipos de lectura.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "deleteToast": {
+      "success": "{{count}} lecturas eliminadas",
+      "failed": "No se pudieron eliminar las lecturas"
     }
   }
 }

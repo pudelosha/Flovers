@@ -23,7 +23,30 @@
       "showMin": "最小値を表示",
       "showLatestLabel": "最新のラベルを表示",
       "showLabels": "すべてのラベルを表示",
-      "hideLabels": "すべてのラベルを非表示"
+      "hideLabels": "すべてのラベルを非表示",
+      "deleteReadings": "測定値を削除"
+    },
+    "deleteModal": {
+      "title": "測定値を削除",
+      "description": "削除する測定値を選択してください。この操作は元に戻せません。",
+      "modeDay": "日を削除",
+      "modeWeek": "週を削除",
+      "modeMonth": "月を削除",
+      "modeTypes": "タイプ別に測定値を削除",
+      "modeOlderThan": "指定日数より古い測定値を削除",
+      "selectDay": "日",
+      "selectWeek": "週",
+      "selectMonth": "月",
+      "selectTypes": "測定タイプ",
+      "selectOlderThan": "これより古い",
+      "daysOption": "{{count}} 日",
+      "noTypes": "測定タイプが見つかりません。",
+      "cancel": "キャンセル",
+      "delete": "削除"
+    },
+    "deleteToast": {
+      "success": "{{count}} 件の測定値を削除しました",
+      "failed": "測定値を削除できませんでした"
     }
   }
 }
