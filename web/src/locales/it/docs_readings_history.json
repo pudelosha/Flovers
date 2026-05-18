@@ -32,6 +32,14 @@
         ]
       },
       {
+        "heading": "Eliminare lo storico delle letture",
+        "body": [
+          "Il menu del grafico include l'azione Elimina letture per pulire i dati storici dei sensori del dispositivo selezionato.",
+          "Puoi eliminare le letture di un giorno, una settimana o un mese specifici, eliminare le letture piu vecchie di un periodo scelto oppure rimuovere solo tipi di misura selezionati come temperatura, umidita, luce o umidita del terreno.",
+          "Quando elimini per tipo di misura, Flovers rimuove quel valore mantenendo, quando possibile, gli altri valori dello stesso record. L'eliminazione e permanente e va usata con attenzione."
+        ]
+      },
+      {
         "heading": "Disponibilità dei dati e interpretazione",
         "body": [
           "Se il dispositivo non ha fornito letture per il periodo selezionato, il grafico sarà vuoto o potrebbe contenere lacune nei dati.",

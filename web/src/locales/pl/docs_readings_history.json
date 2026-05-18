@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_readings_history": {
     "title": "Historia odczytów",
     "sections": [
@@ -29,6 +29,14 @@
         "body": [
           "Strzałki przy wybranym okresie pozwalają przechodzić pomiędzy wcześniejszymi dniami, tygodniami lub miesiącami.",
           "Nawigacja jest dostępna tylko dla okresów, dla których istnieją dane — przyszłe okresy nie są wyświetlane."
+        ]
+      },
+      {
+        "heading": "Usuwanie historii odczytow",
+        "body": [
+          "Menu wykresu zawiera akcje Usun odczyty, ktora pomaga porzadkowac historyczne dane czujnikow dla wybranego urzadzenia.",
+          "Mozesz usunac odczyty z konkretnego dnia, tygodnia lub miesiaca, usunac odczyty starsze niz wybrany okres albo usunac tylko wybrane typy pomiarow, takie jak temperatura, wilgotnosc, swiatlo lub wilgotnosc gleby.",
+          "Przy usuwaniu wedlug typu pomiaru Flovers usuwa wybrana wartosc, zachowujac pozostale dane z tego samego rekordu, gdy jest to mozliwe. Usuniecie jest trwale, dlatego nalezy uzywac tej opcji ostroznie."
         ]
       },
       {

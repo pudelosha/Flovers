@@ -32,6 +32,14 @@
         ]
       },
       {
+        "heading": "Eliminar historial de lecturas",
+        "body": [
+          "El menu del grafico incluye la accion Eliminar lecturas para limpiar datos historicos del sensor del dispositivo seleccionado.",
+          "Puedes eliminar lecturas de un dia, una semana o un mes especificos, eliminar lecturas anteriores a una antiguedad seleccionada, o quitar solo tipos de medicion seleccionados como temperatura, humedad, luz o humedad del suelo.",
+          "Al eliminar por tipo de medicion, Flovers elimina esa metrica y conserva los otros valores del mismo registro cuando es posible. La eliminacion es permanente y debe usarse con cuidado."
+        ]
+      },
+      {
         "heading": "Disponibilidad de datos e interpretación",
         "body": [
           "Si el dispositivo no ha entregado lecturas para el período seleccionado, el gráfico estará vacío o puede contener datos faltantes.",

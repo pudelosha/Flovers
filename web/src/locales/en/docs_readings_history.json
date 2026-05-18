@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_readings_history": {
     "title": "Readings History",
     "sections": [
@@ -29,6 +29,14 @@
         "body": [
           "The arrows next to the selected period allow you to move between previous days, weeks, or months.",
           "Navigation is limited to periods where data exists — future periods are not displayed."
+        ]
+      },
+      {
+        "heading": "Deleting readings history",
+        "body": [
+          "The chart menu includes a Delete readings action for cleaning up historical sensor data for the selected device.",
+          "You can delete readings for a specific day, week, or month, delete readings older than a selected age, or remove only selected measurement types such as temperature, humidity, light, or soil moisture.",
+          "When deleting by measurement type, Flovers removes that metric while keeping the other values from the same reading record when possible. Deletion is permanent and should be used carefully."
         ]
       },
       {

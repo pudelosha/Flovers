@@ -32,6 +32,14 @@
         ]
       },
       {
+        "heading": "Excluir historico de leituras",
+        "body": [
+          "O menu do grafico inclui a acao Excluir leituras para limpar dados historicos do sensor do dispositivo selecionado.",
+          "Voce pode excluir leituras de um dia, semana ou mes especifico, excluir leituras mais antigas que um periodo escolhido, ou remover apenas tipos de medicao selecionados, como temperatura, umidade, luz ou umidade do solo.",
+          "Ao excluir por tipo de medicao, o Flovers remove essa metrica e mantem os outros valores do mesmo registro quando possivel. A exclusao e permanente e deve ser usada com cuidado."
+        ]
+      },
+      {
         "heading": "Disponibilidade dos dados e interpretação",
         "body": [
           "Se o dispositivo não tiver fornecido leituras para o período selecionado, o gráfico estará vazio ou poderá conter lacunas de dados.",

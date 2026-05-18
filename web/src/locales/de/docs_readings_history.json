@@ -32,6 +32,14 @@
         ]
       },
       {
+        "heading": "Messwertverlauf loeschen",
+        "body": [
+          "Das Diagrammmenue enthaelt die Aktion Messwerte loeschen, mit der historische Sensordaten fuer das ausgewaehlte Geraet bereinigt werden koennen.",
+          "Du kannst Messwerte fuer einen bestimmten Tag, eine Woche oder einen Monat loeschen, Messwerte loeschen, die aelter als ein ausgewaehlter Zeitraum sind, oder nur bestimmte Messwerttypen wie Temperatur, Luftfeuchtigkeit, Licht oder Bodenfeuchtigkeit entfernen.",
+          "Beim Loeschen nach Messwerttyp entfernt Flovers nur diesen Messwert und behaelt andere Werte desselben Datensatzes nach Moeglichkeit bei. Das Loeschen ist dauerhaft und sollte vorsichtig verwendet werden."
+        ]
+      },
+      {
         "heading": "Verfügbarkeit der Daten und Interpretation",
         "body": [
           "Wenn das Gerät für den ausgewählten Zeitraum keine Messwerte geliefert hat, ist das Diagramm leer oder enthält möglicherweise Datenlücken.",

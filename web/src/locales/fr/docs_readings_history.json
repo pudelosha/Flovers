@@ -32,6 +32,14 @@
         ]
       },
       {
+        "heading": "Suppression de l'historique des releves",
+        "body": [
+          "Le menu du graphique contient l'action Supprimer les releves pour nettoyer les donnees historiques du capteur pour l'appareil selectionne.",
+          "Vous pouvez supprimer les releves d'un jour, d'une semaine ou d'un mois precis, supprimer les releves plus anciens qu'une periode choisie, ou retirer uniquement certains types de mesure comme la temperature, l'humidite, la lumiere ou l'humidite du sol.",
+          "Lors d'une suppression par type de mesure, Flovers retire cette mesure tout en conservant les autres valeurs du meme enregistrement lorsque c'est possible. La suppression est definitive et doit etre utilisee avec prudence."
+        ]
+      },
+      {
         "heading": "Disponibilité des données et interprétation",
         "body": [
           "Si l'appareil n'a pas fourni de lectures pour la période sélectionnée, le graphique sera vide ou pourra contenir des lacunes dans les données.",
