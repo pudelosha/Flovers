@@ -42,7 +42,9 @@
       "daysOption": "{{count}} 日",
       "noTypes": "測定タイプが見つかりません。",
       "cancel": "キャンセル",
-      "delete": "削除"
+      "delete": "削除",
+      "scopeLabel": "削除範囲",
+      "close": "閉じる"
     },
     "deleteToast": {
       "success": "{{count}} 件の測定値を削除しました",

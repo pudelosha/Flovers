@@ -42,7 +42,9 @@
       "daysOption": "{{count}} jours",
       "noTypes": "Aucun type de relevé trouvé.",
       "cancel": "Annuler",
-      "delete": "Supprimer"
+      "delete": "Supprimer",
+      "scopeLabel": "Perimetre de suppression",
+      "close": "Fermer"
     },
     "deleteToast": {
       "success": "{{count}} relevés supprimés",

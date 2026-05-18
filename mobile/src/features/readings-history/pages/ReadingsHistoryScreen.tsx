@@ -846,7 +846,7 @@ export default function ReadingsHistoryScreen() {
                         <MaterialCommunityIcons
                           name="trash-can-outline"
                           size={16}
-                          color="#FFB3B3"
+                          color="#FF6B6B"
                           style={chartMenuStyles.icon}
                         />
                         <Text style={[chartMenuStyles.text, chartMenuStyles.dangerText]}>
@@ -943,7 +943,7 @@ const chartMenuStyles = StyleSheet.create({
     fontSize: 12,
   },
   dangerText: {
-    color: "#FFB3B3",
+    color: "#FF6B6B",
   },
   checkIcon: {
     marginLeft: 12,

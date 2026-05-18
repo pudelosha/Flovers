@@ -42,7 +42,9 @@
       "daysOption": "{{count}} Tage",
       "noTypes": "Keine Messwerttypen gefunden.",
       "cancel": "Abbrechen",
-      "delete": "Löschen"
+      "delete": "Löschen",
+      "scopeLabel": "Loeschbereich",
+      "close": "Schliessen"
     },
     "deleteToast": {
       "success": "{{count}} Messwerte gelöscht",

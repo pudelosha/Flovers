@@ -42,7 +42,9 @@
       "daysOption": "{{count}} 天",
       "noTypes": "未找到读数类型。",
       "cancel": "取消",
-      "delete": "删除"
+      "delete": "删除",
+      "scopeLabel": "删除范围",
+      "close": "关闭"
     },
     "deleteToast": {
       "success": "已删除 {{count}} 条读数",

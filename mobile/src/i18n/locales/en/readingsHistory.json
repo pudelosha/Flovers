@@ -42,7 +42,9 @@
       "daysOption": "{{count}} days",
       "noTypes": "No reading types found.",
       "cancel": "Cancel",
-      "delete": "Delete"
+      "delete": "Delete",
+      "scopeLabel": "Delete scope",
+      "close": "Close"
     },
     "deleteToast": {
       "success": "Deleted {{count}} readings",

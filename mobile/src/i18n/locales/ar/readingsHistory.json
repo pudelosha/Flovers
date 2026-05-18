@@ -42,7 +42,9 @@
       "daysOption": "{{count}} يوم",
       "noTypes": "لم يتم العثور على أنواع قراءات.",
       "cancel": "إلغاء",
-      "delete": "حذف"
+      "delete": "حذف",
+      "scopeLabel": "نطاق الحذف",
+      "close": "إغلاق"
     },
     "deleteToast": {
       "success": "تم حذف {{count}} قراءة",

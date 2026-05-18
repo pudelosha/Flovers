@@ -1,16 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
-import {
-  Modal,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+import React from "react";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
+import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import { ICON_BG } from "../../../readings/constants/readings.constants";
+import { s } from "../../styles/readings-history.styles";
 import type {
   ApiReadingsDeleteOption,
   ApiReadingsDeleteOptions,
@@ -30,16 +26,20 @@ type Props = {
 
 const OLDER_THAN_OPTIONS = [30, 60, 90, 180, 365];
 const TYPE_ORDER: MetricType[] = ["temperature", "humidity", "light", "moisture"];
+const TYPE_ICONS: Record<MetricType, string> = {
+  temperature: "thermometer",
+  humidity: "water-percent",
+  light: "white-balance-sunny",
+  moisture: "water",
+};
 
 function Dropdown({
-  label,
   value,
   options,
   open,
   onToggle,
   onSelect,
 }: {
-  label: string;
   value: string;
   options: ApiReadingsDeleteOption[];
   open: boolean;
@@ -49,27 +49,29 @@ function Dropdown({
   const selected = options.find((option) => option.key === value);
 
   return (
-    <View style={modalStyles.dropdown}>
-      <Text style={modalStyles.inputLabel}>{label}</Text>
-      <Pressable style={modalStyles.dropdownHeader} onPress={onToggle}>
-        <Text style={modalStyles.dropdownValue}>
-          {selected?.label || "-"}
-        </Text>
+    <View style={[s.dropdown, { marginTop: 4 }]}>
+      <Pressable
+        style={[s.dropdownHeader, s.flatDropdownHeader]}
+        onPress={onToggle}
+        android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+      >
+        <Text style={s.dropdownValue}>{selected?.label || "-"}</Text>
         <MaterialCommunityIcons
           name={open ? "chevron-up" : "chevron-down"}
           size={20}
           color="#FFFFFF"
         />
       </Pressable>
+
       {open && (
-        <View style={modalStyles.dropdownList}>
+        <View style={[s.dropdownList, s.flatDropdownList]}>
           {options.map((option) => (
             <Pressable
               key={option.key}
-              style={modalStyles.dropdownItem}
+              style={[s.dropdownItem, s.flatDropdownItem]}
               onPress={() => onSelect(option.key)}
             >
-              <Text style={modalStyles.dropdownItemText}>{option.label}</Text>
+              <Text style={s.dropdownItemText}>{option.label}</Text>
               {option.key === value && (
                 <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
               )}
@@ -89,20 +91,15 @@ export default function DeleteReadingsModal({
   onConfirm,
 }: Props) {
   const { t } = useTranslation();
-  const [mode, setMode] = useState<Mode>("day");
-  const [openDropdown, setOpenDropdown] = useState<Mode | null>(null);
-  const [day, setDay] = useState("");
-  const [weekStart, setWeekStart] = useState("");
-  const [month, setMonth] = useState("");
-  const [olderThanDays, setOlderThanDays] = useState(90);
-  const [selectedTypes, setSelectedTypes] = useState<MetricType[]>([]);
+  const [mode, setMode] = React.useState<Mode>("day");
+  const [openDropdown, setOpenDropdown] = React.useState<Mode | null>(null);
+  const [day, setDay] = React.useState("");
+  const [weekStart, setWeekStart] = React.useState("");
+  const [month, setMonth] = React.useState("");
+  const [olderThanDays, setOlderThanDays] = React.useState(90);
+  const [selectedTypes, setSelectedTypes] = React.useState<MetricType[]>([]);
 
-  const availableTypes = useMemo(
-    () => TYPE_ORDER.filter((type) => options?.types.includes(type)),
-    [options]
-  );
-
-  useEffect(() => {
+  React.useEffect(() => {
     if (!visible || !options) return;
     setMode("day");
     setOpenDropdown(null);
@@ -113,13 +110,13 @@ export default function DeleteReadingsModal({
     setSelectedTypes(options.types.length ? [options.types[0]] : []);
   }, [options, visible]);
 
-  const modeOptions: Array<{ key: Mode; label: string; icon: string }> = [
-    { key: "day", label: t("readingsHistory.deleteModal.modeDay"), icon: "calendar-today" },
-    { key: "week", label: t("readingsHistory.deleteModal.modeWeek"), icon: "calendar-week" },
-    { key: "month", label: t("readingsHistory.deleteModal.modeMonth"), icon: "calendar-month" },
-    { key: "types", label: t("readingsHistory.deleteModal.modeTypes"), icon: "shape-outline" },
-    { key: "olderThan", label: t("readingsHistory.deleteModal.modeOlderThan"), icon: "calendar-clock" },
-  ];
+  if (!visible) return null;
+
+  const availableTypes = TYPE_ORDER.filter((type) => options?.types.includes(type));
+  const hasDayScope = !!options?.days.length;
+  const hasWeekScope = !!options?.weeks.length;
+  const hasMonthScope = !!options?.months.length;
+  const hasTypeScope = availableTypes.length > 0;
 
   const olderThanOptions = OLDER_THAN_OPTIONS.map((days) => ({
     key: String(days),
@@ -142,7 +139,7 @@ export default function DeleteReadingsModal({
     );
   };
 
-  const confirm = () => {
+  const handleConfirm = () => {
     if (!deviceId || !canConfirm) return;
 
     if (mode === "day") {
@@ -159,44 +156,72 @@ export default function DeleteReadingsModal({
   };
 
   return (
-    <Modal visible={visible} transparent animationType="fade" onRequestClose={onCancel}>
-      <View style={modalStyles.backdrop}>
-        <View style={modalStyles.card}>
-          <LinearGradient
-            colors={["rgba(21,71,58,0.98)", "rgba(10,36,31,0.98)"]}
-            style={StyleSheet.absoluteFillObject}
+    <>
+      <Pressable style={s.promptBackdrop} onPress={onCancel} />
+
+      <View style={s.promptWrap}>
+        <View style={[s.promptGlass, s.promptGlass28]}>
+          <BlurView
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0 }}
+            blurType="light"
+            blurAmount={14}
+            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          <Text style={modalStyles.title}>{t("readingsHistory.deleteModal.title")}</Text>
-          <Text style={modalStyles.description}>
-            {t("readingsHistory.deleteModal.description")}
-          </Text>
 
-          <ScrollView style={modalStyles.body} contentContainerStyle={modalStyles.bodyContent}>
-            {modeOptions.map((option) => (
-              <Pressable
-                key={option.key}
-                style={modalStyles.radioRow}
-                onPress={() => {
-                  setMode(option.key);
-                  setOpenDropdown(null);
-                }}
-              >
-                <MaterialCommunityIcons
-                  name={option.icon}
-                  size={18}
-                  color="#FFFFFF"
-                  style={modalStyles.radioIcon}
-                />
-                <Text style={modalStyles.radioText}>{option.label}</Text>
-                <View style={modalStyles.radioOuter}>
-                  {mode === option.key && <View style={modalStyles.radioInner} />}
-                </View>
-              </Pressable>
-            ))}
+          <View
+            pointerEvents="none"
+            // @ts-ignore
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            }}
+          />
+        </View>
 
-            {mode === "day" && (
+        <View
+          style={[
+            s.promptInner,
+            s.promptInner28,
+            {
+              height: "86%",
+              maxHeight: "86%",
+              position: "relative",
+            },
+          ]}
+        >
+          <ScrollView
+            style={{ flex: 1 }}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
+              paddingTop: 44,
+              paddingBottom: 120,
+            }}
+          >
+            <Text style={s.promptTitle}>{t("readingsHistory.deleteModal.title")}</Text>
+            <Text style={s.promptDescription}>
+              {t("readingsHistory.deleteModal.description")}
+            </Text>
+
+            <Text style={s.inputLabel}>{t("readingsHistory.deleteModal.scopeLabel")}</Text>
+
+            <Pressable
+              style={[s.radioRow, !hasDayScope && styles.disabledRow]}
+              disabled={!hasDayScope}
+              onPress={() => {
+                setMode("day");
+                setOpenDropdown(null);
+              }}
+            >
+              <View style={s.radioOuter}>{mode === "day" && <View style={s.radioInner} />}</View>
+              <Text style={s.modalOptionText}>{t("readingsHistory.deleteModal.modeDay")}</Text>
+            </Pressable>
+            {mode === "day" && hasDayScope && (
               <Dropdown
-                label={t("readingsHistory.deleteModal.selectDay")}
                 value={day}
                 options={options?.days || []}
                 open={openDropdown === "day"}
@@ -208,9 +233,19 @@ export default function DeleteReadingsModal({
               />
             )}
 
-            {mode === "week" && (
+            <Pressable
+              style={[s.radioRow, !hasWeekScope && styles.disabledRow]}
+              disabled={!hasWeekScope}
+              onPress={() => {
+                setMode("week");
+                setOpenDropdown(null);
+              }}
+            >
+              <View style={s.radioOuter}>{mode === "week" && <View style={s.radioInner} />}</View>
+              <Text style={s.modalOptionText}>{t("readingsHistory.deleteModal.modeWeek")}</Text>
+            </Pressable>
+            {mode === "week" && hasWeekScope && (
               <Dropdown
-                label={t("readingsHistory.deleteModal.selectWeek")}
                 value={weekStart}
                 options={options?.weeks || []}
                 open={openDropdown === "week"}
@@ -222,9 +257,19 @@ export default function DeleteReadingsModal({
               />
             )}
 
-            {mode === "month" && (
+            <Pressable
+              style={[s.radioRow, !hasMonthScope && styles.disabledRow]}
+              disabled={!hasMonthScope}
+              onPress={() => {
+                setMode("month");
+                setOpenDropdown(null);
+              }}
+            >
+              <View style={s.radioOuter}>{mode === "month" && <View style={s.radioInner} />}</View>
+              <Text style={s.modalOptionText}>{t("readingsHistory.deleteModal.modeMonth")}</Text>
+            </Pressable>
+            {mode === "month" && hasMonthScope && (
               <Dropdown
-                label={t("readingsHistory.deleteModal.selectMonth")}
                 value={month}
                 options={options?.months || []}
                 open={openDropdown === "month"}
@@ -236,38 +281,66 @@ export default function DeleteReadingsModal({
               />
             )}
 
-            {mode === "types" && (
-              <View>
-                <Text style={modalStyles.inputLabel}>
-                  {t("readingsHistory.deleteModal.selectTypes")}
-                </Text>
-                <View style={modalStyles.chipRow}>
-                  {availableTypes.map((type) => {
-                    const selected = selectedTypes.includes(type);
-                    return (
-                      <Pressable
-                        key={type}
-                        style={[modalStyles.chip, selected && modalStyles.chipSelected]}
-                        onPress={() => toggleType(type)}
-                      >
-                        <Text style={modalStyles.chipText}>
-                          {t(`readingsHistory.metric.${type}Short`)}
-                        </Text>
-                      </Pressable>
-                    );
-                  })}
-                  {!availableTypes.length && (
-                    <Text style={modalStyles.emptyText}>
-                      {t("readingsHistory.deleteModal.noTypes")}
-                    </Text>
-                  )}
-                </View>
+            <Pressable
+              style={[s.radioRow, !hasTypeScope && styles.disabledRow]}
+              disabled={!hasTypeScope}
+              onPress={() => {
+                setMode("types");
+                setOpenDropdown(null);
+              }}
+            >
+              <View style={s.radioOuter}>{mode === "types" && <View style={s.radioInner} />}</View>
+              <Text style={s.modalOptionText}>{t("readingsHistory.deleteModal.modeTypes")}</Text>
+            </Pressable>
+            {mode === "types" && hasTypeScope && (
+              <View style={[s.chipRow, styles.chipGrid]}>
+                {availableTypes.map((type) => {
+                  const selected = selectedTypes.includes(type);
+                  const color = ICON_BG[type];
+
+                  return (
+                    <Pressable
+                      key={type}
+                      onPress={() => toggleType(type)}
+                      style={[
+                        s.chip,
+                        styles.typeChip,
+                        {
+                          backgroundColor: color,
+                          opacity: selected ? 1 : 0.45,
+                        },
+                      ]}
+                    >
+                      <MaterialCommunityIcons
+                        name={TYPE_ICONS[type] as any}
+                        size={16}
+                        color="#FFFFFF"
+                      />
+                      <Text style={s.chipText}>
+                        {t(`readingsHistory.metric.${type}Short`)}
+                      </Text>
+                    </Pressable>
+                  );
+                })}
               </View>
             )}
 
+            <Pressable
+              style={s.radioRow}
+              onPress={() => {
+                setMode("olderThan");
+                setOpenDropdown(null);
+              }}
+            >
+              <View style={s.radioOuter}>
+                {mode === "olderThan" && <View style={s.radioInner} />}
+              </View>
+              <Text style={s.modalOptionText}>
+                {t("readingsHistory.deleteModal.modeOlderThan")}
+              </Text>
+            </Pressable>
             {mode === "olderThan" && (
               <Dropdown
-                label={t("readingsHistory.deleteModal.selectOlderThan")}
                 value={String(olderThanDays)}
                 options={olderThanOptions}
                 open={openDropdown === "olderThan"}
@@ -280,193 +353,60 @@ export default function DeleteReadingsModal({
                 }}
               />
             )}
+
+            <View style={[s.promptButtonsRow, { marginTop: 18 }]}>
+              <Pressable onPress={onCancel} style={s.promptBtn}>
+                <Text style={s.promptBtnText}>{t("readingsHistory.deleteModal.cancel")}</Text>
+              </Pressable>
+
+              <Pressable
+                onPress={handleConfirm}
+                style={[s.promptBtn, s.promptDanger, !canConfirm && { opacity: 0.5 }]}
+                disabled={!canConfirm}
+              >
+                <Text style={[s.promptPrimaryText, styles.deleteText]}>
+                  {t("readingsHistory.deleteModal.delete")}
+                </Text>
+              </Pressable>
+            </View>
           </ScrollView>
 
-          <View style={modalStyles.buttonsRow}>
-            <Pressable style={modalStyles.button} onPress={onCancel}>
-              <Text style={modalStyles.buttonText}>{t("readingsHistory.deleteModal.cancel")}</Text>
-            </Pressable>
-            <Pressable
-              style={[modalStyles.button, modalStyles.dangerButton, !canConfirm && modalStyles.disabledButton]}
-              disabled={!canConfirm}
-              onPress={confirm}
-            >
-              <Text style={modalStyles.buttonText}>{t("readingsHistory.deleteModal.delete")}</Text>
-            </Pressable>
-          </View>
+          <ModalCloseButton
+            onPress={onCancel}
+            accessibilityLabel={t("readingsHistory.deleteModal.close", "Close")}
+            style={{
+              top: 8,
+              right: 8,
+            }}
+          />
         </View>
       </View>
-    </Modal>
+    </>
   );
 }
 
-const modalStyles = StyleSheet.create({
-  backdrop: {
-    flex: 1,
+const styles = StyleSheet.create({
+  disabledRow: {
+    opacity: 0.55,
+  },
+  chipGrid: {
+    marginTop: 4,
+    paddingHorizontal: 16,
+    justifyContent: "space-between",
+    rowGap: 10,
+    columnGap: 10,
+  },
+  typeChip: {
+    width: "48%",
+    minHeight: 44,
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: 24,
-    backgroundColor: "rgba(0,0,0,0.62)",
+    gap: 8,
+    borderWidth: 0,
   },
-  card: {
-    width: "100%",
-    maxWidth: 520,
-    maxHeight: "86%",
-    borderRadius: 18,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.18)",
-  },
-  title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 18,
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    marginBottom: 6,
-  },
-  description: {
-    color: "rgba(255,255,255,0.82)",
-    fontWeight: "600",
-    fontSize: 12,
-    lineHeight: 17,
-    paddingHorizontal: 16,
-    marginBottom: 8,
-  },
-  body: {
-    maxHeight: 430,
-  },
-  bodyContent: {
-    paddingBottom: 8,
-  },
-  radioRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 16,
-    paddingVertical: 9,
-    gap: 10,
-  },
-  radioIcon: {
-    width: 22,
-  },
-  radioText: {
-    flex: 1,
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 13,
-  },
-  radioOuter: {
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    borderWidth: 2,
-    borderColor: "rgba(255,255,255,0.72)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  radioInner: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: "#FFFFFF",
-  },
-  inputLabel: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "800",
-    fontSize: 12,
-    marginTop: 8,
-    marginBottom: 6,
-    marginHorizontal: 16,
-  },
-  dropdown: {
-    marginBottom: 10,
-  },
-  dropdownHeader: {
-    marginHorizontal: 16,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  dropdownValue: {
-    flex: 1,
-    color: "#FFFFFF",
-    fontWeight: "800",
-    marginRight: 12,
-  },
-  dropdownList: {
-    marginHorizontal: 16,
-    marginTop: 6,
-    borderRadius: 16,
-    overflow: "hidden",
-    backgroundColor: "rgba(255,255,255,0.10)",
-  },
-  dropdownItem: {
-    paddingHorizontal: 14,
-    paddingVertical: 13,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.16)",
-  },
-  dropdownItemText: {
-    flex: 1,
-    color: "#FFFFFF",
-    fontWeight: "700",
-    marginRight: 12,
-  },
-  chipRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    paddingHorizontal: 16,
-    gap: 10,
-    marginBottom: 10,
-  },
-  chip: {
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 14,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  chipSelected: {
-    backgroundColor: "rgba(11,114,133,0.92)",
-  },
-  chipText: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 12,
-  },
-  emptyText: {
-    color: "rgba(255,255,255,0.82)",
-    fontWeight: "700",
-    fontSize: 12,
-  },
-  buttonsRow: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    gap: 10,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-    paddingTop: 6,
-  },
-  button: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  dangerButton: {
-    backgroundColor: "rgba(255,107,107,0.28)",
-  },
-  disabledButton: {
-    opacity: 0.45,
-  },
-  buttonText: {
-    color: "#FFFFFF",
+  deleteText: {
+    color: "#FF6B6B",
     fontWeight: "800",
   },
 });

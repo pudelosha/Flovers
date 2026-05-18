@@ -42,7 +42,9 @@
       "daysOption": "{{count}} dni",
       "noTypes": "Nie znaleziono typów odczytów.",
       "cancel": "Anuluj",
-      "delete": "Usuń"
+      "delete": "Usuń",
+      "scopeLabel": "Zakres usuwania",
+      "close": "Zamknij"
     },
     "deleteToast": {
       "success": "Usunięto {{count}} odczytów",

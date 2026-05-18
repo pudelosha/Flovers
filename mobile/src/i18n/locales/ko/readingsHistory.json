@@ -42,7 +42,9 @@
       "daysOption": "{{count}}일",
       "noTypes": "측정 유형을 찾을 수 없습니다.",
       "cancel": "취소",
-      "delete": "삭제"
+      "delete": "삭제",
+      "scopeLabel": "삭제 범위",
+      "close": "닫기"
     },
     "deleteToast": {
       "success": "측정값 {{count}}개를 삭제했습니다",

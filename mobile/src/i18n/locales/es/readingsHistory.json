@@ -42,7 +42,9 @@
       "daysOption": "{{count}} días",
       "noTypes": "No se encontraron tipos de lectura.",
       "cancel": "Cancelar",
-      "delete": "Eliminar"
+      "delete": "Eliminar",
+      "scopeLabel": "Alcance de eliminacion",
+      "close": "Cerrar"
     },
     "deleteToast": {
       "success": "{{count}} lecturas eliminadas",
