@@ -1,7 +1,4 @@
-/* web/src/styles/app.css (CLEANED UP) */
-
 :root {
-  /* App palette */
   --bg0: #041a18;
   --bg1: #062824;
   --bg2: #0b3a30;
@@ -22,7 +19,6 @@
   --maxw: 1100px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 
-  /* ===== RN-like type + controls ===== */
   --title-size: 24px;
   --title-weight: 800;
 
@@ -35,7 +31,7 @@
   --link-size: 14px;
 
   --control-radius: 14px;
-  --input-height: 64px; /* RN INPUT_HEIGHT */
+  --input-height: 64px;
 }
 
 * { box-sizing: border-box; }
@@ -44,9 +40,8 @@ html, body { height: 100%; }
 
 /* ===== Scrollbar: prevent layout shift without ugly gutters ===== */
 
-/* Allocate scrollbar space (single side), not both edges */
 html {
-  scrollbar-gutter: stable; /* NOT both-edges */
+  scrollbar-gutter: stable;
 }
 
 /* Reserve scrollbar width on desktop to prevent "shake" */
@@ -142,7 +137,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.8px;
 }
 
-/* RN-like auth title (Contact uses this) */
 .h1-auth {
   font-size: var(--title-size);
   font-weight: var(--title-weight);
@@ -563,17 +557,16 @@ a { color: inherit; text-decoration: none; }
 .field { display: flex; flex-direction: column; gap: 8px; }
 
 .label {
-  font-weight: var(--label-weight); /* 500 */
+  font-weight: var(--label-weight);
   color: rgba(255,255,255,0.60);
-  font-size: var(--label-size);     /* 16 */
+  font-size: var(--label-size);
 }
 
-/* RN-like filled fields */
 .input {
   width: 100%;
-  border-radius: var(--control-radius);  /* 14 */
-  border: 1px solid transparent;         /* avoids layout shift on focus */
-  background: rgba(255,255,255,0.12);    /* matches RN flat bg */
+  border-radius: var(--control-radius);
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.95);
   padding: 0 16px;
   outline: none;

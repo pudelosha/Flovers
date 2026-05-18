@@ -48,12 +48,6 @@ export function IconLeaf() {
   );
 }
 
-/**
- * NEW: better semantic icons
- * - IconRepeat: "intervals/cadence"
- * - IconClipboardCheck: "reminders -> tasks"
- * - IconActivity: "readings/trends"
- */
 export function IconRepeat() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">

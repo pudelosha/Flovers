@@ -1,4 +1,3 @@
-// web/src/pages/Contact.jsx
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import TopToast from "../shared/ui/TopToast.jsx";
@@ -48,11 +47,10 @@ export default function Contact() {
   const [copyToMe, setCopyToMe] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  // Toast state (RN-like)
   const [toast, setToast] = useState({
     visible: false,
     msg: "",
-    variant: "default", // default | success | error
+    variant: "default",
   });
 
   const showToast = (msg, variant = "default") => {
@@ -105,7 +103,7 @@ export default function Contact() {
         try {
           json = await r.json();
         } catch {
-          // ignore json parse errors
+          json = null;
         }
 
         if (!r.ok) {

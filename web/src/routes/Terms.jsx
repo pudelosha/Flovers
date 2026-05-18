@@ -1,4 +1,3 @@
-// web/src/pages/Terms.jsx
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -32,7 +31,6 @@ export default function Terms() {
 
   return (
     <article className="card prose">
-      {/* Match Privacy Policy formatting */}
       <h1 className="h1 h1-auth">{t("terms.title")}</h1>
       <p className="muted muted-center">
         {t("terms.lastUpdated", { date: "2026-01-28" })}
