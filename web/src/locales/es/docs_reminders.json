@@ -26,11 +26,12 @@
         ]
       },
       {
-        "heading": "Acciones en la ficha del recordatorio (Editar / Eliminar)",
+        "heading": "Acciones de la tarjeta de recordatorio (Editar / Pausar / Reanudar / Eliminar)",
         "body": [
           "Cada recordatorio tiene dos acciones: Editar y Eliminar.",
           "La edición permite cambiar los parámetros del recordatorio, como el intervalo, el tipo de tarea, la planta asociada y otras configuraciones (dependiendo del tipo de recordatorio).",
-          "Eliminar un recordatorio es permanente y evitará que se generen tareas de esa regla en el futuro."
+          "Eliminar un recordatorio es permanente y evitará que se generen tareas de esa regla en el futuro.",
+          "Pausar desactiva temporalmente un recordatorio sin eliminarlo. Mientras est? pausado, su tarea pendiente se elimina de Home y no se incluye en las notificaciones diarias por correo electr?nico o push. Al reanudarlo, Flovers programa la siguiente tarea pendiente seg?n el intervalo del recordatorio."
         ]
       },
       {

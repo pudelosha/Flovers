@@ -84,6 +84,7 @@ type Props = {
   isMenuOpen: boolean;
   onToggleMenu: () => void;
   onPressBody: () => void;
+  onToggleActive: () => void;
   onEdit: () => void;
   onDelete: () => void;
 };
@@ -97,6 +98,7 @@ export default function ReminderTile({
   isMenuOpen,
   onToggleMenu,
   onPressBody,
+  onToggleActive,
   onEdit,
   onDelete,
 }: Props) {
@@ -248,15 +250,30 @@ export default function ReminderTile({
                   {everyStr}
                 </Text>
               )}
-              {!!dueText && (
-                <Text style={s.dueWhen} numberOfLines={2}>
-                  {dueText}
-                </Text>
-              )}
-              {!!dueDateText && (
-                <Text style={s.dueDateText} numberOfLines={1}>
-                  {dueDateText}
-                </Text>
+              {reminder.isActive ? (
+                <>
+                  {!!dueText && (
+                    <Text style={s.dueWhen} numberOfLines={2}>
+                      {dueText}
+                    </Text>
+                  )}
+                  {!!dueDateText && (
+                    <Text style={s.dueDateText} numberOfLines={1}>
+                      {dueDateText}
+                    </Text>
+                  )}
+                </>
+              ) : (
+                <View style={s.pausedRow}>
+                  <MaterialCommunityIcons
+                    name="pause-circle-outline"
+                    size={13}
+                    color="#FFFFFF"
+                  />
+                  <Text style={s.pausedText} numberOfLines={1}>
+                    {tr("reminders.tile.paused", "Paused")}
+                  </Text>
+                </View>
               )}
             </View>
           </Pressable>
@@ -264,7 +281,14 @@ export default function ReminderTile({
       </View>
 
       {/* NOT CLIPPED: menu must be outside cardGlass (overflow: hidden) */}
-      {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
+      {isMenuOpen && (
+        <ReminderMenu
+          isActive={reminder.isActive}
+          onToggleActive={onToggleActive}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      )}
     </View>
   );
 }

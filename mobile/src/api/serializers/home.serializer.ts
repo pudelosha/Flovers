@@ -33,8 +33,10 @@ export function buildUITasks(
   const plantById = new Map<number, ApiPlant>();
   for (const p of plants) plantById.set(p.id, p);
 
-  return tasks.map((t) => {
+  return tasks.flatMap((t) => {
     const r = remById.get(t.reminder);
+    if (!r?.is_active) return [];
+
     const p = r ? plantById.get(r.plant) : undefined;
 
     const type: TaskType = toTaskType(r?.type ?? "care");
@@ -61,7 +63,7 @@ export function buildUITasks(
       note: t.note ?? undefined,         // optional note saved on completion
     };
 
-    return ui;
+    return [ui];
   });
 }
 

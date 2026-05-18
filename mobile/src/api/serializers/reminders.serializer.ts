@@ -42,38 +42,47 @@ export type UIReminder = {
   dueDate: Date;
   intervalValue?: number;
   intervalUnit?: "days" | "months";
+  isActive: boolean;
 };
 
 /**
  * Join tasks + reminders + plants into UIReminders.
- * NOTE: pass interval fields from the reminder (r).
+ * Active reminders use their pending task date; paused reminders still render
+ * with their schedule metadata so they can be resumed from the list.
  */
 export function buildUIReminders(
   tasks: ApiReminderTask[],
   reminders: ApiReminder[],
   plants: ApiPlantInstanceListItem[]
 ): UIReminder[] {
-  const remindersById = Object.fromEntries(reminders.map(r => [r.id, r]));
-  const plantsById = Object.fromEntries(plants.map(p => [p.id, p]));
+  const plantsById = Object.fromEntries(plants.map((p) => [p.id, p]));
+  const tasksByReminderId = new Map<number, ApiReminderTask>();
 
-  return tasks.map(task => {
-    const r = remindersById[task.reminder];
-    const typeUI = mapBackendTypeToUI(r?.type ?? "water");
-    const plant = r ? plantsById[r.plant] : undefined;
+  for (const task of tasks) {
+    if (!tasksByReminderId.has(task.reminder)) {
+      tasksByReminderId.set(task.reminder, task);
+    }
+  }
 
-    const { label, date } = formatDueLabel(task.due_date);
+  return reminders.map((r) => {
+    const task = tasksByReminderId.get(r.id);
+    const typeUI = mapBackendTypeToUI(r.type);
+    const plant = plantsById[r.plant];
+    const dueISO = task?.due_date ?? r.start_date;
+    const { label, date } = formatDueLabel(dueISO);
 
     return {
-      id: String(task.id),                 // task id
-      reminderId: String(task.reminder),   // 🔹 keep the reminder id
+      id: `reminder-${r.id}`,
+      reminderId: String(r.id),
       type: typeUI,
       plant: plant?.display_name || "Plant",
-      plantId: r?.plant != null ? String(r.plant) : undefined,
+      plantId: r.plant != null ? String(r.plant) : undefined,
       location: plant?.location?.name,
       due: label,
       dueDate: date,
-      intervalValue: r?.interval_value,
-      intervalUnit: r?.interval_unit,
+      intervalValue: r.interval_value,
+      intervalUnit: r.interval_unit,
+      isActive: r.is_active,
     };
   });
 }

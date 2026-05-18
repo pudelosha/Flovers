@@ -56,6 +56,7 @@ def _count_due_on_date(user_id: int, due_date) -> int:
         user_id=user_id,
         status="pending",
         due_date=due_date,
+        reminder__is_active=True,
     ).count()
 
 

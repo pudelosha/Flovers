@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_reminders": {
     "title": "Przypomnienia",
     "sections": [
@@ -26,11 +26,12 @@
         ]
       },
       {
-        "heading": "Akcje na kafelku przypomnienia (Edytuj / Usuń)",
+        "heading": "Akcje na kafelku przypomnienia (Edytuj / Wstrzymaj / Wzn?w / Usu?)",
         "body": [
           "Każde przypomnienie posiada dwie akcje: Edytuj oraz Usuń.",
           "Edycja pozwala zmienić parametry przypomnienia, takie jak interwał, typ zadania, powiązana roślina i inne ustawienia (w zależności od rodzaju przypomnienia).",
-          "Usunięcie przypomnienia jest trwałe i powoduje, że zadania nie będą już generowane z tej reguły w przyszłości."
+          "Usunięcie przypomnienia jest trwałe i powoduje, że zadania nie będą już generowane z tej reguły w przyszłości.",
+          "Wstrzymanie tymczasowo wy??cza przypomnienie bez jego usuwania. Gdy przypomnienie jest wstrzymane, jego zadanie znika z ekranu Home i nie jest uwzgl?dniane w codziennych powiadomieniach e-mail ani push. Po wznowieniu Flovers planuje kolejne zadanie zgodnie z interwa?em przypomnienia."
         ]
       },
       {

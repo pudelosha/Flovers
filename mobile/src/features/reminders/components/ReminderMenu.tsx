@@ -6,11 +6,13 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 type Props = {
+  isActive: boolean;
+  onToggleActive: () => void;
   onEdit: () => void;
   onDelete: () => void;
 };
 
-export default function ReminderMenu({ onEdit, onDelete }: Props) {
+export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelete }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -30,6 +32,15 @@ export default function ReminderMenu({ onEdit, onDelete }: Props) {
         label={tr("reminders.menu.edit", "Edit reminder")}
         icon="calendar-edit"
         onPress={onEdit}
+      />
+      <MenuItem
+        label={
+          isActive
+            ? tr("reminders.menu.pause", "Pause reminder")
+            : tr("reminders.menu.resume", "Resume reminder")
+        }
+        icon={isActive ? "pause-circle-outline" : "play-circle-outline"}
+        onPress={onToggleActive}
       />
       <MenuItem
         label={tr("reminders.menu.delete", "Delete reminder")}

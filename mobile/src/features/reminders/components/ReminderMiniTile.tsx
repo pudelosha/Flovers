@@ -13,6 +13,7 @@ type Props = {
   reminder: UIReminder;
   isMenuOpen: boolean;
   onToggleMenu: () => void;
+  onToggleActive?: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
 };
@@ -53,6 +54,7 @@ export default function ReminderMiniTile({
   reminder,
   isMenuOpen,
   onToggleMenu,
+  onToggleActive,
   onEdit,
   onDelete,
 }: Props) {
@@ -98,6 +100,12 @@ export default function ReminderMiniTile({
     return `${Y}-${M}-${D}`;
   })();
 
+  const tagText = reminder.isActive
+    ? `${typeLabel.toUpperCase()}${intervalPart ? ` - ${intervalPart}` : ""}${
+        iso ? ` - ${formatISOForLabel(iso, settings)}` : ""
+      }`
+    : tr("reminders.tile.paused", "Paused");
+
   return (
     <View style={[styles.root, isMenuOpen && styles.rootRaised]}>
       <Pressable
@@ -135,14 +143,19 @@ export default function ReminderMiniTile({
           )}
 
           <Text style={s.miniTag} numberOfLines={1}>
-            {typeLabel.toUpperCase()}
-            {intervalPart ? ` • ${intervalPart}` : ""}
-            {iso ? ` • ${formatISOForLabel(iso, settings)}` : ""}
+            {tagText}
           </Text>
         </View>
       </Pressable>
 
-      {isMenuOpen && <ReminderMiniTileMenu onEdit={onEdit} onDelete={onDelete} />}
+      {isMenuOpen && (
+        <ReminderMiniTileMenu
+          isActive={reminder.isActive}
+          onToggleActive={onToggleActive}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      )}
     </View>
   );
 }

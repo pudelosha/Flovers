@@ -20,6 +20,7 @@ type Props = {
   openMenuId: string | null;
   onSelectDate: (isoDate: string) => void;
   onToggleMenu: (id: string) => void;
+  onToggleActive: (r: UIReminder) => void;
   onEdit: (r: UIReminder) => void;
   onDelete: (r: UIReminder) => void;
 };
@@ -81,6 +82,7 @@ export default function RemindersCalendar({
   openMenuId,
   onSelectDate,
   onToggleMenu,
+  onToggleActive,
   onEdit,
   onDelete,
 }: Props) {
@@ -342,6 +344,7 @@ export default function RemindersCalendar({
                     reminder={item}
                     isMenuOpen={isMenuOpen}
                     onToggleMenu={() => onToggleMenu(item.id)}
+                    onToggleActive={() => onToggleActive(item)}
                     onEdit={() => onEdit(item)}
                     onDelete={() => onDelete(item)}
                   />

@@ -26,11 +26,12 @@
         ]
       },
       {
-        "heading": "Actions sur la tuile du rappel (Modifier / Supprimer)",
+        "heading": "Actions sur la tuile du rappel (Modifier / Pause / Reprendre / Supprimer)",
         "body": [
           "Chaque rappel dispose de deux actions : Modifier et Supprimer.",
           "La modification permet de changer les paramètres du rappel, tels que l'intervalle, le type de tâche, la plante associée et d'autres paramètres (en fonction du type de rappel).",
-          "Supprimer un rappel est permanent et empêche la génération de tâches à partir de cette règle dans le futur."
+          "Supprimer un rappel est permanent et empêche la génération de tâches à partir de cette règle dans le futur.",
+          "La mise en pause d?sactive temporairement un rappel sans le supprimer. Pendant qu?il est en pause, sa t?che ? faire est retir?e de l?accueil et n?est pas incluse dans les notifications quotidiennes par e-mail ou push. Lorsque vous le reprenez, Flovers planifie la prochaine t?che en attente selon l?intervalle du rappel."
         ]
       },
       {

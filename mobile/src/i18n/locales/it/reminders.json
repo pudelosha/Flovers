@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "Modifica promemoria",
-      "delete": "Elimina promemoria"
+      "delete": "Elimina promemoria",
+      "pause": "Metti in pausa promemoria",
+      "resume": "Riprendi promemoria"
     },
     "tile": {
       "repeatsEvery": "Si ripete ogni {{count}} {{unit}}",
       "dueToday": "Scade oggi",
       "dueInOneDay": "Scade tra 1 giorno",
       "dueInDays": "Scade tra {{count}} giorni",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "In pausa"
     },
     "calendar": {
       "scheduledOn": "Programmato per {{date}}",
       "noItems": "Nessun promemoria per questo giorno.",
-
       "today": "Oggi",
-
       "weekdays": {
         "monday": "Lunedì",
         "tuesday": "Martedì",
@@ -54,7 +55,6 @@
         "saturday": "Sabato",
         "sunday": "Domenica"
       },
-
       "weekdaysShort": {
         "mon": "Lun",
         "tue": "Mar",
@@ -64,7 +64,6 @@
         "sat": "Sab",
         "sun": "Dom"
       },
-
       "months": {
         "january": "Gennaio",
         "february": "Febbraio",
@@ -79,7 +78,6 @@
         "november": "Novembre",
         "december": "Dicembre"
       },
-
       "monthsShort": {
         "january": "Gen",
         "february": "Feb",
@@ -106,7 +104,11 @@
       "createFailed": "Impossibile creare",
       "createFailedWithReason": "Impossibile creare: {{reason}}",
       "updateFailed": "Impossibile aggiornare",
-      "updateFailedWithReason": "Impossibile aggiornare: {{reason}}"
+      "updateFailedWithReason": "Impossibile aggiornare: {{reason}}",
+      "paused": "Promemoria in pausa",
+      "resumed": "Promemoria ripreso",
+      "toggleFailed": "Aggiornamento non riuscito",
+      "toggleFailedWithReason": "Aggiornamento non riuscito: {{reason}}"
     }
   }
 }

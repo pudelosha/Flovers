@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "स्मरणपत्र संपादित करें",
-      "delete": "स्मरणपत्र हटाएँ"
+      "delete": "स्मरणपत्र हटाएँ",
+      "pause": "???????? ?????",
+      "resume": "???????? ??? ???? ????"
     },
     "tile": {
       "repeatsEvery": "{{count}} {{unit}} हर बार दोहराता है",
       "dueToday": "आज की समय सीमा",
       "dueInOneDay": "1 दिन में समय सीमा",
       "dueInDays": "{{count}} दिनों में समय सीमा",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "???? ???"
     },
     "calendar": {
       "scheduledOn": "{{date}} पर निर्धारित",
       "noItems": "इस दिन के लिए कोई स्मरणपत्र नहीं है।",
-
       "today": "आज",
-
       "weekdays": {
         "monday": "सोमवार",
         "tuesday": "मंगलवार",
@@ -54,7 +55,6 @@
         "saturday": "शनिवार",
         "sunday": "रविवार"
       },
-
       "weekdaysShort": {
         "mon": "सोम",
         "tue": "मंगल",
@@ -64,7 +64,6 @@
         "sat": "शनि",
         "sun": "रवि"
       },
-
       "months": {
         "january": "जनवरी",
         "february": "फ़रवरी",
@@ -79,7 +78,6 @@
         "november": "नवंबर",
         "december": "दिसंबर"
       },
-
       "monthsShort": {
         "january": "जन",
         "february": "फ़र",
@@ -106,7 +104,11 @@
       "createFailed": "बनाने में विफल",
       "createFailedWithReason": "नहीं बना सका: {{reason}}",
       "updateFailed": "अपडेट करने में विफल",
-      "updateFailedWithReason": "अपडेट नहीं किया जा सका: {{reason}}"
+      "updateFailedWithReason": "अपडेट नहीं किया जा सका: {{reason}}",
+      "paused": "???????? ??? ???? ???",
+      "resumed": "???????? ??? ???? ?? ???",
+      "toggleFailed": "????? ???? ???",
+      "toggleFailedWithReason": "????? ???? ???: {{reason}}"
     }
   }
 }

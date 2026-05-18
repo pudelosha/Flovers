@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "Modifier le rappel",
-      "delete": "Supprimer le rappel"
+      "delete": "Supprimer le rappel",
+      "pause": "Mettre le rappel en pause",
+      "resume": "Reprendre le rappel"
     },
     "tile": {
       "repeatsEvery": "Se répète tous les {{count}} {{unit}}",
       "dueToday": "Échéance aujourd’hui",
       "dueInOneDay": "Échéance dans 1 jour",
       "dueInDays": "Échéance dans {{count}} jours",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "En pause"
     },
     "calendar": {
       "scheduledOn": "Planifié pour le {{date}}",
       "noItems": "Aucun rappel pour ce jour.",
-
       "today": "Aujourd'hui",
-
       "weekdays": {
         "monday": "Lundi",
         "tuesday": "Mardi",
@@ -54,7 +55,6 @@
         "saturday": "Samedi",
         "sunday": "Dimanche"
       },
-
       "weekdaysShort": {
         "mon": "Lun",
         "tue": "Mar",
@@ -64,7 +64,6 @@
         "sat": "Sam",
         "sun": "Dim"
       },
-
       "months": {
         "january": "Janvier",
         "february": "Février",
@@ -79,7 +78,6 @@
         "november": "Novembre",
         "december": "Décembre"
       },
-
       "monthsShort": {
         "january": "Jan",
         "february": "Fév",
@@ -106,7 +104,11 @@
       "createFailed": "Impossible de créer",
       "createFailedWithReason": "Impossible de créer : {{reason}}",
       "updateFailed": "Impossible de mettre à jour",
-      "updateFailedWithReason": "Impossible de mettre à jour : {{reason}}"
+      "updateFailedWithReason": "Impossible de mettre à jour : {{reason}}",
+      "paused": "Rappel mis en pause",
+      "resumed": "Rappel repris",
+      "toggleFailed": "?chec de la mise ? jour",
+      "toggleFailedWithReason": "?chec de la mise ? jour : {{reason}}"
     }
   }
 }

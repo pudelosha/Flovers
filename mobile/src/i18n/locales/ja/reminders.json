@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "リマインダーを編集",
-      "delete": "リマインダーを削除"
+      "delete": "リマインダーを削除",
+      "pause": "???????????",
+      "resume": "?????????"
     },
     "tile": {
       "repeatsEvery": "{{count}} {{unit}} ごとに繰り返し",
       "dueToday": "今日が期限",
       "dueInOneDay": "1日後が期限",
       "dueInDays": "{{count}}日後が期限",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "?????"
     },
     "calendar": {
       "scheduledOn": "{{date}} に予定されています",
       "noItems": "この日にリマインダーはありません。",
-
       "today": "今日",
-
       "weekdays": {
         "monday": "月曜日",
         "tuesday": "火曜日",
@@ -54,7 +55,6 @@
         "saturday": "土曜日",
         "sunday": "日曜日"
       },
-
       "weekdaysShort": {
         "mon": "月",
         "tue": "火",
@@ -64,7 +64,6 @@
         "sat": "土",
         "sun": "日"
       },
-
       "months": {
         "january": "1月",
         "february": "2月",
@@ -79,7 +78,6 @@
         "november": "11月",
         "december": "12月"
       },
-
       "monthsShort": {
         "january": "1月",
         "february": "2月",
@@ -106,7 +104,11 @@
       "createFailed": "作成に失敗しました",
       "createFailedWithReason": "作成に失敗しました: {{reason}}",
       "updateFailed": "更新に失敗しました",
-      "updateFailedWithReason": "更新に失敗しました: {{reason}}"
+      "updateFailedWithReason": "更新に失敗しました: {{reason}}",
+      "paused": "???????????????",
+      "resumed": "?????????????",
+      "toggleFailed": "?????????",
+      "toggleFailedWithReason": "?????????: {{reason}}"
     }
   }
 }

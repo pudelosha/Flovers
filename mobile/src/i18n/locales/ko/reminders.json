@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "알림 편집",
-      "delete": "알림 삭제"
+      "delete": "알림 삭제",
+      "pause": "?? ?? ??",
+      "resume": "?? ?? ??"
     },
     "tile": {
       "repeatsEvery": "{{count}} {{unit}}마다 반복",
       "dueToday": "오늘 기한",
       "dueInOneDay": "1일 후 기한",
       "dueInDays": "{{count}}일 후 기한",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "?? ???"
     },
     "calendar": {
       "scheduledOn": "{{date}}에 예정됨",
       "noItems": "이 날짜에 알림이 없습니다.",
-
       "today": "오늘",
-
       "weekdays": {
         "monday": "월요일",
         "tuesday": "화요일",
@@ -54,7 +55,6 @@
         "saturday": "토요일",
         "sunday": "일요일"
       },
-
       "weekdaysShort": {
         "mon": "월",
         "tue": "화",
@@ -64,7 +64,6 @@
         "sat": "토",
         "sun": "일"
       },
-
       "months": {
         "january": "1월",
         "february": "2월",
@@ -79,7 +78,6 @@
         "november": "11월",
         "december": "12월"
       },
-
       "monthsShort": {
         "january": "1월",
         "february": "2월",
@@ -106,7 +104,11 @@
       "createFailed": "생성에 실패했습니다.",
       "createFailedWithReason": "생성에 실패했습니다: {{reason}}",
       "updateFailed": "업데이트에 실패했습니다.",
-      "updateFailedWithReason": "업데이트에 실패했습니다: {{reason}}"
+      "updateFailedWithReason": "업데이트에 실패했습니다: {{reason}}",
+      "paused": "??? ?? ???????",
+      "resumed": "??? ?? ???????",
+      "toggleFailed": "???? ??",
+      "toggleFailedWithReason": "???? ??: {{reason}}"
     }
   }
 }

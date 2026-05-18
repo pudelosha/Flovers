@@ -26,11 +26,12 @@
         ]
       },
       {
-        "heading": "Ações no cartão de lembrete (Editar / Eliminar)",
+        "heading": "A??es no cart?o de lembrete (Editar / Pausar / Retomar / Excluir)",
         "body": [
           "Cada lembrete tem duas ações: Editar e Eliminar.",
           "A edição permite alterar os parâmetros do lembrete, como o intervalo, o tipo de tarefa, a planta associada e outras definições (dependendo do tipo de lembrete).",
-          "A eliminação do lembrete é permanente e faz com que as tarefas deixem de ser geradas a partir dessa regra no futuro."
+          "A eliminação do lembrete é permanente e faz com que as tarefas deixem de ser geradas a partir dessa regra no futuro.",
+          "Pausar desativa temporariamente um lembrete sem exclu?-lo. Enquanto estiver pausado, sua tarefa pendente ? removida da Home e n?o entra nas notifica??es di?rias por e-mail ou push. Ao retomar o lembrete, o Flovers agenda a pr?xima tarefa pendente de acordo com o intervalo configurado."
         ]
       },
       {

@@ -7,19 +7,18 @@
       "delete": "Usuń",
       "create": "Utwórz",
       "update": "Zapisz",
-      "reset": "Reset"
+      "reset": "Reset",
+      "pause": "Wstrzymaj",
+      "resume": "Wzn?w"
     },
-
     "confirmDelete": {
       "title": "Usuń przypomnienie",
       "areYouSurePrefix": "Czy na pewno chcesz usunąć",
       "areYouSureSuffix": "? Tej operacji nie można cofnąć."
     },
-
     "edit": {
       "titleCreate": "Dodaj przypomnienie",
       "titleEdit": "Edytuj przypomnienie",
-
       "typeLabel": "Typ",
       "plantLabel": "Roślina",
       "selectPlant": "Wybierz roślinę",
@@ -30,7 +29,6 @@
       "intervalLabel": "Częstotliwość",
       "intervalValuePlaceholder": "Wartość"
     },
-
     "filter": {
       "title": "Filtruj przypomnienia",
       "plantLabel": "Roślina",
@@ -44,7 +42,6 @@
       "toLabel": "Do",
       "datePlaceholder": "RRRR-MM-DD"
     },
-
     "sort": {
       "title": "Sortuj przypomnienia",
       "sortByLabel": "Sortuj wg",
@@ -58,6 +55,12 @@
         "asc": "Rosnąco",
         "desc": "Malejąco"
       }
+    },
+    "toggle": {
+      "pauseTitle": "Wstrzymaj przypomnienie",
+      "resumeTitle": "Wzn?w przypomnienie",
+      "pauseBody": "Wstrzyma? przypomnienie dla {{name}}? Zadanie z terminem b?dzie ukryte, dop?ki go nie wznowisz.",
+      "resumeBody": "Wznowi? przypomnienie dla {{name}}? Nast?pne zadanie z terminem zn?w si? pojawi."
     }
   }
 }

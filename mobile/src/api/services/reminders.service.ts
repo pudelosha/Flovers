@@ -109,6 +109,20 @@ export async function updateReminder(
   );
 }
 
+export async function pauseReminder(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiReminder> {
+  return await updateReminder(id, { is_active: false }, opts);
+}
+
+export async function resumeReminder(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiReminder> {
+  return await updateReminder(id, { is_active: true }, opts);
+}
+
 export async function deleteReminder(
   id: number,
   opts: { auth?: boolean } = { auth: true }

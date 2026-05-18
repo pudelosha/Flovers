@@ -44,10 +44,13 @@ import {
   updateReminder,
   deleteReminder,
   createReminder,
+  pauseReminder,
+  resumeReminder,
 } from "../../../api/services/reminders.service";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
 import { buildUIReminders } from "../../../api/serializers/reminders.serializer";
 import ConfirmDeleteReminderModal from "../components/modals/ConfirmDeleteReminderModal";
+import ConfirmToggleReminderModal from "../components/modals/ConfirmToggleReminderModal";
 import EditReminderModal from "../components/modals/EditReminderModal";
 import SortRemindersModal from "../components/modals/SortRemindersModal";
 import FilterRemindersModal from "../components/modals/FilterRemindersModal";
@@ -158,6 +161,8 @@ export default function RemindersScreen() {
     string | null
   >(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
+  const [confirmToggleReminder, setConfirmToggleReminder] =
+    useState<UIReminder | null>(null);
 
   // --- EDIT/CREATE MODAL state ---
   const [editOpen, setEditOpen] = useState(false);
@@ -298,6 +303,7 @@ export default function RemindersScreen() {
       setEditingId(null);
       setConfirmDeleteReminderId(null);
       setConfirmDeleteName("");
+      setConfirmToggleReminder(null);
       setSortOpen(false);
       setFilterOpen(false);
       closeFloatingMenus();
@@ -417,6 +423,46 @@ export default function RemindersScreen() {
               }
             )
           : tr("reminders.toast.deleteFailed", "Delete failed"),
+        "error"
+      );
+    }
+  };
+
+  // --- PAUSE / RESUME FLOW ---
+  const askToggleReminder = (r: UIReminder) => {
+    closeFloatingMenus();
+    setConfirmToggleReminder(r);
+  };
+  const cancelToggleReminder = () => {
+    setConfirmToggleReminder(null);
+  };
+  const confirmToggleReminderActive = async () => {
+    const target = confirmToggleReminder;
+    if (!target) return;
+
+    try {
+      if (target.isActive) {
+        await pauseReminder(Number(target.reminderId), { auth: true });
+      } else {
+        await resumeReminder(Number(target.reminderId), { auth: true });
+      }
+
+      setConfirmToggleReminder(null);
+      await load();
+      showToast(
+        target.isActive
+          ? tr("reminders.toast.paused", "Reminder paused")
+          : tr("reminders.toast.resumed", "Reminder resumed"),
+        "success"
+      );
+    } catch (e: any) {
+      setConfirmToggleReminder(null);
+      showToast(
+        e?.message
+          ? tr("reminders.toast.toggleFailedWithReason", "Update failed: {{reason}}", {
+              reason: e.message,
+            })
+          : tr("reminders.toast.toggleFailed", "Update failed"),
         "error"
       );
     }
@@ -593,7 +639,11 @@ export default function RemindersScreen() {
   }, [filters]);
 
   const showFAB =
-    !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
+    !editOpen &&
+    !confirmDeleteReminderId &&
+    !confirmToggleReminder &&
+    !sortOpen &&
+    !filterOpen;
 
   // ---------- ENTRANCE ANIMATION ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -780,6 +830,7 @@ export default function RemindersScreen() {
                   isMenuOpen={isOpen}
                   onToggleMenu={() => onToggleMenu(item.id)}
                   onPressBody={closeFabMenu}
+                  onToggleActive={() => askToggleReminder(item)}
                   onEdit={() => openEditModal(item)}
                   onDelete={() => askDelete(item)}
                 />
@@ -873,6 +924,7 @@ export default function RemindersScreen() {
             setSelectedDate(iso);
           }}
           onToggleMenu={onToggleMenu}
+          onToggleActive={askToggleReminder}
           onEdit={openEditModal}
           onDelete={askDelete}
         />
@@ -900,6 +952,14 @@ export default function RemindersScreen() {
         name={confirmDeleteName}
         onCancel={cancelDelete}
         onConfirm={confirmDelete}
+      />
+
+      <ConfirmToggleReminderModal
+        visible={!!confirmToggleReminder}
+        name={confirmToggleReminder?.plant ?? ""}
+        isActive={confirmToggleReminder?.isActive ?? true}
+        onCancel={cancelToggleReminder}
+        onConfirm={confirmToggleReminderActive}
       />
 
       <EditReminderModal

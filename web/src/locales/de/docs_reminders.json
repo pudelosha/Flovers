@@ -26,11 +26,12 @@
         ]
       },
       {
-        "heading": "Aktionen auf der Erinnerungskachel (Bearbeiten / Löschen)",
+        "heading": "Aktionen auf der Erinnerungskachel (Bearbeiten / Pausieren / Fortsetzen / L?schen)",
         "body": [
           "Jede Erinnerung hat zwei Aktionen: Bearbeiten und Löschen.",
           "Das Bearbeiten ermöglicht das Ändern von Erinnerungsparametern wie Intervall, Aufgabentyp, zugeordneter Pflanze und anderen Einstellungen (je nach Erinnerungstyp).",
-          "Das Löschen einer Erinnerung ist dauerhaft und verhindert, dass zukünftige Aufgaben basierend auf dieser Regel erstellt werden."
+          "Das Löschen einer Erinnerung ist dauerhaft und verhindert, dass zukünftige Aufgaben basierend auf dieser Regel erstellt werden.",
+          "Pausieren deaktiviert eine Erinnerung vor?bergehend, ohne sie zu l?schen. W?hrend sie pausiert ist, wird ihre f?llige Aufgabe von Home entfernt und nicht in t?glichen E-Mail- oder Push-Benachrichtigungen ber?cksichtigt. Beim Fortsetzen plant Flovers die n?chste ausstehende Aufgabe gem?? dem Erinnerungsintervall."
         ]
       },
       {

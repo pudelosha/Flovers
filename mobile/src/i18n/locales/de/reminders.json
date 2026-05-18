@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "Erinnerung bearbeiten",
-      "delete": "Erinnerung löschen"
+      "delete": "Erinnerung löschen",
+      "pause": "Erinnerung pausieren",
+      "resume": "Erinnerung fortsetzen"
     },
     "tile": {
       "repeatsEvery": "Wiederholt sich alle {{count}} {{unit}}",
       "dueToday": "Heute fällig",
       "dueInOneDay": "Fällig in 1 Tag",
       "dueInDays": "Fällig in {{count}} Tagen",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "Pausiert"
     },
     "calendar": {
       "scheduledOn": "Geplant für {{date}}",
       "noItems": "Keine Erinnerungen für diesen Tag.",
-
       "today": "Heute",
-
       "weekdays": {
         "monday": "Montag",
         "tuesday": "Dienstag",
@@ -54,7 +55,6 @@
         "saturday": "Samstag",
         "sunday": "Sonntag"
       },
-
       "weekdaysShort": {
         "mon": "Mo",
         "tue": "Di",
@@ -64,7 +64,6 @@
         "sat": "Sa",
         "sun": "So"
       },
-
       "months": {
         "january": "Januar",
         "february": "Februar",
@@ -79,7 +78,6 @@
         "november": "November",
         "december": "Dezember"
       },
-
       "monthsShort": {
         "january": "Jan",
         "february": "Feb",
@@ -106,7 +104,11 @@
       "createFailed": "Erstellung fehlgeschlagen",
       "createFailedWithReason": "Erstellung fehlgeschlagen: {{reason}}",
       "updateFailed": "Aktualisierung fehlgeschlagen",
-      "updateFailedWithReason": "Aktualisierung fehlgeschlagen: {{reason}}"
+      "updateFailedWithReason": "Aktualisierung fehlgeschlagen: {{reason}}",
+      "paused": "Erinnerung pausiert",
+      "resumed": "Erinnerung fortgesetzt",
+      "toggleFailed": "Aktualisierung fehlgeschlagen",
+      "toggleFailedWithReason": "Aktualisierung fehlgeschlagen: {{reason}}"
     }
   }
 }

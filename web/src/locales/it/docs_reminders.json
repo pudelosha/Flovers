@@ -26,11 +26,12 @@
         ]
       },
       {
-        "heading": "Azioni sulla scheda del promemoria (Modifica / Elimina)",
+        "heading": "Azioni sul riquadro del promemoria (Modifica / Pausa / Riprendi / Elimina)",
         "body": [
           "Ogni promemoria ha due azioni: Modifica ed Elimina.",
           "La modifica consente di cambiare i parametri del promemoria, come l’intervallo, il tipo di attività, la pianta associata e altre impostazioni (a seconda del tipo di promemoria).",
-          "L’eliminazione del promemoria è permanente e comporta che in futuro non verranno più generate attività da questa regola."
+          "L’eliminazione del promemoria è permanente e comporta che in futuro non verranno più generate attività da questa regola.",
+          "La pausa disattiva temporaneamente un promemoria senza eliminarlo. Mentre ? in pausa, la sua attivit? in scadenza viene rimossa dalla Home e non viene inclusa nelle notifiche giornaliere via e-mail o push. Quando lo riprendi, Flovers pianifica la prossima attivit? in sospeso in base all?intervallo del promemoria."
         ]
       },
       {

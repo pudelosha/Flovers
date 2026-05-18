@@ -1,17 +1,14 @@
 {
   "reminders": {
     "headerTitle": "Reminders",
-
     "common": {
       "unnamedPlant": "Unnamed plant",
       "everyN": "every {{count}} {{unit}}"
     },
-
     "units": {
       "days": "days",
       "months": "months"
     },
-
     "types": {
       "watering": "Watering",
       "moisture": "Misting",
@@ -19,7 +16,6 @@
       "care": "Care",
       "repot": "Repot"
     },
-
     "fab": {
       "add": "Add reminder",
       "calendar": "Calendar",
@@ -28,31 +24,28 @@
       "filter": "Filter",
       "clearFilter": "Clear filter"
     },
-
     "empty": {
       "title": "No reminders yet",
       "description": "Reminders are associated with specific plants. Please make sure you have at least one plant created first.\n\nTap the “+” button to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, misting, fertilising, care, or repot), set the first due date, and define how often it should repeat."
     },
-
     "menu": {
       "edit": "Edit reminder",
-      "delete": "Delete reminder"
+      "delete": "Delete reminder",
+      "pause": "Pause reminder",
+      "resume": "Resume reminder"
     },
-
     "tile": {
       "repeatsEvery": "Repeats every {{count}} {{unit}}",
       "dueToday": "Due today",
       "dueInOneDay": "Due in 1 day",
       "dueInDays": "Due in {{count}} days",
-      "dueLine": "{{prefix}} on {{date}}"
+      "dueLine": "{{prefix}} on {{date}}",
+      "paused": "Paused"
     },
-
     "calendar": {
       "scheduledOn": "Scheduled on {{date}}",
       "noItems": "No reminders for this day.",
-
       "today": "Today",
-
       "weekdays": {
         "monday": "Monday",
         "tuesday": "Tuesday",
@@ -62,7 +55,6 @@
         "saturday": "Saturday",
         "sunday": "Sunday"
       },
-
       "weekdaysShort": {
         "mon": "Mon",
         "tue": "Tue",
@@ -72,7 +64,6 @@
         "sat": "Sat",
         "sun": "Sun"
       },
-
       "months": {
         "january": "January",
         "february": "February",
@@ -87,7 +78,6 @@
         "november": "November",
         "december": "December"
       },
-
       "monthsShort": {
         "january": "Jan",
         "february": "Feb",
@@ -103,7 +93,6 @@
         "december": "Dec"
       }
     },
-
     "toast": {
       "loadFailed": "Failed to load reminders",
       "deleted": "Reminder deleted",
@@ -115,7 +104,11 @@
       "createFailed": "Create failed",
       "createFailedWithReason": "Create failed: {{reason}}",
       "updateFailed": "Update failed",
-      "updateFailedWithReason": "Update failed: {{reason}}"
+      "updateFailedWithReason": "Update failed: {{reason}}",
+      "paused": "Reminder paused",
+      "resumed": "Reminder resumed",
+      "toggleFailed": "Update failed",
+      "toggleFailedWithReason": "Update failed: {{reason}}"
     }
   }
 }

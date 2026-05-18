@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "Editar lembrete",
-      "delete": "Excluir lembrete"
+      "delete": "Excluir lembrete",
+      "pause": "Pausar lembrete",
+      "resume": "Retomar lembrete"
     },
     "tile": {
       "repeatsEvery": "Repete a cada {{count}} {{unit}}",
       "dueToday": "Vencimento hoje",
       "dueInOneDay": "Vencimento em 1 dia",
       "dueInDays": "Vencimento em {{count}} dias",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "Pausado"
     },
     "calendar": {
       "scheduledOn": "Agendado para {{date}}",
       "noItems": "Sem lembretes para este dia.",
-
       "today": "Hoje",
-
       "weekdays": {
         "monday": "Segunda-feira",
         "tuesday": "Terça-feira",
@@ -54,7 +55,6 @@
         "saturday": "Sábado",
         "sunday": "Domingo"
       },
-
       "weekdaysShort": {
         "mon": "Seg",
         "tue": "Ter",
@@ -64,7 +64,6 @@
         "sat": "Sáb",
         "sun": "Dom"
       },
-
       "months": {
         "january": "Janeiro",
         "february": "Fevereiro",
@@ -79,7 +78,6 @@
         "november": "Novembro",
         "december": "Dezembro"
       },
-
       "monthsShort": {
         "january": "Jan",
         "february": "Fev",
@@ -106,7 +104,11 @@
       "createFailed": "Falha ao criar",
       "createFailedWithReason": "Falha ao criar: {{reason}}",
       "updateFailed": "Falha ao atualizar",
-      "updateFailedWithReason": "Falha ao atualizar: {{reason}}"
+      "updateFailedWithReason": "Falha ao atualizar: {{reason}}",
+      "paused": "Lembrete pausado",
+      "resumed": "Lembrete retomado",
+      "toggleFailed": "Falha ao atualizar",
+      "toggleFailedWithReason": "Falha ao atualizar: {{reason}}"
     }
   }
 }

@@ -7,7 +7,9 @@
       "delete": "Löschen",
       "create": "Erstellen",
       "update": "Speichern",
-      "reset": "Zurücksetzen"
+      "reset": "Zurücksetzen",
+      "pause": "Pausieren",
+      "resume": "Fortsetzen"
     },
     "confirmDelete": {
       "title": "Erinnerung löschen",
@@ -53,6 +55,12 @@
         "asc": "Aufsteigend",
         "desc": "Absteigend"
       }
+    },
+    "toggle": {
+      "pauseTitle": "Erinnerung pausieren",
+      "resumeTitle": "Erinnerung fortsetzen",
+      "pauseBody": "Diese Erinnerung f?r {{name}} pausieren? Die f?llige Aufgabe wird ausgeblendet, bis du sie fortsetzt.",
+      "resumeBody": "Diese Erinnerung f?r {{name}} fortsetzen? Die n?chste f?llige Aufgabe wird wieder angezeigt."
     }
   }
 }

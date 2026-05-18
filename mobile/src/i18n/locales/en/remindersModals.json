@@ -7,19 +7,18 @@
       "delete": "Delete",
       "create": "Create",
       "update": "Update",
-      "reset": "Reset"
+      "reset": "Reset",
+      "pause": "Pause",
+      "resume": "Resume"
     },
-
     "confirmDelete": {
       "title": "Delete reminder",
       "areYouSurePrefix": "Are you sure you want to delete",
       "areYouSureSuffix": "? This action cannot be undone."
     },
-
     "edit": {
       "titleCreate": "Add reminder",
       "titleEdit": "Edit reminder",
-
       "typeLabel": "Type",
       "plantLabel": "Plant",
       "selectPlant": "Select plant",
@@ -30,7 +29,6 @@
       "intervalLabel": "Interval",
       "intervalValuePlaceholder": "Value"
     },
-
     "filter": {
       "title": "Filter reminders",
       "plantLabel": "Plant",
@@ -44,7 +42,6 @@
       "toLabel": "To",
       "datePlaceholder": "YYYY-MM-DD"
     },
-
     "sort": {
       "title": "Sort reminders",
       "sortByLabel": "Sort by",
@@ -58,6 +55,12 @@
         "asc": "Ascending",
         "desc": "Descending"
       }
+    },
+    "toggle": {
+      "pauseTitle": "Pause reminder",
+      "resumeTitle": "Resume reminder",
+      "pauseBody": "Pause this reminder for {{name}}? Its due task will be hidden until you resume it.",
+      "resumeBody": "Resume this reminder for {{name}}? Its next due task will appear again."
     }
   }
 }

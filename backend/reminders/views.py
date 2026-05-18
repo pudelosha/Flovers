@@ -226,7 +226,17 @@ class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
         - Close any pending task(s)
         - Create the new pending task based on updated schedule rules
         """
+        was_active = serializer.instance.is_active
+        requested_active = serializer.validated_data.get("is_active", was_active)
         reminder = serializer.save(user=self.request.user)
+
+        if requested_active is False:
+            reminder.tasks.filter(status="pending").delete()
+            return
+
+        if was_active is False and requested_active is True:
+            reminder.ensure_one_pending_task()
+            return
 
         pending_qs = reminder.tasks.filter(status="pending")
         now = timezone.now()
@@ -271,6 +281,8 @@ class ReminderTaskListView(APIView):
         status_param = request.query_params.get("status")
         if status_param in {"pending", "completed"}:
             qs = qs.filter(status=status_param)
+            if status_param == "pending":
+                qs = qs.filter(reminder__is_active=True)
 
         qs = qs.order_by("due_date", "id")
         data = ReminderTaskSerializer(qs, many=True).data

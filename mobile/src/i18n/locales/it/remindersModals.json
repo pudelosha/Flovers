@@ -7,7 +7,9 @@
       "delete": "Elimina",
       "create": "Crea",
       "update": "Salva",
-      "reset": "Reimposta"
+      "reset": "Reimposta",
+      "pause": "Metti in pausa",
+      "resume": "Riprendi"
     },
     "confirmDelete": {
       "title": "Elimina promemoria",
@@ -53,6 +55,12 @@
         "asc": "Crescente",
         "desc": "Decrescente"
       }
+    },
+    "toggle": {
+      "pauseTitle": "Metti in pausa promemoria",
+      "resumeTitle": "Riprendi promemoria",
+      "pauseBody": "Mettere in pausa questo promemoria per {{name}}? L?attivit? in scadenza sar? nascosta finch? non lo riprendi.",
+      "resumeBody": "Riprendere questo promemoria per {{name}}? La prossima attivit? in scadenza riapparir?."
     }
   }
 }

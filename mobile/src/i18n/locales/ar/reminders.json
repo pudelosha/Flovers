@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "تعديل التذكير",
-      "delete": "حذف التذكير"
+      "delete": "حذف التذكير",
+      "pause": "????? ??????? ??????",
+      "resume": "??????? ???????"
     },
     "tile": {
       "repeatsEvery": "يتكرر كل {{count}} {{unit}}",
       "dueToday": "الموعد اليوم",
       "dueInOneDay": "الموعد في يوم واحد",
       "dueInDays": "الموعد في {{count}} أيام",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "????? ??????"
     },
     "calendar": {
       "scheduledOn": "مجدول في {{date}}",
       "noItems": "لا توجد تذكيرات لهذا اليوم.",
-
       "today": "اليوم",
-
       "weekdays": {
         "monday": "الاثنين",
         "tuesday": "الثلاثاء",
@@ -54,7 +55,6 @@
         "saturday": "السبت",
         "sunday": "الأحد"
       },
-
       "weekdaysShort": {
         "mon": "اثن",
         "tue": "ثلا",
@@ -64,7 +64,6 @@
         "sat": "سبت",
         "sun": "أحد"
       },
-
       "months": {
         "january": "يناير",
         "february": "فبراير",
@@ -79,7 +78,6 @@
         "november": "نوفمبر",
         "december": "ديسمبر"
       },
-
       "monthsShort": {
         "january": "ينا",
         "february": "فبر",
@@ -106,7 +104,11 @@
       "createFailed": "فشل الإنشاء",
       "createFailedWithReason": "فشل الإنشاء: {{reason}}",
       "updateFailed": "فشل التحديث",
-      "updateFailedWithReason": "فشل التحديث: {{reason}}"
+      "updateFailedWithReason": "فشل التحديث: {{reason}}",
+      "paused": "?? ????? ??????? ??????",
+      "resumed": "?? ??????? ???????",
+      "toggleFailed": "??? ???????",
+      "toggleFailedWithReason": "??? ???????: {{reason}}"
     }
   }
 }

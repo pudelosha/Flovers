@@ -126,6 +126,20 @@ export const s = StyleSheet.create({
     marginTop: 1,
     textAlign: "right",
   },
+  pausedRow: {
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    gap: 4,
+  },
+  pausedText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 11,
+    lineHeight: 13,
+    textAlign: "right",
+  },
   menuBtn: {
     width: 36,
     height: 36,

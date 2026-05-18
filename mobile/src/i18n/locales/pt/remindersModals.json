@@ -7,7 +7,9 @@
       "delete": "Excluir",
       "create": "Criar",
       "update": "Salvar",
-      "reset": "Redefinir"
+      "reset": "Redefinir",
+      "pause": "Pausar",
+      "resume": "Retomar"
     },
     "confirmDelete": {
       "title": "Excluir lembrete",
@@ -53,6 +55,12 @@
         "asc": "Crescente",
         "desc": "Decrescente"
       }
+    },
+    "toggle": {
+      "pauseTitle": "Pausar lembrete",
+      "resumeTitle": "Retomar lembrete",
+      "pauseBody": "Pausar este lembrete para {{name}}? A tarefa pendente ficar? oculta at? voc? retom?-lo.",
+      "resumeBody": "Retomar este lembrete para {{name}}? A pr?xima tarefa pendente aparecer? novamente."
     }
   }
 }

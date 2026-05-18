@@ -6,11 +6,18 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { s } from "../styles/reminders.styles";
 
 type Props = {
+  isActive: boolean;
+  onToggleActive?: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
 };
 
-export default function ReminderMiniTileMenu({ onEdit, onDelete }: Props) {
+export default function ReminderMiniTileMenu({
+  isActive,
+  onToggleActive,
+  onEdit,
+  onDelete,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -30,6 +37,15 @@ export default function ReminderMiniTileMenu({ onEdit, onDelete }: Props) {
         label={tr("reminders.menu.edit", "Edit reminder")}
         icon="calendar-edit"
         onPress={onEdit}
+      />
+      <MenuItem
+        label={
+          isActive
+            ? tr("reminders.menu.pause", "Pause reminder")
+            : tr("reminders.menu.resume", "Resume reminder")
+        }
+        icon={isActive ? "pause-circle-outline" : "play-circle-outline"}
+        onPress={onToggleActive}
       />
       <MenuItem
         label={tr("reminders.menu.delete", "Delete reminder")}

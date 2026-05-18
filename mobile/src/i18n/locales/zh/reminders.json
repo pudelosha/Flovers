@@ -30,21 +30,22 @@
     },
     "menu": {
       "edit": "编辑提醒",
-      "delete": "删除提醒"
+      "delete": "删除提醒",
+      "pause": "????",
+      "resume": "????"
     },
     "tile": {
       "repeatsEvery": "每 {{count}} {{unit}} 重复",
       "dueToday": "今天到期",
       "dueInOneDay": "1天后到期",
       "dueInDays": "{{count}}天后到期",
-      "dueLine": "{{prefix}} ({{date}})"
+      "dueLine": "{{prefix}} ({{date}})",
+      "paused": "???"
     },
     "calendar": {
       "scheduledOn": "计划在 {{date}}",
       "noItems": "今天没有提醒。",
-
       "today": "今天",
-
       "weekdays": {
         "monday": "星期一",
         "tuesday": "星期二",
@@ -54,7 +55,6 @@
         "saturday": "星期六",
         "sunday": "星期日"
       },
-
       "weekdaysShort": {
         "mon": "周一",
         "tue": "周二",
@@ -64,7 +64,6 @@
         "sat": "周六",
         "sun": "周日"
       },
-
       "months": {
         "january": "一月",
         "february": "二月",
@@ -79,7 +78,6 @@
         "november": "十一月",
         "december": "十二月"
       },
-
       "monthsShort": {
         "january": "1月",
         "february": "2月",
@@ -106,7 +104,11 @@
       "createFailed": "创建失败",
       "createFailedWithReason": "创建失败：{{reason}}",
       "updateFailed": "更新失败",
-      "updateFailedWithReason": "更新失败：{{reason}}"
+      "updateFailedWithReason": "更新失败：{{reason}}",
+      "paused": "?????",
+      "resumed": "?????",
+      "toggleFailed": "????",
+      "toggleFailedWithReason": "?????{{reason}}"
     }
   }
 }
