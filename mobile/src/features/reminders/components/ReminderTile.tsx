@@ -268,7 +268,7 @@ export default function ReminderTile({
                   <MaterialCommunityIcons
                     name="pause-circle-outline"
                     size={13}
-                    color="#FFFFFF"
+                    color="#F2C94C"
                   />
                   <Text style={s.pausedText} numberOfLines={1}>
                     {tr("reminders.tile.paused", "Paused")}
