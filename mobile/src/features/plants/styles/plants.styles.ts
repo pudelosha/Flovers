@@ -1,4 +1,3 @@
-// src/features/plants/styles/plants.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
