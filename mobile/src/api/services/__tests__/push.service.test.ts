@@ -22,7 +22,7 @@ describe("push.service", () => {
     await startPushNotifications();
 
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/profile/push-devices/",
+      "/profile/push-devices/",
       "POST",
       { token: "test-push-token", platform: expect.any(String) },
       { auth: true }

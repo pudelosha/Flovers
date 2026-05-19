@@ -43,12 +43,12 @@ def test_build_mobile_deeplink_with_host():
 def test_build_web_fallback_uses_public_web_base():
     link = build_web_fallback("readings", {})
 
-    assert link == "https://api.example.com/api/readings/open/readings/"
+    assert link == "https://api.example.com/readings/open/readings/"
 
 
 @override_settings(DEEP_LINK_ENABLED=True, PUBLIC_WEB_BASE="https://api.example.com")
 def test_build_readings_link_uses_web_fallback_when_deeplink_enabled():
-    assert build_readings_link() == "https://api.example.com/api/readings/open/readings/"
+    assert build_readings_link() == "https://api.example.com/readings/open/readings/"
 
 
 @override_settings(DEEP_LINK_ENABLED=False, DEEP_LINK_SCHEME="flovers", DEEP_LINK_HOST="")

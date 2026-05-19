@@ -1,7 +1,7 @@
 import { ApiError, request } from "../client";
 
 const ENDPOINTS = {
-  scan: "/api/plant-recognition/scan/",
+  scan: "/plant-recognition/scan/",
 };
 
 export type ApiRecognitionResult = {

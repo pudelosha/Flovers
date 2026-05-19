@@ -42,7 +42,7 @@ def test_build_web_fallback_uses_public_web_base():
         "token": "xyz",
     })
 
-    assert result == "https://example.com/api/auth/open/activate/?uid=abc&token=xyz"
+    assert result == "https://example.com/auth/open/activate/?uid=abc&token=xyz"
 
 
 @pytest.mark.django_db
@@ -59,7 +59,7 @@ def test_build_activation_link_uses_web_fallback_when_deeplink_enabled():
 
     result = build_activation_link(user)
 
-    assert result.startswith("https://example.com/api/auth/open/activate/?")
+    assert result.startswith("https://example.com/auth/open/activate/?")
     assert "uid=" in result
     assert "token=" in result
 
@@ -77,7 +77,7 @@ def test_build_activation_link_uses_api_endpoint_when_deeplink_disabled():
 
     result = build_activation_link(user)
 
-    assert result.startswith("https://api.example.com/api/auth/activate/?")
+    assert result.startswith("https://api.example.com/auth/activate/?")
     assert "uid=" in result
     assert "token=" in result
 
@@ -96,7 +96,7 @@ def test_build_password_reset_link_uses_web_fallback_when_deeplink_enabled():
 
     result = build_password_reset_link(user)
 
-    assert result.startswith("https://example.com/api/auth/open/reset-password/?")
+    assert result.startswith("https://example.com/auth/open/reset-password/?")
     assert "uid=" in result
     assert "token=" in result
 
@@ -114,6 +114,6 @@ def test_build_password_reset_link_uses_api_endpoint_when_deeplink_disabled():
 
     result = build_password_reset_link(user)
 
-    assert result.startswith("https://api.example.com/api/auth/reset-password/?")
+    assert result.startswith("https://api.example.com/auth/reset-password/?")
     assert "uid=" in result
     assert "token=" in result

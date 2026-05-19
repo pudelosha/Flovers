@@ -25,11 +25,11 @@ import {
 import type { PlantProfile, Suggestion } from "../types/create-plant.types";
 
 const ENDPOINTS = {
-  searchIndex: "/api/plant-definitions/search-index/",
+  searchIndex: "/plant-definitions/search-index/",
   profile: (idOrKey: string | number) =>
     typeof idOrKey === "number"
-      ? `/api/plant-definitions/${idOrKey}/profile/`
-      : `/api/plant-definitions/by-key/${idOrKey}/profile/`,
+      ? `/plant-definitions/${idOrKey}/profile/`
+      : `/plant-definitions/by-key/${idOrKey}/profile/`,
 };
 
 // EXACT SAME green tones as AuthCard / PlantTile

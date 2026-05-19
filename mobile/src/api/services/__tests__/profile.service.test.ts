@@ -37,7 +37,7 @@ describe("profile.service", () => {
       push_24h: true,
     });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/profile/notifications/",
+      "/profile/notifications/",
       "GET",
       undefined,
       { auth: false }
@@ -51,7 +51,7 @@ describe("profile.service", () => {
 
     await updateProfileNotifications({ email_daily: false }, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/profile/notifications/",
+      "/profile/notifications/",
       "PATCH",
       { email_daily: false },
       { auth: false }
@@ -99,7 +99,7 @@ describe("profile.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/profile/settings/",
+      "/profile/settings/",
       "PATCH",
       { language: "pl", fab_position: "left" },
       { auth: false }
@@ -114,7 +114,7 @@ describe("profile.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/change-password/",
+      "/auth/change-password/",
       "POST",
       { current_password: "old", new_password: "new" },
       { auth: false }
@@ -125,7 +125,7 @@ describe("profile.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/change-email/",
+      "/auth/change-email/",
       "POST",
       { new_email: "new@example.com", password: "secret" },
       { auth: false }
@@ -138,7 +138,7 @@ describe("profile.service", () => {
       )
     ).resolves.toEqual({ message: "ok" });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/profile/support/contact/",
+      "/profile/support/contact/",
       "POST",
       { subject: "Question", message: "Hello", copy_to_user: true },
       { auth: false, timeoutMs: 30000 }
@@ -149,7 +149,7 @@ describe("profile.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/profile/support/bug/",
+      "/profile/support/bug/",
       "POST",
       { subject: "Bug", description: "Broken", copy_to_user: false },
       { auth: false, timeoutMs: 30000 }

@@ -16,7 +16,7 @@ User = get_user_model()
 
 
 def _request_for(user):
-    request = APIRequestFactory().post("/api/plant-instances/")
+    request = APIRequestFactory().post("/plant-instances/")
     request.user = user
     return request
 

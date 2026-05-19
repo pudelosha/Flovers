@@ -121,19 +121,19 @@ export async function clearToken(): Promise<void> {
 }
 
 export async function registerUser(p: RegisterPayload): Promise<RegisterResponse> {
-  return request<RegisterResponse>("/api/auth/register/", "POST", p);
+  return request<RegisterResponse>("/auth/register/", "POST", p);
 }
 
 export async function resendActivation(email: string): Promise<{ message: string }> {
-  return request<{ message: string }>("/api/auth/resend-activation/", "POST", { email });
+  return request<{ message: string }>("/auth/resend-activation/", "POST", { email });
 }
 
 export async function requestPasswordReset(email: string): Promise<ForgotPasswordResponse> {
-  return request<ForgotPasswordResponse>("/api/auth/forgot-password/", "POST", { email });
+  return request<ForgotPasswordResponse>("/auth/forgot-password/", "POST", { email });
 }
 
 export async function resetPassword(p: ResetPasswordPayload): Promise<ResetPasswordResponse> {
-  return request<ResetPasswordResponse>("/api/auth/reset-password/", "POST", p);
+  return request<ResetPasswordResponse>("/auth/reset-password/", "POST", p);
 }
 
 export async function confirmEmail(p: ConfirmEmailPayload): Promise<ConfirmEmailResponse> {
@@ -142,11 +142,11 @@ export async function confirmEmail(p: ConfirmEmailPayload): Promise<ConfirmEmail
     token: p.token,
   }).toString();
 
-  return request<ConfirmEmailResponse>(`/api/auth/activate/?${qs}`, "GET");
+  return request<ConfirmEmailResponse>(`/auth/activate/?${qs}`, "GET");
 }
 
 export async function loginUser(p: LoginPayload): Promise<LoginResult> {
-  const resp = await request<LoginApiResponse>("/api/auth/login/", "POST", p);
+  const resp = await request<LoginApiResponse>("/auth/login/", "POST", p);
 
   const access = resp.access ?? resp.data?.access ?? null;
   const refresh = resp.refresh ?? resp.data?.refresh ?? null;

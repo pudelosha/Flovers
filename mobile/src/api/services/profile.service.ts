@@ -31,7 +31,7 @@ export async function fetchProfileNotifications(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileNotifications> {
   const res = await request<ApiEnvelope<ApiProfileNotifications>>(
-    "/api/profile/notifications/",
+    "/profile/notifications/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -44,7 +44,7 @@ export async function updateProfileNotifications(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileNotifications> {
   const res = await request<ApiEnvelope<ApiProfileNotifications>>(
-    "/api/profile/notifications/",
+    "/profile/notifications/",
     "PATCH",
     payload,
     { auth: opts.auth ?? true }
@@ -73,7 +73,7 @@ export async function fetchProfileSettings(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileSettings> {
   const res = await request<ApiEnvelope<ApiProfileSettings>>(
-    "/api/profile/settings/",
+    "/profile/settings/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -86,7 +86,7 @@ export async function updateProfileSettings(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileSettings> {
   const res = await request<ApiEnvelope<ApiProfileSettings>>(
-    "/api/profile/settings/",
+    "/profile/settings/",
     "PATCH",
     payload,
     { auth: opts.auth ?? true }
@@ -95,7 +95,7 @@ export async function updateProfileSettings(
 }
 
 /** ---- Change password ----
- * NOTE: Backend endpoints /api/auth/change-password/ do not exist yet.
+ * NOTE: Backend endpoints /auth/change-password/ do not exist yet.
  * This will 404 until we implement them in `accounts`.
  */
 export async function changeMyPassword(
@@ -103,7 +103,7 @@ export async function changeMyPassword(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ status: string; message: string; data: Record<string, unknown> }> {
   return await request<{ status: string; message: string; data: Record<string, unknown> }>(
-    "/api/auth/change-password/",
+    "/auth/change-password/",
     "POST",
     payload,
     { auth: opts.auth ?? true }
@@ -111,7 +111,7 @@ export async function changeMyPassword(
 }
 
 /** ---- Change email ----
- * NOTE: Backend endpoints /api/auth/change-email/ do not exist yet.
+ * NOTE: Backend endpoints /auth/change-email/ do not exist yet.
  * This will 404 until we implement them in `accounts`.
  */
 export async function changeMyEmail(
@@ -119,7 +119,7 @@ export async function changeMyEmail(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ status: string; message: string; data: { email?: string } }> {
   return await request<{ status: string; message: string; data: { email?: string } }>(
-    "/api/auth/change-email/",
+    "/auth/change-email/",
     "POST",
     payload,
     { auth: opts.auth ?? true }
@@ -127,8 +127,8 @@ export async function changeMyEmail(
 }
 
 /** ---- Support: Contact + Bug report ----
- *  - POST /api/profile/support/contact/
- *  - POST /api/profile/support/bug/
+ *  - POST /profile/support/contact/
+ *  - POST /profile/support/bug/
  */
 
 export type ApiSupportContactPayload = {
@@ -148,7 +148,7 @@ export async function sendSupportContact(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ message: string }> {
   const res = await request<ApiEnvelope<null>>(
-    "/api/profile/support/contact/",
+    "/profile/support/contact/",
     "POST",
     payload,
     { auth: opts.auth ?? true, timeoutMs: 30000 }
@@ -161,7 +161,7 @@ export async function sendSupportBug(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ message: string }> {
   const res = await request<ApiEnvelope<null>>(
-    "/api/profile/support/bug/",
+    "/profile/support/bug/",
     "POST",
     payload,
     { auth: opts.auth ?? true, timeoutMs: 30000 }

@@ -57,7 +57,7 @@ describe("plant-instances.service", () => {
     await createPlantInstance(state, { auth: false });
 
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/plant-instances/",
+      "/plant-instances/",
       "POST",
       expect.objectContaining({
         location_id: 4,
@@ -132,7 +132,7 @@ describe("plant-instances.service", () => {
   it("supports plant fetch, update and delete actions", async () => {
     await fetchPlantInstanceForEdit(4, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-instances/4/",
+      "/plant-instances/4/",
       "GET",
       undefined,
       { auth: false }
@@ -140,7 +140,7 @@ describe("plant-instances.service", () => {
 
     await fetchPlantInstanceDetail(4, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-instances/4/",
+      "/plant-instances/4/",
       "GET",
       undefined,
       { auth: false }
@@ -148,7 +148,7 @@ describe("plant-instances.service", () => {
 
     await fetchPlantByQr("qr code/with space", { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-instances/by-qr/?code=qr%20code%2Fwith%20space",
+      "/plant-instances/by-qr/?code=qr%20code%2Fwith%20space",
       "GET",
       undefined,
       { auth: false }
@@ -160,7 +160,7 @@ describe("plant-instances.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-instances/4/",
+      "/plant-instances/4/",
       "PATCH",
       { display_name: "Updated fern" },
       { auth: false }
@@ -172,7 +172,7 @@ describe("plant-instances.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-instances/4/",
+      "/plant-instances/4/",
       "PATCH",
       { display_name: "From form", distance_cm: 13 },
       { auth: false }
@@ -180,7 +180,7 @@ describe("plant-instances.service", () => {
 
     await deletePlantInstance(4, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-instances/4/",
+      "/plant-instances/4/",
       "DELETE",
       undefined,
       { auth: false }

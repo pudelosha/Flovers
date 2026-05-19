@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import sketch1 from "../assets/Sketch_1.jpg";
 import "../styles/schemas.css";
 
-const INGEST_ENDPOINT = "https://api.flovers.app/api/readings/ingest/";
-const PUMP_NEXT_TASK_ENDPOINT = "https://api.flovers.app/api/readings/pump-next-task/";
-const PUMP_COMPLETE_ENDPOINT = "https://api.flovers.app/api/readings/pump-complete/";
-const FEED_ENDPOINT = "https://api.flovers.app/api/readings/feed/";
+const INGEST_ENDPOINT = "https://api.flovers.app/readings/ingest/";
+const PUMP_NEXT_TASK_ENDPOINT = "https://api.flovers.app/readings/pump-next-task/";
+const PUMP_COMPLETE_ENDPOINT = "https://api.flovers.app/readings/pump-complete/";
+const FEED_ENDPOINT = "https://api.flovers.app/readings/feed/";
 
 function CodeBlock({ text, label }) {
   const { t } = useTranslation("schemas");

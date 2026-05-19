@@ -34,7 +34,7 @@ export async function fetchHistoryItems(): Promise<TaskHistoryItem[]> {
  * Delete a single completed task from history (dropdown "Delete").
  *
  * Backend:
- *   DELETE /api/reminders/tasks/<id>/
+ *   DELETE /reminders/tasks/<id>/
  * physically removes the ReminderTask row.
  */
 export async function deleteHistoryEntry(taskId: string): Promise<void> {
@@ -56,7 +56,7 @@ export type HistoryBulkDeleteRequest =
  * Bulk delete completed tasks from history (modal "Delete" action).
  *
  * Backend:
- *   POST /api/reminders/tasks/bulk-delete/
+ *   POST /reminders/tasks/bulk-delete/
  *   body = HistoryBulkDeleteRequest
  */
 export async function bulkDeleteHistoryEntries(
@@ -84,7 +84,7 @@ export type HistoryExportEmailRequest = {
  * Send task history export email request.
  *
  * Backend expected:
- *   POST /api/reminders/tasks/export-email/
+ *   POST /reminders/tasks/export-email/
  *   body = HistoryExportEmailRequest
  *
  * Response:
@@ -94,7 +94,7 @@ export async function sendHistoryExportEmail(
   payload: HistoryExportEmailRequest
 ): Promise<void> {
   await request<void>(
-    "/api/reminders/tasks/export-email/",
+    "/reminders/tasks/export-email/",
     "POST",
     payload,
     { auth: true }

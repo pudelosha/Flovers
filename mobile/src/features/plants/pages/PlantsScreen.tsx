@@ -516,7 +516,7 @@ export default function PlantsScreen() {
     closeFloatingMenus();
 
     const code = p.qrCode || p.id;
-    const value = `${PUBLIC_BASE_URL_NORM}/api/plant-instances/by-qr/?code=${encodeURIComponent(
+        const value = `${PUBLIC_BASE_URL_NORM}/plant-instances/by-qr/?code=${encodeURIComponent(
       code
     )}`;
 

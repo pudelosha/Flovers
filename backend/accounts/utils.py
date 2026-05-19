@@ -27,7 +27,7 @@ def build_mobile_deeplink(path: str, params: dict) -> str:
 def build_web_fallback(path: str, params: dict) -> str:
     web_base = getattr(settings, "PUBLIC_WEB_BASE", settings.SITE_URL).rstrip("/")
     qs = urlencode(params)
-    return f"{web_base}/api/auth/open/{path}/?{qs}"
+    return f"{web_base}/auth/open/{path}/?{qs}"
 
 def build_activation_link(user) -> str:
     uid = urlsafe_base64_encode(force_bytes(user.pk))
@@ -35,7 +35,7 @@ def build_activation_link(user) -> str:
     params = {"uid": uid, "token": token}
     if getattr(settings, "DEEP_LINK_ENABLED", True):
         return build_web_fallback("activate", params)
-    return f"{settings.SITE_URL}/api/auth/activate/?{urlencode(params)}"
+    return f"{settings.SITE_URL}/auth/activate/?{urlencode(params)}"
 
 def build_password_reset_link(user) -> str:
     uid = urlsafe_base64_encode(force_bytes(user.pk))
@@ -43,4 +43,4 @@ def build_password_reset_link(user) -> str:
     params = {"uid": uid, "token": token}
     if getattr(settings, "DEEP_LINK_ENABLED", True):
         return build_web_fallback("reset-password", params)
-    return f"{settings.SITE_URL}/api/auth/reset-password/?{urlencode(params)}"
+    return f"{settings.SITE_URL}/auth/reset-password/?{urlencode(params)}"

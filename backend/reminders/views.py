@@ -209,9 +209,9 @@ class ReminderListCreateView(generics.ListCreateAPIView):
 
 class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
     """
-    GET    /api/reminders/<id>/
-    PATCH  /api/reminders/<id>/
-    DELETE /api/reminders/<id>/
+    GET    /reminders/<id>/
+    PATCH  /reminders/<id>/
+    DELETE /reminders/<id>/
     """
     permission_classes = [IsAuthenticated]
     serializer_class = ReminderSerializer
@@ -291,7 +291,7 @@ class ReminderTaskListView(APIView):
 
 class ReminderTaskDetailDeleteView(APIView):
     """
-    DELETE /api/reminders/tasks/<pk>/
+    DELETE /reminders/tasks/<pk>/
 
     Physically delete a single reminder task (typically a *completed* history item)
     that belongs to the authenticated user.
@@ -317,7 +317,7 @@ class ReminderTaskDetailDeleteView(APIView):
 
 class ReminderTaskBulkDeleteView(APIView):
     """
-    POST /api/reminders/tasks/bulk-delete/
+    POST /reminders/tasks/bulk-delete/
 
     Only tasks belonging to the authenticated user are affected.
     We target *completed* tasks (history).
@@ -410,7 +410,7 @@ class ReminderTaskBulkDeleteView(APIView):
 
 class ReminderTaskExportEmailView(APIView):
     """
-    POST /api/reminders/tasks/export-email/
+    POST /reminders/tasks/export-email/
 
     Sends an email with an XLSX attachment containing task history data
     filtered by the provided criteria.

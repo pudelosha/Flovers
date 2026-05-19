@@ -58,7 +58,7 @@ export async function createPlantInstance(
 ): Promise<ApiPlantInstance> {
   const payload = buildPayload(state);
   return await request<ApiPlantInstance>(
-    "/api/plant-instances/",
+    "/plant-instances/",
     "POST",
     payload,
     { auth: opts.auth ?? true }
@@ -70,7 +70,7 @@ export async function fetchPlantInstances(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceListItem[]> {
   const resp = await request<any>(
-    "/api/plant-instances/",
+    "/plant-instances/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -87,7 +87,7 @@ export async function fetchPlantInstanceForEdit(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceDetailFull> {
   return await request<ApiPlantInstanceDetailFull>(
-    `/api/plant-instances/${id}/`,
+    `/plant-instances/${id}/`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -100,7 +100,7 @@ export async function deletePlantInstance(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<void> {
   await request<void>(
-    `/api/plant-instances/${id}/`,
+    `/plant-instances/${id}/`,
     "DELETE",
     undefined,
     { auth: opts.auth ?? true }
@@ -114,7 +114,7 @@ export async function updatePlantInstance(
   opts: { auth?: boolean } = { auth: true }
 ) {
   return await request<ApiPlantInstanceListItem>(
-    `/api/plant-instances/${id}/`,
+    `/plant-instances/${id}/`,
     "PATCH",
     payload,
     { auth: opts.auth ?? true }
@@ -188,7 +188,7 @@ export async function fetchPlantByQr(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceDetailFull> {
   return await request<ApiPlantInstanceDetailFull>(
-    `/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`,
+    `/plant-instances/by-qr/?code=${encodeURIComponent(code)}`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -201,7 +201,7 @@ export async function fetchPlantInstanceDetail(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceDetailFull> {
   return await request<ApiPlantInstanceDetailFull>(
-    `/api/plant-instances/${id}/`,
+    `/plant-instances/${id}/`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -212,7 +212,7 @@ export async function fetchPlantInstanceDetail(
 
 /**
  * Backend endpoint:
- *   GET /api/plant-instances/<plant_id>/journal/
+ *   GET /plant-instances/<plant_id>/journal/
  *
  * Returns items like:
  *   { id, type, completed_at, note }
@@ -231,7 +231,7 @@ export async function fetchPlantJournal(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantJournalItem[]> {
   const resp = await request<any>(
-    `/api/plant-instances/${plantId}/journal/`,
+    `/plant-instances/${plantId}/journal/`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }

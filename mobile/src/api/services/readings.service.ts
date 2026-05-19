@@ -10,7 +10,7 @@ import {
 } from "../../features/readings/types/readings.types";
 
 /* ============================== ENDPOINTS ============================== */
-const DEVICES_URL = "/api/readings/devices/";
+const DEVICES_URL = "/readings/devices/";
 
 /* ============================== LIST / CRUD ============================== */
 
@@ -80,7 +80,7 @@ export async function rotateAccountSecret(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ secret: string }> {
   return await request<{ secret: string }>(
-    `/api/readings/rotate-secret/`,
+    `/readings/rotate-secret/`,
     "POST",
     undefined,
     { auth: opts.auth ?? true }
@@ -124,7 +124,7 @@ export async function fetchDeviceSetup(
   secret: string;
 }> {
   return await request(
-    "/api/readings/device-setup/",
+    "/readings/device-setup/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -213,7 +213,7 @@ export async function sendReadingsExportEmail(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<{ detail?: string }> {
   return await request<{ detail?: string }>(
-    "/api/readings/export-email/",
+    "/readings/export-email/",
     "POST",
     payload,
     { auth: opts.auth ?? true }
@@ -223,7 +223,7 @@ export async function sendReadingsExportEmail(
 /* ============================== READ FEED (LATEST ONLY) ============================== */
 
 /**
- * Types for /api/readings/feed/
+ * Types for /readings/feed/
  * (backend now returns only the latest reading in `readings` array)
  */
 export type ApiReading = {
@@ -245,7 +245,7 @@ export type ApiFeedResponse = {
 };
 
 /**
- * Wrapper for /api/readings/feed/.
+ * Wrapper for /readings/feed/.
  * Generally used by devices/Arduino; kept here for completeness.
  */
 export async function fetchReadingsFeed(
@@ -268,7 +268,7 @@ export async function fetchReadingsFeed(
   q.set("limit", String(params.limit ?? 200));
 
   return await request<ApiFeedResponse>(
-    `/api/readings/feed/?${q.toString()}`,
+    `/readings/feed/?${q.toString()}`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -302,7 +302,7 @@ export type ApiHistoryResponse = {
 
 /**
  * Authenticated history endpoint for Readings History page.
- * GET /api/readings/history/
+ * GET /readings/history/
  */
 export async function fetchReadingsHistory(
   params: {
@@ -326,7 +326,7 @@ export async function fetchReadingsHistory(
   }
 
   return await request<ApiHistoryResponse>(
-    `/api/readings/history/?${q.toString()}`,
+    `/readings/history/?${q.toString()}`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -367,7 +367,7 @@ export async function fetchReadingsDeleteOptions(
   q.set("device_id", String(deviceId));
 
   return await request<ApiReadingsDeleteOptions>(
-    `/api/readings/history/delete-options/?${q.toString()}`,
+    `/readings/history/delete-options/?${q.toString()}`,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -381,7 +381,7 @@ export async function bulkDeleteReadings(
   const { deviceId, ...body } = payload;
 
   return await request<ApiReadingsBulkDeleteResponse>(
-    "/api/readings/history/bulk-delete/",
+    "/readings/history/bulk-delete/",
     "POST",
     { device_id: deviceId, ...body },
     { auth: opts.auth ?? true }

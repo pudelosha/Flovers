@@ -90,7 +90,7 @@ describe("history.service", () => {
 
     await sendHistoryExportEmail({ location: "Kitchen", lang: "en" });
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/reminders/tasks/export-email/",
+      "/reminders/tasks/export-email/",
       "POST",
       { location: "Kitchen", lang: "en" },
       { auth: true }

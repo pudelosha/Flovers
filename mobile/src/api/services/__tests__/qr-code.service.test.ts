@@ -21,7 +21,7 @@ describe("qr-code.service", () => {
   it("sends QR code email with optional language", async () => {
     await sendQrCodeByEmail(7, " pl ", { auth: false });
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/plant-instances/7/send-qr-email/",
+      "/plant-instances/7/send-qr-email/",
       "POST",
       { lang: "pl" },
       { auth: false }

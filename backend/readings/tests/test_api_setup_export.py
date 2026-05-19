@@ -57,7 +57,7 @@ def test_device_setup_returns_secret_and_endpoint_samples():
     data = response.json()
     assert response.status_code == 200
     assert data["secret"]
-    assert data["endpoints"]["ingest"] == "https://api.example.com/api/readings/ingest/"
+    assert data["endpoints"]["ingest"] == "https://api.example.com/readings/ingest/"
     assert data["sample_payloads"]["ingest"]["device_key"] == "AB12CD34"
 
 

@@ -42,7 +42,7 @@ describe("reminders.service and serializer", () => {
     await createReminder(payload, { auth: false });
 
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/reminders/",
+      "/reminders/",
       "POST",
       payload,
       { auth: false }
@@ -53,7 +53,7 @@ describe("reminders.service and serializer", () => {
     await completeReminderTask(12, { auth: false }, { note: "Leaves sprayed" });
 
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/reminders/tasks/12/complete/",
+      "/reminders/tasks/12/complete/",
       "POST",
       { note: "Leaves sprayed" },
       { auth: false }
@@ -113,7 +113,7 @@ describe("reminders.service and serializer", () => {
   it("supports reminder list, update and delete actions", async () => {
     await listReminders({ auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/reminders/",
+      "/reminders/",
       "GET",
       undefined,
       { auth: false }
@@ -121,7 +121,7 @@ describe("reminders.service and serializer", () => {
 
     await listReminderTasks({ status: "completed", auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/reminders/tasks/?status=completed",
+      "/reminders/tasks/?status=completed",
       "GET",
       undefined,
       { auth: false }
@@ -133,7 +133,7 @@ describe("reminders.service and serializer", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/reminders/8/",
+      "/reminders/8/",
       "PATCH",
       { interval_value: 10, interval_unit: "days" },
       { auth: false }
@@ -141,7 +141,7 @@ describe("reminders.service and serializer", () => {
 
     await deleteReminder(8, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/reminders/8/",
+      "/reminders/8/",
       "DELETE",
       undefined,
       { auth: false }
@@ -151,7 +151,7 @@ describe("reminders.service and serializer", () => {
   it("supports reminder history delete actions", async () => {
     await deleteReminderTask(21, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/reminders/tasks/21/",
+      "/reminders/tasks/21/",
       "DELETE",
       undefined,
       { auth: false }
@@ -162,7 +162,7 @@ describe("reminders.service and serializer", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/reminders/tasks/bulk-delete/",
+      "/reminders/tasks/bulk-delete/",
       "POST",
       { mode: "types", types: ["watering", "moisture"] },
       { auth: false }

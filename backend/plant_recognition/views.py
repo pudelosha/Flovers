@@ -60,7 +60,7 @@ def _abs_media_url(request, value) -> str | None:
 
 class PlantRecognitionView(APIView):
     """
-    POST /api/plant-recognition/scan/
+    POST /plant-recognition/scan/
 
     Body: multipart/form-data with field "image"
     Optional field "topk" (default=3).

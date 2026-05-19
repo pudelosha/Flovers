@@ -85,21 +85,21 @@ describe("auth.service", () => {
       lang: "en",
     });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/register/",
+      "/auth/register/",
       "POST",
       { email: "new@example.com", password: "secret", lang: "en" }
     );
 
     await resendActivation("new@example.com");
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/resend-activation/",
+      "/auth/resend-activation/",
       "POST",
       { email: "new@example.com" }
     );
 
     await requestPasswordReset("new@example.com");
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/forgot-password/",
+      "/auth/forgot-password/",
       "POST",
       { email: "new@example.com" }
     );
@@ -110,14 +110,14 @@ describe("auth.service", () => {
       new_password: "new-secret",
     });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/reset-password/",
+      "/auth/reset-password/",
       "POST",
       { uid: "abc", token: "token", new_password: "new-secret" }
     );
 
     await confirmEmail({ uid: "abc", token: "token/value" });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/auth/activate/?uid=abc&token=token%2Fvalue",
+      "/auth/activate/?uid=abc&token=token%2Fvalue",
       "GET"
     );
   });

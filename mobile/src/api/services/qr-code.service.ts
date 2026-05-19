@@ -28,14 +28,14 @@ export type SaveQrCodeToDeviceResponse = {
 
 /* ============================== ENDPOINTS ============================== */
 
-const PLANT_INSTANCES_URL = "/api/plant-instances/";
+const PLANT_INSTANCES_URL = "/plant-instances/";
 
 /* ============================== EMAIL ============================== */
 
 /**
  * Request backend to send QR code image to the authenticated user's email.
  * Backend endpoint:
- * POST /api/plant-instances/<plant_id>/send-qr-email/
+ * POST /plant-instances/<plant_id>/send-qr-email/
  */
 export async function sendQrCodeByEmail(
   plantId: number,

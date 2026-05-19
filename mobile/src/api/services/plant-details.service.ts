@@ -126,7 +126,7 @@ function mapHomeTaskToReminderSummary(task: HomeTask): PlantReminderSummary | nu
 async function fetchReadingDevicesSafe(): Promise<ApiReadingDevice[]> {
   try {
     const resp = await request<any>(
-      "/api/readings/devices/",
+      "/readings/devices/",
       "GET",
       undefined,
       { auth: true }

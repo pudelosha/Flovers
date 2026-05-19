@@ -85,7 +85,7 @@ export default function Contact() {
     try {
       setSaving(true);
 
-      const url = `${API_BASE}/api/profile/support/contact/`;
+      const url = `${API_BASE}/profile/support/contact/`;
 
       const res = await withTimeout(async (signal) => {
         const r = await fetch(url, {

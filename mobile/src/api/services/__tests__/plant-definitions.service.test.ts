@@ -49,7 +49,7 @@ describe("plant-definitions.service", () => {
       }),
     ]);
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/plant-definitions/popular/?lang=pl",
+      "/plant-definitions/popular/?lang=pl",
       "GET",
       undefined,
       { auth: false }
@@ -89,7 +89,7 @@ describe("plant-definitions.service", () => {
       latin: "Nephrolepis exaltata",
     });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/plant-definitions/4/profile/?lang=en",
+      "/plant-definitions/4/profile/?lang=en",
       "GET",
       undefined,
       { auth: false }

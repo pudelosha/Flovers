@@ -120,7 +120,7 @@ async function performTokenRefresh(timeoutMs: number): Promise<string | null> {
 
     let timeoutId: any = null;
 
-    const fetchPromise = fetch(`${API_BASE_NORM}/api/auth/token/refresh/`, {
+    const fetchPromise = fetch(`${API_BASE_NORM}/auth/token/refresh/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

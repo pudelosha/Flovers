@@ -282,7 +282,7 @@ def test_code_text_returns_generated_arduino_code():
     content = response.content.decode()
     assert response.status_code == 200
     assert response["Content-Type"].startswith("text/plain")
-    assert "https://api.example.com/api/readings/ingest/" in content
+    assert "https://api.example.com/readings/ingest/" in content
     assert f'const char* deviceKey = "{device.device_key}";' in content
     assert 'const char* secret = "secret-123";' in content
 

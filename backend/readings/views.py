@@ -701,8 +701,8 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             f"Account secret: {secret}",
             "",
             "Endpoints:",
-            f"  Ingest: {settings.SITE_URL}/api/readings/ingest/",
-            f"  Feed:   {settings.SITE_URL}/api/readings/feed/",
+            f"  Ingest: {settings.SITE_URL}/readings/ingest/",
+            f"  Feed:   {settings.SITE_URL}/readings/feed/",
             "",
             "Sample Ingest JSON:",
             '{ "secret": "SECRET", "device_id": ID, "device_key": "KEY", "metrics": { "temperature": 22.8 } }',
@@ -738,8 +738,8 @@ def device_setup(request):
     base = getattr(settings, "SITE_URL", "")
     return Response({
         "endpoints": {
-            "ingest": f"{base}/api/readings/ingest/",
-            "read": f"{base}/api/readings/feed/",
+            "ingest": f"{base}/readings/ingest/",
+            "read": f"{base}/readings/feed/",
         },
         "sample_payloads": {
             "ingest": {

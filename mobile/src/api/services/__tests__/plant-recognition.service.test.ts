@@ -43,7 +43,7 @@ describe("plant-recognition.service", () => {
     });
 
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/plant-recognition/scan/",
+      "/plant-recognition/scan/",
       "POST",
       expect.any(FormData),
       { auth: false }

@@ -37,8 +37,8 @@ def _request_lang(request) -> str:
 
 class PlantInstanceListCreateView(ListCreateAPIView):
     """
-    GET  /api/plant-instances/      -> list current user's plant instances
-    POST /api/plant-instances/      -> create a plant instance for current user
+    GET  /plant-instances/      -> list current user's plant instances
+    POST /plant-instances/      -> create a plant instance for current user
     """
     permission_classes = [IsAuthenticated]
 
@@ -69,10 +69,10 @@ class PlantInstanceListCreateView(ListCreateAPIView):
 
 class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
     """
-    GET    /api/plant-instances/<id>/  -> retrieve single (FULL detail read-format)
-    PATCH  /api/plant-instances/<id>/  -> partial update (responds with list/read-format)
-    PUT    /api/plant-instances/<id>/  -> full update (responds with list/read-format)
-    DELETE /api/plant-instances/<id>/  -> delete
+    GET    /plant-instances/<id>/  -> retrieve single (FULL detail read-format)
+    PATCH  /plant-instances/<id>/  -> partial update (responds with list/read-format)
+    PUT    /plant-instances/<id>/  -> full update (responds with list/read-format)
+    DELETE /plant-instances/<id>/  -> delete
     """
     permission_classes = [IsAuthenticated]
 
@@ -111,7 +111,7 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
 
 class PlantInstanceByQRView(APIView):
     """
-    GET /api/plant-instances/by-qr/?code=<opaque>
+    GET /plant-instances/by-qr/?code=<opaque>
     Requires auth. Returns 404 if code not found for this user.
     """
     permission_classes = [IsAuthenticated]
@@ -171,7 +171,7 @@ class PlantInstanceSendQREmailView(APIView):
 
         lang = _request_lang(request)
 
-        qr_payload = f"{public_base}/api/plant-instances/by-qr/?code={quote(plant.qr_code)}"
+        qr_payload = f"{public_base}/plant-instances/by-qr/?code={quote(plant.qr_code)}"
 
         img = qrcode.make(qr_payload)
         buf = BytesIO()

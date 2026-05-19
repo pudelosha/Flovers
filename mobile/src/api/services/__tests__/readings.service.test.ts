@@ -112,7 +112,7 @@ describe("readings.service", () => {
     await createReadingDevice(payload, { auth: false });
 
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/api/readings/devices/",
+      "/readings/devices/",
       "POST",
       payload,
       { auth: false }
@@ -122,7 +122,7 @@ describe("readings.service", () => {
   it("uses dedicated pump endpoints for manual scheduling and auto-pump updates", async () => {
     await schedulePumpWatering(7, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/7/pump-schedule/",
+      "/readings/devices/7/pump-schedule/",
       "POST",
       undefined,
       { auth: false }
@@ -130,7 +130,7 @@ describe("readings.service", () => {
 
     await recallPumpWatering(7, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/7/pump-recall/",
+      "/readings/devices/7/pump-recall/",
       "POST",
       undefined,
       { auth: false }
@@ -142,7 +142,7 @@ describe("readings.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/7/auto-pump/",
+      "/readings/devices/7/auto-pump/",
       "PATCH",
       { automatic_pump_launch: true, pump_threshold_pct: 28 },
       { auth: false }
@@ -152,7 +152,7 @@ describe("readings.service", () => {
   it("supports reading device CRUD and setup actions", async () => {
     await listReadingDevices({ auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/",
+      "/readings/devices/",
       "GET",
       undefined,
       { auth: false }
@@ -160,7 +160,7 @@ describe("readings.service", () => {
 
     await getReadingDevice(5, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/5/",
+      "/readings/devices/5/",
       "GET",
       undefined,
       { auth: false }
@@ -168,7 +168,7 @@ describe("readings.service", () => {
 
     await updateReadingDevice(5, { device_name: "Updated" }, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/5/",
+      "/readings/devices/5/",
       "PATCH",
       { device_name: "Updated" },
       { auth: false }
@@ -176,7 +176,7 @@ describe("readings.service", () => {
 
     await deleteReadingDevice(5, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/5/",
+      "/readings/devices/5/",
       "DELETE",
       undefined,
       { auth: false }
@@ -184,7 +184,7 @@ describe("readings.service", () => {
 
     await rotateAccountSecret({ auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/rotate-secret/",
+      "/readings/rotate-secret/",
       "POST",
       undefined,
       { auth: false }
@@ -192,7 +192,7 @@ describe("readings.service", () => {
 
     await fetchDeviceSetup({ auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/device-setup/",
+      "/readings/device-setup/",
       "GET",
       undefined,
       { auth: false }
@@ -200,7 +200,7 @@ describe("readings.service", () => {
 
     await sendDeviceCodeByEmail(5, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/5/send-code-email/",
+      "/readings/devices/5/send-code-email/",
       "POST",
       undefined,
       { auth: false }
@@ -213,7 +213,7 @@ describe("readings.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/export-email/",
+      "/readings/export-email/",
       "POST",
       { plantId: "4", status: "enabled", lang: "en" },
       { auth: false }
@@ -231,7 +231,7 @@ describe("readings.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/feed/?secret=SECRET&device_key=DEVICE1&device_id=9&from=2026-05-01T00%3A00%3A00Z&to=2026-05-13T00%3A00%3A00Z&limit=50",
+      "/readings/feed/?secret=SECRET&device_key=DEVICE1&device_id=9&from=2026-05-01T00%3A00%3A00Z&to=2026-05-13T00%3A00%3A00Z&limit=50",
       "GET",
       undefined,
       { auth: false }
@@ -248,7 +248,7 @@ describe("readings.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/history/?device_id=9&range=week&metric=moisture&stat=avg&anchor=2026-05-13T00%3A00%3A00Z",
+      "/readings/history/?device_id=9&range=week&metric=moisture&stat=avg&anchor=2026-05-13T00%3A00%3A00Z",
       "GET",
       undefined,
       { auth: false }
@@ -256,7 +256,7 @@ describe("readings.service", () => {
 
     await fetchReadingsDeleteOptions(9, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/history/delete-options/?device_id=9",
+      "/readings/history/delete-options/?device_id=9",
       "GET",
       undefined,
       { auth: false }
@@ -267,7 +267,7 @@ describe("readings.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/history/bulk-delete/",
+      "/readings/history/bulk-delete/",
       "POST",
       { device_id: 9, mode: "week", weekStart: "2026-05-18" },
       { auth: false }
@@ -275,7 +275,7 @@ describe("readings.service", () => {
 
     await fetchPumpStatus(9, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/readings/devices/9/pump-status/",
+      "/readings/devices/9/pump-status/",
       "GET",
       undefined,
       { auth: false }

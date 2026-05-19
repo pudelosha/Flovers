@@ -13,7 +13,7 @@ export async function fetchUserLocations(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiLocation[]> {
   const data = await request<ApiLocation[]>(
-    "/api/locations/",
+    "/locations/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -27,7 +27,7 @@ export async function createLocation(
 ): Promise<ApiLocation> {
   try {
     const data = await request<ApiLocation>(
-      "/api/locations/",
+      "/locations/",
       "POST",
       payload,
       { auth: opts.auth ?? true }
@@ -52,7 +52,7 @@ export async function updateLocation(
 ): Promise<ApiLocation> {
   try {
     const data = await request<ApiLocation>(
-      `/api/locations/${id}/`,
+      `/locations/${id}/`,
       "PATCH",
       payload,
       { auth: opts.auth ?? true }
@@ -75,7 +75,7 @@ export async function deleteLocation(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<void> {
   try {
-    await request<void>(`/api/locations/${id}/`, "DELETE", undefined, {
+    await request<void>(`/locations/${id}/`, "DELETE", undefined, {
       auth: opts.auth ?? true,
     });
   } catch (e) {

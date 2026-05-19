@@ -1224,9 +1224,9 @@ def generate_arduino_code(
     fallback_pump_threshold = _safe_int(pump_threshold_pct, fallback=30)
 
     base = base_url.rstrip("/")
-    api_url = f"{base}/api/readings/ingest/"
-    pump_next_task_url = f"{base}/api/readings/pump-next-task/"
-    pump_complete_url = f"{base}/api/readings/pump-complete/"
+    api_url = f"{base}/readings/ingest/"
+    pump_next_task_url = f"{base}/readings/pump-next-task/"
+    pump_complete_url = f"{base}/readings/pump-complete/"
 
     sections = [
         _section_includes(),

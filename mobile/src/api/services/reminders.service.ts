@@ -27,7 +27,7 @@ export async function listReminders(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiReminder[]> {
   return await request<ApiReminder[]>(
-    "/api/reminders/",
+    "/reminders/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
@@ -40,7 +40,7 @@ export async function listReminderTasks(
 ): Promise<ApiReminderTask[]> {
   const q = params?.status ? `?status=${encodeURIComponent(params.status)}` : "";
   return await request<ApiReminderTask[]>(
-    `/api/reminders/tasks/${q}`,
+    `/reminders/tasks/${q}`,
     "GET",
     undefined,
     { auth: params?.auth ?? true }
@@ -57,7 +57,7 @@ export async function completeReminderTask(
   next_task: ApiReminderTask | null;
 }> {
   return await request(
-    `/api/reminders/tasks/${taskId}/complete/`,
+    `/reminders/tasks/${taskId}/complete/`,
     "POST",
     payload ?? undefined,
     { auth: opts.auth ?? true }
@@ -80,7 +80,7 @@ export async function createReminder(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiReminder> {
   return await request<ApiReminder>(
-    `/api/reminders/`,
+    `/reminders/`,
     "POST",
     payload,
     { auth: opts.auth ?? true }
@@ -102,7 +102,7 @@ export async function updateReminder(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiReminder> {
   return await request<ApiReminder>(
-    `/api/reminders/${id}/`,
+    `/reminders/${id}/`,
     "PATCH",
     payload,
     { auth: opts.auth ?? true }
@@ -128,7 +128,7 @@ export async function deleteReminder(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<void> {
   await request<void>(
-    `/api/reminders/${id}/`,
+    `/reminders/${id}/`,
     "DELETE",
     undefined,
     { auth: opts.auth ?? true }
@@ -141,14 +141,14 @@ export async function deleteReminder(
  * Delete a single ReminderTask row (used by Task History per-row "Delete").
  *
  * Backend endpoint (to be implemented server-side):
- *   DELETE /api/reminders/tasks/<id>/
+ *   DELETE /reminders/tasks/<id>/
  */
 export async function deleteReminderTask(
   id: number,
   opts: { auth?: boolean } = { auth: true }
 ): Promise<void> {
   await request<void>(
-    `/api/reminders/tasks/${id}/`,
+    `/reminders/tasks/${id}/`,
     "DELETE",
     undefined,
     { auth: opts.auth ?? true }
@@ -160,7 +160,7 @@ export async function deleteReminderTask(
  * Shape mirrors the HistoryDeletePayload on the client.
  *
  * Backend endpoint (to be implemented server-side):
- *   POST /api/reminders/tasks/bulk-delete/
+ *   POST /reminders/tasks/bulk-delete/
  */
 export type ApiBulkDeleteReminderTasksPayload =
   | { mode: "plant"; plantId: string }
@@ -173,7 +173,7 @@ export async function bulkDeleteReminderTasks(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<void> {
   await request<void>(
-    `/api/reminders/tasks/bulk-delete/`,
+    `/reminders/tasks/bulk-delete/`,
     "POST",
     payload,
     { auth: opts.auth ?? true }

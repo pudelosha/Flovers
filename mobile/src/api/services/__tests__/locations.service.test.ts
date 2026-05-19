@@ -38,7 +38,7 @@ describe("locations.service", () => {
       { id: "1", name: "Living room" },
     ]);
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/locations/",
+      "/locations/",
       "GET",
       undefined,
       { auth: false }
@@ -49,7 +49,7 @@ describe("locations.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/locations/",
+      "/locations/",
       "POST",
       { name: "Bedroom", category: "indoor" },
       { auth: false }
@@ -61,7 +61,7 @@ describe("locations.service", () => {
       { auth: false }
     );
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/locations/1/",
+      "/locations/1/",
       "PATCH",
       { name: "Balcony", category: "outdoor" },
       { auth: false }
@@ -69,7 +69,7 @@ describe("locations.service", () => {
 
     await deleteLocation("1", { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
-      "/api/locations/1/",
+      "/locations/1/",
       "DELETE",
       undefined,
       { auth: false }

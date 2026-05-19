@@ -10,13 +10,13 @@ import {
 import { POPULAR_FALLBACK, SEARCH_INDEX_FALLBACK } from "../fallback/plants.fallback";
 
 const ENDPOINTS = {
-  popular: "/api/plant-definitions/popular/",
-  searchIndex: "/api/plant-definitions/search-index/",
+  popular: "/plant-definitions/popular/",
+  searchIndex: "/plant-definitions/search-index/",
 
   profile: (idOrKey: string | number) =>
     typeof idOrKey === "number"
-      ? `/api/plant-definitions/${idOrKey}/profile/`
-      : `/api/plant-definitions/by-key/${encodeURIComponent(idOrKey)}/profile/`,
+      ? `/plant-definitions/${idOrKey}/profile/`
+      : `/plant-definitions/by-key/${encodeURIComponent(idOrKey)}/profile/`,
 };
 
 function withLang(url: string, lang?: string) {

@@ -26,7 +26,7 @@ type Props = {
   /**
    * Preferred new backend shape.
    * Comes from:
-   * - GET /api/readings/devices/:id/pump-status/
+   * - GET /readings/devices/:id/pump-status/
    * - pending_pump_task
    */
   pendingPumpTask?: ApiPumpTask | null;

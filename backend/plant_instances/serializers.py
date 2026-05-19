@@ -155,7 +155,7 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "image": hero,
         }
 
-# detail serializer for GET /api/plant-instances/<id>/
+# detail serializer for GET /plant-instances/<id>/
 # returns the full editable payload + nested read bits
 class PlantInstanceDetailSerializer(serializers.ModelSerializer):
     location = serializers.SerializerMethodField()

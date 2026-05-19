@@ -252,7 +252,7 @@ export default function PlantDetailsScreen() {
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || "";
     if (!code) return "";
-    return `${PUBLIC_BASE_URL_NORM}/api/plant-instances/by-qr/?code=${encodeURIComponent(
+    return `${PUBLIC_BASE_URL_NORM}/plant-instances/by-qr/?code=${encodeURIComponent(
       code
     )}`;
   }, [details, qrFromNav]);

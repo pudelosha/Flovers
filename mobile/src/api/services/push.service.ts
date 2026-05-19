@@ -69,7 +69,7 @@ async function ensurePushPermission() {
 
 async function registerTokenToBackend(token: string) {
   await request<ApiEnvelope<ApiPushDevice>>(
-    "/api/profile/push-devices/",
+    "/profile/push-devices/",
     "POST",
     { token, platform: Platform.OS === "ios" ? "ios" : "android" },
     { auth: true }

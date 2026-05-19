@@ -21,7 +21,7 @@ def test_build_mobile_deeplink_with_host():
 def test_build_web_fallback_uses_public_web_base():
     link = build_web_fallback("home", {"source": "email"})
 
-    assert link == "https://api.example.com/api/profile/open/home/?source=email"
+    assert link == "https://api.example.com/profile/open/home/?source=email"
 
 
 @override_settings(
@@ -31,7 +31,7 @@ def test_build_web_fallback_uses_public_web_base():
 def test_build_reminders_link_uses_web_fallback_when_deeplink_enabled():
     link = build_reminders_link()
 
-    assert link == "https://api.example.com/api/profile/open/home/"
+    assert link == "https://api.example.com/profile/open/home/"
 
 
 @override_settings(
