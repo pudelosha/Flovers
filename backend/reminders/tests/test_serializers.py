@@ -1,11 +1,16 @@
-from datetime import date
+from datetime import date, timedelta
 
 import pytest
 from django.contrib.auth import get_user_model
+from django.utils import timezone
 
 from locations.models import Location
 from plant_instances.models import PlantInstance
-from reminders.serializers import ReminderSerializer, ReminderTaskExportEmailSerializer
+from reminders.serializers import (
+    ReminderSerializer,
+    ReminderTaskCompleteSerializer,
+    ReminderTaskExportEmailSerializer,
+)
 
 User = get_user_model()
 
@@ -77,6 +82,29 @@ def test_export_email_serializer_accepts_current_payload():
 
     assert serializer.is_valid(), serializer.errors
     assert serializer.validated_data["types"] == ["watering", "fertilising"]
+
+
+def test_complete_serializer_accepts_completion_date_and_note_alias():
+    completion_date = timezone.localdate() - timedelta(days=1)
+    serializer = ReminderTaskCompleteSerializer(
+        data={
+            "completedDate": completion_date.isoformat(),
+            "notes": "Watered yesterday.",
+        }
+    )
+
+    assert serializer.is_valid(), serializer.errors
+    assert serializer.validated_data["completion_date"] == completion_date
+    assert serializer.validated_data["completion_note"] == "Watered yesterday."
+
+
+def test_complete_serializer_rejects_future_completion_date():
+    serializer = ReminderTaskCompleteSerializer(
+        data={"completedDate": (timezone.localdate() + timedelta(days=1)).isoformat()}
+    )
+
+    assert serializer.is_valid() is False
+    assert "completedDate" in serializer.errors
 
 
 def test_export_email_serializer_rejects_completed_to_before_completed_from():

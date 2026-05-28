@@ -275,6 +275,31 @@ export const s = StyleSheet.create({
     borderWidth: 0,
   },
   inputInline: { marginHorizontal: 0, marginBottom: 0 },
+  datePickerOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 8,
+    elevation: 8,
+    justifyContent: "center",
+    paddingHorizontal: 16,
+  },
+  datePickerDismissLayer: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "transparent",
+  },
+  datePickerPopover: {
+    alignSelf: "stretch",
+    borderRadius: 16,
+    overflow: "hidden",
+    padding: 8,
+    backgroundColor: "rgba(8,32,29,0.96)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.16)",
+  },
+  datePickerActions: {
+    marginTop: 8,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
 
   // DROPDOWNS
   dropdown: { marginHorizontal: 16, marginBottom: 10 },

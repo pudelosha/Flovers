@@ -66,6 +66,13 @@ function parseISODate(d?: string): Date | null {
   return dt;
 }
 
+function toYYYYMMDD(d: Date = new Date()) {
+  const Y = d.getFullYear();
+  const M = String(d.getMonth() + 1).padStart(2, "0");
+  const D = String(d.getDate()).padStart(2, "0");
+  return `${Y}-${M}-${D}`;
+}
+
 // Empty-state gradient (matches the wizard gradient style)
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
@@ -118,6 +125,7 @@ export default function HomeScreen() {
   const [completeMode, setCompleteMode] = useState<CompleteMode>("single");
   const [completeTaskIds, setCompleteTaskIds] = useState<string[]>([]);
   const [completeNote, setCompleteNote] = useState("");
+  const [completeDate, setCompleteDate] = useState(toYYYYMMDD());
 
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
   const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
@@ -127,6 +135,7 @@ export default function HomeScreen() {
     setCompleteMode("single");
     setCompleteTaskIds([]);
     setCompleteNote("");
+    setCompleteDate(toYYYYMMDD());
     setCompleteIsOverdue(false);
     setCompleteIntervalText("");
   }, []);
@@ -458,6 +467,7 @@ export default function HomeScreen() {
     setCompleteMode(mode);
     setCompleteTaskIds(selectedTasks.map((x) => x.id));
     setCompleteNote("");
+    setCompleteDate(toYYYYMMDD());
 
     const anyOverdue = selectedTasks.some(isTaskOverdue);
     setCompleteIsOverdue(anyOverdue);
@@ -483,6 +493,7 @@ export default function HomeScreen() {
     }
 
     const ids = [...completeTaskIds]; // capture before we clear state
+    const completionDate = completeDate;
 
     try {
       // Show spinner + avoid broken intermediate list
@@ -490,7 +501,7 @@ export default function HomeScreen() {
       setTasks([]);
 
       const results = await Promise.allSettled(
-        ids.map((id) => markHomeTaskComplete(id, completeNote))
+        ids.map((id) => markHomeTaskComplete(id, completeNote, completionDate))
       );
 
       closeCompleteModal();
@@ -955,6 +966,8 @@ export default function HomeScreen() {
         visible={completeModalVisible}
         note={completeNote}
         onChangeNote={setCompleteNote}
+        completionDate={completeDate}
+        onChangeCompletionDate={setCompleteDate}
         onCancel={closeCompleteModal}
         onConfirm={handleConfirmComplete}
         mode={completeMode}

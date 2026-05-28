@@ -21,6 +21,7 @@ from .serializers import (
     ReminderSerializer,
     ReminderTaskSerializer,
     ReminderTaskJournalSerializer,
+    ReminderTaskCompleteSerializer,
     ReminderTaskExportEmailSerializer,
 )
 
@@ -258,9 +259,15 @@ class TaskCompleteView(APIView):
             user=request.user,
         )
 
-        note = request.data.get("note") or request.data.get("notes")
+        serializer = ReminderTaskCompleteSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        note = serializer.validated_data.get("completion_note")
+        completed_date = serializer.validated_data.get("completion_date")
 
-        new_task = task.mark_complete_and_spawn_next(note=note)
+        new_task = task.mark_complete_and_spawn_next(
+            note=note,
+            completed_date=completed_date,
+        )
         return Response(
             {
                 "completed_task": ReminderTaskSerializer(task).data,

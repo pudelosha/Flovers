@@ -78,6 +78,13 @@ type LightLevel5 =
   | "bright-indirect"
   | "bright-direct";
 
+function toYYYYMMDD(d: Date = new Date()) {
+  const Y = d.getFullYear();
+  const M = String(d.getMonth() + 1).padStart(2, "0");
+  const D = String(d.getDate()).padStart(2, "0");
+  return `${Y}-${M}-${D}`;
+}
+
 export default function PlantDetailsScreen() {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -105,6 +112,7 @@ export default function PlantDetailsScreen() {
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
   const [completeReminderId, setCompleteReminderId] = useState<string | null>(null);
   const [completeNote, setCompleteNote] = useState("");
+  const [completeDate, setCompleteDate] = useState(toYYYYMMDD());
 
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
   const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
@@ -674,6 +682,7 @@ export default function PlantDetailsScreen() {
   const openCompleteModal = (reminderId: string) => {
     setCompleteReminderId(reminderId);
     setCompleteNote("");
+    setCompleteDate(toYYYYMMDD());
 
     const r = details?.reminders?.find((x) => x.id === reminderId);
     const overdue = r ? isReminderOverdue(r) : false;
@@ -687,6 +696,7 @@ export default function PlantDetailsScreen() {
     setCompleteModalVisible(false);
     setCompleteReminderId(null);
     setCompleteNote("");
+    setCompleteDate(toYYYYMMDD());
 
     setCompleteIsOverdue(false);
     setCompleteIntervalText("");
@@ -703,7 +713,7 @@ export default function PlantDetailsScreen() {
 
       const r = details.reminders.find((x) => x.id === completeReminderId);
       if (r?.taskId) {
-        await markHomeTaskComplete(r.taskId, completeNote);
+        await markHomeTaskComplete(r.taskId, completeNote, completeDate);
       }
 
       closeCompleteModal();
@@ -949,6 +959,8 @@ export default function PlantDetailsScreen() {
         visible={completeModalVisible}
         note={completeNote}
         onChangeNote={setCompleteNote}
+        completionDate={completeDate}
+        onChangeCompletionDate={setCompleteDate}
         onCancel={closeCompleteModal}
         onConfirm={handleConfirmComplete}
         mode="single"

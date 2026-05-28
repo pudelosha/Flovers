@@ -32,18 +32,26 @@ export async function fetchHomeHistoryTasks(): Promise<HomeTask[]> {
   return buildUITasks(tasks as ApiReminderTask[], reminders, plants) as HomeTask[];
 }
 
-// 🔹 now accepts optional note and forwards it to backend
+// Forward completion metadata to the backend.
 export async function markHomeTaskComplete(
   taskId: string,
-  note?: string
+  note?: string,
+  completedDate?: string
 ): Promise<void> {
-  const payload =
-    note && note.trim().length > 0 ? { note: note.trim() } : undefined;
+  const payload: { note?: string; completedDate?: string } = {};
+
+  if (note && note.trim().length > 0) {
+    payload.note = note.trim();
+  }
+
+  if (completedDate) {
+    payload.completedDate = completedDate;
+  }
 
   await completeReminderTask(
     Number(taskId),
     { auth: true },
-    payload
+    Object.keys(payload).length > 0 ? payload : undefined
   );
 }
 

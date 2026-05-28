@@ -6,16 +6,19 @@
       "reset": "Restablecer"
     },
     "complete": {
+      "completionDateLabel": "Fecha de finalización",
+      "completionDateHint": "Elige la fecha en que se completó esta tarea. No se permiten fechas futuras.",
       "title": "Marcar tarea como completada",
-      "overdueInfo": "Esta tarea está atrasada. La próxima fecha se calculará desde hoy {{intervalText}}.",
+      "overdueInfo": "Esta tarea está atrasada. La próxima fecha se calculará desde la fecha de finalización {{intervalText}}.",
       "noteLabel": "Nota (opcional)",
       "noteHint": "Esta nota se guardará y será visible más adelante para la planta correspondiente en el Diario de plantas.",
       "notePlaceholder": "Puedes añadir una breve nota sobre lo que hiciste, observaciones, etc.",
       "confirm": "Marcar como completada"
     },
     "completeBulk": {
+      "completionDateHint": "Esta fecha se guardará para cada tarea completada. No se permiten fechas futuras.",
       "title": "Marcar {{count}} tareas como completadas",
-      "overdueInfo": "Algunas tareas están atrasadas. Para las tareas atrasadas, la próxima fecha se calculará desde hoy {{intervalText}}.",
+      "overdueInfo": "Algunas tareas están atrasadas. La próxima fecha se calculará desde la fecha de finalización seleccionada {{intervalText}}.",
       "noteHint": "Esta nota se guardará para cada tarea completada y será visible más adelante para la planta correspondiente en el Diario de plantas.",
       "confirm": "Marcar como completadas"
     },

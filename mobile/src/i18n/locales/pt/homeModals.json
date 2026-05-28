@@ -6,16 +6,19 @@
       "reset": "Reiniciar"
     },
     "complete": {
+      "completionDateLabel": "Data de conclusão",
+      "completionDateHint": "Escolha a data em que esta tarefa foi concluída. Datas futuras não são permitidas.",
       "title": "Marcar tarefa como concluída",
-      "overdueInfo": "Esta tarefa está em atraso. A próxima data será calculada a partir de hoje {{intervalText}}.",
+      "overdueInfo": "Esta tarefa está em atraso. A próxima data será calculada a partir da data de conclusão {{intervalText}}.",
       "noteLabel": "Nota (opcional)",
       "noteHint": "Esta nota será salva e ficará visível mais tarde para a planta no Diário da Planta.",
       "notePlaceholder": "Você pode adicionar uma nota curta sobre o que fez, observações, etc.",
       "confirm": "Marcar como concluída"
     },
     "completeBulk": {
+      "completionDateHint": "Esta data será salva para cada tarefa concluída. Datas futuras não são permitidas.",
       "title": "Marcar {{count}} tarefas como concluídas",
-      "overdueInfo": "Algumas tarefas estão em atraso. Para as tarefas em atraso, a próxima data será calculada a partir de hoje {{intervalText}}.",
+      "overdueInfo": "Algumas tarefas estão em atraso. A próxima data será calculada a partir da data de conclusão selecionada {{intervalText}}.",
       "noteHint": "Esta nota será salva para cada tarefa concluída e ficará visível mais tarde para a planta no Diário da Planta.",
       "confirm": "Marcar como concluída"
     },

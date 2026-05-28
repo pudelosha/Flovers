@@ -1,3 +1,5 @@
+from datetime import timedelta
+
 import pytest
 from django.contrib.auth import get_user_model
 from django.urls import reverse
@@ -89,6 +91,61 @@ def test_complete_task_marks_completed_and_returns_next_task():
     assert data["completed_task"]["note"] == "Watered well."
     assert data["next_task"]["status"] == "pending"
     assert task.status == "completed"
+
+
+@pytest.mark.django_db
+def test_complete_task_accepts_completion_date_for_next_task():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    reminder = _reminder(user)
+    today = timezone.localdate()
+    completion_date = today - timedelta(days=1)
+    task = ReminderTask.objects.create(
+        reminder=reminder,
+        user=user,
+        due_date=today - timedelta(days=3),
+        status="pending",
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(
+        reverse("reminder-task-complete", args=[task.id]),
+        data={"completedDate": completion_date.isoformat()},
+        format="json",
+    )
+
+    data = response.json()
+    task.refresh_from_db()
+
+    assert response.status_code == 200
+    assert timezone.localtime(task.completed_at).date() == completion_date
+    assert data["next_task"]["due_date"] == (completion_date + timedelta(days=7)).isoformat()
+
+
+@pytest.mark.django_db
+def test_complete_task_rejects_future_completion_date():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    reminder = _reminder(user)
+    task = ReminderTask.objects.create(
+        reminder=reminder,
+        user=user,
+        due_date=timezone.localdate(),
+        status="pending",
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(
+        reverse("reminder-task-complete", args=[task.id]),
+        data={"completedDate": (timezone.localdate() + timedelta(days=1)).isoformat()},
+        format="json",
+    )
+
+    task.refresh_from_db()
+
+    assert response.status_code == 400
+    assert "completedDate" in response.json()
+    assert task.status == "pending"
 
 
 @pytest.mark.django_db

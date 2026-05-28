@@ -47,11 +47,11 @@ export async function listReminderTasks(
   );
 }
 
-// 🔹 now accepts optional payload with note, but keeps old call signature working
+// Accepts optional completion metadata while keeping old call signatures working.
 export async function completeReminderTask(
   taskId: number,
   opts: { auth?: boolean } = { auth: true },
-  payload?: { note?: string }
+  payload?: { note?: string; completedDate?: string }
 ): Promise<{
   completed_task: ApiReminderTask;
   next_task: ApiReminderTask | null;

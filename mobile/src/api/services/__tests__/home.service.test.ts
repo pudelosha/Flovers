@@ -50,6 +50,7 @@ describe("home.service", () => {
         type: "water",
         interval_value: 7,
         interval_unit: "days",
+        is_active: true,
       },
     ]);
     mockedFetchPlants.mockResolvedValue([
@@ -91,6 +92,13 @@ describe("home.service", () => {
       11,
       { auth: true },
       { note: "done" }
+    );
+
+    await markHomeTaskComplete("11", "  done  ", "2026-05-27");
+    expect(mockedComplete).toHaveBeenLastCalledWith(
+      11,
+      { auth: true },
+      { note: "done", completedDate: "2026-05-27" }
     );
 
     await markHomeTaskComplete("11", "   ");

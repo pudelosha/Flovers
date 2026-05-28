@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import datetime
+
 from django.conf import settings
 from django.db import models, transaction
 from django.utils import timezone
@@ -133,24 +135,54 @@ class ReminderTask(models.Model):
     def __str__(self):
         return f"Task#{self.pk} {self.reminder.type} due {self.due_date} ({self.status})"
 
+    @staticmethod
+    def _completed_at_for_date(completed_date):
+        if completed_date is None:
+            return timezone.now()
+
+        local_now = timezone.localtime(timezone.now())
+        naive = datetime.combine(
+            completed_date,
+            local_now.time().replace(microsecond=0),
+        )
+        return timezone.make_aware(naive, timezone.get_current_timezone())
+
+    @staticmethod
+    def _add_interval(anchor_date, interval_value, interval_unit):
+        if interval_unit == "days":
+            from datetime import timedelta
+
+            return anchor_date + timedelta(days=interval_value)
+
+        from dateutil.relativedelta import relativedelta
+
+        return anchor_date + relativedelta(months=interval_value)
+
     @transaction.atomic
-    def mark_complete_and_spawn_next(self, note=None):
+    def mark_complete_and_spawn_next(self, note=None, completed_date=None):
         """
         Complete this task and create the next pending one.
 
         Rules:
-        - If task is overdue, anchor on today's date.
-        - Otherwise, anchor on this task's due_date.
+        - Anchor the next task on the actual completion date.
+        - If repeated intervals would land in the past or today, advance until
+          the next due date is strictly after today.
         - Ensure at most ONE pending task exists per reminder.
         """
         if self.status == "completed":
             return None  # idempotent
 
+        today = timezone.localdate()
+        if completed_date is None:
+            completed_date = today
+        if completed_date > today:
+            raise ValueError("completed_date cannot be in the future.")
+
         if note is not None:
             self.note = note
 
         self.status = "completed"
-        self.completed_at = timezone.now()
+        self.completed_at = self._completed_at_for_date(completed_date)
         self.save(update_fields=["status", "completed_at", "updated_at", "note"])
 
         rem = self.reminder
@@ -159,15 +191,17 @@ class ReminderTask(models.Model):
         if existing:
             return existing
 
-        today = timezone.localdate()
-        anchor = today if self.due_date < today else self.due_date
-
-        if rem.interval_unit == "days":
-            from datetime import timedelta
-            next_due = anchor + timedelta(days=rem.interval_value)
-        else:
-            from dateutil.relativedelta import relativedelta
-            next_due = anchor + relativedelta(months=rem.interval_value)
+        next_due = self._add_interval(
+            completed_date,
+            rem.interval_value,
+            rem.interval_unit,
+        )
+        while next_due <= today:
+            next_due = self._add_interval(
+                next_due,
+                rem.interval_value,
+                rem.interval_unit,
+            )
 
         return ReminderTask.objects.create(
             reminder=rem,

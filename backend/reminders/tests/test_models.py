@@ -124,6 +124,65 @@ def test_mark_complete_and_spawn_next_updates_task_and_creates_next():
 
 
 @pytest.mark.django_db
+def test_mark_complete_and_spawn_next_uses_completion_date_for_next_due():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    plant = _plant(user)
+    today = timezone.localdate()
+    completion_date = today - timedelta(days=1)
+    reminder = Reminder.objects.create(
+        user=user,
+        plant=plant,
+        type="water",
+        start_date=today,
+        interval_value=7,
+        interval_unit="days",
+    )
+    task = ReminderTask.objects.create(
+        reminder=reminder,
+        user=user,
+        due_date=today - timedelta(days=3),
+        status="pending",
+    )
+
+    next_task = task.mark_complete_and_spawn_next(completed_date=completion_date)
+    task.refresh_from_db()
+
+    assert timezone.localtime(task.completed_at).date() == completion_date
+    assert next_task.due_date == completion_date + timedelta(days=7)
+
+
+@pytest.mark.django_db
+def test_mark_complete_and_spawn_next_advances_old_completion_date_until_future():
+    user = User.objects.create_user(email="test@example.com", password="strong-password-123")
+    plant = _plant(user)
+    today = timezone.localdate()
+    completion_date = today - timedelta(days=15)
+    reminder = Reminder.objects.create(
+        user=user,
+        plant=plant,
+        type="water",
+        start_date=today,
+        interval_value=7,
+        interval_unit="days",
+    )
+    task = ReminderTask.objects.create(
+        reminder=reminder,
+        user=user,
+        due_date=today - timedelta(days=15),
+        status="pending",
+    )
+
+    next_task = task.mark_complete_and_spawn_next(completed_date=completion_date)
+
+    expected = completion_date + timedelta(days=7)
+    while expected <= today:
+        expected = expected + timedelta(days=7)
+
+    assert next_task.due_date == expected
+    assert next_task.due_date > today
+
+
+@pytest.mark.django_db
 def test_mark_complete_is_idempotent_for_completed_task():
     user = User.objects.create_user(email="test@example.com", password="strong-password-123")
     plant = _plant(user)

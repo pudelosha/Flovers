@@ -37,6 +37,29 @@ class ReminderTaskJournalSerializer(serializers.ModelSerializer):
         fields = ["id", "type", "completed_at", "note"]
 
 
+class ReminderTaskCompleteSerializer(serializers.Serializer):
+    note = serializers.CharField(required=False, allow_blank=True, trim_whitespace=True)
+    notes = serializers.CharField(required=False, allow_blank=True, trim_whitespace=True)
+    completedDate = serializers.DateField(required=False, input_formats=["%Y-%m-%d"])
+    completed_date = serializers.DateField(required=False, input_formats=["%Y-%m-%d"])
+
+    def validate(self, attrs):
+        completed_date = attrs.get("completedDate") or attrs.get("completed_date")
+
+        if completed_date and completed_date > timezone.localdate():
+            raise serializers.ValidationError(
+                {"completedDate": "completedDate cannot be in the future."}
+            )
+
+        note = attrs.get("note")
+        if note is None:
+            note = attrs.get("notes")
+
+        attrs["completion_date"] = completed_date
+        attrs["completion_note"] = note
+        return attrs
+
+
 class ReminderTaskExportEmailSerializer(serializers.Serializer):
     plantId = serializers.IntegerField(required=False)
     location = serializers.CharField(required=False, allow_blank=False)

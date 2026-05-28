@@ -6,16 +6,19 @@
       "reset": "リセット"
     },
     "complete": {
+      "completionDateLabel": "完了日",
+      "completionDateHint": "このタスクを完了した日付を選択してください。未来の日付は選択できません。",
       "title": "タスクを完了としてマークする",
-      "overdueInfo": "このタスクは期限切れです。次の期日は今日から計算された{{intervalText}}になります。",
+      "overdueInfo": "このタスクは期限切れです。次回の日付は完了日から {{intervalText}} として計算されます。",
       "noteLabel": "メモ（オプション）",
       "noteHint": "このメモは保存され、後でその植物の植物日誌に表示されます。",
       "notePlaceholder": "あなたが行ったこと、観察結果などについて簡単なメモを追加できます。",
       "confirm": "完了としてマークする"
     },
     "completeBulk": {
+      "completionDateHint": "この日付は完了した各タスクに保存されます。未来の日付は選択できません。",
       "title": "{{count}}件のタスクを完了としてマークする",
-      "overdueInfo": "いくつかのタスクが期限切れです。期限切れのタスクには、次の期日が今日から計算された{{intervalText}}になります。",
+      "overdueInfo": "一部のタスクは期限切れです。次回の日付は選択した完了日から {{intervalText}} として計算されます。",
       "noteHint": "このメモは、完了した各タスクに保存され、後でその植物の日誌に表示されます。",
       "confirm": "完了としてマークする"
     },

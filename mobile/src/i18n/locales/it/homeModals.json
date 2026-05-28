@@ -6,16 +6,19 @@
       "reset": "Reimposta"
     },
     "complete": {
+      "completionDateLabel": "Data di completamento",
+      "completionDateHint": "Scegli la data in cui questa attività è stata completata. Le date future non sono consentite.",
       "title": "Segna attività come completata",
-      "overdueInfo": "Questa attività è in ritardo. La prossima data verrà calcolata a partire da oggi {{intervalText}}.",
+      "overdueInfo": "Questa attività è in ritardo. La prossima data verrà calcolata dalla data di completamento {{intervalText}}.",
       "noteLabel": "Nota (facoltativa)",
       "noteHint": "Questa nota verrà salvata e sarà visibile in seguito per la pianta specifica nel Diario delle piante.",
       "notePlaceholder": "Puoi aggiungere una breve nota su ciò che hai fatto, osservazioni, ecc.",
       "confirm": "Segna come completata"
     },
     "completeBulk": {
+      "completionDateHint": "Questa data verrà salvata per ogni attività completata. Le date future non sono consentite.",
       "title": "Segna {{count}} attività come completate",
-      "overdueInfo": "Alcune attività sono in ritardo. Per le attività in ritardo la prossima data verrà calcolata a partire da oggi {{intervalText}}.",
+      "overdueInfo": "Alcune attività sono in ritardo. La prossima data verrà calcolata dalla data di completamento selezionata {{intervalText}}.",
       "noteHint": "Questa nota verrà salvata per ogni attività completata e sarà visibile in seguito per la pianta specifica nel Diario delle piante.",
       "confirm": "Segna come completate"
     },
