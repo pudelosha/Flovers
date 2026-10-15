@@ -168,6 +168,7 @@ def test_plant_instance_serializer_creates_enabled_auto_reminders():
             "display_name": "Monstera",
             "create_auto_tasks": True,
             "water_task_enabled": True,
+            "water_interval_days": 7,
             "moisture_interval_days": 7,
             "fertilize_required": True,
             "fertilize_interval_days": 30,

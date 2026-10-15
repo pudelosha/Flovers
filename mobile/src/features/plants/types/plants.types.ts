@@ -9,13 +9,13 @@ import type {
 
 /** CREATE / PATCH payload */
 export type ApiPlantInstanceCreatePayload = {
+  creation_key?: string;
   plant_definition_id: number | null;
   location_id: number;
 
   display_name: string;
   notes: string;
   purchase_date: string | null; // "YYYY-MM-DD" or null
-  photo_uri: string;
 
   light_level: LightLevel;
   orientation: Orientation;
@@ -34,6 +34,7 @@ export type ApiPlantInstanceCreatePayload = {
   last_watered: LastWatered | "" | undefined;
   last_repotted: LastRepotted | "" | undefined;
 
+  water_interval_days: number | null;
   moisture_interval_days: number | null;
   fertilize_interval_days: number | null;
   care_interval_days: number | null;
@@ -118,6 +119,7 @@ export type ApiPlantInstanceDetailFull = {
   last_watered?: LastWatered | "" | null;
   last_repotted?: LastRepotted | "" | null;
 
+  water_interval_days?: number | null;
   moisture_interval_days?: number | null;
   fertilize_interval_days?: number | null;
   care_interval_days?: number | null;
@@ -155,6 +157,7 @@ export type PlantEditForm = {
   last_watered?: LastWatered | "" | undefined;
   last_repotted?: LastRepotted | "" | undefined;
 
+  water_interval_days?: number | null;
   moisture_interval_days?: number | null;
   fertilize_interval_days?: number | null;
   care_interval_days?: number | null;

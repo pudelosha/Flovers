@@ -6,7 +6,7 @@ from django.utils import timezone
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import status
+from rest_framework import status, serializers
 
 from .models import PushDevice, ProfileSettings, ProfileNotifications
 from .serializers import PushDeviceSerializer, ProfileSettingsSerializer, ProfileNotificationsSerializer
@@ -56,6 +56,15 @@ class ProfileNotificationsView(APIView):
 
 class PushDeviceRegisterView(APIView):
     permission_classes = [IsAuthenticated]
+
+    def delete(self, request):
+        token_field = serializers.CharField(max_length=512)
+        try:
+            token = token_field.run_validation(request.data.get("token"))
+        except serializers.ValidationError as exc:
+            return err("Validation failed.", {"token": exc.detail})
+        PushDevice.objects.filter(user=request.user, token=token).update(is_active=False)
+        return ok("Push device unregistered.")
 
     def post(self, request):
         """

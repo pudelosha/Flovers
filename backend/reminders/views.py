@@ -1,8 +1,11 @@
 import logging
 from io import BytesIO
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from django.conf import settings
+from django.core.exceptions import ValidationError as DjangoValidationError
+from django.db import transaction
+from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
@@ -15,6 +18,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Font
 
 from core.emailing import send_templated_email
+from core.spreadsheets import append_safe_row
 
 from .models import Reminder, ReminderTask
 from .serializers import (
@@ -51,22 +55,6 @@ def _request_lang(request) -> str:
     return _normalize_lang(lang)
 
 
-def _plant_display_name(plant) -> str:
-    if getattr(plant, "display_name", None):
-        return plant.display_name
-    plant_def = getattr(plant, "plant_definition", None)
-    if plant_def and getattr(plant_def, "name", None):
-        return plant_def.name
-    return f"Plant #{plant.id}"
-
-
-def _location_display_name(plant) -> str:
-    location = getattr(plant, "location", None)
-    if location and getattr(location, "name", None):
-        return location.name
-    return ""
-
-
 def _format_datetime_local(dt) -> str:
     if not dt:
         return ""
@@ -76,7 +64,7 @@ def _format_datetime_local(dt) -> str:
 def _format_date_value(value) -> str:
     if not value:
         return ""
-    return value.strftime("%Y-%m-%d")
+    return value if isinstance(value, str) else value.strftime("%Y-%m-%d")
 
 
 def _autosize_worksheet_columns(ws):
@@ -98,20 +86,20 @@ def _build_export_rows(tasks, sort_key: str, sort_dir: str):
 
     for task in tasks:
         reminder = task.reminder
-        plant = reminder.plant
+        event = task.event
 
         row = {
             "task_id": task.id,
             "status": task.status,
             "status_label": "Completed" if task.status == "completed" else "Pending",
-            "type_label": reminder.get_type_display(),
-            "plant": _plant_display_name(plant),
-            "location": _location_display_name(plant),
+            "type_label": dict(Reminder.TYPE_CHOICES).get(event["type"], event["type"]),
+            "plant": event["plant_name"],
+            "location": event["location_name"],
             "due_date": _format_date_value(task.due_date),
             "completed_at": _format_datetime_local(task.completed_at),
             "note": task.note or "",
-            "reminder_start_date": _format_date_value(reminder.start_date),
-            "interval": f"{reminder.interval_value} {reminder.interval_unit}",
+            "reminder_start_date": _format_date_value(event["start_date"]),
+            "interval": f"{event['interval_value']} {event['interval_unit']}",
             "reminder_active": "Yes" if reminder.is_active else "No",
             "_completed_sort": task.completed_at or None,
             "_due_sort": task.due_date,
@@ -169,13 +157,13 @@ def _build_export_workbook(rows):
         "Interval",
         "Reminder Active",
     ]
-    ws.append(headers)
+    append_safe_row(ws, headers)
 
     for cell in ws[1]:
         cell.font = Font(bold=True)
 
     for row in rows:
-        ws.append([
+        append_safe_row(ws, [
             row["task_id"],
             row["status_label"],
             row["type_label"],
@@ -201,8 +189,9 @@ class ReminderListCreateView(generics.ListCreateAPIView):
     serializer_class = ReminderSerializer
 
     def get_queryset(self):
-        return Reminder.objects.filter(user=self.request.user).select_related("plant")
+        return Reminder.objects.filter(user=self.request.user, plant__user=self.request.user).select_related("plant")
 
+    @transaction.atomic
     def perform_create(self, serializer):
         reminder = serializer.save(user=self.request.user)
         reminder.ensure_one_pending_task()
@@ -218,35 +207,30 @@ class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ReminderSerializer
 
     def get_queryset(self):
-        return Reminder.objects.filter(user=self.request.user).select_related("plant")
+        return Reminder.objects.filter(user=self.request.user, plant__user=self.request.user).select_related("plant")
 
     def perform_update(self, serializer):
-        """
-        On update:
-        - Save new fields
-        - Close any pending task(s)
-        - Create the new pending task based on updated schedule rules
-        """
-        was_active = serializer.instance.is_active
-        requested_active = serializer.validated_data.get("is_active", was_active)
-        reminder = serializer.save(user=self.request.user)
-
-        if requested_active is False:
-            reminder.tasks.filter(status="pending").delete()
-            return
-
-        if was_active is False and requested_active is True:
-            reminder.ensure_one_pending_task()
-            return
-
-        pending_qs = reminder.tasks.filter(status="pending")
-        now = timezone.now()
-        for t in pending_qs:
-            t.status = "completed"
-            t.completed_at = now
-            t.save(update_fields=["status", "completed_at", "updated_at"])
-
-        reminder.ensure_one_pending_task()
+        schedule_fields = ("start_date", "interval_value", "interval_unit", "plant_id", "type")
+        with transaction.atomic():
+            current = get_object_or_404(self.get_queryset().select_for_update(of=("self",)), pk=serializer.instance.pk)
+            previous_schedule = tuple(getattr(current, field) for field in schedule_fields)
+            # Revalidate against the locked, current row: DRF's instance may have
+            # been fetched before another request changed the schedule.
+            fresh = serializer.__class__(current, data=serializer.initial_data,
+                                         partial=serializer.partial, context=serializer.context)
+            fresh.is_valid(raise_exception=True)
+            reminder = fresh.save(user=self.request.user)
+            serializer.instance = reminder
+            pending = reminder.tasks.select_for_update().filter(status="pending").order_by("id")
+            if not reminder.is_active:
+                pending.delete()
+                return
+            task = pending.first()
+            if task is None:
+                reminder.ensure_one_pending_task()
+            elif previous_schedule != tuple(getattr(reminder, field) for field in schedule_fields):
+                task.due_date = reminder._next_due_from_anchor()
+                task.save(update_fields=["due_date", "updated_at"])
 
 
 class TaskCompleteView(APIView):
@@ -257,6 +241,8 @@ class TaskCompleteView(APIView):
             ReminderTask.objects.select_related("reminder", "reminder__plant"),
             pk=pk,
             user=request.user,
+            reminder__user=request.user,
+            reminder__plant__user=request.user,
         )
 
         serializer = ReminderTaskCompleteSerializer(data=request.data)
@@ -264,10 +250,12 @@ class TaskCompleteView(APIView):
         note = serializer.validated_data.get("completion_note")
         completed_date = serializer.validated_data.get("completion_date")
 
-        new_task = task.mark_complete_and_spawn_next(
-            note=note,
-            completed_date=completed_date,
-        )
+        try:
+            new_task = task.mark_complete_and_spawn_next(note=note, completed_date=completed_date)
+        except (Reminder.DoesNotExist, ReminderTask.DoesNotExist):
+            return Response({"detail": "Task no longer exists."}, status=status.HTTP_404_NOT_FOUND)
+        except DjangoValidationError as exc:
+            return Response({"detail": exc.messages}, status=status.HTTP_409_CONFLICT)
         return Response(
             {
                 "completed_task": ReminderTaskSerializer(task).data,
@@ -282,7 +270,10 @@ class ReminderTaskListView(APIView):
 
     def get(self, request):
         qs = ReminderTask.objects.filter(
-            reminder__plant__user=request.user
+            user=request.user,
+            reminder__user=request.user,
+            reminder__plant__user=request.user,
+            status__in=["pending", "completed"],
         ).select_related("reminder", "reminder__plant")
 
         status_param = request.query_params.get("status")
@@ -310,6 +301,8 @@ class ReminderTaskDetailDeleteView(APIView):
             ReminderTask.objects.select_related("reminder", "reminder__plant"),
             pk=pk,
             user=request.user,
+            reminder__user=request.user,
+            reminder__plant__user=request.user,
         )
 
         if task.status != "completed":
@@ -336,6 +329,8 @@ class ReminderTaskBulkDeleteView(APIView):
 
         qs = ReminderTask.objects.filter(
             user=request.user,
+            reminder__user=request.user,
+            reminder__plant__user=request.user,
             status="completed",
         ).select_related(
             "reminder", "reminder__plant", "reminder__plant__location"
@@ -348,7 +343,11 @@ class ReminderTaskBulkDeleteView(APIView):
                     {"detail": "plantId is required for mode='plant'."},
                     status=status.HTTP_400_BAD_REQUEST,
                 )
-            qs = qs.filter(reminder__plant_id=plant_id)
+            try:
+                plant_id = int(plant_id)
+            except (ValueError, TypeError):
+                return Response({"detail": "plantId must be an integer."}, status=status.HTTP_400_BAD_REQUEST)
+            qs = qs.filter(completed_event__plant_id=plant_id)
 
         elif mode == "location":
             location_name = request.data.get("location")
@@ -357,7 +356,7 @@ class ReminderTaskBulkDeleteView(APIView):
                     {"detail": "location is required for mode='location'."},
                     status=status.HTTP_400_BAD_REQUEST,
                 )
-            qs = qs.filter(reminder__plant__location__name=location_name)
+            qs = qs.filter(completed_event__location_name=location_name)
 
         elif mode == "types":
             ui_types = request.data.get("types") or []
@@ -382,7 +381,7 @@ class ReminderTaskBulkDeleteView(APIView):
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
-            qs = qs.filter(reminder__type__in=model_types)
+            qs = qs.filter(completed_event__type__in=model_types)
 
         elif mode == "olderThan":
             days = request.data.get("days")
@@ -394,7 +393,12 @@ class ReminderTaskBulkDeleteView(APIView):
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
-            cutoff = timezone.now() - timedelta(days=days)
+            try:
+                if days < 0:
+                    raise ValueError
+                cutoff = timezone.now() - timedelta(days=days)
+            except (ValueError, OverflowError):
+                return Response({"detail": "days must be a non-negative, representable age."}, status=status.HTTP_400_BAD_REQUEST)
             qs = qs.filter(
                 completed_at__isnull=False,
                 completed_at__lt=cutoff,
@@ -452,7 +456,7 @@ class ReminderTaskExportEmailView(APIView):
 
         base_qs = (
             ReminderTask.objects
-            .filter(user=request.user)
+            .filter(user=request.user, reminder__user=request.user, reminder__plant__user=request.user)
             .select_related(
                 "reminder",
                 "reminder__plant",
@@ -462,10 +466,10 @@ class ReminderTaskExportEmailView(APIView):
         )
 
         if plant_id:
-            base_qs = base_qs.filter(reminder__plant_id=plant_id)
+            base_qs = base_qs.filter(Q(status="completed", completed_event__plant_id=plant_id) | Q(status="pending", reminder__plant_id=plant_id))
 
         if location_name:
-            base_qs = base_qs.filter(reminder__plant__location__name=location_name)
+            base_qs = base_qs.filter(Q(status="completed", completed_event__location_name=location_name) | Q(status="pending", reminder__plant__location__name=location_name))
 
         if ui_types:
             model_types = [UI_TO_MODEL_TYPE[t] for t in ui_types if t in UI_TO_MODEL_TYPE]
@@ -474,7 +478,7 @@ class ReminderTaskExportEmailView(APIView):
                     {"detail": "No valid task types provided."},
                     status=status.HTTP_400_BAD_REQUEST,
                 )
-            base_qs = base_qs.filter(reminder__type__in=model_types)
+            base_qs = base_qs.filter(Q(status="completed", completed_event__type__in=model_types) | Q(status="pending", reminder__type__in=model_types))
 
         completed_qs = base_qs.filter(status="completed")
         pending_qs = base_qs.filter(status="pending") if include_pending else base_qs.none()
@@ -546,8 +550,10 @@ class PlantJournalView(APIView):
             ReminderTask.objects
             .filter(
                 user=request.user,
+                reminder__user=request.user,
+                reminder__plant__user=request.user,
                 status="completed",
-                reminder__plant_id=plant_id,
+                completed_event__plant_id=plant_id,
             )
             .select_related("reminder")
             .order_by("-completed_at", "-id")

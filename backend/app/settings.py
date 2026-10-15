@@ -2,6 +2,7 @@ from pathlib import Path
 import environ
 from datetime import timedelta
 from celery.schedules import crontab
+from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,14 +11,22 @@ env = environ.Env()
 
 # Load .env if present (but DO NOT use its existence to decide DB engine)
 env_file = BASE_DIR / ".env"
-if env_file.exists():
+if env.bool("LOAD_DOTENV", default=True) and env_file.exists():
     environ.Env.read_env(env_file)
 
 # --- Core ---
-SECRET_KEY = env(
-    "SECRET_KEY",
-    default="django-insecure-local-dev-secret-key-change-me-32-bytes-min",
-)
+APP_ENV = env("APP_ENV", default="production").strip().lower()
+if APP_ENV not in {"production", "development", "test"}:
+    raise ImproperlyConfigured("APP_ENV must be production, development, or test.")
+_development = APP_ENV in {"development", "test"}
+_dev_secret = "django-insecure-local-dev-secret-key-change-me-32-bytes-min"
+_dev_jwt_key = "simplejwt-local-dev-signing-key-change-me-32-bytes-min"
+SECRET_KEY = env("SECRET_KEY", default=_dev_secret if _development else "")
+JWT_SIGNING_KEY = env("JWT_SIGNING_KEY", default=_dev_jwt_key if _development else "")
+if not _development:
+    for _name, _value in (("SECRET_KEY", SECRET_KEY), ("JWT_SIGNING_KEY", JWT_SIGNING_KEY)):
+        if len(_value.strip()) < 32 or _value in {_dev_secret, _dev_jwt_key} or _value.startswith("django-insecure-"):
+            raise ImproperlyConfigured(f"{_name} must be an explicitly configured private key of at least 32 characters in production.")
 DEBUG = env.bool("DEBUG", default=False)
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["api.flovers.app"])
 
@@ -44,6 +53,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "core.middleware.TrustedProxyHeadersMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -97,28 +107,35 @@ REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_CLASSES": [
         "rest_framework.throttling.UserRateThrottle",
         "rest_framework.throttling.AnonRateThrottle",
-        "readings.throttles.IngestPerDeviceThrottle",
-        "readings.throttles.FeedPerDeviceThrottle",
     ],
     "DEFAULT_THROTTLE_RATES": {
         "user": "200/min",
         "anon": "50/min",
         "ingest_per_device": "60/hour",
-        "feed_per_device": "60/hour",
+        "feed_per_device": "120/hour",
+        "pump_poll_per_device": "120/hour",
+        "pump_complete_per_device": "120/hour",
+        "public_contact": "5/hour",
     },
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
+    # Middleware resolves a client address only from an explicitly trusted proxy.
+    "NUM_PROXIES": 0,
 }
 
-# --- JWT ---
-JWT_SIGNING_KEY = env(
-    "JWT_SIGNING_KEY",
-    default="simplejwt-local-dev-signing-key-change-me-32-bytes-min",
-)
+TRUSTED_PROXY_CIDRS = env.list("TRUSTED_PROXY_CIDRS", default=[])
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = False
+THROTTLE_CACHE_URL = env("THROTTLE_CACHE_URL", default="").strip()
+if THROTTLE_CACHE_URL:
+    CACHES = {"default": {"BACKEND": "django.core.cache.backends.redis.RedisCache", "LOCATION": THROTTLE_CACHE_URL}}
 
+# --- JWT ---
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
     "SIGNING_KEY": JWT_SIGNING_KEY,
+    "CHECK_REVOKE_TOKEN": True,
+    "TOKEN_REFRESH_SERIALIZER": "accounts.serializers.PasswordAwareTokenRefreshSerializer",
 }
 
 # --- I18N / TZ ---
@@ -164,6 +181,7 @@ DEEP_LINK_ENABLED = env.bool("DEEP_LINK_ENABLED", default=True)
 PUBLIC_WEB_BASE = env("PUBLIC_WEB_BASE", default=SITE_URL)  # where /open/* is served
 
 ANDROID_PACKAGE_NAME = "com.flovers.mobile"  # <-- set your actual appId
+IOT_TLS_CA_CERT = env("IOT_TLS_CA_CERT", default="")
 
 # --- Celery ---
 CELERY_BEAT_SCHEDULE = {
@@ -193,6 +211,9 @@ EMAIL_HOST = env("EMAIL_HOST", default="postfix")
 EMAIL_PORT = env.int("EMAIL_PORT", default=25)
 EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=False)
 EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
+EMAIL_TIMEOUT = env.int("EMAIL_TIMEOUT", default=30)
+if not 1 <= EMAIL_TIMEOUT <= 120:
+    raise ImproperlyConfigured("EMAIL_TIMEOUT must be between 1 and 120 seconds.")
 EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.app")

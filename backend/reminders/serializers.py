@@ -4,6 +4,8 @@ from .models import Reminder, ReminderTask
 
 
 class ReminderSerializer(serializers.ModelSerializer):
+    interval_value = serializers.IntegerField(min_value=1)
+
     class Meta:
         model = Reminder
         fields = [
@@ -12,11 +14,20 @@ class ReminderSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ["id", "created_at", "updated_at"]
 
+    def validate_plant(self, plant):
+        request = self.context.get("request")
+        if request is not None and plant.user_id != request.user.pk:
+            raise serializers.ValidationError("Invalid plant.")
+        return plant
+
     def update(self, instance: Reminder, validated_data):
         """
         Allow normal field updates; task regeneration handled in the view's perform_update.
         """
-        return super().update(instance, validated_data)
+        for name, value in validated_data.items():
+            setattr(instance, name, value)
+        instance.save(update_fields=[*validated_data, "updated_at"])
+        return instance
 
 
 class ReminderTaskSerializer(serializers.ModelSerializer):
@@ -25,12 +36,16 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
         fields = [
             "id", "reminder", "due_date", "status", "completed_at", "note",
             "created_at", "updated_at",
+            "completed_event",
         ]
-        read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at"]
+        read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at", "completed_event"]
 
 
 class ReminderTaskJournalSerializer(serializers.ModelSerializer):
-    type = serializers.CharField(source="reminder.type", read_only=True)
+    type = serializers.SerializerMethodField()
+
+    def get_type(self, obj):
+        return obj.event["type"]
 
     class Meta:
         model = ReminderTask

@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useRef, useState, useCallback } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
@@ -31,7 +31,8 @@ export default function Step09_Creating() {
 
   const { state, actions } = useCreatePlantWizard();
   const navigation = useNavigation<any>();
-  const [status, setStatus] = useState<"creating" | "success">("creating");
+  const [status, setStatus] = useState<"creating" | "success" | "error">("creating");
+  const [attempt, setAttempt] = useState(0);
   const lottieRef = useRef<any>(null);
 
   const getTranslation = useCallback(
@@ -49,16 +50,11 @@ export default function Step09_Creating() {
     [t, currentLanguage]
   );
 
-  // one-shot guard to prevent multiple POSTs even if the effect re-runs
-  const startedRef = useRef(false);
-
   useEffect(() => {
     let mounted = true;
+    let navigationTimer: ReturnType<typeof setTimeout> | undefined;
 
     const run = async () => {
-      if (startedRef.current) return;
-      startedRef.current = true;
-
       setStatus("creating");
       try {
         await actions.createPlant();
@@ -66,20 +62,22 @@ export default function Step09_Creating() {
         setStatus("success");
 
         // Navigate to Plants tab after ~2.5s
-        setTimeout(() => {
+        navigationTimer = setTimeout(() => {
           if (!mounted) return;
+          actions.reset();
           navigation.navigate(PLANTS_ROUTE_NAME);
         }, 2500);
-      } catch (e) {
-        console.error("Create plant failed", e);
+      } catch {
+        if (mounted) setStatus("error");
       }
     };
 
     run();
     return () => {
       mounted = false;
+      if (navigationTimer) clearTimeout(navigationTimer);
     };
-  }, [actions, navigation]);
+  }, [actions, navigation, attempt]);
 
   // Fixed card height (tweak to taste)
   const CARD_HEIGHT = 360;
@@ -121,13 +119,15 @@ export default function Step09_Creating() {
         {/* content */}
         <View style={[wiz.cardInner, { alignItems: "center", justifyContent: "center", height: "100%" }]}>
           {/* Lottie centered */}
-          <View style={{ width: 220, height: 220, alignItems: "center", justifyContent: "center", marginTop: -10 }}>
-            {LottieView && ANIM ? (
+          <View style={{ width: 220, height: status === "error" ? 100 : 220, alignItems: "center", justifyContent: "center", marginTop: -10 }}>
+            {status === "error" ? (
+              <MaterialCommunityIcons name="alert-circle-outline" size={72} color="#FFFFFF" />
+            ) : LottieView && ANIM ? (
               <LottieView
                 ref={lottieRef}
                 source={ANIM}
                 autoPlay
-                loop={status !== "success"}
+                loop={status === "creating"}
                 style={{ width: "100%", height: "100%" }}
               />
             ) : (
@@ -139,16 +139,44 @@ export default function Step09_Creating() {
           <Text style={[wiz.title, { marginTop: 8, textAlign: "center" }]}>
             {status === "creating"
               ? getTranslation("createPlant.step09.creating", "creating new plant")
-              : getTranslation("createPlant.step09.success", "plant created successfully")}
+              : status === "success"
+                ? getTranslation("createPlant.step09.success", "plant created successfully")
+                : state.createdPlantId
+                  ? getTranslation("createPlant.step09.photoFailed", "Your plant was created, but its photo could not be saved.")
+                  : getTranslation("createPlant.step09.failed", "Could not create your plant. Please try again.")}
           </Text>
 
-          {/* Reserve space for ID line so height never changes 
-          <Text style={[wiz.smallMuted, { textAlign: "center", minHeight: 20, marginTop: 4 }]}>
-            {status === "success" && state.createdPlantId
-              ? `${getTranslation("createPlant.step09.idPrefix", "ID")}: ${state.createdPlantId}`
-              : "\u00A0"}
-          </Text>
-          */}
+          {status === "error" && (
+            <View style={{ width: "100%", flexDirection: "row", gap: 12, marginTop: 20 }}>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => {
+                  if (state.createdPlantId) {
+                    actions.reset();
+                    navigation.navigate(PLANTS_ROUTE_NAME);
+                  } else {
+                    actions.goTo("name");
+                  }
+                }}
+                style={[wiz.nextBtnWide, { flex: 1, justifyContent: "center", backgroundColor: "#263238" }]}
+              >
+                <Text style={wiz.nextBtnText}>
+                  {state.createdPlantId
+                    ? getTranslation("createPlant.step09.openPlants", "Go to plants")
+                    : getTranslation("createPlant.common.previous", "Back")}
+                </Text>
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => setAttempt((value) => value + 1)}
+                style={[wiz.nextBtnWide, { flex: 1, justifyContent: "center", backgroundColor: "#0B7285" }]}
+              >
+                <Text style={wiz.nextBtnText}>
+                  {getTranslation("createPlant.step09.retry", "Try again")}
+                </Text>
+              </Pressable>
+            </View>
+          )}
         </View>
       </View>
     </View>

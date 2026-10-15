@@ -2,6 +2,8 @@
   "title": "Kontakt",
   "subtitle": "Senden Sie eine Nachricht an den Support. Wir antworten in der Regel innerhalb von 1–3 Werktagen.",
   "form": {
+    "emailLabel": "Deine E-Mail-Adresse",
+    "emailPlaceholder": "du@example.com",
     "subjectLabel": "Betreff",
     "subjectPlaceholder": "z.B. Anmeldeproblem",
     "messageLabel": "Nachricht",
@@ -13,6 +15,8 @@
     "note": "Wenn das Formular nicht funktioniert, verwenden Sie die E-Mail-Schaltfläche."
   },
   "toasts": {
+    "enterEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "rateLimited": "Zu viele Nachrichten. Bitte versuche es später erneut.",
     "enterSubject": "Geben Sie einen Betreff ein.",
     "enterMessage": "Geben Sie eine Nachricht ein.",
     "contactSent": "Nachricht gesendet.",

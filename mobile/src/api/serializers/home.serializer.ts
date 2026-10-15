@@ -25,7 +25,8 @@ function plantName(p?: ApiPlant | null): string {
 export function buildUITasks(
   tasks: ApiReminderTask[],
   reminders: ApiReminder[],
-  plants: ApiPlant[]
+  plants: ApiPlant[],
+  options: { includeInactive?: boolean } = {}
 ): (Task & { reminderId: string })[] {
   const remById = new Map<number, ApiReminder>();
   for (const r of reminders) remById.set(r.id, r);
@@ -35,11 +36,12 @@ export function buildUITasks(
 
   return tasks.flatMap((t) => {
     const r = remById.get(t.reminder);
-    if (!r?.is_active) return [];
+    const event = t.status === "completed" ? t.completed_event : null;
+    if (!event && (!r || (!r.is_active && !options.includeInactive))) return [];
 
     const p = r ? plantById.get(r.plant) : undefined;
 
-    const type: TaskType = toTaskType(r?.type ?? "care");
+    const type: TaskType = toTaskType(event?.type ?? r?.type ?? "care");
     const dueInfo = getDueInfo(t.due_date);
 
     const ui: Task & { reminderId: string } = {
@@ -47,16 +49,16 @@ export function buildUITasks(
       type,
 
       // underlying plant instance id for navigation from Home → PlantDetails
-      plantId: p ? String(p.id) : undefined,
+      plantId: event ? String(event.plant_id) : p ? String(p.id) : undefined,
 
-      plant: plantName(p),
-      location: p?.location?.name || "",
+      plant: event ? event.plant_name || "Unnamed plant" : plantName(p),
+      location: event ? event.location_name : p?.location?.name || "",
       due: dueInfo.fallbackLabel,        // fallback only; UI should prefer dueDiffDays
-      dueDate: new Date(t.due_date),     // exact date
+      dueDate: new Date(`${t.due_date}T00:00:00`), // local calendar date
       dueDiffDays: dueInfo.diffDays,     // used by UI for localized labels
 
       // used for Delete/Edit routing
-      reminderId: String(r?.id ?? ""),
+      reminderId: String(t.reminder ?? ""),
 
       // extra fields used by Task History
       completedAt: t.completed_at || "", // ISO string or "" if not completed
@@ -71,7 +73,7 @@ function getDueInfo(iso: string): { diffDays: number; fallbackLabel: string } {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const d = new Date(iso);
+  const d = new Date(`${iso}T00:00:00`);
   d.setHours(0, 0, 0, 0);
 
   const diff = Math.round((+d - +today) / (1000 * 60 * 60 * 24));

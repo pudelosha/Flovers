@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import ProfileSettingsView, ProfileNotificationsView, PushDeviceRegisterView
-from .views_support import SupportContactView, SupportBugView
+from .views_support import SupportContactView, SupportBugView, PublicSupportContactView
 from .views_open import open_home
 
 urlpatterns = [
@@ -10,6 +10,7 @@ urlpatterns = [
 
     # Support
     path("support/contact/", SupportContactView.as_view(), name="profile-support-contact"),
+    path("support/public-contact/", PublicSupportContactView.as_view(), name="profile-support-public-contact"),
     path("support/bug/", SupportBugView.as_view(), name="profile-support-bug"),
 
     # App open / deep-link fallbacks

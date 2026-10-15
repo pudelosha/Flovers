@@ -81,23 +81,17 @@ export default function Step07_Photo() {
       const uri = asset?.uri;
       if (!uri) return;
 
-      // If we already have a photo in wizard state, delete it (avoid orphaned files)
-      if (state.photoUri) {
-        try {
-          await deleteLocalPhoto(state.photoUri);
-        } catch {
-          // ignore: don't block user flow if cleanup fails
-        }
-      }
-
       try {
         const persistedUri = await persistTempPlantPhoto({
           sourceUri: uri,
           fileNameHint: asset?.fileName,
-          tempKey: tempKeyRef.current,
+          tempKey: `${tempKeyRef.current}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
         });
 
         actions.setPhotoUri(persistedUri);
+        if (state.photoUri) {
+          await deleteLocalPhoto(state.photoUri).catch(() => {});
+        }
       } catch (e: any) {
         Alert.alert(
           getTranslation("createPlant.step07.saveErrorTitle", "Save error"),

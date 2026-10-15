@@ -2,6 +2,8 @@
   "title": "お問い合わせ",
   "subtitle": "サポートにメッセージを送信してください。通常、1～3営業日以内に返信します。",
   "form": {
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "you@example.com",
     "subjectLabel": "件名",
     "subjectPlaceholder": "例: ログイン問題",
     "messageLabel": "メッセージ",
@@ -13,6 +15,8 @@
     "note": "フォームが機能しない場合は、メールボタンを使用してください。"
   },
   "toasts": {
+    "enterEmail": "有効なメールアドレスを入力してください。",
+    "rateLimited": "送信回数が多すぎます。後でもう一度お試しください。",
     "enterSubject": "件名を入力してください。",
     "enterMessage": "メッセージを入力してください。",
     "contactSent": "メッセージが送信されました。",

@@ -103,7 +103,7 @@ def test_retrieve_reminder_returns_404_for_other_users_reminder():
 
 
 @pytest.mark.django_db
-def test_patch_reminder_regenerates_pending_task():
+def test_patch_reminder_reschedules_pending_without_fabricating_completion():
     user = User.objects.create_user(email="test@example.com", password="strong-password-123")
     plant = _plant(user)
     reminder = Reminder.objects.create(
@@ -130,7 +130,9 @@ def test_patch_reminder_regenerates_pending_task():
     assert response.status_code == 200
     assert data["interval_value"] == 14
     assert reminder.interval_value == 14
-    assert old_task.status == "completed"
+    assert old_task.status == "pending"
+    assert old_task.completed_at is None
+    assert reminder.tasks.filter(status="completed").count() == 0
     assert reminder.tasks.filter(status="pending").count() == 1
 
 

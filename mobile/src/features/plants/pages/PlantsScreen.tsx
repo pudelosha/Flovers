@@ -151,6 +151,7 @@ export default function PlantsScreen() {
   const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
 
   const [editLoading, setEditLoading] = useState(false);
+  const editRequestRef = useRef(0);
   const [saving, setSaving] = useState(false);
 
   const [sortOpen, setSortOpen] = useState(false);
@@ -237,6 +238,8 @@ export default function PlantsScreen() {
 
   useFocusEffect(
     useCallback(() => {
+      editRequestRef.current += 1;
+      setEditLoading(false);
       setEditOpen(false);
       setEditingId(null);
       closeFloatingMenus();
@@ -252,7 +255,7 @@ export default function PlantsScreen() {
       setJournalPlantName("");
       setJournalPlantId("");
 
-      return undefined;
+      return () => { editRequestRef.current += 1; };
     }, [closeFloatingMenus])
   );
 
@@ -322,6 +325,7 @@ export default function PlantsScreen() {
 
   const openEditModal = useCallback(
     async (p: Plant) => {
+      const request = ++editRequestRef.current;
       closeFloatingMenus();
       setEditingId(p.id);
       setEditLoading(true);
@@ -336,6 +340,7 @@ export default function PlantsScreen() {
         const detail = await fetchPlantInstanceForEdit(Number(p.id), {
           auth: true,
         });
+        if (request !== editRequestRef.current) return;
 
         if (detail.display_name !== undefined && detail.display_name !== null)
           setFName(detail.display_name || "");
@@ -358,6 +363,7 @@ export default function PlantsScreen() {
 
         setEditOpen(true);
       } catch (e: any) {
+        if (request !== editRequestRef.current) return;
         Alert.alert(
           t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
           e?.message ||
@@ -366,7 +372,7 @@ export default function PlantsScreen() {
             })
         );
       } finally {
-        setEditLoading(false);
+        if (request === editRequestRef.current) setEditLoading(false);
       }
     },
     [closeFloatingMenus, t]
@@ -433,7 +439,12 @@ export default function PlantsScreen() {
     }, [load, route, nav, openEditModalById])
   );
 
-  const closeEdit = () => setEditOpen(false);
+  const closeEdit = () => {
+    editRequestRef.current += 1;
+    setEditLoading(false);
+    setEditOpen(false);
+    setEditingId(null);
+  };
 
   const onUpdate = async () => {
     if (!editingId) return;

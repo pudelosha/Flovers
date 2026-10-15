@@ -17,7 +17,7 @@ export function buildUIHistoryItems(
   reminders: ApiReminder[],
   plants: ApiPlant[]
 ): TaskHistoryItem[] {
-  const uiTasks = buildUITasks(tasks, reminders, plants) as any[];
+  const uiTasks = buildUITasks(tasks, reminders, plants, { includeInactive: true });
 
   return uiTasks.map(
     (t): TaskHistoryItem => {
@@ -31,7 +31,7 @@ export function buildUIHistoryItems(
         location: t.location,
         plantId: t.plantId,
         reminderId: trimmedReminderId || undefined,
-        completedAt: t.completedAt,
+        completedAt: t.completedAt ?? "",
         note: t.note,
       };
     }

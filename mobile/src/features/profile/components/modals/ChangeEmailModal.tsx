@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { changeMyEmail } from "../../../../api/services/profile.service";
 import { prompts as pr } from "../../styles/profile.styles";
 import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import { useAuth } from "../../../../app/providers/useAuth";
+import { getAuthSessionId } from "../../../../api/client";
 
 type Props = {
   visible: boolean;
@@ -14,6 +16,7 @@ type Props = {
 
 export default function ChangeEmailModal({ visible, onClose, showToast }: Props) {
   const { t } = useTranslation();
+  const { updateUser } = useAuth();
 
   const [newEmail, setNewEmail] = useState("");
   const [currentPassword, setCurrentPassword] = useState("");
@@ -38,10 +41,12 @@ export default function ChangeEmailModal({ visible, onClose, showToast }: Props)
 
     try {
       setSaving(true);
+      const session = getAuthSessionId();
       const res = await changeMyEmail(
         { new_email: newEmail.trim(), password: currentPassword },
         { auth: true }
       );
+      await updateUser({ email: res?.data?.email || newEmail.trim() }, session);
       showToast(res?.message || t("profileModals.toasts.emailUpdated"), "success");
       onClose();
     } catch (e: any) {

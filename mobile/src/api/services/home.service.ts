@@ -29,7 +29,7 @@ export async function fetchHomeHistoryTasks(): Promise<HomeTask[]> {
     fetchPlantInstances({ auth: true }),
   ]);
 
-  return buildUITasks(tasks as ApiReminderTask[], reminders, plants) as HomeTask[];
+  return buildUITasks(tasks as ApiReminderTask[], reminders, plants, { includeInactive: true });
 }
 
 // Forward completion metadata to the backend.

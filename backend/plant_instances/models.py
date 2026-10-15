@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.core.validators import MinValueValidator
 from django.utils import timezone
 import secrets
 
@@ -56,6 +57,7 @@ class PlantInstance(models.Model):
     last_watered = models.CharField(max_length=32, blank=True, default="")
     last_repotted = models.CharField(max_length=32, blank=True, default="")
 
+    water_interval_days = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MinValueValidator(1)])
     moisture_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
     fertilize_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
     care_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
@@ -87,3 +89,16 @@ class PlantInstance(models.Model):
     def save(self, *args, **kwargs):
         self._ensure_qr_code()
         super().save(*args, **kwargs)
+
+
+class PlantCreationRequest(models.Model):
+    """Durable per-account receipt; deleting a plant must not silently recreate it on retry."""
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    creation_key = models.UUIDField()
+    request_hash = models.CharField(max_length=64)
+    plant = models.OneToOneField(PlantInstance, null=True, on_delete=models.SET_NULL)
+    response_data = models.JSONField(default=dict)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "creation_key"], name="plant_creation_user_key_unique")]

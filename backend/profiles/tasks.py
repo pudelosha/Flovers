@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from uuid import uuid4
 from datetime import timedelta
 from typing import Optional
 
@@ -9,7 +10,7 @@ from core.i18n import t
 from celery import shared_task
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.db import IntegrityError, models, transaction
+from django.db import models
 from django.utils import timezone
 
 try:
@@ -44,42 +45,15 @@ def _safe_zoneinfo(tz_name: Optional[str]):
             return timezone.get_current_timezone()
 
 
-def _matches_minute(now_local, hour: int, minute: int) -> bool:
-    try:
-        return now_local.hour == int(hour) and now_local.minute == int(minute)
-    except Exception:
-        return False
-
-
 def _count_due_on_date(user_id: int, due_date) -> int:
     return ReminderTask.objects.filter(
         user_id=user_id,
         status="pending",
         due_date=due_date,
         reminder__is_active=True,
+        reminder__user_id=user_id,
+        reminder__plant__user_id=user_id,
     ).count()
-
-
-def _should_send(user_id: int, channel: str, kind: str, local_date) -> bool:
-    return not NotificationDeliveryLog.objects.filter(
-        user_id=user_id,
-        channel=channel,
-        kind=kind,
-        local_date=local_date,
-    ).exists()
-
-
-def _log_sent(user_id: int, channel: str, kind: str, local_date) -> None:
-    try:
-        with transaction.atomic():
-            NotificationDeliveryLog.objects.create(
-                user_id=user_id,
-                channel=channel,
-                kind=kind,
-                local_date=local_date,
-            )
-    except IntegrityError:
-        pass
 
 
 def _get_user_lang(user) -> str:
@@ -228,93 +202,142 @@ def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: st
     return int(success_count)
 
 
+
+# A claim is intentionally longer than bounded provider timeouts. A process
+# dying after provider acceptance can still cause a repeat after lease recovery;
+# SMTP/FCM do not offer an atomic commit with this database.
+DELIVERY_LEASE = timedelta(minutes=15)
+RETRY_MAX_SECONDS = 3600
+
+
+def _notification_enabled(preferences, channel, kind):
+    prefix = "email" if channel == NotificationDeliveryLog.CHANNEL_EMAIL else "push"
+    suffix = "daily" if kind == NotificationDeliveryLog.KIND_DUE_TODAY else "24h"
+    return bool(getattr(preferences, f"{prefix}_{suffix}"))
+
+
+def _enqueue_due_notifications(now_utc):
+    preferences = ProfileNotifications.objects.select_related("user").filter(user__is_active=True).filter(
+        models.Q(email_daily=True) | models.Q(email_24h=True) |
+        models.Q(push_daily=True) | models.Q(push_24h=True)
+    )
+    for pn in preferences.iterator():
+        # One invalid recipient must not prevent other recipients being queued.
+        try:
+            local = now_utc.astimezone(_safe_zoneinfo(pn.timezone))
+            existing = set(NotificationDeliveryLog.objects.filter(
+                user_id=pn.user_id, local_date=local.date()
+            ).values_list("channel", "kind"))
+            due_counts = {}
+            for channel in (NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.CHANNEL_PUSH):
+                prefix = "email" if channel == NotificationDeliveryLog.CHANNEL_EMAIL else "push"
+                hour, minute = int(getattr(pn, f"{prefix}_hour")), int(getattr(pn, f"{prefix}_minute"))
+                if not (0 <= hour <= 23 and 0 <= minute <= 59):
+                    continue
+                # Catch up after a missed minute, including a worker restart.
+                if (local.hour, local.minute) < (hour, minute):
+                    continue
+                for kind in (NotificationDeliveryLog.KIND_DUE_TODAY, NotificationDeliveryLog.KIND_OVERDUE_1D):
+                    if (channel, kind) in existing or not _notification_enabled(pn, channel, kind):
+                        continue
+                    due_date = local.date() - timedelta(days=kind == NotificationDeliveryLog.KIND_OVERDUE_1D)
+                    if kind not in due_counts:
+                        due_counts[kind] = _count_due_on_date(pn.user_id, due_date)
+                    if due_counts[kind] == 0:
+                        continue
+                    NotificationDeliveryLog.objects.get_or_create(
+                        user_id=pn.user_id, channel=channel, kind=kind, local_date=local.date(),
+                        defaults={"status": NotificationDeliveryLog.STATUS_PENDING, "next_attempt_at": now_utc},
+                    )
+        except Exception:
+            logger.exception("Could not queue task notifications for user=%s", pn.user_id)
+
+
+def _claim_delivery(delivery_id, now_utc):
+    token = uuid4().hex
+    eligible = models.Q(status=NotificationDeliveryLog.STATUS_PENDING, next_attempt_at__lte=now_utc) | models.Q(
+        status=NotificationDeliveryLog.STATUS_SENDING, lease_expires_at__lte=now_utc
+    )
+    # Conditional UPDATE is the claim. A unique delivery row alone would dedup
+    # only the log after sending and let overlapping workers both send.
+    changed = NotificationDeliveryLog.objects.filter(pk=delivery_id).filter(eligible).update(
+        status=NotificationDeliveryLog.STATUS_SENDING, claim_token=token,
+        lease_expires_at=now_utc + DELIVERY_LEASE, attempts=models.F("attempts") + 1,
+    )
+    if not changed:
+        return None
+    return NotificationDeliveryLog.objects.select_related("user", "user__profile_notifications").get(
+        pk=delivery_id, claim_token=token
+    )
+
+
+def _finish_delivery(delivery, state, *, now_utc, error=""):
+    # A recovered lease fences the previous worker from changing the new claim.
+    values = {
+        "status": state, "claim_token": "", "lease_expires_at": None,
+        "last_error": error[:1000],
+    }
+    if state == NotificationDeliveryLog.STATUS_SENT:
+        values["sent_at"] = now_utc
+    if state == NotificationDeliveryLog.STATUS_PENDING:
+        delay = min(60 * (2 ** min(delivery.attempts - 1, 6)), RETRY_MAX_SECONDS)
+        values["next_attempt_at"] = now_utc + timedelta(seconds=delay)
+    NotificationDeliveryLog.objects.filter(
+        pk=delivery.pk, status=NotificationDeliveryLog.STATUS_SENDING, claim_token=delivery.claim_token
+    ).update(**values)
+
+
+def _deliver_claimed(delivery, now_utc):
+    user = delivery.user
+    pn = getattr(user, "profile_notifications", None)
+    if pn is None or not user.is_active or not _notification_enabled(pn, delivery.channel, delivery.kind):
+        _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SKIPPED, now_utc=now_utc)
+        return
+    local_date = now_utc.astimezone(_safe_zoneinfo(pn.timezone)).date()
+    # A "due today" message must describe this local day. Tomorrow's overdue
+    # preference controls tomorrow's notifications; stale work is not sent late.
+    if delivery.local_date != local_date:
+        _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SKIPPED, now_utc=now_utc, error="Local delivery day expired.")
+        return
+    due_date = delivery.local_date - timedelta(days=delivery.kind == NotificationDeliveryLog.KIND_OVERDUE_1D)
+    count = _count_due_on_date(user.pk, due_date)
+    if count == 0:
+        _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SKIPPED, now_utc=now_utc)
+        return
+    if delivery.channel == NotificationDeliveryLog.CHANNEL_EMAIL:
+        send = _send_email_due_today if delivery.kind == NotificationDeliveryLog.KIND_DUE_TODAY else _send_email_overdue_1d
+        sent = send(user, count)
+    else:
+        tokens = _get_android_tokens(user.pk)
+        get_text = _get_push_due_today_text if delivery.kind == NotificationDeliveryLog.KIND_DUE_TODAY else _get_push_overdue_1d_text
+        title, body = get_text(user, count)
+        sent = _send_push_and_deactivate_bad_tokens(tokens, title, body, {
+            "kind": delivery.kind, "route": "Home", "delivery_id": str(delivery.pk),
+        }) > 0
+    if not sent:
+        raise RuntimeError("Notification provider did not accept a delivery.")
+    _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SENT, now_utc=timezone.now())
+
+
 @shared_task(bind=True, ignore_result=True)
 def check_and_send_daily_task_notifications(self):
     now_utc = timezone.now()
-
-    notif_qs = (
-        ProfileNotifications.objects
-        .select_related("user")
-        .filter(
-            models.Q(email_daily=True) |
-            models.Q(push_daily=True) |
-            models.Q(email_24h=True) |
-            models.Q(push_24h=True)
-        )
-        .only(
-            "id", "timezone",
-            "email_daily", "email_24h", "email_hour", "email_minute",
-            "push_daily", "push_24h", "push_hour", "push_minute",
-            "user__id", "user__email",
-        )
+    _enqueue_due_notifications(now_utc)
+    eligible = models.Q(status=NotificationDeliveryLog.STATUS_PENDING, next_attempt_at__lte=now_utc) | models.Q(
+        status=NotificationDeliveryLog.STATUS_SENDING, lease_expires_at__lte=now_utc
     )
-
-    for pn in notif_qs:
-        tzinfo = _safe_zoneinfo(pn.timezone)
-        now_local = now_utc.astimezone(tzinfo)
-        local_date = now_local.date()
-        yesterday = local_date - timedelta(days=1)
-
-        user = pn.user
-
-        email_time_match = _matches_minute(now_local, pn.email_hour, pn.email_minute)
-        push_time_match = _matches_minute(now_local, pn.push_hour, pn.push_minute)
-
-        if pn.email_daily and email_time_match:
-            if _should_send(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_DUE_TODAY, local_date):
-                due_count = _count_due_on_date(user.id, local_date)
-                if due_count > 0 and _send_email_due_today(user, due_count):
-                    _log_sent(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
-
-        if pn.email_24h and email_time_match:
-            if _should_send(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date):
-                overdue_count = _count_due_on_date(user.id, yesterday)
-                if overdue_count > 0 and _send_email_overdue_1d(user, overdue_count):
-                    _log_sent(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date)
-
-        if pn.push_daily and push_time_match:
-            should = _should_send(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
-            due_count = _count_due_on_date(user.id, local_date) if should else 0
-            tokens = _get_android_tokens(user.id) if (should and due_count > 0) else []
-
-            logger.info(
-                "push_due_today user=%s tz=%s now_local=%s local_date=%s match=%s should_send=%s due=%s tokens=%s",
-                user.id,
-                pn.timezone,
-                now_local.isoformat(),
-                local_date,
-                push_time_match,
-                should,
-                due_count,
-                len(tokens),
-            )
-
-            if should and due_count > 0:
-                title, body = _get_push_due_today_text(user, due_count)
-
-                sent = _send_push_and_deactivate_bad_tokens(
-                    tokens=tokens,
-                    title=title,
-                    body=body,
-                    data={"kind": "due_today", "route": "Home"},
-                )
-                logger.info("push_due_today result user=%s sent=%s", user.id, sent)
-
-                if sent > 0:
-                    _log_sent(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
-
-        if pn.push_24h and push_time_match:
-            if _should_send(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date):
-                overdue_count = _count_due_on_date(user.id, yesterday)
-                if overdue_count > 0:
-                    tokens = _get_android_tokens(user.id)
-                    title, body = _get_push_overdue_1d_text(user, overdue_count)
-
-                    sent = _send_push_and_deactivate_bad_tokens(
-                        tokens=tokens,
-                        title=title,
-                        body=body,
-                        data={"kind": "overdue_1d", "route": "Home"},
-                    )
-                    if sent > 0:
-                        _log_sent(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date)
+    ids = NotificationDeliveryLog.objects.filter(eligible).order_by("next_attempt_at", "pk").values_list("pk", flat=True)
+    for delivery_id in ids.iterator():
+        delivery = None
+        try:
+            # Queue enumeration can be long; every claim gets a fresh lease.
+            delivery = _claim_delivery(delivery_id, timezone.now())
+            if delivery is not None:
+                _deliver_claimed(delivery, timezone.now())
+        except Exception as exc:
+            logger.exception("Task notification attempt failed delivery=%s", delivery_id)
+            if delivery is not None:
+                # Store an exception class, not provider text that may contain
+                # tokens, addresses or response bodies.
+                _finish_delivery(delivery, NotificationDeliveryLog.STATUS_PENDING,
+                                 now_utc=timezone.now(), error=type(exc).__name__)

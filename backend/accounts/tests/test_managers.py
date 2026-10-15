@@ -11,7 +11,7 @@ def test_create_user_with_email_and_password():
         password="strong-password-123",
     )
 
-    assert user.email == "TEST@example.com"
+    assert user.email == "test@example.com"
     assert user.check_password("strong-password-123")
     assert user.is_staff is False
     assert user.is_superuser is False

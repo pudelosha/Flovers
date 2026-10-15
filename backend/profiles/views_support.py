@@ -3,14 +3,15 @@ from __future__ import annotations
 import logging
 
 from django.conf import settings
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.throttling import ScopedRateThrottle
 from rest_framework.views import APIView
 from rest_framework import status
 
 from core.emailing import send_templated_email
 from .models import SupportMessage
 from .views import ok, err
-from .serializers_support import SupportContactSerializer, SupportBugSerializer
+from .serializers_support import SupportContactSerializer, SupportBugSerializer, PublicSupportContactSerializer
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +33,48 @@ def _support_admin_email() -> str:
 
 
 ADMIN_LANG = "en"
+
+
+class PublicSupportContactView(APIView):
+    permission_classes = [AllowAny]
+    authentication_classes = []
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "public_contact"
+
+    def post(self, request):
+        serializer = PublicSupportContactSerializer(data=request.data)
+        if not serializer.is_valid():
+            return err("Validation failed.", serializer.errors)
+        data = serializer.validated_data
+        if data["website"]:
+            return ok("Message sent.")
+        admin_email = _support_admin_email()
+        if not admin_email:
+            return err("Support inbox is not configured.", code=status.HTTP_503_SERVICE_UNAVAILABLE)
+        sender = {"email": data["email"]}
+        message = SupportMessage.objects.create(
+            user=None, kind=SupportMessage.KIND_CONTACT,
+            subject=data["subject"], body=data["message"],
+            copy_to_user=data["copy_to_user"], user_email=data["email"],
+            user_agent=(request.META.get("HTTP_USER_AGENT") or "")[:255], platform="web",
+        )
+        context = {"user": sender, "subject": message.subject, "body": message.body,
+                   "message": message.body, "kind": "contact"}
+        try:
+            send_templated_email(
+                to_email=admin_email, template_name="profiles/support_contact_admin",
+                subject_key="profiles.support_contact_admin.subject", lang=ADMIN_LANG,
+                reply_to=[data["email"]], context=context,
+            )
+            if message.copy_to_user:
+                send_templated_email(
+                    to_email=data["email"], template_name="profiles/support_copy",
+                    subject_key="profiles.support_copy.subject", lang=data["lang"], context=context,
+                )
+        except Exception:
+            logger.exception("Public contact email delivery failed for message_id=%s", message.pk)
+            return err("Failed to send support email.", code=status.HTTP_503_SERVICE_UNAVAILABLE)
+        return ok("Message sent.")
 
 
 class SupportContactView(APIView):

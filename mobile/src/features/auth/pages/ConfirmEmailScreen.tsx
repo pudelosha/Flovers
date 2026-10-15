@@ -106,7 +106,7 @@ const LinkText = ({
 
 export default function ConfirmEmailScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ConfirmEmail">>();
-  const { confirmEmail } = useAuth() as any;
+  const { confirmEmail, token: sessionToken } = useAuth();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -218,12 +218,12 @@ export default function ConfirmEmailScreen({ navigation }: any) {
         )}
 
         {!loading && ok === true && (
-          <Button mode="contained" onPress={() => navigation.navigate("Login")} style={s.button}>
-            {getTranslation("confirmEmail.goToLogin", "Go to Login")}
+          <Button mode="contained" onPress={() => navigation.navigate(sessionToken ? "Home" : "Login")} style={s.button}>
+            {sessionToken ? getTranslation("navigation.tabs.Home", "Home") : getTranslation("confirmEmail.goToLogin", "Go to Login")}
           </Button>
         )}
 
-        {!loading && ok === false && (
+        {!loading && ok === false && !sessionToken && (
           <Button
             mode="contained"
             onPress={() => navigation.navigate("ResendActivation", { email: derived.email })}
@@ -234,8 +234,8 @@ export default function ConfirmEmailScreen({ navigation }: any) {
         )}
 
         <LinkText
-          onPress={() => navigation.navigate("Login")}
-          text={getTranslation("confirmEmail.backToLogin", "Back to Login")}
+          onPress={() => navigation.navigate(sessionToken ? "Home" : "Login")}
+          text={sessionToken ? getTranslation("navigation.tabs.Home", "Home") : getTranslation("confirmEmail.backToLogin", "Back to Login")}
           style={s.linkTight}
         />
 

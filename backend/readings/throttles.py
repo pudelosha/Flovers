@@ -1,25 +1,24 @@
 from rest_framework.throttling import SimpleRateThrottle
+from .device_auth import resolve_device
 
 
-class IngestPerDeviceThrottle(SimpleRateThrottle):
+class AuthenticatedDeviceThrottle(SimpleRateThrottle):
+    def get_cache_key(self, request, view):
+        device = resolve_device(request)
+        return self.cache_format % {"scope": self.scope, "ident": device.pk}
+
+
+class IngestPerDeviceThrottle(AuthenticatedDeviceThrottle):
     scope = "ingest_per_device"
 
-    def get_cache_key(self, request, view):
-        device_id = request.data.get("device_id") or request.query_params.get("device_id")
-        device_key = request.data.get("device_key") or request.query_params.get("device_key")
-        ident = device_id or device_key
-        if not ident:
-            return None
-        return f"ingest:{ident}"
 
-
-class FeedPerDeviceThrottle(SimpleRateThrottle):
+class FeedPerDeviceThrottle(AuthenticatedDeviceThrottle):
     scope = "feed_per_device"
 
-    def get_cache_key(self, request, view):
-        device_id = request.data.get("device_id") or request.query_params.get("device_id")
-        device_key = request.data.get("device_key") or request.query_params.get("device_key")
-        ident = device_id or device_key
-        if not ident:
-            return None
-        return f"feed:{ident}"
+
+class PumpPollPerDeviceThrottle(AuthenticatedDeviceThrottle):
+    scope = "pump_poll_per_device"
+
+
+class PumpCompletePerDeviceThrottle(AuthenticatedDeviceThrottle):
+    scope = "pump_complete_per_device"

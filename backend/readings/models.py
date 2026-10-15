@@ -65,8 +65,9 @@ class ReadingDevice(models.Model):
     last_pump_run_at = models.DateTimeField(null=True, blank=True)
     last_pump_run_source = models.CharField(max_length=16, null=True, blank=True)
 
-    # Safety cooldown used by backend automatic pump logic
+    # Reserved before physical execution, including a conservative run allowance.
     pump_cooldown_minutes = models.PositiveSmallIntegerField(default=60)
+    pump_safety_until = models.DateTimeField(null=True, blank=True)
 
     last_read_at = models.DateTimeField(null=True, blank=True)
     latest_snapshot = models.JSONField(null=True, blank=True)
@@ -146,6 +147,9 @@ class PumpTask(models.Model):
 
     requested_at = models.DateTimeField(default=timezone.now)
     delivered_at = models.DateTimeField(null=True, blank=True)
+    # A delivery first made to receipt-less firmware must never be replayed
+    # after a later firmware upgrade with an empty receipt store.
+    delivery_retry_safe = models.BooleanField(default=False)
     executed_at = models.DateTimeField(null=True, blank=True)
     cancelled_at = models.DateTimeField(null=True, blank=True)
     expires_at = models.DateTimeField(null=True, blank=True)
@@ -190,6 +194,8 @@ class Reading(models.Model):
         related_name="readings",
     )
     timestamp = models.DateTimeField(db_index=True)
+    # The hourly bucket is timestamp; ordering uses the actual sensor timestamp.
+    observed_at = models.DateTimeField(null=True, blank=True)
 
     temperature = models.FloatField(null=True, blank=True)
     humidity = models.FloatField(null=True, blank=True)

@@ -2,6 +2,8 @@
   "title": "Kontakt",
   "subtitle": "Wyślij wiadomość do wsparcia. Zwykle odpowiadamy w 1–3 dni robocze.",
   "form": {
+    "emailLabel": "Twój adres e-mail",
+    "emailPlaceholder": "ty@example.com",
     "subjectLabel": "Temat",
     "subjectPlaceholder": "np. Problem z logowaniem",
     "messageLabel": "Wiadomość",
@@ -13,6 +15,8 @@
     "note": "Jeśli formularz nie zadziała, użyj przycisku e-mail."
   },
   "toasts": {
+    "enterEmail": "Wpisz poprawny adres e-mail.",
+    "rateLimited": "Wysłano zbyt wiele wiadomości. Spróbuj ponownie później.",
     "enterSubject": "Wpisz temat.",
     "enterMessage": "Wpisz wiadomość.",
     "contactSent": "Wiadomość wysłana.",

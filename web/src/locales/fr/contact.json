@@ -2,6 +2,8 @@
   "title": "Contact",
   "subtitle": "Envoyez un message au support. Nous répondons généralement sous 1 à 3 jours ouvrables.",
   "form": {
+    "emailLabel": "Votre adresse e-mail",
+    "emailPlaceholder": "vous@example.com",
     "subjectLabel": "Sujet",
     "subjectPlaceholder": "ex. Problème de connexion",
     "messageLabel": "Message",
@@ -13,6 +15,8 @@
     "note": "Si le formulaire ne fonctionne pas, utilisez le bouton e-mail."
   },
   "toasts": {
+    "enterEmail": "Veuillez saisir une adresse e-mail valide.",
+    "rateLimited": "Trop de messages. Veuillez réessayer plus tard.",
     "enterSubject": "Entrez le sujet.",
     "enterMessage": "Entrez un message.",
     "contactSent": "Message envoyé.",

@@ -178,6 +178,7 @@ export default function PlantDetailsScreen() {
   const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
 
   const [editLoading, setEditLoading] = useState(false);
+  const editRequestRef = useRef(0);
   const [saving, setSaving] = useState(false);
 
   const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
@@ -315,6 +316,7 @@ export default function PlantDetailsScreen() {
 
   const openEditModal = useCallback(
     async (plantId: string) => {
+      const request = ++editRequestRef.current;
       setDismissMenusTick((t) => t + 1);
       setEditingId(plantId);
       setEditLoading(true);
@@ -323,6 +325,7 @@ export default function PlantDetailsScreen() {
         const detail = await fetchPlantInstanceForEdit(Number(plantId), {
           auth: true,
         });
+        if (request !== editRequestRef.current) return;
 
         const resolvedName =
           detail.display_name?.trim() ||
@@ -348,6 +351,7 @@ export default function PlantDetailsScreen() {
 
         setEditOpen(true);
       } catch (e: any) {
+        if (request !== editRequestRef.current) return;
         Alert.alert(
           t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
           e?.message ||
@@ -356,13 +360,15 @@ export default function PlantDetailsScreen() {
             })
         );
       } finally {
-        setEditLoading(false);
+        if (request === editRequestRef.current) setEditLoading(false);
       }
     },
     [t, tr]
   );
 
   const closeEdit = useCallback(() => {
+    editRequestRef.current += 1;
+    setEditLoading(false);
     setEditOpen(false);
     setEditingId(null);
   }, []);

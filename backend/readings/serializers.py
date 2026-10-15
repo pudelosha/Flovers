@@ -1,10 +1,58 @@
 from rest_framework import serializers
+from datetime import timedelta
+import math
+from django.utils import timezone
 from .models import ReadingDevice, Reading, PumpTask
 
 
 class ReadingDeviceAutoPumpSerializer(serializers.Serializer):
     automatic_pump_launch = serializers.BooleanField()
     pump_threshold_pct = serializers.FloatField(required=False, allow_null=True)
+
+    def validate_pump_threshold_pct(self, value):
+        if value is not None and (not math.isfinite(value) or not 0 <= value <= 100):
+            raise serializers.ValidationError("Must be a finite number between 0 and 100.")
+        return value
+
+
+class ReadingIngestSerializer(serializers.Serializer):
+    timestamp = serializers.DateTimeField(required=False, default=timezone.now)
+    metrics = serializers.DictField(allow_empty=False)
+
+    def validate_timestamp(self, value):
+        if value > timezone.now() + timedelta(minutes=5):
+            raise serializers.ValidationError("Timestamp cannot be more than five minutes in the future.")
+        return value
+
+    def validate_metrics(self, values):
+        allowed = {"temperature", "humidity", "light", "moisture"}
+        if set(values) - allowed:
+            raise serializers.ValidationError("Unknown sensor metric.")
+        parsed = {}
+        for name, value in values.items():
+            if value is None:
+                parsed[name] = None
+                continue
+            try:
+                if isinstance(value, bool):
+                    raise ValueError
+                number = float(value)
+                if not math.isfinite(number):
+                    raise ValueError
+            except (TypeError, ValueError, OverflowError):
+                raise serializers.ValidationError({name: "A finite number or null is required."})
+            if name in {"humidity", "moisture"} and not 0 <= number <= 100:
+                raise serializers.ValidationError({name: "Must be between 0 and 100."})
+            if name == "light" and number < 0:
+                raise serializers.ValidationError({name: "Must not be negative."})
+            parsed[name] = number
+        return parsed
+
+    def to_internal_value(self, data):
+        # Older sketches use an empty timestamp when their clock is unavailable.
+        if isinstance(data, dict) and data.get("timestamp") == "":
+            data = {key: value for key, value in data.items() if key != "timestamp"}
+        return super().to_internal_value(data)
 
 
 class PumpTaskSerializer(serializers.ModelSerializer):
@@ -194,14 +242,44 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             normalized_sensors.pop("moistureAlertPct", None)
             data["sensors"] = normalized_sensors
 
-        data.pop("mode", None)
+        for alias in (
+            "mode", "plantId", "name", "enabled", "intervalHours",
+            "sendEmailNotifications", "sendPushNotifications", "pumpIncluded",
+            "automaticPumpLaunch", "pumpThresholdPct", "sendEmailWateringNotifications",
+            "sendPushWateringNotifications",
+        ):
+            data.pop(alias, None)
 
         return super().to_internal_value(data)
+
+    def validate_plant(self, plant):
+        request = self.context.get("request")
+        if request is not None and plant.user_id != request.user.pk:
+            raise serializers.ValidationError("Invalid plant.")
+        return plant
 
     def validate_interval_hours(self, value: int):
         if not 1 <= value <= 24:
             raise serializers.ValidationError("interval_hours must be between 1 and 24")
         return value
+
+    def validate_sensors(self, value):
+        if not isinstance(value, dict):
+            raise serializers.ValidationError("A sensor object is required.")
+        boolean = serializers.BooleanField()
+        return {key: boolean.run_validation(flag) for key, flag in value.items()}
+
+    def validate_pump_cooldown_minutes(self, value):
+        if value < 1:
+            raise serializers.ValidationError("Cooldown must be at least one minute.")
+        return value
+
+    def validate_pump_threshold_pct(self, value):
+        if value is not None and (not math.isfinite(value) or not 0 <= value <= 100):
+            raise serializers.ValidationError("Must be a finite number between 0 and 100.")
+        return value
+
+    validate_moisture_alert_threshold = validate_pump_threshold_pct
 
     def validate(self, attrs):
         instance = getattr(self, "instance", None)
@@ -314,7 +392,15 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             validated_data["send_email_watering_notifications"] = False
             validated_data["send_push_watering_notifications"] = False
 
-        return super().update(instance, validated_data)
+        # ModelSerializer's default full save can restore a stale snapshot or
+        # pump summary while a settings PATCH edits an unrelated field.
+        for field, value in validated_data.items():
+            setattr(instance, field, value)
+        fields = set(validated_data) | {"updated_at"}
+        if "plant" in fields:
+            fields.update({"plant_name", "plant_location"})
+        instance.save(update_fields=fields)
+        return instance
 
 
 class ReadingSerializer(serializers.ModelSerializer):

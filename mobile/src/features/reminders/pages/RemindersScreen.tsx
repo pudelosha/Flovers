@@ -481,15 +481,7 @@ export default function RemindersScreen() {
       setFPlantId(match?.id);
     }
 
-    const d = r.dueDate ? new Date(r.dueDate) : null;
-    const iso =
-      d && !isNaN(+d)
-        ? `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(
-            2,
-            "0"
-          )}-${String(d.getUTCDate()).padStart(2, "0")}`
-        : "";
-    setFDueDate(iso);
+    setFDueDate(r.dueDateISO);
     setFIntervalValue(r.intervalValue);
     setFIntervalUnit(r.intervalUnit || (r.type === "repot" ? "months" : "days"));
 

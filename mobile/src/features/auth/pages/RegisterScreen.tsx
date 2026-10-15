@@ -227,7 +227,7 @@ export default function RegisterScreen({ navigation }: any) {
   const pwd2Ref = useRef<RNTextInput | null>(null);
 
   const emailValid = /\S+@\S+\.\S+/.test(email);
-  const passwordValid = pwd.length >= 6;
+  const passwordValid = pwd.length >= 8;
   const passwordsMatch = pwd && pwd === pwd2;
   const formValid = emailValid && passwordValid && passwordsMatch && agree;
 

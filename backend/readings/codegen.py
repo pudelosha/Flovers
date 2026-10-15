@@ -1,4 +1,8 @@
 from textwrap import dedent
+from pathlib import Path
+import json
+import ssl
+from urllib.parse import urlsplit
 
 
 def _bool_flag(value) -> str:
@@ -29,6 +33,9 @@ def _section_includes() -> str:
         #include <WiFi.h>
         #include <WiFiClientSecure.h>
         #include <HTTPClient.h>
+        #include <Preferences.h>
+        #include <cstring>
+        #include <cstdint>
         #include <Wire.h>
         #include <BH1750.h>
         #include <Adafruit_Sensor.h>
@@ -59,20 +66,22 @@ def _section_api_config(
     pump_enabled: bool,
     pump_next_task_url: str,
     pump_complete_url: str,
+    pump_auto_claim_url: str,
 ) -> str:
     lines = [
         "// -------------------- API ---------------------",
         "",
-        f'const char* apiUrl = "{api_url}";',
-        f'const char* secret = "{secret}";',
-        f'const char* deviceKey = "{device_key}";',
+        f'const char* apiUrl = {json.dumps(api_url)};',
+        f'const char* secret = {json.dumps(secret)};',
+        f'const char* deviceKey = {json.dumps(device_key)};',
     ]
 
     if pump_enabled:
         lines.extend(
             [
-                f'const char* pumpNextTaskUrl = "{pump_next_task_url}";',
-                f'const char* pumpCompleteUrl = "{pump_complete_url}";',
+                f'const char* pumpNextTaskUrl = {json.dumps(pump_next_task_url)};',
+                f'const char* pumpCompleteUrl = {json.dumps(pump_complete_url)};',
+                f'const char* pumpAutoClaimUrl = {json.dumps(pump_auto_claim_url)};',
             ]
         )
 
@@ -86,6 +95,16 @@ def _section_api_config(
     )
 
     return "\n".join(lines).strip()
+
+
+def _section_tls_config(ca_cert: str | None = None) -> str:
+    ca_cert = ca_cert or Path(__file__).with_name("tls_roots.pem").read_text(encoding="ascii")
+    # Validate the configured trust anchors before generating a sketch. Never
+    # silently fall back to accepting arbitrary server certificates.
+    ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT).load_verify_locations(cadata=ca_cert)
+    if ")FLOVERS_CA\"" in ca_cert:
+        raise ValueError("Invalid certificate delimiter")
+    return '// Trusted TLS roots; see readings/TLS.md.\nstatic const char TLS_ROOT_CA[] = R"FLOVERS_CA(\n' + ca_cert.strip() + '\n)FLOVERS_CA";'
 
 
 def _section_pins(*, pump_enabled: bool) -> str:
@@ -138,24 +157,24 @@ def _section_sensors(
     )
 
 
-def _section_timing(*, pump_enabled: bool) -> str:
+def _section_timing(*, pump_enabled: bool, interval_hours: int) -> str:
     if not pump_enabled:
         return _clean_section(
-            """
+            f"""
             // -------------------- Timing --------------------
             // Backend stores and displays readings hourly.
-            // You can adjust this value manually in the sketch if needed.
+            // Sampling interval selected in Flovers when generating this sketch.
 
-            const unsigned long SEND_INTERVAL_MS = 60UL * 60UL * 1000UL;
+            const unsigned long SEND_INTERVAL_MS = {interval_hours}UL * 60UL * 60UL * 1000UL;
             unsigned long lastSendMs = 0;
             """
         )
 
     return _clean_section(
-        """
+        f"""
         // -------------------- Timing --------------------
         // Backend stores and displays readings hourly.
-        // You can adjust these values manually in the sketch if needed.
+        // Sampling interval selected in Flovers when generating this sketch.
         //
         // SEND_INTERVAL_MS:
         // - sends sensor readings
@@ -167,7 +186,7 @@ def _section_timing(*, pump_enabled: bool) -> str:
         // - does not send readings
         // - does not run automatic watering
 
-        const unsigned long SEND_INTERVAL_MS = 60UL * 60UL * 1000UL;
+        const unsigned long SEND_INTERVAL_MS = {interval_hours}UL * 60UL * 60UL * 1000UL;
         const unsigned long MANUAL_PUMP_CHECK_INTERVAL_MS = 60UL * 1000UL;
 
         unsigned long lastSendMs = 0;
@@ -194,6 +213,7 @@ def _section_pump_config(*, fallback_pump_threshold: int) -> str:
         const int FALLBACK_AUTO_PUMP_THRESHOLD_PCT = {fallback_pump_threshold};
 
         unsigned long lastAutoPumpMs = 0;
+        unsigned long activePumpCooldownMs = AUTO_PUMP_MIN_INTERVAL_MS;
         """
     )
 
@@ -560,10 +580,15 @@ def _section_http_helpers() -> str:
             Serial.print("Sending ");
             Serial.print(label);
             Serial.println(":");
-            Serial.println(json);
+            // Request bodies contain device credentials; keep them out of logs.
 
             WiFiClientSecure client;
-            client.setInsecure();
+            if (time(nullptr) < 1735689600LL)
+            {
+                Serial.println("HTTPS skipped: synchronize the clock before sending credentials");
+                return false;
+            }
+            client.setCACert(TLS_ROOT_CA);
 
             HTTPClient http;
             http.setTimeout(15000);
@@ -730,6 +755,51 @@ def _section_pump_helpers() -> str:
         // PUMP
         // ========================================================
 
+        struct PumpSafetyRecord
+        {
+            int64_t notBefore;
+            char deviceKey[17];
+            unsigned char version;
+        };
+
+        bool readPumpSafety(PumpSafetyRecord& record)
+        {
+            Preferences storage;
+            // Read/write mode also creates the namespace on a fresh device.
+            // Missing storage or a malformed existing record still fails closed.
+            if (!storage.begin("flovers-pump", false))
+                return false;
+            size_t size = storage.isKey("cooldown") ? storage.getBytesLength("cooldown") : 0;
+            bool valid = size == 0 ||
+                (size == sizeof(record) &&
+                 storage.getBytes("cooldown", &record, sizeof(record)) == sizeof(record) &&
+                 record.version == 1 && record.deviceKey[16] == '\\0' && record.notBefore >= 0);
+            storage.end();
+            return valid;
+        }
+
+        bool reservePumpSafety()
+        {
+            int64_t now = static_cast<int64_t>(time(nullptr));
+            if (now < 1735689600LL)
+                return false;
+            PumpSafetyRecord record = {};
+            if (!readPumpSafety(record))
+                return false;
+            int64_t until = now + (activePumpCooldownMs + PUMP_RUN_MS + 999UL) / 1000UL;
+            if (String(record.deviceKey) != String(deviceKey) || record.notBefore < until)
+                record.notBefore = until;
+            std::strncpy(record.deviceKey, deviceKey, sizeof(record.deviceKey) - 1);
+            record.deviceKey[sizeof(record.deviceKey) - 1] = '\\0';
+            record.version = 1;
+            Preferences storage;
+            if (!storage.begin("flovers-pump", false))
+                return false;
+            bool persisted = storage.putBytes("cooldown", &record, sizeof(record)) == sizeof(record);
+            storage.end();
+            return persisted;
+        }
+
         bool runPumpForMs(unsigned long durationMs)
         {
             Serial.print("Running pump for ");
@@ -751,7 +821,9 @@ def _section_pump_helpers() -> str:
 
             json += "\\"secret\\":\\"" + String(secret) + "\\",";
             json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
-            json += "\\"device_id\\":" + String(DEVICE_ID);
+            json += "\\"device_id\\":" + String(DEVICE_ID) + ",";
+            json += "\\"supports_task_retry\\":true,";
+            json += "\\"supports_auto_claim\\":true";
 
             json += "}";
 
@@ -847,6 +919,13 @@ def _section_pump_helpers() -> str:
                 "auto_pump_threshold_pct",
                 FALLBACK_AUTO_PUMP_THRESHOLD_PCT
             );
+            long cooldownMinutes = jsonLongValue(responseBody, "pump_cooldown_minutes", 60);
+            if (cooldownMinutes < 1 || cooldownMinutes > 32767)
+            {
+                result.autoPumpEnabled = false;
+                cooldownMinutes = 60;
+            }
+            activePumpCooldownMs = static_cast<unsigned long>(cooldownMinutes) * 60UL * 1000UL;
 
             bool shouldRunPump = jsonBoolValue(responseBody, "run", false);
 
@@ -880,11 +959,79 @@ def _section_pump_helpers() -> str:
                 return result;
             }
 
-            // Manual scheduled watering intentionally ignores:
-            // - soil moisture
-            // - automatic watering threshold
-            // - automatic watering cooldown
+            // Persist the execution receipt BEFORE pumping. Replayed deliveries
+            // acknowledge the same task without watering again, even after reboot.
+            struct PumpReceipt
+            {
+                long taskId;
+                char deviceKey[17];
+                unsigned char state; // 1: started, 2: succeeded, 3: failed
+            };
+            PumpReceipt receipt = {};
+            Preferences receipts;
+            if (!receipts.begin("flovers-pump", false))
+            {
+                sendPumpComplete(taskId, "manual", false, "Could not open pump receipt storage");
+                return result;
+            }
+
+            size_t storedSize = receipts.isKey("receipt") ? receipts.getBytesLength("receipt") : 0;
+            if (storedSize != 0 &&
+                (storedSize != sizeof(receipt) ||
+                 receipts.getBytes("receipt", &receipt, sizeof(receipt)) != sizeof(receipt)))
+            {
+                receipts.end();
+                sendPumpComplete(taskId, "manual", false, "Could not read pump receipt");
+                return result;
+            }
+            receipt.deviceKey[sizeof(receipt.deviceKey) - 1] = '\\0';
+
+            if (String(receipt.deviceKey) == String(deviceKey) && receipt.taskId >= taskId)
+            {
+                bool succeeded = receipt.taskId == taskId && receipt.state == 2;
+                receipts.end();
+                sendPumpComplete(
+                    taskId, "manual", succeeded,
+                    succeeded ? "" : "Previous pump execution was interrupted or superseded"
+                );
+                // An interrupted run may already have delivered water. Apply
+                // cooldown and skip automatic watering during this cycle too.
+                result.manualPumpRan = true;
+                return result;
+            }
+
+            receipt.taskId = taskId;
+            std::strncpy(receipt.deviceKey, deviceKey, sizeof(receipt.deviceKey) - 1);
+            receipt.deviceKey[sizeof(receipt.deviceKey) - 1] = '\\0';
+            receipt.state = 1;
+            if (receipts.putBytes("receipt", &receipt, sizeof(receipt)) != sizeof(receipt))
+            {
+                receipts.end();
+                sendPumpComplete(taskId, "manual", false, "Could not persist pump receipt");
+                return result;
+            }
+
+            // A manual run may override the cooldown, but must persist a new
+            // safety boundary before delivering water. Reboots retain it.
+            if (!reservePumpSafety())
+            {
+                receipt.state = 3;
+                receipts.putBytes("receipt", &receipt, sizeof(receipt));
+                receipts.end();
+                sendPumpComplete(taskId, "manual", false, "Could not persist watering cooldown");
+                return result;
+            }
             bool success = runPumpForMs(PUMP_RUN_MS);
+            receipt.state = success ? 2 : 3;
+            bool recorded = receipts.putBytes("receipt", &receipt, sizeof(receipt)) == sizeof(receipt);
+            receipts.end();
+
+            if (!recorded)
+            {
+                sendPumpComplete(taskId, "manual", false, "Pump ran but its result could not be persisted");
+                result.manualPumpRan = success;
+                return result;
+            }
 
             sendPumpComplete(
                 taskId,
@@ -899,12 +1046,29 @@ def _section_pump_helpers() -> str:
 
         bool automaticPumpCooldownActive()
         {
-            if (lastAutoPumpMs == 0)
-                return false;
+            int64_t now = static_cast<int64_t>(time(nullptr));
+            if (now < 1735689600LL)
+                return true;
+            PumpSafetyRecord record = {};
+            if (!readPumpSafety(record))
+                return true;
+            if (String(record.deviceKey) == String(deviceKey) && record.notBefore > now)
+                return true;
+            return lastAutoPumpMs != 0 && (millis() - lastAutoPumpMs) < activePumpCooldownMs;
+        }
 
-            unsigned long elapsed = millis() - lastAutoPumpMs;
-
-            return elapsed < AUTO_PUMP_MIN_INTERVAL_MS;
+        long claimAutomaticPump(int moisture)
+        {
+            String json = "{";
+            json += "\\"secret\\":\\"" + String(secret) + "\\",";
+            json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
+            json += "\\"device_id\\":" + String(DEVICE_ID) + ",";
+            json += "\\"moisture\\":" + String(moisture) + "}";
+            String response = "";
+            if (!postJson(pumpAutoClaimUrl, json, response, "automatic watering claim") ||
+                !jsonBoolValue(response, "run", false))
+                return -1;
+            return jsonLongValue(response, "task_id", -1);
         }
 
         void handleAutomaticPump(
@@ -954,6 +1118,17 @@ def _section_pump_helpers() -> str:
             Serial.print("Backend threshold: ");
             Serial.println(pumpCheck.autoPumpThresholdPct);
 
+            long taskId = claimAutomaticPump(moisture);
+            if (taskId <= 0)
+            {
+                Serial.println("Automatic watering was not reserved by backend");
+                return;
+            }
+            if (!reservePumpSafety())
+            {
+                sendPumpComplete(taskId, "automatic", false, "Could not persist watering cooldown");
+                return;
+            }
             bool success = runPumpForMs(PUMP_RUN_MS);
 
             if (success)
@@ -962,7 +1137,7 @@ def _section_pump_helpers() -> str:
             }
 
             sendPumpComplete(
-                -1,
+                taskId,
                 "automatic",
                 success,
                 success ? "" : "Automatic pump run failed"
@@ -1209,7 +1384,12 @@ def generate_arduino_code(
     pump_included: bool = False,
     automatic_pump_launch: bool = False,
     pump_threshold_pct: float | int | None = None,
+    interval_hours: int = 1,
+    tls_ca_cert: str | None = None,
 ) -> str:
+    interval_hours = int(interval_hours)
+    if not 1 <= interval_hours <= 24:
+        raise ValueError("interval_hours must be between 1 and 24")
     sensors = sensors or {}
 
     use_temperature = _bool_flag(sensors.get("temperature", True))
@@ -1223,14 +1403,19 @@ def generate_arduino_code(
     # The actual automatic pump toggle and threshold are fetched from backend during each full cycle.
     fallback_pump_threshold = _safe_int(pump_threshold_pct, fallback=30)
 
+    parsed_base = urlsplit(base_url)
+    if parsed_base.scheme != "https" or not parsed_base.hostname or parsed_base.username or parsed_base.password or parsed_base.query or parsed_base.fragment:
+        raise ValueError("Firmware API URL must be an HTTPS origin or base path without credentials/query/fragment")
     base = base_url.rstrip("/")
     api_url = f"{base}/readings/ingest/"
     pump_next_task_url = f"{base}/readings/pump-next-task/"
     pump_complete_url = f"{base}/readings/pump-complete/"
+    pump_auto_claim_url = f"{base}/readings/pump-auto-claim/"
 
     sections = [
         _section_includes(),
         _section_wifi_config(),
+        _section_tls_config(tls_ca_cert),
         _section_api_config(
             api_url=api_url,
             secret=secret,
@@ -1239,6 +1424,7 @@ def generate_arduino_code(
             pump_enabled=pump_enabled,
             pump_next_task_url=pump_next_task_url,
             pump_complete_url=pump_complete_url,
+            pump_auto_claim_url=pump_auto_claim_url,
         ),
         _section_pins(pump_enabled=pump_enabled),
         _section_calibration(),
@@ -1248,7 +1434,7 @@ def generate_arduino_code(
             use_light=use_light,
             use_moisture=use_moisture,
         ),
-        _section_timing(pump_enabled=pump_enabled),
+        _section_timing(pump_enabled=pump_enabled, interval_hours=interval_hours),
     ]
 
     if pump_enabled:

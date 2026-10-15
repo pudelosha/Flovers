@@ -1,0 +1,51 @@
+# Configuration fragments to adapt to the EXISTING production Compose file.
+# Do not layer this over an existing backend ports list: remove that list.
+# Set the real service/image/certificate configuration and unused subnet first.
+services:
+  web:
+    image: ${BACKEND_IMAGE:?Set a reviewed backend image tag or digest}
+    env_file: ./backend.production.env
+    environment:
+      TRUSTED_PROXY_CIDRS: 172.29.0.2/32
+    # Deliberately no published ports; Traefik reaches container port 8000.
+    expose:
+      - "8000"
+    networks:
+      - default
+      - flovers_proxy
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: flovers_proxy
+      traefik.http.routers.flovers.rule: Host(`api.flovers.app`)
+      traefik.http.routers.flovers.entrypoints: websecure
+      traefik.http.routers.flovers.tls: "true"
+      traefik.http.routers.flovers.service: flovers
+      traefik.http.services.flovers.loadbalancer.server.port: "8000"
+
+  traefik:
+    image: ${TRAEFIK_IMAGE:?Use the pinned image deployed on this VPS}
+    # Merge with existing providers, listeners and certificate configuration.
+    # The example does not provision a certificate resolver.
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.web.forwardedheaders.insecure=false
+      - --entrypoints.websecure.forwardedheaders.insecure=false
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      flovers_proxy:
+        ipv4_address: 172.29.0.2
+
+networks:
+  default: {}
+  flovers_proxy:
+    name: flovers_proxy
+    ipam:
+      config:
+        - subnet: 172.29.0.0/24

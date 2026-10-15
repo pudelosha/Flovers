@@ -2,6 +2,8 @@
   "title": "Contacto",
   "subtitle": "Envíe un mensaje al soporte. Normalmente respondemos en 1–3 días hábiles.",
   "form": {
+    "emailLabel": "Tu correo electrónico",
+    "emailPlaceholder": "tu@example.com",
     "subjectLabel": "Asunto",
     "subjectPlaceholder": "por ejemplo, Problema de inicio de sesión",
     "messageLabel": "Mensaje",
@@ -13,6 +15,8 @@
     "note": "Si el formulario no funciona, use el botón de correo electrónico."
   },
   "toasts": {
+    "enterEmail": "Introduce una dirección de correo válida.",
+    "rateLimited": "Demasiados mensajes. Inténtalo de nuevo más tarde.",
     "enterSubject": "Escribe el asunto.",
     "enterMessage": "Escribe el mensaje.",
     "contactSent": "Mensaje enviado.",

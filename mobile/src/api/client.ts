@@ -12,21 +12,30 @@ import { API_BASE_NORM } from "../config";
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 let inMemoryToken: string | null = null;
+let authSessionId = 0;
 
 export function setAuthToken(token: string | null) {
+  // A login/logout boundary invalidates requests and refreshes from the old session.
+  authSessionId += 1;
   inMemoryToken = token;
+  refreshInFlight?.cancel();
+  refreshInFlight = null;
+}
+
+export function getAuthSessionId() {
+  return authSessionId;
 }
 
 type TokenRefreshConfig = {
   getRefreshToken: () => Promise<string | null>;
-  onAccessTokenRefreshed: (token: string) => Promise<void> | void;
-  onRefreshFailed: () => Promise<void> | void;
+  onAccessTokenRefreshed: (token: string, sessionId: number) => Promise<void> | void;
+  onRefreshFailed: (sessionId: number) => Promise<void> | void;
 };
 
 let tokenRefreshConfig: TokenRefreshConfig | null = null;
-let refreshInFlight: Promise<string | null> | null = null;
+let refreshInFlight: { sessionId: number; promise: Promise<string | null>; cancel: () => void } | null = null;
 
-export function configureTokenRefresh(config: TokenRefreshConfig) {
+export function configureTokenRefresh(config: TokenRefreshConfig | null) {
   tokenRefreshConfig = config;
 }
 
@@ -61,6 +70,10 @@ function isExpectedStatus(status: number) {
 type RequestOpts = {
   auth?: boolean;
   timeoutMs?: number;
+  refreshAuth?: boolean;
+  notifyUnauthorized?: boolean;
+  // Explicit credentials are reserved for bounded teardown after local logout.
+  accessToken?: string;
 };
 
 function isAbortError(e: any) {
@@ -99,24 +112,30 @@ function emitUnauthorized() {
   });
 }
 
-async function performTokenRefresh(timeoutMs: number): Promise<string | null> {
-  if (!tokenRefreshConfig) {
+async function performTokenRefresh(timeoutMs: number, sessionId: number): Promise<string | null> {
+  const config = tokenRefreshConfig;
+  if (!config || sessionId !== authSessionId) {
     return null;
   }
 
-  if (refreshInFlight) {
-    return refreshInFlight;
+  if (refreshInFlight?.sessionId === sessionId) {
+    return refreshInFlight.promise;
   }
 
-  refreshInFlight = (async () => {
-    const refresh = await tokenRefreshConfig!.getRefreshToken();
+  const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+  let cancel!: () => void;
+  const cancelled = new Promise<null>(resolve => {
+    cancel = () => {
+      try { controller?.abort(); } catch {}
+      resolve(null);
+    };
+  });
+  const work = (async () => {
+    const refresh = await config.getRefreshToken();
 
-    if (!refresh) {
+    if (!refresh || sessionId !== authSessionId) {
       return null;
     }
-
-    const controller =
-      typeof AbortController !== "undefined" ? new AbortController() : null;
 
     let timeoutId: any = null;
 
@@ -142,7 +161,9 @@ async function performTokenRefresh(timeoutMs: number): Promise<string | null> {
 
     let res: Response;
     try {
-      res = (await Promise.race([fetchPromise, timeoutPromise])) as Response;
+      const result = await Promise.race([fetchPromise, timeoutPromise, cancelled]);
+      if (!result) return null;
+      res = result;
     } finally {
       if (timeoutId) clearTimeout(timeoutId);
     }
@@ -161,18 +182,20 @@ async function performTokenRefresh(timeoutMs: number): Promise<string | null> {
       return null;
     }
 
+    if (sessionId !== authSessionId) return null;
     inMemoryToken = nextAccess;
-    await tokenRefreshConfig!.onAccessTokenRefreshed(nextAccess);
+    await config.onAccessTokenRefreshed(nextAccess, sessionId);
 
-    return nextAccess;
+    return sessionId === authSessionId ? nextAccess : null;
   })();
+  const promise = Promise.race([work, cancelled]).catch(() => null);
+  const flight = { sessionId, promise, cancel };
+  refreshInFlight = flight;
 
   try {
-    return await refreshInFlight;
-  } catch {
-    return null;
+    return await promise;
   } finally {
-    refreshInFlight = null;
+    if (refreshInFlight === flight) refreshInFlight = null;
   }
 }
 
@@ -181,12 +204,22 @@ async function requestInternal<T>(
   method: HttpMethod = "GET",
   body?: any,
   opts: RequestOpts = { auth: false, timeoutMs: 15000 },
-  hasRetriedAfterRefresh: boolean = false
+  hasRetriedAfterRefresh: boolean = false,
+  sessionId: number = authSessionId
 ): Promise<T> {
+  const assertCurrentSession = () => {
+    if (opts.auth && sessionId !== authSessionId) {
+      throw new ApiError(401, { code: "session_changed" }, "Authentication session changed");
+    }
+  };
+  assertCurrentSession();
   const headers: Record<string, string> = {};
   const url = `${API_BASE_NORM}${path}`;
+  const requestToken = inMemoryToken;
 
-  if (opts.auth && inMemoryToken) {
+  if (opts.accessToken) {
+    headers.Authorization = `Bearer ${opts.accessToken}`;
+  } else if (opts.auth && inMemoryToken) {
     headers.Authorization = `Bearer ${inMemoryToken}`;
   }
 
@@ -249,30 +282,30 @@ async function requestInternal<T>(
   }
 
   const raw = await res.text().catch(() => "");
+  assertCurrentSession();
 
   if (!res.ok) {
     const bodyParsed = isJsonContent(res) ? safeJsonParse(raw) : raw;
 
-    if (res.status === 401 && opts.auth && !hasRetriedAfterRefresh) {
-      const refreshedAccess = await performTokenRefresh(timeoutMs);
+    if (res.status === 401 && opts.auth && opts.refreshAuth !== false && !hasRetriedAfterRefresh) {
+      // Another request may already have refreshed this session's access token.
+      const refreshedAccess = requestToken !== inMemoryToken && inMemoryToken
+        ? inMemoryToken
+        : await performTokenRefresh(timeoutMs, sessionId);
+      assertCurrentSession();
 
       if (refreshedAccess) {
-        return requestInternal<T>(path, method, body, opts, true);
+        return requestInternal<T>(path, method, body, opts, true, sessionId);
       }
+    }
 
+    if (res.status === 401 && opts.auth && opts.notifyUnauthorized !== false) {
+      const config = tokenRefreshConfig;
       try {
-        await tokenRefreshConfig?.onRefreshFailed?.();
+        await config?.onRefreshFailed(sessionId);
       } catch {
       }
-
-      emitUnauthorized();
-    } else if (res.status === 401 && opts.auth) {
-      try {
-        await tokenRefreshConfig?.onRefreshFailed?.();
-      } catch {
-      }
-
-      emitUnauthorized();
+      if (sessionId === authSessionId) emitUnauthorized();
     }
 
     if (__DEV__) {
@@ -318,4 +351,17 @@ export async function request<T>(
   opts: RequestOpts = { auth: false, timeoutMs: 15000 }
 ): Promise<T> {
   return requestInternal<T>(path, method, body, opts, false);
+}
+
+/** Use the logged-out session's snapshot; never refresh or consult a later login. */
+export function requestWithAccessToken<T>(
+  path: string,
+  method: HttpMethod,
+  body: unknown,
+  accessToken: string,
+  timeoutMs: number
+): Promise<T> {
+  return requestInternal<T>(path, method, body, {
+    auth: false, accessToken, timeoutMs, refreshAuth: false, notifyUnauthorized: false,
+  });
 }

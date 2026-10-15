@@ -14,6 +14,7 @@ import {
   resendActivation,
   resetPassword,
   updateStoredAccessToken,
+  updateStoredUser,
 } from "../auth.service";
 
 jest.mock("../../client", () => {
@@ -74,6 +75,56 @@ describe("auth.service", () => {
     await expect(bootstrapToken()).resolves.toBe("token");
     await clearToken();
     await expect(bootstrapToken()).resolves.toBeNull();
+  });
+
+  it("serializes a slow old access write before logout and the next login", async () => {
+    await persistAuth("access-a", "refresh-a", { email: "a@example.com" });
+    const mockedSet = AsyncStorage.setItem as jest.Mock;
+    const normalSet = mockedSet.getMockImplementation()!;
+    let release!: () => void;
+    const gate = new Promise<void>(done => { release = done; });
+    mockedSet.mockImplementation((key, value) => value === "late-access-a" ? gate.then(() => normalSet(key, value)) : normalSet(key, value));
+    try {
+      const oldWrite = updateStoredAccessToken("late-access-a");
+      for (let i = 0; i < 5; i++) await Promise.resolve();
+      const logout = clearAuth();
+      const login = persistAuth("access-b", "refresh-b", { email: "b@example.com" });
+      release();
+      await Promise.all([oldWrite, logout, login]);
+      await expect(bootstrapAuth()).resolves.toEqual({ access: "access-b", refresh: "refresh-b", user: { email: "b@example.com" } });
+    } finally { mockedSet.mockImplementation(normalSet); }
+  });
+
+  it("waits for sibling writes after a storage failure before clearing the session", async () => {
+    const mockedSet = AsyncStorage.setItem as jest.Mock;
+    const normalSet = mockedSet.getMockImplementation()!;
+    const mockedRemove = AsyncStorage.removeItem as jest.Mock;
+    mockedRemove.mockClear();
+    let release!: () => void;
+    const gate = new Promise<void>(done => { release = done; });
+    mockedSet.mockImplementation((key, value) => {
+      if (key === "auth_access_token") return Promise.reject(new Error("Disk failure"));
+      if (key === "auth_refresh_token") return gate.then(() => normalSet(key, value));
+      return normalSet(key, value);
+    });
+    try {
+      const login = persistAuth("access-a", "refresh-a", { email: "a@example.com" });
+      const failed = expect(login).rejects.toThrow("Disk failure");
+      for (let i = 0; i < 6; i++) await Promise.resolve();
+      const logout = clearAuth();
+      for (let i = 0; i < 6; i++) await Promise.resolve();
+      expect(mockedRemove).not.toHaveBeenCalled();
+      release();
+      await failed;
+      await logout;
+      await expect(bootstrapAuth()).resolves.toEqual({ access: null, refresh: null, user: null });
+    } finally { mockedSet.mockImplementation(normalSet); }
+  });
+
+  it("updates the cached email without replacing the stored tokens", async () => {
+    await persistAuth("access", "refresh", { id: "7", email: "old@example.com" });
+    await updateStoredUser({ id: "7", email: "new@example.com" });
+    await expect(bootstrapAuth()).resolves.toEqual({ access: "access", refresh: "refresh", user: { id: "7", email: "new@example.com" } });
   });
 
   it("calls register, activation and password endpoints", async () => {

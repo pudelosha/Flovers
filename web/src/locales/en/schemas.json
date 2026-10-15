@@ -4,6 +4,7 @@
     "copied": "Copied"
   },
   "title": "Device API & wiring",
+  "retrySafety": "Set supports_task_retry to true only if your firmware saves task IDs and results before running the pump and can report a repeated task without watering twice. The generated example includes this protection. Regenerate and reflash existing devices to enable safe retries; older firmware keeps one-shot task delivery.",
   "lead": [
     "This page documents how IoT devices integrate with Flovers.",
     "Devices can send environmental readings to the backend, check whether a manual watering job has been scheduled from the mobile app, and report completed pump runs back to Flovers.",

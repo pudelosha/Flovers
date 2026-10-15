@@ -20,6 +20,7 @@ import type {
   LastWatered,
   LastRepotted,
   PlantDefinition,
+  PlantProfile,
 } from "../types/create-plant.types";
 import { createPlantInstance } from "../../../api/services/plant-instances.service";
 import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage";
@@ -27,7 +28,7 @@ import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage";
 type Action =
   | { type: "SET_QUERY"; query: string }
   | { type: "SET_SELECTED_PLANT"; plant?: SelectedPlant }
-  | { type: "SET_SELECTED_PLANT_DEFINITION"; def?: PlantDefinition }
+  | { type: "SET_SELECTED_PLANT_DEFINITION"; def?: PlantDefinition | PlantProfile }
   | { type: "NEXT" }
   | { type: "PREV" }
   | { type: "GOTO"; step: WizardStep }
@@ -217,7 +218,7 @@ const Ctx = createContext<{
     setPlantQuery: (q: string) => void;
     setSelectedPlant: (p?: SelectedPlant) => void;
 
-    setSelectedPlantDefinition: (def?: PlantDefinition) => void;
+    setSelectedPlantDefinition: (def?: PlantDefinition | PlantProfile) => void;
 
     goNext: () => void;
     goPrev: () => void;
@@ -264,43 +265,69 @@ function genId() {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
+// An identifier for a logical creation, retained when a response is lost.
+function newCreationKey() {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (character) => {
+    const random = Math.floor(Math.random() * 16);
+    return (character === "x" ? random : (random & 3) | 8).toString(16);
+  });
+}
+
 export function CreatePlantProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initial);
 
   const stateRef = useRef(state);
+  const createdPlantIdRef = useRef<string | undefined>(undefined);
+  const savedPhotoUriRef = useRef<string | undefined>(undefined);
+  const creationInFlightRef = useRef<Promise<string> | null>(null);
+  const creationKeyRef = useRef<string | null>(null);
+  if (!creationKeyRef.current) creationKeyRef.current = newCreationKey();
   useEffect(() => {
     stateRef.current = state;
   }, [state]);
 
   const createPlant = useCallback(async (): Promise<string> => {
-    const s = stateRef.current;
+    if (creationInFlightRef.current) return creationInFlightRef.current;
 
-    if (!s.selectedLocationId) {
-      throw new Error("Location is required to create a plant.");
-    }
+    const attempt = (async () => {
+      const s = stateRef.current;
+      let newId = createdPlantIdRef.current ?? s.createdPlantId;
 
-    const created = await createPlantInstance(s, { auth: true });
-    const newId = String(created.id);
+      if (!newId) {
+        if (!s.selectedLocationId) {
+          throw new Error("Location is required to create a plant.");
+        }
+        const created = await createPlantInstance(s, {
+          auth: true,
+          creationKey: creationKeyRef.current!,
+        });
+        newId = String(created.id);
+        createdPlantIdRef.current = newId;
+        stateRef.current = { ...stateRef.current, createdPlantId: newId };
+        dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
+      }
 
-    if (s.photoUri) {
-      try {
+      if (s.photoUri && s.photoUri !== savedPhotoUriRef.current) {
         const finalUri = await promoteTempPhotoToPlant({
           tempPhotoUri: s.photoUri,
           plantId: newId,
         });
-
+        stateRef.current = { ...stateRef.current, createdPlantId: newId, photoUri: finalUri };
+        savedPhotoUriRef.current = finalUri;
         dispatch({
           type: "PATCH",
           patch: { createdPlantId: newId, photoUri: finalUri },
         });
-      } catch {
-        dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
       }
-    } else {
-      dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
-    }
 
-    return newId;
+      return newId;
+    })();
+    creationInFlightRef.current = attempt;
+    try {
+      return await attempt;
+    } finally {
+      creationInFlightRef.current = null;
+    }
   }, []);
 
   const actions = useMemo(
@@ -314,13 +341,19 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
         dispatch({ type: "SET_SELECTED_PLANT", plant: p });
       },
 
-      setSelectedPlantDefinition: (def?: PlantDefinition) =>
+      setSelectedPlantDefinition: (def?: PlantDefinition | PlantProfile) =>
         dispatch({ type: "SET_SELECTED_PLANT_DEFINITION", def }),
 
       goNext: () => dispatch({ type: "NEXT" }),
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),
-      reset: () => dispatch({ type: "RESET" }),
+      reset: () => {
+        creationKeyRef.current = newCreationKey();
+        createdPlantIdRef.current = undefined;
+        savedPhotoUriRef.current = undefined;
+        stateRef.current = { ...initial };
+        dispatch({ type: "RESET" });
+      },
       patch: (patch: Partial<WizardState>) => dispatch({ type: "PATCH", patch }),
 
       addLocation: (name: string, category: LocationCategory, idOverride?: string) =>

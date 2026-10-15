@@ -97,13 +97,14 @@ describe("reminders.service and serializer", () => {
 
     expect(ui).toEqual([
       expect.objectContaining({
-        id: "21",
+        id: "reminder-8",
         reminderId: "8",
         plant: "Window fern",
         plantId: "4",
         location: "Kitchen",
         type: "fertilising",
         due: "Tomorrow",
+        dueDateISO: "2026-05-14",
         intervalValue: 14,
         intervalUnit: "days",
       }),

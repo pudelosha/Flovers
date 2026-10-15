@@ -2,6 +2,8 @@
   "title": "संपर्क",
   "subtitle": "सपोर्ट को संदेश भेजें। हम आमतौर पर 1–3 कार्यदिवसों में उत्तर देते हैं।",
   "form": {
+    "emailLabel": "आपका ईमेल",
+    "emailPlaceholder": "you@example.com",
     "subjectLabel": "विषय",
     "subjectPlaceholder": "उदाहरण: लॉगिन समस्या",
     "messageLabel": "संदेश",
@@ -13,6 +15,8 @@
     "note": "यदि फॉर्म काम नहीं करता है, तो ईमेल बटन का उपयोग करें।"
   },
   "toasts": {
+    "enterEmail": "कृपया एक मान्य ईमेल पता दर्ज करें।",
+    "rateLimited": "बहुत अधिक संदेश भेजे गए हैं। कृपया बाद में प्रयास करें।",
     "enterSubject": "विषय दर्ज करें।",
     "enterMessage": "संदेश दर्ज करें।",
     "contactSent": "संदेश भेजा गया।",

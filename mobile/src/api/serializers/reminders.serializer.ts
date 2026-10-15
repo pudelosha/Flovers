@@ -40,6 +40,7 @@ export type UIReminder = {
   location?: string;
   due: string;
   dueDate: Date;
+  dueDateISO: string;
   intervalValue?: number;
   intervalUnit?: "days" | "months";
   isActive: boolean;
@@ -80,6 +81,7 @@ export function buildUIReminders(
       location: plant?.location?.name,
       due: label,
       dueDate: date,
+      dueDateISO: dueISO,
       intervalValue: r.interval_value,
       intervalUnit: r.interval_unit,
       isActive: r.is_active,

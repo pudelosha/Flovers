@@ -102,7 +102,7 @@ export type WizardState = {
   selectedPlant?: SelectedPlant;
 
   // full plant definition/profile stored from Step02
-  selectedPlantDefinition?: PlantDefinition;
+  selectedPlantDefinition?: PlantDefinition | PlantProfile;
 
   // Step 3
   locations: UserLocation[];
@@ -177,9 +177,22 @@ export type PlantProfile = {
   id?: string;          // optional; useful when fetched by id
   name?: string;        // optional; useful when fetched by name
   latin?: string;       // optional
-  image: string;        // hero image URL
+  image: string | null; // hero image URL
   description: string;  // long paragraph
   traits: PlantTrait[]; // list rendered in Step 2
+  sun?: SunRequirement;
+  water?: WaterRequirement;
+  difficulty?: DifficultyLevel;
+  recommended_pot_materials?: string[];
+  recommended_soil_mixes?: string[];
+  water_required?: boolean;
+  water_interval_days?: number | null;
+  moisture_required?: boolean;
+  moisture_interval_days?: number | null;
+  fertilize_required?: boolean;
+  fertilize_interval_days?: number | null;
+  repot_required?: boolean;
+  repot_interval_months?: number | null;
 };
 
 export type PlantDefinition = {
@@ -207,13 +220,13 @@ export type PlantDefinition = {
 
 // ---- Plant Instance API payload/response ----
 export type ApiPlantInstanceCreatePayload = {
+  creation_key?: string;
   plant_definition_id: number | null;
   location_id: number;
 
   display_name: string;
   notes: string;
   purchase_date: string | null; // "YYYY-MM-DD" or null
-  photo_uri: string;
 
   light_level: LightLevel;
   orientation: Orientation;

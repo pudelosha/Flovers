@@ -25,6 +25,7 @@ import Step08_NameAndNotes from "../steps/Step08_NameAndNotes";
 import Step09_Creating from "../steps/Step09_Creating";
 
 import PreviousNextBar from "../components/PreviousNextBar";
+import ResetWizardOnFocus from "../components/ResetWizardOnFocus";
 import AddLocationModal from "../components/modals/AddLocationModal";
 import MeasureExposureModal from "../components/modals/MeasureExposureModal";
 import PlantScannerModal from "../components/modals/PlantScannerModal";
@@ -43,19 +44,6 @@ const STEPS_ORDER = [
 ] as const;
 
 type StepKey = typeof STEPS_ORDER[number];
-
-function ResetOnFocus() {
-  const { actions } = useCreatePlantWizard();
-
-  useFocusEffect(
-    React.useCallback(() => {
-      actions.reset();
-      return () => {};
-    }, [actions])
-  );
-
-  return null;
-}
 
 function WizardBody() {
   const { t } = useTranslation();
@@ -251,7 +239,7 @@ export default function CreatePlantWizardScreen() {
 
   return (
     <CreatePlantProvider>
-      <ResetOnFocus />
+      <ResetWizardOnFocus />
       <View style={{ flex: 1 }}>
         <GlassHeader
           title={t("createPlant.header.title")}

@@ -2,6 +2,8 @@
   "title": "联系",
   "subtitle": "向支持团队发送消息。我们通常在 1–3 个工作日内回复。",
   "form": {
+    "emailLabel": "您的电子邮箱",
+    "emailPlaceholder": "you@example.com",
     "subjectLabel": "主题",
     "subjectPlaceholder": "例如 登录问题",
     "messageLabel": "消息",
@@ -13,6 +15,8 @@
     "note": "如果表单无法使用，请使用电子邮件按钮。"
   },
   "toasts": {
+    "enterEmail": "请输入有效的电子邮箱地址。",
+    "rateLimited": "消息发送过多，请稍后重试。",
     "enterSubject": "请输入主题。",
     "enterMessage": "请输入消息。",
     "contactSent": "消息已发送。",

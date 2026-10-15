@@ -41,6 +41,11 @@ export type ApiPlantProfile = {
   image_thumb?: string | null;
   description?: string;
   traits?: any;
+  sun?: SunRequirement;
+  water?: WaterRequirement;
+  difficulty?: DifficultyLevel;
+  recommended_pot_materials?: string[];
+  recommended_soil_mixes?: string[];
 
   // AUTO TASK FLAGS
   water_required?: boolean;
@@ -82,6 +87,11 @@ export function serializePlantProfile(p: ApiPlantProfile): PlantProfile {
     image: p.image ?? null,
     description: p.description ?? "",
     traits,
+    sun: p.sun,
+    water: p.water,
+    difficulty: p.difficulty,
+    recommended_pot_materials: p.recommended_pot_materials ?? [],
+    recommended_soil_mixes: p.recommended_soil_mixes ?? [],
 
     // PASS FLAGS THROUGH
     water_required: p.water_required,

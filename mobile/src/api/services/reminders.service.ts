@@ -21,6 +21,15 @@ export type ApiReminderTask = {
   created_at: string;
   updated_at: string;
   note?: string | null;
+  completed_event?: {
+    plant_id: number;
+    type: ApiReminder["type"];
+    plant_name: string;
+    location_name: string;
+    interval_value: number;
+    interval_unit: "days" | "months";
+    start_date: string;
+  } | null;
 };
 
 export async function listReminders(

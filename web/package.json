@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:github": "vite build --mode github",
     "lint": "eslint .",
+    "test": "node --test tests/*.test.js",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo } from "react";
-import { Image, ImageBackground, StyleSheet, View } from "react-native";
+import { AppState, Image, ImageBackground, StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../providers/useAuth";
-import { navigationRef } from "./navigationRef";
+import { navigationRef, flushPendingNavigation } from "./navigationRef";
 import { useSettings } from "../providers/SettingsProvider";
 import { resolveBackground } from "../settings/backgrounds";
 
@@ -136,12 +136,28 @@ export default function RootNavigator() {
 
   useEffect(() => {
     if (loading) return;
-
-    if (token) {
-      startPushNotifications().catch(() => {});
-    } else {
+    if (!token) {
       stopPushNotifications();
+      return;
     }
+    let cancelled = false;
+    let retryTimer: ReturnType<typeof setTimeout> | undefined;
+    const start = () => {
+      if (retryTimer) clearTimeout(retryTimer);
+      startPushNotifications().catch(() => {
+        if (!cancelled) retryTimer = setTimeout(start, 30000);
+      });
+    };
+    start();
+    const subscription = AppState.addEventListener("change", state => {
+      if (state === "active") start();
+    });
+    return () => {
+      cancelled = true;
+      if (retryTimer) clearTimeout(retryTimer);
+      subscription.remove();
+      stopPushNotifications();
+    };
   }, [loading, token]);
 
   if (loading) {
@@ -157,7 +173,7 @@ export default function RootNavigator() {
   }
 
   return (
-    <NavigationContainer linking={linking} ref={navigationRef}>
+    <NavigationContainer linking={linking} ref={navigationRef} onReady={flushPendingNavigation}>
       <ImageBackground source={bgSource} style={{ flex: 1 }} resizeMode="cover">
         {token ? <AppNavigator /> : <AuthNavigator />}
 

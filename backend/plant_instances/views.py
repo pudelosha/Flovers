@@ -63,8 +63,9 @@ class PlantInstanceListCreateView(ListCreateAPIView):
         ser = self.get_serializer(data=request.data, context={"request": request})
         ser.is_valid(raise_exception=True)
         obj = ser.save()
-        out = PlantInstanceSerializer(obj, context={"request": request}).data
-        return Response(out, status=status.HTTP_201_CREATED)
+        out = getattr(ser, "creation_response", None) or PlantInstanceSerializer(obj, context={"request": request}).data
+        code = status.HTTP_200_OK if getattr(ser, "creation_replayed", False) else status.HTTP_201_CREATED
+        return Response(out, status=code)
 
 
 class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):

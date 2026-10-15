@@ -50,7 +50,7 @@ def test_next_due_from_anchor_for_days_future_today_and_past():
     assert reminder._next_due_from_anchor(today=today) == today + timedelta(days=2)
 
     reminder.start_date = today
-    assert reminder._next_due_from_anchor(today=today) == today + timedelta(days=7)
+    assert reminder._next_due_from_anchor(today=today) == today
 
     reminder.start_date = today - timedelta(days=10)
     assert reminder._next_due_from_anchor(today=today) == today + timedelta(days=4)

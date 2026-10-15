@@ -12,6 +12,7 @@ from .views import (
     readings_export_email,
     pump_next_task,
     pump_complete,
+    pump_auto_claim,
 )
 from .views_open import open_readings
 
@@ -30,6 +31,7 @@ urlpatterns = [
     path("export-email/", readings_export_email, name="readings-export-email"),
     path("pump-next-task/", pump_next_task, name="pump-next-task"),
     path("pump-complete/", pump_complete, name="pump-complete"),
+    path("pump-auto-claim/", pump_auto_claim, name="pump-auto-claim"),
 
     # App open / deep-link fallbacks
     path("open/readings/", open_readings, name="open-readings"),

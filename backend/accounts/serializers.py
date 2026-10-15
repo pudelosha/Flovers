@@ -1,7 +1,13 @@
 from django.contrib.auth import get_user_model, password_validation
+from django.conf import settings
 from django.core.validators import EmailValidator
+from django.db import IntegrityError, transaction
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
+from rest_framework.exceptions import AuthenticationFailed
+from rest_framework_simplejwt.serializers import TokenRefreshSerializer
+from rest_framework_simplejwt.settings import api_settings
+from rest_framework_simplejwt.utils import get_md5_hash_password
 
 from profiles.models import ProfileSettings
 
@@ -16,6 +22,7 @@ class RegisterSerializer(serializers.Serializer):
     lang = serializers.CharField(required=False, allow_blank=True, max_length=8)
 
     def validate_email(self, value):
+        value = User.objects.normalize_email(value)
         if User.objects.filter(email__iexact=value).exists():
             raise serializers.ValidationError(_("Email is already taken."))
         return value
@@ -26,7 +33,7 @@ class RegisterSerializer(serializers.Serializer):
             return "en"
         if "-" in value:
             value = value.split("-", 1)[0]
-        allowed = {"en", "pl", "de", "fr", "es", "it", "pt", "zh", "hi", "ar"}
+        allowed = set(settings.SUPPORTED_LANGS)
         return value if value in allowed else "en"
 
     def validate_password(self, value):
@@ -36,20 +43,39 @@ class RegisterSerializer(serializers.Serializer):
     def create(self, validated_data):
         lang = validated_data.pop("lang", "en") or "en"
 
-        user = User.objects.create_user(
-            email=validated_data["email"],
-            password=validated_data["password"],
-            first_name=validated_data.get("first_name", ""),
-            last_name=validated_data.get("last_name", ""),
-            is_active=False,
-        )
-
-        ProfileSettings.objects.get_or_create(
-            user=user,
-            defaults={"language": lang},
-        )
+        try:
+            with transaction.atomic():
+                user = User.objects.create_user(
+                    email=validated_data["email"],
+                    password=validated_data["password"],
+                    first_name=validated_data.get("first_name", ""),
+                    last_name=validated_data.get("last_name", ""),
+                    is_active=False,
+                )
+                ProfileSettings.objects.update_or_create(user=user, defaults={"language": lang})
+        except IntegrityError:
+            if User.objects.filter(email__iexact=validated_data["email"]).exists():
+                raise serializers.ValidationError({"email": _("Email is already taken.")})
+            raise
 
         return user
+
+
+class PasswordAwareTokenRefreshSerializer(TokenRefreshSerializer):
+    """Apply the same password-revocation check to refresh and access tokens."""
+
+    def validate(self, attrs):
+        refresh = self.token_class(attrs["refresh"])
+        user_id = refresh.get(api_settings.USER_ID_CLAIM)
+        try:
+            user = User.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+        except (User.DoesNotExist, TypeError, ValueError):
+            raise AuthenticationFailed("Invalid refresh token.", code="token_not_valid")
+        if not user.is_active:
+            raise AuthenticationFailed("Account is inactive.", code="user_inactive")
+        if refresh.get(api_settings.REVOKE_TOKEN_CLAIM) != get_md5_hash_password(user.password):
+            raise AuthenticationFailed("Password has changed. Please log in again.", code="password_changed")
+        return super().validate(attrs)
 
 
 class LoginSerializer(serializers.Serializer):
@@ -62,7 +88,7 @@ class LoginSerializer(serializers.Serializer):
 
         try:
             user = User.objects.get(email__iexact=email)
-        except User.DoesNotExist:
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
             raise serializers.ValidationError({"message": _("Invalid credentials.")})
 
         if not user.check_password(password):

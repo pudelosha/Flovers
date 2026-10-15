@@ -4,6 +4,7 @@ import logging
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.db import IntegrityError, transaction
 from django.utils.encoding import force_str
 from django.utils.http import urlsafe_base64_decode
 
@@ -11,6 +12,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import (
@@ -67,7 +69,10 @@ class RegisterView(APIView):
         if not ser.is_valid():
             return fail("Registration failed.", ser.errors)
 
-        user = ser.save()
+        try:
+            user = ser.save()
+        except ValidationError as exc:
+            return fail("Registration failed.", exc.detail)
         lang = _request_lang(request)
 
         try:
@@ -147,7 +152,7 @@ class ResendActivationView(APIView):
 
         try:
             user = User.objects.get(email__iexact=email)
-        except User.DoesNotExist:
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
             return ok("If the account exists and is not activated, an email has been sent.")
 
         if user.is_active:
@@ -175,7 +180,7 @@ class ForgotPasswordView(APIView):
 
         try:
             user = User.objects.get(email__iexact=email)
-        except User.DoesNotExist:
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
             return ok("If an account exists for this email, a reset link has been sent.")
 
         if not user.is_active:
@@ -244,5 +249,11 @@ class ChangeEmailView(APIView):
         user = request.user
         new_email = ser.validated_data["new_email"]
         user.email = new_email
-        user.save(update_fields=["email"])
+        try:
+            with transaction.atomic():
+                user.save(update_fields=["email"])
+        except IntegrityError:
+            if User.objects.filter(email__iexact=new_email).exclude(pk=user.pk).exists():
+                return fail("This email is already in use.", {"new_email": ["This email is already in use."]})
+            raise
         return ok("Email updated successfully.", {"email": user.email})

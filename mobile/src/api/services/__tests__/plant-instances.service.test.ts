@@ -44,6 +44,7 @@ describe("plant-instances.service", () => {
       careRequired: true,
       lastWatered: "yesterday",
       lastRepotted: "one-month-ago",
+      waterIntervalDays: 12,
       moistureIntervalDays: 3,
       fertilizeIntervalDays: undefined,
       careIntervalDays: 14,
@@ -54,12 +55,13 @@ describe("plant-instances.service", () => {
       purchaseDateISO: "2026-05-12",
     };
 
-    await createPlantInstance(state, { auth: false });
+    await createPlantInstance(state, { auth: false, creationKey: "70d3a509-5f9b-4a31-8fa1-342eabc5dc98" });
 
     expect(mockedRequest).toHaveBeenCalledWith(
       "/plant-instances/",
       "POST",
       expect.objectContaining({
+        creation_key: "70d3a509-5f9b-4a31-8fa1-342eabc5dc98",
         location_id: 4,
         plant_definition_id: 12,
         display_name: "Fern by the window",
@@ -72,6 +74,7 @@ describe("plant-instances.service", () => {
         water_task_enabled: true,
         moisture_required: true,
         care_required: true,
+        water_interval_days: 12,
         moisture_interval_days: 3,
         care_interval_days: 14,
         repot_interval_months: 12,
@@ -97,6 +100,7 @@ describe("plant-instances.service", () => {
         pot_material: undefined,
         soil_mix: "peat-based",
         moisture_required: true,
+        water_interval_days: 9,
         fertilize_interval_days: null,
       })
     ).toEqual({
@@ -111,6 +115,7 @@ describe("plant-instances.service", () => {
       pot_material: "",
       soil_mix: "peat-based",
       moisture_required: true,
+      water_interval_days: 9,
       fertilize_interval_days: null,
     });
   });

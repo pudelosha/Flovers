@@ -191,7 +191,7 @@ const LinkText = ({
 
 export default function ResetPasswordScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ResetPassword">>();
-  const { resetPassword } = useAuth() as any;
+  const { resetPassword, token: sessionToken } = useAuth();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -229,7 +229,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
   const pwdRef = useRef<RNTextInput | null>(null);
   const pwd2Ref = useRef<RNTextInput | null>(null);
 
-  const passwordValid = pwd.length >= 6;
+  const passwordValid = pwd.length >= 8;
   const passwordsMatch = pwd && pwd === pwd2;
   const formValid = passwordValid && passwordsMatch && !!derived.token && !!derived.uid;
 
@@ -252,14 +252,14 @@ export default function ResetPasswordScreen({ navigation }: any) {
   }, [currentLanguage]);
 
   async function onSubmit() {
-    if (!formValid) {
+    if (!formValid || !derived.token || !derived.uid) {
       let msg = getTranslation("resetPassword.errors.generic", "Please fix the errors below");
       if (!derived.token || !derived.uid)
         msg = getTranslation("resetPassword.errors.invalidLink", "Invalid or expired reset link");
       else if (!passwordValid)
         msg = getTranslation(
           "resetPassword.errors.passwordTooShort",
-          "Password must be at least 6 characters"
+          "Password must be at least 8 characters"
         );
       else if (!passwordsMatch)
         msg = getTranslation(
@@ -283,7 +283,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
         msg: getTranslation("resetPassword.success.changed", "Password reset successfully"),
         variant: "success",
       });
-      navigation.navigate("Login");
+      navigation.navigate(sessionToken ? "Home" : "Login");
     } catch (e: any) {
       const msg =
         e instanceof ApiError
@@ -359,8 +359,8 @@ export default function ResetPasswordScreen({ navigation }: any) {
         </Button>
 
         <LinkText
-          onPress={() => navigation.navigate("Login")}
-          text={getTranslation("resetPassword.backToLogin", "Back to Login")}
+          onPress={() => navigation.navigate(sessionToken ? "Home" : "Login")}
+          text={sessionToken ? getTranslation("navigation.tabs.Home", "Home") : getTranslation("resetPassword.backToLogin", "Back to Login")}
           style={s.linkTight}
         />
 

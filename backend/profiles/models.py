@@ -9,6 +9,7 @@ LANG_CHOICES = [
     ("en", "English"), ("pl", "Polski"), ("de", "Deutsch"), ("fr", "Français"),
     ("es", "Español"), ("it", "Italiano"), ("pt", "Português"), ("zh", "中文"),
     ("hi", "हिन्दी"), ("ar", "العربية"),
+    ("ja", "日本語"), ("ko", "한국어"),
 ]
 
 TEMP_CHOICES = [("C", "Celsius"), ("F", "Fahrenheit"), ("K", "Kelvin")]
@@ -79,6 +80,12 @@ class ProfileNotifications(TimeStampedModel):
 
 
 class NotificationDeliveryLog(models.Model):
+    STATUS_PENDING = "pending"
+    STATUS_SENDING = "sending"
+    STATUS_SENT = "sent"
+    STATUS_SKIPPED = "skipped"
+    STATUS_CHOICES = [(STATUS_PENDING, "Pending"), (STATUS_SENDING, "Sending"),
+                      (STATUS_SENT, "Sent"), (STATUS_SKIPPED, "Skipped")]
     CHANNEL_EMAIL = "email"
     CHANNEL_PUSH = "push"
 
@@ -100,6 +107,15 @@ class NotificationDeliveryLog(models.Model):
     kind = models.CharField(max_length=32, choices=KIND_CHOICES, default=KIND_DUE_TODAY)
     local_date = models.DateField()
     created_at = models.DateTimeField(default=timezone.now, editable=False)
+    # Existing delivery records represent successful sends. New outbox work
+    # explicitly starts pending; retaining this default also preserves imports.
+    status = models.CharField(max_length=12, choices=STATUS_CHOICES, default=STATUS_SENT)
+    attempts = models.PositiveIntegerField(default=0)
+    next_attempt_at = models.DateTimeField(default=timezone.now)
+    lease_expires_at = models.DateTimeField(null=True, blank=True)
+    claim_token = models.CharField(max_length=32, blank=True, default="")
+    sent_at = models.DateTimeField(null=True, blank=True)
+    last_error = models.CharField(max_length=1000, blank=True, default="")
 
     class Meta:
         constraints = [
@@ -109,6 +125,7 @@ class NotificationDeliveryLog(models.Model):
             ),
         ]
         indexes = [
+            models.Index(fields=["status", "next_attempt_at"], name="notification_retry_idx"),
             models.Index(fields=["local_date", "channel"]),
             models.Index(fields=["user", "local_date"]),
             models.Index(fields=["user", "channel", "kind", "local_date"]),
@@ -155,6 +172,8 @@ class SupportMessage(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name="support_messages",
+        null=True,
+        blank=True,
     )
 
     kind = models.CharField(max_length=16, choices=KIND_CHOICES)

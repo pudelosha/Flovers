@@ -1,31 +1,40 @@
 from io import BytesIO
 import math
 import secrets
+import logging
 from datetime import date, datetime, time, timedelta
 
 from django.conf import settings
 from django.http import HttpResponse, Http404
 from django.shortcuts import get_object_or_404
-from django.db import IntegrityError, transaction
+from django.db import DatabaseError, transaction
+from django.db.models import Q
 from django.utils import timezone
 
 from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import api_view, permission_classes, throttle_classes, action
 from rest_framework.response import Response
 from rest_framework.throttling import AnonRateThrottle
+from rest_framework.exceptions import APIException
 
 from core.emailing import send_templated_email
+from core.spreadsheets import append_safe_row
 
 from .models import ReadingDevice, Reading, AccountSecret, PumpTask
 from .serializers import (
     ReadingDeviceSerializer,
     ReadingDeviceAutoPumpSerializer,
+    ReadingIngestSerializer,
     ReadingSerializer,
     ReadingsExportEmailSerializer,
     PumpTaskSerializer,
 )
+from .device_auth import resolve_device
 from .utils import parse_ts_or_now
-from .throttles import IngestPerDeviceThrottle, FeedPerDeviceThrottle
+from .throttles import (
+    IngestPerDeviceThrottle, FeedPerDeviceThrottle,
+    PumpPollPerDeviceThrottle, PumpCompletePerDeviceThrottle,
+)
 from .codegen import generate_arduino_code
 from .emails import send_device_code_email
 from .notifications import (
@@ -37,6 +46,8 @@ from .notifications import (
 # ---------- helpers ----------
 
 PUMP_TASK_TTL_HOURS = 2
+PUMP_MAX_RUN_SECONDS = 30
+logger = logging.getLogger(__name__)
 
 
 def _get_or_create_secret(user) -> AccountSecret:
@@ -105,44 +116,11 @@ def _serialize_pump_task_for_app(task):
 
 
 def _resolve_device_from_secret_and_key(request):
-    device_id = request.data.get("device_id")
-    device_key = request.data.get("device_key")
-    secret_str = request.data.get("secret")
-
-    if not (device_key and secret_str):
-        return None, Response(
-            {"detail": "device_key and secret are required"},
-            status=status.HTTP_400_BAD_REQUEST,
-        )
-
-    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
-    if not acct:
-        return None, Response(
-            {"detail": "invalid credentials"},
-            status=status.HTTP_403_FORBIDDEN,
-        )
-
-    if device_id:
-        device = get_object_or_404(
-            ReadingDevice,
-            id=device_id,
-            device_key=device_key,
-            user=acct.user,
-        )
-    else:
-        device = get_object_or_404(
-            ReadingDevice,
-            device_key=device_key,
-            user=acct.user,
-        )
-
-    if not device.is_active:
-        return None, Response(
-            {"detail": "device disabled"},
-            status=status.HTTP_403_FORBIDDEN,
-        )
-
-    return device, None
+    try:
+        return resolve_device(request), None
+    except APIException as exc:
+        detail = exc.detail if isinstance(exc.detail, dict) else {"detail": exc.detail}
+        return None, Response(detail, status=exc.status_code)
 
 
 def _autosize_worksheet_columns(ws):
@@ -222,13 +200,13 @@ def _build_readings_export_workbook(readings, pump_tasks, sort_key: str, sort_di
         "Soil Moisture",
         "Created At",
     ]
-    ws_readings.append(readings_headers)
+    append_safe_row(ws_readings, readings_headers)
 
     for cell in ws_readings[1]:
         cell.font = Font(bold=True)
 
     for row in reading_rows:
-        ws_readings.append([
+        append_safe_row(ws_readings, [
             row["plant_name"],
             row["location"],
             row["device_name"],
@@ -303,13 +281,13 @@ def _build_readings_export_workbook(readings, pump_tasks, sort_key: str, sort_di
         "Threshold At Request",
         "Error Message",
     ]
-    ws_tasks.append(tasks_headers)
+    append_safe_row(ws_tasks, tasks_headers)
 
     for cell in ws_tasks[1]:
         cell.font = Font(bold=True)
 
     for row in task_rows:
-        ws_tasks.append([
+        append_safe_row(ws_tasks, [
             row["plant_name"],
             row["location"],
             row["device_name"],
@@ -367,7 +345,21 @@ def _device_can_run_pump(device: ReadingDevice):
     return True, ""
 
 
-def _auto_pump_config_for_device(device: ReadingDevice) -> dict:
+def _pump_cooldown_until(device):
+    candidates = [device.pump_safety_until]
+    if device.last_pump_run_at is not None:
+        candidates.append(device.last_pump_run_at + timedelta(minutes=max(1, device.pump_cooldown_minutes)))
+    return max((value for value in candidates if value is not None), default=None)
+
+
+def _reserve_pump_cooldown(device, now):
+    until = now + timedelta(minutes=max(1, device.pump_cooldown_minutes), seconds=PUMP_MAX_RUN_SECONDS)
+    current = _pump_cooldown_until(device)
+    device.pump_safety_until = max(current, until) if current else until
+    device.save(update_fields=["pump_safety_until", "updated_at"])
+
+
+def _auto_pump_config_for_device(device: ReadingDevice, *, supports_auto_claim=False) -> dict:
     sensors = device.sensors or {}
     moisture_sensor_enabled = bool(sensors.get("moisture", True))
 
@@ -379,9 +371,14 @@ def _auto_pump_config_for_device(device: ReadingDevice) -> dict:
             and moisture_sensor_enabled
             and device.pump_threshold_pct is not None
             and device.is_active
+            and supports_auto_claim
+            and (_pump_cooldown_until(device) is None or _pump_cooldown_until(device) <= timezone.now())
         ),
         "auto_pump_threshold_pct": device.pump_threshold_pct,
         "moisture_sensor_enabled": moisture_sensor_enabled,
+        "auto_pump_requires_claim": True,
+        "pump_cooldown_minutes": max(1, device.pump_cooldown_minutes),
+        "pump_cooldown_until": _pump_cooldown_until(device),
     }
 
 
@@ -489,7 +486,7 @@ def _aware_end_of_day(day: date) -> timezone.datetime:
 def _refresh_device_latest(device: ReadingDevice) -> None:
     latest = device.readings.order_by("-timestamp").first()
     if latest:
-        device.last_read_at = latest.timestamp
+        device.last_read_at = latest.observed_at or latest.timestamp
         device.latest_snapshot = {
             "temperature": latest.temperature,
             "humidity": latest.humidity,
@@ -510,13 +507,26 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return ReadingDevice.objects.filter(user=self.request.user)
+        return ReadingDevice.objects.filter(
+            user=self.request.user, plant__user=self.request.user,
+        )
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
+    @transaction.atomic
+    def update(self, request, *args, **kwargs):
+        self._lock_for_update = True
+        return super().update(request, *args, **kwargs)
+
+    def filter_queryset(self, queryset):
+        queryset = super().filter_queryset(queryset)
+        return queryset.select_for_update() if getattr(self, "_lock_for_update", False) else queryset
+
     @action(detail=True, methods=["patch"], url_path="auto-pump")
+    @transaction.atomic
     def auto_pump(self, request, pk=None):
+        self._lock_for_update = True
         device = self.get_object()
 
         serializer = ReadingDeviceAutoPumpSerializer(data=request.data)
@@ -583,6 +593,9 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
 
         with transaction.atomic():
             device = ReadingDevice.objects.select_for_update().get(pk=device.pk, user=request.user)
+            ok, reason = _device_can_run_pump(device)
+            if not ok:
+                return Response({"detail": reason}, status=status.HTTP_400_BAD_REQUEST)
             existing = _get_open_manual_pump_task(device)
 
             if existing:
@@ -644,6 +657,8 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             pump_included=device.pump_included,
             automatic_pump_launch=device.automatic_pump_launch,
             pump_threshold_pct=device.pump_threshold_pct,
+            interval_hours=device.interval_hours,
+            tls_ca_cert=getattr(settings, "IOT_TLS_CA_CERT", "") or None,
         )
         return HttpResponse(code, content_type="text/plain; charset=utf-8")
 
@@ -662,6 +677,8 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             pump_included=device.pump_included,
             automatic_pump_launch=device.automatic_pump_launch,
             pump_threshold_pct=device.pump_threshold_pct,
+            interval_hours=device.interval_hours,
+            tls_ca_cert=getattr(settings, "IOT_TLS_CA_CERT", "") or None,
         )
 
         send_device_code_email(
@@ -791,7 +808,7 @@ def readings_export_email(request):
 
     device_qs = (
         ReadingDevice.objects
-        .filter(user=request.user)
+        .filter(user=request.user, plant__user=request.user)
         .select_related("plant")
     )
 
@@ -885,16 +902,16 @@ def ingest(request):
       - When crossing into the low-moisture state, push and email notifications are sent once.
       - When moisture rises back above threshold, the active alert state is reset.
       - Pump task lookup is intentionally handled by /pump-next-task/.
-      - Automatic pump decisions are handled by the Arduino sketch, not by the backend.
+      - Automatic watering requires a backend claim before the sketch drives the pump.
     """
     device, error_response = _resolve_device_from_secret_and_key(request)
     if error_response is not None:
         return error_response
 
-    metrics = request.data.get("metrics") or {}
-
-    ts = parse_ts_or_now(request.data.get("timestamp"))
-
+    serializer = ReadingIngestSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    metrics = serializer.validated_data["metrics"]
+    ts = serializer.validated_data["timestamp"]
     ts_rounded = ts.replace(minute=0, second=0, microsecond=0)
 
     try:
@@ -907,24 +924,26 @@ def ingest(request):
             rec, created = Reading.objects.get_or_create(
                 device=device,
                 timestamp=ts_rounded,
-                defaults=dict(
-                    temperature=metrics.get("temperature"),
-                    humidity=metrics.get("humidity"),
-                    light=metrics.get("light"),
-                    moisture=metrics.get("moisture"),
-                ),
+                defaults={**metrics, "observed_at": ts},
             )
 
+            # Retain an older hourly observation in history without allowing it
+            # to replace a later observation already saved in that same bucket.
+            if not created and rec.observed_at is not None and ts < rec.observed_at:
+                return Response({"status": "ok"}, status=status.HTTP_202_ACCEPTED)
             if not created:
-                rec.temperature = metrics.get("temperature")
-                rec.humidity = metrics.get("humidity")
-                rec.light = metrics.get("light")
-                rec.moisture = metrics.get("moisture")
-                rec.save(update_fields=["temperature", "humidity", "light", "moisture"])
+                for metric, value in metrics.items():
+                    setattr(rec, metric, value)
+                rec.observed_at = ts
+                rec.save(update_fields=[*metrics, "observed_at"])
+
+            if device.last_read_at is not None and ts < device.last_read_at:
+                return Response({"status": "ok"}, status=status.HTTP_202_ACCEPTED)
 
             moisture_value = rec.moisture
             if (
                 moisture_value is not None
+                and "moisture" in metrics
                 and device.moisture_alert_enabled
                 and device.moisture_alert_threshold is not None
             ):
@@ -970,8 +989,12 @@ def ingest(request):
                         moisture_value=moisture_value,
                     )
                 )
-    except IntegrityError:
-        pass
+    except DatabaseError:
+        logger.exception("Reading write failed for device=%s", device.pk)
+        return Response(
+            {"detail": "Reading could not be saved. Please retry."},
+            status=status.HTTP_503_SERVICE_UNAVAILABLE,
+        )
 
     return Response(
         {"status": "ok"},
@@ -981,7 +1004,7 @@ def ingest(request):
 
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
-@throttle_classes([AnonRateThrottle, FeedPerDeviceThrottle])
+@throttle_classes([AnonRateThrottle, PumpPollPerDeviceThrottle])
 def pump_next_task(request):
     """
     Body:
@@ -997,14 +1020,17 @@ def pump_next_task(request):
       - manual watering task info, if one is pending
       - current backend automatic pump config
 
-    Automatic watering is still executed locally by Arduino, but only after
-    backend confirms the current app-controlled auto-pump settings.
+    Arduino executes automatic watering only after the separate pump-auto-claim
+    endpoint reserves a cooldown. Legacy automatic watering is disabled until
+    the firmware advertises support for that protocol.
     """
     device, error_response = _resolve_device_from_secret_and_key(request)
     if error_response is not None:
         return error_response
 
-    auto_config = _auto_pump_config_for_device(device)
+    supports_auto_claim = _parse_bool(request.data.get("supports_auto_claim"), default=False)
+    auto_config = _auto_pump_config_for_device(device, supports_auto_claim=supports_auto_claim)
+    supports_task_retry = _parse_bool(request.data.get("supports_task_retry"), default=False)
 
     if not device.pump_included:
         return Response({
@@ -1019,15 +1045,19 @@ def pump_next_task(request):
         device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
         _expire_old_pump_tasks(device)
 
-        auto_config = _auto_pump_config_for_device(device)
+        auto_config = _auto_pump_config_for_device(device, supports_auto_claim=supports_auto_claim)
+        ready, reason = _device_can_run_pump(device)
+        if not ready:
+            return Response({"run": False, "task_id": None, "source": None, "reason": reason, **auto_config})
+
+        eligible = Q(status=PumpTask.STATUS_PENDING)
+        if supports_task_retry:
+            eligible |= Q(status=PumpTask.STATUS_DELIVERED, delivery_retry_safe=True)
 
         task = (
             device.pump_tasks
             .select_for_update()
-            .filter(
-                source=PumpTask.SOURCE_MANUAL,
-                status=PumpTask.STATUS_PENDING,
-            )
+            .filter(eligible, source=PumpTask.SOURCE_MANUAL)
             .order_by("requested_at")
             .first()
         )
@@ -1041,10 +1071,14 @@ def pump_next_task(request):
                 **auto_config,
             })
 
-        now = timezone.now()
-        task.status = PumpTask.STATUS_DELIVERED
-        task.delivered_at = now
-        task.save(update_fields=["status", "delivered_at", "updated_at"])
+        # Only retry-capable firmware persists execution receipts before watering.
+        # Preserve one-shot delivery for older sketches to prevent repeat runs.
+        if task.status == PumpTask.STATUS_PENDING:
+            task.status = PumpTask.STATUS_DELIVERED
+            task.delivered_at = timezone.now()
+            task.delivery_retry_safe = supports_task_retry
+            task.save(update_fields=["status", "delivered_at", "delivery_retry_safe", "updated_at"])
+            _reserve_pump_cooldown(device, timezone.now())
 
     return Response({
         "run": True,
@@ -1057,7 +1091,42 @@ def pump_next_task(request):
 
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
-@throttle_classes([AnonRateThrottle, FeedPerDeviceThrottle])
+@throttle_classes([AnonRateThrottle, PumpCompletePerDeviceThrottle])
+def pump_auto_claim(request):
+    """Reserve a durable cooldown and one automatic execution before watering."""
+    device, error = _resolve_device_from_secret_and_key(request)
+    if error is not None:
+        return error
+    measurement = ReadingIngestSerializer(data={"metrics": {"moisture": request.data.get("moisture")}})
+    measurement.is_valid(raise_exception=True)
+    moisture = measurement.validated_data["metrics"]["moisture"]
+    if moisture is None:
+        return Response({"detail": "A moisture measurement is required."}, status=400)
+    now = timezone.now()
+    with transaction.atomic():
+        device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
+        config = _auto_pump_config_for_device(device, supports_auto_claim=True)
+        if not config["auto_pump_enabled"]:
+            return Response({"run": False, "task_id": None, "reason": "automatic_disabled_or_cooldown", **config})
+        if moisture >= device.pump_threshold_pct:
+            return Response({"run": False, "task_id": None, "reason": "moisture_above_threshold", **config})
+        if _get_open_manual_pump_task(device) is not None:
+            return Response({"run": False, "task_id": None, "reason": "manual_task_has_priority", **config})
+        _reserve_pump_cooldown(device, now)
+        task = PumpTask.objects.create(
+            device=device, source=PumpTask.SOURCE_AUTOMATIC, status=PumpTask.STATUS_DELIVERED,
+            requested_at=now, delivered_at=now, expires_at=now + timedelta(minutes=2),
+            moisture_at_request=moisture, threshold_at_request=device.pump_threshold_pct,
+        )
+        return Response({
+            "run": True, "task_id": task.pk, "reason": "automatic_claimed",
+            "pump_cooldown_until": device.pump_safety_until,
+        })
+
+
+@api_view(["POST"])
+@permission_classes([permissions.AllowAny])
+@throttle_classes([AnonRateThrottle, PumpCompletePerDeviceThrottle])
 def pump_complete(request):
     """
     Body for manual scheduled watering completion:
@@ -1070,10 +1139,12 @@ def pump_complete(request):
       "error_message": "optional"
     }
 
-    Body for Arduino-local automatic watering completion:
+    Body for claimed automatic watering completion (task-less reports from
+    older firmware remain accepted as historical reports):
     {
       "secret": "...",
       "device_key": "AB12CD34",
+      "task_id": 123,
       "source": "automatic",
       "success": true,
       "error_message": "optional"
@@ -1111,6 +1182,13 @@ def pump_complete(request):
             if task.status == PumpTask.STATUS_EXECUTED:
                 return Response({
                     "detail": "Pump execution was already recorded.",
+                    "last_pump_run_at": device.last_pump_run_at,
+                    "last_pump_run_source": device.last_pump_run_source,
+                })
+
+            if task.status == PumpTask.STATUS_FAILED:
+                return Response({
+                    "detail": "Pump failure was already recorded.",
                     "last_pump_run_at": device.last_pump_run_at,
                     "last_pump_run_source": device.last_pump_run_source,
                 })
@@ -1201,33 +1279,9 @@ def feed(request):
 
     Returns only the latest reading (as an array with at most one item).
     """
-    device_id = request.query_params.get("device_id")
-    device_key = request.query_params.get("device_key")
-    secret_str = request.query_params.get("secret")
-
-    if not (device_key and secret_str):
-        return Response({"detail": "device_key and secret are required"}, status=400)
-
-    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
-    if not acct:
-        return Response({"detail": "invalid credentials"}, status=403)
-
-    if device_id:
-        device = get_object_or_404(
-            ReadingDevice,
-            id=device_id,
-            device_key=device_key,
-            user=acct.user,
-        )
-    else:
-        device = get_object_or_404(
-            ReadingDevice,
-            device_key=device_key,
-            user=acct.user,
-        )
-
-    if not device.is_active:
-        return Response({"detail": "device disabled"}, status=403)
+    device, error = _resolve_device_from_secret_and_key(request)
+    if error is not None:
+        return error
 
     qs = device.readings.all()
     if "from" in request.query_params:
@@ -1285,7 +1339,7 @@ def history(request):
         return Response({"detail": "device_id is required"}, status=400)
 
     try:
-        device = ReadingDevice.objects.get(id=device_id, user=request.user)
+        device = ReadingDevice.objects.get(id=device_id, user=request.user, plant__user=request.user)
     except ReadingDevice.DoesNotExist:
         raise Http404
 
@@ -1402,7 +1456,7 @@ def history_delete_options(request):
         return Response({"detail": "device_id is required"}, status=400)
 
     try:
-        device = ReadingDevice.objects.get(id=device_id, user=request.user)
+        device = ReadingDevice.objects.get(id=device_id, user=request.user, plant__user=request.user)
     except ReadingDevice.DoesNotExist:
         raise Http404
 
@@ -1459,7 +1513,7 @@ def history_bulk_delete(request):
         return Response({"detail": "device_id is required"}, status=400)
 
     try:
-        device = ReadingDevice.objects.get(id=device_id, user=request.user)
+        device = ReadingDevice.objects.get(id=device_id, user=request.user, plant__user=request.user)
     except ReadingDevice.DoesNotExist:
         raise Http404
 
@@ -1471,6 +1525,7 @@ def history_bulk_delete(request):
     updated_count = 0
 
     with transaction.atomic():
+        device = ReadingDevice.objects.select_for_update().get(pk=device.pk, user=request.user, plant__user=request.user)
         qs = device.readings.all()
 
         if mode == "day":

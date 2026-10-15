@@ -70,6 +70,8 @@ def test_register_serializer_rejects_duplicate_email_case_insensitive():
         ("PL", "pl"),
         ("en-US", "en"),
         ("de-DE", "de"),
+        ("ja-JP", "ja"),
+        ("ko-KR", "ko"),
         ("unknown", "en"),
         ("", "en"),
         (None, "en"),

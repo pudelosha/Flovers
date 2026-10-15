@@ -44,6 +44,7 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
     last_watered: (state as any).lastWatered ?? "",
     last_repotted: (state as any).lastRepotted ?? "",
 
+    water_interval_days: state.waterIntervalDays ?? null,
     moisture_interval_days: state.moistureIntervalDays ?? null,
     fertilize_interval_days: state.fertilizeIntervalDays ?? null,
     care_interval_days: state.careIntervalDays ?? null,
@@ -54,9 +55,9 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
 /** ---- Create ---- */
 export async function createPlantInstance(
   state: WizardState,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean; creationKey?: string } = { auth: true }
 ): Promise<ApiPlantInstance> {
-  const payload = buildPayload(state);
+  const payload = { ...buildPayload(state), ...(opts.creationKey ? { creation_key: opts.creationKey } : {}) };
   return await request<ApiPlantInstance>(
     "/plant-instances/",
     "POST",
@@ -160,6 +161,8 @@ export function buildUpdatePayloadFromForm(
   if ("last_watered" in form) out.last_watered = (form.last_watered as any) ?? "";
   if ("last_repotted" in form) out.last_repotted = (form.last_repotted as any) ?? "";
 
+  if ("water_interval_days" in form)
+    out.water_interval_days = form.water_interval_days ?? null;
   if ("moisture_interval_days" in form)
     out.moisture_interval_days = form.moisture_interval_days ?? null;
   if ("fertilize_interval_days" in form)

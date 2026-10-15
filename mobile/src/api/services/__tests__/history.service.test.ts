@@ -50,7 +50,7 @@ describe("history.service", () => {
       },
     ]);
     mockedListReminders.mockResolvedValue([
-      { id: 3, plant: 2, type: "moisture" },
+      { id: 3, plant: 2, type: "moisture", is_active: true },
     ]);
     mockedFetchPlants.mockResolvedValue([
       { id: 2, display_name: "Fern", location: { name: "Kitchen" } },
@@ -72,6 +72,16 @@ describe("history.service", () => {
         completedAt: "2026-05-12T08:00:00Z",
         note: "done",
       }),
+    ]);
+  });
+
+  it("keeps completed history when its reminder is paused", async () => {
+    mockedListReminders.mockResolvedValue([
+      { id: 3, plant: 2, type: "moisture", is_active: false },
+    ]);
+
+    await expect(fetchHistoryItems()).resolves.toEqual([
+      expect.objectContaining({ id: "11", reminderId: "3", note: "done" }),
     ]);
   });
 

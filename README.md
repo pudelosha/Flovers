@@ -132,7 +132,7 @@ services:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
     ports:
-      - "8000:8000"
+      - "${BACKEND_BIND_ADDRESS:-127.0.0.1}:8000:8000"
     depends_on:
       - db
       - redis
@@ -165,7 +165,7 @@ services:
   redis:
     image: redis:7-alpine
     ports:
-      - "6379:6379"
+      - "127.0.0.1:6379:6379"
 
   db:
     image: postgres:16-alpine
@@ -174,7 +174,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-appuser}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-apppass}
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -182,7 +182,7 @@ services:
     image: mailhog/mailhog:latest
     # SMTP is at 1025 inside the network; HTTP UI is exposed on 8025
     ports:
-      - "8025:8025"
+      - "127.0.0.1:8025:8025"
 
 volumes:
   pgdata:
@@ -209,13 +209,22 @@ Production email delivery is handled from the VPS environment; MailHog remains u
 Backend environment variables are stored in `backend/.env`.  
 Example:
 ```env
-DJANGO_SECRET_KEY=your-secret-key
+APP_ENV=development
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
+USE_POSTGRES=True
 POSTGRES_DB=appdb
 POSTGRES_USER=appuser
 POSTGRES_PASSWORD=apppass
 ```
+
+Development defaults are enabled only by explicit `APP_ENV=development` or `test`.
+Production requires private `SECRET_KEY` and `JWT_SIGNING_KEY` values of at least
+32 characters. Backend and infrastructure host ports bind to loopback by default;
+set `BACKEND_BIND_ADDRESS` explicitly for a physical development phone on your LAN.
+See [backend rollout configuration](deployment/README.md) for the existing VPS's
+Caddy/Traefik alternatives, trusted proxy identity, shared throttling cache and
+required database/firmware migrations.
 
 ---
 

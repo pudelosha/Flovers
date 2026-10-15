@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import TopToast from "../shared/ui/TopToast.jsx";
+import { sendPublicContact } from "../shared/contact.js";
 
 function withTimeout(promise, ms = 30000) {
   const controller = new AbortController();
@@ -17,12 +18,6 @@ function withTimeout(promise, ms = 30000) {
   return wrapped;
 }
 
-function isUnauthorized(err, status) {
-  if (status === 401) return true;
-  const msg = String(err?.message ?? "").toLowerCase();
-  return msg.includes("unauthorized") || msg.includes("unauthorised");
-}
-
 function isTimedOut(err) {
   const name = String(err?.name ?? "");
   const msg = String(err?.message ?? "").toLowerCase();
@@ -35,13 +30,15 @@ function isTimedOut(err) {
 }
 
 export default function Contact() {
-  const { t } = useTranslation(["contact", "common"]);
+  const { t, i18n } = useTranslation(["contact", "common"]);
 
   const API_BASE = useMemo(
-    () => (import.meta.env.VITE_API_BASE || "").replace(/\/+$/, ""),
+    () => (import.meta.env.VITE_API_BASE || "https://api.flovers.app").replace(/\/+$/, ""),
     []
   );
 
+  const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [copyToMe, setCopyToMe] = useState(true);
@@ -68,6 +65,11 @@ export default function Contact() {
     const s = subject.trim();
     const m = message.trim();
 
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      showToast(t("contact:toasts.enterEmail"), "error");
+      return;
+    }
+
     if (!s) {
       showToast(t("contact:toasts.enterSubject"), "error");
       return;
@@ -85,36 +87,10 @@ export default function Contact() {
     try {
       setSaving(true);
 
-      const url = `${API_BASE}/profile/support/contact/`;
-
-      const res = await withTimeout(async (signal) => {
-        const r = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            subject: s,
-            message: m,
-            copy_to_user: copyToMe,
-          }),
-          signal,
-        });
-
-        let json = null;
-        try {
-          json = await r.json();
-        } catch {
-          json = null;
-        }
-
-        if (!r.ok) {
-          const err = new Error(json?.message || `HTTP ${r.status}`);
-          err.status = r.status;
-          err.payload = json;
-          throw err;
-        }
-
-        return json;
-      }, 30000);
+      const res = await withTimeout(signal => sendPublicContact(API_BASE, {
+        email: email.trim(), subject: s, message: m, copy_to_user: copyToMe,
+        lang: i18n.resolvedLanguage || i18n.language || "en", website,
+      }, signal), 30000);
 
       showToast(res?.message || t("contact:toasts.contactSent"), "success");
 
@@ -124,8 +100,8 @@ export default function Contact() {
     } catch (err) {
       const httpStatus = err?.status;
 
-      if (isUnauthorized(err, httpStatus)) {
-        showToast(t("contact:toasts.unauthorizedLoginAgain"), "error");
+      if (httpStatus === 429) {
+        showToast(t("contact:toasts.rateLimited"), "error");
       } else if (isTimedOut(err)) {
         showToast(t("contact:toasts.requestTimedOut"), "error");
       } else {
@@ -153,6 +129,17 @@ export default function Contact() {
 
         <form onSubmit={handleSubmit} className="form">
           <div className="field">
+            <label className="label" htmlFor="contact-email">{t("contact:form.emailLabel")}</label>
+            <input id="contact-email" className="input input-soft" type="email" autoComplete="email"
+              value={email} onChange={e => setEmail(e.target.value)} maxLength={254} required
+              placeholder={t("contact:form.emailPlaceholder")} disabled={saving} />
+          </div>
+          <div style={{ display: "none" }} aria-hidden="true">
+            <label htmlFor="contact-website">Website</label>
+            <input id="contact-website" name="website" value={website} onChange={e => setWebsite(e.target.value)}
+              tabIndex={-1} autoComplete="off" maxLength={200} />
+          </div>
+          <div className="field">
             <label className="label">{t("contact:form.subjectLabel")}</label>
             <input
               className="input input-soft"
@@ -160,6 +147,8 @@ export default function Contact() {
               onChange={(e) => setSubject(e.target.value)}
               placeholder={t("contact:form.subjectPlaceholder")}
               disabled={saving}
+              maxLength={200}
+              required
             />
           </div>
 
@@ -171,6 +160,8 @@ export default function Contact() {
               onChange={(e) => setMessage(e.target.value)}
               placeholder={t("contact:form.messagePlaceholder")}
               disabled={saving}
+              maxLength={5000}
+              required
             />
           </div>
 

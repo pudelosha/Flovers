@@ -28,7 +28,7 @@ import {
   getPlantPhotoUri,
   persistTempPlantPhoto,
   promoteTempPhotoToPlant,
-  deleteLocalPhoto,
+  deletePlantPhotoById,
 } from "../../../../shared/utils/photoStorage";
 
 type Props = {
@@ -65,11 +65,6 @@ function withCacheBuster(uri: string | null | undefined): string | null {
   return `${uri}${sep}t=${Date.now()}`;
 }
 
-/** deleteLocalPhoto must receive the real file uri/path (no query params) */
-function stripQuery(uri: string): string {
-  return uri.split("?")[0];
-}
-
 type PendingAction =
   | { kind: "none" }
   | { kind: "set"; uri: string } // set/replace with this local uri
@@ -90,6 +85,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   );
 
   const [loading, setLoading] = useState(false);
+  const savingRef = useRef(false);
   const [error, setError] = useState<string | null>(null);
 
   // currently stored on disk
@@ -108,6 +104,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const initialPersistedUriRef = useRef<string | null>(null);
 
   const close = useCallback(() => {
+    if (savingRef.current) return;
     Keyboard.dismiss();
 
     const hasUnsaved = pending.kind !== "none";
@@ -238,21 +235,20 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   }, [plantId]);
 
   const applyChanges = useCallback(async () => {
-    if (!plantId) return;
+    if (!plantId || savingRef.current) return;
 
     if (pending.kind === "none") {
       onClose();
       return;
     }
 
+    savingRef.current = true;
     setLoading(true);
     setError(null);
 
     try {
-      const existing = await getPlantPhotoUri(String(plantId));
-      if (existing) await deleteLocalPhoto(stripQuery(existing));
-
       if (pending.kind === "remove") {
+        await deletePlantPhotoById(plantId);
         setPersistedUri(null);
         setPreviewUri(null);
         setPending({ kind: "none" });
@@ -287,11 +283,13 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     } catch (e: any) {
       setError(e?.message || tr("plantDetailsModals.changeImage.saveFailedMsg", "Could not save this photo locally."));
     } finally {
+      savingRef.current = false;
       setLoading(false);
     }
   }, [plantId, pending, onChanged, onClose, tr]);
 
   const discardChanges = useCallback(() => {
+    if (savingRef.current) return;
     const orig = initialPersistedUriRef.current;
     setPersistedUri(orig);
     setPreviewUri(orig);

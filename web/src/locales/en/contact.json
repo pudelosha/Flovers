@@ -2,6 +2,8 @@
   "title": "Contact",
   "subtitle": "Send a message to support. We typically reply within 1–3 business days.",
   "form": {
+    "emailLabel": "Your email",
+    "emailPlaceholder": "you@example.com",
     "subjectLabel": "Subject",
     "subjectPlaceholder": "e.g. Login issue",
     "messageLabel": "Message",
@@ -13,6 +15,8 @@
     "note": "If the form fails, use the email button."
   },
   "toasts": {
+    "enterEmail": "Please enter a valid email address.",
+    "rateLimited": "Too many messages. Please try again later.",
     "enterSubject": "Please enter a subject.",
     "enterMessage": "Please enter a message.",
     "contactSent": "Message sent.",

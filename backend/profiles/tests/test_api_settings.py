@@ -6,6 +6,19 @@ from rest_framework.test import APIClient
 User = get_user_model()
 
 
+@pytest.mark.django_db
+@pytest.mark.parametrize("language", ["ja", "ko"])
+def test_profile_settings_preserves_supported_asian_languages(language):
+    user = User.objects.create_user(email="language@example.com", password="strong-password-123")
+    client = APIClient()
+    client.force_authenticate(user=user)
+    response = client.patch(reverse("profile-settings"), {"language": language}, format="json")
+    assert response.status_code == 200
+    user.profile_settings.refresh_from_db()
+    assert user.profile_settings.language == language
+    assert client.get(reverse("profile-settings")).json()["data"]["language"] == language
+
+
 def test_profile_settings_requires_authentication():
     response = APIClient().get(reverse("profile-settings"))
 

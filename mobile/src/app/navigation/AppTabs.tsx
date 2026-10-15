@@ -30,6 +30,17 @@ import TaskHistoryScreen from "../../features/task-history/pages/TaskHistoryScre
 
 // locations screen (hidden, under Plants)
 import LocationsScreen from "../../features/locations/pages/LocationsScreen";
+import ConfirmEmailScreen from "../../features/auth/pages/ConfirmEmailScreen";
+import ResetPasswordScreen from "../../features/auth/pages/ResetPasswordScreen";
+import AuthCard from "../../features/auth/components/AuthCard";
+
+function ConfirmEmailRecovery(props: any) {
+  return <AuthCard><ConfirmEmailScreen {...props} /></AuthCard>;
+}
+
+function ResetPasswordRecovery(props: any) {
+  return <AuthCard><ResetPasswordScreen {...props} /></AuthCard>;
+}
 
 const Placeholder: React.FC = () => <View style={{ flex: 1 }} />;
 
@@ -48,6 +59,8 @@ export type AppTabParamList = {
   Reminders: undefined;
   Readings: undefined;
   Profile: undefined;
+  ConfirmEmail: { uid?: string; token?: string; email?: string; url?: string } | undefined;
+  ResetPassword: { uid?: string; token?: string; email?: string; url?: string } | undefined;
 
   // Hidden
   Scanner: undefined;
@@ -80,6 +93,8 @@ const Tab = createBottomTabNavigator<AppTabParamList>();
 
 // Map hidden child routes to the tab that should appear active
 const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
+  ConfirmEmail: "Profile",
+  ResetPassword: "Profile",
   CreatePlantWizard: "Plants",
   PlantDetails: "Plants",
   AddReminder: "Reminders",
@@ -126,6 +141,8 @@ function GlassTabBar({ state, navigation }: any) {
   };
 
   const HIDDEN = new Set([
+    "ConfirmEmail",
+    "ResetPassword",
     "Scanner",
     "PlantDetails",
     "CreatePlantWizard",
@@ -273,6 +290,8 @@ export default function AppTabs() {
       <Tab.Screen name="Reminders" component={RemindersScreen} />
       <Tab.Screen name="Readings" component={ReadingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="ConfirmEmail" component={ConfirmEmailRecovery} />
+      <Tab.Screen name="ResetPassword" component={ResetPasswordRecovery} />
 
       {/* Hidden routes */}
       <Tab.Screen

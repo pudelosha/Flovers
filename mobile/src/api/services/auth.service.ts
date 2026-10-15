@@ -60,27 +60,44 @@ export type ConfirmEmailResponse = { message: string };
 const ACCESS_TOKEN_KEY = "auth_access_token";
 const REFRESH_TOKEN_KEY = "auth_refresh_token";
 const USER_KEY = "auth_user";
+let storageGeneration = 0;
+let storageQueue: Promise<void> = Promise.resolve();
+
+function serializeStorage<T>(operation: () => Promise<T>): Promise<T> {
+  const result = storageQueue.then(operation, operation);
+  storageQueue = result.then(() => undefined, () => undefined);
+  return result;
+}
+
+async function completeStorageWrites(writes: Promise<unknown>[]): Promise<void> {
+  // A failed write must not release the queue while sibling writes can still finish.
+  const results = await Promise.allSettled(writes);
+  const failure = results.find((result): result is PromiseRejectedResult => result.status === "rejected");
+  if (failure) throw failure.reason;
+}
 
 export async function bootstrapAuth(): Promise<{
   access: string | null;
   refresh: string | null;
   user: AuthUserInfo;
 }> {
-  const [access, refresh, userRaw] = await Promise.all([
-    AsyncStorage.getItem(ACCESS_TOKEN_KEY),
-    AsyncStorage.getItem(REFRESH_TOKEN_KEY),
-    AsyncStorage.getItem(USER_KEY),
-  ]);
+  return serializeStorage(async () => {
+    const [access, refresh, userRaw] = await Promise.all([
+      AsyncStorage.getItem(ACCESS_TOKEN_KEY),
+      AsyncStorage.getItem(REFRESH_TOKEN_KEY),
+      AsyncStorage.getItem(USER_KEY),
+    ]);
 
-  let user: AuthUserInfo = null;
+    let user: AuthUserInfo = null;
 
-  try {
-    user = userRaw ? (JSON.parse(userRaw) as AuthUserInfo) : null;
-  } catch {
-    user = null;
-  }
+    try {
+      user = userRaw ? (JSON.parse(userRaw) as AuthUserInfo) : null;
+    } catch {
+      user = null;
+    }
 
-  return { access, refresh, user };
+    return { access, refresh, user };
+  });
 }
 
 export async function persistAuth(
@@ -88,36 +105,57 @@ export async function persistAuth(
   refresh: string,
   user: AuthUserInfo
 ): Promise<void> {
-  await Promise.all([
-    AsyncStorage.setItem(ACCESS_TOKEN_KEY, access),
-    AsyncStorage.setItem(REFRESH_TOKEN_KEY, refresh),
-    AsyncStorage.setItem(USER_KEY, JSON.stringify(user ?? null)),
-  ]);
+  const generation = ++storageGeneration;
+  await serializeStorage(async () => {
+    if (generation !== storageGeneration) return;
+    await completeStorageWrites([
+      AsyncStorage.setItem(ACCESS_TOKEN_KEY, access),
+      AsyncStorage.setItem(REFRESH_TOKEN_KEY, refresh),
+      AsyncStorage.setItem(USER_KEY, JSON.stringify(user ?? null)),
+    ]);
+  });
 }
 
 export async function updateStoredAccessToken(access: string): Promise<void> {
-  await AsyncStorage.setItem(ACCESS_TOKEN_KEY, access);
+  const generation = storageGeneration;
+  await serializeStorage(async () => {
+    if (generation === storageGeneration) await AsyncStorage.setItem(ACCESS_TOKEN_KEY, access);
+  });
+}
+
+export async function updateStoredUser(user: AuthUserInfo): Promise<void> {
+  const generation = storageGeneration;
+  await serializeStorage(async () => {
+    if (generation === storageGeneration) await AsyncStorage.setItem(USER_KEY, JSON.stringify(user));
+  });
 }
 
 export async function clearAuth(): Promise<void> {
-  await Promise.all([
-    AsyncStorage.removeItem(ACCESS_TOKEN_KEY),
-    AsyncStorage.removeItem(REFRESH_TOKEN_KEY),
-    AsyncStorage.removeItem(USER_KEY),
-  ]);
+  const generation = ++storageGeneration;
+  await serializeStorage(async () => {
+    if (generation !== storageGeneration) return;
+    await completeStorageWrites([
+      AsyncStorage.removeItem(ACCESS_TOKEN_KEY),
+      AsyncStorage.removeItem(REFRESH_TOKEN_KEY),
+      AsyncStorage.removeItem(USER_KEY),
+    ]);
+  });
 }
 
 // compatibility wrappers (safe to keep if referenced elsewhere)
 export async function bootstrapToken(): Promise<string | null> {
-  return AsyncStorage.getItem(ACCESS_TOKEN_KEY);
+  return serializeStorage(() => AsyncStorage.getItem(ACCESS_TOKEN_KEY));
 }
 
 export async function persistToken(access: string): Promise<void> {
-  await AsyncStorage.setItem(ACCESS_TOKEN_KEY, access);
+  await updateStoredAccessToken(access);
 }
 
 export async function clearToken(): Promise<void> {
-  await AsyncStorage.removeItem(ACCESS_TOKEN_KEY);
+  const generation = ++storageGeneration;
+  await serializeStorage(async () => {
+    if (generation === storageGeneration) await AsyncStorage.removeItem(ACCESS_TOKEN_KEY);
+  });
 }
 
 export async function registerUser(p: RegisterPayload): Promise<RegisterResponse> {

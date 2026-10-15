@@ -8,6 +8,7 @@ export type Reminder = {
   plantId?: string;
   location?: string;
   dueDate?: Date | string;
+  dueDateISO: string;
   intervalValue?: number;
   intervalUnit?: "days" | "months";
   isActive: boolean;
