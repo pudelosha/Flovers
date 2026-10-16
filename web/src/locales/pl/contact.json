@@ -1,27 +1,27 @@
 {
   "title": "Kontakt",
-  "subtitle": "Wyślij wiadomość do wsparcia. Zwykle odpowiadamy w 1–3 dni robocze.",
+  "subtitle": "Masz pytanie lub problem z aplikacją? Napisz do nas. Zwykle odpowiadamy w ciągu 1–3 dni roboczych.",
   "form": {
     "emailLabel": "Twój adres e-mail",
     "emailPlaceholder": "ty@example.com",
     "subjectLabel": "Temat",
     "subjectPlaceholder": "np. Problem z logowaniem",
     "messageLabel": "Wiadomość",
-    "messagePlaceholder": "Opisz problem lub pytanie…",
+    "messagePlaceholder": "Opisz problem lub napisz, o co chcesz zapytać…",
     "copyToMe": "Wyślij mi kopię",
     "send": "Wyślij",
     "sending": "Wysyłanie…",
     "mailtoFallback": "Napisz e-mail",
-    "note": "Jeśli formularz nie zadziała, użyj przycisku e-mail."
+    "note": "Jeśli formularz nie działa, kliknij „Napisz e-mail”."
   },
   "toasts": {
-    "enterEmail": "Wpisz poprawny adres e-mail.",
-    "rateLimited": "Wysłano zbyt wiele wiadomości. Spróbuj ponownie później.",
+    "enterEmail": "Podaj poprawny adres e-mail.",
+    "rateLimited": "Za dużo wiadomości w krótkim czasie. Spróbuj ponownie później.",
     "enterSubject": "Wpisz temat.",
     "enterMessage": "Wpisz wiadomość.",
-    "contactSent": "Wiadomość wysłana.",
+    "contactSent": "Wiadomość została wysłana.",
     "couldNotSendContact": "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
-    "requestTimedOut": "Upłynął limit czasu. Spróbuj ponownie.",
+    "requestTimedOut": "Serwer nie odpowiedział na czas. Spróbuj ponownie.",
     "unauthorizedLoginAgain": "Sesja wygasła. Zaloguj się ponownie.",
     "missingApiBase": "Nie skonfigurowano adresu API."
   }

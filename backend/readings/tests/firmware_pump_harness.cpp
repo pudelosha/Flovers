@@ -32,14 +32,7 @@ struct SerialStub {
     void println() {}
 } Serial;
 
-struct PumpTaskCheck {
-    bool requestOk;
-    bool manualPumpRan;
-    bool backendPumpIncluded;
-    bool autoPumpEnabled;
-    bool moistureSensorEnabled;
-    int autoPumpThresholdPct;
-};
+// GENERATED_TYPES
 
 const char* secret = "test-secret";
 const char* deviceKey = "DEVICE";

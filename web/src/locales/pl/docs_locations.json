@@ -3,42 +3,42 @@
     "title": "Lokalizacje",
     "sections": [
       {
-        "heading": "Cel tego widoku",
+        "heading": "Do czego służą lokalizacje",
         "body": [
-          "Widok Lokalizacje służy do zarządzania miejscami, w których znajdują się Twoje rośliny, np. pomieszczeniami, balkonami lub innymi obszarami.",
-          "Lokalizacje są wykorzystywane głównie do porządkowania roślin oraz ułatwiania filtrowania, sortowania i grupowania danych w aplikacji."
+          "W Lokalizacjach zapiszesz miejsca, w których trzymasz rośliny: pokoje, balkon czy inne części domu.",
+          "Dzięki lokalizacjom łatwiej uporządkujesz rośliny oraz pogrupujesz, posortujesz i przefiltrujesz listy w aplikacji."
         ]
       },
       {
         "heading": "Lista lokalizacji",
         "body": [
-          "Ekran wyświetla listę wszystkich lokalizacji zdefiniowanych przez użytkownika.",
-          "Lokalizacje mogą być nazwami domyślnymi lub własnymi nazwami utworzonymi przez użytkownika.",
-          "Każda lokalizacja pokazuje liczbę roślin aktualnie z nią powiązanych."
+          "Na tym ekranie znajdziesz wszystkie swoje lokalizacje.",
+          "Możesz skorzystać z proponowanych nazw lub nadać własne.",
+          "Przy każdej lokalizacji zobaczysz liczbę przypisanych do niej roślin."
         ]
       },
       {
-        "heading": "Akcje na lokalizacji (menu 3-kropki)",
+        "heading": "Menu lokalizacji",
         "body": [
-          "Każda lokalizacja posiada menu 3-kropki z dostępnymi akcjami.",
-          "Użytkownik może edytować nazwę lokalizacji, aby lepiej odzwierciedlała rzeczywiste miejsce przechowywania roślin.",
-          "Usunięcie lokalizacji jest możliwe tylko wtedy, gdy nie są do niej przypisane żadne rośliny."
+          "Dotknij trzech kropek przy lokalizacji, aby otworzyć jej menu.",
+          "Możesz zmienić nazwę lokalizacji, na przykład po przeniesieniu roślin w inne miejsce.",
+          "Lokalizację możesz usunąć tylko wtedy, gdy nie ma w niej żadnych roślin."
         ]
       },
       {
-        "heading": "Przycisk akcji (FAB)",
+        "heading": "Przycisk szybkich akcji",
         "body": [
-          "Przycisk FAB udostępnia szybkie akcje związane z zarządzaniem lokalizacjami.",
-          "Użytkownik może dodać nową lokalizację w dowolnym momencie.",
-          "Lokalizacje można sortować według nazwy lokalizacji lub liczby przypisanych roślin."
+          "Przycisk szybkich akcji otwiera menu do zarządzania lokalizacjami.",
+          "Wybierz dodawanie lokalizacji, gdy potrzebujesz nowego miejsca dla roślin.",
+          "Listę możesz posortować według nazwy lub liczby roślin."
         ]
       },
       {
-        "heading": "Zastosowanie lokalizacji",
+        "heading": "Lokalizacje w pozostałych częściach aplikacji",
         "body": [
-          "Lokalizacje są używane w całej aplikacji do logicznego grupowania roślin.",
-          "Mogą być wykorzystywane jako kryteria filtrowania i sortowania w widokach takich jak Rośliny, Przypomnienia czy Historia zadań.",
-          "Stosowanie lokalizacji ułatwia utrzymanie porządku, szczególnie przy większej liczbie roślin."
+          "Z tego samego podziału na lokalizacje korzystasz w całej aplikacji.",
+          "Według lokalizacji możesz filtrować i sortować między innymi Rośliny, Przypomnienia i Historię zadań.",
+          "Taki podział pomaga utrzymać porządek, zwłaszcza gdy masz dużo roślin."
         ]
       }
     ]

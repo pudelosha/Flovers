@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Flovers",
-    "subtitle": "Dbaj o rośliny z jasnym planem, rutynami i historią.",
-    "purpose": "Dodaj swoje rośliny, podepnij definicje gatunków dla wskazówek, ustaw cykliczne przypomnienia i śledź historię pielęgnacji — opcjonalnie monitoruj odczyty czujników lub korzystaj z kodów QR.",
+    "subtitle": "Pamiętaj o pielęgnacji i miej wszystkie informacje o roślinach pod ręką.",
+    "purpose": "Dodaj rośliny, wybierz ich gatunki i korzystaj ze wskazówek pielęgnacyjnych. Ustaw przypomnienia i zapisuj, co już zrobione. Możesz też podłączyć czujniki lub oznaczyć doniczki kodami QR, by szybko otwierać szczegóły roślin.",
     "cta": {
       "googlePlayUrl": "",
       "appStoreUrl": ""
@@ -11,60 +11,60 @@
 
   "homeNew": {
     "cta": {
-      "title": "Zacznij prosto. Trzymaj rutynę konsekwentnie.",
-      "subtitle": "Dodaj rośliny, podepnij definicje dla wskazówek, ustaw cykliczne przypomnienia i pozwól Flovers tworzyć zadania automatycznie. Korzystaj z codziennych powiadomień, skanuj etykiety QR, żeby wejść prosto w roślinę, i opcjonalnie weryfikuj rutyny odczytami z czujników."
+      "title": "Łatwo zacząć. Łatwiej pamiętać o roślinach.",
+      "subtitle": "Dodaj rośliny, wybierz ich gatunki i ustaw przypomnienia. Flovers sam utworzy zadania i przypomni o nich w codziennym powiadomieniu. Kody QR na doniczkach pozwolą szybko otworzyć szczegóły roślin, a odczyty z czujników pomogą sprawdzić, czy warto zmienić sposób pielęgnacji."
     },
     "sections": {
       "how": {
         "title": "Jak to działa",
-        "subtitle": "Prosta pętla: dodaj → zdefiniuj → wykonaj → trzymaj rutynę. Flovers pilnuje ciągłości, żebyś skupiał(a) się na roślinach, nie na planowaniu."
+        "subtitle": "Dodaj roślinę, ustal plan pielęgnacji i wykonuj zadania. O kolejnych terminach przypomni Flovers, a tobie zostanie więcej czasu na same rośliny."
       }
     },
     "steps": {
       "s1": {
-        "title": "Dodaj roślinę: rozpoznaj ze zdjęcia albo wyszukaj w bazie",
-        "text": "Dodasz roślinę w kilka sekund. Przeszukaj bazę 700+ definicji albo użyj rozpoznawania ze zdjęcia, żeby dostać sugerowane dopasowanie. Po dodaniu cała pielęgnacja, zadania i historia są przypięte do tej jednej rośliny."
+        "title": "Rozpoznaj roślinę ze zdjęcia lub znajdź ją w bazie",
+        "text": "Dodanie rośliny zajmuje chwilę. Wybierz gatunek z bazy ponad 700 roślin albo zrób zdjęcie i sprawdź podpowiedzi. Każda dodana roślina ma własne zadania, plan pielęgnacji i historię."
       },
       "s2": {
-        "title": "Podepnij definicję, ustaw kontekst i wylicz sensowne interwały",
-        "text": "Połącz roślinę z definicją, żeby odblokować cechy pielęgnacji i domyślne ustawienia. Dodaj kontekst: rozmiar doniczki, typ podłoża, lokalizację oraz poziom światła. Na tej podstawie Flovers pomaga wyliczyć realistyczne interwały przypomnień, które możesz zmieniać w dowolnym momencie."
+        "title": "Wybierz gatunek i dopasuj pielęgnację do warunków",
+        "text": "Wybierz dla rośliny opis gatunku, aby korzystać z jego zaleceń. Podaj rozmiar doniczki, rodzaj podłoża, miejsce i ilość światła. Na tej podstawie Flovers zaproponuje, co ile dni przypominać o pielęgnacji. Te ustawienia możesz w każdej chwili zmienić."
       },
       "s3": {
-        "title": "Wykonuj zadania szybko i buduj czystą historię pielęgnacji",
-        "text": "Przypomnienia automatycznie tworzą zadania z terminami. Ekran Home pokazuje co jest do zrobienia, a ekran rośliny daje pełny kontekst. Gdy zamkniesz zadanie, możesz dodać notatkę, a Flovers kolejkuje następne — dzięki temu rutyna działa bez ręcznego planowania."
+        "title": "Oznaczaj wykonane zadania i zapisuj historię pielęgnacji",
+        "text": "Na podstawie przypomnień Flovers tworzy zadania z terminami. Na ekranie głównym zobaczysz, co jest do zrobienia, a w szczegółach rośliny znajdziesz wszystkie informacje o niej. Przy oznaczaniu zadania jako wykonanego możesz dodać notatkę. Kolejne zadanie zaplanuje się automatycznie."
       },
       "s4": {
-        "title": "Trzymaj się planu dzięki codziennym powiadomieniom",
-        "text": "W ustawieniach profilu wybierz powiadomienia push albo e-mail i ustaw godzinę dostarczenia. Dostaniesz dzienne podsumowanie z zadaniami na dziś oraz opcjonalne przypomnienia, jeśli zadania staną się zaległe — żeby nic nie przeszło po cichu."
+        "title": "Pamiętaj o zadaniach dzięki codziennym powiadomieniom",
+        "text": "W ustawieniach profilu wybierz powiadomienia na telefon lub e-mail i ustal godzinę wysyłki. Dostaniesz podsumowanie zadań na dany dzień. Możesz też włączyć dodatkowe przypomnienie o zaległych zadaniach."
       }
     }
   },
 
   "featureGrid": {
     "header": {
-      "title": "Funkcje, które utrzymują rutynę pielęgnacji",
-      "subtitle": "Flovers opiera się na kilku praktycznych rozwiązaniach: sensownych interwałach startowych, zadaniach z przypomnień, codziennych powiadomieniach, skrótach QR i opcjonalnych odczytach IoT — żeby rośliny miały się dobrze bez ciągłego zastanawiania się."
+      "title": "Wszystko, co ułatwia codzienną pielęgnację",
+      "subtitle": "Podpowiedzi, jak często dbać o rośliny, automatycznie tworzone zadania i codzienne powiadomienia pomagają pamiętać o pielęgnacji. Do tego kody QR, które prowadzą prosto do rośliny w aplikacji, oraz odczyty z czujników, jeśli chcesz je podłączyć."
     },
     "tiles": {
       "intervals": {
-        "title": "Proponowane interwały z definicji roślin",
-        "text": "Podepnij roślinę do definicji, a Flovers zaproponuje interwały startowe na podstawie gatunku i Twoich warunków. Możesz je przyjąć, poprawić albo trzymać swój własny rytm."
+        "title": "Podpowiedzi, jak często dbać o roślinę",
+        "text": "Wybierz opis gatunku, a Flovers zaproponuje częstotliwość pielęgnacji odpowiednią dla rośliny i warunków, w których rośnie. Możesz skorzystać z podpowiedzi, zmienić je lub ustawić własne terminy."
       },
       "tasks": {
         "title": "Przypomnienia, które zamieniają się w zadania",
-        "text": "Ustaw cykliczne przypomnienie (podlewanie, zraszanie, nawożenie, przesadzanie, pielęgnacja). Flovers zamienia je w zadania z terminami. Gdy wykonasz jedno, kolejne tworzy się automatycznie."
+        "text": "Ustaw, jak często chcesz podlewać, zraszać, nawozić, przesadzać lub wykonywać inne zabiegi pielęgnacyjne. Flovers utworzy zadanie z terminem, a po jego wykonaniu automatycznie zaplanuje następne."
       },
       "notifications": {
-        "title": "Codzienne powiadomienia push lub e-mail",
-        "text": "W ustawieniach profilu wybierasz push albo e-mail. Flovers może wysyłać dzienne podsumowanie o wybranej godzinie (np. 14:00) z zadaniami na dziś oraz opcjonalnie przypomnieć ~24h później, jeśli coś jest zaległe."
+        "title": "Codzienne powiadomienia na telefon lub e-mail",
+        "text": "W ustawieniach profilu wybierz sposób powiadamiania i godzinę wysyłki, np. 14:00. Flovers może codziennie wysyłać listę zadań na dziś oraz przypomnieć o zaległościach po około 24 godzinach, jeśli włączysz tę opcję."
       },
       "qr": {
-        "title": "Skanuj QR i od razu jesteś na ekranie rośliny",
-        "text": "Wydrukuj kod QR dla rośliny i przyklej go do doniczki. Skanujesz i natychmiast otwierasz Szczegóły rośliny — najszybsza droga do sprawdzenia kontekstu i odhaczenia pielęgnacji."
+        "title": "Zeskanuj kod QR i otwórz szczegóły rośliny",
+        "text": "Wydrukuj kod QR rośliny i przyklej go do doniczki. Wystarczy go zeskanować, by sprawdzić informacje o roślinie i oznaczyć zadanie jako wykonane."
       },
       "iot": {
-        "title": "Odczyty IoT na żywo i trendy",
-        "text": "Podepnij własne urządzenie na ESP albo Arduino i wysyłaj odczyty takie jak temperatura, wilgotność, światło i wilgotność gleby. W aplikacji masz wykresy dzienne, tygodniowe i miesięczne, więc łatwo wyłapiesz wzorce i dopasujesz rutyny."
+        "title": "Odczyty z czujników i wykresy zmian",
+        "text": "Podłącz własne urządzenie z ESP lub Arduino, które mierzy temperaturę, wilgotność powietrza, natężenie światła i wilgotność gleby. Na wykresach dziennych, tygodniowych i miesięcznych zobaczysz, jak zmieniają się warunki, i łatwiej dopasujesz pielęgnację."
       }
     },
     "images": {
@@ -75,47 +75,47 @@
 
   "core": {
     "title": "Dwie rzeczy, które Flovers robi najlepiej",
-    "lead": "Solidna baza roślin i szybkie rozpoznawanie ze zdjęcia. Wybierasz dopasowanie, podpinasz raz i masz sensowny punkt startowy do pielęgnacji.",
+    "lead": "Baza gatunków i rozpoznawanie ze zdjęcia pomogą ustalić, jaką masz roślinę i czego potrzebuje. Wystarczy wybrać pasujący opis, by zacząć planować pielęgnację.",
     "tiles": {
       "defs": {
-        "title": "700+ definicji roślin z realnymi wskazówkami",
-        "desc": "Przeglądaj definicje ze zdjęciami i kluczowymi cechami. Podepnij roślinę, a Flovers poprowadzi Cię sensownymi domyślnymi ustawieniami.",
+        "title": "Ponad 700 opisów roślin ze wskazówkami pielęgnacyjnymi",
+        "desc": "Przeglądaj zdjęcia i opisy gatunków. Wybierz opis dla swojej rośliny, a Flovers podpowie, od jakich ustawień pielęgnacji zacząć.",
         "bullets": [
-          "Cechy pielęgnacyjne: światło, gleba, podlewanie, wilgotność, temperatura.",
-          "Dobry punkt startowy, który możesz dopasować do swoich warunków.",
-          "Szybkie powiązanie, żeby każda roślina miała jasną bazę."
+          "Wymagania dotyczące światła, podłoża, podlewania, wilgotności i temperatury.",
+          "Zalecenia, które możesz dopasować do warunków w swoim domu.",
+          "Łatwy wybór opisu gatunku dla każdej dodanej rośliny."
         ]
       },
       "recognition": {
-        "title": "Rozpoznawanie ze zdjęcia z podpowiedzią najlepszego dopasowania",
-        "desc": "Zrób zdjęcie lub dodaj je z galerii, a Flovers zaproponuje, co to może być. Wybierasz najlepsze dopasowanie i idziesz dalej.",
+        "title": "Zrób zdjęcie i sprawdź, co to za roślina",
+        "desc": "Zrób zdjęcie lub wybierz je z galerii. Flovers zaproponuje pasujące gatunki, a ty wybierzesz właściwy opis dla swojej rośliny.",
         "bullets": [
-          "Najlepiej działa przy wyraźnych, dobrze oświetlonych zdjęciach.",
-          "Pokazuje kilka podobnych opcji do wyboru.",
-          "Zaprojektowane, by oszczędzać czas, a nie blokować Cię na jednej zgadywance."
+          "Najlepsze wyniki dają wyraźne, dobrze oświetlone zdjęcia.",
+          "Kilka podobnych gatunków do porównania i wyboru.",
+          "Wynik jest podpowiedzią — to ty wybierasz pasujący gatunek."
         ]
       }
     }
   },
 
   "qr": {
-    "title": "Skaner QR: fizyczny skrót",
-    "lead": "Wygeneruj kod QR dla każdej rośliny, wydrukuj go, przyklej do doniczki, a potem skanuj, żeby od razu przejść do szczegółów i zadań tej rośliny.",
+    "title": "Kod na doniczce, szczegóły w aplikacji",
+    "lead": "Wygeneruj kod QR rośliny, wydrukuj go i przyklej do doniczki. Po zeskanowaniu od razu zobaczysz jej szczegóły i zadania.",
     "image": {
       "alt": "Skanowanie kodu QR rośliny w aplikacji Flovers"
     },
     "blocks": {
       "create": {
         "title": "Utwórz → wydrukuj → przyklej",
-        "text": "Każda roślina ma własne ID. W Szczegółach rośliny możesz wygenerować kod QR, zapisać go na telefonie lub wysłać mailem, żeby go wydrukować i nakleić na doniczkę."
+        "text": "Każda dodana roślina ma własny identyfikator. W jej szczegółach wygenerujesz kod QR, który możesz zapisać na telefonie lub wysłać e-mailem. Potem wystarczy go wydrukować i przykleić do doniczki."
       },
       "scan": {
-        "title": "Skanuj → potwierdź → otwórz Szczegóły rośliny",
-        "text": "Użyj wbudowanego skanera QR. Po potwierdzeniu kodu przez backend zostaniesz przeniesiony prosto do tej rośliny — z zadaniami, przypomnieniami, notatkami, odczytami i pełnym kontekstem."
+        "title": "Zeskanuj → potwierdź → otwórz szczegóły rośliny",
+        "text": "Użyj skanera QR w aplikacji. Po sprawdzeniu kodu otworzą się szczegóły właściwej rośliny: zadania, przypomnienia, notatki i odczyty z czujników."
       },
       "care": {
-        "title": "Pielęgnacja w momencie",
-        "text": "Podlej roślinę, zeskanuj etykietę i odhacz zadanie jako wykonane — albo po prostu zeskanuj, żeby sprawdzić, czy coś jest do zrobienia. Szybkie połączenie między fizyczną rośliną a Twoimi danymi."
+        "title": "Podlej, zeskanuj, gotowe",
+        "text": "Po podlaniu zeskanuj etykietę i oznacz zadanie jako wykonane. Możesz też najpierw sprawdzić, czego roślina dziś potrzebuje. Wszystkie jej dane masz pod ręką, gdy stoisz przy doniczce."
       }
     }
   },

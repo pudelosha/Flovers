@@ -3,90 +3,90 @@
     "title": "Kreator dodawania rośliny",
     "sections": [
       {
-        "heading": "Cel tego procesu",
+        "heading": "Jak dodać roślinę",
         "body": [
-          "Kreator dodawania rośliny to prowadzony proces w 9 krokach, który służy do utworzenia nowej Instancji rośliny na Twoim koncie.",
-          "Pomaga (opcjonalnie) powiązać roślinę z Definicją rośliny z bazy Flovers, zebrać kontekst (lokalizacja, ekspozycja) oraz opcjonalnie wygenerować przypomnienia na podstawie preferencji pielęgnacyjnych.",
-          "Kreator służy wyłącznie do tworzenia nowej rośliny. Edycja istniejącej rośliny odbywa się w innym widoku/procesie."
+          "Kreator przeprowadzi cię przez 9 kroków dodawania rośliny do twojego konta.",
+          "Wybierzesz lokalizację i uzupełnisz warunki, w których rośnie roślina. Możesz też połączyć ją z opisem gatunku z bazy Flovers i na tej podstawie utworzyć przypomnienia o pielęgnacji.",
+          "Kreator służy do dodawania nowych roślin. Dane roślin, które już masz w aplikacji, zmienisz na ekranie edycji."
         ]
       },
       {
-        "heading": "Krok 01 — Wybór definicji rośliny (opcjonalnie)",
+        "heading": "Krok 1 — Wybierz gatunek (opcjonalnie)",
         "body": [
-          "Możesz wyszukać Definicję rośliny (wbudowany profil gatunkowy) za pomocą pola wyszukiwania.",
-          "Pod polem znajduje się lista popularnych roślin domowych, która działa jako szybki skrót.",
-          "Opcjonalnie możesz użyć Rozpoznawania roślin: uruchom skanowanie, zrób zdjęcie lub wybierz je z galerii, a system zwróci 3 najbardziej dopasowane wyniki.",
-          "Jeśli zaakceptujesz propozycję, wybrana Definicja rośliny zostanie zastosowana do tworzonej rośliny."
+          "Wyszukaj gatunek w bazie Flovers, aby skorzystać z jego opisu i zaleceń pielęgnacyjnych.",
+          "Pod wyszukiwarką znajdziesz listę popularnych roślin domowych. Możesz od razu wybrać jedną z nich.",
+          "Możesz też rozpoznać roślinę ze zdjęcia. Uruchom skanowanie, zrób zdjęcie lub wybierz je z galerii. Aplikacja zaproponuje 3 najlepiej pasujące gatunki.",
+          "Po zaakceptowaniu propozycji dodawana roślina zostanie powiązana z opisem wybranego gatunku."
         ]
       },
       {
-        "heading": "Krok 02 — Podgląd definicji",
+        "heading": "Krok 2 — Sprawdź opis gatunku",
         "body": [
-          "Jeśli wybrano Definicję rośliny, w tym kroku wyświetlane są jej szczegóły: obraz oraz podstawowe cechy i preferencje.",
-          "To krok weryfikacyjny, który pozwala potwierdzić właściwy profil przed przejściem dalej."
+          "Jeśli wybierzesz gatunek, zobaczysz jego zdjęcie, podstawowe cechy i wymagania pielęgnacyjne.",
+          "Sprawdź, czy opis pasuje do twojej rośliny, zanim przejdziesz dalej."
         ]
       },
       {
-        "heading": "Krok 03 — Wybór lokalizacji (wymagane)",
+        "heading": "Krok 3 — Wybierz lokalizację (wymagane)",
         "body": [
-          "Wybierz Lokalizację, w której znajduje się roślina (np. Kuchnia, Salon, Balkon).",
-          "Na tym etapie możesz również dodać nową Lokalizację.",
-          "Aktualnie wybór Lokalizacji jest wymagany, aby przejść do kolejnych kroków."
+          "Wybierz miejsce, w którym trzymasz roślinę, na przykład kuchnię, salon lub balkon.",
+          "Jeśli na liście nie ma odpowiedniego miejsca, możesz tutaj dodać nową lokalizację.",
+          "Aby przejść dalej, musisz wybrać lokalizację."
         ]
       },
       {
-        "heading": "Krok 04 — Ekspozycja (opcjonalne pomiary)",
+        "heading": "Krok 4 — Określ stanowisko (opcjonalnie)",
         "body": [
-          "Ten krok pozwala zapisać kontekst ekspozycji: kierunek, poziom światła oraz odległość od okna.",
-          "Kierunek może zostać zmierzony z użyciem kompasu telefonu, jeśli aplikacja ma przyznane uprawnienia do kompasu/czujników.",
-          "Poziom światła może zostać zmierzony, jeśli urządzenie posiada odpowiedni czujnik oraz udzielono wymaganych uprawnień.",
-          "Wartości ekspozycji są opcjonalne — możesz je uzupełnić ręcznie albo pominąć."
+          "Podaj stronę świata, natężenie światła i odległość rośliny od okna.",
+          "Stronę świata możesz sprawdzić za pomocą kompasu w telefonie, jeśli aplikacja ma dostęp do odpowiednich czujników.",
+          "Możesz też zmierzyć natężenie światła, jeśli telefon ma taki czujnik i przyznasz aplikacji wymagane uprawnienia.",
+          "Te dane nie są wymagane. Możesz wpisać je ręcznie lub pominąć."
         ]
       },
       {
-        "heading": "Krok 05 — Doniczka i podłoże (opcjonalnie)",
+        "heading": "Krok 5 — Podaj rodzaj doniczki i podłoża (opcjonalnie)",
         "body": [
-          "Określ rodzaj pojemnika/doniczki (np. plastik, ceramika) oraz rodzaj podłoża/substratu.",
-          "Te pola są opcjonalne, ale mogą pomóc w lepszym dopasowaniu sugerowanych interwałów, gdy włączone są automatyczne zadania."
+          "Wybierz rodzaj doniczki, na przykład plastikową lub ceramiczną, oraz podłoże, w którym rośnie roślina.",
+          "Możesz pominąć te pola. Jeśli jednak włączysz automatyczne zadania, te informacje pomogą lepiej dobrać częstotliwość pielęgnacji."
         ]
       },
       {
-        "heading": "Krok 06 — Automatyczne zadania (opcjonalnie, przy Definicji rośliny)",
+        "heading": "Krok 6 — Ustaw automatyczne zadania (opcjonalnie, po wybraniu gatunku)",
         "body": [
-          "Jeśli roślina jest powiązana z Definicją rośliny, Flovers może automatycznie utworzyć przypomnienia/zadania na podstawie preferencji z bazy.",
-          "Zaznacz główny checkbox, aby włączyć automatyczne generowanie, a następnie wybierz typy zadań, które mają zostać utworzone (np. podlewanie, zraszanie, nawożenie, przesadzanie, pielęgnacja).",
-          "Sugerowane interwały bazują na Definicji rośliny i mogą zostać dopasowane na podstawie Ekspozycji oraz Doniczki/Podłoża, jeśli te dane są dostępne.",
-          "Możesz pominąć ten krok i utworzyć przypomnienia ręcznie w późniejszym czasie."
+          "Jeśli wybierzesz opis gatunku, Flovers może na podstawie jego wymagań automatycznie utworzyć przypomnienia i zadania.",
+          "Zaznacz główne pole wyboru, aby włączyć tę opcję. Następnie wybierz czynności, o których aplikacja ma przypominać: podlewanie, zraszanie, nawożenie, przesadzanie lub inne zabiegi pielęgnacyjne.",
+          "Sugerowana częstotliwość wynika z wymagań gatunku. Aplikacja może ją dopasować do stanowiska, doniczki i podłoża, jeśli podasz te informacje.",
+          "Możesz pominąć ten krok i później samodzielnie dodać przypomnienia."
         ]
       },
       {
-        "heading": "Krok 07 — Dodanie własnego zdjęcia (opcjonalnie)",
+        "heading": "Krok 7 — Dodaj zdjęcie (opcjonalnie)",
         "body": [
-          "Możesz dodać własne zdjęcie rośliny z telefonu.",
-          "Ten krok jest opcjonalny i w zależności od Twojego przepływu w aplikacji może być możliwy również później."
+          "Wybierz z telefonu własne zdjęcie rośliny.",
+          "Zdjęcie nie jest wymagane. Możesz też dodać je później w opcjach edycji rośliny."
         ]
       },
       {
-        "heading": "Krok 08 — Dane końcowe (wymagana nazwa)",
+        "heading": "Krok 8 — Nadaj nazwę i uzupełnij dane",
         "body": [
-          "Ustaw nazwę wyświetlaną rośliny (wymagana).",
-          "Opcjonalnie dodaj notatki oraz datę zakupu.",
-          "Te informacje są widoczne w Szczegółach rośliny i pomagają prowadzić czytelną historię pielęgnacji."
+          "Nadaj roślinie nazwę — to pole jest wymagane.",
+          "Jeśli chcesz, dodaj notatki i datę zakupu.",
+          "Te informacje znajdziesz później w Szczegółach rośliny. Pomogą ci prowadzić historię jej pielęgnacji."
         ]
       },
       {
-        "heading": "Krok 09 — Podsumowanie i potwierdzenie",
+        "heading": "Krok 9 — Zobacz podsumowanie",
         "body": [
-          "Po poprawnym dodaniu rośliny kreator wyświetla ekran potwierdzenia/podsumowania.",
-          "Z tego miejsca możesz przejść do listy roślin lub otworzyć nowo utworzoną roślinę — zależnie od nawigacji w aplikacji."
+          "Po dodaniu rośliny zobaczysz potwierdzenie i podsumowanie.",
+          "Stąd możesz przejść do listy roślin lub otworzyć szczegóły nowej rośliny, korzystając z dostępnych opcji."
         ]
       },
       {
-        "heading": "Uwagi i uprawnienia",
+        "heading": "Potrzebne uprawnienia",
         "body": [
-          "Rozpoznawanie roślin wymaga dostępu do aparatu i/lub galerii, zależnie od sposobu dostarczenia zdjęcia.",
-          "Pomiary ekspozycji mogą wymagać uprawnień do czujników (np. kompas) oraz zależą od dostępności sprzętu w urządzeniu.",
-          "Powiązanie z Definicją rośliny jest opcjonalne — możesz pominąć ten etap i nadal utworzyć roślinę, a przypomnienia dodać ręcznie."
+          "Do rozpoznania rośliny potrzebny jest dostęp do aparatu lub galerii, zależnie od tego, jak dodasz zdjęcie.",
+          "Pomiary stanowiska zależą od czujników dostępnych w telefonie, na przykład kompasu, i mogą wymagać odpowiednich uprawnień.",
+          "Nie musisz wybierać opisu gatunku. Możesz dodać roślinę bez niego, a przypomnienia ustawić samodzielnie."
         ]
       }
     ]

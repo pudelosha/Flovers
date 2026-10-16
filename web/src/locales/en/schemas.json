@@ -1,7 +1,8 @@
 {
   "common": {
     "copy": "Copy",
-    "copied": "Copied"
+    "copied": "Copied",
+    "closePreview": "Close image preview"
   },
   "title": "Device API & wiring",
   "retrySafety": "Set supports_task_retry to true only if your firmware saves task IDs and results before running the pump and can report a repeated task without watering twice. The generated example includes this protection. Regenerate and reflash existing devices to enable safe retries; older firmware keeps one-shot task delivery.",
@@ -60,7 +61,7 @@
       ],
       "items": [
         "a scheduled manual watering task, using task_id",
-        "or an automatic watering event, using source: \"automatic\""
+        "an automatic watering event, using source: \"automatic\" and the task_id returned before running the pump"
       ]
     },
     "feed": {
@@ -101,7 +102,7 @@
     "desc": [
       "After the pump runs, the device reports completion.",
       "For manual watering, include the task_id returned by pump-next-task.",
-      "For automatic watering, omit task_id and use source: \"automatic\"."
+      "For automatic watering, include the task_id returned by pump-auto-claim and use source: \"automatic\"."
     ],
     "manualPayload": "Manual watering completion payload",
     "automaticPayload": "Automatic watering completion payload",
@@ -240,5 +241,6 @@
     "ariaPrimary": "Sample device wiring schema",
     "placeholderTitlePrimary": "Sample device wiring schema",
     "placeholderSubPrimary": "Click the image to display it in full screen."
-  }
+  },
+  "claimSafety": "Before automatic watering, request permission with POST /readings/pump-auto-claim/, including secret, device_key and moisture from the current measurement; device_id is optional. Run the pump only after run: true, and use the returned task_id when reporting completion. The generated firmware handles this process."
 }

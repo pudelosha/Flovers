@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_overview": {
     "title": "Overview",
     "sections": [
@@ -70,7 +70,7 @@
         "body": [
           "Flovers stores account data and plant-related data needed to provide the Service (plants, reminders, tasks, notes, and sensor readings).",
           "Passwords are stored in hashed form; account activation is confirmed via email verification.",
-          "Flovers aims to keep data within the EU; hosting is planned on Hetzner (EU) and push notifications use Firebase.",
+          "Flovers aims to keep data within the EU. The backend runs on a Hetzner VPS, and push notifications use Firebase.",
           "For details, always refer to the Privacy Policy and the Terms of Service available on the website and in the app."
         ]
       },

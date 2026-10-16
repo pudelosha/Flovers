@@ -1,8 +1,10 @@
 import React from "react";
 import QRCode from "react-qr-code";
+import { useTranslation } from "react-i18next";
 import { GooglePlayIcon, AppleIcon } from "./Icons";
 
 export default function StoreBadge({ platform, kicker, main, url, disabledText }) {
+  const { t } = useTranslation("common");
   const disabled = !url;
 
   return (
@@ -29,7 +31,7 @@ export default function StoreBadge({ platform, kicker, main, url, disabledText }
       {/* QR (desktop) */}
       <div className="storeqr" aria-hidden={disabled ? "true" : "false"}>
         {url ? (
-          <div className="storeqr-inner" title="Scan to open store link">
+          <div className="storeqr-inner" title={t("a11y.scanStoreLink")}>
             <QRCode value={url} size={72} />
           </div>
         ) : (

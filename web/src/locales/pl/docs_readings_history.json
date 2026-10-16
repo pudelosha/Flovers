@@ -3,47 +3,47 @@
     "title": "Historia odczytów",
     "sections": [
       {
-        "heading": "Cel tego widoku",
+        "heading": "Co znajdziesz w Historii odczytów",
         "body": [
-          "Widok Historia odczytów zapewnia pełny wgląd w dane pomiarowe z przeszłości dla powiązanego urządzenia i rośliny.",
-          "W przeciwieństwie do listy Odczytów (gdzie widoczne są głównie ostatnie wartości), ten widok służy do analizy trendów i zmian w czasie na wykresach."
+          "W Historii odczytów sprawdzisz wcześniejsze pomiary z urządzenia przypisanego do rośliny.",
+          "Lista Odczyty pokazuje najnowsze wartości, a wykresy w historii pozwalają zobaczyć, jak zmieniały się warunki z upływem czasu."
         ]
       },
       {
-        "heading": "Zakresy czasu: Dzień, Tydzień, Miesiąc",
+        "heading": "Zakres czasu: dzień, tydzień lub miesiąc",
         "body": [
-          "Użytkownik może przełączać się pomiędzy trzema zakresami: Dzień, Tydzień oraz Miesiąc.",
-          "Widok Dzień prezentuje odczyty dla jednego dnia w interwale godzinowym (zakładając, że urządzenie wysyła dane co godzinę i użytkownik akceptuje większe zużycie baterii po stronie urządzenia).",
-          "Widoki Tydzień i Miesiąc pokazują dane w dłuższej perspektywie, co ułatwia wykrywanie trendów."
+          "Możesz wybrać jeden z trzech zakresów: Dzień, Tydzień lub Miesiąc.",
+          "Widok Dzień pokazuje odczyty z danego dnia w odstępach godzinowych, o ile urządzenie tak często przesyła dane. Pamiętaj, że częstsze wysyłanie danych zwiększa zużycie baterii urządzenia.",
+          "Widoki Tydzień i Miesiąc pokazują dłuższe okresy, dzięki czemu łatwiej zauważyć powtarzające się zmiany."
         ]
       },
       {
-        "heading": "Wybór parametru pomiaru",
+        "heading": "Wybór pomiaru",
         "body": [
-          "Wykresy dostępne są dla parametrów: temperatura powietrza, wilgotność powietrza, poziom światła oraz wilgotność gleby (w zależności od tego, co mierzy urządzenie).",
-          "Parametr wybierany jest przyciskami pod wykresem (Temp, Hum, Light, Moist)."
+          "Na wykresie możesz sprawdzić temperaturę i wilgotność powietrza, natężenie światła oraz wilgotność gleby. Dostępność pomiarów zależy od czujników urządzenia.",
+          "Rodzaj pomiaru wybierzesz przyciskami pod wykresem (Temp, Hum, Light, Moist)."
         ]
       },
       {
-        "heading": "Nawigacja po wcześniejszych okresach",
+        "heading": "Przeglądanie wcześniejszych pomiarów",
         "body": [
-          "Strzałki przy wybranym okresie pozwalają przechodzić pomiędzy wcześniejszymi dniami, tygodniami lub miesiącami.",
-          "Nawigacja jest dostępna tylko dla okresów, dla których istnieją dane — przyszłe okresy nie są wyświetlane."
+          "Strzałkami przy wybranym okresie przejdziesz do wcześniejszych dni, tygodni lub miesięcy.",
+          "Możesz przeglądać tylko okresy, dla których są dostępne dane. Przyszłe daty nie są wyświetlane."
         ]
       },
       {
-        "heading": "Usuwanie historii odczytow",
+        "heading": "Usuwanie historii odczytów",
         "body": [
-          "Menu wykresu zawiera akcje Usun odczyty, ktora pomaga porzadkowac historyczne dane czujnikow dla wybranego urzadzenia.",
-          "Mozesz usunac odczyty z konkretnego dnia, tygodnia lub miesiaca, usunac odczyty starsze niz wybrany okres albo usunac tylko wybrane typy pomiarow, takie jak temperatura, wilgotnosc, swiatlo lub wilgotnosc gleby.",
-          "Przy usuwaniu wedlug typu pomiaru Flovers usuwa wybrana wartosc, zachowujac pozostale dane z tego samego rekordu, gdy jest to mozliwe. Usuniecie jest trwale, dlatego nalezy uzywac tej opcji ostroznie."
+          "W menu wykresu wybierz Usuń odczyty, aby usunąć niepotrzebne pomiary wybranego urządzenia.",
+          "Możesz usunąć odczyty z danego dnia, tygodnia lub miesiąca, odczyty starsze niż wybrany okres albo tylko wybrane pomiary: temperaturę, wilgotność powietrza, natężenie światła lub wilgotność gleby.",
+          "Jeśli usuwasz wybrany rodzaj pomiaru, Flovers zachowa pozostałe wartości z tego samego odczytu, o ile to możliwe. Usunięcia nie można cofnąć."
         ]
       },
       {
-        "heading": "Dostępność danych i interpretacja",
+        "heading": "Brakujące dane i dokładność pomiarów",
         "body": [
-          "Jeśli urządzenie nie dostarczyło odczytów dla wybranego okresu, wykres będzie pusty lub może zawierać braki danych.",
-          "Dane z czujników mają charakter informacyjny i powinny być interpretowane wraz z obserwacją roślin oraz świadomością wpływu kalibracji, umiejscowienia czujników i warunków otoczenia."
+          "Jeśli urządzenie nie przesłało danych z wybranego okresu, wykres będzie pusty lub pojawią się na nim przerwy.",
+          "Traktuj odczyty jako wskazówkę i porównuj je ze stanem rośliny. Na dokładność pomiarów wpływają kalibracja, umiejscowienie czujników i warunki otoczenia."
         ]
       }
     ]

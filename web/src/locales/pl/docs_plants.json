@@ -3,52 +3,52 @@
     "title": "Rośliny",
     "sections": [
       {
-        "heading": "Cel tego widoku",
+        "heading": "Twoje rośliny w jednym miejscu",
         "body": [
-          "Widok Rośliny wyświetla wszystkie Instancje roślin utworzone w Twoim koncie.",
-          "Każdy kafelek reprezentuje jedną roślinę (Twój egzemplarz). Z kafelka możesz przejść do Szczegółów rośliny lub skorzystać ze skrótów w menu trzech kropek (np. przypomnienia, dziennik, kod QR)."
+          "Na ekranie Rośliny znajdziesz wszystkie rośliny dodane do swojego konta.",
+          "Każda ma własny kafelek. Dotknij go, aby otworzyć Szczegóły rośliny, lub skorzystaj z menu trzech kropek, aby przejść do przypomnień, dziennika czy kodu QR."
         ]
       },
       {
-        "heading": "Kafelki roślin (lista)",
+        "heading": "Co widać na liście",
         "body": [
-          "Kafelek rośliny pokazuje nazwę rośliny oraz (jeśli dostępne) nazwę powiązanej definicji rośliny (gatunek) i przypisaną Lokalizację.",
-          "Dotknięcie treści kafelka (poza menu z trzema kropkami) przenosi do widoku Szczegóły rośliny."
+          "Na kafelku zobaczysz nazwę rośliny, jej lokalizację i gatunek, jeśli roślina jest powiązana z jego opisem.",
+          "Dotknij kafelka poza menu trzech kropek, aby otworzyć Szczegóły rośliny."
         ]
       },
       {
-        "heading": "Menu trzech kropek (akcje rośliny)",
+        "heading": "Menu rośliny",
         "body": [
-          "Każdy kafelek ma menu z trzema kropkami zawierające akcje dla wybranej rośliny:",
-          "Edytuj roślinę: otwiera edycję danych i parametrów rośliny.",
-          "Pokaż przypomnienia: przechodzi do widoku Przypomnienia z filtrem ustawionym na przypomnienia powiązane z wybraną rośliną.",
-          "Pokaż dziennik rośliny: otwiera modal z historią zamkniętych zadań (wraz z notatkami użytkownika). Notatki są widoczne i nie są ukrywane.",
-          "Pokaż kod QR: otwiera modal z kodem QR dla rośliny, krótkim opisem oraz opcjami zapisania (pobrania) lub wysłania kodu na własny adres e-mail.",
-          "Usuń roślinę: trwale usuwa roślinę oraz powiązane dane, takie jak zadania, przypomnienia i połączenia z urządzeniami."
+          "Dotknij trzech kropek na kafelku, aby zobaczyć opcje dla tej rośliny:",
+          "Edytuj roślinę: pozwala zmienić jej dane i ustawienia.",
+          "Pokaż przypomnienia: otwiera Przypomnienia i pokazuje tylko te, które dotyczą wybranej rośliny.",
+          "Pokaż dziennik rośliny: otwiera okno z historią wykonanych zadań i dodanymi do nich notatkami.",
+          "Pokaż kod QR: otwiera okno z kodem rośliny i krótkim opisem. Możesz zapisać kod na urządzeniu lub wysłać go na swój adres e-mail.",
+          "Usuń roślinę: trwale usuwa roślinę wraz z powiązanymi danymi, takimi jak zadania, przypomnienia i powiązania z urządzeniami."
         ]
       },
       {
-        "heading": "Menu przycisku FAB",
+        "heading": "Przycisk szybkich akcji",
         "body": [
-          "FAB w widoku Rośliny udostępnia szybkie akcje:",
-          "Utwórz roślinę: uruchamia Kreator tworzenia rośliny (proces 9 kroków), w którym można precyzyjnie zdefiniować roślinę.",
-          "Sortuj: sortuje kafelki roślin według Nazwy rośliny lub Lokalizacji.",
-          "Filtruj: filtruje listę według Lokalizacji.",
-          "Lokalizacje: przechodzi do widoku Lokalizacje, gdzie można dodawać, edytować i zarządzać lokalizacjami wykorzystywanymi do grupowania i filtrowania."
+          "Przycisk szybkich akcji na ekranie Rośliny otwiera następujące opcje:",
+          "Utwórz roślinę: uruchamia kreator, który w 9 krokach pomaga dodać roślinę i uzupełnić jej dane.",
+          "Sortuj: ustawia kolejność roślin według nazwy lub lokalizacji.",
+          "Filtruj: pokazuje rośliny z wybranej lokalizacji.",
+          "Lokalizacje: otwiera ekran, na którym możesz dodawać i zmieniać miejsca służące do grupowania i filtrowania roślin."
         ]
       },
       {
-        "heading": "Usuwanie rośliny (ważne informacje)",
+        "heading": "Co się dzieje po usunięciu rośliny",
         "body": [
-          "Usunięcie rośliny jest operacją trwałą i nie można jej cofnąć.",
-          "Usunięcie rośliny usuwa Instancję rośliny oraz powiązane dane, takie jak wygenerowane zadania, przypomnienia przypisane do tej rośliny oraz linki do urządzeń."
+          "Usunięcia rośliny nie można cofnąć.",
+          "Wraz z rośliną znikają powiązane z nią dane, w tym zadania, przypomnienia i powiązania z urządzeniami."
         ]
       },
       {
-        "heading": "Gdy nie widać żadnych roślin",
+        "heading": "Lista jest pusta?",
         "body": [
-          "Jeśli lista jest pusta, użyj akcji Utwórz roślinę z menu FAB, aby dodać pierwszą Instancję rośliny.",
-          "Po dodaniu roślin możesz je grupować za pomocą Lokalizacji oraz zarządzać rutynami pielęgnacji poprzez Przypomnienia."
+          "Otwórz menu szybkich akcji i wybierz „Utwórz roślinę”, aby dodać pierwszą roślinę.",
+          "Następnie przypisz rośliny do lokalizacji i ustaw w Przypomnieniach, jak często chcesz je pielęgnować."
         ]
       }
     ]

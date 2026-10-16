@@ -34,6 +34,7 @@ def _section_includes() -> str:
         #include <WiFiClientSecure.h>
         #include <HTTPClient.h>
         #include <Preferences.h>
+        #include <cmath>
         #include <cstring>
         #include <cstdint>
         #include <Wire.h>
@@ -243,6 +244,14 @@ struct PumpTaskCheck
     bool autoPumpEnabled;
     bool moistureSensorEnabled;
     int autoPumpThresholdPct;
+};
+
+// Keep custom types before all functions: Arduino inserts function prototypes.
+struct PumpSafetyRecord
+{
+    int64_t notBefore;
+    char deviceKey[17];
+    unsigned char version;
 };
 """
 
@@ -521,21 +530,25 @@ def _section_reading_payload() -> str:
 
             if (readings.hasTemperature)
             {
-                json += "\\"temperature\\":" + String(readings.temperature, 2);
+                json += "\\"temperature\\":" + (std::isfinite(readings.temperature)
+                    ? String(readings.temperature, 2) : String("null"));
                 firstMetric = false;
             }
 
             if (readings.hasHumidity)
             {
                 if (!firstMetric) json += ",";
-                json += "\\"humidity\\":" + String(readings.humidity, 2);
+                json += "\\"humidity\\":" + (std::isfinite(readings.humidity) &&
+                    readings.humidity >= 0 && readings.humidity <= 100
+                    ? String(readings.humidity, 2) : String("null"));
                 firstMetric = false;
             }
 
             if (readings.hasLight)
             {
                 if (!firstMetric) json += ",";
-                json += "\\"light\\":" + String(readings.light, 0);
+                json += "\\"light\\":" + (std::isfinite(readings.light) && readings.light >= 0
+                    ? String(readings.light, 0) : String("null"));
                 firstMetric = false;
             }
 
@@ -754,13 +767,6 @@ def _section_pump_helpers() -> str:
         // ========================================================
         // PUMP
         // ========================================================
-
-        struct PumpSafetyRecord
-        {
-            int64_t notBefore;
-            char deviceKey[17];
-            unsigned char version;
-        };
 
         bool readPumpSafety(PumpSafetyRecord& record)
         {

@@ -163,7 +163,7 @@ function WiringPlaceholder({ ariaLabel, title, sub, imageSrc, imageAlt, onClick 
   );
 }
 
-function ImageModal({ open, src, alt, onClose }) {
+function ImageModal({ open, src, alt, closeLabel, onClose }) {
   useEffect(() => {
     if (!open) return;
 
@@ -201,7 +201,7 @@ function ImageModal({ open, src, alt, onClose }) {
     >
       <button
         type="button"
-        aria-label="Close image preview"
+        aria-label={closeLabel}
         onClick={onClose}
         style={{
           position: "absolute",
@@ -320,7 +320,8 @@ Invoke-RestMethod \`
   "secret": "string",
   "device_key": "string",
   "device_id": "number optional",
-  "supports_task_retry": "boolean optional, defaults false"
+  "supports_task_retry": "boolean optional, defaults false",
+  "supports_auto_claim": "boolean optional, defaults false"
 }`,
     []
   );
@@ -329,7 +330,8 @@ Invoke-RestMethod \`
     () => `{
   "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
-  "device_id": 12
+  "device_id": 12,
+  "supports_auto_claim": true
 }`,
     []
   );
@@ -369,7 +371,8 @@ $body = @'
 {
   "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
-  "device_id": 12
+  "device_id": 12,
+  "supports_auto_claim": true
 }
 '@
 
@@ -398,6 +401,7 @@ Invoke-RestMethod \`
   "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
   "device_id": 12,
+  "task_id": 124,
   "source": "automatic",
   "success": true
 }`,
@@ -560,6 +564,7 @@ digitalWrite(PUMP_PIN, LOW);`,
               <Paragraphs value={trArray("pumpNextTask.desc")} />
               <BulletList items={trArray("pumpNextTask.items")} />
               <p className="muted">{t("retrySafety")}</p>
+              <p className="muted">{t("claimSafety")}</p>
 
               <CodeBlock label={t("pumpNextTask.payloadShape")} text={pumpNextTaskSchema} />
               <CodeBlock label={t("pumpNextTask.examplePayload")} text={pumpNextTaskExamplePayload} />
@@ -705,6 +710,7 @@ digitalWrite(PUMP_PIN, LOW);`,
         open={Boolean(modalImage)}
         src={modalImage?.src}
         alt={modalImage?.alt || ""}
+        closeLabel={t("common.closePreview")}
         onClose={() => setModalImage(null)}
       />
     </>

@@ -3,52 +3,52 @@
     "title": "Logowanie i rejestracja",
     "sections": [
       {
-        "heading": "Tworzenie nowego konta (Rejestracja)",
+        "heading": "Jak założyć konto",
         "body": [
-          "Aby korzystać z Flovers, należy utworzyć indywidualne konto użytkownika. Rejestracja odbywa się bezpośrednio w aplikacji mobilnej.",
-          "Podczas rejestracji wymagany jest jedynie adres e-mail oraz hasło. Na tym etapie nie są wymagane żadne dodatkowe dane osobowe.",
-          "Hasło musi mieć co najmniej 8 znaków oraz zawierać przynajmniej jedną cyfrę i jeden znak specjalny, aby zapewnić podstawowy poziom bezpieczeństwa.",
-          "Przed zakończeniem rejestracji użytkownik musi zaakceptować Regulamin oraz Politykę Prywatności."
+          "Zacznij od założenia konta w aplikacji mobilnej Flovers.",
+          "Wystarczą adres e-mail i hasło. Podczas rejestracji nie prosimy o inne dane osobowe.",
+          "Hasło musi mieć co najmniej 8 znaków, w tym przynajmniej jedną cyfrę i jeden znak specjalny.",
+          "Aby zakończyć rejestrację, zaakceptuj Regulamin i Politykę prywatności."
         ]
       },
       {
         "heading": "Aktywacja konta przez e-mail",
         "body": [
-          "Po wysłaniu formularza rejestracyjnego na podany adres e-mail wysyłana jest wiadomość aktywacyjna.",
-          "Aby aktywować konto, należy kliknąć link potwierdzający znajdujący się w otrzymanej wiadomości.",
-          "Do momentu aktywacji konta logowanie do aplikacji nie jest możliwe."
+          "Po rejestracji otrzymasz wiadomość na podany adres e-mail.",
+          "Kliknij link w wiadomości, aby aktywować konto.",
+          "Po aktywacji możesz zalogować się do aplikacji."
         ]
       },
       {
-        "heading": "Ponowne wysłanie e-maila aktywacyjnego",
+        "heading": "Nie dotarł e-mail aktywacyjny?",
         "body": [
-          "Jeżeli e-mail aktywacyjny nie dotarł, użytkownik może zażądać jego ponownego wysłania z poziomu aplikacji.",
-          "Opcja ta jest dostępna na ekranie logowania lub rejestracji i może być użyta, jeśli wiadomość została zgubiona, opóźniona lub trafiła do spamu.",
-          "Przed ponownym wysłaniem warto sprawdzić folder spam lub inne filtry poczty."
+          "Jeśli nie masz wiadomości aktywacyjnej, możesz wysłać ją ponownie z aplikacji.",
+          "Odpowiednią opcję znajdziesz na ekranie logowania lub rejestracji. Skorzystaj z niej, jeśli wiadomość zaginęła albo nie dotarła.",
+          "Najpierw sprawdź folder ze spamem i pozostałe foldery poczty — wiadomość mogła tam trafić."
         ]
       },
       {
-        "heading": "Logowanie do istniejącego konta",
+        "heading": "Jak się zalogować",
         "body": [
-          "Do zalogowania się wymagany jest jedynie adres e-mail oraz hasło przypisane do konta.",
-          "Jeżeli konto nie zostało jeszcze aktywowane, aplikacja poinformuje o konieczności potwierdzenia adresu e-mail.",
-          "Dane logowania są weryfikowane bezpiecznie po stronie serwera; hasła nie są przechowywane w postaci jawnej."
+          "Wpisz adres e-mail i hasło użyte przy zakładaniu konta.",
+          "Jeśli konto nie jest jeszcze aktywne, aplikacja poprosi o potwierdzenie adresu e-mail.",
+          "Serwer bezpiecznie sprawdza dane logowania. Hasła nie są przechowywane w czytelnej postaci."
         ]
       },
       {
-        "heading": "Resetowanie zapomnianego hasła",
+        "heading": "Jak ustawić nowe hasło",
         "body": [
-          "Jeżeli użytkownik nie może się zalogować z powodu zapomnianego hasła, może zażądać wysłania e-maila do resetu hasła.",
-          "Wiadomość zawiera instrukcje oraz bezpieczny link umożliwiający ustawienie nowego hasła.",
-          "Po ustawieniu nowego hasła możliwe jest natychmiastowe zalogowanie się do aplikacji."
+          "Jeśli nie pamiętasz hasła, skorzystaj z opcji jego resetowania i poproś o wiadomość e-mail.",
+          "W wiadomości znajdziesz instrukcje i bezpieczny link do ustawienia nowego hasła.",
+          "Po zmianie hasła możesz od razu się nim zalogować."
         ]
       },
       {
-        "heading": "Uwagi dotyczące bezpieczeństwa",
+        "heading": "Bezpieczeństwo konta",
         "body": [
-          "Każde konto użytkownika jest chronione indywidualnym hasłem ustawionym podczas rejestracji.",
-          "Ze względów bezpieczeństwa nie należy udostępniać danych logowania osobom trzecim.",
-          "W przypadku podejrzenia nieautoryzowanego dostępu do konta zaleca się niezwłoczną zmianę hasła."
+          "Konto chroni hasło wybrane podczas rejestracji.",
+          "Nie udostępniaj nikomu swoich danych logowania.",
+          "Jeśli podejrzewasz, że ktoś uzyskał dostęp do twojego konta, jak najszybciej zmień hasło."
         ]
       }
     ]

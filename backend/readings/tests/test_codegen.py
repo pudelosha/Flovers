@@ -7,7 +7,7 @@ import ssl
 
 import pytest
 
-from readings.codegen import _section_pump_helpers, generate_arduino_code
+from readings.codegen import _section_pump_helpers, _section_types, generate_arduino_code
 
 
 @pytest.mark.parametrize("interval_hours", [0, -1, 25])
@@ -29,7 +29,9 @@ def test_generated_pump_retries_do_not_repeat_physical_execution(tmp_path):
     harness = Path(__file__).with_name("firmware_pump_harness.cpp").read_text(encoding="utf-8")
     source = tmp_path / "pump.cpp"
     source.write_text(
-        harness.replace("// GENERATED_PUMP_HELPERS", _section_pump_helpers()),
+        harness.replace("// GENERATED_TYPES", _section_types(pump_enabled=True)).replace(
+            "// GENERATED_PUMP_HELPERS", _section_pump_helpers()
+        ),
         encoding="utf-8",
     )
     binary = tmp_path / ("pump.exe" if os.name == "nt" else "pump")
@@ -41,6 +43,33 @@ def test_generated_pump_retries_do_not_repeat_physical_execution(tmp_path):
     result = subprocess.run([str(binary)], capture_output=True, text=True, timeout=10)
     assert result.returncode == 0, result.stdout + result.stderr
     assert "checks passed" in result.stdout
+
+
+@pytest.mark.parametrize("pump_enabled", [False, True], ids=["sensors-only", "with-pump"])
+def test_generated_sketch_compiles_with_arduino_preprocessing(tmp_path, pump_enabled):
+    cli = os.environ.get("FLOVERS_TEST_ARDUINO_CLI")
+    if not cli:
+        pytest.skip("Set FLOVERS_TEST_ARDUINO_CLI to run the ESP32 Arduino build check")
+    # Arduino generates prototypes before compiling .ino files. A direct C++
+    # compile misses errors caused by prototypes referring to later types.
+    sketch = tmp_path / "flovers_firmware"
+    sketch.mkdir()
+    (sketch / "flovers_firmware.ino").write_text(
+        generate_arduino_code(
+            base_url="https://api.example.com", secret="not-a-real-secret",
+            device_id=1, device_key="DEVICE", pump_included=pump_enabled,
+        ),
+        encoding="utf-8",
+    )
+    result = subprocess.run(
+        [
+            cli, "compile", "--fqbn",
+            os.environ.get("FLOVERS_TEST_ARDUINO_FQBN", "esp32:esp32:esp32c3:CDCOnBoot=cdc"),
+            "--build-path", str(tmp_path / "build"), str(sketch),
+        ],
+        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=600,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
 
 
 def test_generated_https_verifies_server_using_valid_trust_anchors():

@@ -1,11 +1,12 @@
 {
   "title": "Dokumentacja",
+  "navigationLabel": "Spis treści dokumentacji",
   "placeholder": {
     "heading": "Wkrótce",
-    "body": "Szczegółowa dokumentacja dla tego ekranu pojawi się wkrótce."
+    "body": "Wkrótce dodamy szczegółowy opis tego ekranu."
   },
   "screens": {
-    "overview": { "title": "Przegląd" },
+    "overview": { "title": "O aplikacji" },
     "auth": { "title": "Logowanie i rejestracja" },
     "home": { "title": "Ekran główny" },
     "taskHistory": { "title": "Historia zadań" },
@@ -16,7 +17,7 @@
     "reminders": { "title": "Przypomnienia" },
     "readings": { "title": "Odczyty" },
     "readingsHistory": { "title": "Historia odczytów" },
-    "scanner": { "title": "Skaner (QR)" },
+    "scanner": { "title": "Skaner kodów QR" },
     "profile": { "title": "Profil i ustawienia" }
   }
 }

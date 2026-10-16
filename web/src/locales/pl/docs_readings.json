@@ -3,198 +3,198 @@
     "title": "Odczyty",
     "sections": [
       {
-        "heading": "Cel tego ekranu",
+        "heading": "Do czego służą Odczyty",
         "body": [
-          "Ekran Odczyty pozwala przeglądać urządzenia IoT połączone z Twoimi roślinami i zarządzać nimi.",
-          "Każde urządzenie może przesyłać do Flovers pomiary środowiskowe, takie jak temperatura powietrza, wilgotność powietrza, poziom światła i wilgotność gleby.",
-          "Ta funkcja jest przeznaczona dla użytkowników, którzy budują własne urządzenia lub z nich korzystają, na przykład płytki Arduino lub oparte na ESP, i chcą monitorować warunki roślin w czasie.",
-          "Urządzenia mogą być również skonfigurowane z pompą wody do ręcznego zaplanowanego podlewania oraz automatycznego podlewania na podstawie wilgotności gleby."
+          "Na ekranie Odczyty sprawdzisz pomiary z urządzeń IoT połączonych z twoimi roślinami i zmienisz ustawienia tych urządzeń.",
+          "Urządzenia mogą przesyłać do Flovers temperaturę i wilgotność powietrza, natężenie światła oraz wilgotność gleby.",
+          "To funkcja dla osób, które korzystają z własnych urządzeń, np. płytek Arduino lub ESP, i chcą śledzić warunki, w jakich rosną ich rośliny.",
+          "Do urządzenia możesz też podłączyć pompę. Pozwoli ci to zlecać podlewanie z aplikacji lub włączyć podlewanie automatyczne, zależne od wilgotności gleby."
         ]
       },
       {
-        "heading": "Kafelki urządzeń i najnowsze odczyty",
+        "heading": "Kafelki urządzeń i najnowsze pomiary",
         "body": [
-          "Ekran wyświetla listę kafelków, z których każdy reprezentuje jedno połączone urządzenie.",
-          "Każdy kafelek pokazuje nazwę urządzenia lub rośliny, lokalizację oraz najnowsze odczyty otrzymane z urządzenia.",
-          "W zależności od czujników włączonych dla urządzenia kafelek może pokazywać temperaturę powietrza, wilgotność powietrza, poziom światła i wilgotność gleby.",
-          "Jeśli nie otrzymano jeszcze żadnych danych, zamiast wartości wyświetlane są symbole zastępcze.",
-          "Jeśli urządzenie jest skonfigurowane z pompą wody, kafelek pokazuje również kontrolki i informacje związane z pompą, w tym czas ostatniego uruchomienia pompy."
+          "Każdy kafelek na liście odpowiada jednemu połączonemu urządzeniu.",
+          "Zobaczysz na nim nazwę urządzenia lub rośliny, lokalizację i ostatnie otrzymane pomiary.",
+          "Kafelek pokazuje dane z włączonych czujników: temperaturę i wilgotność powietrza, natężenie światła oraz wilgotność gleby.",
+          "Jeśli urządzenie nie przesłało jeszcze danych, w miejscu pomiarów pojawią się oznaczenia braku wartości.",
+          "Jeśli urządzenie obsługuje pompę, na kafelku znajdziesz też przyciski podlewania i informację, kiedy pompa ostatnio pracowała."
         ]
       },
       {
-        "heading": "Sekcja pompy wody na kafelkach urządzeń",
+        "heading": "Podlewanie na kafelku urządzenia",
         "body": [
-          "Gdy urządzenie ma włączoną obsługę pompy wody, jego kafelek wyświetla dodatkowe kontrolki pompy.",
-          "Kafelek może pokazywać, czy automatyczne podlewanie pompą jest włączone, próg wilgotności gleby używany do automatycznego podlewania, ostatnie zarejestrowane uruchomienie pompy oraz przycisk do ręcznego zaplanowanego podlewania.",
-          "Przycisk ręcznego podlewania zmienia stan w zależności od tego, czy istnieje już oczekujące żądanie podlewania.",
-          "Jeśli nie ma oczekującego żądania ręcznego podlewania, przycisk pokazuje Zaplanuj podlewanie.",
-          "Jeśli żądanie ręcznego podlewania już oczekuje, przycisk pokazuje Anuluj zaplanowane podlewanie.",
-          "Dzięki temu bezpośrednio na kafelku widać, czy podlewanie zostało już zażądane dla tego urządzenia."
+          "Po włączeniu obsługi pompy na kafelku pojawiają się dodatkowe opcje podlewania.",
+          "Sprawdzisz tam, czy automatyczne podlewanie jest włączone, jaki ma próg wilgotności gleby i kiedy pompa ostatnio pracowała. Znajdziesz też przycisk do zlecenia ręcznego podlewania.",
+          "Napis na przycisku zależy od tego, czy urządzenie czeka już na wykonanie polecenia podlewania.",
+          "Jeśli nie ma oczekującego polecenia, zobaczysz Zaplanuj podlewanie.",
+          "Jeśli podlewanie już czeka na wykonanie, zobaczysz Anuluj zaplanowane podlewanie.",
+          "Dzięki temu od razu wiesz, czy dla danego urządzenia zlecono już podlewanie."
         ]
       },
       {
-        "heading": "Interakcje z kafelkiem",
+        "heading": "Otwieranie wykresów z kafelka",
         "body": [
-          "Dotknięcie treści kafelka przenosi bezpośrednio do ekranu Historii odczytów dla tego urządzenia.",
-          "Dotknięcie konkretnej ikony odczytu, na przykład temperatury, wilgotności, światła lub wilgotności gleby, otwiera ekran Historii odczytów z wstępnie wybranym tym pomiarem.",
-          "Pozwala to szybko uzyskać dostęp do szczegółowych wykresów dla konkretnego typu odczytu."
+          "Dotknij kafelka, aby otworzyć Historię odczytów tego urządzenia.",
+          "Jeśli dotkniesz ikony konkretnego pomiaru, np. temperatury, wilgotności powietrza, światła lub wilgotności gleby, historia otworzy się od razu z wybranym wykresem.",
+          "To szybki sposób na sprawdzenie, jak zmieniał się interesujący cię pomiar."
         ]
       },
       {
-        "heading": "Akcje urządzenia",
+        "heading": "Menu urządzenia",
         "body": [
-          "Każdy kafelek urządzenia zawiera menu z 3 kropkami z dodatkowymi akcjami.",
-          "Dostępne opcje obejmują Historię odczytów, Szczegóły rośliny, Szczegóły urządzenia, Edytuj urządzenie i Usuń urządzenie.",
-          "Akcja Szczegóły urządzenia otwiera okno modalne z informacjami konfiguracyjnymi dla wybranego urządzenia, w tym wygenerowanymi identyfikatorami, włączonymi czujnikami, konfiguracją pompy oraz sekretem konta używanym przez urządzenie.",
-          "Usunięcie urządzenia trwale usuwa je oraz jego powiązanie z rośliną."
+          "Na każdym kafelku urządzenia znajduje się menu z trzema kropkami.",
+          "Znajdziesz w nim opcje: Historia odczytów, Szczegóły rośliny, Szczegóły urządzenia, Edytuj urządzenie i Usuń urządzenie.",
+          "W Szczegółach urządzenia sprawdzisz jego identyfikatory, włączone czujniki, ustawienia pompy i tajny klucz konta, z którego korzysta urządzenie.",
+          "Usunięcie urządzenia jest trwałe i usuwa także jego powiązanie z rośliną."
         ]
       },
       {
         "heading": "Historia odczytów",
         "body": [
-          "Ekran Historia odczytów wyświetla szczegółowe wykresy zebranych danych z czujników.",
-          "Dane można przeglądać przy użyciu agregacji dziennej, tygodniowej i miesięcznej.",
-          "Wykresy są dostępne dla temperatury powietrza, wilgotności powietrza, poziomu światła i wilgotności gleby.",
-          "Wyświetlane mogą być tylko dane dostarczone przez urządzenie.",
-          "Backend przechowuje odczyty w przedziałach godzinowych. Jeśli urządzenie wyśle wiele odczytów dla tej samej godziny, istniejący rekord godzinowy zostanie zaktualizowany, zamiast zostać zduplikowany."
+          "W Historii odczytów przejrzysz wykresy pomiarów zapisanych z urządzenia.",
+          "Możesz wybrać podsumowanie dzienne, tygodniowe lub miesięczne.",
+          "Dostępne są wykresy temperatury i wilgotności powietrza, natężenia światła oraz wilgotności gleby.",
+          "Na wykresach zobaczysz tylko pomiary, które urządzenie rzeczywiście przesłało.",
+          "Flovers zapisuje odczyty w przedziałach godzinowych. Jeśli urządzenie wyśle kilka odczytów w tej samej godzinie, zaktualizują one zapis dla tej godziny, zamiast tworzyć kolejne wpisy."
         ]
       },
       {
-        "heading": "Akcje FAB",
+        "heading": "Menu przycisku szybkich akcji",
         "body": [
-          "Pływający przycisk akcji udostępnia akcje związane z zarządzaniem urządzeniami i konfiguracją.",
-          "Dostępne akcje obejmują Połącz urządzenie, Konfiguracja urządzenia, Sortuj, Filtruj, Wyślij eksport oraz Wyczyść filtr, gdy filtry są aktywne.",
-          "Sortowanie można zastosować według nazwy rośliny, lokalizacji lub czasu ostatniego odczytu.",
-          "Filtrowanie można zastosować według rośliny, lokalizacji i statusu urządzenia, takiego jak włączone lub wyłączone.",
-          "Akcja Wyślij eksport wysyła e-mailem eksport odczytów w arkuszu kalkulacyjnym. Eksport obejmuje rekordy odczytów oraz rekordy zadań podlewania. Jeśli zastosowano filtry, eksportowane dane odzwierciedlają te filtry."
+          "Przycisk szybkich akcji otwiera menu do łączenia, konfigurowania i przeglądania urządzeń.",
+          "Dostępne opcje to: Połącz urządzenie, Konfiguracja urządzenia, Sortuj, Filtruj i Wyślij eksport. Gdy korzystasz z filtrów, pojawia się też Wyczyść filtr.",
+          "Urządzenia możesz posortować według nazwy rośliny, lokalizacji lub czasu ostatniego odczytu.",
+          "Filtry pozwalają wybrać roślinę, lokalizację i stan urządzenia: włączone lub wyłączone.",
+          "Opcja Wyślij eksport wysyła na twój e-mail arkusz z odczytami i historią zadań podlewania. Jeśli masz włączone filtry, obejmie on tylko pasujące dane."
         ]
       },
       {
-        "heading": "Łączenie urządzenia",
+        "heading": "Łączenie urządzenia z rośliną",
         "body": [
-          "Połącz urządzenie służy do skonfigurowania nowego urządzenia odczytowego i powiązania go z rośliną.",
-          "Podczas konfiguracji możesz skonfigurować nazwę urządzenia, połączoną roślinę, stan włączony lub wyłączony, interwał odczytów, włączone czujniki, alerty niskiej wilgotności gleby, powiadomienia e-mail i push o niskiej wilgotności gleby, obsługę pompy wody, automatyczne uruchamianie pompy, próg wilgotności gleby dla automatycznego podlewania oraz powiadomienia e-mail i push po zakończeniu podlewania.",
-          "Każde urządzenie otrzymuje wygenerowany Klucz urządzenia. Konto użytkownika ma również Tajny klucz uwierzytelniania. Razem te dane uwierzytelniające pozwalają fizycznemu urządzeniu komunikować się z backendem."
+          "Wybierz Połącz urządzenie, aby dodać nowe urządzenie pomiarowe i przypisać je do rośliny.",
+          "Podczas konfiguracji nadajesz nazwę, wybierasz roślinę, włączasz lub wyłączasz urządzenie i ustalasz częstotliwość odczytów. Wybierasz też czujniki, alerty i powiadomienia e-mail lub push o niskiej wilgotności gleby. Jeśli korzystasz z pompy, włączasz jej obsługę, automatyczne podlewanie, próg wilgotności i powiadomienia o zakończeniu podlewania.",
+          "Każde urządzenie otrzymuje Klucz urządzenia, a twoje konto ma Tajny klucz uwierzytelniania. Te dwa klucze pozwalają płytce komunikować się z serwerem Flovers."
         ]
       },
       {
-        "heading": "Uwierzytelnianie urządzenia i przepływ danych",
+        "heading": "Jak urządzenie łączy się z Flovers",
         "body": [
-          "Urządzenia uwierzytelniają się przy użyciu Tajnego klucza uwierzytelniania, Klucza urządzenia i opcjonalnego ID urządzenia.",
-          "Dla endpointów przyjmowania danych z urządzeń nie jest wymagany token logowania użytkownika. Autoryzacja odbywa się poprzez dane uwierzytelniające urządzenia.",
-          "Pozwala to na proste integracje IoT, w których płytka może wysyłać dane bezpośrednio do Flovers.",
-          "Wygenerowany kod Arduino lub ESP zawiera wymagane endpointy oraz dane uwierzytelniające dla wybranego urządzenia. Przed wgraniem kodu użytkownik musi uzupełnić własny identyfikator SSID WiFi i hasło."
+          "Urządzenie potwierdza swoją tożsamość za pomocą Tajnego klucza uwierzytelniania, Klucza urządzenia i opcjonalnie ID urządzenia.",
+          "Do przesyłania odczytów nie jest potrzebny token logowania użytkownika. Serwer sprawdza klucze urządzenia.",
+          "Dzięki temu płytka może wysyłać pomiary bezpośrednio do Flovers.",
+          "Wygenerowany kod Arduino lub ESP zawiera adresy API i klucze wybranego urządzenia. Przed wgraniem go na płytkę wpisz nazwę swojej sieci Wi-Fi (SSID) i hasło."
         ]
       },
       {
         "heading": "Konfiguracja urządzenia",
         "body": [
-          "Opcja Konfiguracja urządzenia udostępnia informacje techniczne potrzebne do konfiguracji sprzętu.",
-          "Obejmuje endpoint ingest do wysyłania odczytów, endpoint feed do pobierania najnowszych odczytów, przykładowe payloady, Tajny klucz uwierzytelniania konta oraz opcję rotacji Tajnego klucza uwierzytelniania.",
-          "Rotacja Tajnego klucza uwierzytelniania unieważnia stary sekret, więc każdy istniejący kod urządzenia używający poprzedniego sekretu musi zostać zaktualizowany."
+          "W opcji Konfiguracja urządzenia znajdziesz dane techniczne potrzebne do połączenia sprzętu z Flovers.",
+          "Są tam adresy API: ingest do wysyłania odczytów i feed do pobierania najnowszych danych, przykłady przesyłanych danych, Tajny klucz uwierzytelniania konta oraz opcja jego zmiany.",
+          "Zmiana Tajnego klucza uwierzytelniania unieważnia poprzedni klucz. Musisz wtedy zaktualizować kod na wszystkich urządzeniach, które z niego korzystają."
         ]
       },
       {
         "heading": "Szczegóły urządzenia",
         "body": [
-          "Okno modalne Szczegóły urządzenia pokazuje informacje o konkretnym urządzeniu.",
-          "Obejmuje nazwę urządzenia, Klucz urządzenia, Tajny klucz uwierzytelniania, połączoną roślinę, włączone czujniki oraz informację, czy pompa wody jest połączona.",
-          "Okno modalne pozwala również użytkownikowi wysłać e-mailem wygenerowany kod Arduino dla wybranego urządzenia. E-mail zawiera wygenerowany kod w treści wiadomości oraz jako załącznik .ino.",
-          "Wygenerowany kod opiera się na konfiguracji wybranego urządzenia, w tym włączonych czujnikach, obsłudze pompy, ustawieniach automatycznego podlewania, Kluczu urządzenia, ID urządzenia i Tajnym kluczu uwierzytelniania."
+          "Okno Szczegóły urządzenia pokazuje ustawienia wybranej płytki.",
+          "Znajdziesz w nim nazwę urządzenia, Klucz urządzenia, Tajny klucz uwierzytelniania, przypisaną roślinę, włączone czujniki i informację o podłączonej pompie.",
+          "Możesz stąd wysłać sobie e-mailem kod Arduino dla tego urządzenia. Otrzymasz go w treści wiadomości i w załączniku .ino.",
+          "Kod uwzględnia ustawienia urządzenia: wybrane czujniki, obsługę pompy, automatyczne podlewanie, Klucz urządzenia, ID urządzenia i Tajny klucz uwierzytelniania."
         ]
       },
       {
-        "heading": "Ręczne zaplanowane podlewanie",
+        "heading": "Ręczne podlewanie z aplikacji",
         "body": [
-          "Jeśli urządzenie ma włączoną obsługę pompy wody, użytkownik może zaplanować żądanie ręcznego podlewania.",
-          "Ręczne podlewanie nie uruchamia pompy natychmiast z aplikacji mobilnej. Zamiast tego backend tworzy oczekujące zadanie pompy dla urządzenia.",
-          "Fizyczna płytka sprawdza backend pod kątem oczekujących zadań ręcznego podlewania. Jeśli istnieje oczekujące zadanie, a płytka ma logikę sterowania pompą, może uruchomić pompę, a następnie zgłosić zakończenie z powrotem do backendu.",
-          "Ręczne zaplanowane podlewanie ignoruje bieżącą wartość wilgotności gleby, próg automatycznego podlewania i czas odnowienia automatycznego podlewania.",
-          "Oznacza to, że ręczne podlewanie jest traktowane jako wyraźne żądanie użytkownika.",
-          "Zaplanowane żądanie ręcznego podlewania można również wycofać, zanim urządzenie je odbierze."
+          "Jeśli urządzenie obsługuje pompę, możesz zlecić ręczne podlewanie.",
+          "Wybranie podlewania w aplikacji nie uruchamia pompy od razu. Najpierw na serwerze powstaje polecenie oczekujące na odbiór przez urządzenie.",
+          "Płytka sprawdza, czy czeka na nią polecenie podlewania. Jeśli takie znajdzie i ma wgrany kod do sterowania pompą, może uruchomić pompę, a po zakończeniu poinformować o tym serwer.",
+          "Ręczne podlewanie nie zależy od bieżącej wilgotności gleby, progu automatycznego podlewania ani minimalnej przerwy ustawionej dla automatycznego podlewania.",
+          "Jest wykonywane na twoje wyraźne polecenie.",
+          "Możesz anulować zaplanowane podlewanie, zanim urządzenie odbierze polecenie."
         ]
       },
       {
-        "heading": "Czas zadań ręcznego podlewania",
+        "heading": "Kiedy urządzenie odbiera polecenie podlewania",
         "body": [
-          "Wygenerowany kod urządzenia używa oddzielnego harmonogramu dla odczytów i sprawdzania ręcznego podlewania.",
-          "Domyślnie odczyty z czujników są wysyłane raz na godzinę.",
-          "Sprawdzanie automatycznego podlewania odbywa się jako część godzinowego cyklu odczytów.",
-          "Oczekujące zadania ręcznego podlewania są sprawdzane częściej, domyślnie raz na minutę.",
-          "Pozwala to szybciej odbierać żądania ręcznego podlewania bez wysyłania odczytów z czujników co minutę.",
-          "Kolejność wykonania pozostaje następująca: wyślij odczyty podczas normalnego cyklu odczytu, sprawdź oczekujące ręczne podlewanie, a jeśli ręczne podlewanie nie zostało uruchomione, sprawdź warunki automatycznego podlewania.",
-          "Gdy jednominutowe sprawdzanie ręcznego podlewania działa poza godzinowym cyklem odczytów, sprawdza wyłącznie oczekujące zadania ręcznego podlewania."
+          "Wygenerowany kod osobno ustala, kiedy wysyłać odczyty, a kiedy sprawdzać polecenia ręcznego podlewania.",
+          "Domyślnie urządzenie wysyła odczyty raz na godzinę.",
+          "Przy okazji godzinowego pomiaru sprawdza też warunki automatycznego podlewania.",
+          "Polecenia ręcznego podlewania sprawdza częściej: domyślnie raz na minutę.",
+          "Dzięki temu szybciej reaguje na twoje polecenia bez konieczności wysyłania pomiarów co minutę.",
+          "W cyklu pomiarowym urządzenie najpierw wysyła odczyty, potem sprawdza ręczne podlewanie. Jeśli go nie wykonało, sprawdza warunki podlewania automatycznego.",
+          "Między cyklami pomiarowymi sprawdza raz na minutę wyłącznie polecenia ręcznego podlewania."
         ]
       },
       {
         "heading": "Automatyczne podlewanie",
         "body": [
-          "Jeśli obsługa pompy wody jest włączona, można również włączyć automatyczne podlewanie.",
-          "Automatyczne podlewanie wykorzystuje odczyty wilgotności gleby i skonfigurowany próg.",
-          "Płytka pyta backend o bieżącą konfigurację pompy, w tym o to, czy automatyczne podlewanie jest włączone i jaki próg powinien być używany.",
-          "Jeśli automatyczne podlewanie jest włączone, a bieżąca wilgotność gleby jest poniżej skonfigurowanego progu, płytka może uruchomić pompę.",
-          "Automatyczne podlewanie zależy od włączonej obsługi pompy wody, włączonego czujnika wilgotności gleby, włączonego automatycznego uruchamiania pompy, poprawnego progu wilgotności gleby, aktywnego urządzenia oraz potwierdzenia bieżących ustawień pompy przez backend.",
-          "Automatyczne podlewanie ma czas odnowienia, aby uniknąć zbyt częstego powtarzania aktywacji pompy.",
-          "Ręczne podlewanie ma priorytet nad automatycznym podlewaniem w tym samym cyklu. Jeśli uruchomi się ręczne podlewanie, automatyczne podlewanie zostanie pominięte w tym cyklu."
+          "Jeśli masz włączoną obsługę pompy, możesz też włączyć automatyczne podlewanie.",
+          "Urządzenie korzysta wtedy z pomiaru wilgotności gleby i ustawionego progu.",
+          "Płytka pobiera z serwera aktualne ustawienia pompy: czy automatyczne podlewanie jest włączone i jaki próg obowiązuje.",
+          "Jeśli automatyczne podlewanie jest włączone, a wilgotność gleby spadnie poniżej progu, płytka może uruchomić pompę.",
+          "Do działania potrzebne są: aktywne urządzenie, włączona obsługa pompy, włączony czujnik wilgotności gleby, włączone automatyczne podlewanie, poprawny próg wilgotności i potwierdzenie bieżących ustawień przez serwer.",
+          "Automatyczne podlewanie zachowuje minimalną przerwę między podlewaniami, aby pompa nie włączała się zbyt często.",
+          "Ręczne podlewanie ma pierwszeństwo. Jeśli urządzenie wykona je w danym cyklu, pominie w nim podlewanie automatyczne."
         ]
       },
       {
-        "heading": "Raportowanie zakończenia pracy pompy",
+        "heading": "Potwierdzanie zakończenia podlewania",
         "body": [
-          "Po uruchomieniu pompy urządzenie zgłasza zakończenie z powrotem do backendu.",
-          "Zakończenie pracy pompy może zostać zgłoszone dla ręcznego zaplanowanego podlewania lub automatycznego podlewania wyzwolonego przez wilgotność gleby.",
-          "Gdy uruchomienie pompy zostanie pomyślnie zapisane, backend aktualizuje czas ostatniego uruchomienia pompy, źródło ostatniego uruchomienia pompy oraz powiązany status zadania pompy, jeśli ma to zastosowanie.",
-          "Jeśli powiadomienia o zakończeniu podlewania są włączone, backend może wysyłać powiadomienia e-mail i push po zakończeniu podlewania."
+          "Po zakończeniu pracy pompy urządzenie wysyła potwierdzenie do serwera.",
+          "Dotyczy to zarówno podlewania zleconego ręcznie, jak i automatycznego, wywołanego niską wilgotnością gleby.",
+          "Po zapisaniu potwierdzenia serwer aktualizuje czas ostatniego podlewania, informację, czy było ręczne czy automatyczne, oraz stan powiązanego zadania pompy, jeśli takie istnieje.",
+          "Jeśli włączysz powiadomienia o zakończeniu podlewania, Flovers może wtedy wysłać e-mail lub powiadomienie push."
         ]
       },
       {
         "heading": "Powiadomienia o podlewaniu",
         "body": [
-          "Urządzenia można skonfigurować tak, aby wysyłały powiadomienia po zakończeniu podlewania.",
-          "Obsługiwane typy powiadomień to powiadomienie e-mail i powiadomienie push.",
-          "Są one oddzielne od alertów niskiej wilgotności gleby.",
-          "Powiadomienia o podlewaniu są istotne tylko wtedy, gdy urządzenie ma włączoną obsługę pompy wody.",
-          "Powiadomienie o podlewaniu może zostać wysłane po zakończeniu podlewania ręcznego lub automatycznego, w zależności od raportu zakończenia pracy pompy otrzymanego z urządzenia."
+          "W ustawieniach urządzenia możesz włączyć powiadomienia o zakończeniu podlewania.",
+          "Do wyboru masz e-mail i powiadomienia push.",
+          "Ustawia się je osobno od alertów o niskiej wilgotności gleby.",
+          "Powiadomienia o podlewaniu dotyczą urządzeń z włączoną obsługą pompy.",
+          "Możesz je otrzymać po podlewaniu ręcznym lub automatycznym, gdy urządzenie potwierdzi jego zakończenie."
         ]
       },
       {
-        "heading": "Alerty niskiej wilgotności gleby",
+        "heading": "Alerty o niskiej wilgotności gleby",
         "body": [
-          "Urządzenia z czujnikiem wilgotności gleby można skonfigurować tak, aby wysyłały alerty, gdy wilgotność gleby spadnie poniżej skonfigurowanego progu.",
-          "Alerty niskiej wilgotności gleby obsługują powiadomienia e-mail i powiadomienia push.",
-          "Backend śledzi stan alertu, aby użytkownik nie był powiadamiany wielokrotnie przy każdym odczycie, gdy roślina pozostaje poniżej progu.",
-          "Nowy alert jest wysyłany, gdy wartość wilgotności przechodzi w stan niskiej wilgotności. Stan alertu resetuje się po ponownym wzroście wilgotności powyżej progu.",
-          "Alerty niskiej wilgotności gleby są niezależne od powiadomień o zakończeniu podlewania."
+          "Jeśli urządzenie ma czujnik wilgotności gleby, możesz włączyć alerty o spadku wilgotności poniżej wybranego progu.",
+          "Alerty możesz otrzymywać e-mailem lub jako powiadomienia push.",
+          "Flovers zapamiętuje, że alert został już wysłany. Nie powiadamia cię przy każdym kolejnym odczycie, jeśli gleba nadal jest zbyt sucha.",
+          "Nowy alert pojawia się, gdy wilgotność spadnie poniżej progu. Aby kolejny spadek wywołał następny alert, wilgotność musi najpierw wzrosnąć powyżej progu.",
+          "Alerty o niskiej wilgotności gleby działają niezależnie od powiadomień o zakończeniu podlewania."
         ]
       },
       {
         "heading": "Eksport danych",
         "body": [
-          "Eksport odczytów wysyła użytkownikowi arkusz kalkulacyjny e-mailem.",
-          "Arkusz kalkulacyjny zawiera dane odczytów i rekordy zadań podlewania.",
-          "Karta odczytów zawiera odczyty z czujników, takie jak temperatura, wilgotność, światło i wilgotność gleby.",
-          "Karta zadań podlewania zawiera rekordy zadań pompy, takie jak źródło ręczne lub automatyczne, status, czas żądania, czas dostarczenia, czas wykonania, czas anulowania, wilgotność przy żądaniu, próg przy żądaniu oraz komunikat błędu.",
-          "Jeśli na ekranie Odczyty zastosowano filtry, eksport uwzględnia te filtry. Na przykład, jeśli eksport jest ograniczony do konkretnej rośliny lub zakresu urządzeń, rekordy zadań podlewania są również ograniczone do pasujących urządzeń."
+          "Eksport odczytów wysyła na twój e-mail arkusz kalkulacyjny.",
+          "Znajdziesz w nim pomiary z czujników i historię zadań podlewania.",
+          "Karta odczytów zawiera temperaturę i wilgotność powietrza, natężenie światła oraz wilgotność gleby.",
+          "Karta zadań podlewania pokazuje, czy podlewanie zlecono ręcznie czy automatycznie, jego stan oraz czas zlecenia, odbioru, wykonania i anulowania. Zawiera też wilgotność gleby i próg zapisane w chwili zlecenia oraz ewentualny komunikat błędu.",
+          "Eksport uwzględnia filtry z ekranu Odczyty. Jeśli wybierzesz np. konkretną roślinę lub grupę urządzeń, arkusz obejmie tylko ich odczyty i zadania podlewania."
         ]
       },
       {
         "heading": "Wygenerowany kod Arduino lub ESP",
         "body": [
-          "Wygenerowany kod ma służyć jako gotowy do edycji punkt wyjścia dla płytek w stylu ESP32.",
-          "Obejmuje logikę połączenia WiFi, synchronizacji czasu, inicjalizacji czujników, odczytywania włączonych czujników, wysyłania odczytów do backendu, sprawdzania zadań ręcznego podlewania, sprawdzania ustawień automatycznego podlewania kontrolowanych przez backend, uruchamiania pompy w razie potrzeby oraz raportowania zakończenia pracy pompy.",
-          "Wygenerowany kod utrzymuje przesyłanie odczytów i sprawdzanie zadań ręcznego podlewania jako oddzielne procesy.",
-          "Domyślnie odczyty są wysyłane co godzinę, a zadania ręcznego podlewania są sprawdzane raz na minutę.",
-          "Użytkownicy muszą przejrzeć i dostosować wygenerowany kod do własnego sprzętu, pinów, wartości kalibracji, okablowania przekaźnika pompy i typu płytki."
+          "Wygenerowany kod to punkt wyjścia do przygotowania programu na płytkę, np. ESP32.",
+          "Obsługuje połączenie z Wi-Fi, synchronizację czasu, uruchamianie czujników, odczyt pomiarów i wysyłanie ich na serwer. Sprawdza też polecenia ręcznego podlewania i ustawienia podlewania automatycznego, steruje pompą i potwierdza zakończenie podlewania.",
+          "Wysyłanie odczytów i sprawdzanie poleceń ręcznego podlewania odbywa się niezależnie.",
+          "Domyślnie kod wysyła odczyty co godzinę, a polecenia ręcznego podlewania sprawdza co minutę.",
+          "Przed wgraniem kodu sprawdź go i dostosuj do swojej płytki, czujników, pinów, kalibracji i połączeń przekaźnika pompy."
         ]
       },
       {
-        "heading": "Ważne uwagi",
+        "heading": "O czym warto pamiętać",
         "body": [
-          "Stabilność urządzenia, kalibracja, fizyczne okablowanie i instalacja są odpowiedzialnością użytkownika.",
-          "Odczyty z czujników mają charakter informacyjny i powinny być interpretowane razem z obserwacją rzeczywistych warunków.",
-          "Sterowanie pompą wody wymaga szczególnej ostrożności. Użytkownicy powinni upewnić się, że ich przekaźnik, pompa, zasilacz, przewody i źródło wody są zainstalowane bezpiecznie.",
-          "Flovers rejestruje i wyświetla dane urządzenia, ale nie gwarantuje dokładności czujników firm trzecich ani samodzielnie zbudowanych.",
-          "Flovers nie gwarantuje również, że fizyczna pompa uruchomi się pomyślnie. Wykonanie pracy pompy zależy od sprzętu użytkownika, wygenerowanego kodu, łączności WiFi i poprawnej konfiguracji urządzenia."
+          "Za prawidłowe podłączenie, kalibrację, montaż i niezawodne działanie urządzenia odpowiada jego użytkownik.",
+          "Traktuj pomiary jako wskazówkę i porównuj je z rzeczywistym stanem rośliny i jej otoczenia.",
+          "Przy podłączaniu pompy zachowaj szczególną ostrożność. Upewnij się, że przekaźnik, pompa, zasilacz, przewody i dopływ wody są zamontowane bezpiecznie.",
+          "Flovers zapisuje i pokazuje dane urządzenia, ale nie gwarantuje dokładności zewnętrznych ani samodzielnie zbudowanych czujników.",
+          "Aplikacja nie gwarantuje też, że pompa faktycznie się uruchomi. Zależy to od sprzętu, kodu na płytce, połączenia Wi-Fi i poprawnych ustawień urządzenia."
         ]
       }
     ]

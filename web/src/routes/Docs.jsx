@@ -116,7 +116,7 @@ export default function Docs() {
   return (
     <div className="docs-layout">
       {/* Desktop/tablet sidebar */}
-      <aside className="docs-nav" aria-label="Documentation navigation">
+      <aside className="docs-nav" aria-label={t("navigationLabel")}>
         <div className="docs-nav-title h2">{t("title")}</div>
 
         <nav className="docs-nav-list h2">

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { useTranslation } from "react-i18next";
 
 /**
  * Props:
@@ -16,6 +17,7 @@ export default function TopToast({
   duration = 3000,
   variant = "default",
 }) {
+  const { t } = useTranslation("common");
   useEffect(() => {
     if (!visible) return;
     if (!duration || duration <= 0) return;
@@ -47,7 +49,7 @@ export default function TopToast({
           type="button"
           className="toast-x"
           onClick={onDismiss}
-          aria-label="Close"
+          aria-label={t("a11y.closeNotification")}
         >
           ×
         </button>
