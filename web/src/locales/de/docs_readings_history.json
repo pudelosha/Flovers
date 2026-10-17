@@ -1,49 +1,49 @@
 {
   "docs_readings_history": {
-    "title": "Lesegeschichte",
+    "title": "Messwertverlauf",
     "sections": [
       {
-        "heading": "Zweck dieser Ansicht",
+        "heading": "Was du im Messwertverlauf findest",
         "body": [
-          "Die Ansicht Lesegeschichte bietet einen vollständigen Einblick in die Messdaten aus der Vergangenheit für das verbundene Gerät und die Anlage.",
-          "Im Gegensatz zur Liste der Messwerte (wo hauptsächlich die letzten Werte sichtbar sind), dient diese Ansicht der Analyse von Trends und Veränderungen im Zeitverlauf auf Diagrammen."
+          "Im Messwertverlauf siehst du frühere Sensormessungen des Geräts, das mit deiner Pflanze verbunden ist.",
+          "Unter Messwerte findest du die neuesten Werte. Die Diagramme im Verlauf zeigen dir, wie sich die Bedingungen mit der Zeit verändert haben."
         ]
       },
       {
-        "heading": "Zeitrahmen: Tag, Woche, Monat",
+        "heading": "Zeitraum wählen: Tag, Woche oder Monat",
         "body": [
-          "Der Benutzer kann zwischen drei Zeitrahmen wechseln: Tag, Woche und Monat.",
-          "Die Ansicht Tag zeigt Messwerte für einen einzelnen Tag im Stundenintervall an (vorausgesetzt, das Gerät sendet Daten jede Stunde und der Benutzer akzeptiert einen höheren Batterieverbrauch auf der Seite des Geräts).",
-          "Die Ansichten Woche und Monat zeigen Daten über einen längeren Zeitraum an, was das Erkennen von Trends erleichtert."
+          "Du kannst zwischen Tag, Woche und Monat wechseln.",
+          "Die Tagesansicht zeigt die Werte eines Tages in Stundenabständen, sofern dein Gerät so häufig Daten sendet. Häufigeres Senden verbraucht mehr Energie und kann die Batterielaufzeit des Geräts verkürzen.",
+          "Die Wochen- und Monatsansicht fassen längere Zeiträume zusammen. So erkennst du wiederkehrende Veränderungen und Entwicklungen leichter."
         ]
       },
       {
-        "heading": "Auswahl des Messparameters",
+        "heading": "Messgröße auswählen",
         "body": [
-          "Diagramme sind für die folgenden Parameter verfügbar: Lufttemperatur, Luftfeuchtigkeit, Lichtniveau und Bodenfeuchtigkeit (je nachdem, was das Gerät misst).",
-          "Der Parameter wird mit den Schaltflächen unter dem Diagramm ausgewählt (Temp, Hum, Light, Moist)."
+          "Du kannst Lufttemperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchte im Diagramm ansehen. Welche Werte verfügbar sind, hängt von den Sensoren deines Geräts ab.",
+          "Die Messgröße wählst du mit den Schaltflächen unter dem Diagramm (Temp, Feuchte, Licht, Boden)."
         ]
       },
       {
-        "heading": "Navigation zu früheren Zeiträumen",
+        "heading": "Frühere Messwerte ansehen",
         "body": [
-          "Pfeile neben dem ausgewählten Zeitraum ermöglichen das Navigieren zwischen früheren Tagen, Wochen oder Monaten.",
-          "Die Navigation ist nur für Zeiträume verfügbar, für die Daten vorhanden sind – zukünftige Zeiträume werden nicht angezeigt."
+          "Mit den Pfeilen neben dem gewählten Zeitraum wechselst du zu früheren Tagen, Wochen oder Monaten.",
+          "Du kannst nur Zeiträume mit vorhandenen Daten aufrufen. Zukünftige Zeiträume werden nicht angezeigt."
         ]
       },
       {
-        "heading": "Messwertverlauf loeschen",
+        "heading": "Messwerte löschen",
         "body": [
-          "Das Diagrammmenue enthaelt die Aktion Messwerte loeschen, mit der historische Sensordaten fuer das ausgewaehlte Geraet bereinigt werden koennen.",
-          "Du kannst Messwerte fuer einen bestimmten Tag, eine Woche oder einen Monat loeschen, Messwerte loeschen, die aelter als ein ausgewaehlter Zeitraum sind, oder nur bestimmte Messwerttypen wie Temperatur, Luftfeuchtigkeit, Licht oder Bodenfeuchtigkeit entfernen.",
-          "Beim Loeschen nach Messwerttyp entfernt Flovers nur diesen Messwert und behaelt andere Werte desselben Datensatzes nach Moeglichkeit bei. Das Loeschen ist dauerhaft und sollte vorsichtig verwendet werden."
+          "Wähle im Diagrammmenü Messwerte löschen, um frühere Messungen des ausgewählten Geräts zu entfernen.",
+          "Du kannst Werte eines bestimmten Tages, einer Woche oder eines Monats löschen, Werte ab einem gewählten Alter entfernen oder nur einzelne Messgrößen löschen: Temperatur, Luftfeuchtigkeit, Licht oder Bodenfeuchte.",
+          "Wenn du nur eine Messgröße löschst, bleiben die anderen Werte desselben Eintrags nach Möglichkeit erhalten. Das Löschen lässt sich nicht rückgängig machen."
         ]
       },
       {
-        "heading": "Verfügbarkeit der Daten und Interpretation",
+        "heading": "Fehlende Daten und Messgenauigkeit",
         "body": [
-          "Wenn das Gerät für den ausgewählten Zeitraum keine Messwerte geliefert hat, ist das Diagramm leer oder enthält möglicherweise Datenlücken.",
-          "Die Sensordaten dienen nur zu Informationszwecken und sollten zusammen mit der Beobachtung der Pflanzen sowie unter Berücksichtigung der Kalibrierung, Positionierung der Sensoren und der Umgebungsbedingungen interpretiert werden."
+          "Hat dein Gerät für den gewählten Zeitraum keine Werte gesendet, bleibt das Diagramm leer oder zeigt Lücken.",
+          "Nutze die Messwerte als Orientierung und vergleiche sie mit dem Zustand deiner Pflanze. Kalibrierung, Sensorplatzierung und Umgebung können die Genauigkeit beeinflussen."
         ]
       }
     ]

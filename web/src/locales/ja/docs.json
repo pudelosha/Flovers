@@ -1,8 +1,8 @@
 {
-  "title": "ドキュメンテーション",
+  "title": "使い方",
   "placeholder": {
     "heading": "近日公開",
-    "body": "この画面の詳細なドキュメンテーションは近日公開予定です。"
+    "body": "この画面の詳しい使い方は、近日中に公開予定です。"
   },
   "screens": {
     "overview": {
@@ -15,7 +15,7 @@
       "title": "ホーム画面"
     },
     "taskHistory": {
-      "title": "タスク履歴"
+      "title": "お手入れ履歴"
     },
     "plants": {
       "title": "植物"
@@ -24,25 +24,26 @@
       "title": "植物の詳細"
     },
     "createPlantWizard": {
-      "title": "植物追加ウィザード"
+      "title": "植物を追加"
     },
     "locations": {
-      "title": "ロケーション"
+      "title": "場所"
     },
     "reminders": {
       "title": "リマインダー"
     },
     "readings": {
-      "title": "読み取り"
+      "title": "測定値"
     },
     "readingsHistory": {
-      "title": "読み取り履歴"
+      "title": "測定履歴"
     },
     "scanner": {
-      "title": "スキャナー (QR)"
+      "title": "QRスキャナー"
     },
     "profile": {
       "title": "プロフィールと設定"
     }
-  }
+  },
+  "navigationLabel": "ドキュメントの目次"
 }

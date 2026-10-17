@@ -1,28 +1,28 @@
 {
-  "title": "연락처",
-  "subtitle": "지원팀에 메시지를 보내세요. 보통 1-3일 이내에 답변을 드립니다.",
+  "title": "문의하기",
+  "subtitle": "지원팀에 메시지를 보내 주세요. 보통 영업일 기준 1~3일 안에 답변드려요.",
   "form": {
     "emailLabel": "이메일 주소",
     "emailPlaceholder": "you@example.com",
-    "subjectLabel": "주제",
-    "subjectPlaceholder": "예: 로그인 문제",
-    "messageLabel": "메시지",
-    "messagePlaceholder": "문제나 질문을 설명해주세요…",
-    "copyToMe": "사본을 나에게 보내기",
+    "subjectLabel": "제목",
+    "subjectPlaceholder": "예: 로그인이 되지 않아요",
+    "messageLabel": "문의 내용",
+    "messagePlaceholder": "궁금한 점이나 겪고 있는 문제를 적어 주세요…",
+    "copyToMe": "나에게도 사본 보내기",
     "send": "보내기",
     "sending": "보내는 중…",
-    "mailtoFallback": "이메일 보내기",
-    "note": "폼이 작동하지 않으면 이메일 버튼을 사용하세요."
+    "mailtoFallback": "이메일로 문의하기",
+    "note": "폼에서 전송되지 않으면 이메일 버튼을 이용해 주세요."
   },
   "toasts": {
-    "enterEmail": "유효한 이메일 주소를 입력하세요.",
-    "rateLimited": "메시지가 너무 많습니다. 나중에 다시 시도하세요.",
-    "enterSubject": "주제를 입력하세요.",
-    "enterMessage": "메시지를 입력하세요.",
-    "contactSent": "메시지가 전송되었습니다.",
-    "couldNotSendContact": "메시지를 보낼 수 없습니다. 나중에 다시 시도하세요.",
-    "requestTimedOut": "시간이 초과되었습니다. 다시 시도하세요.",
-    "unauthorizedLoginAgain": "세션이 만료되었습니다. 다시 로그인하세요.",
-    "missingApiBase": "API 주소가 설정되지 않았습니다."
+    "enterEmail": "올바른 이메일 주소를 입력해 주세요.",
+    "rateLimited": "메시지를 너무 많이 보냈어요. 잠시 후 다시 시도해 주세요.",
+    "enterSubject": "제목을 입력해 주세요.",
+    "enterMessage": "문의 내용을 입력해 주세요.",
+    "contactSent": "메시지를 보냈어요.",
+    "couldNotSendContact": "메시지를 보내지 못했어요. 잠시 후 다시 시도해 주세요.",
+    "requestTimedOut": "응답 시간이 초과됐어요. 다시 시도해 주세요.",
+    "unauthorizedLoginAgain": "로그인 시간이 만료됐어요. 다시 로그인해 주세요.",
+    "missingApiBase": "API 연결 주소가 설정되지 않았어요."
   }
 }

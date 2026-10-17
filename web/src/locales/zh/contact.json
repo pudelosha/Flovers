@@ -1,26 +1,26 @@
 {
-  "title": "联系",
+  "title": "联系我们",
   "subtitle": "向支持团队发送消息。我们通常在 1–3 个工作日内回复。",
   "form": {
-    "emailLabel": "您的电子邮箱",
+    "emailLabel": "你的邮箱",
     "emailPlaceholder": "you@example.com",
     "subjectLabel": "主题",
-    "subjectPlaceholder": "例如 登录问题",
-    "messageLabel": "消息",
-    "messagePlaceholder": "描述问题或疑问…",
-    "copyToMe": "给我发送一份副本",
+    "subjectPlaceholder": "例如：无法登录",
+    "messageLabel": "留言",
+    "messagePlaceholder": "告诉我们你遇到的问题或想了解的内容…",
+    "copyToMe": "同时发送一份到我的邮箱",
     "send": "发送",
     "sending": "发送中…",
-    "mailtoFallback": "写电子邮件",
-    "note": "如果表单无法使用，请使用电子邮件按钮。"
+    "mailtoFallback": "通过邮件联系",
+    "note": "如果表单无法发送，可以点击邮件按钮联系我们。"
   },
   "toasts": {
-    "enterEmail": "请输入有效的电子邮箱地址。",
+    "enterEmail": "请输入有效的邮箱地址。",
     "rateLimited": "消息发送过多，请稍后重试。",
     "enterSubject": "请输入主题。",
-    "enterMessage": "请输入消息。",
-    "contactSent": "消息已发送。",
-    "couldNotSendContact": "无法发送消息。请稍后再试。",
+    "enterMessage": "请输入留言内容。",
+    "contactSent": "留言已发送。",
+    "couldNotSendContact": "留言发送失败，请稍后重试。",
     "requestTimedOut": "请求超时。请重试。",
     "unauthorizedLoginAgain": "会话已过期。请重新登录。",
     "missingApiBase": "未配置 API 地址。"

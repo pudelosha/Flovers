@@ -1,92 +1,92 @@
 {
   "docs_create_plant_wizard": {
-    "title": "Pflanzenhinzufügungs-Assistent",
+    "title": "Pflanze hinzufügen",
     "sections": [
       {
-        "heading": "Ziel dieses Prozesses",
+        "heading": "In neun Schritten zu deiner Pflanze",
         "body": [
-          "Der Pflanzenhinzufügungs-Assistent ist ein geführter Prozess in 9 Schritten, der dazu dient, eine neue Pflanzeninstanz in deinem Konto zu erstellen.",
-          "Er hilft (optional), die Pflanze mit einer Pflanzenbeschreibung aus der Flovers-Datenbank zu verknüpfen, den Kontext (Standort, Belichtung) zu sammeln und optional Erinnerungen basierend auf Pflegepräferenzen zu generieren.",
-          "Der Assistent dient ausschließlich zur Erstellung einer neuen Pflanze. Die Bearbeitung einer bestehenden Pflanze erfolgt in einer anderen Ansicht/einem anderen Prozess."
+          "Der Assistent führt dich in 9 Schritten durch das Hinzufügen einer neuen Pflanze zu deinem Konto.",
+          "Du kannst ein Pflanzenprofil aus der Flovers-Datenbank auswählen, Angaben zu Standort und Lichtverhältnissen machen und auf Wunsch passende Erinnerungen erstellen lassen.",
+          "Der Assistent ist für neue Pflanzen gedacht. Bereits hinzugefügte Pflanzen bearbeitest du in einer eigenen Ansicht."
         ]
       },
       {
-        "heading": "Schritt 01 — Auswahl der Pflanzenbeschreibung (optional)",
+        "heading": "Schritt 01 — Pflanzenprofil auswählen (optional)",
         "body": [
-          "Du kannst eine Pflanzenbeschreibung (eingebaute Art-Profil) mit dem Suchfeld suchen.",
-          "Unter dem Feld befindet sich eine Liste populärer Zimmerpflanzen, die als schnelle Verknüpfung dient.",
-          "Optional kannst du die Pflanzenbestimmung verwenden: starte die Erkennung, mache ein Foto oder wähle es aus der Galerie, und das System wird die 3 am besten passenden Ergebnisse anzeigen.",
-          "Wenn du den Vorschlag akzeptierst, wird die ausgewählte Pflanzenbeschreibung auf die zu erstellende Pflanze angewendet."
+          "Über das Suchfeld findest du Pflanzenprofile mit Informationen zu den einzelnen Arten.",
+          "Unter dem Suchfeld kannst du häufige Zimmerpflanzen direkt auswählen.",
+          "Du kannst auch die Fotobestimmung nutzen: Tippe auf die Schaltfläche zum Scannen und mache ein Foto oder wähle eines aus deiner Galerie. Du erhältst die 3 am besten passenden Vorschläge.",
+          "Wenn du einen Vorschlag übernimmst, wird das zugehörige Pflanzenprofil für deine neue Pflanze ausgewählt."
         ]
       },
       {
-        "heading": "Schritt 02 — Vorschau der Pflanzenbeschreibung",
+        "heading": "Schritt 02 — Pflanzenprofil prüfen",
         "body": [
-          "Wenn eine Pflanzenbeschreibung ausgewählt wurde, werden in diesem Schritt die Details angezeigt: Bild sowie grundlegende Merkmale und Präferenzen.",
-          "Dies ist ein Verifizierungsschritt, der es ermöglicht, das richtige Profil zu bestätigen, bevor du weitergehst."
+          "Wenn du ein Pflanzenprofil ausgewählt hast, siehst du hier das Bild und die wichtigsten Merkmale und Pflegeanforderungen.",
+          "Prüfe, ob das Profil zu deiner Pflanze passt, bevor du fortfährst."
         ]
       },
       {
-        "heading": "Schritt 03 — Auswahl des Standorts (erforderlich)",
+        "heading": "Schritt 03 — Standort auswählen (erforderlich)",
         "body": [
-          "Wähle den Standort aus, an dem sich die Pflanze befindet (z. B. Küche, Wohnzimmer, Balkon).",
-          "An dieser Stelle kannst du auch einen neuen Standort hinzufügen.",
-          "Die Auswahl des Standorts ist derzeit erforderlich, um mit den nächsten Schritten fortzufahren."
+          "Wähle aus, wo deine Pflanze steht, zum Beispiel in der Küche, im Wohnzimmer oder auf dem Balkon.",
+          "Du kannst hier auch direkt einen neuen Standort hinzufügen.",
+          "Aktuell musst du einen Standort auswählen, um fortzufahren."
         ]
       },
       {
-        "heading": "Schritt 04 — Belichtung (optionale Messungen)",
+        "heading": "Schritt 04 — Lichtverhältnisse erfassen (optional)",
         "body": [
-          "Dieser Schritt ermöglicht es, den Kontext der Belichtung zu speichern: Richtung, Lichtstärke und Entfernung zum Fenster.",
-          "Die Richtung kann mit dem Kompass des Telefons gemessen werden, wenn die App die Berechtigung für den Kompass/Sensoren erhalten hat.",
-          "Die Lichtstärke kann gemessen werden, wenn das Gerät über einen entsprechenden Sensor verfügt und die erforderlichen Berechtigungen erteilt wurden.",
-          "Die Belichtungswerte sind optional — du kannst sie manuell ausfüllen oder überspringen."
+          "Hier kannst du die Himmelsrichtung, die Lichtstärke und den Abstand zum Fenster festhalten.",
+          "Die Himmelsrichtung lässt sich mit dem Kompass deines Telefons messen, wenn du die nötige Berechtigung erteilt hast.",
+          "Die Lichtstärke kannst du messen, wenn dein Gerät einen Lichtsensor hat und die nötigen Berechtigungen erteilt sind.",
+          "Alle Angaben zu den Lichtverhältnissen sind freiwillig. Du kannst sie auch von Hand eintragen oder überspringen."
         ]
       },
       {
-        "heading": "Schritt 05 — Topf und Substrat (optional)",
+        "heading": "Schritt 05 — Topf und Substrat angeben (optional)",
         "body": [
-          "Gib die Art des Behälters/Tops (z. B. Plastik, Keramik) und des Substrats an.",
-          "Diese Felder sind optional, können jedoch helfen, die empfohlenen Intervalle besser anzupassen, wenn automatische Aufgaben aktiviert sind."
+          "Gib an, in welchem Topf deine Pflanze steht, zum Beispiel aus Kunststoff oder Keramik, und welches Substrat du verwendest.",
+          "Diese Angaben sind freiwillig. Wenn du automatische Aufgaben nutzt, können sie helfen, passendere Pflegeintervalle vorzuschlagen."
         ]
       },
       {
-        "heading": "Schritt 06 — Automatische Aufgaben (optional, bei Pflanzenbeschreibung)",
+        "heading": "Schritt 06 — Automatische Aufgaben einrichten (optional, mit Pflanzenprofil)",
         "body": [
-          "Wenn die Pflanze mit einer Pflanzenbeschreibung verknüpft ist, kann Flovers automatisch Erinnerungen/Aufgaben basierend auf den Präferenzen aus der Datenbank erstellen.",
-          "Aktiviere das Hauptkästchen, um die automatische Erstellung zu aktivieren, und wähle dann die Arten von Aufgaben aus, die erstellt werden sollen (z. B. Gießen, Sprühen, Düngen, Umtopfen, Pflege).",
-          "Die empfohlenen Intervalle basieren auf der Pflanzenbeschreibung und können anhand der Belichtung sowie des Topfes/Substrats angepasst werden, wenn diese Daten verfügbar sind.",
-          "Du kannst diesen Schritt überspringen und die Erinnerungen später manuell erstellen."
+          "Wenn du ein Pflanzenprofil ausgewählt hast, kann Flovers anhand der Pflegeempfehlungen automatisch Erinnerungen und Aufgaben erstellen.",
+          "Aktiviere das oberste Kontrollkästchen und wähle anschließend die gewünschten Aufgabenarten aus, etwa Gießen, Besprühen, Düngen, Umtopfen oder allgemeine Pflege.",
+          "Die vorgeschlagenen Intervalle richten sich nach dem Pflanzenprofil. Angaben zu Licht, Topf und Substrat können dabei berücksichtigt werden.",
+          "Du kannst diesen Schritt überspringen und später selbst Erinnerungen anlegen."
         ]
       },
       {
-        "heading": "Schritt 07 — Hinzufügen eines eigenen Fotos (optional)",
+        "heading": "Schritt 07 — Eigenes Foto hinzufügen (optional)",
         "body": [
-          "Du kannst ein eigenes Foto der Pflanze von deinem Telefon hinzufügen.",
-          "Dieser Schritt ist optional und kann je nach deinem App-Workflow später ebenfalls möglich sein."
+          "Du kannst ein eigenes Foto deiner Pflanze vom Telefon hinzufügen.",
+          "Dieser Schritt ist freiwillig. Je nach Ablauf in deiner App kannst du das Foto auch später über die Bearbeitung der Pflanze ergänzen."
         ]
       },
       {
-        "heading": "Schritt 08 — Enddaten (erforderlicher Name)",
+        "heading": "Schritt 08 — Namen und weitere Angaben eintragen",
         "body": [
-          "Lege den angezeigten Namen der Pflanze fest (erforderlich).",
-          "Optional kannst du Notizen und das Kaufdatum hinzufügen.",
-          "Diese Informationen sind in den Pflanzendetails sichtbar und helfen, eine übersichtliche Pflegerecorde zu führen."
+          "Gib deiner Pflanze einen Namen. Diese Angabe ist erforderlich.",
+          "Notizen und das Kaufdatum kannst du freiwillig ergänzen.",
+          "Diese Angaben erscheinen in den Pflanzendetails und helfen dir, den Pflegeverlauf deiner Pflanze nachzuvollziehen."
         ]
       },
       {
         "heading": "Schritt 09 — Zusammenfassung und Bestätigung",
         "body": [
-          "Nach dem erfolgreichen Hinzufügen der Pflanze zeigt der Assistent einen Bestätigungs-/Zusammenfassungsbildschirm an.",
-          "Von hier aus kannst du zur Pflanzenliste wechseln oder die neu erstellte Pflanze öffnen — je nach Navigation in der App."
+          "Wenn die Pflanze erfolgreich hinzugefügt wurde, zeigt der Assistent eine Bestätigung und Zusammenfassung an.",
+          "Von dort kannst du je nach Navigation in deiner App zur Pflanzenliste wechseln oder die neue Pflanze öffnen."
         ]
       },
       {
         "heading": "Hinweise und Berechtigungen",
         "body": [
-          "Die Pflanzenbestimmung erfordert Zugriff auf die Kamera und/oder Galerie, je nach der Methode zur Bereitstellung des Fotos.",
-          "Die Belichtungsmessungen können Berechtigungen für Sensoren (z. B. Kompass) erfordern und hängen von der Verfügbarkeit der Hardware im Gerät ab.",
-          "Die Verknüpfung mit einer Pflanzenbeschreibung ist optional — du kannst diesen Schritt überspringen und die Pflanze dennoch erstellen, und Erinnerungen später manuell hinzufügen."
+          "Für die Fotobestimmung braucht die App Zugriff auf die Kamera oder Galerie, je nachdem, woher das Foto stammt.",
+          "Messungen zu den Lichtverhältnissen können eine Berechtigung für Gerätesensoren wie den Kompass erfordern. Außerdem muss dein Gerät die passenden Sensoren besitzen.",
+          "Ein Pflanzenprofil ist freiwillig. Du kannst deine Pflanze auch ohne Profil hinzufügen und später selbst Erinnerungen einrichten."
         ]
       }
     ]

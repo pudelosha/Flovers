@@ -3,47 +3,47 @@
     "title": "Histórico de leituras",
     "sections": [
       {
-        "heading": "Objetivo desta visualização",
+        "heading": "Acompanhe as mudanças",
         "body": [
-          "A visualização Histórico de leituras fornece uma visão completa dos dados de medição passados para o dispositivo e a planta associados.",
-          "Ao contrário da lista de Leituras (onde são visíveis principalmente os valores mais recentes), esta visualização serve para analisar tendências e alterações ao longo do tempo nos gráficos."
+          "O Histórico de leituras mostra os dados anteriores do dispositivo e da planta associada.",
+          "Use os gráficos para acompanhar as mudanças ao longo do tempo. Na lista de Leituras, você vê principalmente os valores mais recentes."
         ]
       },
       {
-        "heading": "Intervalos de tempo: Dia, Semana, Mês",
+        "heading": "Dia, Semana e Mês",
         "body": [
-          "O utilizador pode alternar entre três intervalos: Dia, Semana e Mês.",
-          "A visualização Dia apresenta leituras de um único dia em intervalos horários (assumindo que o dispositivo envia dados de hora a hora e que o utilizador aceita um maior consumo de bateria por parte do dispositivo).",
-          "As visualizações Semana e Mês mostram os dados numa perspetiva mais longa, facilitando a deteção de tendências."
+          "Escolha Dia, Semana ou Mês para ajustar o período do gráfico.",
+          "Em Dia, os dados aparecem a cada hora, desde que o dispositivo envie leituras nessa frequência, que pode aumentar o consumo de bateria.",
+          "Semana e Mês mostram períodos maiores para você identificar mudanças mais duradouras."
         ]
       },
       {
-        "heading": "Seleção do parâmetro de medição",
+        "heading": "Escolha o que medir",
         "body": [
-          "Os gráficos estão disponíveis para os parâmetros: temperatura do ar, humidade do ar, nível de luz e humidade do solo (dependendo do que o dispositivo mede).",
-          "O parâmetro é selecionado através dos botões abaixo do gráfico (Temp, Hum, Light, Moist)."
+          "Há gráficos de temperatura do ar, umidade do ar, luz e umidade do solo, conforme os sensores do dispositivo.",
+          "Escolha a medição nos botões abaixo do gráfico: Temp, Umid, Luz e Solo."
         ]
       },
       {
-        "heading": "Navegação por períodos anteriores",
+        "heading": "Consulte períodos anteriores",
         "body": [
-          "As setas junto ao período selecionado permitem navegar entre dias, semanas ou meses anteriores.",
-          "A navegação está disponível apenas para períodos para os quais existem dados — períodos futuros não são apresentados."
+          "Use as setas ao lado do período para consultar outros dias, semanas ou meses.",
+          "Você só pode abrir períodos que tenham dados. Datas futuras não aparecem."
         ]
       },
       {
-        "heading": "Excluir historico de leituras",
+        "heading": "Excluir histórico de leituras",
         "body": [
-          "O menu do grafico inclui a acao Excluir leituras para limpar dados historicos do sensor do dispositivo selecionado.",
-          "Voce pode excluir leituras de um dia, semana ou mes especifico, excluir leituras mais antigas que um periodo escolhido, ou remover apenas tipos de medicao selecionados, como temperatura, umidade, luz ou umidade do solo.",
-          "Ao excluir por tipo de medicao, o Flovers remove essa metrica e mantem os outros valores do mesmo registro quando possivel. A exclusao e permanente e deve ser usada com cuidado."
+          "No menu do gráfico, escolha Excluir leituras para remover dados históricos do dispositivo selecionado.",
+          "Você pode excluir dados de um dia, semana ou mês, remover leituras anteriores a um período ou selecionar apenas certas medições, como temperatura, umidade do ar, luz ou umidade do solo.",
+          "Ao excluir por tipo de medição, o Flovers mantém os demais valores do mesmo registro sempre que possível. A exclusão é permanente: confira sua escolha antes de continuar."
         ]
       },
       {
-        "heading": "Disponibilidade dos dados e interpretação",
+        "heading": "Quando faltam dados",
         "body": [
-          "Se o dispositivo não tiver fornecido leituras para o período selecionado, o gráfico estará vazio ou poderá conter lacunas de dados.",
-          "Os dados dos sensores têm caráter informativo e devem ser interpretados juntamente com a observação das plantas e com a consciência da influência da calibração, da localização dos sensores e das condições ambientais."
+          "Se o dispositivo não enviou leituras no período escolhido, o gráfico pode ficar vazio ou apresentar lacunas.",
+          "As leituras servem de apoio. Observe também a planta e considere a calibração, a posição dos sensores e as condições do ambiente."
         ]
       }
     ]

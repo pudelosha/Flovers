@@ -3,67 +3,67 @@
     "title": "Détails de la plante",
     "sections": [
       {
-        "heading": "Objectif de cette vue",
+        "heading": "Tout retrouver pour une plante",
         "body": [
-          "La vue Détails de la plante est l'endroit central pour consulter et gérer une seule plante créée par l'utilisateur.",
-          "Elle regroupe des informations sur la plante, des rappels assignés, des tâches, des relevés de capteurs (si disponibles) et des actions rapides liées à cette plante."
+          "Cet écran rassemble les informations et les actions pour l’une de tes plantes.",
+          "Tu y retrouves ses renseignements, ses rappels, ses tâches et, si un appareil est associé, ses relevés de capteurs. Des raccourcis donnent accès aux autres écrans liés à cette plante."
         ]
       },
       {
-        "heading": "Informations sur la plante",
+        "heading": "Les informations de ta plante",
         "body": [
-          "En haut de l'écran, une image de la plante, son nom, un nom de définition de plante optionnel et la localisation assignée sont affichés.",
-          "Ci-dessous, les paramètres détaillés fournis lors de la création de la plante sont présentés, tels que la date d'achat, les notes, les conditions d'éclairage, l'orientation, la distance de la fenêtre, le type de pot et le type de sol.",
-          "Ces informations aident à mieux interpréter les rappels, les relevés et les décisions d'entretien."
+          "En haut figurent sa photo, son nom, son emplacement et, le cas échéant, le nom de sa fiche d’espèce.",
+          "En dessous, tu retrouves les renseignements saisis lors de l’ajout : date d’achat, notes, lumière, orientation, distance de la fenêtre, type de pot et substrat.",
+          "Ils t’aident à interpréter les relevés et à adapter les rappels et les soins aux conditions réelles."
         ]
       },
       {
-        "heading": "Actions au niveau de la plante (menu à trois points)",
+        "heading": "Les actions du menu à trois points",
         "body": [
-          "Le menu à trois points associé à l'en-tête de la plante offre des actions supplémentaires concernant la plante elle-même.",
-          "Les options disponibles incluent l'affichage de la Définition de la plante (si la plante y est associée), l'édition des données de la plante, le changement d'image et l'accès aux Rappels filtrés pour cette plante.",
-          "Le changement d'image permet de remplacer l'image par défaut, d'ajouter une photo personnelle depuis le téléphone ou de supprimer l'image."
+          "Le menu à trois points près du titre propose d’autres actions pour cette plante.",
+          "Tu peux consulter sa fiche d’espèce si elle en a une, modifier ses informations, changer sa photo ou ouvrir les rappels filtrés pour cette plante.",
+          "Tu peux remplacer une image proposée, ajouter une photo depuis ton téléphone ou retirer l’image."
         ]
       },
       {
-        "heading": "Définition de la plante",
+        "heading": "La fiche d’espèce",
         "body": [
-          "Si la plante est associée à une Définition de plante de la base de données Flovers, l'utilisateur peut ouvrir la vue dédiée à la Définition.",
-          "Cette vue présente des informations sur l'espèce, telles que la description de la plante, les préférences d'entretien, les caractéristiques, le niveau de difficulté, la plage de températures, l'humidité, la toxicité et le type de croissance.",
-          "Les définitions des plantes fournissent des conseils généraux et doivent être interprétées dans le contexte des conditions réelles de l'utilisateur."
+          "Si tu as choisi une fiche dans la base Flovers, tu peux l’ouvrir dans un écran dédié.",
+          "Elle décrit l’espèce et ses besoins : caractéristiques, difficulté d’entretien, températures, humidité de l’air, toxicité et croissance.",
+          "Ces conseils sont généraux. Tiens toujours compte des conditions réelles de ta plante."
         ]
       },
       {
-        "heading": "Rappels et tâches",
+        "heading": "Les rappels et les tâches",
         "body": [
-          "La section Rappels affiche tous les rappels actifs assignés à la plante donnée.",
-          "Chaque rappel a son propre menu à trois points, permettant de fermer la tâche, d'éditer le rappel ou de consulter l'historique des tâches.",
-          "Lors de la fermeture de la tâche, l'utilisateur peut ajouter une note qui devient une partie de l'historique d'entretien de la plante."
+          "La section « Rappels » présente les rappels actifs associés à cette plante.",
+          "Le menu à trois points de chaque rappel permet de terminer une tâche, de modifier le rappel ou de consulter l’historique des tâches.",
+          "Quand tu termines une tâche, tu peux ajouter une note qui fera partie du suivi des soins."
         ]
       },
       {
-        "heading": "Derniers relevés",
+        "heading": "Les derniers relevés",
         "body": [
-          "Si la plante est associée à un appareil de mesure, les derniers relevés des capteurs sont affichés dans cette vue.",
-          "Les relevés pris en charge incluent la température de l'air, l'humidité de l'air, le niveau de lumière et l'humidité du sol.",
-          "La section montre les dernières valeurs avec l'information sur l'heure du relevé.",
-          "Toucher la tuile des relevés amène l'utilisateur à la vue Historique des relevés, où des graphiques détaillés et des résumés (quotidiens/hebdomadaires/mensuels) sont présentés pour la température, l'humidité, la lumière et l'humidité du sol (si l'appareil est lié à la plante)."
+          "Si un appareil de mesure est associé à la plante, ses derniers relevés s’affichent ici.",
+          "Les mesures prises en charge sont la température de l’air, l’humidité de l’air, la luminosité et l’humidité du sol.",
+          "La section montre les valeurs les plus récentes et l’heure du dernier relevé reçu.",
+          "Touche la carte des relevés pour ouvrir leur historique. Tant qu’un appareil est associé, tu peux consulter les graphiques et les résumés par jour, semaine ou mois pour chaque mesure."
         ]
       },
       {
-        "heading": "Code QR et accès rapide",
+        "heading": "L’accès rapide par code QR",
         "body": [
-          "Chaque plante possède un code QR unique affiché en bas de l'écran.",
-          "Scanner ce code dans la vue Scanner amène directement à la vue Détails de la plante.",
-          "Le code QR peut être enregistré sur l'appareil ou envoyé par e-mail, permettant ainsi de l'imprimer et de le placer sur le pot."
+          "Chaque plante possède un code QR unique, affiché en bas de cet écran.",
+          "En le scannant avec le scanner de l’application, tu ouvres directement les détails de cette plante.",
+          "Tu peux enregistrer le code sur ton téléphone ou l’envoyer par e-mail, puis l’imprimer et le coller sur le pot."
         ]
       },
       {
-        "heading": "Informations importantes",
+        "heading": "À retenir",
         "body": [
-          "Les photos ajoutées par l'utilisateur sont stockées uniquement sur l'appareil de l'utilisateur et ne sont pas enregistrées dans l'arrière-plan de Flovers.",
-          "Les images par défaut des plantes proviennent de l'arrière-plan de Flovers et peuvent être générées par l'IA.",
-          "Les relevés des capteurs et les actions suggérées sont informatifs et doivent être combinés avec l'évaluation personnelle de l'utilisateur."
+          "Les photos de plantes que tu ajoutes restent sur ton appareil et ne sont pas envoyées aux serveurs Flovers.",
+          "Les images proposées sont fournies par les serveurs Flovers et peuvent avoir été générées par IA.",
+          "Les relevés et les conseils sont des indications. Complète-les toujours par ta propre observation."
         ]
       }
     ]

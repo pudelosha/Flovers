@@ -220,7 +220,7 @@ DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.app")
 SERVER_EMAIL = env("SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 
 # Email + i18n helpers
-EMAIL_SUBJECT_PREFIX = env("EMAIL_SUBJECT_PREFIX", default="[Flovers] ").strip()
+EMAIL_SUBJECT_PREFIX = ""
 EMAIL_DEFAULT_LANG = env("EMAIL_DEFAULT_LANG", default="en").strip()
 
 # Where JSON translations live (core/i18n.py reads this)

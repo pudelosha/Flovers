@@ -3,68 +3,68 @@
     "title": "Recordatorios",
     "sections": [
       {
-        "heading": "Objetivo de esta vista",
+        "heading": "Planificar los cuidados que se repiten",
         "body": [
-          "La vista de Recordatorios se utiliza para gestionar los horarios cíclicos de cuidado de las plantas.",
-          "Un recordatorio especifica qué debe hacerse (tipo de tarea), con qué frecuencia debe repetirse (intervalo) y a qué planta está asignado. Con esta información, Flovers genera automáticamente las tareas a lo largo del tiempo."
+          "En «Recordatorios» gestionas los cuidados periódicos de tus plantas.",
+          "Cada recordatorio indica qué cuidado toca, cada cuánto se repite y para qué planta. A partir de esos datos, Flovers crea las tareas automáticamente."
         ]
       },
       {
-        "heading": "Dos vistas: lista de recordatorios y calendario",
+        "heading": "Dos vistas: lista y calendario",
         "body": [
-          "Esta pantalla tiene dos modos: lista de recordatorios y vista de calendario.",
-          "Puedes alternar entre ellos deslizando la pantalla hacia la izquierda/derecha o seleccionando el cambio de vista desde el menú FAB.",
-          "Ambas vistas muestran los mismos datos, pero de manera diferente, según si deseas revisar rápidamente las reglas o ver el plan en el tiempo."
+          "Puedes ver tus recordatorios en una lista o en un calendario.",
+          "Desliza a izquierda o derecha para cambiar de vista, o usa la opción correspondiente del menú de acciones rápidas.",
+          "Las dos vistas muestran los mismos recordatorios: elige la lista para revisarlos o el calendario para ver cómo se distribuyen."
         ]
       },
       {
-        "heading": "Vista de lista de recordatorios",
+        "heading": "La lista de recordatorios",
         "body": [
-          "En la vista de lista, cada ficha representa un recordatorio creado por el usuario.",
-          "La ficha muestra el tipo de tarea (ícono y nombre), el nombre de la planta, la ubicación (si está asignada), la frecuencia y la fecha de la próxima ejecución.",
-          "Es la manera más rápida de revisar todas las reglas cíclicas activas en la cuenta."
+          "Cada tarjeta representa un recordatorio que has creado.",
+          "Muestra el tipo de cuidado con su icono, la planta, su ubicación si la tiene, la frecuencia y la próxima fecha prevista.",
+          "La lista permite revisar rápidamente los cuidados periódicos activos en tu cuenta."
         ]
       },
       {
-        "heading": "Acciones de la tarjeta de recordatorio (Editar / Pausar / Reanudar / Eliminar)",
+        "heading": "Editar, pausar, reanudar o eliminar",
         "body": [
-          "Cada recordatorio tiene dos acciones: Editar y Eliminar.",
-          "La edición permite cambiar los parámetros del recordatorio, como el intervalo, el tipo de tarea, la planta asociada y otras configuraciones (dependiendo del tipo de recordatorio).",
-          "Eliminar un recordatorio es permanente y evitará que se generen tareas de esa regla en el futuro.",
-        "Pausar desactiva temporalmente un recordatorio sin eliminarlo. Mientras est\u00e1 pausado, su tarea pendiente se elimina de Home y no se incluye en las notificaciones diarias por correo electr\u00f3nico o push. Al reanudarlo, Flovers programa la siguiente tarea pendiente seg\u00fan el intervalo del recordatorio."
+          "El menú de cada recordatorio permite editarlo, pausarlo, reanudarlo o eliminarlo.",
+          "Puedes cambiar la frecuencia, el tipo de cuidado, la planta asociada y otros ajustes disponibles para ese recordatorio.",
+          "La eliminación es permanente. El recordatorio dejará de generar tareas nuevas.",
+          "La pausa conserva el recordatorio, pero retira su tarea pendiente de Inicio y de las notificaciones diarias por correo o push. Al reanudarlo, Flovers programa la próxima tarea según su intervalo."
         ]
       },
       {
-        "heading": "Vista del calendario",
+        "heading": "El calendario",
         "body": [
-          "En la vista del calendario, los recordatorios se presentan como elementos programados para días específicos.",
-          "Para ver los detalles, haz clic en un día del calendario; los elementos programados para ese día aparecerán debajo del calendario.",
-          "El calendario utiliza marcas de color/iconos para indicar los tipos de tareas programadas para un día determinado y facilitar la evaluación de la distribución de las responsabilidades."
+          "El calendario sitúa los recordatorios en sus días previstos.",
+          "Toca una fecha para ver debajo los cuidados programados para ese día.",
+          "Los indicadores visuales distinguen los tipos de cuidado para que veas su distribución de un vistazo."
         ]
       },
       {
-        "heading": "Menú FAB",
+        "heading": "Acciones rápidas",
         "body": [
-          "El botón FAB ofrece acciones rápidas relacionadas con los recordatorios y el cambio de vista.",
-          "Las opciones disponibles son: Agregar recordatorio, cambiar vista (Lista/Calendario), Ordenar y Filtrar.",
-          "El orden puede realizarse por fecha de vencimiento, nombre de la planta o ubicación.",
-          "El filtrado puede incluir: nombre de la planta, ubicación, tipo de tarea y rango de fechas (rango de fechas de vencimiento)."
+          "El botón de acciones rápidas abre las opciones para gestionar recordatorios y cambiar de vista.",
+          "Incluye «Añadir recordatorio», el cambio entre «Lista» y «Calendario», «Ordenar» y «Filtrar».",
+          "Puedes ordenar por fecha prevista, nombre de planta o ubicación.",
+          "Puedes filtrar por planta, ubicación, tipo de cuidado y un intervalo de fechas previstas."
         ]
       },
       {
-        "heading": "Cómo los recordatorios generan tareas (lógica general)",
+        "heading": "Cómo se crean las tareas",
         "body": [
-          "Un recordatorio es una regla cíclica (por ejemplo, regar cada 7 días).",
-          "Con base en los recordatorios, Flovers genera tareas y las muestra en la pantalla de inicio como elementos a realizar.",
-          "Después de cerrar una tarea, se planifica la siguiente según el intervalo del recordatorio (lo que asegura que la rutina continúe automáticamente)."
+          "Un recordatorio define un cuidado recurrente, por ejemplo regar cada 7 días.",
+          "Flovers crea las tareas correspondientes y las muestra en Inicio para que las completes.",
+          "Cuando completas una, programa la siguiente según el intervalo del recordatorio. Así el seguimiento continúa automáticamente."
         ]
       },
       {
-        "heading": "Comentarios y consejos prácticos",
+        "heading": "Consejos prácticos",
         "body": [
-          "Los recordatorios ayudan a mantener la regularidad, pero no garantizan la salud de las plantas; las condiciones reales pueden requerir ajustes en los intervalos.",
-          "Si las condiciones cambian (época del año, luz, sustrato, tamaño de la maceta), considera actualizar los recordatorios.",
-          "Si deseas gestionar tareas cerradas y notas, usa la vista de Historia de tareas (descrita por separado)."
+          "Los recordatorios ayudan a mantener una rutina, pero no garantizan la salud de las plantas. Las condiciones reales pueden exigir cambiar los intervalos.",
+          "Si cambia la estación, la luz, el sustrato o el tamaño de la maceta, revisa tus recordatorios.",
+          "Para consultar las tareas completadas y sus notas, abre el historial de tareas, explicado en una página propia."
         ]
       }
     ]

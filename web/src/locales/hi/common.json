@@ -1,9 +1,9 @@
 {
   "nav": {
     "start": "मुखपृष्ठ",
-    "docs": "दस्तावेज़",
-    "schemas": "स्कीमा",
-    "faq": "FAQ"
+    "docs": "मदद और जानकारी",
+    "schemas": "कनेक्शन और API",
+    "faq": "आम सवाल"
   },
   "footer": {
     "terms": "शर्तें",
@@ -12,9 +12,11 @@
   },
   "a11y": {
     "mainNav": "मुख्य नेविगेशन",
-    "languageSwitch": "भाषा चयन",
+    "languageSwitch": "भाषा चुनें",
     "openMenu": "मेनू खोलें",
-    "mobileMenu": "मोबाइल मेनू"
+    "mobileMenu": "मोबाइल मेनू",
+    "closeNotification": "नोटिफ़िकेशन बंद करें",
+    "scanStoreLink": "स्टोर का लिंक खोलने के लिए स्कैन करें"
   },
   "language": {
     "pl": "पोलिश",

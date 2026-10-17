@@ -3,77 +3,77 @@
     "title": "Historial de tareas",
     "sections": [
       {
-        "heading": "Objetivo de la vista Historial de tareas",
+        "heading": "Consultar los cuidados realizados",
         "body": [
-          "El historial de tareas sirve para revisar y gestionar las tareas que se han completado (cerradas).",
-          "Facilita el análisis de lo que se ha hecho, cuándo se realizó y qué plantas estuvieron involucradas en las acciones.",
-          "La vista puede abrirse con un filtro activo (por ejemplo, historial para una planta seleccionada) o mostrar todas las tareas cerradas."
+          "El historial permite revisar y gestionar las tareas que ya has completado.",
+          "Muestra qué cuidados hiciste, cuándo y para qué plantas.",
+          "Puede abrirse con todas las tareas o con un filtro aplicado, por ejemplo para una planta concreta."
         ]
       },
       {
-        "heading": "Azulejos de tareas cerradas",
+        "heading": "Las tarjetas de tareas completadas",
         "body": [
-          "Cada azulejo representa una tarea cerrada individual y contiene, entre otras cosas, el tipo de tarea (por ejemplo, Riego, Pulverización, Fertilización), el nombre de la planta, la ubicación y la fecha de realización.",
-          "Las tareas cerradas pueden incluir una nota añadida al marcar la tarea como completada.",
-          "Las notas solo son visibles después de expandir el azulejo."
+          "Cada tarjeta muestra un cuidado realizado, como riego, pulverización o fertilización, con la planta, su ubicación y la fecha.",
+          "También puede incluir una nota añadida al completar la tarea.",
+          "Las notas aparecen al expandir la tarjeta."
         ]
       },
       {
-        "heading": "Vista previa de notas: expandir y contraer",
+        "heading": "Mostrar u ocultar una nota",
         "body": [
-          "Para ver la nota de una tarea cerrada, puedes expandir el azulejo tocando el azulejo.",
-          "También puedes usar el menú de tres puntos para realizar la acción Expander/Contraer (dependiendo del estado actual).",
-          "Esto permite que la lista se mantenga legible y compacta, mientras que los detalles están disponibles bajo demanda."
+          "Toca una tarjeta para expandirla y leer su nota.",
+          "También puedes elegir «Expandir» o «Colapsar» en el menú de tres puntos, según el estado de la tarjeta.",
+          "Así la lista ocupa poco espacio y puedes ver los detalles cuando los necesitas."
         ]
       },
       {
-        "heading": "Menú del azulejo (tres puntos)",
+        "heading": "Acciones del menú de tres puntos",
         "body": [
-          "Cada azulejo de tarea cerrada tiene un menú contextual con acciones relacionadas con esa entrada específica en el historial.",
-          "Expandir/Contraer: muestra u oculta la sección de la nota dentro del azulejo.",
-          "Editar recordatorio: te lleva al recordatorio asociado con la tarea para cambiar la configuración de la periodicidad o otros parámetros.",
-          "Ir a la planta: te lleva a la vista Detalles de la planta asociada con la tarea.",
-          "Eliminar tarea: elimina permanentemente la tarea cerrada seleccionada de la cuenta del usuario."
+          "Cada tarjeta tiene un menú con acciones para esa tarea del historial.",
+          "«Expandir» o «Colapsar»: muestra u oculta la nota.",
+          "«Editar recordatorio»: abre el recordatorio asociado para cambiar su frecuencia o sus ajustes.",
+          "«Ir a la planta»: abre los detalles de la planta correspondiente.",
+          "«Eliminar tarea»: borra definitivamente esa tarea de tu cuenta."
         ]
       },
       {
-        "heading": "Acciones FAB (Botón de Acción Flotante)",
+        "heading": "Acciones rápidas",
         "body": [
-          "La vista del Historial de tareas tiene un botón FAB con acciones para trabajar en toda la lista.",
-          "Ordenar: cambia el orden en que se muestran las tareas cerradas.",
-          "Filtrar: reduce la lista del historial a los criterios seleccionados.",
-          "Eliminar: permite eliminar tareas en masa según criterios (por ejemplo, tareas para una planta seleccionada, para una ubicación, por tipo de tarea o tareas anteriores a una fecha específica)."
+          "El botón de acciones rápidas abre las opciones para gestionar el historial.",
+          "«Ordenar»: cambia el orden de las tareas completadas.",
+          "«Filtrar»: limita la lista según los criterios que elijas.",
+          "«Eliminar»: borra varias tareas según criterios como planta, ubicación, tipo de cuidado o antigüedad."
         ]
       },
       {
-        "heading": "Opciones de ordenación",
+        "heading": "Ordenar el historial",
         "body": [
-          "La ordenación ayuda a revisar el historial en el orden que mejor se adapte a tu forma de trabajar.",
-          "Las opciones de ordenación disponibles son: Fecha de ejecución, Nombre de la planta y Ubicación."
+          "Puedes ordenar los cuidados como te resulte más cómodo revisarlos.",
+          "Puedes elegir entre fecha de realización, nombre de planta y ubicación."
         ]
       },
       {
-        "heading": "Opciones de filtrado",
+        "heading": "Filtrar el historial",
         "body": [
-          "Los filtros permiten enfocarse en un subconjunto seleccionado de tareas cerradas.",
-          "Puedes filtrar por: Nombre de la planta, Ubicación, Tipo de tarea y Rango de fechas de ejecución.",
-          "Los filtros se pueden combinar, por ejemplo, para mostrar Fertilización realizada en una ubicación durante un mes seleccionado."
+          "Los filtros ayudan a encontrar ciertos cuidados completados.",
+          "Puedes filtrar por planta, ubicación, tipo de cuidado e intervalo de fechas de realización.",
+          "Combina filtros para precisar la búsqueda, por ejemplo las fertilizaciones de una ubicación durante un mes concreto."
         ]
       },
       {
-        "heading": "Eliminación en masa (acción Eliminar)",
+        "heading": "Eliminar varias tareas",
         "body": [
-          "La eliminación en masa permite eliminar permanentemente varias tareas cerradas a la vez según los criterios seleccionados.",
-          "Escenarios típicos incluyen: limpiar el historial de una planta, eliminar tareas para una ubicación, eliminar solo un tipo de tarea o eliminar tareas anteriores a una fecha indicada.",
-          "La eliminación en masa es permanente y no se puede deshacer."
+          "La eliminación en grupo borra permanentemente varias tareas completadas según los criterios elegidos.",
+          "Puedes vaciar el historial de una planta, eliminar tareas de una ubicación o de un tipo, o borrar las anteriores a una fecha.",
+          "Esta eliminación es definitiva y no se puede deshacer."
         ]
       },
       {
-        "heading": "Diferencias entre Historial de tareas y Inicio",
+        "heading": "El historial y la pantalla de Inicio",
         "body": [
-          "Inicio se centra en las tareas actuales (para hoy y pendientes) y en su ejecución.",
-          "El Historial de tareas se centra en las tareas completadas y apoya la revisión, ordenación, filtrado y eliminación de entradas históricas.",
-          "Juntos, estas vistas permiten tanto realizar las tareas diarias (Inicio) como analizar el historial a largo plazo de cuidado (Historial de tareas)."
+          "Inicio reúne las tareas previstas o atrasadas para ayudarte con los cuidados diarios.",
+          "El historial recoge las tareas ya completadas y permite consultarlas, ordenarlas, filtrarlas o eliminarlas.",
+          "Juntas, las dos pantallas cubren los cuidados del día y el seguimiento a largo plazo."
         ]
       }
     ]

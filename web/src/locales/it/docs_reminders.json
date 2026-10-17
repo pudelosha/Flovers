@@ -3,68 +3,68 @@
     "title": "Promemoria",
     "sections": [
       {
-        "heading": "Obiettivo di questa vista",
+        "heading": "A cosa servono i Promemoria",
         "body": [
-          "La vista Promemoria serve per gestire i programmi ciclici di cura delle piante.",
-          "Il promemoria definisce cosa deve essere fatto (tipo di attività), con quale frequenza deve ripetersi (intervallo) e a quale pianta è associato. Su questa base Flovers genera automaticamente le attività nel tempo."
+          "Nei Promemoria organizzi la cura regolare delle tue piante.",
+          "Scegli la pianta, il tipo di attività e la frequenza, per esempio un’annaffiatura ogni 7 giorni. Flovers userà queste indicazioni per creare automaticamente le attività successive."
         ]
       },
       {
-        "heading": "Due viste: elenco promemoria e calendario",
+        "heading": "Elenco e calendario",
         "body": [
-          "Questa schermata ha due modalità: l’elenco dei promemoria e la vista calendario.",
-          "Puoi passare da una all’altra scorrendo lo schermo a sinistra/destra oppure selezionando il cambio di vista dal menu FAB.",
-          "Entrambe le viste mostrano gli stessi dati, ma in modo diverso — a seconda che tu voglia rivedere rapidamente le regole o visualizzare il piano nel tempo."
+          "Puoi consultare i promemoria in un elenco o nel calendario.",
+          "Per cambiare vista, scorri verso destra o sinistra oppure usa l’apposita opzione nel menu del pulsante delle azioni rapide.",
+          "Le due viste mostrano gli stessi promemoria. Nell’elenco controlli rapidamente le impostazioni, nel calendario vedi quando sono previste le attività."
         ]
       },
       {
-        "heading": "Vista elenco promemoria",
+        "heading": "Elenco dei promemoria",
         "body": [
-          "Nella vista elenco, ogni scheda rappresenta un singolo promemoria creato dall’utente.",
-          "La scheda mostra il tipo di attività (icona e nome), il nome della pianta, la posizione (se assegnata), le informazioni sulla frequenza e la data della prossima esecuzione.",
-          "È il modo più rapido per rivedere tutte le regole cicliche attive nell’account."
+          "Ogni riquadro dell’elenco corrisponde a un promemoria che hai creato.",
+          "Il riquadro mostra icona e nome dell’attività, nome della pianta, posizione (se assegnata), frequenza e prossima scadenza.",
+          "È un modo rapido per controllare i promemoria attivi nel tuo account."
         ]
       },
       {
-        "heading": "Azioni sul riquadro del promemoria (Modifica / Pausa / Riprendi / Elimina)",
+        "heading": "Modificare, sospendere ed eliminare i promemoria",
         "body": [
-          "Ogni promemoria ha due azioni: Modifica ed Elimina.",
-          "La modifica consente di cambiare i parametri del promemoria, come l’intervallo, il tipo di attività, la pianta associata e altre impostazioni (a seconda del tipo di promemoria).",
-          "L’eliminazione del promemoria è permanente e comporta che in futuro non verranno più generate attività da questa regola.",
-        "La pausa disattiva temporaneamente un promemoria senza eliminarlo. Mentre \u00e8 in pausa, la sua attivit\u00e0 in scadenza viene rimossa dalla Home e non viene inclusa nelle notifiche giornaliere via e-mail o push. Quando lo riprendi, Flovers pianifica la prossima attivit\u00e0 in sospeso in base all\u2019intervallo del promemoria."
+          "Puoi modificare, mettere in pausa, riprendere o eliminare ogni promemoria.",
+          "Scegli Modifica per cambiare la frequenza, il tipo di attività, la pianta associata e le altre impostazioni disponibili.",
+          "Un promemoria eliminato non può essere recuperato. Flovers smette di usarlo per creare nuove attività.",
+          "Con Pausa sospendi un promemoria senza eliminarlo. La sua attività in scadenza scompare dalla schermata iniziale e non viene inclusa nelle e-mail e nelle notifiche push giornaliere. Con Riprendi, Flovers programma la prossima attività da svolgere in base alla frequenza del promemoria."
         ]
       },
       {
-        "heading": "Vista calendario",
+        "heading": "Calendario",
         "body": [
-          "Nella vista calendario i promemoria sono presentati come voci pianificate in giorni specifici.",
-          "Per vedere i dettagli, tocca un giorno nel calendario — le voci pianificate per quel giorno appariranno sotto il calendario.",
-          "Il calendario utilizza indicatori cromatici/icone per mostrare i tipi di attività pianificate in un determinato giorno e facilitare la valutazione della distribuzione degli impegni."
+          "Nel calendario trovi le attività dei promemoria distribuite nei rispettivi giorni.",
+          "Tocca un giorno per vedere sotto il calendario le attività previste per quella data.",
+          "Gli indicatori sui giorni mostrano i tipi di attività e ti aiutano a capire a colpo d’occhio come si distribuisce la cura delle piante."
         ]
       },
       {
-        "heading": "Menu FAB",
+        "heading": "Menu delle azioni rapide",
         "body": [
-          "Il pulsante FAB fornisce azioni rapide relative ai promemoria e al cambio di vista.",
-          "Le opzioni disponibili sono: Aggiungi promemoria, cambio vista (Elenco/Calendario), Ordina e Filtra.",
-          "L’ordinamento può essere effettuato per data di scadenza (due date), nome della pianta o posizione.",
-          "Il filtraggio può includere: nome della pianta, posizione, tipo di attività e intervallo di date (due date range)."
+          "Il pulsante delle azioni rapide apre il menu per gestire i promemoria e cambiare vista.",
+          "Trovi Aggiungi promemoria, il cambio di vista tra Elenco e Calendario, Ordina e Filtra.",
+          "Puoi ordinare per data di scadenza, nome della pianta o posizione.",
+          "Con i filtri puoi scegliere nome della pianta, posizione, tipo di attività e intervallo delle scadenze."
         ]
       },
       {
-        "heading": "Come i promemoria generano le attività (logica generale)",
+        "heading": "Come i promemoria creano le attività",
         "body": [
-          "Un promemoria è una regola ciclica (ad esempio: Innaffia ogni 7 giorni).",
-          "Sulla base dei promemoria, Flovers genera le attività e le presenta nella schermata Home come elementi da completare.",
-          "Dopo la chiusura di un’attività, la successiva viene pianificata secondo l’intervallo del promemoria (in questo modo la routine viene proseguita automaticamente)."
+          "Un promemoria stabilisce cosa vuoi fare e con quale frequenza, per esempio annaffiare una pianta ogni 7 giorni.",
+          "Flovers crea le attività corrispondenti e le mostra nella schermata iniziale.",
+          "Quando segni un’attività come completata, l’app programma la successiva in base alla frequenza impostata."
         ]
       },
       {
-        "heading": "Note e suggerimenti pratici",
+        "heading": "Consigli pratici",
         "body": [
-          "I promemoria aiutano a mantenere la regolarità, ma non garantiscono la salute delle piante — le condizioni reali possono richiedere aggiustamenti degli intervalli.",
-          "Se le condizioni cambiano (stagione, luce, substrato, dimensione del vaso), valuta l’aggiornamento dei promemoria.",
-          "Se vuoi gestire le attività chiuse e le note, utilizza la vista Cronologia attività (descritta separatamente)."
+          "I promemoria ti aiutano a ricordare la cura delle piante, ma è sempre utile osservarle e adattare la frequenza alle loro esigenze.",
+          "Se cambiano la stagione, la luce, il terriccio o le dimensioni del vaso, controlla che i promemoria siano ancora adatti alle nuove condizioni.",
+          "Trovi le attività completate e le relative note nello Storico attività, descritto in una sezione dedicata della documentazione."
         ]
       }
     ]

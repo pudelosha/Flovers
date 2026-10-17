@@ -1,28 +1,28 @@
 {
   "title": "Contacto",
-  "subtitle": "Envíe un mensaje al soporte. Normalmente respondemos en 1–3 días hábiles.",
+  "subtitle": "Escribe a nuestro equipo de ayuda. Solemos responder en un plazo de 1 a 3 días laborables.",
   "form": {
     "emailLabel": "Tu correo electrónico",
     "emailPlaceholder": "tu@example.com",
     "subjectLabel": "Asunto",
-    "subjectPlaceholder": "por ejemplo, Problema de inicio de sesión",
+    "subjectPlaceholder": "Por ejemplo: problema para iniciar sesión",
     "messageLabel": "Mensaje",
-    "messagePlaceholder": "Describa el problema o la pregunta...",
-    "copyToMe": "Envíame una copia",
+    "messagePlaceholder": "Describe el problema o cuéntanos tu duda…",
+    "copyToMe": "Enviarme una copia",
     "send": "Enviar",
-    "sending": "Enviando...",
+    "sending": "Enviando…",
     "mailtoFallback": "Escribir un correo electrónico",
-    "note": "Si el formulario no funciona, use el botón de correo electrónico."
+    "note": "Si el formulario no funciona, usa el botón para escribirnos por correo."
   },
   "toasts": {
     "enterEmail": "Introduce una dirección de correo válida.",
-    "rateLimited": "Demasiados mensajes. Inténtalo de nuevo más tarde.",
-    "enterSubject": "Escribe el asunto.",
-    "enterMessage": "Escribe el mensaje.",
+    "rateLimited": "Has enviado demasiados mensajes. Vuelve a intentarlo más tarde.",
+    "enterSubject": "Escribe un asunto.",
+    "enterMessage": "Escribe un mensaje.",
     "contactSent": "Mensaje enviado.",
-    "couldNotSendContact": "No se pudo enviar el mensaje. Intenta de nuevo más tarde.",
-    "requestTimedOut": "Tiempo de espera agotado. Intenta de nuevo.",
-    "unauthorizedLoginAgain": "Sesión caducada. Inicia sesión nuevamente.",
-    "missingApiBase": "No se ha configurado la dirección de la API."
+    "couldNotSendContact": "No se ha podido enviar el mensaje. Vuelve a intentarlo más tarde.",
+    "requestTimedOut": "La solicitud ha tardado demasiado. Vuelve a intentarlo.",
+    "unauthorizedLoginAgain": "Tu sesión ha caducado. Inicia sesión de nuevo.",
+    "missingApiBase": "El servicio de contacto aún no está configurado."
   }
 }

@@ -3,67 +3,67 @@
     "title": "Detalhes da planta",
     "sections": [
       {
-        "heading": "Objetivo desta vista",
+        "heading": "Tudo sobre uma planta",
         "body": [
-          "A vista Detalhes da planta é o local central para visualizar e gerir uma planta individual criada pelo utilizador.",
-          "Reúne informações sobre a planta, lembretes atribuídos, tarefas, leituras de sensores (se disponíveis) e ações rápidas relacionadas com esta planta."
+          "Nos Detalhes da planta, você consulta e gerencia uma planta da sua conta.",
+          "Essa tela reúne os dados, os lembretes, as ações das tarefas, as leituras de sensores disponíveis e os atalhos para outras telas relacionadas."
         ]
       },
       {
         "heading": "Informações da planta",
         "body": [
-          "Na parte superior do ecrã é apresentada a imagem da planta, o seu nome, o nome opcional da definição da planta e a localização atribuída.",
-          "Abaixo são apresentados os parâmetros detalhados fornecidos durante a criação da planta, como a data de compra, notas, condições de iluminação, orientação, distância da janela, tipo de vaso e tipo de substrato.",
-          "Estas informações ajudam a interpretar melhor os lembretes, as leituras e as decisões relacionadas com os cuidados."
+          "No alto ficam a imagem, o nome, a espécie se houver uma ficha associada e a localização.",
+          "Abaixo aparecem os dados informados ao adicionar a planta, como data de compra, anotações, luz, orientação, distância da janela, vaso e substrato.",
+          "Essas informações ajudam você a avaliar os lembretes, interpretar as leituras e escolher os cuidados."
         ]
       },
       {
-        "heading": "Ações ao nível da planta (menu de 3 pontos)",
+        "heading": "Menu da planta",
         "body": [
-          "O menu de 3 pontos associado ao cabeçalho da planta disponibiliza ações adicionais relacionadas com a própria planta.",
-          "As opções disponíveis incluem visualizar a Definição da planta (se a planta estiver associada a uma), editar os dados da planta, alterar a imagem e aceder aos Lembretes filtrados para esta planta.",
-          "A alteração da imagem permite substituir a imagem predefinida, adicionar uma fotografia própria a partir do telefone ou remover a imagem."
+          "Abra os três pontos ao lado do nome para ver as ações da planta.",
+          "Você pode consultar a ficha da espécie, se houver uma associada, editar os dados, mudar a imagem e abrir os lembretes filtrados para essa planta.",
+          "É possível substituir a imagem padrão, escolher uma foto do celular ou remover a imagem."
         ]
       },
       {
-        "heading": "Definição da planta",
+        "heading": "Ficha da espécie",
         "body": [
-          "Se a planta estiver associada a uma Definição da planta da base Flovers, o utilizador pode abrir a vista dedicada da Definição.",
-          "Esta vista apresenta informações da espécie, como a descrição da planta, preferências de cuidados, características, nível de dificuldade, intervalo de temperaturas, humidade, toxicidade e hábito de crescimento.",
-          "As definições de plantas fornecem orientações gerais e devem ser interpretadas no contexto das condições reais do utilizador."
+          "Se você associou uma ficha do catálogo do Flovers à planta, pode abri-la por aqui.",
+          "A ficha traz descrição, necessidades de cuidado, características, dificuldade, faixa de temperatura, umidade, toxicidade e forma de crescimento da espécie.",
+          "As orientações são gerais. Avalie se são adequadas às condições em que sua planta vive."
         ]
       },
       {
         "heading": "Lembretes e tarefas",
         "body": [
-          "A secção Lembretes apresenta todos os lembretes ativos atribuídos à planta.",
-          "Cada lembrete possui o seu próprio menu de 3 pontos, permitindo concluir a tarefa, editar o lembrete ou visualizar o histórico de tarefas.",
-          "Ao concluir uma tarefa, o utilizador pode adicionar uma nota, que passa a fazer parte do histórico de cuidados da planta."
+          "A seção Lembretes mostra todos os lembretes ativos dessa planta.",
+          "Nos três pontos de cada lembrete, você pode concluir a tarefa, editar o lembrete ou consultar o histórico.",
+          "Ao concluir uma tarefa, você pode adicionar uma anotação ao histórico de cuidados da planta."
         ]
       },
       {
-        "heading": "Leituras mais recentes",
+        "heading": "Últimas leituras",
         "body": [
-          "Se a planta estiver associada a um dispositivo de medição, as leituras mais recentes dos sensores são apresentadas nesta vista.",
-          "As leituras suportadas incluem temperatura do ar, humidade do ar, nível de luz e humidade do solo.",
-          "A secção mostra os últimos valores juntamente com a informação sobre o momento em que a medição foi efetuada.",
-          "Tocar no cartão das leituras leva o utilizador à vista Histórico de leituras, onde são apresentados gráficos detalhados e resumos (diários/semanais/mensais) de temperatura, humidade, luz e humidade do solo (desde que o dispositivo esteja associado à planta)."
+          "Se a planta está ligada a um dispositivo, as últimas leituras aparecem nesta tela.",
+          "Os sensores podem medir temperatura do ar, umidade do ar, luz e umidade do solo.",
+          "Os valores aparecem com a data e a hora da última leitura recebida.",
+          "Toque no cartão para abrir o Histórico de leituras. Com um dispositivo associado, você vê gráficos e resumos diários, semanais e mensais de temperatura, umidade do ar, luz e umidade do solo."
         ]
       },
       {
         "heading": "Código QR e acesso rápido",
         "body": [
-          "Cada planta possui um código QR único apresentado na parte inferior do ecrã.",
-          "A leitura deste código na vista do Scanner permite o acesso direto à vista Detalhes da planta.",
-          "O código QR pode ser guardado no dispositivo ou enviado por e-mail, permitindo a sua impressão e colocação no vaso."
+          "Cada planta tem um código QR próprio, exibido no fim da tela.",
+          "Escaneie esse código pelo Scanner do aplicativo para abrir diretamente os Detalhes da planta.",
+          "Salve o código no celular ou envie por e-mail para imprimir e colar no vaso."
         ]
       },
       {
         "heading": "Informações importantes",
         "body": [
-          "As fotografias adicionadas pelo utilizador são armazenadas exclusivamente no dispositivo do utilizador e não são guardadas no backend do Flovers.",
-          "As imagens predefinidas das plantas provêm do backend do Flovers e podem ser geradas com recurso a IA.",
-          "As leituras dos sensores e as ações sugeridas têm caráter informativo e devem ser combinadas com a avaliação do próprio utilizador."
+          "As fotos que você adiciona às plantas ficam apenas no seu dispositivo e não são enviadas ao servidor do Flovers.",
+          "As imagens padrão vêm do servidor e podem ter sido geradas com IA.",
+          "As leituras e os cuidados sugeridos servem de apoio. Observe a planta e use também sua própria avaliação."
         ]
       }
     ]

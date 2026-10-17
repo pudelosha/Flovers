@@ -31,8 +31,8 @@
     "menu": {
       "edit": "स्मरणपत्र संपादित करें",
       "delete": "स्मरणपत्र हटाएँ",
-      "pause": "???????? ?????",
-      "resume": "???????? ??? ???? ????"
+      "pause": "स्मरणपत्र रोकें",
+      "resume": "स्मरणपत्र फिर चालू करें"
     },
     "tile": {
       "repeatsEvery": "{{count}} {{unit}} हर बार दोहराता है",
@@ -40,7 +40,7 @@
       "dueInOneDay": "1 दिन में समय सीमा",
       "dueInDays": "{{count}} दिनों में समय सीमा",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "???? ???"
+      "paused": "रुका हुआ"
     },
     "calendar": {
       "scheduledOn": "{{date}} पर निर्धारित",
@@ -105,10 +105,10 @@
       "createFailedWithReason": "नहीं बना सका: {{reason}}",
       "updateFailed": "अपडेट करने में विफल",
       "updateFailedWithReason": "अपडेट नहीं किया जा सका: {{reason}}",
-      "paused": "???????? ??? ???? ???",
-      "resumed": "???????? ??? ???? ?? ???",
-      "toggleFailed": "????? ???? ???",
-      "toggleFailedWithReason": "????? ???? ???: {{reason}}"
+      "paused": "स्मरणपत्र रोक दिया गया",
+      "resumed": "स्मरणपत्र फिर चालू हो गया",
+      "toggleFailed": "स्मरणपत्र अपडेट नहीं हुआ",
+      "toggleFailedWithReason": "स्मरणपत्र अपडेट नहीं हुआ: {{reason}}"
     }
   }
 }

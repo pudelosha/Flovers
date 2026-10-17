@@ -12,10 +12,10 @@
       "title": "Accesso e registrazione"
     },
     "home": {
-      "title": "Schermata principale"
+      "title": "Schermata iniziale"
     },
     "taskHistory": {
-      "title": "Cronologia delle attività"
+      "title": "Storico attività"
     },
     "plants": {
       "title": "Piante"
@@ -24,7 +24,7 @@
       "title": "Dettagli della pianta"
     },
     "createPlantWizard": {
-      "title": "Procedura guidata di aggiunta della pianta"
+      "title": "Aggiunta guidata di una pianta"
     },
     "locations": {
       "title": "Posizioni"
@@ -33,10 +33,10 @@
       "title": "Promemoria"
     },
     "readings": {
-      "title": "Letture"
+      "title": "Misurazioni"
     },
     "readingsHistory": {
-      "title": "Cronologia delle letture"
+      "title": "Cronologia misurazioni"
     },
     "scanner": {
       "title": "Scanner (QR)"
@@ -44,5 +44,6 @@
     "profile": {
       "title": "Profilo e impostazioni"
     }
-  }
+  },
+  "navigationLabel": "Navigazione della documentazione"
 }

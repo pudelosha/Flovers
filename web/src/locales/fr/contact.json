@@ -1,28 +1,28 @@
 {
   "title": "Contact",
-  "subtitle": "Envoyez un message au support. Nous répondons généralement sous 1 à 3 jours ouvrables.",
+  "subtitle": "Écris à notre équipe d’assistance. Nous répondons généralement sous 1 à 3 jours ouvrés.",
   "form": {
-    "emailLabel": "Votre adresse e-mail",
+    "emailLabel": "Ton adresse e-mail",
     "emailPlaceholder": "vous@example.com",
-    "subjectLabel": "Sujet",
-    "subjectPlaceholder": "ex. Problème de connexion",
+    "subjectLabel": "Objet",
+    "subjectPlaceholder": "Par exemple : problème de connexion",
     "messageLabel": "Message",
-    "messagePlaceholder": "Décrivez votre problème ou question…",
-    "copyToMe": "Envoyez-moi une copie",
+    "messagePlaceholder": "Décris ton problème ou pose-nous ta question…",
+    "copyToMe": "M’envoyer une copie",
     "send": "Envoyer",
     "sending": "Envoi en cours…",
     "mailtoFallback": "Envoyer un e-mail",
-    "note": "Si le formulaire ne fonctionne pas, utilisez le bouton e-mail."
+    "note": "Si le formulaire ne fonctionne pas, utilise le bouton pour nous écrire par e-mail."
   },
   "toasts": {
-    "enterEmail": "Veuillez saisir une adresse e-mail valide.",
-    "rateLimited": "Trop de messages. Veuillez réessayer plus tard.",
-    "enterSubject": "Entrez le sujet.",
-    "enterMessage": "Entrez un message.",
+    "enterEmail": "Saisis une adresse e-mail valide.",
+    "rateLimited": "Tu as envoyé trop de messages. Réessaie plus tard.",
+    "enterSubject": "Ajoute un objet à ton message.",
+    "enterMessage": "Saisis ton message.",
     "contactSent": "Message envoyé.",
-    "couldNotSendContact": "Impossible d'envoyer le message. Essayez à nouveau plus tard.",
-    "requestTimedOut": "Le délai d'attente est expiré. Essayez à nouveau.",
-    "unauthorizedLoginAgain": "La session a expiré. Veuillez vous reconnecter.",
-    "missingApiBase": "L'adresse API n'est pas configurée."
+    "couldNotSendContact": "Le message n’a pas pu être envoyé. Réessaie plus tard.",
+    "requestTimedOut": "La demande a pris trop de temps. Réessaie.",
+    "unauthorizedLoginAgain": "Ta session a expiré. Connecte-toi à nouveau.",
+    "missingApiBase": "Le service de contact n’est pas encore configuré."
   }
 }

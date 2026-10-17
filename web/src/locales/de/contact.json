@@ -1,28 +1,28 @@
 {
   "title": "Kontakt",
-  "subtitle": "Senden Sie eine Nachricht an den Support. Wir antworten in der Regel innerhalb von 1–3 Werktagen.",
+  "subtitle": "Schreib unserem Support. Wir antworten in der Regel innerhalb von 1–3 Werktagen.",
   "form": {
     "emailLabel": "Deine E-Mail-Adresse",
     "emailPlaceholder": "du@example.com",
     "subjectLabel": "Betreff",
-    "subjectPlaceholder": "z.B. Anmeldeproblem",
+    "subjectPlaceholder": "z. B. Probleme bei der Anmeldung",
     "messageLabel": "Nachricht",
-    "messagePlaceholder": "Beschreiben Sie das Problem oder die Frage…",
+    "messagePlaceholder": "Beschreibe dein Problem oder stelle uns deine Frage …",
     "copyToMe": "Eine Kopie an mich senden",
     "send": "Senden",
-    "sending": "Senden…",
+    "sending": "Wird gesendet …",
     "mailtoFallback": "E-Mail schreiben",
-    "note": "Wenn das Formular nicht funktioniert, verwenden Sie die E-Mail-Schaltfläche."
+    "note": "Falls das Formular nicht funktioniert, kannst du uns über die Schaltfläche eine E-Mail schreiben."
   },
   "toasts": {
     "enterEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
-    "rateLimited": "Zu viele Nachrichten. Bitte versuche es später erneut.",
-    "enterSubject": "Geben Sie einen Betreff ein.",
-    "enterMessage": "Geben Sie eine Nachricht ein.",
+    "rateLimited": "Du hast zu viele Nachrichten gesendet. Bitte versuche es später noch einmal.",
+    "enterSubject": "Bitte gib einen Betreff ein.",
+    "enterMessage": "Bitte gib eine Nachricht ein.",
     "contactSent": "Nachricht gesendet.",
-    "couldNotSendContact": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es später noch einmal.",
-    "requestTimedOut": "Zeitüberschreitung. Versuchen Sie es erneut.",
-    "unauthorizedLoginAgain": "Die Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
-    "missingApiBase": "Die API-Adresse wurde nicht konfiguriert."
+    "couldNotSendContact": "Deine Nachricht konnte nicht gesendet werden. Bitte versuche es später noch einmal.",
+    "requestTimedOut": "Die Anfrage hat zu lange gedauert. Bitte versuche es noch einmal.",
+    "unauthorizedLoginAgain": "Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.",
+    "missingApiBase": "Der Kontaktservice ist noch nicht eingerichtet."
   }
 }

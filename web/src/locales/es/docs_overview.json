@@ -5,91 +5,91 @@
       {
         "heading": "¿Qué es Flovers?",
         "body": [
-          "Flovers es un asistente de cuidado de plantas que ayuda a organizar las tareas diarias, rastrear el historial de cuidado y monitorear las lecturas de tus propios dispositivos IoT.",
-          "La aplicación combina recordatorios y tareas con perfiles de plantas (Tus plantas) y definiciones de plantas (perfiles incorporados de especies con recomendaciones).",
-          "Flovers apoya tus decisiones, pero no las reemplaza; los efectos del cuidado dependen de las condiciones y de cómo se apliquen las recomendaciones.",
-          "El servicio incluye una aplicación móvil (Android; en el futuro iOS), una API backend y un sitio web con documentación e información legal."
+          "Flovers te ayuda a organizar los cuidados diarios de tus plantas, guardar su historial y consultar las lecturas de tus propios sensores conectados.",
+          "Gestionas tus plantas con recordatorios y tareas. Las fichas de especies de la base aportan información general y consejos de cuidado.",
+          "Flovers te ayuda a tomar decisiones. Los resultados dependen de las condiciones y de cómo apliques las recomendaciones.",
+          "Flovers incluye la aplicación para Android, con una versión para iOS prevista, los servidores con su API y una web con documentación e información legal."
         ]
       },
       {
-        "heading": "Conceptos clave (cómo funciona la estructura de la aplicación)",
+        "heading": "Conceptos útiles",
         "body": [
-          "Definición de planta: perfil incorporado de la especie que contiene características generales y recomendaciones (luz, riego/rociado, fertilización, etc.).",
-          "Instancia de planta: tu propia planta (tu ejemplar), opcionalmente vinculada con la Definición de la planta para obtener mejores recomendaciones predeterminadas.",
-          "Recordatorio: regla cíclica (por ejemplo, regar cada X días), en base a la cual se generan automáticamente las Tareas.",
-          "Tarea: acción específica generada a partir de un Recordatorio; puedes marcarla como completada y añadir una nota, construyendo así el historial de cuidado."
+          "Ficha de especie: una ficha de la base con las características y necesidades generales de una especie, como luz, riego, pulverización y fertilización.",
+          "Tu planta: el registro de tu propio ejemplar. Puedes asociarle una ficha de especie para recibir consejos y ajustes sugeridos.",
+          "Recordatorio: un ajuste de cuidado recurrente, por ejemplo regar cada X días, que crea tareas automáticamente.",
+          "Tarea: un cuidado concreto creado a partir de un recordatorio. Puedes marcarlo como completado y añadir una nota al historial."
         ]
       },
       {
-        "heading": "Funciones clave en resumen",
+        "heading": "Funciones principales",
         "body": [
-          "Cuenta de usuario: registro, inicio de sesión, confirmación por correo electrónico, restablecimiento de contraseña y gestión de la configuración del perfil.",
-          "Gestión de plantas: agregar plantas, agrupar por Ubicaciones, notas y vista del historial de actividades.",
-          "Recordatorios y tareas: creación de rutinas cíclicas (regar, rociar, fertilizar, trasplantar, cuidado) y su ejecución.",
-          "Lecturas IoT: conexión de tus propios dispositivos y almacenamiento de datos como temperatura, humedad del aire, humedad del suelo y nivel de luz."
+          "Cuenta: registrarte, iniciar sesión, confirmar el correo, restablecer la contraseña y gestionar el perfil.",
+          "Plantas: añadir tus plantas, agruparlas por ubicación, tomar notas y consultar qué cuidados hiciste y cuándo.",
+          "Recordatorios y tareas: planificar el riego, la pulverización, la fertilización, el trasplante o el cuidado general y marcar lo que has hecho.",
+          "Lecturas: conectar tus dispositivos y guardar medidas de temperatura del aire, humedad del aire, humedad del suelo e intensidad de luz."
         ]
       },
       {
-        "heading": "Reconocimiento de plantas (a partir de una foto)",
+        "heading": "Identificar una planta con una foto",
         "body": [
-          "Flovers permite el reconocimiento de plantas a partir de una foto para facilitar la asignación de la Definición de la planta y comenzar con mejores configuraciones predeterminadas.",
-          "El reconocimiento se realiza en el servidor utilizando el propio sistema ML del Proveedor de Servicios, entrenado en más de 700 especies.",
-          "Las fotos enviadas para el reconocimiento se utilizan exclusivamente para realizar el proceso de identificación y no se destinan a almacenamiento permanente.",
-          "Los resultados dependen de la calidad de la foto, la iluminación, el enfoque, la visibilidad de la planta y la similitud con otras especies."
+          "La identificación por foto te ayuda a encontrar la ficha de especie adecuada y empezar con ajustes de cuidado útiles.",
+          "Se realiza en los servidores del proveedor con su propio sistema de aprendizaje automático, entrenado con más de 700 especies.",
+          "Las fotos enviadas se usan solo para la identificación. No está previsto guardarlas de forma permanente.",
+          "El resultado depende de la iluminación, el enfoque, la visibilidad de la planta y su parecido con otras especies de la base."
         ]
       },
       {
-        "heading": "Dispositivos IoT y datos de sensores",
+        "heading": "Dispositivos conectados y sensores",
         "body": [
-          "Flovers admite dispositivos propios o externos (por ejemplo, Arduino) que envían lecturas asociadas a tu cuenta.",
-          "Lecturas compatibles: temperatura del aire, humedad del aire, humedad del suelo y nivel de luz.",
-          "Las lecturas se almacenan en el backend y se presentan en la aplicación como valores actuales y un historial (resúmenes diarios/semanales/mensuales).",
-          "Tienes control sobre la emparejamiento y el uso: la estabilidad, calibración y montaje de los dispositivos quedan bajo tu responsabilidad."
+          "Puedes usar dispositivos que hayas montado tú o de otros fabricantes, por ejemplo basados en Arduino, para enviar lecturas a tu cuenta.",
+          "Se admiten temperatura del aire, humedad del aire, humedad del suelo e intensidad de luz.",
+          "Las lecturas se guardan en los servidores. La aplicación muestra los valores actuales y resúmenes diarios, semanales y mensuales.",
+          "Tú eliges qué dispositivos vinculas y cómo los utilizas. Su funcionamiento, calibración e instalación son tu responsabilidad."
         ]
       },
       {
-        "heading": "Códigos QR y acceso rápido",
+        "heading": "Acceso rápido con códigos QR",
         "body": [
-          "Puedes generar códigos QR que contengan un enlace a una Instancia específica de planta en tu cuenta.",
-          "El escenario típico es imprimir y pegar el código en la maceta, luego escanearlo para acceder rápidamente a los detalles de la planta.",
-          "Los códigos QR están destinados a la conveniencia; trátalos como indicadores de acceso y no los compartas públicamente si podrían revelar metadatos.",
-          "Actualmente, los detalles de las plantas están disponibles principalmente para el propietario conectado."
+          "Puedes crear un código QR con un enlace a una planta concreta de tu cuenta.",
+          "Imprímelo y pégalo en la maceta. Al escanearlo, abrirás sus detalles y lecturas.",
+          "Los códigos QR facilitan el acceso a tus datos. No los compartas públicamente si pueden revelar información sensible.",
+          "Actualmente, los detalles están pensados para que los vea solo la persona propietaria de la planta después de iniciar sesión."
         ]
       },
       {
         "heading": "Notificaciones y recordatorios",
         "body": [
-          "Flovers puede enviar notificaciones push (a través de Firebase) sobre las tareas del día o las pendientes, según la configuración.",
-          "Las configuraciones de notificaciones se encuentran en el perfil; incluso si desactivas las notificaciones push, los recordatorios y las tareas permanecen en la aplicación.",
-          "Los correos electrónicos actualmente se usan principalmente para acciones relacionadas con la cuenta (activación y restablecimiento de contraseña).",
-          "Las notificaciones son de apoyo: Flovers no garantiza la salud de las plantas ni que los recordatorios evitarán pérdidas."
+          "Según tus ajustes, Flovers puede enviar notificaciones push mediante Firebase para las tareas previstas o atrasadas.",
+          "Puedes configurarlas en el perfil. Los recordatorios y tareas siguen en la aplicación aunque desactives las notificaciones.",
+          "El correo electrónico se utiliza para activar la cuenta y restablecer la contraseña. Según tus ajustes, también puedes recibir resúmenes diarios de tareas y avisos de las que siguen pendientes después de su fecha.",
+          "Las notificaciones son una ayuda: Flovers no garantiza la salud de las plantas ni que los recordatorios eviten pérdidas."
         ]
       },
       {
-        "heading": "Privacidad, seguridad y tus datos",
+        "heading": "Privacidad y seguridad de tus datos",
         "body": [
-          "Flovers almacena los datos de la cuenta y los datos necesarios para proporcionar el Servicio (plantas, recordatorios, tareas, notas y lecturas).",
-          "Las contraseñas se almacenan de manera cifrada; la activación de la cuenta requiere verificación por correo electrónico.",
-          "Se asume que los datos se procesan dentro de la UE; el alojamiento está planificado en Hetzner (UE), y las notificaciones push se manejan a través de Firebase.",
-          "Los detalles se encuentran en la Política de Privacidad y los Términos de Servicio disponibles en el sitio web y en la aplicación."
+          "Flovers guarda los datos de la cuenta y los necesarios para prestar el servicio: plantas, recordatorios, tareas, notas y lecturas.",
+          "Las contraseñas se guardan como valores hash. La cuenta se activa mediante la confirmación del correo electrónico.",
+          "Flovers procura mantener los datos en la Unión Europea. Los servidores funcionan en un VPS de Hetzner y las notificaciones push utilizan Firebase.",
+          "Encontrarás los detalles en la política de privacidad y las condiciones de uso, disponibles en la web y en la aplicación."
         ]
       },
       {
-        "heading": "Limitaciones y advertencias importantes",
+        "heading": "Límites que conviene conocer",
         "body": [
-          "Flovers es una herramienta de planificación y monitoreo; no es un sistema profesional de asesoramiento y no reemplaza el conocimiento de jardinería.",
-          "Las lecturas de los sensores pueden ser inexactas (calibración, montaje, condiciones); en situaciones importantes, verifica por ti mismo.",
-          "Las recomendaciones de cuidado son generales y pueden no ser adecuadas para tus condiciones (sustrato, maceta, luz, humedad, temporada).",
-          "Si algo parece incorrecto, confía en tu propio juicio: ajusta las rutinas y usa fuentes confiables."
+          "Flovers es una herramienta de planificación y seguimiento. No sustituye los conocimientos de jardinería ni el asesoramiento profesional.",
+          "La calibración, la ubicación o los fallos de un sensor pueden alterar las lecturas. Comprueba los valores importantes antes de basar una decisión en ellos.",
+          "Las recomendaciones son generales y pueden no ajustarse a tu sustrato, tamaño de maceta, luz, humedad o estación del año.",
+          "Si algo no parece ir bien, usa tu criterio, adapta los cuidados y consulta fuentes de jardinería fiables cuando lo necesites."
         ]
       },
       {
-        "heading": "¿Qué sigue?",
+        "heading": "Por dónde empezar",
         "body": [
-          "Si estás comenzando, ve a Iniciar sesión & Registrarse, luego crea tu primera Instancia de planta en el asistente de Crear Planta.",
-          "Luego configura los Recordatorios y realiza las Tareas para mantener la rutina y construir tu historial de cuidado.",
-          "Si tienes un dispositivo, abre Lecturas, configúralo y usa Historial de Lecturas para observar tendencias.",
-          "Consulta las Preguntas frecuentes para respuestas rápidas y los documentos de Términos de servicio/Política de privacidad para temas formales."
+          "Empieza por «Inicio de sesión y registro» y después añade tu primera planta con el asistente.",
+          "Configura recordatorios y completa las tareas para establecer una rutina y llevar un historial útil.",
+          "Si tienes un dispositivo, vincúlalo en «Lecturas» y consulta el historial para ver los cambios.",
+          "Las preguntas frecuentes ofrecen respuestas rápidas. Las condiciones de uso y la política de privacidad explican los aspectos legales y el tratamiento de datos."
         ]
       }
     ]

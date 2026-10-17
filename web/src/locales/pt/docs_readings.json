@@ -3,198 +3,198 @@
     "title": "Leituras",
     "sections": [
       {
-        "heading": "Finalidade deste ecrã",
+        "heading": "Sensores e dispositivos",
         "body": [
-          "O ecrã Leituras permite-lhe visualizar e gerir dispositivos IoT associados às suas plantas.",
-          "Cada dispositivo pode enviar medições ambientais, como temperatura do ar, humidade do ar, nível de luz e humidade do solo, para o Flovers.",
-          "Esta funcionalidade foi concebida para utilizadores que constroem ou utilizam os seus próprios dispositivos, por exemplo placas Arduino ou baseadas em ESP, e querem monitorizar as condições das plantas ao longo do tempo.",
-          "Os dispositivos também podem ser configurados com uma bomba de água para rega manual programada e rega automática baseada na humidade do solo."
+          "Na tela Leituras, você consulta e gerencia os dispositivos IoT associados às plantas.",
+          "Eles podem enviar temperatura do ar, umidade do ar, luz e umidade do solo ao Flovers.",
+          "Essa função atende a quem usa ou monta seus próprios dispositivos, como placas Arduino ou ESP, para acompanhar as condições das plantas.",
+          "Você também pode configurar uma bomba para receber pedidos de rega pelo aplicativo ou regar automaticamente conforme a umidade do solo."
         ]
       },
       {
-        "heading": "Cartões de dispositivos e leituras mais recentes",
+        "heading": "Cartões dos dispositivos",
         "body": [
-          "O ecrã apresenta uma lista de cartões, em que cada cartão representa um dispositivo associado.",
-          "Cada cartão mostra o nome do dispositivo ou da planta, a localização e as leituras mais recentes recebidas do dispositivo.",
-          "Dependendo dos sensores ativados para o dispositivo, o cartão pode mostrar temperatura do ar, humidade do ar, nível de luz e humidade do solo.",
-          "Se ainda não tiverem sido recebidos dados, são apresentados marcadores de posição em vez de valores.",
-          "Se o dispositivo estiver configurado com uma bomba de água, o cartão também mostra controlos e informações relacionados com a bomba, incluindo a hora da última execução da bomba."
+          "Cada cartão da lista corresponde a um dispositivo associado.",
+          "Ele mostra o nome do dispositivo ou da planta, a localização e as últimas leituras recebidas.",
+          "Os valores disponíveis dependem dos sensores ativados: temperatura do ar, umidade do ar, luz e umidade do solo.",
+          "Quando ainda não chegaram dados, aparecem marcadores no lugar dos valores.",
+          "Se houver uma bomba configurada, o cartão também mostra os controles e a hora da última rega registrada."
         ]
       },
       {
-        "heading": "Secção da bomba de água nos cartões de dispositivos",
+        "heading": "Controles da bomba",
         "body": [
-          "Quando um dispositivo tem o suporte de bomba de água ativado, o seu cartão apresenta controlos adicionais da bomba.",
-          "O cartão pode mostrar se a rega automática por bomba está ativada, o limite de humidade do solo utilizado para a rega automática, a última execução registada da bomba e um botão para rega manual programada.",
-          "O botão de rega manual muda de estado consoante já exista ou não um pedido de rega pendente.",
-          "Se não houver nenhum pedido de rega manual pendente, o botão mostra Programar rega.",
-          "Se já houver um pedido de rega manual pendente, o botão mostra Cancelar rega programada.",
-          "Isto torna visível diretamente no cartão se a rega já foi solicitada para esse dispositivo."
+          "Quando a opção de bomba está ativada, aparecem controles adicionais no cartão.",
+          "Você pode ver se a rega automática está ligada, o limite de umidade do solo, a última rega registrada e o botão para pedir uma rega manual.",
+          "O botão muda conforme já exista ou não um pedido pendente.",
+          "Sem pedido pendente, aparece Agendar rega.",
+          "Com um pedido pendente, aparece Cancelar rega agendada.",
+          "Assim, você vê no próprio cartão se já pediu uma rega para aquele dispositivo."
         ]
       },
       {
-        "heading": "Interações com cartões",
+        "heading": "Abra os gráficos",
         "body": [
-          "Tocar no corpo do cartão navega diretamente para o ecrã Histórico de Leituras desse dispositivo.",
-          "Tocar num ícone de leitura específico, por exemplo temperatura, humidade, luz ou humidade do solo, abre o ecrã Histórico de Leituras com essa medição pré-selecionada.",
-          "Isto permite acesso rápido a gráficos detalhados para um tipo de leitura específico."
+          "Toque no cartão para abrir o Histórico de leituras do dispositivo.",
+          "Toque no ícone de temperatura, umidade do ar, luz ou umidade do solo para abrir o histórico já com aquela medição selecionada.",
+          "Esses atalhos levam diretamente ao gráfico que você quer consultar."
         ]
       },
       {
-        "heading": "Ações de dispositivos",
+        "heading": "Menu do dispositivo",
         "body": [
-          "Cada cartão de dispositivo inclui um menu de 3 pontos com ações adicionais.",
-          "As opções disponíveis incluem Histórico de leituras, Detalhes da planta, Detalhes do dispositivo, Editar dispositivo e Eliminar dispositivo.",
-          "A ação Detalhes do dispositivo abre um modal com informações de configuração para o dispositivo selecionado, incluindo identificadores gerados, sensores ativados, configuração da bomba e o segredo da conta utilizado pelo dispositivo.",
-          "Eliminar um dispositivo remove-o permanentemente, bem como a sua associação à planta."
+          "Os três pontos de cada cartão abrem as ações do dispositivo.",
+          "Você encontra Histórico de leituras, Detalhes da planta, Detalhes do dispositivo, Editar dispositivo e Excluir dispositivo.",
+          "Detalhes do dispositivo abre uma janela com identificadores, sensores ativos, configuração da bomba e a chave secreta da conta usada pelo aparelho.",
+          "Excluir dispositivo remove o aparelho e sua associação à planta permanentemente."
         ]
       },
       {
-        "heading": "Histórico de Leituras",
+        "heading": "Histórico de leituras",
         "body": [
-          "O ecrã Histórico de Leituras apresenta gráficos detalhados dos dados recolhidos pelos sensores.",
-          "Os dados podem ser visualizados com agregação diária, semanal e mensal.",
-          "Estão disponíveis gráficos para temperatura do ar, humidade do ar, nível de luz e humidade do solo.",
-          "Só podem ser apresentados os dados fornecidos pelo dispositivo.",
-          "O backend armazena leituras em blocos horários. Se o dispositivo enviar várias leituras para a mesma hora, o registo horário existente é atualizado em vez de duplicado."
+          "O Histórico de leituras mostra os dados dos sensores em gráficos detalhados.",
+          "Escolha os períodos diário, semanal ou mensal para consultar os dados.",
+          "Há gráficos de temperatura do ar, umidade do ar, luz e umidade do solo.",
+          "Só aparecem os dados enviados pelo dispositivo.",
+          "O servidor mantém um registro por hora. Se receber outras leituras da mesma hora, atualiza esse registro em vez de criar cópias."
         ]
       },
       {
-        "heading": "Ações do FAB",
+        "heading": "Botão de ações rápidas",
         "body": [
-          "O Botão de Ação Flutuante fornece ações relacionadas com a gestão e configuração de dispositivos.",
-          "As ações disponíveis incluem Associar dispositivo, Configuração do dispositivo, Ordenar, Filtrar, Enviar exportação e Limpar filtro quando os filtros estão ativos.",
-          "A ordenação pode ser aplicada por nome da planta, localização ou hora da última leitura.",
-          "A filtragem pode ser aplicada por planta, localização e estado do dispositivo, como ativado ou desativado.",
-          "A ação Enviar exportação envia por email uma exportação das leituras em folha de cálculo. A exportação inclui registos de leituras e registos de tarefas de rega. Se forem aplicados filtros, os dados exportados refletem esses filtros."
+          "O botão de ações rápidas reúne as opções para adicionar e gerenciar dispositivos.",
+          "Você encontra Vincular dispositivo, Configuração do dispositivo, Ordenar, Filtrar e Enviar exportação. Limpar filtro aparece quando há filtros ativos.",
+          "Ordene por nome da planta, localização ou hora da última leitura.",
+          "Filtre por planta, localização ou estado do dispositivo, como ativo ou inativo.",
+          "Enviar exportação manda uma planilha com as leituras e os registros de rega ao seu e-mail. Os filtros da lista também se aplicam aos dados exportados."
         ]
       },
       {
-        "heading": "Associar um dispositivo",
+        "heading": "Vincule um dispositivo",
         "body": [
-          "Associar dispositivo é utilizado para configurar um novo dispositivo de leitura e associá-lo a uma planta.",
-          "Durante a configuração, pode configurar o nome do dispositivo, a planta associada, o estado ativado ou desativado, o intervalo de leitura, os sensores ativados, alertas de baixa humidade do solo, notificações por email e push para baixa humidade do solo, suporte de bomba de água, arranque automático da bomba, limite de humidade do solo para rega automática e notificações por email e push após a conclusão da rega.",
-          "Cada dispositivo recebe uma Chave do Dispositivo gerada. A conta do utilizador também tem uma Chave Secreta de Autenticação. Em conjunto, estas credenciais permitem que o dispositivo físico comunique com o backend."
+          "Escolha Vincular dispositivo para configurar um novo aparelho e associá-lo a uma planta.",
+          "Defina nome, planta, estado ativo ou inativo, intervalo de leitura e sensores. Você também pode configurar alertas de baixa umidade do solo, os canais de aviso, a bomba, a rega automática, seu limite de umidade e os avisos de conclusão da rega.",
+          "Cada aparelho recebe uma Chave do Dispositivo. A conta também tem uma Chave Secreta de Autenticação. Juntas, elas permitem que o aparelho se comunique com o servidor."
         ]
       },
       {
-        "heading": "Autenticação do dispositivo e fluxo de dados",
+        "heading": "Como o dispositivo envia dados",
         "body": [
-          "Os dispositivos autenticam-se utilizando a Chave Secreta de Autenticação, a Chave do Dispositivo e o ID do Dispositivo opcional.",
-          "Não é necessário nenhum token de início de sessão do utilizador para endpoints de ingestão do dispositivo. A autorização é tratada através das credenciais do dispositivo.",
-          "Isto permite integrações IoT simples, em que a placa pode enviar dados diretamente para o Flovers.",
-          "O código Arduino ou ESP gerado contém os endpoints e as credenciais necessários para o dispositivo selecionado. Antes de carregar o código, o utilizador deve preencher o seu próprio SSID e palavra-passe de WiFi."
+          "O dispositivo se identifica com a Chave Secreta de Autenticação, a Chave do Dispositivo e, opcionalmente, o ID do Dispositivo.",
+          "Os endpoints de envio de dados não exigem o token de login do usuário. A autorização usa as credenciais do próprio dispositivo.",
+          "Assim, a placa pode enviar dados diretamente ao Flovers.",
+          "O código gerado para Arduino ou ESP já inclui os endpoints e as credenciais do aparelho escolhido. Antes de enviar à placa, preencha o SSID e a senha da sua rede Wi-Fi."
         ]
       },
       {
         "heading": "Configuração do dispositivo",
         "body": [
-          "A opção Configuração do dispositivo fornece informações técnicas para configurar hardware.",
-          "Inclui o endpoint de ingestão para enviar leituras, o endpoint de feed para obter as leituras mais recentes, exemplos de payloads, a Chave Secreta de Autenticação da conta e a opção de rodar a Chave Secreta de Autenticação.",
-          "Rodar a Chave Secreta de Autenticação invalida o segredo antigo, pelo que qualquer código de dispositivo existente que utilize o segredo anterior deve ser atualizado."
+          "Em Configuração do dispositivo, você encontra os dados técnicos para preparar o hardware.",
+          "Essa opção mostra o endpoint ingest para enviar leituras, feed para consultar as últimas, exemplos de dados e a Chave Secreta de Autenticação da conta. Você também pode trocar essa chave.",
+          "Trocar a chave invalida a anterior. Atualize o código de todos os dispositivos que ainda usam a chave antiga."
         ]
       },
       {
         "heading": "Detalhes do dispositivo",
         "body": [
-          "O modal Detalhes do dispositivo mostra informações para um dispositivo específico.",
-          "Inclui o nome do dispositivo, a Chave do Dispositivo, a Chave Secreta de Autenticação, a planta associada, os sensores ativados e se está associada uma bomba de água.",
-          "O modal também permite ao utilizador enviar por email o código Arduino gerado para o dispositivo selecionado. O email inclui o código gerado no corpo do email e como um anexo .ino.",
-          "O código gerado baseia-se na configuração do dispositivo selecionado, incluindo sensores ativados, suporte da bomba, definições de rega automática, Chave do Dispositivo, ID do Dispositivo e Chave Secreta de Autenticação."
+          "A janela Detalhes do dispositivo reúne as informações daquele aparelho.",
+          "Ela mostra nome, Chave do Dispositivo, Chave Secreta de Autenticação, planta associada, sensores ativos e a presença de uma bomba.",
+          "Você pode enviar por e-mail o código Arduino gerado para esse dispositivo. Ele aparece no corpo da mensagem e como anexo .ino.",
+          "O código usa a configuração escolhida: sensores, bomba, rega automática, Chave do Dispositivo, ID do Dispositivo e Chave Secreta de Autenticação."
         ]
       },
       {
-        "heading": "Rega manual programada",
+        "heading": "Peça uma rega pelo aplicativo",
         "body": [
-          "Se um dispositivo tiver o suporte de bomba de água ativado, o utilizador pode programar um pedido de rega manual.",
-          "A rega manual não aciona imediatamente a bomba a partir da aplicação móvel. Em vez disso, o backend cria uma tarefa de bomba pendente para o dispositivo.",
-          "A placa física verifica no backend se existem tarefas de rega manual pendentes. Se existir uma tarefa pendente e a placa tiver lógica de controlo da bomba, pode acionar a bomba e depois comunicar a conclusão ao backend.",
-          "A rega manual programada ignora o valor atual da humidade do solo, o limite de rega automática e o período de espera da rega automática.",
-          "Isto significa que a rega manual é tratada como um pedido explícito do utilizador.",
-          "Um pedido de rega manual programada também pode ser retirado antes de o dispositivo o recolher."
+          "Com a opção de bomba ativada, você pode pedir uma rega manual.",
+          "O pedido não liga a bomba imediatamente. Ele cria uma tarefa pendente no servidor.",
+          "A placa consulta os pedidos pendentes. Se encontrar um e tiver o código de controle da bomba, executa a rega e informa o resultado ao servidor.",
+          "A rega manual não verifica a umidade atual do solo, o limite ou o intervalo mínimo da rega automática.",
+          "Ela é tratada como um pedido explícito seu para regar.",
+          "Você pode cancelar o pedido antes que o dispositivo o receba."
         ]
       },
       {
-        "heading": "Temporização da tarefa de rega manual",
+        "heading": "Quando os pedidos são verificados",
         "body": [
-          "O código de dispositivo gerado utiliza temporização separada para leituras e verificações de rega manual.",
-          "Por predefinição, as leituras dos sensores são enviadas uma vez por hora.",
-          "As verificações de rega automática acontecem como parte do ciclo de leitura horário.",
-          "As tarefas de rega manual pendentes são verificadas com maior frequência, por predefinição uma vez por minuto.",
-          "Isto permite que os pedidos de rega manual sejam recolhidos mais rapidamente sem enviar leituras dos sensores a cada minuto.",
-          "A ordem de execução mantém-se: enviar leituras durante o ciclo de leitura normal, verificar se há rega manual pendente e, se não tiver sido executada nenhuma rega manual, verificar as condições de rega automática.",
-          "Quando a verificação de rega manual de um minuto é executada fora do ciclo de leitura horário, verifica apenas se existem tarefas de rega manual pendentes."
+          "O código gerado usa intervalos diferentes para enviar leituras e procurar pedidos manuais.",
+          "Por padrão, as leituras são enviadas uma vez por hora.",
+          "As condições da rega automática são verificadas nesse ciclo de leitura.",
+          "Os pedidos manuais são verificados com mais frequência: por padrão, a cada minuto.",
+          "Isso permite atender ao pedido rapidamente sem enviar todas as leituras a cada minuto.",
+          "No ciclo normal, a placa envia as leituras, verifica pedidos manuais e, se não executar uma rega manual, avalia a rega automática.",
+          "Fora do ciclo de leitura, a verificação a cada minuto procura apenas pedidos manuais."
         ]
       },
       {
         "heading": "Rega automática",
         "body": [
-          "Se o suporte de bomba de água estiver ativado, a rega automática também pode ser ativada.",
-          "A rega automática utiliza leituras de humidade do solo e um limite configurado.",
-          "A placa solicita ao backend a configuração atual da bomba, incluindo se a rega automática está ativada e que limite deve ser utilizado.",
-          "Se a rega automática estiver ativada e a humidade atual do solo estiver abaixo do limite configurado, a placa pode acionar a bomba.",
-          "A rega automática depende de o suporte de bomba de água estar ativado, de o sensor de humidade do solo estar ativado, de o arranque automático da bomba estar ativado, de existir um limite válido de humidade do solo, de o dispositivo estar ativo e da confirmação do backend das definições atuais da bomba.",
-          "A rega automática tem um período de espera para evitar a ativação repetida da bomba com demasiada frequência.",
-          "A rega manual tem prioridade sobre a rega automática no mesmo ciclo. Se a rega manual for executada, a rega automática é ignorada nesse ciclo."
+          "Com a opção de bomba ativada, você também pode ligar a rega automática.",
+          "Ela usa a umidade do solo medida pelo sensor e o limite que você escolheu.",
+          "A placa consulta no servidor se a rega automática está ativa e qual limite deve usar.",
+          "Se estiver ativa e a umidade estiver abaixo do limite, a placa pede autorização ao servidor antes de ligar a bomba.",
+          "Para funcionar, a bomba, o sensor de umidade e a rega automática precisam estar ativados. Também são necessários um limite válido, um dispositivo ativo e a confirmação das configurações pelo servidor.",
+          "Há um intervalo de espera para evitar regas automáticas próximas demais.",
+          "A rega manual tem prioridade. Se ela acontecer, a placa não faz uma rega automática no mesmo ciclo."
         ]
       },
       {
-        "heading": "Comunicação de conclusão da bomba",
+        "heading": "Confirmação da rega",
         "body": [
-          "Após uma execução da bomba, o dispositivo comunica a conclusão ao backend.",
-          "A conclusão da bomba pode ser comunicada para rega manual programada ou rega automática acionada pela humidade do solo.",
-          "Quando uma execução da bomba é registada com sucesso, o backend atualiza a hora da última execução da bomba, a origem da última execução da bomba e o estado da tarefa de bomba relacionada, quando aplicável.",
-          "Se as notificações de conclusão de rega estiverem ativadas, o backend pode enviar notificações por email e push após a conclusão da rega."
+          "Depois de executar a rega, o dispositivo informa o resultado ao servidor.",
+          "Isso vale para pedidos manuais e para regas automáticas por umidade do solo.",
+          "Ao registrar a execução, o servidor atualiza a hora, a origem da última rega e, quando houver, o estado da tarefa relacionada.",
+          "Se os avisos de conclusão estiverem ativos, o servidor pode enviar notificações por e-mail e push."
         ]
       },
       {
-        "heading": "Notificações de rega",
+        "heading": "Avisos de conclusão da rega",
         "body": [
-          "Os dispositivos podem ser configurados para enviar notificações após a conclusão da rega.",
-          "Os tipos de notificação suportados são notificação por email e notificação push.",
-          "Estas são separadas dos alertas de baixa humidade do solo.",
-          "As notificações de rega só são relevantes quando o dispositivo tem o suporte de bomba de água ativado.",
-          "Uma notificação de rega pode ser enviada após a conclusão de rega manual ou automática, dependendo do relatório de conclusão da bomba recebido do dispositivo."
+          "Você pode configurar avisos quando uma rega terminar.",
+          "Os canais disponíveis são e-mail e push.",
+          "Esses avisos são separados dos alertas de baixa umidade do solo.",
+          "Eles só se aplicam aos dispositivos com a opção de bomba ativada.",
+          "O aviso pode ser enviado após uma rega manual ou automática, conforme o resultado informado pelo dispositivo."
         ]
       },
       {
-        "heading": "Alertas de baixa humidade do solo",
+        "heading": "Alertas de baixa umidade do solo",
         "body": [
-          "Os dispositivos com um sensor de humidade do solo podem ser configurados para enviar alertas quando a humidade do solo desce abaixo de um limite configurado.",
-          "Os alertas de baixa humidade do solo suportam notificações por email e notificações push.",
-          "O backend acompanha o estado do alerta para que o utilizador não seja notificado repetidamente em cada leitura enquanto a planta permanecer abaixo do limite.",
-          "Um novo alerta é enviado quando o valor de humidade entra no estado de baixa humidade. O estado do alerta é reposto depois de a humidade voltar a subir acima do limite.",
-          "Os alertas de baixa humidade do solo são independentes das notificações de conclusão de rega."
+          "Com um sensor de umidade do solo, você pode receber um alerta quando a medição cair abaixo do limite escolhido.",
+          "Os alertas podem chegar por e-mail e push.",
+          "O servidor acompanha a situação para não enviar outro aviso a cada leitura enquanto a umidade continuar baixa.",
+          "Um novo alerta é enviado ao passar para a condição de baixa umidade. Quando a medição volta a superar o limite, o estado do alerta é redefinido.",
+          "Esses alertas funcionam separadamente dos avisos de conclusão da rega."
         ]
       },
       {
-        "heading": "Exportação de dados",
+        "heading": "Exporte os dados",
         "body": [
-          "A exportação de Leituras envia uma folha de cálculo para o utilizador por email.",
-          "A folha de cálculo inclui dados de leituras e registos de tarefas de rega.",
-          "O separador de leituras inclui leituras dos sensores, como temperatura, humidade, luz e humidade do solo.",
-          "O separador de tarefas de rega inclui registos de tarefas da bomba, como origem manual ou automática, estado, hora solicitada, hora entregue, hora executada, hora cancelada, humidade no pedido, limite no pedido e mensagem de erro.",
-          "Se forem aplicados filtros no ecrã Leituras, a exportação respeita esses filtros. Por exemplo, se a exportação estiver limitada a uma determinada planta ou âmbito de dispositivo, os registos de tarefas de rega também são limitados aos dispositivos correspondentes."
+          "A exportação envia uma planilha ao seu e-mail.",
+          "Ela contém as leituras e os registros das tarefas de rega.",
+          "A aba de leituras traz temperatura do ar, umidade do ar, luz e umidade do solo.",
+          "A aba de regas traz origem manual ou automática, estado, horários do pedido, entrega, execução e cancelamento, umidade e limite no pedido e mensagem de erro.",
+          "Os filtros da tela Leituras valem para a exportação. Se você selecionar apenas uma planta ou certos dispositivos, os registros de rega também ficam limitados aos aparelhos correspondentes."
         ]
       },
       {
-        "heading": "Código Arduino ou ESP gerado",
+        "heading": "Código gerado para Arduino ou ESP",
         "body": [
-          "O código gerado destina-se a ser um ponto de partida pronto a editar para placas do tipo ESP32.",
-          "Inclui lógica para ligação WiFi, sincronização de hora, inicialização de sensores, leitura dos sensores ativados, envio de leituras para o backend, verificação de tarefas de rega manual, verificação de definições de rega automática controladas pelo backend, acionamento de uma bomba quando necessário e comunicação da conclusão da bomba.",
-          "O código gerado mantém separados o carregamento de leituras e as verificações de tarefas de rega manual.",
-          "Por predefinição, as leituras são enviadas de hora a hora, enquanto as tarefas de rega manual são verificadas uma vez por minuto.",
-          "Os utilizadores devem rever e ajustar o código gerado para o seu próprio hardware, pinos, valores de calibração, cablagem do relé da bomba e tipo de placa."
+          "O código é um ponto de partida para placas como a ESP32. Revise e adapte antes de usar.",
+          "Ele se conecta ao Wi-Fi, sincroniza a hora, inicializa e lê os sensores, envia as leituras e verifica os pedidos manuais. Também consulta as configurações da rega automática, pede autorização ao servidor, aciona a bomba quando necessário e informa o resultado.",
+          "O envio das leituras e a busca de pedidos manuais são feitos separadamente.",
+          "Por padrão, as leituras saem a cada hora e os pedidos manuais são verificados a cada minuto.",
+          "Ajuste o código ao seu hardware: pinos, calibração, ligação do relé e tipo de placa."
         ]
       },
       {
-        "heading": "Notas importantes",
+        "heading": "Antes de usar",
         "body": [
-          "A estabilidade do dispositivo, a calibração, a cablagem física e a instalação são da responsabilidade do utilizador.",
-          "As leituras dos sensores são informativas e devem ser interpretadas em conjunto com a observação do mundo real.",
-          "O controlo de bomba de água requer cuidados adicionais. Os utilizadores devem garantir que o relé, a bomba, a fonte de alimentação, os tubos e a fonte de água estão instalados em segurança.",
-          "O Flovers regista e apresenta dados de dispositivos, mas não garante a precisão de sensores de terceiros ou construídos pelo próprio utilizador.",
-          "O Flovers também não garante que uma bomba física seja executada com sucesso. A execução da bomba depende do hardware do utilizador, do código gerado, da conectividade WiFi e da configuração correta do dispositivo."
+          "O funcionamento do dispositivo, a calibração, a fiação e a instalação são sua responsabilidade.",
+          "Use as leituras como apoio e observe também a planta de perto.",
+          "A bomba exige atenção adicional. Instale relé, bomba, fonte, tubos e reservatório de forma segura.",
+          "O Flovers registra e mostra os dados, mas não garante a precisão de sensores de terceiros ou montados por você.",
+          "Também não garante que a bomba física funcione. A execução depende do hardware, do código, da conexão Wi-Fi e da configuração correta."
         ]
       }
     ]

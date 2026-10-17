@@ -28,7 +28,7 @@
       {
         "heading": "Reminder tile actions (Edit / Pause / Resume / Delete)",
         "body": [
-          "Each reminder tile provides two actions: Edit and Delete.",
+          "You can edit, pause, resume or delete each reminder.",
           "Edit lets you change reminder parameters such as interval, task type, associated plant, and other reminder settings (depending on the reminder type).",
           "Delete removes the reminder permanently. In practice, this also means tasks will no longer be generated from that reminder going forward.",
           "Pause temporarily disables a reminder without deleting it. While paused, its due task is removed from Home and daily email or push notifications will not include it. When you resume the reminder, Flovers schedules the next pending task according to the reminder interval."

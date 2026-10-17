@@ -1,49 +1,49 @@
 {
   "docs_readings_history": {
-    "title": "Storico delle letture",
+    "title": "Cronologia misurazioni",
     "sections": [
       {
-        "heading": "Scopo di questa vista",
+        "heading": "Cosa trovi nella Cronologia misurazioni",
         "body": [
-          "La vista Storico delle letture fornisce una panoramica completa dei dati di misurazione storici per il dispositivo e la pianta associati.",
-          "A differenza dell'elenco delle Letture (dove sono visibili principalmente gli ultimi valori), questa vista serve per analizzare trend e variazioni nel tempo tramite grafici."
+          "Nella Cronologia misurazioni trovi i dati raccolti nel tempo dal dispositivo collegato alla tua pianta.",
+          "L’elenco Misurazioni mostra gli ultimi valori, mentre i grafici della cronologia ti permettono di seguire i cambiamenti nel tempo."
         ]
       },
       {
-        "heading": "Intervalli di tempo: Giorno, Settimana, Mese",
+        "heading": "Scegliere il periodo: giorno, settimana o mese",
         "body": [
-          "L'utente può passare tra tre intervalli: Giorno, Settimana e Mese.",
-          "La vista Giorno presenta le letture per un singolo giorno con intervallo orario (supponendo che il dispositivo invii dati ogni ora e che l'utente accetti un maggiore consumo della batteria da parte del dispositivo).",
-          "Le viste Settimana e Mese mostrano i dati su un orizzonte più lungo, facilitando l'individuazione dei trend."
+          "Puoi scegliere tra Giorno, Settimana e Mese.",
+          "La vista Giorno mostra i valori di una giornata a intervalli di un’ora, se il dispositivo invia i dati con questa frequenza. Un invio più frequente consuma più energia e può ridurre la durata della batteria del dispositivo.",
+          "Le viste Settimana e Mese riassumono periodi più lunghi e ti aiutano a riconoscere cambiamenti ricorrenti e tendenze."
         ]
       },
       {
-        "heading": "Selezione del parametro di misurazione",
+        "heading": "Scegliere la misurazione",
         "body": [
-          "I grafici sono disponibili per i parametri: temperatura dell'aria, umidità dell'aria, livello di luce e umidità del suolo (a seconda di ciò che misura il dispositivo).",
-          "Il parametro viene selezionato tramite i pulsanti sotto il grafico (Temp, Hum, Light, Moist)."
+          "Puoi visualizzare temperatura e umidità dell’aria, intensità della luce e umidità del terreno. I dati disponibili dipendono dai sensori del dispositivo.",
+          "Scegli la misurazione con i pulsanti sotto il grafico (Temp, Umid, Luce, Suolo)."
         ]
       },
       {
-        "heading": "Navigazione nei periodi precedenti",
+        "heading": "Consultare i periodi precedenti",
         "body": [
-          "Le frecce accanto al periodo selezionato consentono di passare tra giorni, settimane o mesi precedenti.",
-          "La navigazione è disponibile solo per i periodi per i quali esistono dati — i periodi futuri non vengono visualizzati."
+          "Usa le frecce accanto al periodo selezionato per passare a giorni, settimane o mesi precedenti.",
+          "Puoi consultare solo i periodi per cui esistono dati. I periodi futuri non vengono mostrati."
         ]
       },
       {
-        "heading": "Eliminare lo storico delle letture",
+        "heading": "Eliminare le misurazioni",
         "body": [
-          "Il menu del grafico include l'azione Elimina letture per pulire i dati storici dei sensori del dispositivo selezionato.",
-          "Puoi eliminare le letture di un giorno, una settimana o un mese specifici, eliminare le letture piu vecchie di un periodo scelto oppure rimuovere solo tipi di misura selezionati come temperatura, umidita, luce o umidita del terreno.",
-          "Quando elimini per tipo di misura, Flovers rimuove quel valore mantenendo, quando possibile, gli altri valori dello stesso record. L'eliminazione e permanente e va usata con attenzione."
+          "Nel menu del grafico scegli Elimina letture per rimuovere i dati passati del dispositivo selezionato.",
+          "Puoi eliminare i valori di un giorno, una settimana o un mese, quelli più vecchi del periodo scelto oppure solo alcune misurazioni: temperatura, umidità dell’aria, luce o umidità del terreno.",
+          "Se elimini un solo tipo di misurazione, Flovers conserva, quando possibile, gli altri valori della stessa registrazione. L’eliminazione è definitiva e non può essere annullata."
         ]
       },
       {
-        "heading": "Disponibilità dei dati e interpretazione",
+        "heading": "Dati mancanti e precisione",
         "body": [
-          "Se il dispositivo non ha fornito letture per il periodo selezionato, il grafico sarà vuoto o potrebbe contenere lacune nei dati.",
-          "I dati dei sensori hanno carattere informativo e dovrebbero essere interpretati insieme all'osservazione delle piante e con la consapevolezza dell'influenza della calibrazione, del posizionamento dei sensori e delle condizioni ambientali."
+          "Se il dispositivo non ha inviato dati per il periodo scelto, il grafico resta vuoto o presenta delle interruzioni.",
+          "Usa le misurazioni come indicazione e confrontale con lo stato della pianta. La calibrazione, la posizione dei sensori e l’ambiente possono influire sulla precisione."
         ]
       }
     ]

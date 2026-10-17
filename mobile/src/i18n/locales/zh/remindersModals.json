@@ -8,8 +8,8 @@
       "create": "创建",
       "update": "保存",
       "reset": "重置",
-      "pause": "??",
-      "resume": "??"
+      "pause": "暂停",
+      "resume": "恢复"
     },
     "confirmDelete": {
       "title": "删除提醒",
@@ -57,10 +57,10 @@
       }
     },
     "toggle": {
-      "pauseTitle": "????",
-      "resumeTitle": "????",
-      "pauseBody": "??? {{name}} ??????????????????????",
-      "resumeBody": "??? {{name}} ????????????????????"
+      "pauseTitle": "暂停提醒",
+      "resumeTitle": "恢复提醒",
+      "pauseBody": "要暂停 {{name}} 的这条提醒吗？恢复前，对应的待办任务将不再显示。",
+      "resumeBody": "要恢复 {{name}} 的这条提醒吗？下一项待办任务将重新显示。"
     }
   }
 }

@@ -3,59 +3,59 @@
     "title": "Scanner QR",
     "sections": [
       {
-        "heading": "À quoi sert le Scanner",
+        "heading": "Retrouver rapidement ta plante",
         "body": [
-          "La vue Scanner permet de scanner les codes QR générés précédemment pour les plantes dans Flovers.",
-          "Le scénario le plus courant consiste à imprimer un code QR et à le placer sur un pot de fleurs pour ouvrir rapidement la bonne plante dans l'application.",
-          "Le scan QR sert avant tout à une navigation pratique et rapide — sans avoir à rechercher manuellement dans la liste."
+          "Le scanner lit les codes QR Flovers que tu as créés pour tes plantes.",
+          "Tu peux imprimer un code et le coller sur le pot pour ouvrir facilement la bonne plante par la suite.",
+          "Un scan suffit pour accéder à sa fiche sans chercher dans la liste."
         ]
       },
       {
-        "heading": "Accès requis à la caméra",
+        "heading": "Autoriser l’accès à la caméra",
         "body": [
-          "Pour utiliser la fonction Scanner QR, l'application Flovers nécessite l'autorisation d'accéder à la caméra du téléphone.",
-          "La caméra est utilisée uniquement pour scanner les codes QR en temps réel et ne sert pas à enregistrer des vidéos ni à prendre des photos en dehors de ce processus.",
-          "Si l'accès à la caméra est refusé, la fonction Scanner ne fonctionnera pas jusqu'à ce que les autorisations appropriées soient accordées dans les paramètres système de l'appareil."
+          "Le scanner a besoin de l’autorisation d’accéder à la caméra de ton appareil.",
+          "La caméra sert à lire les codes QR en direct. Elle n’enregistre pas de vidéo et ne prend pas de photos en dehors du scan.",
+          "Si tu refuses cette autorisation, le scanner ne fonctionne pas. Tu peux l’accorder plus tard dans les réglages système de ton appareil."
         ]
       },
       {
-        "heading": "Ce que contient le code QR dans Flovers",
+        "heading": "Ce que contient un code QR Flovers",
         "body": [
-          "Le code QR dans Flovers contient une référence à Flovers ainsi qu'un identifiant (ID) pour une instance spécifique de plante dans le compte utilisateur.",
-          "Après avoir correctement scanné le code, l'application le reconnaît et effectue une redirection vers la plante indiquée.",
-          "Les codes QR sont principalement destinés à être utilisés avec vos propres plantes enregistrées dans votre compte."
+          "Le code contient une référence à Flovers et l’identifiant d’une plante précise de ton compte.",
+          "Une fois le code lu et reconnu, l’application ouvre la plante correspondante.",
+          "Ces codes sont conçus pour les plantes que tu gères dans ton propre compte."
         ]
       },
       {
-        "heading": "Ce qui se passe après un scan réussi",
+        "heading": "Après le scan",
         "body": [
-          "Après un scan réussi du code QR dans la vue Scanner, l'utilisateur est automatiquement redirigé vers la vue Détails de la plante (Plant Details).",
-          "Dans les Détails de la plante, des informations sur la plante, les tâches associées et les dernières lectures (si la plante est connectée à un appareil) sont disponibles.",
-          "Cela fait du Scanner le moyen le plus rapide de passer à la vue complète d'une plante."
+          "Si le scan réussit, l’application ouvre les détails de la plante.",
+          "Tu y retrouves ses informations, ses tâches et les derniers relevés si un appareil lui est associé.",
+          "Le scanner donne ainsi un accès direct à tout ce qui concerne cette plante."
         ]
       },
       {
-        "heading": "Où voir le code QR de la plante",
+        "heading": "Où trouver le code d’une plante",
         "body": [
-          "L'aperçu du code QR est disponible dans la liste des plantes dans la vue Plantes (Plants) — il suffit d'ouvrir le menu déroulant pour la plante choisie et de sélectionner l'option du code QR.",
-          "Le code QR peut également être affiché directement dans la vue Détails de la plante (Plant Details).",
-          "Dans les deux endroits, le même code QR est affiché, attribué à la plante."
+          "Dans la liste « Plantes », ouvre le menu de la plante et choisis l’option du code QR.",
+          "Tu peux aussi voir le code dans les détails de la plante.",
+          "Ces deux endroits donnent accès au même code pour la plante sélectionnée."
         ]
       },
       {
-        "heading": "Enregistrer ou envoyer le code QR",
+        "heading": "Enregistrer ou envoyer le code",
         "body": [
-          "Il est possible d'enregistrer le code QR sur le téléphone depuis la vue Plante (Plants) ou les Détails de la plante (Plant Details).",
-          "Il est aussi possible d'envoyer le code QR à son propre adresse e-mail — par exemple pour une impression ultérieure ou pour sauvegarder une copie.",
-          "Lors de l'impression, assurez-vous que le code soit lisible (bon contraste, sans plis, sans reflets)."
+          "Tu peux enregistrer le code sur ton téléphone depuis la liste des plantes ou leurs détails.",
+          "Tu peux aussi te l’envoyer par e-mail pour l’imprimer ou en garder une copie.",
+          "Pour l’impression, veille à conserver un bon contraste et à éviter les plis ou les reflets qui gênent la lecture."
         ]
       },
       {
-        "heading": "Résolution des problèmes de scan",
+        "heading": "Si le scan ne fonctionne pas",
         "body": [
-          "Si le scan ne fonctionne pas, essayez d'améliorer l'éclairage et assurez-vous que le code soit plat et complètement visible dans le cadre de la caméra.",
-          "Si le code est endommagé ou flou, sauvegardez-le à nouveau depuis l'application ou envoyez-le par e-mail et imprimez une nouvelle copie.",
-          "Si le code ouvre la mauvaise plante, assurez-vous que la bonne plante a été choisie lors de l'enregistrement ou de l'exportation."
+          "Améliore l’éclairage et garde le code à plat, entièrement visible dans le cadre de la caméra.",
+          "S’il est abîmé ou flou, enregistre-le ou envoie-le à nouveau depuis l’application, puis imprime une nouvelle copie.",
+          "Si la mauvaise plante s’ouvre, vérifie que tu avais choisi la bonne plante lors de la création ou de l’export du code."
         ]
       }
     ]

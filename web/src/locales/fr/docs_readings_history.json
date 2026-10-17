@@ -1,49 +1,49 @@
 {
   "docs_readings_history": {
-    "title": "Historique des lectures",
+    "title": "Historique des relevés",
     "sections": [
       {
-        "heading": "Objectif de cette vue",
+        "heading": "Observer l’évolution des conditions",
         "body": [
-          "La vue Historique des lectures offre une vue complète des données de mesure passées pour l'appareil et la plante associés.",
-          "Contrairement à la liste des lectures (où seules les dernières valeurs sont visibles), cette vue est utilisée pour analyser les tendances et les changements dans le temps sur les graphiques."
+          "Cet écran présente les relevés passés d’un appareil et de la plante qui lui est associée.",
+          "Les graphiques permettent de voir les changements au fil du temps, tandis que la liste « Relevés » affiche les dernières valeurs."
         ]
       },
       {
-        "heading": "Plages de temps : Jour, Semaine, Mois",
+        "heading": "Choisir une période : jour, semaine ou mois",
         "body": [
-          "L'utilisateur peut basculer entre trois plages : Jour, Semaine et Mois.",
-          "La vue Jour présente les lectures pour une journée entière dans un intervalle horaire (en supposant que l'appareil envoie des données toutes les heures et que l'utilisateur accepte une plus grande consommation de batterie de l'appareil).",
-          "Les vues Semaine et Mois montrent les données sur une période plus longue, facilitant ainsi la détection des tendances."
+          "Tu peux consulter les mesures par jour, semaine ou mois.",
+          "La vue du jour affiche les valeurs par heure, si l’appareil envoie des relevés à cette fréquence. Ce rythme peut augmenter sa consommation de batterie.",
+          "Les vues de la semaine et du mois résument des périodes plus longues pour mieux repérer les tendances."
         ]
       },
       {
-        "heading": "Choix du paramètre de mesure",
+        "heading": "Choisir la mesure",
         "body": [
-          "Les graphiques sont disponibles pour les paramètres suivants : température de l'air, humidité de l'air, niveau de lumière et humidité du sol (selon ce que mesure l'appareil).",
-          "Le paramètre est sélectionné à l'aide des boutons sous le graphique (Temp, Hum, Light, Moist)."
+          "Des graphiques sont disponibles pour la température de l’air, l’humidité de l’air, la luminosité et l’humidité du sol, selon les capteurs de l’appareil.",
+          "Choisis la mesure avec les boutons « Temp », « Hum », « Lumière » et « Sol » sous le graphique."
         ]
       },
       {
-        "heading": "Navigation dans les périodes précédentes",
+        "heading": "Parcourir les périodes passées",
         "body": [
-          "Les flèches à côté de la période sélectionnée permettent de naviguer entre les jours, semaines ou mois précédents.",
-          "La navigation est disponible uniquement pour les périodes pour lesquelles des données existent — les périodes futures ne sont pas affichées."
+          "Les flèches à côté de la période te permettent de passer d’un jour, d’une semaine ou d’un mois à l’autre.",
+          "La navigation reste limitée aux périodes pour lesquelles il existe des données. Les périodes futures ne sont pas affichées."
         ]
       },
       {
-        "heading": "Suppression de l'historique des releves",
+        "heading": "Supprimer des relevés",
         "body": [
-          "Le menu du graphique contient l'action Supprimer les releves pour nettoyer les donnees historiques du capteur pour l'appareil selectionne.",
-          "Vous pouvez supprimer les releves d'un jour, d'une semaine ou d'un mois precis, supprimer les releves plus anciens qu'une periode choisie, ou retirer uniquement certains types de mesure comme la temperature, l'humidite, la lumiere ou l'humidite du sol.",
-          "Lors d'une suppression par type de mesure, Flovers retire cette mesure tout en conservant les autres valeurs du meme enregistrement lorsque c'est possible. La suppression est definitive et doit etre utilisee avec prudence."
+          "Le menu du graphique permet de supprimer des relevés de l’appareil sélectionné.",
+          "Tu peux effacer un jour, une semaine ou un mois, les relevés plus anciens qu’un âge choisi, ou seulement certaines mesures comme la température, l’humidité, la lumière ou l’humidité du sol.",
+          "Si tu supprimes un type de mesure, les autres valeurs du même relevé sont conservées lorsque c’est possible. La suppression est définitive."
         ]
       },
       {
-        "heading": "Disponibilité des données et interprétation",
+        "heading": "Comprendre les données affichées",
         "body": [
-          "Si l'appareil n'a pas fourni de lectures pour la période sélectionnée, le graphique sera vide ou pourra contenir des lacunes dans les données.",
-          "Les données des capteurs sont à titre informatif et doivent être interprétées en tenant compte de l'observation des plantes ainsi que de l'impact de la calibration, du placement des capteurs et des conditions environnementales."
+          "Si aucun relevé n’a été reçu pour la période choisie, le graphique est vide ou présente des valeurs manquantes.",
+          "Les mesures sont des indications à comparer à tes observations. L’étalonnage, l’installation et les conditions ambiantes peuvent influencer leur précision."
         ]
       }
     ]

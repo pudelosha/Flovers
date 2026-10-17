@@ -1,54 +1,54 @@
 {
   "docs_auth": {
-    "title": "Login e registo",
+    "title": "Acesso e cadastro",
     "sections": [
       {
-        "heading": "Criação de uma nova conta (Registo)",
+        "heading": "Crie sua conta",
         "body": [
-          "Para utilizar o Flovers, é necessário criar uma conta de utilizador individual. O registo é efetuado diretamente na aplicação móvel.",
-          "Durante o registo, é necessário apenas um endereço de e-mail e uma palavra-passe. Nesta fase, não são exigidos quaisquer dados pessoais adicionais.",
-          "A palavra-passe deve ter pelo menos 8 caracteres e conter pelo menos um número e um carácter especial, de modo a garantir um nível básico de segurança.",
-          "Antes de concluir o registo, o utilizador deve aceitar os Termos e Condições e a Política de Privacidade."
+          "Para usar o Flovers, crie uma conta pessoal diretamente no aplicativo.",
+          "Você só precisa de um endereço de e-mail e uma senha. Nenhum outro dado pessoal é solicitado nessa etapa.",
+          "A senha deve ter pelo menos 8 caracteres, incluindo um número e um caractere especial, para atender aos requisitos básicos de segurança.",
+          "Antes de concluir o cadastro, você precisa aceitar os Termos de uso e a Política de privacidade."
         ]
       },
       {
         "heading": "Ativação da conta por e-mail",
         "body": [
-          "Após o envio do formulário de registo, é enviada uma mensagem de ativação para o endereço de e-mail indicado.",
-          "Para ativar a conta, é necessário clicar no link de confirmação presente na mensagem recebida.",
-          "Até que a conta seja ativada, não é possível iniciar sessão na aplicação."
+          "Após o cadastro, você receberá um e-mail de ativação no endereço informado.",
+          "Abra o link de confirmação da mensagem para ativar a conta.",
+          "Você só poderá entrar no aplicativo depois de ativar a conta."
         ]
       },
       {
         "heading": "Reenvio do e-mail de ativação",
         "body": [
-          "Se o e-mail de ativação não tiver sido recebido, o utilizador pode solicitar o seu reenvio através da aplicação.",
-          "Esta opção está disponível no ecrã de login ou de registo e pode ser utilizada se a mensagem tiver sido perdida, atrasada ou encaminhada para o spam.",
-          "Antes de solicitar um novo envio, recomenda-se verificar a pasta de spam ou outros filtros de correio."
+          "Se o e-mail de ativação não chegou, solicite um novo envio pelo aplicativo.",
+          "Essa opção está nas telas de acesso e cadastro. Use-a se perdeu a mensagem, se ela está demorando ou se foi para o spam.",
+          "Antes de solicitar outro envio, confira a pasta de spam ou lixo eletrônico."
         ]
       },
       {
-        "heading": "Login numa conta existente",
+        "heading": "Entre na sua conta",
         "body": [
-          "Para iniciar sessão, é necessário apenas o endereço de e-mail e a palavra-passe associados à conta.",
-          "Se a conta ainda não tiver sido ativada, a aplicação informará sobre a necessidade de confirmar o endereço de e-mail.",
-          "As credenciais de login são verificadas de forma segura no servidor; as palavras-passe não são armazenadas em texto simples."
+          "Para entrar, informe o e-mail e a senha da sua conta.",
+          "Se a conta ainda não foi ativada, o aplicativo pedirá que você confirme primeiro o endereço de e-mail.",
+          "Os dados de acesso são verificados com segurança no servidor. As senhas nunca são armazenadas em texto simples."
         ]
       },
       {
-        "heading": "Reposição de palavra-passe esquecida",
+        "heading": "Esqueceu a senha?",
         "body": [
-          "Se o utilizador não conseguir iniciar sessão devido a uma palavra-passe esquecida, pode solicitar o envio de um e-mail para redefinição da palavra-passe.",
-          "A mensagem contém instruções e um link seguro que permite definir uma nova palavra-passe.",
-          "Após definir uma nova palavra-passe, é possível iniciar sessão imediatamente na aplicação."
+          "Se você esqueceu a senha e não consegue entrar, solicite um e-mail para redefini-la.",
+          "A mensagem traz as instruções e um link seguro para criar uma nova senha.",
+          "Depois de definir a nova senha, você já pode usá-la para entrar."
         ]
       },
       {
         "heading": "Notas sobre segurança",
         "body": [
-          "Cada conta de utilizador é protegida por uma palavra-passe individual definida durante o registo.",
-          "Por motivos de segurança, os dados de login não devem ser partilhados com terceiros.",
-          "Em caso de suspeita de acesso não autorizado à conta, recomenda-se a alteração imediata da palavra-passe."
+          "Cada conta é protegida pela senha pessoal escolhida no cadastro.",
+          "Para proteger sua conta, não compartilhe os dados de acesso com outras pessoas.",
+          "Se suspeitar de um acesso não autorizado, troque sua senha assim que possível."
         ]
       }
     ]

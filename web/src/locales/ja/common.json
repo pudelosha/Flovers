@@ -1,9 +1,9 @@
 {
   "nav": {
     "start": "ホーム",
-    "docs": "ドキュメント",
-    "schemas": "スキーマ",
-    "faq": "FAQ"
+    "docs": "使い方",
+    "schemas": "デバイスAPI・配線図",
+    "faq": "よくある質問"
   },
   "footer": {
     "terms": "利用規約",
@@ -12,9 +12,11 @@
   },
   "a11y": {
     "mainNav": "メインナビゲーション",
-    "languageSwitch": "言語選択",
+    "languageSwitch": "表示言語を選ぶ",
     "openMenu": "メニューを開く",
-    "mobileMenu": "モバイルメニュー"
+    "mobileMenu": "モバイルメニュー",
+    "closeNotification": "通知を閉じる",
+    "scanStoreLink": "スキャンしてストアを開く"
   },
   "language": {
     "pl": "ポーランド語",

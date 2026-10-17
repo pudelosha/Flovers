@@ -1,18 +1,18 @@
 {
   "title": "Documentation",
   "placeholder": {
-    "heading": "Bientôt",
-    "body": "Une documentation détaillée pour cet écran sera disponible bientôt."
+    "heading": "Bientôt disponible",
+    "body": "Le guide détaillé de cet écran sera ajouté prochainement."
   },
   "screens": {
     "overview": {
-      "title": "Aperçu"
+      "title": "Vue d’ensemble"
     },
     "auth": {
       "title": "Connexion et inscription"
     },
     "home": {
-      "title": "Écran principal"
+      "title": "Accueil"
     },
     "taskHistory": {
       "title": "Historique des tâches"
@@ -24,7 +24,7 @@
       "title": "Détails de la plante"
     },
     "createPlantWizard": {
-      "title": "Assistant d'ajout de plante"
+      "title": "Ajouter une plante"
     },
     "locations": {
       "title": "Emplacements"
@@ -33,16 +33,17 @@
       "title": "Rappels"
     },
     "readings": {
-      "title": "Lectures"
+      "title": "Relevés"
     },
     "readingsHistory": {
-      "title": "Historique des lectures"
+      "title": "Historique des relevés"
     },
     "scanner": {
-      "title": "Scanner (QR)"
+      "title": "Scanner QR"
     },
     "profile": {
       "title": "Profil et paramètres"
     }
-  }
+  },
+  "navigationLabel": "Navigation de la documentation"
 }

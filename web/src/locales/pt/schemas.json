@@ -1,40 +1,41 @@
 {
   "common": {
     "copy": "Copiar",
-    "copied": "Copiado"
+    "copied": "Copiado",
+    "closePreview": "Fechar a prévia do esquema"
   },
-  "title": "API do dispositivo e cablagem",
+  "title": "Sensores, rega e API",
   "lead": [
-    "Esta página documenta como os dispositivos IoT se integram com o Flovers.",
-    "Os dispositivos podem enviar leituras ambientais para o backend, verificar se uma tarefa de rega manual foi agendada a partir da aplicação móvel e comunicar execuções de bomba concluídas de volta ao Flovers.",
-    "O firmware Arduino/ESP gerado pode suportar leituras e controlo de rega num único sketch. Se o dispositivo associado tiver sido configurado com uma bomba de água, o código gerado inclui endpoints da bomba e lógica de controlo da bomba. Se o dispositivo tiver sido configurado sem bomba, o firmware gerado pode ser simplificado para enviar apenas leituras."
+    "Aqui você aprende a conectar sensores e uma bomba ao Flovers e a usar a API.",
+    "O dispositivo envia leituras, consulta os pedidos de rega feitos no aplicativo e informa quando a bomba termina.",
+    "O código gerado para Arduino/ESP segue as configurações do dispositivo escolhido. Se houver uma bomba, ele cuida das leituras e da rega. Sem bomba, pode ser simplificado para apenas enviar leituras."
   ],
   "firmwareIntro": {
-    "title": "O que o firmware gerado faz",
-    "lead": "O firmware gerado pode:",
+    "title": "O que o programa faz",
+    "lead": "O programa gerado pode:",
     "items": [
-      "ligar-se ao Wi-Fi",
-      "sincronizar a hora usando NTP",
+      "conectar-se ao Wi-Fi",
+      "sincronizar o relógio por NTP",
       "ler os sensores ativados",
-      "enviar leituras para o Flovers",
-      "verificar tarefas de rega manual agendadas",
-      "acionar a bomba quando uma tarefa de rega manual está pendente",
-      "verificar as definições de rega automática controladas pelo backend",
-      "acionar a rega automática quando a humidade do solo está abaixo do limite configurado",
-      "comunicar a conclusão da rega de volta ao backend"
+      "enviar leituras ao Flovers",
+      "consultar pedidos de rega manual",
+      "acionar a bomba quando há um pedido pendente",
+      "consultar as configurações de rega automática no servidor",
+      "regar automaticamente quando a umidade estiver abaixo do limite e o servidor autorizar",
+      "informar a conclusão da rega"
     ],
-    "defaultTiming": "Por predefinição, as leituras são enviadas uma vez por hora. As tarefas de rega manual são verificadas com mais frequência, por exemplo uma vez por minuto, para que um pedido de rega criado a partir da aplicação móvel possa ser recolhido sem esperar pelo próximo ciclo horário de leituras.",
-    "adjustmentNote": "Alguns valores devem ser ajustados ao seu hardware e às suas preferências, especialmente as credenciais de Wi-Fi, números dos pinos, calibração da humidade do solo, tempo de funcionamento da bomba, intervalo de leitura, intervalo de verificação de tarefas manuais e tempo de espera da rega automática."
+    "defaultTiming": "Por padrão, o programa envia leituras uma vez por hora. Os pedidos manuais são verificados separadamente, em geral a cada minuto. Assim, um pedido feito no aplicativo pode ser atendido antes do próximo envio de leituras.",
+    "adjustmentNote": "Antes de enviar o código à placa, confira a rede Wi-Fi, os pinos, a calibração do sensor de solo e o tempo de funcionamento da bomba. Você também pode ajustar os intervalos entre leituras, consultas de pedidos e regas automáticas."
   },
   "endpoints": {
     "title": "Endpoints da API",
     "ingest": {
-      "title": "Ingerir leituras",
+      "title": "Enviar leituras",
       "direction": "Dispositivo → backend",
       "desc": [
-        "Os dispositivos usam este endpoint para enviar leituras dos sensores.",
-        "O backend autentica o pedido usando:",
-        "O backend armazena as leituras no dispositivo correspondente. As leituras podem incluir temperatura, humidade, luz, humidade do solo ou qualquer subconjunto das métricas ativadas."
+        "Use esse endpoint para enviar as leituras dos sensores.",
+        "O servidor verifica a solicitação com estas credenciais:",
+        "Os valores ficam associados ao dispositivo correspondente. Você pode enviar temperatura, umidade do ar, luz e umidade do solo, ou apenas parte dessas medições."
       ],
       "authItems": [
         "secret",
@@ -43,89 +44,89 @@
       ]
     },
     "pumpNextTask": {
-      "title": "Verificar a próxima tarefa da bomba",
+      "title": "Consultar pedidos de rega",
       "direction": "Dispositivo → backend",
       "desc": [
-        "Os dispositivos com suporte de bomba usam este endpoint para verificar se existe uma tarefa de rega manual em espera.",
-        "A resposta também inclui a configuração atual da bomba automática controlada pelo backend, como se a rega automática está ativada e qual o limite de humidade do solo que deve ser usado."
+        "Um dispositivo com bomba usa esse endpoint para verificar se há um pedido manual pendente.",
+        "A resposta também traz as configurações atuais da rega automática, como seu estado ativo ou inativo e o limite de umidade do solo."
       ]
     },
     "pumpComplete": {
-      "title": "Comunicar conclusão da bomba",
+      "title": "Confirmar o resultado da rega",
       "direction": "Dispositivo → backend",
       "desc": [
-        "Os dispositivos usam este endpoint depois de a bomba ter funcionado.",
-        "Isto pode comunicar:"
+        "Quando a bomba termina, o dispositivo informa o resultado por esse endpoint.",
+        "A confirmação pode ser de:"
       ],
       "items": [
         "uma tarefa de rega manual agendada, usando task_id",
-        "ou um evento de rega automática, usando source: \"automatic\""
+        "uma rega automática, com source: \"automatic\" e o task_id recebido antes de acionar a bomba"
       ]
     },
     "feed": {
-      "title": "Ler feed mais recente",
+      "title": "Consultar as últimas leituras",
       "direction": "Dispositivo → backend",
       "desc": [
-        "Este endpoint devolve os dados de leitura mais recentes de um dispositivo. Continua a ser útil para integrações simples ou diagnósticos, mas o firmware gerado com bomba ativada usa pump-next-task e pump-complete para o controlo da rega."
+        "O endpoint retorna as últimas leituras do dispositivo e serve para diagnóstico e integrações simples. Para controlar a rega, o firmware usa pump-next-task, pump-auto-claim e pump-complete."
       ]
     }
   },
   "ingest": {
-    "title": "Documentação de POST ingest",
-    "desc": "Envie uma amostra de leitura como JSON. O backend autentica o dispositivo e armazena as métricas fornecidas.",
-    "payloadShape": "Formato do payload",
-    "examplePayload": "Exemplo de payload",
+    "title": "Enviar leituras: POST ingest",
+    "desc": "Envie uma medição em JSON. O servidor verifica as credenciais do dispositivo e salva os valores recebidos.",
+    "payloadShape": "Campos da solicitação",
+    "examplePayload": "Dados de exemplo",
     "powershellExample": "Exemplo de PowerShell"
   },
   "pumpNextTask": {
-    "title": "Documentação de POST pump-next-task",
+    "title": "Consultar pedidos: POST pump-next-task",
     "desc": [
-      "Este endpoint é usado por dispositivos com suporte de bomba.",
-      "O dispositivo pergunta ao backend se existe uma tarefa de rega manual agendada. O backend devolve:"
+      "Esse endpoint atende aos dispositivos com bomba.",
+      "O dispositivo consulta se há um pedido manual feito no aplicativo. A resposta informa:"
     ],
     "items": [
-      "se a bomba deve funcionar agora",
-      "o ID da tarefa se existir uma tarefa de rega manual",
-      "as definições atuais da bomba automática",
-      "se o backend considera a bomba e o sensor de humidade ativados"
+      "se a bomba deve ligar agora",
+      "o ID do pedido manual, quando há um pendente",
+      "as configurações atuais da rega automática",
+      "se a bomba e o sensor de umidade do solo estão ativados nas configurações"
     ],
-    "payloadShape": "Formato do payload",
-    "examplePayload": "Exemplo de payload",
-    "responseNoTask": "Exemplo de resposta sem tarefa de rega manual",
-    "responseWithTask": "Exemplo de resposta com uma tarefa de rega manual",
+    "payloadShape": "Campos da solicitação",
+    "examplePayload": "Dados de exemplo",
+    "responseNoTask": "Resposta sem pedido de rega pendente",
+    "responseWithTask": "Resposta com um pedido de rega",
     "powershellExample": "Exemplo de PowerShell"
   },
   "pumpComplete": {
-    "title": "Documentação de POST pump-complete",
+    "title": "Informar o resultado: POST pump-complete",
     "desc": [
-      "Depois de a bomba funcionar, o dispositivo comunica a conclusão.",
-      "Para rega manual, inclua o task_id devolvido por pump-next-task.",
-      "Para rega automática, omita task_id e use source: \"automatic\"."
+      "Depois da execução, o dispositivo informa ao servidor se a rega deu certo.",
+      "Para rega manual, envie o task_id recebido de pump-next-task.",
+      "Para rega automática, inclua o task_id retornado por pump-auto-claim e source: \"automatic\"."
     ],
-    "manualPayload": "Payload de conclusão de rega manual",
-    "automaticPayload": "Payload de conclusão de rega automática",
-    "failedPayload": "Payload de execução da bomba falhada",
+    "manualPayload": "Confirmação de rega manual",
+    "automaticPayload": "Confirmação de rega automática",
+    "failedPayload": "Registro de falha na rega",
     "powershellExample": "Exemplo de PowerShell"
   },
   "feed": {
-    "title": "Documentação de GET feed",
+    "title": "Consultar leituras: GET feed",
     "desc": [
-      "O endpoint feed devolve a leitura mais recente de um dispositivo.",
-      "Pode ser usado para diagnósticos ou integrações simples que apenas precisam de ler os valores armazenados mais recentes."
+      "O endpoint feed retorna as últimas leituras salvas do dispositivo.",
+      "Use para diagnóstico ou em integrações que só precisam consultar os valores mais recentes."
     ],
-    "exampleRequest": "Pedido de exemplo",
-    "exampleResponse": "Resposta de exemplo"
+    "exampleRequest": "Exemplo de solicitação",
+    "exampleResponse": "Exemplo de resposta"
   },
   "generatedFirmware": {
-    "title": "Firmware Arduino / ESP32 gerado",
+    "title": "Código para Arduino / ESP32",
     "desc": [
-      "A aplicação pode gerar firmware para o dispositivo selecionado.",
-      "O firmware gerado inclui os endpoints corretos da API, o segredo de autenticação, a chave do dispositivo, o ID do dispositivo, os sensores ativados e as definições da bomba para esse dispositivo.",
-      "Se o dispositivo estiver configurado com uma bomba de água, o código gerado inclui tanto leituras como controlo da bomba de água. Verifica as tarefas de rega manual separadamente do ciclo horário de leituras, e a rega automática usa o limite e o botão de ativação controlados pelo backend."
+      "Você pode gerar o código do dispositivo escolhido no aplicativo.",
+      "Ele inclui os endpoints da API, as credenciais (secret e device_key), o ID do dispositivo e as configurações dos sensores e da bomba.",
+      "Com uma bomba configurada, o código gerado gerencia as leituras e a rega. Ele verifica os comandos manuais separadamente do envio horário das leituras. Para regar automaticamente, consulta as configurações do aplicativo e pede autorização ao servidor antes de ligar a bomba."
     ],
-    "adjustIntro": "Antes de carregar o sketch, ajuste os seguintes valores para o seu hardware:",
+    "adjustIntro": "Antes de enviar o código à placa, ajuste estes valores ao seu hardware:",
     "adjustItems": [
-      "SSID e palavra-passe do Wi-Fi",
+      "SSID e senha do Wi-Fi",
       "SDA_PIN e SCL_PIN",
       "SOIL_PIN",
       "PUMP_PIN",
@@ -135,109 +136,111 @@
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
       "AUTO_PUMP_MIN_INTERVAL_MS"
     ],
-    "codeLabel": "Firmware Arduino gerado: leituras + controlo da bomba de água"
+    "codeLabel": "Programa de exemplo: sensores e controle da bomba"
   },
   "behavior": {
-    "title": "Resumo do comportamento do firmware",
+    "title": "Leituras e rega, passo a passo",
     "fullCycle": {
-      "title": "Ciclo horário completo",
-      "desc": "A cada SEND_INTERVAL_MS, a placa executa um ciclo completo:",
+      "title": "Ciclo de leitura",
+      "desc": "A cada SEND_INTERVAL_MS, a placa:",
       "items": [
         "lê os sensores",
         "envia leituras para o endpoint ingest",
-        "verifica se há rega manual agendada",
-        "executa a rega manual se houver uma tarefa pendente",
-        "caso contrário, verifica as condições de rega automática",
-        "executa a rega automática se as definições do backend o permitirem e a humidade do solo estiver abaixo do limite"
+        "procura um pedido de rega manual",
+        "executa o pedido, se houver um pendente",
+        "se não houver, avalia as condições para a rega automática",
+        "executa a rega automática se a umidade estiver abaixo do limite, as configurações permitirem e o servidor autorizar"
       ]
     },
     "manualCheck": {
-      "title": "Verificação de rega manual",
+      "title": "Consulta de pedidos manuais",
       "desc": [
-        "A cada MANUAL_PUMP_CHECK_INTERVAL_MS, a placa verifica apenas tarefas de rega manual agendadas.",
-        "Esta verificação mais curta:",
-        "Isto permite que a ação “Agendar rega” da aplicação seja recolhida rapidamente sem forçar o envio de leituras dos sensores a cada minuto."
+        "A cada MANUAL_PUMP_CHECK_INTERVAL_MS, a placa procura pedidos manuais.",
+        "Nessa consulta mais curta, a placa:",
+        "Assim, um pedido do aplicativo pode ser atendido rapidamente, sem enviar todas as leituras a cada minuto."
       ],
       "items": [
         "não envia leituras",
         "não executa rega automática",
-        "apenas executa uma tarefa de rega manual pendente se existir"
+        "apenas executa um pedido manual, se houver um pendente"
       ]
     },
     "automatic": {
       "title": "Rega automática",
       "desc": [
-        "A rega automática é controlada pelas definições do backend configuradas na aplicação móvel.",
-        "A placa só executa a rega automática quando:"
+        "Você ativa e configura a rega automática no aplicativo.",
+        "A placa só rega automaticamente se:"
       ],
       "items": [
-        "o suporte de bomba está ativado",
-        "o arranque automático da bomba está ativado",
-        "o sensor de humidade está ativado",
-        "a humidade do solo medida mais recentemente está abaixo do limite do backend",
-        "o tempo de espera da rega automática já passou"
+        "a opção de bomba estiver ativada",
+        "a rega automática estiver ligada",
+        "o sensor de umidade do solo estiver ativado",
+        "a umidade recém-medida estiver abaixo do limite",
+        "o intervalo mínimo tiver passado e o servidor autorizar a rega"
       ],
-      "cooldown": "Depois de ocorrer rega manual ou rega automática, o firmware inicia o tempo de espera da rega automática. Isto ajuda a evitar que uma tarefa de rega manual e a rega automática aconteçam demasiado próximas uma da outra."
+      "cooldown": "Depois de uma rega manual ou automática, o programa espera o intervalo configurado antes de regar automaticamente de novo. Isso evita duas regas muito próximas."
     },
     "manual": {
       "title": "Rega manual",
       "desc": [
-        "A rega manual é agendada a partir da aplicação móvel.",
-        "A rega manual ignora intencionalmente:",
-        "Isto significa que, quando o utilizador agenda manualmente a rega, a placa trata isso como um pedido explícito para acionar a bomba uma vez."
+        "Você pede a rega manual pelo aplicativo.",
+        "O pedido é executado sem verificar:",
+        "A placa trata o pedido como uma ordem explícita para ligar a bomba uma vez, sem avaliar as condições da rega automática."
       ],
       "items": [
-        "humidade atual do solo",
+        "umidade atual do solo",
         "limite de rega automática",
         "tempo de espera da rega automática"
       ]
     }
   },
   "hardware": {
-    "title": "Notas de hardware",
-    "desc": "O firmware gerado pressupõe componentes comuns compatíveis com ESP32:",
+    "title": "Conexões do hardware",
+    "desc": "O código gerado foi preparado para estes componentes:",
     "items": [
-      "sensor de luz BH1750 / GY-302 através de I2C",
-      "sensor de temperatura e humidade BME280 através de I2C",
-      "sensor capacitivo de humidade do solo num pino analógico",
-      "relé ou controlador de bomba ligado a um pino de saída digital"
+      "sensor de luz BH1750 / GY-302 conectado por I2C",
+      "sensor de temperatura e umidade do ar BME280 conectado por I2C",
+      "sensor capacitivo de umidade do solo conectado a uma entrada analógica",
+      "relé ou driver da bomba conectado a uma saída digital"
     ],
-    "verify": "Verifique toda a cablagem antes de alimentar a bomba.",
-    "relayNote": "Alguns módulos de relé são ativos em LOW, enquanto outros são ativos em HIGH. O exemplo gerado usa:",
-    "relayReverse": "Se o seu relé funcionar ao contrário, poderá precisar de trocar os valores HIGH e LOW.",
-    "relayCodeLabel": "Exemplo de saída da bomba"
+    "verify": "Confira todas as conexões antes de ligar a alimentação da bomba.",
+    "relayNote": "Conforme o módulo, o relé pode ser acionado com LOW ou HIGH. O exemplo usa:",
+    "relayReverse": "Se seu relé funcionar ao contrário, troque HIGH e LOW no código de controle da bomba.",
+    "relayCodeLabel": "Ligar e desligar a bomba"
   },
   "calibration": {
-    "title": "Notas de calibração",
+    "title": "Calibre o sensor de umidade do solo",
     "desc": [
-      "Os sensores de humidade do solo têm de ser calibrados para resultados fiáveis.",
-      "O código gerado usa:",
-      "Estes valores são apenas exemplos.",
-      "Meça o valor do seu sensor em solo seco ou no ar, depois meça-o novamente em solo húmido ou água, e atualize estas constantes em conformidade."
+      "Calibre o sensor para obter valores confiáveis.",
+      "O código usa duas constantes para converter as leituras:",
+      "Os valores do exemplo precisam ser ajustados ao seu sensor.",
+      "Meça o valor bruto no solo seco e depois no solo úmido para ajustar as duas constantes. Se fizer um teste na água, mergulhe apenas a parte de medição, conforme as instruções do fabricante."
     ],
-    "codeLabel": "Valores de calibração predefinidos"
+    "codeLabel": "Valores de calibração de exemplo"
   },
   "safety": {
-    "title": "Notas de segurança",
+    "title": "Antes de deixar a bomba sem supervisão",
     "desc": [
-      "O firmware gerado é um ponto de partida. Antes de deixar uma bomba sem supervisão:",
-      "O Flovers armazena leituras e eventos de rega, mas a cablagem do dispositivo, a calibração, o comportamento da bomba e a instalação física continuam a ser responsabilidade do utilizador."
+      "Adapte o código ao seu sistema. Antes de deixar a bomba sem supervisão:",
+      "O Flovers salva leituras e registros de rega. A ligação, a calibração, o funcionamento da bomba e a instalação continuam sendo sua responsabilidade."
     ],
     "items": [
-      "teste a bomba manualmente",
-      "confirme a lógica do relé",
-      "verifique se a bomba desliga corretamente",
-      "use um tempo de funcionamento seguro da bomba",
-      "confirme que os valores de humidade do solo são realistas",
-      "proteja os componentes eletrónicos da água",
-      "use uma fonte de alimentação e isolamento adequados para a bomba"
+      "teste o acionamento manual da bomba",
+      "confira com qual nível da saída o relé é acionado",
+      "verifique se a bomba para ao terminar a rega",
+      "escolha um tempo de funcionamento adequado",
+      "confira se as medições de umidade do solo fazem sentido",
+      "proteja a eletrônica da água",
+      "use alimentação e isolamento adequados para a bomba"
     ]
   },
   "wiring": {
-    "title": "Diagramas de cablagem",
-    "desc": "Abaixo está um esquema de cablagem de dispositivo de exemplo. Clique na imagem para a abrir em ecrã inteiro.",
-    "ariaPrimary": "Esquema de cablagem de dispositivo de exemplo",
-    "placeholderTitlePrimary": "Esquema de cablagem de dispositivo de exemplo",
-    "placeholderSubPrimary": "Clique na imagem para a apresentar em ecrã inteiro."
-  }
+    "title": "Esquema de ligação",
+    "desc": "Veja um exemplo de ligação do dispositivo. Clique na imagem para ampliar.",
+    "ariaPrimary": "Ampliar o esquema de ligação",
+    "placeholderTitlePrimary": "Exemplo de ligação do dispositivo",
+    "placeholderSubPrimary": "Clique para ampliar."
+  },
+  "claimSafety": "Antes de regar automaticamente, o dispositivo precisa da autorização do servidor. Envie um POST para /readings/pump-auto-claim/ com secret, device_key e o valor moisture recém-medido; device_id é opcional. Acione a bomba somente se a resposta contiver run: true. Guarde o task_id retornado para confirmar a execução. O código gerado já cuida desses passos.",
+  "retrySafety": "Defina supports_task_retry como true somente se o programa salvar o estado do comando em armazenamento persistente antes de ligar a bomba e conservar o resultado. Assim, receber o mesmo comando novamente não causa outra rega. O código gerado já inclui essa proteção. Para usá-la em dispositivos existentes, gere o código novamente e envie para a placa. Para programas antigos, o servidor não reenvia comandos já entregues."
 }

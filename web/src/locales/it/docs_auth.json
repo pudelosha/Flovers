@@ -3,52 +3,52 @@
     "title": "Accesso e registrazione",
     "sections": [
       {
-        "heading": "Creazione di un nuovo account (Registrazione)",
+        "heading": "Crea un account",
         "body": [
-          "Per utilizzare Flovers è necessario creare un account utente individuale. La registrazione avviene direttamente nell'applicazione mobile.",
-          "Durante la registrazione sono richiesti solo l'indirizzo e-mail e la password. In questa fase non sono richiesti altri dati personali.",
-          "La password deve contenere almeno 8 caratteri e includere almeno una cifra e un carattere speciale, per garantire un livello base di sicurezza.",
-          "Prima di completare la registrazione, l'utente deve accettare il Regolamento e l'Informativa sulla Privacy."
+          "Per usare Flovers devi creare un account personale. Puoi registrarti direttamente nell'app.",
+          "Servono solo un indirizzo e-mail e una password. In questa fase non ti vengono chiesti altri dati personali.",
+          "Per rispettare i requisiti minimi di sicurezza, la password deve contenere almeno 8 caratteri, tra cui almeno un numero e un carattere speciale.",
+          "Prima di completare la registrazione, devi accettare i Termini di servizio e l'Informativa sulla privacy."
         ]
       },
       {
         "heading": "Attivazione dell'account tramite e-mail",
         "body": [
-          "Dopo l'invio del modulo di registrazione, viene inviata un'e-mail di attivazione all'indirizzo e-mail fornito.",
-          "Per attivare l'account è necessario fare clic sul link di conferma contenuto nel messaggio ricevuto.",
-          "Fino all'attivazione dell'account, l'accesso all'applicazione non è possibile."
+          "Dopo la registrazione riceverai un'e-mail di attivazione all'indirizzo che hai indicato.",
+          "Per attivare l'account, apri il link di conferma nel messaggio.",
+          "Potrai accedere all'app solo dopo aver attivato l'account."
         ]
       },
       {
-        "heading": "Nuovo invio dell'e-mail di attivazione",
+        "heading": "Richiedi una nuova e-mail di attivazione",
         "body": [
-          "Se l'e-mail di attivazione non è arrivata, l'utente può richiederne un nuovo invio dall'interno dell'applicazione.",
-          "Questa opzione è disponibile nella schermata di accesso o di registrazione e può essere utilizzata se il messaggio è stato perso, ritardato o finito nello spam.",
-          "Prima di richiedere un nuovo invio, è consigliabile controllare la cartella spam o altri filtri di posta."
+          "Se non hai ricevuto l'e-mail di attivazione, puoi richiederne un'altra direttamente nell'app.",
+          "Trovi questa opzione nella schermata di accesso o di registrazione. Puoi usarla se hai perso il messaggio, se tarda ad arrivare o se è finito nello spam.",
+          "Prima di richiedere un'altra e-mail, controlla la cartella spam o posta indesiderata."
         ]
       },
       {
-        "heading": "Accesso a un account esistente",
+        "heading": "Accedi al tuo account",
         "body": [
-          "Per effettuare l'accesso sono richiesti solo l'indirizzo e-mail e la password associati all'account.",
-          "Se l'account non è ancora stato attivato, l'applicazione informerà della necessità di confermare l'indirizzo e-mail.",
+          "Per accedere, inserisci l'indirizzo e-mail e la password del tuo account.",
+          "Se non hai ancora attivato l'account, l'app ti chiederà di confermare prima l'indirizzo e-mail.",
           "I dati di accesso vengono verificati in modo sicuro lato server; le password non vengono memorizzate in chiaro."
         ]
       },
       {
-        "heading": "Reimpostazione della password dimenticata",
+        "heading": "Hai dimenticato la password?",
         "body": [
-          "Se l'utente non riesce ad accedere a causa di una password dimenticata, può richiedere l'invio di un'e-mail per la reimpostazione della password.",
-          "Il messaggio contiene istruzioni e un link sicuro che consente di impostare una nuova password.",
-          "Dopo aver impostato la nuova password, è possibile accedere immediatamente all'applicazione."
+          "Se hai dimenticato la password e non riesci ad accedere, puoi richiedere un'e-mail per reimpostarla.",
+          "Il messaggio contiene le istruzioni e un link sicuro per scegliere una nuova password.",
+          "Dopo averla impostata, puoi accedere subito con la nuova password."
         ]
       },
       {
         "heading": "Note sulla sicurezza",
         "body": [
-          "Ogni account utente è protetto da una password individuale impostata durante la registrazione.",
-          "Per motivi di sicurezza, non è consigliabile condividere i dati di accesso con terze parti.",
-          "In caso di sospetto accesso non autorizzato all'account, si raccomanda di cambiare immediatamente la password."
+          "Ogni account è protetto dalla password personale scelta durante la registrazione.",
+          "Per proteggere il tuo account, non condividere i dati di accesso con altre persone.",
+          "Se sospetti che qualcuno abbia avuto accesso al tuo account senza autorizzazione, cambia la password il prima possibile."
         ]
       }
     ]

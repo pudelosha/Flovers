@@ -3,68 +3,68 @@
     "title": "Lembretes",
     "sections": [
       {
-        "heading": "Objetivo desta vista",
+        "heading": "Planeje os cuidados",
         "body": [
-          "A vista Lembretes é utilizada para gerir horários cíclicos de cuidados com plantas.",
-          "Um lembrete define o que deve ser feito (tipo de tarefa), com que frequência deve repetir-se (intervalo) e a que planta está associado. Com base nisso, o Flovers gera automaticamente tarefas ao longo do tempo."
+          "Na tela Lembretes, você organiza os cuidados que precisa repetir com suas plantas.",
+          "Cada lembrete define o tipo de cuidado, a frequência e a planta. O Flovers usa essas informações para criar as tarefas automaticamente."
         ]
       },
       {
-        "heading": "Duas vistas: lista de lembretes e calendário",
+        "heading": "Lista e calendário",
         "body": [
-          "Este ecrã tem dois modos: a lista de lembretes e a vista de calendário.",
-          "Pode alternar entre eles deslizando o ecrã para a esquerda/direita ou escolhendo a mudança de vista no menu FAB.",
-          "Ambas as vistas apresentam os mesmos dados, mas de forma diferente — dependendo se pretende rever rapidamente as regras ou ver o plano ao longo do tempo."
+          "Você pode ver os lembretes em uma lista ou no calendário.",
+          "Deslize a tela para a esquerda ou a direita, ou use o botão de ações rápidas para trocar de modo.",
+          "Os dois mostram os mesmos dados. Use a lista para conferir os lembretes e o calendário para ver as próximas datas."
         ]
       },
       {
-        "heading": "Vista da lista de lembretes",
+        "heading": "Lista de lembretes",
         "body": [
-          "Na vista de lista, cada cartão representa um lembrete criado pelo utilizador.",
-          "O cartão mostra o tipo de tarefa (ícone e nome), o nome da planta, a localização (se atribuída), a informação de frequência e a data da próxima execução.",
-          "É a forma mais rápida de rever todas as regras cíclicas ativas na conta."
+          "Cada cartão corresponde a um lembrete que você criou.",
+          "Ele mostra o ícone e o tipo de tarefa, a planta, a localização se houver, a frequência e a próxima data prevista.",
+          "A lista permite conferir rapidamente todos os lembretes ativos da conta."
         ]
       },
       {
-        "heading": "A\u00e7\u00f5es no cart\u00e3o de lembrete (Editar / Pausar / Retomar / Excluir)",
+        "heading": "Edite, pause, retome ou exclua",
         "body": [
-          "Cada lembrete tem duas ações: Editar e Eliminar.",
-          "A edição permite alterar os parâmetros do lembrete, como o intervalo, o tipo de tarefa, a planta associada e outras definições (dependendo do tipo de lembrete).",
-          "A eliminação do lembrete é permanente e faz com que as tarefas deixem de ser geradas a partir dessa regra no futuro.",
-        "Pausar desativa temporariamente um lembrete sem exclu\u00ed-lo. Enquanto estiver pausado, sua tarefa pendente \u00e9 removida da Home e n\u00e3o entra nas notifica\u00e7\u00f5es di\u00e1rias por e-mail ou push. Ao retomar o lembrete, o Flovers agenda a pr\u00f3xima tarefa pendente de acordo com o intervalo configurado."
+          "Você pode editar, pausar, retomar ou excluir cada lembrete.",
+          "Ao editar, pode mudar o intervalo, o tipo de tarefa, a planta e outras opções disponíveis para aquele lembrete.",
+          "A exclusão é permanente e impede que novas tarefas sejam criadas a partir do lembrete.",
+          "Pausar interrompe o lembrete sem excluí-lo. A tarefa pendente sai do Início e dos avisos diários por e-mail e push. Ao retomar, o Flovers agenda a próxima tarefa conforme o intervalo configurado."
         ]
       },
       {
-        "heading": "Vista de calendário",
+        "heading": "Calendário",
         "body": [
-          "Na vista de calendário, os lembretes são apresentados como itens planeados em dias específicos.",
-          "Para ver os detalhes, toque num dia do calendário — os itens planeados para esse dia aparecerão abaixo do calendário.",
-          "O calendário utiliza marcadores/ícones de cores para indicar os tipos de tarefas planeadas para um determinado dia e facilitar a avaliação da distribuição das obrigações."
+          "No calendário, os lembretes aparecem nos dias previstos.",
+          "Toque em um dia para ver os cuidados programados abaixo do calendário.",
+          "Cores e ícones indicam os tipos de tarefa e ajudam você a ver como os cuidados estão distribuídos entre os dias."
         ]
       },
       {
-        "heading": "Menu FAB",
+        "heading": "Botão de ações rápidas",
         "body": [
-          "O botão FAB disponibiliza ações rápidas relacionadas com lembretes e com a mudança de vista.",
-          "As opções disponíveis são: Adicionar lembrete, mudar vista (Lista/Calendário), Ordenar e Filtrar.",
-          "A ordenação pode ser feita por data limite (due date), nome da planta ou localização.",
-          "A filtragem pode incluir: nome da planta, localização, tipo de tarefa e intervalo de datas (due date range)."
+          "O botão de ações rápidas abre as opções dos lembretes e permite mudar entre lista e calendário.",
+          "Nele você encontra Adicionar lembrete, Lista/Calendário, Ordenar e Filtrar.",
+          "Ordene por data prevista, nome da planta ou localização.",
+          "Filtre por nome da planta, localização, tipo de tarefa ou intervalo de datas previstas."
         ]
       },
       {
-        "heading": "Como os lembretes geram tarefas (lógica geral)",
+        "heading": "Como as tarefas são criadas",
         "body": [
-          "Um lembrete é uma regra cíclica (por exemplo: Regar a cada 7 dias).",
-          "Com base nos lembretes, o Flovers gera tarefas e apresenta-as no ecrã Home como itens a executar.",
-          "Após a conclusão de uma tarefa, a seguinte é planeada de acordo com o intervalo do lembrete (permitindo que a rotina continue automaticamente)."
+          "Um lembrete define algo a repetir, como regar a cada 7 dias.",
+          "O Flovers cria as tarefas e as mostra no Início para você saber o que fazer.",
+          "Ao concluir uma tarefa, a próxima é agendada automaticamente conforme o intervalo do lembrete."
         ]
       },
       {
-        "heading": "Notas e dicas práticas",
+        "heading": "Dicas de uso",
         "body": [
-          "Os lembretes ajudam a manter a regularidade, mas não garantem a saúde das plantas — as condições reais podem exigir ajustes nos intervalos.",
-          "Se as condições mudarem (estação do ano, luz, substrato, tamanho do vaso), considere atualizar os lembretes.",
-          "Se quiser gerir tarefas concluídas e notas, utilize a vista Histórico de tarefas (descrita separadamente)."
+          "Os lembretes ajudam a manter a regularidade, mas não garantem a saúde das plantas. Ajuste os intervalos às condições reais.",
+          "Se a estação, a luz, o substrato ou o tamanho do vaso mudar, confira se os lembretes ainda fazem sentido.",
+          "Para consultar e gerenciar os cuidados já realizados e as anotações, abra o Histórico de tarefas."
         ]
       }
     ]

@@ -1,131 +1,132 @@
 {
   "common": {
     "copy": "Kopieren",
-    "copied": "Kopiert"
+    "copied": "Kopiert",
+    "closePreview": "Vorschau des Schaltplans schließen"
   },
-  "title": "Geräte-API & Verkabelung",
+  "title": "Sensoren, Gießen und API",
   "lead": [
-    "Diese Seite dokumentiert, wie IoT-Geräte in Flovers integriert werden.",
-    "Geräte können Umgebungswerte an das Backend senden, prüfen, ob über die mobile App eine manuelle Bewässerungsaufgabe geplant wurde, und abgeschlossene Pumpenläufe an Flovers zurückmelden.",
-    "Die generierte Arduino-/ESP-Firmware kann sowohl Messwerte als auch die Bewässerungssteuerung in einem Sketch unterstützen. Wenn das verknüpfte Gerät mit einer Wasserpumpe konfiguriert wurde, enthält der generierte Code Pumpen-Endpunkte und Pumpensteuerungslogik. Wenn das Gerät ohne Pumpe konfiguriert wurde, kann die generierte Firmware vereinfacht werden, sodass sie nur Messwerte sendet."
+    "Hier erfährst du, wie du Sensoren und eine Pumpe mit Flovers verbindest und die API nutzt.",
+    "Dein Gerät kann Messwerte senden, Gießaufträge aus der App abrufen und melden, wenn die Pumpe ihre Arbeit beendet hat.",
+    "Der in der App erzeugte Code passt zu den Einstellungen deines Geräts. Wenn du eine Pumpe verwendest, steuert er auch das Gießen. Ohne Pumpe sendet er nur die Messwerte."
   ],
   "firmwareIntro": {
-    "title": "Was die generierte Firmware tut",
-    "lead": "Die generierte Firmware kann:",
+    "title": "Was das Programm auf deinem Board macht",
+    "lead": "Das erzeugte Programm:",
     "items": [
-      "eine Verbindung zu Wi-Fi herstellen",
-      "die Zeit per NTP synchronisieren",
-      "aktivierte Sensoren auslesen",
-      "Messwerte an Flovers senden",
-      "auf geplante manuelle Bewässerungsaufgaben prüfen",
-      "die Pumpe starten, wenn eine manuelle Bewässerungsaufgabe aussteht",
-      "backend-gesteuerte Einstellungen für automatische Bewässerung prüfen",
-      "automatische Bewässerung ausführen, wenn die Bodenfeuchtigkeit unter dem konfigurierten Schwellenwert liegt",
-      "den Abschluss der Bewässerung an das Backend zurückmelden"
+      "verbindet sich mit dem WLAN",
+      "stellt die Uhr über einen NTP-Server ein",
+      "liest die aktivierten Sensoren aus",
+      "sendet die Messwerte an Flovers",
+      "prüft, ob du in der App einen Gießauftrag erteilt hast",
+      "schaltet die Pumpe ein, wenn ein solcher Auftrag vorliegt",
+      "ruft die Einstellungen für automatisches Gießen vom Server ab",
+      "gießt automatisch, wenn die Bodenfeuchte unter dem eingestellten Grenzwert liegt und der Server den Vorgang freigibt",
+      "meldet den Abschluss des Gießvorgangs"
     ],
-    "defaultTiming": "Standardmäßig werden Messwerte einmal pro Stunde gesendet. Manuelle Bewässerungsaufgaben werden häufiger geprüft, zum Beispiel einmal pro Minute, damit eine über die mobile App erstellte Bewässerungsanforderung übernommen werden kann, ohne auf den nächsten stündlichen Messzyklus zu warten.",
-    "adjustmentNote": "Einige Werte sollten an Ihre Hardware und Vorlieben angepasst werden, insbesondere Wi-Fi-Zugangsdaten, Pin-Nummern, Kalibrierung der Bodenfeuchtigkeit, Pumpenlaufzeit, Messintervall, Abfrageintervall für manuelle Aufgaben und Abkühlzeit für automatische Bewässerung."
+    "defaultTiming": "Standardmäßig sendet das Programm einmal pro Stunde Messwerte. Manuelle Gießaufträge prüft es unabhängig davon, standardmäßig einmal pro Minute. So kann die Pumpe auf einen Auftrag aus der App reagieren, ohne auf die nächste Messung zu warten.",
+    "adjustmentNote": "Trage vor dem Aufspielen deine WLAN-Zugangsdaten ein und prüfe die Hardwareeinstellungen: Pins, Kalibrierung des Bodenfeuchtesensors und Laufzeit der Pumpe. Du kannst auch festlegen, wie oft das Board misst, nach Aufträgen fragt und automatisch gießen darf."
   },
   "endpoints": {
-    "title": "API-Endpunkte",
+    "title": "API-Adressen",
     "ingest": {
-      "title": "Messwerte aufnehmen",
-      "direction": "Gerät → Backend",
+      "title": "Messwerte senden",
+      "direction": "Gerät → Server",
       "desc": [
-        "Geräte verwenden diesen Endpunkt, um Sensorwerte zu senden.",
-        "Das Backend authentifiziert die Anfrage mit:",
-        "Das Backend speichert Messwerte unter dem passenden Gerät. Messwerte können Temperatur, Luftfeuchtigkeit, Licht, Bodenfeuchtigkeit oder eine beliebige Teilmenge aktivierter Metriken enthalten."
+        "An diese Adresse sendet dein Gerät die Messwerte seiner Sensoren.",
+        "Der Server prüft die Felder secret und device_key. Du kannst zusätzlich device_id angeben.",
+        "Die Werte werden dem passenden Gerät zugeordnet. Du kannst Temperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchte senden oder nur einen Teil dieser Messwerte."
       ],
       "authItems": [
         "secret",
         "device_key",
-        "optional device_id"
+        "device_id — optional"
       ]
     },
     "pumpNextTask": {
-      "title": "Nächste Pumpenaufgabe prüfen",
-      "direction": "Gerät → Backend",
+      "title": "Gießaufträge abrufen",
+      "direction": "Gerät → Server",
       "desc": [
-        "Geräte mit Pumpenunterstützung verwenden diesen Endpunkt, um zu prüfen, ob eine manuelle Bewässerungsaufgabe wartet.",
-        "Die Antwort enthält außerdem die aktuelle backend-gesteuerte automatische Pumpenkonfiguration, zum Beispiel ob automatische Bewässerung aktiviert ist und welcher Schwellenwert für die Bodenfeuchtigkeit verwendet werden soll."
+        "Ein Gerät mit Pumpe prüft hier, ob ein manueller Gießauftrag auf die Ausführung wartet.",
+        "Die Antwort enthält auch die aktuellen Einstellungen für automatisches Gießen, etwa ob es aktiviert ist und welcher Grenzwert für die Bodenfeuchte gilt."
       ]
     },
     "pumpComplete": {
-      "title": "Pumpenabschluss melden",
-      "direction": "Gerät → Backend",
+      "title": "Abschluss des Gießvorgangs melden",
+      "direction": "Gerät → Server",
       "desc": [
-        "Geräte verwenden diesen Endpunkt, nachdem die Pumpe gelaufen ist.",
-        "Dies kann entweder melden:"
+        "Wenn die Pumpe fertig ist, meldet das Gerät das Ergebnis.",
+        "Die Meldung kann sich auf Folgendes beziehen:"
       ],
       "items": [
-        "eine geplante manuelle Bewässerungsaufgabe unter Verwendung von task_id",
-        "oder ein automatisches Bewässerungsereignis unter Verwendung von source: \"automatic\""
+        "einen manuellen Gießauftrag mit der zusammen mit dem Auftrag erhaltenen task_id",
+        "einen automatischen Gießvorgang mit source: \"automatic\" und der vor dem Pumpenstart erhaltenen task_id"
       ]
     },
     "feed": {
-      "title": "Neuesten Feed lesen",
-      "direction": "Gerät → Backend",
+      "title": "Letzte Messwerte abrufen",
+      "direction": "Gerät → Server",
       "desc": [
-        "Dieser Endpunkt gibt die neuesten Messdaten für ein Gerät zurück. Er ist weiterhin nützlich für einfache Integrationen oder Diagnosezwecke, aber die generierte pumpenfähige Firmware verwendet pump-next-task und pump-complete für die Bewässerungssteuerung."
+        "Diese Adresse liefert die zuletzt gespeicherten Messwerte eines Geräts. Sie eignet sich für die Fehlersuche und einfache Integrationen. Zur Pumpensteuerung dienen die separaten Adressen pump-next-task, pump-auto-claim und pump-complete."
       ]
     }
   },
   "ingest": {
-    "title": "POST ingest-Dokumentation",
-    "desc": "Senden Sie eine Messprobe als JSON. Das Backend authentifiziert das Gerät und speichert die bereitgestellten Metriken.",
-    "payloadShape": "Payload-Struktur",
-    "examplePayload": "Beispiel-Payload",
+    "title": "Messwerte senden: POST ingest",
+    "desc": "Sende eine Messung im JSON-Format. Der Server prüft die Zugangsdaten und speichert die übermittelten Werte.",
+    "payloadShape": "Felder der Anfrage",
+    "examplePayload": "Beispieldaten",
     "powershellExample": "PowerShell-Beispiel"
   },
   "pumpNextTask": {
-    "title": "POST pump-next-task-Dokumentation",
+    "title": "Aufträge abrufen: POST pump-next-task",
     "desc": [
-      "Dieser Endpunkt wird von Geräten mit Pumpenunterstützung verwendet.",
-      "Das Gerät fragt das Backend, ob eine geplante manuelle Bewässerungsaufgabe vorhanden ist. Das Backend gibt zurück:"
+      "Diese Adresse wird von Geräten mit Pumpe verwendet.",
+      "Das Gerät fragt nach, ob du in der App einen manuellen Gießauftrag erteilt hast. Die Antwort enthält:"
     ],
     "items": [
-      "ob die Pumpe jetzt laufen soll",
-      "die Aufgaben-ID, wenn eine manuelle Bewässerungsaufgabe vorhanden ist",
-      "die aktuellen automatischen Pumpeneinstellungen",
-      "ob das Backend die Pumpe und den Feuchtigkeitssensor als aktiviert betrachtet"
+      "die Angabe, ob die Pumpe jetzt starten soll",
+      "die Kennung des manuellen Gießauftrags, falls einer vorliegt",
+      "die aktuellen Einstellungen für automatisches Gießen",
+      "die Angabe, ob Pumpe und Bodenfeuchtesensor in den Geräteeinstellungen aktiviert sind"
     ],
-    "payloadShape": "Payload-Struktur",
-    "examplePayload": "Beispiel-Payload",
-    "responseNoTask": "Beispielantwort ohne manuelle Bewässerungsaufgabe",
-    "responseWithTask": "Beispielantwort mit einer manuellen Bewässerungsaufgabe",
+    "payloadShape": "Felder der Anfrage",
+    "examplePayload": "Beispieldaten",
+    "responseNoTask": "Antwort ohne anstehenden Gießauftrag",
+    "responseWithTask": "Antwort mit einem Gießauftrag",
     "powershellExample": "PowerShell-Beispiel"
   },
   "pumpComplete": {
-    "title": "POST pump-complete-Dokumentation",
+    "title": "Ergebnis melden: POST pump-complete",
     "desc": [
-      "Nachdem die Pumpe gelaufen ist, meldet das Gerät den Abschluss.",
-      "Für manuelle Bewässerung fügen Sie die von pump-next-task zurückgegebene task_id ein.",
-      "Für automatische Bewässerung lassen Sie task_id weg und verwenden Sie source: \"automatic\"."
+      "Wenn die Pumpe fertig ist, teilt das Gerät dem Server mit, ob das Gießen erfolgreich war.",
+      "Gib bei manuellem Gießen die task_id aus pump-next-task an.",
+      "Gib bei automatischem Gießen die task_id aus pump-auto-claim und source: \"automatic\" an."
     ],
-    "manualPayload": "Payload für Abschluss der manuellen Bewässerung",
-    "automaticPayload": "Payload für Abschluss der automatischen Bewässerung",
-    "failedPayload": "Payload für fehlgeschlagenen Pumpenlauf",
+    "manualPayload": "Abschlussmeldung für manuelles Gießen",
+    "automaticPayload": "Abschlussmeldung für automatisches Gießen",
+    "failedPayload": "Meldung eines fehlgeschlagenen Gießvorgangs",
     "powershellExample": "PowerShell-Beispiel"
   },
   "feed": {
-    "title": "GET feed-Dokumentation",
+    "title": "Messwerte abrufen: GET feed",
     "desc": [
-      "Der Feed-Endpunkt gibt den neuesten Messwert für ein Gerät zurück.",
-      "Er kann für Diagnosezwecke oder einfache Integrationen verwendet werden, die nur die neuesten gespeicherten Werte lesen müssen."
+      "Die Adresse feed liefert die zuletzt gespeicherten Messwerte des Geräts.",
+      "Du kannst sie für die Fehlersuche oder für eine Integration nutzen, die nur die aktuellen Werte abfragen soll."
     ],
     "exampleRequest": "Beispielanfrage",
     "exampleResponse": "Beispielantwort"
   },
   "generatedFirmware": {
-    "title": "Generierte Arduino- / ESP32-Firmware",
+    "title": "Code für dein Arduino- oder ESP32-Board",
     "desc": [
-      "Die App kann Firmware für das ausgewählte Gerät generieren.",
-      "Die generierte Firmware enthält die richtigen API-Endpunkte, das Authentifizierungs-Secret, den Geräteschlüssel, die Geräte-ID, aktivierte Sensoren und Pumpeneinstellungen für dieses Gerät.",
-      "Wenn das Gerät mit einer Wasserpumpe konfiguriert ist, enthält der generierte Code sowohl Messwerte als auch Wasserpumpensteuerung. Er prüft manuelle Bewässerungsaufgaben getrennt vom stündlichen Messzyklus, und automatische Bewässerung verwendet den backend-gesteuerten Schwellenwert und Schalter."
+      "In der App kannst du Code für das ausgewählte Gerät erzeugen.",
+      "Er enthält die API-Adressen, Zugangsdaten (secret und device_key), Gerätekennung sowie die Einstellungen für Sensoren und Pumpe.",
+      "Wenn das Gerät eine Pumpe hat, übernimmt das Programm sowohl die Messungen als auch das Gießen. Manuelle Aufträge fragt es unabhängig vom Senden der Messwerte ab. Beim automatischen Gießen verwendet es die Einstellungen aus der App und holt vor dem Pumpenstart die Freigabe des Servers ein."
     ],
-    "adjustIntro": "Passen Sie vor dem Hochladen des Sketches die folgenden Werte an Ihre Hardware an:",
+    "adjustIntro": "Prüfe vor dem Aufspielen des Codes diese Werte und passe sie an deine Hardware an:",
     "adjustItems": [
-      "Wi-Fi-SSID und Passwort",
+      "WLAN-Name (SSID) und Passwort",
       "SDA_PIN und SCL_PIN",
       "SOIL_PIN",
       "PUMP_PIN",
@@ -135,109 +136,111 @@
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
       "AUTO_PUMP_MIN_INTERVAL_MS"
     ],
-    "codeLabel": "Generierte Arduino-Firmware: Messwerte + Wasserpumpensteuerung"
+    "codeLabel": "Beispielprogramm: Sensorwerte und Pumpensteuerung"
   },
   "behavior": {
-    "title": "Zusammenfassung des Firmware-Verhaltens",
+    "title": "Messen und Gießen Schritt für Schritt",
     "fullCycle": {
-      "title": "Vollständiger stündlicher Zyklus",
-      "desc": "Alle SEND_INTERVAL_MS führt das Board einen vollständigen Zyklus aus:",
+      "title": "Messzyklus",
+      "desc": "In Abständen von SEND_INTERVAL_MS führt das Board diese Schritte aus:",
       "items": [
-        "liest Sensoren aus",
-        "sendet Messwerte an den ingest-Endpunkt",
-        "prüft auf geplante manuelle Bewässerung",
-        "führt manuelle Bewässerung aus, wenn eine Aufgabe aussteht",
-        "prüft andernfalls die Bedingungen für automatische Bewässerung",
-        "führt automatische Bewässerung aus, wenn die Backend-Einstellungen dies erlauben und die Bodenfeuchtigkeit unter dem Schwellenwert liegt"
+        "Sensoren auslesen",
+        "Messwerte an ingest senden",
+        "nach einem manuellen Gießauftrag fragen",
+        "den Auftrag ausführen, falls einer vorliegt",
+        "andernfalls die Bedingungen für automatisches Gießen prüfen",
+        "automatisch gießen, wenn die Bodenfeuchte unter dem Grenzwert liegt, die Einstellungen es erlauben und der Server den Vorgang freigibt"
       ]
     },
     "manualCheck": {
-      "title": "Prüfung der manuellen Bewässerung",
+      "title": "Manuelle Aufträge prüfen",
       "desc": [
-        "Alle MANUAL_PUMP_CHECK_INTERVAL_MS prüft das Board nur auf geplante manuelle Bewässerungsaufgaben.",
-        "Diese kürzere Prüfung:",
-        "Dadurch kann die Aktion „Bewässerung planen“ der App schnell übernommen werden, ohne dass Sensorwerte jede Minute gesendet werden müssen."
+        "In Abständen von MANUAL_PUMP_CHECK_INTERVAL_MS fragt das Board nach manuellen Gießaufträgen.",
+        "In diesem kürzeren Zyklus:",
+        "So kann ein Gießauftrag aus der App zügig ausgeführt werden, ohne dafür jede Minute sämtliche Sensorwerte zu senden."
       ],
       "items": [
-        "sendet keine Messwerte",
-        "führt keine automatische Bewässerung aus",
-        "führt nur eine ausstehende manuelle Bewässerungsaufgabe aus, wenn eine vorhanden ist"
+        "werden keine Sensorwerte gesendet",
+        "wird kein automatisches Gießen gestartet",
+        "wird nur ein anstehender manueller Gießauftrag ausgeführt"
       ]
     },
     "automatic": {
-      "title": "Automatische Bewässerung",
+      "title": "Automatisch gießen",
       "desc": [
-        "Automatische Bewässerung wird durch die in der mobilen App konfigurierten Backend-Einstellungen gesteuert.",
-        "Das Board führt automatische Bewässerung nur aus, wenn:"
+        "Automatisches Gießen aktivierst und konfigurierst du in der App.",
+        "Das Board startet die Pumpe nur, wenn:"
       ],
       "items": [
-        "Pumpenunterstützung aktiviert ist",
-        "automatischer Pumpenstart aktiviert ist",
-        "der Feuchtigkeitssensor aktiviert ist",
-        "die zuletzt gemessene Bodenfeuchtigkeit unter dem Backend-Schwellenwert liegt",
-        "die Abkühlzeit für automatische Bewässerung abgelaufen ist"
+        "die Pumpe in den Geräteeinstellungen aktiviert ist",
+        "automatisches Gießen eingeschaltet ist",
+        "der Bodenfeuchtesensor aktiviert ist",
+        "die gemessene Bodenfeuchte unter dem eingestellten Grenzwert liegt",
+        "die erforderliche Pause seit dem letzten Gießen verstrichen ist und der Server den nächsten Vorgang freigibt"
       ],
-      "cooldown": "Nachdem entweder manuelle Bewässerung oder automatische Bewässerung ausgeführt wurde, startet die Firmware die Abkühlzeit für automatische Bewässerung. Dies hilft zu vermeiden, dass eine manuelle Bewässerungsaufgabe und automatische Bewässerung zu dicht aufeinander folgen."
+      "cooldown": "Nach jedem Gießvorgang, ob manuell oder automatisch gestartet, wartet das Programm die eingestellte Pause ab, bevor es erneut automatisch gießt. So startet die Pumpe nicht zu schnell hintereinander."
     },
     "manual": {
-      "title": "Manuelle Bewässerung",
+      "title": "Manuell gießen",
       "desc": [
-        "Manuelle Bewässerung wird über die mobile App geplant.",
-        "Manuelle Bewässerung ignoriert absichtlich:",
-        "Das bedeutet, dass das Board es als ausdrückliche Aufforderung behandelt, die Pumpe einmal laufen zu lassen, wenn der Benutzer manuell eine Bewässerung plant."
+        "Einen manuellen Gießauftrag erteilst du in der App.",
+        "Dieser Auftrag wird unabhängig von folgenden Werten ausgeführt:",
+        "Das Board behandelt ihn als ausdrücklichen Auftrag, die Pumpe einmal einzuschalten. Es prüft dabei nicht die Bedingungen für automatisches Gießen."
       ],
       "items": [
-        "aktuelle Bodenfeuchtigkeit",
-        "Schwellenwert für automatische Bewässerung",
-        "Abkühlzeit für automatische Bewässerung"
+        "der aktuellen Bodenfeuchte",
+        "dem Grenzwert für automatisches Gießen",
+        "der vorgeschriebenen Pause zwischen automatischen Gießvorgängen"
       ]
     }
   },
   "hardware": {
-    "title": "Hardware-Hinweise",
-    "desc": "Die generierte Firmware geht von gängigen ESP32-kompatiblen Komponenten aus:",
+    "title": "Hardware anschließen",
+    "desc": "Der erzeugte Code ist für folgende Komponenten ausgelegt:",
     "items": [
-      "BH1750- / GY-302-Lichtsensor über I2C",
-      "BME280-Temperatur- und Luftfeuchtigkeitssensor über I2C",
-      "kapazitiver Bodenfeuchtigkeitssensor an einem analogen Pin",
-      "Relais oder Pumpentreiber, verbunden mit einem digitalen Ausgangspin"
+      "Lichtsensor BH1750 / GY-302 über I2C",
+      "Temperatur- und Luftfeuchtigkeitssensor BME280 über I2C",
+      "kapazitiver Bodenfeuchtesensor an einem analogen Eingang",
+      "Relais oder Pumpentreiber an einem digitalen Ausgang"
     ],
-    "verify": "Überprüfen Sie die gesamte Verkabelung, bevor Sie die Pumpe mit Strom versorgen.",
-    "relayNote": "Einige Relaismodule sind aktiv LOW, andere aktiv HIGH. Das generierte Beispiel verwendet:",
-    "relayReverse": "Wenn Ihr Relais umgekehrt arbeitet, müssen Sie möglicherweise die HIGH- und LOW-Werte vertauschen.",
-    "relayCodeLabel": "Beispiel für Pumpenausgang"
+    "verify": "Prüfe alle Anschlüsse, bevor du die Stromversorgung der Pumpe einschaltest.",
+    "relayNote": "Je nach Modul schaltet ein Relais bei LOW oder bei HIGH ein. Im Beispiel wird die Pumpe so gesteuert:",
+    "relayReverse": "Wenn dein Relais umgekehrt schaltet, vertausche HIGH und LOW im Code für die Pumpensteuerung.",
+    "relayCodeLabel": "Pumpe ein- und ausschalten"
   },
   "calibration": {
-    "title": "Kalibrierungshinweise",
+    "title": "Bodenfeuchtesensor kalibrieren",
     "desc": [
-      "Bodenfeuchtigkeitssensoren müssen für zuverlässige Ergebnisse kalibriert werden.",
-      "Der generierte Code verwendet:",
-      "Diese Werte sind nur Beispiele.",
-      "Messen Sie den Sensorwert in trockener Erde oder Luft, messen Sie ihn dann erneut in nasser Erde oder Wasser und aktualisieren Sie diese Konstanten entsprechend."
+      "Kalibriere den Bodenfeuchtesensor, damit seine Werte aussagekräftig sind.",
+      "Zwei Konstanten bestimmen die Umrechnung der Messwerte in Prozent:",
+      "Die Beispielwerte musst du an deinen eigenen Sensor anpassen.",
+      "Lies die Rohwerte in trockenem und in nassem Substrat ab und trage sie in die beiden Konstanten ein. Wenn du in Wasser misst, tauche nur den dafür vorgesehenen Messbereich ein und beachte die Herstellerangaben."
     ],
-    "codeLabel": "Standard-Kalibrierungswerte"
+    "codeLabel": "Beispielwerte für die Kalibrierung"
   },
   "safety": {
-    "title": "Sicherheitshinweise",
+    "title": "Bevor du die Pumpe unbeaufsichtigt lässt",
     "desc": [
-      "Die generierte Firmware ist ein Ausgangspunkt. Bevor Sie eine Pumpe unbeaufsichtigt lassen:",
-      "Flovers speichert Messwerte und Bewässerungsereignisse, aber Geräteverkabelung, Kalibrierung, Pumpenverhalten und physische Installation bleiben in der Verantwortung des Benutzers."
+      "Passe den erzeugten Code an deinen Aufbau an. Bevor die Pumpe unbeaufsichtigt läuft:",
+      "Flovers speichert Messwerte und Gießvorgänge. Für den richtigen Anschluss, die Kalibrierung, den Betrieb und den Einbau der Pumpe bist du selbst verantwortlich."
     ],
     "items": [
-      "die Pumpe manuell testen",
-      "die Relaislogik bestätigen",
-      "überprüfen, dass sich die Pumpe korrekt ausschaltet",
-      "eine sichere Pumpenlaufzeit verwenden",
-      "bestätigen, dass die Bodenfeuchtigkeitswerte realistisch sind",
-      "Elektronik vor Wasser schützen",
-      "geeignete Stromversorgung und Isolierung für die Pumpe verwenden"
+      "teste den manuellen Pumpenstart",
+      "prüfe, bei welchem Ausgangssignal das Relais einschaltet",
+      "stelle sicher, dass die Pumpe nach dem Gießen wieder ausgeht",
+      "wähle eine Laufzeit, die zur Förderleistung der Pumpe und zum Wasserbedarf der Pflanze passt",
+      "prüfe, ob die angezeigte Bodenfeuchte plausibel ist",
+      "schütze die Elektronik vor Wasser",
+      "sorge für eine geeignete Stromversorgung und elektrische Trennung des Pumpenkreises"
     ]
   },
   "wiring": {
-    "title": "Schaltpläne",
-    "desc": "Unten finden Sie ein beispielhaftes Verdrahtungsschema für ein Gerät. Klicken Sie auf das Bild, um es im Vollbildmodus zu öffnen.",
-    "ariaPrimary": "Beispielhaftes Verdrahtungsschema für ein Gerät",
-    "placeholderTitlePrimary": "Beispielhaftes Verdrahtungsschema für ein Gerät",
-    "placeholderSubPrimary": "Klicken Sie auf das Bild, um es im Vollbildmodus anzuzeigen."
-  }
+    "title": "Schaltplan",
+    "desc": "Hier siehst du ein Beispiel für den Anschluss des Geräts. Klicke auf das Bild, um es zu vergrößern.",
+    "ariaPrimary": "Beispielschaltplan vergrößern",
+    "placeholderTitlePrimary": "Beispiel für den Geräteanschluss",
+    "placeholderSubPrimary": "Zum Vergrößern auf den Schaltplan klicken."
+  },
+  "retrySafety": "Setze supports_task_retry nur dann auf true, wenn dein Programm den Auftragsstatus vor dem Einschalten der Pumpe dauerhaft speichert und anschließend auch das Ergebnis festhält. So löst derselbe Auftrag beim erneuten Empfang keinen zweiten Gießvorgang aus. Das erzeugte Beispiel enthält diesen Schutz bereits. Erzeuge den Code neu und spiele ihn auf vorhandene Geräte auf, um ihn dort zu nutzen. An ältere Programme sendet der Server einen bereits zugestellten Auftrag nicht erneut.",
+  "claimSafety": "Vor dem automatischen Gießen muss das Gerät die Freigabe des Servers einholen. Dazu sendet es eine POST-Anfrage an /readings/pump-auto-claim/ mit secret, device_key und dem aktuellen Messwert moisture; device_id ist optional. Die Pumpe darf erst bei run: true starten. Die zurückgegebene task_id wird für die Abschlussmeldung benötigt. Der erzeugte Code übernimmt diese Schritte."
 }

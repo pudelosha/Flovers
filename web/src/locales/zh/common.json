@@ -2,19 +2,21 @@
   "nav": {
     "start": "首页",
     "docs": "文档",
-    "schemas": "模式",
+    "schemas": "设备与 API",
     "faq": "常见问题"
   },
   "footer": {
-    "terms": "条款",
+    "terms": "使用条款",
     "privacy": "隐私政策",
-    "contact": "联系"
+    "contact": "联系我们"
   },
   "a11y": {
     "mainNav": "主导航",
-    "languageSwitch": "语言选择",
+    "languageSwitch": "选择语言",
     "openMenu": "打开菜单",
-    "mobileMenu": "移动菜单"
+    "mobileMenu": "手机版菜单",
+    "closeNotification": "关闭通知",
+    "scanStoreLink": "扫码打开应用商店"
   },
   "language": {
     "pl": "波兰语",

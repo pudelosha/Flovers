@@ -3,73 +3,73 @@
     "title": "Início",
     "sections": [
       {
-        "heading": "Objetivo da vista Início",
+        "heading": "O que aparece no Início",
         "body": [
-          "O Início é o ecrã principal visível após um login bem-sucedido.",
-          "Foca-se nas atividades diárias: apresenta Tarefas geradas com base em Lembretes, permitindo ver rapidamente o que requer atenção hoje ou o que já está em atraso.",
-          "Se não houver tarefas a executar, é apresentado um cartão informativo com uma mensagem sobre a ausência de tarefas planeadas e sugestões de próximos passos, por exemplo, criar lembretes."
+          "O Início é a primeira tela que aparece depois do login.",
+          "Aqui ficam as tarefas criadas pelos lembretes. Você vê o que precisa fazer hoje e o que já está atrasado.",
+          "Quando não há tarefas previstas, um cartão informa isso e sugere como começar, por exemplo, criando um lembrete."
         ]
       },
       {
-        "heading": "Lista de tarefas (cartões gerados a partir de lembretes)",
+        "heading": "Lista de tarefas",
         "body": [
-          "Cada cartão representa uma Tarefa individual gerada com base na definição de um Lembrete (por exemplo, Rega, Pulverização, Fertilização, Transplante ou Manutenção).",
-          "As tarefas aparecem automaticamente quando se tornam necessárias de acordo com as regras de recorrência definidas no Lembrete.",
-          "O cartão normalmente contém o tipo de tarefa, o nome da planta, a localização e o estado do prazo (por exemplo, Para hoje ou Em atraso)."
+          "Cada cartão corresponde a uma tarefa criada por um lembrete: regar, pulverizar, fertilizar, replantar ou realizar outros cuidados.",
+          "As tarefas aparecem automaticamente quando chega a data prevista pelo lembrete.",
+          "O cartão costuma mostrar o tipo de tarefa, o nome da planta, a localização e a situação do prazo, como Para hoje ou Em atraso."
         ]
       },
       {
-        "heading": "Menu do cartão da tarefa (ações para uma tarefa individual)",
+        "heading": "Menu de uma tarefa",
         "body": [
-          "Cada tarefa possui um menu contextual (menu de três pontos) que contém ações relacionadas com a tarefa específica.",
-          "Marcar como concluída: encerra a tarefa e permite adicionar opcionalmente uma nota, o que ajuda a construir o histórico de cuidados.",
-          "Editar lembrete: abre o Lembrete associado à tarefa para alterar as definições de recorrência.",
-          "Ir para a planta: leva à vista Detalhes da planta associada à tarefa.",
-          "Mostrar histórico: abre o histórico de tarefas que mostra tarefas anteriormente concluídas para a mesma planta ou lembrete."
+          "Abra os três pontos do cartão para ver as ações daquela tarefa.",
+          "Marcar como concluída: conclui a tarefa e permite adicionar uma anotação ao histórico de cuidados.",
+          "Editar lembrete: abre o lembrete da tarefa para você mudar a frequência.",
+          "Ir para a planta: abre os Detalhes da planta correspondente.",
+          "Mostrar histórico: mostra as tarefas já concluídas para a mesma planta ou o mesmo lembrete."
         ]
       },
       {
-        "heading": "Botão FAB (ações rápidas)",
+        "heading": "Botão de ações rápidas",
         "body": [
-          "No ecrã Início está disponível um botão FAB, que expande um conjunto de ações rápidas para trabalhar com tarefas.",
-          "Mostrar em atraso: aplica um filtro rápido que apresenta apenas tarefas em atraso.",
-          "Mostrar para hoje: aplica um filtro rápido que apresenta tarefas planeadas para hoje.",
-          "Ordenar: altera a ordem de apresentação das tarefas na lista.",
-          "Filtrar: restringe a lista de tarefas de acordo com critérios selecionados.",
-          "Histórico: leva à vista Histórico de tarefas, que é documentada separadamente."
+          "O botão flutuante de ações rápidas abre as opções para gerenciar a lista.",
+          "Mostrar em atraso: mostra apenas as tarefas atrasadas.",
+          "Mostrar para hoje: mostra as tarefas previstas para hoje.",
+          "Ordenar: muda a ordem das tarefas na lista.",
+          "Filtrar: mostra apenas as tarefas que atendem aos critérios escolhidos.",
+          "Histórico: abre o Histórico de tarefas, explicado em uma página própria."
         ]
       },
       {
-        "heading": "Opções de ordenação",
+        "heading": "Como ordenar",
         "body": [
-          "A ordenação permite adaptar a lista de tarefas à sua forma de trabalhar.",
-          "As opções de ordenação disponíveis são: Data de execução (prazo), Nome da planta e Localização."
+          "Escolha a ordem que for mais útil para você.",
+          "As opções são Data de execução (prazo), Nome da planta e Localização."
         ]
       },
       {
-        "heading": "Opções de filtragem",
+        "heading": "Como filtrar",
         "body": [
-          "Os filtros ajudam a focar-se num grupo específico de tarefas.",
-          "As tarefas podem ser filtradas por: Nome da planta, Localização, Tipo de tarefa e Intervalo de datas de execução.",
-          "Os filtros podem ser combinados, por exemplo, para apresentar apenas tarefas de Rega para plantas numa localização selecionada."
+          "Use os filtros para ver só as tarefas que interessam.",
+          "Você pode filtrar por Nome da planta, Localização, Tipo de tarefa e Intervalo de datas de execução.",
+          "Combine os filtros para ver, por exemplo, apenas as regas das plantas de um determinado local."
         ]
       },
       {
-        "heading": "Encerramento em massa de tarefas (bulk)",
+        "heading": "Conclua várias tarefas de uma vez",
         "body": [
-          "O encerramento em massa de tarefas está disponível ao utilizar as vistas de atalho: Mostrar em atraso ou Mostrar para hoje.",
-          "Quando um destes filtros está ativo, o botão FAB apresenta temporariamente uma ação adicional, como “Marcar visíveis como concluídas”.",
-          "Esta ação encerra todas as tarefas atualmente visíveis de uma só vez, sem necessidade de selecionar manualmente cartões individuais.",
-          "O encerramento em massa foi concebido para situações em que executa a mesma ação de cuidado para várias plantas ao mesmo tempo.",
-          "Dependendo do fluxo selecionado, pode ainda ser possível adicionar notas às tarefas encerradas após executar a ação em massa."
+          "Essa opção fica disponível ao usar Mostrar em atraso ou Mostrar para hoje.",
+          "Com um desses filtros ativo, o botão de ações rápidas oferece uma opção extra, como “Marcar visíveis como concluídas”.",
+          "Ela conclui todas as tarefas visíveis de uma vez, sem precisar selecionar cada cartão.",
+          "É útil quando você realiza o mesmo cuidado em várias plantas na mesma ocasião.",
+          "Dependendo das etapas escolhidas, você ainda poderá adicionar anotações depois de concluir as tarefas em conjunto."
         ]
       },
       {
-        "heading": "Navegação a partir do ecrã Início",
+        "heading": "Abra outras telas",
         "body": [
-          "O ecrã Início permite uma navegação rápida para outras partes da aplicação através de ações nos cartões e dos atalhos do FAB.",
-          "A partir de uma tarefa individual, pode ir diretamente para os Detalhes da planta ou para o histórico de tarefas.",
-          "A partir do FAB, pode abrir o Histórico de tarefas ou restringir a lista de tarefas utilizando ordenação e filtros."
+          "Os menus das tarefas e o botão de ações rápidas levam a outras partes do aplicativo.",
+          "Pelo menu de uma tarefa, você pode abrir os Detalhes da planta ou o histórico.",
+          "Pelo botão de ações rápidas, você pode abrir o Histórico de tarefas ou ordenar e filtrar a lista."
         ]
       }
     ]

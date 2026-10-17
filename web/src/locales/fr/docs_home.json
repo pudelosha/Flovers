@@ -3,73 +3,73 @@
     "title": "Accueil",
     "sections": [
       {
-        "heading": "Objectif de la vue Accueil",
+        "heading": "Tes soins du jour en un coup d’œil",
         "body": [
-          "Accueil est l'écran principal visible après une connexion réussie.",
-          "Il se concentre sur les actions quotidiennes : il affiche les Tâches générées à partir des Rappels, permettant ainsi de voir rapidement ce qui nécessite une attention aujourd'hui ou ce qui est déjà en retard.",
-          "S'il n'y a aucune tâche à effectuer, un carreau informatif est affiché avec un message indiquant l'absence de tâches planifiées et des suggestions d'étapes suivantes, par exemple la création de rappels."
+          "L’accueil est le premier écran affiché après ta connexion.",
+          "Il présente les tâches issues de tes rappels pour voir rapidement ce qui est prévu aujourd’hui et ce qui est déjà en retard.",
+          "Si aucune tâche n’est à faire, une carte l’indique et te propose des pistes pour commencer, comme créer des rappels."
         ]
       },
       {
-        "heading": "Liste des tâches (carreaux générés à partir des rappels)",
+        "heading": "Ce que montrent les cartes de tâches",
         "body": [
-          "Chaque carreau représente une tâche individuelle générée à partir de la définition d'un Rappel (par exemple, Arrosage, Pulvérisation, Fertilisation, Rempotage ou Entretien).",
-          "Les tâches apparaissent automatiquement lorsqu'elles deviennent nécessaires selon les règles de périodicité définies dans le Rappel.",
-          "Le carreau contient généralement le type de tâche, le nom de la plante, la localisation et le statut de la date limite (par exemple, Pour aujourd'hui ou En retard)."
+          "Chaque carte correspond à une tâche créée à partir d’un rappel : arrosage, brumisation, fertilisation, rempotage ou entretien général.",
+          "Les tâches apparaissent automatiquement selon le rythme défini dans le rappel.",
+          "La carte indique généralement le type de soin, le nom de la plante, son emplacement et l’échéance, par exemple aujourd’hui ou en retard."
         ]
       },
       {
-        "heading": "Menu du carreau de tâche (actions pour une tâche individuelle)",
+        "heading": "Les actions du menu à trois points",
         "body": [
-          "Chaque tâche possède un menu contextuel (menu avec trois points) contenant des actions liées à cette tâche spécifique.",
-          "Marquer comme terminé : ferme la tâche et permet éventuellement d'ajouter une note, ce qui aide à construire l'historique des soins.",
-          "Modifier le rappel : ouvre le Rappel lié à la tâche pour modifier les paramètres de périodicité.",
-          "Aller à la plante : vous mène à la vue Détails de la plante assignée à la tâche.",
-          "Afficher l'historique : ouvre l'historique des tâches montrant les tâches précédemment effectuées pour la même plante ou le même rappel."
+          "Chaque carte possède un menu à trois points pour agir sur la tâche correspondante.",
+          "« Marquer comme terminé » : termine la tâche et te permet d’ajouter une note pour enrichir le suivi des soins.",
+          "« Modifier le rappel » : ouvre le rappel associé pour en changer la fréquence.",
+          "« Aller à la plante » : ouvre directement les détails de la plante concernée.",
+          "« Afficher l’historique » : affiche les tâches déjà terminées pour cette plante ou ce rappel."
         ]
       },
       {
-        "heading": "Bouton FAB (actions rapides)",
+        "heading": "Les actions rapides",
         "body": [
-          "L'écran Accueil dispose d'un bouton FAB qui déploie un ensemble d'actions rapides pour travailler avec les tâches.",
-          "Afficher les en retard : applique un filtre rapide affichant uniquement les tâches en retard.",
-          "Afficher pour aujourd'hui : applique un filtre rapide affichant les tâches planifiées pour aujourd'hui.",
-          "Trier : change l'ordre d'affichage des tâches dans la liste.",
-          "Filtrer : affine la liste des tâches selon les critères choisis.",
-          "Historique : vous mène à la vue Historique des tâches, qui est documentée séparément."
+          "Le bouton d’actions rapides de l’accueil ouvre un menu pour gérer tes tâches.",
+          "« Afficher les en retard » : affiche uniquement les tâches en retard.",
+          "« Afficher ceux d’aujourd’hui » : affiche uniquement les tâches prévues aujourd’hui.",
+          "« Trier » : change l’ordre des tâches.",
+          "« Filtrer » : limite la liste selon les critères choisis.",
+          "« Historique » : ouvre l’historique des tâches, présenté dans une autre page de la documentation."
         ]
       },
       {
-        "heading": "Options de tri",
+        "heading": "Trier les tâches",
         "body": [
-          "Le tri permet d'adapter la liste des tâches à votre manière de travailler.",
-          "Les options de tri disponibles sont : Date d'exécution (date limite), Nom de la plante et Localisation."
+          "Le tri te permet de parcourir les tâches dans l’ordre qui te convient.",
+          "Tu peux trier par échéance, nom de plante ou emplacement."
         ]
       },
       {
-        "heading": "Options de filtrage",
+        "heading": "Filtrer les tâches",
         "body": [
-          "Les filtres aident à se concentrer sur un groupe spécifique de tâches.",
-          "Les tâches peuvent être filtrées par : Nom de la plante, Localisation, Type de tâche et Plage de dates d'exécution.",
-          "Les filtres peuvent être combinés, par exemple pour afficher uniquement les tâches d'Arrosage pour des plantes dans une localisation donnée."
+          "Les filtres t’aident à te concentrer sur certaines tâches.",
+          "Tu peux filtrer par plante, emplacement, type de soin et période d’échéance.",
+          "Les filtres se combinent, par exemple pour voir uniquement les arrosages des plantes d’un emplacement précis."
         ]
       },
       {
-        "heading": "Fermeture groupée des tâches (en masse)",
+        "heading": "Terminer plusieurs tâches à la fois",
         "body": [
-          "La fermeture groupée des tâches est disponible lors de l'utilisation des vues de raccourci : Afficher les en retard ou Afficher pour aujourd'hui.",
-          "Lorsque l'un de ces filtres est actif, le bouton FAB affiche temporairement une action supplémentaire, telle que « Marquer les visibles comme terminées ».",
-          "Cette action ferme toutes les tâches actuellement visibles en une seule fois, sans avoir besoin de marquer manuellement chaque carreau.",
-          "La fermeture groupée a été conçue pour les situations où vous effectuez la même tâche de soins pour plusieurs plantes en même temps.",
-          "En fonction du flux choisi, il peut être possible d'ajouter des notes aux tâches fermées après l'exécution de l'action groupée."
+          "Cette possibilité est disponible avec les vues « Afficher les en retard » et « Afficher ceux d’aujourd’hui ».",
+          "Lorsqu’un de ces filtres est actif, le menu d’actions rapides propose une action supplémentaire, comme « Marquer les visibles comme terminées ».",
+          "Elle termine toutes les tâches actuellement affichées, sans devoir les sélectionner une par une.",
+          "C’est pratique lorsque tu effectues le même soin sur plusieurs plantes à la suite.",
+          "Selon le parcours choisi, tu peux encore ajouter des notes aux tâches après les avoir terminées ensemble."
         ]
       },
       {
-        "heading": "Navigation depuis l'écran Accueil",
+        "heading": "Accéder aux autres écrans",
         "body": [
-          "L'écran Accueil permet de passer rapidement à d'autres parties de l'application via des actions sur les carreaux et des raccourcis FAB.",
-          "Depuis une tâche individuelle, vous pouvez passer directement aux Détails de la plante ou à l'historique des tâches.",
-          "Depuis FAB, vous pouvez ouvrir l'Historique des tâches ou affiner la liste des tâches en utilisant le tri et les filtres."
+          "Les menus des tâches et les actions rapides donnent accès aux autres parties de l’application.",
+          "Depuis une tâche, tu peux ouvrir les détails de sa plante ou l’historique des tâches.",
+          "Le menu d’actions rapides permet d’ouvrir l’historique et d’affiner la liste avec le tri et les filtres."
         ]
       }
     ]

@@ -3,68 +3,68 @@
     "title": "Erinnerungen",
     "sections": [
       {
-        "heading": "Zweck dieser Ansicht",
+        "heading": "Wofür Erinnerungen da sind",
         "body": [
-          "Die Erinnerungsansicht dient der Verwaltung von zyklischen Pflegeplänen für Pflanzen.",
-          "Eine Erinnerung legt fest, was erledigt werden muss (Aufgabentyp), wie oft sie wiederholt wird (Intervall) und welcher Pflanze sie zugeordnet ist. Basierend darauf generiert Flovers automatisch Aufgaben im Zeitverlauf."
+          "Unter Erinnerungen planst du die regelmäßige Pflege deiner Pflanzen.",
+          "Du wählst eine Pflanze, eine Aufgabe und einen Abstand, zum Beispiel Gießen alle 7 Tage. Flovers erstellt daraus automatisch die nächsten Aufgaben."
         ]
       },
       {
-        "heading": "Zwei Ansichten: Erinnerungsübersicht und Kalender",
+        "heading": "Liste und Kalender",
         "body": [
-          "Dieser Bildschirm hat zwei Modi: die Erinnerungsübersicht und die Kalenderansicht.",
-          "Du kannst zwischen ihnen wechseln, indem du den Bildschirm nach links/rechts schiebst oder die Ansicht im FAB-Menü änderst.",
-          "Beide Ansichten zeigen die gleichen Daten an, jedoch auf unterschiedliche Weise – je nachdem, ob du schnell die Regeln durchsehen oder den Plan im Zeitverlauf ansehen möchtest."
+          "Du kannst deine Erinnerungen als Liste oder im Kalender ansehen.",
+          "Wische nach links oder rechts, um die Ansicht zu wechseln, oder nutze die entsprechende Option im Menü der Schaltfläche für Schnellaktionen.",
+          "Beide Ansichten zeigen dieselben Erinnerungen. In der Liste prüfst du schnell die Einstellungen, im Kalender siehst du die anstehenden Termine."
         ]
       },
       {
-        "heading": "Erinnerungsliste Ansicht",
+        "heading": "Erinnerungsliste",
         "body": [
-          "In der Listenansicht stellt jede Kachel eine vom Benutzer erstellte Erinnerung dar.",
-          "Die Kachel zeigt den Aufgabentyp (Symbol und Name), den Pflanzennamen, den Standort (falls zugewiesen), die Häufigkeit und den nächsten Fälligkeitstermin an.",
-          "Dies ist der schnellste Weg, um alle aktiven zyklischen Regeln auf dem Konto zu überprüfen."
+          "Jede Kachel in der Liste steht für eine Erinnerung, die du erstellt hast.",
+          "Sie zeigt Symbol und Namen der Aufgabe, den Pflanzennamen, den Standort (falls zugewiesen), den Wiederholungsabstand und den nächsten Termin.",
+          "So verschaffst du dir schnell einen Überblick über die aktiven Erinnerungen in deinem Konto."
         ]
       },
       {
-        "heading": "Aktionen auf der Erinnerungskachel (Bearbeiten / Pausieren / Fortsetzen / L\u00f6schen)",
+        "heading": "Erinnerungen bearbeiten, pausieren und löschen",
         "body": [
-          "Jede Erinnerung hat zwei Aktionen: Bearbeiten und Löschen.",
-          "Das Bearbeiten ermöglicht das Ändern von Erinnerungsparametern wie Intervall, Aufgabentyp, zugeordneter Pflanze und anderen Einstellungen (je nach Erinnerungstyp).",
-          "Das Löschen einer Erinnerung ist dauerhaft und verhindert, dass zukünftige Aufgaben basierend auf dieser Regel erstellt werden.",
-        "Pausieren deaktiviert eine Erinnerung vor\u00fcbergehend, ohne sie zu l\u00f6schen. W\u00e4hrend sie pausiert ist, wird ihre f\u00e4llige Aufgabe von Home entfernt und nicht in t\u00e4glichen E-Mail- oder Push-Benachrichtigungen ber\u00fccksichtigt. Beim Fortsetzen plant Flovers die n\u00e4chste ausstehende Aufgabe gem\u00e4\u00df dem Erinnerungsintervall."
+          "Bei jeder Erinnerung kannst du die Einstellungen bearbeiten, sie pausieren oder fortsetzen und sie löschen.",
+          "Mit Bearbeiten änderst du den Wiederholungsabstand, die Aufgabe, die zugeordnete Pflanze und weitere verfügbare Einstellungen.",
+          "Eine gelöschte Erinnerung lässt sich nicht wiederherstellen. Flovers erstellt daraus keine weiteren Aufgaben.",
+          "Mit Pausieren setzt du eine Erinnerung vorübergehend aus. Ihre fällige Aufgabe verschwindet von der Startseite und wird in den täglichen E-Mails und Push-Benachrichtigungen nicht berücksichtigt. Mit Fortsetzen plant Flovers die nächste offene Aufgabe entsprechend dem Wiederholungsabstand der Erinnerung."
         ]
       },
       {
-        "heading": "Kalenderansicht",
+        "heading": "Kalender",
         "body": [
-          "In der Kalenderansicht werden Erinnerungen als geplante Elemente an bestimmten Tagen angezeigt.",
-          "Um Details zu sehen, klicke auf einen Tag im Kalender – die geplanten Positionen für diesen Tag erscheinen unter dem Kalender.",
-          "Der Kalender verwendet Farbetiketten/Icons, um die Aufgabentypen für den jeweiligen Tag anzuzeigen und die Beurteilung der Aufgabenverteilung zu erleichtern."
+          "Im Kalender siehst du die Aufgaben aus deinen Erinnerungen an den jeweiligen Tagen.",
+          "Tippe auf einen Tag, um die dafür geplanten Aufgaben unter dem Kalender anzuzeigen.",
+          "Markierungen an den Tagen zeigen die Aufgabenarten. So erkennst du auf einen Blick, wie sich die Pflege verteilt."
         ]
       },
       {
-        "heading": "FAB-Menü",
+        "heading": "Schnellaktionen",
         "body": [
-          "Die FAB-Schaltfläche bietet schnelle Aktionen im Zusammenhang mit Erinnerungen und dem Wechsel der Ansicht.",
-          "Verfügbare Optionen sind: Erinnerung hinzufügen, Ansichtswechsel (Liste/Kalender), Sortieren und Filtern.",
-          "Das Sortieren kann nach Fälligkeitsdatum, Pflanzenname oder Standort erfolgen.",
-          "Das Filtern kann folgende Kriterien umfassen: Pflanzenname, Standort, Aufgabentyp und Datumsbereich (Fälligkeitsdatum)."
+          "Die Schaltfläche für Schnellaktionen öffnet ein Menü, in dem du Erinnerungen verwaltest und die Ansicht wechselst.",
+          "Dort findest du Erinnerung hinzufügen, den Wechsel zwischen Liste und Kalender, Sortieren und Filtern.",
+          "Du kannst nach Fälligkeitsdatum, Pflanzenname oder Standort sortieren.",
+          "Mit den Filtern wählst du Pflanzenname, Standort, Aufgabentyp und einen Zeitraum für die Fälligkeit."
         ]
       },
       {
-        "heading": "Wie Erinnerungen Aufgaben generieren (allgemeine Logik)",
+        "heading": "Wie aus Erinnerungen Aufgaben werden",
         "body": [
-          "Eine Erinnerung ist eine zyklische Regel (z. B. Gießen alle 7 Tage).",
-          "Basierend auf den Erinnerungen generiert Flovers Aufgaben und zeigt sie auf dem Home-Bildschirm als auszuführende Elemente an.",
-          "Nach Abschluss einer Aufgabe wird die nächste gemäß dem Erinnerungsintervall geplant (damit wird die Routine automatisch fortgesetzt)."
+          "Eine Erinnerung legt fest, was du in welchem Abstand tun möchtest, zum Beispiel deine Pflanze alle 7 Tage gießen.",
+          "Flovers erstellt daraus Aufgaben, die du auf der Startseite findest.",
+          "Wenn du eine Aufgabe als erledigt markierst, plant die App die nächste entsprechend dem eingestellten Abstand."
         ]
       },
       {
-        "heading": "Hinweise und praktische Tipps",
+        "heading": "Praktische Tipps",
         "body": [
-          "Erinnerungen helfen, die Regelmäßigkeit aufrechtzuerhalten, garantieren jedoch nicht die Gesundheit der Pflanzen – tatsächliche Bedingungen können Anpassungen der Intervalle erfordern.",
-          "Wenn sich die Bedingungen ändern (Jahreszeit, Licht, Substrat, Topfgröße), erwäge eine Aktualisierung der Erinnerungen.",
-          "Wenn du abgeschlossene Aufgaben und Notizen verwalten möchtest, verwende die Ansicht „Aufgabenverlauf“ (die separat beschrieben wird)."
+          "Erinnerungen helfen dir, regelmäßig an die Pflege zu denken. Beobachte deine Pflanzen trotzdem und passe die Abstände an ihre Bedürfnisse an.",
+          "Wenn sich Jahreszeit, Licht, Substrat oder Topfgröße ändern, prüfe, ob deine Erinnerungen noch zu den Bedingungen passen.",
+          "Erledigte Aufgaben und ihre Notizen findest du im Pflegeverlauf, der in einem eigenen Teil der Dokumentation beschrieben ist."
         ]
       }
     ]

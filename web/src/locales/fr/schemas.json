@@ -1,129 +1,130 @@
 {
   "common": {
     "copy": "Copier",
-    "copied": "Copié"
+    "copied": "Copié",
+    "closePreview": "Fermer l’aperçu du schéma"
   },
-  "title": "API de l’appareil et câblage",
+  "title": "Capteurs, arrosage et API",
   "lead": [
-    "Cette page explique comment les appareils IoT s’intègrent à Flovers.",
-    "Les appareils peuvent envoyer des relevés environnementaux au backend, vérifier si une tâche d’arrosage manuel a été planifiée depuis l’application mobile, et signaler à Flovers les cycles de pompe terminés.",
-    "Le firmware Arduino/ESP généré peut prendre en charge à la fois les relevés et le contrôle de l’arrosage dans un seul sketch. Si l’appareil lié a été configuré avec une pompe à eau, le code généré inclut les endpoints de pompe et la logique de contrôle de la pompe. Si l’appareil a été configuré sans pompe, le firmware généré peut être simplifié pour envoyer uniquement des relevés."
+    "Cette page explique comment connecter tes capteurs et ta pompe à Flovers et utiliser l’API.",
+    "Ton appareil peut envoyer ses relevés, récupérer les demandes d’arrosage faites dans l’application et signaler la fin d’un arrosage.",
+    "Le programme Arduino ou ESP généré correspond aux réglages de ton appareil. Avec une pompe, il gère aussi l’arrosage. Sans pompe, il peut se limiter à l’envoi des mesures."
   ],
   "firmwareIntro": {
-    "title": "Ce que fait le firmware généré",
-    "lead": "Le firmware généré peut :",
+    "title": "Ce que fait le programme sur ta carte",
+    "lead": "Le programme généré :",
     "items": [
-      "se connecter au Wi-Fi",
-      "synchroniser l’heure avec NTP",
-      "lire les capteurs activés",
-      "envoyer les relevés à Flovers",
-      "vérifier les tâches d’arrosage manuel planifiées",
-      "faire fonctionner la pompe lorsqu’une tâche d’arrosage manuel est en attente",
-      "vérifier les paramètres d’arrosage automatique contrôlés par le backend",
-      "lancer l’arrosage automatique lorsque l’humidité du sol est inférieure au seuil configuré",
-      "signaler la fin de l’arrosage au backend"
+      "se connecte au Wi-Fi",
+      "met l’horloge à l’heure avec un serveur NTP",
+      "lit les capteurs activés",
+      "envoie les relevés à Flovers",
+      "recherche les demandes d’arrosage manuel",
+      "démarre la pompe si une demande est en attente",
+      "récupère les réglages d’arrosage automatique auprès du serveur",
+      "arrose automatiquement si l’humidité du sol passe sous le seuil et si le serveur autorise le démarrage",
+      "signale la fin de l’arrosage"
     ],
-    "defaultTiming": "Par défaut, les relevés sont envoyés une fois par heure. Les tâches d’arrosage manuel sont vérifiées plus fréquemment, par exemple une fois par minute, afin qu’une demande d’arrosage créée depuis l’application mobile puisse être prise en compte sans attendre le prochain cycle de relevé horaire.",
-    "adjustmentNote": "Certaines valeurs doivent être ajustées selon votre matériel et vos préférences, notamment les identifiants Wi-Fi, les numéros de broches, l’étalonnage de l’humidité du sol, la durée de fonctionnement de la pompe, l’intervalle de relevé, l’intervalle d’interrogation des tâches manuelles et le délai de récupération de l’arrosage automatique."
+    "defaultTiming": "Par défaut, le programme envoie les relevés une fois par heure et recherche les demandes manuelles une fois par minute. Une demande faite dans l’application peut ainsi être exécutée sans attendre le prochain relevé.",
+    "adjustmentNote": "Avant d’installer le programme, renseigne ton Wi-Fi et vérifie les broches, l’étalonnage du capteur de sol et la durée de fonctionnement de la pompe. Tu peux aussi régler les intervalles de mesure, de recherche des demandes et la pause entre les arrosages automatiques."
   },
   "endpoints": {
-    "title": "Endpoints API",
+    "title": "Adresses de l’API",
     "ingest": {
-      "title": "Ingestion des relevés",
-      "direction": "Appareil → backend",
+      "title": "Envoyer les relevés",
+      "direction": "Appareil → serveur",
       "desc": [
-        "Les appareils utilisent cet endpoint pour envoyer les relevés des capteurs.",
-        "Le backend authentifie la requête à l’aide de :",
-        "Le backend stocke les relevés sous l’appareil correspondant. Les relevés peuvent inclure la température, l’humidité, la lumière, l’humidité du sol ou tout sous-ensemble de métriques activées."
+        "Ton appareil envoie les mesures de ses capteurs à cette adresse.",
+        "Le serveur vérifie les identifiants suivants :",
+        "Les données sont rattachées au bon appareil. Tu peux envoyer la température, l’humidité de l’air, la lumière et l’humidité du sol, ou seulement une partie de ces mesures."
       ],
       "authItems": [
         "secret",
         "device_key",
-        "éventuellement device_id"
+        "device_id — facultatif"
       ]
     },
     "pumpNextTask": {
-      "title": "Vérifier la prochaine tâche de pompe",
-      "direction": "Appareil → backend",
+      "title": "Récupérer les demandes d’arrosage",
+      "direction": "Appareil → serveur",
       "desc": [
-        "Les appareils prenant en charge une pompe utilisent cet endpoint pour vérifier si une tâche d’arrosage manuel est en attente.",
-        "La réponse inclut également la configuration actuelle de la pompe automatique contrôlée par le backend, par exemple si l’arrosage automatique est activé et quel seuil d’humidité du sol doit être utilisé."
+        "Un appareil équipé d’une pompe utilise cette adresse pour chercher une demande manuelle en attente.",
+        "La réponse contient aussi les réglages actuels d’arrosage automatique, dont son activation et le seuil d’humidité du sol."
       ]
     },
     "pumpComplete": {
-      "title": "Signaler la fin de la pompe",
-      "direction": "Appareil → backend",
+      "title": "Signaler la fin de l’arrosage",
+      "direction": "Appareil → serveur",
       "desc": [
-        "Les appareils utilisent cet endpoint après le fonctionnement de la pompe.",
-        "Cela peut signaler soit :"
+        "Après le fonctionnement de la pompe, l’appareil transmet le résultat.",
+        "Le compte rendu peut concerner :"
       ],
       "items": [
-        "une tâche d’arrosage manuel planifiée, en utilisant task_id",
-        "ou un événement d’arrosage automatique, en utilisant source: \"automatic\""
+        "une demande manuelle, avec l’identifiant task_id reçu pour cet ordre",
+        "un arrosage automatique, avec source: \"automatic\" et l’identifiant task_id obtenu avant le démarrage de la pompe"
       ]
     },
     "feed": {
-      "title": "Lire le dernier flux",
-      "direction": "Appareil → backend",
+      "title": "Lire les dernières mesures",
+      "direction": "Appareil → serveur",
       "desc": [
-        "Cet endpoint renvoie les dernières données de relevé pour un appareil. Il reste utile pour les intégrations simples ou les diagnostics, mais le firmware généré avec prise en charge de la pompe utilise pump-next-task et pump-complete pour le contrôle de l’arrosage."
+        "Cette adresse renvoie le dernier relevé d’un appareil, pour le diagnostic ou des intégrations simples. La commande de la pompe utilise les adresses distinctes pump-next-task, pump-auto-claim et pump-complete."
       ]
     }
   },
   "ingest": {
-    "title": "Documentation POST ingest",
-    "desc": "Envoyez un échantillon de relevé au format JSON. Le backend authentifie l’appareil et stocke les métriques fournies.",
-    "payloadShape": "Structure de la charge utile",
-    "examplePayload": "Exemple de charge utile",
+    "title": "Envoyer des relevés : POST ingest",
+    "desc": "Envoie une mesure au format JSON. Le serveur vérifie les identifiants de l’appareil et enregistre les valeurs fournies.",
+    "payloadShape": "Champs de la requête",
+    "examplePayload": "Exemple de données",
     "powershellExample": "Exemple PowerShell"
   },
   "pumpNextTask": {
-    "title": "Documentation POST pump-next-task",
+    "title": "Récupérer les demandes : POST pump-next-task",
     "desc": [
-      "Cet endpoint est utilisé par les appareils prenant en charge une pompe.",
-      "L’appareil demande au backend s’il existe une tâche d’arrosage manuel planifiée. Le backend renvoie :"
+      "Cette adresse est destinée aux appareils équipés d’une pompe.",
+      "L’appareil demande si un arrosage manuel a été programmé. La réponse indique :"
     ],
     "items": [
-      "si la pompe doit fonctionner maintenant",
-      "l’ID de la tâche s’il existe une tâche d’arrosage manuel",
-      "les paramètres actuels de la pompe automatique",
-      "si le backend considère que la pompe et le capteur d’humidité sont activés"
+      "si la pompe doit démarrer maintenant",
+      "l’identifiant de la demande manuelle, si une demande est en attente",
+      "les réglages actuels d’arrosage automatique",
+      "si la pompe et le capteur de sol sont activés dans la configuration"
     ],
-    "payloadShape": "Structure de la charge utile",
-    "examplePayload": "Exemple de charge utile",
-    "responseNoTask": "Exemple de réponse sans tâche d’arrosage manuel",
-    "responseWithTask": "Exemple de réponse avec une tâche d’arrosage manuel",
+    "payloadShape": "Champs de la requête",
+    "examplePayload": "Exemple de données",
+    "responseNoTask": "Réponse sans demande en attente",
+    "responseWithTask": "Réponse avec une demande d’arrosage",
     "powershellExample": "Exemple PowerShell"
   },
   "pumpComplete": {
-    "title": "Documentation POST pump-complete",
+    "title": "Envoyer le résultat : POST pump-complete",
     "desc": [
-      "Après le fonctionnement de la pompe, l’appareil signale la fin de l’opération.",
-      "Pour l’arrosage manuel, incluez le task_id renvoyé par pump-next-task.",
-      "Pour l’arrosage automatique, omettez task_id et utilisez source: \"automatic\"."
+      "Quand la pompe a terminé, l’appareil indique au serveur si l’arrosage a réussi.",
+      "Pour un arrosage manuel, indique l’identifiant task_id reçu de pump-next-task.",
+      "Pour un arrosage automatique, indique l’identifiant task_id reçu de pump-auto-claim et source: \"automatic\"."
     ],
-    "manualPayload": "Charge utile de fin d’arrosage manuel",
-    "automaticPayload": "Charge utile de fin d’arrosage automatique",
-    "failedPayload": "Charge utile d’échec du cycle de pompe",
+    "manualPayload": "Compte rendu d’arrosage manuel",
+    "automaticPayload": "Compte rendu d’arrosage automatique",
+    "failedPayload": "Compte rendu d’un échec d’arrosage",
     "powershellExample": "Exemple PowerShell"
   },
   "feed": {
-    "title": "Documentation GET feed",
+    "title": "Lire les relevés : GET feed",
     "desc": [
-      "L’endpoint de flux renvoie le dernier relevé pour un appareil.",
-      "Il peut être utilisé pour les diagnostics ou les intégrations simples qui ont uniquement besoin de lire les dernières valeurs stockées."
+      "L’adresse feed renvoie le dernier relevé enregistré pour l’appareil.",
+      "Tu peux l’utiliser pour le diagnostic ou une intégration qui demande uniquement les valeurs actuelles."
     ],
     "exampleRequest": "Exemple de requête",
     "exampleResponse": "Exemple de réponse"
   },
   "generatedFirmware": {
-    "title": "Firmware Arduino / ESP32 généré",
+    "title": "Le code pour ta carte Arduino ou ESP32",
     "desc": [
-      "L’application peut générer un firmware pour l’appareil sélectionné.",
-      "Le firmware généré inclut les bons endpoints API, le secret d’authentification, la clé de l’appareil, l’ID de l’appareil, les capteurs activés et les paramètres de pompe pour cet appareil.",
-      "Si l’appareil est configuré avec une pompe à eau, le code généré inclut à la fois les relevés et le contrôle de la pompe à eau. Il vérifie les tâches d’arrosage manuel séparément du cycle de relevé horaire, et l’arrosage automatique utilise le seuil et le bouton d’activation contrôlés par le backend."
+      "L’application peut générer le programme de l’appareil sélectionné.",
+      "Il contient les adresses de l’API, les identifiants (secret et device_key), l’identifiant de l’appareil et les réglages de ses capteurs et de sa pompe.",
+      "Si une pompe est configurée, le programme gère les mesures et l’arrosage. Il recherche les demandes manuelles séparément de l’envoi des relevés. Pour l’arrosage automatique, il récupère les réglages de l’application et demande l’accord du serveur avant de démarrer."
     ],
-    "adjustIntro": "Avant de téléverser le sketch, ajustez les valeurs suivantes selon votre matériel :",
+    "adjustIntro": "Avant d’installer le code, vérifie ces valeurs et adapte-les à ton matériel :",
     "adjustItems": [
       "SSID et mot de passe Wi-Fi",
       "SDA_PIN et SCL_PIN",
@@ -135,109 +136,111 @@
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
       "AUTO_PUMP_MIN_INTERVAL_MS"
     ],
-    "codeLabel": "Firmware Arduino généré : relevés + contrôle de la pompe à eau"
+    "codeLabel": "Exemple de programme : capteurs et commande de pompe"
   },
   "behavior": {
-    "title": "Résumé du comportement du firmware",
+    "title": "Les étapes de mesure et d’arrosage",
     "fullCycle": {
-      "title": "Cycle horaire complet",
-      "desc": "Toutes les SEND_INTERVAL_MS, la carte exécute un cycle complet :",
+      "title": "Le cycle de mesure",
+      "desc": "À chaque intervalle SEND_INTERVAL_MS, la carte :",
       "items": [
         "lit les capteurs",
-        "envoie les relevés à l’endpoint ingest",
-        "vérifie les arrosages manuels planifiés",
-        "lance l’arrosage manuel si une tâche est en attente",
+        "envoie les relevés à ingest",
+        "recherche une demande d’arrosage manuel",
+        "l’exécute si une demande est en attente",
         "sinon, vérifie les conditions d’arrosage automatique",
-        "lance l’arrosage automatique si les paramètres du backend l’autorisent et si l’humidité du sol est inférieure au seuil"
+        "arrose automatiquement si l’humidité du sol est sous le seuil, si les réglages l’autorisent et si le serveur donne son accord"
       ]
     },
     "manualCheck": {
-      "title": "Vérification de l’arrosage manuel",
+      "title": "La recherche des demandes manuelles",
       "desc": [
-        "Toutes les MANUAL_PUMP_CHECK_INTERVAL_MS, la carte vérifie uniquement les tâches d’arrosage manuel planifiées.",
-        "Cette vérification plus courte :",
-        "Cela permet à l’action « Planifier l’arrosage » de l’application d’être prise en compte rapidement, sans forcer l’envoi des relevés des capteurs chaque minute."
+        "À chaque intervalle MANUAL_PUMP_CHECK_INTERVAL_MS, la carte recherche uniquement les demandes manuelles.",
+        "Cette vérification intermédiaire :",
+        "La demande faite dans l’application peut ainsi être exécutée rapidement sans envoyer tous les relevés chaque minute."
       ],
       "items": [
         "n’envoie pas de relevés",
-        "ne lance pas l’arrosage automatique",
-        "lance uniquement une tâche d’arrosage manuel en attente s’il en existe une"
+        "ne lance pas d’arrosage automatique",
+        "exécute seulement une demande manuelle en attente"
       ]
     },
     "automatic": {
-      "title": "Arrosage automatique",
+      "title": "L’arrosage automatique",
       "desc": [
-        "L’arrosage automatique est contrôlé par les paramètres du backend configurés dans l’application mobile.",
-        "La carte ne lance l’arrosage automatique que lorsque :"
+        "Tu actives et règles l’arrosage automatique dans l’application.",
+        "La carte ne démarre la pompe que si :"
       ],
       "items": [
-        "la prise en charge de la pompe est activée",
-        "le lancement automatique de la pompe est activé",
-        "le capteur d’humidité est activé",
-        "la dernière humidité du sol mesurée est inférieure au seuil du backend",
-        "le délai de récupération de l’arrosage automatique est écoulé"
+        "la pompe est activée dans les réglages de l’appareil",
+        "le démarrage automatique est autorisé",
+        "le capteur d’humidité du sol est activé",
+        "l’humidité mesurée est sous le seuil choisi",
+        "la pause nécessaire depuis le dernier arrosage est écoulée et le serveur autorise le nouveau démarrage"
       ],
-      "cooldown": "Après un arrosage manuel ou automatique, le firmware démarre le délai de récupération de l’arrosage automatique. Cela aide à éviter qu’une tâche d’arrosage manuel et un arrosage automatique se produisent trop près l’un de l’autre."
+      "cooldown": "Après tout arrosage, manuel ou automatique, le programme attend la pause prévue avant d’arroser à nouveau automatiquement. Cela évite de faire fonctionner la pompe à intervalles trop rapprochés."
     },
     "manual": {
-      "title": "Arrosage manuel",
+      "title": "L’arrosage manuel",
       "desc": [
-        "L’arrosage manuel est planifié depuis l’application mobile.",
-        "L’arrosage manuel ignore volontairement :",
-        "Cela signifie que lorsque l’utilisateur planifie manuellement un arrosage, la carte le traite comme une demande explicite d’exécuter la pompe une fois."
+        "Tu demandes un arrosage manuel dans l’application.",
+        "Cette demande ne tient pas compte de :",
+        "La carte la traite comme un ordre explicite de faire fonctionner la pompe une fois, sans vérifier les conditions d’arrosage automatique."
       ],
       "items": [
         "l’humidité actuelle du sol",
-        "le seuil d’arrosage automatique",
-        "le délai de récupération de l’arrosage automatique"
+        "son seuil d’arrosage automatique",
+        "la pause prévue entre les arrosages automatiques"
       ]
     }
   },
   "hardware": {
-    "title": "Notes matérielles",
-    "desc": "Le firmware généré suppose des composants courants compatibles ESP32 :",
+    "title": "Brancher le matériel",
+    "desc": "Le code généré est prévu pour ces composants compatibles avec l’ESP32 :",
     "items": [
-      "capteur de lumière BH1750 / GY-302 via I2C",
-      "capteur de température et d’humidité BME280 via I2C",
-      "capteur capacitif d’humidité du sol sur une broche analogique",
-      "relais ou pilote de pompe connecté à une broche de sortie numérique"
+      "capteur de lumière BH1750 / GY-302 en I2C",
+      "capteur de température et d’humidité de l’air BME280 en I2C",
+      "capteur capacitif d’humidité du sol sur une entrée analogique",
+      "relais ou pilote de pompe sur une sortie numérique"
     ],
-    "verify": "Vérifiez tout le câblage avant d’alimenter la pompe.",
-    "relayNote": "Certains modules relais sont actifs à l’état BAS, tandis que d’autres sont actifs à l’état HAUT. L’exemple généré utilise :",
-    "relayReverse": "Si votre relais fonctionne à l’envers, vous devrez peut-être permuter les valeurs HIGH et LOW.",
-    "relayCodeLabel": "Exemple de sortie de pompe"
+    "verify": "Vérifie tous les branchements avant d’alimenter la pompe.",
+    "relayNote": "Selon le modèle, le relais s’active à l’état LOW ou HIGH. Dans l’exemple, la pompe est commandée ainsi :",
+    "relayReverse": "Si ton relais fonctionne à l’inverse, échange HIGH et LOW dans la commande de la pompe.",
+    "relayCodeLabel": "Allumer et éteindre la pompe"
   },
   "calibration": {
-    "title": "Notes d’étalonnage",
+    "title": "Étalonner le capteur de sol",
     "desc": [
-      "Les capteurs d’humidité du sol doivent être étalonnés pour obtenir des résultats fiables.",
-      "Le code généré utilise :",
-      "Ces valeurs ne sont que des exemples.",
-      "Mesurez la valeur de votre capteur dans un sol sec ou dans l’air, puis mesurez-la de nouveau dans un sol humide ou dans l’eau, et mettez à jour ces constantes en conséquence."
+      "Étalonne le capteur d’humidité du sol pour obtenir des valeurs utiles.",
+      "Deux constantes servent à convertir les valeurs brutes en pourcentage :",
+      "Les valeurs de l’exemple sont à adapter à ton propre capteur.",
+      "Relève les valeurs dans un substrat sec puis humide et ajuste les constantes. Si tu mesures dans l’eau, n’immerge que la partie prévue pour cela et respecte les instructions du fabricant."
     ],
-    "codeLabel": "Valeurs d’étalonnage par défaut"
+    "codeLabel": "Exemples de valeurs d’étalonnage"
   },
   "safety": {
-    "title": "Notes de sécurité",
+    "title": "Avant de laisser la pompe sans surveillance",
     "desc": [
-      "Le firmware généré est un point de départ. Avant de laisser une pompe sans surveillance :",
-      "Flovers stocke les relevés et les événements d’arrosage, mais le câblage de l’appareil, l’étalonnage, le comportement de la pompe et l’installation physique restent sous la responsabilité de l’utilisateur."
+      "Adapte le programme à ton montage. Avant de laisser fonctionner la pompe sans surveillance :",
+      "Flovers enregistre les relevés et les arrosages. Tu restes responsable du câblage, de l’étalonnage, du fonctionnement de la pompe et de son installation."
     ],
     "items": [
-      "testez la pompe manuellement",
-      "confirmez la logique du relais",
-      "vérifiez que la pompe s’arrête correctement",
-      "utilisez une durée de fonctionnement de pompe sûre",
-      "confirmez que les valeurs d’humidité du sol sont réalistes",
-      "protégez l’électronique de l’eau",
-      "utilisez une alimentation et une isolation adaptées pour la pompe"
+      "teste le démarrage manuel de la pompe",
+      "vérifie le signal qui active le relais",
+      "assure-toi que la pompe s’arrête après l’arrosage",
+      "choisis une durée adaptée au débit de la pompe et aux besoins de la plante",
+      "vérifie que l’humidité du sol affichée est plausible",
+      "protège l’électronique de l’eau",
+      "prévois une alimentation et une isolation adaptées au circuit de la pompe"
     ]
   },
   "wiring": {
-    "title": "Schémas de câblage",
-    "desc": "Voici un exemple de schéma de câblage d’appareil. Cliquez sur l’image pour l’ouvrir en plein écran.",
-    "ariaPrimary": "Exemple de schéma de câblage d’appareil",
-    "placeholderTitlePrimary": "Exemple de schéma de câblage d’appareil",
-    "placeholderSubPrimary": "Cliquez sur l’image pour l’afficher en plein écran."
-  }
+    "title": "Schéma de câblage",
+    "desc": "Voici un exemple de branchement. Clique sur l’image pour l’agrandir.",
+    "ariaPrimary": "Agrandir le schéma de câblage",
+    "placeholderTitlePrimary": "Exemple de branchement de l’appareil",
+    "placeholderSubPrimary": "Clique sur le schéma pour l’agrandir."
+  },
+  "retrySafety": "N’active supports_task_retry avec true que si ton programme enregistre durablement l’état de l’ordre avant de démarrer la pompe, puis conserve aussi le résultat. Un même ordre reçu à nouveau ne doit pas déclencher un second arrosage. Le programme généré inclut déjà cette protection. Génère-le à nouveau et installe-le sur les appareils existants pour en bénéficier. Pour les anciens programmes, le serveur ne renvoie pas un ordre déjà transmis.",
+  "claimSafety": "Avant un arrosage automatique, l’appareil doit obtenir l’accord du serveur. Il envoie une requête POST à /readings/pump-auto-claim/ avec secret, device_key et la mesure actuelle moisture ; device_id est facultatif. La pompe ne doit démarrer que si la réponse contient run: true. L’identifiant task_id renvoyé est nécessaire au compte rendu. Le code généré réalise ces étapes."
 }

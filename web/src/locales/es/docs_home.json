@@ -3,73 +3,73 @@
     "title": "Inicio",
     "sections": [
       {
-        "heading": "Objetivo de la vista de inicio",
+        "heading": "Tus cuidados diarios de un vistazo",
         "body": [
-          "Inicio es la pantalla principal visible después de un inicio de sesión exitoso.",
-          "Se centra en las actividades diarias: muestra las Tareas generadas a partir de los Recordatorios, lo que permite ver rápidamente qué requiere atención hoy o qué está retrasado.",
-          "Si no hay tareas para realizar, se muestra un azulejo informativo con un mensaje sobre la falta de tareas programadas y sugerencias de próximos pasos, como la creación de recordatorios."
+          "Inicio es la primera pantalla que aparece después de iniciar sesión.",
+          "Muestra las tareas que se crean a partir de tus recordatorios para que veas qué toca hoy y qué está atrasado.",
+          "Si no hay tareas pendientes, una tarjeta te lo indica y propone cómo empezar, por ejemplo creando recordatorios."
         ]
       },
       {
-        "heading": "Lista de tareas (azulejos generados a partir de los recordatorios)",
+        "heading": "Qué muestran las tarjetas de tareas",
         "body": [
-          "Cada azulejo representa una Tarea individual generada a partir de la definición de un Recordatorio (por ejemplo, Riego, Rociado, Fertilización, Trasplante o Cuidado).",
-          "Las tareas aparecen automáticamente cuando se vuelven necesarias según las reglas de recurrencia definidas en el Recordatorio.",
-          "El azulejo generalmente contiene el tipo de tarea, el nombre de la planta, la ubicación y el estado del plazo (por ejemplo, Hoy o Atrasado)."
+          "Cada tarjeta representa una tarea de un recordatorio: riego, pulverización, fertilización, trasplante o cuidado general.",
+          "Las tareas aparecen automáticamente según la frecuencia del recordatorio.",
+          "La tarjeta suele mostrar el tipo de cuidado, el nombre de la planta, la ubicación y si toca hoy o está atrasada."
         ]
       },
       {
-        "heading": "Menú de azulejo de tarea (acciones para una tarea individual)",
+        "heading": "Acciones del menú de tres puntos",
         "body": [
-          "Cada tarea tiene un menú contextual (menú con tres puntos) que contiene acciones relacionadas con la tarea específica.",
-          "Marcar como completado: cierra la tarea y permite opcionalmente agregar una nota, lo que ayuda a construir el historial de cuidado.",
-          "Editar recordatorio: abre el Recordatorio asociado a la tarea para cambiar los ajustes de recurrencia.",
-          "Ir a la planta: te lleva a la vista de Detalles de la planta asignada a la tarea.",
-          "Mostrar historial: abre el historial de tareas mostrando las tareas realizadas anteriormente para la misma planta o recordatorio."
+          "Cada tarjeta tiene un menú de tres puntos con acciones para esa tarea.",
+          "«Marcar como completada»: termina la tarea y te permite añadir una nota al historial de cuidados.",
+          "«Editar recordatorio»: abre el recordatorio asociado para cambiar su frecuencia.",
+          "«Ir a la planta»: abre los detalles de la planta correspondiente.",
+          "«Mostrar historial»: muestra las tareas que ya has completado para esa planta o recordatorio."
         ]
       },
       {
-        "heading": "Botón FAB (acciones rápidas)",
+        "heading": "Acciones rápidas",
         "body": [
-          "En la pantalla de Inicio hay un botón FAB que despliega un conjunto de acciones rápidas para trabajar con las tareas.",
-          "Mostrar atrasadas: aplica un filtro rápido que muestra solo las tareas atrasadas.",
-          "Mostrar hoy: aplica un filtro rápido que muestra las tareas programadas para hoy.",
-          "Ordenar: cambia el orden de visualización de las tareas en la lista.",
-          "Filtrar: reduce la lista de tareas según los criterios seleccionados.",
-          "Historial: te lleva a la vista de Historial de tareas, que se documenta por separado."
+          "El botón de acciones rápidas de Inicio abre un menú para gestionar tus tareas.",
+          "«Mostrar atrasadas»: muestra solo las tareas atrasadas.",
+          "«Mostrar para hoy»: muestra solo las tareas previstas para hoy.",
+          "«Ordenar»: cambia el orden de las tareas.",
+          "«Filtrar»: limita la lista según los criterios elegidos.",
+          "«Historial»: abre el historial de tareas, explicado en otra página de la documentación."
         ]
       },
       {
-        "heading": "Opciones de ordenación",
+        "heading": "Ordenar las tareas",
         "body": [
-          "La ordenación permite ajustar la lista de tareas a tu forma de trabajar.",
-          "Las opciones de ordenación disponibles son: Fecha de ejecución (plazo), Nombre de la planta y Ubicación."
+          "Puedes ordenar las tareas como te resulte más cómodo revisarlas.",
+          "Las opciones disponibles son fecha prevista, nombre de la planta y ubicación."
         ]
       },
       {
-        "heading": "Opciones de filtrado",
+        "heading": "Filtrar las tareas",
         "body": [
-          "Los filtros ayudan a concentrarse en un grupo seleccionado de tareas.",
-          "Las tareas se pueden filtrar por: Nombre de la planta, Ubicación, Tipo de tarea y Rango de fechas de ejecución.",
-          "Los filtros se pueden combinar, por ejemplo, para mostrar solo las tareas de Riego para plantas en una ubicación seleccionada."
+          "Los filtros te ayudan a centrarte en ciertas tareas.",
+          "Puedes filtrar por planta, ubicación, tipo de cuidado y un intervalo de fechas previstas.",
+          "Combina filtros para ver, por ejemplo, solo los riegos de las plantas de una ubicación concreta."
         ]
       },
       {
-        "heading": "Cierre masivo de tareas (bulk)",
+        "heading": "Completar varias tareas a la vez",
         "body": [
-          "El cierre masivo de tareas está disponible cuando se usan vistas resumidas: Mostrar atrasadas o Mostrar hoy.",
-          "Cuando uno de estos filtros está activo, el botón FAB muestra temporalmente una acción adicional, como \"Marcar los visibles como completados\".",
-          "Esta acción cierra todas las tareas visibles actualmente al mismo tiempo, sin necesidad de marcar manualmente cada azulejo.",
-          "El cierre masivo está diseñado para situaciones en las que realizas la misma acción de cuidado para muchas plantas al mismo tiempo.",
-          "Dependiendo del flujo seleccionado, aún puede ser posible agregar notas a las tareas cerradas después de realizar la acción masiva."
+          "Esta opción está disponible en las vistas «Mostrar atrasadas» y «Mostrar para hoy».",
+          "Cuando uno de estos filtros está activo, el menú de acciones rápidas añade una opción como «Marcar visibles como completadas».",
+          "La acción completa todas las tareas que se están mostrando sin tener que seleccionarlas una por una.",
+          "Es útil si haces el mismo cuidado a varias plantas seguidas.",
+          "Según el recorrido elegido, podrás añadir notas a las tareas después de completarlas juntas."
         ]
       },
       {
-        "heading": "Navegación desde la pantalla de inicio",
+        "heading": "Abrir otras pantallas",
         "body": [
-          "La pantalla de inicio permite pasar rápidamente a otras partes de la aplicación mediante acciones en los azulejos y accesos directos FAB.",
-          "Desde una tarea individual puedes ir directamente a los Detalles de la planta o al historial de tareas.",
-          "Desde el FAB puedes abrir el Historial de tareas o reducir la lista de tareas usando la ordenación y los filtros."
+          "Los menús de las tareas y las acciones rápidas te llevan a otras partes de la aplicación.",
+          "Desde una tarea puedes abrir los detalles de su planta o el historial.",
+          "El menú de acciones rápidas permite abrir el historial y ajustar la lista con la ordenación y los filtros."
         ]
       }
     ]

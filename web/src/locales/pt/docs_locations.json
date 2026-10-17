@@ -3,42 +3,42 @@
     "title": "Localizações",
     "sections": [
       {
-        "heading": "Objetivo desta visualização",
+        "heading": "Para que servem as localizações",
         "body": [
-          "A visualização Localizações é usada para gerenciar os lugares onde as suas plantas estão localizadas, por exemplo, cômodos, varandas ou outras áreas.",
-          "As localizações são usadas principalmente para organizar as plantas e facilitar a filtragem, ordenação e agrupamento de dados no aplicativo."
+          "Na tela Localizações, você organiza os lugares onde ficam suas plantas, como cômodos, varandas e outros espaços.",
+          "As localizações ajudam a agrupar plantas e a filtrar e ordenar as informações no aplicativo."
         ]
       },
       {
         "heading": "Lista de localizações",
         "body": [
-          "A tela exibe uma lista de todas as localizações definidas pelo usuário.",
-          "As localizações podem ser nomes padrão ou nomes personalizados criados pelo usuário.",
-          "Cada localização mostra o número de plantas atualmente associadas a ela."
+          "A lista mostra todas as localizações que você cadastrou.",
+          "Você pode usar os nomes sugeridos ou criar os seus.",
+          "Cada localização mostra quantas plantas estão associadas a ela."
         ]
       },
       {
-        "heading": "Ações na localização (menu de 3 pontos)",
+        "heading": "Menu de uma localização",
         "body": [
-          "Cada localização possui um menu de 3 pontos com ações disponíveis.",
-          "O usuário pode editar o nome da localização para que reflita melhor o local real onde as plantas estão.",
-          "A exclusão de uma localização só é possível quando não há plantas associadas a ela."
+          "Os três pontos de cada localização abrem as ações disponíveis.",
+          "Você pode mudar o nome para descrever melhor o lugar onde as plantas ficam.",
+          "Só é possível excluir uma localização quando nenhuma planta está associada a ela."
         ]
       },
       {
-        "heading": "Botão de ação (FAB)",
+        "heading": "Botão de ações rápidas",
         "body": [
-          "O botão FAB oferece ações rápidas relacionadas ao gerenciamento de localizações.",
-          "O usuário pode adicionar uma nova localização a qualquer momento.",
-          "As localizações podem ser ordenadas pelo nome da localização ou pelo número de plantas associadas."
+          "O botão de ações rápidas reúne as opções para gerenciar a lista.",
+          "Você pode adicionar uma localização quando quiser.",
+          "Também pode ordenar pelo nome ou pela quantidade de plantas associadas."
         ]
       },
       {
-        "heading": "Uso das localizações",
+        "heading": "Use as localizações no aplicativo",
         "body": [
-          "As localizações são usadas em todo o aplicativo para o agrupamento lógico das plantas.",
-          "Elas podem ser usadas como critérios de filtragem e ordenação em visualizações como Plantas, Lembretes ou Histórico de tarefas.",
-          "O uso de localizações facilita a manutenção da organização, especialmente quando há um grande número de plantas."
+          "As localizações agrupam as plantas pelo lugar onde você as mantém.",
+          "Elas também servem para filtrar e ordenar listas, como Plantas, Lembretes e Histórico de tarefas.",
+          "Isso facilita a organização, especialmente quando você tem muitas plantas."
         ]
       }
     ]

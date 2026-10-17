@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Flovers",
-    "subtitle": "Kümmere dich um Pflanzen mit einem klaren Plan, Routinen und einer Geschichte.",
-    "purpose": "Füge deine Pflanzen hinzu, verbinde Arten-Definitionen für Hinweise, stelle wiederkehrende Erinnerungen ein und verfolge die Pflegegeschichte – optional überwache Sensormesswerte oder verwende QR-Codes.",
+    "subtitle": "Behalte die Pflege deiner Pflanzen im Blick.",
+    "purpose": "Füge deine Pflanzen hinzu und wähle passende Pflanzenprofile mit Pflegehinweisen. Richte Erinnerungen ein und halte fest, was du erledigt hast. Auf Wunsch kannst du Sensormesswerte nutzen oder per QR-Code direkt die Details einer Pflanze öffnen.",
     "cta": {
       "googlePlayUrl": "",
       "appStoreUrl": ""
@@ -10,117 +10,117 @@
   },
   "homeNew": {
     "cta": {
-      "title": "Starte einfach. Halte die Routine konsequent.",
-      "subtitle": "Füge Pflanzen hinzu, verbinde Definitionen für Hinweise, stelle wiederkehrende Erinnerungen ein und lasse Flovers Aufgaben automatisch erstellen. Nutze tägliche Benachrichtigungen, scanne QR-Etiketten, um direkt zur Pflanze zu gelangen, und verifiziere optional Routinen mit Sensormesswerten."
+      "title": "Einfach starten. Bei der Pflege dranbleiben.",
+      "subtitle": "Füge Pflanzen hinzu, wähle passende Pflanzenprofile und richte Erinnerungen ein. Flovers erstellt die Aufgaben und erinnert dich täglich daran. QR-Etiketten führen dich direkt zu deiner Pflanze, und mit Sensormesswerten kannst du prüfen, ob du die Pflege anpassen solltest."
     },
     "sections": {
       "how": {
-        "title": "Wie es funktioniert",
-        "subtitle": "Einfache Schleife: hinzufügen → definieren → ausführen → Routine halten. Flovers sorgt für die Kontinuität, damit du dich auf die Pflanzen konzentrieren kannst, nicht auf das Planen."
+        "title": "So funktioniert’s",
+        "subtitle": "Füge deine Pflanze hinzu, plane die Pflege und hake erledigte Aufgaben ab. Flovers behält die nächsten Termine im Blick, damit dir mehr Zeit für deine Pflanzen bleibt."
       }
     },
     "steps": {
       "s1": {
-        "title": "Füge eine Pflanze hinzu: Erkenne sie per Foto oder suche in der Datenbank",
-        "text": "Du kannst eine Pflanze in wenigen Sekunden hinzufügen. Durchsuche die Datenbank mit 700+ Definitionen oder nutze die Fotobestimmung, um passende Vorschläge zu erhalten. Nach dem Hinzufügen werden alle Pflegeaufgaben und die Geschichte an diese Pflanze angehängt."
+        "title": "Bestimme deine Pflanze per Foto oder suche sie in der Datenbank",
+        "text": "Eine Pflanze ist schnell hinzugefügt. Wähle aus über 700 Pflanzenprofilen oder mache ein Foto und sieh dir die Vorschläge an. Jede deiner Pflanzen erhält eigene Pflegeaufgaben und einen eigenen Verlauf."
       },
       "s2": {
-        "title": "Verbinde eine Definition, stelle den Kontext ein und berechne sinnvolle Intervalle",
-        "text": "Verknüpfe die Pflanze mit einer Definition, um Pflegefunktionen und Standard-Einstellungen freizuschalten. Füge Kontext hinzu: Topfgröße, Substrattyp, Standort und Lichtverhältnisse. Auf dieser Basis hilft dir Flovers, realistische Erinnerungsintervalle zu berechnen, die du jederzeit anpassen kannst."
+        "title": "Wähle ein Pflanzenprofil und passe die Pflege an",
+        "text": "Mit dem passenden Pflanzenprofil erhältst du Hinweise und Vorschläge für die Pflege. Ergänze Angaben wie Topfgröße, Substrat, Standort und Lichtstärke. Daraus schlägt Flovers passende Abstände für deine Erinnerungen vor. Du kannst sie jederzeit ändern."
       },
       "s3": {
-        "title": "Führe Aufgaben schnell aus und baue eine saubere Pflegegeschichte auf",
-        "text": "Erinnerungen erstellen automatisch Aufgaben mit Terminen. Der Home-Bildschirm zeigt, was zu tun ist, und der Pflanzenbildschirm bietet den vollständigen Kontext. Wenn du eine Aufgabe abschließt, kannst du eine Notiz hinzufügen, und Flovers stellt die nächste Aufgabe ein – so funktioniert die Routine ohne manuelles Planen."
+        "title": "Hake Aufgaben ab und halte den Pflegeverlauf fest",
+        "text": "Aus deinen Erinnerungen entstehen automatisch Aufgaben mit Terminen. Auf der Startseite siehst du, was ansteht, und in den Pflanzendetails findest du alle Angaben zur Pflanze. Wenn du eine Aufgabe erledigst, kannst du eine Notiz hinzufügen. Den nächsten Termin plant Flovers automatisch."
       },
       "s4": {
-        "title": "Bleibe dem Plan mit täglichen Benachrichtigungen treu",
-        "text": "Wähle in den Profileinstellungen Push-Benachrichtigungen oder E-Mail und stelle die Lieferzeit ein. Du erhältst eine tägliche Zusammenfassung mit Aufgaben für den Tag und optional Erinnerungen, wenn Aufgaben überfällig werden – damit nichts stillschweigend verloren geht."
+        "title": "Lass dich täglich an deine Pflanzen erinnern",
+        "text": "Wähle im Profil Push-Benachrichtigungen oder E-Mail und lege eine Uhrzeit fest. Du erhältst eine tägliche Übersicht der anstehenden Aufgaben. Auf Wunsch erinnert dich Flovers auch noch einmal an überfällige Aufgaben."
       }
     }
   },
   "featureGrid": {
     "header": {
-      "title": "Funktionen, die die Pflege-Routine aufrechterhalten",
-      "subtitle": "Flovers basiert auf mehreren praktischen Lösungen: sinnvollen Start-Intervallen, Aufgaben aus Erinnerungen, täglichen Benachrichtigungen, QR-Kurzbefehlen und optionalen IoT-Daten – damit die Pflanzen ohne ständiges Nachdenken gut gedeihen."
+      "title": "Alles für die tägliche Pflanzenpflege",
+      "subtitle": "Passende Pflegeintervalle, automatisch erstellte Aufgaben und tägliche Benachrichtigungen helfen dir, an deine Pflanzen zu denken. Dazu kommen QR-Codes für den schnellen Zugriff und Sensormesswerte, wenn du eigene Geräte verbinden möchtest."
     },
     "tiles": {
       "intervals": {
-        "title": "Vorgeschlagene Intervalle aus Pflanzendefinitionen",
-        "text": "Verknüpfe eine Pflanze mit einer Definition, und Flovers schlägt Start-Intervalle basierend auf der Art und deinen Bedingungen vor. Du kannst sie übernehmen, anpassen oder deinen eigenen Rhythmus beibehalten."
+        "title": "Vorschläge für passende Pflegeintervalle",
+        "text": "Wähle ein Pflanzenprofil aus. Flovers schlägt dir anhand der Art und der Bedingungen passende Pflegeintervalle vor. Du kannst sie übernehmen, anpassen oder deinen eigenen Rhythmus festlegen."
       },
       "tasks": {
-        "title": "Erinnerungen, die sich in Aufgaben verwandeln",
-        "text": "Stelle wiederkehrende Erinnerungen ein (Bewässern, Sprühen, Düngen, Umtopfen, Pflege). Flovers verwandelt sie in Aufgaben mit Terminen. Sobald du eine erledigst, wird automatisch die nächste erstellt."
+        "title": "Aus Erinnerungen werden Aufgaben",
+        "text": "Lege fest, wie oft du gießen, besprühen, düngen, umtopfen oder andere Pflege erledigen möchtest. Flovers erstellt Aufgaben mit Terminen und plant nach dem Abschluss automatisch die nächste."
       },
       "notifications": {
-        "title": "Tägliche Push-Benachrichtigungen oder E-Mail",
-        "text": "Wähle in den Profileinstellungen Push-Benachrichtigungen oder E-Mail. Flovers kann eine tägliche Zusammenfassung zur gewünschten Zeit (z. B. 14:00 Uhr) senden, mit Aufgaben für den Tag und optional eine Erinnerung ~24 Stunden später, wenn etwas überfällig ist."
+        "title": "Tägliche Hinweise per Push oder E-Mail",
+        "text": "Wähle im Profil die Benachrichtigungsart und eine Uhrzeit, zum Beispiel 14:00 Uhr. Flovers kann dir täglich die Aufgaben für heute senden und dich auf Wunsch nach etwa 24 Stunden an Überfälliges erinnern."
       },
       "qr": {
-        "title": "Scanne QR und gehe direkt zum Pflanzenbildschirm",
-        "text": "Drucke einen QR-Code für deine Pflanze aus und klebe ihn auf den Topf. Scanne ihn und öffne sofort die Pflanzendetails – der schnellste Weg, den Kontext zu überprüfen und die Pflege abzuhaken."
+        "title": "QR-Code scannen und Pflanzendetails öffnen",
+        "text": "Drucke den QR-Code deiner Pflanze aus und klebe ihn an den Topf. Ein Scan genügt, um ihre Angaben nachzusehen und erledigte Pflege abzuhaken."
       },
       "iot": {
-        "title": "Echtzeit IoT-Messwerte und Trends",
-        "text": "Verbinde dein eigenes Gerät über ESP oder Arduino und sende Messwerte wie Temperatur, Feuchtigkeit, Licht und Bodenfeuchte. In der App findest du tägliche, wöchentliche und monatliche Diagramme, damit du Muster erkennst und Routinen anpasst."
+        "title": "Sensormesswerte und Veränderungen im Blick",
+        "text": "Verbinde dein eigenes Gerät mit ESP oder Arduino und übertrage Temperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchte. Tages-, Wochen- und Monatsdiagramme zeigen dir Veränderungen und helfen dir, die Pflege anzupassen."
       }
     },
     "images": {
       "createPlantAlt": "Bildschirm zum Hinzufügen einer Pflanze",
-      "readingsHistoryAlt": "Bildschirm mit Messwert-Historie"
+      "readingsHistoryAlt": "Ansicht des Messwertverlaufs"
     }
   },
   "core": {
-    "title": "Zwei Dinge, die Flovers am besten macht",
-    "lead": "Eine solide Pflanzendatenbank und schnelle Fotobestimmung. Du wählst das passende Modell aus, verknüpfst es einmal und hast einen sinnvollen Startpunkt für die Pflege.",
+    "title": "Finde deine Pflanze und die passende Pflege",
+    "lead": "Mit der Pflanzendatenbank und der Fotobestimmung findest du heraus, welche Pflanze du hast und was sie braucht. Wähle das passende Pflanzenprofil und beginne mit der Pflegeplanung.",
     "tiles": {
       "defs": {
-        "title": "700+ Pflanzendefinitionen mit realistischen Tipps",
-        "desc": "Durchsuche Definitionen mit Fotos und wichtigen Merkmalen. Verknüpfe eine Pflanze, und Flovers führt dich mit sinnvollen Standardeinstellungen.",
+        "title": "Über 700 Pflanzenprofile mit Pflegehinweisen",
+        "desc": "Entdecke Arten mit Fotos und den wichtigsten Merkmalen. Wähle ein Profil für deine Pflanze, und Flovers schlägt dir passende Pflegeeinstellungen vor.",
         "bullets": [
-          "Pflege-Merkmale: Licht, Erde, Bewässerung, Feuchtigkeit, Temperatur.",
-          "Ein guter Startpunkt, den du an deine Bedingungen anpassen kannst.",
-          "Schnelle Verknüpfung, damit jede Pflanze eine klare Basis hat."
+          "Angaben zu Licht, Substrat, Gießen, Luftfeuchtigkeit und Temperatur.",
+          "Empfehlungen, die du an die Bedingungen bei dir anpassen kannst.",
+          "Für jede Pflanze schnell das passende Pflanzenprofil auswählen."
         ]
       },
       "recognition": {
-        "title": "Fotobestimmung mit Vorschlägen für die beste Übereinstimmung",
-        "desc": "Mache ein Foto oder lade eines aus deiner Galerie hoch, und Flovers schlägt vor, was es sein könnte. Wähle die beste Übereinstimmung und fahre fort.",
+        "title": "Foto machen und die passende Art finden",
+        "desc": "Mache ein Foto oder wähle eines aus deiner Galerie. Flovers schlägt dir passende Arten vor, und du wählst das richtige Pflanzenprofil aus.",
         "bullets": [
-          "Funktioniert am besten bei klaren, gut beleuchteten Fotos.",
-          "Zeigt mehrere ähnliche Optionen zur Auswahl.",
-          "Entwickelt, um Zeit zu sparen und dich nicht bei einer einzigen Vermutung zu blockieren."
+          "Klare, gut beleuchtete Fotos liefern die besten Ergebnisse.",
+          "Mehrere ähnliche Arten zum Vergleichen und Auswählen.",
+          "Das Ergebnis hilft bei der Auswahl. Du entscheidest, welche Art passt."
         ]
       }
     }
   },
   "qr": {
-    "title": "QR-Scanner: physischer Shortcut",
-    "lead": "Erstelle einen QR-Code für jede Pflanze, drucke ihn aus, klebe ihn auf den Topf und scanne ihn, um sofort zu den Details und Aufgaben dieser Pflanze zu gelangen.",
+    "title": "Code am Topf, Pflanzendetails in der App",
+    "lead": "Erstelle für jede Pflanze einen QR-Code, drucke ihn aus und klebe ihn an den Topf. Nach dem Scannen siehst du sofort ihre Details und Aufgaben.",
     "image": {
       "alt": "Scannen des QR-Codes einer Pflanze in der Flovers-App"
     },
     "blocks": {
       "create": {
-        "title": "Erstellen → Drucken → Ankleben",
-        "text": "Jede Pflanze hat eine eigene ID. In den Pflanzendetails kannst du einen QR-Code erstellen, ihn auf deinem Handy speichern oder per E-Mail senden, um ihn auszudrucken und auf den Topf zu kleben."
+        "title": "Erstellen → ausdrucken → aufkleben",
+        "text": "Jede deiner Pflanzen hat eine eigene Kennung. In den Pflanzendetails erstellst du einen QR-Code, den du auf dem Telefon speichern oder per E-Mail senden kannst. Danach einfach ausdrucken und an den Topf kleben."
       },
       "scan": {
-        "title": "Scannen → Bestätigen → Pflanzendetails öffnen",
-        "text": "Nutze den eingebauten QR-Scanner. Nach der Bestätigung des Codes durch das Backend wirst du direkt zu dieser Pflanze weitergeleitet – mit Aufgaben, Erinnerungen, Notizen, Messwerten und dem vollständigen Kontext."
+        "title": "Scannen → bestätigen → Pflanzendetails öffnen",
+        "text": "Nutze den QR-Scanner in der App. Sobald der Code geprüft ist, öffnen sich die Details der richtigen Pflanze mit Aufgaben, Erinnerungen, Notizen und Messwerten."
       },
       "care": {
-        "title": "Pflege in Echtzeit",
-        "text": "Gieße die Pflanze, scanne das Etikett und hake die Aufgabe als erledigt ab – oder scanne einfach, um zu überprüfen, ob etwas zu tun ist. Schnelle Verbindung zwischen der physischen Pflanze und deinen Daten."
+        "title": "Gießen, scannen, abhaken",
+        "text": "Scanne nach dem Gießen das Etikett und markiere die Aufgabe als erledigt. Oder schau zuerst nach, was gerade ansteht. So hast du alle Angaben zur Hand, während du bei deiner Pflanze stehst."
       }
     }
   },
   "store": {
     "google": {
-      "alt": "Aus dem Google Play Store herunterladen"
+      "alt": "Jetzt bei Google Play herunterladen"
     },
     "apple": {
-      "alt": "Aus dem App Store herunterladen"
+      "alt": "Im App Store herunterladen"
     }
   }
 }

@@ -2,7 +2,7 @@
   "title": "Dokumentation",
   "placeholder": {
     "heading": "Bald verfügbar",
-    "body": "Detaillierte Dokumentation für diesen Bildschirm wird bald verfügbar sein."
+    "body": "Die ausführliche Anleitung zu dieser Ansicht folgt in Kürze."
   },
   "screens": {
     "overview": {
@@ -12,10 +12,10 @@
       "title": "Anmeldung und Registrierung"
     },
     "home": {
-      "title": "Startbildschirm"
+      "title": "Startseite"
     },
     "taskHistory": {
-      "title": "Aufgabenhistorie"
+      "title": "Aufgabenverlauf"
     },
     "plants": {
       "title": "Pflanzen"
@@ -24,7 +24,7 @@
       "title": "Pflanzendetails"
     },
     "createPlantWizard": {
-      "title": "Pflanzenerstellungsassistent"
+      "title": "Pflanze hinzufügen"
     },
     "locations": {
       "title": "Standorte"
@@ -36,13 +36,14 @@
       "title": "Messwerte"
     },
     "readingsHistory": {
-      "title": "Messwertgeschichte"
+      "title": "Messwertverlauf"
     },
     "scanner": {
-      "title": "Scanner (QR)"
+      "title": "QR-Scanner"
     },
     "profile": {
       "title": "Profil und Einstellungen"
     }
-  }
+  },
+  "navigationLabel": "Navigation der Dokumentation"
 }

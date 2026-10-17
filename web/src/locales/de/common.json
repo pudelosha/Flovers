@@ -1,20 +1,22 @@
 {
   "nav": {
-    "start": "Start",
+    "start": "Startseite",
     "docs": "Dokumentation",
-    "schemas": "Schemas",
+    "schemas": "Schaltpläne",
     "faq": "FAQ"
   },
   "footer": {
     "terms": "Nutzungsbedingungen",
-    "privacy": "Datenschutz",
+    "privacy": "Datenschutzerklärung",
     "contact": "Kontakt"
   },
   "a11y": {
     "mainNav": "Hauptnavigation",
     "languageSwitch": "Sprachauswahl",
     "openMenu": "Menü öffnen",
-    "mobileMenu": "Mobiles Menü"
+    "mobileMenu": "Mobiles Menü",
+    "closeNotification": "Benachrichtigung schließen",
+    "scanStoreLink": "Scannen, um den App-Store zu öffnen"
   },
   "language": {
     "pl": "Polnisch",

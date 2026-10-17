@@ -2,11 +2,11 @@
   "nav": {
     "start": "Inicio",
     "docs": "Documentación",
-    "schemas": "Esquemas",
+    "schemas": "Esquemas de conexión",
     "faq": "FAQ"
   },
   "footer": {
-    "terms": "Términos",
+    "terms": "Condiciones de uso",
     "privacy": "Política de privacidad",
     "contact": "Contacto"
   },
@@ -14,7 +14,9 @@
     "mainNav": "Navegación principal",
     "languageSwitch": "Selección de idioma",
     "openMenu": "Abrir menú",
-    "mobileMenu": "Menú móvil"
+    "mobileMenu": "Menú móvil",
+    "closeNotification": "Cerrar notificación",
+    "scanStoreLink": "Escanear para abrir la página de descarga"
   },
   "language": {
     "pl": "Polaco",

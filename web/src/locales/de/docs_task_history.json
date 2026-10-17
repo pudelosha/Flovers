@@ -1,79 +1,79 @@
 {
   "docs_task_history": {
-    "title": "Aufgabenhistorie",
+    "title": "Pflegeverlauf",
     "sections": [
       {
-        "heading": "Ziel der Ansicht Aufgabenhistorie",
+        "heading": "Was du im Pflegeverlauf findest",
         "body": [
-          "Die Aufgabenhistorie dient dazu, abgeschlossene Aufgaben anzusehen und zu verwalten.",
-          "Es erleichtert die Analyse dessen, was getan wurde, wann es getan wurde und welche Pflanzen betroffen waren.",
-          "Die Ansicht kann mit einem aktiven Filter geöffnet werden (z. B. Historie für eine ausgewählte Pflanze) oder alle abgeschlossenen Aufgaben anzeigen."
+          "Im Pflegeverlauf siehst du erledigte Aufgaben und kannst die gespeicherten Einträge verwalten.",
+          "Du kannst nachsehen, wann du welche Pflanze wie gepflegt hast.",
+          "Der Verlauf kann alle erledigten Aufgaben zeigen oder bereits gefiltert sein, zum Beispiel auf die Aufgaben einer bestimmten Pflanze."
         ]
       },
       {
-        "heading": "Kacheln abgeschlossener Aufgaben",
+        "heading": "Kacheln erledigter Aufgaben",
         "body": [
-          "Jede Kachel repräsentiert eine einzelne abgeschlossene Aufgabe und enthält unter anderem den Aufgabentyp (z. B. Bewässerung, Sprühen, Düngen), den Namen der Pflanze, den Standort und das Ausführungsdatum.",
-          "Abgeschlossene Aufgaben können eine Notiz enthalten, die beim Markieren der Aufgabe als erledigt hinzugefügt wurde.",
-          "Notizen sind erst sichtbar, wenn die Kachel aufgeklappt wird."
+          "Jede Kachel steht für eine erledigte Aufgabe. Sie zeigt die Aufgabenart (zum Beispiel Gießen, Besprühen oder Düngen), den Pflanzennamen, den Standort und das Erledigungsdatum.",
+          "Eine Aufgabe kann eine Notiz enthalten, die du beim Erledigen hinzugefügt hast.",
+          "Um die Notiz zu lesen, klappst du die Kachel auf."
         ]
       },
       {
-        "heading": "Notizvorschau: Aufklappen und Zuklappen",
+        "heading": "Notizen ansehen",
         "body": [
-          "Um eine Notiz für eine abgeschlossene Aufgabe zu sehen, kannst du die Kachel durch Antippen aufklappen.",
-          "Du kannst auch das Menü mit den drei Punkten verwenden, um die Aktion Aufklappen/Zuklappen auszuführen (je nach aktuellem Zustand).",
-          "Auf diese Weise bleibt die Liste übersichtlich und kompakt, während Details auf Anfrage verfügbar sind."
+          "Tippe auf die Kachel einer erledigten Aufgabe, um sie aufzuklappen und die Notiz zu lesen.",
+          "Du kannst auch im Drei-Punkte-Menü Aufklappen oder Zuklappen wählen, je nachdem, ob die Notiz gerade sichtbar ist.",
+          "So bleibt die Liste übersichtlich und du kannst Details bei Bedarf öffnen."
         ]
       },
       {
-        "heading": "Kachelmenü (drei Punkte)",
+        "heading": "Kachelmenü mit drei Punkten",
         "body": [
-          "Jede Kachel einer abgeschlossenen Aufgabe verfügt über ein Kontextmenü mit Aktionen, die diese spezifische Position in der Historie betreffen.",
-          "Aufklappen/Zuklappen: Zeigt oder verbirgt den Notizbereich innerhalb der Kachel.",
-          "Erinnerrung bearbeiten: Leitet zur Erinnerung, die mit der Aufgabe verbunden ist, um die Häufigkeit oder andere Parameter zu ändern.",
-          "Zur Pflanze gehen: Leitet zur Detailansicht der Pflanze, die mit der Aufgabe verbunden ist.",
-          "Aufgabe löschen: Löscht die ausgewählte abgeschlossene Aufgabe dauerhaft vom Benutzerkonto."
+          "Das Drei-Punkte-Menü enthält Aktionen für den jeweiligen Eintrag im Pflegeverlauf.",
+          "Aufklappen/Zuklappen: zeigt die Notiz in der Kachel an oder blendet sie aus.",
+          "Erinnerung bearbeiten: öffnet die Erinnerung, aus der die Aufgabe entstanden ist. Dort kannst du den Wiederholungsabstand und andere Einstellungen ändern.",
+          "Zur Pflanze gehen: öffnet die Pflanzendetails der zugehörigen Pflanze.",
+          "Aufgabe löschen: entfernt die ausgewählte erledigte Aufgabe unwiderruflich aus deinem Konto."
         ]
       },
       {
-        "heading": "FAB-Aktionen (Floating Action Button)",
+        "heading": "Schnellaktionen",
         "body": [
-          "Die Ansicht Aufgabenhistorie enthält einen FAB-Button mit Aktionen zur Arbeit auf der gesamten Liste.",
-          "Sortieren: Ändert die Reihenfolge der Anzeige abgeschlossener Aufgaben.",
-          "Filtern: Verengt die Historienliste auf ausgewählte Kriterien.",
-          "Löschen: Ermöglicht das Massenlöschen von Aufgaben basierend auf Kriterien (z. B. Aufgaben für eine ausgewählte Pflanze, für einen Standort, für einen Aufgabentyp oder Aufgaben, die älter als ein bestimmtes Datum sind)."
+          "Die Schaltfläche für Schnellaktionen im Pflegeverlauf öffnet ein Menü für die gesamte Liste.",
+          "Sortieren: ändert die Reihenfolge der erledigten Aufgaben.",
+          "Filtern: zeigt nur Aufgaben, die zu deinen gewählten Kriterien passen.",
+          "Löschen: entfernt mehrere Aufgaben auf einmal, zum Beispiel für eine bestimmte Pflanze oder einen Standort, eine bestimmte Aufgabenart oder Aufgaben ab einem gewählten Alter."
         ]
       },
       {
-        "heading": "Sortieroptionen",
+        "heading": "Sortieren",
         "body": [
-          "Sortieren hilft dabei, die Historie in der Reihenfolge zu durchsuchen, die am besten zu deinem Arbeitsstil passt.",
-          "Verfügbare Sortieroptionen sind: Ausführungsdatum, Pflanzenname und Standort."
+          "Ändere die Reihenfolge der Einträge, damit du leichter findest, was du suchst.",
+          "Du kannst nach Erledigungsdatum, Pflanzenname oder Standort sortieren."
         ]
       },
       {
-        "heading": "Filteroptionen",
+        "heading": "Filtern",
         "body": [
-          "Filter ermöglichen es, sich auf einen ausgewählten Teilbereich der abgeschlossenen Aufgaben zu konzentrieren.",
-          "Du kannst nach folgenden Kriterien filtern: Pflanzenname, Standort, Aufgabentyp und Zeitraum der Ausführung.",
-          "Filter können kombiniert werden, z. B. um Düngen, das in einem bestimmten Monat an einem bestimmten Standort durchgeführt wurde, anzuzeigen."
+          "Mit Filtern zeigst du nur die erledigten Aufgaben an, die dich interessieren.",
+          "Du kannst Pflanzenname, Standort, Aufgabentyp und einen Zeitraum für das Erledigungsdatum wählen.",
+          "Die Filter lassen sich kombinieren, etwa um nur Düngeaufgaben an einem bestimmten Standort aus einem bestimmten Monat zu sehen."
         ]
       },
       {
-        "heading": "Massenlöschung (Aktion Löschen)",
+        "heading": "Mehrere Aufgaben auf einmal löschen",
         "body": [
-          "Massenlöschung ermöglicht es, mehrere abgeschlossene Aufgaben gleichzeitig basierend auf ausgewählten Kriterien dauerhaft zu löschen.",
-          "Typische Szenarien sind: Löschen der Historie einer einzelnen Pflanze, Löschen von Aufgaben für einen Standort, Löschen nur eines Aufgabentyps oder Löschen von Aufgaben, die älter als ein bestimmtes Datum sind.",
-          "Die Massenlöschung ist dauerhaft und kann nicht rückgängig gemacht werden."
+          "Mit Löschen entfernst du mehrere erledigte Aufgaben dauerhaft, die zu deinen gewählten Kriterien passen.",
+          "Du kannst zum Beispiel den Verlauf einer Pflanze leeren, Aufgaben eines Standorts entfernen, eine bestimmte Aufgabenart löschen oder Einträge vor einem gewählten Datum entfernen.",
+          "Das Löschen lässt sich nicht rückgängig machen."
         ]
       },
       {
-        "heading": "Unterschiede zwischen Aufgabenhistorie und Home",
+        "heading": "Pflegeverlauf und Startseite",
         "body": [
-          "Home konzentriert sich auf aktuelle Aufgaben (heute und überfällig) und deren Ausführung.",
-          "Die Aufgabenhistorie konzentriert sich auf abgeschlossene Aufgaben und unterstützt das Durchsuchen, Sortieren, Filtern und Löschen historischer Einträge.",
-          "Zusammen ermöglichen diese Ansichten sowohl die Durchführung von täglichen Aufgaben (Home) als auch die Analyse der langfristigen Pflegehistorie (Aufgabenhistorie)."
+          "Auf der Startseite findest du heute fällige und überfällige Aufgaben, die noch zu erledigen sind.",
+          "Im Pflegeverlauf siehst du, was bereits erledigt wurde. Du kannst die Einträge ansehen, sortieren, filtern und löschen.",
+          "Die Startseite hilft dir bei der täglichen Pflege, im Pflegeverlauf kannst du frühere Arbeiten nachschlagen."
         ]
       }
     ]

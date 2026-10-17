@@ -3,42 +3,42 @@
     "title": "Perfil",
     "sections": [
       {
-        "heading": "Objetivo de esta vista",
+        "heading": "Gestionar tu cuenta y preferencias",
         "body": [
-          "La vista de Perfil es el lugar central para gestionar los datos de la cuenta, las configuraciones de notificaciones, la configuración de la aplicación y el soporte.",
-          "Permite al usuario controlar tanto los datos personales como el comportamiento de la aplicación Flovers."
+          "El perfil reúne los datos de tu cuenta, las notificaciones, los ajustes de la aplicación y las opciones de ayuda.",
+          "Aquí puedes gestionar tus datos personales y adaptar Flovers a tu día a día."
         ]
       },
       {
-        "heading": "Cuenta",
+        "heading": "Tu cuenta",
         "body": [
-          "La sección Cuenta muestra la información básica de la cuenta, como la dirección de correo electrónico y la fecha de creación de la cuenta.",
-          "Desde este lugar, el usuario puede cambiar la dirección de correo electrónico (se requiere confirmación de la contraseña), cambiar la contraseña actual, cerrar sesión o eliminar permanentemente la cuenta.",
-          "Eliminar la cuenta causa la eliminación irreversible de todos los datos del usuario, incluidas las plantas, los recordatorios, las tareas, las lecturas y los dispositivos."
+          "La sección de cuenta muestra tu dirección de correo y la fecha en que la creaste.",
+          "Puedes cambiar el correo confirmándolo con tu contraseña actual, cambiar la contraseña, cerrar sesión o eliminar la cuenta de forma permanente.",
+          "Eliminar la cuenta borra todos tus datos sin posibilidad de recuperarlos: plantas, recordatorios, tareas, lecturas y dispositivos."
         ]
       },
       {
-        "heading": "Notificaciones",
+        "heading": "Tus notificaciones",
         "body": [
-          "La sección Notificaciones permite gestionar los permisos y las preferencias para las notificaciones por correo electrónico y push.",
-          "Para ambos canales, el usuario puede activar o desactivar dos tipos de notificaciones: el resumen diario que informa sobre las tareas programadas para hoy y un recordatorio enviado 24 horas después si las tareas aún no se han completado.",
-          "Para cada tipo de notificación, el usuario especifica la hora de envío (hora exacta, por ejemplo, 14:00)."
+          "Esta sección te permite gestionar tus permisos y preferencias de notificaciones por correo y push.",
+          "Para ambos canales puedes activar un resumen diario de las tareas de hoy y un segundo aviso si siguen pendientes 24 horas después de la primera notificación.",
+          "Elige una hora de envío para cada tipo de notificación, siempre a una hora en punto, por ejemplo las 14:00."
         ]
       },
       {
-        "heading": "Configuraciones",
+        "heading": "Los ajustes de la aplicación",
         "body": [
-          "La sección Configuraciones permite controlar el comportamiento general y la apariencia de la aplicación.",
-          "Las opciones disponibles incluyen la selección del idioma, el formato de fecha y hora, las unidades de temperatura (Celsius, Fahrenheit, Kelvin), las unidades de medida (métricas o imperiales) y la posición del botón FAB (lado izquierdo o derecho).",
-          "El usuario también puede personalizar la apariencia de la aplicación, eligiendo una imagen de fondo, el tema de los mosaicos (claro u oscuro) y el nivel de transparencia de los mosaicos."
+          "Estos ajustes controlan el funcionamiento y el aspecto de Flovers.",
+          "Puedes elegir idioma, formato de fecha y hora, unidad de temperatura (Celsius, Fahrenheit o Kelvin), sistema de medidas (métrico o imperial) y posición del botón de acciones rápidas, a la izquierda o a la derecha.",
+          "También puedes elegir la imagen de fondo, el tema claro u oscuro de las tarjetas y su nivel de transparencia."
         ]
       },
       {
-        "heading": "Soporte",
+        "heading": "Contactar con el equipo de ayuda",
         "body": [
-          "La sección Soporte permite contactar directamente con el equipo de Flovers.",
-          "El usuario puede informar de un problema o enviar una consulta al equipo de soporte técnico.",
-          "Informar de errores ayuda en el desarrollo continuo y mejora la calidad de la aplicación."
+          "Esta sección da acceso a la asistencia del equipo de Flovers.",
+          "Puedes pedir ayuda o informar de un error directamente desde esta pantalla.",
+          "Tus avisos nos ayudan a mejorar la estabilidad y la calidad de la aplicación."
         ]
       }
     ]

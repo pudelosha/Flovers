@@ -33,7 +33,7 @@ def test_send_templated_email_renders_templates_and_attachment(tmp_path):
     with override_settings(
         BASE_DIR=tmp_path,
         EMAIL_BACKEND="django.core.mail.backends.locmem.EmailBackend",
-        EMAIL_SUBJECT_PREFIX="[Flovers]",
+        EMAIL_SUBJECT_PREFIX="[Flovers]",  # Legacy settings must not add branding.
         DEFAULT_FROM_EMAIL="no-reply@example.com",
         TEMPLATES=[
             {
@@ -60,7 +60,7 @@ def test_send_templated_email_renders_templates_and_attachment(tmp_path):
     assert sent is True
     assert len(mail.outbox) == 1
     message = mail.outbox[0]
-    assert message.subject == "[Flovers] Greetings"
+    assert message.subject == "Greetings"
     assert message.body == "BASE Hello Ada"
     assert message.from_email == "no-reply@example.com"
     assert message.to == ["user@example.com"]

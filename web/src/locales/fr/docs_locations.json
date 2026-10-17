@@ -1,44 +1,44 @@
 {
   "docs_locations": {
-    "title": "Localisations",
+    "title": "Emplacements",
     "sections": [
       {
-        "heading": "Objectif de cette vue",
+        "heading": "Organiser tes plantes par emplacement",
         "body": [
-          "La vue Localisations est utilisée pour gérer les endroits où se trouvent vos plantes, par exemple les pièces, les balcons ou d'autres zones.",
-          "Les localisations sont principalement utilisées pour organiser les plantes et faciliter le filtrage, le tri et le regroupement des données dans l'application."
+          "Cet écran te permet de gérer les endroits où se trouvent tes plantes : pièces, balcons ou autres espaces.",
+          "Les emplacements servent à organiser tes plantes et à filtrer, trier ou regrouper les informations dans l’application."
         ]
       },
       {
-        "heading": "Liste des localisations",
+        "heading": "La liste des emplacements",
         "body": [
-          "L'écran affiche la liste de toutes les localisations définies par l'utilisateur.",
-          "Les localisations peuvent être des noms par défaut ou des noms personnalisés créés par l'utilisateur.",
-          "Chaque localisation affiche le nombre de plantes actuellement associées à celle-ci."
+          "La liste présente tous les emplacements que tu as définis.",
+          "Tu peux utiliser les noms proposés ou choisir tes propres noms.",
+          "Chaque emplacement indique le nombre de plantes qui lui sont actuellement associées."
         ]
       },
       {
-        "heading": "Actions sur la localisation (menu à 3 points)",
+        "heading": "Modifier ou supprimer un emplacement",
         "body": [
-          "Chaque localisation possède un menu à 3 points avec les actions disponibles.",
-          "L'utilisateur peut modifier le nom de la localisation pour qu'il reflète mieux l'endroit réel de stockage des plantes.",
-          "La suppression d'une localisation n'est possible que si aucune plante n'y est assignée."
+          "Chaque emplacement possède un menu à trois points avec les actions disponibles.",
+          "Tu peux le renommer pour qu’il corresponde au lieu réel où se trouvent tes plantes.",
+          "Tu ne peux supprimer un emplacement que si aucune plante ne lui est associée."
         ]
       },
       {
-        "heading": "Bouton d'action (FAB)",
+        "heading": "Les actions rapides",
         "body": [
-          "Le bouton FAB propose des actions rapides liées à la gestion des localisations.",
-          "L'utilisateur peut ajouter une nouvelle localisation à tout moment.",
-          "Les localisations peuvent être triées par nom de localisation ou par nombre de plantes assignées."
+          "Le bouton d’actions rapides ouvre les options de gestion des emplacements.",
+          "Tu peux ajouter un nouvel emplacement à tout moment.",
+          "Tu peux trier les emplacements par nom ou par nombre de plantes associées."
         ]
       },
       {
-        "heading": "Utilisation des localisations",
+        "heading": "Utiliser les emplacements ailleurs dans l’application",
         "body": [
-          "Les localisations sont utilisées dans toute l'application pour regrouper logiquement les plantes.",
-          "Elles peuvent être utilisées comme critères de filtrage et de tri dans des vues telles que Plantes, Rappels ou Historique des tâches.",
-          "L'utilisation des localisations facilite le maintien de l'ordre, surtout lorsqu'il y a un grand nombre de plantes."
+          "Les emplacements permettent de regrouper tes plantes dans toute l’application.",
+          "Ils servent notamment à filtrer et trier les listes de plantes, de rappels et de tâches terminées.",
+          "Ils sont particulièrement utiles pour garder une vue d’ensemble quand tu as beaucoup de plantes."
         ]
       }
     ]

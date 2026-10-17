@@ -31,8 +31,8 @@
     "menu": {
       "edit": "编辑提醒",
       "delete": "删除提醒",
-      "pause": "????",
-      "resume": "????"
+      "pause": "暂停提醒",
+      "resume": "恢复提醒"
     },
     "tile": {
       "repeatsEvery": "每 {{count}} {{unit}} 重复",
@@ -40,7 +40,7 @@
       "dueInOneDay": "1天后到期",
       "dueInDays": "{{count}}天后到期",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "???"
+      "paused": "已暂停"
     },
     "calendar": {
       "scheduledOn": "计划在 {{date}}",
@@ -105,10 +105,10 @@
       "createFailedWithReason": "创建失败：{{reason}}",
       "updateFailed": "更新失败",
       "updateFailedWithReason": "更新失败：{{reason}}",
-      "paused": "?????",
-      "resumed": "?????",
-      "toggleFailed": "????",
-      "toggleFailedWithReason": "?????{{reason}}"
+      "paused": "提醒已暂停",
+      "resumed": "提醒已恢复",
+      "toggleFailed": "无法更新提醒",
+      "toggleFailedWithReason": "无法更新提醒：{{reason}}"
     }
   }
 }

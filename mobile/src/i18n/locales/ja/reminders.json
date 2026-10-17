@@ -31,8 +31,8 @@
     "menu": {
       "edit": "リマインダーを編集",
       "delete": "リマインダーを削除",
-      "pause": "???????????",
-      "resume": "?????????"
+      "pause": "リマインダーを一時停止",
+      "resume": "リマインダーを再開"
     },
     "tile": {
       "repeatsEvery": "{{count}} {{unit}} ごとに繰り返し",
@@ -40,7 +40,7 @@
       "dueInOneDay": "1日後が期限",
       "dueInDays": "{{count}}日後が期限",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "?????"
+      "paused": "一時停止中"
     },
     "calendar": {
       "scheduledOn": "{{date}} に予定されています",
@@ -105,10 +105,10 @@
       "createFailedWithReason": "作成に失敗しました: {{reason}}",
       "updateFailed": "更新に失敗しました",
       "updateFailedWithReason": "更新に失敗しました: {{reason}}",
-      "paused": "???????????????",
-      "resumed": "?????????????",
-      "toggleFailed": "?????????",
-      "toggleFailedWithReason": "?????????: {{reason}}"
+      "paused": "リマインダーを一時停止しました",
+      "resumed": "リマインダーを再開しました",
+      "toggleFailed": "リマインダーを更新できませんでした",
+      "toggleFailedWithReason": "リマインダーを更新できませんでした: {{reason}}"
     }
   }
 }

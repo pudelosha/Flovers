@@ -3,198 +3,198 @@
     "title": "Lecturas",
     "sections": [
       {
-        "heading": "Propósito de esta pantalla",
+        "heading": "Seguir las condiciones de tus plantas",
         "body": [
-          "La pantalla Lecturas te permite ver y gestionar dispositivos IoT vinculados a tus plantas.",
-          "Cada dispositivo puede enviar mediciones ambientales como temperatura del aire, humedad del aire, nivel de luz y humedad del suelo a Flovers.",
-          "Esta función está diseñada para usuarios que construyen o usan sus propios dispositivos, por ejemplo placas Arduino o basadas en ESP, y desean monitorear las condiciones de las plantas a lo largo del tiempo.",
-          "Los dispositivos también pueden configurarse con una bomba de agua para riego manual programado y riego automático basado en la humedad del suelo."
+          "En «Lecturas» puedes consultar y gestionar los dispositivos conectados a tus plantas.",
+          "Cada dispositivo puede enviar temperatura del aire, humedad del aire, intensidad de luz y humedad del suelo a Flovers.",
+          "Esta función está pensada para quienes montan o utilizan sus propios dispositivos, por ejemplo con Arduino o ESP, y quieren observar las condiciones con el tiempo.",
+          "También puedes configurar una bomba para solicitar riegos desde la aplicación o regar automáticamente según la humedad del suelo."
         ]
       },
       {
-        "heading": "Tarjetas de dispositivos y lecturas más recientes",
+        "heading": "Las tarjetas de los dispositivos",
         "body": [
-          "La pantalla muestra una lista de tarjetas, donde cada tarjeta representa un dispositivo vinculado.",
-          "Cada tarjeta muestra el nombre del dispositivo o de la planta, la ubicación y las lecturas más recientes recibidas del dispositivo.",
-          "Según los sensores habilitados para el dispositivo, la tarjeta puede mostrar temperatura del aire, humedad del aire, nivel de luz y humedad del suelo.",
-          "Si aún no se han recibido datos, se muestran marcadores de posición en lugar de valores.",
-          "Si el dispositivo está configurado con una bomba de agua, la tarjeta también muestra controles e información relacionados con la bomba, incluido el último tiempo de funcionamiento de la bomba."
+          "Cada tarjeta representa un dispositivo vinculado.",
+          "Muestra el nombre del dispositivo o de la planta, la ubicación y las últimas lecturas recibidas.",
+          "Según los sensores activados, verás temperatura del aire, humedad del aire, luz y humedad del suelo.",
+          "Si aún no se han recibido datos, se muestran espacios sin valores.",
+          "Si hay una bomba configurada, la tarjeta añade sus controles e información, como la fecha del último riego registrado."
         ]
       },
       {
-        "heading": "Sección de bomba de agua en las tarjetas de dispositivos",
+        "heading": "Los controles de la bomba",
         "body": [
-          "Cuando un dispositivo tiene habilitado el soporte para bomba de agua, su tarjeta muestra controles adicionales de la bomba.",
-          "La tarjeta puede mostrar si el riego automático con bomba está habilitado, el umbral de humedad del suelo usado para el riego automático, el último funcionamiento registrado de la bomba y un botón para el riego manual programado.",
-          "El botón de riego manual cambia de estado según si ya existe una solicitud de riego pendiente.",
-          "Si no hay ninguna solicitud de riego manual pendiente, el botón muestra Programar riego.",
-          "Si ya hay una solicitud de riego manual pendiente, el botón muestra Cancelar programación de riego.",
-          "Esto permite ver directamente desde la tarjeta si ya se ha solicitado riego para ese dispositivo."
+          "Cuando activas la bomba en los ajustes del dispositivo, aparecen controles adicionales en la tarjeta.",
+          "Puedes ver si el riego automático está activado, su umbral de humedad, el último riego registrado y un botón para solicitar un riego manual.",
+          "El botón cambia según haya una solicitud pendiente o no.",
+          "Si no hay solicitudes pendientes, permite programar un riego.",
+          "Si ya hay una solicitud pendiente, permite cancelarla.",
+          "Así puedes comprobar directamente si ya has pedido un riego para ese dispositivo."
         ]
       },
       {
-        "heading": "Interacciones con la tarjeta",
+        "heading": "Abrir los gráficos",
         "body": [
-          "Al tocar el cuerpo de la tarjeta, se navega directamente a la pantalla Historial de lecturas de ese dispositivo.",
-          "Al tocar un icono de lectura específico, por ejemplo temperatura, humedad, luz o humedad del suelo, se abre la pantalla Historial de lecturas con esa medición preseleccionada.",
-          "Esto permite acceder rápidamente a gráficos detallados de un tipo de lectura específico."
+          "Toca una tarjeta para abrir el historial de lecturas del dispositivo.",
+          "Si tocas el icono de una medida, como temperatura, humedad, luz o humedad del suelo, el historial se abre con esa medida seleccionada.",
+          "Así accedes directamente al gráfico que te interesa."
         ]
       },
       {
         "heading": "Acciones del dispositivo",
         "body": [
-          "Cada tarjeta de dispositivo incluye un menú de 3 puntos con acciones adicionales.",
-          "Las opciones disponibles incluyen Historial de lecturas, Detalles de la planta, Detalles del dispositivo, Editar dispositivo y Eliminar dispositivo.",
-          "La acción Detalles del dispositivo abre un modal con información de configuración del dispositivo seleccionado, incluidos identificadores generados, sensores habilitados, configuración de la bomba y el secreto de la cuenta usado por el dispositivo.",
-          "Eliminar un dispositivo lo elimina permanentemente junto con su asociación con la planta."
+          "Cada tarjeta tiene un menú de tres puntos con más acciones.",
+          "Puedes abrir el historial, los detalles de la planta o del dispositivo, editar el dispositivo o eliminarlo.",
+          "Los detalles del dispositivo muestran sus identificadores, los sensores activados, los ajustes de la bomba y la clave secreta de la cuenta que utiliza para comunicarse.",
+          "Eliminar un dispositivo lo borra de forma permanente y retira su vínculo con la planta."
         ]
       },
       {
-        "heading": "Historial de lecturas",
+        "heading": "El historial de lecturas",
         "body": [
-          "La pantalla Historial de lecturas muestra gráficos detallados de los datos de sensores recopilados.",
-          "Los datos pueden verse usando agregación diaria, semanal y mensual.",
-          "Hay gráficos disponibles para temperatura del aire, humedad del aire, nivel de luz y humedad del suelo.",
-          "Solo se pueden mostrar los datos proporcionados por el dispositivo.",
-          "El backend almacena las lecturas en bloques horarios. Si el dispositivo envía varias lecturas para la misma hora, el registro horario existente se actualiza en lugar de duplicarse."
+          "El historial presenta gráficos detallados de los datos recibidos.",
+          "Los datos se pueden agrupar por día, semana o mes.",
+          "Hay gráficos de temperatura del aire, humedad del aire, luz y humedad del suelo.",
+          "Solo pueden mostrarse las medidas que el dispositivo haya enviado.",
+          "El servidor guarda un registro por hora. Si llegan varias lecturas en la misma hora, actualiza el registro existente en lugar de duplicarlo."
         ]
       },
       {
-        "heading": "Acciones del FAB",
+        "heading": "Acciones rápidas",
         "body": [
-          "El botón de acción flotante proporciona acciones relacionadas con la gestión y configuración de dispositivos.",
-          "Las acciones disponibles incluyen Vincular dispositivo, Configuración del dispositivo, Ordenar, Filtrar, Enviar exportación y Borrar filtro cuando los filtros están activos.",
-          "La ordenación puede aplicarse por nombre de la planta, ubicación o última hora de lectura.",
-          "El filtrado puede aplicarse por planta, ubicación y estado del dispositivo, como habilitado o deshabilitado.",
-          "La acción Enviar exportación envía por correo electrónico una exportación de lecturas en una hoja de cálculo. La exportación incluye registros de lecturas y registros de tareas de riego. Si se aplican filtros, los datos exportados reflejan esos filtros."
+          "El botón de acciones rápidas abre las opciones para gestionar y configurar dispositivos.",
+          "Incluye «Vincular dispositivo», «Configuración del dispositivo», «Ordenar», «Filtrar», «Enviar exportación» y, si hay filtros activos, «Borrar filtro».",
+          "Puedes ordenar por planta, ubicación o fecha de la última lectura.",
+          "Puedes filtrar por planta, ubicación y estado del dispositivo, por ejemplo activado o desactivado.",
+          "La exportación envía por correo una hoja de cálculo con lecturas y operaciones de riego. Respeta los filtros aplicados."
         ]
       },
       {
         "heading": "Vincular un dispositivo",
         "body": [
-          "Vincular dispositivo se usa para configurar un nuevo dispositivo de lectura y asociarlo con una planta.",
-          "Durante la configuración, puedes configurar el nombre del dispositivo, la planta vinculada, el estado habilitado o deshabilitado, el intervalo de lectura, los sensores habilitados, las alertas de baja humedad del suelo, las notificaciones por correo electrónico y push para baja humedad del suelo, el soporte para bomba de agua, el inicio automático de la bomba, el umbral de humedad del suelo para riego automático y las notificaciones por correo electrónico y push después de que se complete el riego.",
-          "Cada dispositivo recibe una Clave de dispositivo generada. La cuenta del usuario también tiene una Clave secreta de autenticación. Juntas, estas credenciales permiten que el dispositivo físico se comunique con el backend."
+          "«Vincular dispositivo» permite dar de alta un dispositivo de medición y asociarlo a una planta.",
+          "Puedes configurar su nombre, la planta, la activación, el intervalo de lecturas, los sensores, las alertas de suelo seco por correo o push, la bomba, el riego automático, su umbral de humedad y los avisos al terminar el riego.",
+          "Cada dispositivo recibe una Device Key. La cuenta también tiene una Auth Secret Key. Juntas permiten al dispositivo comunicarse con los servidores."
         ]
       },
       {
-        "heading": "Autenticación del dispositivo y flujo de datos",
+        "heading": "Cómo se identifica el dispositivo",
         "body": [
-          "Los dispositivos se autentican usando la Clave secreta de autenticación, la Clave de dispositivo y el ID de dispositivo opcional.",
-          "No se requiere ningún token de inicio de sesión de usuario para los endpoints de ingesta de dispositivos. La autorización se gestiona mediante las credenciales del dispositivo.",
-          "Esto permite integraciones IoT sencillas en las que la placa puede enviar datos directamente a Flovers.",
-          "El código Arduino o ESP generado contiene los endpoints y las credenciales necesarios para el dispositivo seleccionado. Antes de cargar el código, el usuario debe completar su propio SSID y contraseña de WiFi."
+          "El dispositivo se autentica con la Auth Secret Key, la Device Key y, de forma opcional, el Device ID.",
+          "Las direcciones para enviar lecturas no necesitan un token de inicio de sesión del usuario: comprueban las credenciales del dispositivo.",
+          "Así la placa puede enviar sus medidas directamente a Flovers.",
+          "El código generado para Arduino o ESP incluye las direcciones y credenciales necesarias. Antes de instalarlo, introduce el nombre de tu red Wi-Fi (SSID) y su contraseña."
         ]
       },
       {
-        "heading": "Configuración del dispositivo",
+        "heading": "Configurar el hardware",
         "body": [
-          "La opción Configuración del dispositivo proporciona información técnica para configurar el hardware.",
-          "Incluye el endpoint de ingesta para enviar lecturas, el endpoint de feed para recuperar las lecturas más recientes, ejemplos de payloads, la Clave secreta de autenticación de la cuenta y la opción de rotar la Clave secreta de autenticación.",
-          "Rotar la Clave secreta de autenticación invalida el secreto anterior, por lo que cualquier código de dispositivo existente que use el secreto anterior debe actualizarse."
+          "La opción de configuración presenta los datos técnicos necesarios para preparar el dispositivo.",
+          "Incluye la dirección ingest para enviar lecturas, feed para consultar los últimos valores, ejemplos de datos, la Auth Secret Key de la cuenta y la opción de renovarla.",
+          "Renovar la clave invalida la anterior. Debes actualizar el código de todos los dispositivos que usaban la clave antigua."
         ]
       },
       {
-        "heading": "Detalles del dispositivo",
+        "heading": "Los detalles del dispositivo",
         "body": [
-          "El modal Detalles del dispositivo muestra información de un dispositivo específico.",
-          "Incluye el nombre del dispositivo, la Clave de dispositivo, la Clave secreta de autenticación, la planta vinculada, los sensores habilitados y si hay una bomba de agua vinculada.",
-          "El modal también permite al usuario enviar por correo electrónico código Arduino generado para el dispositivo seleccionado. El correo electrónico incluye el código generado en el cuerpo del mensaje y como un adjunto .ino.",
-          "El código generado se basa en la configuración del dispositivo seleccionado, incluidos los sensores habilitados, el soporte de la bomba, la configuración de riego automático, la Clave de dispositivo, el ID de dispositivo y la Clave secreta de autenticación."
+          "Esta ventana reúne los datos del dispositivo seleccionado.",
+          "Muestra su nombre, Device Key, Auth Secret Key, la planta asociada, los sensores activados y si tiene bomba.",
+          "También puedes recibir por correo el código Arduino generado para ese dispositivo. El mensaje contiene el código en el texto y en un archivo .ino adjunto.",
+          "El código recoge la configuración del dispositivo: sensores, bomba, ajustes de riego automático, Device Key, Device ID y Auth Secret Key."
         ]
       },
       {
-        "heading": "Riego manual programado",
+        "heading": "Solicitar un riego manual",
         "body": [
-          "Si un dispositivo tiene habilitado el soporte para bomba de agua, el usuario puede programar una solicitud de riego manual.",
-          "El riego manual no ejecuta inmediatamente la bomba desde la app móvil. En su lugar, el backend crea una tarea de bomba pendiente para el dispositivo.",
-          "La placa física consulta el backend para buscar tareas de riego manual pendientes. Si existe una tarea pendiente y la placa tiene lógica de control de bomba, puede ejecutar la bomba y luego informar la finalización al backend.",
-          "El riego manual programado ignora el valor actual de humedad del suelo, el umbral de riego automático y el tiempo de espera del riego automático.",
-          "Esto significa que el riego manual se trata como una solicitud explícita del usuario.",
-          "Una solicitud de riego manual programada también puede retirarse antes de que el dispositivo la recoja."
+          "Si el dispositivo tiene la bomba activada, puedes pedir un riego desde la aplicación.",
+          "La solicitud no enciende la bomba de inmediato: crea una orden pendiente en el servidor.",
+          "La placa consulta el servidor. Si encuentra una orden y su programa controla la bomba, puede ejecutarla y comunicar el resultado.",
+          "El riego manual no tiene en cuenta la humedad actual, el umbral del riego automático ni la pausa entre riegos automáticos.",
+          "Se considera una instrucción expresa por tu parte.",
+          "Puedes cancelar la solicitud antes de que el dispositivo la recoja."
         ]
       },
       {
-        "heading": "Temporización de la tarea de riego manual",
+        "heading": "Cuándo se ejecuta la solicitud",
         "body": [
-          "El código de dispositivo generado usa temporización separada para las lecturas y las comprobaciones de riego manual.",
-          "De forma predeterminada, las lecturas de sensores se envían una vez por hora.",
-          "Las comprobaciones de riego automático se realizan como parte del ciclo de lectura horario.",
-          "Las tareas de riego manual pendientes se comprueban con mayor frecuencia, de forma predeterminada una vez por minuto.",
-          "Esto permite que las solicitudes de riego manual se recojan más rápido sin enviar lecturas de sensores cada minuto.",
-          "El orden de ejecución sigue siendo: enviar lecturas durante el ciclo de lectura normal, comprobar si hay riego manual pendiente y, si no se ejecutó ningún riego manual, comprobar las condiciones de riego automático.",
-          "Cuando la comprobación de riego manual de un minuto se ejecuta fuera del ciclo de lectura horario, solo comprueba si hay tareas de riego manual pendientes."
+          "El código generado separa el envío de lecturas de la búsqueda de solicitudes manuales.",
+          "Por defecto, envía las medidas una vez por hora.",
+          "Las condiciones del riego automático se comprueban en ese ciclo horario.",
+          "Las solicitudes manuales se consultan más a menudo: una vez por minuto de forma predeterminada.",
+          "Así pueden ejecutarse antes sin enviar todas las lecturas cada minuto.",
+          "En el ciclo normal, la placa envía las lecturas, busca solicitudes manuales y, si no ha ejecutado un riego manual, comprueba las condiciones automáticas.",
+          "Las comprobaciones entre los ciclos horarios solo buscan solicitudes manuales."
         ]
       },
       {
-        "heading": "Riego automático",
+        "heading": "El riego automático",
         "body": [
-          "Si el soporte para bomba de agua está habilitado, también puede habilitarse el riego automático.",
-          "El riego automático usa lecturas de humedad del suelo y un umbral configurado.",
-          "La placa solicita al backend la configuración actual de la bomba, incluido si el riego automático está habilitado y qué umbral debe usarse.",
-          "Si el riego automático está habilitado y la humedad actual del suelo está por debajo del umbral configurado, la placa puede ejecutar la bomba.",
-          "El riego automático depende de que el soporte para bomba de agua esté habilitado, el sensor de humedad del suelo esté habilitado, el inicio automático de la bomba esté habilitado, exista un umbral de humedad del suelo válido, el dispositivo esté activo y haya confirmación del backend de la configuración actual de la bomba.",
-          "El riego automático tiene un tiempo de espera para evitar activaciones repetidas de la bomba con demasiada frecuencia.",
-          "El riego manual tiene prioridad sobre el riego automático en el mismo ciclo. Si se ejecuta el riego manual, el riego automático se omite para ese ciclo."
+          "Puedes activar el riego automático si el dispositivo tiene habilitada la bomba.",
+          "Se basa en la lectura de humedad del suelo y el umbral configurado.",
+          "La placa pide al servidor los ajustes actuales, incluido si está activado el riego automático y qué umbral debe usar.",
+          "Si está activado y la humedad está por debajo del umbral, puede arrancar la bomba con autorización del servidor.",
+          "Requiere una bomba y un sensor de humedad habilitados, arranque automático activado, un umbral válido, un dispositivo activo y confirmación del servidor.",
+          "Una pausa entre riegos evita encender la bomba con demasiada frecuencia.",
+          "El riego manual tiene prioridad. Si se ejecuta, se omite el automático durante ese ciclo."
         ]
       },
       {
-        "heading": "Informe de finalización de la bomba",
+        "heading": "Comunicar el resultado del riego",
         "body": [
-          "Después de una ejecución de la bomba, el dispositivo informa la finalización al backend.",
-          "La finalización de la bomba puede informarse para riego manual programado o riego automático activado por la humedad del suelo.",
-          "Cuando una ejecución de la bomba se registra correctamente, el backend actualiza la última hora de ejecución de la bomba, el último origen de ejecución de la bomba y el estado de la tarea de bomba relacionada cuando corresponda.",
-          "Si las notificaciones de finalización de riego están habilitadas, el backend puede enviar notificaciones por correo electrónico y push después de que se complete el riego."
+          "Después de usar la bomba, el dispositivo comunica el resultado al servidor.",
+          "Puede hacerlo para una solicitud manual o para un riego automático por humedad del suelo.",
+          "Cuando se registra el resultado, el servidor actualiza la fecha del último riego, su origen y, si corresponde, el estado de la orden asociada.",
+          "Si has activado los avisos al terminar el riego, el servidor puede enviar un correo o una notificación push."
         ]
       },
       {
-        "heading": "Notificaciones de riego",
+        "heading": "Avisos al terminar el riego",
         "body": [
-          "Los dispositivos pueden configurarse para enviar notificaciones después de que se complete el riego.",
-          "Los tipos de notificación admitidos son notificación por correo electrónico y notificación push.",
-          "Estas son independientes de las alertas de baja humedad del suelo.",
-          "Las notificaciones de riego solo son relevantes cuando el dispositivo tiene habilitado el soporte para bomba de agua.",
-          "Una notificación de riego puede enviarse después de que se complete el riego manual o automático, dependiendo del informe de finalización de la bomba recibido del dispositivo."
+          "Puedes configurar avisos para cuando termine un riego.",
+          "Están disponibles por correo electrónico y por push.",
+          "Son independientes de las alertas de humedad baja.",
+          "Solo se aplican a los dispositivos con bomba activada.",
+          "Pueden enviarse después de un riego manual o automático, según el resultado que comunique el dispositivo."
         ]
       },
       {
-        "heading": "Alertas de baja humedad del suelo",
+        "heading": "Alertas de suelo seco",
         "body": [
-          "Los dispositivos con un sensor de humedad del suelo pueden configurarse para enviar alertas cuando la humedad del suelo cae por debajo de un umbral configurado.",
-          "Las alertas de baja humedad del suelo admiten notificaciones por correo electrónico y notificaciones push.",
-          "El backend rastrea el estado de alerta para que el usuario no reciba notificaciones repetidas en cada lectura mientras la planta permanezca por debajo del umbral.",
-          "Se envía una nueva alerta cuando el valor de humedad entra en el estado de baja humedad. El estado de alerta se restablece después de que la humedad vuelva a subir por encima del umbral.",
-          "Las alertas de baja humedad del suelo son independientes de las notificaciones de finalización de riego."
+          "Los dispositivos con sensor de humedad del suelo pueden avisarte cuando el valor baja del umbral elegido.",
+          "Estas alertas están disponibles por correo y push.",
+          "El servidor controla el estado de la alerta para no repetirla en cada lectura mientras la humedad siga baja.",
+          "La alerta se envía al cruzar el umbral hacia abajo. Puede volver a activarse después de que la humedad haya subido por encima del umbral.",
+          "Estas alertas son independientes de los avisos de fin de riego."
         ]
       },
       {
-        "heading": "Exportación de datos",
+        "heading": "Exportar los datos",
         "body": [
-          "La exportación de Lecturas envía una hoja de cálculo al usuario por correo electrónico.",
-          "La hoja de cálculo incluye datos de lecturas y registros de tareas de riego.",
-          "La pestaña de lecturas incluye lecturas de sensores como temperatura, humedad, luz y humedad del suelo.",
-          "La pestaña de tareas de riego incluye registros de tareas de bomba como origen manual o automático, estado, hora solicitada, hora entregada, hora ejecutada, hora cancelada, humedad en la solicitud, umbral en la solicitud y mensaje de error.",
-          "Si se aplican filtros en la pantalla Lecturas, la exportación respeta esos filtros. Por ejemplo, si la exportación está limitada a una planta o ámbito de dispositivo particular, los registros de tareas de riego también se limitan a los dispositivos coincidentes."
+          "La exportación de lecturas te envía una hoja de cálculo por correo.",
+          "El archivo incluye las medidas y los registros de las operaciones de riego.",
+          "La pestaña de lecturas contiene temperatura, humedad del aire, luz y humedad del suelo, entre otros datos.",
+          "La pestaña de riego incluye origen manual o automático, estado, fechas de solicitud, entrega, ejecución y cancelación, humedad y umbral en el momento de la solicitud y posibles mensajes de error.",
+          "La exportación respeta los filtros de «Lecturas». Si la limitas a una planta o a ciertos dispositivos, también se limitan los registros de riego a esos dispositivos."
         ]
       },
       {
-        "heading": "Código Arduino o ESP generado",
+        "heading": "El código generado para Arduino o ESP",
         "body": [
-          "El código generado está pensado como un punto de partida listo para editar para placas de estilo ESP32.",
-          "Incluye lógica para conexión WiFi, sincronización de hora, inicialización de sensores, lectura de sensores habilitados, envío de lecturas al backend, comprobación de tareas de riego manual, comprobación de configuraciones de riego automático controladas por el backend, ejecución de una bomba cuando sea necesario e informe de finalización de la bomba.",
-          "El código generado mantiene separadas la carga de lecturas y las comprobaciones de tareas de riego manual.",
-          "De forma predeterminada, las lecturas se envían cada hora, mientras que las tareas de riego manual se comprueban una vez por minuto.",
-          "Los usuarios deben revisar y ajustar el código generado para su propio hardware, pines, valores de calibración, cableado del relé de la bomba y tipo de placa."
+          "El código es una base que puedes adaptar para placas de tipo ESP32.",
+          "Gestiona Wi-Fi, sincronización horaria, inicialización y lectura de sensores, envío de medidas, solicitudes manuales, ajustes automáticos del servidor, control de la bomba y comunicación del resultado.",
+          "El envío de lecturas y la búsqueda de solicitudes manuales se gestionan por separado.",
+          "Por defecto, las lecturas se envían cada hora y las solicitudes manuales se buscan cada minuto.",
+          "Revisa y adapta el código a tu placa, pines, calibración, relé de la bomba y cableado."
         ]
       },
       {
-        "heading": "Notas importantes",
+        "heading": "Aspectos importantes",
         "body": [
-          "La estabilidad del dispositivo, la calibración, el cableado físico y la instalación son responsabilidad del usuario.",
-          "Las lecturas de sensores son informativas y deben interpretarse junto con la observación del mundo real.",
-          "El control de bombas de agua requiere cuidado adicional. Los usuarios deben asegurarse de que su relé, bomba, fuente de alimentación, tuberías y fuente de agua estén instalados de forma segura.",
-          "Flovers registra y muestra datos del dispositivo, pero no garantiza la precisión de sensores de terceros o construidos por el usuario.",
-          "Flovers tampoco garantiza que una bomba física se ejecute correctamente. La ejecución de la bomba depende del hardware del usuario, el código generado, la conectividad WiFi y la configuración correcta del dispositivo."
+          "El funcionamiento del dispositivo, su calibración, cableado e instalación son tu responsabilidad.",
+          "Las medidas sirven de orientación y deben compararse con la observación directa.",
+          "El control de una bomba requiere especial cuidado. Instala de forma segura el relé, la bomba, la alimentación, los tubos y la fuente de agua.",
+          "Flovers registra y muestra los datos, pero no garantiza la precisión de sensores de terceros o montados por ti.",
+          "Tampoco garantiza que la bomba física funcione. Depende del hardware, el programa instalado, la conexión Wi-Fi y los ajustes del dispositivo."
         ]
       }
     ]

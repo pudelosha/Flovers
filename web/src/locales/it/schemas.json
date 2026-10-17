@@ -1,131 +1,132 @@
 {
   "common": {
     "copy": "Copia",
-    "copied": "Copiato"
+    "copied": "Copiato",
+    "closePreview": "Chiudi l'anteprima dello schema"
   },
-  "title": "API del dispositivo e cablaggio",
+  "title": "Sensori, annaffiatura e API",
   "lead": [
-    "Questa pagina documenta come i dispositivi IoT si integrano con Flovers.",
-    "I dispositivi possono inviare letture ambientali al backend, controllare se dall’app mobile è stato programmato un intervento di irrigazione manuale e segnalare a Flovers le attivazioni della pompa completate.",
-    "Il firmware Arduino/ESP generato può supportare sia le letture sia il controllo dell’irrigazione in un unico sketch. Se il dispositivo collegato è stato configurato con una pompa dell’acqua, il codice generato include endpoint della pompa e logica di controllo della pompa. Se il dispositivo è stato configurato senza pompa, il firmware generato può essere semplificato per inviare solo le letture."
+    "Qui trovi le istruzioni per collegare sensori e pompa a Flovers e usare le API.",
+    "Il dispositivo può inviare misurazioni, ricevere i comandi di annaffiatura dall'app e comunicare quando la pompa ha finito.",
+    "Il codice generato nell'app tiene conto delle impostazioni del dispositivo scelto. Se usi una pompa, gestisce anche l'annaffiatura; altrimenti invia soltanto le misurazioni."
   ],
   "firmwareIntro": {
-    "title": "Cosa fa il firmware generato",
-    "lead": "Il firmware generato può:",
+    "title": "Cosa fa il programma sulla scheda",
+    "lead": "Il programma generato:",
     "items": [
-      "connettersi al Wi-Fi",
-      "sincronizzare l’ora tramite NTP",
-      "leggere i sensori abilitati",
-      "inviare letture a Flovers",
-      "controllare la presenza di interventi di irrigazione manuale programmati",
-      "azionare la pompa quando è in sospeso un intervento di irrigazione manuale",
-      "controllare le impostazioni di irrigazione automatica gestite dal backend",
-      "azionare l’irrigazione automatica quando l’umidità del suolo è inferiore alla soglia configurata",
-      "segnalare al backend il completamento dell’irrigazione"
+      "si connette al Wi-Fi",
+      "imposta l'orologio tramite un server NTP",
+      "legge i dati dei sensori attivati",
+      "invia le misurazioni a Flovers",
+      "controlla se hai richiesto un'annaffiatura manuale dall'app",
+      "avvia la pompa quando riceve il comando",
+      "recupera dal server le impostazioni dell'annaffiatura automatica",
+      "annaffia automaticamente quando l'umidità del terreno scende sotto la soglia impostata e il server lo autorizza",
+      "comunica il completamento dell'annaffiatura"
     ],
-    "defaultTiming": "Per impostazione predefinita, le letture vengono inviate una volta all’ora. Gli interventi di irrigazione manuale vengono controllati più frequentemente, ad esempio una volta al minuto, in modo che una richiesta di irrigazione creata dall’app mobile possa essere rilevata senza attendere il successivo ciclo di lettura orario.",
-    "adjustmentNote": "Alcuni valori devono essere adattati al tuo hardware e alle tue preferenze, in particolare le credenziali Wi-Fi, i numeri dei pin, la calibrazione dell’umidità del suolo, il tempo di funzionamento della pompa, l’intervallo di lettura, l’intervallo di polling degli interventi manuali e il cooldown dell’irrigazione automatica."
+    "defaultTiming": "Per impostazione predefinita, il programma invia le misurazioni una volta all'ora. Controlla i comandi di annaffiatura manuale separatamente, di norma ogni minuto. Così la pompa può rispondere a una richiesta dall'app senza aspettare la misurazione successiva.",
+    "adjustmentNote": "Prima di caricare il codice, inserisci i dati del Wi-Fi e controlla le impostazioni dell'hardware: pin, calibrazione del sensore del terreno e durata di funzionamento della pompa. Puoi anche modificare gli intervalli tra le misurazioni, i controlli dei comandi e le annaffiature automatiche."
   },
   "endpoints": {
-    "title": "Endpoint API",
+    "title": "Indirizzi delle API",
     "ingest": {
-      "title": "Acquisizione letture",
-      "direction": "Dispositivo → backend",
+      "title": "Invio delle misurazioni",
+      "direction": "Dispositivo → server",
       "desc": [
-        "I dispositivi usano questo endpoint per inviare letture dei sensori.",
-        "Il backend autentica la richiesta usando:",
-        "Il backend archivia le letture nel dispositivo corrispondente. Le letture possono includere temperatura, umidità, luce, umidità del suolo o qualsiasi sottoinsieme delle metriche abilitate."
+        "Il dispositivo invia a questo indirizzo le misurazioni dei sensori.",
+        "Il server controlla i campi secret e device_key. Puoi indicare anche device_id.",
+        "Le misurazioni vengono associate al dispositivo corrispondente. Puoi inviare temperatura, umidità dell'aria, luminosità e umidità del terreno, oppure solo alcuni di questi valori."
       ],
       "authItems": [
         "secret",
         "device_key",
-        "facoltativamente device_id"
+        "device_id — facoltativo"
       ]
     },
     "pumpNextTask": {
-      "title": "Controlla il prossimo intervento della pompa",
-      "direction": "Dispositivo → backend",
+      "title": "Controllo dei comandi di annaffiatura",
+      "direction": "Dispositivo → server",
       "desc": [
-        "I dispositivi con supporto per la pompa usano questo endpoint per controllare se è in attesa un intervento di irrigazione manuale.",
-        "La risposta include anche la configurazione corrente della pompa automatica gestita dal backend, ad esempio se l’irrigazione automatica è abilitata e quale soglia di umidità del suolo deve essere usata."
+        "Un dispositivo con pompa usa questo indirizzo per verificare se c'è un comando di annaffiatura manuale da eseguire.",
+        "La risposta contiene anche le impostazioni attuali dell'annaffiatura automatica: ad esempio, se è attiva e quale soglia di umidità del terreno deve usare."
       ]
     },
     "pumpComplete": {
-      "title": "Segnala il completamento della pompa",
-      "direction": "Dispositivo → backend",
+      "title": "Conferma di completamento dell'annaffiatura",
+      "direction": "Dispositivo → server",
       "desc": [
-        "I dispositivi usano questo endpoint dopo che la pompa è stata azionata.",
-        "Questo può segnalare:"
+        "Quando la pompa ha finito, il dispositivo comunica il risultato.",
+        "La conferma può riguardare:"
       ],
       "items": [
-        "un intervento di irrigazione manuale programmato, usando task_id",
-        "oppure un evento di irrigazione automatica, usando source: \"automatic\""
+        "un'annaffiatura manuale, con il task_id ricevuto insieme al comando",
+        "un'annaffiatura automatica, con source: \"automatic\" e il task_id ricevuto prima di avviare la pompa"
       ]
     },
     "feed": {
-      "title": "Leggi il feed più recente",
-      "direction": "Dispositivo → backend",
+      "title": "Recupero delle ultime misurazioni",
+      "direction": "Dispositivo → server",
       "desc": [
-        "Questo endpoint restituisce i dati dell’ultima lettura per un dispositivo. È ancora utile per integrazioni semplici o diagnostica, ma il firmware generato con pompa abilitata usa pump-next-task e pump-complete per il controllo dell’irrigazione."
+        "Questo indirizzo restituisce le ultime misurazioni salvate per il dispositivo. È utile per la diagnostica e per integrazioni semplici. Per gestire la pompa si usano invece pump-next-task, pump-auto-claim e pump-complete."
       ]
     }
   },
   "ingest": {
-    "title": "Documentazione POST ingest",
-    "desc": "Invia un singolo campione di lettura come JSON. Il backend autentica il dispositivo e archivia le metriche fornite.",
-    "payloadShape": "Struttura del payload",
-    "examplePayload": "Payload di esempio",
-    "powershellExample": "Esempio PowerShell"
+    "title": "Inviare misurazioni: POST ingest",
+    "desc": "Invia una misurazione in formato JSON. Il server verifica i dati di accesso e salva i valori ricevuti.",
+    "payloadShape": "Campi della richiesta",
+    "examplePayload": "Dati di esempio",
+    "powershellExample": "Esempio in PowerShell"
   },
   "pumpNextTask": {
-    "title": "Documentazione POST pump-next-task",
+    "title": "Controllare i comandi: POST pump-next-task",
     "desc": [
-      "Questo endpoint è usato dai dispositivi con supporto per la pompa.",
-      "Il dispositivo chiede al backend se esiste un intervento di irrigazione manuale programmato. Il backend restituisce:"
+      "Questo indirizzo è destinato ai dispositivi dotati di pompa.",
+      "Il dispositivo chiede al server se hai richiesto un'annaffiatura manuale nell'app. La risposta indica:"
     ],
     "items": [
-      "se la pompa deve essere azionata ora",
-      "l’ID dell’intervento se esiste un intervento di irrigazione manuale",
-      "le impostazioni correnti della pompa automatica",
-      "se il backend considera abilitati la pompa e il sensore di umidità"
+      "se la pompa deve avviarsi adesso",
+      "l'identificativo del comando di annaffiatura manuale, se ce n'è uno in attesa",
+      "le impostazioni attuali dell'annaffiatura automatica",
+      "se la pompa e il sensore di umidità del terreno sono attivati nelle impostazioni del dispositivo"
     ],
-    "payloadShape": "Struttura del payload",
-    "examplePayload": "Payload di esempio",
-    "responseNoTask": "Risposta di esempio senza intervento di irrigazione manuale",
-    "responseWithTask": "Risposta di esempio con un intervento di irrigazione manuale",
-    "powershellExample": "Esempio PowerShell"
+    "payloadShape": "Campi della richiesta",
+    "examplePayload": "Dati di esempio",
+    "responseNoTask": "Risposta senza comandi di annaffiatura in attesa",
+    "responseWithTask": "Risposta con un comando di annaffiatura",
+    "powershellExample": "Esempio in PowerShell"
   },
   "pumpComplete": {
-    "title": "Documentazione POST pump-complete",
+    "title": "Comunicare il risultato: POST pump-complete",
     "desc": [
-      "Dopo l’attivazione della pompa, il dispositivo segnala il completamento.",
-      "Per l’irrigazione manuale, includi il task_id restituito da pump-next-task.",
-      "Per l’irrigazione automatica, ometti task_id e usa source: \"automatic\"."
+      "Al termine, il dispositivo comunica al server se l'annaffiatura è riuscita.",
+      "Per l'annaffiatura manuale, indica il task_id ricevuto da pump-next-task.",
+      "Per l'annaffiatura automatica, indica il task_id ricevuto da pump-auto-claim e source: \"automatic\"."
     ],
-    "manualPayload": "Payload di completamento dell’irrigazione manuale",
-    "automaticPayload": "Payload di completamento dell’irrigazione automatica",
-    "failedPayload": "Payload di attivazione della pompa non riuscita",
-    "powershellExample": "Esempio PowerShell"
+    "manualPayload": "Conferma dell'annaffiatura manuale",
+    "automaticPayload": "Conferma dell'annaffiatura automatica",
+    "failedPayload": "Segnalazione di un'annaffiatura non riuscita",
+    "powershellExample": "Esempio in PowerShell"
   },
   "feed": {
-    "title": "Documentazione GET feed",
+    "title": "Recuperare le misurazioni: GET feed",
     "desc": [
-      "L’endpoint feed restituisce l’ultima lettura per un dispositivo.",
-      "Può essere usato per diagnostica o integrazioni semplici che devono solo leggere gli ultimi valori archiviati."
+      "L'indirizzo feed restituisce le ultime misurazioni salvate per il dispositivo.",
+      "Puoi usarlo per la diagnostica o in un'integrazione che deve soltanto recuperare i valori più recenti."
     ],
-    "exampleRequest": "Richiesta di esempio",
-    "exampleResponse": "Risposta di esempio"
+    "exampleRequest": "Esempio di richiesta",
+    "exampleResponse": "Esempio di risposta"
   },
   "generatedFirmware": {
-    "title": "Firmware Arduino / ESP32 generato",
+    "title": "Codice per la scheda Arduino / ESP32",
     "desc": [
-      "L’app può generare firmware per il dispositivo selezionato.",
-      "Il firmware generato include gli endpoint API corretti, il segreto di autenticazione, la chiave del dispositivo, l’ID del dispositivo, i sensori abilitati e le impostazioni della pompa per quel dispositivo.",
-      "Se il dispositivo è configurato con una pompa dell’acqua, il codice generato include sia le letture sia il controllo della pompa dell’acqua. Controlla gli interventi di irrigazione manuale separatamente dal ciclo di lettura orario e l’irrigazione automatica usa la soglia e l’interruttore gestiti dal backend."
+      "Nell'app puoi generare il codice per il dispositivo selezionato.",
+      "Il codice include gli indirizzi delle API, i dati di accesso (secret e device_key), l'identificativo del dispositivo e le impostazioni dei sensori e della pompa.",
+      "Se il dispositivo ha una pompa, il programma gestisce sia le misurazioni sia l'annaffiatura. Controlla i comandi manuali indipendentemente dall'invio delle misurazioni. Per l'annaffiatura automatica usa le impostazioni dell'app e richiede l'autorizzazione del server prima di avviare la pompa."
     ],
-    "adjustIntro": "Prima di caricare lo sketch, adatta i seguenti valori al tuo hardware:",
+    "adjustIntro": "Prima di caricare il codice, controlla questi valori e adattali al tuo hardware:",
     "adjustItems": [
-      "SSID e password Wi-Fi",
+      "nome della rete (SSID) e password Wi-Fi",
       "SDA_PIN e SCL_PIN",
       "SOIL_PIN",
       "PUMP_PIN",
@@ -135,109 +136,111 @@
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
       "AUTO_PUMP_MIN_INTERVAL_MS"
     ],
-    "codeLabel": "Firmware Arduino generato: letture + controllo della pompa dell’acqua"
+    "codeLabel": "Programma di esempio: misurazioni dei sensori e controllo della pompa"
   },
   "behavior": {
-    "title": "Riepilogo del comportamento del firmware",
+    "title": "Misurazioni e annaffiatura, passo dopo passo",
     "fullCycle": {
-      "title": "Ciclo orario completo",
-      "desc": "Ogni SEND_INTERVAL_MS, la scheda esegue un ciclo completo:",
+      "title": "Ciclo di misurazione",
+      "desc": "Ogni SEND_INTERVAL_MS, la scheda:",
       "items": [
         "legge i sensori",
-        "invia le letture all’endpoint ingest",
-        "controlla la presenza di irrigazione manuale programmata",
-        "esegue l’irrigazione manuale se un intervento è in sospeso",
-        "altrimenti controlla le condizioni per l’irrigazione automatica",
-        "esegue l’irrigazione automatica se le impostazioni del backend lo consentono e l’umidità del suolo è inferiore alla soglia"
+        "invia le misurazioni a ingest",
+        "controlla se c'è un comando di annaffiatura manuale",
+        "lo esegue, se presente",
+        "in caso contrario, verifica le condizioni per l'annaffiatura automatica",
+        "annaffia automaticamente se l'umidità del terreno è sotto la soglia, le impostazioni lo consentono e il server autorizza l'operazione"
       ]
     },
     "manualCheck": {
-      "title": "Controllo dell’irrigazione manuale",
+      "title": "Controllo dei comandi manuali",
       "desc": [
-        "Ogni MANUAL_PUMP_CHECK_INTERVAL_MS, la scheda controlla solo la presenza di interventi di irrigazione manuale programmati.",
-        "Questo controllo più breve:",
-        "Questo consente all’azione “Programma irrigazione” dell’app di essere rilevata rapidamente senza forzare l’invio delle letture dei sensori ogni minuto."
+        "Ogni MANUAL_PUMP_CHECK_INTERVAL_MS, la scheda controlla i comandi di annaffiatura manuale.",
+        "Durante questo ciclo più breve:",
+        "Così un comando inviato dall'app può essere eseguito rapidamente, senza inviare tutte le misurazioni ogni minuto."
       ],
       "items": [
-        "non invia letture",
-        "non esegue l’irrigazione automatica",
-        "esegue solo un intervento di irrigazione manuale in sospeso, se esiste"
+        "non invia misurazioni",
+        "non avvia l'annaffiatura automatica",
+        "esegue soltanto l'eventuale comando di annaffiatura manuale in attesa"
       ]
     },
     "automatic": {
-      "title": "Irrigazione automatica",
+      "title": "Annaffiatura automatica",
       "desc": [
-        "L’irrigazione automatica è controllata dalle impostazioni del backend configurate nell’app mobile.",
-        "La scheda esegue l’irrigazione automatica solo quando:"
+        "Puoi attivare e configurare l'annaffiatura automatica nell'app.",
+        "La scheda avvia la pompa solo se:"
       ],
       "items": [
-        "il supporto per la pompa è abilitato",
-        "l’avvio automatico della pompa è abilitato",
-        "il sensore di umidità è abilitato",
-        "l’ultima umidità del suolo misurata è inferiore alla soglia del backend",
-        "il cooldown dell’irrigazione automatica è trascorso"
+        "la pompa è attivata nelle impostazioni del dispositivo",
+        "l'annaffiatura automatica è attiva",
+        "il sensore di umidità del terreno è attivato",
+        "l'umidità misurata è inferiore alla soglia impostata",
+        "è trascorso l'intervallo minimo dall'ultima annaffiatura e il server autorizza la successiva"
       ],
-      "cooldown": "Dopo l’esecuzione dell’irrigazione manuale o automatica, il firmware avvia il cooldown dell’irrigazione automatica. Questo aiuta a evitare che un intervento di irrigazione manuale e l’irrigazione automatica avvengano troppo ravvicinati."
+      "cooldown": "Dopo ogni annaffiatura, manuale o automatica, il programma attende l'intervallo impostato prima di annaffiare di nuovo automaticamente. In questo modo evita di avviare la pompa due volte a distanza troppo ravvicinata."
     },
     "manual": {
-      "title": "Irrigazione manuale",
+      "title": "Annaffiatura manuale",
       "desc": [
-        "L’irrigazione manuale viene programmata dall’app mobile.",
-        "L’irrigazione manuale ignora intenzionalmente:",
-        "Ciò significa che quando l’utente programma manualmente l’irrigazione, la scheda la considera una richiesta esplicita di azionare la pompa una volta."
+        "Puoi richiedere un'annaffiatura manuale dall'app.",
+        "Il comando viene eseguito indipendentemente da:",
+        "La scheda lo considera una richiesta esplicita di avviare la pompa una volta, senza verificare le condizioni dell'annaffiatura automatica."
       ],
       "items": [
-        "l’umidità corrente del suolo",
-        "la soglia di irrigazione automatica",
-        "il cooldown dell’irrigazione automatica"
+        "umidità attuale del terreno",
+        "soglia dell'annaffiatura automatica",
+        "intervallo minimo tra le annaffiature automatiche"
       ]
     }
   },
   "hardware": {
-    "title": "Note sull’hardware",
-    "desc": "Il firmware generato presuppone componenti comuni compatibili con ESP32:",
+    "title": "Collegamento dell'hardware",
+    "desc": "Il codice generato è predisposto per questi componenti:",
     "items": [
-      "sensore di luce BH1750 / GY-302 tramite I2C",
-      "sensore di temperatura e umidità BME280 tramite I2C",
-      "sensore capacitivo di umidità del suolo su un pin analogico",
-      "relè o driver della pompa collegato a un pin di uscita digitale"
+      "sensore di luminosità BH1750 / GY-302 collegato tramite I2C",
+      "sensore di temperatura e umidità dell'aria BME280 collegato tramite I2C",
+      "sensore capacitivo di umidità del terreno collegato a un ingresso analogico",
+      "relè o driver della pompa collegato a un'uscita digitale"
     ],
-    "verify": "Verifica tutto il cablaggio prima di alimentare la pompa.",
-    "relayNote": "Alcuni moduli relè sono attivi LOW, mentre altri sono attivi HIGH. L’esempio generato usa:",
-    "relayReverse": "Se il tuo relè funziona al contrario, potrebbe essere necessario invertire i valori HIGH e LOW.",
-    "relayCodeLabel": "Esempio di uscita della pompa"
+    "verify": "Controlla tutti i collegamenti prima di alimentare la pompa.",
+    "relayNote": "A seconda del modulo, il relè può attivarsi con un livello LOW o HIGH. Nell'esempio la pompa viene comandata così:",
+    "relayReverse": "Se il tuo relè funziona al contrario, scambia HIGH e LOW nel codice che comanda la pompa.",
+    "relayCodeLabel": "Accensione e spegnimento della pompa"
   },
   "calibration": {
-    "title": "Note sulla calibrazione",
+    "title": "Calibrazione del sensore di umidità del terreno",
     "desc": [
-      "I sensori di umidità del suolo devono essere calibrati per ottenere risultati affidabili.",
-      "Il codice generato usa:",
-      "Questi valori sono solo esempi.",
-      "Misura il valore del sensore nel terreno asciutto o nell’aria, poi misuralo di nuovo nel terreno bagnato o nell’acqua e aggiorna queste costanti di conseguenza."
+      "Calibra il sensore di umidità del terreno per ottenere valori attendibili.",
+      "Due costanti servono a convertire le letture in percentuale:",
+      "I valori dell'esempio vanno adattati al tuo sensore.",
+      "Leggi il valore grezzo nel terreno asciutto e in quello bagnato, poi inserisci i risultati nelle due costanti. Se fai una prova in acqua, immergi solo la parte di misurazione, seguendo le istruzioni del produttore."
     ],
-    "codeLabel": "Valori di calibrazione predefiniti"
+    "codeLabel": "Valori di calibrazione di esempio"
   },
   "safety": {
-    "title": "Note sulla sicurezza",
+    "title": "Prima di lasciare la pompa incustodita",
     "desc": [
-      "Il firmware generato è un punto di partenza. Prima di lasciare una pompa incustodita:",
-      "Flovers archivia letture ed eventi di irrigazione, ma il cablaggio del dispositivo, la calibrazione, il comportamento della pompa e l’installazione fisica restano responsabilità dell’utente."
+      "Adatta il codice generato al tuo impianto. Prima di lasciare la pompa incustodita:",
+      "Flovers salva le misurazioni e la cronologia delle annaffiature. Il corretto collegamento, la calibrazione, il funzionamento e il montaggio della pompa restano sotto la tua responsabilità."
     ],
     "items": [
-      "testa manualmente la pompa",
-      "conferma la logica del relè",
-      "verifica che la pompa si spenga correttamente",
-      "usa un tempo di funzionamento sicuro per la pompa",
-      "conferma che i valori di umidità del suolo siano realistici",
-      "proteggi l’elettronica dall’acqua",
-      "usa un’alimentazione e un isolamento adeguati per la pompa"
+      "prova l'avvio manuale della pompa",
+      "verifica con quale livello dell'uscita si attiva il relè",
+      "controlla che la pompa si spenga al termine dell'annaffiatura",
+      "scegli una durata adatta alla portata della pompa e alle necessità della pianta",
+      "verifica che i valori di umidità del terreno siano plausibili",
+      "proteggi l'elettronica dall'acqua",
+      "usa un'alimentazione adeguata e un corretto isolamento del circuito della pompa"
     ]
   },
   "wiring": {
-    "title": "Schemi di cablaggio",
-    "desc": "Di seguito è riportato uno schema di cablaggio di esempio del dispositivo. Fai clic sull’immagine per aprirla a schermo intero.",
-    "ariaPrimary": "Schema di cablaggio di esempio del dispositivo",
-    "placeholderTitlePrimary": "Schema di cablaggio di esempio del dispositivo",
-    "placeholderSubPrimary": "Fai clic sull’immagine per visualizzarla a schermo intero."
-  }
+    "title": "Schema dei collegamenti",
+    "desc": "Qui trovi un esempio di collegamento del dispositivo. Fai clic sull'immagine per ingrandirla.",
+    "ariaPrimary": "Ingrandisci lo schema dei collegamenti",
+    "placeholderTitlePrimary": "Esempio di collegamento del dispositivo",
+    "placeholderSubPrimary": "Fai clic per ingrandire lo schema."
+  },
+  "retrySafety": "Imposta supports_task_retry su true solo se il programma salva in modo permanente lo stato del comando prima di avviare la pompa e ne conserva il risultato. In questo modo, ricevere di nuovo lo stesso comando non provoca una seconda annaffiatura. Il codice generato include già questa protezione. Per usarla sui dispositivi esistenti, genera di nuovo il codice e caricalo sulla scheda. Ai programmi precedenti il server non invia di nuovo un comando già consegnato.",
+  "claimSafety": "Prima di annaffiare automaticamente, il dispositivo deve ottenere l'autorizzazione del server. Invia una richiesta POST a /readings/pump-auto-claim/ con secret, device_key e il valore moisture appena misurato; device_id è facoltativo. Avvia la pompa solo se la risposta contiene run: true. Il task_id restituito serve per confermare l'esecuzione. Il codice generato gestisce già questi passaggi."
 }

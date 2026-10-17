@@ -3,52 +3,52 @@
     "title": "Connexion et inscription",
     "sections": [
       {
-        "heading": "Créer un nouveau compte (Inscription)",
+        "heading": "Créer ton compte",
         "body": [
-          "Pour utiliser Flovers, vous devez créer un compte utilisateur individuel. L'inscription se fait directement dans l'application mobile.",
-          "Lors de l'inscription, seule l'adresse e-mail et le mot de passe sont requis. Aucune donnée personnelle supplémentaire n'est nécessaire à ce stade.",
-          "Le mot de passe doit comporter au moins 8 caractères et inclure au moins un chiffre et un caractère spécial pour assurer un niveau de sécurité de base.",
-          "Avant de terminer l'inscription, l'utilisateur doit accepter les Conditions Générales et la Politique de Confidentialité."
+          "Pour utiliser Flovers, crée ton propre compte directement dans l’application mobile.",
+          "Une adresse e-mail et un mot de passe suffisent pour t’inscrire. Aucune autre information personnelle n’est demandée à cette étape.",
+          "Ton mot de passe doit contenir au moins 8 caractères, dont un chiffre et un caractère spécial.",
+          "Avant de terminer l’inscription, tu dois accepter les conditions d’utilisation et la politique de confidentialité."
         ]
       },
       {
-        "heading": "Activation du compte par e-mail",
+        "heading": "Activer ton compte par e-mail",
         "body": [
-          "Après l'envoi du formulaire d'inscription, un e-mail d'activation est envoyé à l'adresse e-mail fournie.",
-          "Pour activer le compte, cliquez sur le lien de confirmation contenu dans l'e-mail reçu.",
-          "Jusqu'à l'activation du compte, il n'est pas possible de se connecter à l'application."
+          "Après ton inscription, un e-mail d’activation est envoyé à l’adresse indiquée.",
+          "Ouvre le lien de confirmation dans ce message pour activer ton compte.",
+          "Tu pourras te connecter à l’application une fois ton compte activé."
         ]
       },
       {
-        "heading": "Renvoi de l'e-mail d'activation",
+        "heading": "Recevoir un nouvel e-mail d’activation",
         "body": [
-          "Si l'e-mail d'activation n'est pas arrivé, l'utilisateur peut demander son renvoi depuis l'application.",
-          "Cette option est disponible sur l'écran de connexion ou d'inscription et peut être utilisée si le message a été perdu, retardé ou est arrivé dans les spams.",
-          "Avant de redemander l'envoi, il est recommandé de vérifier le dossier spam ou d'autres filtres de messagerie."
+          "Si le message n’est pas arrivé, tu peux en demander un nouveau dans l’application.",
+          "Cette option se trouve sur les écrans de connexion ou d’inscription. Elle peut servir si le message est retardé, perdu ou classé comme indésirable.",
+          "Vérifie d’abord tes courriers indésirables et les autres dossiers filtrés avant de demander un nouvel envoi."
         ]
       },
       {
-        "heading": "Connexion à un compte existant",
+        "heading": "Te connecter à ton compte",
         "body": [
-          "Pour se connecter, seule l'adresse e-mail et le mot de passe associé au compte sont nécessaires.",
-          "Si le compte n'a pas encore été activé, l'application informera qu'il est nécessaire de confirmer l'adresse e-mail.",
-          "Les informations de connexion sont vérifiées en toute sécurité côté serveur ; les mots de passe ne sont pas stockés en texte clair."
+          "Utilise l’adresse e-mail et le mot de passe associés à ton compte.",
+          "Si ton compte n’est pas encore activé, l’application te demandera de confirmer ton adresse e-mail.",
+          "Les identifiants sont vérifiés de manière sécurisée sur le serveur. Les mots de passe ne sont pas conservés en clair."
         ]
       },
       {
-        "heading": "Réinitialisation du mot de passe oublié",
+        "heading": "Réinitialiser ton mot de passe",
         "body": [
-          "Si l'utilisateur ne peut pas se connecter en raison d'un mot de passe oublié, il peut demander l'envoi d'un e-mail pour réinitialiser le mot de passe.",
-          "Le message contient des instructions ainsi qu'un lien sécurisé permettant de définir un nouveau mot de passe.",
-          "Après avoir défini un nouveau mot de passe, il est possible de se connecter immédiatement à l'application."
+          "Si tu as oublié ton mot de passe, demande un e-mail de réinitialisation dans l’application.",
+          "Ce message contient les instructions et un lien sécurisé pour choisir un nouveau mot de passe.",
+          "Tu peux ensuite te connecter immédiatement avec ce nouveau mot de passe."
         ]
       },
       {
-        "heading": "Consignes de sécurité",
+        "heading": "Protéger ton compte",
         "body": [
-          "Chaque compte utilisateur est protégé par un mot de passe individuel défini lors de l'inscription.",
-          "Pour des raisons de sécurité, il est recommandé de ne pas partager les informations de connexion avec des tiers.",
-          "En cas de soupçon d'accès non autorisé au compte, il est recommandé de changer immédiatement le mot de passe."
+          "Chaque compte est protégé par le mot de passe choisi lors de l’inscription.",
+          "Ne communique pas tes identifiants à d’autres personnes.",
+          "Si tu soupçonnes un accès non autorisé à ton compte, change immédiatement ton mot de passe."
         ]
       }
     ]

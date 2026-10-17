@@ -3,52 +3,52 @@
     "title": "Pflanzen",
     "sections": [
       {
-        "heading": "Ziel dieser Ansicht",
+        "heading": "Deine Pflanzen im Überblick",
         "body": [
-          "Die Pflanzenansicht zeigt alle Pflanzeninstanzen an, die in deinem Konto erstellt wurden.",
-          "Jede Kachel stellt eine Pflanze (dein Exemplar) dar. Von der Kachel aus kannst du zu den Pflanzendetails wechseln oder die Schnellzugriffsmenüoptionen über das Drei-Punkte-Menü verwenden (z. B. Erinnerungen, Tagebuch, QR-Code)."
+          "Unter „Pflanzen“ findest du alle Pflanzen, die du zu deinem Konto hinzugefügt hast.",
+          "Jede Kachel steht für eine deiner Pflanzen. Du kannst ihre Details öffnen oder über das Drei-Punkte-Menü direkt zu Erinnerungen, Pflanzentagebuch oder QR-Code wechseln."
         ]
       },
       {
-        "heading": "Pflanzenkacheln (Liste)",
+        "heading": "Was die Pflanzenkacheln zeigen",
         "body": [
-          "Die Pflanzenkachel zeigt den Namen der Pflanze sowie (falls verfügbar) den Namen der zugehörigen Pflanzendefinition (Art) und den zugewiesenen Standort.",
-          "Das Tippen auf den Inhalt der Kachel (außerhalb des Drei-Punkte-Menüs) führt zu den Pflanzendetails."
+          "Die Kachel zeigt den Namen deiner Pflanze, den zugeordneten Standort und, falls vorhanden, den Namen des ausgewählten Pflanzenprofils beziehungsweise der Art.",
+          "Tippe auf die Kachel außerhalb des Drei-Punkte-Menüs, um die Pflanzendetails zu öffnen."
         ]
       },
       {
-        "heading": "Drei-Punkte-Menü (Pflanzenaktionen)",
+        "heading": "Aktionen im Drei-Punkte-Menü",
         "body": [
-          "Jede Kachel hat ein Drei-Punkte-Menü mit Aktionen für die ausgewählte Pflanze:",
-          "Pflanze bearbeiten: öffnet die Bearbeitung der Pflanzendaten und -parameter.",
-          "Erinnerungen anzeigen: geht zur Erinnerungsansicht mit einem Filter, der auf Erinnerungen eingestellt ist, die mit der ausgewählten Pflanze verbunden sind.",
-          "Pflanzenjournal anzeigen: öffnet ein Modal mit der Historie abgeschlossener Aufgaben (einschließlich Benutzernotizen). Notizen sind sichtbar und werden nicht ausgeblendet.",
-          "QR-Code anzeigen: öffnet ein Modal mit dem QR-Code der Pflanze, einer kurzen Beschreibung und Optionen zum Speichern (Herunterladen) oder Senden des Codes an die eigene E-Mail-Adresse.",
-          "Pflanze löschen: entfernt die Pflanze dauerhaft sowie alle zugehörigen Daten wie Aufgaben, Erinnerungen und Verbindungen zu Geräten."
+          "Im Drei-Punkte-Menü jeder Kachel findest du Aktionen für die jeweilige Pflanze:",
+          "„Pflanze bearbeiten“: Öffnet die Bearbeitung der Angaben und Einstellungen deiner Pflanze.",
+          "„Erinnerungen anzeigen“: Öffnet die Erinnerungen mit einem Filter für diese Pflanze.",
+          "„Pflanzentagebuch anzeigen“: Öffnet ein Fenster mit den erledigten Aufgaben und deinen Notizen. Die Notizen werden direkt angezeigt.",
+          "„QR-Code anzeigen“: Öffnet den QR-Code mit einer kurzen Erklärung. Du kannst ihn herunterladen oder an deine E-Mail-Adresse senden lassen.",
+          "„Pflanze löschen“: Löscht die Pflanze und zugehörige Daten wie Aufgaben, Erinnerungen und Geräteverknüpfungen dauerhaft."
         ]
       },
       {
-        "heading": "FAB-Schaltflächenmenü",
+        "heading": "Schnellaktionen",
         "body": [
-          "Die FAB im Pflanzenbereich bietet schnelle Aktionen:",
-          "Pflanze erstellen: startet den Pflanzen-Erstellungsassistenten (9-Schritte-Prozess), bei dem die Pflanze präzise definiert werden kann.",
-          "Sortieren: sortiert die Pflanzenkacheln nach Pflanzenname oder Standort.",
-          "Filtern: filtert die Liste nach Standort.",
-          "Standorte: geht zur Standortansicht, in der Standorte hinzugefügt, bearbeitet und verwaltet werden können, die für das Gruppieren und Filtern verwendet werden."
+          "Über die Schaltfläche für Schnellaktionen öffnest du ein Menü mit diesen Optionen:",
+          "„Pflanze hinzufügen“: Startet den Assistenten, der dich in 9 Schritten durch alle Angaben zur neuen Pflanze führt.",
+          "„Sortieren“: Ordnet die Pflanzen nach Namen oder Standort.",
+          "„Filtern“: Grenzt die Liste nach Standort ein.",
+          "„Standorte“: Öffnet die Standortverwaltung. Dort kannst du Standorte zum Gruppieren und Filtern hinzufügen oder bearbeiten."
         ]
       },
       {
-        "heading": "Pflanze löschen (wichtige Informationen)",
+        "heading": "Was beim Löschen passiert",
         "body": [
-          "Das Löschen einer Pflanze ist ein permanenter Vorgang und kann nicht rückgängig gemacht werden.",
-          "Das Löschen einer Pflanze entfernt die Pflanzeninstanz sowie zugehörige Daten wie generierte Aufgaben, an diese Pflanze zugewiesene Erinnerungen und Links zu Geräten."
+          "Das Löschen einer Pflanze ist endgültig und lässt sich nicht rückgängig machen.",
+          "Dabei werden auch zugehörige Daten entfernt, etwa automatisch erstellte Aufgaben, Erinnerungen und Geräteverknüpfungen."
         ]
       },
       {
-        "heading": "Wenn keine Pflanzen angezeigt werden",
+        "heading": "Wenn die Pflanzenliste leer ist",
         "body": [
-          "Wenn die Liste leer ist, verwende die Aktion 'Pflanze erstellen' im FAB-Menü, um die erste Pflanzeninstanz hinzuzufügen.",
-          "Nach dem Hinzufügen von Pflanzen kannst du sie nach Standorten gruppieren und Pflege-Routinen über Erinnerungen verwalten."
+          "Wähle im Schnellaktionsmenü „Pflanze hinzufügen“, um deine erste Pflanze anzulegen.",
+          "Danach kannst du deine Pflanzen nach Standorten ordnen und über Erinnerungen ihre Pflege planen."
         ]
       }
     ]

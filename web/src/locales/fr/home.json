@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Flovers",
-    "subtitle": "Prenez soin de vos plantes avec un plan clair, des routines et une histoire.",
-    "purpose": "Ajoutez vos plantes, associez des définitions d'espèces pour des conseils, définissez des rappels récurrents et suivez l'historique des soins — vous pouvez également surveiller les lectures des capteurs ou utiliser des codes QR.",
+    "subtitle": "Garde le fil de l’entretien de tes plantes.",
+    "purpose": "Ajoute tes plantes, choisis leurs fiches d’espèces et profite de conseils adaptés. Programme des rappels et garde une trace des soins effectués. Tu peux aussi connecter des capteurs ou utiliser des codes QR pour ouvrir rapidement les détails de tes plantes.",
     "cta": {
       "googlePlayUrl": "",
       "appStoreUrl": ""
@@ -10,117 +10,117 @@
   },
   "homeNew": {
     "cta": {
-      "title": "Commencez simplement. Maintenez une routine cohérente.",
-      "subtitle": "Ajoutez des plantes, associez des définitions pour des conseils, définissez des rappels récurrents et laissez Flovers créer des tâches automatiquement. Utilisez les notifications quotidiennes, scannez les étiquettes QR pour accéder directement à la plante, et vérifiez éventuellement les routines avec les lectures des capteurs."
+      "title": "Facile à démarrer. Plus simple à suivre.",
+      "subtitle": "Ajoute tes plantes, choisis leurs espèces et programme des rappels. Flovers crée les tâches et t’envoie des notifications quotidiennes. Les codes QR sur les pots ouvrent directement les détails des plantes, et les relevés de capteurs t’aident à ajuster les soins si nécessaire."
     },
     "sections": {
       "how": {
-        "title": "Comment ça fonctionne",
-        "subtitle": "Une boucle simple : ajoutez → définissez → effectuez → maintenez la routine. Flovers veille à la continuité pour que vous vous concentriez sur les plantes, pas sur la planification."
+        "title": "Comment ça marche",
+        "subtitle": "Ajoute une plante, prépare ses soins et coche les tâches terminées. Flovers s’occupe des prochaines échéances pour te laisser plus de temps avec tes plantes."
       }
     },
     "steps": {
       "s1": {
-        "title": "Ajoutez une plante : reconnaissez-la à partir d'une photo ou recherchez dans la base",
-        "text": "Ajoutez une plante en quelques secondes. Recherchez dans la base de données de plus de 700 définitions ou utilisez la reconnaissance d'image pour obtenir une correspondance suggérée. Une fois ajoutée, tous les soins, tâches et historiques sont attachés à cette plante."
+        "title": "Identifie ta plante par photo ou trouve-la dans la base",
+        "text": "Ajouter une plante ne prend qu’un instant. Choisis parmi plus de 700 fiches d’espèces ou prends une photo pour obtenir des suggestions. Chaque plante conserve ses propres tâches, son programme de soins et son historique."
       },
       "s2": {
-        "title": "Associez une définition, définissez un contexte et calculez des intervalles réalistes",
-        "text": "Associez la plante à une définition pour débloquer les caractéristiques de soin et les paramètres par défaut. Ajoutez un contexte : taille du pot, type de sol, emplacement et niveau de lumière. Flovers vous aide ensuite à calculer des intervalles de rappels réalistes que vous pouvez ajuster à tout moment."
+        "title": "Choisis l’espèce et adapte les soins aux conditions",
+        "text": "La fiche de l’espèce fournit les conseils de départ. Précise la taille du pot, le substrat, l’emplacement et la lumière reçue. Flovers peut alors proposer une fréquence de rappels adaptée, que tu peux modifier à tout moment."
       },
       "s3": {
-        "title": "Effectuez rapidement les tâches et construisez un historique de soins clair",
-        "text": "Les rappels créent automatiquement des tâches avec des délais. L'écran d'accueil montre ce qu'il reste à faire, et l'écran de la plante vous donne tout le contexte. Lorsque vous terminez une tâche, vous pouvez ajouter une note, et Flovers prépare la suivante — ainsi la routine fonctionne sans planification manuelle."
+        "title": "Coche les soins effectués et garde leur historique",
+        "text": "Les rappels créent automatiquement des tâches avec une date. L’accueil montre ce qui est à faire, et les détails de la plante rassemblent ses informations. En terminant une tâche, tu peux ajouter une note. Flovers programme ensuite la prochaine."
       },
       "s4": {
-        "title": "Restez fidèle au plan grâce aux notifications quotidiennes",
-        "text": "Dans les paramètres de votre profil, choisissez des notifications push ou par e-mail et définissez l'heure de livraison. Vous recevrez un résumé quotidien des tâches à accomplir, ainsi que des rappels optionnels si des tâches deviennent en retard — pour que rien ne passe inaperçu."
+        "title": "Pense aux soins grâce aux notifications quotidiennes",
+        "text": "Dans ton profil, choisis les notifications push ou les e-mails et fixe une heure d’envoi. Tu reçois un résumé des tâches du jour. Tu peux aussi activer un rappel supplémentaire pour les tâches en retard."
       }
     }
   },
   "featureGrid": {
     "header": {
-      "title": "Fonctionnalités qui maintiennent la routine de soin",
-      "subtitle": "Flovers repose sur plusieurs solutions pratiques : intervalles de départ réalistes, tâches avec rappels, notifications quotidiennes, raccourcis QR et lectures IoT optionnelles — pour que vos plantes soient en bonne santé sans avoir à constamment y penser."
+      "title": "Tout pour simplifier les soins au quotidien",
+      "subtitle": "Des fréquences de soins suggérées, des tâches créées automatiquement et des notifications quotidiennes t’aident à garder le rythme. Les codes QR donnent un accès direct à tes plantes et, si tu le souhaites, les capteurs te permettent de suivre leurs conditions."
     },
     "tiles": {
       "intervals": {
-        "title": "Intervalles proposés à partir des définitions des plantes",
-        "text": "Associez une plante à une définition et Flovers proposera des intervalles de départ en fonction de l'espèce et de vos conditions. Vous pouvez les accepter, les ajuster ou suivre votre propre rythme."
+        "title": "Des conseils pour choisir la fréquence des soins",
+        "text": "Choisis une fiche d’espèce : Flovers te propose des intervalles adaptés à la plante et à ses conditions. Tu peux suivre ces suggestions, les ajuster ou conserver ton propre rythme."
       },
       "tasks": {
-        "title": "Rappels qui se transforment en tâches",
-        "text": "Définissez un rappel récurrent (arrosage, pulvérisation, fertilisation, transplantation, entretien). Flovers les transforme en tâches avec des délais. Lorsque vous en accomplissez une, la suivante est automatiquement créée."
+        "title": "Des rappels qui deviennent des tâches",
+        "text": "Définis la fréquence de l’arrosage, de la brumisation, de la fertilisation, du rempotage ou des autres soins. Flovers crée une tâche avec une échéance, puis programme la suivante lorsque tu l’as terminée."
       },
       "notifications": {
-        "title": "Notifications push ou par e-mail quotidiennes",
-        "text": "Dans les paramètres de votre profil, choisissez push ou e-mail. Flovers peut envoyer un résumé quotidien à l'heure choisie (par exemple, 14h00) avec les tâches du jour et, en option, un rappel ~24h plus tard si quelque chose est en retard."
+        "title": "Des notifications quotidiennes par push ou e-mail",
+        "text": "Choisis le canal et l’heure d’envoi dans ton profil, par exemple 14:00. Flovers peut envoyer la liste des tâches du jour et, si tu actives cette option, un rappel environ 24 heures plus tard pour les tâches en retard."
       },
       "qr": {
-        "title": "Scannez le QR et accédez directement à l'écran de la plante",
-        "text": "Imprimez le code QR de votre plante et collez-le sur le pot. Scannez-le et ouvrez immédiatement les Détails de la plante — le moyen le plus rapide de vérifier le contexte et de cocher les tâches de soin."
+        "title": "Scanne le code QR pour retrouver ta plante",
+        "text": "Imprime le code QR d’une plante et colle-le sur son pot. Un scan suffit pour ouvrir ses détails et cocher les soins effectués."
       },
       "iot": {
-        "title": "Lectures IoT en temps réel et tendances",
-        "text": "Connectez votre propre appareil ESP ou Arduino et envoyez des lectures telles que la température, l'humidité, la lumière et l'humidité du sol. Vous avez accès à des graphiques quotidiens, hebdomadaires et mensuels, ce qui vous permet de repérer facilement les tendances et d'ajuster vos routines."
+        "title": "Des relevés de capteurs et des graphiques d’évolution",
+        "text": "Connecte ton appareil ESP ou Arduino pour envoyer la température, l’humidité de l’air, la luminosité et l’humidité du sol. Les graphiques par jour, semaine et mois permettent de repérer les changements et d’adapter les soins."
       }
     },
     "images": {
       "createPlantAlt": "Écran d'ajout de plante",
-      "readingsHistoryAlt": "Écran de l'historique des lectures"
+      "readingsHistoryAlt": "Écran de l’historique des relevés"
     }
   },
   "core": {
-    "title": "Deux choses que Flovers fait le mieux",
-    "lead": "Une solide base de données de plantes et une reconnaissance rapide des images. Vous choisissez une correspondance, l'associez une fois et obtenez un point de départ raisonnable pour les soins.",
+    "title": "Identifie ta plante et découvre ses besoins",
+    "lead": "La base d’espèces et l’identification par photo t’aident à savoir quelle plante tu as et comment l’entretenir. Choisis la bonne fiche pour commencer à préparer ses soins.",
     "tiles": {
       "defs": {
-        "title": "Plus de 700 définitions de plantes avec des conseils réels",
-        "desc": "Parcourez les définitions avec des photos et des caractéristiques clés. Associez une plante et Flovers vous guidera avec des paramètres par défaut raisonnables.",
+        "title": "Plus de 700 fiches de plantes avec des conseils d’entretien",
+        "desc": "Parcours les photos et les principales caractéristiques des espèces. Choisis une fiche pour ta plante et Flovers te propose des réglages de départ adaptés.",
         "bullets": [
-          "Caractéristiques de soins : lumière, sol, arrosage, humidité, température.",
-          "Un bon point de départ que vous pouvez ajuster à vos conditions.",
-          "Association rapide pour que chaque plante ait une base claire."
+          "Besoins en lumière, substrat, arrosage, humidité et température.",
+          "Des conseils que tu peux adapter aux conditions chez toi.",
+          "La bonne fiche d’espèce pour chacune de tes plantes."
         ]
       },
       "recognition": {
-        "title": "Reconnaissance par image avec la meilleure correspondance suggérée",
-        "desc": "Prenez une photo ou ajoutez-en une depuis votre galerie et Flovers vous proposera ce que cela pourrait être. Vous choisissez la meilleure correspondance et continuez.",
+        "title": "Prends une photo pour trouver la bonne espèce",
+        "desc": "Prends une photo ou choisis-en une dans ta galerie. Flovers propose les espèces les plus proches, et tu sélectionnes la bonne fiche.",
         "bullets": [
-          "Fonctionne mieux avec des photos claires et bien éclairées.",
-          "Affiche plusieurs options similaires à choisir.",
-          "Conçu pour gagner du temps et non pour vous bloquer sur une seule supposition."
+          "Les photos nettes et bien éclairées donnent les meilleurs résultats.",
+          "Plusieurs espèces proches à comparer avant de choisir.",
+          "Le résultat est une suggestion : tu gardes le choix de l’espèce."
         ]
       }
     }
   },
   "qr": {
-    "title": "Scanneur QR : raccourci physique",
-    "lead": "Générez un code QR pour chaque plante, imprimez-le, collez-le sur le pot, puis scannez-le pour accéder immédiatement aux détails et aux tâches de cette plante.",
+    "title": "Un code sur le pot, les détails dans l’application",
+    "lead": "Crée un code QR pour chaque plante, imprime-le et colle-le sur le pot. Scanne-le pour retrouver directement ses détails et ses tâches.",
     "image": {
       "alt": "Scan du code QR de la plante dans l'application Flovers"
     },
     "blocks": {
       "create": {
-        "title": "Créez → imprimez → collez",
-        "text": "Chaque plante a son propre ID. Dans les Détails de la plante, vous pouvez générer un code QR, l'enregistrer sur votre téléphone ou l'envoyer par e-mail pour l'imprimer et le coller sur le pot."
+        "title": "Créer → imprimer → coller",
+        "text": "Chaque plante possède son propre identifiant. Dans ses détails, crée un code QR à enregistrer sur ton téléphone ou à envoyer par e-mail. Il ne reste qu’à l’imprimer et à le coller sur le pot."
       },
       "scan": {
-        "title": "Scannez → confirmez → ouvrez les Détails de la plante",
-        "text": "Utilisez le scanner QR intégré. Après confirmation du code par le backend, vous serez redirigé directement vers cette plante — avec les tâches, rappels, notes, lectures et tout le contexte."
+        "title": "Scanner → confirmer → ouvrir les détails",
+        "text": "Utilise le scanner QR de l’application. Une fois le code vérifié, tu retrouves la bonne plante avec ses tâches, ses rappels, ses notes et ses relevés."
       },
       "care": {
-        "title": "Soins instantanés",
-        "text": "Arrosez la plante, scannez l'étiquette et cochez la tâche comme accomplie — ou scannez simplement pour vérifier s'il y a des tâches à faire. Une connexion rapide entre la plante physique et vos données."
+        "title": "Arroser, scanner, cocher",
+        "text": "Après l’arrosage, scanne l’étiquette et marque la tâche comme terminée. Tu peux aussi vérifier d’abord ce qui est prévu. Toutes les informations sont à portée de main quand tu es près de ta plante."
       }
     }
   },
   "store": {
     "google": {
-      "alt": "Téléchargez depuis Google Play"
+      "alt": "Télécharger sur Google Play"
     },
     "apple": {
-      "alt": "Téléchargez depuis l'App Store"
+      "alt": "Télécharger dans l’App Store"
     }
   }
 }

@@ -1,129 +1,130 @@
 {
   "common": {
     "copy": "Copiar",
-    "copied": "Copiado"
+    "copied": "Copiado",
+    "closePreview": "Cerrar vista previa del esquema"
   },
-  "title": "API del dispositivo y cableado",
+  "title": "Sensores, riego y API",
   "lead": [
-    "Esta página documenta cómo los dispositivos IoT se integran con Flovers.",
-    "Los dispositivos pueden enviar lecturas ambientales al backend, comprobar si se ha programado una tarea de riego manual desde la aplicación móvil e informar a Flovers sobre ejecuciones de la bomba completadas.",
-    "El firmware generado para Arduino/ESP puede admitir tanto lecturas como control de riego en un solo sketch. Si el dispositivo vinculado se configuró con una bomba de agua, el código generado incluye endpoints de bomba y lógica de control de bomba. Si el dispositivo se configuró sin bomba, el firmware generado puede simplificarse para enviar solo lecturas."
+    "Aquí verás cómo conectar tus sensores y tu bomba a Flovers y utilizar la API.",
+    "Tu dispositivo puede enviar lecturas, recoger solicitudes de riego de la aplicación y comunicar cuándo ha terminado la bomba.",
+    "El programa Arduino o ESP generado se adapta a los ajustes de tu dispositivo. Si tiene bomba, también controla el riego. Si no, puede limitarse a enviar las medidas."
   ],
   "firmwareIntro": {
-    "title": "Qué hace el firmware generado",
-    "lead": "El firmware generado puede:",
+    "title": "Qué hace el programa de tu placa",
+    "lead": "El programa generado:",
     "items": [
-      "conectarse a Wi-Fi",
-      "sincronizar la hora mediante NTP",
-      "leer sensores habilitados",
-      "enviar lecturas a Flovers",
-      "comprobar si hay tareas de riego manual programadas",
-      "ejecutar la bomba cuando haya una tarea de riego manual pendiente",
-      "comprobar la configuración de riego automático controlada por el backend",
-      "ejecutar el riego automático cuando la humedad del suelo esté por debajo del umbral configurado",
-      "informar al backend sobre la finalización del riego"
+      "se conecta al Wi-Fi",
+      "sincroniza la hora con un servidor NTP",
+      "lee los sensores activados",
+      "envía las lecturas a Flovers",
+      "busca solicitudes de riego manual",
+      "enciende la bomba cuando hay una solicitud pendiente",
+      "consulta los ajustes de riego automático en el servidor",
+      "riega automáticamente si la humedad está por debajo del umbral y el servidor autoriza el arranque",
+      "comunica el resultado del riego"
     ],
-    "defaultTiming": "De forma predeterminada, las lecturas se envían una vez por hora. Las tareas de riego manual se comprueban con mayor frecuencia, por ejemplo una vez por minuto, para que una solicitud de riego creada desde la aplicación móvil pueda detectarse sin esperar al siguiente ciclo de lectura por hora.",
-    "adjustmentNote": "Algunos valores deben ajustarse según tu hardware y tus preferencias, especialmente las credenciales de Wi-Fi, los números de pines, la calibración de la humedad del suelo, el tiempo de ejecución de la bomba, el intervalo de lectura, el intervalo de consulta de tareas manuales y el enfriamiento del riego automático."
+    "defaultTiming": "Por defecto, el programa envía lecturas cada hora y busca solicitudes manuales cada minuto. Así una petición de la aplicación puede ejecutarse sin esperar a la siguiente medición.",
+    "adjustmentNote": "Antes de instalar el programa, introduce los datos de tu Wi-Fi y revisa los pines, la calibración del sensor de suelo y el tiempo de funcionamiento de la bomba. También puedes ajustar los intervalos de medición, búsqueda de solicitudes y la pausa entre riegos automáticos."
   },
   "endpoints": {
-    "title": "Endpoints de la API",
+    "title": "Direcciones de la API",
     "ingest": {
-      "title": "Ingerir lecturas",
-      "direction": "Dispositivo → backend",
+      "title": "Enviar lecturas",
+      "direction": "Dispositivo → servidor",
       "desc": [
-        "Los dispositivos utilizan este endpoint para enviar lecturas de sensores.",
-        "El backend autentica la solicitud usando:",
-        "El backend almacena las lecturas bajo el dispositivo correspondiente. Las lecturas pueden incluir temperatura, humedad, luz, humedad del suelo o cualquier subconjunto de métricas habilitadas."
+        "Tu dispositivo envía las medidas de sus sensores a esta dirección.",
+        "El servidor comprueba estas credenciales:",
+        "Los valores se guardan para el dispositivo correspondiente. Puedes enviar temperatura, humedad del aire, luz y humedad del suelo, o solo parte de esas medidas."
       ],
       "authItems": [
         "secret",
         "device_key",
-        "opcionalmente device_id"
+        "device_id — opcional"
       ]
     },
     "pumpNextTask": {
-      "title": "Comprobar la siguiente tarea de la bomba",
-      "direction": "Dispositivo → backend",
+      "title": "Recoger solicitudes de riego",
+      "direction": "Dispositivo → servidor",
       "desc": [
-        "Los dispositivos con soporte de bomba utilizan este endpoint para comprobar si hay una tarea de riego manual en espera.",
-        "La respuesta también incluye la configuración actual de la bomba automática controlada por el backend, como si el riego automático está habilitado y qué umbral de humedad del suelo debe usarse."
+        "Los dispositivos con bomba consultan esta dirección para saber si hay una solicitud manual pendiente.",
+        "La respuesta también incluye los ajustes actuales del riego automático, como su activación y el umbral de humedad del suelo."
       ]
     },
     "pumpComplete": {
-      "title": "Informar finalización de la bomba",
-      "direction": "Dispositivo → backend",
+      "title": "Comunicar el resultado del riego",
+      "direction": "Dispositivo → servidor",
       "desc": [
-        "Los dispositivos utilizan este endpoint después de que la bomba haya funcionado.",
-        "Esto puede informar cualquiera de los siguientes:"
+        "Cuando termina la bomba, el dispositivo comunica el resultado.",
+        "El informe puede corresponder a:"
       ],
       "items": [
-        "una tarea de riego manual programada, usando task_id",
-        "o un evento de riego automático, usando source: \"automatic\""
+        "una solicitud manual, con el identificador task_id recibido para esa orden",
+        "un riego automático, con source: \"automatic\" y el identificador task_id obtenido antes de encender la bomba"
       ]
     },
     "feed": {
-      "title": "Leer el feed más reciente",
-      "direction": "Dispositivo → backend",
+      "title": "Consultar las últimas medidas",
+      "direction": "Dispositivo → servidor",
       "desc": [
-        "Este endpoint devuelve los datos de lectura más recientes de un dispositivo. Sigue siendo útil para integraciones simples o diagnósticos, pero el firmware generado con bomba habilitada utiliza pump-next-task y pump-complete para el control del riego."
+        "Esta dirección devuelve la última lectura de un dispositivo para diagnósticos o integraciones sencillas. El control de la bomba utiliza las direcciones independientes pump-next-task, pump-auto-claim y pump-complete."
       ]
     }
   },
   "ingest": {
-    "title": "Documentación de POST ingest",
-    "desc": "Envía una muestra de lectura como JSON. El backend autentica el dispositivo y almacena las métricas proporcionadas.",
-    "payloadShape": "Forma del payload",
-    "examplePayload": "Payload de ejemplo",
+    "title": "Enviar lecturas: POST ingest",
+    "desc": "Envía una medida en formato JSON. El servidor comprueba las credenciales y guarda los valores recibidos.",
+    "payloadShape": "Campos de la solicitud",
+    "examplePayload": "Ejemplo de datos",
     "powershellExample": "Ejemplo de PowerShell"
   },
   "pumpNextTask": {
-    "title": "Documentación de POST pump-next-task",
+    "title": "Consultar solicitudes: POST pump-next-task",
     "desc": [
-      "Este endpoint lo utilizan los dispositivos con soporte de bomba.",
-      "El dispositivo pregunta al backend si existe una tarea de riego manual programada. El backend devuelve:"
+      "Esta dirección se utiliza en dispositivos con bomba.",
+      "El dispositivo consulta si has solicitado un riego manual. La respuesta indica:"
     ],
     "items": [
-      "si la bomba debe ejecutarse ahora",
-      "el ID de la tarea si existe una tarea de riego manual",
-      "la configuración actual de la bomba automática",
-      "si el backend considera que la bomba y el sensor de humedad están habilitados"
+      "si la bomba debe arrancar ahora",
+      "el identificador de la orden manual, si hay una pendiente",
+      "los ajustes actuales del riego automático",
+      "si la bomba y el sensor de humedad están activados en los ajustes"
     ],
-    "payloadShape": "Forma del payload",
-    "examplePayload": "Payload de ejemplo",
-    "responseNoTask": "Respuesta de ejemplo sin tarea de riego manual",
-    "responseWithTask": "Respuesta de ejemplo con una tarea de riego manual",
+    "payloadShape": "Campos de la solicitud",
+    "examplePayload": "Ejemplo de datos",
+    "responseNoTask": "Respuesta sin solicitudes pendientes",
+    "responseWithTask": "Respuesta con una solicitud de riego",
     "powershellExample": "Ejemplo de PowerShell"
   },
   "pumpComplete": {
-    "title": "Documentación de POST pump-complete",
+    "title": "Comunicar el resultado: POST pump-complete",
     "desc": [
-      "Después de que la bomba funcione, el dispositivo informa la finalización.",
-      "Para el riego manual, incluye el task_id devuelto por pump-next-task.",
-      "Para el riego automático, omite task_id y usa source: \"automatic\"."
+      "Cuando termina la bomba, el dispositivo indica al servidor si el riego ha tenido éxito.",
+      "Para el riego manual, incluye el identificador task_id recibido de pump-next-task.",
+      "Para el riego automático, incluye el identificador task_id recibido de pump-auto-claim y source: \"automatic\"."
     ],
-    "manualPayload": "Payload de finalización de riego manual",
-    "automaticPayload": "Payload de finalización de riego automático",
-    "failedPayload": "Payload de ejecución fallida de la bomba",
+    "manualPayload": "Informe de riego manual",
+    "automaticPayload": "Informe de riego automático",
+    "failedPayload": "Informe de un riego fallido",
     "powershellExample": "Ejemplo de PowerShell"
   },
   "feed": {
-    "title": "Documentación de GET feed",
+    "title": "Consultar lecturas: GET feed",
     "desc": [
-      "El endpoint de feed devuelve la lectura más reciente de un dispositivo.",
-      "Puede utilizarse para diagnósticos o integraciones simples que solo necesiten leer los últimos valores almacenados."
+      "La dirección feed devuelve la última lectura guardada para el dispositivo.",
+      "Puedes usarla para diagnósticos o integraciones que solo necesiten consultar los valores actuales."
     ],
     "exampleRequest": "Solicitud de ejemplo",
     "exampleResponse": "Respuesta de ejemplo"
   },
   "generatedFirmware": {
-    "title": "Firmware generado para Arduino / ESP32",
+    "title": "Código para tu placa Arduino o ESP32",
     "desc": [
-      "La aplicación puede generar firmware para el dispositivo seleccionado.",
-      "El firmware generado incluye los endpoints de API correctos, el secreto de autenticación, la clave del dispositivo, el ID del dispositivo, los sensores habilitados y la configuración de la bomba para ese dispositivo.",
-      "Si el dispositivo está configurado con una bomba de agua, el código generado incluye tanto lecturas como control de la bomba de agua. Comprueba las tareas de riego manual por separado del ciclo de lectura por hora, y el riego automático utiliza el umbral y el interruptor controlados por el backend."
+      "La aplicación puede generar el programa del dispositivo seleccionado.",
+      "Incluye las direcciones de la API, las credenciales (secret y device_key), el identificador del dispositivo y los ajustes de sensores y bomba.",
+      "Si hay una bomba configurada, el programa gestiona las mediciones y el riego. Busca solicitudes manuales por separado del envío de lecturas. Para el riego automático, consulta los ajustes de la aplicación y pide autorización al servidor antes de arrancar."
     ],
-    "adjustIntro": "Antes de cargar el sketch, ajusta los siguientes valores para tu hardware:",
+    "adjustIntro": "Antes de instalar el código, revisa estos valores y adáptalos a tu hardware:",
     "adjustItems": [
       "SSID y contraseña de Wi-Fi",
       "SDA_PIN y SCL_PIN",
@@ -135,109 +136,111 @@
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
       "AUTO_PUMP_MIN_INTERVAL_MS"
     ],
-    "codeLabel": "Firmware generado para Arduino: lecturas + control de bomba de agua"
+    "codeLabel": "Programa de ejemplo: sensores y control de la bomba"
   },
   "behavior": {
-    "title": "Resumen del comportamiento del firmware",
+    "title": "Medir y regar paso a paso",
     "fullCycle": {
-      "title": "Ciclo completo por hora",
-      "desc": "Cada SEND_INTERVAL_MS, la placa ejecuta un ciclo completo:",
+      "title": "Ciclo de medición",
+      "desc": "En cada intervalo SEND_INTERVAL_MS, la placa:",
       "items": [
-        "lee sensores",
-        "envía lecturas al endpoint de ingest",
-        "comprueba si hay riego manual programado",
-        "ejecuta el riego manual si hay una tarea pendiente",
-        "de lo contrario, comprueba las condiciones de riego automático",
-        "ejecuta el riego automático si la configuración del backend lo permite y la humedad del suelo está por debajo del umbral"
+        "lee los sensores",
+        "envía las lecturas a ingest",
+        "busca una solicitud de riego manual",
+        "la ejecuta si hay una pendiente",
+        "si no, comprueba las condiciones del riego automático",
+        "riega automáticamente si la humedad está bajo el umbral, los ajustes lo permiten y el servidor lo autoriza"
       ]
     },
     "manualCheck": {
-      "title": "Comprobación de riego manual",
+      "title": "Comprobar solicitudes manuales",
       "desc": [
-        "Cada MANUAL_PUMP_CHECK_INTERVAL_MS, la placa comprueba solo si hay tareas de riego manual programadas.",
-        "Esta comprobación más corta:",
-        "Esto permite que la acción “Programar riego” de la aplicación se detecte rápidamente sin obligar a enviar lecturas de sensores cada minuto."
+        "En cada intervalo MANUAL_PUMP_CHECK_INTERVAL_MS, la placa busca solicitudes manuales.",
+        "Esta comprobación intermedia:",
+        "Así una solicitud desde la aplicación puede ejecutarse rápidamente sin enviar todas las lecturas cada minuto."
       ],
       "items": [
         "no envía lecturas",
-        "no ejecuta riego automático",
-        "solo ejecuta una tarea de riego manual pendiente si existe"
+        "no inicia riegos automáticos",
+        "solo ejecuta una solicitud manual pendiente"
       ]
     },
     "automatic": {
       "title": "Riego automático",
       "desc": [
-        "El riego automático está controlado por la configuración del backend definida en la aplicación móvil.",
-        "La placa solo ejecuta el riego automático cuando:"
+        "Activas y configuras el riego automático desde la aplicación.",
+        "La placa solo enciende la bomba si:"
       ],
       "items": [
-        "el soporte de bomba está habilitado",
-        "el inicio automático de la bomba está habilitado",
-        "el sensor de humedad está habilitado",
-        "la última humedad del suelo medida está por debajo del umbral del backend",
-        "ha pasado el enfriamiento del riego automático"
+        "la bomba está activada en los ajustes del dispositivo",
+        "el arranque automático está habilitado",
+        "el sensor de humedad del suelo está activado",
+        "la humedad medida está por debajo del umbral elegido",
+        "ha transcurrido la pausa necesaria desde el último riego y el servidor autoriza el siguiente"
       ],
-      "cooldown": "Después de que se ejecute el riego manual o automático, el firmware inicia el enfriamiento del riego automático. Esto ayuda a evitar que una tarea de riego manual y el riego automático ocurran demasiado cerca entre sí."
+      "cooldown": "Después de un riego manual o automático, el programa espera la pausa configurada antes de volver a regar automáticamente. Así evita encender la bomba con demasiada frecuencia."
     },
     "manual": {
       "title": "Riego manual",
       "desc": [
-        "El riego manual se programa desde la aplicación móvil.",
-        "El riego manual ignora intencionalmente:",
-        "Esto significa que cuando el usuario programa manualmente el riego, la placa lo trata como una solicitud explícita para ejecutar la bomba una vez."
+        "Solicitas el riego manual desde la aplicación.",
+        "Esta solicitud no tiene en cuenta:",
+        "La placa la trata como una orden expresa de encender la bomba una vez, sin comprobar las condiciones del riego automático."
       ],
       "items": [
-        "humedad actual del suelo",
-        "umbral de riego automático",
-        "enfriamiento del riego automático"
+        "la humedad actual del suelo",
+        "el umbral de riego automático",
+        "la pausa entre riegos automáticos"
       ]
     }
   },
   "hardware": {
-    "title": "Notas de hardware",
-    "desc": "El firmware generado asume componentes comunes compatibles con ESP32:",
+    "title": "Conectar el hardware",
+    "desc": "El programa está preparado para estos componentes compatibles con ESP32:",
     "items": [
       "sensor de luz BH1750 / GY-302 por I2C",
-      "sensor de temperatura y humedad BME280 por I2C",
-      "sensor capacitivo de humedad del suelo en un pin analógico",
-      "relé o controlador de bomba conectado a un pin de salida digital"
+      "sensor de temperatura y humedad del aire BME280 por I2C",
+      "sensor capacitivo de humedad del suelo en una entrada analógica",
+      "relé o controlador de bomba en una salida digital"
     ],
-    "verify": "Verifica todo el cableado antes de alimentar la bomba.",
-    "relayNote": "Algunos módulos de relé son activos en LOW, mientras que otros son activos en HIGH. El ejemplo generado usa:",
-    "relayReverse": "Si tu relé funciona al revés, es posible que debas intercambiar los valores HIGH y LOW.",
-    "relayCodeLabel": "Ejemplo de salida de bomba"
+    "verify": "Revisa todo el cableado antes de alimentar la bomba.",
+    "relayNote": "Según el modelo, el relé se activa con LOW o HIGH. El ejemplo controla la bomba así:",
+    "relayReverse": "Si tu relé funciona al revés, intercambia HIGH y LOW en el código de control de la bomba.",
+    "relayCodeLabel": "Encender y apagar la bomba"
   },
   "calibration": {
-    "title": "Notas de calibración",
+    "title": "Calibrar el sensor de humedad del suelo",
     "desc": [
-      "Los sensores de humedad del suelo deben calibrarse para obtener resultados fiables.",
-      "El código generado usa:",
-      "Estos valores son solo ejemplos.",
-      "Mide el valor de tu sensor en suelo seco o al aire, luego mídelo de nuevo en suelo húmedo o agua, y actualiza estas constantes según corresponda."
+      "Calibra el sensor para obtener valores útiles.",
+      "Dos constantes convierten las lecturas brutas en un porcentaje:",
+      "Debes adaptar los valores del ejemplo a tu propio sensor.",
+      "Mide los valores en sustrato seco y húmedo y ajusta las constantes. Si mides en agua, sumerge solo la zona prevista para ello y sigue las instrucciones del fabricante."
     ],
-    "codeLabel": "Valores de calibración predeterminados"
+    "codeLabel": "Ejemplos de valores de calibración"
   },
   "safety": {
-    "title": "Notas de seguridad",
+    "title": "Antes de dejar la bomba sin supervisión",
     "desc": [
-      "El firmware generado es un punto de partida. Antes de dejar una bomba sin supervisión:",
-      "Flovers almacena lecturas y eventos de riego, pero el cableado del dispositivo, la calibración, el comportamiento de la bomba y la instalación física siguen siendo responsabilidad del usuario."
+      "Adapta el programa a tu montaje. Antes de dejar la bomba funcionando sin supervisión:",
+      "Flovers guarda las lecturas y los riegos. El cableado, la calibración, el funcionamiento de la bomba y su instalación son tu responsabilidad."
     ],
     "items": [
-      "prueba la bomba manualmente",
-      "confirma la lógica del relé",
-      "verifica que la bomba se apague correctamente",
-      "usa un tiempo de ejecución seguro de la bomba",
-      "confirma que los valores de humedad del suelo sean realistas",
+      "prueba el arranque manual",
+      "comprueba qué señal activa el relé",
+      "asegúrate de que la bomba se apaga después del riego",
+      "elige un tiempo de funcionamiento adecuado al caudal y a las necesidades de la planta",
+      "comprueba que la humedad del suelo mostrada sea razonable",
       "protege la electrónica del agua",
-      "usa una fuente de alimentación e aislamiento adecuados para la bomba"
+      "utiliza una alimentación y un aislamiento adecuados para el circuito de la bomba"
     ]
   },
   "wiring": {
-    "title": "Diagramas de cableado",
-    "desc": "A continuación se muestra un esquema de cableado de dispositivo de ejemplo. Haz clic en la imagen para abrirla en pantalla completa.",
-    "ariaPrimary": "Esquema de cableado de dispositivo de ejemplo",
-    "placeholderTitlePrimary": "Esquema de cableado de dispositivo de ejemplo",
-    "placeholderSubPrimary": "Haz clic en la imagen para mostrarla en pantalla completa."
-  }
+    "title": "Esquema de conexión",
+    "desc": "Aquí tienes un ejemplo de conexión del dispositivo. Pulsa la imagen para ampliarla.",
+    "ariaPrimary": "Ampliar el esquema de conexión",
+    "placeholderTitlePrimary": "Ejemplo de conexión del dispositivo",
+    "placeholderSubPrimary": "Pulsa el esquema para ampliarlo."
+  },
+  "retrySafety": "Activa supports_task_retry con true solo si tu programa guarda de forma persistente el estado de la orden antes de encender la bomba y también conserva el resultado. Recibir de nuevo la misma orden no debe provocar un segundo riego. El programa generado ya incluye esta protección. Vuelve a generarlo e instálalo en los dispositivos existentes para utilizarla. El servidor no reenvía a los programas antiguos una orden que ya se haya entregado.",
+  "claimSafety": "Antes de regar automáticamente, el dispositivo debe obtener autorización del servidor. Envía una solicitud POST a /readings/pump-auto-claim/ con secret, device_key y la medida actual moisture; device_id es opcional. La bomba solo puede arrancar si la respuesta contiene run: true. El identificador task_id recibido se necesita para comunicar el resultado. El código generado realiza estos pasos."
 }

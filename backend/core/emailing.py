@@ -102,11 +102,6 @@ def send_templated_email(
     if not subject:
         subject = "Flovers"
 
-    prefix = (getattr(settings, "EMAIL_SUBJECT_PREFIX", "") or "")
-    if prefix and not prefix.endswith(" "):
-        prefix = prefix + " "
-    subject = f"{prefix}{subject}"
-
     base_from = from_email or getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
 
     html_fragment = _render_optional(f"email/{template_name}.html", ctx)

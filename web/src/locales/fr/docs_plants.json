@@ -3,52 +3,52 @@
     "title": "Plantes",
     "sections": [
       {
-        "heading": "Objectif de cette vue",
+        "heading": "Toutes tes plantes au même endroit",
         "body": [
-          "La vue Plantes affiche toutes les Instances de plantes créées dans votre compte.",
-          "Chaque tuile représente une plante (votre exemplaire). Vous pouvez accéder aux Détails de la plante ou utiliser les raccourcis du menu des trois points (par exemple, rappels, journal, code QR)."
+          "L’écran « Plantes » présente toutes les plantes que tu as ajoutées à ton compte.",
+          "Chaque carte représente l’une de tes plantes. Tu peux ouvrir ses détails ou utiliser le menu à trois points pour accéder à ses rappels, son journal ou son code QR."
         ]
       },
       {
-        "heading": "Tuiles de plantes (liste)",
+        "heading": "Les informations sur les cartes",
         "body": [
-          "La tuile de la plante affiche le nom de la plante ainsi que (si disponible) le nom de la définition associée à la plante (espèce) et la Localisation attribuée.",
-          "Toucher le contenu de la tuile (en dehors du menu à trois points) vous mène à la vue Détails de la plante."
+          "Chaque carte affiche le nom de ta plante, son emplacement et, si tu en as choisi une, le nom de la fiche d’espèce associée.",
+          "Touche la carte en dehors du menu à trois points pour ouvrir les détails de la plante."
         ]
       },
       {
-        "heading": "Menu des trois points (actions de la plante)",
+        "heading": "Les actions du menu à trois points",
         "body": [
-          "Chaque tuile a un menu à trois points contenant des actions pour la plante sélectionnée :",
-          "Modifier la plante : ouvre l'édition des données et des paramètres de la plante.",
-          "Afficher les rappels : accède à la vue Rappels avec un filtre défini sur les rappels liés à la plante sélectionnée.",
-          "Afficher le journal de la plante : ouvre une fenêtre modale avec l'historique des tâches terminées (avec les notes de l'utilisateur). Les notes sont visibles et ne sont pas masquées.",
-          "Afficher le code QR : ouvre une fenêtre modale avec le code QR de la plante, une brève description et des options pour enregistrer (télécharger) ou envoyer le code à votre propre adresse e-mail.",
-          "Supprimer la plante : supprime définitivement la plante ainsi que les données associées, telles que les tâches, les rappels et les connexions avec les appareils."
+          "Le menu de chaque carte propose des actions pour la plante correspondante :",
+          "« Modifier la plante » : ouvre l’écran de modification de ses informations et paramètres.",
+          "« Afficher les rappels » : ouvre les rappels avec un filtre pour cette plante.",
+          "« Afficher le journal de la plante » : ouvre une fenêtre avec les tâches terminées et tes notes. Les notes sont directement visibles.",
+          "« Afficher le code QR » : ouvre le code QR avec une courte explication. Tu peux l’enregistrer ou te l’envoyer par e-mail.",
+          "« Supprimer la plante » : supprime définitivement la plante et ses données associées, comme les tâches, les rappels et les liens avec des appareils."
         ]
       },
       {
-        "heading": "Menu du bouton FAB",
+        "heading": "Les actions rapides",
         "body": [
-          "Le FAB dans la vue Plantes propose des actions rapides :",
-          "Créer une plante : lance l'Assistant de création de plante (processus en 9 étapes), où vous pouvez définir précisément la plante.",
-          "Trier : trie les tuiles des plantes par Nom de la plante ou Localisation.",
-          "Filtrer : filtre la liste par Localisation.",
-          "Localisations : accède à la vue Localisations, où vous pouvez ajouter, modifier et gérer les localisations utilisées pour regrouper et filtrer."
+          "Le bouton d’actions rapides ouvre les options suivantes :",
+          "« Ajouter une plante » : lance l’assistant en 9 étapes pour renseigner ta nouvelle plante.",
+          "« Trier » : classe les cartes par nom de plante ou par emplacement.",
+          "« Filtrer » : limite la liste à certains emplacements.",
+          "« Emplacements » : ouvre la gestion des emplacements utilisés pour regrouper et filtrer tes plantes."
         ]
       },
       {
-        "heading": "Suppression de la plante (informations importantes)",
+        "heading": "Ce que supprime la suppression d’une plante",
         "body": [
-          "La suppression d'une plante est une opération permanente et ne peut pas être annulée.",
-          "La suppression d'une plante supprime l'Instance de la plante ainsi que les données associées, telles que les tâches générées, les rappels attribués à cette plante et les liens vers les appareils."
+          "La suppression d’une plante est définitive et ne peut pas être annulée.",
+          "Elle efface aussi les données liées à cette plante, dont les tâches créées, les rappels associés et les liens avec les appareils."
         ]
       },
       {
-        "heading": "Lorsque aucune plante n'est visible",
+        "heading": "Si la liste est vide",
         "body": [
-          "Si la liste est vide, utilisez l'action Créer une plante dans le menu FAB pour ajouter la première Instance de plante.",
-          "Une fois les plantes ajoutées, vous pouvez les regrouper par Localisation et gérer les routines d'entretien via les Rappels."
+          "Choisis « Ajouter une plante » dans le menu d’actions rapides pour ajouter ta première plante.",
+          "Tu pourras ensuite organiser tes plantes par emplacement et planifier leur entretien avec des rappels."
         ]
       }
     ]

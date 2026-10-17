@@ -4,30 +4,30 @@
     "lastUpdated": "Dernière mise à jour : {{date}}",
     "section1": {
       "title": "§ 1. Dispositions générales",
-      "p1": "Le responsable du traitement des données personnelles traitées dans le cadre de l'utilisation du site web Flovers et de l'application mobile Flovers est Marcin Janowski Copy Paste IT Solutions, situé au 30/115 rue płk. Francesco Nullo, 31-543 Cracovie, Pologne, adresse e-mail : info@flovers.app, ci-après dénommé « Responsable ». ",
+      "p1": "Le responsable du traitement des données personnelles liées à l’utilisation du site et de l’application mobile Flovers est Marcin Janowski Copy Paste IT Solutions, ul. płk. Francesco Nullo 30/115, 31-543 Cracovie, Pologne, e-mail : info@flovers.app (ci-après le « Responsable »).",
       "p2": "Le Responsable traite les données personnelles conformément au règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 (RGPD).",
-      "p3": "La présente Politique de confidentialité s'applique au site web Flovers, à l'application mobile Flovers (Android, et à l'avenir iOS) ainsi qu'à l'infrastructure backend liée à leur fonctionnement."
+      "p3": "La présente politique s’applique au site Flovers, à l’application mobile pour Android, puis iOS à l’avenir, et aux serveurs nécessaires à leur fonctionnement."
     },
     "section2": {
-      "title": "§ 2. Portée et objectifs du traitement des données personnelles",
-      "intro": "Le Responsable traite les données personnelles dans les objectifs suivants :",
+      "title": "§ 2. Données personnelles : portée et finalités du traitement",
+      "intro": "Le Responsable traite les données personnelles aux fins suivantes :",
       "list": [
-        "création et gestion du compte utilisateur dans l'application",
-        "authentification de l'utilisateur et réalisation du processus de connexion",
-        "envoi de messages système, y compris des e-mails de vérification et de réinitialisation du mot de passe",
-        "gestion des demandes envoyées via le formulaire de contact",
-        "assurance du bon fonctionnement de l'application et du service",
-        "réalisation des rappels, des tâches et des notifications liées à l'entretien des plantes",
-        "assurance de la sécurité du système et gestion des journaux techniques"
+        "création et gestion du compte dans l’application",
+        "authentification de l’utilisateur et connexion",
+        "envoi de messages système, dont les e-mails de vérification et de réinitialisation du mot de passe",
+        "traitement des demandes reçues par le formulaire de contact",
+        "bon fonctionnement de l’application et du service",
+        "gestion des rappels, tâches et notifications d’entretien des plantes",
+        "sécurité du système et tenue des journaux techniques"
       ],
-      "legalBasis": "La base légale du traitement des données est l'article 6, paragraphe 1, point b du RGPD (exécution du contrat), article 6, paragraphe 1, point c du RGPD (obligation légale) et article 6, paragraphe 1, point f du RGPD (intérêt légitime du Responsable)."
+      "legalBasis": "Le traitement repose sur l’article 6, paragraphe 1, point b du RGPD (exécution du contrat), le point c (obligation légale) et le point f (intérêt légitime du Responsable)."
     },
     "section3": {
-      "title": "§ 3. Type de données traitées",
-      "intro": "En fonction de la manière dont l'application ou le service est utilisé, le Responsable peut traiter les données suivantes :",
+      "title": "§ 3. Catégories de données traitées",
+      "intro": "Selon l’utilisation de l’application ou du service, le Responsable peut traiter les données suivantes :",
       "list": [
         "adresse e-mail de l'utilisateur",
-        "mot de passe crypté de l'utilisateur",
+        "mot de passe de l’utilisateur conservé sous forme hachée",
         "informations sur le profil et les préférences de l'utilisateur",
         "données techniques de l'appareil (type d'appareil, système d'exploitation, version de l'application)",
         "adresse IP",
@@ -39,47 +39,47 @@
     "section4": {
       "title": "§ 4. Comptes utilisateurs et sécurité",
       "p1": "Les utilisateurs de l'application Flovers créent des comptes individuels protégés par mot de passe.",
-      "p2": "Les mots de passe sont stockés de manière cryptée (hachée).",
-      "p3": "Un compte utilisateur nécessite la vérification de l'adresse e-mail.",
+      "p2": "Les mots de passe sont conservés sous forme hachée.",
+      "p3": "La création d’un compte nécessite la vérification de l’adresse e-mail fournie.",
       "p4": "L'utilisateur peut changer son mot de passe à tout moment ou utiliser la procédure de réinitialisation."
     },
     "section5": {
       "title": "§ 5. Notifications et communication",
       "p1": "Le Responsable envoie uniquement des messages de nature transactionnelle, notamment concernant la connexion, la vérification du compte et la réinitialisation du mot de passe.",
       "p2": "L'application peut utiliser des notifications push (par exemple via Firebase) pour rappeler les tâches liées à l'entretien des plantes.",
-      "p3": "Le Responsable se réserve le droit d'introduire une newsletter à l'avenir, cependant l'envoi d'informations marketing ne sera effectué qu'après avoir obtenu un consentement séparé de l'utilisateur."
+      "p3": "Le Responsable se réserve la possibilité de proposer une newsletter à l’avenir. Les communications marketing nécessiteront le consentement distinct de l’utilisateur."
     },
     "section6": {
       "title": "§ 6. Cookies et technologies similaires",
       "p1": "Le site web Flovers peut utiliser des cookies nécessaires au bon fonctionnement du site.",
       "p2": "Les cookies sont utilisés uniquement à des fins techniques et fonctionnelles.",
-      "p3": "Le service ne utilise pas d'outils d'analyse ou de marketing de tiers."
+      "p3": "Le service n’utilise pas d’outils tiers d’analyse ou de marketing."
     },
     "section7": {
       "title": "§ 7. Destinataires des données et lieu de traitement",
       "p1": "Les données personnelles sont traitées sur des serveurs situés dans l'Union européenne.",
-      "p2": "L'infrastructure des serveurs est maintenue par Hetzner Online GmbH.",
+      "p2": "L’infrastructure serveur est fournie par Hetzner Online GmbH.",
       "p3": "Le Responsable peut utiliser les services de Firebase pour la gestion des notifications push.",
       "p4": "Le Responsable ne transmet pas les données personnelles à des pays tiers en dehors de l'UE."
     },
     "section8": {
       "title": "§ 8. Durée de conservation des données",
-      "p1": "Les données personnelles sont conservées pendant la durée de l'existence du compte utilisateur.",
+      "p1": "Les données personnelles sont conservées tant que le compte utilisateur existe.",
       "p2": "Après la suppression du compte, les données sont définitivement supprimées ou anonymisées, sauf disposition légale contraire."
     },
     "section9": {
       "title": "§ 9. Droits des personnes concernées",
-      "intro": "Toute personne concernée par des données dispose des droits suivants :",
+      "intro": "Toute personne concernée dispose des droits suivants :",
       "list": [
         "accès à ses données",
         "rectification de ses données",
         "suppression des données",
         "limitation du traitement",
         "opposition au traitement",
-        "révocation du consentement à tout moment"
+        "retrait du consentement à tout moment"
       ],
       "p2": "Pour exercer ces droits, il convient de contacter le Responsable à l'adresse e-mail : info@flovers.app.",
-      "p3": "La personne concernée dispose également du droit de déposer une plainte auprès du Président de l'Office de Protection des Données Personnelles."
+      "p3": "La personne concernée peut également déposer une réclamation auprès du président de l’autorité polonaise de protection des données personnelles (UODO)."
     },
     "section10": {
       "title": "§ 10. Dispositions finales",

@@ -1,92 +1,92 @@
 {
   "docs_create_plant_wizard": {
-    "title": "Assistant de création de plante",
+    "title": "Ajouter une plante",
     "sections": [
       {
-        "heading": "Objectif de ce processus",
+        "heading": "Ajouter ta plante en neuf étapes",
         "body": [
-          "L'Assistant de création de plante est un processus guidé en 9 étapes qui permet de créer une nouvelle instance de plante sur votre compte.",
-          "Il aide (facultatif) à lier la plante à une définition de plante de la base Flovers, à collecter des informations contextuelles (localisation, exposition) et, facultativement, à générer des rappels en fonction des préférences de soins.",
-          "L'Assistant est uniquement destiné à la création de nouvelles plantes. La modification d'une plante existante se fait dans une autre vue/processus."
+          "L’assistant te guide en 9 étapes pour ajouter une plante à ton compte.",
+          "Tu peux choisir une fiche d’espèce dans la base Flovers, préciser l’emplacement et la lumière reçue, puis faire créer des rappels adaptés à ses besoins.",
+          "Cet assistant sert à ajouter de nouvelles plantes. La modification d’une plante existante se fait dans un autre écran."
         ]
       },
       {
-        "heading": "Étape 01 — Sélection de la définition de la plante (facultatif)",
+        "heading": "Étape 01 — Choisir une fiche d’espèce (facultatif)",
         "body": [
-          "Vous pouvez rechercher une définition de plante (profil d'espèce intégré) à l'aide du champ de recherche.",
-          "Sous le champ, il y a une liste de plantes d'intérieur populaires, qui sert de raccourci.",
-          "Vous pouvez également utiliser la reconnaissance de plantes : lancez le scan, prenez une photo ou sélectionnez-la dans la galerie, et le système renverra les 3 résultats les plus correspondants.",
-          "Si vous acceptez la suggestion, la définition de la plante choisie sera appliquée à la plante en cours de création."
+          "Utilise la recherche pour trouver une fiche décrivant ton espèce de plante.",
+          "Une sélection de plantes d’intérieur courantes est proposée sous le champ de recherche pour aller plus vite.",
+          "Tu peux aussi utiliser l’identification par photo : touche le bouton de scan, prends une photo ou choisis-en une dans ta galerie. Les 3 résultats les plus proches s’affichent.",
+          "Si tu retiens une suggestion, la fiche correspondante est sélectionnée pour ta nouvelle plante."
         ]
       },
       {
-        "heading": "Étape 02 — Aperçu de la définition",
+        "heading": "Étape 02 — Vérifier la fiche",
         "body": [
-          "Si une définition de plante a été sélectionnée, les détails de celle-ci s'affichent à cette étape : image, caractéristiques de base et préférences.",
-          "C'est une étape de vérification permettant de confirmer le bon profil avant de continuer."
+          "Si tu as choisi une fiche, cet écran présente sa photo, ses principales caractéristiques et ses besoins.",
+          "Vérifie qu’il s’agit bien de la bonne espèce avant de continuer."
         ]
       },
       {
-        "heading": "Étape 03 — Sélection de la localisation (obligatoire)",
+        "heading": "Étape 03 — Choisir un emplacement (obligatoire)",
         "body": [
-          "Choisissez la localisation où se trouve la plante (par exemple, Cuisine, Salon, Balcon).",
-          "À cette étape, vous pouvez également ajouter une nouvelle localisation.",
-          "La sélection de la localisation est actuellement requise pour passer aux étapes suivantes."
+          "Indique où se trouve ta plante, par exemple dans la cuisine, le salon ou sur le balcon.",
+          "Tu peux aussi ajouter un nouvel emplacement directement à cette étape.",
+          "Pour le moment, tu dois choisir un emplacement pour continuer."
         ]
       },
       {
-        "heading": "Étape 04 — Exposition (mesures facultatives)",
+        "heading": "Étape 04 — Préciser l’exposition (facultatif)",
         "body": [
-          "Cette étape permet d'enregistrer les informations sur l'exposition : direction, niveau de lumière et distance par rapport à la fenêtre.",
-          "La direction peut être mesurée à l'aide de la boussole du téléphone si l'application dispose des autorisations nécessaires pour la boussole/capteurs.",
-          "Le niveau de lumière peut être mesuré si l'appareil dispose du capteur approprié et si les autorisations nécessaires sont accordées.",
-          "Les valeurs d'exposition sont facultatives — vous pouvez les compléter manuellement ou les ignorer."
+          "Tu peux renseigner l’orientation, la luminosité et la distance entre la plante et la fenêtre.",
+          "L’orientation peut être mesurée avec la boussole du téléphone si tu accordes l’autorisation nécessaire.",
+          "La luminosité peut être mesurée si ton appareil possède un capteur adapté et si les autorisations nécessaires sont accordées.",
+          "Ces renseignements sont facultatifs. Tu peux les saisir à la main ou passer cette étape."
         ]
       },
       {
-        "heading": "Étape 05 — Pot et substrat (facultatif)",
+        "heading": "Étape 05 — Indiquer le pot et le substrat (facultatif)",
         "body": [
-          "Indiquez le type de contenant/pot (par exemple, plastique, céramique) et le type de substrat.",
-          "Ces champs sont facultatifs, mais peuvent aider à mieux ajuster les intervalles suggérés lorsque les tâches automatiques sont activées."
+          "Précise le type de pot, par exemple en plastique ou en céramique, et le substrat utilisé.",
+          "Ces informations sont facultatives, mais elles peuvent aider à proposer des intervalles de soins plus adaptés si tu actives les tâches automatiques."
         ]
       },
       {
-        "heading": "Étape 06 — Tâches automatiques (facultatif, avec une définition de plante)",
+        "heading": "Étape 06 — Préparer les tâches automatiques (facultatif, avec une fiche d’espèce)",
         "body": [
-          "Si la plante est liée à une définition de plante, Flovers peut automatiquement créer des rappels/tâches en fonction des préférences de la base.",
-          "Cochez la case principale pour activer la génération automatique, puis sélectionnez les types de tâches à créer (par exemple, arrosage, pulvérisation, fertilisation, rempotage, entretien).",
-          "Les intervalles suggérés sont basés sur la définition de la plante et peuvent être ajustés en fonction de l'exposition et du pot/substrat si ces données sont disponibles.",
-          "Vous pouvez ignorer cette étape et créer les rappels manuellement plus tard."
+          "Si tu as choisi une fiche d’espèce, Flovers peut créer automatiquement des rappels et des tâches à partir de ses conseils d’entretien.",
+          "Coche la case principale, puis choisis les soins à prévoir : arrosage, brumisation, fertilisation, rempotage ou entretien général.",
+          "Les intervalles proposés dépendent de la fiche choisie. Ils peuvent tenir compte des informations sur l’exposition, le pot et le substrat si tu les as renseignées.",
+          "Tu peux passer cette étape et créer toi-même les rappels plus tard."
         ]
       },
       {
-        "heading": "Étape 07 — Ajouter votre propre photo (facultatif)",
+        "heading": "Étape 07 — Ajouter ta photo (facultatif)",
         "body": [
-          "Vous pouvez ajouter votre propre photo de la plante depuis votre téléphone.",
-          "Cette étape est facultative et peut également être possible plus tard en fonction de votre flux dans l'application."
+          "Tu peux ajouter une photo de ta plante depuis ton téléphone.",
+          "Cette étape est facultative. Selon le parcours proposé dans ton application, tu pourras aussi ajouter une photo plus tard en modifiant la plante."
         ]
       },
       {
-        "heading": "Étape 08 — Informations finales (nom requis)",
+        "heading": "Étape 08 — Nommer ta plante et compléter ses informations",
         "body": [
-          "Définissez le nom affiché de la plante (obligatoire).",
-          "Ajoutez facultativement des notes et la date d'achat.",
-          "Ces informations sont visibles dans les détails de la plante et aident à tenir un historique lisible des soins."
+          "Donne un nom à ta plante. Ce champ est obligatoire.",
+          "Tu peux aussi ajouter des notes et la date d’achat.",
+          "Ces informations apparaissent dans les détails de la plante et t’aident à conserver un suivi utile de son entretien."
         ]
       },
       {
         "heading": "Étape 09 — Résumé et confirmation",
         "body": [
-          "Après avoir ajouté correctement la plante, l'assistant affiche l'écran de confirmation/résumé.",
-          "À partir de cet écran, vous pouvez accéder à la liste des plantes ou ouvrir la plante nouvellement créée — en fonction de la navigation dans l'application."
+          "Une fois la plante ajoutée, l’assistant affiche une confirmation et un récapitulatif.",
+          "Selon la navigation de ton application, tu peux alors ouvrir la liste des plantes ou les détails de celle que tu viens d’ajouter."
         ]
       },
       {
-        "heading": "Notes et autorisations",
+        "heading": "Autorisations et points à retenir",
         "body": [
-          "La reconnaissance des plantes nécessite l'accès à l'appareil photo et/ou à la galerie, en fonction de la manière dont la photo est fournie.",
-          "Les mesures d'exposition peuvent nécessiter des autorisations pour les capteurs (par exemple, boussole) et dépendent de la disponibilité du matériel dans l'appareil.",
-          "L'association avec la définition de la plante est facultative — vous pouvez ignorer cette étape et toujours créer la plante, puis ajouter des rappels manuellement."
+          "L’identification par photo nécessite l’accès à la caméra ou à la galerie, selon l’origine de la photo.",
+          "Les mesures d’exposition peuvent demander l’accès aux capteurs du téléphone, comme la boussole. Elles dépendent aussi des capteurs présents sur ton appareil.",
+          "La fiche d’espèce est facultative : tu peux ajouter ta plante sans en choisir une et créer tes rappels toi-même."
         ]
       }
     ]

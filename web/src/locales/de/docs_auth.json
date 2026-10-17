@@ -3,52 +3,52 @@
     "title": "Anmeldung und Registrierung",
     "sections": [
       {
-        "heading": "Erstellen eines neuen Kontos (Registrierung)",
+        "heading": "Konto erstellen",
         "body": [
-          "Um Flovers zu nutzen, muss ein individuelles Benutzerkonto erstellt werden. Die Registrierung erfolgt direkt in der mobilen App.",
-          "Für die Registrierung ist lediglich eine E-Mail-Adresse und ein Passwort erforderlich. Zu diesem Zeitpunkt sind keine zusätzlichen persönlichen Daten notwendig.",
-          "Das Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl sowie ein Sonderzeichen enthalten, um ein grundlegendes Sicherheitsniveau zu gewährleisten.",
-          "Vor Abschluss der Registrierung muss der Benutzer die Nutzungsbedingungen und die Datenschutzrichtlinie akzeptieren."
+          "Für Flovers brauchst du ein eigenes Konto. Du kannst es direkt in der App erstellen.",
+          "Zur Registrierung reichen eine E-Mail-Adresse und ein Passwort. Weitere persönliche Angaben sind zunächst nicht nötig.",
+          "Dein Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl sowie ein Sonderzeichen enthalten.",
+          "Bevor du die Registrierung abschließt, musst du die Nutzungsbedingungen und die Datenschutzerklärung akzeptieren."
         ]
       },
       {
-        "heading": "Aktivierung des Kontos per E-Mail",
+        "heading": "Konto per E-Mail aktivieren",
         "body": [
-          "Nach dem Absenden des Registrierungsformulars wird eine Aktivierungs-E-Mail an die angegebene Adresse gesendet.",
-          "Um das Konto zu aktivieren, muss der Bestätigungslink in der erhaltenen Nachricht angeklickt werden.",
-          "Bis zur Aktivierung des Kontos ist das Anmelden in der App nicht möglich."
+          "Nach der Registrierung erhältst du eine Aktivierungs-E-Mail an die angegebene Adresse.",
+          "Öffne den Bestätigungslink in dieser Nachricht, um dein Konto zu aktivieren.",
+          "Erst nach der Aktivierung kannst du dich in der App anmelden."
         ]
       },
       {
-        "heading": "Erneutes Senden der Aktivierungs-E-Mail",
+        "heading": "Aktivierungs-E-Mail erneut anfordern",
         "body": [
-          "Falls die Aktivierungs-E-Mail nicht angekommen ist, kann der Benutzer deren erneutes Senden über die App anfordern.",
-          "Diese Option ist auf dem Anmelde- oder Registrierungsbildschirm verfügbar und kann verwendet werden, wenn die Nachricht verloren gegangen, verzögert oder im Spam-Ordner gelandet ist.",
-          "Es ist ratsam, vor dem erneuten Senden den Spam-Ordner oder andere E-Mail-Filter zu überprüfen."
+          "Falls die Aktivierungs-E-Mail nicht angekommen ist, kannst du sie in der App erneut anfordern.",
+          "Die Option findest du bei der Anmeldung oder Registrierung. Sie hilft dir, wenn die Nachricht verspätet eintrifft, verloren gegangen ist oder im Spamordner liegt.",
+          "Prüfe zuerst den Spamordner und andere gefilterte Postfächer, bevor du eine neue Nachricht anforderst."
         ]
       },
       {
-        "heading": "Anmeldung in ein bestehendes Konto",
+        "heading": "Mit einem bestehenden Konto anmelden",
         "body": [
-          "Für die Anmeldung ist nur die E-Mail-Adresse und das zum Konto gehörende Passwort erforderlich.",
-          "Falls das Konto noch nicht aktiviert wurde, informiert die App darüber, dass die E-Mail-Adresse bestätigt werden muss.",
-          "Die Anmeldedaten werden sicher serverseitig überprüft; Passwörter werden nicht im Klartext gespeichert."
+          "Melde dich mit der E-Mail-Adresse und dem Passwort deines Kontos an.",
+          "Falls dein Konto noch nicht aktiviert ist, weist dich die App darauf hin, deine E-Mail-Adresse zu bestätigen.",
+          "Deine Anmeldedaten werden sicher auf dem Server geprüft. Passwörter werden nicht im Klartext gespeichert."
         ]
       },
       {
-        "heading": "Zurücksetzen des vergessenen Passworts",
+        "heading": "Passwort zurücksetzen",
         "body": [
-          "Falls der Benutzer sich aufgrund eines vergessenen Passworts nicht anmelden kann, kann er eine E-Mail zum Zurücksetzen des Passworts anfordern.",
-          "Die Nachricht enthält Anweisungen sowie einen sicheren Link, mit dem ein neues Passwort festgelegt werden kann.",
-          "Nach dem Festlegen des neuen Passworts ist eine sofortige Anmeldung in der App möglich."
+          "Wenn du dein Passwort vergessen hast, kannst du in der App eine E-Mail zum Zurücksetzen anfordern.",
+          "Die Nachricht enthält eine Anleitung und einen sicheren Link, über den du ein neues Passwort festlegen kannst.",
+          "Danach kannst du dich sofort mit deinem neuen Passwort anmelden."
         ]
       },
       {
-        "heading": "Sicherheitsmaßnahmen",
+        "heading": "Dein Konto schützen",
         "body": [
-          "Jedes Benutzerkonto ist durch ein individuelles Passwort geschützt, das bei der Registrierung festgelegt wird.",
-          "Aus Sicherheitsgründen sollten Anmeldedaten nicht an Dritte weitergegeben werden.",
-          "Bei Verdacht auf unbefugten Zugriff auf das Konto wird empfohlen, das Passwort unverzüglich zu ändern."
+          "Jedes Konto ist durch das eigene Passwort geschützt, das du bei der Registrierung festlegst.",
+          "Gib deine Anmeldedaten nicht an andere weiter.",
+          "Wenn du vermutest, dass jemand unbefugt auf dein Konto zugreift, ändere dein Passwort sofort."
         ]
       }
     ]

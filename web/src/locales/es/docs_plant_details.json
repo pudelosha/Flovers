@@ -3,67 +3,67 @@
     "title": "Detalles de la planta",
     "sections": [
       {
-        "heading": "Propósito de esta vista",
+        "heading": "Todo lo relacionado con una planta",
         "body": [
-          "La vista Detalles de la planta es el lugar central para ver y gestionar una sola planta creada por el usuario.",
-          "Conecta información sobre la planta, recordatorios asignados, tareas, lecturas de sensores (si están disponibles) y acciones rápidas relacionadas con esta planta."
+          "Esta pantalla reúne la información y las acciones para una de tus plantas.",
+          "Aquí encontrarás sus datos, recordatorios, tareas y lecturas de sensores, si tiene un dispositivo asociado, además de accesos a otras pantallas relacionadas."
         ]
       },
       {
-        "heading": "Información sobre la planta",
+        "heading": "Los datos de tu planta",
         "body": [
-          "En la parte superior de la pantalla se muestra la imagen de la planta, su nombre, el nombre opcional de la definición de la planta y la ubicación asignada.",
-          "A continuación se presentan los parámetros detallados proporcionados durante la creación de la planta, como la fecha de compra, notas, condiciones de luz, orientación, distancia de la ventana, tipo de maceta y tipo de sustrato.",
-          "Esta información ayuda a interpretar mejor los recordatorios, las lecturas y las decisiones relacionadas con el cuidado."
+          "En la parte superior verás su imagen, nombre, ubicación y, si corresponde, el nombre de su ficha de especie.",
+          "Debajo aparecen los datos indicados al añadirla: fecha de compra, notas, luz, orientación, distancia a la ventana, maceta y sustrato.",
+          "Estos datos te ayudan a interpretar las lecturas y adaptar los recordatorios y cuidados a las condiciones reales."
         ]
       },
       {
-        "heading": "Acciones a nivel de planta (menú de 3 puntos)",
+        "heading": "Acciones del menú de tres puntos",
         "body": [
-          "El menú de 3 puntos asociado con el encabezado de la planta ofrece acciones adicionales relacionadas con la propia planta.",
-          "Las opciones disponibles incluyen mostrar la Definición de la planta (si la planta está vinculada a ella), editar los datos de la planta, cambiar la imagen y acceder a los Recordatorios filtrados para esta planta.",
-          "Cambiar la imagen permite reemplazar la imagen predeterminada, agregar una foto propia desde el teléfono o eliminar la imagen."
+          "El menú junto al título ofrece más acciones para esa planta.",
+          "Puedes consultar la ficha de especie asociada, editar los datos, cambiar la imagen o abrir sus recordatorios.",
+          "Al cambiar la imagen puedes sustituir una predeterminada, añadir una foto del teléfono o retirar la imagen."
         ]
       },
       {
-        "heading": "Definición de la planta",
+        "heading": "La ficha de especie",
         "body": [
-          "Si la planta está vinculada a una Definición de planta desde la base de datos de Flovers, el usuario puede abrir la vista dedicada de la Definición.",
-          "Esta vista presenta información sobre la especie, como la descripción de la planta, las preferencias de cuidado, características, nivel de dificultad, rango de temperaturas, humedad, toxicidad y tipo de crecimiento.",
-          "Las definiciones de plantas ofrecen pautas generales y deben ser interpretadas en el contexto de las condiciones reales del usuario."
+          "Si has elegido una ficha de la base Flovers, puedes abrirla en una pantalla propia.",
+          "La ficha describe la especie y sus necesidades: características, dificultad de cuidado, temperaturas, humedad del aire, toxicidad y crecimiento.",
+          "Sus recomendaciones son generales. Ten siempre en cuenta las condiciones reales de tu planta."
         ]
       },
       {
         "heading": "Recordatorios y tareas",
         "body": [
-          "La sección Recordatorios muestra todos los recordatorios activos asignados a una planta en particular.",
-          "Cada recordatorio tiene su propio menú de 3 puntos, que permite cerrar la tarea, editar el recordatorio o ver el historial de tareas.",
-          "Al cerrar una tarea, el usuario puede agregar una nota, que se convierte en parte del historial de cuidado de la planta."
+          "La sección «Recordatorios» muestra los recordatorios activos de esa planta.",
+          "El menú de cada recordatorio permite completar tareas, editarlo o consultar el historial.",
+          "Cuando completas una tarea, puedes añadir una nota que quedará en el historial de cuidados de la planta."
         ]
       },
       {
-        "heading": "Últimas lecturas",
+        "heading": "Las últimas lecturas",
         "body": [
-          "Si la planta está vinculada a un dispositivo de medición, las últimas lecturas de los sensores se muestran en esta vista.",
-          "Las lecturas admitidas incluyen la temperatura del aire, la humedad del aire, el nivel de luz y la humedad del suelo.",
-          "La sección muestra los últimos valores junto con la información sobre el momento en que se realizaron las mediciones.",
-          "Tocar el mosaico de lecturas lleva al usuario a la vista Historial de lecturas, donde se presentan gráficos detallados y resúmenes (diarios/semanales/mensuales) para la temperatura, la humedad, la luz y la humedad del suelo (si el dispositivo está vinculado a la planta)."
+          "Si la planta tiene un dispositivo de medición asociado, sus últimas lecturas aparecen aquí.",
+          "Se admiten temperatura del aire, humedad del aire, intensidad de luz y humedad del suelo.",
+          "La sección muestra los últimos valores y la fecha y hora de la última lectura recibida.",
+          "Toca la tarjeta de lecturas para abrir el historial. Mientras haya un dispositivo asociado, podrás ver gráficos y resúmenes diarios, semanales o mensuales de cada medida."
         ]
       },
       {
-        "heading": "Código QR y acceso rápido",
+        "heading": "Acceso rápido con el código QR",
         "body": [
-          "Cada planta tiene un código QR único que se muestra en la parte inferior de la pantalla.",
-          "Escanear este código en la vista del escáner lleva directamente a la vista Detalles de la planta.",
-          "El código QR se puede guardar en el dispositivo o enviar por correo electrónico, lo que permite imprimirlo y colocarlo en la maceta."
+          "Cada planta tiene un código QR único que aparece al final de esta pantalla.",
+          "Si lo escaneas con el escáner de la aplicación, se abren directamente los detalles de esa planta.",
+          "Puedes guardar el código en el teléfono o enviártelo por correo para imprimirlo y pegarlo en la maceta."
         ]
       },
       {
-        "heading": "Información importante",
+        "heading": "Aspectos importantes",
         "body": [
-          "Las fotos añadidas por el usuario se almacenan exclusivamente en el dispositivo del usuario y no se guardan en el backend de Flovers.",
-          "Las imágenes predeterminadas de las plantas provienen del backend de Flovers y pueden generarse utilizando IA.",
-          "Las lecturas de los sensores y las acciones sugeridas son solo informativas y deben combinarse con la propia evaluación del usuario."
+          "Las fotos de plantas que añades se guardan solo en tu dispositivo y no se suben a los servidores de Flovers.",
+          "Las imágenes predeterminadas proceden de los servidores de Flovers y pueden haberse generado con IA.",
+          "Las lecturas y las recomendaciones sirven de orientación. Complétalas con tu propia observación."
         ]
       }
     ]

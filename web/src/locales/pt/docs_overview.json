@@ -5,91 +5,91 @@
       {
         "heading": "O que é o Flovers?",
         "body": [
-          "Flovers é um assistente de cuidados com plantas que ajuda a organizar atividades diárias, acompanhar o histórico de cuidados e monitorar leituras dos seus próprios dispositivos IoT.",
-          "O aplicativo combina lembretes e tarefas com perfis de plantas (Suas plantas) e definições de plantas (perfis de espécies integrados com recomendações).",
-          "O Flovers apoia suas decisões, mas não as substitui—os resultados dos cuidados dependem das condições e da forma de aplicação das orientações.",
-          "O serviço inclui um aplicativo móvel (Android; futuramente iOS), uma API de backend e um site com documentação e informações legais."
+          "O Flovers ajuda você a organizar os cuidados do dia a dia, manter o histórico das plantas e acompanhar as leituras dos seus dispositivos IoT.",
+          "O aplicativo reúne lembretes, tarefas e informações sobre suas plantas. Você pode associar fichas de espécies do catálogo para consultar orientações de cuidado.",
+          "O Flovers ajuda nas suas decisões. Os resultados dependem do ambiente e de como você aplica as orientações.",
+          "O serviço inclui um aplicativo Android, com iOS previsto para o futuro, uma API de backend e um site com documentação e informações legais."
         ]
       },
       {
-        "heading": "Conceitos-chave (como funciona a estrutura do aplicativo)",
+        "heading": "Como o Flovers funciona",
         "body": [
-          "Definição da planta: perfil de espécie integrado que contém características gerais e recomendações (luz, rega/pulverização, fertilização etc.).",
-          "Instância da planta: a sua própria planta (seu exemplar), opcionalmente vinculada a uma Definição da planta para obter melhores orientações padrão.",
-          "Lembrete: regra cíclica (por exemplo, regar a cada X dias) com base na qual as Tarefas são criadas automaticamente.",
-          "Tarefa: ação específica gerada a partir de um Lembrete; você pode marcá-la como concluída e adicionar uma nota, construindo o histórico de cuidados."
+          "Ficha da espécie: informações do catálogo sobre as características e os cuidados gerais, como luz, frequência de rega e pulverização e fertilização.",
+          "Sua planta: o exemplar que você adiciona à conta e cuida. Associe uma ficha da espécie, se quiser receber orientações e sugestões iniciais.",
+          "Lembrete: define um cuidado a repetir, como regar a cada X dias, e gera as tarefas automaticamente.",
+          "Tarefa: um cuidado específico criado por um lembrete. Você pode marcar como concluído e adicionar uma anotação ao histórico."
         ]
       },
       {
-        "heading": "Principais funcionalidades em resumo",
+        "heading": "O que você pode fazer",
         "body": [
-          "Conta do usuário: registro, login, confirmação de e-mail, redefinição de senha e gerenciamento das configurações do perfil.",
-          "Gerenciamento de plantas: adicionar plantas, agrupar por Localizações, notas e visualização do histórico de atividades.",
-          "Lembretes e tarefas: criação de rotinas cíclicas (rega, pulverização, fertilização, transplante, cuidados) e sua execução.",
-          "Leituras IoT: conexão de dispositivos próprios e registro de dados como temperatura, umidade do ar, umidade do solo e intensidade da luz."
+          "Conta: cadastre-se, entre, confirme o e-mail, redefina a senha e ajuste o perfil.",
+          "Plantas: adicione seus exemplares, agrupe por localização, escreva anotações e confira o que foi feito e quando.",
+          "Lembretes e tarefas: planeje rega, pulverização, fertilização, replantio e outros cuidados e marque os trabalhos concluídos.",
+          "Leituras IoT: conecte seus dispositivos e salve temperatura do ar, umidade do ar, umidade do solo e luz."
         ]
       },
       {
-        "heading": "Reconhecimento de plantas (a partir de foto)",
+        "heading": "Reconhecimento por foto",
         "body": [
-          "O Flovers permite reconhecer plantas a partir de uma foto para facilitar a correspondência com a Definição da planta e começar com melhores configurações padrão.",
-          "O reconhecimento ocorre no servidor usando o sistema de ML proprietário do Prestador de Serviço, treinado em mais de 700 espécies.",
-          "As fotos enviadas para reconhecimento são usadas exclusivamente para realizar o processo de reconhecimento e não se destinam ao armazenamento permanente.",
-          "Os resultados dependem da qualidade da foto, iluminação, nitidez, visibilidade da planta e semelhança com outras espécies."
+          "O reconhecimento por foto ajuda a encontrar a ficha da espécie mais provável e sugestões de cuidado para começar.",
+          "Ele é feito no servidor por um sistema de aprendizado de máquina do próprio prestador do serviço, treinado com mais de 700 espécies.",
+          "As fotos são usadas apenas no reconhecimento e não se destinam ao armazenamento permanente.",
+          "Os resultados dependem da iluminação, do foco, da visibilidade da planta e da semelhança com outras espécies do sistema."
         ]
       },
       {
-        "heading": "Dispositivos IoT e dados de sensores",
+        "heading": "Dispositivos IoT e sensores",
         "body": [
-          "O Flovers oferece suporte a dispositivos próprios ou de terceiros (por exemplo, Arduino) que enviam leituras associadas à sua conta.",
-          "Leituras suportadas: temperatura do ar, umidade do ar, umidade do solo e nível de luz.",
-          "As leituras são armazenadas no backend e apresentadas no aplicativo como valores atuais e histórico (resumos diários/semanais/mensais).",
-          "Você tem controle sobre o pareamento e o uso—estabilidade, calibração e instalação dos dispositivos ficam sob sua responsabilidade."
+          "Você pode usar dispositivos próprios ou de terceiros, como placas Arduino, para enviar leituras à sua conta.",
+          "São aceitas medições de temperatura do ar, umidade do ar, umidade do solo e luz.",
+          "As leituras ficam no servidor e aparecem no aplicativo como valores atuais e resumos diários, semanais e mensais.",
+          "Você decide como associar e usar os dispositivos. O funcionamento, a calibração e a instalação são sua responsabilidade."
         ]
       },
       {
-        "heading": "Códigos QR e acesso rápido",
+        "heading": "Códigos QR",
         "body": [
-          "Você pode gerar códigos QR contendo um link para uma Instância de planta específica na sua conta.",
-          "Um cenário típico é imprimir e colar o código no vaso e, em seguida, escanear para acessar rapidamente os detalhes da planta.",
-          "Os códigos QR servem para conveniência; trate-os como indicadores de acesso e não os compartilhe publicamente se puderem revelar metadados.",
-          "Atualmente, os detalhes das plantas destinam-se principalmente à visualização pelo proprietário autenticado."
+          "Você pode criar um código QR com um link para uma planta da sua conta.",
+          "Imprima e cole no vaso. Ao escanear, você abre os detalhes e as leituras da planta.",
+          "Os códigos facilitam o acesso às informações. Evite compartilhá-los publicamente se puderem expor metadados sensíveis.",
+          "No momento, os detalhes se destinam apenas ao proprietário da planta depois de entrar na conta."
         ]
       },
       {
         "heading": "Notificações e lembretes",
         "body": [
-          "O Flovers pode enviar notificações push (via Firebase) sobre tarefas de hoje ou atrasadas—dependendo das configurações.",
-          "As configurações de notificação estão no Perfil; mesmo com o push desativado, lembretes e tarefas permanecem no aplicativo.",
-          "As mensagens por e-mail são usadas atualmente principalmente para ações relacionadas à conta (ativação e redefinição de senha).",
-          "As notificações têm caráter de apoio—o Flovers não garante a saúde das plantas nem que os lembretes evitarão perdas."
+          "Conforme suas configurações, o Flovers pode enviar notificações push pelo Firebase para tarefas no prazo ou atrasadas.",
+          "Ajuste os avisos em Perfil e configurações. Os lembretes continuam no aplicativo mesmo se você desativar as notificações.",
+          "Os e-mails servem para ativar a conta, redefinir a senha e, quando você habilita esses avisos, receber resumos diários das tarefas e lembretes de atraso.",
+          "Os avisos são um apoio. O Flovers não garante a saúde das plantas nem que os lembretes evitem perdas."
         ]
       },
       {
         "heading": "Privacidade, segurança e seus dados",
         "body": [
-          "O Flovers armazena dados da conta e os dados necessários para a prestação do Serviço (plantas, lembretes, tarefas, notas e leituras).",
-          "As senhas são armazenadas de forma criptografada; a ativação da conta requer verificação de e-mail.",
-          "A premissa é o processamento de dados na UE; a hospedagem está planejada na Hetzner (UE), e as notificações push são realizadas pelo Firebase.",
-          "Os detalhes estão na Política de Privacidade e nos Termos disponíveis no site e no aplicativo."
+          "O Flovers guarda os dados da conta e os necessários ao serviço: plantas, lembretes, tarefas, anotações e leituras.",
+          "As senhas são armazenadas na forma de hash. Para ativar a conta, você precisa confirmar seu e-mail.",
+          "O Flovers busca manter os dados na UE. O backend funciona em um VPS da Hetzner, e as notificações push usam o Firebase.",
+          "Para os detalhes, consulte a Política de privacidade e os Termos de uso disponíveis no site e no aplicativo."
         ]
       },
       {
-        "heading": "Limitações e avisos importantes",
+        "heading": "Limites e cuidados",
         "body": [
-          "O Flovers é uma ferramenta de planejamento e monitoramento; não é um sistema profissional de aconselhamento e não substitui o conhecimento em jardinagem.",
-          "As leituras dos sensores podem ser imprecisas (calibração, instalação, condições); em situações importantes, verifique-as por conta própria.",
-          "As recomendações de cuidados são gerais e podem não se adequar às suas condições (substrato, vaso, luz, umidade, estação).",
-          "Se algo parecer incorreto, confie na sua própria avaliação—ajuste as rotinas e use fontes confiáveis."
+          "O Flovers é uma ferramenta de planejamento e acompanhamento. Ele não oferece aconselhamento profissional nem substitui o conhecimento especializado.",
+          "As leituras podem estar imprecisas por problemas de calibração, posição ou funcionamento do dispositivo. Confira os valores por conta própria antes de decisões importantes.",
+          "As orientações são gerais e podem não se aplicar ao seu substrato, vaso, luz, umidade ou estação do ano.",
+          "Se algo parecer errado, use sua avaliação, ajuste os cuidados e consulte fontes confiáveis de jardinagem quando precisar."
         ]
       },
       {
-        "heading": "E agora?",
+        "heading": "Por onde começar",
         "body": [
-          "Se você está começando, vá para Login & Register e, em seguida, crie sua primeira Instância de planta no assistente Create Plant Wizard.",
-          "Depois, configure Lembretes e execute Tarefas para manter a rotina e construir o histórico de cuidados.",
-          "Se você tiver um dispositivo, abra Readings, configure-o e use Readings History para observar tendências.",
-          "Use o FAQ para respostas rápidas e os documentos Termos/Política de Privacidade para questões formais."
+          "Leia Acesso e cadastro e depois adicione sua primeira planta com o Assistente para adicionar plantas.",
+          "Configure os Lembretes e conclua as tarefas para manter os cuidados em dia e construir um histórico útil.",
+          "Se tiver um dispositivo, abra Leituras para associá-lo. Depois, use o Histórico de leituras para acompanhar as mudanças.",
+          "Consulte as Perguntas frequentes para respostas rápidas e os Termos e a Política de privacidade para as condições de uso e o tratamento dos dados."
         ]
       }
     ]

@@ -3,59 +3,59 @@
     "title": "Escáner QR",
     "sections": [
       {
-        "heading": "Para qué sirve el Escáner",
+        "heading": "Abrir tu planta rápidamente",
         "body": [
-          "La vista Escáner permite escanear los códigos QR generados previamente para las plantas en Flovers.",
-          "El escenario más común es imprimir el código QR y colocarlo en la maceta para abrir rápidamente la planta correspondiente en la aplicación.",
-          "El escaneo de QR sirve principalmente para una navegación cómoda y rápida, sin necesidad de buscar manualmente en la lista."
+          "El escáner lee los códigos QR de Flovers que has creado para tus plantas.",
+          "Puedes imprimir el código y pegarlo en la maceta para abrir la planta correspondiente más adelante.",
+          "Así no tienes que buscarla manualmente en la lista."
         ]
       },
       {
-        "heading": "Acceso requerido a la cámara",
+        "heading": "Permitir el acceso a la cámara",
         "body": [
-          "Para usar la función del Escáner QR, la aplicación Flovers requiere permiso para acceder a la cámara del teléfono.",
-          "La cámara se utiliza exclusivamente para escanear códigos QR en tiempo real y no se utiliza para grabar videos ni tomar fotos fuera de este proceso.",
-          "Si el acceso a la cámara es denegado, la función del Escáner no funcionará hasta que se otorguen los permisos correspondientes en la configuración del dispositivo."
+          "El escáner necesita permiso para acceder a la cámara del dispositivo.",
+          "La cámara solo se usa para leer códigos QR en directo. No graba vídeo ni toma fotos fuera de ese proceso.",
+          "Si no concedes el permiso, el escáner no funcionará. Puedes activarlo más tarde en los ajustes del sistema."
         ]
       },
       {
-        "heading": "Qué contiene el código QR en Flovers",
+        "heading": "Qué contiene un código QR de Flovers",
         "body": [
-          "El código QR en Flovers contiene una referencia a Flovers y el identificador (ID) de la Instancia específica de la planta en la cuenta del usuario.",
-          "Después de escanear correctamente el código, la aplicación lo reconoce y redirige a la planta indicada.",
-          "Los códigos QR están destinados principalmente para trabajar con las plantas propias guardadas en la cuenta."
+          "El código incluye una referencia a Flovers y el identificador de una planta concreta de tu cuenta.",
+          "Cuando la aplicación lo lee y lo reconoce, abre la planta correspondiente.",
+          "Estos códigos están pensados para las plantas que gestionas en tu propia cuenta."
         ]
       },
       {
-        "heading": "Qué sucede después de un escaneo exitoso",
+        "heading": "Qué ocurre después del escaneo",
         "body": [
-          "Después de escanear correctamente el código QR en la vista Escáner, el usuario es redirigido automáticamente a la vista Detalles de la Planta (Plant Details).",
-          "En los Detalles de la Planta, se pueden ver la información sobre la planta, las tareas asociadas y las lecturas más recientes (si la planta está conectada a un dispositivo).",
-          "Por lo tanto, el Escáner es la forma más rápida de acceder a la vista completa de una planta."
+          "Si el escaneo tiene éxito, se abren los detalles de la planta.",
+          "Allí puedes consultar sus datos, sus tareas y las últimas lecturas si tiene un dispositivo vinculado.",
+          "El escáner da acceso directo a toda la información de esa planta."
         ]
       },
       {
-        "heading": "Dónde ver el código QR de la planta",
+        "heading": "Dónde consultar el código de una planta",
         "body": [
-          "La vista previa del código QR está disponible en la lista de plantas en la vista Plantas (Plants) — solo hay que abrir el menú desplegable de la planta seleccionada y elegir la opción de código QR.",
-          "También se puede mostrar el código QR directamente en la vista Detalles de la Planta (Plant Details).",
-          "En ambos lugares se muestra el mismo código QR asignado a la planta."
+          "En la lista «Plantas», abre el menú de la planta y elige la opción de código QR.",
+          "También puedes verlo en los detalles de la planta.",
+          "Ambas pantallas muestran el mismo código de la planta seleccionada."
         ]
       },
       {
-        "heading": "Guardar o enviar el código QR",
+        "heading": "Guardar o enviar el código",
         "body": [
-          "Tanto desde la vista Planta (Plants) como desde los Detalles de la Planta (Plant Details) se puede guardar el código QR en el teléfono.",
-          "También es posible enviar el código QR a la propia dirección de correo electrónico, por ejemplo, para imprimirlo más tarde o mantener una copia de seguridad.",
-          "Cuando imprimas, asegúrate de que el código sea legible (buen contraste, sin dobleces, sin reflejos)."
+          "Puedes guardar el código en el teléfono desde la lista de plantas o sus detalles.",
+          "También puedes enviártelo por correo para imprimirlo o conservar una copia.",
+          "Al imprimirlo, asegúrate de que tenga buen contraste y evita pliegues o reflejos que dificulten su lectura."
         ]
       },
       {
-        "heading": "Solución de problemas con el escaneo",
+        "heading": "Si el escaneo falla",
         "body": [
-          "Si el escaneo no funciona, intenta mejorar la iluminación y asegúrate de que el código esté plano y completamente visible en el marco de la cámara.",
-          "Si el código está dañado o borroso, vuelve a guardarlo desde la aplicación o envíalo por correo electrónico e imprime una nueva copia.",
-          "Si el código abre la planta incorrecta, asegúrate de que al guardar o exportar se haya seleccionado la planta correcta."
+          "Mejora la iluminación y mantén el código plano y completamente visible dentro de la cámara.",
+          "Si está dañado o borroso, vuelve a guardarlo o enviarlo desde la aplicación e imprime otra copia.",
+          "Si abre otra planta, comprueba que seleccionaste la correcta al generar o exportar el código."
         ]
       }
     ]

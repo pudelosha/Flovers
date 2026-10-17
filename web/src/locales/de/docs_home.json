@@ -1,75 +1,75 @@
 {
   "docs_home": {
-    "title": "Home",
+    "title": "Startseite",
     "sections": [
       {
-        "heading": "Ziel des Home-Bildschirms",
+        "heading": "Deine täglichen Aufgaben im Blick",
         "body": [
-          "Home ist der Hauptbildschirm, der nach erfolgreichem Anmelden angezeigt wird.",
-          "Er konzentriert sich auf tägliche Aufgaben: Es zeigt Aufgaben an, die auf Erinnerungen basieren, sodass schnell erkennbar wird, was heute Aufmerksamkeit benötigt oder bereits überfällig ist.",
-          "Wenn keine Aufgaben zum Erledigen vorhanden sind, wird eine Informationskachel angezeigt, die eine Nachricht über das Fehlen geplanter Aufgaben und Vorschläge für die nächsten Schritte enthält, z. B. das Erstellen von Erinnerungen."
+          "Die Startseite ist die erste Ansicht nach der Anmeldung.",
+          "Hier siehst du die Aufgaben, die aus deinen Erinnerungen entstehen. So erkennst du schnell, was heute ansteht und was bereits überfällig ist.",
+          "Wenn keine Aufgaben fällig sind, zeigt dir eine Infokachel, dass aktuell nichts geplant ist. Sie schlägt dir auch nächste Schritte vor, etwa Erinnerungen einzurichten."
         ]
       },
       {
-        "heading": "Aufgabenliste (Kacheln, die aus Erinnerungen generiert werden)",
+        "heading": "Was die Aufgabenkacheln zeigen",
         "body": [
-          "Jede Kachel stellt eine einzelne Aufgabe dar, die basierend auf der Definition der Erinnerung generiert wurde (z. B. Bewässerung, Sprühen, Düngen, Umpflanzen oder Pflege).",
-          "Aufgaben erscheinen automatisch, wenn sie gemäß den Zyklusregeln in der Erinnerung erforderlich werden.",
-          "Eine Kachel enthält normalerweise den Aufgabentyp, den Pflanzennamen, den Standort und den Status des Termins (z. B. Für heute oder Überfällig)."
+          "Jede Kachel steht für eine Aufgabe aus einer Erinnerung, zum Beispiel Gießen, Besprühen, Düngen, Umtopfen oder allgemeine Pflege.",
+          "Aufgaben erscheinen automatisch entsprechend dem Wiederholungsrhythmus der Erinnerung.",
+          "Auf der Kachel siehst du in der Regel die Aufgabenart, den Pflanzennamen, den Standort und die Fälligkeit, etwa heute oder bereits überfällig."
         ]
       },
       {
-        "heading": "Aufgaben-Kachel-Menü (Aktionen für einzelne Aufgaben)",
+        "heading": "Aktionen im Drei-Punkte-Menü",
         "body": [
-          "Jede Aufgabe hat ein Kontextmenü (Menü mit drei Punkten), das Aktionen für die jeweilige Aufgabe enthält.",
-          "Als erledigt markieren: Schließt die Aufgabe ab und ermöglicht optional das Hinzufügen einer Notiz, was hilft, die Pflegehistorie aufzubauen.",
-          "Erinnerung bearbeiten: Öffnet die Erinnerung, die mit der Aufgabe verbunden ist, um die Zykluseinstellungen zu ändern.",
-          "Zur Pflanze gehen: Führt zum Pflanzendetails-Bildschirm der der Aufgabe zugeordneten Pflanze.",
-          "Historie anzeigen: Öffnet die Aufgabenhistorie, die bereits erledigte Aufgaben für diese Pflanze oder Erinnerung zeigt."
+          "Über das Drei-Punkte-Menü einer Kachel erreichst du die Aktionen für diese Aufgabe.",
+          "„Als erledigt markieren“: Schließt die Aufgabe ab. Auf Wunsch kannst du eine Notiz zum Pflegeverlauf hinzufügen.",
+          "„Erinnerung bearbeiten“: Öffnet die zugehörige Erinnerung, damit du den Wiederholungsrhythmus ändern kannst.",
+          "„Zur Pflanze gehen“: Öffnet direkt die Details der zugehörigen Pflanze.",
+          "„Verlauf anzeigen“: Zeigt bereits erledigte Aufgaben für diese Pflanze oder Erinnerung."
         ]
       },
       {
-        "heading": "FAB-Schaltfläche (schnelle Aktionen)",
+        "heading": "Schnellaktionen",
         "body": [
-          "Auf dem Home-Bildschirm gibt es eine FAB-Schaltfläche, die ein Set schneller Aktionen zum Arbeiten mit Aufgaben erweitert.",
-          "Überfällige anzeigen: Wendet einen schnellen Filter an, der nur überfällige Aufgaben anzeigt.",
-          "Für heute anzeigen: Wendet einen schnellen Filter an, der Aufgaben anzeigt, die für heute geplant sind.",
-          "Sortieren: Ändert die Reihenfolge der angezeigten Aufgaben in der Liste.",
-          "Filtern: Verengt die Aufgabenliste basierend auf ausgewählten Kriterien.",
-          "Historie: Führt zum Aufgabenhistorie-Bildschirm, der separat dokumentiert wird."
+          "Die Schaltfläche für Schnellaktionen auf der Startseite öffnet ein Menü für deine Aufgaben.",
+          "„Überfällige anzeigen“: Zeigt nur überfällige Aufgaben.",
+          "„Heute fällige anzeigen“: Zeigt nur Aufgaben, die heute fällig sind.",
+          "„Sortieren“: Ändert die Reihenfolge der Aufgaben.",
+          "„Filtern“: Grenzt die Liste nach den gewählten Kriterien ein.",
+          "„Verlauf“: Öffnet den Aufgabenverlauf. Dazu gibt es eine eigene Anleitung."
         ]
       },
       {
-        "heading": "Sortieroptionen",
+        "heading": "Aufgaben sortieren",
         "body": [
-          "Die Sortierung ermöglicht es, die Aufgabenliste an Ihre Arbeitsweise anzupassen.",
-          "Verfügbare Sortieroptionen sind: Ausführungsdatum (Termin), Pflanzenname und Standort."
+          "Mit der Sortierung bringst du die Aufgaben in eine für dich passende Reihenfolge.",
+          "Du kannst nach Fälligkeit, Pflanzenname oder Standort sortieren."
         ]
       },
       {
-        "heading": "Filteroptionen",
+        "heading": "Aufgaben filtern",
         "body": [
-          "Filter helfen, sich auf eine ausgewählte Gruppe von Aufgaben zu konzentrieren.",
-          "Aufgaben können gefiltert werden nach: Pflanzenname, Standort, Aufgabentyp und Ausführungsdatumsbereich.",
-          "Filter können kombiniert werden, z. B. um nur Bewässerungsaufgaben für Pflanzen an einem bestimmten Standort anzuzeigen."
+          "Mit Filtern konzentrierst du dich auf bestimmte Aufgaben.",
+          "Du kannst nach Pflanzenname, Standort, Aufgabenart und einem Zeitraum für die Fälligkeit filtern.",
+          "Mehrere Filter lassen sich kombinieren, etwa um nur Gießaufgaben für Pflanzen an einem bestimmten Standort anzuzeigen."
         ]
       },
       {
-        "heading": "Massenaufgaben schließen (Bulk)",
+        "heading": "Mehrere Aufgaben auf einmal erledigen",
         "body": [
-          "Das Massen-Schließen von Aufgaben ist verfügbar, wenn Sie Schnellansichten wie 'Überfällige anzeigen' oder 'Für heute anzeigen' verwenden.",
-          "Wenn einer dieser Filter aktiv ist, zeigt die FAB-Schaltfläche vorübergehend eine zusätzliche Aktion wie „Alle sichtbaren als erledigt markieren“.",
-          "Diese Aktion schließt alle aktuell sichtbaren Aufgaben gleichzeitig, ohne dass einzelne Kacheln manuell ausgewählt werden müssen.",
-          "Das Massen-Schließen wurde für Situationen entwickelt, in denen Sie dieselbe Pflegeaufgabe für mehrere Pflanzen gleichzeitig durchführen.",
-          "Je nach gewähltem Workflow ist es möglicherweise immer noch möglich, Notizen zu den geschlossenen Aufgaben hinzuzufügen, nachdem die Massenaktion ausgeführt wurde."
+          "Wenn du „Überfällige anzeigen“ oder „Heute fällige anzeigen“ verwendest, kannst du mehrere Aufgaben gemeinsam abschließen.",
+          "Solange einer dieser Filter aktiv ist, erscheint im Schnellaktionsmenü eine zusätzliche Aktion wie „Sichtbare als erledigt markieren“.",
+          "Damit schließt du alle gerade angezeigten Aufgaben auf einmal ab, ohne sie einzeln auswählen zu müssen.",
+          "Das ist praktisch, wenn du zum Beispiel mehrere Pflanzen nacheinander gießt.",
+          "Je nach gewähltem Ablauf kannst du nach dem gemeinsamen Abschluss noch Notizen zu den erledigten Aufgaben hinzufügen."
         ]
       },
       {
-        "heading": "Navigation vom Home-Bildschirm",
+        "heading": "Von der Startseite zu anderen Ansichten",
         "body": [
-          "Der Home-Bildschirm ermöglicht ein schnelles Navigieren zu anderen Teilen der App durch Aktionen auf den Kacheln und FAB-Verknüpfungen.",
-          "Vom einzelnen Aufgabenbildschirm aus können Sie direkt zu den Pflanzendetails oder zur Aufgabenhistorie wechseln.",
-          "Vom FAB aus können Sie die Aufgabenhistorie öffnen oder die Aufgabenliste mithilfe von Sortierung und Filtern eingrenzen."
+          "Über die Aufgabenmenüs und die Schaltfläche für Schnellaktionen gelangst du schnell zu weiteren Bereichen der App.",
+          "Von einer Aufgabe aus kannst du direkt die Pflanzendetails oder den Aufgabenverlauf öffnen.",
+          "Im Schnellaktionsmenü erreichst du den Aufgabenverlauf sowie die Sortier- und Filteroptionen."
         ]
       }
     ]

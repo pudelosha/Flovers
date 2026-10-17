@@ -1,95 +1,95 @@
 {
   "docs_overview": {
-    "title": "Aperçu",
+    "title": "Vue d’ensemble",
     "sections": [
       {
-        "heading": "Qu'est-ce que Flovers ?",
+        "heading": "Qu’est-ce que Flovers ?",
         "body": [
-          "Flovers est un assistant de soin des plantes qui aide à organiser les tâches quotidiennes, suivre l'historique des soins et surveiller les lectures de vos propres appareils IoT.",
-          "L'application combine des rappels et des tâches avec des profils de plantes (Vos plantes) et des définitions de plantes (profils d'espèces intégrés avec des recommandations).",
-          "Flovers soutient vos décisions, mais ne les remplace pas—les résultats des soins dépendent des conditions et de la manière dont les conseils sont appliqués.",
-          "Le service comprend l'application mobile (Android ; iOS à venir), une API backend et un site Web avec de la documentation et des informations juridiques."
+          "Flovers t’aide à organiser l’entretien quotidien de tes plantes, à garder une trace des soins et à consulter les relevés de tes propres appareils connectés.",
+          "Tu gères tes plantes avec des rappels et des tâches. Les fiches d’espèces de la base apportent des informations générales et des conseils d’entretien.",
+          "Flovers accompagne tes décisions. Les résultats dépendent des conditions de culture et de la façon dont tu appliques les conseils.",
+          "Flovers comprend l’application Android, avec une version iOS prévue, les serveurs et leur API, ainsi qu’un site avec la documentation et les informations juridiques."
         ]
       },
       {
-        "heading": "Concepts clés (comment fonctionne la structure de l'application)",
+        "heading": "Les notions utiles",
         "body": [
-          "Définition de la plante : profil intégré d'espèce contenant des caractéristiques générales et des recommandations (lumière, arrosage/aspergeage, fertilisation, etc.).",
-          "Instance de plante : votre propre plante (votre exemplaire), éventuellement liée à la Définition de la plante pour obtenir de meilleurs conseils par défaut.",
-          "Rappel : règle cyclique (par exemple, arroser tous les X jours), à partir de laquelle des Tâches sont créées automatiquement.",
-          "Tâche : action spécifique générée à partir d'un Rappel ; vous pouvez la marquer comme accomplie et ajouter une note, construisant ainsi l'historique des soins."
+          "Fiche d’espèce : une fiche de la base avec les caractéristiques et les besoins généraux d’une espèce, notamment la lumière, l’arrosage, la brumisation et la fertilisation.",
+          "Ta plante : l’entrée correspondant à ton propre exemplaire. Tu peux lui associer une fiche d’espèce pour obtenir des conseils et des réglages suggérés.",
+          "Rappel : un réglage de soin récurrent, par exemple arroser tous les X jours, qui crée automatiquement des tâches.",
+          "Tâche : un soin concret issu d’un rappel. Tu peux le marquer comme terminé et ajouter une note au suivi des soins."
         ]
       },
       {
-        "heading": "Les fonctionnalités principales en résumé",
+        "heading": "Les principales fonctions",
         "body": [
-          "Compte utilisateur : inscription, connexion, confirmation par e-mail, réinitialisation du mot de passe et gestion des paramètres du profil.",
-          "Gestion des plantes : ajout de plantes, regroupement par Localisations, notes et aperçu de l'historique des actions.",
-          "Rappels et tâches : création de routines cycliques (arrosage, aspergeage, fertilisation, rempotage, entretien) et leur exécution.",
-          "Lectures IoT : connexion de vos appareils et enregistrement de données telles que la température, l'humidité de l'air, l'humidité du sol et l'intensité lumineuse."
+          "Compte : inscription, connexion, confirmation de l’e-mail, réinitialisation du mot de passe et gestion du profil.",
+          "Plantes : ajouter tes plantes, les regrouper par emplacement, prendre des notes et retrouver les soins effectués avec leur date.",
+          "Rappels et tâches : prévoir l’arrosage, la brumisation, la fertilisation, le rempotage ou l’entretien général, puis cocher les soins terminés.",
+          "Relevés de capteurs : connecter tes propres appareils et enregistrer la température de l’air, son humidité, l’humidité du sol et la luminosité."
         ]
       },
       {
-        "heading": "Reconnaissance des plantes (à partir d'une photo)",
+        "heading": "Identifier une plante à partir d’une photo",
         "body": [
-          "Flovers permet la reconnaissance des plantes à partir d'une photo, pour mieux adapter la Définition de la plante et commencer avec de meilleurs paramètres par défaut.",
-          "La reconnaissance se fait côté serveur en utilisant le système ML propriétaire du fournisseur, entraîné sur plus de 700 espèces.",
-          "Les photos envoyées pour la reconnaissance sont utilisées uniquement pour effectuer le processus de reconnaissance et ne sont pas destinées à être stockées de manière permanente.",
-          "Les résultats dépendent de la qualité de la photo, de l'éclairage, de la netteté, de la visibilité de la plante et de la similarité avec d'autres espèces."
+          "L’identification par photo t’aide à trouver la bonne fiche d’espèce et à commencer avec des réglages de soins adaptés.",
+          "Elle est effectuée sur les serveurs du fournisseur par son propre système d’apprentissage automatique, entraîné sur plus de 700 espèces.",
+          "Les photos envoyées servent uniquement à l’identification. Leur conservation permanente n’est pas prévue.",
+          "Les résultats dépendent de l’éclairage, de la netteté, de la visibilité de la plante et de sa ressemblance avec d’autres espèces de la base."
         ]
       },
       {
-        "heading": "Appareils IoT et données des capteurs",
+        "heading": "Les appareils connectés et leurs relevés",
         "body": [
-          "Flovers prend en charge les appareils internes ou externes (par exemple, Arduino) envoyant des lectures liées à votre compte.",
-          "Lectures prises en charge : température de l'air, humidité de l'air, humidité du sol et niveau de lumière.",
-          "Les lectures sont stockées dans le backend et affichées dans l'application sous forme de valeurs actuelles et d'historique (résumés quotidiens/hebdomadaires/mensuels).",
-          "Vous avez le contrôle sur l'appairage et l'utilisation—la stabilité, la calibration et l'installation des appareils restent de votre responsabilité."
+          "Tu peux utiliser des appareils fabriqués par tes soins ou par un tiers, par exemple à base d’Arduino, pour envoyer des relevés à ton compte.",
+          "Les mesures prises en charge sont la température de l’air, l’humidité de l’air, l’humidité du sol et la luminosité.",
+          "Les relevés sont conservés sur les serveurs. L’application affiche les valeurs actuelles et des résumés par jour, semaine ou mois.",
+          "Tu choisis les appareils que tu associes et leur usage. Leur fiabilité, leur étalonnage et leur installation restent sous ta responsabilité."
         ]
       },
       {
-        "heading": "QR Codes et accès rapide",
+        "heading": "Accéder à une plante par code QR",
         "body": [
-          "Vous pouvez générer des codes QR contenant un lien vers une Instance de plante spécifique dans votre compte.",
-          "Un scénario typique consiste à imprimer et coller le code sur le pot de fleurs, puis à scanner pour accéder rapidement aux détails de la plante.",
-          "Les QR codes sont destinés à la commodité ; considérez-les comme des indicateurs d'accès et ne les partagez pas publiquement s'ils peuvent révéler des métadonnées.",
-          "Actuellement, les détails des plantes sont principalement destinés à être consultés par le propriétaire connecté."
+          "Tu peux créer un code QR contenant un lien vers une plante précise de ton compte.",
+          "Imprime-le et colle-le sur le pot. En le scannant, tu retrouves directement les détails et les relevés de cette plante.",
+          "Les codes QR facilitent l’accès à tes données. Ne les partage pas publiquement s’ils risquent de révéler des informations sensibles.",
+          "Actuellement, les détails sont destinés à être consultés uniquement par la personne connectée à qui appartient la plante."
         ]
       },
       {
-        "heading": "Notifications et rappels",
+        "heading": "Les notifications et les rappels",
         "body": [
-          "Flovers peut envoyer des notifications push (via Firebase) concernant les tâches du jour ou en retard—en fonction des paramètres.",
-          "Les paramètres de notification se trouvent dans le Profil ; même si les notifications push sont désactivées, les rappels et tâches restent dans l'application.",
-          "Les e-mails sont actuellement utilisés principalement pour des actions liées au compte (activation et réinitialisation du mot de passe).",
-          "Les notifications sont de nature supportive—Flovers ne garantit pas la santé des plantes ni que les rappels éviteront des pertes."
+          "Selon tes réglages, Flovers peut envoyer des notifications push via Firebase pour les tâches prévues ou en retard.",
+          "Tu règles les notifications dans le profil. Les rappels et les tâches restent dans l’application même si les notifications sont désactivées.",
+          "Les e-mails servent à activer le compte et à réinitialiser le mot de passe. Selon tes réglages, tu peux aussi recevoir un résumé quotidien des tâches et des rappels pour celles en retard.",
+          "Les notifications sont une aide : Flovers ne garantit ni la santé des plantes ni que les rappels éviteront des pertes."
         ]
       },
       {
-        "heading": "Vie privée, sécurité et vos données",
+        "heading": "La confidentialité et tes données",
         "body": [
-          "Flovers stocke les données de compte et les données nécessaires à la fourniture du service (plantes, rappels, tâches, notes et lectures).",
-          "Les mots de passe sont stockés sous forme hachée ; l'activation du compte nécessite une vérification par e-mail.",
-          "Le traitement des données se fait au sein de l'UE ; l'hébergement est prévu sur Hetzner (UE), et les notifications push sont gérées par Firebase.",
-          "Les détails sont disponibles dans la Politique de confidentialité et le Règlement accessibles sur le site Web et dans l'application."
+          "Flovers conserve les données du compte et celles nécessaires au service : plantes, rappels, tâches, notes et relevés.",
+          "Les mots de passe sont conservés sous forme hachée. L’activation du compte passe par la confirmation de ton adresse e-mail.",
+          "Flovers cherche à conserver les données dans l’Union européenne. Les serveurs fonctionnent sur un VPS Hetzner et les notifications push utilisent Firebase.",
+          "Les précisions figurent dans la politique de confidentialité et les conditions d’utilisation, disponibles sur le site et dans l’application."
         ]
       },
       {
-        "heading": "Limitations et importantes remarques",
+        "heading": "Les limites à connaître",
         "body": [
-          "Flovers est un outil de planification et de suivi ; il ne s'agit pas d'un système de conseil professionnel et ne remplace pas les connaissances en jardinage.",
-          "Les lectures des capteurs peuvent être inexactes (calibration, montage, conditions) ; en cas de situation importante, vérifiez-les vous-même.",
-          "Les recommandations de soins sont générales et peuvent ne pas convenir à vos conditions (substrat, pot, lumière, humidité, saison).",
-          "Si quelque chose semble anormal, suivez votre propre jugement—ajustez les routines et utilisez des sources fiables."
+          "Flovers sert à planifier et à suivre les soins. L’application ne remplace ni les connaissances horticoles ni les conseils d’un professionnel.",
+          "Un relevé peut être faussé par l’étalonnage, l’emplacement ou un problème d’appareil. Vérifie toi-même les valeurs importantes avant de prendre une décision.",
+          "Les conseils sont généraux et peuvent ne pas convenir à tes conditions : substrat, taille du pot, lumière, humidité ou saison.",
+          "Si quelque chose te semble anormal, fie-toi aussi à tes observations, adapte les soins et consulte des sources horticoles fiables si nécessaire."
         ]
       },
       {
-        "heading": "Et après ?",
+        "heading": "Pour commencer",
         "body": [
-          "Si vous commencez, allez dans Login & Register, puis créez la première Instance de plante dans l'assistant Create Plant Wizard.",
-          "Ensuite, configurez les Rappels et exécutez les Tâches pour maintenir la routine et construire l'historique des soins.",
-          "Si vous avez un appareil, ouvrez Readings, configurez-le et utilisez Readings History pour observer les tendances.",
-          "Consultez la FAQ pour des réponses rapides et les documents Règlement/Politique de confidentialité pour les questions formelles."
+          "Lis d’abord « Connexion et inscription », puis ajoute ta première plante avec l’assistant.",
+          "Crée ensuite tes rappels et coche les tâches terminées pour établir une routine et garder un historique utile.",
+          "Si tu as un appareil, associe-le dans « Relevés », puis consulte l’historique pour repérer les évolutions.",
+          "La FAQ apporte des réponses rapides. Les conditions d’utilisation et la politique de confidentialité précisent les aspects juridiques et le traitement des données."
         ]
       }
     ]

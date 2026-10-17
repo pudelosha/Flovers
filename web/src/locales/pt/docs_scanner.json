@@ -3,59 +3,59 @@
     "title": "Scanner QR",
     "sections": [
       {
-        "heading": "Para que serve o Scanner",
+        "heading": "Abra a planta pelo código QR",
         "body": [
-          "A visualização do Scanner permite escanear códigos QR gerados anteriormente para plantas no Flovers.",
-          "O cenário mais comum é imprimir o código QR e colocá-lo no vaso, para depois abrir rapidamente a planta correta no aplicativo.",
-          "O escaneamento de QR serve principalmente para uma navegação conveniente e rápida — sem pesquisa manual na lista."
+          "O Scanner lê os códigos QR que você gerou para suas plantas no Flovers.",
+          "Imprima o código e cole no vaso. Depois, basta escanear para abrir a planta certa no aplicativo.",
+          "Assim, você acessa as informações sem procurar a planta na lista."
         ]
       },
       {
-        "heading": "Acesso à câmera obrigatório",
+        "heading": "Permita o acesso à câmera",
         "body": [
-          "Para usar a funcionalidade do Scanner QR, o aplicativo Flovers requer permissão de acesso à câmera do telefone.",
-          "A câmera é utilizada exclusivamente para escanear códigos QR em tempo real e não é usada para gravar vídeos nem tirar fotos fora desse processo.",
-          "Se o acesso à câmera for negado, a funcionalidade do Scanner não funcionará até que as permissões apropriadas sejam concedidas nas configurações do sistema do dispositivo."
+          "Para usar o Scanner QR, o Flovers precisa de permissão para acessar a câmera do celular.",
+          "A câmera é usada apenas para ler os códigos em tempo real. Ela não grava vídeos nem tira fotos fora desse processo.",
+          "Se você negar a permissão, o Scanner só funcionará depois que o acesso for liberado nas configurações do dispositivo."
         ]
       },
       {
-        "heading": "O que contém o código QR no Flovers",
+        "heading": "O que há no código",
         "body": [
-          "O código QR no Flovers contém uma referência ao Flovers e o identificador (ID) de uma Instância específica da planta na conta do usuário.",
-          "Após a leitura correta do código, o aplicativo o reconhece e realiza o redirecionamento para a planta indicada.",
-          "Os códigos QR são destinados principalmente ao uso com as próprias plantas salvas na conta."
+          "O código QR contém uma referência ao Flovers e o identificador (ID) de uma planta da sua conta.",
+          "Quando reconhece o código, o aplicativo abre a planta correspondente.",
+          "Os códigos foram pensados principalmente para acessar suas próprias plantas cadastradas."
         ]
       },
       {
-        "heading": "O que acontece após a leitura correta",
+        "heading": "Depois de escanear",
         "body": [
-          "Após a leitura correta do código QR na visualização do Scanner, o usuário é automaticamente redirecionado para a visualização Detalhes da planta (Plant Details).",
-          "Nos Detalhes da planta estão disponíveis informações sobre a planta, tarefas associadas e as leituras mais recentes (se a planta estiver conectada a um dispositivo).",
-          "Assim, o Scanner é a forma mais rápida de acessar a visualização completa de uma determinada planta."
+          "Quando o Scanner reconhece o código, abre os Detalhes da planta automaticamente.",
+          "Lá você encontra os dados, as tarefas e as últimas leituras, se houver um dispositivo associado.",
+          "É uma forma rápida de consultar todas as informações da planta."
         ]
       },
       {
-        "heading": "Onde visualizar o código QR da planta",
+        "heading": "Onde encontrar o código QR",
         "body": [
-          "A visualização do código QR está disponível na lista de plantas na visualização Plantas (Plants) — basta abrir o menu suspenso da planta selecionada e escolher a opção de código QR.",
-          "O código QR também pode ser exibido diretamente na visualização Detalhes da planta (Plant Details).",
-          "Em ambos os locais é exibido o mesmo código QR atribuído à planta."
+          "Na tela Plantas, abra o menu da planta e escolha a opção de código QR.",
+          "Você também pode ver o código nos Detalhes da planta.",
+          "Os dois lugares mostram o mesmo código, associado àquela planta."
         ]
       },
       {
-        "heading": "Salvar ou enviar o código QR",
+        "heading": "Salve ou envie o código",
         "body": [
-          "Tanto na visualização Plantas (Plants) quanto nos Detalhes da planta (Plant Details) é possível salvar o código QR no telefone.",
-          "Também é possível enviar o código QR para o próprio endereço de e-mail — por exemplo, para impressão posterior ou para manter uma cópia de segurança.",
-          "Ao imprimir, garanta a legibilidade do código (bom contraste, sem dobras, sem reflexos de luz)."
+          "Nas telas Plantas e Detalhes da planta, você pode salvar o código no celular.",
+          "Também pode enviá-lo ao seu e-mail para imprimir depois ou guardar uma cópia.",
+          "Na impressão, mantenha um bom contraste e evite dobras ou reflexos que dificultem a leitura."
         ]
       },
       {
-        "heading": "Solução de problemas de escaneamento",
+        "heading": "Se o Scanner não conseguir ler",
         "body": [
-          "Se o escaneamento não funcionar, tente melhorar a iluminação e certifique-se de que o código esteja plano e totalmente visível no enquadramento da câmera.",
-          "Se o código estiver danificado ou borrado, salve-o novamente a partir do aplicativo ou envie por e-mail e imprima uma nova cópia.",
-          "Se o código abrir a planta incorreta, verifique se a planta correta foi selecionada durante o salvamento ou a exportação."
+          "Melhore a iluminação e confira se o código está plano e aparece inteiro na câmera.",
+          "Se estiver danificado ou borrado, salve outra cópia no aplicativo ou envie por e-mail e imprima novamente.",
+          "Se abrir a planta errada, confira se você selecionou a planta certa ao salvar ou exportar o código."
         ]
       }
     ]

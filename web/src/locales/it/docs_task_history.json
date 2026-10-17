@@ -1,79 +1,79 @@
 {
   "docs_task_history": {
-    "title": "Cronologia delle attività",
+    "title": "Storico attività",
     "sections": [
       {
-        "heading": "Obiettivo della vista Cronologia delle attività",
+        "heading": "Cosa trovi nello Storico attività",
         "body": [
-          "La Cronologia delle attività serve per visualizzare e gestire le attività che sono state completate (chiuse).",
-          "Facilita l’analisi di ciò che è stato fatto, quando è stato fatto e a quali piante si riferivano le azioni.",
-          "La vista può essere aperta con un filtro attivo (ad es. cronologia per una pianta selezionata) oppure mostrare tutte le attività chiuse."
+          "Nello Storico attività puoi consultare le attività completate e gestire le registrazioni salvate.",
+          "Puoi vedere come sono state curate le tue piante e in quali date.",
+          "Lo storico può mostrare tutte le attività completate oppure aprirsi con un filtro già applicato, per esempio sulle attività di una sola pianta."
         ]
       },
       {
-        "heading": "Riquadri delle attività chiuse",
+        "heading": "Riquadri delle attività completate",
         "body": [
-          "Ogni riquadro rappresenta una singola attività chiusa e contiene, tra l’altro, il tipo di attività (ad es. Annaffiatura, Nebulizzazione, Concimazione), il nome della pianta, la posizione e la data di esecuzione.",
-          "Le attività chiuse possono includere una nota aggiunta durante la marcatura dell’attività come completata.",
-          "Le note sono visibili solo dopo l’espansione del riquadro."
+          "Ogni riquadro corrisponde a un’attività completata. Mostra il tipo di attività (per esempio Annaffiatura, Nebulizzazione o Concimazione), il nome della pianta, la posizione e la data di completamento.",
+          "L’attività può includere una nota aggiunta quando l’hai segnata come completata.",
+          "Per leggere la nota, espandi il riquadro."
         ]
       },
       {
-        "heading": "Anteprima delle note: espansione e compressione",
+        "heading": "Consultare le note",
         "body": [
-          "Per visualizzare la nota di un’attività chiusa, puoi espandere il riquadro toccandolo.",
-          "Puoi anche usare il menu con i tre puntini per eseguire l’azione Espandi/Comprimi (a seconda dello stato attuale).",
-          "In questo modo l’elenco può rimanere leggibile e compatto, mentre i dettagli sono disponibili su richiesta."
+          "Tocca il riquadro di un’attività completata per espanderlo e leggere la nota.",
+          "Puoi anche aprire il menu con i tre puntini e scegliere Espandi o Comprimi, a seconda che la nota sia già visibile.",
+          "In questo modo l’elenco resta compatto e puoi aprire i dettagli quando ti servono."
         ]
       },
       {
-        "heading": "Menu del riquadro (tre puntini)",
+        "heading": "Menu del riquadro con i tre puntini",
         "body": [
-          "Ogni riquadro di un’attività chiusa dispone di un menu contestuale con azioni relative a quella specifica voce della cronologia.",
-          "Espandi/Comprimi: mostra o nasconde la sezione delle note all’interno del riquadro.",
-          "Modifica promemoria: porta al Promemoria associato all’attività per modificare le impostazioni di ricorrenza o altri parametri.",
-          "Vai alla pianta: porta alla vista Dettagli della pianta associata all’attività.",
-          "Elimina attività: rimuove definitivamente l’attività chiusa selezionata dall’account dell’Utente."
+          "Il menu con i tre puntini contiene le azioni per la singola voce dello storico.",
+          "Espandi/Comprimi: mostra o nasconde la nota nel riquadro.",
+          "Modifica promemoria: apre il promemoria da cui è nata l’attività. Qui puoi cambiare la frequenza e le altre impostazioni.",
+          "Vai alla pianta: apre i Dettagli della pianta associata all’attività.",
+          "Elimina attività: rimuove definitivamente dal tuo account l’attività completata selezionata."
         ]
       },
       {
-        "heading": "Azioni FAB (Floating Action Button)",
+        "heading": "Menu delle azioni rapide",
         "body": [
-          "La vista Cronologia delle attività dispone di un pulsante FAB con azioni per operare sull’intero elenco.",
-          "Ordina: cambia l’ordine di visualizzazione delle attività chiuse.",
-          "Filtra: restringe l’elenco della cronologia ai criteri selezionati.",
-          "Elimina: consente l’eliminazione in blocco delle attività in base a criteri (ad es. attività per una pianta selezionata, per posizione, per tipo di attività o attività più vecchie di una data specificata)."
+          "Il pulsante delle azioni rapide nello Storico attività apre un menu per gestire l’intero elenco.",
+          "Ordina: cambia l’ordine delle attività completate.",
+          "Filtra: mostra solo le attività che corrispondono ai criteri scelti.",
+          "Elimina: rimuove più attività insieme, per esempio quelle di una pianta o di una posizione, quelle di un certo tipo oppure quelle più vecchie del periodo indicato."
         ]
       },
       {
-        "heading": "Opzioni di ordinamento",
+        "heading": "Ordinamento",
         "body": [
-          "L’ordinamento aiuta a consultare la cronologia nell’ordine più adatto al tuo modo di lavorare.",
-          "Le opzioni di ordinamento disponibili sono: Data di esecuzione, Nome della pianta e Posizione."
+          "Cambia l’ordine delle voci per trovare più facilmente ciò che cerchi.",
+          "Puoi ordinare per data di completamento, nome della pianta o posizione."
         ]
       },
       {
-        "heading": "Opzioni di filtraggio",
+        "heading": "Filtri",
         "body": [
-          "I filtri permettono di concentrarsi su un sottoinsieme selezionato di attività chiuse.",
-          "Puoi filtrare per: Nome della pianta, Posizione, Tipo di attività e Intervallo di date di esecuzione.",
-          "I filtri possono essere combinati, ad es. per visualizzare la Concimazione eseguita in una determinata posizione nel mese selezionato."
+          "Con i filtri visualizzi solo le attività completate che ti interessano.",
+          "Puoi scegliere nome della pianta, posizione, tipo di attività e intervallo delle date di completamento.",
+          "Puoi combinare i filtri, per esempio per vedere solo le concimazioni eseguite in una certa posizione durante un determinato mese."
         ]
       },
       {
-        "heading": "Eliminazione in blocco (azione Elimina)",
+        "heading": "Eliminare più attività insieme",
         "body": [
-          "L’eliminazione in blocco consente di rimuovere definitivamente più attività chiuse contemporaneamente in base ai criteri selezionati.",
-          "Gli scenari tipici includono: pulizia della cronologia di una singola pianta, rimozione delle attività per una posizione, eliminazione di un solo tipo di attività o rimozione delle attività più vecchie della data indicata.",
-          "L’eliminazione in blocco è permanente e non può essere annullata."
+          "L’opzione Elimina rimuove definitivamente più attività completate che corrispondono ai criteri scelti.",
+          "Puoi, per esempio, svuotare lo storico di una pianta, rimuovere le attività di una posizione, eliminare un solo tipo di attività o le voci precedenti a una certa data.",
+          "L’eliminazione non può essere annullata."
         ]
       },
       {
-        "heading": "Differenze tra Cronologia delle attività e Home",
+        "heading": "Storico attività e schermata iniziale",
         "body": [
-          "Home si concentra sulle attività correnti (per oggi e in arretrato) e sulla loro esecuzione.",
-          "La Cronologia delle attività si concentra sulle attività completate e supporta la consultazione, l’ordinamento, il filtraggio e l’eliminazione delle voci storiche.",
-          "Insieme, queste viste consentono sia di svolgere le attività quotidiane (Home) sia di analizzare la cronologia di cura a lungo termine (Cronologia delle attività)."
+          "Nella schermata iniziale trovi le attività previste per oggi e quelle in ritardo ancora da completare.",
+          "Nello Storico attività vedi ciò che è già stato fatto. Puoi consultare, ordinare, filtrare ed eliminare le voci.",
+          "La schermata iniziale ti aiuta nella cura quotidiana, mentre lo Storico attività ti permette di ripercorrere gli interventi passati."
         ]
       }
     ]

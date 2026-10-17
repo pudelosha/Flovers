@@ -3,42 +3,42 @@
     "title": "Posizioni",
     "sections": [
       {
-        "heading": "Scopo di questa vista",
+        "heading": "A cosa servono le posizioni",
         "body": [
-          "La vista Posizioni serve per gestire i luoghi in cui si trovano le tue piante, ad esempio stanze, balconi o altre aree.",
-          "Le posizioni sono utilizzate principalmente per organizzare le piante e facilitare il filtraggio, l’ordinamento e il raggruppamento dei dati nell’applicazione."
+          "Nella schermata Posizioni puoi gestire i luoghi in cui tieni le tue piante, come stanze, balconi o altri spazi.",
+          "Le posizioni ti aiutano a organizzare le piante e a filtrare, ordinare e raggruppare i dati nell'app."
         ]
       },
       {
         "heading": "Elenco delle posizioni",
         "body": [
-          "La schermata mostra l’elenco di tutte le posizioni definite dall’utente.",
-          "Le posizioni possono essere nomi predefiniti o nomi personalizzati creati dall’utente.",
-          "Ogni posizione mostra il numero di piante attualmente ad essa associate."
+          "Qui trovi tutte le posizioni che hai impostato.",
+          "Puoi usare i nomi proposti dall'app oppure sceglierne di personalizzati.",
+          "Accanto a ogni posizione vedi quante piante le sono assegnate."
         ]
       },
       {
-        "heading": "Azioni sulla posizione (menu a 3 punti)",
+        "heading": "Menu di una posizione (tre puntini)",
         "body": [
-          "Ogni posizione dispone di un menu a 3 punti con le azioni disponibili.",
-          "L’utente può modificare il nome della posizione per riflettere meglio il luogo reale in cui sono conservate le piante.",
-          "L’eliminazione di una posizione è possibile solo quando non vi sono piante ad essa assegnate."
+          "Ogni posizione ha un menu con tre puntini che raccoglie le azioni disponibili.",
+          "Puoi cambiarne il nome per descrivere meglio il luogo in cui tieni le piante.",
+          "Puoi eliminare una posizione solo se non le è assegnata nessuna pianta."
         ]
       },
       {
-        "heading": "Pulsante di azione (FAB)",
+        "heading": "Pulsante delle azioni rapide",
         "body": [
-          "Il pulsante FAB offre azioni rapide relative alla gestione delle posizioni.",
-          "L’utente può aggiungere una nuova posizione in qualsiasi momento.",
-          "Le posizioni possono essere ordinate per nome della posizione o per numero di piante assegnate."
+          "Il pulsante delle azioni rapide apre le opzioni per gestire le posizioni.",
+          "Puoi aggiungere una nuova posizione in qualsiasi momento.",
+          "Puoi ordinare le posizioni per nome o per numero di piante assegnate."
         ]
       },
       {
         "heading": "Utilizzo delle posizioni",
         "body": [
-          "Le posizioni sono utilizzate in tutta l’applicazione per il raggruppamento logico delle piante.",
-          "Possono essere usate come criteri di filtraggio e ordinamento in viste come Piante, Promemoria o Cronologia delle attività.",
-          "L’uso delle posizioni facilita il mantenimento dell’ordine, soprattutto con un numero elevato di piante."
+          "Le posizioni permettono di raggruppare le piante in tutta l'app.",
+          "Puoi usarle per filtrare e ordinare gli elenchi in schermate come Piante, Promemoria e Storico attività.",
+          "Sono particolarmente utili per tenere tutto in ordine quando hai molte piante."
         ]
       }
     ]

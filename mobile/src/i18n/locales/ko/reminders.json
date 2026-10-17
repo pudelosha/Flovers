@@ -31,8 +31,8 @@
     "menu": {
       "edit": "알림 편집",
       "delete": "알림 삭제",
-      "pause": "?? ?? ??",
-      "resume": "?? ?? ??"
+      "pause": "알림 일시 중지",
+      "resume": "알림 다시 시작"
     },
     "tile": {
       "repeatsEvery": "{{count}} {{unit}}마다 반복",
@@ -40,7 +40,7 @@
       "dueInOneDay": "1일 후 기한",
       "dueInDays": "{{count}}일 후 기한",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "?? ???"
+      "paused": "일시 중지됨"
     },
     "calendar": {
       "scheduledOn": "{{date}}에 예정됨",
@@ -105,10 +105,10 @@
       "createFailedWithReason": "생성에 실패했습니다: {{reason}}",
       "updateFailed": "업데이트에 실패했습니다.",
       "updateFailedWithReason": "업데이트에 실패했습니다: {{reason}}",
-      "paused": "??? ?? ???????",
-      "resumed": "??? ?? ???????",
-      "toggleFailed": "???? ??",
-      "toggleFailedWithReason": "???? ??: {{reason}}"
+      "paused": "알림을 일시 중지했어요",
+      "resumed": "알림을 다시 시작했어요",
+      "toggleFailed": "알림을 업데이트하지 못했어요",
+      "toggleFailedWithReason": "알림을 업데이트하지 못했어요: {{reason}}"
     }
   }
 }

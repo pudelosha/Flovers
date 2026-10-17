@@ -1,20 +1,22 @@
 {
   "nav": {
     "start": "홈",
-    "docs": "문서",
-    "schemas": "스키마",
-    "faq": "FAQ"
+    "docs": "사용 안내",
+    "schemas": "기기 API·배선도",
+    "faq": "자주 묻는 질문"
   },
   "footer": {
-    "terms": "약관",
+    "terms": "이용약관",
     "privacy": "개인정보 처리방침",
     "contact": "문의"
   },
   "a11y": {
-    "mainNav": "주요 탐색",
-    "languageSwitch": "언어 선택",
+    "mainNav": "주 메뉴",
+    "languageSwitch": "표시 언어 선택",
     "openMenu": "메뉴 열기",
-    "mobileMenu": "모바일 메뉴"
+    "mobileMenu": "모바일 메뉴",
+    "closeNotification": "알림 닫기",
+    "scanStoreLink": "스캔하여 스토어 열기"
   },
   "language": {
     "pl": "폴란드어",

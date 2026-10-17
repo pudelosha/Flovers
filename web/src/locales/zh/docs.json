@@ -2,7 +2,7 @@
   "title": "文档",
   "placeholder": {
     "heading": "即将推出",
-    "body": "该界面的详细文档将很快提供。"
+    "body": "这个页面的详细使用说明即将上线。"
   },
   "screens": {
     "overview": {
@@ -12,10 +12,10 @@
       "title": "登录与注册"
     },
     "home": {
-      "title": "主屏幕"
+      "title": "首页"
     },
     "taskHistory": {
-      "title": "任务历史"
+      "title": "任务记录"
     },
     "plants": {
       "title": "植物"
@@ -39,10 +39,11 @@
       "title": "读数历史"
     },
     "scanner": {
-      "title": "扫描器（QR）"
+      "title": "二维码扫描"
     },
     "profile": {
       "title": "个人资料与设置"
     }
-  }
+  },
+  "navigationLabel": "文档目录"
 }

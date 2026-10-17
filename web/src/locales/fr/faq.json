@@ -2,124 +2,124 @@
   "title": "Foire aux questions",
   "items": [
     {
-      "q": "Qu'est-ce que Flovers et à quoi puis-je l'utiliser ?",
-      "a": "Flovers est une application qui soutient l'entretien des plantes en organisant des tâches et en surveillant les paramètres des plantes à l'aide de données provenant de capteurs. Elle fournit des rappels, des conseils et des informations utiles pour la culture quotidienne."
+      "q": "Qu’est-ce que Flovers et à quoi sert l’application ?",
+      "a": "Flovers t’aide à organiser les soins de tes plantes et à suivre leurs conditions grâce aux relevés de capteurs. L’application propose des rappels et des conseils pour t’accompagner au quotidien."
     },
     {
       "q": "Flovers est-il gratuit ?",
-      "a": "Oui. Actuellement, Flovers est disponible gratuitement."
+      "a": "Oui. Flovers est actuellement disponible gratuitement."
     },
     {
-      "q": "Quelles plateformes sont supportées par Flovers ?",
-      "a": "Flovers est actuellement disponible sur Android. Le support pour iOS est prévu dans le futur."
+      "q": "Sur quelles plateformes Flovers est-il disponible ?",
+      "a": "Flovers est actuellement disponible sur Android. Une version iOS est prévue."
     },
     {
-      "q": "Ai-je besoin d'un compte pour utiliser Flovers ?",
-      "a": "Oui. La création d'un compte est requise pour utiliser l'application et ses fonctionnalités."
+      "q": "Faut-il un compte pour utiliser Flovers ?",
+      "a": "Oui. Tu dois créer un compte pour utiliser l’application et ses fonctions."
     },
     {
-      "q": "Flovers est-il disponible en plusieurs langues ?",
-      "a": "Oui. Flovers supporte plusieurs langues, dont l'anglais, le polonais, l'allemand, l'italien, le français, l'espagnol, le portugais, l'arabe, l'hindi, le chinois, le japonais et le coréen."
+      "q": "Quelles langues sont disponibles ?",
+      "a": "Flovers est disponible en français, anglais, polonais, allemand, italien, espagnol, portugais, arabe, hindi, chinois, japonais et coréen."
     },
     {
-      "q": "Comment puis-je créer un compte ?",
-      "a": "L'enregistrement peut être effectué directement dans l'application. Après l'enregistrement, il est nécessaire de confirmer le compte par e-mail. En cas de besoin, vous pouvez renvoyer l'e-mail d'activation."
+      "q": "Comment créer un compte ?",
+      "a": "Inscris-toi directement dans l’application, puis confirme ton compte avec l’e-mail reçu. Tu peux demander un nouvel e-mail d’activation si nécessaire."
     },
     {
-      "q": "Je n'ai pas reçu l'e-mail d'activation - que faire ?",
-      "a": "Vous pouvez demander un nouvel e-mail d'activation directement dans l'application."
+      "q": "Que faire si l’e-mail d’activation n’arrive pas ?",
+      "a": "Tu peux demander un nouvel e-mail d’activation directement dans l’application."
     },
     {
-      "q": "Comment puis-je réinitialiser mon mot de passe ?",
-      "a": "Vous pouvez demander un e-mail pour réinitialiser votre mot de passe dans l'application. Si vous êtes connecté(e), vous pouvez également changer votre mot de passe directement dans les paramètres du compte."
+      "q": "Comment réinitialiser mon mot de passe ?",
+      "a": "Demande un e-mail de réinitialisation dans l’application. Si tu es déjà connecté, tu peux aussi changer ton mot de passe dans les paramètres du compte."
     },
     {
-      "q": "Puis-je changer l'adresse e-mail associée à mon compte ?",
-      "a": "Oui. Après vous être connecté(e), vous pouvez changer l'adresse e-mail sur l'écran Profil de l'application."
+      "q": "Puis-je changer mon adresse e-mail ?",
+      "a": "Oui. Connecte-toi et modifie ton adresse e-mail dans le profil de l’application."
     },
     {
-      "q": "Comment puis-je supprimer mon compte et mes données ?",
-      "a": "Le compte peut être définitivement supprimé depuis l'écran Profil après vous être connecté(e). Cette opération est irréversible et entraîne la suppression de toutes les données associées."
+      "q": "Comment supprimer mon compte et mes données ?",
+      "a": "Tu peux supprimer définitivement ton compte depuis le profil, après connexion. Cette action est irréversible et supprime toutes les données associées."
     },
     {
-      "q": "Quelle est la différence entre la définition d'une plante et ma plante ?",
-      "a": "La définition d'une plante est un enregistrement intégré dans la base de données de Flovers contenant des informations générales sur une espèce donnée, telles que les préférences, les caractéristiques, les images, les exigences en matière de lumière, de sol et les intervalles recommandés pour l'arrosage ou la brumisation. Votre plante est une instance spécifique que vous gérez vous-même."
+      "q": "Quelle différence entre une fiche d’espèce et ma plante ?",
+      "a": "Une fiche d’espèce de la base Flovers contient des informations générales : caractéristiques, photos, besoins en lumière et en substrat, ainsi que les fréquences d’arrosage ou de brumisation conseillées. Ta plante correspond à ton propre exemplaire, que tu gères dans l’application."
     },
     {
-      "q": "Quelle est la précision de la fonction de reconnaissance des plantes ?",
-      "a": "La précision dépend de la qualité de la photo et de la manière dont la plante est capturée. Le système de reconnaissance est entraîné à partir d'une base couvrant plus de 700 espèces de plantes."
+      "q": "L’identification par photo est-elle précise ?",
+      "a": "La précision dépend de la qualité de la photo et de la façon dont la plante est visible. Le système a été entraîné sur une base de plus de 700 espèces."
     },
     {
-      "q": "Les photos envoyées pour la reconnaissance des plantes sont-elles sauvegardées ?",
-      "a": "Non. Les photos sont traitées par le backend uniquement à des fins de reconnaissance et ne sont pas stockées de manière permanente."
+      "q": "Les photos envoyées pour l’identification sont-elles conservées ?",
+      "a": "Non. Elles sont traitées sur le serveur uniquement pour identifier la plante, sans conservation permanente."
     },
     {
-      "q": "Puis-je suivre plusieurs plantes en même temps ?",
-      "a": "Oui. Actuellement, il n'y a pas de limite au nombre de plantes ou d'appareils de mesure pouvant être ajoutés. Chaque plante peut être associée à un appareil de mesure."
+      "q": "Puis-je suivre plusieurs plantes ?",
+      "a": "Oui. Il n’y a actuellement pas de limite au nombre de plantes ou d’appareils que tu peux ajouter. Chaque plante peut être associée à un seul appareil de mesure."
     },
     {
-      "q": "Puis-je ajouter des notes ou tenir un journal des plantes ?",
-      "a": "Oui. Vous pouvez ajouter des notes aux plantes ainsi qu'aux tâches terminées, en créant un journal de soins."
+      "q": "Puis-je prendre des notes ou tenir un journal ?",
+      "a": "Oui. Tu peux ajouter des notes à tes plantes et aux tâches terminées pour constituer ton journal de soins."
     },
     {
       "q": "Comment fonctionnent les rappels et les tâches ?",
-      "a": "L'utilisateur crée un rappel avec un intervalle cyclique spécifié. À partir de celui-ci, des tâches sont automatiquement créées. Après avoir marqué une tâche comme terminée, la tâche suivante est planifiée en fonction de l'intervalle. Selon les paramètres, vous pouvez recevoir des notifications par e-mail ou push pour les tâches du jour ou celles en retard d'un jour."
+      "a": "Tu crées un rappel avec une fréquence. Flovers génère les tâches correspondantes et programme la suivante quand tu en termines une. Selon tes réglages, tu peux recevoir des e-mails ou des notifications push pour les tâches du jour ou en retard d’un jour."
     },
     {
-      "q": "Quels types de tâches d'entretien sont pris en charge ?",
-      "a": "Les types de tâches pris en charge incluent, entre autres, l'arrosage, la brumisation, la fertilisation, le rempotage et l'entretien général."
+      "q": "Quels types de soins sont proposés ?",
+      "a": "L’application prend en charge l’arrosage, la brumisation, la fertilisation, le rempotage et l’entretien général."
     },
     {
-      "q": "Que se passe-t-il si j'oublie de faire une tâche ?",
-      "a": "Si une tâche n'est pas effectuée, l'application peut envoyer un rappel après 24 heures. Sinon, la tâche restera marquée comme en retard jusqu'à sa réalisation."
+      "q": "Que se passe-t-il si j’oublie une tâche ?",
+      "a": "L’application peut te relancer après 24 heures. La tâche reste marquée en retard tant que tu ne l’as pas terminée."
     },
     {
-      "q": "Puis-je désactiver ou modifier les rappels ?",
-      "a": "Vous pouvez modifier ou supprimer les rappels à tout moment. Actuellement, il n'est pas possible de les suspendre temporairement."
+      "q": "Puis-je désactiver ou modifier un rappel ?",
+      "a": "Tu peux modifier, mettre en pause, reprendre ou supprimer tes rappels à tout moment."
     },
     {
-      "q": "Les rappels garantissent-ils que mes plantes seront en bonne santé ?",
-      "a": "Non. Flovers fournit des rappels et des conseils, mais les décisions concernant les soins et leurs effets dépendent de l'utilisateur."
+      "q": "Les rappels garantissent-ils la santé de mes plantes ?",
+      "a": "Non. Flovers fournit des rappels et des conseils, mais les décisions d’entretien et leurs résultats dépendent de toi."
     },
     {
-      "q": "Quels capteurs et appareils puis-je connecter à Flovers ?",
-      "a": "Flovers prend en charge les capteurs mesurant la température de l'air, l'humidité de l'air, le niveau de lumière et l'humidité du sol. Les configurations d'appareils proposées se trouvent dans la documentation de l'application."
+      "q": "Quels capteurs et appareils puis-je connecter ?",
+      "a": "Flovers prend en charge les capteurs de température de l’air, d’humidité de l’air, de luminosité et d’humidité du sol. La documentation présente des montages recommandés."
     },
     {
-      "q": "À quelle fréquence les données des capteurs sont-elles mises à jour ?",
-      "a": "Les lectures peuvent être envoyées toutes les 5 minutes. Pour les besoins de l'enregistrement, les données sont actuellement conservées à des intervalles horaires."
+      "q": "À quelle fréquence les données sont-elles actualisées ?",
+      "a": "Les mesures peuvent être envoyées toutes les 5 minutes. Elles sont actuellement enregistrées à raison d’un relevé par heure."
     },
     {
-      "q": "Que se passe-t-il si mon appareil de mesure cesse de fonctionner ?",
-      "a": "L'application ne vous informe pas de l'absence de lectures. Cependant, elle peut envoyer une notification si le niveau d'humidité du sol descend en dessous d'un seuil défini."
+      "q": "Que se passe-t-il si mon appareil cesse d’envoyer des données ?",
+      "a": "L’application ne signale pas l’absence de relevés. Elle peut toutefois envoyer une alerte lorsque l’humidité du sol passe sous le seuil défini."
     },
     {
-      "q": "Les données des capteurs sont-elles stockées dans le cloud ?",
-      "a": "Oui. Les données des capteurs sont stockées sur un serveur VPS dans le cloud."
+      "q": "Les relevés sont-ils conservés dans le cloud ?",
+      "a": "Oui. Ils sont enregistrés sur un serveur virtuel (VPS) dans le cloud."
     },
     {
-      "q": "D'autres personnes peuvent-elles voir mes lectures de capteurs ?",
-      "a": "Actuellement non. Des options de partage pourraient être introduites à l'avenir. L'utilisateur peut également télécharger des données via l'API pour les intégrer à d'autres appareils, tels que l'arrosage automatique."
+      "q": "D’autres personnes peuvent-elles voir mes relevés ?",
+      "a": "Les relevés sont actuellement privés. Des options de partage pourraient être ajoutées plus tard. Tu peux aussi les récupérer par l’API pour les utiliser avec d’autres appareils, comme un système d’arrosage automatique."
     },
     {
-      "q": "À quoi servent les codes QR dans Flovers ?",
-      "a": "L'utilisateur peut générer et imprimer des codes QR et les placer sur des pots de fleurs. Chaque code mène à une instance spécifique de la plante. Après avoir scanné le code dans l'application, l'utilisateur est immédiatement redirigé vers les détails de la plante."
+      "q": "À quoi servent les codes QR ?",
+      "a": "Tu peux créer un code QR pour une plante, l’imprimer et le coller sur le pot. En le scannant dans l’application, tu ouvres directement les détails de cette plante."
     },
     {
-      "q": "Partager un code QR ou un lien vers une plante est-il sécurisé ?",
-      "a": "En principe, oui. Les détails de la plante ne sont visibles que pour l'utilisateur connecté qui en est le propriétaire."
+      "q": "Puis-je partager un code QR ou un lien de plante sans risque ?",
+      "a": "En règle générale, oui. Seule la personne connectée à qui appartient la plante peut en consulter les détails."
     },
     {
       "q": "Puis-je rendre mes plantes publiques ou les partager avec des amis ?",
-      "a": "Pas pour le moment. Des fonctionnalités de partage public peuvent apparaître à l'avenir."
+      "a": "Pas pour le moment. Des fonctions de partage public pourraient être ajoutées plus tard."
     },
     {
-      "q": "Pourquoi ne reçois-je pas de notifications ?",
-      "a": "Assurez-vous que les notifications push sont activées à la fois dans les paramètres système de l'appareil et dans les paramètres de l'application disponibles sur l'écran Profil."
+      "q": "Pourquoi est-ce que je ne reçois pas de notifications ?",
+      "a": "Vérifie que les notifications push sont autorisées dans les réglages de ton appareil et activées dans le profil de l’application."
     },
     {
-      "q": "Comment puis-je contacter le support technique ou signaler un problème ?",
-      "a": "Vous pouvez utiliser le formulaire de contact sur le site Flovers ou le formulaire de contact disponible dans l'application sur l'écran Profil."
+      "q": "Comment contacter l’assistance ou signaler un problème ?",
+      "a": "Utilise le formulaire de contact du site Flovers ou celui disponible dans le profil de l’application."
     }
   ]
 }

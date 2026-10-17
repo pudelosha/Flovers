@@ -9,10 +9,10 @@
       "title": "Visão geral"
     },
     "auth": {
-      "title": "Login e registo"
+      "title": "Acesso e cadastro"
     },
     "home": {
-      "title": "Ecrã principal"
+      "title": "Tela inicial"
     },
     "taskHistory": {
       "title": "Histórico de tarefas"
@@ -24,7 +24,7 @@
       "title": "Detalhes da planta"
     },
     "createPlantWizard": {
-      "title": "Assistente de adição de planta"
+      "title": "Assistente para adicionar plantas"
     },
     "locations": {
       "title": "Localizações"
@@ -42,7 +42,8 @@
       "title": "Scanner (QR)"
     },
     "profile": {
-      "title": "Perfil e definições"
+      "title": "Perfil e configurações"
     }
-  }
+  },
+  "navigationLabel": "Navegação da documentação"
 }
