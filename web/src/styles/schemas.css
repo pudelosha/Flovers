@@ -55,7 +55,7 @@
   padding: 12px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 0;
   overflow: hidden;
 }
 
@@ -86,7 +86,7 @@
 
 .schema-copy {
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 0;
   background: rgba(255, 255, 255, 0.10);
   color: rgba(255, 255, 255, 0.92);
   border-radius: 12px;
@@ -104,7 +104,7 @@
   padding: 14px;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 0;
   overflow: auto;
   max-width: 100%;
 }
@@ -150,7 +150,7 @@
 .schema-wiring {
   margin-top: 12px;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 0;
   background: rgba(255, 255, 255, 0.06);
   overflow: hidden;
 }

@@ -9,8 +9,6 @@
   --accent: #0a7184;
   --accent-2: #1aa6a0;
 
-  --border: rgba(255, 255, 255, 0.10);
-
   --radius-xl: 34px;
   --radius-lg: 22px;
 
@@ -102,6 +100,11 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+:where(a, button):focus-visible {
+  outline: 2px solid rgba(255,255,255,0.92);
+  outline-offset: 3px;
+}
+
 .container {
   width: 100%;
   max-width: var(--maxw);
@@ -166,7 +169,7 @@ a { color: inherit; text-decoration: none; }
 /* Cards */
 .card {
   border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
+  border: 0;
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
   background:
@@ -177,6 +180,11 @@ a { color: inherit; text-decoration: none; }
       rgba(255,255,255,0.04) 100%
     );
   padding: 22px;
+}
+
+/* Static content panels already sit over the smooth page background. */
+.card.prose {
+  backdrop-filter: none;
 }
 
 .hero {
@@ -207,7 +215,7 @@ a { color: inherit; text-decoration: none; }
   padding: 0 18px;
 
   border-radius: 999px;
-  border: 1px solid rgba(10,113,132,0.35);
+  border: 0;
   background: rgba(10,113,132,0.85);
 
   color: rgba(255,255,255,0.96);
@@ -289,19 +297,17 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.3px;
 
   color: rgba(255,255,255,0.70);
-  border: 1px solid transparent;
+  border: 0;
 }
 
 .nav-link:hover {
   color: rgba(255,255,255,0.92);
   background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.10);
 }
 
 .nav-link.active {
   color: rgba(255,255,255,0.95);
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* Stack + grid spacing */
@@ -408,7 +414,7 @@ a { color: inherit; text-decoration: none; }
   height: 38px;
   padding: 0 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 0;
   background: rgba(255,255,255,0.06);
   color: rgba(255,255,255,0.88);
   font-weight: 750;
@@ -423,7 +429,6 @@ a { color: inherit; text-decoration: none; }
 .lang-trigger:hover { background: rgba(255,255,255,0.10); }
 
 .lang-trigger.active {
-  border-color: rgba(10,113,132,0.35);
   background: rgba(10,113,132,0.20);
 }
 
@@ -446,7 +451,7 @@ a { color: inherit; text-decoration: none; }
   padding: 10px;
 
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 0;
 
   background: #0b3a30;
   backdrop-filter: none;
@@ -465,7 +470,7 @@ a { color: inherit; text-decoration: none; }
   padding: 10px 12px;
   border-radius: 14px;
 
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 0;
   background: rgba(255,255,255,0.05);
 
   color: rgba(255,255,255,0.86);
@@ -476,7 +481,6 @@ a { color: inherit; text-decoration: none; }
 .lang-item:hover { background: rgba(255,255,255,0.09); }
 
 .lang-item.active {
-  border-color: rgba(10,113,132,0.35);
   background: rgba(10,113,132,0.22);
   color: rgba(255,255,255,0.95);
 }
@@ -487,7 +491,7 @@ a { color: inherit; text-decoration: none; }
   height: 38px;
   width: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 0;
   background: rgba(255,255,255,0.06);
   color: rgba(255,255,255,0.90);
   cursor: pointer;
@@ -498,7 +502,6 @@ a { color: inherit; text-decoration: none; }
 .burger-btn:hover { background: rgba(255,255,255,0.10); }
 
 .burger-btn.active {
-  border-color: rgba(10,113,132,0.35);
   background: rgba(10,113,132,0.22);
 }
 
@@ -720,7 +723,7 @@ input, textarea, button, select {
   align-self: start;
 
   border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
+  border: 0;
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
   background: rgba(255,255,255,0.06);
@@ -746,7 +749,7 @@ input, textarea, button, select {
   padding: 10px 12px;
   border-radius: 14px;
 
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 0;
   background: rgba(255,255,255,0.05);
 
   color: rgba(255,255,255,0.86);
@@ -757,7 +760,6 @@ input, textarea, button, select {
 .docs-nav-item:hover { background: rgba(255,255,255,0.09); }
 
 .docs-nav-item.active {
-  border-color: rgba(10,113,132,0.35);
   background: rgba(10,113,132,0.22);
   color: rgba(255,255,255,0.95);
 }
@@ -788,7 +790,7 @@ input, textarea, button, select {
   width: 100%;
   padding: 0 16px;
   border-radius: var(--control-radius); /* 14 */
-  border: 1px solid transparent;
+  border: 0;
   background: rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.95);
   font-size: var(--input-size);         /* 16 */
@@ -805,7 +807,6 @@ input, textarea, button, select {
 .docs-trigger:hover { background: rgba(255,255,255,0.14); }
 
 .docs-trigger.active {
-  box-shadow: 0 0 0 4px rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.14);
 }
 
@@ -820,7 +821,7 @@ input, textarea, button, select {
   padding: 10px;
 
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 0;
 
   background: #0b3a30;
   box-shadow: 0 18px 50px rgba(0,0,0,0.45);
@@ -838,7 +839,7 @@ input, textarea, button, select {
   padding: 10px 12px;
   border-radius: 14px;
 
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 0;
   background: rgba(255,255,255,0.05);
 
   color: rgba(255,255,255,0.86);
@@ -849,7 +850,6 @@ input, textarea, button, select {
 .docs-item:hover { background: rgba(255,255,255,0.09); }
 
 .docs-item.active {
-  border-color: rgba(10,113,132,0.35);
   background: rgba(10,113,132,0.22);
   color: rgba(255,255,255,0.95);
 }
@@ -878,6 +878,5 @@ input, textarea, button, select {
 /* --- optional "atomic" light card variant (used by some tiles/steps) --- */
 .card-light {
   background: rgba(255, 255, 255, 0.10) !important;
-  border-color: rgba(255, 255, 255, 0.14) !important;
   box-shadow: 0 16px 52px rgba(0, 0, 0, 0.42) !important;
 }
