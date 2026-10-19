@@ -223,8 +223,8 @@ const s = StyleSheet.create({
     borderRadius: 28,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(11,114,133,0.95)",
-    borderWidth: 1,
+    backgroundColor: "#0B7285",
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
     ...Platform.select({
       ios: {

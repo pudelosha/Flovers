@@ -23,7 +23,7 @@ export const s = StyleSheet.create({
   frameBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.20)",
     zIndex: 2,
   },

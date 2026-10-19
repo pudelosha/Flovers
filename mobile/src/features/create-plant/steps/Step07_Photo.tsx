@@ -235,7 +235,7 @@ export default function Step07_Photo() {
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: "rgba(255,255,255,0.08)",
-              borderWidth: 1,
+              borderWidth: 0,
               borderColor: "rgba(255,255,255,0.18)",
             },
           ]}

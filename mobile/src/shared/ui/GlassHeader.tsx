@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   headerBar: {
     paddingBottom: 8,
     paddingHorizontal: 16,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
   },
   headerTopRow: {

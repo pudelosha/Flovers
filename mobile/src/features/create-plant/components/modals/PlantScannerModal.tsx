@@ -790,7 +790,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.18)",
   },
   previewPlaceholder: {
@@ -848,7 +848,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.18)",
   },
   previewArrowWrap: {
@@ -863,7 +863,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.18)",
     position: "relative",
   },
@@ -876,7 +876,7 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     borderRadius: 10,
     backgroundColor: "rgba(0,0,0,0.58)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.16)",
   },
   closestMatchBadgeText: {
@@ -894,7 +894,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     borderRadius: 18,
     backgroundColor: "rgba(255,255,255,0.14)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.14)",
     overflow: "hidden",
     gap: 14,
@@ -905,7 +905,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.14)",
   },
   candidateImage: {
@@ -1000,7 +1000,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 999,
     backgroundColor: "rgba(11,114,133,0.35)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(11,114,133,0.65)",
   },
   pillText: {

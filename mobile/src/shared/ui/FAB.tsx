@@ -164,8 +164,8 @@ const s = StyleSheet.create({
     borderRadius: 28,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(11,114,133,0.95)",
-    borderWidth: 1,
+    backgroundColor: "#0B7285",
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
     // soft shadow
     ...Platform.select({
@@ -196,11 +196,11 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#000000",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.18)",
   },
   miniBtnDanger: {
-    backgroundColor: "rgba(255,107,107,0.12)",
+    backgroundColor: "#1F0D0D",
     borderColor: "rgba(255,107,107,0.35)",
   },
   labelPill: {
@@ -208,11 +208,11 @@ const s = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 12,
     backgroundColor: "#000000",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.18)",
   },
   labelDanger: {
-    backgroundColor: "rgba(255,107,107,0.18)",
+    backgroundColor: "#2E1313",
     borderColor: "rgba(255,107,107,0.35)",
   },
   labelText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },

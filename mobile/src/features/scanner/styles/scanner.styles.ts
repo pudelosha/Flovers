@@ -19,7 +19,7 @@ export const scannerStyles = StyleSheet.create({
   frameBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1, // thicker like Profile
+    borderWidth: 0, // thicker like Profile
     borderColor: "rgba(255,255,255,0.20)", // Profile-style border tone
     zIndex: 2,
   },
@@ -58,7 +58,7 @@ export const scannerStyles = StyleSheet.create({
     bottom: 0,
     left: 0,
     borderRadius: 28,
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.20)",
     backgroundColor: "rgba(255,255,255,0.12)",
     pointerEvents: "none",
@@ -92,7 +92,7 @@ export const scannerStyles = StyleSheet.create({
   overlayBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1, // thicker like Profile
+    borderWidth: 0, // thicker like Profile
     borderColor: "rgba(255,255,255,0.20)", // Profile-style border tone
     zIndex: 2,
   },

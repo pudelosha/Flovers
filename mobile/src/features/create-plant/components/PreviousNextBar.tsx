@@ -125,7 +125,7 @@ export default function PreviousNextBar({
   const prevBg = "#263238";
   const nextBg = "#0B7285";
   const borderStyle = {
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
   } as const;
 

@@ -41,7 +41,7 @@ export default function TaskHistoryEmptyState({ plantIdFilter }: Props) {
           StyleSheet.absoluteFill,
           {
             borderRadius: 28,
-            borderWidth: 1,
+            borderWidth: 0,
             borderColor: "rgba(255,255,255,0.20)",
           },
         ]}

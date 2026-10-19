@@ -12,7 +12,7 @@ export const s = StyleSheet.create({
   headerBar: {
     paddingBottom: 8,
     paddingHorizontal: 16,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
   },
   headerTopRow: {
@@ -87,7 +87,7 @@ export const s = StyleSheet.create({
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.20)",
   },
   cardImageTint: {
@@ -309,7 +309,7 @@ export const s = StyleSheet.create({
   emptyBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.18)",
     zIndex: 2,
   },

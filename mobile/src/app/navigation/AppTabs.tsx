@@ -364,7 +364,7 @@ const s = StyleSheet.create({
     bottom: 0,
     borderRadius: 0,
     overflow: "hidden",
-    borderTopWidth: 1,
+    borderTopWidth: 0,
     borderColor: "rgba(255,255,255,0.20)",
   },
   tabInner: {
