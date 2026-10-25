@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Test deployment sequence
+      - name: Test deployment sequence and image retention
         run: python3 -m unittest discover -s deployment -p 'test_deploy_backend.py'
 
       - name: Log in to GHCR

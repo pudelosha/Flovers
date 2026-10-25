@@ -44,6 +44,48 @@ def application_services(services, running, requested_backend=None):
     return backend, apps
 
 
+def previous_backend_images(base, backend, execute):
+    """Remember the actual previous deployment, rather than image creation order."""
+    containers = execute([*base, "ps", "--all", "--quiet", backend], capture=True).stdout.split()
+    if not containers:
+        return set()
+    records = json.loads(execute(["docker", "inspect", *containers], capture=True).stdout)
+    return {record["Image"] for record in records}
+
+
+def cleanup_backend_images(previous, execute):
+    """Remove only obsolete Flovers tags; preserve every container's image."""
+    containers = execute(["docker", "ps", "--all", "--quiet"], capture=True).stdout.split()
+    if not containers:
+        raise ValueError("No application containers found; skipping image cleanup.")
+    records = json.loads(execute(["docker", "inspect", *containers], capture=True).stdout)
+    used = {record["Image"] for record in records}
+    if previous and set(previous).issubset(used):
+        # Re-running the same release must not discard its existing rollback.
+        print("Backend image unchanged; retaining existing rollback images.", flush=True)
+        return
+    keep = set(previous) | used
+    ids = sorted(set(execute([
+        "docker", "image", "ls", "--quiet", "--no-trunc", IMAGE_REPOSITORY,
+    ], capture=True).stdout.split()))
+    if not ids:
+        return
+    images = json.loads(execute(["docker", "image", "inspect", *ids], capture=True).stdout)
+    for image in images:
+        if image["Id"] in keep:
+            continue
+        tags = image.get("RepoTags") or []
+        # Do not delete shared images, dangling images, or user-created tags.
+        if not tags or not all(
+            re.fullmatch(re.escape(IMAGE_REPOSITORY) + r":(?:[0-9a-f]{40}|latest)", tag)
+            for tag in tags
+        ):
+            continue
+        print(f"Removing obsolete backend image {image['Id']}", flush=True)
+        # No --force: Docker also guards against containers created concurrently.
+        execute(["docker", "image", "rm", *tags])
+
+
 def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None):
     if not re.fullmatch(r"[0-9a-f]{40}", commit_sha):
         raise ValueError("DEPLOY_SHA must be the full Git commit SHA.")
@@ -63,6 +105,7 @@ def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None):
     help_text = execute(["docker", "compose", "up", "--help"], capture=True).stdout
     if "--wait-timeout" not in help_text:
         raise ValueError("Docker Compose must support up --wait and --wait-timeout; update Compose before deploying.")
+    previous = previous_backend_images(base, backend, execute)
     image = f"{IMAGE_REPOSITORY}:{commit_sha}"
     print(f"Deploying {commit_sha}; Django service: {backend}; application services: {', '.join(apps)}", flush=True)
     execute(["docker", "pull", image])
@@ -92,7 +135,12 @@ def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None):
         execute([*one_off, "migrate", "--noinput"])
         execute([*compose, "up", "-d", "--no-deps", "--no-build", "--pull", "never", "--wait", "--wait-timeout", "120", *apps])
         print("Migrations completed and application containers are running/healthy.", flush=True)
-        execute(["docker", "image", "prune", "-f"])
+        try:
+            cleanup_backend_images(previous, execute)
+        except (ValueError, OSError, subprocess.CalledProcessError) as exc:
+            # The application is already healthy. Report maintenance failures
+            # without incorrectly marking a successful release as failed.
+            print(f"WARNING: Backend image cleanup failed: {exc}", file=sys.stderr)
     finally:
         override_path.unlink(missing_ok=True)
 

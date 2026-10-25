@@ -41,6 +41,8 @@ class DeploymentTests(unittest.TestCase):
         self.stdout = io.StringIO()
         self.addCleanup(patch.stopall)
         patch("deploy_backend.subprocess.run", side_effect=self.docker).start()
+        self.previous = patch("deploy_backend.previous_backend_images", return_value={"old-image"}).start()
+        self.cleanup = patch("deploy_backend.cleanup_backend_images").start()
 
     def docker(self, command, **kwargs):
         if command[:2] == ["docker", "pull"]:
@@ -87,7 +89,9 @@ class DeploymentTests(unittest.TestCase):
 
     def test_success_pins_migration_and_startup_and_preserves_infrastructure(self):
         self.deploy()
-        self.assertEqual(self.actions(), ["config", "ps", "help", "pull", "inspect", "check", "stop", "migrate", "up", "prune"])
+        self.assertEqual(self.actions(), ["config", "ps", "help", "pull", "inspect", "check", "stop", "migrate", "up"])
+        self.cleanup.assert_called_once()
+        self.assertEqual(self.cleanup.call_args.args[0], {"old-image"})
         self.assertEqual(self.command("pull"), ["docker", "pull", f"{REPOSITORY}:{SHA}"])
         expected = {"services": {name: {"image": DIGEST} for name in ("beat", "web", "worker")}}
         self.assertTrue(self.overrides)
@@ -184,6 +188,7 @@ class DeploymentTests(unittest.TestCase):
                 self.assertNotIn("stop", self.actions())
                 self.assertNotIn("migrate", self.actions())
                 self.assertNotIn("up", self.actions())
+                self.cleanup.assert_not_called()
                 self.assert_override_removed()
 
     def test_missing_registry_digest_is_rejected_before_downtime(self):
@@ -212,13 +217,88 @@ class DeploymentTests(unittest.TestCase):
         with self.assertRaises(subprocess.CalledProcessError):
             self.deploy()
         self.assertEqual(self.actions()[-2:], ["migrate", "up"])
+        self.cleanup.assert_not_called()
         self.assert_override_removed()
+
+    def test_cleanup_failure_does_not_mark_healthy_deployment_failed(self):
+        self.cleanup.side_effect = subprocess.CalledProcessError(1, ["docker", "image", "rm"])
+        stderr = io.StringIO()
+        with redirect_stderr(stderr):
+            self.deploy()
+        self.assertIn("WARNING: Backend image cleanup failed", stderr.getvalue())
+        self.assertIn("up", self.actions())
 
     def test_main_returns_failure_exit_code(self):
         stderr = io.StringIO()
         with patch("deploy_backend.deploy", side_effect=ValueError("Invalid configuration")), redirect_stderr(stderr):
             self.assertEqual(deploy_backend.main(), 1)
         self.assertIn("Backend deployment failed: Invalid configuration", stderr.getvalue())
+
+
+class ImageRetentionTests(unittest.TestCase):
+    def test_preserves_previous_containers_and_unrelated_tags(self):
+        def image(identifier, tags):
+            return {"Id": identifier, "RepoTags": tags}
+        old_tags = [f"{REPOSITORY}:{'c' * 40}", f"{REPOSITORY}:latest"]
+        images = [
+            image("current", [f"{REPOSITORY}:{SHA}"]),
+            image("previous", [f"{REPOSITORY}:{'d' * 40}"]),
+            image("stopped", [f"{REPOSITORY}:{'e' * 40}"]),
+            image("obsolete", old_tags),
+            image("shared", [f"{REPOSITORY}:{'f' * 40}", "another/app:latest"]),
+            image("custom", [f"{REPOSITORY}:manual-backup"]),
+            image("untagged", None),
+        ]
+        calls = []
+
+        def execute(command, capture=False):
+            calls.append(command)
+            if command[:2] == ["docker", "ps"]:
+                output = "running-container\nstopped-container\n"
+            elif command[:2] == ["docker", "inspect"]:
+                output = json.dumps([{"Image": "current"}, {"Image": "stopped"}])
+            elif command[:3] == ["docker", "image", "ls"]:
+                output = "\n".join(i["Id"] for i in images)
+            elif command[:3] == ["docker", "image", "inspect"]:
+                output = json.dumps(images)
+            elif command[:3] == ["docker", "image", "rm"]:
+                output = ""
+            else:
+                self.fail(command)
+            return subprocess.CompletedProcess(command, 0, stdout=output)
+
+        deploy_backend.cleanup_backend_images({"previous"}, execute)
+        removals = [c for c in calls if c[:3] == ["docker", "image", "rm"]]
+        self.assertEqual(removals, [["docker", "image", "rm", *old_tags]])
+        self.assertNotIn("--force", removals[0])
+
+    def test_empty_container_inventory_refuses_cleanup(self):
+        def execute(command, capture=False):
+            self.assertEqual(command, ["docker", "ps", "--all", "--quiet"])
+            return subprocess.CompletedProcess(command, 0, stdout="")
+        with self.assertRaisesRegex(ValueError, "skipping image cleanup"):
+            deploy_backend.cleanup_backend_images(set(), execute)
+
+    def test_same_release_retry_preserves_existing_rollback(self):
+        def execute(command, capture=False):
+            if command[:2] == ["docker", "ps"]:
+                output = "container\n"
+            elif command[:2] == ["docker", "inspect"]:
+                output = json.dumps([{"Image": "unchanged"}])
+            else:
+                self.fail("A repeated release must not delete rollback images")
+            return subprocess.CompletedProcess(command, 0, stdout=output)
+        deploy_backend.cleanup_backend_images({"unchanged"}, execute)
+
+    def test_previous_image_is_taken_from_deployed_backend(self):
+        calls = []
+        def execute(command, capture=False):
+            calls.append(command)
+            output = "backend-container\n" if "ps" in command else json.dumps([{"Image": "actual-previous"}])
+            return subprocess.CompletedProcess(command, 0, stdout=output)
+        result = deploy_backend.previous_backend_images(["docker", "compose"], "web", execute)
+        self.assertEqual(result, {"actual-previous"})
+        self.assertEqual(calls[0], ["docker", "compose", "ps", "--all", "--quiet", "web"])
 
 
 if __name__ == "__main__":
