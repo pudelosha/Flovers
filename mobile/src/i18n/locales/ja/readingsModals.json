@@ -73,7 +73,12 @@
       "pumpRequiredText": "このデバイスにはウォーターポンプが設定されていません。水やりをスケジュールする前に、デバイス設定でウォーターポンプ対応を有効にしてください。",
       "working": "更新中...",
       "recallWatering": "スケジュールされた水やりを取り消す",
-      "scheduleWatering": "水やりをスケジュール"
+      "scheduleWatering": "水やりをスケジュール",
+      "durationLabel": "水やりの時間（秒）",
+      "firmwareDuration": "デバイスのコードで設定された時間を使用します。",
+      "durationHint": "1〜300秒で指定してください。自動水やりには引き続きデバイスのコードで設定された時間を使用します。",
+      "durationFirmwareRequired": "時間を指定するには、デバイスに最新のコードを書き込み、接続されるまでお待ちください。それまでは手動の水やりにもコードで設定された時間を使用します。",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "読み取り値をフィルター",

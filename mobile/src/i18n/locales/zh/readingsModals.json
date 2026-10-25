@@ -73,7 +73,12 @@
       "pumpRequiredText": "此设备未配置水泵。请先在设备设置中启用水泵支持，然后再安排浇水。",
       "working": "正在更新...",
       "recallWatering": "撤回计划浇水",
-      "scheduleWatering": "安排浇水"
+      "scheduleWatering": "安排浇水",
+      "durationLabel": "浇水时长（秒）",
+      "firmwareDuration": "使用设备代码中设置的时长。",
+      "durationHint": "请输入 1–300 秒。自动浇水仍使用设备代码中设置的时长。",
+      "durationFirmwareRequired": "如需选择时长，请将最新代码上传到设备，并等待设备连接。在此之前，手动浇水将使用代码中设置的时长。",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "筛选读数",

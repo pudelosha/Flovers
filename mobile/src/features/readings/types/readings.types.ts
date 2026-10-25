@@ -12,6 +12,7 @@ export type ApiReadingMetrics = {
 
 export type ApiPumpTask = {
   id: number | string;
+  duration_seconds?: number | null;
   source: "manual" | "automatic";
   status:
     | "pending"

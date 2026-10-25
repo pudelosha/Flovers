@@ -147,6 +147,7 @@ export async function sendDeviceCodeByEmail(
 
 export type ApiPumpStatusResponse = {
   pump_included: boolean;
+  supports_manual_duration?: boolean;
   last_pump_run_at?: string | null;
   last_pump_run_source?: "manual" | "automatic" | null;
   pending_pump_task?: ApiPumpTask | null;
@@ -171,12 +172,12 @@ export async function fetchPumpStatus(
 
 export async function schedulePumpWatering(
   id: number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean; durationSeconds?: number } = { auth: true }
 ): Promise<ApiPumpMutationResponse> {
   return await request<ApiPumpMutationResponse>(
     `${DEVICES_URL}${id}/pump-schedule/`,
     "POST",
-    undefined,
+    opts.durationSeconds === undefined ? undefined : { duration_seconds: opts.durationSeconds },
     { auth: opts.auth ?? true }
   );
 }

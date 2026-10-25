@@ -73,7 +73,12 @@
       "pumpRequiredText": "Questo dispositivo non è configurato con una pompa dell’acqua. Abilita il supporto per la pompa dell’acqua nelle impostazioni del dispositivo prima di programmare l’irrigazione.",
       "working": "Aggiornamento in corso...",
       "recallWatering": "Richiama irrigazione programmata",
-      "scheduleWatering": "Programma irrigazione"
+      "scheduleWatering": "Programma irrigazione",
+      "durationLabel": "Durata dell’irrigazione (secondi)",
+      "firmwareDuration": "Viene usata la durata impostata nel codice del dispositivo.",
+      "durationHint": "Scegli da 1 a 300 secondi. L’irrigazione automatica continua a usare la durata impostata nel codice del dispositivo.",
+      "durationFirmwareRequired": "Per scegliere la durata, carica il codice aggiornato sul dispositivo e attendi che si connetta. Fino ad allora, l’irrigazione manuale usa la durata impostata nel codice.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Filtra letture",

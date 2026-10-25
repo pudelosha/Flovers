@@ -157,6 +157,7 @@ export default function ReadingsScreen() {
 
   // Watering schedule modal state
   const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
+  const [wateringDurationSupported, setWateringDurationSupported] = useState(false);
   const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
   const [wateringScheduleName, setWateringScheduleName] = useState<string>("");
   const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
@@ -641,6 +642,7 @@ export default function ReadingsScreen() {
 
       try {
         const res = await fetchPumpStatus(Number(id));
+        setWateringDurationSupported(Boolean(res.supports_manual_duration));
 
         setWateringSchedulePendingTask(res.pending_pump_task ?? null);
         setWateringScheduleLastPumpRunAt(res.last_pump_run_at ?? null);
@@ -686,7 +688,7 @@ export default function ReadingsScreen() {
     [closeFloatingMenus, items, showToast, tr]
   );
 
-  const handleScheduleWatering = useCallback(async () => {
+  const handleScheduleWatering = useCallback(async (durationSeconds?: number) => {
     if (!wateringScheduleId) {
       showToast(
         tr("readings.toasts.missingDeviceId", "Missing device ID"),
@@ -698,7 +700,7 @@ export default function ReadingsScreen() {
     try {
       setWateringScheduleWorking(true);
 
-      const res = await schedulePumpWatering(Number(wateringScheduleId));
+      const res = await schedulePumpWatering(Number(wateringScheduleId), { durationSeconds });
       const pendingTask = res.pending_pump_task ?? null;
 
       setWateringSchedulePendingTask(pendingTask);
@@ -1419,6 +1421,7 @@ export default function ReadingsScreen() {
           })()
         }
         pendingPumpTask={wateringSchedulePendingTask}
+        durationSupported={wateringDurationSupported}
         scheduledJobExists={Boolean(wateringSchedulePendingTask)}
         scheduledJobCreatedAt={wateringSchedulePendingTask?.requested_at ?? null}
         onScheduleWatering={handleScheduleWatering}

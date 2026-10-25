@@ -120,6 +120,10 @@ describe("readings.service", () => {
   });
 
   it("uses dedicated pump endpoints for manual scheduling and auto-pump updates", async () => {
+    await schedulePumpWatering(7, { durationSeconds: 20 });
+    expect(mockedRequest).toHaveBeenLastCalledWith(
+      "/readings/devices/7/pump-schedule/", "POST", { duration_seconds: 20 }, { auth: true }
+    );
     await schedulePumpWatering(7, { auth: false });
     expect(mockedRequest).toHaveBeenLastCalledWith(
       "/readings/devices/7/pump-schedule/",

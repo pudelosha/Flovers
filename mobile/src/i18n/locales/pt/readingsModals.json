@@ -73,7 +73,12 @@
       "pumpRequiredText": "Este dispositivo não está configurado com uma bomba de água. Ative o suporte à bomba de água nas configurações do dispositivo antes de agendar a rega.",
       "working": "Atualizando...",
       "recallWatering": "Cancelar rega agendada",
-      "scheduleWatering": "Agendar rega"
+      "scheduleWatering": "Agendar rega",
+      "durationLabel": "Duração da rega (segundos)",
+      "firmwareDuration": "É usada a duração definida no código do dispositivo.",
+      "durationHint": "Escolhe entre 1 e 300 segundos. A rega automática continua a usar a duração definida no código do dispositivo.",
+      "durationFirmwareRequired": "Para escolher a duração, carrega o código atualizado no dispositivo e espera que se ligue. Até lá, a rega manual usa a duração definida no código.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Filtrar leituras",

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
+import { View, Text, TextInput, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -21,6 +21,7 @@ type Props = {
   plantName?: string | null;
   location?: string | null;
   pumpIncluded?: boolean;
+  durationSupported?: boolean;
   lastPumpRunAt?: string | null;
 
   /**
@@ -39,7 +40,7 @@ type Props = {
   scheduledJobCreatedAt?: string | null;
 
   onClose: () => void;
-  onScheduleWatering?: () => Promise<void> | void;
+  onScheduleWatering?: (durationSeconds?: number) => Promise<void> | void;
   onRecallWatering?: () => Promise<void> | void;
 };
 
@@ -90,6 +91,7 @@ export default function WateringScheduleModal({
   plantName,
   location,
   pumpIncluded,
+  durationSupported = false,
   lastPumpRunAt,
   pendingPumpTask,
   scheduledJobExists = false,
@@ -101,15 +103,21 @@ export default function WateringScheduleModal({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const [durationText, setDurationText] = React.useState("30");
+  React.useEffect(() => {
+    if (visible) setDurationText("30");
+  }, [visible, deviceId]);
+  const durationSeconds = Number(durationText);
+  const validDuration = /^\d+$/.test(durationText) && durationSeconds >= 1 && durationSeconds <= 300;
 
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: Record<string, any>) => {
       void currentLanguage;
 
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
+      const isMissing = typeof txt !== "string" || !txt || txt === key;
 
-      if (!isMissing) return txt;
+      if (!isMissing && typeof txt === "string") return txt;
 
       let fallbackText = fallback ?? key.split(".").pop() ?? key;
 
@@ -140,6 +148,7 @@ export default function WateringScheduleModal({
   const canScheduleOrRecall =
     Boolean(pumpIncluded) &&
     !working &&
+    (hasPendingTask || !durationSupported || validDuration) &&
     (hasPendingTask ? Boolean(onRecallWatering) : Boolean(onScheduleWatering));
 
   const handleScheduleButtonPress = React.useCallback(() => {
@@ -148,13 +157,15 @@ export default function WateringScheduleModal({
     if (hasPendingTask) {
       onRecallWatering?.();
     } else {
-      onScheduleWatering?.();
+      onScheduleWatering?.(durationSupported ? durationSeconds : undefined);
     }
   }, [
     canScheduleOrRecall,
     hasPendingTask,
     onRecallWatering,
     onScheduleWatering,
+    durationSupported,
+    durationSeconds,
   ]);
 
   // Parent should fetch pump status first and only then set visible=true.
@@ -263,6 +274,37 @@ export default function WateringScheduleModal({
                   )}
                 </View>
               </Block>
+
+              {pumpIncluded && (
+                <Block label={tr("readingsModals.wateringSchedule.durationLabel", "Watering duration (seconds)")}>
+                  {hasPendingTask ? (
+                    <Text style={{ color: "#FFFFFF" }}>
+                      {pendingPumpTask?.duration_seconds != null
+                        ? tr("readingsModals.wateringSchedule.durationValue", "{{seconds}} s", { seconds: pendingPumpTask.duration_seconds })
+                        : tr("readingsModals.wateringSchedule.firmwareDuration", "Uses the duration set in the board's code.")}
+                    </Text>
+                  ) : durationSupported ? (
+                    <>
+                      <TextInput
+                        accessibilityLabel={tr("readingsModals.wateringSchedule.durationLabel", "Watering duration (seconds)")}
+                        value={durationText}
+                        onChangeText={setDurationText}
+                        keyboardType="number-pad"
+                        maxLength={3}
+                        editable={!working}
+                        style={{ color: "#FFFFFF", backgroundColor: "rgba(255,255,255,0.12)", borderRadius: 12, padding: 12 }}
+                      />
+                      <Text style={{ color: "#FFFFFF", marginTop: 6 }}>
+                        {tr("readingsModals.wateringSchedule.durationHint", "Choose 1–300 seconds. Automatic watering still uses the duration set in the board's code.")}
+                      </Text>
+                    </>
+                  ) : (
+                    <Text style={{ color: "#FFFFFF" }}>
+                      {tr("readingsModals.wateringSchedule.durationFirmwareRequired", "To choose a duration, upload the latest device code and wait for the board to connect. Until then, manual watering uses the duration set in its code.")}
+                    </Text>
+                  )}
+                </Block>
+              )}
 
               <Block
                 label={tr(

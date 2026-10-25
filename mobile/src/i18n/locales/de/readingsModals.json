@@ -73,7 +73,12 @@
       "pumpRequiredText": "Dieses Gerät ist nicht mit einer Wasserpumpe konfiguriert. Aktivieren Sie die Wasserpumpenunterstützung in den Geräteeinstellungen, bevor Sie eine Bewässerung planen.",
       "working": "Wird aktualisiert...",
       "recallWatering": "Geplante Bewässerung zurückrufen",
-      "scheduleWatering": "Bewässerung planen"
+      "scheduleWatering": "Bewässerung planen",
+      "durationLabel": "Bewässerungsdauer (Sekunden)",
+      "firmwareDuration": "Es gilt die im Gerätecode festgelegte Dauer.",
+      "durationHint": "Wähle 1–300 Sekunden. Für die automatische Bewässerung gilt weiterhin die im Gerätecode festgelegte Dauer.",
+      "durationFirmwareRequired": "Lade den aktuellen Gerätecode hoch und warte, bis sich das Gerät verbindet, um die Dauer auszuwählen. Bis dahin gilt auch für die manuelle Bewässerung die im Code festgelegte Dauer.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Messwerte filtern",

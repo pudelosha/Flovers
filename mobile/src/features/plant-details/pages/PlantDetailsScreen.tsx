@@ -182,6 +182,7 @@ export default function PlantDetailsScreen() {
   const [saving, setSaving] = useState(false);
 
   const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
+  const [wateringDurationSupported, setWateringDurationSupported] = useState(false);
   const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
   const [wateringScheduleName, setWateringScheduleName] = useState("");
   const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
@@ -445,6 +446,7 @@ export default function PlantDetailsScreen() {
 
       try {
         const res = await fetchPumpStatus(Number(resolvedDeviceId));
+        setWateringDurationSupported(Boolean(res.supports_manual_duration));
 
         setWateringSchedulePendingTask(res.pending_pump_task ?? null);
         setWateringScheduleLastPumpRunAt(res.last_pump_run_at ?? null);
@@ -477,7 +479,7 @@ export default function PlantDetailsScreen() {
     [details, tr]
   );
 
-  const handleScheduleWatering = useCallback(async () => {
+  const handleScheduleWatering = useCallback(async (durationSeconds?: number) => {
     if (!wateringScheduleId) {
       showToast(
         tr("plantDetails.toasts.missingDeviceId", "Missing reading device."),
@@ -489,7 +491,7 @@ export default function PlantDetailsScreen() {
     try {
       setWateringScheduleWorking(true);
 
-      const res = await schedulePumpWatering(Number(wateringScheduleId));
+      const res = await schedulePumpWatering(Number(wateringScheduleId), { durationSeconds });
       const pendingTask = res.pending_pump_task ?? null;
 
       setWateringSchedulePendingTask(pendingTask);
@@ -998,6 +1000,7 @@ export default function PlantDetailsScreen() {
           "—"
         }
         pendingPumpTask={wateringSchedulePendingTask}
+        durationSupported={wateringDurationSupported}
         scheduledJobExists={Boolean(wateringSchedulePendingTask)}
         scheduledJobCreatedAt={wateringSchedulePendingTask?.requested_at ?? null}
         onScheduleWatering={handleScheduleWatering}

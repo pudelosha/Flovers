@@ -73,7 +73,12 @@
       "pumpRequiredText": "Este dispositivo no está configurado con una bomba de agua. Habilita el soporte de bomba de agua en la configuración del dispositivo antes de programar el riego.",
       "working": "Actualizando...",
       "recallWatering": "Cancelar riego programado",
-      "scheduleWatering": "Programar riego"
+      "scheduleWatering": "Programar riego",
+      "durationLabel": "Duración del riego (segundos)",
+      "firmwareDuration": "Se usa la duración definida en el código del dispositivo.",
+      "durationHint": "Elige entre 1 y 300 segundos. El riego automático sigue usando la duración definida en el código del dispositivo.",
+      "durationFirmwareRequired": "Para elegir la duración, carga el código actualizado en el dispositivo y espera a que se conecte. Hasta entonces, el riego manual usa la duración definida en el código.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Filtrar lecturas",

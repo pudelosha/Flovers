@@ -3,6 +3,35 @@ import { fireEvent, render } from "@testing-library/react-native";
 import WateringScheduleModal from "../WateringScheduleModal";
 
 describe("WateringScheduleModal", () => {
+  it("passes the selected duration and blocks invalid values", () => {
+    const onScheduleWatering = jest.fn();
+    const { getByLabelText, getAllByText } = render(
+      <WateringScheduleModal visible pumpIncluded durationSupported deviceId={7}
+        onClose={jest.fn()} onScheduleWatering={onScheduleWatering} />
+    );
+    const input = getByLabelText("Watering duration (seconds)");
+    fireEvent.changeText(input, "0");
+    let buttons = getAllByText("Schedule watering");
+    fireEvent.press(buttons[buttons.length - 1]);
+    expect(onScheduleWatering).not.toHaveBeenCalled();
+    fireEvent.changeText(input, "20");
+    buttons = getAllByText("Schedule watering");
+    fireEvent.press(buttons[buttons.length - 1]);
+    expect(onScheduleWatering).toHaveBeenCalledWith(20);
+  });
+
+  it("keeps legacy firmware duration when the board lacks support", () => {
+    const onScheduleWatering = jest.fn();
+    const { queryByLabelText, getAllByText } = render(
+      <WateringScheduleModal visible pumpIncluded deviceId={7}
+        onClose={jest.fn()} onScheduleWatering={onScheduleWatering} />
+    );
+    expect(queryByLabelText("Watering duration (seconds)")).toBeNull();
+    const buttons = getAllByText("Schedule watering");
+    fireEvent.press(buttons[buttons.length - 1]);
+    expect(onScheduleWatering).toHaveBeenCalledWith(undefined);
+  });
+
   it("schedules watering when the device has a pump and no pending task", () => {
     const onScheduleWatering = jest.fn();
 

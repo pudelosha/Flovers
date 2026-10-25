@@ -73,7 +73,12 @@
       "pumpRequiredText": "This device is not configured with a water pump. Enable water pump support in the device settings before scheduling watering.",
       "working": "Updating...",
       "recallWatering": "Recall scheduled watering",
-      "scheduleWatering": "Schedule watering"
+      "scheduleWatering": "Schedule watering",
+      "durationLabel": "Watering duration (seconds)",
+      "firmwareDuration": "Uses the duration set in the board's code.",
+      "durationHint": "Choose 1–300 seconds. Automatic watering still uses the duration set in the board's code.",
+      "durationFirmwareRequired": "To choose a duration, upload the latest device code and wait for the board to connect. Until then, manual watering uses the duration set in its code.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Filter readings",

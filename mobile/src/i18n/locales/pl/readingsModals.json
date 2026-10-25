@@ -73,7 +73,12 @@
       "pumpRequiredText": "To urządzenie nie jest skonfigurowane z pompą wody. Włącz obsługę pompy wody w ustawieniach urządzenia przed zaplanowaniem podlewania.",
       "working": "Aktualizowanie...",
       "recallWatering": "Odwołaj zaplanowane podlewanie",
-      "scheduleWatering": "Zaplanuj podlewanie"
+      "scheduleWatering": "Zaplanuj podlewanie",
+      "durationLabel": "Czas podlewania (sekundy)",
+      "firmwareDuration": "Czas podlewania jest ustawiony w kodzie urządzenia.",
+      "durationHint": "Wpisz od 1 do 300 sekund. Automatyczne podlewanie nadal korzysta z czasu ustawionego w kodzie urządzenia.",
+      "durationFirmwareRequired": "Aby ustawić czas podlewania, wgraj najnowszy kod do urządzenia i poczekaj, aż się połączy. Do tego czasu ręczne podlewanie korzysta z czasu ustawionego w kodzie.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Filtruj odczyty",

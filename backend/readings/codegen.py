@@ -37,6 +37,7 @@ def _section_includes() -> str:
         #include <cmath>
         #include <cstring>
         #include <cstdint>
+        #include <cctype>
         #include <Wire.h>
         #include <BH1750.h>
         #include <Adafruit_Sensor.h>
@@ -784,7 +785,7 @@ def _section_pump_helpers() -> str:
             return valid;
         }
 
-        bool reservePumpSafety()
+        bool reservePumpSafety(unsigned long durationMs)
         {
             int64_t now = static_cast<int64_t>(time(nullptr));
             if (now < 1735689600LL)
@@ -792,7 +793,7 @@ def _section_pump_helpers() -> str:
             PumpSafetyRecord record = {};
             if (!readPumpSafety(record))
                 return false;
-            int64_t until = now + (activePumpCooldownMs + PUMP_RUN_MS + 999UL) / 1000UL;
+            int64_t until = now + (activePumpCooldownMs + durationMs + 999UL) / 1000UL;
             if (String(record.deviceKey) != String(deviceKey) || record.notBefore < until)
                 record.notBefore = until;
             std::strncpy(record.deviceKey, deviceKey, sizeof(record.deviceKey) - 1);
@@ -829,7 +830,8 @@ def _section_pump_helpers() -> str:
             json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
             json += "\\"device_id\\":" + String(DEVICE_ID) + ",";
             json += "\\"supports_task_retry\\":true,";
-            json += "\\"supports_auto_claim\\":true";
+            json += "\\"supports_auto_claim\\":true,";
+            json += "\\"supports_manual_duration\\":true";
 
             json += "}";
 
@@ -965,6 +967,27 @@ def _section_pump_helpers() -> str:
                 return result;
             }
 
+            // A task duration applies only to manual watering.
+            unsigned long manualDurationMs = PUMP_RUN_MS;
+            int durationIndex = findJsonValueStart(responseBody, "duration_seconds");
+            if (durationIndex >= 0 && responseBody.substring(durationIndex, durationIndex + 4) != "null")
+            {
+                int end = durationIndex;
+                while (end < responseBody.length() && responseBody[end] >= '0' && responseBody[end] <= '9')
+                    end++;
+                long seconds = jsonLongValue(responseBody, "duration_seconds", -1);
+                while (end < responseBody.length() && isspace(static_cast<unsigned char>(responseBody[end])))
+                    end++;
+                if (seconds < 1 || seconds > 300 || end >= responseBody.length() ||
+                    (responseBody[end] != ',' && responseBody[end] != '}'))
+                {
+                    sendPumpComplete(taskId, "manual", false, "Invalid manual watering duration");
+                    result.manualPumpRan = true;
+                    return result;
+                }
+                manualDurationMs = static_cast<unsigned long>(seconds) * 1000UL;
+            }
+
             // Persist the execution receipt BEFORE pumping. Replayed deliveries
             // acknowledge the same task without watering again, even after reboot.
             struct PumpReceipt
@@ -1019,7 +1042,7 @@ def _section_pump_helpers() -> str:
 
             // A manual run may override the cooldown, but must persist a new
             // safety boundary before delivering water. Reboots retain it.
-            if (!reservePumpSafety())
+            if (!reservePumpSafety(manualDurationMs))
             {
                 receipt.state = 3;
                 receipts.putBytes("receipt", &receipt, sizeof(receipt));
@@ -1027,7 +1050,7 @@ def _section_pump_helpers() -> str:
                 sendPumpComplete(taskId, "manual", false, "Could not persist watering cooldown");
                 return result;
             }
-            bool success = runPumpForMs(PUMP_RUN_MS);
+            bool success = runPumpForMs(manualDurationMs);
             receipt.state = success ? 2 : 3;
             bool recorded = receipts.putBytes("receipt", &receipt, sizeof(receipt)) == sizeof(receipt);
             receipts.end();
@@ -1130,7 +1153,7 @@ def _section_pump_helpers() -> str:
                 Serial.println("Automatic watering was not reserved by backend");
                 return;
             }
-            if (!reservePumpSafety())
+            if (!reservePumpSafety(PUMP_RUN_MS))
             {
                 sendPumpComplete(taskId, "automatic", false, "Could not persist watering cooldown");
                 return;

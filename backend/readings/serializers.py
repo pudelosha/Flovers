@@ -55,6 +55,10 @@ class ReadingIngestSerializer(serializers.Serializer):
         return super().to_internal_value(data)
 
 
+class PumpScheduleSerializer(serializers.Serializer):
+    duration_seconds = serializers.IntegerField(min_value=1, max_value=300, required=False)
+
+
 class PumpTaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = PumpTask
@@ -63,6 +67,7 @@ class PumpTaskSerializer(serializers.ModelSerializer):
             "source",
             "status",
             "requested_at",
+            "duration_seconds",
             "delivered_at",
             "executed_at",
             "cancelled_at",

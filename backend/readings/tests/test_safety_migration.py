@@ -35,4 +35,5 @@ def test_upgrade_preserves_uncertain_legacy_watering_and_existing_observations()
         updated_row = new.get_model("readings", "Reading").objects.get(pk=row.pk)
         assert updated_row.observed_at == now and updated_row.moisture == 12
     finally:
-        MigrationExecutor(connection).migrate(after)
+        executor = MigrationExecutor(connection)
+        executor.migrate(executor.loader.graph.leaf_nodes())

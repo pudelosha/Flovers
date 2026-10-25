@@ -28,6 +28,7 @@ from .serializers import (
     ReadingSerializer,
     ReadingsExportEmailSerializer,
     PumpTaskSerializer,
+    PumpScheduleSerializer,
 )
 from .device_auth import resolve_device
 from .utils import parse_ts_or_now
@@ -352,8 +353,8 @@ def _pump_cooldown_until(device):
     return max((value for value in candidates if value is not None), default=None)
 
 
-def _reserve_pump_cooldown(device, now):
-    until = now + timedelta(minutes=max(1, device.pump_cooldown_minutes), seconds=PUMP_MAX_RUN_SECONDS)
+def _reserve_pump_cooldown(device, now, duration_seconds=None):
+    until = now + timedelta(minutes=max(1, device.pump_cooldown_minutes), seconds=duration_seconds or PUMP_MAX_RUN_SECONDS)
     current = _pump_cooldown_until(device)
     device.pump_safety_until = max(current, until) if current else until
     device.save(update_fields=["pump_safety_until", "updated_at"])
@@ -581,11 +582,15 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             "last_pump_run_at": device.last_pump_run_at,
             "last_pump_run_source": device.last_pump_run_source,
             "pending_pump_task": _serialize_pump_task_for_app(task),
+            "supports_manual_duration": device.supports_manual_duration,
         })
 
     @action(detail=True, methods=["post"], url_path="pump-schedule")
     def pump_schedule(self, request, pk=None):
         device = self.get_object()
+        payload = PumpScheduleSerializer(data=request.data)
+        payload.is_valid(raise_exception=True)
+        duration_seconds = payload.validated_data.get("duration_seconds")
 
         ok, reason = _device_can_run_pump(device)
         if not ok:
@@ -593,6 +598,9 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
 
         with transaction.atomic():
             device = ReadingDevice.objects.select_for_update().get(pk=device.pk, user=request.user)
+            if duration_seconds is not None and not device.supports_manual_duration:
+                return Response({"detail": "Update the device firmware before choosing a watering duration."},
+                                status=status.HTTP_400_BAD_REQUEST)
             ok, reason = _device_can_run_pump(device)
             if not ok:
                 return Response({"detail": reason}, status=status.HTTP_400_BAD_REQUEST)
@@ -612,6 +620,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
                 requested_at=now,
                 expires_at=now + timedelta(hours=PUMP_TASK_TTL_HOURS),
                 created_by_user=request.user,
+                duration_seconds=duration_seconds,
             )
 
         return Response({
@@ -1031,6 +1040,7 @@ def pump_next_task(request):
     supports_auto_claim = _parse_bool(request.data.get("supports_auto_claim"), default=False)
     auto_config = _auto_pump_config_for_device(device, supports_auto_claim=supports_auto_claim)
     supports_task_retry = _parse_bool(request.data.get("supports_task_retry"), default=False)
+    supports_manual_duration = request.data.get("supports_manual_duration") is True
 
     if not device.pump_included:
         return Response({
@@ -1043,6 +1053,9 @@ def pump_next_task(request):
 
     with transaction.atomic():
         device = ReadingDevice.objects.select_for_update().get(pk=device.pk)
+        if device.supports_manual_duration != supports_manual_duration:
+            device.supports_manual_duration = supports_manual_duration
+            device.save(update_fields=["supports_manual_duration", "updated_at"])
         _expire_old_pump_tasks(device)
 
         auto_config = _auto_pump_config_for_device(device, supports_auto_claim=supports_auto_claim)
@@ -1072,19 +1085,23 @@ def pump_next_task(request):
             })
 
         # Only retry-capable firmware persists execution receipts before watering.
+        if task.duration_seconds is not None and not supports_manual_duration:
+            return Response({"run": False, "task_id": None, "source": None,
+                             "reason": "firmware_duration_update_required", **auto_config})
         # Preserve one-shot delivery for older sketches to prevent repeat runs.
         if task.status == PumpTask.STATUS_PENDING:
             task.status = PumpTask.STATUS_DELIVERED
             task.delivered_at = timezone.now()
             task.delivery_retry_safe = supports_task_retry
             task.save(update_fields=["status", "delivered_at", "delivery_retry_safe", "updated_at"])
-            _reserve_pump_cooldown(device, timezone.now())
+            _reserve_pump_cooldown(device, timezone.now(), task.duration_seconds)
 
     return Response({
         "run": True,
         "task_id": task.id,
         "source": PumpTask.SOURCE_MANUAL,
         "reason": "manual_scheduled",
+        "duration_seconds": task.duration_seconds,
         **auto_config,
     })
 

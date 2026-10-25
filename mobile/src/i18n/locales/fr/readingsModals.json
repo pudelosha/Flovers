@@ -73,7 +73,12 @@
       "pumpRequiredText": "Cet appareil n’est pas configuré avec une pompe à eau. Activez la prise en charge de la pompe à eau dans les paramètres de l’appareil avant de programmer un arrosage.",
       "working": "Mise à jour...",
       "recallWatering": "Rappeler l’arrosage programmé",
-      "scheduleWatering": "Programmer l’arrosage"
+      "scheduleWatering": "Programmer l’arrosage",
+      "durationLabel": "Durée d’arrosage (secondes)",
+      "firmwareDuration": "La durée définie dans le code de l’appareil est utilisée.",
+      "durationHint": "Choisissez entre 1 et 300 secondes. L’arrosage automatique conserve la durée définie dans le code de l’appareil.",
+      "durationFirmwareRequired": "Pour choisir la durée, installez le dernier code sur l’appareil et attendez sa connexion. En attendant, l’arrosage manuel utilise la durée définie dans le code.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "Filtrer les lectures",

@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
 
 
@@ -68,6 +69,8 @@ class ReadingDevice(models.Model):
     # Reserved before physical execution, including a conservative run allowance.
     pump_cooldown_minutes = models.PositiveSmallIntegerField(default=60)
     pump_safety_until = models.DateTimeField(null=True, blank=True)
+    # Last capability advertised by authenticated firmware polling for tasks.
+    supports_manual_duration = models.BooleanField(default=False)
 
     last_read_at = models.DateTimeField(null=True, blank=True)
     latest_snapshot = models.JSONField(null=True, blank=True)
@@ -146,6 +149,10 @@ class PumpTask(models.Model):
     )
 
     requested_at = models.DateTimeField(default=timezone.now)
+    # Null preserves firmware-defined duration for legacy/manual and automatic jobs.
+    duration_seconds = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MinValueValidator(1), MaxValueValidator(300)],
+    )
     delivered_at = models.DateTimeField(null=True, blank=True)
     # A delivery first made to receipt-less firmware must never be replayed
     # after a later firmware upgrade with an empty receipt store.

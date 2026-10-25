@@ -8,6 +8,8 @@
 #include <cstdint>
 #include <ctime>
 #include <set>
+#include <cctype>
+#include <cstdlib>
 
 // Host substitutes for ESP32 I/O. The pump implementation below is generated
 // from production code, so retries execute that implementation directly.
@@ -20,6 +22,8 @@ public:
     String(int number) : value(std::to_string(number)) {}
     String(long number) : value(std::to_string(number)) {}
     size_t length() const { return value.size(); }
+    char operator[](size_t index) const { return value[index]; }
+    String substring(size_t start, size_t end) const { return value.substr(start, end - start); }
     String& operator+=(const String& other) { value += other.value; return *this; }
     friend String operator+(const String& a, const String& b) { return a.value + b.value; }
     friend bool operator==(const String& a, const String& b) { return a.value == b.value; }
@@ -56,6 +60,8 @@ int pumpRuns = 0, storageWrites = 0, failStorageWrite = 0;
 bool storageUnavailable = false, interruptPump = false, completionReplyLost = false;
 bool claimAllowed = true, claimReplyLost = false;
 int autoClaims = 0;
+unsigned long lastDuration = 0;
+std::string durationReply;
 long cooldownMinutesReply = 60;
 long nextTask = 42;
 std::vector<bool> completions;
@@ -65,6 +71,7 @@ std::set<std::string> namespaces;
 unsigned long millis() { return clockMs; }
 void digitalWrite(int, int level) { if (level == HIGH) ++pumpRuns; }
 void delay(unsigned long duration) {
+    lastDuration = duration;
     if (interruptPump) throw std::runtime_error("simulated power loss");
     clockMs += duration;
 }
@@ -98,6 +105,7 @@ public:
 bool postJson(const char* url, const String& body, String& response, const char*) {
     response = "{}";
     if (std::string(url) == "next") {
+        response = durationReply.empty() ? "{}" : "{\"duration_seconds\":" + durationReply + "}";
         assert(body.value.find("\"supports_task_retry\":true") != std::string::npos);
         assert(body.value.find("\"supports_auto_claim\":true") != std::string::npos);
         return true;
@@ -113,7 +121,14 @@ bool postJson(const char* url, const String& body, String& response, const char*
 }
 bool jsonBoolValue(const String& text, const String&, bool = false) { return text.value != "claim-denied"; }
 int jsonIntValue(const String&, const String& key, int) { return key == "pump_cooldown_minutes" ? 60 : 30; }
-long jsonLongValue(const String&, const String& key, long = -1) { return key == "pump_cooldown_minutes" ? cooldownMinutesReply : nextTask; }
+int findJsonValueStart(const String& text, const String& key) {
+    auto index = text.value.find("\"" + key.value + "\":");
+    return index == std::string::npos ? -1 : int(index + key.length() + 3);
+}
+long jsonLongValue(const String&, const String& key, long = -1) {
+    if (key == "duration_seconds") return std::strtol(durationReply.c_str(), nullptr, 10);
+    return key == "pump_cooldown_minutes" ? cooldownMinutesReply : nextTask;
+}
 String jsonStringValue(const String&, const String& key, const String& = "") {
     return key == "source" ? "manual" : "manual_scheduled";
 }
@@ -121,6 +136,8 @@ String jsonStringValue(const String&, const String& key, const String& = "") {
 // GENERATED_PUMP_HELPERS
 
 void reset() {
+    durationReply.clear();
+    lastDuration = 0;
     flash.clear();
     namespaces.clear();
     completions.clear();
@@ -139,6 +156,41 @@ void reset() {
 }
 
 int main() {
+    reset();
+    durationReply = "20";
+    assert(checkAndRunManualPumpTask().manualPumpRan);
+    assert(pumpRuns == 1 && lastDuration == 20000);
+    checkAndRunManualPumpTask();
+    assert(pumpRuns == 1); // a replay does not repeat custom-duration watering
+
+    reset();
+    durationReply = "300";
+    checkAndRunManualPumpTask();
+    assert(lastDuration == 300000);
+    wallEpoch += 3601;
+    clockMs = 1000;
+    lastAutoPumpMs = 0;
+    assert(automaticPumpCooldownActive()); // runtime is included after reboot
+
+    for (const auto& invalid : {"0", "-1", "301", "20.5", "\"20\"", "true"}) {
+        reset();
+        durationReply = invalid;
+        checkAndRunManualPumpTask();
+        assert(pumpRuns == 0 && !completions.back());
+    }
+
+    reset();
+    durationReply = "null";
+    checkAndRunManualPumpTask();
+    assert(lastDuration == PUMP_RUN_MS);
+
+    reset();
+    durationReply = "20";
+    checkAndRunManualPumpTask();
+    wallEpoch += 4000;
+    handleAutomaticPump(true, 10, PumpTaskCheck{true, false, true, true, true, 30});
+    assert(pumpRuns == 2 && lastDuration == PUMP_RUN_MS);
+
     reset();
     completionReplyLost = true;
     assert(checkAndRunManualPumpTask().manualPumpRan);

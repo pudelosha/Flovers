@@ -73,7 +73,12 @@
       "pumpRequiredText": "이 기기는 물 펌프로 구성되어 있지 않습니다. 물 주기를 예약하기 전에 기기 설정에서 물 펌프 지원을 활성화하세요.",
       "working": "업데이트 중...",
       "recallWatering": "예약된 물 주기 취소",
-      "scheduleWatering": "물 주기 예약"
+      "scheduleWatering": "물 주기 예약",
+      "durationLabel": "물 주는 시간(초)",
+      "firmwareDuration": "기기 코드에 설정된 시간을 사용합니다.",
+      "durationHint": "1~300초로 설정하세요. 자동 물주기는 계속 기기 코드에 설정된 시간을 사용합니다.",
+      "durationFirmwareRequired": "시간을 설정하려면 기기에 최신 코드를 업로드하고 연결될 때까지 기다려 주세요. 그전까지 수동 물주기는 코드에 설정된 시간을 사용합니다.",
+      "durationValue": "{{seconds}} s"
     },
     "filter": {
       "title": "측정값 필터링",
