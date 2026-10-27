@@ -11,6 +11,34 @@
       "send": "发送"
     },
     "account": {
+      "level": {
+        "currentRank": "当前称号",
+        "level": "等级",
+        "journey": "点滴呵护，植物茁壮成长。",
+        "experience": "经验值",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "升至 {{level}} 级",
+        "remaining": "距下一级还需 {{xp}} XP",
+        "nextRank": "{{level}} 级解锁新称号",
+        "maxLevel": "已达最高等级",
+        "allRanks": "已解锁全部称号",
+        "pending": "经验值功能即将上线",
+        "ranks": {
+          "seedling": "幼苗",
+          "sproutKeeper": "新芽守护者",
+          "leafLover": "绿叶爱好者",
+          "buddingGardener": "园艺新手",
+          "plantNurturer": "植物养护师",
+          "greenThumb": "园艺能手",
+          "gardenGuardian": "花园守护者",
+          "botanicalExpert": "植物专家",
+          "masterGrower": "栽培大师",
+          "plantLegend": "植物传奇"
+        },
+        "loading": "正在加载 XP…",
+        "unavailable": "无法加载等级。请重新打开个人资料以重试。"
+      },
       "title": "账户",
       "emailLabel": "电子邮件",
       "createdLabel": "创建时间",

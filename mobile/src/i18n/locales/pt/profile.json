@@ -11,6 +11,34 @@
       "send": "Enviar"
     },
     "account": {
+      "level": {
+        "currentRank": "Título atual",
+        "level": "Nível",
+        "journey": "Pequenos cuidados, plantas cheias de vida.",
+        "experience": "Experiência",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Até o nível {{level}}",
+        "remaining": "{{xp}} XP para o próximo nível",
+        "nextRank": "Próximo título no nível {{level}}",
+        "maxLevel": "Nível máximo alcançado",
+        "allRanks": "Todos os títulos desbloqueados",
+        "pending": "Em breve você poderá ganhar XP",
+        "ranks": {
+          "seedling": "Muda",
+          "sproutKeeper": "Guardião dos brotos",
+          "leafLover": "Amante das folhas",
+          "buddingGardener": "Jardineiro iniciante",
+          "plantNurturer": "Cuidador de plantas",
+          "greenThumb": "Dedo verde",
+          "gardenGuardian": "Guardião do jardim",
+          "botanicalExpert": "Especialista em botânica",
+          "masterGrower": "Mestre do cultivo",
+          "plantLegend": "Lenda das plantas"
+        },
+        "loading": "A carregar XP…",
+        "unavailable": "Não foi possível carregar o teu nível. Abre novamente o perfil para tentar outra vez."
+      },
       "title": "Conta",
       "emailLabel": "Email",
       "createdLabel": "Criado",

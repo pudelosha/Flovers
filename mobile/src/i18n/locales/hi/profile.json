@@ -11,6 +11,34 @@
       "send": "भेजें"
     },
     "account": {
+      "level": {
+        "currentRank": "मौजूदा उपाधि",
+        "level": "स्तर",
+        "journey": "छोटी-छोटी कोशिशें, लहलहाते पौधे।",
+        "experience": "अनुभव",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "स्तर {{level}} तक",
+        "remaining": "अगले स्तर के लिए {{xp}} XP",
+        "nextRank": "अगली उपाधि स्तर {{level}} पर",
+        "maxLevel": "सबसे ऊँचे स्तर पर पहुँच गए",
+        "allRanks": "सभी उपाधियाँ मिल गईं",
+        "pending": "जल्द ही XP कमा सकेंगे",
+        "ranks": {
+          "seedling": "नन्हा पौधा",
+          "sproutKeeper": "अंकुरों का रखवाला",
+          "leafLover": "पत्तियों का प्रेमी",
+          "buddingGardener": "नया माली",
+          "plantNurturer": "पौधों का साथी",
+          "greenThumb": "कुशल माली",
+          "gardenGuardian": "बगीचे का रखवाला",
+          "botanicalExpert": "वनस्पति विशेषज्ञ",
+          "masterGrower": "खेती का उस्ताद",
+          "plantLegend": "बागवानी का दिग्गज"
+        },
+        "loading": "XP लोड हो रहे हैं…",
+        "unavailable": "आपका लेवल लोड नहीं हो सका। फिर से कोशिश करने के लिए प्रोफ़ाइल दोबारा खोलें।"
+      },
       "title": "खाता",
       "emailLabel": "ईमेल",
       "createdLabel": "निर्मित",

@@ -11,6 +11,34 @@
       "send": "送信"
     },
     "account": {
+      "level": {
+        "currentRank": "現在のランク",
+        "level": "レベル",
+        "journey": "小さな積み重ねで、植物はすくすく。",
+        "experience": "経験値",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "レベル{{level}}まで",
+        "remaining": "次のレベルまであと{{xp}} XP",
+        "nextRank": "レベル{{level}}で次のランクへ",
+        "maxLevel": "最高レベルに到達",
+        "allRanks": "すべてのランクを獲得",
+        "pending": "XP獲得機能は近日公開",
+        "ranks": {
+          "seedling": "苗",
+          "sproutKeeper": "新芽の守り手",
+          "leafLover": "葉っぱ好き",
+          "buddingGardener": "駆け出しの園芸家",
+          "plantNurturer": "植物の世話役",
+          "greenThumb": "緑の達人",
+          "gardenGuardian": "庭の守護者",
+          "botanicalExpert": "植物の専門家",
+          "masterGrower": "栽培の名人",
+          "plantLegend": "植物界のレジェンド"
+        },
+        "loading": "XPを読み込み中…",
+        "unavailable": "レベルを読み込めませんでした。プロフィールを開き直して、もう一度お試しください。"
+      },
       "title": "アカウント",
       "emailLabel": "メールアドレス",
       "createdLabel": "作成日",

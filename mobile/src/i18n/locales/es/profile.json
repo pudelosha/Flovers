@@ -11,6 +11,34 @@
       "send": "Enviar"
     },
     "account": {
+      "level": {
+        "currentRank": "Rango actual",
+        "level": "Nivel",
+        "journey": "Pequeños pasos, plantas llenas de vida.",
+        "experience": "Experiencia",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Hasta el nivel {{level}}",
+        "remaining": "{{xp}} XP para el siguiente nivel",
+        "nextRank": "Próximo rango en el nivel {{level}}",
+        "maxLevel": "Has alcanzado el nivel máximo",
+        "allRanks": "Todos los rangos desbloqueados",
+        "pending": "Pronto podrás ganar XP",
+        "ranks": {
+          "seedling": "Plántula",
+          "sproutKeeper": "Cuidador de brotes",
+          "leafLover": "Amante de las hojas",
+          "buddingGardener": "Jardinero en ciernes",
+          "plantNurturer": "Cuidador de plantas",
+          "greenThumb": "Jardinero nato",
+          "gardenGuardian": "Guardián del jardín",
+          "botanicalExpert": "Experto en botánica",
+          "masterGrower": "Maestro cultivador",
+          "plantLegend": "Leyenda de las plantas"
+        },
+        "loading": "Cargando XP…",
+        "unavailable": "No se ha podido cargar tu nivel. Vuelve a abrir el perfil para intentarlo de nuevo."
+      },
       "title": "Cuenta",
       "emailLabel": "Correo electrónico",
       "createdLabel": "Creado",

@@ -11,6 +11,34 @@
       "send": "Senden"
     },
     "account": {
+      "level": {
+        "currentRank": "Aktueller Rang",
+        "level": "Level",
+        "journey": "Kleine Schritte, prächtige Pflanzen.",
+        "experience": "Erfahrung",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Bis Level {{level}}",
+        "remaining": "{{xp}} XP bis zum nächsten Level",
+        "nextRank": "Nächster Rang ab Level {{level}}",
+        "maxLevel": "Höchstes Level erreicht",
+        "allRanks": "Alle Ränge freigeschaltet",
+        "pending": "XP sammeln ist bald möglich",
+        "ranks": {
+          "seedling": "Keimling",
+          "sproutKeeper": "Hüter der Keimlinge",
+          "leafLover": "Blattliebhaber",
+          "buddingGardener": "Angehender Gärtner",
+          "plantNurturer": "Pflanzenpfleger",
+          "greenThumb": "Grüner Daumen",
+          "gardenGuardian": "Gartenwächter",
+          "botanicalExpert": "Botanikexperte",
+          "masterGrower": "Meistergärtner",
+          "plantLegend": "Pflanzenlegende"
+        },
+        "loading": "XP werden geladen…",
+        "unavailable": "Dein Level konnte nicht geladen werden. Öffne dein Profil erneut, um es noch einmal zu versuchen."
+      },
       "title": "Konto",
       "emailLabel": "E-Mail",
       "createdLabel": "Erstellt",

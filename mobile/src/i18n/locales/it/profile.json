@@ -11,6 +11,34 @@
       "send": "Invia"
     },
     "account": {
+      "level": {
+        "currentRank": "Grado attuale",
+        "level": "Livello",
+        "journey": "Piccoli gesti, piante rigogliose.",
+        "experience": "Esperienza",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Al livello {{level}}",
+        "remaining": "{{xp}} XP al prossimo livello",
+        "nextRank": "Prossimo grado al livello {{level}}",
+        "maxLevel": "Livello massimo raggiunto",
+        "allRanks": "Tutti i gradi sbloccati",
+        "pending": "Presto potrai guadagnare XP",
+        "ranks": {
+          "seedling": "Piantina",
+          "sproutKeeper": "Custode dei germogli",
+          "leafLover": "Amante delle foglie",
+          "buddingGardener": "Giardiniere in erba",
+          "plantNurturer": "Amico delle piante",
+          "greenThumb": "Pollice verde",
+          "gardenGuardian": "Custode del giardino",
+          "botanicalExpert": "Esperto di botanica",
+          "masterGrower": "Maestro coltivatore",
+          "plantLegend": "Leggenda del verde"
+        },
+        "loading": "Caricamento XP…",
+        "unavailable": "Non è stato possibile caricare il livello. Riapri il profilo per riprovare."
+      },
       "title": "Account",
       "emailLabel": "Email",
       "createdLabel": "Creato",

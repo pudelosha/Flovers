@@ -11,6 +11,34 @@
       "send": "Send"
     },
     "account": {
+      "level": {
+        "currentRank": "Current rank",
+        "level": "Level",
+        "journey": "Small steps, thriving plants.",
+        "experience": "Experience",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "To level {{level}}",
+        "remaining": "{{xp}} XP to next level",
+        "nextRank": "Next rank at level {{level}}",
+        "maxLevel": "Maximum level reached",
+        "allRanks": "All ranks unlocked",
+        "pending": "XP tracking coming soon",
+        "ranks": {
+          "seedling": "Seedling",
+          "sproutKeeper": "Sprout Keeper",
+          "leafLover": "Leaf Lover",
+          "buddingGardener": "Budding Gardener",
+          "plantNurturer": "Plant Nurturer",
+          "greenThumb": "Green Thumb",
+          "gardenGuardian": "Garden Guardian",
+          "botanicalExpert": "Botanical Expert",
+          "masterGrower": "Master Grower",
+          "plantLegend": "Plant Legend"
+        },
+        "loading": "Loading XP…",
+        "unavailable": "Couldn’t load your level. Open Profile again to retry."
+      },
       "title": "Account",
       "emailLabel": "Email",
       "createdLabel": "Created",

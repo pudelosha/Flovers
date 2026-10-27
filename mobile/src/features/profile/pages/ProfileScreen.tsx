@@ -22,6 +22,7 @@ import AccountCard from "../components/AccountCard";
 import NotificationsCard from "../components/NotificationsCard";
 import SettingsCard from "../components/SettingsCard";
 import SupportCard from "../components/SupportCard";
+import { useAccountLevel } from "../hooks/useAccountLevel";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
@@ -66,6 +67,7 @@ export default function ProfileScreen() {
   const nav = useNavigation<any>();
 
   const { user, logout } = useAuth();
+  const accountLevel = useAccountLevel(user?.id ?? user?.email);
   const insets = useSafeAreaInsets();
   const { settings, loading: settingsLoading, applyServerSettings } = useSettings();
   const { changeLanguage: changeAppLanguage, currentLanguage } = useLanguage();
@@ -358,6 +360,8 @@ export default function ProfileScreen() {
           showsVerticalScrollIndicator={false}
         >
           <AccountCard
+            levelProgress={accountLevel.progress}
+            levelLoading={accountLevel.loading}
             email={user?.email}
             createdAt={
               (user as any)?.date_joined ??

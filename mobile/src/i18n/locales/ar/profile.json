@@ -11,6 +11,34 @@
       "send": "إرسال"
     },
     "account": {
+      "level": {
+        "currentRank": "رتبتك الحالية",
+        "level": "المستوى",
+        "journey": "خطوات صغيرة، ونباتات تزدهر.",
+        "experience": "الخبرة",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "إلى المستوى {{level}}",
+        "remaining": "{{xp}} XP للوصول إلى المستوى التالي",
+        "nextRank": "الرتبة التالية عند المستوى {{level}}",
+        "maxLevel": "وصلت إلى أعلى مستوى",
+        "allRanks": "حصلت على جميع الرتب",
+        "pending": "سيكون جمع نقاط XP متاحًا قريبًا",
+        "ranks": {
+          "seedling": "شتلة",
+          "sproutKeeper": "راعي البراعم",
+          "leafLover": "محب الأوراق",
+          "buddingGardener": "بستاني مبتدئ",
+          "plantNurturer": "راعي النباتات",
+          "greenThumb": "بستاني بالفطرة",
+          "gardenGuardian": "حارس الحديقة",
+          "botanicalExpert": "خبير النباتات",
+          "masterGrower": "أستاذ الزراعة",
+          "plantLegend": "أسطورة النباتات"
+        },
+        "loading": "جارٍ تحميل نقاط الخبرة…",
+        "unavailable": "تعذّر تحميل مستواك. افتح الملف الشخصي مجددًا للمحاولة مرة أخرى."
+      },
       "title": "الحساب",
       "emailLabel": "البريد الإلكتروني",
       "createdLabel": "تم الإنشاء",

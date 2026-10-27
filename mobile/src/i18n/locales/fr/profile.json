@@ -11,6 +11,34 @@
       "send": "Envoyer"
     },
     "account": {
+      "level": {
+        "currentRank": "Rang actuel",
+        "level": "Niveau",
+        "journey": "De petits gestes, des plantes épanouies.",
+        "experience": "Expérience",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Jusqu’au niveau {{level}}",
+        "remaining": "{{xp}} XP avant le prochain niveau",
+        "nextRank": "Prochain rang au niveau {{level}}",
+        "maxLevel": "Niveau maximum atteint",
+        "allRanks": "Tous les rangs débloqués",
+        "pending": "Vous pourrez bientôt gagner de l’XP",
+        "ranks": {
+          "seedling": "Jeune pousse",
+          "sproutKeeper": "Gardien des pousses",
+          "leafLover": "Ami des feuilles",
+          "buddingGardener": "Jardinier en herbe",
+          "plantNurturer": "Ami des plantes",
+          "greenThumb": "Main verte",
+          "gardenGuardian": "Gardien du jardin",
+          "botanicalExpert": "Expert en botanique",
+          "masterGrower": "Maître jardinier",
+          "plantLegend": "Légende du jardin"
+        },
+        "loading": "Chargement des XP…",
+        "unavailable": "Impossible de charger votre niveau. Rouvrez le profil pour réessayer."
+      },
       "title": "Compte",
       "emailLabel": "E-mail",
       "createdLabel": "Créé le",

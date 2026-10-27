@@ -192,3 +192,52 @@ class SupportMessage(models.Model):
 
     def __str__(self):
         return f"SupportMessage<{self.kind}:{self.user_id}:{self.subject[:30]}>"
+
+
+class AccountProgression(TimeStampedModel):
+    """Server-owned XP balance; created lazily on a new task completion."""
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="account_progression")
+    total_xp = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(194625)])
+
+    class Meta:
+        constraints = [
+            models.CheckConstraint(condition=models.Q(total_xp__lte=194625), name="account_xp_at_most_max_level"),
+        ]
+
+
+class TaskXPAward(models.Model):
+    """Immutable award decisions, including zero XP, independent of task history."""
+
+    REASON_AWARDED = "awarded"
+    REASON_EARLY = "early"
+    REASON_PLANT_LIMIT = "plant_care_daily_limit"
+    REASON_DAILY_CAP = "daily_cap"
+    REASON_LEVEL_CAP = "level_cap"
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="task_xp_awards")
+    # Snapshot identifiers deliberately have no cascading foreign keys. Deleting
+    # a plant, reminder or task must not erase deduplication evidence.
+    source_task_id = models.PositiveBigIntegerField(unique=True)
+    plant_id = models.PositiveBigIntegerField()
+    care_type = models.CharField(max_length=16)
+    earned_on = models.DateField()
+    xp = models.PositiveSmallIntegerField(default=0, validators=[MaxValueValidator(100)])
+    reason = models.CharField(max_length=24, choices=[
+        (REASON_AWARDED, "Awarded"),
+        (REASON_EARLY, "Task was not due"),
+        (REASON_PLANT_LIMIT, "Plant care already rewarded today"),
+        (REASON_DAILY_CAP, "Daily cap reached"),
+        (REASON_LEVEL_CAP, "Maximum level reached"),
+    ])
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user", "plant_id", "care_type", "earned_on"],
+                condition=models.Q(xp__gt=0), name="xp_one_plant_care_per_day",
+            ),
+            models.CheckConstraint(condition=models.Q(xp__lte=100), name="task_xp_at_most_first_reward"),
+        ]
+        indexes = [models.Index(fields=["user", "earned_on"], name="task_xp_user_day_idx")]

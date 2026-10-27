@@ -20,6 +20,15 @@ def err(message: str, errors: dict | None = None, code=status.HTTP_400_BAD_REQUE
     return Response({"status": "error", "message": message, "errors": errors or {}}, status=code)
 
 
+class ProfileProgressionView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        from .progression import get_progression
+
+        return ok("Profile progression fetched.", get_progression(request.user))
+
+
 class ProfileSettingsView(APIView):
     permission_classes = [IsAuthenticated]
 

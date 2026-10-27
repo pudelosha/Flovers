@@ -14,6 +14,32 @@ type ApiEnvelope<T> = {
   errors?: Record<string, unknown>;
 };
 
+export type ApiProfileProgression = {
+  total_xp: number;
+  level: number;
+  rank_key: string;
+  xp_into_level: number;
+  xp_for_next_level: number;
+  daily_xp: number;
+  daily_cap: number;
+};
+
+/** Progression is owned by the backend; clients never submit XP or levels. */
+export async function fetchProfileProgression(): Promise<ApiProfileProgression> {
+  const res = await request<ApiEnvelope<ApiProfileProgression>>(
+    "/profile/progression/", "GET", undefined, { auth: true }
+  );
+  const data = res.data;
+  if (!data || !Number.isInteger(data.level) || data.level < 1 || data.level > 100 ||
+      !Number.isInteger(data.xp_into_level) || data.xp_into_level < 0 ||
+      !Number.isInteger(data.xp_for_next_level) ||
+      (data.level === 100 ? data.xp_for_next_level !== 0 :
+        data.xp_for_next_level <= 0 || data.xp_into_level >= data.xp_for_next_level)) {
+    throw new Error("Invalid account progression response.");
+  }
+  return data;
+}
+
 /** ---- Notifications ---- */
 export type ApiProfileNotifications = {
   email_daily: boolean;

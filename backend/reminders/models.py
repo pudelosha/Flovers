@@ -240,9 +240,12 @@ class ReminderTask(models.Model):
             current.note = note
 
         current.status = "completed"
+        receipt_now = timezone.now()
         current.completed_at = self._completed_at_for_date(completed_date)
         current.completed_event = current.current_event()
         current.save(update_fields=["status", "completed_at", "updated_at", "note", "completed_event"])
+        from profiles.progression import award_task_completion
+        award_task_completion(current, receipt_now)
         self.__dict__.update(current.__dict__)
 
         rem = reminder

@@ -11,6 +11,34 @@
       "send": "Wyślij"
     },
     "account": {
+      "level": {
+        "currentRank": "Obecna ranga",
+        "level": "Poziom",
+        "journey": "Małe kroki, bujne rośliny.",
+        "experience": "Doświadczenie",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Do poziomu {{level}}",
+        "remaining": "{{xp}} XP do następnego poziomu",
+        "nextRank": "Nowa ranga na poziomie {{level}}",
+        "maxLevel": "Osiągnięto najwyższy poziom",
+        "allRanks": "Zdobyto wszystkie rangi",
+        "pending": "Punkty XP pojawią się wkrótce",
+        "ranks": {
+          "seedling": "Siewka",
+          "sproutKeeper": "Opiekun kiełków",
+          "leafLover": "Miłośnik liści",
+          "buddingGardener": "Początkujący ogrodnik",
+          "plantNurturer": "Opiekun roślin",
+          "greenThumb": "Urodzony ogrodnik",
+          "gardenGuardian": "Strażnik ogrodu",
+          "botanicalExpert": "Ekspert botaniki",
+          "masterGrower": "Mistrz uprawy",
+          "plantLegend": "Legenda ogrodnictwa"
+        },
+        "loading": "Wczytywanie XP…",
+        "unavailable": "Nie udało się wczytać poziomu. Otwórz ponownie profil, aby spróbować jeszcze raz."
+      },
       "title": "Konto",
       "emailLabel": "Email",
       "createdLabel": "Utworzono",

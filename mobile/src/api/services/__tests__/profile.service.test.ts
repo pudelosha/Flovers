@@ -3,6 +3,7 @@ import {
   changeMyEmail,
   changeMyPassword,
   fetchProfileNotifications,
+  fetchProfileProgression,
   fetchProfileSettings,
   sendSupportBug,
   sendSupportContact,
@@ -19,6 +20,19 @@ const mockedRequest = request as jest.Mock;
 describe("profile.service", () => {
   beforeEach(() => {
     mockedRequest.mockReset();
+  });
+
+  it("reads account progression without submitting client XP", async () => {
+    const progression = { total_xp: 100, level: 2, rank_key: "seedling", xp_into_level: 0,
+      xp_for_next_level: 200, daily_xp: 100, daily_cap: 250 };
+    mockedRequest.mockResolvedValue({ status: "success", message: "ok", data: progression });
+    await expect(fetchProfileProgression()).resolves.toEqual(progression);
+    expect(mockedRequest).toHaveBeenCalledWith("/profile/progression/", "GET", undefined, { auth: true });
+  });
+
+  it("rejects malformed progression rather than showing a fictional level", async () => {
+    mockedRequest.mockResolvedValue({ status: "success", data: { level: 0, xp_into_level: 0, xp_for_next_level: 100 } });
+    await expect(fetchProfileProgression()).rejects.toThrow("Invalid account progression");
   });
 
   it("fetches and updates notification preferences through API envelopes", async () => {

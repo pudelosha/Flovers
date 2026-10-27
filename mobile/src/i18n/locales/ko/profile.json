@@ -11,6 +11,34 @@
       "send": "보내기"
     },
     "account": {
+      "level": {
+        "currentRank": "현재 칭호",
+        "level": "레벨",
+        "journey": "작은 정성으로 식물이 무럭무럭.",
+        "experience": "경험치",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "레벨 {{level}}까지",
+        "remaining": "다음 레벨까지 {{xp}} XP",
+        "nextRank": "레벨 {{level}}에서 다음 칭호 획득",
+        "maxLevel": "최고 레벨 달성",
+        "allRanks": "모든 칭호 획득",
+        "pending": "곧 XP를 모을 수 있어요",
+        "ranks": {
+          "seedling": "어린 모종",
+          "sproutKeeper": "새싹 지킴이",
+          "leafLover": "잎사귀 애호가",
+          "buddingGardener": "초보 정원사",
+          "plantNurturer": "식물 돌보미",
+          "greenThumb": "타고난 정원사",
+          "gardenGuardian": "정원 수호자",
+          "botanicalExpert": "식물 전문가",
+          "masterGrower": "재배의 달인",
+          "plantLegend": "식물의 전설"
+        },
+        "loading": "XP 불러오는 중…",
+        "unavailable": "레벨을 불러오지 못했어요. 프로필을 다시 열어 주세요."
+      },
       "title": "계정",
       "emailLabel": "이메일",
       "createdLabel": "생성됨",

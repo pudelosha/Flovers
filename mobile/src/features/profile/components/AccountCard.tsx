@@ -6,6 +6,8 @@ import GlassCard from "./../components/GlassCard";
 import { card, controls } from "../styles/profile.styles";
 import type { PromptKey } from "../types/profile.types";
 import { useSettings } from "../../../app/providers/SettingsProvider";
+import AccountLevelCard from "./AccountLevelCard";
+import type { AccountLevelProgress } from "../types/account-level.types";
 
 function pad2(n: number) {
   return n < 10 ? `0${n}` : String(n);
@@ -44,11 +46,15 @@ export default function AccountCard({
   createdAt,
   onPrompt,
   onLogout,
+  levelProgress,
+  levelLoading,
 }: {
   email?: string | null;
   createdAt?: string | Date | null;
   onPrompt: (p: PromptKey) => void;
   onLogout: () => void;
+  levelProgress?: AccountLevelProgress | null;
+  levelLoading?: boolean;
 }) {
   const { t } = useTranslation();
   const { settings } = useSettings();
@@ -61,6 +67,7 @@ export default function AccountCard({
   return (
     <GlassCard>
       <Text style={card.cardTitle}>{t("profile.account.title")}</Text>
+      <AccountLevelCard progress={levelProgress} loading={levelLoading} />
 
       <View style={card.row}>
         <Text style={card.rowLabel}>{t("profile.account.emailLabel")}</Text>
