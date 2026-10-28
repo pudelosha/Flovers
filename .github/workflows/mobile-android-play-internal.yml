@@ -1,12 +1,6 @@
 name: Mobile Android -> Play Internal
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'mobile/**'
-      - '.github/workflows/mobile-android-play-internal.yml'
   workflow_dispatch:
 
 concurrency:
