@@ -366,17 +366,17 @@ export default function PlantInfoTile({
         <View style={styles.infoGrid}>
           {[
             { icon: "calendar", label: tr("plantDetails.info.purchased", "Purchased"), value: purchaseValue },
-            { icon: "note-edit-outline", label: tr("plantDetails.info.notes", "Notes"), value: notesValue },
+            { icon: "note-edit-outline", label: tr("plantDetails.info.notes", "Notes"), value: notesValue, multiline: true },
             { icon: "white-balance-sunny", label: tr("plantDetails.info.light", "Light"), value: lightValue },
             { icon: "compass-outline", label: tr("plantDetails.info.orientation", "Orientation"), value: orientationValue },
             { icon: "tape-measure", label: tr("plantDetails.info.distance", "Distance"), value: distanceValue },
             { icon: "pot-outline", label: tr("plantDetails.info.pot", "Pot"), value: potValue },
             { icon: "shovel", label: tr("plantDetails.info.soil", "Soil"), value: soilValue },
           ].map((it, i) => (
-            <View key={i} style={styles.infoRow}>
+            <View key={i} style={[styles.infoRow, it.multiline && styles.infoRowTopAligned]}>
               <MaterialCommunityIcons name={it.icon as any} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
               <Text style={styles.infoLabel}>{it.label}:</Text>
-              <Text style={styles.infoValue} numberOfLines={2}>
+              <Text style={styles.infoValue} numberOfLines={it.multiline ? undefined : 2}>
                 {it.value}
               </Text>
             </View>
@@ -492,6 +492,7 @@ const styles = StyleSheet.create({
 
   infoGrid: { gap: 8, marginTop: 6 },
   infoRow: { flexDirection: "row", alignItems: "center" },
+  infoRowTopAligned: { alignItems: "flex-start" },
   infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
   infoValue: { color: "rgba(255,255,255,0.95)", fontWeight: "600", flex: 1 },
 

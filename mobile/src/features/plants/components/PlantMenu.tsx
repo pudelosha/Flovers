@@ -41,7 +41,7 @@ export default function PlantMenu({
     <View style={s.menuSheet} pointerEvents="auto">
       <MenuItem
         label={tr("plants.menu.details", "Plant details")}
-        icon="flower-outline"
+        icon="sprout-outline"
         onPress={onDetails}
       />
 

@@ -376,7 +376,7 @@ export default function TaskHistoryTile({
           {/* Go to plant */}
           <Pressable style={s.menuItem} onPress={handleGoToPlant}>
             <MaterialCommunityIcons
-              name="flower-outline"
+              name="flower-tulip-outline"
               size={18}
               color="#FFFFFF"
               style={{ marginRight: 8 }}

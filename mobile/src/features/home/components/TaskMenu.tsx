@@ -72,7 +72,7 @@ export default function TaskMenu({
         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
       >
         <MaterialCommunityIcons
-          name="leaf"
+          name="flower-tulip-outline"
           size={18}
           color="#FFFFFF"
           style={{ marginRight: 8 }}

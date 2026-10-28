@@ -33,6 +33,52 @@ describe("live account level", () => {
     mockSession = 1;
   });
 
+  it("keeps progression loading until the initial request settles", async () => {
+    const first = pending();
+    mockFetch.mockReturnValueOnce(first.promise);
+    const { result } = renderHook(() => useAccountLevel("12"));
+    expect(result.current).toEqual({ progress: null, loading: true });
+    await act(async () => first.resolve(payload(2, 0)));
+    expect(result.current).toEqual({
+      progress: { level: 2, xpIntoLevel: 0, xpForNextLevel: 400 }, loading: false,
+    });
+  });
+
+  it("hides the old balance on the first render of a new profile focus", async () => {
+    const next = pending();
+    mockFetch.mockResolvedValueOnce(payload(2, 0)).mockReturnValueOnce(next.promise);
+    const renders: Array<ReturnType<typeof useAccountLevel>> = [];
+    const { result, rerender } = renderHook(() => {
+      const accountLevel = useAccountLevel("12");
+      renders.push(accountLevel);
+      return accountLevel;
+    });
+    await waitFor(() => expect(result.current.progress?.level).toBe(2));
+    mockFocused = false;
+    rerender({});
+    renders.length = 0;
+    mockFocused = true;
+    rerender({});
+    expect(renders[0]).toEqual({ progress: null, loading: true });
+    expect(result.current).toEqual({ progress: null, loading: true });
+    await act(async () => next.resolve(payload(3, 30)));
+    expect(result.current.progress?.level).toBe(3);
+    expect(result.current.loading).toBe(false);
+  });
+
+  it("releases loading after a failed refresh instead of waiting forever", async () => {
+    mockFetch.mockRejectedValueOnce(new Error("Offline"));
+    const { result } = renderHook(() => useAccountLevel("12"));
+    await waitFor(() => expect(result.current.loading).toBe(false));
+    expect(result.current.progress).toBeNull();
+  });
+
+  it("does not wait for progression without a signed-in account", () => {
+    const { result } = renderHook(() => useAccountLevel(null));
+    expect(result.current).toEqual({ progress: null, loading: false });
+    expect(mockFetch).not.toHaveBeenCalled();
+  });
+
   it("refreshes when returning to Profile after completing tasks", async () => {
     mockFetch.mockResolvedValueOnce(payload(2, 0)).mockResolvedValueOnce(payload(3, 30));
     const { result, rerender } = renderHook(({ userId }) => useAccountLevel(userId), { initialProps: { userId: "12" } });
@@ -92,6 +138,25 @@ describe("live account level", () => {
     await act(async () => second.resolve(payload(5, 40)));
     await act(async () => first.resolve(payload(2, 10)));
     expect(result.current.progress?.level).toBe(5);
+    unmount();
+    spy.mockRestore();
+  });
+
+  it("hides settled progress while refreshing after foreground resume", async () => {
+    let onChange: (state: string) => void = () => {};
+    const spy = jest.spyOn(AppState, "addEventListener").mockImplementation((_, listener: any) => {
+      onChange = listener;
+      return { remove: jest.fn() };
+    });
+    const resumed = pending();
+    mockFetch.mockResolvedValueOnce(payload(2, 0)).mockReturnValueOnce(resumed.promise);
+    const { result, unmount } = renderHook(() => useAccountLevel("12"));
+    await waitFor(() => expect(result.current.progress?.level).toBe(2));
+    act(() => onChange("active"));
+    expect(result.current).toEqual({ progress: null, loading: true });
+    await act(async () => resumed.resolve(payload(3, 20)));
+    expect(result.current.progress?.level).toBe(3);
+    expect(result.current.loading).toBe(false);
     unmount();
     spy.mockRestore();
   });

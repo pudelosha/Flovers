@@ -109,7 +109,7 @@ export default function ProfileScreen() {
   // PROMPTS (modal selector)
   const [prompt, setPrompt] = useState<PromptKey | "contact" | "bug" | null>(null);
 
-  // Loading state (notifications only)
+  // Notifications load alongside settings and account progression.
   const [loading, setLoading] = useState<boolean>(true);
 
   // Saving states
@@ -308,9 +308,15 @@ export default function ProfileScreen() {
   const contentOpacity = entry;
   const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
   const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+  const isProfileLoading = loading || settingsLoading || !formInitialized || accountLevel.loading;
 
   useFocusEffect(
     useCallback(() => {
+      if (isProfileLoading) {
+        entry.stopAnimation();
+        entry.setValue(0);
+        return;
+      }
       scrollToTop();
 
       Animated.timing(entry, {
@@ -328,10 +334,8 @@ export default function ProfileScreen() {
           useNativeDriver: true,
         }).start();
       };
-    }, [entry, scrollToTop])
+    }, [entry, scrollToTop, isProfileLoading])
   );
-
-  const showLoadingOverlay = loading || settingsLoading || !formInitialized;
 
   return (
     <View style={{ flex: 1 }}>
@@ -344,6 +348,9 @@ export default function ProfileScreen() {
         showSeparator={false}
       />
 
+      {isProfileLoading ? (
+        <CenteredSpinner size={56} color="#FFFFFF" />
+      ) : (
       <Animated.View
         style={{
           flex: 1,
@@ -431,8 +438,8 @@ export default function ProfileScreen() {
           <SupportCard onContact={() => setPrompt("contact")} onBug={() => setPrompt("bug")} />
         </ScrollView>
       </Animated.View>
+      )}
 
-      {showLoadingOverlay && <CenteredSpinner overlay size={48} color="#FFFFFF" />}
       {savingNotif && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
       {savingSettings && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
       {switchingLanguage && <CenteredSpinner overlay size={36} color="#FFFFFF" />}

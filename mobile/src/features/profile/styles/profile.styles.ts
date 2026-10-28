@@ -1,5 +1,11 @@
 import { StyleSheet } from "react-native";
 
+const profileActionButtonSizing = {
+  minHeight: 46,
+  paddingVertical: 12,
+  borderRadius: 16,
+};
+
 /** Header + submenu */
 export const header = StyleSheet.create({
   headerBar: {
@@ -63,13 +69,12 @@ export const card = StyleSheet.create({
 export const controls = StyleSheet.create({
   // full-width action buttons — flat like dropdowns (no shadow/elevation), no borders
   actionBtnFull: {
+    ...profileActionButtonSizing,
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
     paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderRadius: 16,
     marginBottom: 10,
     backgroundColor: "rgba(255,255,255,0.12)",
     overflow: "hidden",
@@ -165,14 +170,13 @@ export const controls = StyleSheet.create({
 
   // save button — flat, no shadow/elevation, no inner glare
   saveBtn: {
+    ...profileActionButtonSizing,
     marginTop: 12,
     alignSelf: "stretch",
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
     paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderRadius: 18,
     backgroundColor: "rgba(11,114,133,0.92)",
     justifyContent: "center",
     overflow: "hidden",
