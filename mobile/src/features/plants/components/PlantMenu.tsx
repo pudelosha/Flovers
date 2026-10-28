@@ -14,6 +14,8 @@ type Props = {
   onJournal: () => void;
   onDelete: () => void;
   onShowQr: () => void;
+  onShare?: () => void;
+  sharingActive?: boolean;
 };
 
 export default function PlantMenu({
@@ -23,6 +25,8 @@ export default function PlantMenu({
   onJournal,
   onDelete,
   onShowQr,
+  onShare,
+  sharingActive,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -31,8 +35,8 @@ export default function PlantMenu({
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      if (typeof txt === "string" && txt && txt !== key) return txt;
+      return fallback ?? key.split(".").pop() ?? key;
     },
     [t, currentLanguage]
   );
@@ -44,6 +48,12 @@ export default function PlantMenu({
         icon="sprout-outline"
         onPress={onDetails}
       />
+
+      {onShare && <MenuItem
+        label={sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.form.share", "Share plants")}
+        icon="share-variant-outline"
+        onPress={onShare}
+      />}
 
       <MenuItem
         label={tr("plants.menu.edit", "Edit plant")}

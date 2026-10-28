@@ -18,6 +18,11 @@ import PlantsScreen from "../../features/plants/pages/PlantsScreen";
 import RemindersScreen from "../../features/reminders/pages/RemindersScreen";
 import ReadingsScreen from "../../features/readings/pages/ReadingsScreen";
 import ProfileScreen from "../../features/profile/pages/ProfileScreen";
+import ContactsScreen from "../../features/sharing/pages/ContactsScreen";
+import SharedPlantsScreen from "../../features/sharing/pages/SharedPlantsScreen";
+import SharePlantModal from "../../features/sharing/components/SharePlantModal";
+import SharingToastHost from "../../features/sharing/components/SharingToastHost";
+import { SharingPreviewProvider } from "../../features/sharing/state/SharingPreviewProvider";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plant-details/pages/PlantDetailsScreen"; // hidden tab
 import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // hidden tab
@@ -59,6 +64,8 @@ export type AppTabParamList = {
   Reminders: undefined;
   Readings: undefined;
   Profile: undefined;
+  Contacts: undefined;
+  SharedPlants: undefined;
   ConfirmEmail: { uid?: string; token?: string; email?: string; url?: string } | undefined;
   ResetPassword: { uid?: string; token?: string; email?: string; url?: string } | undefined;
 
@@ -93,6 +100,8 @@ const Tab = createBottomTabNavigator<AppTabParamList>();
 
 // Map hidden child routes to the tab that should appear active
 const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
+  Contacts: "Profile",
+  SharedPlants: "Profile",
   ConfirmEmail: "Profile",
   ResetPassword: "Profile",
   CreatePlantWizard: "Plants",
@@ -141,6 +150,8 @@ function GlassTabBar({ state, navigation }: any) {
   };
 
   const HIDDEN = new Set([
+    "Contacts",
+    "SharedPlants",
     "ConfirmEmail",
     "ResetPassword",
     "Scanner",
@@ -226,7 +237,7 @@ function GlassTabBar({ state, navigation }: any) {
                 target: route.key,
                 canPreventDefault: true,
               });
-              if (!isFocused && !event.defaultPrevented) {
+              if ((!isFocused || activeRouteName !== route.name) && !event.defaultPrevented) {
                 navigation.navigate(route.name);
               }
             };
@@ -269,7 +280,7 @@ function GlassTabBar({ state, navigation }: any) {
   );
 }
 
-export default function AppTabs() {
+function AppTabsNavigator() {
   return (
     <Tab.Navigator
       backBehavior="history"
@@ -290,6 +301,8 @@ export default function AppTabs() {
       <Tab.Screen name="Reminders" component={RemindersScreen} />
       <Tab.Screen name="Readings" component={ReadingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Contacts" component={ContactsScreen} />
+      <Tab.Screen name="SharedPlants" component={SharedPlantsScreen} />
       <Tab.Screen name="ConfirmEmail" component={ConfirmEmailRecovery} />
       <Tab.Screen name="ResetPassword" component={ResetPasswordRecovery} />
 
@@ -353,6 +366,18 @@ export default function AppTabs() {
         options={{ tabBarStyle: { display: "flex" } }}
       />
     </Tab.Navigator>
+  );
+}
+
+export default function AppTabs() {
+  return (
+    <SharingPreviewProvider>
+      <View style={{ flex: 1 }}>
+        <AppTabsNavigator />
+        <SharePlantModal />
+        <SharingToastHost />
+      </View>
+    </SharingPreviewProvider>
   );
 }
 

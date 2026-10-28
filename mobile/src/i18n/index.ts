@@ -450,6 +450,20 @@ import zhProfile from "./locales/zh/profile.json";
 import jaProfile from "./locales/ja/profile.json";
 import koProfile from "./locales/ko/profile.json";
 
+// Contacts and plant sharing
+import enSharing from "./locales/en/sharing.json";
+import plSharing from "./locales/pl/sharing.json";
+import deSharing from "./locales/de/sharing.json";
+import frSharing from "./locales/fr/sharing.json";
+import itSharing from "./locales/it/sharing.json";
+import esSharing from "./locales/es/sharing.json";
+import ptSharing from "./locales/pt/sharing.json";
+import arSharing from "./locales/ar/sharing.json";
+import hiSharing from "./locales/hi/sharing.json";
+import zhSharing from "./locales/zh/sharing.json";
+import jaSharing from "./locales/ja/sharing.json";
+import koSharing from "./locales/ko/sharing.json";
+
 // Profile modals bundles for all 12 languages
 import enProfileModals from "./locales/en/profileModals.json";
 import plProfileModals from "./locales/pl/profileModals.json";
@@ -621,6 +635,7 @@ const resources = {
         enReadingsModals,
         enReadingsHistory,
         enProfile,
+        enSharing,
         enProfileModals,
         enHome,
         enHomeModals,
@@ -664,6 +679,7 @@ const resources = {
         plReadingsModals,
         plReadingsHistory,
         plProfile,
+        plSharing,
         plProfileModals,
         plHome,
         plHomeModals,
@@ -707,6 +723,7 @@ const resources = {
         deReadingsModals,
         deReadingsHistory,
         deProfile,
+        deSharing,
         deProfileModals,
         deHome,
         deHomeModals,
@@ -750,6 +767,7 @@ const resources = {
         frReadingsModals,
         frReadingsHistory,
         frProfile,
+        frSharing,
         frProfileModals,
         frHome,
         frHomeModals,
@@ -793,6 +811,7 @@ const resources = {
         itReadingsModals,
         itReadingsHistory,
         itProfile,
+        itSharing,
         itProfileModals,
         itHome,
         itHomeModals,
@@ -836,6 +855,7 @@ const resources = {
         esReadingsModals,
         esReadingsHistory,
         esProfile,
+        esSharing,
         esProfileModals,
         esHome,
         esHomeModals,
@@ -879,6 +899,7 @@ const resources = {
         ptReadingsModals,
         ptReadingsHistory,
         ptProfile,
+        ptSharing,
         ptProfileModals,
         ptHome,
         ptHomeModals,
@@ -922,6 +943,7 @@ const resources = {
         arReadingsModals,
         arReadingsHistory,
         arProfile,
+        arSharing,
         arProfileModals,
         arHome,
         arHomeModals,
@@ -965,6 +987,7 @@ const resources = {
         hiReadingsModals,
         hiReadingsHistory,
         hiProfile,
+        hiSharing,
         hiProfileModals,
         hiHome,
         hiHomeModals,
@@ -1008,6 +1031,7 @@ const resources = {
         zhReadingsModals,
         zhReadingsHistory,
         zhProfile,
+        zhSharing,
         zhProfileModals,
         zhHome,
         zhHomeModals,
@@ -1051,6 +1075,7 @@ const resources = {
         jaReadingsModals,
         jaReadingsHistory,
         jaProfile,
+        jaSharing,
         jaProfileModals,
         jaHome,
         jaHomeModals,
@@ -1094,6 +1119,7 @@ const resources = {
         koReadingsModals,
         koReadingsHistory,
         koProfile,
+        koSharing,
         koProfileModals,
         koHome,
         koHomeModals,

@@ -7,6 +7,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { s } from "../styles/plants.styles";
 import { Plant } from "../types/plants.types";
 import PlantMenu from "./PlantMenu";
+import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 
 type Props = {
   plant: Plant;
@@ -36,6 +37,7 @@ export default function PlantTile({
   onDelete,
   onShowQr,
 }: Props) {
+  const { openSharePlant, shares } = useSharingPreview();
   const imgUri = plant.imageUrl;
 
   const handleTilePress = () => {
@@ -184,6 +186,11 @@ export default function PlantTile({
           onJournal={onJournal}
           onDelete={onDelete}
           onShowQr={onShowQr}
+          sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
+          onShare={() => {
+            onPressMenu();
+            openSharePlant({ id: String(plant.id), name: plant.name, location: plant.location, latin: plant.latin, imageUrl: plant.imageUrl });
+          }}
         />
       )}
     </View>

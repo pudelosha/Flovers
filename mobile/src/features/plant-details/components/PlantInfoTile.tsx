@@ -11,6 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
 import PlantInfoMenu from "./PlantInfoMenu";
+import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 
@@ -122,13 +123,14 @@ export default function PlantInfoTile({
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
   const nav = useNavigation<any>();
+  const { openSharePlant, shares } = useSharingPreview();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      if (typeof txt === "string" && txt && txt !== key) return txt;
+      return fallback || key.split(".").pop() || key;
     },
     [t, currentLanguage]
   );
@@ -318,6 +320,11 @@ export default function PlantInfoTile({
 
             <View style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]} pointerEvents="box-none">
               <PlantInfoMenu
+                sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
+                onShare={() => {
+                  closeMenu();
+                  openSharePlant({ id: String(plant.id), name: title, location: locationName, latin, imageUrl: imageUrl ?? undefined });
+                }}
                 onPlantDefinition={() => {
                   closeMenu();
                   if (plantDefinitionIdSafe != null) {

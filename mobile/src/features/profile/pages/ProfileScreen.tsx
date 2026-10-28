@@ -22,6 +22,7 @@ import AccountCard from "../components/AccountCard";
 import NotificationsCard from "../components/NotificationsCard";
 import SettingsCard from "../components/SettingsCard";
 import SupportCard from "../components/SupportCard";
+import SharingCard from "../../sharing/components/SharingCard";
 import { useAccountLevel } from "../hooks/useAccountLevel";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
@@ -379,6 +380,8 @@ export default function ProfileScreen() {
             onPrompt={setPrompt}
             onLogout={logout}
           />
+
+          <SharingCard />
 
           <NotificationsCard
             emailDaily={emailDaily}

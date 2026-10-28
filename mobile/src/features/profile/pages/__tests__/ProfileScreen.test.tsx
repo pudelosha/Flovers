@@ -43,6 +43,8 @@ jest.mock("../../components/SettingsCard", () => (props: any) =>
   require("react").createElement(require("react-native").Text, null, "Settings " + props.dateFormat));
 jest.mock("../../components/SupportCard", () => () =>
   require("react").createElement(require("react-native").Text, null, "Support"));
+jest.mock("../../../sharing/components/SharingCard", () => () =>
+  require("react").createElement(require("react-native").Text, null, "Sharing"));
 jest.mock("../../../../shared/ui/TopSnackbar", () => () => null);
 jest.mock("../../components/modals/ChangeEmailModal", () => () => null);
 jest.mock("../../components/modals/ChangePasswordModal", () => () => null);
@@ -83,6 +85,7 @@ describe("Profile loading screen", () => {
     expect(view.queryByText(/Notifications/)).toBeNull();
     expect(view.queryByText(/Settings/)).toBeNull();
     expect(view.queryByText("Support")).toBeNull();
+    expect(view.queryByText("Sharing")).toBeNull();
 
     readyLevel();
     view.rerender(<ProfileScreen />);
@@ -91,6 +94,10 @@ describe("Profile loading screen", () => {
     expect(view.getByText("Notifications false")).toBeTruthy();
     expect(view.getByText("Settings DD.MM.YYYY")).toBeTruthy();
     expect(view.getByText("Support")).toBeTruthy();
+    const tiles = view.getAllByText(/^(Account level 2|Sharing|Notifications false|Settings DD.MM.YYYY|Support)$/);
+    expect(tiles.map((tile) => tile.props.children)).toEqual([
+      "Account level 2", "Sharing", "Notifications false", "Settings DD.MM.YYYY", "Support",
+    ]);
   });
 
   it("waits for notifications even if account XP is already available", async () => {

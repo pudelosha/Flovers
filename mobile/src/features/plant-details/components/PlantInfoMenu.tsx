@@ -12,9 +12,11 @@ type Props = {
   onEditPlant: () => void;
   onChangeImage: () => void;
   onShowReminders: () => void;
+  onShare?: () => void;
+  sharingActive?: boolean;
 };
 
-export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChangeImage, onShowReminders }: Props) {
+export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChangeImage, onShowReminders, onShare, sharingActive }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -22,8 +24,8 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      if (typeof txt === "string" && txt && txt !== key) return txt;
+      return fallback || key.split(".").pop() || key;
     },
     [t, currentLanguage]
   );
@@ -34,6 +36,11 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
         <MaterialCommunityIcons name="book-open-variant" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.plantDefinition", "Plant definition")}</Text>
       </Pressable>
+
+      {onShare && <Pressable style={s.menuItem} onPress={onShare} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+        <MaterialCommunityIcons name="share-variant-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
+        <Text style={s.menuItemText}>{sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.form.share", "Share plants")}</Text>
+      </Pressable>}
 
       <Pressable style={s.menuItem} onPress={onEditPlant} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
         <MaterialCommunityIcons name="pencil-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
