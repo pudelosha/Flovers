@@ -132,14 +132,15 @@ export default function ContactsScreen() {
       <View style={local.identityText}>
         <Text style={s.text}>{contact.name}</Text>
         {!!contact.email && <Text style={s.hint}>{contact.email}</Text>}
-        {!!contact.floversId && <Text style={s.hint}>{contact.floversId}</Text>}
+        {!!contact.floversId && <Text style={[s.hint, local.contactId]} numberOfLines={1}
+          adjustsFontSizeToFit minimumFontScale={0.6}>{contact.floversId}</Text>}
       </View>
     </View>
   );
 
   return (
     <View ref={pageRef} testID="contacts-screen" collapsable={false} style={local.page}>
-      <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false}>
+      <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false} extraBottomPadding={64}>
         {!snapshot ? (
           loading ? <View testID="contacts-loading" style={local.loading}><CenteredSpinner /></View> :
             <GlassCard>
@@ -232,7 +233,8 @@ export default function ContactsScreen() {
 
         {!!currentUser && <GlassCard>
           <Text style={s.title}>{t("sharing.contacts.yourId", { defaultValue: "Your Flovers ID" })}</Text>
-          <Text selectable style={[s.text, local.ownId]}>{currentUser.floversId}</Text>
+          <Text selectable style={[s.text, local.ownId]} numberOfLines={1}
+            adjustsFontSizeToFit minimumFontScale={0.6}>{currentUser.floversId}</Text>
           <Text style={s.hint}>{t("sharing.contacts.realIdHint", { defaultValue: "Share this ID so others can invite you without knowing your email address." })}</Text>
           <SharingButton
             style={local.copyButton}
@@ -315,7 +317,8 @@ const local = StyleSheet.create({
   menuOverlay: { ...StyleSheet.absoluteFillObject, zIndex: 4000, elevation: 4000 },
   dangerText: { color: "#FF6B6B" },
   empty: { gap: 6, paddingVertical: 12 },
-  ownId: { fontSize: 15, letterSpacing: 0.3, marginVertical: 8 },
+  contactId: { fontSize: 10, letterSpacing: 0, flexShrink: 1 },
+  ownId: { fontSize: 12, letterSpacing: 0, marginVertical: 8 },
   loading: { height: 320 },
   copyButton: { marginTop: 12 },
 });
