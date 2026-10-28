@@ -6,11 +6,12 @@
       "sharedPlants": "Geteilte Pflanzen",
       "contactCount": "Kontakte: {{count}}",
       "pendingCount": "Erhaltene Anfragen: {{count}}",
-      "noPending": "Keine offenen Anfragen"
+      "noPending": "Keine offenen Anfragen",
+      "sharingPreviewNote": "Das Teilen von Pflanzen ist noch eine Vorschau. Kontakte und Einladungen funktionieren bereits."
     },
     "preview": {
       "label": "UI-Vorschau",
-      "notice": "Beispielkontakte und Freigaben. Es wird nichts versendet oder tatsächlich geteilt.",
+      "notice": "Das Teilen von Pflanzen ist noch eine Vorschau. Änderungen hier haben keinen Einfluss auf tatsächliche Zugriffsrechte.",
       "reset": "Vorschau zurücksetzen"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "Löschen",
       "deleteTitle": "Kontakt löschen?",
       "deleteHint": "{{name}} aus deinen Kontakten löschen? Dadurch werden in dieser Vorschau auch die Pflanzenfreigaben zwischen euch entfernt.",
-      "identityLabel": "Kontodaten"
+      "identityLabel": "Kontodaten",
+      "yourId": "Deine Flovers-ID",
+      "realIdHint": "Gib diese ID an die Person weiter, die du als Kontakt hinzufügen möchtest.",
+      "loadFailed": "Deine Kontakte konnten nicht geladen werden.",
+      "retry": "Erneut versuchen",
+      "sharingUnavailable": "Das Teilen von Pflanzen ist noch nicht verfügbar.",
+      "deleteRealHint": "{{name}} aus deinen Kontakten löschen?"
     },
     "requests": {
       "title": "Offene Einladungen",
@@ -67,12 +74,13 @@
       "title": "Kontakt hinzufügen",
       "label": "E-Mail oder Flovers-ID",
       "placeholder": "name@example.com oder FL-…",
-      "hint": "Probiere eine E-Mail-Adresse oder Flovers-ID aus. Diese Vorschau versendet keine Einladung.",
-      "action": "Einladung hinzufügen",
+      "hint": "Lade eine Person mit aktivem Flovers-Konto über ihre E-Mail-Adresse oder Flovers-ID ein. Die Einladung erscheint in der App; es wird keine E-Mail verschickt.",
+      "action": "Einladung senden",
       "invalid": "Gib eine gültige E-Mail-Adresse oder Flovers-ID ein.",
       "self": "Du kannst dich nicht selbst einladen.",
       "alreadyContact": "Diese Person ist bereits in deinen Kontakten.",
-      "alreadyPending": "Für diese Person gibt es bereits eine offene Einladung."
+      "alreadyPending": "Für diese Person gibt es bereits eine offene Einladung.",
+      "realHint": "Lade eine Person mit aktivem Flovers-Konto über ihre E-Mail-Adresse oder Flovers-ID ein. Die Einladung erscheint in der App; es wird keine E-Mail verschickt."
     },
     "plants": {
       "title": "Geteilte Pflanzen",
@@ -142,7 +150,22 @@
       "plantLeft": "Geteilte Pflanze aus der Vorschau entfernt.",
       "idCopied": "ID kopiert.",
       "copyFailed": "Die ID konnte nicht kopiert werden.",
-      "previewReset": "Vorschau zurückgesetzt."
+      "previewReset": "Vorschau zurückgesetzt.",
+      "contactsInvitationAdded": "Einladung gesendet.",
+      "contactsInvitationAccepted": "Kontakt hinzugefügt.",
+      "contactsInvitationDeclined": "Einladung abgelehnt.",
+      "contactsInvitationCancelled": "Einladung zurückgezogen.",
+      "contactsContactUpdated": "Kontaktname aktualisiert.",
+      "contactsContactDeleted": "Kontakt gelöscht."
+    },
+    "errors": {
+      "invalid": "Gib eine gültige E-Mail-Adresse oder Flovers-ID ein.",
+      "notFound": "Zu dieser E-Mail-Adresse oder ID wurde kein aktives Flovers-Konto gefunden.",
+      "self": "Du kannst dich nicht selbst einladen.",
+      "alreadyContact": "Diese Person ist bereits in deinen Kontakten.",
+      "alreadyPending": "Für diese Person gibt es bereits eine offene Einladung.",
+      "throttled": "Zu viele Anfragen. Warte kurz und versuche es erneut.",
+      "unavailable": "Verbindung fehlgeschlagen. Bitte versuche es erneut."
     }
   }
 }

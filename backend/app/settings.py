@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # local
     "accounts",
     "profiles",
+    "contacts",
     "plant_definitions",
     "plant_instances",
     "locations",
@@ -116,6 +117,8 @@ REST_FRAMEWORK = {
         "pump_poll_per_device": "120/hour",
         "pump_complete_per_device": "120/hour",
         "public_contact": "5/hour",
+        "contact_invitation_hour": "20/hour",
+        "contact_invitation_day": "100/day",
     },
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     # Middleware resolves a client address only from an explicitly trusted proxy.

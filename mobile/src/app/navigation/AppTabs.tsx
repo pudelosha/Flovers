@@ -23,6 +23,7 @@ import SharedPlantsScreen from "../../features/sharing/pages/SharedPlantsScreen"
 import SharePlantModal from "../../features/sharing/components/SharePlantModal";
 import SharingToastHost from "../../features/sharing/components/SharingToastHost";
 import { SharingPreviewProvider } from "../../features/sharing/state/SharingPreviewProvider";
+import { ContactsProvider } from "../../features/sharing/state/ContactsProvider";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plant-details/pages/PlantDetailsScreen"; // hidden tab
 import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // hidden tab
@@ -372,11 +373,13 @@ function AppTabsNavigator() {
 export default function AppTabs() {
   return (
     <SharingPreviewProvider>
+      <ContactsProvider>
       <View style={{ flex: 1 }}>
         <AppTabsNavigator />
         <SharePlantModal />
         <SharingToastHost />
       </View>
+      </ContactsProvider>
     </SharingPreviewProvider>
   );
 }

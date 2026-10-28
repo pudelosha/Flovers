@@ -58,7 +58,9 @@ export type SharingPreviewState = {
 export type SharingToastKind =
   | "invitationAdded" | "invitationAccepted" | "invitationDeclined" | "invitationCancelled"
   | "contactUpdated" | "contactDeleted" | "sharingSaved" | "accessRemoved"
-  | "plantLeft" | "idCopied" | "copyFailed" | "previewReset";
+  | "plantLeft" | "idCopied" | "copyFailed" | "previewReset"
+  | "contactsInvitationAdded" | "contactsInvitationAccepted" | "contactsInvitationDeclined"
+  | "contactsInvitationCancelled" | "contactsContactUpdated" | "contactsContactDeleted";
 
 export type SharingToastVariant = "default" | "success" | "error";
 

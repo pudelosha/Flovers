@@ -6,11 +6,12 @@
       "sharedPlants": "Shared plants",
       "contactCount": "Contacts: {{count}}",
       "pendingCount": "Incoming requests: {{count}}",
-      "noPending": "No pending requests"
+      "noPending": "No pending requests",
+      "sharingPreviewNote": "Plant sharing is still a preview. Contacts and invitations are live."
     },
     "preview": {
       "label": "UI preview",
-      "notice": "Sample contacts and sharing. Nothing is sent or shared.",
+      "notice": "Plant sharing is a preview. Changes here do not affect anyone's actual access.",
       "reset": "Reset preview"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "Delete",
       "deleteTitle": "Delete contact?",
       "deleteHint": "Delete {{name}} from your contacts? This also ends plant sharing between you in this preview.",
-      "identityLabel": "Account details"
+      "identityLabel": "Account details",
+      "yourId": "Your Flovers ID",
+      "realIdHint": "Share this ID with someone you want to add as a contact.",
+      "loadFailed": "Could not load your contacts.",
+      "retry": "Try again",
+      "sharingUnavailable": "Plant sharing is not available yet.",
+      "deleteRealHint": "Delete {{name}} from your contacts?"
     },
     "requests": {
       "title": "Pending invitations",
@@ -67,12 +74,13 @@
       "title": "Add contact",
       "label": "Email or Flovers ID",
       "placeholder": "name@example.com or FL-…",
-      "hint": "Try an email address or a Flovers ID. No invitation will be sent from this preview.",
-      "action": "Add invitation",
+      "hint": "Use an email address or Flovers ID to invite an existing active account. Invitations appear in the app; no email is sent.",
+      "action": "Send invitation",
       "invalid": "Enter a valid email address or Flovers ID.",
       "self": "You cannot invite yourself.",
       "alreadyContact": "This person is already in your contacts.",
-      "alreadyPending": "An invitation for this person is already pending."
+      "alreadyPending": "An invitation for this person is already pending.",
+      "realHint": "Use an email address or Flovers ID to invite an existing active account. Invitations appear in the app; no email is sent."
     },
     "plants": {
       "title": "Shared plants",
@@ -142,7 +150,22 @@
       "plantLeft": "Shared plant removed from this preview.",
       "idCopied": "ID copied.",
       "copyFailed": "Could not copy the ID.",
-      "previewReset": "Preview reset."
+      "previewReset": "Preview reset.",
+      "contactsInvitationAdded": "Invitation sent.",
+      "contactsInvitationAccepted": "Contact added.",
+      "contactsInvitationDeclined": "Invitation declined.",
+      "contactsInvitationCancelled": "Invitation cancelled.",
+      "contactsContactUpdated": "Contact name updated.",
+      "contactsContactDeleted": "Contact deleted."
+    },
+    "errors": {
+      "invalid": "Enter a valid email address or Flovers ID.",
+      "notFound": "No active Flovers account matches this email address or ID.",
+      "self": "You cannot invite yourself.",
+      "alreadyContact": "This person is already in your contacts.",
+      "alreadyPending": "An invitation for this person is already pending.",
+      "throttled": "Too many requests. Wait a little and try again.",
+      "unavailable": "Could not connect. Please try again."
     }
   }
 }

@@ -6,11 +6,12 @@
       "sharedPlants": "共有中の植物",
       "contactCount": "連絡先：{{count}}",
       "pendingCount": "受信したリクエスト：{{count}}",
-      "noPending": "保留中のリクエストはありません"
+      "noPending": "保留中のリクエストはありません",
+      "sharingPreviewNote": "植物の共有はまだプレビューです。連絡先と招待は実際に利用できます。"
     },
     "preview": {
       "label": "画面プレビュー",
-      "notice": "連絡先と共有のサンプルです。招待の送信や実際の共有は行われません。",
+      "notice": "植物の共有はまだプレビューです。ここで変更しても、実際のアクセス権限には影響しません。",
       "reset": "プレビューをリセット"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "削除",
       "deleteTitle": "連絡先を削除しますか？",
       "deleteHint": "{{name}} さんを連絡先から削除しますか？このプレビューで、お互いの植物の共有も解除されます。",
-      "identityLabel": "アカウント情報"
+      "identityLabel": "アカウント情報",
+      "yourId": "あなたの Flovers ID",
+      "realIdHint": "連絡先に追加したい相手に、この ID を伝えてください。",
+      "loadFailed": "連絡先を読み込めませんでした。",
+      "retry": "再試行",
+      "sharingUnavailable": "植物の共有はまだ利用できません。",
+      "deleteRealHint": "{{name}} さんを連絡先から削除しますか？"
     },
     "requests": {
       "title": "保留中の招待",
@@ -67,12 +74,13 @@
       "title": "連絡先を追加",
       "label": "メールアドレスまたは Flovers ID",
       "placeholder": "name@example.com または FL-…",
-      "hint": "メールアドレスか Flovers ID を入力してお試しください。このプレビューから招待は送信されません。",
-      "action": "招待を追加",
+      "hint": "メールアドレスまたは Flovers ID で、有効な Flovers アカウントを持つ相手を招待できます。招待はアプリ内に表示され、メールは送信されません。",
+      "action": "招待を送信",
       "invalid": "有効なメールアドレスまたは Flovers ID を入力してください。",
       "self": "自分自身を招待することはできません。",
       "alreadyContact": "このユーザーはすでに連絡先に登録されています。",
-      "alreadyPending": "このユーザーにはすでに招待を送信しています。"
+      "alreadyPending": "このユーザーにはすでに招待を送信しています。",
+      "realHint": "メールアドレスまたは Flovers ID で、有効な Flovers アカウントを持つ相手を招待できます。招待はアプリ内に表示され、メールは送信されません。"
     },
     "plants": {
       "title": "共有中の植物",
@@ -142,7 +150,22 @@
       "plantLeft": "プレビューから共有中の植物を削除しました。",
       "idCopied": "ID をコピーしました。",
       "copyFailed": "ID をコピーできませんでした。",
-      "previewReset": "プレビューをリセットしました。"
+      "previewReset": "プレビューをリセットしました。",
+      "contactsInvitationAdded": "招待を送信しました。",
+      "contactsInvitationAccepted": "連絡先を追加しました。",
+      "contactsInvitationDeclined": "招待を辞退しました。",
+      "contactsInvitationCancelled": "招待を取り消しました。",
+      "contactsContactUpdated": "連絡先の名前を更新しました。",
+      "contactsContactDeleted": "連絡先を削除しました。"
+    },
+    "errors": {
+      "invalid": "有効なメールアドレスまたは Flovers ID を入力してください。",
+      "notFound": "このメールアドレスまたは ID に一致する有効な Flovers アカウントが見つかりません。",
+      "self": "自分自身を招待することはできません。",
+      "alreadyContact": "このユーザーはすでに連絡先に登録されています。",
+      "alreadyPending": "このユーザーにはすでに招待を送信しています。",
+      "throttled": "リクエストが多すぎます。少し待ってから再試行してください。",
+      "unavailable": "接続できませんでした。もう一度お試しください。"
     }
   }
 }

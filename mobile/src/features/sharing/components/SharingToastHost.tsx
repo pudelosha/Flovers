@@ -17,6 +17,12 @@ export const SHARING_TOAST_MESSAGES: Record<SharingToastKind, string> = {
   idCopied: "ID copied.",
   copyFailed: "Could not copy the ID.",
   previewReset: "Preview reset.",
+  contactsInvitationAdded: "Invitation sent.",
+  contactsInvitationAccepted: "Contact added.",
+  contactsInvitationDeclined: "Invitation declined.",
+  contactsInvitationCancelled: "Invitation cancelled.",
+  contactsContactUpdated: "Contact name updated.",
+  contactsContactDeleted: "Contact deleted.",
 };
 
 export default function SharingToastHost() {

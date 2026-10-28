@@ -8,6 +8,8 @@ def test_legacy_water_intervals_and_invalid_reminders_migrate_safely():
     executor = MigrationExecutor(connection)
     final_targets = executor.loader.graph.leaf_nodes()
     previous_targets = [("plant_instances", "0003_backfill_qr_codes"), ("reminders", "0003_remindertask_note")]
+    # Keep unrelated account fields in sync with the live account table.
+    previous_targets += [target for target in final_targets if target[0] == "accounts"]
     try:
         executor.migrate(previous_targets)
         old_apps = executor.loader.project_state(previous_targets).apps

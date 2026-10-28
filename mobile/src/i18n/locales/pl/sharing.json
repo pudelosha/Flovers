@@ -6,11 +6,12 @@
       "sharedPlants": "Udostępnione rośliny",
       "contactCount": "Kontakty: {{count}}",
       "pendingCount": "Otrzymane zaproszenia: {{count}}",
-      "noPending": "Brak oczekujących zaproszeń"
+      "noPending": "Brak oczekujących zaproszeń",
+      "sharingPreviewNote": "Udostępnianie roślin nadal jest podglądem. Kontakty i zaproszenia już działają."
     },
     "preview": {
       "label": "Podgląd interfejsu",
-      "notice": "Przykładowe kontakty i rośliny. Zaproszenia nie są wysyłane, a rośliny nie są udostępniane.",
+      "notice": "Udostępnianie roślin jest na razie podglądem. Zmiany tutaj nie wpływają na to, kto naprawdę ma dostęp do roślin.",
       "reset": "Przywróć przykładowe dane"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "Usuń",
       "deleteTitle": "Usunąć kontakt?",
       "deleteHint": "Kontakt „{{name}}” zniknie z listy. W tym podglądzie usunie to też wzajemne udostępnienia roślin.",
-      "identityLabel": "Dane konta"
+      "identityLabel": "Dane konta",
+      "yourId": "Twój identyfikator Flovers",
+      "realIdHint": "Podaj ten identyfikator osobie, którą chcesz dodać do kontaktów.",
+      "loadFailed": "Nie udało się wczytać kontaktów.",
+      "retry": "Spróbuj ponownie",
+      "sharingUnavailable": "Udostępnianie roślin nie jest jeszcze dostępne.",
+      "deleteRealHint": "Usunąć kontakt „{{name}}”?"
     },
     "requests": {
       "title": "Oczekujące zaproszenia",
@@ -67,12 +74,13 @@
       "title": "Dodaj kontakt",
       "label": "E-mail lub identyfikator Flovers",
       "placeholder": "adres@example.com lub FL-…",
-      "hint": "Wpisz e-mail lub identyfikator Flovers. W tym podglądzie zaproszenie nie zostanie wysłane.",
-      "action": "Dodaj zaproszenie",
+      "hint": "Zaproś osobę z aktywnym kontem Flovers, podając jej e-mail lub identyfikator. Zaproszenie pojawi się w aplikacji — nie wysyłamy e-maila.",
+      "action": "Wyślij zaproszenie",
       "invalid": "Wpisz poprawny adres e-mail lub identyfikator Flovers.",
       "self": "Nie możesz zaprosić siebie.",
       "alreadyContact": "Ta osoba jest już w Twoich kontaktach.",
-      "alreadyPending": "Zaproszenie dla tej osoby już oczekuje na odpowiedź."
+      "alreadyPending": "Zaproszenie dla tej osoby już oczekuje na odpowiedź.",
+      "realHint": "Zaproś osobę z aktywnym kontem Flovers, podając jej e-mail lub identyfikator. Zaproszenie pojawi się w aplikacji — nie wysyłamy e-maila."
     },
     "plants": {
       "title": "Udostępnione rośliny",
@@ -142,7 +150,22 @@
       "plantLeft": "Usunięto udostępnioną roślinę z podglądu.",
       "idCopied": "Skopiowano identyfikator.",
       "copyFailed": "Nie udało się skopiować identyfikatora.",
-      "previewReset": "Przywrócono przykładowe dane."
+      "previewReset": "Przywrócono przykładowe dane.",
+      "contactsInvitationAdded": "Wysłano zaproszenie.",
+      "contactsInvitationAccepted": "Dodano kontakt.",
+      "contactsInvitationDeclined": "Odrzucono zaproszenie.",
+      "contactsInvitationCancelled": "Anulowano zaproszenie.",
+      "contactsContactUpdated": "Zapisano nazwę kontaktu.",
+      "contactsContactDeleted": "Usunięto kontakt."
+    },
+    "errors": {
+      "invalid": "Wpisz poprawny adres e-mail lub identyfikator Flovers.",
+      "notFound": "Nie znaleziono aktywnego konta Flovers z tym adresem e-mail lub identyfikatorem.",
+      "self": "Nie możesz zaprosić siebie.",
+      "alreadyContact": "Ta osoba jest już w Twoich kontaktach.",
+      "alreadyPending": "Zaproszenie dla tej osoby już oczekuje na odpowiedź.",
+      "throttled": "Za dużo prób. Odczekaj chwilę i spróbuj ponownie.",
+      "unavailable": "Nie udało się połączyć. Spróbuj ponownie."
     }
   }
 }

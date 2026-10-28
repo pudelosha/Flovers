@@ -6,11 +6,12 @@
       "sharedPlants": "공유한 식물",
       "contactCount": "연락처: {{count}}",
       "pendingCount": "받은 요청: {{count}}",
-      "noPending": "대기 중인 요청이 없어요"
+      "noPending": "대기 중인 요청이 없어요",
+      "sharingPreviewNote": "식물 공유는 아직 미리보기예요. 연락처와 초대는 실제로 이용할 수 있어요."
     },
     "preview": {
       "label": "화면 미리보기",
-      "notice": "예시 연락처와 공유 정보예요. 초대를 보내거나 식물을 실제로 공유하지 않아요.",
+      "notice": "식물 공유는 아직 미리보기입니다. 여기서 변경해도 실제 접근 권한에는 영향을 주지 않습니다.",
       "reset": "미리보기 초기화"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "삭제",
       "deleteTitle": "연락처를 삭제할까요?",
       "deleteHint": "{{name}} 님을 연락처에서 삭제할까요? 이 미리보기에서 두 사람 사이의 식물 공유도 해제돼요.",
-      "identityLabel": "계정 정보"
+      "identityLabel": "계정 정보",
+      "yourId": "내 Flovers ID",
+      "realIdHint": "연락처에 추가하고 싶은 사람에게 이 ID를 알려 주세요.",
+      "loadFailed": "연락처를 불러오지 못했어요.",
+      "retry": "다시 시도",
+      "sharingUnavailable": "식물 공유는 아직 이용할 수 없어요.",
+      "deleteRealHint": "{{name}} 님을 연락처에서 삭제할까요?"
     },
     "requests": {
       "title": "대기 중인 초대",
@@ -67,12 +74,13 @@
       "title": "연락처 추가",
       "label": "이메일 또는 Flovers ID",
       "placeholder": "name@example.com 또는 FL-…",
-      "hint": "이메일 주소나 Flovers ID를 입력해 보세요. 이 미리보기에서는 초대를 보내지 않아요.",
-      "action": "초대 추가",
+      "hint": "이메일이나 Flovers ID로 활성화된 Flovers 계정이 있는 사람을 초대하세요. 초대는 앱 안에만 표시되며 이메일은 보내지 않아요.",
+      "action": "초대 보내기",
       "invalid": "올바른 이메일 주소 또는 Flovers ID를 입력해 주세요.",
       "self": "자신에게는 초대를 보낼 수 없어요.",
       "alreadyContact": "이미 연락처에 있는 사람이에요.",
-      "alreadyPending": "이미 초대를 보냈으며 응답을 기다리고 있어요."
+      "alreadyPending": "이미 초대를 보냈으며 응답을 기다리고 있어요.",
+      "realHint": "이메일이나 Flovers ID로 활성화된 Flovers 계정이 있는 사람을 초대하세요. 초대는 앱 안에만 표시되며 이메일은 보내지 않아요."
     },
     "plants": {
       "title": "공유한 식물",
@@ -142,7 +150,22 @@
       "plantLeft": "미리보기에서 공유된 식물을 삭제했어요.",
       "idCopied": "ID를 복사했어요.",
       "copyFailed": "ID를 복사하지 못했어요.",
-      "previewReset": "미리보기를 초기화했어요."
+      "previewReset": "미리보기를 초기화했어요.",
+      "contactsInvitationAdded": "초대를 보냈어요.",
+      "contactsInvitationAccepted": "연락처를 추가했어요.",
+      "contactsInvitationDeclined": "초대를 거절했어요.",
+      "contactsInvitationCancelled": "초대를 취소했어요.",
+      "contactsContactUpdated": "연락처 이름을 수정했어요.",
+      "contactsContactDeleted": "연락처를 삭제했어요."
+    },
+    "errors": {
+      "invalid": "올바른 이메일 주소 또는 Flovers ID를 입력해 주세요.",
+      "notFound": "이 이메일 주소나 ID와 일치하는 활성화된 Flovers 계정을 찾을 수 없어요.",
+      "self": "자신에게는 초대를 보낼 수 없어요.",
+      "alreadyContact": "이미 연락처에 있는 사람이에요.",
+      "alreadyPending": "이미 초대를 보냈으며 응답을 기다리고 있어요.",
+      "throttled": "요청이 너무 많아요. 잠시 후 다시 시도해 주세요.",
+      "unavailable": "연결하지 못했어요. 다시 시도해 주세요."
     }
   }
 }

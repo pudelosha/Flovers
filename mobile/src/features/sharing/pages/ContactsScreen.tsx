@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { BackHandler, Pressable, StyleSheet, Text, View } from "react-native";
 import Clipboard from "@react-native-clipboard/clipboard";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useIsFocused } from "@react-navigation/native";
@@ -10,8 +11,11 @@ import GlassCard from "../../profile/components/GlassCard";
 import AddContactModal from "../components/AddContactModal";
 import ContactDetailsModal from "../components/ContactDetailsModal";
 import DeleteContactModal from "../components/DeleteContactModal";
-import { PreviewNotice, SharingButton, SharingPage, sharingStyles as s } from "../components/SharingUI";
+import { SharingButton, SharingPage, sharingStyles as s } from "../components/SharingUI";
 import { useSharingPreview } from "../state/SharingPreviewProvider";
+import { useContacts } from "../state/ContactsProvider";
+import { CONTACT_ERROR_MESSAGES } from "../types/contacts.types";
+import type { ContactsMutationResult } from "../types/contacts.types";
 import type { SharingContact } from "../types/sharing.types";
 import { s as plantDetailStyles } from "../../plant-details/styles/plant-details.styles";
 
@@ -26,7 +30,12 @@ export default function ContactsScreen() {
   const { t } = useTranslation();
   const isFocused = useIsFocused();
   const { settings } = useSettings();
-  const { contacts, invitations, currentUser, acceptInvitation, dismissInvitation, notify } = useSharingPreview();
+  const { notify } = useSharingPreview();
+  const { snapshot, loading, error, pending, refresh, acceptInvitation, dismissInvitation } = useContacts();
+  const contacts = snapshot?.contacts ?? [];
+  const invitations = snapshot?.invitations ?? [];
+  const currentUser = snapshot?.currentUser;
+  const [actionError, setActionError] = useState<string | null>(null);
   const [addVisible, setAddVisible] = useState(false);
   const [selectedContactId, setSelectedContactId] = useState<string | null>(null);
   const [deletingContactId, setDeletingContactId] = useState<string | null>(null);
@@ -76,7 +85,19 @@ export default function ContactsScreen() {
       ? menuAnchor.buttonTop - 6 : menuAnchor.buttonTop - menuHeight - 6)
     : 0;
 
-  useEffect(() => setCopied(false), [currentUser.floversId]);
+  useEffect(() => setCopied(false), [currentUser?.floversId]);
+  useEffect(() => {
+    if (!isFocused) return;
+    void refresh();
+    const timer = setInterval(() => { if (focusedRef.current) void refresh(); }, 30000);
+    return () => clearInterval(timer);
+  }, [isFocused, refresh]);
+  const perform = async (operation: () => Promise<ContactsMutationResult>) => {
+    setActionError(null);
+    const result = await operation();
+    if (!focusedRef.current || result.ok || result.reason === "busy" || result.reason === "staleSession") return;
+    setActionError(t(`sharing.errors.${result.reason}`, { defaultValue: CONTACT_ERROR_MESSAGES[result.reason] }));
+  };
   useEffect(() => () => { menuRequest.current += 1; }, []);
   useEffect(() => {
     if (!isFocused) {
@@ -119,8 +140,18 @@ export default function ContactsScreen() {
   return (
     <View ref={pageRef} testID="contacts-screen" collapsable={false} style={local.page}>
       <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false}>
-        <PreviewNotice />
-
+        {!snapshot ? (
+          loading ? <View testID="contacts-loading" style={local.loading}><CenteredSpinner /></View> :
+            <GlassCard>
+              <Text accessibilityRole="alert" style={s.error}>{t("sharing.contacts.loadFailed", { defaultValue: "Could not load contacts." })}</Text>
+              <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} />
+            </GlassCard>
+        ) : <>
+        {!!error && <GlassCard>
+          <Text accessibilityRole="alert" style={s.error}>{t(`sharing.errors.${error}`, { defaultValue: CONTACT_ERROR_MESSAGES[error] })}</Text>
+          <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} disabled={loading} />
+        </GlassCard>}
+        {!!actionError && <Text accessibilityRole="alert" style={s.error}>{actionError}</Text>}
         <GlassCard>
           <View style={local.sectionHeading}>
             <Text style={[s.title, local.headingText]}>
@@ -142,21 +173,24 @@ export default function ContactsScreen() {
                     style={local.actionColumn}
                     label={t("sharing.requests.accept", { defaultValue: "Accept" })}
                     icon="check"
-                    onPress={() => acceptInvitation(invitation.id)}
+                    disabled={!!pending}
+                    onPress={() => { void perform(() => acceptInvitation(invitation.id)); }}
                   />
                   <SharingButton
                     style={local.actionColumn}
                     label={t("sharing.requests.decline", { defaultValue: "Decline" })}
                     icon="close"
                     variant="secondary"
-                    onPress={() => dismissInvitation(invitation.id)}
+                    disabled={!!pending}
+                    onPress={() => { void perform(() => dismissInvitation(invitation.id)); }}
                   />
                 </View>
               ) : (
                 <SharingButton
                   label={t("sharing.requests.cancel", { defaultValue: "Cancel invitation" })}
                   variant="secondary"
-                  onPress={() => dismissInvitation(invitation.id)}
+                  disabled={!!pending}
+                  onPress={() => { void perform(() => dismissInvitation(invitation.id)); }}
                 />
               )}
             </View>
@@ -196,10 +230,10 @@ export default function ContactsScreen() {
           ))}
         </GlassCard>
 
-        <GlassCard>
-          <Text style={s.title}>{t("sharing.contacts.previewId", { defaultValue: "Your preview Flovers ID" })}</Text>
+        {!!currentUser && <GlassCard>
+          <Text style={s.title}>{t("sharing.contacts.yourId", { defaultValue: "Your Flovers ID" })}</Text>
           <Text selectable style={[s.text, local.ownId]}>{currentUser.floversId}</Text>
-          <Text style={s.hint}>{t("sharing.contacts.idHint", { defaultValue: "This sample ID is for trying the screens." })}</Text>
+          <Text style={s.hint}>{t("sharing.contacts.realIdHint", { defaultValue: "Share this ID so others can invite you without knowing your email address." })}</Text>
           <SharingButton
             style={local.copyButton}
             label={copied
@@ -218,9 +252,10 @@ export default function ContactsScreen() {
               }
             }}
           />
-        </GlassCard>
+        </GlassCard>}
+        </>}
       </SharingPage>
-      {isFocused && !addVisible && !selectedContact && !deletingContact && (
+      {isFocused && !!snapshot && !addVisible && !selectedContact && !deletingContact && (
         <FAB
           position={settings.fabPosition}
           closeSignal={fabCloseSignal}
@@ -280,6 +315,7 @@ const local = StyleSheet.create({
   menuOverlay: { ...StyleSheet.absoluteFillObject, zIndex: 4000, elevation: 4000 },
   dangerText: { color: "#FF6B6B" },
   empty: { gap: 6, paddingVertical: 12 },
-  ownId: { fontSize: 20, letterSpacing: 1, marginVertical: 8 },
+  ownId: { fontSize: 15, letterSpacing: 0.3, marginVertical: 8 },
+  loading: { height: 320 },
   copyButton: { marginTop: 12 },
 });

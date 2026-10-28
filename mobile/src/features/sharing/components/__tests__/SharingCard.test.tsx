@@ -1,20 +1,25 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react-native";
 import SharingCard from "../SharingCard";
-import { SharingPreviewProvider } from "../../state/SharingPreviewProvider";
 
-const mockNavigate = jest.fn();
-jest.mock("@react-navigation/native", () => ({ useNavigation: () => ({ navigate: mockNavigate }) }));
-jest.mock("../../../../api/client", () => ({ getAuthSessionId: () => 1 }));
-jest.mock("../../../../app/providers/useAuth", () => ({ useAuth: () => ({ user: { id: 12, email: "owner@example.test" } }) }));
-
-it("shows accepted contacts, incoming request count and both Profile destinations", () => {
-  const view = render(<SharingPreviewProvider><SharingCard /></SharingPreviewProvider>);
-  expect(view.getByText("Contacts: 2")).toBeTruthy();
-  expect(view.getByText("Incoming requests: 1")).toBeTruthy();
-  expect(view.getByText("UI preview")).toBeTruthy();
-  fireEvent.press(view.getByRole("button", { name: /Contacts/ }));
-  expect(mockNavigate).toHaveBeenLastCalledWith("Contacts");
-  fireEvent.press(view.getByRole("button", { name: /Shared plants/ }));
-  expect(mockNavigate).toHaveBeenLastCalledWith("SharedPlants");
+const mockNavigate = jest.fn(), mockRefresh = jest.fn();
+let mockState: any;
+jest.mock("@react-navigation/native", () => ({ useNavigation: () => ({ navigate: mockNavigate }), useIsFocused: () => true }));
+jest.mock("../../state/ContactsProvider", () => ({ useContacts: () => ({ ...mockState, refresh: mockRefresh }) }));
+beforeEach(() => { jest.clearAllMocks(); mockState = { snapshot: { counts: { contacts: 7, incoming: 2 } }, loading: false, error: null }; });
+it("shows real contact counts and keeps both Profile destinations", () => {
+  const view = render(<SharingCard />);
+  expect(view.getByText("Contacts: 7")).toBeTruthy(); expect(view.getByText("Incoming requests: 2")).toBeTruthy();
+  expect(view.queryByText("UI preview")).toBeNull(); expect(view.getByText(/Plant sharing is still a preview/)).toBeTruthy();
+  fireEvent.press(view.getByRole("button", { name: /Contacts/ })); expect(mockNavigate).toHaveBeenLastCalledWith("Contacts");
+  fireEvent.press(view.getByRole("button", { name: /Shared plants/ })); expect(mockNavigate).toHaveBeenLastCalledWith("SharedPlants");
+  expect(mockRefresh).toHaveBeenCalledTimes(1);
+});
+it("does not show fictional counts while loading", () => {
+  mockState = { snapshot: null, loading: true, error: null }; const view = render(<SharingCard />);
+  expect(view.queryByText(/Contacts:/)).toBeNull(); expect(view.queryByText("No pending requests")).toBeNull();
+});
+it("provides retry when contacts cannot load", () => {
+  mockState = { snapshot: null, loading: false, error: "unavailable" }; const view = render(<SharingCard />);
+  fireEvent.press(view.getByText(/Could not load contacts/)); expect(mockRefresh).toHaveBeenCalledTimes(2);
 });

@@ -10,6 +10,7 @@ def test_existing_notification_logs_migrate_as_sent_not_pending_work():
     executor = MigrationExecutor(connection)
     final = executor.loader.graph.leaf_nodes()
     previous = [("profiles", "0012_profilesettings_japanese_korean")]
+    previous += [target for target in final if target[0] == "accounts"]
     try:
         executor.migrate(previous)
         old = executor.loader.project_state(previous).apps

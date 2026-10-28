@@ -6,11 +6,12 @@
       "sharedPlants": "Plantes partagées",
       "contactCount": "Contacts : {{count}}",
       "pendingCount": "Demandes reçues : {{count}}",
-      "noPending": "Aucune demande en attente"
+      "noPending": "Aucune demande en attente",
+      "sharingPreviewNote": "Le partage de plantes est encore un aperçu. Les contacts et les invitations sont déjà actifs."
     },
     "preview": {
       "label": "Aperçu de l'interface",
-      "notice": "Exemples de contacts et de partages. Rien n'est envoyé ni partagé.",
+      "notice": "Le partage de plantes est encore en aperçu. Les modifications ici ne changent pas les accès réels.",
       "reset": "Réinitialiser l'aperçu"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "Supprimer",
       "deleteTitle": "Supprimer le contact ?",
       "deleteHint": "Supprimer {{name}} de vos contacts ? Les partages de plantes entre vous seront aussi supprimés dans cet aperçu.",
-      "identityLabel": "Informations du compte"
+      "identityLabel": "Informations du compte",
+      "yourId": "Votre identifiant Flovers",
+      "realIdHint": "Communiquez cet identifiant à la personne que vous souhaitez ajouter à vos contacts.",
+      "loadFailed": "Impossible de charger vos contacts.",
+      "retry": "Réessayer",
+      "sharingUnavailable": "Le partage de plantes n'est pas encore disponible.",
+      "deleteRealHint": "Supprimer {{name}} de vos contacts ?"
     },
     "requests": {
       "title": "Invitations en attente",
@@ -67,12 +74,13 @@
       "title": "Ajouter un contact",
       "label": "E-mail ou identifiant Flovers",
       "placeholder": "nom@example.com ou FL-…",
-      "hint": "Essayez une adresse e-mail ou un identifiant Flovers. Aucun envoi ne sera effectué depuis cet aperçu.",
-      "action": "Ajouter une invitation",
+      "hint": "Invitez une personne ayant un compte Flovers actif avec son adresse e-mail ou son identifiant. L'invitation apparaît dans l'application ; aucun e-mail n'est envoyé.",
+      "action": "Envoyer l'invitation",
       "invalid": "Saisissez une adresse e-mail ou un identifiant Flovers valide.",
       "self": "Vous ne pouvez pas vous inviter vous-même.",
       "alreadyContact": "Cette personne figure déjà dans vos contacts.",
-      "alreadyPending": "Une invitation est déjà en attente pour cette personne."
+      "alreadyPending": "Une invitation est déjà en attente pour cette personne.",
+      "realHint": "Invitez une personne ayant un compte Flovers actif avec son adresse e-mail ou son identifiant. L'invitation apparaît dans l'application ; aucun e-mail n'est envoyé."
     },
     "plants": {
       "title": "Plantes partagées",
@@ -142,7 +150,22 @@
       "plantLeft": "Plante partagée retirée de l'aperçu.",
       "idCopied": "Identifiant copié.",
       "copyFailed": "Impossible de copier l'identifiant.",
-      "previewReset": "Aperçu réinitialisé."
+      "previewReset": "Aperçu réinitialisé.",
+      "contactsInvitationAdded": "Invitation envoyée.",
+      "contactsInvitationAccepted": "Contact ajouté.",
+      "contactsInvitationDeclined": "Invitation refusée.",
+      "contactsInvitationCancelled": "Invitation annulée.",
+      "contactsContactUpdated": "Nom du contact mis à jour.",
+      "contactsContactDeleted": "Contact supprimé."
+    },
+    "errors": {
+      "invalid": "Saisissez une adresse e-mail ou un identifiant Flovers valide.",
+      "notFound": "Aucun compte Flovers actif ne correspond à cette adresse e-mail ou à cet identifiant.",
+      "self": "Vous ne pouvez pas vous inviter vous-même.",
+      "alreadyContact": "Cette personne figure déjà dans vos contacts.",
+      "alreadyPending": "Une invitation est déjà en attente pour cette personne.",
+      "throttled": "Trop de demandes. Patientez un instant, puis réessayez.",
+      "unavailable": "Connexion impossible. Veuillez réessayer."
     }
   }
 }

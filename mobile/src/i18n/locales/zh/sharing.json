@@ -6,11 +6,12 @@
       "sharedPlants": "共享植物",
       "contactCount": "联系人：{{count}}",
       "pendingCount": "收到的请求：{{count}}",
-      "noPending": "没有待处理的请求"
+      "noPending": "没有待处理的请求",
+      "sharingPreviewNote": "植物共享仍处于预览阶段。联系人和邀请功能已可正常使用。"
     },
     "preview": {
       "label": "界面预览",
-      "notice": "这里显示示例联系人和共享内容，不会发送邀请或真正共享植物。",
+      "notice": "植物共享功能仍处于预览阶段。此处的更改不会影响任何人的实际访问权限。",
       "reset": "重置预览"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "删除",
       "deleteTitle": "删除联系人？",
       "deleteHint": "从联系人中删除 {{name}}？此预览中你们之间的植物共享也会被移除。",
-      "identityLabel": "账号信息"
+      "identityLabel": "账号信息",
+      "yourId": "你的 Flovers ID",
+      "realIdHint": "将此 ID 分享给你想添加为联系人的人。",
+      "loadFailed": "无法加载你的联系人。",
+      "retry": "重试",
+      "sharingUnavailable": "植物共享暂未开放。",
+      "deleteRealHint": "从联系人中删除 {{name}}？"
     },
     "requests": {
       "title": "待处理的邀请",
@@ -67,12 +74,13 @@
       "title": "添加联系人",
       "label": "邮箱或 Flovers ID",
       "placeholder": "name@example.com 或 FL-…",
-      "hint": "试着输入邮箱地址或 Flovers ID。此预览不会发送邀请。",
-      "action": "添加邀请",
+      "hint": "使用邮箱或 Flovers ID 邀请拥有已激活 Flovers 账号的用户。邀请仅显示在应用内，不会发送邮件。",
+      "action": "发送邀请",
       "invalid": "请输入有效的邮箱地址或 Flovers ID。",
       "self": "不能邀请自己。",
       "alreadyContact": "对方已经在你的联系人中。",
-      "alreadyPending": "已向对方发出邀请，正在等待回应。"
+      "alreadyPending": "已向对方发出邀请，正在等待回应。",
+      "realHint": "使用邮箱或 Flovers ID 邀请拥有已激活 Flovers 账号的用户。邀请仅显示在应用内，不会发送邮件。"
     },
     "plants": {
       "title": "共享植物",
@@ -142,7 +150,22 @@
       "plantLeft": "已从预览中移除共享植物。",
       "idCopied": "ID 已复制。",
       "copyFailed": "无法复制 ID。",
-      "previewReset": "预览已重置。"
+      "previewReset": "预览已重置。",
+      "contactsInvitationAdded": "邀请已发送。",
+      "contactsInvitationAccepted": "已添加联系人。",
+      "contactsInvitationDeclined": "已拒绝邀请。",
+      "contactsInvitationCancelled": "已取消邀请。",
+      "contactsContactUpdated": "已更新联系人名称。",
+      "contactsContactDeleted": "已删除联系人。"
+    },
+    "errors": {
+      "invalid": "请输入有效的邮箱地址或 Flovers ID。",
+      "notFound": "没有找到与此邮箱或 ID 匹配的已激活 Flovers 账号。",
+      "self": "不能邀请自己。",
+      "alreadyContact": "对方已经在你的联系人中。",
+      "alreadyPending": "已向对方发出邀请，正在等待回应。",
+      "throttled": "请求过多，请稍等片刻后重试。",
+      "unavailable": "无法连接，请重试。"
     }
   }
 }

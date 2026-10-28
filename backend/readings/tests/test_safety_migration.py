@@ -11,6 +11,9 @@ def test_upgrade_preserves_uncertain_legacy_watering_and_existing_observations()
     before = [("readings", "0006_readingdevice_send_email_watering_notifications_and_more")]
     after = [("readings", "0007_reading_observation_and_pump_safety")]
     executor = MigrationExecutor(connection)
+    account_targets = [target for target in executor.loader.graph.leaf_nodes() if target[0] == "accounts"]
+    before += account_targets
+    after += account_targets
     executor.migrate(before)
     try:
         old = executor.loader.project_state(before).apps

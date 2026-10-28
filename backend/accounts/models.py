@@ -1,3 +1,5 @@
+import uuid
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.db.models.functions import Lower
@@ -6,6 +8,8 @@ from .managers import UserManager
 class User(AbstractUser):
     username = None  # remove username
     email = models.EmailField(unique=True)
+    # Public contact identifier, independent of email changes and internal IDs.
+    flovers_id = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS: list[str] = []

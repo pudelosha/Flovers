@@ -6,11 +6,12 @@
       "sharedPlants": "Plantas compartilhadas",
       "contactCount": "Contatos: {{count}}",
       "pendingCount": "Solicitações recebidas: {{count}}",
-      "noPending": "Nenhuma solicitação pendente"
+      "noPending": "Nenhuma solicitação pendente",
+      "sharingPreviewNote": "O compartilhamento de plantas ainda é uma prévia. Contatos e convites já estão funcionando."
     },
     "preview": {
       "label": "Prévia da interface",
-      "notice": "Contatos e compartilhamentos de exemplo. Nada é enviado ou compartilhado.",
+      "notice": "A partilha de plantas ainda é uma pré-visualização. As alterações aqui não afetam os acessos reais.",
       "reset": "Redefinir prévia"
     },
     "common": {
@@ -52,7 +53,13 @@
       "delete": "Excluir",
       "deleteTitle": "Excluir contato?",
       "deleteHint": "Excluir {{name}} dos seus contatos? Isso também encerra o compartilhamento de plantas entre vocês nesta prévia.",
-      "identityLabel": "Dados da conta"
+      "identityLabel": "Dados da conta",
+      "yourId": "Seu ID Flovers",
+      "realIdHint": "Compartilhe este ID com a pessoa que deseja adicionar aos contatos.",
+      "loadFailed": "Não foi possível carregar seus contatos.",
+      "retry": "Tentar novamente",
+      "sharingUnavailable": "O compartilhamento de plantas ainda não está disponível.",
+      "deleteRealHint": "Excluir {{name}} dos seus contatos?"
     },
     "requests": {
       "title": "Convites pendentes",
@@ -67,12 +74,13 @@
       "title": "Adicionar contato",
       "label": "Email ou ID Flovers",
       "placeholder": "nome@example.com ou FL-…",
-      "hint": "Experimente um endereço de email ou ID Flovers. Nenhum convite será enviado nesta prévia.",
-      "action": "Adicionar convite",
+      "hint": "Convide alguém com uma conta ativa no Flovers usando o email ou ID. O convite aparece no aplicativo; nenhum email é enviado.",
+      "action": "Enviar convite",
       "invalid": "Digite um endereço de email ou ID Flovers válido.",
       "self": "Você não pode convidar a si mesmo.",
       "alreadyContact": "Esta pessoa já está nos seus contatos.",
-      "alreadyPending": "Já existe um convite pendente para esta pessoa."
+      "alreadyPending": "Já existe um convite pendente para esta pessoa.",
+      "realHint": "Convide alguém com uma conta ativa no Flovers usando o email ou ID. O convite aparece no aplicativo; nenhum email é enviado."
     },
     "plants": {
       "title": "Plantas compartilhadas",
@@ -142,7 +150,22 @@
       "plantLeft": "Planta compartilhada removida da prévia.",
       "idCopied": "ID copiado.",
       "copyFailed": "Não foi possível copiar o ID.",
-      "previewReset": "Prévia redefinida."
+      "previewReset": "Prévia redefinida.",
+      "contactsInvitationAdded": "Convite enviado.",
+      "contactsInvitationAccepted": "Contato adicionado.",
+      "contactsInvitationDeclined": "Convite recusado.",
+      "contactsInvitationCancelled": "Convite cancelado.",
+      "contactsContactUpdated": "Nome do contato atualizado.",
+      "contactsContactDeleted": "Contato excluído."
+    },
+    "errors": {
+      "invalid": "Digite um endereço de email ou ID Flovers válido.",
+      "notFound": "Nenhuma conta ativa no Flovers corresponde a este email ou ID.",
+      "self": "Você não pode convidar a si mesmo.",
+      "alreadyContact": "Esta pessoa já está nos seus contatos.",
+      "alreadyPending": "Já existe um convite pendente para esta pessoa.",
+      "throttled": "Muitas solicitações. Espere um pouco e tente novamente.",
+      "unavailable": "Não foi possível conectar. Tente novamente."
     }
   }
 }
